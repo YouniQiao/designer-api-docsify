@@ -2,9 +2,11 @@
 
 AVCastController definition used to implement a remote control when a cast is connected
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
 
@@ -24,9 +26,11 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 Get the playback status of the current player
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
 
@@ -36,13 +40,13 @@ Get the playback status of the current player
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getAVPlaybackState
 
@@ -52,9 +56,11 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 Get the playback status of the current player
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,7 +78,7 @@ Get the playback status of the current player
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getCurrentItem
 
@@ -82,9 +88,11 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 
 Get the current playing item
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void--><!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void-End-->
 
@@ -94,13 +102,13 @@ Get the current playing item
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | The triggered asyncCallback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | The triggered asyncCallback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getCurrentItem
 
@@ -110,9 +118,11 @@ getCurrentItem(): Promise<AVQueueItem>
 
 Get the current playing item
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,7 +140,7 @@ Get the current playing item
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getRecommendedResolutionLevel
 
@@ -140,11 +150,13 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 Get recommended resolution of remote player based on each decoder.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>--><!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>-End-->
 
@@ -166,7 +178,7 @@ Get recommended resolution of remote player based on each decoder.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getSupportedDecoders
 
@@ -176,11 +188,13 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 
 Get supported decoders of remote player.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>--><!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>-End-->
 
@@ -196,7 +210,7 @@ Get supported decoders of remote player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getSupportedHdrCapabilities
 
@@ -206,11 +220,13 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 Get supported hdr capabilities of remote player.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>--><!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>-End-->
 
@@ -226,27 +242,23 @@ Get supported hdr capabilities of remote player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getSupportedPlaySpeeds
 
-ArkTS-Dyn:
-```TypeScript
-getSupportedPlaySpeeds(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSupportedPlaySpeeds(): Promise<Array<double>>
 ```
 
 Get supported speed of remote player.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>--><!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>-End-->
 
@@ -256,13 +268,13 @@ Get supported speed of remote player.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | supported speed returned through promise |
+| Promise&lt;Array&lt;double&gt;&gt; | supported speed returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getValidCommands
 
@@ -272,9 +284,11 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 
 Get commands supported by the current cast controller
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void-End-->
 
@@ -284,13 +298,13 @@ Get commands supported by the current cast controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## getValidCommands
 
@@ -300,9 +314,11 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 
 Get commands supported by the current cast controller
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>--><!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>-End-->
 
@@ -318,23 +334,23 @@ Get commands supported by the current cast controller
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-## off('playbackStateChange')
+## offCastControlAudioRendererError
 
 ```TypeScript
-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void
+offCastControlAudioRendererError(callback?: ErrorCallback): void
 ```
 
-Unregister playback state changed callback
+Unregister listeners for cast control audio renderer error events.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void-End-->
+<!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -342,93 +358,335 @@ Unregister playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+## offCastControlDecodingError
+
+```TypeScript
+offCastControlDecodingError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control decoding error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+## offCastControlDrmError
+
+```TypeScript
+offCastControlDrmError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control drm error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+## offCastControlGenericError
+
+```TypeScript
+offCastControlGenericError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control generic error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+## offCastControlIoError
+
+```TypeScript
+offCastControlIoError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control input/output error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+## offCastControlParsingError
+
+```TypeScript
+offCastControlParsingError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control parsing error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+## offCustomDataChange
+
+```TypeScript
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister listener for custom data sent from remote device.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## off('mediaItemChange')
+## offEndOfStream
 
 ```TypeScript
-off(type: 'mediaItemChange'): void
+offEndOfStream(callback?: NoParamCallback): void
+```
+
+Unregister endOfStream state callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void--><!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle 'endOfStream' command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## offError
+
+```TypeScript
+offError(): void
+```
+
+Unregister listens for playback error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offError(): void--><!--Device-AVCastController-offError(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+
+## offKeyRequest
+
+```TypeScript
+offKeyRequest(callback?: KeyRequestCallback): void
+```
+
+Unregister listener for drm key request.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void--><!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | No | Callback used to request drm key. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## offMediaItemChange
+
+```TypeScript
+offMediaItemChange(): void
 ```
 
 Unregister listener for current media item playback events.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-AVCastController-off(type: 'mediaItemChange'): void--><!--Device-AVCastController-off(type: 'mediaItemChange'): void-End-->
+<!--Device-AVCastController-offMediaItemChange(): void--><!--Device-AVCastController-offMediaItemChange(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## off('playNext')
+## offPlayNext
 
 ```TypeScript
-off(type: 'playNext'): void
+offPlayNext(): void
 ```
 
-Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
+Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-AVCastController-off(type: 'playNext'): void--><!--Device-AVCastController-off(type: 'playNext'): void-End-->
+<!--Device-AVCastController-offPlayNext(): void--><!--Device-AVCastController-offPlayNext(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## off('playPrevious')
+## offPlayPrevious
 
 ```TypeScript
-off(type: 'playPrevious'): void
+offPlayPrevious(): void
 ```
 
-Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
+Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-AVCastController-off(type: 'playPrevious'): void--><!--Device-AVCastController-off(type: 'playPrevious'): void-End-->
+<!--Device-AVCastController-offPlayPrevious(): void--><!--Device-AVCastController-offPlayPrevious(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## offPlaybackStateChange
+
+```TypeScript
+offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
+```
+
+Unregister playback state changed callback
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -436,28 +694,29 @@ Unregister playback command callback sent by remote side or media center.When ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## off('requestPlay')
+## offRequestPlay
 
 ```TypeScript
-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
+offRequestPlay(callback?: Callback<AVQueueItem>): void
 ```
 
 Unregister requested playback command callback sent by remote side or media center.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -465,17 +724,325 @@ Unregister requested playback command callback sent by remote side or media cent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## off('endOfStream')
+## offSeekDone
+
+```TypeScript
+offSeekDone(): void
+```
+
+Unregister listens for playback events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offSeekDone(): void--><!--Device-AVCastController-offSeekDone(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## offValidCommandChange
+
+```TypeScript
+offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void
+```
+
+Unregister the valid commands of the casted session changed callback
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## offVideoSizeChange
+
+```TypeScript
+offVideoSizeChange(): void
+```
+
+Unregister listener for video size change event, used at remote side.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-offVideoSizeChange(): void--><!--Device-AVCastController-offVideoSizeChange(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_castControlAudioRendererError
+
+```TypeScript
+off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control audio renderer error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+## off_castControlDecodingError
+
+```TypeScript
+off(type: 'castControlDecodingError', callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control decoding error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+## off_castControlDrmError
+
+```TypeScript
+off(type: 'castControlDrmError', callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control drm error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+## off_castControlGenericError
+
+```TypeScript
+off(type: 'castControlGenericError', callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control generic error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+## off_castControlIoError
+
+```TypeScript
+off(type: 'castControlIoError', callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control input/output error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+## off_castControlParsingError
+
+```TypeScript
+off(type: 'castControlParsingError', callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control parsing error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+## off_customDataChange
+
+```TypeScript
+off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister listener for custom data sent from remote device.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_endOfStream
 
 ```TypeScript
 off(type: 'endOfStream', callback?: Callback<void>): void
@@ -487,6 +1054,8 @@ Unregister endOfStream state callback.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -496,113 +1065,16 @@ Unregister endOfStream state callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle 'endOfStream' command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle 'endOfStream' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## off('seekDone')
-
-```TypeScript
-off(type: 'seekDone'): void
-```
-
-Unregister listens for playback events.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastController-off(type: 'seekDone'): void--><!--Device-AVCastController-off(type: 'seekDone'): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'seekDone' | Yes | Type of the 'seekDone' to listen for. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## off('validCommandChange')
-
-```TypeScript
-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)
-```
-
-Unregister the valid commands of the casted session changed callback
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-<!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'validCommandChange' | Yes | 'validCommandChange' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## off('videoSizeChange')
-
-```TypeScript
-off(type: 'videoSizeChange'): void
-```
-
-Unregister listener for video size change event, used at remote side.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-<!--Device-AVCastController-off(type: 'videoSizeChange'): void--><!--Device-AVCastController-off(type: 'videoSizeChange'): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'videoSizeChange' | Yes | Type of the 'videoSizeChange' to listen for. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## Examples
-
-```TypeScript
-aVCastController.off('videoSizeChange');
-```
-
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error'): void
@@ -613,6 +1085,8 @@ Unregister listens for playback error events.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -630,202 +1104,16 @@ Unregister listens for playback error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
-
-## off('castControlGenericError')
-
-```TypeScript
-off(type: 'castControlGenericError', callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control generic error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-
-## off('castControlIoError')
-
-```TypeScript
-off(type: 'castControlIoError', callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control input/output error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-
-## off('castControlParsingError')
-
-```TypeScript
-off(type: 'castControlParsingError', callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control parsing error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-
-## off('castControlDecodingError')
-
-```TypeScript
-off(type: 'castControlDecodingError', callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control decoding error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-
-## off('castControlAudioRendererError')
-
-```TypeScript
-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control audio renderer error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-
-## off('castControlDrmError')
-
-```TypeScript
-off(type: 'castControlDrmError', callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control drm error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-
-## off('keyRequest')
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+
+## off_keyRequest
 
 ```TypeScript
 off(type: 'keyRequest', callback?: KeyRequestCallback): void
@@ -836,6 +1124,8 @@ Unregister listener for drm key request.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -854,24 +1144,1174 @@ Unregister listener for drm key request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## off('customDataChange')
+## off_mediaItemChange
 
 ```TypeScript
-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
+off(type: 'mediaItemChange'): void
 ```
 
-Unregister listener for custom data sent from remote device.
+Unregister listener for current media item playback events.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'mediaItemChange'): void--><!--Device-AVCastController-off(type: 'mediaItemChange'): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_playNext
+
+```TypeScript
+off(type: 'playNext'): void
+```
+
+Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'playNext'): void--><!--Device-AVCastController-off(type: 'playNext'): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_playPrevious
+
+```TypeScript
+off(type: 'playPrevious'): void
+```
+
+Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'playPrevious'): void--><!--Device-AVCastController-off(type: 'playPrevious'): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_playbackStateChange
+
+```TypeScript
+off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void
+```
+
+Unregister playback state changed callback
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'playbackStateChange' | Yes |  |
+| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_requestPlay
+
+```TypeScript
+off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
+```
+
+Unregister requested playback command callback sent by remote side or media center.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_seekDone
+
+```TypeScript
+off(type: 'seekDone'): void
+```
+
+Unregister listens for playback events.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'seekDone'): void--><!--Device-AVCastController-off(type: 'seekDone'): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'seekDone' | Yes | Type of the 'seekDone' to listen for. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## off_validCommandChange
+
+```TypeScript
+off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)
+```
+
+Unregister the valid commands of the casted session changed callback
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'validCommandChange' | Yes | 'validCommandChange' |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## off_videoSizeChange
+
+```TypeScript
+off(type: 'videoSizeChange'): void
+```
+
+Unregister listener for video size change event, used at remote side.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-off(type: 'videoSizeChange'): void--><!--Device-AVCastController-off(type: 'videoSizeChange'): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'videoSizeChange' | Yes | Type of the 'videoSizeChange' to listen for. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## Examples
+
+```TypeScript
+aVCastController.off('videoSizeChange');
+```
+
+## onCastControlAudioRendererError
+
+```TypeScript
+onCastControlAudioRendererError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control audio renderer error error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6615000](../errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) | Unspecified errors related to the audio renderer. |
+| [6615001](../errorcode-avsession.md#6615001-audio-renderer-initialization-failure) | Initializing the audio renderer failed. |
+| [6615002](../errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) | The audio renderer fails to write data. |
+
+## onCastControlDecodingError
+
+```TypeScript
+onCastControlDecodingError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control decoding error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
+| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
+| [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
+| [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
+| [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
+| [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
+
+## onCastControlDrmError
+
+```TypeScript
+onCastControlDrmError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control drm error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
+| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
+| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
+| [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
+| [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
+| [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
+| [6616003](../errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
+| [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
+
+## onCastControlGenericError
+
+```TypeScript
+onCastControlGenericError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control generic error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
+| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
+| [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
+| [6611100](../errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) | Cross-device data transmission is locked. |
+| [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
+| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
+| [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
+| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
+
+## onCastControlIoError
+
+```TypeScript
+onCastControlIoError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control input/output error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
+| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
+| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
+| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
+| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
+| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
+| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
+| [6612000](../errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
+| [6612001](../errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
+| [6612002](../errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
+| [6612003](../errorcode-avsession.md#6612003-invalid-contenttype-http-header) | Invalid "Content-Type" HTTP header. |
+| [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
+| [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
+| [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
+| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
+| [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
+
+## onCastControlParsingError
+
+```TypeScript
+onCastControlParsingError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control parsing error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
+| [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
+| [6613001](../errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
+| [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
+| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data sent from remote device.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onEndOfStream
+
+```TypeScript
+onEndOfStream(callback: NoParamCallback): void
+```
+
+Register endOfStream state callback. Application needs update the new media resource when receive these commands by using playItem.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void--><!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle 'endOfStream' command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Register listeners for playback error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onError(callback: ErrorCallback): void--><!--Device-AVCastController-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the playback error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+
+## onKeyRequest
+
+```TypeScript
+onKeyRequest(callback: KeyRequestCallback): void
+```
+
+Register listener for drm key request.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void--><!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | Yes | Callback used to request drm key. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onMediaItemChange
+
+```TypeScript
+onMediaItemChange(callback: Callback<AVQueueItem>): void
+```
+
+Register listener for current media item playback events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onPlayNext
+
+```TypeScript
+onPlayNext(callback: NoParamCallback): void
+```
+
+Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle 'playNext' command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onPlayPrevious
+
+```TypeScript
+onPlayPrevious(callback: NoParamCallback): void
+```
+
+Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle 'playPrevious' command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onPlaybackStateChange
+
+```TypeScript
+onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. 1. Required parameters are missing. 2. Provided parameters have invalid types. |
+
+## onPlaybackStateChangeAll
+
+```TypeScript
+onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+```
+
+Registers a callback to be invoked whenever the playback state changes
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. 1. Required parameters are missing. 2. Provided parameters have invalid types. |
+
+## onRequestPlay
+
+```TypeScript
+onRequestPlay(callback: Callback<AVQueueItem>): void
+```
+
+Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onSeekDone
+
+```TypeScript
+onSeekDone(callback: Callback<int>): void
+```
+
+Register listens for playback events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onSeekDone(callback: Callback<int>): void--><!--Device-AVCastController-onSeekDone(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## onValidCommandChange
+
+```TypeScript
+onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void
+```
+
+Register the valid commands of the casted session changed callback
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onVideoSizeChange
+
+```TypeScript
+onVideoSizeChange(callback: VideoSizeEvent): void
+```
+
+Register listener for video size change event, used at remote side.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void--><!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [VideoSizeEvent](arkts-avsession-avsession-videosizeevent-t.md) | Yes | Callback used to return video size. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## on_castControlAudioRendererError
+
+```TypeScript
+on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
+```
+
+Register listeners for cast control audio renderer error error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6615000](../errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) | Unspecified errors related to the audio renderer. |
+| [6615001](../errorcode-avsession.md#6615001-audio-renderer-initialization-failure) | Initializing the audio renderer failed. |
+| [6615002](../errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) | The audio renderer fails to write data. |
+
+## on_castControlDecodingError
+
+```TypeScript
+on(type: 'castControlDecodingError', callback: ErrorCallback): void
+```
+
+Register listeners for cast control decoding error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
+| [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
+| [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
+| [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
+| [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
+
+## on_castControlDrmError
+
+```TypeScript
+on(type: 'castControlDrmError', callback: ErrorCallback): void
+```
+
+Register listeners for cast control drm error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
+| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
+| [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
+| [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
+| [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
+| [6616003](../errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
+| [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
+
+## on_castControlGenericError
+
+```TypeScript
+on(type: 'castControlGenericError', callback: ErrorCallback): void
+```
+
+Register listeners for cast control generic error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
+| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
+| [6611100](../errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) | Cross-device data transmission is locked. |
+| [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
+| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
+| [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
+| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
+
+## on_castControlIoError
+
+```TypeScript
+on(type: 'castControlIoError', callback: ErrorCallback): void
+```
+
+Register listeners for cast control input/output error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
+| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
+| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
+| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
+| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
+| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
+| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
+| [6612000](../errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
+| [6612001](../errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
+| [6612002](../errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
+| [6612003](../errorcode-avsession.md#6612003-invalid-contenttype-http-header) | Invalid "Content-Type" HTTP header. |
+| [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
+| [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
+| [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
+| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
+| [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+## on_castControlParsingError
+
+```TypeScript
+on(type: 'castControlParsingError', callback: ErrorCallback): void
+```
+
+Register listeners for cast control parsing error events.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
+| [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
+| [6613001](../errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
+| [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
+| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+
+## on_customDataChange
+
+```TypeScript
+on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data sent from remote device.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -880,27 +2320,29 @@ Unregister listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## offCastControlAudioRendererError
+## on_endOfStream
 
 ```TypeScript
-offCastControlAudioRendererError(callback?: ErrorCallback): void
+on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-Unregister listeners for cast control audio renderer error events.
+Register endOfStream state callback. Application needs update the new media resource when receive these commands by using playItem.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -908,21 +2350,33 @@ Unregister listeners for cast control audio renderer error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'endOfStream' command |
 
-## offCastControlDecodingError
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## on_error
 
 ```TypeScript
-offCastControlDecodingError(callback?: ErrorCallback): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
-Unregister listeners for cast control decoding error events.
+Register listeners for playback error events.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -930,21 +2384,39 @@ Unregister listeners for cast control decoding error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| type | 'error' | Yes | Type of the 'error' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the playback error event. |
 
-## offCastControlDrmError
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+
+## on_keyRequest
 
 ```TypeScript
-offCastControlDrmError(callback?: ErrorCallback): void
+on(type: 'keyRequest', callback: KeyRequestCallback): void
 ```
 
-Unregister listeners for cast control drm error events.
+Register listener for drm key request.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void--><!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -952,21 +2424,33 @@ Unregister listeners for cast control drm error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| type | 'keyRequest' | Yes | Type of the 'keyRequest' to listen for. |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | Yes | Callback used to request drm key. |
 
-## offCastControlGenericError
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## on_mediaItemChange
 
 ```TypeScript
-offCastControlGenericError(callback?: ErrorCallback): void
+on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 ```
 
-Unregister listeners for cast control generic error events.
+Register listener for current media item playback events.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -974,21 +2458,33 @@ Unregister listeners for cast control generic error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
 
-## offCastControlIoError
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## on_playNext
 
 ```TypeScript
-offCastControlIoError(callback?: ErrorCallback): void
+on(type: 'playNext', callback: Callback<void>): void
 ```
 
-Unregister listeners for cast control input/output error events.
+Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -996,21 +2492,33 @@ Unregister listeners for cast control input/output error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'playNext' command |
 
-## offCastControlParsingError
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+
+## on_playPrevious
 
 ```TypeScript
-offCastControlParsingError(callback?: ErrorCallback): void
+on(type: 'playPrevious', callback: Callback<void>): void
 ```
 
-Unregister listeners for cast control parsing error events.
+Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1018,316 +2526,17 @@ Unregister listeners for cast control parsing error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
-
-## offCustomDataChange
-
-```TypeScript
-offCustomDataChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister listener for custom data sent from remote device.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'playPrevious' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## offEndOfStream
-
-```TypeScript
-offEndOfStream(callback?: NoParamCallback): void
-```
-
-Unregister endOfStream state callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void--><!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle 'endOfStream' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offError
-
-```TypeScript
-offError(): void
-```
-
-Unregister listens for playback error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offError(): void--><!--Device-AVCastController-offError(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
-
-## offKeyRequest
-
-```TypeScript
-offKeyRequest(callback?: KeyRequestCallback): void
-```
-
-Unregister listener for drm key request.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void--><!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | No | Callback used to request drm key. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offMediaItemChange
-
-```TypeScript
-offMediaItemChange(): void
-```
-
-Unregister listener for current media item playback events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offMediaItemChange(): void--><!--Device-AVCastController-offMediaItemChange(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offPlayNext
-
-```TypeScript
-offPlayNext(): void
-```
-
-Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offPlayNext(): void--><!--Device-AVCastController-offPlayNext(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offPlayPrevious
-
-```TypeScript
-offPlayPrevious(): void
-```
-
-Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offPlayPrevious(): void--><!--Device-AVCastController-offPlayPrevious(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offPlaybackStateChange
-
-```TypeScript
-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
-```
-
-Unregister playback state changed callback
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offRequestPlay
-
-```TypeScript
-offRequestPlay(callback?: Callback<AVQueueItem>): void
-```
-
-Unregister requested playback command callback sent by remote side or media center.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offSeekDone
-
-```TypeScript
-offSeekDone(): void
-```
-
-Unregister listens for playback events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offSeekDone(): void--><!--Device-AVCastController-offSeekDone(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## offValidCommandChange
-
-```TypeScript
-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void
-```
-
-Unregister the valid commands of the casted session changed callback
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offVideoSizeChange
-
-```TypeScript
-offVideoSizeChange(): void
-```
-
-Unregister listener for video size change event, used at remote side.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-offVideoSizeChange(): void--><!--Device-AVCastController-offVideoSizeChange(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## on('playbackStateChange')
+## on_playbackStateChange
 
 ```TypeScript
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void
@@ -1338,6 +2547,8 @@ Register playback state changed callback
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1357,116 +2568,22 @@ Register playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## on('mediaItemChange')
-
-```TypeScript
-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
-```
-
-Register listener for current media item playback events.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## on('playNext')
-
-```TypeScript
-on(type: 'playNext', callback: Callback<void>): void
-```
-
-Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle 'playNext' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## on('playPrevious')
-
-```TypeScript
-on(type: 'playPrevious', callback: Callback<void>): void
-```
-
-Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle 'playPrevious' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## on('requestPlay')
+## on_requestPlay
 
 ```TypeScript
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 ```
 
-Register requested playback command callback sent by remote side or media center.The AVQueueItem may include the requested assetId, starting position and other configurations.
+Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void-End-->
 
@@ -1477,46 +2594,16 @@ Register requested playback command callback sent by remote side or media center
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## on('endOfStream')
-
-```TypeScript
-on(type: 'endOfStream', callback: Callback<void>): void
-```
-
-Register endOfStream state callback.Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-<!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle 'endOfStream' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## on('seekDone')
+## on_seekDone
 
 ```TypeScript
 on(type: 'seekDone', callback: Callback<int>): void
@@ -1527,6 +2614,8 @@ Register listens for playback events.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1539,16 +2628,16 @@ Register listens for playback events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Type of the 'seekDone' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-## on('validCommandChange')
+## on_validCommandChange
 
 ```TypeScript
 on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)
@@ -1560,6 +2649,8 @@ Register the valid commands of the casted session changed callback
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1569,17 +2660,17 @@ Register the valid commands of the casted session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | Yes | 'validCommandChange' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on('videoSizeChange')
+## on_videoSizeChange
 
 ```TypeScript
 on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
@@ -1590,6 +2681,8 @@ Register listener for video size change event, used at remote side.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void--><!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void-End-->
 
@@ -1606,8 +2699,8 @@ Register listener for video size change event, used at remote side.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## Examples
 
@@ -1618,937 +2711,6 @@ aVCastController.on('videoSizeChange', (width: number, height: number) => {
 });
 ```
 
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Register listeners for playback error events.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | Type of the 'error' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the playback error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
-
-## on('castControlGenericError')
-
-```TypeScript
-on(type: 'castControlGenericError', callback: ErrorCallback): void
-```
-
-Register listeners for cast control generic error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6611108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
-| [6611104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
-| [6611105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
-| [6611106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
-| [6611107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6611004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
-| [6611100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) | Cross-device data transmission is locked. |
-| [6611101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
-| [6611102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
-| [6611103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
-| [6611000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
-| [6611001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
-| [6611002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
-| [6611003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
-
-## on('castControlIoError')
-
-```TypeScript
-on(type: 'castControlIoError', callback: ErrorCallback): void
-```
-
-Register listeners for cast control input/output error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6612004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
-| [6612100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
-| [6612005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
-| [6612101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
-| [6612006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
-| [6612102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
-| [6612007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| [6612103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
-| [6612000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
-| [6612001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
-| [6612002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
-| [6612003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612003-invalid-contenttype-http-header) | Invalid "Content-Type" HTTP header. |
-| [6612008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
-| [6612104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
-| [6612105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
-| [6612106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
-| [6612107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-
-## on('castControlParsingError')
-
-```TypeScript
-on(type: 'castControlParsingError', callback: ErrorCallback): void
-```
-
-Register listeners for cast control parsing error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6613004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
-| [6613000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
-| [6613001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
-| [6613002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
-| [6613003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
-
-## on('castControlDecodingError')
-
-```TypeScript
-on(type: 'castControlDecodingError', callback: ErrorCallback): void
-```
-
-Register listeners for cast control decoding error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6614004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6614005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
-| [6614000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
-| [6614001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
-| [6614002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
-| [6614003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
-
-## on('castControlAudioRendererError')
-
-```TypeScript
-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
-```
-
-Register listeners for cast control audio renderer error error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6615000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) | Unspecified errors related to the audio renderer. |
-| [6615001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615001-audio-renderer-initialization-failure) | Initializing the audio renderer failed. |
-| [6615002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) | The audio renderer fails to write data. |
-
-## on('castControlDrmError')
-
-```TypeScript
-on(type: 'castControlDrmError', callback: ErrorCallback): void
-```
-
-Register listeners for cast control drm error events.
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6616004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
-| [6616100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6616005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
-| [6616006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
-| [6616007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
-| [6616000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
-| [6616001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
-| [6616002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
-| [6616003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
-| [6616008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
-
-## on('keyRequest')
-
-```TypeScript
-on(type: 'keyRequest', callback: KeyRequestCallback): void
-```
-
-Register listener for drm key request.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void--><!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyRequest' | Yes | Type of the 'keyRequest' to listen for. |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | Yes | Callback used to request drm key. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## on('customDataChange')
-
-```TypeScript
-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data sent from remote device.
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onCastControlAudioRendererError
-
-```TypeScript
-onCastControlAudioRendererError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control audio renderer error error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6615000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) | Unspecified errors related to the audio renderer. |
-| [6615001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615001-audio-renderer-initialization-failure) | Initializing the audio renderer failed. |
-| [6615002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) | The audio renderer fails to write data. |
-
-## onCastControlDecodingError
-
-```TypeScript
-onCastControlDecodingError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control decoding error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6614004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
-| [6614005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
-| [6614000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
-| [6614001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
-| [6614002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
-| [6614003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
-
-## onCastControlDrmError
-
-```TypeScript
-onCastControlDrmError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control drm error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6616004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
-| [6616100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
-| [6616005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
-| [6616006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
-| [6616007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
-| [6616000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
-| [6616001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
-| [6616002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
-| [6616003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
-| [6616008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
-
-## onCastControlGenericError
-
-```TypeScript
-onCastControlGenericError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control generic error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6611108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
-| [6611104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
-| [6611105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
-| [6611106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
-| [6611107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
-| [6611004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
-| [6611100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) | Cross-device data transmission is locked. |
-| [6611101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
-| [6611102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
-| [6611103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
-| [6611000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
-| [6611001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
-| [6611002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
-| [6611003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
-
-## onCastControlIoError
-
-```TypeScript
-onCastControlIoError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control input/output error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6612004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
-| [6612100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
-| [6612005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
-| [6612101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
-| [6612006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
-| [6612102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
-| [6612007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| [6612103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
-| [6612000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
-| [6612001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
-| [6612002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
-| [6612003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612003-invalid-contenttype-http-header) | Invalid "Content-Type" HTTP header. |
-| [6612008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
-| [6612104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
-| [6612105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
-| [6612106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
-| [6612107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
-
-## onCastControlParsingError
-
-```TypeScript
-onCastControlParsingError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control parsing error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6613004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
-| [6613000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
-| [6613001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
-| [6613002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
-| [6613003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
-
-## onCustomDataChange
-
-```TypeScript
-onCustomDataChange(callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data sent from remote device.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onEndOfStream
-
-```TypeScript
-onEndOfStream(callback: NoParamCallback): void
-```
-
-Register endOfStream state callback.Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void--><!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle 'endOfStream' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Register listeners for playback error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onError(callback: ErrorCallback): void--><!--Device-AVCastController-onError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the playback error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
-
-## onKeyRequest
-
-```TypeScript
-onKeyRequest(callback: KeyRequestCallback): void
-```
-
-Register listener for drm key request.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void--><!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | Yes | Callback used to request drm key. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onMediaItemChange
-
-```TypeScript
-onMediaItemChange(callback: Callback<AVQueueItem>): void
-```
-
-Register listener for current media item playback events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onPlayNext
-
-```TypeScript
-onPlayNext(callback: NoParamCallback): void
-```
-
-Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle 'playNext' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onPlayPrevious
-
-```TypeScript
-onPlayPrevious(callback: NoParamCallback): void
-```
-
-Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle 'playPrevious' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onPlaybackStateChange
-
-```TypeScript
-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
-```
-
-Register playback state changed callback
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. 1. Required parameters are missing. 2. Provided parameters have invalid types. |
-
-## onPlaybackStateChangeAll
-
-```TypeScript
-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
-```
-
-Registers a callback to be invoked whenever the playback state changes
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. 1. Required parameters are missing. 2. Provided parameters have invalid types. |
-
-## onRequestPlay
-
-```TypeScript
-onRequestPlay(callback: Callback<AVQueueItem>): void
-```
-
-Register requested playback command callback sent by remote side or media center.The AVQueueItem may include the requested assetId, starting position and other configurations.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onSeekDone
-
-```TypeScript
-onSeekDone(callback: Callback<int>): void
-```
-
-Register listens for playback events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onSeekDone(callback: Callback<int>): void--><!--Device-AVCastController-onSeekDone(callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
-## onValidCommandChange
-
-```TypeScript
-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void
-```
-
-Register the valid commands of the casted session changed callback
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## onVideoSizeChange
-
-```TypeScript
-onVideoSizeChange(callback: VideoSizeEvent): void
-```
-
-Register listener for video size change event, used at remote side.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void--><!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [VideoSizeEvent](arkts-avsession-avsession-videosizeevent-t.md) | Yes | Callback used to return video size. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-
 ## prepare
 
 ```TypeScript
@@ -2557,9 +2719,11 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
@@ -2570,15 +2734,15 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
 ## prepare
 
@@ -2588,9 +2752,11 @@ prepare(item: AVQueueItem): Promise<void>
 
 Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2614,9 +2780,9 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
 ## processMediaKeyResponse
 
@@ -2626,11 +2792,13 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 Process the response corresponding to the media key request obtained by the application.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>--><!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>-End-->
 
@@ -2653,8 +2821,8 @@ Process the response corresponding to the media key request obtained by the appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## release
 
@@ -2664,9 +2832,11 @@ release(callback: AsyncCallback<void>): void
 
 Destroy the controller
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-release(callback: AsyncCallback<void>): void--><!--Device-AVCastController-release(callback: AsyncCallback<void>): void-End-->
 
@@ -2676,13 +2846,13 @@ Destroy the controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## release
 
@@ -2692,9 +2862,11 @@ release(): Promise<void>
 
 Destroy the controller
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2712,7 +2884,7 @@ Destroy the controller
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## sendControlCommand
 
@@ -2722,9 +2894,11 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 
 Send control commands to remote player
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void-End-->
 
@@ -2735,16 +2909,16 @@ Send control commands to remote player
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | Yes | The command to be send. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
 
 ## sendControlCommand
 
@@ -2754,9 +2928,11 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 Send control commands to remote player
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2780,10 +2956,10 @@ Send control commands to remote player
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
 
 ## sendCustomData
 
@@ -2793,11 +2969,13 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 Sends custom data to a remote device.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
@@ -2819,7 +2997,7 @@ Sends custom data to a remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 
 ## start
 
@@ -2829,9 +3007,11 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 Play the current item, should contain mediaUri otherwise the playback will fail.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
@@ -2842,15 +3022,15 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
 ## start
 
@@ -2860,9 +3040,11 @@ start(item: AVQueueItem): Promise<void>
 
 Play the current item, should contain mediaUri otherwise the playback will fail.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2886,7 +3068,7 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 

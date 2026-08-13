@@ -4,6 +4,8 @@ Defines the LocalizedPosition.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LocalizedPosition--><!--Device-unnamed-declare interface LocalizedPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Coordinate start of the Position.
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Coordinate top of the Position.
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

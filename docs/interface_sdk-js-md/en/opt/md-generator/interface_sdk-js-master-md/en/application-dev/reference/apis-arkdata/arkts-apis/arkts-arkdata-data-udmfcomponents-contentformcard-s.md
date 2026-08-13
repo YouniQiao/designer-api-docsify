@@ -4,7 +4,7 @@ Defines a content form card.
 
 **Since:** 20
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
@@ -28,6 +28,8 @@ Data of the form card.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm--><!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm-End-->
@@ -37,7 +39,8 @@ Data of the form card.
 ## formHeight
 
 ```TypeScript
-formHeight?: number
+@Prop
+  formHeight?: number
 ```
 
 Height of the content form card. The unit of measurement is vp.
@@ -46,18 +49,19 @@ Height of the content form card. The unit of measurement is vp.
 
 **Since:** 20
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContentFormCard-formHeight?: double--><!--Device-ContentFormCard-formHeight?: double-End-->
+<!--Device-ContentFormCard-@Prop  formHeight?: double--><!--Device-ContentFormCard-@Prop  formHeight?: double-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formType
 
 ```TypeScript
-formType: FormType
+@Prop
+  formType: FormType
 ```
 
 Type of the form card.
@@ -66,18 +70,19 @@ Type of the form card.
 
 **Since:** 20
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContentFormCard-formType: FormType--><!--Device-ContentFormCard-formType: FormType-End-->
+<!--Device-ContentFormCard-@Prop  formType: FormType--><!--Device-ContentFormCard-@Prop  formType: FormType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formWidth
 
 ```TypeScript
-formWidth?: number
+@Prop
+  formWidth?: number
 ```
 
 Width of the content form card. The unit of measurement is vp.
@@ -86,11 +91,11 @@ Width of the content form card. The unit of measurement is vp.
 
 **Since:** 20
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContentFormCard-formWidth?: double--><!--Device-ContentFormCard-formWidth?: double-End-->
+<!--Device-ContentFormCard-@Prop  formWidth?: double--><!--Device-ContentFormCard-@Prop  formWidth?: double-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -105,6 +110,8 @@ Callback to be invoked when the form card is tapped.
 **Type:** Function
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

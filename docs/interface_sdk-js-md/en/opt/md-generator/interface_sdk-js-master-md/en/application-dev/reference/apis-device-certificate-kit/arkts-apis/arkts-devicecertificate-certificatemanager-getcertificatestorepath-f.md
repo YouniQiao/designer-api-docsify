@@ -14,7 +14,9 @@ function getCertificateStorePath(property: CertStoreProperty): string
 
 Obtains the certificate storage path.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string--><!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string-End-->
 
@@ -36,9 +38,9 @@ Obtains the certificate storage path.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17500009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500009-specified-certificate-storage-path-not-supported) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17500009](../errorcode-certManager.md#17500009-specified-certificate-storage-path-not-supported) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 

@@ -1,19 +1,21 @@
 # FormExtensionContext
 
 ```TypeScript
-export type FormExtensionContext = _FormExtensionContext.default
+export type FormExtensionContext = _FormExtensionContext
 ```
 
 The context of form extension. It allows access to formExtension-specific resources.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-common-export type FormExtensionContext = _FormExtensionContext.default--><!--Device-common-export type FormExtensionContext = _FormExtensionContext.default-End-->
+<!--Device-common-export type FormExtensionContext = _FormExtensionContext--><!--Device-common-export type FormExtensionContext = _FormExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _FormExtensionContext.default
+**Property type:** _FormExtensionContext

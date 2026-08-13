@@ -3,6 +3,7 @@
 ## TextArea
 
 ```TypeScript
+@ComponentBuilder
 export declare function TextArea(
     value?: TextAreaOptions
 ): TextAreaAttribute
@@ -14,9 +15,11 @@ export declare function TextArea(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute--><!--Device-unnamed-export declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ export declare function TextArea(
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md) |  |
+| TextAreaAttribute |  |
 
 
 ## TextArea
 
 ```TypeScript
+@Builder
 export declare function TextArea(
     style: CustomBuilderT<TextAreaAttribute>,
 ): TextAreaAttribute
@@ -47,11 +51,11 @@ export declare function TextArea(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute--><!--Device-unnamed-export declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute--><!--Device-unnamed-@Builderexport declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ export declare function TextArea(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md)&gt; | 是 | TextArea属性实例。 |
+| style | CustomBuilderT&lt;TextAreaAttribute&gt; | 是 | TextArea属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md) |  |
+| TextAreaAttribute |  |
 

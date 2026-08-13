@@ -2,7 +2,9 @@
 
 Provides configuration for decimal.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DecimalConfig--><!--Device-unnamed-export interface DecimalConfig-End-->
 
@@ -20,13 +22,15 @@ import { Decimal } from '@kit.ArkTS';
 crypto?: boolean
 ```
 
-The value that determines whether cryptographically-secure pseudo-random number generation is used.Default value: false
+The value that determines whether cryptographically-secure pseudo-random number generation is used. Default value: false
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-crypto?: boolean--><!--Device-DecimalConfig-crypto?: boolean-End-->
 
@@ -38,13 +42,15 @@ The value that determines whether cryptographically-secure pseudo-random number 
 defaults?: boolean
 ```
 
-If object has a 'defaults' property with value true then the new constructor will use the default configuration.Default value: false
+If object has a 'defaults' property with value true then the new constructor will use the default configuration. Default value: false
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-defaults?: boolean--><!--Device-DecimalConfig-defaults?: boolean-End-->
 
@@ -56,13 +62,15 @@ If object has a 'defaults' property with value true then the new constructor wil
 maxE?: number
 ```
 
-The positive exponent limit, i.e. the exponent value above which overflow to Infinity occurs.Default value: 9e15
+The positive exponent limit, i.e. the exponent value above which overflow to Infinity occurs. Default value: 9e15
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-maxE?: double--><!--Device-DecimalConfig-maxE?: double-End-->
 
@@ -74,13 +82,15 @@ The positive exponent limit, i.e. the exponent value above which overflow to Inf
 minE?: number
 ```
 
-The negative exponent limit, i.e. the exponent value below which underflow to zero occurs.Default value: -9e15
+The negative exponent limit, i.e. the exponent value below which underflow to zero occurs. Default value: -9e15
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-minE?: double--><!--Device-DecimalConfig-minE?: double-End-->
 
@@ -92,13 +102,15 @@ The negative exponent limit, i.e. the exponent value below which underflow to ze
 modulo?: Modulo
 ```
 
-The modulo mode used when calculating the modulus: a mod n.Default value: 1 (ROUND_DOWN)
+The modulo mode used when calculating the modulus: a mod n. Default value: 1 (ROUND_DOWN)
 
 **Type:** [Modulo](arkts-arkts-modulo-t.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-modulo?: Modulo--><!--Device-DecimalConfig-modulo?: Modulo-End-->
 
@@ -110,13 +122,15 @@ The modulo mode used when calculating the modulus: a mod n.Default value: 1 (ROU
 precision?: number
 ```
 
-The maximum number of significant digits of the result of an operation.Default value: 20
+The maximum number of significant digits of the result of an operation. Default value: 20
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-precision?: double--><!--Device-DecimalConfig-precision?: double-End-->
 
@@ -128,13 +142,15 @@ The maximum number of significant digits of the result of an operation.Default v
 rounding?: Rounding
 ```
 
-The default rounding mode used when rounding the result of an operation to precision significant digits,and when rounding the return value of the round, toBinary, toDecimalPlaces, toExponential, toFixed,toHexadecimal, toNearest, toOctal, toPrecision and toSignificantDigits methods.Default value: 4 (ROUND_HALF_UP)
+The default rounding mode used when rounding the result of an operation to precision significant digits, and when rounding the return value of the round, toBinary, toDecimalPlaces, toExponential, toFixed, toHexadecimal, toNearest, toOctal, toPrecision and toSignificantDigits methods. Default value: 4 (ROUND_HALF_UP)
 
 **Type:** [Rounding](arkts-arkts-rounding-t.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-rounding?: Rounding--><!--Device-DecimalConfig-rounding?: Rounding-End-->
 
@@ -146,13 +162,15 @@ The default rounding mode used when rounding the result of an operation to preci
 toExpNeg?: number
 ```
 
-The negative exponent value at and below which toString returns exponential notation.Default value: -7
+The negative exponent value at and below which toString returns exponential notation. Default value: -7
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-toExpNeg?: double--><!--Device-DecimalConfig-toExpNeg?: double-End-->
 
@@ -164,13 +182,15 @@ The negative exponent value at and below which toString returns exponential nota
 toExpPos?: number
 ```
 
-The positive exponent value at and above which toString returns exponential notation.Default value: 21
+The positive exponent value at and above which toString returns exponential notation. Default value: 21
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecimalConfig-toExpPos?: double--><!--Device-DecimalConfig-toExpPos?: double-End-->
 

@@ -2,11 +2,11 @@
 
 Defines a content form card.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
@@ -18,26 +18,6 @@ Defines a content form card.
 import { ContentFormCard, FormType } from '@kit.ArkData';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Decorator:** @Builder
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContentFormCard-build(): void--><!--Device-ContentFormCard-build(): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
 ## contentFormData
 
 ```TypeScript
@@ -48,9 +28,11 @@ Data of the form card.
 
 **Type:** uniformDataStruct.ContentForm
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,60 +43,69 @@ Data of the form card.
 ## formHeight
 
 ```TypeScript
-formHeight?: double
+@Prop
+  formHeight?: double
 ```
 
 Height of the content form card. The unit of measurement is vp.
 
 **Type:** double
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContentFormCard-formHeight?: double--><!--Device-ContentFormCard-formHeight?: double-End-->
+<!--Device-ContentFormCard-@Prop  formHeight?: double--><!--Device-ContentFormCard-@Prop  formHeight?: double-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formType
 
 ```TypeScript
-formType: FormType
+@Prop
+  formType: FormType
 ```
 
 Type of the form card.
 
-**Type:** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
+**Type:** [FormType](../../apis-na/arkts-apis/arkts-na-data-udmfcomponents-formtype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContentFormCard-formType: FormType--><!--Device-ContentFormCard-formType: FormType-End-->
+<!--Device-ContentFormCard-@Prop  formType: FormType--><!--Device-ContentFormCard-@Prop  formType: FormType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formWidth
 
 ```TypeScript
-formWidth?: double
+@Prop
+  formWidth?: double
 ```
 
 Width of the content form card. The unit of measurement is vp.
 
 **Type:** double
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContentFormCard-formWidth?: double--><!--Device-ContentFormCard-formWidth?: double-End-->
+<!--Device-ContentFormCard-@Prop  formWidth?: double--><!--Device-ContentFormCard-@Prop  formWidth?: double-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -128,9 +119,11 @@ Callback to be invoked when the form card is tapped.
 
 **Type:** Function
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

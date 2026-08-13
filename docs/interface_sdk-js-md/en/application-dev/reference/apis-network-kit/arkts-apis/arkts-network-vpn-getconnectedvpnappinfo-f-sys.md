@@ -18,6 +18,8 @@ Get the connected VPN App Info.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>--><!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>-End-->
@@ -36,8 +38,8 @@ Get the connected VPN App Info.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [19900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
-| [19900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
+| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
 

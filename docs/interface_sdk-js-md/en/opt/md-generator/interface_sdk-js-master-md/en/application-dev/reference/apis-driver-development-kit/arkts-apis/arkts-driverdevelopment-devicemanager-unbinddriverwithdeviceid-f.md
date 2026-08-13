@@ -14,7 +14,9 @@ function unbindDriverWithDeviceId(deviceId: number): Promise<number>
 
 Unbinds a peripheral device. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DDK_DRIVERS
 
@@ -38,9 +40,9 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [26300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) |
-| [26300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-driver-client-not-bound-to-any-driver-server) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) |
+| [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-driver-client-not-bound-to-any-driver-server) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

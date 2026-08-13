@@ -26,9 +26,7 @@ import { picker } from '@kit.CoreFileKit';
 MIMEType?: PhotoViewMIMETypes
 ```
 
-Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by default.
-
-**Note：**: This API is supported since API version 9 and deprecated since API version 18.
+Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by default. **Note：**: This API is supported since API version 9 and deprecated since API version 18.
 
 **Type:** PhotoViewMIMETypes
 
@@ -38,7 +36,7 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 
 **Deprecated since:** 18
 
-**Substitutes:** [MIMEType](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions#MIMEType)
+**Substitutes:** MIMEType
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,7 +50,7 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 maxSelectNumber?: number
 ```
 
-Maximum number of media files that can be selected. The default value is **50**,and the maximum value is **500**.
+Maximum number of media files that can be selected. The default value is **50**, and the maximum value is **500**.
 
 **Type:** number
 
@@ -62,7 +60,7 @@ Maximum number of media files that can be selected. The default value is **50**,
 
 **Deprecated since:** 18
 
-**Substitutes:** [maxSelectNumber](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions#maxSelectNumber)
+**Substitutes:** maxSelectNumber
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -8,9 +8,11 @@ function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Res
 
 将机械设备旋转到相对角度
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Result>--><!--Device-mechanicManager-function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Result>-End-->
 
@@ -22,9 +24,9 @@ function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Res
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ID of the mechanical device. |
+| mechId | int | 是 | ID of the mechanical device. |
 | angles | [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | 是 | Relative angles. |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Rotation duration. Unit: millisecond. |
+| duration | int | 是 | Rotation duration. Unit: millisecond. |
 
 **返回值：**
 
@@ -36,9 +38,9 @@ function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Res
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
 
 ## 示例
 

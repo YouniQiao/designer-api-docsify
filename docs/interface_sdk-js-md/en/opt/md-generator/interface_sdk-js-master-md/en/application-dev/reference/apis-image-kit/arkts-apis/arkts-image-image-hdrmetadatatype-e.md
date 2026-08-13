@@ -2,7 +2,9 @@
 
 Enumerates the values available for **HDR_METADATA_TYPE** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-enum HdrMetadataType--><!--Device-image-enum HdrMetadataType-End-->
 
@@ -16,7 +18,9 @@ NONE = 0
 
 No metadata.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrMetadataType-NONE = 0--><!--Device-HdrMetadataType-NONE = 0-End-->
 
@@ -30,7 +34,9 @@ BASE = 1
 
 Metadata used for base graphics.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrMetadataType-BASE = 1--><!--Device-HdrMetadataType-BASE = 1-End-->
 
@@ -44,7 +50,9 @@ GAINMAP = 2
 
 Metadata used for gain maps.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrMetadataType-GAINMAP = 2--><!--Device-HdrMetadataType-GAINMAP = 2-End-->
 
@@ -58,7 +66,9 @@ ALTERNATE = 3
 
 Metadata used for synthesized HDR graphics.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrMetadataType-ALTERNATE = 3--><!--Device-HdrMetadataType-ALTERNATE = 3-End-->
 

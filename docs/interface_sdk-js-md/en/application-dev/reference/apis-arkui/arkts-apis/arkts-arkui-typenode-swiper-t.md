@@ -1,20 +1,24 @@
 # Swiper
 
 ```TypeScript
-type Swiper = SwiperFrameNode
+type Swiper = TypedFrameNode<SwiperInterface, SwiperAttribute>
 ```
 
-Define the FrameNode type for Swiper.
+Represents a FrameNode of the **Swiper** type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Swiper = SwiperFrameNode--><!--Device-typeNode-type Swiper = SwiperFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Swiper = TypedFrameNode<SwiperInterface, SwiperAttribute>--><!--Device-typeNode-type Swiper = TypedFrameNode<SwiperInterface, SwiperAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SwiperFrameNode
+**Property type:** TypedFrameNode<SwiperInterface, SwiperAttribute>
 

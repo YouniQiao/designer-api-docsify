@@ -12,12 +12,13 @@ import { JSON } from '@kit.ArkTS';
 function remove(obj: object, property: string): void
 ```
 
-Removes a key from an ArkTS object. This API can be used for related operations after  
-[JSON.parse](arkts-arkts-json-parse-f.md#parse) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets).
+Removes a key from an ArkTS object. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md#parse) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

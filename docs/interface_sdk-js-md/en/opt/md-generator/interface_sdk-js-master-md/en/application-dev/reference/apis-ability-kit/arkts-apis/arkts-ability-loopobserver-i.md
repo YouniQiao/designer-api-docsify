@@ -1,9 +1,10 @@
 # LoopObserver
 
-The module defines an observer to listen for event processing timeout. It can be used as an input parameter in   
-[ErrorManager.on](./../@ohos.app.ability.errorManager:errorManager.on(type: 'loopObserver', timeout: number, observer: LoopObserver))to listen for the event processing timeout of the current application's main thread.
+The module defines an observer to listen for event processing timeout. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#on_error) to listen for the event processing timeout of the current application's main thread.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface LoopObserver--><!--Device-unnamed-export interface LoopObserver-End-->
 
@@ -18,6 +19,8 @@ onLoopTimeOut?(timeout: number): void
 Called when a timeout occurs for the main thread to process an event in the JS runtime.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

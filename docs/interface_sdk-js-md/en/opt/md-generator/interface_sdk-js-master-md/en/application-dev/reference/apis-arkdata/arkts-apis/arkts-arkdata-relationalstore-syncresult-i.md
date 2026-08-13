@@ -4,6 +4,8 @@ Indicates synchronization result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-relationalStore-interface SyncResult--><!--Device-relationalStore-interface SyncResult-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -26,6 +28,8 @@ Indicates the synchronization result code.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResult-readonly code:SyncResultCode--><!--Device-SyncResult-readonly code:SyncResultCode-End-->
@@ -44,6 +48,8 @@ Indicates the synchronization deviceId.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResult-readonly device:string--><!--Device-SyncResult-readonly device:string-End-->
@@ -61,6 +67,8 @@ Indicates detailed information about the synchronization results.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

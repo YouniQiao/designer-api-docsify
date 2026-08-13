@@ -1,0 +1,80 @@
+# EvalErrorConstructor
+
+**Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#ErrorConstructor)
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface EvalErrorConstructor--><!--Device-unnamed-interface EvalErrorConstructor-End-->
+
+## constructor
+
+```TypeScript
+new(message?: string): EvalError
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-EvalErrorConstructor-new(message?: string): EvalError--><!--Device-EvalErrorConstructor-new(message?: string): EvalError-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [EvalError](arkts-na-lib-es5-evalerror-i.md) |  |
+
+## constructor
+
+```TypeScript
+(message?: string): EvalError
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-EvalErrorConstructor-(message?: string): EvalError--><!--Device-EvalErrorConstructor-(message?: string): EvalError-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [EvalError](arkts-na-lib-es5-evalerror-i.md) |  |
+
+## prototype
+
+```TypeScript
+readonly prototype: EvalError
+```
+
+**Type:** [EvalError](arkts-na-lib-es5-evalerror-i.md)
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-EvalErrorConstructor-readonly prototype: EvalError--><!--Device-EvalErrorConstructor-readonly prototype: EvalError-End-->
+

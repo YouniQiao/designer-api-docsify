@@ -4,6 +4,8 @@ Enumerates battery levels.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-export enum BatteryCapacityLevel--><!--Device-batteryInfo-export enum BatteryCapacityLevel-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -17,6 +19,8 @@ LEVEL_NONE
 Unknown battery level.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_NONE--><!--Device-BatteryCapacityLevel-LEVEL_NONE-End-->
 
@@ -32,6 +36,8 @@ Full battery level.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_FULL--><!--Device-BatteryCapacityLevel-LEVEL_FULL-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -45,6 +51,8 @@ LEVEL_HIGH
 High battery level.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_HIGH--><!--Device-BatteryCapacityLevel-LEVEL_HIGH-End-->
 
@@ -60,6 +68,8 @@ Normal battery level.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_NORMAL--><!--Device-BatteryCapacityLevel-LEVEL_NORMAL-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -73,6 +83,8 @@ LEVEL_LOW
 Low battery level.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_LOW--><!--Device-BatteryCapacityLevel-LEVEL_LOW-End-->
 
@@ -88,6 +100,8 @@ Alarm battery level.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_WARNING--><!--Device-BatteryCapacityLevel-LEVEL_WARNING-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -102,6 +116,8 @@ Ultra-low battery level.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_CRITICAL--><!--Device-BatteryCapacityLevel-LEVEL_CRITICAL-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -115,6 +131,8 @@ LEVEL_SHUTDOWN
 Power-down battery level.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN--><!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN-End-->
 

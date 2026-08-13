@@ -4,7 +4,7 @@ Declare struct ExceptionPrompt higher-order component.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ExceptionPrompt--><!--Device-unnamed-export declare struct ExceptionPrompt-End-->
 
@@ -26,6 +26,8 @@ The build function is a member function that must return an ArkTS component type
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -42,7 +44,11 @@ onActionTextClick?: () => void
 
 Callback when click the icon button.
 
+**Type:** () =&gt; void
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,11 @@ onTipClick?: () => void
 
 Callback when clicking the text on the left.
 
+**Type:** () =&gt; void
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,7 +83,7 @@ Callback when clicking the text on the left.
 ## options
 
 ```TypeScript
-options: PromptOptions
+@Prop options: PromptOptions
 ```
 
 Configuration information of ExceptionPrompt.
@@ -82,12 +92,12 @@ Configuration information of ExceptionPrompt.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ExceptionPrompt-options: PromptOptions--><!--Device-ExceptionPrompt-options: PromptOptions-End-->
+<!--Device-ExceptionPrompt-@Prop options: PromptOptions--><!--Device-ExceptionPrompt-@Prop options: PromptOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

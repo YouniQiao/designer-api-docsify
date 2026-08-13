@@ -14,7 +14,9 @@ function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: st
 
 Obtains the path of the configuration file with the highest priority based on the provided follow mode.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string--><!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string-End-->
 
@@ -40,4 +42,4 @@ Obtains the path of the configuration file with the highest priority based on th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

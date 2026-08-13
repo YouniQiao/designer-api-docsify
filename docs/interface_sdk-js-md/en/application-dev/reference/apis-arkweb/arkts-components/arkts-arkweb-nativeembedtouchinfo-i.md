@@ -6,6 +6,8 @@ Provides touch information of the same-layer tag.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NativeEmbedTouchInfo--><!--Device-unnamed-declare interface NativeEmbedTouchInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Unique ID of the same-layer tag.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,6 +48,8 @@ Gesture event consumption result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeEmbedTouchInfo-result?: EventResult--><!--Device-NativeEmbedTouchInfo-result?: EventResult-End-->
@@ -63,6 +69,8 @@ Touch action information.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

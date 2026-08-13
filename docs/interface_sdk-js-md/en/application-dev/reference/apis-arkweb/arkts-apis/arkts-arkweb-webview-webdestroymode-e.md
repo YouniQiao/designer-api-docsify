@@ -1,10 +1,12 @@
 # WebDestroyMode
 
-Enum type supplied to [SetWebDestroyMode](SetWebDestroyMode) for indicating the web component destroy mode.
+Enumerates the destroy modes of the **Web** component. When the Web component is destroyed, the destroy mode affects the resource release time of the Web kernel, such as the JavaScript running context and rendering context.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebDestroyMode--><!--Device-webview-enum WebDestroyMode-End-->
 
@@ -16,11 +18,13 @@ Enum type supplied to [SetWebDestroyMode](SetWebDestroyMode) for indicating the 
 NORMAL_MODE = 0
 ```
 
-The normal destroy mode, when the web component triggers destroy,the resources will be released at the appropriate time.
+Normal mode. The system determines the destroy time of **Web** component resources.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebDestroyMode-NORMAL_MODE = 0--><!--Device-WebDestroyMode-NORMAL_MODE = 0-End-->
 
@@ -32,11 +36,13 @@ The normal destroy mode, when the web component triggers destroy,the resources w
 FAST_MODE = 1
 ```
 
-The fast destroy mode, when the web component triggers destroy, the resources will be immediately released.
+Quick mode. When the **Web** component is destroyed, the related internal resources are destroyed immediately.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebDestroyMode-FAST_MODE = 1--><!--Device-WebDestroyMode-FAST_MODE = 1-End-->
 

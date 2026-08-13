@@ -1,9 +1,10 @@
 # @ohos.multimedia.audioHaptic
 
-音振协同
+音振协同，表示在播放声音时，可同步发起振动。可用于来电通知、消息提醒等场景。 **设备行为差异：** 若设备无振动器件，将不会产生振动效果。
 
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace audioHaptic--><!--Device-unnamed-declare namespace audioHaptic-End-->
 
@@ -15,7 +16,7 @@
 
 | 名称 |
 | --- |
-| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager) |
+| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager) |
 
 ### 接口
 

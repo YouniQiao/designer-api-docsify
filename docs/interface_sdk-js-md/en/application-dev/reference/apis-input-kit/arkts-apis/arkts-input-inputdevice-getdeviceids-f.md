@@ -12,12 +12,7 @@ import { inputDevice } from '@kit.InputKit';
 function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead.
+Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead.
 
 **Since:** 8
 
@@ -25,7 +20,7 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceList](ohos.multimodalInput.inputDevice#getDeviceList)
+**Substitutes:** getDeviceList
 
 <!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void--><!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -35,7 +30,7 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -70,12 +65,7 @@ struct Index {
 function getDeviceIds(): Promise<Array<number>>
 ```
 
-Obtains the IDs of all input devices. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead.
+Obtains the IDs of all input devices. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead.
 
 **Since:** 8
 
@@ -83,7 +73,7 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceList](ohos.multimodalInput.inputDevice#getDeviceList)
+**Substitutes:** getDeviceList
 
 <!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>--><!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>-End-->
 

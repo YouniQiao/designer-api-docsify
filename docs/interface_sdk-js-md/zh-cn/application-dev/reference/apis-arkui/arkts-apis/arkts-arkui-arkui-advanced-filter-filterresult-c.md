@@ -1,10 +1,12 @@
 # FilterResult
 
-This parameter specifies the selection result of a filtering dimension.The index starts from 0.
+This parameter specifies the selection result of a filtering dimension. The index starts from 0.
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class FilterResult--><!--Device-unnamed-export declare class FilterResult-End-->
 
@@ -16,17 +18,15 @@ This parameter specifies the selection result of a filtering dimension.The index
 index: number
 ```
 
-该维度筛选项选中项目的索引值。
-
-取值范围：大于等于-1的整数。
-
-默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
+该维度筛选项选中项目的索引值。 取值范围：大于等于-1的整数。 默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,17 +42,15 @@ index: number
 name: ResourceStr
 ```
 
-筛选项维度名称。
-
-默认值：空字符串。
-
-**说明：**如果文本大于列宽时，文本被截断。
+筛选项维度名称。 默认值：空字符串。 **说明：**如果文本大于列宽时，文本被截断。
 
 **类型：** ResourceStr
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,17 +66,15 @@ name: ResourceStr
 value: ResourceStr
 ```
 
-该维度筛选项选中项目的值。
-
-默认值：空字符串。
-
-**说明：**如果文本大于列宽时，文本被截断。
+该维度筛选项选中项目的值。 默认值：空字符串。 **说明：**如果文本大于列宽时，文本被截断。
 
 **类型：** ResourceStr
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

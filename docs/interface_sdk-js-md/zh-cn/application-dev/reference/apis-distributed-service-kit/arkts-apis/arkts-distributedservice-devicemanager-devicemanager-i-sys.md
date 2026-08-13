@@ -32,7 +32,7 @@ authenticateDevice(
 
 **废弃版本：** 11
 
-**替代接口：** [bindTarget](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.bindTarget(deviceId:)
+**替代接口：** [bindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindTarget)(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback&lt;{deviceId: string;}&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -48,18 +48,18 @@ authenticateDevice(
 | --- | --- | --- | --- |
 | deviceInfo | DeviceInfo | 是 | 设备信息。 |
 | authParam | AuthParam | 是 | 认证参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -151,18 +151,18 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | queryInfo | string | 是 | 删除凭据信息。长度范围1~64000字符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ resultInfo: string }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -227,18 +227,18 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | 设备的网络标识。长度范围1~255字符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | 是 | 获取指定设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceInfo&gt; | 是 | 获取指定设备信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -300,12 +300,12 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -348,18 +348,18 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | 是 | 获取本地设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceInfo&gt; | 是 | 获取本地设备信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -414,11 +414,11 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -465,13 +465,13 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -499,7 +499,7 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 **废弃版本：** 11
 
-**替代接口：** [getAvailableDeviceList](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceList(callback:)
+**替代接口：** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceList)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -513,18 +513,18 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceInfo&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;DeviceInfo&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -578,11 +578,11 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -629,13 +629,13 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -687,14 +687,14 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -735,18 +735,18 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | credentialInfo | string | 是 | 导入凭据信息。长度范围1~64000字符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ resultInfo: string }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -811,128 +811,7 @@ try {
 }
 ```
 
-## off('uiStateChange')
-
-```TypeScript
-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
-```
-
-取消ui状态变更回调。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** 11
-
-**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
-
-**需要权限：** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'uiStateChange' | 是 | 取消注册的设备管理器 ui 状态回调，固定为uiStateChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | 否 |  |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-## 示例
-
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.off('uiStateChange');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('deviceStateChange')
-
-```TypeScript
-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
-```
-
-取消注册设备状态回调。
-
-**起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** 11
-
-**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
-
-**需要权限：** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'deviceStateChange' | 是 | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 否 |  |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-## 示例
-
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.off('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('deviceFound')
+## off_deviceFound
 
 ```TypeScript
 off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void
@@ -946,7 +825,7 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 
 **废弃版本：** 11
 
-**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**替代接口：** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -961,18 +840,18 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | 是 | 取消注册设备发现回调，固定为deviceFound。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -1000,7 +879,75 @@ try {
 }
 ```
 
-## off('discoverFail')
+## off_deviceStateChange
+
+```TypeScript
+off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
+```
+
+取消注册设备状态回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** 11
+
+**替代接口：** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'deviceStateChange' | 是 | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 否 |  |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  action: deviceManager.DeviceStateChangeAction = 0;
+  device: deviceManager.DeviceInfo = {
+    deviceId: "",
+    deviceName: "",
+    deviceType: 0,
+    networkId: "",
+    range: 0,
+    authForm:0
+  };
+}
+
+try {
+  dmInstance.off('deviceStateChange', (data: Data) => {
+    console.info('deviceStateChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## off_discoverFail
 
 ```TypeScript
 off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void
@@ -1014,7 +961,7 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 
 **废弃版本：** 11
 
-**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**替代接口：** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1029,18 +976,18 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | 是 | 取消注册设备发现失败回调，固定为discoverFail。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, reason: number }&gt; | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1060,64 +1007,7 @@ try {
 }
 ```
 
-## off('publishSuccess')
-
-```TypeScript
-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
-```
-
-取消注册设备发布成功回调。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** 11
-
-**需要权限：** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'publishSuccess' | 是 | 取消注册设备发布成功回调，固定为publishSuccess。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | 否 |  |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-## 示例
-
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.off('publishSuccess', (data: Data) => {
-    console.info('publishSuccess' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('publishFail')
+## off_publishFail
 
 ```TypeScript
 off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void
@@ -1144,18 +1034,18 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishFail' | 是 | 取消注册设备发布失败回调，固定为publishFail。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number, reason: number }&gt; | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1175,7 +1065,64 @@ try {
 }
 ```
 
-## off('serviceDie')
+## off_publishSuccess
+
+```TypeScript
+off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
+```
+
+取消注册设备发布成功回调。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 11
+
+**需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'publishSuccess' | 是 | 取消注册设备发布成功回调，固定为publishSuccess。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number }&gt; | 否 |  |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  publishId: number = 0;
+}
+
+try {
+  dmInstance.off('publishSuccess', (data: Data) => {
+    console.info('publishSuccess' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## off_serviceDie
 
 ```TypeScript
 off(type: 'serviceDie', callback?: () => void): void
@@ -1189,7 +1136,7 @@ off(type: 'serviceDie', callback?: () => void): void
 
 **废弃版本：** 11
 
-**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**替代接口：** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1210,12 +1157,12 @@ off(type: 'serviceDie', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1230,13 +1177,13 @@ try {
 }
 ```
 
-## on('uiStateChange')
+## off_uiStateChange
 
 ```TypeScript
-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void
+off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 ```
 
-ui状态变更回调。
+取消ui状态变更回调。
 
 **起始版本：** 9
 
@@ -1244,11 +1191,11 @@ ui状态变更回调。
 
 **废弃版本：** 11
 
-**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**替代接口：** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
-<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1258,113 +1205,32 @@ ui状态变更回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'uiStateChange' | 是 | 注册的设备管理器 ui 状态回调，以便在状态改变时通知应用，固定为uiStateChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | 是 |  |
+| type | 'uiStateChange' | 是 | 取消注册的设备管理器 ui 状态回调，固定为uiStateChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string }&gt; | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 
-class Data {
-  param: string = "";
-}
-
-interface TmpStr {
-  verifyFailed: boolean;
-}
-
 try {
-  dmInstance.on('uiStateChange', (data: Data) => {
-    console.info("uiStateChange executed, dialog closed" + JSON.stringify(data));
-    let tmpStr: TmpStr = JSON.parse(data.param);
-    let isShow = tmpStr.verifyFailed;
-    console.info("uiStateChange executed, dialog closed" + isShow);
-  });
+  dmInstance.off('uiStateChange');
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
 
-## on('deviceStateChange')
-
-```TypeScript
-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
-```
-
-注册设备状态回调。
-
-**起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** 11
-
-**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
-
-**需要权限：** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'deviceStateChange' | 是 | 注册设备状态回调，固定为deviceStateChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 是 |  |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-## 示例
-
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.on('deviceStateChange', (data: Data) => {
-    console.info("deviceStateChange on:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## on('deviceFound')
+## on_deviceFound
 
 ```TypeScript
 on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void
@@ -1378,7 +1244,7 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 
 **废弃版本：** 11
 
-**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1393,18 +1259,18 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | 是 | 注册设备发现回调，以便在发现周边设备时通知应用程序，固定为deviceFound。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -1432,7 +1298,75 @@ try {
 }
 ```
 
-## on('discoverFail')
+## on_deviceStateChange
+
+```TypeScript
+on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
+```
+
+注册设备状态回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** 11
+
+**替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'deviceStateChange' | 是 | 注册设备状态回调，固定为deviceStateChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 是 |  |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  action: deviceManager.DeviceStateChangeAction = 0;
+  device: deviceManager.DeviceInfo = {
+    deviceId: "",
+    deviceName: "",
+    deviceType: 0,
+    networkId: "",
+    range: 0,
+    authForm:0
+  };
+}
+
+try {
+  dmInstance.on('deviceStateChange', (data: Data) => {
+    console.info("deviceStateChange on:" + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_discoverFail
 
 ```TypeScript
 on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void
@@ -1446,7 +1380,7 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 
 **废弃版本：** 11
 
-**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1461,18 +1395,18 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | 是 | 注册设备发现失败回调，以便在发现周边设备失败时通知应用程序，固定为discoverFail。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, reason: number }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1492,64 +1426,7 @@ try {
 }
 ```
 
-## on('publishSuccess')
-
-```TypeScript
-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
-```
-
-注册发布设备发现回调监听。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** 11
-
-**需要权限：** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'publishSuccess' | 是 | 注册发布设备成功回调，以便将发布成功时通知应用程序，固定为publishSuccess。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | 是 |  |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-## 示例
-
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.on('publishSuccess', (data: Data) => {
-    console.info("publishSuccess:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## on('publishFail')
+## on_publishFail
 
 ```TypeScript
 on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void
@@ -1576,18 +1453,18 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishFail' | 是 | 注册设备发布失败回调，以便在发布设备失败时通知应用程序，固定为publishFail。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number, reason: number }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1607,7 +1484,64 @@ try {
 }
 ```
 
-## on('serviceDie')
+## on_publishSuccess
+
+```TypeScript
+on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
+```
+
+注册发布设备发现回调监听。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 11
+
+**需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'publishSuccess' | 是 | 注册发布设备成功回调，以便将发布成功时通知应用程序，固定为publishSuccess。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number }&gt; | 是 |  |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  publishId: number = 0;
+}
+
+try {
+  dmInstance.on('publishSuccess', (data: Data) => {
+    console.info("publishSuccess:" + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_serviceDie
 
 ```TypeScript
 on(type: 'serviceDie', callback: () => void): void
@@ -1621,7 +1555,7 @@ on(type: 'serviceDie', callback: () => void): void
 
 **废弃版本：** 11
 
-**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1642,12 +1576,12 @@ on(type: 'serviceDie', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1659,6 +1593,72 @@ try {
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error("serviceDie errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_uiStateChange
+
+```TypeScript
+on(type: 'uiStateChange', callback: Callback<{ param: string }>): void
+```
+
+ui状态变更回调。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 11
+
+**替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
+
+**需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'uiStateChange' | 是 | 注册的设备管理器 ui 状态回调，以便在状态改变时通知应用，固定为uiStateChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string }&gt; | 是 |  |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  param: string = "";
+}
+
+interface TmpStr {
+  verifyFailed: boolean;
+}
+
+try {
+  dmInstance.on('uiStateChange', (data: Data) => {
+    console.info("uiStateChange executed, dialog closed" + JSON.stringify(data));
+    let tmpStr: TmpStr = JSON.parse(data.param);
+    let isShow = tmpStr.verifyFailed;
+    console.info("uiStateChange executed, dialog closed" + isShow);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
 
@@ -1694,15 +1694,15 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [11600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600105-发布业务不可用) | Publish unavailable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [11600105](../../apis-distributedservice-kit/errorcode-device-manager.md#11600105-发布业务不可用) | Publish unavailable. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1759,13 +1759,13 @@ release(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1805,18 +1805,18 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | requestInfo | string | 是 | 请求凭据信息。最大长度255字符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ registerInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ registerInfo: string }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1884,13 +1884,13 @@ setUserOperation(operateAction: number, params: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified params is greater than 255. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified params is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1926,7 +1926,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 **废弃版本：** 11
 
-**替代接口：** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**替代接口：** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1946,15 +1946,15 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2002,7 +2002,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 **废弃版本：** 11
 
-**替代接口：** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**替代接口：** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2023,15 +2023,15 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2121,14 +2121,14 @@ stopDeviceDiscovery(subscribeId: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2177,14 +2177,14 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2245,14 +2245,14 @@ unPublishDeviceDiscovery(publishId: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2294,18 +2294,18 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | authInfo | [AuthInfo](arkts-distributedservice-devicemanager-authinfo-i-sys.md) | 是 | 认证信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, level: number }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceId: string, level: number }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
-示例中的初始化请参见[deviceManager.createDeviceManager](#devicemanagercreatedevicemanager)。
+示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

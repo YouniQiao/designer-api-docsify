@@ -2,7 +2,9 @@
 
 Enumerates USB port mode types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum PortModeType--><!--Device-usbManager-export enum PortModeType-End-->
 
@@ -18,7 +20,9 @@ NONE = 0
 
 No function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortModeType-NONE = 0--><!--Device-PortModeType-NONE = 0-End-->
 
@@ -34,7 +38,9 @@ UFP = 1
 
 Upstream facing port, which functions as the sink of power supply
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortModeType-UFP = 1--><!--Device-PortModeType-UFP = 1-End-->
 
@@ -50,7 +56,9 @@ DFP = 2
 
 Downstream facing port, which functions as the source of power supply
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortModeType-DFP = 2--><!--Device-PortModeType-DFP = 2-End-->
 
@@ -66,7 +74,9 @@ DRP = 3
 
 Dynamic reconfiguration port (DRP), which can function as the DFP (host) or UFP (device). It is not supported currently.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortModeType-DRP = 3--><!--Device-PortModeType-DRP = 3-End-->
 
@@ -82,7 +92,9 @@ NUM_MODES = 4
 
 Not supported currently
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortModeType-NUM_MODES = 4--><!--Device-PortModeType-NUM_MODES = 4-End-->
 

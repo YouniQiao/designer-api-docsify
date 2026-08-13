@@ -1,12 +1,22 @@
 # @ohos.fastbuffer
 
-FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长度的字节序列，是专门存放二进制数据的缓冲区。
+/*
+ Copyright (c) 2025 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (The type of "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-FastBuffer通过from构造时，仅支持FastBuffer、Uint8Array、string、Array、ArrayBuffer和SharedArrayBuffer类型的参数。
-
-需要高效处理二进制数据（如图片、文件传输、网络通信等）时，推荐使用FastBuffer以获得更好的性能。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace fastbuffer--><!--Device-unnamed-declare namespace fastbuffer-End-->
 
@@ -19,17 +29,17 @@ FastBuffer通过from构造时，仅支持FastBuffer、Uint8Array、string、Arra
 | 名称 |
 | --- |
 | [alloc](arkts-arkts-fastbuffer-alloc-f.md#alloc) |
-| [allocUninitialized](arkts-arkts-fastbuffer-allocuninitialized-f.md#allocuninitialized) |
-| [allocUninitializedFromPool](arkts-arkts-fastbuffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool) |
-| [byteLength](arkts-arkts-fastbuffer-bytelength-f.md#bytelength) |
+| [allocUninitialized](arkts-arkts-fastbuffer-allocuninitialized-f.md#allocUninitialized) |
+| [allocUninitializedFromPool](arkts-arkts-fastbuffer-allocuninitializedfrompool-f.md#allocUninitializedFromPool) |
+| [byteLength](arkts-arkts-fastbuffer-bytelength-f.md#byteLength) |
 | [compare](arkts-arkts-fastbuffer-compare-f.md#compare) |
 | [concat](arkts-arkts-fastbuffer-concat-f.md#concat) |
 | [from](arkts-arkts-fastbuffer-from-f.md#from) |
-| [from](arkts-arkts-fastbuffer-from-f.md#from-1) |
-| [from](arkts-arkts-fastbuffer-from-f.md#from-2) |
-| [from](arkts-arkts-fastbuffer-from-f.md#from-3) |
-| [isBuffer](arkts-arkts-fastbuffer-isbuffer-f.md#isbuffer) |
-| [isEncoding](arkts-arkts-fastbuffer-isencoding-f.md#isencoding) |
+| [from](arkts-arkts-fastbuffer-from-f.md#from) |
+| [from](arkts-arkts-fastbuffer-from-f.md#from) |
+| [from](arkts-arkts-fastbuffer-from-f.md#from) |
+| [isBuffer](arkts-arkts-fastbuffer-isbuffer-f.md#isBuffer) |
+| [isEncoding](arkts-arkts-fastbuffer-isencoding-f.md#isEncoding) |
 | [transcode](arkts-arkts-fastbuffer-transcode-f.md#transcode) |
 
 ### 类

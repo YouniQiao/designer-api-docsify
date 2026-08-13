@@ -8,7 +8,9 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 设置当前应用指定的快捷方式是否显示。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>-End-->
 
@@ -31,7 +33,7 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17700070](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
+| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
 
 ## 示例
 

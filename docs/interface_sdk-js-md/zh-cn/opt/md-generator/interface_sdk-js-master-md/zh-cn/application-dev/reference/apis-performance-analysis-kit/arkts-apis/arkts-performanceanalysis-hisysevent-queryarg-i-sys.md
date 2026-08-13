@@ -2,7 +2,9 @@
 
 系统事件查询参数对象接口。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiSysEvent-interface QueryArg--><!--Device-hiSysEvent-interface QueryArg-End-->
 
@@ -20,7 +22,9 @@ beginTime: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QueryArg-beginTime: long--><!--Device-QueryArg-beginTime: long-End-->
 
@@ -38,7 +42,9 @@ endTime: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QueryArg-endTime: long--><!--Device-QueryArg-endTime: long-End-->
 
@@ -49,16 +55,18 @@ endTime: number
 ## fromSeq
 
 ```TypeScript
-fromSeq?: number
+fromSeq?: number | null | undefined
 ```
 
 查询的系统事件起始序列号，默认值为-1。
 
-**类型：** number
+**类型：** number \| null \| undefined
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-QueryArg-fromSeq?: long--><!--Device-QueryArg-fromSeq?: long-End-->
+**废弃版本：** -1
+
+<!--Device-QueryArg-fromSeq?: long | null | undefined--><!--Device-QueryArg-fromSeq?: long | null | undefined-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -74,7 +82,9 @@ maxEvents: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QueryArg-maxEvents: long--><!--Device-QueryArg-maxEvents: long-End-->
 
@@ -85,16 +95,18 @@ maxEvents: number
 ## toSeq
 
 ```TypeScript
-toSeq?: number
+toSeq?: number | null | undefined
 ```
 
 查询的系统事件结束序列号，默认值为-1。
 
-**类型：** number
+**类型：** number \| null \| undefined
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-QueryArg-toSeq?: long--><!--Device-QueryArg-toSeq?: long-End-->
+**废弃版本：** -1
+
+<!--Device-QueryArg-toSeq?: long | null | undefined--><!--Device-QueryArg-toSeq?: long | null | undefined-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

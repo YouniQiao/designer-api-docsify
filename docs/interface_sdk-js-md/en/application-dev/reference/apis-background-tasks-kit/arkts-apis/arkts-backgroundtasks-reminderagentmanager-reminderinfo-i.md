@@ -2,9 +2,11 @@
 
 Defines the reminder information.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface ReminderInfo--><!--Device-reminderAgentManager-interface ReminderInfo-End-->
 
@@ -24,11 +26,13 @@ reminderId: int
 
 Reminder ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderInfo-reminderId: int--><!--Device-ReminderInfo-reminderId: int-End-->
 
@@ -44,9 +48,11 @@ Request used for publishing the reminder.
 
 **Type:** ReminderRequest
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderInfo-reminderReq: ReminderRequest--><!--Device-ReminderInfo-reminderReq: ReminderRequest-End-->
 

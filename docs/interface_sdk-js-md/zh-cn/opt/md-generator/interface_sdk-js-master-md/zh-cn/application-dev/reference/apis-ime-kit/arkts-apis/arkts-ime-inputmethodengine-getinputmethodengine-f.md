@@ -6,9 +6,7 @@
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#InputMethodEngine)（输入法引擎）。
-
-输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。
+获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#InputMethodEngine)（输入法引擎）。 输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。
 
 **起始版本：** 8
 

@@ -2,7 +2,9 @@
 
 Wi-Fi IPv6 information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface Ipv6Info--><!--Device-wifiManager-interface Ipv6Info-End-->
 
@@ -24,7 +26,9 @@ The gateway of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-gateway: string--><!--Device-Ipv6Info-gateway: string-End-->
 
@@ -40,7 +44,9 @@ The global IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-globalIpv6Address: string--><!--Device-Ipv6Info-globalIpv6Address: string-End-->
 
@@ -56,7 +62,9 @@ The link IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-linkIpv6Address: string--><!--Device-Ipv6Info-linkIpv6Address: string-End-->
 
@@ -72,7 +80,9 @@ The network mask of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-netmask: string--><!--Device-Ipv6Info-netmask: string-End-->
 
@@ -88,7 +98,9 @@ The primary DNS server IPV6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-primaryDNS: string--><!--Device-Ipv6Info-primaryDNS: string-End-->
 
@@ -104,7 +116,9 @@ The rand Global IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-randomGlobalIpv6Address: string--><!--Device-Ipv6Info-randomGlobalIpv6Address: string-End-->
 
@@ -120,7 +134,9 @@ The rand unique IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-randomUniqueIpv6Address?: string--><!--Device-Ipv6Info-randomUniqueIpv6Address?: string-End-->
 
@@ -136,7 +152,9 @@ The secondary DNS server IPV6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-secondDNS: string--><!--Device-Ipv6Info-secondDNS: string-End-->
 
@@ -152,7 +170,9 @@ The unique IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Info-uniqueIpv6Address?: string--><!--Device-Ipv6Info-uniqueIpv6Address?: string-End-->
 

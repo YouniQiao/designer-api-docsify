@@ -2,9 +2,11 @@
 
 Defines the state for download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebDownloadState--><!--Device-webview-enum WebDownloadState-End-->
 
@@ -18,9 +20,13 @@ IN_PROGRESS = 0
 
 The web download is in progress.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-IN_PROGRESS = 0--><!--Device-WebDownloadState-IN_PROGRESS = 0-End-->
 
@@ -34,9 +40,13 @@ COMPLETED
 
 The web download has been completed.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-COMPLETED--><!--Device-WebDownloadState-COMPLETED-End-->
 
@@ -50,9 +60,13 @@ CANCELED
 
 The web download was canceled.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-CANCELED--><!--Device-WebDownloadState-CANCELED-End-->
 
@@ -66,9 +80,13 @@ INTERRUPTED
 
 The web download was interrupted.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-INTERRUPTED--><!--Device-WebDownloadState-INTERRUPTED-End-->
 
@@ -82,9 +100,13 @@ PENDING
 
 The web download is pending.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-PENDING--><!--Device-WebDownloadState-PENDING-End-->
 
@@ -98,9 +120,13 @@ PAUSED
 
 The web download has been paused.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-PAUSED--><!--Device-WebDownloadState-PAUSED-End-->
 
@@ -114,9 +140,13 @@ UNKNOWN
 
 Unknown state.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-UNKNOWN--><!--Device-WebDownloadState-UNKNOWN-End-->
 

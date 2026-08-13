@@ -6,6 +6,8 @@ Defines the custom event dispatch result. You can influence event dispatch by re
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class TouchResult--><!--Device-unnamed-declare class TouchResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,16 +18,15 @@ Defines the custom event dispatch result. You can influence event dispatch by re
 id?: string
 ```
 
-Unique ID of the child component.
-
-If **strategy** is set to **TouchTestStrategy.DEFAULT**, **id** is optional. If **strategy** is set to  
-**TouchTestStrategy.FORWARD_COMPETITION** or **TouchTestStrategy.FORWARD**, **id** is mandatory. If **id** is not returned, the strategy **TouchTestStrategy.DEFAULT** is used.
+Unique ID of the child component. If **strategy** is set to **TouchTestStrategy.DEFAULT**, **id** is optional. If **strategy** is set to **TouchTestStrategy.FORWARD_COMPETITION** or **TouchTestStrategy.FORWARD**, **id** is mandatory. If **id** is not returned, the strategy **TouchTestStrategy.DEFAULT** is used.
 
 **Type:** string
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +49,8 @@ Event dispatch strategy.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

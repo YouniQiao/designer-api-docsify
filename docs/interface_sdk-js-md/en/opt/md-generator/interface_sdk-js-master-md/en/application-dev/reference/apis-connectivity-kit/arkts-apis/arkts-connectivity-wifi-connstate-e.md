@@ -6,7 +6,7 @@ The state of Wi-Fi connection enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ConnState](ohos.wifiManager/wifiManager.ConnState)
+**Substitutes:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md#ConnState)
 
 <!--Device-wifi-export enum ConnState--><!--Device-wifi-export enum ConnState-End-->
 
@@ -24,7 +24,7 @@ The device is searching for an available AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCANNING](ohos.wifiManager/wifiManager.ConnState.SCANNING)
+**Substitutes:** [SCANNING](arkts-connectivity-wifimanager-connstate-e.md#SCANNING)
 
 <!--Device-ConnState-SCANNING--><!--Device-ConnState-SCANNING-End-->
 
@@ -42,7 +42,7 @@ The Wi-Fi connection is being set up.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CONNECTING](ohos.wifiManager/wifiManager.ConnState.CONNECTING)
+**Substitutes:** [CONNECTING](arkts-connectivity-wifimanager-connstate-e.md#CONNECTING)
 
 <!--Device-ConnState-CONNECTING--><!--Device-ConnState-CONNECTING-End-->
 
@@ -60,7 +60,7 @@ The Wi-Fi connection is being authenticated.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AUTHENTICATING](ohos.wifiManager/wifiManager.ConnState.AUTHENTICATING)
+**Substitutes:** [AUTHENTICATING](arkts-connectivity-wifimanager-connstate-e.md#AUTHENTICATING)
 
 <!--Device-ConnState-AUTHENTICATING--><!--Device-ConnState-AUTHENTICATING-End-->
 
@@ -78,7 +78,7 @@ The IP address of the Wi-Fi connection is being obtained.
 
 **Deprecated since:** 9
 
-**Substitutes:** [OBTAINING_IPADDR](ohos.wifiManager/wifiManager.ConnState.OBTAINING_IPADDR)
+**Substitutes:** [OBTAINING_IPADDR](arkts-connectivity-wifimanager-connstate-e.md#OBTAINING_IPADDR)
 
 <!--Device-ConnState-OBTAINING_IPADDR--><!--Device-ConnState-OBTAINING_IPADDR-End-->
 
@@ -96,7 +96,7 @@ The Wi-Fi connection has been set up.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CONNECTED](ohos.wifiManager/wifiManager.ConnState.CONNECTED)
+**Substitutes:** [CONNECTED](arkts-connectivity-wifimanager-connstate-e.md#CONNECTED)
 
 <!--Device-ConnState-CONNECTED--><!--Device-ConnState-CONNECTED-End-->
 
@@ -114,7 +114,7 @@ The Wi-Fi connection is being torn down.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DISCONNECTING](ohos.wifiManager/wifiManager.ConnState.DISCONNECTING)
+**Substitutes:** [DISCONNECTING](arkts-connectivity-wifimanager-connstate-e.md#DISCONNECTING)
 
 <!--Device-ConnState-DISCONNECTING--><!--Device-ConnState-DISCONNECTING-End-->
 
@@ -132,7 +132,7 @@ The Wi-Fi connection has been torn down.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DISCONNECTED](ohos.wifiManager/wifiManager.ConnState.DISCONNECTED)
+**Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-connstate-e.md#DISCONNECTED)
 
 <!--Device-ConnState-DISCONNECTED--><!--Device-ConnState-DISCONNECTED-End-->
 
@@ -150,7 +150,7 @@ Failed to set up the Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNKNOWN](ohos.wifiManager/wifiManager.ConnState.UNKNOWN)
+**Substitutes:** [UNKNOWN](arkts-connectivity-wifimanager-connstate-e.md#UNKNOWN)
 
 <!--Device-ConnState-UNKNOWN--><!--Device-ConnState-UNKNOWN-End-->
 

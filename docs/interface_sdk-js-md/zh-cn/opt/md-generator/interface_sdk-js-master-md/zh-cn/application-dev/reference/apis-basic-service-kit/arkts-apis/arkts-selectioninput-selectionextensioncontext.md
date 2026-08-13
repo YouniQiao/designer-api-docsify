@@ -1,9 +1,11 @@
-# @ohos.selectionInput.SelectionExtensionContext(划词扩展上下文)
+# @ohos.selectionInput.SelectionExtensionContext
 
 ## 汇总
 
-### 类
+<!--Del-->
+### 类（系统接口）
 
 | 名称 |
 | --- |
-| [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md) |
+| [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md) |
+<!--DelEnd-->

@@ -2,9 +2,11 @@
 
 Enumerates the filter modes.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum FilterMode--><!--Device-drawing-enum FilterMode-End-->
 
@@ -18,9 +20,11 @@ FILTER_MODE_NEAREST = 0
 
 Nearest filter mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FilterMode-FILTER_MODE_NEAREST = 0--><!--Device-FilterMode-FILTER_MODE_NEAREST = 0-End-->
 
@@ -34,9 +38,11 @@ FILTER_MODE_LINEAR = 1
 
 Linear filter mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FilterMode-FILTER_MODE_LINEAR = 1--><!--Device-FilterMode-FILTER_MODE_LINEAR = 1-End-->
 

@@ -2,7 +2,9 @@
 
 Describes the image embedding functions of the multi-modal embedding model.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-interface ImageEmbedding--><!--Device-intelligence-interface ImageEmbedding-End-->
 
@@ -20,9 +22,11 @@ import { intelligence } from '@kit.ArkData';
 getEmbedding(image: Image): Promise<Array<number>>
 ```
 
-Obtains the embedding vector of the given image.The model can handle images below 20 MB in size in a single inference.
+Obtains the embedding vector of the given image. The model can handle images below 20 MB in size in a single inference.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>--><!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>-End-->
 
@@ -44,9 +48,9 @@ Obtains the embedding vector of the given image.The model can handle images belo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 ## Examples
 
@@ -72,7 +76,9 @@ loadModel(): Promise<void>
 
 Loads this image embedding model. If the loading fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImageEmbedding-loadModel(): Promise<void>--><!--Device-ImageEmbedding-loadModel(): Promise<void>-End-->
 
@@ -88,8 +94,8 @@ Loads this image embedding model. If the loading fails, an error code is returne
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 ## Examples
 
@@ -113,7 +119,9 @@ releaseModel(): Promise<void>
 
 Releases this image embedding model. If the releasing fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImageEmbedding-releaseModel(): Promise<void>--><!--Device-ImageEmbedding-releaseModel(): Promise<void>-End-->
 
@@ -129,8 +137,8 @@ Releases this image embedding model. If the releasing fails, an error code is re
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 ## Examples
 

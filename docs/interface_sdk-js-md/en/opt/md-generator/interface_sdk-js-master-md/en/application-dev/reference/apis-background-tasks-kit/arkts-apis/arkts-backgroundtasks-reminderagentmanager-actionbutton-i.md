@@ -2,7 +2,9 @@
 
 Describes the button displayed for a reminder.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
 
@@ -24,7 +26,9 @@ Text on the button.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
 
@@ -40,7 +44,9 @@ Resource ID of the title. This parameter is used to read the title information a
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActionButton-titleResource?: string--><!--Device-ActionButton-titleResource?: string-End-->
 
@@ -56,7 +62,9 @@ Button type.
 
 **Type:** ActionButtonType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
 

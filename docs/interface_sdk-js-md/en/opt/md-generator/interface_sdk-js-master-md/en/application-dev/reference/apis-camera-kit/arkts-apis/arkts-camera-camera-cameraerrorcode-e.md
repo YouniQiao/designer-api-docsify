@@ -1,10 +1,10 @@
 # CameraErrorCode
 
-Enumerates the camera error codes,
+Enumerates the camera error codes, which are returned when an API call is incorrect or the **on()** API is used to listen for the error status.
 
-which are returned when an API call is incorrect or the **on()** API is used to listen for the error status.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-camera-enum CameraErrorCode--><!--Device-camera-enum CameraErrorCode-End-->
 
@@ -18,7 +18,9 @@ INVALID_ARGUMENT = 7400101
 
 A parameter is missing or the parameter type is incorrect.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,7 +36,9 @@ OPERATION_NOT_ALLOWED = 7400102
 
 The operation is not allowed.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -50,7 +54,9 @@ SESSION_NOT_CONFIG = 7400103
 
 The session is not configured.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -66,7 +72,9 @@ SESSION_NOT_RUNNING = 7400104
 
 The session is not running.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -82,7 +90,9 @@ SESSION_CONFIG_LOCKED = 7400105
 
 The session configuration is locked.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -98,7 +108,9 @@ DEVICE_SETTING_LOCKED = 7400106
 
 The device setting is locked.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -114,7 +126,9 @@ CONFLICT_CAMERA = 7400107
 
 The device is already started.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -130,7 +144,9 @@ DEVICE_DISABLED = 7400108
 
 The camera is disabled for security reasons.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -146,7 +162,9 @@ DEVICE_PREEMPTED = 7400109
 
 The camera is preempted.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -162,7 +180,9 @@ UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110
 
 The configuration conflicts with the current configuration.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -178,7 +198,9 @@ SERVICE_FATAL_ERROR = 7400201
 
 The camera service is abnormal.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

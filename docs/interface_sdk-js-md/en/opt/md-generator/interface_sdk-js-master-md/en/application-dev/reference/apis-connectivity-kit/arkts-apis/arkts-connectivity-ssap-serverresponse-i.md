@@ -4,6 +4,8 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-ssap-interface ServerResponse--><!--Device-ssap-interface ServerResponse-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -20,11 +22,13 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ Indicates the device address.The length must be 17, The value consists of hexade
 requestId: number
 ```
 
-The request ID.The value range is all integers.
+The request ID. The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,6 +67,8 @@ Indicates the response data.
 **Type:** ArrayBuffer
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

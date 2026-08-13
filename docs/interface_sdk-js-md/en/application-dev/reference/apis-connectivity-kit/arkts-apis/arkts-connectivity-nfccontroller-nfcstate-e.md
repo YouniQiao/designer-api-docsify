@@ -2,9 +2,11 @@
 
 NFC changed states.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-nfcController-enum NfcState--><!--Device-nfcController-enum NfcState-End-->
 
@@ -18,11 +20,13 @@ STATE_OFF = 1
 
 Indicates that NFC is disabled.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcState-STATE_OFF = 1--><!--Device-NfcState-STATE_OFF = 1-End-->
 
@@ -36,11 +40,13 @@ STATE_TURNING_ON = 2
 
 Indicates that NFC is being enabled.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcState-STATE_TURNING_ON = 2--><!--Device-NfcState-STATE_TURNING_ON = 2-End-->
 
@@ -54,11 +60,13 @@ STATE_ON = 3
 
 Indicates that NFC is enabled.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcState-STATE_ON = 3--><!--Device-NfcState-STATE_ON = 3-End-->
 
@@ -72,11 +80,13 @@ STATE_TURNING_OFF = 4
 
 Indicates that NFC is being disabled.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcState-STATE_TURNING_OFF = 4--><!--Device-NfcState-STATE_TURNING_OFF = 4-End-->
 

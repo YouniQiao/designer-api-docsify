@@ -4,7 +4,9 @@ Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetS
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface NetStatsInfoSequenceItem--><!--Device-statistics-export interface NetStatsInfoSequenceItem-End-->
 
@@ -30,7 +32,9 @@ End time for querying traffic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfoSequenceItem-endTime: int--><!--Device-NetStatsInfoSequenceItem-endTime: int-End-->
 
@@ -50,7 +54,9 @@ Detailed information of statistics.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfoSequenceItem-info: NetStatsInfo--><!--Device-NetStatsInfoSequenceItem-info: NetStatsInfo-End-->
 
@@ -70,7 +76,9 @@ Start time for querying traffic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfoSequenceItem-startTime: int--><!--Device-NetStatsInfoSequenceItem-startTime: int-End-->
 

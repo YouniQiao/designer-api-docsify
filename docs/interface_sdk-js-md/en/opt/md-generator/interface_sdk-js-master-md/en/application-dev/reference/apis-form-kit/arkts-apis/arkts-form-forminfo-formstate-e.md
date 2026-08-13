@@ -2,7 +2,9 @@
 
 Provides state about a form.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
 
@@ -16,7 +18,9 @@ UNKNOWN = -1
 
 Indicates that the form status is unknown due to an internal error.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ DEFAULT = 0
 
 Indicates that the form is in the default state.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +54,9 @@ READY = 1
 
 Indicates that the form is ready.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

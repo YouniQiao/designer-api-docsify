@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-image-enum XMPTagType--><!--Device-image-enum XMPTagType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -17,6 +19,8 @@ UNKNOWN = 0
 未知类型。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ STRING = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-XMPTagType-STRING = 1--><!--Device-XMPTagType-STRING = 1-End-->
@@ -49,6 +55,8 @@ UNORDERED_ARRAY = 2
 无序数组类型。序列化时，此类型在XMP元数据中的格式为&lt;rdf:Bag&gt;。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ ORDERED_ARRAY = 3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-XMPTagType-ORDERED_ARRAY = 3--><!--Device-XMPTagType-ORDERED_ARRAY = 3-End-->
@@ -81,6 +91,8 @@ ALTERNATE_ARRAY = 4
 备选数组类型。序列化时，此类型在XMP元数据中的格式为&lt;rdf:Alt&gt;。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +110,8 @@ ALTERNATE_TEXT = 5
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-XMPTagType-ALTERNATE_TEXT = 5--><!--Device-XMPTagType-ALTERNATE_TEXT = 5-End-->
@@ -113,6 +127,8 @@ STRUCTURE = 6
 结构体类型。不同于数组元素，结构体字段可以属于不同的命名空间。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

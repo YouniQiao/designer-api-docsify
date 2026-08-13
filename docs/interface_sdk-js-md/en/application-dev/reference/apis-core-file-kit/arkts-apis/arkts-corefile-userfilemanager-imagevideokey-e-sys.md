@@ -294,7 +294,7 @@ File location type.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#POSITION)
+**Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#POSITION)
 
 <!--Device-ImageVideoKey-POSITION--><!--Device-ImageVideoKey-POSITION-End-->
 
@@ -374,9 +374,7 @@ User comment information.
 CAMERA_SHOT_KEY
 ```
 
-Key for the Ultra Snapshot feature.
-
-This parameter is available only for the system camera, and the key value is defined by the system camera.
+Key for the Ultra Snapshot feature. This parameter is available only for the system camera, and the key value is defined by the system camera.
 
 **Since:** 10
 

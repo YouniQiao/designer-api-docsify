@@ -1,12 +1,14 @@
 # PluginComponentTemplate
 
-Plugin component template property.
+Describes the **PluginComponent** template parameters.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-export interface PluginComponentTemplate--><!--Device-unnamed-export interface PluginComponentTemplate-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface PluginComponentTemplate--><!--Device-unnamed-interface PluginComponentTemplate-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +24,17 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 ability: string
 ```
 
-Defines the ability.
+Bundle name of the provider ability.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PluginComponentTemplate-ability: string--><!--Device-PluginComponentTemplate-ability: string-End-->
 
@@ -42,15 +46,17 @@ Defines the ability.
 source: string
 ```
 
-Defines the source.
+Component template name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PluginComponentTemplate-source: string--><!--Device-PluginComponentTemplate-source: string-End-->
 

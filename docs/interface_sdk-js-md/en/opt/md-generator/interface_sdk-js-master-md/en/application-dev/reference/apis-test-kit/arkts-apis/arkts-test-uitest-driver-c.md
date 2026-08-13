@@ -1,8 +1,10 @@
 # Driver
 
-The **Driver** class is the main entrance of the UiTest framework. This class provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **Driver.create()** and **Driver.createUIEventObserver()**, use an asynchronous method (promise) to return the result and must be invoked using **await**.
+The **Driver** class is the main entrance of the UiTest framework. This class provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot. All APIs provided by this class, except **Driver.create()** and **Driver.createUIEventObserver()**, use an asynchronous method (promise) to return the result and must be invoked using **await**.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Driver--><!--Device-unnamed-declare class Driver-End-->
 
@@ -20,9 +22,11 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 assertComponentExist(on: On): Promise<void>
 ```
 
-Asserts whether a component matches the specified attributes exists on the current page. If the assertion fails,a JS exception is thrown, causing the test case to fail. This API uses a promise to return the result.
+Asserts whether a component matches the specified attributes exists on the current page. If the assertion fails, a JS exception is thrown, causing the test case to fail. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,9 +50,9 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Error Code ID |
 | --- |
-| [17000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-assertion-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000003](../errorcode-uitest.md#17000003-assertion-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -70,7 +74,9 @@ click(x: number, y: number): Promise<void>
 
 Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [clickAt](#clickAt). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -95,8 +101,8 @@ Clicks the target coordinate point. This method can be used only on the default 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -120,9 +126,11 @@ clickAt(point: Point): Promise<void>
 
 Clicks the target coordinate point. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-clickAt(point: Point): Promise<void>--><!--Device-Driver-clickAt(point: Point): Promise<void>-End-->
 
@@ -144,8 +152,8 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -168,6 +176,8 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 Click on the specified location on the screen, with optional touch options.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -192,8 +202,8 @@ Click on the specified location on the screen, with optional touch options.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -219,7 +229,9 @@ static create(): Driver
 
 Creates a **Driver** object and returns the object created. This API is a static API.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -237,7 +249,7 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 | Error Code ID |
 | --- |
-| [17000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000001-initialization-failure) |
+| [17000001](../errorcode-uitest.md#17000001-initialization-failure) |
 
 ## Examples
 
@@ -258,7 +270,9 @@ createUIEventObserver(): UIEventObserver
 
 Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md#UIEventObserver).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -276,7 +290,7 @@ Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -298,9 +312,11 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 Injects a crown rotation event. You can specify the rotation speed. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>--><!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>-End-->
 
@@ -323,9 +339,9 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -350,7 +366,9 @@ delayMs(duration: number): Promise<void>
 
 Delays a duration of time. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -374,8 +392,8 @@ Delays a duration of time. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -397,7 +415,9 @@ doubleClick(x: number, y: number): Promise<void>
 
 Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [doubleClickAt](#doubleClickAt). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -422,8 +442,8 @@ Double-clicks the target coordinate point. This method can be used only on the d
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -445,9 +465,11 @@ doubleClickAt(point: Point): Promise<void>
 
 Double-clicks the target coordinate point. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-doubleClickAt(point: Point): Promise<void>--><!--Device-Driver-doubleClickAt(point: Point): Promise<void>-End-->
 
@@ -469,8 +491,8 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -492,7 +514,9 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use [dragBetween](#dragBetween). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -520,8 +544,8 @@ Drags from the start coordinate point to the target coordinate point. This metho
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -543,9 +567,11 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 Drags from the start point to the target point. You can specify the drag speed and the click duration before dragging. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
@@ -570,8 +596,8 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -594,6 +620,8 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 Drag on the screen between the specified points with optional settings.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -619,8 +647,8 @@ Drag on the screen between the specified points with optional settings.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -650,6 +678,8 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>--><!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>-End-->
@@ -673,8 +703,8 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -699,6 +729,8 @@ Searches for the target component based on the specified attributes. This API us
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-findComponent(on: On): Promise<Component>--><!--Device-Driver-findComponent(on: On): Promise<Component>-End-->
@@ -721,8 +753,8 @@ Searches for the target component based on the specified attributes. This API us
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -738,6 +770,41 @@ async function demo() {
 }
 ```
 
+## findComponent
+
+```TypeScript
+findComponent(on: On): Promise<Component | null>
+```
+
+Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Driver-findComponent(on: On): Promise<Component | null>--><!--Device-Driver-findComponent(on: On): Promise<Component | null>-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+
 ## findComponents
 
 ```TypeScript
@@ -747,6 +814,8 @@ findComponents(on: On): Promise<Array<Component>>
 Searches for all matched components based on the specified attributes and saves them in a list. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -770,8 +839,8 @@ Searches for all matched components based on the specified attributes and saves 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -787,6 +856,41 @@ async function demo() {
 }
 ```
 
+## findComponents
+
+```TypeScript
+findComponents(on: On): Promise<Array<Component> | null>
+```
+
+Find all the matched [Component](arkts-test-uitest-component-c.md#Component)s on current UI.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt; \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+
 ## findWindow
 
 ```TypeScript
@@ -796,6 +900,8 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 Searches for a window based on the specified attributes. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -819,8 +925,8 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -834,6 +940,41 @@ async function demo() {
 }
 ```
 
+## findWindow
+
+```TypeScript
+findWindow(filter: WindowFilter): Promise<UiWindow | null>
+```
+
+Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow) window.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+
 ## fling
 
 ```TypeScript
@@ -842,7 +983,9 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 Simulates a fling operation. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -869,8 +1012,8 @@ Simulates a fling operation. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -892,7 +1035,9 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 Simulates a fling operation with the specified direction and speed. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -917,8 +1062,8 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -938,11 +1083,13 @@ async function demo() {
 fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 ```
 
-Simulates a fling operation on a specified display with the specified direction and speed. This API uses a promise  to return the result.
+Simulates a fling operation on a specified display with the specified direction and speed. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>--><!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>-End-->
 
@@ -966,8 +1113,8 @@ Simulates a fling operation on a specified display with the specified direction 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -987,14 +1134,11 @@ async function demo() {
 getDisplayDensity(): Promise<Point>
 ```
 
-Obtains the display density of the current device. This API uses a promise to return the result.
+Obtains the display density of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display density of the home screen. To obtain the display density > of a specified screen, use [getDisplayDensity](#getDisplayDensity)(displayId: number).
 
-> **NOTE：**
-> 
-> This method can only be used to obtain the display density of the home screen. To obtain the display density
-> of a specified screen, use [getDisplayDensity](#getDisplayDensity)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1012,7 +1156,7 @@ Obtains the display density of the current device. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1034,9 +1178,11 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 Obtains the density of the specified display of the current device. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>--><!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>-End-->
 
@@ -1058,8 +1204,8 @@ Obtains the density of the specified display of the current device. This API use
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1079,14 +1225,11 @@ async function demo() {
 getDisplayRotation(): Promise<DisplayRotation>
 ```
 
-Obtains the display rotation of the current device. This API uses a promise to return the result.
+Obtains the display rotation of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation > of a specified screen, use [getDisplayRotation](#getDisplayRotation)(displayId: number).
 
-> **NOTE：**
-> 
-> This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation
-> of a specified screen, use [getDisplayRotation](#getDisplayRotation)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1104,7 +1247,7 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1126,9 +1269,11 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 Obtains the display rotation of the specified device. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>--><!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>-End-->
 
@@ -1150,8 +1295,8 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1171,14 +1316,11 @@ async function demo() {
 getDisplaySize(): Promise<Point>
 ```
 
-Obtains the display size of the current device. This API uses a promise to return the result.
+Obtains the display size of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display size of the home screen. To obtain the display size of a > specified screen, use [getDisplaySize](#getDisplaySize)(displayId: number).
 
-> **NOTE：**
-> 
-> This method can only be used to obtain the display size of the home screen. To obtain the display size of a
-> specified screen, use [getDisplaySize](#getDisplaySize)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1196,7 +1338,7 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1218,9 +1360,11 @@ getDisplaySize(displayId: number): Promise<Point>
 
 Obtains the size of the specified display on the current device. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>--><!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>-End-->
 
@@ -1242,8 +1386,8 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1263,15 +1407,13 @@ async function demo() {
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<void>
 ```
 
-Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result.
+Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
 
-> **NOTE：**
-> 
-> If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>--><!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>-End-->
 
@@ -1294,9 +1436,9 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -1326,7 +1468,9 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 Injects a multi-finger operation into a device. This method applies to test scenarios where multi-finger gestures need to be simulated, such as pinching or spreading two fingers to zoom in or out on the image or swiping with multiple fingers to switch between pages. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1351,8 +1495,8 @@ Injects a multi-finger operation into a device. This method applies to test scen
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1390,9 +1534,11 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 Simulates a continuous multi-point pen injection operation. This method is applicable to test scenarios where custom track operations, such as continuous writing and drawing with a pen, need to be simulated. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>-End-->
 
@@ -1416,8 +1562,8 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1444,11 +1590,13 @@ async function demo() {
 inputText(p: Point, text: string): Promise<void>
 ```
 
-Inputs text at a specified coordinate without clearing the original text in the component. This API uses a promise  to return the result.
+Inputs text at a specified coordinate without clearing the original text in the component. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-inputText(p: Point, text: string): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string): Promise<void>-End-->
 
@@ -1471,8 +1619,8 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1500,9 +1648,11 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 Inputs text at a specified coordinate point in a specified input mode. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>-End-->
 
@@ -1526,9 +1676,9 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1560,9 +1710,11 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 Drags from the start point to the end point and checks whether the target component exists. This method is applicable to verifying the dynamic UI elements that appear during the drag operation. For example, when dragging a file to a target folder, you can use this API to verify the highlight effect of the folder. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>-End-->
 
@@ -1588,8 +1740,8 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1611,9 +1763,11 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 Long-clicks at the specified coordinates and checks whether the target component exists. This method is applicable to verifying the UI elements that dynamically appear after a long-click, such as the context menu or edit button. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>-End-->
 
@@ -1637,8 +1791,8 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1660,9 +1814,11 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 Swipes from the start point to the end point and checks whether the target component exists. This method is applicable to verifying the dynamic UI elements that appear during the swipe operation, for example, verifying whether the delete button appears when swiping is used to delete a list item. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>-End-->
 
@@ -1687,8 +1843,8 @@ Swipes from the start point to the end point and checks whether the target compo
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1708,15 +1864,13 @@ async function demo() {
 knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 ```
 
-Simulates a knuckle knock on the display. This API uses a promise to return the result.
+Simulates a knuckle knock on the display. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
 
-> **NOTE：**
-> 
-> If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>--><!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>-End-->
 
@@ -1739,9 +1893,9 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -1763,9 +1917,11 @@ async function demo() {
 longClick(x: number, y: number): Promise<void>
 ```
 
-Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longClickAt).This API uses a promise to return the result.
+Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longClickAt). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1790,8 +1946,8 @@ Long-clicks the target coordinate point. This method can be used only on the def
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1813,9 +1969,11 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 Long-clicks the target coordinate point for a specified duration. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>--><!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>-End-->
 
@@ -1838,8 +1996,8 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1862,6 +2020,8 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 LongClick on the specified location on the screen, with optional touch settings.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -1886,8 +2046,8 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1912,9 +2072,11 @@ async function demo() {
 mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
 ```
 
-Injects a mouse click action at the specified coordinates, with the optional key or key combination. This API uses  a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed  with the mouse click.
+Injects a mouse click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the mouse click.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1941,8 +2103,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1964,9 +2126,11 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 Injects a double-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the double-click.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
 
@@ -1991,8 +2155,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2015,6 +2179,8 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 Drags the mouse pointer from the start point to the end point. This API uses a promise to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2040,8 +2206,8 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2063,9 +2229,11 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 Drags the mouse from the start point to the end point. You can specify the dragging speed and the duration before dragging. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
@@ -2090,8 +2258,8 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2111,9 +2279,11 @@ async function demo() {
 mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>
 ```
 
-Hold down the left mouse button and drag on the screen between the specified points,with optional touch and key settings.
+Hold down the left mouse button and drag on the screen between the specified points, with optional touch and key settings.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2140,8 +2310,8 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -2170,9 +2340,11 @@ async function demo() {
 mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
 ```
 
-Injects a mouse long-click action at the specified coordinates, with the optional key or key combination. This API  uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is long-clicked with the mouse device.
+Injects a mouse long-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is long-clicked with the mouse device.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2199,8 +2371,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2221,11 +2393,13 @@ async function demo() {
 mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, duration?: number): Promise<void>
 ```
 
-Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the long-click.
+Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072** , the **Ctrl** button is pressed with the long-click.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>-End-->
 
@@ -2251,8 +2425,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2275,7 +2449,9 @@ mouseMoveTo(p: Point): Promise<void>
 
 Moves the mouse cursor to the target point. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2299,8 +2475,8 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2322,9 +2498,11 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 Moves the mouse pointer from the start point to the end point, with a visible movement track. This method is applicable to test scenarios that depend on the mouse movement track, such as verification of the mouse hover effect and selecting an area by dragging with the mouse. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
@@ -2348,8 +2526,8 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2372,6 +2550,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 Injects a mouse scroll action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with mouse scrolling.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2399,8 +2579,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2422,9 +2602,11 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 Injects a mouse scroll action at the specified coordinates, with the optional key or key combination and the specified scroll speed. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>-End-->
 
@@ -2451,8 +2633,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2474,9 +2656,11 @@ penClick(point: Point): Promise<void>
 
 Simulates a pen click operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penClick(point: Point): Promise<void>--><!--Device-Driver-penClick(point: Point): Promise<void>-End-->
 
@@ -2498,8 +2682,8 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2521,9 +2705,11 @@ penDoubleClick(point: Point): Promise<void>
 
 Simulates a pen double-click operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penDoubleClick(point: Point): Promise<void>--><!--Device-Driver-penDoubleClick(point: Point): Promise<void>-End-->
 
@@ -2545,8 +2731,8 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2568,9 +2754,11 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 Simulates a pen long-click operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>--><!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>-End-->
 
@@ -2593,8 +2781,8 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2616,9 +2804,11 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 Simulates a pen swipe operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>-End-->
 
@@ -2643,8 +2833,8 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2664,14 +2854,11 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-Simulates pressing the Back button. This API uses a promise to return the result.
+Simulates pressing the Back button. This API uses a promise to return the result. > **NOTE：**> > This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button > on a specified screen, use pressBack(displayId: number).
 
-> **NOTE：**
-> 
-> This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button
-> on a specified screen, use [pressBack](pressBack)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2689,7 +2876,7 @@ Simulates pressing the Back button. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2711,9 +2898,11 @@ pressBack(displayId: number): Promise<void>
 
 Simulates pressing the Back button on a specified screen. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-pressBack(displayId: int): Promise<void>--><!--Device-Driver-pressBack(displayId: int): Promise<void>-End-->
 
@@ -2735,8 +2924,8 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -2758,7 +2947,9 @@ pressHome(): Promise<void>
 
 Injects an operation of returning to the home screen on the device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2776,7 +2967,7 @@ Injects an operation of returning to the home screen on the device. This API use
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2798,9 +2989,11 @@ pressHome(displayId: number): Promise<void>
 
 Injects an operation of returning to the home screen on the specified display. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-pressHome(displayId: int): Promise<void>--><!--Device-Driver-pressHome(displayId: int): Promise<void>-End-->
 
@@ -2822,8 +3015,8 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -2845,7 +3038,9 @@ screenCap(savePath: string): Promise<boolean>
 
 Captures the current screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2869,8 +3064,8 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2892,9 +3087,11 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 Captures the specified screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>--><!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>-End-->
 
@@ -2917,8 +3114,8 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2938,9 +3135,11 @@ async function demo() {
 screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 ```
 
-Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike [screenCap](screenCap), this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
+Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike screenCap, this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2965,8 +3164,8 @@ Captures the specified area of the current screen and saves the captured screens
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2991,10 +3190,11 @@ async function demo() {
 setDisplayRotation(rotation: DisplayRotation): Promise<void>
 ```
 
-Sets the display rotation of the current scene. This API uses a promise to return the result. This API is applicable to scenarios where rotation is allowed. The rotation function can be enabled by setting  
-**orientation=** to **auto_rotation** in the module.json5 configuration file.
+Sets the display rotation of the current scene. This API uses a promise to return the result. This API is applicable to scenarios where rotation is allowed. The rotation function can be enabled by setting **orientation=** to **auto_rotation** in the module.json5 configuration file.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3018,8 +3218,8 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3041,7 +3241,9 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 Enables or disables display rotation. This method is applicable to scenarios where the screen orientation needs to be locked during the test to maintain a specific display state, for example, testing the layout stability in landscape or portrait mode. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3065,8 +3267,8 @@ Enables or disables display rotation. This method is applicable to scenarios whe
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3088,7 +3290,9 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [swipeBetween](#swipeBetween). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3116,8 +3320,8 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3141,9 +3345,11 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 Swipes from the start coordinate point to the target coordinate point. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
@@ -3167,8 +3373,8 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -3191,6 +3397,8 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 Swipe on the screen between the specified points with optional touch options.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -3216,8 +3424,8 @@ Swipe on the screen between the specified points with optional touch options.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -3244,9 +3452,11 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 
 Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>--><!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>-End-->
 
@@ -3270,9 +3480,9 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -3294,9 +3504,11 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 Simulates a two-finger scroll gesture on the touchpad. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>--><!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>-End-->
 
@@ -3321,9 +3533,9 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -3346,6 +3558,8 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 Triggers a combination key event based on the specified key code values. This API uses a promise to return the result. For example, if the key code value is (2072, 2019), the module finds and clicks the key combination that matches the value, for example, **Ctrl+C**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3371,8 +3585,8 @@ Triggers a combination key event based on the specified key code values. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3395,9 +3609,11 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 Triggers a combination key event based on the specified key code values on the specified screen. This API uses a promise to return the result. For example, if the key code value is (2072, 2019), the module finds and clicks the key combination that matches the value, for example, **Ctrl+C**.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>-End-->
 
@@ -3422,8 +3638,8 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3445,7 +3661,9 @@ triggerKey(keyCode: number): Promise<void>
 
 Triggers a key event by passing the key code value. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3469,8 +3687,8 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3493,9 +3711,11 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 Triggers a key event by passing the key code value on the specified screen. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>-End-->
 
@@ -3518,8 +3738,8 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3540,15 +3760,11 @@ async function demo() {
 triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>
 ```
 
-Trigger pen key operation.
-
-Supported combinations:
-
-- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.  
-- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),  
- HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
+Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -3575,9 +3791,9 @@ Supported combinations:
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -3606,6 +3822,8 @@ Searches for the target component based on the attributes within a specified tim
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>--><!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>-End-->
@@ -3629,8 +3847,8 @@ Searches for the target component based on the attributes within a specified tim
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3644,6 +3862,42 @@ async function demo() {
 }
 ```
 
+## waitForComponent
+
+```TypeScript
+waitForComponent(on: On, time: number): Promise<Component | null>
+```
+
+Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI during the time given.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>--><!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes |
+| time | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+
 ## waitForIdle
 
 ```TypeScript
@@ -3652,7 +3906,9 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 Checks whether all components on the current UI are idle. This method is applicable to scenarios such as page redirection, animation playback, and loading. After calling this method, you can perform subsequent test operations only after the UI becomes stable. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3677,8 +3933,8 @@ Checks whether all components on the current UI are idle. This method is applica
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3700,7 +3956,9 @@ wakeUpDisplay(): Promise<void>
 
 Wakes up the current display. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3718,7 +3976,7 @@ Wakes up the current display. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 

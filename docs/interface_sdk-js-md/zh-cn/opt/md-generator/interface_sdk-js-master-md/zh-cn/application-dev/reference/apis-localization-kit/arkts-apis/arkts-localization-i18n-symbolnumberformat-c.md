@@ -1,14 +1,14 @@
 # SymbolNumberFormat
 
-提供自定义数字符号的能力。继承自  
-[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  
-[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
+提供自定义数字符号的能力。继承自 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)， 支持 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 的方法。
 
 **继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md#NumberFormat)
 
 **起始版本：** 26.0.0
 
-<!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat--><!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat-End-->
+**废弃版本：** -1
+
+<!--Device-i18n-export class SymbolNumberFormat--><!--Device-i18n-export class SymbolNumberFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -21,6 +21,8 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 创建使用自定义符号的数字格式化对象。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,6 +48,8 @@ public format(value: number | bigint): string
 对数字进行格式化，返回使用自定义符号的数字字符串。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +80,8 @@ public formatRange(startRange: number, endRange: number): string
 对数字范围进行格式化，返回使用自定义符号的数字范围字符串。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,6 +114,8 @@ public formatRangeToParts(startRange: number, endRange: number): Intl.NumberForm
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -139,6 +147,8 @@ public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -169,6 +179,8 @@ public parse(text: string, lenientMode: boolean): number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -194,7 +206,7 @@ public parse(text: string, lenientMode: boolean): number
 
 | 错误码ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 ## resolvedOptions
 
@@ -205,6 +217,8 @@ public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 解析自定义数字符号的配置项。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

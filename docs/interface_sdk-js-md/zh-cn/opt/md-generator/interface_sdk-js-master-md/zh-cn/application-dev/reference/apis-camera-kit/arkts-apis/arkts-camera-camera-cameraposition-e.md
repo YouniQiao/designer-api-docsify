@@ -2,7 +2,9 @@
 
 枚举，相机位置。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum CameraPosition--><!--Device-camera-enum CameraPosition-End-->
 
@@ -16,7 +18,9 @@ CAMERA_POSITION_UNSPECIFIED = 0
 
 相对于设备屏幕没有固定的朝向的相机。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +36,9 @@ CAMERA_POSITION_BACK = 1
 
 后置相机。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,7 +54,9 @@ CAMERA_POSITION_FRONT = 2
 
 前置相机。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -62,15 +70,13 @@ CAMERA_POSITION_FRONT = 2
 CAMERA_POSITION_FOLD_INNER = 3
 ```
 
-折叠态相机。
-
-从API version 11开始支持，从API version 12开始废弃。
+折叠态相机。 从API version 11开始支持，从API version 12开始废弃。
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

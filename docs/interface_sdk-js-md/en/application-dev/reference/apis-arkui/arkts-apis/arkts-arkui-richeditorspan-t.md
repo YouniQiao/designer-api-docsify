@@ -10,6 +10,8 @@ Defines the types of spans in rich editor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type RichEditorSpan = RichEditorImageSpanResult | RichEditorTextSpanResult--><!--Device-unnamed-export type RichEditorSpan = RichEditorImageSpanResult | RichEditorTextSpanResult-End-->

@@ -6,9 +6,11 @@ export type NotificationFlagStatus = _NotificationFlagStatus
 
 Enumerates the notification flag states.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus--><!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus-End-->
 

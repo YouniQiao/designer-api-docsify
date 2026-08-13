@@ -1,11 +1,12 @@
 # Direction
 
-Enumerates the screen directions, which are used in the  
-[Configuration.direction](arkts-ability-app-ability-configuration-configuration-i.md#Configuration) field. You can use these predefined enumerated values to set or obtain the screen direction of the system or application.
+Enumerates the screen directions, which are used in the [Configuration.direction](arkts-ability-app-ability-configuration-configuration-i.md#Configuration) field. You can use these predefined enumerated values to set or obtain the screen direction of the system or application.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConfigurationConstant-export enum Direction--><!--Device-ConfigurationConstant-export enum Direction-End-->
 
@@ -19,9 +20,11 @@ DIRECTION_NOT_SET = -1
 
 Unspecified direction.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,9 +40,11 @@ DIRECTION_VERTICAL = 0
 
 Vertical direction.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,9 +60,11 @@ DIRECTION_HORIZONTAL = 1
 
 Horizontal direction.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

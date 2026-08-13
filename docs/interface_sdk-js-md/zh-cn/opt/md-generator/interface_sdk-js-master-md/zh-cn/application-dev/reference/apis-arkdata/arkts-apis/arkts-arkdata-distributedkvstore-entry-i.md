@@ -2,7 +2,9 @@
 
 存储在数据库中的键值对。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-interface Entry--><!--Device-distributedKVStore-interface Entry-End-->
 
@@ -18,7 +20,9 @@ key: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ value: Value
 
 **类型：** Value
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

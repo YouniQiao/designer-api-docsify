@@ -6,6 +6,8 @@ Defines the Embed Data info.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface HoverEventParam--><!--Device-unnamed-export declare interface HoverEventParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ App rotation
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Folder state.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HoverEventParam-foldStatus: FoldStatus--><!--Device-HoverEventParam-foldStatus: FoldStatus-End-->
@@ -64,6 +70,8 @@ Is hover mode
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HoverEventParam-isHoverMode: boolean--><!--Device-HoverEventParam-isHoverMode: boolean-End-->
@@ -83,6 +91,8 @@ Window status type
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

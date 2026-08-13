@@ -8,9 +8,11 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 创建标准色域对象。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager--><!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager-End-->
 
@@ -32,8 +34,8 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
 
 ## 示例
 
@@ -55,9 +57,11 @@ function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManage
 
 创建用户自定义色域对象。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager--><!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager-End-->
 
@@ -68,7 +72,7 @@ function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManage
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | primaries | [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | 是 | 色域标准三原色。 |
-| gamma | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 色域gamma值，取值为大于0的浮点数。 |
+| gamma | double | 是 | 色域gamma值，取值为大于0的浮点数。 |
 
 **返回值：**
 
@@ -80,8 +84,8 @@ function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManage
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
 
 ## 示例
 

@@ -1,8 +1,10 @@
 # AppGroupCallbackInfo (System API)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-interface AppGroupCallbackInfo--><!--Device-usageStatistics-interface AppGroupCallbackInfo-End-->
 
@@ -24,11 +26,13 @@ appNewGroup: int
 
 The usage new group of the application
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppGroupCallbackInfo-appNewGroup: int--><!--Device-AppGroupCallbackInfo-appNewGroup: int-End-->
 
@@ -44,11 +48,13 @@ appOldGroup: int
 
 The usage old group of the application
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppGroupCallbackInfo-appOldGroup: int--><!--Device-AppGroupCallbackInfo-appOldGroup: int-End-->
 
@@ -66,9 +72,11 @@ The bundle name
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppGroupCallbackInfo-bundleName: string--><!--Device-AppGroupCallbackInfo-bundleName: string-End-->
 
@@ -84,11 +92,13 @@ changeReason: long
 
 The change reason
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppGroupCallbackInfo-changeReason: long--><!--Device-AppGroupCallbackInfo-changeReason: long-End-->
 
@@ -104,11 +114,13 @@ userId: int
 
 The use id
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppGroupCallbackInfo-userId: int--><!--Device-AppGroupCallbackInfo-userId: int-End-->
 

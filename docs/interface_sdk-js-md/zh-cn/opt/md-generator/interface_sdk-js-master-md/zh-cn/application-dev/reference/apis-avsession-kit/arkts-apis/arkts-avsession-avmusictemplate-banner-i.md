@@ -6,7 +6,9 @@
 
 **起始版本：** 23
 
-<!--Device-avMusicTemplate-interface Banner extends MediaEntity--><!--Device-avMusicTemplate-interface Banner extends MediaEntity-End-->
+**废弃版本：** -1
+
+<!--Device-avMusicTemplate-interface Banner--><!--Device-avMusicTemplate-interface Banner-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -21,6 +23,8 @@ isSupportOnePlay: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,9 +2,11 @@
 
 Interface for device rotation radian
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-deviceStatus-export interface DeviceRotationRadian--><!--Device-deviceStatus-export interface DeviceRotationRadian-End-->
 
@@ -26,11 +28,13 @@ x: double
 
 indicates X-RotationRadian
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceRotationRadian-x: double--><!--Device-DeviceRotationRadian-x: double-End-->
 
@@ -46,11 +50,13 @@ y: double
 
 indicates Y-RotationRadian
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceRotationRadian-y: double--><!--Device-DeviceRotationRadian-y: double-End-->
 
@@ -66,11 +72,13 @@ z: double
 
 indicates Z-RotationRadian
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceRotationRadian-z: double--><!--Device-DeviceRotationRadian-z: double-End-->
 

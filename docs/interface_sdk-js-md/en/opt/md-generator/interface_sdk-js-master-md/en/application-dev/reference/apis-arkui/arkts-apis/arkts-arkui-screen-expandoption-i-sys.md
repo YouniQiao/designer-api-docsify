@@ -2,7 +2,9 @@
 
 Defines the parameters for expanding a screen.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screen-interface ExpandOption--><!--Device-screen-interface ExpandOption-End-->
 
@@ -26,7 +28,9 @@ Screen ID. The value must be an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExpandOption-screenId: long--><!--Device-ExpandOption-screenId: long-End-->
 
@@ -44,7 +48,9 @@ Start X coordinate of the screen. in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExpandOption-startX: long--><!--Device-ExpandOption-startX: long-End-->
 
@@ -62,7 +68,9 @@ Start Y coordinate of the screen. in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExpandOption-startY: long--><!--Device-ExpandOption-startY: long-End-->
 

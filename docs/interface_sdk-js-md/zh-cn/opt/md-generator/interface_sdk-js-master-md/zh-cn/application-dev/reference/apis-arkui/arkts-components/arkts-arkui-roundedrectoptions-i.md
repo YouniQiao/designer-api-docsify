@@ -1,12 +1,10 @@
 # RoundedRectOptions
 
-用于描述圆角矩形绘制组件的绘制属性。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+用于描述圆角矩形绘制组件的绘制属性。 > **说明：** > > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface RoundedRectOptions--><!--Device-unnamed-declare interface RoundedRectOptions-End-->
 
@@ -18,17 +16,13 @@
 height?: Length
 ```
 
-高度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp。
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+高度，取值范围≥0。 默认值：0 默认单位：vp。 异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,17 +38,13 @@ height?: Length
 radiusHeight?: Length
 ```
 
-圆角高度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp。
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+圆角高度，取值范围≥0。 默认值：0 默认单位：vp。 异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -70,17 +60,13 @@ radiusHeight?: Length
 radiusWidth?: Length
 ```
 
-圆角宽度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp。
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+圆角宽度，取值范围≥0。 默认值：0 默认单位：vp。 异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -96,17 +82,13 @@ radiusWidth?: Length
 width?: Length
 ```
 
-宽度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp。
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+宽度，取值范围≥0。 默认值：0 默认单位：vp。 异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

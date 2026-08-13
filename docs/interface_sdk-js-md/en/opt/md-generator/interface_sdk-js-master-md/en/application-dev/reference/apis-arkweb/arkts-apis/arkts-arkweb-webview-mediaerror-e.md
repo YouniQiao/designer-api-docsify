@@ -4,6 +4,8 @@ Enumerates the error types of the player.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum MediaError--><!--Device-webview-enum MediaError-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NETWORK_ERROR = 1
 Network error.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,6 +38,8 @@ Media format error.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaError-FORMAT_ERROR = 2--><!--Device-MediaError-FORMAT_ERROR = 2-End-->
@@ -49,6 +55,8 @@ DECODE_ERROR = 3
 Decoding error.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

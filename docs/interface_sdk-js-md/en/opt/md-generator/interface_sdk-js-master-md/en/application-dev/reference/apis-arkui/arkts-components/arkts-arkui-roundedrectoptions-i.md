@@ -1,14 +1,10 @@
 # RoundedRectOptions
 
-Describes the options of the rounded rectangle.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's @since version number is higher than inner elements'. This does not affect interface usability.
+Describes the options of the rounded rectangle. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface RoundedRectOptions--><!--Device-unnamed-declare interface RoundedRectOptions-End-->
 
@@ -20,12 +16,13 @@ Describes the options of the rounded rectangle.
 height?: Length
 ```
 
-Height. The value must be greater than or equal to 0.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and  
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+Height. The value must be greater than or equal to 0. Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,11 +38,13 @@ Height. The value must be greater than or equal to 0.Unit: vp, The value must be
 radiusHeight?: Length
 ```
 
-Height of the rounded corner. The value must be greater than or equal to 0.Unit: vp, Invalid values are treated as the default value. Default value: **0**.
+Height of the rounded corner. The value must be greater than or equal to 0. Unit: vp, Invalid values are treated as the default value. Default value: **0**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -61,11 +60,13 @@ Height of the rounded corner. The value must be greater than or equal to 0.Unit:
 radiusWidth?: Length
 ```
 
-Width of the rounded corner. The value must be greater than or equal to 0.Unit: vp, Invalid values are treated as the default value.Default value: **0**.
+Width of the rounded corner. The value must be greater than or equal to 0. Unit: vp, Invalid values are treated as the default value. Default value: **0**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -81,11 +82,13 @@ Width of the rounded corner. The value must be greater than or equal to 0.Unit: 
 width?: Length
 ```
 
-Width. The value must be greater than or equal to 0Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity**values are invalid and treated as the default value. Default value: **0**.
+Width. The value must be greater than or equal to 0 Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

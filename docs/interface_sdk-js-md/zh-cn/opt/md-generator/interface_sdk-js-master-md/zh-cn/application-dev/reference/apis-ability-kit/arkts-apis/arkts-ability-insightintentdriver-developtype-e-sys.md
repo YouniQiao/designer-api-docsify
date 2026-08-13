@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-insightIntentDriver-enum DevelopType--><!--Device-insightIntentDriver-enum DevelopType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -19,6 +21,8 @@ CONFIGURATION = 'configuration'
 使用配置文件开发的意图。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ DECORATOR = 'decorator'
 使用装饰器开发的意图。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

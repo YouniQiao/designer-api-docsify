@@ -1,14 +1,14 @@
 # Flash
 
-**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery).
-
-It provides APIs related to the flash.
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery). It provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-camera-interface Flash extends FlashQuery--><!--Device-camera-interface Flash extends FlashQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface Flash--><!--Device-camera-interface Flash-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,7 +26,9 @@ getFlashMode(): FlashMode
 
 Obtains the flash mode in use.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -44,7 +46,7 @@ Obtains the flash mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## offFlashStateChange
 
@@ -55,6 +57,8 @@ offFlashStateChange(callback?: Callback<FlashState>): void
 Unsubscribes from flash light status change events.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +84,8 @@ Subscribes to flash light status change events.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -100,13 +106,11 @@ Subscribes to flash light status change events.
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode.
+Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash) to check whether the camera device has flash. 2. Use [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported) to check whether the camera device supports the flash mode.
 
-Before the setting, do the following checks:
+**Since:** 23
 
-1. Use [hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported) to check whether the camera device supports the flash mode.
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -124,4 +128,4 @@ Before the setting, do the following checks:
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

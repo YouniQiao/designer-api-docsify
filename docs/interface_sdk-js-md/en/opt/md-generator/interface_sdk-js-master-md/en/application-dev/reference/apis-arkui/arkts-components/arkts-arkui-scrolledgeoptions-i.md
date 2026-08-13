@@ -4,6 +4,8 @@ Provides parameters for scrolling to the edge of a scrollable container.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ScrollEdgeOptions--><!--Device-unnamed-declare interface ScrollEdgeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,15 @@ Provides parameters for scrolling to the edge of a scrollable container.
 velocity?: number
 ```
 
-Fixed velocity for scrolling to the edge of the container.If the value specified is less than or equal to 0, the parameter will not take effect.
+Fixed velocity for scrolling to the edge of the container. If the value specified is less than or equal to 0, the parameter will not take effect.
 
 **Type:** number
 
 **Default:** 0vp/s
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

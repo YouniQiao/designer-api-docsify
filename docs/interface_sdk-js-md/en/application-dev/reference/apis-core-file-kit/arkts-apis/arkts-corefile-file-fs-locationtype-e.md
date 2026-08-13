@@ -6,6 +6,8 @@ Enumerates the file locations.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum LocationType--><!--Device-unnamed-declare enum LocationType-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -22,6 +24,8 @@ The file is stored in a local device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-LocationType-LOCAL = 1 << 0--><!--Device-LocationType-LOCAL = 1 << 0-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -37,6 +41,8 @@ The file is stored in the cloud.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-LocationType-CLOUD = 1 << 1--><!--Device-LocationType-CLOUD = 1 << 1-End-->
 

@@ -1,8 +1,10 @@
 # Vec3
 
-A three-dimensional vector used to represent a point, a direction, or a vector transformation in 3D space.It consists of three components: x, y, and z.
+A three-dimensional vector used to represent a point, a direction, or a vector transformation in 3D space. It consists of three components: x, y, and z.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Vec3--><!--Device-unnamed-export interface Vec3-End-->
 
@@ -18,7 +20,9 @@ Component on the X axis. The value is a real number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Vec3-x: double--><!--Device-Vec3-x: double-End-->
 
@@ -34,7 +38,9 @@ Component on the Y axis. The value is a real number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Vec3-y: double--><!--Device-Vec3-y: double-End-->
 
@@ -50,7 +56,9 @@ Component on the Z axis. The value is a real number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Vec3-z: double--><!--Device-Vec3-z: double-End-->
 

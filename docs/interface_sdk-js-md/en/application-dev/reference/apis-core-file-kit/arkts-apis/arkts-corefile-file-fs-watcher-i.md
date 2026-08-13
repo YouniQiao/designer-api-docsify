@@ -1,11 +1,12 @@
 # Watcher
 
-Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call  
-**createWatcher()** to create a **Watcher** object.
+Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call **createWatcher()** to create a **Watcher** object.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
 
@@ -28,6 +29,8 @@ Starts listening.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
@@ -72,6 +75,8 @@ Stops listening and removes the **Watcher** object.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 

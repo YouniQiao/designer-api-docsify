@@ -4,6 +4,8 @@ Defines the struct of Theme.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface Theme--><!--Device-unnamed-export declare interface Theme-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Define tokens associated with color resources.
 **Type:** [Colors](arkts-arkui-arkui-theme-colors-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

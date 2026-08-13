@@ -6,6 +6,8 @@ Defines the ad request parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-advertising-export interface AdRequestParams--><!--Device-advertising-export interface AdRequestParams-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -15,28 +17,6 @@ Defines the ad request parameters.
 ```TypeScript
 import { advertising } from '@kit.AdsKit';
 ```
-
-## [key: string]
-
-```TypeScript
-[key: string]: number | boolean | string | undefined
-```
-
-Custom parameter.
-
-&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
-
-**Type:** number \| boolean \| string \| undefined
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined--><!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined-End-->
-
-**System capability:** SystemCapability.Advertising.Ads
 
 ## adCount
 
@@ -51,6 +31,8 @@ Number of ads requested. If not set, the business logic prevails.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,6 +54,8 @@ Expected creative height when requesting an ad, in vp (mandatory for banner ads)
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdRequestParams-adHeight?: number--><!--Device-AdRequestParams-adHeight?: number-End-->
@@ -84,15 +68,15 @@ Expected creative height when requesting an ad, in vp (mandatory for banner ads)
 adId: string
 ```
 
-Ad slot ID.
-
-Note: The getAdRequestBody API can omit this parameter.
+Ad slot ID. Note: The getAdRequestBody API can omit this parameter.
 
 **Type:** string
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,15 +90,15 @@ Note: The getAdRequestBody API can omit this parameter.
 adSearchKeyword?: string
 ```
 
-Ad keyword. Defaults to "" if not set.
-
-Note: Not supported for use currently.
+Ad keyword. Defaults to "" if not set. Note: Not supported for use currently.
 
 **Type:** string
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,22 +112,15 @@ Note: Not supported for use currently.
 adType?: number
 ```
 
-Requested ad type.
-
-- 1: Splash ad.  
-- 3: Native ad.  
-- 7: Rewarded ad.  
-- 8: Banner ad.  
-- 12: Interstitial ad  
-- 60: Roll ad.
-
-If not set, the default is the native ad type.
+Requested ad type. - 1: Splash ad. - 3: Native ad. - 7: Rewarded ad. - 8: Banner ad. - 12: Interstitial ad - 60: Roll ad. If not set, the default is the native ad type.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -157,13 +134,15 @@ If not set, the default is the native ad type.
 adWidth?: number
 ```
 
-Expected creative width when requesting an ad, in vp (mandatory for banner ads).If not set, the business logic prevails.
+Expected creative width when requesting an ad, in vp (mandatory for banner ads). If not set, the business logic prevails.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

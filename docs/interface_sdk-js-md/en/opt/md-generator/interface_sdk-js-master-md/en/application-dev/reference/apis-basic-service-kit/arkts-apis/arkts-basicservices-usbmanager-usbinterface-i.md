@@ -1,9 +1,10 @@
 # USBInterface
 
-Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration) object can contain multiple *  
-*USBInterface** instances, each providing a specific function.
+Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration) object can contain multiple * *USBInterface** instances, each providing a specific function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBInterface--><!--Device-usbManager-interface USBInterface-End-->
 
@@ -25,7 +26,9 @@ Settings for alternating between descriptors of the same USB interface. The valu
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-alternateSetting: int--><!--Device-USBInterface-alternateSetting: int-End-->
 
@@ -41,7 +44,9 @@ Device type.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-clazz: int--><!--Device-USBInterface-clazz: int-End-->
 
@@ -57,7 +62,9 @@ Endpoints that belong to the USB interface.
 
 **Type:** Array&lt;USBEndpoint&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
 
@@ -73,7 +80,9 @@ Unique ID of the USB interface.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-id: int--><!--Device-USBInterface-id: int-End-->
 
@@ -89,7 +98,9 @@ Interface name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
 
@@ -105,7 +116,9 @@ Interface protocol.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-protocol: int--><!--Device-USBInterface-protocol: int-End-->
 
@@ -121,7 +134,9 @@ Device subclass.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-subClass: int--><!--Device-USBInterface-subClass: int-End-->
 

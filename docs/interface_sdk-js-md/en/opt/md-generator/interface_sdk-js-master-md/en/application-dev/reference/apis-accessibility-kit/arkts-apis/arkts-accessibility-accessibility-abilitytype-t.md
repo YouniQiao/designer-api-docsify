@@ -6,7 +6,9 @@ type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all
 
 Enumerates the types of accessibility applications.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

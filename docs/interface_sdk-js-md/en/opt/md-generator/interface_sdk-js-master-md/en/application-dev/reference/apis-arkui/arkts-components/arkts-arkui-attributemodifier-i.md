@@ -4,7 +4,9 @@ Defines the attribute modifier.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface AttributeModifier<T>--><!--Device-unnamed-declare interface AttributeModifier<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AttributeModifier--><!--Device-unnamed-declare interface AttributeModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,6 +19,8 @@ applyDisabledAttribute?(instance: T) : void
 Defines the disabled update attribute function.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Defines the focused update attribute function.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,6 +71,8 @@ applyHoveredAttribute?(instance: T) : void
 Defines the function that updates the hovered attribute.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Defines the normal update attribute function.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -114,6 +124,8 @@ Defines the pressed update attribute function.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -137,6 +149,8 @@ applySelectedAttribute?(instance: T) : void
 Defines the selected update attribute function.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

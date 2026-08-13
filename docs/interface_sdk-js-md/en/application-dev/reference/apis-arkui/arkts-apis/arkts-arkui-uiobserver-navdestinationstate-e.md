@@ -1,10 +1,12 @@
 # NavDestinationState
 
-NavDestination state.
+Describes the state of the **NavDestination** component.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export enum NavDestinationState--><!--Device-uiObserver-export enum NavDestinationState-End-->
 
@@ -16,13 +18,17 @@ NavDestination state.
 ON_SHOWN = 0
 ```
 
-When the NavDestination is displayed.
+The **NavDestination** component is displayed.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_SHOWN = 0--><!--Device-NavDestinationState-ON_SHOWN = 0-End-->
 
@@ -34,13 +40,17 @@ When the NavDestination is displayed.
 ON_HIDDEN = 1
 ```
 
-When the NavDestination is hidden.
+The **NavDestination** component is hidden.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_HIDDEN = 1--><!--Device-NavDestinationState-ON_HIDDEN = 1-End-->
 
@@ -52,13 +62,17 @@ When the NavDestination is hidden.
 ON_APPEAR = 2
 ```
 
-When the NavDestination appear.
+The **NavDestination** component is attached to the component tree.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_APPEAR = 2--><!--Device-NavDestinationState-ON_APPEAR = 2-End-->
 
@@ -70,13 +84,17 @@ When the NavDestination appear.
 ON_DISAPPEAR = 3
 ```
 
-When the NavDestination disappear.
+The **NavDestination** component is detached from the component tree.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_DISAPPEAR = 3--><!--Device-NavDestinationState-ON_DISAPPEAR = 3-End-->
 
@@ -88,13 +106,17 @@ When the NavDestination disappear.
 ON_WILL_SHOW = 4
 ```
 
-Before the NavDestination is displayed.
+The **NavDestination** component is about to be displayed.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_WILL_SHOW = 4--><!--Device-NavDestinationState-ON_WILL_SHOW = 4-End-->
 
@@ -106,13 +128,17 @@ Before the NavDestination is displayed.
 ON_WILL_HIDE = 5
 ```
 
-Before the NavDestination is hidden.
+The **NavDestination** component is about to be hidden.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_WILL_HIDE = 5--><!--Device-NavDestinationState-ON_WILL_HIDE = 5-End-->
 
@@ -124,13 +150,17 @@ Before the NavDestination is hidden.
 ON_WILL_APPEAR = 6
 ```
 
-Before the NavDestination is appeared.
+The **NavDestination** component is about to be mounted to the component tree.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_WILL_APPEAR = 6--><!--Device-NavDestinationState-ON_WILL_APPEAR = 6-End-->
 
@@ -142,13 +172,17 @@ Before the NavDestination is appeared.
 ON_WILL_DISAPPEAR = 7
 ```
 
-Before the NavDestination is disappeared.
+The **NavDestination** component is about to be unmounted from the component tree.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_WILL_DISAPPEAR = 7--><!--Device-NavDestinationState-ON_WILL_DISAPPEAR = 7-End-->
 
@@ -160,13 +194,17 @@ Before the NavDestination is disappeared.
 ON_ACTIVE = 8
 ```
 
-When the NavDestination is active.
+The **NavDestination** component is active.
 
-**Since:** 23
+**Since:** 17
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 17.
 
 <!--Device-NavDestinationState-ON_ACTIVE = 8--><!--Device-NavDestinationState-ON_ACTIVE = 8-End-->
 
@@ -178,13 +216,17 @@ When the NavDestination is active.
 ON_INACTIVE = 9
 ```
 
-When the NavDestination is inactive.
+The **NavDestination** component is inactive.
 
-**Since:** 23
+**Since:** 17
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 17.
 
 <!--Device-NavDestinationState-ON_INACTIVE = 9--><!--Device-NavDestinationState-ON_INACTIVE = 9-End-->
 
@@ -196,13 +238,17 @@ When the NavDestination is inactive.
 ON_BACKPRESS = 100
 ```
 
-When back press event happened in NavDestination.
+The back button is pressed on the **NavDestination** component.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationState-ON_BACKPRESS = 100--><!--Device-NavDestinationState-ON_BACKPRESS = 100-End-->
 

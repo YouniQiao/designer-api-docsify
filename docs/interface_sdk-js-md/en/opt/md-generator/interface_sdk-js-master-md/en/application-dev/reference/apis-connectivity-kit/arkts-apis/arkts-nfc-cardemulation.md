@@ -2,7 +2,9 @@
 
 Provides methods to operate or manage NFC card emulation.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cardEmulation--><!--Device-unnamed-declare namespace cardEmulation-End-->
 
@@ -20,16 +22,16 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability) |
-| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isdefaultservice) |
-| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#issupported) |
+| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability) |
+| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isDefaultService) |
+| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#isSupported) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getPaymentServices](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md#getpaymentservices) |
+| [getPaymentServices](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md#getPaymentServices-(System-API)) |
 <!--DelEnd-->
 
 ### Classes

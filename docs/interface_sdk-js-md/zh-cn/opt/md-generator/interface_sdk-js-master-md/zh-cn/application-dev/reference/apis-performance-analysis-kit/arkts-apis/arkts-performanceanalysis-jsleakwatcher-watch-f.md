@@ -8,7 +8,9 @@ function watch(obj: object, msg: string): void
 
 注册待检测泄漏的对象。
 
-**起始版本：** 12
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void--><!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void-End-->
 

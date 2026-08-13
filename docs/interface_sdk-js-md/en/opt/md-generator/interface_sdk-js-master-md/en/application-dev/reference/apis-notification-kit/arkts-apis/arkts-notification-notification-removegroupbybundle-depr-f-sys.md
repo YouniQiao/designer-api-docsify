@@ -6,13 +6,13 @@
 function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void
 ```
 
-Removes notifications under a notification group of a specified application.This API uses an asynchronous callback to return the result.
+Removes notifications under a notification group of a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeGroupByBundle](ohos.notificationManager/notificationManager#removeGroupByBundle)
+**Substitutes:** [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md#removeGroupByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,13 +37,13 @@ Removes notifications under a notification group of a specified application.This
 function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>
 ```
 
-Removes notifications under a notification group of a specified application.This API uses a promise to return the result.
+Removes notifications under a notification group of a specified application. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeGroupByBundle](ohos.notificationManager/notificationManager#removeGroupByBundle)
+**Substitutes:** [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md#removeGroupByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

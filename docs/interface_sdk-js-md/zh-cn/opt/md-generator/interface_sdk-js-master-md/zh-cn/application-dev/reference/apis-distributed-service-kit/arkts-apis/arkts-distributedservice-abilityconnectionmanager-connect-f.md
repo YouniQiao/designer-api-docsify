@@ -8,7 +8,9 @@ function connect(sessionId: number): Promise<ConnectResult>
 
 创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,7 +34,7 @@ function connect(sessionId: number): Promise<ConnectResult>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

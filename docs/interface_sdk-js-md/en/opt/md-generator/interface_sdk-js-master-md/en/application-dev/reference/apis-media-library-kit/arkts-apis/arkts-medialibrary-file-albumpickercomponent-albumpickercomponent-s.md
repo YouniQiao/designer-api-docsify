@@ -1,12 +1,10 @@
 # AlbumPickerComponent
 
-AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (albumInfo: AlbumInfo) => boolean,onEmptyAreaClick?: EmptyAreaClickCallback, albumPickerController?: AlbumPickerController })
-
-The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the user directory without any permission.
+AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (albumInfo: AlbumInfo) => boolean, onEmptyAreaClick?: EmptyAreaClickCallback, albumPickerController?: AlbumPickerController }) The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the user directory without any permission.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AlbumPickerComponent--><!--Device-unnamed-export declare struct AlbumPickerComponent-End-->
 
@@ -17,44 +15,6 @@ The **AlbumPickerComponent** embedded in the UI of an application allows the app
 ```TypeScript
 import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
-
-## onAlbumClick
-
-```TypeScript
-onAlbumClick?: (albumInfo: AlbumInfo) => boolean
-```
-
-Callback when select an album, will return album uri
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean--><!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| albumInfo | [AlbumInfo](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md) | Yes |
-
-## onEmptyAreaClick
-
-```TypeScript
-onEmptyAreaClick?: EmptyAreaClickCallback
-```
-
-Callback when click the empty area of the album component
-
-**Since:** 13
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-AlbumPickerComponent-onEmptyAreaClick?: EmptyAreaClickCallback--><!--Device-AlbumPickerComponent-onEmptyAreaClick?: EmptyAreaClickCallback-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumPickerController
 
@@ -67,6 +27,8 @@ AlbumPickerController
 **Type:** [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -86,8 +48,50 @@ AlbumPickerOptions
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AlbumPickerComponent-albumPickerOptions?: AlbumPickerOptions--><!--Device-AlbumPickerComponent-albumPickerOptions?: AlbumPickerOptions-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## onAlbumClick
+
+```TypeScript
+onAlbumClick?: (albumInfo: AlbumInfo) => boolean
+```
+
+Callback when select an album, will return album uri
+
+**Type:** (albumInfo: AlbumInfo) =&gt; boolean
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean--><!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## onEmptyAreaClick
+
+```TypeScript
+onEmptyAreaClick?: EmptyAreaClickCallback
+```
+
+Callback when click the empty area of the album component
+
+**Type:** [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md)
+
+**Since:** 13
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AlbumPickerComponent-onEmptyAreaClick?: EmptyAreaClickCallback--><!--Device-AlbumPickerComponent-onEmptyAreaClick?: EmptyAreaClickCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

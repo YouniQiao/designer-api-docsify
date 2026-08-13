@@ -4,6 +4,8 @@ Implements the subtab style. A transition animation is played when the user swit
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class SubTabBarStyle--><!--Device-unnamed-declare class SubTabBarStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ board(value: BoardStyle): SubTabBarStyle
 Sets the background style (board style) of the selected subtab. It takes effect only in the horizontal layout.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Constructor used to create a **SubTabBarStyle** instance.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SubTabBarStyle-constructor(content: ResourceStr)--><!--Device-SubTabBarStyle-constructor(content: ResourceStr)-End-->
@@ -70,6 +76,8 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -90,9 +98,11 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 id(value: string): SubTabBarStyle
 ```
 
-Sets the [ID](CommonMethod#id) of the subtab.
+Sets the ID of the subtab.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,6 +134,8 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -150,10 +162,11 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-Sets the indicator style of the selected subtab. Compared with  
-[indicator](#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md#ImageFit). It takes effect only in the horizontal layout.
+Sets the indicator style of the selected subtab. Compared with [indicator](#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md#ImageFit). It takes effect only in the horizontal layout.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,6 +198,8 @@ Sets the style of the label text and font for the subtab.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -215,6 +230,8 @@ Static constructor used to create a **SubTabBarStyle** instance.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -241,10 +258,11 @@ Static constructor used to create a **SubTabBarStyle** instance.
 static of(content: ResourceStr | ComponentContent): SubTabBarStyle
 ```
 
-Static constructor used to create a **SubTabBarStyle** instance. You can set custom content with  
-**ComponentContent**.
+Static constructor used to create a **SubTabBarStyle** instance. You can set custom content with **ComponentContent**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -276,6 +294,8 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -288,7 +308,7 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
+| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
 
 **Return value:**
 
@@ -305,6 +325,8 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 Sets the padding of the subtab. This API supports mirroring but does not support percentage-based settings.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -335,6 +357,8 @@ selectedMode(value: SelectedMode): SubTabBarStyle
 Sets the display mode of the selected subtab. It takes effect only in the horizontal layout.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

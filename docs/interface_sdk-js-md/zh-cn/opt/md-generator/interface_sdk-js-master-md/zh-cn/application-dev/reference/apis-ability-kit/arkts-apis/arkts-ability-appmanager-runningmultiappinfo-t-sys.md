@@ -6,7 +6,9 @@ export type RunningMultiAppInfo = _RunningMultiAppInfo
 
 应用多开在运行态的结构信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appManager-export type RunningMultiAppInfo = _RunningMultiAppInfo--><!--Device-appManager-export type RunningMultiAppInfo = _RunningMultiAppInfo-End-->
 

@@ -2,7 +2,9 @@
 
 P12（PKCS #12）数据，包含私钥、证书和其他证书。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cert-interface Pkcs12Data--><!--Device-cert-interface Pkcs12Data-End-->
 
@@ -18,9 +20,11 @@ cert?: X509Cert
 
 **类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Pkcs12Data-cert?: X509Cert--><!--Device-Pkcs12Data-cert?: X509Cert-End-->
 
@@ -36,9 +40,11 @@ otherCerts?: Array<X509Cert>
 
 **类型：** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Pkcs12Data-otherCerts?: Array<X509Cert>--><!--Device-Pkcs12Data-otherCerts?: Array<X509Cert>-End-->
 
@@ -54,9 +60,11 @@ privateKey?: string | Uint8Array
 
 **类型：** string \| Uint8Array
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Pkcs12Data-privateKey?: string | Uint8Array--><!--Device-Pkcs12Data-privateKey?: string | Uint8Array-End-->
 

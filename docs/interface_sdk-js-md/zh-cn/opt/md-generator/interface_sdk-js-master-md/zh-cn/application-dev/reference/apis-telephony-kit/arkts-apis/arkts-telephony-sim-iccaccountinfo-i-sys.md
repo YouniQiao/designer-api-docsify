@@ -2,7 +2,9 @@
 
 Defines the ICC account information.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
 
@@ -20,6 +22,8 @@ operatorName?: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-IccAccountInfo-operatorName?: string--><!--Device-IccAccountInfo-operatorName?: string-End-->
@@ -34,11 +38,13 @@ operatorName?: string
 simLabelIndex?: number
 ```
 
-卡的simLabelIndex。取值限定为整数。
+卡的simLabelIndex。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

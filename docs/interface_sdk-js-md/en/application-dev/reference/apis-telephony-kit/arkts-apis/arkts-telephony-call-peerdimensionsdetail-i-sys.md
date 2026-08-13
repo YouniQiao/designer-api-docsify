@@ -2,9 +2,11 @@
 
 Defines the peer image resolution in a video call.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface PeerDimensionsDetail--><!--Device-call-export interface PeerDimensionsDetail-End-->
 
@@ -26,11 +28,13 @@ callId: int
 
 Call ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PeerDimensionsDetail-callId: int--><!--Device-PeerDimensionsDetail-callId: int-End-->
 
@@ -46,11 +50,13 @@ height: int
 
 Height of the peer image, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PeerDimensionsDetail-height: int--><!--Device-PeerDimensionsDetail-height: int-End-->
 
@@ -66,11 +72,13 @@ width: int
 
 Width of the peer image, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PeerDimensionsDetail-width: int--><!--Device-PeerDimensionsDetail-width: int-End-->
 

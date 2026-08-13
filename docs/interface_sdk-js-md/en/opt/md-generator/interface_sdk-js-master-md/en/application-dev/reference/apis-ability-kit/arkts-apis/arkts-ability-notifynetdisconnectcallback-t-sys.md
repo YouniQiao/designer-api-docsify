@@ -6,7 +6,9 @@ type NotifyNetDisconnectCallback = (deviceId: string, state: number) => void
 
 Callback function on network disconnect.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Provides options for configuring or querying the cross-language access permissio
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CrossLanguageOptions--><!--Device-unnamed-declare interface CrossLanguageOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,15 @@ Provides options for configuring or querying the cross-language access permissio
 attributeSetting?: boolean
 ```
 
-Whether the FrameNode supports cross-language settings.
-
-The value **true** means the FrameNode supports cross-language settings, and **false** means the opposite.
-
-The default value is **false**.
+Whether the FrameNode supports cross-language settings. The value **true** means the FrameNode supports cross-language settings, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,23 +40,15 @@ The default value is **false**.
 treeOperating?: boolean
 ```
 
-Whether the FrameNode supports cross-language operations on the component tree.
-
-The value **true** means the FrameNode supports cross-language operations on the component tree, and **false**means the opposite.
-
-The default value is **false**.
-
-Note: When **treeOperating** is set to **true** for a FrameNode, the FrameNode can call  
-[addChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addchild),  
-[insertChildAfter](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildafter),  
-[insertChildAt](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildat),  
-[insertChildBefore](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildbefore),and [removeChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#removechild)across languages.
+Whether the FrameNode supports cross-language operations on the component tree. The value **true** means the FrameNode supports cross-language operations on the component tree, and **false** means the opposite. The default value is **false**. Note: When **treeOperating** is set to **true** for a FrameNode, the FrameNode can call [addChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addchild), [insertChildAfter](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildafter), [insertChildAt](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildat), [insertChildBefore](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildbefore), and [removeChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#removechild) across languages.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

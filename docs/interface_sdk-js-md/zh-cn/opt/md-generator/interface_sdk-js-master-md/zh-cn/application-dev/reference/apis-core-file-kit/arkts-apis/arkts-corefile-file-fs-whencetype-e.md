@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum WhenceType--><!--Device-unnamed-declare enum WhenceType-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ SEEK_SET = 0
 文件起始位置处。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-WhenceType-SEEK_SET = 0--><!--Device-WhenceType-SEEK_SET = 0-End-->
 
@@ -32,6 +36,8 @@ SEEK_CUR = 1
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-WhenceType-SEEK_CUR = 1--><!--Device-WhenceType-SEEK_CUR = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -45,6 +51,8 @@ SEEK_END = 2
 文件末尾位置处。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-WhenceType-SEEK_END = 2--><!--Device-WhenceType-SEEK_END = 2-End-->
 

@@ -6,7 +6,9 @@ export type PluginModuleInfo = _PluginModuleInfo
 
 插件的模块信息。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo--><!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo-End-->
 

@@ -4,6 +4,8 @@ Describes the video Dimensions.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-media-interface VideoSize--><!--Device-media-interface VideoSize-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
@@ -14,11 +16,13 @@ Describes the video Dimensions.
 height?: number
 ```
 
-height of the video resolution.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:Pixel.
+height of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,11 +36,13 @@ height of the video resolution.The value should be an integer.Value constraint:T
 width?: number
 ```
 
-width of the video resolution.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:Pixel.
+width of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

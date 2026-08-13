@@ -4,6 +4,8 @@ The **InterstitialDialogAction** component is a dialog box used in atomic servic
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class InterstitialDialogAction--><!--Device-unnamed-export declare class InterstitialDialogAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Closes the dialog box.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterstitialDialogAction-closeDialog(): void--><!--Device-InterstitialDialogAction-closeDialog(): void-End-->
@@ -39,6 +43,8 @@ constructor(dialogOptions: DialogOptions)
 A constructor used to create an **InterstitialDialogAction** instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,6 +67,8 @@ openDialog(): void
 Opens the dialog box.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -2,7 +2,9 @@
 
 Defines the options for obtaining the thumbnail of an image or video.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface RequestPhotoOptions--><!--Device-photoAccessHelper-interface RequestPhotoOptions-End-->
 
@@ -26,7 +28,9 @@ Operation to perform.
 
 **Type:** [RequestPhotoType](arkts-medialibrary-photoaccesshelper-requestphototype-e-sys.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestPhotoOptions-requestPhotoType?: RequestPhotoType--><!--Device-RequestPhotoOptions-requestPhotoType?: RequestPhotoType-End-->
 
@@ -44,7 +48,9 @@ Size of the thumbnail to obtain.
 
 **Type:** image.Size
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestPhotoOptions-size?: image.Size--><!--Device-RequestPhotoOptions-size?: image.Size-End-->
 

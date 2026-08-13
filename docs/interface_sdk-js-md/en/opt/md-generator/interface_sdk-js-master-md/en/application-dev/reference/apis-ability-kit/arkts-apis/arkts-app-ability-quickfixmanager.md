@@ -2,7 +2,9 @@
 
 The quickFixManager module provides APIs for quick fix. With quick fix, you can fix bugs in your application by applying patches, which is more efficient than by updating the entire application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace quickFixManager--><!--Device-unnamed-declare namespace quickFixManager-End-->
 
@@ -23,12 +25,12 @@ import { quickFixManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix) |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix-1) |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo) |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo-1) |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix) |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix-1) |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyQuickFix-(System-API)) |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyQuickFix-(System-API)) |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getApplicationQuickFixInfo-(System-API)) |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getApplicationQuickFixInfo-(System-API)) |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokeQuickFix-(System-API)) |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokeQuickFix-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

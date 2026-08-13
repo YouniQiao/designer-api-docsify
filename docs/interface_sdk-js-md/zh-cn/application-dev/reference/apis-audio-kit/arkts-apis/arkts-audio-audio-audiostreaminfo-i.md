@@ -2,9 +2,11 @@
 
 音频流信息。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioStreamInfo--><!--Device-audio-interface AudioStreamInfo-End-->
 
@@ -20,9 +22,11 @@ channelLayout?: AudioChannelLayout
 
 **类型：** [AudioChannelLayout](arkts-audio-audio-audiochannellayout-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout--><!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout-End-->
 
@@ -38,9 +42,11 @@ channels: AudioChannel
 
 **类型：** [AudioChannel](arkts-audio-audio-audiochannel-e.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamInfo-channels: AudioChannel--><!--Device-AudioStreamInfo-channels: AudioChannel-End-->
 
@@ -56,9 +62,11 @@ encodingType: AudioEncodingType
 
 **类型：** [AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamInfo-encodingType: AudioEncodingType--><!--Device-AudioStreamInfo-encodingType: AudioEncodingType-End-->
 
@@ -74,9 +82,11 @@ sampleFormat: AudioSampleFormat
 
 **类型：** [AudioSampleFormat](arkts-audio-audio-audiosampleformat-e.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat--><!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat-End-->
 
@@ -88,18 +98,15 @@ sampleFormat: AudioSampleFormat
 samplingRate: AudioSamplingRate | int
 ```
 
-音频文件的采样率，单位为赫兹（Hz）。支持传入[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md#AudioSamplingRate)。
+音频文件的采样率，单位为赫兹（Hz）。支持传入[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md#AudioSamplingRate)。 从API版本26.0.0开始： - 参数samplingRate支持number类型。 - 音频渲染扩展支持8000Hz到384000Hz范围内以10Hz为步长的采样率值。具体设备支持的采样率规格会存在差异。
 
-从API版本26.0.0开始：
+**类型：** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| int
 
-- 参数samplingRate支持number类型。  
-- 音频渲染扩展支持8000Hz到384000Hz范围内以10Hz为步长的采样率值。具体设备支持的采样率规格会存在差异。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number  <br>ArkTS-Sta：[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| int
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本26.0.0+：此接口可在Stage模型和FA模型下使用。

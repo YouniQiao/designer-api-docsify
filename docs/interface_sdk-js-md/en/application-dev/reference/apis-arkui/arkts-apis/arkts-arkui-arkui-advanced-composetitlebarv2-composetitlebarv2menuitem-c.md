@@ -4,9 +4,9 @@ Declaration of the menu item on the right side.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ComposeTitleBarV2MenuItem--><!--Device-unnamed-export declare class ComposeTitleBarV2MenuItem-End-->
 
@@ -18,24 +18,6 @@ Declaration of the menu item on the right side.
 import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from '@kit.ArkUI';
 ```
 
-## action
-
-```TypeScript
-action?: OnActionCallback
-```
-
-Callback function when click on this menu item.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ComposeTitleBarV2MenuItem-action?: OnActionCallback--><!--Device-ComposeTitleBarV2MenuItem-action?: OnActionCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## constructor
 
 ```TypeScript
@@ -46,9 +28,13 @@ Constructor of ComposeTitleBarV2MenuItem.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ComposeTitleBarV2MenuItem-constructor(params?: ComposeTitleBarV2MenuItemParams)--><!--Device-ComposeTitleBarV2MenuItem-constructor(params?: ComposeTitleBarV2MenuItemParams)-End-->
 
@@ -63,7 +49,8 @@ Constructor of ComposeTitleBarV2MenuItem.
 ## accessibilityDescription
 
 ```TypeScript
-accessibilityDescription?: ResourceStr
+@Trace
+  accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of this menu item.
@@ -72,18 +59,23 @@ The accessibilityDescription of this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComposeTitleBarV2MenuItem-accessibilityDescription?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-accessibilityDescription?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityDescription?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-accessibilityLevel?: string
+@Trace
+  accessibilityLevel?: string
 ```
 
 The accessibilityLevel of this menu item.
@@ -94,18 +86,23 @@ The accessibilityLevel of this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComposeTitleBarV2MenuItem-accessibilityLevel?: string--><!--Device-ComposeTitleBarV2MenuItem-accessibilityLevel?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityLevel?: string--><!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-accessibilityText?: ResourceStr
+@Trace
+  accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of this menu item.
@@ -114,18 +111,48 @@ The accessibilityText of this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComposeTitleBarV2MenuItem-accessibilityText?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-accessibilityText?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityText?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+@Trace
+  action?: OnActionCallback
+```
+
+Callback function when click on this menu item.
+
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  action?: OnActionCallback--><!--Device-ComposeTitleBarV2MenuItem-@Trace  action?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isEnabled
 
 ```TypeScript
-isEnabled?: boolean
+@Trace
+  isEnabled?: boolean
 ```
 
 Whether to enable this menu item.
@@ -134,18 +161,23 @@ Whether to enable this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComposeTitleBarV2MenuItem-isEnabled?: boolean--><!--Device-ComposeTitleBarV2MenuItem-isEnabled?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  isEnabled?: boolean--><!--Device-ComposeTitleBarV2MenuItem-@Trace  isEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
 
 ```TypeScript
-label?: ResourceStr
+@Trace
+  label?: ResourceStr
 ```
 
 Icon label for this menu item.
@@ -154,18 +186,23 @@ Icon label for this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComposeTitleBarV2MenuItem-label?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-label?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  label?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-@Trace  label?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
 
 ```TypeScript
-symbolStyle?: SymbolGlyphModifier
+@Trace
+  symbolStyle?: SymbolGlyphModifier
 ```
 
 Symbol icon resource for this menu item, which has higher priority than value.
@@ -174,18 +211,23 @@ Symbol icon resource for this menu item, which has higher priority than value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComposeTitleBarV2MenuItem-symbolStyle?: SymbolGlyphModifier--><!--Device-ComposeTitleBarV2MenuItem-symbolStyle?: SymbolGlyphModifier-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  symbolStyle?: SymbolGlyphModifier--><!--Device-ComposeTitleBarV2MenuItem-@Trace  symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
 
 ```TypeScript
-value: ResourceStr
+@Trace
+  value: ResourceStr
 ```
 
 Icon resource for this menu item.
@@ -194,11 +236,15 @@ Icon resource for this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComposeTitleBarV2MenuItem-value: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-value: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ComposeTitleBarV2MenuItem-@Trace  value: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-@Trace  value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

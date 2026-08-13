@@ -2,7 +2,9 @@
 
 skill标签对象。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Skill--><!--Device-unnamed-export interface Skill-End-->
 
@@ -18,9 +20,11 @@ Skill接收的[Action集合](arkts-ability-wantconstant-action-depr-e.md#Action)
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Skill-readonly actions: Array<string>--><!--Device-Skill-readonly actions: Array<string>-End-->
 
@@ -36,9 +40,11 @@ Skill接收的DomainVerify值，仅在AbilityInfo中存在，表示是否开启�
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Skill-readonly domainVerify: boolean--><!--Device-Skill-readonly domainVerify: boolean-End-->
 
@@ -54,9 +60,11 @@ Skill接收的[Entity集合](arkts-ability-wantconstant-entity-depr-e.md#Entity)
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Skill-readonly entities: Array<string>--><!--Device-Skill-readonly entities: Array<string>-End-->
 
@@ -72,9 +80,11 @@ Want匹配的Uri集合。
 
 **类型：** Array&lt;[SkillUri](arkts-ability-skill-skilluri-i.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Skill-readonly uris: Array<SkillUri>--><!--Device-Skill-readonly uris: Array<SkillUri>-End-->
 

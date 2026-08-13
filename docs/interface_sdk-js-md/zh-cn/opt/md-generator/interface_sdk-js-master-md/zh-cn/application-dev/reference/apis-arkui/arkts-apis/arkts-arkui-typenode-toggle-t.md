@@ -4,9 +4,11 @@
 type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>
 ```
 
-[Toggle](../@internal/component/ets/toggle)类型的FrameNode节点类型。
+Toggle类型的FrameNode节点类型。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

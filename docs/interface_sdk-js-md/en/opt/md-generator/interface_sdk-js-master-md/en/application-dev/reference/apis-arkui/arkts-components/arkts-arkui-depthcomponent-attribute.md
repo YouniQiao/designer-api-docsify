@@ -2,11 +2,13 @@
 
 Style the DepthComponent.
 
-**Inheritance/Implementation:** DepthComponentAttribute extends [CommonMethod<DepthComponentAttribute>](CommonMethod<DepthComponentAttribute>)
+**Inheritance/Implementation:** DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>--><!--Device-unnamed-declare class DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class DepthComponentAttribute--><!--Device-unnamed-declare class DepthComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

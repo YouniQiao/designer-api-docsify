@@ -8,7 +8,9 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 
 查询所有打印任务，使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -22,14 +24,14 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)&gt;&gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i-sys.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -55,7 +57,9 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 
 查询所有打印任务，使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -69,14 +73,14 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)&gt;&gt; |
+| Promise&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -4,6 +4,8 @@ Provides the callback information returned when a page is popped out of the rout
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PopInfo--><!--Device-unnamed-declare interface PopInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Information about the current page when a back action is performed. The value is
 **Type:** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Result returned when a back action is performed. You must customize the object.
 **Type:** Object
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Wi-Fi IP configuration information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface IpConfig--><!--Device-wifiManager-interface IpConfig-End-->
 
@@ -26,7 +28,9 @@ DNS servers.
 
 **Type:** number[]
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpConfig-dnsServers: int[]--><!--Device-IpConfig-dnsServers: int[]-End-->
 
@@ -44,7 +48,9 @@ Domains.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpConfig-domains: Array<string>--><!--Device-IpConfig-domains: Array<string>-End-->
 
@@ -62,7 +68,9 @@ Gate way.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpConfig-gateway: int--><!--Device-IpConfig-gateway: int-End-->
 
@@ -80,7 +88,9 @@ IP address.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpConfig-ipAddress: int--><!--Device-IpConfig-ipAddress: int-End-->
 
@@ -98,7 +108,9 @@ Prefix length.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpConfig-prefixLength: int--><!--Device-IpConfig-prefixLength: int-End-->
 

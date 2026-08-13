@@ -2,9 +2,11 @@
 
 The optional options used as filters to ask getFormsInfo to return formInfos from only forms that match the options.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface FormInfoFilter--><!--Device-formInfo-interface FormInfoFilter-End-->
 
@@ -26,9 +28,11 @@ optional bundleName that used to ask getFormsInfo to return form infos with the 
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfoFilter-bundleName?: string--><!--Device-FormInfoFilter-bundleName?: string-End-->
 
@@ -42,13 +46,15 @@ optional bundleName that used to ask getFormsInfo to return form infos with the 
 supportedDimensions?: Array<int>
 ```
 
-optional supportedDimensions that used to ask getFormsInfo to return form infos with the same supportedDimensions.The minimum length is 1, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md#FormDimension).
+optional supportedDimensions that used to ask getFormsInfo to return form infos with the same supportedDimensions. The minimum length is 1, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md#FormDimension).
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfoFilter-supportedDimensions?: Array<int>--><!--Device-FormInfoFilter-supportedDimensions?: Array<int>-End-->
 
@@ -62,13 +68,15 @@ optional supportedDimensions that used to ask getFormsInfo to return form infos 
 supportedShapes?: Array<int>
 ```
 
-optional supportedShapes that used to ask getFormsInfo to return form infos with the same supportedShapes.The minimum length is 1, Refer to [FormShape](arkts-form-forminfo-formshape-e.md#FormShape).
+optional supportedShapes that used to ask getFormsInfo to return form infos with the same supportedShapes. The minimum length is 1, Refer to [FormShape](arkts-form-forminfo-formshape-e.md#FormShape).
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfoFilter-supportedShapes?: Array<int>--><!--Device-FormInfoFilter-supportedShapes?: Array<int>-End-->
 

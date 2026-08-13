@@ -4,7 +4,9 @@ Speed gear definition.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export enum SpeedGear--><!--Device-mechanicManager-export enum SpeedGear-End-->
 
@@ -22,7 +24,9 @@ Low speed definition.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-SpeedGear-LOW_SPEED = 0--><!--Device-SpeedGear-LOW_SPEED = 0-End-->
 
@@ -40,7 +44,9 @@ Middle speed definition, default speed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-SpeedGear-MIDDLE_SPEED = 1--><!--Device-SpeedGear-MIDDLE_SPEED = 1-End-->
 
@@ -58,7 +64,9 @@ High speed definition.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-SpeedGear-HIGH_SPEED = 2--><!--Device-SpeedGear-HIGH_SPEED = 2-End-->
 

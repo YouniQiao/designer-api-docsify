@@ -12,11 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result.
+Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result. No permission is required when the caller clears its own cache.
 
-No permission is required when the caller clears its own cache.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -37,11 +37,11 @@ No permission is required when the caller clears its own cache.
 
 | Error Code ID |
 | --- |
-| [17700030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700030-failure-in-clearing-cache-files) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 
@@ -73,11 +73,11 @@ try {
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses a promise to return the result.
+Clears the bundle cache based on the given bundle name. This API uses a promise to return the result. No permission is required when the caller clears its own cache.
 
-No permission is required when the caller clears its own cache.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -103,11 +103,11 @@ No permission is required when the caller clears its own cache.
 
 | Error Code ID |
 | --- |
-| [17700030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700030-failure-in-clearing-cache-files) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 
@@ -137,11 +137,11 @@ try {
 function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result.
+Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result. No permission is required when the caller clears its own cache.
 
-No permission is required when the caller clears its own cache.
+**Since:** 23
 
-**Since:** 15
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -168,12 +168,12 @@ No permission is required when the caller clears its own cache.
 
 | Error Code ID |
 | --- |
-| [17700030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700030-failure-in-clearing-cache-files) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 

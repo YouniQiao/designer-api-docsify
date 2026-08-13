@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-screenshot-enum DisplayIntentType--><!--Device-screenshot-enum DisplayIntentType-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -19,6 +21,8 @@ CANONICAL = 0
 指定使用规范显示属性渲染屏幕截图，以优化HDR显示器上的演示输出。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ LOCAL = 1
 指定使用本地显示属性渲染屏幕截图，以优化在捕获显示上的显示输出。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

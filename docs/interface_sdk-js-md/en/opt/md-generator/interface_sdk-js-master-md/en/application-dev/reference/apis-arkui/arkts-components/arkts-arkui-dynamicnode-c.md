@@ -4,7 +4,9 @@ Define DynamicNode.
 
 **Since:** 12
 
-<!--Device-unnamed-declare class DynamicNode<T>--><!--Device-unnamed-declare class DynamicNode<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class DynamicNode--><!--Device-unnamed-declare class DynamicNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,9 +16,11 @@ Define DynamicNode.
 onMove(handler: Optional<OnMoveHandler>): T
 ```
 
-Invoked when data is moved during drag and drop sorting.This callback is only applicable in a List component.where each ForEach iteration generates a ListItem component.It allows you to define custom drag actions and handle various drag events.
+Invoked when data is moved during drag and drop sorting. This callback is only applicable in a List component. where each ForEach iteration generates a ListItem component. It allows you to define custom drag actions and handle various drag events.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ onMove(handler: Optional<OnMoveHandler>, eventHandler: ItemDragEventHandler): T
 Set the move action.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

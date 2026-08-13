@@ -12,11 +12,13 @@ import { contact } from '@kit.ContactsKit';
 function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int): Promise<boolean>
 ```
 
-Checks whether there are call records that meet the specified conditions. By default, call records within the last6 hours are queried. This API applies only to carrier calls. This API uses a promise to return the result.
+Checks whether there are call records that meet the specified conditions. By default, call records within the last 6 hours are queried. This API applies only to carrier calls. This API uses a promise to return the result.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 
@@ -46,9 +48,9 @@ Checks whether there are call records that meet the specified conditions. By def
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 
 ## hasMatchedCallLog
@@ -57,11 +59,13 @@ Checks whether there are call records that meet the specified conditions. By def
 function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int, withinTime: int): Promise<boolean>
 ```
 
-Checks whether there are call records that meet the specified conditions. This API applies only to carrier calls.This API uses a promise to return the result.
+Checks whether there are call records that meet the specified conditions. This API applies only to carrier calls. This API uses a promise to return the result.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 
@@ -92,7 +96,7 @@ Checks whether there are call records that meet the specified conditions. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 

@@ -6,9 +6,11 @@
 function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.ExecuteResult>): void
 ```
 
-执行意图调用的接口。使用callback异步回调。当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md#ExecuteMode)取值为UI_ABILITY_BACKGROUND时，需要申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
+执行意图调用的接口。使用callback异步回调。 当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。 当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md#ExecuteMode)取值为UI_ABILITY_BACKGROUND时，需要 申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.EXECUTE_INSIGHT_INTENT
 
@@ -31,25 +33,25 @@ function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.Exec
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000137-跨设备执行意图连接失败) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000138](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000138-跨设备执行意图设备断连) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000137](../errorcode-ability.md#16000137-跨设备执行意图连接失败) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000138](../errorcode-ability.md#16000138-跨设备执行意图设备断连) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -92,9 +94,11 @@ import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
 function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 ```
 
-执行意图调用的接口。使用Promise异步回调。当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md#ExecuteMode)取值为UI_ABILITY_BACKGROUND时，需要申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
+执行意图调用的接口。使用Promise异步回调。 当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。 当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md#ExecuteMode)取值为UI_ABILITY_BACKGROUND时，需要 申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.EXECUTE_INSIGHT_INTENT
 
@@ -122,25 +126,25 @@ function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000137-跨设备执行意图连接失败) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000138](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000138-跨设备执行意图设备断连) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000137](../errorcode-ability.md#16000137-跨设备执行意图连接失败) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000138](../errorcode-ability.md#16000138-跨设备执行意图设备断连) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 

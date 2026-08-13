@@ -6,6 +6,8 @@ Defines the triggered callback to decision whether resend form data or not.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnDataResubmittedEvent--><!--Device-unnamed-declare interface OnDataResubmittedEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Form data resubmission handle.
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

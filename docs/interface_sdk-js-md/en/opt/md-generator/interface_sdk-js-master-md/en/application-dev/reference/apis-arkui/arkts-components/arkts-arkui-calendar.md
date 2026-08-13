@@ -36,12 +36,12 @@ Set value.
 
 ## Summary
 
-- [CalendarDay](arkts-arkui-calendar-calendarday-i-sys.md)
-- [CalendarRequestedData](arkts-arkui-calendar-calendarrequesteddata-i-sys.md)
-- [CalendarSelectedDate](arkts-arkui-calendar-calendarselecteddate-i-sys.md)
-- [CurrentDayStyle](arkts-arkui-calendar-currentdaystyle-i-sys.md)
-- [MonthData](arkts-arkui-calendar-monthdata-i-sys.md)
-- [NonCurrentDayStyle](arkts-arkui-calendar-noncurrentdaystyle-i-sys.md)
-- [TodayStyle](arkts-arkui-calendar-todaystyle-i-sys.md)
-- [WeekStyle](arkts-arkui-calendar-weekstyle-i-sys.md)
-- [WorkStateStyle](arkts-arkui-calendar-workstatestyle-i-sys.md)
+- [CalendarDay](arkts-arkui-calendarday-i-sys.md)
+- [CalendarRequestedData](arkts-arkui-calendarrequesteddata-i-sys.md)
+- [CalendarSelectedDate](arkts-arkui-calendarselecteddate-i-sys.md)
+- [CurrentDayStyle](arkts-arkui-currentdaystyle-i-sys.md)
+- [MonthData](arkts-arkui-monthdata-i-sys.md)
+- [NonCurrentDayStyle](arkts-arkui-noncurrentdaystyle-i-sys.md)
+- [TodayStyle](arkts-arkui-todaystyle-i-sys.md)
+- [WeekStyle](arkts-arkui-weekstyle-i-sys.md)
+- [WorkStateStyle](arkts-arkui-workstatestyle-i-sys.md)

@@ -1,14 +1,12 @@
 # NotificationCapsule
 
-Describes the notification capsule, which is used to display the capsule form in the live view.
+Describes the notification capsule, which is used to display the capsule form in the live view. > **NOTE：**> > The actual display effect depends on the device capabilities and the notification center UI style.
 
-> **NOTE：**
-> 
-> The actual display effect depends on the device capabilities and the notification center UI style.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationCapsule--><!--Device-unnamed-export interface NotificationCapsule-End-->
 
@@ -20,14 +18,15 @@ Describes the notification capsule, which is used to display the capsule form in
 backgroundColor?: string
 ```
 
-Capsule background color. Colors in rgb, rgba, or argb format are supported. Example of rgb format color:  
-**#ffffff**, **rgb(255, 100, 255)**. Example of rgba format color: **rgba(255, 100, 255, 0.5)**. Example of argb format color: **#ff000000**. The size does not exceed 202 bytes, and the excess part will be truncated.The value defaults to empty.
+Capsule background color. Colors in rgb, rgba, or argb format are supported. Example of rgb format color: **#ffffff**, **rgb(255, 100, 255)**. Example of rgba format color: **rgba(255, 100, 255, 0.5)**. Example of argb format color: **#ff000000**. The size does not exceed 202 bytes, and the excess part will be truncated. The value defaults to empty.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationCapsule-backgroundColor?: string--><!--Device-NotificationCapsule-backgroundColor?: string-End-->
 
@@ -43,9 +42,11 @@ Capsule icon. The total bytes of the icon pixel does not exceed 192 KB (the tota
 
 **Type:** image.PixelMap
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationCapsule-icon?: image.PixelMap--><!--Device-NotificationCapsule-icon?: image.PixelMap-End-->
 
@@ -61,9 +62,11 @@ Capsule title. The size does not exceed 202 bytes, and the excess part will be t
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationCapsule-title?: string--><!--Device-NotificationCapsule-title?: string-End-->
 

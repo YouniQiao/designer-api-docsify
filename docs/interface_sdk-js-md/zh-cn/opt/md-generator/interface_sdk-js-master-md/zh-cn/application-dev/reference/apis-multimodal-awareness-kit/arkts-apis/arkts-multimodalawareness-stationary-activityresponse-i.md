@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-stationary-interface ActivityResponse--><!--Device-stationary-interface ActivityResponse-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
@@ -19,6 +21,8 @@ state: ActivityState
 **类型：** [ActivityState](arkts-multimodalawareness-stationary-activitystate-e.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ActivityResponse-state: ActivityState--><!--Device-ActivityResponse-state: ActivityState-End-->
 

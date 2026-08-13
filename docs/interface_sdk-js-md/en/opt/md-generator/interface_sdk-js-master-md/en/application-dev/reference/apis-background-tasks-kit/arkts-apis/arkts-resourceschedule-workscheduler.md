@@ -2,7 +2,9 @@
 
 The **workScheduler** module provides the APIs for registering, canceling, and querying deferred tasks. You can use the APIs to register tasks that do not have high requirements on real-time performance as deferred tasks. The system schedules and executes the deferred tasks at an appropriate time, subject to the storage space, power consumption, and more. For details, see [Deferred Task Scheduling](../../../task-management/work-scheduler.md).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,25 +24,25 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md#getworkstatus) |
-| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md#getworkstatus-1) |
-| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#islastworktimeout) |
-| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#islastworktimeout-1) |
-| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#islastworktimeout-2) |
-| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks) |
-| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks-1) |
-| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks-2) |
-| [startWork](arkts-backgroundtasks-workscheduler-startwork-f.md#startwork) |
-| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md#stopandclearworks) |
-| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopwork) |
+| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md#getWorkStatus) |
+| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md#getWorkStatus) |
+| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#isLastWorkTimeOut) |
+| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#isLastWorkTimeOut) |
+| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#isLastWorkTimeOut) |
+| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainAllWorks) |
+| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainAllWorks) |
+| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainAllWorks) |
+| [startWork](arkts-backgroundtasks-workscheduler-startwork-f.md#startWork) |
+| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md#stopAndClearWorks) |
+| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopWork) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md#resetexecfrequency) |
-| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md#setexecfrequency) |
+| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md#resetExecFrequency-(System-API)) |
+| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md#setExecFrequency-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -71,6 +73,6 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [EXECUTE_IMMEDIATE](arkts-backgroundtasks-workscheduler-con-sys.md#execute_immediate) |
-| [WORK_SCHEDULER_CONDITION](arkts-backgroundtasks-workscheduler-con-sys.md#work_scheduler_condition) |
+| [EXECUTE_IMMEDIATE](arkts-backgroundtasks-workscheduler-con-sys.md#EXECUTE_IMMEDIATE) |
+| [WORK_SCHEDULER_CONDITION](arkts-backgroundtasks-workscheduler-con-sys.md#WORK_SCHEDULER_CONDITION) |
 <!--DelEnd-->

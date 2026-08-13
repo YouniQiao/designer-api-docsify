@@ -1,10 +1,10 @@
 # SwitchMode
 
-Enumerates the **selectTrack** modes for video playback.
+Enumerates the **selectTrack** modes for video playback. SwitchMode can be passed as a parameter through the **selectTrack** method. Currently, both DASH and HLS video tracks support this extended parameter. (HLS video tracks support this extended parameter since API version 24.)
 
-SwitchMode can be passed as a parameter through the **selectTrack** method. Currently, both DASH and HLS video tracks support this extended parameter. (HLS video tracks support this extended parameter since API version 24.)
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-media-enum SwitchMode--><!--Device-media-enum SwitchMode-End-->
 
@@ -18,9 +18,11 @@ SMOOTH = 0
 
 Smooth playback is ensured after the switching. This mode has a delay, that is, the switching does not take effect immediately.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SwitchMode-SMOOTH = 0--><!--Device-SwitchMode-SMOOTH = 0-End-->
 
@@ -34,9 +36,11 @@ SEGMENT = 1
 
 The playback starts from the start position of the current segment after the switching. In this mode, the switching takes effect immediately and repeated playback may occur.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SwitchMode-SEGMENT = 1--><!--Device-SwitchMode-SEGMENT = 1-End-->
 
@@ -50,9 +54,11 @@ CLOSEST = 2
 
 The playback starts from the frame closest to the current playback time. In this mode, the switching takes effect immediately, and the playback is suspended for 3s to 5s and then resumed.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SwitchMode-CLOSEST = 2--><!--Device-SwitchMode-CLOSEST = 2-End-->
 

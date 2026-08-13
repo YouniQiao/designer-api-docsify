@@ -6,6 +6,8 @@ TextMenuItem
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextMenuItem--><!--Device-unnamed-declare interface TextMenuItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Menu name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -38,15 +42,15 @@ Menu name.
 icon?: ResourceStr
 ```
 
-Menu icon.
-
-Online images are not supported.
+Menu icon. Online images are not supported.
 
 **Type:** ResourceStr
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +74,8 @@ Menu ID.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -84,15 +90,15 @@ Menu ID.
 labelInfo?: ResourceStr
 ```
 
-Shortcut key hint.
-
-This field is only supported on 2-in-1 devices.
+Shortcut key hint. This field is only supported on 2-in-1 devices.
 
 **Type:** ResourceStr
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

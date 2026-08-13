@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NativeEmbedVisibilityInfo--><!--Device-unnamed-declare interface NativeEmbedVisibilityInfo-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ embedId: string
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-NativeEmbedVisibilityInfo-embedId: string--><!--Device-NativeEmbedVisibilityInfo-embedId: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -30,13 +34,13 @@ embedId: string
 visibility: boolean
 ```
 
-可见性。
-
-true表示可见，false表示不可见。
+可见性。 true表示可见，false表示不可见。
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-NativeEmbedVisibilityInfo-visibility: boolean--><!--Device-NativeEmbedVisibilityInfo-visibility: boolean-End-->
 

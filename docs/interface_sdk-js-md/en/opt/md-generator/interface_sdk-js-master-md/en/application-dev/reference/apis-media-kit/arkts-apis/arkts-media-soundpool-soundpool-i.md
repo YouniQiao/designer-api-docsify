@@ -1,31 +1,10 @@
 # SoundPool
 
-Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call   
-[media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)to create a SoundPool instance.
+Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md) to create a SoundPool instance. > **NOTE：**> > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain > status changes: > > - [on('loadComplete')](#on_loadComplete): listens for the > event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that > the audio is played after being loaded. > > - > [on('playFinishedWithStreamId')](#on_loadComplete): > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes > playing. > > - [on('playFinished')](#on_loadComplete): listens > for the event indicating that the playback is finished. > > - [on('error')](#on_loadComplete): listens for error events. > > - [on('errorOccurred')](#on_loadComplete): listens for > error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo). > > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using > SoundPool, see > [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
 
-> **NOTE：**
-> 
-> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
-> status changes:
-> > - [on('loadComplete')](SoundPool.on(type: 'loadComplete', callback: Callback&lt;int&gt;)): listens for the
-> event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that
-> the audio is played after being loaded.
-> > -
-> [on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)):
-> listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes
-> playing.
-> > - [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)): listens
-> for the event indicating that the playback is finished.
-> > - [on('error')](SoundPool.on(type: 'error', callback: ErrorCallback)): listens for error events.
-> > - [on('errorOccurred')](SoundPool.on(type: 'errorOccurred', callback: Callback&lt;ErrorInfo&gt;)): listens for
-> error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo).
-> 
-> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or
-> skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using
-> SoundPool, see
-> [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface SoundPool--><!--Device-unnamed-export declare interface SoundPool-End-->
 
@@ -37,25 +16,11 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 load(uri: string, callback: AsyncCallback<number>): void
 ```
 
-Loads a sound. This API uses an asynchronous callback to return the result.
+Loads a sound. This API uses an asynchronous callback to return the result. This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained. This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) . > **NOTE：**> > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to > the player, do not use the resource handle or path description in read or write operations, including but not > limited to transferring it to multiple players. > > - Competition occurs when multiple players use the same resource handle or path description to read and write > files at the same time, resulting in playback errors.
 
-This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with  
-**fd://**, which is generated based on the file descriptor (FD) obtained.
+**Since:** 23
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use   
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)or   
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3).
-
-> **NOTE：**
-> 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
-> 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void-End-->
 
@@ -72,9 +37,9 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
@@ -82,24 +47,11 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 load(uri: string): Promise<number>
 ```
 
-Loads a sound. This API uses a promise to return the result.
+Loads a sound. This API uses a promise to return the result. This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained. This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) . > **NOTE：**> > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to > the player, do not use the resource handle or path description in read or write operations, including but not > limited to transferring it to multiple players. > > - Competition occurs when multiple players use the same resource handle or path description to read and write > files at the same time, resulting in playback errors.
 
-This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
+**Since:** 23
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use   
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)or   
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3).
-
-> **NOTE：**
-> 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
-> 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-SoundPool-load(uri: string): Promise<int>--><!--Device-SoundPool-load(uri: string): Promise<int>-End-->
 
@@ -121,9 +73,9 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
@@ -131,20 +83,11 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 load(fd: number, offset: number, length: number, callback: AsyncCallback<number>): void
 ```
 
-Loads a sound. This API uses an asynchronous callback to return the result.
+Loads a sound. This API uses an asynchronous callback to return the result. This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources. > **NOTE：**> > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to > the player, do not use the resource handle or path description in read or write operations, including but not > limited to transferring it to multiple players. > > - Competition occurs when multiple players use the same resource handle or path description to read and write > files at the same time, resulting in playback errors.
 
-This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
-> 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void-End-->
 
@@ -163,9 +106,9 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
@@ -173,20 +116,11 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 load(fd: number, offset: number, length: number): Promise<number>
 ```
 
-Loads a sound. This API uses a promise to return the result.
+Loads a sound. This API uses a promise to return the result. This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources. > **NOTE：**> > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to > the player, do not use the resource handle or path description in read or write operations, including but not > limited to transferring it to multiple players. > > - Competition occurs when multiple players use the same resource handle or path description to read and write > files at the same time, resulting in playback errors.
 
-This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
-> 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>--><!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>-End-->
 
@@ -210,71 +144,97 @@ This API uses a promise to obtain the resource ID. For the input parameter, reso
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
-## off('loadComplete')
+## offError
 
 ```TypeScript
-off(type: 'loadComplete'): void
+offError(): void
+```
+
+Unsubscribes from error events of this **SoundPool** instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+## offErrorOccurred
+
+```TypeScript
+offErrorOccurred(callback?: Callback<ErrorInfo>): void
+```
+
+Unsubscribes from errorOccurred events of this **SoundPool** instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No |
+
+## offLoadComplete
+
+```TypeScript
+offLoadComplete(): void
 ```
 
 Unsubscribes from events indicating that a sound finishes loading.
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'loadComplete' | Yes |
-
-## off('playFinishedWithStreamId')
+## offPlayFinished
 
 ```TypeScript
-off(type: 'playFinishedWithStreamId'): void
+offPlayFinished(): void
 ```
 
 Unsubscribes from events indicating that a sound finishes playing.
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'playFinishedWithStreamId' | Yes |
-
-## off('playFinished')
+## offPlayFinishedWithStreamId
 
 ```TypeScript
-off(type: 'playFinished'): void
+offPlayFinishedWithStreamId(): void
 ```
 
 Unsubscribes from events indicating that a sound finishes playing.
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'playFinished' | Yes |
-
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error'): void
@@ -283,6 +243,8 @@ off(type: 'error'): void
 Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
 
@@ -294,7 +256,7 @@ Unsubscribes from error events of a SoundPool instance.
 | --- | --- | --- |
 | type | 'error' | Yes |
 
-## off('errorOccurred')
+## off_errorOccurred
 
 ```TypeScript
 off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
@@ -303,6 +265,8 @@ off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
 Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void-End-->
 
@@ -315,17 +279,19 @@ Unsubscribes from error events of a SoundPool instance.
 | type | 'errorOccurred' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No |
 
-## on('loadComplete')
+## off_loadComplete
 
 ```TypeScript
-on(type: 'loadComplete', callback: Callback<number>): void
+off(type: 'loadComplete'): void
 ```
 
-Subscribes to events indicating that a sound finishes loading. This API uses an asynchronous callback to return the result.
+Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 10
 
-<!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -334,46 +300,20 @@ Subscribes to events indicating that a sound finishes loading. This API uses an 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'loadComplete' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
 
-## on('playFinishedWithStreamId')
-
-```TypeScript
-on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
-```
-
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.
-
-When only [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) or   
-[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) is subscribed to, the registered callback is triggered when the audio playback is complete.
-
-When both [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) and   
-[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
-
-**Since:** 18
-
-<!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'playFinishedWithStreamId' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
-
-## on('playFinished')
+## off_playFinished
 
 ```TypeScript
-on(type: 'playFinished', callback: Callback<void>): void
+off(type: 'playFinished'): void
 ```
 
-Subscribes to events indicating that a sound finishes playing. This API uses an asynchronous callback to return the result.
+Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 10
 
-<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -382,18 +322,150 @@ Subscribes to events indicating that a sound finishes playing. This API uses an 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playFinished' | Yes |
+
+## off_playFinishedWithStreamId
+
+```TypeScript
+off(type: 'playFinishedWithStreamId'): void
+```
+
+Unsubscribes from events indicating that a sound finishes playing.
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playFinishedWithStreamId' | Yes |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+## onErrorOccurred
+
+```TypeScript
+onErrorOccurred(callback: Callback<ErrorInfo>): void
+```
+
+Subscribes to errorOccurred events of this **SoundPool** instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes |
+
+## onLoadComplete
+
+```TypeScript
+onLoadComplete(callback: Callback<number>): void
+```
+
+Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(callback: Callback<void>): void
+```
+
+Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
-## on('error')
+## onPlayFinishedWithStreamId
+
+```TypeScript
+onPlayFinishedWithStreamId(callback: Callback<number>): void
+```
+
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete. When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to error events of a   
-[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
+Subscribes to error events of a SoundPool instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -406,16 +478,17 @@ Subscribes to error events of a
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
-## on('errorOccurred')
+## on_errorOccurred
 
 ```TypeScript
 on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
-Subscribes to error events of a   
-[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
+Subscribes to error events of a SoundPool instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void-End-->
 
@@ -428,6 +501,75 @@ Subscribes to error events of a
 | type | 'errorOccurred' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes |
 
+## on_loadComplete
+
+```TypeScript
+on(type: 'loadComplete', callback: Callback<number>): void
+```
+
+Subscribes to events indicating that a sound finishes loading. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'loadComplete' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+## on_playFinished
+
+```TypeScript
+on(type: 'playFinished', callback: Callback<void>): void
+```
+
+Subscribes to events indicating that a sound finishes playing. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playFinished' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+## on_playFinishedWithStreamId
+
+```TypeScript
+on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
+```
+
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result. When only [on('playFinished')](#on_loadComplete) or [on('playFinishedWithStreamId')](#on_loadComplete) is subscribed to, the registered callback is triggered when the audio playback is complete. When both [on('playFinished')](#on_loadComplete) and [on('playFinishedWithStreamId')](#on_loadComplete) are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+<!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playFinishedWithStreamId' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
 ## play
 
 ```TypeScript
@@ -436,7 +578,9 @@ play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): 
 
 Plays a sound and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void-End-->
 
@@ -454,9 +598,9 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## play
 
@@ -466,7 +610,9 @@ play(soundID: number, callback: AsyncCallback<number>): void
 
 Plays a sound using default parameters and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void-End-->
 
@@ -483,9 +629,9 @@ Plays a sound using default parameters and obtains the stream ID. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## play
 
@@ -495,7 +641,9 @@ play(soundID: number, params?: PlayParameters): Promise<number>
 
 Plays a sound and obtains the stream ID. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>--><!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>-End-->
 
@@ -518,9 +666,9 @@ Plays a sound and obtains the stream ID. This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -530,7 +678,9 @@ release(callback: AsyncCallback<void>): void
 
 Releases a **SoundPool** instance. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-release(callback: AsyncCallback<void>): void--><!--Device-SoundPool-release(callback: AsyncCallback<void>): void-End-->
 
@@ -546,7 +696,7 @@ Releases a **SoundPool** instance. This API uses an asynchronous callback to ret
 
 | Error Code ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -556,7 +706,9 @@ release(): Promise<void>
 
 Releases a **SoundPool** instance. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-release(): Promise<void>--><!--Device-SoundPool-release(): Promise<void>-End-->
 
@@ -572,7 +724,7 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setInterruptMode
 
@@ -580,10 +732,11 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created,this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the   
-[SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
+Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created, this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the [SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is , if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -605,7 +758,9 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 
 Sets the loop mode. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void-End-->
 
@@ -623,9 +778,9 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setLoop
 
@@ -635,7 +790,9 @@ setLoop(streamID: number, loop: number): Promise<void>
 
 Sets the loop mode. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>--><!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>-End-->
 
@@ -658,9 +815,9 @@ Sets the loop mode. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setPriority
 
@@ -670,7 +827,9 @@ setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): 
 
 Sets the priority for an audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void-End-->
 
@@ -688,9 +847,9 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setPriority
 
@@ -700,7 +859,9 @@ setPriority(streamID: number, priority: number): Promise<void>
 
 Sets the priority for an audio stream. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>--><!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>-End-->
 
@@ -723,9 +884,9 @@ Sets the priority for an audio stream. This API uses a promise to return the res
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setRate
 
@@ -735,7 +896,9 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 
 Sets the playback rate for an audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
@@ -753,9 +916,9 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setRate
 
@@ -765,7 +928,9 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 
 Sets the playback rate for an audio stream. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>-End-->
 
@@ -788,9 +953,9 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setVolume
 
@@ -800,7 +965,9 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: A
 
 Sets the volume for an audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void-End-->
 
@@ -819,9 +986,9 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setVolume
 
@@ -831,7 +998,9 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<vo
 
 Sets the volume for an audio stream. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>-End-->
 
@@ -855,9 +1024,9 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
@@ -867,7 +1036,9 @@ stop(streamID: number, callback: AsyncCallback<void>): void
 
 Stops audio playback. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void-End-->
 
@@ -884,9 +1055,9 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
@@ -896,7 +1067,9 @@ stop(streamID: number): Promise<void>
 
 Stops audio playback. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-stop(streamID: int): Promise<void>--><!--Device-SoundPool-stop(streamID: int): Promise<void>-End-->
 
@@ -918,9 +1091,9 @@ Stops audio playback. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## unload
 
@@ -930,7 +1103,9 @@ unload(soundID: number, callback: AsyncCallback<void>): void
 
 Unloads a sound. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void-End-->
 
@@ -947,9 +1122,9 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## unload
 
@@ -959,7 +1134,9 @@ unload(soundID: number): Promise<void>
 
 Unloads a sound. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SoundPool-unload(soundID: int): Promise<void>--><!--Device-SoundPool-unload(soundID: int): Promise<void>-End-->
 
@@ -981,6 +1158,6 @@ Unloads a sound. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |

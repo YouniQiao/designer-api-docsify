@@ -6,6 +6,8 @@ Defines the load committed details.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LoadCommittedDetails--><!--Device-unnamed-declare interface LoadCommittedDetails-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ True if the committed entry has replaced the existing one. Note that in case of 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,6 +48,8 @@ Check whether the request is for getting the main frame.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LoadCommittedDetails-isMainFrame: boolean--><!--Device-LoadCommittedDetails-isMainFrame: boolean-End-->
@@ -63,6 +69,8 @@ Whether the navigation happened without changing document. Examples of same docu
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,6 +92,8 @@ The type of the navigation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LoadCommittedDetails-navigationType: WebNavigationType--><!--Device-LoadCommittedDetails-navigationType: WebNavigationType-End-->
@@ -103,6 +113,8 @@ The url to navigate.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -14,7 +14,9 @@ function updateFormSize(formId: string, newDimension: formInfo.FormDimension, ne
 
 Updates the size of the widget.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -36,11 +38,11 @@ Updates the size of the widget.
 
 | Error Code ID |
 | --- |
-| [16501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16501012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501012-incorrect-widget-dimension) |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501012](../errorcode-form.md#16501012-incorrect-widget-dimension) |
 
 ## Examples
 

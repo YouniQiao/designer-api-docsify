@@ -6,7 +6,9 @@ type TelCallState = call.TelCallState
 
 通话状态码。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-observer-type TelCallState = call.TelCallState--><!--Device-observer-type TelCallState = call.TelCallState-End-->
 

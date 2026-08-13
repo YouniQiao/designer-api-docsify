@@ -6,7 +6,7 @@ typedef struct ArkUI_HostWindowInfo ArkUI_HostWindowInfo
 
 ## 概述
 
-定义窗口属性的 HostWindowInfo 类信息。
+定义窗口属性的HostWindowInfo类信息。
 
 **起始版本：** 15
 

@@ -2,7 +2,9 @@
 
 Describes the parameters in the callback of the action event of the PiP controller.
 
-**Since:** 12
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-interface ControlEventParam--><!--Device-PiPWindow-interface ControlEventParam-End-->
 
@@ -20,13 +22,15 @@ import { PiPWindow } from '@kit.ArkUI';
 controlType: PiPControlType
 ```
 
-Type of the action event of the PiP controller. The application performs processing based on the component type.For example, if the video play/pause component is touched, the application starts or stops the video.
+Type of the action event of the PiP controller. The application performs processing based on the component type. For example, if the video play/pause component is touched, the application starts or stops the video.
 
 **Type:** [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md)
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ControlEventParam-controlType: PiPControlType--><!--Device-ControlEventParam-controlType: PiPControlType-End-->
 
@@ -42,9 +46,11 @@ Status of a component that can be switched. For example, for a microphone on/off
 
 **Type:** [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md)
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ControlEventParam-status?: PiPControlStatus--><!--Device-ControlEventParam-status?: PiPControlStatus-End-->
 

@@ -2,7 +2,9 @@
 
 设置AVRecorder的水印配置。水印位置从左上角开始计算。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface WatermarkConfig--><!--Device-unnamed-interface WatermarkConfig-End-->
 
@@ -20,7 +22,9 @@ left: number
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WatermarkConfig-left: int--><!--Device-WatermarkConfig-left: int-End-->
 
@@ -38,7 +42,9 @@ top: number
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WatermarkConfig-top: int--><!--Device-WatermarkConfig-top: int-End-->
 

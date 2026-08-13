@@ -2,7 +2,9 @@
 
 描述占位符样式。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-text-interface PlaceholderSpan--><!--Device-text-interface PlaceholderSpan-End-->
 
@@ -18,7 +20,9 @@ align: PlaceholderAlignment
 
 **类型：** [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ baseline: TextBaseline
 
 **类型：** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ baselineOffset: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +80,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +100,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

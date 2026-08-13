@@ -12,6 +12,8 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>--><!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -33,9 +35,9 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
-| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
 ## 示例
 

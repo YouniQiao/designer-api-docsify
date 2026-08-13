@@ -4,6 +4,8 @@ Specifies the target node for component binding.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface TargetInfo--><!--Device-unnamed-export interface TargetInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,13 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 componentId?: number
 ```
 
-Unique ID of the custom component where the target node is located.When the above **id** is specified as a string, this property can be used to narrow down the scope,helping you ensure the uniqueness of **id: string** within a certain range.
+Unique ID of the custom component where the target node is located. When the above **id** is specified as a string, this property can be used to narrow down the scope, helping you ensure the uniqueness of **id: string** within a certain range.
 
 **Type:** number
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,12 +44,13 @@ Unique ID of the custom component where the target node is located.When the abov
 id: string | number
 ```
 
-Target node for binding popups or menus.&lt;br&gt;**NOTE：**&lt;br&gt;1. When **id** is a number, it corresponds to the component's **UniqueID**,whose uniqueness is guaranteed by the system.&lt;br&gt;2. When **id** is a string,it corresponds to the component specified by the universal attribute
-[id](CommonMethod#id). You must ensure the uniqueness of this ID,although there may be multiple instances.
+Target node for binding popups or menus.&lt;br&gt;**NOTE：**&lt;br&gt;1. When **id** is a number, it corresponds to the component's **UniqueID**, whose uniqueness is guaranteed by the system.&lt;br&gt;2. When **id** is a string, it corresponds to the component specified by the universal attribute id. You must ensure the uniqueness of this ID, although there may be multiple instances.
 
 **Type:** string \| number
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

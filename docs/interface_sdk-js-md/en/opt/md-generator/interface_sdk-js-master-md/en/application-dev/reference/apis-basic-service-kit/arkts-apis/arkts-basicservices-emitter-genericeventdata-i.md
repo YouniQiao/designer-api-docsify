@@ -2,9 +2,11 @@
 
 Describes the generic data carried by the emitted event.
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-emitter-export interface GenericEventData<T>--><!--Device-emitter-export interface GenericEventData<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-emitter-export interface GenericEventData--><!--Device-emitter-export interface GenericEventData-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -17,17 +19,17 @@ import { emitter } from '@kit.BasicServicesKit';
 ## data
 
 ```TypeScript
-data?: T
+data?: T | ESValue
 ```
 
-Data carried by the emitted event. **T** represents a generic type, which can be customized based on service requirements.
+Data passed in the event. T: generic type.
 
-**Type:** T
+**Type:** T \| ESValue
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-GenericEventData-data?: T--><!--Device-GenericEventData-data?: T-End-->
+<!--Device-GenericEventData-data?: T | ESValue--><!--Device-GenericEventData-data?: T | ESValue-End-->
 
 **System capability:** SystemCapability.Notification.Emitter

@@ -4,6 +4,8 @@ Enumerates the reasons for popup dismissal.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum DismissReason--><!--Device-unnamed-declare enum DismissReason-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ PRESS_BACK = 0
 Touching the **Back** button, swiping left or right on the screen, or pressing the **Esc** key.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Touching the mask.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -54,6 +60,8 @@ Touching the close button.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -68,13 +76,11 @@ Touching the close button.
 SLIDE_DOWN = 3
 ```
 
-Swiping down.
-
-**NOTE：**
-
-This API is effective only in [sheet transition](common).
+Swiping down. **NOTE：**This API is effective only in sheet transition.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,13 +96,11 @@ This API is effective only in [sheet transition](common).
 SLIDE = 4
 ```
 
-Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in the mirror scenario. This setting is not user-defined.
-
-**NOTE：**
-
-This API is effective only in [sheet transition](common).
+Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in the mirror scenario. This setting is not user-defined. **NOTE：**This API is effective only in sheet transition.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

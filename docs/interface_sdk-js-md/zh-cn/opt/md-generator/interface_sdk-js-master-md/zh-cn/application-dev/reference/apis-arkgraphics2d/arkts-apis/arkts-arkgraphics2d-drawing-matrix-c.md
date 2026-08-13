@@ -1,26 +1,10 @@
 # Matrix
 
-矩阵对象，用于图形的坐标变换，支持平移、旋转、缩放和倾斜等变换操作。通过矩阵变换可实现不同坐标系之间的映射。
+矩阵对象，用于图形的坐标变换，支持平移、旋转、缩放和倾斜等变换操作。通过矩阵变换可实现不同坐标系之间的映射。 表示为3×3的矩阵，如下图所示：  矩阵中的元素从左到右，从上到下分别表示水平缩放因子、水平倾斜系数、水平位移系数、垂直倾斜系数、垂直缩放因子、垂直位移系数、x轴透视系数、y轴透视系数、透视缩放因子。 设(x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;)为源坐标点，(x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;)为源坐标点通过矩阵变换后的坐标点，则两个坐标点的关系如下：  > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-表示为3×3的矩阵，如下图所示：
+**起始版本：** 23
 
-![matrix_3x3](../../../reference/apis-arkgraphics2d/figures/matrix3X3.PNG)
-
-矩阵中的元素从左到右，从上到下分别表示水平缩放因子、水平倾斜系数、水平位移系数、垂直倾斜系数、垂直缩放因子、垂直位移系数、x轴透视系数、y轴透视系数、透视缩放因子。
-
-设(x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;)为源坐标点，(x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;)为源坐标点通过矩阵变换后的坐标点，则两个坐标点的关系如下：
-
-![matrix-xy](../../../reference/apis-arkgraphics2d/figures/matrix-xy.PNG)
-
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
-
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-drawing-class Matrix--><!--Device-drawing-class Matrix-End-->
 
@@ -34,7 +18,9 @@ constructor()
 
 构造一个矩阵对象。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-constructor()--><!--Device-Matrix-constructor()-End-->
 
@@ -48,7 +34,9 @@ constructor(matrix: Matrix)
 
 拷贝一个矩阵。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-constructor(matrix: Matrix)--><!--Device-Matrix-constructor(matrix: Matrix)-End-->
 
@@ -70,7 +58,31 @@ getAll(): Array<number>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-Matrix-getAll(): Array<number>--><!--Device-Matrix-getAll(): Array<number>-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Array & lt;number & gt; |
+
+## getAll
+
+```TypeScript
+getAll(): Array<number> | undefined
+```
+
+获取矩阵的所有元素值。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Matrix-getAll(): Array<double> | undefined--><!--Device-Matrix-getAll(): Array<double> | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -88,7 +100,9 @@ getValue(index: number): number
 
 获取矩阵给定索引位的值。索引范围0-8。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-getValue(index: int): double--><!--Device-Matrix-getValue(index: int): double-End-->
 
@@ -110,7 +124,7 @@ getValue(index: number): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## invert
 
@@ -120,7 +134,9 @@ invert(matrix: Matrix): boolean
 
 将矩阵matrix设置为当前矩阵的逆矩阵，并返回是否设置成功的结果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-invert(matrix: Matrix): boolean--><!--Device-Matrix-invert(matrix: Matrix): boolean-End-->
 
@@ -142,7 +158,7 @@ invert(matrix: Matrix): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## isAffine
 
@@ -152,7 +168,9 @@ isAffine(): boolean
 
 判断当前矩阵是否为仿射矩阵。仿射矩阵是一种包括平移、旋转、缩放等变换的矩阵。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-isAffine(): boolean--><!--Device-Matrix-isAffine(): boolean-End-->
 
@@ -172,7 +190,9 @@ isEqual(matrix: Matrix): boolean
 
 判断两个矩阵是否相等。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-isEqual(matrix: Matrix): boolean--><!--Device-Matrix-isEqual(matrix: Matrix): boolean-End-->
 
@@ -194,7 +214,7 @@ isEqual(matrix: Matrix): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## isIdentity
 
@@ -204,7 +224,9 @@ isIdentity(): boolean
 
 判断矩阵是否是单位矩阵。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-isIdentity(): boolean--><!--Device-Matrix-isIdentity(): boolean-End-->
 
@@ -226,6 +248,8 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -246,7 +270,41 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## mapPoints
+
+```TypeScript
+mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined
+```
+
+通过矩阵变换将源点数组映射到目标点数组。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Array & lt;common2D.Point & gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Array & lt;common2D.Point & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## mapRadius
 
@@ -256,7 +314,9 @@ mapRadius(radius: number): number
 
 返回半径为radius的圆经过当前矩阵映射形成的椭圆的平均半径。平均半径的平方为椭圆长轴长度和短轴长度的乘积。若当前矩阵包含透视变换，则该结果无意义。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-mapRadius(radius: double): double--><!--Device-Matrix-mapRadius(radius: double): double-End-->
 
@@ -280,11 +340,11 @@ mapRadius(radius: number): number
 mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 ```
 
-将目标矩形设置为源矩形通过矩阵变换后的图形的外接矩形。如下图所示，蓝色矩形为源矩形，假设黄色矩形为源矩形通过矩阵变换形成的图形，此时黄色矩形的边不与坐标轴平行，无法使用矩形对象表示，因此，将目标矩形设置为黄色矩形的外接矩形，即黑色矩形。
+将目标矩形设置为源矩形通过矩阵变换后的图形的外接矩形。如下图所示，蓝色矩形为源矩形，假设黄色矩形为源矩形通过矩阵变换形成的图形，此时黄色矩形的边不与坐标轴平行，无法使用矩形对象表示，因此，将目标矩形设置为黄色矩形的外接矩形，即 黑色矩形。 
 
-![mapRect](../../../reference/apis-arkgraphics2d/figures/matrix-mapRect.png)
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean--><!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean-End-->
 
@@ -307,7 +367,7 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## postConcat
 
@@ -317,7 +377,9 @@ postConcat(matrix: Matrix): void
 
 将一个矩阵乘在当前矩阵的左侧，即新的变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用新变换，使用preConcat方法。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postConcat(matrix: Matrix): void--><!--Device-Matrix-postConcat(matrix: Matrix): void-End-->
 
@@ -337,7 +399,9 @@ postRotate(degree: number, px: number, py: number): void
 
 将矩阵设置为矩阵右乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用旋转变换，使用preRotate方法。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-postRotate(degree: double, px: double, py: double): void-End-->
 
@@ -348,14 +412,14 @@ postRotate(degree: number, px: number, py: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | degree | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## postScale
 
@@ -365,7 +429,9 @@ postScale(sx: number, sy: number, px: number, py: number): void
 
 将矩阵设置为矩阵右乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用缩放变换，使用preScale方法。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -377,14 +443,14 @@ postScale(sx: number, sy: number, px: number, py: number): void
 | --- | --- | --- |
 | sx | number | 是 |
 | sy | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## postSkew
 
@@ -394,7 +460,9 @@ postSkew(kx: number, ky: number, px: number, py: number): void
 
 当前矩阵右乘一个倾斜变换矩阵。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -406,7 +474,7 @@ postSkew(kx: number, ky: number, px: number, py: number): void
 | --- | --- | --- |
 | kx | number | 是 |
 | ky | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## postTranslate
@@ -417,7 +485,9 @@ postTranslate(dx: number, dy: number): void
 
 将矩阵设置为矩阵右乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用平移变换，使用preTranslate方法。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postTranslate(dx: double, dy: double): void--><!--Device-Matrix-postTranslate(dx: double, dy: double): void-End-->
 
@@ -434,7 +504,7 @@ postTranslate(dx: number, dy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## preConcat
 
@@ -444,7 +514,9 @@ preConcat(matrix: Matrix): void
 
 将一个矩阵乘在当前矩阵的右侧，即新的变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用新变换，使用postConcat方法。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preConcat(matrix: Matrix): void--><!--Device-Matrix-preConcat(matrix: Matrix): void-End-->
 
@@ -460,7 +532,7 @@ preConcat(matrix: Matrix): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## preRotate
 
@@ -470,7 +542,9 @@ preRotate(degree: number, px: number, py: number): void
 
 将矩阵设置为矩阵左乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用旋转变换，使用postRotate方法。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-preRotate(degree: double, px: double, py: double): void-End-->
 
@@ -481,14 +555,14 @@ preRotate(degree: number, px: number, py: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | degree | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## preScale
 
@@ -498,7 +572,9 @@ preScale(sx: number, sy: number, px: number, py: number): void
 
 将矩阵设置为矩阵左乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用缩放变换，使用postScale方法。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -510,14 +586,14 @@ preScale(sx: number, sy: number, px: number, py: number): void
 | --- | --- | --- |
 | sx | number | 是 |
 | sy | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## preSkew
 
@@ -527,7 +603,9 @@ preSkew(kx: number, ky: number, px: number, py: number): void
 
 当前矩阵左乘一个倾斜变换矩阵。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -539,7 +617,7 @@ preSkew(kx: number, ky: number, px: number, py: number): void
 | --- | --- | --- |
 | kx | number | 是 |
 | ky | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## preTranslate
@@ -550,7 +628,9 @@ preTranslate(dx: number, dy: number): void
 
 将矩阵设置为矩阵左乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用平移变换，使用postTranslate方法。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preTranslate(dx: double, dy: double): void--><!--Device-Matrix-preTranslate(dx: double, dy: double): void-End-->
 
@@ -567,7 +647,7 @@ preTranslate(dx: number, dy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## rectStaysRect
 
@@ -577,7 +657,9 @@ rectStaysRect(): boolean
 
 判断经过该矩阵映射后的矩形的形状是否仍为矩形。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-rectStaysRect(): boolean--><!--Device-Matrix-rectStaysRect(): boolean-End-->
 
@@ -597,7 +679,9 @@ reset(): void
 
 重置当前矩阵为单位矩阵。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-reset(): void--><!--Device-Matrix-reset(): void-End-->
 
@@ -611,7 +695,9 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 
 用两个矩阵的乘积更新当前矩阵，即当前矩阵 = matrixA × matrixB。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void--><!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void-End-->
 
@@ -632,7 +718,9 @@ setMatrix(values: Array<number>): void
 
 设置矩阵对象的各项参数。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setMatrix(values: Array<double>): void--><!--Device-Matrix-setMatrix(values: Array<double>): void-End-->
 
@@ -648,7 +736,7 @@ setMatrix(values: Array<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setMatrix
 
@@ -658,7 +746,9 @@ setMatrix(matrix: Array<number> | Matrix): void
 
 用一个矩阵对当前矩阵进行更新。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void--><!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void-End-->
 
@@ -678,7 +768,9 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: num
 
 将当前矩阵设置为能够将源点数组映射到目标点数组的变换矩阵。源点和目标点的个数必须大于等于0，小于等于4。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean--><!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean-End-->
 
@@ -702,7 +794,7 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: num
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setRectToRect
 
@@ -712,7 +804,9 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 将当前矩阵设置为能使源矩形映射到目标矩形的变换矩阵。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean--><!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean-End-->
 
@@ -736,7 +830,7 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setRotation
 
@@ -746,7 +840,9 @@ setRotation(degree: number, px: number, py: number): void
 
 设置矩阵为单位矩阵，并围绕旋转中心点(px, py)进行旋转。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setRotation(degree: double, px: double, py: double): void--><!--Device-Matrix-setRotation(degree: double, px: double, py: double): void-End-->
 
@@ -757,14 +853,14 @@ setRotation(degree: number, px: number, py: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | degree | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setScale
 
@@ -774,7 +870,9 @@ setScale(sx: number, sy: number, px: number, py: number): void
 
 设置矩阵为单位矩阵，并围绕缩放中心点(px, py)按sx和sy进行缩放。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -786,14 +884,14 @@ setScale(sx: number, sy: number, px: number, py: number): void
 | --- | --- | --- |
 | sx | number | 是 |
 | sy | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setSinCos
 
@@ -801,9 +899,11 @@ setScale(sx: number, sy: number, px: number, py: number): void
 setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
 ```
 
-设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](#setRotation)功能类似，但setRotation直接传入角度值，而本方法传入正弦值和余弦值。
+设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](#setRotation)功能类似，但setRotation直接传入角度 值，而本方法传入正弦值和余弦值。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void--><!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void-End-->
 
@@ -815,7 +915,7 @@ setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
 | --- | --- | --- |
 | sinValue | number | 是 |
 | cosValue | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## setSkew
@@ -824,10 +924,11 @@ setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
 setSkew(kx: number, ky: number, px: number, py: number): void
 ```
 
-设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](#setRotation)、  
-[setScale](#setScale)、[setTranslation](#setTranslation)类似，均为重置矩阵后施加单一变换。
+设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](#setRotation)、 [setScale](#setScale)、[setTranslation](#setTranslation)类似，均为重置矩阵后施加单一变换。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -839,7 +940,7 @@ setSkew(kx: number, ky: number, px: number, py: number): void
 | --- | --- | --- |
 | kx | number | 是 |
 | ky | number | 是 |
-| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
+| [px](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## setTranslation
@@ -850,7 +951,9 @@ setTranslation(dx: number, dy: number): void
 
 设置矩阵为单位矩阵，并平移(dx, dy)。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setTranslation(dx: double, dy: double): void--><!--Device-Matrix-setTranslation(dx: double, dy: double): void-End-->
 
@@ -867,4 +970,4 @@ setTranslation(dx: number, dy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

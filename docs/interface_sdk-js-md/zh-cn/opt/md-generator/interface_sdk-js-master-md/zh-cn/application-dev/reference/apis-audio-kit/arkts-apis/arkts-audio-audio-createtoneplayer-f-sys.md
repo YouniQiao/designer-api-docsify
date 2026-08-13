@@ -6,9 +6,11 @@
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void-End-->
 
@@ -49,12 +51,46 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 ## createTonePlayer
 
 ```TypeScript
+function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void
+```
+
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses an asynchronous callback to return the renderer instance.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Tone
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null & gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+
+## createTonePlayer
+
+```TypeScript
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses a promise to return the renderer instance.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>-End-->
 
@@ -88,3 +124,40 @@ async function createTonePlayerBefore(){
   tonePlayer = await audio.createTonePlayer(audioRendererInfo);
 }
 ```
+
+
+## createTonePlayer
+
+```TypeScript
+function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>
+```
+
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses a promise to return the renderer instance.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Tone
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

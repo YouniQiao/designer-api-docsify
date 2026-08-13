@@ -2,9 +2,11 @@
 
 Describes the translation parameters.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface TranslateOptions--><!--Device-window-interface TranslateOptions-End-->
 
@@ -26,11 +28,13 @@ x?: double
 
 Distance to translate along the x-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TranslateOptions-x?: double--><!--Device-TranslateOptions-x?: double-End-->
 
@@ -46,11 +50,13 @@ y?: double
 
 Distance to translate along the y-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TranslateOptions-y?: double--><!--Device-TranslateOptions-y?: double-End-->
 
@@ -66,11 +72,13 @@ z?: double
 
 Distance to translate along the z-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TranslateOptions-z?: double--><!--Device-TranslateOptions-z?: double-End-->
 

@@ -8,7 +8,7 @@ Wi-Fi connection information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiLinkedInfo](ohos.wifiManager/wifiManager.WifiLinkedInfo)
+**Substitutes:** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#WifiLinkedInfo)
 
 <!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
 
@@ -36,7 +36,7 @@ The load value of this Wi-Fi connection. A greater value indicates a higher load
 
 **Deprecated since:** 9
 
-**Substitutes:** [chload](ohos.wifiManager/wifiManager.WifiLinkedInfo.chload)
+**Substitutes:** [chload](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#chload)
 
 <!--Device-WifiLinkedInfo-chload: number--><!--Device-WifiLinkedInfo-chload: number-End-->
 
@@ -60,7 +60,7 @@ The ID(uniquely identifies) of a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [networkId](ohos.wifiManager/wifiManager.WifiLinkedInfo.networkId)
+**Substitutes:** [networkId](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#networkId)
 
 <!--Device-WifiLinkedInfo-networkId: number--><!--Device-WifiLinkedInfo-networkId: number-End-->
 
@@ -84,7 +84,7 @@ The signal-to-noise ratio (SNR) of this Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [snr](ohos.wifiManager/wifiManager.WifiLinkedInfo.snr)
+**Substitutes:** [snr](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#snr)
 
 <!--Device-WifiLinkedInfo-snr: number--><!--Device-WifiLinkedInfo-snr: number-End-->
 
@@ -108,7 +108,7 @@ The state of the supplicant of this Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [suppState](ohos.wifiManager/wifiManager.WifiLinkedInfo.suppState)
+**Substitutes:** [suppState](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#suppState)
 
 <!--Device-WifiLinkedInfo-suppState: SuppState--><!--Device-WifiLinkedInfo-suppState: SuppState-End-->
 

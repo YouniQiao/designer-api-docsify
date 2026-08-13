@@ -4,6 +4,8 @@ FunctionInfo describes the basic information of a CLI function.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface FunctionInfo--><!--Device-unnamed-export interface FunctionInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -21,6 +23,8 @@ Human-readable function description, used for AI Agent decision-making.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ The name of the function.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly functionName: string--><!--Device-FunctionInfo-readonly functionName: string-End-->
@@ -61,6 +67,8 @@ The namespace of the function.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +90,8 @@ Input parameter JSON Schema, describes the structure of parameters accepted by t
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly inputSchema?: string--><!--Device-FunctionInfo-readonly inputSchema?: string-End-->
@@ -102,6 +112,8 @@ Output result JSON Schema (optional), describes the structure of the function re
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly outputSchema?: string--><!--Device-FunctionInfo-readonly outputSchema?: string-End-->
@@ -121,6 +133,8 @@ The version of the function (format defined by provider, e.g., "1.0.0").
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

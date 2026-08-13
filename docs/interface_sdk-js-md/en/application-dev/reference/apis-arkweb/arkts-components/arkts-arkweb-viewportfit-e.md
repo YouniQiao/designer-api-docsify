@@ -6,6 +6,8 @@ Enumerates the viewport types available for **viewport-fit** in the web page **\
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ViewportFit--><!--Device-unnamed-declare enum ViewportFit-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ The entire web page is visible. Default value.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,6 +44,8 @@ The initial layout viewport and the visual viewport are confined within the boun
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ViewportFit-CONTAINS = 1--><!--Device-ViewportFit-CONTAINS = 1-End-->
@@ -57,6 +63,8 @@ The initial layout viewport and the visual viewport are confined within the boun
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,12 +1,12 @@
 # AudioManager
 
-音频音量和设备管理。
+音频音量和设备管理。 在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager)获取AudioManager实例。
 
-在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager)获取AudioManager实例。
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
@@ -20,9 +20,11 @@ disableSafeMediaVolume(): Promise<void>
 
 user disable the safe media volume state.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -42,8 +44,8 @@ user disable the safe media volume state.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -65,9 +67,11 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 获取协同播放管理实例
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager--><!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager-End-->
 
@@ -85,7 +89,7 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## getEffectManager
 
@@ -93,11 +97,13 @@ getCollaborativeManager(): AudioCollaborativeManager
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager) instance.
+Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager（系统接口）) instance.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-getEffectManager(): AudioEffectManager--><!--Device-AudioManager-getEffectManager(): AudioEffectManager-End-->
 
@@ -115,7 +121,7 @@ Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#Au
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -133,9 +139,11 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 
 Obtains the values of a certain key. This method uses a promise to return the query result.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>--><!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>-End-->
 
@@ -160,9 +168,9 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -187,7 +195,9 @@ getRecordingManager(): AudioRecordingManager
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -207,48 +217,9 @@ getRecordingManager(): AudioRecordingManager
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## on('volumeChange')
-
-```TypeScript
-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
-```
-
-Listens for system volume change events. This method uses a callback to get volume change events.
-
-**起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** 9
-
-**替代接口：** [volumeChange](ohos.multimedia.audio.AudioVolumeManager#event:volumeChange)
-
-<!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'volumeChange' | 是 | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
-
-## 示例
-
-```TypeScript
-audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
-```
-
-## on('ringerModeChange')
+## on_ringerModeChange
 
 ```TypeScript
 on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
@@ -262,7 +233,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 **废弃版本：** 9
 
-**替代接口：** [ringerModeChange](ohos.multimedia.audio.AudioVolumeGroupManager#event:ringerModeChange)
+**替代接口：** ringerModeChange
 
 <!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
 
@@ -275,13 +246,52 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
 
 ## 示例
 
 ```TypeScript
 audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
   console.info(`Updated ringermode: ${ringerMode}`);
+});
+```
+
+## on_volumeChange
+
+```TypeScript
+on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
+```
+
+Listens for system volume change events. This method uses a callback to get volume change events.
+
+**起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** 9
+
+**替代接口：** volumeChange
+
+<!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'volumeChange' | 是 | Type of the event to listen for. Only the volumeChange event is supported. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
+
+## 示例
+
+```TypeScript
+audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
 });
 ```
 
@@ -293,9 +303,11 @@ setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
 
 Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the result.
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void-End-->
 
@@ -308,7 +320,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | 是 | Audio scene mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 ## 示例
 
@@ -332,9 +344,11 @@ setAudioScene(scene: AudioScene): Promise<void>
 
 Sets the audio scene mode to change audio strategies. This method uses a promise to return the result.
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>--><!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>-End-->
 
@@ -374,9 +388,11 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 
 Sets extra audio parameters. This method uses a promise to return the result.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -403,10 +419,10 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 

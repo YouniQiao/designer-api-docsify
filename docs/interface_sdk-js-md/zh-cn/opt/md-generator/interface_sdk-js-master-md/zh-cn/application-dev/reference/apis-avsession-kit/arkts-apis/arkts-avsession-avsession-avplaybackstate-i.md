@@ -2,7 +2,9 @@
 
 媒体播放状态的相关属性。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface AVPlaybackState--><!--Device-avSession-interface AVPlaybackState-End-->
 
@@ -18,7 +20,9 @@ activeItemId?: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ bufferedTime?: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ duration?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVPlaybackState-duration?: int--><!--Device-AVPlaybackState-duration?: int-End-->
 
@@ -63,18 +71,20 @@ duration?: number
 ## extras
 
 ```TypeScript
-extras?: {[key: string]: Object}
+extras?: Record<string, Object>
 ```
 
-自定义媒体数据。
+Current custom media packets
 
-**类型：** {[key: string]: Object}
+**类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVPlaybackState-extras?: {[key: string]: Object}--><!--Device-AVPlaybackState-extras?: {[key: string]: Object}-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlaybackState-extras?: Record<string, Object>--><!--Device-AVPlaybackState-extras?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -88,7 +98,9 @@ isFavorite?: boolean
 
 **类型：** boolean
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -106,7 +118,9 @@ loopMode?: LoopMode
 
 **类型：** [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -124,7 +138,9 @@ maxVolume?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -142,7 +158,9 @@ muted?: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -160,7 +178,9 @@ position?: PlaybackPosition
 
 **类型：** [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -178,7 +198,9 @@ speed?: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -196,7 +218,9 @@ state?: PlaybackState
 
 **类型：** PlaybackState
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -214,7 +238,9 @@ videoHeight?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -232,7 +258,9 @@ videoWidth?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -250,7 +278,9 @@ volume?: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

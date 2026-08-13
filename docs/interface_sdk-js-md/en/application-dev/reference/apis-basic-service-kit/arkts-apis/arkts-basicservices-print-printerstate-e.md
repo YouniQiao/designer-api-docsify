@@ -2,9 +2,11 @@
 
 Enumerates the printer states.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrinterState--><!--Device-print-enum PrinterState-End-->
 
@@ -18,9 +20,11 @@ PRINTER_ADDED = 0
 
 A new printer is added.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_ADDED = 0--><!--Device-PrinterState-PRINTER_ADDED = 0-End-->
 
@@ -34,9 +38,11 @@ PRINTER_REMOVED = 1
 
 The printer is removed.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_REMOVED = 1--><!--Device-PrinterState-PRINTER_REMOVED = 1-End-->
 
@@ -50,9 +56,11 @@ PRINTER_CAPABILITY_UPDATED = 2
 
 The printer is updated.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_CAPABILITY_UPDATED = 2--><!--Device-PrinterState-PRINTER_CAPABILITY_UPDATED = 2-End-->
 
@@ -66,9 +74,11 @@ PRINTER_CONNECTED = 3
 
 The printer is connected.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_CONNECTED = 3--><!--Device-PrinterState-PRINTER_CONNECTED = 3-End-->
 
@@ -82,9 +92,11 @@ PRINTER_DISCONNECTED = 4
 
 The printer is disconnected.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_DISCONNECTED = 4--><!--Device-PrinterState-PRINTER_DISCONNECTED = 4-End-->
 
@@ -98,9 +110,11 @@ PRINTER_RUNNING = 5
 
 The printer is running.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_RUNNING = 5--><!--Device-PrinterState-PRINTER_RUNNING = 5-End-->
 

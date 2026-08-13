@@ -1,12 +1,12 @@
 # DowngradeDownload (System API)
 
-Full download: provides the capability of downloading cloud data for applications.
+Full download: provides the capability of downloading cloud data for applications. It supports the full download of cloud application files.
 
-It supports the full download of cloud application files.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cloudSyncManager-class DowngradeDownload--><!--Device-cloudSyncManager-class DowngradeDownload-End-->
 
@@ -28,9 +28,11 @@ constructor(bundleName: string)
 
 A constructor used to create an instance of the **DowngradeDownload** class with a specified bundle name.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -52,8 +54,8 @@ A constructor used to create an instance of the **DowngradeDownload** class with
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -75,11 +77,13 @@ try {
 getCloudFileInfo(): Promise<CloudFileInfo>
 ```
 
-Obtains the size and count of files for applications requiring full download, including those stored only locally, only in the cloud, or both locally and in the cloud. This API uses a promise to return the result.
+Obtains the size and count of files for applications requiring full download, including those stored only locally , only in the cloud, or both locally and in the cloud. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -100,8 +104,8 @@ Obtains the size and count of files for applications requiring full download, in
 | Error Code ID | Error Message |
 | --- | --- |
 | 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
@@ -125,13 +129,13 @@ downgradeMgr.getCloudFileInfo().then((fileInfo: cloudSyncManager.CloudFileInfo) 
 startDownload(callback: Callback<DownloadProgress>): Promise<void>
 ```
 
-Starts the full download for the specified application's cloud files. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
+Starts the full download for the specified application's cloud files. This API uses a promise to return the result. This API uses an asynchronous callback to return the result. Repeated triggering of a full download task will throw an error (22400006).
 
-Repeated triggering of a full download task will throw an error (22400006).
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -145,7 +149,7 @@ Repeated triggering of a full download task will throw an error (22400006).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the download progress. The parameter is **DownloadProgress**, and the return value is **void**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the download progress. The parameter is **DownloadProgress**, and the return value is **void**. |
 
 **Return value:**
 
@@ -160,8 +164,8 @@ Repeated triggering of a full download task will throw an error (22400006).
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | 22400006 | The same task is already in progress. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
@@ -197,7 +201,9 @@ Start to migrate the downloaded full data to the specified public directory of f
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -214,7 +220,7 @@ Start to migrate the downloaded full data to the specified public directory of f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetUri | string | Yes | Transfer target Uri. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | Yes | Callback function. The callback will be triggered when the transfer progress changes or the transfer task completes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | Yes | Callback function. The callback will be triggered when the transfer progress changes or the transfer task completes. |
 
 **Error codes:**
 
@@ -224,8 +230,8 @@ Start to migrate the downloaded full data to the specified public directory of f
 | 22400006 | The same task is already in progress. |
 | 13900001 | Operation not permitted. Possible causes: &lt;br&gt;1.The DowngradeDownload task is running. &lt;br&gt;2.The full data synchronization task is running. |
 | 13900002 | No such file or directory. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
 
 ## stopDownload
@@ -234,11 +240,13 @@ Start to migrate the downloaded full data to the specified public directory of f
 stopDownload(): Promise<void>
 ```
 
-Stops the full download task triggered by [startDownload](#startDownload). This API uses a promise to return the result.
+Stops the full download task triggered by [startDownload](#startDownload) . This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -259,8 +267,8 @@ Stops the full download task triggered by [startDownload](#startDownload). This 
 | Error Code ID | Error Message |
 | --- | --- |
 | 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
 
 ## Examples

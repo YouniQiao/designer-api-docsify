@@ -2,7 +2,9 @@
 
 段落信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-onScreen-export interface Paragraph--><!--Device-onScreen-export interface Paragraph-End-->
 
@@ -20,7 +22,9 @@ chapterId?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-chapterId?: int--><!--Device-Paragraph-chapterId?: int-End-->
 
@@ -38,7 +42,9 @@ hookId?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-hookId?: long--><!--Device-Paragraph-hookId?: long-End-->
 
@@ -56,7 +62,9 @@ text?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-text?: string--><!--Device-Paragraph-text?: string-End-->
 
@@ -74,7 +82,9 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-title?: string--><!--Device-Paragraph-title?: string-End-->
 

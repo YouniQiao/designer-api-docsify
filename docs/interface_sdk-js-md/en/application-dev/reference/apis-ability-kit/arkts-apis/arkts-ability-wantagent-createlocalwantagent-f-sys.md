@@ -12,11 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 ```
 
-Create a local WantAgent object.The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer.If this WantAgent object is passed across processes,its contained data will be serialized and transmitted to the target process.
+Create a local WantAgent object. The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer. If this WantAgent object is passed across processes, its contained data will be serialized and transmitted to the target process.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +44,7 @@ Create a local WantAgent object.The WantAgent created by this interface stores d
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 ## Examples
 

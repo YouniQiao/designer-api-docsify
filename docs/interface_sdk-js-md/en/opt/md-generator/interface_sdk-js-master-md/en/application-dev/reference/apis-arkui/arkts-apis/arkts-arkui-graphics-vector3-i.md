@@ -4,6 +4,8 @@ Represents a vector including three values: x, y, and z.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface Vector3--><!--Device-unnamed-interface Vector3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Represents a vector including three values: x, y, and z.
 x: number
 ```
 
-Rotation angle along the x-axis.
-
-Value range: (-∞, +∞).
+Rotation angle along the x-axis. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ Value range: (-∞, +∞).
 y: number
 ```
 
-Rotation angle along the y-axis.
-
-Value range: (-∞, +∞).
+Rotation angle along the y-axis. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +60,13 @@ Value range: (-∞, +∞).
 z: number
 ```
 
-Rotation angle along the z-axis.
-
-Value range: (-∞, +∞).
+Rotation angle along the z-axis. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

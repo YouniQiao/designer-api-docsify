@@ -14,7 +14,9 @@ function getBundleInstallerSync(): BundleInstaller
 
 Obtains a BundleInstaller object. This API is a synchronous API.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-installer-function getBundleInstallerSync(): BundleInstaller--><!--Device-installer-function getBundleInstallerSync(): BundleInstaller-End-->
 
@@ -32,4 +34,4 @@ Obtains a BundleInstaller object. This API is a synchronous API.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

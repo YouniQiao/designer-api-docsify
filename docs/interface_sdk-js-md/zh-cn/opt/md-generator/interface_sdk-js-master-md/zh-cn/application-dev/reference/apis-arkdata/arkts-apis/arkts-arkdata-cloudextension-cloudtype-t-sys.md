@@ -6,7 +6,9 @@ type CloudType = null | number | number | string | boolean | Uint8Array | CloudA
 
 表示云数据字段可使用的类型。各接口参数的实际类型视其功能而定。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets--><!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets-End-->
 

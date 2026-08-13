@@ -4,6 +4,8 @@ Png metadata.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-image-class PngMetadata--><!--Device-image-class PngMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -19,6 +21,8 @@ PNG author.
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ PNG color primary/white-point coordinates.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly chromaticities?: double[]--><!--Device-PngMetadata-readonly chromaticities?: double[]-End-->
@@ -55,6 +61,8 @@ PNG comment.
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ PNG copyright.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly copyright?: string--><!--Device-PngMetadata-readonly copyright?: string-End-->
@@ -91,6 +101,8 @@ PNG creation time.
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +122,8 @@ PNG description.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly description?: string--><!--Device-PngMetadata-readonly description?: string-End-->
@@ -127,6 +141,8 @@ PNG disclaimer.
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +162,8 @@ PNG gamma.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly gamma?: double--><!--Device-PngMetadata-readonly gamma?: double-End-->
@@ -158,11 +176,13 @@ PNG gamma.
 readonly interlaceType?: number
 ```
 
-PNG interlacing mode.The value should be an integer.
+PNG interlacing mode. The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,6 +202,8 @@ PNG modification time.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly modificationTime?: string--><!--Device-PngMetadata-readonly modificationTime?: string-End-->
@@ -194,11 +216,13 @@ PNG modification time.
 readonly sRGBIntent?: number
 ```
 
-PNG sRGB rendering intent.The value should be an integer.
+PNG sRGB rendering intent. The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,6 +242,8 @@ PNG software.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly software?: string--><!--Device-PngMetadata-readonly software?: string-End-->
@@ -235,6 +261,8 @@ PNG title.
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,6 +282,8 @@ PNG warning.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly warning?: string--><!--Device-PngMetadata-readonly warning?: string-End-->
@@ -266,11 +296,13 @@ PNG warning.
 readonly xPixelsPerMeter?: number
 ```
 
-PNG x pixels per meter.The value should be an integer.
+PNG x pixels per meter. The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -284,11 +316,13 @@ PNG x pixels per meter.The value should be an integer.
 readonly yPixelsPerMeter?: number
 ```
 
-PNG y pixels per meter.The value should be an integer.
+PNG y pixels per meter. The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

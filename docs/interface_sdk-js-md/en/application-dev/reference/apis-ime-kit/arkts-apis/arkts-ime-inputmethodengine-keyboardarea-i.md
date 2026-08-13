@@ -2,9 +2,11 @@
 
 Represents the keyboard area on the panel.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface KeyboardArea--><!--Device-inputMethodEngine-export interface KeyboardArea-End-->
 
@@ -24,11 +26,13 @@ bottom: int
 
 Distance between the lower boundary of the keyboard area and the lower boundary of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardArea-bottom: int--><!--Device-KeyboardArea-bottom: int-End-->
 
@@ -42,11 +46,13 @@ left: int
 
 Distance between the left boundary of the keyboard area and the left boundary of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardArea-left: int--><!--Device-KeyboardArea-left: int-End-->
 
@@ -60,11 +66,13 @@ right: int
 
 Distance between the right border of the keyboard area and the right border of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardArea-right: int--><!--Device-KeyboardArea-right: int-End-->
 
@@ -78,11 +86,13 @@ top: int
 
 Distance between the upper boundary of the keyboard area and the upper boundary of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardArea-top: int--><!--Device-KeyboardArea-top: int-End-->
 

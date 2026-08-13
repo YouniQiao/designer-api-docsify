@@ -6,6 +6,8 @@ Represents the callback invoked when the scrollbar scrolls to a specified positi
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnScrollEvent--><!--Device-unnamed-declare interface OnScrollEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,15 +18,15 @@ Represents the callback invoked when the scrollbar scrolls to a specified positi
 xOffset: number
 ```
 
-Position of the scrollbar on the x-axis relative to the leftmost of the web page.
-
-Unit: vp.
+Position of the scrollbar on the x-axis relative to the leftmost of the web page. Unit: vp.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,15 +40,15 @@ Unit: vp.
 yOffset: number
 ```
 
-Position of the scrollbar on the y-axis relative to the top of the web page.
-
-Unit: vp.
+Position of the scrollbar on the y-axis relative to the top of the web page. Unit: vp.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

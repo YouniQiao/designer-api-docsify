@@ -8,7 +8,9 @@ function getSimLabelSync(slotId: number): SimLabel
 
 Obtains the SIM card label synchronously.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-function getSimLabelSync(slotId: int): SimLabel--><!--Device-sim-function getSimLabelSync(slotId: int): SimLabel-End-->
 

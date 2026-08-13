@@ -18,6 +18,8 @@ Create PixelMap by data buffer.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core

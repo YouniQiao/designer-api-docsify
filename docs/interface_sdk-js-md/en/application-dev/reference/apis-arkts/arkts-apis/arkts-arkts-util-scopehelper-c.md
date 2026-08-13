@@ -2,11 +2,13 @@
 
 Provides APIs to define the valid range of a field. The constructor of this class creates comparable objects with lower and upper limits.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-util-class ScopeHelper<T extends ScopeComparable<T>>--><!--Device-util-class ScopeHelper<T extends ScopeComparable<T>>-End-->
+**Deprecated since:** -1
+
+<!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -19,16 +21,20 @@ import { util } from '@kit.ArkTS';
 ## clamp
 
 ```TypeScript
-clamp(value: T): T
+clamp(value: ScopeType): ScopeType
 ```
 
-Clamps a given value to the current range.
+Limits a value to this **Scope**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-clamp(value: T): T--><!--Device-ScopeHelper-clamp(value: T): T-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType--><!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -36,27 +42,63 @@ Clamps a given value to the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | A ScopeType value |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Returns a ScopeType object that a given value is clamped to the current range. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.clamp(tempMiDF);
+console.info("result = " + result);
+// Output: result = 35
+```
 
 ## constructor
 
 ```TypeScript
-constructor(lowerObj: T, upperObj: T)
+constructor(lowerObj: ScopeType, upperObj: ScopeType)
 ```
 
-A constructor used to create a Scope instance with the lower and upper bounds specified.
+A constructor used to create a **ScopeHelper** object with the specified upper and lower limits.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-constructor(lowerObj: T, upperObj: T)--><!--Device-ScopeHelper-constructor(lowerObj: T, upperObj: T)-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -64,22 +106,55 @@ A constructor used to create a Scope instance with the lower and upper bounds sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | T | Yes | A ScopeType value |
-| upperObj | T | Yes | A ScopeType value |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+console.info("range = " + range);
+// Output: range = [30, 40]
+```
 
 ## contains
 
 ```TypeScript
-contains(value: T): boolean
+contains(value: ScopeType): boolean
 ```
 
-Checks whether a given value is within the current range.
+Checks whether a range is within this **Scope**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-contains(value: T): boolean--><!--Device-ScopeHelper-contains(value: T): boolean-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-contains(value: ScopeType): boolean--><!--Device-ScopeHelper-contains(value: ScopeType): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,27 +162,63 @@ Checks whether a given value is within the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | A ScopeType value |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | If the value is within the current range return true,otherwise return false. |
+| boolean | Check result. The value **true** is returned if the value is within this **Scope**; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.contains(tempMiDF);
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## contains
 
 ```TypeScript
-contains(range: ScopeHelper<T>): boolean
+contains(range: ScopeHelper): boolean
 ```
 
-Checks whether a given range is within the current range.
+Checks whether a range is within this **Scope**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-contains(range: ScopeHelper<T>): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper<T>): boolean-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-contains(range: ScopeHelper): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -115,27 +226,65 @@ Checks whether a given range is within the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | If the current range is within the given range return true,otherwise return false. |
+| boolean | Check result. The value **true** is returned if the range is within this **Scope**; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let tempLess = new Temperature(20);
+let tempMore = new Temperature(45);
+let rangeSec = new util.ScopeHelper(tempLess, tempMore);
+let result = range.contains(rangeSec);
+console.info("result = " + result);
+// Output: result = false
+```
 
 ## expand
 
 ```TypeScript
-expand(lowerObj: T, upperObj: T): ScopeHelper<T>
+expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 ```
 
-Creates the smallest range that includes the current range and the given lower and upper bounds.
+Obtains the union set of this **Scope** and the given lower and upper limits.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-expand(lowerObj: T, upperObj: T): ScopeHelper<T>--><!--Device-ScopeHelper-expand(lowerObj: T, upperObj: T): ScopeHelper<T>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -143,28 +292,65 @@ Creates the smallest range that includes the current range and the given lower a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | T | Yes | A ScopeType value |
-| upperObj | T | Yes | A ScopeType value |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and the given lower and upper bounds. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given lower and upper limits. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let tempMidS = new Temperature(39);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.expand(tempMiDF, tempMidS);
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
 
 ## expand
 
 ```TypeScript
-expand(range: ScopeHelper<T>): ScopeHelper<T>
+expand(range: ScopeHelper): ScopeHelper
 ```
 
-Creates the smallest range that includes the current range and a given range.
+Obtains the union set of this **Scope** and the given **Scope**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-expand(range: ScopeHelper<T>): ScopeHelper<T>--><!--Device-ScopeHelper-expand(range: ScopeHelper<T>): ScopeHelper<T>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -172,27 +358,65 @@ Creates the smallest range that includes the current range and a given range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given range. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given **Scope**. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let tempMidS = new Temperature(39);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let rangeFir = new util.ScopeHelper(tempMiDF, tempMidS);
+let result = range.expand(rangeFir);
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
 
 ## expand
 
 ```TypeScript
-expand(value: T): ScopeHelper<T>
+expand(value: ScopeType): ScopeHelper
 ```
 
-Creates the smallest range that includes the current range and a given value.
+Obtains the union set of this **Scope** and the given value.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-expand(value: T): ScopeHelper<T>--><!--Device-ScopeHelper-expand(value: T): ScopeHelper<T>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -200,27 +424,63 @@ Creates the smallest range that includes the current range and a given value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | A ScopeType value |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given value. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given value. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.expand(tempMiDF);
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
 
 ## getLower
 
 ```TypeScript
-getLower(): T
+getLower(): ScopeType
 ```
 
-Obtains the lower bound of the current range.
+Obtains the lower limit of this **Scope**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-getLower(): T--><!--Device-ScopeHelper-getLower(): T-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -228,21 +488,56 @@ Obtains the lower bound of the current range.
 
 | Type | Description |
 | --- | --- |
-| T | Returns the lower bound of the current range. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Lower limit of this **Scope**. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.getLower();
+console.info("result = " + result);
+// Output: result = 30
+```
 
 ## getUpper
 
 ```TypeScript
-getUpper(): T
+getUpper(): ScopeType
 ```
 
-Obtains the upper bound of the current range.
+Obtains the upper limit of this **Scope**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-getUpper(): T--><!--Device-ScopeHelper-getUpper(): T-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -250,21 +545,56 @@ Obtains the upper bound of the current range.
 
 | Type | Description |
 | --- | --- |
-| T | Returns the upper bound of the current range. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.getUpper();
+console.info("result = " + result);
+// Output: result = 40
+```
 
 ## intersect
 
 ```TypeScript
-intersect(range: ScopeHelper<T>): ScopeHelper<T>
+intersect(range: ScopeHelper): ScopeHelper
 ```
 
-Returns the intersection of a given range and the current range.
+Obtains the intersection of this **Scope** and the given **Scope**. If the intersection is empty, an exception is thrown.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-intersect(range: ScopeHelper<T>): ScopeHelper<T>--><!--Device-ScopeHelper-intersect(range: ScopeHelper<T>): ScopeHelper<T>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -272,27 +602,65 @@ Returns the intersection of a given range and the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of a given range and the current range. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Intersection of this **Scope** and the given **Scope**. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let tempMiDF = new Temperature(35);
+let tempMidS = new Temperature(39);
+let rangeFir = new util.ScopeHelper(tempMiDF, tempMidS);
+let result = range.intersect(rangeFir);
+console.info("result = " + result);
+// Output: result = [35, 39]
+```
 
 ## intersect
 
 ```TypeScript
-intersect(lowerObj: T, upperObj: T): ScopeHelper<T>
+intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 ```
 
-Returns the intersection of the current range and the range specified by the given lower and upper bounds.
+Obtains the intersection of this **Scope** and the given lower and upper limits. If the intersection is empty, an exception is thrown.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-ScopeHelper-intersect(lowerObj: T, upperObj: T): ScopeHelper<T>--><!--Device-ScopeHelper-intersect(lowerObj: T, upperObj: T): ScopeHelper<T>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -300,14 +668,47 @@ Returns the intersection of the current range and the range specified by the giv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | T | Yes | A ScopeType value |
-| upperObj | T | Yes | A ScopeType value |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of the current range and the range specified by the given lower and upper bounds. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let tempMidS = new Temperature(39);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.intersect(tempMiDF, tempMidS);
+console.info("result = " + result);
+// Output: result = [35, 39]
+```
 
 ## toString
 
@@ -315,11 +716,15 @@ Returns the intersection of the current range and the range specified by the giv
 toString(): string
 ```
 
-Obtains a string representation of the current range.
+Obtains a string representation that contains this **Scope**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
 
@@ -329,5 +734,36 @@ Obtains a string representation of the current range.
 
 | Type | Description |
 | --- | --- |
-| string | Returns a string representation of the current range object. |
+| string | String representation containing the **Scope**. |
+
+## Examples
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
 

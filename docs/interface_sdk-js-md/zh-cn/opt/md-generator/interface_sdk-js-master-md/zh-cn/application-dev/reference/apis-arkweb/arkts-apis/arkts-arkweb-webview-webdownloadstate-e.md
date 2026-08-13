@@ -4,6 +4,8 @@ Defines the state for download.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-webview-enum WebDownloadState--><!--Device-webview-enum WebDownloadState-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ IN_PROGRESS = 0
 The web download is in progress.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ The web download has been completed.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadState-COMPLETED = 1--><!--Device-WebDownloadState-COMPLETED = 1-End-->
@@ -49,6 +55,8 @@ CANCELED = 2
 The web download was canceled.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ The web download was interrupted.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadState-INTERRUPTED = 3--><!--Device-WebDownloadState-INTERRUPTED = 3-End-->
@@ -81,6 +91,8 @@ PENDING = 4
 The web download is pending.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +110,8 @@ The web download has been paused.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadState-PAUSED = 5--><!--Device-WebDownloadState-PAUSED = 5-End-->
@@ -113,6 +127,8 @@ UNKNOWN = 6
 Unknown state.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

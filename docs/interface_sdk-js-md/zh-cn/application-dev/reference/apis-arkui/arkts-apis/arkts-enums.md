@@ -37,7 +37,7 @@
 | [EllipsisMode](arkts-arkui-ellipsismode-e.md) | Enum of ellipsisMode |
 | [EmbeddedType](arkts-arkui-embeddedtype-e.md) | Enum of EmbeddedType |
 | [EventQueryType](arkts-arkui-eventquerytype-e.md) | 要查询的交互事件类型。 |
-| [FillMode](arkts-arkui-fillmode-e.md) | 设置当前播放方向下，动画开始前和结束后的状态。动画结束后的状态由fillMode和reverse属性共同决定。例如，fillMode为Forwards表示停止时维持动画最后一个关键帧的状态，若reverse为false则维持正播的最后一帧，即最后一张图，若reverse为true则维持逆播的最后一帧，即第一张图。 |
+| [FillMode](arkts-arkui-fillmode-e.md) | 设置当前播放方向下，动画开始前和结束后的状态。动画结束后的状态由fillMode和reverse属性共同决定。例如，fillMode为Forwards表示停止时维持动画最后一个关键帧的状态，若reverse为false则维持正播的最后 一帧，即最后一张图，若reverse为true则维持逆播的最后一帧，即第一张图。 |
 | [FlexAlign](arkts-arkui-flexalign-e.md) | FlexAlign enumeration description. |
 | [FlexDirection](arkts-arkui-flexdirection-e.md) | FlexDirection enumeration description |
 | [FlexWrap](arkts-arkui-flexwrap-e.md) | FlexWrap enumeration description |
@@ -85,7 +85,7 @@
 | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | 原始输入事件类型。 |
 | [RelateType](arkts-arkui-relatetype-e.md) | RelateType enumeration description |
 | [RenderFit](arkts-arkui-renderfit-e.md) | 表示宽高动画过程中组件内容的填充方式。 |
-| [RenderStrategy](arkts-arkui-renderstrategy-e.md) | RenderStrategy 的枚举。定义图形渲染策略。 |
+| [RenderStrategy](arkts-arkui-renderstrategy-e.md) | RenderStrategy 的枚举。 定义图形渲染策略。 |
 | [ResponseRegionSupportedTool](arkts-arkui-responseregionsupportedtool-e.md) | 触摸热区适用的输入工具类型。 |
 | [ResponseType](arkts-arkui-responsetype-e.md) | ResponseType for contextMenu |
 | [ScrollSource](arkts-arkui-scrollsource-e.md) | The possible source of scroll event |

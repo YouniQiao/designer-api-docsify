@@ -14,9 +14,11 @@ function disconnect(sessionId: int): void
 
 Disconnects the UIAbility connection to end the collaboration session.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +30,7 @@ Disconnects the UIAbility connection to end the collaboration session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the collaboration session. |
+| sessionId | int | Yes | ID of the collaboration session. |
 
 ## Examples
 

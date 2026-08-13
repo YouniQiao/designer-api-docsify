@@ -3,6 +3,7 @@
 ## Shape
 
 ```TypeScript
+@ComponentBuilder
 export declare function Shape(
     value?: PixelMap, 
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Shape is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Shape(    value?: PixelMap,     content_?: CustomBuilder,): ShapeAttribute--><!--Device-unnamed-export declare function Shape(    value?: PixelMap,     content_?: CustomBuilder,): ShapeAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Shape(    value?: PixelMap,     content_?: CustomBuilder,): ShapeAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Shape(    value?: PixelMap,     content_?: CustomBuilder,): ShapeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +29,7 @@ Shape is returned when the parameter is transferred.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | No | A pixelMap can be drawn in the area of shape. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
@@ -38,6 +41,7 @@ Shape is returned when the parameter is transferred.
 ## Shape
 
 ```TypeScript
+@Builder
 export declare function Shape(
     style: CustomBuilderT<ShapeAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines Shape Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Shape(    style: CustomBuilderT<ShapeAttribute>,    content_?: CustomBuilder,): ShapeAttribute--><!--Device-unnamed-export declare function Shape(    style: CustomBuilderT<ShapeAttribute>,    content_?: CustomBuilder,): ShapeAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Shape(    style: CustomBuilderT<ShapeAttribute>,    content_?: CustomBuilder,): ShapeAttribute--><!--Device-unnamed-@Builderexport declare function Shape(    style: CustomBuilderT<ShapeAttribute>,    content_?: CustomBuilder,): ShapeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,8 +66,8 @@ Defines Shape Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;[ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 

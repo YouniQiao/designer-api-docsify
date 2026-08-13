@@ -6,7 +6,9 @@ export type SubscribeCallbackData = _SubscribeCallbackData
 
 携带系统属性值的通知信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationSubscribe-export type SubscribeCallbackData = _SubscribeCallbackData--><!--Device-notificationSubscribe-export type SubscribeCallbackData = _SubscribeCallbackData-End-->
 

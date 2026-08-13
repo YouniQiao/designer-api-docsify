@@ -2,7 +2,9 @@
 
 Defines the vibration sequence.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibratorPattern--><!--Device-vibrator-interface VibratorPattern-End-->
 
@@ -24,7 +26,9 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 
 **Type:** Array&lt;[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md)&gt;
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorPattern-events: Array<VibratorEvent>--><!--Device-VibratorPattern-events: Array<VibratorEvent>-End-->
 
@@ -40,7 +44,9 @@ Absolute vibration start time, in ms.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorPattern-time: int--><!--Device-VibratorPattern-time: int-End-->
 

@@ -2,7 +2,9 @@
 
 打印机状态的枚举。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-enum PrinterState--><!--Device-print-enum PrinterState-End-->
 
@@ -16,7 +18,9 @@ PRINTER_ADDED = 0
 
 表示新打印机到达。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterState-PRINTER_ADDED = 0--><!--Device-PrinterState-PRINTER_ADDED = 0-End-->
 
@@ -30,7 +34,9 @@ PRINTER_REMOVED = 1
 
 表示打印机丢失。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterState-PRINTER_REMOVED = 1--><!--Device-PrinterState-PRINTER_REMOVED = 1-End-->
 
@@ -44,7 +50,9 @@ PRINTER_CAPABILITY_UPDATED = 2
 
 表示打印机更新。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterState-PRINTER_CAPABILITY_UPDATED = 2--><!--Device-PrinterState-PRINTER_CAPABILITY_UPDATED = 2-End-->
 
@@ -58,7 +66,9 @@ PRINTER_CONNECTED = 3
 
 表示打印机已连接。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterState-PRINTER_CONNECTED = 3--><!--Device-PrinterState-PRINTER_CONNECTED = 3-End-->
 
@@ -72,7 +82,9 @@ PRINTER_DISCONNECTED = 4
 
 表示打印机已断开连接。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterState-PRINTER_DISCONNECTED = 4--><!--Device-PrinterState-PRINTER_DISCONNECTED = 4-End-->
 
@@ -86,7 +98,9 @@ PRINTER_RUNNING = 5
 
 表示打印机正在运行。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterState-PRINTER_RUNNING = 5--><!--Device-PrinterState-PRINTER_RUNNING = 5-End-->
 

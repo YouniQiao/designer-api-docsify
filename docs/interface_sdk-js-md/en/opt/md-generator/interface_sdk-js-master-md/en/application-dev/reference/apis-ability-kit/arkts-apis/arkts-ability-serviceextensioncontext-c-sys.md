@@ -1,18 +1,14 @@
 # ServiceExtensionContext (System API)
 
-The ServiceExtensionContext module provides the context environment for the ServiceExtensionAbility. It inherits from ExtensionContext.
+The ServiceExtensionContext module provides the context environment for the ServiceExtensionAbility. It inherits from ExtensionContext. You can use the APIs of this module to start, terminate, connect, and disconnect an ability. > **NOTE：**> > - The APIs of this module must be used on the main thread, but not in child threads such as Worker and TaskPool.
 
-You can use the APIs of this module to start, terminate, connect, and disconnect an ability.
+**Inheritance/Implementation:** ServiceExtensionContext extends ExtensionContext
 
-> **NOTE：**
-> 
-> - The APIs of this module must be used on the main thread, but not in child threads such as Worker and TaskPool.
+**Since:** 23
 
-**Inheritance/Implementation:** ServiceExtensionContext extends [ExtensionContext](ExtensionContext)
+**Deprecated since:** -1
 
-**Since:** 9
-
-<!--Device-unnamed-declare class ServiceExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class ServiceExtensionContext extends ExtensionContext-End-->
+<!--Device-unnamed-declare class ServiceExtensionContext--><!--Device-unnamed-declare class ServiceExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,14 +20,11 @@ You can use the APIs of this module to start, terminate, connect, and disconnect
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 ```
 
-Connects this ability to a ServiceExtensionAbility. This API can be called only on the main thread.
+Connects this ability to a ServiceExtensionAbility. This API can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,20 +51,20 @@ Connects this ability to a ServiceExtensionAbility. This API can be called only 
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -118,17 +111,11 @@ class EntryAbility extends ServiceExtensionAbility {
 connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options: ConnectOptions): number
 ```
 
-Connects this ability to a ServiceExtensionAbility of a given account. This API can be called only on the main thread.
+Connects this ability to a ServiceExtensionAbility of a given account. This API can be called only on the main thread. This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
 
-This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-> > Permission verification is not required when **accountId** specifies the current user.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -158,21 +145,21 @@ This API can be properly called on phones and tablets. If it is called on other 
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -223,7 +210,9 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,9 +233,9 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -289,7 +278,9 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -315,9 +306,9 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -359,14 +350,11 @@ class EntryAbility extends ServiceExtensionAbility {
 openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>
 ```
 
-Starts an atomic service based on an application ID. This API uses a promise to return the result asynchronously.
+Starts an atomic service based on an application ID. This API uses a promise to return the result asynchronously. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -393,14 +381,14 @@ Starts an atomic service based on an application ID. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -437,22 +425,11 @@ export default class ServiceExtension extends ServiceExtensionAbility {
 openLink(link: string, options?: OpenLinkOptions): Promise<void>
 ```
 
-Starts a UIAbility through App Linking. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
+Starts a UIAbility through App Linking. This API can be called only on the main thread. It uses a promise to return the result asynchronously. A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking: - The **actions** field must contain **ohos.want.action.viewData**. - The **entities** field must contain **entity.system.browsable**. - The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**. If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:
+**Since:** 23
 
-- The **actions** field must contain **ohos.want.action.viewData**.  
-- The **entities** field must contain **entity.system.browsable**.  
-- The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.
-
-If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -479,23 +456,23 @@ If an input parameter is invalid, for example, a mandatory parameter is not set 
 
 | Error Code ID |
 | --- |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000136](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000136-prohibited-from-launching-the-applications-own-uiability-via-app-linking) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000136](../errorcode-ability.md#16000136-prohibited-from-launching-the-applications-own-uiability-via-app-linking) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -545,11 +522,11 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 preStartMission(bundleName: string, moduleName: string, abilityName: string, startTime: string): Promise<void>
 ```
 
-Starts an atomic service and pre-opens the window, with the loading box skipped. This API uses a promise to return the result.
+Starts an atomic service and pre-opens the window, with the loading box skipped. This API uses a promise to return the result. If parameter verification is successful but the atomic service fails to start, you need to implement an exception mechanism to capture the error.
 
-If parameter verification is successful but the atomic service fails to start, you need to implement an exception mechanism to capture the error.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRE_START_ATOMIC_SERVICE
 
@@ -580,12 +557,12 @@ If parameter verification is successful but the atomic service fails to start, y
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300007-download-and-installation-task-information-of-the-atomic-service-does-not-exist) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16300007](../errorcode-ability.md#16300007-download-and-installation-task-information-of-the-atomic-service-does-not-exist) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -636,17 +613,11 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 ```
 
-Requests the specified focused application to start the UIExtensionAbility of the corresponding type. The focused application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the specified application does not gain focus, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and  
-**moduleName** fields in **Want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
+Requests the specified focused application to start the UIExtensionAbility of the corresponding type. The focused application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the specified application does not gain focus, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **Want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. This API can be called only on the main thread. It uses an asynchronous callback to return the result. Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization. Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization.Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -667,14 +638,14 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -721,17 +692,11 @@ class ServiceExtension extends ServiceExtensionAbility {
 requestModalUIExtension(pickerWant: Want): Promise<void>
 ```
 
-Requests the specified focused application to start the UIExtensionAbility of the corresponding type. The focused application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the specified application does not gain focus, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and  
-**moduleName** fields in **Want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
+Requests the specified focused application to start the UIExtensionAbility of the corresponding type. The focused application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the specified application does not gain focus, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **Want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. This API can be called only on the main thread. It uses a promise to return the result asynchronously. Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization. Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization.Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -757,14 +722,14 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -811,18 +776,11 @@ class ServiceExtension extends ServiceExtensionAbility {
 requestModalUIExtensionWithAccount(pickerWant: Want, accountId: number): Promise<void>
 ```
 
-Requests the specified focused application to start the UIExtensionAbility of the corresponding type for the specified user. The focused application is specified by **bundleName** in **want.parameters**. If **bundleName**is left unspecified, or if the specified application does not gain focus, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**,  
-**abilityName**, and **moduleName** fields in **Want**, and its type is determined by the  
-**ability.want.params.uiExtensionType** field in **want.parameters**. This API can be called only on the main thread.It uses a promise to return the result asynchronously.
-
-Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization.Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Requests the specified focused application to start the UIExtensionAbility of the corresponding type for the specified user. The focused application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the specified application does not gain focus, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **Want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. This API can be called only on the main thread. It uses a promise to return the result asynchronously. Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization. Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -851,9 +809,9 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## startAbility
 
@@ -863,7 +821,9 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts an ability. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -884,32 +844,32 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -950,7 +910,9 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 Starts an ability. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -972,32 +934,32 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1042,7 +1004,9 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 Starts an ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1069,32 +1033,32 @@ Starts an ability. This API can be called only on the main thread. It uses a pro
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1136,14 +1100,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability with the caller information specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
+Starts an ability with the caller information specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1164,32 +1125,32 @@ Starts an ability with the caller information specified. The caller information 
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1222,16 +1183,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability with the caller information and start options specified. The caller information is carried in  
-**Want** and identified at the system service layer. The ability can obtain the caller information from the  
-**Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
+Starts an ability with the caller information and start options specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1253,30 +1209,30 @@ Starts an ability with the caller information and start options specified. The c
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1313,16 +1269,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability with the start options specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the  
-**onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in  
-**Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
+Starts an ability with the start options specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses a promise to return the result asynchronously. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1349,32 +1300,32 @@ Starts an ability with the start options specified. The caller information is ca
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1412,21 +1363,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityByCall(want: Want): Promise<Caller>
 ```
 
-Starts an ability in the foreground or background and obtains the caller object for communicating with the ability.This API can be called only on the main thread. It uses a promise to return the result asynchronously.
+Starts an ability in the foreground or background and obtains the caller object for communicating with the ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously. This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified). Observe the following when using this API: - If an application running in the background needs to call this API to start an ability, it must have the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission. - If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission. - The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-This API cannot be used to start the UIAbility with the launch type set to  
-[specified](../../../application-models/uiability-launch-type.md#specified).
+**Since:** 23
 
-Observe the following when using this API:
-
-- If an application running in the background needs to call this API to start an ability, it must have the  
-ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
-- If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the  
-ohos.permission.START_INVISIBLE_ABILITY permission.  
-- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
-[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ABILITY_BACKGROUND_COMMUNICATION
 
@@ -1454,17 +1395,17 @@ ohos.permission.START_INVISIBLE_ABILITY permission.
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1547,23 +1488,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityByCallWithAccount(want: Want, accountId: number): Promise<Caller>
 ```
 
-Starts an ability with the account ID specified and obtains the caller object for communicating with the ability.This API can be called only on the main thread. It uses a promise to return the result asynchronously.
+Starts an ability with the account ID specified and obtains the caller object for communicating with the ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously. This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified). Observe the following when using this API: - If an application needs to call this API to start an ability that belongs to another user, it must have the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions. - If an application running in the background needs to call this API to start an ability, it must have the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission. - If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission. - The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-This API cannot be used to start the UIAbility with the launch type set to  
-[specified](../../../application-models/uiability-launch-type.md#specified).
+**Since:** 23
 
-Observe the following when using this API:
-
-- If an application needs to call this API to start an ability that belongs to another user, it must have the  
-ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.  
-- If an application running in the background needs to call this API to start an ability, it must have the  
-ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
-- If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the  
-ohos.permission.START_INVISIBLE_ABILITY permission.  
-- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
-[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1592,20 +1521,20 @@ ohos.permission.START_INVISIBLE_ABILITY permission.
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1654,14 +1583,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability with the account ID specified. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
+Starts an ability with the account ID specified. This API can be called only on the main thread. It uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1685,33 +1611,33 @@ Starts an ability with the account ID specified. This API can be called only on 
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1752,14 +1678,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability with the account ID and start options specified. This API can be called only on the main thread.It uses an asynchronous callback to return the result.
+Starts an ability with the account ID and start options specified. This API can be called only on the main thread. It uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1784,33 +1707,33 @@ Starts an ability with the account ID and start options specified. This API can 
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1854,14 +1777,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability with the account ID specified. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
+Starts an ability with the account ID specified. This API can be called only on the main thread. It uses a promise to return the result asynchronously. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1891,33 +1811,33 @@ Starts an ability with the account ID specified. This API can be called only on 
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1961,14 +1881,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability. If the ability has multiple instances, the latest instance is started. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
+Starts an ability. If the ability has multiple instances, the latest instance is started. This API can be called only on the main thread. It uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1989,30 +1906,30 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2053,16 +1970,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability. If the ability has multiple instances, the latest instance is started. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
+Starts an ability. If the ability has multiple instances, the latest instance is started. This API can be called only on the main thread. It uses an asynchronous callback to return the result. You can use this API to carry start options. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-You can use this API to carry start options.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2084,30 +1996,30 @@ You can use this API to carry start options.
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2152,14 +2064,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability. If the ability has multiple instances, the latest instance is started. This API uses a promise to return the result asynchronously. It can be called only on the main thread.
+Starts an ability. If the ability has multiple instances, the latest instance is started. This API uses a promise to return the result asynchronously. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2186,30 +2095,30 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2255,7 +2164,9 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts a ServiceExtensionAbility. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2276,21 +2187,21 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2332,7 +2243,9 @@ startServiceExtensionAbility(want: Want): Promise<void>
 
 Starts a ServiceExtensionAbility. This API uses a promise to return the result asynchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2358,21 +2271,21 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result a
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2412,15 +2325,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-Starts a ServiceExtensionAbility with the account ID specified. This API uses an asynchronous callback to return the result.
+Starts a ServiceExtensionAbility with the account ID specified. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-> > Permission verification is not required when **accountId** specifies the current user.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2444,21 +2353,21 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2499,15 +2408,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
 ```
 
-Starts a ServiceExtensionAbility with the account ID specified. This API uses a promise to return the result asynchronously.
+Starts a ServiceExtensionAbility with the account ID specified. This API uses a promise to return the result asynchronously. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-> > Permission verification is not required when **accountId** specifies the current user.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2536,21 +2441,21 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2591,18 +2496,11 @@ class EntryAbility extends ServiceExtensionAbility {
 startUIAbilities(wantList: Array<Want>): Promise<void>
 ```
 
-Starts multiple UIAbility components simultaneously. This API uses a promise to return the result asynchronously.
+Starts multiple UIAbility components simultaneously. This API uses a promise to return the result asynchronously. You can pass the Want information of multiple UIAbility instances, which can point to one or more applications. If all the UIAbility instances can be started successfully, the system displays these UIAbility instances in multiple windows simultaneously. Depending on the window handling, different devices may have varying display effects ( including window shape, quantity, and layout). This API can be properly called on phones and tablets. If it is called on other devices, error code 801 is returned. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-You can pass the Want information of multiple UIAbility instances, which can point to one or more applications. If all the UIAbility instances can be started successfully, the system displays these UIAbility instances in multiple windows simultaneously. Depending on the window handling, different devices may have varying display effects (including window shape, quantity, and layout).
+**Since:** 23
 
-This API can be properly called on phones and tablets. If it is called on other devices, error code 801 is returned.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2628,28 +2526,28 @@ This API can be properly called on phones and tablets. If it is called on other 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000124](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000125](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000126](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000126-dlp-files-cannot-be-started) |
-| [16000120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000120-number-of-elements-in-wantlist-exceeds-4-or-is-less-than-1) |
-| [16000121](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000121-target-component-is-not-a-uiability) |
-| [16000122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
-| [16000123](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000123-implicit-startup-is-not-supported) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000126](../errorcode-ability.md#16000126-dlp-files-cannot-be-started) |
+| [16000120](../errorcode-ability.md#16000120-number-of-elements-in-wantlist-exceeds-4-or-is-less-than-1) |
+| [16000121](../errorcode-ability.md#16000121-target-component-is-not-a-uiability) |
+| [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
+| [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2688,15 +2586,11 @@ export default class EntryServiceExtAbility extends ServiceExtensionAbility {
 startUIServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Starts a new  
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility). This API uses a promise to return the result asynchronously.
+Starts a new [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility-(System-API)). This API uses a promise to return the result asynchronously. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2722,21 +2616,21 @@ Starts a new
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2768,7 +2662,9 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 
 Stops a ServiceExtensionAbility. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2789,17 +2685,17 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2841,7 +2737,9 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 
 Stops a ServiceExtensionAbility. This API uses a promise to return the result asynchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2867,17 +2765,17 @@ Stops a ServiceExtensionAbility. This API uses a promise to return the result as
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2917,13 +2815,11 @@ class EntryAbility extends ServiceExtensionAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-Stops a ServiceExtensionAbility with the specified account. This API uses an asynchronous callback to return the result.
+Stops a ServiceExtensionAbility with the specified account. This API uses an asynchronous callback to return the result. > **NOTE：**> > Permission verification is not required when **accountId** specifies the current user.
 
-> **NOTE：**
-> 
-> Permission verification is not required when **accountId** specifies the current user.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2947,17 +2843,17 @@ Stops a ServiceExtensionAbility with the specified account. This API uses an asy
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2998,13 +2894,11 @@ class EntryAbility extends ServiceExtensionAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
 ```
 
-Stops a ServiceExtensionAbility with the specified account. This API uses a promise to return the result asynchronously.
+Stops a ServiceExtensionAbility with the specified account. This API uses a promise to return the result asynchronously. > **NOTE：**> > Permission verification is not required when **accountId** specifies the current user.
 
-> **NOTE：**
-> 
-> Permission verification is not required when **accountId** specifies the current user.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3033,17 +2927,17 @@ Stops a ServiceExtensionAbility with the specified account. This API uses a prom
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3086,7 +2980,9 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 Terminates this ability. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3106,13 +3002,13 @@ Terminates this ability. This API can be called only on the main thread. It uses
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3143,7 +3039,9 @@ terminateSelf(): Promise<void>
 
 Terminates this ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3163,12 +3061,12 @@ Terminates this ability. This API can be called only on the main thread. It uses
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 

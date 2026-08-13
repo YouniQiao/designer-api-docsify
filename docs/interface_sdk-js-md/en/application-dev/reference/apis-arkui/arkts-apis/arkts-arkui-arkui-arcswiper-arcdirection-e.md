@@ -2,11 +2,13 @@
 
 Declare the direction of arc indicator.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-export declare enum ArcDirection--><!--Device-unnamed-export declare enum ArcDirection-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export enum ArcDirection--><!--Device-unnamed-export enum ArcDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -18,11 +20,13 @@ THREE_CLOCK_DIRECTION = 0
 
 3 o'clock direction.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0--><!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0-End-->
 
@@ -36,11 +40,13 @@ SIX_CLOCK_DIRECTION = 1
 
 6 o'clock direction.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcDirection-SIX_CLOCK_DIRECTION = 1--><!--Device-ArcDirection-SIX_CLOCK_DIRECTION = 1-End-->
 
@@ -54,11 +60,13 @@ NINE_CLOCK_DIRECTION = 2
 
 9 o'clock direction.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2--><!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2-End-->
 

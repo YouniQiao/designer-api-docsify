@@ -4,13 +4,15 @@
 export type ExceedMaxSelectedCallback = (exceedMaxCountType: MaxCountType) => void
 ```
 
-The callback of onExceedMaxSelected event
+Called when items are selected after the maximum count has been reached.
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-unnamed-export type ExceedMaxSelectedCallback = (exceedMaxCountType: MaxCountType) => void--><!--Device-unnamed-export type ExceedMaxSelectedCallback = (exceedMaxCountType: MaxCountType) => void-End-->
 
@@ -20,5 +22,5 @@ The callback of onExceedMaxSelected event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exceedMaxCountType | [MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md) | Yes |  |
+| exceedMaxCountType | [MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md) | Yes | Type of the maximum count that has been reached. It can be the maximum count of selected images, maximum count of selected videos, or maximum count of selected images and videos. |
 

@@ -6,6 +6,8 @@ Defines the moving photo view options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MovingPhotoViewOptions--><!--Device-unnamed-declare interface MovingPhotoViewOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,6 +32,8 @@ controller of MovingPhotoView.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewOptions-controller?: MovingPhotoViewController--><!--Device-MovingPhotoViewOptions-controller?: MovingPhotoViewController-End-->
@@ -50,6 +54,8 @@ image ai options of MovingPhotoView.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-MovingPhotoViewOptions-imageAIOptions?: ImageAIOptions--><!--Device-MovingPhotoViewOptions-imageAIOptions?: ImageAIOptions-End-->
@@ -69,6 +75,8 @@ moving photo data.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

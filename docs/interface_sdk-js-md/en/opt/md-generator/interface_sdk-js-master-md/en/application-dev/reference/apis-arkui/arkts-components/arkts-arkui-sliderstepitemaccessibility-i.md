@@ -4,6 +4,8 @@ Provides accessibility configuration of the slider step markers.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SliderStepItemAccessibility--><!--Device-unnamed-declare interface SliderStepItemAccessibility-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Provides accessibility configuration of the slider step markers.
 text?: ResourceStr
 ```
 
-Text for assistive technologies (for example, screen readers).
-
-Default value: **""**
+Text for assistive technologies (for example, screen readers). Default value: **""**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

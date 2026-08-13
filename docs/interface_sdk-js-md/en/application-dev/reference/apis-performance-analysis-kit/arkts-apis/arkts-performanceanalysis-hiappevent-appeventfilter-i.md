@@ -1,15 +1,12 @@
 # AppEventFilter
 
-Defines parameters of subscription filtering conditions of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher). This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to.
+Defines parameters of subscription filtering conditions of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher). This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to. > **NOTE：**> > The subscription specifications of system events vary according to application types. For details, see > [HiAppEvent Constraints](../../../dfx/hiappevent-intro.md#constraints).
 
-> **NOTE：**
-> 
-> The subscription specifications of system events vary according to application types. For details, see
-> [HiAppEvent Constraints](../../../dfx/hiappevent-intro.md#constraints).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-hiAppEvent-interface AppEventFilter--><!--Device-hiAppEvent-interface AppEventFilter-End-->
 
@@ -27,14 +24,15 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 domain: string
 ```
 
-Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or the event domain of the custom event information ([AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md#AppEventInfo)) passed through the  
-[Write](arkts-performanceanalysis-hiappevent-write-f.md#write) API.
+Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or the event domain of the custom event information ([AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md#AppEventInfo)) passed through the [Write](arkts-performanceanalysis-hiappevent-write-f.md#write) API.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,9 +50,11 @@ Event types. If this parameter is not set, events are not filtered by default.
 
 **Type:** EventType[]
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,9 +72,11 @@ Names of the events to be subscribed. If this parameter is not set, events are n
 
 **Type:** string[]
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

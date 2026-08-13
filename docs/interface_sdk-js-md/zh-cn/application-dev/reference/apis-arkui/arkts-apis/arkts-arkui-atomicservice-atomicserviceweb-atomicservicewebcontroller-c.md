@@ -1,12 +1,12 @@
 # AtomicServiceWebController
 
-通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。一个AtomicServiceWebController对象只能控制一个AtomicServiceWeb组件，且必须在AtomicServiceWeb组件和AtomicServiceWebController绑定后，才能调用AtomicServiceWebController上的方法。
+通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。一个AtomicServiceWebController对象只能控制一个AtomicServiceWeb组件，且必须在 AtomicServiceWeb组件和AtomicServiceWebController绑定后，才能调用AtomicServiceWebController上的方法。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**装饰器类型：** @Observed
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class AtomicServiceWebController--><!--Device-unnamed-export declare class AtomicServiceWebController-End-->
 
@@ -18,11 +18,13 @@
 accessBackward(): boolean
 ```
 
-当前页面是否可后退，即当前页面是否有返回历史记录。可结合[backward](#backward)一起使用，先通过此方法判断是否可后退，再调用backward执行后退操作。
+当前页面是否可后退，即当前页面是否有返回历史记录。可结合[backward](#backward)一起使用，先通过此方法判断是否可后退，再调用backward执行后退 操作。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,7 +42,7 @@ accessBackward(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessForward
 
@@ -53,6 +55,8 @@ accessForward(): boolean
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -70,7 +74,7 @@ accessForward(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessStep
 
@@ -83,6 +87,8 @@ accessStep(step: number): boolean
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -106,8 +112,8 @@ accessStep(step: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## backward
 
@@ -121,6 +127,8 @@ backward(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWebController-backward(): void--><!--Device-AtomicServiceWebController-backward(): void-End-->
@@ -131,7 +139,7 @@ backward(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## forward
 
@@ -145,6 +153,8 @@ forward(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWebController-forward(): void--><!--Device-AtomicServiceWebController-forward(): void-End-->
@@ -155,7 +165,7 @@ forward(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getCustomUserAgent
 
@@ -168,6 +178,8 @@ getCustomUserAgent(): string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -185,7 +197,7 @@ getCustomUserAgent(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getUserAgent
 
@@ -198,6 +210,8 @@ getUserAgent(): string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -215,7 +229,7 @@ getUserAgent(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## loadUrl
 
@@ -228,6 +242,8 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -246,10 +262,10 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | Invalid url. |
-| [17100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100002](../../apis-arkweb/errorcode-webview.md#17100002-url格式错误) | Invalid url. |
+| [17100003](../../apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
 
 ## refresh
 
@@ -263,6 +279,8 @@ refresh(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWebController-refresh(): void--><!--Device-AtomicServiceWebController-refresh(): void-End-->
@@ -273,7 +291,7 @@ refresh(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## setCustomUserAgent
 
@@ -281,18 +299,13 @@ refresh(): void
 setCustomUserAgent(userAgent: string): void
 ```
 
-设置自定义用户代理，会覆盖系统的用户代理。
-
-建议在onControllerAttached回调事件中设置User-Agent，设置方式请参考示例。不建议将User-Agent设置在onLoadIntercept回调事件中，在部分场景下可能出现设置失败。
-
-> **说明：**
-> 
-> 当Web组件src设置了url，且未在onControllerAttached回调事件中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现
-> 象。
+设置自定义用户代理，会覆盖系统的用户代理。 建议在onControllerAttached回调事件中设置User-Agent，设置方式请参考示例。不建议将User-Agent设置在onLoadIntercept回调事件中，在部分场景下可能出现设置失败。 > **说明：** > > 当Web组件src设置了url，且未在onControllerAttached回调事件中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现 > 象。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -310,6 +323,6 @@ setCustomUserAgent(userAgent: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 

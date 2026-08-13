@@ -6,9 +6,9 @@ Defines chip prefix symbol icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon extends ChipV2SymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon extends ChipV2SymbolIcon-End-->
+<!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ constructor(config: ChipV2PrefixSymbolIconConfig)
 The constructor of ChipV2PrefixSymbolIcon
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

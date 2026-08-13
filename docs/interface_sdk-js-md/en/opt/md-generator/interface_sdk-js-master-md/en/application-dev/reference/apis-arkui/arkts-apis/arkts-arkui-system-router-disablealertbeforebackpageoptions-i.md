@@ -6,7 +6,7 @@ Defines the **DisableAlertBeforeBackPage** parameter.
 
 **Deprecated since:** 8
 
-**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
+**Substitutes:** RouterOptions
 
 <!--Device-unnamed-export interface DisableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface DisableAlertBeforeBackPageOptions-End-->
 
@@ -26,21 +26,17 @@ cancel?: (errMsg: string) => void
 
 Called when the dialog box fails to be closed. **errMsg** indicates the returned information.
 
+**Type:** (errMsg: string) =&gt; void
+
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
+**Substitutes:** RouterOptions
 
 <!--Device-DisableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-DisableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errMsg | string | Yes |
 
 ## complete
 
@@ -50,11 +46,13 @@ complete?: () => void
 
 Called when the dialog box is closed.
 
+**Type:** () =&gt; void
+
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
+**Substitutes:** RouterOptions
 
 <!--Device-DisableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-DisableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -68,18 +66,14 @@ success?: (errMsg: string) => void
 
 Called when the dialog box is closed. **errMsg** indicates the returned information.
 
+**Type:** (errMsg: string) =&gt; void
+
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
+**Substitutes:** RouterOptions
 
 <!--Device-DisableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-DisableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errMsg | string | Yes |

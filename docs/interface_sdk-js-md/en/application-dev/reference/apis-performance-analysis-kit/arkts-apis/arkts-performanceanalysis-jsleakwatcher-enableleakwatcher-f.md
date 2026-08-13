@@ -12,16 +12,13 @@ import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void
 ```
 
-Enables the detection for JS object leaks. This function is disabled by default.
+Enables the detection for JS object leaks. This function is disabled by default. This API can detect the JS object memory leak, which is simpler than the method that needs to call the **enable**, **watch**, **check**, and **dump** functions. If a memory leak occurs, the leaked file is returned through the callback.
 
-This API can detect the JS object memory leak, which is simpler than the method that needs to call the **enable**,  
-**watch**, **check**, and **dump** functions.
+**Since:** 26.1.0
 
-If a memory leak occurs, the leaked file is returned through the callback.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
+**Deprecated since:** -1
 
 <!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void-End-->
 
@@ -39,9 +36,9 @@ If a memory leak occurs, the leaked file is returned through the callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10801001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
-| [10801002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
-| [10801003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -62,13 +59,13 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
 function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void
 ```
 
-Enables the ArkTS object leak detection.
+Enables the ArkTS object leak detection. This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs** parameter to customize the properties of monitoring items, greatly improving the leak detection performance.
 
-This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs**parameter to customize the properties of monitoring items, greatly improving the leak detection performance.
+**Since:** 26.1.0
 
-**Since:** 24
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
+**Deprecated since:** -1
 
 <!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void-End-->
 
@@ -86,9 +83,9 @@ This API can detect memory leaks of ArkTS objects with a single call, which is s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10801001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
-| [10801002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
-| [10801003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 

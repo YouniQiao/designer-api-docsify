@@ -2,7 +2,9 @@
 
 Provides character attribute management capabilities, such as checking whether a character is a space, digit, or letter.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class Unicode--><!--Device-i18n-export class Unicode-End-->
 
@@ -23,6 +25,8 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 Detects the encoding information of the input byte stream.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +65,9 @@ static getType(ch: string): string
 
 Obtains the type of the input character.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -97,7 +103,9 @@ static isDigit(ch: string): boolean
 
 Checks whether the input character is a digit.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -133,7 +141,9 @@ static isIdeograph(ch: string): boolean
 
 Checks whether the input character is an ideographic character.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -169,7 +179,9 @@ static isLetter(ch: string): boolean
 
 Checks whether the input character is a letter.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -205,7 +217,9 @@ static isLowerCase(ch: string): boolean
 
 Checks whether the input character is a lowercase letter.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -241,7 +255,9 @@ static isRTL(ch: string): boolean
 
 Checks whether the input character is of the right to left (RTL) language.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -277,7 +293,9 @@ static isSpaceChar(ch: string): boolean
 
 Checks whether the input character is a space.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -313,7 +331,9 @@ static isUpperCase(ch: string): boolean
 
 Checks whether the input character is an uppercase letter.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -349,7 +369,9 @@ static isWhitespace(ch: string): boolean
 
 Checks whether the input character is a whitespace.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

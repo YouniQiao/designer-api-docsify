@@ -2,11 +2,13 @@
 
 Provides APIs for encapsulating file asset attributes.
 
-**Inheritance/Implementation:** PhotoAsset extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** PhotoAsset extends lang.ISendable
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface PhotoAsset--><!--Device-sendablePhotoAccessHelper-interface PhotoAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,6 +28,8 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -44,13 +48,13 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -89,6 +93,8 @@ Converts a Sendable PhotoAsset object to a non-Sendable PhotoAsset object.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PhotoAsset-convertToPhotoAsset(): photoAccessHelper.PhotoAsset--><!--Device-PhotoAsset-convertToPhotoAsset(): photoAccessHelper.PhotoAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -103,12 +109,12 @@ Converts a Sendable PhotoAsset object to a non-Sendable PhotoAsset object.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -142,6 +148,8 @@ Obtains a **PhotoAsset** member parameter.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PhotoAsset-get(member: string): photoAccessHelper.MemberType--><!--Device-PhotoAsset-get(member: string): photoAccessHelper.MemberType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -162,11 +170,11 @@ Obtains a **PhotoAsset** member parameter.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -205,6 +213,8 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>--><!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>-End-->
@@ -227,13 +237,13 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -274,6 +284,8 @@ Sets a **PhotoAsset** member parameter.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PhotoAsset-set(member: string, value: string): void--><!--Device-PhotoAsset-set(member: string, value: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -289,11 +301,11 @@ Sets a **PhotoAsset** member parameter.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -329,6 +341,8 @@ Display name (with a file name extension) of the asset.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PhotoAsset-readonly displayName: string--><!--Device-PhotoAsset-readonly displayName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -345,6 +359,8 @@ Photo type, image or video
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PhotoAsset-readonly photoType: PhotoType--><!--Device-PhotoAsset-readonly photoType: PhotoType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -360,6 +376,8 @@ uri of the asset.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

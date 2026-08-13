@@ -8,6 +8,8 @@ Callback for picker state
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-unnamed-export type OnPickerStateCallback = (state: AVCastPickerState) => void--><!--Device-unnamed-export type OnPickerStateCallback = (state: AVCastPickerState) => void-End-->

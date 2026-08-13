@@ -2,9 +2,11 @@
 
 EffectSuggestion object.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-camera-interface EffectSuggestion--><!--Device-camera-interface EffectSuggestion-End-->
 
@@ -20,9 +22,11 @@ enableEffectSuggestion(enabled: boolean): void
 
 Enable effect suggestion for session.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void--><!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void-End-->
 
@@ -40,9 +44,9 @@ Enable effect suggestion for session.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## getSupportedEffectSuggestionTypes
 
@@ -52,9 +56,11 @@ getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>
 
 Gets supported effect suggestion types.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>--><!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>-End-->
 
@@ -72,8 +78,8 @@ Gets supported effect suggestion types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isEffectSuggestionSupported
 
@@ -83,9 +89,11 @@ isEffectSuggestionSupported(): boolean
 
 Checks whether effect suggestion is supported.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean--><!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean-End-->
 
@@ -103,8 +111,8 @@ Checks whether effect suggestion is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## setEffectSuggestionStatus
 
@@ -112,11 +120,13 @@ Checks whether effect suggestion is supported.
 setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void
 ```
 
-Set the range of effect suggestion type and enable status.The application should fully set all data when it starts up.
+Set the range of effect suggestion type and enable status. The application should fully set all data when it starts up.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void--><!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void-End-->
 
@@ -134,9 +144,9 @@ Set the range of effect suggestion type and enable status.The application should
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## updateEffectSuggestion
 
@@ -146,9 +156,11 @@ updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void
 
 Update the enable status of the effect suggestion type.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void--><!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void-End-->
 
@@ -167,7 +179,7 @@ Update the enable status of the effect suggestion type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

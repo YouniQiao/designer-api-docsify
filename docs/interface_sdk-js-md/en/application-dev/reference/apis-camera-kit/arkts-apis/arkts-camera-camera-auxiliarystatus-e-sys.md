@@ -2,9 +2,11 @@
 
 Enum for auxiliary status.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum AuxiliaryStatus--><!--Device-camera-enum AuxiliaryStatus-End-->
 
@@ -20,9 +22,11 @@ LOCKED = 0
 
 Auxiliary locked.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryStatus-LOCKED = 0--><!--Device-AuxiliaryStatus-LOCKED = 0-End-->
 
@@ -38,9 +42,11 @@ ON = 1
 
 Turn on auxiliary.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryStatus-ON = 1--><!--Device-AuxiliaryStatus-ON = 1-End-->
 
@@ -56,9 +62,11 @@ OFF = 2
 
 Turn off auxiliary.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryStatus-OFF = 2--><!--Device-AuxiliaryStatus-OFF = 2-End-->
 

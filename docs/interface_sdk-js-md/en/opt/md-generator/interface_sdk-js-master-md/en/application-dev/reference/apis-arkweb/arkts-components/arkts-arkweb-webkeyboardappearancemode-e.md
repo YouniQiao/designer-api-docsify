@@ -1,8 +1,10 @@
 # WebKeyboardAppearanceMode
 
-Enum type supplied to [keyboardAppearance](keyboardAppearance) for setting the web keyboard appearance mode.
+Enum type supplied to keyboardAppearance for setting the web keyboard appearance mode.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WebKeyboardAppearanceMode--><!--Device-unnamed-declare enum WebKeyboardAppearanceMode-End-->
 
@@ -17,6 +19,8 @@ NONE_IMMERSIVE = 0
 Default skin mode, no immersive style.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ No immersive style.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1--><!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1-End-->
@@ -50,6 +56,8 @@ Light immersive style.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2--><!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2-End-->
@@ -65,6 +73,8 @@ DARK_IMMERSIVE = 3
 Dark immersive style.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

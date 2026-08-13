@@ -14,7 +14,9 @@ function hasCallSync(): boolean
 
 Checks whether a call is in progress.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-function hasCallSync(): boolean--><!--Device-call-function hasCallSync(): boolean-End-->
 

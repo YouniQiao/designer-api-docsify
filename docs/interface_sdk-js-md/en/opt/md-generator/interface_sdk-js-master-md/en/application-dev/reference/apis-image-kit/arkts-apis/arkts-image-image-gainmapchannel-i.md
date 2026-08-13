@@ -2,7 +2,9 @@
 
 Describes the data content of a single channel of the gain map. For details, see ISO 21496-1.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface GainmapChannel--><!--Device-image-interface GainmapChannel-End-->
 
@@ -24,7 +26,9 @@ The per-component alternate offset.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-alternateOffset: double--><!--Device-GainmapChannel-alternateOffset: double-End-->
 
@@ -40,7 +44,9 @@ The per-component baseline offset.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-baseOffset: double--><!--Device-GainmapChannel-baseOffset: double-End-->
 
@@ -56,7 +62,9 @@ The per-component max gain map values.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-gainmapMax: double--><!--Device-GainmapChannel-gainmapMax: double-End-->
 
@@ -72,7 +80,9 @@ The per-component min gain map values.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-gainmapMin: double--><!--Device-GainmapChannel-gainmapMin: double-End-->
 
@@ -88,7 +98,9 @@ The per-component gamma values.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-gamma: double--><!--Device-GainmapChannel-gamma: double-End-->
 

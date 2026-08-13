@@ -1,10 +1,6 @@
 # HuksHandle
 
-huks Handle结构体。
-
-> **说明：**
-> 
-> 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#HuksSessionHandle)替代。
+huks Handle结构体。 > **说明：** > > 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#HuksSessionHandle)替代。
 
 **起始版本：** 8
 
@@ -12,7 +8,7 @@ huks Handle结构体。
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 <!--Device-huks-export interface HuksHandle--><!--Device-huks-export interface HuksHandle-End-->
 
@@ -24,9 +20,7 @@ huks Handle结构体。
 errorCode: number
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** number
 
@@ -46,9 +40,7 @@ errorCode: number
 handle: number
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** number
 
@@ -68,9 +60,7 @@ handle: number
 token?: Uint8Array
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** Uint8Array
 

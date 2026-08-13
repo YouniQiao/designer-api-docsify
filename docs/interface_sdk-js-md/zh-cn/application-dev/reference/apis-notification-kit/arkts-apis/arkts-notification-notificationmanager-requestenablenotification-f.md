@@ -30,18 +30,18 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当应用请求通知使能成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当应用请求通知使能成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600004](../errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -65,21 +65,13 @@ notificationManager.requestEnableNotification(requestEnableNotificationCallback)
 function requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback<void>): void
 ```
 
-应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用callback异步回调。
+应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用callback异步回调。 > **说明：** > > - 仅当应用界面加载完成后（即调用 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent)成功），方可使用该接口 > 。 > > - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用 > [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#openNotificationSettingsWithResult)二次申请授权，拉起通知管理弹窗 > 。
 
-> **说明：**
-> 
-> - 仅当应用界面加载完成后（即调用
-> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent)成功），方可使用该接口
-> 。
-> 
-> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
-> [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#openNotificationSettingsWithResult)二次申请授权，拉起通知管理弹窗
-> 。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,30 +81,29 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 **参见：**
 
-[isNotificationEnabled](notificationManager.isNotificationEnabled(callback: AsyncCallback<boolean>): void) 查询当前应用通知授权状态。
+isNotificationEnabled 查询当前应用通知授权状态。
 
-[openNotificationSettings](notificationManager.openNotificationSettings(context: UIAbilityContext): Promise<void>) 拉起当前应用的通知设置界面。
+openNotificationSettings 拉起当前应用的通知设置界面。
 
-[openNotificationSettingsWithResult](notificationManager.openNotificationSettingsWithResult(context: UIAbilityContext): 
-   *     Promise<notificationsetting>) 拉起应用的通知设置界面。
+openNotificationSettingsWithResult 拉起应用的通知设置界面。
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | 是 | 通知弹窗绑定Ability的上下文。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当应用通过弹窗获取用户授权成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当应用通过弹窗获取用户授权成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600004](../errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -197,11 +188,11 @@ function requestEnableNotification(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
+| [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600004](../errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -222,21 +213,13 @@ notificationManager.requestEnableNotification().then(() => {
 function requestEnableNotification(context: UIAbilityContext): Promise<void>
 ```
 
-应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用Promise异步回调。
+应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用Promise异步回调。 > **说明：** > > - 仅当应用界面加载完成后（即调用 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent)成功），方可使用该接口 > 。 > > - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用 > [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#openNotificationSettingsWithResult)二次申请授权，拉起通知管理弹窗 > 。
 
-> **说明：**
-> 
-> - 仅当应用界面加载完成后（即调用
-> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent)成功），方可使用该接口
-> 。
-> 
-> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
-> [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#openNotificationSettingsWithResult)二次申请授权，拉起通知管理弹窗
-> 。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -246,12 +229,11 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 **参见：**
 
-[isNotificationEnabled](notificationManager.isNotificationEnabled(callback: AsyncCallback<boolean>): void) 查询当前应用通知授权状态。
+isNotificationEnabled 查询当前应用通知授权状态。
 
-[openNotificationSettings](notificationManager.openNotificationSettings(context: UIAbilityContext): Promise<void>) 拉起当前应用的通知设置界面。
+openNotificationSettings 拉起当前应用的通知设置界面。
 
-[openNotificationSettingsWithResult](notificationManager.openNotificationSettingsWithResult(context: UIAbilityContext): 
-   *     Promise<notificationsetting>) 拉起应用的通知设置界面。
+openNotificationSettingsWithResult 拉起应用的通知设置界面。
 
 **参数：**
 
@@ -269,12 +251,12 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) | A notification dialog box is already displayed.<br>**适用版本：** 11+ |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600004](../errorcode-notification.md#1600004-通知开关关闭) | Notification disabled.<br>**适用版本：** 11+ |
 
 ## 示例
 

@@ -2,9 +2,11 @@
 
 Represents information about a remote device driver.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-interface RemoteDeviceDriver--><!--Device-deviceManager-interface RemoteDeviceDriver-End-->
 
@@ -24,11 +26,13 @@ deviceId: long
 
 ID of the peripheral device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteDeviceDriver-deviceId: long--><!--Device-RemoteDeviceDriver-deviceId: long-End-->
 
@@ -44,9 +48,11 @@ Remote driver object.
 
 **Type:** rpc.IRemoteObject
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteDeviceDriver-remote: rpc.IRemoteObject--><!--Device-RemoteDeviceDriver-remote: rpc.IRemoteObject-End-->
 

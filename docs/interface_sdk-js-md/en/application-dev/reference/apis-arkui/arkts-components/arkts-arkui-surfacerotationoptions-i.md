@@ -6,6 +6,8 @@ Defines whether the orientation of the surface held by the current **XComponent*
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SurfaceRotationOptions--><!--Device-unnamed-declare interface SurfaceRotationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ Defines whether the orientation of the surface held by the current **XComponent*
 lock?: boolean
 ```
 
-Whether the orientation of the surface is locked when the screen rotates. If this parameter is not set, the default value **false** is used, indicating that the orientation is not locked.
-
-**true**: The orientation of the surface is locked when the screen rotates.
-
-**false**: The orientation of the surface is not locked when the screen rotates.
+Whether the orientation of the surface is locked when the screen rotates. If this parameter is not set, the default value **false** is used, indicating that the orientation is not locked. **true**: The orientation of the surface is locked when the screen rotates. **false**: The orientation of the surface is not locked when the screen rotates.
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

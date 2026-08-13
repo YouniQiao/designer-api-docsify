@@ -2,9 +2,11 @@
 
 Enumerates the scene features.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum SceneFeatureType--><!--Device-camera-enum SceneFeatureType-End-->
 
@@ -18,11 +20,13 @@ Enumerates the scene features.
 MOON_CAPTURE_BOOST = 0
 ```
 
-Moon scene.This is a system API.
+Moon scene. This is a system API.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneFeatureType-MOON_CAPTURE_BOOST = 0--><!--Device-SceneFeatureType-MOON_CAPTURE_BOOST = 0-End-->
 
@@ -36,11 +40,13 @@ Moon scene.This is a system API.
 TRIPOD_DETECTION = 1
 ```
 
-Scene where a tripod is used for photo capture.This is a system API.
+Scene where a tripod is used for photo capture. This is a system API.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneFeatureType-TRIPOD_DETECTION = 1--><!--Device-SceneFeatureType-TRIPOD_DETECTION = 1-End-->
 
@@ -54,11 +60,13 @@ Scene where a tripod is used for photo capture.This is a system API.
 LOW_LIGHT_BOOST = 2
 ```
 
-Scene for long exposure photography.This is a system API.
+Scene for long exposure photography. This is a system API.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneFeatureType-LOW_LIGHT_BOOST = 2--><!--Device-SceneFeatureType-LOW_LIGHT_BOOST = 2-End-->
 

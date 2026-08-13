@@ -4,6 +4,8 @@ Defining Environment variable enumeration value.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SystemProperties--><!--Device-unnamed-declare enum SystemProperties-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ BREAK_POINT = 'system.arkui.breakpoint'
 System environmental breakpoint key that is used to obtain the width and height breakpoint value of the window.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ System environmental avoidarea key that is used to obtain the avoid area of the 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,6 +59,8 @@ WINDOW_AVOID_AREA_PX = 'system.window.avoidarea.px'
 System environmental avoidarea key that is used to obtain the avoid area of the window, measured in px.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ System environmental windowsize key that is used to obtain the size of the windo
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -89,6 +99,8 @@ WINDOW_SIZE_PX = 'system.window.size.px'
 System environmental windowsize key that is used to obtain the size of the window, measured in px.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

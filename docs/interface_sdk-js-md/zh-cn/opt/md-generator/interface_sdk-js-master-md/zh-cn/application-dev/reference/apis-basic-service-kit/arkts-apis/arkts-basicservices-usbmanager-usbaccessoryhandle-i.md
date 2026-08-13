@@ -2,7 +2,9 @@
 
 USB配件句柄。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-interface USBAccessoryHandle--><!--Device-usbManager-interface USBAccessoryHandle-End-->
 
@@ -18,7 +20,9 @@ accessoryFd: number
 
 **类型：** number
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBAccessoryHandle-accessoryFd: int--><!--Device-USBAccessoryHandle-accessoryFd: int-End-->
 

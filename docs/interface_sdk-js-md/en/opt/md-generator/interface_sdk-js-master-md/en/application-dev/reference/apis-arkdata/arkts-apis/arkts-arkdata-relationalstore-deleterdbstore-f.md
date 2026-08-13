@@ -12,13 +12,11 @@ import { relationalStore } from '@kit.ArkData';
 function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the RDB store with the specified database file name. This API uses a promise to return the result.
+Deletes the RDB store with the specified database file name. This API uses a promise to return the result. If **vector** is set to **true** in [StoreConfig] [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) when an RDB store is created, using this API cannot delete the RDB store. Use [deleteRdbStore] [deleteRdbStore](#deleteRdbStore) instead. Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
-If **vector** is set to **true** in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) when an RDB store is created, using this API cannot delete the RDB store. Use [deleteRdbStore](#deleteRdbStore-3) instead.
+**Since:** 23
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -36,9 +34,9 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
 
 ## Examples
 
@@ -90,13 +88,11 @@ class EntryAbility extends UIAbility {
 function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void
 ```
 
-Deletes an RDB store. This API uses an asynchronous callback to return the result.
+Deletes an RDB store. This API uses an asynchronous callback to return the result. After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) during RDB store creation, using this API to delete the RDB store. Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
-After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) during RDB store creation, using this API to delete the RDB store.
+**Since:** 23
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void-End-->
 
@@ -114,11 +110,11 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801001-stage-model-required) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
-| [14801002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
 
 ## Examples
 
@@ -179,15 +175,11 @@ class EntryAbility extends UIAbility {
 function deleteRdbStore(context: Context, name: string): Promise<void>
 ```
 
-Deletes an RDB store. This API uses a promise to return the result.
+Deletes an RDB store. This API uses a promise to return the result. After the deletion, you are advised to set the database object to null. If a custom path is set in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) when an RDB store is created, using this API cannot delete the RDB store. Use [deleteRdbStore](#deleteRdbStore) instead. Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
-After the deletion, you are advised to set the database object to null. If a custom path is set in   
-[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) when an RDB store is created, using this API cannot delete the RDB store. Use   
-[deleteRdbStore](#deleteRdbStore-3) instead.
+**Since:** 23
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, name: string): Promise<void>--><!--Device-relationalStore-function deleteRdbStore(context: Context, name: string): Promise<void>-End-->
 
@@ -210,9 +202,9 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
 
 ## Examples
 
@@ -260,13 +252,11 @@ class EntryAbility extends UIAbility {
 function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>
 ```
 
-Deletes an RDB store. This API uses a promise to return the result.
+Deletes an RDB store. This API uses a promise to return the result. After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) during RDB store creation, using this API to delete the RDB store. Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
-After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) during RDB store creation, using this API to delete the RDB store.
+**Since:** 23
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>-End-->
 
@@ -289,12 +279,12 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801001-stage-model-required) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
-| [14801002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
 
 ## Examples
 

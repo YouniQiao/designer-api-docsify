@@ -1,14 +1,8 @@
 # Counter
 
-The **Counter** component provides an operation to increase or decrease the number.
+The **Counter** component provides an operation to increase or decrease the number. > **NOTE** > > - This component supports WithTheme since API version 26.0.0.
 
-> **NOTE**
->
-> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0.
-
-## Child Components
-
-Supported
+## Child Components Supported
 
 ## Counter
 
@@ -21,6 +15,8 @@ Create Counter component.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

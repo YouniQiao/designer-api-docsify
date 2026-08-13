@@ -8,7 +8,9 @@ type OnDisconnectFn = (elementName: ElementName) => void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-type OnDisconnectFn = (elementName: ElementName) => void--><!--Device-unnamed-type OnDisconnectFn = (elementName: ElementName) => void-End-->
 

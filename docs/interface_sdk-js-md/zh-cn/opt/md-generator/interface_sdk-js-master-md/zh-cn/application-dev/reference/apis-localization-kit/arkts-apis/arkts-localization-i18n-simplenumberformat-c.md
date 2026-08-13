@@ -2,7 +2,9 @@
 
 基于框架字符串提供数字格式化的能力。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class SimpleNumberFormat--><!--Device-i18n-export class SimpleNumberFormat-End-->
 
@@ -16,9 +18,11 @@ format(value: number): string
 
 对数字进行格式化。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SimpleNumberFormat-format(value: double): string--><!--Device-SimpleNumberFormat-format(value: double): string-End-->
 

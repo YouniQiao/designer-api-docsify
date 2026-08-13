@@ -2,7 +2,9 @@
 
 Provides methods for setting information about input methods, including automatic capitalization, automatic punctuation, autocorrect, password presentation, input method engine, and input method subtypes.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-settings-namespace input--><!--Device-settings-namespace input-End-->
 
@@ -20,11 +22,11 @@ import { settings } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DEFAULT_INPUT_METHOD](arkts-basicservices-input-con.md#default_input_method) |
-| [ACTIVATED_INPUT_METHOD_SUB_MODE](arkts-basicservices-input-con.md#activated_input_method_sub_mode) |
-| [ACTIVATED_INPUT_METHODS](arkts-basicservices-input-con.md#activated_input_methods) |
-| [SELECTOR_VISIBILITY_FOR_INPUT_METHOD](arkts-basicservices-input-con.md#selector_visibility_for_input_method) |
-| [AUTO_CAPS_TEXT_INPUT](arkts-basicservices-input-con.md#auto_caps_text_input) |
-| [AUTO_PUNCTUATE_TEXT_INPUT](arkts-basicservices-input-con.md#auto_punctuate_text_input) |
-| [AUTO_REPLACE_TEXT_INPUT](arkts-basicservices-input-con.md#auto_replace_text_input) |
-| [SHOW_PASSWORD_TEXT_INPUT](arkts-basicservices-input-con.md#show_password_text_input) |
+| [DEFAULT_INPUT_METHOD](arkts-basicservices-input-con.md#DEFAULT_INPUT_METHOD) |
+| [ACTIVATED_INPUT_METHOD_SUB_MODE](arkts-basicservices-input-con.md#ACTIVATED_INPUT_METHOD_SUB_MODE) |
+| [ACTIVATED_INPUT_METHODS](arkts-basicservices-input-con.md#ACTIVATED_INPUT_METHODS) |
+| [SELECTOR_VISIBILITY_FOR_INPUT_METHOD](arkts-basicservices-input-con.md#SELECTOR_VISIBILITY_FOR_INPUT_METHOD) |
+| [AUTO_CAPS_TEXT_INPUT](arkts-basicservices-input-con.md#AUTO_CAPS_TEXT_INPUT) |
+| [AUTO_PUNCTUATE_TEXT_INPUT](arkts-basicservices-input-con.md#AUTO_PUNCTUATE_TEXT_INPUT) |
+| [AUTO_REPLACE_TEXT_INPUT](arkts-basicservices-input-con.md#AUTO_REPLACE_TEXT_INPUT) |
+| [SHOW_PASSWORD_TEXT_INPUT](arkts-basicservices-input-con.md#SHOW_PASSWORD_TEXT_INPUT) |

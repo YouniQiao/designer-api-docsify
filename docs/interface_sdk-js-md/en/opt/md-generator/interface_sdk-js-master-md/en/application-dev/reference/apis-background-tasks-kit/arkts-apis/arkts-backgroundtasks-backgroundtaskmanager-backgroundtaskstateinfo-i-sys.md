@@ -2,7 +2,9 @@
 
 Defines the authorization information of a continuous task.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-interface BackgroundTaskStateInfo--><!--Device-backgroundTaskManager-interface BackgroundTaskStateInfo-End-->
 
@@ -26,7 +28,9 @@ AppIndex of the application applying for special continuous task.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,9 @@ Type of user authorization status.
 
 **Type:** UserAuthResult
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +72,9 @@ BundleName of the application applying for special continuous task.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +94,9 @@ UserId of the application applying for special continuous task
 
 **Type:** number
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

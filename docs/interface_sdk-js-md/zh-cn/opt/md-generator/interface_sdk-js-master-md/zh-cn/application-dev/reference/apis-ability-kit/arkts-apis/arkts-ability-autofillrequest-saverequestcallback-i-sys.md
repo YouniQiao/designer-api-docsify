@@ -2,7 +2,9 @@
 
 自动保存或者手动保存请求回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SaveRequestCallback--><!--Device-unnamed-export interface SaveRequestCallback-End-->
 
@@ -18,7 +20,9 @@ onFailure(): void
 
 通知保存请求处理失败。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,8 +36,8 @@ onFailure(): void
 
 | 错误码ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -113,7 +117,9 @@ onSuccess(): void
 
 通知保存请求已成功处理。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,8 +133,8 @@ onSuccess(): void
 
 | 错误码ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

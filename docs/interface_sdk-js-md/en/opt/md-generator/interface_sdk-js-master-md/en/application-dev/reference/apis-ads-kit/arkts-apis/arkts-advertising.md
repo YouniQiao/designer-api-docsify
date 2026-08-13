@@ -1,12 +1,10 @@
-# @ohos.advertising(Ads Service Framework)
+# @ohos.advertising
 
-The advertising module provides APIs for requesting and displaying ads.
-
-> **NOTE：**
-> The initial APIs of this module are supported since API version 11.
-> Newly added APIs will be marked with a superscript to indicate their earliest API version.
+The advertising module provides APIs for requesting and displaying ads. > **NOTE：**> The initial APIs of this module are supported since API version 11. > Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
 
@@ -24,12 +22,12 @@ import { advertising } from '@kit.AdsKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [deleteWebAdInterface](arkts-ads-advertising-deletewebadinterface-f.md#deletewebadinterface) |
-| [getAdRequestBody](arkts-ads-advertising-getadrequestbody-f.md#getadrequestbody) |
-| [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md#parseadresponse) |
-| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerwebadinterface) |
-| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerwebadinterface-1) |
-| [showAd](arkts-ads-advertising-showad-f.md#showad) |
+| [deleteWebAdInterface](arkts-ads-advertising-deletewebadinterface-f.md#deleteWebAdInterface) |
+| [getAdRequestBody](arkts-ads-advertising-getadrequestbody-f.md#getAdRequestBody) |
+| [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md#parseAdResponse) |
+| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerWebAdInterface) |
+| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerWebAdInterface) |
+| [showAd](arkts-ads-advertising-showad-f.md#showAd) |
 
 ### Classes
 

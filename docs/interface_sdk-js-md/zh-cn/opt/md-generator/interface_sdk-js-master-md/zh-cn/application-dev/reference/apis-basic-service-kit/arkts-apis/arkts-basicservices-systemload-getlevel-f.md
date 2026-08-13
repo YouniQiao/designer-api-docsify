@@ -8,7 +8,9 @@ function getLevel(): Promise<SystemLoadLevel>
 
 获取系统负载融合档位，使用promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemLoad-function getLevel(): Promise<SystemLoadLevel>--><!--Device-systemLoad-function getLevel(): Promise<SystemLoadLevel>-End-->
 

@@ -6,6 +6,8 @@ Specify proxy types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export enum ProxyTypes--><!--Device-socket-export enum ProxyTypes-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -22,6 +24,8 @@ No proxy.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-ProxyTypes-NONE = 0--><!--Device-ProxyTypes-NONE = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -37,6 +41,8 @@ Use Socks5 proxy.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-ProxyTypes-SOCKS5 = 1--><!--Device-ProxyTypes-SOCKS5 = 1-End-->
 

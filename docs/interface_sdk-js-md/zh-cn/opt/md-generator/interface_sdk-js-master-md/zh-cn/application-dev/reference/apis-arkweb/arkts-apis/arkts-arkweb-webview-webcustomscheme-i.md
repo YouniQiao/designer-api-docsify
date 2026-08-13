@@ -4,6 +4,8 @@ Defines the configuration of web custom scheme, related to [customizeSchemes](ar
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-webview-interface WebCustomScheme--><!--Device-webview-interface WebCustomScheme-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ If isCodeCacheSupported is true, then the js of this scheme can generate code ca
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-WebCustomScheme-isCodeCacheSupported?: boolean--><!--Device-WebCustomScheme-isCodeCacheSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -30,11 +34,13 @@ If isCodeCacheSupported is true, then the js of this scheme can generate code ca
 isCspBypassing?: boolean
 ```
 
-If isCspBypassing is true, then this scheme can bypass Content Security Policy (CSP)checks. In most cases, this value should not be true when isStandard is true.
+If isCspBypassing is true, then this scheme can bypass Content Security Policy (CSP) checks. In most cases, this value should not be true when isStandard is true.
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,6 +60,8 @@ If isDisplayIsolated is true, then the scheme can only be displayed from other c
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isDisplayIsolated?: boolean--><!--Device-WebCustomScheme-isDisplayIsolated?: boolean-End-->
@@ -71,6 +79,8 @@ If isLocal is true, the same security rules as those applied to the "file" URL w
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,6 +100,8 @@ If isSecure is true, the same security rules as those applied to the "https" URL
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isSecure?: boolean--><!--Device-WebCustomScheme-isSecure?: boolean-End-->
@@ -102,11 +114,13 @@ If isSecure is true, the same security rules as those applied to the "https" URL
 isStandard?: boolean
 ```
 
-If isStandard is true, the scheme will be handled as a standard scheme. The standard schemes needs to comply with the URL normalization and parsing rules defined in Section 3.1 of RFC 1738,which can be found in the http://www.ietf.org/rfc/rfc1738.txt.
+If isStandard is true, the scheme will be handled as a standard scheme. The standard schemes needs to comply with the URL normalization and parsing rules defined in Section 3.1 of RFC 1738, which can be found in the http://www.ietf.org/rfc/rfc1738.txt.
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -126,6 +140,8 @@ Whether Cross-Origin Resource Sharing is supported.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isSupportCORS: boolean--><!--Device-WebCustomScheme-isSupportCORS: boolean-End-->
@@ -144,6 +160,8 @@ Whether fetch request is supported.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isSupportFetch: boolean--><!--Device-WebCustomScheme-isSupportFetch: boolean-End-->
@@ -161,6 +179,8 @@ Name of the custom scheme.
 **类型：** string
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

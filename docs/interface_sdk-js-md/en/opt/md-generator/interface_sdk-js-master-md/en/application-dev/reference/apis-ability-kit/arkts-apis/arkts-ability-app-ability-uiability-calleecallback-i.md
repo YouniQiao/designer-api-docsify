@@ -4,6 +4,8 @@ Defines the callback of the registration message notification of the UIAbility.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface CalleeCallback--><!--Device-unnamed-export interface CalleeCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -14,7 +16,7 @@ Defines the callback of the registration message notification of the UIAbility.
 import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (indata: rpc.MessageSequence): rpc.Parcelable
@@ -23,6 +25,8 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 Defines the callback of Callee.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

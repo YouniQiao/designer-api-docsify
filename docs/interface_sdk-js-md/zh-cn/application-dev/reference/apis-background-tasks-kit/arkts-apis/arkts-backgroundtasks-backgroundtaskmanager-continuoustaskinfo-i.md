@@ -2,9 +2,11 @@
 
 长时任务信息。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-interface ContinuousTaskInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskInfo-End-->
 
@@ -18,11 +20,13 @@ abilityId: int
 
 UIAbility ID.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-abilityId: int--><!--Device-ContinuousTaskInfo-abilityId: int-End-->
 
@@ -38,9 +42,11 @@ UIAbility名称。
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-abilityName: string--><!--Device-ContinuousTaskInfo-abilityName: string-End-->
 
@@ -52,13 +58,15 @@ UIAbility名称。
 appIndex?: int
 ```
 
-应用分身ID。取值范围为全体整数。
+应用分身ID。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 23
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-appIndex?: int--><!--Device-ContinuousTaskInfo-appIndex?: int-End-->
 
@@ -74,9 +82,11 @@ backgroundModes: string[]
 
 **类型：** string[]
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-backgroundModes: string[]--><!--Device-ContinuousTaskInfo-backgroundModes: string[]-End-->
 
@@ -92,9 +102,11 @@ backgroundSubModes: string[]
 
 **类型：** string[]
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-backgroundSubModes: string[]--><!--Device-ContinuousTaskInfo-backgroundSubModes: string[]-End-->
 
@@ -110,9 +122,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-bundleName?: string--><!--Device-ContinuousTaskInfo-bundleName?: string-End-->
 
@@ -126,11 +140,13 @@ continuousTaskId: int
 
 长时任务ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-continuousTaskId: int--><!--Device-ContinuousTaskInfo-continuousTaskId: int-End-->
 
@@ -146,9 +162,11 @@ isFromWebView: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-isFromWebView: boolean--><!--Device-ContinuousTaskInfo-isFromWebView: boolean-End-->
 
@@ -162,11 +180,13 @@ notificationId: int
 
 通知 Id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-notificationId: int--><!--Device-ContinuousTaskInfo-notificationId: int-End-->
 
@@ -180,11 +200,13 @@ pid: int
 
 应用进程的PID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-pid: int--><!--Device-ContinuousTaskInfo-pid: int-End-->
 
@@ -200,9 +222,11 @@ suspendState: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-suspendState: boolean--><!--Device-ContinuousTaskInfo-suspendState: boolean-End-->
 
@@ -216,11 +240,13 @@ uid: int
 
 应用的UID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-uid: int--><!--Device-ContinuousTaskInfo-uid: int-End-->
 
@@ -232,13 +258,15 @@ uid: int
 wantAgentAbilityName: string
 ```
 
-[WantAgent](@ohos.app.ability.wantAgent) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantAgent) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-wantAgentAbilityName: string--><!--Device-ContinuousTaskInfo-wantAgentAbilityName: string-End-->
 
@@ -250,13 +278,15 @@ wantAgentAbilityName: string
 wantAgentBundleName: string
 ```
 
-[WantAgent](@ohos.app.ability.wantAgent) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantAgent) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskInfo-wantAgentBundleName: string--><!--Device-ContinuousTaskInfo-wantAgentBundleName: string-End-->
 

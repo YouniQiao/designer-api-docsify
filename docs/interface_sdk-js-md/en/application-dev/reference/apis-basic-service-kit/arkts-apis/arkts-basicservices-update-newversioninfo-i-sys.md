@@ -2,9 +2,11 @@
 
 Represents information about the new version.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface NewVersionInfo--><!--Device-update-export interface NewVersionInfo-End-->
 
@@ -28,9 +30,11 @@ Version components.
 
 **Type:** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NewVersionInfo-versionComponents: Array<VersionComponent>--><!--Device-NewVersionInfo-versionComponents: Array<VersionComponent>-End-->
 
@@ -48,9 +52,11 @@ Version digest information.
 
 **Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NewVersionInfo-versionDigestInfo: VersionDigestInfo--><!--Device-NewVersionInfo-versionDigestInfo: VersionDigestInfo-End-->
 

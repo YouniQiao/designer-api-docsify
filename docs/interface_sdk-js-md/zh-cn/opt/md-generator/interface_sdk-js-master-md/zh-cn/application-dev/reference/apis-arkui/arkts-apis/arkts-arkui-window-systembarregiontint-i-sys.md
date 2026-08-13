@@ -2,7 +2,9 @@
 
 单个导航栏或状态栏回调信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface SystemBarRegionTint--><!--Device-window-interface SystemBarRegionTint-End-->
 
@@ -20,7 +22,9 @@ backgroundColor?: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-backgroundColor?: string--><!--Device-SystemBarRegionTint-backgroundColor?: string-End-->
 
@@ -38,7 +42,9 @@ contentColor?: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-contentColor?: string--><!--Device-SystemBarRegionTint-contentColor?: string-End-->
 
@@ -56,7 +62,9 @@ isEnable?: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-isEnable?: boolean--><!--Device-SystemBarRegionTint-isEnable?: boolean-End-->
 
@@ -74,7 +82,9 @@ region?: Rect
 
 **类型：** Rect
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-region?: Rect--><!--Device-SystemBarRegionTint-region?: Rect-End-->
 
@@ -92,7 +102,9 @@ type: WindowType
 
 **类型：** WindowType
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-type: WindowType--><!--Device-SystemBarRegionTint-type: WindowType-End-->
 

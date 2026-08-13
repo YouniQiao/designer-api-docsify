@@ -2,7 +2,9 @@
 
 本模块提供[意图框架](../../../application-models/insight-intent-overview.md)基础定义。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

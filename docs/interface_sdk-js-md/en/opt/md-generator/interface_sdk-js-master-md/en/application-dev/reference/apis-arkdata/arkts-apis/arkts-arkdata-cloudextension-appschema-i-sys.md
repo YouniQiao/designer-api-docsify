@@ -2,7 +2,9 @@
 
 Represents the application database schema.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface AppSchema--><!--Device-cloudExtension-export interface AppSchema-End-->
 
@@ -26,7 +28,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppSchema-bundleName: string--><!--Device-AppSchema-bundleName: string-End-->
 
@@ -44,7 +48,9 @@ Database information of the application.
 
 **Type:** Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppSchema-databases: Array<Database>--><!--Device-AppSchema-databases: Array<Database>-End-->
 
@@ -62,7 +68,9 @@ Version of the database schema.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppSchema-version: int--><!--Device-AppSchema-version: int-End-->
 

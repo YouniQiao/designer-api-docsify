@@ -2,13 +2,15 @@
 
 Define the EffectComponentAttribute.
 
-**Inheritance/Implementation:** EffectComponentAttribute extends [CommonMethod](CommonMethod)
+**Inheritance/Implementation:** EffectComponentAttribute extends CommonMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface EffectComponentAttribute extends CommonMethod--><!--Device-unnamed-export declare interface EffectComponentAttribute extends CommonMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface EffectComponentAttribute--><!--Device-unnamed-export declare interface EffectComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Use snapshot when Effect Component have no visual effect.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,45 +54,12 @@ Use snapshot when Effect Component have no visual effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 
-## attributeModifier
-
-```TypeScript
-default attributeModifier(modifier: AttributeModifier<EffectComponentAttribute>
-        | AttributeModifier<CommonMethod> | undefined): this
-```
-
-Set the attribute modifier for EffectComponent.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EffectComponentAttribute-default attributeModifier(modifier: AttributeModifier<EffectComponentAttribute>        | AttributeModifier<CommonMethod> | undefined): this--><!--Device-EffectComponentAttribute-default attributeModifier(modifier: AttributeModifier<EffectComponentAttribute>        | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| this |  |
-
-## setEffectComponentOptions
+## default
 
 ```TypeScript
-default setEffectComponentOptions(options?: EffectComponentOptions): this
+default
 ```
 
 Set EffectComponent options.
@@ -97,23 +68,13 @@ Set EffectComponent options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EffectComponentAttribute-default setEffectComponentOptions(options?: EffectComponentOptions): this--><!--Device-EffectComponentAttribute-default setEffectComponentOptions(options?: EffectComponentOptions): this-End-->
+<!--Device-EffectComponentAttribute-default--><!--Device-EffectComponentAttribute-default-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | No | The options to create an EffectComponent. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| this | Returns instance of EffectComponentAttribute. |
 

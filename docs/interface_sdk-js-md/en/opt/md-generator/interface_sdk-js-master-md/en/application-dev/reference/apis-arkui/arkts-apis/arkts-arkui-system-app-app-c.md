@@ -4,6 +4,8 @@ Defines static functions of App class
 
 **Since:** 3
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export default class App--><!--Device-unnamed-export default class App-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -20,12 +22,11 @@ import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@
 static getInfo(): AppResponse
 ```
 
-Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**.
-
-This API is deprecated since API version 9. You are advised to use  
-[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)instead.
+Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**. This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) instead.
 
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,13 +161,13 @@ export default {
 static requestFullWindow(options?: RequestFullWindowOptions): void
 ```
 
-Requests the application to run in full window.In some scenarios, such as semi-modal FA, the FA runs in non-full window.In this case, you can call this API.This API is invalid for an application already in full-window mode.
+Requests the application to run in full window. In some scenarios, such as semi-modal FA, the FA runs in non-full window. In this case, you can call this API. This API is invalid for an application already in full-window mode.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [startAbility](startAbility)
+**Substitutes:** startAbility
 
 <!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void--><!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void-End-->
 
@@ -197,9 +198,7 @@ export default class Req {
 static screenOnVisible(options?: ScreenOnVisibleOptions): void
 ```
 
-Defines whether to keep the application visible when the screen is woken up.
-
-This API is deprecated since API version 8.
+Defines whether to keep the application visible when the screen is woken up. This API is deprecated since API version 8.
 
 **Since:** 3
 
@@ -221,9 +220,11 @@ This API is deprecated since API version 8.
 static setImageCacheCount(value: number): void
 ```
 
-Set image cache capacity of decoded image count.if not set, the application will not cache any decoded image.
+Set image cache capacity of decoded image count. if not set, the application will not cache any decoded image.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -272,9 +273,11 @@ struct Index {
 static setImageFileCacheSize(value: number): void
 ```
 
-Set image file cache size in bytes on disk before decode.if not set, the application will cache 100MB image files on disk.
+Set image file cache size in bytes on disk before decode. if not set, the application will cache 100MB image files on disk.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -312,9 +315,11 @@ export default class OnC {
 static setImageRawDataCacheSize(value: number): void
 ```
 
-Set image cache capacity of raw image data size in bytes before decode.if not set, the application will not cache any raw image data.
+Set image cache capacity of raw image data size in bytes before decode. if not set, the application will not cache any raw image data.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -363,12 +368,11 @@ struct Index {
 static terminate(): void
 ```
 
-Terminates the current ability. In the stage model, this API has no effect.
-
-This API is deprecated since API version 7. You are advised to use  
-[@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#featureAbility) instead.
+Terminates the current ability. In the stage model, this API has no effect. This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#@ohos.ability.featureAbility) instead.
 
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

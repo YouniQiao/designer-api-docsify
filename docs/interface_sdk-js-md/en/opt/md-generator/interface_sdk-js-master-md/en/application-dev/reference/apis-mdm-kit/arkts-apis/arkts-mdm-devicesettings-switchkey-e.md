@@ -4,6 +4,8 @@ Enumerates switch names.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-deviceSettings-enum SwitchKey--><!--Device-deviceSettings-enum SwitchKey-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ NEARLINK = 0
 NearLink.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Bluetooth.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SwitchKey-BLUETOOTH = 1--><!--Device-SwitchKey-BLUETOOTH = 1-End-->
@@ -50,6 +56,8 @@ Wi-Fi.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SwitchKey-WIFI = 2--><!--Device-SwitchKey-WIFI = 2-End-->
@@ -65,6 +73,8 @@ NFC = 3
 NFC.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 关键帧的策略配置。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface KeyFramePolicy--><!--Device-window-interface KeyFramePolicy-End-->
 
@@ -20,7 +22,9 @@ animationDelay?: number
 
 **默认值：** 100
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyFramePolicy-animationDelay?: long--><!--Device-KeyFramePolicy-animationDelay?: long-End-->
 
@@ -38,7 +42,9 @@ animationDuration?: number
 
 **默认值：** 100
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyFramePolicy-animationDuration?: long--><!--Device-KeyFramePolicy-animationDuration?: long-End-->
 
@@ -56,7 +62,9 @@ distance?: number
 
 **默认值：** 1000
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyFramePolicy-distance?: int--><!--Device-KeyFramePolicy-distance?: int-End-->
 
@@ -72,7 +80,9 @@ enable: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyFramePolicy-enable: boolean--><!--Device-KeyFramePolicy-enable: boolean-End-->
 
@@ -90,7 +100,9 @@ interval?: number
 
 **默认值：** 1000
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyFramePolicy-interval?: long--><!--Device-KeyFramePolicy-interval?: long-End-->
 

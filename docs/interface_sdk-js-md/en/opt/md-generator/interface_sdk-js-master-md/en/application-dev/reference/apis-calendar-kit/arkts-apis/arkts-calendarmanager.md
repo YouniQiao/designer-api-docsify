@@ -1,8 +1,10 @@
 # @ohos.calendarManager
 
-The calendarManager module provides APIs for calendar and event management,including those for creating, deleting, modifying, and querying calendars and events.
+The calendarManager module provides APIs for calendar and event management, including those for creating, deleting, modifying, and querying calendars and events.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace calendarManager--><!--Device-unnamed-declare namespace calendarManager-End-->
 
@@ -20,7 +22,7 @@ import { calendarManager } from '@kit.CalendarKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) |
+| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getCalendarManager) |
 
 ### Classes
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class TouchTestInfo--><!--Device-unnamed-declare class TouchTestInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ id: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -38,15 +42,15 @@ id: string
 parentX: number
 ```
 
-按压点相对于父组件左上角的x轴坐标。
-
-单位：vp
+按压点相对于父组件左上角的x轴坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,15 +66,15 @@ parentX: number
 parentY: number
 ```
 
-按压点相对于父组件左上角的y轴坐标。
-
-单位：vp
+按压点相对于父组件左上角的y轴坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,6 +98,8 @@ rect: RectResult
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -108,15 +114,15 @@ rect: RectResult
 windowX: number
 ```
 
-按压点相对于窗口左上角的x轴坐标。
-
-单位：vp
+按压点相对于窗口左上角的x轴坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -132,15 +138,15 @@ windowX: number
 windowY: number
 ```
 
-按压点相对于窗口左上角的y轴坐标。
-
-单位：vp
+按压点相对于窗口左上角的y轴坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,15 +162,15 @@ windowY: number
 x: number
 ```
 
-按压点相对于子组件左上角的x轴坐标。
-
-单位：vp
+按压点相对于子组件左上角的x轴坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -180,15 +186,15 @@ x: number
 y: number
 ```
 
-按压点相对于子组件左上角的y轴坐标。
-
-单位：vp
+按压点相对于子组件左上角的y轴坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

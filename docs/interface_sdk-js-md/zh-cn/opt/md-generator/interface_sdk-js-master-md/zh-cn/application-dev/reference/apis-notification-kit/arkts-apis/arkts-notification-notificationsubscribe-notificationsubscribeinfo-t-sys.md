@@ -6,7 +6,9 @@ export type NotificationSubscribeInfo = _NotificationSubscribeInfo
 
 通知发布者的信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationSubscribe-export type NotificationSubscribeInfo = _NotificationSubscribeInfo--><!--Device-notificationSubscribe-export type NotificationSubscribeInfo = _NotificationSubscribeInfo-End-->
 

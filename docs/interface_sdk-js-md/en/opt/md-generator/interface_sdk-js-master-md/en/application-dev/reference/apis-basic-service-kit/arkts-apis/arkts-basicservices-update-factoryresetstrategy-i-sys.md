@@ -4,6 +4,8 @@ Represents the factory reset strategy, which contains the **scope** (reset scope
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-update-export interface FactoryResetStrategy--><!--Device-update-export interface FactoryResetStrategy-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -28,6 +30,8 @@ Reset scope. The value **DATA** indicates that only data in the user partition i
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FactoryResetStrategy-scope: FactoryResetScope--><!--Device-FactoryResetStrategy-scope: FactoryResetScope-End-->
@@ -42,11 +46,13 @@ Reset scope. The value **DATA** indicates that only data in the user partition i
 strategy: string
 ```
 
-Reset strategy, which specifies the specific strategy for the reset operation. The value is a string of 0 to 64 characters. The value can contain letters, digits, underscores (_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. This parameter describes the reset operation.For example, **quick erase** indicates fast data erasure, and **deep erase** indicates deep erasure.
+Reset strategy, which specifies the specific strategy for the reset operation. The value is a string of 0 to 64 characters. The value can contain letters, digits, underscores (_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. This parameter describes the reset operation. For example, **quick erase** indicates fast data erasure, and **deep erase** indicates deep erasure.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

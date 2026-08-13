@@ -2,7 +2,9 @@
 
 SIM卡短消息。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface SimShortMessage--><!--Device-sms-export interface SimShortMessage-End-->
 
@@ -20,7 +22,9 @@ SIM卡索引
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SimShortMessage-indexOnSim: int--><!--Device-SimShortMessage-indexOnSim: int-End-->
 
@@ -38,7 +42,9 @@ shortMessage: ShortMessage
 
 **类型：** [ShortMessage](arkts-telephony-sms-shortmessage-i.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SimShortMessage-shortMessage: ShortMessage--><!--Device-SimShortMessage-shortMessage: ShortMessage-End-->
 
@@ -56,7 +62,9 @@ SIM卡消息状态
 
 **类型：** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SimShortMessage-simMessageStatus: SimMessageStatus--><!--Device-SimShortMessage-simMessageStatus: SimMessageStatus-End-->
 

@@ -12,6 +12,8 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>-End-->
@@ -76,6 +78,8 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void-End-->
@@ -88,7 +92,7 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | fd | number | 是 | 已打开的文件描述符。 |
 | mode | string | 是 | r：打开只读文件，该文件必须存在。&lt;br/&gt;- r+：打开可读写的文件，该文件必须存在。&lt;br/&gt;- w：打开只写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则 建立该文件。&lt;br/&gt;- w+：打开可读写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则建立该文件。&lt;br/&gt;- a：以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到 文件尾，即文件原先的内容会被保留。&lt;br/&gt;- a+：以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾后，即文件原先的内容会被保留。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | 是 | 异步打开文件流之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | 是 | 异步打开文件流之后的回调。 |
 
 **错误码：**
 

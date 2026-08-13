@@ -12,17 +12,13 @@ import { text } from '@kit.ArkGraphics2D';
 function setTextHighContrast(action : TextHighContrast): void
 ```
 
-Sets the high contrast mode for text rendering.
+Sets the high contrast mode for text rendering. The setting of this API takes effect for the entire process, and all pages in the process share the same mode. You can call this API to set the high contrast mode, or enable or disable the high contrast mode by toggling the switch on the system settings screen. This API is used to set the high contrast mode for text rendering. The setting of this API takes precedence over the one based on system settings. This API does not take effect for text drawn by the app through APIs such as Canvas. It only takes effect for text rendered using system text components.
 
-The setting of this API takes effect for the entire process, and all pages in the process share the same mode.
+**Since:** 23
 
-You can call this API to set the high contrast mode, or enable or disable the high contrast mode by toggling the switch on the system settings screen. This API is used to set the high contrast mode for text rendering. The setting of this API takes precedence over the one based on system settings.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-This API does not take effect for text drawn by the app through APIs such as Canvas. It only takes effect for text rendered using system text components.
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

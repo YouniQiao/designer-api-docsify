@@ -1,16 +1,22 @@
 # @ohos.taskpool
 
-TaskPool provides a multi-thread running environment for applications. It helps reduce resource consumption and improve system performance. It also frees you from caring about the thread lifecycle. You can use the TaskPool APIs to create background tasks and perform operations on them, for example, executing or canceling a task. Theoretically,you can create an unlimited number of tasks, but this is not recommended due to memory limitations. In addition, you are not advised performing blocking operations in a task, especially indefinite blocking. Long-time blocking operations occupy worker threads and may block other task scheduling, adversely affecting your application performance.You can determine the execution sequence of tasks with the same priority. They are executed in the same sequence as you call the task execution APIs. The default task priority is MEDIUM.If the number of tasks to be executed is greater than the number of worker threads in the task pool, the task pool scales out based on load balancing to minimize the waiting duration. Similarly, when the number of tasks to be executed falls below the number of worker threads, the task pool scales in to reduce the number of worker threads.For details about the error codes returned by TaskPool APIs, see  
-[Utils Error Codes](../../../reference/apis-arkts/errorcode-utils.md).For details about the precautions for using TaskPool, see  
-[Precautions for TaskPool](../../../arkts-utils/taskpool-introduction.md#precautions-for-taskpool).The following concepts are used in this topic:
+/*
+ Copyright (c) 2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-- Task group task: task in a [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md#TaskGroup).  
-- Serial queue task: task in a [SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md#SequenceRunner).  
-- Asynchronous queue task: task in an [AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md#AsyncRunner).  
-- Periodic task: task executed by calling  
-[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executePeriodically).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace taskpool--><!--Device-unnamed-declare namespace taskpool-End-->
 
@@ -29,24 +35,24 @@ import { taskpool } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [cancel](arkts-arkts-taskpool-cancel-f.md#cancel) |
-| [cancel](arkts-arkts-taskpool-cancel-f.md#cancel-1) |
-| [cancel](arkts-arkts-taskpool-cancel-f.md#cancel-2) |
+| [cancel](arkts-arkts-taskpool-cancel-f.md#cancel) |
+| [cancel](arkts-arkts-taskpool-cancel-f.md#cancel) |
 | [execute](arkts-arkts-taskpool-execute-f.md#execute) |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-1) |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-2) |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-3) |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-4) |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-5) |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-6) |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-7) |
-| [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executedelayed) |
-| [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executedelayed-1) |
-| [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically) |
-| [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically-1) |
-| [getTask](arkts-arkts-taskpool-gettask-f.md#gettask) |
-| [getTaskPoolInfo](arkts-arkts-taskpool-gettaskpoolinfo-f.md#gettaskpoolinfo) |
-| [isConcurrent](arkts-arkts-taskpool-isconcurrent-f.md#isconcurrent) |
-| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminatetask) |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute) |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute) |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute) |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute) |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute) |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute) |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute) |
+| [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executeDelayed) |
+| [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executeDelayed) |
+| [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executePeriodically) |
+| [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executePeriodically) |
+| [getTask](arkts-arkts-taskpool-gettask-f.md#getTask) |
+| [getTaskPoolInfo](arkts-arkts-taskpool-gettaskpoolinfo-f.md#getTaskPoolInfo) |
+| [isConcurrent](arkts-arkts-taskpool-isconcurrent-f.md#isConcurrent) |
+| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminateTask) |
 
 ### Classes
 

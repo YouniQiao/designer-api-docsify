@@ -6,9 +6,11 @@ export type SetPreviewTextCallback = (text: string, range: Range) => void
 
 当输入法框架需要显示预览文本时触发的回调。
 
-**起始版本：** 17
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void--><!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void-End-->
 

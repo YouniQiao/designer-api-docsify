@@ -6,19 +6,11 @@ Element References
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the FA model.
+
 <!--Device-unnamed-export interface ElementReferences--><!--Device-unnamed-export interface ElementReferences-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-
-## [k: string]
-
-```TypeScript
-[k: string]: object & ListElement & ImageAnimatorElement
-```
-
-**Type:** object & [ListElement](arkts-arkui-viewmodel-listelement-i.md) & [ImageAnimatorElement](arkts-arkui-viewmodel-imageanimatorelement-i.md)
-
-**ArkTS mode:** ArkTS-Dyn only
-
-<!--Device-ElementReferences-[k: string]: object & ListElement & ImageAnimatorElement--><!--Device-ElementReferences-[k: string]: object & ListElement & ImageAnimatorElement-End-->
 

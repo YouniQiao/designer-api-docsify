@@ -6,14 +6,11 @@
 function createTimer(options: TimerOptions, callback: AsyncCallback<number>): void
 ```
 
-创建定时器，使用callback异步回调。
+创建定时器，使用callback异步回调。 > **注意：** > > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer（系统接口）)结合使用，否则会造 > 成内存泄漏
 
-> **注意：**
-> 
-> 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer)结合使用，否则会造
-> 成内存泄漏
+**起始版本：** 23
 
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void--><!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void-End-->
 
@@ -32,8 +29,8 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -65,14 +62,11 @@ try {
 function createTimer(options: TimerOptions): Promise<number>
 ```
 
-创建定时器，使用Promise异步回调返回定时器的ID。
+创建定时器，使用Promise异步回调返回定时器的ID。 > **注意：** > > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer（系统接口）)结合使用，否则会造 > 成内存泄漏
 
-> **注意：**
-> 
-> 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer)结合使用，否则会造
-> 成内存泄漏
+**起始版本：** 23
 
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>--><!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>-End-->
 
@@ -96,8 +90,8 @@ function createTimer(options: TimerOptions): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

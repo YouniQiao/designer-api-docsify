@@ -4,6 +4,8 @@ Enumerates whether to enable web dark mode.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum WebDarkMode--><!--Device-unnamed-declare enum WebDarkMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ Off = 0
 The web dark mode is disabled.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ The web dark mode is enabled.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDarkMode-On = 1--><!--Device-WebDarkMode-On = 1-End-->
@@ -49,6 +55,8 @@ Auto = 2
 The web dark mode setting follows the system setting.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

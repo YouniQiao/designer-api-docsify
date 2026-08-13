@@ -8,7 +8,9 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all a
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-declare interface BadgeParamWithNumber extends BadgeParam--><!--Device-unnamed-declare interface BadgeParamWithNumber extends BadgeParam-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface BadgeParamWithNumber--><!--Device-unnamed-declare interface BadgeParamWithNumber-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,19 +20,15 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all a
 count: number
 ```
 
-Number of notifications.
-
-**NOTE：**
-
-If the value is less than or equal to 0 and less than the value of **maxCount**, no badge is displayed.
-
-Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
+Number of notifications. **NOTE：**If the value is less than or equal to 0 and less than the value of **maxCount**, no badge is displayed. Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
 
 **Type:** number
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,11 +44,7 @@ Value range: [-2147483648, 2147483647]. If the value is out of the range, 429496
 maxCount?: number
 ```
 
-Maximum number of messages. If the number of messages exceeds the maximum, only **maxCount+** is displayed. For example, if **maxCount** is 99, **99+** is displayed.
-
-Default value: **99**
-
-Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
+Maximum number of messages. If the number of messages exceeds the maximum, only **maxCount+** is displayed. For example, if **maxCount** is 99, **99+** is displayed. Default value: **99** Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
 
 **Type:** number
 
@@ -59,6 +53,8 @@ Value range: [-2147483648, 2147483647]. If the value is out of the range, 429496
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

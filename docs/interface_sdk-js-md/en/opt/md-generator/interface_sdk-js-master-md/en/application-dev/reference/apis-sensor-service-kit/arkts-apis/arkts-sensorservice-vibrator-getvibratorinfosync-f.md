@@ -14,7 +14,9 @@ function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
 
 Queries the vibrator list of one or all devices.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>--><!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>-End-->
 

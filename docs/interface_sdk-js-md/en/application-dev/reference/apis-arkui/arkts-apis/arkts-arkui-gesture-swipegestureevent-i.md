@@ -8,7 +8,9 @@ Defines event info for swipe gesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export interface SwipeGestureEvent extends BaseGestureEvent--><!--Device-unnamed-export interface SwipeGestureEvent extends BaseGestureEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface SwipeGestureEvent--><!--Device-unnamed-export interface SwipeGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ Defines event info for swipe gesture.
 angle: double
 ```
 
-Gesture event direction angle.The unit is deg.
+Gesture event direction angle. The unit is deg.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +42,15 @@ Gesture event direction angle.The unit is deg.
 speed: double
 ```
 
-Gesture event slide speed.The unit is vp.
+Gesture event slide speed. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

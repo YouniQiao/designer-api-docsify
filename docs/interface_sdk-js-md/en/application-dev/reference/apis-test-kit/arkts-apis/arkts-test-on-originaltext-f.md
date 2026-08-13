@@ -12,12 +12,13 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 export function originalText(text: string, pattern?: MatchPattern): On
 ```
 
-Specifies the original text for the target Component.If the accessibility property  
-[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)of a component is set to 'no' or 'no-hide-descendants',you will not be able to use [text](arkts-test-uitest-on-c.md#text) to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with [text](arkts-test-uitest-on-c.md#text)
+Specifies the original text for the target Component. If the accessibility property [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) of a component is set to 'no' or 'no-hide-descendants', you will not be able to use [text](arkts-test-uitest-on-c.md#text) to match the component with the specified original text, but you can use this method to achieve it; if the component does not set the above accessibility property, this method has no difference with [text](arkts-test-uitest-on-c.md#text)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ON-export function originalText(text: string, pattern?: MatchPattern): On--><!--Device-ON-export function originalText(text: string, pattern?: MatchPattern): On-End-->
 
@@ -40,5 +41,5 @@ Specifies the original text for the target Component.If the accessibility proper
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 

@@ -2,9 +2,11 @@
 
 Describes the scale parameters.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface ScaleOptions--><!--Device-window-interface ScaleOptions-End-->
 
@@ -26,11 +28,13 @@ pivotX?: double
 
 X coordinate of the scale center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-pivotX?: double--><!--Device-ScaleOptions-pivotX?: double-End-->
 
@@ -46,11 +50,13 @@ pivotY?: double
 
 Y coordinate of the scale center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-pivotY?: double--><!--Device-ScaleOptions-pivotY?: double-End-->
 
@@ -66,11 +72,13 @@ x?: double
 
 Scale factor along the x-axis. The value is a floating-point number, and the default value is **1.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-x?: double--><!--Device-ScaleOptions-x?: double-End-->
 
@@ -86,11 +94,13 @@ y?: double
 
 Scale factor along the y-axis. The value is a floating-point number, and the default value is **1.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-y?: double--><!--Device-ScaleOptions-y?: double-End-->
 

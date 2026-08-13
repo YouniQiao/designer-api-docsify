@@ -4,6 +4,8 @@ Interface for indoor or outdoor identify result
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-spatialAwareness-export interface DoorPositionResponse--><!--Device-spatialAwareness-export interface DoorPositionResponse-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -28,6 +30,8 @@ indicates the ID of the remote ranging device
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DoorPositionResponse-deviceId: string--><!--Device-DoorPositionResponse-deviceId: string-End-->
@@ -48,6 +52,8 @@ indicates random code for unlocking the door
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DoorPositionResponse-doorLockCode: int--><!--Device-DoorPositionResponse-doorLockCode: int-End-->
@@ -67,6 +73,8 @@ indicates result inside and outside the door
 **Type:** [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

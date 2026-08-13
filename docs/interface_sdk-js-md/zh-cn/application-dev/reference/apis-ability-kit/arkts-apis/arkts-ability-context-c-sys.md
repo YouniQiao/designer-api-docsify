@@ -2,13 +2,15 @@
 
 Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
 
-**继承/实现关系：** Context extends [BaseContext](BaseContext)
+**继承/实现关系：** Context extends BaseContext
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-declare class Context extends BaseContext--><!--Device-unnamed-declare class Context extends BaseContext-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class Context--><!--Device-unnamed-declare class Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,12 +20,7 @@ Context是Stage模型的上下文基类，主要用于访问特定应用程序�
 createBundleContext(bundleName: string): Context
 ```
 
-根据Bundle名称创建安装包的上下文。
-
-> **说明：**
-> 
-> - stage模型多module的情况下可能发生资源id冲突的情况，建议使用
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)替代。
+根据Bundle名称创建安装包的上下文。 > **说明：** > > - stage模型多module的情况下可能发生资源id冲突的情况，建议使用 > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)替代。
 
 **起始版本：** 9
 
@@ -31,7 +28,7 @@ createBundleContext(bundleName: string): Context
 
 **废弃版本：** 12
 
-**替代接口：** [createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createBundleContext)
+**替代接口：** [createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createBundleContext（系统接口）)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -59,9 +56,9 @@ createBundleContext(bundleName: string): Context
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 
@@ -123,7 +120,7 @@ createModuleContext(bundleName: string, moduleName: string): Context
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## 示例
 
@@ -152,9 +149,11 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 为指定Module创建资源管理对象。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -183,9 +182,9 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 
@@ -213,12 +212,13 @@ export default class EntryAbility extends UIAbility {
 createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager
 ```
 
-该接口用于OEM厂商预置的[系统级HSP](../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的  
-[ResourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager)。
+该接口用于OEM厂商预置的[系统级HSP](../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的 [ResourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager)。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -245,8 +245,8 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16400001-目标应用类型不是系统级hsp) | The input bundleName is not a system HSP. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16400001](../errorcode-ability.md#16400001-目标应用类型不是系统级hsp) | The input bundleName is not a system HSP. |
 
 ## 示例
 

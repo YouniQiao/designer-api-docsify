@@ -1,14 +1,8 @@
 # ToolBarItem
 
-可以使用**ToolBarItem**组件，通过[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性向标题栏中添加toolbar item。
+可以使用**ToolBarItem**组件，通过[toolbar](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性向标题栏中添加toolbar item。 > **说明** > > 该组件通常与[toolbar](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性一起使用。
 
-> **说明**
->
-> 该组件通常与[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性一起使用。
-
-## 子组件
-
-该组件可以包含单个子组件。
+## 子组件 该组件可以包含单个子组件。
 
 ## ToolBarItem
 
@@ -16,9 +10,11 @@
 ToolBarItem(options?: ToolBarItemOptions)
 ```
 
-默认在标题栏对应分栏开头位置创建工具栏项，分栏位置由绑定该[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)属性的组件所在分栏位置而定。
+默认在标题栏对应分栏开头位置创建工具栏项，分栏位置由绑定该[toolbar](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)属性的组件所在分栏位置而定。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,5 +30,5 @@ ToolBarItem(options?: ToolBarItemOptions)
 
 ## 汇总
 
-- [ToolBarItemOptions](arkts-arkui-toolbaritem-toolbaritemoptions-i.md)
-- [ToolBarItemPlacement](arkts-arkui-toolbaritem-toolbaritemplacement-e.md)
+- [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md)
+- [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)

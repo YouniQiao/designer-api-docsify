@@ -8,7 +8,9 @@ function isLocalWantAgent(agent: WantAgent): boolean
 
 判断WantAgent实例是否为本地实例。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,7 +36,7 @@ function isLocalWantAgent(agent: WantAgent): boolean
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

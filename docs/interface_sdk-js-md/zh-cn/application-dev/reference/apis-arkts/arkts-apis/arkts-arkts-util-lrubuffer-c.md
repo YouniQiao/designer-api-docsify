@@ -10,7 +10,7 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **替代接口：** [LRUCache](arkts-arkts-util-lrucache-c.md#LRUCache)
 
-<!--Device-util-class LruBuffer<K, V>--><!--Device-util-class LruBuffer<K, V>-End-->
+<!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,7 +28,7 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **废弃版本：** 9
 
-**替代接口：** [iterator]](ohos.util.LRUCache.[Symbol.iterator])
+**替代接口：** iterator]
 
 <!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
@@ -145,7 +145,7 @@ constructor(capacity?: number)
 
 **废弃版本：** 9
 
-**替代接口：** [constructor](ohos.util.LRUCache.constructor)
+**替代接口：** constructor
 
 <!--Device-LruBuffer-constructor(capacity?: number)--><!--Device-LruBuffer-constructor(capacity?: number)-End-->
 
@@ -820,7 +820,7 @@ length: number
 
 **废弃版本：** 9
 
-**替代接口：** [length](ohos.util.LRUCache.length)
+**替代接口：** length
 
 <!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
 

@@ -12,9 +12,11 @@ import { asset } from '@kit.AssetStoreKit';
 function postQuerySync(handle: AssetMap): void
 ```
 
-Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync) together.This API returns the result synchronously.
+Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync) together. This API returns the result synchronously.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -32,13 +34,13 @@ Performs postprocessing for the asset query. This API is used when user authenti
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000012-account-system-service-abnormal) |
-| [24000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000013-access-token-service-abnormal) |
-| [24000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000010-ipc-failed) |
-| [24000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
-| [24000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000006-insufficient-memory) |
-| [24000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000001-asset-store-service-unavailable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) |
 
 ## Examples
 

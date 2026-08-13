@@ -10,6 +10,8 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -37,12 +39,12 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [17700027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700027-分布式服务未启动) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [17700007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700007-输入的设备id有误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

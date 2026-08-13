@@ -4,6 +4,8 @@ Translation Result
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface TranslateResult--><!--Device-componentUtils-interface TranslateResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { componentUtils } from '@kit.ArkUI';
 x: number
 ```
 
-Translation distance along the x-axis.
-
-Unit: vp
+Translation distance along the x-axis. Unit: vp
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Unit: vp
 y: number
 ```
 
-Translation distance along the y-axis.
-
-Unit: vp
+Translation distance along the y-axis. Unit: vp
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +66,13 @@ Unit: vp
 z: number
 ```
 
-Translation distance along the z-axis.
-
-Unit: vp
+Translation distance along the z-axis. Unit: vp
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

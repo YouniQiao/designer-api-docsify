@@ -6,6 +6,8 @@ Defines Close contextMenu.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class ContextMenu--><!--Device-unnamed-declare class ContextMenu-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +26,7 @@ Invoking method close.
 
 **Deprecated since:** 18
 
-**Substitutes:** [close](ohos.arkui.UIContext.ContextMenuController#close)
+**Substitutes:** close
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

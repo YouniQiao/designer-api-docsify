@@ -4,7 +4,9 @@ Describes XMP enumerate option parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface XMPEnumerateOptions--><!--Device-image-interface XMPEnumerateOptions-End-->
 
@@ -28,7 +30,9 @@ The option that controls recursive enabling.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ The option that controls recursive enabling.
 onlyQualifier?: boolean
 ```
 
-Whether to return only qualifier data.&lt;br&gt;Default value:false.
+Whether to return only qualifier data. &lt;br&gt;Default value:false.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

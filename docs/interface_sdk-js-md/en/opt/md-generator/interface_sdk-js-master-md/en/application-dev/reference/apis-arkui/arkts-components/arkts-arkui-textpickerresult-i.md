@@ -4,6 +4,8 @@ Defines the struct of TextPickerResult.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextPickerResult--><!--Device-unnamed-declare interface TextPickerResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ The subscript of the current selection.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerResult-index: number | number[]--><!--Device-TextPickerResult-index: number | number[]-End-->
@@ -32,11 +36,13 @@ The subscript of the current selection.
 value: string | string[]
 ```
 
-The currently selected value.Only valid when only text is displayed.When picture or picture plus text is displayed, the value of value is "".
+The currently selected value. Only valid when only text is displayed.When picture or picture plus text is displayed, the value of value is "".
 
 **Type:** string \| string[]
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,9 +1,5 @@
 # LayoutAlgorithm
 
-[DynamicLayout](@ohos.arkui.components.ArkDynamicLayout)组件支持的布局算法详细信息。
- > **说明：**
-
-
 ## 汇总
 
 ### 类

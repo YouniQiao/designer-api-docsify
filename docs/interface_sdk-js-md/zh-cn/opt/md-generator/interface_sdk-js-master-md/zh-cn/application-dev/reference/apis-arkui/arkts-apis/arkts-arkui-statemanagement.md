@@ -1,12 +1,4 @@
-# @ohos.arkui.StateManagement(状态管理)
-
-状态管理模块具备应用数据存储、持久化管理以及UIAbility（包含用户界面的应用组件）数据存储能力，同时覆盖环境状态、工具和UI状态同步等场景，从而帮助开发者简化状态管理逻辑，提升应用的响应能力和数据一致性。
- 本文中T和S的含义如下：
-| [类型](#类型) |
-| ---- |
-| T    |
-| S    |
-
+# @ohos.arkui.StateManagement
 
 ## 汇总
 
@@ -17,7 +9,7 @@
 | [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md) |
 | [Binding](arkts-arkui-arkui-statemanagement-binding-c.md) |
 | [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md) |
-| [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md) | [globalConnect](PersistenceV2.globalConnect&lt;T extends CollectionType<S>, S extends object&gt;&lt;S&gt;, S extends object>( type: ConnectOptionsCollections&lt;T, S&gt; \|
+| [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md) |
 | [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md) |
 | [PersistenceV2](arkts-arkui-arkui-statemanagement-persistencev2-c.md) |
 | [UIUtils](arkts-arkui-arkui-statemanagement-uiutils-c.md) |

@@ -6,7 +6,9 @@ Represents a dynamic synchronization scene of Marquee.
 
 **Since:** 14
 
-<!--Device-unnamed-export class MarqueeDynamicSyncScene extends DynamicSyncScene--><!--Device-unnamed-export class MarqueeDynamicSyncScene extends DynamicSyncScene-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class MarqueeDynamicSyncScene--><!--Device-unnamed-export class MarqueeDynamicSyncScene-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Type of the MarqueeDynamicSyncSceneType.
 **Type:** [MarqueeDynamicSyncSceneType](arkts-arkui-arkui-uicontext-marqueedynamicsyncscenetype-e.md)
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

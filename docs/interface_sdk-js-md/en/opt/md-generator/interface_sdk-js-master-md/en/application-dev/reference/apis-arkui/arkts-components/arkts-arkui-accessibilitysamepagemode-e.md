@@ -4,6 +4,8 @@ Enumerates the same-page modes for cross-process embedded components and their h
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AccessibilitySamePageMode--><!--Device-unnamed-declare enum AccessibilitySamePageMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SEMI_SILENT = 0
 Ignores initial page loading events and root node page events from the cross-process embedded component.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ FULL_SILENT = 1
 Ignores all page events from the cross-process embedded component.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

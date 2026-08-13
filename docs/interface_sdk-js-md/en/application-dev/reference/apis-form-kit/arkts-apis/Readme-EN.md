@@ -66,7 +66,15 @@
   <!--Del-->
   - [notifyVisibleForms(system api)](arkts-form-formhost-notifyvisibleforms-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-form-formhost-off-f-sys.md)<!--DelEnd-->
+  - [off_changeSceneAnimationState(system api)](arkts-form-formhost-offchangesceneanimationstate-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_formOverflow(system api)](arkts-form-formhost-offformoverflow-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_formUninstall(system api)](arkts-form-formhost-offformuninstall-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_getFormRect(system api)](arkts-form-formhost-offgetformrect-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_getLiveFormStatus(system api)](arkts-form-formhost-offgetliveformstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offChangeSceneAnimationState(system api)](arkts-form-formhost-offchangesceneanimationstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -86,7 +94,15 @@
   <!--Del-->
   - [offUpdateFormsConfigCallback(system api)](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-form-formhost-on-f-sys.md)<!--DelEnd-->
+  - [on_changeSceneAnimationState(system api)](arkts-form-formhost-onchangesceneanimationstate-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_formOverflow(system api)](arkts-form-formhost-onformoverflow-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_formUninstall(system api)](arkts-form-formhost-onformuninstall-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_getFormRect(system api)](arkts-form-formhost-ongetformrect-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_getLiveFormStatus(system api)](arkts-form-formhost-ongetliveformstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onChangeSceneAnimationState(system api)](arkts-form-formhost-onchangesceneanimationstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -153,7 +169,8 @@
   <!--Del-->
   - [PublishFormResult(system api)](arkts-form-forminfo-publishformresult-i-sys.md)<!--DelEnd-->
   - [Rect](arkts-form-forminfo-rect-i.md)
-  - [RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)
+  <!--Del-->
+  - [RunningFormInfo(system api)](arkts-form-forminfo-runningforminfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SceneAnimationParams(system api)](arkts-form-forminfo-sceneanimationparams-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -175,6 +192,8 @@
   - [ColorMode](arkts-form-forminfo-colormode-e.md)
   - [FormDimension](arkts-form-forminfo-formdimension-e.md)
   - [FormLocation](arkts-form-forminfo-formlocation-e.md)
+  <!--Del-->
+  - [FormLocation(system api)](arkts-form-forminfo-formlocation-e-sys.md)<!--DelEnd-->
   - [FormParam](arkts-form-forminfo-formparam-e.md)
   <!--Del-->
   - [FormParam(system api)](arkts-form-forminfo-formparam-e-sys.md)<!--DelEnd-->
@@ -200,7 +219,19 @@
   <!--Del-->
   - [getRunningFormInfosByFilter(system api)](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-form-formobserver-off-f-sys.md)<!--DelEnd-->
+  - [off_call(system api)](arkts-form-formobserver-offcall-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_formAdd(system api)](arkts-form-formobserver-offformadd-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_formRemove(system api)](arkts-form-formobserver-offformremove-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_message(system api)](arkts-form-formobserver-offmessage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_notifyInvisible(system api)](arkts-form-formobserver-offnotifyinvisible-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_notifyVisible(system api)](arkts-form-formobserver-offnotifyvisible-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_router(system api)](arkts-form-formobserver-offrouter-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offCall(system api)](arkts-form-formobserver-offcall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -216,7 +247,19 @@
   <!--Del-->
   - [offRouter(system api)](arkts-form-formobserver-offrouter-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-form-formobserver-on-f-sys.md)<!--DelEnd-->
+  - [on_call(system api)](arkts-form-formobserver-oncall-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_formAdd(system api)](arkts-form-formobserver-onformadd-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_formRemove(system api)](arkts-form-formobserver-onformremove-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_message(system api)](arkts-form-formobserver-onmessage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_notifyInvisible(system api)](arkts-form-formobserver-onnotifyinvisible-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_notifyVisible(system api)](arkts-form-formobserver-onnotifyvisible-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_router(system api)](arkts-form-formobserver-onrouter-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onCall(system api)](arkts-form-formobserver-oncall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -298,9 +341,9 @@
   <!--Del-->
   - [notifyVisibleForms(system api)](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-form-formhost-off-depr-f-sys.md)<!--DelEnd-->
+  - [off_formUninstall(system api)](arkts-form-formhost-offformuninstall-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-form-formhost-on-depr-f-sys.md)<!--DelEnd-->
+  - [on_formUninstall(system api)](arkts-form-formhost-onformuninstall-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [releaseForm(system api)](arkts-form-formhost-releaseform-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->

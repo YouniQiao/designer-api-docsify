@@ -2,9 +2,11 @@
 
 Defines sensor parameters, including **deviceId** and **sensorIndex**.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface SensorInfoParam--><!--Device-sensor-interface SensorInfoParam-End-->
 
@@ -22,17 +24,17 @@ import { sensor } from '@kit.SensorServiceKit';
 deviceId?: int
 ```
 
-Device ID. The default value is -1, indicating the local device. You can use  
-[getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getSensorList) or  
-[sensorStatusChange](sensor.on(type: 'sensorStatusChange', callback: Callback&lt;SensorStatusEvent&gt;)) to obtain the device ID.
+Device ID. The default value is -1, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getSensorList) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) to obtain the device ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SensorInfoParam-deviceId?: int--><!--Device-SensorInfoParam-deviceId?: int-End-->
 
@@ -44,17 +46,17 @@ Device ID. The default value is -1, indicating the local device. You can use
 sensorIndex?: int
 ```
 
-Sensor index. The default value is **0**, indicating the default sensor on the device. You can use  
-[getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getSensorList) or  
-[sensorStatusChange](sensor.on(type: 'sensorStatusChange', callback: Callback&lt;SensorStatusEvent&gt;)) to obtain the sensor index.
+Sensor index. The default value is **0**, indicating the default sensor on the device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getSensorList) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) to obtain the sensor index.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SensorInfoParam-sensorIndex?: int--><!--Device-SensorInfoParam-sensorIndex?: int-End-->
 

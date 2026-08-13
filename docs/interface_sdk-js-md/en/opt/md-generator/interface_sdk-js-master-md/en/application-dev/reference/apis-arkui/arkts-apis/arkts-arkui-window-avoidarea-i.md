@@ -1,19 +1,10 @@
 # AvoidArea
 
-Describes the area to avoid for window content.
+Describes the area to avoid for window content. When adapting window content for an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType). In the avoid area, the application window content is obscured and does not respond to user click events. > **NOTE：**> > The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**. > > 
 
-When adapting window content for an  
-[immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType).
+**Since:** 23
 
-In the avoid area, the application window content is obscured and does not respond to user click events.
-
-> **NOTE：**
-> 
-> The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**.
-> 
-> ![avoidArea](../../../reference/apis-arkui/figures/avoidArea.png)
-
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-window-interface AvoidArea--><!--Device-window-interface AvoidArea-End-->
 
@@ -35,7 +26,9 @@ Rectangle centered at the bottom of the window's two diagonals.
 
 **Type:** Rect
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -53,7 +46,9 @@ Rectangle centered to the left of the window's two diagonals.
 
 **Type:** Rect
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -71,7 +66,9 @@ Rectangle centered to the right of the window's two diagonals.
 
 **Type:** Rect
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -89,7 +86,9 @@ Rectangle centered at the top of the window's two diagonals.
 
 **Type:** Rect
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,7 +106,9 @@ Whether the avoid area is visible. **true** if visible, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

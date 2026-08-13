@@ -2,7 +2,9 @@
 
 Defines options of DNS query.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface QueryOptions--><!--Device-connection-export interface QueryOptions-End-->
 
@@ -24,7 +26,9 @@ Specify family type of DNS query.
 
 **Type:** [FamilyType](arkts-network-connection-familytype-e.md)
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-QueryOptions-family?: FamilyType--><!--Device-QueryOptions-family?: FamilyType-End-->
 

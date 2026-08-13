@@ -2,9 +2,11 @@
 
 当前XML解析信息。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
 
@@ -12,23 +14,17 @@
 
 ## getAttributeCount
 
-ArkTS-Dyn:
-```TypeScript
-getAttributeCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAttributeCount(): int
 ```
 
-ArkTS-Sta: getAttributeCount(): int
+ArkTS-Sta: getAttributeCount(): int 当前开始标记的属性数量，用于遍历和处理XML属性。
 
-当前开始标记的属性数量，用于遍历和处理XML属性。
+**起始版本：** 23
 
-**起始版本：** 8
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,7 +36,7 @@ ArkTS-Sta: getAttributeCount(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前开始标记的属性数量，用于遍历和处理XML属性。 |
+| int | 当前开始标记的属性数量，用于遍历和处理XML属性。 |
 
 ## 示例
 
@@ -64,23 +60,17 @@ console.info(str);
 
 ## getColumnNumber
 
-ArkTS-Dyn:
-```TypeScript
-getColumnNumber(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColumnNumber(): int
 ```
 
-ArkTS-Sta: getColumnNumber(): int
+ArkTS-Sta: getColumnNumber(): int 获取当前列号，从1开始计数。
 
-获取当前列号，从1开始计数。
+**起始版本：** 23
 
-**起始版本：** 8
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -92,7 +82,7 @@ ArkTS-Sta: getColumnNumber(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前元素的列号（从1开始），用于定位XML解析位置。 |
+| int | 当前元素的列号（从1开始），用于定位XML解析位置。 |
 
 ## 示例
 
@@ -116,27 +106,17 @@ console.info(str);
 
 ## getDepth
 
-ArkTS-Dyn:
-```TypeScript
-getDepth(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDepth(): int
 ```
 
-ArkTS-Sta: getDepth(): int
+ArkTS-Sta: getDepth(): int 获取元素的当前深度。 > **说明：** > > 标签内的空白事件深度与标签的深度保持一致。
 
-获取元素的当前深度。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 标签内的空白事件深度与标签的深度保持一致。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -148,7 +128,7 @@ ArkTS-Sta: getDepth(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 元素的嵌套深度（从0开始），用于判断XML层级结构。 |
+| int | 元素的嵌套深度（从0开始），用于判断XML层级结构。 |
 
 ## 示例
 
@@ -176,23 +156,17 @@ console.info(str);
 
 ## getLineNumber
 
-ArkTS-Dyn:
-```TypeScript
-getLineNumber(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLineNumber(): int
 ```
 
-ArkTS-Sta: getLineNumber(): int
+ArkTS-Sta: getLineNumber(): int 获取当前行号，从1开始。
 
-获取当前行号，从1开始。
+**起始版本：** 23
 
-**起始版本：** 8
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -204,7 +178,7 @@ ArkTS-Sta: getLineNumber(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前元素的行号（从1开始），用于定位XML解析位置。 |
+| int | 当前元素的行号（从1开始），用于定位XML解析位置。 |
 
 ## 示例
 
@@ -234,9 +208,11 @@ getName(): string
 
 获取当前元素名称。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -278,9 +254,11 @@ getNamespace(): string
 
 获取当前元素的命名空间。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -326,9 +304,11 @@ getPrefix(): string
 
 获取当前元素的命名空间前缀。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -374,9 +354,11 @@ getText(): string
 
 获取当前事件的文本内容。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -418,9 +400,11 @@ isEmptyElementTag(): boolean
 
 判断当前元素是否为空元素。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -466,9 +450,11 @@ isWhitespace(): boolean
 
 判断当前事件是否只包含空格字符。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

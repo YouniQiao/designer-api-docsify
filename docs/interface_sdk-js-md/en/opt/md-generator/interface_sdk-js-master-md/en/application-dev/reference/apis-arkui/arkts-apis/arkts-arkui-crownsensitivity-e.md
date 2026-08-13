@@ -4,6 +4,8 @@ Enumerates the sensitivity levels for crown rotation.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum CrownSensitivity--><!--Device-unnamed-declare enum CrownSensitivity-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ LOW = 0
 Low sensitivity.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Medium sensitivity.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -53,6 +59,8 @@ HIGH = 2
 High sensitivity.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

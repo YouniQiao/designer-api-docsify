@@ -2,7 +2,9 @@
 
 Enumerates the types of the floating ball template.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-floatingBall-enum FloatingBallTemplate--><!--Device-floatingBall-enum FloatingBallTemplate-End-->
 
@@ -14,9 +16,11 @@ Enumerates the types of the floating ball template.
 STATIC = 1
 ```
 
-Static layout, which provides a title and an icon. When this template is used, the **title** and **icon**parameters in **FloatingBallParams** must be passed.
+Static layout, which provides a title and an icon. When this template is used, the **title** and **icon** parameters in **FloatingBallParams** must be passed.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallTemplate-STATIC = 1--><!--Device-FloatingBallTemplate-STATIC = 1-End-->
 
@@ -28,10 +32,11 @@ Static layout, which provides a title and an icon. When this template is used, t
 NORMAL = 2
 ```
 
-Standard text layout, which provides a title and content. When this template is used, the **title** parameter in  
-**FloatingBallParams** must be passed.
+Standard text layout, which provides a title and content. When this template is used, the **title** parameter in **FloatingBallParams** must be passed.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallTemplate-NORMAL = 2--><!--Device-FloatingBallTemplate-NORMAL = 2-End-->
 
@@ -43,9 +48,11 @@ Standard text layout, which provides a title and content. When this template is 
 EMPHATIC = 3
 ```
 
-Emphasized text layout, which provides an icon, a title, and content. When this template is used, the **title**parameter in **FloatingBallParams** must be passed.
+Emphasized text layout, which provides an icon, a title, and content. When this template is used, the **title** parameter in **FloatingBallParams** must be passed.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallTemplate-EMPHATIC = 3--><!--Device-FloatingBallTemplate-EMPHATIC = 3-End-->
 
@@ -57,10 +64,11 @@ Emphasized text layout, which provides an icon, a title, and content. When this 
 SIMPLE = 4
 ```
 
-Plain text layout, which provides only a title. When this template is used, the **title** parameter in  
-**FloatingBallParams** must be passed.
+Plain text layout, which provides only a title. When this template is used, the **title** parameter in **FloatingBallParams** must be passed.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallTemplate-SIMPLE = 4--><!--Device-FloatingBallTemplate-SIMPLE = 4-End-->
 

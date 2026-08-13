@@ -2,7 +2,9 @@
 
 A helper to enable a picker to select output devices
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-class AVCastPickerHelper--><!--Device-avSession-class AVCastPickerHelper-End-->
 
@@ -22,9 +24,11 @@ constructor(context: Context)
 
 The constructor used to create a AVCastPickerHelper object.
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastPickerHelper-constructor(context: Context)--><!--Device-AVCastPickerHelper-constructor(context: Context)-End-->
 
@@ -40,10 +44,38 @@ The constructor used to create a AVCastPickerHelper object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-## off('pickerStateChange')
+## offPickerStateChange
+
+```TypeScript
+offPickerStateChange(callback?: Callback<AVCastPickerState>) : void
+```
+
+Unregister picker state change callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVCastPickerHelper-offPickerStateChange(callback?: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-offPickerStateChange(callback?: Callback<AVCastPickerState>) : void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+
+## off_pickerStateChange
 
 ```TypeScript
 off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
@@ -52,6 +84,8 @@ off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 Unregister picker state change callback.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -70,10 +104,38 @@ Unregister picker state change callback.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-## on('pickerStateChange')
+## onPickerStateChange
+
+```TypeScript
+onPickerStateChange(callback: Callback<AVCastPickerState>) : void
+```
+
+Register picker state change callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVCastPickerHelper-onPickerStateChange(callback: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-onPickerStateChange(callback: Callback<AVCastPickerState>) : void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+
+## on_pickerStateChange
 
 ```TypeScript
 on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
@@ -82,6 +144,8 @@ on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 Register picker state change callback.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -100,8 +164,8 @@ Register picker state change callback.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
 ## resetCommunicationDevice
 
@@ -109,11 +173,13 @@ Register picker state change callback.
 resetCommunicationDevice(): Promise<void>
 ```
 
-Reset audio device to be default set by the platform which is used for communication use cases including voice or video calls.For example, the audio output device will be switched to earpiece for voice call and to speaker for video call on phone.
+Reset audio device to be default set by the platform which is used for communication use cases including voice or video calls. For example, the audio output device will be switched to earpiece for voice call and to speaker for video call on phone.
 
-**Since:** 21
+**Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>--><!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>-End-->
 
@@ -133,9 +199,11 @@ select(options?: AVCastPickerOptions): Promise<void>
 
 Pull up the avcastpicker based on the options.
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastPickerHelper-select(options?: AVCastPickerOptions): Promise<void>--><!--Device-AVCastPickerHelper-select(options?: AVCastPickerOptions): Promise<void>-End-->
 
@@ -157,4 +225,4 @@ Pull up the avcastpicker based on the options.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

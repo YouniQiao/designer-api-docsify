@@ -2,7 +2,9 @@
 
 Quick thumbnail object
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface QuickThumbnail--><!--Device-camera-interface QuickThumbnail-End-->
 
@@ -24,7 +26,9 @@ release(): Promise<void>
 
 Release quick thumbnail object.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-QuickThumbnail-release(): Promise<void>--><!--Device-QuickThumbnail-release(): Promise<void>-End-->
 
@@ -42,7 +46,7 @@ Release quick thumbnail object.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## captureId
 
@@ -54,7 +58,9 @@ capture id.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-QuickThumbnail-readonly captureId: int--><!--Device-QuickThumbnail-readonly captureId: int-End-->
 
@@ -72,7 +78,9 @@ Thumbnail image.
 
 **Type:** image.PixelMap
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-QuickThumbnail-thumbnailImage: image.PixelMap--><!--Device-QuickThumbnail-thumbnailImage: image.PixelMap-End-->
 

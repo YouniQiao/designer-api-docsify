@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-motion-export enum HoverHandAction--><!--Device-motion-export enum HoverHandAction-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
@@ -19,6 +21,8 @@ DOWN = 0
 表示悬停手势进入检测区域。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ UP = 1
 表示悬停手势离开检测区域。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

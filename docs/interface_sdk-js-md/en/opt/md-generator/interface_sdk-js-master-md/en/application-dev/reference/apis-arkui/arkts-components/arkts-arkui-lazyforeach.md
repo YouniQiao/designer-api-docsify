@@ -1,12 +1,6 @@
 # LazyForEach
 
-For details about the development, see
-[LazyForEach: Lazy Data Loading](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md).
-
-In scenarios involving a large number of child components, LazyForEach, when combined with techniques such as cached
-list items, dynamic preloading, and component reuse, can significantly improve scrolling frame rates while reducing
-memory usage. For best practices, see
-[Optimizing Frame Loss for Long List Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list).
+For details about the development, see [LazyForEach: Lazy Data Loading](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md). In scenarios involving a large number of child components, LazyForEach, when combined with techniques such as cached list items, dynamic preloading, and component reuse, can significantly improve scrolling frame rates while reducing memory usage. For best practices, see [Optimizing Frame Loss for Long List Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list).
 
 ## LazyForEach
 
@@ -18,9 +12,11 @@ LazyForEach(
   )
 ```
 
-**LazyForEach** iterates over provided data sources and creates corresponding components during each iteration.When **LazyForEach** is used in a scrolling container, the framework creates components as required within the visible area of the scrolling container. When a component is out of the visible area, the framework destroys and reclaims the component to reduce memory usage.
+**LazyForEach** iterates over provided data sources and creates corresponding components during each iteration. When **LazyForEach** is used in a scrolling container, the framework creates components as required within the visible area of the scrolling container. When a component is out of the visible area, the framework destroys and reclaims the component to reduce memory usage.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,6 +47,8 @@ Enter the value to obtain the LazyForEach.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -70,20 +68,20 @@ Enter the value to obtain the LazyForEach.
 
 ## Summary
 
-- [DataAddOperation](arkts-arkui-lazyforeach-dataaddoperation-i.md)
-- [DataChangeListener](arkts-arkui-lazyforeach-datachangelistener-i.md)
-- [DataChangeOperation](arkts-arkui-lazyforeach-datachangeoperation-i.md)
-- [DataDeleteOperation](arkts-arkui-lazyforeach-datadeleteoperation-i.md)
-- [DataExchangeOperation](arkts-arkui-lazyforeach-dataexchangeoperation-i.md)
-- [DataMoveOperation](arkts-arkui-lazyforeach-datamoveoperation-i.md)
-- [DataReloadOperation](arkts-arkui-lazyforeach-datareloadoperation-i.md)
-- [ExchangeIndex](arkts-arkui-lazyforeach-exchangeindex-i.md)
-- [ExchangeKey](arkts-arkui-lazyforeach-exchangekey-i.md)
-- [IDataSource](arkts-arkui-lazyforeach-idatasource-i.md)
-- [LazyForEachOptions](arkts-arkui-lazyforeach-lazyforeachoptions-i.md)
-- [MoveIndex](arkts-arkui-lazyforeach-moveindex-i.md)
-- [DataOperation](arkts-arkui-lazyforeach-dataoperation-t.md)
-- [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md)
-- [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeach-lazyforeachcustomcomponentfreezemode-e.md)
-- [LazyForEachMemOptStrategy](arkts-arkui-lazyforeach-lazyforeachmemoptstrategy-e.md)
-- [LazyForEachReleaseStrategy](arkts-arkui-lazyforeach-lazyforeachreleasestrategy-e.md)
+- [DataAddOperation](arkts-arkui-dataaddoperation-i.md)
+- [DataChangeListener](arkts-arkui-datachangelistener-i.md)
+- [DataChangeOperation](arkts-arkui-datachangeoperation-i.md)
+- [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md)
+- [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md)
+- [DataMoveOperation](arkts-arkui-datamoveoperation-i.md)
+- [DataReloadOperation](arkts-arkui-datareloadoperation-i.md)
+- [ExchangeIndex](arkts-arkui-exchangeindex-i.md)
+- [ExchangeKey](arkts-arkui-exchangekey-i.md)
+- [IDataSource](arkts-arkui-idatasource-i.md)
+- [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)
+- [MoveIndex](arkts-arkui-moveindex-i.md)
+- [DataOperation](arkts-arkui-dataoperation-t.md)
+- [DataOperationType](arkts-arkui-dataoperationtype-e.md)
+- [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md)
+- [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md)
+- [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md)

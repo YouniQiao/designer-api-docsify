@@ -2,9 +2,11 @@
 
 Describes audio interrupt operation results.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface InterruptResult--><!--Device-audio-interface InterruptResult-End-->
 
@@ -26,11 +28,13 @@ interruptNode: int
 
 Interrupt node as a unit to receive interrupt change event.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InterruptResult-interruptNode: int--><!--Device-InterruptResult-interruptNode: int-End-->
 
@@ -48,9 +52,11 @@ Interrupt request or abandon result.
 
 **Type:** [InterruptRequestResultType](arkts-audio-audio-interruptrequestresulttype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InterruptResult-requestResult: InterruptRequestResultType--><!--Device-InterruptResult-requestResult: InterruptRequestResultType-End-->
 

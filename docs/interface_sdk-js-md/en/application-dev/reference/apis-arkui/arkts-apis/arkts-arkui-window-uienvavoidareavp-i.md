@@ -1,11 +1,12 @@
 # UIEnvAvoidAreaVP
 
-Describes the information about the window avoidance area in units of vp, which requires careful attention during  
-[immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) adaptation.
+Describes the information about the window avoidance area in units of vp, which requires careful attention during [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) adaptation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface UIEnvAvoidAreaVP--><!--Device-window-interface UIEnvAvoidAreaVP-End-->
 
@@ -29,7 +30,9 @@ Rectangle centered at the bottom of the window's two diagonals, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvAvoidAreaVP-bottomRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-bottomRect: RectInVP-End-->
 
@@ -47,7 +50,9 @@ Rectangle centered to the left of the window's two diagonals, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvAvoidAreaVP-leftRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-leftRect: RectInVP-End-->
 
@@ -65,7 +70,9 @@ Rectangle centered to the right of the window's two diagonals, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvAvoidAreaVP-rightRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-rightRect: RectInVP-End-->
 
@@ -83,7 +90,9 @@ Rectangle centered at the top of the window's two diagonals, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvAvoidAreaVP-topRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-topRect: RectInVP-End-->
 
@@ -101,7 +110,9 @@ Whether the avoid area is visible. **true** if visible, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvAvoidAreaVP-visible: boolean--><!--Device-UIEnvAvoidAreaVP-visible: boolean-End-->
 

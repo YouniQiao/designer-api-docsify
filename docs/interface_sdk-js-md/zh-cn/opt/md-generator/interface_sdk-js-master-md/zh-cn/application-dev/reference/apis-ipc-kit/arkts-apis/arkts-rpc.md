@@ -1,8 +1,10 @@
-# @ohos.rpc(RPC通信)
+# @ohos.rpc
 
 本模块提供进程间通信能力，包括设备内的进程间通信（IPC）和设备间的进程间通信（RPC），前者基于Binder驱动，后者基于软总线驱动。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace rpc--><!--Device-unnamed-declare namespace rpc-End-->
 
@@ -41,3 +43,9 @@
 | --- |
 | [ErrorCode](arkts-ipc-rpc-errorcode-e.md) |
 | [TypeCode](arkts-ipc-rpc-typecode-e.md) |
+
+### 类型
+
+| 名称 |
+| --- |
+| [OnRemoteDiedFunc](arkts-ipc-rpc-onremotediedfunc-t.md) |

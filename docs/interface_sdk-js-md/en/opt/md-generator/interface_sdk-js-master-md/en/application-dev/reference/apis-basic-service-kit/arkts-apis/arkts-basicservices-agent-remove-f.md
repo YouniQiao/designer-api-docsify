@@ -14,7 +14,9 @@ function remove(id: string, callback: AsyncCallback<void>): void
 
 Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses an asynchronous callback to return the result. After this API is called, the **task** object and its callback function are released.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,9 +35,9 @@ Removes a specified task of the invoker. If the task is being executed, the task
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## remove
@@ -46,7 +48,9 @@ function remove(id: string): Promise<void>
 
 Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses a promise to return the result. After this API is called, the **task** object and its callback function are released.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,6 +74,6 @@ Removes a specified task of the invoker. If the task is being executed, the task
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

@@ -2,9 +2,11 @@
 
 Enum for the file transfer status.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-opp-enum TransferStatus--><!--Device-opp-enum TransferStatus-End-->
 
@@ -20,9 +22,11 @@ PENDING = 0
 
 The file is waiting next operate.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +44,11 @@ RUNNING = 1
 
 The file is transfering.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,9 +66,11 @@ FINISH = 2
 
 The file is transfer finished.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

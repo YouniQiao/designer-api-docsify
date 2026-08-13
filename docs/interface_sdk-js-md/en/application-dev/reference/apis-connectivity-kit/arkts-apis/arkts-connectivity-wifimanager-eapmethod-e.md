@@ -2,9 +2,11 @@
 
 Wi-Fi EAP method.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum EapMethod--><!--Device-wifiManager-enum EapMethod-End-->
 
@@ -18,9 +20,11 @@ EAP_NONE
 
 EAP NONE
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_NONE--><!--Device-EapMethod-EAP_NONE-End-->
 
@@ -34,9 +38,11 @@ EAP_PEAP
 
 EAP PEAP
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_PEAP--><!--Device-EapMethod-EAP_PEAP-End-->
 
@@ -50,9 +56,11 @@ EAP_TLS
 
 EAP TLS
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_TLS--><!--Device-EapMethod-EAP_TLS-End-->
 
@@ -66,9 +74,11 @@ EAP_TTLS
 
 EAP TTLS
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_TTLS--><!--Device-EapMethod-EAP_TTLS-End-->
 
@@ -82,9 +92,11 @@ EAP_PWD
 
 EAP PWD
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_PWD--><!--Device-EapMethod-EAP_PWD-End-->
 
@@ -98,9 +110,11 @@ EAP_SIM
 
 EAP SIM
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_SIM--><!--Device-EapMethod-EAP_SIM-End-->
 
@@ -114,9 +128,11 @@ EAP_AKA
 
 EAP AKA
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_AKA--><!--Device-EapMethod-EAP_AKA-End-->
 
@@ -130,9 +146,11 @@ EAP_AKA_PRIME
 
 EAP AKA PRIME
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_AKA_PRIME--><!--Device-EapMethod-EAP_AKA_PRIME-End-->
 
@@ -146,9 +164,11 @@ EAP_UNAUTH_TLS
 
 EAP UNAUTH TLS
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_UNAUTH_TLS--><!--Device-EapMethod-EAP_UNAUTH_TLS-End-->
 

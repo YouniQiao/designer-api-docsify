@@ -1,13 +1,14 @@
 # LongPressGestureHandlerOptions
 
-Provides the parameters of the long press gesture handler. Inherits from   
-[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions).
+Provides the parameters of the long press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions).
 
 **Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)
 
 **Since:** 12
 
-<!--Device-unnamed-interface LongPressGestureHandlerOptions extends BaseHandlerOptions--><!--Device-unnamed-interface LongPressGestureHandlerOptions extends BaseHandlerOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface LongPressGestureHandlerOptions--><!--Device-unnamed-interface LongPressGestureHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,15 +18,13 @@ Provides the parameters of the long press gesture handler. Inherits from
 allowableMovement?: number
 ```
 
-Maximum movement distance recognized by the long press gesture recognizer, in px.
-
-Default value: **15**
-
-Value range: (0, +∞). If the value is less than or equal to 0, the default value **15** is used.
+Maximum movement distance recognized by the long press gesture recognizer, in px. Default value: **15** Value range: (0, +∞). If the value is less than or equal to 0, the default value **15** is used.
 
 **Type:** number
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,17 +40,13 @@ Value range: (0, +∞). If the value is less than or equal to 0, the default val
 duration?: number
 ```
 
-Minimum hold-down time, in ms.
-
-Default value: **500**
-
-**NOTE：**
-
-Value range: [0, +∞). If the value is less than or equal to 0, the default value **500** is used.
+Minimum hold-down time, in ms. Default value: **500** **NOTE：**Value range: [0, +∞). If the value is less than or equal to 0, the default value **500** is used.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,19 +62,13 @@ Value range: [0, +∞). If the value is less than or equal to 0, the default val
 fingers?: number
 ```
 
-Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10.
-
-Default value: **1**
-
-Value range: [1, 10]
-
-**NOTE：**
-
-If a finger moves more than 15 px after being pressed, the gesture recognition fails.
+Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. Default value: **1** Value range: [1, 10] **NOTE：**If a finger moves more than 15 px after being pressed, the gesture recognition fails.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,13 +84,13 @@ If a finger moves more than 15 px after being pressed, the gesture recognition f
 repeat?: boolean
 ```
 
-Whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.
-
-Default value: **false**
+Whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

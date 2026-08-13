@@ -2,9 +2,11 @@
 
 Enumerates the statuses for releasing access permissions for sensitive data under the lock screen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screenLockFileManager-export enum ReleaseStatus--><!--Device-screenLockFileManager-export enum ReleaseStatus-End-->
 
@@ -18,9 +20,11 @@ RELEASE_DENIED = -1
 
 Release of access permission for sensitive data under lock screen is denied.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReleaseStatus-RELEASE_DENIED = -1--><!--Device-ReleaseStatus-RELEASE_DENIED = -1-End-->
 
@@ -34,9 +38,11 @@ RELEASE_GRANTED = 0
 
 Release of access permission for sensitive data under lock screen is granted.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReleaseStatus-RELEASE_GRANTED = 0--><!--Device-ReleaseStatus-RELEASE_GRANTED = 0-End-->
 

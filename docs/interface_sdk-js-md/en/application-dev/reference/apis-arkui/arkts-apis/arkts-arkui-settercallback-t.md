@@ -4,13 +4,17 @@
 export declare type SetterCallback<T> = (newValue: T) => void
 ```
 
-Setter callback type. It is used to assign a new value.
+Defines a callback used to set a value.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-unnamed-export declare type SetterCallback<T> = (newValue: T) => void--><!--Device-unnamed-export declare type SetterCallback<T> = (newValue: T) => void-End-->
 
@@ -20,5 +24,5 @@ Setter callback type. It is used to assign a new value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | update the value with newValue. |
+| newValue | T | Yes | Parameter of the T type. |
 

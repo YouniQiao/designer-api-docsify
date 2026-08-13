@@ -8,29 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare interface HoverEvent extends BaseEvent--><!--Device-unnamed-declare interface HoverEvent extends BaseEvent-End-->
+**废弃版本：** -1
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## stopPropagation
-
-```TypeScript
-stopPropagation: () => void
-```
-
-阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。 
-
-**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HoverEvent-stopPropagation: () => void--><!--Device-HoverEvent-stopPropagation: () => void-End-->
+<!--Device-unnamed-declare interface HoverEvent--><!--Device-unnamed-declare interface HoverEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,19 +20,15 @@ stopPropagation: () => void
 displayX?: number
 ```
 
-鼠标光标或手写笔位置在当前应用屏幕坐标系中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
+鼠标光标或手写笔位置在当前应用屏幕坐标系中的X坐标。 单位：vp 取值范围：[0, +∞) **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,19 +44,15 @@ displayX?: number
 displayY?: number
 ```
 
-鼠标光标或手写笔位置在当前应用屏幕坐标系中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
+鼠标光标或手写笔位置在当前应用屏幕坐标系中的Y坐标。 单位：vp 取值范围：[0, +∞) **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,17 +68,15 @@ displayY?: number
 globalDisplayX?: number
 ```
 
-鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,11 +100,37 @@ globalDisplayY?: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HoverEvent-globalDisplayY?: number--><!--Device-HoverEvent-globalDisplayY?: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## stopPropagation
+
+```TypeScript
+stopPropagation: () => void
+```
+
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
+
+**类型：** () =&gt; void
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HoverEvent-stopPropagation: () => void--><!--Device-HoverEvent-stopPropagation: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,19 +140,15 @@ globalDisplayY?: number
 windowX?: number
 ```
 
-鼠标光标或手写笔位置在当前应用窗口坐标系中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
+鼠标光标或手写笔位置在当前应用窗口坐标系中的X坐标。 单位：vp 取值范围：[0, +∞) **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,19 +164,15 @@ windowX?: number
 windowY?: number
 ```
 
-鼠标光标或手写笔位置在当前应用窗口坐标系中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
+鼠标光标或手写笔位置在当前应用窗口坐标系中的Y坐标。 单位：vp 取值范围：[0, +∞) **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,19 +188,15 @@ windowY?: number
 x?: number
 ```
 
-鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。 单位：vp 取值范围：[0, +∞) **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -228,19 +212,15 @@ x?: number
 y?: number
 ```
 
-鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞) **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

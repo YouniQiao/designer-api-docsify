@@ -12,13 +12,11 @@ import { startupManager } from '@kit.AbilityKit';
 function removeStartupTaskResult(startupTask: string): void
 ```
 
-Removes the initialization result of a startup task or .so file preloading task.
+Removes the initialization result of a startup task or .so file preloading task. - If a startup task name is passed, the initialization result of that startup task is removed. - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not removed.
 
-- If a startup task name is passed, the initialization result of that startup task is removed.  
-- If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not  
-removed.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +34,7 @@ removed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

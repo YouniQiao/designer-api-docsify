@@ -2,13 +2,15 @@
 
 Defines a pan gesture handler object.
 
-**Inheritance/Implementation:** PanGestureHandler extends [GestureHandler<PanGestureHandler>](GestureHandler<PanGestureHandler>)
+**Inheritance/Implementation:** PanGestureHandler extends GestureHandler<PanGestureHandler>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare class PanGestureHandler extends GestureHandler<PanGestureHandler>--><!--Device-unnamed-declare class PanGestureHandler extends GestureHandler<PanGestureHandler>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class PanGestureHandler--><!--Device-unnamed-declare class PanGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor used to create a pan gesture handler instance.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -76,12 +82,13 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 ```
 
-Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
-[onActionCancel](#onActionCancel), this API returns gesture event information.
+Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onActionCancel), this API returns gesture event information.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,6 +122,8 @@ Sets the callback for pan gesture recognition completion. This callback is trigg
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -147,6 +156,8 @@ Sets the callback for successful pan gesture recognition.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -178,6 +189,8 @@ Sets the callback for pan gesture movement updates. The callback is triggered wh
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,6 @@
 # EmbeddableUIAbility
 
-EmbeddableUIAbility is an embeddable UIAbility component provided for atomic services. It inherits from  
-[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility).You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI.For details about the inheritance relationship of each ability, see  
-[Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).
+EmbeddableUIAbility is an embeddable UIAbility component provided for atomic services. It inherits from [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI. For details about the inheritance relationship of each ability, see Inheritance Relationship .
 
 **Inheritance/Implementation:** EmbeddableUIAbility extends [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)
 
@@ -10,7 +8,9 @@ EmbeddableUIAbility is an embeddable UIAbility component provided for atomic ser
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export default class EmbeddableUIAbility extends UIAbility--><!--Device-unnamed-export default class EmbeddableUIAbility extends UIAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export default class EmbeddableUIAbility--><!--Device-unnamed-export default class EmbeddableUIAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -33,6 +33,8 @@ Context of the EmbeddableUIAbility.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

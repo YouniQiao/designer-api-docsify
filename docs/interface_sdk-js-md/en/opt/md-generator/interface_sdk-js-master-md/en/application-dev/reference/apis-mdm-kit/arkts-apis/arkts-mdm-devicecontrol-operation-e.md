@@ -4,6 +4,8 @@ Defines the device operation.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-deviceControl-enum Operation--><!--Device-deviceControl-enum Operation-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -14,9 +16,11 @@ Defines the device operation.
 DISK_ERASURE = 0
 ```
 
-Disk erasure. After this API is called, the device immediately performs a disk erasure operation. Once completed,all data on the device will be erased and cannot be recovered. To protect against data loss caused by potential application attacks, enterprises should implement robust security measures for their applications. It is support only on PCs/2-in-1 devices.
+Disk erasure. After this API is called, the device immediately performs a disk erasure operation. Once completed, all data on the device will be erased and cannot be recovered. To protect against data loss caused by potential application attacks, enterprises should implement robust security measures for their applications. It is support only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Restore device factory settings..
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Operation-RESET_FACTORY = 1--><!--Device-Operation-RESET_FACTORY = 1-End-->
@@ -49,6 +55,8 @@ REBOOT = 2
 Restart devices.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Shut down devices.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Operation-SHUT_DOWN = 3--><!--Device-Operation-SHUT_DOWN = 3-End-->
@@ -81,6 +91,8 @@ LOCK_SCREEN = 4
 Lock device screens.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ Lock devices.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Operation-LOCK_DEVICE = 5--><!--Device-Operation-LOCK_DEVICE = 5-End-->
@@ -113,6 +127,8 @@ UNLOCK_DEVICE = 6
 Unlock devices.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-calendarManager-export interface RecurrenceRule--><!--Device-calendarManager-export interface RecurrenceRule-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -16,13 +18,15 @@
 count?: number
 ```
 
-重复日程的重复次数，取值为非负整数，浮点数输入将向下取整，不填时默认为0，表示不会限定重复次数，会一直重复。取值为负时，效果等同于取值为0。当count与interval和expire同时设置时，以先到达的限制条件及效果为准。
+重复日程的重复次数，取值为非负整数，浮点数输入将向下取整，不填时默认为0，表示不会限定重复次数，会一直重复。取值为负时，效果等同于取值为0。 当count与interval和expire同时设置时，以先到达的限制条件及效果为准。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,13 +40,15 @@ count?: number
 daysOfMonth?: number[]
 ```
 
-按照一个月第几天重复。不填时，默认为空，表示没有一个月第几天重复的规则。范围为[1, 31]，[1, 31]对应1到31号，其他值为无效值，与空值效果相同。若当月没有29号、30号或31号，则29、30、31也为无效值。该字段数组与其相关字段数组为一一对应关系，如monthsOfYear为[1, 2, 3]，daysOfMonth为[1, 2, 3]，则表示按照一月一号，二月二号，三月三号进行重复。
+按照一个月第几天重复。不填时，默认为空，表示没有一个月第几天重复的规则。范围为[1, 31]，[1, 31]对应1到31号，其他值为无效值，与空值效果相同。若当月没有29号、30号或31号， 则29、30、31也为无效值。该字段数组与其相关字段数组为一一对应关系，如monthsOfYear为[1, 2, 3]，daysOfMonth为[1, 2, 3]，则表示按照一月一号，二月二号，三月三号进行重复。
 
 **类型：** number[]
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,13 +62,15 @@ daysOfMonth?: number[]
 daysOfWeek?: number[]
 ```
 
-按照一周第几天重复。不填时，默认为空，表示没有一周第几天重复的规则。范围为[1, 7]，对应周一到周日，其他值为无效值，与空值效果相同。该字段数组与其相关字段数组为一一对应关系，如weeksOfMonth为[1, 2, 3]，daysOfWeek为[1, 2, 3]，则表示按照每月的第一周的周一，第二周的周二，第三周的周三进行重复。
+按照一周第几天重复。不填时，默认为空，表示没有一周第几天重复的规则。范围为[1, 7]，对应周一到周日，其他值为无效值，与空值效果相同。该字段数组与其相关字段数组为一一对应关系， 如weeksOfMonth为[1, 2, 3]，daysOfWeek为[1, 2, 3]，则表示按照每月的第一周的周一，第二周的周二，第三周的周三进行重复。
 
 **类型：** number[]
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -84,6 +92,8 @@ daysOfYear?: number[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RecurrenceRule-daysOfYear?: number[]--><!--Device-RecurrenceRule-daysOfYear?: number[]-End-->
@@ -104,6 +114,8 @@ excludedDates?: number[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RecurrenceRule-excludedDates?: number[]--><!--Device-RecurrenceRule-excludedDates?: number[]-End-->
@@ -116,15 +128,15 @@ excludedDates?: number[]
 expire?: number
 ```
 
-重复周期截止日。格式为13位时间戳，不填时则日程无截止日期。 
-
-当expire与count和interval同时设置时，以先到达的限制条件及效果为准。
+重复周期截止日。格式为13位时间戳，不填时则日程无截止日期。 当expire与count和interval同时设置时，以先到达的限制条件及效果为准。
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -138,13 +150,15 @@ expire?: number
 interval?: number
 ```
 
-重复日程的重复周期，取值为非负整数，浮点数输入将向下取整。不填时默认为0，当取值为0、1或负值时，表示日程每天/周/月/年重复一次。当interval与count和expire同时设置时，以先到达的限制条件及效果为准。此属性与recurrenceFrequency重复规则相关，不同的重复规则下，表示的重复周期不同，以interval取2为例，分为以下几种情况：每天重复时：表示日程每两天重复一次。每周重复时：表示日程每两周重复一次。每月重复时：表示日程每两月重复一次。每年重复时：表示日程每两年重复一次。
+重复日程的重复周期，取值为非负整数，浮点数输入将向下取整。 不填时默认为0，当取值为0、1或负值时，表示日程每天/周/月/年重复一次。 当interval与count和expire同时设置时，以先到达的限制条件及效果为准。 此属性与recurrenceFrequency重复规则相关，不同的重复规则下，表示的重复周期不同，以interval取2为例，分为以下几种情况： 每天重复时：表示日程每两天重复一次。 每周重复时：表示日程每两周重复一次。 每月重复时：表示日程每两月重复一次。 每年重复时：表示日程每两年重复一次。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -166,6 +180,8 @@ monthsOfYear?: number[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RecurrenceRule-monthsOfYear?: number[]--><!--Device-RecurrenceRule-monthsOfYear?: number[]-End-->
@@ -185,6 +201,8 @@ recurrenceFrequency: RecurrenceFrequency
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -206,6 +224,8 @@ weeksOfMonth?: number[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RecurrenceRule-weeksOfMonth?: number[]--><!--Device-RecurrenceRule-weeksOfMonth?: number[]-End-->
@@ -225,6 +245,8 @@ weeksOfYear?: number[]
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

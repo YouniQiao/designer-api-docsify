@@ -2,9 +2,11 @@
 
 Defines the authentication result information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface AuthResult--><!--Device-osAccount-interface AuthResult-End-->
 
@@ -26,11 +28,13 @@ accountId?: int
 
 OS account ID, which is **undefined** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-accountId?: int--><!--Device-AuthResult-accountId?: int-End-->
 
@@ -48,9 +52,11 @@ Credential ID, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-credentialId?: Uint8Array--><!--Device-AuthResult-credentialId?: Uint8Array-End-->
 
@@ -66,11 +72,13 @@ freezingTime?: int
 
 Freezing time, in milliseconds. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-freezingTime?: int--><!--Device-AuthResult-freezingTime?: int-End-->
 
@@ -86,11 +94,13 @@ nextPhaseFreezingTime?: int
 
 Next freezing time, in milliseconds. The default value is **undefined**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-nextPhaseFreezingTime?: int--><!--Device-AuthResult-nextPhaseFreezingTime?: int-End-->
 
@@ -106,11 +116,13 @@ pinValidityPeriod?: long
 
 Authentication validity period, in milliseconds. The default value is **undefined**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-pinValidityPeriod?: long--><!--Device-AuthResult-pinValidityPeriod?: long-End-->
 
@@ -126,11 +138,13 @@ remainTimes?: int
 
 Number of remaining authentication times, which is **-1** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-remainTimes?: int--><!--Device-AuthResult-remainTimes?: int-End-->
 
@@ -148,9 +162,11 @@ Authentication token, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-token?: Uint8Array--><!--Device-AuthResult-token?: Uint8Array-End-->
 

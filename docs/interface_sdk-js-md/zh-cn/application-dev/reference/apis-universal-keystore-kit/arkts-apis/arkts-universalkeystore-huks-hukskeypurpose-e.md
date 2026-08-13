@@ -1,12 +1,12 @@
 # HuksKeyPurpose
 
-表示密钥用途。
-
-一个密钥仅能用于单类用途，不能既用于加解密又用于签名验签。
+表示密钥用途。 一个密钥仅能用于单类用途，不能既用于加解密又用于签名验签。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 <!--Device-huks-export enum HuksKeyPurpose--><!--Device-huks-export enum HuksKeyPurpose-End-->
 
@@ -23,6 +23,8 @@ HUKS_KEY_PURPOSE_ENCRYPT = 1
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,6 +44,8 @@ HUKS_KEY_PURPOSE_DECRYPT = 2
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DECRYPT = 2--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DECRYPT = 2-End-->
@@ -59,6 +63,8 @@ HUKS_KEY_PURPOSE_SIGN = 4
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,6 +86,8 @@ HUKS_KEY_PURPOSE_VERIFY = 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_VERIFY = 8--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_VERIFY = 8-End-->
@@ -99,6 +107,8 @@ HUKS_KEY_PURPOSE_DERIVE = 16
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -120,6 +130,8 @@ HUKS_KEY_PURPOSE_WRAP = 32
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_WRAP = 32--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_WRAP = 32-End-->
@@ -139,6 +151,8 @@ HUKS_KEY_PURPOSE_UNWRAP = 64
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -160,6 +174,8 @@ HUKS_KEY_PURPOSE_MAC = 128
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_MAC = 128--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_MAC = 128-End-->
@@ -179,6 +195,8 @@ HUKS_KEY_PURPOSE_AGREE = 256
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

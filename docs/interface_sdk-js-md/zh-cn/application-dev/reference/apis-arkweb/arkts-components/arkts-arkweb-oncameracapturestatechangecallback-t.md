@@ -10,6 +10,8 @@ type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) 
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void--><!--Device-unnamed-type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

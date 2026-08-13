@@ -2,9 +2,11 @@
 
 Provides configuration options for download and cache, including HTTP options, transmission options, and task options.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-interface CacheDownloadOptions--><!--Device-cacheDownload-interface CacheDownloadOptions-End-->
 
@@ -26,9 +28,11 @@ CA certificate path. Currently, only the .pem certificate is supported. The CA c
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
 
@@ -46,7 +50,9 @@ Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy i
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy--><!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy-End-->
 
@@ -62,9 +68,11 @@ Request header used by a download task during HTTP transfer. The default value i
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-headers?: Record<string, string>--><!--Device-CacheDownloadOptions-headers?: Record<string, string>-End-->
 
@@ -82,7 +90,9 @@ Task retry configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,9 +110,11 @@ Secure communication protocol, such as TSL or TLCP. TLS is used by default. Curr
 
 **Type:** SslType
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-sslType?: SslType--><!--Device-CacheDownloadOptions-sslType?: SslType-End-->
 
@@ -120,7 +132,9 @@ Task timeout configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

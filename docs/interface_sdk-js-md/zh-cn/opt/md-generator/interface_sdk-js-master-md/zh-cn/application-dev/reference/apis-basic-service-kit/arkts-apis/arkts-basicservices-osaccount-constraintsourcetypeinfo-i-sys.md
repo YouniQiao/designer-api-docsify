@@ -2,7 +2,9 @@
 
 表示约束来源类型信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface ConstraintSourceTypeInfo--><!--Device-osAccount-interface ConstraintSourceTypeInfo-End-->
 
@@ -20,7 +22,9 @@ localId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ConstraintSourceTypeInfo-localId: int--><!--Device-ConstraintSourceTypeInfo-localId: int-End-->
 
@@ -38,7 +42,9 @@ type: ConstraintSourceType
 
 **类型：** [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType--><!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType-End-->
 

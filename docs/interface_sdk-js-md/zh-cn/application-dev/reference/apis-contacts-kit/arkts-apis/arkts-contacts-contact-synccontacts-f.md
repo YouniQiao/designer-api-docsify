@@ -6,13 +6,13 @@
 function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>
 ```
 
-批量同步多个联系人至联系人数据库。
-
- 每次最多可批量同步400个联系人。调用方必须处于前台。
+批量同步多个联系人至联系人数据库。 每次最多可批量同步400个联系人。调用方必须处于前台。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -43,16 +43,16 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-用户取消) | User cancel. |
-| [16700004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700004-联系人数量超过限制) | The number of contacts exceeds the limit. |
-| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
-| [16700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700003-禁止后台调用) | Background usage is prohibited. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700103](../errorcode-contacts.md#16700103-用户取消) | User cancel. |
+| [16700004](../errorcode-contacts.md#16700004-联系人数量超过限制) | The number of contacts exceeds the limit. |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700003](../errorcode-contacts.md#16700003-禁止后台调用) | Background usage is prohibited. |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

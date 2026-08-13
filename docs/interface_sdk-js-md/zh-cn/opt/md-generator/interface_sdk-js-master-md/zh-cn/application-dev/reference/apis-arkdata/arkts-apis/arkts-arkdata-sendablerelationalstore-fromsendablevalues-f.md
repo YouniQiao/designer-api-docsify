@@ -10,6 +10,8 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues--><!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,7 +32,7 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 | 错误码ID |
 | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
 
 ## 示例
 

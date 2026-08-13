@@ -1,9 +1,10 @@
 # KeyboardController
 
-In the following API examples, you must first use   
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface KeyboardController--><!--Device-inputMethodEngine-interface KeyboardController-End-->
 
@@ -23,7 +24,9 @@ exitCurrentInputType(callback: AsyncCallback<void>): void
 
 Exits this input type. This API can be called only by the preconfigured default input method. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardController-exitCurrentInputType(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-exitCurrentInputType(callback: AsyncCallback<void>): void-End-->
 
@@ -39,8 +42,8 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Error Code ID |
 | --- |
-| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -64,7 +67,9 @@ exitCurrentInputType(): Promise<void>
 
 Exits this input type. This API can be called only by the preconfigured default input method. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardController-exitCurrentInputType(): Promise<void>--><!--Device-KeyboardController-exitCurrentInputType(): Promise<void>-End-->
 
@@ -80,8 +85,8 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Error Code ID |
 | --- |
-| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -103,7 +108,9 @@ hide(callback: AsyncCallback<void>): void
 
 Hides the keyboard. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardController-hide(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hide(callback: AsyncCallback<void>): void-End-->
 
@@ -119,7 +126,7 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -143,7 +150,9 @@ hide(): Promise<void>
 
 Hides the keyboard. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardController-hide(): Promise<void>--><!--Device-KeyboardController-hide(): Promise<void>-End-->
 
@@ -159,7 +168,7 @@ Hides the keyboard. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -185,7 +194,7 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hide](inputMethodEngine.KeyboardController.hide(callback:)
+**Substitutes:** [hide](#hide)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void-End-->
 

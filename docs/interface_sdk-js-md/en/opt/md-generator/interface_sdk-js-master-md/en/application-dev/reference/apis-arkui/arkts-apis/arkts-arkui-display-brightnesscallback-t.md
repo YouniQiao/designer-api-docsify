@@ -6,7 +6,9 @@ type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void
 
 Defines the callback function used to listen for screen brightness information.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-display-type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void--><!--Device-display-type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void-End-->
 

@@ -4,6 +4,8 @@ Implements a common controller for managing components related to **promptAction
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-promptAction-class CommonController--><!--Device-promptAction-class CommonController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Closes the custom dialog box. If the dialog box is already closed, this API has 
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -42,6 +46,8 @@ A constructor used to create a controller instance.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -59,6 +65,8 @@ getState(): CommonState
 Obtains the state of the custom dialog box.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

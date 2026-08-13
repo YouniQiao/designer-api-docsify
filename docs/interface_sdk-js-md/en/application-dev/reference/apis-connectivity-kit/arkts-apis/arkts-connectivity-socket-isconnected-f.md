@@ -14,9 +14,11 @@ function isConnected(clientSocket: int): boolean
 
 Check whether the current socket connection has been established.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-socket-function isConnected(clientSocket: int): boolean--><!--Device-socket-function isConnected(clientSocket: int): boolean-End-->
 
@@ -26,7 +28,7 @@ Check whether the current socket connection has been established.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates client socket. |
+| clientSocket | int | Yes | Indicates client socket. |
 
 **Return value:**
 

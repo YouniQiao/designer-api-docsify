@@ -2,9 +2,11 @@
 
 Enumerates the OS account types.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum OsAccountType--><!--Device-osAccount-enum OsAccountType-End-->
 
@@ -16,13 +18,13 @@ Enumerates the OS account types.
 PRIVATE = 1024
 ```
 
-Privacy account. Only one privacy account is allowed.
+Privacy account. Only one privacy account is allowed. This is a system API.
 
-This is a system API.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-OsAccountType-PRIVATE = 1024--><!--Device-OsAccountType-PRIVATE = 1024-End-->
 

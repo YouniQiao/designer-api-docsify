@@ -2,9 +2,11 @@
 
 Describes the wifi channel width.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum WifiChannelWidth--><!--Device-wifiManager-enum WifiChannelWidth-End-->
 
@@ -18,9 +20,11 @@ WIDTH_20MHZ = 0
 
 20MHz.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_20MHZ = 0--><!--Device-WifiChannelWidth-WIDTH_20MHZ = 0-End-->
 
@@ -34,9 +38,11 @@ WIDTH_40MHZ = 1
 
 40MHz.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_40MHZ = 1--><!--Device-WifiChannelWidth-WIDTH_40MHZ = 1-End-->
 
@@ -50,9 +56,11 @@ WIDTH_80MHZ = 2
 
 80MHz.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_80MHZ = 2--><!--Device-WifiChannelWidth-WIDTH_80MHZ = 2-End-->
 
@@ -66,9 +74,11 @@ WIDTH_160MHZ = 3
 
 160MHz.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_160MHZ = 3--><!--Device-WifiChannelWidth-WIDTH_160MHZ = 3-End-->
 
@@ -82,9 +92,11 @@ WIDTH_80MHZ_PLUS = 4
 
 80MHz plus.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4--><!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4-End-->
 
@@ -98,9 +110,11 @@ WIDTH_INVALID
 
 Invalid.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_INVALID--><!--Device-WifiChannelWidth-WIDTH_INVALID-End-->
 

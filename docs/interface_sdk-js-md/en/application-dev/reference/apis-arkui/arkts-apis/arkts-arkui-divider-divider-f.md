@@ -3,6 +3,7 @@
 ## Divider
 
 ```TypeScript
+@ComponentBuilder
 export declare function Divider(): DividerAttribute
 ```
 
@@ -12,9 +13,11 @@ Defines Divider Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Divider(): DividerAttribute--><!--Device-unnamed-export declare function Divider(): DividerAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Divider(): DividerAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Divider(): DividerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,12 +25,13 @@ Defines Divider Component.
 
 | Type | Description |
 | --- | --- |
-| [DividerAttribute](arkts-arkui-divider-dividerattribute-i.md) |  |
+| DividerAttribute |  |
 
 
 ## Divider
 
 ```TypeScript
+@Builder
 export declare function Divider(
     style: CustomBuilderT<DividerAttribute>
 ): DividerAttribute
@@ -39,11 +43,11 @@ Defines Divider Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Divider(    style: CustomBuilderT<DividerAttribute>): DividerAttribute--><!--Device-unnamed-export declare function Divider(    style: CustomBuilderT<DividerAttribute>): DividerAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Divider(    style: CustomBuilderT<DividerAttribute>): DividerAttribute--><!--Device-unnamed-@Builderexport declare function Divider(    style: CustomBuilderT<DividerAttribute>): DividerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +55,11 @@ Defines Divider Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DividerAttribute](arkts-arkui-divider-dividerattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;DividerAttribute&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DividerAttribute](arkts-arkui-divider-dividerattribute-i.md) |  |
+| DividerAttribute |  |
 

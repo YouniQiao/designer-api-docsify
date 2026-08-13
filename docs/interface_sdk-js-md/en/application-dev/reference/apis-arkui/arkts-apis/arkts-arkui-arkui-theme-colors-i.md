@@ -2,9 +2,11 @@
 
 Defines the struct of Colors.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface Colors--><!--Device-unnamed-export declare interface Colors-End-->
 
@@ -24,13 +26,17 @@ alert: ResourceColor
 
 System alert Color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-alert: ResourceColor--><!--Device-Colors-alert: ResourceColor-End-->
 
@@ -44,13 +50,17 @@ backgroundEmphasize: ResourceColor
 
 System emphasize level background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-backgroundEmphasize: ResourceColor--><!--Device-Colors-backgroundEmphasize: ResourceColor-End-->
 
@@ -64,13 +74,17 @@ backgroundFourth: ResourceColor
 
 System fourth level background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-backgroundFourth: ResourceColor--><!--Device-Colors-backgroundFourth: ResourceColor-End-->
 
@@ -84,13 +98,17 @@ backgroundPrimary: ResourceColor
 
 System Primary level background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-backgroundPrimary: ResourceColor--><!--Device-Colors-backgroundPrimary: ResourceColor-End-->
 
@@ -104,13 +122,17 @@ backgroundSecondary: ResourceColor
 
 System Secondary level background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-backgroundSecondary: ResourceColor--><!--Device-Colors-backgroundSecondary: ResourceColor-End-->
 
@@ -124,13 +146,17 @@ backgroundTertiary: ResourceColor
 
 System tertiary level background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-backgroundTertiary: ResourceColor--><!--Device-Colors-backgroundTertiary: ResourceColor-End-->
 
@@ -144,13 +170,17 @@ brand: ResourceColor
 
 System brand Color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-brand: ResourceColor--><!--Device-Colors-brand: ResourceColor-End-->
 
@@ -164,13 +194,17 @@ compBackgroundEmphasize: ResourceColor
 
 100% bright brand background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundEmphasize: ResourceColor--><!--Device-Colors-compBackgroundEmphasize: ResourceColor-End-->
 
@@ -184,13 +218,17 @@ compBackgroundFocus: ResourceColor
 
 CompBackgroundFocus Color
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundFocus: ResourceColor--><!--Device-Colors-compBackgroundFocus: ResourceColor-End-->
 
@@ -204,13 +242,17 @@ compBackgroundGray: ResourceColor
 
 CompBackgroundGray color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundGray: ResourceColor--><!--Device-Colors-compBackgroundGray: ResourceColor-End-->
 
@@ -224,13 +266,17 @@ compBackgroundNeutral: ResourceColor
 
 Black neutral high gloss color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundNeutral: ResourceColor--><!--Device-Colors-compBackgroundNeutral: ResourceColor-End-->
 
@@ -244,13 +290,17 @@ compBackgroundPrimary: ResourceColor
 
 CompBackgroundPrimary color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundPrimary: ResourceColor--><!--Device-Colors-compBackgroundPrimary: ResourceColor-End-->
 
@@ -264,13 +314,17 @@ compBackgroundPrimaryContrary: ResourceColor
 
 CompBackgroundPrimaryContrary color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundPrimaryContrary: ResourceColor--><!--Device-Colors-compBackgroundPrimaryContrary: ResourceColor-End-->
 
@@ -284,13 +338,17 @@ compBackgroundPrimaryTran: ResourceColor
 
 CompBackgroundPrimaryTran color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundPrimaryTran: ResourceColor--><!--Device-Colors-compBackgroundPrimaryTran: ResourceColor-End-->
 
@@ -304,13 +362,17 @@ compBackgroundSecondary: ResourceColor
 
 10% black universal control background.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundSecondary: ResourceColor--><!--Device-Colors-compBackgroundSecondary: ResourceColor-End-->
 
@@ -324,13 +386,17 @@ compBackgroundTertiary: ResourceColor
 
 5% black universal control background.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compBackgroundTertiary: ResourceColor--><!--Device-Colors-compBackgroundTertiary: ResourceColor-End-->
 
@@ -344,13 +410,17 @@ compCommonContrary: ResourceColor
 
 CompCommonContrary Color
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compCommonContrary: ResourceColor--><!--Device-Colors-compCommonContrary: ResourceColor-End-->
 
@@ -364,13 +434,17 @@ compDivider: ResourceColor
 
 Universal Division Line Color
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compDivider: ResourceColor--><!--Device-Colors-compDivider: ResourceColor-End-->
 
@@ -384,13 +458,17 @@ compEmphasizeSecondary: ResourceColor
 
 20% High gloss brand background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compEmphasizeSecondary: ResourceColor--><!--Device-Colors-compEmphasizeSecondary: ResourceColor-End-->
 
@@ -404,13 +482,17 @@ compEmphasizeTertiary: ResourceColor
 
 10% High gloss brand background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compEmphasizeTertiary: ResourceColor--><!--Device-Colors-compEmphasizeTertiary: ResourceColor-End-->
 
@@ -424,13 +506,17 @@ compFocusedPrimary: ResourceColor
 
 CompFocusedPrimary Color
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compFocusedPrimary: ResourceColor--><!--Device-Colors-compFocusedPrimary: ResourceColor-End-->
 
@@ -444,13 +530,17 @@ compFocusedSecondary: ResourceColor
 
 CompFocusedSecondary Color
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compFocusedSecondary: ResourceColor--><!--Device-Colors-compFocusedSecondary: ResourceColor-End-->
 
@@ -464,13 +554,17 @@ compFocusedTertiary: ResourceColor
 
 CompFocusedTertiary Color
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compFocusedTertiary: ResourceColor--><!--Device-Colors-compFocusedTertiary: ResourceColor-End-->
 
@@ -484,13 +578,17 @@ compForegroundPrimary: ResourceColor
 
 CompForegroundPrimary color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-compForegroundPrimary: ResourceColor--><!--Device-Colors-compForegroundPrimary: ResourceColor-End-->
 
@@ -504,13 +602,17 @@ confirm: ResourceColor
 
 System confirm Color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-confirm: ResourceColor--><!--Device-Colors-confirm: ResourceColor-End-->
 
@@ -524,13 +626,17 @@ container?: ResourceColor
 
 System container Color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Colors-container?: ResourceColor--><!--Device-Colors-container?: ResourceColor-End-->
 
@@ -544,13 +650,17 @@ fontEmphasize: ResourceColor
 
 Emphasize text color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontEmphasize: ResourceColor--><!--Device-Colors-fontEmphasize: ResourceColor-End-->
 
@@ -564,13 +674,17 @@ fontFourth: ResourceColor
 
 Fourth text color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontFourth: ResourceColor--><!--Device-Colors-fontFourth: ResourceColor-End-->
 
@@ -584,13 +698,17 @@ fontOnFourth: ResourceColor
 
 Fourth level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontOnFourth: ResourceColor--><!--Device-Colors-fontOnFourth: ResourceColor-End-->
 
@@ -604,13 +722,17 @@ fontOnPrimary: ResourceColor
 
 First level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontOnPrimary: ResourceColor--><!--Device-Colors-fontOnPrimary: ResourceColor-End-->
 
@@ -624,13 +746,17 @@ fontOnSecondary: ResourceColor
 
 Secondary level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontOnSecondary: ResourceColor--><!--Device-Colors-fontOnSecondary: ResourceColor-End-->
 
@@ -644,13 +770,17 @@ fontOnTertiary: ResourceColor
 
 Tertiary level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontOnTertiary: ResourceColor--><!--Device-Colors-fontOnTertiary: ResourceColor-End-->
 
@@ -664,13 +794,17 @@ fontPrimary: ResourceColor
 
 First level text color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontPrimary: ResourceColor--><!--Device-Colors-fontPrimary: ResourceColor-End-->
 
@@ -684,13 +818,17 @@ fontSecondary: ResourceColor
 
 Secondary text color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontSecondary: ResourceColor--><!--Device-Colors-fontSecondary: ResourceColor-End-->
 
@@ -702,15 +840,19 @@ Secondary text color.
 fontTertiary: ResourceColor
 ```
 
-tertiary text color.
+Tertiary text color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-fontTertiary: ResourceColor--><!--Device-Colors-fontTertiary: ResourceColor-End-->
 
@@ -724,13 +866,17 @@ iconEmphasize: ResourceColor
 
 Emphasize level icon color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconEmphasize: ResourceColor--><!--Device-Colors-iconEmphasize: ResourceColor-End-->
 
@@ -744,13 +890,17 @@ iconFourth: ResourceColor
 
 Fourth level icon color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconFourth: ResourceColor--><!--Device-Colors-iconFourth: ResourceColor-End-->
 
@@ -764,13 +914,17 @@ iconOnFourth: ResourceColor
 
 Fourth level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconOnFourth: ResourceColor--><!--Device-Colors-iconOnFourth: ResourceColor-End-->
 
@@ -784,13 +938,17 @@ iconOnPrimary: ResourceColor
 
 First level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconOnPrimary: ResourceColor--><!--Device-Colors-iconOnPrimary: ResourceColor-End-->
 
@@ -804,13 +962,17 @@ iconOnSecondary: ResourceColor
 
 Secondary level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconOnSecondary: ResourceColor--><!--Device-Colors-iconOnSecondary: ResourceColor-End-->
 
@@ -824,13 +986,17 @@ iconOnTertiary: ResourceColor
 
 Tertiary level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconOnTertiary: ResourceColor--><!--Device-Colors-iconOnTertiary: ResourceColor-End-->
 
@@ -844,13 +1010,17 @@ iconPrimary: ResourceColor
 
 First level icon color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconPrimary: ResourceColor--><!--Device-Colors-iconPrimary: ResourceColor-End-->
 
@@ -864,13 +1034,17 @@ iconSecondary: ResourceColor
 
 Secondary level icon color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconSecondary: ResourceColor--><!--Device-Colors-iconSecondary: ResourceColor-End-->
 
@@ -884,13 +1058,17 @@ iconSubEmphasize: ResourceColor
 
 Secondary emphasize level icon color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconSubEmphasize: ResourceColor--><!--Device-Colors-iconSubEmphasize: ResourceColor-End-->
 
@@ -904,13 +1082,17 @@ iconTertiary: ResourceColor
 
 Tertiary level icon color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-iconTertiary: ResourceColor--><!--Device-Colors-iconTertiary: ResourceColor-End-->
 
@@ -922,15 +1104,19 @@ Tertiary level icon color.
 interactiveActive: ResourceColor
 ```
 
-Active interactive color
+Active interactive color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-interactiveActive: ResourceColor--><!--Device-Colors-interactiveActive: ResourceColor-End-->
 
@@ -942,15 +1128,19 @@ Active interactive color
 interactiveClick: ResourceColor
 ```
 
-Click interactive color
+Click interactive color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-interactiveClick: ResourceColor--><!--Device-Colors-interactiveClick: ResourceColor-End-->
 
@@ -962,15 +1152,19 @@ Click interactive color
 interactiveFocus: ResourceColor
 ```
 
-Focus interactive color
+Focus interactive color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-interactiveFocus: ResourceColor--><!--Device-Colors-interactiveFocus: ResourceColor-End-->
 
@@ -982,15 +1176,19 @@ Focus interactive color
 interactiveHover: ResourceColor
 ```
 
-Hover interactive color
+Hover interactive color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-interactiveHover: ResourceColor--><!--Device-Colors-interactiveHover: ResourceColor-End-->
 
@@ -1002,15 +1200,19 @@ Hover interactive color
 interactivePressed: ResourceColor
 ```
 
-Pressed interactive color
+Pressed interactive color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-interactivePressed: ResourceColor--><!--Device-Colors-interactivePressed: ResourceColor-End-->
 
@@ -1022,15 +1224,19 @@ Pressed interactive color
 interactiveSelect: ResourceColor
 ```
 
-Select interactive color
+Select interactive color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-interactiveSelect: ResourceColor--><!--Device-Colors-interactiveSelect: ResourceColor-End-->
 
@@ -1044,13 +1250,17 @@ onPrimary?: ResourceColor
 
 System onPrimary Color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Colors-onPrimary?: ResourceColor--><!--Device-Colors-onPrimary?: ResourceColor-End-->
 
@@ -1064,13 +1274,17 @@ primary?: ResourceColor
 
 System primary Color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Colors-primary?: ResourceColor--><!--Device-Colors-primary?: ResourceColor-End-->
 
@@ -1084,13 +1298,17 @@ warning: ResourceColor
 
 System warning Color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Colors-warning: ResourceColor--><!--Device-Colors-warning: ResourceColor-End-->
 

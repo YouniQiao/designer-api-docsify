@@ -1,14 +1,14 @@
 # HeifsMetadata
 
-HeifsMetadata implements Metadata
-
-HEIF image sequence metadata.
+HeifsMetadata implements Metadata HEIF image sequence metadata.
 
 **Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **Since:** 23
 
-<!--Device-image-class HeifsMetadata implements Metadata--><!--Device-image-class HeifsMetadata implements Metadata-End-->
+**Deprecated since:** -1
+
+<!--Device-image-class HeifsMetadata--><!--Device-image-class HeifsMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -27,6 +27,8 @@ clone(): Promise<HeifsMetadata>
 Clones the HEIFS metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +52,8 @@ Creates an empty [HeifsMetadata](#HeifsMetadata) instance.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeifsMetadata-static createInstance(): HeifsMetadata--><!--Device-HeifsMetadata-static createInstance(): HeifsMetadata-End-->
@@ -68,12 +72,11 @@ Creates an empty [HeifsMetadata](#HeifsMetadata) instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
-
-For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,7 +88,7 @@ For details about the properties, see
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 ## getBlob
 
@@ -96,6 +99,8 @@ getBlob(): Promise<ArrayBuffer>
 Obtains the metadata in binary format. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,6 +124,8 @@ Obtains the property values of image metadata. This API returns the result async
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
@@ -135,13 +142,13 @@ Obtains the property values of image metadata. This API returns the result async
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## setBlob
 
@@ -152,6 +159,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 Replaces the current metadata with binary data. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,7 +184,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## setProperties
 
@@ -183,12 +192,11 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
-
-For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,7 +208,7 @@ For details about the properties, see
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; | Yes |
+| records | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string \| null & gt; | Yes |
 
 **Return value:**
 
@@ -212,7 +220,7 @@ For details about the properties, see
 
 | Error Code ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## heifsCanvasHeight
 
@@ -225,6 +233,8 @@ Canvas height.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,6 +254,8 @@ Canvas width.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int--><!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int-End-->
@@ -262,6 +274,8 @@ Playback duration of each frame in an HEIF image sequence, in ms.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeifsMetadata-readonly heifsDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsDelayTime?: int-End-->
@@ -279,6 +293,8 @@ Unclamped delay of each frame in ms.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

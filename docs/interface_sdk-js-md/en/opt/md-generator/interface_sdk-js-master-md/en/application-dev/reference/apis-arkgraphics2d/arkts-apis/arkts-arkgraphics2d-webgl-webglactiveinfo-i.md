@@ -4,6 +4,8 @@ WebGL 1.0
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface WebGLActiveInfo--><!--Device-unnamed-interface WebGLActiveInfo-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -19,6 +21,8 @@ Name of the attribute
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -38,6 +42,8 @@ Size of the attribute
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLActiveInfo-readonly size: GLint--><!--Device-WebGLActiveInfo-readonly size: GLint-End-->
@@ -55,6 +61,8 @@ Type of the attribute
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

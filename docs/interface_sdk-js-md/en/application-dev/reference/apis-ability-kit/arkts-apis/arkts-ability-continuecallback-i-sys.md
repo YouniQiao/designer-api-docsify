@@ -2,9 +2,11 @@
 
 ContinueCallback registered for notify continue result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ContinueCallback--><!--Device-unnamed-export interface ContinueCallback-End-->
 
@@ -20,9 +22,13 @@ onContinueDone: OnContinueDoneCallback
 
 Called by system when continue mission done.
 
-**Since:** 9
+**Type:** [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

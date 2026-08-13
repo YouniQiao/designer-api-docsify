@@ -1,15 +1,17 @@
 # ExtraInfo
 
 ```TypeScript
-type ExtraInfo = {[key: string]: Object; }
+type ExtraInfo = Record<string, Object>
 ```
 
 The extra info object.
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-avSession-type ExtraInfo = {[key: string]: Object; }--><!--Device-avSession-type ExtraInfo = {[key: string]: Object; }-End-->
+**Deprecated since:** -1
+
+<!--Device-avSession-type ExtraInfo = Record<string, Object>--><!--Device-avSession-type ExtraInfo = Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-**Property type:** {[key: string]: Object; }
+**Property type:** Record<string, Object>

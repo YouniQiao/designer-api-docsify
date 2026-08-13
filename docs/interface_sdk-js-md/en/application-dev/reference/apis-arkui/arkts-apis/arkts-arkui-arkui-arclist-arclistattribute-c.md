@@ -1,14 +1,16 @@
 # ArcListAttribute
 
-In addition to the [universal attributes](common), the following attributes are supported.
+In addition to the universal attributes, the following attributes are supported.
 
-**Inheritance/Implementation:** ArcListAttribute extends [CommonMethod<ArcListAttribute>](CommonMethod<ArcListAttribute>)
+**Inheritance/Implementation:** ArcListAttribute extends CommonMethod<ArcListAttribute>
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-export declare class ArcListAttribute extends CommonMethod<ArcListAttribute>--><!--Device-unnamed-export declare class ArcListAttribute extends CommonMethod<ArcListAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class ArcListAttribute--><!--Device-unnamed-export declare class ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -24,12 +26,13 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@k
 cachedCount(count: Optional<number>): ArcListAttribute
 ```
 
-Sets the number of arc list items to be preloaded (cached). In a lazy loading scenario,only the content equivalent to **cachedCount** outside the visible area of the arc list is preloaded. In a non-lazy loading scenario, all items are loaded at once. For both lazy and non-lazy loading, only the content within the visible area of the arc list plus the content equivalent to **cachedCount** outside the visible area is laid out.When **cachedCount** is set for the arc list, the system preloads and lays out the  
-**cachedCount**-specified number of rows of arc list items both above and below the currently visible area of the arc list.
+Sets the number of arc list items to be preloaded (cached). In a lazy loading scenario, only the content equivalent to **cachedCount** outside the visible area of the arc list is preloaded. In a non-lazy loading scenario, all items are loaded at once. For both lazy and non-lazy loading, only the content within the visible area of the arc list plus the content equivalent to **cachedCount** outside the visible area is laid out. When **cachedCount** is set for the arc list, the system preloads and lays out the **cachedCount**-specified number of rows of arc list items both above and below the currently visible area of the arc list.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -47,7 +50,7 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## chainAnimation
 
@@ -55,11 +58,13 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 chainAnimation(enable: Optional<boolean>): ArcListAttribute
 ```
 
-Sets whether to enable chained animations, which provide a visually connected, or"chained," effect when the **ArcList** component is scrolled or its top or bottom edge is dragged.The list items are separated with even space, and one item animation starts after the previous animation during basic sliding interactions. The chained animation effect is similar with spring physics.For chained animations to work properly, the edge scrolling effect of the **ArcList**component must be set to **EdgeEffect.Spring**.
+Sets whether to enable chained animations, which provide a visually connected, or "chained," effect when the **ArcList** component is scrolled or its top or bottom edge is dragged. The list items are separated with even space, and one item animation starts after the previous animation during basic sliding interactions. The chained animation effect is similar with spring physics. For chained animations to work properly, the edge scrolling effect of the **ArcList** component must be set to **EdgeEffect.Spring**.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -77,7 +82,7 @@ Sets whether to enable chained animations, which provide a visually connected, o
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## childrenMainSize
 
@@ -90,6 +95,8 @@ Sets the size information of the child components of the **ArcList** component a
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -107,7 +114,7 @@ Sets the size information of the child components of the **ArcList** component a
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## digitalCrownSensitivity
 
@@ -120,6 +127,8 @@ Sets the sensitivity of the digital crown's event response.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -137,7 +146,7 @@ Sets the sensitivity of the digital crown's event response.
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## enableScrollInteraction
 
@@ -150,6 +159,8 @@ Sets whether to enable scroll gestures.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -167,7 +178,7 @@ Sets whether to enable scroll gestures.
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## fadingEdge
 
@@ -180,6 +191,8 @@ Sets whether to enable the edge fading effect.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -197,7 +210,7 @@ Sets whether to enable the edge fading effect.
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## flingSpeedLimit
 
@@ -210,6 +223,8 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -227,7 +242,7 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## friction
 
@@ -240,6 +255,8 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -257,7 +274,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onDidScroll
 
@@ -270,6 +287,8 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -287,7 +306,7 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onReachEnd
 
@@ -295,11 +314,13 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list reaches the end position.If the edge scrolling effect is set to spring, this event is triggered when scrolling past the end position and again when bouncing back to it.
+Triggered when the list reaches the end position. If the edge scrolling effect is set to spring, this event is triggered when scrolling past the end position and again when bouncing back to it.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -317,7 +338,7 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onReachStart
 
@@ -325,12 +346,13 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list reaches the start position.This event is triggered during initialization of the **ArcList** component if  
-**initialIndex** is set to **0**, and whenever the list scrolls to the start position.If the edge scrolling effect is set to spring, this event is triggered when scrolling past the start position and again when bouncing back to it.
+Triggered when the list reaches the start position. This event is triggered during initialization of the **ArcList** component if **initialIndex** is set to **0**, and whenever the list scrolls to the start position. If the edge scrolling effect is set to spring, this event is triggered when scrolling past the start position and again when bouncing back to it.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -348,7 +370,7 @@ Triggered when the list reaches the start position.This event is triggered durin
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollIndex
 
@@ -356,11 +378,13 @@ Triggered when the list reaches the start position.This event is triggered durin
 onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 ```
 
-Triggered when a child component enters or leaves the visible area of the **ArcList**component. This event is triggered during initialization of the **ArcList** component and when the index of the first or last child component in the visible area changes, or when the center child component changes.If the edge scrolling effect of the **ArcList** component is set to spring, this event is not triggered during continued scrolling at the edge or during the bounce-back process.
+Triggered when a child component enters or leaves the visible area of the **ArcList** component. This event is triggered during initialization of the **ArcList** component and when the index of the first or last child component in the visible area changes, or when the center child component changes. If the edge scrolling effect of the **ArcList** component is set to spring, this event is not triggered during continued scrolling at the edge or during the bounce-back process.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -378,7 +402,7 @@ Triggered when a child component enters or leaves the visible area of the **ArcL
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollStart
 
@@ -391,6 +415,8 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -408,7 +434,7 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollStop
 
@@ -416,12 +442,13 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list stops scrolling after the user's finger leaves the screen.This event is also triggered when the animation contained in the scrolling triggered by  
-**Scroller** stops.
+Triggered when the list stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by **Scroller** stops.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -439,7 +466,7 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onWillScroll
 
@@ -452,6 +479,8 @@ Triggered before each frame during list scrolling. The callback returns the offs
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -469,7 +498,7 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBar
 
@@ -482,6 +511,8 @@ Sets the state of the scrollbar.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -499,7 +530,7 @@ Sets the state of the scrollbar.
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBarColor
 
@@ -513,6 +544,8 @@ Sets the color of the scrollbar.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute-End-->
@@ -523,13 +556,13 @@ Sets the color of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.&lt;br/&gt; Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.&lt;br/&gt; Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBarWidth
 
@@ -543,6 +576,8 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute-End-->
@@ -553,13 +588,13 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.&lt;br/&gt; Default value: **LengthMetrics.vp(24)**.&lt;br/&gt;Minimum value: **LengthMetrics.vp(4)**&lt;br&gt;Unit: vp |
+| width | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.&lt;br/&gt; Default value: **LengthMetrics.vp(24)**.&lt;br/&gt;Minimum value: **LengthMetrics.vp(4)**&lt;br&gt;Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## space
 
@@ -573,6 +608,8 @@ Sets the spacing between list items.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-space(space: Optional<LengthMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-space(space: Optional<LengthMetrics>): ArcListAttribute-End-->
@@ -583,11 +620,11 @@ Sets the spacing between list items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.&lt;br/&gt; Default value: **LengthMetrics.vp(0)**.&lt;br/&gt;Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
+| space | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.&lt;br/&gt; Default value: **LengthMetrics.vp(0)**.&lt;br/&gt;Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 

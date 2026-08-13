@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Value](ohos.data.distributedKVStore.Value)
+**替代接口：** Value
 
 <!--Device-distributedData-interface Value--><!--Device-distributedData-interface Value-End-->
 
@@ -26,7 +26,7 @@ type: ValueType
 
 **废弃版本：** 9
 
-**替代接口：** [type](ohos.data.distributedKVStore.Value#type)
+**替代接口：** type
 
 <!--Device-Value-type: ValueType--><!--Device-Value-type: ValueType-End-->
 
@@ -46,7 +46,7 @@ value: Uint8Array | string | number | boolean
 
 **废弃版本：** 9
 
-**替代接口：** [value](ohos.data.distributedKVStore.Value#value)
+**替代接口：** value
 
 <!--Device-Value-value: Uint8Array | string | number | boolean--><!--Device-Value-value: Uint8Array | string | number | boolean-End-->
 

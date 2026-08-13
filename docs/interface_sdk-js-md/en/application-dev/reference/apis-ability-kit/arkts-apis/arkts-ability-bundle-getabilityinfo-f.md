@@ -12,9 +12,7 @@ import { bundle } from '@kit.AbilityKit';
 function getAbilityInfo(bundleName: string, abilityName: string, callback: AsyncCallback<AbilityInfo>): void
 ```
 
-Obtains the ability information based on a given bundle name and ability name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the ability information based on a given bundle name and ability name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -34,7 +32,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Callback used to return the ability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Callback used to return the ability information. |
 
 
 ## getAbilityInfo
@@ -43,9 +41,7 @@ No permission is required for obtaining the caller's own information.
 function getAbilityInfo(bundleName: string, abilityName: string): Promise<AbilityInfo>
 ```
 
-Obtains the ability information based on a given bundle name and ability name. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the ability information based on a given bundle name and ability name. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 

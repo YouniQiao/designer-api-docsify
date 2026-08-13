@@ -28,7 +28,7 @@ Countdown reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [REMINDER_TYPE_TIMER](reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER)
+**Substitutes:** REMINDER_TYPE_TIMER
 
 <!--Device-ReminderType-REMINDER_TYPE_TIMER = 0--><!--Device-ReminderType-REMINDER_TYPE_TIMER = 0-End-->
 
@@ -48,7 +48,7 @@ Calendar reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [REMINDER_TYPE_CALENDAR](reminderAgentManager.ReminderType.REMINDER_TYPE_CALENDAR)
+**Substitutes:** REMINDER_TYPE_CALENDAR
 
 <!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1--><!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1-End-->
 
@@ -68,7 +68,7 @@ Alarm reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [REMINDER_TYPE_ALARM](reminderAgentManager.ReminderType.REMINDER_TYPE_ALARM)
+**Substitutes:** REMINDER_TYPE_ALARM
 
 <!--Device-ReminderType-REMINDER_TYPE_ALARM = 2--><!--Device-ReminderType-REMINDER_TYPE_ALARM = 2-End-->
 

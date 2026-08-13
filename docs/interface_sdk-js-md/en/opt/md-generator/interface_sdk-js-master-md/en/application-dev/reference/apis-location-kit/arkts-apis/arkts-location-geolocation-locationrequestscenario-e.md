@@ -6,7 +6,7 @@ Enum for location scenario
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequestScenario](ohos.geoLocationManager/geoLocationManager.LocationRequestScenario)
+**Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md#LocationRequestScenario)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -24,7 +24,7 @@ UNSET = 0x300
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNSET](ohos.geoLocationManager/geoLocationManager.LocationRequestScenario#UNSET)
+**Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#UNSET)
 
 <!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 
@@ -40,7 +40,7 @@ NAVIGATION
 
 **Deprecated since:** 9
 
-**Substitutes:** [NAVIGATION](ohos.geoLocationManager/geoLocationManager.LocationRequestScenario#NAVIGATION)
+**Substitutes:** [NAVIGATION](arkts-location-geolocationmanager-locationrequestscenario-e.md#NAVIGATION)
 
 <!--Device-LocationRequestScenario-NAVIGATION--><!--Device-LocationRequestScenario-NAVIGATION-End-->
 
@@ -56,7 +56,7 @@ TRAJECTORY_TRACKING
 
 **Deprecated since:** 9
 
-**Substitutes:** [TRAJECTORY_TRACKING](ohos.geoLocationManager/geoLocationManager.LocationRequestScenario#TRAJECTORY_TRACKING)
+**Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#TRAJECTORY_TRACKING)
 
 <!--Device-LocationRequestScenario-TRAJECTORY_TRACKING--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING-End-->
 
@@ -72,7 +72,7 @@ CAR_HAILING
 
 **Deprecated since:** 9
 
-**Substitutes:** [CAR_HAILING](ohos.geoLocationManager/geoLocationManager.LocationRequestScenario#CAR_HAILING)
+**Substitutes:** [CAR_HAILING](arkts-location-geolocationmanager-locationrequestscenario-e.md#CAR_HAILING)
 
 <!--Device-LocationRequestScenario-CAR_HAILING--><!--Device-LocationRequestScenario-CAR_HAILING-End-->
 
@@ -88,7 +88,7 @@ DAILY_LIFE_SERVICE
 
 **Deprecated since:** 9
 
-**Substitutes:** [DAILY_LIFE_SERVICE](ohos.geoLocationManager/geoLocationManager.LocationRequestScenario#DAILY_LIFE_SERVICE)
+**Substitutes:** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#DAILY_LIFE_SERVICE)
 
 <!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE-End-->
 
@@ -104,7 +104,7 @@ NO_POWER
 
 **Deprecated since:** 9
 
-**Substitutes:** [NO_POWER](ohos.geoLocationManager/geoLocationManager.LocationRequestScenario#NO_POWER)
+**Substitutes:** [NO_POWER](arkts-location-geolocationmanager-locationrequestscenario-e.md#NO_POWER)
 
 <!--Device-LocationRequestScenario-NO_POWER--><!--Device-LocationRequestScenario-NO_POWER-End-->
 

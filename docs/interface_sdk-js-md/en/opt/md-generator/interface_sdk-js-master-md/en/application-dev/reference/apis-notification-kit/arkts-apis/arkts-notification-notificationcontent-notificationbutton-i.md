@@ -1,12 +1,10 @@
 # NotificationButton
 
-Describes the notification button, which is used to display an interactive button in the live view.
+Describes the notification button, which is used to display an interactive button in the live view. > **NOTE：**> > The actual display effect depends on the device capabilities and the notification center UI style.
 
-> **NOTE：**
-> 
-> The actual display effect depends on the device capabilities and the notification center UI style.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationButton--><!--Device-unnamed-export interface NotificationButton-End-->
 
@@ -22,7 +20,9 @@ List of button icons, corresponding one-to-one with **names**, with each icon di
 
 **Type:** Array&lt;image.PixelMap&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationButton-icons?: Array<image.PixelMap>--><!--Device-NotificationButton-icons?: Array<image.PixelMap>-End-->
 
@@ -34,11 +34,13 @@ List of button icons, corresponding one-to-one with **names**, with each icon di
 iconsResource?: Array<Resource>
 ```
 
-List of button icon resources, corresponding one-to-one with **names** via Resource references. A maximum of 3resources is supported. The value defaults to empty. This parameter is mutually exclusive with **icons**; only one of them can be used.
+List of button icon resources, corresponding one-to-one with **names** via Resource references. A maximum of 3 resources is supported. The value defaults to empty. This parameter is mutually exclusive with **icons**; only one of them can be used.
 
 **Type:** Array&lt;[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationButton-iconsResource?: Array<Resource>--><!--Device-NotificationButton-iconsResource?: Array<Resource>-End-->
 
@@ -50,11 +52,13 @@ List of button icon resources, corresponding one-to-one with **names** via Resou
 names?: Array<string>
 ```
 
-List of button names. Each name corresponds to the text displayed on a notification button. A maximum of 3buttons is supported. The size of each name does not exceed 202 bytes, and the excess part will be truncated.The value defaults to empty.
+List of button names. Each name corresponds to the text displayed on a notification button. A maximum of 3 buttons is supported. The size of each name does not exceed 202 bytes, and the excess part will be truncated. The value defaults to empty.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationButton-names?: Array<string>--><!--Device-NotificationButton-names?: Array<string>-End-->
 

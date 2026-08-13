@@ -1,10 +1,10 @@
 # CameraInput
 
-相机设备输入对象。
+相机设备输入对象。 会话中[Session](arkts-camera-camera-session-i.md#Session)使用的相机信息。
 
-会话中[Session](arkts-camera-camera-session-i.md#Session)使用的相机信息。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-camera-interface CameraInput--><!--Device-camera-interface CameraInput-End-->
 
@@ -18,7 +18,9 @@ closeDelayed(time: number): Promise<void>
 
 Delay close camera.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraInput-closeDelayed(time: int): Promise<void>--><!--Device-CameraInput-closeDelayed(time: int): Promise<void>-End-->
 
@@ -42,9 +44,9 @@ Delay close camera.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## controlAuxiliary
 
@@ -54,7 +56,9 @@ controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus)
 
 Control auxiliary.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraInput-controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus): Promise<void>--><!--Device-CameraInput-controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus): Promise<void>-End-->
 
@@ -79,9 +83,75 @@ Control auxiliary.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_cameraOcclusionDetection
+
+```TypeScript
+off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
+```
+
+注销监听CameraInput的镜头遮挡或脏污事件。使用callback异步回调。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'cameraOcclusionDetection' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_cameraOcclusionDetection
+
+```TypeScript
+on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void
+```
+
+监听CameraInput的镜头遮挡或脏污事件，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'cameraOcclusionDetection' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## usedAsPosition
 
@@ -91,7 +161,9 @@ usedAsPosition(position: CameraPosition): void
 
 Sets the camera to be used as a camera at the specified position.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraInput-usedAsPosition(position: CameraPosition): void--><!--Device-CameraInput-usedAsPosition(position: CameraPosition): void-End-->
 
@@ -109,6 +181,6 @@ Sets the camera to be used as a camera at the specified position.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

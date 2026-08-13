@@ -18,5 +18,5 @@
 
 | 名称 |
 | --- |
-| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayout) |
-| [DynamicLayoutInstance](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayoutinstance) |
+| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#DynamicLayout) |
+| [DynamicLayoutInstance](arkts-arkui-arkui-components-arkdynamiclayout-con.md#DynamicLayoutInstance) |

@@ -1,10 +1,12 @@
 # HashMap
 
-HashMap is a map implemented based on the array, linked list, and red-black tree. It provides efficient data query, insertion,and removal. The elements in a HashMap instance are mappings of key-value pairs. Each key must be unique and have only one value.
+HashMap is a map implemented based on the array, linked list, and red-black tree. It provides efficient data query, insertion, and removal. The elements in a HashMap instance are mappings of key-value pairs. Each key must be unique and have only one value.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class HashMap<K, V>--><!--Device-unnamed-declare class HashMap<K, V>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class HashMap--><!--Device-unnamed-declare class HashMap-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 ```TypeScript
 import { HashMap } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<[K, V]>
+```
+
+Obtains an iterator, each item of which is a JavaScript object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-HashMap-$_iterator(): IterableIterator<[K, V]>--><!--Device-HashMap-$_iterator(): IterableIterator<[K, V]>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
@@ -34,13 +62,13 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -93,7 +121,9 @@ clear(): void
 
 Clears this HashMap and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,7 +135,7 @@ Clears this HashMap and sets its length to **0**.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -126,7 +156,9 @@ constructor()
 
 A constructor used to create a **HashMap** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -138,7 +170,7 @@ A constructor used to create a **HashMap** instance.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -154,7 +186,9 @@ entries(): IterableIterator<[K, V]>
 
 Returns an iterator that contains all the elements in this HashMap.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -166,13 +200,13 @@ Returns an iterator that contains all the elements in this HashMap.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -211,6 +245,8 @@ Uses a callback to traverse each element.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void--><!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void-End-->
@@ -228,7 +264,7 @@ Uses a callback to traverse each element.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -255,6 +291,30 @@ for(let i = 0; i < 10; i++) {
 }
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: HashMapCbFn<K, V>): void
+```
+
+Uses a callback to traverse the elements in this container and obtain their position indexes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-HashMap-forEach(callbackFn: HashMapCbFn<K, V>): void--><!--Device-HashMap-forEach(callbackFn: HashMapCbFn<K, V>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | Yes |
+
 ## get
 
 ```TypeScript
@@ -264,6 +324,8 @@ get(key: K): V
 Obtains the value of the specified key in this HashMap. If nothing is obtained, **undefined** is returned.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -287,7 +349,7 @@ Obtains the value of the specified key in this HashMap. If nothing is obtained, 
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -299,6 +361,36 @@ let result = hashMap.get("sparrow");
 console.info("result:", result);  // result: 356
 ```
 
+## get
+
+```TypeScript
+get(key: K): V | undefined
+```
+
+Obtains the value of the specified key in this container. If nothing is obtained, undefined is returned.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-HashMap-get(key: K): V | undefined--><!--Device-HashMap-get(key: K): V | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
+
 ## hasKey
 
 ```TypeScript
@@ -307,7 +399,9 @@ hasKey(key: K): boolean
 
 Checks whether this HashMap has the specified key.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -331,7 +425,7 @@ Checks whether this HashMap has the specified key.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -350,7 +444,9 @@ hasValue(value: V): boolean
 
 Checks whether this HashMap has the specified value.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -374,7 +470,7 @@ Checks whether this HashMap has the specified value.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -393,7 +489,9 @@ isEmpty(): boolean
 
 Checks whether this HashMap is empty (contains no element).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -411,7 +509,7 @@ Checks whether this HashMap is empty (contains no element).
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -429,7 +527,9 @@ keys(): IterableIterator<K>
 
 Returns an iterator that contains all the keys in this HashMap.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -441,13 +541,13 @@ Returns an iterator that contains all the keys in this HashMap.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -473,6 +573,8 @@ Removes an element with the specified key from this HashMap.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-remove(key: K): V--><!--Device-HashMap-remove(key: K): V-End-->
@@ -495,7 +597,7 @@ Removes an element with the specified key from this HashMap.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -507,6 +609,36 @@ let result = hashMap.remove("sparrow");
 console.info("result:", result);  // result: 356
 ```
 
+## remove
+
+```TypeScript
+remove(key: K): V | undefined
+```
+
+Removes an element with the specified key from this container.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-HashMap-remove(key: K): V | undefined--><!--Device-HashMap-remove(key: K): V | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
+
 ## replace
 
 ```TypeScript
@@ -515,7 +647,9 @@ replace(key: K, newValue: V): boolean
 
 Replaces the value of a specified key.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -540,7 +674,7 @@ Replaces the value of a specified key.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -559,7 +693,9 @@ set(key: K, value: V): Object
 
 Adds or updates an element in this HashMap.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -584,7 +720,7 @@ Adds or updates an element in this HashMap.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -602,7 +738,9 @@ setAll(map: HashMap<K, V>): void
 
 Adds all elements in a **HashMap** instance to this HashMap.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -620,7 +758,7 @@ Adds all elements in a **HashMap** instance to this HashMap.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -643,7 +781,9 @@ values(): IterableIterator<V>
 
 Returns an iterator that contains all the values in this HashMap.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -655,13 +795,13 @@ Returns an iterator that contains all the values in this HashMap.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -688,6 +828,8 @@ Number of elements in a HashMap.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

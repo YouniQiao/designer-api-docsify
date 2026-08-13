@@ -1,10 +1,12 @@
-# @ohos.multimodalAwareness.spatialAwareness(空间感知)
+# @ohos.multimodalAwareness.spatialAwareness
 
 本模块提供对测距的感知能力。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -21,10 +23,10 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md#offdistancemeasure) | 取消订阅测距接口。停止运行已订阅的测距算法。 |
-| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md#offindoororoutdooridentify) | 取消订阅门内外识别接口。停止运行已订阅的门内外识别算法。 |
-| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md#ondistancemeasure) | 订阅测距接口。触发测距算法执行，并返回测距结果。 |
-| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md#onindoororoutdooridentify) | 订阅门内外识别接口。触发门内外识别算法执行，并返回设备在门内还是门外的信息。 |
+| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md#offDistanceMeasure) | 取消订阅测距接口。停止运行已订阅的测距算法。 |
+| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md#offIndoorOrOutdoorIdentify) | 取消订阅门内外识别接口。停止运行已订阅的门内外识别算法。 |
+| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md#onDistanceMeasure) | 订阅测距接口。触发测距算法执行，并返回测距结果。 |
+| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md#onIndoorOrOutdoorIdentify) | 订阅门内外识别接口。触发门内外识别算法执行，并返回设备在门内还是门外的信息。 |
 <!--DelEnd-->
 
 <!--Del-->

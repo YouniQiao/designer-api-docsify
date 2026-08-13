@@ -1,10 +1,12 @@
 # HitTestValue
 
-Provides element information of the click area. related to [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) method.
+Provides the element information of the area being clicked. For the sample code, see [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest).
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface HitTestValue--><!--Device-webview-interface HitTestValue-End-->
 
@@ -22,13 +24,17 @@ import { webview } from '@kit.ArkWeb';
 extra: string
 ```
 
-Get the hit test extra data.If the clicked area is an image or a link, the additional parameter information is it's URL address.
+Extra information of the area being clicked. If the area being clicked is an image or a link, the extra information is the URL of the image or link.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HitTestValue-extra: string--><!--Device-HitTestValue-extra: string-End-->
 
@@ -40,13 +46,17 @@ Get the hit test extra data.If the clicked area is an image or a link, the addit
 type: WebHitTestType
 ```
 
-Get the hit test type.
+Element type of the area being clicked.
 
 **Type:** [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HitTestValue-type: WebHitTestType--><!--Device-HitTestValue-type: WebHitTestType-End-->
 

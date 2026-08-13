@@ -2,7 +2,9 @@
 
 Defines the onscreen content.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-onScreen-export interface PageContent--><!--Device-onScreen-export interface PageContent-End-->
 
@@ -26,7 +28,9 @@ Bundle name of the onscreen content.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-bundleName: string--><!--Device-PageContent-bundleName: string-End-->
 
@@ -40,12 +44,13 @@ Bundle name of the onscreen content.
 content?: string
 ```
 
-Body of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
-**True**.
+Body of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to **True**.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-content?: string--><!--Device-PageContent-content?: string-End-->
 
@@ -63,7 +68,9 @@ Page link of the onscreen content. This parameter is available only when **optio
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-pageLink?: string--><!--Device-PageContent-pageLink?: string-End-->
 
@@ -81,7 +88,9 @@ Paragraph information of the onscreen content. This parameter is available only 
 
 **Type:** Paragraph[]
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-paragraphs?: Paragraph[]--><!--Device-PageContent-paragraphs?: Paragraph[]-End-->
 
@@ -95,12 +104,13 @@ Paragraph information of the onscreen content. This parameter is available only 
 scenario?: Scenario
 ```
 
-Scenario of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
-**True**.
+Scenario of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to **True**.
 
 **Type:** [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-scenario?: Scenario--><!--Device-PageContent-scenario?: Scenario-End-->
 
@@ -118,7 +128,9 @@ Session ID, which identifies the call action.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-sessionId: long--><!--Device-PageContent-sessionId: long-End-->
 
@@ -132,12 +144,13 @@ Session ID, which identifies the call action.
 title?: string
 ```
 
-Title of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
-**True**.
+Title of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to **True**.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-title?: string--><!--Device-PageContent-title?: string-End-->
 
@@ -155,7 +168,9 @@ Window ID of the onscreen content.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PageContent-windowId: int--><!--Device-PageContent-windowId: int-End-->
 

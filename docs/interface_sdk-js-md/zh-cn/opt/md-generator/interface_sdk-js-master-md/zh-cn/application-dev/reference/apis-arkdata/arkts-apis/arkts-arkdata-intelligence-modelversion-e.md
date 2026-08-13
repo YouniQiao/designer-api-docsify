@@ -2,7 +2,9 @@
 
 模型版本枚举。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-intelligence-enum ModelVersion--><!--Device-intelligence-enum ModelVersion-End-->
 
@@ -16,7 +18,9 @@ BASIC_MODEL = 0
 
 基本嵌入模型版本。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModelVersion-BASIC_MODEL = 0--><!--Device-ModelVersion-BASIC_MODEL = 0-End-->
 

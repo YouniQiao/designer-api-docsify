@@ -2,9 +2,11 @@
 
 Enumerates the error code of the permission policy for the URI operation.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-fileShare-export enum PolicyErrorCode--><!--Device-fileShare-export enum PolicyErrorCode-End-->
 
@@ -18,9 +20,11 @@ PERSISTENCE_FORBIDDEN = 1
 
 Indicates that the policy is not allowed to be persisted.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1--><!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1-End-->
 
@@ -34,9 +38,11 @@ INVALID_MODE = 2
 
 Indicates that the mode of this policy is invalid.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolicyErrorCode-INVALID_MODE = 2--><!--Device-PolicyErrorCode-INVALID_MODE = 2-End-->
 
@@ -50,9 +56,11 @@ INVALID_PATH = 3
 
 Indicates that the path of this policy is invalid.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolicyErrorCode-INVALID_PATH = 3--><!--Device-PolicyErrorCode-INVALID_PATH = 3-End-->
 
@@ -66,9 +74,11 @@ PERMISSION_NOT_PERSISTED = 4
 
 Indicates that the permission is not persistent.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4--><!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4-End-->
 

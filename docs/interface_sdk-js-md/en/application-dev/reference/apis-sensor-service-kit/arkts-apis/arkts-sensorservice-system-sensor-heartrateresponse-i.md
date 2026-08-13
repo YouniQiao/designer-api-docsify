@@ -8,7 +8,7 @@ Defines a **HeartRateResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [HeartRateResponse](ohos.sensor/sensor#HeartRateResponse)
+**Substitutes:** [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md#HeartRateResponse)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -38,7 +38,7 @@ Heart rate.
 
 **Deprecated since:** 8
 
-**Substitutes:** [heartRate](ohos.sensor/sensor#HeartRateResponse.heartRate)
+**Substitutes:** [heartRate](arkts-sensorservice-sensor-heartrateresponse-i.md#heartRate)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 

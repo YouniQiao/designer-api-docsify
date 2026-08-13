@@ -4,6 +4,8 @@ Enum type supplied to [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum JsMessageType--><!--Device-webview-enum JsMessageType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NOT_SUPPORT = 0
 Unsupported data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ The string data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsMessageType-STRING = 1--><!--Device-JsMessageType-STRING = 1-End-->
@@ -49,6 +55,8 @@ NUMBER = 2
 The number data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ The boolean data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsMessageType-BOOLEAN = 3--><!--Device-JsMessageType-BOOLEAN = 3-End-->
@@ -82,6 +92,8 @@ The arraybuffer data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsMessageType-ARRAY_BUFFER = 4--><!--Device-JsMessageType-ARRAY_BUFFER = 4-End-->
@@ -97,6 +109,8 @@ ARRAY = 5
 The array data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

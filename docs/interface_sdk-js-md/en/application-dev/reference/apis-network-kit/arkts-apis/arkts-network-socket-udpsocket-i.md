@@ -6,6 +6,8 @@ Defines a UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface UDPSocket--><!--Device-socket-export interface UDPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,6 +30,8 @@ Binds the IP address and port number. The port number can be specified or random
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
@@ -38,15 +42,15 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. [NetAddress](NetAddress) |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of bind. |
+| address | NetAddress | Yes | Destination address. NetAddress |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of bind. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -80,6 +84,8 @@ Binds the IP address and port number. The port number can be specified or random
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-bind(address: NetAddress): Promise<void>--><!--Device-UDPSocket-bind(address: NetAddress): Promise<void>-End-->
@@ -90,7 +96,7 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. [NetAddress](NetAddress) |
+| address | NetAddress | Yes | Destination address. NetAddress |
 
 **Return value:**
 
@@ -102,8 +108,8 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -135,6 +141,8 @@ Closes a UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-close(callback: AsyncCallback<void>): void--><!--Device-UDPSocket-close(callback: AsyncCallback<void>): void-End-->
@@ -145,13 +153,13 @@ Closes a UDPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of close. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of close. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -181,6 +189,8 @@ Closes a UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-close(): Promise<void>--><!--Device-UDPSocket-close(): Promise<void>-End-->
@@ -197,7 +207,7 @@ Closes a UDPSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -221,9 +231,11 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local address of a UDPSocket connection.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>-End-->
 
@@ -239,9 +251,9 @@ Obtains the local address of a UDPSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2301009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -269,21 +281,17 @@ udp.bind(bindAddr).then(() => {
 
 ## getSocketFd
 
-ArkTS-Dyn:
-```TypeScript
-getSocketFd(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSocketFd(): Promise<int>
 ```
 
 Obtains the file descriptor of the UDPSocket.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -295,13 +303,13 @@ Obtains the file descriptor of the UDPSocket.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returns the file descriptor of the UDP socket. |
+| Promise&lt;int&gt; | The promise returns the file descriptor of the UDP socket. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -339,6 +347,8 @@ Obtains the status of the UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
@@ -349,13 +359,13 @@ Obtains the status of the UDPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. [SocketStateBase](arkts-network-socket-socketstatebase-i.md#SocketStateBase). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. [SocketStateBase](arkts-network-socket-socketstatebase-i.md#SocketStateBase). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -396,6 +406,8 @@ Obtains the status of the UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-getState(): Promise<SocketStateBase>--><!--Device-UDPSocket-getState(): Promise<SocketStateBase>-End-->
@@ -412,7 +424,7 @@ Obtains the status of the UDPSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -439,7 +451,144 @@ udp.bind(bindAddr, (err: BusinessError) => {
 });
 ```
 
-## off('message')
+## off_close
+
+```TypeScript
+off(type: 'listening' | 'close', callback?: Callback<void>): void
+```
+
+Cancels listening for data packet message events or close events of the UDPSocket connection.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'listening' \| 'close' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let callback1 = () => {
+  console.info("on listening, success");
+}
+udp.on('listening', callback1);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+udp.off('listening', callback1);
+udp.off('listening');
+let callback2 = () => {
+  console.info("on close, success");
+}
+udp.on('close', callback2);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+udp.off('close', callback2);
+udp.off('close');
+```
+
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Cancels listening for error events of the UDPSocket connection.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Indicates Event name. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let callback = (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+udp.on('error', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+udp.off('error', callback);
+udp.off('error');
+```
+
+## off_listening
+
+```TypeScript
+off(type: 'listening' | 'close', callback?: Callback<void>): void
+```
+
+Cancels listening for data packet message events or close events of the UDPSocket connection.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'listening' \| 'close' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let callback1 = () => {
+  console.info("on listening, success");
+}
+udp.on('listening', callback1);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+udp.off('listening', callback1);
+udp.off('listening');
+let callback2 = () => {
+  console.info("on close, success");
+}
+udp.on('close', callback2);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+udp.off('close', callback2);
+udp.off('close');
+```
+
+## off_message
 
 ```TypeScript
 off(type: 'message', callback?: Callback<SocketMessageInfo>): void
@@ -451,6 +600,8 @@ Cancels listening for message receiving events of the UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -460,7 +611,7 @@ Cancels listening for message receiving events of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
@@ -486,19 +637,21 @@ udp.off('message', callback);
 udp.off('message');
 ```
 
-## off('listening' | 'close')
+## on_close
 
 ```TypeScript
-off(type: 'listening' | 'close', callback?: Callback<void>): void
+on(type: 'listening' | 'close', callback: Callback<void>): void
 ```
 
-Cancels listening for data packet message events or close events of the UDPSocket connection.
+Listens for data packet message events or close events of the UDPSocket connection.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -507,7 +660,7 @@ Cancels listening for data packet message events or close events of the UDPSocke
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -516,81 +669,29 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback1 = () => {
-  console.info("on listening, success");
-}
-udp.on('listening', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('listening', callback1);
-udp.off('listening');
-let callback2 = () => {
-  console.info("on close, success");
-}
-udp.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('close', callback2);
-udp.off('close');
+udp.on('listening', () => {
+  console.info("on listening success");
+});
+udp.on('close', () => {
+  console.info("on close success");
+});
 ```
 
-## off('listening' | 'close')
+## on_error
 
 ```TypeScript
-off(type: 'listening' | 'close', callback?: Callback<void>): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
-Cancels listening for data packet message events or close events of the UDPSocket connection.
+Listens for error events of the UDPSocket connection.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback1 = () => {
-  console.info("on listening, success");
-}
-udp.on('listening', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('listening', callback1);
-udp.off('listening');
-let callback2 = () => {
-  console.info("on close, success");
-}
-udp.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('close', callback2);
-udp.off('close');
-```
-
-## off('error')
-
-```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
-```
-
-Cancels listening for error events of the UDPSocket connection.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+<!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -599,7 +700,7 @@ Cancels listening for error events of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -608,16 +709,52 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback = (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
-udp.on('error', callback);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('error', callback);
-udp.off('error');
+udp.on('error', (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err))
+});
 ```
 
-## on('message')
+## on_listening
+
+```TypeScript
+on(type: 'listening' | 'close', callback: Callback<void>): void
+```
+
+Listens for data packet message events or close events of the UDPSocket connection.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'listening' \| 'close' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+udp.on('listening', () => {
+  console.info("on listening success");
+});
+udp.on('close', () => {
+  console.info("on close success");
+});
+```
+
+## on_message
 
 ```TypeScript
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
@@ -629,6 +766,8 @@ Listens for message receiving events of the UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -638,7 +777,7 @@ Listens for message receiving events of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -661,117 +800,6 @@ udp.on('message', (value: socket.SocketMessageInfo) => {
 });
 ```
 
-## on('listening' | 'close')
-
-```TypeScript
-on(type: 'listening' | 'close', callback: Callback<void>): void
-```
-
-Listens for data packet message events or close events of the UDPSocket connection.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('listening', () => {
-  console.info("on listening success");
-});
-udp.on('close', () => {
-  console.info("on close success");
-});
-```
-
-## on('listening' | 'close')
-
-```TypeScript
-on(type: 'listening' | 'close', callback: Callback<void>): void
-```
-
-Listens for data packet message events or close events of the UDPSocket connection.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('listening', () => {
-  console.info("on listening success");
-});
-udp.on('close', () => {
-  console.info("on close success");
-});
-```
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Listens for error events of the UDPSocket connection.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('error', (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err))
-});
-```
-
 ## send
 
 ```TypeScript
@@ -784,6 +812,8 @@ Sends data over a UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void-End-->
@@ -795,22 +825,22 @@ Sends data over a UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | Yes | Optional parameters [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md#UDPSendOptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of send. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of send. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2301207](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
-| [2301206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
-| [2301211](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2301210](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
-| [2301209](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
-| [2301208](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
-| [2301213](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
-| [2301212](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
+| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
+| [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
 ## Examples
 
@@ -905,6 +935,8 @@ Sends data over a UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>--><!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>-End-->
@@ -927,16 +959,16 @@ Sends data over a UDPSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2301207](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
-| [2301206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
-| [2301211](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2301210](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
-| [2301209](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
-| [2301208](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
-| [2301213](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
-| [2301212](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
+| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
+| [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
 ## Examples
 
@@ -1025,6 +1057,8 @@ Sets other attributes of the UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void-End-->
@@ -1036,14 +1070,14 @@ Sets other attributes of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | Yes | Optional parameters [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md#UDPExtraOptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -1092,6 +1126,8 @@ Sets other attributes of the UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>-End-->
@@ -1114,8 +1150,8 @@ Sets other attributes of the UDPSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

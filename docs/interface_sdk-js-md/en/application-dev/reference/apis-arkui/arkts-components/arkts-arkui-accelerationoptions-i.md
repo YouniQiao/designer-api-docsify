@@ -1,18 +1,14 @@
 # AccelerationOptions
 
-Particle acceleration.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the
-> outer element's @since version number is higher than inner elements'. This does not affect interface usability.
+Particle acceleration. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the > outer element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-declare interface AccelerationOptions<  ACC_SPEED_UPDATER extends ParticleUpdater,  ACC_ANGLE_UPDATER extends ParticleUpdater>--><!--Device-unnamed-declare interface AccelerationOptions<  ACC_SPEED_UPDATER extends ParticleUpdater,  ACC_ANGLE_UPDATER extends ParticleUpdater>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AccelerationOptions--><!--Device-unnamed-declare interface AccelerationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +18,15 @@ Particle acceleration.
 angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 ```
 
-Acceleration direction (in angles).
-
-Default value: **{range:[0.0,0.0]}**
+Acceleration direction (in angles). Default value: **{range:[0.0,0.0]}**
 
 **Type:** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_ANGLE_UPDATER&gt;
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +42,15 @@ Default value: **{range:[0.0,0.0]}**
 speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>
 ```
 
-Acceleration speed.
-
-Default value: **{range:[0.0,0.0]}**
+Acceleration speed. Default value: **{range:[0.0,0.0]}**
 
 **Type:** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_SPEED_UPDATER&gt;
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

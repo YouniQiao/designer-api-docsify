@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class WebContextMenuParam--><!--Device-unnamed-declare class WebContextMenuParam-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 WebContextMenuParam的构造函数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ existsImageContents(): boolean
 长按菜单所在位置是否包含图片内容。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,6 +62,8 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType--><!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -75,6 +83,8 @@ getEditStateFlags(): number
 返回上下文可编辑状态标记 [ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md#ContextMenuEditStateFlags)。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +108,8 @@ getInputFieldType(): ContextMenuInputFieldType
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuParam-getInputFieldType(): ContextMenuInputFieldType--><!--Device-WebContextMenuParam-getInputFieldType(): ContextMenuInputFieldType-End-->
@@ -119,6 +131,8 @@ getLinkUrl(): string
 若长按位置为链接，则返回经过安全校验的链接 URL。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -142,6 +156,8 @@ getMediaType(): ContextMenuMediaType
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuParam-getMediaType(): ContextMenuMediaType--><!--Device-WebContextMenuParam-getMediaType(): ContextMenuMediaType-End-->
@@ -164,6 +180,8 @@ getPreviewHeight(): number
 
 **起始版本：** 13
 
+**废弃版本：** -1
+
 <!--Device-WebContextMenuParam-getPreviewHeight(): number--><!--Device-WebContextMenuParam-getPreviewHeight(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -184,6 +202,8 @@ getPreviewWidth(): number
 
 **起始版本：** 13
 
+**废弃版本：** -1
+
 <!--Device-WebContextMenuParam-getPreviewWidth(): number--><!--Device-WebContextMenuParam-getPreviewWidth(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -203,6 +223,8 @@ getSelectionText(): string
 返回选中的文本内容。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -226,6 +248,8 @@ getSourceType(): ContextMenuSourceType
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuParam-getSourceType(): ContextMenuSourceType--><!--Device-WebContextMenuParam-getSourceType(): ContextMenuSourceType-End-->
@@ -247,6 +271,8 @@ getSourceUrl(): string
 若选中元素包含 SRC 属性，则返回其资源地址 URL。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -270,6 +296,8 @@ getUnfilteredLinkUrl(): string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuParam-getUnfilteredLinkUrl(): string--><!--Device-WebContextMenuParam-getUnfilteredLinkUrl(): string-End-->
@@ -291,6 +319,8 @@ isEditable(): boolean
 * 返回当前上下文是否可编辑。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -314,6 +344,8 @@ x(): number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuParam-x(): number--><!--Device-WebContextMenuParam-x(): number-End-->
@@ -335,6 +367,8 @@ y(): number
 菜单在Web组件内的垂直偏移坐标。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,7 +2,9 @@
 
 Defines the options for obtaining the onscreen content.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-onScreen-export interface ContentOptions--><!--Device-onScreen-export interface ContentOptions-End-->
 
@@ -26,7 +28,9 @@ Whether content understanding is required. The default value is **False**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContentOptions-contentUnderstand?: boolean--><!--Device-ContentOptions-contentUnderstand?: boolean-End-->
 
@@ -44,7 +48,9 @@ Whether to obtain the page link. The default value is **False**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContentOptions-pageLink?: boolean--><!--Device-ContentOptions-pageLink?: boolean-End-->
 
@@ -62,7 +68,9 @@ Whether to obtain only the text and divide the text into paragraphs. The default
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContentOptions-textOnly?: boolean--><!--Device-ContentOptions-textOnly?: boolean-End-->
 
@@ -80,7 +88,9 @@ ID of the window whose content needs to be obtained. If this parameter is not se
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContentOptions-windowId?: int--><!--Device-ContentOptions-windowId?: int-End-->
 

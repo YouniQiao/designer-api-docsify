@@ -1,10 +1,12 @@
 # DragSpringLoadingConfiguration
 
-定义拖拽的悬停检测配置参数的接口。默认的配置参数通常已能满足需求。可以通过在绑定[onDragSpringLoading](CommonMethod#onDragSpringLoading)时指定配置，或者通过在BEGIN状态期间使用[updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateConfiguration)方法动态修改的方式以自定义该配置参数。
+定义拖拽的悬停检测配置参数的接口。默认的配置参数通常已能满足需求。可以通过在绑定onDragSpringLoading时指定配置，或者通过在 BEGIN状态期间使用[updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateConfiguration)方法动态修改的方式以自定义该配置参数。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-dragController-interface DragSpringLoadingConfiguration--><!--Device-dragController-interface DragSpringLoadingConfiguration-End-->
 
@@ -23,6 +25,8 @@ stillTimeLimit?: number
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,6 +50,8 @@ updateInterval?: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -68,6 +74,8 @@ updateNotifyCount?: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -89,6 +97,8 @@ updateToFinishInterval?: number
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

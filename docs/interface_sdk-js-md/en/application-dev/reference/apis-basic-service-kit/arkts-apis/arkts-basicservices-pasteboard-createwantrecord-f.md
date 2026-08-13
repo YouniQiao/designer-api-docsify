@@ -20,7 +20,7 @@ Creates a **PasteDataRecord** object of the Want type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createRecord](pasteboard.createRecord(mimeType:)
+**Substitutes:** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord--><!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord-End-->
 

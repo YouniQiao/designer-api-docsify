@@ -2,9 +2,11 @@
 
 Defines the notification key value.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationSubscribe-export interface NotificationKey--><!--Device-notificationSubscribe-export interface NotificationKey-End-->
 
@@ -26,11 +28,13 @@ id: int
 
 Notification ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationKey-id: int--><!--Device-NotificationKey-id: int-End-->
 
@@ -48,9 +52,11 @@ Notification label. This parameter is left empty by default.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
 

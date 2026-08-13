@@ -2,9 +2,11 @@
 
 Enumerates SIM card types and states.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-observer-export interface SimStateData--><!--Device-observer-export interface SimStateData-End-->
 
@@ -26,9 +28,11 @@ SIM card lock type.
 
 **Type:** [LockReason](arkts-telephony-observer-lockreason-e.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SimStateData-reason: LockReason--><!--Device-SimStateData-reason: LockReason-End-->
 
@@ -44,9 +48,11 @@ SIM card state.
 
 **Type:** SimState
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SimStateData-state: SimState--><!--Device-SimStateData-state: SimState-End-->
 
@@ -62,9 +68,11 @@ SIM card type.
 
 **Type:** CardType
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SimStateData-type: CardType--><!--Device-SimStateData-type: CardType-End-->
 

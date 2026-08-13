@@ -8,7 +8,9 @@ function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCall
 
 发送控制命令给置顶会话。结果通过callback异步回调方式返回。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -29,12 +31,12 @@ function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCall
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## 示例
 
@@ -69,7 +71,9 @@ function sendSystemControlCommand(command: AVControlCommand): Promise<void>
 
 发送控制命令给置顶会话。结果通过Promise异步回调方式返回。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -95,12 +99,12 @@ function sendSystemControlCommand(command: AVControlCommand): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## 示例
 

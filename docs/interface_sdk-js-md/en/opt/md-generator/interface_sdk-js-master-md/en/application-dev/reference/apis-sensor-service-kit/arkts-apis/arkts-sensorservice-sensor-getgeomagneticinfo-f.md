@@ -14,7 +14,9 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number
 
 Obtains the geomagnetic field of a geographic location at a certain time. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void-End-->
 
@@ -32,8 +34,8 @@ Obtains the geomagnetic field of a geographic location at a certain time. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 
@@ -72,7 +74,9 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number
 
 Obtains the geomagnetic field of a geographic location at a certain time. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>-End-->
 
@@ -95,8 +99,8 @@ Obtains the geomagnetic field of a geographic location at a certain time. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

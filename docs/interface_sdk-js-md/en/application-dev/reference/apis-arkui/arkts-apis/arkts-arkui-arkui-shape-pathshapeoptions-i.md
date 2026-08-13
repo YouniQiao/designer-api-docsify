@@ -1,12 +1,14 @@
 # PathShapeOptions
 
-Interface for PathShape constructor parameters.
+Represents the parameter of the constructor used to create a **PathShape** object.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export interface PathShapeOptions--><!--Device-unnamed-export interface PathShapeOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface PathShapeOptions--><!--Device-unnamed-interface PathShapeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +24,21 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 commands?: string
 ```
 
-Defines the commands for drawing the PathShape.
+Path drawing commands. For more about the commands, see commands.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PathShapeOptions-commands?: string--><!--Device-PathShapeOptions-commands?: string-End-->
 

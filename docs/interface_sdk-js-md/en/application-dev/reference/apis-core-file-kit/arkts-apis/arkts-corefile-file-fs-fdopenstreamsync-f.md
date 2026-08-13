@@ -12,12 +12,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function fdopenStreamSync(fd: number, mode: string): Stream
 ```
 
-Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of  
-[Stream](arkts-corefile-file-fs-stream-i.md#Stream).
+Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md#Stream).
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

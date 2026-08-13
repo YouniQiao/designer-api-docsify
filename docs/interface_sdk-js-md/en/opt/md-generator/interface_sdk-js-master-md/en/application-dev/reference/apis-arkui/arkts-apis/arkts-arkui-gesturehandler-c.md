@@ -2,11 +2,13 @@
 
 Represents the base type for gesture handlers.
 
-**Inheritance/Implementation:** GestureHandler implements [GestureInterface<T>](GestureInterface<T>)
+**Inheritance/Implementation:** GestureHandler implements GestureInterface<T>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class GestureHandler<T> implements GestureInterface<T>--><!--Device-unnamed-declare class GestureHandler<T> implements GestureInterface<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class GestureHandler--><!--Device-unnamed-declare class GestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +22,8 @@ Sets the event input sources supported by the gesture handler.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -32,7 +36,7 @@ Sets the event input sources supported by the gesture handler.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes |
+| [types](../../apis-na/arkts-apis/arkts-na-util-types-c.md) | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -49,6 +53,8 @@ tag(tag: string): T
 Sets the tag for the gesture handler.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

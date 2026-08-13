@@ -1,12 +1,38 @@
 # TreeSet
 
-TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#TreeMap)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
+TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#TreeMap)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。 TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-unnamed-declare class TreeSet<T>--><!--Device-unnamed-declare class TreeSet<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class TreeSet--><!--Device-unnamed-declare class TreeSet-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+返回一个迭代器，每一项都是一个JavaScript对象。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TreeSet-$_iterator(): IterableIterator<T>--><!--Device-TreeSet-$_iterator(): IterableIterator<T>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## [Symbol.iterator]
 
@@ -17,6 +43,8 @@ TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#TreeMap)实现，�
 返回一个迭代器，迭代器的每一项为容器中的元素值。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +62,7 @@ TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#TreeMap)实现，�
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -79,7 +107,9 @@ add(value: T): boolean
 
 向容器中添加指定元素。不建议插入null值，可能会影响排序结果；添加自定义类型元素时，需确保TreeSet在构造时已提供比较函数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -103,7 +133,7 @@ add(value: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -121,7 +151,9 @@ clear(): void
 
 清除容器中的所有元素，并将length置为0。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -133,7 +165,7 @@ clear(): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -156,6 +188,8 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
@@ -172,7 +206,7 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -216,6 +250,30 @@ testEntrySet.add(secondEntry);
 console.info('treeSet: ', testEntrySet.length);
 ```
 
+## constructor
+
+```TypeScript
+constructor(comparator?: TreeSetComparator<T>)
+```
+
+TreeSet的构造函数，支持通过比较函数对元素进行升序或降序排序。当插入自定义类型时，必须提供比较函数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)--><!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | 否 |
+
 ## entries
 
 ```TypeScript
@@ -224,7 +282,9 @@ entries(): IterableIterator<[T, T]>
 
 返回包含此容器中元素的新迭代器对象，每个元素以[value, value]的形式返回。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -242,7 +302,7 @@ entries(): IterableIterator<[T, T]>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -283,6 +343,8 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
@@ -300,7 +362,7 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -327,6 +389,30 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: TreeSetForEachCb<T>): void
+```
+
+通过回调函数来遍历实例对象上的元素。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void--><!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | 是 |
+
 ## getFirstValue
 
 ```TypeScript
@@ -335,7 +421,9 @@ getFirstValue(): T
 
 获取容器中排序第一的元素，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -353,8 +441,8 @@ getFirstValue(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -375,6 +463,8 @@ getHigherValue(key: T): T
 获取容器中比传入元素排序靠后一位的元素，为空时返回undefined。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -398,7 +488,7 @@ getHigherValue(key: T): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -411,6 +501,42 @@ let result = treeSet.getHigherValue('sparrow');
 console.info('result:', result); // result: squirrel
 ```
 
+## getHigherValue
+
+```TypeScript
+getHigherValue(key: T): T | undefined
+```
+
+获取容器中比传入元素排序靠后一位的元素，如果key不存在，则返回undefined。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TreeSet-getHigherValue(key: T): T | undefined--><!--Device-TreeSet-getHigherValue(key: T): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | T | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
 ## getLastValue
 
 ```TypeScript
@@ -419,7 +545,9 @@ getLastValue(): T
 
 获取容器中排序最后的数据，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -437,8 +565,8 @@ getLastValue(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -459,6 +587,8 @@ getLowerValue(key: T): T
 获取容器中比传入元素排序靠前一位的元素，为空时返回undefined。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -482,7 +612,7 @@ getLowerValue(key: T): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -495,6 +625,42 @@ let result = treeSet.getLowerValue('sparrow');
 console.info('result:', result); // result: gander
 ```
 
+## getLowerValue
+
+```TypeScript
+getLowerValue(key: T): T | undefined
+```
+
+获取容器中比传入元素排序靠前一位的元素，如果key不存在，则返回undefined。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TreeSet-getLowerValue(key: T): T | undefined--><!--Device-TreeSet-getLowerValue(key: T): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | T | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
 ## has
 
 ```TypeScript
@@ -503,7 +669,9 @@ has(value: T): boolean
 
 判断容器中是否包含指定元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -527,7 +695,7 @@ has(value: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -547,7 +715,9 @@ isEmpty(): boolean
 
 判断容器是否为空。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -565,7 +735,7 @@ isEmpty(): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -584,7 +754,9 @@ popFirst(): T
 
 删除容器中排序最前的数据，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -602,8 +774,8 @@ popFirst(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -623,7 +795,9 @@ popLast(): T
 
 删除容器中排序最后的数据，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -641,8 +815,8 @@ popLast(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -662,7 +836,9 @@ remove(value: T): boolean
 
 删除指定的元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -686,7 +862,7 @@ remove(value: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -706,7 +882,9 @@ values(): IterableIterator<T>
 
 返回包含此容器中元素值的新迭代器对象。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -724,7 +902,7 @@ values(): IterableIterator<T>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -752,6 +930,8 @@ TreeSet的元素个数。
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

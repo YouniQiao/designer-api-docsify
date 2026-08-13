@@ -2,17 +2,19 @@
 
 PanGesture is used to trigger a pan gesture when the movement distance of a finger on the screen reaches the minimum value.
 
-**Inheritance/Implementation:** PanGestureInterface extends [GestureInterface<PanGestureInterface>](GestureInterface<PanGestureInterface>)
+**Inheritance/Implementation:** PanGestureInterface extends GestureInterface<PanGestureInterface>
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-interface PanGestureInterface extends GestureInterface<PanGestureInterface>--><!--Device-unnamed-interface PanGestureInterface extends GestureInterface<PanGestureInterface>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface PanGestureInterface--><!--Device-unnamed-interface PanGestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
@@ -23,6 +25,8 @@ Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,17 +46,19 @@ Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 | --- | --- |
 | [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options?: PanGestureHandlerOptions): PanGestureInterface
 ```
 
-Creates a pan gesture. Compared with [PanGesture](PanGestureInterface(value?: { fingers?: number; direction?: PanDirection; distance?: number) | PanGestureOptions)}, this API adds the **isFingerCountLimited** and **distanceMap** parameters to **options**, which control whether to enforce the exact number of fingers touching the screen and specify the minimum pan distance required to trigger the gesture for different input sources, respectively.
+Creates a pan gesture. Compared with PanGesture | PanGestureOptions)}, this API adds the **isFingerCountLimited** and **distanceMap** parameters to **options**, which control whether to enforce the exact number of fingers touching the screen and specify the minimum pan distance required to trigger the gesture for different input sources, respectively.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +92,8 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanGestureInterface-onActionCancel(event: () => void): PanGestureInterface--><!--Device-PanGestureInterface-onActionCancel(event: () => void): PanGestureInterface-End-->
@@ -115,6 +123,8 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +158,8 @@ Registers the callback for pan gesture completion. This callback is triggered wh
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanGestureInterface-onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface--><!--Device-PanGestureInterface-onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface-End-->
@@ -178,6 +190,8 @@ Registers the callback for successful pan gesture recognition.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanGestureInterface-onActionStart(event: (event: GestureEvent) => void): PanGestureInterface--><!--Device-PanGestureInterface-onActionStart(event: (event: GestureEvent) => void): PanGestureInterface-End-->
@@ -207,6 +221,8 @@ Registers the callback for pan gesture updates. If **fingerList** contains multi
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

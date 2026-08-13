@@ -12,14 +12,11 @@ import { applicationManager } from '@kit.MDMKit';
 function removeDockApp(admin: Want, bundleName: string, abilityName: string): void
 ```
 
-Removes an application from the shortcut bar.
-
-> **NOTE：**
-> 
-> The following applications cannot be removed from the shortcut bar using this API: Application Center, Task
-> Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
+Removes an application from the shortcut bar. > **NOTE：**> > The following applications cannot be removed from the shortcut bar using this API: Application Center, Task > Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -41,12 +38,12 @@ Removes an application from the shortcut bar.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [9201016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201016-specified-application-not-in-dock) |
-| [9201018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201018-specified-application-inoperable) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [9201016](../errorcode-enterpriseDeviceManager.md#9201016-specified-application-not-in-dock) |
+| [9201018](../errorcode-enterpriseDeviceManager.md#9201018-specified-application-inoperable) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

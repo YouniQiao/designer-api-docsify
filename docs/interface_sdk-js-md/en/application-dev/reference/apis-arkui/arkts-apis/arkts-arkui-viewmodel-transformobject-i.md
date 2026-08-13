@@ -6,6 +6,8 @@ TransformObject
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface TransformObject--><!--Device-unnamed-export interface TransformObject-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Defines a 2D transformation, using a matrix of six values..
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -68,6 +72,8 @@ Defines a 3D transformation using a 4x4 matrix of 16 values.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-matrix3d(    n00: number,    n01: number,    n02: number,    n03: number,    n10: number,    n11: number,    n12: number,    n13: number,    n20: number,    n21: number,    n22: number,    n23: number,    n30: number,    n31: number,    n32: number,    n33: number,  ): void--><!--Device-TransformObject-matrix3d(    n00: number,    n01: number,    n02: number,    n03: number,    n10: number,    n11: number,    n12: number,    n13: number,    n20: number,    n21: number,    n22: number,    n23: number,    n30: number,    n31: number,    n32: number,    n33: number,  ): void-End-->
@@ -107,6 +113,8 @@ Defines a perspective view for the 3D transformation element.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-perspective(verticalDistance: number): void--><!--Device-TransformObject-perspective(verticalDistance: number): void-End-->
@@ -131,6 +139,8 @@ Define the 2D rotation and specify the angle in the parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-rotate(angle: number): void--><!--Device-TransformObject-rotate(angle: number): void-End-->
@@ -154,6 +164,8 @@ Defines a 3D transformation for rotating the X / Y / Z axes.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -182,6 +194,8 @@ Defines 3D transformations for rotating of the X axes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-rotateX(angle: number): void--><!--Device-TransformObject-rotateX(angle: number): void-End-->
@@ -205,6 +219,8 @@ Defines 3D transformations for rotating of the Y axes.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -230,6 +246,8 @@ Defines 3D transformations for rotating of the Z axes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-rotateZ(angle: number): void--><!--Device-TransformObject-rotateZ(angle: number): void-End-->
@@ -253,6 +271,8 @@ Defines 2D transformations for scaling of the X and Y axes
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -278,6 +298,8 @@ Defines 3D transformations for scaling of the X / Y / Z axes
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -305,6 +327,8 @@ Defines 2D transformations for scaling of the X axes
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-scaleX(x: number): void--><!--Device-TransformObject-scaleX(x: number): void-End-->
@@ -328,6 +352,8 @@ Defines 2D transformations for scaling of the Y axes
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -353,6 +379,8 @@ Defines 3D transformations for scaling of the Z axes
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-scaleZ(z: number): void--><!--Device-TransformObject-scaleZ(z: number): void-End-->
@@ -376,6 +404,8 @@ Defines the 2D skew transition along the X and Y axes.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -402,6 +432,8 @@ Defines the 2D skew transition along the X axes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-skewX(angle: number): void--><!--Device-TransformObject-skewX(angle: number): void-End-->
@@ -425,6 +457,8 @@ Defines the 2D skew transition along the Y axes.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -450,6 +484,8 @@ Defines 2D transformations for translation of the X and Y axes
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-translate(x: number, y: number): void--><!--Device-TransformObject-translate(x: number, y: number): void-End-->
@@ -474,6 +510,8 @@ Defines 3D transformations for translation of the X / Y / Z axes
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -501,6 +539,8 @@ Defines 2D transformations for translation of the X axes
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-translateX(x: number): void--><!--Device-TransformObject-translateX(x: number): void-End-->
@@ -525,6 +565,8 @@ Defines 2D transformations for translation of the Y axes
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-TransformObject-translateY(y: number): void--><!--Device-TransformObject-translateY(y: number): void-End-->
@@ -548,6 +590,8 @@ Defines 3D transformations for translation of the Z axes
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

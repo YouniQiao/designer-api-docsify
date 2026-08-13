@@ -12,13 +12,11 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 function end(id: HiTraceId): void
 ```
 
-Stops call chain trace. This API works in synchronous manner.
+Stops call chain trace. This API works in synchronous manner. If the given HiTrace ID is valid and is the same as the HiTrace ID in the current thread's TLS, the tracing is stopped and the HiTrace ID in the current thread's TLS is set to invalid. If the given HiTrace ID is invalid or is not the same as the HiTrace ID in the current thread's TLS, the tracing fails to be stopped, and a tracing stop failure log is printed.
 
-If the given HiTrace ID is valid and is the same as the HiTrace ID in the current thread's TLS, the tracing is stopped and the HiTrace ID in the current thread's TLS is set to invalid.
+**Since:** 23
 
-If the given HiTrace ID is invalid or is not the same as the HiTrace ID in the current thread's TLS, the tracing fails to be stopped, and a tracing stop failure log is printed.
-
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function end(id: HiTraceId): void--><!--Device-hiTraceChain-function end(id: HiTraceId): void-End-->
 

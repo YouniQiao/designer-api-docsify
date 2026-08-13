@@ -1,15 +1,8 @@
 # MenuItem
 
-The **MenuItem** component represents an item in a menu.
+The **MenuItem** component represents an item in a menu. > **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
 
-> **NOTE**
->
-> This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate 
-> their
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## MenuItem
 
@@ -21,6 +14,8 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MenuItemInterface-(value?: MenuItemOptions | CustomBuilder): MenuItemAttribute--><!--Device-MenuItemInterface-(value?: MenuItemOptions | CustomBuilder): MenuItemAttribute-End-->
@@ -31,8 +26,7 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) \| CustomBuilder | No | Information about the menu item. |
+| value | MenuItemOptions \| CustomBuilder | No | Information about the menu item. |
 
 ## Summary
 
-- [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md)

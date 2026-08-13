@@ -2,7 +2,9 @@
 
 指纹手势事件的类型和相对侧边指纹器件的偏移位置。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface FingerprintEvent--><!--Device-unnamed-export declare interface FingerprintEvent-End-->
 
@@ -20,7 +22,9 @@ action: FingerprintAction
 
 **类型：** [FingerprintAction](arkts-input-multimodalinput-shortkey-fingerprintaction-e-sys.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FingerprintEvent-action: FingerprintAction--><!--Device-FingerprintEvent-action: FingerprintAction-End-->
 
@@ -38,7 +42,9 @@ distanceX: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FingerprintEvent-distanceX: double--><!--Device-FingerprintEvent-distanceX: double-End-->
 
@@ -56,7 +62,9 @@ distanceY: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FingerprintEvent-distanceY: double--><!--Device-FingerprintEvent-distanceY: double-End-->
 

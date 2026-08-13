@@ -3,6 +3,7 @@
 ## RichEditor
 
 ```TypeScript
+@ComponentBuilder
 export declare function RichEditor(
     options: RichEditorOptions | RichEditorStyledStringOptions, 
 ): RichEditorAttribute
@@ -14,9 +15,11 @@ Defines RichEditor Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function RichEditor(    options: RichEditorOptions | RichEditorStyledStringOptions, ): RichEditorAttribute--><!--Device-unnamed-export declare function RichEditor(    options: RichEditorOptions | RichEditorStyledStringOptions, ): RichEditorAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function RichEditor(    options: RichEditorOptions | RichEditorStyledStringOptions, ): RichEditorAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function RichEditor(    options: RichEditorOptions | RichEditorStyledStringOptions, ): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines RichEditor Component.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md) |  |
+| RichEditorAttribute |  |
 
 
 ## RichEditor
 
 ```TypeScript
+@Builder
 export declare function RichEditor(
     style: CustomBuilderT<RichEditorAttribute>,
 ): RichEditorAttribute
@@ -47,11 +51,11 @@ Defines RichEditor Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function RichEditor(    style: CustomBuilderT<RichEditorAttribute>,): RichEditorAttribute--><!--Device-unnamed-export declare function RichEditor(    style: CustomBuilderT<RichEditorAttribute>,): RichEditorAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function RichEditor(    style: CustomBuilderT<RichEditorAttribute>,): RichEditorAttribute--><!--Device-unnamed-@Builderexport declare function RichEditor(    style: CustomBuilderT<RichEditorAttribute>,): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines RichEditor Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md)&gt; | Yes | RichEditor attribute instance |
+| style | CustomBuilderT&lt;RichEditorAttribute&gt; | Yes | RichEditor attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md) |  |
+| RichEditorAttribute |  |
 

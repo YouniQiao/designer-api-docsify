@@ -6,7 +6,9 @@ export type BundleResourceInfo = _BundleResourceInfo
 
 应用配置的图标和名称信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleResourceManager-export type BundleResourceInfo = _BundleResourceInfo--><!--Device-bundleResourceManager-export type BundleResourceInfo = _BundleResourceInfo-End-->
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum BarrierDirection--><!--Device-unnamed-declare enum BarrierDirection-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -17,6 +19,8 @@ LEFT = 0
 屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle)的最左侧。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ RIGHT = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -54,6 +60,8 @@ TOP = 2
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -71,6 +79,8 @@ BOTTOM = 3
 屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle)的最下方。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

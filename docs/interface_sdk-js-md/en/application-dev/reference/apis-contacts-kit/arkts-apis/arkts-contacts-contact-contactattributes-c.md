@@ -1,10 +1,12 @@
 # ContactAttributes
 
-Provides a list of contact attributes, which are generally used as arguments.If **null** is passed, all attributes are queried by default.
+Provides a list of contact attributes, which are generally used as arguments. If **null** is passed, all attributes are queried by default.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-contact-class ContactAttributes--><!--Device-contact-class ContactAttributes-End-->
 
@@ -29,6 +31,8 @@ Indicates the contact attributes.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

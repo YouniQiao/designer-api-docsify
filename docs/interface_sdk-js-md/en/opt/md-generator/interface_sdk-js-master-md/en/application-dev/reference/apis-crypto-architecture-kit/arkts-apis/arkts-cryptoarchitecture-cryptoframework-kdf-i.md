@@ -1,8 +1,10 @@
 # Kdf
 
-Key derivation function (KDF) interface, defining methods for deriving keys based on key derivation parameters.Before use, you must create a **Kdf** instance by using [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createKdf).
+Key derivation function (KDF) interface, defining methods for deriving keys based on key derivation parameters. Before use, you must create a **Kdf** instance by using [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createKdf).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Kdf--><!--Device-cryptoFramework-interface Kdf-End-->
 
@@ -24,7 +26,9 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 
 Generates a key based on the specified key derivation parameters. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,10 +49,10 @@ Generates a key based on the specified key derivation parameters. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -104,7 +108,9 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 Generates a key based on the specified key derivation parameters. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,10 +136,10 @@ Generates a key based on the specified key derivation parameters. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -187,13 +193,13 @@ kdfPromise.then(secret => {
 generateSecretSync(params: KdfSpec): DataBlob
 ```
 
-Generates a key based on the specified key derivation parameters. This API returns the result synchronously.
+Generates a key based on the specified key derivation parameters. This API returns the result synchronously. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, generateSecret. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [generateSecret](generateSecret). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob--><!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob-End-->
 
@@ -215,11 +221,11 @@ Generates a key based on the specified key derivation parameters. This API retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -267,7 +273,9 @@ Indicates the algorithm name of the key derivation function.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,10 +1,12 @@
-# @ohos.telephony.observer(电话服务状态监听)
+# @ohos.telephony.observer
 
 本模块提供订阅管理功能，可以订阅/取消订阅的事件包括：网络状态变化、信号状态变化、通话状态变化、蜂窝数据链路连接状态、蜂窝数据业务的上下行数据流状态、SIM状态变化。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace observer--><!--Device-unnamed-declare namespace observer-End-->
 
@@ -16,68 +18,68 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [off](arkts-telephony-observer-off-f.md#off) | 取消订阅网络状态变化事件，使用callback方式作为异步方法。 |
-| [off](arkts-telephony-observer-off-f.md#off-1) | 取消订阅信号状态变化事件，使用callback方式作为异步方法。 |
-| [off](arkts-telephony-observer-off-f.md#off-3) | 移除订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。 |
-| [off](arkts-telephony-observer-off-f.md#off-4) | 移除订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。 |
-| [off](arkts-telephony-observer-off-f.md#off-5) | 取消订阅通话状态变化事件，使用callback方式作为异步方法。 |
-| [off](arkts-telephony-observer-off-f.md#off-6) | 取消订阅通话状态变化拓展事件，使用callback方式作为异步方法。 |
-| [off](arkts-telephony-observer-off-f.md#off-7) | 移除订阅sim状态更改事件，使用callback方式作为异步方法。 |
-| [off](arkts-telephony-observer-off-f.md#off-8) | 移除订阅卡帐户变化事件，使用callback方式作为异步方法。 |
-| [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md#offccallstatechange) | 取消三方应用监听运营商通话状态并获取通话号码，使用callback方式作为异步方法。 |
-| [offCallStateChange](arkts-telephony-observer-offcallstatechange-f.md#offcallstatechange) | Cancel callback when the call state is updated. |
-| [offCallStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md#offcallstatechangeex) | Cancel callback when the telCall state is updated. |
-| [offCellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md#offcellulardataconnectionstatechange) | Cancel callback when the cellular data link connection state is updated. |
-| [offCellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md#offcellulardataflowchange) | Cancel callback when the uplink and downlink data flow state of cellular data services is updated. |
-| [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md#offcommunicationstatechange) | 取消订阅5A网络状态变化事件，使用callback异步回调。 |
-| [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md#offgetsimactivestate) | 取消SIM卡激活状态变化的监听，使用callback方式作为异步方法。 |
-| [offIccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md#officcaccountinfochange) | Cancel to receive an ICC account change. |
-| [offNetworkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md#offnetworkstatechange) | Cancel callback when the network state is updated. |
-| [offSignalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md#offsignalinfochange) | Cancel callback when the signal strength is updated. |
-| [offSimStateChange](arkts-telephony-observer-offsimstatechange-f.md#offsimstatechange) | Cancel callback when the sim state is updated. |
-| [on](arkts-telephony-observer-on-f.md#on) | 订阅网络状态变化事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-1) | 订阅指定卡槽位的网络状态变化事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-2) | 订阅信号状态变化事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-3) | 订阅指定卡槽位的信号状态变化事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-6) | 订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-7) | 订阅指定卡槽位的蜂窝数据链路连接状态，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-8) | 订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-9) | 订阅指定卡槽位的蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-10) | 订阅通话状态变化事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-11) | 订阅通话状态变化事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-12) | 订阅通话状态变化拓展事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-13) | 订阅sim状态更改事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-14) | 订阅指定卡槽位的sim状态更改事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f.md#on-15) | 订阅卡帐户变化事件，使用callback方式作为异步方法。 |
-| [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md#onccallstatechange) | 三方应用监听运营商通话状态并获取通话号码，使用callback方式作为异步方法。 |
-| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md#oncallstatechange) | Callback when the call state corresponding to the default sim card is updated. |
-| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md#oncallstatechange-1) | Callback when the call state corresponding to the monitored {@code slotId} is updated. |
-| [onCallStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md#oncallstatechangeex) | Callback when the telCall state corresponding to the monitored {@code slotId} is updated. |
-| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md#oncellulardataconnectionstatechange) | Callback when the cellular data link connection state corresponding to the default sim card is updated. |
-| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md#oncellulardataconnectionstatechange-1) | Callback when the cellular data link connection state corresponding to the monitored {@code slotId} is updated. |
-| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md#oncellulardataflowchange) | Callback when the uplink and downlink data flow state of cellular data services corresponding to the default sim card is updated. |
-| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md#oncellulardataflowchange-1) | Callback when the uplink and downlink data flow state of cellular data services corresponding to the monitored {@code slotId} is updated. |
-| [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md#oncommunicationstatechange) | 订阅5A网络状态变化事件，使用callback异步回调。 |
-| [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md#ongetsimactivestate) | SIM卡激活状态变化的监听，使用callback方式作为异步方法。 |
-| [onIccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md#oniccaccountinfochange) | Receives an ICC account change. This callback is invoked when the ICC account updates and the observer is added to monitor the updates. |
-| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md#onnetworkstatechange) | Callback when the network state corresponding to the default sim card is updated. |
-| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md#onnetworkstatechange-1) | Callback when the network state corresponding to the monitored {@code slotId} is updated. |
-| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md#onsignalinfochange) | Callback when the signal strength corresponding to the default sim card is updated. |
-| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md#onsignalinfochange-1) | Callback when the signal strength corresponding to a monitored {@code slotId} is updated. |
-| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md#onsimstatechange) | Callback when the sim state corresponding to the default sim card is updated. |
-| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md#onsimstatechange-1) | Callback when the sim state corresponding to the monitored {@code slotId} is updated. |
+| [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md#offCCallStateChange) | 取消三方应用监听运营商通话状态并获取通话号码，使用callback方式作为异步方法。 |
+| [offCallStateChange](arkts-telephony-observer-offcallstatechange-f.md#offCallStateChange) | Cancel callback when the call state is updated. |
+| [offCallStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md#offCallStateChangeEx) | Cancel callback when the telCall state is updated. |
+| [offCellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md#offCellularDataConnectionStateChange) | Cancel callback when the cellular data link connection state is updated. |
+| [offCellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md#offCellularDataFlowChange) | Cancel callback when the uplink and downlink data flow state of cellular data services is updated. |
+| [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md#offCommunicationStateChange) | 取消订阅5A网络状态变化事件，使用callback异步回调。 |
+| [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md#offGetSimActiveState) | 取消SIM卡激活状态变化的监听，使用callback方式作为异步方法。 |
+| [offIccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md#offIccAccountInfoChange) | Cancel to receive an ICC account change. |
+| [offNetworkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md#offNetworkStateChange) | Cancel callback when the network state is updated. |
+| [offSignalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md#offSignalInfoChange) | Cancel callback when the signal strength is updated. |
+| [offSimStateChange](arkts-telephony-observer-offsimstatechange-f.md#offSimStateChange) | Cancel callback when the sim state is updated. |
+| off_callStateChange | 取消订阅通话状态变化事件，使用callback方式作为异步方法。 |
+| off_callStateChangeEx | 取消订阅通话状态变化拓展事件，使用callback方式作为异步方法。 |
+| off_cellularDataConnectionStateChange | 移除订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。 |
+| off_cellularDataFlowChange | 移除订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。 |
+| off_iccAccountInfoChange | 移除订阅卡帐户变化事件，使用callback方式作为异步方法。 |
+| off_networkStateChange | 取消订阅网络状态变化事件，使用callback方式作为异步方法。 |
+| off_signalInfoChange | 取消订阅信号状态变化事件，使用callback方式作为异步方法。 |
+| off_simStateChange | 移除订阅sim状态更改事件，使用callback方式作为异步方法。 |
+| [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md#onCCallStateChange) | 三方应用监听运营商通话状态并获取通话号码，使用callback方式作为异步方法。 |
+| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md#onCallStateChange) | Callback when the call state corresponding to the default sim card is updated. |
+| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md#onCallStateChange) | Callback when the call state corresponding to the monitored {@code slotId} is updated. |
+| [onCallStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md#onCallStateChangeEx) | Callback when the telCall state corresponding to the monitored {@code slotId} is updated. |
+| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md#onCellularDataConnectionStateChange) | Callback when the cellular data link connection state corresponding to the default sim card is updated. |
+| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md#onCellularDataConnectionStateChange) | Callback when the cellular data link connection state corresponding to the monitored {@code slotId} is updated. |
+| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md#onCellularDataFlowChange) | Callback when the uplink and downlink data flow state of cellular data services corresponding to the default sim card is updated. |
+| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md#onCellularDataFlowChange) | Callback when the uplink and downlink data flow state of cellular data services corresponding to the monitored {@code slotId} is updated. |
+| [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md#onCommunicationStateChange) | 订阅5A网络状态变化事件，使用callback异步回调。 |
+| [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md#onGetSimActiveState) | SIM卡激活状态变化的监听，使用callback方式作为异步方法。 |
+| [onIccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md#onIccAccountInfoChange) | Receives an ICC account change. This callback is invoked when the ICC account updates and the observer is added to monitor the updates. |
+| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md#onNetworkStateChange) | Callback when the network state corresponding to the default sim card is updated. |
+| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md#onNetworkStateChange) | Callback when the network state corresponding to the monitored {@code slotId} is updated. |
+| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md#onSignalInfoChange) | Callback when the signal strength corresponding to the default sim card is updated. |
+| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md#onSignalInfoChange) | Callback when the signal strength corresponding to a monitored {@code slotId} is updated. |
+| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md#onSimStateChange) | Callback when the sim state corresponding to the default sim card is updated. |
+| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md#onSimStateChange) | Callback when the sim state corresponding to the monitored {@code slotId} is updated. |
+| on_callStateChange | 订阅通话状态变化事件，使用callback方式作为异步方法。 |
+| [on_callStateChange](arkts-telephony-observer-oncallstatechange-f.md#on_callstatechange-1) | 订阅通话状态变化事件，使用callback方式作为异步方法。 |
+| on_callStateChangeEx | 订阅通话状态变化拓展事件，使用callback方式作为异步方法。 |
+| on_cellularDataConnectionStateChange | 订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。 |
+| [on_cellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md#on_cellulardataconnectionstatechange-1) | 订阅指定卡槽位的蜂窝数据链路连接状态，使用callback方式作为异步方法。 |
+| on_cellularDataFlowChange | 订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。 |
+| [on_cellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md#on_cellulardataflowchange-1) | 订阅指定卡槽位的蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。 |
+| on_iccAccountInfoChange | 订阅卡帐户变化事件，使用callback方式作为异步方法。 |
+| on_networkStateChange | 订阅网络状态变化事件，使用callback方式作为异步方法。 |
+| [on_networkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md#on_networkstatechange-1) | 订阅指定卡槽位的网络状态变化事件，使用callback方式作为异步方法。 |
+| on_signalInfoChange | 订阅信号状态变化事件，使用callback方式作为异步方法。 |
+| [on_signalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md#on_signalinfochange-1) | 订阅指定卡槽位的信号状态变化事件，使用callback方式作为异步方法。 |
+| on_simStateChange | 订阅sim状态更改事件，使用callback方式作为异步方法。 |
+| [on_simStateChange](arkts-telephony-observer-onsimstatechange-f.md#on_simstatechange-1) | 订阅指定卡槽位的sim状态更改事件，使用callback方式作为异步方法。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [off](arkts-telephony-observer-off-f-sys.md#off-2) | 取消订阅小区信息变化事件，使用callback方式作为异步方法。 |
-| [offCellInfoChange](arkts-telephony-observer-offcellinfochange-f-sys.md#offcellinfochange) | Cancel callback when the cell information is updated. |
-| [on](arkts-telephony-observer-on-f-sys.md#on-4) | 订阅小区信息变化事件，使用callback方式作为异步方法。 |
-| [on](arkts-telephony-observer-on-f-sys.md#on-5) | 订阅指定卡槽位的小区信息变化事件，使用callback方式作为异步方法。 |
-| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md#oncellinfochange) | Callback when the cell information corresponding to the default sim card is updated. |
-| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md#oncellinfochange-1) | Callback when the cell information corresponding to a monitored {@code slotId} is updated. |
+| [offCellInfoChange](arkts-telephony-observer-offcellinfochange-f-sys.md#offCellInfoChange) | Cancel callback when the cell information is updated. |
+| off_cellInfoChange | 取消订阅小区信息变化事件，使用callback方式作为异步方法。 |
+| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md#onCellInfoChange) | Callback when the cell information corresponding to the default sim card is updated. |
+| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md#onCellInfoChange（系统接口）) | Callback when the cell information corresponding to a monitored {@code slotId} is updated. |
+| on_cellInfoChange | 订阅小区信息变化事件，使用callback方式作为异步方法。 |
+| [on_cellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md#on_cellinfochange-1) | 订阅指定卡槽位的小区信息变化事件，使用callback方式作为异步方法。 |
 <!--DelEnd-->
 
 ### 接口

@@ -36,7 +36,7 @@ Indicates secure channel or not
 
 **Deprecated since:** 10
 
-**Substitutes:** [secure](ohos.bluetooth.socket/socket.SppOptions#secure)
+**Substitutes:** [secure](arkts-connectivity-socket-sppoptions-i.md#secure)
 
 <!--Device-SppOption-secure: boolean--><!--Device-SppOption-secure: boolean-End-->
 
@@ -58,7 +58,7 @@ Spp link type [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md#SppType
 
 **Deprecated since:** 10
 
-**Substitutes:** [type](ohos.bluetooth.socket/socket.SppOptions#type)
+**Substitutes:** [type](arkts-connectivity-socket-sppoptions-i.md#type)
 
 <!--Device-SppOption-type: SppType--><!--Device-SppOption-type: SppType-End-->
 
@@ -80,7 +80,7 @@ Indicates the UUID in the SDP record.
 
 **Deprecated since:** 10
 
-**Substitutes:** [uuid](ohos.bluetooth.socket/socket.SppOptions#uuid)
+**Substitutes:** [uuid](arkts-connectivity-socket-sppoptions-i.md#uuid)
 
 <!--Device-SppOption-uuid: string--><!--Device-SppOption-uuid: string-End-->
 

@@ -8,7 +8,7 @@ Describes the bond key param.
 
 **Deprecated since:** 10
 
-**Substitutes:** [PinRequiredParam](ohos.bluetooth.connection/connection.PinRequiredParam)
+**Substitutes:** [PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md#PinRequiredParam)
 
 <!--Device-bluetoothManager-interface PinRequiredParam--><!--Device-bluetoothManager-interface PinRequiredParam-End-->
 
@@ -36,7 +36,7 @@ ID of the device to pair.
 
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](ohos.bluetooth.connection/connection.PinRequiredParam#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-connection-pinrequiredparam-i.md#deviceId)
 
 <!--Device-PinRequiredParam-deviceId: string--><!--Device-PinRequiredParam-deviceId: string-End-->
 
@@ -58,7 +58,7 @@ Key for the device pairing.
 
 **Deprecated since:** 10
 
-**Substitutes:** [pinCode](ohos.bluetooth.connection/connection.PinRequiredParam#pinCode)
+**Substitutes:** [pinCode](arkts-connectivity-connection-pinrequiredparam-i.md#pinCode)
 
 <!--Device-PinRequiredParam-pinCode: string--><!--Device-PinRequiredParam-pinCode: string-End-->
 

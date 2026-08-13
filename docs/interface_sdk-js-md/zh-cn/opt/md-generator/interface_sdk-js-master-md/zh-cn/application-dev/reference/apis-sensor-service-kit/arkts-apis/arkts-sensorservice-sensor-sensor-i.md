@@ -2,7 +2,9 @@
 
 指示传感器信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-interface Sensor--><!--Device-sensor-interface Sensor-End-->
 
@@ -18,7 +20,9 @@ deviceId?: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-deviceId?: int--><!--Device-Sensor-deviceId?: int-End-->
 
@@ -34,7 +38,9 @@ deviceName?: string
 
 **类型：** string
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-deviceName?: string--><!--Device-Sensor-deviceName?: string-End-->
 
@@ -50,7 +56,9 @@ firmwareVersion:string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-firmwareVersion:string--><!--Device-Sensor-firmwareVersion:string-End-->
 
@@ -66,7 +74,9 @@ hardwareVersion:string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-hardwareVersion:string--><!--Device-Sensor-hardwareVersion:string-End-->
 
@@ -82,7 +92,9 @@ isLocalSensor?: boolean
 
 **类型：** boolean
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-isLocalSensor?: boolean--><!--Device-Sensor-isLocalSensor?: boolean-End-->
 
@@ -100,6 +112,8 @@ isMockSensor?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-Sensor-isMockSensor?: boolean--><!--Device-Sensor-isMockSensor?: boolean-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -114,7 +128,9 @@ maxRange:number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-maxRange:double--><!--Device-Sensor-maxRange:double-End-->
 
@@ -130,7 +146,9 @@ maxSamplePeriod:number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-maxSamplePeriod:long--><!--Device-Sensor-maxSamplePeriod:long-End-->
 
@@ -146,7 +164,9 @@ minSamplePeriod:number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-minSamplePeriod:long--><!--Device-Sensor-minSamplePeriod:long-End-->
 
@@ -162,7 +182,9 @@ power:number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-power:double--><!--Device-Sensor-power:double-End-->
 
@@ -178,7 +200,9 @@ precision:number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-precision:double--><!--Device-Sensor-precision:double-End-->
 
@@ -194,7 +218,9 @@ sensorId:number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-sensorId:int--><!--Device-Sensor-sensorId:int-End-->
 
@@ -210,7 +236,9 @@ sensorIndex?: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-sensorIndex?: int--><!--Device-Sensor-sensorIndex?: int-End-->
 
@@ -226,7 +254,9 @@ sensorName:string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-sensorName:string--><!--Device-Sensor-sensorName:string-End-->
 
@@ -242,7 +272,9 @@ vendorName:string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sensor-vendorName:string--><!--Device-Sensor-vendorName:string-End-->
 

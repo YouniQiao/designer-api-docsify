@@ -2,7 +2,9 @@
 
 Describes an audio effect property.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioEffectProperty--><!--Device-audio-interface AudioEffectProperty-End-->
 
@@ -26,7 +28,9 @@ Effect category this effect property belongs to.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioEffectProperty-category: string--><!--Device-AudioEffectProperty-category: string-End-->
 
@@ -44,7 +48,9 @@ Effect flag of this effect property.
 
 **Type:** [EffectFlag](arkts-audio-audio-effectflag-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioEffectProperty-flag: EffectFlag--><!--Device-AudioEffectProperty-flag: EffectFlag-End-->
 
@@ -62,7 +68,9 @@ Name of effect property.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioEffectProperty-name: string--><!--Device-AudioEffectProperty-name: string-End-->
 

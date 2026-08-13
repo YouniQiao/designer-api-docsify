@@ -12,11 +12,11 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a key exists. This API uses an asynchronous callback to return the result.
-
-If the key does not exist, **false** is returned through the callback.
+Checks whether a key exists. This API uses an asynchronous callback to return the result. If the key does not exist, **false** is returned through the callback.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,14 +36,14 @@ If the key does not exist, **false** is returned through the callback.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
 
 ## Examples
 
@@ -76,11 +76,11 @@ huks.hasKeyItem(keyAlias, emptyOptions, (error, data) => {
 function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 ```
 
-Checks whether a key exists. This API uses a promise to return the result.
-
-If the key does not exist, **false** is returned through the promise.
+Checks whether a key exists. This API uses a promise to return the result. If the key does not exist, **false** is returned through the promise.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -105,14 +105,14 @@ If the key does not exist, **false** is returned through the promise.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
 
 ## Examples
 

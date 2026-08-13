@@ -16,6 +16,8 @@ Checks whether the current device supports the ranging feature.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ranging-function isRangingSupported(): boolean--><!--Device-ranging-function isRangingSupported(): boolean-End-->

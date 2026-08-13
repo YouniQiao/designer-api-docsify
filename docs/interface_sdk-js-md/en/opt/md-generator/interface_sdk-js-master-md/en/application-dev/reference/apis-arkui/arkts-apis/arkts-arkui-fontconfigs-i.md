@@ -4,6 +4,8 @@ Defines font configurations.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FontConfigs--><!--Device-unnamed-declare interface FontConfigs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Font weight configuration. The default value is inherited from [FontWeightConfig
 **Type:** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

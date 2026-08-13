@@ -1,22 +1,10 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](./arkts/@arkts.collections:collections)、  
-[Uint8Array](./arkts/@arkts.collections:collections)、  
-[Int16Array](./arkts/@arkts.collections:collections)、  
-[Uint16Array](./arkts/@arkts.collections:collections)、  
-[Int32Array](./arkts/@arkts.collections:collections)、  
-[Uint32Array](./arkts/@arkts.collections:collections)、  
-[Uint8ClampedArray](./arkts/@arkts.collections:collections)、  
-[Float32Array](./arkts/@arkts.collections:collections)）的底层数据结构。
-
-> **说明：**
-> 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> **装饰器类型**：\@Sendable
+ArkTS TypedArray（[Int8Array](arkts-collections.md#@arkts.collections)、 [Uint8Array](arkts-collections.md#@arkts.collections)、 [Int16Array](arkts-collections.md#@arkts.collections)、 [Uint16Array](arkts-collections.md#@arkts.collections)、 [Int32Array](arkts-collections.md#@arkts.collections)、 [Uint32Array](arkts-collections.md#@arkts.collections)、 [Uint8ClampedArray](arkts-collections.md#@arkts.collections)、 [Float32Array](arkts-collections.md#@arkts.collections)）的底层数据结构。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
 <!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
 
@@ -32,6 +20,8 @@ constructor(byteLength: number)
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayBuffer-constructor(byteLength: number)--><!--Device-ArrayBuffer-constructor(byteLength: number)-End-->
@@ -42,13 +32,13 @@ constructor(byteLength: number)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [byteLength](#bytelength) | number | 是 |
+| [byteLength](#byteLength) | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## slice
 
@@ -59,6 +49,8 @@ slice(begin: number, end?: number): ArrayBuffer
 返回一个新的ArkTS ArrayBuffer对象，其包含原ArkTS ArrayBuffer指定范围的内容。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -83,8 +75,8 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## byteLength
 
@@ -97,6 +89,8 @@ buffer所占的字节数。
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

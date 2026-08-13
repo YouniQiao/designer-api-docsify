@@ -3,18 +3,22 @@
 ## edgeColors
 
 ```TypeScript
-export declare function edgeColors(all: int): NodeEdges<int>
+export function edgeColors(all: number): Edges<number>
 ```
 
-Obtain an object with all edges are set to the same color.
+Generates an **edgeColors** object with the specified edge color for all edges.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function edgeColors(all: int): NodeEdges<int>--><!--Device-unnamed-export declare function edgeColors(all: int): NodeEdges<int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-export function edgeColors(all: number): Edges<number>--><!--Device-unnamed-export function edgeColors(all: number): Edges<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +26,51 @@ Obtain an object with all edges are set to the same color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | int | Yes | The edge color will be set. |
+| all | number | Yes | Edge color, in ARGB format, for example, **0xffff00ff**. &lt;br&gt;Value range: [0, 0xffffffff] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;int&gt; | The object with all edges are set to the same color. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | edgeColors** object whose edge colors are all at the specified value. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, edgeColors } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+renderNode.backgroundColor = 0xffd5d5d5;
+renderNode.borderWidth = { left: 8, top: 8, right: 8, bottom: 8 };
+renderNode.borderColor = edgeColors(0xff519db4);
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }.margin(30)
+  }
+}
+```
 

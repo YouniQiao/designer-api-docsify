@@ -4,11 +4,46 @@
 
 **继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-camera-interface PreviewOutput extends CameraOutput--><!--Device-camera-interface PreviewOutput extends CameraOutput-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface PreviewOutput--><!--Device-camera-interface PreviewOutput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## addDeferredSurface
+
+```TypeScript
+addDeferredSurface(surfaceId: string): void
+```
+
+配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitConfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后 运行。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void--><!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| surfaceId | string | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## attachSketchSurface
 
@@ -18,7 +53,9 @@ attachSketchSurface(surfaceId: string): void
 
 Attaches a surface for PiP preview.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void--><!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void-End-->
 
@@ -36,10 +73,10 @@ Attaches a surface for PiP preview.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -70,7 +107,9 @@ enableSketch(enabled: boolean): void
 
 Enables or disables PiP preview.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-enableSketch(enabled: boolean): void--><!--Device-PreviewOutput-enableSketch(enabled: boolean): void-End-->
 
@@ -88,10 +127,10 @@ Enables or disables PiP preview.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -121,7 +160,9 @@ getSketchRatio(): number
 
 Obtains the zoom ratio when PiP preview is enabled.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-getSketchRatio(): double--><!--Device-PreviewOutput-getSketchRatio(): double-End-->
 
@@ -139,8 +180,8 @@ Obtains the zoom ratio when PiP preview is enabled.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -159,7 +200,9 @@ isSketchSupported(): boolean
 
 Checks whether Picture-in-Picture (PiP) preview is supported.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-isSketchSupported(): boolean--><!--Device-PreviewOutput-isSketchSupported(): boolean-End-->
 
@@ -177,7 +220,7 @@ Checks whether Picture-in-Picture (PiP) preview is supported.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -197,7 +240,37 @@ function isSketchSupported(previewOutput: camera.PreviewOutput): boolean {
 }
 ```
 
-## off('sketchStatusChanged')
+## offSketchStatusChanged
+
+```TypeScript
+offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void
+```
+
+Unsubscribes sketch status changed event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_sketchStatusChanged
 
 ```TypeScript
 off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void
@@ -206,6 +279,8 @@ off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): vo
 Unsubscribes from PiP status change events.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void-End-->
 
@@ -224,7 +299,7 @@ Unsubscribes from PiP status change events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -234,7 +309,37 @@ function unregisterSketchStatusChanged(previewOutput: camera.PreviewOutput): voi
 }
 ```
 
-## on('sketchStatusChanged')
+## onSketchStatusChanged
+
+```TypeScript
+onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void
+```
+
+Subscribes sketch status changed event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_sketchStatusChanged
 
 ```TypeScript
 on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void
@@ -243,6 +348,8 @@ on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void
 Subscribes to PiP status change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void-End-->
 
@@ -261,7 +368,7 @@ Subscribes to PiP status change events. This API uses an asynchronous callback t
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

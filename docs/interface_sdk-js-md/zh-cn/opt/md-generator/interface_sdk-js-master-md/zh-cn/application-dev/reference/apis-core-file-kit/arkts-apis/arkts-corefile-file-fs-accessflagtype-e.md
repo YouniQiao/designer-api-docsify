@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum AccessFlagType--><!--Device-unnamed-declare enum AccessFlagType-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ LOCAL = 0
 文件是否在本地。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-AccessFlagType-LOCAL = 0--><!--Device-AccessFlagType-LOCAL = 0-End-->
 

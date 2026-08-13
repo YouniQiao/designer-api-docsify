@@ -2,7 +2,9 @@
 
 Defines the ICC account information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
 
@@ -26,6 +28,8 @@ Indicates the operatorName for card.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IccAccountInfo-operatorName?: string--><!--Device-IccAccountInfo-operatorName?: string-End-->
@@ -40,11 +44,13 @@ Indicates the operatorName for card.
 simLabelIndex?: number
 ```
 
-Indicates the simLabelIndex for card.The value should be an integer.
+Indicates the simLabelIndex for card. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

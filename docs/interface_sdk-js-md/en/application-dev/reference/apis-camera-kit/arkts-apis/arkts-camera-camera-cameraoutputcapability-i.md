@@ -2,9 +2,11 @@
 
 Describes the camera output capability.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface CameraOutputCapability--><!--Device-camera-interface CameraOutputCapability-End-->
 
@@ -26,9 +28,11 @@ Supported photo profiles.
 
 **Type:** Array&lt;[Profile](arkts-camera-camera-profile-i.md)&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -46,9 +50,11 @@ Supported preview profiles.
 
 **Type:** Array&lt;[Profile](arkts-camera-camera-profile-i.md)&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -66,9 +72,11 @@ Supported metadata object types.
 
 **Type:** Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -86,9 +94,11 @@ Supported video profiles.
 
 **Type:** Array&lt;[VideoProfile](arkts-camera-camera-videoprofile-i.md)&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

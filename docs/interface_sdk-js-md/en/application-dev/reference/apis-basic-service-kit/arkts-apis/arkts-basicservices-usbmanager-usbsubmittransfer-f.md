@@ -12,19 +12,13 @@ import { usbManager } from '@kit.BasicServicesKit';
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Requests a USB data transfer.
+Requests a USB data transfer. > **NOTE：**> > This API uses an asynchronous callback to return the result. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > API to claim a communication interface.
 
-> **NOTE：**
-> 
-> This API uses an asynchronous callback to return the result.
-> 
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
-> API to claim a communication interface.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void-End-->
 
@@ -40,12 +34,12 @@ Requests a USB data transfer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [14400009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) | Insufficient memory. Possible causes:  &lt;br&gt;1. Memory allocation failed. |
-| [14400008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
-| [14400012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400012-io-error) | Transmission I/O error. |
-| [14400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:  &lt;br&gt;1. The transfer has already been submitted.  &lt;br&gt;2. The interface is claimed by another program or driver. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [14400009](../../apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) | Insufficient memory. Possible causes:  &lt;br&gt;1. Memory allocation failed. |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
+| [14400012](../../apis-basic-services-kit/errorcode-usb.md#14400012-io-error) | Transmission I/O error. |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400007](../../apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:  &lt;br&gt;1. The transfer has already been submitted.  &lt;br&gt;2. The interface is claimed by another program or driver. |
 
 ## Examples
 

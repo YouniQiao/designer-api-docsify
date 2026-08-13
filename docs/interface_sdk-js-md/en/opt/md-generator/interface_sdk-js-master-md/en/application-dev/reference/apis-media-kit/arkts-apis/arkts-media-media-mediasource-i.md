@@ -1,9 +1,10 @@
 # MediaSource
 
-The MediaSource class defines the media data information, which is from   
-[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl).
+The MediaSource class defines the media data information, which is from [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface MediaSource--><!--Device-media-interface MediaSource-End-->
 
@@ -25,6 +26,8 @@ Sets whether to enable offline caching during video playback.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-MediaSource-enableOfflineCache(enable: boolean): void--><!--Device-MediaSource-enableOfflineCache(enable: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -44,6 +47,8 @@ getID(): string
 Gets the identifier of the media source.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,9 +72,11 @@ setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void
 
 Sets a MediaSourceLoader object, which is used to help the player request media data.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void--><!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void-End-->
 
@@ -89,9 +96,11 @@ setMimeType(mimeType: AVMimeTypes): void
 
 Sets the MIME type to help the player process extended media sources.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void--><!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void-End-->
 

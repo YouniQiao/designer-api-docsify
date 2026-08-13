@@ -14,7 +14,9 @@ function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<vo
 
 Enables or disables gesture navigation. This API uses an asynchronous callback to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-window-function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -33,10 +35,10 @@ Enables or disables gesture navigation. This API uses an asynchronous callback t
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -66,7 +68,9 @@ function setGestureNavigationEnabled(enable: boolean): Promise<void>
 
 Enables or disables gesture navigation. This API uses a promise to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-function setGestureNavigationEnabled(enable: boolean): Promise<void>--><!--Device-window-function setGestureNavigationEnabled(enable: boolean): Promise<void>-End-->
 
@@ -90,10 +94,10 @@ Enables or disables gesture navigation. This API uses a promise to return the re
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

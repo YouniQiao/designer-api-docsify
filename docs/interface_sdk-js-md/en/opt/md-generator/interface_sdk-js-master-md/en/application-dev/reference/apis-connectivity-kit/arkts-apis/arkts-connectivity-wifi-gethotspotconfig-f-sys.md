@@ -18,7 +18,7 @@ Obtains the Wi-Fi hotspot configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getHotspotConfig](ohos.wifiManager/wifiManager.getHotspotConfig)
+**Substitutes:** [getHotspotConfig](arkts-connectivity-wifimanager-gethotspotconfig-f-sys.md#getHotspotConfig-(System-API))
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 

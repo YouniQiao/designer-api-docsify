@@ -2,9 +2,11 @@
 
 The continueManager module provides capabilities for managing cross-device application migration. For example, it allows you to obtain the result of quickly launching the target application during the cross-device migration process.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -24,10 +26,10 @@ import { continueManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-ability-continuemanager-off-f.md#off) | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
-| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offpreparecontinue) | Unregister prepareContinue event. |
-| [on](arkts-ability-continuemanager-on-f.md#on) | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
-| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onpreparecontinue) | Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION. |
+| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offPrepareContinue) | Unregister prepareContinue event. |
+| off_prepareContinue | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onPrepareContinue) | Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION. |
+| on_prepareContinue | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
 
 ### Interfaces
 

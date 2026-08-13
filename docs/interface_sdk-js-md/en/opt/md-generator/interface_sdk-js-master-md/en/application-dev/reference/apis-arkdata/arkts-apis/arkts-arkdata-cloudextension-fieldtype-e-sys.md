@@ -2,7 +2,9 @@
 
 Enumerates the types of the fields in a database table. Use the enum name rather than the enum value.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export enum FieldType--><!--Device-cloudExtension-export enum FieldType-End-->
 
@@ -18,7 +20,9 @@ NULL = 0
 
 NULL.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-NULL = 0--><!--Device-FieldType-NULL = 0-End-->
 
@@ -34,7 +38,9 @@ NUMBER = 1
 
 Number.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-NUMBER = 1--><!--Device-FieldType-NUMBER = 1-End-->
 
@@ -50,7 +56,9 @@ REAL = 2
 
 Double-precision floating point.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-REAL = 2--><!--Device-FieldType-REAL = 2-End-->
 
@@ -66,7 +74,9 @@ TEXT = 3
 
 Text.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-TEXT = 3--><!--Device-FieldType-TEXT = 3-End-->
 
@@ -82,7 +92,9 @@ BOOL = 4
 
 Boolean.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-BOOL = 4--><!--Device-FieldType-BOOL = 4-End-->
 
@@ -98,7 +110,9 @@ BLOB = 5
 
 BLOB, which can hold a binary file.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-BLOB = 5--><!--Device-FieldType-BLOB = 5-End-->
 
@@ -112,9 +126,11 @@ BLOB, which can hold a binary file.
 ASSET = 6
 ```
 
-Asset. For details, see [Asset](relationalStore.Asset).
+Asset. For details, see Asset.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-ASSET = 6--><!--Device-FieldType-ASSET = 6-End-->
 
@@ -128,9 +144,11 @@ Asset. For details, see [Asset](relationalStore.Asset).
 ASSETS = 7
 ```
 
-Assets. For details, see [Assets](relationalStore.Assets).
+Assets. For details, see Assets.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FieldType-ASSETS = 7--><!--Device-FieldType-ASSETS = 7-End-->
 

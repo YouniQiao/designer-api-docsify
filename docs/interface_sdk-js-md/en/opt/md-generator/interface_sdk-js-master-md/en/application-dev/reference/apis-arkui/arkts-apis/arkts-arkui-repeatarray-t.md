@@ -8,6 +8,8 @@ Defines a union type for **Repeat** data source parameters.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -22,4 +24,4 @@ Defines a union type for **Repeat** data source parameters.
 | --- |
 | Array & lt;T & gt; |
 | ReadonlyArray & lt;T & gt; |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md) & lt;Array & lt;T & gt; & gt; |
+| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md) & lt;Array & lt;T & gt; & gt; |

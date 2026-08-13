@@ -1,14 +1,12 @@
 # BlanklessFrameInterpolationState
 
-Enumerates the frame interpolation states.
-
-&lt;strong&gt;ArkWeb Dual Web Engine Versioning Convention&lt;/strong&gt;:&lt;p&gt;See [ArkWeb Dual Web Engine Versioning Convention] for switching between Legacy and Evergreen Web Engine.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+定义当前插帧状态 设备行为差异:仅支持手机平台，其他平台返回801
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum BlanklessFrameInterpolationState--><!--Device-webview-enum BlanklessFrameInterpolationState-End-->
 
@@ -20,13 +18,13 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 FRAME_INTERPOLATION_SUCCEEDED = 0
 ```
 
-Frame interpolation succeeded.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+插帧成功 设备行为差异:仅支持手机平台，其他平台返回801
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +38,13 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 FRAME_INTERPOLATION_FAILED = 1
 ```
 
-Frame interpolation failed.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+插帧失败 设备行为差异:仅支持手机平台，其他平台返回801
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,13 +58,13 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 FRAME_INTERPOLATION_REMOVED = 2
 ```
 
-The frame interpolation is removed.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+插帧移除 设备行为差异:仅支持手机平台，其他平台返回801
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

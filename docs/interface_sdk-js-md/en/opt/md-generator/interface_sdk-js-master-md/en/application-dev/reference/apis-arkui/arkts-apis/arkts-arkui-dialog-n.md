@@ -4,6 +4,8 @@ Provides unified dialog APIs.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace dialog--><!--Device-unnamed-declare namespace dialog-End-->

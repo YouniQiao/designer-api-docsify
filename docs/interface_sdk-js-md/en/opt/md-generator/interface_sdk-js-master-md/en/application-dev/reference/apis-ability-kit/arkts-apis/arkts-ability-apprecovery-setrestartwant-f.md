@@ -14,7 +14,9 @@ function setRestartWant(want: Want): void
 
 Sets an ability that will be recovered. The ability must be a UIAbility in the current bundle.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

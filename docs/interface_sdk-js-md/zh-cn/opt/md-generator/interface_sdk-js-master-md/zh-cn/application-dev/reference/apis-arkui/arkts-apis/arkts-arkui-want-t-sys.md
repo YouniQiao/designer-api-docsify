@@ -8,6 +8,8 @@ declare type Want = import('../api/@ohos.app.ability.Want').default
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare type Want = import('../api/@ohos.app.ability.Want').default--><!--Device-unnamed-declare type Want = import('../api/@ohos.app.ability.Want').default-End-->

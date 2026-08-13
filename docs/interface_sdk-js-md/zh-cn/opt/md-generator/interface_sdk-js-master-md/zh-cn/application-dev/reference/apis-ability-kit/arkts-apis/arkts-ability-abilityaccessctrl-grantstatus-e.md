@@ -2,7 +2,9 @@
 
 表示授权状态的枚举。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityAccessCtrl-export enum GrantStatus--><!--Device-abilityAccessCtrl-export enum GrantStatus-End-->
 
@@ -16,7 +18,9 @@ PERMISSION_DENIED = -1
 
 表示未授权。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +36,9 @@ PERMISSION_GRANTED = 0
 
 表示已授权。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

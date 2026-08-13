@@ -2,9 +2,11 @@
 
 Describes audio capturer configurations.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioCapturerOptions--><!--Device-audio-interface AudioCapturerOptions-End-->
 
@@ -26,9 +28,11 @@ Audio capturer information.
 
 **Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo-End-->
 
@@ -40,10 +44,7 @@ Audio capturer information.
 playbackCaptureConfig?: AudioPlaybackCaptureConfig
 ```
 
-Defines configuration for capturing played audio.
-
-This API is supported since API version 10 and deprecated since API version 12. You are advised to use  
-[AVScreenCapture](../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
+Defines configuration for capturing played audio. This API is supported since API version 10 and deprecated since API version 12. You are advised to use [AVScreenCapture](../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
 
 **Type:** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
 
@@ -53,7 +54,7 @@ This API is supported since API version 10 and deprecated since API version 12. 
 
 **Deprecated since:** 12
 
-**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
+**Substitutes:** OH_AVScreenCapture in native interface.
 
 <!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig--><!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig-End-->
 
@@ -65,13 +66,15 @@ This API is supported since API version 10 and deprecated since API version 12. 
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-The playback capture mode for audio capturer.This can be a combination of the available [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md#AudioPlaybackCaptureMode).
+The playback capture mode for audio capturer. This can be a combination of the available [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md#AudioPlaybackCaptureMode).
 
 **Type:** [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,9 +92,11 @@ Audio stream information.
 
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo--><!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo-End-->
 

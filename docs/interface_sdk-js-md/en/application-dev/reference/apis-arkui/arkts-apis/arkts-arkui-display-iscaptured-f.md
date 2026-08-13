@@ -14,11 +14,13 @@ function isCaptured(): boolean
 
 Checks whether the device's screen content is being captured.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function isCaptured(): boolean--><!--Device-display-function isCaptured(): boolean-End-->
 
@@ -34,7 +36,7 @@ Checks whether the device's screen content is being captured.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -56,7 +58,9 @@ Check whether the device is captured, projected, or recorded by any app in the b
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +86,6 @@ Check whether the device is captured, projected, or recorded by any app in the b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1.The size of bundleNameList is larger than 100. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1.The size of bundleNameList is larger than 100. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 

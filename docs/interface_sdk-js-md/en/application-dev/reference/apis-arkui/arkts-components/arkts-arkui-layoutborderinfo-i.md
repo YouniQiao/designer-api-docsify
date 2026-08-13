@@ -8,7 +8,7 @@ Provides the border information of the child component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
+**Substitutes:** Measurable/Layoutable
 
 <!--Device-unnamed-declare interface LayoutBorderInfo--><!--Device-unnamed-declare interface LayoutBorderInfo-End-->
 
@@ -22,7 +22,7 @@ borderWidth: EdgeWidths
 
 Edge widths in different directions of the component.
 
-**Type:** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
+**Type:** EdgeWidths
 
 **Since:** 9
 
@@ -30,7 +30,7 @@ Edge widths in different directions of the component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getBorderWidth](getBorderWidth)
+**Substitutes:** getBorderWidth
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -54,7 +54,7 @@ Margin values in different directions of the component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getMargin](getMargin)
+**Substitutes:** getMargin
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -70,7 +70,7 @@ padding: Padding
 
 Padding values in different directions of the component.
 
-**Type:** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
+**Type:** Padding
 
 **Since:** 9
 
@@ -78,7 +78,7 @@ Padding values in different directions of the component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getPadding](getPadding)
+**Substitutes:** getPadding
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

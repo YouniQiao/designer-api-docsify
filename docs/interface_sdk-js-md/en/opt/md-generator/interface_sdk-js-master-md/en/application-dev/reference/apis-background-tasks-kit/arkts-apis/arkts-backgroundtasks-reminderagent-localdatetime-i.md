@@ -32,7 +32,7 @@ Date.
 
 **Deprecated since:** 9
 
-**Substitutes:** [day](reminderAgentManager.LocalDateTime.day)
+**Substitutes:** day
 
 <!--Device-LocalDateTime-day: number--><!--Device-LocalDateTime-day: number-End-->
 
@@ -52,7 +52,7 @@ Hour.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hour](reminderAgentManager.LocalDateTime.hour)
+**Substitutes:** hour
 
 <!--Device-LocalDateTime-hour: number--><!--Device-LocalDateTime-hour: number-End-->
 
@@ -72,7 +72,7 @@ Minute.
 
 **Deprecated since:** 9
 
-**Substitutes:** [minute](reminderAgentManager.LocalDateTime.minute)
+**Substitutes:** minute
 
 <!--Device-LocalDateTime-minute: number--><!--Device-LocalDateTime-minute: number-End-->
 
@@ -92,7 +92,7 @@ Month.
 
 **Deprecated since:** 9
 
-**Substitutes:** [month](reminderAgentManager.LocalDateTime.month)
+**Substitutes:** month
 
 <!--Device-LocalDateTime-month: number--><!--Device-LocalDateTime-month: number-End-->
 
@@ -112,7 +112,7 @@ Second.
 
 **Deprecated since:** 9
 
-**Substitutes:** [second](reminderAgentManager.LocalDateTime.second)
+**Substitutes:** second
 
 <!--Device-LocalDateTime-second?: number--><!--Device-LocalDateTime-second?: number-End-->
 
@@ -132,7 +132,7 @@ Year.
 
 **Deprecated since:** 9
 
-**Substitutes:** [year](reminderAgentManager.LocalDateTime.year)
+**Substitutes:** year
 
 <!--Device-LocalDateTime-year: number--><!--Device-LocalDateTime-year: number-End-->
 

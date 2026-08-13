@@ -4,6 +4,8 @@ Display state of the popup.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PopupStateChangeParam--><!--Device-unnamed-declare interface PopupStateChangeParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Display state of the popup. It returns **true** when the popup transitions from 
 **Type:** boolean
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

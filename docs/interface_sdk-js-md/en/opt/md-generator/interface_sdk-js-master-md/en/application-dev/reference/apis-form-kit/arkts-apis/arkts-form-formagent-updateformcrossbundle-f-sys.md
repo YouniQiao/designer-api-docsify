@@ -16,6 +16,8 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.UPDATE_FORM_CROSS_BUNDLE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,11 +45,11 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
-| [16501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16501007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501007-untrusted-widget) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16501007](../errorcode-form.md#16501007-untrusted-widget) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

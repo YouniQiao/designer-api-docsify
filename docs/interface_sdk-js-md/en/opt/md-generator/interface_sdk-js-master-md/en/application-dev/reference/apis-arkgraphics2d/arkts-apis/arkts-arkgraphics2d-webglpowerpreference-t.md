@@ -8,6 +8,8 @@ WebGL 1.0
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-type WebGLPowerPreference = "default" | "low-power" | "high-performance"--><!--Device-unnamed-type WebGLPowerPreference = "default" | "low-power" | "high-performance"-End-->

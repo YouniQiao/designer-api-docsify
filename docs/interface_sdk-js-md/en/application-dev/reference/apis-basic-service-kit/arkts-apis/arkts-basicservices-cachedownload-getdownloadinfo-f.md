@@ -12,18 +12,13 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function getDownloadInfo(url: string): DownloadInfo | undefined
 ```
 
-Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits.
+Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits. - If the specified URL is found in the download information list, the latest [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md#DownloadInfo) corresponding to the URL is returned. - If the specified URL cannot be found in the download information list, **undefined** is returned. - If the download information has already cached in the URL, the new cached information will overwrite the old one. - When the target information is stored in the memory, the existing cache data is replaced in the LRU mode.
 
-- If the specified URL is found in the download information list, the latest   
-[DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md#DownloadInfo) corresponding to the URL is returned.  
-- If the specified URL cannot be found in the download information list, **undefined** is returned.  
-- If the download information has already cached in the URL, the new cached information will overwrite the old   
-one.  
-- When the target information is stored in the memory, the existing cache data is replaced in the LRU mode.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -47,5 +42,5 @@ one.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 

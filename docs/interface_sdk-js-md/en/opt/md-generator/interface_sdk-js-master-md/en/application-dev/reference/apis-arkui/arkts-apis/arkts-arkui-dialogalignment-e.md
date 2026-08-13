@@ -4,6 +4,8 @@ Enumerates the alignment modes of the alert dialog boxes.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum DialogAlignment--><!--Device-unnamed-declare enum DialogAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Top
 Vertical top alignment.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Vertical center alignment.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DialogAlignment-Center--><!--Device-DialogAlignment-Center-End-->
@@ -49,6 +55,8 @@ Bottom
 Vertical bottom alignment.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ Default alignment.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DialogAlignment-Default--><!--Device-DialogAlignment-Default-End-->
@@ -81,6 +91,8 @@ TopStart
 Top left alignment.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ Top right alignment.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DialogAlignment-TopEnd--><!--Device-DialogAlignment-TopEnd-End-->
@@ -113,6 +127,8 @@ CenterStart
 Center left alignment.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,6 +146,8 @@ Center right alignment.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DialogAlignment-CenterEnd--><!--Device-DialogAlignment-CenterEnd-End-->
@@ -146,6 +164,8 @@ Bottom left alignment.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DialogAlignment-BottomStart--><!--Device-DialogAlignment-BottomStart-End-->
@@ -161,6 +181,8 @@ BottomEnd
 Bottom right alignment.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

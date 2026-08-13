@@ -18,7 +18,7 @@ Displays the menu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**Substitutes:** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void-End-->
 
@@ -69,7 +69,7 @@ Displays the menu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**Substitutes:** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>-End-->
 

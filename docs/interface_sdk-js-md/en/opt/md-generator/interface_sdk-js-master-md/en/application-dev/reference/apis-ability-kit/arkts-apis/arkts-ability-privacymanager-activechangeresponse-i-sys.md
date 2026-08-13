@@ -2,7 +2,9 @@
 
 Defines the detailed permission usage information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-privacyManager-interface ActiveChangeResponse--><!--Device-privacyManager-interface ActiveChangeResponse-End-->
 
@@ -26,7 +28,9 @@ Permission usage status.
 
 **Type:** [PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus--><!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus-End-->
 
@@ -40,13 +44,13 @@ Permission usage status.
 callingTokenId?: number
 ```
 
-Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**.
-
-Default value: **0**.
+Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**. Default value: **0**.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-callingTokenId?: int--><!--Device-ActiveChangeResponse-callingTokenId?: int-End-->
 
@@ -64,7 +68,9 @@ ID of the device where the permission usage status change occurred.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-deviceId: string--><!--Device-ActiveChangeResponse-deviceId: string-End-->
 
@@ -78,11 +84,13 @@ ID of the device where the permission usage status change occurred.
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is returned when it is necessary to distinguish permission usage records from different call sources within the same application.The maximum length is 48. Default value: Empty string.
+Extension identity, used to identify additional identity information of the caller. This field is returned when it is necessary to distinguish permission usage records from different call sources within the same application. The maximum length is 48. Default value: Empty string.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +110,9 @@ Name of the permission whose usage status has changed.
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-permissionName: Permissions--><!--Device-ActiveChangeResponse-permissionName: Permissions-End-->
 
@@ -120,7 +130,9 @@ Token ID of the application whose permission usage changes are subscribed to.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-tokenId: int--><!--Device-ActiveChangeResponse-tokenId: int-End-->
 
@@ -134,13 +146,13 @@ Token ID of the application whose permission usage changes are subscribed to.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE.
-
-Default value: NORMAL_TYPE.
+Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE. Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-usedType?: PermissionUsedType--><!--Device-ActiveChangeResponse-usedType?: PermissionUsedType-End-->
 

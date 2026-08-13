@@ -14,7 +14,9 @@ function getGwpAsanGrayscaleState(): number
 
 Obtain the remaining days of GWP-ASan grayscale for your application.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
 

@@ -2,7 +2,9 @@
 
 铃声参数选项。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RingtoneOptions--><!--Device-unnamed-export interface RingtoneOptions-End-->
 
@@ -20,7 +22,9 @@ loop: boolean
 
 **类型：** boolean
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtoneOptions-loop: boolean--><!--Device-RingtoneOptions-loop: boolean-End-->
 
@@ -38,7 +42,9 @@ volume: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtoneOptions-volume: double--><!--Device-RingtoneOptions-volume: double-End-->
 

@@ -1,10 +1,12 @@
 # Unicode
 
-Provides the API for accessing unicode character properties. For example, determine whether a character is a number.
+Provides character attribute management capabilities, such as checking whether a character is a space, digit, or letter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class Unicode--><!--Device-i18n-export class Unicode-End-->
 
@@ -26,7 +28,9 @@ Detects the encoding information of the input byte stream.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,7 @@ Detects the encoding information of the input byte stream.
 
 | Type | Description |
 | --- | --- |
-| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
+| [EncodingInfo](../../apis-na/arkts-apis/arkts-na-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
 
 ## getType
 
@@ -58,9 +62,11 @@ Obtains the type of the input character.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static getType(ch: string): string--><!--Device-Unicode-static getType(ch: string): string-End-->
 
@@ -70,13 +76,21 @@ Obtains the type of the input character.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Type of the input character. |
+| string | Type of the input character.U_UNASSIGNED： Non-category for unassigned and non-character code points. The value can be |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
+```
 
 ## isDigit
 
@@ -88,9 +102,11 @@ Checks whether the input character is a digit.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isDigit(ch: string): boolean--><!--Device-Unicode-static isDigit(ch: string): boolean-End-->
 
@@ -100,13 +116,21 @@ Checks whether the input character is a digit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is a digit, and false otherwise. |
+| boolean | true** if the input character is a digit, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
+```
 
 ## isIdeograph
 
@@ -118,9 +142,11 @@ Checks whether the input character is an ideographic character.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isIdeograph(ch: string): boolean--><!--Device-Unicode-static isIdeograph(ch: string): boolean-End-->
 
@@ -130,13 +156,21 @@ Checks whether the input character is an ideographic character.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character an ideographic character, and false otherwise. |
+| boolean | true** if the input character an ideographic character, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
+```
 
 ## isLetter
 
@@ -148,9 +182,11 @@ Checks whether the input character is a letter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isLetter(ch: string): boolean--><!--Device-Unicode-static isLetter(ch: string): boolean-End-->
 
@@ -160,13 +196,21 @@ Checks whether the input character is a letter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character a letter, and false otherwise. |
+| boolean | true** if the input character a letter, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
+```
 
 ## isLowerCase
 
@@ -178,9 +222,11 @@ Checks whether the input character is a lowercase letter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isLowerCase(ch: string): boolean--><!--Device-Unicode-static isLowerCase(ch: string): boolean-End-->
 
@@ -190,13 +236,21 @@ Checks whether the input character is a lowercase letter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character a lowercase letter, and false otherwise. |
+| boolean | true** if the input character a lowercase letter, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
+```
 
 ## isRTL
 
@@ -208,9 +262,11 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isRTL(ch: string): boolean--><!--Device-Unicode-static isRTL(ch: string): boolean-End-->
 
@@ -220,13 +276,21 @@ Checks whether the input character is of the right to left (RTL) language.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is of the RTL language, and false otherwise. |
+| boolean | true** if the input character is of the RTL language, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
+```
 
 ## isSpaceChar
 
@@ -238,9 +302,11 @@ Checks whether the input character is a space.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isSpaceChar(ch: string): boolean--><!--Device-Unicode-static isSpaceChar(ch: string): boolean-End-->
 
@@ -250,13 +316,21 @@ Checks whether the input character is a space.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is a space, and false otherwise. |
+| boolean | true** if the input character is a space, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
+```
 
 ## isUpperCase
 
@@ -268,9 +342,11 @@ Checks whether the input character is an uppercase letter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isUpperCase(ch: string): boolean--><!--Device-Unicode-static isUpperCase(ch: string): boolean-End-->
 
@@ -280,13 +356,21 @@ Checks whether the input character is an uppercase letter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character an uppercase letter, and false otherwise. |
+| boolean | true** if the input character an uppercase letter, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
+```
 
 ## isWhitespace
 
@@ -298,9 +382,11 @@ Checks whether the input character is a whitespace.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Unicode-static isWhitespace(ch: string): boolean--><!--Device-Unicode-static isWhitespace(ch: string): boolean-End-->
 
@@ -310,11 +396,19 @@ Checks whether the input character is a whitespace.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is a white space, and false otherwise. |
+| boolean | true** if the input character is a white space, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
+```
 

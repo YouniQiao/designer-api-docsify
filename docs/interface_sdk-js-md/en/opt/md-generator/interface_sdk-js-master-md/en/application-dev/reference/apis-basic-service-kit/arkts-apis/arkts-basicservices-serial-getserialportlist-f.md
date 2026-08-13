@@ -16,6 +16,8 @@ Obtains the serial port list. This API returns the result asynchronously through
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-serial-function getSerialPortList(): Promise<SerialPort[]>--><!--Device-serial-function getSerialPortList(): Promise<SerialPort[]>-End-->
@@ -32,5 +34,5 @@ Obtains the serial port list. This API returns the result asynchronously through
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |

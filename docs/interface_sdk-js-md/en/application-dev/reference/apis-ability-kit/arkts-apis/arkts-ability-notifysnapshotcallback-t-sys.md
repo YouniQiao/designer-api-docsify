@@ -6,9 +6,11 @@ type NotifySnapshotCallback = (deviceId: string, mission: int) => void
 
 Callback function on snapshot changed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -23,5 +25,5 @@ Callback function on snapshot changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the deviceId snapshot changed. |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the id of mission. |
+| mission | int | Yes | Indicates the id of mission. |
 

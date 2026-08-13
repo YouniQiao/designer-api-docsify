@@ -1,8 +1,10 @@
-# @ohos.multimodalAwareness.userStatus(用户状态感知)
+# @ohos.multimodalAwareness.userStatus
 
 本模块提供用户状态感知能力，包括年龄群组检测等功能。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace userStatus--><!--Device-unnamed-declare namespace userStatus-End-->
 
@@ -14,18 +16,20 @@
 
 | 名称 |
 | --- |
-| [off](arkts-multimodalawareness-userstatus-off-f.md#off) |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#on) |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offUserAgeGroupDetected) |
+| [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onUserAgeGroupDetected) |
+| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) |
-| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) |
-| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) |
+| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure（系统接口）) |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#queryCapabilities（系统接口）) |
+| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe（系统接口）) |
+| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

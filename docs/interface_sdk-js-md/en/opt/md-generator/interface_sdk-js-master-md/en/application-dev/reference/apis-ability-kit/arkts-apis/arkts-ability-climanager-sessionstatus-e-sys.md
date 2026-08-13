@@ -4,6 +4,8 @@ Enum for session status.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cliManager-enum SessionStatus--><!--Device-cliManager-enum SessionStatus-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -19,6 +21,8 @@ RUNNING = 'running'
 Indicates that the status is running.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Indicates that the status is completed.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SessionStatus-COMPLETED = 'completed'--><!--Device-SessionStatus-COMPLETED = 'completed'-End-->
@@ -55,6 +61,8 @@ FAILED = 'failed'
 Indicates that the status is failed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

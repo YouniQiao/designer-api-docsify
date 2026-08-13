@@ -2,9 +2,11 @@
 
 Enumerates the lockout status of an identity authentication type. This API is used to query the lockout status of a specified authentication type (such as face, fingerprint, or PIN), including whether the authentication type is locked out, the number of remaining attempts, and the lockout duration. If a user fails to be authenticated multiple times, the authenticator may enter a temporary or permanent lockout state. The application can notify the user based on the lockout information.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-userAuth-interface AuthLockState--><!--Device-userAuth-interface AuthLockState-End-->
 
@@ -26,11 +28,13 @@ Whether the authentication is locked. The value **true** indicates that the auth
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AuthLockState-isLocked: boolean--><!--Device-AuthLockState-isLocked: boolean-End-->
 
@@ -42,18 +46,17 @@ Whether the authentication is locked. The value **true** indicates that the auth
 lockoutDuration: int
 ```
 
-Remaining lockout duration, in milliseconds. This parameter is valid only when **isLocked** is set to **true**.
+Remaining lockout duration, in milliseconds. This parameter is valid only when **isLocked** is set to **true**. If the authenticator is permanently locked, the value is [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#PERMANENT_LOCKOUT_DURATION), indicating that the authenticator has been permanently locked. The user needs to perform PIN authentication before using the authentication type again. If the authenticator is temporarily locked, the value is the actual remaining lockout duration. After the lockout period ends, the user can continue to attempt authentication.
 
-If the authenticator is permanently locked, the value is  
-[PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#PERMANENT_LOCKOUT_DURATION),indicating that the authenticator has been permanently locked. The user needs to perform PIN authentication before using the authentication type again. If the authenticator is temporarily locked, the value is the actual remaining lockout duration. After the lockout period ends, the user can continue to attempt authentication.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AuthLockState-lockoutDuration: int--><!--Device-AuthLockState-lockoutDuration: int-End-->
 
@@ -67,13 +70,15 @@ remainingAuthAttempts: int
 
 Number of remaining attempts before the authentication is locked. The maximum value is **5**. The value decreases by 1 each time the authentication fails. When the value decreases to 0, the authenticator is locked. This parameter is valid only when **isLocked** is set to **false**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AuthLockState-remainingAuthAttempts: int--><!--Device-AuthLockState-remainingAuthAttempts: int-End-->
 

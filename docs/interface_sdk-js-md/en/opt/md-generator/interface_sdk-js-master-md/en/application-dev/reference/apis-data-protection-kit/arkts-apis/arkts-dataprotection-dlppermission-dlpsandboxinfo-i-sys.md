@@ -4,6 +4,8 @@ Represents the DLP sandbox information.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export interface DLPSandboxInfo--><!--Device-dlpPermission-export interface DLPSandboxInfo-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -28,6 +30,8 @@ Index of the DLP sandbox application.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-DLPSandboxInfo-appIndex: number--><!--Device-DLPSandboxInfo-appIndex: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -45,6 +49,8 @@ Index of the DLP sandbox application to be bound. This parameter is not returned
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,6 +71,8 @@ Token ID of the DLP sandbox application.
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-DLPSandboxInfo-tokenID: number--><!--Device-DLPSandboxInfo-tokenID: number-End-->
 

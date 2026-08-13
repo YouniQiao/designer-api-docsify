@@ -4,7 +4,9 @@ Defines the group notification information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface GroupInfo--><!--Device-unnamed-export interface GroupInfo-End-->
 
@@ -18,13 +20,15 @@ Defines the group notification information.
 groupTitle?: string
 ```
 
-Group title displayed after notifications are grouped. This parameter is valid only when the notification is the latest one in the notification group.This parameter is left empty by default.
+Group title displayed after notifications are grouped. This parameter is valid only when the notification is the latest one in the notification group. This parameter is left empty by default.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,16 +44,15 @@ Group title displayed after notifications are grouped. This parameter is valid o
 isGroupIcon?: boolean
 ```
 
-Whether to use the **smallIcon** field in   
-[NotificationRequest](@link ./notification/notificationRequest:NotificationRequest) as the group icon displayed after notifications are grouped. Whether to use the **smallIcon** field as the group icon when the notification is the latest one in the notification group and the **smallIcon** field is passed. The default value is **false**.  
-- **true**: yes.  
-- **false**: no.
+Whether to use the **smallIcon** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest) as the group icon displayed after notifications are grouped. Whether to use the **smallIcon** field as the group icon when the notification is the latest one in the notification group and the **smallIcon** field is passed. The default value is **false**. - **true**: yes. - **false**: no.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

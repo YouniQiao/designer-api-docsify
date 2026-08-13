@@ -2,11 +2,13 @@
 
 云资产的信息。
 
-**继承/实现关系：** CloudAsset extends [relationalStore.Asset](relationalStore.Asset)
+**继承/实现关系：** CloudAsset extends relationalStore.Asset
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-cloudExtension-export interface CloudAsset extends relationalStore.Asset--><!--Device-cloudExtension-export interface CloudAsset extends relationalStore.Asset-End-->
+**废弃版本：** -1
+
+<!--Device-cloudExtension-export interface CloudAsset--><!--Device-cloudExtension-export interface CloudAsset-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -22,7 +24,9 @@ assetId: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudAsset-assetId: string--><!--Device-CloudAsset-assetId: string-End-->
 
@@ -40,7 +44,9 @@ hash: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudAsset-hash: string--><!--Device-CloudAsset-hash: string-End-->
 

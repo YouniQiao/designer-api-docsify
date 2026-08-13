@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-componentSnapshot-interface SnapshotSizeLimitation--><!--Device-componentSnapshot-interface SnapshotSizeLimitation-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@
 maxHeight: int
 ```
 
-组件截图的最大高度限制。
-
-取值范围：（-∞，+∞）
-
-单位：px
+组件截图的最大高度限制。 取值范围：（-∞，+∞） 单位：px
 
 **类型：** int
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,17 +42,15 @@ maxHeight: int
 maxWidth: int
 ```
 
-组件截图的最大宽度限制。
-
-取值范围：（-∞，+∞）
-
-单位：px
+组件截图的最大宽度限制。 取值范围：（-∞，+∞） 单位：px
 
 **类型：** int
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

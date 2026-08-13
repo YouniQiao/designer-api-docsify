@@ -2,9 +2,11 @@
 
 Defines the layer mask of the node.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
 
@@ -12,21 +14,17 @@ Defines the layer mask of the node.
 
 ## getEnabled
 
-ArkTS-Dyn:
-```TypeScript
-getEnabled(index: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 getEnabled(index: int): boolean
 ```
 
 Checks whether the mask is enabled for a layer of a given index.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
 
@@ -36,7 +34,7 @@ Checks whether the mask is enabled for a layer of a given index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
+| index | int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -68,21 +66,17 @@ function layerMask(): void {
 
 ## setEnabled
 
-ArkTS-Dyn:
-```TypeScript
-setEnabled(index: number, enabled: boolean): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setEnabled(index: int, enabled: boolean): void
 ```
 
 Enables the mask of a layer of a given index.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
 
@@ -92,7 +86,7 @@ Enables the mask of a layer of a given index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
+| index | int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
 | enabled | boolean | Yes | Whether to enable the layer mask. true to enable, false otherwise. |
 
 ## Examples

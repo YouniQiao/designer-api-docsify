@@ -2,7 +2,9 @@
 
 Provides the extension information of nnrt device
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-interface Extension--><!--Device-mindSporeLite-interface Extension-End-->
 
@@ -24,7 +26,9 @@ Extension name
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Extension array buffer
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

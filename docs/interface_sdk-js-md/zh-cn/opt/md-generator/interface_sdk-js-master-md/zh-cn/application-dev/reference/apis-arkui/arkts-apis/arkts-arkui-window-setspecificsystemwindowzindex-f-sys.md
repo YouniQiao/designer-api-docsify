@@ -6,13 +6,11 @@
 function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: number): Promise<void>
 ```
 
-设置系统窗口的窗口层级。使用Promise异步回调。
-
-将所有该类型系统窗口zIndex调整为所设置的值，调整前后，该类型窗口之间相对层级保持不变，焦点窗口不发生变化。当应用关闭之后该类型窗口层级恢复默认值。
-
-推荐不同类型窗口设置不同的zIndex，如果已经存在相同zIndex的窗口，设置前后，窗口之间的相对层级保持不变。
+设置系统窗口的窗口层级。使用Promise异步回调。 将所有该类型系统窗口zIndex调整为所设置的值，调整前后，该类型窗口之间相对层级保持不变，焦点窗口不发生变化。当应用关闭之后该类型窗口层级恢复默认值。 推荐不同类型窗口设置不同的zIndex，如果已经存在相同zIndex的窗口，设置前后，窗口之间的相对层级保持不变。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>--><!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>-End-->
 
@@ -37,10 +35,10 @@ function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: number): 
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -14,7 +14,7 @@ function isScreenLocked(callback: AsyncCallback<boolean>): void
 
 Checks whether the screen is currently locked.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 9
 
@@ -51,7 +51,7 @@ function isScreenLocked(): Promise<boolean>
 
 Checks whether the screen is currently locked.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 9
 

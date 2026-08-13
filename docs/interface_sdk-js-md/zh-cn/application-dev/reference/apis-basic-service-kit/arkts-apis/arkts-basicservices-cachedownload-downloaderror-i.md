@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cacheDownload-interface DownloadError--><!--Device-cacheDownload-interface DownloadError-End-->
 
@@ -22,7 +24,9 @@ readonly errorCode: ErrorCode
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DownloadError-readonly errorCode: ErrorCode--><!--Device-DownloadError-readonly errorCode: ErrorCode-End-->
 
@@ -34,14 +38,15 @@ readonly errorCode: ErrorCode
 readonly message: string
 ```
 
-返回[通用错误码](../../../reference/errorcode-universal.md)或  
-[HTTP错误码](../../../reference/apis-network-kit/errorcode-net-http.md)。
+返回[通用错误码](../../errorcode-universal.md)或 [HTTP错误码](../../apis-network-kit/errorcode-net-http.md)。
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DownloadError-readonly message: string--><!--Device-DownloadError-readonly message: string-End-->
 

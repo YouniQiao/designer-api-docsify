@@ -2,7 +2,9 @@
 
 压缩/解压缩函数的返回代码。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-zlib-export enum ReturnStatus--><!--Device-zlib-export enum ReturnStatus-End-->
 
@@ -16,9 +18,11 @@ OK = 0
 
 函数调用成功。该接口支持在原子化服务中使用。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ReturnStatus-OK = 0--><!--Device-ReturnStatus-OK = 0-End-->
 
@@ -32,9 +36,11 @@ STREAM_END = 1
 
 函数调用成功，表示已处理了整个数据。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ReturnStatus-STREAM_END = 1--><!--Device-ReturnStatus-STREAM_END = 1-End-->
 
@@ -48,9 +54,11 @@ NEED_DICT = 2
 
 函数调用成功，表示需要预设字典才能继续解压缩。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ReturnStatus-NEED_DICT = 2--><!--Device-ReturnStatus-NEED_DICT = 2-End-->
 
@@ -65,6 +73,8 @@ ERRNO = -1
 函数调用失败，表示文件操作错误。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -82,6 +92,8 @@ STREAM_ERROR = -2
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ReturnStatus-STREAM_ERROR = -2--><!--Device-ReturnStatus-STREAM_ERROR = -2-End-->
@@ -97,6 +109,8 @@ DATA_ERROR = -3
 函数调用失败，表示输入数据不正确。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -114,6 +128,8 @@ MEM_ERROR = -4
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ReturnStatus-MEM_ERROR = -4--><!--Device-ReturnStatus-MEM_ERROR = -4-End-->
@@ -129,6 +145,8 @@ BUF_ERROR = -5
 函数调用失败，表示输入缓冲区不正确。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

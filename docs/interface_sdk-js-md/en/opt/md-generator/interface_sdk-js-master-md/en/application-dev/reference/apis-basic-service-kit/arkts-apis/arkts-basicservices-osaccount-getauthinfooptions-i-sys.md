@@ -1,9 +1,10 @@
 # GetAuthInfoOptions (System API)
 
-Represents a set of optional parameters for  
-[GetAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getAuthInfo-3).
+Represents a set of optional parameters for [GetAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getAuthInfo).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface GetAuthInfoOptions--><!--Device-osAccount-interface GetAuthInfoOptions-End-->
 
@@ -27,7 +28,9 @@ OS account ID, which is **undefined** by default.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetAuthInfoOptions-accountId?: int--><!--Device-GetAuthInfoOptions-accountId?: int-End-->
 
@@ -45,7 +48,9 @@ Authentication type, which is **undefined** by default.
 
 **Type:** AuthType
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetAuthInfoOptions-authType?: AuthType--><!--Device-GetAuthInfoOptions-authType?: AuthType-End-->
 

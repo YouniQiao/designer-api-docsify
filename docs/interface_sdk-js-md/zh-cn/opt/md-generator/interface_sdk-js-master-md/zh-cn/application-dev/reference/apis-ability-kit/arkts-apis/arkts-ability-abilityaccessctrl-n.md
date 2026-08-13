@@ -1,6 +1,8 @@
 # abilityAccessCtrl
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace abilityAccessCtrl--><!--Device-unnamed-declare namespace abilityAccessCtrl-End-->
 
@@ -12,7 +14,7 @@
 
 | 名称 |
 | --- |
-| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager) |
+| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager) |
 
 ### 接口
 

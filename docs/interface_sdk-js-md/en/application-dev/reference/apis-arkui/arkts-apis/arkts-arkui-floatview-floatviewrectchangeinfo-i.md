@@ -4,7 +4,9 @@ Provides the rectangle area change information of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-floatView-interface FloatViewRectChangeInfo--><!--Device-floatView-interface FloatViewRectChangeInfo-End-->
 
@@ -22,19 +24,15 @@ import { floatView } from '@kit.ArkUI';
 reason: string
 ```
 
-Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows:
-
-**"POSITION_CHANGE"**: The position changes.
-
-**"SIZE_CHANGE"**: The size changes.
-
-**"RECT_CHANGE"**: Both the position and size change.
+Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows: **"POSITION_CHANGE"**: The position changes. **"SIZE_CHANGE"**: The size changes. **"RECT_CHANGE"**: Both the position and size change.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +52,9 @@ Rectangle area of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +70,13 @@ windowScale: double
 
 Scale factor of the float view.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

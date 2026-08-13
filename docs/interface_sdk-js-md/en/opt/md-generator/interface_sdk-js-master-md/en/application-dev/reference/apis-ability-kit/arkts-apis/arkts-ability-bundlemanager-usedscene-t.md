@@ -1,17 +1,17 @@
 # UsedScene
 
 ```TypeScript
-export type UsedScene = _BundleInfo.UsedScene
+export type UsedScene = _UsedScene
 ```
 
 Defines the use scenario and timing for using the permission.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type UsedScene = _BundleInfo.UsedScene--><!--Device-bundleManager-export type UsedScene = _BundleInfo.UsedScene-End-->
+<!--Device-bundleManager-export type UsedScene = _UsedScene--><!--Device-bundleManager-export type UsedScene = _UsedScene-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.UsedScene
+**Property type:** _UsedScene

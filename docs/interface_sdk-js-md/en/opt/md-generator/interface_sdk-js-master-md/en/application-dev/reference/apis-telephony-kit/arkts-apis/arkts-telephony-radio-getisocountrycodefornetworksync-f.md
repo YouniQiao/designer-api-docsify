@@ -14,7 +14,9 @@ function getISOCountryCodeForNetworkSync(slotId: number): string
 
 Obtains the ISO-defined country code of the country where the registered network is deployed.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string--><!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string-End-->
 

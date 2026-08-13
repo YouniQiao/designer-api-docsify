@@ -2,7 +2,9 @@
 
 Obtains WCDMA cell information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface WcdmaCellInformation--><!--Device-radio-export interface WcdmaCellInformation-End-->
 
@@ -26,7 +28,9 @@ Indicates the cell ID.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-cellId: int--><!--Device-WcdmaCellInformation-cellId: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the location area code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-lac: int--><!--Device-WcdmaCellInformation-lac: int-End-->
 
@@ -62,7 +68,9 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-mcc: string--><!--Device-WcdmaCellInformation-mcc: string-End-->
 
@@ -80,7 +88,9 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-mnc: string--><!--Device-WcdmaCellInformation-mnc: string-End-->
 
@@ -98,7 +108,9 @@ Indicates the primary scrambling code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-psc: int--><!--Device-WcdmaCellInformation-psc: int-End-->
 
@@ -116,7 +128,9 @@ Indicates the absolute radio frequency number.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-uarfcn: int--><!--Device-WcdmaCellInformation-uarfcn: int-End-->
 

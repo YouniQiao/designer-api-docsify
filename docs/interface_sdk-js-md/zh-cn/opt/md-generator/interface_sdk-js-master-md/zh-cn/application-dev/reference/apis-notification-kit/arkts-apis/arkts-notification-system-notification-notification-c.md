@@ -6,7 +6,7 @@
 
 **废弃版本：** 7
 
-**替代接口：** [notification/notification](ohos.notification/notification)
+**替代接口：** [notification/notification](arkts-notification.md#@ohos.notification)
 
 <!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
 
@@ -30,7 +30,7 @@ static show(options?: ShowNotificationOptions): void
 
 **废弃版本：** 7
 
-**替代接口：** [notification/notification](ohos.notification/notification)
+**替代接口：** [notification/notification](arkts-notification.md#@ohos.notification)
 
 <!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
 

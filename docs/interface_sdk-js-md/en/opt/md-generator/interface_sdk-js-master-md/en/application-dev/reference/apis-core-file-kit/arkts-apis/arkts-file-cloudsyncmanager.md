@@ -2,7 +2,9 @@
 
 The **cloudSyncManager** module provides APIs for managing device-cloud sync for applications. You can use the APIs to manage the full download state, the reason why the full download stops, and number of local and cloud files.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cloudSyncManager--><!--Device-unnamed-declare namespace cloudSyncManager-End-->
 
@@ -21,20 +23,20 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeappcloudswitch) |
-| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeappcloudswitch-1) |
-| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean) |
-| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean-1) |
-| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disablecloud) |
-| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disablecloud-1) |
-| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enablecloud) |
-| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enablecloud-1) |
-| [getBundlesLocalFilePresentStatus](arkts-corefile-cloudsyncmanager-getbundleslocalfilepresentstatus-f-sys.md#getbundleslocalfilepresentstatus) |
-| [getDowngradeDownloadTaskState](arkts-corefile-cloudsyncmanager-getdowngradedownloadtaskstate-f-sys.md#getdowngradedownloadtaskstate) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-1) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-2) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-3) |
+| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeAppCloudSwitch-(System-API)) |
+| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeAppCloudSwitch-(System-API)) |
+| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean-(System-API)) |
+| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean-(System-API)) |
+| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disableCloud-(System-API)) |
+| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disableCloud-(System-API)) |
+| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enableCloud-(System-API)) |
+| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enableCloud-(System-API)) |
+| [getBundlesLocalFilePresentStatus](arkts-corefile-cloudsyncmanager-getbundleslocalfilepresentstatus-f-sys.md#getBundlesLocalFilePresentStatus-(System-API)) |
+| [getDowngradeDownloadTaskState](arkts-corefile-cloudsyncmanager-getdowngradedownloadtaskstate-f-sys.md#getDowngradeDownloadTaskState-(System-API)) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange-(System-API)) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange-(System-API)) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange-(System-API)) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange-(System-API)) |
 <!--DelEnd-->
 
 ### Classes

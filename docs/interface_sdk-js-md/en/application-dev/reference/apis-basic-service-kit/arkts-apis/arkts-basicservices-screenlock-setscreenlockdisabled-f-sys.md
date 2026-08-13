@@ -14,9 +14,11 @@ function setScreenLockDisabled(disable: boolean, userId: int): Promise<boolean>
 
 Disable screen lock showing for os account local userId. This only becomes effective when there is no password.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
@@ -31,7 +33,7 @@ Disable screen lock showing for os account local userId. This only becomes effec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | disable | boolean | Yes | disable or enable screen lock showing. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Os account local userId. |
+| userId | int | Yes | Os account local userId. |
 
 **Return value:**
 
@@ -43,8 +45,8 @@ Disable screen lock showing for os account local userId. This only becomes effec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
-| [13200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 

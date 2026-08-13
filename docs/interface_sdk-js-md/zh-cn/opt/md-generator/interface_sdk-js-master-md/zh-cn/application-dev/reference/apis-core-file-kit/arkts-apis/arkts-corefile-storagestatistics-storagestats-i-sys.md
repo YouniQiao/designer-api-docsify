@@ -1,6 +1,8 @@
 # StorageStats（系统接口）
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-storageStatistics-export interface StorageStats--><!--Device-storageStatistics-export interface StorageStats-End-->
 
@@ -18,7 +20,9 @@ app: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StorageStats-app: long--><!--Device-StorageStats-app: long-End-->
 
@@ -36,7 +40,9 @@ audio: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StorageStats-audio: long--><!--Device-StorageStats-audio: long-End-->
 
@@ -54,7 +60,9 @@ file: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StorageStats-file: long--><!--Device-StorageStats-file: long-End-->
 
@@ -72,7 +80,9 @@ image: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StorageStats-image: long--><!--Device-StorageStats-image: long-End-->
 
@@ -90,7 +100,9 @@ total: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StorageStats-total: long--><!--Device-StorageStats-total: long-End-->
 
@@ -108,7 +120,9 @@ video: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StorageStats-video: long--><!--Device-StorageStats-video: long-End-->
 

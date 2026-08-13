@@ -24,7 +24,7 @@ REMINDER_TYPE_TIMER = 0
 
 **废弃版本：** 9
 
-**替代接口：** [REMINDER_TYPE_TIMER](reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER)
+**替代接口：** REMINDER_TYPE_TIMER
 
 <!--Device-ReminderType-REMINDER_TYPE_TIMER = 0--><!--Device-ReminderType-REMINDER_TYPE_TIMER = 0-End-->
 
@@ -42,7 +42,7 @@ REMINDER_TYPE_CALENDAR = 1
 
 **废弃版本：** 9
 
-**替代接口：** [REMINDER_TYPE_CALENDAR](reminderAgentManager.ReminderType.REMINDER_TYPE_CALENDAR)
+**替代接口：** REMINDER_TYPE_CALENDAR
 
 <!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1--><!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1-End-->
 
@@ -60,7 +60,7 @@ REMINDER_TYPE_ALARM = 2
 
 **废弃版本：** 9
 
-**替代接口：** [REMINDER_TYPE_ALARM](reminderAgentManager.ReminderType.REMINDER_TYPE_ALARM)
+**替代接口：** REMINDER_TYPE_ALARM
 
 <!--Device-ReminderType-REMINDER_TYPE_ALARM = 2--><!--Device-ReminderType-REMINDER_TYPE_ALARM = 2-End-->
 

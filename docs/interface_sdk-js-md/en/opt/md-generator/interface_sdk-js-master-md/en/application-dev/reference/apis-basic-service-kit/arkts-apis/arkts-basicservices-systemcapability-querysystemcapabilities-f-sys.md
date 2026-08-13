@@ -14,7 +14,9 @@ function querySystemCapabilities(callback: AsyncCallback<string>): void
 
 Get System Capability.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemCapability-function querySystemCapabilities(callback: AsyncCallback<string>): void--><!--Device-systemCapability-function querySystemCapabilities(callback: AsyncCallback<string>): void-End-->
 
@@ -52,7 +54,9 @@ function querySystemCapabilities(): Promise<string>
 
 Get System Capability.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemCapability-function querySystemCapabilities(): Promise<string>--><!--Device-systemCapability-function querySystemCapabilities(): Promise<string>-End-->
 

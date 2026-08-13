@@ -2,7 +2,9 @@
 
 子网格资源.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SubMesh--><!--Device-unnamed-export interface SubMesh-End-->
 
@@ -18,7 +20,9 @@ readonly aabb: Aabb
 
 **类型：** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SubMesh-readonly aabb: Aabb--><!--Device-SubMesh-readonly aabb: Aabb-End-->
 
@@ -34,7 +38,9 @@ material: Material
 
 **类型：** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SubMesh-material: Material--><!--Device-SubMesh-material: Material-End-->
 
@@ -50,7 +56,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SubMesh-name: string--><!--Device-SubMesh-name: string-End-->
 

@@ -2,7 +2,9 @@
 
 设备详细信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 
@@ -20,7 +22,9 @@ deviceId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceInfo-deviceId: long--><!--Device-DeviceInfo-deviceId: long-End-->
 
@@ -38,7 +42,9 @@ driverUid?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceInfo-driverUid?: string--><!--Device-DeviceInfo-driverUid?: string-End-->
 
@@ -56,7 +62,9 @@ isDriverMatched: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceInfo-isDriverMatched: boolean--><!--Device-DeviceInfo-isDriverMatched: boolean-End-->
 

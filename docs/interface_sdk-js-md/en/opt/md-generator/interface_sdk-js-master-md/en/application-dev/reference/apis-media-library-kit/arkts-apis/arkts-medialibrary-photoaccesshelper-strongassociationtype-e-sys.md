@@ -2,7 +2,9 @@
 
 Enumerates the strong association types of photos.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum StrongAssociationType--><!--Device-photoAccessHelper-enum StrongAssociationType-End-->
 
@@ -18,7 +20,9 @@ NORMAL = 0
 
 Common photo.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StrongAssociationType-NORMAL = 0--><!--Device-StrongAssociationType-NORMAL = 0-End-->
 
@@ -34,7 +38,9 @@ CLOUD_ENHANCEMENT = 1
 
 Cloud-enhanced photo.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StrongAssociationType-CLOUD_ENHANCEMENT = 1--><!--Device-StrongAssociationType-CLOUD_ENHANCEMENT = 1-End-->
 

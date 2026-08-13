@@ -12,17 +12,11 @@ import { formHost } from '@kit.FormKit';
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void
 ```
 
-Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result.
+Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result. > **NOTE：**> > Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework > checks whether the destination is proper and whether the widget has the redirection permission, and then > triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, > in the case of router-based redirection, the widget framework does not trigger redirection for the widget. > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
-> **NOTE：**
-> 
-> Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
-> checks whether the destination is proper and whether the widget has the redirection permission, and then
-> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
-> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
-> - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -44,13 +38,13 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 | Error Code ID |
 | --- |
-| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 
 ## setRouterProxy
@@ -59,18 +53,11 @@ Sets a router proxy for widgets and obtains the Want information required for re
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>
 ```
 
-Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result.
+Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result. > **NOTE：**> > - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework > checks whether the destination is proper and whether the widget has the redirection permission, and then > triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, > in the case of router-based redirection, the widget framework does not trigger redirection for the widget. > > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
-> **NOTE：**
-> 
-> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
-> checks whether the destination is proper and whether the widget has the redirection permission, and then
-> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
-> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
-> 
-> - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -97,10 +84,10 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 | Error Code ID |
 | --- |
-| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

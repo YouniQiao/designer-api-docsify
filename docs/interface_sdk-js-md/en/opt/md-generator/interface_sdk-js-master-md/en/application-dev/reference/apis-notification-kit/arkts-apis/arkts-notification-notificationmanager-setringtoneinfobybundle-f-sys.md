@@ -14,7 +14,9 @@ function setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInf
 
 Sets the custom ringtone information for an application. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,11 +43,11 @@ Sets the custom ringtone information for an application. This API uses a promise
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600022-invalid-bundle-information) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) |
 
 ## Examples
 

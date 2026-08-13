@@ -2,9 +2,11 @@
 
 Represents asset (such as a file, image, or video) information.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-commonType-interface Asset--><!--Device-commonType-interface Asset-End-->
 
@@ -26,9 +28,11 @@ Time when the asset was created.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
 
@@ -44,9 +48,11 @@ Time when the asset was last modified.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
 
@@ -62,9 +68,11 @@ Asset name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
 
@@ -80,9 +88,11 @@ Application sandbox path of the asset.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
 
@@ -98,9 +108,11 @@ Size of the asset. If this field changes, the asset is considered to have change
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
 
@@ -116,9 +128,11 @@ Asset status. The default value is ASSET_NORMAL.
 
 **Type:** AssetStatus
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Asset-status?: AssetStatus--><!--Device-Asset-status?: AssetStatus-End-->
 
@@ -134,9 +148,11 @@ Asset URI, which is an absolute path in the system.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
 

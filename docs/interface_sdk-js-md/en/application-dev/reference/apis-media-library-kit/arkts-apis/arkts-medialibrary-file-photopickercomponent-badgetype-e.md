@@ -1,10 +1,12 @@
 # BadgeType
 
-BadgeType.
+Enumerates the badge types.
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum BadgeType--><!--Device-unnamed-export declare enum BadgeType-End-->
 
@@ -16,13 +18,15 @@ BadgeType.
 BADGE_UPLOADED = 0
 ```
 
-BADGE_UPLOADED. Asset uploaded.
+Uploaded.
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-BadgeType-BADGE_UPLOADED = 0--><!--Device-BadgeType-BADGE_UPLOADED = 0-End-->
 

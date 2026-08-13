@@ -1,12 +1,14 @@
 # PushParameters
 
-Plugin component push parameters.
+Defines the parameters required when using the **PluginManager.Push** API.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-pluginComponentManager-export interface PushParameters--><!--Device-pluginComponentManager-export interface PushParameters-End-->
+**Deprecated since:** -1
+
+<!--Device-pluginComponentManager-interface PushParameters--><!--Device-pluginComponentManager-interface PushParameters-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +24,17 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data: KVObject
 ```
 
-Defines data.
+Component data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-data: KVObject--><!--Device-PushParameters-data: KVObject-End-->
 
@@ -42,15 +46,17 @@ Defines data.
 extraData: KVObject
 ```
 
-Defines extraData.
+Extra data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-extraData: KVObject--><!--Device-PushParameters-extraData: KVObject-End-->
 
@@ -62,15 +68,17 @@ Defines extraData.
 jsonPath?: string
 ```
 
-Defines jsonPath.
+Path to the external.json file that stores the template path.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-jsonPath?: string--><!--Device-PushParameters-jsonPath?: string-End-->
 
@@ -82,15 +90,17 @@ Defines jsonPath.
 name: string
 ```
 
-Defines name.
+Component name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-name: string--><!--Device-PushParameters-name: string-End-->
 
@@ -102,15 +112,17 @@ Defines name.
 want: Want
 ```
 
-Defines want.
+Ability information of the component user.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-want: Want--><!--Device-PushParameters-want: Want-End-->
 

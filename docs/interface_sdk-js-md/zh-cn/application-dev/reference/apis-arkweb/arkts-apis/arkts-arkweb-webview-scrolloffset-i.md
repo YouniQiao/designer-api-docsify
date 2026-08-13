@@ -1,10 +1,12 @@
 # ScrollOffset
 
-Defines the scroll offset of the webpage in view port, the unit is virtual pixel.Related to [getScrollOffset](arkts-arkweb-webview-webviewcontroller-c.md#getScrollOffset) method.
+网页当前的滚动偏移量。
 
-**起始版本：** 23
+**起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
@@ -13,36 +15,44 @@ Defines the scroll offset of the webpage in view port, the unit is virtual pixel
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Get the horizontal offset. The unit is vp
+网页在水平方向的滚动偏移量。取值为网页左边界x坐标与Web组件左边界x坐标的差值。 当网页向右过滚动时，取值范围为负值。 当网页没有过滚动或者网页向左过滚动时，取值为0或正值。 单位：vp。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
-<!--Device-ScrollOffset-x: double--><!--Device-ScrollOffset-x: double-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollOffset-x: number--><!--Device-ScrollOffset-x: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Get the vertical offset. The unit is vp
+网页在垂直方向的滚动偏移量。取值为网页上边界y坐标与Web组件上边界y坐标的差值。 当网页向下过滚动时，取值范围为负值。 当网页没有过滚动或者网页向上过滚动时，取值为0或正值。 单位：vp。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
-<!--Device-ScrollOffset-y: double--><!--Device-ScrollOffset-y: double-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollOffset-y: number--><!--Device-ScrollOffset-y: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -18,6 +18,8 @@ Execute a command. This API uses a promise to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.EXEC_CLI_TOOL
 
 **Model restriction:** This API can be used only in the stage model.
@@ -46,7 +48,7 @@ Execute a command. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | 35600031 | Maximum number of processes has been reached. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | 35600050 | System Error. 1. Failed to connect to the system service; 2. The system service failed to communicate with the dependent module. |
 

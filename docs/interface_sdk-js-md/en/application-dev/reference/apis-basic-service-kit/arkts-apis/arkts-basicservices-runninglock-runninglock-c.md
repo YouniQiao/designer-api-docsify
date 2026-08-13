@@ -2,9 +2,11 @@
 
 Defines a **RunningLock** object.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
 
@@ -18,21 +20,17 @@ import { runningLock } from '@kit.BasicServicesKit';
 
 ## hold
 
-ArkTS-Dyn:
-```TypeScript
-hold(timeout: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 hold(timeout: int): void
 ```
 
 Holds a running lock.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -44,14 +42,14 @@ Holds a running lock.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Duration for locking and holding the **RunningLock** object, in ms.&lt;br&gt;The value must be a number:&lt;br&gt;**-1**: The lock is permanently held and needs to be released automatically.&lt;br&gt;**0**: The lock is released 3 seconds after the timer expires by default.&lt;br&gt;> 0: The lock is released based on the input value after the timer expires. |
+| timeout | int | Yes | Duration for locking and holding the **RunningLock** object, in ms.&lt;br&gt;The value must be a number:&lt;br&gt;**-1**: The lock is permanently held and needs to be released automatically.&lt;br&gt;**0**: The lock is released 3 seconds after the timer expires by default.&lt;br&gt;> 0: The lock is released based on the input value after the timer expires. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | If the permission is denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 
@@ -92,9 +90,11 @@ isHolding(): boolean
 
 Checks whether this running lock is being held.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
 
@@ -221,9 +221,11 @@ unhold(): void
 
 Releases this running lock.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -235,7 +237,7 @@ Releases this running lock.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | If the permission is denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 

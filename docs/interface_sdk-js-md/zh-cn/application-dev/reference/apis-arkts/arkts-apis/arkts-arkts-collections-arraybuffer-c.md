@@ -1,24 +1,12 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](./arkts/@arkts.collections:collections)、  
-[Uint8Array](./arkts/@arkts.collections:collections)、  
-[Int16Array](./arkts/@arkts.collections:collections)、  
-[Uint16Array](./arkts/@arkts.collections:collections)、  
-[Int32Array](./arkts/@arkts.collections:collections)、  
-[Uint32Array](./arkts/@arkts.collections:collections)、  
-[Uint8ClampedArray](./arkts/@arkts.collections:collections)、  
-[Float32Array](./arkts/@arkts.collections:collections)）的底层数据结构。
-
-> **说明：**
-> 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> **装饰器类型**：\@Sendable
+ArkTS TypedArray（Int8Array、 Uint8Array、 Int16Array、 Uint16Array、 Int32Array、 Uint32Array、 Uint8ClampedArray、 Float32Array）的底层数据结构。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
 <!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
 
@@ -36,6 +24,8 @@ constructor(byteLength: number)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayBuffer-constructor(byteLength: number)--><!--Device-ArrayBuffer-constructor(byteLength: number)-End-->
@@ -52,7 +42,7 @@ constructor(byteLength: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The ArrayBuffer's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArrayBuffer's constructor cannot be directly invoked. |
 
 ## slice
 
@@ -65,6 +55,8 @@ slice(begin: number, end?: number): ArrayBuffer
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -89,8 +81,8 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## byteLength
 
@@ -105,6 +97,8 @@ buffer所占的字节数。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

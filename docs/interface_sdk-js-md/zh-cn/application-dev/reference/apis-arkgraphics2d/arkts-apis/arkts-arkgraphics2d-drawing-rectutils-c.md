@@ -1,22 +1,12 @@
 # RectUtils
 
-提供处理矩形的工具，支持矩形的快速构建与基本属性获取、边界计算与调整、平移与状态判断、边界规范化等功能。
+提供处理矩形的工具，支持矩形的快速构建与基本属性获取、边界计算与调整、平移与状态判断、边界规范化等功能。 主要的使用场景： 1. 矩形快速构建与获取基本属性，如构造新矩形、拷贝矩形、获取矩形的宽高以及中心点等。 2. 边界计算与调整，如判断包含关系、计算与更新矩形之间交集和并集，更新边界值等。 3. 矩形平移与状态判断，如对矩形进行平移、将矩形平移到指定位置、判断矩形是否为空以及判断两个矩形是否相等。 4. 矩形边界规范化，如对存在反转情况的矩形边界值进行交换排序等。 > **说明：** > > - 本Class首批接口从API version 20开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-主要的使用场景：
+**起始版本：** 23
 
-1. 矩形快速构建与获取基本属性，如构造新矩形、拷贝矩形、获取矩形的宽高以及中心点等。2. 边界计算与调整，如判断包含关系、计算与更新矩形之间交集和并集，更新边界值等。3. 矩形平移与状态判断，如对矩形进行平移、将矩形平移到指定位置、判断矩形是否为空以及判断两个矩形是否相等。4. 矩形边界规范化，如对存在反转情况的矩形边界值进行交换排序等。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-> **说明：**
-> 
-> - 本Class首批接口从API version 20开始支持。
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
-
-**起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-drawing-class RectUtils--><!--Device-drawing-class RectUtils-End-->
 
@@ -24,21 +14,17 @@
 
 ## centerX
 
-ArkTS-Dyn:
-```TypeScript
-static centerX(rect: common2D.Rect): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 static centerX(rect: common2D.Rect): double
 ```
 
 获取矩形中心的x轴坐标，中心x轴坐标为矩形左边界与右边界之和的一半。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static centerX(rect: common2D.Rect): double--><!--Device-RectUtils-static centerX(rect: common2D.Rect): double-End-->
 
@@ -54,25 +40,21 @@ static centerX(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形中心的x轴坐标。单位为物理像素px。 |
+| double | 返回矩形中心的x轴坐标。单位为物理像素px。 |
 
 ## centerY
 
-ArkTS-Dyn:
-```TypeScript
-static centerY(rect: common2D.Rect): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 static centerY(rect: common2D.Rect): double
 ```
 
 获取矩形中心的y轴坐标，中心y轴坐标为矩形上边界与下边界之和的一半。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static centerY(rect: common2D.Rect): double--><!--Device-RectUtils-static centerY(rect: common2D.Rect): double-End-->
 
@@ -88,7 +70,7 @@ static centerY(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形中心的y轴坐标。单位为物理像素px。 |
+| double | 返回矩形中心的y轴坐标。单位为物理像素px。 |
 
 ## contains
 
@@ -98,9 +80,11 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 
 判断一个矩形是否完全包含另外一个矩形。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
@@ -121,21 +105,17 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 
 ## contains
 
-ArkTS-Dyn:
-```TypeScript
-static contains(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean
 ```
 
 判断一个矩形是否完全包含另外一个矩形（另一个矩形分别用左上右下坐标表示）。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean-End-->
 
@@ -146,10 +126,10 @@ static contains(rect: common2D.Rect, left: double, top: double, right: double, b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 用于判断是否包含由左上右下坐标组成的矩形的原矩形对象。 |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| left | double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **返回值：**
 
@@ -159,21 +139,17 @@ static contains(rect: common2D.Rect, left: double, top: double, right: double, b
 
 ## contains
 
-ArkTS-Dyn:
-```TypeScript
-static contains(rect: common2D.Rect, x: number, y: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 static contains(rect: common2D.Rect, x: double, y: double): boolean
 ```
 
 判断一个矩形是否完全包含一个点。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean-End-->
 
@@ -184,8 +160,8 @@ static contains(rect: common2D.Rect, x: double, y: double): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 用于判断是否包含指定点的原矩形对象。 |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要判断点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要判断点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| x | double | 是 | 要判断点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| y | double | 是 | 要判断点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **返回值：**
 
@@ -195,21 +171,17 @@ static contains(rect: common2D.Rect, x: double, y: double): boolean
 
 ## getHeight
 
-ArkTS-Dyn:
-```TypeScript
-static getHeight(rect: common2D.Rect): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 static getHeight(rect: common2D.Rect): double
 ```
 
 获取矩形的高度。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static getHeight(rect: common2D.Rect): double--><!--Device-RectUtils-static getHeight(rect: common2D.Rect): double-End-->
 
@@ -225,25 +197,21 @@ static getHeight(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形的高。如果矩形的上边界大于下边界，获取的高度为负值，上边界小于下边界则为正值。单位为物理像素px。 |
+| double | 返回矩形的高。如果矩形的上边界大于下边界，获取的高度为负值，上边界小于下边界则为正值。单位为物理像素px。 |
 
 ## getWidth
 
-ArkTS-Dyn:
-```TypeScript
-static getWidth(rect: common2D.Rect): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 static getWidth(rect: common2D.Rect): double
 ```
 
 获取矩形的宽度。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static getWidth(rect: common2D.Rect): double--><!--Device-RectUtils-static getWidth(rect: common2D.Rect): double-End-->
 
@@ -259,25 +227,21 @@ static getWidth(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形的宽。如果矩形的左边界大于右边界，获取的宽度为负值，左边界小于右边界则为正值。单位为物理像素px。 |
+| double | 返回矩形的宽。如果矩形的左边界大于右边界，获取的宽度为负值，左边界小于右边界则为正值。单位为物理像素px。 |
 
 ## inset
 
-ArkTS-Dyn:
-```TypeScript
-static inset(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void
 ```
 
 将指定矩形的左边界、上边界、右边界和下边界分别和传入的“左上右下”的值相加。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
 
@@ -288,10 +252,10 @@ static inset(rect: common2D.Rect, left: double, top: double, right: double, bott
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 需要进行边界调整的原矩形对象。 |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形左边界的值（矩形左上角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形上边界的值（矩形左上角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形右边界的值（矩形右下角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形下边界的值（矩形右下角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| left | double | 是 | 添加到矩形左边界的值（矩形左上角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| top | double | 是 | 添加到矩形上边界的值（矩形左上角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| right | double | 是 | 添加到矩形右边界的值（矩形右下角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| bottom | double | 是 | 添加到矩形下边界的值（矩形右下角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
 
 ## intersect
 
@@ -301,9 +265,11 @@ static intersect(rect: common2D.Rect, other: common2D.Rect): boolean
 
 计算两个矩形的交集区域，并将交集结果更新到第一个入参代表的矩形区域。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
@@ -330,9 +296,11 @@ static isEmpty(rect: common2D.Rect): boolean
 
 判断矩形是否为空（左边界大于等于右边界或者上边界大于等于下边界）。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean--><!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean-End-->
 
@@ -358,9 +326,11 @@ static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean
 
 判断两个矩形是否相等。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
@@ -387,9 +357,11 @@ static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean
 
 判断两个矩形是否相交。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
@@ -420,6 +392,8 @@ static makeCopy(src: common2D.Rect): common2D.Rect
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect--><!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -446,7 +420,9 @@ static makeCopy(src: common2D.Rect): common2D.Rect | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect | undefined--><!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect | undefined-End-->
 
@@ -476,6 +452,8 @@ static makeEmpty(): common2D.Rect
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-RectUtils-static makeEmpty(): common2D.Rect--><!--Device-RectUtils-static makeEmpty(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -496,7 +474,9 @@ static makeEmpty(): common2D.Rect | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static makeEmpty(): common2D.Rect | undefined--><!--Device-RectUtils-static makeEmpty(): common2D.Rect | undefined-End-->
 
@@ -519,6 +499,8 @@ static makeLtrb(left: number, top: number, right: number, bottom: number): commo
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect--><!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect-End-->
 
@@ -549,7 +531,9 @@ static makeLtrb(left: double, top: double, right: double, bottom: double): commo
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static makeLtrb(left: double, top: double, right: double, bottom: double): common2D.Rect | undefined--><!--Device-RectUtils-static makeLtrb(left: double, top: double, right: double, bottom: double): common2D.Rect | undefined-End-->
 
@@ -572,21 +556,17 @@ static makeLtrb(left: double, top: double, right: double, bottom: double): commo
 
 ## offset
 
-ArkTS-Dyn:
-```TypeScript
-static offset(rect: common2D.Rect, dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 static offset(rect: common2D.Rect, dx: double, dy: double): void
 ```
 
 对矩形进行平移。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void--><!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void-End-->
 
@@ -597,26 +577,22 @@ static offset(rect: common2D.Rect, dx: double, dy: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 发生平移的矩形区域。 |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 水平方向平移的距离，该参数为浮点数。0表示不平移，负数表示向左平移，正数表示向右平移。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 竖直方向平移的距离，该参数为浮点数。0表示不平移，负数表示向上平移，正数表示向下平移。单位为物理像素px。 |
+| dx | double | 是 | 水平方向平移的距离，该参数为浮点数。0表示不平移，负数表示向左平移，正数表示向右平移。单位为物理像素px。 |
+| dy | double | 是 | 竖直方向平移的距离，该参数为浮点数。0表示不平移，负数表示向上平移，正数表示向下平移。单位为物理像素px。 |
 
 ## offsetTo
 
-ArkTS-Dyn:
-```TypeScript
-static offsetTo(rect: common2D.Rect, newLeft: number, newTop: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void
 ```
 
 将矩形平移到指定位置。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void--><!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void-End-->
 
@@ -627,8 +603,8 @@ static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 发生平移的矩形区域。 |
-| newLeft | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要平移到的对应位置的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| newTop | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要平移到的对应位置的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| newLeft | double | 是 | 要平移到的对应位置的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| newTop | double | 是 | 要平移到的对应位置的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## setEmpty
 
@@ -638,9 +614,11 @@ static setEmpty(rect: common2D.Rect): void
 
 将矩形的上下左右边界都设为0。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void--><!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void-End-->
 
@@ -654,21 +632,17 @@ static setEmpty(rect: common2D.Rect): void
 
 ## setLtrb
 
-ArkTS-Dyn:
-```TypeScript
-static setLtrb(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void
 ```
 
 使用传入的“左上右下”的值更新当前矩形的左上右下边界值。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
 
@@ -679,10 +653,10 @@ static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 需要更新边界值的原矩形对象。 |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| left | double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## setRect
 
@@ -692,9 +666,11 @@ static setRect(rect: common2D.Rect, other: common2D.Rect): void
 
 使用另一个矩形对当前矩形进行赋值。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void-End-->
 
@@ -713,13 +689,13 @@ static setRect(rect: common2D.Rect, other: common2D.Rect): void
 static sort(rect: common2D.Rect): void
 ```
 
-如果矩形存在反转的情况（即左边界大于右边界或上边界大于下边界），则将发生反转的对应边界值进行交换（若左边界大于右边界，交换左右边界值；若上边界大于下边界，交换上下边界值），使得上边界小于下边界（左边界小于右边界）。
+如果矩形存在反转的情况（即左边界大于右边界或上边界大于下边界），则将发生反转的对应边界值进行交换（若左边界大于右边界，交换左右边界值；若上边界大于下边界，交换上下边界值），使得上边界小于下边界（左边界小于右边界）。 如果矩形不存在反转的情况（即左边界小于等于右边界且上边界小于等于下边界），不做任何操作。
 
-如果矩形不存在反转的情况（即左边界小于等于右边界且上边界小于等于下边界），不做任何操作。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-RectUtils-static sort(rect: common2D.Rect): void--><!--Device-RectUtils-static sort(rect: common2D.Rect): void-End-->
 
@@ -739,9 +715,11 @@ static union(rect: common2D.Rect, other: common2D.Rect): void
 
 计算两个矩形的并集区域，并将并集结果更新到第一个入参代表的矩形区域。如果第一个入参矩形为空，则将并集结果更新到第二个入参代表的矩形区域；如果第二个入参的矩形为空，则不进行任何操作。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void-End-->
 

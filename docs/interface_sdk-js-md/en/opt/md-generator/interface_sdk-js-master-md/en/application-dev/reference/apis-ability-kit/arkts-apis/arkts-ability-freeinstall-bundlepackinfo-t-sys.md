@@ -1,17 +1,19 @@
 # BundlePackInfo (System API)
 
 ```TypeScript
-export type BundlePackInfo = _PackInfo.BundlePackInfo
+export type BundlePackInfo = _BundlePackInfo
 ```
 
 Defines the bundle information.
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-freeInstall-export type BundlePackInfo = _PackInfo.BundlePackInfo--><!--Device-freeInstall-export type BundlePackInfo = _PackInfo.BundlePackInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-freeInstall-export type BundlePackInfo = _BundlePackInfo--><!--Device-freeInstall-export type BundlePackInfo = _BundlePackInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.BundlePackInfo
+**Property type:** _BundlePackInfo

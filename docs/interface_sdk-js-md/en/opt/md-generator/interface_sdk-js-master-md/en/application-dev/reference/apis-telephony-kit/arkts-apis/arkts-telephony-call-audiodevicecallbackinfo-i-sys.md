@@ -2,7 +2,9 @@
 
 Defines the audio device information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface AudioDeviceCallbackInfo--><!--Device-call-export interface AudioDeviceCallbackInfo-End-->
 
@@ -26,7 +28,9 @@ Audio device list.
 
 **Type:** Array&lt;[AudioDevice](arkts-telephony-call-audiodevice-i-sys.md)&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceCallbackInfo-audioDeviceList: Array<AudioDevice>--><!--Device-AudioDeviceCallbackInfo-audioDeviceList: Array<AudioDevice>-End-->
 
@@ -44,7 +48,9 @@ Current audio device.
 
 **Type:** [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceCallbackInfo-currentAudioDevice: AudioDevice--><!--Device-AudioDeviceCallbackInfo-currentAudioDevice: AudioDevice-End-->
 
@@ -58,14 +64,13 @@ Current audio device.
 isMicDisabled?: boolean
 ```
 
-Whether to disable the microphone.
-
-- **true**: yes.  
-- **false**: no.
+Whether to disable the microphone. - **true**: yes. - **false**: no.
 
 **Type:** boolean
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceCallbackInfo-isMicDisabled?: boolean--><!--Device-AudioDeviceCallbackInfo-isMicDisabled?: boolean-End-->
 
@@ -83,7 +88,9 @@ Whether the audio device is muted.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceCallbackInfo-isMuted: boolean--><!--Device-AudioDeviceCallbackInfo-isMuted: boolean-End-->
 

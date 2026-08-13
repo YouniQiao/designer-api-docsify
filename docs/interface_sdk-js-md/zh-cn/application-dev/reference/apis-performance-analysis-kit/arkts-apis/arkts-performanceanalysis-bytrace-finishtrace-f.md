@@ -6,11 +6,7 @@
 function finishTrace(name: string, taskId: number): void
 ```
 
-标记一个时间片跟踪事件的结束。
-
-> **说明：**
-> 
-> finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。
+标记一个时间片跟踪事件的结束。 > **说明：** > > finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。
 
 **起始版本：** 7
 
@@ -18,7 +14,7 @@ function finishTrace(name: string, taskId: number): void
 
 **废弃版本：** 8
 
-**替代接口：** [finishTrace](ohos.hiTraceMeter.finishTrace)
+**替代接口：** finishTrace
 
 <!--Device-bytrace-function finishTrace(name: string, taskId: number): void--><!--Device-bytrace-function finishTrace(name: string, taskId: number): void-End-->
 

@@ -2,9 +2,11 @@
 
 限制状态。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export enum RestrictionStatus--><!--Device-call-export enum RestrictionStatus-End-->
 
@@ -20,9 +22,11 @@ RESTRICTION_DISABLE = 0
 
 禁用限制。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RestrictionStatus-RESTRICTION_DISABLE = 0--><!--Device-RestrictionStatus-RESTRICTION_DISABLE = 0-End-->
 
@@ -38,9 +42,11 @@ RESTRICTION_ENABLE = 1
 
 启用限制。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RestrictionStatus-RESTRICTION_ENABLE = 1--><!--Device-RestrictionStatus-RESTRICTION_ENABLE = 1-End-->
 

@@ -12,16 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 ```
 
-Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use   
-[on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))to obtain the upload success or error information.
+Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) to obtain the upload success or error information. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -41,9 +36,9 @@ Uploads a file. This API uses an asynchronous callback to return the result. HTT
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [13400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
 
 ## Examples
 
@@ -81,16 +76,11 @@ try {
 function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>
 ```
 
-Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use   
-[on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))to obtain the upload success or error information.
+Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) to obtain the upload success or error information. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -115,9 +105,9 @@ Uploads a file. This API uses a promise to return the result. HTTP is supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [13400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
 
 ## Examples
 

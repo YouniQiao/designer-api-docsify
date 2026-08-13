@@ -2,7 +2,9 @@
 
 Enumerates USB port roles.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBPortStatus--><!--Device-usbManager-interface USBPortStatus-End-->
 
@@ -26,7 +28,9 @@ Current data role.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBPortStatus-currentDataRole: int--><!--Device-USBPortStatus-currentDataRole: int-End-->
 
@@ -44,7 +48,9 @@ Current USB mode.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBPortStatus-currentMode: int--><!--Device-USBPortStatus-currentMode: int-End-->
 
@@ -62,7 +68,9 @@ Current power role.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBPortStatus-currentPowerRole: int--><!--Device-USBPortStatus-currentPowerRole: int-End-->
 

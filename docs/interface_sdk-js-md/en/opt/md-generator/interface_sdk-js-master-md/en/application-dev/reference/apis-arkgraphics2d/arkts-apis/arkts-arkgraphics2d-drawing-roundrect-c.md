@@ -1,17 +1,10 @@
 # RoundRect
 
-Rounded rectangle.
+Rounded rectangle. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-drawing-class RoundRect--><!--Device-drawing-class RoundRect-End-->
 
@@ -31,7 +24,9 @@ constructor(roundRect: RoundRect)
 
 Copies a rounded rectangle.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-constructor(roundRect: RoundRect)--><!--Device-RoundRect-constructor(roundRect: RoundRect)-End-->
 
@@ -49,10 +44,11 @@ Copies a rounded rectangle.
 constructor(rect: common2D.Rect, xRadii: number, yRadii: number)
 ```
 
-A constructor used to create a **RoundRect** object. A rounded rectangle is created when both **xRadii** and  
-**yRadii** are greater than 0. Otherwise, only a rectangle is created.
+A constructor used to create a **RoundRect** object. A rounded rectangle is created when both **xRadii** and **yRadii** are greater than 0. Otherwise, only a rectangle is created.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)--><!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)-End-->
 
@@ -70,7 +66,7 @@ A constructor used to create a **RoundRect** object. A rounded rectangle is crea
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getCorner
 
@@ -81,6 +77,8 @@ getCorner(pos: CornerPos): common2D.Point
 Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point-End-->
 
@@ -102,7 +100,41 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## getCorner
+
+```TypeScript
+getCorner(pos: CornerPos): common2D.Point | undefined
+```
+
+Obtains the radii of the specified rounded corner in this rounded rectangle.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Point |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## offset
 
@@ -112,7 +144,9 @@ offset(dx: number, dy: number): void
 
 Translates this rounded rectangle by an offset along the X axis and Y axis.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-offset(dx: double, dy: double): void--><!--Device-RoundRect-offset(dx: double, dy: double): void-End-->
 
@@ -129,7 +163,7 @@ Translates this rounded rectangle by an offset along the X axis and Y axis.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setCorner
 
@@ -139,7 +173,9 @@ setCorner(pos: CornerPos, x: number, y: number): void
 
 Sets the radii of the specified rounded corner in this rounded rectangle.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void--><!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void-End-->
 
@@ -157,4 +193,4 @@ Sets the radii of the specified rounded corner in this rounded rectangle.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

@@ -10,7 +10,9 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_INSTALLED_BUNDLE_LIST
 
@@ -24,7 +26,7 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)。 |
+| bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)。 |
 
 **返回值：**
 
@@ -36,7 +38,7 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

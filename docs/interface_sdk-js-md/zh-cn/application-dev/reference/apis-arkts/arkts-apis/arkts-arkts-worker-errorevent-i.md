@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
-<!--Device-unnamed-export interface ErrorEvent extends Event--><!--Device-unnamed-export interface ErrorEvent extends Event-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface ErrorEvent--><!--Device-unnamed-export interface ErrorEvent-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,6 +27,8 @@ readonly colno: number
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,6 +50,8 @@ readonly error: Object
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorEvent-readonly error: Object--><!--Device-ErrorEvent-readonly error: Object-End-->
@@ -65,6 +71,8 @@ readonly filename: string
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -86,6 +94,8 @@ readonly lineno: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorEvent-readonly lineno: number--><!--Device-ErrorEvent-readonly lineno: number-End-->
@@ -105,6 +115,8 @@ readonly message: string
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

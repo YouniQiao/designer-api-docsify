@@ -6,6 +6,8 @@ Implements a **BarGridColumnOptions** object for setting the visible area of the
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface BarGridColumnOptions--><!--Device-unnamed-interface BarGridColumnOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ Implements a **BarGridColumnOptions** object for setting the visible area of the
 gutter?: Dimension
 ```
 
-Column gutter (that is, gap between columns) in grid mode. It cannot be set in percentage.
-
-Default value: **24.0**
-
-Unit: vp
+Column gutter (that is, gap between columns) in grid mode. It cannot be set in percentage. Default value: **24.0** Unit: vp
 
 **Type:** Dimension
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,15 +42,15 @@ Unit: vp
 lg?: number
 ```
 
-Number of columns occupied by a tab on a screen whose width is greater than or equal to 840 vp but less than 1024vp.
-
-The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 840 vp but less than 1024 vp. The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,17 +66,15 @@ The value must be a non-negative even number. The default value is **-1**, indic
 margin?: Dimension
 ```
 
-Column margin in grid mode. It cannot be set in percentage.
-
-Default value: **24.0**
-
-Unit: vp
+Column margin in grid mode. It cannot be set in percentage. Default value: **24.0** Unit: vp
 
 **Type:** Dimension
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,15 +90,15 @@ Unit: vp
 md?: number
 ```
 
-Number of columns occupied by a tab on a screen whose width is greater than or equal to 600 vp but less than 800vp.
-
-The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 600 vp but less than 800 vp. The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,15 +114,15 @@ The value must be a non-negative even number. The default value is **-1**, indic
 sm?: number
 ```
 
-Number of columns occupied by a tab on a screen whose width is greater than or equal to 320 vp but less than 600vp.
-
-The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 320 vp but less than 600 vp. The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

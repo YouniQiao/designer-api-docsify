@@ -6,6 +6,8 @@ Defines the options of the visible interface on the screen.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ScreenOnVisibleOptions--><!--Device-unnamed-export interface ScreenOnVisibleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,9 +26,13 @@ complete?: () => void
 
 Called when the API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,22 +48,19 @@ fail?: (data: string, code: number) => void
 
 Callback upon failure.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenOnVisibleOptions-fail?: (data: string, code: number) => void--><!--Device-ScreenOnVisibleOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
 
 ## success
 
@@ -67,9 +70,13 @@ success?: () => void
 
 Callback upon success.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,6 +97,8 @@ Whether to keep the application visible. The default value is **false**.
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

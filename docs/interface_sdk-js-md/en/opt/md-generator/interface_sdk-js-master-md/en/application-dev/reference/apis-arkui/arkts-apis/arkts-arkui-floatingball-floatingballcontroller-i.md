@@ -1,10 +1,10 @@
 # FloatingBallController
 
-Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.
+Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks. Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md#create) to create a floating ball controller instance.
 
-Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md#create) to create a floating ball controller instance.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-floatingBall-interface FloatingBallController--><!--Device-floatingBall-interface FloatingBallController-End-->
 
@@ -24,7 +24,9 @@ getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>
 
 Obtains the floating ball window information. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallController-getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>--><!--Device-FloatingBallController-getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>-End-->
 
@@ -40,12 +42,12 @@ Obtains the floating ball window information. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -60,17 +62,19 @@ floatingBallController.getFloatingBallWindowInfo().then((data: floatingBall.Floa
 });
 ```
 
-## off('stateChange')
+## offClick
 
 ```TypeScript
-off(type: 'stateChange', callback?: Callback<FloatingBallState>): void
+offClick(callback?: Callback<void>): void
 ```
 
-Unregisters the listener for lifecycle state changes of the floating ball.
+Unregister floating ball click event listener.
 
-**Since:** 20
+**Since:** 23
 
-<!--Device-FloatingBallController-off(type: 'stateChange', callback?: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-off(type: 'stateChange', callback?: Callback<FloatingBallState>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-offClick(callback?: Callback<void>): void--><!--Device-FloatingBallController-offClick(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -78,75 +82,15 @@ Unregisters the listener for lifecycle state changes of the floating ball.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-
-## Examples
-
-```TypeScript
-// Define the callback function for status changes (the callback function must be the same as that registered).
-let onStateChange = (state: floatingBall.FloatingBallState) => {
-  console.info('Floating ball stateChange: ' + state);
-};
-try {
-  // Unregister the callback for listening to floating ball state changes.
-  floatingBallController.off('stateChange', onStateChange);
-} catch (e) {
-  console.error(`Failed to off stateChange floating ball. Cause:${e.code}, message:${e.message}`);
-}
-```
-
-## off('click')
-
-```TypeScript
-off(type: 'click', callback?: Callback<void>): void
-```
-
-Unregisters the listener for click events of the floating ball.
-
-**Since:** 20
-
-<!--Device-FloatingBallController-off(type: 'click', callback?: Callback<void>): void--><!--Device-FloatingBallController-off(type: 'click', callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'click' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-
-## Examples
-
-```TypeScript
-// Define the callback function for the click event (the callback function must be the same as that registered).
-let onClick = () => {
-  console.info('Floating ball onClick');
-};
-try {
-  // Unregister the callback for listening to click events of the floating ball.
-  floatingBallController.off('click', onClick);
-} catch (e) {
-  console.error(`Failed to off click floating ball. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## offDestroy
 
@@ -157,6 +101,8 @@ offDestroy(callback?: Callback<string>): void
 Unregister floating ball destroy event listener.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,9 +120,9 @@ Unregister floating ball destroy event listener.
 
 | Error Code ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -199,17 +145,19 @@ try {
 }
 ```
 
-## on('stateChange')
+## offStateChange
 
 ```TypeScript
-on(type: 'stateChange', callback: Callback<FloatingBallState>): void
+offStateChange(callback?: Callback<FloatingBallState>): void
 ```
 
-Registers a listener for lifecycle state changes of the floating ball. To prevent memory leaks, remember to unregister the listener when it is no longer needed.
+Unregister floating ball stateChange event listener.
 
-**Since:** 20
+**Since:** 23
 
-<!--Device-FloatingBallController-on(type: 'stateChange', callback: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-on(type: 'stateChange', callback: Callback<FloatingBallState>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -217,44 +165,29 @@ Registers a listener for lifecycle state changes of the floating ball. To preven
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
-## Examples
-
-```TypeScript
-// Define the callback function for status changes.
-let onStateChange = (state: floatingBall.FloatingBallState) => {
-  console.info('Floating ball stateChange: ' + state);
-};
-try {
-  // Register the callback for listening to floating ball state changes.
-  floatingBallController.on('stateChange', onStateChange);
-} catch (e) {
-  console.error(`Failed to on stateChange floating ball. Cause:${e.code}, message:${e.message}`);
-}
-```
-
-## on('click')
+## off_click
 
 ```TypeScript
-on(type: 'click', callback: Callback<void>): void
+off(type: 'click', callback?: Callback<void>): void
 ```
 
-Registers a listener for click events of the floating ball. To prevent memory leaks, remember to unregister the listener when it is no longer needed.
+Unregisters the listener for click events of the floating ball.
 
 **Since:** 20
 
-<!--Device-FloatingBallController-on(type: 'click', callback: Callback<void>): void--><!--Device-FloatingBallController-on(type: 'click', callback: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-off(type: 'click', callback?: Callback<void>): void--><!--Device-FloatingBallController-off(type: 'click', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -263,31 +196,107 @@ Registers a listener for click events of the floating ball. To prevent memory le
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'click' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+
+## Examples
+
+```TypeScript
+// Define the callback function for the click event (the callback function must be the same as that registered).
+let onClick = () => {
+  console.info('Floating ball onClick');
+};
+try {
+  // Unregister the callback for listening to click events of the floating ball.
+  floatingBallController.off('click', onClick);
+} catch (e) {
+  console.error(`Failed to off click floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
+
+## off_stateChange
+
+```TypeScript
+off(type: 'stateChange', callback?: Callback<FloatingBallState>): void
+```
+
+Unregisters the listener for lifecycle state changes of the floating ball.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-off(type: 'stateChange', callback?: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-off(type: 'stateChange', callback?: Callback<FloatingBallState>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'stateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+
+## Examples
+
+```TypeScript
+// Define the callback function for status changes (the callback function must be the same as that registered).
+let onStateChange = (state: floatingBall.FloatingBallState) => {
+  console.info('Floating ball stateChange: ' + state);
+};
+try {
+  // Unregister the callback for listening to floating ball state changes.
+  floatingBallController.off('stateChange', onStateChange);
+} catch (e) {
+  console.error(`Failed to off stateChange floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
+
+## onClick
+
+```TypeScript
+onClick(callback: Callback<void>): void
+```
+
+Register floating ball click event listener.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-onClick(callback: Callback<void>): void--><!--Device-FloatingBallController-onClick(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-
-## Examples
-
-```TypeScript
-// Define the click event callback function.
-let onClick = () => {
-  console.info('Floating ball onClick');
-};
-try {
-  // Register the callback for listening to click events of the floating ball.
-  floatingBallController.on('click', onClick);
-} catch (e) {
-  console.error(`Failed to on click floating ball. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## onDestroy
 
@@ -298,6 +307,8 @@ onDestroy(callback: Callback<string>): void
 Register floating ball destroy event listener.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -315,10 +326,10 @@ Register floating ball destroy event listener.
 
 | Error Code ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -335,16 +346,142 @@ try {
 }
 ```
 
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<FloatingBallState>): void
+```
+
+Register floating ball stateChange event listener.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+
+## on_click
+
+```TypeScript
+on(type: 'click', callback: Callback<void>): void
+```
+
+Registers a listener for click events of the floating ball. To prevent memory leaks, remember to unregister the listener when it is no longer needed.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-on(type: 'click', callback: Callback<void>): void--><!--Device-FloatingBallController-on(type: 'click', callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'click' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+
+## Examples
+
+```TypeScript
+// Define the click event callback function.
+let onClick = () => {
+  console.info('Floating ball onClick');
+};
+try {
+  // Register the callback for listening to click events of the floating ball.
+  floatingBallController.on('click', onClick);
+} catch (e) {
+  console.error(`Failed to on click floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
+
+## on_stateChange
+
+```TypeScript
+on(type: 'stateChange', callback: Callback<FloatingBallState>): void
+```
+
+Registers a listener for lifecycle state changes of the floating ball. To prevent memory leaks, remember to unregister the listener when it is no longer needed.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-FloatingBallController-on(type: 'stateChange', callback: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-on(type: 'stateChange', callback: Callback<FloatingBallState>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'stateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+
+## Examples
+
+```TypeScript
+// Define the callback function for status changes.
+let onStateChange = (state: floatingBall.FloatingBallState) => {
+  console.info('Floating ball stateChange: ' + state);
+};
+try {
+  // Register the callback for listening to floating ball state changes.
+  floatingBallController.on('stateChange', onStateChange);
+} catch (e) {
+  console.error(`Failed to on stateChange floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## restoreMainWindow
 
 ```TypeScript
 restoreMainWindow(want: Want): Promise<void>
 ```
 
-Restores the main window of the application and loads the specified page. This API uses a promise to return the result. This API can be called only after the floating ball is tapped. If the application has the  
-**ohos.permission.AUTO_RESTORE_MAIN_WINDOW** permission, this API can be called directly without tapping the floating ball.
+Restores the main window of the application and loads the specified page. This API uses a promise to return the result. This API can be called only after the floating ball is tapped. If the application has the **ohos.permission.AUTO_RESTORE_MAIN_WINDOW** permission, this API can be called directly without tapping the floating ball.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_FLOAT_BALL
 
@@ -368,15 +505,15 @@ Restores the main window of the application and loads the specified page. This A
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300026-failure-in-launch-an-application-window-via-a-floating-ball) |
-| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1300026](../errorcode-window.md#1300026-failure-in-launch-an-application-window-via-a-floating-ball) |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -407,18 +544,11 @@ try {
 setFloatingBallVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-Sets whether the floating ball is visible in the application. This API uses a promise to return the result.
-
-- When the application is on the recent tasks screen (the  
-[lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **PAUSED**), the floating ball is invisible.  
-- By default (when this API is not called) or when this API is called with the value **true** passed in, the  
-floating ball is visible except on the recent tasks screen.  
-- When this API is called with the value **false** passed in, the floating ball is invisible when the application  
-is in the foreground (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is  
-**SHOWN** or **RESUMED**) and is visible when the application is in the background (the  
-[lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **HIDDEN**).
+Sets whether the floating ball is visible in the application. This API uses a promise to return the result. - When the application is on the recent tasks screen (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **PAUSED**), the floating ball is invisible. - By default (when this API is not called) or when this API is called with the value **true** passed in, the floating ball is visible except on the recent tasks screen. - When this API is called with the value **false** passed in, the floating ball is invisible when the application is in the foreground (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **SHOWN** or **RESUMED**) and is visible when the application is in the background (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **HIDDEN**).
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -442,9 +572,9 @@ is in the foreground (the [lifecycle state](../../../windowmanager/window-overvi
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -467,7 +597,9 @@ startFloatingBall(params: FloatingBallParams): Promise<void>
 
 Starts the floating ball. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_FLOAT_BALL
 
@@ -491,15 +623,15 @@ Starts the floating ball. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300021-failure-in-starting-multiple-floating-balls) |
-| [1300020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300020-failure-in-creating-a-floating-ball-window) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300021](../errorcode-window.md#1300021-failure-in-starting-multiple-floating-balls) |
+| [1300020](../errorcode-window.md#1300020-failure-in-creating-a-floating-ball-window) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -532,7 +664,9 @@ stopFloatingBall(): Promise<void>
 
 Stops the floating ball. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallController-stopFloatingBall(): Promise<void>--><!--Device-FloatingBallController-stopFloatingBall(): Promise<void>-End-->
 
@@ -548,9 +682,9 @@ Stops the floating ball. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -573,7 +707,9 @@ updateFloatingBall(params: FloatingBallParams): Promise<void>
 
 Updates the floating ball. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallController-updateFloatingBall(params: FloatingBallParams): Promise<void>--><!--Device-FloatingBallController-updateFloatingBall(params: FloatingBallParams): Promise<void>-End-->
 
@@ -595,15 +731,15 @@ Updates the floating ball. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [1300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300027-cannot-change-template-type-when-updating-the-floating-ball) |
-| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-| [1300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300027](../errorcode-window.md#1300027-cannot-change-template-type-when-updating-the-floating-ball) |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300028](../errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) |
 
 ## Examples
 

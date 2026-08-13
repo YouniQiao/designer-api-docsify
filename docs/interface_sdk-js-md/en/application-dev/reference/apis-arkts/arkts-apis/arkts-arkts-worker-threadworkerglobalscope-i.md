@@ -8,7 +8,9 @@ Implements communication between the Worker thread and the host thread. The post
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-unnamed-export interface ThreadWorkerGlobalScope extends GlobalScope--><!--Device-unnamed-export interface ThreadWorkerGlobalScope extends GlobalScope-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface ThreadWorkerGlobalScope--><!--Device-unnamed-export interface ThreadWorkerGlobalScope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,11 +26,13 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object
 ```
 
-Calls a method of an object registered with the host thread. This API is called by the Worker thread.The invoking is synchronous for the Worker thread and asynchronous for the host thread. The return value is transferred through serialization.
+Calls a method of an object registered with the host thread. This API is called by the Worker thread. The invoking is synchronous for the Worker thread and asynchronous for the host thread. The return value is transferred through serialization.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -55,11 +59,11 @@ Calls a method of an object registered with the host thread. This API is called 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
+| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
 
 ## Examples
 
@@ -122,6 +126,8 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorkerGlobalScope-close(): void--><!--Device-ThreadWorkerGlobalScope-close(): void-End-->
@@ -132,7 +138,7 @@ Terminates the Worker thread to stop it from receiving messages.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -154,70 +160,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 }
 ```
 
-## onmessage
-
-```TypeScript
-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
-```
-
-Called when the Worker thread receives a message sent by the host thread through postMessage.The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md) | Yes |  |
-| ev | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-
-## onmessageerror
-
-```TypeScript
-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
-```
-
-Called when the Worker thread receives a message that cannot be deserialized. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope,and the ev type is MessageEvents, indicating the received message data.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md) | Yes |  |
-| ev | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-
 ## postMessage
 
 ```TypeScript
@@ -229,6 +171,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -247,8 +191,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -286,6 +230,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
@@ -303,8 +249,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -335,11 +281,13 @@ workerPort.onmessage = (e: MessageEvents): void => {
 postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the Worker thread to the main thread by transferring object ownership,and inserted into the head of the corresponding priority queue.Except for the worker thread to the main thread,this interface has the same function as postMessage.
+Sends a message from the Worker thread to the main thread by transferring object ownership, and inserted into the head of the corresponding priority queue.Except for the worker thread to the main thread, this interface has the same function as postMessage.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -361,8 +309,8 @@ Sends a message from the Worker thread to the main thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## postMessageWithSharedSendable
 
@@ -370,11 +318,13 @@ Sends a message from the Worker thread to the main thread by transferring object
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the Worker thread to the host thread. In the message, a sendable object is passed by reference,and a non-sendable object is passed by serialization.
+Sends a message from the Worker thread to the host thread. In the message, a sendable object is passed by reference , and a non-sendable object is passed by serialization.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -393,8 +343,8 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -437,4 +387,48 @@ workerInstance.onmessage = (e: MessageEvents) => {
   console.info("sendable index obj is: " + obj.a);
 }
 ```
+
+## onmessage
+
+```TypeScript
+onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
+```
+
+Called when the Worker thread receives a message sent by the host thread through postMessage. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
+
+**Type:** (this: ThreadWorkerGlobalScope, ev: MessageEvents) =&gt; void
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## onmessageerror
+
+```TypeScript
+onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
+```
+
+Called when the Worker thread receives a message that cannot be deserialized. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
+
+**Type:** (this: ThreadWorkerGlobalScope, ev: MessageEvents) =&gt; void
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
 

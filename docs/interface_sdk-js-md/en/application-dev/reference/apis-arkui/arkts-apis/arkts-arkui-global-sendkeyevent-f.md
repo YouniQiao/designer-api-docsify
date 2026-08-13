@@ -12,6 +12,8 @@ Send key event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-export declare function sendKeyEvent(event: KeyEvent): boolean--><!--Device-unnamed-export declare function sendKeyEvent(event: KeyEvent): boolean-End-->

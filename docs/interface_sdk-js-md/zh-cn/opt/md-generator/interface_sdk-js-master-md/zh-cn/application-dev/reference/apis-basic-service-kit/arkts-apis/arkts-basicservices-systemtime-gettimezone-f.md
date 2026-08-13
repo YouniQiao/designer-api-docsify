@@ -12,7 +12,7 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getTimezone](@ohos.systemDateTime:systemDateTime.getTimezone(callback:)
+**替代接口：** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#getTimezone)(callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 

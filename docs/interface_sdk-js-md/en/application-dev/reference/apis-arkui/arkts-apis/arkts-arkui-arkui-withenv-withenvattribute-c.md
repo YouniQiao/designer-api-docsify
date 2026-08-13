@@ -6,6 +6,8 @@ Define the WithEnv attribute functions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class WithEnvAttribute--><!--Device-unnamed-export declare class WithEnvAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Defining Custom Environment Variables
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -40,14 +44,14 @@ Defining Custom Environment Variables
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md)&lt;T&gt; | Yes | Key for custom environment variables. |
+| key | [CustomEnvKey](../../apis-na/arkts-apis/arkts-na-decorator-customenvkey-c.md)&lt;T&gt; | Yes | Key for custom environment variables. |
 | value | T | Yes | Value of custom environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
 
 ## env
 
@@ -61,6 +65,8 @@ Defining System Environment Variables
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -73,12 +79,12 @@ Defining System Environment Variables
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md)&lt;T&gt; | Yes | Key for system environment variables. |
+| key | [WritableSystemEnvKey](../../apis-na/arkts-apis/arkts-na-decorator-writablesystemenvkey-c.md)&lt;T&gt; | Yes | Key for system environment variables. |
 | value | T | Yes | Value of system environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
 

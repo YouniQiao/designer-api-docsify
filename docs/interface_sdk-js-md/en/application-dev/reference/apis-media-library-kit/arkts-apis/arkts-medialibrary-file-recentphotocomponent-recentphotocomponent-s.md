@@ -1,12 +1,12 @@
 # RecentPhotoComponent
 
-Declare struct RecentPhotoComponent
+RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback, onRecentPhotoClick: RecentPhotoClickCallback, onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback, }) Allows an application to access the latest image or video file in the public directory to access the recent image or video in the user directory without the media access permission.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct RecentPhotoComponent--><!--Device-unnamed-export declare struct RecentPhotoComponent-End-->
 
@@ -18,26 +18,6 @@ Declare struct RecentPhotoComponent
 import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from '@kit.MediaLibraryKit';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-Build function of RecentPhotoComponent
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Decorator:** @Builder
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RecentPhotoComponent-build(): void--><!--Device-RecentPhotoComponent-build(): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 ## onRecentPhotoCheckInfo
 
 ```TypeScript
@@ -46,11 +26,15 @@ onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback
 
 Callback when check whether photos or videos exists and return the recent photo info
 
-**Since:** 26.0.0
+**Type:** [RecentPhotoCheckInfoCallback](../../apis-na/arkts-apis/arkts-na-recentphotocheckinfocallback-t.md)
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**Since:** 13
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-RecentPhotoComponent-onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback--><!--Device-RecentPhotoComponent-onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback-End-->
 
@@ -64,11 +48,15 @@ onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback
 
 Callback when check whether photos or videos exists
 
-**Since:** 26.0.0
+**Type:** [RecentPhotoCheckResultCallback](../../apis-na/arkts-apis/arkts-na-recentphotocheckresultcallback-t.md)
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecentPhotoComponent-onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback--><!--Device-RecentPhotoComponent-onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback-End-->
 
@@ -82,11 +70,15 @@ onRecentPhotoClick: RecentPhotoClickCallback
 
 Callback when select photos or videos
 
-**Since:** 26.0.0
+**Type:** [RecentPhotoClickCallback](../../apis-na/arkts-apis/arkts-na-recentphotoclickcallback-t.md)
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecentPhotoComponent-onRecentPhotoClick: RecentPhotoClickCallback--><!--Device-RecentPhotoComponent-onRecentPhotoClick: RecentPhotoClickCallback-End-->
 
@@ -100,13 +92,15 @@ recentPhotoOptions?: RecentPhotoOptions
 
 recentPhotoOptions
 
-**Type:** [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
+**Type:** [RecentPhotoOptions](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-recentphotooptions-c.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecentPhotoComponent-recentPhotoOptions?: RecentPhotoOptions--><!--Device-RecentPhotoComponent-recentPhotoOptions?: RecentPhotoOptions-End-->
 

@@ -12,11 +12,11 @@ import { data } from '@kit.TelephonyKit';
 function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void
 ```
 
-Indicates that there is no uplink or downlink data.
+Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return value of service state query of cellular data services.
 
-&lt;p&gt;It is a return value of service state query of cellular data services.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -34,7 +34,7 @@ Indicates that there is no uplink or downlink data.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -58,11 +58,11 @@ data.getCellularDataFlowType((err: BusinessError, contextData: data.DataFlowType
 function getCellularDataFlowType(): Promise<DataFlowType>
 ```
 
-Indicates that there is no uplink or downlink data.
+Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return value of service state query of cellular data services.
 
-&lt;p&gt;It is a return value of service state query of cellular data services.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -80,7 +80,7 @@ Indicates that there is no uplink or downlink data.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

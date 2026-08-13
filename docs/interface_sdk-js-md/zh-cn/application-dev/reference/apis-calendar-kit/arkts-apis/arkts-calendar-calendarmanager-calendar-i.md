@@ -1,11 +1,12 @@
 # Calendar
 
-下列API示例中需先通过  
-[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar)、[getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getCalendar)中任一方法获取Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
+下列API示例中需先通过 [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar) 、[getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getCalendar)中任一方法获取 Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-calendarManager-export interface Calendar--><!--Device-calendarManager-export interface Calendar-End-->
 
@@ -22,6 +23,8 @@ addEvent(event: Event): Promise<number>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
@@ -48,8 +51,8 @@ addEvent(event: Event): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -95,6 +98,8 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
@@ -109,14 +114,14 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | Event | 是 | Event对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，当添加日程成功时，err为undefined，data为日程id；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，当添加日程成功时，err为undefined，data为日程id；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -162,6 +167,8 @@ addEvents(events: Event[]): Promise<void>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
@@ -185,8 +192,8 @@ addEvents(events: Event[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -239,6 +246,8 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
@@ -251,14 +260,14 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | events | Event[] | 是 | Event对象数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当添加日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当添加日程成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -312,6 +321,8 @@ deleteEvent(id: number): Promise<void>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-Calendar-deleteEvent(id: number): Promise<void>--><!--Device-Calendar-deleteEvent(id: number): Promise<void>-End-->
 
@@ -381,6 +392,8 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void-End-->
@@ -392,7 +405,7 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 日程id，传入的日程id为整数，表示已创建日程的id，是日程的唯一标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当删除日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当删除日程成功时，err为undefined；否则为错误对象。 |
 
 ## 示例
 
@@ -447,6 +460,8 @@ deleteEvents(ids: number[]): Promise<void>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>--><!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>-End-->
 
@@ -529,6 +544,8 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void-End-->
@@ -540,7 +557,7 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ids | number[] | 是 | 日程id数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当删除多个日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当删除多个日程成功时，err为undefined；否则为错误对象。 |
 
 ## 示例
 
@@ -609,6 +626,8 @@ getAccount(): CalendarAccount
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-Calendar-getAccount(): CalendarAccount--><!--Device-Calendar-getAccount(): CalendarAccount-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -653,6 +672,8 @@ getConfig(): CalendarConfig
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-Calendar-getConfig(): CalendarConfig--><!--Device-Calendar-getConfig(): CalendarConfig-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -691,11 +712,13 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>
 ```
 
-获取Calendar下符合查询条件的Event，使用Promise异步回调。只有一个入参时，参数必须为查询条件，对应参数类型为EventFilter。当没有入参时，可查询指定日历账户下的所有日程。
+获取Calendar下符合查询条件的Event，使用Promise异步回调。只有一个入参时，参数必须为查询条件，对应参数类型为EventFilter。当没有入参时， 可查询指定日历账户下的所有日程。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
@@ -721,8 +744,8 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -777,6 +800,8 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
@@ -790,14 +815,14 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 | --- | --- | --- | --- |
 | eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 是 | 查询条件。 |
 | eventKey | (keyof Event)[] | 是 | 查询字段。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -861,11 +886,13 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(callback: AsyncCallback<Event[]>):void
 ```
 
-查询当前日历下所有日程，使用callback异步回调。API version 20之前，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime。从API version 20开始，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime、identifier。若查询字段为空，则不返回该字段。
+查询当前日历下所有日程，使用callback异步回调。 API version 20之前，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime。 从API version 20开始，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime、identifier。 若查询字段为空，则不返回该字段。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
@@ -878,14 +905,14 @@ getEvents(callback: AsyncCallback<Event[]>):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -926,6 +953,8 @@ Opens the event edit page.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -950,8 +979,8 @@ Opens the event edit page.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900005-该日程不支持编辑) | 该日程不支持编辑。 |
-| [23900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-参数值错误) | 参数值错误。 |
+| [23900005](../errorcode-calendarManager.md#23900005-该日程不支持编辑) | 该日程不支持编辑。 |
+| [23900001](../errorcode-calendarManager.md#23900001-参数值错误) | 参数值错误。 |
 
 ## 示例
 
@@ -1016,6 +1045,8 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
@@ -1044,8 +1075,8 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -1099,6 +1130,8 @@ setConfig(config: CalendarConfig): Promise<void>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>--><!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -1119,7 +1152,7 @@ setConfig(config: CalendarConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-参数值错误) | 参数值错误。<br>**适用版本：** 23+ |
+| [23900001](../errorcode-calendarManager.md#23900001-参数值错误) | 参数值错误。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -1163,6 +1196,8 @@ setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void--><!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -1172,13 +1207,13 @@ setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | 是 | 日历配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当设置Config成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当设置Config成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-参数值错误) | 参数值错误。<br>**适用版本：** 23+ |
+| [23900001](../errorcode-calendarManager.md#23900001-参数值错误) | 参数值错误。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -1223,6 +1258,8 @@ updateEvent(event: Event): Promise<void>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-Calendar-updateEvent(event: Event): Promise<void>--><!--Device-Calendar-updateEvent(event: Event): Promise<void>-End-->
 
@@ -1294,6 +1331,8 @@ updateEvent(event: Event, callback: AsyncCallback<void>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void--><!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -1303,7 +1342,7 @@ updateEvent(event: Event, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | Event | 是 | Event对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当更新日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当更新日程成功时，err为undefined；否则为错误对象。 |
 
 ## 示例
 
@@ -1362,6 +1401,8 @@ readonly id: number
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

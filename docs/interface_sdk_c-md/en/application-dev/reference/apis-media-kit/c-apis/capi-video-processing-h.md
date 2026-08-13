@@ -37,6 +37,9 @@ Declare video processing functions.Provides SDR content processing for videos, i
 | [VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnError(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnError onError)](#oh_videoprocessingcallback_bindonerror) | Bind the [OH_VideoProcessingCallback_OnError](capi-video-processing-types-h.md#oh_videoprocessingcallback_onerror) callback function to callback object. |
 | [VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnState(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnState onState)](#oh_videoprocessingcallback_bindonstate) | Bind the [OH_VideoProcessingCallback_OnState](capi-video-processing-types-h.md#oh_videoprocessingcallback_onstate) callback function to callback object. |
 | [VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnNewOutputBuffer(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnNewOutputBuffer onNewOutputBuffer)](#oh_videoprocessingcallback_bindonnewoutputbuffer) | Bind the [OH_VideoProcessingCallback_OnNewOutputBuffer](capi-video-processing-types-h.md#oh_videoprocessingcallback_onnewoutputbuffer) callback function to callback object. |
+| [bool OH_VideoProcessing_IsAutoEffectSupported(uint32_t type)](#oh_videoprocessing_isautoeffectsupported) | Query if the autoeffect is supported. |
+| [VideoProcessing_ErrorCode OH_VideoProcessing_UseAutoEffect(uint32_t type, bool enable, const char *name)](#oh_videoprocessing_useautoeffect) | Specifies whether the type effect is required in the XComponent named name that will be created.Records the mapping between type, enable, and name in the internal map.This should be called before [OH_VideoProcessing_SetAutoEffectParam](capi-video-processing-h.md#oh_videoprocessing_setautoeffectparam). |
+| [VideoProcessing_ErrorCode OH_VideoProcessing_SetAutoEffectParam(uint32_t type, const char *name, const OH_AVFormat *param)](#oh_videoprocessing_setautoeffectparam) | Sets parameters for the automatic effect associated with the XComponent. Currently, the AutoEffect only takes effect on the last invoked XComponent. |
 
 ## Function description
 
@@ -495,5 +498,81 @@ Bind the [OH_VideoProcessingCallback_OnNewOutputBuffer](capi-video-processing-ty
 | Type | Description |
 | -- | -- |
 | [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the function is bound to callback object successfully. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the callback is null. |
+
+### OH_VideoProcessing_IsAutoEffectSupported()
+
+```c
+bool OH_VideoProcessing_IsAutoEffectSupported(uint32_t type)
+```
+
+**Description**
+
+Query if the autoeffect is supported.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| uint32_t type | [in] The autoeffect type to query. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| bool | <ul><li><b>true</b> if the autoeffect is supported.</li><br>     <li><b>false</b> if the autoeffect is not supported.</li></ul> |
+
+### OH_VideoProcessing_UseAutoEffect()
+
+```c
+VideoProcessing_ErrorCode OH_VideoProcessing_UseAutoEffect(uint32_t type, bool enable, const char *name)
+```
+
+**Description**
+
+Specifies whether the type effect is required in the XComponent named name that will be created.Records the mapping between type, enable, and name in the internal map.This should be called before [OH_VideoProcessing_SetAutoEffectParam](capi-video-processing-h.md#oh_videoprocessing_setautoeffectparam).
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| uint32_t type | [in] Specify AutoEffect to use. |
+| bool enable | [in] Enable or disable the type effect in the XComponent named name to be created later. |
+| const char *name | [in] Specifies the name of an XComponent. If the current application has multiple XComponents withthe same name, this parameter takes effect only on the first active XComponent. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li><br>     <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if type is not {@link VIDEO_PROCESSING_TYPE_AUTOEFFECT_AISR}<br>     or name is null.</li><br>     <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported)<br>     returns false for the type, or the same name has already been registered by calling this function.</li></ul> |
+
+### OH_VideoProcessing_SetAutoEffectParam()
+
+```c
+VideoProcessing_ErrorCode OH_VideoProcessing_SetAutoEffectParam(uint32_t type, const char *name, const OH_AVFormat *param)
+```
+
+**Description**
+
+Sets parameters for the automatic effect associated with the XComponent. Currently, the AutoEffect only takes effect on the last invoked XComponent.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| uint32_t type | [in] Specify AutoEffect to use. |
+| const char *name | [in] Specifies the name of an XComponent. If the current application has multiple XComponentswith the same name, this parameter takes effect only on the first active XComponent. |
+| [const OH_AVFormat](capi-videoprocessing-oh-avformat.md) *param | [in] The parameter according to the type see video_processing_type.h. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li><br>     <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if the name is nullptr or the param value is invalid.</li><br>     <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported)<br>     returns false for the type, or name does not match any registered name, or the VPE instance has not been<br>     created or [OH_VideoProcessing_UseAutoEffect](capi-video-processing-h.md#oh_videoprocessing_useautoeffect) has not been called for the name.</li><br>     <li>[VIDEO_PROCESSING_ERROR_UNKNOWN](capi-video-processing-types-h.md#videoprocessing_errorcode) if an internal algorithm error occurs.</li></ul> |
 
 

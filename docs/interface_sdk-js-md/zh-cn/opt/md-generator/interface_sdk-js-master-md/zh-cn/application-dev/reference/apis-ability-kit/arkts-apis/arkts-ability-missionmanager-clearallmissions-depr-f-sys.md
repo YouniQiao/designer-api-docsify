@@ -12,7 +12,7 @@ function clearAllMissions(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [clearAllMissions](ohos.app.ability.missionManager/missionManager#clearAllMissions)
+**替代接口：** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -62,7 +62,7 @@ function clearAllMissions(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [clearAllMissions](ohos.app.ability.missionManager/missionManager#clearAllMissions)
+**替代接口：** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

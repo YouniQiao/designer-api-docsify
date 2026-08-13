@@ -12,6 +12,8 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
@@ -22,13 +24,13 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## 示例
 
@@ -58,6 +60,8 @@ function selectContacts(): Promise<Array<Contact>>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -96,6 +100,8 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void-End-->
@@ -107,13 +113,13 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，表示单选或多选。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## 示例
 
@@ -146,6 +152,8 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>-End-->
@@ -168,7 +176,7 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## 示例
 

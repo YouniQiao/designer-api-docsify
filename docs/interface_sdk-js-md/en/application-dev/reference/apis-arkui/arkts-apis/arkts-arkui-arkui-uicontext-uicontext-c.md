@@ -1,12 +1,14 @@
 # UIContext
 
-class UIContext
+Implements a **UIContext** instance. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a > **UIContext** instance: (1) using the > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from > ohos.window; (2) using the built-in method > [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom > component; (3) using static methods of the UIContext class such as > [getCallingScopeUIContext](#getCallingScopeUIContext). In this document, the **UIContext** instance > is represented by **uiContext**.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-export declare class UIContext--><!--Device-unnamed-export declare class UIContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class UIContext--><!--Device-unnamed-export class UIContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,29 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor
 ```
 
-Registers a local input event monitor.
-
-The "Local" in the interface name indicates that the monitor is only valid within the current UIContext,and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors.
-
-Performance Warning: Do not perform time-consuming operations in the callback!
-
-Monitor Object Notes:  
-- The returned Monitor object is a unique identifier created by the system.  
-- Developers cannot actively construct or forge this object.  
-- Must save the returned monitor object reference for subsequent cancellation.  
-- It is recommended to use a variable to save it to avoid losing the reference.
-
-Usage Examples:```typescript// Monitor a single event type const monitor1 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent(); console.log(`Mouse: (\${mouseEvent.windowX}, \${mouseEvent.windowY})`); return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue } return { action: InputEventInterceptAction.BLOCK }; // Block event });
-
-// Monitor multiple event types (using bitwise operations)const monitor2 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent()!; console.log(`Mouse button: \${mouseEvent.button}`); return { action: InputEventInterceptAction.BLOCK }; } return { action: InputEventInterceptAction.CONTINUE }; });
-
-// When unregistering the monitor, use the returned Monitor object uiContext.removeLocalInputEventMonitor(monitor1);uiContext.removeLocalInputEventMonitor(monitor2);```
+Registers a local input event monitor. The "Local" in the interface name indicates that the monitor is only valid within the current UIContext, and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors. Performance Warning: Do not perform time-consuming operations in the callback! Monitor Object Notes: - The returned Monitor object is a unique identifier created by the system. - Developers cannot actively construct or forge this object. - Must save the returned monitor object reference for subsequent cancellation. - It is recommended to use a variable to save it to avoid losing the reference. Usage Examples: ```typescript // Monitor a single event type const monitor1 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent(); console.log(`Mouse: (\${mouseEvent.windowX}, \${mouseEvent.windowY})`); return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue } return { action: InputEventInterceptAction.BLOCK }; // Block event } ); // Monitor multiple event types (using bitwise operations) const monitor2 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent()!; console.log(`Mouse button: \${mouseEvent.button}`); return { action: InputEventInterceptAction.BLOCK }; } return { action: InputEventInterceptAction.CONTINUE }; } ); // When unregistering the monitor, use the returned Monitor object uiContext.removeLocalInputEventMonitor(monitor1); uiContext.removeLocalInputEventMonitor(monitor2); ```
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-UIContext-addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor--><!--Device-UIContext-addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor-End-->
 
@@ -69,13 +59,17 @@ Usage Examples:```typescript// Monitor a single event type const monitor1 = uiCo
 animateTo(value: AnimateParam, event: () => void): void
 ```
 
-Defining animation function
+Adds transition animations for state changes in closure code. > **NOTE：**> > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**. > > - When **animateTo** is called in > [aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the > component's build method is not executed yet, and internal components are not created. This means the animation > has no initial values to work with and will not function as expected. > > - During execution of > [aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear), > the component is being destroyed, so animations should not be used. > > - When a component appears or disappears, animation effects can be added through > component transition. > > - For properties that component transitions do not support, refer to > [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion), > which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes. > > - In certain scenarios, using animateTo with > [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may > produce unexpected results. For details, see > [Using animateTo Failed in State Management V2](../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2). > > > - When a UIAbility switches from the foreground to the background, any limited iteration animations that are > currently running will end immediately, thereby triggering the > onFinish animation completion callback. > > - If transition animations are turned off in Developer options, animations end on the current frame, and the > **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this > callback.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-animateTo(value: AnimateParam, event: () => void): void--><!--Device-UIContext-animateTo(value: AnimateParam, event: () => void): void-End-->
 
@@ -85,33 +79,8 @@ Defining animation function
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | AnimateParam | Yes | parameters for animation. |
-| event | () =&gt; void | Yes | the closure base on which, the system will create animation automatically |
-
-## animateToImmediately
-
-```TypeScript
-animateToImmediately(param: AnimateParam, processor: VoidCallback): void
-```
-
-Define animation functions for immediate distribution.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: VoidCallback): void--><!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: VoidCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | AnimateParam | Yes | Set animation effect parameters. |
-| processor | VoidCallback | Yes | Specify the closure function that displays dynamic effects, and the system will automatically insert transition animations for state changes caused by the closure function. |
+| value | AnimateParam | Yes | Animation settings. |
+| event | () =&gt; void | Yes | Closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
 
 ## bindTabsToNestedScrollable
 
@@ -121,11 +90,15 @@ bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scrol
 
 Bind tabs to nested scrollable container components to automatically hide tab bar.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-UIContext-bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void--><!--Device-UIContext-bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void-End-->
 
@@ -147,11 +120,15 @@ bindTabsToScrollable(tabsController: TabsController, scroller: Scroller): void
 
 Bind tabs to scrollable container component to automatically hide tab bar.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-UIContext-bindTabsToScrollable(tabsController: TabsController, scroller: Scroller): void--><!--Device-UIContext-bindTabsToScrollable(tabsController: TabsController, scroller: Scroller): void-End-->
 
@@ -167,18 +144,22 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 ## closeBindSheet
 
 ```TypeScript
-closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
+closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise<void>
 ```
 
-Close the BindSheet.
+Closes the sheet corresponding to **bindSheetContent**. This API uses a promise to return the result. > **NOTE：**> > Closing a sheet using this API will not invoke the **shouldDismiss** callback.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>--><!--Device-UIContext-closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise<void>--><!--Device-UIContext-closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,21 +167,21 @@ Close the BindSheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
+| bindSheetContent | ComponentContent&lt;T&gt; | Yes | Content to display on the sheet. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
+| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## constructor
 
@@ -208,13 +189,17 @@ Close the BindSheet.
 constructor()
 ```
 
-UIContext constructor
+Construct a **UIContext** object. > **NOTE：**> > A **UIContext** object created using the constructor points to an ambiguous UI context, meaning it is not bound > to any specific UI instance. The unique ID of such a UIContext instance is -1.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIContext-constructor()--><!--Device-UIContext-constructor()-End-->
 
@@ -223,16 +208,60 @@ UIContext constructor
 ## createAnimator
 
 ```TypeScript
+createAnimator(options: AnimatorOptions): AnimatorResult
+```
+
+Creates an **Animator** object.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UIContext-createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-UIContext-createAnimator(options: AnimatorOptions): AnimatorResult-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+
+## createAnimator
+
+```TypeScript
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Create an animator object for custom animation.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createAnimator) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-UIContext-createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult--><!--Device-UIContext-createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult-End-->
 
@@ -242,36 +271,39 @@ Create an animator object for custom animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) |  |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
 ```TypeScript
-static createUIContextWithoutWindow(
-    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined
+static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined
 ```
 
-Create a UI instance singleton without window and get its UIContext object.
+Creates a UI instance that does not depend on a window and returns its UI context. The created UI instance is a singleton. > **NOTE：**> > The returned UI context can only be used to create [custom nodes](../../../ui/arkts-user-defined-node.md). It > cannot be used for other UI operations.
 
-**Since:** 23
+**Since:** 17
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-static createUIContextWithoutWindow(    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined--><!--Device-UIContext-static createUIContextWithoutWindow(    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined--><!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -279,20 +311,20 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | Yes | UIAbilityContext or ExtensionContext. |
+| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Context of the created UI instance, or **undefined** if creation fails. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. @static |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
 
 ## destroyUIContextWithoutWindow
 
@@ -300,13 +332,17 @@ Create a UI instance singleton without window and get its UIContext object.
 static destroyUIContextWithoutWindow(): void
 ```
 
-Destroy the UI instance singleton without window.
+Destroys the UI instance created using [createUIContextWithoutWindow](#createUIContextWithoutWindow).
 
-**Since:** 23
+**Since:** 17
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 17.
 
 <!--Device-UIContext-static destroyUIContextWithoutWindow(): void--><!--Device-UIContext-static destroyUIContextWithoutWindow(): void-End-->
 
@@ -315,18 +351,22 @@ Destroy the UI instance singleton without window.
 ## dispatchKeyEvent
 
 ```TypeScript
-dispatchKeyEvent(node: int | string, event: KeyEvent): boolean
+dispatchKeyEvent(node: number | string, event: KeyEvent): boolean
 ```
 
 Dispach keyboard event to the frameNode with inspector key.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-dispatchKeyEvent(node: int | string, event: KeyEvent): boolean--><!--Device-UIContext-dispatchKeyEvent(node: int | string, event: KeyEvent): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-UIContext-dispatchKeyEvent(node: number | string, event: KeyEvent): boolean--><!--Device-UIContext-dispatchKeyEvent(node: number | string, event: KeyEvent): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -334,8 +374,8 @@ Dispach keyboard event to the frameNode with inspector key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | int \| string | Yes | The uniqueId or inspector key of the target FrameNode. |
-| event | KeyEvent | Yes | The keyboard event. |
+| node | number \| string | Yes | The uniqueId or inspector key of the target FrameNode. |
+| event | KeyEvent | Yes | The key event to be sent. |
 
 **Return value:**
 
@@ -346,18 +386,22 @@ Dispach keyboard event to the frameNode with inspector key.
 ## enableEventPassthrough
 
 ```TypeScript
-enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventType): void
+enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void
 ```
 
 Whether to enable or disable event passthrough.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventType): void--><!--Device-UIContext-enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventType): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-UIContext-enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void--><!--Device-UIContext-enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -365,24 +409,26 @@ Whether to enable or disable event passthrough.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | enable or disable event passthrough. The default value is false. |
+| enabled | boolean | Yes | enable or disable event passthrough. The default value is false. |
 | eventType | RawInputEventType | Yes | the type of raw input event. |
 
 ## enableSwipeBack
 
 ```TypeScript
-enableSwipeBack(enabled: boolean | undefined): void
+enableSwipeBack(enabled: Optional<boolean>): void
 ```
 
 whether to enable or disable swipe to back event.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-UIContext-enableSwipeBack(enabled: boolean | undefined): void--><!--Device-UIContext-enableSwipeBack(enabled: boolean | undefined): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void--><!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -390,23 +436,27 @@ whether to enable or disable swipe to back event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | enable or disable swipe to back event. |
+| enabled | Optional&lt;boolean&gt; | Yes | enable or disable swipe to back event. |
 
 ## fp2px
 
 ```TypeScript
-fp2px(value: double): double
+fp2px(value: number): number
 ```
 
 Converts a value in fp units to a value in px.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-fp2px(value: double): double--><!--Device-UIContext-fp2px(value: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-fp2px(value: number): number--><!--Device-UIContext-fp2px(value: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -414,13 +464,13 @@ Converts a value in fp units to a value in px.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number |  |
 
 ## getAllUIContexts
 
@@ -428,13 +478,17 @@ Converts a value in fp units to a value in px.
 static getAllUIContexts(): UIContext[]
 ```
 
-Gets all currently active UIContext instances.
+Obtains all currently valid UIContext instances.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIContext-static getAllUIContexts(): UIContext[]--><!--Device-UIContext-static getAllUIContexts(): UIContext[]-End-->
 
@@ -444,7 +498,7 @@ Gets all currently active UIContext instances.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
 
 ## getAtomicServiceBar
 
@@ -454,11 +508,15 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 
 Get AtomicServiceBar.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getAtomicServiceBar(): Nullable<AtomicServiceBar>--><!--Device-UIContext-getAtomicServiceBar(): Nullable<AtomicServiceBar>-End-->
 
@@ -478,11 +536,15 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 Get the FrameNode attached to current window by id.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getAttachedFrameNodeById(id: string): FrameNode | null--><!--Device-UIContext-getAttachedFrameNodeById(id: string): FrameNode | null-End-->
 
@@ -506,13 +568,17 @@ Get the FrameNode attached to current window by id.
 static getCallingScopeUIContext(): UIContext | undefined
 ```
 
-Gets the UIContext associated with the current calling scope.
+Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous. > **NOTE：**> > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its > validity via the [isAvailable](#isAvailable) API.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIContext-static getCallingScopeUIContext(): UIContext | undefined--><!--Device-UIContext-static getCallingScopeUIContext(): UIContext | undefined-End-->
 
@@ -522,7 +588,7 @@ Gets the UIContext associated with the current calling scope.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
 
 ## getComponentSnapshot
 
@@ -532,11 +598,15 @@ getComponentSnapshot(): ComponentSnapshot
 
 Get ComponentSnapshot.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getComponentSnapshot(): ComponentSnapshot--><!--Device-UIContext-getComponentSnapshot(): ComponentSnapshot-End-->
 
@@ -556,11 +626,15 @@ getComponentUtils(): ComponentUtils
 
 get object ComponentUtils.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getComponentUtils(): ComponentUtils--><!--Device-UIContext-getComponentUtils(): ComponentUtils-End-->
 
@@ -580,11 +654,15 @@ getContextMenuController(): ContextMenuController
 
 Get object context menu controller.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getContextMenuController(): ContextMenuController--><!--Device-UIContext-getContextMenuController(): ContextMenuController-End-->
 
@@ -604,11 +682,15 @@ getCursorController(): CursorController
 
 Get object cursor controller.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getCursorController(): CursorController--><!--Device-UIContext-getCursorController(): CursorController-End-->
 
@@ -620,6 +702,34 @@ Get object cursor controller.
 | --- | --- |
 | [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
+## getDialogPresenter
+
+```TypeScript
+getDialogPresenter(): DialogPresenter
+```
+
+Get the Dialog object.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-UIContext-getDialogPresenter(): DialogPresenter--><!--Device-UIContext-getDialogPresenter(): DialogPresenter-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DialogPresenter](arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Dialog object. |
+
 ## getDragController
 
 ```TypeScript
@@ -628,11 +738,15 @@ getDragController(): DragController
 
 Get DragController.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getDragController(): DragController--><!--Device-UIContext-getDragController(): DragController-End-->
 
@@ -650,13 +764,17 @@ Get DragController.
 getFilteredInspectorTree(filters?: Array<string>): string
 ```
 
-Obtains the component tree and component attributes. This API has a long processing time and is intended for&lt;br&gt;testing scenarios only.
+Obtains the component tree and component attributes. This API has a long processing time and is intended for &lt;br&gt;testing scenarios only.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getFilteredInspectorTree(filters?: Array<string>): string--><!--Device-UIContext-getFilteredInspectorTree(filters?: Array<string>): string-End-->
 
@@ -666,7 +784,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields &lt;br&gt;will be filtered out. &lt;br&gt;The following filter field is supported since API version 20: &lt;br&gt;**"isLayoutInspector"**: whether the component tree contains custom components. &lt;br&gt;If **filters** is omitted or &lt;br&gt;does not contain **"isLayoutInspector"**, the returned component tree &lt;br&gt;will not include custom component details. &lt;br&gt;Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -678,23 +796,27 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## getFilteredInspectorTreeById
 
 ```TypeScript
-getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): string
+getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>): string
 ```
 
-Obtains the attributes of the specified component and its child components. This API has a long processing time&lt;br&gt;and is intended for testing scenarios only.
+Obtains the attributes of the specified component and its child components. This API has a long processing time &lt;br&gt;and is intended for testing scenarios only.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): string--><!--Device-UIContext-getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>): string--><!--Device-UIContext-getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -702,22 +824,21 @@ Obtains the attributes of the specified component and its child components. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | [ID](CommonMethod#id) of the target component. |
-| depth | int | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of &lt;br&gt;the specified component are obtained. If the value is **2**, the attributes of the specified component and its &lt;br&gt;level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
+| id | string | Yes | ID of the target component. |
+| depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of &lt;br&gt;the specified component are obtained. If the value is **2**, the attributes of &lt;br&gt;the specified component and its &lt;br&gt;level-1 child components are obtained. The rest can be deduced by analogy. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields &lt;br&gt;will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value description of [getInspectorInfo]{ |
+| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value &lt;br&gt;description of [getInspectorInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
-| [100024](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The parameter depth must be greater than 0. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## getFocusController
 
@@ -727,11 +848,15 @@ getFocusController(): FocusController
 
 Get FocusController.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getFocusController(): FocusController--><!--Device-UIContext-getFocusController(): FocusController-End-->
 
@@ -749,13 +874,17 @@ Get FocusController.
 getFont(): Font
 ```
 
-get object font.
+Obtains a **Font** object.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getFont(): Font--><!--Device-UIContext-getFont(): Font-End-->
 
@@ -765,7 +894,7 @@ get object font.
 
 | Type | Description |
 | --- | --- |
-| [Font](arkts-arkui-arkui-uicontext-font-c.md) | object Font. |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | Font** object. |
 
 ## getFrameNodeById
 
@@ -775,11 +904,15 @@ getFrameNodeById(id: string): FrameNode | null
 
 Get FrameNode by id.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getFrameNodeById(id: string): FrameNode | null--><!--Device-UIContext-getFrameNodeById(id: string): FrameNode | null-End-->
 
@@ -800,18 +933,22 @@ Get FrameNode by id.
 ## getFrameNodeByUniqueId
 
 ```TypeScript
-getFrameNodeByUniqueId(id: int): FrameNode | null
+getFrameNodeByUniqueId(id: number): FrameNode | null
 ```
 
-Get FrameNode by uniqueId.
+Get FrameNode by uniqueId. Obtains the entity node, FrameNode, of a component on the component tree using its uniqueId. The return value depends on the type of component associated with the uniqueId. 1. If the uniqueId corresponds to a built-in component, the associated FrameNode is returned. 2. If the uniqueId corresponds to a custom component: If the component has rendered content, its root node is returned, with the type __Common__; if the component has no rendered content, the FrameNode of its first child component is returned. 3. If the uniqueId does not correspond to any component, null is returned.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-getFrameNodeByUniqueId(id: int): FrameNode | null--><!--Device-UIContext-getFrameNodeByUniqueId(id: int): FrameNode | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-getFrameNodeByUniqueId(id: number): FrameNode | null--><!--Device-UIContext-getFrameNodeByUniqueId(id: number): FrameNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -819,7 +956,7 @@ Get FrameNode by uniqueId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | The uniqueId of the FrameNode. |
+| id | number | Yes | The uniqueId of the FrameNode. |
 
 **Return value:**
 
@@ -833,13 +970,17 @@ Get FrameNode by uniqueId.
 getHostContext(): Context | undefined
 ```
 
-Obtains context of the ability.
+Obtains the context of this ability.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getHostContext(): Context | undefined--><!--Device-UIContext-getHostContext(): Context | undefined-End-->
 
@@ -849,23 +990,27 @@ Obtains context of the ability.
 
 | Type | Description |
 | --- | --- |
-| [Context](arkts-arkui-context-t.md) |  |
+| [Context](arkts-arkui-context-t.md) | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
 
 ## getId
 
 ```TypeScript
-getId(): int
+getId(): number
 ```
 
-Get id of the UI instance.
+Obtains the unique ID of a UI instance object. In multi-instance scenarios, you can use this unique ID to distinguish between different UI instance objects for easier management.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-getId(): int--><!--Device-UIContext-getId(): int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIContext-getId(): number--><!--Device-UIContext-getId(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -873,7 +1018,7 @@ Get id of the UI instance.
 
 | Type | Description |
 | --- | --- |
-| int | Returns id of the UI instance. |
+| number | Unique ID of the backend instance. The value range is [-1, +∞). |
 
 ## getKeyboardAvoidMode
 
@@ -881,13 +1026,17 @@ Get id of the UI instance.
 getKeyboardAvoidMode(): KeyboardAvoidMode
 ```
 
-Get KeyboardAvoidMode.
+Obtains the avoidance mode of the virtual keyboard.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getKeyboardAvoidMode(): KeyboardAvoidMode--><!--Device-UIContext-getKeyboardAvoidMode(): KeyboardAvoidMode-End-->
 
@@ -897,7 +1046,7 @@ Get KeyboardAvoidMode.
 
 | Type | Description |
 | --- | --- |
-| [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
+| [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Avoidance mode of the virtual keyboard. |
 
 ## getLastFocusedUIContext
 
@@ -905,13 +1054,17 @@ Get KeyboardAvoidMode.
 static getLastFocusedUIContext(): UIContext | undefined
 ```
 
-Gets the UIContext of the last focused UI instance if one exists.
+Obtains the UIContext of the UI instance that most recently switched to the focused state.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIContext-static getLastFocusedUIContext(): UIContext | undefined--><!--Device-UIContext-static getLastFocusedUIContext(): UIContext | undefined-End-->
 
@@ -921,7 +1074,7 @@ Gets the UIContext of the last focused UI instance if one exists.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
 
 ## getLastForegroundUIContext
 
@@ -929,13 +1082,17 @@ Gets the UIContext of the last focused UI instance if one exists.
 static getLastForegroundUIContext(): UIContext | undefined
 ```
 
-Gets the UIContext of the last foregrounded UI instance if one exists.
+Obtains the UIContext of the UI instance that most recently switched to the foreground state.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIContext-static getLastForegroundUIContext(): UIContext | undefined--><!--Device-UIContext-static getLastForegroundUIContext(): UIContext | undefined-End-->
 
@@ -945,7 +1102,7 @@ Gets the UIContext of the last foregrounded UI instance if one exists.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
 
 ## getMagnifier
 
@@ -953,13 +1110,17 @@ Gets the UIContext of the last foregrounded UI instance if one exists.
 getMagnifier(): Magnifier
 ```
 
-Obtains the Magnifier object.
+Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md#Magnifier) object, which can be used to control the display and hiding of a magnifier.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIContext-getMagnifier(): Magnifier--><!--Device-UIContext-getMagnifier(): Magnifier-End-->
 
@@ -969,23 +1130,27 @@ Obtains the Magnifier object.
 
 | Type | Description |
 | --- | --- |
-| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
+| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier** object, which can be used to control the display and hiding of a magnifier. |
 
 ## getMaxFontScale
 
 ```TypeScript
-getMaxFontScale(): double
+getMaxFontScale(): number
 ```
 
 Get the max font scale.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-getMaxFontScale(): double--><!--Device-UIContext-getMaxFontScale(): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-UIContext-getMaxFontScale(): number--><!--Device-UIContext-getMaxFontScale(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -993,7 +1158,7 @@ Get the max font scale.
 
 | Type | Description |
 | --- | --- |
-| double | The max font scale. |
+| number | The max font scale. |
 
 ## getMeasureUtils
 
@@ -1001,13 +1166,17 @@ Get the max font scale.
 getMeasureUtils(): MeasureUtils
 ```
 
-Get MeasureUtils.
+Obtains a **MeasureUtils** object for text calculation.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getMeasureUtils(): MeasureUtils--><!--Device-UIContext-getMeasureUtils(): MeasureUtils-End-->
 
@@ -1017,7 +1186,7 @@ Get MeasureUtils.
 
 | Type | Description |
 | --- | --- |
-| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
+| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | Text metrics, such as text height and width. |
 
 ## getMediaQuery
 
@@ -1027,11 +1196,15 @@ getMediaQuery(): MediaQuery
 
 get object mediaQuery.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getMediaQuery(): MediaQuery--><!--Device-UIContext-getMediaQuery(): MediaQuery-End-->
 
@@ -1046,18 +1219,22 @@ get object mediaQuery.
 ## getNavigationInfoByUniqueId
 
 ```TypeScript
-getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined
+getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined
 ```
 
 Get navigation information of the frameNode with uniqueId.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined--><!--Device-UIContext-getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined--><!--Device-UIContext-getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1065,7 +1242,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | The uniqueId of the target FrameNode. |
+| id | number | Yes | The uniqueId of the target FrameNode. |
 
 **Return value:**
 
@@ -1079,13 +1256,17 @@ Get navigation information of the frameNode with uniqueId.
 getOverlayManager(): OverlayManager
 ```
 
-Get object OverlayManager.
+Obtains the OverlayManager object.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getOverlayManager(): OverlayManager--><!--Device-UIContext-getOverlayManager(): OverlayManager-End-->
 
@@ -1095,7 +1276,7 @@ Get object OverlayManager.
 
 | Type | Description |
 | --- | --- |
-| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
+| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
 
 ## getOverlayManagerOptions
 
@@ -1105,11 +1286,15 @@ getOverlayManagerOptions(): OverlayManagerOptions
 
 Get object OverlayManagerOptions.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-UIContext-getOverlayManagerOptions(): OverlayManagerOptions--><!--Device-UIContext-getOverlayManagerOptions(): OverlayManagerOptions-End-->
 
@@ -1124,18 +1309,22 @@ Get object OverlayManagerOptions.
 ## getPageInfoByUniqueId
 
 ```TypeScript
-getPageInfoByUniqueId(id: int): PageInfo
+getPageInfoByUniqueId(id: number): PageInfo
 ```
 
 Get page information of the frameNode with uniqueId.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-getPageInfoByUniqueId(id: int): PageInfo--><!--Device-UIContext-getPageInfoByUniqueId(id: int): PageInfo-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-getPageInfoByUniqueId(id: number): PageInfo--><!--Device-UIContext-getPageInfoByUniqueId(id: number): PageInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1143,7 +1332,7 @@ Get page information of the frameNode with uniqueId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | The uniqueId of the target FrameNode. |
+| id | number | Yes | The uniqueId of the target FrameNode. |
 
 **Return value:**
 
@@ -1157,13 +1346,15 @@ Get page information of the frameNode with uniqueId.
 getPageRootNode(): FrameNode | null
 ```
 
-Retrieve the root node of the corresponding page of the UIContext.
+Obtains the root node of the page corresponding to the UIContext.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-UIContext-getPageRootNode(): FrameNode | null--><!--Device-UIContext-getPageRootNode(): FrameNode | null-End-->
 
@@ -1173,13 +1364,13 @@ Retrieve the root node of the corresponding page of the UIContext.
 
 | Type | Description |
 | --- | --- |
-| FrameNode | The root node of the corresponding page of the UIContext, or null if no root node exists. |
+| FrameNode | FrameNode of the root node of the page or **null**. &lt;br&gt;If no valid FrameNode is available, **null** is returned. &lt;br&gt;If no page is loaded in the window, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#120007-instance-not-exist) | The UIContext is not available. |
+| [120007](../errorcode-uicontext.md#120007-instance-not-exist) | The UIContext is not available. |
 
 ## getPixelRoundMode
 
@@ -1187,13 +1378,17 @@ Retrieve the root node of the corresponding page of the UIContext.
 getPixelRoundMode(): PixelRoundMode
 ```
 
-Get the pixel round mode of the system.
+Obtains the pixel rounding mode for this page.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-UIContext-getPixelRoundMode(): PixelRoundMode--><!--Device-UIContext-getPixelRoundMode(): PixelRoundMode-End-->
 
@@ -1203,7 +1398,7 @@ Get the pixel round mode of the system.
 
 | Type | Description |
 | --- | --- |
-| PixelRoundMode | the mode of pixel round. |
+| PixelRoundMode | Pixel rounding mode of the current page. |
 
 ## getPromptAction
 
@@ -1211,13 +1406,17 @@ Get the pixel round mode of the system.
 getPromptAction(): PromptAction
 ```
 
-get object PromptAction.
+Obtains a PromptAction object.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getPromptAction(): PromptAction--><!--Device-UIContext-getPromptAction(): PromptAction-End-->
 
@@ -1227,7 +1426,7 @@ get object PromptAction.
 
 | Type | Description |
 | --- | --- |
-| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | object PromptAction. |
+| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | PromptAction object. |
 
 ## getRouter
 
@@ -1235,13 +1434,17 @@ get object PromptAction.
 getRouter(): Router
 ```
 
-get object router.
+Obtains a Router object.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getRouter(): Router--><!--Device-UIContext-getRouter(): Router-End-->
 
@@ -1251,7 +1454,7 @@ get object router.
 
 | Type | Description |
 | --- | --- |
-| [Router](arkts-arkui-arkui-uicontext-router-c.md) | object Router. |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) | Router object. |
 
 ## getSharedLocalStorage
 
@@ -1259,13 +1462,17 @@ get object router.
 getSharedLocalStorage(): LocalStorage | undefined
 ```
 
-Get current LocalStorage shared from stage.
+Obtains the **LocalStorage** instance shared by this stage.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getSharedLocalStorage(): LocalStorage | undefined--><!--Device-UIContext-getSharedLocalStorage(): LocalStorage | undefined-End-->
 
@@ -1275,7 +1482,7 @@ Get current LocalStorage shared from stage.
 
 | Type | Description |
 | --- | --- |
-| LocalStorage |  |
+| LocalStorage | LocalStorage** instance if it exists; **undefined** if it does not exist. |
 
 ## getSmartGestureController
 
@@ -1287,9 +1494,13 @@ Get object smart gesture controller.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-UIContext-getSmartGestureController(): SmartGestureController--><!--Device-UIContext-getSmartGestureController(): SmartGestureController-End-->
 
@@ -1307,13 +1518,17 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Get object text menu controller.
+Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md#TextMenuController) object, which can be used to control the context menu on selection.
 
-**Since:** 23
+**Since:** 16
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 16.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 16.
 
 <!--Device-UIContext-getTextMenuController(): TextMenuController--><!--Device-UIContext-getTextMenuController(): TextMenuController-End-->
 
@@ -1323,7 +1538,7 @@ Get object text menu controller.
 
 | Type | Description |
 | --- | --- |
-| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
+| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | Obtained **TextMenuController** object. |
 
 ## getUIInspector
 
@@ -1333,11 +1548,15 @@ getUIInspector(): UIInspector
 
 Obtains the **UIInspector** object.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-getUIInspector(): UIInspector--><!--Device-UIContext-getUIInspector(): UIInspector-End-->
 
@@ -1355,13 +1574,17 @@ Obtains the **UIInspector** object.
 getUIObserver(): UIObserver
 ```
 
-Get the UI observer.
+Obtains the **UIObserver** object.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getUIObserver(): UIObserver--><!--Device-UIContext-getUIObserver(): UIObserver-End-->
 
@@ -1371,7 +1594,7 @@ Get the UI observer.
 
 | Type | Description |
 | --- | --- |
-| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | The UI observer. |
+| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | UIObserver** object. |
 
 ## getWindowHeightBreakpoint
 
@@ -1379,13 +1602,17 @@ Get the UI observer.
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-Get the height breakpoint of current window.
+Obtains the height breakpoint value of the window where this instance is located. The specific value is determined based on the window aspect ratio. For details, see HeightBreakpoint.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-UIContext-getWindowHeightBreakpoint(): HeightBreakpoint--><!--Device-UIContext-getWindowHeightBreakpoint(): HeightBreakpoint-End-->
 
@@ -1395,23 +1622,27 @@ Get the height breakpoint of current window.
 
 | Type | Description |
 | --- | --- |
-| HeightBreakpoint | The height breakpoint of current window. |
+| HeightBreakpoint | Height breakpoint value of the window where the current instance is located. If the window aspect ratio is 0, **HEIGHT_SM** is returned. |
 
 ## getWindowId
 
 ```TypeScript
-getWindowId(): int | undefined
+getWindowId(): number | undefined
 ```
 
-Get window id to which the current UIContext belongs.&lt;p&gt;**NOTE：**:If the current UIContext is in a UIExtensionAbility running within the host process,this method returns the top-level window ID of the host application.&lt;/p&gt;
+Obtains the ID of the window to which the current application instance belongs. > **NOTE：**> > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that runs in the main > application process, the top-level window ID of the main application is returned.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-getWindowId(): int | undefined--><!--Device-UIContext-getWindowId(): int | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UIContext-getWindowId(): number | undefined--><!--Device-UIContext-getWindowId(): number | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1419,7 +1650,7 @@ Get window id to which the current UIContext belongs.&lt;p&gt;**NOTE：**:If the
 
 | Type | Description |
 | --- | --- |
-| int | Window id. If the current UIContext is unavailable, return undefined. |
+| number | ID of the window to which the current application instance belongs. If the window does not exist, **undefined** is returned. |
 
 ## getWindowName
 
@@ -1427,13 +1658,17 @@ Get window id to which the current UIContext belongs.&lt;p&gt;**NOTE：**:If the
 getWindowName(): string | undefined
 ```
 
-Get the name of current window.
+Obtains the name of the window where this instance is located.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-getWindowName(): string | undefined--><!--Device-UIContext-getWindowName(): string | undefined-End-->
 
@@ -1443,7 +1678,7 @@ Get the name of current window.
 
 | Type | Description |
 | --- | --- |
-| string | The name of current window, or undefined if the window doesn't exist. |
+| string | Name of the window where the current instance is located. If the window does not exist, **undefined** is returned. |
 
 ## getWindowWidthBreakpoint
 
@@ -1451,13 +1686,17 @@ Get the name of current window.
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-Get the width breakpoint of current window.
+Obtains the width breakpoint value of the window where this instance is located. The specific value is determined by the vp value of the window width. For details, see WidthBreakpoint.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-UIContext-getWindowWidthBreakpoint(): WidthBreakpoint--><!--Device-UIContext-getWindowWidthBreakpoint(): WidthBreakpoint-End-->
 
@@ -1467,7 +1706,7 @@ Get the width breakpoint of current window.
 
 | Type | Description |
 | --- | --- |
-| WidthBreakpoint | The width breakpoint of current window. |
+| WidthBreakpoint | Width breakpoint value of the window where the current instance is located. If the window width is 0 vp, **WIDTH_XS** is returned. |
 
 ## isAvailable
 
@@ -1475,13 +1714,17 @@ Get the width breakpoint of current window.
 isAvailable(): boolean
 ```
 
-Check whether the UIContext object is available.
+Checks whether the UI instance corresponding to this **UIContext** object is valid. The **UIContext** object can be obtained using the [getUIContext](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) API. A UI instance is considered valid when the backend UI instance exists. UIContext objects created using **new UIContext()** have no corresponding UI instance. After multiple [loadContent](../../../reference/apis-arkui/arkts-apis-window-Window.md#loadcontent9) operations, old UI instances become invalid. In multi-window scenarios, when a window is closed, its UI instance becomes invalid. In summary, a UIContext object is invalid when it has no corresponding backend UI instance.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIContext-isAvailable(): boolean--><!--Device-UIContext-isAvailable(): boolean-End-->
 
@@ -1491,7 +1734,7 @@ Check whether the UIContext object is available.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the UIContext object is available. |
+| boolean | Whether the UI instance corresponding to the current **UIContext** object is valid. The value **true** indicates yes, and the value **false** indicates no. |
 
 ## isEasySplit
 
@@ -1503,9 +1746,13 @@ Checks whether the current UI instance is in easy split mode.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-UIContext-isEasySplit(): boolean--><!--Device-UIContext-isEasySplit(): boolean-End-->
 
@@ -1525,11 +1772,15 @@ isFollowingSystemFontScale(): boolean
 
 Checks whether current font scale follows the system.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-UIContext-isFollowingSystemFontScale(): boolean--><!--Device-UIContext-isFollowingSystemFontScale(): boolean-End-->
 
@@ -1547,13 +1798,17 @@ Checks whether current font scale follows the system.
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-Defining keyframe animation function.
+Generates a key frame animation. For details about how to use this API, see keyframeAnimateTo.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void--><!--Device-UIContext-keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void-End-->
 
@@ -1563,24 +1818,28 @@ Defining keyframe animation function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | KeyframeAnimateParam | Yes | overall animation parameters |
-| keyframes | Array&lt;KeyframeState&gt; | Yes | all keyframe states |
+| param | KeyframeAnimateParam | Yes | Overall animation parameter of the keyframe animation. |
+| keyframes | Array&lt;KeyframeState&gt; | Yes | List of all keyframe states. |
 
 ## lpx2px
 
 ```TypeScript
-lpx2px(value: double): double
+lpx2px(value: number): number
 ```
 
 Converts a value in lpx units to a value in px.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-lpx2px(value: double): double--><!--Device-UIContext-lpx2px(value: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-lpx2px(value: number): number--><!--Device-UIContext-lpx2px(value: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1588,30 +1847,33 @@ Converts a value in lpx units to a value in px.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number |  |
 
 ## openBindSheet
 
 ```TypeScript
-openBindSheet(bindSheetContent: ComponentContentBase,
-    sheetOptions?: SheetOptions, targetId?: int): Promise<void>
+openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>
 ```
 
-Open the BindSheet.
+Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result. > **NOTE：**> > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**. > > 2. Since [updateBindSheet](#updateBindSheet) and [closeBindSheet](#closeBindSheet) > depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself. > > 3. Setting **SheetOptions.UIContext** is not supported.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions?: SheetOptions, targetId?: int): Promise<void>--><!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions?: SheetOptions, targetId?: int): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>--><!--Device-UIContext-openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1619,42 +1881,46 @@ Open the BindSheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
-| sheetOptions | SheetOptions | No | The options of sheet. |
-| targetId | int | No | The uniqueId of the FrameNode to which BindSheet is attached. &lt;br&gt;Value range:(0, +∞) |
+| bindSheetContent | ComponentContent&lt;T&gt; | Yes | Content to display on the sheet. |
+| sheetOptions | SheetOptions | No | Style of the sheet.&lt;br&gt;**NOTE：**&lt;br&gt;1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance.&lt;br&gt;2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**.&lt;br&gt;3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**.&lt;br&gt;4. For the default values of other attributes, see SheetOptions. |
+| targetId | number | No | ID of the component to be bound. If this parameter is not set, no component is bound. If the ID does not exist, the error code 120004 is returned. Returns error code 401 if **undefined** is passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
-| [120005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
-| [120004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
-| [120006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) | The node of targetId is not a child of the page node or NavDestination node. |
+| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
+| [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
+| [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
+| [120006](../errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) | The node of targetId is not a child of the page node or NavDestination node. |
 
 ## postDelayedFrameCallback
 
 ```TypeScript
-postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: long): void
+postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void
 ```
 
 Post a frame callback to run on the next frame after the specified delay.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: long): void--><!--Device-UIContext-postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: long): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void--><!--Device-UIContext-postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1663,7 +1929,7 @@ Post a frame callback to run on the next frame after the specified delay.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
-| delayTime | long | Yes | The delay time in milliseconds, |
+| delayTime | number | Yes | The delay time in milliseconds, |
 
 ## postFrameCallback
 
@@ -1673,11 +1939,15 @@ postFrameCallback(frameCallback: FrameCallback): void
 
 Post a frame callback to run on the next frame.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-postFrameCallback(frameCallback: FrameCallback): void--><!--Device-UIContext-postFrameCallback(frameCallback: FrameCallback): void-End-->
 
@@ -1692,18 +1962,22 @@ Post a frame callback to run on the next frame.
 ## px2fp
 
 ```TypeScript
-px2fp(value: double): double
+px2fp(value: number): number
 ```
 
 Converts a value in px units to a value in fp.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-px2fp(value: double): double--><!--Device-UIContext-px2fp(value: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-px2fp(value: number): number--><!--Device-UIContext-px2fp(value: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1711,29 +1985,33 @@ Converts a value in px units to a value in fp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number |  |
 
 ## px2lpx
 
 ```TypeScript
-px2lpx(value: double): double
+px2lpx(value: number): number
 ```
 
 Converts a value in px units to a value in lpx.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-px2lpx(value: double): double--><!--Device-UIContext-px2lpx(value: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-px2lpx(value: number): number--><!--Device-UIContext-px2lpx(value: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1741,29 +2019,33 @@ Converts a value in px units to a value in lpx.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number |  |
 
 ## px2vp
 
 ```TypeScript
-px2vp(value: double): double
+px2vp(value: number): number
 ```
 
 Converts a value in px units to a value in vp.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-px2vp(value: double): double--><!--Device-UIContext-px2vp(value: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-px2vp(value: number): number--><!--Device-UIContext-px2vp(value: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1771,13 +2053,13 @@ Converts a value in px units to a value in vp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number |  |
 
 ## removeLocalInputEventMonitor
 
@@ -1785,18 +2067,17 @@ Converts a value in px units to a value in vp.
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-Removes a local input event monitor.
-
-**Important Notes**:  
-- Only Monitor objects returned by addLocalInputEventMonitor can be removed.  
-- Cannot unregister a monitor by manually constructing an object.  
-- If an invalid object is passed, the system silently ignores it.
+Removes a local input event monitor. **Important Notes**: - Only Monitor objects returned by addLocalInputEventMonitor can be removed. - Cannot unregister a monitor by manually constructing an object. - If an invalid object is passed, the system silently ignores it.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-UIContext-removeLocalInputEventMonitor(monitor: InputEventMonitor): void--><!--Device-UIContext-removeLocalInputEventMonitor(monitor: InputEventMonitor): void-End-->
 
@@ -1816,11 +2097,15 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 Require DynamicSyncScene by id.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIContext-requireDynamicSyncScene(id: string): Array<DynamicSyncScene>--><!--Device-UIContext-requireDynamicSyncScene(id: string): Array<DynamicSyncScene>-End-->
 
@@ -1844,15 +2129,17 @@ Require DynamicSyncScene by id.
 static resolveUIContext(): ResolvedUIContext
 ```
 
-Resolves a UIContext using priority strategy.
+Obtains a UIContext instance along with its resolution strategy using a predefined priority order. > **NOTE：**> > This API resolves and returns a UIContext instance together with the strategy used to determine it, > > based on the following priority rules (in order): > > 1. UIContext in the current calling scope. > > 2. If only one UI instance exists, its UIContext is returned. > > 3. If a UI instance has switched to the focused state, and the most recently focused UI instance has not been > destroyed, the UIContext of that most recently focused instance is returned. > > 4. If a UI instance has switched to the foreground state, and the most recently foreground UI instance has not > been destroyed, the UIContext of that most recently foreground instance is returned. > > 5. If multiple UI instances exist, the UIContext with the largest unique instance ID is returned. > > 6. If none of the above conditions are met, an invalid UIContext instance is returned.
 
-Resolves and returns a UIContext instance following a predefined priority sequence.resolution rules in order:&lt;br&gt;1. the UIContext with current calling scope&lt;br&gt;2. Returns the unique UIContext if only one UI instance exists.&lt;br&gt;3. Returns the UIContext of the last focused UI instance if one exists.&lt;br&gt;4. Returns the UIContext of the last foregrounded UI instance if one exists.&lt;br&gt;5. Returns the UIContext of the most recently created UI instance if any UI instance exists.&lt;br&gt;6. Returns an invalid UIContext instance if none of the above conditions are met.
+**Since:** 22
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIContext-static resolveUIContext(): ResolvedUIContext--><!--Device-UIContext-static resolveUIContext(): ResolvedUIContext-End-->
 
@@ -1862,7 +2149,7 @@ Resolves and returns a UIContext instance following a predefined priority sequen
 
 | Type | Description |
 | --- | --- |
-| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext instance |
+| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | UIContext instance along with its resolution strategy. |
 
 ## runScopedTask
 
@@ -1872,11 +2159,15 @@ runScopedTask(callback: () => void): void
 
 Run custom functions inside the UIContext scope.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-runScopedTask(callback: () => void): void--><!--Device-UIContext-runScopedTask(callback: () => void): void-End-->
 
@@ -1898,9 +2189,13 @@ Set custom keyboard continue feature.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIContext-setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void--><!--Device-UIContext-setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void-End-->
 
@@ -1915,18 +2210,22 @@ Set custom keyboard continue feature.
 ## setImageCacheCount
 
 ```TypeScript
-setImageCacheCount(value: int): void
+setImageCacheCount(value: number): void
 ```
 
-Set image cache capacity of decoded image count.if not set, the application will not cache any decoded image.
+Set image cache capacity of decoded image count. if not set, the application will not cache any decoded image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-setImageCacheCount(value: int): void--><!--Device-UIContext-setImageCacheCount(value: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UIContext-setImageCacheCount(value: number): void--><!--Device-UIContext-setImageCacheCount(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1934,23 +2233,27 @@ Set image cache capacity of decoded image count.if not set, the application will
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | capacity of decoded image count. |
+| value | number | Yes | capacity of decoded image count. |
 
 ## setImageRawDataCacheSize
 
 ```TypeScript
-setImageRawDataCacheSize(value: int): void
+setImageRawDataCacheSize(value: number): void
 ```
 
-Set image cache capacity of raw image data size in bytes before decode.if not set, the application will not cache any raw image data.
+Set image cache capacity of raw image data size in bytes before decode. if not set, the application will not cache any raw image data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-setImageRawDataCacheSize(value: int): void--><!--Device-UIContext-setImageRawDataCacheSize(value: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UIContext-setImageRawDataCacheSize(value: number): void--><!--Device-UIContext-setImageRawDataCacheSize(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1958,7 +2261,7 @@ Set image cache capacity of raw image data size in bytes before decode.if not se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | capacity of raw image data size in bytes. |
+| value | number | Yes | capacity of raw image data size in bytes. |
 
 ## setKeyboardAvoidMode
 
@@ -1966,13 +2269,17 @@ Set image cache capacity of raw image data size in bytes before decode.if not se
 setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 ```
 
-Set KeyboardAvoidMode. The default mode is KeyboardAvoidMode.OFFSET
+Sets the avoidance mode for the virtual keyboard. > **NOTE：**> > With **KeyboardAvoidMode.RESIZE**, the page is resized to prevent the virtual keyboard from obstructing the > view. Regarding components on the page, those whose width and height are set in percentage are resized with the > page, and those whose width and height are set to specific values are laid out according to their settings. > With **KeyboardAvoidMode.RESIZE**, **expandSafeArea([SafeAreaType.KEYBOARD],[SafeAreaEdge.BOTTOM])** does not > take effect. > > With **KeyboardAvoidMode.NONE**, keyboard avoidance is disabled, and the page will be covered by the displayed > keyboard. > > **setKeyboardAvoidMode** only affects page layouts. It does not apply to popup components, including the > following: **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, **Toast**, **OverlayManager**. > For details about the avoidance mode of popup components, see > CustomDialogControllerOptions.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-setKeyboardAvoidMode(value: KeyboardAvoidMode): void--><!--Device-UIContext-setKeyboardAvoidMode(value: KeyboardAvoidMode): void-End-->
 
@@ -1982,7 +2289,7 @@ Set KeyboardAvoidMode. The default mode is KeyboardAvoidMode.OFFSET
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | The mode of keyboard avoid. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.&lt;br&gt;Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.&lt;br&gt;When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
 
 ## setOverlayManagerOptions
 
@@ -1992,11 +2299,15 @@ setOverlayManagerOptions(options: OverlayManagerOptions): boolean
 
 Init OverlayManager.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-UIContext-setOverlayManagerOptions(options: OverlayManagerOptions): boolean--><!--Device-UIContext-setOverlayManagerOptions(options: OverlayManagerOptions): boolean-End-->
 
@@ -2020,13 +2331,17 @@ Init OverlayManager.
 setPixelRoundMode(mode: PixelRoundMode): void
 ```
 
-Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH.
+Sets the pixel rounding mode for this page.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-UIContext-setPixelRoundMode(mode: PixelRoundMode): void--><!--Device-UIContext-setPixelRoundMode(mode: PixelRoundMode): void-End-->
 
@@ -2036,25 +2351,27 @@ Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | PixelRoundMode | Yes | The mode of pixel round. |
+| mode | PixelRoundMode | Yes | Pixel rounding mode. Default value:**PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH**.&lt;br&gt;If this parameter is set to an invalid value, the default value will be used. |
 
 ## setResourceManagerCacheMaxCountForHSP
 
 ```TypeScript
-static setResourceManagerCacheMaxCountForHSP(count: int): void
+static setResourceManagerCacheMaxCountForHSP(count: number): void
 ```
 
-Set the upper limit for the cache count of HSP resource management objects.
+Set the upper limit for the cache count of HSP resource management objects. If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
 
-If the upper limit of the cache is set too high, there is a risk of excessive memory overhead.It is recommended to configure it according to actual needs.
+**Since:** 21
 
-**Since:** 26.0.0
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-static setResourceManagerCacheMaxCountForHSP(count: int): void--><!--Device-UIContext-static setResourceManagerCacheMaxCountForHSP(count: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-UIContext-static setResourceManagerCacheMaxCountForHSP(count: number): void--><!--Device-UIContext-static setResourceManagerCacheMaxCountForHSP(count: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2062,15 +2379,15 @@ If the upper limit of the cache is set too high, there is a risk of excessive me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | int | Yes | The cache limit of resource manager for HSP, must be non negative integers. |
+| count | number | Yes | The cache limit of resource manager for HSP, must be non negative integers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100101-invalid-negative-parameter-value) | The parameter is less than 0. |
-| [100103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100103-invalid-thread-context) | The function cannot be called from a non main thread. @static |
-| [100102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100102-incorrect-parameter-type) | The parameter value cannot be a floating point number. |
+| [100101](../errorcode-uicontext.md#100101-invalid-negative-parameter-value) | The parameter is less than 0. |
+| [100103](../errorcode-uicontext.md#100103-invalid-thread-context) | The function cannot be called from a non main thread. |
+| [100102](../errorcode-uicontext.md#100102-incorrect-parameter-type) | The parameter value cannot be a floating point number. |
 
 ## setTextSelectionClearPolicy
 
@@ -2078,13 +2395,17 @@ If the upper limit of the cache is set too high, there is a risk of excessive me
 setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 ```
 
-Sets the text selection clear policy for text component.Default policy: **TextSelectionClearPolicy.KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH**
+Sets the text selection clear policy for text component. Default policy: **TextSelectionClearPolicy.KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH**
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-UIContext-setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void--><!--Device-UIContext-setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void-End-->
 
@@ -2096,43 +2417,23 @@ Sets the text selection clear policy for text component.Default policy: **TextSe
 | --- | --- | --- | --- |
 | policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
 
-## setUIStates
-
-```TypeScript
-setUIStates(callback: VoidCallback): void
-```
-
-Thread-safe UI state variables updates interface.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIContext-setUIStates(callback: VoidCallback): void--><!--Device-UIContext-setUIStates(callback: VoidCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | VoidCallback | Yes | The callback function to be executed in the UI thread. |
-
 ## showActionSheet
 
 ```TypeScript
 showActionSheet(value: ActionSheetOptions): void
 ```
 
-actionSheet display.
+Shows an action sheet in the given settings.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-showActionSheet(value: ActionSheetOptions): void--><!--Device-UIContext-showActionSheet(value: ActionSheetOptions): void-End-->
 
@@ -2142,24 +2443,27 @@ actionSheet display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ActionSheetOptions | Yes | Options. |
+| value | ActionSheetOptions | Yes | Parameters of the action sheet. |
 
 ## showAlertDialog
 
 ```TypeScript
-showAlertDialog(
-    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void
+showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void
 ```
 
-alertDialog display.
+Shows an alert dialog box.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-showAlertDialog(    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void--><!--Device-UIContext-showAlertDialog(    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void--><!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2167,7 +2471,7 @@ alertDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AlertDialogParamWithConfirm \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | Yes | Options. |
+| options | AlertDialogParamWithConfirm \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | Yes | Shows an AlertDialog component in the given settings. |
 
 ## showDatePickerDialog
 
@@ -2177,11 +2481,15 @@ showDatePickerDialog(options: DatePickerDialogOptions): void
 
 datePickerDialog display.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-showDatePickerDialog(options: DatePickerDialogOptions): void--><!--Device-UIContext-showDatePickerDialog(options: DatePickerDialogOptions): void-End-->
 
@@ -2196,16 +2504,48 @@ datePickerDialog display.
 ## showTextPickerDialog
 
 ```TypeScript
+showTextPickerDialog(options: TextPickerDialogOptions): void
+```
+
+textPickerDialog display.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UIContext-showTextPickerDialog(options: TextPickerDialogOptions): void--><!--Device-UIContext-showTextPickerDialog(options: TextPickerDialogOptions): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | TextPickerDialogOptions | Yes | Options. |
+
+## showTextPickerDialog
+
+```TypeScript
 showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt): void
 ```
 
 textPickerDialog display.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIContext-showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt): void--><!--Device-UIContext-showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt): void-End-->
 
@@ -2225,11 +2565,15 @@ showTimePickerDialog(options: TimePickerDialogOptions): void
 
 timePickerDialog display.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIContext-showTimePickerDialog(options: TimePickerDialogOptions): void--><!--Device-UIContext-showTimePickerDialog(options: TimePickerDialogOptions): void-End-->
 
@@ -2244,19 +2588,22 @@ timePickerDialog display.
 ## unbindTabsFromNestedScrollable
 
 ```TypeScript
-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,
-    childScroller: Scroller): void
+unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void
 ```
 
 Unbind tabs from nested scrollable container components.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,    childScroller: Scroller): void--><!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,    childScroller: Scroller): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void--><!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2276,11 +2623,15 @@ unbindTabsFromScrollable(tabsController: TabsController, scroller: Scroller): vo
 
 Unbind tabs from scrollable container component.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-UIContext-unbindTabsFromScrollable(tabsController: TabsController, scroller: Scroller): void--><!--Device-UIContext-unbindTabsFromScrollable(tabsController: TabsController, scroller: Scroller): void-End-->
 
@@ -2296,19 +2647,22 @@ Unbind tabs from scrollable container component.
 ## updateBindSheet
 
 ```TypeScript
-updateBindSheet(bindSheetContent: ComponentContentBase,
-    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>
+updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-Update the BindSheet with sheetOptions.
+Updates the style of the sheet corresponding to the provided **bindSheetContent**. This API uses a promise to return the result. > **NOTE：**> > **SheetOptions.UIContext**, **SheetOptions.mode**, and callback functions cannot be updated.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>--><!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>--><!--Device-UIContext-updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2316,39 +2670,43 @@ Update the BindSheet with sheetOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
-| sheetOptions | SheetOptions | Yes | The update options of sheet. |
-| partialUpdate | boolean | No | If true, only the specified properties in the sheetOptions are updated, otherwise the rest of the properties are overwritten with the default values. Default value is false. |
+| bindSheetContent | ComponentContent&lt;T&gt; | Yes | Content to display on the sheet. |
+| sheetOptions | SheetOptions | Yes | Style of the sheet.&lt;br&gt;**NOTE：**&lt;br&gt;**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
+| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.&lt;br&gt;Default value: **false**&lt;br&gt; **NOTE：**&lt;br&gt;1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value.&lt;br&gt;2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
+| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## vp2px
 
 ```TypeScript
-vp2px(value: double): double
+vp2px(value: number): number
 ```
 
 Converts a value in vp units to a value in px.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-vp2px(value: double): double--><!--Device-UIContext-vp2px(value: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIContext-vp2px(value: number): number--><!--Device-UIContext-vp2px(value: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2356,11 +2714,11 @@ Converts a value in vp units to a value in px.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number |  |
 

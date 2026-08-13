@@ -10,7 +10,9 @@ function create(config: FloatViewConfiguration): Promise<FloatViewController>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,9 +36,9 @@ function create(config: FloatViewConfiguration): Promise<FloatViewController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible cause: Call the API on unsupported device. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. This window context is abnormal. 2. System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid template type. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible cause: Call the API on unsupported device. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. This window context is abnormal. 2. System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid template type. |
 
 ## 示例
 

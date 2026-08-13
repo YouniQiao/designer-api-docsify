@@ -4,6 +4,8 @@ The definition of member purchase information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface MemberPurchaseInfo--><!--Device-avMusicTemplate-interface MemberPurchaseInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ Member purchase diagram content.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MemberPurchaseInfo-diagramContent: string--><!--Device-MemberPurchaseInfo-diagramContent: string-End-->
@@ -43,6 +47,8 @@ Member purchase diagram.
 **Type:** image.PixelMap
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ The URL for the member purchase illustration must be in 21:9 aspect ratio.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MemberPurchaseInfo-diagramUrl: string--><!--Device-MemberPurchaseInfo-diagramUrl: string-End-->
@@ -80,6 +88,8 @@ Unique id of the member purchase information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MemberPurchaseInfo-id: string--><!--Device-MemberPurchaseInfo-id: string-End-->
@@ -97,6 +107,8 @@ Member purchase type
 **Type:** [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

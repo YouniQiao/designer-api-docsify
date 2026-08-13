@@ -6,7 +6,9 @@ export type NotificationBasicContent = _NotificationBasicContent
 
 Describes the normal text notification.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationBasicContent = _NotificationBasicContent--><!--Device-notificationManager-export type NotificationBasicContent = _NotificationBasicContent-End-->
 

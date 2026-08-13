@@ -2,7 +2,9 @@
 
 The scene node parameters type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SceneNodeParameters--><!--Device-unnamed-export interface SceneNodeParameters-End-->
 
@@ -18,7 +20,9 @@ The name of the scene node parameters.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneNodeParameters-name: string--><!--Device-SceneNodeParameters-name: string-End-->
 
@@ -34,7 +38,9 @@ The path of the scene node parameters.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneNodeParameters-path?: string--><!--Device-SceneNodeParameters-path?: string-End-->
 

@@ -2,9 +2,11 @@
 
 发送请求的响应结果。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
 
@@ -18,11 +20,13 @@ code: int
 
 消息代码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
 
@@ -38,9 +42,11 @@ data: MessageSequence
 
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
 
@@ -54,11 +60,13 @@ errCode: int
 
 错误码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
 
@@ -74,9 +82,11 @@ reply: MessageSequence
 
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
 

@@ -6,6 +6,8 @@ Enumerates the modes of the file selector.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FileSelectorMode--><!--Device-unnamed-declare enum FileSelectorMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Open and upload a file.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Open and upload multiple files.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FileSelectorMode-FileOpenMultipleMode = 1--><!--Device-FileSelectorMode-FileOpenMultipleMode = 1-End-->
@@ -58,6 +64,8 @@ Open and upload a folder.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FileSelectorMode-FileOpenFolderMode = 2--><!--Device-FileSelectorMode-FileOpenFolderMode = 2-End-->
@@ -75,6 +83,8 @@ Save a file.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

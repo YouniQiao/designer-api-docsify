@@ -4,6 +4,8 @@ The particleAbility module provides APIs for operating a DataAbility and Service
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-declare namespace particleAbility--><!--Device-unnamed-declare namespace particleAbility-End-->
@@ -22,18 +24,18 @@ import { particleAbility } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md#acquiredataabilityhelper) |
-| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning) |
-| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning-1) |
-| [connectAbility](arkts-ability-particleability-connectability-f.md#connectability) |
-| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability) |
-| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability-1) |
-| [startAbility](arkts-ability-particleability-startability-f.md#startability) |
-| [startAbility](arkts-ability-particleability-startability-f.md#startability-1) |
-| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning) |
-| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning-1) |
-| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself) |
-| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself-1) |
+| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper) |
+| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelBackgroundRunning) |
+| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelBackgroundRunning) |
+| [connectAbility](arkts-ability-particleability-connectability-f.md#connectAbility) |
+| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectAbility) |
+| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectAbility) |
+| [startAbility](arkts-ability-particleability-startability-f.md#startAbility) |
+| [startAbility](arkts-ability-particleability-startability-f.md#startAbility) |
+| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startBackgroundRunning) |
+| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startBackgroundRunning) |
+| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateSelf) |
+| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateSelf) |
 
 ### Enums
 

@@ -1,14 +1,12 @@
 # NotificationTime
 
-Describes the notification timing information.
+Describes the notification timing information. > **NOTE：**> > The actual display effect depends on the device capabilities and the notification center UI style.
 
-> **NOTE：**
-> 
-> The actual display effect depends on the device capabilities and the notification center UI style.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationTime--><!--Device-unnamed-export interface NotificationTime-End-->
 
@@ -22,11 +20,13 @@ initialTime?: int
 
 Initial time for the timer, which is used to set the starting point of the timer in the live view. The default value is **0**. Unit: ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationTime-initialTime?: int--><!--Device-NotificationTime-initialTime?: int-End-->
 
@@ -38,16 +38,15 @@ Initial time for the timer, which is used to set the starting point of the timer
 isCountDown?: boolean
 ```
 
-Whether it is countdown mode. The default value is **false**.
-
-- **true**: The time is displayed decreasing from initialTime.  
-- **false**: The time is displayed increasing from initialTime.
+Whether it is countdown mode. The default value is **false**. - **true**: The time is displayed decreasing from initialTime. - **false**: The time is displayed increasing from initialTime.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationTime-isCountDown?: boolean--><!--Device-NotificationTime-isCountDown?: boolean-End-->
 
@@ -59,16 +58,15 @@ Whether it is countdown mode. The default value is **false**.
 isInTitle?: boolean
 ```
 
-Whether the time information is displayed in the notification title. The default value is **false**.
-
-- **true**: The timer information will be embedded in the title area.  
-- **false**: The timer information is displayed in a separate area.
+Whether the time information is displayed in the notification title. The default value is **false**. - **true**: The timer information will be embedded in the title area. - **false**: The timer information is displayed in a separate area.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationTime-isInTitle?: boolean--><!--Device-NotificationTime-isInTitle?: boolean-End-->
 
@@ -80,16 +78,15 @@ Whether the time information is displayed in the notification title. The default
 isPaused?: boolean
 ```
 
-Whether the timer is paused. The default value is **false**.
-
-- **true**: The timer is paused at the current value.  
-- **false**: The timer runs normally.
+Whether the timer is paused. The default value is **false**. - **true**: The timer is paused at the current value. - **false**: The timer runs normally.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationTime-isPaused?: boolean--><!--Device-NotificationTime-isPaused?: boolean-End-->
 

@@ -2,17 +2,19 @@
 
 Define read-only system environment variable keys.
 
-**Inheritance/Implementation:** ReadonlySystemEnvKey extends [SystemEnvKey<T>](SystemEnvKey<T>)
+**Inheritance/Implementation:** ReadonlySystemEnvKey extends SystemEnvKey<T>
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-unnamed-declare class ReadonlySystemEnvKey<T> extends SystemEnvKey<T>--><!--Device-unnamed-declare class ReadonlySystemEnvKey<T> extends SystemEnvKey<T>-End-->
+<!--Device-unnamed-declare class ReadonlySystemEnvKey--><!--Device-unnamed-declare class ReadonlySystemEnvKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

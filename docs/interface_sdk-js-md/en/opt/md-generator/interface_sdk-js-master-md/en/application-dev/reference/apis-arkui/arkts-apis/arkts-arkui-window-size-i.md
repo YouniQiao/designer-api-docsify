@@ -2,7 +2,9 @@
 
 Describes the window size, in px.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface Size--><!--Device-window-interface Size-End-->
 
@@ -24,7 +26,9 @@ Window height, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +46,9 @@ Window width, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

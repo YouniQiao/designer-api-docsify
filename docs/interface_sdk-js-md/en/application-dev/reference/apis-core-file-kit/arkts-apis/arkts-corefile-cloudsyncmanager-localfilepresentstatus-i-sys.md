@@ -4,7 +4,9 @@ Specifies a result object that contains the application bundle name and the stat
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSyncManager-interface LocalFilePresentStatus--><!--Device-cloudSyncManager-interface LocalFilePresentStatus-End-->
 
@@ -30,7 +32,9 @@ Bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocalFilePresentStatus-bundleName: string--><!--Device-LocalFilePresentStatus-bundleName: string-End-->
 
@@ -50,7 +54,9 @@ Whether there are local files that have not been synchronized to the cloud in th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean--><!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean-End-->
 

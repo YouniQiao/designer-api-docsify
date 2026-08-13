@@ -2,9 +2,11 @@
 
 Provides APIs for the file manager application to download files from the Drive Kit to a local device.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-class CloudFileCache--><!--Device-cloudSync-class CloudFileCache-End-->
 
@@ -26,7 +28,9 @@ Clean all downloaded files except those not yet migrated to the cloud or those t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,9 +58,11 @@ cleanFileCache(uri: string): void
 
 Deletes a cache file. This API returns the result synchronously.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-cleanFileCache(uri: string): void--><!--Device-CloudFileCache-cleanFileCache(uri: string): void-End-->
 
@@ -106,9 +112,11 @@ constructor()
 
 A constructor used to create a **CloudFileCache** instance. Data is not shared between multiple instances.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-constructor()--><!--Device-CloudFileCache-constructor()-End-->
 
@@ -118,7 +126,7 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 
 ## Examples
 
@@ -128,12 +136,6 @@ let fileCache = new cloudSync.CloudFileCache();
 
 ## getCachedTotalSize
 
-ArkTS-Dyn:
-```TypeScript
-getCachedTotalSize(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCachedTotalSize(): Promise<long>
 ```
@@ -142,7 +144,9 @@ Query the total size of cached files.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,7 +158,7 @@ Query the total size of cached files.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Return the total size of cached files. |
+| Promise&lt;long&gt; | Return the total size of cached files. |
 
 **Error codes:**
 
@@ -162,19 +166,21 @@ Query the total size of cached files.
 | --- | --- |
 | 13900010 | Try again. |
 
-## off
+## offBatchDownload
 
 ```TypeScript
-off(event: 'progress', callback?: Callback<DownloadProgress>): void
+offBatchDownload(callback?: Callback<MultiDownloadProgress>): void
 ```
 
-Removes the specified callback from the device-cloud file cache progress.
+Unsubscribes from cloud file cache download progress event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -182,48 +188,59 @@ Removes the specified callback from the device-cloud file cache progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | No | Callback used to return the file download progress. If this parameter is not specified, this API unregisters all callbacks for the download progress event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | No | callback function with a `MultiDownloadProgress` argument. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 13600001 | IPC error |
+| 13900020 | Invalid argument. Possible causes:Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-## Examples
+## offProgress
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-
-let callback = (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-}
-
-try {
-  fileCache.on('progress', callback);
-  fileCache.off('progress', callback);
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
+offProgress(callback?: Callback<DownloadProgress>): void
 ```
 
-## off
+Unsubscribes from cloud file cache download progress event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | No | callback function with a `DownloadProgress` argument. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| 13600001 | IPC error |
+
+## off_batchDownload
 
 ```TypeScript
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-Removes the listener added via the  
-[on](cloudSync.CloudFileCache#on(event: 'batchDownload', callback: Callback&lt;MultiDownloadProgress&gt;)) API for file batch downloads.
+Removes the listener added via the [on](#on_progress) API for file batch downloads.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void-End-->
 
@@ -234,7 +251,7 @@ Removes the listener added via the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'batchDownload' | Yes | Event type. The value is **'batchDownload'**, indicating the batch download event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | No | Callback used to return the download progress of a file. If this parameter is set, the specified callback will be canceled; otherwise, all currently subscribed callbacks of the same event type will be canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | No | Callback used to return the download progress of a file. If this parameter is set, the specified callback will be canceled; otherwise, all currently subscribed callbacks of the same event type will be canceled. |
 
 **Error codes:**
 
@@ -262,77 +279,21 @@ try {
 }
 ```
 
-## offBatchDownload
+## off_progress
 
 ```TypeScript
-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void
+off(event: 'progress', callback?: Callback<DownloadProgress>): void
 ```
 
-Unsubscribes from cloud file cache download progress event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | No | callback function with a `MultiDownloadProgress` argument. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument. Possible causes:Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: Callback<DownloadProgress>): void
-```
-
-Unsubscribes from cloud file cache download progress event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | No | callback function with a `DownloadProgress` argument. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
-| 13600001 | IPC error |
-
-## on
-
-```TypeScript
-on(event: 'progress', callback: Callback<DownloadProgress>): void
-```
-
-Registers a listener for the download progress of a file from the Drive Kit.
+Removes the specified callback from the device-cloud file cache progress.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -340,14 +301,14 @@ Registers a listener for the download progress of a file from the Drive Kit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of a cloud file. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the file download progress. |
+| event | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | No | Callback used to return the file download progress. If this parameter is not specified, this API unregisters all callbacks for the download progress event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## Examples
@@ -356,19 +317,83 @@ Registers a listener for the download progress of a file from the Drive Kit.
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let fileCache = new cloudSync.CloudFileCache();
+
 let callback = (pg: cloudSync.DownloadProgress) => {
   console.info("download state: " + pg.state);
-};
+}
 
 try {
   fileCache.on('progress', callback);
+  fileCache.off('progress', callback);
 } catch (e) {
   const error = e as BusinessError;
   console.error(`Error code: ${error.code}, message: ${error.message}`);
 }
 ```
 
-## on
+## onBatchDownload
+
+```TypeScript
+onBatchDownload(callback: Callback<MultiDownloadProgress>): void
+```
+
+Subscribes to a batch of cloud file cache download progress change event. This method uses a callback to get download progress changes.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | Yes | callback function with a `MultiDownloadProgress` argument. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: Callback<DownloadProgress>): void
+```
+
+Subscribes to cloud file cache download progress change event. This method uses a callback to get download progress changes.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 13600001 | IPC error |
+
+## on_batchDownload
 
 ```TypeScript
 on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
@@ -380,6 +405,8 @@ Registers a listener for the batch download of a file from the Drive Kit.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-CloudFileCache-on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -389,7 +416,7 @@ Registers a listener for the batch download of a file from the Drive Kit.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'batchDownload' | Yes | Event type. The value is **'batchDownload'**, indicating the batch download event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | Yes | Callback used to return the download progress of a file. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | Yes | Callback used to return the download progress of a file. |
 
 **Error codes:**
 
@@ -421,19 +448,21 @@ try {
 }
 ```
 
-## onBatchDownload
+## on_progress
 
 ```TypeScript
-onBatchDownload(callback: Callback<MultiDownloadProgress>): void
+on(event: 'progress', callback: Callback<DownloadProgress>): void
 ```
 
-Subscribes to a batch of cloud file cache download progress change event.This method uses a callback to get download progress changes.
+Registers a listener for the download progress of a file from the Drive Kit.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -441,43 +470,33 @@ Subscribes to a batch of cloud file cache download progress change event.This me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | Yes | callback function with a `MultiDownloadProgress` argument. |
+| event | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of a cloud file. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the file download progress. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-
-## onProgress
-
-```TypeScript
-onProgress(callback: Callback<DownloadProgress>): void
-```
-
-Subscribes to cloud file cache download progress change event.This method uses a callback to get download progress changes.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (pg: cloudSync.DownloadProgress) => {
+  console.info("download state: " + pg.state);
+};
+
+try {
+  fileCache.on('progress', callback);
+} catch (e) {
+  const error = e as BusinessError;
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## start
 
@@ -487,9 +506,11 @@ start(uri: string): Promise<void>
 
 Starts downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-start(uri: string): Promise<void>--><!--Device-CloudFileCache-start(uri: string): Promise<void>-End-->
 
@@ -511,7 +532,7 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13900025 | No space left on device. |
@@ -551,9 +572,11 @@ start(uri: string, callback: AsyncCallback<void>): void
 
 Starts downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -564,13 +587,13 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to download. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to start downloading a cloud file asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to start downloading a cloud file asynchronously. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13900025 | No space left on device. |
@@ -597,23 +620,17 @@ fileCache.start(uri, (err: BusinessError) => {
 
 ## startBatch
 
-ArkTS-Dyn:
-```TypeScript
-startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 ```
 
-Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.
+Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result. Different batch download tasks can be distinguished by the task ID returned.
 
-Different batch download tasks can be distinguished by the task ID returned.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>--><!--Device-CloudFileCache-startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>-End-->
 
@@ -630,7 +647,7 @@ Different batch download tasks can be distinguished by the task ID returned.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the ID of the batch download task. |
+| Promise&lt;long&gt; | Promise used to return the ID of the batch download task. |
 
 **Error codes:**
 
@@ -671,13 +688,13 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result. When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
-When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-stop(uri: string, needClean?: boolean): Promise<void>--><!--Device-CloudFileCache-stop(uri: string, needClean?: boolean): Promise<void>-End-->
 
@@ -700,7 +717,7 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13600001 | IPC error. |
@@ -728,13 +745,13 @@ fileCache.stop(uri, true).then(() => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
+Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result. When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
 
-When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -745,13 +762,13 @@ When **stop()** is called, the current file download process terminates, and dow
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to download. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to stop downloading a cloud file asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to stop downloading a cloud file asynchronously. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13600001 | IPC error. |
@@ -777,23 +794,17 @@ fileCache.stop(uri, (err: BusinessError) => {
 
 ## stopBatch
 
-ArkTS-Dyn:
-```TypeScript
-stopBatch(downloadId: number, needClean?: boolean): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 ```
 
-Stops the batch download task enabled by [startBatch](#startBatch) of a file from the Drive Kit. This API uses a promise to return the result.
+Stops the batch download task enabled by [startBatch](#startBatch) of a file from the Drive Kit. This API uses a promise to return the result. When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
 
-When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-stopBatch(downloadId: long, needClean?: boolean): Promise<void>--><!--Device-CloudFileCache-stopBatch(downloadId: long, needClean?: boolean): Promise<void>-End-->
 
@@ -803,7 +814,7 @@ When **stopBatch()** is called, the batch download terminates. The **needClean**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| downloadId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the download task to be stopped. |
+| downloadId | long | Yes | ID of the download task to be stopped. |
 | needClean | boolean | No | Whether to delete incompletely downloaded files. The default value **false** means not to delete the files; the value **true** means the opposite. |
 
 **Return value:**

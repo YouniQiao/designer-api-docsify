@@ -4,11 +4,13 @@ Provides APIs for managing the media album change request.
 
 **Inheritance/Implementation:** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#MediaChangeRequest)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class MediaAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,21 +26,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest
 ```
 
-Creates a MediaAlbumChangeRequest instance.
-
-The album name must meet the following requirements:
-
-- The total length of the album name must be between 1 and 255 characters.  
-- It must not contain any invalid characters, which are:
-
-. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-- The characters are case insensitive.  
-- Duplicate album names are not allowed.
+Creates a MediaAlbumChangeRequest instance. The album name must meet the following requirements: - The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ] - The characters are case insensitive. - Duplicate album names are not allowed.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest--><!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest-End-->
 
@@ -63,8 +57,8 @@ The album name must meet the following requirements:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -95,7 +89,9 @@ Creates a MediaAlbumChangeRequest instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest | null--><!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest | null-End-->
 
@@ -120,9 +116,9 @@ Creates a MediaAlbumChangeRequest instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## deleteAlbums
 
@@ -132,9 +128,11 @@ static deleteAlbums(context: Context, albums: Array<Album>): Promise<void>
 
 Deletes user albums. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -161,9 +159,9 @@ Deletes user albums. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -199,9 +197,11 @@ static deleteAlbumsWithUri(context: Context, albumUris: Array<string>): Promise<
 
 Deletes user albums by URI. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -229,8 +229,8 @@ Deletes user albums by URI. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out; |
 
 ## Examples
@@ -253,16 +253,13 @@ async function example(context: Context, albumUri: string) {
 deleteAssets(assets: Array<PhotoAsset>): void
 ```
 
-Permanently deletes assets from the trash.
+Permanently deletes assets from the trash. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-deleteAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-deleteAssets(assets: Array<PhotoAsset>): void-End-->
 
@@ -280,9 +277,9 @@ Permanently deletes assets from the trash.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -329,16 +326,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 deleteAssetsWithUri(assetUris: Array<string>): void
 ```
 
-Permanently deletes assets from the trash.
+Permanently deletes assets from the trash. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+**Since:** 23
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-deleteAssetsWithUri(assetUris: Array<string>): void--><!--Device-MediaAlbumChangeRequest-deleteAssetsWithUri(assetUris: Array<string>): void-End-->
 
@@ -358,7 +352,7 @@ Permanently deletes assets from the trash.
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## dismiss
@@ -369,9 +363,11 @@ dismiss(): void
 
 Removes this group photo album.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-dismiss(): void--><!--Device-MediaAlbumChangeRequest-dismiss(): void-End-->
 
@@ -383,8 +379,8 @@ Removes this group photo album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -418,9 +414,11 @@ dismissAssets(assets: Array<PhotoAsset>): void
 
 Removes assets from this portrait album or group photo album.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-dismissAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-dismissAssets(assets: Array<PhotoAsset>): void-End-->
 
@@ -438,9 +436,9 @@ Removes assets from this portrait album or group photo album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -487,9 +485,11 @@ mergeAlbum(target: Album): void
 
 Merges two portrait albums.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-mergeAlbum(target: Album): void--><!--Device-MediaAlbumChangeRequest-mergeAlbum(target: Album): void-End-->
 
@@ -507,9 +507,9 @@ Merges two portrait albums.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -554,9 +554,11 @@ moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void
 
 Moves assets to another album.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void--><!--Device-MediaAlbumChangeRequest-moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void-End-->
 
@@ -575,9 +577,9 @@ Moves assets to another album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -623,9 +625,11 @@ moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void
 
 Moves assets in an album to another album.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void--><!--Device-MediaAlbumChangeRequest-moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void-End-->
 
@@ -646,7 +650,7 @@ Moves assets in an album to another album.
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## operateAttribute
@@ -659,7 +663,9 @@ Operates album attribute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0 - since 26.0.0: ohos.permission.ACCESS_MEDIALIB_THUMB_DB
@@ -683,11 +689,11 @@ Operates album attribute.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800201-unsupported-operation-type) | Unsupported operation type. It is recommended to check the logs. Possible causes: &lt;br&gt;1. Unsupported AlbumAttribute for the album. &lt;br&gt;2. Unsupported AlbumOperationType for the AlbumAttribute. &lt;br&gt;3. Other operation limit. |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs. &lt;br&gt;Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The attr of operation is invalid; &lt;br&gt;2. The type of operation is invalid; &lt;br&gt;3. The values of operation is incorrect; |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Unsupported operation type. It is recommended to check the logs. Possible causes: &lt;br&gt;1. Unsupported AlbumAttribute for the album. &lt;br&gt;2. Unsupported AlbumOperationType for the AlbumAttribute. &lt;br&gt;3. Other operation limit. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs. &lt;br&gt;Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The attr of operation is invalid; &lt;br&gt;2. The type of operation is invalid; &lt;br&gt;3. The values of operation is incorrect; |
 
 ## placeBefore
 
@@ -697,9 +703,11 @@ placeBefore(album: Album): void
 
 Places this album before an album.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-placeBefore(album: Album): void--><!--Device-MediaAlbumChangeRequest-placeBefore(album: Album): void-End-->
 
@@ -717,8 +725,8 @@ Places this album before an album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -754,9 +762,11 @@ recoverAssets(assets: Array<PhotoAsset>): void
 
 Restores the assets corresponding to the specified PhotoAsset object array from the trash.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-recoverAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-recoverAssets(assets: Array<PhotoAsset>): void-End-->
 
@@ -774,9 +784,9 @@ Restores the assets corresponding to the specified PhotoAsset object array from 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -817,9 +827,11 @@ recoverAssetsWithUri(assetUris: Array<string>): void
 
 Restores the assets corresponding to the specified URI string array from the trash.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-recoverAssetsWithUri(assetUris: Array<string>): void--><!--Device-MediaAlbumChangeRequest-recoverAssetsWithUri(assetUris: Array<string>): void-End-->
 
@@ -839,7 +851,7 @@ Restores the assets corresponding to the specified URI string array from the tra
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## resetCoverUri
@@ -850,9 +862,11 @@ resetCoverUri(): void
 
 Resets the cover.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-resetCoverUri(): void--><!--Device-MediaAlbumChangeRequest-resetCoverUri(): void-End-->
 
@@ -864,8 +878,8 @@ Resets the cover.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## Examples
 
@@ -905,7 +919,9 @@ set album name by filemanger.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -925,9 +941,9 @@ set album name by filemanger.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The album is not exist; |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The album is not exist; |
 
 ## setCoverUri
 
@@ -937,9 +953,11 @@ setCoverUri(coverUri: string): void
 
 Sets the album cover.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-setCoverUri(coverUri: string): void--><!--Device-MediaAlbumChangeRequest-setCoverUri(coverUri: string): void-End-->
 
@@ -957,8 +975,8 @@ Sets the album cover.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1000,21 +1018,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ## setDisplayLevel
 
-ArkTS-Dyn:
-```TypeScript
-setDisplayLevel(displayLevel: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setDisplayLevel(displayLevel: int): void
 ```
 
 Sets the display level of the portrait album.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-setDisplayLevel(displayLevel: int): void--><!--Device-MediaAlbumChangeRequest-setDisplayLevel(displayLevel: int): void-End-->
 
@@ -1026,14 +1040,14 @@ Sets the display level of the portrait album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display level to set. The options are as follows: &lt;br&gt;**0**: unfavorite the portrait album. &lt;br&gt;**1**: set the portrait album as the first to display. &lt;br&gt;**2**: do not display the portrait album as the first one. &lt;br&gt;**3**: favorite the portrait album. |
+| displayLevel | int | Yes | Display level to set. The options are as follows: &lt;br&gt;**0**: unfavorite the portrait album. &lt;br&gt;**1**: set the portrait album as the first to display. &lt;br&gt;**2**: do not display the portrait album as the first one. &lt;br&gt;**3**: favorite the portrait album. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1073,7 +1087,9 @@ set hidden state of album.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1094,9 +1110,9 @@ set hidden state of album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The ablum is not exist; |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The ablum is not exist; |
 
 ## setIsMe
 
@@ -1106,9 +1122,11 @@ setIsMe(): void
 
 Sets the relationship between people in the portrait album to **Me**.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAlbumChangeRequest-setIsMe(): void--><!--Device-MediaAlbumChangeRequest-setIsMe(): void-End-->
 
@@ -1120,8 +1138,8 @@ Sets the relationship between people in the portrait album to **Me**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1159,9 +1177,11 @@ static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean):
 
 Sets whether the albums can be synced to cloud storage or family storage. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1189,10 +1209,10 @@ Sets whether the albums can be synced to cloud storage or family storage. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1.Database corrupted; &lt;br&gt;2.The file system is abnormal; &lt;br&gt;3.The IPC request timed out; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Album array size is bigger than 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1.Database corrupted; &lt;br&gt;2.The file system is abnormal; &lt;br&gt;3.The IPC request timed out; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Album array size is bigger than 500. |
 
 ## Examples
 

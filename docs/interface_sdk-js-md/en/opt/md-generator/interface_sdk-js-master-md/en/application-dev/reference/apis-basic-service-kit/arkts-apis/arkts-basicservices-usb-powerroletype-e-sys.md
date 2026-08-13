@@ -6,7 +6,7 @@ Enumerates power role types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#PowerRoleType)
+**Substitutes:** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#PowerRoleType-(System-API))
 
 <!--Device-usb-export enum PowerRoleType--><!--Device-usb-export enum PowerRoleType-End-->
 

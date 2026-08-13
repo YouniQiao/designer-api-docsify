@@ -4,15 +4,77 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 
 **继承/实现关系：** DepthDataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**起始版本：** 13
+**起始版本：** 23
 
-<!--Device-camera-interface DepthDataOutput extends CameraOutput--><!--Device-camera-interface DepthDataOutput extends CameraOutput-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface DepthDataOutput--><!--Device-camera-interface DepthDataOutput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
 
-## off('depthDataAvailable')
+## offDepthDataAvailable
+
+```TypeScript
+offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void
+```
+
+Unsubscribes from depth data objects available event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DepthDataOutput-offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DepthDataOutput-offError(callback?: ErrorCallback): void--><!--Device-DepthDataOutput-offError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_depthDataAvailable
 
 ```TypeScript
 off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void
@@ -21,6 +83,8 @@ off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void
 Unsubscribes from depth data availability events.
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 <!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void-End-->
 
@@ -39,7 +103,7 @@ Unsubscribes from depth data availability events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -58,7 +122,7 @@ function unRegisterDepthDataAvailable(depthDataOutput: camera.DepthDataOutput): 
 }
 ```
 
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -67,6 +131,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from DepthDataOutput error events.
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 <!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -85,7 +151,7 @@ Unsubscribes from DepthDataOutput error events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -95,19 +161,77 @@ function unregisterDepthDataOutputError(depthDataOutput: camera.DepthDataOutput)
 }
 ```
 
-## on('depthDataAvailable')
+## onDepthDataAvailable
+
+```TypeScript
+onDepthDataAvailable(callback: AsyncCallback<DepthData>): void
+```
+
+Subscribes to depth data objects available event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DepthDataOutput-onDepthDataAvailable(callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-onDepthDataAvailable(callback: AsyncCallback<DepthData>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DepthDataOutput-onError(callback: ErrorCallback): void--><!--Device-DepthDataOutput-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_depthDataAvailable
 
 ```TypeScript
 on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void
 ```
 
-Subscribes to depth data availability events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to depth data availability events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 <!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void-End-->
 
@@ -126,7 +250,7 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -145,19 +269,17 @@ function registerDepthDataAvailable(depthDataOutput: camera.DepthDataOutput): vo
 }
 ```
 
-## on('error')
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 <!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -176,7 +298,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -200,7 +322,9 @@ start(): Promise<void>
 
 Starts depth data output. This API uses a promise to return the result.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DepthDataOutput-start(): Promise<void>--><!--Device-DepthDataOutput-start(): Promise<void>-End-->
 
@@ -218,9 +342,9 @@ Starts depth data output. This API uses a promise to return the result.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -244,7 +368,9 @@ stop(): Promise<void>
 
 Stops depth data output. This API uses a promise to return the result.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DepthDataOutput-stop(): Promise<void>--><!--Device-DepthDataOutput-stop(): Promise<void>-End-->
 
@@ -262,9 +388,9 @@ Stops depth data output. This API uses a promise to return the result.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

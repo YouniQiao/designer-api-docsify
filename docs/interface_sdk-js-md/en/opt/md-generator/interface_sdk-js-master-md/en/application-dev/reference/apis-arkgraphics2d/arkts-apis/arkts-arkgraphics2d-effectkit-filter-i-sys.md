@@ -1,8 +1,10 @@
 # Filter
 
-An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image.
+An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects, you need to call getEffectPixelMap to obtain the processed image.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
 
@@ -24,6 +26,8 @@ ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
 Adds the elliptical gradient blur effect to the filter linked list, and returns the head node of the linked list.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +56,7 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

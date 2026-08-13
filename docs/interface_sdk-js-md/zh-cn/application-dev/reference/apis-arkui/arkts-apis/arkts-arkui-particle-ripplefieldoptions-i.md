@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RippleFieldOptions--><!--Device-unnamed-export declare interface RippleFieldOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@
 amplitude?: double
 ```
 
-The amplitude of the ripple field. The greater the amplitude, the stronger the force of the ripple field.Range of values:[0, +∞)
+The amplitude of the ripple field. The greater the amplitude, the stronger the force of the ripple field. Range of values:[0, +∞)
 
 **类型：** double
 
@@ -25,6 +27,8 @@ The amplitude of the ripple field. The greater the amplitude, the stronger the f
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ The attenuation coefficient of the ripple field. The larger the attenuation coef
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RippleFieldOptions-attenuation?: double--><!--Device-RippleFieldOptions-attenuation?: double-End-->
@@ -62,13 +68,15 @@ center?: PositionT<double>
 
 The central point where the ripple field generates force. The top-left corner of the component is the origin of coordinates. The coordinate unit is vp.
 
-**类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;double&gt;
+**类型：** [PositionT](../../apis-na/arkts-apis/arkts-na-positiont-t.md)&lt;double&gt;
 
 **默认值：** {x:0,y:0}
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,6 +100,8 @@ The region influenced by the ripple field.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RippleFieldOptions-region?: FieldRegion--><!--Device-RippleFieldOptions-region?: FieldRegion-End-->
@@ -114,6 +124,8 @@ Wave speed. The greater the wave speed, the faster the wave changes over time, a
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RippleFieldOptions-waveSpeed?: double--><!--Device-RippleFieldOptions-waveSpeed?: double-End-->
@@ -126,7 +138,7 @@ Wave speed. The greater the wave speed, the faster the wave changes over time, a
 wavelength?: double
 ```
 
-Wavelength, which is the distance over which a wave cycle changes. The larger the wavelength, the slower the wave changes with distance, and the less pronounced the wave fluctiations.Range of values:[0, +∞)
+Wavelength, which is the distance over which a wave cycle changes. The larger the wavelength, the slower the wave changes with distance, and the less pronounced the wave fluctiations. Range of values:[0, +∞)
 
 **类型：** double
 
@@ -135,6 +147,8 @@ Wavelength, which is the distance over which a wave cycle changes. The larger th
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

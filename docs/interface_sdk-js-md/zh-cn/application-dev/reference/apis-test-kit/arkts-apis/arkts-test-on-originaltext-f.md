@@ -6,11 +6,13 @@
 export function originalText(text: string, pattern?: MatchPattern): On
 ```
 
-Specifies the original text for the target Component.If the accessibility property 'accessibilityLevel' of a component is set to 'no' or 'no-hide-descendants',you will not be able to use [text](arkts-test-uitest-on-c.md#text) to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with [text](arkts-test-uitest-on-c.md#text)
+Specifies the original text for the target Component. If the accessibility property 'accessibilityLevel' of a component is set to 'no' or 'no-hide-descendants', you will not be able to use [text](arkts-test-uitest-on-c.md#text) to match the component with the specified original text, but you can use this method to achieve it; if the component does not set the above accessibility property, this method has no difference with [text](arkts-test-uitest-on-c.md#text)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ON-export function originalText(text: string, pattern?: MatchPattern): On--><!--Device-ON-export function originalText(text: string, pattern?: MatchPattern): On-End-->
 
@@ -33,5 +35,5 @@ Specifies the original text for the target Component.If the accessibility proper
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 

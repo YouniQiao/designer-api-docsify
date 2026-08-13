@@ -2,7 +2,9 @@
 
 Policy information to manager permissions on a URI.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-fileShare-export interface PolicyInfo--><!--Device-fileShare-export interface PolicyInfo-End-->
 
@@ -24,7 +26,9 @@ Indicates the mode of operation for the URI, example { OperationMode.READ_MODE }
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PolicyInfo-operationMode: int--><!--Device-PolicyInfo-operationMode: int-End-->
 
@@ -40,7 +44,9 @@ Indicates the uri of the policy information.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PolicyInfo-uri: string--><!--Device-PolicyInfo-uri: string-End-->
 

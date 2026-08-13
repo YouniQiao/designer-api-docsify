@@ -12,7 +12,7 @@ function cancel(agent: WantAgent, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [cancel](ohos.app.ability.wantAgent/wantAgent#cancel)
+**替代接口：** [cancel](arkts-ability-wantagent-cancel-f.md#cancel)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -94,7 +94,7 @@ function cancel(agent: WantAgent): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [cancel](ohos.app.ability.wantAgent/wantAgent#cancel)
+**替代接口：** [cancel](arkts-ability-wantagent-cancel-f.md#cancel)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

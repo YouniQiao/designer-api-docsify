@@ -2,9 +2,11 @@
 
 How a raycast should be performed.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RaycastParameters--><!--Device-unnamed-export interface RaycastParameters-End-->
 
@@ -20,9 +22,11 @@ If defined, search only the nodes in the hierarchy under this node If undefined,
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RaycastParameters-rootNode?: Node--><!--Device-RaycastParameters-rootNode?: Node-End-->
 

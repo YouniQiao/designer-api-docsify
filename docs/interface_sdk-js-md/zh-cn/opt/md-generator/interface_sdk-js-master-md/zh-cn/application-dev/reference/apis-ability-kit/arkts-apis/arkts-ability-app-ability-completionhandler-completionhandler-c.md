@@ -1,10 +1,10 @@
 # CompletionHandler
 
-CompletionHandler提供了  
-[onRequestSuccess](#onRequestSuccess)和  
-[onRequestFailure](#onRequestFailure)两个回调函数，分别用来处理拉起应用成功和失败时的结果。
+CompletionHandler提供了 [onRequestSuccess](#onRequestSuccess)和 [onRequestFailure](#onRequestFailure)两个回调函数，分别用来处理拉 起应用成功和失败时的结果。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class CompletionHandler--><!--Device-unnamed-declare class CompletionHandler-End-->
 
@@ -19,6 +19,8 @@ onRequestFailure(elementName: ElementName, message: string): void
 拉起应用失败时的回调函数。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,7 +39,7 @@ onRequestFailure(elementName: ElementName, message: string): void
 
 ## 示例
 
-参见[CompletionHandler使用](#completionhandler使用)。
+参见CompletionHandler使用。
 
 ## onRequestSuccess
 
@@ -48,6 +50,8 @@ onRequestSuccess(elementName: ElementName, message: string): void
 拉起应用成功时的回调函数。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,4 +70,44 @@ onRequestSuccess(elementName: ElementName, message: string): void
 
 ## 示例
 
-参见[CompletionHandler使用](#completionhandler使用)。
+参见CompletionHandler使用。
+
+## onRequestFailure
+
+```TypeScript
+onRequestFailure: OnRequestFailureFn
+```
+
+拉端失败时的回调函数。
+
+**类型：** [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CompletionHandler-onRequestFailure: OnRequestFailureFn--><!--Device-CompletionHandler-onRequestFailure: OnRequestFailureFn-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## onRequestSuccess
+
+```TypeScript
+onRequestSuccess: OnRequestSuccessFn
+```
+
+拉端成功时的回调函数。
+
+**类型：** [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CompletionHandler-onRequestSuccess: OnRequestSuccessFn--><!--Device-CompletionHandler-onRequestSuccess: OnRequestSuccessFn-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core

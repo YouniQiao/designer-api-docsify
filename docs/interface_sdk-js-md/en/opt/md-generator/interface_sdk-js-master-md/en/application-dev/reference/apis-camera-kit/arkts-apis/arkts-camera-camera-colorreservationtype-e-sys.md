@@ -2,7 +2,9 @@
 
 Enumerates the color reservation types.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum ColorReservationType--><!--Device-camera-enum ColorReservationType-End-->
 
@@ -18,7 +20,9 @@ NONE = 0
 
 No color reservation.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorReservationType-NONE = 0--><!--Device-ColorReservationType-NONE = 0-End-->
 
@@ -34,7 +38,9 @@ PORTRAIT = 1
 
 Portrait color reservation.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorReservationType-PORTRAIT = 1--><!--Device-ColorReservationType-PORTRAIT = 1-End-->
 

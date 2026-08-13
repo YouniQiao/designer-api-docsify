@@ -4,6 +4,8 @@ Provides stream output result type definition.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-enum PartialResultType--><!--Device-imageGeneration-enum PartialResultType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ PARTIAL = 0
 Indicates the action for partial result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Indicates the action for complete result.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartialResultType-COMPLETED = 1--><!--Device-PartialResultType-COMPLETED = 1-End-->
@@ -55,6 +61,8 @@ PARTIAL_FAIL = 2
 Indicates the action for partial fail result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,12 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createMac(algName: string): Mac
 ```
 
-Creates a **Mac** instance.
+Creates a **Mac** instance. &lt;br&gt;For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md) .
 
-&lt;br&gt;For details about the supported specifications, see  
-[MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,8 +42,8 @@ Creates a **Mac** instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -68,14 +67,13 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-Creates a **Mac** instance.
+Creates a **Mac** instance. &lt;br&gt;For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md) .
 
-&lt;br&gt;For details about the supported specifications, see  
-[MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac--><!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac-End-->
 
@@ -97,10 +95,10 @@ Creates a **Mac** instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## Examples
 

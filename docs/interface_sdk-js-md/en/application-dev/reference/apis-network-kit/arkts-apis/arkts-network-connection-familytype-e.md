@@ -2,9 +2,11 @@
 
 Defines the address family type.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-connection-export enum FamilyType--><!--Device-connection-export enum FamilyType-End-->
 
@@ -18,9 +20,11 @@ FAMILY_TYPE_ALL = 0
 
 Indicates that no ip type is specified, all address types can be use.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-FamilyType-FAMILY_TYPE_ALL = 0--><!--Device-FamilyType-FAMILY_TYPE_ALL = 0-End-->
 
@@ -34,9 +38,11 @@ FAMILY_TYPE_IPV4 = 1
 
 Indicates that the family type is ipv4.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1--><!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1-End-->
 
@@ -50,9 +56,11 @@ FAMILY_TYPE_IPV6 = 2
 
 Indicates that the family type is ipv6.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2--><!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2-End-->
 

@@ -2,7 +2,9 @@
 
 Provides information about a component.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiExtension-interface WindowProxyProperties--><!--Device-uiExtension-interface WindowProxyProperties-End-->
 
@@ -24,11 +26,13 @@ Position and size of the component (**EmbeddedComponent** or **UIExtensionCompon
 
 **Type:** window.Rect
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowProxyProperties-uiExtensionHostWindowProxyRect: window.Rect--><!--Device-WindowProxyProperties-uiExtensionHostWindowProxyRect: window.Rect-End-->
 

@@ -12,7 +12,7 @@ function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>
 
 **废弃版本：** 10
 
-**替代接口：** [obtainAllWorks](workScheduler.obtainAllWorks(callback:)
+**替代接口：** [obtainAllWorks](#obtainAllWorks)(callback: AsyncCallback&lt;Array&lt;WorkInfo&gt;&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,10 +36,10 @@ function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) |
-| [9700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) |
-| [9700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) |
 
 
 ## obtainAllWorks
@@ -50,7 +50,9 @@ function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 
 获取当前应用所有的延迟任务，使用Callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,10 +70,10 @@ function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) |
-| [9700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) |
-| [9700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) |
 
 ## 示例
 
@@ -97,7 +99,9 @@ function obtainAllWorks(): Promise<Array<WorkInfo>>
 
 获取当前应用所有的延迟任务，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,10 +119,10 @@ function obtainAllWorks(): Promise<Array<WorkInfo>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) |
-| [9700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) |
-| [9700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) |
 
 ## 示例
 

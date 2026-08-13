@@ -1,9 +1,10 @@
 # RingtonePlayer（系统接口）
 
-系统铃声播放器，提供系统铃声的参数设置、参数获取、播放、停止等功能。在调用RingtonePlayer的接口前，需要先通过  
-[getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getRingtonePlayer)创建实例。
+系统铃声播放器，提供系统铃声的参数设置、参数获取、播放、停止等功能。在调用RingtonePlayer的接口前，需要先通过 [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getRingtonePlayer) 创建实例。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RingtonePlayer--><!--Device-unnamed-export interface RingtonePlayer-End-->
 
@@ -19,7 +20,9 @@ configure(options: RingtoneOptions, callback: AsyncCallback<void>): void
 
 配置铃声播放参数。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-configure(options: RingtoneOptions, callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-configure(options: RingtoneOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -62,7 +65,9 @@ configure(options: RingtoneOptions): Promise<void>
 
 配置铃声播放参数。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>--><!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>-End-->
 
@@ -108,7 +113,9 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 
 获取铃声使用的AudioRendererInfo。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void--><!--Device-RingtonePlayer-getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void-End-->
 
@@ -148,7 +155,9 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 
 获取铃声使用的AudioRendererInfo。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-getAudioRendererInfo(): Promise<audio.AudioRendererInfo>--><!--Device-RingtonePlayer-getAudioRendererInfo(): Promise<audio.AudioRendererInfo>-End-->
 
@@ -186,7 +195,9 @@ getTitle(callback: AsyncCallback<string>): void
 
 获取铃声标题。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-getTitle(callback: AsyncCallback<string>): void--><!--Device-RingtonePlayer-getTitle(callback: AsyncCallback<string>): void-End-->
 
@@ -222,7 +233,9 @@ getTitle(): Promise<string>
 
 获取铃声标题。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-getTitle(): Promise<string>--><!--Device-RingtonePlayer-getTitle(): Promise<string>-End-->
 
@@ -248,7 +261,31 @@ systemRingtonePlayer.getTitle().then((value: string) => {
 });
 ```
 
-## off('audioInterrupt')
+## offAudioInterrupt
+
+```TypeScript
+offAudioInterrupt(): void
+```
+
+取消监听音频中断事件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-RingtonePlayer-offAudioInterrupt(): void--><!--Device-RingtonePlayer-offAudioInterrupt(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_audioInterrupt
 
 ```TypeScript
 off(type: 'audioInterrupt'): void
@@ -257,6 +294,8 @@ off(type: 'audioInterrupt'): void
 取消监听音频中断事件。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-off(type: 'audioInterrupt'): void--><!--Device-RingtonePlayer-off(type: 'audioInterrupt'): void-End-->
 
@@ -274,8 +313,8 @@ off(type: 'audioInterrupt'): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## 示例
 
@@ -283,7 +322,38 @@ off(type: 'audioInterrupt'): void
 systemRingtonePlayer.off('audioInterrupt');
 ```
 
-## on('audioInterrupt')
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+```
+
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_audioInterrupt
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
@@ -292,6 +362,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
@@ -310,8 +382,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## 示例
 
@@ -371,7 +443,9 @@ release(callback: AsyncCallback<void>): void
 
 释放铃声播放器。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-release(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -407,7 +481,9 @@ release(): Promise<void>
 
 释放铃声播放器。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-release(): Promise<void>--><!--Device-RingtonePlayer-release(): Promise<void>-End-->
 
@@ -441,7 +517,9 @@ start(callback: AsyncCallback<void>): void
 
 开始播放铃声。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-start(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-start(callback: AsyncCallback<void>): void-End-->
 
@@ -477,7 +555,9 @@ start(): Promise<void>
 
 开始播放铃声。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-start(): Promise<void>--><!--Device-RingtonePlayer-start(): Promise<void>-End-->
 
@@ -511,7 +591,9 @@ stop(callback: AsyncCallback<void>): void
 
 停止播放铃声。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-stop(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -547,7 +629,9 @@ stop(): Promise<void>
 
 停止播放铃声。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-stop(): Promise<void>--><!--Device-RingtonePlayer-stop(): Promise<void>-End-->
 
@@ -583,7 +667,9 @@ readonly state: media.AVPlayerState
 
 **类型：** media.AVPlayerState
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RingtonePlayer-readonly state: media.AVPlayerState--><!--Device-RingtonePlayer-readonly state: media.AVPlayerState-End-->
 

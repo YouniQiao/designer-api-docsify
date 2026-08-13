@@ -6,6 +6,8 @@ Defines the function triggered when the PDF page is scrolled to the bottom.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnPdfScrollEvent--><!--Device-unnamed-declare interface OnPdfScrollEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ URL of the page.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-OnPdfScrollEvent-url:string--><!--Device-OnPdfScrollEvent-url:string-End-->
 

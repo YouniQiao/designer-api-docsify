@@ -8,6 +8,8 @@ The touch position of an accessibility virtual node.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type TouchPosition = _TouchPosition--><!--Device-unnamed-export type TouchPosition = _TouchPosition-End-->

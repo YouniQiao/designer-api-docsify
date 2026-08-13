@@ -14,7 +14,9 @@ function unregCustomEapHandler(netType:number, eapCode: number, eapType: number,
 
 unreg the callback of eap packet customization.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -35,12 +37,12 @@ unreg the callback of eap packet customization.
 
 | Error Code ID |
 | --- |
-| [33200008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200008-invalid-eaptype-value) |
-| [33200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200009-netmanager-not-exist) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [33200099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200099-internal-program-error) |
-| [33200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200006-invalid-network-type) |
-| [33200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200007-invalid-eapcode-value) |
+| [33200008](../errorcode-net-eap.md#33200008-invalid-eaptype-value) |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
+| [33200006](../errorcode-net-eap.md#33200006-invalid-network-type) |
+| [33200007](../errorcode-net-eap.md#33200007-invalid-eapcode-value) |
 
 ## Examples
 

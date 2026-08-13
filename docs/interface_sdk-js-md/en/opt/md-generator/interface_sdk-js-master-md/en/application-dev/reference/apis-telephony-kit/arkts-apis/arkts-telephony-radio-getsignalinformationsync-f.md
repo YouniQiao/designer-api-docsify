@@ -14,7 +14,9 @@ function getSignalInformationSync(slotId: number): Array<SignalInformation>
 
 Obtains the list of signal strength information of the registered network corresponding to a specified SIM card.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>--><!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>-End-->
 

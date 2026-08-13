@@ -1,15 +1,10 @@
 # AudioRenderer
 
-This interface provides APIs for audio rendering.
+This interface provides APIs for audio rendering. Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) to create an AudioRenderer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
 
-Before calling any API in AudioRenderer, you must use  
-[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer)to create an AudioRenderer instance.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The initial APIs of this interface are supported since API version 8.
-
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
 
@@ -29,7 +24,9 @@ drain(callback: AsyncCallback<void>): void
 
 Drains the playback buffer. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void-End-->
 
@@ -49,7 +46,9 @@ drain(): Promise<void>
 
 Drains the playback buffer. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-drain(): Promise<void>--><!--Device-AudioRenderer-drain(): Promise<void>-End-->
 
@@ -67,10 +66,11 @@ Drains the playback buffer. This API uses a promise to return the result.
 flush(): Promise<void>
 ```
 
-Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-audiostate-e.md#AudioState) is  
-**STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
+Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-audiostate-e.md#AudioState) is **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-flush(): Promise<void>--><!--Device-AudioRenderer-flush(): Promise<void>-End-->
 
@@ -86,7 +86,7 @@ Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-au
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
 
 ## getAudioEffectMode
 
@@ -96,7 +96,9 @@ getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void
 
 Obtains the audio effect mode in use. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void--><!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void-End-->
 
@@ -116,7 +118,9 @@ getAudioEffectMode(): Promise<AudioEffectMode>
 
 Obtains the audio effect mode in use. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>--><!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>-End-->
 
@@ -136,7 +140,9 @@ getAudioStreamId(callback: AsyncCallback<number>): void
 
 Obtains the stream ID of this audio renderer. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
 
@@ -156,7 +162,9 @@ getAudioStreamId(): Promise<number>
 
 Obtains the stream ID of this audio renderer. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioStreamId(): Promise<long>--><!--Device-AudioRenderer-getAudioStreamId(): Promise<long>-End-->
 
@@ -176,7 +184,9 @@ getAudioStreamIdSync(): number
 
 Obtains the stream ID of this audio renderer. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioStreamIdSync(): long--><!--Device-AudioRenderer-getAudioStreamIdSync(): long-End-->
 
@@ -194,9 +204,11 @@ Obtains the stream ID of this audio renderer. This API returns the result synchr
 getAudioTime(callback: AsyncCallback<number>): void
 ```
 
-Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API uses an asynchronous callback to return the result.
+Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1 970). This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void-End-->
 
@@ -214,9 +226,11 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 getAudioTime(): Promise<number>
 ```
 
-Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API uses a promise to return the result.
+Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1 970). This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioTime(): Promise<long>--><!--Device-AudioRenderer-getAudioTime(): Promise<long>-End-->
 
@@ -234,9 +248,11 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 getAudioTimeSync(): number
 ```
 
-Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API returns the result synchronously.
+Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1 970). This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioTimeSync(): long--><!--Device-AudioRenderer-getAudioTimeSync(): long-End-->
 
@@ -254,15 +270,11 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result. This information is commonly used for audio and video synchronization. Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called. Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
-This information is commonly used for audio and video synchronization.
+**Since:** 23
 
-Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
-
-Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
-
-**Since:** 19
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
 
@@ -278,7 +290,7 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
 
 ## getAudioTimestampInfoSync
 
@@ -286,15 +298,11 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 getAudioTimestampInfoSync(): AudioTimestampInfo
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API returns the result synchronously.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API returns the result synchronously. This information is commonly used for audio and video synchronization. Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called. Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
-This information is commonly used for audio and video synchronization.
+**Since:** 23
 
-Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
-
-Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
-
-**Since:** 19
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
 
@@ -310,7 +318,7 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
 
 ## getBufferSize
 
@@ -320,7 +328,9 @@ getBufferSize(callback: AsyncCallback<number>): void
 
 Obtains a reasonable minimum buffer size in bytes for rendering. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
@@ -340,7 +350,9 @@ getBufferSize(): Promise<number>
 
 Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getBufferSize(): Promise<long>--><!--Device-AudioRenderer-getBufferSize(): Promise<long>-End-->
 
@@ -360,7 +372,9 @@ getBufferSizeSync(): number
 
 Obtains a reasonable minimum buffer size in bytes for rendering. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getBufferSizeSync(): long--><!--Device-AudioRenderer-getBufferSizeSync(): long-End-->
 
@@ -380,7 +394,9 @@ getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void
 
 Obtains the output device information of the audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
@@ -400,7 +416,9 @@ getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>
 
 Obtains the output device information of the audio stream. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>-End-->
 
@@ -420,7 +438,9 @@ getCurrentOutputDevicesSync(): AudioDeviceDescriptors
 
 Obtains the output device information of the audio stream. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors--><!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors-End-->
 
@@ -438,20 +458,11 @@ Obtains the output device information of the audio stream. This API returns the 
 getLatency(type: AudioLatencyType): number
 ```
 
-Obtains the estimated latency of the current audio route.
-
-> **NOTE：**
-> 
-> - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only.
-> 
-> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the
-> audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
-> 
-> - You are advised to use [getAudioTimestampInfo](#getAudioTimestampInfo) or
-> [getAudioTimestampInfoSync](#getAudioTimestampInfoSync) to implement audio and video
-> synchronization after the audio is output to the hardware.
+Obtains the estimated latency of the current audio route. > **NOTE：**> > - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only. > > - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the > audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching. > > - You are advised to use [getAudioTimestampInfo](#getAudioTimestampInfo) or > [getAudioTimestampInfoSync](#getAudioTimestampInfoSync) to implement audio and video > synchronization after the audio is output to the hardware.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -475,9 +486,9 @@ Obtains the estimated latency of the current audio route.
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 ## getLoudnessGain
 
@@ -487,7 +498,9 @@ getLoudnessGain(): number
 
 Gets loudness gain of this stream.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getLoudnessGain(): double--><!--Device-AudioRenderer-getLoudnessGain(): double-End-->
 
@@ -507,7 +520,9 @@ getMaxStreamVolume(callback: AsyncCallback<number>): void
 
 Obtains the maximum volume of the audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void-End-->
 
@@ -527,7 +542,9 @@ getMaxStreamVolume(): Promise<number>
 
 Obtains the maximum volume of the audio stream. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>-End-->
 
@@ -547,7 +564,9 @@ getMaxStreamVolumeSync(): number
 
 Obtains the maximum volume of the audio stream. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMaxStreamVolumeSync(): double--><!--Device-AudioRenderer-getMaxStreamVolumeSync(): double-End-->
 
@@ -567,7 +586,9 @@ getMinStreamVolume(callback: AsyncCallback<number>): void
 
 Obtains the minimum volume of the audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void-End-->
 
@@ -587,7 +608,9 @@ getMinStreamVolume(): Promise<number>
 
 Obtains the minimum volume of the audio stream. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>-End-->
 
@@ -607,7 +630,9 @@ getMinStreamVolumeSync(): number
 
 Obtains the minimum volume of the audio stream. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMinStreamVolumeSync(): double--><!--Device-AudioRenderer-getMinStreamVolumeSync(): double-End-->
 
@@ -699,7 +724,9 @@ getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void
 
 Obtains the information about this audio renderer. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void--><!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void-End-->
 
@@ -719,7 +746,9 @@ getRendererInfo(): Promise<AudioRendererInfo>
 
 Obtains the information about this audio renderer. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>--><!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>-End-->
 
@@ -739,7 +768,9 @@ getRendererInfoSync(): AudioRendererInfo
 
 Obtains the information about this audio renderer. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo--><!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo-End-->
 
@@ -759,7 +790,9 @@ getSilentModeAndMixWithOthers(): boolean
 
 Obtains the silent mode in concurrent playback for the audio stream.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean--><!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean-End-->
 
@@ -779,7 +812,9 @@ getSpeed(): number
 
 Obtains the playback speed.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getSpeed(): double--><!--Device-AudioRenderer-getSpeed(): double-End-->
 
@@ -799,7 +834,9 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 
 Obtains the stream information of this audio renderer. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
@@ -819,7 +856,9 @@ getStreamInfo(): Promise<AudioStreamInfo>
 
 Obtains the stream information of this audio renderer. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
 
@@ -839,7 +878,9 @@ getStreamInfoSync(): AudioStreamInfo
 
 Obtains the stream information of this audio renderer. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo-End-->
 
@@ -859,7 +900,9 @@ getUnderflowCount(callback: AsyncCallback<number>): void
 
 Obtains the number of underflow audio frames in the audio stream that is being played. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void-End-->
 
@@ -879,7 +922,9 @@ getUnderflowCount(): Promise<number>
 
 Obtains the number of underflow audio frames in the audio stream that is being played. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getUnderflowCount(): Promise<long>--><!--Device-AudioRenderer-getUnderflowCount(): Promise<long>-End-->
 
@@ -899,7 +944,9 @@ getUnderflowCountSync(): number
 
 Obtains the number of underflow audio frames in the audio stream that is being played. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getUnderflowCountSync(): long--><!--Device-AudioRenderer-getUnderflowCountSync(): long-End-->
 
@@ -919,7 +966,9 @@ getVolume(): number
 
 Obtains the volume of the audio stream. This API returns the result synchronously.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getVolume(): double--><!--Device-AudioRenderer-getVolume(): double-End-->
 
@@ -931,7 +980,191 @@ Obtains the volume of the audio stream. This API returns the result synchronousl
 | --- |
 | number |
 
-## off('audioInterrupt')
+## offAudioInterrupt
+
+```TypeScript
+offAudioInterrupt(callback?: Callback<InterruptEvent>): void
+```
+
+Unsubscribes audio interrupt events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-offAudioInterrupt(callback?: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-offAudioInterrupt(callback?: Callback<InterruptEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Interrupt
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## offMarkReach
+
+```TypeScript
+offMarkReach(callback?: Callback<number>): void
+```
+
+Unsubscribes from mark reached events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-offMarkReach(callback?: Callback<long>): void--><!--Device-AudioRenderer-offMarkReach(callback?: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+
+## offOutputDeviceChange
+
+```TypeScript
+offOutputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+Unsubscribes output device change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-offOutputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-offOutputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## offOutputDeviceChangeWithInfo
+
+```TypeScript
+offOutputDeviceChangeWithInfo(callback?: Callback<AudioStreamDeviceChangeInfo>): void
+```
+
+Unsubscribes output device change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-offOutputDeviceChangeWithInfo(callback?: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-offOutputDeviceChangeWithInfo(callback?: Callback<AudioStreamDeviceChangeInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## offPeriodReach
+
+```TypeScript
+offPeriodReach(callback?: Callback<number>): void
+```
+
+Unsubscribes from period reached events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-offPeriodReach(callback?: Callback<long>): void--><!--Device-AudioRenderer-offPeriodReach(callback?: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+
+## offStateChange
+
+```TypeScript
+offStateChange(callback?: Callback<AudioState>): void
+```
+
+Unsubscribes audio state change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-offStateChange(callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-offStateChange(callback?: Callback<AudioState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## offWriteData
+
+```TypeScript
+offWriteData(callback?: AudioRendererWriteDataCallback): void
+```
+
+Unsubscribes audio data callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-offWriteData(callback?: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-offWriteData(callback?: AudioRendererWriteDataCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## off_audioInterrupt
 
 ```TypeScript
 off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
@@ -940,6 +1173,8 @@ off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
 Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void-End-->
 
@@ -956,9 +1191,9 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## off('markReach')
+## off_markReach
 
 ```TypeScript
 off(type: 'markReach', callback?: Callback<number>): void
@@ -967,6 +1202,8 @@ off(type: 'markReach', callback?: Callback<number>): void
 Unsubscribes from the mark reached event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void-End-->
 
@@ -979,55 +1216,7 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 | type | 'markReach' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
 
-## off('periodReach')
-
-```TypeScript
-off(type: 'periodReach', callback?: Callback<number>): void
-```
-
-Unsubscribes from the period reached event. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-<!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'periodReach' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
-
-## off('stateChange')
-
-```TypeScript
-off(type: 'stateChange', callback?: Callback<AudioState>): void
-```
-
-Unsubscribes from the audio renderer state change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 18
-
-<!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-
-## off('outputDeviceChange')
+## off_outputDeviceChange
 
 ```TypeScript
 off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
@@ -1036,6 +1225,8 @@ off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): vo
 Unsubscribes from the audio output device change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -1052,10 +1243,10 @@ Unsubscribes from the audio output device change event. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## off('outputDeviceChangeWithInfo')
+## off_outputDeviceChangeWithInfo
 
 ```TypeScript
 off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void
@@ -1064,6 +1255,8 @@ off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceCha
 Unsubscribes from the change event of audio output devices and reasons. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
@@ -1080,10 +1273,62 @@ Unsubscribes from the change event of audio output devices and reasons. This API
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## off('writeData')
+## off_periodReach
+
+```TypeScript
+off(type: 'periodReach', callback?: Callback<number>): void
+```
+
+Unsubscribes from the period reached event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'periodReach' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+
+## off_stateChange
+
+```TypeScript
+off(type: 'stateChange', callback?: Callback<AudioState>): void
+```
+
+Unsubscribes from the audio renderer state change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'stateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## off_writeData
 
 ```TypeScript
 off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
@@ -1092,6 +1337,8 @@ off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
 Unsubscribes from the audio data write event. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void-End-->
 
@@ -1108,23 +1355,200 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('audioInterrupt')
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<InterruptEvent>): void
+```
+
+Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio playback is interrupted.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-onAudioInterrupt(callback: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-onAudioInterrupt(callback: Callback<InterruptEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Interrupt
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## onMarkReach
+
+```TypeScript
+onMarkReach(frame: number, callback: Callback<number>): void
+```
+
+Subscribes to mark reached events. When the number of frames rendered reaches the value of the frame parameter, the callback is invoked.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-onMarkReach(frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-onMarkReach(frame: long, callback: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| frame | number | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+## onOutputDeviceChange
+
+```TypeScript
+onOutputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void
+```
+
+Subscribes output device change event callback. The event is triggered when output device change for this stream.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-onOutputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-onOutputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## onOutputDeviceChangeWithInfo
+
+```TypeScript
+onOutputDeviceChangeWithInfo(callback: Callback<AudioStreamDeviceChangeInfo>): void
+```
+
+Subscribes output device change event callback. The event is triggered when output device change for this stream.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-onOutputDeviceChangeWithInfo(callback: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-onOutputDeviceChangeWithInfo(callback: Callback<AudioStreamDeviceChangeInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## onPeriodReach
+
+```TypeScript
+onPeriodReach(frame: number, callback: Callback<number>): void
+```
+
+Subscribes to period reached events. When the period of frame rendering reaches the value of frame parameter, the callback is invoked.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-onPeriodReach(frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-onPeriodReach(frame: long, callback: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| frame | number | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<AudioState>): void
+```
+
+Subscribes audio renderer state change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-onStateChange(callback: Callback<AudioState>): void--><!--Device-AudioRenderer-onStateChange(callback: Callback<AudioState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes |
+
+## onWriteData
+
+```TypeScript
+onWriteData(callback: AudioRendererWriteDataCallback): void
+```
+
+Subscribes audio data callback. The event is triggered when audio buffer is available for writing more data.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-onWriteData(callback: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-onWriteData(callback: AudioRendererWriteDataCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## on_audioInterrupt
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
-
-The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
-
-After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see  
-[Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
 
@@ -1141,20 +1565,20 @@ After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('markReach')
+## on_markReach
 
 ```TypeScript
 on(type: 'markReach', frame: number, callback: Callback<number>): void
 ```
 
-Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
-
-For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches the 100th frame.
+Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result. For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches the 100th frame.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
 
@@ -1165,63 +1589,20 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'markReach' | Yes |
-| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | Yes |
+| frame | number | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
 
-## on('periodReach')
-
-```TypeScript
-on(type: 'periodReach', frame: number, callback: Callback<number>): void
-```
-
-Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.
-
-For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example, when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
-
-**Since:** 8
-
-<!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'periodReach' | Yes |
-| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
-
-## on('stateChange')
-
-```TypeScript
-on(type: 'stateChange', callback: Callback<AudioState>): void
-```
-
-Subscribes to the audio renderer state change event, which is triggered when the state of the audio renderer is changed. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-<!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes |
-
-## on('outputDeviceChange')
+## on_outputDeviceChange
 
 ```TypeScript
 on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to the audio output device change event, which is triggered when an audio output device is changed.This API uses an asynchronous callback to return the result.
+Subscribes to the audio output device change event, which is triggered when an audio output device is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -1238,10 +1619,10 @@ Subscribes to the audio output device change event, which is triggered when an a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('outputDeviceChangeWithInfo')
+## on_outputDeviceChangeWithInfo
 
 ```TypeScript
 on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void
@@ -1250,6 +1631,8 @@ on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChang
 Subscribes to the change event of audio output devices and reasons, which is triggered when an audio output device is changed, and the change reason is reported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
@@ -1266,20 +1649,67 @@ Subscribes to the change event of audio output devices and reasons, which is tri
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('writeData')
+## on_periodReach
+
+```TypeScript
+on(type: 'periodReach', frame: number, callback: Callback<number>): void
+```
+
+Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result. For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example , when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
+
+**Since:** 8
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'periodReach' | Yes |
+| frame | number | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+## on_stateChange
+
+```TypeScript
+on(type: 'stateChange', callback: Callback<AudioState>): void
+```
+
+Subscribes to the audio renderer state change event, which is triggered when the state of the audio renderer is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** -1
+
+<!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'stateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes |
+
+## on_writeData
 
 ```TypeScript
 on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 ```
 
-Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses an asynchronous callback to return the result.
-
-The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
+Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses an asynchronous callback to return the result. The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void-End-->
 
@@ -1296,8 +1726,8 @@ The callback function is used only to write audio data. Do not call AudioRendere
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## pause
 
@@ -1307,7 +1737,9 @@ pause(callback: AsyncCallback<void>): void
 
 Pauses this audio renderer. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -1327,7 +1759,9 @@ pause(): Promise<void>
 
 Pauses this audio renderer. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-pause(): Promise<void>--><!--Device-AudioRenderer-pause(): Promise<void>-End-->
 
@@ -1347,7 +1781,9 @@ release(callback: AsyncCallback<void>): void
 
 Releases the renderer. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -1367,7 +1803,9 @@ release(): Promise<void>
 
 Releases the renderer. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-release(): Promise<void>--><!--Device-AudioRenderer-release(): Promise<void>-End-->
 
@@ -1387,7 +1825,9 @@ setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void
 
 Sets an audio effect mode. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void-End-->
 
@@ -1404,8 +1844,8 @@ Sets an audio effect mode. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setAudioEffectMode
 
@@ -1415,7 +1855,9 @@ setAudioEffectMode(mode: AudioEffectMode): Promise<void>
 
 Sets an audio effect mode. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>-End-->
 
@@ -1437,8 +1879,8 @@ Sets an audio effect mode. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setChannelBlendMode
 
@@ -1448,7 +1890,9 @@ setChannelBlendMode(mode: ChannelBlendMode): void
 
 Sets the audio channel blending mode. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void--><!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void-End-->
 
@@ -1464,9 +1908,9 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setDefaultOutputDevice
 
@@ -1474,9 +1918,11 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Temporarily changes the current audio device This function applies on audiorenderers whose StreamUsage are STREAM_USAGE_VOICE_COMMUNICATION/STREAM_USAGE_VIDEO_COMMUNICATION/STREAM_USAGE_VOICE_MESSAGE.Setting the device will only takes effect if no other accessory such as headphones are in use
+Temporarily changes the current audio device This function applies on audiorenderers whose StreamUsage are STREAM_USAGE_VOICE_COMMUNICATION/STREAM_USAGE_VIDEO_COMMUNICATION/STREAM_USAGE_VOICE_MESSAGE. Setting the device will only takes effect if no other accessory such as headphones are in use
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
@@ -1498,9 +1944,9 @@ Temporarily changes the current audio device This function applies on audiorende
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setIndependentAudioSessionStrategy
 
@@ -1508,15 +1954,11 @@ Temporarily changes the current audio device This function applies on audiorende
 setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: number): void
 ```
 
-Sets the independent audio session strategy and behavior parameters.
-
-> **NOTE：**
-> 
-> If this API is called while an audio renderer is running, you must call the
-> [start](#start) API again for
-> the settings to take effect.
+Sets the independent audio session strategy and behavior parameters. > **NOTE：**> > If this API is called while an audio renderer is running, you must call the > [start](#start) API again for > the settings to take effect.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1535,8 +1977,8 @@ Sets the independent audio session strategy and behavior parameters.
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setInterruptMode
 
@@ -1546,7 +1988,9 @@ setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void
 
 Sets the audio interruption mode for the application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void-End-->
 
@@ -1567,7 +2011,9 @@ setInterruptMode(mode: InterruptMode): Promise<void>
 
 Sets the audio interruption mode for the application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>-End-->
 
@@ -1593,7 +2039,9 @@ setInterruptModeSync(mode: InterruptMode): void
 
 Sets the audio interruption mode for the application. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void--><!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void-End-->
 
@@ -1609,8 +2057,8 @@ Sets the audio interruption mode for the application. This API returns the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setLoudnessGain
 
@@ -1618,9 +2066,11 @@ Sets the audio interruption mode for the application. This API returns the resul
 setLoudnessGain(loudnessGain: number): Promise<void>
 ```
 
-Sets the loudness gain of this stream. The default loudness gain is 0.0dB.The stream usage of the audio renderer must be [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MUSIC),[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MOVIE) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_AUDIOBOOK).After calling this interface, the adjustment of loundness gain will take effect immediately.
+Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The stream usage of the audio renderer must be [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MUSIC), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MOVIE) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_AUDIOBOOK). After calling this interface, the adjustment of loundness gain will take effect immediately.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>--><!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>-End-->
 
@@ -1642,8 +2092,8 @@ Sets the loudness gain of this stream. The default loudness gain is 0.0dB.The st
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
 ## setRenderRate
 
@@ -1657,7 +2107,7 @@ Sets the render rate. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 11
 
-**Substitutes:** [setSpeed](ohos.multimedia.audio.AudioRenderer#setSpeed)
+**Substitutes:** setSpeed
 
 <!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
@@ -1682,7 +2132,7 @@ Sets the render rate. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [setSpeed](ohos.multimedia.audio.AudioRenderer#setSpeed)
+**Substitutes:** setSpeed
 
 <!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>-End-->
 
@@ -1706,11 +2156,11 @@ Sets the render rate. This API uses a promise to return the result.
 setSilentModeAndMixWithOthers(on: boolean): void
 ```
 
-Sets the silent mode in concurrent playback for the audio stream.
+Sets the silent mode in concurrent playback for the audio stream. If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based on the system focus strategy.
 
-If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based on the system focus strategy.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void--><!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void-End-->
 
@@ -1730,7 +2180,9 @@ setSpeed(speed: number): void
 
 Sets the playback speed.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setSpeed(speed: double): void--><!--Device-AudioRenderer-setSpeed(speed: double): void-End-->
 
@@ -1746,8 +2198,8 @@ Sets the playback speed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setVolume
 
@@ -1757,7 +2209,9 @@ setVolume(volume: number, callback: AsyncCallback<void>): void
 
 Sets the volume for the audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void-End-->
 
@@ -1778,7 +2232,9 @@ setVolume(volume: number): Promise<void>
 
 Sets the volume for the audio stream. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setVolume(volume: double): Promise<void>--><!--Device-AudioRenderer-setVolume(volume: double): Promise<void>-End-->
 
@@ -1804,7 +2260,9 @@ setVolumeWithRamp(volume: number, duration: number): void
 
 Sets a volume ramp. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void--><!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void-End-->
 
@@ -1821,8 +2279,8 @@ Sets a volume ramp. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## start
 
@@ -1832,7 +2290,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts this audio renderer. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void-End-->
 
@@ -1852,7 +2312,9 @@ start(): Promise<void>
 
 Starts this audio renderer. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-start(): Promise<void>--><!--Device-AudioRenderer-start(): Promise<void>-End-->
 
@@ -1872,7 +2334,9 @@ stop(callback: AsyncCallback<void>): void
 
 Stops this audio renderer. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -1892,7 +2356,9 @@ stop(): Promise<void>
 
 Stops this audio renderer. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-stop(): Promise<void>--><!--Device-AudioRenderer-stop(): Promise<void>-End-->
 
@@ -1916,7 +2382,7 @@ Writes the buffer. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeData](ohos.multimedia.audio.AudioRenderer#event:writeData)
+**Substitutes:** writeData
 
 <!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
 
@@ -1941,7 +2407,7 @@ Writes the buffer. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeData](ohos.multimedia.audio.AudioRenderer#event:writeData)
+**Substitutes:** writeData
 
 <!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>--><!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>-End-->
 
@@ -1969,7 +2435,9 @@ Audio renderer state.
 
 **Type:** AudioState
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRenderer-readonly state: AudioState--><!--Device-AudioRenderer-readonly state: AudioState-End-->
 

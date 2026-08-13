@@ -1,14 +1,10 @@
 # BlurType
 
-Enumerates the blur types of a mask filter.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description | Diagram |
-| ------ | - | ------------------ | -------- |
-| [NORMAL](#normal) | 0 | Both the outer edges and the inner solid parts are blurred.|![image_BlueType_Normal.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Normal.png)|
-| [SOLID](#solid) | 1 | The inner solid part remains unchanged, while only the outer edges are blurred.|![image_BlueType_Solid.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Solid.png)|
-| [OUTER](arkts-arkgraphics2d-drawing-blurtype-e.md) | 2 | Only the outer edges are blurred, with the inner solid part being fully transparent.|![image_BlueType_Outer.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png)|
-| [INNER](arkts-arkgraphics2d-drawing-blurtype-e.md) | 3 | Only the inner solid part is blurred, while the outer edges remain sharp.|
+Enumerates the blur types of a mask filter. | Name | Value| Description | Diagram | | ------ | - | ------------------ | -------- | | NORMAL | 0 | Both the outer edges and the inner solid parts are blurred.| | | SOLID | 1 | The inner solid part remains unchanged, while only the outer edges are blurred.| | | OUTER | 2 | Only the outer edges are blurred, with the inner solid part being fully transparent.| | | INNER | 3 | Only the inner solid part is blurred, while the outer edges remain sharp.| |
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum BlurType--><!--Device-drawing-enum BlurType-End-->
 
@@ -22,7 +18,9 @@ NORMAL = 0
 
 Both the outer edges and the inner solid parts are blurred.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurType-NORMAL = 0--><!--Device-BlurType-NORMAL = 0-End-->
 
@@ -36,7 +34,9 @@ SOLID = 1
 
 The inner solid part remains unchanged, while only the outer edges are blurred.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurType-SOLID = 1--><!--Device-BlurType-SOLID = 1-End-->
 
@@ -50,7 +50,9 @@ OUTER = 2
 
 Only the outer edges are blurred, with the inner solid part being fully transparent.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurType-OUTER = 2--><!--Device-BlurType-OUTER = 2-End-->
 
@@ -64,7 +66,9 @@ INNER = 3
 
 Only the inner solid part is blurred, while the outer edges remain sharp.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurType-INNER = 3--><!--Device-BlurType-INNER = 3-End-->
 

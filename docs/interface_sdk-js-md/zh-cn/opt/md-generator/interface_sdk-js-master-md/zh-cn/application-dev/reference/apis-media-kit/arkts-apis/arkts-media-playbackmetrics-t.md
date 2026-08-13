@@ -8,6 +8,8 @@ type PlaybackMetrics = Record<PlaybackMetricsKey, Object>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type PlaybackMetrics = Record<PlaybackMetricsKey, Object>--><!--Device-unnamed-type PlaybackMetrics = Record<PlaybackMetricsKey, Object>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

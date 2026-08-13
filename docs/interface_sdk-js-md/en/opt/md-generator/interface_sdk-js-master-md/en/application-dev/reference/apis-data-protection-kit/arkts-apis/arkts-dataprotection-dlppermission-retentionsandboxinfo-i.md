@@ -4,6 +4,8 @@ Represents the sandbox retention information.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export interface RetentionSandboxInfo--><!--Device-dlpPermission-export interface RetentionSandboxInfo-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -26,6 +28,8 @@ Index of the DLP sandbox application. The value ranges from 1001 to 1100.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RetentionSandboxInfo-appIndex: number--><!--Device-RetentionSandboxInfo-appIndex: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -42,6 +46,8 @@ Bundle name of the application. The value contains 7 to 128 bytes. If the value 
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RetentionSandboxInfo-bundleName: string--><!--Device-RetentionSandboxInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -57,6 +63,8 @@ URI list of the DLP files. The array has no length limit, but each string cannot
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RetentionSandboxInfo-docUris: Array<string>--><!--Device-RetentionSandboxInfo-docUris: Array<string>-End-->
 

@@ -2,7 +2,9 @@
 
 Describes the crease region of a foldable device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-display-interface FoldCreaseRegion--><!--Device-display-interface FoldCreaseRegion-End-->
 
@@ -24,7 +26,9 @@ Crease region.
 
 **Type:** Array&lt;Rect&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ ID of the display where the crease is located.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

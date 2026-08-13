@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-relationalStore-interface SyncResult--><!--Device-relationalStore-interface SyncResult-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -20,6 +22,8 @@ readonly code:SyncResultCode
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SyncResult-readonly code:SyncResultCode--><!--Device-SyncResult-readonly code:SyncResultCode-End-->
@@ -32,12 +36,13 @@ readonly code:SyncResultCode
 readonly device:string
 ```
 
-表示同步的设备ID，可通过  
-[getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)等接口获取所有可信设备ID列表。
+表示同步的设备ID，可通过 [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) 等接口获取所有可信设备ID列表。
 
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,6 +61,8 @@ readonly message:string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

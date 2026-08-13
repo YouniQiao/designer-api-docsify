@@ -2,9 +2,11 @@
 
 音频渲染器信息。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioRendererInfo--><!--Device-audio-interface AudioRendererInfo-End-->
 
@@ -16,11 +18,7 @@
 content?: ContentType
 ```
 
-音频内容类型。
-
-API version 8、9为必填参数，从API version 10开始为可选参数，默认值为CONTENT_TYPE_UNKNOWN。
-
-从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
+音频内容类型。 API version 8、9为必填参数，从API version 10开始为可选参数，默认值为CONTENT_TYPE_UNKNOWN。 从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
 
 **类型：** ContentType
 
@@ -30,7 +28,7 @@ API version 8、9为必填参数，从API version 10开始为可选参数，默�
 
 **废弃版本：** 10
 
-**替代接口：** [usage](ohos.multimedia.audio.AudioRendererInfo#usage)
+**替代接口：** usage
 
 <!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 
@@ -42,15 +40,15 @@ API version 8、9为必填参数，从API version 10开始为可选参数，默�
 rendererFlags: int
 ```
 
-播放流行为标志。
+播放流行为标志。 设置为0即可。
 
-设置为0即可。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 8
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -68,9 +66,11 @@ usage: StreamUsage
 
 **类型：** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -88,9 +88,11 @@ volumeMode?: AudioVolumeMode
 
 **类型：** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
-**起始版本：** 19
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode--><!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode-End-->
 

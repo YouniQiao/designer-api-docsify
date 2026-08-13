@@ -9,64 +9,16 @@ import { storageStatistics } from '@kit.CoreFileKit';
 ## getTotalSize
 
 ```TypeScript
-function getTotalSize(callback: AsyncCallback<long>): void
-```
-
-Obtains the total size (in bytes) of the built-in storage. This API uses an asynchronous callback to return the result.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Required permissions:** 
-- API version 9 - 14: ohos.permission.STORAGE_MANAGER
-
-<!--Device-storageStatistics-function getTotalSize(callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getTotalSize(callback: AsyncCallback<long>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the built-in storage space obtained. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.<br>**Applicable version:** 9 - 14 |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application.<br>**Applicable version:** 9 - 14 |
-| 13600001 | IPC error. |
-| 13900042 | Unknown error. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getTotalSize((error: BusinessError, number: number) => {
-  if (error) {
-    console.error("getTotalSize failed with error:" + JSON.stringify(error));
-  } else {
-    // Do something.
-    console.info("getTotalSize successfully:" + number);
-  }
-});
-```
-
-
-## getTotalSize
-
-```TypeScript
 function getTotalSize(): Promise<long>
 ```
 
 Get the total size.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-storageStatistics-function getTotalSize(): Promise<long>--><!--Device-storageStatistics-function getTotalSize(): Promise<long>-End-->
 
@@ -76,7 +28,7 @@ Get the total size.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | return Promise (Unit: Byte) |
+| Promise&lt;long&gt; | return Promise (Unit: Byte) |
 
 **Error codes:**
 

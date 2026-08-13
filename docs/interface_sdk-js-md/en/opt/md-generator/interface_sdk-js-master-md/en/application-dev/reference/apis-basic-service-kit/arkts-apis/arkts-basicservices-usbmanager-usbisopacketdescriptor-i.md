@@ -2,7 +2,9 @@
 
 Describes packet information returned in real time by the transfer callback.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface UsbIsoPacketDescriptor--><!--Device-usbManager-interface UsbIsoPacketDescriptor-End-->
 
@@ -24,7 +26,9 @@ Actual length of the read or written data.Unit: bytes.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsbIsoPacketDescriptor-actualLength: int--><!--Device-UsbIsoPacketDescriptor-actualLength: int-End-->
 
@@ -40,7 +44,9 @@ Expected length of the read or written data.Unit: bytes.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsbIsoPacketDescriptor-length: int--><!--Device-UsbIsoPacketDescriptor-length: int-End-->
 
@@ -56,7 +62,9 @@ Status returned by callback.
 
 **Type:** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsbIsoPacketDescriptor-status: UsbTransferStatus--><!--Device-UsbIsoPacketDescriptor-status: UsbTransferStatus-End-->
 

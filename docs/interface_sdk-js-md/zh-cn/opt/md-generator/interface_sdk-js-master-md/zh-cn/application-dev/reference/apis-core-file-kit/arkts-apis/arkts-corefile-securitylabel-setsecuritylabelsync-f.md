@@ -8,7 +8,9 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 
 以同步方法设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void--><!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void-End-->
 

@@ -2,7 +2,9 @@
 
 Enumerates the modes used for deleting cloud media assets.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum CloudMediaRetainType--><!--Device-photoAccessHelper-enum CloudMediaRetainType-End-->
 
@@ -18,7 +20,9 @@ RETAIN_FORCE = 0
 
 Deletes the local metadata and thumbnail of the original files from the cloud.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudMediaRetainType-RETAIN_FORCE = 0--><!--Device-CloudMediaRetainType-RETAIN_FORCE = 0-End-->
 
@@ -34,7 +38,9 @@ HDC_RETAIN_FORCE = 1
 
 Deletes the local metadata and thumbnail of the original files from the home storage device.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1--><!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1-End-->
 

@@ -4,9 +4,11 @@
 
 **继承/实现关系：** PedometerDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface PedometerDetectionResponse extends Response--><!--Device-sensor-interface PedometerDetectionResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface PedometerDetectionResponse--><!--Device-sensor-interface PedometerDetectionResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ scalar: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PedometerDetectionResponse-scalar: double--><!--Device-PedometerDetectionResponse-scalar: double-End-->
 

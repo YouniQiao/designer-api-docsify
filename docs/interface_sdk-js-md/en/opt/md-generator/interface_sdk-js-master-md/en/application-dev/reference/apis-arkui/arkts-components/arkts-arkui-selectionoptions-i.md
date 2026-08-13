@@ -4,6 +4,8 @@ Defines the selection options.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SelectionOptions--><!--Device-unnamed-declare interface SelectionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Defines the selection options.
 menuPolicy?: MenuPolicy
 ```
 
-Menu display policy.Default value: MenuPolicy.DEFAULT.
+Menu display policy. Default value: MenuPolicy.DEFAULT.
 
 **Type:** [MenuPolicy](arkts-arkui-menupolicy-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Enumerates the print job states.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrintDocumentAdapterState--><!--Device-print-enum PrintDocumentAdapterState-End-->
 
@@ -18,9 +20,11 @@ PREVIEW_DESTROY = 0
 
 The preview fails.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDocumentAdapterState-PREVIEW_DESTROY = 0--><!--Device-PrintDocumentAdapterState-PREVIEW_DESTROY = 0-End-->
 
@@ -34,9 +38,11 @@ PRINT_TASK_SUCCEED = 1
 
 The print job is successful.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDocumentAdapterState-PRINT_TASK_SUCCEED = 1--><!--Device-PrintDocumentAdapterState-PRINT_TASK_SUCCEED = 1-End-->
 
@@ -50,9 +56,11 @@ PRINT_TASK_FAIL = 2
 
 The print job is failed.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDocumentAdapterState-PRINT_TASK_FAIL = 2--><!--Device-PrintDocumentAdapterState-PRINT_TASK_FAIL = 2-End-->
 
@@ -66,9 +74,11 @@ PRINT_TASK_CANCEL = 3
 
 The print job is canceled.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDocumentAdapterState-PRINT_TASK_CANCEL = 3--><!--Device-PrintDocumentAdapterState-PRINT_TASK_CANCEL = 3-End-->
 
@@ -82,9 +92,11 @@ PRINT_TASK_BLOCK = 4
 
 The print job is blocked.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDocumentAdapterState-PRINT_TASK_BLOCK = 4--><!--Device-PrintDocumentAdapterState-PRINT_TASK_BLOCK = 4-End-->
 

@@ -4,7 +4,7 @@ Declare CustomDialog TipsDialogV2
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct TipsDialogV2--><!--Device-unnamed-export declare struct TipsDialogV2-End-->
 
@@ -16,30 +16,11 @@ Declare CustomDialog TipsDialogV2
 import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from '@kit.ArkUI';
 ```
 
-## onCheckedChange
-
-```TypeScript
-onCheckedChange?: AdvancedDialogV2OnCheckedChange
-```
-
-Sets the TipsDialogV2 CheckBox Callback.
-
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-TipsDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-TipsDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## checkTips
 
 ```TypeScript
-checkTips?: ResourceStr
+@Param
+  checkTips?: ResourceStr
 ```
 
 Sets the TipsDialogV2 checkbox tips.
@@ -48,20 +29,21 @@ Sets the TipsDialogV2 checkbox tips.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-checkTips?: ResourceStr--><!--Device-TipsDialogV2-checkTips?: ResourceStr-End-->
+<!--Device-TipsDialogV2-@Param  checkTips?: ResourceStr--><!--Device-TipsDialogV2-@Param  checkTips?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checked
 
 ```TypeScript
-checked?: boolean
+@Param
+  checked?: boolean
 ```
 
 Sets the TipsDialogV2 checkbox check state.
@@ -70,20 +52,21 @@ Sets the TipsDialogV2 checkbox check state.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-checked?: boolean--><!--Device-TipsDialogV2-checked?: boolean-End-->
+<!--Device-TipsDialogV2-@Param  checked?: boolean--><!--Device-TipsDialogV2-@Param  checked?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-content?: ResourceStr
+@Param
+  content?: ResourceStr
 ```
 
 Sets the TipsDialogV2 content.
@@ -92,20 +75,21 @@ Sets the TipsDialogV2 content.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-content?: ResourceStr--><!--Device-TipsDialogV2-content?: ResourceStr-End-->
+<!--Device-TipsDialogV2-@Param  content?: ResourceStr--><!--Device-TipsDialogV2-@Param  content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageBorderColor
 
 ```TypeScript
-imageBorderColor?: ColorMetrics
+@Param
+  imageBorderColor?: ColorMetrics
 ```
 
 Sets the borderColor of TipsDialogV2 image.
@@ -114,20 +98,21 @@ Sets the borderColor of TipsDialogV2 image.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-imageBorderColor?: ColorMetrics--><!--Device-TipsDialogV2-imageBorderColor?: ColorMetrics-End-->
+<!--Device-TipsDialogV2-@Param  imageBorderColor?: ColorMetrics--><!--Device-TipsDialogV2-@Param  imageBorderColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageBorderWidth
 
 ```TypeScript
-imageBorderWidth?: LengthMetrics
+@Param
+  imageBorderWidth?: LengthMetrics
 ```
 
 Sets the borderWidth of TipsDialogV2 image.
@@ -136,20 +121,22 @@ Sets the borderWidth of TipsDialogV2 image.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-imageBorderWidth?: LengthMetrics--><!--Device-TipsDialogV2-imageBorderWidth?: LengthMetrics-End-->
+<!--Device-TipsDialogV2-@Param  imageBorderWidth?: LengthMetrics--><!--Device-TipsDialogV2-@Param  imageBorderWidth?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageRes
 
 ```TypeScript
-imageRes: ResourceStr | PixelMap
+@Require
+  @Param
+  imageRes: ResourceStr | PixelMap
 ```
 
 Sets the TipsDialogV2 imageRes.
@@ -158,20 +145,21 @@ Sets the TipsDialogV2 imageRes.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-imageRes: ResourceStr | PixelMap--><!--Device-TipsDialogV2-imageRes: ResourceStr | PixelMap-End-->
+<!--Device-TipsDialogV2-@Require  @Param  imageRes: ResourceStr | PixelMap--><!--Device-TipsDialogV2-@Require  @Param  imageRes: ResourceStr | PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageSize
 
 ```TypeScript
-imageSize?: SizeOptions
+@Param
+  imageSize?: SizeOptions
 ```
 
 Sets the TipsDialogV2 image size.
@@ -180,20 +168,44 @@ Sets the TipsDialogV2 image size.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-imageSize?: SizeOptions--><!--Device-TipsDialogV2-imageSize?: SizeOptions-End-->
+<!--Device-TipsDialogV2-@Param  imageSize?: SizeOptions--><!--Device-TipsDialogV2-@Param  imageSize?: SizeOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onCheckedChange
+
+```TypeScript
+@Param
+  onCheckedChange?: AdvancedDialogV2OnCheckedChange
+```
+
+Sets the TipsDialogV2 CheckBox Callback.
+
+**Type:** [AdvancedDialogV2OnCheckedChange](arkts-arkui-advanceddialogv2oncheckedchange-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-TipsDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryButton
 
 ```TypeScript
-primaryButton?: AdvancedDialogV2Button
+@Param
+  primaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the TipsDialogV2 primary button.
@@ -202,20 +214,21 @@ Sets the TipsDialogV2 primary button.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-primaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-primaryButton?: AdvancedDialogV2Button-End-->
+<!--Device-TipsDialogV2-@Param  primaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-@Param  primaryButton?: AdvancedDialogV2Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryButton
 
 ```TypeScript
-secondaryButton?: AdvancedDialogV2Button
+@Param
+  secondaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the TipsDialogV2 secondary button.
@@ -224,20 +237,21 @@ Sets the TipsDialogV2 secondary button.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-secondaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-secondaryButton?: AdvancedDialogV2Button-End-->
+<!--Device-TipsDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
 
 ```TypeScript
-title?: ResourceStr
+@Param
+  title?: ResourceStr
 ```
 
 Sets the TipsDialogV2 title.
@@ -246,12 +260,12 @@ Sets the TipsDialogV2 title.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialogV2-title?: ResourceStr--><!--Device-TipsDialogV2-title?: ResourceStr-End-->
+<!--Device-TipsDialogV2-@Param  title?: ResourceStr--><!--Device-TipsDialogV2-@Param  title?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

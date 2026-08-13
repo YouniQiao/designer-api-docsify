@@ -1,10 +1,10 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
-**dmInstance**.
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
 
@@ -24,7 +24,9 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 
 Obtains the device icon. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -50,11 +52,11 @@ Obtains the device icon. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
 
 ## Examples
 
@@ -94,7 +96,9 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 
 Obtains the list of network devices according to the specified filter options.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -120,11 +124,11 @@ Obtains the list of network devices according to the specified filter options.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
 
 ## Examples
 
@@ -157,7 +161,9 @@ getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise
 
 Obtains the list of devices under the same account. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -183,12 +189,12 @@ Obtains the list of devices under the same account. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
-| [11600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
 
 ## Examples
 
@@ -219,6 +225,8 @@ Query device identification by device IDs.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM and ohos.permission.sec.ACCESS_UDID
 
 **Model restriction:** This API can be used only in the stage model.
@@ -245,10 +253,10 @@ Query device identification by device IDs.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -285,7 +293,9 @@ getLocalDisplayDeviceName(maxNameLength: number): Promise<string>
 
 Obtains the local device's display name with the specified length. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -311,10 +321,10 @@ Obtains the local device's display name with the specified length. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -346,6 +356,8 @@ Query the device operating system type by device network ID.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -372,12 +384,45 @@ Query the device operating system type by device network ID.
 
 | Error Code ID |
 | --- |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 11600110 |
 
-## off('replyResult')
+## offReplyResult
+
+```TypeScript
+offReplyResult(callback?: Callback<ReplyResult>): void
+```
+
+Unregister uiStateChange, this interface can only be used by devicemanager ui.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## off_replyResult
 
 ```TypeScript
 off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
@@ -386,6 +431,8 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 Unsubscribes from the reply to the UI operation result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -406,9 +453,9 @@ Unsubscribes from the reply to the UI operation result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -425,7 +472,40 @@ try {
 }
 ```
 
-## on('replyResult')
+## onReplyResult
+
+```TypeScript
+onReplyResult(callback: Callback<ReplyResult>): void
+```
+
+Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void--><!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## on_replyResult
 
 ```TypeScript
 on(type: 'replyResult', callback: Callback<{ param: string; }>): void
@@ -434,6 +514,8 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 Subscribes to the reply to the UI operation result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -454,9 +536,9 @@ Subscribes to the reply to the UI operation result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -494,7 +576,9 @@ putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promi
 
 Updates the device list. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -520,10 +604,10 @@ Updates the device list. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -553,7 +637,9 @@ replyUiAction(action: number, actionResult: string): void
 
 Replies to the user's UI operation. This API can be used only by the PIN HAP of the **deviceManager**.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -574,9 +660,9 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -610,7 +696,7 @@ restoreLocalDeivceName(): void
 
 Restores the local device name by resetting the network settings.
 
-**Since:** 18
+**Since:** 23
 
 **Deprecated since:** 24
 
@@ -628,9 +714,9 @@ Restores the local device name by resetting the network settings.
 
 | Error Code ID |
 | --- |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -657,6 +743,8 @@ Restores the local device name.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -671,9 +759,9 @@ Restores the local device name.
 
 | Error Code ID |
 | --- |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -698,7 +786,9 @@ setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: number): void
 
 Sets the heartbeat broadcast policy.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -719,10 +809,10 @@ Sets the heartbeat broadcast policy.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -749,7 +839,9 @@ setLocalDeviceName(deviceName: string): Promise<number>
 
 Sets the local device name. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -775,13 +867,13 @@ Sets the local device name. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
-| [11600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
-| [11600108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
+| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
 
 ## Examples
 
@@ -811,7 +903,9 @@ setRemoteDeviceName(deviceId: string, deviceName: string): Promise<number>
 
 Sets the remote device name. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -838,13 +932,13 @@ Sets the remote device name. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
-| [11600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
-| [11600108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
+| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
 
 ## Examples
 

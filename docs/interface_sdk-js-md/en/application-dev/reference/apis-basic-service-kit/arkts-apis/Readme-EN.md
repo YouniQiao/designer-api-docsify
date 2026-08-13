@@ -228,14 +228,12 @@
   - [UploadFileType(system api)](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [WakeupIntelligentVoiceEventType(system api)](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceeventtype-e-sys.md)<!--DelEnd-->
-- [@ohos.annotation](arkts-annotation.md)
-  - [Available](arkts-basicservices-annotation-available-i.md)
-  - [SuppressWarnings](arkts-basicservices-annotation-suppresswarnings-i.md)
+- @ohos.annotation
   - [SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md)
-- [@ohos.annotation](arkts-annotation.md)
-  - [Available](arkts-basicservices-annotation-available-i.md)
 - [@ohos.app.ability.PrintExtensionAbility](arkts-app-ability-printextensionability.md)
   - [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)
+  <!--Del-->
+  - [PrintExtensionAbility(system api)](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.application.StaticSubscriberExtensionAbility](arkts-application-staticsubscriberextensionability.md)
   <!--Del-->
   - [StaticSubscriberExtensionAbility(system api)](arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)<!--DelEnd-->
@@ -384,18 +382,18 @@
   - [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md)
   - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
   - [Constants](arkts-basicservices-deviceinfo-con.md)
-- [@ohos.deviceInfo](arkts-deviceinfo.md)
-  - [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md)
-  - [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md)
-  - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
 - [@ohos.events.emitter](arkts-events-emitter.md)
-  - [emit](arkts-basicservices-emitter-emit-f.md)
+  - [emit_InnerEvent](arkts-basicservices-emitter-emitinnerevent-f.md)
+  - [emit_string](arkts-basicservices-emitter-emitstring-f.md)
   - [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md)
-  - [off](arkts-basicservices-emitter-off-f.md)
+  - [off_long](arkts-basicservices-emitter-offlong-f.md)
+  - [off_string](arkts-basicservices-emitter-offstring-f.md)
   - [offEventData](arkts-basicservices-emitter-offeventdata-f.md)
   - [offGenericEventData](arkts-basicservices-emitter-offgenericeventdata-f.md)
-  - [on](arkts-basicservices-emitter-on-f.md)
-  - [once](arkts-basicservices-emitter-once-f.md)
+  - [on_InnerEvent](arkts-basicservices-emitter-oninnerevent-f.md)
+  - [on_string](arkts-basicservices-emitter-onstring-f.md)
+  - [once_InnerEvent](arkts-basicservices-emitter-onceinnerevent-f.md)
+  - [once_string](arkts-basicservices-emitter-oncestring-f.md)
   - [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md)
   - [onceGenericEventData](arkts-basicservices-emitter-oncegenericeventdata-f.md)
   - [onEventData](arkts-basicservices-emitter-oneventdata-f.md)
@@ -428,6 +426,8 @@
   - [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)
   - [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md)
   - [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md)
+  <!--Del-->
+  - [SystemPasteboard(system api)](arkts-basicservices-pasteboard-systempasteboard-i-sys.md)<!--DelEnd-->
   - [ProgressListener](arkts-basicservices-pasteboard-progresslistener-t.md)
   - [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md)
   - [ValueType](arkts-basicservices-pasteboard-valuetype-t.md)
@@ -487,7 +487,8 @@
   - [cancelPrintJob(system api)](arkts-basicservices-print-cancelprintjob-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [checkPreferencesConflicts(system api)](arkts-basicservices-print-checkpreferencesconflicts-f-sys.md)<!--DelEnd-->
-  - [connectPrinter](arkts-basicservices-print-connectprinter-f.md)
+  <!--Del-->
+  - [connectPrinter(system api)](arkts-basicservices-print-connectprinter-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [connectPrinterByIdAndPpd(system api)](arkts-basicservices-print-connectprinterbyidandppd-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -515,9 +516,13 @@
   <!--Del-->
   - [notifyPrintServiceSpoolerCloseForStarted(system api)](arkts-basicservices-print-notifyprintservicespoolercloseforstarted-f-sys.md)<!--DelEnd-->
   - [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md)
-  - [off](arkts-basicservices-print-off-f.md)
   <!--Del-->
-  - [off(system api)](arkts-basicservices-print-off-f-sys.md)<!--DelEnd-->
+  - [off_extInfoChange(system api)](arkts-basicservices-print-offextinfochange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_jobStateChange(system api)](arkts-basicservices-print-offjobstatechange-f-sys.md)<!--DelEnd-->
+  - [off_printerChange](arkts-basicservices-print-offprinterchange-f.md)
+  <!--Del-->
+  - [off_printerStateChange(system api)](arkts-basicservices-print-offprinterstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offExtInfoChange(system api)](arkts-basicservices-print-offextinfochange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -527,9 +532,13 @@
   - [offPrinterInfoQuery(system api)](arkts-basicservices-print-offprinterinfoquery-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offPrinterStateChange(system api)](arkts-basicservices-print-offprinterstatechange-f-sys.md)<!--DelEnd-->
-  - [on](arkts-basicservices-print-on-f.md)
   <!--Del-->
-  - [on(system api)](arkts-basicservices-print-on-f-sys.md)<!--DelEnd-->
+  - [on_extInfoChange(system api)](arkts-basicservices-print-onextinfochange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_jobStateChange(system api)](arkts-basicservices-print-onjobstatechange-f-sys.md)<!--DelEnd-->
+  - [on_printerChange](arkts-basicservices-print-onprinterchange-f.md)
+  <!--Del-->
+  - [on_printerStateChange(system api)](arkts-basicservices-print-onprinterstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onExtInfoChange(system api)](arkts-basicservices-print-onextinfochange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -574,41 +583,53 @@
   - [setDefaultPrinter(system api)](arkts-basicservices-print-setdefaultprinter-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setPrinterPreferences(system api)](arkts-basicservices-print-setprinterpreferences-f-sys.md)<!--DelEnd-->
-  - [startDiscoverPrinter](arkts-basicservices-print-startdiscoverprinter-f.md)
+  <!--Del-->
+  - [startDiscoverPrinter(system api)](arkts-basicservices-print-startdiscoverprinter-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [startGettingPrintFile(system api)](arkts-basicservices-print-startgettingprintfile-f-sys.md)<!--DelEnd-->
   - [startPrint](arkts-basicservices-print-startprint-f.md)
   <!--Del-->
   - [startPrintJob(system api)](arkts-basicservices-print-startprintjob-f-sys.md)<!--DelEnd-->
-  - [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f.md)
+  <!--Del-->
+  - [stopDiscoverPrinter(system api)](arkts-basicservices-print-stopdiscoverprinter-f-sys.md)<!--DelEnd-->
   - [unregisterWatermarkCallback](arkts-basicservices-print-unregisterwatermarkcallback-f.md)
   <!--Del-->
   - [updateExtensionInfo(system api)](arkts-basicservices-print-updateextensioninfo-f-sys.md)<!--DelEnd-->
   - [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md)
-  - [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md)
+  <!--Del-->
+  - [updatePrinterInformation(system api)](arkts-basicservices-print-updateprinterinformation-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updatePrinters(system api)](arkts-basicservices-print-updateprinters-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updatePrinterState(system api)](arkts-basicservices-print-updateprinterstate-f-sys.md)<!--DelEnd-->
-  - [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md)
+  <!--Del-->
+  - [updatePrintJobState(system api)](arkts-basicservices-print-updateprintjobstate-f-sys.md)<!--DelEnd-->
   - [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
-  - [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
+  <!--Del-->
+  - [PreviewAttribute(system api)](arkts-basicservices-print-previewattribute-i-sys.md)<!--DelEnd-->
   - [PrintAttributes](arkts-basicservices-print-printattributes-i.md)
   - [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md)
   - [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
-  - [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
+  <!--Del-->
+  - [PrinterCapability(system api)](arkts-basicservices-print-printercapability-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PrinterExtensionInfo(system api)](arkts-basicservices-print-printerextensioninfo-i-sys.md)<!--DelEnd-->
-  - [PrinterInfo](arkts-basicservices-print-printerinfo-i.md)
+  <!--Del-->
+  - [PrinterInfo(system api)](arkts-basicservices-print-printerinfo-i-sys.md)<!--DelEnd-->
   - [PrinterInformation](arkts-basicservices-print-printerinformation-i.md)
   - [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
-  - [PrinterRange](arkts-basicservices-print-printerrange-i.md)
+  <!--Del-->
+  - [PrinterRange(system api)](arkts-basicservices-print-printerrange-i-sys.md)<!--DelEnd-->
   - [PrintJob](arkts-basicservices-print-printjob-i.md)
+  <!--Del-->
+  - [PrintJob(system api)](arkts-basicservices-print-printjob-i-sys.md)<!--DelEnd-->
   - [PrintJobData](arkts-basicservices-print-printjobdata-i.md)
-  - [PrintMargin](arkts-basicservices-print-printmargin-i.md)
+  <!--Del-->
+  - [PrintMargin(system api)](arkts-basicservices-print-printmargin-i-sys.md)<!--DelEnd-->
   - [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
   - [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
-  - [PrintResolution](arkts-basicservices-print-printresolution-i.md)
+  <!--Del-->
+  - [PrintResolution(system api)](arkts-basicservices-print-printresolution-i-sys.md)<!--DelEnd-->
   - [PrintTask](arkts-basicservices-print-printtask-i.md)
   - [SharedHost](arkts-basicservices-print-sharedhost-i.md)
   <!--Del-->
@@ -729,9 +750,9 @@
   - [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
 - [@ohos.resourceschedule.systemload](arkts-resourceschedule-systemload.md)
   - [getLevel](arkts-basicservices-systemload-getlevel-f.md)
-  - [off](arkts-basicservices-systemload-off-f.md)
+  - [off_systemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md)
   - [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md)
-  - [on](arkts-basicservices-systemload-on-f.md)
+  - [on_systemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md)
   - [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md)
   - [SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)
 - [@ohos.runningLock](arkts-runninglock.md)
@@ -755,18 +776,24 @@
   - [getScannerCurrentSetting](arkts-basicservices-scan-getscannercurrentsetting-f.md)
   - [getScannerParameter](arkts-basicservices-scan-getscannerparameter-f.md)
   - [init](arkts-basicservices-scan-init-f.md)
-  - [off](arkts-basicservices-scan-off-f.md)
   <!--Del-->
-  - [off(system api)](arkts-basicservices-scan-off-f-sys.md)<!--DelEnd-->
+  - [off_scanDeviceAdd(system api)](arkts-basicservices-scan-offscandeviceadd-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_scanDeviceDel(system api)](arkts-basicservices-scan-offscandevicedel-f-sys.md)<!--DelEnd-->
+  - [off_scanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md)
+  - [off_scanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md)
   <!--Del-->
   - [offScanDeviceAdd(system api)](arkts-basicservices-scan-offscandeviceadd-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offScanDeviceDel(system api)](arkts-basicservices-scan-offscandevicedel-f-sys.md)<!--DelEnd-->
   - [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md)
   - [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md)
-  - [on](arkts-basicservices-scan-on-f.md)
   <!--Del-->
-  - [on(system api)](arkts-basicservices-scan-on-f-sys.md)<!--DelEnd-->
+  - [on_scanDeviceAdd(system api)](arkts-basicservices-scan-onscandeviceadd-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_scanDeviceDel(system api)](arkts-basicservices-scan-onscandevicedel-f-sys.md)<!--DelEnd-->
+  - [on_scanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md)
+  - [on_scanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md)
   <!--Del-->
   - [onScanDeviceAdd(system api)](arkts-basicservices-scan-onscandeviceadd-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -831,23 +858,36 @@
   <!--Del-->
   - [UnlockPolicy(system api)](arkts-basicservices-screenlock-unlockpolicy-e-sys.md)<!--DelEnd-->
 - [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)
-  - [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)
+  <!--Del-->
+  - [SelectionExtensionAbility(system api)](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)
-  - [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md)
+  <!--Del-->
+  - [SelectionExtensionContext(system api)](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md)<!--DelEnd-->
 - [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)
-  - [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md)
-  - [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
+  <!--Del-->
+  - [PanelInfo(system api)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PanelType(system api)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md)<!--DelEnd-->
 - [@ohos.selectionInput.selectionManager](arkts-selectioninput-selectionmanager.md)
-  - [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)
-  - [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)
-  - [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md)
-  - [off](arkts-basicservices-selectionmanager-off-f.md)
+  <!--Del-->
+  - [createPanel(system api)](arkts-basicservices-selectionmanager-createpanel-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [destroyPanel(system api)](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSelectionContent(system api)](arkts-basicservices-selectionmanager-getselectioncontent-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_selectionCompleted(system api)](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md)<!--DelEnd-->
   - [offSelectionComplete](arkts-basicservices-selectionmanager-offselectioncomplete-f.md)
-  - [on](arkts-basicservices-selectionmanager-on-f.md)
+  <!--Del-->
+  - [on_selectionCompleted(system api)](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md)<!--DelEnd-->
   - [onSelectionComplete](arkts-basicservices-selectionmanager-onselectioncomplete-f.md)
   - [Panel](arkts-basicservices-selectionmanager-panel-i.md)
-  - [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)
-  - [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md)
+  <!--Del-->
+  - [Panel(system api)](arkts-basicservices-selectionmanager-panel-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SelectionInfo(system api)](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SelectionType(system api)](arkts-basicservices-selectionmanager-selectiontype-e-sys.md)<!--DelEnd-->
 - [@ohos.settings](arkts-settings.md)
   - [settings](arkts-basicservices-settings-n.md)
     - [date](arkts-basicservices-settings-date-n.md)
@@ -1247,14 +1287,14 @@
   - [getWallpaperByState(system api)](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md)<!--DelEnd-->
   - [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md)
   - [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md)
-  - [off](arkts-basicservices-wallpaper-off-f.md)
+  - [off_colorChange](arkts-basicservices-wallpaper-offcolorchange-f.md)
   <!--Del-->
-  - [off(system api)](arkts-basicservices-wallpaper-off-f-sys.md)<!--DelEnd-->
+  - [off_wallpaperChange(system api)](arkts-basicservices-wallpaper-offwallpaperchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offWallpaperChange(system api)](arkts-basicservices-wallpaper-offwallpaperchange-f-sys.md)<!--DelEnd-->
-  - [on](arkts-basicservices-wallpaper-on-f.md)
+  - [on_colorChange](arkts-basicservices-wallpaper-oncolorchange-f.md)
   <!--Del-->
-  - [on(system api)](arkts-basicservices-wallpaper-on-f-sys.md)<!--DelEnd-->
+  - [on_wallpaperChange(system api)](arkts-basicservices-wallpaper-onwallpaperchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onWallpaperChange(system api)](arkts-basicservices-wallpaper-onwallpaperchange-f-sys.md)<!--DelEnd-->
   - [reset](arkts-basicservices-wallpaper-reset-f.md)

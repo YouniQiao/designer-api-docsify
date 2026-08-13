@@ -4,6 +4,8 @@ Defines the scroll effect options for the title bar.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ScrollEffectOptions--><!--Device-unnamed-declare interface ScrollEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Defines the scroll effect options for the title bar.
 blurEffectiveEndOffset?: LengthMetrics
 ```
 
-The maximum sliding distance of the content area to enable the final blur style of the title bar.Default value: 8vp.
+The maximum sliding distance of the content area to enable the final blur style of the title bar. Default value: 8vp.
 
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +38,13 @@ The maximum sliding distance of the content area to enable the final blur style 
 blurEffectiveStartOffset?: LengthMetrics
 ```
 
-The minimum sliding distance of the content area to enable the title bar sliding blur effect.Default value: 0vp.
+The minimum sliding distance of the content area to enable the title bar sliding blur effect. Default value: 0vp.
 
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,11 +60,13 @@ The minimum sliding distance of the content area to enable the title bar sliding
 scrollEffectType?: ScrollEffectType
 ```
 
-Title bar scroll blur style.Default value: ScrollEffectType.COMMON_BLUR.
+Title bar scroll blur style. Default value: ScrollEffectType.COMMON_BLUR.
 
 **Type:** [ScrollEffectType](arkts-arkui-scrolleffecttype-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

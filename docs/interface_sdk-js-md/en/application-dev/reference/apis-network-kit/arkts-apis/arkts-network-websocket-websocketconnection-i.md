@@ -4,7 +4,9 @@ Info about the connection from each specific client.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-webSocket-export interface WebSocketConnection--><!--Device-webSocket-export interface WebSocketConnection-End-->
 
@@ -28,7 +30,9 @@ IP address of the client.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketConnection-clientIP: string--><!--Device-WebSocketConnection-clientIP: string-End-->
 
@@ -42,11 +46,13 @@ clientPort: int
 
 Port of the client.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketConnection-clientPort: int--><!--Device-WebSocketConnection-clientPort: int-End-->
 

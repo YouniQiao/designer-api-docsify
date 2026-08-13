@@ -9,6 +9,7 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@k
 ## ArcList
 
 ```TypeScript
+@ComponentBuilder
 export declare function ArcList(
     options?: ArkListOptions,
     content_?: CustomBuilder,
@@ -21,7 +22,9 @@ Defines ArcList Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-@ComponentBuilderexport declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -36,12 +39,13 @@ Defines ArcList Component.
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 
 ## ArcList
 
 ```TypeScript
+@Builder
 export declare function ArcList(
     style_: CustomBuilderT<ArcListAttribute>,
     content_?: CustomBuilder
@@ -54,11 +58,11 @@ Defines ArcList Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute--><!--Device-unnamed-@Builderexport declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -66,12 +70,12 @@ Defines ArcList Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md)&gt; | Yes | The style to create an ArcList. |
+| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md)&gt; | Yes | The style to create an ArcList. |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | The attribute of the ArcList. |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | The attribute of the ArcList. |
 

@@ -2,9 +2,11 @@
 
 The **logLibrary** module provides APIs for obtaining various system maintenance and test logs.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace logLibrary--><!--Device-unnamed-declare namespace logLibrary-End-->
 
@@ -26,10 +28,10 @@ import { logLibrary } from '@kit.PerformanceAnalysisKit';
 | Name | Description |
 | --- | --- |
 | [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy) | Copies log files of the specified type to the target application directory. This API uses a promise to return the result. |
-| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy-1) | Copies log files of the specified type to the target application directory. This API uses an asynchronous callback to return the result. |
+| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy-(System-API)) | Copies log files of the specified type to the target application directory. This API uses an asynchronous callback to return the result. |
 | [list](arkts-performanceanalysis-loglibrary-list-f-sys.md#list) | Obtains the list of log files of the specified type in synchronous mode. This API accepts objects of the string type as input parameters and returns a list log files of the specified type. |
 | [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move) | Moves log files of the specified type to the target application directory. This API uses a promise to return the result. |
-| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move-1) | Moves log files of the specified type to the target application directory. This API uses an asynchronous callback to return the result. |
+| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move-(System-API)) | Moves log files of the specified type to the target application directory. This API uses an asynchronous callback to return the result. |
 | [remove](arkts-performanceanalysis-loglibrary-remove-f-sys.md#remove) | Deletes log files of the specified type in synchronous mode. |
 <!--DelEnd-->
 

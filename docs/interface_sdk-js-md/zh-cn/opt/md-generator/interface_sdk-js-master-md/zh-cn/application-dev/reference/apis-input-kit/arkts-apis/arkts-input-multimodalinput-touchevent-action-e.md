@@ -2,7 +2,9 @@
 
 触屏输入事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum Action--><!--Device-unnamed-export declare enum Action-End-->
 
@@ -16,7 +18,9 @@ CANCEL = 0
 
 触屏取消。触屏down事件异常打断，未正常闭环，例如：手指按下后未抬起，屏幕发生旋转、折叠或有新hover等场景时触发cancel事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-CANCEL = 0--><!--Device-Action-CANCEL = 0-End-->
 
@@ -30,7 +34,9 @@ DOWN = 1
 
 触屏按下。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-DOWN = 1--><!--Device-Action-DOWN = 1-End-->
 
@@ -44,7 +50,9 @@ MOVE = 2
 
 触屏移动。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-MOVE = 2--><!--Device-Action-MOVE = 2-End-->
 
@@ -58,7 +66,9 @@ UP = 3
 
 触屏抬起。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-UP = 3--><!--Device-Action-UP = 3-End-->
 
@@ -73,6 +83,8 @@ PULL_DOWN = 4
 触屏开始拖拽。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +102,8 @@ PULL_MOVE = 5
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Action-PULL_MOVE = 5--><!--Device-Action-PULL_MOVE = 5-End-->
@@ -105,6 +119,8 @@ PULL_UP = 6
 触屏结束拖拽。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

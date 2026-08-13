@@ -2,9 +2,11 @@
 
 表示系统账号信息。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface OsAccountInfo--><!--Device-osAccount-interface OsAccountInfo-End-->
 
@@ -16,15 +18,15 @@
 isLoggedIn?: boolean
 ```
 
-是否登录。true表示已登录；false表示未登录。
-
-此接口为系统接口，默认为false。
+是否登录。true表示已登录；false表示未登录。 此接口为系统接口，默认为false。
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-isLoggedIn?: boolean--><!--Device-OsAccountInfo-isLoggedIn?: boolean-End-->
 
@@ -38,15 +40,15 @@ isLoggedIn?: boolean
 shortName?: string
 ```
 
-系统账号的短名称。
-
-此接口为系统接口，默认为空。
+系统账号的短名称。 此接口为系统接口，默认为空。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-shortName?: string--><!--Device-OsAccountInfo-shortName?: string-End-->
 

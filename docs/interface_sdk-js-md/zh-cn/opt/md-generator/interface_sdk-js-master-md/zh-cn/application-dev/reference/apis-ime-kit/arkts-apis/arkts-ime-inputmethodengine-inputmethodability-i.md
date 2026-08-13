@@ -1,11 +1,10 @@
 # InputMethodAbility
 
-InputMethodAbility是输入法应用的核心能力对象，提供输入法生命周期管理、面板创建与销毁、事件订阅等功能。输入法应用通过  
-[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取该实例。
+InputMethodAbility是输入法应用的核心能力对象，提供输入法生命周期管理、面板创建与销毁、事件订阅等功能。输入法应用通过 [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取该实例。 下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取到InputMethodAbility实例后，通过实例调用。
 
-下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取到InputMethodAbility实例后，通过实例调用。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface InputMethodAbility--><!--Device-inputMethodEngine-interface InputMethodAbility-End-->
 
@@ -17,10 +16,11 @@ InputMethodAbility是输入法应用的核心能力对象，提供输入法生�
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-创建输入法面板，仅支持输入法应用在  
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)（输入法扩展能力）类中调用。使用callback异步回调。
+创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)（输入法扩展能力）类中调用。使 用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void-End-->
 
@@ -31,15 +31,15 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
 
 ## 示例
 
@@ -79,10 +79,11 @@ class InputMethodExt extends InputMethodExtensionAbility {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-创建输入法面板，仅支持输入法应用在  
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)类中调用。使用promise异步回调。
+创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)类中调用。使用promise异 步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>-End-->
 
@@ -93,7 +94,7 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 是 |
 
 **返回值：**
 
@@ -105,8 +106,8 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
 
 ## 示例
 
@@ -144,7 +145,9 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 销毁输入法面板。需先通过 createPanel 创建面板后调用。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void--><!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void-End-->
 
@@ -161,7 +164,7 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -207,7 +210,9 @@ destroyPanel(panel: Panel): Promise<void>
 
 销毁输入法面板。使用promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>--><!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>-End-->
 
@@ -229,7 +234,7 @@ destroyPanel(panel: Panel): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -273,7 +278,9 @@ getSecurityMode(): SecurityMode
 
 获取输入法应用的当前安全模式。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-getSecurityMode(): SecurityMode--><!--Device-InputMethodAbility-getSecurityMode(): SecurityMode-End-->
 
@@ -289,7 +296,7 @@ getSecurityMode(): SecurityMode
 
 | 错误码ID |
 | --- |
-| [12800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
 
 ## 示例
 
@@ -298,7 +305,295 @@ let security: inputMethodEngine.SecurityMode = inputMethodEngine.getInputMethodA
 console.error(`getSecurityMode, securityMode is : ${security}`);
 ```
 
-## off('inputStart')
+## offCallingDisplayDidChange
+
+```TypeScript
+offCallingDisplayDidChange(callback?: Callback<number>): void
+```
+
+取消编辑框对应窗口所在屏幕ID变化。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void--><!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+## offDiscardTypingText
+
+```TypeScript
+offDiscardTypingText(callback?: Callback<void>): void
+```
+
+取消订阅编辑框应用发送“清空候选词”事件到输入法。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+## offInputStart
+
+```TypeScript
+offInputStart(callback?: IMAInputStartCallback): void
+```
+
+取消订阅输入法绑定成功事件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void--><!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | 否 |
+
+## offInputStop
+
+```TypeScript
+offInputStop(callback: Callback<void>): void
+```
+
+取消订阅输入法输入停止（inputStop）事件，停止监听系统要求输入法终止输入流程的触发动作。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## offKeyboardHide
+
+```TypeScript
+offKeyboardHide(callback?: Callback<void>): void
+```
+
+取消订阅输入法键盘隐藏（keyboardHide）事件，停止监听输入法键盘隐藏的触发动作。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+## offKeyboardShow
+
+```TypeScript
+offKeyboardShow(callback?: Callback<void>): void
+```
+
+取消订阅输入法事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+## offPrivateCommand
+
+```TypeScript
+offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
+```
+
+取消订阅输入法私有数据事件。使用callback异步回调。该接口只能被系统预置输入法调用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+
+## offSecurityModeChange
+
+```TypeScript
+offSecurityModeChange(callback?: Callback<SecurityMode>): void
+```
+
+取消订阅输入法安全模式改变类型事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 |
+
+## offSetCallingWindow
+
+```TypeScript
+offSetCallingWindow(callback: Callback<number>): void
+```
+
+取消订阅编辑框设置调用窗口 ID（setCallingWindow）事件，停止监听编辑框设置调用窗口标识的触发动作。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## offSetSubtype
+
+```TypeScript
+offSetSubtype(callback?: Callback<InputMethodSubtype>): void
+```
+
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 否 |
+
+## off_callingDisplayDidChange
+
+```TypeScript
+off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
+```
+
+取消订阅编辑框对应窗口所在屏幕ID变化事件。使用callback异步回调。
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void--><!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'callingDisplayDidChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+## 示例
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (displayId: number) => {
+  console.info('InputMethodAbility delete calling display notification.');
+});
+```
+
+## off_discardTypingText
+
+```TypeScript
+off(type: 'discardTypingText', callback?: Callback<void>): void
+```
+
+取消订阅编辑框应用发送\u201c清空候选词\u201d事件到输入法。使用callback异步回调。 **使用场景：** 编辑框应用需要通知输入法清空当前候选词列表时使用（如用户切换输入框、提交表单后等场景）。 **使用后效果：** 当编辑框应用发送清空候选词请求时触发回调，输入法应用应在回调中清空候选词列表和预输入文本。
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void--><!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'discardTypingText' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+## 示例
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
+  console.info('InputMethodAbility discard the typing text.');
+});
+```
+
+## off_inputStart
 
 ```TypeScript
 off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void
@@ -307,6 +602,8 @@ off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClien
 取消订阅输入法绑定成功事件。使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
 
@@ -325,7 +622,7 @@ off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClien
 inputMethodEngine.getInputMethodAbility().off('inputStart');
 ```
 
-## off('inputStop')
+## off_inputStop
 
 ```TypeScript
 off(type: 'inputStop', callback: () => void): void
@@ -334,6 +631,8 @@ off(type: 'inputStop', callback: () => void): void
 取消订阅停止输入法应用事件。使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void-End-->
 
@@ -354,36 +653,7 @@ inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
 });
 ```
 
-## off('setCallingWindow')
-
-```TypeScript
-off(type: 'setCallingWindow', callback: (wid: number) => void): void
-```
-
-取消订阅设置调用窗口事件。使用callback异步回调。
-
-**起始版本：** 9
-
-<!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'setCallingWindow' | 是 |
-| callback | (wid: number) = & gt; void | 是 |
-
-## 示例
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (windowId: number) => {
-  console.info('inputMethodAbility delete setCallingWindow notification.');
-});
-```
-
-## off('keyboardShow' | 'keyboardHide')
+## off_keyboardHide
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -392,6 +662,8 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -415,7 +687,7 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 });
 ```
 
-## off('keyboardShow' | 'keyboardHide')
+## off_keyboardShow
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -424,6 +696,8 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -447,17 +721,19 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 });
 ```
 
-## off('setSubtype')
+## off_privateCommand
 
 ```TypeScript
-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void
+off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-取消订阅设置输入法子类型事件。使用callback异步回调。
+取消订阅输入法私有数据事件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 12
 
-<!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -465,18 +741,29 @@ off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'setSubtype' | 是 |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 否 |
+| type | 'privateCommand' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
 
 ## 示例
 
 ```TypeScript
-inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
-  console.info('InputMethodAbility delete setSubtype notification.');
-});
+let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
+  (record: Record<string, inputMethodEngine.CommandDataType>) => {
+    for (const key in record) {
+      console.info(`private command key: ${key}, value: ${record[key]}`);
+    }
+  }
+
+inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCallback);
 ```
 
-## off('securityModeChange')
+## off_securityModeChange
 
 ```TypeScript
 off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
@@ -485,6 +772,8 @@ off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 取消订阅输入法安全模式改变类型事件。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void-End-->
 
@@ -509,17 +798,19 @@ inputMethodAbility.on('securityModeChange', securityChangeCallback);
 inputMethodAbility.off('securityModeChange', securityChangeCallback);
 ```
 
-## off('privateCommand')
+## off_setCallingWindow
 
 ```TypeScript
-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void
+off(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-取消订阅输入法私有数据事件。使用callback异步回调。
+取消订阅设置调用窗口事件。使用callback异步回调。
 
-**起始版本：** 12
+**起始版本：** 9
 
-<!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void-End-->
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -527,39 +818,293 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'privateCommand' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 |
+| type | 'setCallingWindow' | 是 |
+| callback | (wid: number) = & gt; void | 是 |
+
+## 示例
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (windowId: number) => {
+  console.info('inputMethodAbility delete setCallingWindow notification.');
+});
+```
+
+## off_setSubtype
+
+```TypeScript
+off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void
+```
+
+取消订阅设置输入法子类型事件。使用callback异步回调。
+
+**起始版本：** 9
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'setSubtype' | 是 |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 否 |
+
+## 示例
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
+  console.info('InputMethodAbility delete setSubtype notification.');
+});
+```
+
+## onCallingDisplayDidChange
+
+```TypeScript
+onCallingDisplayDidChange(callback: Callback<number>): void
+```
+
+订阅编辑框对应窗口所在屏幕ID变化。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void--><!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-## 示例
-
-```TypeScript
-let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
-  (record: Record<string, inputMethodEngine.CommandDataType>) => {
-    for (const key in record) {
-      console.info(`private command key: ${key}, value: ${record[key]}`);
-    }
-  }
-
-inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCallback);
-```
-
-## off('callingDisplayDidChange')
+## onDiscardTypingText
 
 ```TypeScript
-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
+onDiscardTypingText(callback: Callback<void>): void
 ```
 
-取消订阅编辑框对应窗口所在屏幕ID变化事件。使用callback异步回调。
+订阅编辑框应用发送“清空候选词”事件到输入法。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void--><!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## onInputStart
+
+```TypeScript
+onInputStart(callback: IMAInputStartCallback): void
+```
+
+订阅输入法绑定成功事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void--><!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | 是 |
+
+## onInputStop
+
+```TypeScript
+onInputStop(callback: Callback<void>): void
+```
+
+订阅停止输入法应用事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## onKeyboardHide
+
+```TypeScript
+onKeyboardHide(callback: Callback<void>): void
+```
+
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## onKeyboardShow
+
+```TypeScript
+onKeyboardShow(callback: Callback<void>): void
+```
+
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## onPrivateCommand
+
+```TypeScript
+onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
+```
+
+订阅输入法私有数据事件。使用callback异步回调。该接口只能被系统预置输入法调用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+
+## onSecurityModeChange
+
+```TypeScript
+onSecurityModeChange(callback: Callback<SecurityMode>): void
+```
+
+订阅输入法安全模式改变类型事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 |
+
+## onSetCallingWindow
+
+```TypeScript
+onSetCallingWindow(callback: Callback<number>): void
+```
+
+订阅设置调用窗口事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## onSetSubtype
+
+```TypeScript
+onSetSubtype(callback: Callback<InputMethodSubtype>): void
+```
+
+订阅设置输入法子类型事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 是 |
+
+## on_callingDisplayDidChange
+
+```TypeScript
+on(type: 'callingDisplayDidChange', callback: Callback<number>): void
+```
+
+订阅编辑框对应窗口所在屏幕ID变化事件。使用callback异步回调。 **使用场景：** 多屏幕设备场景下，编辑框在不同屏幕间切换时，输入法应用需根据新的屏幕ID调整面板位置和大小。 **使用后效果：** 当编辑框所在屏幕ID发生变化时触发回调，返回新的屏幕ID。
 
 **起始版本：** 18
 
-<!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void--><!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void-End-->
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void--><!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -568,31 +1113,36 @@ off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'callingDisplayDidChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 
 ```TypeScript
-inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (displayId: number) => {
-  console.info('InputMethodAbility delete calling display notification.');
+inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', (displayId: number) => {
+  console.info(`display id: ${displayId}`);
 });
+inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingDisplayDidChangeCallback);
 ```
 
-## off('discardTypingText')
+## on_discardTypingText
 
 ```TypeScript
-off(type: 'discardTypingText', callback?: Callback<void>): void
+on(type: 'discardTypingText', callback: Callback<void>): void
 ```
 
-取消订阅编辑框应用发送\u201c清空候选词\u201d事件到输入法。使用callback异步回调。
-
-**使用场景：** 编辑框应用需要通知输入法清空当前候选词列表时使用（如用户切换输入框、提交表单后等场景）。
-
-**使用后效果：** 当编辑框应用发送清空候选词请求时触发回调，输入法应用应在回调中清空候选词列表和预输入文本。
+订阅编辑框应用发送\u201c清空候选词\u201d事件到输入法。使用callback异步回调。 **使用场景：** 编辑框应用需要通知输入法清空当前候选词列表时使用（如用户切换输入框、提交表单后等场景）。 **使用后效果：** 当编辑框应用发送清空候选词请求时触发回调，输入法应用应在回调中清空候选词列表和预输入文本。
 
 **起始版本：** 20
 
-<!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void--><!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void-End-->
+**废弃版本：** -1
+
+<!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void--><!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -601,29 +1151,27 @@ off(type: 'discardTypingText', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'discardTypingText' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 ## 示例
 
 ```TypeScript
-inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
+inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
   console.info('InputMethodAbility discard the typing text.');
 });
 ```
 
-## on('inputStart')
+## on_inputStart
 
 ```TypeScript
 on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void
 ```
 
-订阅输入法绑定成功事件。使用callback异步回调。
-
-**使用场景：** 输入法应用需要在编辑框获得焦点并绑定输入法时，获取KeyboardController和InputClient实例以进行后续的键盘操作和文本交互。
-
-**使用后效果：** 当编辑框绑定到输入法应用时，触发回调并返回KeyboardController和InputClient实例。输入法应用可在回调中创建面板、加载键盘页面、订阅KeyboardDelegate事件等。
+订阅输入法绑定成功事件。使用callback异步回调。 **使用场景：** 输入法应用需要在编辑框获得焦点并绑定输入法时，获取KeyboardController和InputClient实例以进行后续的键盘操作和文本交互。 **使用后效果：** 当编辑框绑定到输入法应用时，触发回调并返回KeyboardController和InputClient实例。输入法应用可在回调中创建面板、加载键盘页面、订阅KeyboardDelegate事件等。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
 
@@ -646,19 +1194,17 @@ inputMethodEngine.getInputMethodAbility()
     });
 ```
 
-## on('inputStop')
+## on_inputStop
 
 ```TypeScript
 on(type: 'inputStop', callback: () => void): void
 ```
 
-订阅停止输入法应用事件。使用callback异步回调。
-
-**使用场景：** 输入法应用需要在编辑框失去焦点或用户切换输入法时，执行清理操作（如隐藏面板、释放资源）。
-
-**使用后效果：** 当输入法应用被停止绑定时触发回调。输入法应用应在回调中隐藏面板、取消事件订阅、释放InputClient相关资源。
+订阅停止输入法应用事件。使用callback异步回调。 **使用场景：** 输入法应用需要在编辑框失去焦点或用户切换输入法时，执行清理操作（如隐藏面板、释放资源）。 **使用后效果：** 当输入法应用被停止绑定时触发回调。输入法应用应在回调中隐藏面板、取消事件订阅、释放InputClient相关资源。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void-End-->
 
@@ -679,52 +1225,17 @@ inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
 });
 ```
 
-## on('setCallingWindow')
-
-```TypeScript
-on(type: 'setCallingWindow', callback: (wid: number) => void): void
-```
-
-订阅设置调用窗口事件。使用callback异步回调。
-
-**使用场景：** 输入法应用需要在绑定应用的窗口发生变化时（如应用切换窗口、多窗口场景），调整面板位置或重新定位。
-
-**使用后效果：** 当调用方窗口发生变化时触发回调，返回新的窗口ID。输入法应用可根据窗口ID调整面板位置。
-
-**起始版本：** 9
-
-<!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'setCallingWindow' | 是 |
-| callback | (wid: number) = & gt; void | 是 |
-
-## 示例
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (windowId: number) => {
-  console.info('inputMethodAbility setCallingWindow');
-});
-```
-
-## on('keyboardShow' | 'keyboardHide')
+## on_keyboardHide
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
-
-**使用场景：** 输入法应用需要在软键盘显示/隐藏时，执行相应的界面更新操作（如调整面板布局、更新候选词区域）。
-
-**使用后效果：** 当软键盘显示请求触发时，'keyboardShow'回调被调用，输入法应用应在回调中调用panel.show()显示面板；当软键盘隐藏请求触发时，'keyboardHide'回调被调用，输入法应用应在回调中调用panel.hide()隐藏面板。
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。 **使用场景：** 输入法应用需要在软键盘显示/隐藏时，执行相应的界面更新操作（如调整面板布局、更新候选词区域）。 **使用后效果：** 当软键盘显示请求触发时，'keyboardShow'回调被调用，输入法应用应在回调中调用panel.show()显示面板；当软键盘隐藏请求触发时，'keyboardHide'回调被调用，输入法应用应在回调 中调用panel.hide()隐藏面板。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
@@ -748,19 +1259,17 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 });
 ```
 
-## on('keyboardShow' | 'keyboardHide')
+## on_keyboardShow
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
-
-**使用场景：** 输入法应用需要在软键盘显示/隐藏时，执行相应的界面更新操作（如调整面板布局、更新候选词区域）。
-
-**使用后效果：** 当软键盘显示请求触发时，'keyboardShow'回调被调用，输入法应用应在回调中调用panel.show()显示面板；当软键盘隐藏请求触发时，'keyboardHide'回调被调用，输入法应用应在回调中调用panel.hide()隐藏面板。
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。 **使用场景：** 输入法应用需要在软键盘显示/隐藏时，执行相应的界面更新操作（如调整面板布局、更新候选词区域）。 **使用后效果：** 当软键盘显示请求触发时，'keyboardShow'回调被调用，输入法应用应在回调中调用panel.show()显示面板；当软键盘隐藏请求触发时，'keyboardHide'回调被调用，输入法应用应在回调 中调用panel.hide()隐藏面板。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
@@ -784,21 +1293,19 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 });
 ```
 
-## on('setSubtype')
+## on_privateCommand
 
 ```TypeScript
-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void
+on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-订阅设置输入法子类型事件。使用callback异步回调。
+订阅输入法私有数据事件。使用callback异步回调。 **使用场景：** 应用与输入法之间需要传递私有数据（如自定义命令、配置信息等）时使用。仅系统默认输入法应用可订阅此事件。 **使用后效果：** 当绑定应用向输入法发送私有数据时触发回调，返回私有数据记录。
 
-**使用场景：** 输入法应用需要在子类型（如语言、输入模式）发生变化时，切换到对应的键盘布局或输入逻辑。
+**起始版本：** 12
 
-**使用后效果：** 当输入法子类型变化时触发回调，返回新的输入法子类型信息。
+**废弃版本：** -1
 
-**起始版本：** 9
-
-<!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
+<!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -806,32 +1313,38 @@ on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'setSubtype' | 是 |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 是 |
+| type | 'privateCommand' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
 
 ## 示例
 
 ```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-
-inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: InputMethodSubtype) => {
-  console.info('InputMethodAbility setSubtype.');
-});
+let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
+  (record: Record<string, inputMethodEngine.CommandDataType>) => {
+    for (const key in record) {
+      console.info(`private command key: ${key}, value: ${record[key]}`);
+    }
+  }
+inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCallback);
 ```
 
-## on('securityModeChange')
+## on_securityModeChange
 
 ```TypeScript
 on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 ```
 
-订阅输入法安全模式改变类型事件。使用callback异步回调。
-
-**使用场景：** 输入法应用需要在安全模式发生变化时（如编辑框切换到密码输入模式、隐私模式等），调整键盘行为（如禁止截图、切换到安全键盘布局等）。
-
-**使用后效果：** 当安全模式变化时触发回调，返回当前的安全模式值。
+订阅输入法安全模式改变类型事件。使用callback异步回调。 **使用场景：** 输入法应用需要在安全模式发生变化时（如编辑框切换到密码输入模式、隐私模式等），调整键盘行为（如禁止截图、切换到安全键盘布局等）。 **使用后效果：** 当安全模式变化时触发回调，返回当前的安全模式值。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void-End-->
 
@@ -853,21 +1366,19 @@ inputMethodEngine.getInputMethodAbility()
   });
 ```
 
-## on('privateCommand')
+## on_setCallingWindow
 
 ```TypeScript
-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void
+on(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-订阅输入法私有数据事件。使用callback异步回调。
+订阅设置调用窗口事件。使用callback异步回调。 **使用场景：** 输入法应用需要在绑定应用的窗口发生变化时（如应用切换窗口、多窗口场景），调整面板位置或重新定位。 **使用后效果：** 当调用方窗口发生变化时触发回调，返回新的窗口ID。输入法应用可根据窗口ID调整面板位置。
 
-**使用场景：** 应用与输入法之间需要传递私有数据（如自定义命令、配置信息等）时使用。仅系统默认输入法应用可订阅此事件。
+**起始版本：** 9
 
-**使用后效果：** 当绑定应用向输入法发送私有数据时触发回调，返回私有数据记录。
+**废弃版本：** -1
 
-**起始版本：** 12
-
-<!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void-End-->
+<!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -875,82 +1386,30 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'privateCommand' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| type | 'setCallingWindow' | 是 |
+| callback | (wid: number) = & gt; void | 是 |
 
 ## 示例
 
 ```TypeScript
-let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
-  (record: Record<string, inputMethodEngine.CommandDataType>) => {
-    for (const key in record) {
-      console.info(`private command key: ${key}, value: ${record[key]}`);
-    }
-  }
-inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCallback);
-```
-
-## on('callingDisplayDidChange')
-
-```TypeScript
-on(type: 'callingDisplayDidChange', callback: Callback<number>): void
-```
-
-订阅编辑框对应窗口所在屏幕ID变化事件。使用callback异步回调。
-
-**使用场景：** 多屏幕设备场景下，编辑框在不同屏幕间切换时，输入法应用需根据新的屏幕ID调整面板位置和大小。
-
-**使用后效果：** 当编辑框所在屏幕ID发生变化时触发回调，返回新的屏幕ID。
-
-**起始版本：** 18
-
-<!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void--><!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callingDisplayDidChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-
-## 示例
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', (displayId: number) => {
-  console.info(`display id: ${displayId}`);
+inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (windowId: number) => {
+  console.info('inputMethodAbility setCallingWindow');
 });
-inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingDisplayDidChangeCallback);
 ```
 
-## on('discardTypingText')
+## on_setSubtype
 
 ```TypeScript
-on(type: 'discardTypingText', callback: Callback<void>): void
+on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void
 ```
 
-订阅编辑框应用发送\u201c清空候选词\u201d事件到输入法。使用callback异步回调。
+订阅设置输入法子类型事件。使用callback异步回调。 **使用场景：** 输入法应用需要在子类型（如语言、输入模式）发生变化时，切换到对应的键盘布局或输入逻辑。 **使用后效果：** 当输入法子类型变化时触发回调，返回新的输入法子类型信息。
 
-**使用场景：** 编辑框应用需要通知输入法清空当前候选词列表时使用（如用户切换输入框、提交表单后等场景）。
+**起始版本：** 9
 
-**使用后效果：** 当编辑框应用发送清空候选词请求时触发回调，输入法应用应在回调中清空候选词列表和预输入文本。
+**废弃版本：** -1
 
-**起始版本：** 20
-
-<!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void--><!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void-End-->
+<!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -958,13 +1417,15 @@ on(type: 'discardTypingText', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'discardTypingText' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| type | 'setSubtype' | 是 |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 是 |
 
 ## 示例
 
 ```TypeScript
-inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
-  console.info('InputMethodAbility discard the typing text.');
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: InputMethodSubtype) => {
+  console.info('InputMethodAbility setSubtype.');
 });
 ```

@@ -1,4 +1,4 @@
-# @ohos.selectionInput.SelectionExtensionContext(Word Selection Extension Context)
+# @ohos.selectionInput.SelectionExtensionContext
 
 ## Modules to Import
 
@@ -8,8 +8,10 @@ import { SelectionExtensionContext } from '@kit.BasicServicesKit';
 
 ## Summary
 
-### Classes
+<!--Del-->
+### Classes（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md) |
+| [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md) |
+<!--DelEnd-->

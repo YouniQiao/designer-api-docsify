@@ -1,9 +1,10 @@
 # LightStatus（系统接口）
 
-Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys.  
-[on('lightStatusChange')](camera.VideoSession.on(type: 'lightStatusChange', callback: AsyncCallback&lt;LightStatus&gt;)).
+Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i.md#on_error).
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum LightStatus--><!--Device-camera-enum LightStatus-End-->
 
@@ -19,7 +20,9 @@ NORMAL = 0
 
 Normal lighting conditions.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LightStatus-NORMAL = 0--><!--Device-LightStatus-NORMAL = 0-End-->
 
@@ -35,7 +38,9 @@ INSUFFICIENT = 1
 
 Insufficient lighting (too dark).
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LightStatus-INSUFFICIENT = 1--><!--Device-LightStatus-INSUFFICIENT = 1-End-->
 

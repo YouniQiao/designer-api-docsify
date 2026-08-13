@@ -2,9 +2,11 @@
 
 视频通话事件信息。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export interface CallSessionEvent--><!--Device-call-export interface CallSessionEvent-End-->
 
@@ -20,11 +22,13 @@ callId: int
 
 呼叫Id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallSessionEvent-callId: int--><!--Device-CallSessionEvent-callId: int-End-->
 
@@ -42,9 +46,11 @@ eventId: CallSessionEventId
 
 **类型：** [CallSessionEventId](arkts-telephony-call-callsessioneventid-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallSessionEvent-eventId: CallSessionEventId--><!--Device-CallSessionEvent-eventId: CallSessionEventId-End-->
 

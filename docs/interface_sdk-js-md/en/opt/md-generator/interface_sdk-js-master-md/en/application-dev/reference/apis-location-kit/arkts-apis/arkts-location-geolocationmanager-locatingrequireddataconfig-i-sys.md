@@ -2,7 +2,9 @@
 
 Describes the request parameters for obtaining the data required for locating.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface LocatingRequiredDataConfig--><!--Device-geoLocationManager-export interface LocatingRequiredDataConfig-End-->
 
@@ -22,11 +24,13 @@ import { geoLocationManager } from '@kit.LocationKit';
 arfcn?: number[]
 ```
 
-Indicates absolute radio frequency channel number (ARFCN).Querying Cell Information by Specified ARFCN.
+Indicates absolute radio frequency channel number (ARFCN). Querying Cell Information by Specified ARFCN.
 
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,9 @@ Indicates whether to start scanning.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-needStartScan: boolean--><!--Device-LocatingRequiredDataConfig-needStartScan: boolean-End-->
 
@@ -66,6 +72,8 @@ Indicates PLMN number of the SIM card.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LocatingRequiredDataConfig-plmnId?: int[]--><!--Device-LocatingRequiredDataConfig-plmnId?: int[]-End-->
@@ -80,11 +88,13 @@ Indicates PLMN number of the SIM card.
 scanInterval?: number
 ```
 
-Indicates the interval between scans. The unit is millisecond.This parameter needs to be set only when scanning information is continuously monitored.
+Indicates the interval between scans. The unit is millisecond. This parameter needs to be set only when scanning information is continuously monitored.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-scanInterval?: int--><!--Device-LocatingRequiredDataConfig-scanInterval?: int-End-->
 
@@ -98,11 +108,13 @@ Indicates the interval between scans. The unit is millisecond.This parameter nee
 scanTimeout?: number
 ```
 
-Indicates the timeout period of a single scan. The unit is millisecond. The default value is 10000.This parameter needs to be set only when getLocatingRequiredData is used.
+Indicates the timeout period of a single scan. The unit is millisecond. The default value is 10000. This parameter needs to be set only when getLocatingRequiredData is used.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-scanTimeout?: int--><!--Device-LocatingRequiredDataConfig-scanTimeout?: int-End-->
 
@@ -116,11 +128,13 @@ Indicates the timeout period of a single scan. The unit is millisecond. The defa
 slotId?: number
 ```
 
-Indicates SIM card slot number.The value should be an integer.
+Indicates SIM card slot number. The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,7 +154,9 @@ Indicates the type of locating required data.
 
 **Type:** [LocatingRequiredDataType](arkts-location-geolocationmanager-locatingrequireddatatype-e-sys.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType--><!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType-End-->
 

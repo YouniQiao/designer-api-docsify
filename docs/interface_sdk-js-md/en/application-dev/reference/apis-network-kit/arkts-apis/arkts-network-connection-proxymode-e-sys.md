@@ -6,6 +6,8 @@ Enumerates proxy modes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-connection-export enum ProxyMode--><!--Device-connection-export enum ProxyMode-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -24,6 +26,8 @@ Off proxy mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-ProxyMode-PROXY_MODE_OFF = 0--><!--Device-ProxyMode-PROXY_MODE_OFF = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -41,6 +45,8 @@ Auto proxy mode.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-ProxyMode-PROXY_MODE_AUTO = 1--><!--Device-ProxyMode-PROXY_MODE_AUTO = 1-End-->
 

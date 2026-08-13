@@ -2,7 +2,9 @@
 
 The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes vary according to notification slots.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
 
@@ -14,14 +16,13 @@ The **NotificationSlot** module provides APIs for defining the notification slot
 badgeFlag?: boolean
 ```
 
-Whether to display the badge. The default value is **true**.
-
-- **true**: Display the badge.  
-- **false**: Do not display the badge.
+Whether to display the badge. The default value is **true**. - **true**: Display the badge. - **false**: Do not display the badge.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-badgeFlag?: boolean--><!--Device-NotificationSlot-badgeFlag?: boolean-End-->
 
@@ -33,14 +34,13 @@ Whether to display the badge. The default value is **true**.
 bypassDnd?: boolean
 ```
 
-Whether to bypass Do Not Disturb mode in the system. The default value is **false**.
-
-- **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode.  
-- **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
+Whether to bypass Do Not Disturb mode in the system. The default value is **false**. - **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode. - **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-bypassDnd?: boolean--><!--Device-NotificationSlot-bypassDnd?: boolean-End-->
 
@@ -56,7 +56,9 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-desc?: string--><!--Device-NotificationSlot-desc?: string-End-->
 
@@ -68,14 +70,13 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 readonly enabled?: boolean
 ```
 
-Whether to allow notifications of this slot type to be published.
-
-- **true**: yes.  
-- **false**: no.
+Whether to allow notifications of this slot type to be published. - **true**: yes. - **false**: no.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-readonly enabled?: boolean--><!--Device-NotificationSlot-readonly enabled?: boolean-End-->
 
@@ -111,7 +112,9 @@ Indicator color of the notification. This is a reserved capability and is not su
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-lightColor?: int--><!--Device-NotificationSlot-lightColor?: int-End-->
 
@@ -123,14 +126,13 @@ Indicator color of the notification. This is a reserved capability and is not su
 lightEnabled?: boolean
 ```
 
-Whether to enable the light. The default value is **false**.
-
-- **true**: yes.  
-- **false**: no.
+Whether to enable the light. The default value is **false**. - **true**: yes. - **false**: no.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-lightEnabled?: boolean--><!--Device-NotificationSlot-lightEnabled?: boolean-End-->
 
@@ -146,7 +148,9 @@ Mode for displaying the notification on the lock screen. This is a reserved capa
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-lockscreenVisibility?: int--><!--Device-NotificationSlot-lockscreenVisibility?: int-End-->
 
@@ -162,7 +166,9 @@ Notification level, which is used to describe the display priority and alert int
 
 **Type:** notificationManager.SlotLevel
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel--><!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel-End-->
 
@@ -178,7 +184,9 @@ Slot type. Different slot types have different notification reminder types.
 
 **Type:** notificationManager.SlotType
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-notificationType?: notificationManager.SlotType--><!--Device-NotificationSlot-notificationType?: notificationManager.SlotType-End-->
 
@@ -190,12 +198,13 @@ Slot type. Different slot types have different notification reminder types.
 sound?: string
 ```
 
-File name of the custom ringtone for notifications from this channel. The file is placed in the  
-**resources/rawfile** directory, and formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported. The size cannot exceed 243 bytes, and the excess part will be truncated.
+File name of the custom ringtone for notifications from this channel. The file is placed in the **resources/rawfile** directory, and formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported. The size cannot exceed 243 bytes, and the excess part will be truncated.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-sound?: string--><!--Device-NotificationSlot-sound?: string-End-->
 
@@ -227,14 +236,13 @@ Channel type.
 vibrationEnabled?: boolean
 ```
 
-Whether to enable vibration. The default value is **false**.
-
-- **true**: yes.  
-- **false**: no.
+Whether to enable vibration. The default value is **false**. - **true**: yes. - **false**: no.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-vibrationEnabled?: boolean--><!--Device-NotificationSlot-vibrationEnabled?: boolean-End-->
 
@@ -250,7 +258,9 @@ Vibration mode of the notification. This is a reserved capability and is not sup
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSlot-vibrationValues?: Array<long>--><!--Device-NotificationSlot-vibrationValues?: Array<long>-End-->
 

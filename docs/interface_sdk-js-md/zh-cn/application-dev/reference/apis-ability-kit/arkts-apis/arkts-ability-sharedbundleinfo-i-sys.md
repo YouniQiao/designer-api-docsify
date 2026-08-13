@@ -2,9 +2,11 @@
 
 共享包信息。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SharedBundleInfo--><!--Device-unnamed-export interface SharedBundleInfo-End-->
 
@@ -22,9 +24,11 @@ readonly compatiblePolicy: bundleManager.CompatiblePolicy
 
 **类型：** bundleManager.CompatiblePolicy
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedBundleInfo-readonly compatiblePolicy: bundleManager.CompatiblePolicy--><!--Device-SharedBundleInfo-readonly compatiblePolicy: bundleManager.CompatiblePolicy-End-->
 
@@ -42,9 +46,11 @@ readonly name: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedBundleInfo-readonly name: string--><!--Device-SharedBundleInfo-readonly name: string-End-->
 
@@ -62,9 +68,11 @@ readonly sharedModuleInfo: Array<SharedModuleInfo>
 
 **类型：** Array&lt;[SharedModuleInfo](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md)&gt;
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedBundleInfo-readonly sharedModuleInfo: Array<SharedModuleInfo>--><!--Device-SharedBundleInfo-readonly sharedModuleInfo: Array<SharedModuleInfo>-End-->
 

@@ -1,9 +1,10 @@
 # ShowMode
 
-Enumerates the display modes of an  
-[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility) when it is launched.
+Enumerates the display modes of an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility) when it is launched.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wantConstant-export enum ShowMode--><!--Device-wantConstant-export enum ShowMode-End-->
 
@@ -17,9 +18,11 @@ WINDOW = 0
 
 An independent window is used to show the ability startup.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ShowMode-WINDOW = 0--><!--Device-ShowMode-WINDOW = 0-End-->
 
@@ -33,9 +36,11 @@ EMBEDDED_FULL = 1
 
 An embedded full-screen is used to show the ability startup.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ShowMode-EMBEDDED_FULL = 1--><!--Device-ShowMode-EMBEDDED_FULL = 1-End-->
 
@@ -50,6 +55,8 @@ EMBEDDED_HALF = 2
 An embedded half-screen is used to show the ability startup.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

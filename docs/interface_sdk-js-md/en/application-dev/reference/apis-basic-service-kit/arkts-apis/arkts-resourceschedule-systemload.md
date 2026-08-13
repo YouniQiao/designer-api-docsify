@@ -1,10 +1,12 @@
-# @ohos.resourceschedule.systemload(System Load Level Management)
+# @ohos.resourceschedule.systemload
 
-The **systemload** module allows the system to determine the system load level based on the current temperature,load, and scenario, and notifies registered applications of level changes, if any.
+The **systemload** module allows the system to determine the system load level based on the current temperature, load, and scenario, and notifies registered applications of level changes, if any.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace systemLoad--><!--Device-unnamed-declare namespace systemLoad-End-->
 
@@ -22,11 +24,11 @@ import { systemLoad } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getlevel) | Obtains the system load level. This API uses a promise to return the result. |
-| [off](arkts-basicservices-systemload-off-f.md#off) | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
-| [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md#offsystemloadchange) | Unregister system load callback for perception system load change |
-| [on](arkts-basicservices-systemload-on-f.md#on) | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
-| [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md#onsystemloadchange) | Register system load callback for perception system load change |
+| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getLevel) | Obtains the system load level. This API uses a promise to return the result. |
+| [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md#offSystemLoadChange) | Unregister system load callback for perception system load change |
+| off_systemLoadChange | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md#onSystemLoadChange) | Register system load callback for perception system load change |
+| on_systemLoadChange | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
 
 ### Enums
 

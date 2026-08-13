@@ -2,9 +2,11 @@
 
 Defines the video call mode information.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface ImsCallModeInfo--><!--Device-call-export interface ImsCallModeInfo-End-->
 
@@ -26,11 +28,13 @@ callId: int
 
 Call ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallModeInfo-callId: int--><!--Device-ImsCallModeInfo-callId: int-End-->
 
@@ -48,9 +52,11 @@ Video call mode.
 
 **Type:** [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallModeInfo-imsCallMode: ImsCallMode--><!--Device-ImsCallModeInfo-imsCallMode: ImsCallMode-End-->
 
@@ -68,9 +74,11 @@ Whether the information is request information.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallModeInfo-isRequestInfo: boolean--><!--Device-ImsCallModeInfo-isRequestInfo: boolean-End-->
 
@@ -88,9 +96,11 @@ Call ending message.
 
 **Type:** [VideoRequestResultType](arkts-telephony-call-videorequestresulttype-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallModeInfo-result: VideoRequestResultType--><!--Device-ImsCallModeInfo-result: VideoRequestResultType-End-->
 

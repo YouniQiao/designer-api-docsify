@@ -10,7 +10,9 @@ function getTaskInfo(taskId: int): Promise<TaskInfo>
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -24,7 +26,7 @@ function getTaskInfo(taskId: int): Promise<TaskInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 后台加载任务id。 &lt;br&gt;取值范围为全体整数。 |
+| taskId | int | 是 | 后台加载任务id。 &lt;br&gt;取值范围为全体整数。 |
 
 **返回值：**
 
@@ -36,7 +38,7 @@ function getTaskInfo(taskId: int): Promise<TaskInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9700004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on taskId failed. |
-| [9700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on taskId failed. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 

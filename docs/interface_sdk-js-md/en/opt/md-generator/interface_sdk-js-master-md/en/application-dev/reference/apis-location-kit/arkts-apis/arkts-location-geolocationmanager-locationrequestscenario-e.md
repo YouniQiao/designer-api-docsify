@@ -2,7 +2,9 @@
 
 Enum for location scenario.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum LocationRequestScenario--><!--Device-geoLocationManager-export enum LocationRequestScenario-End-->
 
@@ -16,7 +18,9 @@ UNSET = 0x300
 
 Default scenario.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ NAVIGATION = 0x301
 
 Navigation scenario. High positioning precision and real-time performance are required.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +54,9 @@ TRAJECTORY_TRACKING = 0x302
 
 Trajectory tracking scenario. High positioning precision is required.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +72,9 @@ CAR_HAILING = 0x303
 
 Car hailing scenario. High positioning precision and real-time performance are required.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,7 +90,9 @@ DAILY_LIFE_SERVICE = 0x304
 
 Daily life scenarios. Low requirements on positioning precision and real-time performance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +108,9 @@ NO_POWER = 0x305
 
 Power saving scenarios.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

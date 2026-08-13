@@ -26,7 +26,7 @@ actionButton?: [ActionButton?, ActionButton?]
 
 **废弃版本：** 9
 
-**替代接口：** [actionButton](reminderAgentManager.ReminderRequest.actionButton)
+**替代接口：** actionButton
 
 <!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]--><!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]-End-->
 
@@ -46,7 +46,7 @@ content?: string
 
 **废弃版本：** 9
 
-**替代接口：** [content](reminderAgentManager.ReminderRequest.content)
+**替代接口：** content
 
 <!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
@@ -66,7 +66,7 @@ expiredContent?: string
 
 **废弃版本：** 9
 
-**替代接口：** [expiredContent](reminderAgentManager.ReminderRequest.expiredContent)
+**替代接口：** expiredContent
 
 <!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
@@ -86,7 +86,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 **废弃版本：** 9
 
-**替代接口：** [maxScreenWantAgent](reminderAgentManager.ReminderRequest.maxScreenWantAgent)
+**替代接口：** maxScreenWantAgent
 
 <!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
@@ -106,7 +106,7 @@ notificationId?: number
 
 **废弃版本：** 9
 
-**替代接口：** [notificationId](reminderAgentManager.ReminderRequest.notificationId)
+**替代接口：** notificationId
 
 <!--Device-ReminderRequest-notificationId?: number--><!--Device-ReminderRequest-notificationId?: number-End-->
 
@@ -126,7 +126,7 @@ reminderType: ReminderType
 
 **废弃版本：** 9
 
-**替代接口：** [reminderType](reminderAgentManager.ReminderRequest.reminderType)
+**替代接口：** reminderType
 
 <!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
@@ -146,7 +146,7 @@ ringDuration?: number
 
 **废弃版本：** 9
 
-**替代接口：** [ringDuration](reminderAgentManager.ReminderRequest.ringDuration)
+**替代接口：** ringDuration
 
 <!--Device-ReminderRequest-ringDuration?: number--><!--Device-ReminderRequest-ringDuration?: number-End-->
 
@@ -166,7 +166,7 @@ slotType?: notification.SlotType
 
 **废弃版本：** 9
 
-**替代接口：** [slotType](reminderAgentManager.ReminderRequest.slotType)
+**替代接口：** slotType
 
 <!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
@@ -186,7 +186,7 @@ snoozeContent?: string
 
 **废弃版本：** 9
 
-**替代接口：** [snoozeContent](reminderAgentManager.ReminderRequest.snoozeContent)
+**替代接口：** snoozeContent
 
 <!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
@@ -206,7 +206,7 @@ snoozeTimes?: number
 
 **废弃版本：** 9
 
-**替代接口：** [snoozeTimes](reminderAgentManager.ReminderRequest.snoozeTimes)
+**替代接口：** snoozeTimes
 
 <!--Device-ReminderRequest-snoozeTimes?: number--><!--Device-ReminderRequest-snoozeTimes?: number-End-->
 
@@ -226,7 +226,7 @@ timeInterval?: number
 
 **废弃版本：** 9
 
-**替代接口：** [timeInterval](reminderAgentManager.ReminderRequest.timeInterval)
+**替代接口：** timeInterval
 
 <!--Device-ReminderRequest-timeInterval?: number--><!--Device-ReminderRequest-timeInterval?: number-End-->
 
@@ -246,7 +246,7 @@ title?: string
 
 **废弃版本：** 9
 
-**替代接口：** [title](reminderAgentManager.ReminderRequest.title)
+**替代接口：** title
 
 <!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
@@ -266,7 +266,7 @@ wantAgent?: WantAgent
 
 **废弃版本：** 9
 
-**替代接口：** [wantAgent](reminderAgentManager.ReminderRequest.wantAgent)
+**替代接口：** wantAgent
 
 <!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
 

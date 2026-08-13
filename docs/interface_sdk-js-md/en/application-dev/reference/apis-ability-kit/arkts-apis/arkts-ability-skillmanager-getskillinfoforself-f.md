@@ -18,6 +18,8 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,5 +47,5 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 | Error Code ID | Error Message |
 | --- | --- |
 | 17700093 | The specified skillName is not found. |
-| [17700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
 

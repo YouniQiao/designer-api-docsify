@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum BarStyle--><!--Device-unnamed-declare enum BarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ STANDARD = 0
 指定该模式的标题栏或工具栏与内容区采用上下布局。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ STACK = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ SAFE_AREA_PADDING = 2
 将指定该模式的标题栏或工具栏设置为[组件级安全区](arkts-arkui-commonmethod-c.md#safeAreaPadding)。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

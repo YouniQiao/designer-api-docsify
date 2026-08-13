@@ -1,10 +1,12 @@
 # LinkedList
 
-LinkedList is implemented based on the doubly linked list. Each node of the doubly linked list has references pointing to the previous element and the next element. When querying an element,the system traverses the list from the beginning or end.
+LinkedList is implemented based on the doubly linked list. Each node of the doubly linked list has references pointing to the previous element and the next element. When querying an element, the system traverses the list from the beginning or end.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class LinkedList<T>--><!--Device-unnamed-declare class LinkedList<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LinkedList--><!--Device-unnamed-declare class LinkedList-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 ```TypeScript
 import { LinkedList } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+returns an iterator. Each item of the iterator is a ArkTS Object
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LinkedList-$_iterator(): IterableIterator<T>--><!--Device-LinkedList-$_iterator(): IterableIterator<T>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>--><!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -34,13 +62,13 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -81,7 +109,9 @@ add(element: T): boolean
 
 Adds an element at the end of this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,7 +135,7 @@ Adds an element at the end of this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -133,7 +163,9 @@ addFirst(element: T): void
 
 Adds an element at the top of this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -151,7 +183,7 @@ Adds an element at the top of this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -180,7 +212,9 @@ clear(): void
 
 Clears this LinkedList and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -192,7 +226,7 @@ Clears this LinkedList and sets its length to **0**.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -215,7 +249,9 @@ clone(): LinkedList<T>
 
 Clones an instance identical to this **LinkedList** and returns it. The modification to the copy does not affect the original instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -233,7 +269,7 @@ Clones an instance identical to this **LinkedList** and returns it. The modifica
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -255,7 +291,9 @@ constructor()
 
 A constructor used to create a **LinkedList** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -267,7 +305,7 @@ A constructor used to create a **LinkedList** instance.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -283,7 +321,9 @@ convertToArray(): Array<T>
 
 Converts this LinkedList into an array and returns the array.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -301,7 +341,7 @@ Converts this LinkedList into an array and returns the array.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -325,6 +365,8 @@ Uses a callback to traverse the elements in this LinkedList and obtain their ind
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void--><!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void-End-->
@@ -342,7 +384,7 @@ Uses a callback to traverse the elements in this LinkedList and obtain their ind
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -361,6 +403,32 @@ linkedList.forEach((value: number, index: number) => {
 // value:4 index:3
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: LinkedListForEachCb<T>): void
+```
+
+Replaces each element of this linkedList with the result of applying the operator to that element.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LinkedList-forEach(callbackFn: LinkedListForEachCb<T>): void--><!--Device-LinkedList-forEach(callbackFn: LinkedListForEachCb<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [LinkedListForEachCb](arkts-arkts-linkedlistforeachcb-t.md)&lt;T&gt; | Yes |
+
 ## get
 
 ```TypeScript
@@ -369,7 +437,9 @@ get(index: number): T
 
 Obtains an element at the specified position in this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -393,8 +463,8 @@ Obtains an element at the specified position in this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -419,7 +489,9 @@ getFirst(): T
 
 Obtains the first element in this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -437,8 +509,8 @@ Obtains the first element in this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -460,7 +532,9 @@ getIndexOf(element: T): number
 
 Obtains the index of the first occurrence of the specified element in this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -484,7 +558,7 @@ Obtains the index of the first occurrence of the specified element in this Linke
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -509,7 +583,9 @@ getLast(): T
 
 Obtains the last element in this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -527,8 +603,8 @@ Obtains the last element in this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -550,7 +626,9 @@ getLastIndexOf(element: T): number
 
 Obtains the index of the last occurrence of the specified element in this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -574,7 +652,7 @@ Obtains the index of the last occurrence of the specified element in this Linked
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -599,7 +677,9 @@ has(element: T): boolean
 
 Checks whether this LinkedList has the specified element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -623,7 +703,7 @@ Checks whether this LinkedList has the specified element.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -642,7 +722,9 @@ insert(index: number, element: T): void
 
 Inserts an element at the specified position in this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -661,8 +743,8 @@ Inserts an element at the specified position in this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -683,7 +765,9 @@ remove(element: T): boolean
 
 Removes the first occurrence of the specified element from this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -707,7 +791,7 @@ Removes the first occurrence of the specified element from this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -731,6 +815,8 @@ Searches for an element based on its index and then removes it.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-removeByIndex(index: number): T--><!--Device-LinkedList-removeByIndex(index: number): T-End-->
@@ -753,8 +839,8 @@ Searches for an element based on its index and then removes it.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -769,6 +855,43 @@ let result = linkedList.removeByIndex(2);
 console.info("result:", result);  // result: 5
 ```
 
+## removeByIndex
+
+```TypeScript
+removeByIndex(index: number): T | undefined
+```
+
+Removes and returns the element at the specified index in this linkedlist.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LinkedList-removeByIndex(index: int): T | undefined--><!--Device-LinkedList-removeByIndex(index: int): T | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+
 ## removeFirst
 
 ```TypeScript
@@ -778,6 +901,8 @@ removeFirst(): T
 Removes the first element from this LinkedList.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -795,8 +920,8 @@ Removes the first element from this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -811,6 +936,36 @@ let result = linkedList.removeFirst();
 console.info("result:", result);  // result: 2
 ```
 
+## removeFirst
+
+```TypeScript
+removeFirst(): T | undefined
+```
+
+Retrieves and removes the head (first element) of this linkedList.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LinkedList-removeFirst(): T | undefined--><!--Device-LinkedList-removeFirst(): T | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+
 ## removeFirstFound
 
 ```TypeScript
@@ -819,7 +974,9 @@ removeFirstFound(element: T): boolean
 
 Removes the first occurrence of the specified element from this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -843,9 +1000,9 @@ Removes the first occurrence of the specified element from this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
-| [10200017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+| [10200017](../errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) |
 
 ## Examples
 
@@ -869,6 +1026,8 @@ Removes the last element from this LinkedList.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-removeLast(): T--><!--Device-LinkedList-removeLast(): T-End-->
@@ -885,8 +1044,8 @@ Removes the last element from this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -901,6 +1060,36 @@ let result = linkedList.removeLast();
 console.info("result:", result);  // result: 4
 ```
 
+## removeLast
+
+```TypeScript
+removeLast(): T | undefined
+```
+
+Removes and returns the last element from this linkedList.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LinkedList-removeLast(): T | undefined--><!--Device-LinkedList-removeLast(): T | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+
 ## removeLastFound
 
 ```TypeScript
@@ -909,7 +1098,9 @@ removeLastFound(element: T): boolean
 
 Removes the last occurrence of the specified element from this LinkedList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -933,9 +1124,9 @@ Removes the last occurrence of the specified element from this LinkedList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
-| [10200017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+| [10200017](../errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) |
 
 ## Examples
 
@@ -957,7 +1148,9 @@ set(index: number, element: T): T
 
 Replaces an element at the specified position in this LinkedList with a given element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -982,9 +1175,9 @@ Replaces an element at the specified position in this LinkedList with a given el
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1009,6 +1202,8 @@ Number of elements in a LinkedList.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,6 +4,8 @@ Declare enum ToolBarV2ItemState
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum ToolBarV2ItemState--><!--Device-unnamed-export declare enum ToolBarV2ItemState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ ENABLE = 1
 Enable type.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Disable type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -53,6 +59,8 @@ ACTIVATE = 3
 Activate type.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

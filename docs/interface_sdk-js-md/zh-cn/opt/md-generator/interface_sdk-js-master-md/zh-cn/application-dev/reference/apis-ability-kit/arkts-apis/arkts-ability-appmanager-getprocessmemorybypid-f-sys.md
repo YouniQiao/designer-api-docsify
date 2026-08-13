@@ -8,7 +8,9 @@ function getProcessMemoryByPid(pid: number): Promise<number>
 
 通过pid查询对应进程占用的内存大小。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>--><!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>-End-->
 
@@ -32,9 +34,9 @@ function getProcessMemoryByPid(pid: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -66,7 +68,9 @@ function getProcessMemoryByPid(pid: number, callback: AsyncCallback<number>): vo
 
 通过pid查询对应进程占用的内存大小。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void--><!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void-End-->
 
@@ -85,9 +89,9 @@ function getProcessMemoryByPid(pid: number, callback: AsyncCallback<number>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

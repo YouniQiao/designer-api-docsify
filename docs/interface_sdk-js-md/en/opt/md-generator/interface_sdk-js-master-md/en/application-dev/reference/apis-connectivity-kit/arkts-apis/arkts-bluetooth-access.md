@@ -2,7 +2,9 @@
 
 Provides methods for enabling/disabling bluetooth or monitoring bluetooth state.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace access--><!--Device-unnamed-declare namespace access-End-->
 
@@ -20,30 +22,32 @@ import { access } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md#addpersistentdeviceid) |
-| [convertUuid](arkts-connectivity-access-convertuuid-f.md#convertuuid) |
-| [deletePersistentDeviceId](arkts-connectivity-access-deletepersistentdeviceid-f.md#deletepersistentdeviceid) |
-| [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md#disablebluetooth) |
-| [disableBluetoothAsync](arkts-connectivity-access-disablebluetoothasync-f.md#disablebluetoothasync) |
-| [enableBluetooth](arkts-connectivity-access-enablebluetooth-f.md#enablebluetooth) |
-| [enableBluetoothAsync](arkts-connectivity-access-enablebluetoothasync-f.md#enablebluetoothasync) |
-| [getPersistentDeviceIds](arkts-connectivity-access-getpersistentdeviceids-f.md#getpersistentdeviceids) |
-| [getState](arkts-connectivity-access-getstate-f.md#getstate) |
-| [isBluetoothSupported](arkts-connectivity-access-isbluetoothsupported-f.md#isbluetoothsupported) |
-| [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md#isvalidrandomdeviceid) |
-| [off](arkts-connectivity-access-off-f.md#off) |
-| [on](arkts-connectivity-access-on-f.md#on) |
+| [addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md#addPersistentDeviceId) |
+| [convertUuid](arkts-connectivity-access-convertuuid-f.md#convertUuid) |
+| [deletePersistentDeviceId](arkts-connectivity-access-deletepersistentdeviceid-f.md#deletePersistentDeviceId) |
+| [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md#disableBluetooth) |
+| [disableBluetoothAsync](arkts-connectivity-access-disablebluetoothasync-f.md#disableBluetoothAsync) |
+| [enableBluetooth](arkts-connectivity-access-enablebluetooth-f.md#enableBluetooth) |
+| [enableBluetoothAsync](arkts-connectivity-access-enablebluetoothasync-f.md#enableBluetoothAsync) |
+| [getPersistentDeviceIds](arkts-connectivity-access-getpersistentdeviceids-f.md#getPersistentDeviceIds) |
+| [getState](arkts-connectivity-access-getstate-f.md#getState) |
+| [isBluetoothSupported](arkts-connectivity-access-isbluetoothsupported-f.md#isBluetoothSupported) |
+| [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md#isValidRandomDeviceId) |
+| [offStateChange](arkts-connectivity-access-offstatechange-f.md#offStateChange) |
+| off_stateChange |
+| [onStateChange](arkts-connectivity-access-onstatechange-f.md#onStateChange) |
+| on_stateChange |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [factoryReset](arkts-connectivity-access-factoryreset-f-sys.md#factoryreset) |
-| [factoryReset](arkts-connectivity-access-factoryreset-f-sys.md#factoryreset-1) |
-| [getLocalAddress](arkts-connectivity-access-getlocaladdress-f-sys.md#getlocaladdress) |
-| [notifyDialogResult](arkts-connectivity-access-notifydialogresult-f-sys.md#notifydialogresult) |
-| [restrictBluetooth](arkts-connectivity-access-restrictbluetooth-f-sys.md#restrictbluetooth) |
+| [factoryReset](arkts-connectivity-access-factoryreset-f-sys.md#factoryReset-(System-API)) |
+| [factoryReset](arkts-connectivity-access-factoryreset-f-sys.md#factoryReset-(System-API)) |
+| [getLocalAddress](arkts-connectivity-access-getlocaladdress-f-sys.md#getLocalAddress-(System-API)) |
+| [notifyDialogResult](arkts-connectivity-access-notifydialogresult-f-sys.md#notifyDialogResult-(System-API)) |
+| [restrictBluetooth](arkts-connectivity-access-restrictbluetooth-f-sys.md#restrictBluetooth-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

@@ -14,7 +14,9 @@ function updateNtpTime(): Promise<void>
 
 Updates the NTP time from the NTP server This API returns the result asynchronously. In this way, the NTP time is updated from the NTP server only once within one hour.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-function updateNtpTime(): Promise<void>--><!--Device-systemDateTime-function updateNtpTime(): Promise<void>-End-->
 
@@ -32,8 +34,8 @@ Updates the NTP time from the NTP server This API returns the result asynchronou
 
 | Error Code ID |
 | --- |
-| [13000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -14,9 +14,11 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 
 Sets scanner parameters. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -29,7 +31,7 @@ Sets scanner parameters. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scannerId | string | Yes | Scanner ID. |
-| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the option to be set. |
+| optionIndex | int | Yes | Index of the option to be set. |
 | value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | Yes | Value to be set. |
 
 **Return value:**
@@ -42,7 +44,7 @@ Sets scanner parameters. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

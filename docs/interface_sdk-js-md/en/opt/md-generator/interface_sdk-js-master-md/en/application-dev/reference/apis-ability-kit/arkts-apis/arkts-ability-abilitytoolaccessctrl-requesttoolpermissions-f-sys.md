@@ -6,9 +6,11 @@
 export function requestToolPermissions(permissionQuery: PermissionQuery): Promise<PermissionQueryResult>
 ```
 
-Queries tool permissions based on the specified operations.This function checks the permission status for CLI commands or APIs specified in permissionQuery.operationInfo.For each operation, it returns the permission status, authorization status, and whether a user dialog is required.When needTicket is set to true, a ticket will be generated for remote authorization.
+Queries tool permissions based on the specified operations. This function checks the permission status for CLI commands or APIs specified in permissionQuery.operationInfo. For each operation, it returns the permission status, authorization status, and whether a user dialog is required. When needTicket is set to true, a ticket will be generated for remote authorization.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
@@ -35,8 +37,8 @@ Queries tool permissions based on the specified operations.This function checks 
 | Error Code ID |
 | --- |
 | 24010006 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 24010002 |
 | 24010003 |
 | 24010000 |

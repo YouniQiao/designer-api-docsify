@@ -1,18 +1,22 @@
 # CustomColors
 
 ```TypeScript
-export type CustomColors = Partial<Colors>
+export declare type CustomColors = Partial<Colors>
 ```
 
 Defines the struct of CustomColors.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export type CustomColors = Partial<Colors>--><!--Device-unnamed-export type CustomColors = Partial<Colors>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-export declare type CustomColors = Partial<Colors>--><!--Device-unnamed-export declare type CustomColors = Partial<Colors>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

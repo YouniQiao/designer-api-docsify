@@ -6,7 +6,9 @@ type CellInformation = radio.CellInformation
 
 Describes current cell information.
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-observer-type CellInformation = radio.CellInformation--><!--Device-observer-type CellInformation = radio.CellInformation-End-->
 

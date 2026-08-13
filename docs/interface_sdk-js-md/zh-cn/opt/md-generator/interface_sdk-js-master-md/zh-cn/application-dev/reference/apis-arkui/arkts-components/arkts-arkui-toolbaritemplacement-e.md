@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ToolBarItemPlacement--><!--Device-unnamed-declare enum ToolBarItemPlacement-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TOP_BAR_LEADING = 0
 将工具栏项放置在对应顶部栏的开头位置。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ TOP_BAR_TRAILING = 1
 将工具栏项放置在对应顶部栏的末尾位置。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

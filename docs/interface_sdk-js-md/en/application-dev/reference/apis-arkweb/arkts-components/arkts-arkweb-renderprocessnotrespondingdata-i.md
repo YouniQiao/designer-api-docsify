@@ -6,6 +6,8 @@ Provides detailed information about the unresponsive rendering process.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RenderProcessNotRespondingData--><!--Device-unnamed-declare interface RenderProcessNotRespondingData-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ JavaScript call stack information of the web page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-RenderProcessNotRespondingData-jsStack: string--><!--Device-RenderProcessNotRespondingData-jsStack: string-End-->
 
@@ -42,6 +46,8 @@ Process ID of the web page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-RenderProcessNotRespondingData-pid: number--><!--Device-RenderProcessNotRespondingData-pid: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -59,6 +65,8 @@ Reason why the rendering process does not respond.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-RenderProcessNotRespondingData-reason: RenderProcessNotRespondingReason--><!--Device-RenderProcessNotRespondingData-reason: RenderProcessNotRespondingReason-End-->
 

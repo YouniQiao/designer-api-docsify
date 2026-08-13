@@ -6,17 +6,13 @@
 function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>
 ```
 
-Obtains information about the running processes. This API uses a promise to return the result.
-
-> This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
-> instead.
+Obtains information about the running processes. This API uses a promise to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager:appManager#getRunningProcessInformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
@@ -37,7 +33,7 @@ Obtains information about the running processes. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 
 ## getProcessRunningInformation
@@ -46,17 +42,13 @@ Obtains information about the running processes. This API uses a promise to retu
 function getProcessRunningInformation(callback: AsyncCallback<Array<ProcessRunningInfo>>): void
 ```
 
-Obtains information about the running processes. This API uses an asynchronous callback to return the result.
-
-> This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation]{
-> @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead.
+Obtains information about the running processes. This API uses an asynchronous callback to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation]{ > @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager:appManager#getRunningProcessInformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
@@ -77,5 +69,5 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |

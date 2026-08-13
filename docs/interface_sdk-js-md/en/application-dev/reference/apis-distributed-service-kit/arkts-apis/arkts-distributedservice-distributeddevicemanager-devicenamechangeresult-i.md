@@ -4,7 +4,9 @@ Device name change result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceNameChangeResult--><!--Device-distributedDeviceManager-interface DeviceNameChangeResult-End-->
 
@@ -28,7 +30,9 @@ Device name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceNameChangeResult-deviceName: string--><!--Device-DeviceNameChangeResult-deviceName: string-End-->
 

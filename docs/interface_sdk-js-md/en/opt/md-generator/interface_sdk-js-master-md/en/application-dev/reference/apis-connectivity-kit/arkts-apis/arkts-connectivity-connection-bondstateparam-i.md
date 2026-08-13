@@ -2,7 +2,9 @@
 
 Describes the class of a bluetooth device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-interface BondStateParam--><!--Device-connection-interface BondStateParam-End-->
 
@@ -24,7 +26,9 @@ Cause of unbond.
 
 **Type:** [UnbondCause](arkts-connectivity-connection-unbondcause-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Cause message of unbond.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BondStateParam-causeMessage?: string--><!--Device-BondStateParam-causeMessage?: string-End-->
@@ -60,7 +66,9 @@ Address of a Bluetooth device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ Profile connection state of the device.
 
 **Type:** BondState
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

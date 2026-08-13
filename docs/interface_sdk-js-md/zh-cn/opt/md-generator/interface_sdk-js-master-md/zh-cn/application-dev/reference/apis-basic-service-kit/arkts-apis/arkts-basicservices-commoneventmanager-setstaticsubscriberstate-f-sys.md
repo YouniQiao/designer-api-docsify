@@ -8,7 +8,9 @@ function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>
 
 为当前应用设置静态订阅事件使能或去使能状态。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -29,10 +31,10 @@ function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
 
 ## 示例
 
@@ -57,7 +59,9 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 为当前应用设置静态订阅事件使能或去使能状态。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,10 +87,10 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
 
 ## 示例
 
@@ -110,6 +114,8 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 设置当前应用的静态订阅公共事件的使能状态。使用Promise异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,10 +142,10 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
 
 ## 示例
 
@@ -153,3 +159,46 @@ commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
   console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 ```
+
+
+## setStaticSubscriberState
+
+```TypeScript
+function setStaticSubscriberState(enable: boolean, events: Array<string>): Promise<void>
+```
+
+为当前应用设置静态订阅事件的使能状态，并且记录事件名称。使用Promise异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events: Array<string>): Promise<void>--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events: Array<string>): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Notification.CommonEvent
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | boolean | 是 |
+| events | Array & lt;string & gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |

@@ -4,6 +4,8 @@ KeyCommandTriggerType
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-inputConsumer-export enum KeyCommandTriggerType--><!--Device-inputConsumer-export enum KeyCommandTriggerType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -19,6 +21,8 @@ PRESSED = 1
 Triggered when pressed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Triggered when pressed repeatedly.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyCommandTriggerType-REPEAT_PRESSED = 2--><!--Device-KeyCommandTriggerType-REPEAT_PRESSED = 2-End-->
@@ -55,6 +61,8 @@ ALL_RELEASED = 3
 Continuous triggering, from pressing until all keys are released.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

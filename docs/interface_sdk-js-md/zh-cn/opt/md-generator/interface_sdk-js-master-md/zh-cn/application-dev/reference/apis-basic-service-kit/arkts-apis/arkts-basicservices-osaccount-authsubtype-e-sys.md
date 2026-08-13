@@ -2,7 +2,9 @@
 
 表示用于认证的凭据子类型的枚举。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-enum AuthSubType--><!--Device-osAccount-enum AuthSubType-End-->
 
@@ -18,7 +20,9 @@ PIN_SIX = 10000
 
 表示6位凭证。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_SIX = 10000--><!--Device-AuthSubType-PIN_SIX = 10000-End-->
 
@@ -34,7 +38,9 @@ PIN_NUMBER = 10001
 
 表示自定义数字凭证。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_NUMBER = 10001--><!--Device-AuthSubType-PIN_NUMBER = 10001-End-->
 
@@ -50,7 +56,9 @@ PIN_MIXED = 10002
 
 表示自定义混合凭据。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_MIXED = 10002--><!--Device-AuthSubType-PIN_MIXED = 10002-End-->
 
@@ -66,7 +74,9 @@ PIN_FOUR = 10003
 
 表示4位凭证。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_FOUR = 10003--><!--Device-AuthSubType-PIN_FOUR = 10003-End-->
 
@@ -82,7 +92,9 @@ PIN_PATTERN = 10004
 
 表示图案凭据。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_PATTERN = 10004--><!--Device-AuthSubType-PIN_PATTERN = 10004-End-->
 
@@ -98,7 +110,9 @@ PIN_QUESTION = 10005
 
 表示密保问题凭据。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_QUESTION = 10005--><!--Device-AuthSubType-PIN_QUESTION = 10005-End-->
 
@@ -114,7 +128,9 @@ FACE_2D = 20000
 
 表示2D 人脸凭证。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-FACE_2D = 20000--><!--Device-AuthSubType-FACE_2D = 20000-End-->
 
@@ -130,7 +146,9 @@ FACE_3D = 20001
 
 表示3D 人脸凭证。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-FACE_3D = 20001--><!--Device-AuthSubType-FACE_3D = 20001-End-->
 
@@ -146,7 +164,9 @@ FINGERPRINT_CAPACITIVE = 30000
 
 表示电容式指纹。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-FINGERPRINT_CAPACITIVE = 30000--><!--Device-AuthSubType-FINGERPRINT_CAPACITIVE = 30000-End-->
 
@@ -162,7 +182,9 @@ FINGERPRINT_OPTICAL = 30001
 
 表示光学指纹。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-FINGERPRINT_OPTICAL = 30001--><!--Device-AuthSubType-FINGERPRINT_OPTICAL = 30001-End-->
 
@@ -178,7 +200,9 @@ FINGERPRINT_ULTRASONIC = 30002
 
 表示超声波指纹。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-FINGERPRINT_ULTRASONIC = 30002--><!--Device-AuthSubType-FINGERPRINT_ULTRASONIC = 30002-End-->
 
@@ -194,7 +218,9 @@ DOMAIN_MIXED = 10240001
 
 表示域认证混合凭证。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthSubType-DOMAIN_MIXED = 10240001--><!--Device-AuthSubType-DOMAIN_MIXED = 10240001-End-->
 

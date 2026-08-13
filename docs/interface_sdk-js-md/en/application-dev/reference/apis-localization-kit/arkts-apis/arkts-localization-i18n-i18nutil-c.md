@@ -1,10 +1,12 @@
 # I18NUtil
 
-Provides util functions.
+Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval, time segment name retrieval, region matching, and path localization.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class I18NUtil--><!--Device-i18n-export class I18NUtil-End-->
 
@@ -26,7 +28,9 @@ Adjusts a locale ID to a format that complies with the [BCP47](https://www.rfc-e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +62,9 @@ Obtains the locale that best matches a region from the specified locale list.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -70,7 +76,7 @@ Obtains the locale that best matches a region from the specified locale list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Locale ID, for example, "zh-Hans-CN". |
+| locale | string | Yes | [Locale ID](../../../internationalization/i18n-locale-culture.md#how-it-works), for example, **zh-Hans-CN**. |
 | localeList | string[] | Yes | List of locale IDs. |
 
 **Return value:**
@@ -83,8 +89,8 @@ Obtains the locale that best matches a region from the specified locale list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getDateOrder
 
@@ -96,9 +102,11 @@ Obtains the sequence of the year, month, and day in the specified locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-I18NUtil-static getDateOrder(locale: string): string--><!--Device-I18NUtil-static getDateOrder(locale: string): string-End-->
 
@@ -108,13 +116,13 @@ Obtains the sequence of the year, month, and day in the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
+| locale | string | Yes | [Locale ID](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Sequence of the year, month, and day in the locale. "y" indicates the year, "L" indicates the month, and "d" indicates the day. |
+| string | Sequence of the year, month, and day in the locale. **y** indicates the year, **L** indicates the month, and **d** indicates the day. |
 
 ## getThreeLetterLanguage
 
@@ -122,12 +130,13 @@ Obtains the sequence of the year, month, and day in the specified locale.
 static getThreeLetterLanguage(locale: string): string
 ```
 
-Converts a language code from two letters to three letters. For example, the two-letter language code of Chinese is "zh", and the corresponding three-letter language code is "zho". For details, see  
-[ISO 639](https://www.iso.org/iso-639-language-code).
+Converts a language code from two letters to three letters. For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -139,7 +148,7 @@ Converts a language code from two letters to three letters. For example, the two
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Two-letter code of the language to be converted, for example, "zh". |
+| locale | string | Yes | Two-letter code of the language to be converted, for example, **zh**. |
 
 **Return value:**
 
@@ -151,8 +160,8 @@ Converts a language code from two letters to three letters. For example, the two
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getThreeLetterRegion
 
@@ -160,12 +169,13 @@ Converts a language code from two letters to three letters. For example, the two
 static getThreeLetterRegion(locale: string): string
 ```
 
-Converts a region code from two letters to three letters. For example, the two-letter region code of China is"CN", and the corresponding three-letter region code is "CHN". For details, see  
-[ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
+Converts a region code from two letters to three letters. For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is **CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -177,20 +187,20 @@ Converts a region code from two letters to three letters. For example, the two-l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Two-letter country/region code to be converted, for example, "CN". |
+| locale | string | Yes | Two-letter country/region code to be converted, for example, **CN**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Region code after conversion. |
+| string | Region code after conversion . |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getTimePeriodName
 
@@ -202,9 +212,11 @@ Obtains the localized expression of the specified time in the specified locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string--><!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string-End-->
 
@@ -214,8 +226,8 @@ Obtains the localized expression of the specified time in the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hour | int | Yes | Specified time, for example, 16. &lt;br&gt;The value should be an integer. |
-| locale | string | No | System locale, which consists of the language, script, and country/region. for example, "zh-Hans-CN". The default value is the current system locale. |
+| hour | int | Yes | Specified time, for example, **16**. |
+| locale | string | No | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. for example, **zh-Hans-CN**. The default value is the current system locale. |
 
 **Return value:**
 
@@ -227,8 +239,8 @@ Obtains the localized expression of the specified time in the specified locale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getUnicodeWrappedFilePath
 
@@ -236,11 +248,13 @@ Obtains the localized expression of the specified time in the specified locale.
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string
 ```
 
-Localizes a file path for the specified locale. For example, /data/out/tmp is changed to tmp/out/data/ after localization.
+Localizes a file path for the specified locale. For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -253,8 +267,8 @@ Localizes a file path for the specified locale. For example, /data/out/tmp is ch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path to mirror, for example, "/data/out/tmp". |
-| delimiter | string | No | Path delimiter. The default value is "/"". |
-| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
+| delimiter | string | No | Path delimiter. The default value is "/". |
+| locale | Intl.Locale | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
@@ -266,7 +280,49 @@ Localizes a file path for the specified locale. For example, /data/out/tmp is ch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## getUnicodeWrappedFilePath
+
+```TypeScript
+static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string
+```
+
+Localizes a file path for the specified locale. For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** 20
+
+**Substitutes:** [getUnicodeWrappedFilePath](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md#getUnicodeWrappedFilePath)(path: string, delimiter?: string, locale?: Intl.Locale)
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path to mirror, for example, "/data/out/tmp". |
+| delimiter | string | No | Path delimiter. The default value is "/". |
+| locale | intl.Locale | No | Locale** object. The default value is the current system locale. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | File path after localization. If the specified locale object corresponds to an RTL language, the processed file path contains a direction control character to ensure that the file path is displayed in mirror mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setUnicodeWrappedBidiDirection
 
@@ -274,11 +330,13 @@ Localizes a file path for the specified locale. For example, /data/out/tmp is ch
 static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string
 ```
 
-Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and LTR (left-to-right).Note: The setting does not take effect within strong characters (characters with an intrinsic, unambiguous writing direction).
+Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and LTR (left-to-right). NOTE: The setting does not take effect within strong characters (characters with an intrinsic, unambiguous writing direction).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -292,7 +350,7 @@ Sets the text direction for certain text within a paragraph, including RTL (righ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Input characters need to set direction. |
+| text | string | Yes | Text for which the direction needs to be set. |
 | direction | 'RTL' \| 'LTR' | Yes | The value can be "RTL" or "LTR". "RTL" indicates setting the input text direction from right to left. "LTR" indicates setting the input text direction from left to right. |
 
 **Return value:**
@@ -311,9 +369,11 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 
@@ -323,11 +383,11 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | double | Yes | Value of the measurement unit to be converted. |
-| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
-| style | string | No | Style used for formatting. The value can be long, short, or narrow. The default value is short. For details about the meaning or display effect of different values, see Number and Unit of Measurement Formatting. |
+| locale | string | Yes | [Locale ID](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
+| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. For details about the meaning or display effect of different values, see [Number and Unit of Measurement Formatting](../../../internationalization/i18n-numbers-weights-measures.md). |
 
 **Return value:**
 

@@ -10,6 +10,8 @@ Creates a image PixelMap from sendable image PixelMap.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap--><!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -18,7 +20,7 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pixelmap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| pixelmap | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
 
 **返回值：**
 
@@ -30,8 +32,8 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [62980104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
 
 ## 示例
 

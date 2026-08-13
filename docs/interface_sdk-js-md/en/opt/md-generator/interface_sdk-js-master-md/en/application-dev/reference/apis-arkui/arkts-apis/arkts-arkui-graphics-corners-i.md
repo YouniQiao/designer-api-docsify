@@ -4,7 +4,9 @@ Describes the four corners.
 
 **Since:** 12
 
-<!--Device-unnamed-interface Corners<T>--><!--Device-unnamed-interface Corners<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Corners--><!--Device-unnamed-interface Corners-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ Radius of the lower left corner.
 **Type:** T
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Radius of the lower right corner.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,6 +66,8 @@ Radius of the upper left corner.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -79,6 +87,8 @@ Radius of the upper right corner.
 **Type:** T
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

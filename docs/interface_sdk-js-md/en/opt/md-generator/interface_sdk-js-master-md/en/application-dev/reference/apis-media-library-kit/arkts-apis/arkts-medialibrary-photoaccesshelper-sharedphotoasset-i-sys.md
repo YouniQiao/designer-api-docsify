@@ -2,7 +2,9 @@
 
 Describes the information about a shared media asset.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface SharedPhotoAsset--><!--Device-photoAccessHelper-interface SharedPhotoAsset-End-->
 
@@ -26,7 +28,9 @@ Camera shot information of the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-cameraShotKey: string--><!--Device-SharedPhotoAsset-cameraShotKey: string-End-->
 
@@ -44,7 +48,9 @@ Path data of the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-data: string--><!--Device-SharedPhotoAsset-data: string-End-->
 
@@ -62,7 +68,9 @@ Data added to the media asset.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateAdded: long--><!--Device-SharedPhotoAsset-dateAdded: long-End-->
 
@@ -80,7 +88,9 @@ Time elapsed after the media asset was added.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateAddedMs: long--><!--Device-SharedPhotoAsset-dateAddedMs: long-End-->
 
@@ -98,7 +108,9 @@ Time when the media asset was created.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateDay: string--><!--Device-SharedPhotoAsset-dateDay: string-End-->
 
@@ -116,7 +128,9 @@ Data modified in the media asset.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateModified: long--><!--Device-SharedPhotoAsset-dateModified: long-End-->
 
@@ -134,7 +148,9 @@ Modified time of the asset in milliseconds
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateModifiedMs: long--><!--Device-SharedPhotoAsset-dateModifiedMs: long-End-->
 
@@ -152,7 +168,9 @@ Month when the media asset was created.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateMonth: string--><!--Device-SharedPhotoAsset-dateMonth: string-End-->
 
@@ -170,7 +188,9 @@ Timestamp when the media asset was taken and stored locally.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateTaken: long--><!--Device-SharedPhotoAsset-dateTaken: long-End-->
 
@@ -188,7 +208,9 @@ Whether the media asset is moved to the trash.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateTrashed: long--><!--Device-SharedPhotoAsset-dateTrashed: long-End-->
 
@@ -206,7 +228,9 @@ Time elapsed since the media asset was trashed.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateTrashedMs: long--><!--Device-SharedPhotoAsset-dateTrashedMs: long-End-->
 
@@ -224,7 +248,9 @@ Year when the media asset was created.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateYear: string--><!--Device-SharedPhotoAsset-dateYear: string-End-->
 
@@ -242,7 +268,9 @@ Display name of the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-displayName: string--><!--Device-SharedPhotoAsset-displayName: string-End-->
 
@@ -260,7 +288,9 @@ Duration of the media asset if it is a video.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-duration: int--><!--Device-SharedPhotoAsset-duration: int-End-->
 
@@ -278,7 +308,9 @@ Dynamic range type of the media asset.
 
 **Type:** DynamicRangeType
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType--><!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType-End-->
 
@@ -296,7 +328,9 @@ ID of the media asset.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-fileId: int--><!--Device-SharedPhotoAsset-fileId: int-End-->
 
@@ -314,7 +348,9 @@ Pixel height of the media asset.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-height: int--><!--Device-SharedPhotoAsset-height: int-End-->
 
@@ -332,7 +368,9 @@ Whether the media asset is hidden. **true** if hidden, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-hidden: boolean--><!--Device-SharedPhotoAsset-hidden: boolean-End-->
 
@@ -350,7 +388,9 @@ Whether the media asset is marked as a favorite. **true** if marked, **false** o
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-isFavorite: boolean--><!--Device-SharedPhotoAsset-isFavorite: boolean-End-->
 
@@ -368,7 +408,9 @@ Width and height of the LCD thumbnail of the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-lcdSize: string--><!--Device-SharedPhotoAsset-lcdSize: string-End-->
 
@@ -386,7 +428,9 @@ Media type of the media asset.
 
 **Type:** PhotoType
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-mediaType: PhotoType--><!--Device-SharedPhotoAsset-mediaType: PhotoType-End-->
 
@@ -404,7 +448,9 @@ Effect of the moving photo.
 
 **Type:** MovingPhotoEffectMode
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode--><!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode-End-->
 
@@ -422,7 +468,9 @@ Rotation angle of the media asset.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-orientation: int--><!--Device-SharedPhotoAsset-orientation: int-End-->
 
@@ -440,7 +488,9 @@ Whether the media asset is in a pending state. **true** if pending, **false** ot
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-pending: boolean--><!--Device-SharedPhotoAsset-pending: boolean-End-->
 
@@ -458,7 +508,9 @@ Location of the media asset.
 
 **Type:** PositionType
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-position: PositionType--><!--Device-SharedPhotoAsset-position: PositionType-End-->
 
@@ -476,7 +528,9 @@ File size of the media asset.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-size: long--><!--Device-SharedPhotoAsset-size: long-End-->
 
@@ -494,7 +548,9 @@ Subtype of the media asset.
 
 **Type:** PhotoSubtype
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-subtype: PhotoSubtype--><!--Device-SharedPhotoAsset-subtype: PhotoSubtype-End-->
 
@@ -512,7 +568,9 @@ Width and height of the thumb thumbnail of the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-thmSize: string--><!--Device-SharedPhotoAsset-thmSize: string-End-->
 
@@ -530,7 +588,9 @@ Time elapsed since the thumbnail status of the media asset changed.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-thumbnailModifiedMs?: long--><!--Device-SharedPhotoAsset-thumbnailModifiedMs?: long-End-->
 
@@ -548,7 +608,9 @@ Whether the thumbnail of the media asset is ready. **true** if ready, **false** 
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-thumbnailReady: boolean--><!--Device-SharedPhotoAsset-thumbnailReady: boolean-End-->
 
@@ -566,7 +628,9 @@ Whether the thumbnail of the media asset is visible.
 
 **Type:** ThumbnailVisibility
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility--><!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility-End-->
 
@@ -584,7 +648,9 @@ Title of the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-title: string--><!--Device-SharedPhotoAsset-title: string-End-->
 
@@ -602,7 +668,9 @@ URI of the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-uri: string--><!--Device-SharedPhotoAsset-uri: string-End-->
 
@@ -620,7 +688,9 @@ User comments on the media asset.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-userComment: string--><!--Device-SharedPhotoAsset-userComment: string-End-->
 
@@ -638,7 +708,9 @@ Pixel width of the media asset.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-width: int--><!--Device-SharedPhotoAsset-width: int-End-->
 

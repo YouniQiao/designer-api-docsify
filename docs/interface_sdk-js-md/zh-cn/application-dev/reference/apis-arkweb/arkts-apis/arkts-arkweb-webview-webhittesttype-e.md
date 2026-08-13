@@ -1,140 +1,174 @@
 # WebHitTestType
 
-Enum type supplied to [getHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getHitTest) for indicating the cursor node HitTest.
+[getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)接口用于指示光标节点。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum WebHitTestType--><!--Device-webview-enum WebHitTestType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## EDIT_TEXT
+## EditText
 
 ```TypeScript
-EDIT_TEXT = 0
+EditText = 0
 ```
 
-Editable area.
+可编辑的区域。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-EDIT_TEXT = 0--><!--Device-WebHitTestType-EDIT_TEXT = 0-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-EditText = 0--><!--Device-WebHitTestType-EditText = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## EMAIL
+## Email
 
 ```TypeScript
-EMAIL = 1
+Email = 1
 ```
 
-Email address.
+电子邮件地址。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-EMAIL = 1--><!--Device-WebHitTestType-EMAIL = 1-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-Email = 1--><!--Device-WebHitTestType-Email = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## HTTP_ANCHOR
+## HttpAnchor
 
 ```TypeScript
-HTTP_ANCHOR = 2
+HttpAnchor = 2
 ```
 
-Hyperlink, where **src** is **http**.
+超链接，其中src为http。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-HTTP_ANCHOR = 2--><!--Device-WebHitTestType-HTTP_ANCHOR = 2-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-HttpAnchor = 2--><!--Device-WebHitTestType-HttpAnchor = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## HTTP_ANCHOR_IMG
+## HttpAnchorImg
 
 ```TypeScript
-HTTP_ANCHOR_IMG = 3
+HttpAnchorImg = 3
 ```
 
-Image with a hyperlink, where **src** is http + HTML::img.
+带有超链接的图片，其中src为http + HTML::img。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-HTTP_ANCHOR_IMG = 3--><!--Device-WebHitTestType-HTTP_ANCHOR_IMG = 3-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-HttpAnchorImg = 3--><!--Device-WebHitTestType-HttpAnchorImg = 3-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## IMG
+## Img
 
 ```TypeScript
-IMG = 4
+Img = 4
 ```
 
-HTML::img tag.
+HTML::img标签。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-IMG = 4--><!--Device-WebHitTestType-IMG = 4-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-Img = 4--><!--Device-WebHitTestType-Img = 4-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## MAP
+## Map
 
 ```TypeScript
-MAP = 5
+Map = 5
 ```
 
-Geographical address.
+地理地址。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-MAP = 5--><!--Device-WebHitTestType-MAP = 5-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-Map = 5--><!--Device-WebHitTestType-Map = 5-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## PHONE
+## Phone
 
 ```TypeScript
-PHONE = 6
+Phone = 6
 ```
 
-Phone number.
+电话号码。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-PHONE = 6--><!--Device-WebHitTestType-PHONE = 6-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-Phone = 6--><!--Device-WebHitTestType-Phone = 6-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## UNKNOWN
+## Unknown
 
 ```TypeScript
-UNKNOWN = 7
+Unknown = 7
 ```
 
-Unknown content.
+未知内容。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebHitTestType-UNKNOWN = 7--><!--Device-WebHitTestType-UNKNOWN = 7-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHitTestType-Unknown = 7--><!--Device-WebHitTestType-Unknown = 7-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

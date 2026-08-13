@@ -1,12 +1,14 @@
 # ArcScrollBarOptions
 
-Defines the arc scroll bar options.
+Represents the parameters used to construct an **ArcScrollBar** component. > **NOTE：**> > **ArcScrollBar** must be bound to a scrollable component through **scroller** to achieve synchronization. Only a > one-to-one binding is allowed between **ArcScrollBar** and a scrollable component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-export declare interface ArcScrollBarOptions--><!--Device-unnamed-export declare interface ArcScrollBarOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ArcScrollBarOptions--><!--Device-unnamed-declare interface ArcScrollBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -22,13 +24,17 @@ import { ArcScrollBarAttribute, ArcScrollBar } from '@kit.ArkUI';
 scroller: Scroller
 ```
 
-Describes the controller for scrollable container.
+Scroller, which can be bound to scrollable components for scrolling control.
 
 **Type:** Scroller
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcScrollBarOptions-scroller: Scroller--><!--Device-ArcScrollBarOptions-scroller: Scroller-End-->
 
@@ -40,13 +46,17 @@ Describes the controller for scrollable container.
 state?: BarState
 ```
 
-Sets the state of scroll bar.
+State of the scrollbar.&lt;br/&gt;Default value: **BarState.Auto**
 
 **Type:** BarState
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcScrollBarOptions-state?: BarState--><!--Device-ArcScrollBarOptions-state?: BarState-End-->
 

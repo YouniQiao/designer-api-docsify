@@ -1,11 +1,10 @@
 # LineTypeset
 
-保存文本内容及样式的载体，可用于计算单行排版信息。
+保存文本内容及样式的载体，可用于计算单行排版信息。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的 [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的  
-[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 <!--Device-text-class LineTypeset--><!--Device-text-class LineTypeset-End-->
 
@@ -19,7 +18,9 @@ createLine(startIndex: number, count: number): TextLine
 
 根据指定的排版区间生成文本行对象。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -44,7 +45,7 @@ createLine(startIndex: number, count: number): TextLine
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -63,7 +64,9 @@ getLineBreak(startIndex: number, width: number): number
 
 计算在限定宽度下，从指定位置开始可以排版的字符数。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -88,7 +91,7 @@ getLineBreak(startIndex: number, width: number): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

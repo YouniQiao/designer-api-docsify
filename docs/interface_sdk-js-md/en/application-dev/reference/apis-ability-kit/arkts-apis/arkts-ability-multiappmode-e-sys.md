@@ -2,9 +2,11 @@
 
 The module defines whether an application supports the multi-app mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum MultiAppMode--><!--Device-unnamed-export enum MultiAppMode-End-->
 
@@ -20,9 +22,11 @@ NOT_SUPPORTED = 0
 
 The application does not support the multi-app mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +42,13 @@ The application does not support the multi-app mode.
 MULTI_INSTANCE = 1
 ```
 
-The application supports the multi-instance mode.
+The application supports the multi-instance mode. Note: This property is valid only for 2-in-1 devices.
 
-Note: This property is valid only for 2-in-1 devices.
+**Since:** 23
 
-**Since:** 14
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,9 +66,11 @@ APP_CLONE = 2
 
 The application supports the app-clone mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

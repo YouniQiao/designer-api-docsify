@@ -2,7 +2,9 @@
 
 RGBA color description.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface Color--><!--Device-uiEffect-interface Color-End-->
 
@@ -26,7 +28,9 @@ Alpha component of the color (transparency).
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-alpha: double--><!--Device-Color-alpha: double-End-->
 
@@ -44,7 +48,9 @@ Blue component of the color.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-blue: double--><!--Device-Color-blue: double-End-->
 
@@ -62,7 +68,9 @@ Green component of the color.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-green: double--><!--Device-Color-green: double-End-->
 
@@ -80,7 +88,9 @@ Red component of the color.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-red: double--><!--Device-Color-red: double-End-->
 

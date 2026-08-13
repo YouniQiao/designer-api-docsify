@@ -2,7 +2,9 @@
 
 定义进度上报的数据。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unifiedDataChannel-interface ProgressInfo--><!--Device-unifiedDataChannel-interface ProgressInfo-End-->
 
@@ -18,11 +20,13 @@ progress: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProgressInfo-progress: int--><!--Device-ProgressInfo-progress: int-End-->
 
@@ -38,11 +42,13 @@ status: ListenerStatus
 
 **类型：** [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md)
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProgressInfo-status: ListenerStatus--><!--Device-ProgressInfo-status: ListenerStatus-End-->
 

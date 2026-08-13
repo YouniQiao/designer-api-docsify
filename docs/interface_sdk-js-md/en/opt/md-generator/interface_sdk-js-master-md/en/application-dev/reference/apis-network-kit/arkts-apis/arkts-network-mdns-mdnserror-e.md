@@ -4,6 +4,8 @@ Defines the mDNS error information.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-mdns-export enum MdnsError--><!--Device-mdns-export enum MdnsError-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
@@ -17,6 +19,8 @@ INTERNAL_ERROR = 0
 Indicates that the operation failed due to internal error.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Indicates that the operation failed because it is already active.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MdnsError-ALREADY_ACTIVE = 1--><!--Device-MdnsError-ALREADY_ACTIVE = 1-End-->
@@ -49,6 +55,8 @@ MAX_LIMIT = 2
 &lt;p&gt;Indicates that the operation failed because the maximum outstanding requests from the applications have reached.&lt;/p&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

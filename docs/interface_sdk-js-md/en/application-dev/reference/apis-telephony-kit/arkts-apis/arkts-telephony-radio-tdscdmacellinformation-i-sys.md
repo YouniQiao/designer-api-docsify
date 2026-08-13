@@ -2,9 +2,11 @@
 
 Obtains TDSCDMA cell information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface TdscdmaCellInformation--><!--Device-radio-export interface TdscdmaCellInformation-End-->
 
@@ -26,11 +28,13 @@ cellId: int
 
 Indicates the cell ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-cellId: int--><!--Device-TdscdmaCellInformation-cellId: int-End-->
 
@@ -46,11 +50,13 @@ cpid: int
 
 Indicates the cell parameter ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-cpid: int--><!--Device-TdscdmaCellInformation-cpid: int-End-->
 
@@ -66,11 +72,13 @@ lac: int
 
 Indicates the location area code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-lac: int--><!--Device-TdscdmaCellInformation-lac: int-End-->
 
@@ -88,9 +96,11 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-mcc: string--><!--Device-TdscdmaCellInformation-mcc: string-End-->
 
@@ -108,9 +118,11 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-mnc: string--><!--Device-TdscdmaCellInformation-mnc: string-End-->
 
@@ -126,11 +138,13 @@ uarfcn: int
 
 Indicates the absolute radio frequency number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-uarfcn: int--><!--Device-TdscdmaCellInformation-uarfcn: int-End-->
 

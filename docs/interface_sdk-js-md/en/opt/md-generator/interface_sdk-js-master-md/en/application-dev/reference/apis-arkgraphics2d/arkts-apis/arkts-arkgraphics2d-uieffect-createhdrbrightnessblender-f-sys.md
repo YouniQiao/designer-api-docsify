@@ -14,7 +14,9 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness effect to a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender--><!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender-End-->
 
@@ -38,7 +40,7 @@ Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness ef
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

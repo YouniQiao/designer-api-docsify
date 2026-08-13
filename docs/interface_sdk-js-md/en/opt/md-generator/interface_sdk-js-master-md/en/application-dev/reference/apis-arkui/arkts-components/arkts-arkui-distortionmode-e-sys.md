@@ -4,6 +4,8 @@ Enum for distortion animation mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum DistortionMode--><!--Device-unnamed-declare enum DistortionMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ DISTORTION_AUTO = 0
 Adaptive implementation of distortion animation
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Distortion animation is enabled.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistortionMode-DISTORTION_ENABLED = 1--><!--Device-DistortionMode-DISTORTION_ENABLED = 1-End-->
@@ -55,6 +61,8 @@ DISTORTION_DISABLED = 2
 Distortion animation is disabled.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

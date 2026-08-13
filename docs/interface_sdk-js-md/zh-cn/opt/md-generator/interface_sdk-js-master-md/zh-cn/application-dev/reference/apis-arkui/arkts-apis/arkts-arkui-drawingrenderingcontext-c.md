@@ -4,6 +4,8 @@ DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class DrawingRenderingContext--><!--Device-unnamed-declare class DrawingRenderingContext-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ constructor(unit?: LengthMetricsUnit)
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -30,7 +34,7 @@ constructor(unit?: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-lengthmetricsunit-t.md) | 否 |
 
 ## invalidate
 
@@ -42,50 +46,12 @@ invalidate(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DrawingRenderingContext-invalidate(): void--><!--Device-DrawingRenderingContext-invalidate(): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## canvas
-
-```TypeScript
-get canvas(): DrawingCanvas
-```
-
-获取绘制内容的画布对象。
-
-**类型：** [DrawingCanvas](arkts-arkui-drawingcanvas-t.md)
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawingRenderingContext-get canvas(): DrawingCanvas--><!--Device-DrawingRenderingContext-get canvas(): DrawingCanvas-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## size
-
-```TypeScript
-get size(): Size
-```
-
-获取DrawingRenderingContext的大小。
-
-**类型：** [Size](arkts-arkui-size-i.md)
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawingRenderingContext-get size(): Size--><!--Device-DrawingRenderingContext-get size(): Size-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

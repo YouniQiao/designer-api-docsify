@@ -14,7 +14,7 @@ function canShowFloating(callback: AsyncCallback<boolean>): void
 
 Checks whether a specified application can show as a floating window.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 
@@ -49,7 +49,7 @@ function canShowFloating(): Promise<boolean>
 
 Checks whether a specified application can show as a floating window.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 

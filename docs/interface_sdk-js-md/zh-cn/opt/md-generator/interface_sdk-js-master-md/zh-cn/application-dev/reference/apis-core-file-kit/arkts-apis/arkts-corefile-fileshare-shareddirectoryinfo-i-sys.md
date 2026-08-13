@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-fileShare-export interface SharedDirectoryInfo--><!--Device-fileShare-export interface SharedDirectoryInfo-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
@@ -21,6 +23,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ path: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SharedDirectoryInfo-path: string--><!--Device-SharedDirectoryInfo-path: string-End-->
@@ -56,11 +62,13 @@ path: string
 permissionMode: number
 ```
 
-应用程序捐献目录的权限，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
+应用程序捐献目录的权限，例如 { OperationMode.READ_MODE } 或 { OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

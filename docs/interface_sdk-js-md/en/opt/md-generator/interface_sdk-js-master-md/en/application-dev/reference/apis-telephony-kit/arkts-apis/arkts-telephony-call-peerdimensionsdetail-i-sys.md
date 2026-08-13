@@ -2,7 +2,9 @@
 
 Defines the peer image resolution in a video call.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface PeerDimensionsDetail--><!--Device-call-export interface PeerDimensionsDetail-End-->
 
@@ -26,7 +28,9 @@ Call ID.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PeerDimensionsDetail-callId: int--><!--Device-PeerDimensionsDetail-callId: int-End-->
 
@@ -44,7 +48,9 @@ Height of the peer image, in pixels.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PeerDimensionsDetail-height: int--><!--Device-PeerDimensionsDetail-height: int-End-->
 
@@ -62,7 +68,9 @@ Width of the peer image, in pixels.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PeerDimensionsDetail-width: int--><!--Device-PeerDimensionsDetail-width: int-End-->
 

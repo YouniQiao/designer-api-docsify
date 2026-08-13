@@ -6,9 +6,11 @@
 function enterKioskMode(context: UIAbilityContext): Promise<void>
 ```
 
-进入Kiosk模式。使用Promise异步回调。该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
+进入Kiosk模式。使用Promise异步回调。 该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,11 +34,11 @@ function enterKioskMode(context: UIAbilityContext): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [16000113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000113-当前ability不在前台) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16000110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) |
-| [16000111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000111-已经有应用进入了kiosk模式) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16000113](../errorcode-ability.md#16000113-当前ability不在前台) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000110](../errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) |
+| [16000111](../errorcode-ability.md#16000111-已经有应用进入了kiosk模式) |
 
 ## 示例
 

@@ -6,9 +6,11 @@ Define AppIntentEntity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity-End-->
+**Deprecated since:** -1
+
+<!--Device-insightIntent-abstract class AppIntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,7 +30,9 @@ Called when query entity execute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +66,9 @@ The display name of entity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,7 +8,7 @@ Describes the advertising data.
 
 **Deprecated since:** 10
 
-**Substitutes:** [AdvertiseData](ohos.bluetooth.ble/ble.AdvertiseData)
+**Substitutes:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md#AdvertiseData)
 
 <!--Device-bluetoothManager-interface AdvertiseData--><!--Device-bluetoothManager-interface AdvertiseData-End-->
 
@@ -36,7 +36,7 @@ The specified manufacturer data list to this advertisement
 
 **Deprecated since:** 10
 
-**Substitutes:** [manufactureData](ohos.bluetooth.ble/ble.AdvertiseData#manufactureData)
+**Substitutes:** [manufactureData](arkts-connectivity-ble-advertisedata-i.md#manufactureData)
 
 <!--Device-AdvertiseData-manufactureData: Array<ManufactureData>--><!--Device-AdvertiseData-manufactureData: Array<ManufactureData>-End-->
 
@@ -58,7 +58,7 @@ The specified service data list to this advertisement
 
 **Deprecated since:** 10
 
-**Substitutes:** [serviceData](ohos.bluetooth.ble/ble.AdvertiseData#serviceData)
+**Substitutes:** [serviceData](arkts-connectivity-ble-advertisedata-i.md#serviceData)
 
 <!--Device-AdvertiseData-serviceData: Array<ServiceData>--><!--Device-AdvertiseData-serviceData: Array<ServiceData>-End-->
 
@@ -80,7 +80,7 @@ The specified service UUID list to this advertisement
 
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuids](ohos.bluetooth.ble/ble.AdvertiseData#serviceUuids)
+**Substitutes:** [serviceUuids](arkts-connectivity-ble-advertisedata-i.md#serviceUuids)
 
 <!--Device-AdvertiseData-serviceUuids: Array<string>--><!--Device-AdvertiseData-serviceUuids: Array<string>-End-->
 

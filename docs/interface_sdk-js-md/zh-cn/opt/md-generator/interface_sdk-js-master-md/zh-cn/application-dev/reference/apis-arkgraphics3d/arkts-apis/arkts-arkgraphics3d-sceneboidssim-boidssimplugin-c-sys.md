@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class BoidsSimPlugin--><!--Device-unnamed-export declare class BoidsSimPlugin-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -19,6 +21,8 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 获取指定场景的默认群组模拟世界.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

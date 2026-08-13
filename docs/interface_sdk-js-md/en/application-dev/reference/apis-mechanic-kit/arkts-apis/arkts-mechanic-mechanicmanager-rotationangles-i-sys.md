@@ -2,9 +2,11 @@
 
 The rotion angles, relative to the current position.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface RotationAngles--><!--Device-mechanicManager-export interface RotationAngles-End-->
 
@@ -26,11 +28,13 @@ pitch?: double
 
 Pitch angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationAngles-pitch?: double--><!--Device-RotationAngles-pitch?: double-End-->
 
@@ -46,11 +50,13 @@ roll?: double
 
 Roll angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationAngles-roll?: double--><!--Device-RotationAngles-roll?: double-End-->
 
@@ -66,11 +72,13 @@ yaw?: double
 
 Yaw angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationAngles-yaw?: double--><!--Device-RotationAngles-yaw?: double-End-->
 

@@ -6,6 +6,8 @@ Defines the spacing between child components along the main axis or cross axis o
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface FlexSpaceOptions--><!--Device-unnamed-export declare interface FlexSpaceOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,11 +20,13 @@ cross?: LengthMetrics
 
 Space on the main axis of the Flex component.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ main?: LengthMetrics
 
 Space on the main axis of the Flex component.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

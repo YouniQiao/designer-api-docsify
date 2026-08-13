@@ -12,6 +12,8 @@ function completeArkTSScriptInApp(context: Context, requestCode: string, result:
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -38,7 +40,7 @@ function completeArkTSScriptInApp(context: Context, requestCode: string, result:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000020](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000020-传入的context对象不是ability级别context) | The context is not ability context. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| [16000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-指定的id不存在) | The specified ID does not exist. |
+| [16000020](../errorcode-ability.md#16000020-传入的context对象不是ability级别context) | The context is not ability context. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | The specified ID does not exist. |
 

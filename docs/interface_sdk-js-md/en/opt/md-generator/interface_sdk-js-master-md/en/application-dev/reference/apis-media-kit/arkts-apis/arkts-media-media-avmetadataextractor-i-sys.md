@@ -1,12 +1,10 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use   
-[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor)to create an AVMetadataExtractor instance.
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) to create an AVMetadataExtractor instance. For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
-For details about the demo of obtaining audio or video metadata and video thumbnails, see   
-[Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
 
@@ -26,7 +24,9 @@ getFrameIndexByTime(timeUs: number): Promise<number>
 
 Obtains the video frame number corresponding to a video timestamp. Only MP4 video files are supported.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>--><!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>-End-->
 
@@ -50,9 +50,9 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) |
 
 ## Examples
 
@@ -75,7 +75,9 @@ getTimeByFrameIndex(index: number): Promise<number>
 
 Obtains the video timestamp corresponding to a video frame number. Only MP4 video files are supported.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>--><!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>-End-->
 
@@ -99,9 +101,9 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) |
 
 ## Examples
 

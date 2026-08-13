@@ -1,10 +1,12 @@
 # CloudService (System API)
 
-Provides APIs for interacting with the cloud sync service.You need to inherit this class and implement APIs of this class.The system calls these APIs to connect to the cloud and use the cloud sync service.
+Provides APIs for interacting with the cloud sync service. You need to inherit this class and implement APIs of this class. The system calls these APIs to connect to the cloud and use the cloud sync service.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface CloudService--><!--Device-cloudExtension-export interface CloudService-End-->
 
@@ -24,11 +26,13 @@ import { cloudExtension } from '@kit.ArkData';
 connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,which is created by using createAssetLoaderStub. This API uses a promise to return the result.You can use this API to connect to the asset loader.
+Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader, which is created by using createAssetLoaderStub. This API uses a promise to return the result. You can use this API to connect to the asset loader.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
 
@@ -55,11 +59,13 @@ Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,
 connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-Connects to a cloud database by obtaining a RemoteObject instance of CloudDB,which is created by using createCloudDBStub. This API uses a promise to return the result.
+Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, which is created by using createCloudDBStub. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
 
@@ -82,21 +88,17 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB,whi
 
 ## connectShareCenter
 
-ArkTS-Dyn:
-```TypeScript
-connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject>
-```
-
-ArkTS-Sta:
 ```TypeScript
 connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>
 ```
 
-Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter,which is created by using createShareServiceStub. This API uses a promise to return the result.
+Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, which is created by using createShareServiceStub. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>-End-->
 
@@ -108,7 +110,7 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter,whic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 
 **Return value:**
@@ -144,9 +146,11 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 Obtains brief application information. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>--><!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>-End-->
 
@@ -190,9 +194,11 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 Obtains the application database schema information. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>--><!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>-End-->
 
@@ -243,9 +249,11 @@ getServiceInfo(): Promise<ServiceInfo>
 
 Obtains the server information. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>--><!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>-End-->
 
@@ -286,15 +294,6 @@ class MyCloudService implements cloudExtension.CloudService {
 
 ## subscribe
 
-ArkTS-Dyn:
-```TypeScript
-subscribe(
-      subInfo: Record<string, Array<Database>>,
-      expirationTime: number
-    ): Promise<Result<SubscribeInfo>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 subscribe(
       subInfo: Record<string, Array<Database>>,
@@ -304,9 +303,11 @@ subscribe(
 
 Subscribes to data. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>--><!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>-End-->
 
@@ -319,7 +320,7 @@ Subscribes to data. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes | Data to be subscribed to, in KV pairs of the application bundle name and database information. |
-| expirationTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Subscription expiration time, in ms. |
+| expirationTime | long | Yes | Subscription expiration time, in ms. |
 
 **Return value:**
 
@@ -353,21 +354,17 @@ class MyCloudService implements cloudExtension.CloudService {
 
 ## unsubscribe
 
-ArkTS-Dyn:
-```TypeScript
-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>
 ```
 
 Unsubscribes from data changes in the cloud. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>--><!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>-End-->
 
@@ -385,5 +382,5 @@ Unsubscribes from data changes in the cloud. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| Promise&lt;int&gt; | Promise used to return the result. |
 

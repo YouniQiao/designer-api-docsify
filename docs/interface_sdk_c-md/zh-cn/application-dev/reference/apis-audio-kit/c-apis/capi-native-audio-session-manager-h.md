@@ -306,7 +306,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_ActivateAudioSession(OH_AudioSessio
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| const OH_AudioSession_Strategy *strategy | 指向[OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)，用于设置音频会话策略。 |
+| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md) *strategy | 指向[OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)，用于设置音频会话策略。 |
 
 **返回：**
 

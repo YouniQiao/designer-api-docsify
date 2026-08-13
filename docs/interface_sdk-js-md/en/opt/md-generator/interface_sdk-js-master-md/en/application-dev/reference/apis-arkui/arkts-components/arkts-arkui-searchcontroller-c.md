@@ -1,26 +1,16 @@
 # SearchController
 
-The controller for the **Search** component inherits from  
-[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API  
-[getText](TextContentControllerBase#getText) and other APIs like&lt;!--DelEnd--&gt;  
-[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentRect),  
-[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentLineCount),  
-[getCaretOffset](TextContentControllerBase#getCaretOffset), [addText](TextContentControllerBase#addText),  
-[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deleteText),  
-[getSelection](TextContentControllerBase#getSelection),  
-[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearPreviewText),  
-[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder), and  
-[deleteBackward](TextContentControllerBase#deleteBackward).
+The controller for the **Search** component inherits from [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API getText and other APIs like&lt;!--DelEnd--&gt; [getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentRect), [getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentLineCount), getCaretOffset, addText, [deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deleteText), getSelection, [clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearPreviewText), setStyledPlaceholder, and deleteBackward.
 
-## Objects to Import
-
-```ts controller: SearchController = new SearchController();```
+## Objects to Import ```ts controller: SearchController = new SearchController(); ```
 
 **Inheritance/Implementation:** SearchController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase)
 
 **Since:** 8
 
-<!--Device-unnamed-declare class SearchController extends TextContentControllerBase--><!--Device-unnamed-declare class SearchController extends TextContentControllerBase-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class SearchController--><!--Device-unnamed-declare class SearchController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +23,8 @@ caretPosition(value: number): void
 Sets the position of the caret.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,6 +48,8 @@ A constructor used to create a **SearchController** object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SearchController-constructor()--><!--Device-SearchController-constructor()-End-->
@@ -71,6 +65,8 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 Sets the text selection range and highlights the selected text when the component is focused. This API works only when the value of **selectionStart** is less than that of **selectionEnd**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,6 +93,8 @@ stopEditing(): void
 Exits the editing state.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,19 +6,13 @@
 function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-将旋转矢量转换为旋转矩阵，使用Callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)
-> 替代。
+将旋转矢量转换为旋转矩阵，使用Callback异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(rotationVector:)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -56,18 +50,13 @@ sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877],
 function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>
 ```
 
-将旋转矢量转换为旋转矩阵，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
+将旋转矢量转换为旋转矩阵，使用Promise异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(rotationVector:)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(rotationVector: Array&lt;double&gt;)
 
 <!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
@@ -109,19 +98,13 @@ promise.then((data: Array<number>) => {
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void
 ```
 
-根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)
-> 替代。
+根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(gravity:)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
 
 <!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void-End-->
 
@@ -158,18 +141,13 @@ sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>
 ```
 
-根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
+根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(gravity:)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;)
 
 <!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>-End-->
 

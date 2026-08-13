@@ -4,9 +4,11 @@ Describes the wear detection sensor data. It extends from [Response](arkts-senso
 
 **Inheritance/Implementation:** WearDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-sensor-interface WearDetectionResponse extends Response--><!--Device-sensor-interface WearDetectionResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface WearDetectionResponse--><!--Device-sensor-interface WearDetectionResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,7 +28,9 @@ Whether the device is being worn. The value **1** means that the device is being
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WearDetectionResponse-value: double--><!--Device-WearDetectionResponse-value: double-End-->
 

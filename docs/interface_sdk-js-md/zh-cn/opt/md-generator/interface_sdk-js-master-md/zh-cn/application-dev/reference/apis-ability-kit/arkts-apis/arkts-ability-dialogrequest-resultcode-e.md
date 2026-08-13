@@ -2,7 +2,9 @@
 
 模态弹框请求结果码。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-dialogRequest-export enum ResultCode--><!--Device-dialogRequest-export enum ResultCode-End-->
 
@@ -16,7 +18,9 @@ RESULT_OK = 0
 
 表示成功。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResultCode-RESULT_OK = 0--><!--Device-ResultCode-RESULT_OK = 0-End-->
 
@@ -30,7 +34,9 @@ RESULT_CANCEL = 1
 
 表示失败。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResultCode-RESULT_CANCEL = 1--><!--Device-ResultCode-RESULT_CANCEL = 1-End-->
 

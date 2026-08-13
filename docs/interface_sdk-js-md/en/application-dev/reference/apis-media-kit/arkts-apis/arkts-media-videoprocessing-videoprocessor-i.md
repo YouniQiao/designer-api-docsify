@@ -4,7 +4,9 @@ Provides the VideoProcessor type, including AIHDR related functions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-videoProcessing-interface VideoProcessor--><!--Device-videoProcessing-interface VideoProcessor-End-->
 
@@ -26,7 +28,9 @@ Gets the current status of video processor features.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,7 @@ Gets the current status of video processor features.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## offStatusChange
 
@@ -56,7 +60,9 @@ Unregisters a listener for video processor status changes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,9 +80,9 @@ Unregisters a listener for video processor status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
-| [29200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
+| [29200006](../../apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
 
 ## onStatusChange
 
@@ -88,7 +94,9 @@ Registers a listener for video processor status changes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +114,7 @@ Registers a listener for video processor status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
-| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
+| [29200007](../../apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 

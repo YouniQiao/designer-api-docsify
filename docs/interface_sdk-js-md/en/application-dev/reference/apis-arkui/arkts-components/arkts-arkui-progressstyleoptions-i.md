@@ -1,8 +1,6 @@
 # ProgressStyleOptions
 
-Defines the progress bar style options.
-
-Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
+Defines the progress bar style options. Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
 **Inheritance/Implementation:** ProgressStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
@@ -10,7 +8,9 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoption
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-declare interface ProgressStyleOptions extends CommonProgressStyleOptions--><!--Device-unnamed-declare interface ProgressStyleOptions extends CommonProgressStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ProgressStyleOptions--><!--Device-unnamed-declare interface ProgressStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,17 +20,15 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoption
 scaleCount?: number
 ```
 
-Number of divisions on the ring-style process indicator.
-
-Default value: **120**
-
-Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
+Number of divisions on the ring-style process indicator. Default value: **120** Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,15 +44,15 @@ Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside th
 scaleWidth?: Length
 ```
 
-Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used.
-
-Default value: **2.0vp**
+Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used. Default value: **2.0vp**
 
 **Type:** Length
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,17 +68,15 @@ Default value: **2.0vp**
 strokeWidth?: Length
 ```
 
-Stroke width of the progress indicator. Percentage values are not supported.
-
-Default value: **4.0vp**
-
-If the value is out of the range, the default value is used.
+Stroke width of the progress indicator. Percentage values are not supported. Default value: **4.0vp** If the value is out of the range, the default value is used.
 
 **Type:** Length
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -2,7 +2,9 @@
 
 Enumerates the directions of a closed contour.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum PathDirection--><!--Device-drawing-enum PathDirection-End-->
 
@@ -16,7 +18,9 @@ CLOCKWISE = 0
 
 Adds a closed contour clockwise.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathDirection-CLOCKWISE = 0--><!--Device-PathDirection-CLOCKWISE = 0-End-->
 
@@ -30,7 +34,9 @@ COUNTER_CLOCKWISE = 1
 
 Adds a closed contour counterclockwise.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathDirection-COUNTER_CLOCKWISE = 1--><!--Device-PathDirection-COUNTER_CLOCKWISE = 1-End-->
 

@@ -2,9 +2,11 @@
 
 场景资源类型枚举.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->
 
@@ -18,9 +20,11 @@ UNKNOWN = 0
 
 资源是Unknown类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
 
@@ -34,9 +38,11 @@ NODE = 1
 
 资源是Node类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
 
@@ -50,9 +56,11 @@ ENVIRONMENT = 2
 
 资源是Environment类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-ENVIRONMENT = 2--><!--Device-SceneResourceType-ENVIRONMENT = 2-End-->
 
@@ -66,9 +74,11 @@ MATERIAL = 3
 
 资源是Material类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-MATERIAL = 3--><!--Device-SceneResourceType-MATERIAL = 3-End-->
 
@@ -82,9 +92,11 @@ MESH = 4
 
 资源是Mesh类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-MESH = 4--><!--Device-SceneResourceType-MESH = 4-End-->
 
@@ -98,9 +110,11 @@ ANIMATION = 5
 
 资源是Animation类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
 
@@ -114,9 +128,11 @@ SHADER = 6
 
 资源是Shader类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-SHADER = 6--><!--Device-SceneResourceType-SHADER = 6-End-->
 
@@ -130,9 +146,11 @@ IMAGE = 7
 
 资源是Image类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
 
@@ -146,9 +164,11 @@ MESH_RESOURCE = 8
 
 资源是MeshResource类型
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
 
@@ -162,9 +182,11 @@ EFFECT = 9
 
 资源是Effect类型.
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
 

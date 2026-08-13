@@ -4,6 +4,8 @@ Represents the single-line display mode. In single-line mode, the component does
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class SingleLineConfig--><!--Device-unnamed-export declare class SingleLineConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,9 +24,11 @@ itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 Rounded corner radius for grid items.
 
-**Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -38,11 +42,13 @@ Rounded corner radius for grid items.
 itemDisplayRatio?: ItemDisplayRatio
 ```
 
-Aspect ratio for grid display. Both 1:1 and the original image aspect ratio are supported. The default value is 1:1.
+Aspect ratio for grid display. Both 1:1 and the original image aspect ratio are supported. The default value is 1: 1.
 
 **Type:** [ItemDisplayRatio](arkts-medialibrary-file-photopickercomponent-itemdisplayratio-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -61,6 +67,8 @@ Spacing between grid items.
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -6,7 +6,9 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export interface WriteOptions extends Options--><!--Device-unnamed-export interface WriteOptions extends Options-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface WriteOptions--><!--Device-unnamed-export interface WriteOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -21,6 +23,8 @@ length?: number
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -39,6 +43,8 @@ offset?: number
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

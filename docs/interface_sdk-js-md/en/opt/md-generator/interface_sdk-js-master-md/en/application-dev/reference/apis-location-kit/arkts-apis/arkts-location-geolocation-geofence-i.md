@@ -6,7 +6,7 @@ Circular fence information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Geofence](ohos.geoLocationManager/geoLocationManager.Geofence)
+**Substitutes:** [Geofence](arkts-location-geolocationmanager-geofence-i.md#Geofence)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,7 +32,7 @@ expiration: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [expiration](ohos.geoLocationManager/geoLocationManager.Geofence#expiration)
+**Substitutes:** [expiration](arkts-location-geolocationmanager-geofence-i.md#expiration)
 
 <!--Device-Geofence-expiration: number--><!--Device-Geofence-expiration: number-End-->
 
@@ -50,7 +50,7 @@ latitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.Geofence#latitude)
+**Substitutes:** [latitude](arkts-location-geolocationmanager-geofence-i.md#latitude)
 
 <!--Device-Geofence-latitude: number--><!--Device-Geofence-latitude: number-End-->
 
@@ -68,7 +68,7 @@ longitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.Geofence#longitude)
+**Substitutes:** [longitude](arkts-location-geolocationmanager-geofence-i.md#longitude)
 
 <!--Device-Geofence-longitude: number--><!--Device-Geofence-longitude: number-End-->
 
@@ -86,7 +86,7 @@ radius: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [radius](ohos.geoLocationManager/geoLocationManager.Geofence#radius)
+**Substitutes:** [radius](arkts-location-geolocationmanager-geofence-i.md#radius)
 
 <!--Device-Geofence-radius: number--><!--Device-Geofence-radius: number-End-->
 

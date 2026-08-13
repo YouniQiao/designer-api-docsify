@@ -1,8 +1,6 @@
 # BundleInfo
 
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](#BundleInfo)替代。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](#BundleInfo)替代。
 
 **起始版本：** 7
 
@@ -20,10 +18,7 @@
 readonly abilityInfos: Array<AbilityInfo>
 ```
 
-Ability的配置信息
-
-通过调用  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2)接口时，传入GET_BUNDLE_WITH_ABILITIES获取。
+Ability的配置信息 通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) 接口时，传入GET_BUNDLE_WITH_ABILITIES获取。
 
 **类型：** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;
 
@@ -33,7 +28,7 @@ Ability的配置信息
 
 **废弃版本：** 9
 
-**替代接口：** [abilitiesInfo](arkts-ability-hapmoduleinfo-i.md#abilitiesInfo)
+**替代接口：** abilitiesInfo
 
 <!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>--><!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>-End-->
 
@@ -55,7 +50,7 @@ readonly appId: string
 
 **废弃版本：** 9
 
-**替代接口：** [appId](ohos.bundle.bundleManager/bundleManager.SignatureInfo#appId)
+**替代接口：** appId
 
 <!--Device-BundleInfo-readonly appId: string--><!--Device-BundleInfo-readonly appId: string-End-->
 
@@ -77,7 +72,7 @@ readonly appInfo: ApplicationInfo
 
 **废弃版本：** 9
 
-**替代接口：** [appInfo](ohos.bundle.bundleManager/bundleManager.BundleInfo#appInfo)
+**替代接口：** appInfo
 
 <!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
 
@@ -179,7 +174,7 @@ readonly hapModuleInfos: Array<HapModuleInfo>
 
 **废弃版本：** 9
 
-**替代接口：** [hapModulesInfo](arkts-ability-bundleinfo-i.md#hapModulesInfo)
+**替代接口：** hapModulesInfo
 
 <!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>--><!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>-End-->
 
@@ -201,7 +196,7 @@ HAP安装时间，单位：毫秒。
 
 **废弃版本：** 9
 
-**替代接口：** [installTime](ohos.bundle.bundleManager/bundleManager.BundleInfo#installTime)
+**替代接口：** installTime
 
 <!--Device-BundleInfo-readonly installTime: number--><!--Device-BundleInfo-readonly installTime: number-End-->
 
@@ -263,7 +258,7 @@ readonly minCompatibleVersionCode: number
 
 **废弃版本：** 9
 
-**替代接口：** [minCompatibleVersionCode](ohos.bundle.bundleManager/bundleManager.BundleInfo#minCompatibleVersionCode)
+**替代接口：** minCompatibleVersionCode
 
 <!--Device-BundleInfo-readonly minCompatibleVersionCode: number--><!--Device-BundleInfo-readonly minCompatibleVersionCode: number-End-->
 
@@ -285,7 +280,7 @@ readonly name: string
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.BundleInfo#name)
+**替代接口：** name
 
 <!--Device-BundleInfo-readonly name: string--><!--Device-BundleInfo-readonly name: string-End-->
 
@@ -297,10 +292,7 @@ readonly name: string
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-应用运行时需向系统申请的权限集合的详细信息
-
-通过调用  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+应用运行时需向系统申请的权限集合的详细信息 通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) 接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
 
 **类型：** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)&gt;
 
@@ -310,7 +302,7 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 **废弃版本：** 9
 
-**替代接口：** [reqPermissionDetails](ohos.bundle.bundleManager/bundleManager.BundleInfo#reqPermissionDetails)
+**替代接口：** reqPermissionDetails
 
 <!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>--><!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>-End-->
 
@@ -332,7 +324,7 @@ readonly reqPermissionStates: Array<number>
 
 **废弃版本：** 9
 
-**替代接口：** [permissionGrantStates](arkts-ability-bundleinfo-i.md#permissionGrantStates)
+**替代接口：** permissionGrantStates
 
 <!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
 
@@ -344,10 +336,7 @@ readonly reqPermissionStates: Array<number>
 readonly reqPermissions: Array<string>
 ```
 
-应用运行时需向系统申请的权限集合
-
-通过调用  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+应用运行时需向系统申请的权限集合 通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) 接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -357,7 +346,7 @@ readonly reqPermissions: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [permissions](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#permissions)
+**替代接口：** permissions
 
 <!--Device-BundleInfo-readonly reqPermissions: Array<string>--><!--Device-BundleInfo-readonly reqPermissions: Array<string>-End-->
 
@@ -379,7 +368,7 @@ readonly targetVersion: number
 
 **废弃版本：** 9
 
-**替代接口：** [targetVersion](ohos.bundle.bundleManager/bundleManager.BundleInfo#targetVersion)
+**替代接口：** targetVersion
 
 <!--Device-BundleInfo-readonly targetVersion: number--><!--Device-BundleInfo-readonly targetVersion: number-End-->
 
@@ -401,7 +390,7 @@ readonly type: string
 
 **废弃版本：** 9
 
-**替代接口：** [bundleType](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#bundleType)
+**替代接口：** bundleType
 
 <!--Device-BundleInfo-readonly type: string--><!--Device-BundleInfo-readonly type: string-End-->
 
@@ -423,7 +412,7 @@ readonly uid: number
 
 **废弃版本：** 9
 
-**替代接口：** [uid](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#uid)
+**替代接口：** uid
 
 <!--Device-BundleInfo-readonly uid: number--><!--Device-BundleInfo-readonly uid: number-End-->
 
@@ -445,7 +434,7 @@ HAP更新时间，单位：毫秒。
 
 **废弃版本：** 9
 
-**替代接口：** [updateTime](ohos.bundle.bundleManager/bundleManager.BundleInfo#updateTime)
+**替代接口：** updateTime
 
 <!--Device-BundleInfo-readonly updateTime: number--><!--Device-BundleInfo-readonly updateTime: number-End-->
 
@@ -467,7 +456,7 @@ readonly vendor: string
 
 **废弃版本：** 9
 
-**替代接口：** [vendor](ohos.bundle.bundleManager/bundleManager.BundleInfo#vendor)
+**替代接口：** vendor
 
 <!--Device-BundleInfo-readonly vendor: string--><!--Device-BundleInfo-readonly vendor: string-End-->
 
@@ -489,7 +478,7 @@ readonly versionCode: number
 
 **废弃版本：** 9
 
-**替代接口：** [versionCode](ohos.bundle.bundleManager/bundleManager.BundleInfo#versionCode)
+**替代接口：** versionCode
 
 <!--Device-BundleInfo-readonly versionCode: number--><!--Device-BundleInfo-readonly versionCode: number-End-->
 
@@ -511,7 +500,7 @@ readonly versionName: string
 
 **废弃版本：** 9
 
-**替代接口：** [versionName](ohos.bundle.bundleManager/bundleManager.BundleInfo#versionName)
+**替代接口：** versionName
 
 <!--Device-BundleInfo-readonly versionName: string--><!--Device-BundleInfo-readonly versionName: string-End-->
 

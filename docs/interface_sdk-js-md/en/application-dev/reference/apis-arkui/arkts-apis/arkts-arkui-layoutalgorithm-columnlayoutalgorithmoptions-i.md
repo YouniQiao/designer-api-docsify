@@ -1,10 +1,12 @@
 # ColumnLayoutAlgorithmOptions
 
-ColumnLayoutAlgorithm constructor options.
+Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the vertical linear layout algorithm.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface ColumnLayoutAlgorithmOptions--><!--Device-unnamed-interface ColumnLayoutAlgorithmOptions-End-->
 
@@ -16,17 +18,23 @@ ColumnLayoutAlgorithm constructor options.
 alignItems?: HorizontalAlign
 ```
 
-Set the alignment format of the subassembly in the horizontal direction.
+Horizontal alignment mode of all child components. Default value: **HorizontalAlign.Center** Invalid values are treated as the default value.
 
-**Type:** [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md)
+**Type:** [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md)
 
 **Default:** HorizontalAlign.Center
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign--><!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign-End-->
 
@@ -38,7 +46,7 @@ Set the alignment format of the subassembly in the horizontal direction.
 isReverse?: boolean
 ```
 
-Whether the main axis is reversed.
+Whether to reverse the vertical arrangement of child components. **true** indicates to reverse the vertical arrangement of child components. **false** indicates to arrange child components in the vertical direction in normal order. Default value: **false** Invalid values are treated as the default value.
 
 **Type:** boolean
 
@@ -46,9 +54,15 @@ Whether the main axis is reversed.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean-End-->
 
@@ -60,17 +74,23 @@ Whether the main axis is reversed.
 justifyContent?: FlexAlign
 ```
 
-Set alignment mode of the child components along the vertical axis.
+Vertical alignment mode of all child components. Default value: **FlexAlign.Start** Invalid values are treated as the default value.
 
-**Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
+**Type:** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
 
 **Default:** FlexAlign.Start
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
 
@@ -82,17 +102,23 @@ Set alignment mode of the child components along the vertical axis.
 space?: LengthMetrics
 ```
 
-Vertical layout element space.
+Vertical spacing between elements in a vertical layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics-End-->
 

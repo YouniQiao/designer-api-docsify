@@ -4,6 +4,8 @@ Enumerates the main axis layout directions.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum GridDirection--><!--Device-unnamed-declare enum GridDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Row
 Horizontal layout, where the child components are arranged from left to right as the main axis runs along the rows.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Vertical layout, where the child components are arranged from top to bottom as t
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GridDirection-Column--><!--Device-GridDirection-Column-End-->
@@ -50,6 +56,8 @@ Reverse horizontal layout, where the child components are arranged from right to
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GridDirection-RowReverse--><!--Device-GridDirection-RowReverse-End-->
@@ -65,6 +73,8 @@ ColumnReverse
 Reverse vertical layout, where the child components are arranged from bottom up as the main axis runs down the columns.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

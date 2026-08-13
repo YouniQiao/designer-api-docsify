@@ -6,6 +6,8 @@ Size information of the text.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextMetrics--><!--Device-unnamed-declare interface TextMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,14 +18,15 @@ Size information of the text.
 readonly actualBoundingBoxAscent: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the bounding rectangle used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the bounding rectangle used to render the text. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,14 +42,15 @@ Distance from the horizontal line specified by the
 readonly actualBoundingBoxDescent: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the bounding rectangle used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the bounding rectangle used to render the text. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,14 +66,15 @@ Distance from the horizontal line specified by the
 readonly actualBoundingBoxLeft: number
 ```
 
-Distance parallel to the baseline from the alignment point determined by the  
-[CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the left side of the bounding rectangle of the text. Read-only.
+Distance parallel to the baseline from the alignment point determined by the [CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the left side of the bounding rectangle of the text. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,14 +90,15 @@ Distance parallel to the baseline from the alignment point determined by the
 readonly actualBoundingBoxRight: number
 ```
 
-Distance parallel to the baseline from the alignment point determined by the  
-[CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the right side of the bounding rectangle of the text. Read-only.
+Distance parallel to the baseline from the alignment point determined by the [CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the right side of the bounding rectangle of the text. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,14 +114,15 @@ Distance parallel to the baseline from the alignment point determined by the
 readonly alphabeticBaseline: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the alphabetic baseline of the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the alphabetic baseline of the line box. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -131,14 +138,15 @@ Distance from the horizontal line specified by the
 readonly emHeightAscent: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the em square in the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the em square in the line box. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -154,14 +162,15 @@ Distance from the horizontal line specified by the
 readonly emHeightDescent: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the em square in the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the em square in the line box. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -177,14 +186,15 @@ Distance from the horizontal line specified by the
 readonly fontBoundingBoxAscent: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the bounding rectangle of all the fonts used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the bounding rectangle of all the fonts used to render the text. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -200,14 +210,15 @@ Distance from the horizontal line specified by the
 readonly fontBoundingBoxDescent: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the bounding rectangle of all the fonts used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the bounding rectangle of all the fonts used to render the text. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -223,14 +234,15 @@ Distance from the horizontal line specified by the
 readonly hangingBaseline: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the hanging baseline of the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the hanging baseline of the line box. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -246,17 +258,15 @@ Distance from the horizontal line specified by the
 readonly height: number
 ```
 
-Height of the text. Read-only.
-
-Default unit: vp.
-
-If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
+Height of the text. Read-only. Default unit: vp. If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -272,14 +282,15 @@ If the unit mode of the **CanvasRenderingContext2D** object is set to px, the un
 readonly ideographicBaseline: number
 ```
 
-Distance from the horizontal line specified by the  
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the ideographic baseline of the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the ideographic baseline of the line box. Read-only.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -295,17 +306,15 @@ Distance from the horizontal line specified by the
 readonly width: number
 ```
 
-Width of the text. Read-only.
-
-Default unit: vp.
-
-If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
+Width of the text. Read-only. Default unit: vp. If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

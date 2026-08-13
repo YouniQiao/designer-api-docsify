@@ -6,6 +6,8 @@ Describes the options for adding a text span.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorTextSpanOptions--><!--Device-unnamed-declare interface RichEditorTextSpanOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Behavior-triggered callback. If this parameter is left empty, only the default s
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -38,15 +42,15 @@ Behavior-triggered callback. If this parameter is left empty, only the default s
 offset?: number
 ```
 
-Position of the text span to be added. If this parameter is omitted, the paragraph is added to the end of all content.
-
-If the value specified is less than 0, the paragraph is placed at the beginning of all content. If the value is greater than the length of all content, the paragraph is placed at the end of all content.
+Position of the text span to be added. If this parameter is omitted, the paragraph is added to the end of all content. If the value specified is less than 0, the paragraph is placed at the beginning of all content. If the value is greater than the length of all content, the paragraph is placed at the end of all content.
 
 **Type:** number
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +74,8 @@ Paragraph style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -92,6 +98,8 @@ Style of the text span to be added. If this parameter is left empty, the default
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -106,15 +114,15 @@ Style of the text span to be added. If this parameter is left empty, the default
 urlStyle?: RichEditorUrlStyle
 ```
 
-URL information.
-
-Default value: **undefined**
+URL information. Default value: **undefined**
 
 **Type:** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

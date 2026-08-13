@@ -4,6 +4,8 @@ Returns the changes of the notification switch state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface NotificationSwitchChangedCallbackData--><!--Device-unnamed-export interface NotificationSwitchChangedCallbackData-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -22,6 +24,8 @@ Notification switch state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotificationSwitchChangedCallbackData-readonly enableStatus: notificationManager.SwitchState--><!--Device-NotificationSwitchChangedCallbackData-readonly enableStatus: notificationManager.SwitchState-End-->
@@ -36,12 +40,13 @@ Notification switch state.
 readonly switchName: string
 ```
 
-Notification switch name. The value can be **DEAL** (aggregated switch for transaction notifications) or  
-**LOGISTICS** (aggregated switch for logistics notifications).
+Notification switch name. The value can be **DEAL** (aggregated switch for transaction notifications) or **LOGISTICS** (aggregated switch for logistics notifications).
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +67,8 @@ User ID.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

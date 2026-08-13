@@ -12,11 +12,13 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function openSubscriptionSettings(context: UIAbilityContext): Promise<void>
 ```
 
-打开应用的通知扩展订阅授权页面，以半模态弹窗形式显示。用户可在该页面授权“允许获取本机通知”开关与“已获取的本机通知”应用开关。使用Promise异步回调。
+打开应用的通知扩展订阅授权页面，以半模态弹窗形式显示。用户可在该页面授权“允许获取本机通知”开关与“已获取的本机通知”应用开关。 使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -40,10 +42,10 @@ function openSubscriptionSettings(context: UIAbilityContext): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied or current device not supported. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600018-通知设置页面已经拉起) | The notification settings window is already displayed. |
-| [1600023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) | The application does not implement the NotificationSubscriberExtensionAbility. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied or current device not supported. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600018](../errorcode-notification.md#1600018-通知设置页面已经拉起) | The notification settings window is already displayed. |
+| [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) | The application does not implement the NotificationSubscriberExtensionAbility. |
 
 ## 示例
 

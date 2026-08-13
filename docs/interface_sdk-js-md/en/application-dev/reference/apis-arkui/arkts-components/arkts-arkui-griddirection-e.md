@@ -6,6 +6,8 @@ Enumerates the main axis layout directions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum GridDirection--><!--Device-unnamed-declare enum GridDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Horizontal layout, where the child components are arranged from left to right as
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Vertical layout, where the child components are arranged from top to bottom as t
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GridDirection-Column--><!--Device-GridDirection-Column-End-->
@@ -58,6 +64,8 @@ Reverse horizontal layout, where the child components are arranged from right to
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GridDirection-RowReverse--><!--Device-GridDirection-RowReverse-End-->
@@ -75,6 +83,8 @@ Reverse vertical layout, where the child components are arranged from bottom up 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

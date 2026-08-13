@@ -16,7 +16,9 @@ Send execute result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,7 +32,7 @@ Send execute result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instanceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The insight intent instance ID. It is from InsightIntentExecutor.context.instanceId. |
+| instanceId | int | Yes | The insight intent instance ID. It is from InsightIntentExecutor.context.instanceId. |
 | result | insightIntent.ExecuteResult | Yes | The result of insight intent execution. |
 
 **Return value:**
@@ -43,8 +45,8 @@ Send execute result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| [16000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Describes a rectangle, which can be defined by two coordinate points: upper left corner point and lower right corner point.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-common2D-interface Rect--><!--Device-common2D-interface Rect-End-->
 
@@ -24,7 +26,9 @@ Y coordinate of the lower right corner of the rectangle. The value is a floating
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ X coordinate of the upper left corner of the rectangle. The value is a floating 
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -60,7 +66,9 @@ X coordinate of the lower right corner of the rectangle. The value is a floating
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -78,7 +86,9 @@ Y coordinate of the upper left corner of the rectangle. The value is a floating 
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

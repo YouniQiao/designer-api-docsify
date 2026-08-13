@@ -2,9 +2,11 @@
 
 Enumerates the predicates.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum OperationType--><!--Device-photoAccessHelper-export enum OperationType-End-->
 
@@ -18,13 +20,15 @@ EQUAL_TO = 1
 
 Checks for equality, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-EQUAL_TO = 1--><!--Device-OperationType-EQUAL_TO = 1-End-->
 
@@ -38,13 +42,15 @@ NOT_EQUAL_TO = 2
 
 Checks for inequality, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-NOT_EQUAL_TO = 2--><!--Device-OperationType-NOT_EQUAL_TO = 2-End-->
 
@@ -58,13 +64,15 @@ GREATER_THAN = 3
 
 Checks whether the value is greater than the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-GREATER_THAN = 3--><!--Device-OperationType-GREATER_THAN = 3-End-->
 
@@ -78,13 +86,15 @@ LESS_THAN = 4
 
 Checks whether the value is less than the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-LESS_THAN = 4--><!--Device-OperationType-LESS_THAN = 4-End-->
 
@@ -98,13 +108,15 @@ GREATER_THAN_OR_EQUAL_TO = 5
 
 Checks whether the value is greater than or equal to the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-GREATER_THAN_OR_EQUAL_TO = 5--><!--Device-OperationType-GREATER_THAN_OR_EQUAL_TO = 5-End-->
 
@@ -118,13 +130,15 @@ LESS_THAN_OR_EQUAL_TO = 6
 
 Checks whether the value is less than or equal to the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-LESS_THAN_OR_EQUAL_TO = 6--><!--Device-OperationType-LESS_THAN_OR_EQUAL_TO = 6-End-->
 
@@ -138,13 +152,15 @@ AND = 7
 
 Logical 'AND', similar to 'and' in database queries. No **field** or **value** is needed.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-AND = 7--><!--Device-OperationType-AND = 7-End-->
 
@@ -158,13 +174,15 @@ OR = 8
 
 Logical 'OR', similar to 'or' in database queries. No **field** or **value** is needed.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-OR = 8--><!--Device-OperationType-OR = 8-End-->
 
@@ -178,13 +196,15 @@ IN = 9
 
 Matches fields within a specified range, with a maximum value length of 10.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-IN = 9--><!--Device-OperationType-IN = 9-End-->
 
@@ -198,13 +218,15 @@ NOT_IN = 10
 
 Matches fields outside a specified range, with a maximum value length of 10.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-NOT_IN = 10--><!--Device-OperationType-NOT_IN = 10-End-->
 
@@ -218,13 +240,15 @@ BEGIN_WRAP = 11
 
 Adds a left parenthesis to the predicate, similar to "(" in database queries. It must be used with a right parenthesis. No **field** or **value** is needed.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-BEGIN_WRAP = 11--><!--Device-OperationType-BEGIN_WRAP = 11-End-->
 
@@ -238,13 +262,15 @@ END_WRAP = 12
 
 Adds a right parenthesis to the predicate, similar to ")" in database queries. It must be used with a left parenthesis. No **field** or **value** is needed.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-END_WRAP = 12--><!--Device-OperationType-END_WRAP = 12-End-->
 
@@ -256,17 +282,17 @@ Adds a right parenthesis to the predicate, similar to ")" in database queries. I
 BETWEEN = 13
 ```
 
-Matches fields within a specified range,
+Matches fields within a specified range, including both endpoints (closed interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
 
-including both endpoints (closed interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4],the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
+**Since:** 26.0.0
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-BETWEEN = 13--><!--Device-OperationType-BETWEEN = 13-End-->
 
@@ -278,17 +304,17 @@ including both endpoints (closed interval). It uses the first two elements of th
 NOT_BETWEEN = 14
 ```
 
-Matches fields outside a specified range,
+Matches fields outside a specified range, excluding both endpoints (open interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
 
-excluding both endpoints (open interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
+**Since:** 26.0.0
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperationType-NOT_BETWEEN = 14--><!--Device-OperationType-NOT_BETWEEN = 14-End-->
 

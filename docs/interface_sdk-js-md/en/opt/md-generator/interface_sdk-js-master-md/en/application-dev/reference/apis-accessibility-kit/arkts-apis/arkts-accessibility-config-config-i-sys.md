@@ -2,9 +2,11 @@
 
 Implements configuration, acquisition, and listening for properties.
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-config-interface Config<T>--><!--Device-config-interface Config<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-config-interface Config--><!--Device-config-interface Config-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -24,7 +26,9 @@ get(): Promise<T>
 
 Obtains the value of a property. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Config-get(): Promise<T>--><!--Device-Config-get(): Promise<T>-End-->
 
@@ -42,8 +46,8 @@ Obtains the value of a property. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -66,7 +70,9 @@ get(callback: AsyncCallback<T>): void
 
 Obtains the property value. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Config-get(callback: AsyncCallback<T>): void--><!--Device-Config-get(callback: AsyncCallback<T>): void-End-->
 
@@ -84,7 +90,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -101,7 +107,7 @@ config.highContrastText.get((err: BusinessError, data: boolean) => {
 });
 ```
 
-## off
+## off_Callback<T>
 
 ```TypeScript
 off(callback?: Callback<T>): void
@@ -109,7 +115,9 @@ off(callback?: Callback<T>): void
 
 Cancels the listener for property changes. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -129,8 +137,8 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -144,7 +152,7 @@ config.highContrastText.on(callback);
 config.highContrastText.off(callback);
 ```
 
-## on
+## on_Callback<T>
 
 ```TypeScript
 on(callback: Callback<T>): void
@@ -152,7 +160,9 @@ on(callback: Callback<T>): void
 
 Adds a listener for property changes. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -172,9 +182,9 @@ Adds a listener for property changes. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -194,7 +204,9 @@ set(value: T): Promise<void>
 
 Sets the value of a property. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -220,9 +232,9 @@ Sets the value of a property. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -247,7 +259,9 @@ set(value: T, callback: AsyncCallback<void>): void
 
 Sets the property value. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -268,9 +282,9 @@ Sets the property value. This API uses an asynchronous callback to return the re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

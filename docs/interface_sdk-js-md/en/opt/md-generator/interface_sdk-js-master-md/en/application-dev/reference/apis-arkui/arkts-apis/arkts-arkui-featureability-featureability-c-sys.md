@@ -4,7 +4,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** [FeatureAbility](#FeatureAbility)
+**Substitutes:** [FeatureAbility](#FeatureAbility-(System-API))
 
 <!--Device-unnamed-export declare class FeatureAbility--><!--Device-unnamed-export declare class FeatureAbility-End-->
 

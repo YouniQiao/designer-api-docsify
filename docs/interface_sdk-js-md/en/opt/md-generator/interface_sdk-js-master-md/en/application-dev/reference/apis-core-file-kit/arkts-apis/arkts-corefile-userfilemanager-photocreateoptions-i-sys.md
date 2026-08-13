@@ -6,7 +6,7 @@ Defines the options for creating an image or video asset.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#PhotoCreateOptions)
+**Substitutes:** [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#PhotoCreateOptions-(System-API))
 
 <!--Device-userFileManager-interface PhotoCreateOptions--><!--Device-userFileManager-interface PhotoCreateOptions-End-->
 
@@ -26,9 +26,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 cameraShotKey?: string
 ```
 
-Key for the Ultra Snapshot feature.
-
-This parameter is available only for the system camera, and the key value is defined by the system camera.
+Key for the Ultra Snapshot feature. This parameter is available only for the system camera, and the key value is defined by the system camera.
 
 **Type:** string
 
@@ -58,7 +56,7 @@ Subtype of the image or video.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [subType](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoCreateOptions.subType)
+**Substitutes:** subType
 
 <!--Device-PhotoCreateOptions-subType?: PhotoSubType--><!--Device-PhotoCreateOptions-subType?: PhotoSubType-End-->
 

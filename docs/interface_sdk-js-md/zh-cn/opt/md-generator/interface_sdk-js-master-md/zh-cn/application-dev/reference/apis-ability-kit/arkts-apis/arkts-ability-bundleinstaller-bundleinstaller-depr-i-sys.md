@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#BundleInstaller)
+**替代接口：** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#BundleInstaller（系统接口）)
 
 <!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
 

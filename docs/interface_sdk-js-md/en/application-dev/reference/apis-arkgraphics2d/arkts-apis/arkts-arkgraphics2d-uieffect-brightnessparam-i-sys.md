@@ -2,9 +2,11 @@
 
 Detailed description of the material brightness parameters.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface BrightnessParam--><!--Device-uiEffect-interface BrightnessParam-End-->
 
@@ -26,11 +28,13 @@ cubicCoeff : double
 
 Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-cubicCoeff : double--><!--Device-BrightnessParam-cubicCoeff : double-End-->
 
@@ -44,13 +48,15 @@ Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Va
 fraction : double
 ```
 
-Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
+Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-fraction : double--><!--Device-BrightnessParam-fraction : double-End-->
 
@@ -64,13 +70,15 @@ Blending ratio for the brightness effect. The value range is [0, 1]. Values less
 lightUpDegree : double
 ```
 
-Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-lightUpDegree : double--><!--Device-BrightnessParam-lightUpDegree : double-End-->
 
@@ -84,13 +92,15 @@ Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are 
 negRgb : [double, double, double]
 ```
 
-Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates lower saturation.
+Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates lower saturation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [double, double, double]
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-negRgb : [double, double, double]--><!--Device-BrightnessParam-negRgb : [double, double, double]-End-->
 
@@ -104,13 +114,15 @@ Negative adjustment coefficients based on the base saturation. The value range f
 posRgb : [double, double, double]
 ```
 
-Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates higher saturation.
+Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates higher saturation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [double, double, double]
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-posRgb : [double, double, double]--><!--Device-BrightnessParam-posRgb : [double, double, double]-End-->
 
@@ -126,11 +138,13 @@ quadCoeff : double
 
 Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-quadCoeff : double--><!--Device-BrightnessParam-quadCoeff : double-End-->
 
@@ -144,13 +158,15 @@ Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. V
 rate : double
 ```
 
-Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-rate : double--><!--Device-BrightnessParam-rate : double-End-->
 
@@ -164,13 +180,15 @@ Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values 
 saturation : double
 ```
 
-Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
+Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-saturation : double--><!--Device-BrightnessParam-saturation : double-End-->
 

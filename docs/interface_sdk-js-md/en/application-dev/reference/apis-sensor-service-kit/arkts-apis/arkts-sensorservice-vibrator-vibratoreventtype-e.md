@@ -2,9 +2,11 @@
 
 Vibration event type.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-enum VibratorEventType--><!--Device-vibrator-enum VibratorEventType-End-->
 
@@ -18,9 +20,11 @@ CONTINUOUS = 0
 
 Long vibration.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VibratorEventType-CONTINUOUS = 0--><!--Device-VibratorEventType-CONTINUOUS = 0-End-->
 
@@ -34,9 +38,11 @@ TRANSIENT = 1
 
 Short vibration.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VibratorEventType-TRANSIENT = 1--><!--Device-VibratorEventType-TRANSIENT = 1-End-->
 

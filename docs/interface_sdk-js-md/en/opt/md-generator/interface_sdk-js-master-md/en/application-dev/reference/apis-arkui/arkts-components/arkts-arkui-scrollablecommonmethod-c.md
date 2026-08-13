@@ -2,11 +2,13 @@
 
 CommonScrollableMethod
 
-**Inheritance/Implementation:** ScrollableCommonMethod extends [CommonMethod<T>](CommonMethod<T>)
+**Inheritance/Implementation:** ScrollableCommonMethod extends CommonMethod<T>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class ScrollableCommonMethod<T> extends CommonMethod<T>--><!--Device-unnamed-declare class ScrollableCommonMethod<T> extends CommonMethod<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ScrollableCommonMethod--><!--Device-unnamed-declare class ScrollableCommonMethod-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ autoAdjustScrollBarMargin(enable: boolean | undefined): T
 Set the scroll bar auto adjust the margin to avoid the padding, safeAreaPadding, and contentStartOffset/contentEndOffset of the component.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Sets whether to enable the back-to-top feature for a scrollable component when t
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -62,7 +68,7 @@ Sets whether to enable the back-to-top feature for a scrollable component when t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [backToTop](#backtotop) | boolean | Yes |
+| [backToTop](#backToTop) | boolean | Yes |
 
 **Return value:**
 
@@ -79,6 +85,8 @@ clipContent(clip: ContentClipMode | RectShape): T
 Sets the content clipping area for this scrollable component.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +118,8 @@ Sets the offset from the end of the content to the boundary of the scrollable di
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -139,6 +149,8 @@ contentStartOffset(offset: number | Resource): T
 Sets the offset from the start of the content to the boundary of the scrollable display area.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,6 +182,8 @@ Set the sensitivity of rotating crown.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -200,6 +214,8 @@ Sets the effect used when the scroll boundary is reached.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -212,7 +228,7 @@ Sets the effect used when the scroll boundary is reached.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [edgeEffect](#edgeeffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes |
+| [edgeEffect](#edgeEffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes |
 | options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No |
 
 **Return value:**
@@ -230,6 +246,8 @@ enableScrollInteraction(value: boolean): T
 Sets whether to support scroll gestures.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -261,6 +279,8 @@ Enable left mouse button press-and-drag scrolling.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -290,6 +310,8 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 Called when setting whether to enable fading Edge effect.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,6 +344,8 @@ Sets the maximum initial velocity at the start of the fling animation that occur
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -351,6 +375,8 @@ friction(value: number | Resource): T
 Sets the friction coefficient.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -382,6 +408,8 @@ Sets the nested scrolling options.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -411,6 +439,8 @@ onDidScroll(handler: OnScrollCallback): T
 Triggered when the scrollable component scrolls.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -444,6 +474,8 @@ Called when the scrollable did end dragging.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -475,6 +507,8 @@ onDidStopFling(handler: VoidCallback): T
 Called when the scrollable did end fling.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -508,6 +542,8 @@ Triggered when the scrollable component reaches the end position.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -537,6 +573,8 @@ onReachStart(event: () => void): T
 Triggered when the scrollable component reaches the start position.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,6 +640,8 @@ Triggered when the scrollable component starts scrolling initiated by the user's
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -631,6 +671,8 @@ onScrollStop(event: () => void): T
 Triggered when scrolling stops after the user's finger leaves the screen.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -662,6 +704,8 @@ Called when the scrollable will scroll.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -691,6 +735,8 @@ onWillStartDragging(handler: VoidCallback): T
 Called when the scrollable will start dragging.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -724,6 +770,8 @@ Called when the scrollable will start fling.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -755,6 +803,8 @@ onWillStopDragging(handler: OnWillStopDraggingCallback): T
 Called when the scrollable will end dragging.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -788,6 +838,8 @@ Sets the scrollbar state.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -817,6 +869,8 @@ scrollBarColor(color: Color | number | string): T
 Sets the scrollbar color.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -848,6 +902,8 @@ Sets the scrollbar color.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -877,6 +933,8 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 Sets the scrollbar track height.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -908,6 +966,8 @@ Margin of the scrollbar.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -938,6 +998,8 @@ Sets the scrollbar width.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -967,6 +1029,8 @@ scrollBarWidth(value: number | string | Resource): T
 Sets the scrollbar width.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

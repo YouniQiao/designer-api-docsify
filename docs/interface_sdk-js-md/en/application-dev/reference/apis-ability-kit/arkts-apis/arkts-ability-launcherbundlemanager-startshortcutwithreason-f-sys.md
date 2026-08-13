@@ -12,14 +12,13 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.
+Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result. The launched ability can obtain the launch reason through the **launchReasonMessage** field of [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam) and handle service logic accordingly.
 
-The launched ability can obtain the launch reason through the **launchReasonMessage** field of  
-[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam) and handle service logic accordingly.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.START_SHORTCUT and ohos.permission.SET_LAUNCH_REASON_MESSAGE
 
@@ -34,7 +33,7 @@ The launched ability can obtain the launch reason through the **launchReasonMess
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | Yes | Shortcut information of the application. |
-| startReason | string | Yes | Reason for launching the shortcut. The value can be [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](../../../reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md#constants) , indicating a home screen shortcut launch. |
+| startReason | string | Yes | Reason for launching the shortcut. The value can be [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-app-ability-abilityconstant.md#Constants) , indicating a home screen shortcut launch. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used to specify the window mode of the target ability. |
 
 **Return value:**
@@ -47,10 +46,10 @@ The launched ability can obtain the launch reason through the **launchReasonMess
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not support. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Verify permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700065](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) | The specified shortcut want in shortcut info is not supported to be started. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700065](../errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) | The specified shortcut want in shortcut info is not supported to be started. |
 
 ## Examples
 

@@ -2,11 +2,13 @@
 
 CommonShapeMethod
 
-**继承/实现关系：** CommonShapeMethod extends [CommonMethod<T>](CommonMethod<T>)
+**继承/实现关系：** CommonShapeMethod extends CommonMethod<T>
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class CommonShapeMethod<T> extends CommonMethod<T>--><!--Device-unnamed-declare class CommonShapeMethod<T> extends CommonMethod<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class CommonShapeMethod--><!--Device-unnamed-declare class CommonShapeMethod-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ antiAlias(value: boolean): T
 Indicates whether to enable anti-aliasing
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,6 +54,8 @@ Fill color.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -79,6 +85,8 @@ fillOpacity(value: number | string | Resource): T
 fill Opacity
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +118,8 @@ border Color
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -139,6 +149,8 @@ strokeDashArray(value: Array<any>): T
 Sets the gap for the border.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -170,6 +182,8 @@ Offset from the start point of the border drawing.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -199,6 +213,8 @@ strokeLineCap(value: LineCapStyle): T
 Path endpoint drawing style.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -230,6 +246,8 @@ Border corner drawing style.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -259,6 +277,8 @@ strokeMiterLimit(value: number | string): T
 Limits for drawing acute angles as bevels
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -290,6 +310,8 @@ Sets the opacity of the border.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -319,6 +341,8 @@ strokeWidth(value: Length): T
 Sets the width of the dividing line.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

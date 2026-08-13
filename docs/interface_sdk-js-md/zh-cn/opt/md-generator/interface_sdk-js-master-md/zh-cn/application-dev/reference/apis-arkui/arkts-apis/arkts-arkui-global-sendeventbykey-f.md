@@ -10,6 +10,8 @@ Sends an event to the component with the specified ID.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-export declare function sendEventByKey(id: string, action: number, params: string): boolean--><!--Device-unnamed-export declare function sendEventByKey(id: string, action: number, params: string): boolean-End-->

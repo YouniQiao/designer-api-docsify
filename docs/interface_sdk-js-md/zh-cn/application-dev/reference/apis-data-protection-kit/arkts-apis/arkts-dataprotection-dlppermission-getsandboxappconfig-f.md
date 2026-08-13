@@ -6,13 +6,13 @@
 function getSandboxAppConfig(): Promise<string>
 ```
 
-获取沙箱应用配置信息，使用Promise异步回调。
-
-该接口用于获取沙箱应用的配置信息，便于读取或验证当前的配置状态。
+获取沙箱应用配置信息，使用Promise异步回调。 该接口用于获取沙箱应用的配置信息，便于读取或验证当前的配置状态。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>--><!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>-End-->
 
@@ -28,9 +28,9 @@ function getSandboxAppConfig(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100018-应用未授权) | The application is not authorized. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [19100018](../errorcode-dlp.md#19100018-应用未授权) | The application is not authorized. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 

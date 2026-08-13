@@ -14,9 +14,11 @@ function write(info: SysEventInfo): Promise<void>
 
 Writes event information to the event file. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>--><!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>-End-->
 
@@ -40,15 +42,15 @@ Writes event information to the event file. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | 11200002 | Invalid event name. |
-| [11200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
-| [11200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
+| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
 | 11200001 | Invalid event domain. |
-| [11200054](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
-| [11200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
-| [11200052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
-| [11200053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
+| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
+| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
+| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
 
 ## Examples
 
@@ -93,9 +95,11 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 
 Writes event information to the event file. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void--><!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -108,21 +112,21 @@ Writes event information to the event file. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Yes | System event information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to process the received return value. &lt;br/&gt;- Value **0**: The event verification is successful, and the event will be written to the event file asynchronously. &lt;br/&gt;- A value greater than **0**: Invalid parameters are present in the event, and the event will be written to the event file asynchronously after the invalid parameters are ignored. &lt;br/&gt;- A value smaller than **0**: The event parameter verification fails, and the event will not be written to the event file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to process the received return value. &lt;br/&gt;- Value **0**: The event verification is successful, and the event will be written to the event file asynchronously. &lt;br/&gt;- A value greater than **0**: Invalid parameters are present in the event, and the event will be written to the event file asynchronously after the invalid parameters are ignored. &lt;br/&gt;- A value smaller than **0**: The event parameter verification fails, and the event will not be written to the event file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | 11200002 | Invalid event name. |
-| [11200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
-| [11200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
+| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
 | 11200001 | Invalid event domain. |
-| [11200054](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
-| [11200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
-| [11200052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
-| [11200053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
+| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
+| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
+| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
 
 ## Examples
 

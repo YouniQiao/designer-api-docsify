@@ -10,7 +10,9 @@ function unSubscribe(events: MechEventType[]): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-function unSubscribe(events: MechEventType[]): void--><!--Device-mechanicManager-function unSubscribe(events: MechEventType[]): void-End-->
 
@@ -28,8 +30,8 @@ function unSubscribe(events: MechEventType[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
-| [33300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
 

@@ -4,6 +4,8 @@ Enumerates the button importance levels.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ButtonStyleMode--><!--Device-unnamed-declare enum ButtonStyleMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NORMAL = 0
 Normal button (used to direct the user to a common task).
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Emphasized button (used to direct the user to the most important task).
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -57,6 +63,8 @@ TEXTUAL = 2
 Text button (displayed as simple text without any background color).
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

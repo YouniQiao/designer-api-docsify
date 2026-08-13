@@ -1,13 +1,10 @@
 # @ohos.bundle.freeInstall
 
-The module provides APIs for setting and obtaining installation-free information and APIs for obtaining
- BundlePackInfo and DispatchInfo.
- > **NOTE**
- >
- > The APIs provided by this module are system APIs.
+The module provides APIs for setting and obtaining installation-free information and APIs for obtaining BundlePackInfo and DispatchInfo. > **NOTE：**> > The APIs provided by this module are system APIs.
 
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace freeInstall--><!--Device-unnamed-declare namespace freeInstall-End-->
 
@@ -28,14 +25,14 @@ import { freeInstall } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getbundlepackinfo) |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getbundlepackinfo-1) |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo) |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo-1) |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#ishapmoduleremovable) |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#ishapmoduleremovable-1) |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#sethapmoduleupgradeflag) |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#sethapmoduleupgradeflag-1) |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getBundlePackInfo-(System-API)) |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getBundlePackInfo-(System-API)) |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo-(System-API)) |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo-(System-API)) |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#isHapModuleRemovable-(System-API)) |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#isHapModuleRemovable-(System-API)) |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#setHapModuleUpgradeFlag-(System-API)) |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#setHapModuleUpgradeFlag-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

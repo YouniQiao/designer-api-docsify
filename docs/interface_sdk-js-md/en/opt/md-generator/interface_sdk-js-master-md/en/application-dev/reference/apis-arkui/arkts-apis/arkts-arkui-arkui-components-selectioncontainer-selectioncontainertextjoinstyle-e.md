@@ -4,6 +4,8 @@ Defines text join style for SelectionContainer.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum SelectionContainerTextJoinStyle--><!--Device-unnamed-export declare enum SelectionContainerTextJoinStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NEWLINE = 0
 Join text with line break (`\n`) between text nodes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ DIRECT = 1
 Join text directly without separator between text nodes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

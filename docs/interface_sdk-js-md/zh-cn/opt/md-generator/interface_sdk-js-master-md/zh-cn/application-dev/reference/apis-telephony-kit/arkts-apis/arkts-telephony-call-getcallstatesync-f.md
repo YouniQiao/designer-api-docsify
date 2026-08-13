@@ -8,7 +8,9 @@ function getCallStateSync(): CallState
 
 获取当前通话状态。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function getCallStateSync(): CallState--><!--Device-call-function getCallStateSync(): CallState-End-->
 

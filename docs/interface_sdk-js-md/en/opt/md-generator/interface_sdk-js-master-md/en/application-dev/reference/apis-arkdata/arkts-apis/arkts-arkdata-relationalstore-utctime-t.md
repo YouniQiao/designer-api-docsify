@@ -6,7 +6,9 @@ type UTCTime = Date
 
 The time is in UTC format.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-type UTCTime = Date--><!--Device-relationalStore-type UTCTime = Date-End-->
 

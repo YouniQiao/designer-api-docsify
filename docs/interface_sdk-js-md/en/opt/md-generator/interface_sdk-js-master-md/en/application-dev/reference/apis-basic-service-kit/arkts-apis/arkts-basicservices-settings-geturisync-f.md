@@ -14,7 +14,7 @@ function getUriSync(name: string): string
 
 Get settingsdata uri (synchronous method)
 
-**Since:** 8
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 

@@ -14,7 +14,9 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<v
 
 Controls whether a watermark image is displayed on the screen. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>-End-->
 
@@ -39,9 +41,9 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -85,6 +87,8 @@ Set watermark image.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: int): Promise<void>--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: int): Promise<void>-End-->
@@ -111,9 +115,9 @@ Set watermark image.
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -154,7 +158,9 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: 
 
 Controls whether a watermark image is displayed on the screen. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -174,9 +180,9 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

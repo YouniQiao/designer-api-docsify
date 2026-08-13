@@ -1,14 +1,8 @@
 # Checkbox
 
-提供多选框组件，用于在多个选项中进行选择。
+提供多选框组件，用于在多个选项中进行选择。 > **说明：** > > API version 11开始，Checkbox默认样式由圆角方形变为圆形。
 
-> **说明：**
->
-> API version 11开始，Checkbox默认样式由圆角方形变为圆形。
-
-## 子组件
-
-无
+## 子组件 无
 
 ## Checkbox
 
@@ -21,6 +15,8 @@ Checkbox(options?: CheckboxOptions)
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +34,6 @@ Checkbox(options?: CheckboxOptions)
 
 ## 汇总
 
-- [CheckBoxConfiguration](arkts-arkui-checkbox-checkboxconfiguration-i.md)
-- [CheckboxOptions](arkts-arkui-checkbox-checkboxoptions-i.md)
-- [OnCheckboxChangeCallback](arkts-arkui-checkbox-oncheckboxchangecallback-t.md)
+- [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)
+- [CheckboxOptions](arkts-arkui-checkboxoptions-i.md)
+- [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md)

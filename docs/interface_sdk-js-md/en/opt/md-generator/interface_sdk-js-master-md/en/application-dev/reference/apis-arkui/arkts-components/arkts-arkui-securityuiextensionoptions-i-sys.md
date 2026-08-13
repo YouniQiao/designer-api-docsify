@@ -4,6 +4,8 @@ Defines the options to be passed when constructing **SecurityUIExtensionComponen
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SecurityUIExtensionOptions--><!--Device-unnamed-declare interface SecurityUIExtensionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,14 +18,15 @@ Defines the options to be passed when constructing **SecurityUIExtensionComponen
 dpiFollowStrategy?: SecurityDpiFollowStrategy
 ```
 
-Resolution following strategy for **SecurityUIExtensionComponent**, used to control whether the embedded  
-**UIExtensionAbility** content follows the host application's resolution or uses its own resolution.Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**.
+Resolution following strategy for **SecurityUIExtensionComponent**, used to control whether the embedded **UIExtensionAbility** content follows the host application's resolution or uses its own resolution. Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI** .
 
 **Type:** [SecurityDpiFollowStrategy](arkts-arkui-securitydpifollowstrategy-e-sys.md)
 
 **Default:** SecurityDpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,14 +42,15 @@ Resolution following strategy for **SecurityUIExtensionComponent**, used to cont
 isTransferringCaller?: boolean
 ```
 
-Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting.  
-**true**: yes; **false**: no.The default value is **false**.
+Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting. **true**: yes; **false**: no. The default value is **false**.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,12 +66,13 @@ Whether the **UIExtensionComponent** forwards the upper-level caller information
 placeholder?: ComponentContent
 ```
 
-Placeholder to be displayed before the **SecurityUIExtensionComponent** establishes a connection with the  
-**UIExtensionAbility**.
+Placeholder to be displayed before the **SecurityUIExtensionComponent** establishes a connection with the **UIExtensionAbility**.
 
 **Type:** ComponentContent
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

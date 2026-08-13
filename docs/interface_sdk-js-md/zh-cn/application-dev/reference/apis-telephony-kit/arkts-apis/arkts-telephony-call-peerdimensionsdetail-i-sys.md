@@ -2,9 +2,11 @@
 
 视频通话对端画面分辨率信息。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export interface PeerDimensionsDetail--><!--Device-call-export interface PeerDimensionsDetail-End-->
 
@@ -20,11 +22,13 @@ callId: int
 
 呼叫Id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PeerDimensionsDetail-callId: int--><!--Device-PeerDimensionsDetail-callId: int-End-->
 
@@ -40,11 +44,13 @@ height: int
 
 对端画面图像尺寸高(像素)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PeerDimensionsDetail-height: int--><!--Device-PeerDimensionsDetail-height: int-End-->
 
@@ -60,11 +66,13 @@ width: int
 
 对端画面图像尺寸宽(像素)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PeerDimensionsDetail-width: int--><!--Device-PeerDimensionsDetail-width: int-End-->
 

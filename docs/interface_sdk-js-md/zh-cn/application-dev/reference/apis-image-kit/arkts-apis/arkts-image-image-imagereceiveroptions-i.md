@@ -4,7 +4,9 @@ ImageReceiver的初始化选项。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-interface ImageReceiverOptions--><!--Device-image-interface ImageReceiverOptions-End-->
 
@@ -16,15 +18,15 @@ ImageReceiver的初始化选项。
 capacity?: int
 ```
 
-可同时访问的最大图像数量。该值必须为正整数，且小于或等于64张。
+可同时访问的最大图像数量。该值必须为正整数，且小于或等于64张。 该参数仅作为期望值，实际capacity由设备硬件决定。
 
-该参数仅作为期望值，实际capacity由设备硬件决定。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +40,15 @@ capacity?: int
 size?: Size
 ```
 
-图像的大小，包括宽与高，且值都大于0。单位：像素（px）。
-
-该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。
+图像的大小，包括宽与高，且值都大于0。单位：像素（px）。 该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。
 
 **类型：** Size
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

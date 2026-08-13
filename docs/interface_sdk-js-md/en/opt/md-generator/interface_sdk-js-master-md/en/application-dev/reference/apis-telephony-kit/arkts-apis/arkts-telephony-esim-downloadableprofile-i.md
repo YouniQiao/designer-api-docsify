@@ -2,7 +2,9 @@
 
 Information about a profile which is downloadable to an eUICC using.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface DownloadableProfile--><!--Device-eSIM-export interface DownloadableProfile-End-->
 
@@ -24,7 +26,9 @@ Gets the accessRules.
 
 **Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadableProfile-accessRules?: Array<AccessRule>--><!--Device-DownloadableProfile-accessRules?: Array<AccessRule>-End-->
 
@@ -40,7 +44,9 @@ Activation code.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadableProfile-activationCode: string--><!--Device-DownloadableProfile-activationCode: string-End-->
 
@@ -56,7 +62,9 @@ Carrier name.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadableProfile-carrierName?: string--><!--Device-DownloadableProfile-carrierName?: string-End-->
 
@@ -72,7 +80,9 @@ Confirmation code.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadableProfile-confirmationCode?: string--><!--Device-DownloadableProfile-confirmationCode?: string-End-->
 

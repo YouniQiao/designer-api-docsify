@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class TextMenuItemId--><!--Device-unnamed-declare class TextMenuItemId-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ equals(id: TextMenuItemId): boolean
 判断TextMenuItemId是否相等。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +51,8 @@ static of(id: ResourceStr): TextMenuItemId
 根据id创建TextMenuItemId。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,6 +86,8 @@ static readonly AI_WRITER: TextMenuItemId
 
 **起始版本：** 13
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -99,6 +107,8 @@ static readonly CAMERA_INPUT: TextMenuItemId
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,6 +130,8 @@ static readonly COLLABORATION_SERVICE: TextMenuItemId
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -139,6 +151,8 @@ static readonly COPY: TextMenuItemId
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,6 +174,8 @@ static readonly CUT: TextMenuItemId
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -179,6 +195,8 @@ static readonly PASTE: TextMenuItemId
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,6 +218,8 @@ static readonly SEARCH: TextMenuItemId
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -219,6 +239,8 @@ static readonly SELECT_ALL: TextMenuItemId
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -240,6 +262,8 @@ static readonly SHARE: TextMenuItemId
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -259,6 +283,8 @@ static readonly TRANSLATE: TextMenuItemId
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -280,6 +306,8 @@ static readonly address: TextMenuItemId
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -300,6 +328,8 @@ static readonly askAI: TextMenuItemId
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -314,12 +344,13 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-自动填充，为一级菜单项。点击后会展开二级菜单项“密码保险箱”，仅支持[Search](./search)、[TextInput](./text_input)、  
-[TextArea](./text_area)或[RichEditor](./rich_editor)。
+自动填充，为一级菜单项。点击后会展开二级菜单项“密码保险箱”，仅支持Search、TextInput、 TextArea或RichEditor。
 
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -341,6 +372,8 @@ static readonly dateTime: TextMenuItemId
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -361,6 +394,8 @@ static readonly email: TextMenuItemId
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -375,12 +410,13 @@ static readonly email: TextMenuItemId
 static readonly passwordVault: TextMenuItemId
 ```
 
-密码保险箱，为二级菜单项。点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持[Search](./search)、[TextInput](./text_input)、  
-[TextArea](./text_area)或[RichEditor](./rich_editor)。
+密码保险箱，为二级菜单项。点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持Search、TextInput、 TextArea或RichEditor。
 
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -402,6 +438,8 @@ static readonly phoneNumber: TextMenuItemId
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -421,6 +459,8 @@ static readonly url: TextMenuItemId
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

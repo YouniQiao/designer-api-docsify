@@ -2,9 +2,11 @@
 
 Describes a series of consecutive glyphs with the same attributes in a text blob.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-interface TextBlobRunBuffer--><!--Device-drawing-interface TextBlobRunBuffer-End-->
 
@@ -24,11 +26,13 @@ glyph: int
 
 Index of the glyph. The value is an integer. If a floating point number is passed in, the value is rounded down.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextBlobRunBuffer-glyph: int--><!--Device-TextBlobRunBuffer-glyph: int-End-->
 
@@ -42,11 +46,13 @@ positionX: double
 
 X coordinate of the start point of the text blob. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextBlobRunBuffer-positionX: double--><!--Device-TextBlobRunBuffer-positionX: double-End-->
 
@@ -60,11 +66,13 @@ positionY: double
 
 Y coordinate of the start point of the text blob. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextBlobRunBuffer-positionY: double--><!--Device-TextBlobRunBuffer-positionY: double-End-->
 

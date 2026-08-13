@@ -20,7 +20,7 @@ Sets the Bluetooth friendly name of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setLocalName](ohos.bluetoothManager/bluetoothManager.setLocalName)
+**Substitutes:** [setLocalName](arkts-connectivity-bluetoothmanager-setlocalname-f.md#setLocalName)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

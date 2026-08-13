@@ -6,7 +6,9 @@ export type BadgeNumberCallbackData = _BadgeNumberCallbackData
 
 Describes the badge number of the application has changed.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData--><!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData-End-->
 

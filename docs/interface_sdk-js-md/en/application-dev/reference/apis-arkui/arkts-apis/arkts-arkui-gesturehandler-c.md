@@ -2,13 +2,15 @@
 
 Represents the base type for gesture handlers.
 
-**Inheritance/Implementation:** GestureHandler implements [GestureInterface<T>](GestureInterface<T>)
+**Inheritance/Implementation:** GestureHandler implements GestureInterface<T>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare class GestureHandler<T> implements GestureInterface<T>--><!--Device-unnamed-declare class GestureHandler<T> implements GestureInterface<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class GestureHandler--><!--Device-unnamed-declare class GestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Sets the event input sources supported by the gesture handler.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,6 +59,8 @@ Sets the tag for the gesture handler.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,9 +4,11 @@ Effect resource.
 
 **Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 21
+**Since:** 23
 
-<!--Device-unnamed-export interface Effect extends SceneResource--><!--Device-unnamed-export interface Effect extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Effect--><!--Device-unnamed-export interface Effect-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -19,6 +21,8 @@ getPropertyValue(propertyName: string): Object | null | undefined
 Get the value of a specific effect property.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +72,8 @@ Set the value of a specific effect property
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean--><!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean-End-->
@@ -113,11 +119,13 @@ function setEffectProperty() {
 readonly effectId: string
 ```
 
-The id of the effect.This is the id that was used to create the effect.
+The id of the effect. This is the id that was used to create the effect.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Effect-readonly effectId: string--><!--Device-Effect-readonly effectId: string-End-->
 
@@ -133,7 +141,9 @@ Controls whether the effect is enabled or not.
 
 **Type:** boolean
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Effect-enabled: boolean--><!--Device-Effect-enabled: boolean-End-->
 

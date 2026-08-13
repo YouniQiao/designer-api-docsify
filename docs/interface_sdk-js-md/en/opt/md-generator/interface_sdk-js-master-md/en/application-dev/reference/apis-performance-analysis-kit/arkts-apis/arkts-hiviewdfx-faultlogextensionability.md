@@ -1,4 +1,4 @@
-# @ohos.hiviewdfx.FaultLogExtensionAbility(Delayed Fault Notification)
+# @ohos.hiviewdfx.FaultLogExtensionAbility
 
 ## Modules to Import
 

@@ -8,9 +8,11 @@ function getFreeSizeSync(path: string): long
 
 以同步方法获取指定文件系统空闲字节数。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-statfs-function getFreeSizeSync(path: string): long--><!--Device-statfs-function getFreeSizeSync(path: string): long-End-->
 
@@ -26,7 +28,7 @@ function getFreeSizeSync(path: string): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回空闲字节数。 |
+| long | 返回空闲字节数。 |
 
 **错误码：**
 

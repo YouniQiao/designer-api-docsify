@@ -4,6 +4,8 @@ Defines mode for playback capture, each mode means different target streams to c
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-audio-enum AudioPlaybackCaptureMode--><!--Device-audio-enum AudioPlaybackCaptureMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
@@ -14,9 +16,11 @@ Defines mode for playback capture, each mode means different target streams to c
 MODE_ONLY_VOIP = 0x4000
 ```
 
-Only voip mode. Capture only voice/video communication streams.If [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackCaptureUid) is set, only the voice/video communication stream of the specified application is captured.The [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackCaptureUid) takes effect only when this mode is set.This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO`permission; otherwise [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) fails.
+Only voip mode. Capture only voice/video communication streams. If [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackCaptureUid) is set, only the voice/video communication stream of the specified application is captured. The [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackCaptureUid) takes effect only when this mode is set. This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO` permission; otherwise [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) fails.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

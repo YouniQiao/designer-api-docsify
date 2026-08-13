@@ -1,10 +1,12 @@
 # WebKeyboardAppearanceMode
 
-Enum type supplied to [keyboardAppearance](keyboardAppearance) for setting the web keyboard appearance mode.
+Enum type supplied to keyboardAppearance for setting the web keyboard appearance mode.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WebKeyboardAppearanceMode--><!--Device-unnamed-declare enum WebKeyboardAppearanceMode-End-->
 
@@ -21,6 +23,8 @@ Default skin mode, no immersive style.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ No immersive style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1--><!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1-End-->
@@ -58,6 +64,8 @@ Light immersive style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2--><!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2-End-->
@@ -75,6 +83,8 @@ Dark immersive style.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

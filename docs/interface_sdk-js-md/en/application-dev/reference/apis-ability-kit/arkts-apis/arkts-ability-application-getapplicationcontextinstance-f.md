@@ -12,11 +12,13 @@ import { application } from '@kit.AbilityKit';
 export function getApplicationContextInstance(): ApplicationContext
 ```
 
-Obtains the application context. This API provides context access independent of the base class **Context**.Repeated calls to this API obtain the same ApplicationContext instance.
+Obtains the application context. This API provides context access independent of the base class **Context**. Repeated calls to this API obtain the same ApplicationContext instance.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +38,7 @@ Obtains the application context. This API provides context access independent of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Memory operation error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Memory operation error. |
 
 ## Examples
 

@@ -6,13 +6,13 @@
 function deleteGroup(gid: string): Promise<void>
 ```
 
-移除指定分组，后续不能再往该分组中添加任务id。使用Promise异步回调。
+移除指定分组，后续不能再往该分组中添加任务id。使用Promise异步回调。 当分组中的所有任务处于完成、失败或移除状态，并且分组被移除时，显示该分组的完成或失败通知。
 
-当分组中的所有任务处于完成、失败或移除状态，并且分组被移除时，显示该分组的完成或失败通知。
+**起始版本：** 23
 
-**起始版本：** 15
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-agent-function deleteGroup(gid: string): Promise<void>--><!--Device-agent-function deleteGroup(gid: string): Promise<void>-End-->
 
@@ -34,9 +34,9 @@ function deleteGroup(gid: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| [21900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900008-任务分组不存在或已移除) | Group deleted or not found. |
-| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900008](../../apis-basic-services-kit/errorcode-request.md#21900008-任务分组不存在或已移除) | Group deleted or not found. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
 

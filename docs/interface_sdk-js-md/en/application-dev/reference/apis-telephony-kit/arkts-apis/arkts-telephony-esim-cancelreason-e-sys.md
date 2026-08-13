@@ -2,9 +2,11 @@
 
 The reason for canceling a profile download session.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export enum CancelReason--><!--Device-eSIM-export enum CancelReason-End-->
 
@@ -20,9 +22,11 @@ CANCEL_REASON_END_USER_REJECTION = 0
 
 The end user has rejected the download.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CancelReason-CANCEL_REASON_END_USER_REJECTION = 0--><!--Device-CancelReason-CANCEL_REASON_END_USER_REJECTION = 0-End-->
 
@@ -38,9 +42,11 @@ CANCEL_REASON_POSTPONED = 1
 
 The download has been postponed and you can try again later.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CancelReason-CANCEL_REASON_POSTPONED = 1--><!--Device-CancelReason-CANCEL_REASON_POSTPONED = 1-End-->
 
@@ -56,9 +62,11 @@ CANCEL_REASON_TIMEOUT = 2
 
 The download has been timed out and you can try again later.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CancelReason-CANCEL_REASON_TIMEOUT = 2--><!--Device-CancelReason-CANCEL_REASON_TIMEOUT = 2-End-->
 
@@ -74,9 +82,11 @@ CANCEL_REASON_PPR_NOT_ALLOWED = 3
 
 The profile to be downloaded cannot be installed because profile policy rules are not allowed.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CancelReason-CANCEL_REASON_PPR_NOT_ALLOWED = 3--><!--Device-CancelReason-CANCEL_REASON_PPR_NOT_ALLOWED = 3-End-->
 

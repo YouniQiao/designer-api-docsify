@@ -1,10 +1,12 @@
 # PhotoSource
 
-Enumeration of PhotoSource type
+Enumerates the sources of the image or video data.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum PhotoSource--><!--Device-unnamed-export declare enum PhotoSource-End-->
 
@@ -16,13 +18,15 @@ Enumeration of PhotoSource type
 ALL = 0
 ```
 
-all resource
+Image or video from all sources.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoSource-ALL = 0--><!--Device-PhotoSource-ALL = 0-End-->
 
@@ -34,13 +38,15 @@ all resource
 CAMERA = 1
 ```
 
-camera resource
+Image or video taken by the camera.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoSource-CAMERA = 1--><!--Device-PhotoSource-CAMERA = 1-End-->
 
@@ -52,13 +58,15 @@ camera resource
 SCREENSHOT = 2
 ```
 
-screenshot resource
+Screenshot or screen capture video.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoSource-SCREENSHOT = 2--><!--Device-PhotoSource-SCREENSHOT = 2-End-->
 

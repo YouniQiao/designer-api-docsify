@@ -4,6 +4,8 @@ Enumerates the layout directions of the icon and text on a security component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SecurityComponentLayoutDirection--><!--Device-unnamed-declare enum SecurityComponentLayoutDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ HORIZONTAL = 0
 The icon and text on the security component are arranged horizontally.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ VERTICAL = 1
 The icon and text on the security component are arranged vertically.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

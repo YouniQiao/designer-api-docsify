@@ -1,8 +1,10 @@
 # AVErrorCode
 
-[Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。
+[Media错误码](../errorcode-media.md)类型枚举。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-media-enum AVErrorCode--><!--Device-media-enum AVErrorCode-End-->
 
@@ -16,7 +18,9 @@ AVERR_SESSION_NOT_EXIST = 5400109
 
 The parameter value means session does not exist
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVErrorCode-AVERR_SESSION_NOT_EXIST = 5400109--><!--Device-AVErrorCode-AVERR_SESSION_NOT_EXIST = 5400109-End-->
 

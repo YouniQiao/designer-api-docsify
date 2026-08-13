@@ -2,9 +2,11 @@
 
 VisualEffect class, used to apply background color blending, border lighting, color gradient, and other effects to a component. Before calling VisualEffect methods, you need to first create a VisualEffect instance through createEffect.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
 
@@ -24,9 +26,11 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 A blender for changing the background color of the component. Currently, only the brightness blender is supported.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -59,13 +63,6 @@ visualEffect.backgroundColorBlender(blender)
 
 ## borderLight
 
-ArkTS-Dyn:
-```TypeScript
-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: number,
-      borderWidth: number): VisualEffect
-```
-
-ArkTS-Sta:
 ```TypeScript
 borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
       borderWidth: double): VisualEffect
@@ -73,9 +70,11 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 Adds a 3D lighting effect to the border of a rounded rectangle component.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect-End-->
 
@@ -89,8 +88,8 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 | --- | --- | --- | --- |
 | lightPosition | common2D.Point3d | Yes | The 3D position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
 | lightColor | common2D.Color | Yes | The color of the light source. Each component range is [0, 1]. Values outside the range will be automatically clamped. |
-| lightIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
-| borderWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The illuminated width of the component border. The value range is [0.0, 30.0]. Values outside the range will be automatically clamped. Setting it to 0.0 results in no lighting effect on the component border; a larger value results in a wider illuminated area. |
+| lightIntensity | double | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
+| borderWidth | double | Yes | The illuminated width of the component border. The value range is [0.0, 30.0]. Values outside the range will be automatically clamped. Setting it to 0.0 results in no lighting effect on the component border; a larger value results in a wider illuminated area. |
 
 **Return value:**
 
@@ -102,7 +101,7 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -148,13 +147,6 @@ struct Index {
 
 ## colorGradient
 
-ArkTS-Dyn:
-```TypeScript
-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<number>,
-      alphaMask?: Mask): VisualEffect
-```
-
-ArkTS-Sta:
 ```TypeScript
 colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
       alphaMask?: Mask): VisualEffect
@@ -162,9 +154,11 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 Adds a color gradient effect to the component.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect-End-->
 
@@ -178,7 +172,7 @@ Adds a color gradient effect to the component.
 | --- | --- | --- | --- |
 | colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
 | positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
-| strengths | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | The strength array, corresponding to the intensity of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| strengths | Array&lt;double&gt; | Yes | The strength array, corresponding to the intensity of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The alpha mask corresponding to the colors. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
 
 **Return value:**
@@ -191,7 +185,7 @@ Adds a color gradient effect to the component.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -237,13 +231,13 @@ struct ColorGradientExample {
 distortionCollapse(distortionParam: DistortionParam): VisualEffect
 ```
 
-Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc.
-
-NOTE1. This visual effect supports drawing outside the bounds of the control, but it is still subject to the clipping (Clip) of the parent control.2. Because it contains a foreground Filter, some visual effects of the component itself and its child components (e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination  with the EffectComponent.3. It supports distorting the system material, but when used in combination with the EffectComponent, it will cause the background of the system material to be distorted.4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created. The content of the current component (including child components) is then drawn onto this offscreen canvas, and the existing content on the canvas is drawn with deformation.5. When using this implementation without combining with the EffectComponent, interfaces that require screen  capture, such as systemMaterial, backgroundEffect, brightness, and blur, will not be able to capture  the correct screen.
+Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc. NOTE 1. This visual effect supports drawing outside the bounds of the control, but it is still subject to the clipping (Clip) of the parent control. 2. Because it contains a foreground Filter, some visual effects of the component itself and its child components (e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination with the EffectComponent. 3. It supports distorting the system material, but when used in combination with the EffectComponent, it will cause the background of the system material to be distorted. 4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created. The content of the current component (including child components) is then drawn onto this offscreen canvas, and the existing content on the canvas is drawn with deformation. 5. When using this implementation without combining with the EffectComponent, interfaces that require screen capture, such as systemMaterial, backgroundEffect, brightness, and blur, will not be able to capture the correct screen.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,11 +266,13 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
       brightnessParam?: BrightnessParam): VisualEffect
 ```
 
-Adds a material effect to the component. The material effect simulates the optical properties(refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI,fluid material animation, frosted glass effects, etc.
+Adds a material effect to the component. The material effect simulates the optical properties (refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI, fluid material animation, frosted glass effects, etc.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect-End-->
 
@@ -303,7 +299,7 @@ Adds a material effect to the component. The material effect simulates the optic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

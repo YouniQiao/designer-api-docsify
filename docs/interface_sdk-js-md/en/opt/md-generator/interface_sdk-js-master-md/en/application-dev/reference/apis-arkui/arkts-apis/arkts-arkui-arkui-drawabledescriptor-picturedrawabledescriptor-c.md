@@ -1,13 +1,14 @@
 # PictureDrawableDescriptor
 
-Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. This API inherits from   
-[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
+Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. This API inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
 
 **Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export class PictureDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class PictureDrawableDescriptor extends DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class PictureDrawableDescriptor--><!--Device-unnamed-export class PictureDrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +27,8 @@ constructor(src: image.Picture)
 A constructor used to create a **PictureDrawableDescriptor** object.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +53,8 @@ setHdrComposition(config: HdrCompositionConfig): void
 Sets HDR composition.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Device role.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-enum Role--><!--Device-abilityToolAccessCtrl-enum Role-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -20,6 +22,8 @@ Controller device.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-Role-CONTROLLER = 0x01--><!--Device-Role-CONTROLLER = 0x01-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -35,6 +39,8 @@ CONTROLLED = 0x02
 Controlled device.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-Role-CONTROLLED = 0x02--><!--Device-Role-CONTROLLED = 0x02-End-->
 

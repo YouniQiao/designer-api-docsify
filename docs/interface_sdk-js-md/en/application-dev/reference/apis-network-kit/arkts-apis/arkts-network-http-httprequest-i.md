@@ -1,10 +1,12 @@
 # HttpRequest
 
-&lt;p&gt;Defines an HTTP request task. Before invoking APIs provided by HttpRequest,you must call createHttp() to create an HttpRequestTask object.&lt;/p&gt;
+&lt;p&gt;Defines an HTTP request task. Before invoking APIs provided by HttpRequest, you must call createHttp() to create an HttpRequestTask object.&lt;/p&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface HttpRequest--><!--Device-http-export interface HttpRequest-End-->
 
@@ -24,11 +26,13 @@ destroy(): void
 
 Destroys an HTTP request.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
@@ -60,7 +64,9 @@ Sets whether to automatically reply with cookies.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +80,333 @@ Sets whether to automatically reply with cookies.
 | --- | --- | --- | --- |
 | enable | boolean | Yes | whether to automatically reply with cookies, default is false. |
 
-## off("headerReceive")
+## offDataEnd
+
+```TypeScript
+offDataEnd(callback?: Callback<void>): void
+```
+
+Unregisters an observer for receiving HTTP Response data ends events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-offDataEnd(callback?: Callback<void>): void--><!--Device-HttpRequest-offDataEnd(callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+## offDataReceive
+
+```TypeScript
+offDataReceive(callback?: Callback<ArrayBuffer>): void
+```
+
+Unregisters an observer for receiving HTTP Response data events continuously.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-offDataReceive(callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-offDataReceive(callback?: Callback<ArrayBuffer>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | the callback used to return the result. |
+
+## offDataReceiveProgress
+
+```TypeScript
+offDataReceiveProgress(callback?: Callback<DataReceiveProgressInfo>): void
+```
+
+Unregisters an observer for progress of receiving HTTP Response data events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-offDataReceiveProgress(callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-offDataReceiveProgress(callback?: Callback<DataReceiveProgressInfo>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | the callback used to return the result. |
+
+## offDataSendProgress
+
+```TypeScript
+offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void
+```
+
+Unregisters an observer for progress of sendSize HTTP Response data events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | the callback of off. |
+
+## offHeadersReceive
+
+```TypeScript
+offHeadersReceive(callback?: Callback<Record<string, string>>): void
+```
+
+Unregisters the observer for HTTP Response Header events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-offHeadersReceive(callback?: Callback<Record<string, string>>): void--><!--Device-HttpRequest-offHeadersReceive(callback?: Callback<Record<string, string>>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, string&gt;&gt; | No | the callback used to return the result. |
+
+## off_dataEnd
+
+```TypeScript
+off(type: "dataEnd", callback?: Callback<void>): void
+```
+
+Unregisters an observer for receiving HTTP Response data ends events.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "dataEnd" | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
+## off_dataReceive
+
+```TypeScript
+off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
+```
+
+Unregisters an observer for receiving HTTP Response data events continuously.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "dataReceive" | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
+```
+
+## off_dataReceiveProgress
+
+```TypeScript
+off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void
+```
+
+Unregisters an observer for progress of receiving HTTP Response data events.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'dataReceiveProgress' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
+  console.info("dataReceiveProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataReceiveProgress");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
+  console.info("dataReceiveProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataReceiveProgress");
+```
+
+## off_dataSendProgress
+
+```TypeScript
+off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
+```
+
+Unregisters an observer for progress of sendSize HTTP Response data events.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'dataSendProgress' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | the callback of off. |
+
+## Examples
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
+```
+
+## off_headerReceive
 
 ```TypeScript
 off(type: "headerReceive", callback?: AsyncCallback<Object>): void
@@ -88,7 +420,7 @@ Unregisters the observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [off_headersReceive](#off-1)
+**Substitutes:** [off_headersReceive](#off_headersReceive)
 
 <!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
 
@@ -99,7 +431,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Indicates Event name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | No | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | the callback used to return the result. |
 
 ## Examples
 
@@ -117,7 +449,7 @@ let httpRequest = http.createHttp();
 httpRequest.off("headerReceive");
 ```
 
-## off("headersReceive")
+## off_headersReceive
 
 ```TypeScript
 off(type: "headersReceive", callback?: Callback<Object>): void
@@ -128,6 +460,8 @@ Unregisters the observer for HTTP Response Header events.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -140,7 +474,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No | the callback used to return the result. |
 
 ## Examples
 
@@ -164,21 +498,23 @@ httpRequest.on("headersReceive", (header: Object) => {
 httpRequest.off("headersReceive");
 ```
 
-## off("dataReceive")
+## onDataEnd
 
 ```TypeScript
-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
+onDataEnd(callback: Callback<void>): void
 ```
 
-Unregisters an observer for receiving HTTP Response data events continuously.
+Registers an observer for receiving HTTP Response data ends events.
 
-**Since:** 18
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
 
-<!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-onDataEnd(callback: Callback<void>): void--><!--Device-HttpRequest-onDataEnd(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -186,46 +522,129 @@ Unregisters an observer for receiving HTTP Response data events continuously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | "dataReceive" | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-## Examples
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
+## onDataReceive
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
+onDataReceive(callback: Callback<ArrayBuffer>): void
 ```
 
-## off("dataEnd")
+Registers an observer for receiving HTTP Response data events continuously.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-onDataReceive(callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-onDataReceive(callback: Callback<ArrayBuffer>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | the callback used to return the result. |
+
+## onDataReceiveProgress
 
 ```TypeScript
-off(type: "dataEnd", callback?: Callback<void>): void
+onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void
 ```
 
-Unregisters an observer for receiving HTTP Response data ends events.
+Registers an observer for progress of receiving HTTP Response data events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | the callback used to return the result. |
+
+## onDataSendProgress
+
+```TypeScript
+onDataSendProgress(callback: Callback<DataSendProgressInfo>): void
+```
+
+Registers an observer for progress of sendSize HTTP Response data events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-onDataSendProgress(callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-onDataSendProgress(callback: Callback<DataSendProgressInfo>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | the callback of on. |
+
+## onHeadersReceive
+
+```TypeScript
+onHeadersReceive(callback: Callback<Record<string, string>>): void
+```
+
+Registers an observer for HTTP Response Header events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HttpRequest-onHeadersReceive(callback: Callback<Record<string, string>>): void--><!--Device-HttpRequest-onHeadersReceive(callback: Callback<Record<string, string>>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, string&gt;&gt; | Yes | the callback used to return the result. |
+
+## on_dataEnd
+
+```TypeScript
+on(type: "dataEnd", callback: Callback<void>): void
+```
+
+Registers an observer for receiving HTTP Response data ends events.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
+<!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -234,7 +653,7 @@ Unregisters an observer for receiving HTTP Response data ends events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -258,21 +677,72 @@ httpRequest.on("dataEnd", () => {
 httpRequest.off("dataEnd");
 ```
 
-## off('dataReceiveProgress')
+## on_dataReceive
 
 ```TypeScript
-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void
+on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
 ```
 
-Unregisters an observer for progress of receiving HTTP Response data events.
+Registers an observer for receiving HTTP Response data events continuously.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "dataReceive" | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
+```
+
+## on_dataReceiveProgress
+
+```TypeScript
+on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
+```
+
+Registers an observer for progress of receiving HTTP Response data events.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
+<!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -281,7 +751,7 @@ Unregisters an observer for progress of receiving HTTP Response data events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -305,21 +775,23 @@ httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
 httpRequest.off("dataReceiveProgress");
 ```
 
-## off('dataSendProgress')
+## on_dataSendProgress
 
 ```TypeScript
-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
+on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
 ```
 
-Unregisters an observer for progress of sendSize HTTP Response data events.
+Registers an observer for progress of sendSize HTTP Response data events.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
+<!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -328,7 +800,7 @@ Unregisters an observer for progress of sendSize HTTP Response data events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | the callback of off. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | the callback of on. |
 
 ## Examples
 
@@ -352,127 +824,7 @@ httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
 httpRequest.off("dataSendProgress");
 ```
 
-## offDataEnd
-
-```TypeScript
-offDataEnd(callback?: Callback<void>): void
-```
-
-Unregisters an observer for receiving HTTP Response data ends events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-offDataEnd(callback?: Callback<void>): void--><!--Device-HttpRequest-offDataEnd(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
-
-## offDataReceive
-
-```TypeScript
-offDataReceive(callback?: Callback<ArrayBuffer>): void
-```
-
-Unregisters an observer for receiving HTTP Response data events continuously.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-offDataReceive(callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-offDataReceive(callback?: Callback<ArrayBuffer>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | the callback used to return the result. |
-
-## offDataReceiveProgress
-
-```TypeScript
-offDataReceiveProgress(callback?: Callback<DataReceiveProgressInfo>): void
-```
-
-Unregisters an observer for progress of receiving HTTP Response data events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-offDataReceiveProgress(callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-offDataReceiveProgress(callback?: Callback<DataReceiveProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | the callback used to return the result. |
-
-## offDataSendProgress
-
-```TypeScript
-offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void
-```
-
-Unregisters an observer for progress of sendSize HTTP Response data events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | the callback of off. |
-
-## offHeadersReceive
-
-```TypeScript
-offHeadersReceive(callback?: Callback<Record<string, string>>): void
-```
-
-Unregisters the observer for HTTP Response Header events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-offHeadersReceive(callback?: Callback<Record<string, string>>): void--><!--Device-HttpRequest-offHeadersReceive(callback?: Callback<Record<string, string>>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, string&gt;&gt; | No | the callback used to return the result. |
-
-## on("headerReceive")
+## on_headerReceive
 
 ```TypeScript
 on(type: "headerReceive", callback: AsyncCallback<Object>): void
@@ -486,7 +838,7 @@ Registers an observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on_headersReceive](#on-1)
+**Substitutes:** [on_headersReceive](#on_headersReceive)
 
 <!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
@@ -497,7 +849,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Indicates Event name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -521,7 +873,7 @@ httpRequest.on("headerReceive", (data: BusinessError) => {
 });
 ```
 
-## on("headersReceive")
+## on_headersReceive
 
 ```TypeScript
 on(type: "headersReceive", callback: Callback<Object>): void
@@ -532,6 +884,8 @@ Registers an observer for HTTP Response Header events.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -544,7 +898,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -566,359 +920,6 @@ httpRequest.on("headersReceive", (header: Object) => {
   console.info("header: " + JSON.stringify(header));
 });
 httpRequest.off("headersReceive");
-```
-
-## on("dataReceive")
-
-```TypeScript
-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
-```
-
-Registers an observer for receiving HTTP Response data events continuously.
-
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "dataReceive" | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
-## on("dataEnd")
-
-```TypeScript
-on(type: "dataEnd", callback: Callback<void>): void
-```
-
-Registers an observer for receiving HTTP Response data ends events.
-
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "dataEnd" | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
-## on('dataReceiveProgress')
-
-```TypeScript
-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
-```
-
-Registers an observer for progress of receiving HTTP Response data events.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataReceiveProgress' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
-## on('dataSendProgress')
-
-```TypeScript
-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
-```
-
-Registers an observer for progress of sendSize HTTP Response data events.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataSendProgress' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | the callback of on. |
-
-## Examples
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
-## onDataEnd
-
-```TypeScript
-onDataEnd(callback: Callback<void>): void
-```
-
-Registers an observer for receiving HTTP Response data ends events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-onDataEnd(callback: Callback<void>): void--><!--Device-HttpRequest-onDataEnd(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-## onDataReceive
-
-```TypeScript
-onDataReceive(callback: Callback<ArrayBuffer>): void
-```
-
-Registers an observer for receiving HTTP Response data events continuously.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-onDataReceive(callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-onDataReceive(callback: Callback<ArrayBuffer>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | the callback used to return the result. |
-
-## onDataReceiveProgress
-
-```TypeScript
-onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void
-```
-
-Registers an observer for progress of receiving HTTP Response data events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | the callback used to return the result. |
-
-## onDataSendProgress
-
-```TypeScript
-onDataSendProgress(callback: Callback<DataSendProgressInfo>): void
-```
-
-Registers an observer for progress of sendSize HTTP Response data events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-onDataSendProgress(callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-onDataSendProgress(callback: Callback<DataSendProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | the callback of on. |
-
-## onHeadersReceive
-
-```TypeScript
-onHeadersReceive(callback: Callback<Record<string, string>>): void
-```
-
-Registers an observer for HTTP Response Header events.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HttpRequest-onHeadersReceive(callback: Callback<Record<string, string>>): void--><!--Device-HttpRequest-onHeadersReceive(callback: Callback<Record<string, string>>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, string&gt;&gt; | Yes | the callback used to return the result. |
-
-## once("headersReceive")
-
-```TypeScript
-once(type: "headersReceive", callback: Callback<Object>): void
-```
-
-Registers a one-time observer for HTTP Response Header events.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "headersReceive" | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.once("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.once("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
 ```
 
 ## onceHeadersReceive
@@ -931,7 +932,9 @@ Registers a one-time observer for HTTP Response Header events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -943,7 +946,54 @@ Registers a one-time observer for HTTP Response Header events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, string&gt;&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, string&gt;&gt; | Yes | the callback used to return the result. |
+
+## once_headersReceive
+
+```TypeScript
+once(type: "headersReceive", callback: Callback<Object>): void
+```
+
+Registers a one-time observer for HTTP Response Header events.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "headersReceive" | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.once("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.once("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
+});
+```
 
 ## request
 
@@ -951,25 +1001,13 @@ Registers a one-time observer for HTTP Response Header events.
 request(url: string, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result.
+Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call > [requestInStream](#requestInStream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
 
-> **NOTE：**
-> 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call
-> [requestInStream](#requestInStream) to
-> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
-> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
-> will fail to be received.
+**Since:** 23
 
-> (2) If you need to pass in cookies, add them to the **options** parameter.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
-> HTTP request.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -984,46 +1022,46 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
-| [2300047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 ## Examples
 
@@ -1067,25 +1105,13 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call > [requestInStream](#requestInStream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
 
-> **NOTE：**
-> 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call
-> [requestInStream](#requestInStream) to
-> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
-> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
-> will fail to be received.
+**Since:** 23
 
-> (2) If you need to pass in cookies, add them to the **options** parameter.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
-> HTTP request.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1101,46 +1127,46 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md#HttpResponse) object; otherwise, the callback content is undefined. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md#HttpResponse) object; otherwise, the callback content is undefined. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
-| [2300047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 ## Examples
 
@@ -1230,25 +1256,13 @@ httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse
 request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call > [requestInStream](#requestInStream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
 
-> **NOTE：**
-> 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call
-> [requestInStream](#requestInStream) to
-> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
-> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
-> will fail to be received.
+**Since:** 23
 
-> (2) If you need to pass in cookies, add them to the **options** parameter.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
-> HTTP request.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1275,40 +1289,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
-| [2300047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 ## Examples
 
@@ -1376,21 +1390,17 @@ promise.then((data:http.HttpResponse) => {
 
 ## requestInStream
 
-ArkTS-Dyn:
-```TypeScript
-requestInStream(url: string, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 requestInStream(url: string, callback: AsyncCallback<int>): void
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
 
-**Since:** 10
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1405,46 +1415,46 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Unknown error. |
-| [2300998](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Unknown error. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
-| [2300047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 ## Examples
 
@@ -1478,21 +1488,17 @@ httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) =>
 
 ## requestInStream
 
-ArkTS-Dyn:
-```TypeScript
-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
 
-**Since:** 10
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1508,46 +1514,46 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md#ResponseCode) is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md#ResponseCode) is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Unknown error. |
-| [2300998](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Unknown error. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
-| [2300047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 ## Examples
 
@@ -1625,21 +1631,17 @@ httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , 
 
 ## requestInStream
 
-ArkTS-Dyn:
-```TypeScript
-requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 requestInStream(url: string, options?: HttpRequestOptions): Promise<int>
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result, which is a streaming response.
 
-**Since:** 10
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1660,46 +1662,46 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the [result]{ |
+| Promise&lt;int&gt; | Promise used to return the [result]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Unknown error. |
-| [2300998](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Unknown error. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
-| [2300047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 ## Examples
 
@@ -1759,25 +1761,13 @@ promise.then((data: number) => {
 requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 ```
 
-Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously.
-
-> **NOTE：**
-> 
-> (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**
-> parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions).
-
-> (2) If you need to pass in cookies, add them to the **options** parameter.
-
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
-> HTTP request.
-
-> (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned.
-
-**Required permission**: ohos.permission.INTERNET
+Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously. > **NOTE：**> > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit** > parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request. > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned. **Required permission**: ohos.permission.INTERNET
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1804,37 +1794,37 @@ Initiates an HTTP network request based on the URL and related configuration opt
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain. |
-| [2300997](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain. |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted. |
 | 2300996 | The request was intercepted by the HTTP global interceptor. |
-| [2300047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 

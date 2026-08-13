@@ -2,7 +2,9 @@
 
 表示身份管理回调类。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface IIdmCallback--><!--Device-osAccount-interface IIdmCallback-End-->
 
@@ -18,37 +20,17 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: Uint8Array) => void
 
 身份管理信息获取回调函数。
 
-**起始版本：** 8
+**类型：** (module: number, acquire: number, extraInfo: Uint8Array) =&gt; void
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IIdmCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void--><!--Device-IIdmCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| module | number | 是 |
-| acquire | number | 是 |
-| extraInfo | Uint8Array | 是 |
-
-## 示例
-
-```TypeScript
-let idmCallback: osAccount.IIdmCallback = {
-  onResult: (result: number, extraInfo: Object) => {
-    console.info('callback result = ' + result)
-    console.info('callback onResult = ' + JSON.stringify(extraInfo));
-  },
-  onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
-    console.info('callback module = ' + module);
-    console.info('callback acquire = ' + acquire);
-    console.info('callback onacquireinfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```
 
 ## onResult
 
@@ -58,28 +40,14 @@ onResult: (result: number, extraInfo: RequestResult) => void
 
 身份管理操作结果回调函数，返回结果码和请求结果信息。
 
-**起始版本：** 8
+**类型：** (result: number, extraInfo: RequestResult) =&gt; void
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IIdmCallback-onResult: (result: int, extraInfo: RequestResult) => void--><!--Device-IIdmCallback-onResult: (result: int, extraInfo: RequestResult) => void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | number | 是 |
-| extraInfo | [RequestResult](arkts-basicservices-osaccount-requestresult-i-sys.md) | 是 |
-
-## 示例
-
-```TypeScript
-let idmCallback: osAccount.IIdmCallback = {
-  onResult: (result: number, extraInfo: osAccount.RequestResult) => {
-    console.info('callback result = ' + result)
-    console.info('callback extraInfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```

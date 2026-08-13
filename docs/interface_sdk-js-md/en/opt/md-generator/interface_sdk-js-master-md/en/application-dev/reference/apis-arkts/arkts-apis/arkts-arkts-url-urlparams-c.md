@@ -2,7 +2,9 @@
 
 The URLParams interface defines some practical methods to process URL query strings.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-url-class URLParams--><!--Device-url-class URLParams-End-->
 
@@ -14,6 +16,30 @@ The URLParams interface defines some practical methods to process URL query stri
 import { url } from '@kit.ArkTS';
 ```
 
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<[string, string]>
+```
+
+Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-$_iterator(): IterableIterator<[string, string]>--><!--Device-URLParams-$_iterator(): IterableIterator<[string, string]>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
+
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -23,6 +49,8 @@ import { url } from '@kit.ArkTS';
 Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +62,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
 
 ## Examples
 
@@ -56,7 +84,9 @@ append(name: string, value: string): void
 
 Appends a key-value pair into the query string.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -89,6 +119,8 @@ A constructor used to create a URLParams instance.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)-End-->
@@ -99,7 +131,7 @@ A constructor used to create a URLParams instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| init | string[][] \| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No |
+| init | string[][] \| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No |
 
 ## Examples
 
@@ -118,6 +150,30 @@ let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2')
 let objectParams4 = urlObject1.params;
 ```
 
+## constructor
+
+```TypeScript
+constructor(init?: [string, string][] | Record<string, string> | string | URLParams)
+```
+
+A parameterized constructor used to create an URLParams instance. As the input parameter of the constructor function, init supports four types. The input parameter is a character string two-dimensional array. The input parameter is the object list. The input parameter is a character string. The input parameter is the URLParams object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-constructor(init?: [string, string][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: [string, string][] | Record<string, string> | string | URLParams)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| init | [string, string][] \| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No |
+
 ## delete
 
 ```TypeScript
@@ -126,7 +182,9 @@ delete(name: string): void
 
 Deletes key-value pairs of the specified key.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,7 +214,9 @@ entries(): IterableIterator<[string, string]>
 
 Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields of each array are the key and value respectively.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -168,7 +228,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
 
 ## Examples
 
@@ -192,6 +252,8 @@ Callback functions are used to traverse key-value pairs on the URLParams instanc
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void--><!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void-End-->
@@ -214,6 +276,30 @@ myURLObject.params.forEach((value, name, searchParams) => {
 });
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: UrlCbFn): void
+```
+
+Iterates over a collection (e.g., URLs) and executes a callback function for each element.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-forEach(callbackFn: UrlCbFn): void--><!--Device-URLParams-forEach(callbackFn: UrlCbFn): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) | Yes |
+
 ## get
 
 ```TypeScript
@@ -223,6 +309,8 @@ get(name: string): string | null
 Obtains the value of the first key-value pair based on the specified key.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -251,6 +339,36 @@ let age = paramsObject.get("age"); // is the string "18"
 let getObj = paramsObject.get("abc"); // undefined
 ```
 
+## get
+
+```TypeScript
+get(name: string): string | undefined
+```
+
+Obtains the value of the first key-value pair based on the specified key.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-get(name: string): string | undefined--><!--Device-URLParams-get(name: string): string | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
 ## getAll
 
 ```TypeScript
@@ -259,7 +377,9 @@ getAll(name: string): string[]
 
 Obtains all the values based on the specified key.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -296,7 +416,9 @@ has(name: string): boolean
 
 Checks whether a key has a value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -332,7 +454,9 @@ keys(): IterableIterator<string>
 
 Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -344,7 +468,7 @@ Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
 
 ## Examples
 
@@ -364,9 +488,11 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-Sets the value for a key. If key-value pairs matching the specified key exist, the value of the first key-value pair will be set to the specified value and other key-value pairs will be deleted. Otherwise, the key-value pair will be appended to the query string.
+Sets the value for a key. If key-value pairs matching the specified key exist, the value of the first key- value pair will be set to the specified value and other key-value pairs will be deleted. Otherwise, the key-value pair will be appended to the query string.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -397,7 +523,9 @@ sort(): void
 
 Sorts all key-value pairs contained in this object based on the Unicode code points of the keys and returns undefined. This method uses a stable sorting algorithm, that is, the relative order between key-value pairs with equal keys is retained.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -421,7 +549,9 @@ toString(): string
 
 Obtains search parameters that are serialized as a string and, if necessary, percent-encodes the characters in the string.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -452,7 +582,9 @@ values(): IterableIterator<string>
 
 Obtains an ES6 iterator that contains the values of all the key-value pairs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -464,7 +596,7 @@ Obtains an ES6 iterator that contains the values of all the key-value pairs.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
 
 ## Examples
 

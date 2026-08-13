@@ -14,7 +14,9 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 
 Enables or disables a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -32,9 +34,9 @@ Enables or disables a module with the overlay feature in the current application
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
 
 ## Examples
 
@@ -69,7 +71,9 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 
 Enables or disables a module with the overlay feature in the current application. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>-End-->
 
@@ -92,9 +96,9 @@ Enables or disables a module with the overlay feature in the current application
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
 
 ## Examples
 

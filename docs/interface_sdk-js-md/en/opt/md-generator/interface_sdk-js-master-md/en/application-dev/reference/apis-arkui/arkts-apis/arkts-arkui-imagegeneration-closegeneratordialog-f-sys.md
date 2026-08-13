@@ -16,6 +16,8 @@ Close the AI image generation task popup.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-imageGeneration-function closeGeneratorDialog(uiContext: UIContext): Promise<void>--><!--Device-imageGeneration-function closeGeneratorDialog(uiContext: UIContext): Promise<void>-End-->

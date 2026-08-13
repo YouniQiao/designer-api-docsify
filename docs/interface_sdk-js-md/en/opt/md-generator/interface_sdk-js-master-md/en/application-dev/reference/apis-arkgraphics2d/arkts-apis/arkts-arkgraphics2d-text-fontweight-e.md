@@ -2,7 +2,9 @@
 
 Enumerates the font weights.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-enum FontWeight--><!--Device-text-enum FontWeight-End-->
 
@@ -16,7 +18,9 @@ W100 = 0
 
 Font weight W100.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -32,7 +36,9 @@ W200 = 1
 
 Font weight W200.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -48,7 +54,9 @@ W300 = 2
 
 Font weight W300.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -64,7 +72,9 @@ W400 = 3
 
 Font weight W400.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -80,7 +90,9 @@ W500 = 4
 
 Font weight W500.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -96,7 +108,9 @@ W600 = 5
 
 Font weight W600.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -112,7 +126,9 @@ W700 = 6
 
 Font weight W700.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -128,7 +144,9 @@ W800 = 7
 
 Font weight W800.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -144,7 +162,9 @@ W900 = 8
 
 Font weight W900.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

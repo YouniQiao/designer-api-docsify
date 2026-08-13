@@ -2,7 +2,9 @@
 
 Describes the contents of the battery information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-interface BatteryInfo--><!--Device-connection-interface BatteryInfo-End-->
 
@@ -24,7 +26,9 @@ Electricity value of the general device. {@code -1} means no power information.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Electricity value of the box. {@code -1} means no power information.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ The charge state of the box.
 
 **Type:** [DeviceChargeState](arkts-connectivity-connection-devicechargestate-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ Electricity value of the left ear. {@code -1} means no power information.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +106,9 @@ The charge state of the left ear.
 
 **Type:** [DeviceChargeState](arkts-connectivity-connection-devicechargestate-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,7 +126,9 @@ Electricity value of the right ear. {@code -1} means no power information.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,7 +146,9 @@ The charge state of the right ear.
 
 **Type:** [DeviceChargeState](arkts-connectivity-connection-devicechargestate-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

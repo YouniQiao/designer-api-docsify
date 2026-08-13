@@ -4,6 +4,8 @@ Enum of Illuminated type
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum IlluminatedType--><!--Device-unnamed-declare enum IlluminatedType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ NONE = 0
 The component is not illuminated.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ The borders of the component can be illuminated.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IlluminatedType-BORDER = 1--><!--Device-IlluminatedType-BORDER = 1-End-->
@@ -55,6 +61,8 @@ CONTENT = 2
 The content of the component can be illuminated.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ The borders and content of the component can be illuminated.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IlluminatedType-BORDER_CONTENT = 3--><!--Device-IlluminatedType-BORDER_CONTENT = 3-End-->
@@ -92,6 +102,8 @@ The borders of the component can be illuminated, with a luminous effect applied 
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IlluminatedType-BLOOM_BORDER = 4--><!--Device-IlluminatedType-BLOOM_BORDER = 4-End-->
@@ -109,6 +121,8 @@ BLOOM_BORDER_CONTENT = 5
 The borders and content of the component can be illuminated, with a luminous effect applied to the borders.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

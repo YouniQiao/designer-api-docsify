@@ -2,7 +2,9 @@
 
 Describe the interrupt data is received from remote host.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-hid-interface InterruptData--><!--Device-hid-interface InterruptData-End-->
 
@@ -24,7 +26,9 @@ data of interrupt data.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ id of interrupt data.
 
 **Type:** number
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

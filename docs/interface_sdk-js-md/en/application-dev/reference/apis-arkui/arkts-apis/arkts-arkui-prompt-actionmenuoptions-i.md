@@ -8,7 +8,7 @@ Defines the option of ShowActionMenu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ActionMenuOptions](ohos.promptAction/promptAction.ActionMenuOptions)
+**Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md#ActionMenuOptions)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 
@@ -26,7 +26,7 @@ import { prompt } from '@kit.ArkUI';
 buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 ```
 
-Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
+Array of buttons in the dialog box. The array structure is {text:'button', color: '#666666'}. One to six buttons are supported.
 
 **Type:** [Button, Button?, Button?, Button?, Button?, Button?]
 
@@ -36,7 +36,7 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 
 **Deprecated since:** 9
 
-**Substitutes:** [buttons](ohos.promptAction/promptAction.ActionMenuOptions#buttons)
+**Substitutes:** [buttons](arkts-arkui-promptaction-actionmenuoptions-i.md#buttons)
 
 <!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
 
@@ -58,7 +58,7 @@ Title of the text to display.
 
 **Deprecated since:** 9
 
-**Substitutes:** [title](ohos.promptAction/promptAction.ActionMenuOptions#title)
+**Substitutes:** [title](arkts-arkui-promptaction-actionmenuoptions-i.md#title)
 
 <!--Device-ActionMenuOptions-title?: string--><!--Device-ActionMenuOptions-title?: string-End-->
 

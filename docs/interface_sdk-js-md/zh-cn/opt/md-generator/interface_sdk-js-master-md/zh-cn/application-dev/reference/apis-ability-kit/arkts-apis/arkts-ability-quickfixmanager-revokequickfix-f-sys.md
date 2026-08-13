@@ -8,7 +8,9 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 
 撤销快速修复的接口，使用callback方式返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
@@ -29,11 +31,11 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [18500009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [18500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500001-指定的包名无效) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18500009](../errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
 
 ## 示例
 
@@ -58,7 +60,9 @@ function revokeQuickFix(bundleName: string): Promise<void>
 
 撤销快速修复的接口。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
@@ -84,11 +88,11 @@ function revokeQuickFix(bundleName: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [18500009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [18500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500001-指定的包名无效) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18500009](../errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
 
 ## 示例
 

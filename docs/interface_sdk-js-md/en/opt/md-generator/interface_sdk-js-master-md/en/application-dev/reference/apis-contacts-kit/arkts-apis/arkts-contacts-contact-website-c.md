@@ -4,6 +4,8 @@ Defines a contact's website.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Website--><!--Device-contact-class Website-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -25,6 +27,8 @@ Website that stores the contact information.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,6 +4,8 @@ Represents the permission dialog query result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityAccessCtrl-interface PermissionDialogResult--><!--Device-abilityAccessCtrl-interface PermissionDialogResult-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -27,6 +29,8 @@ List of permission dialog information.
 **Type:** Array&lt;[PermissionDialogDetail](arkts-ability-abilityaccessctrl-permissiondialogdetail-i-sys.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

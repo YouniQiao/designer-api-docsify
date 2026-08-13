@@ -4,6 +4,8 @@ Enumerates proxy modes.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-connection-export enum ProxyMode--><!--Device-connection-export enum ProxyMode-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -20,6 +22,8 @@ Off proxy mode.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-ProxyMode-PROXY_MODE_OFF = 0--><!--Device-ProxyMode-PROXY_MODE_OFF = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -35,6 +39,8 @@ PROXY_MODE_AUTO = 1
 Auto proxy mode.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-ProxyMode-PROXY_MODE_AUTO = 1--><!--Device-ProxyMode-PROXY_MODE_AUTO = 1-End-->
 

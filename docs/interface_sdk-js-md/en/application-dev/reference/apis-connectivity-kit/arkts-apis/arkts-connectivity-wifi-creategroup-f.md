@@ -20,7 +20,7 @@ Creates a P2P group.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createP2pGroup](ohos.wifiManager/wifiManager.createP2pGroup)
+**Substitutes:** createP2pGroup
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

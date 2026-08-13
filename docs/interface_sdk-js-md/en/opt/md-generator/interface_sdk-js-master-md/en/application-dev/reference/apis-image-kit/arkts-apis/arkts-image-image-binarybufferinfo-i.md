@@ -4,6 +4,8 @@ Describes binary buffer info.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-interface BinaryBufferInfo--><!--Device-image-interface BinaryBufferInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -20,11 +22,13 @@ import { image } from '@kit.ImageKit';
 bytesPerRow?: number
 ```
 
-Bytes per row.If it is not specified, it will be calculated as (width + 7) / 8.The value range is all integers.
+Bytes per row.If it is not specified, it will be calculated as (width + 7) / 8. The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Describes binary buffer.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BinaryBufferInfo-data: ArrayBuffer--><!--Device-BinaryBufferInfo-data: ArrayBuffer-End-->
@@ -61,6 +67,8 @@ Describes binary buffer size.
 **Type:** Size
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

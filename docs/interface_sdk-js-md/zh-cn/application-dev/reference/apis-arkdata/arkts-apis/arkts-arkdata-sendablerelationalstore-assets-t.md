@@ -10,6 +10,8 @@ type Assets = collections.Array<Asset>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-sendableRelationalStore-type Assets = collections.Array<Asset>--><!--Device-sendableRelationalStore-type Assets = collections.Array<Asset>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

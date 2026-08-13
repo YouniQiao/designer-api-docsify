@@ -4,11 +4,13 @@ Describes the rotation vector sensor data. It extends from [Response](arkts-sens
 
 **Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-sensor-interface RotationVectorResponse extends Response--><!--Device-sensor-interface RotationVectorResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface RotationVectorResponse--><!--Device-sensor-interface RotationVectorResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,11 +28,13 @@ w: double
 
 Scalar, which describes the rotation status of the device relative to a reference direction, in radians
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-w: double--><!--Device-RotationVectorResponse-w: double-End-->
 
@@ -44,11 +48,13 @@ x: double
 
 X-component of the rotation vector.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-x: double--><!--Device-RotationVectorResponse-x: double-End-->
 
@@ -62,11 +68,13 @@ y: double
 
 Y-component of the rotation vector.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-y: double--><!--Device-RotationVectorResponse-y: double-End-->
 
@@ -80,11 +88,13 @@ z: double
 
 Z-component of the rotation vector.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-z: double--><!--Device-RotationVectorResponse-z: double-End-->
 

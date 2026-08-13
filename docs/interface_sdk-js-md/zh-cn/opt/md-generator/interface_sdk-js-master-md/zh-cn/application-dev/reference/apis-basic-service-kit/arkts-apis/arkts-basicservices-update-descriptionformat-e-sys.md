@@ -2,7 +2,9 @@
 
 描述文件格式。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export enum DescriptionFormat--><!--Device-update-export enum DescriptionFormat-End-->
 
@@ -18,7 +20,9 @@ STANDARD = 0
 
 标准格式。适合需要完整描述信息的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DescriptionFormat-STANDARD = 0--><!--Device-DescriptionFormat-STANDARD = 0-End-->
 
@@ -34,7 +38,9 @@ SIMPLIFIED = 1
 
 简易格式。适合仅需精简描述信息的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DescriptionFormat-SIMPLIFIED = 1--><!--Device-DescriptionFormat-SIMPLIFIED = 1-End-->
 

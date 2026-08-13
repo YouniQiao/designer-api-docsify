@@ -2,9 +2,11 @@
 
 Represents information about the download progress of a cloud file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-interface DownloadProgress--><!--Device-cloudSync-interface DownloadProgress-End-->
 
@@ -26,9 +28,11 @@ Download error type.
 
 **Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-error: DownloadErrorType--><!--Device-DownloadProgress-error: DownloadErrorType-End-->
 
@@ -42,11 +46,13 @@ processed: long
 
 Size of the downloaded data, in bytes. The value range is [0, 9223372036854775807].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-processed: long--><!--Device-DownloadProgress-processed: long-End-->
 
@@ -60,11 +66,13 @@ size: long
 
 Size of the cloud file, in bytes. The value range is [0, 9223372036854775807].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-size: long--><!--Device-DownloadProgress-size: long-End-->
 
@@ -80,9 +88,11 @@ File download state.
 
 **Type:** State
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-state: State--><!--Device-DownloadProgress-state: State-End-->
 
@@ -98,9 +108,11 @@ URI of the cloud file.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-uri: string--><!--Device-DownloadProgress-uri: string-End-->
 

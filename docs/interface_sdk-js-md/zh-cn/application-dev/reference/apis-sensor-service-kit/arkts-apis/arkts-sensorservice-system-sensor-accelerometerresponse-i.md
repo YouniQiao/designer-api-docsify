@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [AccelerometerResponse](ohos.sensor/sensor#AccelerometerResponse)
+**替代接口：** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#AccelerometerResponse)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -32,7 +32,7 @@ x: number
 
 **废弃版本：** 8
 
-**替代接口：** [x](ohos.sensor/sensor#AccelerometerResponse.x)
+**替代接口：** [x](arkts-sensorservice-sensor-accelerometerresponse-i.md#x)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -58,7 +58,7 @@ y: number
 
 **废弃版本：** 8
 
-**替代接口：** [y](ohos.sensor/sensor#AccelerometerResponse.y)
+**替代接口：** [y](arkts-sensorservice-sensor-accelerometerresponse-i.md#y)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -84,7 +84,7 @@ z: number
 
 **废弃版本：** 8
 
-**替代接口：** [z](ohos.sensor/sensor#AccelerometerResponse.z)
+**替代接口：** [z](arkts-sensorservice-sensor-accelerometerresponse-i.md#z)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 

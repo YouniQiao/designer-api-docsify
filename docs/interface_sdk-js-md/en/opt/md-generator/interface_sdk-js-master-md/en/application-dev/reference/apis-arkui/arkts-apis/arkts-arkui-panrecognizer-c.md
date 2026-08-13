@@ -6,7 +6,9 @@ Gesture recognizer object.
 
 **Since:** 12
 
-<!--Device-unnamed-declare class PanRecognizer extends GestureRecognizer--><!--Device-unnamed-declare class PanRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class PanRecognizer--><!--Device-unnamed-declare class PanRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ getDirection(): PanDirection
 Obtains the recognized direction of the current pan gesture recognizer.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -64,15 +70,11 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 getDistanceMap(): Map<SourceTool, number>
 ```
 
-Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer.
-
-> **NOTE：**
-> 
-> This API only returns thresholds for input sources that have been explicitly configured during pan gesture
-> initialization. The default threshold can be queried using the [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md#SourceTool).Unknown type.
-> Thresholds for unconfigured device types are not available.
+Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer. > **NOTE：**> > This API only returns thresholds for input sources that have been explicitly configured during pan gesture > initialization. The default threshold can be queried using the [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md#SourceTool).Unknown type. > Thresholds for unconfigured device types are not available.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,6 +99,8 @@ getPanGestureOptions(): PanGestureOptions
 Obtains the properties of this pan gesture recognizer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

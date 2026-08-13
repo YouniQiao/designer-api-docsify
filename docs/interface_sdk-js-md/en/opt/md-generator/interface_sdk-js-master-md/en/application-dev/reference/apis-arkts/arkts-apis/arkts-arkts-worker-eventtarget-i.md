@@ -30,7 +30,7 @@ Adds an event listener to the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** [addEventListener](ohos.worker.WorkerEventTarget.addEventListener)
+**Substitutes:** addEventListener
 
 <!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
 
@@ -68,7 +68,7 @@ Dispatches the event defined for the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** [dispatchEvent](ohos.worker.WorkerEventTarget.dispatchEvent)
+**Substitutes:** dispatchEvent
 
 <!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
 
@@ -141,7 +141,7 @@ Removes all event listeners for the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAllListener](ohos.worker.WorkerEventTarget.removeAllListener)
+**Substitutes:** removeAllListener
 
 <!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
 
@@ -174,7 +174,7 @@ Removes an event defined for the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeEventListener](ohos.worker.WorkerEventTarget.removeEventListener)
+**Substitutes:** removeEventListener
 
 <!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
 

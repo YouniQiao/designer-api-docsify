@@ -2,33 +2,31 @@
 
 Provides attribute for Polygon.
 
-**Inheritance/Implementation:** PolygonAttribute extends [CommonShapeMethod](CommonShapeMethod)
+**Inheritance/Implementation:** PolygonAttribute extends CommonShapeMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface PolygonAttribute extends CommonShapeMethod--><!--Device-unnamed-export declare interface PolygonAttribute extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface PolygonAttribute--><!--Device-unnamed-export declare interface PolygonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PolygonAttribute-default attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PolygonAttribute-default attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PolygonAttribute-attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PolygonAttribute-attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -45,20 +43,16 @@ Call attributeModifier.
 ## points
 
 ```TypeScript
-default points(value: Array<ShapePoint> | undefined): this
+points(value: Array<ShapePoint> | undefined): this
 ```
 
-Called when the vertex coordinate list of a polygon is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PolygonAttribute-default points(value: Array<ShapePoint> | undefined): this--><!--Device-PolygonAttribute-default points(value: Array<ShapePoint> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PolygonAttribute-points(value: Array<ShapePoint> | undefined): this--><!--Device-PolygonAttribute-points(value: Array<ShapePoint> | undefined): this-End-->
 
 **Parameters:**
 
@@ -75,30 +69,46 @@ Called when the vertex coordinate list of a polygon is set.
 ## setPolygonOptions
 
 ```TypeScript
-default setPolygonOptions(options?: PolygonOptions): this
+setPolygonOptions(options?: PolygonOptions): this
 ```
 
-Set Polygon options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PolygonAttribute-default setPolygonOptions(options?: PolygonOptions): this--><!--Device-PolygonAttribute-default setPolygonOptions(options?: PolygonOptions): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PolygonAttribute-setPolygonOptions(options?: PolygonOptions): this--><!--Device-PolygonAttribute-setPolygonOptions(options?: PolygonOptions): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md) | No | Polygon constructor options. |
+| options | [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the PolygonAttribute. |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PolygonAttribute-default--><!--Device-PolygonAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

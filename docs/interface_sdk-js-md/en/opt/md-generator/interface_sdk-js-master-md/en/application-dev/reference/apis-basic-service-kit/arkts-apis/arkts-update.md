@@ -1,47 +1,10 @@
 # @ohos.update
 
-The **@ohos.update** module provides the core capabilities of online update, local SD card update, and factory reset.Version management, update control, and equipment maintenance can be implemented for the Over-The-Air (OTA) clients and system apps using this module. APIs provided by this module can be used for system version update, offline update, and data clearing.
+The **@ohos.update** module provides the core capabilities of online update, local SD card update, and factory reset. Version management, update control, and equipment maintenance can be implemented for the Over-The-Air (OTA) clients and system apps using this module. APIs provided by this module can be used for system version update, offline update, and data clearing. This module implements update of the entire system, including built-in resources and preset applications, but not third-party apps. This feature ensures system integrity, prevents compatibility issues with third-party apps, and improves update stability and security. There are two types of updates: local SD card update and OTA update. The design logic and use scenarios of each update type are as follows: - **Local SD card update:** For details, see Upgrading Service Terms Use scenarios: The system needs to be updated from a local storage device. **Benefits** This update mode applies to system update offline or with poor network connection when automatic update cannot be implemented. This mode does not depend on the upgrade package management server, reducing the update cost. - **Online update:** For details, see Upgrading Service Terms Use scenarios: The system needs to be automatically checked and updated by connecting to the network. This update mode is implemented by calling APIs of the **Updater** module. This mode depends on the upgrade package management server deployed by the vendor (the server system provides functions such as version check and upgrade package download). The APIs are implemented by the vendor. **Benefits** Users can obtain system updates in a timely manner, improving update efficiency and user experience. Functions such as automatic version check, background download, and resumable download are supported, reducing operation costs for users. **Reset** Use scenarios: This operation is performed to delete user data and restore the device to factory settings. It is applicable to scenarios such as troubleshooting, device transfer or scrapping, privacy protection, and storage space release. Traditional reset methods have problems such as residual data, uncleared keys, and incomplete data cleanup. This module provides hierarchical restoration capabilities to meet different security requirements. **Benefits** This module enables users to quickly troubleshoot, free up storage space, and protect the security of privacy data. Three reset modes are provided to meet the requirements for different security levels. Common reset applies to routine maintenance scenarios, forcible reset applies to data destruction scenarios, and deep reset applies to extreme scenarios such as device scrapping. In this way, hierarchical management of data clearing is implemented, reducing O&M costs. > **NOTE：**> > The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. > The APIs provided by this module are system APIs. For details about the system application permission request, see the system application development guide. For details about the application extension permission request, see the application extension development guide.
 
-This module implements update of the entire system, including built-in resources and preset applications, but not third-party apps. This feature ensures system integrity, prevents compatibility issues with third-party apps, and improves update stability and security.
+**Since:** 23
 
-There are two types of updates: local SD card update and OTA update.
-
-The design logic and use scenarios of each update type are as follows:
-
-- **Local SD card update:** For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
-
-Use scenarios: The system needs to be updated from a local storage device.
-
-**Benefits**
-
-This update mode applies to system update offline or with poor network connection when automatic update cannot be implemented. This mode does not depend on the upgrade package management server, reducing the update cost.
-
-- **Online update:** For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md.)
-
-Use scenarios: The system needs to be automatically checked and updated by connecting to the network.
-
-This update mode is implemented by calling APIs of the **Updater** module. This mode depends on the upgrade package management server deployed by the vendor (the server system provides functions such as version check and upgrade package download). The APIs are implemented by the vendor.
-
-**Benefits**
-
-Users can obtain system updates in a timely manner, improving update efficiency and user experience. Functions such as automatic version check, background download, and resumable download are supported, reducing operation costs for users.
-
-**Reset**
-
-Use scenarios: This operation is performed to delete user data and restore the device to factory settings. It is applicable to scenarios such as troubleshooting, device transfer or scrapping, privacy protection, and storage space release. Traditional reset methods have problems such as residual data, uncleared keys, and incomplete data cleanup. This module provides hierarchical restoration capabilities to meet different security requirements.
-
-**Benefits**
-
-This module enables users to quickly troubleshoot, free up storage space, and protect the security of privacy data. Three reset modes are provided to meet the requirements for different security levels. Common reset applies to routine maintenance scenarios, forcible reset applies to data destruction scenarios, and deep reset applies to extreme scenarios such as device scrapping. In this way, hierarchical management of data clearing is implemented, reducing O&M costs.
-
-> **NOTE：**
-> 
-> The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a
- superscript to indicate their earliest API version.  
-> The APIs provided by this module are system APIs. For details about the system application permission request,
- see the system application development guide. For details about the application extension permission request, see the application extension development guide.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace update--><!--Device-unnamed-declare namespace update-End-->
 
@@ -62,9 +25,9 @@ import { update } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getLocalUpdater](arkts-basicservices-update-getlocalupdater-f-sys.md#getlocalupdater) |
-| [getOnlineUpdater](arkts-basicservices-update-getonlineupdater-f-sys.md#getonlineupdater) |
-| [getRestorer](arkts-basicservices-update-getrestorer-f-sys.md#getrestorer) |
+| [getLocalUpdater](arkts-basicservices-update-getlocalupdater-f-sys.md#getLocalUpdater-(System-API)) |
+| [getOnlineUpdater](arkts-basicservices-update-getonlineupdater-f-sys.md#getOnlineUpdater-(System-API)) |
+| [getRestorer](arkts-basicservices-update-getrestorer-f-sys.md#getRestorer-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

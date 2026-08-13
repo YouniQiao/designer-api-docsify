@@ -2,7 +2,9 @@
 
 Enumerates the CMS encoding formats.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum CmsFormat--><!--Device-cert-enum CmsFormat-End-->
 
@@ -16,9 +18,11 @@ PEM = 0
 
 Privacy-Enhanced Mail (PEM) format.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsFormat-PEM = 0--><!--Device-CmsFormat-PEM = 0-End-->
 
@@ -32,9 +36,11 @@ DER = 1
 
 Distinguished Encoding Rules (DER) format.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsFormat-DER = 1--><!--Device-CmsFormat-DER = 1-End-->
 

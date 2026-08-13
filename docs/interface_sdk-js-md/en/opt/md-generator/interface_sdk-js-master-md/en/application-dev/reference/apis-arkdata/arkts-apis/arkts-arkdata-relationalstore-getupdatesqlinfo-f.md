@@ -14,7 +14,9 @@ function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, confl
 
 Obtains the SQL statement used to update data. This API returns the result synchronously.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo--><!--Device-relationalStore-function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo-End-->
 
@@ -38,7 +40,7 @@ Obtains the SQL statement used to update data. This API returns the result synch
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
 
 ## Examples
 

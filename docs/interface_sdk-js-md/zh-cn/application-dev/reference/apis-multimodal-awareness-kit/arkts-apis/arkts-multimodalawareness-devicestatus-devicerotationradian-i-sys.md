@@ -2,9 +2,11 @@
 
 设备旋转弧度接口。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-deviceStatus-export interface DeviceRotationRadian--><!--Device-deviceStatus-export interface DeviceRotationRadian-End-->
 
@@ -20,11 +22,13 @@ x: double
 
 表示X轴旋转弧度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceRotationRadian-x: double--><!--Device-DeviceRotationRadian-x: double-End-->
 
@@ -40,11 +44,13 @@ y: double
 
 表示Y轴旋转弧度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceRotationRadian-y: double--><!--Device-DeviceRotationRadian-y: double-End-->
 
@@ -60,11 +66,13 @@ z: double
 
 表示Z轴旋转弧度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceRotationRadian-z: double--><!--Device-DeviceRotationRadian-z: double-End-->
 

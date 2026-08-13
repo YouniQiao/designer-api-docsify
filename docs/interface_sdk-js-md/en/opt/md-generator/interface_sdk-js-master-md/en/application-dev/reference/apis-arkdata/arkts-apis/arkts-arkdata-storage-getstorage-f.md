@@ -12,7 +12,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPreferences](ohos.preferences.preferences.getPreferences)
+**Substitutes:** getPreferences
 
 <!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void--><!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void-End-->
 
@@ -36,7 +36,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPreferences](ohos.preferences.preferences.getPreferences)
+**Substitutes:** getPreferences
 
 <!--Device-storage-function getStorage(path: string): Promise<Storage>--><!--Device-storage-function getStorage(path: string): Promise<Storage>-End-->
 

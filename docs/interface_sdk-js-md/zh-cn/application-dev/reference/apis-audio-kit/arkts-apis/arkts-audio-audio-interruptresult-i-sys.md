@@ -1,8 +1,10 @@
 # InterruptResult（系统接口）
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface InterruptResult--><!--Device-audio-interface InterruptResult-End-->
 
@@ -18,11 +20,13 @@ interruptNode: int
 
 Interrupt node as a unit to receive interrupt change event.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InterruptResult-interruptNode: int--><!--Device-InterruptResult-interruptNode: int-End-->
 
@@ -38,9 +42,11 @@ requestResult: InterruptRequestResultType
 
 **类型：** [InterruptRequestResultType](arkts-audio-audio-interruptrequestresulttype-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InterruptResult-requestResult: InterruptRequestResultType--><!--Device-InterruptResult-requestResult: InterruptRequestResultType-End-->
 

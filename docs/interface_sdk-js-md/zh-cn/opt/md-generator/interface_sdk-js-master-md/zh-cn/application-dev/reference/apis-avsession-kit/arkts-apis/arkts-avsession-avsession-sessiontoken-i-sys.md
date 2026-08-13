@@ -2,7 +2,9 @@
 
 会话令牌的信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface SessionToken--><!--Device-avSession-interface SessionToken-End-->
 
@@ -20,7 +22,9 @@ pid?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -40,7 +44,9 @@ sessionId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -60,7 +66,9 @@ uid?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 

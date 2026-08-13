@@ -2,7 +2,9 @@
 
 Describes the coordinate options.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface CoordinatesOptions--><!--Device-sensor-interface CoordinatesOptions-End-->
 
@@ -24,7 +26,9 @@ X coordinate direction.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CoordinatesOptions-x: int--><!--Device-CoordinatesOptions-x: int-End-->
 
@@ -40,7 +44,9 @@ Y coordinate direction.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CoordinatesOptions-y: int--><!--Device-CoordinatesOptions-y: int-End-->
 

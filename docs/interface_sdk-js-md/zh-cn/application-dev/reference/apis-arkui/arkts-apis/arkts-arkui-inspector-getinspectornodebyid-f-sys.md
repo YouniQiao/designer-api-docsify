@@ -14,7 +14,7 @@ declare function getInspectorNodeById(id: number): object
 
 **废弃版本：** 9
 
-**替代接口：** [getInspectorByKey](getInspectorByKey)
+**替代接口：** getInspectorByKey
 
 <!--Device-unnamed-declare function getInspectorNodeById(id: number): object--><!--Device-unnamed-declare function getInspectorNodeById(id: number): object-End-->
 

@@ -1,11 +1,12 @@
 # MissionInfo (System API)
 
-The module defines detailed information about a mission. The information can be obtained through  
-[getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo).
+The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo-(System-API)) .
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MissionInfo--><!--Device-unnamed-export interface MissionInfo-End-->
 
@@ -21,11 +22,13 @@ abilityState: int
 
 Indicates the ability state of this mission.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-abilityState: int--><!--Device-MissionInfo-abilityState: int-End-->
 
@@ -43,9 +46,11 @@ Indicates whether the mission is continuable.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-continuable: boolean--><!--Device-MissionInfo-continuable: boolean-End-->
 
@@ -63,9 +68,11 @@ Indicates icon path of the mission.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-iconPath: string--><!--Device-MissionInfo-iconPath: string-End-->
 
@@ -83,9 +90,11 @@ Indicates label of the mission.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-label: string--><!--Device-MissionInfo-label: string-End-->
 
@@ -103,9 +112,11 @@ Indicates locked state.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-lockedState: boolean--><!--Device-MissionInfo-lockedState: boolean-End-->
 
@@ -121,11 +132,13 @@ missionId: int
 
 Indicates mission id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-missionId: int--><!--Device-MissionInfo-missionId: int-End-->
 
@@ -141,11 +154,13 @@ runningState: int
 
 Indicates running state.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-runningState: int--><!--Device-MissionInfo-runningState: int-End-->
 
@@ -163,9 +178,11 @@ Indicates the recent created or updated time of the mission.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-timestamp: string--><!--Device-MissionInfo-timestamp: string-End-->
 
@@ -183,9 +200,11 @@ Indicates whether the mission is unclearable.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-unclearable: boolean--><!--Device-MissionInfo-unclearable: boolean-End-->
 
@@ -203,9 +222,11 @@ Indicates want of the mission.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionInfo-want: Want--><!--Device-MissionInfo-want: Want-End-->
 

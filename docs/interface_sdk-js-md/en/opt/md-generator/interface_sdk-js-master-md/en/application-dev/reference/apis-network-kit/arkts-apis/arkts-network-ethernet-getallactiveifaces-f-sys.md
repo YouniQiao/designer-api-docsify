@@ -16,6 +16,8 @@ Gets the names of all active network interfaces.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void--><!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void-End-->
@@ -34,10 +36,10 @@ Gets the names of all active network interfaces.
 
 | Error Code ID |
 | --- |
-| [2200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) |
-| [2200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -68,6 +70,8 @@ Gets the names of all active network interfaces.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>--><!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>-End-->
@@ -86,10 +90,10 @@ Gets the names of all active network interfaces.
 
 | Error Code ID |
 | --- |
-| [2200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) |
-| [2200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

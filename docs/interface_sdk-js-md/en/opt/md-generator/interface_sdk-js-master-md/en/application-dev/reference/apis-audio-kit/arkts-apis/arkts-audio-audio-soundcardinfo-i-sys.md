@@ -4,6 +4,8 @@ Describes sound card information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-audio-interface SoundCardInfo--><!--Device-audio-interface SoundCardInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -28,6 +30,8 @@ Sound card bus address.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SoundCardInfo-busAddress: string--><!--Device-SoundCardInfo-busAddress: string-End-->
@@ -47,6 +51,8 @@ Sound card driver.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Sound card model.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SoundCardInfo-model: string--><!--Device-SoundCardInfo-model: string-End-->
@@ -88,6 +96,8 @@ Sound card name.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SoundCardInfo-name: string--><!--Device-SoundCardInfo-name: string-End-->
@@ -107,6 +117,8 @@ Sound card vendor.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

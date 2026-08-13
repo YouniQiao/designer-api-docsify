@@ -2,7 +2,9 @@
 
 Enumerates the mission continuation states.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedMissionManager-enum ContinueState--><!--Device-distributedMissionManager-enum ContinueState-End-->
 
@@ -18,7 +20,9 @@ ACTIVE = 0
 
 Continuation is activated for the current mission.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,9 @@ INACTIVE = 1
 
 Continuation is not activated for the current mission.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

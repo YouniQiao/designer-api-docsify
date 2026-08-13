@@ -2,7 +2,9 @@
 
 Represents window information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface WindowInfo--><!--Device-inputMethodEngine-export interface WindowInfo-End-->
 
@@ -24,7 +26,9 @@ Rectangular area of the window.
 
 **Type:** window.Rect
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowInfo-rect: window.Rect--><!--Device-WindowInfo-rect: window.Rect-End-->
 
@@ -40,7 +44,9 @@ Window status type.
 
 **Type:** window.WindowStatusType
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowInfo-status: window.WindowStatusType--><!--Device-WindowInfo-status: window.WindowStatusType-End-->
 

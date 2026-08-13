@@ -1,10 +1,12 @@
 # ControllerHandler
 
-Defines the onWindowNew callback, related to [onWindowNew](onWindowNew) method.
+Defines the onWindowNew callback, related to onWindowNew method.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ControllerHandler--><!--Device-unnamed-declare class ControllerHandler-End-->
 
@@ -21,6 +23,8 @@ Constructs a **ControllerHandler** API.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ Sets a **WebviewController** object. If opening a new window is not needed, set 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

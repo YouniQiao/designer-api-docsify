@@ -1,11 +1,12 @@
 # MediaKeySession
 
-支持媒体密钥管理。在调用MediaKeySession方法之前，必须使用  
-[createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createMediaKeySession-1)获取一个MediaKeySession实例。
+支持媒体密钥管理。在调用MediaKeySession方法之前，必须使用 [createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createMediaKeySession) 获取一个MediaKeySession实例。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-drm-interface MediaKeySession--><!--Device-drm-interface MediaKeySession-End-->
 
@@ -19,9 +20,11 @@ checkMediaKeyStatus(): MediaKeyStatus[]
 
 检查当前媒体密钥状态。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -39,8 +42,8 @@ checkMediaKeyStatus(): MediaKeyStatus[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## clearMediaKeys
 
@@ -50,9 +53,11 @@ clearMediaKeys(): void
 
 清除当前媒体密钥。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -64,8 +69,8 @@ clearMediaKeys(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## destroy
 
@@ -75,9 +80,11 @@ destroy(): void
 
 销毁MediaKeySession实例。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -89,26 +96,22 @@ destroy(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## generateMediaKeyRequest
 
-ArkTS-Dyn:
-```TypeScript
-generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: number, options?: OptionsData[]): Promise<MediaKeyRequest>
-```
-
-ArkTS-Sta:
 ```TypeScript
 generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>
 ```
 
 生成媒体密钥请求。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -120,9 +123,9 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: in
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-1) 查询。 |
-| initData | Uint8Array | 是 | 初始数据，即加密流中的PSSH box中的实际PSSH数据。可通过监听AVPlayer的'mediaKeySystemInfoUpdate'事件（ [on('mediaKeySystemInfoUpdate')](@ohos.multimedia.media:media.AVPlayer.on(type: 'mediaKeySystemInfoUpdate', callback: Callback&lt;Array<drm.MediaKeySystemInfo>&gt;&lt;drm.MediaKeySystemInfo&gt;>)) ）获取DRM信息，从中提取pssh字段生成initData。具体开发流程可参考 [基于AVPlayer播放DRM节目(ArkTS)](../../../media/drm/drm-avplayer-arkts-integration.md)。 |
-| mediaKeyType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 媒体密钥类型。取值范围为[0, 1]。0表示在线，1表示离线。&lt;br&gt;传入指定范围外的参数会导致参数校验失败，抛出错误码401。 |
+| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported) 查询。 |
+| initData | Uint8Array | 是 | 初始数据，即加密流中的PSSH box中的实际PSSH数据。可通过监听AVPlayer的'mediaKeySystemInfoUpdate'事件（ on('mediaKeySystemInfoUpdate') ）获取DRM信息，从中提取pssh字段生成initData。具体开发流程可参考 [基于AVPlayer播放DRM节目(ArkTS)](../../../media/drm/drm-avplayer-arkts-integration.md)。 |
+| mediaKeyType | int | 是 | 媒体密钥类型。取值范围为[0, 1]。0表示在线，1表示离线。&lt;br&gt;传入指定范围外的参数会导致参数校验失败，抛出错误码401。 |
 | options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | 否 | 可选数据。默认值为空数组。 |
 
 **返回值：**
@@ -135,9 +138,9 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## generateOfflineReleaseRequest
 
@@ -147,9 +150,11 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 
 生成离线媒体密钥释放请求。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -173,9 +178,9 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getContentProtectionLevel
 
@@ -185,9 +190,11 @@ getContentProtectionLevel(): ContentProtectionLevel
 
 获取当前会话的内容保护级别。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -205,26 +212,24 @@ getContentProtectionLevel(): ContentProtectionLevel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off('keyRequired')
+## offExpirationUpdate
 
 ```TypeScript
-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
+offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-注销密钥请求事件监听。使用callback异步回调。
+Unregister expirationUpdate event.
 
-该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -232,31 +237,29 @@ off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyRequired' | 是 | 监听事件类型，固定为'keyRequired'。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for expiration update event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off('keyExpired')
+## offKeyExpired
 
 ```TypeScript
-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
+offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-注销密钥过期事件监听。使用callback异步回调。
+Unregister keyExpired event.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -264,31 +267,29 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for the key required event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off('vendorDefined')
+## offKeyRequired
 
 ```TypeScript
-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
+offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-注销DRM解决方案自定义事件监听。使用callback异步回调。
+Unregister keyRequired event.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -296,17 +297,75 @@ off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | used to listen for the key required event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off('expirationUpdate')
+## offKeysChange
+
+```TypeScript
+offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+```
+
+Unregister keysChange event.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 否 | Used to listen for keys change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## offVendorDefined
+
+```TypeScript
+offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
+```
+
+Unregister vendorDefined event.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for the vendor defined event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## off_expirationUpdate
 
 ```TypeScript
 off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
@@ -317,6 +376,8 @@ off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -335,10 +396,78 @@ off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off('keysChange')
+## off_keyExpired
+
+```TypeScript
+off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
+```
+
+注销密钥过期事件监听。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## off_keyRequired
+
+```TypeScript
+off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
+```
+
+注销密钥请求事件监听。使用callback异步回调。 该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | 是 | 监听事件类型，固定为'keyRequired'。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## off_keysChange
 
 ```TypeScript
 off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -349,6 +478,8 @@ off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolea
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -367,164 +498,26 @@ off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## offExpirationUpdate
-
-```TypeScript
-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister expirationUpdate event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for expiration update event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## offKeyExpired
+## off_vendorDefined
 
 ```TypeScript
-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
+off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyExpired event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for the key required event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## offKeyRequired
-
-```TypeScript
-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister keyRequired event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | used to listen for the key required event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## offKeysChange
-
-```TypeScript
-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
-```
-
-Unregister keysChange event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 否 | Used to listen for keys change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## offVendorDefined
-
-```TypeScript
-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister vendorDefined event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for the vendor defined event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## on('keyRequired')
-
-```TypeScript
-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
-```
-
-监听密钥请求事件。使用callback异步回调。
+注销DRM解决方案自定义事件监听。使用callback异步回调。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -532,31 +525,31 @@ on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyRequired' | 是 | 事件类型，固定为'keyRequired'，当播放DRM节目需要获取媒体密钥时触发。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on('keyExpired')
+## onExpirationUpdate
 
 ```TypeScript
-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
+onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
 ```
 
-监听密钥过期事件。使用callback异步回调。
+Register expirationUpdate event.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -564,31 +557,29 @@ on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。密钥过期时触发。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for expiration update event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on('vendorDefined')
+## onKeyExpired
 
 ```TypeScript
-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
+onKeyExpired(callback: (eventInfo: EventInfo) => void): void
 ```
 
-监听DRM解决方案自定义事件。使用callback异步回调。
+Register keyExpired event.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -596,17 +587,105 @@ on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。自定义事件发生时触发。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for the key required event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on('expirationUpdate')
+## onKeyRequired
+
+```TypeScript
+onKeyRequired(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register keyRequired event.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | used to listen for the key required event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## onKeysChange
+
+```TypeScript
+onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+```
+
+Register keysChange event.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 是 | Used to listen for keys change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## onVendorDefined
+
+```TypeScript
+onVendorDefined(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register vendorDefined event.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for the vendor defined event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## on_expirationUpdate
 
 ```TypeScript
 on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
@@ -617,6 +696,8 @@ on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -635,10 +716,78 @@ on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on('keysChange')
+## on_keyExpired
+
+```TypeScript
+on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
+```
+
+监听密钥过期事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。密钥过期时触发。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## on_keyRequired
+
+```TypeScript
+on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
+```
+
+监听密钥请求事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | 是 | 事件类型，固定为'keyRequired'，当播放DRM节目需要获取媒体密钥时触发。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## on_keysChange
 
 ```TypeScript
 on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -649,6 +798,8 @@ on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean)
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -667,22 +818,26 @@ on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## onExpirationUpdate
+## on_vendorDefined
 
 ```TypeScript
-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
+on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register expirationUpdate event.
+监听DRM解决方案自定义事件。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -690,125 +845,15 @@ Register expirationUpdate event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for expiration update event. |
+| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。自定义事件发生时触发。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## onKeyExpired
-
-```TypeScript
-onKeyExpired(callback: (eventInfo: EventInfo) => void): void
-```
-
-Register keyExpired event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for the key required event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## onKeyRequired
-
-```TypeScript
-onKeyRequired(callback: (eventInfo: EventInfo) => void): void
-```
-
-Register keyRequired event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | used to listen for the key required event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## onKeysChange
-
-```TypeScript
-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
-```
-
-Register keysChange event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 是 | Used to listen for keys change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## onVendorDefined
-
-```TypeScript
-onVendorDefined(callback: (eventInfo: EventInfo) => void): void
-```
-
-Register vendorDefined event.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for the vendor defined event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## processMediaKeyResponse
 
@@ -818,9 +863,11 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 
 处理媒体密钥响应。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -844,9 +891,9 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## processOfflineReleaseResponse
 
@@ -854,13 +901,13 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>
 ```
 
-处理离线媒体密钥释放响应。使用Promise异步回调。
+处理离线媒体密钥释放响应。使用Promise异步回调。 如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
 
-如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -885,9 +932,9 @@ processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## requireSecureDecoderModule
 
@@ -897,9 +944,11 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 是否需要安全解码。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -911,7 +960,7 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-1) 查询。 |
+| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported) 查询。 |
 
 **返回值：**
 
@@ -923,9 +972,9 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## restoreOfflineMediaKeys
 
@@ -935,9 +984,11 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 
 恢复离线媒体密钥。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -961,7 +1012,7 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 

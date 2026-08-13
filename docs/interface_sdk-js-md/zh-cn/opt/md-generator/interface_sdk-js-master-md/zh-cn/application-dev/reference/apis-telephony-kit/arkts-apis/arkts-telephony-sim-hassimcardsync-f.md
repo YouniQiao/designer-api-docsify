@@ -8,7 +8,9 @@ function hasSimCardSync(slotId: number): boolean
 
 Checks whether a SIM card is inserted in a specified slot.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-function hasSimCardSync(slotId: int): boolean--><!--Device-sim-function hasSimCardSync(slotId: int): boolean-End-->
 

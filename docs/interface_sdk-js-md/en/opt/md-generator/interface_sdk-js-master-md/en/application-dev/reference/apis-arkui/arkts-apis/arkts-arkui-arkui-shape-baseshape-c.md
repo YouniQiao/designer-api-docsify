@@ -2,11 +2,13 @@
 
 This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod).
 
-**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod<T>](CommonShapeMethod<T>)
+**Inheritance/Implementation:** BaseShape extends CommonShapeMethod<T>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class BaseShape<T> extends CommonShapeMethod<T>--><!--Device-unnamed-declare class BaseShape<T> extends CommonShapeMethod<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class BaseShape--><!--Device-unnamed-declare class BaseShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ height(height: Length): T
 Sets the height of a shape.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,6 +62,8 @@ Sets the size of a shape.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -89,6 +95,8 @@ width(width: Length): T
 Sets the width of a shape.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

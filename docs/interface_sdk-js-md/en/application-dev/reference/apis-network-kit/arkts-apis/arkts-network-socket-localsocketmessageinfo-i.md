@@ -6,6 +6,8 @@ Defines the local socket connection information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface LocalSocketMessageInfo--><!--Device-socket-export interface LocalSocketMessageInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,6 +32,8 @@ Bound local socket address.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocketMessageInfo-address: string--><!--Device-LocalSocketMessageInfo-address: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -48,6 +52,8 @@ Message data.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocketMessageInfo-message: ArrayBuffer--><!--Device-LocalSocketMessageInfo-message: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -65,6 +71,8 @@ Length of the message, in bytes.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketMessageInfo-size: number--><!--Device-LocalSocketMessageInfo-size: number-End-->
 

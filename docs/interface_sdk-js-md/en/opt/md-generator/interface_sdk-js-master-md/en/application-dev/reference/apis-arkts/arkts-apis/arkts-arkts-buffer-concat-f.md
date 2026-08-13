@@ -14,7 +14,9 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: number): Buffer
 
 Concatenates an array of **Buffer** objects of the specified length into a new object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,7 +41,7 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 

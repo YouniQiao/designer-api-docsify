@@ -2,9 +2,11 @@
 
 Enumerates the slow-motion states.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum SlowMotionStatus--><!--Device-camera-enum SlowMotionStatus-End-->
 
@@ -20,9 +22,11 @@ DISABLED = 0
 
 Disabled.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SlowMotionStatus-DISABLED = 0--><!--Device-SlowMotionStatus-DISABLED = 0-End-->
 
@@ -38,9 +42,11 @@ READY = 1
 
 Ready.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SlowMotionStatus-READY = 1--><!--Device-SlowMotionStatus-READY = 1-End-->
 
@@ -56,9 +62,11 @@ VIDEO_START = 2
 
 Video start.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SlowMotionStatus-VIDEO_START = 2--><!--Device-SlowMotionStatus-VIDEO_START = 2-End-->
 
@@ -74,9 +82,11 @@ VIDEO_DONE = 3
 
 Video complete.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SlowMotionStatus-VIDEO_DONE = 3--><!--Device-SlowMotionStatus-VIDEO_DONE = 3-End-->
 
@@ -92,9 +102,11 @@ FINISHED = 4
 
 Finished.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SlowMotionStatus-FINISHED = 4--><!--Device-SlowMotionStatus-FINISHED = 4-End-->
 

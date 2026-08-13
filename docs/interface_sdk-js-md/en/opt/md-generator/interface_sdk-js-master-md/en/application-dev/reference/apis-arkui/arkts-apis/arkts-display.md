@@ -1,8 +1,10 @@
 # @ohos.display
 
-The **Display** module provides APIs for managing displays, such as obtaining information about the default display,obtaining information about all displays, and listening for the addition and removal of displays.
+The **Display** module provides APIs for managing displays, such as obtaining information about the default display, obtaining information about all displays, and listening for the addition and removal of displays.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace display--><!--Device-unnamed-declare namespace display-End-->
 
@@ -20,62 +22,80 @@ import { display } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [convertGlobalToRelativeCoordinate](arkts-arkui-display-convertglobaltorelativecoordinate-f.md#convertglobaltorelativecoordinate) |
-| [convertRelativeToGlobalCoordinate](arkts-arkui-display-convertrelativetoglobalcoordinate-f.md#convertrelativetoglobalcoordinate) |
-| [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) |
-| [destroyVirtualScreen](arkts-arkui-display-destroyvirtualscreen-f.md#destroyvirtualscreen) |
-| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getalldisplay) |
-| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getalldisplay-1) |
-| [getAllDisplayPhysicalResolution](arkts-arkui-display-getalldisplayphysicalresolution-f.md#getalldisplayphysicalresolution) |
-| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays) |
-| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) |
-| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md#getbrightnessinfo) |
-| [getCurrentFoldCreaseRegion](arkts-arkui-display-getcurrentfoldcreaseregion-f.md#getcurrentfoldcreaseregion) |
-| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay) |
-| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay-1) |
-| [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) |
-| [getDisplayByIdSync](arkts-arkui-display-getdisplaybyidsync-f.md#getdisplaybyidsync) |
-| [getFoldDisplayMode](arkts-arkui-display-getfolddisplaymode-f.md#getfolddisplaymode) |
-| [getFoldStatus](arkts-arkui-display-getfoldstatus-f.md#getfoldstatus) |
-| [getPrimaryDisplaySync](arkts-arkui-display-getprimarydisplaysync-f.md#getprimarydisplaysync) |
-| [isCaptured](arkts-arkui-display-iscaptured-f.md#iscaptured) |
-| [isCaptured](arkts-arkui-display-iscaptured-f.md#iscaptured-1) |
-| [isFoldable](arkts-arkui-display-isfoldable-f.md#isfoldable) |
-| [makeUnique](arkts-arkui-display-makeunique-f.md#makeunique) |
-| [off](arkts-arkui-display-off-f.md#off) |
-| [off](arkts-arkui-display-off-f.md#off-1) |
-| [off](arkts-arkui-display-off-f.md#off-2) |
-| [off](arkts-arkui-display-off-f.md#off-4) |
-| [off](arkts-arkui-display-off-f.md#off-5) |
-| [off](arkts-arkui-display-off-f.md#off-6) |
-| [off](arkts-arkui-display-off-f.md#off-7) |
-| [off](arkts-arkui-display-off-f.md#off-8) |
-| [on](arkts-arkui-display-on-f.md#on) |
-| [on](arkts-arkui-display-on-f.md#on-1) |
-| [on](arkts-arkui-display-on-f.md#on-2) |
-| [on](arkts-arkui-display-on-f.md#on-4) |
-| [on](arkts-arkui-display-on-f.md#on-5) |
-| [on](arkts-arkui-display-on-f.md#on-6) |
-| [on](arkts-arkui-display-on-f.md#on-7) |
-| [on](arkts-arkui-display-on-f.md#on-8) |
-| [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md#onchangewithattribute) |
-| [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) |
+| [convertGlobalToRelativeCoordinate](arkts-arkui-display-convertglobaltorelativecoordinate-f.md#convertGlobalToRelativeCoordinate) |
+| [convertRelativeToGlobalCoordinate](arkts-arkui-display-convertrelativetoglobalcoordinate-f.md#convertRelativeToGlobalCoordinate) |
+| [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createVirtualScreen) |
+| [destroyVirtualScreen](arkts-arkui-display-destroyvirtualscreen-f.md#destroyVirtualScreen) |
+| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getAllDisplay) |
+| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getAllDisplay) |
+| [getAllDisplayPhysicalResolution](arkts-arkui-display-getalldisplayphysicalresolution-f.md#getAllDisplayPhysicalResolution) |
+| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays) |
+| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays) |
+| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md#getBrightnessInfo) |
+| [getCurrentFoldCreaseRegion](arkts-arkui-display-getcurrentfoldcreaseregion-f.md#getCurrentFoldCreaseRegion) |
+| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getDefaultDisplay) |
+| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getDefaultDisplay) |
+| [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync) |
+| [getDisplayByIdSync](arkts-arkui-display-getdisplaybyidsync-f.md#getDisplayByIdSync) |
+| [getFoldDisplayMode](arkts-arkui-display-getfolddisplaymode-f.md#getFoldDisplayMode) |
+| [getFoldStatus](arkts-arkui-display-getfoldstatus-f.md#getFoldStatus) |
+| [getPrimaryDisplaySync](arkts-arkui-display-getprimarydisplaysync-f.md#getPrimaryDisplaySync) |
+| [isCaptured](arkts-arkui-display-iscaptured-f.md#isCaptured) |
+| [isCaptured](arkts-arkui-display-iscaptured-f.md#isCaptured) |
+| [isFoldable](arkts-arkui-display-isfoldable-f.md#isFoldable) |
+| [makeUnique](arkts-arkui-display-makeunique-f.md#makeUnique) |
+| [offAdd](arkts-arkui-display-offadd-f.md#offAdd) |
+| [offBrightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md#offBrightnessInfoChange) |
+| [offCaptureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md#offCaptureStatusChange) |
+| [offChange](arkts-arkui-display-offchange-f.md#offChange) |
+| [offFoldAngleChange](arkts-arkui-display-offfoldanglechange-f.md#offFoldAngleChange) |
+| [offFoldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md#offFoldDisplayModeChange) |
+| [offFoldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md#offFoldStatusChange) |
+| [offRemove](arkts-arkui-display-offremove-f.md#offRemove) |
+| [off_add](arkts-arkui-display-offadd-f.md) |
+| [off_brightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) |
+| [off_captureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) |
+| off_change |
+| [off_foldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) |
+| [off_foldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) |
+| off_foldStatusChange |
+| off_remove |
+| [onAdd](arkts-arkui-display-onadd-f.md#onAdd) |
+| [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md#onBrightnessInfoChange) |
+| [onCaptureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md#onCaptureStatusChange) |
+| [onChange](arkts-arkui-display-onchange-f.md#onChange) |
+| [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md#onChangeWithAttribute) |
+| [onFoldAngleChange](arkts-arkui-display-onfoldanglechange-f.md#onFoldAngleChange) |
+| [onFoldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md#onFoldDisplayModeChange) |
+| [onFoldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md#onFoldStatusChange) |
+| [onRemove](arkts-arkui-display-onremove-f.md#onRemove) |
+| [on_add](arkts-arkui-display-onadd-f.md) |
+| [on_brightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) |
+| [on_captureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) |
+| on_change |
+| [on_foldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) |
+| [on_foldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) |
+| on_foldStatusChange |
+| on_remove |
+| [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md#setVirtualScreenSurface) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md#addvirtualscreenblocklist) |
-| [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addvirtualscreensurface) |
-| [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md#hasprivatewindow) |
-| [off](arkts-arkui-display-off-f-sys.md#off-3) |
-| [on](arkts-arkui-display-on-f-sys.md#on-3) |
-| [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md#removevirtualscreenblocklist) |
-| [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md#removevirtualscreensurface) |
-| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md#setfolddisplaymode) |
-| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md#setfolddisplaymode-1) |
-| [setFoldStatusLocked](arkts-arkui-display-setfoldstatuslocked-f-sys.md#setfoldstatuslocked) |
+| [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md#addVirtualScreenBlocklist-(System-API)) |
+| [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addVirtualScreenSurface-(System-API)) |
+| [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md#hasPrivateWindow-(System-API)) |
+| [offPrivateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md#offPrivateModeChange-(System-API)) |
+| [off_privateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) |
+| [onPrivateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md#onPrivateModeChange-(System-API)) |
+| [on_privateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) |
+| [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md#removeVirtualScreenBlocklist-(System-API)) |
+| [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md#removeVirtualScreenSurface-(System-API)) |
+| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md#setFoldDisplayMode-(System-API)) |
+| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md#setFoldDisplayMode-(System-API)) |
+| [setFoldStatusLocked](arkts-arkui-display-setfoldstatuslocked-f-sys.md#setFoldStatusLocked-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

@@ -2,7 +2,9 @@
 
 Provides http related APIs.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace http--><!--Device-unnamed-declare namespace http-End-->
 
@@ -20,8 +22,8 @@ import { http } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createHttp](arkts-network-http-createhttp-f.md#createhttp) |
-| [createHttpResponseCache](arkts-network-http-createhttpresponsecache-f.md#createhttpresponsecache) |
+| [createHttp](arkts-network-http-createhttp-f.md#createHttp) |
+| [createHttpResponseCache](arkts-network-http-createhttpresponsecache-f.md#createHttpResponseCache) |
 
 ### Classes
 

@@ -1,8 +1,10 @@
-# @ohos.security.securityGuard(This module provides the capabilities to security guard.)
+# @ohos.security.securityGuard
 
-Provides security event management and security model management.Based on event information, you will be able to analyze the running status of devices.
+Provides security event management and security model management. Based on event information, you will be able to analyze the running status of devices.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace securityGuard--><!--Device-unnamed-declare namespace securityGuard-End-->
 
@@ -23,14 +25,14 @@ import { securityGuard } from '@kit.SecurityGuardKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getmodelresult) |
-| [off](arkts-securityguard-securityguard-off-f-sys.md#off) |
-| [on](arkts-securityguard-securityguard-on-f-sys.md#on) |
-| [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querysecurityevent) |
-| [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportsecurityevent) |
-| [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startsecurityeventcollector) |
-| [stopSecurityEventCollector](arkts-securityguard-securityguard-stopsecurityeventcollector-f-sys.md#stopsecurityeventcollector) |
-| [updatePolicyFile](arkts-securityguard-securityguard-updatepolicyfile-f-sys.md#updatepolicyfile) |
+| [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getModelResult-(System-API)) |
+| [off_securityEventOccur](arkts-securityguard-securityguard-offsecurityeventoccur-f-sys.md#off_securityEventOccur) |
+| [on_securityEventOccur](arkts-securityguard-securityguard-onsecurityeventoccur-f-sys.md#on_securityEventOccur) |
+| [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querySecurityEvent-(System-API)) |
+| [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportSecurityEvent-(System-API)) |
+| [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startSecurityEventCollector-(System-API)) |
+| [stopSecurityEventCollector](arkts-securityguard-securityguard-stopsecurityeventcollector-f-sys.md#stopSecurityEventCollector-(System-API)) |
+| [updatePolicyFile](arkts-securityguard-securityguard-updatepolicyfile-f-sys.md#updatePolicyFile-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

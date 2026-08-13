@@ -1,20 +1,24 @@
 # TextArea
 
 ```TypeScript
-type TextArea = TextAreaFrameNode
+type TextArea = TypedFrameNode<TextAreaInterface, TextAreaAttribute>
 ```
 
-Define the FrameNode type for TextArea.
+Represents a FrameNode of the **TextArea** type.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type TextArea = TextAreaFrameNode--><!--Device-typeNode-type TextArea = TextAreaFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-typeNode-type TextArea = TypedFrameNode<TextAreaInterface, TextAreaAttribute>--><!--Device-typeNode-type TextArea = TypedFrameNode<TextAreaInterface, TextAreaAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TextAreaFrameNode
+**Property type:** TypedFrameNode<TextAreaInterface, TextAreaAttribute>
 

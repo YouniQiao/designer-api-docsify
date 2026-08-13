@@ -14,9 +14,11 @@ function startEthEap(netId: number, profile: EthEapProfile): void
 
 Set the specified network interface parameters.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -35,12 +37,12 @@ Set the specified network interface parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200010-invalid-eap-status) | invalid eth state |
-| [33200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [33200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200003-invalid-eth-eap-configuration) | Invalid profile |
-| [33200099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200099-internal-program-error) | internal error |
-| [33200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200001-invalid-netid) | Invalid netId |
+| [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) | invalid eth state |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [33200003](../errorcode-net-eap.md#33200003-invalid-eth-eap-configuration) | Invalid profile |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| [33200001](../errorcode-net-eap.md#33200001-invalid-netid) | Invalid netId |
 
 ## Examples
 

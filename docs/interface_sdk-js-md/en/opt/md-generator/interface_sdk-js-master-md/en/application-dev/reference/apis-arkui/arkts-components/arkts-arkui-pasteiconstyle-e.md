@@ -4,6 +4,8 @@ Enumerates icon styles of the **PasteButton** component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum PasteIconStyle--><!--Device-unnamed-declare enum PasteIconStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ LINES = 0
 Line style icon.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

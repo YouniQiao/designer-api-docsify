@@ -14,7 +14,9 @@ function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): Pixel
 
 Creates a PixelMap object from surface id.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap-End-->
 
@@ -37,9 +39,9 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980178](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
-| [62980105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-failure-in-obtaining-image-data) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) |
 
 ## Examples
 
@@ -67,7 +69,9 @@ function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap
 
 Creates a PixelMap object from surface id.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap-End-->
 
@@ -89,9 +93,9 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980178](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
-| [62980105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-failure-in-obtaining-image-data) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) |
 
 ## Examples
 

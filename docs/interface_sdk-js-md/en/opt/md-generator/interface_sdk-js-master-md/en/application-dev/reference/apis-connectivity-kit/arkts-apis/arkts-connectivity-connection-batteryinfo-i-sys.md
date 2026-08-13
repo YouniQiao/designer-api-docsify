@@ -2,7 +2,9 @@
 
 Describes the contents of the battery information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-interface BatteryInfo--><!--Device-connection-interface BatteryInfo-End-->
 
@@ -24,7 +26,9 @@ Identify of the discovery device.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

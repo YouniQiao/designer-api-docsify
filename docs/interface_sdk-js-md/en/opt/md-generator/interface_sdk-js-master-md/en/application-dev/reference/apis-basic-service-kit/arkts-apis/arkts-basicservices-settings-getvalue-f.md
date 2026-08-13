@@ -18,7 +18,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValue](ohos.settings#getValue)
+**Substitutes:** getValue
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -63,7 +63,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValue](ohos.settings#getValue)
+**Substitutes:** getValue
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -105,7 +105,9 @@ function getValue(context: Context, name: string, callback: AsyncCallback<string
 
 Get value from settingsdata
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,7 +149,9 @@ function getValue(context: Context, name: string): Promise<string>
 
 Get value from settingsdata
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,10 +192,11 @@ settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS).then((valu
 function getValue(context: Context, name: string, domainName: string): Promise<string>
 ```
 
-Get value from settingsdata  
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

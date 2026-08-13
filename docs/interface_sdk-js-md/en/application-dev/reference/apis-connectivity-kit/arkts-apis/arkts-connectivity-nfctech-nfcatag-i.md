@@ -1,36 +1,34 @@
 # NfcATag
 
-Provides interfaces to control the read and write of tags that support the NFC-A technology.&lt;p&gt;This class is inherited from the [TagSession](TagSession) abstract class, and provides methods to create{@code NfcATag} objects and obtain the ATQA and SAK.
+Provides interfaces to control the read and write of tags that support the NFC-A technology. &lt;p&gt;This class is inherited from the TagSession abstract class, and provides methods to create {@code NfcATag} objects and obtain the ATQA and SAK.
 
-**Inheritance/Implementation:** NfcATag extends [TagSession](TagSession)
+**Inheritance/Implementation:** NfcATag extends TagSession
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface NfcATag extends TagSession--><!--Device-unnamed-export interface NfcATag extends TagSession-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface NfcATag--><!--Device-unnamed-export interface NfcATag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getAtqa
 
-ArkTS-Dyn:
-```TypeScript
-getAtqa(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAtqa(): int[]
 ```
 
 Obtains the ATQA of an NFC-A tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcATag-getAtqa(): int[]--><!--Device-NfcATag-getAtqa(): int[]-End-->
 
@@ -40,7 +38,7 @@ Obtains the ATQA of an NFC-A tag.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns the ATQA of the NFC-A tag. |
+| int[] | Returns the ATQA of the NFC-A tag. |
 
 ## Examples
 
@@ -54,23 +52,19 @@ console.info("nfcA atqa: " + atqa);
 
 ## getSak
 
-ArkTS-Dyn:
-```TypeScript
-getSak(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSak(): int
 ```
 
 Obtains the SAK of an NFC-A tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcATag-getSak(): int--><!--Device-NfcATag-getSak(): int-End-->
 
@@ -80,7 +74,7 @@ Obtains the SAK of an NFC-A tag.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the SAK of the NFC-A tag. |
+| int | Returns the SAK of the NFC-A tag. |
 
 ## Examples
 

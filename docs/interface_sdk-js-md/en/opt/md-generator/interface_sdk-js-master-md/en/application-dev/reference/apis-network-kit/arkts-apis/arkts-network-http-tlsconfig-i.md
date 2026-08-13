@@ -2,7 +2,9 @@
 
 TLS config.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface TlsConfig--><!--Device-http-export interface TlsConfig-End-->
 
@@ -24,9 +26,11 @@ CipherSuites, cipherSuits must match tsl version, otherswise will set all system
 
 **Type:** [CipherSuite](arkts-network-http-ciphersuite-t.md)[]
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TlsConfig-cipherSuites?: CipherSuite[]--><!--Device-TlsConfig-cipherSuites?: CipherSuite[]-End-->
 
@@ -42,9 +46,11 @@ Maximum version num of Tls protocol.
 
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TlsConfig-tlsVersionMax: TlsVersion--><!--Device-TlsConfig-tlsVersionMax: TlsVersion-End-->
 
@@ -60,9 +66,11 @@ Minimum version num of Tls protocol.
 
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TlsConfig-tlsVersionMin: TlsVersion--><!--Device-TlsConfig-tlsVersionMin: TlsVersion-End-->
 

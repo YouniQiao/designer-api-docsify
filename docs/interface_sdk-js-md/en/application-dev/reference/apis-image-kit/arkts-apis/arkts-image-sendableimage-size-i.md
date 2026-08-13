@@ -1,14 +1,16 @@
 # Size
 
-Describes the size of an image.It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
+Describes the size of an image. It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
 
-**Inheritance/Implementation:** Size extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** Size extends lang.ISendable
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-sendableImage-interface Size extends lang.ISendable--><!--Device-sendableImage-interface Size extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendableImage-interface Size--><!--Device-sendableImage-interface Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +34,8 @@ Height of the output image, in px.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -53,6 +57,8 @@ Width of the output image, in px.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -16,6 +16,8 @@ Obtains the device screen lock password policy.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -40,10 +42,10 @@ Obtains the device screen lock password policy.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 
 ## getPasswordPolicy
@@ -55,6 +57,8 @@ function getPasswordPolicy(admin: Want | null): PasswordPolicy
 Obtains the device screen lock password policy. Enterprises can use this API to query the current password policy for policy audit and compliance check, ensuring that the device password policy complies with enterprise security specifications.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -80,10 +84,10 @@ Obtains the device screen lock password policy. Enterprises can use this API to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 
@@ -99,48 +103,6 @@ let wantTemp: Want = {
 
 try {
   let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy(wantTemp);
-  console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-
-## getPasswordPolicy
-
-```TypeScript
-function getPasswordPolicy(): PasswordPolicy
-```
-
-Obtains the device screen lock password policy.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy--><!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy-End-->
-
-**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-try {
-  let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy();
   console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
 } catch(err) {
   console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);

@@ -1,10 +1,12 @@
 # SecureDnsMode
 
-Defines the mode for using HttpDns.
+Web组件使用HTTPDNS的模式。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum SecureDnsMode--><!--Device-webview-enum SecureDnsMode-End-->
 
@@ -16,11 +18,15 @@ Defines the mode for using HttpDns.
 OFF = 0
 ```
 
-Do not use HttpDns, can be used to revoke previously used HttpDns configuration.
+不使用HTTPDNS， 可以用于撤销之前使用的HTTPDNS配置。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecureDnsMode-OFF = 0--><!--Device-SecureDnsMode-OFF = 0-End-->
 
@@ -32,11 +38,15 @@ Do not use HttpDns, can be used to revoke previously used HttpDns configuration.
 AUTO = 1
 ```
 
-By default, the user-settings of HttpDns is used for dns resolution, and if it fails,the system dns is used for resolution.
+自动模式，HttpDns的用户设置用于DNS解析，若解析失败，则使用系统DNS进行解析。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecureDnsMode-AUTO = 1--><!--Device-SecureDnsMode-AUTO = 1-End-->
 
@@ -48,11 +58,15 @@ By default, the user-settings of HttpDns is used for dns resolution, and if it f
 SECURE_ONLY = 2
 ```
 
-Use the user-settings of HttpDns for dns resolution. If it fails, it will not fall back to the system dns, which will directly cause the page to fail to load.
+强制使用设定的HTTPDNS服务器进行域名解析。如果解析失败，将不会回退到系统 DNS，这将直接导致页面加载失败。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecureDnsMode-SECURE_ONLY = 2--><!--Device-SecureDnsMode-SECURE_ONLY = 2-End-->
 

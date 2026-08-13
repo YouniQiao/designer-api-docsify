@@ -6,6 +6,8 @@ Defines the js result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class JsResult--><!--Device-unnamed-declare class JsResult-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Constructor.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Handle the user's JavaScript result if cancel the dialog.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsResult-handleCancel(): void--><!--Device-JsResult-handleCancel(): void-End-->
@@ -58,6 +64,8 @@ Handle the user's JavaScript result if confirm the dialog.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsResult-handleConfirm(): void--><!--Device-JsResult-handleConfirm(): void-End-->
@@ -75,6 +83,8 @@ Handle the user's JavaScript result if confirm the prompt dialog.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

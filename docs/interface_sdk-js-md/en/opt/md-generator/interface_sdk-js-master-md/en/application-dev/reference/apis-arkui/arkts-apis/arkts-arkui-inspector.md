@@ -1,8 +1,10 @@
-# @ohos.arkui.inspector(Layout Callback)
+# @ohos.arkui.inspector
 
 Used to do observer layout and draw event for component.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,7 +24,7 @@ import { inspector } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver) |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createComponentObserver) |
 
 ### Interfaces
 

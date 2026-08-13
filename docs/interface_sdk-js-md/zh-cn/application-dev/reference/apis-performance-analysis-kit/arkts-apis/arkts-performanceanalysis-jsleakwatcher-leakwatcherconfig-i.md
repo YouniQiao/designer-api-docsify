@@ -2,9 +2,11 @@
 
 LeakWatcherConfig对象类型，对象中包含多个用于内存泄漏监测的可配置属性。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 <!--Device-jsLeakWatcher-interface LeakWatcherConfig--><!--Device-jsLeakWatcher-interface LeakWatcherConfig-End-->
 
@@ -16,19 +18,15 @@ LeakWatcherConfig对象类型，对象中包含多个用于内存泄漏监测的
 bgLeakCountThreshold?: int
 ```
 
-应用在后台泄漏个数达到设定值触发dump，取值范围为[0, +∞)。
+应用在后台泄漏个数达到设定值触发dump，取值范围为[0, +∞)。 GC/Dump阶段，大于等于1时触发Dump。 阈值默认为1。 传入不在取值范围内的值时将使用默认值。
 
-GC/Dump阶段，大于等于1时触发Dump。
+**类型：** int
 
-阈值默认为1。
+**起始版本：** 26.1.0
 
-传入不在取值范围内的值时将使用默认值。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int-End-->
 
@@ -40,21 +38,15 @@ GC/Dump阶段，大于等于1时触发Dump。
 checkInterval?: int
 ```
 
-每轮泄漏检测间隔时间，单位：ms，取值范围为[90000, +∞)。
+每轮泄漏检测间隔时间，单位：ms，取值范围为[90000, +∞)。 默认为90000ms。 如果应用输入的自定义检测间隔时间小于默认值，JSLeakWatcher强制将间隔设置为默认值。 当前jsLeakWatcher泄漏检测性能开销较大，会导致应用卡顿，建议增大该参数，减少卡顿频率。 传入不在取值范围内的值时将使用默认值。
 
-默认为90000ms。
+**类型：** int
 
-如果应用输入的自定义检测间隔时间小于默认值，JSLeakWatcher强制将间隔设置为默认值。
+**起始版本：** 26.1.0
 
-当前jsLeakWatcher泄漏检测性能开销较大，会导致应用卡顿，建议增大该参数，减少卡顿频率。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
-传入不在取值范围内的值时将使用默认值。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-checkInterval?: int--><!--Device-LeakWatcherConfig-checkInterval?: int-End-->
 
@@ -66,21 +58,15 @@ checkInterval?: int
 dumpHeapWaitTimeMs?: int
 ```
 
-延迟执行dump，保证GC能调度且执行完再执行dump，延迟间隔小于等于泄漏检测间隔时间，单位：ms，取值范围为[0, +∞)。
+延迟执行dump，保证GC能调度且执行完再执行dump，延迟间隔小于等于泄漏检测间隔时间，单位：ms，取值范围为[0, +∞)。 设置延迟时长超过泄漏间隔时长则默认与泄漏间隔时长保持一致。 若无新增泄漏对象将不会触发dump。 GC结束后默认延迟5秒执行dump。 传入不在取值范围内的值时将使用默认值。
 
-设置延迟时长超过泄漏间隔时长则默认与泄漏间隔时长保持一致。
+**类型：** int
 
-若无新增泄漏对象将不会触发dump。
+**起始版本：** 26.1.0
 
-GC结束后默认延迟5秒执行dump。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
-传入不在取值范围内的值时将使用默认值。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int--><!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int-End-->
 
@@ -92,21 +78,15 @@ GC结束后默认延迟5秒执行dump。
 exclusionList?: Array<string>
 ```
 
-过滤不想监测的对象类名。
-
-作用于Window、CustomComponent和Ability组件，不会影响其他组件类型的过滤。
-
-存在混淆问题时无法进行过滤，只在开发态生效。
-
-配置项冲突优先级：ID列表 > 白名单。
-
-默认为空数组。
+过滤不想监测的对象类名。 作用于Window、CustomComponent和Ability组件，不会影响其他组件类型的过滤。 存在混淆问题时无法进行过滤，只在开发态生效。 配置项冲突优先级：ID列表 > 白名单。 默认为空数组。
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 24
+**起始版本：** 26.1.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-exclusionList?: Array<string>--><!--Device-LeakWatcherConfig-exclusionList?: Array<string>-End-->
 
@@ -118,19 +98,15 @@ exclusionList?: Array<string>
 fgLeakCountThreshold?: int
 ```
 
-应用在前台泄漏个数达到设定值触发dump，取值范围为[0, +∞)。
+应用在前台泄漏个数达到设定值触发dump，取值范围为[0, +∞)。 GC/Dump阶段，大于等于5时触发Dump。 阈值默认为5。 传入不在取值范围内的值时将使用默认值。
 
-GC/Dump阶段，大于等于5时触发Dump。
+**类型：** int
 
-阈值默认为5。
+**起始版本：** 26.1.0
 
-传入不在取值范围内的值时将使用默认值。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int-End-->
 
@@ -142,17 +118,15 @@ GC/Dump阶段，大于等于5时触发Dump。
 maxStoredHeapDumps?: int
 ```
 
-最大dump保存个数，取值范围为(0, 10]，避免磁盘空间占满，超过则删除时间戳最小的rawheap、jsleaklist文件。
+最大dump保存个数，取值范围为(0, 10]，避免磁盘空间占满，超过则删除时间戳最小的rawheap、jsleaklist文件。 默认保存10个rawheap、10个jsleaklist文件。 传入不在取值范围内的值时将使用默认值。
 
-默认保存10个rawheap、10个jsleaklist文件。
+**类型：** int
 
-传入不在取值范围内的值时将使用默认值。
+**起始版本：** 26.1.0
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int--><!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int-End-->
 
@@ -164,15 +138,15 @@ maxStoredHeapDumps?: int
 monitorObjectTypes: MonitorObjectType
 ```
 
-被监测对象类型。
-
-默认监测所有组件类型。
+被监测对象类型。 默认监测所有组件类型。
 
 **类型：** [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 
-**起始版本：** 24
+**起始版本：** 26.1.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType--><!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType-End-->
 
@@ -184,19 +158,15 @@ monitorObjectTypes: MonitorObjectType
 objectUniqueIDs?: Array<int>
 ```
 
-被监测泄漏对象ID列表。
+被监测泄漏对象ID列表。 只作用于自定义组件，不会影响其他组件类型的监测。 例如：白名单中设置的对象类名ID与自定义ID列表存在相同值时，生效自定义ID列表参数。 默认为空数组。
 
-只作用于自定义组件，不会影响其他组件类型的监测。
+**类型：** Array&lt;int&gt;
 
-例如：白名单中设置的对象类名ID与自定义ID列表存在相同值时，生效自定义ID列表参数。
+**起始版本：** 26.1.0
 
-默认为空数组。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
-
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
+**废弃版本：** -1
 
 <!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>--><!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>-End-->
 

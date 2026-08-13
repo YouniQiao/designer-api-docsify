@@ -2,7 +2,9 @@
 
 Defines the options used to construct the **MessageOption** object.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-rpc-class MessageOption--><!--Device-rpc-class MessageOption-End-->
 
@@ -23,6 +25,8 @@ constructor(syncFlags?: number, waitTime?: number)
 A constructor used to create a **MessageOption** object.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -59,6 +63,8 @@ A constructor used to create a **MessageOption** object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-constructor(async?: boolean)--><!--Device-MessageOption-constructor(async?: boolean)-End-->
@@ -83,6 +89,89 @@ class TestRemoteObject extends rpc.MessageOption {
 }
 ```
 
+## constructor
+
+```TypeScript
+constructor(isAsync: boolean)
+```
+
+A constructor used to create a MessageOption instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MessageOption-constructor(isAsync: boolean)--><!--Device-MessageOption-constructor(isAsync: boolean)-End-->
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [isAsync](#isAsync) | boolean | Yes |
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+A constructor used to create a MessageOption instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MessageOption-constructor()--><!--Device-MessageOption-constructor()-End-->
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+## constructor
+
+```TypeScript
+constructor(syncFlags: number)
+```
+
+A constructor used to create a MessageOption instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MessageOption-constructor(syncFlags: int)--><!--Device-MessageOption-constructor(syncFlags: int)-End-->
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| syncFlags | number | Yes |
+
+## constructor
+
+```TypeScript
+constructor(syncFlags: number, waitTime: number)
+```
+
+A constructor used to create a MessageOption instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)--><!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)-End-->
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| syncFlags | number | Yes |
+| waitTime | number | Yes |
+
 ## getFlags
 
 ```TypeScript
@@ -91,7 +180,9 @@ getFlags(): number
 
 Obtains the call flag, which can be synchronous or asynchronous.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -133,7 +224,9 @@ getWaitTime(): number
 
 Obtains the maximum wait time for this RPC call.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -173,7 +266,9 @@ isAsync(): boolean
 
 Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -209,7 +304,9 @@ setAsync(isAsync: boolean): void
 
 Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -221,7 +318,7 @@ Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [isAsync](#isasync) | boolean | Yes |
+| [isAsync](#isAsync) | boolean | Yes |
 
 ## Examples
 
@@ -245,7 +342,9 @@ setFlags(flags: number): void
 
 Sets the call flag, which can be synchronous or asynchronous.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -284,7 +383,9 @@ setWaitTime(waitTime: number): void
 
 Sets the maximum wait time for this RPC call.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -328,6 +429,8 @@ Indication to **sendMessageRequest** for passing the file descriptor.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number--><!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number-End-->
@@ -347,6 +450,8 @@ Asynchronous call.
 **Default:** 1
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -368,6 +473,8 @@ Synchronous call.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-static readonly TF_SYNC: number--><!--Device-MessageOption-static readonly TF_SYNC: number-End-->
@@ -380,13 +487,15 @@ Synchronous call.
 static readonly TF_WAIT_TIME: number
 ```
 
-RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are  advised not to change the waiting time.
+RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are advised not to change the waiting time.
 
 **Type:** number
 
 **Default:** 4 [since 7 - 10] @default 8 [since 11]
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface ICurve--><!--Device-unnamed-interface ICurve-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ interpolate(fraction : number) : number
 插值曲线的插值计算函数，可以通过传入的归一化时间参数返回当前的插值
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

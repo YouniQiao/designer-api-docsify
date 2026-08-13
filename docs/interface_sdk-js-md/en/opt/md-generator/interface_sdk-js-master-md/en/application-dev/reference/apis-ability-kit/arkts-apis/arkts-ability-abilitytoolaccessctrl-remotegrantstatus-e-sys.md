@@ -4,6 +4,8 @@ Remote grant status.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-enum RemoteGrantStatus--><!--Device-abilityToolAccessCtrl-enum RemoteGrantStatus-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -20,6 +22,8 @@ Enable remote grant.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-RemoteGrantStatus-ENABLE = 0x01--><!--Device-RemoteGrantStatus-ENABLE = 0x01-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -35,6 +39,8 @@ DISABLE = 0x02
 Disable remote grant.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-RemoteGrantStatus-DISABLE = 0x02--><!--Device-RemoteGrantStatus-DISABLE = 0x02-End-->
 

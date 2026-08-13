@@ -1,23 +1,14 @@
 # Set
 
-A non-linear data structure.
-
-> **NOTE：**
-> 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
-> This section uses the following to identify the use of generics:
-
-- T: type, which can be any of the  
-[sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).  
-**Decorator**: \@Sendable
+A non-linear data structure. > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > This section uses the following to identify the use of generics: - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Decorator:** @Sendable
+**Deprecated since:** -1
 
-<!--Device-collections-class Set<T>--><!--Device-collections-class Set<T>-End-->
+<!--Device-collections-class Set--><!--Device-collections-class Set-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -33,11 +24,13 @@ import { collections } from '@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-Returns an iterator, each item of which is a JavaScript object.NOTE:This API cannot be used in .ets files.
+Returns an iterator, each item of which is a JavaScript object. NOTE: This API cannot be used in .ets files.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -55,7 +48,7 @@ Returns an iterator, each item of which is a JavaScript object.NOTE:This API can
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## add
 
@@ -68,6 +61,8 @@ Checks whether a value exists in this ArkTS set, and if not, adds the value to t
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -91,8 +86,8 @@ Checks whether a value exists in this ArkTS set, and if not, adds the value to t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## clear
 
@@ -106,6 +101,8 @@ Removes all elements from this ArkTS set.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
@@ -116,8 +113,8 @@ Removes all elements from this ArkTS set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## constructor
 
@@ -130,6 +127,8 @@ A constructor used to create an ArkTS set.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -147,7 +146,7 @@ A constructor used to create an ArkTS set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Set's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -160,6 +159,8 @@ A constructor used to create an ArkTS set.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -177,7 +178,7 @@ A constructor used to create an ArkTS set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Set's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## delete
 
@@ -190,6 +191,8 @@ Deletes an element from this ArkTS set.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -213,8 +216,8 @@ Deletes an element from this ArkTS set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The delete method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The delete method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## entries
 
@@ -227,6 +230,8 @@ Returns a set iterator object that contains the key-value pair of each element i
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -244,8 +249,8 @@ Returns a set iterator object that contains the key-value pair of each element i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## forEach
 
@@ -258,6 +263,8 @@ Calls a callback function for each key-value pair in this ArkTS set.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -275,8 +282,8 @@ Calls a callback function for each key-value pair in this ArkTS set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## has
 
@@ -289,6 +296,8 @@ Checks whether a value exists in this ArkTS set.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -312,8 +321,8 @@ Checks whether a value exists in this ArkTS set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## keys
 
@@ -326,6 +335,8 @@ Returns a set iterator object that contains the key of each element in this ArkT
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -343,8 +354,8 @@ Returns a set iterator object that contains the key of each element in this ArkT
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## values
 
@@ -357,6 +368,8 @@ Returns a set iterator object that contains the value of each element in this Ar
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -374,8 +387,8 @@ Returns a set iterator object that contains the value of each element in this Ar
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## size
 
@@ -390,6 +403,8 @@ Number of elements in a set.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

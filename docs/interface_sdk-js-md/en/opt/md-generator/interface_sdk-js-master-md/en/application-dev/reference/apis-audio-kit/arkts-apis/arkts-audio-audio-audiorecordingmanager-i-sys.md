@@ -4,6 +4,8 @@ Provides recording strategy management, including collaborative recording and re
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -24,6 +26,8 @@ Unsubscribes from the system recording controller panel enabled state change eve
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void-End-->
@@ -42,9 +46,9 @@ Unsubscribes from the system recording controller panel enabled state change eve
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 ## onSystemRecordControllerEnabledChange
 
@@ -55,6 +59,8 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 Subscribes to the system recording controller panel enabled state change event.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +80,7 @@ Subscribes to the system recording controller panel enabled state change event.
 
 | Error Code ID |
 | --- |
-| [6800102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |

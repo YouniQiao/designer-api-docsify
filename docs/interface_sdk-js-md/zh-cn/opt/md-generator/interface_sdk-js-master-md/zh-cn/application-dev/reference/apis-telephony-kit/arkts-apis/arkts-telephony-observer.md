@@ -1,8 +1,10 @@
-# @ohos.telephony.observer(电话服务状态监听)
+# @ohos.telephony.observer
 
 本模块提供订阅管理功能，可以订阅/取消订阅的事件包括：网络状态变化、信号状态变化、通话状态变化、蜂窝数据链路连接状态、蜂窝数据业务的上下行数据流状态、SIM状态变化。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace observer--><!--Device-unnamed-declare namespace observer-End-->
 
@@ -14,43 +16,68 @@
 
 | 名称 |
 | --- |
-| [off](arkts-telephony-observer-off-f.md#off) |
-| [off](arkts-telephony-observer-off-f.md#off-1) |
-| [off](arkts-telephony-observer-off-f.md#off-3) |
-| [off](arkts-telephony-observer-off-f.md#off-4) |
-| [off](arkts-telephony-observer-off-f.md#off-5) |
-| [off](arkts-telephony-observer-off-f.md#off-6) |
-| [off](arkts-telephony-observer-off-f.md#off-7) |
-| [off](arkts-telephony-observer-off-f.md#off-8) |
-| [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md#offccallstatechange) |
-| [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md#offcommunicationstatechange) |
-| [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md#offgetsimactivestate) |
-| [on](arkts-telephony-observer-on-f.md#on) |
-| [on](arkts-telephony-observer-on-f.md#on-1) |
-| [on](arkts-telephony-observer-on-f.md#on-2) |
-| [on](arkts-telephony-observer-on-f.md#on-3) |
-| [on](arkts-telephony-observer-on-f.md#on-6) |
-| [on](arkts-telephony-observer-on-f.md#on-7) |
-| [on](arkts-telephony-observer-on-f.md#on-8) |
-| [on](arkts-telephony-observer-on-f.md#on-9) |
-| [on](arkts-telephony-observer-on-f.md#on-10) |
-| [on](arkts-telephony-observer-on-f.md#on-11) |
-| [on](arkts-telephony-observer-on-f.md#on-12) |
-| [on](arkts-telephony-observer-on-f.md#on-13) |
-| [on](arkts-telephony-observer-on-f.md#on-14) |
-| [on](arkts-telephony-observer-on-f.md#on-15) |
-| [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md#onccallstatechange) |
-| [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md#oncommunicationstatechange) |
-| [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md#ongetsimactivestate) |
+| [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md#offCCallStateChange) |
+| [offCallStateChange](arkts-telephony-observer-offcallstatechange-f.md#offCallStateChange) |
+| [offCallStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md#offCallStateChangeEx) |
+| [offCellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md#offCellularDataConnectionStateChange) |
+| [offCellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md#offCellularDataFlowChange) |
+| [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md#offCommunicationStateChange) |
+| [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md#offGetSimActiveState) |
+| [offIccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md#offIccAccountInfoChange) |
+| [offNetworkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md#offNetworkStateChange) |
+| [offSignalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md#offSignalInfoChange) |
+| [offSimStateChange](arkts-telephony-observer-offsimstatechange-f.md#offSimStateChange) |
+| off_callStateChange |
+| [off_callStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md) |
+| [off_cellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md) |
+| [off_cellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md) |
+| [off_iccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md) |
+| [off_networkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md) |
+| [off_signalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md) |
+| [off_simStateChange](arkts-telephony-observer-offsimstatechange-f.md) |
+| [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md#onCCallStateChange) |
+| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md#onCallStateChange) |
+| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md#onCallStateChange) |
+| [onCallStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md#onCallStateChangeEx) |
+| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md#onCellularDataConnectionStateChange) |
+| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md#onCellularDataConnectionStateChange) |
+| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md#onCellularDataFlowChange) |
+| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md#onCellularDataFlowChange) |
+| [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md#onCommunicationStateChange) |
+| [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md#onGetSimActiveState) |
+| [onIccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md#onIccAccountInfoChange) |
+| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md#onNetworkStateChange) |
+| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md#onNetworkStateChange) |
+| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md#onSignalInfoChange) |
+| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md#onSignalInfoChange) |
+| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md#onSimStateChange) |
+| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md#onSimStateChange) |
+| on_callStateChange |
+| on_callStateChange |
+| [on_callStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md) |
+| [on_cellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) |
+| [on_cellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) |
+| [on_cellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md) |
+| [on_cellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md) |
+| [on_iccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md) |
+| [on_networkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md) |
+| [on_networkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md) |
+| [on_signalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md) |
+| [on_signalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md) |
+| [on_simStateChange](arkts-telephony-observer-onsimstatechange-f.md) |
+| [on_simStateChange](arkts-telephony-observer-onsimstatechange-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [off](arkts-telephony-observer-off-f-sys.md#off-2) |
-| [on](arkts-telephony-observer-on-f-sys.md#on-4) |
-| [on](arkts-telephony-observer-on-f-sys.md#on-5) |
+| [offCellInfoChange](arkts-telephony-observer-offcellinfochange-f-sys.md#offCellInfoChange（系统接口）) |
+| [off_cellInfoChange](arkts-telephony-observer-offcellinfochange-f-sys.md) |
+| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md#onCellInfoChange（系统接口）) |
+| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md#onCellInfoChange（系统接口）) |
+| [on_cellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md) |
+| [on_cellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md) |
 <!--DelEnd-->
 
 ### 接口

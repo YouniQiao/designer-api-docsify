@@ -4,6 +4,8 @@ Configuration for invoking an analysis tool.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-interface ToolInvokeConfig--><!--Device-photoAccessHelper-interface ToolInvokeConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -28,6 +30,8 @@ Parameters of the analysis tool to invoke, in JSON string format. The total leng
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInvokeConfig-param?: string--><!--Device-ToolInvokeConfig-param?: string-End-->
@@ -47,6 +51,8 @@ Type of the analysis tool to invoke.
 **Type:** [AnalysisToolType](arkts-medialibrary-photoaccesshelper-analysistooltype-e-sys.md)
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

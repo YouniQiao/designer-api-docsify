@@ -4,6 +4,8 @@ Enumerates the types of screens.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-screen-enum ScreenType--><!--Device-screen-enum ScreenType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -19,6 +21,8 @@ BUILT_IN = 0
 The built-in, on-board screen that is physically integrated into the device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ An external physical display connected via a wired interface.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScreenType-EXTERNAL = 1--><!--Device-ScreenType-EXTERNAL = 1-End-->
@@ -52,9 +58,11 @@ An external physical display connected via a wired interface.
 VIRTUAL = 2
 ```
 
-An virtual display created by software, typically used for screen casting,screen recording, or multi-screen collaboration.
+An virtual display created by software, typically used for screen casting, screen recording, or multi-screen collaboration.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

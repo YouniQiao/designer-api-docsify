@@ -2,7 +2,9 @@
 
 Describes the authorized bundle information.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface GrantedBundleInfo--><!--Device-unnamed-export interface GrantedBundleInfo-End-->
 
@@ -14,12 +16,13 @@ Describes the authorized bundle information.
 readonly appIndex: number
 ```
 
-Index of an application clone, which takes effect only for application clones. The value is obtained from the  
-**appIndex** of ApplicationInfo.
+Index of an application clone, which takes effect only for application clones. The value is obtained from the **appIndex** of ApplicationInfo.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GrantedBundleInfo-readonly appIndex: int--><!--Device-GrantedBundleInfo-readonly appIndex: int-End-->
 
@@ -35,7 +38,9 @@ Application name, which is obtained from the **label** of ApplicationInfo.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GrantedBundleInfo-readonly appName?: string--><!--Device-GrantedBundleInfo-readonly appName?: string-End-->
 
@@ -51,7 +56,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GrantedBundleInfo-bundleName: string--><!--Device-GrantedBundleInfo-bundleName: string-End-->
 

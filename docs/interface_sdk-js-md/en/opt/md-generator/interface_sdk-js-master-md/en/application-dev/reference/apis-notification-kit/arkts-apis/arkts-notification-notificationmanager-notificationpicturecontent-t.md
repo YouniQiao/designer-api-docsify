@@ -6,7 +6,9 @@ export type NotificationPictureContent = _NotificationPictureContent
 
 Describes the picture-attached notification.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationPictureContent = _NotificationPictureContent--><!--Device-notificationManager-export type NotificationPictureContent = _NotificationPictureContent-End-->
 

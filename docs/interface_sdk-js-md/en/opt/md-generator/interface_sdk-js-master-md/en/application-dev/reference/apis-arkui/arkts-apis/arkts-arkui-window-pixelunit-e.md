@@ -1,11 +1,10 @@
 # PixelUnit
 
-Enumerates the pixel units.
+Enumerates the pixel units. You can use px2vp and vp2px to convert between physical pixels and virtual pixels.
 
-You can use [px2vp](px2vp) and  
-[vp2px](vp2px) to convert between physical pixels and virtual pixels.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-window-enum PixelUnit--><!--Device-window-enum PixelUnit-End-->
 
@@ -19,7 +18,9 @@ PX = 0
 
 Physical pixel unit (px).
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PixelUnit-PX = 0--><!--Device-PixelUnit-PX = 0-End-->
 
@@ -33,7 +34,9 @@ VP = 1
 
 Virtual pixel unit (vp).
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PixelUnit-VP = 1--><!--Device-PixelUnit-VP = 1-End-->
 

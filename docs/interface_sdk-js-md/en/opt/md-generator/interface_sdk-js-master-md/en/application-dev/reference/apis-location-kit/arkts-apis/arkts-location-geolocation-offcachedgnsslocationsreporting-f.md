@@ -1,0 +1,46 @@
+# off_cachedGnssLocationsReporting
+
+## Modules to Import
+
+```TypeScript
+import { geolocation } from '@kit.LocationKit';
+```
+
+## off_cachedGnssLocationsReporting
+
+```TypeScript
+function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void
+```
+
+Unsubscribe to cache GNSS locations update messages
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** cachedGnssLocationsChange
+
+**Required permissions:** ohos.permission.LOCATION
+
+<!--Device-geolocation-function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void--><!--Device-geolocation-function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'cachedGnssLocationsReporting' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | No |
+
+## Examples
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let cachedLocationsCb = (locations:Array<geolocation.Location>):void => {
+    console.info('cachedGnssLocationsReporting: locations: ' + JSON.stringify(locations));
+}
+let requestInfo:geolocation.CachedGnssLocationsRequest = {'reportingPeriodSec': 10, 'wakeUpCacheQueueFull': true};
+geolocation.on('cachedGnssLocationsReporting', requestInfo, cachedLocationsCb);
+geolocation.off('cachedGnssLocationsReporting');
+```

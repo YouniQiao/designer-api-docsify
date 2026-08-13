@@ -4,9 +4,11 @@
 type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 ```
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>--><!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>-End-->
 

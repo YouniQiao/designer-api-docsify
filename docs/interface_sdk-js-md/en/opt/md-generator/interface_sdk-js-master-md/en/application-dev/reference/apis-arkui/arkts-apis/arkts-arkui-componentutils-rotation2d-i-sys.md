@@ -4,6 +4,8 @@ Describes a rotation in 2D, which can be defined by rotation angle and rotation 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface Rotation2D--><!--Device-componentUtils-interface Rotation2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Rotation angle Information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Rotation2D-angle: double--><!--Device-Rotation2D-angle: double-End-->
@@ -48,6 +52,8 @@ Rotation centerX Information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Rotation2D-centerX: double--><!--Device-Rotation2D-centerX: double-End-->
@@ -67,6 +73,8 @@ Rotation centerY Information.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

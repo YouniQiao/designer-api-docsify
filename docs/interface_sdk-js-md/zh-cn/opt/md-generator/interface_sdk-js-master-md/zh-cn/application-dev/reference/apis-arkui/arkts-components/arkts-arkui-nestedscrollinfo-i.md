@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NestedScrollInfo--><!--Device-unnamed-declare interface NestedScrollInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ child: Scroller
 **类型：** [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +43,8 @@ parent: Scroller
 **类型：** [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

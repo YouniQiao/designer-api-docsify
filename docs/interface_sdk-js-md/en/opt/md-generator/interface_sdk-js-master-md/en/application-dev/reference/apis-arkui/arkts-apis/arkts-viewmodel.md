@@ -7,7 +7,7 @@
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md#extendviewmodel) |
+| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md#extendViewModel-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

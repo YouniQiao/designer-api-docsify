@@ -1,12 +1,14 @@
 # GaugeShadowOptions
 
-Inherits from [MultiShadowOptions](MultiShadowOptions) and has all attributes of **MultiShadowOptions**.
+Inherits from MultiShadowOptions and has all attributes of **MultiShadowOptions**.
 
-**Inheritance/Implementation:** GaugeShadowOptions extends [MultiShadowOptions](MultiShadowOptions)
+**Inheritance/Implementation:** GaugeShadowOptions extends MultiShadowOptions
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -14,7 +16,7 @@ Inherits from [MultiShadowOptions](MultiShadowOptions) and has all attributes of
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-unnamed-declare interface GaugeShadowOptions extends MultiShadowOptions--><!--Device-unnamed-declare interface GaugeShadowOptions extends MultiShadowOptions-End-->
+<!--Device-unnamed-declare interface GaugeShadowOptions--><!--Device-unnamed-declare interface GaugeShadowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

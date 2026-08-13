@@ -4,6 +4,8 @@ Title bar options.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface TitleOptions--><!--Device-unnamed-export interface TitleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Background color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TitleOptions-backgroundColor?: ResourceColor--><!--Device-TitleOptions-backgroundColor?: ResourceColor-End-->
@@ -45,6 +49,8 @@ Set title bar style.
 **Default:** BarStyle.STANDARD
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,6 +72,8 @@ Whether to enable the blur effect.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TitleOptions-isBlurEnabled?: boolean--><!--Device-TitleOptions-isBlurEnabled?: boolean-End-->
@@ -86,6 +94,8 @@ Set title bar type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-TitleOptions-titleBarType?: TitleBarType--><!--Device-TitleOptions-titleBarType?: TitleBarType-End-->
@@ -105,6 +115,8 @@ Set title bar icon.
 **Default:** atomicservice icon
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

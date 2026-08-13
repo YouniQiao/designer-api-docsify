@@ -2,9 +2,11 @@
 
 云文件批量缓存的进度信息。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-class MultiDownloadProgress--><!--Device-cloudSync-class MultiDownloadProgress-End-->
 
@@ -18,9 +20,11 @@ getFailedFiles(): Array<FailedFileInfo>
 
 获取批量缓存失败的文件列表。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>--><!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>-End-->
 
@@ -110,9 +114,11 @@ getSuccessfulFiles(): Array<string>
 
 获取批量缓存成功的文件列表。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>--><!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>-End-->
 
@@ -198,11 +204,13 @@ downloadedSize: long
 
 已缓存的文件大小，取值范围为 [0, INT64_MAX)，单位：Byte。如果进度异常，返回值为 INT64_MAX。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-downloadedSize: long--><!--Device-MultiDownloadProgress-downloadedSize: long-End-->
 
@@ -218,9 +226,11 @@ errType: DownloadErrorType
 
 **类型：** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-errType: DownloadErrorType--><!--Device-MultiDownloadProgress-errType: DownloadErrorType-End-->
 
@@ -234,11 +244,13 @@ failedCount: int
 
 缓存失败的文件数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-failedCount: int--><!--Device-MultiDownloadProgress-failedCount: int-End-->
 
@@ -254,9 +266,11 @@ state: State
 
 **类型：** State
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-state: State--><!--Device-MultiDownloadProgress-state: State-End-->
 
@@ -270,11 +284,13 @@ successfulCount: int
 
 缓存成功的文件数量，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-successfulCount: int--><!--Device-MultiDownloadProgress-successfulCount: int-End-->
 
@@ -288,11 +304,13 @@ taskId: long
 
 批量缓存任务的ID，取值范围为0到INT64_MAX。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-taskId: long--><!--Device-MultiDownloadProgress-taskId: long-End-->
 
@@ -306,11 +324,13 @@ totalCount: int
 
 文件总数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-totalCount: int--><!--Device-MultiDownloadProgress-totalCount: int-End-->
 
@@ -324,11 +344,13 @@ totalSize: long
 
 待缓存的文件总大小，取值范围为 [0, INT64_MAX)，单位为 Byte。如果进度异常，返回值为 INT64_MAX。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-totalSize: long--><!--Device-MultiDownloadProgress-totalSize: long-End-->
 

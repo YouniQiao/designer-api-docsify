@@ -12,11 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 ```
 
-Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings.
+Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
 
-If an application level proxy is set, the application level proxy parameters are returned.If a global proxy is set, the global proxy parameters are returned.If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned.In other cases, the proxy settings of default network are returned.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void--><!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void-End-->
 
@@ -32,8 +32,8 @@ If an application level proxy is set, the application level proxy parameters are
 
 | Error Code ID |
 | --- |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 
@@ -57,11 +57,11 @@ connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy
 function getDefaultHttpProxy(): Promise<HttpProxy>
 ```
 
-Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings.
+Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
 
-If an application level proxy is set, the application level proxy parameters are returned.If a global proxy is set, the global proxy parameters are returned.If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned.In other cases, the proxy settings of default network are returned.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>-End-->
 
@@ -77,8 +77,8 @@ If an application level proxy is set, the application level proxy parameters are
 
 | Error Code ID |
 | --- |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Enumerates the join styles of a pen. The join style defines the shape of the joints of a polyline segment drawn by the pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum JoinStyle--><!--Device-drawing-enum JoinStyle-End-->
 
@@ -16,7 +18,9 @@ MITER_JOIN = 0
 
 Mitered corner. If the angle of a polyline is small, its miter length may be inappropriate. In this case, you need to use the miter limit to limit the miter length.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-JoinStyle-MITER_JOIN = 0--><!--Device-JoinStyle-MITER_JOIN = 0-End-->
 
@@ -30,7 +34,9 @@ ROUND_JOIN = 1
 
 Round corner.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-JoinStyle-ROUND_JOIN = 1--><!--Device-JoinStyle-ROUND_JOIN = 1-End-->
 
@@ -44,7 +50,9 @@ BEVEL_JOIN = 2
 
 Beveled corner.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-JoinStyle-BEVEL_JOIN = 2--><!--Device-JoinStyle-BEVEL_JOIN = 2-End-->
 

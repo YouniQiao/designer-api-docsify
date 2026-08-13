@@ -2,7 +2,9 @@
 
 屏幕显示模式信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-interface ScreenModeInfo--><!--Device-screen-interface ScreenModeInfo-End-->
 
@@ -20,7 +22,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScreenModeInfo-height: long--><!--Device-ScreenModeInfo-height: long-End-->
 
@@ -38,7 +42,9 @@ id: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScreenModeInfo-id: long--><!--Device-ScreenModeInfo-id: long-End-->
 
@@ -56,7 +62,9 @@ refreshRate: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScreenModeInfo-refreshRate: int--><!--Device-ScreenModeInfo-refreshRate: int-End-->
 
@@ -74,7 +82,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScreenModeInfo-width: long--><!--Device-ScreenModeInfo-width: long-End-->
 

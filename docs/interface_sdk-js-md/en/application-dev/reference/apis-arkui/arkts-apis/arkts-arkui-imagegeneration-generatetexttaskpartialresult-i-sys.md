@@ -6,6 +6,8 @@ Configuration stream result for AI-generated text tasks.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GenerateTextTaskPartialResult--><!--Device-imageGeneration-interface GenerateTextTaskPartialResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,6 +34,8 @@ Final data in AI-generated text task, available in partial result.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateTextTaskPartialResult-content?: string--><!--Device-GenerateTextTaskPartialResult-content?: string-End-->
@@ -48,11 +52,13 @@ partialFail?: BusinessError
 
 Information of the partial error corresponding to AI-generated text task, available in partial error result.
 
-**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +82,8 @@ Think information in AI-generated text task, available in partial result.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateTextTaskPartialResult-reasoningContent?: string--><!--Device-GenerateTextTaskPartialResult-reasoningContent?: string-End-->
@@ -97,6 +105,8 @@ The type information used for AI-generated text task.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

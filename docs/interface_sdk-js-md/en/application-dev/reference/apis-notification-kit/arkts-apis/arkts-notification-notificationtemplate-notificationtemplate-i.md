@@ -1,16 +1,12 @@
 # NotificationTemplate
 
-This module defines the notification template, which is used to specify the template type for a notification.
+This module defines the notification template, which is used to specify the template type for a notification. > **NOTE：**> > The predefined system templates are supported. You only need to provide the template name and related data for > the system to automatically render the notification style that complies with the specifications. > Application scenario: Currently, only the upload and download scenarios are supported.
 
-> **NOTE：**
-> 
-> The predefined system templates are supported. You only need to provide the template name and related data for
-> the system to automatically render the notification style that complies with the specifications.
-> Application scenario: Currently, only the upload and download scenarios are supported.
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationTemplate--><!--Device-unnamed-export interface NotificationTemplate-End-->
 
@@ -19,23 +15,20 @@ This module defines the notification template, which is used to specify the temp
 ## data
 
 ```TypeScript
-data: Record<string, Object>
+data: Record<string, RecordData>
 ```
 
-Template data.
+Template data. - **title**: Download title. Mandatory field, with the value being a string type. - **fileName**: Download file name. Mandatory field, with the value being a string type. - **progressValue**: Download progress, with the value being a numeric type. The recommended value range is 0 to 100, representing the percentage progress. When **progressValue** is less than or equal to 0, the progress is 0; when it is greater than or equal to 100, the progress ring disappears, indicating that the download is complete.
 
-- **title**: Download title. Mandatory field, with the value being a string type.  
-- **fileName**: Download file name. Mandatory field, with the value being a string type.  
-- **progressValue**: Download progress, with the value being a numeric type. The recommended value range is 0  
-to 100, representing the percentage progress. When **progressValue** is less than or equal to 0, the progress is0; when it is greater than or equal to 100, the progress ring disappears, indicating that the download is complete.
+**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**Type:** Record&lt;string, Object&gt;
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-<!--Device-NotificationTemplate-data: Record<string, Object>--><!--Device-NotificationTemplate-data: Record<string, Object>-End-->
+<!--Device-NotificationTemplate-data: Record<string, RecordData>--><!--Device-NotificationTemplate-data: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -45,13 +38,15 @@ to 100, representing the percentage progress. When **progressValue** is less tha
 name: string
 ```
 
-Template name. Currently, only the progress bar notification template indicating download progress is supported,with the value **downloadTemplate**. The string length cannot exceed 202 bytes; any excess will be truncated.It cannot be an empty string.
+Template name. Currently, only the progress bar notification template indicating download progress is supported, with the value **downloadTemplate**. The string length cannot exceed 202 bytes; any excess will be truncated. It cannot be an empty string.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationTemplate-name: string--><!--Device-NotificationTemplate-name: string-End-->
 

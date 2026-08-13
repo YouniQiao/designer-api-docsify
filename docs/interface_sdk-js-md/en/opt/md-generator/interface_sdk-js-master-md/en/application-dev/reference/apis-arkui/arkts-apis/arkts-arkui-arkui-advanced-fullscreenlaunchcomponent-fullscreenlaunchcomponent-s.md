@@ -1,16 +1,10 @@
 # FullScreenLaunchComponent
 
-**FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner,the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.
-
-> **NOTE：**
-> 
-> To implement an embeddable atomic service within this component, it must inherit from
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). Otherwise, the system
-> cannot guarantee that the atomic service will function properly.
+**FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. > **NOTE：**> > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). Otherwise, the system > cannot guarantee that the atomic service will function properly.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct FullScreenLaunchComponent--><!--Device-unnamed-export declare struct FullScreenLaunchComponent-End-->
 
@@ -34,6 +28,8 @@ App ID of the atomic service to be launched. It is the unique identifier for the
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FullScreenLaunchComponent-appId: string--><!--Device-FullScreenLaunchComponent-appId: string-End-->
@@ -43,7 +39,8 @@ App ID of the atomic service to be launched. It is the unique identifier for the
 ## content
 
 ```TypeScript
-content: Callback<void>
+@BuilderParam
+  content: Callback<void>
 ```
 
 Custom placeholder icon displayed before the atomic service is launched. This allows you to create a large launch icon similar to those used by desktop apps. Clicking the placeholder icon will launch the atomic service.
@@ -52,11 +49,11 @@ Custom placeholder icon displayed before the atomic service is launched. This al
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FullScreenLaunchComponent-content: Callback<void>--><!--Device-FullScreenLaunchComponent-content: Callback<void>-End-->
+<!--Device-FullScreenLaunchComponent-@BuilderParam  content: Callback<void>--><!--Device-FullScreenLaunchComponent-@BuilderParam  content: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +69,8 @@ Callback triggered when an exception occurs during the execution of an embedded 
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-FullScreenLaunchComponent-onError?: ErrorCallback--><!--Device-FullScreenLaunchComponent-onError?: ErrorCallback-End-->
@@ -84,11 +83,13 @@ Callback triggered when an exception occurs during the execution of an embedded 
 onReceive?: Callback<Record<string, Object>>
 ```
 
-Callback triggered when an embedded atomic service calls [@ohos.window (window)](@ohos.window) APIs.
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-arkui-window-n.md#window) APIs.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -102,13 +103,13 @@ Callback triggered when an embedded atomic service calls [@ohos.window (window)]
 onTerminated?: Callback<TerminationInfo>
 ```
 
-Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to  
-[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)or  
-[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelf).
+Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelf).
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -127,6 +128,8 @@ Parameters for launching the atomic service.
 **Type:** [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

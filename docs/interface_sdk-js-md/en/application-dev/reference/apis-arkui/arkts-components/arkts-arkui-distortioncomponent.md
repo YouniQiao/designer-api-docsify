@@ -14,6 +14,8 @@ Creates a DistortionComponent with content.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistortionComponentInterface-(options?: DistortionComponentOptions): DistortionComponentAttribute--><!--Device-DistortionComponentInterface-(options?: DistortionComponentOptions): DistortionComponentAttribute-End-->
@@ -30,7 +32,7 @@ Creates a DistortionComponent with content.
 
 ## Summary
 
-- [DistortionComponentOptions](arkts-arkui-distortioncomponent-distortioncomponentoptions-i-sys.md)
-- [DistortionParam](arkts-arkui-distortioncomponent-distortionparam-i-sys.md)
-- [Vector2](arkts-arkui-distortioncomponent-vector2-t-sys.md)
-- [Vector4](arkts-arkui-distortioncomponent-vector4-t-sys.md)
+- [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md)
+- [DistortionParam](arkts-arkui-distortionparam-i-sys.md)
+- [Vector2](arkts-arkui-vector2-t-sys.md)
+- [Vector4](arkts-arkui-vector4-t-sys.md)

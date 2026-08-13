@@ -8,6 +8,8 @@ Enumerates the trigger types.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-notificationManager-export type TriggerType = _TriggerType--><!--Device-notificationManager-export type TriggerType = _TriggerType-End-->

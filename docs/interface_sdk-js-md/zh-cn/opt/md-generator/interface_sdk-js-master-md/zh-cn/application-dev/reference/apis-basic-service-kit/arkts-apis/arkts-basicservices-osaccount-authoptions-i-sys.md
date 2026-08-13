@@ -1,9 +1,10 @@
 # AuthOptions（系统接口）
 
-表示  
-[认证用户](arkts-basicservices-osaccount-userauth-c-sys.md#auth-1)的可选参数集合。
+表示 [认证用户](arkts-basicservices-osaccount-userauth-c-sys.md#auth) 的可选参数集合。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface AuthOptions--><!--Device-osAccount-interface AuthOptions-End-->
 
@@ -21,7 +22,9 @@ accountId?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthOptions-accountId?: int--><!--Device-AuthOptions-accountId?: int-End-->
 
@@ -41,6 +44,8 @@ additionalInfo?: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AuthOptions-additionalInfo?: string--><!--Device-AuthOptions-additionalInfo?: string-End-->
@@ -59,7 +64,9 @@ authIntent?: AuthIntent
 
 **类型：** [AuthIntent](arkts-basicservices-osaccount-authintent-e-sys.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthOptions-authIntent?: AuthIntent--><!--Device-AuthOptions-authIntent?: AuthIntent-End-->
 
@@ -77,7 +84,9 @@ remoteAuthOptions?: RemoteAuthOptions
 
 **类型：** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions--><!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions-End-->
 

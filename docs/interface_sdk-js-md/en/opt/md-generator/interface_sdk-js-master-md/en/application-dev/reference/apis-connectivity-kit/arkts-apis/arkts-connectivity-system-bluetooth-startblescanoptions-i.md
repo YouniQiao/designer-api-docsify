@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface StartBLEScanOptions--><!--Device-unnamed-export interface StartBLEScanOptions-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
@@ -20,7 +22,11 @@ complete: () => void
 
 StartBLEScanOptions completed
 
+**Type:** () =&gt; void
+
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -36,34 +42,15 @@ fail: (data: string, code: number) => void
 
 StartBLEScanOptions failed
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-StartBLEScanOptions-fail: (data: string, code: number) => void--><!--Device-StartBLEScanOptions-fail: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Lite
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
-## success
-
-```TypeScript
-success: () => void
-```
-
-StartBLEScanOptions success
-
-**Since:** 6
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-StartBLEScanOptions-success: () => void--><!--Device-StartBLEScanOptions-success: () => void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
@@ -79,8 +66,30 @@ Time of delay for reporting the scan result
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-StartBLEScanOptions-interval: number--><!--Device-StartBLEScanOptions-interval: number-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Lite
+
+## success
+
+```TypeScript
+success: () => void
+```
+
+StartBLEScanOptions success
+
+**Type:** () =&gt; void
+
+**Since:** 6
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-StartBLEScanOptions-success: () => void--><!--Device-StartBLEScanOptions-success: () => void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite

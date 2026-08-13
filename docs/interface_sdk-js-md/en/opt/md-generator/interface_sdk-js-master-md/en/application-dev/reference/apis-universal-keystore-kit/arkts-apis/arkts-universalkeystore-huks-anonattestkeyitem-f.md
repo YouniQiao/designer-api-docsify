@@ -12,18 +12,11 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Attests an anonymous key. This API uses an asynchronous callback to return the result.
-
-This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later.
-
-> **NOTE：**
-> 
-> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)
-> requires the ohos.permission.ACCESS_SE_KEY permission.
-
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+Attests an anonymous key. This API uses an asynchronous callback to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later. > **NOTE：**> > Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) > requires the ohos.permission.ACCESS_SE_KEY permission. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,18 +36,18 @@ This operation requires Internet access and takes time. If error code 12000012 i
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) |
-| [12000026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000026-secure-element-fault) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) |
 
 ## Examples
 
@@ -156,18 +149,11 @@ async function generateKeyThenAttestKey(): Promise<void> {
 function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Attests an anonymous key. This API uses a promise to return the result.
-
-This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later.
-
-> **NOTE：**
-> 
-> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)
-> requires the ohos.permission.ACCESS_SE_KEY permission.
-
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+Attests an anonymous key. This API uses a promise to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later. > **NOTE：**> > Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) > requires the ohos.permission.ACCESS_SE_KEY permission. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -192,20 +178,20 @@ This operation requires Internet access and takes time. If error code 12000012 i
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12000026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000026-secure-element-fault) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
-| [12000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
 
 ## Examples
 

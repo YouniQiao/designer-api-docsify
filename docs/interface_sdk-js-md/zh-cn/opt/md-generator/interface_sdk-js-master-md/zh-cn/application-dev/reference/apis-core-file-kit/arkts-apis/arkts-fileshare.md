@@ -2,7 +2,9 @@
 
 提供文件分享能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace fileShare--><!--Device-unnamed-declare namespace fileShare-End-->
 
@@ -14,27 +16,27 @@
 
 | 名称 |
 | --- |
-| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md#activatepermission) |
-| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md#checkpersistentpermission) |
-| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md#deactivatepermission) |
-| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md#persistpermission) |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md#revokepermission) |
+| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md#activatePermission) |
+| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md#checkPersistentPermission) |
+| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md#deactivatePermission) |
+| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md#persistPermission) |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md#revokePermission) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md#checkpathpermission) |
-| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md#getpersistentpolicy) |
-| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md#getshareddirectoryinfo) |
-| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md#grantshareddirectorypermission) |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission) |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-1) |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-2) |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-1) |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-2) |
-| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md#revokeshareddirectorypermission) |
+| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md#checkPathPermission（系统接口）) |
+| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md#getPersistentPolicy（系统接口）) |
+| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md#getSharedDirectoryInfo（系统接口）) |
+| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md#grantSharedDirectoryPermission（系统接口）) |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#grantUriPermission（系统接口）) |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#grantUriPermission（系统接口）) |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#grantUriPermission（系统接口）) |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokePermission（系统接口）) |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokePermission（系统接口）) |
+| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md#revokeSharedDirectoryPermission（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

@@ -2,9 +2,11 @@
 
 用于设置或返回组件的布局大小和位置。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface Frame--><!--Device-unnamed-export declare interface Frame-End-->
 
@@ -13,80 +15,96 @@
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
-组件的高度。单位：vp。取值范围：[0, +∞)。
+组件的高度。 单位：vp 取值范围：[0, +∞) 负数按默认值处理。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Frame-height: double--><!--Device-Frame-height: double-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Frame-height: number--><!--Device-Frame-height: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
-组件的宽度。单位：vp。取值范围：[0, +∞)。
+组件的宽度。 单位：vp 取值范围：[0, +∞) 负数按默认值处理。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Frame-width: double--><!--Device-Frame-width: double-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Frame-width: number--><!--Device-Frame-width: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-水平方向位置。单位：vp。取值范围：(-∞, +∞)。
+水平方向位置。 单位：vp 取值范围：(-∞, +∞)
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Frame-x: double--><!--Device-Frame-x: double-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Frame-x: number--><!--Device-Frame-x: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-垂直方向位置。单位：vp。取值范围：(-∞, +∞)。
+垂直方向位置。 单位：vp 取值范围：(-∞, +∞)
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Frame-y: double--><!--Device-Frame-y: double-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Frame-y: number--><!--Device-Frame-y: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

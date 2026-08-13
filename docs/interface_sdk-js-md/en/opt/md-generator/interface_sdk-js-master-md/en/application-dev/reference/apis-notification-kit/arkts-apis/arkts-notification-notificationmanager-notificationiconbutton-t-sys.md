@@ -8,6 +8,8 @@ System notification button.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-notificationManager-export type NotificationIconButton = _NotificationIconButton--><!--Device-notificationManager-export type NotificationIconButton = _NotificationIconButton-End-->
 
 **System capability:** SystemCapability.Notification.Notification

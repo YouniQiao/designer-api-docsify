@@ -8,7 +8,9 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 创建闪控球控制器，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>--><!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>-End-->
 
@@ -30,9 +32,9 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 | 错误码ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300019-闪控球参数校验错误) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300023-闪控球内部错误) |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300023](../errorcode-window.md#1300023-闪控球内部错误) |
 
 ## 示例
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-cacheDownload-interface DownloadError--><!--Device-cacheDownload-interface DownloadError-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -20,6 +22,8 @@ readonly errorCode: ErrorCode
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-DownloadError-readonly errorCode: ErrorCode--><!--Device-DownloadError-readonly errorCode: ErrorCode-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -30,12 +34,13 @@ readonly errorCode: ErrorCode
 readonly message: string
 ```
 
-返回[通用错误码](../../../reference/errorcode-universal.md)或  
-[HTTP错误码](../../../reference/apis-network-kit/errorcode-net-http.md)。
+返回[通用错误码](../../errorcode-universal.md)或 [HTTP错误码](../../apis-network-kit/errorcode-net-http.md)。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadError-readonly message: string--><!--Device-DownloadError-readonly message: string-End-->
 

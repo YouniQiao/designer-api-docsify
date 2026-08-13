@@ -3,24 +3,22 @@
 ## closeToast
 
 ```TypeScript
-export function closeToast(toastId: int): void
+function closeToast(toastId: number): void
 ```
 
-关闭即时反馈。
+关闭即时反馈。 > **说明：** > > 直接使用closeToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用 UIContext中的getPromptAction方法获取 > 到PromptAction对象，再通过该对象调用 > [closeToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#closetoast18)实现。
 
-> **说明：**
-> 
-> 直接使用closeToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction
-> 方法获取到PromptAction对象，再通过该对象调用
-> [closeToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#closetoast18)实现。
+**起始版本：** 18
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-promptAction-export function closeToast(toastId: int): void--><!--Device-promptAction-export function closeToast(toastId: int): void-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-promptAction-function closeToast(toastId: number): void--><!--Device-promptAction-function closeToast(toastId: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,13 +26,13 @@ export function closeToast(toastId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| toastId | int | 是 | openToast返回的id。 |
+| toastId | number | 是 | openToast返回的id，用于标识要关闭的Toast实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [103401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103401-无法找到对应的文本提示框) | Cannot find the toast. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103401](../errorcode-promptAction.md#103401-无法找到对应的文本提示框) | Cannot find the toast. |
 

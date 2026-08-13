@@ -2,7 +2,9 @@
 
 Describes the parameters for scan.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface ScanOptions--><!--Device-ble-interface ScanOptions-End-->
 
@@ -25,6 +27,8 @@ Configuration of scan enhance mode.
 **Type:** [ScanEnhanceMode](arkts-connectivity-ble-scanenhancemode-i-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

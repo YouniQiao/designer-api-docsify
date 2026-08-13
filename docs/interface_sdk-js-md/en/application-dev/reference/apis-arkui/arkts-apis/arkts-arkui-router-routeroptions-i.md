@@ -1,8 +1,12 @@
 # RouterOptions
 
-**Since:** 23
+Describes the page routing options.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-router-interface RouterOptions--><!--Device-router-interface RouterOptions-End-->
 
@@ -20,15 +24,17 @@ import { router } from '@kit.ArkUI';
 params?: Object
 ```
 
-Data that needs to be passed to the destination page during navigation.After the destination page is displayed, the parameter can be directly used for the page.
+Data that needs to be passed to the target page during redirection. The received data becomes invalid when the page is switched to another page. The target page can use **router.getParams()** to obtain the passed parameters, for example, **this.keyValue** (**keyValue** is the value of a key in **params**). In the web-like paradigm, these parameters can be directly used on the target page. If the field specified by **key** already exists on the target page, the passed value of the key will be displayed. **NOTE：**The **params** parameter can only carry serializable data. Objects returned by methods and system APIs (for example, **PixelMap** objects defined and returned by media APIs) cannot be passed. To pass such objects, extract from them the basic type attributes to be passed, and then construct objects of the object type.
 
 **Type:** Object
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RouterOptions-params?: Object--><!--Device-RouterOptions-params?: Object-End-->
 
@@ -40,13 +46,15 @@ Data that needs to be passed to the destination page during navigation.After the
 recoverable?: boolean
 ```
 
-Set router page stack can be recovered after application is destroyed. When router page stack is recovered,top page will be recovered, other page recovered when it backs. the default value is 'true'.
+Whether the corresponding page is recoverable. Default value: **true**. **true**: The corresponding page is recoverable. **false**: The corresponding page is not recoverable. **NOTE：**If an application is switched to the background and is later closed by the system due to resource constraints or other reasons, a page marked as recoverable can be restored by the system when the application is brought back to the foreground. For more details, see [UIAbility Backup and Restore](../../../application-models/ability-recover-guideline.md).
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-RouterOptions-recoverable?: boolean--><!--Device-RouterOptions-recoverable?: boolean-End-->
 
@@ -58,13 +66,17 @@ Set router page stack can be recovered after application is destroyed. When rout
 url: string
 ```
 
-URI of the destination page, which supports the following formats:1. Absolute path of the page, which is provided by the pages list in the config.json file.Example:pages/index/index pages/detail/detail2. Particular path. If the URI is a slash (/), the home page is displayed.
+URL of the target page, in either of the following formats: - Absolute path of the page. The value is available in the pages list in the **config.json** file, for example: - pages/index/index - pages/detail/detail - special value. If the value of **url** is **"/"**, the application navigates to the home page. By default, the home page is set to the first item in the **src** value array.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RouterOptions-url: string--><!--Device-RouterOptions-url: string-End-->
 

@@ -1,11 +1,12 @@
 # ChildProcessArgs
 
-The module describes the parameters transferred to the child process. When starting a child process through  
-[childProcessManager](arkts-app-ability-childprocessmanager.md#childProcessManager), you can transfer parameters to the child process through **ChildProcessArgs**.
+The module describes the parameters transferred to the child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md#@ohos.app.ability.childProcessManager), you can transfer parameters to the child process through **ChildProcessArgs**.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ChildProcessArgs--><!--Device-unnamed-export interface ChildProcessArgs-End-->
 
@@ -23,14 +24,15 @@ import { ChildProcessArgs } from '@kit.AbilityKit';
 entryParams?: string
 ```
 
-Custom parameters to be transparently transmitted to the child process. The parameters can be obtained through  
-**args.entryParams** in [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart). The maximum data volume supported by **entryParams** is 150 KB.
+Custom parameters to be transparently transmitted to the child process. The parameters can be obtained through **args.entryParams** in [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart). The maximum data volume supported by **entryParams** is 150 KB.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,19 +46,15 @@ Custom parameters to be transparently transmitted to the child process. The para
 fds?: Record<string, int>
 ```
 
-File Descriptor (FD) handles, which are used for communication between the main process and child process. They are passed to the child process in the form of key-value pairs, where **key** is a custom string and **value** is a DF handle. The FD handles can be obtained through **args.fds** in  
-[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart).
+File Descriptor (FD) handles, which are used for communication between the main process and child process. They are passed to the child process in the form of key-value pairs, where **key** is a custom string and **value** is a DF handle. The FD handles can be obtained through **args.fds** in [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart). &lt;b&gt;NOTE&lt;/b&gt; - **fds** supports a maximum of 16 groups. In each group, **key** contains a maximum of 20 characters. - The ID of a handle passed to the child process may change, but the handle always points to the same file.
 
-&lt;b&gt;NOTE&lt;/b&gt;
+**Type:** Record&lt;string, int&gt;
 
-- **fds** supports a maximum of 16 groups. In each group, **key** contains a maximum of 20 characters.  
-- The ID of a handle passed to the child process may change, but the handle always points to the same file.
+**Since:** 23
 
-**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

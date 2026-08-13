@@ -10,7 +10,9 @@ function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promi
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -37,11 +39,11 @@ function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17500011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500011-入参校验失败) | Parameter verification failed. &lt;br&gt; Possible causes: the ukeyInfo parameter is invalid. For example, the parameter format is incorrect or the value range is invalid. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17500010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500010-访问usb证书凭据失败) | Indicates that access USB Key service failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [17500001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. |
+| [17500011](../errorcode-certManager.md#17500011-入参校验失败) | Parameter verification failed. &lt;br&gt; Possible causes: the ukeyInfo parameter is invalid. For example, the parameter format is incorrect or the value range is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17500010](../errorcode-certManager.md#17500010-访问usb证书凭据失败) | Indicates that access USB Key service failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. |
 
 ## 示例
 

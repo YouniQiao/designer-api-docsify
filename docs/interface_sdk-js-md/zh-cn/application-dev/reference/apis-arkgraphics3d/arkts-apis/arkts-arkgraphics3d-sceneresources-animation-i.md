@@ -4,11 +4,13 @@
 
 **继承/实现关系：** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-export interface Animation extends SceneResource--><!--Device-unnamed-export interface Animation extends SceneResource-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Animation--><!--Device-unnamed-export interface Animation-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +22,11 @@ finish(): void
 
 结束动画并将位置设置到结尾.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-finish(): void--><!--Device-Animation-finish(): void-End-->
 
@@ -54,9 +58,11 @@ onFinished(callback: Callback<void>): void
 
 动画播放结束时执行的回调函数，动画播放完成或者finish操作会触发这个回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-onFinished(callback: Callback<void>): void--><!--Device-Animation-onFinished(callback: Callback<void>): void-End-->
 
@@ -66,7 +72,7 @@ onFinished(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 动画完成时调用的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 动画完成时调用的回调 |
 
 ## 示例
 
@@ -96,9 +102,11 @@ onStarted(callback: Callback<void>): void
 
 注册动画开始时的回调.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-onStarted(callback: Callback<void>): void--><!--Device-Animation-onStarted(callback: Callback<void>): void-End-->
 
@@ -108,7 +116,7 @@ onStarted(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 动画开始时调用的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 动画开始时调用的回调 |
 
 ## 示例
 
@@ -138,9 +146,11 @@ pause(): void
 
 暂停动画.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-pause(): void--><!--Device-Animation-pause(): void-End-->
 
@@ -172,9 +182,11 @@ restart(): void
 
 重新启动动画.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-restart(): void--><!--Device-Animation-restart(): void-End-->
 
@@ -200,21 +212,17 @@ function restart(): void {
 
 ## seek
 
-ArkTS-Dyn:
-```TypeScript
-seek(position: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 seek(position: double): void
 ```
 
 将动画跳转到指定位置.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-seek(position: double): void--><!--Device-Animation-seek(position: double): void-End-->
 
@@ -224,7 +232,7 @@ seek(position: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 跳转到0~1之间的位置 |
+| position | double | 是 | 跳转到0~1之间的位置 |
 
 ## 示例
 
@@ -252,9 +260,11 @@ start(): void
 
 开始动画.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-start(): void--><!--Device-Animation-start(): void-End-->
 
@@ -286,9 +296,11 @@ stop(): void
 
 停止动画并将位置设置到开头.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-stop(): void--><!--Device-Animation-stop(): void-End-->
 
@@ -320,11 +332,13 @@ readonly duration: double
 
 动画持续时间, 单位为秒.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-readonly duration: double--><!--Device-Animation-readonly duration: double-End-->
 
@@ -340,9 +354,11 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-enabled: boolean--><!--Device-Animation-enabled: boolean-End-->
 
@@ -356,11 +372,13 @@ readonly progress: double
 
 动画在0~1之间的进度.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-readonly progress: double--><!--Device-Animation-readonly progress: double-End-->
 
@@ -376,9 +394,11 @@ readonly running: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-readonly running: boolean--><!--Device-Animation-readonly running: boolean-End-->
 
@@ -390,13 +410,15 @@ readonly running: boolean
 speed?: double
 ```
 
-动画速度因子负值使用给定速度因子反向播放动画
+动画速度因子 负值使用给定速度因子反向播放动画
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Animation-speed?: double--><!--Device-Animation-speed?: double-End-->
 

@@ -12,9 +12,7 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void
 ```
 
-Queries the usage priority group of the calling application.
-
-The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
+Queries the usage priority group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 7
 
@@ -30,7 +28,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
 ## Examples
 
@@ -53,9 +51,7 @@ bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
 function queryAppUsagePriorityGroup(): Promise<number>
 ```
 
-Queries the usage priority group of the calling application.
-
-The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
+Queries the usage priority group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 7
 

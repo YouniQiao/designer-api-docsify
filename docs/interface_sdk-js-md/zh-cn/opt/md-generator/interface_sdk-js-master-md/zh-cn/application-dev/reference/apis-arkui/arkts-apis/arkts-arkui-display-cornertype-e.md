@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-display-enum CornerType--><!--Device-display-enum CornerType-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -17,6 +19,8 @@ TOP_LEFT = 0
 屏幕左上方的圆角。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ TOP_RIGHT = 1
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CornerType-TOP_RIGHT = 1--><!--Device-CornerType-TOP_RIGHT = 1-End-->
@@ -50,6 +56,8 @@ BOTTOM_RIGHT  = 2
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CornerType-BOTTOM_RIGHT  = 2--><!--Device-CornerType-BOTTOM_RIGHT  = 2-End-->
@@ -65,6 +73,8 @@ BOTTOM_LEFT  = 3
 屏幕左下方的圆角。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

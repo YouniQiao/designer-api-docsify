@@ -2,7 +2,9 @@
 
 Indicates wallpaper type.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wallpaper-enum WallpaperType--><!--Device-wallpaper-enum WallpaperType-End-->
 
@@ -16,7 +18,9 @@ WALLPAPER_SYSTEM
 
 Indicates the home screen wallpaper.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperType-WALLPAPER_SYSTEM--><!--Device-WallpaperType-WALLPAPER_SYSTEM-End-->
 
@@ -30,7 +34,9 @@ WALLPAPER_LOCKSCREEN
 
 Indicates the lock screen wallpaper.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperType-WALLPAPER_LOCKSCREEN--><!--Device-WallpaperType-WALLPAPER_LOCKSCREEN-End-->
 

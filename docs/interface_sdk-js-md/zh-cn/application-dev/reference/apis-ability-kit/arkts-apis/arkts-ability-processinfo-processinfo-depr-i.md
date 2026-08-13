@@ -1,10 +1,12 @@
 # ProcessInfo
 
-定义进程信息，可以通过[getProcessInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetprocessinfo7)获取当前Ability运行的进程信息。
+定义进程信息，可以通过getProcessInfo 获取当前Ability运行的进程信息。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ProcessInfo--><!--Device-unnamed-export interface ProcessInfo-End-->
 
@@ -18,11 +20,13 @@ pid: int
 
 进程ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ProcessInfo-pid: int--><!--Device-ProcessInfo-pid: int-End-->
 
@@ -38,9 +42,11 @@ processName: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ProcessInfo-processName: string--><!--Device-ProcessInfo-processName: string-End-->
 

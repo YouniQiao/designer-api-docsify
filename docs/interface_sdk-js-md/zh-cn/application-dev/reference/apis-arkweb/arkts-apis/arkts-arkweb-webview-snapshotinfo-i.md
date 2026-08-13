@@ -1,10 +1,12 @@
 # SnapshotInfo
 
-Defines the snapshot info.
+获取全量绘制结果入参。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface SnapshotInfo--><!--Device-webview-interface SnapshotInfo-End-->
 
@@ -16,13 +18,17 @@ Defines the snapshot info.
 id?: string
 ```
 
-Id of the snapshot.
+snapshot的id。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SnapshotInfo-id?: string--><!--Device-SnapshotInfo-id?: string-End-->
 
@@ -34,13 +40,17 @@ Id of the snapshot.
 size?: SizeOptions
 ```
 
-Size for web rendering.The maximum size is 16000 px × 16000 px. The length unit can be px, vp, or %.The length unit must be the consistent across parameters. The default unit is vp.If the size exceeds the specifications, the maximum size is returned.(Example: width: '100px', height: '200px' or width: '20%', height'30%'. If only digits are written, the unit is vp.)
+web绘制的尺寸，最多支持16000px * 16000px，长度单位支持px、vp、%，需保持不同参数传入长度单位一致，默认单位vp，超过规格时返回最大规格。（示例：width:'100px'，height:'200px'。 或者 width:'20%'，height:'30%'。只写数字时单位为vp。）
 
 **类型：** SizeOptions
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SnapshotInfo-size?: SizeOptions--><!--Device-SnapshotInfo-size?: SizeOptions-End-->
 

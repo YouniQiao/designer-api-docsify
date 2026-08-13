@@ -1,10 +1,12 @@
 # PopupOptions
 
-Defines the popup options.
+Defines the style parameters of the popup.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PopupOptions--><!--Device-unnamed-export interface PopupOptions-End-->
 
@@ -19,23 +21,24 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 ## buttons
 
 ```TypeScript
-buttons?: [
-    PopupButtonOptions | undefined,
-    PopupButtonOptions | undefined
-  ]
+buttons?: [PopupButtonOptions?, PopupButtonOptions?]
 ```
 
-The buttons of Popup. Setting undefined means that the button will not be displayed.
+Buttons of the popup. A maximum of two buttons can be set. By default, no buttons are displayed.
 
-**Type:** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
+**Type:** [PopupButtonOptions?, PopupButtonOptions?]
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PopupOptions-buttons?: [    PopupButtonOptions | undefined,    PopupButtonOptions | undefined  ]--><!--Device-PopupOptions-buttons?: [    PopupButtonOptions | undefined,    PopupButtonOptions | undefined  ]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-buttons?: [PopupButtonOptions?, PopupButtonOptions?]--><!--Device-PopupOptions-buttons?: [PopupButtonOptions?, PopupButtonOptions?]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,17 +48,19 @@ The buttons of Popup. Setting undefined means that the button will not be displa
 direction?: Direction
 ```
 
-Indicates the attribute of the current popup direction.
+Layout direction. Default value: **Direction.Auto**
 
 **Type:** Direction
 
-**Default:** Direction.Auto
+**Since:** 12
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupOptions-direction?: Direction--><!--Device-PopupOptions-direction?: Direction-End-->
 
@@ -67,15 +72,19 @@ Indicates the attribute of the current popup direction.
 icon?: PopupIconOptions
 ```
 
-The icon of Popup.
+Icon of the popup. **NOTE：**The icon is not displayed when **width** and **height** are set to an invalid value or **0**. By default, no icon is displayed.
 
-**Type:** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
+**Type:** [PopupIconOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popupiconoptions-i.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupOptions-icon?: PopupIconOptions--><!--Device-PopupOptions-icon?: PopupIconOptions-End-->
 
@@ -87,17 +96,19 @@ The icon of Popup.
 maxWidth?: Dimension
 ```
 
-Set the max width of the popup.
+Maximum width of the popup. This API allows the popup to display with a custom width. **NOTE：**1. When using resource references, ensure that the parameter type matches the attribute method type. 2. **maxWidth** accepts numeric values (both floating-point and integer values), such as **\$r('app.float.maxWidth')** and **\$r('app.integer.maxWidth')**. 3. When the type is Resource, values default to px units if no unit is explicitly specified. Default value: **400vp**
 
 **Type:** Dimension
 
-**Default:** 400.0_vp
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-PopupOptions-maxWidth?: Dimension--><!--Device-PopupOptions-maxWidth?: Dimension-End-->
 
@@ -106,40 +117,48 @@ Set the max width of the popup.
 ## message
 
 ```TypeScript
-message?: PopupTextOptions
+message: PopupTextOptions
 ```
 
-The message of Popup.
+Message of the popup. **NOTE：****fontWeight** is not available for messages. By default, no message is displayed.
 
-**Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
+**Type:** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PopupOptions-message?: PopupTextOptions--><!--Device-PopupOptions-message?: PopupTextOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-message: PopupTextOptions--><!--Device-PopupOptions-message: PopupTextOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClose
 
 ```TypeScript
-onClose?: VoidCallback
+onClose?: () => void
 ```
 
-The close button callback of Popup.
+Callback for the popup close button. By default, the callback for the close button is not set.
 
-**Type:** VoidCallback
+**Type:** () =&gt; void
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PopupOptions-onClose?: VoidCallback--><!--Device-PopupOptions-onClose?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-onClose?: () => void--><!--Device-PopupOptions-onClose?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,17 +168,19 @@ The close button callback of Popup.
 showClose?: boolean | Resource
 ```
 
-The show close of Popup.
+Whether to show the close button. **true**: Show the close button. **false**: Do not show the close button. **Resource**: Show the corresponding icon. Default value: **true**
 
 **Type:** boolean \| Resource
 
-**Default:** true
+**Since:** 11
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupOptions-showClose?: boolean | Resource--><!--Device-PopupOptions-showClose?: boolean | Resource-End-->
 
@@ -171,15 +192,19 @@ The show close of Popup.
 title?: PopupTextOptions
 ```
 
-The title of Popup.
+Title of the popup. By default, no title is displayed.
 
-**Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
+**Type:** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupOptions-title?: PopupTextOptions--><!--Device-PopupOptions-title?: PopupTextOptions-End-->
 

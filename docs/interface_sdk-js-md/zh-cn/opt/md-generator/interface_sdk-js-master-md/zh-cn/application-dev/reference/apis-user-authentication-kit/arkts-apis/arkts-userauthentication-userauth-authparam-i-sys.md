@@ -2,7 +2,9 @@
 
 用户认证相关参数。该接口用于配置用户认证的各项参数，包括挑战值、认证类型列表、认证信任等级、认证结果复用配置等。通过合理配置这些参数，可以满足不同业务场景下的认证需求。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-userAuth-interface AuthParam--><!--Device-userAuth-interface AuthParam-End-->
 
@@ -19,6 +21,8 @@ credentialIdList?: Uint8Array[]
 **类型：** Uint8Array[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +44,9 @@ userId?: number
 
 **默认值：** The ID of the current user. The value is a positive integer greater than or equal to 0.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthParam-userId?: int--><!--Device-AuthParam-userId?: int-End-->
 

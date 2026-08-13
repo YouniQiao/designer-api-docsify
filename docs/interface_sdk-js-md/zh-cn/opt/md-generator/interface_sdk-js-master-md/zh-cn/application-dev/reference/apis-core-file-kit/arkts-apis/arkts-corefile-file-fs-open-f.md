@@ -10,6 +10,8 @@ declare function open(path: string, mode?: number): Promise<File>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function open(path: string, mode?: number): Promise<File>--><!--Device-unnamed-declare function open(path: string, mode?: number): Promise<File>-End-->
@@ -72,6 +74,8 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<File>): void--><!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<File>): void-End-->
@@ -123,11 +127,11 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 declare function open(path: string, mode: number, callback: AsyncCallback<File>): void
 ```
 
-打开文件或目录，可设置打开文件的选项。使用callback异步回调。
-
-支持使用URI打开文件。
+打开文件或目录，可设置打开文件的选项。使用callback异步回调。 支持使用URI打开文件。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

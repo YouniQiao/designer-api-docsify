@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [ShowToastOptions](ohos.promptAction/promptAction.ShowToastOptions)
+**替代接口：** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#ShowToastOptions)
 
 <!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
 
@@ -30,7 +30,7 @@ bottom?: string | number
 
 **废弃版本：** 8
 
-**替代接口：** [bottom](ohos.promptAction/promptAction.ShowToastOptions#bottom)
+**替代接口：** [bottom](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#bottom)
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
@@ -52,7 +52,7 @@ duration?: number
 
 **废弃版本：** 8
 
-**替代接口：** [duration](ohos.promptAction/promptAction.ShowToastOptions#duration)
+**替代接口：** [duration](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#duration)
 
 <!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
@@ -74,7 +74,7 @@ message: string
 
 **废弃版本：** 8
 
-**替代接口：** [message](ohos.promptAction/promptAction.ShowToastOptions#message)
+**替代接口：** [message](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#message)
 
 <!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 

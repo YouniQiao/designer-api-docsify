@@ -16,7 +16,9 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,9 +45,9 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600208](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) | HDR image decomposition failed. Possible causes: 1. Decomposition processing is not supported. 2. Processing error occurs. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. hdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: hdrPixelMap is empty. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
+| [7600208](../errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) | HDR image decomposition failed. Possible causes: 1. Decomposition processing is not supported. 2. Processing error occurs. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. hdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: hdrPixelMap is empty. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
 

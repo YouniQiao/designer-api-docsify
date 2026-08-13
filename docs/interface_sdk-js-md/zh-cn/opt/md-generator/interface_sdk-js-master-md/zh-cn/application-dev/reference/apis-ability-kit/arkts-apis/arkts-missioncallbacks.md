@@ -1,10 +1,5 @@
 # MissionCallbacks
 
-The module defines the callbacks invoked after synchronization starts. These callbacks can be used as input
- parameters in
- [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener-1)
-
-
 ## 汇总
 
 <!--Del-->

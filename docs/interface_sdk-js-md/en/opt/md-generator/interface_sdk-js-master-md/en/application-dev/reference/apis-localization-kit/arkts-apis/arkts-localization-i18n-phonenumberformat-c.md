@@ -2,7 +2,9 @@
 
 Provides phone number management capabilities, such as phone number validity verification, formatting, and home location retrieval.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class PhoneNumberFormat--><!--Device-i18n-export class PhoneNumberFormat-End-->
 
@@ -22,7 +24,9 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 
 Creates a **PhoneNumberFormat** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,12 +56,11 @@ let phoneNumberFormat: i18n.PhoneNumberFormat = new i18n.PhoneNumberFormat('CN',
 format(phoneNumber: string): string
 ```
 
-Formats a phone number.
+Formats a phone number. > **Description** > > Formatting dialed phone numbers is supported since API version 12.
 
-> **Description**
->> Formatting dialed phone numbers is supported since API version 12.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -103,12 +106,11 @@ for (let i = 0; i < phoneNumber.length; i++) {
 getLocationName(phoneNumber: string, locale: string): string
 ```
 
-Obtains the home location of a phone number.
+Obtains the home location of a phone number. > **Description** > > This API can be used to obtain the home location of a dialed number in real time since API version 23.
 
-> **Description**
->> This API can be used to obtain the home location of a dialed number in real time since API version 23.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -158,7 +160,9 @@ isValidNumber(phoneNumber: string): boolean
 
 Checks whether the phone number is valid for the country/region in the **PhoneNumberFormat** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

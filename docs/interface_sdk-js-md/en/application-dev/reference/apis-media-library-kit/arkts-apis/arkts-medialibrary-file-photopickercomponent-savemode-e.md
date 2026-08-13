@@ -1,10 +1,12 @@
 # SaveMode
 
-Enumeration type of save mode.
+Enumerates the modes for saving images or videos.
 
-**Since:** 26.0.0
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum SaveMode--><!--Device-unnamed-export declare enum SaveMode-End-->
 
@@ -16,13 +18,15 @@ Enumeration type of save mode.
 SAVE_AS = 0
 ```
 
-Save as a new photo/video.
+Saves the image or video as a new one.
 
-**Since:** 26.0.0
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-SaveMode-SAVE_AS = 0--><!--Device-SaveMode-SAVE_AS = 0-End-->
 
@@ -34,13 +38,15 @@ Save as a new photo/video.
 OVERWRITE = 1
 ```
 
-Overwrite and save.
+Replaces the original image or video. After the replacements, you can roll back the saved content in Gallery to restore the original image or video.
 
-**Since:** 26.0.0
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-SaveMode-OVERWRITE = 1--><!--Device-SaveMode-OVERWRITE = 1-End-->
 

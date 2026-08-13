@@ -4,79 +4,9 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-promptAction-interface BaseDialogOptions--><!--Device-promptAction-interface BaseDialogOptions-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidAppear
-
-```TypeScript
-onDidAppear?: () => void
-```
-
-弹窗弹出后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。&lt;br /&gt;3.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。&lt;br /&gt;4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BaseDialogOptions-onDidAppear?: () => void--><!--Device-BaseDialogOptions-onDidAppear?: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidDisappear
-
-```TypeScript
-onDidDisappear?: () => void
-```
-
-弹窗消失后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br/&gt;当弹窗退场动画未完成时（例如：同时触发弹窗关闭和页面切换），该回调不会触发。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BaseDialogOptions-onDidDisappear?: () => void--><!--Device-BaseDialogOptions-onDidDisappear?: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillAppear
-
-```TypeScript
-onWillAppear?: () => void
-```
-
-弹窗显示动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BaseDialogOptions-onWillAppear?: () => void--><!--Device-BaseDialogOptions-onWillAppear?: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillDisappear
-
-```TypeScript
-onWillDisappear?: () => void
-```
-
-弹窗退出动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BaseDialogOptions-onWillDisappear?: () => void--><!--Device-BaseDialogOptions-onWillDisappear?: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +16,13 @@ onWillDisappear?: () => void
 alignment?: DialogAlignment
 ```
 
-弹窗在竖直方向上的对齐方式。&lt;br&gt;默认值：DialogAlignment.Default &lt;br/&gt;**说明：**&lt;br/&gt;若在UIExtension中设置showInSubWindow为true, 弹窗将基于UIExtension的宿主窗口对齐。
+弹窗在竖直方向上的对齐方式。 &lt;br&gt;默认值：DialogAlignment.Default &lt;br/&gt;**说明：** &lt;br/&gt;若在UIExtension中设置showInSubWindow为true, 弹窗将基于UIExtension的宿主窗口对齐。
 
 **类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,6 +46,8 @@ autoCancel?: boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -133,6 +67,8 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 **类型：** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -154,6 +90,8 @@ backgroundEffect?: BackgroundEffectOptions
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -174,6 +112,8 @@ dialogTransition?: TransitionEffect
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -188,13 +128,15 @@ dialogTransition?: TransitionEffect
 displayModeInSubWindow?: DialogDisplayMode
 ```
 
-弹窗在子窗口中的显示模式。&lt;br/&gt;默认值：DialogDisplayMode.SCREEN_BASED&lt;br/&gt;**说明：**&lt;br/&gt;仅当showInSubWindow设置为true时生效。
+弹窗在子窗口中的显示模式。 &lt;br/&gt;默认值：DialogDisplayMode.SCREEN_BASED &lt;br/&gt;**说明：** &lt;br/&gt;仅当showInSubWindow设置为true时生效。
 
 **类型：** [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md)
 
 **默认值：** DialogDisplayMode.SCREEN_BASED
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -210,13 +152,15 @@ displayModeInSubWindow?: DialogDisplayMode
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态，值为true时，响应悬停态。&lt;br /&gt;默认值：false，默认不响应。&lt;br /&gt;**说明：**&lt;br /&gt;PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true。可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
+是否响应悬停态，值为true时，响应悬停态。 &lt;br /&gt;默认值：false，默认不响应。 &lt;br /&gt;**说明：** &lt;br /&gt;PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true。 可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,13 +176,15 @@ enableHoverMode?: boolean
 focusable?: boolean
 ```
 
-设置弹窗是否获取焦点。值为true表示获取焦点，值为false表示不获取焦点。&lt;br /&gt;默认值：true &lt;br /&gt;**说明：**&lt;br /&gt;只有弹出覆盖在当前窗口之上的弹窗才可以获取焦点。
+设置弹窗是否获取焦点。值为true表示获取焦点，值为false表示不获取焦点。 &lt;br /&gt;默认值：true &lt;br /&gt;**说明：** &lt;br /&gt;只有弹出覆盖在当前窗口之上的弹窗才可以获取焦点。
 
 **类型：** boolean
 
 **默认值：** true
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -262,6 +208,8 @@ hoverModeArea?: HoverModeAreaType
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -276,13 +224,15 @@ hoverModeArea?: HoverModeAreaType
 immersiveMode?: ImmersiveMode
 ```
 
-设置页面内弹窗蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面内弹窗蒙层效果。 &lt;br /&gt;**说明：** &lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -298,13 +248,15 @@ immersiveMode?: ImmersiveMode
 isModal?: boolean
 ```
 
-弹窗是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与弹窗周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与弹窗周围其他控件进行交互。&lt;br/&gt;默认值：true
+弹窗是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与弹窗周围其他控件进行交互，即蒙层区域无法事件透传。 值为false表示为非模态窗口且无蒙层，可以与弹窗周围其他控件进行交互。 &lt;br/&gt;默认值：true
 
 **类型：** boolean
 
 **默认值：** true
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -320,11 +272,13 @@ isModal?: boolean
 keyboardAvoidDistance?: LengthMetrics
 ```
 
-弹窗避让键盘后，和键盘之间距离。&lt;br /&gt;**说明：**&lt;br/&gt;- 默认值：16vp&lt;br /&gt;- 默认单位：vp&lt;br /&gt;- 当且仅当keyboardAvoidMode属性设置为DEFAULT时生效。
+弹窗避让键盘后，和键盘之间距离。 &lt;br /&gt;**说明：** &lt;br/&gt;- 默认值：16vp &lt;br /&gt;- 默认单位：vp &lt;br /&gt;- 当且仅当keyboardAvoidMode属性设置为DEFAULT时生效。
 
 **类型：** LengthMetrics
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,6 +302,8 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -362,13 +318,15 @@ keyboardAvoidMode?: KeyboardAvoidMode
 levelMode?: LevelMode
 ```
 
-设置弹窗显示层级。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
+设置弹窗显示层级。 &lt;br /&gt;**说明：** &lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
 
 **类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -392,6 +350,8 @@ levelOrder?: LevelOrder
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -406,11 +366,13 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-设置页面级弹窗需要显示的层级下的[节点UniqueID](js-apis-arkui-frameNode.md#getuniqueid12)。&lt;br/&gt;取值范围：大于等于0的数字。&lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级弹窗需要显示的层级下的节点UniqueID。 &lt;br/&gt;取值范围：大于等于0的数字。 &lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -432,6 +394,8 @@ maskColor?: ResourceColor
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -446,11 +410,13 @@ maskColor?: ResourceColor
 maskRect?: Rectangle
 ```
 
-弹窗遮蔽层区域。&lt;br/&gt;默认值：{ x: 0, y: 0, width: '100%', height: '100%' }&lt;br/&gt;**说明：** &lt;br/&gt;showInSubWindow为true时，maskRect不生效。&lt;br/&gt;maskRect在设置[Rectangle](arkui-ts/ts-methods-alert-dialog-box.md#rectangle8类型说明)中的部分属性后，若未设置其余的属性，则其余属性的默认值为0。
+弹窗遮蔽层区域。 &lt;br/&gt;默认值：{ x: 0, y: 0, width: '100%', height: '100%' } &lt;br/&gt;**说明：** &lt;br/&gt;showInSubWindow为true时，maskRect不生效。 &lt;br/&gt;maskRect在设置[Rectangle](../arkui-ts/ts-methods-alert-dialog-box.md#rectangle8类型说明)中的部分属性后，若未设置其余的属性，则其余属性的默认值为0。
 
 **类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -472,6 +438,8 @@ maskTransition?: TransitionEffect
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -486,11 +454,13 @@ maskTransition?: TransitionEffect
 offset?: Offset
 ```
 
-弹窗相对alignment所在位置的偏移量。&lt;br/&gt;默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
+弹窗相对alignment所在位置的偏移量。 &lt;br/&gt;默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
 
 **类型：** Offset
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -500,17 +470,107 @@ offset?: Offset
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## onDidAppear
+
+```TypeScript
+onDidAppear?: () => void
+```
+
+弹窗弹出后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br /&gt;2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 &lt;br /&gt;3.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。 &lt;br /&gt;4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseDialogOptions-onDidAppear?: () => void--><!--Device-BaseDialogOptions-onDidAppear?: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidDisappear
+
+```TypeScript
+onDidDisappear?: () => void
+```
+
+弹窗消失后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br/&gt;当弹窗退场动画未完成时（例如：同时触发弹窗关闭和页面切换），该回调不会触发。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseDialogOptions-onDidDisappear?: () => void--><!--Device-BaseDialogOptions-onDidDisappear?: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillAppear
+
+```TypeScript
+onWillAppear?: () => void
+```
+
+弹窗显示动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br /&gt;2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseDialogOptions-onWillAppear?: () => void--><!--Device-BaseDialogOptions-onWillAppear?: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillDisappear
+
+```TypeScript
+onWillDisappear?: () => void
+```
+
+弹窗退出动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br /&gt;2.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseDialogOptions-onWillDisappear?: () => void--><!--Device-BaseDialogOptions-onWillDisappear?: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## onWillDismiss
 
 ```TypeScript
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-交互式关闭回调函数。&lt;br/&gt;**说明：** &lt;br/&gt;1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。&lt;br/&gt;2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
+交互式关闭回调函数。 &lt;br/&gt;**说明：** &lt;br/&gt;1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。 在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。 &lt;br/&gt;2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
 **类型：** Callback&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -526,13 +586,15 @@ onWillDismiss?: Callback<DismissDialogAction>
 showInSubWindow?: boolean
 ```
 
-某弹窗需要显示在主窗口之外时，是否在子窗口显示此弹窗。值为true表示在子窗口显示弹窗。&lt;br/&gt;默认值：false，弹窗显示在应用内，而非独立子窗口。
+某弹窗需要显示在主窗口之外时，是否在子窗口显示此弹窗。值为true表示在子窗口显示弹窗。 &lt;br/&gt;默认值：false，弹窗显示在应用内，而非独立子窗口。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -548,11 +610,13 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。&lt;br/&gt;**说明：**&lt;br/&gt;- 默认值：[ImmersiveOptions](arkts-apis-uimaterial.md#immersiveoptions)的style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-apis-uimaterial.md#immersivematerial)对象。设置undefined时与默认值保持一致。&lt;br/&gt;- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、背景模糊[backgroundBlurStyle](arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、背景效果[backgroundEffect](arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、边框颜色[borderColor](arkui-ts/ts-universal-attributes-border.md#bordercolor)、边框宽度[borderWidth](arkui-ts/ts-universal-attributes-border.md#borderwidth)、阴影[shadow](arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
+设置弹窗的系统材质。 &lt;br/&gt;**说明：** &lt;br/&gt;- 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md#ImmersiveOptions)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial)对象。 设置undefined时与默认值保持一致。 &lt;br/&gt;- 不同的材质具有不同的效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 背景模糊[backgroundBlurStyle](../arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、 背景效果[backgroundEffect](../arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -568,11 +632,13 @@ systemMaterial?: SystemUiMaterial
 transition?: TransitionEffect
 ```
 
-设置弹窗显示和退出的过渡效果。&lt;br/&gt;**说明：**&lt;br/&gt; 1.如果不设置，则使用默认的显示/退出动效。&lt;br/&gt; 2.显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。&lt;br/&gt; 3.退出动效中按back键，不会打断退出动效，退出动效继续执行，继续按back键退出应用。
+设置弹窗显示和退出的过渡效果。 &lt;br/&gt;**说明：** &lt;br/&gt; 1.如果不设置，则使用默认的显示/退出动效。 &lt;br/&gt; 2.显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。 &lt;br/&gt; 3.退出动效中按back键，不会打断退出动效，退出动效继续执行，继续按back键退出应用。
 
 **类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

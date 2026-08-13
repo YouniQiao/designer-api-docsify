@@ -2,7 +2,9 @@
 
 Describes the frame shutter end information during capture.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface FrameShutterEndInfo--><!--Device-camera-interface FrameShutterEndInfo-End-->
 
@@ -24,7 +26,9 @@ ID of this capture action.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

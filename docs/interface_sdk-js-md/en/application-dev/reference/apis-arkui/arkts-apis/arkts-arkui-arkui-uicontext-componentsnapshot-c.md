@@ -1,12 +1,14 @@
 # ComponentSnapshot
 
-class ComponentSnapshot
+Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance. > > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the > target component. Applying these transformation properties directly to the target component itself has no effect; > the snapshot will still display the component as it appears before any transformations are applied.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class ComponentSnapshot--><!--Device-unnamed-export declare class ComponentSnapshot-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,18 +22,22 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 
 ```TypeScript
 createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,
-    delay?: int, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void
+    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-Generate a snapshot from a custom component builder.
+Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder). This API uses an asynchronous callback to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: int, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: int, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,38 +45,42 @@ Generate a snapshot from a custom component builder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder | Yes | Builder function of a custom component. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback that contains the snapshot in PixelMap format. |
-| delay | int | No | Defines the delay time to render the snapshot. |
-| checkImageStatus | boolean | No | Defines if check the image decoding status before taking snapshot. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| builder | CustomBuilder | Yes | Builder of the custom component.&lt;br&gt;Note: The global builder is not supported.&lt; br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap). Otherwise, **err** provides detailed error information. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.&lt;br&gt; When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.&lt; br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.&lt;br&gt; Default value: **300**&lt;br&gt; Unit: ms&lt;br&gt; Value range: [0, +∞). If the value is less than 0, the default value is used. |
+| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.&lt;br&gt;Default value: **false**. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
-| [160001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
 ## createFromBuilder
 
 ```TypeScript
-createFromBuilder(builder: CustomBuilder, delay?: int,
-    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
+createFromBuilder(builder: CustomBuilder, delay?: number,
+    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Generate a snapshot from a custom component builder.
+Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder). This API uses a promise to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: int,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: int,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,43 +88,47 @@ Generate a snapshot from a custom component builder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder | Yes | Builder function of a custom component. |
-| delay | int | No | Defines the delay time to render the snapshot. |
-| checkImageStatus | boolean | No | Defines if check the image decoding status before taking snapshot. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| builder | CustomBuilder | Yes | Builder of the custom component.&lt;br&gt;Note: The global builder is not supported.&lt; br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.&lt;br&gt; When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.&lt; br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.&lt;br&gt; Default value: **300**&lt;br&gt; Unit: ms&lt;br&gt; Value range: [0, +∞). If the value is less than 0, the default value is used. |
+| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.&lt;br&gt;Default value: **false**. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
-| [160001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
 ## createFromComponent
 
 ```TypeScript
-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: int,
-    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
+createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,
+    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Generate a snapshot from a custom component content.
+Captures a snapshot of the provided component content. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: int,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null--><!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: int,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,26 +136,26 @@ Generate a snapshot from a custom component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | The content to be taken snapshot. |
-| delay | int | No | Defines the delay time to render the snapshot. |
-| checkImageStatus | boolean | No | Defines if check the image decoding status before taking snapshot. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| content | ComponentContent&lt;T&gt; | Yes | Component content to be captured. This is the content currently displayed in the **UIContext**. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.&lt;br&gt; When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.&lt; br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.&lt;br&gt; Value range: [0, +∞). If the value is less than 0, the default value is used.&lt;br&gt;Default value: **300**&lt;br&gt; Unit: ms |
+| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.&lt;br&gt;Default value: **false**. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. You can specify the scale ratio for the pixelmap during rendering and whether to force the system to complete all rendering commands before taking the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
-| [160001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
 ## get
 
@@ -149,13 +163,17 @@ Generate a snapshot from a custom component content.
 get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-Get a component snapshot by component id.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ComponentSnapshot-get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void--><!--Device-ComponentSnapshot-get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void-End-->
 
@@ -165,33 +183,37 @@ Get a component snapshot by component id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Target component ID, set by developer through .id attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback that contains the snapshot in PixelMap format. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| id | string | Yes | ID of the target component.&lt;br&gt;Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap). Otherwise, **err** provides detailed error information. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 ## get
 
 ```TypeScript
-get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
+get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Get a component snapshot by component id.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null--><!--Device-ComponentSnapshot-get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentSnapshot-get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -199,22 +221,22 @@ Get a component snapshot by component id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Target component ID, set by developer through .id attribute. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| id | string | Yes | ID of the target component.&lt;br&gt;Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 ## getSizeLimitation
 
@@ -222,13 +244,17 @@ Get a component snapshot by component id.
 getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation
 ```
 
-Query the size limitation for taking a component snapshot.
+Obtains the size limit of a component screenshot.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ComponentSnapshot-getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation--><!--Device-ComponentSnapshot-getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation-End-->
 
@@ -238,23 +264,27 @@ Query the size limitation for taking a component snapshot.
 
 | Type | Description |
 | --- | --- |
-| componentSnapshot.SnapshotSizeLimitation | The size limitation for taking a component snapshot. |
+| componentSnapshot.SnapshotSizeLimitation | Size limit of a component screenshot. |
 
 ## getSync
 
 ```TypeScript
-getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap | null
+getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-Take a screenshot of the specified component in synchronous mode,this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) after completing the capture. Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap | null--><!--Device-ComponentSnapshot-getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentSnapshot-getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap--><!--Device-ComponentSnapshot-getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -262,39 +292,43 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Target component ID, set by developer through .id attribute. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| id | string | Yes | ID of the target component.&lt;br&gt;Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | The snapshot result in PixelMap format. Null will be returned if the parameters' checking failed or some internal errors occur, for example: the runtime environment is broken. |
+| image.PixelMap | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [160002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 ## getSyncWithUniqueId
 
 ```TypeScript
-getSyncWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): image.PixelMap
+getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-Take a screenshot of the specified component in synchronous mode,this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown.
+Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) object. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-getSyncWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): image.PixelMap--><!--Device-ComponentSnapshot-getSyncWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): image.PixelMap-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ComponentSnapshot-getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): image.PixelMap--><!--Device-ComponentSnapshot-getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): image.PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -302,39 +336,43 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | The uniqueId of the node, can get through getUniqueId. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getUniqueId) API.&lt;br&gt;Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | The snapshot result in PixelMap format. |
+| image.PixelMap | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [160002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 ## getWithUniqueId
 
 ```TypeScript
-getWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
+getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Get a component snapshot by uniqueId.
+Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API uses a promise to return the result. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-getWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null--><!--Device-ComponentSnapshot-getWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ComponentSnapshot-getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -342,20 +380,20 @@ Get a component snapshot by uniqueId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | The uniqueId of the node, can get through getUniqueId. |
-| options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getUniqueId) API.&lt;br&gt;Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 

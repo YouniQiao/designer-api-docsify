@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-interface RotationGestureHandlerOptions extends BaseHandlerOptions--><!--Device-unnamed-interface RotationGestureHandlerOptions extends BaseHandlerOptions-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-interface RotationGestureHandlerOptions--><!--Device-unnamed-interface RotationGestureHandlerOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,19 +20,15 @@
 angle?: number
 ```
 
-触发旋转手势的最小改变度数，单位为deg。
-
-默认值：1 
-
-**说明：**
-
-当改变度数的值小于等于0或大于360时，会被转化为默认值。
+触发旋转手势的最小改变度数，单位为deg。 默认值：1 **说明：** 当改变度数的值小于等于0或大于360时，会被转化为默认值。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,19 +44,15 @@ angle?: number
 fingers?: number
 ```
 
-触发旋转的最少手指数，最小为2指，最大为5指。
-
-默认值：2 
-
-取值范围：[2, 5]
-
-触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。
+触发旋转的最少手指数，最小为2指，最大为5指。 默认值：2 取值范围：[2, 5] 触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

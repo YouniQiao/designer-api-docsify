@@ -1,14 +1,12 @@
 # AwarenessItem (System API)
 
-Provides page information, which includes:
-
-* Basic page information, such as page content, links, and screenshots.  
-* Page entity information, such as the title and body of a page article.  
-* Page interaction information, such as clicks and scrolling.
+Provides page information, which includes: * Basic page information, such as page content, links, and screenshots. * Page entity information, such as the title and body of a page article. * Page interaction information, such as clicks and scrolling.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-onScreen-export interface AwarenessItem--><!--Device-onScreen-export interface AwarenessItem-End-->
 
@@ -34,7 +32,9 @@ Entity information of the awareness result, including the content, links, screen
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

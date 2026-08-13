@@ -1,11 +1,12 @@
 # Scenarios
 
-Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) lifecycle callback is not triggered. It is used in the  
-[setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setOnNewWantSkipScenarios) API.
+Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) lifecycle callback is not triggered. It is used in the [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setOnNewWantSkipScenarios) API.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-contextConstant-export enum Scenarios--><!--Device-contextConstant-export enum Scenarios-End-->
 
@@ -17,15 +18,17 @@ Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiabili
 SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 ```
 
-&lt;!--RP1--&gt;A scenario where the system API [missionManager.moveMissionToFront](./js-apis-app-ability-missionManager-sys.md#missionmanagermovemissiontofront-2) is called to move the UIAbility to the foreground.&lt;!--RP1End--&gt;
+&lt;!--RP1--&gt;A scenario where the system API missionManager.moveMissionToFront is called to move the UIAbility to the foreground.&lt;!--RP1End--&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Scenarios-SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001--><!--Device-Scenarios-SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001-End-->
 
@@ -37,15 +40,17 @@ SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 SCENARIO_SHOW_ABILITY = 0x00000002
 ```
 
-A scenario where the [showAbility](arkts-ability-uiabilitycontext-c.md#showAbility) API is called  to move the UIAbility to the foreground.
+A scenario where the [showAbility](arkts-ability-uiabilitycontext-c.md#showAbility) API is called to move the UIAbility to the foreground.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Scenarios-SCENARIO_SHOW_ABILITY = 0x00000002--><!--Device-Scenarios-SCENARIO_SHOW_ABILITY = 0x00000002-End-->
 
@@ -57,16 +62,17 @@ A scenario where the [showAbility](arkts-ability-uiabilitycontext-c.md#showAbili
 SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004
 ```
 
-A scenario where the  
-[backToCallerAbilityWithResult](arkts-ability-uiabilitycontext-c.md#backToCallerAbilityWithResult) API is called to move the UIAbility to the foreground.
+A scenario where the [backToCallerAbilityWithResult](arkts-ability-uiabilitycontext-c.md#backToCallerAbilityWithResult) API is called to move the UIAbility to the foreground.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004--><!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004-End-->
 

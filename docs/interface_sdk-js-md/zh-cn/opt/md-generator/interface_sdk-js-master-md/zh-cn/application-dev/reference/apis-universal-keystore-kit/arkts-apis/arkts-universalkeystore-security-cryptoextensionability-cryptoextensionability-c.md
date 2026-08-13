@@ -4,6 +4,8 @@ Class to be override for external crypto extension ability.
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class CryptoExtensionAbility--><!--Device-unnamed-declare class CryptoExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -18,6 +20,8 @@ onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCrypt
 请求Ukey认证PIN码。使用Promise异步回调。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -66,6 +70,8 @@ onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExt
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -110,6 +116,8 @@ onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCry
 根据参数中的handle，关闭Ukey的密钥资源。使用Promise异步回调。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -157,6 +165,8 @@ onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | 
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]):      Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -202,6 +212,8 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
 查询指定resourceId下的证书。使用Promise异步回调。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -249,6 +261,8 @@ onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<Huk
 用于导出指定密钥的公钥。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -308,6 +322,8 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -353,6 +369,8 @@ onGenerateKeyItem(handle: string, params:HuksCryptoExtensionParam[]): Promise<Hu
 用于在扩展设备内生成密钥对。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -420,6 +438,8 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -468,6 +488,8 @@ onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtension
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CryptoExtensionAbility-onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
@@ -515,6 +537,8 @@ onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExter
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -561,6 +585,8 @@ onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
 导入指定资源句柄的证书。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -611,6 +637,8 @@ onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCrypt
 用于导入加密封装的密钥对。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -679,6 +707,8 @@ onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionPara
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -724,6 +754,8 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
 打开资源句柄回调，在加密操作之前需打开资源，获取句柄。注意：返回的句柄必须被onCloseResource关闭。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |     HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |     HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -771,6 +803,8 @@ onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionPar
 根据参数中的handle和propertyId设置属性。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -820,6 +854,8 @@ onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 三段式密钥会话更新数据操作。使用Promise异步回调。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>-End-->
 

@@ -2,7 +2,9 @@
 
 Define the certificate content.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-networkSecurity-export interface CertBlob--><!--Device-networkSecurity-export interface CertBlob-End-->
 
@@ -24,7 +26,9 @@ Certificate data.
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertBlob-data: string | ArrayBuffer--><!--Device-CertBlob-data: string | ArrayBuffer-End-->
 
@@ -40,7 +44,9 @@ Certificate type.
 
 **Type:** CertType
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertBlob-type: CertType--><!--Device-CertBlob-type: CertType-End-->
 

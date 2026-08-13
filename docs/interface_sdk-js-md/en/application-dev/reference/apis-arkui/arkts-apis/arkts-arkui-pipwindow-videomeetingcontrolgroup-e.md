@@ -1,11 +1,12 @@
 # VideoMeetingControlGroup
 
-Enumerates the video meeting component groups. They are used only when  
-[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_MEETING**.
+Enumerates the video meeting component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_MEETING**.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-enum VideoMeetingControlGroup--><!--Device-PiPWindow-enum VideoMeetingControlGroup-End-->
 
@@ -19,11 +20,13 @@ HANG_UP_BUTTON = 301
 
 Hang-up component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301--><!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301-End-->
 
@@ -37,11 +40,13 @@ CAMERA_SWITCH = 302
 
 Camera on/off component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302--><!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302-End-->
 
@@ -55,11 +60,13 @@ MUTE_SWITCH = 303
 
 Mute/Unmute component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303--><!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303-End-->
 
@@ -73,11 +80,13 @@ MICROPHONE_SWITCH = 304
 
 Microphone on/off component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304--><!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304-End-->
 

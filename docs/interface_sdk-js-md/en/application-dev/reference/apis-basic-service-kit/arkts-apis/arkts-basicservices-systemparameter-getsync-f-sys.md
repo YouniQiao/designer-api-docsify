@@ -20,7 +20,7 @@ Obtains a value of the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSync](ohos.systemParameterEnhance.getSync)
+**Substitutes:** getSync
 
 <!--Device-systemParameter-function getSync(key: string, def?: string): string--><!--Device-systemParameter-function getSync(key: string, def?: string): string-End-->
 

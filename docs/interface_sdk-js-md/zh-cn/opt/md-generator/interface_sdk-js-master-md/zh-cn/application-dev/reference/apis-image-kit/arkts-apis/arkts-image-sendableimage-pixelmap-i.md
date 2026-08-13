@@ -6,7 +6,9 @@ Sendable PixelMap instance.
 
 **起始版本：** 12
 
-<!--Device-sendableImage-interface PixelMap extends ISendable--><!--Device-sendableImage-interface PixelMap extends ISendable-End-->
+**废弃版本：** -1
+
+<!--Device-sendableImage-interface PixelMap--><!--Device-sendableImage-interface PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -16,11 +18,11 @@ Sendable PixelMap instance.
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Apply color space of pixelmap, the pixels will be changed by input color space.This method uses a promise to return the result.
-
-This method is used to change color space of PixelMap.Pixel data will be changed by calling this method.If you want to set the colorspace property of PixelMap only,use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result. This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
@@ -42,10 +44,10 @@ This method is used to change color space of PixelMap.Pixel data will be changed
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
-| [62980104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) |
-| [62980108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-图片颜色转换错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
+| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) |
 
 ## 示例
 
@@ -74,6 +76,8 @@ createAlphaPixelmap(): Promise<PixelMap>
 Obtains new pixelmap with alpha information. This method uses a promise to return the information.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -114,6 +118,8 @@ Obtains new pixelmap with alpha information.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
@@ -124,14 +130,14 @@ Obtains new pixelmap with alpha information.
 
 | 类型 |
 | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
+| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -153,6 +159,8 @@ crop(region: image.Region): Promise<void>
 Crop the image. This method uses a promise to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -202,6 +210,8 @@ Crop the image.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-cropSync(region: image.Region): void--><!--Device-PixelMap-cropSync(region: image.Region): void-End-->
@@ -218,8 +228,8 @@ Crop the image.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -244,6 +254,8 @@ flip(horizontal: boolean, vertical: boolean): Promise<void>
 Image flipping. This method uses a promise to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -294,6 +306,8 @@ Image flipping.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
@@ -311,8 +325,8 @@ Image flipping.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -337,6 +351,8 @@ getBytesNumberPerRow(): number
 Obtains the number of bytes in each line of the image pixelmap.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -370,6 +386,8 @@ Get color space of pixelmap.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -384,9 +402,9 @@ Get color space of pixelmap.
 
 | 错误码ID |
 | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) |
-| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
 
 ## 示例
 
@@ -409,6 +427,8 @@ getDensity(): number
 Obtains the density of the image pixelmap.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -441,6 +461,8 @@ getImageInfo(): Promise<image.ImageInfo>
 Obtains pixelmap information about this image. This method uses a promise to return the information.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -484,6 +506,8 @@ Get image information from image source.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-getImageInfoSync(): image.ImageInfo--><!--Device-PixelMap-getImageInfoSync(): image.ImageInfo-End-->
@@ -500,7 +524,7 @@ Get image information from image source.
 
 | 错误码ID |
 | --- |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -524,6 +548,8 @@ getPixelBytesNumber(): number
 Obtains the total number of bytes of the image pixelmap.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -557,6 +583,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -571,8 +599,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 错误码ID |
 | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
 
 ## 示例
 
@@ -644,6 +672,8 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-opacity(rate: number): Promise<void>--><!--Device-PixelMap-opacity(rate: number): Promise<void>-End-->
@@ -690,6 +720,8 @@ Set the transparent rate of pixelmap.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-opacitySync(rate: number): void--><!--Device-PixelMap-opacitySync(rate: number): void-End-->
@@ -706,8 +738,8 @@ Set the transparent rate of pixelmap.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -731,6 +763,8 @@ readPixels(area: image.PositionArea): Promise<void>
 Reads image pixelmap data in an area. This method uses a promise to return the data read.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -784,6 +818,8 @@ Reads image pixelmap data in an area.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void-End-->
@@ -800,8 +836,8 @@ Reads image pixelmap data in an area.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -831,6 +867,8 @@ readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 Reads image pixelmap data and writes the data to an ArrayBuffer. This method uses a promise to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -878,6 +916,8 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
@@ -894,8 +934,8 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -920,6 +960,8 @@ release(): Promise<void>
 Releases this PixelMap object. This method uses a promise to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -959,6 +1001,8 @@ rotate(angle: number): Promise<void>
 Image rotation. This method uses a promise to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1006,6 +1050,8 @@ Image rotation.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-rotateSync(angle: number): void--><!--Device-PixelMap-rotateSync(angle: number): void-End-->
@@ -1022,8 +1068,8 @@ Image rotation.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1047,6 +1093,8 @@ scale(x: number, y: number): Promise<void>
 Image zoom in width and height. This method uses a promise to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1097,6 +1145,8 @@ Image zoom in width and height.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-scaleSync(x: number, y: number): void--><!--Device-PixelMap-scaleSync(x: number, y: number): void-End-->
@@ -1114,8 +1164,8 @@ Image zoom in width and height.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1137,11 +1187,11 @@ async function ScaleSync(pixelMap : sendableImage.PixelMap) {
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixelmap.
-
-This method is only used to set the colorspace property of PixelMap,while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Set color space of pixelmap. This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
@@ -1157,8 +1207,8 @@ This method is only used to set the colorspace property of PixelMap,while all pi
 
 | 错误码ID |
 | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
-| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
 
 ## 示例
 
@@ -1184,6 +1234,8 @@ translate(x: number, y: number): Promise<void>
 Image position transformation. This method uses a promise to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1233,6 +1285,8 @@ Image position transformation.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-translateSync(x: number, y: number): void--><!--Device-PixelMap-translateSync(x: number, y: number): void-End-->
@@ -1250,8 +1304,8 @@ Image position transformation.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1277,6 +1331,8 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1297,9 +1353,9 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 错误码ID |
 | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
 
 ## 示例
 
@@ -1371,6 +1427,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>--><!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>-End-->
@@ -1421,6 +1479,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
@@ -1437,8 +1497,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1467,6 +1527,8 @@ writePixels(area: image.PositionArea): Promise<void>
 Writes image pixelmap data to the specified area. This method uses a promise to return the operation result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1524,6 +1586,8 @@ Writes image pixelmap data to the specified area.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void-End-->
@@ -1540,8 +1604,8 @@ Writes image pixelmap data to the specified area.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [501](../errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1578,6 +1642,8 @@ Whether the image pixelmap can be edited.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-readonly isEditable: boolean--><!--Device-PixelMap-readonly isEditable: boolean-End-->
@@ -1595,6 +1661,8 @@ Is it stride Alignment
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 

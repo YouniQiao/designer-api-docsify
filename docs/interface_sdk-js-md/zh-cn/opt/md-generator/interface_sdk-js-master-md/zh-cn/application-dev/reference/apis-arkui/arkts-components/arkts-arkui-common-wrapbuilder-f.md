@@ -6,9 +6,11 @@
 declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => void): WrappedBuilder<Args>
 ```
 
-`wrapBuilder`用于封装全局[@Builder](Builder)，可以将全局`@Builder`函数作为参数传递，实现按引用传递和动态调用，提升代码复用性。开发指南见：[wrapBuilder：封装全局@Builder](../../../ui/state-management/arkts-wrapBuilder.md)。
+`wrapBuilder`用于封装全局@Builder，可以将全局`@Builder`函数作为参数传递，实现按引用传递和动态调用，提升代码复用性。 开发指南见：[wrapBuilder：封装全局@Builder](../../../ui/state-management/arkts-wrapBuilder.md)。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

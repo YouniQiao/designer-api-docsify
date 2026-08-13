@@ -14,9 +14,11 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 
 Obtains the bundle resource information of all uninstalled applications that have retained data based on the given resource flags. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -30,7 +32,7 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag). |
+| resourceFlags | int | Yes | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag-(System-API)). |
 
 **Return value:**
 
@@ -42,8 +44,8 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

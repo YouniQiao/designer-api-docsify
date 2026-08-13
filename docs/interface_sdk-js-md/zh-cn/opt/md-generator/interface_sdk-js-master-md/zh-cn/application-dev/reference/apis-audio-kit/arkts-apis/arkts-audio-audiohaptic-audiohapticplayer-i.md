@@ -1,9 +1,10 @@
 # AudioHapticPlayer
 
-音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  
-[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer)创建实例。
+音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过 [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer)创建 实例。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
@@ -17,7 +18,9 @@ isMuted(type: AudioHapticType): boolean
 
 查询该音振类型是否被静音。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean--><!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean-End-->
 
@@ -39,7 +42,7 @@ isMuted(type: AudioHapticType): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -49,17 +52,19 @@ let audioHapticType: audioHaptic.AudioHapticType = audioHaptic.AudioHapticType.A
 let result: boolean = audioHapticPlayerInstance.isMuted(audioHapticType);
 ```
 
-## off('endOfStream')
+## offAudioInterrupt
 
 ```TypeScript
-off(type: 'endOfStream', callback?: Callback<void>): void
+offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
 ```
 
-取消监听流结束事件。使用callback异步回调。
+Unsubscribes audio interrupt event.
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioHapticPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -67,26 +72,31 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'endOfStream' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | 否 |
 
-## 示例
+## offEndOfStream
 
 ```TypeScript
-// 取消该事件的所有监听。
-audioHapticPlayerInstance.off('endOfStream');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let endOfStreamCallback = () => {
-  console.info('Succeeded in using on or off function.');
-};
-
-audioHapticPlayerInstance.on('endOfStream', endOfStreamCallback);
-
-audioHapticPlayerInstance.off('endOfStream', endOfStreamCallback);
+offEndOfStream(callback?: Callback<void>): void
 ```
 
-## off('audioInterrupt')
+Unsubscribes end of stream event.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioHapticPlayer-offEndOfStream(callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-offEndOfStream(callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+## off_audioInterrupt
 
 ```TypeScript
 off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
@@ -95,6 +105,8 @@ off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 取消监听音频中断事件。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void-End-->
 
@@ -169,17 +181,19 @@ audioHapticPlayerInstance.on('audioInterrupt', audioInterruptCallback);
 audioHapticPlayerInstance.off('audioInterrupt', audioInterruptCallback);
 ```
 
-## on('endOfStream')
+## off_endOfStream
 
 ```TypeScript
-on(type: 'endOfStream', callback: Callback<void>): void
+off(type: 'endOfStream', callback?: Callback<void>): void
 ```
 
-监听流结束事件（音频流播放结束时触发）。使用callback异步回调。
+取消监听流结束事件。使用callback异步回调。
 
 **起始版本：** 11
 
-<!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -188,17 +202,69 @@ on(type: 'endOfStream', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'endOfStream' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 ## 示例
 
 ```TypeScript
-audioHapticPlayerInstance.on('endOfStream', () => {
-  console.info('Succeeded in using on function.');
-});
+// 取消该事件的所有监听。
+audioHapticPlayerInstance.off('endOfStream');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let endOfStreamCallback = () => {
+  console.info('Succeeded in using on or off function.');
+};
+
+audioHapticPlayerInstance.on('endOfStream', endOfStreamCallback);
+
+audioHapticPlayerInstance.off('endOfStream', endOfStreamCallback);
 ```
 
-## on('audioInterrupt')
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+```
+
+Subscribes audio interrupt event.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioHapticPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | 是 |
+
+## onEndOfStream
+
+```TypeScript
+onEndOfStream(callback: Callback<void>): void
+```
+
+Subscribes end of stream event.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioHapticPlayer-onEndOfStream(callback: Callback<void>): void--><!--Device-AudioHapticPlayer-onEndOfStream(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## on_audioInterrupt
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
@@ -207,6 +273,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
@@ -274,6 +342,37 @@ audioHapticPlayerInstance.on('audioInterrupt', (interruptEvent: audio.InterruptE
 });
 ```
 
+## on_endOfStream
+
+```TypeScript
+on(type: 'endOfStream', callback: Callback<void>): void
+```
+
+监听流结束事件（音频流播放结束时触发）。使用callback异步回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'endOfStream' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## 示例
+
+```TypeScript
+audioHapticPlayerInstance.on('endOfStream', () => {
+  console.info('Succeeded in using on function.');
+});
+```
+
 ## release
 
 ```TypeScript
@@ -282,7 +381,9 @@ release(): Promise<void>
 
 释放音振播放器。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-release(): Promise<void>--><!--Device-AudioHapticPlayer-release(): Promise<void>-End-->
 
@@ -298,7 +399,7 @@ release(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -318,13 +419,11 @@ audioHapticPlayerInstance.release().then(() => {
 setLoop(loop: boolean): Promise<void>
 ```
 
-设置音振播放器循环播放。使用Promise异步回调。
+设置音振播放器循环播放。使用Promise异步回调。 > **注意：** > > 该方法需在音振播放器销毁前调用。
 
-> **注意：**
-> 
-> 该方法需在音振播放器销毁前调用。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>--><!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>-End-->
 
@@ -346,7 +445,7 @@ setLoop(loop: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## 示例
 
@@ -366,13 +465,11 @@ audioHapticPlayerInstance.setLoop(true).then(() => {
 setVolume(volume: number): Promise<void>
 ```
 
-设置音振播放器的音量。使用Promise异步回调。
+设置音振播放器的音量。使用Promise异步回调。 > **注意：** > > 该方法需在音振播放器释放前调用。
 
-> **注意：**
-> 
-> 该方法需在音振播放器释放前调用。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>--><!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>-End-->
 
@@ -394,9 +491,9 @@ setVolume(volume: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## 示例
 
@@ -418,7 +515,9 @@ start(): Promise<void>
 
 开始播放。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-start(): Promise<void>--><!--Device-AudioHapticPlayer-start(): Promise<void>-End-->
 
@@ -434,9 +533,9 @@ start(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -458,7 +557,9 @@ stop(): Promise<void>
 
 停止播放。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticPlayer-stop(): Promise<void>--><!--Device-AudioHapticPlayer-stop(): Promise<void>-End-->
 
@@ -474,8 +575,8 @@ stop(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 

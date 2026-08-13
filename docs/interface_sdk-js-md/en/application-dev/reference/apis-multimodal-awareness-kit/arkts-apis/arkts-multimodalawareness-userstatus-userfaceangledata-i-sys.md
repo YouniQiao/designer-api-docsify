@@ -2,13 +2,15 @@
 
 Defines user face angle data.
 
-**Inheritance/Implementation:** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**Inheritance/Implementation:** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData-(System-API))
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-userStatus-export interface UserFaceAngleData extends UserStatusData--><!--Device-userStatus-export interface UserFaceAngleData extends UserStatusData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface UserFaceAngleData--><!--Device-userStatus-export interface UserFaceAngleData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -26,13 +28,15 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 hpeNetworkId: string
 ```
 
-Network ID of device that user head is facing.The maximum length is 128.
+Network ID of device that user head is facing. The maximum length is 128.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

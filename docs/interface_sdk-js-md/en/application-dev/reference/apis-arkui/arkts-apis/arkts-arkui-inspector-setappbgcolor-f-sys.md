@@ -12,6 +12,8 @@ Set app background color.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function setAppBgColor(value: string): void--><!--Device-unnamed-declare function setAppBgColor(value: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

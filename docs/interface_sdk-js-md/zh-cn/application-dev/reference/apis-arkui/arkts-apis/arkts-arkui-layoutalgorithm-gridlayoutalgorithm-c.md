@@ -1,19 +1,16 @@
 # GridLayoutAlgorithm
 
-网格布局算法类。
+网格布局算法类。 > **说明：** > > GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../../apis-na/arkts-apis/arkts-na-arkui-components-arkdynamiclayout-dynamiclayout-f.md#DynamicLayout)组件的入 > 参指定布局算法。
 
-> **说明：**
-> 
-> GridLayoutAlgorithm类对象可以作为
-> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
-
-**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
+**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-<!--Device-unnamed-export declare class GridLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export declare class GridLayoutAlgorithm implements LayoutAlgorithm-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export class GridLayoutAlgorithm--><!--Device-unnamed-export class GridLayoutAlgorithm-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +24,13 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)--><!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)-End-->
 
@@ -37,65 +40,83 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参， 设置网格布局的列数、列间距、行间距。 |
+| option | [GridLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参，设置网格布局的列数、列间距、行间距。 |
 
 ## columnsGap
 
 ```TypeScript
-public columnsGap?: LengthMetrics
+@Trace public columnsGap?: LengthMetrics
 ```
 
-列与列之间的间距。非法值：按默认值处理。
+列与列之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-<!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics-End-->
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridLayoutAlgorithm-@Trace public columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-@Trace public columnsGap?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnsTemplate
 
 ```TypeScript
-public columnsTemplate?: string | ItemFillPolicy
+@Trace public columnsTemplate?: string | ItemFillPolicy
 ```
 
-设置当前网格布局的列数。非法值：按默认值处理。
+设置当前网格布局的列数。 默认值：'1fr' 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
+**类型：** string \| [ItemFillPolicy](../../apis-na/arkts-apis/arkts-na-units-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-<!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy-End-->
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridLayoutAlgorithm-@Trace public columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithm-@Trace public columnsTemplate?: string | ItemFillPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## rowsGap
 
 ```TypeScript
-public rowsGap?: LengthMetrics
+@Trace public rowsGap?: LengthMetrics
 ```
 
-行与行之间的间距。非法值：按默认值处理。
+行与行之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-<!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics-End-->
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridLayoutAlgorithm-@Trace public rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-@Trace public rowsGap?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,14 +1,14 @@
 # UIPickerComponent属性/事件
 
-除支持[通用属性](./common)外，还支持以下属性：
+除支持通用属性外，还支持以下属性： 除支持通用事件外，还支持以下事件：
 
-除支持[通用事件](./common)外，还支持以下事件：
-
-**继承/实现关系：** UIPickerComponentAttribute extends [CommonMethod<UIPickerComponentAttribute>](CommonMethod<UIPickerComponentAttribute>)
+**继承/实现关系：** UIPickerComponentAttribute extends CommonMethod<UIPickerComponentAttribute>
 
 **起始版本：** 22
 
-<!--Device-unnamed-declare class UIPickerComponentAttribute extends CommonMethod<UIPickerComponentAttribute>--><!--Device-unnamed-declare class UIPickerComponentAttribute extends CommonMethod<UIPickerComponentAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class UIPickerComponentAttribute--><!--Device-unnamed-declare class UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +21,8 @@ canLoop(isLoop: Optional<boolean>)
 设置选项列是否可循环滚动。选项数量较多且需要无限滚动浏览时，可开启循环；选项较少或需要限制选择范围时，可关闭循环。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,10 +44,11 @@ canLoop(isLoop: Optional<boolean>)
 displayedItemCount(count: Optional<number>)
 ```
 
-设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时增加可见项数量。此属性与[itemHeight](UIPickerComponentAttribute#itemHeight)共同影响组件的显示效果，建议结合组件  
-[height](CommonMethod#height(value: Length))属性进行调整以保证完整显示。
+设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时 增加可见项数量。此属性与[itemHeight](#itemHeight)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,13 +70,11 @@ displayedItemCount(count: Optional<number>)
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。
-
-开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：  
-> 
-> "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下： > > "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,11 +96,11 @@ enableHapticFeedback(enable: Optional<boolean>)
 itemHeight(height: Optional<LengthMetrics>)
 ```
 
-设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。选项内容较多或需要更大字体显示时可增大高度以避免内容裁剪，选项内容简洁或需要紧凑显示时可减小高度。此属性与  
-[displayedItemCount](UIPickerComponentAttribute#displayedItemCount)共同影响组件的显示效果，建议结合组件  
-[height](CommonMethod#height(value: Length))属性进行调整以保证完整显示。
+设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。选项内容较多或需要更大字体显示时可增大高度以避免内容 裁剪，选项内容简洁或需要紧凑显示时可减小高度。此属性与 [displayedItemCount](#displayedItemCount)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -121,16 +122,11 @@ itemHeight(height: Optional<LengthMetrics>)
 onChange(callback: Optional<OnUIPickerComponentCallback>)
 ```
 
-滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。
-
-> **说明：**
-> 
-> - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。
-> 
-> - 选中项区域可通过设置[selectionIndicator](UIPickerComponentAttribute#selectionIndicator)进行标识。
-> 如果设置选中项指示器为背景，则背景区域即为选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
+滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。 > **说明：** > > - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。 > > - 选中项区域可通过设置[selectionIndicator](#selectionIndicator)进行标识。 > 如果设置选中项指示器为背景，则背景区域即为选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,22 +148,11 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 ```
 
-选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画，则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。
-
-> **说明：**
-> 
-> **onChange与onScrollStop的差异：**
-> 
-> - **触发时机**：onChange在选中项发生变化时立即触发；onScrollStop在滑动动画完全停止后触发。
-> 
-> - **触发频率**：连续滑动过程中，onChange可能多次触发（每次选中项变化都会触发）；onScrollStop只在滑动停止时触发一次。
-> 
-> - **使用场景**：onChange适用于需要实时响应的场景（如实时显示选中内容、联动更新其他组件）；onScrollStop适用于需要最终确认的场景
-> （如提交最终选择结果、保存数据）。
-> 
-> - **两者关系**：一次完整的滑动操作可能先后触发这两个事件，可根据实际需求同时使用或选择使用。
+选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画， 则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。 > **说明：** > > **onChange与onScrollStop的差异：** > > - **触发时机**：onChange在选中项发生变化时立即触发；onScrollStop在滑动动画完全停止后触发。 > > - **触发频率**：连续滑动过程中，onChange可能多次触发（每次选中项变化都会触发）；onScrollStop只在滑动停止时触发一次。 > > - **使用场景**：onChange适用于需要实时响应的场景（如实时显示选中内容、联动更新其他组件）；onScrollStop适用于需要最终确认的场景 > （如提交最终选择结果、保存数据）。 > > - **两者关系**：一次完整的滑动操作可能先后触发这两个事件，可根据实际需求同时使用或选择使用。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -192,6 +177,8 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 设置选中项指示器的样式。需要突出显示选中区域时使用背景指示器，需要简洁轻量标识时使用分割线指示器。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

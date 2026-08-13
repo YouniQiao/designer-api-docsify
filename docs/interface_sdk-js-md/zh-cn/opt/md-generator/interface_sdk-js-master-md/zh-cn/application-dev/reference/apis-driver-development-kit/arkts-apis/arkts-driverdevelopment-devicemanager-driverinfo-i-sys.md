@@ -2,7 +2,9 @@
 
 驱动详细信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-deviceManager-interface DriverInfo--><!--Device-deviceManager-interface DriverInfo-End-->
 
@@ -20,7 +22,9 @@ busType: BusType
 
 **类型：** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DriverInfo-busType: BusType--><!--Device-DriverInfo-busType: BusType-End-->
 
@@ -38,7 +42,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DriverInfo-description: string--><!--Device-DriverInfo-description: string-End-->
 
@@ -56,7 +62,9 @@ driverName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DriverInfo-driverName: string--><!--Device-DriverInfo-driverName: string-End-->
 
@@ -74,7 +82,9 @@ driverSize: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DriverInfo-driverSize: string--><!--Device-DriverInfo-driverSize: string-End-->
 
@@ -92,7 +102,9 @@ driverUid: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DriverInfo-driverUid: string--><!--Device-DriverInfo-driverUid: string-End-->
 
@@ -110,7 +122,9 @@ driverVersion: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DriverInfo-driverVersion: string--><!--Device-DriverInfo-driverVersion: string-End-->
 

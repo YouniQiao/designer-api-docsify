@@ -2,7 +2,9 @@
 
 Describes the control object.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-enum ControlObject--><!--Device-connection-enum ControlObject-End-->
 
@@ -18,7 +20,9 @@ LEFT_EAR = 0
 
 Control object of left ear.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,9 @@ RIGHT_EAR = 1
 
 Control object of right ear.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +60,9 @@ LEFT_RIGHT_EAR = 2
 
 Control object of left and right ear.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,6 +6,8 @@ Defines the network configuration for the Ethernet connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-ethernet-export interface InterfaceConfiguration--><!--Device-ethernet-export interface InterfaceConfiguration-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -24,13 +26,15 @@ import { ethernet } from '@kit.NetworkKit';
 dnsServers: string
 ```
 
-The Ethernet connection is configured with the dns service address.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured, Multiple addresses are separated by ",")
+The Ethernet connection is configured with the dns service address. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured, Multiple addresses are separated by ",")
 
 **Type:** string
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceConfiguration-dnsServers: string--><!--Device-InterfaceConfiguration-dnsServers: string-End-->
 
@@ -44,13 +48,15 @@ The Ethernet connection is configured with the dns service address.The address v
 gateway: string
 ```
 
-Ethernet connection static configuration gateway information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+Ethernet connection static configuration gateway information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
 
 **Type:** string
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceConfiguration-gateway: string--><!--Device-InterfaceConfiguration-gateway: string-End-->
 
@@ -72,6 +78,8 @@ Indicates the HttpProxy settings, no proxy is to be used as default.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-InterfaceConfiguration-httpProxy?: HttpProxy--><!--Device-InterfaceConfiguration-httpProxy?: HttpProxy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -84,13 +92,15 @@ Indicates the HttpProxy settings, no proxy is to be used as default.
 ipAddr: string
 ```
 
-Ethernet connection static configuration IP information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+Ethernet connection static configuration IP information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
 
 **Type:** string
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceConfiguration-ipAddr: string--><!--Device-InterfaceConfiguration-ipAddr: string-End-->
 
@@ -110,6 +120,8 @@ mode: IPSetMode
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-InterfaceConfiguration-mode: IPSetMode--><!--Device-InterfaceConfiguration-mode: IPSetMode-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -122,13 +134,15 @@ mode: IPSetMode
 netMask: string
 ```
 
-Ethernet connection static configuration netMask information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+Ethernet connection static configuration netMask information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
 
 **Type:** string
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceConfiguration-netMask: string--><!--Device-InterfaceConfiguration-netMask: string-End-->
 
@@ -142,13 +156,15 @@ Ethernet connection static configuration netMask information.The address value r
 route: string
 ```
 
-Ethernet connection static configuration route information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+Ethernet connection static configuration route information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
 
 **Type:** string
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceConfiguration-route: string--><!--Device-InterfaceConfiguration-route: string-End-->
 

@@ -1,9 +1,10 @@
 # @ohos.app.ability.insightIntent
 
-This module provides basic definitions of the  
-[InsightIntent framework](../../../application-models/insight-intent-overview.md).
+This module provides basic definitions of the [InsightIntent framework](../../../application-models/insight-intent-overview.md).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,11 +8,13 @@ function getLaunchWant(): Want
 
 获取本应用[入口UIAbility](../../../quick-start/application-package-glossary.md#uiability)的Want参数。
 
-**起始版本：** 13
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-bundleManager-function getLaunchWant(): Want--><!--Device-bundleManager-function getLaunchWant(): Want-End-->
 
@@ -28,7 +30,7 @@ function getLaunchWant(): Want
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700072](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700072-launch-want不存在) | The launch want is not found. |
+| [17700072](../errorcode-bundle.md#17700072-launch-want不存在) | The launch want is not found. |
 
 ## 示例
 

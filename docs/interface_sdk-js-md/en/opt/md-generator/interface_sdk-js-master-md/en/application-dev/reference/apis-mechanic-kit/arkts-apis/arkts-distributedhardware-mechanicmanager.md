@@ -1,8 +1,10 @@
 # @ohos.distributedHardware.mechanicManager
 
-Provides capabilities for controlling and interacting with mechanical devices connected to this device.The capabilities cover connection management, control, and monitoring.
+Provides capabilities for controlling and interacting with mechanical devices connected to this device. The capabilities cover connection management, control, and monitoring.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace mechanicManager--><!--Device-unnamed-declare namespace mechanicManager-End-->
 
@@ -20,44 +22,50 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAttachedMechDevices](arkts-mechanic-mechanicmanager-getattachedmechdevices-f.md#getattachedmechdevices) |
-| [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md#getcameratrackingenabled) |
-| [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getcameratrackinglayout) |
-| [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#iscontrolsupported) |
-| [off](arkts-mechanic-mechanicmanager-off-f.md#off) |
-| [off](arkts-mechanic-mechanicmanager-off-f.md#off-1) |
-| [on](arkts-mechanic-mechanicmanager-on-f.md#on) |
-| [on](arkts-mechanic-mechanicmanager-on-f.md#on-1) |
-| [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setcameratrackingenabled) |
+| [getAttachedMechDevices](arkts-mechanic-mechanicmanager-getattachedmechdevices-f.md#getAttachedMechDevices) |
+| [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md#getCameraTrackingEnabled) |
+| [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getCameraTrackingLayout) |
+| [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#isControlSupported) |
+| [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md#offAttachStateChange) |
+| [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md#offTrackingStateChange) |
+| [off_attachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) |
+| [off_trackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) |
+| [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md#onAttachStateChange) |
+| [onTrackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md#onTrackingStateChange) |
+| [on_attachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) |
+| [on_trackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) |
+| [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setCameraTrackingEnabled) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [connectDevice](arkts-mechanic-mechanicmanager-connectdevice-f-sys.md#connectdevice) |
-| [disconnectDevice](arkts-mechanic-mechanicmanager-disconnectdevice-f-sys.md#disconnectdevice) |
-| [doAction](arkts-mechanic-mechanicmanager-doaction-f-sys.md#doaction) |
-| [getCurrentAngles](arkts-mechanic-mechanicmanager-getcurrentangles-f-sys.md#getcurrentangles) |
-| [getMaxRotationSpeed](arkts-mechanic-mechanicmanager-getmaxrotationspeed-f-sys.md#getmaxrotationspeed) |
-| [getMaxRotationTime](arkts-mechanic-mechanicmanager-getmaxrotationtime-f-sys.md#getmaxrotationtime) |
-| [getRotationAxesStatus](arkts-mechanic-mechanicmanager-getrotationaxesstatus-f-sys.md#getrotationaxesstatus) |
-| [getRotationLimits](arkts-mechanic-mechanicmanager-getrotationlimits-f-sys.md#getrotationlimits) |
-| [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md#issupportaction) |
-| [move](arkts-mechanic-mechanicmanager-move-f-sys.md#move) |
-| [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md#movebyspeed) |
-| [off](arkts-mechanic-mechanicmanager-off-f-sys.md#off-2) |
-| [on](arkts-mechanic-mechanicmanager-on-f-sys.md#on-2) |
-| [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md#rotate) |
-| [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md#rotatebyspeed) |
-| [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md#rotatetoeulerangles) |
-| [searchTarget](arkts-mechanic-mechanicmanager-searchtarget-f-sys.md#searchtarget) |
-| [setCameraTrackingLayout](arkts-mechanic-mechanicmanager-setcameratrackinglayout-f-sys.md#setcameratrackinglayout) |
-| [setUserOperation](arkts-mechanic-mechanicmanager-setuseroperation-f-sys.md#setuseroperation) |
-| [stopMoving](arkts-mechanic-mechanicmanager-stopmoving-f-sys.md#stopmoving) |
-| [subscribe](arkts-mechanic-mechanicmanager-subscribe-f-sys.md#subscribe) |
-| [turnBySpeed](arkts-mechanic-mechanicmanager-turnbyspeed-f-sys.md#turnbyspeed) |
-| [unSubscribe](arkts-mechanic-mechanicmanager-unsubscribe-f-sys.md#unsubscribe) |
+| [connectDevice](arkts-mechanic-mechanicmanager-connectdevice-f-sys.md#connectDevice-(System-API)) |
+| [disconnectDevice](arkts-mechanic-mechanicmanager-disconnectdevice-f-sys.md#disconnectDevice-(System-API)) |
+| [doAction](arkts-mechanic-mechanicmanager-doaction-f-sys.md#doAction-(System-API)) |
+| [getCurrentAngles](arkts-mechanic-mechanicmanager-getcurrentangles-f-sys.md#getCurrentAngles-(System-API)) |
+| [getMaxRotationSpeed](arkts-mechanic-mechanicmanager-getmaxrotationspeed-f-sys.md#getMaxRotationSpeed-(System-API)) |
+| [getMaxRotationTime](arkts-mechanic-mechanicmanager-getmaxrotationtime-f-sys.md#getMaxRotationTime-(System-API)) |
+| [getRotationAxesStatus](arkts-mechanic-mechanicmanager-getrotationaxesstatus-f-sys.md#getRotationAxesStatus-(System-API)) |
+| [getRotationLimits](arkts-mechanic-mechanicmanager-getrotationlimits-f-sys.md#getRotationLimits-(System-API)) |
+| [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md#isSupportAction-(System-API)) |
+| [move](arkts-mechanic-mechanicmanager-move-f-sys.md#move-(System-API)) |
+| [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md#moveBySpeed-(System-API)) |
+| [offRotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md#offRotationAxesStatusChange-(System-API)) |
+| [off_rotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) |
+| [onRotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md#onRotationAxesStatusChange-(System-API)) |
+| [on_rotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) |
+| [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md#rotate-(System-API)) |
+| [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md#rotateBySpeed-(System-API)) |
+| [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md#rotateToEulerAngles-(System-API)) |
+| [searchTarget](arkts-mechanic-mechanicmanager-searchtarget-f-sys.md#searchTarget-(System-API)) |
+| [setCameraTrackingLayout](arkts-mechanic-mechanicmanager-setcameratrackinglayout-f-sys.md#setCameraTrackingLayout-(System-API)) |
+| [setUserOperation](arkts-mechanic-mechanicmanager-setuseroperation-f-sys.md#setUserOperation-(System-API)) |
+| [stopMoving](arkts-mechanic-mechanicmanager-stopmoving-f-sys.md#stopMoving-(System-API)) |
+| [subscribe](arkts-mechanic-mechanicmanager-subscribe-f-sys.md#subscribe-(System-API)) |
+| [turnBySpeed](arkts-mechanic-mechanicmanager-turnbyspeed-f-sys.md#turnBySpeed-(System-API)) |
+| [unSubscribe](arkts-mechanic-mechanicmanager-unsubscribe-f-sys.md#unSubscribe-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

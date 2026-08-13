@@ -2,9 +2,11 @@
 
 卡片信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AbilityFormInfo--><!--Device-unnamed-export interface AbilityFormInfo-End-->
 
@@ -22,9 +24,11 @@ readonly defaultDimension: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFormInfo-readonly defaultDimension: string--><!--Device-AbilityFormInfo-readonly defaultDimension: string-End-->
 
@@ -42,9 +46,11 @@ readonly name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFormInfo-readonly name: string--><!--Device-AbilityFormInfo-readonly name: string-End-->
 
@@ -62,9 +68,11 @@ readonly scheduledUpdateTime: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFormInfo-readonly scheduledUpdateTime: string--><!--Device-AbilityFormInfo-readonly scheduledUpdateTime: string-End-->
 
@@ -82,9 +90,11 @@ readonly supportDimensions: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFormInfo-readonly supportDimensions: Array<string>--><!--Device-AbilityFormInfo-readonly supportDimensions: Array<string>-End-->
 
@@ -102,9 +112,11 @@ readonly type: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFormInfo-readonly type: string--><!--Device-AbilityFormInfo-readonly type: string-End-->
 
@@ -120,11 +132,13 @@ readonly updateDuration: int
 
 表示卡片定时刷新的更新频率，单位：分钟，取值为30的倍数值。卡片的最高频率为每30分钟刷新一次，和定点刷新二选一，二者都配置的情况下，定时优先。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFormInfo-readonly updateDuration: int--><!--Device-AbilityFormInfo-readonly updateDuration: int-End-->
 
@@ -142,9 +156,11 @@ readonly updateEnabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFormInfo-readonly updateEnabled: boolean--><!--Device-AbilityFormInfo-readonly updateEnabled: boolean-End-->
 

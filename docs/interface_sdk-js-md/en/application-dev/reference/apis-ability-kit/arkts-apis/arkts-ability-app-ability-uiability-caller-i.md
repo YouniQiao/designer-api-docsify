@@ -1,11 +1,12 @@
 # Caller
 
-A Caller UIAbility can use the   
-[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
+A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Caller--><!--Device-unnamed-export interface Caller-End-->
 
@@ -25,9 +26,11 @@ call(method: string, data: rpc.Parcelable): Promise<void>
 
 Used by a Caller UIAbility to send serialized data, as agreed upon by both parties, to the Callee UIAbility. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +55,10 @@ Used by a Caller UIAbility to send serialized data, as agreed upon by both parti
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -123,9 +126,11 @@ callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequenc
 
 Used by a Caller UIAbility to send serialized data to a Callee UIAbility and return the result after the Callee UIAbility processes the message. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,10 +155,10 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -216,17 +221,65 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off('release')
+## offRelease
+
+```TypeScript
+offRelease(callback: OnReleaseCallback): void
+```
+
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](#onRelease).
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-offRelease(callback: OnReleaseCallback): void--><!--Device-Caller-offRelease(callback: OnReleaseCallback): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
+
+## offRelease
+
+```TypeScript
+offRelease(): void
+```
+
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](#onRelease).
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-offRelease(): void--><!--Device-Caller-offRelease(): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## off_release
 
 ```TypeScript
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](Caller.on). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](#on_release). It is currently not supported.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -245,7 +298,7 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -278,17 +331,19 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off('release')
+## off_release
 
 ```TypeScript
 off(type: 'release'): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](Caller.on). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](#on_release). It is currently not supported.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -306,7 +361,7 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -341,110 +396,6 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## offRelease
-
-```TypeScript
-offRelease(callback: OnReleaseCallback): void
-```
-
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](Caller.onRelease).
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-offRelease(callback: OnReleaseCallback): void--><!--Device-Caller-offRelease(callback: OnReleaseCallback): void-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
-
-## offRelease
-
-```TypeScript
-offRelease(): void
-```
-
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](Caller.onRelease).
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-offRelease(): void--><!--Device-Caller-offRelease(): void-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-## on('release')
-
-```TypeScript
-on(type: 'release', callback: OnReleaseCallback): void
-```
-
-Used by the Caller UIAbility to register a listener for disconnection notifications from the Callee UIAbility.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-
-## Examples
-
-```TypeScript
-import { UIAbility, Caller } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let dstDeviceId: string = 'xxxx';
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: dstDeviceId
-    }).then((obj) => {
-      let caller: Caller = obj;
-      try {
-        caller.on('release', (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        });
-      } catch (error) {
-        console.error(`Caller.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
-
 ## onRelease
 
 ```TypeScript
@@ -453,9 +404,11 @@ onRelease(callback: OnReleaseCallback): void
 
 Used by the Caller UIAbility to register a listener for disconnection notifications from the Callee UIAbility.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -473,8 +426,8 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 ## Examples
 
@@ -513,9 +466,11 @@ onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 
 Called when the remote UIAbility state changes in the collaboration scenario. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -533,8 +488,8 @@ Called when the remote UIAbility state changes in the collaboration scenario. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 ## Examples
 
@@ -566,6 +521,70 @@ export default class MainAbility extends UIAbility {
 }
 ```
 
+## on_release
+
+```TypeScript
+on(type: 'release', callback: OnReleaseCallback): void
+```
+
+Used by the Caller UIAbility to register a listener for disconnection notifications from the Callee UIAbility.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+
+## Examples
+
+```TypeScript
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MainUIAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let dstDeviceId: string = 'xxxx';
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: dstDeviceId
+    }).then((obj) => {
+      let caller: Caller = obj;
+      try {
+        caller.on('release', (str) => {
+          console.info(`Caller OnRelease CallBack is called ${str}`);
+        });
+      } catch (error) {
+        console.error(`Caller.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
+  }
+}
+```
+
 ## release
 
 ```TypeScript
@@ -574,9 +593,11 @@ release(): void
 
 Used by a Caller UIAbility to proactively release the connection with the Callee UIAbility. After this API is called, the Caller UIAbility can no longer use **call** or **callWithResult** to send messages to the Callee UIAbility.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -588,8 +609,8 @@ Used by a Caller UIAbility to proactively release the connection with the Callee
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 ## Examples
 

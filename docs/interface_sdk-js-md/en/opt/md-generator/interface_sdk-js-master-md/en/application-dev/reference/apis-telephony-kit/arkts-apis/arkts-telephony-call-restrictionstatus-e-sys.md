@@ -2,7 +2,9 @@
 
 Enumerates call restriction states.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum RestrictionStatus--><!--Device-call-export enum RestrictionStatus-End-->
 
@@ -18,7 +20,9 @@ RESTRICTION_DISABLE = 0
 
 Call restriction disabled.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RestrictionStatus-RESTRICTION_DISABLE = 0--><!--Device-RestrictionStatus-RESTRICTION_DISABLE = 0-End-->
 
@@ -34,7 +38,9 @@ RESTRICTION_ENABLE = 1
 
 Call restriction enabled.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RestrictionStatus-RESTRICTION_ENABLE = 1--><!--Device-RestrictionStatus-RESTRICTION_ENABLE = 1-End-->
 

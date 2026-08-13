@@ -18,6 +18,8 @@ Return the current work directory;
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-process-function cwd(): string--><!--Device-process-function cwd(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang

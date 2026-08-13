@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.request.agent.Task.on)
+**替代接口：** on
 
 <!--Device-unnamed-export interface OnDownloadCompleteOptions--><!--Device-unnamed-export interface OnDownloadCompleteOptions-End-->
 
@@ -20,13 +20,15 @@ complete?: () => void
 
 接口调用结束的回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.request.agent.Task.on)
+**替代接口：** on
 
 <!--Device-OnDownloadCompleteOptions-complete?: () => void--><!--Device-OnDownloadCompleteOptions-complete?: () => void-End-->
 
@@ -40,24 +42,19 @@ fail?: (data: any, code: number) => void
 
 接口调用失败的回调函数。返回header信息与HTTP状态码。
 
+**类型：** (data: any, code: number) =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.request.agent.Task.on)
+**替代接口：** on
 
 <!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void--><!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | any | 是 |  |
-| code | number | 是 |  |
 
 ## success
 
@@ -67,23 +64,19 @@ success?: (data: OnDownloadCompleteResponse) => void
 
 接口调用成功的回调函数。
 
+**类型：** (data: OnDownloadCompleteResponse) =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.request.agent.Task.on)
+**替代接口：** on
 
 <!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void--><!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [OnDownloadCompleteResponse](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) | 是 |  |
 
 ## token
 
@@ -101,7 +94,7 @@ download 接口返回的结果 token。
 
 **废弃版本：** 9
 
-**替代接口：** [tid](ohos.request.agent.Task.tid)
+**替代接口：** tid
 
 <!--Device-OnDownloadCompleteOptions-token: string--><!--Device-OnDownloadCompleteOptions-token: string-End-->
 

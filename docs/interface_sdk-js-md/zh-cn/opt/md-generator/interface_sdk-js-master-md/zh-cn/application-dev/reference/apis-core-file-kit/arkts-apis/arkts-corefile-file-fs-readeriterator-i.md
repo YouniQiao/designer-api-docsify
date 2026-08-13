@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ next(): ReaderIteratorResult
 获取迭代器下一项内容。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
 

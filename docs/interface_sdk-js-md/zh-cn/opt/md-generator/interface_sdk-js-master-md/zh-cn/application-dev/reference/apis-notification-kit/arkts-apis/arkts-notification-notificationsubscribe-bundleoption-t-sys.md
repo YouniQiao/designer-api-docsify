@@ -6,7 +6,9 @@ export type BundleOption = _BundleOption
 
 描述BundleOption信息，即应用的包信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationSubscribe-export type BundleOption = _BundleOption--><!--Device-notificationSubscribe-export type BundleOption = _BundleOption-End-->
 

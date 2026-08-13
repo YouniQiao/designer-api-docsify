@@ -14,7 +14,9 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 Continues a mission on a remote device, with the mission ID specified. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -38,15 +40,15 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 | Error Code ID |
 | --- |
-| [16300504](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16300505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
-| [16300506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16300501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
-| [16300502](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) |
-| [16300503](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
+| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
+| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
+| [16300502](../errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) |
+| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
 
 ## Examples
 
@@ -89,7 +91,9 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 Continues a mission on a remote device, with the mission ID specified. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -118,15 +122,15 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 | Error Code ID |
 | --- |
-| [16300504](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16300505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
-| [16300506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16300501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
-| [16300502](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) |
-| [16300503](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
+| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
+| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
+| [16300502](../errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) |
+| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
 
 ## Examples
 
@@ -166,7 +170,9 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 
 Continues a mission on a remote device, with the bundle name specified. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -189,15 +195,15 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 | Error Code ID |
 | --- |
-| [16300504](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16300505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
-| [16300506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
-| [16300507](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16300501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
-| [16300503](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
+| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
+| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
+| [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
+| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
 
 ## Examples
 
@@ -234,7 +240,9 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 
 Continues a mission on a remote device, with the bundle name specified. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -262,15 +270,15 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 | Error Code ID |
 | --- |
-| [16300504](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16300505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
-| [16300506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
-| [16300507](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16300501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
-| [16300503](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
+| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
+| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
+| [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
+| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) |
 
 ## Examples
 

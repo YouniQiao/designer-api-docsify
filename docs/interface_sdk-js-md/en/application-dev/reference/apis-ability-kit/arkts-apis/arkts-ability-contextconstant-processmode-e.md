@@ -1,11 +1,12 @@
 # ProcessMode
 
-Enumerates the process modes of the UIAbility after it is started.As a property of [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions), **ProcessMode** takes effect only in  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) and is used to specify the process mode of the target UIAbility.This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned.
+Enumerates the process modes of the UIAbility after it is started. As a property of [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions), **ProcessMode** takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) and is used to specify the process mode of the target UIAbility. This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-contextConstant-export enum ProcessMode--><!--Device-contextConstant-export enum ProcessMode-End-->
 
@@ -17,15 +18,13 @@ Enumerates the process modes of the UIAbility after it is started.As a property 
 NEW_PROCESS_ATTACH_TO_PARENT = 1
 ```
 
-A new process is created, the UIAbility is started on the process, and the process exits along with the parent process.
+A new process is created, the UIAbility is started on the process, and the process exits along with the parent process. **Constraints**: In this mode, the target UIAbility and caller must be in the same application.
 
-**Constraints**:
+**Since:** 23
 
-In this mode, the target UIAbility and caller must be in the same application.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,15 +38,13 @@ In this mode, the target UIAbility and caller must be in the same application.
 NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM = 2
 ```
 
-A new process is created, the UIAbility is started on the process, and the process is bound to the status bar icon.
+A new process is created, the UIAbility is started on the process, and the process is bound to the status bar icon. **Constraints**: In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
 
-**Constraints**:
+**Since:** 23
 
-In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,15 +58,13 @@ In this mode, the target UIAbility and caller must be in the same application, a
 ATTACH_TO_STATUS_BAR_ITEM = 3
 ```
 
-The UIAbility is started, and the process of the UIAbility is bound to the status bar icon.
+The UIAbility is started, and the process of the UIAbility is bound to the status bar icon. **Constraints**: In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
 
-**Constraints**:
+**Since:** 23
 
-In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

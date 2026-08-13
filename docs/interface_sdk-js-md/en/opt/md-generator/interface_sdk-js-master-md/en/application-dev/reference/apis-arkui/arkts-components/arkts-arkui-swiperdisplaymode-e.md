@@ -4,6 +4,8 @@ Enumerates the modes in which elements are displayed along the main axis.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SwiperDisplayMode--><!--Device-unnamed-declare enum SwiperDisplayMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,10 +16,7 @@ Enumerates the modes in which elements are displayed along the main axis.
 Stretch
 ```
 
-The width of each page in the **Swiper** component equals the component's own width.
-
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
-**STRETCH** instead.
+The width of each page in the **Swiper** component equals the component's own width. Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **STRETCH** instead.
 
 **Since:** 7
 
@@ -37,12 +36,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 AutoLinear
 ```
 
-The width of each page in the **Swiper** component equals the maximum width of child components. This enumerated value behaves the same as setting  
-[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean))to **'auto'** (string type). For details, see  
-[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)).
-
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
-**AUTO_LINEAR** instead.
+The width of each page in the **Swiper** component equals the maximum width of child components. This enumerated value behaves the same as setting displayCount to **'auto'** (string type). For details, see displayCount. Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **AUTO_LINEAR** instead.
 
 **Since:** 7
 
@@ -66,6 +60,8 @@ The width of each page in the **Swiper** component equals the component's own wi
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -82,18 +78,13 @@ The width of each page in the **Swiper** component equals the component's own wi
 AUTO_LINEAR
 ```
 
-The width of each page in the **Swiper** component equals the width of the leftmost child component in the viewport. This enumerated value behaves the same as setting  
-[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean))to **'auto'** (string type). For details, see  
-[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)).
-
-Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use  
-[Scroller.scrollTo](Scroller#scrollTo) instead.
+The width of each page in the **Swiper** component equals the width of the leftmost child component in the viewport. This enumerated value behaves the same as setting displayCount to **'auto'** (string type). For details, see displayCount. Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use Scroller.scrollTo instead.
 
 **Since:** 10
 
 **Deprecated since:** 12
 
-**Substitutes:** [scrollTo](Scroller#scrollTo)
+**Substitutes:** scrollTo
 
 **Model restriction:** This API can be used only in the stage model.
 

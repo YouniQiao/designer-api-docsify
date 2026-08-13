@@ -2,9 +2,11 @@
 
 Defines the information about the transient task.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
 
@@ -22,16 +24,15 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 actualDelayTime: int
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds.&lt;br&gt;Unit:ms
+Actual duration of the transient task requested by the application, in milliseconds. &lt;br&gt;Unit:ms Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery ( [BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md#BatteryCapacityLevel) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
 
-Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery (  
-[BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md#BatteryCapacityLevel) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-DelaySuspendInfo-actualDelayTime: int--><!--Device-DelaySuspendInfo-actualDelayTime: int-End-->
 
@@ -45,11 +46,13 @@ requestId: int
 
 Request ID of the transient task.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DelaySuspendInfo-requestId: int--><!--Device-DelaySuspendInfo-requestId: int-End-->
 

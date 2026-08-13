@@ -1,54 +1,37 @@
 # ArcButton
 
-ArcButton({ options: ArcButtonOptions })
+弧形按钮组件提供强调、普通等样式按钮，推荐用于圆形屏幕的设备。 > **说明：** > - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
 
-创建ArcButton实例，入参是弧形按钮配置选项。
+**起始版本：** 18
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**装饰器类型：** @ComponentV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**装饰器类型：** @Builder
-
-<!--Device-ArcButton-build(): void--><!--Device-ArcButton-build(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## options
 
 ```TypeScript
-readonly options: ArcButtonOptions
+@Require
+    readonly options: ArcButtonOptions
 ```
 
 定义ArcButton组件的文本、背景色、阴影等参数。
 
 **类型：** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**装饰器类型：** @Require、@Param
+**废弃版本：** -1
 
-<!--Device-ArcButton-readonly options: ArcButtonOptions--><!--Device-ArcButton-readonly options: ArcButtonOptions-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcButton-@Require    readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require    readonly options: ArcButtonOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

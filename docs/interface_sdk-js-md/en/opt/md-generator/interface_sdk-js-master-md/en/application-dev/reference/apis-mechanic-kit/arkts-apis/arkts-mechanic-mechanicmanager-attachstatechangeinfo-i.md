@@ -2,7 +2,9 @@
 
 Callback information about the device attachment state change.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface AttachStateChangeInfo--><!--Device-mechanicManager-export interface AttachStateChangeInfo-End-->
 
@@ -24,7 +26,9 @@ Mechanical device information.
 
 **Type:** [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AttachStateChangeInfo-mechInfo: MechInfo--><!--Device-AttachStateChangeInfo-mechInfo: MechInfo-End-->
 
@@ -40,7 +44,9 @@ Device attachment state.
 
 **Type:** [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AttachStateChangeInfo-state: AttachState--><!--Device-AttachStateChangeInfo-state: AttachState-End-->
 

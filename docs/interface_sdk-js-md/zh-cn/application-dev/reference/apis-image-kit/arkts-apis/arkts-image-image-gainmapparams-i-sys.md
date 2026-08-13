@@ -4,7 +4,9 @@ Gainmap（增益图）参数设置选项。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-image-interface GainmapParams--><!--Device-image-interface GainmapParams-End-->
 
@@ -18,15 +20,15 @@ Gainmap（增益图）参数设置选项。
 isFullSizeGainmap: boolean
 ```
 
-返回Picture中的Gainmap（增益图）是否使用全尺寸图。
-
-true表示使用全尺寸图，宽高和主图一致；false表示不使用全尺寸图，宽高均为主图的一半。默认值为false。
+返回Picture中的Gainmap（增益图）是否使用全尺寸图。 true表示使用全尺寸图，宽高和主图一致；false表示不使用全尺寸图，宽高均为主图的一半。默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

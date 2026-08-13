@@ -2,9 +2,11 @@
 
 Used to do observer layout and draw event for component.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -24,9 +26,7 @@ import { inspector } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getInspectorByKey](arkts-arkui-inspector-getinspectorbykey-f.md#getinspectorbykey) | Obtains all attributes of the component with the specified ID. |
-| [getInspectorTree](arkts-arkui-inspector-getinspectortree-f.md#getinspectortree) | Get components tree. |
-| [sendEventByKey](arkts-arkui-inspector-sendeventbykey-f.md#sendeventbykey) | Sends an event to the component with the specified ID. |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createComponentObserver) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
 
 ### Interfaces
 

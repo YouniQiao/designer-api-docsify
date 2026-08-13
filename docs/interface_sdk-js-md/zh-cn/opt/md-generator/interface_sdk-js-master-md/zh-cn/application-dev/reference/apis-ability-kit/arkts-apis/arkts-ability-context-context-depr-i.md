@@ -2,11 +2,13 @@
 
 Context模块提供了Ability或Application的上下文的基础能力，包括允许访问特定于应用程序的资源、请求和验证权限等。
 
-**继承/实现关系：** Context extends [BaseContext](BaseContext)
+**继承/实现关系：** Context extends BaseContext
 
 **起始版本：** 6
 
-<!--Device-unnamed-export interface Context extends BaseContext--><!--Device-unnamed-export interface Context extends BaseContext-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Context--><!--Device-unnamed-export interface Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,6 +21,8 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 检查此能力的配置是否正在更改。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -42,6 +46,8 @@ getAbilityInfo(): Promise<AbilityInfo>
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>--><!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>-End-->
@@ -63,6 +69,8 @@ getAppType(callback: AsyncCallback<string>): void
 获取此应用的类型。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -86,6 +94,8 @@ getAppType(): Promise<string>
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getAppType(): Promise<string>--><!--Device-Context-getAppType(): Promise<string>-End-->
@@ -107,6 +117,8 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 获取应用的版本信息。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -130,6 +142,8 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>--><!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>-End-->
@@ -151,6 +165,8 @@ getApplicationContext(): Context
 获取应用上下文信息。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -174,6 +190,8 @@ getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
@@ -195,6 +213,8 @@ getApplicationInfo(): Promise<ApplicationInfo>
 获取有关当前应用程序的信息。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -218,6 +238,8 @@ getBundleName(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getBundleName(callback: AsyncCallback<string>): void--><!--Device-Context-getBundleName(callback: AsyncCallback<string>): void-End-->
@@ -239,6 +261,8 @@ getBundleName(): Promise<string>
 获取当前ability的Bundle名称。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -262,6 +286,8 @@ getCacheDir(callback: AsyncCallback<string>): void
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void-End-->
@@ -283,6 +309,8 @@ getCacheDir(): Promise<string>
 获取该应用程序的内部存储目录。使用Promise异步回调。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -306,6 +334,8 @@ getCallingBundle(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void--><!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void-End-->
@@ -327,6 +357,8 @@ getCallingBundle(): Promise<string>
 获取ability调用方的Bundle名称。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -350,6 +382,8 @@ getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void--><!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void-End-->
@@ -372,6 +406,8 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getDisplayOrientation(): Promise<bundle.DisplayOrientation>--><!--Device-Context-getDisplayOrientation(): Promise<bundle.DisplayOrientation>-End-->
@@ -390,9 +426,11 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 getElementName(callback: AsyncCallback<ElementName>): void
 ```
 
-获取当前ability的ohos.bundleManager.ElementName对象。使用callback异步回调。此方法仅适用于页面功能。
+获取当前ability的ohos.bundleManager.ElementName对象。使用callback异步回调。 此方法仅适用于页面功能。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -412,9 +450,11 @@ getElementName(callback: AsyncCallback<ElementName>): void
 getElementName(): Promise<ElementName>
 ```
 
-获取当前能力的ohos.bundleManager.ElementName对象。使用Promise异步回调。此方法仅适用于页面功能。
+获取当前能力的ohos.bundleManager.ElementName对象。使用Promise异步回调。 此方法仅适用于页面功能。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -486,6 +526,8 @@ getFilesDir(callback: AsyncCallback<string>): void
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void--><!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void-End-->
@@ -507,6 +549,8 @@ getFilesDir(): Promise<string>
 获取内部存储器上此应用程序的文件目录。使用Promise异步回调。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -530,6 +574,8 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void--><!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void-End-->
@@ -552,6 +598,8 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getHapModuleInfo(): Promise<HapModuleInfo>--><!--Device-Context-getHapModuleInfo(): Promise<HapModuleInfo>-End-->
@@ -570,9 +618,11 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 getOrCreateDistributedDir(): Promise<string>
 ```
 
-获取Ability或应用的分布式文件路径。使用callback异步回调。如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
+获取Ability或应用的分布式文件路径。使用callback异步回调。 如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -592,9 +642,11 @@ getOrCreateDistributedDir(): Promise<string>
 getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 ```
 
-获取Ability或应用的分布式文件路径。使用Promise异步回调。如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
+获取Ability或应用的分布式文件路径。使用Promise异步回调。 如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -614,9 +666,11 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 getOrCreateLocalDir(): Promise<string>
 ```
 
-获取应用程序的本地根目录。使用Promise异步回调。如果是第一次调用，将创建目录。
+获取应用程序的本地根目录。使用Promise异步回调。 如果是第一次调用，将创建目录。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -636,9 +690,11 @@ getOrCreateLocalDir(): Promise<string>
 getOrCreateLocalDir(callback: AsyncCallback<string>): void
 ```
 
-获取应用程序的本地根目录。使用callback异步回调。如果是第一次调用，将创建目录。
+获取应用程序的本地根目录。使用callback异步回调。 如果是第一次调用，将创建目录。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -662,6 +718,8 @@ getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void--><!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void-End-->
@@ -683,6 +741,8 @@ getProcessInfo(): Promise<ProcessInfo>
 获取有关当前进程的信息，包括进程id和名称。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -706,6 +766,8 @@ getProcessName(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getProcessName(callback: AsyncCallback<string>): void--><!--Device-Context-getProcessName(callback: AsyncCallback<string>): void-End-->
@@ -727,6 +789,8 @@ getProcessName(): Promise<string>
 获取当前进程的名称。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -750,6 +814,8 @@ isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void--><!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void-End-->
@@ -771,6 +837,8 @@ isUpdatingConfigurations(): Promise<boolean>
 检查此能力的配置是否正在更改。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -794,6 +862,8 @@ printDrawnCompleted(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void-End-->
@@ -815,6 +885,8 @@ printDrawnCompleted(): Promise<void>
 通知系统绘制此页面功能所需的时间。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -842,6 +914,8 @@ requestPermissionsFromUser(
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void--><!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void-End-->
@@ -865,6 +939,8 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 从系统请求某些权限。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -895,6 +971,8 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCal
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void-End-->
@@ -917,6 +995,8 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 设置当前Ability的显示方向。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1007,7 +1087,7 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 12
 
-**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
+**替代接口：** setWakeUpScreen
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1034,7 +1114,7 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 
 **废弃版本：** 12
 
-**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
+**替代接口：** setWakeUpScreen
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1063,6 +1143,8 @@ verifyPermission(permission: string, options?: PermissionOptions): Promise<numbe
 验证系统中运行的特定pid和uid是否具有指定的权限。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1093,6 +1175,8 @@ verifyPermission(permission: string, options: PermissionOptions, callback: Async
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void-End-->
@@ -1116,6 +1200,8 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 验证系统中运行的当前pid和uid是否具有指定的权限。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

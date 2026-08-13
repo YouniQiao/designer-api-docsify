@@ -2,9 +2,11 @@
 
 Implements the transition animation controller. Before calling any API, you must create a system window. For details, see the sample code.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface TransitionController--><!--Device-window-interface TransitionController-End-->
 
@@ -30,6 +32,8 @@ Customizes the animation for the scenario when the window is hidden.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-TransitionController-animationForHidden(context: TransitionContext): void--><!--Device-TransitionController-animationForHidden(context: TransitionContext): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -46,8 +50,8 @@ Customizes the animation for the scenario when the window is hidden.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -107,24 +111,6 @@ try {
 }
 ```
 
-## animationForHidden
-
-```TypeScript
-animationForHidden?: TransitionControllerCallback
-```
-
-Animation configuration when hiding window
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-TransitionController-animationForHidden?: TransitionControllerCallback--><!--Device-TransitionController-animationForHidden?: TransitionControllerCallback-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
 ## animationForShown
 
 ```TypeScript
@@ -136,6 +122,8 @@ Customizes the animation for the scenario when the window is shown.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-TransitionController-animationForShown(context: TransitionContext): void--><!--Device-TransitionController-animationForShown(context: TransitionContext): void-End-->
 
@@ -153,8 +141,8 @@ Customizes the animation for the scenario when the window is shown.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -214,6 +202,30 @@ try {
 }
 ```
 
+## animationForHidden
+
+```TypeScript
+animationForHidden?: TransitionControllerCallback
+```
+
+Animation configuration when hiding window
+
+**Type:** [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md)
+
+**Default:** undefined
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-TransitionController-animationForHidden?: TransitionControllerCallback--><!--Device-TransitionController-animationForHidden?: TransitionControllerCallback-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
 ## animationForShown
 
 ```TypeScript
@@ -222,9 +234,15 @@ animationForShown?: TransitionControllerCallback
 
 Animation configuration when showing window
 
+**Type:** [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md)
+
+**Default:** undefined
+
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TransitionController-animationForShown?: TransitionControllerCallback--><!--Device-TransitionController-animationForShown?: TransitionControllerCallback-End-->
 

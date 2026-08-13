@@ -4,6 +4,8 @@ UI font configuration of the system.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontConfig--><!--Device-font-interface UIFontConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ List of fallback generic font families.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,6 +50,8 @@ Path to the system font file.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,6 +71,8 @@ List of supported generic font families.
 **Type:** Array&lt;[UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md)&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

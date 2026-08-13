@@ -6,7 +6,7 @@ Defines the parameters for routing back.
 
 **Deprecated since:** 8
 
-**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
+**Substitutes:** RouterOptions
 
 <!--Device-unnamed-export interface BackRouterOptions--><!--Device-unnamed-export interface BackRouterOptions-End-->
 
@@ -32,7 +32,7 @@ Data that needs to be passed to the target page during redirection.
 
 **Deprecated since:** 8
 
-**Substitutes:** [params](ohos.router.RouterOptions#params)
+**Substitutes:** params
 
 <!--Device-BackRouterOptions-params?: Object--><!--Device-BackRouterOptions-params?: Object-End-->
 
@@ -52,7 +52,7 @@ URI of the page to return to. If the specified page does not exist in the page s
 
 **Deprecated since:** 8
 
-**Substitutes:** [url](ohos.router.RouterOptions#url)
+**Substitutes:** url
 
 <!--Device-BackRouterOptions-uri?: string--><!--Device-BackRouterOptions-uri?: string-End-->
 

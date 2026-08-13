@@ -2,7 +2,9 @@
 
 表示 Schema 实例的节点，提供定义存储在数据库中的值的方法。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
 
@@ -16,7 +18,9 @@ appendChild(child: FieldNode): boolean
 
 在当前 FieldNode 中添加一个子节点。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +44,7 @@ appendChild(child: FieldNode): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -72,7 +76,9 @@ constructor(name: string)
 
 用于创建带有string字段FieldNode实例的构造函数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,7 +96,7 @@ constructor(name: string)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## default
 
@@ -104,42 +110,8 @@ default: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## nullable
-
-```TypeScript
-set nullable(isnullable: boolean)
-```
-
-设置数据库字段是否为空.
-
-**类型：** boolean
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FieldNode-set nullable(isnullable: boolean)--><!--Device-FieldNode-set nullable(isnullable: boolean)-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## type
-
-```TypeScript
-set type(type: number)
-```
-
-设置节点对应的数据类型。
-
-**类型：** number
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FieldNode-set type(type: int)--><!--Device-FieldNode-set type(type: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

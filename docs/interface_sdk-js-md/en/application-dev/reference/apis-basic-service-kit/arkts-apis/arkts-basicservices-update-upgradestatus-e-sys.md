@@ -2,9 +2,11 @@
 
 Enumerates update states.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export enum UpgradeStatus--><!--Device-update-export enum UpgradeStatus-End-->
 
@@ -20,9 +22,11 @@ WAITING_DOWNLOAD = 20
 
 Waiting for download.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20--><!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20-End-->
 
@@ -38,9 +42,11 @@ DOWNLOADING = 21
 
 Downloading.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-DOWNLOADING = 21--><!--Device-UpgradeStatus-DOWNLOADING = 21-End-->
 
@@ -56,9 +62,11 @@ DOWNLOAD_PAUSED = 22
 
 Download paused.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22--><!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22-End-->
 
@@ -74,9 +82,11 @@ DOWNLOAD_FAIL = 23
 
 Download failed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23--><!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23-End-->
 
@@ -92,9 +102,11 @@ WAITING_INSTALL = 30
 
 Waiting for installation.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-WAITING_INSTALL = 30--><!--Device-UpgradeStatus-WAITING_INSTALL = 30-End-->
 
@@ -110,9 +122,11 @@ UPDATING = 31
 
 Updating.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-UPDATING = 31--><!--Device-UpgradeStatus-UPDATING = 31-End-->
 
@@ -128,9 +142,11 @@ WAITING_APPLY = 40
 
 Waiting for applying the upgrade.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-WAITING_APPLY = 40--><!--Device-UpgradeStatus-WAITING_APPLY = 40-End-->
 
@@ -146,9 +162,11 @@ APPLYING = 41
 
 Applying the update.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-APPLYING = 41--><!--Device-UpgradeStatus-APPLYING = 41-End-->
 
@@ -164,9 +182,11 @@ UPGRADE_SUCCESS = 50
 
 Update succeeded.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50--><!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50-End-->
 
@@ -182,9 +202,11 @@ UPGRADE_FAIL = 51
 
 Update failed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-UPGRADE_FAIL = 51--><!--Device-UpgradeStatus-UPGRADE_FAIL = 51-End-->
 

@@ -12,12 +12,11 @@ import { image } from '@kit.ImageKit';
 function createPicture(mainPixelmap : PixelMap): Picture
 ```
 
-Creates a Picture object based on a main PixelMap.
+Creates a Picture object based on a main PixelMap. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call   
-[release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**Since:** 23
 
-**Since:** 13
+**Deprecated since:** -1
 
 <!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture--><!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture-End-->
 
@@ -39,7 +38,7 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 拉起的投播组件包含的配置属性。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface AVCastPickerOptions--><!--Device-avSession-interface AVCastPickerOptions-End-->
 
@@ -20,9 +22,11 @@ menuPosition?: MenuPosition
 
 **类型：** [MenuPosition](arkts-avsession-avsession-menuposition-i.md)
 
-**起始版本：** 22
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AVCastPickerOptions-menuPosition?: MenuPosition--><!--Device-AVCastPickerOptions-menuPosition?: MenuPosition-End-->
 
@@ -38,9 +42,11 @@ pickerStyle?: AVCastPickerStyle
 
 **类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
-**起始版本：** 22
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle-End-->
 
@@ -52,17 +58,17 @@ pickerStyle?: AVCastPickerStyle
 sessionType?: AVSessionType
 ```
 
-会话类型，默认值为audio。
-
-当前仅支持的会话类型有audio和video。如果传入voice_call或video_call，将默认按照传入audio处理。
+会话类型，默认值为audio。 当前仅支持的会话类型有audio和video。如果传入voice_call或video_call，将默认按照传入audio处理。
 
 **类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastPickerOptions-sessionType?: AVSessionType--><!--Device-AVCastPickerOptions-sessionType?: AVSessionType-End-->
 

@@ -1,14 +1,14 @@
 # DynamicComponent properties/events
 
-The [universal attributes](./common) are supported.
+The universal attributes are supported. The following events are supported:
 
-The following events are supported:
-
-**Inheritance/Implementation:** DynamicComponentAttribute extends [CommonMethod<DynamicComponentAttribute>](CommonMethod<DynamicComponentAttribute>)
+**Inheritance/Implementation:** DynamicComponentAttribute extends CommonMethod<DynamicComponentAttribute>
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class DynamicComponentAttribute extends CommonMethod<DynamicComponentAttribute>--><!--Device-unnamed-declare class DynamicComponentAttribute extends CommonMethod<DynamicComponentAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class DynamicComponentAttribute--><!--Device-unnamed-declare class DynamicComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

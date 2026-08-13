@@ -2,7 +2,9 @@
 
 Enumerates MMS message priorities.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export enum MmsPriorityType--><!--Device-sms-export enum MmsPriorityType-End-->
 
@@ -18,7 +20,9 @@ MMS_LOW = 128
 
 Low priority.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsPriorityType-MMS_LOW = 128--><!--Device-MmsPriorityType-MMS_LOW = 128-End-->
 
@@ -34,7 +38,9 @@ MMS_NORMAL = 129
 
 Normal priority.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsPriorityType-MMS_NORMAL = 129--><!--Device-MmsPriorityType-MMS_NORMAL = 129-End-->
 
@@ -50,7 +56,9 @@ MMS_HIGH = 130
 
 High priority.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsPriorityType-MMS_HIGH = 130--><!--Device-MmsPriorityType-MMS_HIGH = 130-End-->
 

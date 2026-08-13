@@ -6,7 +6,7 @@ Represents the formatting options for the **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [ResolvedRelativeTimeFormatOptions]]([Intl.ResolvedRelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#return_value))
+**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#return_value)
 
 <!--Device-intl-export interface RelativeTimeFormatResolvedOptions--><!--Device-intl-export interface RelativeTimeFormatResolvedOptions-End-->
 
@@ -32,7 +32,7 @@ Locale ID, including the language, script, and region.
 
 **Deprecated since:** 20
 
-**Substitutes:** [locale]]([Intl.ResolvedRelativeTimeFormatOptions.locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#locale))
+**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,14 +46,7 @@ Locale ID, including the language, script, and region.
 numberingSystem: string
 ```
 
-Numbering system. The value can be:
-
-**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**,   
-**diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**,   
-**kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**,   
-**mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**, **mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**,   
-**shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**,   
-**tirh**, **vaii**, **wara**, or **wcho**.
+Numbering system. The value can be: **adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**, **diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**, **kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**, **mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr** , **mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**, **shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**, **tirh**, **vaii**, **wara**, or **wcho**.
 
 **Type:** string
 
@@ -61,7 +54,7 @@ Numbering system. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [numberingSystem]]([Intl.ResolvedRelativeTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numberingsystem))
+**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numberingsystem)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -75,10 +68,7 @@ Numbering system. The value can be:
 numeric: string
 ```
 
-Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**.
-
-For details about their display effects, see   
-[Table 23](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**. For details about their display effects, see Table 23.
 
 **Type:** string
 
@@ -86,7 +76,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [numeric]]([Intl.ResolvedRelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numeric))
+**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numeric)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -100,10 +90,7 @@ For details about their display effects, see
 style: string
 ```
 
-Length of an internationalized message. The value can be **long**, **short**, or **narrow**.
-
-For details about their display effects, see   
-[Table 24](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Length of an internationalized message. The value can be **long**, **short**, or **narrow**. For details about their display effects, see Table 24.
 
 **Type:** string
 
@@ -111,7 +98,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [style]]([Intl.ResolvedRelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#style))
+**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#style)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

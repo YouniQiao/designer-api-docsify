@@ -3,6 +3,7 @@
 ## TextArea
 
 ```TypeScript
+@ComponentBuilder
 export declare function TextArea(
     value?: TextAreaOptions
 ): TextAreaAttribute
@@ -14,9 +15,11 @@ Defines TextArea Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute--><!--Device-unnamed-export declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function TextArea(    value?: TextAreaOptions): TextAreaAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines TextArea Component.
 
 | Type | Description |
 | --- | --- |
-| [TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md) |  |
+| TextAreaAttribute |  |
 
 
 ## TextArea
 
 ```TypeScript
+@Builder
 export declare function TextArea(
     style: CustomBuilderT<TextAreaAttribute>,
 ): TextAreaAttribute
@@ -47,11 +51,11 @@ Defines TextArea Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute--><!--Device-unnamed-export declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute--><!--Device-unnamed-@Builderexport declare function TextArea(    style: CustomBuilderT<TextAreaAttribute>,): TextAreaAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines TextArea Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md)&gt; | Yes | TextArea attribute instance |
+| style | CustomBuilderT&lt;TextAreaAttribute&gt; | Yes | TextArea attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md) |  |
+| TextAreaAttribute |  |
 

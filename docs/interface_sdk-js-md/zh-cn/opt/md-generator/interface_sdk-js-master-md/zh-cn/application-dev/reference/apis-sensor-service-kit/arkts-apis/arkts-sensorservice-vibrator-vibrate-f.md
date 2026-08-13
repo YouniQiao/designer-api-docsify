@@ -6,19 +6,13 @@
 function vibrate(duration: number, callback?: AsyncCallback<void>): void
 ```
 
-按照指定持续时间触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
-> 替代。
+按照指定持续时间触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [startVibration](vibrator.startVibration(effect:)
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -55,18 +49,13 @@ vibrator.vibrate(1000, (error: BusinessError) => {
 function vibrate(duration: number): Promise<void>
 ```
 
-按照指定持续时间触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1)替代。
+按照指定持续时间触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [startVibration](vibrator.startVibration(effect:)
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -106,18 +95,13 @@ vibrator.vibrate(1000).then(() => {
 function vibrate(effectId: EffectId): Promise<void>
 ```
 
-按照预置振动效果触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1)替代。
+按照预置振动效果触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [startVibration](vibrator.startVibration(effect:)
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -157,19 +141,13 @@ vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
 function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 ```
 
-按照指定振动效果触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
-> 替代。
+按照指定振动效果触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [startVibration](vibrator.startVibration(effect:)
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.VIBRATE
 

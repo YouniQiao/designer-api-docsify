@@ -8,7 +8,9 @@ Message options for the dialog box, combining message content with text style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
-<!--Device-dialog-declare interface DialogMessage extends DialogTextStyleOptions--><!--Device-dialog-declare interface DialogMessage extends DialogTextStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-dialog-declare interface DialogMessage--><!--Device-dialog-declare interface DialogMessage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,6 +33,8 @@ Message content of the dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Describes app ID information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-audio-interface AppIdInfo--><!--Device-audio-interface AppIdInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -28,6 +30,8 @@ App full token ID.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppIdInfo-appFullTokenId: long--><!--Device-AppIdInfo-appFullTokenId: long-End-->
@@ -47,6 +51,8 @@ App PID.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ App token ID.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppIdInfo-appTokenId: int--><!--Device-AppIdInfo-appTokenId: int-End-->
@@ -87,6 +95,8 @@ App UID.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

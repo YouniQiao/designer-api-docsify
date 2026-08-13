@@ -6,6 +6,8 @@ Net quota policies, including matching network rule usage periods, restrictions,
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-policy-export interface NetQuotaPolicy--><!--Device-policy-export interface NetQuotaPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -32,6 +34,8 @@ The matching rules of network quota policies.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-NetQuotaPolicy-networkMatchRule: NetworkMatchRule--><!--Device-NetQuotaPolicy-networkMatchRule: NetworkMatchRule-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -51,6 +55,8 @@ Policies that limit network quota.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-NetQuotaPolicy-quotaPolicy: QuotaPolicy--><!--Device-NetQuotaPolicy-quotaPolicy: QuotaPolicy-End-->
 

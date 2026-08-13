@@ -9,7 +9,9 @@ The query media entity by keyword event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -23,7 +25,7 @@ The query media entity by keyword event.
 | --- | --- | --- | --- |
 | keyword | string | Yes | keyword |
 | searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Yes | search type |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
+| pageIndex | int | Yes | page index |
 
 **Return value:**
 

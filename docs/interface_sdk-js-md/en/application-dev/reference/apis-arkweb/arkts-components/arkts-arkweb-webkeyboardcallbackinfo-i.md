@@ -1,10 +1,12 @@
 # WebKeyboardCallbackInfo
 
-Represents input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including [WebKeyboardController](web) and editable element attributes.
+Represents input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including WebKeyboardController and editable element attributes.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface WebKeyboardCallbackInfo--><!--Device-unnamed-declare interface WebKeyboardCallbackInfo-End-->
 
@@ -23,6 +25,8 @@ Attribute of the web page element that triggers the display of the soft keyboard
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,6 +47,8 @@ Controller used to control the input, deletion, and closure of the custom keyboa
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

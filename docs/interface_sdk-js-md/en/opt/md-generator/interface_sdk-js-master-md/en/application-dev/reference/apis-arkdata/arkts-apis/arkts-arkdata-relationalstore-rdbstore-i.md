@@ -1,14 +1,10 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store.
+Provides APIs for managing data in an RDB store. Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getRdbStore) method and then call the corresponding method through the instance. In addition, use [execute](#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
-Before using the following APIs, you should obtain an **RdbStore** instance by calling the   
-[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getRdbStore-1) method and then call the corresponding method through the instance.
+**Since:** 23
 
-In addition, use   
-[execute](#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface RdbStore--><!--Device-relationalStore-interface RdbStore-End-->
 
@@ -28,7 +24,9 @@ attach(fullPath: string, attachName: string, waitTime?: number) : Promise<number
 
 Attaches a database file to the currently linked database.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-attach(fullPath: string, attachName: string, waitTime?: int) : Promise<int>--><!--Device-RdbStore-attach(fullPath: string, attachName: string, waitTime?: int) : Promise<int>-End-->
 
@@ -52,28 +50,28 @@ Attaches a database file to the currently linked database.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800016-duplicate-rdb-alias) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800016](../errorcode-data-rdb.md#14800016-duplicate-rdb-alias) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## attach
 
@@ -83,7 +81,9 @@ attach(context: Context, config: StoreConfig, attachName: string, waitTime?: num
 
 Attaches a database file to the currently linked database.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-attach(context: Context, config: StoreConfig, attachName: string, waitTime?: int) : Promise<int>--><!--Device-RdbStore-attach(context: Context, config: StoreConfig, attachName: string, waitTime?: int) : Promise<int>-End-->
 
@@ -108,30 +108,30 @@ Attaches a database file to the currently linked database.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801001-stage-model-required) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
-| [14801002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800016-duplicate-rdb-alias) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800016](../errorcode-data-rdb.md#14800016-duplicate-rdb-alias) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## backup
 
@@ -141,7 +141,9 @@ backup(destName: string, callback: AsyncCallback<void>): void
 
 Backs up a database in a specified name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-backup(destName: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-backup(destName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -158,26 +160,26 @@ Backs up a database in a specified name.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## backup
 
@@ -187,7 +189,9 @@ backup(destName: string): Promise<void>
 
 Backs up a database in a specified name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-backup(destName: string): Promise<void>--><!--Device-RdbStore-backup(destName: string): Promise<void>-End-->
 
@@ -209,25 +213,25 @@ Backs up a database in a specified name.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## batchInsert
 
@@ -235,13 +239,11 @@ Backs up a database in a specified name.
 batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void
 ```
 
-Inserts a batch of data into the target table.
+Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
-The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
+**Since:** 23
 
-Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy.The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void-End-->
 
@@ -259,26 +261,26 @@ Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-r
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## batchInsert
 
@@ -286,13 +288,11 @@ Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-r
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 ```
 
-Inserts a batch of data into the target table.
+Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
-The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
+**Since:** 23
 
-Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy.The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>-End-->
 
@@ -315,26 +315,26 @@ Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-r
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## batchInsertSync
 
@@ -342,13 +342,11 @@ Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-r
 batchInsertSync(table: string, values: Array<ValuesBucket>): number
 ```
 
-Inserts a batch of data into the target table.
+Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
-The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
+**Since:** 23
 
-Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy.The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsertSync(table: string, values: Array<ValuesBucket>): long--><!--Device-RdbStore-batchInsertSync(table: string, values: Array<ValuesBucket>): long-End-->
 
@@ -371,26 +369,26 @@ Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-r
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## batchInsertWithConflictResolution
 
@@ -402,11 +400,11 @@ batchInsertWithConflictResolution(
     ): Promise<number>
 ```
 
-Inserts a batch of data into the target table.
+Inserts a batch of data into the target table. A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,         conflict: ConflictResolution    ): Promise<long>--><!--Device-RdbStore-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,         conflict: ConflictResolution    ): Promise<long>-End-->
 
@@ -430,26 +428,26 @@ A maximum of 32766 parameters can be inserted at a time. If the number of parame
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## batchInsertWithConflictResolutionSync
 
@@ -461,11 +459,11 @@ batchInsertWithConflictResolutionSync(
     ): number
 ```
 
-Inserts a batch of data into the target table.
+Inserts a batch of data into the target table. A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsertWithConflictResolutionSync(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): long--><!--Device-RdbStore-batchInsertWithConflictResolutionSync(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): long-End-->
 
@@ -489,26 +487,26 @@ A maximum of 32766 parameters can be inserted at a time. If the number of parame
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## batchInsertWithReturning
 
@@ -517,11 +515,11 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Inserts a batch of data into the target table and return a resultSet of changed fields.
-
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table and return a resultSet of changed fields. A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -548,18 +546,18 @@ A maximum of 32766 parameters can be inserted at a time. If the number of parame
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## batchInsertWithReturningSync
 
@@ -568,11 +566,11 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-Inserts a batch of data into the target table and return a resultSet of changed fields.
-
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table and return a resultSet of changed fields. A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -599,18 +597,18 @@ A maximum of 32766 parameters can be inserted at a time. If the number of parame
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## beginTrans
 
@@ -620,7 +618,9 @@ beginTrans(): Promise<number>
 
 Begins a transaction before executing the SQL statement.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-beginTrans(): Promise<long>--><!--Device-RdbStore-beginTrans(): Promise<long>-End-->
 
@@ -636,27 +636,27 @@ Begins a transaction before executing the SQL statement.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## beginTransaction
 
@@ -666,7 +666,9 @@ beginTransaction(): void
 
 BeginTransaction before execute your sql.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
 
@@ -676,26 +678,26 @@ BeginTransaction before execute your sql.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## cleanDirtyData
 
@@ -703,11 +705,11 @@ BeginTransaction before execute your sql.
 cleanDirtyData(table: string, cursor: number, callback: AsyncCallback<void>): void
 ```
 
-Cleans the dirty data, which is the data deleted in the cloud.
+Cleans the dirty data, which is the data deleted in the cloud. Data with a cursor smaller than the specified cursor will be cleaned up.
 
-Data with a cursor smaller than the specified cursor will be cleaned up.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-RdbStore-cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void--><!--Device-RdbStore-cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void-End-->
 
@@ -725,26 +727,26 @@ Data with a cursor smaller than the specified cursor will be cleaned up.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## cleanDirtyData
 
@@ -754,7 +756,9 @@ cleanDirtyData(table: string, callback: AsyncCallback<void>): void
 
 Cleans all dirty data deleted in the cloud.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-cleanDirtyData(table: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-cleanDirtyData(table: string, callback: AsyncCallback<void>): void-End-->
 
@@ -771,26 +775,26 @@ Cleans all dirty data deleted in the cloud.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## cleanDirtyData
 
@@ -798,11 +802,11 @@ Cleans all dirty data deleted in the cloud.
 cleanDirtyData(table: string, cursor?: number): Promise<void>
 ```
 
-Cleans dirty data deleted in the cloud.
+Cleans dirty data deleted in the cloud. If a cursor is specified, data with a cursor smaller than the specified cursor will be cleaned up. otherwise clean all.
 
-If a cursor is specified, data with a cursor smaller than the specified cursor will be cleaned up.otherwise clean all.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-RdbStore-cleanDirtyData(table: string, cursor?: long): Promise<void>--><!--Device-RdbStore-cleanDirtyData(table: string, cursor?: long): Promise<void>-End-->
 
@@ -825,26 +829,26 @@ If a cursor is specified, data with a cursor smaller than the specified cursor w
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## close
 
@@ -854,7 +858,9 @@ close(): Promise<void>
 
 Close the RdbStore and all resultSets.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-close(): Promise<void>--><!--Device-RdbStore-close(): Promise<void>-End-->
 
@@ -870,8 +876,8 @@ Close the RdbStore and all resultSets.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
 
 ## cloudSync
 
@@ -881,7 +887,9 @@ cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCa
 
 Sync data to cloud.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCallback<void>): void-End-->
 
@@ -899,9 +907,9 @@ Sync data to cloud.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## cloudSync
 
@@ -911,7 +919,9 @@ cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>
 
 Sync data to cloud.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>--><!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>-End-->
 
@@ -934,9 +944,9 @@ Sync data to cloud.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## cloudSync
 
@@ -951,7 +961,9 @@ cloudSync(
 
 Sync data to cloud.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-cloudSync(      mode: SyncMode,      tables: string[],      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void--><!--Device-RdbStore-cloudSync(      mode: SyncMode,      tables: string[],      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -970,9 +982,9 @@ Sync data to cloud.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## cloudSync
 
@@ -982,7 +994,9 @@ cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>)
 
 Sync data to cloud.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>): Promise<void>--><!--Device-RdbStore-cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>): Promise<void>-End-->
 
@@ -1006,9 +1020,9 @@ Sync data to cloud.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## cloudSyncEx
 
@@ -1019,6 +1033,8 @@ cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promi
 Synchronizes data to the cloud. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1043,7 +1059,7 @@ Synchronizes data to the cloud. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## commit
 
@@ -1053,7 +1069,9 @@ commit(): void
 
 Commit the the sql you have executed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-commit(): void--><!--Device-RdbStore-commit(): void-End-->
 
@@ -1063,25 +1081,25 @@ Commit the the sql you have executed.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## commit
 
@@ -1091,7 +1109,9 @@ commit(txId : number): Promise<void>
 
 Commits the SQL statement executed.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-commit(txId : long): Promise<void>--><!--Device-RdbStore-commit(txId : long): Promise<void>-End-->
 
@@ -1113,25 +1133,25 @@ Commits the SQL statement executed.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## createTransaction
 
@@ -1141,7 +1161,9 @@ createTransaction(options?: TransactionOptions): Promise<Transaction>
 
 create a transaction instance and begin.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-createTransaction(options?: TransactionOptions): Promise<Transaction>--><!--Device-RdbStore-createTransaction(options?: TransactionOptions): Promise<Transaction>-End-->
 
@@ -1163,16 +1185,16 @@ create a transaction instance and begin.
 
 | Error Code ID |
 | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## delete
 
@@ -1182,7 +1204,9 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 Deletes data from the database based on a specified instance object of RdbPredicates.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<long>): void--><!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<long>): void-End-->
 
@@ -1199,26 +1223,26 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## delete
 
@@ -1228,7 +1252,9 @@ delete(predicates: RdbPredicates): Promise<number>
 
 Deletes data from the database based on a specified instance object of RdbPredicates.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<long>--><!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<long>-End-->
 
@@ -1250,26 +1276,26 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## deleteSync
 
@@ -1279,7 +1305,9 @@ deleteSync(predicates: RdbPredicates): number
 
 Deletes data from the database based on a specified instance object of RdbPredicates with sync interface.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-deleteSync(predicates: RdbPredicates): long--><!--Device-RdbStore-deleteSync(predicates: RdbPredicates): long-End-->
 
@@ -1301,26 +1329,26 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## deleteWithReturning
 
@@ -1331,6 +1359,8 @@ deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise
 Deletes data from the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1355,18 +1385,18 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## deleteWithReturningSync
 
@@ -1377,6 +1407,8 @@ deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Res
 Deletes data from the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1401,18 +1433,18 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## detach
 
@@ -1422,7 +1454,9 @@ detach(attachName: string, waitTime?: number) : Promise<number>
 
 Detaches a database from this database.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-detach(attachName: string, waitTime?: int) : Promise<int>--><!--Device-RdbStore-detach(attachName: string, waitTime?: int) : Promise<int>-End-->
 
@@ -1445,27 +1479,27 @@ Detaches a database from this database.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
-## emit
+## emit_string
 
 ```TypeScript
 emit(event: string): void
@@ -1473,7 +1507,9 @@ emit(event: string): void
 
 Notifies the registered observers of a change to the data resource specified by Uri.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-emit(event: string): void--><!--Device-RdbStore-emit(event: string): void-End-->
 
@@ -1489,11 +1525,11 @@ Notifies the registered observers of a change to the data resource specified by 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800050](../errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## execute
 
@@ -1503,7 +1539,9 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 
 Executes a SQL statement that contains specified parameters and returns a value of ValueType.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-execute(sql: string, args?: Array<ValueType>): Promise<ValueType>--><!--Device-RdbStore-execute(sql: string, args?: Array<ValueType>): Promise<ValueType>-End-->
 
@@ -1526,27 +1564,27 @@ Executes a SQL statement that contains specified parameters and returns a value 
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## execute
 
@@ -1556,7 +1594,9 @@ execute(sql: string, txId: number, args?: Array<ValueType>): Promise<ValueType>
 
 Executes a SQL statement that contains specified parameters and returns a value of ValueType.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>--><!--Device-RdbStore-execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>-End-->
 
@@ -1580,27 +1620,27 @@ Executes a SQL statement that contains specified parameters and returns a value 
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## executeSql
 
@@ -1610,7 +1650,9 @@ executeSql(sql: string, callback: AsyncCallback<void>): void
 
 Executes a SQL statement that contains specified parameters but returns no value.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-executeSql(sql: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1627,27 +1669,27 @@ Executes a SQL statement that contains specified parameters but returns no value
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## executeSql
 
@@ -1657,7 +1699,9 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 Executes a SQL statement that contains specified parameters but returns no value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
 
@@ -1675,27 +1719,27 @@ Executes a SQL statement that contains specified parameters but returns no value
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## executeSql
 
@@ -1705,7 +1749,9 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 Executes a SQL statement that contains specified parameters but returns no value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
@@ -1728,27 +1774,27 @@ Executes a SQL statement that contains specified parameters but returns no value
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## executeSync
 
@@ -1758,7 +1804,9 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 
 Executes a SQL statement that contains specified parameters and returns a value of ValueType with sync interface.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-executeSync(sql: string, args?: Array<ValueType>): ValueType--><!--Device-RdbStore-executeSync(sql: string, args?: Array<ValueType>): ValueType-End-->
 
@@ -1781,26 +1829,26 @@ Executes a SQL statement that contains specified parameters and returns a value 
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getModifyTime
 
@@ -1810,7 +1858,9 @@ getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Pro
 
 Obtains the modify time of rows corresponding to the primary keys.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Promise<ModifyTime>--><!--Device-RdbStore-getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Promise<ModifyTime>-End-->
 
@@ -1834,26 +1884,26 @@ Obtains the modify time of rows corresponding to the primary keys.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getModifyTime
 
@@ -1868,7 +1918,9 @@ getModifyTime(
 
 Obtains the modify time of rows corresponding to the primary keys.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-getModifyTime(      table: string,      columnName: string,      primaryKeys: PRIKeyType[],      callback: AsyncCallback<ModifyTime>    ): void--><!--Device-RdbStore-getModifyTime(      table: string,      columnName: string,      primaryKeys: PRIKeyType[],      callback: AsyncCallback<ModifyTime>    ): void-End-->
 
@@ -1887,26 +1939,26 @@ Obtains the modify time of rows corresponding to the primary keys.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## insert
 
@@ -1916,7 +1968,9 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 
 Inserts a row of data into the target table.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<long>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<long>): void-End-->
 
@@ -1934,26 +1988,26 @@ Inserts a row of data into the target table.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## insert
 
@@ -1963,7 +2017,9 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callba
 
 Inserts a row of data into the target table.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callback: AsyncCallback<long>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callback: AsyncCallback<long>): void-End-->
 
@@ -1982,26 +2038,26 @@ Inserts a row of data into the target table.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## insert
 
@@ -2011,7 +2067,9 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 Inserts a row of data into the target table.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<long>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<long>-End-->
 
@@ -2034,26 +2092,26 @@ Inserts a row of data into the target table.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## insert
 
@@ -2063,7 +2121,9 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promi
 
 Inserts a row of data into the target table.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promise<long>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promise<long>-End-->
 
@@ -2087,26 +2147,26 @@ Inserts a row of data into the target table.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## insertSync
 
@@ -2116,7 +2176,9 @@ insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): 
 
 Inserts a row of data into the target table with sync interface.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): long--><!--Device-RdbStore-insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): long-End-->
 
@@ -2140,26 +2202,26 @@ Inserts a row of data into the target table with sync interface.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## insertSync
 
@@ -2170,6 +2232,8 @@ insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict
 Inserts a row of data into the target table with sync interface.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict?: ConflictResolution): number--><!--Device-RdbStore-insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict?: ConflictResolution): number-End-->
 
@@ -2193,26 +2257,26 @@ Inserts a row of data into the target table with sync interface.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## lockRow
 
@@ -2222,7 +2286,9 @@ lockRow(predicates: RdbPredicates): Promise<void>
 
 Locks data from the database based on a specified instance object of RdbPredicates.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-lockRow(predicates: RdbPredicates): Promise<void>--><!--Device-RdbStore-lockRow(predicates: RdbPredicates): Promise<void>-End-->
 
@@ -2244,26 +2310,26 @@ Locks data from the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800018-no-match) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800018](../errorcode-data-rdb.md#14800018-no-match) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## obtainDistributedTableName
 
@@ -2271,9 +2337,11 @@ Locks data from the database based on a specified instance object of RdbPredicat
 obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void
 ```
 
-Obtain distributed table name of specified remote device according to local table name.When query remote device database, distributed table name is needed.
+Obtain distributed table name of specified remote device according to local table name. When query remote device database, distributed table name is needed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -2293,10 +2361,10 @@ Obtain distributed table name of specified remote device according to local tabl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## obtainDistributedTableName
 
@@ -2304,9 +2372,11 @@ Obtain distributed table name of specified remote device according to local tabl
 obtainDistributedTableName(device: string, table: string): Promise<string>
 ```
 
-Obtain distributed table name of specified remote device according to local table name.When query remote device database, distributed table name is needed.
+Obtain distributed table name of specified remote device according to local table name. When query remote device database, distributed table name is needed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -2331,12 +2401,192 @@ Obtain distributed table name of specified remote device according to local tabl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
-## off
+## offAutoSyncProgress
+
+```TypeScript
+offAutoSyncProgress(progress?: Callback<ProgressDetails>): void
+```
+
+Unregister the database auto synchronization callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-offAutoSyncProgress(progress?: Callback<ProgressDetails>): void--><!--Device-RdbStore-offAutoSyncProgress(progress?: Callback<ProgressDetails>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## offDataChange
+
+```TypeScript
+offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void
+```
+
+Remove specified observer of specified type from the database.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void--><!--Device-RdbStore-offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## offPerfStat
+
+```TypeScript
+offPerfStat(observer?: Callback<SqlExecutionInfo>): void
+```
+
+Unsubscribes from the SQL performance statistics.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-offPerfStat(observer?: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-offPerfStat(observer?: Callback<SqlExecutionInfo>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## offSqliteErrorOccurred
+
+```TypeScript
+offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void
+```
+
+Unsubscribes from the SQL execution error logs.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void--><!--Device-RdbStore-offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## offStatistics
+
+```TypeScript
+offStatistics(observer?: Callback<SqlExecutionInfo> ): void
+```
+
+Unsubscribes from the SQL statistics.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RdbStore-offStatistics(observer?: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-offStatistics(observer?: Callback<SqlExecutionInfo> ): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## off_autoSyncProgress
+
+```TypeScript
+off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void
+```
+
+Unregister the database auto synchronization callback.
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void--><!--Device-RdbStore-off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'autoSyncProgress' | Yes |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## off_dataChange
 
 ```TypeScript
 off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
@@ -2345,6 +2595,8 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 Remove specified observer of specified type from the database.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -2362,11 +2614,11 @@ Remove specified observer of specified type from the database.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
-## off
+## off_dataChange
 
 ```TypeScript
 off(
@@ -2379,6 +2631,8 @@ off(
 Remove specified observer of specified type from the database.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-off(      event: 'dataChange',      type: SubscribeType,      observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void--><!--Device-RdbStore-off(      event: 'dataChange',      type: SubscribeType,      observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void-End-->
 
@@ -2396,12 +2650,104 @@ Remove specified observer of specified type from the database.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
-## off
+## off_perfStat
+
+```TypeScript
+off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void
+```
+
+Unsubscribes from the SQL performance statistics.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'perfStat' | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## off_sqliteErrorOccurred
+
+```TypeScript
+off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void
+```
+
+Unsubscribes from the SQL execution error logs.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void--><!--Device-RdbStore-off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'sqliteErrorOccurred' | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## off_statistics
+
+```TypeScript
+off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void
+```
+
+Unsubscribes from the SQL statistics.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'statistics' | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## off_string
 
 ```TypeScript
 off(event: string, interProcess: boolean, observer?: Callback<void>): void
@@ -2409,7 +2755,9 @@ off(event: string, interProcess: boolean, observer?: Callback<void>): void
 
 Remove specified observer of specified type from the database.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-off(event: string, interProcess: boolean, observer?: Callback<void>): void--><!--Device-RdbStore-off(event: string, interProcess: boolean, observer?: Callback<void>): void-End-->
 
@@ -2427,23 +2775,179 @@ Remove specified observer of specified type from the database.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800050](../errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
-## off
+## onAutoSyncProgress
 
 ```TypeScript
-off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void
+onAutoSyncProgress(progress: Callback<ProgressDetails>): void
 ```
 
-Unregister the database auto synchronization callback.
+Register an automatic synchronization callback to the database.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-onAutoSyncProgress(progress: Callback<ProgressDetails>): void--><!--Device-RdbStore-onAutoSyncProgress(progress: Callback<ProgressDetails>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## onDataChange
+
+```TypeScript
+onDataChange(
+      type: SubscribeType, 
+      observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>
+    ): void
+```
+
+Subscribes to data changes of this RDB store. The registered callback will be called when data in a distributed RDB store changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-onDataChange(      type: SubscribeType,       observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void--><!--Device-RdbStore-onDataChange(      type: SubscribeType,       observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## onPerfStat
+
+```TypeScript
+onPerfStat(observer: Callback<SqlExecutionInfo>): void
+```
+
+Subscribes to the SQL performance statistics.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-onPerfStat(observer: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-onPerfStat(observer: Callback<SqlExecutionInfo>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## onSqliteErrorOccurred
+
+```TypeScript
+onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void
+```
+
+Subscribes to the SQL execution error logs.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void--><!--Device-RdbStore-onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## onStatistics
+
+```TypeScript
+onStatistics(observer: Callback<SqlExecutionInfo> ): void
+```
+
+Subscribes to the SQL statistics.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RdbStore-onStatistics(observer: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-onStatistics(observer: Callback<SqlExecutionInfo> ): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## on_autoSyncProgress
+
+```TypeScript
+on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void
+```
+
+Register an automatic synchronization callback to the database.
 
 **Since:** 11
 
-<!--Device-RdbStore-off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void--><!--Device-RdbStore-off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-RdbStore-on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void--><!--Device-RdbStore-on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -2452,111 +2956,27 @@ Unregister the database auto synchronization callback.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'autoSyncProgress' | Yes |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
-## off
-
-```TypeScript
-off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void
-```
-
-Unsubscribes from the SQL statistics.
-
-**Since:** 12
-
-<!--Device-RdbStore-off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'statistics' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-
-## off
-
-```TypeScript
-off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void
-```
-
-Unsubscribes from the SQL performance statistics.
-
-**Since:** 20
-
-<!--Device-RdbStore-off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'perfStat' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-
-## off
-
-```TypeScript
-off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void
-```
-
-Unsubscribes from the SQL execution error logs.
-
-**Since:** 20
-
-<!--Device-RdbStore-off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void--><!--Device-RdbStore-off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'sqliteErrorOccurred' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-
-## on
+## on_dataChange
 
 ```TypeScript
 on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
 ```
 
-Subscribes to data changes of this RDB store.The registered callback will be called when data in a distributed RDB store changes.the callback will be invoked.
+Subscribes to data changes of this RDB store. The registered callback will be called when data in a distributed RDB store changes. the callback will be invoked.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -2574,19 +2994,21 @@ Subscribes to data changes of this RDB store.The registered callback will be cal
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
-## on
+## on_dataChange
 
 ```TypeScript
 on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void
 ```
 
-Subscribes to data changes of this RDB store.The registered callback will be called when data in a distributed RDB store changes.
+Subscribes to data changes of this RDB store. The registered callback will be called when data in a distributed RDB store changes.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void-End-->
 
@@ -2604,12 +3026,104 @@ Subscribes to data changes of this RDB store.The registered callback will be cal
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
-## on
+## on_perfStat
+
+```TypeScript
+on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void
+```
+
+Subscribes to the SQL performance statistics.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'perfStat' | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## on_sqliteErrorOccurred
+
+```TypeScript
+on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void
+```
+
+Subscribes to the SQL execution error logs.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void--><!--Device-RdbStore-on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'sqliteErrorOccurred' | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## on_statistics
+
+```TypeScript
+on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void
+```
+
+Subscribes to the SQL statistics.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-RdbStore-on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'statistics' | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+
+## on_string
 
 ```TypeScript
 on(event: string, interProcess: boolean, observer: Callback<void>): void
@@ -2617,7 +3131,9 @@ on(event: string, interProcess: boolean, observer: Callback<void>): void
 
 Registers an observer for the database.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-on(event: string, interProcess: boolean, observer: Callback<void>): void--><!--Device-RdbStore-on(event: string, interProcess: boolean, observer: Callback<void>): void-End-->
 
@@ -2635,126 +3151,11 @@ Registers an observer for the database.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-
-## on
-
-```TypeScript
-on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void
-```
-
-Register an automatic synchronization callback to the database.
-
-**Since:** 11
-
-<!--Device-RdbStore-on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void--><!--Device-RdbStore-on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'autoSyncProgress' | Yes |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-
-## on
-
-```TypeScript
-on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void
-```
-
-Subscribes to the SQL statistics.
-
-**Since:** 12
-
-<!--Device-RdbStore-on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'statistics' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-
-## on
-
-```TypeScript
-on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void
-```
-
-Subscribes to the SQL performance statistics.
-
-**Since:** 20
-
-<!--Device-RdbStore-on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'perfStat' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-
-## on
-
-```TypeScript
-on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void
-```
-
-Subscribes to the SQL execution error logs.
-
-**Since:** 20
-
-<!--Device-RdbStore-on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void--><!--Device-RdbStore-on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'sqliteErrorOccurred' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800050](../errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## query
 
@@ -2764,7 +3165,9 @@ query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void
 
 Queries data in the database based on specified conditions.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -2781,10 +3184,10 @@ Queries data in the database based on specified conditions.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## query
 
@@ -2794,7 +3197,9 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 Queries data in the database based on specified conditions.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -2812,10 +3217,10 @@ Queries data in the database based on specified conditions.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## query
 
@@ -2825,7 +3230,9 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 Queries data in the database based on specified conditions.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
@@ -2848,10 +3255,10 @@ Queries data in the database based on specified conditions.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## queryByStep
 
@@ -2862,6 +3269,8 @@ queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 Query data in the database step‑by‑step based on SQL statements.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2886,7 +3295,7 @@ Query data in the database step‑by‑step based on SQL statements.
 
 | Error Code ID |
 | --- |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## queryByStep
 
@@ -2897,6 +3306,8 @@ queryByStep(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultS
 Queries data in the database step‑by‑step based on specified conditions.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2921,7 +3332,7 @@ Queries data in the database step‑by‑step based on specified conditions.
 
 | Error Code ID |
 | --- |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## queryLockedRow
 
@@ -2931,7 +3342,9 @@ queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<Resu
 
 Queries locked data in the database based on specified conditions.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
@@ -2954,25 +3367,25 @@ Queries locked data in the database based on specified conditions.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## querySql
 
@@ -2982,7 +3395,9 @@ querySql(sql: string, callback: AsyncCallback<ResultSet>): void
 
 Queries data in the database based on SQL statement.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-querySql(sql: string, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -2999,10 +3414,10 @@ Queries data in the database based on SQL statement.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## querySql
 
@@ -3012,7 +3427,9 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 Queries data in the database based on SQL statement.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -3030,10 +3447,10 @@ Queries data in the database based on SQL statement.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## querySql
 
@@ -3043,7 +3460,9 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 Queries data in the database based on SQL statement.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
@@ -3066,10 +3485,10 @@ Queries data in the database based on SQL statement.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## querySqlSync
 
@@ -3079,7 +3498,9 @@ querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet
 
 Queries data in the database based on SQL statement with sync interface.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet--><!--Device-RdbStore-querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet-End-->
 
@@ -3102,10 +3523,10 @@ Queries data in the database based on SQL statement with sync interface.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## querySqlWithoutRowCount
 
@@ -3113,10 +3534,11 @@ Queries data in the database based on SQL statement with sync interface.
 querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the   
-[querySql](arkts-arkdata-relationalstore-transaction-i.md#querySql) API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
+Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the [querySql](arkts-arkdata-relationalstore-transaction-i.md#querySql) API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3141,8 +3563,8 @@ Queries data from the RDB store based on specified conditions without calculatin
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## querySqlWithoutRowCountSync
 
@@ -3150,11 +3572,11 @@ Queries data from the RDB store based on specified conditions without calculatin
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by   
-**querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the   
-[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) thread.
+Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#@ohos.taskpool) thread.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3179,8 +3601,8 @@ Queries data from the RDB store based on specified SQL statements without calcul
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## querySync
 
@@ -3190,7 +3612,9 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 
 Queries data in the database based on specified conditions with sync function.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet--><!--Device-RdbStore-querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet-End-->
 
@@ -3213,10 +3637,10 @@ Queries data in the database based on specified conditions with sync function.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## queryWithoutRowCount
 
@@ -3227,6 +3651,8 @@ queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promis
 Queries data without rowCount in the database based on specified conditions.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3251,7 +3677,7 @@ Queries data without rowCount in the database based on specified conditions.
 
 | Error Code ID |
 | --- |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## queryWithoutRowCountSync
 
@@ -3262,6 +3688,8 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 Queries data without rowCount in the database based on specified conditions with sync function.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3286,7 +3714,7 @@ Queries data without rowCount in the database based on specified conditions with
 
 | Error Code ID |
 | --- |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## rekey
 
@@ -3296,7 +3724,9 @@ rekey(cryptoParam?: CryptoParam): Promise<void>
 
 Changes the key used to encrypt the database.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-rekey(cryptoParam?: CryptoParam): Promise<void>--><!--Device-RdbStore-rekey(cryptoParam?: CryptoParam): Promise<void>-End-->
 
@@ -3318,18 +3748,18 @@ Changes the key used to encrypt the database.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## rekeyEx
 
@@ -3339,7 +3769,9 @@ rekeyEx(cryptoParam: CryptoParam): Promise<void>
 
 Change the encryption parameters of the database.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-rekeyEx(cryptoParam: CryptoParam): Promise<void>--><!--Device-RdbStore-rekeyEx(cryptoParam: CryptoParam): Promise<void>-End-->
 
@@ -3361,17 +3793,17 @@ Change the encryption parameters of the database.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## remoteQuery
 
@@ -3387,7 +3819,9 @@ remoteQuery(
 
 Queries remote data in the database based on specified conditions before Synchronizing Data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-remoteQuery(      device: string,      table: string,      predicates: RdbPredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void--><!--Device-RdbStore-remoteQuery(      device: string,      table: string,      predicates: RdbPredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void-End-->
 
@@ -3407,10 +3841,10 @@ Queries remote data in the database based on specified conditions before Synchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## remoteQuery
 
@@ -3420,7 +3854,9 @@ remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: A
 
 Queries remote data in the database based on specified conditions before Synchronizing Data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: Array<string>): Promise<ResultSet>-End-->
 
@@ -3445,10 +3881,10 @@ Queries remote data in the database based on specified conditions before Synchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## restore
 
@@ -3458,7 +3894,9 @@ restore(srcName: string, callback: AsyncCallback<void>): void
 
 Restores a database from a specified database file.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-restore(srcName: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-restore(srcName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -3475,25 +3913,25 @@ Restores a database from a specified database file.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## restore
 
@@ -3503,7 +3941,9 @@ restore(srcName: string): Promise<void>
 
 Restores a database from a specified database file.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-restore(srcName: string): Promise<void>--><!--Device-RdbStore-restore(srcName: string): Promise<void>-End-->
 
@@ -3525,25 +3965,25 @@ Restores a database from a specified database file.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## rollBack
 
@@ -3553,7 +3993,9 @@ rollBack(): void
 
 Roll back the sql you have already executed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
@@ -3563,25 +4005,25 @@ Roll back the sql you have already executed.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## rollback
 
@@ -3591,7 +4033,9 @@ rollback(txId : number): Promise<void>
 
 Rolls back the SQL statement executed.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-rollback(txId : long): Promise<void>--><!--Device-RdbStore-rollback(txId : long): Promise<void>-End-->
 
@@ -3613,25 +4057,25 @@ Rolls back the SQL statement executed.
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## setDistributedTables
 
@@ -3641,7 +4085,9 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 Set table to be distributed table.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3660,10 +4106,10 @@ Set table to be distributed table.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## setDistributedTables
 
@@ -3673,7 +4119,9 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 Set table to be distributed table.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3697,10 +4145,10 @@ Set table to be distributed table.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## setDistributedTables
 
@@ -3710,7 +4158,9 @@ setDistributedTables(tables: Array<string>, type: DistributedType, callback: Asy
 
 Set table to be distributed table.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3730,11 +4180,11 @@ Set table to be distributed table.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800051](../errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## setDistributedTables
 
@@ -3749,7 +4199,9 @@ setDistributedTables(
 
 Set table to be distributed table.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3770,11 +4222,11 @@ Set table to be distributed table.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800051](../errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## setDistributedTables
 
@@ -3784,7 +4236,9 @@ setDistributedTables(tables: Array<string>, type?: DistributedType, config?: Dis
 
 Set table to be a distributed table.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3810,11 +4264,11 @@ Set table to be a distributed table.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800051](../errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## setLocale
 
@@ -3824,7 +4278,9 @@ setLocale(locale: string) : Promise<void>
 
 Support for collations in different languages.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-setLocale(locale: string) : Promise<void>--><!--Device-RdbStore-setLocale(locale: string) : Promise<void>-End-->
 
@@ -3846,12 +4302,12 @@ Support for collations in different languages.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## stopCloudSync
 
@@ -3862,6 +4318,8 @@ stopCloudSync(): Promise<void>
 Stops synchronizing data with the cloud.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3879,8 +4337,8 @@ Stops synchronizing data with the cloud.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## sync
 
@@ -3890,7 +4348,9 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 Sync data between devices.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3910,10 +4370,10 @@ Sync data between devices.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## sync
 
@@ -3923,7 +4383,9 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 Sync data between devices.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3948,10 +4410,10 @@ Sync data between devices.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## syncEx
 
@@ -3959,11 +4421,11 @@ Sync data between devices.
 syncEx(mode: SyncMode, predicates: RdbPredicates): Promise<Array<SyncResult>>
 ```
 
-Sync data between devices.
-
-1. The difference between the sync interface and the syncEx interface is that they can return more error codes,but their functionality is similar.2. Before invoking synchronization, call setdistributedTable to set the distributed table.
+Sync data between devices. 1. The difference between the sync interface and the syncEx interface is that they can return more error codes, but their functionality is similar. 2. Before invoking synchronization, call setdistributedTable to set the distributed table.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3990,9 +4452,9 @@ Sync data between devices.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## unlockRow
 
@@ -4002,7 +4464,9 @@ unlockRow(predicates: RdbPredicates): Promise<void>
 
 Unlocks data from the database based on a specified instance object of RdbPredicates.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-unlockRow(predicates: RdbPredicates): Promise<void>--><!--Device-RdbStore-unlockRow(predicates: RdbPredicates): Promise<void>-End-->
 
@@ -4024,26 +4488,26 @@ Unlocks data from the database based on a specified instance object of RdbPredic
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800018-no-match) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800018](../errorcode-data-rdb.md#14800018-no-match) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## update
 
@@ -4053,7 +4517,9 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 Updates data in the database based on a specified instance object of RdbPredicates.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<long>): void--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<long>): void-End-->
 
@@ -4071,26 +4537,26 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## update
 
@@ -4105,7 +4571,9 @@ update(
 
 Updates data in the database based on a specified instance object of RdbPredicates.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-update(      values: ValuesBucket,      predicates: RdbPredicates,      conflict: ConflictResolution,      callback: AsyncCallback<long>    ): void--><!--Device-RdbStore-update(      values: ValuesBucket,      predicates: RdbPredicates,      conflict: ConflictResolution,      callback: AsyncCallback<long>    ): void-End-->
 
@@ -4124,26 +4592,26 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## update
 
@@ -4153,7 +4621,9 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 Updates data in the database based on a specified instance object of RdbPredicates.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>-End-->
 
@@ -4176,26 +4646,26 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## update
 
@@ -4205,7 +4675,9 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolu
 
 Updates data in the database based on a specified instance object of RdbPredicates.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution): Promise<long>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution): Promise<long>-End-->
 
@@ -4229,26 +4701,26 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## updateSync
 
@@ -4258,7 +4730,9 @@ updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictR
 
 Updates data in the database based on a specified instance object of RdbPredicates with sync interface.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long--><!--Device-RdbStore-updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long-End-->
 
@@ -4282,26 +4756,26 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## updateWithReturning
 
@@ -4313,6 +4787,8 @@ updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: Ret
 Updates data in the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4339,18 +4815,18 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## updateWithReturningSync
 
@@ -4362,6 +4838,8 @@ updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config:
 Updates data in the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4388,18 +4866,18 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
-| [14800032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
-| [14800024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## rebuilt
 
@@ -4411,7 +4889,9 @@ Set whether the database is rebuilt.
 
 **Type:** [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-rebuilt: RebuildType--><!--Device-RdbStore-rebuilt: RebuildType-End-->
 
@@ -4423,11 +4903,13 @@ Set whether the database is rebuilt.
 version: number
 ```
 
-Set RdbStore version. The version number must be an integer greater than 0.Obtains the RdbStore version.
+Set RdbStore version. The version number must be an integer greater than 0. Obtains the RdbStore version.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbStore-version: int--><!--Device-RdbStore-version: int-End-->
 

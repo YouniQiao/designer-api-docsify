@@ -4,6 +4,8 @@ Defines the dynamic layout container.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface DynamicLayoutInterface--><!--Device-unnamed-export interface DynamicLayoutInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,7 +16,7 @@ Defines the dynamic layout container.
 import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (algorithm: LayoutAlgorithm): DynamicLayoutAttribute
@@ -23,6 +25,8 @@ import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 Defines the dynamic layout container.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

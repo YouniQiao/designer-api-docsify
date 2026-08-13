@@ -2,7 +2,9 @@
 
 Represents a component type.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export enum ComponentType--><!--Device-update-export enum ComponentType-End-->
 
@@ -18,7 +20,9 @@ OTA = 1
 
 OTA upgrade package, which is a complete upgrade package used for firmware upgrade
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ComponentType-OTA = 1--><!--Device-ComponentType-OTA = 1-End-->
 

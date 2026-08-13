@@ -8,7 +8,9 @@ function getPointerStyleSync(windowId: number): PointerStyle
 
 查询指定窗口的鼠标样式类型，如向东箭头、向西箭头、向南箭头、向北箭头等。此接口仅支持获取本应用进程内窗口的鼠标样式类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle--><!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle-End-->
 
@@ -24,13 +26,13 @@ function getPointerStyleSync(windowId: number): PointerStyle
 
 | 类型 |
 | --- |
-| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) |
+| [PointerStyle](../../apis-na/arkts-apis/arkts-na-pointerstyle-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

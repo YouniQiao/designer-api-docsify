@@ -1,8 +1,6 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
-**dmInstance**.
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**.
 
 **Since:** 7
 
@@ -40,7 +38,7 @@ Authenticates a device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [bindTarget](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.bindTarget(deviceId:)
+**Substitutes:** [bindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindTarget)(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback&lt;{deviceId: string;}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -56,18 +54,18 @@ Authenticates a device.
 | --- | --- | --- | --- |
 | deviceInfo | DeviceInfo | Yes | Device information. |
 | authParam | AuthParam | Yes | Authentication parameter. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceId: string, pinToken?: number }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -159,18 +157,18 @@ Deletes credential information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | queryInfo | string | Yes | Credential information to delete. The value is a string of 1 to 64000 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ resultInfo: string }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -235,18 +233,18 @@ Obtains the information about a specific device based on the network ID. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. The value is a string of 1 to 255 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the information about the specified device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the information about the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -308,12 +306,12 @@ Obtains the information about a specific device based on the network ID. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -356,18 +354,18 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the local device information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the local device information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -422,11 +420,11 @@ Obtains local device information. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -473,13 +471,13 @@ Obtains local device information synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -507,7 +505,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceList](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceList(callback:)
+**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceList)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -521,18 +519,18 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;DeviceInfo&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceInfo&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -586,11 +584,11 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -637,13 +635,13 @@ Obtains all trusted devices synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -695,14 +693,14 @@ Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices onl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -743,18 +741,18 @@ Imports credential information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | credentialInfo | string | Yes | Credential information to import. The value is a string of 1 to 64000 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ resultInfo: string }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -819,128 +817,7 @@ try {
 }
 ```
 
-## off('uiStateChange')
-
-```TypeScript
-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
-```
-
-Unsubscribes from UI status changes.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** 11
-
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'uiStateChange' | Yes | Event type, which has a fixed value of **uiStateChange**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string }&gt; | No |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.off('uiStateChange');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('deviceStateChange')
-
-```TypeScript
-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
-```
-
-Unsubscribes from changes in the device state.
-
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** 11
-
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | Event type, which has a fixed value of **deviceStateChange**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | No |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.off('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('deviceFound')
+## off_deviceFound
 
 ```TypeScript
 off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void
@@ -954,7 +831,7 @@ Unsubscribes from device discovery events.
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -969,18 +846,18 @@ Unsubscribes from device discovery events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | Yes | Event type, which has a fixed value of **deviceFound**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -1008,7 +885,75 @@ try {
 }
 ```
 
-## off('discoverFail')
+## off_deviceStateChange
+
+```TypeScript
+off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
+```
+
+Unsubscribes from changes in the device state.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 11
+
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceStateChange' | Yes | Event type, which has a fixed value of **deviceStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | No |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  action: deviceManager.DeviceStateChangeAction = 0;
+  device: deviceManager.DeviceInfo = {
+    deviceId: "",
+    deviceName: "",
+    deviceType: 0,
+    networkId: "",
+    range: 0,
+    authForm:0
+  };
+}
+
+try {
+  dmInstance.off('deviceStateChange', (data: Data) => {
+    console.info('deviceStateChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## off_discoverFail
 
 ```TypeScript
 off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void
@@ -1022,7 +967,7 @@ Unsubscribes from device discovery failures.
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1037,18 +982,18 @@ Unsubscribes from device discovery failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | Yes | Event type, which has a fixed value of **discoverFail**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, reason: number }&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1068,64 +1013,7 @@ try {
 }
 ```
 
-## off('publishSuccess')
-
-```TypeScript
-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
-```
-
-Unsubscribes from device information publication success events.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** 11
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number }&gt; | No |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.off('publishSuccess', (data: Data) => {
-    console.info('publishSuccess' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('publishFail')
+## off_publishFail
 
 ```TypeScript
 off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void
@@ -1152,18 +1040,18 @@ Unsubscribes from device information publication failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'publishFail' | Yes | Event type, which has a fixed value of **publishFail**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number, reason: number }&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1183,7 +1071,64 @@ try {
 }
 ```
 
-## off('serviceDie')
+## off_publishSuccess
+
+```TypeScript
+off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
+```
+
+Unsubscribes from device information publication success events.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 11
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | No |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  publishId: number = 0;
+}
+
+try {
+  dmInstance.off('publishSuccess', (data: Data) => {
+    console.info('publishSuccess' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## off_serviceDie
 
 ```TypeScript
 off(type: 'serviceDie', callback?: () => void): void
@@ -1197,7 +1142,7 @@ Unsubscribes from dead events of the **DeviceManager** service.
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1218,12 +1163,12 @@ Unsubscribes from dead events of the **DeviceManager** service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1238,13 +1183,13 @@ try {
 }
 ```
 
-## on('uiStateChange')
+## off_uiStateChange
 
 ```TypeScript
-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void
+off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 ```
 
-Subscribes to UI status changes.
+Unsubscribes from UI status changes.
 
 **Since:** 9
 
@@ -1252,11 +1197,11 @@ Subscribes to UI status changes.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
-<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1267,112 +1212,31 @@ Subscribes to UI status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'uiStateChange' | Yes | Event type, which has a fixed value of **uiStateChange**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 
-class Data {
-  param: string = "";
-}
-
-interface TmpStr {
-  verifyFailed: boolean;
-}
-
 try {
-  dmInstance.on('uiStateChange', (data: Data) => {
-    console.info("uiStateChange executed, dialog closed" + JSON.stringify(data));
-    let tmpStr: TmpStr = JSON.parse(data.param);
-    let isShow = tmpStr.verifyFailed;
-    console.info("uiStateChange executed, dialog closed" + isShow);
-  });
+  dmInstance.off('uiStateChange');
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
 
-## on('deviceStateChange')
-
-```TypeScript
-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
-```
-
-Subscribes to changes in the device state.
-
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** 11
-
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | Event type. The value is **deviceStateChange**, which indicates a device state change event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.on('deviceStateChange', (data: Data) => {
-    console.info("deviceStateChange on:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## on('deviceFound')
+## on_deviceFound
 
 ```TypeScript
 on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void
@@ -1386,7 +1250,7 @@ Subscribes to device discovery events.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1401,18 +1265,18 @@ Subscribes to device discovery events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | Yes | Event type, which has a fixed value of **deviceFound**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -1440,7 +1304,75 @@ try {
 }
 ```
 
-## on('discoverFail')
+## on_deviceStateChange
+
+```TypeScript
+on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
+```
+
+Subscribes to changes in the device state.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceStateChange' | Yes | Event type. The value is **deviceStateChange**, which indicates a device state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | Yes |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  action: deviceManager.DeviceStateChangeAction = 0;
+  device: deviceManager.DeviceInfo = {
+    deviceId: "",
+    deviceName: "",
+    deviceType: 0,
+    networkId: "",
+    range: 0,
+    authForm:0
+  };
+}
+
+try {
+  dmInstance.on('deviceStateChange', (data: Data) => {
+    console.info("deviceStateChange on:" + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_discoverFail
 
 ```TypeScript
 on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void
@@ -1454,7 +1386,7 @@ Subscribes to device discovery failures.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1469,18 +1401,18 @@ Subscribes to device discovery failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | Yes | Event type, which has a fixed value of **discoverFail**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, reason: number }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1500,64 +1432,7 @@ try {
 }
 ```
 
-## on('publishSuccess')
-
-```TypeScript
-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
-```
-
-Subscribes to device information publication success events.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** 11
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number }&gt; | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.on('publishSuccess', (data: Data) => {
-    console.info("publishSuccess:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## on('publishFail')
+## on_publishFail
 
 ```TypeScript
 on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void
@@ -1584,18 +1459,18 @@ Subscribes to device information publication failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'publishFail' | Yes | Event type, which has a fixed value of **publishFail**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number, reason: number }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1615,7 +1490,64 @@ try {
 }
 ```
 
-## on('serviceDie')
+## on_publishSuccess
+
+```TypeScript
+on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
+```
+
+Subscribes to device information publication success events.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 11
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | Yes |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  publishId: number = 0;
+}
+
+try {
+  dmInstance.on('publishSuccess', (data: Data) => {
+    console.info("publishSuccess:" + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_serviceDie
 
 ```TypeScript
 on(type: 'serviceDie', callback: () => void): void
@@ -1629,7 +1561,7 @@ Subscribes to dead events of the **DeviceManager** service.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1650,12 +1582,12 @@ Subscribes to dead events of the **DeviceManager** service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1667,6 +1599,72 @@ try {
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error("serviceDie errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_uiStateChange
+
+```TypeScript
+on(type: 'uiStateChange', callback: Callback<{ param: string }>): void
+```
+
+Subscribes to UI status changes.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'uiStateChange' | Yes | Event type, which has a fixed value of **uiStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | Yes |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  param: string = "";
+}
+
+interface TmpStr {
+  verifyFailed: boolean;
+}
+
+try {
+  dmInstance.on('uiStateChange', (data: Data) => {
+    console.info("uiStateChange executed, dialog closed" + JSON.stringify(data));
+    let tmpStr: TmpStr = JSON.parse(data.param);
+    let isShow = tmpStr.verifyFailed;
+    console.info("uiStateChange executed, dialog closed" + isShow);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
 
@@ -1702,15 +1700,15 @@ Publishes device information for discovery purposes. The publish process lasts 2
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [11600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600105-publish-unavailable) | Publish unavailable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [11600105](../../apis-distributedservice-kit/errorcode-device-manager.md#11600105-publish-unavailable) | Publish unavailable. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1767,13 +1765,13 @@ Releases this **DeviceManager** instance when it is no longer used.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1813,18 +1811,18 @@ Obtains the registration information of the credential.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | requestInfo | string | Yes | Request credential information. The value contains a maximum of 255 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ registerInfo: string }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ registerInfo: string }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1892,13 +1890,13 @@ Sets a user operation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified params is greater than 255. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified params is greater than 255. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1934,7 +1932,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1954,15 +1952,15 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2010,7 +2008,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2031,15 +2029,15 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2129,14 +2127,14 @@ Stops device discovery.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2185,14 +2183,14 @@ Deauthenticates a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2253,14 +2251,14 @@ Stops publishing device information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2302,18 +2300,18 @@ Verifies authentication information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authInfo | [AuthInfo](arkts-distributedservice-devicemanager-authinfo-i-sys.md) | Yes | Authentication information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceId: string, level: number }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, level: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

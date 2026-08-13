@@ -1,11 +1,8 @@
 # ImageSpan
 
-As a child of the [Text]{@link ./text} and [ContainerSpan]{@link ./container_span} components, the **ImageSpan**
-component is used to display inline images.
+As a child of the Text and ContainerSpan components, the **ImageSpan** component is used to display inline images.
 
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## ImageSpan
 
@@ -16,6 +13,8 @@ ImageSpan(value: ResourceStr | PixelMap)
 Defines the constructor of ImageSpan.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,5 +32,5 @@ Defines the constructor of ImageSpan.
 
 ## Summary
 
-- [ImageLoadResult](arkts-arkui-imagespan-imageloadresult-i.md)
-- [ImageCompleteCallback](arkts-arkui-imagespan-imagecompletecallback-t.md)
+- [ImageLoadResult](arkts-arkui-imageloadresult-i.md)
+- [ImageCompleteCallback](arkts-arkui-imagecompletecallback-t.md)

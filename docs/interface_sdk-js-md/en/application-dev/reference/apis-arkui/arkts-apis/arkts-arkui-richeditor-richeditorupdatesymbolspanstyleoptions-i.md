@@ -8,7 +8,9 @@ Defines symbol span style option of RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface RichEditorUpdateSymbolSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorUpdateSymbolSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface RichEditorUpdateSymbolSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorUpdateSymbolSpanStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Update the symbol span style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

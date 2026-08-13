@@ -12,13 +12,15 @@ import { i18n } from '@kit.LocalizationKit';
 export function getCalendar(locale: string, type?: string): Calendar
 ```
 
-Obtains the Calendar object for the specified locale and calendar type.
+Obtains the **Calendar** object for the specified locale and calendar type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar--><!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar-End-->
 
@@ -28,12 +30,12 @@ Obtains the Calendar object for the specified locale and calendar type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, zh-Hans-CN. |
-| type | string | No | Calendar. The value can be: "buddhist", "chinese", "coptic", "ethiopic", "hebrew", "gregory", "indian", "islamic_civil", "islamic_tbla", "islamic_umalqura", "japanese", or "persian". The default value is the default calendar of the locale. For details about the meanings and application scenarios of different values, see Calendar Setting. |
+| locale | string | Yes | [Locale ID](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
+| type | string | No | Calendar. The value can be buddhist, chinese, coptic, ethiopic, hebrew, gregory, indian,  islamic_civil, islamic_tbla, islamic_umalqura, japanese,  or persian. The default value is the default calendar of the locale. For details about the meanings and application scenarios of different values, see [Calendar Setting](../../../internationalization/i18n-calendar.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Calendar | Calendar object |
+| Calendar | Calendar** object. |
 

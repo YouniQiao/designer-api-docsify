@@ -1,15 +1,10 @@
 # FocusQuery
 
-FocusQuery provides APIs to check whether a focus mode is supported.
+FocusQuery provides APIs to check whether a focus mode is supported. > **NOTE：**> > - This interface was first introduced in API version 12. In this version, a compatibility change was made that > preserved the initial version information of inner elements. As a result, you might see outer element's @since > version number being higher than that of the inner elements. However, this discrepancy does not affect the > functionality of the interface.
 
-> **NOTE：**
-> 
-> - This interface was first introduced in API version 12. In this version, a compatibility change was made that
-> preserved the initial version information of inner elements. As a result, you might see outer element's @since
-> version number being higher than that of the inner elements. However, this discrepancy does not affect the
-> functionality of the interface.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
 
@@ -29,7 +24,9 @@ isFocusAssistSupported(): boolean
 
 Checks whether the focus assist is supported.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusQuery-isFocusAssistSupported(): boolean--><!--Device-FocusQuery-isFocusAssistSupported(): boolean-End-->
 
@@ -47,8 +44,8 @@ Checks whether the focus assist is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -76,7 +73,9 @@ isFocusDrivenTypeSupported(type: FocusDrivenType): boolean
 
 Checks whether a focus drive type is supported.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean--><!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean-End-->
 
@@ -100,9 +99,9 @@ Checks whether a focus drive type is supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -130,7 +129,9 @@ isFocusRangeTypeSupported(type: FocusRangeType): boolean
 
 Checks whether a focus range type is supported.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean--><!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean-End-->
 
@@ -154,9 +155,9 @@ Checks whether a focus range type is supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

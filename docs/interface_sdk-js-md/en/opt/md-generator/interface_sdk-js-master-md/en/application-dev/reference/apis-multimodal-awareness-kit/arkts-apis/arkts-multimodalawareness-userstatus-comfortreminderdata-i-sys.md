@@ -2,11 +2,13 @@
 
 Defines comfort reminder data.
 
-**Inheritance/Implementation:** ComfortReminderData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**Inheritance/Implementation:** ComfortReminderData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData-(System-API))
 
 **Since:** 26.0.0
 
-<!--Device-userStatus-export interface ComfortReminderData extends UserStatusData--><!--Device-userStatus-export interface ComfortReminderData extends UserStatusData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface ComfortReminderData--><!--Device-userStatus-export interface ComfortReminderData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -24,11 +26,13 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 eventType: number
 ```
 
-Event type.The value ranges from 0 to 1. 0: Gaze event, 1: Ambient sound event..
+Event type. The value ranges from 0 to 1. 0: Gaze event, 1: Ambient sound event..
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Fusion reminder data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComfortReminderData-fusionReminderData: ReminderLevel--><!--Device-ComfortReminderData-fusionReminderData: ReminderLevel-End-->
@@ -69,6 +75,8 @@ Swing reminder data.
 **Type:** [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

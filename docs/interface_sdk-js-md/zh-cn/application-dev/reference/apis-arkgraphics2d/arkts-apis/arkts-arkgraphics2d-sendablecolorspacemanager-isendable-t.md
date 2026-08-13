@@ -10,6 +10,8 @@ type ISendable = lang.ISendable
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-sendableColorSpaceManager-type ISendable = lang.ISendable--><!--Device-sendableColorSpaceManager-type ISendable = lang.ISendable-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core

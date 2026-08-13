@@ -12,25 +12,13 @@ import { componentUtils } from '@kit.ArkUI';
 function getRectangleById(id: string): ComponentInfo
 ```
 
-Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentUtils) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentUtils](@ohos.arkui.UIContext) object
-> associated with the current UI context. This API provides access to component coordinates and size information
-> after the target component completes layout. It is recommended that you invoke this API within
-> [layout completion callbacks](arkts-arkui-inspector.md#inspector). Note that dynamically created components
-> must be mounted to the component tree before this API can obtain their information, as unmounted components are
-> not measured or laid out by the UI framework. Always ensure that component mounting precedes information
-> retrieval attempts.
+Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component. > **NOTE：**> > - Since API version 10, you can use the > [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentUtils) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [ComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object > associated with the current UI context. This API provides access to component coordinates and size information > after the target component completes layout. It is recommended that you invoke this API within > [layout completion callbacks](arkts-arkui-inspector.md#@ohos.arkui.inspector). Note that dynamically created components > must be mounted to the component tree before this API can obtain their information, as unmounted components are > not measured or laid out by the UI framework. Always ensure that component mounting precedes information > retrieval attempts.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [getRectangleById](ohos.arkui.UIContext.ComponentUtils#getRectangleById)
+**Substitutes:** getRectangleById
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +44,7 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
 
 ## Examples
 

@@ -12,10 +12,11 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function updateReminder(reminderId: number, reminderReq: ReminderRequest): Promise<void>
 ```
 
-Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only   
-[valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated.
+Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -40,9 +41,9 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) |
-| [1700007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
 
 ## Examples
 

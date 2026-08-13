@@ -2,7 +2,9 @@
 
 Describes the parameters for displaying a child window or system window.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface ShowWindowOptions--><!--Device-window-interface ShowWindowOptions-End-->
 
@@ -20,14 +22,15 @@ import { window } from '@kit.ArkUI';
 focusOnShow?: boolean
 ```
 
-Whether the window automatically gains focus when  
-[showWindow()](arkts-arkui-window-window-i.md#showWindow-2) is called. The default value is **true**. This parameter does not take effect for the main window, modal window, and dialog boxes.
+Whether the window automatically gains focus when [showWindow()](arkts-arkui-window-window-i.md#showWindow) is called. The default value is **true**. This parameter does not take effect for the main window, modal window, and dialog boxes.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ShowWindowOptions-focusOnShow?: boolean--><!--Device-ShowWindowOptions-focusOnShow?: boolean-End-->
 

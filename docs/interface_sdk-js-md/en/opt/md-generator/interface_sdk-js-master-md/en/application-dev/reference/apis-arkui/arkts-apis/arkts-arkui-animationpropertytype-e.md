@@ -4,6 +4,8 @@ Enumerates animatable property types for component animations.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AnimationPropertyType--><!--Device-unnamed-declare enum AnimationPropertyType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ ROTATION = 0
 Rotation angles for the x, y, and z axes. Parameters: 3. Unit: degrees (°).
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Translation offsets for the x and y axes. Parameters: 2. Unit: px.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -54,6 +60,8 @@ Scale factors for the x and y axes. Parameters: 2. Value range: (-∞, +∞).
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -71,6 +79,8 @@ OPACITY = 3
 Opacity value. Parameters: 1. Value range: [0, 1].
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

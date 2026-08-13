@@ -12,9 +12,11 @@ import { preferences } from '@kit.ArkData';
 function deletePreferences(context: Context, name: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses an asynchronous callback to return the result.Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner.This API cannot be called concurrently with other **preferences** APIs.
+Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses an asynchronous callback to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,9 +36,9 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500010](../errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -85,9 +87,11 @@ class EntryAbility extends UIAbility {
 function deletePreferences(context: Context, options: Options, callback: AsyncCallback<void>): void
 ```
 
-Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses an asynchronous callback to return the result.Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner.This API cannot be called concurrently with other **preferences** APIs.
+Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses an asynchronous callback to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,12 +111,12 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [15501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-stage-model-required) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
-| [15501002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [15501001](../errorcode-preferences.md#15501001-stage-model-required) |
+| [15500010](../errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
+| [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -163,9 +167,11 @@ class EntryAbility extends UIAbility {
 function deletePreferences(context: Context, name: string): Promise<void>
 ```
 
-Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses a promise to return the result.Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner.This API cannot be called concurrently with other **preferences** APIs.
+Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses a promise to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -190,9 +196,9 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500010](../errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -239,9 +245,11 @@ class EntryAbility extends UIAbility {
 function deletePreferences(context: Context, options: Options): Promise<void>
 ```
 
-Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses a promise to return the result.Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner.This API cannot be called concurrently with other **preferences** APIs.
+Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses a promise to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -266,12 +274,12 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [15501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-stage-model-required) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
-| [15501002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [15501001](../errorcode-preferences.md#15501001-stage-model-required) |
+| [15500010](../errorcode-preferences.md#15500010-failed-to-delete-the-user-preference-persistence-file) |
+| [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 

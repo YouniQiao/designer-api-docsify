@@ -12,9 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function query(id: string, callback: AsyncCallback<TaskInfo>): void
 ```
 
-Queries specified task details.Creates a group based on GroupConfig
+Queries specified task details. Creates a group based on GroupConfig
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DOWNLOAD_SESSION_MANAGER or ohos.permission.UPLOAD_SESSION_MANAGER
 
@@ -35,11 +37,11 @@ Queries specified task details.Creates a group based on GroupConfig
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## query
@@ -50,7 +52,9 @@ function query(id: string): Promise<TaskInfo>
 
 Queries specified task details.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DOWNLOAD_SESSION_MANAGER or ohos.permission.UPLOAD_SESSION_MANAGER
 
@@ -76,8 +80,8 @@ Queries specified task details.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

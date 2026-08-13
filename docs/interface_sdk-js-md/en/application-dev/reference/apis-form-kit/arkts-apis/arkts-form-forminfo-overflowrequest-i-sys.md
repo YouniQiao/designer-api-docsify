@@ -2,9 +2,11 @@
 
 Provides OverflowRequest about request/cancel form's overflow
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface OverflowRequest--><!--Device-formInfo-interface OverflowRequest-End-->
 
@@ -28,9 +30,11 @@ The form id about request/cancel overflow animation
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OverflowRequest-formId: string--><!--Device-OverflowRequest-formId: string-End-->
 
@@ -48,9 +52,11 @@ Whether the form request or cancel overflow animation
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OverflowRequest-isOverflow: boolean--><!--Device-OverflowRequest-isOverflow: boolean-End-->
 
@@ -68,9 +74,11 @@ The form's overflow animation parameter
 
 **Type:** [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OverflowRequest-overflowInfo?: OverflowInfo--><!--Device-OverflowRequest-overflowInfo?: OverflowInfo-End-->
 

@@ -4,9 +4,11 @@ Shader material resource.
 
 **Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface ShaderMaterial extends Material--><!--Device-unnamed-export interface ShaderMaterial extends Material-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface ShaderMaterial--><!--Device-unnamed-export interface ShaderMaterial-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,7 +22,9 @@ Color shader of material.
 
 **Type:** [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ShaderMaterial-colorShader?: Shader--><!--Device-ShaderMaterial-colorShader?: Shader-End-->
 

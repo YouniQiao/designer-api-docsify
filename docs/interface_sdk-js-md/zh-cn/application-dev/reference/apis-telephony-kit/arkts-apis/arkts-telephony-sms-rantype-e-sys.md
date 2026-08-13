@@ -2,9 +2,11 @@
 
 设备网络制式。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export enum RanType--><!--Device-sms-export enum RanType-End-->
 
@@ -20,9 +22,11 @@ TYPE_GSM = 1
 
 GSM
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RanType-TYPE_GSM = 1--><!--Device-RanType-TYPE_GSM = 1-End-->
 
@@ -38,9 +42,11 @@ TYPE_CDMA = 2
 
 CMDA
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RanType-TYPE_CDMA = 2--><!--Device-RanType-TYPE_CDMA = 2-End-->
 

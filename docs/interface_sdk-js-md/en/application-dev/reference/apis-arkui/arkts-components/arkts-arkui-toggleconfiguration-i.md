@@ -1,15 +1,16 @@
 # ToggleConfiguration
 
-You need a custom class to implement the **ContentModifier** API. This API inherits from   
-[CommonConfiguration](CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. This API inherits from CommonConfiguration.
 
-**Inheritance/Implementation:** ToggleConfiguration extends [CommonConfiguration<ToggleConfiguration>](CommonConfiguration<ToggleConfiguration>)
+**Inheritance/Implementation:** ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>--><!--Device-unnamed-declare interface ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ToggleConfiguration--><!--Device-unnamed-declare interface ToggleConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,17 +20,15 @@ You need a custom class to implement the **ContentModifier** API. This API inher
 enabled: boolean
 ```
 
-Whether the toggle is enabled for state switching.
-
-**true**: The state can be changed. **false**: The state cannot be changed.
-
-Default value: **true**
+Whether the toggle is enabled for state switching. **true**: The state can be changed. **false**: The state cannot be changed. Default value: **true**
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,17 +44,15 @@ Default value: **true**
 isOn: boolean
 ```
 
-Whether the toggle is turned on.
-
-**true**: The toggle is turned on. **false**: The toggle is turned off.
-
-Default value: **false**
+Whether the toggle is turned on. **true**: The toggle is turned on. **false**: The toggle is turned off. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,15 +68,15 @@ Default value: **false**
 triggerChange: Callback<boolean>
 ```
 
-Callback invoked when the toggle's state changes.
-
-**true**: The toggle is turned on. **false**: The toggle is turned off.
+Callback invoked when the toggle's state changes. **true**: The toggle is turned on. **false**: The toggle is turned off.
 
 **Type:** Callback&lt;boolean&gt;
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

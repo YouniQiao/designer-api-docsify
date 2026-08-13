@@ -14,7 +14,9 @@ function getDefaultCellularDataSlotIdSync(): number
 
 Get the default cellular data card.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-data-function getDefaultCellularDataSlotIdSync(): int--><!--Device-data-function getDefaultCellularDataSlotIdSync(): int-End-->
 

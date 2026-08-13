@@ -20,7 +20,7 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](sensor.getRotationMatrix(rotationVector:)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -31,7 +31,7 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation matrix. |
 
 ## Examples
 
@@ -66,7 +66,7 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](sensor.getRotationMatrix(rotationVector:)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(rotationVector: Array&lt;double&gt;)
 
 <!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
@@ -116,7 +116,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](sensor.getRotationMatrix(gravity:)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
 
 <!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void-End-->
 
@@ -128,7 +128,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 | --- | --- | --- | --- |
 | gravity | Array&lt;number&gt; | Yes | Gravity vector. |
 | geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Yes | Callback used to return the rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Yes | Callback used to return the rotation matrix. |
 
 ## Examples
 
@@ -161,7 +161,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](sensor.getRotationMatrix(gravity:)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;)
 
 <!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>-End-->
 

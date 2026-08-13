@@ -8,7 +8,9 @@ function getTimezoneSync(): string
 
 获取系统时区，使用同步方式。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
 

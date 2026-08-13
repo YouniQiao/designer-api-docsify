@@ -27,16 +27,18 @@
   - [move(system api)](arkts-mechanic-mechanicmanager-move-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [moveBySpeed(system api)](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md)<!--DelEnd-->
-  - [off](arkts-mechanic-mechanicmanager-off-f.md)
+  - [off_attachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md)
   <!--Del-->
-  - [off(system api)](arkts-mechanic-mechanicmanager-off-f-sys.md)<!--DelEnd-->
+  - [off_rotationAxesStatusChange(system api)](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md)<!--DelEnd-->
+  - [off_trackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md)
   - [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md)
   <!--Del-->
   - [offRotationAxesStatusChange(system api)](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md)<!--DelEnd-->
   - [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md)
-  - [on](arkts-mechanic-mechanicmanager-on-f.md)
+  - [on_attachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md)
   <!--Del-->
-  - [on(system api)](arkts-mechanic-mechanicmanager-on-f-sys.md)<!--DelEnd-->
+  - [on_rotationAxesStatusChange(system api)](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md)<!--DelEnd-->
+  - [on_trackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md)
   - [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md)
   <!--Del-->
   - [onRotationAxesStatusChange(system api)](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md)<!--DelEnd-->

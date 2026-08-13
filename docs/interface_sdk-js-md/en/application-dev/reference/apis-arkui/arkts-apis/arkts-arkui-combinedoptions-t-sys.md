@@ -12,6 +12,8 @@ Used for ide.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-type CombinedOptions<T extends ViewModel, Data> = object &  Options<T, Data> &  ThisType<T & ViewModel & Data>--><!--Device-unnamed-type CombinedOptions<T extends ViewModel, Data> = object &  Options<T, Data> &  ThisType<T & ViewModel & Data>-End-->

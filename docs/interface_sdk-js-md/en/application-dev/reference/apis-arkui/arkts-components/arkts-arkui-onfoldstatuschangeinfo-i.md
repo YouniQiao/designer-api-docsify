@@ -1,16 +1,12 @@
 # OnFoldStatusChangeInfo
 
-Called when the folding state changes. This API takes effect only in landscape mode.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's @since version number is higher than inner elements'. This does not affect interface usability.
+Called when the folding state changes. This API takes effect only in landscape mode. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface OnFoldStatusChangeInfo--><!--Device-unnamed-interface OnFoldStatusChangeInfo-End-->
 
@@ -29,6 +25,8 @@ Current fold state of the device.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

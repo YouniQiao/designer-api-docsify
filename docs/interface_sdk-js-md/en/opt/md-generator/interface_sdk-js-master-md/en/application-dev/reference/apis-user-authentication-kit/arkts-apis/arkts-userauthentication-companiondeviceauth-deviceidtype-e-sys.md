@@ -4,6 +4,8 @@ Enumerates device ID types. They are used to define the device service identifie
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-companionDeviceAuth-enum DeviceIdType--><!--Device-companionDeviceAuth-enum DeviceIdType-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -19,6 +21,8 @@ UNIFIED_DEVICE_ID = 1
 Unified device ID. It is a system-defined device service ID type, used for unified device identification across devices.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ VENDOR_BEGIN = 10000
 Start value of the vendor-defined device ID type. The vendor can extend device ID types based on this value. The actual value must be greater than or equal to 10000 to avoid conflicts with the reserved system values [1-9999].
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

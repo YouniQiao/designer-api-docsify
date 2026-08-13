@@ -20,7 +20,7 @@ Set the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setPowerMode](ohos.wifiManagerExt/wifiManagerExt.setPowerMode)
+**Substitutes:** [setPowerMode](arkts-connectivity-wifimanagerext-setpowermode-f.md#setPowerMode)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 

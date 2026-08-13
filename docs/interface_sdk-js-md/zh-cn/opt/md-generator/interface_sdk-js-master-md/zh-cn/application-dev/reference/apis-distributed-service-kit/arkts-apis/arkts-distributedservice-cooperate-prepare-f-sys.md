@@ -12,7 +12,7 @@ function prepare(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [prepareCooperate](prepareCooperate(callback:)
+**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#prepareCooperate（系统接口）)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void--><!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -30,8 +30,8 @@ function prepare(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -64,7 +64,7 @@ function prepare(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#prepareCooperate)()
+**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#prepareCooperate（系统接口）)()
 
 <!--Device-cooperate-function prepare(): Promise<void>--><!--Device-cooperate-function prepare(): Promise<void>-End-->
 
@@ -82,8 +82,8 @@ function prepare(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

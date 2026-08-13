@@ -1,14 +1,10 @@
 # BackgroundTaskMode
 
-Main type of a continuous task. It is usually used together with the subtype   
-[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md#BackgroundTaskSubmode). For details, see the mapping table. The two types are newly added in API version 21 for   
-[requesting](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning-3) and   
-[updating](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1) continuous tasks.
+Main type of a continuous task. It is usually used together with the subtype [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md#BackgroundTaskSubmode). For details, see the mapping table. The two types are newly added in API version 21 for [requesting](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning) and [updating](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning) continuous tasks. When the main type of the continuous task is **MODE_SPECIAL_SCENARIO_PROCESSING**, or that of a non-PC/2-in-1 device is **MODE_TASK_KEEPING**, you need to request the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system) before calling APIs related to continuous tasks. In other scenarios, this permission is not required.
 
-When the main type of the continuous task is **MODE_SPECIAL_SCENARIO_PROCESSING**, or that of a non-PC/2-in-1 device is **MODE_TASK_KEEPING**, you need to request the ACL permission   
-[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)before calling APIs related to continuous tasks. In other scenarios, this permission is not required.
+**Since:** 24
 
-**Since:** 21
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export enum BackgroundTaskMode--><!--Device-backgroundTaskManager-export enum BackgroundTaskMode-End-->
 
@@ -22,7 +18,9 @@ MODE_ALLOW_WIFI_AWARE = 7
 
 WLAN-related services.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskMode-MODE_ALLOW_WIFI_AWARE = 7--><!--Device-BackgroundTaskMode-MODE_ALLOW_WIFI_AWARE = 7-End-->
 

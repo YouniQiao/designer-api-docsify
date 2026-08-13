@@ -8,7 +8,9 @@ function queryAllActivePrintJobs(): Promise<PrintJob[]>
 
 查询所有活跃中的打印任务，使用Promise进行异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -22,11 +24,11 @@ function queryAllActivePrintJobs(): Promise<PrintJob[]>
 
 | 类型 |
 | --- |
-| Promise&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)[]&gt; |
+| Promise&lt;[PrintJob](arkts-basicservices-print-printjob-i-sys.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

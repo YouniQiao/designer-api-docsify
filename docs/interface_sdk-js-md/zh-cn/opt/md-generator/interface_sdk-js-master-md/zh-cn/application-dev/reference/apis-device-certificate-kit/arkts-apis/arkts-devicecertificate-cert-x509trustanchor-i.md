@@ -2,7 +2,9 @@
 
 表示X.509信任锚，用于校验证书链。使用信任锚中的证书或者公钥作为可信根，对证书链进行校验。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cert-interface X509TrustAnchor--><!--Device-cert-interface X509TrustAnchor-End-->
 
@@ -18,7 +20,9 @@ CACert?: X509Cert
 
 **类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ CAPubKey?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ CASubject?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,9 +80,11 @@ nameConstraints?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509TrustAnchor-nameConstraints?: Uint8Array--><!--Device-X509TrustAnchor-nameConstraints?: Uint8Array-End-->
 

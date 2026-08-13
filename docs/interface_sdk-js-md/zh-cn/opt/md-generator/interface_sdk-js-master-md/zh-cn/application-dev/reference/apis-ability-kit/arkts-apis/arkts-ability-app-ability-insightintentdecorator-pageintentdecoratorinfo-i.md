@@ -1,14 +1,14 @@
 # PageIntentDecoratorInfo
 
-PageIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo)，用于描述  
-[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)装饰器支持的参数，例如目标页面的  
-[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)名称。
+PageIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo)，用于描述 @InsightIntentPage 装饰器支持的参数，例如目标页面的 [NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)名称。
 
 **继承/实现关系：** PageIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo)
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare interface PageIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface PageIntentDecoratorInfo extends IntentDecoratorInfo-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface PageIntentDecoratorInfo--><!--Device-unnamed-declare interface PageIntentDecoratorInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,12 +18,13 @@ PageIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-
 navDestinationName?: string
 ```
 
-表示与意图绑定  
-[NavDestination组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)的名称。
+表示与意图绑定 [NavDestination组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)的名称。
 
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +46,8 @@ navigationId?: string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -65,6 +68,8 @@ pagePath: string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -84,6 +89,8 @@ uiAbility?: string
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

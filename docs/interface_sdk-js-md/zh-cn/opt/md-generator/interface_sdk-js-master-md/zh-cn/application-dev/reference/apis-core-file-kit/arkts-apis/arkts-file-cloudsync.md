@@ -2,7 +2,9 @@
 
 该模块向应用提供端云同步能力，包括启动/停止端云同步以及启动/停止原图下载功能。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace cloudSync--><!--Device-unnamed-declare namespace cloudSync-End-->
 
@@ -14,21 +16,21 @@
 
 | 名称 |
 | --- |
-| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md#getcorefilesyncstate) |
-| [registerChange](arkts-corefile-cloudsync-registerchange-f.md#registerchange) |
-| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md#unregisterchange) |
+| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md#getCoreFileSyncState) |
+| [registerChange](arkts-corefile-cloudsync-registerchange-f.md#registerChange) |
+| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md#unregisterChange) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate) |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-1) |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-2) |
-| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md#optimizestorage) |
-| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md#startoptimizespace) |
-| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md#stopoptimizespace) |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getFileSyncState（系统接口）) |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getFileSyncState（系统接口）) |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getFileSyncState（系统接口）) |
+| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md#optimizeStorage（系统接口）) |
+| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md#startOptimizeSpace（系统接口）) |
+| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md#stopOptimizeSpace（系统接口）) |
 <!--DelEnd-->
 
 ### 类

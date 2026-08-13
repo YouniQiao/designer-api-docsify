@@ -18,6 +18,8 @@ Converts the array data that cannot be passed across threads into the data that 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>--><!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -38,7 +40,7 @@ Converts the array data that cannot be passed across threads into the data that 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
 
 ## Examples
 

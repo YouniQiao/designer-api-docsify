@@ -10,6 +10,8 @@ function from(array: number[]): FastBuffer
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
@@ -49,6 +51,8 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
@@ -73,8 +77,8 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 ## 示例
 
@@ -94,11 +98,11 @@ console.info(buf.length.toString());
 function from(buffer: FastBuffer | Uint8Array): FastBuffer
 ```
 
-当入参为FastBuffer对象时，创建新的FastBuffer对象并复制入参数据。新旧对象数据独立，互不影响。
-
-当入参为Uint8Array对象时，基于其内存创建新的FastBuffer对象。两个对象保持内存关联，修改任一对象的数据会同步影响另一对象。
+当入参为FastBuffer对象时，创建新的FastBuffer对象并复制入参数据。新旧对象数据独立，互不影响。 当入参为Uint8Array对象时，基于其内存创建新的FastBuffer对象。两个对象保持内存关联，修改任一对象的数据会同步影响另一对象。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -122,7 +126,7 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 | 错误码ID |
 | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 ## 示例
 
@@ -155,6 +159,8 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 根据指定编码格式的字符串，创建新的FastBuffer对象。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

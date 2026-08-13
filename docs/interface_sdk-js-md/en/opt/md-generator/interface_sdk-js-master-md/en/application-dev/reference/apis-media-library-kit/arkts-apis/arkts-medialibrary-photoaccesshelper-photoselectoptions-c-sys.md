@@ -4,9 +4,11 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 
 **Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions)
 
-**Since:** 10
+**Since:** 26.0.0
 
-<!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions--><!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class PhotoSelectOptions--><!--Device-photoAccessHelper-class PhotoSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,7 +28,9 @@ Theme color
 
 **Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
-**Since:** 12
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PhotoSelectOptions-themeColor?: CustomColors--><!--Device-PhotoSelectOptions-themeColor?: CustomColors-End-->
 
@@ -40,14 +44,13 @@ Theme color
 userId?: number
 ```
 
-ID of the user space to access. The default value is **-1**.
-
-To use it as a parameter of   
-[PhotoViewPicker.select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select), request the permission **ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS**.
+ID of the user space to access. The default value is **-1**. To use it as a parameter of [PhotoViewPicker.select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select) , request the permission **ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS**.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PhotoSelectOptions-userId?: int--><!--Device-PhotoSelectOptions-userId?: int-End-->
 

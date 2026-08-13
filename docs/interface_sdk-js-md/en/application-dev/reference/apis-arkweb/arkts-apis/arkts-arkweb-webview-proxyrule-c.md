@@ -2,9 +2,11 @@
 
 The ProxyRule used by insertProxyRule.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class ProxyRule--><!--Device-webview-class ProxyRule-End-->
 
@@ -24,9 +26,13 @@ getSchemeFilter(): ProxySchemeFilter
 
 Returns the scheme filter used for this rule.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter--><!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter-End-->
 
@@ -46,9 +52,13 @@ getUrl(): string
 
 Returns the proxy URL.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ProxyRule-getUrl(): string--><!--Device-ProxyRule-getUrl(): string-End-->
 

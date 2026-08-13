@@ -6,6 +6,8 @@ Defines the style of the lunar calendar switch in the **DatePickerDialog** compo
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LunarSwitchStyle--><!--Device-unnamed-declare interface LunarSwitchStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@ Defines the style of the lunar calendar switch in the **DatePickerDialog** compo
 selectedColor?: ResourceColor
 ```
 
-Background color of the switch when it is on.
-
-Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
+Background color of the switch when it is on. Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
 
 **Type:** ResourceColor
 
@@ -27,6 +27,8 @@ Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +44,7 @@ Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
 strokeColor?: ResourceColor
 ```
 
-Color of the icon inside the switch.
-
-Default value: **Color.White**
+Color of the icon inside the switch. Default value: **Color.White**
 
 **Type:** ResourceColor
 
@@ -53,6 +53,8 @@ Default value: **Color.White**
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +70,7 @@ Default value: **Color.White**
 unselectedColor?: ResourceColor
 ```
 
-Border color of the switch when it is off.
-
-Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
+Border color of the switch when it is off. Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
 
 **Type:** ResourceColor
 
@@ -79,6 +79,8 @@ Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

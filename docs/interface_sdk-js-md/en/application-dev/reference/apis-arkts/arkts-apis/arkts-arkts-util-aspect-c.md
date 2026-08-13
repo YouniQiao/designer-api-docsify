@@ -6,6 +6,8 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,6 +29,8 @@ Inserts a function after a method of a class object. The final return value is t
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,6 +114,8 @@ Inserts a function before a method of a class object. The inserted function is e
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,6 +208,8 @@ Replaces a method of a class object with another function. After the replacement
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

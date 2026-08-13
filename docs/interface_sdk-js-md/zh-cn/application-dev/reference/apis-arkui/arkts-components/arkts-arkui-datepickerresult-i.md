@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface DatePickerResult--><!--Device-unnamed-declare interface DatePickerResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 day?: number
 ```
 
-选中日期的日。
-
-取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[1, 31]。
+选中日期的日。 取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[1, 31]。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,15 +40,15 @@ day?: number
 month?: number
 ```
 
-选中日期的月的索引值，索引从0开始，0表示1月，11表示12月。
-
-取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[0, 11]。
+选中日期的月的索引值，索引从0开始，0表示1月，11表示12月。 取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[0, 11]。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -60,15 +62,15 @@ month?: number
 year?: number
 ```
 
-选中日期的年。
-
-取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[1970, 2100]。
+选中日期的年。 取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[1970, 2100]。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

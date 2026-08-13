@@ -4,11 +4,13 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface CalleeCallback--><!--Device-unnamed-export interface CalleeCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (indata: rpc.MessageSequence): rpc.Parcelable
@@ -17,6 +19,8 @@
 定义Callee的回调函数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

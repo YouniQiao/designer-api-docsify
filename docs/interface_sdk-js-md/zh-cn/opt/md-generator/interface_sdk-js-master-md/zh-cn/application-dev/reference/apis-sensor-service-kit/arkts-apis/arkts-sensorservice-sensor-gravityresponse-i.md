@@ -4,9 +4,11 @@
 
 **继承/实现关系：** GravityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface GravityResponse extends Response--><!--Device-sensor-interface GravityResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface GravityResponse--><!--Device-sensor-interface GravityResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GravityResponse-x: double--><!--Device-GravityResponse-x: double-End-->
 
@@ -36,7 +40,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GravityResponse-y: double--><!--Device-GravityResponse-y: double-End-->
 
@@ -52,7 +58,9 @@ z: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GravityResponse-z: double--><!--Device-GravityResponse-z: double-End-->
 

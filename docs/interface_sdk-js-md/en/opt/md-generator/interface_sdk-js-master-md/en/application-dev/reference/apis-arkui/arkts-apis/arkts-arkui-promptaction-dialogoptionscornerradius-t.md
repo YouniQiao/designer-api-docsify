@@ -8,6 +8,8 @@ Defines the allowed data types for specifying the background corner radius of a 
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -18,5 +20,5 @@ Defines the allowed data types for specifying the background corner radius of a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Dimension](arkts-arkui-dimension-t.md) |
-| [BorderRadiuses](arkts-arkui-units-borderradiuses-i.md) |
+| [Dimension](../../apis-na/arkts-apis/arkts-na-dimension-t.md) |
+| [BorderRadiuses](../../apis-na/arkts-apis/arkts-na-units-borderradiuses-i.md) |

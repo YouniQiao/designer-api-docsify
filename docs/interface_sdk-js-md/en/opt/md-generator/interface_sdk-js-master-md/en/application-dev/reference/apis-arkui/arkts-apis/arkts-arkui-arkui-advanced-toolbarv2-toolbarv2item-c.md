@@ -4,7 +4,7 @@ Declare type ToolBarV2Item
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ToolBarV2Item--><!--Device-unnamed-export declare class ToolBarV2Item-End-->
 
@@ -16,24 +16,6 @@ Declare type ToolBarV2Item
 import { ToolBarV2ItemImageOptions, ToolBarV2Item, ToolBarV2ItemText, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemAction, ToolBarV2ItemOptions, ToolBarV2, ToolBarV2SymbolGlyph, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemState, ToolBarV2ItemTextOptions, ToolBarV2Modifier } from '@kit.ArkUI';
 ```
 
-## action
-
-```TypeScript
-action?: ToolBarV2ItemAction
-```
-
-Define the action event.
-
-**Since:** 18
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-action?: ToolBarV2ItemAction--><!--Device-ToolBarV2Item-action?: ToolBarV2ItemAction-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## constructor
 
 ```TypeScript
@@ -43,6 +25,8 @@ constructor(options: ToolBarV2ItemOptions)
 The constructor used to create a ToolBarV2Item object.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +45,8 @@ The constructor used to create a ToolBarV2Item object.
 ## accessibilityDescription
 
 ```TypeScript
-accessibilityDescription?: ResourceStr
+@Trace
+  accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of item.
@@ -70,18 +55,21 @@ The accessibilityDescription of item.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2Item-accessibilityDescription?: ResourceStr--><!--Device-ToolBarV2Item-accessibilityDescription?: ResourceStr-End-->
+<!--Device-ToolBarV2Item-@Trace  accessibilityDescription?: ResourceStr--><!--Device-ToolBarV2Item-@Trace  accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-accessibilityLevel?: string
+@Trace
+  accessibilityLevel?: string
 ```
 
 The accessibilityLevel of item.
@@ -92,18 +80,21 @@ The accessibilityLevel of item.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2Item-accessibilityLevel?: string--><!--Device-ToolBarV2Item-accessibilityLevel?: string-End-->
+<!--Device-ToolBarV2Item-@Trace  accessibilityLevel?: string--><!--Device-ToolBarV2Item-@Trace  accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-accessibilityText?: ResourceStr
+@Trace
+  accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of item.
@@ -112,18 +103,44 @@ The accessibilityText of item.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2Item-accessibilityText?: ResourceStr--><!--Device-ToolBarV2Item-accessibilityText?: ResourceStr-End-->
+<!--Device-ToolBarV2Item-@Trace  accessibilityText?: ResourceStr--><!--Device-ToolBarV2Item-@Trace  accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+@Trace
+  action?: ToolBarV2ItemAction
+```
+
+Define the action event.
+
+**Type:** [ToolBarV2ItemAction](arkts-arkui-toolbarv2itemaction-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2Item-@Trace  action?: ToolBarV2ItemAction--><!--Device-ToolBarV2Item-@Trace  action?: ToolBarV2ItemAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-content: ToolBarV2ItemText
+@Trace
+  content: ToolBarV2ItemText
 ```
 
 Define text content.
@@ -132,18 +149,21 @@ Define text content.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2Item-content: ToolBarV2ItemText--><!--Device-ToolBarV2Item-content: ToolBarV2ItemText-End-->
+<!--Device-ToolBarV2Item-@Trace  content: ToolBarV2ItemText--><!--Device-ToolBarV2Item-@Trace  content: ToolBarV2ItemText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
 
 ```TypeScript
-icon?: ToolBarV2ItemIconType
+@Trace
+  icon?: ToolBarV2ItemIconType
 ```
 
 Define icon resource.
@@ -152,18 +172,21 @@ Define icon resource.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2Item-icon?: ToolBarV2ItemIconType--><!--Device-ToolBarV2Item-icon?: ToolBarV2ItemIconType-End-->
+<!--Device-ToolBarV2Item-@Trace  icon?: ToolBarV2ItemIconType--><!--Device-ToolBarV2Item-@Trace  icon?: ToolBarV2ItemIconType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## state
 
 ```TypeScript
-state?: ToolBarV2ItemState
+@Trace
+  state?: ToolBarV2ItemState
 ```
 
 Define item type.
@@ -172,10 +195,12 @@ Define item type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2Item-state?: ToolBarV2ItemState--><!--Device-ToolBarV2Item-state?: ToolBarV2ItemState-End-->
+<!--Device-ToolBarV2Item-@Trace  state?: ToolBarV2ItemState--><!--Device-ToolBarV2Item-@Trace  state?: ToolBarV2ItemState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

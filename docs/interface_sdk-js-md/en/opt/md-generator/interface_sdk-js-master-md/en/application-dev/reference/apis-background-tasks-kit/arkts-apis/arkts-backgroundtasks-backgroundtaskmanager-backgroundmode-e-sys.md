@@ -2,7 +2,9 @@
 
 Defines the type of a continuous task.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export enum BackgroundMode--><!--Device-backgroundTaskManager-export enum BackgroundMode-End-->
 
@@ -16,7 +18,9 @@ WIFI_INTERACTION = 7
 
 WLAN-related.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundMode-WIFI_INTERACTION = 7--><!--Device-BackgroundMode-WIFI_INTERACTION = 7-End-->
 

@@ -6,9 +6,11 @@ type CloudType = null | long | double | string | boolean | Uint8Array | CloudAss
 
 Enumerates the types of the cloud data field. The specific type is determined by the parameter function.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets--><!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets-End-->
 

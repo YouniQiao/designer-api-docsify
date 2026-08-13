@@ -2,20 +2,23 @@
 
 Defines the Extendable Stack.
 
-**Inheritance/Implementation:** ExtendableStack implements [StackAttribute](arkts-arkui-stack-stackattribute-i.md#StackAttribute)
+**Inheritance/Implementation:** ExtendableStack implements StackAttribute
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-<!--Device-unnamed-export declare abstract class ExtendableStack implements StackAttribute--><!--Device-unnamed-export declare abstract class ExtendableStack implements StackAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare abstract class ExtendableStack--><!--Device-unnamed-export declare abstract class ExtendableStack-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## $_instantiate
 
 ```TypeScript
-static $_instantiate<T extends ExtendableStack>(
+@ComponentBuilder
+    static $_instantiate<T extends ExtendableStack>(
         factory: ConstructorT<T>, 
         options?: StackOptions,
         content_?: CustomBuilder
@@ -28,9 +31,11 @@ Constructor of Extendable Stack.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,         options?: StackOptions,        content_?: CustomBuilder    ): T--><!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,         options?: StackOptions,        content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableStack-@ComponentBuilder    static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,         options?: StackOptions,        content_?: CustomBuilder    ): T--><!--Device-ExtendableStack-@ComponentBuilder    static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,         options?: StackOptions,        content_?: CustomBuilder    ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +43,9 @@ Constructor of Extendable Stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
 | options | [StackOptions](arkts-arkui-stack-stackoptions-i.md) | No |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
@@ -51,7 +56,8 @@ Constructor of Extendable Stack.
 ## _instantiateImpl
 
 ```TypeScript
-static _instantiateImpl<T extends ExtendableStack>(
+@Builder
+    static _instantiateImpl<T extends ExtendableStack>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -64,11 +70,11 @@ Entry of Extendable Stack.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableStack-@Builder    static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableStack-@Builder    static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,9 +82,9 @@ Entry of Extendable Stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| styles | CustomBuilderT&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
+| content_ | CustomBuilder | No |  |
 
 ## setStackOptions
 
@@ -91,6 +97,8 @@ Set the Stack Options.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

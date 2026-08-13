@@ -2,7 +2,9 @@
 
 Enumerates USB transfer types.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum UsbEndpointTransferType--><!--Device-usbManager-export enum UsbEndpointTransferType-End-->
 
@@ -16,7 +18,9 @@ TRANSFER_TYPE_ISOCHRONOUS = 0x1
 
 Real-time transfer.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsbEndpointTransferType-TRANSFER_TYPE_ISOCHRONOUS = 0x1--><!--Device-UsbEndpointTransferType-TRANSFER_TYPE_ISOCHRONOUS = 0x1-End-->
 
@@ -30,7 +34,9 @@ TRANSFER_TYPE_BULK = 0x2
 
 Performs bulk transfer.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsbEndpointTransferType-TRANSFER_TYPE_BULK = 0x2--><!--Device-UsbEndpointTransferType-TRANSFER_TYPE_BULK = 0x2-End-->
 
@@ -44,7 +50,9 @@ TRANSFER_TYPE_INTERRUPT = 0x3
 
 Interrupt transfer.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsbEndpointTransferType-TRANSFER_TYPE_INTERRUPT = 0x3--><!--Device-UsbEndpointTransferType-TRANSFER_TYPE_INTERRUPT = 0x3-End-->
 

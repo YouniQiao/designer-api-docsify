@@ -14,9 +14,11 @@ function getNtpTime(): long
 
 Obtains the actual time calculated based on the last updated NTP time. This API returns the result synchronously.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-function getNtpTime(): long--><!--Device-systemDateTime-function getNtpTime(): long-End-->
 
@@ -28,14 +30,14 @@ Obtains the actual time calculated based on the last updated NTP time. This API 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Unix epoch time (ms) calculated based on the last updated NTP time. |
+| long | Unix epoch time (ms) calculated based on the last updated NTP time. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [13000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000002-ntp-time-not-updated) | updateNtpTime() is not called successfully. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [13000002](../../apis-basic-services-kit/errorcode-time.md#13000002-ntp-time-not-updated) | updateNtpTime() is not called successfully. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

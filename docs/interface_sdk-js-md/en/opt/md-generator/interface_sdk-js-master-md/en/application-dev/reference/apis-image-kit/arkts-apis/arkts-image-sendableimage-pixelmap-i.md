@@ -6,7 +6,9 @@ Sendable PixelMap instance.
 
 **Since:** 12
 
-<!--Device-sendableImage-interface PixelMap extends ISendable--><!--Device-sendableImage-interface PixelMap extends ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendableImage-interface PixelMap--><!--Device-sendableImage-interface PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -22,11 +24,11 @@ import { sendableImage } from '@kit.ImageKit';
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Apply color space of pixelmap, the pixels will be changed by input color space.This method uses a promise to return the result.
-
-This method is used to change color space of PixelMap.Pixel data will be changed by calling this method.If you want to set the colorspace property of PixelMap only,use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result. This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
@@ -48,10 +50,10 @@ This method is used to change color space of PixelMap.Pixel data will be changed
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
-| [62980108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-image-color-conversion-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
+| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) |
 
 ## Examples
 
@@ -80,6 +82,8 @@ createAlphaPixelmap(): Promise<PixelMap>
 Obtains new pixelmap with alpha information. This method uses a promise to return the information.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -120,6 +124,8 @@ Obtains new pixelmap with alpha information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
@@ -136,8 +142,8 @@ Obtains new pixelmap with alpha information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -159,6 +165,8 @@ crop(region: image.Region): Promise<void>
 Crop the image. This method uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -208,6 +216,8 @@ Crop the image.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-cropSync(region: image.Region): void--><!--Device-PixelMap-cropSync(region: image.Region): void-End-->
@@ -224,8 +234,8 @@ Crop the image.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -250,6 +260,8 @@ flip(horizontal: boolean, vertical: boolean): Promise<void>
 Image flipping. This method uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -300,6 +312,8 @@ Image flipping.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
@@ -317,8 +331,8 @@ Image flipping.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -343,6 +357,8 @@ getBytesNumberPerRow(): number
 Obtains the number of bytes in each line of the image pixelmap.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -376,6 +392,8 @@ Get color space of pixelmap.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -390,9 +408,9 @@ Get color space of pixelmap.
 
 | Error Code ID |
 | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
 
 ## Examples
 
@@ -415,6 +433,8 @@ getDensity(): number
 Obtains the density of the image pixelmap.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -447,6 +467,8 @@ getImageInfo(): Promise<image.ImageInfo>
 Obtains pixelmap information about this image. This method uses a promise to return the information.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -490,6 +512,8 @@ Get image information from image source.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-getImageInfoSync(): image.ImageInfo--><!--Device-PixelMap-getImageInfoSync(): image.ImageInfo-End-->
@@ -506,7 +530,7 @@ Get image information from image source.
 
 | Error Code ID |
 | --- |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -530,6 +554,8 @@ getPixelBytesNumber(): number
 Obtains the total number of bytes of the image pixelmap.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -563,6 +589,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -577,8 +605,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 | Error Code ID |
 | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
 
 ## Examples
 
@@ -650,6 +678,8 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-opacity(rate: number): Promise<void>--><!--Device-PixelMap-opacity(rate: number): Promise<void>-End-->
@@ -696,6 +726,8 @@ Set the transparent rate of pixelmap.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-opacitySync(rate: number): void--><!--Device-PixelMap-opacitySync(rate: number): void-End-->
@@ -712,8 +744,8 @@ Set the transparent rate of pixelmap.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -737,6 +769,8 @@ readPixels(area: image.PositionArea): Promise<void>
 Reads image pixelmap data in an area. This method uses a promise to return the data read.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -790,6 +824,8 @@ Reads image pixelmap data in an area.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void-End-->
@@ -806,8 +842,8 @@ Reads image pixelmap data in an area.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -837,6 +873,8 @@ readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 Reads image pixelmap data and writes the data to an ArrayBuffer. This method uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -884,6 +922,8 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
@@ -900,8 +940,8 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -926,6 +966,8 @@ release(): Promise<void>
 Releases this PixelMap object. This method uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -965,6 +1007,8 @@ rotate(angle: number): Promise<void>
 Image rotation. This method uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1012,6 +1056,8 @@ Image rotation.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-rotateSync(angle: number): void--><!--Device-PixelMap-rotateSync(angle: number): void-End-->
@@ -1028,8 +1074,8 @@ Image rotation.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1053,6 +1099,8 @@ scale(x: number, y: number): Promise<void>
 Image zoom in width and height. This method uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1103,6 +1151,8 @@ Image zoom in width and height.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-scaleSync(x: number, y: number): void--><!--Device-PixelMap-scaleSync(x: number, y: number): void-End-->
@@ -1120,8 +1170,8 @@ Image zoom in width and height.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1143,11 +1193,11 @@ async function ScaleSync(pixelMap : sendableImage.PixelMap) {
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixelmap.
-
-This method is only used to set the colorspace property of PixelMap,while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Set color space of pixelmap. This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
@@ -1163,8 +1213,8 @@ This method is only used to set the colorspace property of PixelMap,while all pi
 
 | Error Code ID |
 | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
 
 ## Examples
 
@@ -1190,6 +1240,8 @@ translate(x: number, y: number): Promise<void>
 Image position transformation. This method uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1239,6 +1291,8 @@ Image position transformation.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-translateSync(x: number, y: number): void--><!--Device-PixelMap-translateSync(x: number, y: number): void-End-->
@@ -1256,8 +1310,8 @@ Image position transformation.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1283,6 +1337,8 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1303,9 +1359,9 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Error Code ID |
 | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
 
 ## Examples
 
@@ -1377,6 +1433,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>--><!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>-End-->
@@ -1427,6 +1485,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
@@ -1443,8 +1503,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1473,6 +1533,8 @@ writePixels(area: image.PositionArea): Promise<void>
 Writes image pixelmap data to the specified area. This method uses a promise to return the operation result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1530,6 +1592,8 @@ Writes image pixelmap data to the specified area.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void-End-->
@@ -1546,8 +1610,8 @@ Writes image pixelmap data to the specified area.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [501](../errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1584,6 +1648,8 @@ Whether the image pixelmap can be edited.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readonly isEditable: boolean--><!--Device-PixelMap-readonly isEditable: boolean-End-->
@@ -1601,6 +1667,8 @@ Is it stride Alignment
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 

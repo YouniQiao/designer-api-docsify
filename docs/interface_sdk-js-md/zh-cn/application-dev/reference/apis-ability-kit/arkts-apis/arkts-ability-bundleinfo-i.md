@@ -2,9 +2,11 @@
 
 应用包信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
 
@@ -18,11 +20,13 @@ readonly appIndex: int
 
 应用包的分身索引标识，仅在分身应用中生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleInfo-readonly appIndex: int--><!--Device-BundleInfo-readonly appIndex: int-End-->
 
@@ -31,21 +35,20 @@ readonly appIndex: int
 ## appInfo
 
 ```TypeScript
-readonly appInfo: ApplicationInfo
+readonly appInfo: ApplicationInfo | null
 ```
 
-应用程序的配置信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_APPLICATION获取。
+应用程序的配置信息，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_APPLICATION获取。
 
-**类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
+**类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md) \| null
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
+<!--Device-BundleInfo-readonly appInfo: ApplicationInfo | null--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo | null-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -55,14 +58,15 @@ readonly appInfo: ApplicationInfo
 readonly buildVersion?: string
 ```
 
-应用包的构建版本号，用于标识相同发布版本下的不同构建版本包，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的buildVersion字段。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+应用包的构建版本号，用于标识相同发布版本下的不同构建版本包，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的buildVersion字段。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,13 +84,15 @@ readonly firstInstallTime?: long
 
 应用在当前设备的首次安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒，预置应用的首次安装时间戳为1533657660000。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BundleInfo-readonly firstInstallTime?: long--><!--Device-BundleInfo-readonly firstInstallTime?: long-End-->
 
@@ -98,14 +104,15 @@ readonly firstInstallTime?: long
 readonly hapModulesInfo: Array<HapModuleInfo>
 ```
 
-模块的配置信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE获取。
+模块的配置信息，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE获取。
 
 **类型：** Array&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -119,17 +126,15 @@ readonly hapModulesInfo: Array<HapModuleInfo>
 readonly installTime: long
 ```
 
-应用包安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。
+应用包安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。 **说明：** 设备出厂首次开机时，如果未获取到当前时间，会以Unix时间戳基准（1970-01-01 08:00:00 UTC+8）作为当前系统的起始时间。例如，开机后未获取到时间，等待32s之后安装成功，则应用包安装时间戳为32000。
 
-**说明：**
+**类型：** long
 
-设备出厂首次开机时，如果未获取到当前时间，会以Unix时间戳基准（1970-01-01 08:00:00 UTC+8）作为当前系统的起始时间。例如，开机后未获取到时间，等待32s之后安装成功，则应用包安装时间戳为32000。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -145,11 +150,13 @@ readonly minCompatibleVersionCode: int
 
 分布式场景下的应用包兼容的最低版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的minCompatibleVersionCode字段。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -167,9 +174,11 @@ readonly name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -183,14 +192,15 @@ readonly name: string
 readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 ```
 
-申请权限的授予状态，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION获取。reqPermissionDetails数组和permissionGrantStates数组的索引顺序一一对应，即reqPermissionDetails[2]的授权状态为permissionGrantStates[2]。
+申请权限的授予状态，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION获取。reqPermissionDetails数组和permissionGrantStates数组的索引顺序一一对 应，即reqPermissionDetails[2]的授权状态为permissionGrantStates[2]。
 
 **类型：** Array&lt;bundleManager.PermissionGrantState&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -204,14 +214,15 @@ readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-应用运行时需向系统申请的权限集合的详细信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION获取。reqPermissionDetails数组和permissionGrantStates数组的索引顺序一一对应，即reqPermissionDetails[2]的授权状态为permissionGrantStates[2]。
+应用运行时需向系统申请的权限集合的详细信息，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION获取。reqPermissionDetails数组和permissionGrantStates数组的索引顺序一一对 应，即reqPermissionDetails[2]的授权状态为permissionGrantStates[2]。
 
 **类型：** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -225,16 +236,17 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 readonly routerMap: Array<RouterItem>
 ```
 
-应用的路由表配置，由hapModulesInfo下的routerMap信息，根据RouterItem中的name字段进行去重后合并得到。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_ROUTER_MAP获取。
+应用的路由表配置，由hapModulesInfo下的routerMap信息，根据RouterItem中的name字段进行去重后合并得到。通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_ROUTER_MAP获取。
 
 **类型：** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BundleInfo-readonly routerMap: Array<RouterItem>--><!--Device-BundleInfo-readonly routerMap: Array<RouterItem>-End-->
 
@@ -243,21 +255,20 @@ readonly routerMap: Array<RouterItem>
 ## signatureInfo
 
 ```TypeScript
-readonly signatureInfo: SignatureInfo
+readonly signatureInfo: SignatureInfo | null
 ```
 
-应用包的签名信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_SIGNATURE_INFO获取。
+应用包的签名信息，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_SIGNATURE_INFO获取。
 
-**类型：** [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md)
+**类型：** [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md) \| null
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-BundleInfo-readonly signatureInfo: SignatureInfo--><!--Device-BundleInfo-readonly signatureInfo: SignatureInfo-End-->
+<!--Device-BundleInfo-readonly signatureInfo: SignatureInfo | null--><!--Device-BundleInfo-readonly signatureInfo: SignatureInfo | null-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -269,11 +280,13 @@ readonly targetVersion: int
 
 应用运行目标版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的targetAPIVersion字段。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -289,11 +302,13 @@ readonly updateTime: long
 
 应用包更新时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -311,9 +326,11 @@ readonly vendor: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -329,11 +346,13 @@ readonly versionCode: long
 
 应用包的版本号，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionCode字段。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -351,9 +370,11 @@ readonly versionName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

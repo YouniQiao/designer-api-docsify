@@ -2,9 +2,11 @@
 
 Enumerates the reasons for data loading status changes.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum LoadingRequestError--><!--Device-media-enum LoadingRequestError-End-->
 
@@ -18,11 +20,13 @@ LOADING_ERROR_SUCCESS = 0
 
 Returned by the client to indicate that the end of the resource.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0--><!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0-End-->
 
@@ -36,11 +40,13 @@ LOADING_ERROR_NOT_READY = 1
 
 Returned by the client to indicate that the resource is not ready for access.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1--><!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1-End-->
 
@@ -54,11 +60,13 @@ LOADING_ERROR_NO_RESOURCE = 2
 
 Returned by the client to indicate that the requested resource URL does not exist.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2--><!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2-End-->
 
@@ -72,11 +80,13 @@ LOADING_ERROR_INVAID_HANDLE = 3
 
 Returned by the client to indicate that the ID of the requested resource handle (specified by **uuid**) is invalid.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3--><!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3-End-->
 
@@ -90,11 +100,13 @@ LOADING_ERROR_ACCESS_DENIED = 4
 
 Returned by the client to indicate that the client does not have permission to request the resource.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4-End-->
 
@@ -108,11 +120,13 @@ LOADING_ERROR_ACCESS_TIMEOUT = 5
 
 Returned by the client to indicate that the access to the resource times out.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5-End-->
 
@@ -126,11 +140,13 @@ LOADING_ERROR_AUTHORIZE_FAILED = 6
 
 Returned by the client to indicate that authorization fails.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6--><!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6-End-->
 

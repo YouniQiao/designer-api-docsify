@@ -2,9 +2,11 @@
 
 Enumerates the modes used for preloading an application process.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appManager-export enum PreloadMode--><!--Device-appManager-export enum PreloadMode-End-->
 
@@ -20,9 +22,11 @@ PRESS_DOWN
 
 The application process is preloaded when the application icon is pressed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

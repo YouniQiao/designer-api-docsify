@@ -18,6 +18,8 @@ Adjusts the position of the file offset pointer.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function lseek(fd: number, offset: number, whence?: WhenceType): number--><!--Device-unnamed-declare function lseek(fd: number, offset: number, whence?: WhenceType): number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

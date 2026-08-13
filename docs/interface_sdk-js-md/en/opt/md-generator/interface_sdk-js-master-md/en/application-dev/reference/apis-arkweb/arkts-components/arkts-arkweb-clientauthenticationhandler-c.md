@@ -1,8 +1,10 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to [onClientAuthenticationRequest](onClientAuthenticationRequest) method.
+Defines the client certificate request result, related to onClientAuthenticationRequest method.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ClientAuthenticationHandler--><!--Device-unnamed-declare class ClientAuthenticationHandler-End-->
 
@@ -17,6 +19,8 @@ cancel(): void
 Cancel this certificate request.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ confirm(priKeyFile: string, certChainFile: string): void
 Confirm to use the specified private key and client certificate chain.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,6 +63,8 @@ Confirm to use the authUri.The authUri can be obtained from certificate manageme
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ClientAuthenticationHandler-confirm(authUri: string): void--><!--Device-ClientAuthenticationHandler-confirm(authUri: string): void-End-->
@@ -79,6 +87,8 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void--><!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -94,7 +104,7 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## constructor
 
@@ -105,6 +115,8 @@ constructor()
 Constructor.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -121,6 +133,8 @@ ignore(): void
 Ignore this certificate request temporarily.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

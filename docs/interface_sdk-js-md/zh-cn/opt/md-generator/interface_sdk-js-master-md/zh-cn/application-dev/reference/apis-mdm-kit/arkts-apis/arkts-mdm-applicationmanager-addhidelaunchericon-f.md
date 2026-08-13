@@ -6,17 +6,11 @@
 function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 ```
 
-添加隐藏桌面应用图标名单。
-
-> **说明：**
-> 
-> 1、本接口仅支持隐藏当前用户的桌面应用图标，不支持隐藏应用卡片。
-> 
-> 2、如果被隐藏的应用有应用分身，会同步隐藏应用分身。
-> 
-> 3、不能把桌面所有应用都添加到隐藏名单中，否则所有应用都会显示到桌面上。
+添加隐藏桌面应用图标名单。 > **说明：** > > 1、本接口仅支持隐藏当前用户的桌面应用图标，不支持隐藏应用卡片。 > > 2、如果被隐藏的应用有应用分身，会同步隐藏应用分身。 > > 3、不能把桌面所有应用都添加到隐藏名单中，否则所有应用都会显示到桌面上。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -37,11 +31,11 @@ function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 | 错误码ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

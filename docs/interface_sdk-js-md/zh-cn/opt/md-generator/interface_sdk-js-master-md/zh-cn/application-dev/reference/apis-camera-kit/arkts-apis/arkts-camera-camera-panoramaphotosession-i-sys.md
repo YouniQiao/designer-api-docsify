@@ -1,19 +1,80 @@
 # PanoramaPhotoSession（系统接口）
 
-PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect Implements a panoramic photo session, which sets the parameters of the panoramic photo mode and saves all  
-[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect Implements a panoramic photo session, which sets the parameters of the panoramic photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
 
-**继承/实现关系：** PanoramaPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Focus](arkts-camera-camera-focus-i.md#Focus), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect)
+**继承/实现关系：** PanoramaPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Focus](arkts-camera-camera-focus-i.md#Focus), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance（系统接口）), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect（系统接口）)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-camera-interface PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect--><!--Device-camera-interface PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface PanoramaPhotoSession--><!--Device-camera-interface PanoramaPhotoSession-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
 
-## off('error')
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PanoramaPhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PanoramaPhotoSession-offError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PanoramaPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -22,6 +83,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from HighResolutionPhotoSession error events.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-PanoramaPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PanoramaPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -40,7 +103,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -50,7 +113,7 @@ function unregisterSessionError(panoramaPhotoSession: camera.PanoramaPhotoSessio
 }
 ```
 
-## off('focusStateChange')
+## off_focusStateChange
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -59,6 +122,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-PanoramaPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -77,7 +142,7 @@ Unsubscribes from focus state change events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -87,7 +152,67 @@ function unregisterFocusStateChange(panoramaPhotoSession: camera.PanoramaPhotoSe
 }
 ```
 
-## on('error')
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PanoramaPhotoSession-onError(callback: ErrorCallback): void--><!--Device-PanoramaPhotoSession-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PanoramaPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -96,6 +221,8 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-PanoramaPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-PanoramaPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -114,7 +241,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -130,7 +257,7 @@ function registerSessionError(panoramaPhotoSession: camera.PanoramaPhotoSession)
 }
 ```
 
-## on('focusStateChange')
+## on_focusStateChange
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -139,6 +266,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-PanoramaPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -157,7 +286,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

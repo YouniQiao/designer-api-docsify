@@ -2,7 +2,9 @@
 
 Interface of formObserver.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace formObserver--><!--Device-unnamed-declare namespace formObserver-End-->
 
@@ -23,35 +25,56 @@ import { formObserver } from '@kit.FormKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getrunningforminfobyid) |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getrunningforminfobyid-1) |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getrunningforminfobyid-2) |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getrunningforminfobyid-3) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getrunningforminfos) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getrunningforminfos-1) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getrunningforminfos-2) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getrunningforminfos-3) |
-| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md#getrunningforminfosbyfilter) |
-| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md#getrunningforminfosbyfilter-1) |
-| [off](arkts-form-formobserver-off-f-sys.md#off) |
-| [off](arkts-form-formobserver-off-f-sys.md#off-1) |
-| [off](arkts-form-formobserver-off-f-sys.md#off-2) |
-| [off](arkts-form-formobserver-off-f-sys.md#off-3) |
-| [off](arkts-form-formobserver-off-f-sys.md#off-4) |
-| [off](arkts-form-formobserver-off-f-sys.md#off-5) |
-| [off](arkts-form-formobserver-off-f-sys.md#off-6) |
-| [on](arkts-form-formobserver-on-f-sys.md#on) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-1) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-2) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-3) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-4) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-5) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-6) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-7) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-8) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-9) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-10) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-11) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-12) |
-| [on](arkts-form-formobserver-on-f-sys.md#on-13) |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getRunningFormInfoById-(System-API)) |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getRunningFormInfoById-(System-API)) |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getRunningFormInfoById-(System-API)) |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md#getRunningFormInfoById-(System-API)) |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getRunningFormInfos-(System-API)) |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getRunningFormInfos-(System-API)) |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getRunningFormInfos-(System-API)) |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md#getRunningFormInfos-(System-API)) |
+| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md#getRunningFormInfosByFilter-(System-API)) |
+| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md#getRunningFormInfosByFilter-(System-API)) |
+| [offCall](arkts-form-formobserver-offcall-f-sys.md#offCall-(System-API)) |
+| [offFormAdd](arkts-form-formobserver-offformadd-f-sys.md#offFormAdd-(System-API)) |
+| [offFormRemove](arkts-form-formobserver-offformremove-f-sys.md#offFormRemove-(System-API)) |
+| [offMessage](arkts-form-formobserver-offmessage-f-sys.md#offMessage-(System-API)) |
+| [offNotifyInvisible](arkts-form-formobserver-offnotifyinvisible-f-sys.md#offNotifyInvisible-(System-API)) |
+| [offNotifyVisible](arkts-form-formobserver-offnotifyvisible-f-sys.md#offNotifyVisible-(System-API)) |
+| [offRouter](arkts-form-formobserver-offrouter-f-sys.md#offRouter-(System-API)) |
+| [off_call](arkts-form-formobserver-offcall-f-sys.md) |
+| [off_formAdd](arkts-form-formobserver-offformadd-f-sys.md) |
+| [off_formRemove](arkts-form-formobserver-offformremove-f-sys.md) |
+| off_message |
+| [off_notifyInvisible](arkts-form-formobserver-offnotifyinvisible-f-sys.md) |
+| [off_notifyVisible](arkts-form-formobserver-offnotifyvisible-f-sys.md) |
+| [off_router](arkts-form-formobserver-offrouter-f-sys.md) |
+| [onCall](arkts-form-formobserver-oncall-f-sys.md#onCall-(System-API)) |
+| [onCall](arkts-form-formobserver-oncall-f-sys.md#onCall-(System-API)) |
+| [onFormAdd](arkts-form-formobserver-onformadd-f-sys.md#onFormAdd-(System-API)) |
+| [onFormAdd](arkts-form-formobserver-onformadd-f-sys.md#onFormAdd-(System-API)) |
+| [onFormRemove](arkts-form-formobserver-onformremove-f-sys.md#onFormRemove-(System-API)) |
+| [onFormRemove](arkts-form-formobserver-onformremove-f-sys.md#onFormRemove-(System-API)) |
+| [onMessage](arkts-form-formobserver-onmessage-f-sys.md#onMessage-(System-API)) |
+| [onMessage](arkts-form-formobserver-onmessage-f-sys.md#onMessage-(System-API)) |
+| [onNotifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md#onNotifyInvisible-(System-API)) |
+| [onNotifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md#onNotifyInvisible-(System-API)) |
+| [onNotifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md#onNotifyVisible-(System-API)) |
+| [onNotifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md#onNotifyVisible-(System-API)) |
+| [onRouter](arkts-form-formobserver-onrouter-f-sys.md#onRouter-(System-API)) |
+| [onRouter](arkts-form-formobserver-onrouter-f-sys.md#onRouter-(System-API)) |
+| [on_call](arkts-form-formobserver-oncall-f-sys.md) |
+| [on_call](arkts-form-formobserver-oncall-f-sys.md) |
+| [on_formAdd](arkts-form-formobserver-onformadd-f-sys.md) |
+| [on_formAdd](arkts-form-formobserver-onformadd-f-sys.md) |
+| [on_formRemove](arkts-form-formobserver-onformremove-f-sys.md) |
+| [on_formRemove](arkts-form-formobserver-onformremove-f-sys.md) |
+| on_message |
+| on_message |
+| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) |
+| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) |
+| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) |
+| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) |
+| [on_router](arkts-form-formobserver-onrouter-f-sys.md) |
+| [on_router](arkts-form-formobserver-onrouter-f-sys.md) |
 <!--DelEnd-->

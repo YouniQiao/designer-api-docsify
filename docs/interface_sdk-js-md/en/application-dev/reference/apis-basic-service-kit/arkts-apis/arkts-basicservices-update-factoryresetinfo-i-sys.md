@@ -4,7 +4,9 @@ Describes the information of restoring factory settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface FactoryResetInfo--><!--Device-update-export interface FactoryResetInfo-End-->
 
@@ -26,11 +28,13 @@ duration: int
 
 Duration required for restoring factory settings, in minutes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

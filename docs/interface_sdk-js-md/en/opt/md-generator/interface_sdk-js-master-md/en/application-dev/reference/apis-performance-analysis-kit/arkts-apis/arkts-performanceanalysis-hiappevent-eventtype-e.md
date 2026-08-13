@@ -2,7 +2,9 @@
 
 Enumerates event types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
 
@@ -16,7 +18,9 @@ FAULT = 1
 
 Fault event.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ STATISTIC = 2
 
 Statistic event.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +54,9 @@ SECURITY = 3
 
 Security event.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +72,9 @@ BEHAVIOR = 4
 
 Behavior event.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

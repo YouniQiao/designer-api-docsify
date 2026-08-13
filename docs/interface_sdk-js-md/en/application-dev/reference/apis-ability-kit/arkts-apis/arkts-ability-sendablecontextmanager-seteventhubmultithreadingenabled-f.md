@@ -12,17 +12,13 @@ import { sendableContextManager } from '@kit.AbilityKit';
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#EventHub) in  
-[Context](./app/context).
-
-> **NOTE：**
-> 
-> - When multiple Context objects communicate, you need to call this API to set each Context object to support
-> EventHub cross-thread data transfer.
+Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#EventHub) in Context. > **NOTE：**> > - When multiple Context objects communicate, you need to call this API to set each Context object to support > EventHub cross-thread data transfer.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,12 +32,12 @@ Enables the cross-thread data transfer feature of [EventHub](arkts-ability-event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context object. For details about the serialization data types supported by Eventhub, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The data size cannot exceed 16 MB. |
+| context | common.Context | Yes | Context object. For details about the serialization data types supported by Eventhub, see Sequenceable Data Types. The data size cannot exceed 16 MB. |
 | enabled | boolean | Yes | Whether to enable the cross-thread data transfer feature.&lt;br&gt;- **true**: The cross-thread data transfer feature is enabled, and data is passed by reference.&lt;br&gt;- **false**: The cross-thread data transfer feature is disabled. Data is passed through serialization, which means that the data of the sender thread is independent of that of the receiver thread. |
 
 ## Examples
 
-Enable the cross-thread data transfer feature of [EventHub](./js-apis-inner-application-eventHub.md) in a [Context](./js-apis-inner-application-context.md) object on the main thread, convert the Context object to a [SendableContext](js-apis-inner-application-sendableContext.md) object, and send the SendableContext object to the [Worker](../apis-arkts/js-apis-worker.md) thread.
+Enable the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#EventHub) in a [Context](arkts-ability-context-c.md#Context) object on the main thread, convert the Context object to a [SendableContext](arkts-ability-sendablecontext-i.md#SendableContext) object, and send the SendableContext object to the [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker) thread.
 
 ```TypeScript
 import { common, sendableContextManager } from '@kit.AbilityKit';
@@ -98,7 +94,7 @@ struct Index {
 }
 ```
 
-After receiving the [SendableContext](js-apis-inner-application-sendableContext.md) object on the [Worker](../apis-arkts/js-apis-worker.md) thread, convert it to a [Context](./js-apis-inner-application-context.md) object. Then, enable the cross-thread data transfer feature of [EventHub](./js-apis-inner-application-eventHub.md) in the Context object on the Worker thread, and send a message back to the main thread using this feature.
+After receiving the [SendableContext](arkts-ability-sendablecontext-i.md#SendableContext) object on the [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker) thread, convert it to a [Context](arkts-ability-context-c.md#Context) object. Then, enable the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#EventHub) in the Context object on the Worker thread, and send a message back to the main thread using this feature.
 
 ```TypeScript
 import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';

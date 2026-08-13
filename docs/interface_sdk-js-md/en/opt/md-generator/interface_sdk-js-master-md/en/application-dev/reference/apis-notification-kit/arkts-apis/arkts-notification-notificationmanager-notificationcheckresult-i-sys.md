@@ -2,7 +2,9 @@
 
 Describes the result of check notifications.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface NotificationCheckResult--><!--Device-notificationManager-export interface NotificationCheckResult-End-->
 
@@ -22,15 +24,13 @@ import { notificationManager } from '@kit.NotificationKit';
 code: number
 ```
 
-Result code.
-
-**0**: display.
-
-**1**: no display.
+Result code. **0**: display. **1**: no display.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -50,7 +50,9 @@ Result.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 

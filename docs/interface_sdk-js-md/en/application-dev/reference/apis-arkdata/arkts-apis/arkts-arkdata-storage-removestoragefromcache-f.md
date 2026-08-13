@@ -14,7 +14,7 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Deprecated since:** 9
 
-**Substitutes:** [removePreferencesFromCache](ohos.preferences.preferences.removePreferencesFromCache)
+**Substitutes:** removePreferencesFromCache
 
 <!--Device-storage-function removeStorageFromCache(path: string, callback: AsyncCallback<void>): void--><!--Device-storage-function removeStorageFromCache(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -23,7 +23,7 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the target file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeStorageFromCache
@@ -40,7 +40,7 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Deprecated since:** 9
 
-**Substitutes:** [removePreferencesFromCache](ohos.preferences.preferences.removePreferencesFromCache)
+**Substitutes:** removePreferencesFromCache
 
 <!--Device-storage-function removeStorageFromCache(path: string): Promise<void>--><!--Device-storage-function removeStorageFromCache(path: string): Promise<void>-End-->
 

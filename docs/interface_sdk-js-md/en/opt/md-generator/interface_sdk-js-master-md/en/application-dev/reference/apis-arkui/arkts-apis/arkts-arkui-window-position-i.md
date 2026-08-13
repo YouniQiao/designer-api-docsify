@@ -2,7 +2,9 @@
 
 Describes the position of the window or component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-export interface Position--><!--Device-window-export interface Position-End-->
 
@@ -24,7 +26,9 @@ X coordinate, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Position-x: int--><!--Device-Position-x: int-End-->
 
@@ -40,7 +44,9 @@ Y coordinate, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Position-y: int--><!--Device-Position-y: int-End-->
 

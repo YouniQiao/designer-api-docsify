@@ -2,7 +2,9 @@
 
 Defines the measurement unit information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export interface UnitInfo--><!--Device-i18n-export interface UnitInfo-End-->
 
@@ -24,7 +26,9 @@ Measurement system. The value can be **SI**, **US**, or **UK**.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Name of the measurement unit, for example, **meter**, **inch**, or **cup**.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

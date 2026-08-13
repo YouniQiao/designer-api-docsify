@@ -1,17 +1,10 @@
 # Region
 
-Describes a region, which is used to describe the region where the shape can be drawn.
+Describes a region, which is used to describe the region where the shape can be drawn. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-drawing-class Region--><!--Device-drawing-class Region-End-->
 
@@ -31,7 +24,9 @@ constructor()
 
 Constructs a **Region** object.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-constructor()--><!--Device-Region-constructor()-End-->
 
@@ -45,7 +40,9 @@ constructor(region: Region)
 
 Copies a **Region** object.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-constructor(region: Region)--><!--Device-Region-constructor(region: Region)-End-->
 
@@ -65,7 +62,9 @@ constructor(left: number, top: number, right: number, bottom: number)
 
 Constructs a rectangular region.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)--><!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)-End-->
 
@@ -90,7 +89,31 @@ Obtains a new path that is the boundary of the existing region.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-Region-getBoundaryPath(): Path--><!--Device-Region-getBoundaryPath(): Path-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) |
+
+## getBoundaryPath
+
+```TypeScript
+getBoundaryPath(): Path | undefined
+```
+
+Gets the boundary of the region, which represents by a path. Gets the bounds of the region.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+<!--Device-Region-getBoundaryPath(): Path | undefined--><!--Device-Region-getBoundaryPath(): Path | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -110,7 +133,31 @@ Obtains the boundaries of the existing region.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-Region-getBounds(): common2D.Rect--><!--Device-Region-getBounds(): common2D.Rect-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect |
+
+## getBounds
+
+```TypeScript
+getBounds(): common2D.Rect | undefined
+```
+
+Gets the bounds of the region.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+<!--Device-Region-getBounds(): common2D.Rect | undefined--><!--Device-Region-getBounds(): common2D.Rect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -128,7 +175,9 @@ isComplex(): boolean
 
 Checks whether this region contains multiple rectangles.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Region-isComplex(): boolean--><!--Device-Region-isComplex(): boolean-End-->
 
@@ -148,7 +197,9 @@ isEmpty(): boolean
 
 Checks whether the existing region is empty.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Region-isEmpty(): boolean--><!--Device-Region-isEmpty(): boolean-End-->
 
@@ -168,7 +219,9 @@ isEqual(other: Region): boolean
 
 Checks whether another region is equal to this region.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Region-isEqual(other: Region): boolean--><!--Device-Region-isEqual(other: Region): boolean-End-->
 
@@ -194,7 +247,9 @@ isPointContained(x: number, y:number): boolean
 
 Checks whether a point is contained in this region.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-isPointContained(x: int, y:int): boolean--><!--Device-Region-isPointContained(x: int, y:int): boolean-End-->
 
@@ -217,7 +272,7 @@ Checks whether a point is contained in this region.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## isRect
 
@@ -228,6 +283,8 @@ isRect(): boolean
 Checks whether this region is the same as a single rectangle.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -249,7 +306,9 @@ isRegionContained(other: Region): boolean
 
 Checks whether another region is contained in this region.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-isRegionContained(other: Region): boolean--><!--Device-Region-isRegionContained(other: Region): boolean-End-->
 
@@ -271,7 +330,7 @@ Checks whether another region is contained in this region.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## offset
 
@@ -281,7 +340,9 @@ offset(dx: number, dy: number): void
 
 Translates a region.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Region-offset(dx: int, dy: int): void--><!--Device-Region-offset(dx: int, dy: int): void-End-->
 
@@ -300,9 +361,11 @@ Translates a region.
 op(region: Region, regionOp: RegionOp): boolean
 ```
 
-Performs an operation on this region and another region, and stores the resulting region in this **Region**object.
+Performs an operation on this region and another region, and stores the resulting region in this **Region** object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-op(region: Region, regionOp: RegionOp): boolean--><!--Device-Region-op(region: Region, regionOp: RegionOp): boolean-End-->
 
@@ -325,7 +388,7 @@ Performs an operation on this region and another region, and stores the resultin
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## quickContains
 
@@ -336,6 +399,8 @@ quickContains(left: number, top: number, right: number, bottom: number): boolean
 Checks whether this region is the same as a single rectangle and contains the specified rectangle.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -366,7 +431,9 @@ quickReject(left: number, top: number, right: number, bottom: number): boolean
 
 Checks whether a rectangle do not intersect with this region. Actually, this API determines whether the rectangle does not intersect with the bounding rectangle of the region, and therefore the result may not be accurate.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -391,7 +458,7 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## quickRejectRegion
 
@@ -401,7 +468,9 @@ quickRejectRegion(region: Region): boolean
 
 Checks whether the existing region does not intersect with another region. Actually, the outer rectangles of the two regions are compared to determine whether they do not intersect. Therefore, there may be an error.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Region-quickRejectRegion(region: Region): boolean--><!--Device-Region-quickRejectRegion(region: Region): boolean-End-->
 
@@ -427,7 +496,9 @@ setEmpty(): void
 
 Set the existing region to empty.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-setEmpty(): void--><!--Device-Region-setEmpty(): void-End-->
 
@@ -441,7 +512,9 @@ setPath(path: Path, clip: Region): boolean
 
 Sets a region that matches the outline of a path within the cropping area.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-setPath(path: Path, clip: Region): boolean--><!--Device-Region-setPath(path: Path, clip: Region): boolean-End-->
 
@@ -464,7 +537,7 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setRect
 
@@ -474,7 +547,9 @@ setRect(left: number, top: number, right: number, bottom: number): boolean
 
 Sets a rectangle.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -499,7 +574,7 @@ Sets a rectangle.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setRegion
 
@@ -509,7 +584,9 @@ setRegion(region: Region): void
 
 Sets the existing region to another region.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Region-setRegion(region: Region): void--><!--Device-Region-setRegion(region: Region): void-End-->
 

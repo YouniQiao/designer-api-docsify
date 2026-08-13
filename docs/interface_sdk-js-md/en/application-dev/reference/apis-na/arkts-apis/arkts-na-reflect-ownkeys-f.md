@@ -1,0 +1,30 @@
+# ownKeys
+
+## ownKeys
+
+```TypeScript
+function ownKeys(target: object): (string | symbol)[]
+```
+
+Returns the string and symbol keys of the own properties of an object. The own properties of an object are those that are defined directly on that object, and are not inherited from the object's prototype.
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Reflect-function ownKeys(target: object): (string | symbol)[]--><!--Device-Reflect-function ownKeys(target: object): (string | symbol)[]-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | object | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| (string \| symbol)[] |  |
+

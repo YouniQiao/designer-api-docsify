@@ -1,12 +1,12 @@
 # MarqueeOptions
 
-Defines Marquee constructor options.
-
-Anonymous Object Rectification.
+Defines Marquee constructor options. Anonymous Object Rectification.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MarqueeOptions--><!--Device-unnamed-export interface MarqueeOptions-End-->
 
@@ -18,13 +18,15 @@ Anonymous Object Rectification.
 delay?: int
 ```
 
-The waiting time between each round of the marquee.Unit: ms. The value should be an integer. Default value: 0.
+The waiting time between each round of the marquee. Unit: ms. The value should be an integer. Default value: 0.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +40,7 @@ The waiting time between each round of the marquee.Unit: ms. The value should be
 fromStart?: boolean
 ```
 
-Set text to scroll from the beginning or backward.
-
-Anonymous Object Rectification.
+Set text to scroll from the beginning or backward. Anonymous Object Rectification.
 
 **Type:** boolean
 
@@ -49,6 +49,8 @@ Anonymous Object Rectification.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +64,7 @@ Anonymous Object Rectification.
 loop?: int
 ```
 
-Set the number of times the scroll is repeated, infinite loop if it is less than or equal to zero.
-
-Anonymous Object Rectification.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is less than or equal to 0, the marquee will scroll continuously.&lt;br&gt;Regardless of the value, the marquee scrolls only once on an ArkTS widget.&lt;/p&gt;
+Set the number of times the scroll is repeated, infinite loop if it is less than or equal to zero. Anonymous Object Rectification. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the value is less than or equal to 0, the marquee will scroll continuously. &lt;br&gt;Regardless of the value, the marquee scrolls only once on an ArkTS widget. &lt;/p&gt;
 
 **Type:** int
 
@@ -75,6 +73,8 @@ Anonymous Object Rectification.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,15 +88,15 @@ Anonymous Object Rectification.
 spacing?: LengthMetrics
 ```
 
-The spacing between two rounds of marquee.
-
-Default value is marquee width.
+The spacing between two rounds of marquee. Default value is marquee width.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,15 +110,15 @@ Default value is marquee width.
 src: string | undefined
 ```
 
-Text that needs scrolling. In Marquee component, the default value is an empty string.Set to `undefined` will restore it to the default value.
-
-Anonymous Object Rectification.
+Text that needs scrolling. In Marquee component, the default value is an empty string. Set to `undefined` will restore it to the default value. Anonymous Object Rectification.
 
 **Type:** string \| undefined
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,17 +132,15 @@ Anonymous Object Rectification.
 start: boolean | undefined
 ```
 
-Control whether the running lamp enters the playing state.
-
-Anonymous Object Rectification.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;&lt;em&gt;true&lt;/em&gt;: Start scrolling.&lt;br&gt;&lt;em&gt;false&lt;/em&gt;: Do not start scrolling.&lt;br&gt;This parameter cannot be used to restart scrolling that has been completed.&lt;br&gt;In Marquee component, the default value is false. Set to `undefined` will restore it to the default value.&lt;/p&gt;
+Control whether the running lamp enters the playing state. Anonymous Object Rectification. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;&lt;em&gt;true&lt;/em&gt;: Start scrolling. &lt;br&gt;&lt;em&gt;false&lt;/em&gt;: Do not start scrolling. &lt;br&gt;This parameter cannot be used to restart scrolling that has been completed. &lt;br&gt;In Marquee component, the default value is false. Set to `undefined` will restore it to the default value. &lt;/p&gt;
 
 **Type:** boolean \| undefined
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,13 +154,7 @@ Anonymous Object Rectification.
 step?: double
 ```
 
-Scroll animation text scroll step, when step is larger than the text width of Marquee, take the default value.
-
-Anonymous Object Rectification.
-
-Unit: vp. Default value: 6.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is greater than the text width of the marquee, the default value is used.&lt;/p&gt;
+Scroll animation text scroll step, when step is larger than the text width of Marquee, take the default value. Anonymous Object Rectification. Unit: vp. Default value: 6. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the value is greater than the text width of the marquee, the default value is used. &lt;/p&gt;
 
 **Type:** double
 
@@ -171,6 +163,8 @@ Unit: vp. Default value: 6.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

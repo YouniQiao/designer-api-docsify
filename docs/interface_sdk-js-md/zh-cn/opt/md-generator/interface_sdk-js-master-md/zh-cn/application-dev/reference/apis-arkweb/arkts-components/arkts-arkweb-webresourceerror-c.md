@@ -4,6 +4,8 @@ Defines the Web resource error.
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class WebResourceError--><!--Device-unnamed-declare class WebResourceError-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ getErrorCode(): number
 获取加载资源的错误码。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -55,6 +61,8 @@ getErrorInfo(): string
 获取加载资源的错误信息。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -10,6 +10,8 @@ The callback of onOverrideErrorPage.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string--><!--Device-unnamed-type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

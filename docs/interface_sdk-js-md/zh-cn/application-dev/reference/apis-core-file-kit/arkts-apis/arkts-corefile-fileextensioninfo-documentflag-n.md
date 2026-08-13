@@ -23,9 +23,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#represents_file) | 代表文件。 |
-| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#represents_dir) | 代表目录。 |
-| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#supports_read) | 此设备支持读。 |
-| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#supports_write) | 此设备支持写。 |
+| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#REPRESENTS_FILE) | 代表文件。 |
+| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#REPRESENTS_DIR) | 代表目录。 |
+| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#SUPPORTS_READ) | 此设备支持读。 |
+| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#SUPPORTS_WRITE) | 此设备支持写。 |
 <!--DelEnd-->
 

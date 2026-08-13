@@ -2,7 +2,9 @@
 
 定义分身应用在运行态的结构信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RunningAppClone--><!--Device-unnamed-export interface RunningAppClone-End-->
 
@@ -20,7 +22,9 @@ appCloneIndex: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningAppClone-appCloneIndex: int--><!--Device-RunningAppClone-appCloneIndex: int-End-->
 
@@ -38,7 +42,9 @@ pids: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningAppClone-pids: Array<int>--><!--Device-RunningAppClone-pids: Array<int>-End-->
 
@@ -56,7 +62,9 @@ uid: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningAppClone-uid: int--><!--Device-RunningAppClone-uid: int-End-->
 

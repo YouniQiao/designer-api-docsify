@@ -2,7 +2,9 @@
 
 Enum for the hash algorithm type.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-enum HashAlgorithmType--><!--Device-connection-enum HashAlgorithmType-End-->
 
@@ -16,7 +18,9 @@ HASH_ALGORITHM_SHA256 = 0
 
 SHA256 hash algorithm
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

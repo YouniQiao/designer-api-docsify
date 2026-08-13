@@ -2,7 +2,9 @@
 
 Defines the parameters for installing or uninstalling a plugin.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-installer-export interface PluginParam--><!--Device-installer-export interface PluginParam-End-->
 
@@ -26,7 +28,9 @@ Extension parameters for installing or uninstalling the plugin. The default valu
 
 **Type:** Array&lt;Parameters&gt;
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PluginParam-parameters?: Array<Parameters>--><!--Device-PluginParam-parameters?: Array<Parameters>-End-->
 
@@ -40,12 +44,13 @@ Extension parameters for installing or uninstalling the plugin. The default valu
 userId?: number
 ```
 
-ID of the user for whom the plugin is to be installed or uninstalled. You can obtain the user ID by calling  
-[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId). The default value is the user ID of the caller.
+ID of the user for whom the plugin is to be installed or uninstalled. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PluginParam-userId?: int--><!--Device-PluginParam-userId?: int-End-->
 

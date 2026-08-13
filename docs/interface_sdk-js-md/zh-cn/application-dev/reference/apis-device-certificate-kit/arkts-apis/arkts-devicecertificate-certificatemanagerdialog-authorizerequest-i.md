@@ -2,9 +2,11 @@
 
 证书凭据授权请求信息。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-certificateManagerDialog-export interface AuthorizeRequest--><!--Device-certificateManagerDialog-export interface AuthorizeRequest-End-->
 
@@ -16,13 +18,15 @@
 certPurpose?: certificateManager.CertificatePurpose
 ```
 
-表示证书用途。若certTypes参数中存在CertificateType.CREDENTIAL_UKEY类型，则certPurpose参数生效，表示根据指定的证书用途筛选USB Key的证书凭据。
+表示证书用途。 若certTypes参数中存在CertificateType.CREDENTIAL_UKEY类型，则certPurpose参数生效，表示根据指定的证书用途筛选USB Key的证书凭据。
 
 **类型：** certificateManager.CertificatePurpose
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,9 +44,11 @@ certTypes: Array<CertificateType>
 
 **类型：** Array&lt;[CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)&gt;
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,19 +62,15 @@ certTypes: Array<CertificateType>
 issuers?: Array<Uint8Array>
 ```
 
-表示以DER格式编码的证书颁发者，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。
-
-如果issuers数组中存在长度为0的元素，则issuers筛选器不会生效。
-
-数组最大长度为20。
-
-26.0.0
+表示以DER格式编码的证书颁发者，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。 如果issuers数组中存在长度为0的元素，则issuers筛选器不会生效。 数组最大长度为20。 26.0.0
 
 **类型：** Array&lt;Uint8Array&gt;
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,13 +84,15 @@ issuers?: Array<Uint8Array>
 keyAlgIDs?: Array<string>
 ```
 
-表示证书公钥的算法类型，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。支持的取值为RSA、EC或ECDSA（区分大小写）。若不传此参数，则不按算法类型筛选证书。若 keyAlgIDs包含不支持的算法，则该筛选器无效。最大长度为20，26.0.0。
+表示证书公钥的算法类型，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。支持的取值为RSA、EC或ECDSA（区分大小写）。若不传此参数，则不按算法类型筛选证书。 若 keyAlgIDs包含不支持的算法，则该筛选器无效。 最大长度为20，26. 0. 0。
 
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,7 +112,9 @@ uri?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -8,6 +8,8 @@ export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackDa
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-notificationSubscribe-export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackData--><!--Device-notificationSubscribe-export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackData-End-->

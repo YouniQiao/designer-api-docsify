@@ -6,6 +6,8 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-bundleManager-export enum BundleInfoGetFlag--><!--Device-bundleManager-export enum BundleInfoGetFlag-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Obtains the default bundle information, excluding **applicationInfo** and **sign
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Obtains the default bundle information and **applicationInfo** (excluding **icon
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfoGetFlag-WITH_APPLICATION_INFO = 1 << 0--><!--Device-BundleInfoGetFlag-WITH_APPLICATION_INFO = 1 << 0-End-->
@@ -58,6 +64,8 @@ Obtains the default bundle information and **signatureInfo**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfoGetFlag-WITH_SIGNATURE_INFO = 1 << 1--><!--Device-BundleInfoGetFlag-WITH_SIGNATURE_INFO = 1 << 1-End-->
@@ -75,6 +83,8 @@ Obtains the default bundle information and **applicationInfo** (including **icon
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

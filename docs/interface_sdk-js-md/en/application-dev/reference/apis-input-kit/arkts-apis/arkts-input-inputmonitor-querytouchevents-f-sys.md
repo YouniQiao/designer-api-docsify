@@ -14,9 +14,11 @@ function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>
 
 Queries recent touchscreen input events. A maximum of 100 events can be queried. Since API version 26.0.0, a maximum of 60 events can be queried. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -30,7 +32,7 @@ Queries recent touchscreen input events. A maximum of 100 events can be queried.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of touchscreen input events to query. The value range is an integer from 0 to 100. If the value is less than 0, the value **0** is used. If the value is greater than 100, the value **100** is used. Since API version 26.0.0, if the value is greater than 60, the value **60** is used. If there are only 30 actual touchscreen input events but this parameter is set to **50**, only 30 touchscreen input events can be queried. |
+| count | int | Yes | Number of touchscreen input events to query. The value range is an integer from 0 to 100. If the value is less than 0, the value **0** is used. If the value is greater than 100, the value **100** is used. Since API version 26.0.0, if the value is greater than 60, the value **60** is used. If there are only 30 actual touchscreen input events but this parameter is set to **50**, only 30 touchscreen input events can be queried. |
 
 **Return value:**
 
@@ -42,8 +44,8 @@ Queries recent touchscreen input events. A maximum of 100 events can be queried.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

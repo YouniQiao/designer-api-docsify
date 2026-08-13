@@ -12,12 +12,13 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>
 ```
 
-Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only   
-[valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated.
+Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -29,7 +30,7 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the agent-powered reminder to be updated. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be updated. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called. |
 | reminderReq | ReminderRequest | Yes | Request instance used to set detailed information such as the reminder type and ringing duration. |
 
 **Return value:**
@@ -42,9 +43,9 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
-| [1700007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
 ## Examples
 

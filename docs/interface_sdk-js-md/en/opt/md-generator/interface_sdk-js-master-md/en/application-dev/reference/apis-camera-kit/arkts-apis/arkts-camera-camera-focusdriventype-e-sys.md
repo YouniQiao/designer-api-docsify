@@ -2,7 +2,9 @@
 
 Enumerates the focus drive types.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum FocusDrivenType--><!--Device-camera-enum FocusDrivenType-End-->
 
@@ -18,7 +20,9 @@ AUTO = 0
 
 Automatic.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusDrivenType-AUTO = 0--><!--Device-FocusDrivenType-AUTO = 0-End-->
 
@@ -34,7 +38,9 @@ FACE = 1
 
 Face-driven.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusDrivenType-FACE = 1--><!--Device-FocusDrivenType-FACE = 1-End-->
 

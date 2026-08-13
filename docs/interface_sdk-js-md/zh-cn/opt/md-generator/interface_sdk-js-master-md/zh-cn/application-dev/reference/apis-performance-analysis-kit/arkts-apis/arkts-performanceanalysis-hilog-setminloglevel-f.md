@@ -6,17 +6,13 @@
 function setMinLogLevel(level: LogLevel): void
 ```
 
-设置应用日志打印的最低日志级别，用于拦截低级别日志打印。
+设置应用日志打印的最低日志级别，用于拦截低级别日志打印。 > **注意：** > > 如果设置的日志级别低于[全局日志级别](../../../dfx/hilog.md#查看和设置日志级别)，设置不生效。 > > debug版本应用下，此函数不生效。
 
-> **注意：**
-> 
-> 如果设置的日志级别低于[全局日志级别](../../../dfx/hilog.md#查看和设置日志级别)，设置不生效。
-> 
-> debug版本应用下，此函数不生效。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hilog-function setMinLogLevel(level: LogLevel): void--><!--Device-hilog-function setMinLogLevel(level: LogLevel): void-End-->
 

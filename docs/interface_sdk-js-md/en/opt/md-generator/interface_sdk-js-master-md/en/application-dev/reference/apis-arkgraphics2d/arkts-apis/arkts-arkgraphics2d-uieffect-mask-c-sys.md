@@ -2,7 +2,9 @@
 
 Mask effect class, used as input for Filter and VisualEffect. Different types of Mask provide different grayscale distribution patterns, such as wave ring masks, radial gradients, pixel map masks, etc.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-class Mask--><!--Device-uiEffect-class Mask-End-->
 
@@ -23,9 +25,11 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
       fillColor?: Color): Mask
 ```
 
-Creates a Mask instance with scaling effect by inputting a pixelMap, the area of the pixelMap to be drawn,the drawing area of the mounted node, and the color to fill outside the drawing area.
+Creates a Mask instance with scaling effect by inputting a pixelMap, the area of the pixelMap to be drawn, the drawing area of the mounted node, and the color to fill outside the drawing area.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      fillColor?: Color): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      fillColor?: Color): Mask-End-->
 
@@ -40,7 +44,7 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 | pixelMap | image.PixelMap | Yes |
 | srcRect | common2D.Rect | Yes |
 | dstRect | common2D.Rect | Yes |
-| fillColor | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | No |
+| fillColor | [Color](../../apis-na/arkts-apis/arkts-na-enums-color-e.md) | No |
 
 **Return value:**
 
@@ -52,7 +56,7 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -103,7 +107,9 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 
 Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
 
@@ -127,7 +133,7 @@ Creates a Mask instance by inputting a pixelMap. This interface does not perform
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -227,9 +233,11 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
       gradients: Array<[number, number]>): Mask
 ```
 
-Creates an elliptical mask Mask instance by inputting the center position of the ellipse,the semi-major and semi-minor axes, and shape parameters.
+Creates an elliptical mask Mask instance by inputting the center position of the ellipse, the semi-major and semi-minor axes, and shape parameters.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,      gradients: Array<[double, double]>): Mask--><!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,      gradients: Array<[double, double]>): Mask-End-->
 
@@ -256,7 +264,7 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## createRippleMask
 
@@ -266,7 +274,9 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 
 Creates a wave ring mask Mask instance by inputting the center position, radius, and width of the wave ring.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask--><!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask-End-->
 
@@ -293,7 +303,7 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -309,7 +319,9 @@ static createUseEffectMask(useEffect: boolean): Mask
 
 Creates and sets a Mask instance indicating whether to use blur caching. This Mask instance is specifically designed for the useEffectMask parameter of the liquidMaterial method, used to declare whether the material effect uses blur caching to improve performance. When this Mask instance is used with other Filter or VisualEffect methods, the useEffect property may not take effect.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask--><!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask-End-->
 
@@ -333,7 +345,7 @@ Creates and sets a Mask instance indicating whether to use blur caching. This Ma
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -402,7 +414,9 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 
 Creates a single-wave mask Mask instance by inputting the wave source center position and single-wave parameters.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,      blurRadius: double, turbulenceStrength?: double): Mask--><!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,      blurRadius: double, turbulenceStrength?: double): Mask-End-->
 
@@ -430,7 +444,7 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

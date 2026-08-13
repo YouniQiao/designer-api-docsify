@@ -4,6 +4,8 @@ Defines user status data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-userStatus-export interface UserStatusData--><!--Device-userStatus-export interface UserStatusData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -22,11 +24,13 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 errCode: number
 ```
 
-Business error code.The value `0` indicates success, and other values indicate failure.
+Business error code. The value `0` indicates success, and other values indicate failure.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ User status detection feature type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusData-feature: UserStatusFeature--><!--Device-UserStatusData-feature: UserStatusFeature-End-->
@@ -62,11 +68,13 @@ User status detection feature type.
 result: number
 ```
 
-User status detection result.The value `0` indicates success, and other values indicate failure.
+User status detection result. The value `0` indicates success, and other values indicate failure.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,6 +95,8 @@ Multi-stage detection states under a single perception feature.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

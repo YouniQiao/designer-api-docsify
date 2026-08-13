@@ -4,6 +4,8 @@ Describes the initialization options of the **Text** component.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextOptions--><!--Device-unnamed-declare interface TextOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Text controller.
 **Type:** [TextController](arkts-arkui-textcontroller-c.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

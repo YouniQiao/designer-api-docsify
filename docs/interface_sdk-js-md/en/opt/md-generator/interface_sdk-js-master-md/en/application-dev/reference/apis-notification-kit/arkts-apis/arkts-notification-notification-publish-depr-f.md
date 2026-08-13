@@ -12,7 +12,7 @@ Publishes a notification. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [publish](ohos.notificationManager/notificationManager#publish)
+**Substitutes:** [publish](arkts-notification-notificationmanager-publish-f.md#publish)
 
 <!--Device-notification-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void--><!--Device-notification-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ Publishes a notification. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [publish](ohos.notificationManager/notificationManager#publish)
+**Substitutes:** [publish](arkts-notification-notificationmanager-publish-f.md#publish)
 
 <!--Device-notification-function publish(request: NotificationRequest): Promise<void>--><!--Device-notification-function publish(request: NotificationRequest): Promise<void>-End-->
 

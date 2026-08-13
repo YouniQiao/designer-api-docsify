@@ -8,7 +8,9 @@ The callback function for the download progress event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-request-export type UploadProgressCallback = (uploadedSize: long, totalSize: long) => void--><!--Device-request-export type UploadProgressCallback = (uploadedSize: long, totalSize: long) => void-End-->
 

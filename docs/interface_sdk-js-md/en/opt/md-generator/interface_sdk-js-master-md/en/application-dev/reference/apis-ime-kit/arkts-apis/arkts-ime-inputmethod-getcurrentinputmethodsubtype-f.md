@@ -14,7 +14,9 @@ function getCurrentInputMethodSubtype(): InputMethodSubtype
 
 Get the current input method subtype
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype-End-->
 

@@ -4,6 +4,8 @@ Provides parameter configuration required for creating a float view controller.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-floatView-interface FloatViewConfiguration--><!--Device-floatView-interface FloatViewConfiguration-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -26,6 +28,8 @@ Context environment.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewConfiguration-context: BaseContext--><!--Device-FloatViewConfiguration-context: BaseContext-End-->
@@ -38,12 +42,13 @@ Context environment.
 isConfirmOnClose?: boolean
 ```
 
-This field controls whether user confirmation is required when the close button is clicked.  
-**true** if clicking the close button requires user confirmation, otherwise no confirmation is needed.Default value: default value is false.
+This field controls whether user confirmation is required when the close button is clicked. **true** if clicking the close button requires user confirmation, otherwise no confirmation is needed. Default value: default value is false.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +67,8 @@ Template type of the float view.
 **Type:** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

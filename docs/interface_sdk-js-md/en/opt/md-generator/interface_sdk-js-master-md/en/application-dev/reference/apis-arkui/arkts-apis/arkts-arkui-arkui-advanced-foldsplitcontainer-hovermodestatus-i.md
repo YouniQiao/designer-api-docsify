@@ -4,6 +4,8 @@ Provides information about the device or application's folding, rotation, and wi
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface HoverModeStatus--><!--Device-unnamed-export interface HoverModeStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Rotation angle of the application.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,6 +49,8 @@ Fold status of the device.
 **Type:** display.FoldStatus
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Whether the application is in the hover state. The value **true** means that the
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,6 +93,8 @@ Window mode.
 **Type:** window.WindowStatusType
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

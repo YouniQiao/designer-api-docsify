@@ -2,9 +2,11 @@
 
 Indicates the operator of SIM.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-export enum OperatorSimCard--><!--Device-sim-export enum OperatorSimCard-End-->
 
@@ -20,9 +22,11 @@ CHINA_TELECOM_CARD = 'china_telecom_card'
 
 Indicates the China Telecom card.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OperatorSimCard-CHINA_TELECOM_CARD = 'china_telecom_card'--><!--Device-OperatorSimCard-CHINA_TELECOM_CARD = 'china_telecom_card'-End-->
 

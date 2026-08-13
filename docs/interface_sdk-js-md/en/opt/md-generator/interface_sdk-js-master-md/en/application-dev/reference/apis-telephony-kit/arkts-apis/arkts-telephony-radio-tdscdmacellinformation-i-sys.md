@@ -2,7 +2,9 @@
 
 Obtains TDSCDMA cell information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface TdscdmaCellInformation--><!--Device-radio-export interface TdscdmaCellInformation-End-->
 
@@ -26,7 +28,9 @@ Indicates the cell ID.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-cellId: int--><!--Device-TdscdmaCellInformation-cellId: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the cell parameter ID.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-cpid: int--><!--Device-TdscdmaCellInformation-cpid: int-End-->
 
@@ -62,7 +68,9 @@ Indicates the location area code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-lac: int--><!--Device-TdscdmaCellInformation-lac: int-End-->
 
@@ -80,7 +88,9 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-mcc: string--><!--Device-TdscdmaCellInformation-mcc: string-End-->
 
@@ -98,7 +108,9 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-mnc: string--><!--Device-TdscdmaCellInformation-mnc: string-End-->
 
@@ -116,7 +128,9 @@ Indicates the absolute radio frequency number.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TdscdmaCellInformation-uarfcn: int--><!--Device-TdscdmaCellInformation-uarfcn: int-End-->
 

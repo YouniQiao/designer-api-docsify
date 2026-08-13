@@ -8,6 +8,8 @@ Called when a paste operation is performed.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-unnamed-declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void--><!--Device-unnamed-declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void-End-->

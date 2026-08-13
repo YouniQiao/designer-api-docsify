@@ -1,9 +1,10 @@
 # AVScreenCaptureRecorder
 
-AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before calling any API in AVScreenCaptureRecorder, you must use   
-[createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md#createAVScreenCaptureRecorder) to create an AVScreenCaptureRecorder instance.
+AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before calling any API in AVScreenCaptureRecorder, you must use [createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md#createAVScreenCaptureRecorder) to create an AVScreenCaptureRecorder instance.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVScreenCaptureRecorder--><!--Device-media-interface AVScreenCaptureRecorder-End-->
 
@@ -21,9 +22,11 @@ import { media } from '@kit.MediaKit';
 addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<number>
 ```
 
-add a watermark for the AVScreenCaptureRecorder. This API uses a promise to return the result.App can add up to 5 watermarks.This API can be called only before calling startRecording().
+add a watermark for the AVScreenCaptureRecorder. This API uses a promise to return the result. App can add up to 5 watermarks. This API can be called only before calling startRecording().
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +51,10 @@ add a watermark for the AVScreenCaptureRecorder. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## excludePickerWindows
 
@@ -61,7 +64,9 @@ excludePickerWindows(excludedWindows: Array<number>): Promise<void>
 
 Sets the list of windows to be hidden in the picker. The setting takes effect the next time the picker is displayed. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>-End-->
 
@@ -83,9 +88,9 @@ Sets the list of windows to be hidden in the picker. The setting takes effect th
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## init
 
@@ -95,7 +100,9 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 
 Initializes screen capture and sets screen capture parameters. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>--><!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>-End-->
 
@@ -117,21 +124,23 @@ Initializes screen capture and sets screen capture parameters. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
-## off('stateChange')
+## offError
 
 ```TypeScript
-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
+offError(callback?: ErrorCallback): void
 ```
 
-Unsubscribes from screen capture state changes. You can specify a callback to cancel the specified subscription.
+Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified subscription.
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AVScreenCaptureRecorder-offError(callback?: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -139,10 +148,31 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'stateChange' | Yes |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+
+## offStateChange
+
+```TypeScript
+offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void
+```
+
+Unsubscribes from screen capture state changes. You can specify a callback to cancel the specified subscription.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVScreenCaptureRecorder-offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No |
 
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -151,6 +181,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified subscription.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -163,17 +195,19 @@ Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to 
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
 
-## on('stateChange')
+## off_stateChange
 
 ```TypeScript
-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
+off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
 ```
 
-Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Unsubscribes from screen capture state changes. You can specify a callback to cancel the specified subscription.
 
 **Since:** 12
 
-<!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -182,9 +216,61 @@ Subscribes to screen capture state changes. An application can subscribe to only
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'stateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVScreenCaptureRecorder-onError(callback: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<AVScreenCaptureStateCode>): void
+```
+
+Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVScreenCaptureRecorder-onStateChange(callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-onStateChange(callback: Callback<AVScreenCaptureStateCode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes |
 
-## on('error')
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -193,6 +279,8 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -209,9 +297,32 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+
+## on_stateChange
+
+```TypeScript
+on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
+```
+
+Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'stateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes |
 
 ## pauseRecording
 
@@ -222,6 +333,8 @@ pauseRecording(): Promise<void>
 Pause screen capture. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -239,9 +352,9 @@ Pause screen capture. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## presentPicker
 
@@ -249,16 +362,11 @@ Pause screen capture. This API uses a promise to return the result.
 presentPicker(): Promise<void>
 ```
 
-Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result.
+Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result. > **NOTE：**> > - The ongoing capture process remains uninterrupted while updating the recording source. > > - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly > selected source.
 
-> **NOTE：**
-> 
-> - The ongoing capture process remains uninterrupted while updating the recording source.
-> 
-> - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly
-> selected source.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>--><!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>-End-->
 
@@ -274,9 +382,9 @@ Displays the Picker once more after the screen capture starts, allowing for dyna
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -286,7 +394,9 @@ release(): Promise<void>
 
 Releases this AVScreenCaptureRecorder instance. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-release(): Promise<void>--><!--Device-AVScreenCaptureRecorder-release(): Promise<void>-End-->
 
@@ -302,8 +412,8 @@ Releases this AVScreenCaptureRecorder instance. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## resumeRecording
 
@@ -314,6 +424,8 @@ resumeRecording(): Promise<void>
 Resume screen capture. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -331,9 +443,9 @@ Resume screen capture. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setContentAutoRotation
 
@@ -344,6 +456,8 @@ setContentAutoRotation(enable: boolean): Promise<void>
 Sets whether the captured screen content automatically rotates to keep the image upright.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -367,8 +481,8 @@ Sets whether the captured screen content automatically rotates to keep the image
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setMicEnabled
 
@@ -378,7 +492,9 @@ setMicEnabled(enable: boolean): Promise<void>
 
 Enables or disables the microphone. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>--><!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>-End-->
 
@@ -400,8 +516,8 @@ Enables or disables the microphone. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setPickerMode
 
@@ -411,7 +527,9 @@ setPickerMode(pickerMode: PickerMode): Promise<void>
 
 Sets the display mode of the picker. The setting takes effect the next time the picker is displayed. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>--><!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>-End-->
 
@@ -433,9 +551,9 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## skipPrivacyMode
 
@@ -443,11 +561,11 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 skipPrivacyMode(windowIDs: Array<number>): Promise<void>
 ```
 
-During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result.
+During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result. For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
 
-For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>-End-->
 
@@ -469,8 +587,8 @@ For example, if a user enters a password in this application during screen captu
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## startRecording
 
@@ -478,10 +596,11 @@ For example, if a user enters a password in this application during screen captu
 startRecording(): Promise<void>
 ```
 
-Starts screen recording. Before using this API, you must call   
-[init](#init). This API uses a promise to return the result.
+Starts screen recording. Before using this API, you must call [init](#init). This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>-End-->
 
@@ -497,8 +616,8 @@ Starts screen recording. Before using this API, you must call
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## stopRecording
 
@@ -508,7 +627,9 @@ stopRecording(): Promise<void>
 
 Stops screen recording. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>-End-->
 
@@ -524,5 +645,5 @@ Stops screen recording. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |

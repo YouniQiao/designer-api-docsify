@@ -1,12 +1,12 @@
 # BlanklessLoadingParam
 
-Defines the blankless loading parameter.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Defines the blankless loading parameter. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface BlanklessLoadingParam--><!--Device-webview-interface BlanklessLoadingParam-End-->
 
@@ -24,15 +24,15 @@ import { webview } from '@kit.ArkWeb';
 callback?: Callback<BlanklessFrameInterpolationInfo>
 ```
 
-Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information.
+Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,22 +43,22 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ## duration
 
 ```TypeScript
-duration?: int
+duration?: number
 ```
 
-Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000].
+Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000]. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. &lt;br&gt;Unit: ms.
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.&lt;br&gt;Unit: ms.
-
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlanklessLoadingParam-duration?: int--><!--Device-BlanklessLoadingParam-duration?: int-End-->
+<!--Device-BlanklessLoadingParam-duration?: number--><!--Device-BlanklessLoadingParam-duration?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -68,15 +68,15 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 enable: boolean
 ```
 
-Whether to enable frame interpolation. The value true indicates to enable frame interpolation, and false indicates the opposite.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Whether to enable frame interpolation. The value true indicates to enable frame interpolation, and false indicates the opposite. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Type:** boolean
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,22 +87,22 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ## expirationTime
 
 ```TypeScript
-expirationTime?: int
+expirationTime?: number
 ```
 
-Expiration time of the historical frame, in ms (UTC time). T indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms.The value range is the union of (T, T + 2592000000] and {0}.0 indicates that the expiration time is not specified and the default expiration time (7 days) is used.
+Expiration time of the historical frame, in ms (UTC time). T indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms. The value range is the union of (T, T + 2592000000] and {0}. 0 indicates that the expiration time is not specified and the default expiration time (7 days) is used. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlanklessLoadingParam-expirationTime?: int--><!--Device-BlanklessLoadingParam-expirationTime?: int-End-->
+<!--Device-BlanklessLoadingParam-expirationTime?: number--><!--Device-BlanklessLoadingParam-expirationTime?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

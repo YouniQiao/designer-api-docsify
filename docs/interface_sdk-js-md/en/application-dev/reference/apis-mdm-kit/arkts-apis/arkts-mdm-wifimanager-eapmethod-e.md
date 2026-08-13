@@ -1,14 +1,12 @@
 # EapMethod
 
-Enumerates the EAP authentication methods.
-
-> **NOTE：**
-> 
-> Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported.
+Enumerates the EAP authentication methods. > **NOTE：**> > Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum EapMethod--><!--Device-wifiManager-enum EapMethod-End-->
 
@@ -25,6 +23,8 @@ Not specified.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +44,8 @@ Protected Extensible Authentication Protocol (PEAP). It first establishes a secu
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_PEAP = 1--><!--Device-EapMethod-EAP_PEAP = 1-End-->
@@ -61,6 +63,8 @@ Transport Layer Security (TLS). It implements mutual certificate authentication.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +84,8 @@ Tunnel Transport Layer Security (TTLS). It is similar to PEAP, but supports a mo
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_TTLS = 3--><!--Device-EapMethod-EAP_TTLS = 3-End-->
@@ -97,6 +103,8 @@ Password Authentication (PWD). It enables password-based authentication and does
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,6 +124,8 @@ Subscriber Identity Module (SIM). It performs authentication using the keys and 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_SIM = 5--><!--Device-EapMethod-EAP_SIM = 5-End-->
@@ -133,6 +143,8 @@ Authentication and Key Agreement (AKA). It performs authentication using enhance
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,6 +164,8 @@ AKA Prime. It is an enhanced version of EAP-AKA and binds the network name durin
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_AKA_PRIME = 7--><!--Device-EapMethod-EAP_AKA_PRIME = 7-End-->
@@ -169,6 +183,8 @@ Unauthenticated TLS (UNAUTH TLS). It implements one-way authentication (client a
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

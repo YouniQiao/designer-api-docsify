@@ -12,9 +12,11 @@ import { agentManager } from '@kit.AbilityKit';
 function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: number): Promise<void>
 ```
 
-Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to[connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectServiceExtensionAbility).
+Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectServiceExtensionAbility-(System-API)).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +43,6 @@ Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |

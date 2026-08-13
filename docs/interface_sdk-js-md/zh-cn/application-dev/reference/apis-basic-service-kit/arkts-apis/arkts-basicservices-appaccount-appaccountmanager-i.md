@@ -2,9 +2,11 @@
 
 应用账号管理器，可用于管理应用自身的账号信息。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-appAccount-interface AppAccountManager--><!--Device-appAccount-interface AppAccountManager-End-->
 
@@ -16,13 +18,7 @@
 addAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-根据账号名添加应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createAccount)替
-> 代。
+根据账号名添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [createAccount](#createAccount)替 > 代。
 
 **起始版本：** 7
 
@@ -30,7 +26,7 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**替代接口：** [createAccount](#createAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -41,7 +37,7 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -59,13 +55,7 @@ appAccountManager.addAccount('WangWu', (err: BusinessError) => {
 addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-根据账号名和额外信息添加应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createAccount)
-> 替代。
+根据账号名和额外信息添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [createAccount](#createAccount) > 替代。
 
 **起始版本：** 7
 
@@ -73,7 +63,7 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**替代接口：** [createAccount](#createAccount)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -85,7 +75,7 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -103,12 +93,7 @@ appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => {
 addAccount(name: string, extraInfo?: string): Promise<void>
 ```
 
-根据账号名和额外信息添加应用账号。使用Promise异步回调。
-
-> **说明：**
-> > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createAccount-2)
-> 替代。
+根据账号名和额外信息添加应用账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [createAccount](#createAccount) > 替代。
 
 **起始版本：** 7
 
@@ -116,7 +101,7 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**替代接口：** [createAccount](#createAccount)(name: string, options?: CreateAccountOptions)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
@@ -158,13 +143,7 @@ addAccountImplicitly(
     ): void
 ```
 
-根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [createAccountImplicitly](#createAccountImplicitly)
-> 替代。
+根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [createAccountImplicitly](#createAccountImplicitly) > 替代。
 
 **起始版本：** 8
 
@@ -172,7 +151,7 @@ addAccountImplicitly(
 
 **废弃版本：** 9
 
-**替代接口：** [createAccountImplicitly](appAccount.AppAccountManager.createAccountImplicitly(owner:)
+**替代接口：** [createAccountImplicitly](#createAccountImplicitly)(owner: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -236,9 +215,11 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void--><!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void-End-->
 
@@ -257,13 +238,13 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -381,6 +362,8 @@ auth(
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -399,13 +382,13 @@ auth(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -473,7 +456,9 @@ auth(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void-End-->
 
@@ -493,12 +478,12 @@ auth(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -567,13 +552,7 @@ authenticate(
     ): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [auth](#auth)
-> 替代。
+对应用账号进行鉴权以获取授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [auth](#auth) > 替代。
 
 **起始版本：** 8
 
@@ -581,7 +560,7 @@ authenticate(
 
 **废弃版本：** 9
 
-**替代接口：** [auth](appAccount.AppAccountManager.auth(name:)
+**替代接口：** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -646,9 +625,11 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 检查指定应用账号是否满足特定的标签集合。使用callback异步回调。该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void-End-->
 
@@ -661,19 +642,19 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | labels | Array&lt;string&gt; | 是 | 标签数组。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示满足特定的标签集合，data为false表示不满足；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示满足特定的标签集合，data为false表示不满足；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -731,9 +712,11 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 检查指定应用账号是否满足特定的标签集合。使用Promise异步回调。该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>-End-->
 
@@ -757,13 +740,13 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -818,9 +801,11 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 
 检查指定应用对特定账号的数据是否可访问。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -832,16 +817,16 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -897,9 +882,11 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 检查指定应用对特定账号的数据是否可访问。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>-End-->
 
@@ -922,10 +909,10 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -974,13 +961,7 @@ try {
 checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定应用账号是否开启数据同步功能。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](#checkDataSyncEnabled)
-> 替代。
+检查指定应用账号是否开启数据同步功能。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkDataSyncEnabled](#checkDataSyncEnabled) > 替代。
 
 **起始版本：** 7
 
@@ -988,7 +969,7 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**替代接口：** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1001,7 +982,7 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
 
 ## 示例
 
@@ -1023,12 +1004,7 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
 checkAppAccountSyncEnable(name: string): Promise<boolean>
 ```
 
-检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](#checkDataSyncEnabled-1)替代。
+检查指定应用账号是否开启数据同步功能。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkDataSyncEnabled](#checkDataSyncEnabled)替代。
 
 **起始版本：** 7
 
@@ -1036,7 +1012,7 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**替代接口：** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1076,9 +1052,11 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -1091,17 +1069,17 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 检查可见性的应用包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -1157,9 +1135,11 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -1183,11 +1163,11 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -1240,9 +1220,11 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 
 检查指定应用账号是否开启数据同步功能。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1255,17 +1237,17 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -1320,9 +1302,11 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1346,11 +1330,11 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -1404,13 +1388,7 @@ checkOAuthTokenVisibility(
     ): void
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility)
-> 替代。
+检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
@@ -1418,7 +1396,7 @@ checkOAuthTokenVisibility(
 
 **废弃版本：** 9
 
-**替代接口：** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**替代接口：** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void-End-->
 
@@ -1431,7 +1409,7 @@ checkOAuthTokenVisibility(
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 检查可见性的应用包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
 
 ## 示例
 
@@ -1454,13 +1432,7 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility-1)
-> 替代。
+检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
@@ -1468,7 +1440,7 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 
 **废弃版本：** 9
 
-**替代接口：** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**替代接口：** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -1509,9 +1481,11 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 根据账号名创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1522,17 +1496,17 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 
 ## 示例
 
@@ -1586,9 +1560,11 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 根据账号名和可选项创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -1600,17 +1576,17 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | 是 | 创建应用账号的选项，可提供自定义数据，但不建议包含敏感数据（如密码、Token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or options. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 
 ## 示例
 
@@ -1671,9 +1647,11 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 根据账号名和可选项创建应用账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>--><!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>-End-->
 
@@ -1696,11 +1674,11 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or options. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 
 ## 示例
 
@@ -1758,9 +1736,11 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 根据指定的账号所有者隐式地创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void-End-->
 
@@ -1777,13 +1757,13 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
 
 ## 示例
 
@@ -1889,9 +1869,11 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 根据指定的账号所有者和可选项隐式地创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
@@ -1909,13 +1891,13 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
 
 ## 示例
 
@@ -2028,13 +2010,7 @@ struct Index {
 deleteAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-删除应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](#removeAccount)替
-> 代。
+删除应用账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [removeAccount](#removeAccount)替 > 代。
 
 **起始版本：** 7
 
@@ -2042,7 +2018,7 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**替代接口：** [removeAccount](#removeAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2053,7 +2029,7 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -2071,13 +2047,7 @@ appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => {
 deleteAccount(name: string): Promise<void>
 ```
 
-删除应用账号。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](#removeAccount-1)替
-> 代。
+删除应用账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [removeAccount](#removeAccount)替 > 代。
 
 **起始版本：** 7
 
@@ -2085,7 +2055,7 @@ deleteAccount(name: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**替代接口：** [removeAccount](#removeAccount)(name: string)
 
 <!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
@@ -2123,9 +2093,11 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 
 删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2139,17 +2111,17 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。如果授权令牌不存在，则不执行任何操作。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -2205,9 +2177,11 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -2232,11 +2206,11 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -2287,9 +2261,11 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 删除指定应用账号的特定类型的凭据信息。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2301,17 +2277,17 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
@@ -2365,9 +2341,11 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 删除指定应用账号的特定类型的凭据信息。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>-End-->
 
@@ -2390,11 +2368,11 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
@@ -2443,13 +2421,7 @@ try {
 deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [deleteAuthToken](#deleteAuthToken)
-> 替代。
+删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [deleteAuthToken](#deleteAuthToken) > 替代。
 
 **起始版本：** 8
 
@@ -2457,7 +2429,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 
 **废弃版本：** 9
 
-**替代接口：** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**替代接口：** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2471,7 +2443,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
 
 ## 示例
 
@@ -2494,13 +2466,7 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [deleteAuthToken](#deleteAuthToken-1)
-> 替代。
+删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [deleteAuthToken](#deleteAuthToken) > 替代。
 
 **起始版本：** 8
 
@@ -2508,7 +2474,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 
 **废弃版本：** 9
 
-**替代接口：** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**替代接口：** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -2547,13 +2513,7 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-禁止指定第三方应用账号名称对指定的第三方应用进行访问。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess)
-> 替代。
+禁止指定第三方应用账号名称对指定的第三方应用进行访问。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
@@ -2561,7 +2521,7 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2573,7 +2533,7 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -2591,13 +2551,7 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err
 disableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess-1)
-> 替代。
+禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
@@ -2605,7 +2559,7 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -2642,13 +2596,7 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
 enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess)
-> 替代。
+允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
@@ -2656,7 +2604,7 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2668,7 +2616,7 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当允许指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当允许指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -2690,13 +2638,7 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err:
 enableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess-1)
-> 替代。
+允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
@@ -2704,7 +2646,7 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -2741,13 +2683,7 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(
 getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的凭据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](#getCredential)
-> 替代。
+获取指定应用账号的凭据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCredential](#getCredential) > 替代。
 
 **起始版本：** 7
 
@@ -2755,7 +2691,7 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 
 **废弃版本：** 9
 
-**替代接口：** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**替代接口：** [getCredential](#getCredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2767,7 +2703,7 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
 
 ## 示例
 
@@ -2789,12 +2725,7 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: Bu
 getAccountCredential(name: string, credentialType: string): Promise<string>
 ```
 
-获取指定应用账号的凭据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](#getCredential-1)替代。
+获取指定应用账号的凭据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCredential](#getCredential)替代。
 
 **起始版本：** 7
 
@@ -2802,7 +2733,7 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**替代接口：** [getCredential](#getCredential)(name: string, credentialType: string)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -2839,13 +2770,7 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData)
-> 替代。
+获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData) > 替代。
 
 **起始版本：** 7
 
@@ -2853,7 +2778,7 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2864,7 +2789,7 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取此应用账号的额外信息成功时，err为null，data返回此应用账号的额外信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取此应用账号的额外信息成功时，err为null，data返回此应用账号的额外信息对象；否则为错误对象。 |
 
 ## 示例
 
@@ -2886,12 +2811,7 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
 getAccountExtraInfo(name: string): Promise<string>
 ```
 
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData-1)替代。
+获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData)替代。
 
 **起始版本：** 7
 
@@ -2899,7 +2819,7 @@ getAccountExtraInfo(name: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
@@ -2935,11 +2855,13 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
 getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -2950,15 +2872,15 @@ getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果获取成功，err为null，data为获取到的应用账号列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果获取成功，err为null，data为获取到的应用账号列表；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
@@ -3012,11 +2934,13 @@ try {
 getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
@@ -3038,9 +2962,9 @@ getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
@@ -3091,13 +3015,7 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAllAccounts](#getAllAccounts)
-> 替代。
+获取所有可访问的应用账号信息。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getAllAccounts](#getAllAccounts) > 替代。
 
 **起始版本：** 7
 
@@ -3105,7 +3023,7 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getAllAccounts](appAccount.AppAccountManager.getAllAccounts(callback:)
+**替代接口：** [getAllAccounts](#getAllAccounts)(callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -3117,7 +3035,7 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
 
 ## 示例
 
@@ -3139,12 +3057,7 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getAllAccounts)
-> 替代。
+获取所有可访问的应用账号信息。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getAllAccounts) > 替代。
 
 **起始版本：** 7
 
@@ -3184,11 +3097,13 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
 getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+获取所有可访问的应用账号信息。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -3198,14 +3113,14 @@ getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -3258,11 +3173,13 @@ try {
 getAllAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+获取所有可访问的应用账号信息。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>-End-->
 
@@ -3278,7 +3195,7 @@ getAllAccounts(): Promise<Array<AppAccountInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -3327,13 +3244,7 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAccountsByOwner](#getAccountsByOwner)
-> 替代。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getAccountsByOwner](#getAccountsByOwner) > 替代。
 
 **起始版本：** 7
 
@@ -3341,7 +3252,7 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 
 **废弃版本：** 9
 
-**替代接口：** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**替代接口：** [getAccountsByOwner](#getAccountsByOwner)(owner: string, callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -3354,7 +3265,7 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 应用账号信息列表。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 应用账号信息列表。 |
 
 ## 示例
 
@@ -3377,12 +3288,7 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAccountsByOwner](#getAccountsByOwner-1)替代。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getAccountsByOwner](#getAccountsByOwner)替代。
 
 **起始版本：** 7
 
@@ -3390,7 +3296,7 @@ getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 
 **废弃版本：** 9
 
-**替代接口：** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**替代接口：** [getAccountsByOwner](#getAccountsByOwner)(owner: string)
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -3431,9 +3337,11 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void-End-->
 
@@ -3445,16 +3353,16 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -3509,9 +3417,11 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>-End-->
 
@@ -3534,10 +3444,10 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -3588,13 +3498,7 @@ try {
 getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](#getAllAuthTokens)
-> 替代。
+获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAllAuthTokens](#getAllAuthTokens) > 替代。
 
 **起始版本：** 8
 
@@ -3602,7 +3506,7 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 
 **废弃版本：** 9
 
-**替代接口：** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**替代接口：** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
@@ -3614,7 +3518,7 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
 
 ## 示例
 
@@ -3637,12 +3541,7 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
 getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](#getAllAuthTokens-1)替代。
+获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAllAuthTokens](#getAllAuthTokens)替代。
 
 **起始版本：** 8
 
@@ -3650,7 +3549,7 @@ getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 
 **废弃版本：** 9
 
-**替代接口：** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**替代接口：** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
@@ -3688,13 +3587,7 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-根据指定键名获取特定应用账号的关联数据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData)
-> 替代。
+根据指定键名获取特定应用账号的关联数据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData) > 替代。
 
 **起始版本：** 7
 
@@ -3702,7 +3595,7 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3714,7 +3607,7 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 关联数据的键名。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为关联数据的取值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为关联数据的取值；否则为错误对象。 |
 
 ## 示例
 
@@ -3736,12 +3629,7 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, res
 getAssociatedData(name: string, key: string): Promise<string>
 ```
 
-获取与此应用程序账号关联的数据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData-1)替代。
+获取与此应用程序账号关联的数据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData)替代。
 
 **起始版本：** 7
 
@@ -3749,7 +3637,7 @@ getAssociatedData(name: string, key: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
@@ -3788,9 +3676,11 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 获取鉴权会话的认证器回调对象。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void--><!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void-End-->
 
@@ -3801,16 +3691,16 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 鉴权会话的标识。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为鉴权会话的认证器回调对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为鉴权会话的认证器回调对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) | Session not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -3897,9 +3787,11 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 获取鉴权会话的认证器回调对象。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>--><!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>-End-->
 
@@ -3921,10 +3813,10 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) | Session not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -4005,12 +3897,13 @@ export default class EntryAbility extends UIAbility {
 getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setAuthTokenVisibility](#setAuthTokenVisibility)来设置）。使用callback异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setAuthTokenVisibility](#setAuthTokenVisibility) 来设置）。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -4022,17 +3915,17 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -4085,12 +3978,13 @@ try {
 getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setAuthTokenVisibility](#setAuthTokenVisibility)来设置）。使用Promise异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setAuthTokenVisibility](#setAuthTokenVisibility) 来设置）。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -4113,11 +4007,11 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -4168,9 +4062,11 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 
 获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -4183,17 +4079,17 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -4249,9 +4145,11 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -4275,11 +4173,11 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -4328,13 +4226,7 @@ try {
 getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
 ```
 
-获取鉴权会话的认证器回调。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](#getAuthCallback)
-> 替代。
+获取鉴权会话的认证器回调。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthCallback](#getAuthCallback) > 替代。
 
 **起始版本：** 8
 
@@ -4342,7 +4234,7 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**替代接口：** [getAuthCallback](#getAuthCallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
 
@@ -4353,7 +4245,7 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 鉴权会话的标识。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | 是 | 回调函数。当获取鉴权会话的认证器回调函数成功时，err为null，data为认证器回调函数；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | 是 | 回调函数。当获取鉴权会话的认证器回调函数成功时，err为null，data为认证器回调函数；否则为错误对象。 |
 
 ## 示例
 
@@ -4387,12 +4279,7 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 ```
 
-获取鉴权会话的认证器回调。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](#getAuthCallback-1)替代。
+获取鉴权会话的认证器回调。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthCallback](#getAuthCallback)替代。
 
 **起始版本：** 8
 
@@ -4400,7 +4287,7 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**替代接口：** [getAuthCallback](#getAuthCallback)(sessionId: string)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
@@ -4448,13 +4335,7 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-获取指定应用的认证器信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo)
-> 替代。
+获取指定应用的认证器信息。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [queryAuthenticatorInfo](#queryAuthenticatorInfo) > 替代。
 
 **起始版本：** 8
 
@@ -4462,7 +4343,7 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 
 **废弃版本：** 9
 
-**替代接口：** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**替代接口：** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -4473,7 +4354,7 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
 
 ## 示例
 
@@ -4496,12 +4377,7 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
 getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 ```
 
-获取指定应用的认证器信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo-1)替代。
+获取指定应用的认证器信息。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [queryAuthenticatorInfo](#queryAuthenticatorInfo)替代。
 
 **起始版本：** 8
 
@@ -4509,7 +4385,7 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 **废弃版本：** 9
 
-**替代接口：** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**替代接口：** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -4548,9 +4424,11 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 获取指定应用账号的凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -4562,17 +4440,17 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
@@ -4627,9 +4505,11 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 获取指定应用账号的凭据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -4652,11 +4532,11 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
@@ -4707,9 +4587,11 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 根据指定键名获取特定应用账号的自定义数据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -4721,17 +4603,17 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 自定义数据的键名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为自定义数据的取值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为自定义数据的取值；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found. |
 
 ## 示例
 
@@ -4785,9 +4667,11 @@ getCustomData(name: string, key: string): Promise<string>
 
 根据指定键名获取特定应用账号的自定义数据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>-End-->
 
@@ -4810,11 +4694,11 @@ getCustomData(name: string, key: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found |
 
 ## 示例
 
@@ -4865,9 +4749,11 @@ getCustomDataSync(name: string, key: string): string
 
 根据指定键名获取特定应用账号的自定义数据。使用同步方式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string--><!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string-End-->
 
@@ -4890,11 +4776,11 @@ getCustomDataSync(name: string, key: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found. |
 
 ## 示例
 
@@ -4916,14 +4802,7 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility)来设置）。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](#getAuthList)
-> 替代。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setOAuthTokenVisibility](#setOAuthTokenVisibility) 来设置）。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthList](#getAuthList) > 替代。
 
 **起始版本：** 8
 
@@ -4931,7 +4810,7 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**替代接口：** [getAuthList](#getAuthList)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -4943,7 +4822,7 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
 
 ## 示例
 
@@ -4965,13 +4844,7 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility)来设置）。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](#getAuthList-1)替代。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setOAuthTokenVisibility](#setOAuthTokenVisibility) 来设置）。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthList](#getAuthList)替代。
 
 **起始版本：** 8
 
@@ -4979,7 +4852,7 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**替代接口：** [getAuthList](#getAuthList)(name: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -5016,13 +4889,7 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](#getAuthToken)
-> 替代。
+获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthToken](#getAuthToken) > 替代。
 
 **起始版本：** 8
 
@@ -5030,7 +4897,7 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**替代接口：** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -5043,7 +4910,7 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
 
 ## 示例
 
@@ -5066,13 +4933,7 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](#getAuthToken-1)替
-> 代。
+获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthToken](#getAuthToken)替 > 代。
 
 **起始版本：** 8
 
@@ -5080,7 +4941,7 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**替代接口：** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -5112,114 +4973,6 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 });
 ```
 
-## off('change')
-
-```TypeScript
-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
-```
-
-取消订阅账号信息变更事件。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [off('accountChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-> 替代。
-
-**起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** 9
-
-**替代接口：** [off](appAccount.AppAccountManager.off(type:)
-
-<!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'change' | 是 | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件的所有回调。 |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data:' + JSON.stringify(data));
-}
-
-try {
-  appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`on change failed, code is ${err.code}, message is ${err.message}`);
-}
-try {
-  appAccountManager.off('change', changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off change failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## off('accountChange')
-
-```TypeScript
-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
-```
-
-取消订阅账号信息变更事件。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-
-## 示例
-
-```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data:' + JSON.stringify(data));
-}
-try{
-  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
-} catch(err) {
-  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
-}
-try{
-  appAccountManager.off('accountChange', changeOnCallback);
-}
-catch(err){
-  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## offAccountChange
 
 ```TypeScript
@@ -5230,7 +4983,9 @@ offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -5240,13 +4995,13 @@ offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -5273,69 +5028,21 @@ try {
 }
 ```
 
-## on('change')
+## off_accountChange
 
 ```TypeScript
-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-订阅指定应用的账号信息变更事件。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [on('accountChange')](appAccount.AppAccountManager.on(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array<AppAccountInfo>&gt;&lt;AppAccountInfo&gt;>))
-> 替代。
-
-**起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** 9
-
-**替代接口：** [on](appAccount.AppAccountManager.on(type:)
-
-<!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'change' | 是 | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
-| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息发生变更的应用账号列表。 |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data:' + JSON.stringify(data));
-}
-try{
-  appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
-}
-catch(err){
-  console.error(`on accountOnOffDemo code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## on('accountChange')
-
-```TypeScript
-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
-```
-
-订阅指定应用的账号信息变更事件。
+取消订阅账号信息变更事件。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5343,17 +5050,16 @@ on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAcc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当目标应用更新账号信息时，触发该事件。 |
-| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
+| type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type or owners. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -5368,6 +5074,62 @@ try{
 } catch(err) {
   console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
+try{
+  appAccountManager.off('accountChange', changeOnCallback);
+}
+catch(err){
+  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off_change
+
+```TypeScript
+off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
+```
+
+取消订阅账号信息变更事件。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [off('accountChange')](#off_change) > 替代。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** 9
+
+**替代接口：** [off](#off_change)(type: 'accountChange', callback?: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
+
+<!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件的所有回调。 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
+  console.info('receive change data:' + JSON.stringify(data));
+}
+
+try {
+  appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`on change failed, code is ${err.code}, message is ${err.message}`);
+}
+try {
+  appAccountManager.off('change', changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off change failed, code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## onAccountChange
@@ -5380,7 +5142,9 @@ onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -5391,14 +5155,14 @@ onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owners. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -5416,6 +5180,99 @@ try {
 }
 ```
 
+## on_accountChange
+
+```TypeScript
+on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+```
+
+订阅指定应用的账号信息变更事件。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当目标应用更新账号信息时，触发该事件。 |
+| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type or owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+
+## 示例
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
+  console.info('receive change data:' + JSON.stringify(data));
+}
+try{
+  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
+} catch(err) {
+  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## on_change
+
+```TypeScript
+on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+```
+
+订阅指定应用的账号信息变更事件。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [on('accountChange')](#on_change) > 替代。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** 9
+
+**替代接口：** [on](#on_change)(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
+
+<!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
+| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息发生变更的应用账号列表。 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
+  console.info('receive change data:' + JSON.stringify(data));
+}
+try{
+  appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
+}
+catch(err){
+  console.error(`on accountOnOffDemo code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## queryAuthenticatorInfo
 
 ```TypeScript
@@ -5424,9 +5281,11 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 获取指定应用的认证器信息。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -5437,16 +5296,16 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -5502,9 +5361,11 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 获取指定应用的认证器信息。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -5526,10 +5387,10 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -5582,9 +5443,11 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 删除应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5595,16 +5458,16 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -5657,9 +5520,11 @@ removeAccount(name: string): Promise<void>
 
 删除应用账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string): Promise<void>--><!--Device-AppAccountManager-removeAccount(name: string): Promise<void>-End-->
 
@@ -5681,10 +5546,10 @@ removeAccount(name: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -5735,9 +5600,11 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 根据选项选择调用方可访问的账号列表。使用callback异步回调。如果选项中包含标签约束，则该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -5748,17 +5615,17 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | 是 | 选择账号的选项。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当根据选项选择请求方可访问的账号列表时，err为null，data为可访问的账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当根据选项选择请求方可访问的账号列表时，err为null，data为可访问的账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -5822,9 +5689,11 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 根据选项选择调用方可访问的账号列表。使用Promise异步回调。如果选项中包含标签约束，则该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>-End-->
 
@@ -5846,11 +5715,11 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -5905,13 +5774,7 @@ try {
 setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的凭据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setCredential](#setCredential)
-> 替代。
+设置指定应用账号的凭据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setCredential](#setCredential) > 替代。
 
 **起始版本：** 7
 
@@ -5919,7 +5782,7 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 
 **废弃版本：** 9
 
-**替代接口：** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**替代接口：** [setCredential](#setCredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5932,7 +5795,7 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
 | credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置此应用程序账号的凭据成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置此应用程序账号的凭据成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -5954,13 +5817,7 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
 ```
 
-设置指定应用账号的凭据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setCredential](#setCredential-1)
-> 替代。
+设置指定应用账号的凭据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setCredential](#setCredential) > 替代。
 
 **起始版本：** 7
 
@@ -5968,7 +5825,7 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 
 **废弃版本：** 9
 
-**替代接口：** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**替代接口：** [setCredential](#setCredential)(name: string, credentialType: string, credential: string)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -6006,13 +5863,7 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的额外信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData)
-> 替代。
+设置指定应用账号的额外信息。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData) > 替代。
 
 **起始版本：** 7
 
@@ -6020,7 +5871,7 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -6032,7 +5883,7 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -6054,12 +5905,7 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) 
 setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 ```
 
-设置此应用程序账号的额外信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData-1)替代。
+设置此应用程序账号的额外信息。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData)替代。
 
 **起始版本：** 7
 
@@ -6067,7 +5913,7 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
@@ -6106,9 +5952,11 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 设置指定应用对特定账号的访问权限。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -6121,17 +5969,17 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
 | isAccessible | boolean | 是 | 是否可访问。true表示允许访问，false表示禁止访问。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
@@ -6185,9 +6033,11 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 设置指定应用对特定账号的数据访问权限。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>-End-->
 
@@ -6211,11 +6061,11 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
@@ -6264,13 +6114,7 @@ try {
 setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](#setDataSyncEnabled)
-> 替代。
+开启或禁止指定应用账号的数据同步功能。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setDataSyncEnabled](#setDataSyncEnabled) > 替代。
 
 **起始版本：** 7
 
@@ -6278,7 +6122,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 
 **废弃版本：** 9
 
-**替代接口：** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**替代接口：** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -6292,7 +6136,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | isEnable | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -6314,13 +6158,7 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError)
 setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](#setDataSyncEnabled-1)替代
-> 。
+开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setDataSyncEnabled](#setDataSyncEnabled)替代 > 。
 
 **起始版本：** 7
 
@@ -6328,7 +6166,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**替代接口：** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -6367,13 +6205,7 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的关联数据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData)
-> 替代。
+设置指定应用账号的关联数据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData) > 替代。
 
 **起始版本：** 7
 
@@ -6381,7 +6213,7 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -6394,7 +6226,7 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 关联数据的键名。 |
 | value | string | 是 | 关联数据的取值。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置与此应用账号关联的数据成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置与此应用账号关联的数据成功时，err为null，否则为错误对象。 |
 
 ## 示例
 
@@ -6416,12 +6248,7 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessEr
 setAssociatedData(name: string, key: string, value: string): Promise<void>
 ```
 
-设置指定应用账号的关联数据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData-1)替代。
+设置指定应用账号的关联数据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData)替代。
 
 **起始版本：** 7
 
@@ -6429,7 +6256,7 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -6469,9 +6296,11 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -6484,17 +6313,17 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
-| [12400004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) | The number of tokens reaches the upper limit. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -6548,9 +6377,11 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -6574,11 +6405,11 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
-| [12400004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) | The number of tokens reaches the upper limit. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -6635,9 +6466,11 @@ setAuthTokenVisibility(
 
 设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -6651,18 +6484,18 @@ setAuthTokenVisibility(
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 被设置可见性的应用包名。最大长度为512个字符。 |
 | isVisible | boolean | 是 | 是否可见。true表示可见，false表示不可见。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
@@ -6718,9 +6551,11 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -6745,12 +6580,12 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
@@ -6803,9 +6638,11 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 设置指定应用的认证器属性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void-End-->
 
@@ -6822,12 +6659,12 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -6887,9 +6724,11 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 设置认证器属性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
@@ -6907,12 +6746,12 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -6980,9 +6819,11 @@ setCredential(name: string, credentialType: string, credential: string,
 
 设置指定应用账号的凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void-End-->
 
@@ -6995,16 +6836,16 @@ setCredential(name: string, credentialType: string, credential: string,
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
 | credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当凭据设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当凭据设置成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -7058,9 +6899,11 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 设置指定应用账号的凭据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -7084,10 +6927,10 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -7138,9 +6981,11 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 设置指定应用账号的自定义数据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -7153,17 +6998,17 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 自定义数据的键名。最大长度为1024个字符。 |
 | value | string | 是 | 自定义数据的取值。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置自定义数据成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置自定义数据成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) | The number of custom data reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) | The number of custom data reaches the upper limit. |
 
 ## 示例
 
@@ -7217,9 +7062,11 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 设置指定应用账号的自定义数据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -7243,11 +7090,11 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) | The number of custom data reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) | The number of custom data reaches the upper limit. |
 
 ## 示例
 
@@ -7298,9 +7145,11 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -7314,17 +7163,17 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | isEnabled | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -7372,9 +7221,11 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -7399,11 +7250,11 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
@@ -7452,13 +7303,7 @@ try {
 setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthToken](#setAuthToken)
-> 替代。
+为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthToken](#setAuthToken) > 替代。
 
 **起始版本：** 8
 
@@ -7466,7 +7311,7 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**替代接口：** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -7479,7 +7324,7 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 ## 示例
 
@@ -7501,13 +7346,7 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
 setOAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthToken](#setAuthToken-1)替
-> 代。
+为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthToken](#setAuthToken)替 > 代。
 
 **起始版本：** 8
 
@@ -7515,7 +7354,7 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**替代接口：** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -7559,13 +7398,7 @@ setOAuthTokenVisibility(
     ): void
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthTokenVisibility](#setAuthTokenVisibility)
-> 替代。
+设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthTokenVisibility](#setAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
@@ -7573,7 +7406,7 @@ setOAuthTokenVisibility(
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility()
+**替代接口：** [setAuthTokenVisibility](#setAuthTokenVisibility)( name: string, authType: string, bundleName: string, isVisible: boolean, callback: AsyncCallback&lt;void&gt; )
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -7587,7 +7420,7 @@ setOAuthTokenVisibility(
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 被设置可见性的应用包名。最大长度为512个字符。 |
 | isVisible | boolean | 是 | 是否可见。true表示可见，false表示不可见。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 ## 示例
 
@@ -7610,13 +7443,7 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthTokenVisibility](#setAuthTokenVisibility-1)
-> 替代。
+设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthTokenVisibility](#setAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
@@ -7624,7 +7451,7 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility(name:)
+**替代接口：** [setAuthTokenVisibility](#setAuthTokenVisibility)(name: string, authType: string, bundleName: string, isVisible: boolean)
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -7665,9 +7492,11 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 验证指定账号的凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void-End-->
 
@@ -7685,13 +7514,13 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
@@ -7751,9 +7580,11 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 验证用户凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
@@ -7772,13 +7603,13 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 

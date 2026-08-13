@@ -1,8 +1,10 @@
-# @ohos.systemTimer(System Timer)
+# @ohos.systemTimer
 
 The **systemTimer** module provides system timer features. You can use the APIs of this module to implement the alarm clock and other timer services.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace systemTimer--><!--Device-unnamed-declare namespace systemTimer-End-->
 
@@ -23,14 +25,14 @@ import { systemTimer } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer) |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer-1) |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer) |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-1) |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer) |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer-1) |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer) |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer-1) |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createTimer-(System-API)) |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createTimer-(System-API)) |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)) |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)) |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#startTimer-(System-API)) |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#startTimer-(System-API)) |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stopTimer-(System-API)) |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stopTimer-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -46,8 +48,8 @@ import { systemTimer } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) |
-| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) |
-| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) |
-| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) |
+| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_EXACT) |
+| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_IDLE) |
+| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_REALTIME) |
+| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_WAKEUP) |
 <!--DelEnd-->

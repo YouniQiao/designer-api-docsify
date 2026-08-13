@@ -28,7 +28,7 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 
 **废弃版本：** 9
 
-**替代接口：** [iterator]](ohos.url.URLParams.[Symbol.iterator])
+**替代接口：** iterator]
 
 <!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
 
@@ -66,7 +66,7 @@ append(name: string, value: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [append](ohos.url.URLParams.append)
+**替代接口：** append
 
 <!--Device-URLSearchParams-append(name: string, value: string): void--><!--Device-URLSearchParams-append(name: string, value: string): void-End-->
 
@@ -101,7 +101,7 @@ URLSearchParams的构造函数。
 
 **废弃版本：** 9
 
-**替代接口：** [constructor](ohos.url.URLParams.constructor)
+**替代接口：** constructor
 
 <!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)--><!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)-End-->
 
@@ -137,7 +137,7 @@ delete(name: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [delete](ohos.url.URLParams.delete)
+**替代接口：** delete
 
 <!--Device-URLSearchParams-delete(name: string): void--><!--Device-URLSearchParams-delete(name: string): void-End-->
 
@@ -171,7 +171,7 @@ entries(): IterableIterator<[string, string]>
 
 **废弃版本：** 9
 
-**替代接口：** [entries](ohos.url.URLParams.entries)
+**替代接口：** entries
 
 <!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>--><!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>-End-->
 
@@ -209,7 +209,7 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) 
 
 **废弃版本：** 9
 
-**替代接口：** [forEach](ohos.url.URLParams.forEach)
+**替代接口：** forEach
 
 <!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void--><!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void-End-->
 
@@ -245,7 +245,7 @@ get(name: string): string | null
 
 **废弃版本：** 9
 
-**替代接口：** [get](ohos.url.URLParams.get)
+**替代接口：** get
 
 <!--Device-URLSearchParams-get(name: string): string | null--><!--Device-URLSearchParams-get(name: string): string | null-End-->
 
@@ -286,7 +286,7 @@ getAll(name: string): string[]
 
 **废弃版本：** 9
 
-**替代接口：** [getAll](ohos.url.URLParams.getAll)
+**替代接口：** getAll
 
 <!--Device-URLSearchParams-getAll(name: string): string[]--><!--Device-URLSearchParams-getAll(name: string): string[]-End-->
 
@@ -327,7 +327,7 @@ has(name: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [has](ohos.url.URLParams.has)
+**替代接口：** has
 
 <!--Device-URLSearchParams-has(name: string): boolean--><!--Device-URLSearchParams-has(name: string): boolean-End-->
 
@@ -367,7 +367,7 @@ keys(): IterableIterator<string>
 
 **废弃版本：** 9
 
-**替代接口：** [keys](ohos.url.URLParams.keys)
+**替代接口：** keys
 
 <!--Device-URLSearchParams-keys(): IterableIterator<string>--><!--Device-URLSearchParams-keys(): IterableIterator<string>-End-->
 
@@ -405,7 +405,7 @@ set(name: string, value: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [set](ohos.url.URLParams.set)
+**替代接口：** set
 
 <!--Device-URLSearchParams-set(name: string, value: string): void--><!--Device-URLSearchParams-set(name: string, value: string): void-End-->
 
@@ -440,7 +440,7 @@ sort(): void
 
 **废弃版本：** 9
 
-**替代接口：** [sort](ohos.url.URLParams.sort)
+**替代接口：** sort
 
 <!--Device-URLSearchParams-sort(): void--><!--Device-URLSearchParams-sort(): void-End-->
 
@@ -468,7 +468,7 @@ toString(): string
 
 **废弃版本：** 9
 
-**替代接口：** [toString](ohos.url.URLParams.toString)
+**替代接口：** toString
 
 <!--Device-URLSearchParams-toString(): string--><!--Device-URLSearchParams-toString(): string-End-->
 
@@ -503,7 +503,7 @@ values(): IterableIterator<string>
 
 **废弃版本：** 9
 
-**替代接口：** [values](ohos.url.URLParams.values)
+**替代接口：** values
 
 <!--Device-URLSearchParams-values(): IterableIterator<string>--><!--Device-URLSearchParams-values(): IterableIterator<string>-End-->
 

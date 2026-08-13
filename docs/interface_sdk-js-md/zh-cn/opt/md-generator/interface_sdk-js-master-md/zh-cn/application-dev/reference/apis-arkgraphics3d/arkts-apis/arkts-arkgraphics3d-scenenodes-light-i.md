@@ -4,9 +4,11 @@
 
 **继承/实现关系：** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-unnamed-export interface Light extends Node--><!--Device-unnamed-export interface Light extends Node-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Light--><!--Device-unnamed-export interface Light-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,7 +22,9 @@ color: Color
 
 **类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Light-color: Color--><!--Device-Light-color: Color-End-->
 
@@ -36,7 +40,9 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Light-enabled: boolean--><!--Device-Light-enabled: boolean-End-->
 
@@ -52,7 +58,9 @@ intensity: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Light-intensity: double--><!--Device-Light-intensity: double-End-->
 
@@ -68,7 +76,9 @@ readonly lightType: LightType
 
 **类型：** [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Light-readonly lightType: LightType--><!--Device-Light-readonly lightType: LightType-End-->
 
@@ -84,7 +94,9 @@ shadowEnabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Light-shadowEnabled: boolean--><!--Device-Light-shadowEnabled: boolean-End-->
 

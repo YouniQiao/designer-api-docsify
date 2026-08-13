@@ -2,13 +2,13 @@
 
 PatternLock组件的控制器，用于重置组件状态和设置图案密码状态。
 
-## 导入对象
-
-```ts patternLockController: PatternLockController = new PatternLockController();```
+## 导入对象 ```ts patternLockController: PatternLockController = new PatternLockController(); ```
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class PatternLockController--><!--Device-unnamed-declare class PatternLockController-End-->
 
@@ -25,6 +25,8 @@ PatternLockController的构造函数。
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,6 +46,8 @@ reset()
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PatternLockController-reset()--><!--Device-PatternLockController-reset()-End-->
@@ -61,6 +65,8 @@ setChallengeResult(result: PatternLockChallengeResult): void
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

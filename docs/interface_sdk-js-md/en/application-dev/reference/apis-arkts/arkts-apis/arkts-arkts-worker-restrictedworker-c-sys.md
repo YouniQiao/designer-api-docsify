@@ -8,7 +8,9 @@ The RestrictedWorker class contains all Worker functions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-worker-class RestrictedWorker extends ThreadWorker--><!--Device-worker-class RestrictedWorker extends ThreadWorker-End-->
+**Deprecated since:** -1
+
+<!--Device-worker-class RestrictedWorker--><!--Device-worker-class RestrictedWorker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -32,6 +34,8 @@ Creates a worker instance
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -49,6 +53,6 @@ Creates a worker instance
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failure. |
-| [10200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file patch is invalid path. |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failure. |
+| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file patch is invalid path. |
 

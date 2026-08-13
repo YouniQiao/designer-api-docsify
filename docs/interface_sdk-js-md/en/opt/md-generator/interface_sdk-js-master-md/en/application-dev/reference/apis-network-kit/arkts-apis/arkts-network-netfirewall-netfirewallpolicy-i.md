@@ -4,6 +4,8 @@ Firewall policy.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-interface NetFirewallPolicy--><!--Device-netFirewall-interface NetFirewallPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -26,6 +28,8 @@ Inbound connections are allowed or denied by default.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallPolicy-inAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-inAction: FirewallRuleAction-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -42,6 +46,8 @@ Whether the firewall is open.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallPolicy-isOpen: boolean--><!--Device-NetFirewallPolicy-isOpen: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -57,6 +63,8 @@ Outbound connections are allowed or denied by default.
 **Type:** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallPolicy-outAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-outAction: FirewallRuleAction-End-->
 

@@ -4,6 +4,8 @@ Enumerates the OCSP digest algorithm.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cert-enum OcspDigest--><!--Device-cert-enum OcspDigest-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -17,6 +19,8 @@ SHA1 = 0
 SHA1 digest algorithm.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ SHA224 digest algorithm.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,6 +59,8 @@ SHA256 = 2
 SHA256 digest algorithm.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ SHA384 digest algorithm.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -89,6 +99,8 @@ SHA512 = 4
 SHA512 digest algorithm.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

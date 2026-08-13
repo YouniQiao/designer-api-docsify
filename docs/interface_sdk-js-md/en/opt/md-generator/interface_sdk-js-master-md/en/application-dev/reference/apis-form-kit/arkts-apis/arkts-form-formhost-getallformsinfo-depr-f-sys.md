@@ -12,7 +12,7 @@ Obtains the widget information provided by all applications on the device. This 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getAllFormsInfo)
+**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getAllFormsInfo-(System-API))
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,7 +41,7 @@ Obtains the widget information provided by all applications on the device. This 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getAllFormsInfo)
+**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getAllFormsInfo-(System-API))
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

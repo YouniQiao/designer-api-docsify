@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export enum UIState--><!--Device-unnamed-export enum UIState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NORMAL = 0
 正常状态。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ PRESSED = 1 << 0
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ FOCUSED = 1 << 1
 获焦状态。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +80,8 @@ DISABLED = 1 << 2
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -86,11 +96,11 @@ DISABLED = 1 << 2
 SELECTED = 1 << 3
 ```
 
-选中状态。
-
-仅特定的组件支持此状态：Checkbox、Radio、Toggle、List、Grid、MenuItem。
+选中状态。 仅特定的组件支持此状态：Checkbox、Radio、Toggle、List、Grid、MenuItem。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,6 +119,8 @@ HOVERED = 1 << 4
 悬浮状态。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,9 +10,9 @@ Manager pan profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** [PanProfile](ohos.bluetooth.pan/pan.PanProfile)
+**Substitutes:** [PanProfile](arkts-connectivity-pan-panprofile-i.md#PanProfile)
 
-<!--Device-bluetoothManager-interface PanProfile extends BaseProfile--><!--Device-bluetoothManager-interface PanProfile extends BaseProfile-End-->
+<!--Device-bluetoothManager-interface PanProfile--><!--Device-bluetoothManager-interface PanProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -28,7 +28,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 disconnect(device: string): void
 ```
 
-Disconnect to device with pan.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Disconnect to device with pan. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Disconnect to device with pan.On API 10 and above, the permission required by th
 
 **Deprecated since:** 10
 
-**Substitutes:** [disconnect](ohos.bluetooth.pan/pan.PanProfile#disconnect)
+**Substitutes:** [disconnect](arkts-connectivity-pan-panprofile-i-sys.md#disconnect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -58,11 +58,11 @@ Disconnect to device with pan.On API 10 and above, the permission required by th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900004 | Profile not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
@@ -73,7 +73,7 @@ Disconnect to device with pan.On API 10 and above, the permission required by th
 isTetheringOn(): boolean
 ```
 
-Obtains the tethering enable or disable.On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Obtains the tethering enable or disable. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -81,7 +81,7 @@ Obtains the tethering enable or disable.On API 10 and above, the permission requ
 
 **Deprecated since:** 10
 
-**Substitutes:** [isTetheringOn](ohos.bluetooth.pan/pan.PanProfile#isTetheringOn)
+**Substitutes:** [isTetheringOn](arkts-connectivity-pan-panprofile-i-sys.md#isTetheringOn)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -102,8 +102,8 @@ Obtains the tethering enable or disable.On API 10 and above, the permission requ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## setTethering
 
@@ -111,7 +111,7 @@ Obtains the tethering enable or disable.On API 10 and above, the permission requ
 setTethering(enable: boolean): void
 ```
 
-Enable bluetooth tethering.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
+Enable bluetooth tethering. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 
 **Since:** 9
 
@@ -119,7 +119,7 @@ Enable bluetooth tethering.On API 10 and above, the permission required by this 
 
 **Deprecated since:** 10
 
-**Substitutes:** [setTethering](ohos.bluetooth.pan/pan.PanProfile#setTethering)
+**Substitutes:** [setTethering](arkts-connectivity-pan-panprofile-i-sys.md#setTethering)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
@@ -141,11 +141,11 @@ Enable bluetooth tethering.On API 10 and above, the permission required by this 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900004 | Profile not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

@@ -2,9 +2,11 @@
 
 Defines the contact number information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface DiallingNumbersInfo--><!--Device-sim-export interface DiallingNumbersInfo-End-->
 
@@ -28,9 +30,11 @@ Indicates the tag.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DiallingNumbersInfo-alphaTag: string--><!--Device-DiallingNumbersInfo-alphaTag: string-End-->
 
@@ -52,6 +56,8 @@ Indicates the call transfer number.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-DiallingNumbersInfo-number: string--><!--Device-DiallingNumbersInfo-number: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -68,9 +74,11 @@ Indicates the PIN 2.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DiallingNumbersInfo-pin2?: string--><!--Device-DiallingNumbersInfo-pin2?: string-End-->
 
@@ -86,11 +94,13 @@ recordNumber?: int
 
 Indicates the record number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DiallingNumbersInfo-recordNumber?: int--><!--Device-DiallingNumbersInfo-recordNumber?: int-End-->
 
@@ -110,7 +120,9 @@ Indicates the call transfer teleNumber.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DiallingNumbersInfo-teleNumber: string--><!--Device-DiallingNumbersInfo-teleNumber: string-End-->
 

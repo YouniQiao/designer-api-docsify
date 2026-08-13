@@ -6,25 +6,9 @@ Defines the image span options of RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorImageSpanOptions--><!--Device-unnamed-export declare interface RichEditorImageSpanOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onHover
-
-```TypeScript
-onHover?: OnHoverCallback
-```
-
-RichEditor onHover.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback--><!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,6 +25,8 @@ RichEditor gesture.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +48,8 @@ image style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorImageSpanOptions-imageStyle?: RichEditorImageSpanStyle--><!--Device-RichEditorImageSpanOptions-imageStyle?: RichEditorImageSpanStyle-End-->
@@ -82,9 +70,33 @@ the offset that add image span at.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorImageSpanOptions-offset?: int--><!--Device-RichEditorImageSpanOptions-offset?: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onHover
+
+```TypeScript
+onHover?: OnHoverCallback
+```
+
+RichEditor onHover.
+
+**Type:** [OnHoverCallback](arkts-arkui-onhovercallback-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback--><!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

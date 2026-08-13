@@ -2,7 +2,9 @@
 
 描述输入设备的信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-interface InputDeviceData--><!--Device-inputDevice-interface InputDeviceData-End-->
 
@@ -18,7 +20,9 @@ axisRanges: Array<AxisRange>
 
 **类型：** Array&lt;[AxisRange](arkts-input-inputdevice-axisrange-i.md)&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-axisRanges: Array<AxisRange>--><!--Device-InputDeviceData-axisRanges: Array<AxisRange>-End-->
 
@@ -34,7 +38,9 @@ bus: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-bus: int--><!--Device-InputDeviceData-bus: int-End-->
 
@@ -50,7 +56,9 @@ id: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-id: int--><!--Device-InputDeviceData-id: int-End-->
 
@@ -62,13 +70,13 @@ id: number
 isLocal?: boolean
 ```
 
-输入设备是否为本地设备。
-
-true表示是本地设备，false表示是非本地设备。
+输入设备是否为本地设备。 true表示是本地设备，false表示是非本地设备。
 
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-isLocal?: boolean--><!--Device-InputDeviceData-isLocal?: boolean-End-->
 
@@ -80,13 +88,13 @@ true表示是本地设备，false表示是非本地设备。
 isVirtual?: boolean
 ```
 
-输入设备是否为虚拟设备。
-
-true表示是虚拟设备，false表示是非虚拟设备。
+输入设备是否为虚拟设备。 true表示是虚拟设备，false表示是非虚拟设备。
 
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-isVirtual?: boolean--><!--Device-InputDeviceData-isVirtual?: boolean-End-->
 
@@ -102,7 +110,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-name: string--><!--Device-InputDeviceData-name: string-End-->
 
@@ -118,7 +128,9 @@ phys: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-phys: string--><!--Device-InputDeviceData-phys: string-End-->
 
@@ -134,7 +146,9 @@ product: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-product: int--><!--Device-InputDeviceData-product: int-End-->
 
@@ -150,7 +164,9 @@ sources: Array<SourceType>
 
 **类型：** Array&lt;SourceType&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-sources: Array<SourceType>--><!--Device-InputDeviceData-sources: Array<SourceType>-End-->
 
@@ -166,7 +182,9 @@ uniq: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-uniq: string--><!--Device-InputDeviceData-uniq: string-End-->
 
@@ -182,7 +200,9 @@ vendor: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-vendor: int--><!--Device-InputDeviceData-vendor: int-End-->
 
@@ -198,7 +218,9 @@ version: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputDeviceData-version: int--><!--Device-InputDeviceData-version: int-End-->
 

@@ -12,7 +12,7 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 
 **废弃版本：** 9
 
-**替代接口：** [unsubscribe](ohos.notificationSubscribe/notificationSubscribe#unsubscribe)
+**替代接口：** [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [unsubscribe](ohos.notificationSubscribe/notificationSubscribe#unsubscribe)
+**替代接口：** [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

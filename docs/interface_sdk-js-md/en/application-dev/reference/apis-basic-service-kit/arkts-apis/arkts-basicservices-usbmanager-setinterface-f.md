@@ -12,20 +12,13 @@ import { usbManager } from '@kit.BasicServicesKit';
 function setInterface(pipe: USBDevicePipe, iface: USBInterface): int
 ```
 
-Sets a USB interface.
+Sets a USB interface. > **NOTE：**> > A USB interface may have multiple selection modes and supports dynamic switching. It is used to reset the > endpoint to match the transmission type during data transmission. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > API to claim a communication interface.
 
-> **NOTE：**
-> 
-> A USB interface may have multiple selection modes and supports dynamic switching. It is used to reset the
-> endpoint to match the transmission type during data transmission.
-> 
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
-> API to claim a communication interface.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-usbManager-function setInterface(pipe: USBDevicePipe, iface: USBInterface): int--><!--Device-usbManager-function setInterface(pipe: USBDevicePipe, iface: USBInterface): int-End-->
 
@@ -42,14 +35,14 @@ Sets a USB interface.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns **0** if the USB interface is successfully set; returns an error code otherwise. The error codes are as follows: |
+| int | Returns **0** if the USB interface is successfully set; returns an error code otherwise. The error codes are as follows: |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## Examples
 

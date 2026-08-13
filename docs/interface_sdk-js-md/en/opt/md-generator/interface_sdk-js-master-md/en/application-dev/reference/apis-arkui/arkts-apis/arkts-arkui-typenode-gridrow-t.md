@@ -4,9 +4,11 @@
 type GridRow = TypedFrameNode<GridRowInterface, GridRowAttribute>
 ```
 
-Represents a FrameNode of the **GridRow** type. This type of node only allows child components of the **GridCol**type.
+Represents a FrameNode of the **GridRow** type. This type of node only allows child components of the **GridCol** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

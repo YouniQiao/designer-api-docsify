@@ -14,7 +14,9 @@ function getLocalCapabilities(): Promise<FileData>
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -59,7 +61,7 @@ async function getLocalCapabilities() {
 }
 ```
 
-The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fileiostat) of the [@ohos.file.fs](js-apis-file-fs.md) module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md#fileIo) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -87,7 +89,9 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -135,7 +139,7 @@ try {
 }
 ```
 
-The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fileiostat-1) of the [@ohos.file.fs](js-apis-file-fs.md) module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md#fileIo) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -163,7 +167,9 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 Obtain a json file that describes local capabilities.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -177,7 +183,7 @@ Obtain a json file that describes local capabilities.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [dataList](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md) | Array&lt;[IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md)&gt; | Yes |
+| dataList | Array&lt;[IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md)&gt; | Yes |
 
 **Return value:**
 
@@ -189,10 +195,10 @@ Obtain a json file that describes local capabilities.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900025 |
 | 13600001 |
 | 13900042 |

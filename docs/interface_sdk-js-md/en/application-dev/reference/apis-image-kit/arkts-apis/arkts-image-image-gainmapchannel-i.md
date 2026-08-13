@@ -2,9 +2,11 @@
 
 Describes the data content of a single channel of the gain map. For details, see ISO 21496-1.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface GainmapChannel--><!--Device-image-interface GainmapChannel-End-->
 
@@ -24,11 +26,13 @@ alternateOffset: double
 
 The per-component alternate offset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-alternateOffset: double--><!--Device-GainmapChannel-alternateOffset: double-End-->
 
@@ -42,11 +46,13 @@ baseOffset: double
 
 The per-component baseline offset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-baseOffset: double--><!--Device-GainmapChannel-baseOffset: double-End-->
 
@@ -60,11 +66,13 @@ gainmapMax: double
 
 The per-component max gain map values.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-gainmapMax: double--><!--Device-GainmapChannel-gainmapMax: double-End-->
 
@@ -78,11 +86,13 @@ gainmapMin: double
 
 The per-component min gain map values.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-gainmapMin: double--><!--Device-GainmapChannel-gainmapMin: double-End-->
 
@@ -96,11 +106,13 @@ gamma: double
 
 The per-component gamma values.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GainmapChannel-gamma: double--><!--Device-GainmapChannel-gamma: double-End-->
 

@@ -1,4 +1,4 @@
-# resultSet(The result set of database queries.)
+# resultSet
 
 ## 汇总
 

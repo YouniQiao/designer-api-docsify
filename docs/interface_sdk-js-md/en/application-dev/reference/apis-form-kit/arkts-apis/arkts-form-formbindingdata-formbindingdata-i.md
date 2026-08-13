@@ -2,9 +2,11 @@
 
 Defines the createFormBindingData result interface.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->
 
@@ -19,20 +21,20 @@ import { formBindingData } from '@kit.FormKit';
 ## data
 
 ```TypeScript
-data: Object
+data: RecordData
 ```
 
 Data for updating.
 
-**Type:** Object
+**Type:** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-FormBindingData-data: Object--><!--Device-FormBindingData-data: Object-End-->
+<!--Device-FormBindingData-data: RecordData--><!--Device-FormBindingData-data: RecordData-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -46,9 +48,11 @@ proxies for updating.
 
 **Type:** Array&lt;ProxyData&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

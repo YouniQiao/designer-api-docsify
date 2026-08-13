@@ -4,9 +4,11 @@
 type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorderState.Describes video recorder states.
+The maintenance of this interface has been stopped since version api 9. Please use AVRecorderState. Describes video recorder states.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
 

@@ -2,7 +2,9 @@
 
 拍照帧输出信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface FrameShutterInfo--><!--Device-camera-interface FrameShutterInfo-End-->
 
@@ -18,7 +20,9 @@ captureId: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ timestamp: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

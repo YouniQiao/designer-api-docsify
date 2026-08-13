@@ -14,7 +14,9 @@ function getDistributedAccountAbility(): DistributedAccountAbility
 
 Obtains a **DistributedAccountAbility** instance.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility--><!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility-End-->
 

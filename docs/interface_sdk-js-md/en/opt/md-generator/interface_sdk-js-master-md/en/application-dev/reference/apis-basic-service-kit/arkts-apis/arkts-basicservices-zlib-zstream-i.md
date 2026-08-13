@@ -2,7 +2,9 @@
 
 Process all the information required for compression and decompression.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-zlib-interface ZStream--><!--Device-zlib-interface ZStream-End-->
 
@@ -24,9 +26,11 @@ Adler-32 or CRC-32 value of uncompressed data.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-adler?: long--><!--Device-ZStream-adler?: long-End-->
 
@@ -42,9 +46,11 @@ Number of bytes available for **nextIn**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-availableIn?: int--><!--Device-ZStream-availableIn?: int-End-->
 
@@ -60,9 +66,11 @@ Number of remaining bytes available for **nextOut**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-availableOut?: int--><!--Device-ZStream-availableOut?: int-End-->
 
@@ -78,9 +86,11 @@ Binary or text of **deflate**, or decoding state of **inflate**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-dataType?: int--><!--Device-ZStream-dataType?: int-End-->
 
@@ -96,9 +106,11 @@ Input bytes to be compressed.
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-nextIn?: ArrayBuffer--><!--Device-ZStream-nextIn?: ArrayBuffer-End-->
 
@@ -114,9 +126,11 @@ Output bytes after compression.
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-nextOut?: ArrayBuffer--><!--Device-ZStream-nextOut?: ArrayBuffer-End-->
 
@@ -132,9 +146,11 @@ Total number of input bytes read so far.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-totalIn?: long--><!--Device-ZStream-totalIn?: long-End-->
 
@@ -150,9 +166,11 @@ Total number of output bytes.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-totalOut?: long--><!--Device-ZStream-totalOut?: long-End-->
 

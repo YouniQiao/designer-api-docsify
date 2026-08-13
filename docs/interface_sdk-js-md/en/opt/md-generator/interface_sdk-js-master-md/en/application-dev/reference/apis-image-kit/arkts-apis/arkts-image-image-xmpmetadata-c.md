@@ -4,6 +4,8 @@ XMPMetadata instance.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-class XMPMetadata--><!--Device-image-class XMPMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -28,6 +30,8 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-XMPMetadata-public enumerateTags(      callback: (path: string, tag: XMPTag) => boolean,      rootPath?: string,      options?: XMPEnumerateOptions    ): void--><!--Device-XMPMetadata-public enumerateTags(      callback: (path: string, tag: XMPTag) => boolean,      rootPath?: string,      options?: XMPEnumerateOptions    ): void-End-->
@@ -46,7 +50,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## getBlob
 
@@ -57,6 +61,8 @@ public getBlob(): Promise<ArrayBuffer>
 Obtains the XMP metadata as a blob.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,8 +80,8 @@ Obtains the XMP metadata as a blob.
 
 | Error Code ID |
 | --- |
-| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
-| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## getTag
 
@@ -86,6 +92,8 @@ public getTag(path: string): Promise<XMPTag | null>
 Get a single XMP tag from specified path.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,7 +117,7 @@ Get a single XMP tag from specified path.
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## getTags
 
@@ -120,6 +128,8 @@ public getTags(rootPath?: string, options?: XMPEnumerateOptions): Promise<Record
 Get all XMP tags from specified path.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,13 +148,13 @@ Get all XMP tags from specified path.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## registerXMPNamespace
 
@@ -155,6 +165,8 @@ public registerXMPNamespace(xmpNamespace: XMPNamespace): Promise<void>
 Register a new namespace according to the xml namespace and prefix.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,7 +190,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## removeTag
 
@@ -189,6 +201,8 @@ public removeTag(path: string): Promise<void>
 Remove the XMP tag from specified path.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,7 +226,7 @@ Remove the XMP tag from specified path.
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## setBlob
 
@@ -223,6 +237,8 @@ public setBlob(buffer: ArrayBuffer): Promise<void>
 Set a blob into the XMP metadata.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,7 +262,7 @@ Set a blob into the XMP metadata.
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## setValue
 
@@ -257,6 +273,8 @@ public setValue(path: string, type: XMPTagType, value?: string): Promise<void>
 Set the XMP type and value of the XMP tag in the specified path.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,4 +300,4 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |

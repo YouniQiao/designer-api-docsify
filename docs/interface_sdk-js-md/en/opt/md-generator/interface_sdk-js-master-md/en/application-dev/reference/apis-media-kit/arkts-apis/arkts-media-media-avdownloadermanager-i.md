@@ -4,6 +4,8 @@ Definition of the Offline Download Management Interface
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-media-interface AVDownloaderManager--><!--Device-media-interface AVDownloaderManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -23,6 +25,8 @@ addAVDownloadTask(source: MediaSource): string
 Create a download task based on the media description.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +56,8 @@ Set the network environment for the download. By default, the download is perfor
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void--><!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void-End-->
@@ -73,6 +79,8 @@ getDownloadTasks(): Array<string>
 Obtains all offline download tasks in the Task Manager. Ended download tasks are automatically cleared.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,6 +104,8 @@ Obtains the offline download cache directory of a specified task.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string--><!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string-End-->
@@ -118,7 +128,7 @@ Obtains the offline download cache directory of a specified task.
 
 | Error Code ID |
 | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## getTaskProgress
 
@@ -129,6 +139,8 @@ getTaskProgress(taskId: string): number
 Obtains the progress of a specified offline download task.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,7 +164,7 @@ Obtains the progress of a specified offline download task.
 
 | Error Code ID |
 | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## getTaskStatus
 
@@ -163,6 +175,8 @@ getTaskStatus(taskId: string): AVDownloadTaskState
 Obtains the status of a specified offline download task. For details, see #AVDownloadTaskState.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,7 +200,7 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 | Error Code ID |
 | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## offProgressChange
 
@@ -197,6 +211,8 @@ offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void
 Deregisters a specified function's listening on task progress change events.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,6 +236,8 @@ Deregisters a specified function's listening on task status change events.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void-End-->
@@ -238,9 +256,11 @@ Deregisters a specified function's listening on task status change events.
 onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
 ```
 
-Registers a function to listen to the progress change value of an offline download task.The progress change of the offline download task exceeds 1% compared with that of the last time.The event is triggered after the interval exceeds 500 ms.
+Registers a function to listen to the progress change value of an offline download task. The progress change of the offline download task exceeds 1% compared with that of the last time. The event is triggered after the interval exceeds 500 ms.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,6 +284,8 @@ Registering a Function for Listening on Status Changes of Offline Download Tasks
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void-End-->
@@ -286,6 +308,8 @@ Suspending the download of a specified task
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void-End-->
@@ -302,8 +326,8 @@ Suspending the download of a specified task
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## release
 
@@ -314,6 +338,8 @@ release(): void
 Release resources used for AVDownloaderManager.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -331,6 +357,8 @@ Remove a download task from the offline download manager
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void-End-->
@@ -347,7 +375,7 @@ Remove a download task from the offline download manager
 
 | Error Code ID |
 | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## resumeDownloadTask
 
@@ -358,6 +386,8 @@ resumeDownloadTask(taskId?: string): void
 Resuming Offline download of a Specified Task
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -375,8 +405,8 @@ Resuming Offline download of a Specified Task
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## setRequestTimeout
 
@@ -387,6 +417,8 @@ setRequestTimeout(timeout: number): void
 Sets the network timeout interval for HTTP requests. If the timeout interval is exceeded, the download fails.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

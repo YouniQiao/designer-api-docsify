@@ -10,6 +10,8 @@ function getSkillInfos(bundleName: string, flags: number, userId?: number): Prom
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_SKILL_PRIVILEGE or ohos.permission.MANAGE_SKILL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -38,6 +40,6 @@ function getSkillInfos(bundleName: string, flags: number, userId?: number): Prom
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |

@@ -2,7 +2,9 @@
 
 提供会话信息，包括请求方信息、目标组件信息列表、其他参数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-dialogSession-export interface DialogSessionInfo--><!--Device-dialogSession-export interface DialogSessionInfo-End-->
 
@@ -20,7 +22,9 @@ callerAbilityInfo: DialogAbilityInfo
 
 **类型：** [DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,18 +37,20 @@ callerAbilityInfo: DialogAbilityInfo
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: Record<string, RecordData>
 ```
 
 表示其他参数。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DialogSessionInfo-parameters?: Record<string, Object>--><!--Device-DialogSessionInfo-parameters?: Record<string, Object>-End-->
+<!--Device-DialogSessionInfo-parameters?: Record<string, RecordData>--><!--Device-DialogSessionInfo-parameters?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -60,7 +66,9 @@ targetAbilityInfos: Array<DialogAbilityInfo>
 
 **类型：** Array&lt;[DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

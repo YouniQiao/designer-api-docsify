@@ -6,6 +6,8 @@ Provides unified dialog APIs.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class DialogPresenter--><!--Device-unnamed-export class DialogPresenter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,11 +24,13 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 dismiss(target: int | ComponentContent<Object>): Promise<void>
 ```
 
-Dismisses a dialog box.Accepts either the dialog ID (returned by present) or the ComponentContent reference.
+Dismisses a dialog box. Accepts either the dialog ID (returned by present) or the ComponentContent reference.
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +56,8 @@ Dismisses a dialog box.Accepts either the dialog ID (returned by present) or the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
-| [103303](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
 ## present
 
@@ -66,6 +70,8 @@ Presents a fixed-style dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,17 +106,13 @@ Presents a fixed-style dialog box.
 present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>
 ```
 
-Presents a custom-style dialog box with the provided content.
-
-The content parameter accepts CustomBuilder or ComponentContent via union type:  
-- CustomBuilder: Builder function for custom dialog content.  
-- ComponentContent: ComponentContent supporting state-driven updates.
-
-isModal = true and showInSubWindow = true cannot be used at the same time.
+Presents a custom-style dialog box with the provided content. The content parameter accepts CustomBuilder or ComponentContent via union type: - CustomBuilder: Builder function for custom dialog content. - ComponentContent: ComponentContent supporting state-driven updates. isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,8 +139,8 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
-| [103302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
 | 103306 | The dialog cannot be opened due to node mount failure. |
 | 103308 | The dialog cannot be opened due to subwindow create failure. |
 
@@ -153,6 +155,8 @@ Updates a presented custom dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,6 +183,6 @@ Updates a presented custom dialog box.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
-| [103303](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 

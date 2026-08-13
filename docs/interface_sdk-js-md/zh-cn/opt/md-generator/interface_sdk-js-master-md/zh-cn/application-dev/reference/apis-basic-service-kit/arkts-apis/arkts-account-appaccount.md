@@ -2,7 +2,9 @@
 
 本模块提供应用账号信息的添加、删除、修改和查询基础能力，并支持应用间鉴权和分布式数据同步功能。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace appAccount--><!--Device-unnamed-declare namespace appAccount-End-->
 
@@ -14,7 +16,7 @@
 
 | 名称 |
 | --- |
-| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md#createappaccountmanager) |
+| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md#createAppAccountManager) |
 
 ### 类
 

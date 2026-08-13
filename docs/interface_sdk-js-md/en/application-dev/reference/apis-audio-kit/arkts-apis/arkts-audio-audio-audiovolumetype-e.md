@@ -2,9 +2,11 @@
 
 Enumerates the audio volume types.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioVolumeType--><!--Device-audio-enum AudioVolumeType-End-->
 
@@ -18,9 +20,11 @@ VOICE_CALL = 0
 
 Audio volume type for voice calls.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-VOICE_CALL = 0--><!--Device-AudioVolumeType-VOICE_CALL = 0-End-->
 
@@ -34,9 +38,11 @@ RINGTONE = 2
 
 Audio volume type for ringtones.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-RINGTONE = 2--><!--Device-AudioVolumeType-RINGTONE = 2-End-->
 
@@ -50,9 +56,11 @@ MEDIA = 3
 
 Audio volume type for media purpose.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-MEDIA = 3--><!--Device-AudioVolumeType-MEDIA = 3-End-->
 
@@ -66,9 +74,11 @@ ALARM = 4
 
 Audio volume type for alarming.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-ALARM = 4--><!--Device-AudioVolumeType-ALARM = 4-End-->
 
@@ -82,9 +92,11 @@ ACCESSIBILITY = 5
 
 Audio volume type for accessibility.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-ACCESSIBILITY = 5--><!--Device-AudioVolumeType-ACCESSIBILITY = 5-End-->
 
@@ -98,9 +110,11 @@ VOICE_ASSISTANT = 9
 
 Audio volume type for voice assistant.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-VOICE_ASSISTANT = 9--><!--Device-AudioVolumeType-VOICE_ASSISTANT = 9-End-->
 

@@ -1,16 +1,16 @@
 # HeifsMetadata
 
-HeifsMetadata implements Metadata
-
-HEIF image sequence metadata.
+HeifsMetadata implements Metadata HEIF image sequence metadata.
 
 **Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-image-class HeifsMetadata implements Metadata--><!--Device-image-class HeifsMetadata implements Metadata-End-->
+**Deprecated since:** -1
+
+<!--Device-image-class HeifsMetadata--><!--Device-image-class HeifsMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -30,7 +30,9 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +56,9 @@ Creates an empty [HeifsMetadata](#HeifsMetadata) instance.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,14 +78,13 @@ Creates an empty [HeifsMetadata](#HeifsMetadata) instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
-
-For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,7 +108,9 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,7 +134,9 @@ Obtains the property values of image metadata. This API returns the result async
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,7 +160,7 @@ Obtains the property values of image metadata. This API returns the result async
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type |
 
 ## setBlob
 
@@ -165,7 +172,9 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,7 +198,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -197,14 +206,13 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
-
-For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,7 +236,7 @@ For details about the properties, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## heifsCanvasHeight
 
@@ -238,11 +246,13 @@ readonly heifsCanvasHeight?: int
 
 Canvas height.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -258,11 +268,13 @@ readonly heifsCanvasWidth?: int
 
 Canvas width.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,11 +290,13 @@ readonly heifsDelayTime?: int
 
 Playback duration of each frame in an HEIF image sequence, in ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,11 +312,13 @@ readonly heifsUnclampedDelayTime?: int
 
 Unclamped delay of each frame in ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

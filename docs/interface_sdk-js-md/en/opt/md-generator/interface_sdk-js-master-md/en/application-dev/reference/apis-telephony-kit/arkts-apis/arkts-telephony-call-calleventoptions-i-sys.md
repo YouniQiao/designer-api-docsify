@@ -2,7 +2,9 @@
 
 Defines the call event options.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface CallEventOptions--><!--Device-call-export interface CallEventOptions-End-->
 
@@ -26,7 +28,9 @@ Enumerates call ability event IDs.
 
 **Type:** [CallAbilityEventId](arkts-telephony-call-callabilityeventid-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallEventOptions-eventId: CallAbilityEventId--><!--Device-CallEventOptions-eventId: CallAbilityEventId-End-->
 

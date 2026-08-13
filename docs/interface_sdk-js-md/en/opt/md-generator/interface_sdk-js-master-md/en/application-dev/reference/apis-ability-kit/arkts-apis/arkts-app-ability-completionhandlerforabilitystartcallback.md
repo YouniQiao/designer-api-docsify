@@ -1,10 +1,5 @@
 # @ohos.app.ability.CompletionHandlerForAbilityStartCallback
 
-**CompletionHandlerForAbilityStartCallback** is an optional parameter of
- [AbilityStartCallback](./application/AbilityStartCallback). It provides callback results for launching ability
- components of specific types through the vertical panel.
-
-
 ## Modules to Import
 
 ```TypeScript

@@ -4,6 +4,8 @@ Firewall domain name parameters.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-interface NetFirewallDomainParams--><!--Device-netFirewall-interface NetFirewallDomainParams-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -20,11 +22,13 @@ import { netFirewall } from '@kit.NetworkKit';
 domain: string
 ```
 
-Domain: when isWildcard is false, the complete domain that needs to be determined;When isWildcard is true, fuzzy domain only support domains like *.openharmony.cn; *.com.
+Domain: when isWildcard is false, the complete domain that needs to be determined; When isWildcard is true, fuzzy domain only support domains like *.openharmony.cn; *.com.
 
 **Type:** string
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallDomainParams-domain: string--><!--Device-NetFirewallDomainParams-domain: string-End-->
 
@@ -41,6 +45,8 @@ Is there a universal configuration rule.
 **Type:** boolean
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallDomainParams-isWildcard: boolean--><!--Device-NetFirewallDomainParams-isWildcard: boolean-End-->
 

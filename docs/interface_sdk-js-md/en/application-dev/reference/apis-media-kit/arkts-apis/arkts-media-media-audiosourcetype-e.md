@@ -2,9 +2,11 @@
 
 Enumerates the audio source types for video recording.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum AudioSourceType--><!--Device-media-enum AudioSourceType-End-->
 
@@ -18,9 +20,11 @@ AUDIO_SOURCE_TYPE_DEFAULT = 0
 
 Default audio input source.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_DEFAULT = 0--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_DEFAULT = 0-End-->
 
@@ -34,9 +38,11 @@ AUDIO_SOURCE_TYPE_MIC = 1
 
 Microphone audio input source.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,9 +58,11 @@ AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2
 
 Audio source in speech recognition scenarios.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2-End-->
 
@@ -68,9 +76,11 @@ AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7
 
 Voice communication source.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7-End-->
 
@@ -84,9 +94,11 @@ AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10
 
 Voice message source.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10-End-->
 
@@ -100,9 +112,11 @@ AUDIO_SOURCE_TYPE_CAMCORDER = 13
 
 Audio source in camera recording scenarios.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13-End-->
 

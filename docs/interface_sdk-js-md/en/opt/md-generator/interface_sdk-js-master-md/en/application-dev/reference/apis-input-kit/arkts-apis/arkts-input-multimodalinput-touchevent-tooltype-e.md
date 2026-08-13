@@ -2,7 +2,9 @@
 
 Enumerates touch tool types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ToolType--><!--Device-unnamed-export declare enum ToolType-End-->
 
@@ -16,7 +18,9 @@ FINGER = 0
 
 Finger.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-FINGER = 0--><!--Device-ToolType-FINGER = 0-End-->
 
@@ -30,7 +34,9 @@ PEN = 1
 
 Stylus.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-PEN = 1--><!--Device-ToolType-PEN = 1-End-->
 
@@ -44,7 +50,9 @@ RUBBER = 2
 
 Eraser.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-RUBBER = 2--><!--Device-ToolType-RUBBER = 2-End-->
 
@@ -58,7 +66,9 @@ BRUSH = 3
 
 Brush.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-BRUSH = 3--><!--Device-ToolType-BRUSH = 3-End-->
 
@@ -72,7 +82,9 @@ PENCIL = 4
 
 Pencil.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-PENCIL = 4--><!--Device-ToolType-PENCIL = 4-End-->
 
@@ -86,7 +98,9 @@ AIRBRUSH = 5
 
 Air brush.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-AIRBRUSH = 5--><!--Device-ToolType-AIRBRUSH = 5-End-->
 
@@ -100,7 +114,9 @@ MOUSE = 6
 
 Mouse.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-MOUSE = 6--><!--Device-ToolType-MOUSE = 6-End-->
 
@@ -114,7 +130,9 @@ LENS = 7
 
 Lens.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-LENS = 7--><!--Device-ToolType-LENS = 7-End-->
 

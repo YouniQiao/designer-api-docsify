@@ -1,10 +1,6 @@
 # CustomizeData
 
-自定义元数据。
-
-> **说明：**
-> 
-> 从API version 9开始，该模块不再维护，建议使用[Metadata](arkts-ability-metadata-i.md#Metadata)替代。
+自定义元数据。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[Metadata](arkts-ability-metadata-i.md#Metadata)替代。
 
 **起始版本：** 7
 
@@ -36,7 +32,7 @@ extra: string
 
 **废弃版本：** 9
 
-**替代接口：** [resource](ohos.bundle.bundleManager/bundleManager.Metadata#resource)
+**替代接口：** resource
 
 <!--Device-CustomizeData-extra: string--><!--Device-CustomizeData-extra: string-End-->
 
@@ -60,7 +56,7 @@ name: string
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.Metadata#name)
+**替代接口：** name
 
 <!--Device-CustomizeData-name: string--><!--Device-CustomizeData-name: string-End-->
 
@@ -84,7 +80,7 @@ value: string
 
 **废弃版本：** 9
 
-**替代接口：** [value](ohos.bundle.bundleManager/bundleManager.Metadata#value)
+**替代接口：** value
 
 <!--Device-CustomizeData-value: string--><!--Device-CustomizeData-value: string-End-->
 

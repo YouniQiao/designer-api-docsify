@@ -12,14 +12,13 @@ import { power } from '@kit.BasicServicesKit';
 function refreshActivity(reason: string): void
 ```
 
-Refreshes the device activity status (for example, resetting the screen-off time).
+Refreshes the device activity status (for example, resetting the screen-off time). This API takes effect only when the device is active. For details about the device activity status, see [power.isActive](arkts-basicservices-power-isactive-f.md#isActive).
 
-This API takes effect only when the device is active. For details about the device activity status, see  
-[power.isActive](arkts-basicservices-power-isactive-f.md#isActive).
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REFRESH_USER_ACTION
 
@@ -39,11 +38,11 @@ This API takes effect only when the device is active. For details about the devi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. This API cannot work in car devices.<br>**Applicable version:** 26.1.0 and later |
-| [4900201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900201-frequent-status-refreshes) | The device activity is being refreshed too frequently; the minimum time interval is 100 ms. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4900101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. This API cannot work in car devices.<br>**Applicable version:** 26.1.0 and later |
+| [4900201](../../apis-basic-services-kit/errorcode-power.md#4900201-frequent-status-refreshes) | The device activity is being refreshed too frequently; the minimum time interval is 100 ms. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
 ## Examples
 

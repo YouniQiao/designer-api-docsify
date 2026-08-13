@@ -1,8 +1,10 @@
 # @ohos.data.distributedDataObject
 
-The distributedDataObject module provides basic data object management, including creating, querying, deleting,modifying, and subscribing to data objects, and distributed data object collaboration for the same application among multiple devices. Although this module does not parse user data, you are advised not to transfer sensitive personal data or privacy data due to low-level security of storage path.
+The distributedDataObject module provides basic data object management, including creating, querying, deleting, modifying, and subscribing to data objects, and distributed data object collaboration for the same application among multiple devices. Although this module does not parse user data, you are advised not to transfer sensitive personal data or privacy data due to low-level security of storage path.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace distributedDataObject--><!--Device-unnamed-declare namespace distributedDataObject-End-->
 
@@ -21,8 +23,8 @@ import { distributedDataObject } from '@kit.ArkData';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [create](arkts-arkdata-distributeddataobject-create-f.md#create) |
-| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject) |
-| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md#gensessionid) |
+| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createDistributedObject) |
+| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md#genSessionId) |
 
 ### Interfaces
 

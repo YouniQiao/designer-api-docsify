@@ -1,19 +1,12 @@
 # SamplingOptions
 
-Implements sampling options.
+Implements sampling options. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class SamplingOptions--><!--Device-drawing-class SamplingOptions-End-->
 
@@ -31,12 +24,13 @@ import { drawing } from '@kit.ArkGraphics2D';
 constructor()
 ```
 
-Creates a **SamplingOptions** object, where the default value of  
-[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md#FilterMode) is **FILTER_MODE_NEAREST**.
+Creates a **SamplingOptions** object, where the default value of [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md#FilterMode) is **FILTER_MODE_NEAREST**.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SamplingOptions-constructor()--><!--Device-SamplingOptions-constructor()-End-->
 
@@ -50,9 +44,11 @@ constructor(filterMode: FilterMode)
 
 Creates a **SamplingOptions** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SamplingOptions-constructor(filterMode: FilterMode)--><!--Device-SamplingOptions-constructor(filterMode: FilterMode)-End-->
 
@@ -68,5 +64,5 @@ Creates a **SamplingOptions** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

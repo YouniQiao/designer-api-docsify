@@ -1,12 +1,12 @@
 # StateType
 
-Enumerates the scenarios for saving application data. You can use it in  
-[onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState) of the UIAbility to complete  
-[UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
+Enumerates the scenarios for saving application data. You can use it in [onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState) of the UIAbility to complete [UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export enum StateType--><!--Device-AbilityConstant-export enum StateType-End-->
 
@@ -20,9 +20,11 @@ CONTINUATION = 0
 
 Application migration scenario.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +42,11 @@ APP_RECOVERY = 1
 
 Application recovery scenario.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

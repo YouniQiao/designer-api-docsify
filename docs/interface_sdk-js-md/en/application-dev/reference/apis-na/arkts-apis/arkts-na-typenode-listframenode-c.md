@@ -1,0 +1,48 @@
+# ListFrameNode
+
+Define the List type of FrameNode.
+
+**Inheritance/Implementation:** ListFrameNode extends TypedFrameNode<ListAttribute>
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-typeNode-abstract class ListFrameNode--><!--Device-typeNode-abstract class ListFrameNode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## initialize
+
+```TypeScript
+abstract initialize(options?: ListOptions): ListAttribute
+```
+
+Initialize List FrameNode.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ListFrameNode-abstract initialize(options?: ListOptions): ListAttribute--><!--Device-ListFrameNode-abstract initialize(options?: ListOptions): ListAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | ListOptions | No | list options |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ListAttribute |  |
+

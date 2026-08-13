@@ -2,7 +2,9 @@
 
 Provides fileUri APIS
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->
 
@@ -20,7 +22,7 @@ import { fileUri } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) |
 
 ### Classes
 

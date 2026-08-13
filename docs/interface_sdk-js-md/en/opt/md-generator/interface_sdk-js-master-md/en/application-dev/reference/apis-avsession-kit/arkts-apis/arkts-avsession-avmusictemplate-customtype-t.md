@@ -8,6 +8,8 @@ Custom tab type USER_INFO & TAB, COMPILATION, SETTINGS.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avMusicTemplate-type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'--><!--Device-avMusicTemplate-type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'-End-->

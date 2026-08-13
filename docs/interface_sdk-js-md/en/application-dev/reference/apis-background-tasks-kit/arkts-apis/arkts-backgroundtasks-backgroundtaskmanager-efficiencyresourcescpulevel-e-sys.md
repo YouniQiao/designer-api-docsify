@@ -4,7 +4,9 @@ Defines the CPU level of the efficiency resource.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export enum EfficiencyResourcesCpuLevel--><!--Device-backgroundTaskManager-export enum EfficiencyResourcesCpuLevel-End-->
 
@@ -22,7 +24,9 @@ The background task runs on small CPU cores. This level caters to lightweight ba
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ The background task can run on medium CPU cores at maximum. The system determine
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,11 +64,13 @@ The background task can run on medium CPU cores at maximum. The system determine
 LARGE_CPU = 2
 ```
 
-The background task can run on large CPU cores at maximum. The system determines whether to run the task on small, medium, or large CPU cores based on load. This level delivers ultimate performance, and is applicable to scenarios requiring heavy-load task processing with the highest CPU frequency.
+The background task can run on large CPU cores at maximum. The system determines whether to run the task on small , medium, or large CPU cores based on load. This level delivers ultimate performance, and is applicable to scenarios requiring heavy-load task processing with the highest CPU frequency.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

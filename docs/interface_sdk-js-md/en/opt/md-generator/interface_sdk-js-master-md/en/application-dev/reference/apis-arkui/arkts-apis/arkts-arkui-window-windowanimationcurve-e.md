@@ -2,7 +2,9 @@
 
 Enumerates the types of window animation curves.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum WindowAnimationCurve--><!--Device-window-enum WindowAnimationCurve-End-->
 
@@ -14,17 +16,13 @@ Enumerates the types of window animation curves.
 LINEAR = 0
 ```
 
-The animation speed is constant from start to finish.
+The animation speed is constant from start to finish. When this curve type is used, **duration** in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is mandatory. When this curve type is used, **param** in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is optional and does not take effect.
 
-When this curve type is used, **duration** in  
-[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is mandatory.
+**Since:** 23
 
-When this curve type is used, **param** in  
-[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is optional and does not take effect.
+**Deprecated since:** -1
 
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowAnimationCurve-LINEAR = 0--><!--Device-WindowAnimationCurve-LINEAR = 0-End-->
 
@@ -36,17 +34,13 @@ When this curve type is used, **param** in
 INTERPOLATION_SPRING = 1
 ```
 
-Interpolator spring curve, an animation curve from 0 to 1, where the actual animation values are interpolated based on the curve. The animation duration is subject to the curve parameters, rather than the **duration**parameter in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig).
+Interpolator spring curve, an animation curve from 0 to 1, where the actual animation values are interpolated based on the curve. The animation duration is subject to the curve parameters, rather than the **duration** parameter in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig). When this curve type is used, **duration** in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is optional and does not take effect. When this curve type is used, **param** in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is mandatory.
 
-When this curve type is used, **duration** in  
-[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is optional and does not take effect.
+**Since:** 23
 
-When this curve type is used, **param** in  
-[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) is mandatory.
+**Deprecated since:** -1
 
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowAnimationCurve-INTERPOLATION_SPRING = 1--><!--Device-WindowAnimationCurve-INTERPOLATION_SPRING = 1-End-->
 
@@ -58,14 +52,13 @@ When this curve type is used, **param** in
 CUBIC_BEZIER = 2
 ```
 
-Cubic Bézier curve.
+Cubic Bézier curve. When this curve type is used, **param** and **duration** in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) are mandatory.
 
-When this curve type is used, **param** and **duration** in  
-[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md#WindowAnimationConfig) are mandatory.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowAnimationCurve-CUBIC_BEZIER = 2--><!--Device-WindowAnimationCurve-CUBIC_BEZIER = 2-End-->
 

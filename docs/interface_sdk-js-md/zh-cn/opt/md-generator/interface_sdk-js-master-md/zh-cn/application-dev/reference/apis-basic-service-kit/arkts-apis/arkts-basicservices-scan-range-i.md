@@ -2,7 +2,9 @@
 
 定义范围的接口。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-scan-interface Range--><!--Device-scan-interface Range-End-->
 
@@ -18,7 +20,9 @@ maxValue: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Range-maxValue: int--><!--Device-Range-maxValue: int-End-->
 
@@ -34,7 +38,9 @@ minValue: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Range-minValue: int--><!--Device-Range-minValue: int-End-->
 
@@ -50,7 +56,9 @@ quantValue: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Range-quantValue: int--><!--Device-Range-quantValue: int-End-->
 

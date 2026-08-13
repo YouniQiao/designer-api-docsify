@@ -2,7 +2,9 @@
 
 Describes a series of consecutive glyphs with the same attributes in a text blob.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-interface TextBlobRunBuffer--><!--Device-drawing-interface TextBlobRunBuffer-End-->
 
@@ -24,7 +26,9 @@ Index of the glyph. The value is an integer. If a floating point number is passe
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextBlobRunBuffer-glyph: int--><!--Device-TextBlobRunBuffer-glyph: int-End-->
 
@@ -40,7 +44,9 @@ X coordinate of the start point of the text blob. The value is a floating point 
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextBlobRunBuffer-positionX: double--><!--Device-TextBlobRunBuffer-positionX: double-End-->
 
@@ -56,7 +62,9 @@ Y coordinate of the start point of the text blob. The value is a floating point 
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextBlobRunBuffer-positionY: double--><!--Device-TextBlobRunBuffer-positionY: double-End-->
 

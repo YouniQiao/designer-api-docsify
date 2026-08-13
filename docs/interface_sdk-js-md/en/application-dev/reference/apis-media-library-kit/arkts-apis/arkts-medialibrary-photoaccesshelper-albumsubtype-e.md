@@ -2,9 +2,11 @@
 
 Enumerate the album subtypes.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum AlbumSubtype--><!--Device-photoAccessHelper-enum AlbumSubtype-End-->
 
@@ -18,9 +20,11 @@ USER_GENERIC = 1
 
 User album.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-USER_GENERIC = 1--><!--Device-AlbumSubtype-USER_GENERIC = 1-End-->
 
@@ -34,9 +38,11 @@ FAVORITE = 1025
 
 Favorites.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-FAVORITE = 1025--><!--Device-AlbumSubtype-FAVORITE = 1025-End-->
 
@@ -50,43 +56,13 @@ VIDEO
 
 Video album.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-<!--Device-AlbumSubtype-VIDEO--><!--Device-AlbumSubtype-VIDEO-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## IMAGE
-
-```TypeScript
-IMAGE = 1031
-```
-
-Photo album.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
-<!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## SOURCE_GENERIC
-
-```TypeScript
-SOURCE_GENERIC = 2049
-```
-
-Source album.
-
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
+**Deprecated since:** -1
+
+<!--Device-AlbumSubtype-VIDEO--><!--Device-AlbumSubtype-VIDEO-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -100,7 +76,9 @@ Source album from FileManager
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,9 +94,11 @@ ANY = 2147483647
 
 Any album.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-ANY = 2147483647--><!--Device-AlbumSubtype-ANY = 2147483647-End-->
 

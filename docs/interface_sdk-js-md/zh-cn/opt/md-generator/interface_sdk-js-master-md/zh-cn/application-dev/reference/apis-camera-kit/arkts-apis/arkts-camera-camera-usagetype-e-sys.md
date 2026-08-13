@@ -2,7 +2,9 @@
 
 Enum for usage type used in capture session.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum UsageType--><!--Device-camera-enum UsageType-End-->
 
@@ -18,7 +20,9 @@ BOKEH = 0
 
 Bokeh usage type.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsageType-BOKEH = 0--><!--Device-UsageType-BOKEH = 0-End-->
 

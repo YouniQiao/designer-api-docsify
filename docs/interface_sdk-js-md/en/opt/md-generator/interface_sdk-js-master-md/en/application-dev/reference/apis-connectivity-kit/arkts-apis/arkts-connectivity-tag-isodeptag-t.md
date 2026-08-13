@@ -6,9 +6,11 @@ export type IsoDepTag = _IsoDepTag
 
 Exports type IsoDepTag.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-tag-export type IsoDepTag = _IsoDepTag--><!--Device-tag-export type IsoDepTag = _IsoDepTag-End-->
 

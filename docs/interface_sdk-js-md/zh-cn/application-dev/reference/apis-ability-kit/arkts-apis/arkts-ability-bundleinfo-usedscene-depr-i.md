@@ -1,10 +1,6 @@
 # UsedScene
 
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[UsedScene](#UsedScene)替代。
-
-描述权限使用的场景和时机。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[UsedScene](#UsedScene)替代。 描述权限使用的场景和时机。
 
 **起始版本：** 7
 
@@ -36,7 +32,7 @@ abilities: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [abilities](ohos.bundle.bundleManager/bundleManager.UsedScene#abilities)
+**替代接口：** abilities
 
 <!--Device-UsedScene-abilities: Array<string>--><!--Device-UsedScene-abilities: Array<string>-End-->
 
@@ -60,7 +56,7 @@ when: string
 
 **废弃版本：** 9
 
-**替代接口：** [when](ohos.bundle.bundleManager/bundleManager.UsedScene#when)
+**替代接口：** when
 
 <!--Device-UsedScene-when: string--><!--Device-UsedScene-when: string-End-->
 

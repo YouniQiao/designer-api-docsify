@@ -2,7 +2,9 @@
 
 rtt通话状态
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export enum RttState--><!--Device-call-export enum RttState-End-->
 
@@ -18,7 +20,9 @@ RTT_STATE_NO = 0
 
 rtt关闭
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttState-RTT_STATE_NO = 0--><!--Device-RttState-RTT_STATE_NO = 0-End-->
 
@@ -34,7 +38,9 @@ RTT_STATE_YES = 1
 
 rtt打开
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttState-RTT_STATE_YES = 1--><!--Device-RttState-RTT_STATE_YES = 1-End-->
 
@@ -50,7 +56,9 @@ RTT_STATE_REMOTE_TTY = 2
 
 tty模式
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttState-RTT_STATE_REMOTE_TTY = 2--><!--Device-RttState-RTT_STATE_REMOTE_TTY = 2-End-->
 
@@ -66,7 +74,9 @@ RTT_STATE_REMOTE_NOT_SUPPORT = 3
 
 对端不支持rtt
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttState-RTT_STATE_REMOTE_NOT_SUPPORT = 3--><!--Device-RttState-RTT_STATE_REMOTE_NOT_SUPPORT = 3-End-->
 

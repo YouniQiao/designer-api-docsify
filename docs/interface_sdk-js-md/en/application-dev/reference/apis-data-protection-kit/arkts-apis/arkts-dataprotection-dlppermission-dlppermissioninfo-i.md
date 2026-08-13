@@ -6,6 +6,8 @@ Represents the permission information about a DLP file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export interface DLPPermissionInfo--><!--Device-dlpPermission-export interface DLPPermissionInfo-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -30,6 +32,8 @@ User permission on the DLP file, for example, read-only.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-DLPPermissionInfo-dlpFileAccess: DLPFileAccess--><!--Device-DLPPermissionInfo-dlpFileAccess: DLPFileAccess-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -40,14 +44,15 @@ User permission on the DLP file, for example, read-only.
 flags: number
 ```
 
-Operations that can be performed on the DLP file. The value is determined by a combination of different  
-[ActionFlagTypes](arkts-dataprotection-dlppermission-actionflagtype-e.md#ActionFlagType).
+Operations that can be performed on the DLP file. The value is determined by a combination of different [ActionFlagTypes](arkts-dataprotection-dlppermission-actionflagtype-e.md#ActionFlagType).
 
 **Type:** number
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-DLPPermissionInfo-flags: number--><!--Device-DLPPermissionInfo-flags: number-End-->
 

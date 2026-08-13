@@ -1,11 +1,12 @@
 # DistributedAccountAbility
 
-Provides APIs for querying and updating the login state of a distributed account. You must obtain a  
-**DistributedAccountAbility** instance first.
+Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
@@ -25,9 +26,11 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 Obtains the distributed account information. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -39,15 +42,15 @@ Obtains the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -78,9 +81,11 @@ getOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 Obtains the distributed account information. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -98,8 +103,8 @@ Obtains the distributed account information. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -125,13 +130,7 @@ try {
 queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 ```
 
-Queries the distributed account information. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)
-> instead.
+Queries the distributed account information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountDistributedInfo](#getOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
@@ -139,7 +138,7 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.getOsAccountDistributedInfo(callback:)
+**Substitutes:** [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -151,7 +150,7 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -175,13 +174,7 @@ accountAbility.queryOsAccountDistributedInfo(
 queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 ```
 
-Queries the distributed account information. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)
-> instead.
+Queries the distributed account information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountDistributedInfo](#getOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
@@ -222,11 +215,13 @@ accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.Di
 setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Sets the distributed account information. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
+Sets the distributed account information. This API uses an asynchronous callback to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -239,17 +234,17 @@ Sets the distributed account information. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | Yes | Distributed account information to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
@@ -280,11 +275,13 @@ try {
 setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Sets the distributed account information. This API uses a promise to return the result.This API can be called only by system applications.
+Sets the distributed account information. This API uses a promise to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -308,11 +305,11 @@ Sets the distributed account information. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
@@ -341,13 +338,7 @@ try {
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Updates the distributed account information. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)
-> instead.
+Updates the distributed account information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setOsAccountDistributedInfo](#setOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
@@ -355,7 +346,7 @@ Updates the distributed account information. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [setOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.setOsAccountDistributedInfo(accountInfo:)
+**Substitutes:** [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)(accountInfo: DistributedInfo, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -368,7 +359,7 @@ Updates the distributed account information. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | Yes | Distributed account information to update. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -393,13 +384,7 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Updates the distributed account information. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](#setOsAccountDistributedInfo-1)
-> instead.
+Updates the distributed account information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setOsAccountDistributedInfo](#setOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
@@ -407,7 +392,7 @@ Updates the distributed account information. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [setOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.setOsAccountDistributedInfo(accountInfo:)
+**Substitutes:** [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)(accountInfo: DistributedInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 

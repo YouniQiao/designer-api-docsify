@@ -20,7 +20,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
+**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -33,7 +33,7 @@ Send extended commands to location subsystem.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | LocationCommand | Yes | Indicates the extended Command Message Body. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
+**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 

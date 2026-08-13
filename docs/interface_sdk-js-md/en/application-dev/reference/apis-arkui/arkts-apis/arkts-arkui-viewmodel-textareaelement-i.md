@@ -8,7 +8,9 @@ The &lt;textarea&gt; component provides an interactive interface to receive user
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
-<!--Device-unnamed-export interface TextAreaElement extends Element--><!--Device-unnamed-export interface TextAreaElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface TextAreaElement--><!--Device-unnamed-export interface TextAreaElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Obtains or loses the focus of a component, which can display or collapse the inp
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

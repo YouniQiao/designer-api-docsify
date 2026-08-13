@@ -6,7 +6,9 @@ export type ExtensionRunningInfo = _ExtensionRunningInfo
 
 ExtensionRunningInfo二级模块。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityManager-export type ExtensionRunningInfo = _ExtensionRunningInfo--><!--Device-abilityManager-export type ExtensionRunningInfo = _ExtensionRunningInfo-End-->
 

@@ -4,6 +4,8 @@ The enum of pairing state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-nearlinkConstant-export enum PairingState--><!--Device-nearlinkConstant-export enum PairingState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ PAIRING_STATE_NONE = 1
 Indicates that the pairing state is none.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Indicates that the pairing state is pairing.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingState-PAIRING_STATE_PAIRING = 2--><!--Device-PairingState-PAIRING_STATE_PAIRING = 2-End-->
@@ -49,6 +55,8 @@ PAIRING_STATE_PAIRED = 3
 Indicates that the pairing state is paired.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

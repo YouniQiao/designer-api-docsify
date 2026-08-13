@@ -18,7 +18,7 @@ Obtains the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPowerMode](ohos.wifiManagerExt/wifiManagerExt.getPowerMode)
+**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getPowerMode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,7 +45,7 @@ Obtains the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPowerMode](ohos.wifiManagerExt/wifiManagerExt.getPowerMode)
+**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getPowerMode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

@@ -2,7 +2,9 @@
 
 Provides information about geographic locations.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface Location--><!--Device-geoLocationManager-export interface Location-End-->
 
@@ -24,7 +26,9 @@ Indicates location accuracy, in meters.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +46,9 @@ Indicates the amount of additional descriptive information.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,7 +66,9 @@ Indicates additional information.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,9 +86,11 @@ Indicates additional information map.
 
 **Type:** Map&lt;string, string&gt;
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-additionsMap?: Map<string, string>--><!--Device-Location-additionsMap?: Map<string, string>-End-->
 
@@ -96,7 +106,9 @@ Indicates location altitude, in meters.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,9 +126,11 @@ Indicates vertical position accuracy in meters.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-altitudeAccuracy?: double--><!--Device-Location-altitudeAccuracy?: double-End-->
 
@@ -132,7 +146,9 @@ Indicates direction information.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -150,29 +166,13 @@ Indicates direction accuracy in degrees.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-directionAccuracy?: double--><!--Device-Location-directionAccuracy?: double-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## isFromMock
-
-```TypeScript
-isFromMock?: boolean
-```
-
-Indicates whether the location is mocked.
-
-**Type:** boolean
-
-**Since:** 26.0.0
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-Location-isFromMock?: boolean--><!--Device-Location-isFromMock?: boolean-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -182,11 +182,13 @@ Indicates whether the location is mocked.
 latitude: number
 ```
 
-Indicates latitude information.A positive value indicates north latitude,and a negative value indicates south latitude.
+Indicates latitude information. A positive value indicates north latitude, and a negative value indicates south latitude.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -200,11 +202,13 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 longitude: number
 ```
 
-Indicates Longitude information.A positive value indicates east longitude ,and a negative value indicates west longitude.
+Indicates Longitude information. A positive value indicates east longitude , and a negative value indicates west longitude.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -222,9 +226,11 @@ Indicates the poi information.
 
 **Type:** [PoiInfo](arkts-location-geolocationmanager-poiinfo-i.md)
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-poi?: PoiInfo--><!--Device-Location-poi?: PoiInfo-End-->
 
@@ -240,9 +246,11 @@ Indicates the source of the location.
 
 **Type:** [LocationSourceType](arkts-location-geolocationmanager-locationsourcetype-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-sourceType?: LocationSourceType--><!--Device-Location-sourceType?: LocationSourceType-End-->
 
@@ -258,7 +266,9 @@ Indicates speed, in m/s.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -276,9 +286,11 @@ Indicates speed accuracy in meter per seconds.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-speedAccuracy?: double--><!--Device-Location-speedAccuracy?: double-End-->
 
@@ -294,7 +306,9 @@ Indicates location timestamp since boot.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -312,7 +326,9 @@ Indicates location timestamp in the UTC format.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -330,9 +346,11 @@ Time uncertainty Of timeSinceBoot in nanosecond.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-uncertaintyOfTimeSinceBoot?: long--><!--Device-Location-uncertaintyOfTimeSinceBoot?: long-End-->
 

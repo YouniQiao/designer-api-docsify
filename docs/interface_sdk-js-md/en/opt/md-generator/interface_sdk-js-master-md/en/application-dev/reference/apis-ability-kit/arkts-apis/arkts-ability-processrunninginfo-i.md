@@ -1,13 +1,12 @@
 # ProcessRunningInfo
 
-The module defines the running information of a process. The information can be obtained through  
-[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getProcessRunningInfos) of appManager.
+The module defines the running information of a process. The information can be obtained through [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getProcessRunningInfos) of appManager.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProcessInformation/ProcessInformation](ProcessInformation/ProcessInformation)
+**Substitutes:** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md#ProcessInformation)
 
 <!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 

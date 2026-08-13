@@ -1,18 +1,25 @@
 # ScopeType
 
 ```TypeScript
-type ScopeType<T> = ScopeComparable<T>
+type ScopeType = ScopeComparable | number
 ```
 
-A type used to denote ScopeComparable or number.
+Defines the type of values in a **Scope** object.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-util-type ScopeType<T> = ScopeComparable<T>--><!--Device-util-type ScopeType<T> = ScopeComparable<T>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-util-type ScopeType = ScopeComparable | number--><!--Device-util-type ScopeType = ScopeComparable | number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Property type:** ScopeComparable<T>
+| Type | Description |
+| --- | --- |
+| ScopeComparable | The value type is ScopeComparable. |
+| number | The value type is a number. |
 

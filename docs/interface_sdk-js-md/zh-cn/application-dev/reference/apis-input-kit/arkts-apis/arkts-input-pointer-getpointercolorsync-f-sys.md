@@ -8,9 +8,11 @@ function getPointerColorSync(): int
 
 获取鼠标光标颜色，使用同步方式返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-pointer-function getPointerColorSync(): int--><!--Device-pointer-function getPointerColorSync(): int-End-->
 
@@ -22,13 +24,13 @@ function getPointerColorSync(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 鼠标光标颜色。 |
+| int | 鼠标光标颜色。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 ## 示例
 

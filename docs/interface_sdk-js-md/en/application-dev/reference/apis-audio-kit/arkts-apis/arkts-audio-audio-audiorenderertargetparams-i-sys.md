@@ -1,10 +1,12 @@
 # AudioRendererTargetParams (System API)
 
-Options for setting the render target of an audio renderer.This parameter takes effect only when the target is non-PLAYBACK.In other cases, this parameter does not need to be specified and does not take effect even if specified.Both uid and streamId must be specified.
+Options for setting the render target of an audio renderer. This parameter takes effect only when the target is non-PLAYBACK. In other cases, this parameter does not need to be specified and does not take effect even if specified. Both uid and streamId must be specified.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRendererTargetParams--><!--Device-audio-interface AudioRendererTargetParams-End-->
 
@@ -24,13 +26,15 @@ import { audio } from '@kit.AudioKit';
 streamId: long
 ```
 
-The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_COMMUNICATION)capture stream identified by uid. This stream is the injection target for the render stream.It is valid only when the target is non-PLAYBACK.
+The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_COMMUNICATION) capture stream identified by uid. This stream is the injection target for the render stream. It is valid only when the target is non-PLAYBACK.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,15 @@ The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcet
 uid: int
 ```
 
-The application UID of the target capture stream into which the render stream is injected.It is valid only when the target is non-PLAYBACK.The value should be an integer.
+The application UID of the target capture stream into which the render stream is injected. It is valid only when the target is non-PLAYBACK. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

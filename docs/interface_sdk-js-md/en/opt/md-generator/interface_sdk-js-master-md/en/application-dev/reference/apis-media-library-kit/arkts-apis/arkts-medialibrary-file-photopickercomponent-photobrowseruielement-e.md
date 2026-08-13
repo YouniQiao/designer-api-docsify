@@ -4,6 +4,8 @@ Represents other UI elements except the image preview component on the photo bro
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum PhotoBrowserUIElement--><!--Device-unnamed-export declare enum PhotoBrowserUIElement-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -17,6 +19,8 @@ CHECKBOX = 0
 Check box on the photo browser page.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -33,6 +37,8 @@ BACK_BUTTON = 1
 **Back** button on the photo browser page.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

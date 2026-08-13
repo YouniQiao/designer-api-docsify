@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-enum Role--><!--Device-abilityToolAccessCtrl-enum Role-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -20,6 +22,8 @@ CONTROLLER = 0x01
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-Role-CONTROLLER = 0x01--><!--Device-Role-CONTROLLER = 0x01-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -35,6 +39,8 @@ CONTROLLED = 0x02
 受控设备。
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-Role-CONTROLLED = 0x02--><!--Device-Role-CONTROLLED = 0x02-End-->
 

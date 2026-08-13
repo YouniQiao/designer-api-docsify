@@ -10,6 +10,8 @@ Get network link information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-vpn-export type LinkAddress = connection.LinkAddress--><!--Device-vpn-export type LinkAddress = connection.LinkAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core

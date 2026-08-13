@@ -2,9 +2,11 @@
 
 Enumerates the directions of cursor movement of the input method.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export enum Direction--><!--Device-inputMethodEngine-export enum Direction-End-->
 
@@ -18,9 +20,11 @@ CURSOR_UP = 1
 
 Upward.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_UP = 1--><!--Device-Direction-CURSOR_UP = 1-End-->
 
@@ -34,9 +38,11 @@ CURSOR_DOWN
 
 Downward.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_DOWN--><!--Device-Direction-CURSOR_DOWN-End-->
 
@@ -50,9 +56,11 @@ CURSOR_LEFT
 
 Leftward.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_LEFT--><!--Device-Direction-CURSOR_LEFT-End-->
 
@@ -66,9 +74,11 @@ CURSOR_RIGHT
 
 Rightward.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_RIGHT--><!--Device-Direction-CURSOR_RIGHT-End-->
 

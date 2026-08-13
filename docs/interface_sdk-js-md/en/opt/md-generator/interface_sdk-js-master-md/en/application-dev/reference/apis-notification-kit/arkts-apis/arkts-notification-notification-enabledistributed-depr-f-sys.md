@@ -6,13 +6,13 @@
 function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this device supports distributed notifications.This API uses an asynchronous callback to return the result.
+Sets whether this device supports distributed notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setDistributedEnable)
+**Substitutes:** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setDistributedEnable-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ Sets whether this device supports distributed notifications. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setDistributedEnable)
+**Substitutes:** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setDistributedEnable-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

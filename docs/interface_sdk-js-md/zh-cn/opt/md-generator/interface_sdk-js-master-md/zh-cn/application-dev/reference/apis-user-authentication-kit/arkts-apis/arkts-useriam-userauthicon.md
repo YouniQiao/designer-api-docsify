@@ -1,4 +1,4 @@
-# @ohos.userIAM.userAuthIcon(嵌入式用户身份认证控件)
+# @ohos.userIAM.userAuthIcon
 
 ## 汇总
 

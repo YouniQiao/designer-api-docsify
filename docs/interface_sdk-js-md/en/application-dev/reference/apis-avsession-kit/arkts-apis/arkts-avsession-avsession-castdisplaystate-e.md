@@ -2,9 +2,11 @@
 
 Enumerates the cast display states.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum CastDisplayState--><!--Device-avSession-enum CastDisplayState-End-->
 
@@ -18,11 +20,13 @@ STATE_OFF = 1
 
 Screen off.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CastDisplayState-STATE_OFF = 1--><!--Device-CastDisplayState-STATE_OFF = 1-End-->
 
@@ -36,11 +40,13 @@ STATE_ON = 2
 
 Screen on.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CastDisplayState-STATE_ON = 2--><!--Device-CastDisplayState-STATE_ON = 2-End-->
 

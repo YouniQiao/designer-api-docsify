@@ -1,10 +1,10 @@
 # NotificationSubscriberExtensionAbility
 
-NotificationSubscriberExtensionAbility is the base class for notification subscriber extension abilities, providing notification subscription-related functionality. Third-party wearable apps (such as companion applications for watches)implement callback logic by inheriting this class, receiving notification information when notifications are published on the local device and forwarding them to the wearable device via Bluetooth, and receiving callbacks for notification cancellation when local notifications are cancelled and forwarding them to the wearable device to delete the corresponding notifications.
+NotificationSubscriberExtensionAbility is the base class for notification subscriber extension abilities, providing notification subscription-related functionality. Third-party wearable apps (such as companion applications for watches)implement callback logic by inheriting this class, receiving notification information when notifications are published on the local device and forwarding them to the wearable device via Bluetooth, and receiving callbacks for notification cancellation when local notifications are cancelled and forwarding them to the wearable device to delete the corresponding notifications. Use this module when your wearable application needs to obtain local notifications and sync them to a paired wearable device. This module is used together with the notificationExtensionSubscription module. This module is responsible for receiving and processing notification data in callbacks, while the notificationExtensionSubscription module is responsible for management operations such as authorization, subscription, and unsubscription.
 
-Use this module when your wearable application needs to obtain local notifications and sync them to a paired wearable device. This module is used together with the notificationExtensionSubscription module. This module is responsible for receiving and processing notification data in callbacks, while the notificationExtensionSubscription module is responsible for management operations such as authorization, subscription, and unsubscription.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class NotificationSubscriberExtensionAbility--><!--Device-unnamed-declare class NotificationSubscriberExtensionAbility-End-->
 
@@ -24,7 +24,9 @@ onCancelMessages(hashCodes: Array<string>): void
 
 Called when notifications are canceled.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +60,9 @@ onDestroy(): void
 
 Called when the notification subscription extension is destroyed.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +90,9 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 
 Called when a notification is received.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,7 +128,9 @@ Context for the NotificationSubscriberExtensionAbility.
 
 **Type:** [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

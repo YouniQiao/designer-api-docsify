@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface WatermarkConfiguration--><!--Device-unnamed-interface WatermarkConfiguration-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
@@ -20,6 +22,8 @@ target height of the watermark in pixel The value range is all integers.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WatermarkConfiguration-height?: int--><!--Device-WatermarkConfiguration-height?: int-End-->
@@ -32,11 +36,13 @@ target height of the watermark in pixel The value range is all integers.
 left: number
 ```
 
-水印到左侧像素行的偏移量取值为整数。
+水印到左侧像素行的偏移量 取值为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,11 +56,13 @@ left: number
 top: number
 ```
 
-水印到顶部像素行的偏移量取值为整数。
+水印到顶部像素行的偏移量 取值为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,6 +81,8 @@ target width of the watermark in pixel The value range is all integers.
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

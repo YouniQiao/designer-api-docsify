@@ -6,9 +6,7 @@
 function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-设置设备接口。
-
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices)获取设备列表以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight)获取设备请求权限；调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice)得到devicepipe作为参数；调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface)注册通信接口。
+设置设备接口。 需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices)获取设备列表以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight)获取设备请求权限；调 用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice)得到devicepipe作为参数；调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface)注册通信接 口。
 
 **起始版本：** 8
 

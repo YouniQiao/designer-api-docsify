@@ -2,11 +2,13 @@
 
 Defines user emotion data.
 
-**Inheritance/Implementation:** UserEmotionData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**Inheritance/Implementation:** UserEmotionData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData-(System-API))
 
 **Since:** 26.0.0
 
-<!--Device-userStatus-export interface UserEmotionData extends UserStatusData--><!--Device-userStatus-export interface UserEmotionData extends UserStatusData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface UserEmotionData--><!--Device-userStatus-export interface UserEmotionData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -24,11 +26,13 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 confidence?: number
 ```
 
-User emotion confidence.The value ranges from 0 to 100. A larger value indicates a higher confidence.
+User emotion confidence. The value ranges from 0 to 100. A larger value indicates a higher confidence.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,11 +48,13 @@ User emotion confidence.The value ranges from 0 to 100. A larger value indicates
 emotionNonRealTime ?: number[]
 ```
 
-User non-real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
+User non-real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
 
 **Type:** number[]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,11 +70,13 @@ User non-real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1:
 emotionRealTime ?: number
 ```
 
-User real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
+User real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Gravity acceleration of user motion status, in m/s².
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserEmotionData-gravityAcceleration?: double[]--><!--Device-UserEmotionData-gravityAcceleration?: double[]-End-->
@@ -110,6 +120,8 @@ Whether emotion data is real-time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserEmotionData-isRealTime?: boolean--><!--Device-UserEmotionData-isRealTime?: boolean-End-->
@@ -129,6 +141,8 @@ Linear acceleration of user motion status, in m/s².
 **Type:** number[][]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

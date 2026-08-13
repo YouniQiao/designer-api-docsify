@@ -1,20 +1,8 @@
 # CalendarPicker
 
-日历选择器组件，提供下拉日历弹窗，用户可快速选择日期。适用于需要用户选择具体日期的场景，如预订系统、日程安排、日期筛选等，提供直观的日历视图，
-提升用户日期输入体验。
+日历选择器组件，提供下拉日历弹窗，用户可快速选择日期。适用于需要用户选择具体日期的场景，如预订系统、日程安排、日期筛选等，提供直观的日历视图， 提升用户日期输入体验。 > **说明：** > > - 该组件从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > - 该组件从API版本26.0.0开始支持WithTheme。 >
 
-> **说明：**
->
-> - 该组件从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
->
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
-
->
-
-## 子组件
-
-> 
-> 无
+## 子组件 > > 无
 
 ## CalendarPicker
 
@@ -25,6 +13,8 @@ CalendarPicker(options?: CalendarOptions)
 日历选择器。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +32,6 @@ CalendarPicker(options?: CalendarOptions)
 
 ## 汇总
 
-- [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i.md)
-- [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)
-- [CalendarAlign](arkts-arkui-calendarpicker-calendaralign-e.md)
+- [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md)
+- [CalendarOptions](arkts-arkui-calendaroptions-i.md)
+- [CalendarAlign](arkts-arkui-calendaralign-e.md)

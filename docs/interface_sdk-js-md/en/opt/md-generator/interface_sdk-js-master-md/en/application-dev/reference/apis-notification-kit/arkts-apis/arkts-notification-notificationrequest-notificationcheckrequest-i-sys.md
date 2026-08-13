@@ -2,7 +2,9 @@
 
 Describes the notification authentication information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationCheckRequest--><!--Device-unnamed-export interface NotificationCheckRequest-End-->
 
@@ -20,7 +22,9 @@ Notification type.
 
 **Type:** notificationManager.ContentType
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationCheckRequest-contentType: notificationManager.ContentType--><!--Device-NotificationCheckRequest-contentType: notificationManager.ContentType-End-->
 
@@ -38,7 +42,9 @@ Extra information about the live view.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationCheckRequest-extraInfoKeys: Array<string>--><!--Device-NotificationCheckRequest-extraInfoKeys: Array<string>-End-->
 
@@ -56,7 +62,9 @@ Notification slot type.
 
 **Type:** notificationManager.SlotType
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationCheckRequest-slotType: notificationManager.SlotType--><!--Device-NotificationCheckRequest-slotType: notificationManager.SlotType-End-->
 

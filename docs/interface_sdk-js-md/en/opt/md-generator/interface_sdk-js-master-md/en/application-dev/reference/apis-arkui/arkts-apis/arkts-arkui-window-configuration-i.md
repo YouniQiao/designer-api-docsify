@@ -2,7 +2,9 @@
 
 Defines the parameters for creating a child window or system window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface Configuration--><!--Device-window-interface Configuration-End-->
 
@@ -24,7 +26,9 @@ Indicates window context.
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,9 +46,11 @@ Indicates whether enable window decor, only support dialog, The default value is
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-decorEnabled?: boolean--><!--Device-Configuration-decorEnabled?: boolean-End-->
 
@@ -56,11 +62,13 @@ Indicates whether enable window decor, only support dialog, The default value is
 displayId?: number
 ```
 
-Screen ID of the current window. If it is not set, the screen ID of the parent window is used by default. The value is a non-negative integer and must correspond to an existing screen.In scenarios involving extended screens or heterogeneous virtual screens, a global floating window can be  displayed on a specified screen by setting the screen ID.For modal windows and system windows, this parameter takes no effect, and the parent window's  screen ID is used by default.
+Screen ID of the current window. If it is not set, the screen ID of the parent window is used by default. The value is a non-negative integer and must correspond to an existing screen. In scenarios involving extended screens or heterogeneous virtual screens, a global floating window can be displayed on a specified screen by setting the screen ID. For modal windows and system windows, this parameter takes no effect, and the parent window's screen ID is used by default.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +86,9 @@ Indicates window id.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,7 +106,9 @@ Indicates Parent window id
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,9 +126,11 @@ Indicates dialog window title when decor enabled.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-title?: string--><!--Device-Configuration-title?: string-End-->
 
@@ -132,7 +146,9 @@ Indicates window type
 
 **Type:** WindowType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

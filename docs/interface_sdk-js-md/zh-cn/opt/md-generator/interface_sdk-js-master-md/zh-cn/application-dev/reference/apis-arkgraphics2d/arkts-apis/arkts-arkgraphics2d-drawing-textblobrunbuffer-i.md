@@ -2,7 +2,9 @@
 
 描述一行文字中具有相同属性的连续字形。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-drawing-interface TextBlobRunBuffer--><!--Device-drawing-interface TextBlobRunBuffer-End-->
 
@@ -18,7 +20,9 @@ glyph: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TextBlobRunBuffer-glyph: int--><!--Device-TextBlobRunBuffer-glyph: int-End-->
 
@@ -34,7 +38,9 @@ positionX: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TextBlobRunBuffer-positionX: double--><!--Device-TextBlobRunBuffer-positionX: double-End-->
 
@@ -50,7 +56,9 @@ positionY: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TextBlobRunBuffer-positionY: double--><!--Device-TextBlobRunBuffer-positionY: double-End-->
 

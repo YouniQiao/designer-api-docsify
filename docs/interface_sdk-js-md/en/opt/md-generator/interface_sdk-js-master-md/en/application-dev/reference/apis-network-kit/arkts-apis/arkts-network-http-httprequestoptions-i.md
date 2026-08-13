@@ -2,7 +2,9 @@
 
 Specifies the type and value range of the optional parameters in the HTTP request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface HttpRequestOptions--><!--Device-http-export interface HttpRequestOptions-End-->
 
@@ -26,6 +28,8 @@ Address family option.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-HttpRequestOptions-addressFamily?: AddressFamily--><!--Device-HttpRequestOptions-addressFamily?: AddressFamily-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -36,20 +40,13 @@ Address family option.
 body?: string | Object | ArrayBuffer
 ```
 
-The body content of the HTTP request.
-
-This parameter explicitly specifies the payload to be sent in the request body.When this field is set, the framework forces the data into the body, regardless of the HTTP request method (GET, POST, etc.).
-
-Serialization rules:  
-- string: sent directly as the request body.  
-- Object: serialized to a JSON string before being sent.  
-- ArrayBuffer: sent as raw binary data without additional serialization.
-
-If both body and extraData are specified, body takes precedence, and extraData will be ignored.
+The body content of the HTTP request. This parameter explicitly specifies the payload to be sent in the request body. When this field is set, the framework forces the data into the body, regardless of the HTTP request method (GET, POST, etc.). Serialization rules: - string: sent directly as the request body. - Object: serialized to a JSON string before being sent. - ArrayBuffer: sent as raw binary data without additional serialization. If both body and extraData are specified, body takes precedence, and extraData will be ignored.
 
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,11 +60,13 @@ If both body and extraData are specified, body takes precedence, and extraData w
 caData?: string
 ```
 
-A PEM representation of a certificate. The system will create an X.509 certificate object in the SSL process.If the caPath option is set, the caData option will be ignored.Certificate chain is not supported.Maxium length is 8000 Bytes.
+A PEM representation of a certificate. The system will create an X.509 certificate object in the SSL process. If the caPath option is set, the caData option will be ignored. Certificate chain is not supported. Maxium length is 8000 Bytes.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -87,6 +86,8 @@ If this parameter is set, the system will use ca path specified by user, or else
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HttpRequestOptions-caPath?: string--><!--Device-HttpRequestOptions-caPath?: string-End-->
@@ -99,11 +100,13 @@ If this parameter is set, the system will use ca path specified by user, or else
 certificatePinning?: CertificatePinning | CertificatePinning[]
 ```
 
-Certificate pinning option. If server certificate's digest does not match[publicKeyHash](arkts-network-http-certificatepinning-i.md#publicKeyHash), request will fail.
+Certificate pinning option. If server certificate's digest does not match [publicKeyHash](arkts-network-http-certificatepinning-i.md#publicKeyHash), request will fail.
 
 **Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-certificatePinning?: CertificatePinning | CertificatePinning[]--><!--Device-HttpRequestOptions-certificatePinning?: CertificatePinning | CertificatePinning[]-End-->
 
@@ -119,7 +122,9 @@ Support the application to pass in client certificates, allowing the server to v
 
 **Type:** ClientCert
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-clientCert?: ClientCert--><!--Device-HttpRequestOptions-clientCert?: ClientCert-End-->
 
@@ -137,6 +142,8 @@ Support the application to pass in client certificates, allowing the server to v
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-HttpRequestOptions-clientEncCert?: ClientCert--><!--Device-HttpRequestOptions-clientEncCert?: ClientCert-End-->
@@ -153,9 +160,11 @@ Connection timeout interval. The default value is 60,000, in ms.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-connectTimeout?: int--><!--Device-HttpRequestOptions-connectTimeout?: int-End-->
 
@@ -171,7 +180,9 @@ Supports specifying the user custom defined http request method
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-customMethod?: string--><!--Device-HttpRequestOptions-customMethod?: string-End-->
 
@@ -183,11 +194,13 @@ Supports specifying the user custom defined http request method
 dnsOverHttps?: string
 ```
 
-If this parameter is set, incoming DNS resolution server URL for the DoH server to use for name resolving.The parameter must be URL-encoded in the following format: "https://host:port/path".It MUST specify an HTTPS URL.
+If this parameter is set, incoming DNS resolution server URL for the DoH server to use for name resolving. The parameter must be URL-encoded in the following format: "https://host:port/path". It MUST specify an HTTPS URL.
 
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-dnsOverHttps?: string--><!--Device-HttpRequestOptions-dnsOverHttps?: string-End-->
 
@@ -199,11 +212,13 @@ If this parameter is set, incoming DNS resolution server URL for the DoH server 
 dnsServers?: Array<string>
 ```
 
-If this parameter is set, use the specified DNS server for DNS resolution.Multiple DNS resolution servers can be set up, with a maximum of 3 servers.Only take the first three if there are more than three.
+If this parameter is set, use the specified DNS server for DNS resolution. Multiple DNS resolution servers can be set up, with a maximum of 3 servers. Only take the first three if there are more than three.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-dnsServers?: Array<string>--><!--Device-HttpRequestOptions-dnsServers?: Array<string>-End-->
 
@@ -215,11 +230,13 @@ If this parameter is set, use the specified DNS server for DNS resolution.Multip
 enablePartialChain?: boolean
 ```
 
-Indicates whether to enable partial chain verification.The default value is true when SslType is set to TLS, and false when SslType is set to TLCP.If set to false, the certificate chain must verify up to a trusted root CA.If set to true, the verification succeeds if the chain builds to a trusted intermediate CA,without requiring a path to a trusted root CA.
+Indicates whether to enable partial chain verification. The default value is true when SslType is set to TLS, and false when SslType is set to TLCP. If set to false, the certificate chain must verify up to a trusted root CA. If set to true, the verification succeeds if the chain builds to a trusted intermediate CA, without requiring a path to a trusted root CA.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -237,9 +254,11 @@ Data type to be returned. If this parameter is set, the system preferentially re
 
 **Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-expectDataType?: HttpDataType--><!--Device-HttpRequestOptions-expectDataType?: HttpDataType-End-->
 
@@ -251,13 +270,15 @@ Data type to be returned. If this parameter is set, the system preferentially re
 extraData?: string | Object | ArrayBuffer
 ```
 
-Additional data of the request.extraData can be a string or an Object (API 6) or an ArrayBuffer(API 8).
+Additional data of the request. extraData can be a string or an Object (API 6) or an ArrayBuffer(API 8).
 
 **Type:** string \| Object \| ArrayBuffer
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-extraData?: string | Object | ArrayBuffer--><!--Device-HttpRequestOptions-extraData?: string | Object | ArrayBuffer-End-->
 
@@ -273,9 +294,11 @@ HTTP request header. default is 'content-type': 'application/json'
 
 **Type:** Object
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-header?: Object--><!--Device-HttpRequestOptions-header?: Object-End-->
 
@@ -293,6 +316,8 @@ Maximum HTTP idle time (unit: ms)
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HttpRequestOptions-inactivityMs?: int--><!--Device-HttpRequestOptions-inactivityMs?: int-End-->
@@ -305,11 +330,13 @@ Maximum HTTP idle time (unit: ms)
 maxLimit?: number
 ```
 
-The maximum limit of the response body. The default value is 5 * 1024 * 1024, in Byte.The maximum value is 100 * 1024 *1024, in Byte.
+The maximum limit of the response body. The default value is 5 * 1024 * 1024, in Byte. The maximum value is 100 * 1024 *1024, in Byte.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-maxLimit?: int--><!--Device-HttpRequestOptions-maxLimit?: int-End-->
 
@@ -325,7 +352,9 @@ Support specifying the configuration of maximum redirect count
 
 **Type:** number
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-maxRedirects?: int--><!--Device-HttpRequestOptions-maxRedirects?: int-End-->
 
@@ -341,9 +370,11 @@ Request method,default is GET.
 
 **Type:** [RequestMethod](arkts-network-http-requestmethod-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-method?: RequestMethod--><!--Device-HttpRequestOptions-method?: RequestMethod-End-->
 
@@ -359,7 +390,9 @@ The data fields which is supported by the HTTP protocol to post forms and by the
 
 **Type:** Array&lt;[MultiFormData](arkts-network-http-multiformdata-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-multiFormDataList?: Array<MultiFormData>--><!--Device-HttpRequestOptions-multiFormDataList?: Array<MultiFormData>-End-->
 
@@ -371,11 +404,13 @@ The data fields which is supported by the HTTP protocol to post forms and by the
 pathPreference?: PathPreference
 ```
 
-Support specifying a preferred network when making HTTP requests.If the specified network is unavailable, the default network will be selected to send the request.
+Support specifying a preferred network when making HTTP requests. If the specified network is unavailable, the default network will be selected to send the request.
 
 **Type:** [PathPreference](arkts-network-http-pathpreference-t.md)
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-pathPreference?: PathPreference--><!--Device-HttpRequestOptions-pathPreference?: PathPreference-End-->
 
@@ -391,9 +426,11 @@ priority?: number
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-priority?: int--><!--Device-HttpRequestOptions-priority?: int-End-->
 
@@ -405,19 +442,13 @@ priority?: number
 queryParams?: string | QueryParamObject
 ```
 
-Query parameters to append to the request URL.Supports two input forms:  
-- `string`: a pre-encoded query string provided by the caller. It is appended  
-to the URL as-is and is not encoded again by the system.  
-- `QueryParamObject`: a key-value object. The system encodes keys and values  
-and serializes them into the URL query string automatically.
-
-Notes:1. For `string`, do not include the leading `?`(for example, use `"key=value"`, not `"?key=value"`).2. For `string`, the caller is responsible for encoding special characters.3. For `string`, use `&` to separate multiple parameters.
-
-If both `queryParams` and `extraData` are specified, `queryParams` takes precedence for URL construction, and `extraData` will be ignored.
+Query parameters to append to the request URL. Supports two input forms: - `string`: a pre-encoded query string provided by the caller. It is appended to the URL as-is and is not encoded again by the system. - `QueryParamObject`: a key-value object. The system encodes keys and values and serializes them into the URL query string automatically. Notes: 1. For `string`, do not include the leading `?` (for example, use `"key=value"`, not `"?key=value"`). 2. For `string`, the caller is responsible for encoding special characters. 3. For `string`, use `&` to separate multiple parameters. If both `queryParams` and `extraData` are specified, `queryParams` takes precedence for URL construction, and `extraData` will be ignored.
 
 **Type:** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -435,9 +466,11 @@ Read timeout period. The default value is 60,000, in ms.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-readTimeout?: int--><!--Device-HttpRequestOptions-readTimeout?: int-End-->
 
@@ -455,6 +488,8 @@ Certificate authority(CA) which is used to verify the remote server's identifica
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequestOptions-remoteValidation?: RemoteValidation--><!--Device-HttpRequestOptions-remoteValidation?: RemoteValidation-End-->
@@ -467,11 +502,13 @@ Certificate authority(CA) which is used to verify the remote server's identifica
 resumeFrom?: number
 ```
 
-Used to set to uploading or downloading the start bytes. The default value is 0.HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests.For HTTP PUT uploads this option should not be used, since it may conflict with other options.
+Used to set to uploading or downloading the start bytes. The default value is 0. HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests. For HTTP PUT uploads this option should not be used, since it may conflict with other options.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-resumeFrom?: long--><!--Device-HttpRequestOptions-resumeFrom?: long-End-->
 
@@ -483,11 +520,13 @@ Used to set to uploading or downloading the start bytes. The default value is 0.
 resumeTo?: number
 ```
 
-Used to set to uploading or downloading the end bytes. Translate to the end if not set.HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests.For HTTP PUT uploads this option should not be used, since it may conflict with other options.
+Used to set to uploading or downloading the end bytes. Translate to the end if not set. HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests. For HTTP PUT uploads this option should not be used, since it may conflict with other options.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-resumeTo?: long--><!--Device-HttpRequestOptions-resumeTo?: long-End-->
 
@@ -504,6 +543,8 @@ Supports forbidding reuse of HTTP/HTTPS connections
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -523,6 +564,8 @@ HTTP server authentication settings. No authentication by default.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequestOptions-serverAuthentication?: ServerAuthentication--><!--Device-HttpRequestOptions-serverAuthentication?: ServerAuthentication-End-->
@@ -539,7 +582,9 @@ Support specifying an SNI domain name to include the SNI field during the TLS co
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-sniHostName?: string--><!--Device-HttpRequestOptions-sniHostName?: string-End-->
 
@@ -551,11 +596,13 @@ Support specifying an SNI domain name to include the SNI field during the TLS co
 sslType?: SslType
 ```
 
-Which secure communication protocol is used, TLS (by defaul) or TLCP.If TLCP is used, all TLS related options, such as caPath, caData and clientCert, are ignored.
+Which secure communication protocol is used, TLS (by defaul) or TLCP. If TLCP is used, all TLS related options, such as caPath, caData and clientCert, are ignored.
 
 **Type:** SslType
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -575,6 +622,8 @@ TLS option.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequestOptions-tlsOptions?: TlsOptions--><!--Device-HttpRequestOptions-tlsOptions?: TlsOptions-End-->
@@ -591,9 +640,11 @@ default is true
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-usingCache?: boolean--><!--Device-HttpRequestOptions-usingCache?: boolean-End-->
 
@@ -609,9 +660,11 @@ default is automatically specified by the system.
 
 **Type:** [HttpProtocol](arkts-network-http-httpprotocol-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol--><!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol-End-->
 
@@ -623,13 +676,15 @@ default is automatically specified by the system.
 usingProxy?: boolean | HttpProxy
 ```
 
-If this parameter is set as type of boolean, the system will use default proxy or not use proxy.If this parameter is set as type of HttpProxy, the system will use the specified HttpProxy.
+If this parameter is set as type of boolean, the system will use default proxy or not use proxy. If this parameter is set as type of HttpProxy, the system will use the specified HttpProxy.
 
 **Type:** boolean \| HttpProxy
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy--><!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy-End-->
 
@@ -641,11 +696,13 @@ If this parameter is set as type of boolean, the system will use default proxy o
 usingSocks5Proxy?: Socks5Proxy
 ```
 
-Specifies the use of a SOCKS5 proxy. Note that this configuration takes precedence over usingProxy.It is recommend not to configure both simultaneously.
+Specifies the use of a SOCKS5 proxy. Note that this configuration takes precedence over usingProxy. It is recommend not to configure both simultaneously.
 
 **Type:** Socks5Proxy
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

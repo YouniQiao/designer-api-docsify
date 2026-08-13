@@ -2,7 +2,9 @@
 
 相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager)接口获取相机管理实例。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
 
@@ -14,11 +16,11 @@
 createCameraInputWithTokenId(camera: CameraDevice, tokenId: number): CameraInput
 ```
 
-Creates a CameraInput instance by camera and calling token.
-
-Before using this interface, first through the getSupportedCameras interface to query the current list of camera devices supported by the device, the developer needs to be based on specific scenarios to choose the camera device that meets the needs of the developer, and then use this interface to create a CameraInput instance.
+Creates a CameraInput instance by camera and calling token. Before using this interface, first through the getSupportedCameras interface to query the current list of camera devices supported by the device, the developer needs to be based on specific scenarios to choose the camera device that meets the needs of the developer, and then use this interface to create a CameraInput instance.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CAMERA
 
@@ -47,10 +49,10 @@ Before using this interface, first through the getSupportedCameras interface to 
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## createControlCenterSession
 
@@ -60,7 +62,9 @@ createControlCenterSession(): ControlCenterSession
 
 Create a ControlCenterSession instance.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CAMERA_CONTROL
 
@@ -80,8 +84,48 @@ Create a ControlCenterSession instance.
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## createDeferredPreviewOutput
+
+```TypeScript
+createDeferredPreviewOutput(profile: Profile): PreviewOutput
+```
+
+创建延迟预览输出对象，在配流时替代普通的预览输出对象加入数据流。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput--><!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## createDepthDataOutput
 
@@ -91,7 +135,9 @@ createDepthDataOutput(profile: DepthProfile): DepthDataOutput
 
 Creates a DepthDataOutput instance. This API returns the result synchronously.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput--><!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput-End-->
 
@@ -115,8 +161,8 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -145,7 +191,9 @@ isCameraMuteSupported(): boolean
 
 Checks whether the camera device can be muted.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-isCameraMuteSupported(): boolean--><!--Device-CameraManager-isCameraMuteSupported(): boolean-End-->
 
@@ -163,7 +211,7 @@ Checks whether the camera device can be muted.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -182,7 +230,9 @@ isControlCenterActive(): boolean
 
 Check if the control center active.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-isControlCenterActive(): boolean--><!--Device-CameraManager-isControlCenterActive(): boolean-End-->
 
@@ -200,7 +250,7 @@ Check if the control center active.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isPrelaunchSupported
 
@@ -210,7 +260,9 @@ isPrelaunchSupported(camera: CameraDevice): boolean
 
 Checks whether a camera device supports prelaunch.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean--><!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean-End-->
 
@@ -234,8 +286,8 @@ Checks whether a camera device supports prelaunch.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -254,6 +306,40 @@ function isPreLaunchSupported(context: common.BaseContext): boolean {
   return isSupported;
 }
 ```
+
+## isTorchLevelControlSupported
+
+```TypeScript
+isTorchLevelControlSupported(): boolean
+```
+
+检测设备是否支持手电筒亮度调节功能。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CameraManager-isTorchLevelControlSupported(): boolean--><!--Device-CameraManager-isTorchLevelControlSupported(): boolean-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## muteCamera
 
@@ -298,7 +384,9 @@ muteCameraPersistent(mute: boolean, type: PolicyType): void
 
 Mutes the camera device permanently.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CAMERA_CONTROL
 
@@ -319,9 +407,9 @@ Mutes the camera device permanently.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -332,7 +420,67 @@ function muteCameraPersistent(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## off('cameraMute')
+## offCameraMute
+
+```TypeScript
+offCameraMute(callback?: AsyncCallback<boolean>): void
+```
+
+Unsubscribes from camera mute change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## offControlCenterStatusChange
+
+```TypeScript
+offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void
+```
+
+Unsubscribes control center status change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_cameraMute
 
 ```TypeScript
 off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void
@@ -341,6 +489,8 @@ off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void
 Unsubscribes from camera mute status events.
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void-End-->
 
@@ -359,7 +509,7 @@ Unsubscribes from camera mute status events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -375,7 +525,7 @@ function unregisterCameraMute(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## off('controlCenterStatusChange')
+## off_controlCenterStatusChange
 
 ```TypeScript
 off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void
@@ -384,6 +534,8 @@ off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void
 Unsubscribes control center status change event callback.
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void-End-->
 
@@ -402,9 +554,69 @@ Unsubscribes control center status change event callback.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## on('cameraMute')
+## onCameraMute
+
+```TypeScript
+onCameraMute(callback: AsyncCallback<boolean>): void
+```
+
+Subscribes camera mute change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onControlCenterStatusChange
+
+```TypeScript
+onControlCenterStatusChange(callback: AsyncCallback<boolean>): void
+```
+
+Subscribes control center status change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_cameraMute
 
 ```TypeScript
 on(type: 'cameraMute', callback: AsyncCallback<boolean>): void
@@ -413,6 +625,8 @@ on(type: 'cameraMute', callback: AsyncCallback<boolean>): void
 Subscribes to camera mute status events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void-End-->
 
@@ -431,7 +645,7 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -452,7 +666,7 @@ function registerCameraMute(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## on('controlCenterStatusChange')
+## on_controlCenterStatusChange
 
 ```TypeScript
 on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void
@@ -461,6 +675,8 @@ on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void
 Subscribes control center status change event callback.
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void-End-->
 
@@ -479,7 +695,7 @@ Subscribes control center status change event callback.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## preSwitchCamera
 
@@ -489,7 +705,9 @@ preSwitchCamera(cameraId: string): void
 
 Pre-switches a camera device to speed up its startup.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-preSwitchCamera(cameraId: string): void--><!--Device-CameraManager-preSwitchCamera(cameraId: string): void-End-->
 
@@ -507,9 +725,9 @@ Pre-switches a camera device to speed up its startup.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -536,7 +754,9 @@ prelaunch(): void
 
 Prelaunches the camera device. This API is called when a user clicks the system camera icon to start the camera application.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraManager-prelaunch(): void--><!--Device-CameraManager-prelaunch(): void-End-->
 
@@ -548,7 +768,7 @@ Prelaunches the camera device. This API is called when a user clicks the system 
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -574,9 +794,11 @@ function preLaunch(context: common.BaseContext): void {
 setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void
 ```
 
-Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported](#isPrelaunchSupported) to check whether the camera device supports prelaunch.
+Sets prelaunch configuration. Before the setting, call [isPrelaunchSupported](#isPrelaunchSupported) to check whether the camera device supports prelaunch.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CAMERA
 
@@ -596,10 +818,10 @@ Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported](#is
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -623,3 +845,39 @@ function setPrelaunchConfig(context: common.BaseContext): void {
   }
 }
 ```
+
+## setTorchModeOnWithLevel
+
+```TypeScript
+setTorchModeOnWithLevel(torchLevel: number): void
+```
+
+手电筒设置指定亮度级别。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void--><!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [torchLevel](arkts-camera-camera-torchstatusinfo-i.md) | number | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

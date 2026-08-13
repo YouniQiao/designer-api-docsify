@@ -2,9 +2,11 @@
 
 描述普通实况通知的状态。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum LiveViewStatus--><!--Device-unnamed-export enum LiveViewStatus-End-->
 
@@ -20,9 +22,11 @@ LIVE_VIEW_CREATE = 0
 
 创建
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_CREATE = 0--><!--Device-LiveViewStatus-LIVE_VIEW_CREATE = 0-End-->
 
@@ -38,9 +42,11 @@ LIVE_VIEW_INCREMENTAL_UPDATE = 1
 
 增量更新
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_INCREMENTAL_UPDATE = 1--><!--Device-LiveViewStatus-LIVE_VIEW_INCREMENTAL_UPDATE = 1-End-->
 
@@ -56,9 +62,11 @@ LIVE_VIEW_END = 2
 
 结束
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_END = 2--><!--Device-LiveViewStatus-LIVE_VIEW_END = 2-End-->
 
@@ -74,9 +82,11 @@ LIVE_VIEW_FULL_UPDATE = 3
 
 全量更新
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_FULL_UPDATE = 3--><!--Device-LiveViewStatus-LIVE_VIEW_FULL_UPDATE = 3-End-->
 
@@ -94,7 +104,9 @@ LIVE_VIEW_PENDING_CREATE = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,7 +126,9 @@ LIVE_VIEW_PENDING_END = 6
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

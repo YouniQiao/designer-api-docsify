@@ -18,7 +18,7 @@ Obtains information about a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLinkedInfo](ohos.wifiManager/wifiManager.getLinkedInfo)
+**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,7 +45,7 @@ Obtains information about a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLinkedInfo](ohos.wifiManager/wifiManager.getLinkedInfo)
+**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

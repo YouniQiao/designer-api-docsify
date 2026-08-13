@@ -4,6 +4,8 @@ Defines the options for the AreaChangeEvent.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface AreaChangeOptions--><!--Device-unnamed-declare interface AreaChangeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ The value of expectedUpdateInterval indicates the desired update interval (ms).
 **Default:** 1000
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

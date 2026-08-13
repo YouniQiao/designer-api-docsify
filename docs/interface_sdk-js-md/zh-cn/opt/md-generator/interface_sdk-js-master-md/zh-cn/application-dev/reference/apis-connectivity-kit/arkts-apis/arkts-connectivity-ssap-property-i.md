@@ -4,6 +4,8 @@ SSAP属性。
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-ssap-interface Property--><!--Device-ssap-interface Property-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -20,6 +22,8 @@ descriptors?: PropertyDescriptor[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Property-descriptors?: PropertyDescriptor[]--><!--Device-Property-descriptors?: PropertyDescriptor[]-End-->
@@ -32,11 +36,13 @@ descriptors?: PropertyDescriptor[]
 operation?: number
 ```
 
-指示如何访问数据值和描述符值。取值为枚举值的或运算。取值范围为全体整数。 默认值： 默认值：READABLE | WRITE_NO_RESPONSE。
+指示如何访问数据值和描述符值。 取值为枚举值的或运算。 取值范围为全体整数。 默认值： 默认值：READABLE | WRITE_NO_RESPONSE。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,11 +56,13 @@ operation?: number
 propertyUuid: string
 ```
 
-Property实例的UUID长度必须为32，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
+Property实例的UUID 长度必须为32，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 &lt;br&gt;不允许使用NearLink标准UUID。
 
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,11 +76,13 @@ Property实例的UUID长度必须为32，由16进制数字字符和连字符共3
 serviceUuid: string
 ```
 
-属性所属的[Service](arkts-connectivity-ssap-service-i.md#Service)实例的UUID长度必须为32，禁止使用星闪标准服务UUID。&lt;br&gt;不允许使用NearLink标准UUID。
+属性所属的[Service](arkts-connectivity-ssap-service-i.md#Service)实例的UUID 长度必须为32，禁止使用星闪标准服务UUID。 &lt;br&gt;不允许使用NearLink标准UUID。
 
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,6 +101,8 @@ Property实例的值。
 **类型：** ArrayBuffer
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

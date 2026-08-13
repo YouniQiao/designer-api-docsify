@@ -6,11 +6,13 @@ export type TlsV11CipherSuite = TlsV10CipherSuite
 
 TLS1.1 cipher suite is same as TLS1.0 cipher suite.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-http-export type TlsV11CipherSuite = TlsV10CipherSuite--><!--Device-http-export type TlsV11CipherSuite = TlsV10CipherSuite-End-->
 

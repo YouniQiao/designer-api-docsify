@@ -8,7 +8,9 @@ function persistPermission(policies: Array<PolicyInfo>): Promise<void>
 
 对所选择的多个文件或目录URI进行持久化授权，使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.FILE_ACCESS_PERSIST
 
@@ -32,10 +34,10 @@ function persistPermission(policies: Array<PolicyInfo>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 | 13900042 |
 
 ## 示例

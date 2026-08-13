@@ -2,9 +2,11 @@
 
 Enumerates the line height scaling base.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-text-enum LineHeightStyle--><!--Device-text-enum LineHeightStyle-End-->
 
@@ -16,12 +18,13 @@ Enumerates the line height scaling base.
 FONT_SIZE = 0
 ```
 
-Uses the font size as the scaling base. The line height is calculated as follows:  
-[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle).fontSize * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle).heightScale.
+Uses the font size as the scaling base. The line height is calculated as follows: [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle).fontSize * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle).heightScale.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -37,9 +40,11 @@ FONT_HEIGHT = 1
 
 Uses the font height as the scaling base. The line height is calculated as follows: the height of the shaped glyph * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle).heightScale.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

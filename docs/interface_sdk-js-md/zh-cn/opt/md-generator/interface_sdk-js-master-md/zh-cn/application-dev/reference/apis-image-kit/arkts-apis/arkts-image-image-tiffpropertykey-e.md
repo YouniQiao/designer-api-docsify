@@ -1,50 +1,10 @@
 # TiffPropertyKey
 
-表示TIFF图片信息的枚举。
-
-> **说明：**
-> 
-> 返回字段类型具体参考[TiffMetadata](../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)。
-> | 名称 | 值 | 说明 |
-> | ---- | -- | ---- |
-> | DOCUMENT_NAME | 'TiffDocumentName' | 文档或图像的名称。 |
-> | PHOTOMETRIC_INTERPRETATION | 'TiffPhotometricInterpretation' | 定义像素颜色的解释方式（如RGB、灰度）。 |
-> | ORIENTATION | 'TiffOrientation' | 图像方向。
-
-- 1表示"Top-left"，图像未旋转。  
-- 2表示"Top-right"，镜像水平翻转。  
-- 3表示"Bottom-right"，图像旋转180°。  
-- 4表示"Bottom-left"，镜像垂直翻转。  
-- 5表示"Left-top"，镜像水平翻转后再顺时针旋转270°。  
-- 6表示"Right-top"，顺时针旋转90°。  
-- 7表示"Right-bottom"，镜像水平翻转后再顺时针旋转90°。  
-- 8表示"Left-bottom"，顺时针旋转270°。
-
-若读到未定义值，会返回 `Unknown Value x`，其中 `x` 表示该标签的原始取值。 |  
-| [RESOLUTION_UNIT](#resolution_unit) | 'TiffResolutionUnit' | XResolution（水平分辨率）和YResolution（垂直分辨率）的单位，取值为英寸（Inch）或厘米（Centimeter）。 |
-| [COPYRIGHT](#copyright) | 'TiffCopyright' | 图像的版权信息。 |
-| [DATE_TIME](#date_time) | 'TiffDateTime' | 与图像关联的日期和时间（通常为最后修改时间）。 |
-| [IMAGE_DESCRIPTION](#image_description) | 'TiffImageDescription' | 图像信息描述。 |
-| [Y_RESOLUTION](#y_resolution) | 'TiffYResolution' | 垂直方向分辨率（每分辨率单位的像素数）。 |
-| [X_RESOLUTION](#x_resolution) | 'TiffXResolution' | 水平方向分辨率（每分辨率单位的像素数）。 |
-| [WHITE_POINT](#white_point) | 'TiffWhitePoint' | 用于指定图像的白点（white point）色度坐标，即图像颜色空间中被认为是“白色”的参考点。 |
-| [TILE_LENGTH](arkts-image-image-tiffpropertykey-e.md) | 'TiffTileLength' | 每个图像分块的高度。单位：像素（px）。 |
-| [TRANSFER_FUNCTION](#transfer_function) | 'TiffTransferFunction' | 图像的传递函数，通常用于颜色校正。 |
-| [TILE_WIDTH](arkts-image-image-tiffpropertykey-e.md) | 'TiffTileWidth' | 每个图像分块的宽度。单位：像素（px）。 |
-| [MAKE](#make) | 'TiffMake' | 拍摄设备制造商。 |
-| [MODEL](#model) | 'TiffModel' | 拍摄设备型号名称或编号。 |
-| [HOST_COMPUTER](arkts-image-image-tiffpropertykey-e.md) | 'TiffHostComputer' | 用于图像处理的主机或系统。 |
-| COMPRESSION | 'TiffCompression' | TIFF图像数据所用的压缩方案。
-
-- 1表示无压缩。  
-- 5表示LZW（基于字典的无损压缩算法）。  
-- 7表示JPEG基线。  
-- 8表示Deflate（基于LZ77+Huffman的无损压缩算法） |  
-| [SOFTWARE](#software) | 'TiffSoftware' | 用于生成图像的软件名称和版本。 |
-| [PRIMARY_CHROMATICITIES](#primary_chromaticities) | 'TiffPrimaryChromaticities' | 图像中RGB三原色的色度坐标。 |
-| [ARTIST](#artist) | 'TiffArtist' |
+表示TIFF图片信息的枚举。 > **说明：** > > 返回字段类型具体参考[TiffMetadata](../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)。 > | 名称 | 值 | 说明 | > | ---- | -- | ---- | > | DOCUMENT_NAME | 'TiffDocumentName' | 文档或图像的名称。 | > | PHOTOMETRIC_INTERPRETATION | 'TiffPhotometricInterpretation' | 定义像素颜色的解释方式（如RGB、灰度）。 | > | ORIENTATION | 'TiffOrientation' | 图像方向。 - 1表示"Top-left"，图像未旋转。 - 2表示"Top-right"，镜像水平翻转。 - 3表示"Bottom-right"，图像旋转180°。 - 4表示"Bottom-left"，镜像垂直翻转。 - 5表示"Left-top"，镜像水平翻转后再顺时针旋转270°。 - 6表示"Right-top"，顺时针旋转90°。 - 7表示"Right-bottom"，镜像水平翻转后再顺时针旋转90°。 - 8表示"Left-bottom"，顺时针旋转270°。 若读到未定义值，会返回 `Unknown Value x`，其中 `x` 表示该标签的原始取值。 | | RESOLUTION_UNIT | 'TiffResolutionUnit' | XResolution（水平分辨率）和YResolution（垂直分辨率）的单位，取值为英寸（Inch）或厘米（Centimeter）。 | | COPYRIGHT | 'TiffCopyright' | 图像的版权信息。 | | DATE_TIME | 'TiffDateTime' | 与图像关联的日期和时间（通常为最后修改时间）。 | | IMAGE_DESCRIPTION | 'TiffImageDescription' | 图像信息描述。 | | Y_RESOLUTION | 'TiffYResolution' | 垂直方向分辨率（每分辨率单位的像素数）。 | | X_RESOLUTION | 'TiffXResolution' | 水平方向分辨率（每分辨率单位的像素数）。 | | WHITE_POINT | 'TiffWhitePoint' | 用于指定图像的白点（white point）色度坐标，即图像颜色空间中被认为是“白色”的参考点。 | | TILE_LENGTH | 'TiffTileLength' | 每个图像分块的高度。单位：像素（px）。 | | TRANSFER_FUNCTION | 'TiffTransferFunction' | 图像的传递函数，通常用于颜色校正。 | | TILE_WIDTH | 'TiffTileWidth' | 每个图像分块的宽度。单位：像素（px）。 | | MAKE | 'TiffMake' | 拍摄设备制造商。 | | MODEL | 'TiffModel' | 拍摄设备型号名称或编号。 | | HOST_COMPUTER | 'TiffHostComputer' | 用于图像处理的主机或系统。 | | COMPRESSION | 'TiffCompression' | TIFF图像数据所用的压缩方案。 - 1表示无压缩。 - 5表示LZW（基于字典的无损压缩算法）。 - 7表示JPEG基线。 - 8表示Deflate（基于LZ77+Huffman的无损压缩算法） | | SOFTWARE | 'TiffSoftware' | 用于生成图像的软件名称和版本。 | | PRIMARY_CHROMATICITIES | 'TiffPrimaryChromaticities' | 图像中RGB三原色的色度坐标。 | | ARTIST | 'TiffArtist' | 创建图像的用户名称。 |
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-image-enum TiffPropertyKey--><!--Device-image-enum TiffPropertyKey-End-->
 
@@ -59,6 +19,8 @@ COMPRESSION = 'TiffCompression'
 Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate).
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +38,8 @@ Defines how pixel colors are interpreted (e.g., RGB, grayscale).
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-PHOTOMETRIC_INTERPRETATION = 'TiffPhotometricInterpretation'--><!--Device-TiffPropertyKey-PHOTOMETRIC_INTERPRETATION = 'TiffPhotometricInterpretation'-End-->
@@ -91,6 +55,8 @@ TRANSFER_FUNCTION = 'TiffTransferFunction'
 Tone transfer curve mapping pixel values to output intensity.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,6 +74,8 @@ Indicates image orientation for correct display rotation/flip.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-ORIENTATION = 'TiffOrientation'--><!--Device-TiffPropertyKey-ORIENTATION = 'TiffOrientation'-End-->
@@ -123,6 +91,8 @@ X_RESOLUTION = 'TiffXResolution'
 Horizontal resolution (pixels per resolution unit).
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,6 +110,8 @@ Vertical resolution (pixels per resolution unit).
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-Y_RESOLUTION = 'TiffYResolution'--><!--Device-TiffPropertyKey-Y_RESOLUTION = 'TiffYResolution'-End-->
@@ -155,6 +127,8 @@ RESOLUTION_UNIT = 'TiffResolutionUnit'
 Unit for X/Y resolution.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,6 +146,8 @@ Chromaticity coordinates of the reference white point.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-WHITE_POINT = 'TiffWhitePoint'--><!--Device-TiffPropertyKey-WHITE_POINT = 'TiffWhitePoint'-End-->
@@ -187,6 +163,8 @@ PRIMARY_CHROMATICITIES = 'TiffPrimaryChromaticities'
 Chromaticity coordinates of the RGB primaries.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,6 +182,8 @@ Height of each image tile in pixels.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-TILE_LENGTH = 'TiffTileLength'--><!--Device-TiffPropertyKey-TILE_LENGTH = 'TiffTileLength'-End-->
@@ -219,6 +199,8 @@ TILE_WIDTH = 'TiffTileWidth'
 Width of each image tile in pixels.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -236,6 +218,8 @@ Name of the document or image.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-DOCUMENT_NAME = 'TiffDocumentName'--><!--Device-TiffPropertyKey-DOCUMENT_NAME = 'TiffDocumentName'-End-->
@@ -251,6 +235,8 @@ IMAGE_DESCRIPTION = 'TiffImageDescription'
 Description of the image content.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -268,6 +254,8 @@ Name of the image creator or artist.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-ARTIST = 'TiffArtist'--><!--Device-TiffPropertyKey-ARTIST = 'TiffArtist'-End-->
@@ -283,6 +271,8 @@ COPYRIGHT = 'TiffCopyright'
 Copyright notice for the image.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -300,6 +290,8 @@ Date and time associated with the image (typically last modification).
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-DATE_TIME = 'TiffDateTime'--><!--Device-TiffPropertyKey-DATE_TIME = 'TiffDateTime'-End-->
@@ -315,6 +307,8 @@ MAKE = 'TiffMake'
 Manufacturer of the capture device.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -332,6 +326,8 @@ Model name/number of the capture device.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-MODEL = 'TiffModel'--><!--Device-TiffPropertyKey-MODEL = 'TiffModel'-End-->
@@ -348,6 +344,8 @@ Software used to create or process the image.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TiffPropertyKey-SOFTWARE = 'TiffSoftware'--><!--Device-TiffPropertyKey-SOFTWARE = 'TiffSoftware'-End-->
@@ -363,6 +361,8 @@ HOST_COMPUTER = 'TiffHostComputer'
 Host computer/system used for image processing.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

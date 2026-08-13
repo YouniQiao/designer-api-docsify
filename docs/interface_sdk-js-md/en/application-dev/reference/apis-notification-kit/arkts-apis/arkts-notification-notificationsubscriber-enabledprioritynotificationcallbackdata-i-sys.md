@@ -4,7 +4,9 @@ Returns the notification priority master switch state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface EnabledPriorityNotificationCallbackData--><!--Device-unnamed-export interface EnabledPriorityNotificationCallbackData-End-->
 
@@ -18,15 +20,15 @@ Returns the notification priority master switch state.
 readonly enable: boolean
 ```
 
-Whether the priority notification is enabled.  
-- **true**: The priority notification is enabled.  
-- **false**: The priority notification is disabled.
+Whether the priority notification is enabled. - **true**: The priority notification is enabled. - **false**: The priority notification is disabled.
 
 **Type:** boolean
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnabledPriorityNotificationCallbackData-readonly enable: boolean--><!--Device-EnabledPriorityNotificationCallbackData-readonly enable: boolean-End-->
 

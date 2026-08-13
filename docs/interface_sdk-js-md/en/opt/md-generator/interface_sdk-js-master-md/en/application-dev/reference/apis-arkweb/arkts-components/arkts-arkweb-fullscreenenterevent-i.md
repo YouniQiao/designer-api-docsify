@@ -4,6 +4,8 @@ Provides details about the event that the **Web** component to enter the full-sc
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FullScreenEnterEvent--><!--Device-unnamed-declare interface FullScreenEnterEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Function handle for exiting full screen mode.
 **Type:** [FullScreenExitHandler](arkts-arkweb-fullscreenexithandler-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,6 +42,8 @@ Video height, in px. If the element that enters fulls screen mode is a **&lt;vid
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FullScreenEnterEvent-videoHeight?: number--><!--Device-FullScreenEnterEvent-videoHeight?: number-End-->
@@ -55,6 +61,8 @@ Video width, in px. If the element that enters fulls screen mode is a **&lt;vide
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

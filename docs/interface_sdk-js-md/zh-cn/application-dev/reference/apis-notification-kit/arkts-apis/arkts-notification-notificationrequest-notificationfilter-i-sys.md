@@ -2,9 +2,11 @@
 
 描述查询普通实况窗时的筛选条件。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationFilter--><!--Device-unnamed-export interface NotificationFilter-End-->
 
@@ -22,9 +24,11 @@ bundle: BundleOption
 
 **类型：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationFilter-bundle: BundleOption--><!--Device-NotificationFilter-bundle: BundleOption-End-->
 
@@ -42,9 +46,11 @@ extraInfoKeys?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationFilter-extraInfoKeys?: Array<string>--><!--Device-NotificationFilter-extraInfoKeys?: Array<string>-End-->
 
@@ -62,9 +68,11 @@ notificationKey: notificationSubscribe.NotificationKey
 
 **类型：** notificationSubscribe.NotificationKey
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey--><!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey-End-->
 

@@ -6,6 +6,8 @@ Declare the type of automatic case mode switching.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum AutoCapitalizationMode--><!--Device-unnamed-export declare enum AutoCapitalizationMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ The default status is invalid.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Automatic case by words.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoCapitalizationMode-WORDS = 1--><!--Device-AutoCapitalizationMode-WORDS = 1-End-->
@@ -58,6 +64,8 @@ Automatic case by sentences.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoCapitalizationMode-SENTENCES = 2--><!--Device-AutoCapitalizationMode-SENTENCES = 2-End-->
@@ -75,6 +83,8 @@ Automatic case by full characters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

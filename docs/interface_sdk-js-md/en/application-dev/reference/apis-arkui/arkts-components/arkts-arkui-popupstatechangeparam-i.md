@@ -6,6 +6,8 @@ Display state of the popup.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PopupStateChangeParam--><!--Device-unnamed-declare interface PopupStateChangeParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Display state of the popup. It returns **true** when the popup transitions from 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

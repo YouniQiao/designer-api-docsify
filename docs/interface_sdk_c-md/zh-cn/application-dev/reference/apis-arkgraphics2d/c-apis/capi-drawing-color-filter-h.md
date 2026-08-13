@@ -95,7 +95,7 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateMatrix(const float matrix[20
 
 | 参数项 | 描述 |
 | -- | -- |
-| matrix | 表示矩阵，以长度为20的浮点数组表示。 |
+| matrix | 表示4x5颜色矩阵，用于对图像的颜色通道进行线性变换。 |
 
 **返回：**
 

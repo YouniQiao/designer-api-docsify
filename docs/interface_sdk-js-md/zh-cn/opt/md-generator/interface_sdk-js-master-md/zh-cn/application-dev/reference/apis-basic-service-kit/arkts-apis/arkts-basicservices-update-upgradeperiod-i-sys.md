@@ -2,7 +2,9 @@
 
 升级时间段。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export interface UpgradePeriod--><!--Device-update-export interface UpgradePeriod-End-->
 
@@ -16,13 +18,13 @@
 end: number
 ```
 
-结束时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。
-
-必须大于或等于start，超出范围时抛出异常。
+结束时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。 必须大于或等于start，超出范围时抛出异常。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UpgradePeriod-end: int--><!--Device-UpgradePeriod-end: int-End-->
 
@@ -36,13 +38,13 @@ end: number
 start: number
 ```
 
-开始时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。
-
-必须小于或等于end，超出范围时抛出异常。
+开始时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。 必须小于或等于end，超出范围时抛出异常。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UpgradePeriod-start: int--><!--Device-UpgradePeriod-start: int-End-->
 

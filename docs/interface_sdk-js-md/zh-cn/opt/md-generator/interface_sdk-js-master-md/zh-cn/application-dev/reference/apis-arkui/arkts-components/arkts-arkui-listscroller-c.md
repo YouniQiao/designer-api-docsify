@@ -1,20 +1,16 @@
 # ListScroller
 
-List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。
+List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。 > **说明：** > > ListScroller继承自[Scroller](arkts-arkui-scroller-c.md#Scroller)，具有[Scroller](arkts-arkui-scroller-c.md#Scroller)的全部方法。
 
-> **说明：**
-> 
-> ListScroller继承自[Scroller](arkts-arkui-scroller-c.md#Scroller)，具有[Scroller](arkts-arkui-scroller-c.md#Scroller)的全部方法。
-
-## 导入对象
-
-```ts listScroller: ListScroller = new ListScroller();```
+## 导入对象 ```ts listScroller: ListScroller = new ListScroller(); ```
 
 **继承/实现关系：** ListScroller extends [Scroller](arkts-arkui-scroller-c.md#Scroller)
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class ListScroller extends Scroller--><!--Device-unnamed-declare class ListScroller extends Scroller-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class ListScroller--><!--Device-unnamed-declare class ListScroller-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,9 +20,11 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-将[EXPANDED](arkts-arkui-swipeactionstate-e.md#SwipeActionState)状态的[ListItem](./list_item)收起，并设置回调事件。
+将[EXPANDED](arkts-arkui-swipeactionstate-e.md#SwipeActionState)状态的ListItem收起，并设置回调事件。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +44,8 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## getItemRectInGroup
 
@@ -55,9 +53,11 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 getItemRectInGroup(index: number, indexInGroup: number): RectResult
 ```
 
-获取[ListItemGroup](./list_item_group)中的[ListItem](./list_item)的大小和相对于List的位置。
+获取ListItemGroup中的ListItem的大小和相对于List的位置。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,8 +84,8 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## getVisibleListContentInfo
 
@@ -96,6 +96,8 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 根据坐标获取子组件的索引信息。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,8 +124,8 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## scrollToItemInGroup
 
@@ -134,6 +136,8 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 滑动到指定的ListItemGroup中指定的ListItem。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,5 +160,5 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |

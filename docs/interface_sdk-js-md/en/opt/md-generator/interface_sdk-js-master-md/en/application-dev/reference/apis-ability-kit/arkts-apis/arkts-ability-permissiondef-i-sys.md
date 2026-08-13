@@ -1,14 +1,10 @@
 # PermissionDef (System API)
 
-The module provides permission details defined in the  
-[module.json5](../../../quick-start/module-configuration-file.md) file. The information can be obtained using  
-[bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getPermissionDef).
+The module provides permission details defined in the [module.json5](../../../quick-start/module-configuration-file.md) file. The information can be obtained using [bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getPermissionDef-(System-API)) . > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
@@ -26,7 +22,9 @@ ID of the permission description.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionDef-readonly descriptionId: long--><!--Device-PermissionDef-readonly descriptionId: long-End-->
 
@@ -40,11 +38,13 @@ ID of the permission description.
 readonly grantMode: number
 ```
 
-[Grant mode of the permission](../../../security/AccessToken/app-permission-mgmt-overview.md#authorization-mode).The value **0** means user authorization, and **1** means system authorization.
+[Grant mode of the permission](../../../security/AccessToken/app-permission-mgmt-overview.md#authorization-mode). The value **0** means user authorization, and **1** means system authorization.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionDef-readonly grantMode: int--><!--Device-PermissionDef-readonly grantMode: int-End-->
 
@@ -62,7 +62,9 @@ ID of the permission label.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionDef-readonly labelId: long--><!--Device-PermissionDef-readonly labelId: long-End-->
 
@@ -80,7 +82,9 @@ Name of the permission.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionDef-readonly permissionName: string--><!--Device-PermissionDef-readonly permissionName: string-End-->
 

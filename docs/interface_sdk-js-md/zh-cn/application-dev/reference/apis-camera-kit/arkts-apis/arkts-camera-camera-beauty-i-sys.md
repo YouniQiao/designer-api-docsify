@@ -1,14 +1,16 @@
 # Beauty（系统接口）
 
-Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery)Provides APIs to obtain and set the beauty effect.
+Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery（系统接口）) Provides APIs to obtain and set the beauty effect.
 
-**继承/实现关系：** Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery)
+**继承/实现关系：** Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery（系统接口）)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-camera-interface Beauty extends BeautyQuery--><!--Device-camera-interface Beauty extends BeautyQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface Beauty--><!--Device-camera-interface Beauty-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -16,21 +18,17 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuer
 
 ## getBeauty
 
-ArkTS-Dyn:
-```TypeScript
-getBeauty(type: BeautyType): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBeauty(type: BeautyType): int
 ```
 
 Obtains the level of the beauty type in use.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Beauty-getBeauty(type: BeautyType): int--><!--Device-Beauty-getBeauty(type: BeautyType): int-End-->
 
@@ -48,14 +46,14 @@ Obtains the level of the beauty type in use.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | the beauty effect in use. |
+| int | the beauty effect in use. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -78,23 +76,17 @@ function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
 
 ## setBeauty
 
-ArkTS-Dyn:
-```TypeScript
-setBeauty(type: BeautyType, value: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setBeauty(type: BeautyType, value: int): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the  
-[beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType) obtained through  
-[getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyTypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType（系统接口）) obtained through [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyTypes) are disabled.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Beauty-setBeauty(type: BeautyType, value: int): void--><!--Device-Beauty-setBeauty(type: BeautyType, value: int): void-End-->
 
@@ -107,14 +99,14 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 | Beauty type. |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). |
+| value | int | 是 | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -140,9 +132,11 @@ setPortraitThemeType(type: PortraitThemeType): void
 
 Sets a portrait theme type for a camera device.
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void--><!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void-End-->
 
@@ -160,7 +154,7 @@ Sets a portrait theme type for a camera device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

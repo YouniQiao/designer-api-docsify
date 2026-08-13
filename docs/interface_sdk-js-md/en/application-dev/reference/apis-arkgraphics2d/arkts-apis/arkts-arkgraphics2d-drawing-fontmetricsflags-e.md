@@ -1,11 +1,12 @@
 # FontMetricsFlags
 
-Enumerates the font measurement flags, which is used to specify whether a field in the  
-[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics) struct is valid.
+Enumerates the font measurement flags, which is used to specify whether a field in the [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics) struct is valid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum FontMetricsFlags--><!--Device-drawing-enum FontMetricsFlags-End-->
 
@@ -19,9 +20,11 @@ UNDERLINE_THICKNESS_VALID = 1 << 0
 
 The **underlineThickness** field is valid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -37,9 +40,11 @@ UNDERLINE_POSITION_VALID = 1 << 1
 
 The **underlinePosition** field is valid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -55,9 +60,11 @@ STRIKETHROUGH_THICKNESS_VALID = 1 << 2
 
 The **strikethroughThickness** field is valid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -73,9 +80,11 @@ STRIKETHROUGH_POSITION_VALID = 1 << 3
 
 The **strikethroughPosition** field is valid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -91,9 +100,11 @@ BOUNDS_INVALID = 1 << 4
 
 The boundary measurement values (such as **top**, **bottom**, **xMin**, and **xMax**) are invalid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

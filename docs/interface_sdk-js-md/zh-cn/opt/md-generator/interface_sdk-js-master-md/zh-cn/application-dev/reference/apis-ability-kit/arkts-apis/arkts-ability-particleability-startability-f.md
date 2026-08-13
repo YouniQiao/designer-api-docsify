@@ -6,13 +6,11 @@
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void
 ```
 
-启动指定的particleAbility。使用callback异步回调。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动指定的particleAbility。使用callback异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -63,13 +61,11 @@ particleAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<void>
 ```
 
-启动指定的particleAbility。使用Promise异步回调。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动指定的particleAbility。使用Promise异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

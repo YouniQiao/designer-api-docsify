@@ -1,16 +1,12 @@
 # AlertDialogButtonBaseOptions
 
-Defines the button style of the alert dialog box.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
+Defines the button style of the alert dialog box. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AlertDialogButtonBaseOptions--><!--Device-unnamed-declare interface AlertDialogButtonBaseOptions-End-->
 
@@ -24,9 +20,13 @@ action: VoidCallback
 
 Callback upon button clicking.
 
+**Type:** VoidCallback
+
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +50,8 @@ Background color of the button.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -64,8 +66,7 @@ Background color of the button.
 defaultFocus?: boolean
 ```
 
-Whether the button is the default focus. Default value: **false**. **true**: The button is the default focus.   
-**false**: The button is not the default focus.
+Whether the button is the default focus. Default value: **false**. **true**: The button is the default focus. **false**: The button is not the default focus.
 
 **Type:** boolean
 
@@ -74,6 +75,8 @@ Whether the button is the default focus. Default value: **false**. **true**: The
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,11 +92,7 @@ Whether the button is the default focus. Default value: **false**. **true**: The
 enabled?: boolean
 ```
 
-Whether to respond when the button is clicked.
-
-Default value: **true**
-
-**true**: Respond when the button is clicked. **false**: Do not respond when the button is clicked.
+Whether to respond when the button is clicked. Default value: **true** **true**: Respond when the button is clicked. **false**: Do not respond when the button is clicked.
 
 **Type:** boolean
 
@@ -102,6 +101,8 @@ Default value: **true**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,6 +126,8 @@ Font color of the button.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -139,9 +142,7 @@ Font color of the button.
 style?: DialogButtonStyle
 ```
 
-Style of the button.
-
-Default value: **DialogButtonStyle.DEFAULT**
+Style of the button. Default value: **DialogButtonStyle.DEFAULT**
 
 **Type:** DialogButtonStyle
 
@@ -150,6 +151,8 @@ Default value: **DialogButtonStyle.DEFAULT**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,6 +175,8 @@ Text of the button. If the value is null, the button is not displayed.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,10 @@
 # VideoRecorder（系统接口）
 
-该接口自API version 9起停止维护，建议使用AVRecorder。视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。 视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface VideoRecorder--><!--Device-unnamed-interface VideoRecorder-End-->
 
@@ -20,6 +22,8 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void--><!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -36,10 +40,10 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -61,12 +65,47 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 ## getInputSurface
 
 ```TypeScript
+getInputSurface(callback: AsyncCallback<string | undefined>): void
+```
+
+获取录制surface。必须在prepare完成后和start之前调用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string | undefined>): void--><!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string | undefined>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| undefined & gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+
+## getInputSurface
+
+```TypeScript
 getInputSurface(): Promise<string>
 ```
 
 获取录制surface。必须在prepare完成后和start之前调用。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-getInputSurface(): Promise<string>--><!--Device-VideoRecorder-getInputSurface(): Promise<string>-End-->
 
@@ -84,10 +123,10 @@ getInputSurface(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -104,7 +143,73 @@ videoRecorder.getInputSurface().then((surfaceId: string) => {
 });
 ```
 
-## on('error')
+## getInputSurface
+
+```TypeScript
+getInputSurface(): Promise<string | undefined>
+```
+
+获取录制surface。必须在prepare完成后和start之前调用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-VideoRecorder-getInputSurface(): Promise<string | undefined>--><!--Device-VideoRecorder-getInputSurface(): Promise<string | undefined>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;string \ | undefined & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+监听视频录制错误事件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-VideoRecorder-onError(callback: ErrorCallback): void--><!--Device-VideoRecorder-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -113,6 +218,8 @@ on(type: 'error', callback: ErrorCallback): void
 监听视频录制错误事件。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -131,10 +238,10 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -155,7 +262,9 @@ pause(callback: AsyncCallback<void>): void
 
 暂停视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -173,10 +282,10 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -201,7 +310,9 @@ pause(): Promise<void>
 
 暂停视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-pause(): Promise<void>--><!--Device-VideoRecorder-pause(): Promise<void>-End-->
 
@@ -219,10 +330,10 @@ pause(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -245,7 +356,9 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 视频录制准备。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE
 
@@ -266,11 +379,11 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -318,7 +431,9 @@ prepare(config: VideoRecorderConfig): Promise<void>
 
 Prepares for recording.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE
 
@@ -344,11 +459,11 @@ Prepares for recording.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -394,7 +509,9 @@ release(callback: AsyncCallback<void>): void
 
 释放视频录制资源。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void-End-->
 
@@ -412,8 +529,8 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -438,7 +555,9 @@ release(): Promise<void>
 
 释放视频录制资源。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-release(): Promise<void>--><!--Device-VideoRecorder-release(): Promise<void>-End-->
 
@@ -456,8 +575,8 @@ release(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -478,9 +597,11 @@ videoRecorder.release().then(() => {
 reset(callback: AsyncCallback<void>): void
 ```
 
-重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。 在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void-End-->
 
@@ -498,9 +619,9 @@ reset(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -523,9 +644,11 @@ videoRecorder.reset((err: BusinessError) => {
 reset(): Promise<void>
 ```
 
-重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。 在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-reset(): Promise<void>--><!--Device-VideoRecorder-reset(): Promise<void>-End-->
 
@@ -543,9 +666,9 @@ reset(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -568,7 +691,9 @@ resume(callback: AsyncCallback<void>): void
 
 恢复视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void-End-->
 
@@ -586,10 +711,10 @@ resume(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -614,7 +739,9 @@ resume(): Promise<void>
 
 恢复视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-resume(): Promise<void>--><!--Device-VideoRecorder-resume(): Promise<void>-End-->
 
@@ -632,10 +759,10 @@ resume(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -658,7 +785,9 @@ start(callback: AsyncCallback<void>): void
 
 开始视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void-End-->
 
@@ -676,10 +805,10 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -704,7 +833,9 @@ start(): Promise<void>
 
 开始视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-start(): Promise<void>--><!--Device-VideoRecorder-start(): Promise<void>-End-->
 
@@ -722,10 +853,10 @@ start(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -748,7 +879,9 @@ stop(callback: AsyncCallback<void>): void
 
 停止视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -766,10 +899,10 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -794,7 +927,9 @@ stop(): Promise<void>
 
 停止视频录制。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-stop(): Promise<void>--><!--Device-VideoRecorder-stop(): Promise<void>-End-->
 
@@ -812,10 +947,10 @@ stop(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -840,7 +975,9 @@ readonly state: VideoRecordState
 
 **类型：** [VideoRecordState](arkts-media-videorecordstate-t-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorder-readonly state: VideoRecordState--><!--Device-VideoRecorder-readonly state: VideoRecordState-End-->
 

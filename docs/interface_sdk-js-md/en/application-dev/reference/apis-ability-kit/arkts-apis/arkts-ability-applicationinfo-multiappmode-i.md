@@ -2,9 +2,11 @@
 
 Defines the [multi-app mode](../../../quick-start/multiInstance.md).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MultiAppMode--><!--Device-unnamed-export interface MultiAppMode-End-->
 
@@ -18,11 +20,13 @@ readonly maxCount: int
 
 Indicates the max count of the bundle,the unit is quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MultiAppMode-readonly maxCount: int--><!--Device-MultiAppMode-readonly maxCount: int-End-->
 
@@ -38,9 +42,11 @@ Indicates the multiAppModeType of the bundle
 
 **Type:** bundleManager.MultiAppModeType
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MultiAppMode-readonly multiAppModeType: bundleManager.MultiAppModeType--><!--Device-MultiAppMode-readonly multiAppModeType: bundleManager.MultiAppModeType-End-->
 

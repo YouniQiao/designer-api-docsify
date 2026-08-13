@@ -2,9 +2,11 @@
 
 Enumerates the user behavior types of the highlights album.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum HighlightUserActionType--><!--Device-photoAccessHelper-enum HighlightUserActionType-End-->
 
@@ -20,9 +22,11 @@ INSERTED_PIC_COUNT = 0
 
 Number of inserted pictures.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-INSERTED_PIC_COUNT = 0--><!--Device-HighlightUserActionType-INSERTED_PIC_COUNT = 0-End-->
 
@@ -38,9 +42,11 @@ REMOVED_PIC_COUNT
 
 Number of removed pictures.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-REMOVED_PIC_COUNT--><!--Device-HighlightUserActionType-REMOVED_PIC_COUNT-End-->
 
@@ -56,9 +62,11 @@ SHARED_SCREENSHOT_COUNT
 
 Number of times that a full-length image in a highlights album is shared.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-SHARED_SCREENSHOT_COUNT--><!--Device-HighlightUserActionType-SHARED_SCREENSHOT_COUNT-End-->
 
@@ -74,9 +82,11 @@ SHARED_COVER_COUNT
 
 Number of times that a highlights cover is shared.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-SHARED_COVER_COUNT--><!--Device-HighlightUserActionType-SHARED_COVER_COUNT-End-->
 
@@ -92,9 +102,11 @@ RENAMED_COUNT
 
 Number of times that a highlights album is renamed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-RENAMED_COUNT--><!--Device-HighlightUserActionType-RENAMED_COUNT-End-->
 
@@ -110,9 +122,11 @@ CHANGED_COVER_COUNT
 
 Number of times that a cover is changed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-CHANGED_COVER_COUNT--><!--Device-HighlightUserActionType-CHANGED_COVER_COUNT-End-->
 
@@ -128,9 +142,11 @@ RENDER_VIEWED_TIMES = 100
 
 Number of times that the pictures in a highlights album are played.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-RENDER_VIEWED_TIMES = 100--><!--Device-HighlightUserActionType-RENDER_VIEWED_TIMES = 100-End-->
 
@@ -146,9 +162,11 @@ RENDER_VIEWED_DURATION
 
 Time used to play the pictures in a highlights album.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-RENDER_VIEWED_DURATION--><!--Device-HighlightUserActionType-RENDER_VIEWED_DURATION-End-->
 
@@ -164,9 +182,11 @@ ART_LAYOUT_VIEWED_TIMES
 
 Number of times that a highlights album is viewed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_TIMES--><!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_TIMES-End-->
 
@@ -182,9 +202,11 @@ ART_LAYOUT_VIEWED_DURATION
 
 Time used to view a highlights album.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_DURATION--><!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_DURATION-End-->
 

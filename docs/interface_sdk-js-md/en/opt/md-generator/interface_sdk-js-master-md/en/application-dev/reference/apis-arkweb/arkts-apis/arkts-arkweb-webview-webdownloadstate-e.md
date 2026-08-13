@@ -4,6 +4,8 @@ Defines the state for download.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum WebDownloadState--><!--Device-webview-enum WebDownloadState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ IN_PROGRESS = 0
 The web download is in progress.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ The web download has been completed.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-COMPLETED--><!--Device-WebDownloadState-COMPLETED-End-->
@@ -49,6 +55,8 @@ CANCELED
 The web download was canceled.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ The web download was interrupted.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-INTERRUPTED--><!--Device-WebDownloadState-INTERRUPTED-End-->
@@ -81,6 +91,8 @@ PENDING
 The web download is pending.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ The web download has been paused.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadState-PAUSED--><!--Device-WebDownloadState-PAUSED-End-->
@@ -113,6 +127,8 @@ UNKNOWN
 Unknown state.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -2,9 +2,11 @@
 
 回调实例，返回短信送达报告。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface IDeliveryShortMessageCallback--><!--Device-sms-export interface IDeliveryShortMessageCallback-End-->
 
@@ -18,11 +20,13 @@ pdu: Array<int>
 
 短信送达报告。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;int&gt;
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-IDeliveryShortMessageCallback-pdu: Array<int>--><!--Device-IDeliveryShortMessageCallback-pdu: Array<int>-End-->
 

@@ -2,7 +2,9 @@
 
 色调映射类型枚举.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum ToneMappingType--><!--Device-unnamed-export enum ToneMappingType-End-->
 
@@ -16,7 +18,9 @@ ACES = 0
 
 ACES色调映射类型.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ToneMappingType-ACES = 0--><!--Device-ToneMappingType-ACES = 0-End-->
 
@@ -30,7 +34,9 @@ ACES_2020 = 1
 
 ACES_2020色调映射类型.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ToneMappingType-ACES_2020 = 1--><!--Device-ToneMappingType-ACES_2020 = 1-End-->
 
@@ -44,7 +50,9 @@ FILMIC = 2
 
 FILMIC色调映射类型.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ToneMappingType-FILMIC = 2--><!--Device-ToneMappingType-FILMIC = 2-End-->
 

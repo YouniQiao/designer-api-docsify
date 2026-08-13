@@ -4,11 +4,13 @@ Describes the proximity sensor data. It extends from [Response](arkts-sensorserv
 
 **Inheritance/Implementation:** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-sensor-interface ProximityResponse extends Response--><!--Device-sensor-interface ProximityResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface ProximityResponse--><!--Device-sensor-interface ProximityResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,11 +28,13 @@ distance: double
 
 Proximity between the visible object and the device monitor. The value **0** means the two are close to each other, and a value greater than 0 means that they are far away from each other.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProximityResponse-distance: double--><!--Device-ProximityResponse-distance: double-End-->
 

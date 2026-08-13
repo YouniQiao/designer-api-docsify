@@ -2,7 +2,9 @@
 
 Describes the PiP window information.
 
-**Since:** 15
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-interface PiPWindowInfo--><!--Device-PiPWindow-interface PiPWindowInfo-End-->
 
@@ -24,9 +26,11 @@ Size of the PiP window.
 
 **Type:** [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindowInfo-size: PiPWindowSize--><!--Device-PiPWindowInfo-size: PiPWindowSize-End-->
 
@@ -42,9 +46,11 @@ ID of the PiP window.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindowInfo-windowId: int--><!--Device-PiPWindowInfo-windowId: int-End-->
 

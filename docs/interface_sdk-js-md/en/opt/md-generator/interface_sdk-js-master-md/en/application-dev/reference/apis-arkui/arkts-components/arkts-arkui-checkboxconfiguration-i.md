@@ -1,13 +1,14 @@
 # CheckBoxConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
 
-**Inheritance/Implementation:** CheckBoxConfiguration extends [CommonConfiguration<CheckBoxConfiguration>](CommonConfiguration<CheckBoxConfiguration>)
+**Inheritance/Implementation:** CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>--><!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface CheckBoxConfiguration--><!--Device-unnamed-declare interface CheckBoxConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +24,8 @@ Name of the check box.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -37,19 +40,13 @@ Name of the check box.
 selected: boolean
 ```
 
-Whether the check box is selected.
-
-**true**: The check box is selected. 
-
-**false**: The check box is not selected.
-
-If the **select** attribute is not set, the default value **false** is used.
-
-If the **select** attribute is set, the attribute value is used here.
+Whether the check box is selected. **true**: The check box is selected. **false**: The check box is not selected. If the **select** attribute is not set, the default value **false** is used. If the **select** attribute is set, the attribute value is used here.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,13 +62,13 @@ If the **select** attribute is set, the attribute value is used here.
 triggerChange: Callback<boolean>
 ```
 
-Triggers a change in the check box selection state. 
-
-The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected to unselected.
+Triggers a change in the check box selection state. The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected to unselected.
 
 **Type:** Callback&lt;boolean&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

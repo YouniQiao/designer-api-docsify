@@ -14,7 +14,9 @@ function hasSerialRight(portId: number): boolean
 
 Checks whether the application has the permission to access the serial port device. When an application is restarted after exits, you need to request the permission from the user again.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-function hasSerialRight(portId: int): boolean--><!--Device-serialManager-function hasSerialRight(portId: int): boolean-End-->
 
@@ -36,10 +38,10 @@ Checks whether the application has the permission to access the serial port devi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
-| [14400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400005-database-operation-exception) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
+| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-database-operation-exception) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
 
 ## Examples
 

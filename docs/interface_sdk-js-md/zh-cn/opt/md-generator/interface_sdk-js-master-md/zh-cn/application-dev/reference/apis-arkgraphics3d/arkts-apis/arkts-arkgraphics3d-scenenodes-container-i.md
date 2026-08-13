@@ -2,9 +2,11 @@
 
 定义场景对象的容器。容器提供了一种将场景对象分组到层次结构中的方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-unnamed-export interface Container<T>--><!--Device-unnamed-export interface Container<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Container--><!--Device-unnamed-export interface Container-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,7 +18,9 @@ append(item: T): void
 
 追加一个对象到容器。如果追加的对象已存在于容器中，容器会先移除该对象再插入，因此数量不会增加。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Container-append(item: T): void--><!--Device-Container-append(item: T): void-End-->
 
@@ -36,7 +40,9 @@ clear(): void
 
 清空容器内的所有对象。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Container-clear(): void--><!--Device-Container-clear(): void-End-->
 
@@ -50,7 +56,9 @@ count(): number
 
 获取容器中对象的数量。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Container-count(): int--><!--Device-Container-count(): int-End-->
 
@@ -70,7 +78,9 @@ get(index: number): T | null
 
 获取特定下标对象，获取不到则返回空。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Container-get(index: int): T | null--><!--Device-Container-get(index: int): T | null-End-->
 
@@ -96,7 +106,9 @@ insertAfter(item: T, sibling: T | null): void
 
 在兄弟节点后面插入对象。如果插入的对象已存在于容器中，容器会先移除该对象再插入，因此数量不会增加。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Container-insertAfter(item: T, sibling: T | null): void--><!--Device-Container-insertAfter(item: T, sibling: T | null): void-End-->
 
@@ -117,7 +129,9 @@ remove(item: T): void
 
 移除指定对象。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Container-remove(item: T): void--><!--Device-Container-remove(item: T): void-End-->
 

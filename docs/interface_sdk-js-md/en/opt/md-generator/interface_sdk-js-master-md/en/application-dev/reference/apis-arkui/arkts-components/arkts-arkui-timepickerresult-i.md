@@ -4,6 +4,8 @@ Describes a time in 24-hour format.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TimePickerResult--><!--Device-unnamed-declare interface TimePickerResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Describes a time in 24-hour format.
 hour: number
 ```
 
-Hour portion of the selected time.
-
-Value range: [0-23]
+Hour portion of the selected time. Value range: [0-23]
 
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,13 +36,13 @@ Value range: [0-23]
 minute: number
 ```
 
-Minute portion of the selected time.
-
-Value range: [0-59]
+Minute portion of the selected time. Value range: [0-59]
 
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,13 +56,13 @@ Value range: [0-59]
 second: number
 ```
 
-Second portion of the selected time.
-
-Value range: [0-59]
+Second portion of the selected time. Value range: [0-59]
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

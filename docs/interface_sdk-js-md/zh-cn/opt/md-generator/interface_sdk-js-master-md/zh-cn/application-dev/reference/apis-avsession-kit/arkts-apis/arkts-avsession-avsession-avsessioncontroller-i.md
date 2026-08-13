@@ -1,12 +1,10 @@
 # AVSessionController
 
-AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
+AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 > **说明：** > > - 本Interface首批接口从API version 10开始支持。
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 10开始支持。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-avSession-interface AVSessionController--><!--Device-avSession-interface AVSessionController-End-->
 
@@ -20,7 +18,9 @@ destroy(callback: AsyncCallback<void>): void
 
 销毁当前控制器，销毁后当前控制器不可再用。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-destroy(callback: AsyncCallback<void>): void--><!--Device-AVSessionController-destroy(callback: AsyncCallback<void>): void-End-->
 
@@ -36,8 +36,8 @@ destroy(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## destroy
 
@@ -47,7 +47,9 @@ destroy(): Promise<void>
 
 销毁当前控制器，销毁后当前控制器不可再用。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -65,8 +67,8 @@ destroy(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVCallState
 
@@ -76,7 +78,9 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 获取通话状态数据。结果通过callback异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVCallState(callback: AsyncCallback<AVCallState>): void--><!--Device-AVSessionController-getAVCallState(callback: AsyncCallback<AVCallState>): void-End-->
 
@@ -92,9 +96,9 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVCallState
 
@@ -104,7 +108,9 @@ getAVCallState(): Promise<AVCallState>
 
 获取通话状态数据。结果通过Promise异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVCallState(): Promise<AVCallState>--><!--Device-AVSessionController-getAVCallState(): Promise<AVCallState>-End-->
 
@@ -120,9 +126,9 @@ getAVCallState(): Promise<AVCallState>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVMetadata
 
@@ -132,7 +138,9 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 获取会话元数据。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVMetadata(callback: AsyncCallback<AVMetadata>): void--><!--Device-AVSessionController-getAVMetadata(callback: AsyncCallback<AVMetadata>): void-End-->
 
@@ -148,9 +156,9 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVMetadata
 
@@ -160,7 +168,9 @@ getAVMetadata(): Promise<AVMetadata>
 
 获取会话元数据。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -178,9 +188,9 @@ getAVMetadata(): Promise<AVMetadata>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVMetadataSync
 
@@ -190,7 +200,9 @@ getAVMetadataSync(): AVMetadata
 
 使用同步方法获取会话元数据。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -208,9 +220,9 @@ getAVMetadataSync(): AVMetadata
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVPlaybackState
 
@@ -220,7 +232,9 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 获取当前的远端播放状态。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVSessionController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
 
@@ -236,9 +250,9 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVPlaybackState
 
@@ -248,7 +262,9 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 获取当前的远端播放状态。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -266,9 +282,9 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVPlaybackStateSync
 
@@ -278,7 +294,9 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 使用同步方法获取当前会话的播放状态。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -296,9 +314,9 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueItems
 
@@ -308,7 +326,9 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 获取当前播放列表相关信息。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void-End-->
 
@@ -324,9 +344,9 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueItems
 
@@ -336,7 +356,9 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 获取当前会话播放列表相关信息。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -354,9 +376,9 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueItemsSync
 
@@ -366,7 +388,9 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 使用同步方法获取当前会话播放列表相关信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -384,9 +408,9 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueTitle
 
@@ -396,7 +420,9 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 获取当前播放列表的名称。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVQueueTitle(callback: AsyncCallback<string>): void--><!--Device-AVSessionController-getAVQueueTitle(callback: AsyncCallback<string>): void-End-->
 
@@ -412,9 +438,9 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueTitle
 
@@ -424,7 +450,9 @@ getAVQueueTitle(): Promise<string>
 
 获取当前会话播放列表的名称。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -442,9 +470,9 @@ getAVQueueTitle(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueTitleSync
 
@@ -454,7 +482,9 @@ getAVQueueTitleSync(): string
 
 使用同步方法获取当前会话播放列表的名称。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -472,9 +502,9 @@ getAVQueueTitleSync(): string
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getCallMetadata
 
@@ -484,7 +514,9 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 获取通话会话的元数据。结果通过callback异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getCallMetadata(callback: AsyncCallback<CallMetadata>): void--><!--Device-AVSessionController-getCallMetadata(callback: AsyncCallback<CallMetadata>): void-End-->
 
@@ -500,9 +532,9 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getCallMetadata
 
@@ -512,7 +544,9 @@ getCallMetadata(): Promise<CallMetadata>
 
 获取通话会话的元数据。结果通过Promise异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getCallMetadata(): Promise<CallMetadata>--><!--Device-AVSessionController-getCallMetadata(): Promise<CallMetadata>-End-->
 
@@ -528,9 +562,9 @@ getCallMetadata(): Promise<CallMetadata>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getDesktopLyricState
 
@@ -541,6 +575,8 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 获取当前会话桌面歌词状态。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -558,11 +594,11 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## getExtras
 
@@ -573,6 +609,8 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 获取媒体提供方设置的自定义媒体数据包。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getExtras(callback: AsyncCallback<{[key: string]: Object}>): void--><!--Device-AVSessionController-getExtras(callback: AsyncCallback<{[key: string]: Object}>): void-End-->
 
@@ -588,12 +626,44 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+
+## getExtras
+
+```TypeScript
+getExtras(callback: AsyncCallback<Record<string, Object>>): void
+```
+
+Get custom media packets provided by the corresponding session
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-getExtras(callback: AsyncCallback<Record<string, Object>>): void--><!--Device-AVSessionController-getExtras(callback: AsyncCallback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## getExtras
 
@@ -604,6 +674,8 @@ getExtras(): Promise<{[key: string]: Object}>
 获取媒体提供方设置的自定义媒体数据包。使用Promise异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -621,12 +693,46 @@ getExtras(): Promise<{[key: string]: Object}>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+
+## getExtras
+
+```TypeScript
+getExtras(): Promise<Record<string, Object>>
+```
+
+Get custom media packets provided by the corresponding session
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-getExtras(): Promise<Record<string, Object>>--><!--Device-AVSessionController-getExtras(): Promise<Record<string, Object>>-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;Record & lt;string, Object & gt; & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## getExtrasWithEvent
 
@@ -636,7 +742,9 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 根据远端分布式事件类型，获取远端分布式媒体提供方设置的自定义媒体数据包。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>--><!--Device-AVSessionController-getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>-End-->
 
@@ -658,10 +766,10 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 
 ## getLaunchAbility
 
@@ -671,7 +779,9 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 获取应用在会话中保存的WantAgent对象。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getLaunchAbility(callback: AsyncCallback<WantAgent>): void--><!--Device-AVSessionController-getLaunchAbility(callback: AsyncCallback<WantAgent>): void-End-->
 
@@ -687,9 +797,9 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getLaunchAbility
 
@@ -699,7 +809,9 @@ getLaunchAbility(): Promise<WantAgent>
 
 获取应用在会话中保存的WantAgent对象。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -717,9 +829,9 @@ getLaunchAbility(): Promise<WantAgent>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getMediaCenterControlType
 
@@ -727,11 +839,11 @@ getLaunchAbility(): Promise<WantAgent>
 getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 ```
 
-获取应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置优先显示的控制类型列表。使用Promise异步回调。
-
-如果应用未设置或者设置为空列表，则返回空列表。
+获取应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置优先显示的控制类型列表。使用Promise异步 回调。 如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -749,8 +861,8 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getOutputDevice
 
@@ -760,7 +872,9 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 获取播放设备信息。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void--><!--Device-AVSessionController-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void-End-->
 
@@ -787,7 +901,9 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 获取播放设备信息。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -816,7 +932,9 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 使用同步方法获取当前输出设备信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -834,8 +952,8 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getRealPlaybackPositionSync
 
@@ -845,7 +963,9 @@ getRealPlaybackPositionSync(): number
 
 使用同步方法获取当前播放位置。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -863,8 +983,8 @@ getRealPlaybackPositionSync(): number
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getSupportedLoopModes
 
@@ -872,11 +992,11 @@ getRealPlaybackPositionSync(): number
 getSupportedLoopModes(): Promise<Array<LoopMode>>
 ```
 
-获取应用支持的循环模式列表。使用Promise异步回调。
-
-该列表通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+获取应用支持的循环模式列表。使用Promise异步回调。 该列表通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -896,8 +1016,8 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getSupportedPlaySpeeds
 
@@ -905,11 +1025,11 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 getSupportedPlaySpeeds(): Promise<Array<number>>
 ```
 
-获取应用支持的播放倍速列表。使用Promise异步回调。
-
-该列表通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+获取应用支持的播放倍速列表。使用Promise异步回调。 该列表通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -929,8 +1049,8 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getValidCommands
 
@@ -940,7 +1060,9 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 获取会话支持的有效命令。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void-End-->
 
@@ -956,9 +1078,9 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getValidCommands
 
@@ -968,7 +1090,9 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 获取会话支持的有效命令。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -986,9 +1110,9 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getValidCommandsSync
 
@@ -998,7 +1122,9 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 使用同步方法获取会话支持的有效命令。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1016,9 +1142,9 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isActive
 
@@ -1028,7 +1154,9 @@ isActive(callback: AsyncCallback<boolean>): void
 
 判断会话是否被激活。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-isActive(callback: AsyncCallback<boolean>): void--><!--Device-AVSessionController-isActive(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1044,9 +1172,9 @@ isActive(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isActive
 
@@ -1056,7 +1184,9 @@ isActive(): Promise<boolean>
 
 获取会话是否被激活。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1074,9 +1204,9 @@ isActive(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isActiveSync
 
@@ -1086,7 +1216,9 @@ isActiveSync(): boolean
 
 使用同步方法判断会话是否被激活。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1104,9 +1236,9 @@ isActiveSync(): boolean
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isDesktopLyricEnabled
 
@@ -1117,6 +1249,8 @@ isDesktopLyricEnabled(): Promise<boolean>
 查询是否启用桌面歌词功能。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1134,10 +1268,10 @@ isDesktopLyricEnabled(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## isDesktopLyricVisible
 
@@ -1148,6 +1282,8 @@ isDesktopLyricVisible(): Promise<boolean>
 查询当前会话桌面歌词的显示状态。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1165,25 +1301,25 @@ isDesktopLyricVisible(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
-## off('metadataChange')
+## offActiveStateChange
 
 ```TypeScript
-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
+offActiveStateChange(callback?: Callback<boolean>): void
 ```
 
-取消元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the active state of this session changed callback
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)--><!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)-End-->
+<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1191,30 +1327,28 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'metadataChange' | 是 |
-| callback | (data: AVMetadata) = & gt; void | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## off('playbackStateChange')
+## offCallMetadataChange
 
 ```TypeScript
-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
+offCallMetadataChange(callback?: Callback<CallMetadata>): void
 ```
 
-取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister call metadata changed callback
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)-End-->
+<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1222,61 +1356,28 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'playbackStateChange' | 是 |
-| callback | (state: AVPlaybackState) = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('callMetadataChange')
-
-```TypeScript
-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
-```
-
-取消设置通话元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callMetadataChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## off('callStateChange')
+## offCallStateChange
 
 ```TypeScript
-off(type: 'callStateChange', callback?: Callback<AVCallState>): void
+offCallStateChange(callback?: Callback<AVCallState>): void
 ```
 
-取消设置通话状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister playback state changed callback
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void-End-->
+<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1284,278 +1385,28 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'callStateChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## off('sessionDestroy')
-
-```TypeScript
-off(type: 'sessionDestroy', callback?: () => void)
-```
-
-取消监听会话的销毁事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)--><!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionDestroy' | 是 |
-| callback | () = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('activeStateChange')
+## offCustomDataChange
 
 ```TypeScript
-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
 ```
 
-取消监听会话激活状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for custom data.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)--><!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activeStateChange' | 是 |
-| callback | (isActive: boolean) = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('validCommandChange')
-
-```TypeScript
-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
-```
-
-取消监听会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'validCommandChange' | 是 |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('outputDeviceChange')
-
-```TypeScript
-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
-```
-
-取消监听分布式设备变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'outputDeviceChange' | 是 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('sessionEvent')
-
-```TypeScript
-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
-```
-
-取消会话事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionEvent' | 是 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('queueItemsChange')
-
-```TypeScript
-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
-```
-
-取消播放列表变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueItemsChange' | 是 |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('queueTitleChange')
-
-```TypeScript
-off(type: 'queueTitleChange', callback?: (title: string) => void): void
-```
-
-取消播放列表名称变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void--><!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueTitleChange' | 是 |
-| callback | (title: string) = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('extrasChange')
-
-```TypeScript
-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void
-```
-
-取消自定义媒体数据包变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'extrasChange' | 是 |
-| callback | (extras: {[key: string]: Object}) = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## off('customDataChange')
-
-```TypeScript
-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
-```
-
-取消自定义数据监听。
-
-**起始版本：** 20
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1563,15 +1414,14 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'customDataChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offDesktopLyricEnabled
 
@@ -1582,6 +1432,8 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 取消桌面歌词启用状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1599,8 +1451,8 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offDesktopLyricStateChanged
 
@@ -1611,6 +1463,8 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 取消桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1628,8 +1482,8 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1640,6 +1494,8 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 取消显示桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1657,8 +1513,37 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offExtrasChange
+
+```TypeScript
+offExtrasChange(callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister the custom media packets change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offMediaCenterControlTypeChanged
 
@@ -1666,11 +1551,11 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
 ```
 
-取消控制类型列表变化的监听事件。
-
-取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
+取消控制类型列表变化的监听事件。 取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1688,8 +1573,213 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offMetadataChange
+
+```TypeScript
+offMetadataChange(callback?: Callback<AVMetadata>): void
+```
+
+Unregister metadata changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offOutputDeviceChange
+
+```TypeScript
+offOutputDeviceChange(callback?: ConnectionEvent): void
+```
+
+Unregister session output device change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offPlaybackStateChange
+
+```TypeScript
+offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
+```
+
+Unregister playback state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offQueueItemsChange
+
+```TypeScript
+offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
+```
+
+Unregister session playlist change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offQueueTitleChange
+
+```TypeScript
+offQueueTitleChange(callback?: Callback<string>): void
+```
+
+Unregister the name of session playlist change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offSessionDestroy
+
+```TypeScript
+offSessionDestroy(callback?: NoParamCallback): void
+```
+
+Unregister current session destroyed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## offSessionEvent
+
+```TypeScript
+offSessionEvent(callback?: EventProcess): void
+```
+
+Unregister session event callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offSupportedLoopModesChange
 
@@ -1697,11 +1787,11 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 ```
 
-取消支持的循环模式列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
+取消支持的循环模式列表变化事件监听。 取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1721,8 +1811,8 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offSupportedPlaySpeedsChange
 
@@ -1730,11 +1820,11 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
 ```
 
-取消支持的播放倍速列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
+取消支持的播放倍速列表变化事件监听。 取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1754,193 +1844,53 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## on('metadataChange')
+## offValidCommandChange
 
 ```TypeScript
-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)
+offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
 ```
 
-设置元数据变化的监听事件。
+Unregister the valid commands of the session changed callback
 
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_activeStateChange
+
+```TypeScript
+off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
+```
+
+取消监听会话激活状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)--><!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'metadataChange' | 是 |
-| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | 是 |
-| callback | (data: AVMetadata) = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('playbackStateChange')
-
-```TypeScript
-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)
-```
-
-设置播放状态变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playbackStateChange' | 是 |
-| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | 是 |
-| callback | (state: AVPlaybackState) = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('callMetadataChange')
-
-```TypeScript
-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
-```
-
-设置通话元数据变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callMetadataChange' | 是 |
-| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array & lt;keyof CallMetadata & gt; 表示关注Array中的字 段变化。\ |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('callStateChange')
-
-```TypeScript
-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
-```
-
-设置通话状态变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void--><!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callStateChange' | 是 |
-| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array & lt;keyof AVCallState & gt;表示关注Array中的字段变 化。\ |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('sessionDestroy')
-
-```TypeScript
-on(type: 'sessionDestroy', callback: () => void)
-```
-
-会话销毁的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)--><!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionDestroy' | 是 |
-| callback | () = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('activeStateChange')
-
-```TypeScript
-on(type: 'activeStateChange', callback: (isActive: boolean) => void)
-```
-
-会话的激活状态的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)--><!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)-End-->
+<!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)--><!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1949,31 +1899,31 @@ on(type: 'activeStateChange', callback: (isActive: boolean) => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'activeStateChange' | 是 |
-| callback | (isActive: boolean) = & gt; void | 是 |
+| callback | (isActive: boolean) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## on('validCommandChange')
+## off_callMetadataChange
 
 ```TypeScript
-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
+off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 ```
 
-会话支持的有效命令变化监听事件。
+取消设置通话元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+**起始版本：** 11
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)-End-->
+<!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1981,32 +1931,32 @@ on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'validCommandChange' | 是 |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 是 |
+| type | 'callMetadataChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## on('outputDeviceChange')
+## off_callStateChange
 
 ```TypeScript
-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 ```
 
-设置播放设备变化的监听事件。
+取消设置通话状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+**起始版本：** 11
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+<!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2014,158 +1964,32 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'outputDeviceChange' | 是 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 是 |
+| type | 'callStateChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## on('sessionEvent')
-
-```TypeScript
-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
-```
-
-媒体控制器设置会话自定义事件变化的监听器。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionEvent' | 是 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('queueItemsChange')
+## off_customDataChange
 
 ```TypeScript
-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void
+off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 ```
 
-媒体控制器设置会话自定义播放列表变化的监听器。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueItemsChange' | 是 |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('queueTitleChange')
-
-```TypeScript
-on(type: 'queueTitleChange', callback: (title: string) => void): void
-```
-
-媒体控制器设置会话自定义播放列表的名称变化的监听器。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void--><!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueTitleChange' | 是 |
-| callback | (title: string) = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('extrasChange')
-
-```TypeScript
-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
-```
-
-媒体控制器设置自定义媒体数据包事件变化的监听器。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'extrasChange' | 是 |
-| callback | (extras: {[key: string]: Object}) = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-
-## on('customDataChange')
-
-```TypeScript
-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
-```
-
-注册从远程设备发送的自定义数据的监听器。
+取消自定义数据监听。
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2174,14 +1998,487 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'customDataChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_extrasChange
+
+```TypeScript
+off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void
+```
+
+取消自定义媒体数据包变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'extrasChange' | 是 |
+| callback | (extras: {[key: string]: Object}) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_metadataChange
+
+```TypeScript
+off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
+```
+
+取消元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)--><!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'metadataChange' | 是 |
+| callback | (data: AVMetadata) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_outputDeviceChange
+
+```TypeScript
+off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+```
+
+取消监听分布式设备变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'outputDeviceChange' | 是 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_playbackStateChange
+
+```TypeScript
+off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
+```
+
+取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playbackStateChange' | 是 |
+| callback | (state: AVPlaybackState) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_queueItemsChange
+
+```TypeScript
+off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
+```
+
+取消播放列表变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'queueItemsChange' | 是 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_queueTitleChange
+
+```TypeScript
+off(type: 'queueTitleChange', callback?: (title: string) => void): void
+```
+
+取消播放列表名称变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void--><!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'queueTitleChange' | 是 |
+| callback | (title: string) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_sessionDestroy
+
+```TypeScript
+off(type: 'sessionDestroy', callback?: () => void)
+```
+
+取消监听会话的销毁事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)--><!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'sessionDestroy' | 是 |
+| callback | () = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_sessionEvent
+
+```TypeScript
+off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
+```
+
+取消会话事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'sessionEvent' | 是 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_validCommandChange
+
+```TypeScript
+off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
+```
+
+取消监听会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'validCommandChange' | 是 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onActiveStateChange
+
+```TypeScript
+onActiveStateChange(callback: Callback<boolean>): void
+```
+
+Register the active state of this session changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onCallMetadataChange
+
+```TypeScript
+onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onCallMetadataChangeAll
+
+```TypeScript
+onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onCallStateChange
+
+```TypeScript
+onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onCallStateChangeAll
+
+```TypeScript
+onCallStateChangeAll(callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onDesktopLyricEnabled
 
@@ -2192,6 +2489,8 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 桌面歌词功能启用状态变更的监听事件。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2209,8 +2508,8 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onDesktopLyricStateChanged
 
@@ -2221,6 +2520,8 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 桌面歌词状态变更的监听事件。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2238,8 +2539,8 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onDesktopLyricVisibilityChanged
 
@@ -2250,6 +2551,8 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 显示桌面歌词状态变更的监听事件。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2267,8 +2570,37 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onExtrasChange
+
+```TypeScript
+onExtrasChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register the custom media packets change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onMediaCenterControlTypeChanged
 
@@ -2276,11 +2608,11 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
 ```
 
-注册控制类型列表变化的监听事件。使用callback异步回调。
-
-其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
+注册控制类型列表变化的监听事件。使用callback异步回调。 其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2298,8 +2630,271 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onMetadataChange
+
+```TypeScript
+onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onMetadataChangeAll
+
+```TypeScript
+onMetadataChangeAll(callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onOutputDeviceChange
+
+```TypeScript
+onOutputDeviceChange(callback: ConnectionEvent): void
+```
+
+Register session output device change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onPlaybackStateChange
+
+```TypeScript
+onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onPlaybackStateChangeAll
+
+```TypeScript
+onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onQueueItemsChange
+
+```TypeScript
+onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
+```
+
+Register session playlist change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onQueueTitleChange
+
+```TypeScript
+onQueueTitleChange(callback: Callback<string>): void
+```
+
+Register the name of session playlist change callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onSessionDestroy
+
+```TypeScript
+onSessionDestroy(callback: NoParamCallback): void
+```
+
+Register current session destroyed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onSessionEvent
+
+```TypeScript
+onSessionEvent(callback: EventProcess): void
+```
+
+Register session event callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onSupportedLoopModesChange
 
@@ -2307,11 +2902,11 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 ```
 
-注册支持的循环模式列表变化的监听事件。使用callback异步回调。
-
-其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
+注册支持的循环模式列表变化的监听事件。使用callback异步回调。 其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2331,8 +2926,8 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onSupportedPlaySpeedsChange
 
@@ -2340,11 +2935,11 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
 ```
 
-注册支持的播放倍速列表变化的监听事件。使用callback异步回调。
-
-其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
+注册支持的播放倍速列表变化的监听事件。使用callback异步回调。 其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2364,8 +2959,469 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onValidCommandChange
+
+```TypeScript
+onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
+```
+
+Register the valid commands of the session changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_activeStateChange
+
+```TypeScript
+on(type: 'activeStateChange', callback: (isActive: boolean) => void)
+```
+
+会话的激活状态的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)--><!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'activeStateChange' | 是 |
+| callback | (isActive: boolean) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_callMetadataChange
+
+```TypeScript
+on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
+```
+
+设置通话元数据变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'callMetadataChange' | 是 |
+| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array & lt;keyof CallMetadata & gt; 表示关注Array中的字 段变化。\ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_callStateChange
+
+```TypeScript
+on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
+```
+
+设置通话状态变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void--><!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'callStateChange' | 是 |
+| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array & lt;keyof AVCallState & gt;表示关注Array中的字段变 化。\ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_customDataChange
+
+```TypeScript
+on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
+```
+
+注册从远程设备发送的自定义数据的监听器。
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'customDataChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_extrasChange
+
+```TypeScript
+on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
+```
+
+媒体控制器设置自定义媒体数据包事件变化的监听器。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'extrasChange' | 是 |
+| callback | (extras: {[key: string]: Object}) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_metadataChange
+
+```TypeScript
+on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)
+```
+
+设置元数据变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)--><!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'metadataChange' | 是 |
+| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | 是 |
+| callback | (data: AVMetadata) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_outputDeviceChange
+
+```TypeScript
+on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+```
+
+设置播放设备变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'outputDeviceChange' | 是 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_playbackStateChange
+
+```TypeScript
+on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)
+```
+
+设置播放状态变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playbackStateChange' | 是 |
+| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | 是 |
+| callback | (state: AVPlaybackState) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_queueItemsChange
+
+```TypeScript
+on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void
+```
+
+媒体控制器设置会话自定义播放列表变化的监听器。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'queueItemsChange' | 是 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_queueTitleChange
+
+```TypeScript
+on(type: 'queueTitleChange', callback: (title: string) => void): void
+```
+
+媒体控制器设置会话自定义播放列表的名称变化的监听器。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void--><!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'queueTitleChange' | 是 |
+| callback | (title: string) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_sessionDestroy
+
+```TypeScript
+on(type: 'sessionDestroy', callback: () => void)
+```
+
+会话销毁的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)--><!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'sessionDestroy' | 是 |
+| callback | () = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_sessionEvent
+
+```TypeScript
+on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
+```
+
+媒体控制器设置会话自定义事件变化的监听器。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'sessionEvent' | 是 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## on_validCommandChange
+
+```TypeScript
+on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
+```
+
+会话支持的有效命令变化监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'validCommandChange' | 是 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## sendAVKeyEvent
 
@@ -2375,7 +3431,9 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 
 发送按键事件到会话。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void-End-->
 
@@ -2393,7 +3451,7 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 | 错误码ID |
 | --- |
 | 600105 |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 600106 |
 | 600101 |
 | 600103 |
@@ -2407,7 +3465,9 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 
 发送按键事件到控制器对应的会话。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2432,7 +3492,7 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 | 错误码ID |
 | --- |
 | 600105 |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 600106 |
 | 600101 |
 | 600103 |
@@ -2447,6 +3507,8 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 通过会话控制器发送自定义命令到其对应的会话。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
 
@@ -2464,13 +3526,50 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+
+## sendCommonCommand
+
+```TypeScript
+sendCommonCommand(command: string, args: Record<string, Object>, callback: AsyncCallback<void>): void
+```
+
+Send common commands to this session
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| command | string | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Record & lt;string, Object & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendCommonCommand
 
@@ -2481,6 +3580,8 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 通过会话控制器发送自定义控制命令到其对应的会话。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2505,13 +3606,55 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+
+## sendCommonCommand
+
+```TypeScript
+sendCommonCommand(command: string, args: Record<string, Object>): Promise<void>
+```
+
+Send common commands to this session
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>): Promise<void>--><!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| command | string | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Record & lt;string, Object & gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendControlCommand
 
@@ -2519,15 +3662,11 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void
 ```
 
-通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
+通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。 > **说明：** > > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口 > on('play')、 > on('pause')等。
 
-> **说明：**
-> 
-> 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> [on('play')](avSession.AVSession.on(type: 'play', callback: () => void))、
-> [on('pause')](avSession.AVSession.on(type: 'pause', callback: () => void))等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-AVSessionController-sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void-End-->
 
@@ -2544,13 +3683,13 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendControlCommand
 
@@ -2558,15 +3697,11 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 sendControlCommand(command: AVControlCommand): Promise<void>
 ```
 
-通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
+通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。 > **说明：** > > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口 > on('play')、 > on('pause')等。
 
-> **说明：**
-> 
-> 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> [on('play')](avSession.AVSession.on(type: 'play', callback: () => void))、
-> [on('pause')](avSession.AVSession.on(type: 'pause', callback: () => void))等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2590,13 +3725,13 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendCustomData
 
@@ -2606,9 +3741,11 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 发送私有数据到远端设备。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVSessionController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVSessionController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
@@ -2630,9 +3767,9 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## setDesktopLyricState
 
@@ -2643,6 +3780,8 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 设置当前会话桌面歌词状态。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2666,11 +3805,11 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## setDesktopLyricVisible
 
@@ -2681,6 +3820,8 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 设置当前会话桌面歌词的显示状态。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2704,11 +3845,11 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## skipToQueueItem
 
@@ -2718,7 +3859,9 @@ skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
 
 设置指定播放列表单项的ID，发送给session端处理，session端可以选择对这个单项歌曲进行播放。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -2735,10 +3878,10 @@ skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## skipToQueueItem
 
@@ -2748,7 +3891,9 @@ skipToQueueItem(itemId: number): Promise<void>
 
 设置指定播放列表单项的ID，发送给session端处理，session端可以选择对这个单项歌曲进行播放。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2772,10 +3917,10 @@ skipToQueueItem(itemId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## sessionId
 
@@ -2787,7 +3932,9 @@ AVSessionController对象唯一的会话标识。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -2,7 +2,9 @@
 
 定义颜色.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Color--><!--Device-unnamed-export interface Color-End-->
 
@@ -18,7 +20,9 @@ a: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-a: double--><!--Device-Color-a: double-End-->
 
@@ -34,7 +38,9 @@ b: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-b: double--><!--Device-Color-b: double-End-->
 
@@ -50,7 +56,9 @@ g: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-g: double--><!--Device-Color-g: double-End-->
 
@@ -66,7 +74,9 @@ r: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-r: double--><!--Device-Color-r: double-End-->
 

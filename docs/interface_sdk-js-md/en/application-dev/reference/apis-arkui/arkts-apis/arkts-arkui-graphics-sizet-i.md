@@ -1,12 +1,14 @@
 # SizeT
 
-Defines the Size property.
+Sets the width and height attributes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export interface SizeT<T>--><!--Device-unnamed-export interface SizeT<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface SizeT--><!--Device-unnamed-export interface SizeT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,19 @@ Defines the Size property.
 height: T
 ```
 
-Height property.
+Height.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SizeT-height: T--><!--Device-SizeT-height: T-End-->
 
@@ -36,15 +42,19 @@ Height property.
 width: T
 ```
 
-Width property.
+Width.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SizeT-width: T--><!--Device-SizeT-width: T-End-->
 

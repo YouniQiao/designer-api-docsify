@@ -4,79 +4,9 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-dialog-declare interface DialogBaseOptions--><!--Device-dialog-declare interface DialogBaseOptions-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidAppear
-
-```TypeScript
-onDidAppear?: VoidCallback
-```
-
-对话框出现时的回调函数。
-
-**起始版本：** 26.1.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogBaseOptions-onDidAppear?: VoidCallback--><!--Device-DialogBaseOptions-onDidAppear?: VoidCallback-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidDisappear
-
-```TypeScript
-onDidDisappear?: VoidCallback
-```
-
-对话框消失时的回调函数。
-
-**起始版本：** 26.1.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillAppear
-
-```TypeScript
-onWillAppear?: VoidCallback
-```
-
-对话框打开动画开始前的回调函数。
-
-**起始版本：** 26.1.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogBaseOptions-onWillAppear?: VoidCallback--><!--Device-DialogBaseOptions-onWillAppear?: VoidCallback-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillDisappear
-
-```TypeScript
-onWillDisappear?: VoidCallback
-```
-
-对话框关闭动画开始前的回调函数。
-
-**起始版本：** 26.1.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,6 +21,8 @@ alignment?: DialogBaseAlignment
 **类型：** [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,6 +46,8 @@ autoCancel?: boolean
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -128,13 +62,15 @@ autoCancel?: boolean
 backgroundBlurStyle?: BlurStyle
 ```
 
-对话框的背景模糊样式。&lt;br&gt;设置为BlurStyle.NONE将禁用背景模糊。
+对话框的背景模糊样式。 &lt;br&gt;设置为BlurStyle.NONE将禁用背景模糊。
 
 **类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,6 +92,8 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -170,13 +108,15 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-对话框的背景颜色。&lt;br&gt;当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
+对话框的背景颜色。 &lt;br&gt;当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,6 +138,8 @@ backgroundEffect?: BackgroundEffectOptions
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -214,11 +156,13 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 对话框的边框颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-edgecolors-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **默认值：** Color.Black
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -236,11 +180,13 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 背景的边框半径。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -258,11 +204,13 @@ borderStyle?: BorderStyle | EdgeStyles
 
 对话框边框样式。
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| [EdgeStyles](arkts-arkui-edgestyles-t.md)
 
 **默认值：** BorderStyle.Solid
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -280,11 +228,13 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 对话框边框宽度。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeWidths](arkts-arkui-edgewidths-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -306,6 +256,8 @@ Dialog 控制器。
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -325,6 +277,8 @@ dialogTransition?: TransitionEffect
 **类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,6 +302,8 @@ displayModeInSubWindow?: DialogDisplayMode
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -369,6 +325,8 @@ enableHoverMode?: boolean
 **默认值：** false
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -392,6 +350,8 @@ focusable?: boolean
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -411,6 +371,8 @@ height?: Dimension
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -434,6 +396,8 @@ hoverModeArea?: HoverModeAreaType
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -455,6 +419,8 @@ immersiveMode?: ImmersiveMode
 **默认值：** ImmersiveMode.DEFAULT
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -478,6 +444,8 @@ isModal?: boolean
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -497,6 +465,8 @@ keyboardAvoidDistance?: LengthMetrics
 **类型：** LengthMetrics
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -520,6 +490,8 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -541,6 +513,8 @@ levelMode?: LevelMode
 **默认值：** LevelMode.OVERLAY
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -564,6 +538,8 @@ levelOrder?: LevelOrder
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -578,11 +554,13 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-页面级对话框显示层下节点的唯一标识。取值限定为整数。&lt;br&gt;该参数仅在levelMode为LevelMode.EMBEDDED时生效。
+页面级对话框显示层下节点的唯一标识。 取值限定为整数。 &lt;br&gt;该参数仅在levelMode为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -603,6 +581,8 @@ maskColor?: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -626,6 +606,8 @@ maskRect?: Rectangle
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -645,6 +627,8 @@ maskTransition?: TransitionEffect
 **类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -666,11 +650,101 @@ offset?: Offset
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogBaseOptions-offset?: Offset--><!--Device-DialogBaseOptions-offset?: Offset-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidAppear
+
+```TypeScript
+onDidAppear?: VoidCallback
+```
+
+对话框出现时的回调函数。
+
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onDidAppear?: VoidCallback--><!--Device-DialogBaseOptions-onDidAppear?: VoidCallback-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidDisappear
+
+```TypeScript
+onDidDisappear?: VoidCallback
+```
+
+对话框消失时的回调函数。
+
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillAppear
+
+```TypeScript
+onWillAppear?: VoidCallback
+```
+
+对话框打开动画开始前的回调函数。
+
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onWillAppear?: VoidCallback--><!--Device-DialogBaseOptions-onWillAppear?: VoidCallback-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillDisappear
+
+```TypeScript
+onWillDisappear?: VoidCallback
+```
+
+对话框关闭动画开始前的回调函数。
+
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -680,11 +754,13 @@ offset?: Offset
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-对话框交互关闭的回调。&lt;br&gt;如果注册了此回调，则用户点击后对话框不会立即关闭遮罩或返回按钮。回调中的reason参数用于判断是否可以关闭对话框。
+对话框交互关闭的回调。 &lt;br&gt;如果注册了此回调，则用户点击后对话框不会立即关闭 遮罩或返回按钮。 回调中的reason参数用于判断是否可以关闭对话框。
 
 **类型：** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -706,6 +782,8 @@ shadow?: ShadowOptions | ShadowStyle
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -720,13 +798,15 @@ shadow?: ShadowOptions | ShadowStyle
 showInSubWindow?: boolean
 ```
 
-是否在子窗口中显示。&lt;br&gt;isModal = true和showInSubWindow = true不能同时使用。
+是否在子窗口中显示。 &lt;br&gt;isModal = true和showInSubWindow = true不能同时使用。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -748,6 +828,8 @@ systemMaterial?: SystemUiMaterial
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -767,6 +849,8 @@ width?: Dimension
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

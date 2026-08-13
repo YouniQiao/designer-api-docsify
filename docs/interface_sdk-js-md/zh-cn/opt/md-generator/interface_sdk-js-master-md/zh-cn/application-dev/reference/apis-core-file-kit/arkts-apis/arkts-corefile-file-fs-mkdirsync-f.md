@@ -10,6 +10,8 @@ declare function mkdirSync(path: string): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function mkdirSync(path: string): void--><!--Device-unnamed-declare function mkdirSync(path: string): void-End-->
@@ -52,6 +54,8 @@ declare function mkdirSync(path: string, recursion: boolean): void
 以同步方法创建目录。当recursion指定为true，可递归创建目录。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

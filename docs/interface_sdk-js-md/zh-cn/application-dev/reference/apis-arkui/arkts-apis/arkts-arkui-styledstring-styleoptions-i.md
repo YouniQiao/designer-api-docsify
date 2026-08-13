@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface StyleOptions--><!--Device-unnamed-export declare interface StyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 length?: int
 ```
 
-设置属性字符串样式的长度。
-
-当length的值小于0或超出字符串长度与start的差值时，按字符串长度与start的差值处理。
+设置属性字符串样式的长度。 当length的值小于0或超出字符串长度与start的差值时，按字符串长度与start的差值处理。
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +40,15 @@ length?: int
 start?: int
 ```
 
-设置属性字符串样式的开始位置。
-
-当start的值小于0或超出字符串长度时，按0处理。
+设置属性字符串样式的开始位置。 当start的值小于0或超出字符串长度时，按0处理。
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,6 +70,8 @@ styledKey: StyledStringKey
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-StyleOptions-styledKey: StyledStringKey--><!--Device-StyleOptions-styledKey: StyledStringKey-End-->
@@ -87,6 +91,8 @@ styledValue: StyledStringValue
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

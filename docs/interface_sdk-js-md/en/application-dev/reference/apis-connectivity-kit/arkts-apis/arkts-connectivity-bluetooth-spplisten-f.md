@@ -20,7 +20,7 @@ Creates a Bluetooth server listening socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppListen](ohos.bluetoothManager/bluetoothManager.sppListen)
+**Substitutes:** [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#sppListen)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -34,7 +34,7 @@ Creates a Bluetooth server listening socket.
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
 | option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md#SppOption). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
 
 ## Examples
 

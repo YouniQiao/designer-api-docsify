@@ -2,13 +2,15 @@
 
 Declares interface for the attributes of the save button.
 
-**Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod](SecurityComponentMethod)
+**Inheritance/Implementation:** SaveButtonAttribute extends SecurityComponentMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface SaveButtonAttribute extends SecurityComponentMethod--><!--Device-unnamed-export declare interface SaveButtonAttribute extends SecurityComponentMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface SaveButtonAttribute--><!--Device-unnamed-export declare interface SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +26,8 @@ Sets the border radius of the icon.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -36,7 +40,7 @@ Sets the border radius of the icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| undefined | Yes | Border radius of the icon to set. |
+| radius | [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| undefined | Yes | Border radius of the icon to set. |
 
 **Return value:**
 
@@ -55,6 +59,8 @@ Sets the size of the icon.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +92,8 @@ Called when the save button is clicked.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveButtonAttribute-onClick(event: SaveButtonCallback | undefined): this--><!--Device-SaveButtonAttribute-onClick(event: SaveButtonCallback | undefined): this-End-->
@@ -115,6 +123,8 @@ Sets the icon of the save button.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -148,6 +158,8 @@ Sets the text of the save button.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -179,6 +191,8 @@ Enables the press effect of the button.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -212,6 +226,8 @@ Sets the font weight of the symbol icon.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -243,6 +259,8 @@ Sets the color of the symbol icon.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -276,6 +294,8 @@ Sets the rendering policy of the symbol icon.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -307,6 +327,8 @@ Receives the event when the user clicks cancel.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

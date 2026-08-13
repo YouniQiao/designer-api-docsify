@@ -6,6 +6,8 @@ Describes the text line height style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class LineHeightStyle--><!--Device-unnamed-declare class LineHeightStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ A constructor used to create a text line height style.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,24 +46,13 @@ A constructor used to create a text line height style.
 constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 ```
 
-A constructor used to create a text line height and multiple.
-
-> **NOTE：**
-> 
-> - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md#LineSpacingStyle),
-> only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line
-> and the multiplier.
-> 
-> - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and
-> [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md#LineSpacingStyle) to set the line height and line spacing.
-> 
-> - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1.
-
-**Since**: 26.0.0
+A constructor used to create a text line height and multiple. > **NOTE：**> > - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md#LineSpacingStyle), > only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line > and the multiplier. > > - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and > [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md#LineSpacingStyle) to set the line height and line spacing. > > - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +67,7 @@ A constructor used to create a text line height and multiple.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | lineHeight | LengthMetrics | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
-| lineHeightMultiple | number | No | Multiplier for the text line height.&lt;br&gt;Value range: [0, +∞). Decimals are supported. |
+| lineHeightMultiple | number | No | Multiplier for the text line height.&lt;br&gt;Value range: 0, +∞). Decimals are supported. |
 
 ## lineHeight
 
@@ -82,15 +75,15 @@ A constructor used to create a text line height and multiple.
 readonly lineHeight: number
 ```
 
-Text line height of the styled string.
-
-Unit: [vp](common)
+Text line height of the styled string. Unit: [vp
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,15 +99,15 @@ Unit: [vp](common)
 readonly lineHeightMultiple?: number
 ```
 
-Multiplier for the text line height. The effective line height is the product of the highest font height in the line and the multiplier.
-
-**Since**: 26.0.0
+Multiplier for the text line height. The effective line height is the product of the highest font height in the line and the multiplier. **Since**: 26.0.0
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

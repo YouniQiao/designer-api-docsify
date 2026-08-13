@@ -6,6 +6,8 @@ Defines font setting options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FontSettingOptions--><!--Device-unnamed-declare interface FontSettingOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,22 +18,15 @@ Defines font setting options.
 enableVariableFontWeight?: boolean
 ```
 
-Whether to enable variable font weight adjustment. This parameter serves as the input for the  
-[fontWeight](TextAttribute#fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions))API. When the **weight** value in **fontWeight** is a non-hundred value within the [100, 900] range,  
-**enableVariableFontWeight** controls whether this **weight** value is applied.
-
-Default value: **false**
-
-**true**: Enable variable font weight adjustment. If the **weight** value is an integer within the [100, 900]range, it is applied as the font weight.
-
-**false**: Disable variable font weight adjustment. If the value of **weight** is a multiple of 100 within  
-[100, 900], the value is used. If **weight** is a non-multiple of 100, the default value **400** is used.
+Whether to enable variable font weight adjustment. This parameter serves as the input for the fontWeight API. When the **weight** value in **fontWeight** is a non-hundred value within the [100, 900] range, **enableVariableFontWeight** controls whether this **weight** value is applied. Default value: **false** **true**: Enable variable font weight adjustment. If the **weight** value is an integer within the [100, 900] range, it is applied as the font weight. **false**: Disable variable font weight adjustment. If the value of **weight** is a multiple of 100 within [100, 900], the value is used. If **weight** is a non-multiple of 100, the default value **400** is used.
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

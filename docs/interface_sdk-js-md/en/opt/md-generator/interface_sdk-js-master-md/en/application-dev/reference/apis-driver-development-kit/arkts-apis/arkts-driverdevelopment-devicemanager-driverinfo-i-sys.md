@@ -2,7 +2,9 @@
 
 Defines detailed information about a driver.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-interface DriverInfo--><!--Device-deviceManager-interface DriverInfo-End-->
 
@@ -26,7 +28,9 @@ Bus type.
 
 **Type:** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DriverInfo-busType: BusType--><!--Device-DriverInfo-busType: BusType-End-->
 
@@ -44,7 +48,9 @@ Driver description.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DriverInfo-description: string--><!--Device-DriverInfo-description: string-End-->
 
@@ -62,7 +68,9 @@ Driver name.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DriverInfo-driverName: string--><!--Device-DriverInfo-driverName: string-End-->
 
@@ -80,7 +88,9 @@ Driver size, in bytes.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DriverInfo-driverSize: string--><!--Device-DriverInfo-driverSize: string-End-->
 
@@ -98,7 +108,9 @@ Driver UID.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DriverInfo-driverUid: string--><!--Device-DriverInfo-driverUid: string-End-->
 
@@ -116,7 +128,9 @@ Driver version.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DriverInfo-driverVersion: string--><!--Device-DriverInfo-driverVersion: string-End-->
 

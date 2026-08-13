@@ -2,9 +2,11 @@
 
 Effect suggestion status
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-class EffectSuggestionStatus--><!--Device-camera-class EffectSuggestionStatus-End-->
 
@@ -28,9 +30,11 @@ Effect Suggestion type status.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EffectSuggestionStatus-status: boolean--><!--Device-EffectSuggestionStatus-status: boolean-End-->
 
@@ -48,9 +52,11 @@ Effect Suggestion type.
 
 **Type:** [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EffectSuggestionStatus-type: EffectSuggestionType--><!--Device-EffectSuggestionStatus-type: EffectSuggestionType-End-->
 

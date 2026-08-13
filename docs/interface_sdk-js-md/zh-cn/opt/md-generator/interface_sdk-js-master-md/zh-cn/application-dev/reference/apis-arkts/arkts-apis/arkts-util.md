@@ -1,8 +1,22 @@
 # @ohos.util
 
-该模块主要提供常用的工具函数，实现字符串编解码（[TextEncoder](arkts-arkts-util-textencoder-c.md#TextEncoder)，[TextDecoder](arkts-arkts-util-textdecoder-c.md#TextDecoder)）、有理数运算（[RationalNumber&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-rationalnumber-c.md#RationalNumber)）、缓冲区管理（[LRUCache&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#LRUCache)）、范围判断（[ScopeHelper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-scopehelper-c.md#ScopeHelper)）、Base64编解码（[Base64Helper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-base64helper-c.md#Base64Helper)）、内置对象类型检查（[types&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-types-c.md#types)）、对方法进行插桩和替换（[Aspect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkts-util-aspect-c.md#Aspect)）、虚拟机维测能力（[ArkTSVM&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkts-util-arktsvm-c.md#ArkTSVM)）、二进制流解码（[StringDecoder&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkts-util-stringdecoder-c.md#StringDecoder)）、堆内存阈值配置（[HeapMemoryThreshold&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-util-heapmemorythreshold-i.md#HeapMemoryThreshold)）等功能。此外还提供获取对象Hash值（[util.getHash&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkts-util-gethash-f.md#getHash)）、获取主线程栈追踪信息（[util.getMainThreadStackTrace&lt;sup&gt;20+&lt;/sup&gt;](arkts-arkts-util-getmainthreadstacktrace-f.md#getMainThreadStackTrace)）等工具函数。
+/*
+ Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace util--><!--Device-unnamed-declare namespace util-End-->
 
@@ -14,17 +28,17 @@
 
 | 名称 |
 | --- |
-| [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md#callbackwrapper) |
-| [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring) |
+| [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md#callbackWrapper) |
+| [errnoToString](arkts-arkts-util-errnotostring-f.md#errnoToString) |
 | [format](arkts-arkts-util-format-f.md#format) |
-| [generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid) |
-| [generateRandomUUID](arkts-arkts-util-generaterandomuuid-f.md#generaterandomuuid) |
-| [getErrorString](arkts-arkts-util-geterrorstring-f.md#geterrorstring) |
-| [getHash](arkts-arkts-util-gethash-f.md#gethash) |
-| [getMainThreadStackTrace](arkts-arkts-util-getmainthreadstacktrace-f.md#getmainthreadstacktrace) |
-| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseuuid) |
+| [generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generateRandomBinaryUUID) |
+| [generateRandomUUID](arkts-arkts-util-generaterandomuuid-f.md#generateRandomUUID) |
+| [getErrorString](arkts-arkts-util-geterrorstring-f.md#getErrorString) |
+| [getHash](arkts-arkts-util-gethash-f.md#getHash) |
+| [getMainThreadStackTrace](arkts-arkts-util-getmainthreadstacktrace-f.md#getMainThreadStackTrace) |
+| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseUUID) |
 | [printf](arkts-arkts-util-printf-f.md#printf) |
-| [promiseWrapper](arkts-arkts-util-promisewrapper-f.md#promisewrapper) |
+| [promiseWrapper](arkts-arkts-util-promisewrapper-f.md#promiseWrapper) |
 | [promisify](arkts-arkts-util-promisify-f.md#promisify) |
 
 ### 类

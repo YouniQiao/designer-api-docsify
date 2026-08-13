@@ -6,7 +6,7 @@ Describes the Gatt service.
 
 **Deprecated since:** 10
 
-**Substitutes:** [GattService](ohos.bluetooth.ble/ble.GattService)
+**Substitutes:** [GattService](arkts-connectivity-ble-gattservice-i.md#GattService)
 
 <!--Device-bluetoothManager-interface GattService--><!--Device-bluetoothManager-interface GattService-End-->
 
@@ -32,7 +32,7 @@ The [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.
 
 **Deprecated since:** 10
 
-**Substitutes:** [characteristics](ohos.bluetooth.ble/ble.GattService#characteristics)
+**Substitutes:** [characteristics](arkts-connectivity-ble-gattservice-i.md#characteristics)
 
 <!--Device-GattService-characteristics: Array<BLECharacteristic>--><!--Device-GattService-characteristics: Array<BLECharacteristic>-End-->
 
@@ -52,7 +52,7 @@ The list of GATT services contained in the service
 
 **Deprecated since:** 10
 
-**Substitutes:** [includeServices](ohos.bluetooth.ble/ble.GattService#includeServices)
+**Substitutes:** [includeServices](arkts-connectivity-ble-gattservice-i.md#includeServices)
 
 <!--Device-GattService-includeServices?: Array<GattService>--><!--Device-GattService-includeServices?: Array<GattService>-End-->
 
@@ -72,7 +72,7 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Deprecated since:** 10
 
-**Substitutes:** [isPrimary](ohos.bluetooth.ble/ble.GattService#isPrimary)
+**Substitutes:** [isPrimary](arkts-connectivity-ble-gattservice-i.md#isPrimary)
 
 <!--Device-GattService-isPrimary: boolean--><!--Device-GattService-isPrimary: boolean-End-->
 
@@ -92,7 +92,7 @@ The UUID of a GattService instance
 
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.GattService#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-gattservice-i.md#serviceUuid)
 
 <!--Device-GattService-serviceUuid: string--><!--Device-GattService-serviceUuid: string-End-->
 

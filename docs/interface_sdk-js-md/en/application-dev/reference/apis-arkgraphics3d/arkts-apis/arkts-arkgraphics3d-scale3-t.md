@@ -6,9 +6,11 @@ export type Scale3 = Vec3
 
 3D scale information.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type Scale3 = Vec3--><!--Device-unnamed-export type Scale3 = Vec3-End-->
 

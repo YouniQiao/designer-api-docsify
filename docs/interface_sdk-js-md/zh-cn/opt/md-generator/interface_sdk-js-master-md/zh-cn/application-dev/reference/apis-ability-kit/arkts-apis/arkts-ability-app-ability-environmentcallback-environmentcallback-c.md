@@ -4,6 +4,8 @@ EnvironmentCallback模块提供对系统环境变化监听回调的能力。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export default class EnvironmentCallback--><!--Device-unnamed-export default class EnvironmentCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -14,9 +16,11 @@ EnvironmentCallback模块提供对系统环境变化监听回调的能力。
 onConfigurationUpdated(config: Configuration): void
 ```
 
-[注册系统环境变化的监听](./application/ApplicationContext:ApplicationContext.on(type: 'environment', callback: EnvironmentCallback))后，在系统环境变化时触发回调。
+[注册系统环境变化的监听](arkts-ability-applicationcontext-c.md#on_abilityLifecycle) 后，在系统环境变化时触发回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,7 +38,7 @@ onConfigurationUpdated(config: Configuration): void
 
 ## 示例
 
-参见[EnvironmentCallback使用](#environmentcallback使用)。
+参见EnvironmentCallback使用。
 
 ## onMemoryLevel
 
@@ -42,9 +46,11 @@ onConfigurationUpdated(config: Configuration): void
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-[注册系统环境变化的监听](./application/ApplicationContext:ApplicationContext.on(type: 'environment', callback: EnvironmentCallback))后，在系统内存变化时触发回调。
+[注册系统环境变化的监听](arkts-ability-applicationcontext-c.md#on_abilityLifecycle) 后，在系统内存变化时触发回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,4 +68,4 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 ## 示例
 
-参见[EnvironmentCallback使用](#environmentcallback使用)。
+参见EnvironmentCallback使用。

@@ -14,9 +14,11 @@ function isVectorSupported(): boolean
 
 Checks whether the system supports vector stores.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function isVectorSupported(): boolean--><!--Device-relationalStore-function isVectorSupported(): boolean-End-->
 

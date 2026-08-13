@@ -1,8 +1,5 @@
 # @ohos.data.ValuesBucket
 
-**ValuesBucket** is a dataset in the form of key-value (KV) pairs that can be inserted in the database.
-
-
 ## Modules to Import
 
 ```TypeScript

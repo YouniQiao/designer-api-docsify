@@ -8,7 +8,9 @@ function getUserDownloadDir(): string
 
 获取当前用户预授权下载目录的沙箱路径。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本11：ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
@@ -27,8 +29,8 @@ function getUserDownloadDir(): string
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 | 13900042 |
 
 ## 示例

@@ -12,6 +12,8 @@ Send key event.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-export declare function sendKeyEvent(event: KeyEvent): boolean--><!--Device-unnamed-export declare function sendKeyEvent(event: KeyEvent): boolean-End-->

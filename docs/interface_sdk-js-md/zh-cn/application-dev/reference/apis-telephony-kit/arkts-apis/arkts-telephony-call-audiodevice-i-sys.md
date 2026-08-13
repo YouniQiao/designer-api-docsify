@@ -2,9 +2,11 @@
 
 音频设备。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export interface AudioDevice--><!--Device-call-export interface AudioDevice-End-->
 
@@ -22,9 +24,11 @@ address?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDevice-address?: string--><!--Device-AudioDevice-address?: string-End-->
 
@@ -42,9 +46,11 @@ deviceName?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDevice-deviceName?: string--><!--Device-AudioDevice-deviceName?: string-End-->
 
@@ -62,9 +68,11 @@ deviceType: AudioDeviceType
 
 **类型：** [AudioDeviceType](arkts-telephony-call-audiodevicetype-e-sys.md)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDevice-deviceType: AudioDeviceType--><!--Device-AudioDevice-deviceType: AudioDeviceType-End-->
 

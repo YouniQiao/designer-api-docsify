@@ -2,9 +2,11 @@
 
 Enumerates the window anchor points.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-enum WindowAnchor--><!--Device-window-enum WindowAnchor-End-->
 
@@ -18,9 +20,11 @@ TOP_START = 0
 
 Top-left corner of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-TOP_START = 0--><!--Device-WindowAnchor-TOP_START = 0-End-->
 
@@ -34,9 +38,11 @@ TOP = 1
 
 Horizontal center point along the top edge of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-TOP = 1--><!--Device-WindowAnchor-TOP = 1-End-->
 
@@ -50,9 +56,11 @@ TOP_END = 2
 
 Top-right corner of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-TOP_END = 2--><!--Device-WindowAnchor-TOP_END = 2-End-->
 
@@ -66,9 +74,11 @@ START = 3
 
 Vertical center point along the left edge of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-START = 3--><!--Device-WindowAnchor-START = 3-End-->
 
@@ -82,9 +92,11 @@ CENTER = 4
 
 Center point of the window, both horizontally and vertically.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-CENTER = 4--><!--Device-WindowAnchor-CENTER = 4-End-->
 
@@ -98,9 +110,11 @@ END = 5
 
 Vertical center point along the right edge of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-END = 5--><!--Device-WindowAnchor-END = 5-End-->
 
@@ -114,9 +128,11 @@ BOTTOM_START = 6
 
 Bottom-left corner of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-BOTTOM_START = 6--><!--Device-WindowAnchor-BOTTOM_START = 6-End-->
 
@@ -130,9 +146,11 @@ BOTTOM = 7
 
 Horizontal center point along the bottom edge of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-BOTTOM = 7--><!--Device-WindowAnchor-BOTTOM = 7-End-->
 
@@ -146,9 +164,11 @@ BOTTOM_END = 8
 
 Bottom-right corner of the window.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnchor-BOTTOM_END = 8--><!--Device-WindowAnchor-BOTTOM_END = 8-End-->
 

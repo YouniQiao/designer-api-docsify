@@ -10,7 +10,9 @@ function sendUssdResponse(slotId: int, content: string): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -24,7 +26,7 @@ function sendUssdResponse(slotId: int, content: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示发送响应的卡槽ID。 |
+| slotId | int | 是 | 表示发送响应的卡槽ID。 |
 | content | string | 是 | 表示响应内容。 |
 
 **错误码：**
@@ -34,8 +36,8 @@ function sendUssdResponse(slotId: int, content: string): void
 | 8400001 | Invalid parameter value. |
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error, system database write fail. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
 ## 示例
 

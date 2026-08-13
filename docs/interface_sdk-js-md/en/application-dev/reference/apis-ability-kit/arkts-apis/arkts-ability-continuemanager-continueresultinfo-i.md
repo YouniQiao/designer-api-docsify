@@ -2,9 +2,11 @@
 
 Describes the quick start result returned by the callback.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-continueManager-interface ContinueResultInfo--><!--Device-continueManager-interface ContinueResultInfo-End-->
 
@@ -22,15 +24,15 @@ import { continueManager } from '@kit.AbilityKit';
 resultInfo?: string
 ```
 
-Description of the operation result.
-
-This API can be used only in the stage model.
+Description of the operation result. This API can be used only in the stage model.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,9 +50,11 @@ Status code of the operation result.
 
 **Type:** [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

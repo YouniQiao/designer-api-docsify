@@ -3,6 +3,7 @@
 ## Ellipse
 
 ```TypeScript
+@ComponentBuilder
 export declare function Ellipse(
     options?: EllipseOptions
 ): EllipseAttribute
@@ -14,9 +15,11 @@ Ellipse is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Ellipse(    options?: EllipseOptions): EllipseAttribute--><!--Device-unnamed-export declare function Ellipse(    options?: EllipseOptions): EllipseAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Ellipse(    options?: EllipseOptions): EllipseAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Ellipse(    options?: EllipseOptions): EllipseAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Ellipse is returned when the parameter is transferred.
 ## Ellipse
 
 ```TypeScript
+@Builder
 export declare function Ellipse(
     style: CustomBuilderT<EllipseAttribute>
 ): EllipseAttribute
@@ -47,11 +51,11 @@ Defines Ellipse Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute--><!--Device-unnamed-export declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute--><!--Device-unnamed-@Builderexport declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Ellipse Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

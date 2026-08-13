@@ -12,6 +12,8 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.DLP_POLICY_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -37,12 +39,12 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100023-指定的用户id与当前用户id不一致) | The specified userId is inconsistent with the current userId. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [19100024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100024-个人空间用户不支持设置受控应用) | The specified userId belongs to a personal space user and cannot be managed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100023](../errorcode-dlp.md#19100023-指定的用户id与当前用户id不一致) | The specified userId is inconsistent with the current userId. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [19100024](../errorcode-dlp.md#19100024-个人空间用户不支持设置受控应用) | The specified userId belongs to a personal space user and cannot be managed. |
 
 ## 示例
 

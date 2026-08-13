@@ -10,6 +10,8 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: nu
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void--><!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void-End-->
@@ -22,7 +24,7 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: nu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 |
+| type | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | 是 |
 | sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | 是 |
 | time | number | 是 |
 
@@ -30,7 +32,7 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: nu
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

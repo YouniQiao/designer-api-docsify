@@ -1,13 +1,14 @@
 # AbilityStageContext
 
-The AbilityStageContext module implements the context of an ability stage. It inherits from  
-[Context](./../app/context).This module provides APIs for accessing a specific ability stage. You can use the APIs to obtain the ModuleInfo object and environment configuration of an ability stage.
+The AbilityStageContext module implements the context of an ability stage. It inherits from Context. This module provides APIs for accessing a specific ability stage. You can use the APIs to obtain the ModuleInfo object and environment configuration of an ability stage.
 
-**Inheritance/Implementation:** AbilityStageContext extends [Context](Context)
+**Inheritance/Implementation:** AbilityStageContext extends Context
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-declare class AbilityStageContext extends Context--><!--Device-unnamed-declare class AbilityStageContext extends Context-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AbilityStageContext--><!--Device-unnamed-declare class AbilityStageContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -21,7 +22,9 @@ Environment variables.
 
 **Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +44,9 @@ ModuleInfo object corresponding to the ability stage.
 
 **Type:** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +67,8 @@ Indicates launch ElementName object of the abilityStage.
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

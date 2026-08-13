@@ -2,7 +2,9 @@
 
 Defines the reference point for the offset.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-zlib-export enum OffsetReferencePoint--><!--Device-zlib-export enum OffsetReferencePoint-End-->
 
@@ -16,9 +18,11 @@ SEEK_SET = 0
 
 Searches from the beginning of a file.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-OffsetReferencePoint-SEEK_SET = 0--><!--Device-OffsetReferencePoint-SEEK_SET = 0-End-->
 
@@ -32,9 +36,11 @@ SEEK_CUR = 1
 
 Searches from the current location.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-OffsetReferencePoint-SEEK_CUR = 1--><!--Device-OffsetReferencePoint-SEEK_CUR = 1-End-->
 

@@ -1,19 +1,12 @@
 # Matrix
 
-Implements a matrix.A 3 x 3 matrix is shown as below.![matrix_3x3](../../../reference/apis-arkgraphics2d/figures/matrix3X3.PNG)Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient.If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:![matrix_xy](../../../reference/apis-arkgraphics2d/figures/matrix_xy.PNG)
+Implements a matrix. A 3 x 3 matrix is shown as below.  Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:  > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class Matrix--><!--Device-drawing-class Matrix-End-->
 
@@ -33,9 +26,11 @@ constructor()
 
 Creates a **Matrix** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-constructor()--><!--Device-Matrix-constructor()-End-->
 
@@ -49,9 +44,11 @@ constructor(matrix: Matrix)
 
 Copies a matrix.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-constructor(matrix: Matrix)--><!--Device-Matrix-constructor(matrix: Matrix)-End-->
 
@@ -75,6 +72,8 @@ Obtains all element values of this matrix.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-Matrix-getAll(): Array<number>--><!--Device-Matrix-getAll(): Array<number>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -95,7 +94,9 @@ Obtains all element values of this matrix.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-getAll(): Array<double> | undefined--><!--Device-Matrix-getAll(): Array<double> | undefined-End-->
 
@@ -109,21 +110,17 @@ Obtains all element values of this matrix.
 
 ## getValue
 
-ArkTS-Dyn:
-```TypeScript
-getValue(index: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getValue(index: int): double
 ```
 
 Obtains a matrix value of a given index, which ranges from 0 to 8.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-getValue(index: int): double--><!--Device-Matrix-getValue(index: int): double-End-->
 
@@ -133,19 +130,19 @@ Obtains a matrix value of a given index, which ranges from 0 to 8.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index. The value is an integer ranging from 0 to 8. |
+| index | int | Yes | Index. The value is an integer ranging from 0 to 8. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Value obtained, which is an integer. |
+| double | Value obtained, which is an integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## invert
 
@@ -155,9 +152,11 @@ invert(matrix: Matrix): boolean
 
 Inverts this matrix and returns the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-invert(matrix: Matrix): boolean--><!--Device-Matrix-invert(matrix: Matrix): boolean-End-->
 
@@ -179,7 +178,7 @@ Inverts this matrix and returns the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isAffine
 
@@ -187,11 +186,13 @@ Inverts this matrix and returns the result.
 isAffine(): boolean
 ```
 
-Checks whether the existing matrix is an affine matrix, which includes transformations such as translation,rotation, and scaling.
+Checks whether the existing matrix is an affine matrix, which includes transformations such as translation, rotation, and scaling.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-isAffine(): boolean--><!--Device-Matrix-isAffine(): boolean-End-->
 
@@ -211,9 +212,11 @@ isEqual(matrix: Matrix): boolean
 
 Checks whether two **OH_Drawing_Matrix** objects are equal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-isEqual(matrix: Matrix): boolean--><!--Device-Matrix-isEqual(matrix: Matrix): boolean-End-->
 
@@ -235,7 +238,7 @@ Checks whether two **OH_Drawing_Matrix** objects are equal.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isIdentity
 
@@ -245,9 +248,11 @@ isIdentity(): boolean
 
 Checks whether an **OH_Drawing_Matrix** object is an identity matrix:
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-isIdentity(): boolean--><!--Device-Matrix-isIdentity(): boolean-End-->
 
@@ -271,6 +276,8 @@ Maps a source point array to a destination point array by means of matrix transf
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -291,7 +298,7 @@ Maps a source point array to a destination point array by means of matrix transf
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## mapPoints
 
@@ -303,7 +310,9 @@ Maps a source point array to a destination point array by means of matrix transf
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined-End-->
 
@@ -325,25 +334,21 @@ Maps a source point array to a destination point array by means of matrix transf
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## mapRadius
 
-ArkTS-Dyn:
-```TypeScript
-mapRadius(radius: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 mapRadius(radius: double): double
 ```
 
 Returns the average radius of the ellipse formed after a circle with the specified **radius** is mapped by the existing matrix. The square of the average radius is the product of the major axis length and minor axis length of the ellipse. If the matrix contains perspective transformation, the result is meaningless.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-mapRadius(radius: double): double--><!--Device-Matrix-mapRadius(radius: double): double-End-->
 
@@ -353,13 +358,13 @@ Returns the average radius of the ellipse formed after a circle with the specifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the circle used for calculation. The value is a floating point number. The absolute value is used if the number is negative. |
+| radius | double | Yes | Radius of the circle used for calculation. The value is a floating point number. The absolute value is used if the number is negative. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Average radius after transformation. |
+| double | Average radius after transformation. |
 
 ## mapRect
 
@@ -367,11 +372,13 @@ Returns the average radius of the ellipse formed after a circle with the specifi
 mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 ```
 
-Sets the destination rectangle to the bounding rectangle of the shape obtained after transforming the source rectangle with a matrix transformation. As shown in the figure below, the blue rectangle represents the source rectangle, and the yellow rectangle is the shape obtained after a matrix transformation is applied to the source rectangle. Since the edges of the yellow rectangle are not aligned with the coordinate axes, it cannot be represented by a rectangle object. To address this issue, a destination rectangle (black rectangle) is defined as the bounding rectangle.![mapRect](../../../reference/apis-arkgraphics2d/figures/zh-ch_matrix_mapRect.png)
+Sets the destination rectangle to the bounding rectangle of the shape obtained after transforming the source rectangle with a matrix transformation. As shown in the figure below, the blue rectangle represents the source rectangle, and the yellow rectangle is the shape obtained after a matrix transformation is applied to the source rectangle. Since the edges of the yellow rectangle are not aligned with the coordinate axes, it cannot be represented by a rectangle object. To address this issue, a destination rectangle (black rectangle) is defined as the bounding rectangle. 
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean--><!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean-End-->
 
@@ -394,7 +401,7 @@ Sets the destination rectangle to the bounding rectangle of the shape obtained a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postConcat
 
@@ -404,9 +411,11 @@ postConcat(matrix: Matrix): void
 
 Right-multiply the existing matrix by another matrix.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-postConcat(matrix: Matrix): void--><!--Device-Matrix-postConcat(matrix: Matrix): void-End-->
 
@@ -420,21 +429,17 @@ Right-multiply the existing matrix by another matrix.
 
 ## postRotate
 
-ArkTS-Dyn:
-```TypeScript
-postRotate(degree: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postRotate(degree: double, px: double, py: double): void
 ```
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-postRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-postRotate(degree: double, px: double, py: double): void-End-->
 
@@ -444,33 +449,29 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation point. The value is a floating point number. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
+| degree | double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
+| px | double | Yes | X coordinate of the rotation point. The value is a floating point number. |
+| py | double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postScale
 
-ArkTS-Dyn:
-```TypeScript
-postScale(sx: number, sy: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -480,34 +481,30 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| sx | double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
+| sy | double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
+| px | double | Yes | X coordinate of the scale point. The value is a floating point number. |
+| py | double | Yes | Y coordinate of the scale point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postSkew
 
-ArkTS-Dyn:
-```TypeScript
-postSkew(kx: number, ky: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 Right-multiply the existing matrix by a skew transformation matrix.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -517,28 +514,24 @@ Right-multiply the existing matrix by a skew transformation matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| kx | double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| ky | double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| px | double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## postTranslate
 
-ArkTS-Dyn:
-```TypeScript
-postTranslate(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postTranslate(dx: double, dy: double): void
 ```
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-postTranslate(dx: double, dy: double): void--><!--Device-Matrix-postTranslate(dx: double, dy: double): void-End-->
 
@@ -548,14 +541,14 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
+| dx | double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preConcat
 
@@ -565,9 +558,11 @@ preConcat(matrix: Matrix): void
 
 Preconcats the existing matrix with the passed-in matrix.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-preConcat(matrix: Matrix): void--><!--Device-Matrix-preConcat(matrix: Matrix): void-End-->
 
@@ -583,25 +578,21 @@ Preconcats the existing matrix with the passed-in matrix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preRotate
 
-ArkTS-Dyn:
-```TypeScript
-preRotate(degree: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preRotate(degree: double, px: double, py: double): void
 ```
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-preRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-preRotate(degree: double, px: double, py: double): void-End-->
 
@@ -611,33 +602,29 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation point. The value is a floating point number. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
+| degree | double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
+| px | double | Yes | X coordinate of the rotation point. The value is a floating point number. |
+| py | double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preScale
 
-ArkTS-Dyn:
-```TypeScript
-preScale(sx: number, sy: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -647,34 +634,30 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| sx | double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
+| sy | double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
+| px | double | Yes | X coordinate of the scale point. The value is a floating point number. |
+| py | double | Yes | Y coordinate of the scale point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preSkew
 
-ArkTS-Dyn:
-```TypeScript
-preSkew(kx: number, ky: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 Left-multiply the existing matrix by a skew transformation matrix.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -684,28 +667,24 @@ Left-multiply the existing matrix by a skew transformation matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| kx | double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| ky | double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| px | double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## preTranslate
 
-ArkTS-Dyn:
-```TypeScript
-preTranslate(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preTranslate(dx: double, dy: double): void
 ```
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-preTranslate(dx: double, dy: double): void--><!--Device-Matrix-preTranslate(dx: double, dy: double): void-End-->
 
@@ -715,14 +694,14 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
+| dx | double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rectStaysRect
 
@@ -732,9 +711,11 @@ rectStaysRect(): boolean
 
 Checks whether a rectangle stays a rectangle after being mapped by a matrix.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-rectStaysRect(): boolean--><!--Device-Matrix-rectStaysRect(): boolean-End-->
 
@@ -754,9 +735,11 @@ reset(): void
 
 Resets this matrix to an identity matrix.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-reset(): void--><!--Device-Matrix-reset(): void-End-->
 
@@ -770,9 +753,11 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 
 Updates the existing matrix with the product of two matrices.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void--><!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void-End-->
 
@@ -787,21 +772,17 @@ Updates the existing matrix with the product of two matrices.
 
 ## setMatrix
 
-ArkTS-Dyn:
-```TypeScript
-setMatrix(values: Array<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setMatrix(values: Array<double>): void
 ```
 
 Sets parameters for this matrix.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setMatrix(values: Array<double>): void--><!--Device-Matrix-setMatrix(values: Array<double>): void-End-->
 
@@ -811,31 +792,27 @@ Sets parameters for this matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | Floating-point array that holds the parameter values, with the array length set to 9. The values in the array respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient, in ascending order of indexes. |
+| values | Array&lt;double&gt; | Yes | Floating-point array that holds the parameter values, with the array length set to 9. The values in the array respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient, in ascending order of indexes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setMatrix
 
-ArkTS-Dyn:
-```TypeScript
-setMatrix(matrix: Array<number> | Matrix): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setMatrix(matrix: Array<double> | Matrix): void
 ```
 
 Updates the existing matrix with another matrix.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void--><!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void-End-->
 
@@ -845,25 +822,21 @@ Updates the existing matrix with another matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | ArkTS-Dyn: Array&lt;number&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md)  <br>ArkTS-Sta：Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Array or matrix for the update. |
+| matrix | Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Array or matrix for the update. |
 
 ## setPolyToPoly
 
-ArkTS-Dyn:
-```TypeScript
-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean
 ```
 
 Sets this matrix to a transformation matrix that maps the source point array to the destination point array. Both the number of source points and that of destination points must be in the range [0, 4].
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean--><!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean-End-->
 
@@ -875,7 +848,7 @@ Sets this matrix to a transformation matrix that maps the source point array to 
 | --- | --- | --- | --- |
 | src | Array&lt;common2D.Point&gt; | Yes | Array of source points. The array length must be the same as the value of **count**. |
 | dst | Array&lt;common2D.Point&gt; | Yes | Array of destination points. The array length must be the same as the value of **count**. |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of points in each array. The value is an integer. |
+| count | int | Yes | Number of points in each array. The value is an integer. |
 
 **Return value:**
 
@@ -887,7 +860,7 @@ Sets this matrix to a transformation matrix that maps the source point array to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRectToRect
 
@@ -897,9 +870,11 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 Sets this matrix to a transformation matrix that maps a source rectangle to a destination rectangle.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean--><!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean-End-->
 
@@ -923,25 +898,21 @@ Sets this matrix to a transformation matrix that maps a source rectangle to a de
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setRotation
 
-ArkTS-Dyn:
-```TypeScript
-setRotation(degree: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setRotation(degree: double, px: double, py: double): void
 ```
 
 Sets this matrix as an identity matrix and rotates it by a given degree around the rotation point (px, py).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setRotation(degree: double, px: double, py: double): void--><!--Device-Matrix-setRotation(degree: double, px: double, py: double): void-End-->
 
@@ -951,33 +922,29 @@ Sets this matrix as an identity matrix and rotates it by a given degree around t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation point. The value is a floating point number. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
+| degree | double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
+| px | double | Yes | X coordinate of the rotation point. The value is a floating point number. |
+| py | double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setScale
 
-ArkTS-Dyn:
-```TypeScript
-setScale(sx: number, sy: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 Sets this matrix as an identity matrix and scales it with the coefficients (sx, sy) at the scale point (px, py).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -987,34 +954,30 @@ Sets this matrix as an identity matrix and scales it with the coefficients (sx, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| sx | double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
+| sy | double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
+| px | double | Yes | X coordinate of the scale point. The value is a floating point number. |
+| py | double | Yes | Y coordinate of the scale point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setSinCos
 
-ArkTS-Dyn:
-```TypeScript
-setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setSinCos(sinValue: double, cosValue: double, px: double, py: double): void
 ```
 
 Sets the matrix to rotate around the rotation center (px, py) with the specified sine and cosine values.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void--><!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void-End-->
 
@@ -1024,28 +987,24 @@ Sets the matrix to rotate around the rotation center (px, py) with the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sinValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
-| cosValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Cosine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| sinValue | double | Yes | Sine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
+| cosValue | double | Yes | Cosine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
+| px | double | Yes | X coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | double | Yes | Y coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## setSkew
 
-ArkTS-Dyn:
-```TypeScript
-setSkew(kx: number, ky: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 Sets the skew coefficients of a matrix.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -1055,28 +1014,24 @@ Sets the skew coefficients of a matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| kx | double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| ky | double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| px | double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## setTranslation
 
-ArkTS-Dyn:
-```TypeScript
-setTranslation(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setTranslation(dx: double, dy: double): void
 ```
 
 Sets this matrix as an identity matrix and translates it by a given distance (dx, dy).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Matrix-setTranslation(dx: double, dy: double): void--><!--Device-Matrix-setTranslation(dx: double, dy: double): void-End-->
 
@@ -1086,12 +1041,12 @@ Sets this matrix as an identity matrix and translates it by a given distance (dx
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
+| dx | double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

@@ -2,7 +2,9 @@
 
 该模块提供文件数据安全等级的相关功能：向应用程序提供查询、设置文件数据安全等级的JS接口。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace securityLabel--><!--Device-unnamed-declare namespace securityLabel-End-->
 
@@ -14,12 +16,12 @@
 
 | 名称 |
 | --- |
-| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getsecuritylabel) |
-| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getsecuritylabel-1) |
-| [getSecurityLabelSync](arkts-corefile-securitylabel-getsecuritylabelsync-f.md#getsecuritylabelsync) |
-| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setsecuritylabel) |
-| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setsecuritylabel-1) |
-| [setSecurityLabelSync](arkts-corefile-securitylabel-setsecuritylabelsync-f.md#setsecuritylabelsync) |
+| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getSecurityLabel) |
+| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getSecurityLabel) |
+| [getSecurityLabelSync](arkts-corefile-securitylabel-getsecuritylabelsync-f.md#getSecurityLabelSync) |
+| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setSecurityLabel) |
+| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setSecurityLabel) |
+| [setSecurityLabelSync](arkts-corefile-securitylabel-setsecuritylabelsync-f.md#setSecurityLabelSync) |
 
 ### 类型
 

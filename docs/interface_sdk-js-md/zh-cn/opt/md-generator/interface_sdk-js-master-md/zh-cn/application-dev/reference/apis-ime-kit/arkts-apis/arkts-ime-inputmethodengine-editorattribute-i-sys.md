@@ -2,7 +2,9 @@
 
 编辑框属性值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface EditorAttribute--><!--Device-inputMethodEngine-interface EditorAttribute-End-->
 
@@ -14,13 +16,13 @@
 readonly fluidLightMode?: FluidLightMode
 ```
 
-流光模式。未设置或设置非法值时，默认不使用流光模式。
-
-该属性仅系统应用可以使用。
+流光模式。未设置或设置非法值时，默认不使用流光模式。 该属性仅系统应用可以使用。
 
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly fluidLightMode?: FluidLightMode--><!--Device-EditorAttribute-readonly fluidLightMode?: FluidLightMode-End-->
 

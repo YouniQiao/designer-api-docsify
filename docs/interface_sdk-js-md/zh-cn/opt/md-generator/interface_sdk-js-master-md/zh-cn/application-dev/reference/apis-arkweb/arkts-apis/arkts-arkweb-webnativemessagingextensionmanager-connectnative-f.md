@@ -10,6 +10,8 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.WEB_NATIVE_MESSAGING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -36,7 +38,7 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

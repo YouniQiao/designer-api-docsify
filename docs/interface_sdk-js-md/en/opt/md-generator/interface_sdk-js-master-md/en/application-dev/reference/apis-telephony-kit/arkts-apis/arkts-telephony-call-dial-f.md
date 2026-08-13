@@ -12,18 +12,13 @@ import { call } from '@kit.TelephonyKit';
 function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
-> only for system applications.
+Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -59,18 +54,13 @@ call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
 function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 ```
 
-Initiates a call. You can set call options as needed. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
-> only for system applications.
+Initiates a call. You can set call options as needed. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -113,18 +103,13 @@ call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
 function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a call. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
-> only for system applications.
+Initiates a call. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
 
 **Required permissions:** ohos.permission.PLACE_CALL
 

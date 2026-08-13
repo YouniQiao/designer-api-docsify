@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 ```
 
-Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result.
+Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result. The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
 
-The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -24,11 +24,11 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 **See also:**
 
-[getSlot](notificationManager.getSlot(slotType: SlotType,callback: AsyncCallback<NotificationSlot>): void) obtains a
+getSlot obtains a
 
-[removeSlot](notificationManager.removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void) removes a
+removeSlot removes a
 
-[removeAllSlots](notificationManager.removeAllSlots(callback: AsyncCallback<void>): void) removes all
+removeAllSlots removes all
 
 **Parameters:**
 
@@ -41,11 +41,11 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -70,11 +70,11 @@ notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, a
 function addSlot(type: SlotType): Promise<void>
 ```
 
-Adds a notification slot of a specified type. This API uses a promise to return the result.
+Adds a notification slot of a specified type. This API uses a promise to return the result. The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
 
-The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function addSlot(type: SlotType): Promise<void>--><!--Device-notificationManager-function addSlot(type: SlotType): Promise<void>-End-->
 
@@ -82,11 +82,11 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 **See also:**
 
-[getSlot](notificationManager.getSlot(slotType: SlotTyp): Promise<NotificationSlot>) obtains a notification
+getSlot obtains a notification
 
-[removeSlot](notificationManager.removeSlot(slotType: SlotType): Promise<void>) removes a notification
+removeSlot removes a notification
 
-[removeAllSlots](notificationManager.removeAllSlots(): Promise<void>) removes all notificationslots
+removeAllSlots removes all notificationslots
 
 **Parameters:**
 
@@ -104,11 +104,11 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

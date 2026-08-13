@@ -2,7 +2,9 @@
 
 Describes the LCD flash information.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface LcdFlashStatus--><!--Device-camera-interface LcdFlashStatus-End-->
 
@@ -20,7 +22,9 @@ Whether the LCD flash is required. **true** if required, **false** otherwise.
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean--><!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean-End-->
 
@@ -38,7 +42,9 @@ LCD flash compensation.
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LcdFlashStatus-readonly lcdCompensation: int--><!--Device-LcdFlashStatus-readonly lcdCompensation: int-End-->
 

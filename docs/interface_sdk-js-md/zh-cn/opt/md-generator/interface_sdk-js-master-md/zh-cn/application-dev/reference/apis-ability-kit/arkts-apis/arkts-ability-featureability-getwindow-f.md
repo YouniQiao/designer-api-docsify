@@ -10,6 +10,8 @@ function getWindow(callback: AsyncCallback<window.Window>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void--><!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void-End-->
@@ -49,6 +51,8 @@ function getWindow(): Promise<window.Window>
 获取当前Ability对应的窗口。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

@@ -2,7 +2,9 @@
 
 Enumerates the audio concurrency modes.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioConcurrencyMode--><!--Device-audio-enum AudioConcurrencyMode-End-->
 
@@ -16,7 +18,9 @@ CONCURRENCY_DEFAULT = 0
 
 Uses the system strategy by default.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -32,7 +36,9 @@ CONCURRENCY_MIX_WITH_OTHERS = 1
 
 Concurrent with other audio streams, that is, audio mixing.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -48,7 +54,9 @@ CONCURRENCY_DUCK_OTHERS = 2
 
 Ducks other audio streams.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -64,7 +72,9 @@ CONCURRENCY_PAUSE_OTHERS = 3
 
 Pauses other audio streams.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

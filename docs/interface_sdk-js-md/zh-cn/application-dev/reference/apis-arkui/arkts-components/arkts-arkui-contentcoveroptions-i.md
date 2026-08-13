@@ -1,8 +1,6 @@
 # ContentCoverOptions
 
-继承自[BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)。
-
-全屏模态页面内容选项。
+继承自[BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)。 全屏模态页面内容选项。
 
 **继承/实现关系：** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
@@ -10,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare interface ContentCoverOptions extends BindOptions--><!--Device-unnamed-declare interface ContentCoverOptions extends BindOptions-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface ContentCoverOptions--><!--Device-unnamed-declare interface ContentCoverOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +30,8 @@ enableSafeArea?: boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -44,13 +46,7 @@ enableSafeArea?: boolean
 modalTransition?: ModalTransition
 ```
 
-全屏模态页面的系统转场方式。
-
-默认值：ModalTransition.DEFAULT。
-
-**说明：**
-
-与transition同时设置时，此属性不生效。
+全屏模态页面的系统转场方式。 默认值：ModalTransition.DEFAULT。 **说明：** 与transition同时设置时，此属性不生效。
 
 **类型：** [ModalTransition](arkts-arkui-modaltransition-e.md)
 
@@ -59,6 +55,8 @@ modalTransition?: ModalTransition
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,17 +72,15 @@ modalTransition?: ModalTransition
 onWillDismiss?: Callback<DismissContentCoverAction>
 ```
 
-全屏模态页面交互式关闭回调函数。
-
-**说明：**
-
-当用户执行back事件关闭交互操作时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到阻拦关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。在onWillDismiss回调中，不能再做onWillDismiss拦截。
+全屏模态页面交互式关闭回调函数。 **说明：** 当用户执行back事件关闭交互操作时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到阻拦关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。在onWillDismiss回调中，不能再做 onWillDismiss拦截。
 
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;[DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md)&gt;
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,6 +103,8 @@ transition?: TransitionEffect
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

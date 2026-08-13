@@ -4,6 +4,8 @@ Controller for launching the atomic service.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class LaunchController--><!--Device-unnamed-export declare class LaunchController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +26,11 @@ public launchAtomicService: LaunchAtomicServiceCallback
 
 Function to launch atomicservice.
 
+**Type:** [LaunchAtomicServiceCallback](arkts-arkui-launchatomicservicecallback-t-sys.md)
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LaunchController-public launchAtomicService: LaunchAtomicServiceCallback--><!--Device-LaunchController-public launchAtomicService: LaunchAtomicServiceCallback-End-->
 

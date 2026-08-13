@@ -1,12 +1,10 @@
 # DeviceType
 
-Enumerates the device types.
+Enumerates the device types. &lt;!--RP1--&gt; &lt;!--RP1End--&gt;
 
-&lt;!--RP1--&gt;
+**Since:** 23
 
-&lt;!--RP1End--&gt;
-
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-resourceManager-export enum DeviceType--><!--Device-resourceManager-export enum DeviceType-End-->
 
@@ -20,7 +18,9 @@ DEVICE_TYPE_PHONE = 0x00
 
 Phone
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,7 +36,9 @@ DEVICE_TYPE_TABLET = 0x01
 
 Tablet
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,7 +54,9 @@ DEVICE_TYPE_CAR = 0x02
 
 Head unit
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,7 +72,9 @@ DEVICE_TYPE_PC = 0x03
 
 Indicates a PC.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,7 +90,9 @@ DEVICE_TYPE_TV = 0x04
 
 Smart TV
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,7 +108,9 @@ DEVICE_TYPE_WEARABLE = 0x06
 
 Wearable
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,9 +126,11 @@ DEVICE_TYPE_2IN1 = 0x07
 
 PC/2-in-1 device
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceType-DEVICE_TYPE_2IN1 = 0x07--><!--Device-DeviceType-DEVICE_TYPE_2IN1 = 0x07-End-->
 

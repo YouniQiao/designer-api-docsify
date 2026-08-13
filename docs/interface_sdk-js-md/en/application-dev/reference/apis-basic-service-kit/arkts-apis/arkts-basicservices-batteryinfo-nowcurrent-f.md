@@ -18,6 +18,8 @@ Battery current of the device, in unit of mA.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-function nowCurrent(): int--><!--Device-batteryInfo-function nowCurrent(): int-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

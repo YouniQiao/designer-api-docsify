@@ -12,11 +12,11 @@ import { image } from '@kit.ImageKit';
 function createPixelMapFromPixels(pixels: ArrayBuffer, param: InitializationOptions): Promise<PixelMap>
 ```
 
-Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.
-
-The following pixel formats are not supported for PixelMap creation:RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
+Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap. The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +45,10 @@ The following pixel formats are not supported for PixelMap creation:RGBA_1010102
 
 | Error Code ID |
 | --- |
-| [7600305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
-| [7600207](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-unsupported-data-format) |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
+| [7600207](../errorcode-image.md#7600207-unsupported-data-format) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

@@ -1,13 +1,12 @@
 # BreakPoints
 
-Sets breakpoints for the responsive grid container. For details about breakpoints, see   
-[Breakpoints](../../../ui/arkts-layout-development-grid-layout.md#breakpoints).
-
-&lt;!--code_no_check--&gt;
+Sets breakpoints for the responsive grid container. For details about breakpoints, see [Breakpoints](../../../ui/arkts-layout-development-grid-layout.md#breakpoints). &lt;!--code_no_check--&gt;
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface BreakPoints--><!--Device-unnamed-declare interface BreakPoints-End-->
 
@@ -19,17 +18,15 @@ Sets breakpoints for the responsive grid container. For details about breakpoint
 reference?: BreakpointsReference
 ```
 
-Breakpoint switching reference.
-
-Default value: **BreakpointsReference.WindowSize**
-
-Invalid values are treated as the default value.
+Breakpoint switching reference. Default value: **BreakpointsReference.WindowSize** Invalid values are treated as the default value.
 
 **Type:** [BreakpointsReference](arkts-arkui-breakpointsreference-e.md)
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,19 +42,15 @@ Invalid values are treated as the default value.
 value?: Array<string>
 ```
 
-Array of monotonically increasing breakpoints.
-
-Default value: **["320vp", "600vp", "840vp"]**
-
-Invalid values are treated as the default value.
-
-Unit: vp.
+Array of monotonically increasing breakpoints. Default value: **["320vp", "600vp", "840vp"]** Invalid values are treated as the default value. Unit: vp.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

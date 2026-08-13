@@ -1,10 +1,12 @@
 # SimpleAnimatorOptions
 
-Defines the SimpleAnimatorOptions class.
+Defines a simple animation parameter object. Unlike **AnimatorOptions**, this object comes with some default values for certain animation parameters, so you do not have to set them manually.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
 
@@ -19,18 +21,22 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.Ark
 ## constructor
 
 ```TypeScript
-constructor(begin: double, end: double)
+constructor(begin: number, end: number)
 ```
 
-constructor.
+A constructor used to create a **SimpleAnimatorOptions** instance.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SimpleAnimatorOptions-constructor(begin: double, end: double)--><!--Device-SimpleAnimatorOptions-constructor(begin: double, end: double)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SimpleAnimatorOptions-constructor(begin: number, end: number)--><!--Device-SimpleAnimatorOptions-constructor(begin: number, end: number)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,24 +44,51 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | double | Yes | Starting point of animator interpolation. |
-| end | double | Yes | Ending point of animator interpolation. |
+| begin | number | Yes | Start point of the animation interpolation. |
+| end | number | Yes | End point of animation interpolation. |
+
+## Examples
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200); // Animation interpolation from 100 to 200, with other animation parameters set to default values.
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## delay
 
 ```TypeScript
-delay(delay: int): SimpleAnimatorOptions
+delay(delay: number): SimpleAnimatorOptions
 ```
 
-Set delay for the animation start. The default value indicates no delay.
+Sets the playback delay for this animation.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SimpleAnimatorOptions-delay(delay: int): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-delay(delay: int): SimpleAnimatorOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SimpleAnimatorOptions-delay(delay: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-delay(delay: number): SimpleAnimatorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,13 +96,36 @@ Set delay for the animation start. The default value indicates no delay.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delay | int | Yes | if not set, default is 0. |
+| delay | number | Yes | Playback delay, in milliseconds. The value **0** indicates no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.&lt;br&gt;Default value: **0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+
+## Examples
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).delay(500);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## direction
 
@@ -77,13 +133,17 @@ Set delay for the animation start. The default value indicates no delay.
 direction(direction: PlayMode): SimpleAnimatorOptions
 ```
 
-Set the animation playback mode.
+Sets the playback direction for this animator animation.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions-End-->
 
@@ -93,29 +153,33 @@ Set the animation playback mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | PlayMode | Yes | if not set, default is PlayMode.Normal. |
+| direction | PlayMode | Yes | Playback direction.&lt;br&gt;Default value: **PlayMode.Normal |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 ## duration
 
 ```TypeScript
-duration(duration: int): SimpleAnimatorOptions
+duration(duration: number): SimpleAnimatorOptions
 ```
 
-Set duration of the animation, in milliseconds.
+Sets the animation duration.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SimpleAnimatorOptions-duration(duration: int): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-duration(duration: int): SimpleAnimatorOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SimpleAnimatorOptions-duration(duration: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-duration(duration: number): SimpleAnimatorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,13 +187,36 @@ Set duration of the animation, in milliseconds.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | int | Yes | if not set, default is 1000. |
+| duration | number | Yes | Animation duration, in milliseconds.&lt;br&gt;Default value: **1000 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+
+## Examples
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(500);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## easing
 
@@ -137,13 +224,17 @@ Set duration of the animation, in milliseconds.
 easing(curve: string): SimpleAnimatorOptions
 ```
 
-Set time curve of the animation. For details about the supported types.linear The animation speed keeps unchanged.ease The animation starts and ends at a low speed, cubic-bezier(0.25, 0.1, 0.25, 1.0).ease-in The animation starts at a low speed, cubic-bezier(0.42, 0.0, 1.0, 1.0).ease-out The animation ends at a low speed, cubic-bezier(0.0, 0.0, 0.58, 1.0).ease-in-out The animation starts and ends at a low speed, cubic-bezier(0.42, 0.0, 0.58, 1.0).fast-out-slow-in Standard curve, cubic-bezier(0.4, 0.0, 0.2, 1.0).linear-out-slow-in Deceleration curve, cubic-bezier(0.0, 0.0, 0.2, 1.0).fast-out-linear-in Acceleration curve, cubic-bezier(0.4, 0.0, 1.0, 1.0).friction Damping curve, cubic-bezier(0.2, 0.0, 0.2, 1.0).extreme-deceleration Extreme deceleration curve, cubic-bezier(0.0, 0.0, 0.0, 1.0).sharp Sharp curve, cubic-bezier(0.33, 0.0, 0.67, 1.0).rhythm Rhythm curve, cubic-bezier(0.7, 0.0, 0.2, 1.0).smooth Smooth curve, cubic-bezier(0.4, 0.0, 0.4, 1.0).cubic-bezier(x1, y1, x2, y2) You can customize an animation speed curve in the cubic-bezier() function.The x and y values of each input parameter must be between 0 and 1.Step curve. The number must be set and only an integer is supported, step-position is optional.It can be set to start or end. The default value is end.
+Sets the interpolation curve for this animation.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions-End-->
 
@@ -153,13 +244,36 @@ Set time curve of the animation. For details about the supported types.linear Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | string | Yes | if not set, default is ease. |
+| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions).&lt;br&gt; Default value: **"ease" |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+
+## Examples
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).easing("ease-in");
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## fill
 
@@ -167,13 +281,17 @@ Set time curve of the animation. For details about the supported types.linear Th
 fill(fillMode: FillMode): SimpleAnimatorOptions
 ```
 
-Set FillMode of animation.FillMode indicates whether to resume to the initial state after the animation is executed.
+Sets the fill mode for this animation.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions-End-->
 
@@ -183,29 +301,33 @@ Set FillMode of animation.FillMode indicates whether to resume to the initial st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillMode | FillMode | Yes | if not set, default is FillMode.Forwards. |
+| fillMode | FillMode | Yes | Fill mode, which affects how the animation behaves during the delay period and after it ends.&lt;br&gt;Default value: **FillMode.Forwards |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 ## iterations
 
 ```TypeScript
-iterations(iterations: int): SimpleAnimatorOptions
+iterations(iterations: number): SimpleAnimatorOptions
 ```
 
-Set number of times the animation will be played.Number indicates a fixed number of playback operations, and -1 an unlimited number of playback operations.
+Sets the number of times that this animation is played.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SimpleAnimatorOptions-iterations(iterations: int): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-iterations(iterations: int): SimpleAnimatorOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SimpleAnimatorOptions-iterations(iterations: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-iterations(iterations: number): SimpleAnimatorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -213,11 +335,34 @@ Set number of times the animation will be played.Number indicates a fixed number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterations | int | Yes | if not set, default is 1. |
+| iterations | number | Yes | Number of times that the animation is played. The value **0** means the animation is not played, and **-1** means the animation is played for an unlimited number of times.&lt;br&gt;Default value: **1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+
+## Examples
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).iterations(3);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 

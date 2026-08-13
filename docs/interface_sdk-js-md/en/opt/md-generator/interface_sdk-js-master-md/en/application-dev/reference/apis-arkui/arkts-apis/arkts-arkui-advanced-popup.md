@@ -12,7 +12,7 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#popup) |
+| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup) |
 
 ### Interfaces
 

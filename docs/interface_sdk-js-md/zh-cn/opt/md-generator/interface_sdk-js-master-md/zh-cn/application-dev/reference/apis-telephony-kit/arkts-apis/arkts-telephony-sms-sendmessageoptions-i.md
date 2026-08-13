@@ -2,7 +2,9 @@
 
 发送短信的参数和回调。根据SendMessageOptions中的可选参数content的值判断短信类型。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface SendMessageOptions--><!--Device-sms-export interface SendMessageOptions-End-->
 
@@ -18,7 +20,9 @@ content: string | Array<number>
 
 **类型：** string \| Array&lt;number&gt;
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-content: string | Array<int>--><!--Device-SendMessageOptions-content: string | Array<int>-End-->
 
@@ -34,7 +38,9 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 **类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>--><!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>-End-->
 
@@ -50,7 +56,9 @@ destinationHost: string
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-destinationHost: string--><!--Device-SendMessageOptions-destinationHost: string-End-->
 
@@ -66,7 +74,9 @@ destinationPort?: number
 
 **类型：** number
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-destinationPort?: int--><!--Device-SendMessageOptions-destinationPort?: int-End-->
 
@@ -82,7 +92,9 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 **类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>--><!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>-End-->
 
@@ -98,7 +110,9 @@ serviceCenter?: string
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-serviceCenter?: string--><!--Device-SendMessageOptions-serviceCenter?: string-End-->
 
@@ -110,14 +124,13 @@ serviceCenter?: string
 slotId: number
 ```
 
-用于发送短信的SIM卡槽ID：
-
-- 0：卡槽1。  
-- 1：卡槽2。
+用于发送短信的SIM卡槽ID： - 0：卡槽1。 - 1：卡槽2。
 
 **类型：** number
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-slotId: int--><!--Device-SendMessageOptions-slotId: int-End-->
 

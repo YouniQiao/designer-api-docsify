@@ -12,15 +12,13 @@ import { wifi } from '@kit.ConnectivityKit';
 function getStations(): Array<StationInfo>
 ```
 
-Obtains the list of clients that are connected to a Wi-Fi hotspot.
-
-&lt;p&gt;This method can only be used on a device that serves as a Wi-Fi hotspot.
+Obtains the list of clients that are connected to a Wi-Fi hotspot. &lt;p&gt;This method can only be used on a device that serves as a Wi-Fi hotspot.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getHotspotStations](ohos.wifiManager/wifiManager.getHotspotStations)
+**Substitutes:** getHotspotStations
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.MANAGE_WIFI_HOTSPOT
 

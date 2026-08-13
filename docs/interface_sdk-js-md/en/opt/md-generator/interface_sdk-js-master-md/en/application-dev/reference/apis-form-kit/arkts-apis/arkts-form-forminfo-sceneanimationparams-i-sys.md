@@ -2,7 +2,9 @@
 
 The scene animation form params.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface SceneAnimationParams--><!--Device-formInfo-interface SceneAnimationParams-End-->
 
@@ -26,7 +28,9 @@ Ability name of the scene animation form.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneAnimationParams-abilityName: string--><!--Device-SceneAnimationParams-abilityName: string-End-->
 
@@ -44,7 +48,9 @@ Indicates disabled desktop behaviors, only takes effect for system app.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneAnimationParams-disabledDesktopBehaviors?: string--><!--Device-SceneAnimationParams-disabledDesktopBehaviors?: string-End-->
 
@@ -63,6 +69,8 @@ The trigger types of the scene animation.
 **Type:** Array&lt;[SceneAnimationTriggerType](arkts-form-forminfo-sceneanimationtriggertype-e-sys.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

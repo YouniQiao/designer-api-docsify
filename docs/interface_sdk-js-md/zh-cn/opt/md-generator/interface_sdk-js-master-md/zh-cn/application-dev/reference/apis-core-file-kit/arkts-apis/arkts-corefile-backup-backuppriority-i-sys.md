@@ -2,7 +2,9 @@
 
 控制备份和恢复的优先级顺序。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backup-interface BackupPriority--><!--Device-backup-interface BackupPriority-End-->
 
@@ -20,7 +22,9 @@ priority?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BackupPriority-priority?: int--><!--Device-BackupPriority-priority?: int-End-->
 

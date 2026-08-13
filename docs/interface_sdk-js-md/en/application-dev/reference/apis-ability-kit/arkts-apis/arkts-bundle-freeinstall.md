@@ -1,15 +1,12 @@
 # @ohos.bundle.freeInstall
 
-The module provides APIs for setting and obtaining installation-free information and APIs for obtaining
- BundlePackInfo and DispatchInfo.
- > **NOTE**
- >
- > The APIs provided by this module are system APIs.
+The module provides APIs for setting and obtaining installation-free information and APIs for obtaining BundlePackInfo and DispatchInfo. > **NOTE：**> > The APIs provided by this module are system APIs.
 
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace freeInstall--><!--Device-unnamed-declare namespace freeInstall-End-->
 
@@ -30,14 +27,14 @@ import { freeInstall } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getbundlepackinfo) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to return the result. |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getbundlepackinfo-1) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the result. |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo) | Obtains the dispatch information. This API uses an asynchronous callback to return the result. |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo-1) | Obtains the dispatch information. This API uses a promise to return the result. |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#ishapmoduleremovable) | Checks whether a module can be removed. This API uses an asynchronous callback to return the result. |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#ishapmoduleremovable-1) | Checks whether a module can be removed. This API uses a promise to return the result. |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#sethapmoduleupgradeflag) | Sets an upgrade flag for a module. This API uses an asynchronous callback to return the result. |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#sethapmoduleupgradeflag-1) | Sets an upgrade flag for a module. This API uses a promise to return the result. |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getBundlePackInfo) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to return the result. |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getBundlePackInfo-(System-API)) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the result. |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo) | Obtains the dispatch information. This API uses an asynchronous callback to return the result. |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo-(System-API)) | Obtains the dispatch information. This API uses a promise to return the result. |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#isHapModuleRemovable) | Checks whether a module can be removed. This API uses an asynchronous callback to return the result. |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#isHapModuleRemovable-(System-API)) | Checks whether a module can be removed. This API uses a promise to return the result. |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#setHapModuleUpgradeFlag) | Sets an upgrade flag for a module. This API uses an asynchronous callback to return the result. |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#setHapModuleUpgradeFlag-(System-API)) | Sets an upgrade flag for a module. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->

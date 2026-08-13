@@ -77,7 +77,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
@@ -105,7 +105,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
@@ -133,7 +133,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
@@ -161,7 +161,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
@@ -189,7 +189,7 @@ Obtains the binary data of the media resource by the specified resource ID and s
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
@@ -217,7 +217,7 @@ Obtains the binary data of the media resource by the specified resource ID and s
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
@@ -245,7 +245,7 @@ Obtains the binary data of the media resource by the specified resource name and
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
@@ -273,7 +273,7 @@ Obtains the binary data of the media resource by the specified resource name and
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
@@ -301,9 +301,9 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
-| [ArkUI_DrawableDescriptor](../ArkUI/capi-arkui-nativemodule-arkui-drawabledescriptor.md) **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
+| ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
 | density | Input parameter, which is optional. Screen density. For details about the value range, see[ScreenDensity](capi-resmgr-common-h.md#screendensity). The default value is **0**, indicating that the current system screen density is used. |
 | type | Input parameter, which is optional. Icon type. The default value is **0**.<br>*0**: application icon.<br>*1**: application theme icon. |
 
@@ -329,9 +329,9 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
-| [ArkUI_DrawableDescriptor](../ArkUI/capi-arkui-nativemodule-arkui-drawabledescriptor.md) **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
+| ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
 | uint32_t density | Input parameter. Screen density. For details about the value range, see [ScreenDensity](capi-resmgr-common-h.md#screendensity). Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
 | uint32_t type | Input parameter. Icon type. If no specific icon type is required, set this parameter to **0**.<br>*0**: application icon.<br>*1**: application theme icon. |
 
@@ -357,9 +357,9 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
-| [ArkUI_DrawableDescriptor](../ArkUI/capi-arkui-nativemodule-arkui-drawabledescriptor.md) **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
+| ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
 | density | Input parameter, which is optional. Screen density. For details about the value range, see[ScreenDensity](capi-resmgr-common-h.md#screendensity). The default value is **0**, indicating that the current system screen density is used. |
 | type | Input parameter, which is optional. Icon type. The default value is **0**.<br>*0**: application icon.<br>*1**: application theme icon.<br>*2**: dynamic icon. |
 
@@ -385,9 +385,9 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
-| [ArkUI_DrawableDescriptor](../ArkUI/capi-arkui-nativemodule-arkui-drawabledescriptor.md) **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
+| ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
 | uint32_t density | Input parameter. Screen density. For details about the value range, see [ScreenDensity](capi-resmgr-common-h.md#screendensity). Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
 | uint32_t type | Input parameter. Icon type. If no specific icon type is required, set this parameter to **0**.<br>*0**: application icon.<br>*1**: application theme icon.<br>*2**: dynamic icon. |
 
@@ -413,7 +413,7 @@ Obtains the Unicode encoding of the symbol icon corresponding to the specified r
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint32_t *resultValue | Output parameter. Unicode encoding of the symbol icon. |
 
@@ -439,7 +439,7 @@ Obtains the Unicode encoding of the symbol icon corresponding to the specified r
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | uint32_t *resultValue | Output parameter. Unicode encoding of the symbol icon. |
 
@@ -465,7 +465,7 @@ Obtains the list of languages supported by an application.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | char ***resultValue | Output parameter. Pointer to the language list array. The memory is allocated by this functionand must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the language list. |
 | includeSystem | Input parameter, which is optional.This parameter indicates whether to include system resources.The value **true** indicates yes, and the value **false** indicates no. The default value is **false**.<br>When the system resource manager object is used to obtain the language list, the system resource languagelist is returned. |
@@ -492,7 +492,7 @@ Obtains the list of languages supported by an application.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | char ***resultValue | Output parameter. Pointer to the language list array. The memory is allocated by this functionand must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the language list. |
 | bool includeSystem | Input parameter. This parameter indicates whether to include system resources. The value**true** indicates yes, and the value **false** indicates no.<br>When the system resource manager object is used to obtain the language list, the system resource languagelist is returned. |
@@ -523,7 +523,7 @@ Obtains the configuration information of a device, such as the screen orientatio
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | ResourceManager_Configuration *configuration | Output parameter. Device configuration information, where **screenDensity** is the devicescreen density (in dpi) divided by 160 and rounded to an integer.<br>The memory for the locale string in **configuration** is allocated by this function, and must be releasedthrough [OH_ResourceManager_ReleaseConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_releaseconfiguration) after use. If the memory for **configuration** isallocated by **malloc()**, it must be released via **free()**. |
 
 **Returns**:
@@ -597,7 +597,7 @@ Obtains a plain or formatted string based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | char **resultValue | Output parameter. Pointer to the string, which is allocated by **malloc()** and must be releasedvia **free()** after use. |
 | [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetString(mgr, resId, resultValue, 10, "format", 10.10)**. |
@@ -624,7 +624,7 @@ Obtains a plain or formatted string based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | char **resultValue | Output parameter. Pointer to the string, which is allocated by **malloc()** and must be releasedvia **free()** after use. |
 | [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetStringByName(mgr, resName, resultValue, 10, "format", 10.10)**. |
@@ -651,7 +651,7 @@ Obtains the string array based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | char ***resultValue | Output parameter. Pointer to the string array. The memory is allocated by this function and mustbe released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the string array. |
@@ -678,7 +678,7 @@ Obtains the string array based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | char ***resultValue | Output parameter. Pointer to the string array. The memory is allocated by this function and mustbe released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the string array. |
@@ -734,7 +734,7 @@ Obtains the plural string based on the specified resource ID.<br>The Chinese lan
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint32_t num | Input parameter. Quantity value, which is used to obtain the corresponding plural string based on theplural rules of the current language. |
 | char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
@@ -765,7 +765,7 @@ Obtains the plural string based on the specified resource name.<br>The Chinese l
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | uint32_t num | Input parameter. Quantity value, which is used to obtain the corresponding plural string based on theplural rules of the current language. |
 | char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
@@ -792,7 +792,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint32_t num | Input parameter. Quantity value (integer), which is used to obtain the corresponding plural string basedon the plural rules of the current language. |
 | char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
@@ -820,7 +820,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | uint32_t num | Input parameter. Quantity value (integer), which is used to obtain the corresponding plural string basedon the plural rules of the current language. |
 | char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
@@ -848,7 +848,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | double num | Input parameter. Quantity value (floating-point), which is used to obtain the corresponding plural stringbased on the plural rules of the current language. |
 | char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
@@ -876,7 +876,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | double num | Input parameter. Quantity value (floating-point), which is used to obtain the corresponding plural stringbased on the plural rules of the current language. |
 | char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
@@ -904,7 +904,7 @@ Obtains the color resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint32_t *resultValue | Output parameter. Color resource value. |
 
@@ -930,7 +930,7 @@ Obtains the color resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | uint32_t *resultValue | Output parameter. Color resource value. |
 
@@ -956,7 +956,7 @@ Obtains the integer resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | int *resultValue | Output parameter. Integer resource value. |
 
@@ -982,7 +982,7 @@ Obtains the integer resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | int *resultValue | Output parameter. Integer resource value. |
 
@@ -1008,7 +1008,7 @@ Obtains the floating-point resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | float *resultValue | Output parameter. Floating-point resource value. |
 
@@ -1034,7 +1034,7 @@ Obtains the floating-point resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | float *resultValue | Output parameter. Floating-point resource value. |
 
@@ -1060,7 +1060,7 @@ Obtains the Boolean resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | uint32_t resId | Input parameter. Resource ID. |
 | bool *resultValue | Output parameter. Boolean resource value. |
 
@@ -1086,7 +1086,7 @@ Obtains the Boolean resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *resName | Input parameter. Resource name. |
 | bool *resultValue | Output parameter. Boolean resource value. |
 
@@ -1112,7 +1112,7 @@ Dynamically loads overlay resources during application runtime to implement them
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *path | Input parameter. Absolute path of the HSP or HAP resource package to be loaded. |
 
 **Returns**:
@@ -1137,7 +1137,7 @@ Removes the specified overlay resource during application runtime and restores t
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
+| [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 | const char *path | Input parameter. Absolute path of the HSP or HAP resource package to be removed. |
 
 **Returns**:

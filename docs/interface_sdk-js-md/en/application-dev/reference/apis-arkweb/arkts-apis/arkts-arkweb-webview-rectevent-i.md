@@ -2,9 +2,11 @@
 
 Defines a rectangle.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
 
@@ -19,76 +21,80 @@ import { webview } from '@kit.ArkWeb';
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
-Height of the rectangle.
+Height of the rectangle. Unit: px.
 
-Unit: px.
+**Type:** number
 
-**Type:** double
+**Since:** 12
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-<!--Device-RectEvent-height: double--><!--Device-RectEvent-height: double-End-->
+<!--Device-RectEvent-height: number--><!--Device-RectEvent-height: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
-Width of the rectangle.
+Width of the rectangle. Unit: px.
 
-Unit: px.
+**Type:** number
 
-**Type:** double
+**Since:** 12
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-<!--Device-RectEvent-width: double--><!--Device-RectEvent-width: double-End-->
+<!--Device-RectEvent-width: number--><!--Device-RectEvent-width: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 X-axis coordinate of the upper left corner of the rectangle.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-RectEvent-x: double--><!--Device-RectEvent-x: double-End-->
+**Deprecated since:** -1
+
+<!--Device-RectEvent-x: number--><!--Device-RectEvent-x: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Y-axis coordinate of the upper left corner of the rectangle.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-RectEvent-y: double--><!--Device-RectEvent-y: double-End-->
+**Deprecated since:** -1
+
+<!--Device-RectEvent-y: number--><!--Device-RectEvent-y: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -14,9 +14,11 @@ function cleanBundleCacheFilesForSelf(): Promise<void>
 
 Clears the application cache. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-function cleanBundleCacheFilesForSelf(): Promise<void>--><!--Device-bundleManager-function cleanBundleCacheFilesForSelf(): Promise<void>-End-->
 

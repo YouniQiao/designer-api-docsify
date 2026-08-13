@@ -2,7 +2,9 @@
 
 Defines the personalized lock information.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface LockStatusResponse--><!--Device-sim-export interface LockStatusResponse-End-->
 
@@ -26,7 +28,9 @@ Indicates the operations remaining.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockStatusResponse-remain?: int--><!--Device-LockStatusResponse-remain?: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the current operation result.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockStatusResponse-result: int--><!--Device-LockStatusResponse-result: int-End-->
 

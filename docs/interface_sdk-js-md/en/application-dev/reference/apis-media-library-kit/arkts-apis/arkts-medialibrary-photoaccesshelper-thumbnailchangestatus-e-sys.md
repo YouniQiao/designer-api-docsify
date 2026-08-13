@@ -2,9 +2,11 @@
 
 Enumerates the change statuses of thumbnails (including images and videos).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum ThumbnailChangeStatus--><!--Device-photoAccessHelper-enum ThumbnailChangeStatus-End-->
 
@@ -20,9 +22,11 @@ THUMBNAIL_NOT_EXISTS = 0
 
 The thumbnail does not exist.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailChangeStatus-THUMBNAIL_NOT_EXISTS = 0--><!--Device-ThumbnailChangeStatus-THUMBNAIL_NOT_EXISTS = 0-End-->
 
@@ -38,9 +42,11 @@ THUMBNAIL_ADD = 1
 
 The thumbnail has been re-created.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailChangeStatus-THUMBNAIL_ADD = 1--><!--Device-ThumbnailChangeStatus-THUMBNAIL_ADD = 1-End-->
 
@@ -56,9 +62,11 @@ THUMBNAIL_UPDATE = 2
 
 The thumbnail has been updated.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailChangeStatus-THUMBNAIL_UPDATE = 2--><!--Device-ThumbnailChangeStatus-THUMBNAIL_UPDATE = 2-End-->
 
@@ -74,9 +82,11 @@ THUMBNAIL_NOT_CHANGE = 3
 
 The thumbnail has not changed.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailChangeStatus-THUMBNAIL_NOT_CHANGE = 3--><!--Device-ThumbnailChangeStatus-THUMBNAIL_NOT_CHANGE = 3-End-->
 

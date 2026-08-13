@@ -2,7 +2,9 @@
 
 Specifies the download configuration.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface DownloadConfiguration--><!--Device-eSIM-export interface DownloadConfiguration-End-->
 
@@ -26,7 +28,9 @@ Specifies whether to forcibly disable the profile. If true, the active profile i
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadConfiguration-forceDisableProfile: boolean--><!--Device-DownloadConfiguration-forceDisableProfile: boolean-End-->
 
@@ -40,11 +44,13 @@ Specifies whether to forcibly disable the profile. If true, the active profile i
 isPprAllowed: boolean
 ```
 
-Specifies whether the user allows the service provider to enforce this Profile Policy Rule (PPR)after being informed of its restrictions.
+Specifies whether the user allows the service provider to enforce this Profile Policy Rule (PPR) after being informed of its restrictions.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadConfiguration-isPprAllowed: boolean--><!--Device-DownloadConfiguration-isPprAllowed: boolean-End-->
 
@@ -62,7 +68,9 @@ Specifies whether to enable the profile after successful download.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadConfiguration-switchAfterDownload: boolean--><!--Device-DownloadConfiguration-switchAfterDownload: boolean-End-->
 

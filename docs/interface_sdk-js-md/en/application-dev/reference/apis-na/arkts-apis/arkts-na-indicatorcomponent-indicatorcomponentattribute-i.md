@@ -1,0 +1,254 @@
+# IndicatorComponentAttribute
+
+Defines the IndicatorComponent attribute functions.
+
+**Inheritance/Implementation:** IndicatorComponentAttribute extends CommonMethod
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface IndicatorComponentAttribute--><!--Device-unnamed-export declare interface IndicatorComponentAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## count
+
+```TypeScript
+count(totalCount: int | undefined): this
+```
+
+Sets the total number of indicator.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IndicatorComponentAttribute-count(totalCount: int | undefined): this--><!--Device-IndicatorComponentAttribute-count(totalCount: int | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| totalCount | int \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## initialIndex
+
+```TypeScript
+initialIndex(index: int | undefined): this
+```
+
+Called when the index value of the displayed subcomponent is set in the container.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IndicatorComponentAttribute-initialIndex(index: int | undefined): this--><!--Device-IndicatorComponentAttribute-initialIndex(index: int | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | int \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## loop
+
+```TypeScript
+loop(isLoop: boolean | undefined): this
+```
+
+Called when setting whether to turn on cyclic sliding.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IndicatorComponentAttribute-loop(isLoop: boolean | undefined): this--><!--Device-IndicatorComponentAttribute-loop(isLoop: boolean | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isLoop | boolean \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## onChange
+
+```TypeScript
+onChange(event: Callback<int> | undefined): this
+```
+
+Called when the index value changes.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IndicatorComponentAttribute-onChange(event: Callback<int> | undefined): this--><!--Device-IndicatorComponentAttribute-onChange(event: Callback<int> | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;int&gt; \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## setIndicatorComponentOptions
+
+```TypeScript
+setIndicatorComponentOptions(controller?: IndicatorComponentController): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-IndicatorComponentAttribute-setIndicatorComponentOptions(controller?: IndicatorComponentController): this--><!--Device-IndicatorComponentAttribute-setIndicatorComponentOptions(controller?: IndicatorComponentController): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| controller | [IndicatorComponentController](arkts-na-indicatorcomponent-indicatorcomponentcontroller-c.md) | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## style
+
+```TypeScript
+style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
+```
+
+Sets the indicator style.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IndicatorComponentAttribute-style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this--><!--Device-IndicatorComponentAttribute-style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| indicatorStyle | [DotIndicator](../../apis-arkui/arkts-components/arkts-arkui-dotindicator-c.md) \| [DigitIndicator](../../apis-arkui/arkts-components/arkts-arkui-digitindicator-c.md) \| undefined | Yes | the style value |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## vertical
+
+```TypeScript
+vertical(isVertical: boolean | undefined): this
+```
+
+Called when setting whether to slide vertically.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IndicatorComponentAttribute-vertical(isVertical: boolean | undefined): this--><!--Device-IndicatorComponentAttribute-vertical(isVertical: boolean | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isVertical | boolean \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Set indicatorComponent options.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IndicatorComponentAttribute-default--><!--Device-IndicatorComponentAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

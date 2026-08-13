@@ -2,7 +2,9 @@
 
 Describes the pre-downloaded resource information.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-interface ResourceInfo--><!--Device-cacheDownload-interface ResourceInfo-End-->
 
@@ -24,7 +26,9 @@ Size of a pre-downloaded resource after decompression, in bytes. If the value is
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceInfo-readonly size: long--><!--Device-ResourceInfo-readonly size: long-End-->
 

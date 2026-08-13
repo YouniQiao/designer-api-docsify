@@ -2,9 +2,11 @@
 
 自定义弹窗的状态。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-promptAction-enum CommonState--><!--Device-promptAction-enum CommonState-End-->
 
@@ -18,11 +20,15 @@ UNINITIALIZED = 0
 
 未初始化，控制器未与dialog绑定时。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonState-UNINITIALIZED = 0--><!--Device-CommonState-UNINITIALIZED = 0-End-->
 
@@ -36,11 +42,15 @@ INITIALIZED = 1
 
 已初始化，控制器与dialog绑定后。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonState-INITIALIZED = 1--><!--Device-CommonState-INITIALIZED = 1-End-->
 
@@ -54,11 +64,15 @@ APPEARING = 2
 
 显示中，dialog显示动画过程中。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonState-APPEARING = 2--><!--Device-CommonState-APPEARING = 2-End-->
 
@@ -72,11 +86,15 @@ APPEARED = 3
 
 已显示，dialog显示动画结束。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonState-APPEARED = 3--><!--Device-CommonState-APPEARED = 3-End-->
 
@@ -90,11 +108,15 @@ DISAPPEARING = 4
 
 消失中，dialog消失动画过程中。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonState-DISAPPEARING = 4--><!--Device-CommonState-DISAPPEARING = 4-End-->
 
@@ -108,11 +130,15 @@ DISAPPEARED = 5
 
 已消失，dialog消失动画结束后。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonState-DISAPPEARED = 5--><!--Device-CommonState-DISAPPEARED = 5-End-->
 

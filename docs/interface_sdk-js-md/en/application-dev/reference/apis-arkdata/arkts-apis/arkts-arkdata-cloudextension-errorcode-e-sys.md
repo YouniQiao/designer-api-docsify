@@ -2,9 +2,11 @@
 
 Enumerates the device-cloud sync states. Use the enum name rather than the enum value.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export enum ErrorCode--><!--Device-cloudExtension-export enum ErrorCode-End-->
 
@@ -20,9 +22,11 @@ SUCCESS = 0
 
 The device-cloud sync is successful.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-SUCCESS = 0--><!--Device-ErrorCode-SUCCESS = 0-End-->
 
@@ -38,9 +42,11 @@ UNKNOWN_ERROR = 1
 
 An unknown error occurs during the device-cloud sync process.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-UNKNOWN_ERROR = 1--><!--Device-ErrorCode-UNKNOWN_ERROR = 1-End-->
 
@@ -56,9 +62,11 @@ NETWORK_ERROR = 2
 
 A network error occurs during the device-cloud sync process.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-NETWORK_ERROR = 2--><!--Device-ErrorCode-NETWORK_ERROR = 2-End-->
 
@@ -74,9 +82,11 @@ CLOUD_DISABLED = 3
 
 Cloud sync is disabled.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-CLOUD_DISABLED = 3--><!--Device-ErrorCode-CLOUD_DISABLED = 3-End-->
 
@@ -90,11 +100,13 @@ Cloud sync is disabled.
 LOCKED_BY_OTHERS = 4
 ```
 
-The device-cloud sync of another device is being performed.The sync of the local device can be performed only when the device-cloud resources are available.
+The device-cloud sync of another device is being performed. The sync of the local device can be performed only when the device-cloud resources are available.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-LOCKED_BY_OTHERS = 4--><!--Device-ErrorCode-LOCKED_BY_OTHERS = 4-End-->
 
@@ -108,11 +120,13 @@ The device-cloud sync of another device is being performed.The sync of the local
 RECORD_LIMIT_EXCEEDED = 5
 ```
 
-The number of records or size of the data to be synced exceeds the maximum.The maximum value is configured on the cloud.
+The number of records or size of the data to be synced exceeds the maximum. The maximum value is configured on the cloud.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-RECORD_LIMIT_EXCEEDED = 5--><!--Device-ErrorCode-RECORD_LIMIT_EXCEEDED = 5-End-->
 
@@ -128,9 +142,11 @@ NO_SPACE_FOR_ASSET = 6
 
 The remaining cloud space is less than the size of the data to be synced.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-NO_SPACE_FOR_ASSET = 6--><!--Device-ErrorCode-NO_SPACE_FOR_ASSET = 6-End-->
 

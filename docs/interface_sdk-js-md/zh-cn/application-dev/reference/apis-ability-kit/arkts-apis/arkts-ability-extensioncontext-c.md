@@ -1,15 +1,16 @@
 # ExtensionContext
 
-ExtensionContext是[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)的上下文环境，继承自  
-[Context](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context)。ExtensionContext模块提供访问特定[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)的资源的能力。
+ExtensionContext是[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)的上下文环境，继承自 [Context](arkts-ability-context-c.md#Context)。 ExtensionContext模块提供访问特定[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)的资源的能力。
 
-**继承/实现关系：** ExtensionContext extends [Context](Context)
+**继承/实现关系：** ExtensionContext extends Context
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-declare class ExtensionContext extends Context--><!--Device-unnamed-declare class ExtensionContext extends Context-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class ExtensionContext--><!--Device-unnamed-declare class ExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,9 +24,11 @@ config: Configuration
 
 **类型：** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,9 +48,11 @@ currentHapModuleInfo: HapModuleInfo
 
 **类型：** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,9 +72,11 @@ extensionAbilityInfo: ExtensionAbilityInfo
 
 **类型：** [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

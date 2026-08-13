@@ -25,6 +25,8 @@ Indicates the system event type related to the screen lock management service. A
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-screenLock-type EventType =    'beginWakeUp'    | 'endWakeUp'    | 'beginScreenOn'    | 'endScreenOn'    | 'beginScreenOff'    | 'endScreenOff'    | 'unlockScreen'    | 'lockScreen'    | 'beginExitAnimation'    | 'beginSleep'    | 'endSleep'    | 'changeUser'    | 'screenlockEnabled'    | 'serviceRestart'    | 'strongAuthChanged'    | 'screenLockDisabledChanged'    | 'unlockPolicyChanged'--><!--Device-screenLock-type EventType =    'beginWakeUp'    | 'endWakeUp'    | 'beginScreenOn'    | 'endScreenOn'    | 'beginScreenOff'    | 'endScreenOff'    | 'unlockScreen'    | 'lockScreen'    | 'beginExitAnimation'    | 'beginSleep'    | 'endSleep'    | 'changeUser'    | 'screenlockEnabled'    | 'serviceRestart'    | 'strongAuthChanged'    | 'screenLockDisabledChanged'    | 'unlockPolicyChanged'-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock

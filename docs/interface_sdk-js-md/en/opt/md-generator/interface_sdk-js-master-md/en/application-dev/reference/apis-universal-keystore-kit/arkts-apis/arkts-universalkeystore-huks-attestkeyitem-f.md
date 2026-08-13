@@ -12,18 +12,11 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Attests a key. This API uses an asynchronous callback to return the result.
-
-&lt;!--RP6--&gt;  
-> **NOTE：**
-> 
-> The certificate chain generated during non-anonymous certificate key attestation may contain the device
-> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
-> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
-> policy, and destruction method in the privacy statement.
-&lt;!--RP6End--&gt;
+Attests a key. This API uses an asynchronous callback to return the result. &lt;!--RP6--&gt; > **NOTE：**> > The certificate chain generated during non-anonymous certificate key attestation may contain the device > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can > determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention > policy, and destruction method in the privacy statement. &lt;!--RP6End--&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ATTEST_KEY
 
@@ -43,17 +36,17 @@ Attests a key. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
 
 ## Examples
 
@@ -155,18 +148,11 @@ async function generateKeyThenAttestKey() {
 function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Attests a key. This API uses a promise to return the result.
-
-&lt;!--RP6--&gt;  
-> **NOTE：**
-> 
-> The certificate chain generated during non-anonymous certificate key attestation may contain the device
-> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
-> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
-> policy, and destruction method in the privacy statement.
-&lt;!--RP6End--&gt;
+Attests a key. This API uses a promise to return the result. &lt;!--RP6--&gt; > **NOTE：**> > The certificate chain generated during non-anonymous certificate key attestation may contain the device > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can > determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention > policy, and destruction method in the privacy statement. &lt;!--RP6End--&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ATTEST_KEY
 
@@ -191,17 +177,17 @@ Attests a key. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
 
 ## Examples
 

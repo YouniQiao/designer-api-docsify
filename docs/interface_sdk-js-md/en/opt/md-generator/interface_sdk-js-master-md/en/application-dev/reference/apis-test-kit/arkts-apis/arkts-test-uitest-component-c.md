@@ -1,8 +1,10 @@
 # Component
 
-Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component,scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
+Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection. All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Component--><!--Device-unnamed-declare class Component-End-->
 
@@ -22,7 +24,9 @@ clearText(): Promise<void>
 
 Clears the text information of a component. This API takes effect only for editable text components. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,8 +44,8 @@ Clears the text information of a component. This API takes effect only for edita
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -64,7 +68,9 @@ click(): Promise<void>
 
 Clicks this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,8 +88,8 @@ Clicks this component. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -109,7 +115,9 @@ doubleClick(): Promise<void>
 
 Double-clicks this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -127,8 +135,8 @@ Double-clicks this component. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -151,7 +159,9 @@ dragTo(target: Component): Promise<void>
 
 Drags a component to the target component. This method is valid only for components that can be dragged. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -175,9 +185,9 @@ Drags a component to the target component. This method is valid only for compone
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -205,7 +215,9 @@ getBounds(): Promise<Rect>
 
 Obtains the bounds information of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -223,8 +235,8 @@ Obtains the bounds information of this component. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -247,7 +259,9 @@ getBoundsCenter(): Promise<Point>
 
 Obtains the center point of the area occupied by this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -265,8 +279,8 @@ Obtains the center point of the area occupied by this component. This API uses a
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -289,9 +303,11 @@ getDescription(): Promise<string>
 
 Obtains the description of this component. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getDescription(): Promise<string>--><!--Device-Component-getDescription(): Promise<string>-End-->
 
@@ -307,8 +323,8 @@ Obtains the description of this component. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -331,9 +347,11 @@ getDisplayId(): Promise<number>
 
 Obtains the ID of the display to which the component belongs. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getDisplayId(): Promise<int>--><!--Device-Component-getDisplayId(): Promise<int>-End-->
 
@@ -349,8 +367,8 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -373,9 +391,11 @@ getHint(): Promise<string>
 
 Obtains the hint text of a component. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getHint(): Promise<string>--><!--Device-Component-getHint(): Promise<string>-End-->
 
@@ -391,8 +411,8 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -415,7 +435,9 @@ getId(): Promise<string>
 
 Obtains the ID of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -433,8 +455,8 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -455,12 +477,13 @@ async function demo() {
 getOriginalText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result. If the  
-[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](#getText) cannot.
+Obtains the text information of this component. This API uses a promise to return the result. If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](#getText) cannot.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getOriginalText(): Promise<string>--><!--Device-Component-getOriginalText(): Promise<string>-End-->
 
@@ -476,8 +499,8 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -498,16 +521,11 @@ async function demo() {
 getText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result.
+Obtains the text information of this component. This API uses a promise to return the result. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) > attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the > text information of the component. In this case, you can use > [Component.getOriginalText ()](#getOriginalText) instead.
 
-> **NOTE：**
-> 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)
-> attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the
-> text information of the component. In this case, you can use
-> [Component.getOriginalText ()](#getOriginalText) instead.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -525,8 +543,8 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -549,7 +567,9 @@ getType(): Promise<string>
 
 Obtains the type of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -567,8 +587,8 @@ Obtains the type of this component. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -591,7 +611,9 @@ inputText(text: string): Promise<void>
 
 Clears the original text in a component and inputs the specified text. This API takes effect only for editable text components. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -615,9 +637,9 @@ Clears the original text in a component and inputs the specified text. This API 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -643,9 +665,11 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 Inputs text to a component in a specified text input mode. This API takes effect only for editable text components. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>--><!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>-End-->
 
@@ -668,10 +692,10 @@ Inputs text to a component in a specified text input mode. This API takes effect
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -694,7 +718,9 @@ isCheckable(): Promise<boolean>
 
 Obtains the checkable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -712,8 +738,8 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -740,7 +766,9 @@ isChecked(): Promise<boolean>
 
 Obtains the checked status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -758,8 +786,8 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -786,7 +814,9 @@ isClickable(): Promise<boolean>
 
 Obtains the clickable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -804,8 +834,8 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -832,7 +862,9 @@ isEnabled(): Promise<boolean>
 
 Obtains the enabled status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -850,8 +882,8 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -878,7 +910,9 @@ isFocused(): Promise<boolean>
 
 Checks whether a component is focused. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -896,8 +930,8 @@ Checks whether a component is focused. This API uses a promise to return the res
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -924,7 +958,9 @@ isLongClickable(): Promise<boolean>
 
 Obtains the clickable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -942,8 +978,8 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -970,7 +1006,9 @@ isScrollable(): Promise<boolean>
 
 Obtains the scrollable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -988,8 +1026,8 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1016,7 +1054,9 @@ isSelected(): Promise<boolean>
 
 Obtains the selected status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1034,8 +1074,8 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1062,7 +1102,9 @@ longClick(): Promise<void>
 
 Long-clicks this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1080,8 +1122,8 @@ Long-clicks this component. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1102,9 +1144,11 @@ async function demo() {
 pinchIn(scale: number): Promise<void>
 ```
 
-Pinches in a component at the specified scale. This method is valid only for components that support scaling.This API uses a promise to return the result.
+Pinches in a component at the specified scale. This method is valid only for components that support scaling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1128,9 +1172,9 @@ Pinches in a component at the specified scale. This method is valid only for com
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1151,9 +1195,11 @@ async function demo() {
 pinchOut(scale: number): Promise<void>
 ```
 
-Pinches out a component at the specified scale. This method is valid only for components that support scaling.This API uses a promise to return the result.
+Pinches out a component at the specified scale. This method is valid only for components that support scaling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1177,9 +1223,9 @@ Pinches out a component at the specified scale. This method is valid only for co
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1204,6 +1250,8 @@ Scrolls on this component to search for the target component. This API is applic
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Component-scrollSearch(on: On): Promise<Component>--><!--Device-Component-scrollSearch(on: On): Promise<Component>-End-->
@@ -1226,9 +1274,9 @@ Scrolls on this component to search for the target component. This API is applic
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1256,6 +1304,8 @@ Scrolls on this component to search for the target component. This API is applic
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>--><!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>-End-->
@@ -1280,9 +1330,9 @@ Scrolls on this component to search for the target component. This API is applic
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1297,6 +1347,44 @@ async function demo() {
 }
 ```
 
+## scrollSearch
+
+```TypeScript
+scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component | null>
+```
+
+Scroll on this [Component](#Component)to find matched [Component](#Component),applicable to scrollable one.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: int): Promise<Component | null>--><!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: int): Promise<Component | null>-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes |
+| vertical | boolean | No |
+| offset | number | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+
 ## scrollToBottom
 
 ```TypeScript
@@ -1305,7 +1393,9 @@ scrollToBottom(speed?: number): Promise<void>
 
 Scrolls to the bottom of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1329,9 +1419,9 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1354,7 +1444,9 @@ scrollToTop(speed?: number): Promise<void>
 
 Scrolls to the top of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1378,9 +1470,9 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 

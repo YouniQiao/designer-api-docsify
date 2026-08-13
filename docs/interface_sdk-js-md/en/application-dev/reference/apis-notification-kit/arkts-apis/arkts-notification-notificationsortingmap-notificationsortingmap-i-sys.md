@@ -2,9 +2,11 @@
 
 The **NotificationSortingMap** module provides APIs for defining the sorting information of active notifications in all subscribed notifications.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationSortingMap--><!--Device-unnamed-export interface NotificationSortingMap-End-->
 
@@ -22,9 +24,11 @@ Hash codes for notification sorting.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSortingMap-readonly sortedHashCode: Array<string>--><!--Device-NotificationSortingMap-readonly sortedHashCode: Array<string>-End-->
 
@@ -42,9 +46,11 @@ Array of notification sorting information.
 
 **Type:** Record&lt;string, [NotificationSorting](arkts-notification-notificationsorting-notificationsorting-i-sys.md)&gt;
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSortingMap-readonly sortings: Record<string, NotificationSorting>--><!--Device-NotificationSortingMap-readonly sortings: Record<string, NotificationSorting>-End-->
 

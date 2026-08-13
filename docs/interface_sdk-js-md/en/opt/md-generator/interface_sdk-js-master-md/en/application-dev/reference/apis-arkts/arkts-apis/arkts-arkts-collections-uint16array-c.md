@@ -1,15 +1,10 @@
 # Uint16Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](./arkts/@arkts.collections:collections).
-
-> **NOTE：**
-> 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
-> **Decorator**: \@Sendable
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md#@arkts.collections). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
 
-**Decorator:** @Sendable
+**Deprecated since:** -1
 
 <!--Device-collections-class Uint16Array--><!--Device-collections-class Uint16Array-End-->
 
@@ -31,6 +26,8 @@ Returns an iterator that iterates over numbers.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Uint16Array-[Symbol.iterator](): IterableIterator<number>-End-->
@@ -41,13 +38,13 @@ Returns an iterator that iterates over numbers.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## at
 
@@ -58,6 +55,8 @@ at(index: number): number | undefined
 Returns the element at the given index. If no element is found, **undefined** is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -81,8 +80,8 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## constructor
 
@@ -94,6 +93,8 @@ A constructor used to create an empty ArkTS Uint16Array.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-constructor()--><!--Device-Uint16Array-constructor()-End-->
@@ -104,7 +105,7 @@ A constructor used to create an empty ArkTS Uint16Array.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## constructor
 
@@ -115,6 +116,8 @@ constructor(length: number)
 A constructor used to create an ArkTS Uint16Array of a given length.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -132,7 +135,7 @@ A constructor used to create an ArkTS Uint16Array of a given length.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## constructor
 
@@ -143,6 +146,8 @@ constructor(elements: Iterable<number>)
 A constructor that creates an ArkTS Uint16Array from an iterable object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,7 +165,7 @@ A constructor that creates an ArkTS Uint16Array from an iterable object.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## constructor
 
@@ -172,6 +177,8 @@ A constructor that creates an ArkTS Uint16Array from an array-like object or Ark
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Uint16Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
@@ -182,13 +189,13 @@ A constructor that creates an ArkTS Uint16Array from an array-like object or Ark
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| array | [ArrayLike](../../apis-default/arkts-apis/arkts-lib-es5-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | Yes |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-lib-es5-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## constructor
 
@@ -199,6 +206,8 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 A constructor that creates an ArkTS Uint16Array from an ArrayBuffer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -211,14 +220,14 @@ A constructor that creates an ArkTS Uint16Array from an ArrayBuffer.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [buffer](#buffer) | ArrayBuffer | Yes |
-| [byteOffset](#byteoffset) | number | No |
+| [byteOffset](#byteOffset) | number | No |
 | [length](#length) | number | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## copyWithin
 
@@ -229,6 +238,8 @@ copyWithin(target: number, start: number, end?: number): Uint16Array
 Copies elements within a given range from this ArkTS Uint16Array to another position in sequence.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -254,8 +265,8 @@ Copies elements within a given range from this ArkTS Uint16Array to another posi
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## entries
 
@@ -267,6 +278,8 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-entries(): IterableIterator<[number, number]>--><!--Device-Uint16Array-entries(): IterableIterator<[number, number]>-End-->
@@ -277,14 +290,14 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## every
 
@@ -295,6 +308,8 @@ every(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean
 Checks whether all elements in this ArkTS Uint16Array meet a given condition.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -318,8 +333,8 @@ Checks whether all elements in this ArkTS Uint16Array meet a given condition.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## fill
 
@@ -330,6 +345,8 @@ fill(value: number, start?: number, end?: number): Uint16Array
 Fills all elements in a given range in this ArkTS Uint16Array with a value.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -355,8 +372,8 @@ Fills all elements in a given range in this ArkTS Uint16Array with a value.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## filter
 
@@ -367,6 +384,8 @@ filter(predicate: TypedArrayPredicateFn<number, Uint16Array>): Uint16Array
 Returns a new ArkTS Uint16Array that contains all elements that meet the given condition.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -390,8 +409,8 @@ Returns a new ArkTS Uint16Array that contains all elements that meet the given c
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## find
 
@@ -402,6 +421,8 @@ find(predicate: TypedArrayPredicateFn<number, Uint16Array>): number | undefined
 Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -425,8 +446,8 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## findIndex
 
@@ -437,6 +458,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint16Array>): number
 Returns the index of the first element that passes a test provided by a callback function. If none of the elements pass the test, **-1** is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -460,8 +483,8 @@ Returns the index of the first element that passes a test provided by a callback
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## forEach
 
@@ -472,6 +495,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint16Array>): void
 Calls a callback function for each element in this ArkTS Uint16Array.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -489,8 +514,8 @@ Calls a callback function for each element in this ArkTS Uint16Array.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## from
 
@@ -502,6 +527,8 @@ Creates an ArkTS Uint16Array from an array-like or iterator object.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-static from(arrayLike: ArrayLike<number>): Uint16Array--><!--Device-Uint16Array-static from(arrayLike: ArrayLike<number>): Uint16Array-End-->
@@ -512,7 +539,7 @@ Creates an ArkTS Uint16Array from an array-like or iterator object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-default/arkts-apis/arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -530,6 +557,8 @@ Creates an ArkTS Uint16Array from an array-like object.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Uint16Array--><!--Device-Uint16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Uint16Array-End-->
@@ -540,7 +569,7 @@ Creates an ArkTS Uint16Array from an array-like object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-default/arkts-apis/arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes |
 
 **Return value:**
@@ -558,6 +587,8 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 Creates an ArkTS Uint16Array from an iterator object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -588,6 +619,8 @@ Checks whether elements are contained in this ArkTS Uint16Array.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Uint16Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
@@ -611,8 +644,8 @@ Checks whether elements are contained in this ArkTS Uint16Array.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## indexOf
 
@@ -620,10 +653,11 @@ Checks whether elements are contained in this ArkTS Uint16Array.
 indexOf(searchElement: number, fromIndex?: number): number
 ```
 
-Returns the index of the first occurrence of a value in this ArkTS Uint16Array. If the value is not found,  
-**-1** is returned.
+Returns the index of the first occurrence of a value in this ArkTS Uint16Array. If the value is not found, **-1** is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -648,8 +682,8 @@ Returns the index of the first occurrence of a value in this ArkTS Uint16Array. 
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## join
 
@@ -660,6 +694,8 @@ join(separator?: string): string
 Concatenates all elements in this ArkTS Uint16Array into a string, with a given separator.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -683,8 +719,8 @@ Concatenates all elements in this ArkTS Uint16Array into a string, with a given 
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## keys
 
@@ -696,6 +732,8 @@ Returns an iterator object that contains the key (index) of each element in this
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-keys(): IterableIterator<number>--><!--Device-Uint16Array-keys(): IterableIterator<number>-End-->
@@ -706,14 +744,14 @@ Returns an iterator object that contains the key (index) of each element in this
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## lastIndexOf
 
@@ -724,6 +762,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 Obtains the index of the last occurrence of the specified value in this ArkTS Uint16Array.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -748,8 +788,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Ui
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## map
 
@@ -757,9 +797,11 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Ui
 map(callbackFn: TypedArrayMapCallback<number, Uint16Array>): Uint16Array
 ```
 
-Applies a callback function to each element in this ArkTS Uint16Array and uses the result to create an ArkTS Uint16Array.
+Applies a callback function to each element in this ArkTS Uint16Array and uses the result to create an ArkTS Uint 16Array.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -783,8 +825,8 @@ Applies a callback function to each element in this ArkTS Uint16Array and uses t
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## of
 
@@ -795,6 +837,8 @@ static of(...items: number[]): Uint16Array
 Creates an ArkTS Uint16Array with a variable number of parameters.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -824,6 +868,8 @@ Applies a reduce function on each element in this ArkTS Uint16Array and returns 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number--><!--Device-Uint16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number-End-->
@@ -846,8 +892,8 @@ Applies a reduce function on each element in this ArkTS Uint16Array and returns 
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduce
 
@@ -858,6 +904,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>, initia
 Applies a reduce function for each element in this ArkTS Uint16Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -882,8 +930,8 @@ Applies a reduce function for each element in this ArkTS Uint16Array, receives a
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduce
 
@@ -894,6 +942,8 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialV
 Applies a reduce function for each element in this ArkTS Uint16Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -918,8 +968,8 @@ Applies a reduce function for each element in this ArkTS Uint16Array, receives a
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduceRight
 
@@ -930,6 +980,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Ar
 Reversely traverses this ArkTS Uint16Array, applies a reduce function for each element in the array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -954,8 +1006,8 @@ Reversely traverses this ArkTS Uint16Array, applies a reduce function for each e
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduceRight
 
@@ -966,6 +1018,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): 
 Reversely traverses this ArkTS Uint16Array, applies a reduce function on each element in the array, and returns the final reduction result.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -989,8 +1043,8 @@ Reversely traverses this ArkTS Uint16Array, applies a reduce function on each el
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reverse
 
@@ -1001,6 +1055,8 @@ reverse(): Uint16Array
 Reverses this ArkTS Uint16Array.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1018,8 +1074,8 @@ Reverses this ArkTS Uint16Array.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## set
 
@@ -1031,6 +1087,8 @@ Writes the elements in an array-like object to the given start position in seque
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Uint16Array-set(array: ArrayLike<number>, offset?: number): void-End-->
@@ -1041,15 +1099,15 @@ Writes the elements in an array-like object to the given start position in seque
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| array | [ArrayLike](../../apis-default/arkts-apis/arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |
 | offset | number | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## slice
 
@@ -1060,6 +1118,8 @@ slice(start?: number, end?: number): Uint16Array
 Selects a range of elements in this ArkTS Uint16Array to create an ArkTS Uint16Array.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1084,8 +1144,8 @@ Selects a range of elements in this ArkTS Uint16Array to create an ArkTS Uint16A
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## some
 
@@ -1096,6 +1156,8 @@ some(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean
 Checks whether any element in this ArkTS Uint16Array meets a given condition.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1119,8 +1181,8 @@ Checks whether any element in this ArkTS Uint16Array meets a given condition.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## sort
 
@@ -1131,6 +1193,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint16Array
 Sorts elements in this ArkTS Uint16Array and returns the sorted ArkTS Uint16Array.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1154,8 +1218,8 @@ Sorts elements in this ArkTS Uint16Array and returns the sorted ArkTS Uint16Arra
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## subarray
 
@@ -1166,6 +1230,8 @@ subarray(begin?: number, end?: number): Uint16Array
 Truncates an array from a specified position and returns a new ArkTS Uint16Array based on the same ArkTS ArrayBuffer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1190,8 +1256,8 @@ Truncates an array from a specified position and returns a new ArkTS Uint16Array
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## toLocaleString
 
@@ -1202,6 +1268,8 @@ toLocaleString(): string
 Generates a string of digits that matches the cultural conventions of the current system locale. Each element converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1219,8 +1287,8 @@ Generates a string of digits that matches the cultural conventions of the curren
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## toString
 
@@ -1231,6 +1299,8 @@ toString(): string
 Converts an ArkTS Uint16Array into a string.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1248,8 +1318,8 @@ Converts an ArkTS Uint16Array into a string.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## values
 
@@ -1261,6 +1331,8 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-values(): IterableIterator<number>--><!--Device-Uint16Array-values(): IterableIterator<number>-End-->
@@ -1271,14 +1343,14 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## BYTES_PER_ELEMENT
 
@@ -1292,27 +1364,11 @@ Number of bytes occupied by each element in the ArkTS Uint16Array.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint16Array-static readonly BYTES_PER_ELEMENT: number-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## [index: number]
-
-```TypeScript
-[index: number]: number
-```
-
-Returns the item at that index.
-
-**Type:** number
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Uint16Array-[index: number]: number--><!--Device-Uint16Array-[index: number]: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1327,6 +1383,8 @@ Bottom-layer buffer used by an ArkTS Uint16Array.
 **Type:** ArrayBuffer
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1346,6 +1404,8 @@ Number of bytes occupied by an ArkTS Uint16Array.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-readonly byteLength: number--><!--Device-Uint16Array-readonly byteLength: number-End-->
@@ -1364,6 +1424,8 @@ Offset between the ArkTS Uint16Array and the start position of the ArrayBuffer.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint16Array-readonly byteOffset: number--><!--Device-Uint16Array-readonly byteOffset: number-End-->
@@ -1381,6 +1443,8 @@ Number of elements in an ArkTS Uint16Array.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

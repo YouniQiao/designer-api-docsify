@@ -2,9 +2,11 @@
 
 Describes the status of {@code Progress}.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-enum ProgressCode--><!--Device-relationalStore-enum ProgressCode-End-->
 
@@ -18,9 +20,11 @@ SUCCESS = 0
 
 The device-cloud sync is successful.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-SUCCESS = 0--><!--Device-ProgressCode-SUCCESS = 0-End-->
 
@@ -34,9 +38,11 @@ UNKNOWN_ERROR = 1
 
 An unknown error occurs during the device-cloud sync.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-UNKNOWN_ERROR = 1--><!--Device-ProgressCode-UNKNOWN_ERROR = 1-End-->
 
@@ -50,9 +56,11 @@ NETWORK_ERROR = 2
 
 A network error occurs during the device-cloud sync.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-NETWORK_ERROR = 2--><!--Device-ProgressCode-NETWORK_ERROR = 2-End-->
 
@@ -66,9 +74,11 @@ CLOUD_DISABLED = 3
 
 The cloud is unavailable.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-CLOUD_DISABLED = 3--><!--Device-ProgressCode-CLOUD_DISABLED = 3-End-->
 
@@ -80,13 +90,13 @@ The cloud is unavailable.
 LOCKED_BY_OTHERS = 4
 ```
 
-The device-cloud sync of another device is being performed.
+The device-cloud sync of another device is being performed. The sync of the local device can be performed only when the cloud resources are available.
 
-The sync of the local device can be performed only when the cloud resources are available.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-LOCKED_BY_OTHERS = 4--><!--Device-ProgressCode-LOCKED_BY_OTHERS = 4-End-->
 
@@ -100,9 +110,11 @@ RECORD_LIMIT_EXCEEDED = 5
 
 The number of records or size of the data to be synced exceeds the maximum. The maximum value is configured on the cloud.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-RECORD_LIMIT_EXCEEDED = 5--><!--Device-ProgressCode-RECORD_LIMIT_EXCEEDED = 5-End-->
 
@@ -116,9 +128,11 @@ NO_SPACE_FOR_ASSET = 6
 
 The remaining cloud space is less than the size of the data to be synced.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-NO_SPACE_FOR_ASSET = 6--><!--Device-ProgressCode-NO_SPACE_FOR_ASSET = 6-End-->
 
@@ -132,9 +146,11 @@ BLOCKED_BY_NETWORK_STRATEGY = 7
 
 The device-cloud sync is blocked due to the network strategy.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressCode-BLOCKED_BY_NETWORK_STRATEGY = 7--><!--Device-ProgressCode-BLOCKED_BY_NETWORK_STRATEGY = 7-End-->
 
@@ -150,7 +166,9 @@ STOP_CLOUD_SYNC: means cloud synchronization has been stopped.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

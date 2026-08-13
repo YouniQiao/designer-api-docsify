@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.request.agent.Task.on)
+**Substitutes:** on
 
 <!--Device-unnamed-export interface OnDownloadCompleteResponse--><!--Device-unnamed-export interface OnDownloadCompleteResponse-End-->
 
@@ -30,7 +30,7 @@ URI of the download file.
 
 **Deprecated since:** 9
 
-**Substitutes:** [saveas](ohos.request.agent.Task.config.saveas)
+**Substitutes:** saveas
 
 <!--Device-OnDownloadCompleteResponse-uri: string--><!--Device-OnDownloadCompleteResponse-uri: string-End-->
 

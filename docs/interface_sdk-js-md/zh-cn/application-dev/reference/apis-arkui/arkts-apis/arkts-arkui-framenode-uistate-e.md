@@ -2,11 +2,11 @@
 
 多态样式状态枚举，用于处理多态样式。
 
-.0.0
+**起始版本：** 20
 
-**起始版本：** 26.0.0
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum UIState--><!--Device-unnamed-export enum UIState-End-->
 
@@ -20,11 +20,15 @@ NORMAL = 0
 
 正常状态。
 
-**起始版本：** 26.0.0
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIState-NORMAL = 0--><!--Device-UIState-NORMAL = 0-End-->
 
@@ -38,11 +42,15 @@ PRESSED = 1 << 0
 
 按下状态。
 
-**起始版本：** 26.0.0
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIState-PRESSED = 1 << 0--><!--Device-UIState-PRESSED = 1 << 0-End-->
 
@@ -56,11 +64,15 @@ FOCUSED = 1 << 1
 
 获焦状态。
 
-**起始版本：** 26.0.0
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIState-FOCUSED = 1 << 1--><!--Device-UIState-FOCUSED = 1 << 1-End-->
 
@@ -74,11 +86,15 @@ DISABLED = 1 << 2
 
 禁用状态。
 
-**起始版本：** 26.0.0
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIState-DISABLED = 1 << 2--><!--Device-UIState-DISABLED = 1 << 2-End-->
 
@@ -90,15 +106,17 @@ DISABLED = 1 << 2
 SELECTED = 1 << 3
 ```
 
-选中状态。
+选中状态。 仅特定的组件支持此状态：Checkbox、Radio、Toggle、List、Grid、MenuItem。
 
-仅特定的组件支持此状态：Checkbox、Radio、Toggle、List、Grid、MenuItem。
+**起始版本：** 20
 
-**起始版本：** 26.0.0
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIState-SELECTED = 1 << 3--><!--Device-UIState-SELECTED = 1 << 3-End-->
 
@@ -114,9 +132,13 @@ HOVERED = 1 << 4
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIState-HOVERED = 1 << 4--><!--Device-UIState-HOVERED = 1 << 4-End-->
 

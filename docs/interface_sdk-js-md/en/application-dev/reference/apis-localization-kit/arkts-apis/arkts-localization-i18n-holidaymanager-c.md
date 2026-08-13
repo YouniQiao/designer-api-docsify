@@ -1,10 +1,12 @@
 # HolidayManager
 
-Provide some functions to manage holidays in a country or region. Partly follows the RFC2445 standard.
+Provides holiday data parsing capabilities, such as determining holidays and obtaining the holiday list of a specified year.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class HolidayManager--><!--Device-i18n-export class HolidayManager-End-->
 
@@ -22,13 +24,15 @@ import { i18n } from '@kit.LocalizationKit';
 constructor(icsPath: String)
 ```
 
-Creates a HolidayManager object for parsing holiday data.
+Creates a **HolidayManager** object for parsing holiday data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayManager-constructor(icsPath: String)--><!--Device-HolidayManager-constructor(icsPath: String)-End-->
 
@@ -38,14 +42,29 @@ Creates a HolidayManager object for parsing holiday data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icsPath | String | Yes | Path of the .ics file with the read permission granted for applications. |
+| icsPath | String | Yes | Path of the **.ics** file with the read permission granted for applications. iCalendar is a standard Internet calendar format for storing calendar data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // Replace /system/lib/US.ics with the actual ICS file path.
+  let holidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.HolidayManager failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getHolidayInfoItemArray
 
@@ -57,9 +76,11 @@ Obtains the holiday information list of the specified year.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayManager-getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>--><!--Device-HolidayManager-getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>-End-->
 
@@ -69,20 +90,20 @@ Obtains the holiday information list of the specified year.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | No | &lt;br&gt;The value should be an integer. - Specified year, for example, 2023.&lt;br&gt;The default value is the current year. |
+| year | int | No | Specified year, for example, 2023. The default value is the current year. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
+| Array&lt;[HolidayInfoItem](../../apis-na/arkts-apis/arkts-na-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## isHoliday
 
@@ -94,9 +115,11 @@ Determines whether the specified date is a holiday.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayManager-isHoliday(date?: Date): boolean--><!--Device-HolidayManager-isHoliday(date?: Date): boolean-End-->
 
@@ -106,17 +129,34 @@ Determines whether the specified date is a holiday.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | No | Date and time. Note: The month starts from 0. For example, 0 indicates January. The default value is the current date. |
+| date | Date | No | Date and time. Note: The month starts from **0**. For example, **0** indicates January. The default value is the current date. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the specified date is a holiday, and false otherwise. |
+| boolean | true** if the specified date is a holiday, and **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // Replace /system/lib/US.ics with the actual ICS file path.
+  let holidayManager: i18n.HolidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+  let isHoliday: boolean = holidayManager.isHoliday();
+  isHoliday = holidayManager.isHoliday(new Date(2023, 5, 25)); // The date is 2023.06.25.
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call holidayManager.isHoliday failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

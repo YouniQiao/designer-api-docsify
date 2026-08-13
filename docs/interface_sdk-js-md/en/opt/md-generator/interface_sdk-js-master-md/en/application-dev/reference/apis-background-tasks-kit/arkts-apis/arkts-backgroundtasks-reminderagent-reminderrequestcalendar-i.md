@@ -10,7 +10,7 @@ Defines a reminder for a calendar event.
 
 **Substitutes:** [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#ReminderRequestCalendar)
 
-<!--Device-reminderAgent-interface ReminderRequestCalendar extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestCalendar extends ReminderRequest-End-->
+<!--Device-reminderAgent-interface ReminderRequestCalendar--><!--Device-reminderAgent-interface ReminderRequestCalendar-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -34,7 +34,7 @@ Reminder time.
 
 **Deprecated since:** 9
 
-**Substitutes:** [dateTime](reminderAgentManager.ReminderRequestCalendar.dateTime)
+**Substitutes:** dateTime
 
 <!--Device-ReminderRequestCalendar-dateTime: LocalDateTime--><!--Device-ReminderRequestCalendar-dateTime: LocalDateTime-End-->
 
@@ -54,7 +54,7 @@ Date on which the reminder repeats.
 
 **Deprecated since:** 9
 
-**Substitutes:** [repeatDays](reminderAgentManager.ReminderRequestCalendar.repeatDays)
+**Substitutes:** repeatDays
 
 <!--Device-ReminderRequestCalendar-repeatDays?: Array<number>--><!--Device-ReminderRequestCalendar-repeatDays?: Array<number>-End-->
 
@@ -74,7 +74,7 @@ Month in which the reminder repeats.
 
 **Deprecated since:** 9
 
-**Substitutes:** [repeatMonths](reminderAgentManager.ReminderRequestCalendar.repeatMonths)
+**Substitutes:** repeatMonths
 
 <!--Device-ReminderRequestCalendar-repeatMonths?: Array<number>--><!--Device-ReminderRequestCalendar-repeatMonths?: Array<number>-End-->
 

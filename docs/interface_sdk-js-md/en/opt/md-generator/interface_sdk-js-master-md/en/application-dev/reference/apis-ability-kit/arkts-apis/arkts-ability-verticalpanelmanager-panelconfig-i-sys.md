@@ -2,7 +2,9 @@
 
 Indicates the panel config
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-verticalPanelManager-interface PanelConfig--><!--Device-verticalPanelManager-interface PanelConfig-End-->
 
@@ -22,18 +24,13 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 sourceAppInfo: Record<string, string>
 ```
 
-Indicates the info about source app
+Indicates the info about source app &lt;p&gt;**NOTE：**&lt;br&gt;1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the system automatically changes the values to the actual values during data transfer. -SOURCE_APP_BUNDLE_NAME: bundle name of the caller. The value is a string. -SOURCE_APP_MODULE_NAME: module name of the caller. The value is a string. -SOURCE_APP_ABILITY_NAME: ability name of the caller. The value is a string. -SOURCE_APP_WINDOW_ID: the window ID of the caller. The value is a string. -SOURCE_APP_SCREEN_MODE: the screen mode of the split screen. The value is a string. The value is "1".
 
-&lt;p&gt;**NOTE：**&lt;br&gt;1. The values of the following keys are assigned by the system. Manual settings do not take effect,since the system automatically changes the values to the actual values during data transfer.
--SOURCE_APP_BUNDLE_NAME: bundle name of the caller. The value is a string.
--SOURCE_APP_MODULE_NAME: module name of the caller. The value is a string.
--SOURCE_APP_ABILITY_NAME: ability name of the caller. The value is a string.
--SOURCE_APP_WINDOW_ID: the window ID of the caller. The value is a string.
--SOURCE_APP_SCREEN_MODE: the screen mode of the split screen. The value is a string. The value is "1".
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,7 +50,9 @@ The type of vertical domain
 
 **Type:** [VerticalType](arkts-ability-verticalpanelmanager-verticaltype-e-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

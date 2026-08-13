@@ -4,6 +4,8 @@ Represents the return value of the callback that intercepts the soft keyboard st
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface WebKeyboardOptions--><!--Device-unnamed-declare interface WebKeyboardOptions-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ Builder of a custom keyboard. This parameter is required when **useSystemKeyboar
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebKeyboardOptions-customKeyboard?: CustomBuilder--><!--Device-WebKeyboardOptions-customKeyboard?: CustomBuilder-End-->
@@ -32,13 +36,13 @@ Builder of a custom keyboard. This parameter is required when **useSystemKeyboar
 enterKeyType?: number
 ```
 
-Type of the **Enter** key on the system soft keyboard. For details about the value range, see  
-[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#EnterKeyType). This parameter is optional and the default value is **UNSPECIFIED**. This parameter is valid only when **useSystemKeyboard** is set to **true** and  
-**enterKeyType** is set to a valid value.
+Type of the **Enter** key on the system soft keyboard. For details about the value range, see [EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#EnterKeyType). This parameter is optional and the default value is **UNSPECIFIED**. This parameter is valid only when **useSystemKeyboard** is set to **true** and **enterKeyType** is set to a valid value.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -57,6 +61,8 @@ Whether to use the system's default soft keyboard.
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

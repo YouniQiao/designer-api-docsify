@@ -15,9 +15,11 @@ function queryParticipantsByInvitation(
     ): void
 ```
 
-Queries the participants based on the sharing invitation code.This API uses an asynchronous callback to return the result.
+Queries the participants based on the sharing invitation code. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sharing-function queryParticipantsByInvitation(      invitationCode: string,      callback: AsyncCallback<Result<Array<Participant>>>    ): void--><!--Device-sharing-function queryParticipantsByInvitation(      invitationCode: string,      callback: AsyncCallback<Result<Array<Participant>>>    ): void-End-->
 
@@ -36,9 +38,9 @@ Queries the participants based on the sharing invitation code.This API uses an a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -61,9 +63,11 @@ cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', 
 function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>
 ```
 
-Queries the participants based on the sharing invitation code.This API uses a promise to return the result.
+Queries the participants based on the sharing invitation code. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>--><!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>-End-->
 
@@ -87,9 +91,9 @@ Queries the participants based on the sharing invitation code.This API uses a pr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

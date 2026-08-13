@@ -12,6 +12,8 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1--><!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1-End-->
@@ -35,7 +37,7 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 

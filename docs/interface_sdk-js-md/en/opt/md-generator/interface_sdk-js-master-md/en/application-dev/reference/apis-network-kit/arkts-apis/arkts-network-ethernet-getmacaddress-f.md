@@ -16,6 +16,8 @@ Get the ethernet mac address list.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 <!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>--><!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>-End-->
@@ -32,9 +34,9 @@ Get the ethernet mac address list.
 
 | Error Code ID |
 | --- |
-| [2200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [2201005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201005-device-information-not-exist) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
 
 ## Examples
 

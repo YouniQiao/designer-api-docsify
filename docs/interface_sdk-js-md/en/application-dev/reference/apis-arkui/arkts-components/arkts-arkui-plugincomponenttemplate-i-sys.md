@@ -6,6 +6,8 @@ PluginComponentTemplate
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface PluginComponentTemplate--><!--Device-unnamed-interface PluginComponentTemplate-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Bundle name of the provider ability.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-PluginComponentTemplate-bundleName: string--><!--Device-PluginComponentTemplate-bundleName: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -45,6 +49,8 @@ Component template name.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-PluginComponentTemplate-source: string--><!--Device-PluginComponentTemplate-source: string-End-->
 

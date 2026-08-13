@@ -14,7 +14,9 @@ function getSecurityLabel(path: string): Promise<string>
 
 Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>--><!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>-End-->
 
@@ -66,7 +68,9 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 
 Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void--><!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void-End-->
 

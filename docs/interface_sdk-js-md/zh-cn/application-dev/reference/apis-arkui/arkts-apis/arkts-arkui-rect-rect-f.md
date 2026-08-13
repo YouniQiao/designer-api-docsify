@@ -3,6 +3,7 @@
 ## Rect
 
 ```TypeScript
+@ComponentBuilder
 export declare function Rect(
     options?: RectOptions | RoundedRectOptions
 ): RectAttribute
@@ -14,9 +15,11 @@ export declare function Rect(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute--><!--Device-unnamed-export declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ export declare function Rect(
 ## Rect
 
 ```TypeScript
+@Builder
 export declare function Rect(
     style: CustomBuilderT<RectAttribute>,
 ): RectAttribute
@@ -47,11 +51,11 @@ Defines Rect Component.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute--><!--Device-unnamed-export declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute--><!--Device-unnamed-@Builderexport declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Rect Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
 
 **返回值：**
 

@@ -2,7 +2,9 @@
 
 字体描述符信息。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-text-interface FontDescriptor--><!--Device-text-interface FontDescriptor-End-->
 
@@ -20,6 +22,8 @@ copyright?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-copyright?: string--><!--Device-FontDescriptor-copyright?: string-End-->
@@ -36,7 +40,9 @@ fontFamily?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -56,6 +62,8 @@ fontFeatures?: Array<string>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -74,7 +82,9 @@ fontSubfamily?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -92,7 +102,9 @@ fullName?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -112,6 +124,8 @@ index?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -130,7 +144,9 @@ italic?: number
 
 **类型：** number
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -149,6 +165,8 @@ languages?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,6 +188,8 @@ license?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-license?: string--><!--Device-FontDescriptor-license?: string-End-->
@@ -187,6 +207,8 @@ localFamilyName?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -206,6 +228,8 @@ localFullName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-localFullName?: string--><!--Device-FontDescriptor-localFullName?: string-End-->
@@ -223,6 +247,8 @@ localPostscriptName?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -242,6 +268,8 @@ localSubFamilyName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-localSubFamilyName?: string--><!--Device-FontDescriptor-localSubFamilyName?: string-End-->
@@ -260,6 +288,8 @@ manufacture?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-manufacture?: string--><!--Device-FontDescriptor-manufacture?: string-End-->
@@ -276,7 +306,9 @@ monoSpace?: boolean
 
 **类型：** boolean
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -294,7 +326,9 @@ path?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -312,7 +346,9 @@ postScriptName?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -330,7 +366,9 @@ symbolic?: boolean
 
 **类型：** boolean
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -350,6 +388,8 @@ trademark?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-trademark?: string--><!--Device-FontDescriptor-trademark?: string-End-->
@@ -367,6 +407,8 @@ variationAxisRecords?: Array<FontVariationAxis>
 **类型：** Array&lt;[FontVariationAxis](arkts-arkgraphics2d-text-fontvariationaxis-i.md)&gt;
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -386,6 +428,8 @@ variationInstanceRecords?: Array<FontVariationInstance>
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-variationInstanceRecords?: Array<FontVariationInstance>--><!--Device-FontDescriptor-variationInstanceRecords?: Array<FontVariationInstance>-End-->
@@ -404,6 +448,8 @@ version?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FontDescriptor-version?: string--><!--Device-FontDescriptor-version?: string-End-->
@@ -420,7 +466,9 @@ weight?: FontWeight
 
 **类型：** FontWeight
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -438,7 +486,9 @@ width?: number
 
 **类型：** number
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

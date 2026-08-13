@@ -1,12 +1,14 @@
 # Vector2T
 
-Defines a vector with two T type values.
+Represents a vector of the T type that contains two values: x and y.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export interface Vector2T<T>--><!--Device-unnamed-export interface Vector2T<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Vector2T--><!--Device-unnamed-interface Vector2T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,19 @@ Defines a vector with two T type values.
 x: T
 ```
 
-Value for x-axis of the vector.
+X coordinate value of the vector.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Vector2T-x: T--><!--Device-Vector2T-x: T-End-->
 
@@ -36,15 +42,19 @@ Value for x-axis of the vector.
 y: T
 ```
 
-Value for y-axis of the vector.
+Y coordinate value of the vector.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Vector2T-y: T--><!--Device-Vector2T-y: T-End-->
 

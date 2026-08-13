@@ -10,7 +10,9 @@ Unregister a callback function for vibrator plugin or unplug events.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-vibrator-function offVibratorStateChange(callback?: Callback<VibratorStatusEvent>): void--><!--Device-vibrator-function offVibratorStateChange(callback?: Callback<VibratorStatusEvent>): void-End-->
 
@@ -20,13 +22,13 @@ Unregister a callback function for vibrator plugin or unplug events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 否 | The callback function to be removed from the event listener. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 否 | The callback function to be removed from the event listener. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 

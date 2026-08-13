@@ -1,10 +1,4 @@
-# @ohos.atomicservice.HalfScreenLaunchComponent(Defines the halfScreen launch component)
-
-###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](./@internal/component/ets/common) are not supported.
-
+# @ohos.atomicservice.HalfScreenLaunchComponent
 
 ## Modules to Import
 

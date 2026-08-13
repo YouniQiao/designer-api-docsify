@@ -6,7 +6,9 @@ export type Scale3 = Vec3
 
 3D缩放信息.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export type Scale3 = Vec3--><!--Device-unnamed-export type Scale3 = Vec3-End-->
 

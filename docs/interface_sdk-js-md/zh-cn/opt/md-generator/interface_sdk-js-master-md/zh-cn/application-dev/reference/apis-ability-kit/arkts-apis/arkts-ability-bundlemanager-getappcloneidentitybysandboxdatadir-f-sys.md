@@ -8,7 +8,9 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 
 根据应用的沙箱目录名称获取应用的身份信息，包括应用包名和分身索引信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity--><!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity-End-->
 

@@ -2,7 +2,9 @@
 
 Enumerates the moving direction of cursor
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export enum Direction--><!--Device-inputMethod-export enum Direction-End-->
 
@@ -16,7 +18,9 @@ CURSOR_UP = 1
 
 Cursor moves up
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_UP = 1--><!--Device-Direction-CURSOR_UP = 1-End-->
 
@@ -30,7 +34,9 @@ CURSOR_DOWN
 
 Cursor moves down
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_DOWN--><!--Device-Direction-CURSOR_DOWN-End-->
 
@@ -44,7 +50,9 @@ CURSOR_LEFT
 
 Cursor moves left
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_LEFT--><!--Device-Direction-CURSOR_LEFT-End-->
 
@@ -58,7 +66,9 @@ CURSOR_RIGHT
 
 Cursor moves right
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_RIGHT--><!--Device-Direction-CURSOR_RIGHT-End-->
 

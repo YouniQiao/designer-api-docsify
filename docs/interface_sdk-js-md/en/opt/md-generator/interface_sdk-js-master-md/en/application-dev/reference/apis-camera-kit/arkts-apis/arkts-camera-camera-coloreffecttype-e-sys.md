@@ -2,7 +2,9 @@
 
 Enumerates the color effect types.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum ColorEffectType--><!--Device-camera-enum ColorEffectType-End-->
 
@@ -18,7 +20,9 @@ NORMAL = 0
 
 Regular color effect.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorEffectType-NORMAL = 0--><!--Device-ColorEffectType-NORMAL = 0-End-->
 
@@ -34,7 +38,9 @@ BRIGHT = 1
 
 Bright color effect.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorEffectType-BRIGHT = 1--><!--Device-ColorEffectType-BRIGHT = 1-End-->
 
@@ -50,7 +56,9 @@ SOFT = 2
 
 Soft color effect.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorEffectType-SOFT = 2--><!--Device-ColorEffectType-SOFT = 2-End-->
 
@@ -66,7 +74,9 @@ BLACK_WHITE = 3
 
 Black and white color effect.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorEffectType-BLACK_WHITE = 3--><!--Device-ColorEffectType-BLACK_WHITE = 3-End-->
 

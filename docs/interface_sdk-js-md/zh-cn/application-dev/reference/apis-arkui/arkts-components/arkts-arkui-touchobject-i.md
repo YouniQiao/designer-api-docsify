@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface TouchObject--><!--Device-unnamed-declare interface TouchObject-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ getCurrentLocalPosition?(): Coordinate2D
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,15 +46,15 @@ getCurrentLocalPosition?(): Coordinate2D
 displayX: number
 ```
 
-触摸点在当前应用屏幕坐标系中的X坐标。
-
-单位：vp
+触摸点在当前应用屏幕坐标系中的X坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,15 +70,15 @@ displayX: number
 displayY: number
 ```
 
-触摸点在当前应用屏幕坐标系中的Y坐标。
-
-单位：vp
+触摸点在当前应用屏幕坐标系中的Y坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,17 +94,15 @@ displayY: number
 globalDisplayX?: number
 ```
 
-触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,17 +118,15 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,6 +150,8 @@ hand?: InteractionHand
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -164,15 +166,15 @@ hand?: InteractionHand
 height?: number
 ```
 
-当前手指按压区域的高度。
-
-单位：vp
+当前手指按压区域的高度。 单位：vp
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -196,6 +198,8 @@ id: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TouchObject-id: number--><!--Device-TouchObject-id: number-End-->
@@ -208,15 +212,15 @@ id: number
 pressedTime?: number
 ```
 
-当前手指按下的时间。
-
-单位：ns
+当前手指按下的时间。 单位：ns
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,15 +236,15 @@ pressedTime?: number
 pressure?: number
 ```
 
-当前手指按压的压力值。
-
-取值范围：[0,65535)，压力越大，值越大。
+当前手指按压的压力值。 取值范围：[0,65535)，压力越大，值越大。
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -256,9 +260,7 @@ pressure?: number
 screenX: number
 ```
 
-触摸点在当前应用窗口坐标系中的X坐标。
-
-单位：vp
+触摸点在当前应用窗口坐标系中的X坐标。 单位：vp
 
 **类型：** number
 
@@ -280,9 +282,7 @@ screenX: number
 screenY: number
 ```
 
-触摸点在当前应用窗口坐标系中的Y坐标。
-
-单位：vp
+触摸点在当前应用窗口坐标系中的Y坐标。 单位：vp
 
 **类型：** number
 
@@ -312,6 +312,8 @@ type: TouchType
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TouchObject-type: TouchType--><!--Device-TouchObject-type: TouchType-End-->
@@ -324,15 +326,15 @@ type: TouchType
 width?: number
 ```
 
-当前手指按压区域的宽度。
-
-单位：vp
+当前手指按压区域的宽度。 单位：vp
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,15 +350,15 @@ width?: number
 windowX: number
 ```
 
-触摸点在当前应用窗口坐标系中的X坐标。
-
-单位：vp
+触摸点在当前应用窗口坐标系中的X坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -372,15 +374,15 @@ windowX: number
 windowY: number
 ```
 
-触摸点在当前应用窗口坐标系中的Y坐标。
-
-单位：vp
+触摸点在当前应用窗口坐标系中的Y坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -396,15 +398,15 @@ windowY: number
 x: number
 ```
 
-触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
-
-单位：vp
+触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -418,15 +420,15 @@ x: number
 y: number
 ```
 
-触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
-
-单位：vp
+触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,9 +2,11 @@
 
 Enum for usage type used in capture session.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum UsageType--><!--Device-camera-enum UsageType-End-->
 
@@ -20,9 +22,11 @@ BOKEH = 0
 
 Bokeh usage type.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsageType-BOKEH = 0--><!--Device-UsageType-BOKEH = 0-End-->
 

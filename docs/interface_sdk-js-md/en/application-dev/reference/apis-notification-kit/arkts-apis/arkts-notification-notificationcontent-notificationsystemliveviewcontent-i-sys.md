@@ -1,18 +1,16 @@
 # NotificationSystemLiveViewContent
 
-Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent.
-
-> **NOTE：**
-> 
-> The actual display effect depends on the device capabilities and the notification center UI style.
+Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent. > **NOTE：**> > The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface NotificationSystemLiveViewContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,9 +24,11 @@ Live view buttons (a maximum of three buttons are supported). This parameter is 
 
 **Type:** Array&lt;[NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)&gt;
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSystemLiveViewContent-cardButtons?: Array<NotificationIconButton>--><!--Device-NotificationSystemLiveViewContent-cardButtons?: Array<NotificationIconButton>-End-->
 
@@ -46,9 +46,11 @@ Live view types. The default value is **LIVE_VIEW_ACTIVITY**.
 
 **Type:** [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSystemLiveViewContent-liveViewType?: LiveViewTypes--><!--Device-NotificationSystemLiveViewContent-liveViewType?: LiveViewTypes-End-->
 

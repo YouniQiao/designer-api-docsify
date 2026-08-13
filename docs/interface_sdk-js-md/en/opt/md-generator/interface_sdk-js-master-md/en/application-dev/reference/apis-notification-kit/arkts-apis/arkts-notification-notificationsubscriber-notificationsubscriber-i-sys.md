@@ -2,7 +2,9 @@
 
 Provides callback methods for subscribers to receive and cancel notifications.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationSubscriber--><!--Device-unnamed-export interface NotificationSubscriber-End-->
 
@@ -18,7 +20,11 @@ onBadgeChanged?:(data: BadgeNumberCallbackData) => void
 
 Listens for changes of the application badge number.
 
-**Since:** 10
+**Type:** (data: BadgeNumberCallbackData) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onBadgeChanged?:(data: BadgeNumberCallbackData) => void--><!--Device-NotificationSubscriber-onBadgeChanged?:(data: BadgeNumberCallbackData) => void-End-->
 
@@ -26,31 +32,25 @@ Listens for changes of the application badge number.
 
 **System API:** This is a system API.
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [BadgeNumberCallbackData](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md) | Yes |
-
-## Examples
+## onBadgeEnabledChanged
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onBadgeChanged: (data) => {
-    console.info("bundle: ", data.bundle);
-    console.info("uid: ", data.uid);
-    console.info("badgeNumber: ", data.badgeNumber);
-  }
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
+onBadgeEnabledChanged?: BadgeEnabledChangedCallback
 ```
+
+Returns the changes of the enabling state of the application's badge.
+
+**Type:** [BadgeEnabledChangedCallback](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback--><!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
 
 ## onBatchCancel
 
@@ -60,41 +60,17 @@ onBatchCancel?: (data: Array<SubscribeCallbackData>) => void
 
 Called for batch deletion.
 
-**Since:** 11
+**Type:** (data: Array&lt;[SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)&gt;) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onBatchCancel?: (data: Array<SubscribeCallbackData>) => void--><!--Device-NotificationSubscriber-onBatchCancel?: (data: Array<SubscribeCallbackData>) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | Array&lt;[SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)&gt; | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onBatchCancelCallBack = (data: Array<notificationSubscribe.SubscribeCallbackData>) => {
-  console.info('===> onBatchCancel in test');
-  let req = data[0].request;
-  console.info('===> onBatchCancel callback req.id:' + req.id);
-};
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onBatchCancel: onBatchCancelCallBack
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onCancel
 
@@ -104,41 +80,17 @@ onCancel?:(data: SubscribeCallbackData) => void
 
 Called when a notification is canceled.
 
-**Since:** 7
+**Type:** (data: SubscribeCallbackData) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onCancel?:(data: SubscribeCallbackData) => void--><!--Device-NotificationSubscriber-onCancel?:(data: SubscribeCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onCancelCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info('===> onCancel in test');
-  let req = data.request;
-  console.info('===> onCancel callback req.id:' + req.id);
-}
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onCancel: onCancelCallback
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onConnect
 
@@ -148,33 +100,17 @@ onConnect?:() => void
 
 Called when subscription is complete.
 
-**Since:** 7
+**Type:** () =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onConnect?:() => void--><!--Device-NotificationSubscriber-onConnect?:() => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onConnectCallback = () => {
-  console.info('===> onConnect in test');
-}
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConnect: onConnectCallback
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onConsume
 
@@ -184,41 +120,17 @@ onConsume?:(data: SubscribeCallbackData) => void
 
 Called when a new notification is received.
 
-**Since:** 7
+**Type:** (data: SubscribeCallbackData) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onConsume?:(data: SubscribeCallbackData) => void--><!--Device-NotificationSubscriber-onConsume?:(data: SubscribeCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info('===> onConsume in test');
-  let req = data.request;
-  console.info('===> onConsume callback req.id:' + req.id);
-};
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onDestroy
 
@@ -228,33 +140,17 @@ onDestroy?:() => void
 
 Called when the service is disconnected.
 
-**Since:** 7
+**Type:** () =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onDestroy?:() => void--><!--Device-NotificationSubscriber-onDestroy?:() => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onDestroyCallback = () => {
-  console.info('===> onDestroy in test');
-}
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDestroy: onDestroyCallback
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onDisconnect
 
@@ -264,48 +160,17 @@ onDisconnect?:() => void
 
 Called when unsubscription is complete.
 
-**Since:** 7
+**Type:** () =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onDisconnect?:() => void--><!--Device-NotificationSubscriber-onDisconnect?:() => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let unsubscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("unsubscribeCallback");
-  }
-};
-
-let onConnectCallback = () => {
-  console.info('===> onConnect in test');
-}
-let onDisconnectCallback = () => {
-  console.info('===> onDisconnect in test');
-}
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConnect: onConnectCallback,
-  onDisconnect: onDisconnectCallback
-};
-
-// The onConnect callback is invoked when subscription to the notification is complete.
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-// The onDisconnect callback is invoked when unsubscription to the notification is complete.
-notificationSubscribe.unsubscribe(subscriber, unsubscribeCallback);
-```
 
 ## onDoNotDisturbChanged
 
@@ -315,40 +180,17 @@ onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void
 
 Called when the DND time settings are changed.
 
-**Since:** 11
+**Type:** (mode: notificationManager.DoNotDisturbDate) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void--><!--Device-NotificationSubscriber-onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | notificationManager.DoNotDisturbDate | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe, notificationManager } from '@kit.NotificationKit';
-
-let onDoNotDisturbChangedCallback = (mode: notificationManager.DoNotDisturbDate) => {
-  console.info(`===> onDoNotDisturbChanged: ${JSON.stringify(mode)}`);
-}
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDoNotDisturbChanged: onDoNotDisturbChangedCallback
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onDoNotDisturbDateChange
 
@@ -357,6 +199,8 @@ onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 ```
 
 Called when the DND time settings are changed.
+
+**Type:** (mode: notification.DoNotDisturbDate) =&gt; void
 
 **Since:** 8
 
@@ -370,37 +214,6 @@ Called when the DND time settings are changed.
 
 **System API:** This is a system API.
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | notification.DoNotDisturbDate | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import Notification from '@ohos.notification';
-
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("subscribeCallback");
-  }
-};
-
-let onDoNotDisturbDateChangeCallback = (mode: Notification.DoNotDisturbDate) => {
-  console.info('===> onDoNotDisturbDateChange:' + mode);
-}
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDoNotDisturbDateChange: onDoNotDisturbDateChangeCallback
-};
-
-notificationSubscribe.subscribe(subscriber, subscribeCallback);
-```
-
 ## onEnabledNotificationChanged
 
 ```TypeScript
@@ -409,41 +222,17 @@ onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) =>
 
 Listens for the notification enabled state changes.
 
-**Since:** 8
+**Type:** (callbackData: EnabledNotificationCallbackData) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackData | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onEnabledNotificationChangedCallback = (callbackData: notificationSubscribe.EnabledNotificationCallbackData) => {
-  console.info("bundle: ", callbackData.bundle);
-  console.info("uid: ", callbackData.uid);
-  console.info("enable: ", callbackData.enable);
-};
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onEnabledNotificationChanged: onEnabledNotificationChangedCallback
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onEnabledPriorityByBundleChanged
 
@@ -453,36 +242,17 @@ onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByB
 
 Called when the enabling state of the application priority notification changes.
 
+**Type:** (callbackData: EnabledPriorityNotificationByBundleCallbackData) =&gt; void
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackData | [EnabledPriorityNotificationByBundleCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md) | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onEnabledPriorityByBundleChanged: (callbackData: notificationSubscribe.EnabledPriorityNotificationByBundleCallbackData) => {
-    console.info(`onEnabledPriorityByBundleChanged: ${JSON.stringify(callbackData)}`);
-  }
-};
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onEnabledPriorityChanged
 
@@ -492,36 +262,17 @@ onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackDat
 
 Called when the enabling state of the priority notification changes.
 
+**Type:** (callbackData: EnabledPriorityNotificationCallbackData) =&gt; void
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackData | [EnabledPriorityNotificationCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationcallbackdata-i-sys.md) | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onEnabledPriorityChanged: (callbackData: notificationSubscribe.EnabledPriorityNotificationCallbackData) => {
-    console.info(`onEnabledPriorityChanged: ${JSON.stringify(callbackData)}`);
-  }
-};
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onEnabledSilentReminderChanged
 
@@ -531,7 +282,11 @@ onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback
 
 Returns the changes of the enabling state of the application's silent reminder.
 
+**Type:** [EnabledSilentReminderChangedCallback](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md)
+
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -547,10 +302,13 @@ Returns the changes of the enabling state of the application's silent reminder.
 onNotificationSwitchChanged?: NotificationSwitchChangedCallback
 ```
 
-Returns the changes of the notification switch status set by  
-[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setNotificationSwitch).
+Returns the changes of the notification switch status set by [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setNotificationSwitch-(System-API)).
+
+**Type:** [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -568,7 +326,11 @@ onSystemUpdate?: SystemUpdateCallback
 
 Returns notification information containing the system property value.
 
+**Type:** [SystemUpdateCallback](arkts-notification-systemupdatecallback-t-sys.md)
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -586,51 +348,13 @@ onUpdate?:(data: NotificationSortingMap) => void
 
 Called when notification sorting is updated. Not supported currently.
 
-**Since:** 7
+**Type:** (data: NotificationSortingMap) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscriber-onUpdate?:(data: NotificationSortingMap) => void--><!--Device-NotificationSubscriber-onUpdate?:(data: NotificationSortingMap) => void-End-->
-
-**System capability:** SystemCapability.Notification.Notification
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [NotificationSortingMap](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md) | Yes |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onUpdate: (map) => {
-    console.info(`===> onUpdateCallback map: ${JSON.stringify(map)}`);
-  }
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## onBadgeEnabledChanged
-
-```TypeScript
-onBadgeEnabledChanged?: BadgeEnabledChangedCallback
-```
-
-Returns the changes of the enabling state of the application's badge.
-
-**Type:** [BadgeEnabledChangedCallback](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md)
-
-**Since:** 12
-
-<!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback--><!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

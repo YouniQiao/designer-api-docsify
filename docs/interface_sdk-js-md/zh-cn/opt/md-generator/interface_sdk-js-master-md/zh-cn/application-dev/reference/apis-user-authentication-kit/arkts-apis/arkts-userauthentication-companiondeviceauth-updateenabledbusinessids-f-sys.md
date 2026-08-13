@@ -6,11 +6,11 @@
 function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: number[]): Promise<void>
 ```
 
-更新指定伴随设备模板支持的业务范围。用于修改已注册模板的启用业务ID列表，从而控制该模板可参与的业务场景。使用Promise异步回调。
-
-生效机制：更新立即生效，下一次认证按新的业务范围判断，无需重启应用或重新认证。
+更新指定伴随设备模板支持的业务范围。用于修改已注册模板的启用业务ID列表，从而控制该模板可参与的业务场景。使用Promise异步回调。 生效机制：更新立即生效，下一次认证按新的业务范围判断，无需重启应用或重新认证。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.USE_USER_IDM
 
@@ -39,11 +39,11 @@ function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: nu
 
 | 错误码ID |
 | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
-| [32600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600003-业务id无效) |
-| [32600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-模板未找到) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600003](../errorcode-useriam.md#32600003-业务id无效) |
+| [32600002](../errorcode-useriam.md#32600002-模板未找到) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

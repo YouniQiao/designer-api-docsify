@@ -1,14 +1,12 @@
 # PhotoPermissionType (System API)
 
-Enumerates the types of permissions for accessing media assets.
+Enumerates the types of permissions for accessing media assets. The permissions include temporary read permission and persistent read permission. The temporary read permission will be removed when the application is dead, while the persistent read permission will not. For the same media asset and application, the persistent read permission overwrites the temporary read permission. The temporary read permission does not overwrite the persistent read permission.
 
-The permissions include temporary read permission and persistent read permission. The temporary read permission will be removed when the application is dead, while the persistent read permission will not.
+**Since:** 23
 
-For the same media asset and application, the persistent read permission overwrites the temporary read permission. The temporary read permission does not overwrite the persistent read permission.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum PhotoPermissionType--><!--Device-photoAccessHelper-enum PhotoPermissionType-End-->
 
@@ -24,9 +22,11 @@ TEMPORARY_READ_IMAGEVIDEO = 0
 
 Temporary read permission.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoPermissionType-TEMPORARY_READ_IMAGEVIDEO = 0--><!--Device-PhotoPermissionType-TEMPORARY_READ_IMAGEVIDEO = 0-End-->
 
@@ -42,9 +42,11 @@ PERSISTENT_READ_IMAGEVIDEO = 1
 
 Persistent read permission.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoPermissionType-PERSISTENT_READ_IMAGEVIDEO = 1--><!--Device-PhotoPermissionType-PERSISTENT_READ_IMAGEVIDEO = 1-End-->
 

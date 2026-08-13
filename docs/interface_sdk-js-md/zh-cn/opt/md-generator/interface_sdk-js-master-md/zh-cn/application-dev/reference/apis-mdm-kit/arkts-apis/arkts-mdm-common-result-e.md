@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-common-export enum Result--><!--Device-common-export enum Result-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ SUCCESS = 0
 应用安装成功。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ FAIL = -1
 应用安装失败。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

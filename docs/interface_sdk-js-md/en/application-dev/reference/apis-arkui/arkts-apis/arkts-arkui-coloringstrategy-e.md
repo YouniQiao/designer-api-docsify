@@ -6,6 +6,8 @@ Enumerates the coloring strategies.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ColoringStrategy--><!--Device-unnamed-declare enum ColoringStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Enumerates the coloring strategies.
 INVERT = 'invert'
 ```
 
-The foreground colors are the inverse of the component background colors. This strategy is only applicable when set within the [foregroundColor](CommonMethod#foregroundColor(value: ResourceColor | ColoringStrategy)) attribute.
+The foreground colors are the inverse of the component background colors. This strategy is only applicable when set within the foregroundColor attribute.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,12 +40,13 @@ The foreground colors are the inverse of the component background colors. This s
 AVERAGE = 'average'
 ```
 
-The shadow colors of the component are the average color obtained from the component background shadow area. This strategy is only applicable when set within the   
-[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) attribute whose input parameter type is ShadowOptions.
+The shadow colors of the component are the average color obtained from the component background shadow area. This strategy is only applicable when set within the shadow attribute whose input parameter type is ShadowOptions.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,12 +62,13 @@ The shadow colors of the component are the average color obtained from the compo
 PRIMARY = 'primary'
 ```
 
-The shadow colors of the component are the primary color obtained from the component background shadow area. This strategy is only applicable when set within the   
-[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) attribute whose input parameter type is ShadowOptions.
+The shadow colors of the component are the primary color obtained from the component background shadow area. This strategy is only applicable when set within the shadow attribute whose input parameter type is ShadowOptions.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

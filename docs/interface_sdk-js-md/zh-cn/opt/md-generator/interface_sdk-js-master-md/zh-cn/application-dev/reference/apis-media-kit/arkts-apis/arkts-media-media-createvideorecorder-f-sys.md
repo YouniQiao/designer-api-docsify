@@ -6,9 +6,11 @@
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void-End-->
 
@@ -26,8 +28,8 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 错误码ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -49,12 +51,46 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 ## createVideoRecorder
 
 ```TypeScript
+function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void
+```
+
+该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined & gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+
+## createVideoRecorder
+
+```TypeScript
 function createVideoRecorder(): Promise<VideoRecorder>
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>-End-->
 
@@ -72,8 +108,8 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 | 错误码ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -92,3 +128,35 @@ media.createVideoRecorder().then((video: media.VideoRecorder) => {
   console.error(`video catchCallback, error message:${error.message}`);
 });
 ```
+
+
+## createVideoRecorder
+
+```TypeScript
+function createVideoRecorder(): Promise<VideoRecorder | undefined>
+```
+
+该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-media-function createVideoRecorder(): Promise<VideoRecorder | undefined>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder | undefined>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

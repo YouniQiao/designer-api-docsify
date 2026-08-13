@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-remoteDevice-enum PairingType--><!--Device-remoteDevice-enum PairingType-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ NO_PASSKEY_CONFIRMATION = 0
 如果没有通行密钥，用户需要接受或拒绝配对请求。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ PAIRING_TYPE_PASSCODE = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1--><!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1-End-->
@@ -49,6 +55,8 @@ PAIRING_TYPE_NUMBER_COMPARE = 2
 用户需要比较两台设备上显示的数字。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,17 +1,10 @@
 # @ohos.bundle.bundleResourceManager
 
-The module provides APIs for obtaining resource information, including  
-[BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo) and  
-[LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md#LauncherAbilityResourceInfo).
+The module provides APIs for obtaining resource information, including [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo-(System-API)) and [LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md#LauncherAbilityResourceInfo-(System-API)). > **NOTE：**> > Starting from API version 12, this module supports query of icons and names of disabled applications and > applications installed by all users. > > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> Starting from API version 12, this module supports query of icons and names of disabled applications and
-> applications installed by all users.
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace bundleResourceManager--><!--Device-unnamed-declare namespace bundleResourceManager-End-->
 
@@ -32,17 +25,17 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getallbundleresourceinfo) |
-| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getallbundleresourceinfo-1) |
-| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo) |
-| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo-1) |
-| [getAllUninstalledBundleResourceInfo](arkts-ability-bundleresourcemanager-getalluninstalledbundleresourceinfo-f-sys.md#getalluninstalledbundleresourceinfo) |
-| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo) |
-| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-1) |
-| [getExtensionAbilityResourceInfo](arkts-ability-bundleresourcemanager-getextensionabilityresourceinfo-f-sys.md#getextensionabilityresourceinfo) |
-| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo) |
-| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo-1) |
-| [getLauncherAbilityResourceInfoList](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfolist-f-sys.md#getlauncherabilityresourceinfolist) |
+| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getAllBundleResourceInfo-(System-API)) |
+| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getAllBundleResourceInfo-(System-API)) |
+| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getAllLauncherAbilityResourceInfo-(System-API)) |
+| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getAllLauncherAbilityResourceInfo-(System-API)) |
+| [getAllUninstalledBundleResourceInfo](arkts-ability-bundleresourcemanager-getalluninstalledbundleresourceinfo-f-sys.md#getAllUninstalledBundleResourceInfo-(System-API)) |
+| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-(System-API)) |
+| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-(System-API)) |
+| [getExtensionAbilityResourceInfo](arkts-ability-bundleresourcemanager-getextensionabilityresourceinfo-f-sys.md#getExtensionAbilityResourceInfo-(System-API)) |
+| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo-(System-API)) |
+| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo-(System-API)) |
+| [getLauncherAbilityResourceInfoList](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfolist-f-sys.md#getLauncherAbilityResourceInfoList-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

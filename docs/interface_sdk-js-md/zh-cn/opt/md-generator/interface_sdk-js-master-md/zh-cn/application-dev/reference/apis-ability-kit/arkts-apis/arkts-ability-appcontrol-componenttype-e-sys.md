@@ -2,7 +2,9 @@
 
 标识功能组件类型。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appControl-export enum ComponentType--><!--Device-appControl-export enum ComponentType-End-->
 
@@ -18,7 +20,9 @@ UI_ABILITY = 1
 
 UI基础功能类型。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ComponentType-UI_ABILITY = 1--><!--Device-ComponentType-UI_ABILITY = 1-End-->
 
@@ -34,7 +38,9 @@ UI_EXTENSION = 2
 
 UI扩展能力类型。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ComponentType-UI_EXTENSION = 2--><!--Device-ComponentType-UI_EXTENSION = 2-End-->
 

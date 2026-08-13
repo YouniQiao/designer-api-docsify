@@ -14,7 +14,9 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 
 Obtains the onscreen content when a window is displayed on the screen.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SCREEN_CONTENT
 
@@ -40,11 +42,11 @@ Obtains the onscreen content when a window is displayed on the screen.
 
 | Error Code ID |
 | --- |
-| [34000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-onScreen.md#34000006-request-timeout) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [34000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-onScreen.md#34000004-page-not-ready) |
-| [34000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-unsupported-application-or-page) |
-| [34000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-onScreen.md#34000003-invalid-window-id) |
-| [34000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-service-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [34000006](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000006-request-timeout) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [34000004](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000004-page-not-ready) |
+| [34000002](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-unsupported-application-or-page) |
+| [34000003](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000003-invalid-window-id) |
+| [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-service-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

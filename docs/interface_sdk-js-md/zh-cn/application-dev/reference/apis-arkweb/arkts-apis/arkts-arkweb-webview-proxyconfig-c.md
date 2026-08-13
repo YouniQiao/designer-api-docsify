@@ -2,9 +2,11 @@
 
 The ProxyConfig used by applyProxyOverride.
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-webview-class ProxyConfig--><!--Device-webview-class ProxyConfig-End-->
 
@@ -16,11 +18,15 @@ The ProxyConfig used by applyProxyOverride.
 bypassHostnamesWithoutPeriod(): void
 ```
 
-Hostnames without a period in them (and that are not IP literals) will skip the proxy and connect the server directly.Examples: "abc", "local", "some-domain".
+主机名中不包含句点（且不是IP字面量）的主机名将跳过代理，直接连接到服务器。示例："abc"、"local"、"some-domain"。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void--><!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void-End-->
 
@@ -32,11 +38,15 @@ Hostnames without a period in them (and that are not IP literals) will skip the 
 clearImplicitRules(): void
 ```
 
-By default, certain hostnames implicitly bypass the proxy if they are link-local IPs, or localhost addresses. For instance hostnames matching any of (non-exhaustive list): localhost *.localhost [::1] 127.0.0.1/8 169.254/16 [FE80::]/10Call this function to override the default behavior and force localhost and link-local URLs to be sent through the proxy.
+默认情况下，某些主机名如果属于链路本地 IP 或 localhost 地址，则会自动绕过代理。 例如，匹配以下任意条件（非详尽列表）的主机名：localhost、*.localhost、[::1]、127.0.0.1/8、169.254/16、[FE80::]/10。 调用此函数可覆盖默认行为，并强制将 localhost 和链路本地 URL 通过代理发送。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-clearImplicitRules(): void--><!--Device-ProxyConfig-clearImplicitRules(): void-End-->
 
@@ -48,13 +58,15 @@ By default, certain hostnames implicitly bypass the proxy if they are link-local
 enableReverseBypass(reverse: boolean): void
 ```
 
-Reverse the bypass rules.
+反转bypass规则。 若为 false，所有URL都将使用代理设置，除非URL匹配了绕过规则。 若为 true，仅绕过列表中的URL会使用代理，其余所有URL都将直接连接。
 
-If false all URLs will use proxy settings except URLs match the bypass rules.If true only URLs in the bypass list will use proxy, and all other URLs will be connected to directly.
+**起始版本：** 15
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void--><!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void-End-->
 
@@ -64,13 +76,13 @@ If false all URLs will use proxy settings except URLs match the bypass rules.If 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reverse | boolean | 是 | If reverse the bypass rule. |
+| reverse | boolean | 是 | 参数值默认是false，表示与[insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertBypassRule)中的 bypassRule匹配的URL会绕过代理，参数值为true时，表示与[insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertBypassRule)中的bypassRule 匹配的URL会使用代理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## getBypassRules
 
@@ -78,11 +90,15 @@ If false all URLs will use proxy settings except URLs match the bypass rules.If 
 getBypassRules(): Array<string>
 ```
 
-Returns the bypass rules.
+获取不使用代理的URL列表。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-getBypassRules(): Array<string>--><!--Device-ProxyConfig-getBypassRules(): Array<string>-End-->
 
@@ -92,7 +108,7 @@ Returns the bypass rules.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | The bypass rules. |
+| Array&lt;string&gt; | 不使用代理的URL列表。 |
 
 ## getProxyRules
 
@@ -100,11 +116,15 @@ Returns the bypass rules.
 getProxyRules(): Array<ProxyRule>
 ```
 
-Returns the proxy rules.
+获取代理规则。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>--><!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>-End-->
 
@@ -114,7 +134,7 @@ Returns the proxy rules.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | The proxy rules. |
+| Array&lt;[ProxyRule](../../apis-na/arkts-apis/arkts-na-webview-proxyrule-c.md)&gt; | 代理规则。 |
 
 ## insertBypassRule
 
@@ -122,11 +142,15 @@ Returns the proxy rules.
 insertBypassRule(bypassRule: string): void
 ```
 
-Insert a bypass rule that indicates URLs that should skip the override proxy and connect the server directly instead.These maybe URLs or IP addresses and wildcards are supported. e.g. " *.example.com" means that requests to"https://www.example.com" and "http://test.example.com" will connect the server directly.
+插入一个旁路规则，该规则指示哪些URL应跳过覆盖代理，直接连接到服务器。 这些可能是URL或IP地址，并且支持通配符。例如，"*.example.com" 表示对以下地址的请求： "https://www.example.com"和"http://test.example.com"将直接连接服务器。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void--><!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void-End-->
 
@@ -136,13 +160,13 @@ Insert a bypass rule that indicates URLs that should skip the override proxy and
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bypassRule | string | 是 | The bypass rule. |
+| bypassRule | string | 是 | 与bypassRule匹配的URL会绕过代理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## insertDirectRule
 
@@ -150,11 +174,15 @@ Insert a bypass rule that indicates URLs that should skip the override proxy and
 insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 ```
 
-Insert a proxy rule that indicates URLs that match the schemeFilter will connect the server directly.
+插入一条代理规则，指明符合schemeFilter条件的URL将直接连接到服务器。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void-End-->
 
@@ -164,13 +192,13 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。&lt;br&gt;默认值：MATCH_ALL_SCHEMES。 &lt;br&gt;传入 undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## insertProxyRule
 
@@ -178,16 +206,15 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
-Insert a proxy rule which indicates that requests matching the schemeFilter should use an override proxy, all requests will use the proxy rule if schemeFilter is null.
+插入一条代理规则，与schemeFilter匹配的URL都会使用指定代理。如果schemeFilter为空，所有URL都将使用指定代理。 use the proxy rule if schemeFilter is null. 代理的格式为[scheme://]host[:port]。Scheme是可选的，如果存在，必须为 HTTP、HTTPS 或 SOCKS。Scheme默认为 HTTP。 host可以是带括号的 IPv6 字面量、IPv4 字面量，或者一个或多个由点分隔的标签。port是可选的，默认为 HTTP 的 80、 HTTPS 的 443 和 SOCKS 的 1080。 例如 example.com host: example.com https://example.com scheme: https host: example.com example.com:8888 host: example.com port: 8888 https://example.com:8888 scheme:https host: example.com port:8888 192.168.1.1 host: 192.168.1.1 192.168.1.1:8888 host:192.168.1.1 port: 8888 [10:20:30:40:50:60:70:80]
 
-The format for proxy is [scheme://]host[:port]. Scheme is optional and must be HTTP, HTTPS, or SOCKS if present. Scheme defaults to HTTP.Host is an IPv6 literal with brackets, an IPv4 literal or one or more labels seperated by a period. Port number is optional and defaults to 80 for HTTP, 443 for HTTPS and 1080 for SOCKS.
+**起始版本：** 15
 
-e.g. example.com host: example.com  https://example.com scheme: https host: example.com  example.com:8888 host: example.com port: 8888 https://example.com:8888 scheme:https host: example.com port:8888 192.168.1.1 host: 192.168.1.1 192.168.1.1:8888 host:192.168.1.1 port: 8888  
- [10:20:30:40:50:60:70:80]
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
-**起始版本：** 23
+**废弃版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void-End-->
 
@@ -197,14 +224,14 @@ e.g. example.com host: example.com  https://example.com scheme: https host: exam
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| proxyRule | string | 是 | The proxy rule. |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
+| proxyRule | string | 是 | URL要使用的代理。 |
+| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。&lt;br&gt;默认值：MATCH_ALL_SCHEMES。&lt;br&gt;传入undefined或 null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## isReverseBypassEnabled
 
@@ -214,9 +241,13 @@ isReverseBypassEnabled(): boolean
 
 Returns if reverse bypass rules.
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyConfig-isReverseBypassEnabled(): boolean--><!--Device-ProxyConfig-isReverseBypassEnabled(): boolean-End-->
 

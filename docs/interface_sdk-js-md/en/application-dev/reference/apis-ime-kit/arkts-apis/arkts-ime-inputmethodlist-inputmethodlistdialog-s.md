@@ -1,10 +1,12 @@
 # InputMethodListDialog
 
-InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions})Implements a dialog box showing the input method list.
+InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) Implements a dialog box showing the input method list.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct InputMethodListDialog--><!--Device-unnamed-export declare struct InputMethodListDialog-End-->
 
@@ -19,18 +21,19 @@ import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 ## build
 
 ```TypeScript
-build(): void
+@Builder
+  build(): void
 ```
 
 The method to build component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
-<!--Device-InputMethodListDialog-build(): void--><!--Device-InputMethodListDialog-build(): void-End-->
+<!--Device-InputMethodListDialog-@Builder  build(): void--><!--Device-InputMethodListDialog-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +47,11 @@ Sets the controller.
 
 **Type:** CustomDialogController
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodListDialog-controller: CustomDialogController--><!--Device-InputMethodListDialog-controller: CustomDialogController-End-->
 
@@ -62,9 +67,11 @@ Sets the pattern options. This parameter can be left blank when it is not defaul
 
 **Type:** [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodListDialog-patternOptions?: PatternOptions--><!--Device-InputMethodListDialog-patternOptions?: PatternOptions-End-->
 

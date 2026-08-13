@@ -1,15 +1,10 @@
 # ParagraphStyle
 
-Describes the text paragraph style.
-
-Except the first paragraph, all paragraphs are formed using the escape character '\n'.
-
-The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component.
-
-Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a  
-[CustomSpan](arkts-arkui-customspan-c.md#CustomSpan) or [ImageAttachment](arkts-arkui-imageattachment-c.md#ImageAttachment), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect.
+Describes the text paragraph style. Except the first paragraph, all paragraphs are formed using the escape character '\n'. The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component. Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a [CustomSpan](arkts-arkui-customspan-c.md#CustomSpan) or [ImageAttachment](arkts-arkui-imageattachment-c.md#ImageAttachment), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ParagraphStyle--><!--Device-unnamed-declare class ParagraphStyle-End-->
 
@@ -24,6 +19,8 @@ constructor(value?: ParagraphStyleInterface)
 A constructor used to create a text paragraph style.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,13 +42,13 @@ A constructor used to create a text paragraph style.
 readonly leadingMargin?: number | LeadingMarginPlaceholder
 ```
 
-Indent of the text paragraph.
-
-If the return value is of the number type, the unit is vp.
+Indent of the text paragraph. If the return value is of the number type, the unit is vp.
 
 **Type:** number \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,6 +70,8 @@ Custom indentation information for text paragraphs in the styled string.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -92,6 +91,8 @@ Maximum number of lines in the text paragraph.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,6 +114,8 @@ Display mode when the text is too long in the text paragraph.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -127,13 +130,13 @@ Display mode when the text is too long in the text paragraph.
 readonly paragraphSpacing?: number
 ```
 
-Paragraph spacing of the styled string text.
-
-Unit: vp
+Paragraph spacing of the styled string text. Unit: vp
 
 **Type:** number
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,13 +152,13 @@ Unit: vp
 readonly shaderStyle?: ShaderStyle
 ```
 
-Text shader effect.
-
-**Since**: 26.0.0.
+Text shader effect. **Since**: 26.0.0.
 
 **Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,11 +174,13 @@ Text shader effect.
 readonly tailIndents?: Array<number>
 ```
 
-Get the tail indentation of the StyledString.The unit is vp.
+Get the tail indentation of the StyledString. The unit is vp.
 
 **Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,6 +202,8 @@ Horizontal alignment mode of the text paragraph.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -217,6 +224,8 @@ Text direction.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -231,13 +240,13 @@ Text direction.
 readonly textIndent?: number
 ```
 
-First line indent of the text paragraph.
-
-Unit: VP.
+First line indent of the text paragraph. Unit: VP.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -253,15 +262,13 @@ Unit: VP.
 readonly textVerticalAlign?: TextVerticalAlign
 ```
 
-Vertical alignment mode of the text paragraph.
-
-The effect of this attribute is noticeable only when the same font size is used in a paragraph and  
-[lineHeight](TextAttribute#lineHeight) is set, or when different font sizes are used in a paragraph and the font sizes are mixed. The **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-c.md#TextStyle) takes effect only when the value of  
-[TextVerticalAlign](TextVerticalAlign) is set to **TextVerticalAlign.BASELINE**. In other vertical alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
+Vertical alignment mode of the text paragraph. The effect of this attribute is noticeable only when the same font size is used in a paragraph and lineHeight is set, or when different font sizes are used in a paragraph and the font sizes are mixed. The **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-c.md#TextStyle) takes effect only when the value of TextVerticalAlign is set to **TextVerticalAlign.BASELINE**. In other vertical alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
 **Type:** TextVerticalAlign
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,6 +289,8 @@ Word break rule of the text paragraph.
 **Type:** WordBreak
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

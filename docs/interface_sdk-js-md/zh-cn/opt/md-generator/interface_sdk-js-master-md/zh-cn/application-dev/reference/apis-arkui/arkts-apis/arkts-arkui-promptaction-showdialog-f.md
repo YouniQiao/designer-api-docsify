@@ -6,23 +6,13 @@
 function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void
 ```
 
-创建并显示对话框，对话框响应结果使用callback异步回调返回。
-
-> **说明：**
-> 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用[showDialog](arkts-apis-uicontext-promptaction.md#showdialog)替代。
-showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+创建并显示对话框，对话框响应结果使用callback异步回调返回。 > **说明：** > > - 从API version 9开始支持，从API version 18开始废弃，建议使用showDialog替代。 showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象， 然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取当前UI上下文关联的 [PromptAction](arkts-apis-uicontext-promptaction.md)对象。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**替代接口：** showDialog
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,8 +31,8 @@ showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -182,7 +172,7 @@ try {
 };
 ```
 
-从API version 19开始，该示例通过调用[ShowDialogOptions](#showdialogoptions)中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了弹窗生命周期的相关接口的使用方法。
+从API version 19开始，该示例通过调用ShowDialogOptions中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了弹窗生命周期的相关接口的使用方法。
 
 ```TypeScript
 // xxx.ets
@@ -243,7 +233,7 @@ struct DialogExample {
 }
 ```
 
-从API version 19开始，该示例通过调用[ShowDialogOptions](#showdialogoptions)中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了弹窗生命周期的相关接口的使用方法。
+从API version 19开始，该示例通过调用ShowDialogOptions中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了弹窗生命周期的相关接口的使用方法。
 
 ```TypeScript
 // xxx.ets
@@ -311,23 +301,13 @@ struct DialogExample {
 function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
 ```
 
-创建并显示对话框，对话框通过Promise返回结果。
-
-> **说明：**
-> 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用[showDialog](arkts-apis-uicontext-promptaction.md#showdialog-1)替代。
-showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+创建并显示对话框，对话框通过Promise返回结果。 > **说明：** > > - 从API version 9开始支持，从API version 18开始废弃，建议使用showDialog替代。 showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象， 然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取当前UI上下文关联的 [PromptAction](arkts-apis-uicontext-promptaction.md)对象。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**替代接口：** showDialog
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -351,8 +331,8 @@ showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

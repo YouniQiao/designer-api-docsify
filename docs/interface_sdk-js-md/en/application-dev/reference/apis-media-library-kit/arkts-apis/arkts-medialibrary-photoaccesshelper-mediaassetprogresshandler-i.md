@@ -2,9 +2,11 @@
 
 **MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface MediaAssetProgressHandler--><!--Device-photoAccessHelper-interface MediaAssetProgressHandler-End-->
 
@@ -18,21 +20,17 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 ## onProgress
 
-ArkTS-Dyn:
-```TypeScript
-onProgress(progress: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onProgress(progress: int): void
 ```
 
 Called when the progress of the requested video is returned.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetProgressHandler-onProgress(progress: int): void--><!--Device-MediaAssetProgressHandler-onProgress(progress: int): void-End-->
 
@@ -42,5 +40,5 @@ Called when the progress of the requested video is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Progress in percentage. &lt;br&gt;Value range: [0, 100] |
+| progress | int | Yes | Progress in percentage. &lt;br&gt;Value range: [0, 100] |
 

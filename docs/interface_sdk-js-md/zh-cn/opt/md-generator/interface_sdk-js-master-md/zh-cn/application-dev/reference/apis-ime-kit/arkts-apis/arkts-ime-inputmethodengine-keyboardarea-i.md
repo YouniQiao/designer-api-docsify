@@ -2,7 +2,9 @@
 
 面板中的键盘区域。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-export interface KeyboardArea--><!--Device-inputMethodEngine-export interface KeyboardArea-End-->
 
@@ -18,7 +20,9 @@ bottom: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardArea-bottom: int--><!--Device-KeyboardArea-bottom: int-End-->
 
@@ -34,7 +38,9 @@ left: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardArea-left: int--><!--Device-KeyboardArea-left: int-End-->
 
@@ -50,7 +56,9 @@ right: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardArea-right: int--><!--Device-KeyboardArea-right: int-End-->
 
@@ -66,7 +74,9 @@ top: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardArea-top: int--><!--Device-KeyboardArea-top: int-End-->
 

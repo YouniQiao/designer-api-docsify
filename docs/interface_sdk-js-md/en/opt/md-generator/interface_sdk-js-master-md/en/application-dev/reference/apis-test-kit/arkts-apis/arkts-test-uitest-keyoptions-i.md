@@ -4,6 +4,8 @@ Represents the options for key operations.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface KeyOptions--><!--Device-unnamed-declare interface KeyOptions-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -20,11 +22,13 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 key1?: number
 ```
 
-The first keyCode to press during the operation.If not set, no key event will be injected.Setting only key2 without key1 will result in a BusinessError 17000007.
+The first keyCode to press during the operation. If not set, no key event will be injected. Setting only key2 without key1 will result in a BusinessError 17000007.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -38,11 +42,13 @@ The first keyCode to press during the operation.If not set, no key event will be
 key2?: number
 ```
 
-The second KeyCode to press during the operation.If not set, no key event will be injected.Setting only key2 without key1 will result in a BusinessError 17000007.
+The second KeyCode to press during the operation. If not set, no key event will be injected. Setting only key2 without key1 will result in a BusinessError 17000007.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

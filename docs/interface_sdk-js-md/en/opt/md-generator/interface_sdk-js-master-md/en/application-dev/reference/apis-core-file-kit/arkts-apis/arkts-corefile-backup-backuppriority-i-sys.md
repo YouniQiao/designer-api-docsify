@@ -2,7 +2,9 @@
 
 Control backup and restore priority sequence
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-interface BackupPriority--><!--Device-backup-interface BackupPriority-End-->
 
@@ -26,7 +28,9 @@ Indicates the priority of a bundle.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BackupPriority-priority?: int--><!--Device-BackupPriority-priority?: int-End-->
 

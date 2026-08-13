@@ -12,7 +12,7 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -42,7 +42,7 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

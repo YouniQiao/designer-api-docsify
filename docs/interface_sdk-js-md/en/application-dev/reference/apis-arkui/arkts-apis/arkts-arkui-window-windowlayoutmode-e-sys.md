@@ -2,9 +2,9 @@
 
 Enumerates the window layout modes.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -22,9 +22,9 @@ WINDOW_LAYOUT_MODE_CASCADE = 0
 
 Cascade mode. In this mode, freeform windows are stacked with Z-order arrangement.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -42,9 +42,9 @@ WINDOW_LAYOUT_MODE_TILE = 1
 
 Tile mode. In this mode, newly opened application windows appear on the rightmost.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 

@@ -1,8 +1,5 @@
 # @ohos.inputMethod.Panel
 
-The **inputMethod.Panel** module provides APIs for managing the attributes of the input method panel.
-
-
 ## Modules to Import
 
 ```TypeScript

@@ -1,8 +1,10 @@
 # AgentHostProxy
 
-The proxy object of the connected party for the AgentExtensionAbility,used to send messages to the connected party, etc.
+The proxy object of the connected party for the AgentExtensionAbility, used to send messages to the connected party, etc.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AgentHostProxy--><!--Device-unnamed-export interface AgentHostProxy-End-->
 
@@ -17,6 +19,8 @@ authorize(handshakeData: string): void
 Send authentication to an agent service host.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,7 @@ Send authentication to an agent service host.
 
 | Error Code ID |
 | --- |
-| [35600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
+| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
 
 ## sendData
 
@@ -47,6 +51,8 @@ sendData(data: string): void
 Send data to an agent service host.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,4 +72,4 @@ Send data to an agent service host.
 
 | Error Code ID |
 | --- |
-| [35600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
+| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |

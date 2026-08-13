@@ -2,7 +2,9 @@
 
 呼叫转移信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface CallTransferInfo--><!--Device-call-export interface CallTransferInfo-End-->
 
@@ -20,7 +22,9 @@ endHour?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferInfo-endHour?: int--><!--Device-CallTransferInfo-endHour?: int-End-->
 
@@ -38,7 +42,9 @@ endMinute?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferInfo-endMinute?: int--><!--Device-CallTransferInfo-endMinute?: int-End-->
 
@@ -56,7 +62,9 @@ settingType: CallTransferSettingType
 
 **类型：** [CallTransferSettingType](arkts-telephony-call-calltransfersettingtype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferInfo-settingType: CallTransferSettingType--><!--Device-CallTransferInfo-settingType: CallTransferSettingType-End-->
 
@@ -74,7 +82,9 @@ startHour?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferInfo-startHour?: int--><!--Device-CallTransferInfo-startHour?: int-End-->
 
@@ -92,7 +102,9 @@ startMinute?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferInfo-startMinute?: int--><!--Device-CallTransferInfo-startMinute?: int-End-->
 
@@ -110,7 +122,9 @@ transferNum: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferInfo-transferNum: string--><!--Device-CallTransferInfo-transferNum: string-End-->
 
@@ -126,9 +140,11 @@ type: CallTransferType
 
 呼叫转移类型。
 
-**类型：** [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
+**类型：** [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferInfo-type: CallTransferType--><!--Device-CallTransferInfo-type: CallTransferType-End-->
 

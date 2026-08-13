@@ -16,7 +16,9 @@ Specifies the displayId to which the target Component belongs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ON-export function belongingDisplay(displayId: int): On--><!--Device-ON-export function belongingDisplay(displayId: int): On-End-->
 
@@ -38,5 +40,5 @@ Specifies the displayId to which the target Component belongs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 

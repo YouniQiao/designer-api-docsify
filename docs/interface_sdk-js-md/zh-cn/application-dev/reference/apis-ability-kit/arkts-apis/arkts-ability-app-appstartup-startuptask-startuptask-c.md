@@ -1,11 +1,12 @@
 # StartupTask
 
-The module provides capabilities related to startup tasks in  
-[AppStartup](../../../application-models/app-startup.md).
+The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md).
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
@@ -14,18 +15,20 @@ The module provides capabilities related to startup tasks in
 ## init
 
 ```TypeScript
-init(context: AbilityStageContext): Promise<Any> | Promise<void>
+init(context: AbilityStageContext): Promise<Object | void>
 ```
 
-启动任务执行的初始化业务。
+当所有依赖的启动任务都执行完成后，该方法将会被调用。开发者可以在该回调中执行该启动任务的初始化操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Any> | Promise<void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Any> | Promise<void>-End-->
+<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
@@ -33,29 +36,55 @@ init(context: AbilityStageContext): Promise<Any> | Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | 是 | AbilityStage的上下文环境。 |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | 是 | [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage)的上下文环境 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Any&gt; | Promise对象，返回启动任务执行结果对象。 |
+| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
+
+## 示例
+
+```TypeScript
+import { StartupTask, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Sendable
+export default class StartupTask_001 extends StartupTask {
+  constructor() {
+    super();
+  }
+  async init(context: common.AbilityStageContext) {
+    hilog.info(0x0000, 'testTag', 'StartupTask_001 init.');
+    // ...
+
+    return 'StartupTask_001';
+  }
+
+  onDependencyCompleted(dependency: string, result: Object): void {
+    // ...
+  }
+}
+```
 
 ## onDependencyCompleted
 
 ```TypeScript
-onDependencyCompleted(dependency: string, result: Any): void
+onDependencyCompleted?(dependency: string, result: Object): void
 ```
 
 当依赖的启动任务执行完成时该方法将会被调用。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-StartupTask-onDependencyCompleted(dependency: string, result: Any): void--><!--Device-StartupTask-onDependencyCompleted(dependency: string, result: Any): void-End-->
+<!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void--><!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
@@ -64,5 +93,29 @@ onDependencyCompleted(dependency: string, result: Any): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dependency | string | 是 | 依赖的启动任务名称。 |
-| result | Any | 是 | 依赖启动任务执行的结果。 |
+| result | Object | 是 | 依赖的启动任务[init](#init)返回的执行结果。 |
+
+## 示例
+
+```TypeScript
+import { StartupTask, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Sendable
+export default class StartupTask_001 extends StartupTask {
+  constructor() {
+    super();
+  }
+
+  async init(context: common.AbilityStageContext) {
+    // ...
+  }
+
+  onDependencyCompleted(dependency: string, result: Object): void {
+    hilog.info(0x0000, 'testTag', 'StartupTask_001 onDependencyCompleted, dependency: %{public}s, result: %{public}s',
+      dependency, JSON.stringify(result));
+    // ...
+  }
+}
+```
 

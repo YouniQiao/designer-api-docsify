@@ -3,9 +3,9 @@
 - [@ohos.multimodalAwareness.deviceStatus](arkts-multimodalawareness-devicestatus.md)
   <!--Del-->
   - [getDeviceRotationRadian(系统接口)](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md)<!--DelEnd-->
-  - [off](arkts-multimodalawareness-devicestatus-off-f.md)
+  - [off_steadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md)
   - [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md)
-  - [on](arkts-multimodalawareness-devicestatus-on-f.md)
+  - [on_steadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md)
   - [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md)
   <!--Del-->
   - [DeviceRotationRadian(系统接口)](arkts-multimodalawareness-devicestatus-devicerotationradian-i-sys.md)<!--DelEnd-->
@@ -17,14 +17,15 @@
   - [encodeImage(系统接口)](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [notifyMetadataBindingEvent(系统接口)](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md)<!--DelEnd-->
-  - [off](arkts-multimodalawareness-metadatabinding-off-f.md)
+  - [off_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md)
   - [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md)
-  - [on](arkts-multimodalawareness-metadatabinding-on-f.md)
+  - [on_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md)
   - [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md)
   - [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md)
 - [@ohos.multimodalAwareness.motion](arkts-multimodalawareness-motion.md)
   - [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md)
-  - [off](arkts-multimodalawareness-motion-off-f.md)
+  - [off_holdingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md)
+  - [off_operatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md)
   - [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md)
   <!--Del-->
   - [offHoverHandChange(系统接口)](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md)<!--DelEnd-->
@@ -35,7 +36,8 @@
   - [offRotateChange(系统接口)](arkts-multimodalawareness-motion-offrotatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offSmartRotateChange(系统接口)](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md)<!--DelEnd-->
-  - [on](arkts-multimodalawareness-motion-on-f.md)
+  - [on_holdingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md)
+  - [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md)
   - [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md)
   <!--Del-->
   - [onHoverHandChange(系统接口)](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md)<!--DelEnd-->
@@ -135,9 +137,9 @@
 - [@ohos.multimodalAwareness.userStatus](arkts-multimodalawareness-userstatus.md)
   <!--Del-->
   - [configure(系统接口)](arkts-multimodalawareness-userstatus-configure-f-sys.md)<!--DelEnd-->
-  - [off](arkts-multimodalawareness-userstatus-off-f.md)
+  - [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md)
   - [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md)
-  - [on](arkts-multimodalawareness-userstatus-on-f.md)
+  - [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md)
   - [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md)
   <!--Del-->
   - [queryCapabilities(系统接口)](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md)<!--DelEnd-->
@@ -172,9 +174,9 @@
   <!--Del-->
   - [UserStatusFeature(系统接口)](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)<!--DelEnd-->
 - [@ohos.stationary](arkts-stationary.md)
-  - [off](arkts-multimodalawareness-stationary-off-f.md)
-  - [on](arkts-multimodalawareness-stationary-on-f.md)
-  - [once](arkts-multimodalawareness-stationary-once-f.md)
+  - [off_ActivityType](arkts-multimodalawareness-stationary-offactivitytype-f.md)
+  - [on_ActivityType](arkts-multimodalawareness-stationary-onactivitytype-f.md)
+  - [once_ActivityType](arkts-multimodalawareness-stationary-onceactivitytype-f.md)
   - [ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)
   - [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md)
   - [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md)

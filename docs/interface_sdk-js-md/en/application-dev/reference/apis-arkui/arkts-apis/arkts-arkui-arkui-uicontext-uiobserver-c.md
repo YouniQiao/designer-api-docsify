@@ -1,12 +1,14 @@
 # UIObserver
 
-Register callbacks to observe ArkUI behavior.
+Provides APIs for listening for UI component behavior changes. > **NOTE：**> > - The initial APIs of this class are supported since API version 11. > > - In the following API examples, you must first use [getUIObserver()](arkts-arkui-arkui-uicontext-uicontext-c.md#getUIObserver) in > **UIContext** to obtain a **UIObserver** instance, and then call the APIs using the obtained instance. > > - UIObserver can only listen for relevant information within the current process and does not support obtaining > information in cross-process scenarios&lt;!--Del--&gt; such as UIExtensionComponent&lt;!-- &gt; DelEnd-->.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-export declare class UIObserver--><!--Device-unnamed-export declare class UIObserver-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class UIObserver--><!--Device-unnamed-export class UIObserver-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,13 +25,17 @@ addGlobalGestureListener(type: GestureListenerType,
       option: GestureObserverConfigs, callback: GestureListenerCallback): void
 ```
 
-Registers a callback to monitor the gesture trigger information.
+Registers a callback to listen for gesture triggering information.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIObserver-addGlobalGestureListener(type: GestureListenerType,      option: GestureObserverConfigs, callback: GestureListenerCallback): void--><!--Device-UIObserver-addGlobalGestureListener(type: GestureListenerType,      option: GestureObserverConfigs, callback: GestureListenerCallback): void-End-->
 
@@ -39,201 +45,9 @@ Registers a callback to monitor the gesture trigger information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [GestureListenerType](arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | Yes | The type of gesture to monitor. |
-| option | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | Yes | The options when bind the global listener. |
-| callback | [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md) | Yes | The callback function to be called when any gesture's state is updated. |
-
-## offAfterPanEnd
-
-```TypeScript
-offAfterPanEnd(callback?: PanListenerCallback): void
-```
-
-Removes a callback function to be called after panGesture onActionEnd is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offAfterPanEnd(callback?: PanListenerCallback): void--><!--Device-UIObserver-offAfterPanEnd(callback?: PanListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offAfterPanStart
-
-```TypeScript
-offAfterPanStart(callback?: PanListenerCallback): void
-```
-
-Removes a callback function to be called after panGesture onActionStart is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offAfterPanStart(callback?: PanListenerCallback): void--><!--Device-UIObserver-offAfterPanStart(callback?: PanListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offBeforePanEnd
-
-```TypeScript
-offBeforePanEnd(callback?: PanListenerCallback): void
-```
-
-Removes a callback function to be called before panGesture onActionEnd is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offBeforePanEnd(callback?: PanListenerCallback): void--><!--Device-UIObserver-offBeforePanEnd(callback?: PanListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offBeforePanStart
-
-```TypeScript
-offBeforePanStart(callback?: PanListenerCallback): void
-```
-
-Removes a callback function to be called before panGesture onActionStart is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offBeforePanStart(callback?: PanListenerCallback): void--><!--Device-UIObserver-offBeforePanStart(callback?: PanListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offDensityUpdate
-
-```TypeScript
-offDensityUpdate(callback?: Callback<observer.DensityInfo>): void
-```
-
-Removes a callback function that was previously registered with `on()`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offDensityUpdate(callback?: Callback<observer.DensityInfo>): void--><!--Device-UIObserver-offDensityUpdate(callback?: Callback<observer.DensityInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.DensityInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offDidClick
-
-```TypeScript
-offDidClick(callback?: ClickEventListenerCallback): void
-```
-
-Removes a callback function to be called after clickEvent is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offDidClick(callback?: ClickEventListenerCallback): void--><!--Device-UIObserver-offDidClick(callback?: ClickEventListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offDidLayout
-
-```TypeScript
-offDidLayout(callback?: Callback<void>): void
-```
-
-Removes a callback function that was previously registered with `on()`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offDidLayout(callback?: Callback<void>): void--><!--Device-UIObserver-offDidLayout(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offDidTap
-
-```TypeScript
-offDidTap(callback?: GestureEventListenerCallback): void
-```
-
-Removes a callback function to be called after tapGesture is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offDidTap(callback?: GestureEventListenerCallback): void--><!--Device-UIObserver-offDidTap(callback?: GestureEventListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | [GestureListenerType](arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | Yes | Type of gesture to listen for. |
+| option | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | Yes | Configuration options for binding the global listener. |
+| callback | [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md) | Yes | Callback triggered when the gesture state updates. |
 
 ## offNavDestinationSizeChange
 
@@ -241,13 +55,17 @@ Removes a callback function to be called after tapGesture is called.
 offNavDestinationSizeChange(callback?: Callback<observer.NavDestinationInfo>): void
 ```
 
-Removes a callback function that was previously registered with 'onNavDestinationSizeChange()'.
+Removes the listener callback registered using the **onNavDestinationSizeChange** API. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIObserver-offNavDestinationSizeChange(callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-offNavDestinationSizeChange(callback?: Callback<observer.NavDestinationInfo>): void-End-->
 
@@ -257,23 +75,27 @@ Removes a callback function that was previously registered with 'onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | Callback to be removed. If no parameter is passed, all callbacks are removed. |
 
 ## offNavDestinationSizeChangeByUniqueId
 
 ```TypeScript
-offNavDestinationSizeChangeByUniqueId(navigationUniqueId: int, callback?: Callback<observer.NavDestinationInfo>): void
+offNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback?: Callback<observer.NavDestinationInfo>): void
 ```
 
 Removes a callback function that was previously registered with 'onNavDestinationSizeChangeByUniqueId()'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offNavDestinationSizeChangeByUniqueId(navigationUniqueId: int, callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-offNavDestinationSizeChangeByUniqueId(navigationUniqueId: int, callback?: Callback<observer.NavDestinationInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UIObserver-offNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-offNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback?: Callback<observer.NavDestinationInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -281,162 +103,8 @@ Removes a callback function that was previously registered with 'onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. &lt;br&gt;The value should be an integer. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offNavDestinationSwitch
-
-```TypeScript
-offNavDestinationSwitch(callback?: Callback<observer.NavDestinationSwitchInfo>): void
-```
-
-Removes a callback function that was previously registered with `onNavDestinationSwitch`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offNavDestinationSwitch(callback?: Callback<observer.NavDestinationSwitchInfo>): void--><!--Device-UIObserver-offNavDestinationSwitch(callback?: Callback<observer.NavDestinationSwitchInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offNavDestinationSwitch
-
-```TypeScript
-offNavDestinationSwitch(
-    observerOptions: observer.NavDestinationSwitchObserverOptions,
-    callback?: Callback<observer.NavDestinationSwitchInfo>
-  ): void
-```
-
-Removes a callback function that was previously registered with `onNavDestinationSwitch`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offNavDestinationSwitch(    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback?: Callback<observer.NavDestinationSwitchInfo>  ): void--><!--Device-UIObserver-offNavDestinationSwitch(    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback?: Callback<observer.NavDestinationSwitchInfo>  ): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offNavDestinationUpdate
-
-```TypeScript
-offNavDestinationUpdate(
-    options: observer.NavDestinationSwitchObserverOptions,
-    callback?: Callback<observer.NavDestinationInfo>
-    ): void
-```
-
-Removes a callback function that was previously registered with `onNavDestinationUpdate`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offNavDestinationUpdate(    options: observer.NavDestinationSwitchObserverOptions,    callback?: Callback<observer.NavDestinationInfo>    ): void--><!--Device-UIObserver-offNavDestinationUpdate(    options: observer.NavDestinationSwitchObserverOptions,    callback?: Callback<observer.NavDestinationInfo>    ): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | observer.NavDestinationSwitchObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
-
-## offNavDestinationUpdate
-
-```TypeScript
-offNavDestinationUpdate(callback?: Callback<observer.NavDestinationInfo>): void
-```
-
-Removes a callback function that was previously registered with `onNavDestinationUpdate`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offNavDestinationUpdate(callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-offNavDestinationUpdate(callback?: Callback<observer.NavDestinationInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offNavDestinationUpdateByUniqueId
-
-```TypeScript
-offNavDestinationUpdateByUniqueId(navigationUniqueId: int, callback?: Callback<observer.NavDestinationInfo>): void
-```
-
-Removes a callback function that was previously registered with `onNavDestinationUpdateByUniqueId`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offNavDestinationUpdateByUniqueId(navigationUniqueId: int, callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-offNavDestinationUpdateByUniqueId(navigationUniqueId: int, callback?: Callback<observer.NavDestinationInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| navigationUniqueId | int | Yes | The uniqueId of the navigation. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offNodeRenderState
-
-```TypeScript
-offNodeRenderState(nodeIdentity: NodeIdentity, callback?: NodeRenderStateChangeCallback): void
-```
-
-Removes a callback function for node render state monitoring.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offNodeRenderState(nodeIdentity: NodeIdentity, callback?: NodeRenderStateChangeCallback): void--><!--Device-UIObserver-offNodeRenderState(nodeIdentity: NodeIdentity, callback?: NodeRenderStateChangeCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| nodeIdentity | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | The identity of the target node |
-| callback | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | No | The callback function to remove. If not provided, all callbacks will be removed. |
+| navigationUniqueId | number | Yes | The uniqueId of the Navigation to which NavDestination belongs. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offRouterPageSizeChange
 
@@ -444,13 +112,17 @@ Removes a callback function for node render state monitoring.
 offRouterPageSizeChange(callback?: Callback<observer.RouterPageInfo>): void
 ```
 
-Removes a callback function that was previously registered with 'onRouterPageSizeChange()'.
+Removes the listener callback registered using the **onRouterPageSizeChange** API. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIObserver-offRouterPageSizeChange(callback?: Callback<observer.RouterPageInfo>): void--><!--Device-UIObserver-offRouterPageSizeChange(callback?: Callback<observer.RouterPageInfo>): void-End-->
 
@@ -460,80 +132,7 @@ Removes a callback function that was previously registered with 'onRouterPageSiz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.RouterPageInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offRouterPageUpdate
-
-```TypeScript
-offRouterPageUpdate(callback?: Callback<observer.RouterPageInfo>): void
-```
-
-Removes a callback function that was previously registered with `onRouterPageUpdate`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offRouterPageUpdate(callback?: Callback<observer.RouterPageInfo>): void--><!--Device-UIObserver-offRouterPageUpdate(callback?: Callback<observer.RouterPageInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.RouterPageInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offScrollEvent
-
-```TypeScript
-offScrollEvent(options: observer.ObserverOptions, callback?: Callback<observer.ScrollEventInfo>): void
-```
-
-Removes a callback function that was previously registered with `on()`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offScrollEvent(options: observer.ObserverOptions, callback?: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-offScrollEvent(options: observer.ObserverOptions, callback?: Callback<observer.ScrollEventInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | observer.ObserverOptions | Yes |  |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
-
-## offScrollEvent
-
-```TypeScript
-offScrollEvent(callback?: Callback<observer.ScrollEventInfo>): void
-```
-
-Removes a callback function that was previously registered with `onScrollEvent()`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offScrollEvent(callback?: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-offScrollEvent(callback?: Callback<observer.ScrollEventInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.RouterPageInfo&gt; | No | Callback to be removed. If no parameter is passed, all callbacks are removed. |
 
 ## offSwiperContentUpdate
 
@@ -541,13 +140,17 @@ Removes a callback function that was previously registered with `onScrollEvent()
 offSwiperContentUpdate(callback?: Callback<SwiperContentInfo>): void
 ```
 
-Removes a callback function that was previously registered with `onSwiperContentUpdate`.
+Unregister the listener for content switching events of the **Swiper** component.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIObserver-offSwiperContentUpdate(callback?: Callback<SwiperContentInfo>): void--><!--Device-UIObserver-offSwiperContentUpdate(callback?: Callback<SwiperContentInfo>): void-End-->
 
@@ -557,7 +160,7 @@ Removes a callback function that was previously registered with `onSwiperContent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **Swiper** component are unregistered. |
 
 ## offSwiperContentUpdate
 
@@ -565,13 +168,17 @@ Removes a callback function that was previously registered with `onSwiperContent
 offSwiperContentUpdate(config: observer.ObserverOptions, callback?: Callback<SwiperContentInfo>): void
 ```
 
-Removes a callback function that was previously registered with `onSwiperContentUpdate`.
+Unregister the listener for content switching events of a specific **Swiper** component identified by its ID.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIObserver-offSwiperContentUpdate(config: observer.ObserverOptions, callback?: Callback<SwiperContentInfo>): void--><!--Device-UIObserver-offSwiperContentUpdate(config: observer.ObserverOptions, callback?: Callback<SwiperContentInfo>): void-End-->
 
@@ -581,24 +188,28 @@ Removes a callback function that was previously registered with `onSwiperContent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| config | observer.ObserverOptions | Yes | Information about the target **Swiper** component. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **Swiper** component are unregistered. |
 
-## offTabChange
+## off_afterPanEnd
 
 ```TypeScript
-offTabChange(config: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void
+off(type: 'afterPanEnd', callback?: PanListenerCallback): void
 ```
 
-Removes a callback function that was previously registered with `onTabChange`.
+Unregisters the listener for pan gesture onActionEnd post-execution events, canceling callbacks registered via [on('afterPanEnd')](#on_navDestinationUpdate).
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offTabChange(config: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-offTabChange(config: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-off(type: 'afterPanEnd', callback?: PanListenerCallback): void--><!--Device-UIObserver-off(type: 'afterPanEnd', callback?: PanListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -606,24 +217,28 @@ Removes a callback function that was previously registered with `onTabChange`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'afterPanEnd'**, indicating command dispatch after the execution of the pan gesture onActionEnd event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch after the execution of the pan gesture onActionEnd event will be removed. |
 
-## offTabChange
+## off_afterPanStart
 
 ```TypeScript
-offTabChange(callback?: Callback<observer.TabContentInfo>): void
+off(type: 'afterPanStart', callback?: PanListenerCallback): void
 ```
 
-Removes a callback function that was previously registered with `onTabChange`.
+Unregisters the listener for pan gesture onActionStart post-execution events, canceling callbacks registered via [on('afterPanStart')](#on_navDestinationUpdate).
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offTabChange(callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-offTabChange(callback?: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-off(type: 'afterPanStart', callback?: PanListenerCallback): void--><!--Device-UIObserver-off(type: 'afterPanStart', callback?: PanListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -631,23 +246,205 @@ Removes a callback function that was previously registered with `onTabChange`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture onActionStart event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch after the execution of the pan gesture onActionStart event will be removed. |
 
-## offTabContentUpdate
+## off_beforePanEnd
 
 ```TypeScript
-offTabContentUpdate(options: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void
+off(type: 'beforePanEnd', callback?: PanListenerCallback): void
+```
+
+Unregisters the listener for pan gesture onActionEnd pre-execution events, canceling callbacks registered via [on('beforePanEnd')](#on_navDestinationUpdate).
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-off(type: 'beforePanEnd', callback?: PanListenerCallback): void--><!--Device-UIObserver-off(type: 'beforePanEnd', callback?: PanListenerCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture onActionEnd event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch before the execution of the pan gesture onActionEnd event will be removed. |
+
+## off_beforePanStart
+
+```TypeScript
+off(type: 'beforePanStart', callback?: PanListenerCallback): void
+```
+
+Unregisters the listener for pan gesture onActionStart pre-execution events, canceling callbacks registered via [on('beforePanStart')](#on_navDestinationUpdate).
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-off(type: 'beforePanStart', callback?: PanListenerCallback): void--><!--Device-UIObserver-off(type: 'beforePanStart', callback?: PanListenerCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture onActionStart event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch before the execution of the pan gesture onActionStart event will be removed. |
+
+## off_densityUpdate
+
+```TypeScript
+off(type: 'densityUpdate', callback?: Callback<observer.DensityInfo>): void
+```
+
+Unregisters the listener for screen pixel density changes.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'densityUpdate', callback?: Callback<observer.DensityInfo>): void--><!--Device-UIObserver-off(type: 'densityUpdate', callback?: Callback<observer.DensityInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'densityUpdate' | Yes | Event type. The value **'densityUpdate'** indicates the pixel density changes of the screen. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.DensityInfo&gt; | No | Target listener to unregister. If no parameter is provided, all screen pixel density change listeners for the current [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) are removed. |
+
+## off_didClick
+
+```TypeScript
+off(type: 'didClick', callback?: ClickEventListenerCallback): void
+```
+
+Removes a callback function to be called after clickEvent is called.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'didClick', callback?: ClickEventListenerCallback): void--><!--Device-UIObserver-off(type: 'didClick', callback?: ClickEventListenerCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'didClick' | Yes | The type of event to remove the listener for. |
+| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_didClick
+
+```TypeScript
+off(type: 'didClick', callback?: GestureEventListenerCallback): void
+```
+
+Removes a callback function to be called after tapGesture is called.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'didClick', callback?: GestureEventListenerCallback): void--><!--Device-UIObserver-off(type: 'didClick', callback?: GestureEventListenerCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'didClick' | Yes | The type of event to remove the listener for. |
+| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_didLayout
+
+```TypeScript
+off(type: 'didLayout', callback?: Callback<void>): void
+```
+
+Unregisters the listener for layout completion status in each frame.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'didLayout', callback?: Callback<void>): void--><!--Device-UIObserver-off(type: 'didLayout', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'didLayout' | Yes | Event type. The value **'didLayout'** indicates whether the layout has been completed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Target listener to unregister. If no parameter is provided, all layout completion listeners are unregistered. |
+
+## off_navDestinationSwitch
+
+```TypeScript
+off(
+    type: 'navDestinationSwitch',
+    callback?: Callback<observer.NavDestinationSwitchInfo>
+  ): void
 ```
 
 Removes a callback function that was previously registered with `on()`.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offTabContentUpdate(options: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-offTabContentUpdate(options: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(    type: 'navDestinationSwitch',    callback?: Callback<observer.NavDestinationSwitchInfo>  ): void--><!--Device-UIObserver-off(    type: 'navDestinationSwitch',    callback?: Callback<observer.NavDestinationSwitchInfo>  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -655,24 +452,240 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be ' navDestinationSwitch'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_navDestinationSwitch
+
+```TypeScript
+off(
+    type: 'navDestinationSwitch',
+    observerOptions: observer.NavDestinationSwitchObserverOptions,
+    callback?: Callback<observer.NavDestinationSwitchInfo>
+  ): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(    type: 'navDestinationSwitch',    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback?: Callback<observer.NavDestinationSwitchInfo>  ): void--><!--Device-UIObserver-off(    type: 'navDestinationSwitch',    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback?: Callback<observer.NavDestinationSwitchInfo>  ): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be ' navDestinationSwitch'. |
+| observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_navDestinationUpdate
+
+```TypeScript
+off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback<observer.NavDestinationInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback<observer.NavDestinationInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationUpdate' | Yes | The type of event to remove the listener for. Must be 'navDestinationUpdate'. |
+| options | { navigationId: ResourceStr } | Yes | The options object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
+
+## off_navDestinationUpdate
+
+```TypeScript
+off(type: 'navDestinationUpdate', callback?: Callback<observer.NavDestinationInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'navDestinationUpdate', callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-off(type: 'navDestinationUpdate', callback?: Callback<observer.NavDestinationInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationUpdate' | Yes | The type of event to remove the listener for. Must be 'navDestinationUpdate'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_navDestinationUpdateByUniqueId
+
+```TypeScript
+off(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback?: Callback<observer.NavDestinationInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIObserver-off(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback?: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-off(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback?: Callback<observer.NavDestinationInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationUpdateByUniqueId' | Yes | The type of event to remove the listener for. Must be 'navDestinationUpdateByUniqueId'. |
+| navigationUniqueId | number | Yes | The uniqueId of the navigation. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_nodeRenderState
+
+```TypeScript
+off(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback?: NodeRenderStateChangeCallback): void
+```
+
+Unregisters the callback for listening for node rendering state changes.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIObserver-off(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback?: NodeRenderStateChangeCallback): void--><!--Device-UIObserver-off(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback?: NodeRenderStateChangeCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'nodeRenderState' | Yes | Event type. The value is fixed at **'nodeRenderState'**. |
+| nodeIdentity | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | Node ID. |
+| callback | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | No | Target listener to unregister. If no parameter is provided, all node rendering state change listeners are unregistered. |
+
+## off_routerPageUpdate
+
+```TypeScript
+off(type: 'routerPageUpdate', callback?: Callback<observer.RouterPageInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'routerPageUpdate', callback?: Callback<observer.RouterPageInfo>): void--><!--Device-UIObserver-off(type: 'routerPageUpdate', callback?: Callback<observer.RouterPageInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'routerPageUpdate' | Yes | The type of event to remove the listener for. Must be 'routerPageUpdate'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.RouterPageInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_scrollEvent
+
+```TypeScript
+off(type: 'scrollEvent', options: observer.ObserverOptions, callback?: Callback<observer.ScrollEventInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'scrollEvent', options: observer.ObserverOptions, callback?: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-off(type: 'scrollEvent', options: observer.ObserverOptions, callback?: Callback<observer.ScrollEventInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'scrollEvent' | Yes | The type of event to remove the listener for. Must be 'scrollEvent'. |
 | options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
 
-## offTabContentUpdate
+## off_scrollEvent
 
 ```TypeScript
-offTabContentUpdate(callback?: Callback<observer.TabContentInfo>): void
+off(type: 'scrollEvent', callback?: Callback<observer.ScrollEventInfo>): void
 ```
 
 Removes a callback function that was previously registered with `on()`.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offTabContentUpdate(callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-offTabContentUpdate(callback?: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'scrollEvent', callback?: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-off(type: 'scrollEvent', callback?: Callback<observer.ScrollEventInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -680,23 +693,28 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| type | 'scrollEvent' | Yes | The type of event to remove the listener for. Must be 'scrollEvent'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
-## offTextChange
+## off_tabChange
 
 ```TypeScript
-offTextChange(callback?: Callback<observer.TextChangeEventInfo>): void
+off(type: 'tabChange', config: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void
 ```
 
 Removes a callback function that was previously registered with `on()`.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offTextChange(callback?: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-offTextChange(callback?: Callback<observer.TextChangeEventInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-off(type: 'tabChange', config: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-off(type: 'tabChange', config: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -704,23 +722,29 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'tabChange' | Yes | The type of event to remove the listener for. Must be 'tabChange'. |
+| config | observer.ObserverOptions | Yes | The config object. Includes the observed component id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
-## offTextChange
+## off_tabChange
 
 ```TypeScript
-offTextChange(identity: observer.ObserverOptions, callback?: Callback<observer.TextChangeEventInfo>): void
+off(type: 'tabChange', callback?: Callback<observer.TabContentInfo>): void
 ```
 
 Removes a callback function that was previously registered with `on()`.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offTextChange(identity: observer.ObserverOptions, callback?: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-offTextChange(identity: observer.ObserverOptions, callback?: Callback<observer.TextChangeEventInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-off(type: 'tabChange', callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-off(type: 'tabChange', callback?: Callback<observer.TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -728,24 +752,146 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'tabChange' | Yes | The type of event to remove the listener for. Must be 'tabChange'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_tabContentUpdate
+
+```TypeScript
+off(type: 'tabContentUpdate', options: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'tabContentUpdate', options: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-off(type: 'tabContentUpdate', options: observer.ObserverOptions, callback?: Callback<observer.TabContentInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'tabContentUpdate' | Yes | The type of event to remove the listener for. Must be 'tabContentUpdate'. |
+| options | observer.ObserverOptions | Yes | The options object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+
+## off_tabContentUpdate
+
+```TypeScript
+off(type: 'tabContentUpdate', callback?: Callback<observer.TabContentInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'tabContentUpdate', callback?: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-off(type: 'tabContentUpdate', callback?: Callback<observer.TabContentInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'tabContentUpdate' | Yes | The type of event to remove the listener for. Must be 'tabContentUpdate'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+
+## off_textChange
+
+```TypeScript
+off(type: 'textChange', callback?: Callback<observer.TextChangeEventInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-off(type: 'textChange', callback?: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-off(type: 'textChange', callback?: Callback<observer.TextChangeEventInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'textChange' | Yes | The type of event to remove the listener for. Must be 'textChange'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+
+## off_textChange
+
+```TypeScript
+off(type: 'textChange', identity: observer.ObserverOptions, callback?: Callback<observer.TextChangeEventInfo>): void
+```
+
+Removes a callback function that was previously registered with `on()`.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-off(type: 'textChange', identity: observer.ObserverOptions, callback?: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-off(type: 'textChange', identity: observer.ObserverOptions, callback?: Callback<observer.TextChangeEventInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'textChange' | Yes | The type of event to remove the listener for. Must be 'textChange'. |
 | identity | observer.ObserverOptions | Yes | Identity options. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
-## offWillClick
+## off_willClick
 
 ```TypeScript
-offWillClick(callback?: ClickEventListenerCallback): void
+off(type: 'willClick', callback?: ClickEventListenerCallback): void
 ```
 
 Removes a callback function to be called before clickEvent is called.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offWillClick(callback?: ClickEventListenerCallback): void--><!--Device-UIObserver-offWillClick(callback?: ClickEventListenerCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'willClick', callback?: ClickEventListenerCallback): void--><!--Device-UIObserver-off(type: 'willClick', callback?: ClickEventListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -753,47 +899,28 @@ Removes a callback function to be called before clickEvent is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'willClick' | Yes | The type of event to remove the listener for. |
 | callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
-## offWillDraw
+## off_willClick
 
 ```TypeScript
-offWillDraw(callback?: Callback<void>): void
-```
-
-Removes a callback function that was previously registered with `on()`.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-offWillDraw(callback?: Callback<void>): void--><!--Device-UIObserver-offWillDraw(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
-
-## offWillTap
-
-```TypeScript
-offWillTap(callback?: GestureEventListenerCallback): void
+off(type: 'willClick', callback?: GestureEventListenerCallback): void
 ```
 
 Removes a callback function to be called before tapGesture is called.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offWillTap(callback?: GestureEventListenerCallback): void--><!--Device-UIObserver-offWillTap(callback?: GestureEventListenerCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'willClick', callback?: GestureEventListenerCallback): void--><!--Device-UIObserver-off(type: 'willClick', callback?: GestureEventListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -801,23 +928,28 @@ Removes a callback function to be called before tapGesture is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'willClick' | Yes | The type of event to remove the listener for. |
 | callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
-## offWindowSizeLayoutBreakpointChange
+## off_willDraw
 
 ```TypeScript
-offWindowSizeLayoutBreakpointChange(callback?: Callback<observer.WindowSizeLayoutBreakpointInfo>): void
+off(type: 'willDraw', callback?: Callback<void>): void
 ```
 
-Removes a previously registered callback function for window size layout breakpoint changes.If no callback is provided, all callbacks for the specified context will be removed.
+Unregisters the listener for drawing instruction dispatch in each frame.
 
-**Since:** 24
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-offWindowSizeLayoutBreakpointChange(callback?: Callback<observer.WindowSizeLayoutBreakpointInfo>): void--><!--Device-UIObserver-offWindowSizeLayoutBreakpointChange(callback?: Callback<observer.WindowSizeLayoutBreakpointInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-off(type: 'willDraw', callback?: Callback<void>): void--><!--Device-UIObserver-off(type: 'willDraw', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -825,23 +957,28 @@ Removes a previously registered callback function for window size layout breakpo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | No | The specific callback function to remove. If not provided, all callbacks for the given event type and context will be removed. |
+| type | 'willDraw' | Yes | Event event. The value **'willDraw'** indicates whether drawing is about to occur. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Target listener to unregister. If no parameter is provided, all drawing instruction dispatch listeners are unregistered. |
 
-## onAfterPanEnd
+## off_windowSizeLayoutBreakpointChange
 
 ```TypeScript
-onAfterPanEnd(callback: PanListenerCallback): void
+off(type: 'windowSizeLayoutBreakpointChange', callback?: Callback<observer.WindowSizeLayoutBreakpointInfo>): void
 ```
 
-Registers a callback function to be called after panGesture onActionEnd is called.
+Unregisters previously registered window size layout breakpoint change listeners. If no callback is specified, all listeners for the current UI context are removed. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onAfterPanEnd(callback: PanListenerCallback): void--><!--Device-UIObserver-onAfterPanEnd(callback: PanListenerCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-off(type: 'windowSizeLayoutBreakpointChange', callback?: Callback<observer.WindowSizeLayoutBreakpointInfo>): void--><!--Device-UIObserver-off(type: 'windowSizeLayoutBreakpointChange', callback?: Callback<observer.WindowSizeLayoutBreakpointInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -849,175 +986,8 @@ Registers a callback function to be called after panGesture onActionEnd is calle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
-
-## onAfterPanStart
-
-```TypeScript
-onAfterPanStart(callback: PanListenerCallback): void
-```
-
-Registers a callback function to be called after panGesture onActionStart is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onAfterPanStart(callback: PanListenerCallback): void--><!--Device-UIObserver-onAfterPanStart(callback: PanListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
-
-## onBeforePanEnd
-
-```TypeScript
-onBeforePanEnd(callback: PanListenerCallback): void
-```
-
-Registers a callback function to be called before panGesture onActionEnd is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onBeforePanEnd(callback: PanListenerCallback): void--><!--Device-UIObserver-onBeforePanEnd(callback: PanListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
-
-## onBeforePanStart
-
-```TypeScript
-onBeforePanStart(callback: PanListenerCallback): void
-```
-
-Registers a callback function to be called before panGesture onActionStart is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onBeforePanStart(callback: PanListenerCallback): void--><!--Device-UIObserver-onBeforePanStart(callback: PanListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
-
-## onDensityUpdate
-
-```TypeScript
-onDensityUpdate(callback: Callback<observer.DensityInfo>): void
-```
-
-Registers a callback function to be called when the screen density in a ui context is updated.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onDensityUpdate(callback: Callback<observer.DensityInfo>): void--><!--Device-UIObserver-onDensityUpdate(callback: Callback<observer.DensityInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.DensityInfo&gt; | Yes | The callback function to be called when the screen density is updated. |
-
-## onDidClick
-
-```TypeScript
-onDidClick(callback: ClickEventListenerCallback): void
-```
-
-Registers a callback function to be called after clickEvent is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onDidClick(callback: ClickEventListenerCallback): void--><!--Device-UIObserver-onDidClick(callback: ClickEventListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
-
-## onDidLayout
-
-```TypeScript
-onDidLayout(callback: Callback<void>): void
-```
-
-Registers a callback function to be called when the layout is done.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onDidLayout(callback: Callback<void>): void--><!--Device-UIObserver-onDidLayout(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
-
-## onDidTap
-
-```TypeScript
-onDidTap(callback: GestureEventListenerCallback): void
-```
-
-Registers a callback function to be called after tapGesture is called.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onDidTap(callback: GestureEventListenerCallback): void--><!--Device-UIObserver-onDidTap(callback: GestureEventListenerCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
+| type | 'windowSizeLayoutBreakpointChange' | Yes | Event type. The value is fixed at **'windowSizeLayoutBreakpointChange'**, indicating window size layout breakpoint changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | No | Target listener to unregister. If no parameter is provided, all window size layout breakpoint change listeners for the current [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) are removed. |
 
 ## onNavDestinationSizeChange
 
@@ -1025,13 +995,17 @@ Registers a callback function to be called after tapGesture is called.
 onNavDestinationSizeChange(callback: Callback<observer.NavDestinationInfo>): void
 ```
 
-Registers a callback function to be called when the visible NavDestination's size is changed.
+Registers a callback that is triggered when the size of the visible navigation destination changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIObserver-onNavDestinationSizeChange(callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-onNavDestinationSizeChange(callback: Callback<observer.NavDestinationInfo>): void-End-->
 
@@ -1041,23 +1015,27 @@ Registers a callback function to be called when the visible NavDestination's siz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the visible NavDestination's size is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | Callback used to return navigation destination information. |
 
 ## onNavDestinationSizeChangeByUniqueId
 
 ```TypeScript
-onNavDestinationSizeChangeByUniqueId(navigationUniqueId: int, callback: Callback<observer.NavDestinationInfo>): void
+onNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback: Callback<observer.NavDestinationInfo>): void
 ```
 
-Registers a callback function to be called when the size of the visible NavDestination of the navigation with the specified uniqueId changes.
+Removes the listener callback registered using the **onNavDestinationSizeChangeByUniqueId** API. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onNavDestinationSizeChangeByUniqueId(navigationUniqueId: int, callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-onNavDestinationSizeChangeByUniqueId(navigationUniqueId: int, callback: Callback<observer.NavDestinationInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UIObserver-onNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-onNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback: Callback<observer.NavDestinationInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1065,169 +1043,8 @@ Registers a callback function to be called when the size of the visible NavDesti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. &lt;br&gt;The value should be an integer. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the visible NavDestination's size is changed. |
-
-## onNavDestinationSwitch
-
-```TypeScript
-onNavDestinationSwitch(callback: Callback<observer.NavDestinationSwitchInfo>): void
-```
-
-Registers a callback function to be called when the navigation switched to a new navDestination.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onNavDestinationSwitch(callback: Callback<observer.NavDestinationSwitchInfo>): void--><!--Device-UIObserver-onNavDestinationSwitch(callback: Callback<observer.NavDestinationSwitchInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
-
-## onNavDestinationSwitch
-
-```TypeScript
-onNavDestinationSwitch(
-    observerOptions: observer.NavDestinationSwitchObserverOptions,
-    callback: Callback<observer.NavDestinationSwitchInfo>
-  ): void
-```
-
-Registers a callback function to be called when the navigation switched to a new navDestination.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onNavDestinationSwitch(    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback: Callback<observer.NavDestinationSwitchInfo>  ): void--><!--Device-UIObserver-onNavDestinationSwitch(    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback: Callback<observer.NavDestinationSwitchInfo>  ): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
-
-## onNavDestinationUpdate
-
-```TypeScript
-onNavDestinationUpdate(
-    options: observer.NavDestinationSwitchObserverOptions,
-    callback: Callback<observer.NavDestinationInfo>
-    ): void
-```
-
-Registers a callback function to be called when the navigation destination is updated.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onNavDestinationUpdate(    options: observer.NavDestinationSwitchObserverOptions,    callback: Callback<observer.NavDestinationInfo>    ): void--><!--Device-UIObserver-onNavDestinationUpdate(    options: observer.NavDestinationSwitchObserverOptions,    callback: Callback<observer.NavDestinationInfo>    ): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | observer.NavDestinationSwitchObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
-
-## onNavDestinationUpdate
-
-```TypeScript
-onNavDestinationUpdate(callback: Callback<observer.NavDestinationInfo>): void
-```
-
-Registers a callback function to be called when the navigation destination is updated.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onNavDestinationUpdate(callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-onNavDestinationUpdate(callback: Callback<observer.NavDestinationInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
-
-## onNavDestinationUpdateByUniqueId
-
-```TypeScript
-onNavDestinationUpdateByUniqueId(navigationUniqueId: int, callback: Callback<observer.NavDestinationInfo>): void
-```
-
-Registers a callback function to be called when the navigation destination is updated.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onNavDestinationUpdateByUniqueId(navigationUniqueId: int, callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-onNavDestinationUpdateByUniqueId(navigationUniqueId: int, callback: Callback<observer.NavDestinationInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| navigationUniqueId | int | Yes | The uniqueId of the navigation. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
-
-## onNodeRenderState
-
-```TypeScript
-onNodeRenderState(nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): void
-```
-
-Registers a callback function to be called when the specific node's render state changed.This callback will be executed once immediately when the register is successful.  
-[Notes]: 1. Be aware of the limit on the number of nodes: For performance considerations, the system has imposed a limit on the number of  nodes that can be registered for monitoring in a single UI instance, exception will be thrown  if overmuch. Please use this interface with caution. 2. Understanding scenarios where notifications may not occur: In general, within container components that have view or page switching functionality, when a view or page within the screen is moved outside the screen, the components previously  within the screen should be removed from the render tree and should receive a RENDER_OUT  notification. However, this is not always the case, as some scenarios involve views or components  being moved outside the screen's display range without triggering a RENDER_OUT notification. For example, some components with caching capabilities may affect this behavior, and swiper is one  such component. The cacheCount property of the swiper component allows you to force, via its second  parameter isShow, that even if the current page is moved outside the display range, it remains in the  render tree. This can be useful in scenarios where multiple pages are displayed on the screen simultaneously. Another example is scrolling components like list or scroll, where their internal content remains in the  render tree even if it is scrolled outside the screen's display range, provided that lazyForEach/Repeat is  not used. As a result, there will be no changes to the render state. Once you understand the principles  behind the triggers for render state changes, these scenarios will become easier to comprehend.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onNodeRenderState(nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): void--><!--Device-UIObserver-onNodeRenderState(nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| nodeIdentity | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | The identity of the target node |
-| callback | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | Yes | The callback function executed when the rendering state of the component node changes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [161001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node-render-monitor.md#161001-number-of-nodes-listening-for-render-state-exceeds-the-limit) | The count of nodes monitoring render state is over the limitation. |
+| navigationUniqueId | number | Yes | Unique ID of the **Navigation** component to which the **NavDestination** component to be listened belongs, which can be obtained through queryNavigationInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | Callback to be removed. If no parameter is passed, all callbacks with the same **navigationUniqueId** setting are removed. |
 
 ## onRouterPageSizeChange
 
@@ -1235,13 +1052,17 @@ Registers a callback function to be called when the specific node's render state
 onRouterPageSizeChange(callback: Callback<observer.RouterPageInfo>): void
 ```
 
-Registers a callback function to be called when the visible router page's size is changed.
+Registers a callback that is triggered when the size of the visible router page changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIObserver-onRouterPageSizeChange(callback: Callback<observer.RouterPageInfo>): void--><!--Device-UIObserver-onRouterPageSizeChange(callback: Callback<observer.RouterPageInfo>): void-End-->
 
@@ -1251,80 +1072,7 @@ Registers a callback function to be called when the visible router page's size i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.RouterPageInfo&gt; | Yes | The callback function to be called when the visible router page's size is changed. |
-
-## onRouterPageUpdate
-
-```TypeScript
-onRouterPageUpdate(callback: Callback<observer.RouterPageInfo>): void
-```
-
-Registers a callback function to be called when the router page in a ui context is updated.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onRouterPageUpdate(callback: Callback<observer.RouterPageInfo>): void--><!--Device-UIObserver-onRouterPageUpdate(callback: Callback<observer.RouterPageInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.RouterPageInfo&gt; | Yes | The callback function to be called when the router page is updated. |
-
-## onScrollEvent
-
-```TypeScript
-onScrollEvent(options: observer.ObserverOptions, callback: Callback<observer.ScrollEventInfo>): void
-```
-
-Registers a callback function to be called when the scroll event starts or stops.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onScrollEvent(options: observer.ObserverOptions, callback: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-onScrollEvent(options: observer.ObserverOptions, callback: Callback<observer.ScrollEventInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
-
-## onScrollEvent
-
-```TypeScript
-onScrollEvent(callback: Callback<observer.ScrollEventInfo>): void
-```
-
-Registers a callback function to be called when the scroll event starts or stops.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onScrollEvent(callback: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-onScrollEvent(callback: Callback<observer.ScrollEventInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.RouterPageInfo&gt; | Yes | Callback used to return the information about the router page. |
 
 ## onSwiperContentUpdate
 
@@ -1332,13 +1080,17 @@ Registers a callback function to be called when the scroll event starts or stops
 onSwiperContentUpdate(callback: Callback<SwiperContentInfo>): void
 ```
 
-Registers a callback function to be called when the swiper content is updated.
+Listens for content switching events of the **Swiper** component. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIObserver-onSwiperContentUpdate(callback: Callback<SwiperContentInfo>): void--><!--Device-UIObserver-onSwiperContentUpdate(callback: Callback<SwiperContentInfo>): void-End-->
 
@@ -1348,7 +1100,7 @@ Registers a callback function to be called when the swiper content is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | The callback function to be called when the content is updated. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides the **Swiper** content switching information using a **SwiperContentInfo** object. |
 
 ## onSwiperContentUpdate
 
@@ -1356,13 +1108,17 @@ Registers a callback function to be called when the swiper content is updated.
 onSwiperContentUpdate(config: observer.ObserverOptions, callback: Callback<SwiperContentInfo>): void
 ```
 
-Registers a callback function to be called when the swiper content is updated.
+Listens for content switching events of a specific **Swiper** component identified by its ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIObserver-onSwiperContentUpdate(config: observer.ObserverOptions, callback: Callback<SwiperContentInfo>): void--><!--Device-UIObserver-onSwiperContentUpdate(config: observer.ObserverOptions, callback: Callback<SwiperContentInfo>): void-End-->
 
@@ -1372,24 +1128,28 @@ Registers a callback function to be called when the swiper content is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | The callback function to be called when the swiper content is updated. |
+| config | observer.ObserverOptions | Yes | Information about the target **Swiper** component. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides the **Swiper** content switching information using a **SwiperContentInfo** object. |
 
-## onTabChange
+## on_afterPanEnd
 
 ```TypeScript
-onTabChange(config: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void
+on(type: 'afterPanEnd', callback: PanListenerCallback): void
 ```
 
-Registers a callback function to be called when the tabContent is showed or hidden.
+Listens for pan gesture onActionEnd post-execution events, executing the callback after the actual onActionEnd event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onTabChange(config: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-onTabChange(config: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-on(type: 'afterPanEnd', callback: PanListenerCallback): void--><!--Device-UIObserver-on(type: 'afterPanEnd', callback: PanListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1397,24 +1157,28 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch after the execution of the pan gesture onActionEnd event. The registered callback is triggered after **onActionEnd** is executed. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides GestureEvent, GestureRecognizer, and the target component's FrameNode information. |
 
-## onTabChange
+## on_afterPanStart
 
 ```TypeScript
-onTabChange(callback: Callback<observer.TabContentInfo>): void
+on(type: 'afterPanStart', callback: PanListenerCallback): void
 ```
 
-Registers a callback function to be called when the tabContent is showed or hidden.
+Listens for pan gesture onActionStart post-execution events, executing the callback after the actual onActionStart event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onTabChange(callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-onTabChange(callback: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-on(type: 'afterPanStart', callback: PanListenerCallback): void--><!--Device-UIObserver-on(type: 'afterPanStart', callback: PanListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1422,23 +1186,28 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture onActionStart event. The registered callback is triggered after **onActionStart** is executed. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides GestureEvent, GestureRecognizer, and the target component's FrameNode information. |
 
-## onTabContentUpdate
+## on_beforePanEnd
 
 ```TypeScript
-onTabContentUpdate(options: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void
+on(type: 'beforePanEnd', callback: PanListenerCallback): void
 ```
 
-Registers a callback function to be called when the tabContent is showed or hidden.
+Listens for pan gesture onActionEnd pre-execution events, executing the callback before the actual onActionEnd event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onTabContentUpdate(options: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-onTabContentUpdate(options: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-on(type: 'beforePanEnd', callback: PanListenerCallback): void--><!--Device-UIObserver-on(type: 'beforePanEnd', callback: PanListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1446,24 +1215,511 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture onActionEnd event. The registered callback is triggered before **onActionEnd** is executed. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides GestureEvent, GestureRecognizer, and the target component's FrameNode information. |
+
+## on_beforePanStart
+
+```TypeScript
+on(type: 'beforePanStart', callback: PanListenerCallback): void
+```
+
+Listens for pan gesture onActionStart pre-execution events, executing the callback before the actual onActionStart event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIObserver-on(type: 'beforePanStart', callback: PanListenerCallback): void--><!--Device-UIObserver-on(type: 'beforePanStart', callback: PanListenerCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture onActionStart event. The registered callback is triggered before **onActionStart** is executed. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides GestureEvent, GestureRecognizer, and the target component's FrameNode information. |
+
+## on_densityUpdate
+
+```TypeScript
+on(type: 'densityUpdate', callback: Callback<observer.DensityInfo>): void
+```
+
+Listens for screen pixel density changes.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'densityUpdate', callback: Callback<observer.DensityInfo>): void--><!--Device-UIObserver-on(type: 'densityUpdate', callback: Callback<observer.DensityInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'densityUpdate' | Yes | Event type. The value **'densityUpdate'** indicates the pixel density changes of the screen. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.DensityInfo&gt; | Yes | Callback used to return the updated screen pixel density using a [DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md#DensityInfo) object. |
+
+## on_didClick
+
+```TypeScript
+on(type: 'didClick', callback: ClickEventListenerCallback): void
+```
+
+Registers a callback function to be called after clickEvent is called.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'didClick', callback: ClickEventListenerCallback): void--><!--Device-UIObserver-on(type: 'didClick', callback: ClickEventListenerCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'didClick' | Yes | The type of event to listen for. |
+| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
+
+## on_didClick
+
+```TypeScript
+on(type: 'didClick', callback: GestureEventListenerCallback): void
+```
+
+Registers a callback function to be called after tapGesture is called.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'didClick', callback: GestureEventListenerCallback): void--><!--Device-UIObserver-on(type: 'didClick', callback: GestureEventListenerCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'didClick' | Yes | The type of event to listen for. |
+| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
+
+## on_didLayout
+
+```TypeScript
+on(type: 'didLayout', callback: Callback<void>): void
+```
+
+Listens for layout completion status in each frame.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'didLayout', callback: Callback<void>): void--><!--Device-UIObserver-on(type: 'didLayout', callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'didLayout' | Yes | Event type. The value **'didLayout'** indicates whether the layout has been completed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## on_navDestinationSwitch
+
+```TypeScript
+on(
+    type: 'navDestinationSwitch',
+    callback: Callback<observer.NavDestinationSwitchInfo>
+  ): void
+```
+
+Registers a callback function to be called when the navigation switched to a new navDestination.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(    type: 'navDestinationSwitch',    callback: Callback<observer.NavDestinationSwitchInfo>  ): void--><!--Device-UIObserver-on(    type: 'navDestinationSwitch',    callback: Callback<observer.NavDestinationSwitchInfo>  ): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationSwitch' | Yes | The type of event to listen for. Must be 'navDestinationSwitch'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
+
+## on_navDestinationSwitch
+
+```TypeScript
+on(
+    type: 'navDestinationSwitch',
+    observerOptions: observer.NavDestinationSwitchObserverOptions,
+    callback: Callback<observer.NavDestinationSwitchInfo>
+  ): void
+```
+
+Registers a callback function to be called when the navigation switched to a new navDestination.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(    type: 'navDestinationSwitch',    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback: Callback<observer.NavDestinationSwitchInfo>  ): void--><!--Device-UIObserver-on(    type: 'navDestinationSwitch',    observerOptions: observer.NavDestinationSwitchObserverOptions,    callback: Callback<observer.NavDestinationSwitchInfo>  ): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationSwitch' | Yes | The type of event to listen for. Must be 'navDestinationSwitch'. |
+| observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
+
+## on_navDestinationUpdate
+
+```TypeScript
+on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<observer.NavDestinationInfo>): void
+```
+
+Subscribes to status changes of this **NavDestination** component.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<observer.NavDestinationInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationUpdate' | Yes | Event type. The value is fixed at **'navDestinationUpdate'**, which indicates the state change event &lt;br&gt;of the **NavDestination** component. |
+| options | { navigationId: ResourceStr } | Yes | ID of the target **NavDestination** component. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | Callback used to return the current &lt;br&gt;state of the **NavDestination** component. |
+
+## on_navDestinationUpdate
+
+```TypeScript
+on(type: 'navDestinationUpdate', callback: Callback<observer.NavDestinationInfo>): void
+```
+
+Subscribes to status changes of this **NavDestination** component.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'navDestinationUpdate', callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-on(type: 'navDestinationUpdate', callback: Callback<observer.NavDestinationInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationUpdate' | Yes | Event type. The value is fixed at **'navDestinationUpdate'**, &lt;br&gt;which indicates the state change event of the **NavDestination** component. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | Callback used to return the current state of &lt;br&gt;the **NavDestination** component. |
+
+## on_navDestinationUpdateByUniqueId
+
+```TypeScript
+on(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback: Callback<observer.NavDestinationInfo>): void
+```
+
+Registers a callback function to be called when the navigation destination is updated.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIObserver-on(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback: Callback<observer.NavDestinationInfo>): void--><!--Device-UIObserver-on(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback: Callback<observer.NavDestinationInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'navDestinationUpdateByUniqueId' | Yes | The type of event to listen for. Must be 'navDestinationUpdateByUniqueId'. |
+| navigationUniqueId | number | Yes | The uniqueId of the navigation. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
+
+## on_nodeRenderState
+
+```TypeScript
+on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): void
+```
+
+Registers a callback to be invoked when the rendering state of a specific node changes. This callback is executed immediately once upon successful registration. Be mindful of node quantity limitations. For performance reasons, registering too many nodes within a single UI instance will throw an exception. Typically, a **RENDER_OUT** notification is received when a component moves off-screen. However, in certain scenarios, a **RENDER_OUT** notification might not be triggered even if a component has moved off-screen. For example, components with caching capabilities like Swiper will not trigger **RENDER_OUT** notifications even when the **isShown** parameter in the cachedCount attribute is set to **true**.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIObserver-on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): void--><!--Device-UIObserver-on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'nodeRenderState' | Yes | Event type. The value is fixed at **'nodeRenderState'**, indicating rendering state changes. |
+| nodeIdentity | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | Node ID. |
+| callback | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | Yes | Callback used to return the result. It provides the [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md#NodeRenderState) of the node rendering state change event and the component's FrameNode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [161001](../errorcode-node-render-monitor.md#161001-number-of-nodes-listening-for-render-state-exceeds-the-limit) | The count of nodes monitoring render state is over the limitation. |
+
+## on_routerPageUpdate
+
+```TypeScript
+on(type: 'routerPageUpdate', callback: Callback<observer.RouterPageInfo>): void
+```
+
+Unsubscribes to state changes of the page in the router.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'routerPageUpdate', callback: Callback<observer.RouterPageInfo>): void--><!--Device-UIObserver-on(type: 'routerPageUpdate', callback: Callback<observer.RouterPageInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'routerPageUpdate' | Yes | Event type. &lt;br&gt;The value is fixed at 'routerPageUpdate', which indicates the state change event of the page in the router. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.RouterPageInfo&gt; | Yes | Callback to be unregistered. |
+
+## on_scrollEvent
+
+```TypeScript
+on(type: 'scrollEvent', options: observer.ObserverOptions, callback: Callback<observer.ScrollEventInfo>): void
+```
+
+Registers a callback function to be called when the scroll event start or stop.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'scrollEvent', options: observer.ObserverOptions, callback: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-on(type: 'scrollEvent', options: observer.ObserverOptions, callback: Callback<observer.ScrollEventInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
 | options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent show or hide. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
-## onTabContentUpdate
+## on_scrollEvent
 
 ```TypeScript
-onTabContentUpdate(callback: Callback<observer.TabContentInfo>): void
+on(type: 'scrollEvent', callback: Callback<observer.ScrollEventInfo>): void
+```
+
+Registers a callback function to be called when the scroll event start or stop.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'scrollEvent', callback: Callback<observer.ScrollEventInfo>): void--><!--Device-UIObserver-on(type: 'scrollEvent', callback: Callback<observer.ScrollEventInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+
+## on_tabChange
+
+```TypeScript
+on(type: 'tabChange', config: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void
+```
+
+Registers a callback function to be called when the tabContent is showed or hidden. Include the cases when the first tab content shows and when the tab changes current index.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-on(type: 'tabChange', config: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-on(type: 'tabChange', config: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'tabChange' | Yes | The type of event to listen for. Must be 'tabChange'. |
+| config | observer.ObserverOptions | Yes | The options object. Includes the observed component id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when when the tabContent is showed or hidden. |
+
+## on_tabChange
+
+```TypeScript
+on(type: 'tabChange', callback: Callback<observer.TabContentInfo>): void
+```
+
+Registers a callback function to be called when the tabContent is showed or hidden. Include the cases when the first tab content shows and when the tab changes current index.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-on(type: 'tabChange', callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-on(type: 'tabChange', callback: Callback<observer.TabContentInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'tabChange' | Yes | The type of event to listen for. Must be 'tabChange'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+
+## on_tabContentUpdate
+
+```TypeScript
+on(type: 'tabContentUpdate', options: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void
 ```
 
 Registers a callback function to be called when the tabContent is showed or hidden.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onTabContentUpdate(callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-onTabContentUpdate(callback: Callback<observer.TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'tabContentUpdate', options: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-on(type: 'tabContentUpdate', options: observer.ObserverOptions, callback: Callback<observer.TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1471,23 +1727,58 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| type | 'tabContentUpdate' | Yes | The type of event to listen for. Must be 'tabContentUpdate'. |
+| options | observer.ObserverOptions | Yes | The options object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent show or hide. |
 
-## onTextChange
+## on_tabContentUpdate
 
 ```TypeScript
-onTextChange(callback: Callback<observer.TextChangeEventInfo>): void
+on(type: 'tabContentUpdate', callback: Callback<observer.TabContentInfo>): void
+```
+
+Registers a callback function to be called when the tabContent is showed or hidden.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'tabContentUpdate', callback: Callback<observer.TabContentInfo>): void--><!--Device-UIObserver-on(type: 'tabContentUpdate', callback: Callback<observer.TabContentInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'tabContentUpdate' | Yes | The type of event to listen for. Must be 'tabContentUpdate'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+
+## on_textChange
+
+```TypeScript
+on(type: 'textChange', callback: Callback<observer.TextChangeEventInfo>): void
 ```
 
 Registers a callback function to be called when text field's content is changed.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onTextChange(callback: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-onTextChange(callback: Callback<observer.TextChangeEventInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-on(type: 'textChange', callback: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-on(type: 'textChange', callback: Callback<observer.TextChangeEventInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1495,23 +1786,28 @@ Registers a callback function to be called when text field's content is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when text field's content is changed. |
+| type | 'textChange' | Yes | The type of event to listen for. Must be 'textChange'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when text field's content is changed. |
 
-## onTextChange
+## on_textChange
 
 ```TypeScript
-onTextChange(identity: observer.ObserverOptions, callback: Callback<observer.TextChangeEventInfo>): void
+on(type: 'textChange', identity: observer.ObserverOptions, callback: Callback<observer.TextChangeEventInfo>): void
 ```
 
 Registers a callback function to be called when text field's content is changed.
 
-**Since:** 24
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onTextChange(identity: observer.ObserverOptions, callback: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-onTextChange(identity: observer.ObserverOptions, callback: Callback<observer.TextChangeEventInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-on(type: 'textChange', identity: observer.ObserverOptions, callback: Callback<observer.TextChangeEventInfo>): void--><!--Device-UIObserver-on(type: 'textChange', identity: observer.ObserverOptions, callback: Callback<observer.TextChangeEventInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1519,24 +1815,29 @@ Registers a callback function to be called when text field's content is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'textChange' | Yes | The type of event to listen for. Must be 'textChange'. |
 | identity | observer.ObserverOptions | Yes | Identity options. |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when the text field's content is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when the text field's content is changed. |
 
-## onWillClick
+## on_willClick
 
 ```TypeScript
-onWillClick(callback: ClickEventListenerCallback): void
+on(type: 'willClick', callback: ClickEventListenerCallback): void
 ```
 
 Registers a callback function to be called before clickEvent is called.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onWillClick(callback: ClickEventListenerCallback): void--><!--Device-UIObserver-onWillClick(callback: ClickEventListenerCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'willClick', callback: ClickEventListenerCallback): void--><!--Device-UIObserver-on(type: 'willClick', callback: ClickEventListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1544,47 +1845,28 @@ Registers a callback function to be called before clickEvent is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'willClick' | Yes | The type of event to listen for. |
 | callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
 
-## onWillDraw
+## on_willClick
 
 ```TypeScript
-onWillDraw(callback: Callback<void>): void
-```
-
-Registers a callback function to be called when the draw command will be drawn.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIObserver-onWillDraw(callback: Callback<void>): void--><!--Device-UIObserver-onWillDraw(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the draw command will be drawn. |
-
-## onWillTap
-
-```TypeScript
-onWillTap(callback: GestureEventListenerCallback): void
+on(type: 'willClick', callback: GestureEventListenerCallback): void
 ```
 
 Registers a callback function to be called before tapGesture is called.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onWillTap(callback: GestureEventListenerCallback): void--><!--Device-UIObserver-onWillTap(callback: GestureEventListenerCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'willClick', callback: GestureEventListenerCallback): void--><!--Device-UIObserver-on(type: 'willClick', callback: GestureEventListenerCallback): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1592,23 +1874,28 @@ Registers a callback function to be called before tapGesture is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
+| type | 'willClick' | Yes | The type of event to listen for. |
 | callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
 
-## onWindowSizeLayoutBreakpointChange
+## on_willDraw
 
 ```TypeScript
-onWindowSizeLayoutBreakpointChange(callback: Callback<observer.WindowSizeLayoutBreakpointInfo>): void
+on(type: 'willDraw', callback: Callback<void>): void
 ```
 
-Registers a callback function to be called when the window size layout breakpoint changes.This method allows observing changes in window size breakpoints which can be used to adapt UI layouts responsively based on window dimensions.
+Listens for drawing instruction dispatch in each frame.
 
-**Since:** 24
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIObserver-onWindowSizeLayoutBreakpointChange(callback: Callback<observer.WindowSizeLayoutBreakpointInfo>): void--><!--Device-UIObserver-onWindowSizeLayoutBreakpointChange(callback: Callback<observer.WindowSizeLayoutBreakpointInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIObserver-on(type: 'willDraw', callback: Callback<void>): void--><!--Device-UIObserver-on(type: 'willDraw', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1616,7 +1903,37 @@ Registers a callback function to be called when the window size layout breakpoin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | Yes | The callback function to be called when the window size layout breakpoint changes. The callback receives a [WindowSizeLayoutBreakpointInfo](arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-c.md#WindowSizeLayoutBreakpointInfo) object containing the current width and height breakpoint classifications. |
+| type | 'willDraw' | Yes | Event event. The value **'willDraw'** indicates whether drawing is about to occur. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## on_windowSizeLayoutBreakpointChange
+
+```TypeScript
+on(type: 'windowSizeLayoutBreakpointChange', callback: Callback<observer.WindowSizeLayoutBreakpointInfo>): void
+```
+
+Registers a callback for window size layout breakpoint changes. This enables adaptive UI layout adjustments based on window size variations. This API uses an asynchronous callback to return the result.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIObserver-on(type: 'windowSizeLayoutBreakpointChange', callback: Callback<observer.WindowSizeLayoutBreakpointInfo>): void--><!--Device-UIObserver-on(type: 'windowSizeLayoutBreakpointChange', callback: Callback<observer.WindowSizeLayoutBreakpointInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'windowSizeLayoutBreakpointChange' | Yes | Event type. The value is fixed at **'windowSizeLayoutBreakpointChange'**, indicating window size layout breakpoint changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | Yes | Callback used to return the result. It provides window width and height layout breakpoint enumerations using a **WindowSizeLayoutBreakpointinfo** object. |
 
 ## removeGlobalGestureListener
 
@@ -1624,13 +1941,17 @@ Registers a callback function to be called when the window size layout breakpoin
 removeGlobalGestureListener(type: GestureListenerType, callback?: GestureListenerCallback): void
 ```
 
-Removes a callback function for one gesture listener type.
+Unregisters the specified global gesture listener.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIObserver-removeGlobalGestureListener(type: GestureListenerType, callback?: GestureListenerCallback): void--><!--Device-UIObserver-removeGlobalGestureListener(type: GestureListenerType, callback?: GestureListenerCallback): void-End-->
 
@@ -1640,6 +1961,6 @@ Removes a callback function for one gesture listener type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [GestureListenerType](arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | Yes | The type of event to remove the listener for. |
-| callback | [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md) | No | The callback function to be removed. If not provided, all callbacks for the given gesture type will be removed. |
+| type | [GestureListenerType](arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | Yes | Event type. |
+| callback | [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md) | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for this gesture type. |
 

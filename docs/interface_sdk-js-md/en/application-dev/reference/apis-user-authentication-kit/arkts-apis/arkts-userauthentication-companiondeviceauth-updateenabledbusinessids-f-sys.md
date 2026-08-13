@@ -16,7 +16,9 @@ Updates the service scope supported by the specified companion device template. 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -33,7 +35,7 @@ Updates the service scope supported by the specified companion device template. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | templateId | Uint8Array | Yes | ID of the target template. Unique ID of the template whose service scope is to be updated, which can be obtained through [getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#getTemplateStatus). |
-| enabledBusinessIds | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | ID set of services supported by the template. It indicates the list of service scenarios to be enabled, such as [DEFAULT] and [Service ID for unlocking the screen]. Different service IDs correspond to different authentication scenarios. You can configure the service IDs based on service requirements. |
+| enabledBusinessIds | int[] | Yes | ID set of services supported by the template. It indicates the list of service scenarios to be enabled, such as [DEFAULT] and [Service ID for unlocking the screen]. Different service IDs correspond to different authentication scenarios. You can configure the service IDs based on service requirements. |
 
 **Return value:**
 
@@ -45,11 +47,11 @@ Updates the service scope supported by the specified companion device template. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
-| [32600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600003-invalid-service-id) | The business ID is invalid. |
-| [32600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600003](../errorcode-useriam.md#32600003-invalid-service-id) | The business ID is invalid. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

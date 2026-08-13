@@ -6,8 +6,7 @@
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using  
-[NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.This API uses an asynchronous callback to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -15,7 +14,7 @@ Checks whether a specified template is supported before using
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSupportTemplate](ohos.notificationManager/notificationManager#isSupportTemplate)
+**Substitutes:** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#isSupportTemplate)
 
 <!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -26,7 +25,7 @@ Checks whether a specified template is supported before using
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isSupportTemplate
@@ -35,8 +34,7 @@ Checks whether a specified template is supported before using
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using  
-[NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.This API uses a promise to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -44,7 +42,7 @@ Checks whether a specified template is supported before using
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSupportTemplate](ohos.notificationManager/notificationManager#isSupportTemplate)
+**Substitutes:** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#isSupportTemplate)
 
 <!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 

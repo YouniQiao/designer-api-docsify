@@ -1,19 +1,12 @@
 # AuxiliaryPicture
 
-AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取图像的辅助图信息。目前支持的辅助图类型可参考[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md#AuxiliaryPictureType)。
+AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取图像的辅助图信息。目前支持的辅助图类型可参考[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md#AuxiliaryPictureType) 。 在调用AuxiliaryPicture的方法前，需要通过[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createAuxiliaryPicture)或Picture的 [getAuxiliaryPicture](arkts-image-image-picture-i.md#getAuxiliaryPicture)创建一个AuxiliaryPicture实例。 由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](#release)方法及时释放对象。释放时应确保该实例的所有异步方法 均执行完成，且后续不再使用该对象。 > **说明：** > > - 本Interface首批接口从API version 13开始支持。
 
-在调用AuxiliaryPicture的方法前，需要通过[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createAuxiliaryPicture)或Picture的  
-[getAuxiliaryPicture](arkts-image-image-picture-i.md#getAuxiliaryPicture)创建一个AuxiliaryPicture实例。
+**起始版本：** 23
 
-由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](#release)方法及时释放对象。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该对象。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 13开始支持。
-
-**起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-image-interface AuxiliaryPicture--><!--Device-image-interface AuxiliaryPicture-End-->
 
@@ -30,6 +23,8 @@ getAuxiliaryPictureInfo(): AuxiliaryPictureInfo
 **起始版本：** 13
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo--><!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo-End-->
 
@@ -51,7 +46,9 @@ Obtains the information about this auxiliary picture.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo | undefined--><!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo | undefined-End-->
 
@@ -75,6 +72,8 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
+**废弃版本：** -1
+
 <!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -95,8 +94,8 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## getMetadata
 
@@ -108,7 +107,9 @@ Obtains the metadata of auxiliary picture.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>--><!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>-End-->
 
@@ -130,7 +131,7 @@ Obtains the metadata of auxiliary picture.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## getType
 
@@ -143,6 +144,8 @@ getType(): AuxiliaryPictureType
 **起始版本：** 13
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType--><!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType-End-->
 
@@ -164,7 +167,9 @@ Obtains the type of auxiliary picture.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType | undefined--><!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType | undefined-End-->
 
@@ -188,6 +193,8 @@ readPixelsToBuffer(): Promise<ArrayBuffer>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
+**废弃版本：** -1
+
 <!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>--><!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -208,7 +215,9 @@ Reads image pixel map data and writes the data to an ArrayBuffer. This method us
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer | undefined>--><!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer | undefined>-End-->
 
@@ -226,15 +235,13 @@ Reads image pixel map data and writes the data to an ArrayBuffer. This method us
 release():void
 ```
 
-释放辅助图对象，无返回值。
+释放辅助图对象，无返回值。 由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用该方法，及时释放内存。
+**起始版本：** 23
 
-释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-release():void--><!--Device-AuxiliaryPicture-release():void-End-->
 
@@ -248,9 +255,11 @@ setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void
 
 设置辅助图的图像信息。
 
-**起始版本：** 13
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void--><!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void-End-->
 
@@ -266,7 +275,7 @@ setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setMetadata
 
@@ -276,9 +285,11 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 
 设置辅助图元数据。使用Promise异步回调。
 
-**起始版本：** 13
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
 
@@ -301,8 +312,8 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## writePixelsFromBuffer
 
@@ -312,9 +323,11 @@ writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 
 读取ArrayBuffer中的辅助图片数据，并将数据写入AuxiliaryPicture对象。使用Promise异步回调。
 
-**起始版本：** 13
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>--><!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>-End-->
 
@@ -336,5 +349,5 @@ writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 

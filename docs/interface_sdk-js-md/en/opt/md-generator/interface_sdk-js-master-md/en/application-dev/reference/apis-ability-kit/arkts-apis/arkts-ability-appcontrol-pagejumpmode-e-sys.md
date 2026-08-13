@@ -4,6 +4,8 @@ Enumerates the page jump modes used when an application is blocked.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-appControl-export enum PageJumpMode--><!--Device-appControl-export enum PageJumpMode-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -19,6 +21,8 @@ PAGE_JUMP_WINDOW_SHOW = 0
 A page is displayed when the target application is blocked.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ PAGE_JUMP_WINDOW_NOT_SHOW = 1
 No page is displayed when the target application is blocked.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

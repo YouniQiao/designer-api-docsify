@@ -2,7 +2,9 @@
 
 Provides the geographical location definitions for media resources.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface Location--><!--Device-media-interface Location-End-->
 
@@ -24,7 +26,9 @@ Latitude.
 
 **Type:** number
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
 
@@ -40,7 +44,9 @@ Longitude.
 
 **Type:** number
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
 

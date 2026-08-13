@@ -2,7 +2,9 @@
 
 The **hiSysEvent** module provides the system event logging functions, such as configuring trace points, subscribing to system events, and querying system events written to the event file.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hiSysEvent--><!--Device-unnamed-declare namespace hiSysEvent-End-->
 
@@ -23,14 +25,14 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addWatcher](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md#addwatcher) |
-| [exportSysEvents](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md#exportsysevents) |
-| [query](arkts-performanceanalysis-hisysevent-query-f-sys.md#query) |
-| [removeWatcher](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md#removewatcher) |
-| [subscribe](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md#subscribe) |
-| [unsubscribe](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md#unsubscribe) |
-| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write) |
-| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write-1) |
+| [addWatcher](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md#addWatcher-(System-API)) |
+| [exportSysEvents](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md#exportSysEvents-(System-API)) |
+| [query](arkts-performanceanalysis-hisysevent-query-f-sys.md#query-(System-API)) |
+| [removeWatcher](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md#removeWatcher-(System-API)) |
+| [subscribe](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md#subscribe-(System-API)) |
+| [unsubscribe](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md#unsubscribe-(System-API)) |
+| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write-(System-API)) |
+| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

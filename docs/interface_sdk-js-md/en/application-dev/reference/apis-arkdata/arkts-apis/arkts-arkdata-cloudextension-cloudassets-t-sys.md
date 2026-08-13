@@ -6,9 +6,11 @@ type CloudAssets = Array<CloudAsset>
 
 Represents an array of CloudAsset.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>--><!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>-End-->
 

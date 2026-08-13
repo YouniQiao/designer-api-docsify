@@ -1,12 +1,14 @@
 # SymbolNumberFormatOptions
 
-Represents optional configuration items for the SymbolNumberFormat object.Define the symbol element and value that need to be replaced.
+Represents optional configuration items for the SymbolNumberFormat object. Define the symbol element and value that need to be replaced.
 
-**Inheritance/Implementation:** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](Intl.NumberFormatOptions)
+**Inheritance/Implementation:** SymbolNumberFormatOptions extends Intl.NumberFormatOptions
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export interface SymbolNumberFormatOptions extends Intl.NumberFormatOptions--><!--Device-i18n-export interface SymbolNumberFormatOptions extends Intl.NumberFormatOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export interface SymbolNumberFormatOptions--><!--Device-i18n-export interface SymbolNumberFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -28,6 +30,8 @@ Grouping Separator symbol of localized number part, such as "," of "10,000".
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -47,6 +51,8 @@ Infinity symbol of localized number part, such as "∞".
 **Type:** string \| undefined
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Minus sign of localized number part, such as "-".
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -87,6 +95,8 @@ NaN symbol of localized number part, such as "null".
 **Type:** string \| undefined
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +118,8 @@ Plus sign of localized number part, such as "+".
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -127,6 +139,8 @@ Zero symbol of localized number part, such as "0".
 **Type:** string \| undefined
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

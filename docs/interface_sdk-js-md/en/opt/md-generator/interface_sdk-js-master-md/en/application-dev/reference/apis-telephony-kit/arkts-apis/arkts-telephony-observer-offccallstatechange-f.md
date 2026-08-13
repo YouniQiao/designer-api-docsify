@@ -12,9 +12,11 @@ import { observer } from '@kit.TelephonyKit';
 function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 ```
 
-Cancels the listening on the carrier call status and obtaining of the call number by a third-party application.This method uses an asynchronous callback to return the result.
+Cancels the listening on the carrier call status and obtaining of the call number by a third-party application. This method uses an asynchronous callback to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
@@ -32,11 +34,11 @@ Cancels the listening on the carrier call status and obtaining of the call numbe
 
 | Error Code ID |
 | --- |
-| [8800999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800999-internal-error) |
-| [8800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800002-service-connection-error) |
-| [8800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800003-system-internal-error) |
-| [8800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800001-input-parameter-value-out-of-range) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [8800999](../errorcode-telephony.md#8800999-internal-error) |
+| [8800002](../errorcode-telephony.md#8800002-service-connection-error) |
+| [8800003](../errorcode-telephony.md#8800003-system-internal-error) |
+| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

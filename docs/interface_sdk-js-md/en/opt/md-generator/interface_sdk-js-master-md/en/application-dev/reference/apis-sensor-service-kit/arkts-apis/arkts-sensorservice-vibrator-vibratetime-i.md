@@ -2,7 +2,9 @@
 
 Represents vibration of the specified duration.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibrateTime--><!--Device-vibrator-interface VibrateTime-End-->
 
@@ -24,7 +26,9 @@ Vibration duration, in ms. The value range is (0,1800000]. The maximum vibration
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +46,9 @@ The value is **time**, indicating vibration of the specified duration.
 
 **Type:** 'time'
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

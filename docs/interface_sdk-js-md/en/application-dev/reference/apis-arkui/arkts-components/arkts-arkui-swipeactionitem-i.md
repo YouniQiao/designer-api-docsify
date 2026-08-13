@@ -1,102 +1,16 @@
 # SwipeActionItem
 
-Describes the swipe action item.For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item when the list item is swiped right (or left).
-
-For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item when the list item is swiped up (or down).
+Describes the swipe action item. For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item when the list item is swiped right (or left). For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item when the list item is swiped up (or down).
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface SwipeActionItem--><!--Device-unnamed-declare interface SwipeActionItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onAction
-
-```TypeScript
-onAction?: () => void
-```
-
-Callback invoked when the list item is released while in the delete area.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SwipeActionItem-onAction?: () => void--><!--Device-SwipeActionItem-onAction?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onEnterActionArea
-
-```TypeScript
-onEnterActionArea?: () => void
-```
-
-Callback invoked each time the list item enters the delete area.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SwipeActionItem-onEnterActionArea?: () => void--><!--Device-SwipeActionItem-onEnterActionArea?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onExitActionArea
-
-```TypeScript
-onExitActionArea?: () => void
-```
-
-Callback invoked each time the list item exits the delete area.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SwipeActionItem-onExitActionArea?: () => void--><!--Device-SwipeActionItem-onExitActionArea?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onStateChange
-
-```TypeScript
-onStateChange?: (state: SwipeActionState) => void
-```
-
-Callback invoked when the swipe state of the list item changes.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void--><!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| state | [SwipeActionState](arkts-arkui-swipeactionstate-e.md) | Yes |  |
 
 ## actionAreaDistance
 
@@ -114,6 +28,8 @@ Swipe distance threshold for deleting the list item. This threshold applies afte
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -128,13 +44,15 @@ Swipe distance threshold for deleting the list item. This threshold applies afte
 builder?: CustomBuilder
 ```
 
-Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
+Swipe action item displayed when the list item is swiped left or right (in vertical list layout) or up or down (in horizontal list layout).
 
 **Type:** CustomBuilder
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,7 +68,7 @@ Swipe action item displayed when the list item is swiped left or right (in verti
 builderComponent?: ComponentContent
 ```
 
-Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
+Swipe action item displayed when the list item is swiped left or right (in vertical list layout) or up or down (in horizontal list layout).
 
 **Type:** ComponentContent
 
@@ -158,11 +76,109 @@ Swipe action item displayed when the list item is swiped left or right (in verti
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SwipeActionItem-builderComponent?: ComponentContent--><!--Device-SwipeActionItem-builderComponent?: ComponentContent-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onAction
+
+```TypeScript
+onAction?: () => void
+```
+
+Callback invoked when the list item is released while in the delete area.
+
+**Type:** () =&gt; void
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwipeActionItem-onAction?: () => void--><!--Device-SwipeActionItem-onAction?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onEnterActionArea
+
+```TypeScript
+onEnterActionArea?: () => void
+```
+
+Callback invoked each time the list item enters the delete area.
+
+**Type:** () =&gt; void
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwipeActionItem-onEnterActionArea?: () => void--><!--Device-SwipeActionItem-onEnterActionArea?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onExitActionArea
+
+```TypeScript
+onExitActionArea?: () => void
+```
+
+Callback invoked each time the list item exits the delete area.
+
+**Type:** () =&gt; void
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwipeActionItem-onExitActionArea?: () => void--><!--Device-SwipeActionItem-onExitActionArea?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onStateChange
+
+```TypeScript
+onStateChange?: (state: SwipeActionState) => void
+```
+
+Callback invoked when the swipe state of the list item changes.
+
+**Type:** (state: SwipeActionState) =&gt; void
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void--><!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

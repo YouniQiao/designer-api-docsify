@@ -16,6 +16,8 @@ Creates a **FormBindingData** object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData-End-->
@@ -38,7 +40,7 @@ Creates a **FormBindingData** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -84,3 +86,32 @@ struct Index {
   }
 }
 ```
+
+
+## createFormBindingData
+
+```TypeScript
+function createFormBindingData(obj?: RecordData): FormBindingData
+```
+
+Create an FormBindingData instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-formBindingData-function createFormBindingData(obj?: RecordData): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: RecordData): FormBindingData-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md) | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) |

@@ -2,7 +2,9 @@
 
 表示WantAgent支持的操作类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-wantAgent-export enum OperationType--><!--Device-wantAgent-export enum OperationType-End-->
 
@@ -16,7 +18,9 @@ START_SERVICE_EXTENSION = 6
 
 开启一个ServiceExtension。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

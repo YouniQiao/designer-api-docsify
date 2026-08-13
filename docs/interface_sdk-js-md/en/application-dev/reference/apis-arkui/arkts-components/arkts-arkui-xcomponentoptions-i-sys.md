@@ -6,6 +6,8 @@ Defines the options of the **XComponent**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface XComponentOptions--><!--Device-unnamed-declare interface XComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Identifier of a screen.
 **Since:** 17
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

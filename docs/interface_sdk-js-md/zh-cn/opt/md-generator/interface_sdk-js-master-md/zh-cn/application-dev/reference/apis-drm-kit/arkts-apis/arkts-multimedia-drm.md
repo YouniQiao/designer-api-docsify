@@ -1,13 +1,22 @@
 # @ohos.multimedia.drm(Defines the DRM capability.)
 
-DRM（Digital Rights Management）框架组件支持音视频媒体业务数字版权管理功能的开发。开发者可以调用系统提供的DRM插件，完成以下功能：
+/*
+ Copyright (C) 2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-- DRM证书管理：生成证书请求、设置证书响应，实现对证书Provision（下载）功能。  
-- DRM媒体密钥管理：生成媒体密钥请求、设置媒体密钥响应、管理离线媒体密钥功能。  
-- DRM节目授权：支持DRM插件根据媒体密钥权限对DRM节目授权。  
-- DRM节目解密：支持媒体播放功能的解密调用，实现对DRM节目的解密。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace drm--><!--Device-unnamed-declare namespace drm-End-->
 
@@ -19,12 +28,13 @@ DRM（Digital Rights Management）框架组件支持音视频媒体业务数字�
 
 | 名称 |
 | --- |
-| [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem) |
-| [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md#getmediakeysystemuuid) |
-| [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md#getmediakeysystems) |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported) |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-1) |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-2) |
+| [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem) |
+| [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem) |
+| [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md#getMediaKeySystemUuid) |
+| [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md#getMediaKeySystems) |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported) |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported) |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported) |
 
 ### 接口
 

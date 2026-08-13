@@ -2,7 +2,9 @@
 
 Provides APIs for X.509 certificate operations.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface X509Cert--><!--Device-cert-interface X509Cert-End-->
 
@@ -22,7 +24,9 @@ checkValidityWithDate(date: string): void
 
 Checks the validity period of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,11 +44,11 @@ Checks the validity period of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19030003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
-| [19030004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-certificate-expired) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) |
 
 ## getBasicConstraints
 
@@ -54,7 +58,9 @@ getBasicConstraints(): number
 
 Obtains the basic constraints of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,9 +82,11 @@ getCRLDistributionPoint(): DataArray
 
 Obtains the CRL distribution points of this X.509 certificate.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getCRLDistributionPoint(): DataArray--><!--Device-X509Cert-getCRLDistributionPoint(): DataArray-End-->
 
@@ -94,9 +102,9 @@ Obtains the CRL distribution points of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getCertSerialNumber
 
@@ -106,7 +114,9 @@ getCertSerialNumber(): bigint
 
 Obtains the X.509 certificate serial number.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -124,7 +134,7 @@ Obtains the X.509 certificate serial number.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
 
 ## getEncoded
 
@@ -134,7 +144,9 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 Obtains the serialized X.509 certificate data. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -152,10 +164,10 @@ Obtains the serialized X.509 certificate data. This API uses an asynchronous cal
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getEncoded
 
@@ -165,7 +177,9 @@ getEncoded(): Promise<EncodingBlob>
 
 Obtains the serialized X.509 certificate data. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -183,10 +197,10 @@ Obtains the serialized X.509 certificate data. This API uses a promise to return
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getExtKeyUsage
 
@@ -196,7 +210,9 @@ getExtKeyUsage(): DataArray
 
 Obtains the usage of the extended key of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -214,9 +230,9 @@ Obtains the usage of the extended key of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getExtensionsObject
 
@@ -226,9 +242,11 @@ getExtensionsObject(): CertExtension
 
 Obtains the certificate extension object.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getExtensionsObject(): CertExtension--><!--Device-X509Cert-getExtensionsObject(): CertExtension-End-->
 
@@ -244,9 +262,9 @@ Obtains the certificate extension object.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getIssuerAltNames
 
@@ -254,13 +272,11 @@ Obtains the certificate extension object.
 getIssuerAltNames(): DataArray
 ```
 
-Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
+Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. > **NOTE：**> > The obtained IANs contain a string terminator.
 
-> **NOTE：**
-> 
-> The obtained IANs contain a string terminator.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -278,9 +294,9 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getIssuerName
 
@@ -288,16 +304,11 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 getIssuerName(): DataBlob
 ```
 
-Obtains the issuer name of this X.509 certificate.
+Obtains the issuer name of this X.509 certificate. > **NOTE：**> > - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove > this terminator based on your business requirements. > - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name > string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
 
-> **NOTE：**
-> 
-> - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove
-> this terminator based on your business requirements.
-> - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name
-> string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -315,9 +326,9 @@ Obtains the issuer name of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getIssuerName
 
@@ -327,9 +338,11 @@ getIssuerName(encodingType: EncodingType): string
 
 Obtains the issuer name of this X.509 certificate based on the encoding type.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string--><!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string-End-->
 
@@ -351,10 +364,10 @@ Obtains the issuer name of this X.509 certificate based on the encoding type.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getIssuerX500DistinguishedName
 
@@ -364,9 +377,11 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
 
@@ -382,9 +397,9 @@ Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getItem
 
@@ -394,7 +409,9 @@ getItem(itemType: CertItemType): DataBlob
 
 Obtains the fields in the X.509 certificate.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -418,10 +435,10 @@ Obtains the fields in the X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getKeyUsage
 
@@ -431,7 +448,9 @@ getKeyUsage(): DataBlob
 
 Obtains the key usage of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -449,8 +468,8 @@ Obtains the key usage of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getNotAfterTime
 
@@ -460,7 +479,9 @@ getNotAfterTime(): string
 
 Obtains the expiration time of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -478,9 +499,9 @@ Obtains the expiration time of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getNotBeforeTime
 
@@ -490,7 +511,9 @@ getNotBeforeTime(): string
 
 Obtains the start time of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -508,9 +531,9 @@ Obtains the start time of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getPublicKey
 
@@ -520,7 +543,9 @@ getPublicKey(): cryptoFramework.PubKey
 
 Obtains the public key of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -538,8 +563,8 @@ Obtains the public key of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSerialNumber
 
@@ -547,12 +572,7 @@ Obtains the public key of this X.509 certificate.
 getSerialNumber(): number
 ```
 
-Obtains the X.509 certificate serial number.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 10. Use
-> [X509Cert.getCertSerialNumber()](#getCertSerialNumber) instead.
+Obtains the X.509 certificate serial number. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 10. Use > [X509Cert.getCertSerialNumber()](#getCertSerialNumber) instead.
 
 **Since:** 9
 
@@ -578,7 +598,9 @@ getSignature(): DataBlob
 
 Obtains the signature data of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -596,9 +618,9 @@ Obtains the signature data of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSignatureAlgName
 
@@ -608,7 +630,9 @@ getSignatureAlgName(): string
 
 Obtains the signing algorithm of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -626,9 +650,9 @@ Obtains the signing algorithm of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSignatureAlgOid
 
@@ -638,7 +662,9 @@ getSignatureAlgOid(): string
 
 Obtains the object identifier (OID) of the X.509 certificate signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -656,9 +682,9 @@ Obtains the object identifier (OID) of the X.509 certificate signing algorithm. 
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSignatureAlgParams
 
@@ -668,7 +694,9 @@ getSignatureAlgParams(): DataBlob
 
 Obtains the signing algorithm parameters of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -686,10 +714,10 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSubjectAltNames
 
@@ -697,13 +725,11 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 getSubjectAltNames(): DataArray
 ```
 
-Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
+Obtains the Subject Alternative Names (SANs) of this X.509 certificate. > **NOTE：**> > The obtained SANs contain a string terminator.
 
-> **NOTE：**
-> 
-> The obtained SANs contain a string terminator.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -721,9 +747,9 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSubjectName
 
@@ -731,19 +757,11 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-Obtains the subject name of this X.509 certificate.
+Obtains the subject name of this X.509 certificate. > **NOTE：**> > - If the encodingType parameter is not set, the obtained certificate subject name ends with a > NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements. > - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When > converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to > separate relative distinguished names. > - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate > subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
 
-> **NOTE：**
-> 
-> - If the encodingType parameter is not set, the obtained certificate subject name ends with a
-> NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.
-> - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When
-> converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to
-> separate relative distinguished names.
-> - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate
-> subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -767,10 +785,10 @@ Obtains the subject name of this X.509 certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSubjectX500DistinguishedName
 
@@ -780,9 +798,11 @@ getSubjectX500DistinguishedName(): X500DistinguishedName
 
 Obtains the X.500 distinguished name object of the X.509 certificate subject.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName-End-->
 
@@ -798,9 +818,9 @@ Obtains the X.500 distinguished name object of the X.509 certificate subject.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getVersion
 
@@ -810,7 +830,9 @@ getVersion(): number
 
 Obtains the X.509 certificate version.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -832,9 +854,11 @@ hashCode(): Uint8Array
 
 Obtains the hash value of the data in DER format.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-hashCode(): Uint8Array--><!--Device-X509Cert-hashCode(): Uint8Array-End-->
 
@@ -850,9 +874,9 @@ Obtains the hash value of the data in DER format.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## match
 
@@ -862,7 +886,9 @@ match(param: X509CertMatchParameters): boolean
 
 Checks whether this certificate matches the specified parameters.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -886,9 +912,9 @@ Checks whether this certificate matches the specified parameters.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## toString
 
@@ -898,9 +924,11 @@ toString(): string
 
 Converts the object data into a string.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-toString(): string--><!--Device-X509Cert-toString(): string-End-->
 
@@ -916,9 +944,9 @@ Converts the object data into a string.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## toString
 
@@ -928,9 +956,11 @@ toString(encodingType: EncodingType): string
 
 Converts this object into a string in the specified encoding format.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-toString(encodingType: EncodingType): string--><!--Device-X509Cert-toString(encodingType: EncodingType): string-End-->
 
@@ -952,10 +982,10 @@ Converts this object into a string in the specified encoding format.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## verify
 
@@ -965,7 +995,9 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 Verifies the certificate signature. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -984,8 +1016,8 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## verify
 
@@ -995,7 +1027,9 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 Verifies the certificate signature. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1019,5 +1053,5 @@ Verifies the certificate signature. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |

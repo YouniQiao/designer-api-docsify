@@ -2,7 +2,9 @@
 
 Defines PixelMap initialization options.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface InitializationOptions--><!--Device-image-interface InitializationOptions-End-->
 
@@ -24,7 +26,9 @@ Alpha type. The default value is **IMAGE_ALPHA_TYPE_PREMUL**.
 
 **Type:** [AlphaType](arkts-image-image-alphatype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +48,9 @@ Whether the image pixels are editable. **true** if editable, **false** otherwise
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +70,9 @@ Pixel format of the generated PixelMap. The default value is **RGBA_8888**.
 
 **Type:** PixelMapFormat
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,7 +92,9 @@ Scale mode. The default value is **0**.
 
 **Type:** [ScaleMode](arkts-image-image-scalemode-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,7 +114,9 @@ Image size.
 
 **Type:** Size
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -124,7 +136,9 @@ Pixel format of the passed-in buffer data. The default value is **BGRA_8888**.
 
 **Type:** PixelMapFormat
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InitializationOptions-srcPixelFormat?: PixelMapFormat--><!--Device-InitializationOptions-srcPixelFormat?: PixelMapFormat-End-->
 

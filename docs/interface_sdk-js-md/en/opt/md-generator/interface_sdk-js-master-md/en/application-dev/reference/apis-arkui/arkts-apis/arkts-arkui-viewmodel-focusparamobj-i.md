@@ -4,6 +4,8 @@ Defines the focus param.
 
 **Since:** 3
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface FocusParamObj--><!--Device-unnamed-export interface FocusParamObj-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -19,6 +21,8 @@ Whether needs to focus
 **Type:** boolean
 
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

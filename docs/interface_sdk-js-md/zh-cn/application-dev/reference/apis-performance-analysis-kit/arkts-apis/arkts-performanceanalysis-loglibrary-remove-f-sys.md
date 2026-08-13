@@ -8,9 +8,11 @@ function remove(logType: string, logName: string): void
 
 以同步方法删除指定日志类型的指定文件。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_HIVIEW_SYSTEM
 
@@ -31,10 +33,10 @@ function remove(logType: string, logName: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid argument. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [21300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid argument. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api |
 
 ## 示例
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-systemManager-enum UpdateStatus--><!--Device-systemManager-enum UpdateStatus-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ NO_UPDATE_PACKAGE = -4
 指定版本系统更新包不存在。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ UPDATE_WAITING = -3
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UpdateStatus-UPDATE_WAITING = -3--><!--Device-UpdateStatus-UPDATE_WAITING = -3-End-->
@@ -49,6 +55,8 @@ UPDATING = -2
 正在更新。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ UPDATE_FAILURE = -1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UpdateStatus-UPDATE_FAILURE = -1--><!--Device-UpdateStatus-UPDATE_FAILURE = -1-End-->
@@ -81,6 +91,8 @@ UPDATE_SUCCESS = 0
 更新成功。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

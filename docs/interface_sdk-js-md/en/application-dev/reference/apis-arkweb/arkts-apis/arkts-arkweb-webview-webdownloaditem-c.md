@@ -1,10 +1,12 @@
 # WebDownloadItem
 
-Represents a download task, You can use this object to operate the corresponding download task.
+Represents a download task, You can use this object to operate the corresponding download task. Currently, the maximum length of the download file name supported by **WebDownloadItem** is 255 bytes.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebDownloadItem--><!--Device-webview-class WebDownloadItem-End-->
 
@@ -24,9 +26,13 @@ cancel(): void
 
 Cancel the web download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-cancel(): void--><!--Device-WebDownloadItem-cancel(): void-End-->
 
@@ -40,9 +46,13 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 
 Deserialize web download from typed array.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-static deserialize(serializedData: Uint8Array): WebDownloadItem--><!--Device-WebDownloadItem-static deserialize(serializedData: Uint8Array): WebDownloadItem-End-->
 
@@ -64,21 +74,25 @@ Deserialize web download from typed array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 
 ## getCurrentSpeed
 
 ```TypeScript
-getCurrentSpeed(): int
+getCurrentSpeed(): number
 ```
 
 Get current speed, in bytes per second.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-WebDownloadItem-getCurrentSpeed(): int--><!--Device-WebDownloadItem-getCurrentSpeed(): int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebDownloadItem-getCurrentSpeed(): number--><!--Device-WebDownloadItem-getCurrentSpeed(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -86,7 +100,7 @@ Get current speed, in bytes per second.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the current download speed. |
+| number | Returns the current download speed. |
 
 ## getFullPath
 
@@ -96,9 +110,13 @@ getFullPath(): string
 
 Get full path of the web download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getFullPath(): string--><!--Device-WebDownloadItem-getFullPath(): string-End-->
 
@@ -118,9 +136,13 @@ getGuid(): string
 
 Get guid.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getGuid(): string--><!--Device-WebDownloadItem-getGuid(): string-End-->
 
@@ -140,9 +162,13 @@ getLastErrorCode(): WebDownloadErrorCode
 
 Get last error code of the web download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getLastErrorCode(): WebDownloadErrorCode--><!--Device-WebDownloadItem-getLastErrorCode(): WebDownloadErrorCode-End-->
 
@@ -162,9 +188,13 @@ getMethod(): string
 
 Get http method of the web download request.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getMethod(): string--><!--Device-WebDownloadItem-getMethod(): string-End-->
 
@@ -184,9 +214,13 @@ getMimeType(): string
 
 Get mime type of the web download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getMimeType(): string--><!--Device-WebDownloadItem-getMimeType(): string-End-->
 
@@ -208,7 +242,9 @@ Get the original url of the web download.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -225,16 +261,20 @@ Get the original url of the web download.
 ## getPercentComplete
 
 ```TypeScript
-getPercentComplete(): int
+getPercentComplete(): number
 ```
 
 Get percent complete.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-WebDownloadItem-getPercentComplete(): int--><!--Device-WebDownloadItem-getPercentComplete(): int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebDownloadItem-getPercentComplete(): number--><!--Device-WebDownloadItem-getPercentComplete(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -242,21 +282,25 @@ Get percent complete.
 
 | Type | Description |
 | --- | --- |
-| int | Returns -1 if progress is unknown. 100 if the download is already complete. |
+| number | Returns -1 if progress is unknown. 100 if the download is already complete. |
 
 ## getReceivedBytes
 
 ```TypeScript
-getReceivedBytes(): long
+getReceivedBytes(): number
 ```
 
 Get received bytes.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-WebDownloadItem-getReceivedBytes(): long--><!--Device-WebDownloadItem-getReceivedBytes(): long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebDownloadItem-getReceivedBytes(): number--><!--Device-WebDownloadItem-getReceivedBytes(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -264,7 +308,7 @@ Get received bytes.
 
 | Type | Description |
 | --- | --- |
-| long | Returns the received bytes. |
+| number | Returns the received bytes. |
 
 ## getReferrerUrl
 
@@ -276,7 +320,9 @@ Get the referrer url of the web download.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,9 +344,13 @@ getState(): WebDownloadState
 
 Get state of the web download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getState(): WebDownloadState--><!--Device-WebDownloadItem-getState(): WebDownloadState-End-->
 
@@ -320,9 +370,13 @@ getSuggestedFileName(): string
 
 Get suggested file name of the web download request.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getSuggestedFileName(): string--><!--Device-WebDownloadItem-getSuggestedFileName(): string-End-->
 
@@ -337,16 +391,20 @@ Get suggested file name of the web download request.
 ## getTotalBytes
 
 ```TypeScript
-getTotalBytes(): long
+getTotalBytes(): number
 ```
 
 Get total bytes.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-WebDownloadItem-getTotalBytes(): long--><!--Device-WebDownloadItem-getTotalBytes(): long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebDownloadItem-getTotalBytes(): number--><!--Device-WebDownloadItem-getTotalBytes(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -354,7 +412,7 @@ Get total bytes.
 
 | Type | Description |
 | --- | --- |
-| long | Returns the total bytes received, -1 if the total size is unknown. |
+| number | Returns the total bytes received, -1 if the total size is unknown. |
 
 ## getUrl
 
@@ -364,9 +422,13 @@ getUrl(): string
 
 Get url of the web download request.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-getUrl(): string--><!--Device-WebDownloadItem-getUrl(): string-End-->
 
@@ -386,9 +448,13 @@ pause(): void
 
 Pause the web download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-pause(): void--><!--Device-WebDownloadItem-pause(): void-End-->
 
@@ -398,7 +464,7 @@ Pause the web download.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100019-download-not-started-yet) | The download task is not started yet. |
+| [17100019](../errorcode-webview.md#17100019-download-not-started-yet) | The download task is not started yet. |
 
 ## resume
 
@@ -406,11 +472,15 @@ Pause the web download.
 resume(): void
 ```
 
-Resume the web download.Use WebDownloadManager.resumeDownload to resume deserialized downloads.WebDownloadItem.resume is only used to resume the currently paused download.
+Resume the web download. Use WebDownloadManager.resumeDownload to resume deserialized downloads. WebDownloadItem.resume is only used to resume the currently paused download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-resume(): void--><!--Device-WebDownloadItem-resume(): void-End-->
 
@@ -420,7 +490,7 @@ Resume the web download.Use WebDownloadManager.resumeDownload to resume deserial
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100016-download-task-not-paused) | The download task is not paused. |
+| [17100016](../errorcode-webview.md#17100016-download-task-not-paused) | The download task is not paused. |
 
 ## serialize
 
@@ -430,9 +500,13 @@ serialize(): Uint8Array
 
 Serialize web download to typed array.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-serialize(): Uint8Array--><!--Device-WebDownloadItem-serialize(): Uint8Array-End-->
 
@@ -450,11 +524,15 @@ Serialize web download to typed array.
 start(downloadPath: string): void
 ```
 
-Start the web download.Used in onBeforeDownload, If you want to start the current download, call this function.
+Start the web download. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; This API must be used in the **onBeforeDownload** callback of **WebDownloadDelegate**. If it is not called in the callback, the download task remains in the PENDING state and is downloaded to a temporary directory. After the target path is specified by **WebDownloadItem.start**, the temporary files are renamed to the target path and the unfinished files are directly downloaded to the target path. If you do not want to download the file to the temporary directory before invoking **WebDownloadItem.start**, you can call **WebDownloadItem.cancel** to cancel the current download task and then call **WebDownloadManager.resumeDownload** to resume the task. &lt;/p&gt;
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadItem-start(downloadPath: string): void--><!--Device-WebDownloadItem-start(downloadPath: string): void-End-->
 
@@ -470,5 +548,5 @@ Start the web download.Used in onBeforeDownload, If you want to start the curren
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 

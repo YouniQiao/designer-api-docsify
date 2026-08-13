@@ -12,15 +12,11 @@ import { browser } from '@kit.MDMKit';
 function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: string, policyValue: string): void
 ```
 
-Sets a browser policy for a specified browser. This API is applicable to scenarios where an enterprise needs to manage employees' browser behavior in a unified manner, such as configuring browser security policies. After the setting is successful, the system common event  
-[COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_managed_browser_policy_changed)is released.
-
-> **NOTE：**
-> 
-> In multi-MDM application scenarios, once a policy for a specific browser is configured and takes effect by the
-> first admin, it can no longer be configured by other admins.
+Sets a browser policy for a specified browser. This API is applicable to scenarios where an enterprise needs to manage employees' browser behavior in a unified manner, such as configuring browser security policies. After the setting is successful, the system common event [COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_managed_browser_policy_changed) is released. > **NOTE：**> > In multi-MDM application scenarios, once a policy for a specific browser is configured and takes effect by the > first admin, it can no longer be configured by other admins.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
@@ -43,10 +39,10 @@ Sets a browser policy for a specified browser. This API is applicable to scenari
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

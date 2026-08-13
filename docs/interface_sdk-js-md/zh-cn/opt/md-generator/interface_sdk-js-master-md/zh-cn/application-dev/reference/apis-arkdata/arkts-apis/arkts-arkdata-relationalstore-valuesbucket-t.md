@@ -6,7 +6,9 @@ type ValuesBucket = Record<string, ValueType>
 
 用于存储键值对的类型。不支持Sendable跨线程传递。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-type ValuesBucket = Record<string, ValueType>--><!--Device-relationalStore-type ValuesBucket = Record<string, ValueType>-End-->
 

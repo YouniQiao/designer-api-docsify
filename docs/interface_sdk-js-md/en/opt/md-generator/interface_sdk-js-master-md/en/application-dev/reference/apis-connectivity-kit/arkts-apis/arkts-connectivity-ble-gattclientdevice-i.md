@@ -2,7 +2,9 @@
 
 Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
 
@@ -20,11 +22,11 @@ import { ble } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Disables a BLE peripheral device.
+Disables a BLE peripheral device. This method unregisters the device and clears the registered callbacks and handles.
 
-This method unregisters the device and clears the registered callbacks and handles.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -40,8 +42,8 @@ This method unregisters the device and clears the registered callbacks and handl
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -64,11 +66,11 @@ try {
 connect(): void
 ```
 
-Connects to a BLE peripheral device.
+Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is subscribed to return the connection state.
 
-The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -84,8 +86,8 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -110,7 +112,9 @@ disconnect(): void
 
 Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -126,8 +130,8 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -152,7 +156,9 @@ getConnectedState(): ProfileConnectionState
 
 Get the connection status of a specific device.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -172,8 +178,8 @@ Get the connection status of a specific device.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -198,7 +204,9 @@ getDeviceName(callback: AsyncCallback<string>): void
 
 Obtains the name of BLE peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -220,9 +228,9 @@ Obtains the name of BLE peripheral device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -258,7 +266,9 @@ getDeviceName(): Promise<string>
 
 Obtains the name of BLE peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -280,9 +290,9 @@ Obtains the name of BLE peripheral device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -318,7 +328,9 @@ getRssiValue(callback: AsyncCallback<number>): void
 
 Get the RSSI value of this BLE peripheral device.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -340,11 +352,11 @@ Get the RSSI value of this BLE peripheral device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -372,7 +384,9 @@ getRssiValue(): Promise<number>
 
 Get the RSSI value of this BLE peripheral device.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -394,11 +408,11 @@ Get the RSSI value of this BLE peripheral device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -424,7 +438,9 @@ getServices(callback: AsyncCallback<Array<GattService>>): void
 
 Starts discovering services.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -446,9 +462,9 @@ Starts discovering services.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -493,7 +509,9 @@ getServices(): Promise<Array<GattService>>
 
 Starts discovering services.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -515,9 +533,9 @@ Starts discovering services.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -544,7 +562,184 @@ try {
 }
 ```
 
-## off('BLECharacteristicChange')
+## offBLECharacteristicChange
+
+```TypeScript
+offBLECharacteristicChange(callback?: Callback<BLECharacteristic>): void
+```
+
+Unsubscribe characteristic value changed event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-offBLECharacteristicChange(callback?: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-offBLECharacteristicChange(callback?: Callback<BLECharacteristic>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offBLEConnectionStateChange
+
+```TypeScript
+offBLEConnectionStateChange(callback?: Callback<BLEConnectionChangeState>): void
+```
+
+Unsubscribe client connection state changed event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-GattClientDevice-offBLEConnectionStateChange(callback?: Callback<BLEConnectionChangeState>): void--><!--Device-GattClientDevice-offBLEConnectionStateChange(callback?: Callback<BLEConnectionChangeState>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offBLEMtuChange
+
+```TypeScript
+offBLEMtuChange(callback?: Callback<number>): void
+```
+
+Unsubscribe mtu changed event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-offBLEMtuChange(callback?: Callback<int>): void--><!--Device-GattClientDevice-offBLEMtuChange(callback?: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offBlePhyUpdate
+
+```TypeScript
+offBlePhyUpdate(callback?: Callback<PhyValue>): void
+```
+
+Unsubscribe phy updated event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void--><!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+function BlePhyCallback(data:ble.PhyValue) {
+    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
+}
+let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+try {
+    gattClient.offBlePhyUpdate(BlePhyCallback);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
+## offServiceChange
+
+```TypeScript
+offServiceChange(callback?: Callback<void>): void
+```
+
+Unsubscribe to GATT service changed event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-offServiceChange(callback?: Callback<void>): void--><!--Device-GattClientDevice-offServiceChange(callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## off_BLECharacteristicChange
 
 ```TypeScript
 off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void
@@ -553,6 +748,8 @@ off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): vo
 Unsubscribe characteristic value changed event.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -575,9 +772,9 @@ Unsubscribe characteristic value changed event.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -591,7 +788,7 @@ try {
 }
 ```
 
-## off('BLEConnectionStateChange')
+## off_BLEConnectionStateChange
 
 ```TypeScript
 off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectionChangeState>): void
@@ -600,6 +797,8 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectionChangeSta
 Unsubscribe client connection state changed event.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -622,9 +821,9 @@ Unsubscribe client connection state changed event.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -638,7 +837,7 @@ try {
 }
 ```
 
-## off('BLEMtuChange')
+## off_BLEMtuChange
 
 ```TypeScript
 off(type: 'BLEMtuChange', callback?: Callback<number>): void
@@ -647,6 +846,8 @@ off(type: 'BLEMtuChange', callback?: Callback<number>): void
 Unsubscribe mtu changed event.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -669,9 +870,9 @@ Unsubscribe mtu changed event.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -685,7 +886,7 @@ try {
 }
 ```
 
-## off('serviceChange')
+## off_serviceChange
 
 ```TypeScript
 off(type: 'serviceChange', callback?: Callback<void>): void
@@ -694,6 +895,8 @@ off(type: 'serviceChange', callback?: Callback<void>): void
 Unsubscribe to GATT service changed event.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -714,8 +917,8 @@ Unsubscribe to GATT service changed event.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -734,21 +937,21 @@ try {
 }
 ```
 
-## offBlePhyUpdate
+## onBLECharacteristicChange
 
 ```TypeScript
-offBlePhyUpdate(callback?: Callback<PhyValue>): void
+onBLECharacteristicChange(callback: Callback<BLECharacteristic>): void
 ```
 
-Unsubscribe phy updated event.
+Subscribe characteristic value changed event.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void--><!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void-End-->
+<!--Device-GattClientDevice-onBLECharacteristicChange(callback: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-onBLECharacteristicChange(callback: Callback<BLECharacteristic>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -756,14 +959,111 @@ Unsubscribe phy updated event.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onBLEConnectionStateChange
+
+```TypeScript
+onBLEConnectionStateChange(callback: Callback<BLEConnectionChangeState>): void
+```
+
+Subscribe client connection state changed event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-onBLEConnectionStateChange(callback: Callback<BLEConnectionChangeState>): void--><!--Device-GattClientDevice-onBLEConnectionStateChange(callback: Callback<BLEConnectionChangeState>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onBLEMtuChange
+
+```TypeScript
+onBLEMtuChange(callback: Callback<number>): void
+```
+
+Subscribe mtu changed event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-GattClientDevice-onBLEMtuChange(callback: Callback<int>): void--><!--Device-GattClientDevice-onBLEMtuChange(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onBlePhyUpdate
+
+```TypeScript
+onBlePhyUpdate(callback: Callback<PhyValue>): void
+```
+
+Subscribe phy updated event.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void--><!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -773,13 +1073,46 @@ function BlePhyCallback(data:ble.PhyValue) {
 }
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 try {
-    gattClient.offBlePhyUpdate(BlePhyCallback);
+    gattClient.onBlePhyUpdate(BlePhyCallback);
 } catch (err) {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
 
-## on('BLECharacteristicChange')
+## onServiceChange
+
+```TypeScript
+onServiceChange(callback: Callback<void>): void
+```
+
+Subscribe to GATT service changed event. Receiving this event indicates that the peer GATT database has been refreshed, and it is necessary to re-fetch the GATT service list.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-onServiceChange(callback: Callback<void>): void--><!--Device-GattClientDevice-onServiceChange(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## on_BLECharacteristicChange
 
 ```TypeScript
 on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
@@ -788,6 +1121,8 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 Subscribe characteristic value changed event.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -810,9 +1145,9 @@ Subscribe characteristic value changed event.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -831,7 +1166,7 @@ try {
 }
 ```
 
-## on('BLEConnectionStateChange')
+## on_BLEConnectionStateChange
 
 ```TypeScript
 on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectionChangeState>): void
@@ -840,6 +1175,8 @@ on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectionChangeState
 Subscribe client connection state changed event.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -862,9 +1199,9 @@ Subscribe client connection state changed event.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -882,7 +1219,7 @@ try {
 }
 ```
 
-## on('BLEMtuChange')
+## on_BLEMtuChange
 
 ```TypeScript
 on(type: 'BLEMtuChange', callback: Callback<number>): void
@@ -891,6 +1228,8 @@ on(type: 'BLEMtuChange', callback: Callback<number>): void
 Subscribe mtu changed event.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -913,9 +1252,9 @@ Subscribe mtu changed event.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -931,7 +1270,7 @@ try {
 }
 ```
 
-## on('serviceChange')
+## on_serviceChange
 
 ```TypeScript
 on(type: 'serviceChange', callback: Callback<void>): void
@@ -940,6 +1279,8 @@ on(type: 'serviceChange', callback: Callback<void>): void
 Subscribe to GATT service changed event. Receiving this event indicates that the peer GATT database has been refreshed, and it is necessary to re-fetch the GATT service list.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -960,8 +1301,8 @@ Subscribe to GATT service changed event. Receiving this event indicates that the
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -980,51 +1321,6 @@ try {
 }
 ```
 
-## onBlePhyUpdate
-
-```TypeScript
-onBlePhyUpdate(callback: Callback<PhyValue>): void
-```
-
-Subscribe phy updated event.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void--><!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-
-## Examples
-
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-try {
-    gattClient.onBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1033,7 +1329,9 @@ readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallba
 
 Reads the characteristic of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1057,15 +1355,15 @@ Reads the characteristic of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901000 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1114,7 +1412,9 @@ readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacter
 
 Reads the characteristic of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1141,15 +1441,15 @@ Reads the characteristic of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901000 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1189,7 +1489,9 @@ readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescri
 
 Reads the descriptor of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1211,15 +1513,15 @@ Reads the descriptor of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901000 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1261,7 +1563,9 @@ readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
 
 Reads the descriptor of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1288,15 +1592,15 @@ Reads the descriptor of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901000 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1329,7 +1633,9 @@ readPhy(): Promise<PhyValue>
 
 Read the phy associated with the connection.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1349,9 +1655,9 @@ Read the phy associated with the connection.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -1374,9 +1680,11 @@ try {
 setBLEMtu(mtu: number): Promise<number>
 ```
 
-Asynchronous interface for setting the mtu size of a BLE peripheral device.The API returns the mtu size that takes effect.
+Asynchronous interface for setting the mtu size of a BLE peripheral device. The API returns the mtu size that takes effect.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1404,10 +1712,10 @@ Asynchronous interface for setting the mtu size of a BLE peripheral device.The A
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## setBLEMtuSize
@@ -1418,7 +1726,9 @@ setBLEMtuSize(mtu: number): void
 
 Set the mtu size of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1440,9 +1750,9 @@ Set the mtu size of a BLE peripheral device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1470,7 +1780,9 @@ setCharacteristicChangeIndication(
 
 Enables or disables indication of a characteristic when value changed.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1494,11 +1806,11 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1540,7 +1852,9 @@ setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boo
 
 Enables or disables indication of a characteristic when value changed.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1569,11 +1883,11 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1613,7 +1927,9 @@ setCharacteristicChangeNotification(
 
 Enables or disables notification of a characteristic when value changed.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1637,11 +1953,11 @@ Enables or disables notification of a characteristic when value changed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1683,7 +1999,9 @@ setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: b
 
 Enables or disables indication of a characteristic when value changed.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1712,11 +2030,11 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1750,9 +2068,11 @@ try {
 setPhy(phyValue: PhyValue): Promise<void>
 ```
 
-Set the preferred phy associated with the connection.Whether the phy value will be changed depends on the strategy of the Bluetooth chip.A successful call to this interface does not guarantee that the chip's phy value has been successfully set.
+Set the preferred phy associated with the connection. Whether the phy value will be changed depends on the strategy of the Bluetooth chip. A successful call to this interface does not guarantee that the chip's phy value has been successfully set.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1778,9 +2098,9 @@ Set the preferred phy associated with the connection.Whether the phy value will 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -1807,7 +2127,9 @@ updateConnectionParam(param: ConnectionParam): Promise<void>
 
 Update the connection parameters of the current GATT link to save power or improve transmission performance.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1833,9 +2155,9 @@ Update the connection parameters of the current GATT link to save power or impro
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -1864,7 +2186,9 @@ writeCharacteristicValue(
 
 Writes the characteristic of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1889,15 +2213,15 @@ Writes the characteristic of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901001 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1942,7 +2266,9 @@ writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWrite
 
 Writes the characteristic of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1972,15 +2298,15 @@ Writes the characteristic of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901001 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -2019,7 +2345,9 @@ writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<void>): 
 
 Writes the descriptor of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2043,15 +2371,15 @@ Writes the descriptor of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901001 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -2090,7 +2418,9 @@ writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>
 
 Writes the descriptor of a BLE peripheral device.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2119,15 +2449,15 @@ Writes the descriptor of a BLE peripheral device.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901001 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 

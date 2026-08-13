@@ -12,13 +12,15 @@ import { i18n } from '@kit.LocalizationKit';
 export function isRTL(locale: string): boolean
 ```
 
-Checks whether the input character is of the right to left (RTL) language.
+Checks whether a language is an RTL language. For an RTL language, [UI mirroring](../../../internationalization/i18n-ui-design.md#ui-mirroring) is required.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-i18n-export function isRTL(locale: string): boolean--><!--Device-i18n-export function isRTL(locale: string): boolean-End-->
 
@@ -28,11 +30,11 @@ Checks whether the input character is of the right to left (RTL) language.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is of the RTL language, and false otherwise. |
+| boolean | Whether a language is an RTL language. The value **true** indicates that the language is an RTL language, and the value **false** indicates the opposite. |
 

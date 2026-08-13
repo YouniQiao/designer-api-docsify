@@ -2,9 +2,11 @@
 
 ApiVersion: the bundle Api version class.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ApiVersion--><!--Device-unnamed-export interface ApiVersion-End-->
 
@@ -20,11 +22,13 @@ readonly compatible: int
 
 Minimum API version.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly compatible: int--><!--Device-ApiVersion-readonly compatible: int-End-->
 
@@ -42,9 +46,11 @@ Name of the API version.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly releaseType: string--><!--Device-ApiVersion-readonly releaseType: string-End-->
 
@@ -60,11 +66,13 @@ readonly target: int
 
 Target API version.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly target: int--><!--Device-ApiVersion-readonly target: int-End-->
 

@@ -14,9 +14,11 @@ function createRecord(mimeType: string, value: ValueType): PasteDataRecord
 
 Creates a **PasteDataRecord** object of the specified type.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -28,7 +30,7 @@ Creates a **PasteDataRecord** object of the specified type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | The type of custom data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
+| mimeType | string | Yes | The type of custom data. The value can be a predefined MIME type listed in [Constants](arkts-pasteboard.md#Constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
 | value | ValueType | Yes | Data content of the specified type. |
 
 **Return value:**
@@ -41,5 +43,5 @@ Creates a **PasteDataRecord** object of the specified type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 

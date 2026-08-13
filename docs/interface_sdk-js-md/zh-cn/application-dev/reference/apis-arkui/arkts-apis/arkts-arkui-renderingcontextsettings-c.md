@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class RenderingContextSettings--><!--Device-unnamed-declare class RenderingContextSettings-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor(antialias?: boolean)
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,24 +46,15 @@ constructor(antialias?: boolean)
 antialias?: boolean
 ```
 
-表明canvas是否开启抗锯齿。
-
-异常值undefined或null按默认值处理。
-
-true：表示开启抗锯齿，false：表示不开启抗锯齿功能。
-
-默认值：false
-
-**说明：**
-
-绘制文本默认开启抗锯齿效果，RenderingContextSettings的antialias无法影响绘制文本的抗锯齿效果，如需修改文本抗锯齿效果，请使用  
-[antialias&lt;sup&gt;24+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-common-property.md#antialias24)接口。
+表明canvas是否开启抗锯齿。 异常值undefined或null按默认值处理。 true：表示开启抗锯齿，false：表示不开启抗锯齿功能。 默认值：false **说明：** 绘制文本默认开启抗锯齿效果，RenderingContextSettings的antialias无法影响绘制文本的抗锯齿效果，如需修改文本抗锯齿效果，请使用 [antialias&lt;sup&gt;24+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-common-property.md#antialias24) 接口。
 
 **类型：** boolean
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

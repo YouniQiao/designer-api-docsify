@@ -6,6 +6,8 @@ Rotation Result.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-export interface RotateResult--><!--Device-componentUtils-export interface RotateResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Rotation angle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RotateResult-angle: double--><!--Device-RotateResult-angle: double-End-->
@@ -49,6 +53,8 @@ Transform the x-axis coordinate of the center point.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Transform the y-axis coordinate of the center point.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RotateResult-centerY: double--><!--Device-RotateResult-centerY: double-End-->
@@ -89,6 +97,8 @@ Axis of rotation vector x coordinate.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +120,8 @@ Axis of rotation vector y coordinate.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RotateResult-y: double--><!--Device-RotateResult-y: double-End-->
@@ -129,6 +141,8 @@ Axis of rotation vector z coordinate.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

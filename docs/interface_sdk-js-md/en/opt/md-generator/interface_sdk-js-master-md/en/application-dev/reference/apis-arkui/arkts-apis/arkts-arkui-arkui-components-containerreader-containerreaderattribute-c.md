@@ -1,12 +1,14 @@
 # ContainerReaderAttribute
 
-Defines the ContainerReader attribute functions.Provides methods for configuring container reading parameters and breakpoint analysis properties.
+Defines the ContainerReader attribute functions. Provides methods for configuring container reading parameters and breakpoint analysis properties.
 
-**Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod<ContainerReaderAttribute>](CommonMethod<ContainerReaderAttribute>)
+**Inheritance/Implementation:** ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>--><!--Device-unnamed-export declare class ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class ContainerReaderAttribute--><!--Device-unnamed-export declare class ContainerReaderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,9 +24,11 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 ```
 
-Sets the breakpoint configuration for container dimension analysis.Defines a set of threshold values that trigger different layout behaviors based on container size.
+Sets the breakpoint configuration for container dimension analysis. Defines a set of threshold values that trigger different layout behaviors based on container size.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,14 @@
 # CommonShapeMethod
 
-Common shape method class
+Implements the common shape methods.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class CommonShapeMethod--><!--Device-unnamed-export declare class CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CommonShapeMethod--><!--Device-unnamed-declare class CommonShapeMethod-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,18 +21,24 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ## fill
 
 ```TypeScript
-fill(color: ResourceColor): this
+fill(color: ResourceColor): T
 ```
 
-Sets the fill color of the shape.
+Sets the fill color of this shape, which determines its opacity, with black representing full transparency and white representing full opacity.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CommonShapeMethod-fill(color: ResourceColor): this--><!--Device-CommonShapeMethod-fill(color: ResourceColor): this-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-CommonShapeMethod-fill(color: ResourceColor): T--><!--Device-CommonShapeMethod-fill(color: ResourceColor): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,29 +46,35 @@ Sets the fill color of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ResourceColor | Yes |  |
+| color | ResourceColor | Yes | Fill color of the shape, which represents the opacity of the fill area. The black color indicates full transparency, while white indicates full opacity. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| T | Current object. |
 
 ## offset
 
 ```TypeScript
-offset(offset: Position): this
+offset(offset: Position): T
 ```
 
-Sets coordinate offset relative to the layout completion position.
+Sets the coordinate offset relative to the component's layout position.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CommonShapeMethod-offset(offset: Position): this--><!--Device-CommonShapeMethod-offset(offset: Position): this-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-CommonShapeMethod-offset(offset: Position): T--><!--Device-CommonShapeMethod-offset(offset: Position): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,29 +82,35 @@ Sets coordinate offset relative to the layout completion position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | Position | Yes |  |
+| offset | Position | Yes | Coordinate offset relative to the component's layout position. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| T | Current object. |
 
 ## position
 
 ```TypeScript
-position(position: Position): this
+position(position: Position): T
 ```
 
 Sets the position of the shape.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CommonShapeMethod-position(position: Position): this--><!--Device-CommonShapeMethod-position(position: Position): this-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-CommonShapeMethod-position(position: Position): T--><!--Device-CommonShapeMethod-position(position: Position): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,11 +118,11 @@ Sets the position of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | Position | Yes |  |
+| position | Position | Yes | Position of the shape. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| T | Current object. |
 

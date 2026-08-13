@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-floatView-interface FloatViewProperties--><!--Device-floatView-interface FloatViewProperties-End-->
 
@@ -16,18 +18,15 @@
 avoidArea: window.AvoidArea
 ```
 
-标准悬浮窗内容的避让区域。
-
-**注意：**
-
-通过[setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setUIContext)或  
-[setUIContextByName()](arkts-arkui-floatview-floatviewcontroller-i.md#setUIContextByName)加载的页面中，位于避让区域的组件将不响应手势事件，添加需要手势响应事件的组件时，请注意避让这些区域。
+标准悬浮窗内容的避让区域。 **注意：** 通过[setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setUIContext)或 [setUIContextByName()](arkts-arkui-floatview-floatviewcontroller-i.md#setUIContextByName)加载的页面中，位于避让区域的组件将不响应手势事件，添加需要手势响应事件 的组件时，请注意避让这些区域。
 
 **类型：** window.AvoidArea
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,13 +40,15 @@ avoidArea: window.AvoidArea
 displayId: int
 ```
 
-标准悬浮窗所在屏幕ID。取值限定为整数。
+标准悬浮窗所在屏幕ID。 取值限定为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,7 +68,9 @@ inSidebar: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,7 +90,9 @@ templateType: FloatViewTemplateType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,13 +106,15 @@ templateType: FloatViewTemplateType
 windowId: int
 ```
 
-标准悬浮窗窗口ID。取值限定为整数。
+标准悬浮窗窗口ID。 取值限定为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,7 +134,9 @@ windowRect: window.Rect
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -143,11 +152,13 @@ windowScale: double
 
 标准悬浮窗窗口缩放比例。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

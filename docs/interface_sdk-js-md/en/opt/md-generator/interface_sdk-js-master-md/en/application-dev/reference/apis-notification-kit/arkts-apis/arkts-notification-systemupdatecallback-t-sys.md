@@ -4,9 +4,11 @@
 export type SystemUpdateCallback = (data: SubscribeCallbackData) => void
 ```
 
-Returns the notification information carrying system property values.type SystemUpdateCallback = (data: SubscribeCallbackData) => void
+Returns the notification information carrying system property values. type SystemUpdateCallback = (data: SubscribeCallbackData) => void
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,7 +8,9 @@ Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-<!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions--><!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface TextPickerDialogOptionsExt--><!--Device-unnamed-declare interface TextPickerDialogOptionsExt-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +20,7 @@ Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation mode for the dialog.
-
-Default Value: DistortionMode.DISTORTION_AUTO
+Sets the distortion animation mode for the dialog. Default Value: DistortionMode.DISTORTION_AUTO
 
 **Type:** DistortionMode
 
@@ -29,6 +29,8 @@ Default Value: DistortionMode.DISTORTION_AUTO
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,9 +46,7 @@ Default Value: DistortionMode.DISTORTION_AUTO
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edge light animation mode for the dialog.
-
-Default Value: EdgeLightMode.EDGELIGHT_AUTO
+Sets the edge light animation mode for the dialog. Default Value: EdgeLightMode.EDGELIGHT_AUTO
 
 **Type:** EdgeLightMode
 
@@ -55,6 +55,8 @@ Default Value: EdgeLightMode.EDGELIGHT_AUTO
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

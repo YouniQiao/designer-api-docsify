@@ -2,7 +2,9 @@
 
 Represents the rectangle area on the device screen.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface Rect--><!--Device-unnamed-declare interface Rect-End-->
 
@@ -24,7 +26,9 @@ Y coordinate of the lower right corner of the component border, in pixels. The v
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,9 +46,11 @@ ID of the display to which the component border belongs. The value is an integer
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Rect-displayId?: int--><!--Device-Rect-displayId?: int-End-->
 
@@ -60,7 +66,9 @@ X coordinate of the upper left corner of the component border, in pixels. The va
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,7 +86,9 @@ X coordinate of the lower right corner of the component border, in pixels. The v
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +106,9 @@ Y coordinate of the upper left corner of the component border, in pixels. The va
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

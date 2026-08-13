@@ -2,9 +2,11 @@
 
 Enum for the share type.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-pbap-enum ShareType--><!--Device-pbap-enum ShareType-End-->
 
@@ -20,9 +22,11 @@ SHARE_NAME_AND_PHONE_NUMBER = 0
 
 Share the names and numbers in contacts.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-ShareType-SHARE_NAME_AND_PHONE_NUMBER = 0--><!--Device-ShareType-SHARE_NAME_AND_PHONE_NUMBER = 0-End-->
 
@@ -38,9 +42,11 @@ SHARE_ALL = 1
 
 Share all the information.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-ShareType-SHARE_ALL = 1--><!--Device-ShareType-SHARE_ALL = 1-End-->
 
@@ -56,9 +62,11 @@ SHARE_NOTHING = 2
 
 Share nothing.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-ShareType-SHARE_NOTHING = 2--><!--Device-ShareType-SHARE_NOTHING = 2-End-->
 

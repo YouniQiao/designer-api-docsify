@@ -1,10 +1,12 @@
 # AnimatorOptions
 
-Defines the animator options.
+Animator options.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AnimatorOptions--><!--Device-unnamed-export interface AnimatorOptions-End-->
 
@@ -19,40 +21,44 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.Ark
 ## begin
 
 ```TypeScript
-begin: double
+begin: number
 ```
 
-Starting point of animator interpolation.The default value is 0.
+Start point of the animation interpolation. Note: This setting affects the input parameter value of the [onFrame](../arkts-components/arkts-arkui-imageframeinfo-i.md#ImageFrameInfo) callback. Default value: **0**
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AnimatorOptions-begin: double--><!--Device-AnimatorOptions-begin: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-begin: number--><!--Device-AnimatorOptions-begin: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
 
 ```TypeScript
-delay: int
+delay: number
 ```
 
-Delay for the animation start. The default value indicates no delay.The default value is 0.
+Animation delay duration, in milliseconds. Value **0** means that there is no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state. Default value: **0**
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AnimatorOptions-delay: int--><!--Device-AnimatorOptions-delay: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-delay: number--><!--Device-AnimatorOptions-delay: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,15 +68,17 @@ Delay for the animation start. The default value indicates no delay.The default 
 direction: "normal" | "reverse" | "alternate" | "alternate-reverse"
 ```
 
-The animation playback mode.The default value is "normal".
+Animation playback mode. **'normal'**: plays the animation in forward loop mode. **'reverse'**: plays the animation in reverse loop mode. **'alternate'**: plays the animation in alternating loop mode. When the animation is played for an odd number of times, the playback is in forward direction. When the animation is played for an even number of times, the playback is in reverse direction. **'alternate-reverse'**: plays the animation in reverse alternating loop mode. When the animation is played for an odd number of times, the playback is in reverse direction. When the animation is played for an even number of times, the playback is in forward direction. Default value: **'normal'**
 
 **Type:** "normal" \| "reverse" \| "alternate" \| "alternate-reverse"
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimatorOptions-direction: "normal" | "reverse" | "alternate" | "alternate-reverse"--><!--Device-AnimatorOptions-direction: "normal" | "reverse" | "alternate" | "alternate-reverse"-End-->
 
@@ -79,20 +87,22 @@ The animation playback mode.The default value is "normal".
 ## duration
 
 ```TypeScript
-duration: int
+duration: number
 ```
 
-Duration of the animation, in milliseconds.The default value is 0.
+Duration for playing the animation, in milliseconds. Value range: [0, +∞). Default value: **0**
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AnimatorOptions-duration: int--><!--Device-AnimatorOptions-duration: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-duration: number--><!--Device-AnimatorOptions-duration: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,15 +112,17 @@ Duration of the animation, in milliseconds.The default value is 0.
 easing: string
 ```
 
-Time curve of the animation. For details about the supported types.linear The animation speed keeps unchanged.ease The animation starts and ends at a low speed, cubic-bezier(0.25, 0.1, 0.25, 1.0).ease-in The animation starts at a low speed, cubic-bezier(0.42, 0.0, 1.0, 1.0).ease-out The animation ends at a low speed, cubic-bezier(0.0, 0.0, 0.58, 1.0).ease-in-out The animation starts and ends at a low speed, cubic-bezier(0.42, 0.0, 0.58, 1.0).fast-out-slow-in Standard curve, cubic-bezier(0.4, 0.0, 0.2, 1.0).linear-out-slow-in Deceleration curve, cubic-bezier(0.0, 0.0, 0.2, 1.0).fast-out-linear-in Acceleration curve, cubic-bezier(0.4, 0.0, 1.0, 1.0).friction Damping curve, cubic-bezier(0.2, 0.0, 0.2, 1.0).extreme-deceleration Extreme deceleration curve, cubic-bezier(0.0, 0.0, 0.0, 1.0).sharp Sharp curve, cubic-bezier(0.33, 0.0, 0.67, 1.0).rhythm Rhythm curve, cubic-bezier(0.7, 0.0, 0.2, 1.0).smooth Smooth curve, cubic-bezier(0.4, 0.0, 0.4, 1.0).cubic-bezier(x1, y1, x2, y2) You can customize an animation speed curve in the cubic-bezier() function.The x and y values of each input parameter must be between 0 and 1.Step curve. The number must be set and only an integer is supported, step-position is optional.It can be set to start or end. The default value is end.interpolating-spring(velocity, mass, stiffness, damping), interpolating spring curve.The default value is ease.
+Animation interpolation curve. If the provided string is invalid, **"ease"** is used.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimatorOptions-easing: string--><!--Device-AnimatorOptions-easing: string-End-->
 
@@ -119,20 +131,22 @@ Time curve of the animation. For details about the supported types.linear The an
 ## end
 
 ```TypeScript
-end: double
+end: number
 ```
 
-Ending point of Dynamic Interpolation The default value is 1.
+End point of animation interpolation. Note: This setting affects the input parameter value of the [onFrame](../arkts-components/arkts-arkui-imageframeinfo-i.md#ImageFrameInfo) callback. Default value: **1**
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AnimatorOptions-end: double--><!--Device-AnimatorOptions-end: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-end: number--><!--Device-AnimatorOptions-end: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,15 +156,17 @@ Ending point of Dynamic Interpolation The default value is 1.
 fill: "none" | "forwards" | "backwards" | "both"
 ```
 
-Whether to resume to the initial state after the animation is executed.none: The initial state is restored after the animation is executed.forwards: The state at the end of the animation (defined in the last key frame)is retained after the animation is executed.
+State of the animated target after the animation is executed. **'none'**: No style is applied to the target before or after the animation is executed. **'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed. **'backwards'**: During the delay period specified in [AnimatorOptions](#AnimatorOptions), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](#AnimatorOptions) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](#AnimatorOptions) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value. **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
 
 **Type:** "none" \| "forwards" \| "backwards" \| "both"
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimatorOptions-fill: "none" | "forwards" | "backwards" | "both"--><!--Device-AnimatorOptions-fill: "none" | "forwards" | "backwards" | "both"-End-->
 
@@ -159,20 +175,22 @@ Whether to resume to the initial state after the animation is executed.none: The
 ## iterations
 
 ```TypeScript
-iterations: int
+iterations: number
 ```
 
-Number of times the animation will be played.Number indicates a fixed number of playback operations, and -1 an unlimited number of playback operations.The default value is 1.
+Number of times that the animation is played. The value **0** means the animation is not played, **-1** means the animation is played for an unlimited number of times, and a positive integer means the animation is played that specific number of times. Note: Any negative value other than **-1** is treated as invalid. For invalid values, the animation is played once.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AnimatorOptions-iterations: int--><!--Device-AnimatorOptions-iterations: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-iterations: number--><!--Device-AnimatorOptions-iterations: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

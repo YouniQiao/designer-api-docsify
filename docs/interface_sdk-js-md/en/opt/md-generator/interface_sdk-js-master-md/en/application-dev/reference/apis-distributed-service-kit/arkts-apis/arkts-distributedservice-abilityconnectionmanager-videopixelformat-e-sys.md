@@ -2,7 +2,9 @@
 
 Video pixelFormat Configuration Options.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityConnectionManager-export enum VideoPixelFormat--><!--Device-abilityConnectionManager-export enum VideoPixelFormat-End-->
 
@@ -18,7 +20,9 @@ UNKNOWN = -1
 
 Unknown.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,9 @@ NV12 = 0
 
 NV12. yuv 420 semiplanar.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +60,9 @@ NV21 = 1
 
 NV21. yvu 420 semiplanar.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

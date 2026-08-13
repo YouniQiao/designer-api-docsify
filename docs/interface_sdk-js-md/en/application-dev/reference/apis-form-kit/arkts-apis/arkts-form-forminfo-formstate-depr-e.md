@@ -8,7 +8,7 @@ Enumerates the widget states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormState](ohos.app.form.formInfo/formInfo#FormState)
+**Substitutes:** [FormState](arkts-form-forminfo-formstate-e.md#FormState)
 
 <!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
 
@@ -28,7 +28,7 @@ Unknown state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNKNOWN](ohos.app.form.formInfo/formInfo.FormState#UNKNOWN)
+**Substitutes:** [UNKNOWN](arkts-form-forminfo-formstate-e.md#UNKNOWN)
 
 <!--Device-FormState-UNKNOWN = -1--><!--Device-FormState-UNKNOWN = -1-End-->
 
@@ -48,7 +48,7 @@ Default state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DEFAULT](ohos.app.form.formInfo/formInfo.FormState#DEFAULT)
+**Substitutes:** [DEFAULT](arkts-form-forminfo-formstate-e.md#DEFAULT)
 
 <!--Device-FormState-DEFAULT = 0--><!--Device-FormState-DEFAULT = 0-End-->
 
@@ -68,7 +68,7 @@ Ready state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [READY](ohos.app.form.formInfo/formInfo.FormState#READY)
+**Substitutes:** [READY](arkts-form-forminfo-formstate-e.md#READY)
 
 <!--Device-FormState-READY = 1--><!--Device-FormState-READY = 1-End-->
 

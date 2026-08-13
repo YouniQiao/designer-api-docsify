@@ -6,6 +6,8 @@ Defines the builder span options of RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorBuilderSpanOptions--><!--Device-unnamed-export declare interface RichEditorBuilderSpanOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,11 +20,13 @@ dragBackgroundColor?: ColorMetrics
 
 builder span drag background color
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,6 +49,8 @@ builder span drag shadow configuration
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

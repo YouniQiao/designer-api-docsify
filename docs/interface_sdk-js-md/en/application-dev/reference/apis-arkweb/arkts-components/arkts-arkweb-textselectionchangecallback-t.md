@@ -10,6 +10,8 @@ Defines a callback triggered when the text selection changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-type TextSelectionChangeCallback = (selectionText: string) => void--><!--Device-unnamed-type TextSelectionChangeCallback = (selectionText: string) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core

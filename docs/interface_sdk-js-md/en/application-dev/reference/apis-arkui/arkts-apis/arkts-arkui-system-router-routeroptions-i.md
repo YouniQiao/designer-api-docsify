@@ -8,7 +8,7 @@ Defines the page routing parameters.
 
 **Deprecated since:** 8
 
-**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
+**Substitutes:** RouterOptions
 
 <!--Device-unnamed-export interface RouterOptions--><!--Device-unnamed-export interface RouterOptions-End-->
 
@@ -26,8 +26,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 params?: Object
 ```
 
-Data that needs to be passed to the target page during redirection. The target page can use **router.getParams()**to obtain the passed parameters, for example, **this.keyValue** (**keyValue** is the value of a key in **params**).In the web-like paradigm, these parameters can be directly used on the target page. If the field specified by  
-**key** already exists on the target page, the passed value of the key will be displayed.
+Data that needs to be passed to the target page during redirection. The target page can use **router.getParams()** to obtain the passed parameters, for example, **this.keyValue** (**keyValue** is the value of a key in **params**). In the web-like paradigm, these parameters can be directly used on the target page. If the field specified by **key** already exists on the target page, the passed value of the key will be displayed.
 
 **Type:** Object
 
@@ -37,7 +36,7 @@ Data that needs to be passed to the target page during redirection. The target p
 
 **Deprecated since:** 8
 
-**Substitutes:** [params](ohos.router.RouterOptions#params)
+**Substitutes:** params
 
 <!--Device-RouterOptions-params?: Object--><!--Device-RouterOptions-params?: Object-End-->
 
@@ -49,14 +48,7 @@ Data that needs to be passed to the target page during redirection. The target p
 uri: string
 ```
 
-URI of the target page, in either of the following formats:
-
-1. Absolute path, which is provided by the page list in the **config.json** file. Examples:
-
-- pages/index/index  
-- pages/detail/detail
-
-2. Specific path. If the URI is a slash (/), the home page is displayed.
+URI of the target page, in either of the following formats: 1. Absolute path, which is provided by the page list in the **config.json** file. Examples: - pages/index/index - pages/detail/detail 2. Specific path. If the URI is a slash (/), the home page is displayed.
 
 **Type:** string
 
@@ -66,7 +58,7 @@ URI of the target page, in either of the following formats:
 
 **Deprecated since:** 8
 
-**Substitutes:** [url](ohos.router.RouterOptions#url)
+**Substitutes:** url
 
 <!--Device-RouterOptions-uri: string--><!--Device-RouterOptions-uri: string-End-->
 

@@ -8,7 +8,9 @@ function getAudioHapticManager(): AudioHapticManager
 
 获取音振管理器。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager--><!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager-End-->
 

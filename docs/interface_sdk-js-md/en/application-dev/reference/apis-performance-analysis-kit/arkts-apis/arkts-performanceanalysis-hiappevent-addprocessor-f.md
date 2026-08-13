@@ -12,15 +12,15 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function addProcessor(processor: Processor): long
 ```
 
-Adds the configuration information of the data processor, such as the event name received by it.
+Adds the configuration information of the data processor, such as the event name received by it. This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addProcessorFromConfig) or use a child thread.
 
-This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addProcessorFromConfig) or use a child thread.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiAppEvent-function addProcessor(processor: Processor): long--><!--Device-hiAppEvent-function addProcessor(processor: Processor): long-End-->
 
@@ -36,13 +36,13 @@ This is a synchronous API and involves time-consuming operations. To ensure perf
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | ID of the data processor of the reported event, which uniquely identifies the data processor and can be used to remove the data processor. If the operation fails, **-1** is returned. If the operation is successful, a value greater than **0** is returned. |
+| long | ID of the data processor of the reported event, which uniquely identifies the data processor and can be used to remove the data processor. If the operation fails, **-1** is returned. If the operation is successful, a value greater than **0** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## Examples
 

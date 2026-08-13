@@ -10,6 +10,8 @@ function savePdfFileJob(jobId: string, fd: number): Promise<void>
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -38,6 +40,6 @@ function savePdfFileJob(jobId: string, fd: number): Promise<void>
 | 错误码ID |
 | --- |
 | 13100007 |
-| [13100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100006-无效的打印任务) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [13100006](../../apis-basic-services-kit/errorcode-print.md#13100006-无效的打印任务) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

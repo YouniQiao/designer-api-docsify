@@ -4,6 +4,8 @@ Defines a LocalSocket server connection.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface LocalSocketServer--><!--Device-socket-export interface LocalSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -22,7 +24,9 @@ close(): Promise<void>
 
 Close the LocalSocketServer. Close the LocalSocketServer listening port.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-close(): Promise<void>--><!--Device-LocalSocketServer-close(): Promise<void>-End-->
 
@@ -38,11 +42,11 @@ Close the LocalSocketServer. Close the LocalSocketServer listening port.
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -78,6 +82,8 @@ Gets other attributes of the LocalSocket connection.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>--><!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -92,11 +98,11 @@ Gets other attributes of the LocalSocket connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -128,7 +134,9 @@ getLocalAddress(): Promise<string>
 
 Obtains the local address of the LocalSocketServer connection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-getLocalAddress(): Promise<string>--><!--Device-LocalSocketServer-getLocalAddress(): Promise<string>-End-->
 
@@ -144,13 +152,13 @@ Obtains the local address of the LocalSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2301009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) |
-| [2303188](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -183,7 +191,9 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the LocalSocketServer.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-getSocketFd(): Promise<int>--><!--Device-LocalSocketServer-getSocketFd(): Promise<int>-End-->
 
@@ -197,7 +207,7 @@ Obtains the file descriptor of the LocalSocketServer.
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -232,6 +242,8 @@ Obtains the status of the LocalSocketServer connection.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>--><!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -244,7 +256,7 @@ Obtains the status of the LocalSocketServer connection.
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -275,9 +287,11 @@ server.getState().then((data: socket.SocketStateBase) => {
 listen(address: LocalAddress): Promise<void>
 ```
 
-Binds the Local address.&lt;p&gt;Listens for a LocalSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
+Binds the Local address. &lt;p&gt;Listens for a LocalSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>--><!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>-End-->
 
@@ -299,15 +313,15 @@ Binds the Local address.&lt;p&gt;Listens for a LocalSocket connection to be made
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2303109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303109-error-file-number) |
-| [2301013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301013-insufficient-permissions) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) |
+| [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) |
 | 2301098 |
 | 2301022 |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -326,7 +340,7 @@ server.listen(addr).then(() => {
 });
 ```
 
-## off('connect')
+## off_connect
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<LocalSocketConnection>): void
@@ -335,6 +349,8 @@ off(type: 'connect', callback?: Callback<LocalSocketConnection>): void
 Cancels listening for connect events of the LocalSocketServer connection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void-End-->
 
@@ -351,7 +367,7 @@ Cancels listening for connect events of the LocalSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -370,7 +386,7 @@ server.off('connect', callback);
 server.off('connect');
 ```
 
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -379,6 +395,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Cancels listening for error events of the LocalSocketServer connection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -395,7 +413,7 @@ Cancels listening for error events of the LocalSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -412,7 +430,7 @@ server.off('error', callback);
 server.off('error');
 ```
 
-## on('connect')
+## on_connect
 
 ```TypeScript
 on(type: 'connect', callback: Callback<LocalSocketConnection>): void
@@ -421,6 +439,8 @@ on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 Listens for connect events of the LocalSocketServer connection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void-End-->
 
@@ -437,7 +457,7 @@ Listens for connect events of the LocalSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -452,7 +472,7 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 });
 ```
 
-## on('error')
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -461,6 +481,8 @@ on(type: 'error', callback: ErrorCallback): void
 Listens for error events of the LocalSocketServer connection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -477,7 +499,7 @@ Listens for error events of the LocalSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -500,6 +522,8 @@ Sets other attributes of the LocalSocketServer connection.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>--><!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -520,12 +544,12 @@ Sets other attributes of the LocalSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2301009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

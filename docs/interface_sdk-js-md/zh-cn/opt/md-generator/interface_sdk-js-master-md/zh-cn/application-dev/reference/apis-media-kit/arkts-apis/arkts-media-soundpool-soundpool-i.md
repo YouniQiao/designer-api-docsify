@@ -1,25 +1,10 @@
 # SoundPool
 
-音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过  
-[media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)创建实例。
+音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过 [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md) 创建实例。 > **说明：** > > - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 > > - [on('loadComplete')](#on_loadComplete)：监听资源加载完成。建议开发者监听此回调以确 > 保音频在加载完成后进行播放。 > > - > [on('playFinishedWithStreamId')](#on_loadComplete)：监听播 > 放完成，同时返回播放结束的音频的streamId。 > > - [on('playFinished')](#on_loadComplete)：监听播放完成。 > > - [on('error')](#on_loadComplete)：监听错误事件。 > > - [on('errorOccurred')](#on_loadComplete)：监听错误事件，同时返回 > [errorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo)。 > > - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考 > [使用SoundPool播放短音频(ArkTS)](../../../media/media/using-soundpool-for-playback.md)。
 
-> **说明：**
-> 
-> - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。
-> > - [on('loadComplete')](SoundPool.on(type: 'loadComplete', callback: Callback&lt;int&gt;))：监听资源加载完成。建议开发者监听此回调以确
-> 保音频在加载完成后进行播放。
-> > -
-> [on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))：监听播
-> 放完成，同时返回播放结束的音频的streamId。
-> > - [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))：监听播放完成。
-> > - [on('error')](SoundPool.on(type: 'error', callback: ErrorCallback))：监听错误事件。
-> > - [on('errorOccurred')](SoundPool.on(type:'errorOccurred', callback:Callback&lt;ErrorInfo&gt;))：监听错误事件，同时返回
-> [errorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo)。
-> 
-> - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考
-> [使用SoundPool播放短音频(ArkTS)](../../../media/media/using-soundpool-for-playback.md)。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface SoundPool--><!--Device-unnamed-export declare interface SoundPool-End-->
 
@@ -31,21 +16,11 @@
 load(uri: string, callback: AsyncCallback<number>): void
 ```
 
-加载音频资源。使用callback异步回调。
+加载音频资源。使用callback异步回调。 通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。 该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。 > **说明：** > > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。 > > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
-通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
+**起始版本：** 23
 
-该方法不支持加载rawfile目录资源，需要通过  
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者  
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3)实现。
-
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void-End-->
 
@@ -62,9 +37,9 @@ load(uri: string, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## load
 
@@ -72,21 +47,11 @@ load(uri: string, callback: AsyncCallback<number>): void
 load(uri: string): Promise<number>
 ```
 
-加载音频资源。使用Promise异步回调。
+加载音频资源。使用Promise异步回调。 通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。 该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。 > **说明：** > > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。 > > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
-通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
+**起始版本：** 23
 
-该方法不支持加载rawfile目录资源，需要通过  
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者  
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3)实现。
-
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-SoundPool-load(uri: string): Promise<int>--><!--Device-SoundPool-load(uri: string): Promise<int>-End-->
 
@@ -108,9 +73,9 @@ load(uri: string): Promise<number>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## load
 
@@ -118,17 +83,11 @@ load(uri: string): Promise<number>
 load(fd: number, offset: number, length: number, callback: AsyncCallback<number>): void
 ```
 
-加载音频资源。使用callback异步回调。
+加载音频资源。使用callback异步回调。 通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。 > **说明：** > > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。 > > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
-通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void-End-->
 
@@ -147,9 +106,9 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## load
 
@@ -157,17 +116,11 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 load(fd: number, offset: number, length: number): Promise<number>
 ```
 
-加载音频资源。使用Promise异步回调。
+加载音频资源。使用Promise异步回调。 通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。 > **说明：** > > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。 > > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
-通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>--><!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>-End-->
 
@@ -191,21 +144,39 @@ load(fd: number, offset: number, length: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
-## off('loadComplete')
+## offError
 
 ```TypeScript
-off(type: 'loadComplete'): void
+offError(): void
 ```
 
-取消监听资源的加载完成。
+Unsubscribes from error events of this **SoundPool** instance.
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
+**废弃版本：** -1
+
+<!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+## offErrorOccurred
+
+```TypeScript
+offErrorOccurred(callback?:Callback<ErrorInfo>): void
+```
+
+Unsubscribes from errorOccurred events of this **SoundPool** instance.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -213,29 +184,57 @@ off(type: 'loadComplete'): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'loadComplete' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 |
 
-## off('playFinished')
+## offLoadComplete
 
 ```TypeScript
-off(type: 'playFinished'): void
+offLoadComplete(): void
 ```
 
-取消监听音频池资源播放完成。
+Unsubscribes from events indicating that a sound finishes loading.
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
+**废弃版本：** -1
+
+<!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
-**参数：**
+## offPlayFinished
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playFinished' | 是 |
+```TypeScript
+offPlayFinished(): void
+```
 
-## off('error')
+Unsubscribes from events indicating that a sound finishes playing.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+## offPlayFinishedWithStreamId
+
+```TypeScript
+offPlayFinishedWithStreamId(): void
+```
+
+Unsubscribes from events indicating that a sound finishes playing.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+## off_error
 
 ```TypeScript
 off(type: 'error'): void
@@ -244,6 +243,8 @@ off(type: 'error'): void
 取消监听音频池的错误事件。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
 
@@ -255,27 +256,7 @@ off(type: 'error'): void
 | --- | --- | --- |
 | type | 'error' | 是 |
 
-## off('playFinishedWithStreamId')
-
-```TypeScript
-off(type: 'playFinishedWithStreamId'): void
-```
-
-取消监听音频池资源播放完成。
-
-**起始版本：** 18
-
-<!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playFinishedWithStreamId' | 是 |
-
-## off('errorOccurred')
+## off_errorOccurred
 
 ```TypeScript
 off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
@@ -284,6 +265,8 @@ off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
 取消监听音频池的错误事件。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void-End-->
 
@@ -296,17 +279,19 @@ off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
 | type | 'errorOccurred' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 |
 
-## on('loadComplete')
+## off_loadComplete
 
 ```TypeScript
-on(type: 'loadComplete', callback: Callback<number>): void
+off(type: 'loadComplete'): void
 ```
 
-音频池资源加载完成监听。使用callback异步回调。
+取消监听资源的加载完成。
 
 **起始版本：** 10
 
-<!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
+**废弃版本：** -1
+
+<!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -315,19 +300,20 @@ on(type: 'loadComplete', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'loadComplete' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
 
-## on('playFinished')
+## off_playFinished
 
 ```TypeScript
-on(type: 'playFinished', callback: Callback<void>): void
+off(type: 'playFinished'): void
 ```
 
-音频池资源播放完成监听。使用callback异步回调。
+取消监听音频池资源播放完成。
 
 **起始版本：** 10
 
-<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
+**废弃版本：** -1
+
+<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -336,17 +322,150 @@ on(type: 'playFinished', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'playFinished' | 是 |
+
+## off_playFinishedWithStreamId
+
+```TypeScript
+off(type: 'playFinishedWithStreamId'): void
+```
+
+取消监听音频池资源播放完成。
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playFinishedWithStreamId' | 是 |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+## onErrorOccurred
+
+```TypeScript
+onErrorOccurred(callback:Callback<ErrorInfo>): void
+```
+
+Subscribes to errorOccurred events of this **SoundPool** instance.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 |
+
+## onLoadComplete
+
+```TypeScript
+onLoadComplete(callback: Callback<number>): void
+```
+
+Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(callback: Callback<void>): void
+```
+
+Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
-## on('error')
+## onPlayFinishedWithStreamId
+
+```TypeScript
+onPlayFinishedWithStreamId(callback: Callback<number>): void
+```
+
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. When only onPlayFinished or onPlayFinishedWithStreamId is subscribed to, the registered callback is triggered when the audio playback is complete. When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，该事件仅用于错误提示。使用callback异步回调。
+监听SoundPool的错误事件，该事件仅用于错误提示。使 用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -359,42 +478,17 @@ on(type: 'error', callback: ErrorCallback): void
 | type | 'error' | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
-## on('playFinishedWithStreamId')
-
-```TypeScript
-on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
-```
-
-音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。
-
-当仅单独注册[on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调或者  
-[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调时，当音频播放完成的时候，都会触发注册的回调。
-
-当同时注册[on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调和  
-[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
-
-**起始版本：** 18
-
-<!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playFinishedWithStreamId' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
-
-## on('errorOccurred')
+## on_errorOccurred
 
 ```TypeScript
 on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 ```
 
-监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo)。使用callback异步回调。
+监听SoundPool的错误事件，并返回包含错误码、错误发 生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo)。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-on(type:'errorOccurred', callback:Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type:'errorOccurred', callback:Callback<ErrorInfo>): void-End-->
 
@@ -407,6 +501,75 @@ on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 | type | 'errorOccurred' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 |
 
+## on_loadComplete
+
+```TypeScript
+on(type: 'loadComplete', callback: Callback<number>): void
+```
+
+音频池资源加载完成监听。使用callback异步回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'loadComplete' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## on_playFinished
+
+```TypeScript
+on(type: 'playFinished', callback: Callback<void>): void
+```
+
+音频池资源播放完成监听。使用callback异步回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playFinished' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## on_playFinishedWithStreamId
+
+```TypeScript
+on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
+```
+
+音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。 当仅单独注册[on('playFinished')](#on_loadComplete)事件回调或者 [on('playFinishedWithStreamId')](#on_loadComplete)事件回调 时，当音频播放完成的时候，都会触发注册的回调。 当同时注册[on('playFinished')](#on_loadComplete)事件回调和 [on('playFinishedWithStreamId')](#on_loadComplete)事件回调 时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+<!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playFinishedWithStreamId' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
 ## play
 
 ```TypeScript
@@ -415,7 +578,9 @@ play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): 
 
 播放音频资源，获取音频流streamID。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void-End-->
 
@@ -433,9 +598,9 @@ play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## play
 
@@ -445,7 +610,9 @@ play(soundID: number, callback: AsyncCallback<number>): void
 
 使用默认参数播放音频资源，获取音频流streamID。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void-End-->
 
@@ -462,9 +629,9 @@ play(soundID: number, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## play
 
@@ -474,7 +641,9 @@ play(soundID: number, params?: PlayParameters): Promise<number>
 
 播放音频资源，获取音频流streamID。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>--><!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>-End-->
 
@@ -497,9 +666,9 @@ play(soundID: number, params?: PlayParameters): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## release
 
@@ -509,7 +678,9 @@ release(callback: AsyncCallback<void>): void
 
 释放音频池实例。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-release(callback: AsyncCallback<void>): void--><!--Device-SoundPool-release(callback: AsyncCallback<void>): void-End-->
 
@@ -525,7 +696,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## release
 
@@ -535,7 +706,9 @@ release(): Promise<void>
 
 释放音频池实例。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-release(): Promise<void>--><!--Device-SoundPool-release(): Promise<void>-End-->
 
@@ -551,7 +724,7 @@ release(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setInterruptMode
 
@@ -559,10 +732,11 @@ release(): Promise<void>
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-设置同一ID音频在播放时的打断模式。创建soundPool之后，该接口仅在首次调用soundPool的Play函数之前设置有效，期间可多次设置，否则将默认使用  
-[SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md)，即对同一ID的音频，如果前者尚未播放完成，后者在播放前会先打断前者的播放。
+设置同一ID音频在播放时的打断模式。创建soundPool之后，该接口仅在首次调用soundPool的Play函数之前设置有效，期间可多次设置，否则将默认使用 [SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md)，即对同一ID的音频，如果前者尚未播放完成，后者在播放前会先打断前 者的播放。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -584,7 +758,9 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 
 设置循环模式。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void-End-->
 
@@ -602,9 +778,9 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setLoop
 
@@ -614,7 +790,9 @@ setLoop(streamID: number, loop: number): Promise<void>
 
 设置循环模式。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>--><!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>-End-->
 
@@ -637,9 +815,9 @@ setLoop(streamID: number, loop: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setPriority
 
@@ -649,7 +827,9 @@ setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): 
 
 设置音频流播放的优先级。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void-End-->
 
@@ -667,9 +847,9 @@ setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setPriority
 
@@ -679,7 +859,9 @@ setPriority(streamID: number, priority: number): Promise<void>
 
 设置音频流优先级。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>--><!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>-End-->
 
@@ -702,9 +884,9 @@ setPriority(streamID: number, priority: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setRate
 
@@ -714,7 +896,9 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 
 设置音频流播放速率。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
@@ -732,9 +916,9 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setRate
 
@@ -744,7 +928,9 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 
 设置音频流的播放速率。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>-End-->
 
@@ -767,9 +953,9 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setVolume
 
@@ -779,7 +965,9 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: A
 
 设置音频流播放音量。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void-End-->
 
@@ -798,9 +986,9 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: A
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## setVolume
 
@@ -810,7 +998,9 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<vo
 
 设置音频流的播放音量。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>-End-->
 
@@ -834,9 +1024,9 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## stop
 
@@ -846,7 +1036,9 @@ stop(streamID: number, callback: AsyncCallback<void>): void
 
 停止播放音频资源。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void-End-->
 
@@ -863,9 +1055,9 @@ stop(streamID: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## stop
 
@@ -875,7 +1067,9 @@ stop(streamID: number): Promise<void>
 
 停止streamID对应的音频播放。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-stop(streamID: int): Promise<void>--><!--Device-SoundPool-stop(streamID: int): Promise<void>-End-->
 
@@ -897,9 +1091,9 @@ stop(streamID: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## unload
 
@@ -909,7 +1103,9 @@ unload(soundID: number, callback: AsyncCallback<void>): void
 
 卸载音频资源。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void-End-->
 
@@ -926,9 +1122,9 @@ unload(soundID: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 ## unload
 
@@ -938,7 +1134,9 @@ unload(soundID: number): Promise<void>
 
 卸载音频资源。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SoundPool-unload(soundID: int): Promise<void>--><!--Device-SoundPool-unload(soundID: int): Promise<void>-End-->
 
@@ -960,6 +1158,6 @@ unload(soundID: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |

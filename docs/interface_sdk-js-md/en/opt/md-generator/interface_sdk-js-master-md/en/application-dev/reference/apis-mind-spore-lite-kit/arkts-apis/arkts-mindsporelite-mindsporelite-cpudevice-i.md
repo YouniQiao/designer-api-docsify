@@ -2,7 +2,9 @@
 
 Provides the CPU device info
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-interface CpuDevice--><!--Device-mindSporeLite-interface CpuDevice-End-->
 
@@ -24,7 +26,9 @@ The precision mode
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ The thread affinity core list
 
 **Type:** number[]
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ The thread affinity mode
 
 **Type:** [ThreadAffinityMode](arkts-mindsporelite-mindsporelite-threadaffinitymode-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ The thread num
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

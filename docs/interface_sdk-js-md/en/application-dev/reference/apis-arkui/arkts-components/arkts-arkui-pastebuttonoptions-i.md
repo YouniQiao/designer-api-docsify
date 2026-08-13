@@ -1,21 +1,12 @@
 # PasteButtonOptions
 
-Defines options for the paste button, including icon, text and button type.
-
-> **NOTE：**
-> 
-> - You are advised to specify at least one of **icon** or **text**.
-
-> - If neither **icon** nor **text** is specified, **PasteButton** is created with default styles as follows:
-> **PasteIconStyle** defaults to **LINES**, **PasteDescription** to **PASTE**, and **ButtonType** to **Capsule**.
-
-> - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification. Styles and properties
-> of security components are verified by the system upon creation. Dynamic changes may cause the component to
-> violate specifications for security components and invalidate authorization.
+Defines options for the paste button, including icon, text and button type. > **NOTE：**> > - You are advised to specify at least one of **icon** or **text**. > - If neither **icon** nor **text** is specified, **PasteButton** is created with default styles as follows: > **PasteIconStyle** defaults to **LINES**, **PasteDescription** to **PASTE**, and **ButtonType** to **Capsule**. > - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification. Styles and properties > of security components are verified by the system upon creation. Dynamic changes may cause the component to > violate specifications for security components and invalidate authorization.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface PasteButtonOptions--><!--Device-unnamed-declare interface PasteButtonOptions-End-->
 
@@ -27,13 +18,15 @@ Defines options for the paste button, including icon, text and button type.
 buttonType?: ButtonType
 ```
 
-Shape of the **PasteButton** component.Default value: ButtonType.Capsule.
+Shape of the **PasteButton** component. Default value: ButtonType.Capsule.
 
 **Type:** ButtonType
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,13 +42,15 @@ Shape of the **PasteButton** component.Default value: ButtonType.Capsule.
 icon?: PasteIconStyle
 ```
 
-Icon style of the **PasteButton** component.Default value: No icon is displayed.&lt;br&gt;If neither **icon** nor **text** is provided, the component uses the default style.
+Icon style of the **PasteButton** component. Default value: No icon is displayed. &lt;br&gt;If neither **icon** nor **text** is provided, the component uses the default style.
 
 **Type:** [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,13 +66,15 @@ Icon style of the **PasteButton** component.Default value: No icon is displayed.
 text?: PasteDescription
 ```
 
-Text on the **PasteButton** component.Default value: No text description is displayed.&lt;br&gt;If the icon is not transferred, the control is displayed in the default style.
+Text on the **PasteButton** component. Default value: No text description is displayed. &lt;br&gt;If the icon is not transferred, the control is displayed in the default style.
 
 **Type:** [PasteDescription](arkts-arkui-pastedescription-e.md)
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

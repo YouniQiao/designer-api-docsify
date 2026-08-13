@@ -2,9 +2,11 @@
 
 表示证书链校验证书吊销状态的参数。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cert-interface RevocationCheckParameter--><!--Device-cert-interface RevocationCheckParameter-End-->
 
@@ -16,19 +18,17 @@
 crlDownloadURI?: string
 ```
 
-表示用于CRL请求的备选下载地址。
-
-> **说明：**
-> 
-> 当前URI只针对实体证书生效。
+表示用于CRL请求的备选下载地址。 > **说明：** > > 当前URI只针对实体证书生效。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RevocationCheckParameter-crlDownloadURI?: string--><!--Device-RevocationCheckParameter-crlDownloadURI?: string-End-->
 
@@ -46,11 +46,13 @@ ocspDigest?: string
 
 **默认值：** SHA256
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RevocationCheckParameter-ocspDigest?: string--><!--Device-RevocationCheckParameter-ocspDigest?: string-End-->
 
@@ -66,11 +68,13 @@ ocspRequestExtension?: Array<Uint8Array>
 
 **类型：** Array&lt;Uint8Array&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RevocationCheckParameter-ocspRequestExtension?: Array<Uint8Array>--><!--Device-RevocationCheckParameter-ocspRequestExtension?: Array<Uint8Array>-End-->
 
@@ -86,11 +90,13 @@ ocspResponderCert?: X509Cert
 
 **类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RevocationCheckParameter-ocspResponderCert?: X509Cert--><!--Device-RevocationCheckParameter-ocspResponderCert?: X509Cert-End-->
 
@@ -102,19 +108,17 @@ ocspResponderCert?: X509Cert
 ocspResponderURI?: string
 ```
 
-表示用于OCSP请求的备选服务器URI地址，支持HTTP/HTTPS，具体配置由与服务器协商决定。
-
-> **说明：**
-> 
-> 当前URI只针对实体证书生效。
+表示用于OCSP请求的备选服务器URI地址，支持HTTP/HTTPS，具体配置由与服务器协商决定。 > **说明：** > > 当前URI只针对实体证书生效。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RevocationCheckParameter-ocspResponderURI?: string--><!--Device-RevocationCheckParameter-ocspResponderURI?: string-End-->
 
@@ -130,11 +134,13 @@ ocspResponses?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RevocationCheckParameter-ocspResponses?: Uint8Array--><!--Device-RevocationCheckParameter-ocspResponses?: Uint8Array-End-->
 
@@ -150,11 +156,13 @@ options?: Array<RevocationCheckOptions>
 
 **类型：** Array&lt;[RevocationCheckOptions](arkts-devicecertificate-cert-revocationcheckoptions-e.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RevocationCheckParameter-options?: Array<RevocationCheckOptions>--><!--Device-RevocationCheckParameter-options?: Array<RevocationCheckOptions>-End-->
 

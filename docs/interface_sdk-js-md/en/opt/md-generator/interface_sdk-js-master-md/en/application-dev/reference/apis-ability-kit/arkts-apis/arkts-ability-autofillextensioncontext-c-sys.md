@@ -2,11 +2,13 @@
 
 The AutoFillExtensionContext module provides the context environment for the AutoFillExtensionAbility. It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
 
-**Inheritance/Implementation:** AutoFillExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** AutoFillExtensionContext extends ExtensionContext
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-unnamed-declare class AutoFillExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AutoFillExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AutoFillExtensionContext--><!--Device-unnamed-declare class AutoFillExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -20,7 +22,9 @@ reloadInModal(customData: CustomData): Promise<void>
 
 Reload autoFillExtension in modal window.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +50,10 @@ Reload autoFillExtension in modal window.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 

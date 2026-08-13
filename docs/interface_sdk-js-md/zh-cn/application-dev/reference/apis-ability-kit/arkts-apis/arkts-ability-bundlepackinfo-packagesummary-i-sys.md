@@ -2,9 +2,11 @@
 
 pack.info中的包摘要信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface PackageSummary--><!--Device-unnamed-export interface PackageSummary-End-->
 
@@ -22,9 +24,11 @@ readonly app: BundleConfigInfo
 
 **类型：** [BundleConfigInfo](arkts-ability-bundlepackinfo-bundleconfiginfo-i-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PackageSummary-readonly app: BundleConfigInfo--><!--Device-PackageSummary-readonly app: BundleConfigInfo-End-->
 
@@ -42,9 +46,11 @@ readonly modules: Array<ModuleConfigInfo>
 
 **类型：** Array&lt;[ModuleConfigInfo](arkts-ability-bundlepackinfo-moduleconfiginfo-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PackageSummary-readonly modules: Array<ModuleConfigInfo>--><!--Device-PackageSummary-readonly modules: Array<ModuleConfigInfo>-End-->
 

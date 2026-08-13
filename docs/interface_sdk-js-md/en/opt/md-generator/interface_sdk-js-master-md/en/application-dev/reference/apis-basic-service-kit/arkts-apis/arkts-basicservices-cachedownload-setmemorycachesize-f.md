@@ -12,13 +12,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function setMemoryCacheSize(bytes: number): void
 ```
 
-Sets the upper limit of the memory cache size for the **cacheDownload** component.
+Sets the upper limit of the memory cache size for the **cacheDownload** component. - When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data in the memory. - This API returns the result synchronously, without blocking the calling thread.
 
-- When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data   
-in the memory.  
-- This API returns the result synchronously, without blocking the calling thread.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void--><!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void-End-->
 
@@ -34,7 +32,7 @@ in the memory.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -6,6 +6,8 @@ One drag action object for drag process
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface DragAction--><!--Device-dragController-interface DragAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,11 +24,13 @@ import { dragController } from '@kit.ArkUI';
 offStatusChange(callback?: Callback<DragAndDropInfo>): void
 ```
 
-Deregisters a callback for listening on drag status changes.This callback is not triggered when the drag status change.
+Deregisters a callback for listening on drag status changes. This callback is not triggered when the drag status change.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +42,7 @@ Deregisters a callback for listening on drag status changes.This callback is not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | No | with drag event and status information |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | No | with drag event and status information |
 
 ## onStatusChange
 
@@ -46,11 +50,13 @@ Deregisters a callback for listening on drag status changes.This callback is not
 onStatusChange(callback: Callback<DragAndDropInfo>): void
 ```
 
-Registers a callback for listening on drag status changes.This callback is triggered when the drag status change.
+Registers a callback for listening on drag status changes. This callback is triggered when the drag status change.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +68,7 @@ Registers a callback for listening on drag status changes.This callback is trigg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | Yes | with drag event and status information |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | Yes | with drag event and status information |
 
 ## startDrag
 
@@ -75,6 +81,8 @@ trigger drag action
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,5 +100,5 @@ trigger drag action
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 

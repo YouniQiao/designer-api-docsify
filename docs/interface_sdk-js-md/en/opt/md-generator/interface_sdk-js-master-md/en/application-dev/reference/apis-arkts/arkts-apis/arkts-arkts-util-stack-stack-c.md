@@ -1,10 +1,12 @@
 # Stack
 
-Stack is implemented based on the array data structure.It follows the principle Last In First Out (LIFO) and supports data insertion and removal at one end.
+Stack is implemented based on the array data structure. It follows the principle Last In First Out (LIFO) and supports data insertion and removal at one end.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class Stack<T>--><!--Device-unnamed-declare class Stack<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Stack--><!--Device-unnamed-declare class Stack-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ Stack is implemented based on the array data structure.It follows the principle 
 ```TypeScript
 import { Stack } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+returns an iterator. Each item of the iterator is a ArkTS Object
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Stack-$_iterator(): IterableIterator<T>--><!--Device-Stack-$_iterator(): IterableIterator<T>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Stack-[Symbol.iterator](): IterableIterator<T>--><!--Device-Stack-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -34,13 +62,13 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -81,7 +109,9 @@ constructor()
 
 A constructor used to create a **Stack** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -93,7 +123,7 @@ A constructor used to create a **Stack** instance.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -110,6 +140,8 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 Uses a callback to traverse each element in the **Stack** instance.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,7 +160,7 @@ Uses a callback to traverse each element in the **Stack** instance.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -147,6 +179,30 @@ stack.forEach((value : number, index: number) :void => {
 // value:4 index:3
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackfn: StackForEachCb<T>): void
+```
+
+Executes a provided function once for each value in the Stack object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Stack-forEach(callbackfn: StackForEachCb<T>): void--><!--Device-Stack-forEach(callbackfn: StackForEachCb<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | [StackForEachCb](arkts-arkts-stackforeachcb-t.md)&lt;T&gt; | Yes |
+
 ## isEmpty
 
 ```TypeScript
@@ -155,7 +211,9 @@ isEmpty(): boolean
 
 Checks whether this Stack is empty (contains no elements).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -173,7 +231,7 @@ Checks whether this Stack is empty (contains no elements).
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -195,7 +253,9 @@ locate(element: T): number
 
 Obtains the index of the first occurrence of the specified element in this Stack.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -219,7 +279,7 @@ Obtains the index of the first occurrence of the specified element in this Stack
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -241,7 +301,9 @@ peek(): T
 
 Obtains the top element of this Stack. If the Stack is empty, **undefined** is returned.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -259,8 +321,8 @@ Obtains the top element of this Stack. If the Stack is empty, **undefined** is r
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -282,7 +344,9 @@ pop(): T
 
 Removes the top element from this Stack.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -300,8 +364,8 @@ Removes the top element from this Stack.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -324,7 +388,9 @@ push(item: T): T
 
 Adds an element at the top of this Stack.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -348,7 +414,7 @@ Adds an element at the top of this Stack.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -376,6 +442,8 @@ Number of elements in a Stack.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

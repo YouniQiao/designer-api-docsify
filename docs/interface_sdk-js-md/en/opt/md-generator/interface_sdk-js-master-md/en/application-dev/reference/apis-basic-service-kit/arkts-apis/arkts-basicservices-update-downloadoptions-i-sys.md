@@ -2,7 +2,9 @@
 
 Defines the download options, including the **allowNetwork** and **order** fields, which are used to control the download behavior.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface DownloadOptions--><!--Device-update-export interface DownloadOptions-End-->
 
@@ -26,7 +28,9 @@ Network type allowed for download. The value **CELLULAR** indicates that only do
 
 **Type:** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadOptions-allowNetwork: NetType--><!--Device-DownloadOptions-allowNetwork: NetType-End-->
 
@@ -44,7 +48,9 @@ The options are as follows: **DOWNLOAD**: download the upgrade package, which ne
 
 **Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadOptions-order: Order--><!--Device-DownloadOptions-order: Order-End-->
 

@@ -2,7 +2,9 @@
 
 Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-interface FileManifestData--><!--Device-backup-interface FileManifestData-End-->
 
@@ -26,7 +28,9 @@ A file descriptor for the manifest file that holds the data
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileManifestData-manifestFd: int--><!--Device-FileManifestData-manifestFd: int-End-->
 

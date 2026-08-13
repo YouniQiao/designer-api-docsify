@@ -14,7 +14,9 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<number>
 
 Creates a virtual screen. This API uses a promise to return the result.
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
@@ -38,10 +40,10 @@ Creates a virtual screen. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

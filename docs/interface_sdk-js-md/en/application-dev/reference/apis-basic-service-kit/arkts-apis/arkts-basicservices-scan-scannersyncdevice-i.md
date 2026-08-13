@@ -2,9 +2,11 @@
 
 Defines the device to be synced from the scanner.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-scan-interface ScannerSyncDevice--><!--Device-scan-interface ScannerSyncDevice-End-->
 
@@ -26,9 +28,11 @@ Discovery mode.
 
 **Type:** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerSyncDevice-discoveryMode: ScannerDiscoveryMode--><!--Device-ScannerSyncDevice-discoveryMode: ScannerDiscoveryMode-End-->
 
@@ -44,9 +48,11 @@ Old scanner ID, which is valid only when **syncMode** is set to **update**.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerSyncDevice-oldScannerId?: string--><!--Device-ScannerSyncDevice-oldScannerId?: string-End-->
 
@@ -62,9 +68,11 @@ Scanner ID.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerSyncDevice-scannerId: string--><!--Device-ScannerSyncDevice-scannerId: string-End-->
 
@@ -80,9 +88,11 @@ Sync mode.
 
 **Type:** [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerSyncDevice-syncMode: ScannerSyncMode--><!--Device-ScannerSyncDevice-syncMode: ScannerSyncMode-End-->
 
@@ -98,9 +108,11 @@ Unique ID.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerSyncDevice-uniqueId: string--><!--Device-ScannerSyncDevice-uniqueId: string-End-->
 

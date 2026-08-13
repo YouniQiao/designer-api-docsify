@@ -1,10 +1,12 @@
 # PlaybackStatus
 
-[handleStatusChanged](../../../reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md#handlestatuschanged12)接口参数， 用于表示播放器的播放状态。
+[handleStatusChanged](../../apis-na/arkts-apis/arkts-na-webview-nativemediaplayerhandler-i.md#handleStatusChanged) 接口参数， 用于表示播放器的播 放状态。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum PlaybackStatus--><!--Device-webview-enum PlaybackStatus-End-->
 
@@ -18,9 +20,13 @@ PAUSED = 0
 
 播放状态为暂停状态，表示媒体已暂停。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PlaybackStatus-PAUSED = 0--><!--Device-PlaybackStatus-PAUSED = 0-End-->
 
@@ -34,9 +40,13 @@ PLAYING = 1
 
 播放状态为播放状态，表示媒体正在播放。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PlaybackStatus-PLAYING = 1--><!--Device-PlaybackStatus-PLAYING = 1-End-->
 

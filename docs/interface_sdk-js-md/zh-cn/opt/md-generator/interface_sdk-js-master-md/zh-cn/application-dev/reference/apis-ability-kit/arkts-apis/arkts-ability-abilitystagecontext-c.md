@@ -1,12 +1,14 @@
 # AbilityStageContext
 
-AbilityStageContext是AbilityStage的上下文环境，继承自[Context](./../app/context)。AbilityStageContext提供允许访问特定于abilityStage的资源的能力，包括获取AbilityStage对应的ModuleInfo对象、环境变化对象。
+AbilityStageContext是AbilityStage的上下文环境，继承自Context。 AbilityStageContext提供允许访问特定于abilityStage的资源的能力，包括获取AbilityStage对应的ModuleInfo对象、环境变化对象。
 
-**继承/实现关系：** AbilityStageContext extends [Context](Context)
+**继承/实现关系：** AbilityStageContext extends Context
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-unnamed-declare class AbilityStageContext extends Context--><!--Device-unnamed-declare class AbilityStageContext extends Context-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class AbilityStageContext--><!--Device-unnamed-declare class AbilityStageContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,7 +22,9 @@ config: Configuration
 
 **类型：** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +44,9 @@ AbilityStage对应的ModuleInfo对象。
 
 **类型：** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,6 +67,8 @@ launchElement?: ElementName
 **类型：** [ElementName](arkts-ability-elementname-i.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

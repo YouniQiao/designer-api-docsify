@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface AutoPlayOptions--><!--Device-unnamed-declare interface AutoPlayOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,15 @@
 stopWhenTouched: boolean
 ```
 
-在按下事件中配置子组件是否立即停止播放。
-
-设置为true时，停止播放。设置为false时，自动播放不中断。
-
-默认值：true
+在按下事件中配置子组件是否立即停止播放。 设置为true时，停止播放。设置为false时，自动播放不中断。 默认值：true
 
 **类型：** boolean
 
 **默认值：** true
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

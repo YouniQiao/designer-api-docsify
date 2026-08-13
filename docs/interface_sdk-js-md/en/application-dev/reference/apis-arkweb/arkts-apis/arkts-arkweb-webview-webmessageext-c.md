@@ -2,9 +2,11 @@
 
 The message received or sent from web message port.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
 
@@ -19,16 +21,20 @@ import { webview } from '@kit.ArkWeb';
 ## getArray
 
 ```TypeScript
-getArray(): Array<string | double | long | boolean>
+getArray(): Array<string | number | boolean>
 ```
 
 Get the array value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageExt-getArray(): Array<string | double | long | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | double | long | boolean>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-getArray(): Array<string | number | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | number | boolean>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,13 +42,13 @@ Get the array value of the web message.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string \| double \| long \| boolean&gt; | Returns data of Array type |
+| Array&lt;string \| number \| boolean&gt; | Returns data of Array type |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -52,9 +58,13 @@ getArrayBuffer(): ArrayBuffer
 
 Get the array buffer value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer-End-->
 
@@ -70,7 +80,7 @@ Get the array buffer value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -80,9 +90,13 @@ getBoolean(): boolean
 
 Get the boolean value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-getBoolean(): boolean--><!--Device-WebMessageExt-getBoolean(): boolean-End-->
 
@@ -98,7 +112,7 @@ Get the boolean value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getError
 
@@ -108,9 +122,13 @@ getError(): Error
 
 Get the error value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-getError(): Error--><!--Device-WebMessageExt-getError(): Error-End-->
 
@@ -126,21 +144,25 @@ Get the error value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getNumber
 
 ```TypeScript
-getNumber(): double | long
+getNumber(): number
 ```
 
 Get the number value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageExt-getNumber(): double | long--><!--Device-WebMessageExt-getNumber(): double | long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-getNumber(): number--><!--Device-WebMessageExt-getNumber(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -148,13 +170,13 @@ Get the number value of the web message.
 
 | Type | Description |
 | --- | --- |
-| double | Returns data of number type |
+| number | Returns data of number type |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getString
 
@@ -164,9 +186,13 @@ getString(): string
 
 Get the string value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-getString(): string--><!--Device-WebMessageExt-getString(): string-End-->
 
@@ -182,7 +208,7 @@ Get the string value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getType
 
@@ -192,9 +218,13 @@ getType(): WebMessageType
 
 Get the type of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-getType(): WebMessageType--><!--Device-WebMessageExt-getType(): WebMessageType-End-->
 
@@ -209,16 +239,20 @@ Get the type of the web message.
 ## setArray
 
 ```TypeScript
-setArray(message: Array<string | double | long | boolean>): void
+setArray(message: Array<string | number | boolean>): void
 ```
 
 Set the array value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageExt-setArray(message: Array<string | double | long | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | double | long | boolean>): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -226,14 +260,14 @@ Set the array value of the web message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Array&lt;string \| double \| long \| boolean&gt; | Yes | set Array type data |
+| message | Array&lt;string \| number \| boolean&gt; | Yes | set Array type data |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setArrayBuffer
 
@@ -243,9 +277,13 @@ setArrayBuffer(message: ArrayBuffer): void
 
 Set the array buffer value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void--><!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void-End-->
 
@@ -261,8 +299,8 @@ Set the array buffer value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setBoolean
 
@@ -272,9 +310,13 @@ setBoolean(message: boolean): void
 
 Set the boolean value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-setBoolean(message: boolean): void--><!--Device-WebMessageExt-setBoolean(message: boolean): void-End-->
 
@@ -290,8 +332,8 @@ Set the boolean value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setError
 
@@ -301,9 +343,13 @@ setError(message: Error): void
 
 Set the error value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-setError(message: Error): void--><!--Device-WebMessageExt-setError(message: Error): void-End-->
 
@@ -319,22 +365,26 @@ Set the error value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setNumber
 
 ```TypeScript
-setNumber(message: double): void
+setNumber(message: number): void
 ```
 
 Set the number value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageExt-setNumber(message: double): void--><!--Device-WebMessageExt-setNumber(message: double): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-setNumber(message: number): void--><!--Device-WebMessageExt-setNumber(message: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -342,14 +392,14 @@ Set the number value of the web message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | double | Yes | set number type data |
+| message | number | Yes | set number type data |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setString
 
@@ -359,9 +409,13 @@ setString(message: string): void
 
 Set the string value of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-setString(message: string): void--><!--Device-WebMessageExt-setString(message: string): void-End-->
 
@@ -377,8 +431,8 @@ Set the string value of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setType
 
@@ -388,9 +442,13 @@ setType(type: WebMessageType): void
 
 Set the type of the web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-setType(type: WebMessageType): void--><!--Device-WebMessageExt-setType(type: WebMessageType): void-End-->
 
@@ -406,6 +464,6 @@ Set the type of the web message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 

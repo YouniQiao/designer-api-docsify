@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface BaseEvent--><!--Device-unnamed-declare interface BaseEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,13 @@
 getModifierKeyState?(keys: Array<string>): boolean
 ```
 
-获取功能键按压状态。报错信息请参考以下错误码。支持功能键'Ctrl'\|'Alt'\|'Shift'。
-
-> **说明：**
-> 
-> 此接口不支持在手写笔场景下使用。
+获取功能键按压状态。报错信息请参考以下错误码。支持功能键'Ctrl'\|'Alt'\|'Shift'。 > **说明：** > > 此接口不支持在手写笔场景下使用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,7 +50,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
@@ -58,21 +58,15 @@ getModifierKeyState?(keys: Array<string>): boolean
 axisHorizontal ?: number
 ```
 
-水平轴值。
-
-默认值：0
-
-**说明：**
-
-当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。
-
-对于Shift+鼠标滚轮触发的横向滚动场景，axisHorizontal为0，滚动值体现在axisVertical中。
+水平轴值。 默认值：0 **说明：** 当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。 对于Shift+鼠标滚轮触发的横向滚动场景，axisHorizontal为0，滚动值体现在axisVertical中。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,23 +84,15 @@ axisHorizontal ?: number
 axisPinch?: number
 ```
 
-双指缩放比例。
-
-默认值：0
-
-**说明：**
-
-仅在触控板上通过双指缩放操作触发的Pinch手势，或在轴事件中，可以获取该值；在其他场景下，获取到的将是默认值。
-
-缩放比例是指在双指缩放事件触发过程中，双指当前距离与最初按下时距离的比值。
-
-取值范围：[0, +∞)
+双指缩放比例。 默认值：0 **说明：** 仅在触控板上通过双指缩放操作触发的Pinch手势，或在轴事件中，可以获取该值；在其他场景下，获取到的将是默认值。 缩放比例是指在双指缩放事件触发过程中，双指当前距离与最初按下时距离的比值。 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 21
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,21 +110,15 @@ axisPinch?: number
 axisVertical ?: number
 ```
 
-垂直轴值。
-
-默认值：0
-
-**说明：**
-
-当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。
-
-对于Shift+鼠标滚轮触发的横向滚动场景，滚动值体现在axisVertical中。
+垂直轴值。 默认值：0 **说明：** 当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。 对于Shift+鼠标滚轮触发的横向滚动场景，滚动值体现在axisVertical中。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,17 +136,15 @@ axisVertical ?: number
 deviceId?: number
 ```
 
-触发当前事件的输入设备ID。
-
-默认值：0
-
-取值范围：[0, +∞)
+触发当前事件的输入设备ID。 默认值：0 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,17 +160,15 @@ deviceId?: number
 pressure: number
 ```
 
-按压的压力大小。
-
-默认值：0
-
-取值范围：[0,1]，典型值0.913168，压感大小与数值正相关。在部分设备中，由于设备的硬件参数配置不同，可能会返回大于1的值。
+按压的压力大小。 默认值：0 取值范围：[0,1]，典型值0.913168，压感大小与数值正相关。在部分设备中，由于设备的硬件参数配置不同，可能会返回大于1的值。
 
 **类型：** number
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -208,15 +184,15 @@ pressure: number
 rollAngle?: number
 ```
 
-手写笔与设备平面的夹角。
-
-单位：deg
+手写笔与设备平面的夹角。 单位：deg
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,6 +218,8 @@ source: SourceType
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -263,6 +241,8 @@ sourceTool: SourceTool
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -286,6 +266,8 @@ target: EventTarget
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -300,17 +282,15 @@ target: EventTarget
 targetDisplayId?: number
 ```
 
-事件发生的屏幕ID。 
-
-默认值：0
-
-取值范围：[0, +∞)
+事件发生的屏幕ID。 默认值：0 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -326,17 +306,15 @@ targetDisplayId?: number
 tiltX: number
 ```
 
-手写笔在设备平面上的投影与设备平面X轴的夹角。
-
-单位：deg
-
-默认值：0
+手写笔在设备平面上的投影与设备平面X轴的夹角。 单位：deg 默认值：0
 
 **类型：** number
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -352,17 +330,15 @@ tiltX: number
 tiltY: number
 ```
 
-手写笔在设备平面上的投影与设备平面Y轴的夹角。
-
-单位：deg
-
-默认值：0
+手写笔在设备平面上的投影与设备平面Y轴的夹角。 单位：deg 默认值：0
 
 **类型：** number
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -378,15 +354,15 @@ tiltY: number
 timestamp: number
 ```
 
-事件时间戳，触发事件时距离系统启动的时间间隔。
-
-单位：ns
+事件时间戳，触发事件时距离系统启动的时间间隔。 单位：ns
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

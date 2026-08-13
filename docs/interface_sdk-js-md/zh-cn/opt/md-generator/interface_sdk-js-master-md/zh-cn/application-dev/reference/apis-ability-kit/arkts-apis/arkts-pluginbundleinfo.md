@@ -1,17 +1,12 @@
 # PluginBundleInfo
 
-The module defines plugin information, which is obtained through the
- [bundleManager.getAllPluginInfo](arkts-ability-bundlemanager-getallplugininfo-f-sys.md#getAllPluginInfo) API.
- > **NOTE**
- >
- > The APIs provided by this module are system APIs.
-
-
 ## 汇总
 
-### 接口
+<!--Del-->
+### 接口（系统接口）
 
 | 名称 |
 | --- |
-| [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md) |
-| [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md) |
+| [PluginBundleInfo](arkts-ability-pluginbundleinfo-i-sys.md) |
+| [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i-sys.md) |
+<!--DelEnd-->

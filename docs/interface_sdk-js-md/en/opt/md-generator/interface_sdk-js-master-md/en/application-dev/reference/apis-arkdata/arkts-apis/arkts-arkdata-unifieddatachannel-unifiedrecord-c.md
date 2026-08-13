@@ -2,7 +2,9 @@
 
 An abstract definition of the data content supported by the UDMF. A **UnifiedRecord** object contains one or more data records, for example, a text record, an image record, or an HTML record. Since API version 15, different styles of the same content can be added to a **UnifiedRecord** object. Data users can obtain the corresponding styles as required.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-class UnifiedRecord--><!--Device-unifiedDataChannel-class UnifiedRecord-End-->
 
@@ -22,11 +24,13 @@ addEntry(type: string, value: ValueType): void
 
 Adds data of a specified data type and content to the current data record. You can use this API to add different data types and contents to the same data.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedRecord-addEntry(type: string, value: ValueType): void--><!--Device-UnifiedRecord-addEntry(type: string, value: ValueType): void-End-->
 
@@ -43,7 +47,7 @@ Adds data of a specified data type and content to the current data record. You c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -80,11 +84,13 @@ constructor()
 
 Defines a constructor used to create a **UnfiedRecord** object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedRecord-constructor()--><!--Device-UnifiedRecord-constructor()-End-->
 
@@ -102,21 +108,15 @@ let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 constructor(type: string, value: ValueType)
 ```
 
-Defines a constructor used to create a data record with the specified type and value.
+Defines a constructor used to create a data record with the specified type and value. If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) type, **type** must be the value of **OPENHARMONY_PIXEL_MAP** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want) type, **type** must be the value of **OPENHARMONY_WANT** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
-If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) type, **type** must be the value of   
-**OPENHARMONY_PIXEL_MAP** in   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
+**Since:** 23
 
-If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want) type, **type** must be the value of   
-**OPENHARMONY_WANT** in   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedRecord-constructor(type: string, value: ValueType)--><!--Device-UnifiedRecord-constructor(type: string, value: ValueType)-End-->
 
@@ -133,7 +133,7 @@ If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-ap
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -178,11 +178,13 @@ getEntries(): Record<string, ValueType>
 
 Obtains all the data in the current data record.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedRecord-getEntries(): Record<string, ValueType>--><!--Device-UnifiedRecord-getEntries(): Record<string, ValueType>-End-->
 
@@ -192,7 +194,7 @@ Obtains all the data in the current data record.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ValueType&gt; |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ValueType&gt; |
 
 ## Examples
 
@@ -251,11 +253,13 @@ getEntry(type: string): ValueType
 
 Obtains data of the specified type from the data record.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedRecord-getEntry(type: string): ValueType--><!--Device-UnifiedRecord-getEntry(type: string): ValueType-End-->
 
@@ -277,7 +281,7 @@ Obtains data of the specified type from the data record.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -335,12 +339,11 @@ for (let i = 0; i < records.length; i++) {
 getType(): string
 ```
 
-Obtains the type of this **UnfiedRecord**. The data obtained by   
-[getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getRecords) from the **UnifiedData** object is a   
-**UnifiedRecord** object. You need to use this API to obtain the specific type of the record, convert the   
-**UnifiedRecord** object to its child class, and call the child class interfaces.
+Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getRecords) from the **UnifiedData** object is a **UnifiedRecord** object. You need to use this API to obtain the specific type of the record, convert the **UnifiedRecord** object to its child class, and call the child class interfaces.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -382,14 +385,15 @@ if (records[0].getType() == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
 getTypes(): Array<string>
 ```
 
-Obtains all the data types in the data record. This API can be called using the **UnifiedRecord** object to query all data types in the record, including the data types added using the   
-[addEntry](#addEntry) function.
+Obtains all the data types in the data record. This API can be called using the **UnifiedRecord** object to query all data types in the record, including the data types added using the [addEntry](#addEntry) function.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedRecord-getTypes(): Array<string>--><!--Device-UnifiedRecord-getTypes(): Array<string>-End-->
 
@@ -453,11 +457,13 @@ getValue(): ValueType
 
 Obtains the value of this data record.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedRecord-getValue(): ValueType--><!--Device-UnifiedRecord-getValue(): ValueType-End-->
 

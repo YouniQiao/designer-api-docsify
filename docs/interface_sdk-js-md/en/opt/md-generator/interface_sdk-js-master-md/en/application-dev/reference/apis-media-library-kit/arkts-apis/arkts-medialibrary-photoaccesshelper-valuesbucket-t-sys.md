@@ -6,7 +6,9 @@ type ValuesBucket = Record<string, ValueType>
 
 Defines the type of key and value in a KV pair.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-type ValuesBucket = Record<string, ValueType>--><!--Device-photoAccessHelper-type ValuesBucket = Record<string, ValueType>-End-->
 

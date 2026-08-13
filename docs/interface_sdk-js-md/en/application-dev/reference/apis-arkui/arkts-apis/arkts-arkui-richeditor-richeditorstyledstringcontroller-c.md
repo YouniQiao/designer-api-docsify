@@ -2,13 +2,15 @@
 
 Provides Controller for RichEditor with StyledString.
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#RichEditorBaseController) and implements [StyledStringController](StyledStringController)
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#RichEditorBaseController) and implements StyledStringController
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class RichEditorStyledStringController extends RichEditorBaseController    implements StyledStringController--><!--Device-unnamed-export declare class RichEditorStyledStringController extends RichEditorBaseController    implements StyledStringController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class RichEditorStyledStringController--><!--Device-unnamed-export declare class RichEditorStyledStringController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Get the selection in the StyledString of the RichEditor.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Get the StyledString of the RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorStyledStringController-getStyledString(): MutableStyledString | undefined--><!--Device-RichEditorStyledStringController-getStyledString(): MutableStyledString | undefined-End-->
@@ -72,6 +78,8 @@ Register content changed listener
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorStyledStringController-onContentChanged(listener: StyledStringChangedListener): void--><!--Device-RichEditorStyledStringController-onContentChanged(listener: StyledStringChangedListener): void-End-->
@@ -95,6 +103,8 @@ Set the StyledString of the RichEditor.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

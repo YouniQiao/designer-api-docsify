@@ -2,7 +2,9 @@
 
 Defines a struct for distributed configuration of a table.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
 
@@ -26,6 +28,8 @@ Specifies the asset conflict policy.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy--><!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy-End-->
@@ -43,6 +47,8 @@ Specifies whether to download assets on demand.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Specifies the asset temp path.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedConfig-assetTempPath?: string--><!--Device-DistributedConfig-assetTempPath?: string-End-->
@@ -74,13 +82,13 @@ Specifies the asset temp path.
 asyncDownloadAsset?: boolean
 ```
 
-Whether to download assets synchronously or asynchronously when device-cloud sync is being performed for the current RDB store. The value **true** means to use an asynchronous task to download assets after all data is downloaded; **false** means to download assets synchronously. 
-
-Default value: **false**.
+Whether to download assets synchronously or asynchronously when device-cloud sync is being performed for the current RDB store. The value **true** means to use an asynchronous task to download assets after all data is downloaded; **false** means to download assets synchronously. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedConfig-asyncDownloadAsset?: boolean--><!--Device-DistributedConfig-asyncDownloadAsset?: boolean-End-->
 
@@ -92,11 +100,13 @@ Default value: **false**.
 autoSync: boolean
 ```
 
-Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudSync)API needs to be called to trigger device-cloud sync.
+Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync] [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudSync) API needs to be called to trigger device-cloud sync.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedConfig-autoSync: boolean--><!--Device-DistributedConfig-autoSync: boolean-End-->
 
@@ -114,6 +124,8 @@ Specifies the auto synchronization switch.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedConfig-autoSyncSwitch?: boolean--><!--Device-DistributedConfig-autoSyncSwitch?: boolean-End-->
@@ -126,12 +138,13 @@ Specifies the auto synchronization switch.
 enableCloud?: boolean
 ```
 
-Whether to enable device-cloud sync for this RDB store. The value **true** means to enable device-cloud sync;   
-**false** means the opposite. The default value is **true**.
+Whether to enable device-cloud sync for this RDB store. The value **true** means to enable device-cloud sync; **false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedConfig-enableCloud?: boolean--><!--Device-DistributedConfig-enableCloud?: boolean-End-->
 
@@ -143,11 +156,13 @@ Whether to enable device-cloud sync for this RDB store. The value **true** means
 tableType?: DistributedTableType
 ```
 
-Distributed table type. **DEVICE_COLLABORATION** indicates the device collaboration table, and **SINGLE_VERSION**indicates the single version table. For cross-device data sync, the default value is **DEVICE_COLLABORATION**. For device-cloud data sync, the default value is **SINGLE_VERSION**, and **DEVICE_COLLABORATION** is not supported.
+Distributed table type. **DEVICE_COLLABORATION** indicates the device collaboration table, and **SINGLE_VERSION** indicates the single version table. For cross-device data sync, the default value is **DEVICE_COLLABORATION**. For device-cloud data sync, the default value is **SINGLE_VERSION**, and **DEVICE_COLLABORATION** is not supported.
 
 **Type:** [DistributedTableType](arkts-arkdata-relationalstore-distributedtabletype-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedConfig-tableType?: DistributedTableType--><!--Device-DistributedConfig-tableType?: DistributedTableType-End-->
 

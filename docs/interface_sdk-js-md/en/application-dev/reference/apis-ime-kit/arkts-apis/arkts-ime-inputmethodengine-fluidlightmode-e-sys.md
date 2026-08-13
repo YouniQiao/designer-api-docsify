@@ -2,9 +2,11 @@
 
 Enumerates the fluid light modes of the input method.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export enum FluidLightMode--><!--Device-inputMethodEngine-export enum FluidLightMode-End-->
 
@@ -20,9 +22,11 @@ NONE = 0
 
 Disable fluid light mode.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FluidLightMode-NONE = 0--><!--Device-FluidLightMode-NONE = 0-End-->
 
@@ -38,9 +42,11 @@ BACKGROUND_FLUID_LIGHT = 1
 
 When the background fluid light mode is enabled, the system panel turns transparent. The fluid light effect must be implemented by the application.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FluidLightMode-BACKGROUND_FLUID_LIGHT = 1--><!--Device-FluidLightMode-BACKGROUND_FLUID_LIGHT = 1-End-->
 

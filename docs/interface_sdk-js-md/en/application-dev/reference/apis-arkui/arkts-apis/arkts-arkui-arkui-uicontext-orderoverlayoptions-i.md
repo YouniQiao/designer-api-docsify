@@ -4,7 +4,9 @@ Options for opening an overlay with order.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface OrderOverlayOptions--><!--Device-unnamed-export interface OrderOverlayOptions-End-->
 
@@ -28,9 +30,13 @@ The display mode of the overlay.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OrderOverlayOptions-levelMode?: LevelMode--><!--Device-OrderOverlayOptions-levelMode?: LevelMode-End-->
 
@@ -48,9 +54,13 @@ The display order of the overlay.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OrderOverlayOptions-levelOrder?: LevelOrder--><!--Device-OrderOverlayOptions-levelOrder?: LevelOrder-End-->
 
@@ -68,9 +78,13 @@ The uniqueId of any node in the router or navigation page.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OrderOverlayOptions-levelUniqueId?: int--><!--Device-OrderOverlayOptions-levelUniqueId?: int-End-->
 

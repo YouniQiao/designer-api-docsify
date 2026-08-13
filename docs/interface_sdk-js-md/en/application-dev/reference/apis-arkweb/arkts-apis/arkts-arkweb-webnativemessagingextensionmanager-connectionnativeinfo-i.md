@@ -2,9 +2,11 @@
 
 Represents the information about the web native message connection.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo--><!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo-End-->
 
@@ -26,9 +28,11 @@ Bundle name of the web native message extension application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,20 +43,22 @@ Bundle name of the web native message extension application.
 ## connectionId
 
 ```TypeScript
-connectionId: int
+connectionId: number
 ```
 
-Connection ID.The value range is all integers.
+Unique identifier of the Web native message extension connection, returned by connectNative() and used to identify and manage the connection.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ConnectionNativeInfo-connectionId: int--><!--Device-ConnectionNativeInfo-connectionId: int-End-->
+<!--Device-ConnectionNativeInfo-connectionId: number--><!--Device-ConnectionNativeInfo-connectionId: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -66,9 +72,11 @@ Source URL of the browser extension.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,20 +87,22 @@ Source URL of the browser extension.
 ## extensionPid
 
 ```TypeScript
-extensionPid: int
+extensionPid: number
 ```
 
-Process ID of the web native message extension.The value range is all integers.
+Process ID of the web native message extension.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ConnectionNativeInfo-extensionPid: int--><!--Device-ConnectionNativeInfo-extensionPid: int-End-->
+<!--Device-ConnectionNativeInfo-extensionPid: number--><!--Device-ConnectionNativeInfo-extensionPid: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

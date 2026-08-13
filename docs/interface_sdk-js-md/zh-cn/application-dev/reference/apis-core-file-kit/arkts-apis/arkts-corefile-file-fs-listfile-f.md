@@ -9,13 +9,13 @@ declare function listFile(
 ): Promise<string[]>
 ```
 
-默认列出当前目录下所有文件名和目录名。支持过滤。使用promise异步回调。
-
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+默认列出当前目录下所有文件名和目录名。支持过滤。使用promise异步回调。 可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -53,13 +53,13 @@ declare function listFile(
 declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 ```
 
-默认列出当前目录下所有文件名和目录名。支持过滤。使用callback异步回调。
-
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+默认列出当前目录下所有文件名和目录名。支持过滤。使用callback异步回调。 可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +72,7 @@ declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | 是 | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
 
 **错误码：**
 
@@ -95,13 +95,13 @@ declare function listFile(
 ): void
 ```
 
-默认列出当前目录下所有文件名和目录名。支持过滤。使用callback异步回调。
-
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+默认列出当前目录下所有文件名和目录名。支持过滤。使用callback异步回调。 可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -115,7 +115,7 @@ declare function listFile(
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
 | options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 是 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | 是 | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
 
 **错误码：**
 

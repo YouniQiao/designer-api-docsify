@@ -14,11 +14,13 @@ function removeProcessor(id: long): void
 
 Removes the data processor of a reported event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiAppEvent-function removeProcessor(id: long): void--><!--Device-hiAppEvent-function removeProcessor(id: long): void-End-->
 
@@ -28,13 +30,13 @@ Removes the data processor of a reported event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addProcessor) or [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addProcessorFromConfig). |
+| id | long | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addProcessor) or [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addProcessorFromConfig). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

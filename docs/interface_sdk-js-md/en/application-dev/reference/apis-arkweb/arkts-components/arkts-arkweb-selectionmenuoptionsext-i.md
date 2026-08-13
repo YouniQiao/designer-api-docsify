@@ -6,6 +6,8 @@ Represents the selection menu option extension.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SelectionMenuOptionsExt--><!--Device-unnamed-declare interface SelectionMenuOptionsExt-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,17 +18,15 @@ Represents the selection menu option extension.
 menuType?: MenuType
 ```
 
-Type of the custom selection menu.
-
-Default value: **MenuType.SELECTION_MENU**
-
-Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
+Type of the custom selection menu. Default value: **MenuType.SELECTION_MENU** Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
 
 **Type:** MenuType
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-SelectionMenuOptionsExt-menuType?: MenuType--><!--Device-SelectionMenuOptionsExt-menuType?: MenuType-End-->
 
@@ -46,6 +46,8 @@ Callback invoked when the custom selection menu appears.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 <!--Device-SelectionMenuOptionsExt-onAppear?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onAppear?: Callback<void>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -63,6 +65,8 @@ Callback invoked when the custom selection menu disappears.
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-SelectionMenuOptionsExt-onDisappear?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onDisappear?: Callback<void>-End-->
 
@@ -82,6 +86,8 @@ Callback invoked when the custom context menu on selection is hidden.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-SelectionMenuOptionsExt-onMenuHide?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onMenuHide?: Callback<void>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -99,6 +105,8 @@ Callback invoked when the custom context menu on selection is shown.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-SelectionMenuOptionsExt-onMenuShow?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onMenuShow?: Callback<void>-End-->
 
@@ -118,6 +126,8 @@ Preview content style of the custom selection menu. If this parameter is not set
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 <!--Device-SelectionMenuOptionsExt-preview?: CustomBuilder--><!--Device-SelectionMenuOptionsExt-preview?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -135,6 +145,8 @@ Custom preview menu options.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-SelectionMenuOptionsExt-previewMenuOptions?: PreviewMenuOptions--><!--Device-SelectionMenuOptionsExt-previewMenuOptions?: PreviewMenuOptions-End-->
 

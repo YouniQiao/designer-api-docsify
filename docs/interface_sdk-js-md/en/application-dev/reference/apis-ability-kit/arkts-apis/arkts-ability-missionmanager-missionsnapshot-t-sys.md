@@ -6,9 +6,11 @@ export type MissionSnapshot = _MissionSnapshot
 
 Mission snapshot corresponding to mission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot--><!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot-End-->
 

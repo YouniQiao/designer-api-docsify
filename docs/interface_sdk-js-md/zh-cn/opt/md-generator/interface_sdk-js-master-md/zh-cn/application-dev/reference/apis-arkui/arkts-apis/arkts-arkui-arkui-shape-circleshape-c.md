@@ -1,14 +1,14 @@
 # CircleShape
 
-用于clipShape和maskShape接口的圆形形状。
+用于clipShape和maskShape接口的圆形形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
 
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
-
-**继承/实现关系：** CircleShape extends [BaseShape<CircleShape>](BaseShape<CircleShape>)
+**继承/实现关系：** CircleShape extends BaseShape<CircleShape>
 
 **起始版本：** 12
 
-<!--Device-unnamed-export declare class CircleShape extends BaseShape<CircleShape>--><!--Device-unnamed-export declare class CircleShape extends BaseShape<CircleShape>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class CircleShape--><!--Device-unnamed-export declare class CircleShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +21,8 @@ constructor(options?: ShapeSize)
 创建CircleShape对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

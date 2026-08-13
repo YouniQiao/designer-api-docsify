@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface PlaceholderStyle--><!--Device-unnamed-export declare interface PlaceholderStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 font?: Font
 ```
 
-设置placeholder文本样式。
-
-默认值遵循主题设置。
+设置placeholder文本样式。 默认值遵循主题设置。
 
 **类型：** [Font](arkts-arkui-font-i.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +40,15 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-设置placeholder文本颜色。
-
-默认值遵循主题设置。
+设置placeholder文本颜色。 默认值遵循主题设置。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

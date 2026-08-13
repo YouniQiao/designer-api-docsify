@@ -6,6 +6,8 @@ Defines the LeadingMarginSpanDrawInfo interface.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo--><!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the LeadingMarginSpanDrawInfo interface.
 baseline: double
 ```
 
-The baseline offset of the line.The unit is px.
+The baseline offset of the line. The unit is px.
 
 **Type:** double
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ The baseline offset of the line.The unit is px.
 bottom: double
 ```
 
-The bottom position of the line.The unit is px.
+The bottom position of the line. The unit is px.
 
 **Type:** double
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,6 +70,8 @@ The direction of text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection--><!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection-End-->
@@ -76,13 +84,15 @@ The direction of text.
 end: int
 ```
 
-The end index of the first character in the current line relative to the component text content.The value should be an integer.
+The end index of the first character in the current line relative to the component text content. The value should be an integer.
 
 **Type:** int
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,6 +114,8 @@ Whether current line is first line of a paragraph.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LeadingMarginSpanDrawInfo-first: boolean--><!--Device-LeadingMarginSpanDrawInfo-first: boolean-End-->
@@ -116,13 +128,15 @@ Whether current line is first line of a paragraph.
 start: int
 ```
 
-The start index of the first character in the current line relative to the component text content.The value should be an integer.
+The start index of the first character in the current line relative to the component text content. The value should be an integer.
 
 **Type:** int
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +150,15 @@ The start index of the first character in the current line relative to the compo
 top: double
 ```
 
-The top position of the line.The unit is px.
+The top position of the line. The unit is px.
 
 **Type:** double
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,13 +172,15 @@ The top position of the line.The unit is px.
 x: double
 ```
 
-The x offset of the line.The unit is px.
+The x offset of the line. The unit is px.
 
 **Type:** double
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,7 +14,9 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 Obtains the crease region of the foldable device in the current display mode.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +34,7 @@ Obtains the crease region of the foldable device in the current display mode.
 
 | Error Code ID |
 | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

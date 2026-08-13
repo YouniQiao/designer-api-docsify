@@ -2,7 +2,9 @@
 
 Enumerates the audio interruption types.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum InterruptType--><!--Device-audio-enum InterruptType-End-->
 
@@ -16,7 +18,9 @@ INTERRUPT_TYPE_BEGIN = 1
 
 Audio interruption started.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ INTERRUPT_TYPE_END = 2
 
 Audio interruption ended.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

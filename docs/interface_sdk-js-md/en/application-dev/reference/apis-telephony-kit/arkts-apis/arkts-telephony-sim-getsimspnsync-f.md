@@ -12,13 +12,13 @@ import { sim } from '@kit.TelephonyKit';
 function getSimSpnSync(slotId: int): string
 ```
 
-Obtains the service provider name (SPN) of the SIM card in a specified slot.
+Obtains the service provider name (SPN) of the SIM card in a specified slot. &lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
-&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-sim-function getSimSpnSync(slotId: int): string--><!--Device-sim-function getSimSpnSync(slotId: int): string-End-->
 
@@ -28,7 +28,7 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **Return value:**
 

@@ -1,17 +1,19 @@
 # BusinessAbilityInfo (System API)
 
 ```TypeScript
-export type BusinessAbilityInfo = _BusinessAbilityInfo.BusinessAbilityInfo
+export type BusinessAbilityInfo = _BusinessAbilityInfo
 ```
 
 Obtains business ability info.
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo.BusinessAbilityInfo--><!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo.BusinessAbilityInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo--><!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
-**Property type:** _BusinessAbilityInfo.BusinessAbilityInfo
+**Property type:** _BusinessAbilityInfo

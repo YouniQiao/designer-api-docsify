@@ -4,6 +4,8 @@ Defines the MediaQuery list info.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface MediaQueryList--><!--Device-unnamed-export interface MediaQueryList-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,9 +22,11 @@ import { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 addListener(callback: (event: MediaQueryEvent) => void): void
 ```
 
-Adds a listening function to MediaQueryList.The listening function must be added before onShow is called, that is, added to the onInit or onReady function.
+Adds a listening function to MediaQueryList. The listening function must be added before onShow is called, that is, added to the onInit or onReady function.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,28 +54,6 @@ function maxWidthMatch(e: MediaQueryEvent): void {
 mMediaQueryList.addListener(maxWidthMatch);
 ```
 
-## onchange
-
-```TypeScript
-onchange?: (matches: boolean) => void
-```
-
-Called when the matches value changes.
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-MediaQueryList-onchange?: (matches: boolean) => void--><!--Device-MediaQueryList-onchange?: (matches: boolean) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [matches](#matches) | boolean | Yes |
-
 ## removeListener
 
 ```TypeScript
@@ -81,6 +63,8 @@ removeListener(callback: (event: MediaQueryEvent) => void): void
 Removes a listening function from MediaQueryList.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,11 +98,13 @@ mMediaQueryList.removeListener(maxWidthMatch);
 matches?: boolean
 ```
 
-Whether the query is successful. True if the query condition is matched successfully, false otherwise.This parameter is read-only.
+Whether the query is successful. True if the query condition is matched successfully, false otherwise. This parameter is read-only.
 
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,14 +118,36 @@ Whether the query is successful. True if the query condition is matched successf
 media?: string
 ```
 
-Serialized media query condition.This parameter is read-only.
+Serialized media query condition. This parameter is read-only.
 
 **Type:** string
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaQueryList-media?: string--><!--Device-MediaQueryList-media?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onchange
+
+```TypeScript
+onchange?: (matches: boolean) => void
+```
+
+Called when the matches value changes.
+
+**Type:** (matches: boolean) =&gt; void
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MediaQueryList-onchange?: (matches: boolean) => void--><!--Device-MediaQueryList-onchange?: (matches: boolean) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-fontManager-interface DataMigrationCallback--><!--Device-fontManager-interface DataMigrationCallback-End-->
 
 **系统能力：** SystemCapability.Global.FontManager
@@ -19,6 +21,8 @@ onHeartBeat(): void
 回调函数，在数据迁移任务执行期间定期调用，用于通知开发者迁移任务仍在正常运行，开发者可据此更新UI提示或执行其他业务逻辑。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataMigrationCallback-onHeartBeat(): void--><!--Device-DataMigrationCallback-onHeartBeat(): void-End-->
 
@@ -61,6 +65,8 @@ onProgress(progress : DataMigrationProgress): void
 回调函数，在数据迁移任务执行过程中定期调用，用于通知开发者当前的迁移进度和预估剩余时间。当需要在UI上展示进度条、剩余时间等信息时使用此回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void--><!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void-End-->
 
@@ -109,6 +115,8 @@ onResult(result : number): void
 回调函数，在数据迁移任务完成（无论成功或失败）后调用，用于通知开发者迁移的最终结果。当需要在迁移完成后执行后续操作（如更新UI、记录日志、通知用户等）时使用此回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataMigrationCallback-onResult(result : int): void--><!--Device-DataMigrationCallback-onResult(result : int): void-End-->
 

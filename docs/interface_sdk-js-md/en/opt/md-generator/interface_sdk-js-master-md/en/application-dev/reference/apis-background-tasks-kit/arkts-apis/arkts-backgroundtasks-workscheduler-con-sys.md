@@ -10,6 +10,8 @@ Whether the requested task is executed immediately.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-workScheduler-const EXECUTE_IMMEDIATE: string--><!--Device-workScheduler-const EXECUTE_IMMEDIATE: string-End-->
@@ -27,6 +29,8 @@ const WORK_SCHEDULER_CONDITION: string
 The last condition met when the current task is triggered.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

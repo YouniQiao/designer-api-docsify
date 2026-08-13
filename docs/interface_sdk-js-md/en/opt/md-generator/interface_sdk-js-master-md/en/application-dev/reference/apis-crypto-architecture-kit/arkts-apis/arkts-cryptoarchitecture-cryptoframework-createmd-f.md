@@ -12,12 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createMd(algName: string): Md
 ```
 
-Creates an **Md** instance.
+Creates an **Md** instance. &lt;br&gt;For details about the supported specifications, see [Supported Algorithms and Specifications](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications) .
 
-&lt;br&gt;For details about the supported specifications, see  
-[Supported Algorithms and Specifications](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -47,8 +46,8 @@ Creates an **Md** instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 

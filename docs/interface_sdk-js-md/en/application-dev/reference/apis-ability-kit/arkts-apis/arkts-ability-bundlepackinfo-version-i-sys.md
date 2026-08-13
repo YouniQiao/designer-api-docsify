@@ -2,9 +2,11 @@
 
 Version: the bundle version class.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Version--><!--Device-unnamed-export interface Version-End-->
 
@@ -20,11 +22,13 @@ readonly code: int
 
 Version number of the bundle used only for bundle management. The value is a 32-bit non-negative integer. It is used only to determine whether a version is later than another version. A larger value indicates a later version.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Version-readonly code: int--><!--Device-Version-readonly code: int-End-->
 
@@ -40,11 +44,13 @@ readonly minCompatibleVersionCode: int
 
 Minimum compatible version of the bundle. It is used to check whether the bundle is compatible with a version on other devices in the cross-device scenario. The value is a 32-bit non-negative integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Version-readonly minCompatibleVersionCode: int--><!--Device-Version-readonly minCompatibleVersionCode: int-End-->
 
@@ -62,9 +68,11 @@ Version number of the bundle visible to users.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Version-readonly name: string--><!--Device-Version-readonly name: string-End-->
 

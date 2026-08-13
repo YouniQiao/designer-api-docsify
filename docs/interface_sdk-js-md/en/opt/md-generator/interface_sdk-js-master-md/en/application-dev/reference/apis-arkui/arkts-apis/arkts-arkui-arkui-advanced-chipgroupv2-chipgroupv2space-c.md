@@ -4,7 +4,7 @@ Defines chip group space.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ChipGroupV2Space--><!--Device-unnamed-export declare class ChipGroupV2Space-End-->
 
@@ -26,6 +26,8 @@ The constructor of ChipGroupV2SpaceConfig
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ The constructor of ChipGroupV2SpaceConfig
 ## endSpace
 
 ```TypeScript
-public endSpace?: Length
+@Trace
+    public endSpace?: Length
 ```
 
 End space.
@@ -52,18 +55,21 @@ End space.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Space-public endSpace?: Length--><!--Device-ChipGroupV2Space-public endSpace?: Length-End-->
+<!--Device-ChipGroupV2Space-@Trace    public endSpace?: Length--><!--Device-ChipGroupV2Space-@Trace    public endSpace?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemSpace
 
 ```TypeScript
-public itemSpace?: string | number
+@Trace
+    public itemSpace?: string | number
 ```
 
 Space between items.
@@ -72,18 +78,21 @@ Space between items.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Space-public itemSpace?: string | number--><!--Device-ChipGroupV2Space-public itemSpace?: string | number-End-->
+<!--Device-ChipGroupV2Space-@Trace    public itemSpace?: string | number--><!--Device-ChipGroupV2Space-@Trace    public itemSpace?: string | number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## startSpace
 
 ```TypeScript
-public startSpace?: Length
+@Trace
+    public startSpace?: Length
 ```
 
 Start space.
@@ -92,10 +101,12 @@ Start space.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Space-public startSpace?: Length--><!--Device-ChipGroupV2Space-public startSpace?: Length-End-->
+<!--Device-ChipGroupV2Space-@Trace    public startSpace?: Length--><!--Device-ChipGroupV2Space-@Trace    public startSpace?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

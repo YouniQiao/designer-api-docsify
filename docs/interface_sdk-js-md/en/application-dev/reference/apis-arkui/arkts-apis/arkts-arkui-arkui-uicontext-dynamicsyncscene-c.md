@@ -2,11 +2,13 @@
 
 Represents a dynamic synchronization scene.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class DynamicSyncScene--><!--Device-unnamed-export declare class DynamicSyncScene-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class DynamicSyncScene--><!--Device-unnamed-export class DynamicSyncScene-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +26,15 @@ getFrameRateRange(): ExpectedFrameRateRange
 
 Gets the FrameRateRange of the DynamicSyncScene.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DynamicSyncScene-getFrameRateRange(): ExpectedFrameRateRange--><!--Device-DynamicSyncScene-getFrameRateRange(): ExpectedFrameRateRange-End-->
 
@@ -48,11 +54,15 @@ setFrameRateRange(range: ExpectedFrameRateRange): void
 
 Sets the FrameRateRange of the DynamicSyncScene.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DynamicSyncScene-setFrameRateRange(range: ExpectedFrameRateRange): void--><!--Device-DynamicSyncScene-setFrameRateRange(range: ExpectedFrameRateRange): void-End-->
 

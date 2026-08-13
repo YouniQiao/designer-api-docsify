@@ -4,13 +4,50 @@
 
 **继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-camera-interface PreviewOutput extends CameraOutput--><!--Device-camera-interface PreviewOutput extends CameraOutput-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface PreviewOutput--><!--Device-camera-interface PreviewOutput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## addDeferredSurface
+
+```TypeScript
+addDeferredSurface(surfaceId: string): void
+```
+
+配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitConfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后 运行。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void--><!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| surfaceId | string | 是 | 从XComponent组件获取的surfaceId。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
 
 ## attachSketchSurface
 
@@ -20,9 +57,11 @@ attachSketchSurface(surfaceId: string): void
 
 Attaches a surface for PiP preview.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void--><!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void-End-->
 
@@ -34,16 +73,16 @@ Attaches a surface for PiP preview.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | Surface ID, which is obtained from [XComponent](XComponent). |
+| surfaceId | string | 是 | Surface ID, which is obtained from XComponent. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -74,9 +113,11 @@ enableSketch(enabled: boolean): void
 
 Enables or disables PiP preview.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-enableSketch(enabled: boolean): void--><!--Device-PreviewOutput-enableSketch(enabled: boolean): void-End-->
 
@@ -94,10 +135,10 @@ Enables or disables PiP preview.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -121,21 +162,17 @@ function enableSketch(previewOutput: camera.PreviewOutput, session: camera.Sessi
 
 ## getSketchRatio
 
-ArkTS-Dyn:
-```TypeScript
-getSketchRatio(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSketchRatio(): double
 ```
 
 Obtains the zoom ratio when PiP preview is enabled.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-getSketchRatio(): double--><!--Device-PreviewOutput-getSketchRatio(): double-End-->
 
@@ -147,14 +184,14 @@ Obtains the zoom ratio when PiP preview is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Zoom ratio. If PiP preview is not supported, the value **-1** is returned. |
+| double | Zoom ratio. If PiP preview is not supported, the value **-1** is returned. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -173,9 +210,11 @@ isSketchSupported(): boolean
 
 Checks whether Picture-in-Picture (PiP) preview is supported.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-isSketchSupported(): boolean--><!--Device-PreviewOutput-isSketchSupported(): boolean-End-->
 
@@ -193,7 +232,7 @@ Checks whether Picture-in-Picture (PiP) preview is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -213,7 +252,39 @@ function isSketchSupported(previewOutput: camera.PreviewOutput): boolean {
 }
 ```
 
-## off('sketchStatusChanged')
+## offSketchStatusChanged
+
+```TypeScript
+offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void
+```
+
+Unsubscribes sketch status changed event callback.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 否 | Callback used to get sketch status data. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+## off_sketchStatusChanged
 
 ```TypeScript
 off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void
@@ -224,6 +295,8 @@ Unsubscribes from PiP status change events.
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void-End-->
 
@@ -236,13 +309,13 @@ Unsubscribes from PiP status change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sketchStatusChanged' | 是 | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('sketchStatusChanged')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('sketchStatusChanged')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -252,19 +325,21 @@ function unregisterSketchStatusChanged(previewOutput: camera.PreviewOutput): voi
 }
 ```
 
-## offSketchStatusChanged
+## onSketchStatusChanged
 
 ```TypeScript
-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void
+onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void
 ```
 
-Unsubscribes sketch status changed event callback.
+Subscribes sketch status changed event callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void-End-->
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -274,15 +349,15 @@ Unsubscribes sketch status changed event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 否 | Callback used to get sketch status data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 是 | Callback used to sketch status data. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## on('sketchStatusChanged')
+## on_sketchStatusChanged
 
 ```TypeScript
 on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void
@@ -293,6 +368,8 @@ Subscribes to PiP status change events. This API uses an asynchronous callback t
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void-End-->
 
@@ -305,13 +382,13 @@ Subscribes to PiP status change events. This API uses an asynchronous callback t
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sketchStatusChanged' | 是 | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. This event is triggered when PiP preview is enabled or disabled or the zoom ratio changes while PiP preview is enabled. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 是 | Callback used to return the PiP status data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 是 | Callback used to return the PiP status data. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -330,34 +407,4 @@ function registerSketchStatusChanged(previewOutput: camera.PreviewOutput): void 
   previewOutput.on('sketchStatusChanged', callback);
 }
 ```
-
-## onSketchStatusChanged
-
-```TypeScript
-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void
-```
-
-Subscribes sketch status changed event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 是 | Callback used to sketch status data. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

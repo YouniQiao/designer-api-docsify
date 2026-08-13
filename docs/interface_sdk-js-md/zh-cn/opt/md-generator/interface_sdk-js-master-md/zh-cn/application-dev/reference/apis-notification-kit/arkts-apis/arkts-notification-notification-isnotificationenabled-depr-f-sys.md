@@ -12,7 +12,7 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 **废弃版本：** 9
 
-**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -77,7 +77,7 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -106,7 +106,7 @@ function isNotificationEnabled(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -135,7 +135,7 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 
 **废弃版本：** 9
 
-**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -165,7 +165,7 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

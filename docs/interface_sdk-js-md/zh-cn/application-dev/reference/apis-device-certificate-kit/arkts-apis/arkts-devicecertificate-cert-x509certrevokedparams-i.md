@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-cert-interface X509CertRevokedParams--><!--Device-cert-interface X509CertRevokedParams-End-->
 
@@ -16,11 +18,7 @@
 allowDownloadCrl?: boolean
 ```
 
-是否允许下载CRL，默认值为false。true：尝试使用证书的CDP扩展下载CRL；false：不尝试下载CRL。
-
-> **说明：**
-> 
-> 如果crls中存在匹配的CRL，则跳过下载。
+是否允许下载CRL，默认值为false。true：尝试使用证书的CDP扩展下载CRL；false：不尝试下载CRL。 > **说明：** > > 如果crls中存在匹配的CRL，则跳过下载。
 
 **类型：** boolean
 
@@ -28,7 +26,9 @@ allowDownloadCrl?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,13 +44,7 @@ allowDownloadCrl?: boolean
 allowOcspCheckOnline?: boolean
 ```
 
-是否允许在线OCSP检查，默认值为false。  
-- true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应；  
-- false：不执行在线OCSP检查。
-
-> **说明：**
-> 
-> 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。
+是否允许在线OCSP检查，默认值为false。 - true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应； - false：不执行在线OCSP检查。 > **说明：** > > 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。
 
 **类型：** boolean
 
@@ -58,7 +52,9 @@ allowOcspCheckOnline?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,7 +76,9 @@ CRL列表。最大个数：100。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,7 +102,9 @@ OCSP请求使用的摘要算法，默认值为SHA256。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,7 +126,9 @@ OCSP响应数据。预置的OCSP响应数据。最大个数：100。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,7 +150,9 @@ revocationFlags: Array<CertRevocationFlag>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

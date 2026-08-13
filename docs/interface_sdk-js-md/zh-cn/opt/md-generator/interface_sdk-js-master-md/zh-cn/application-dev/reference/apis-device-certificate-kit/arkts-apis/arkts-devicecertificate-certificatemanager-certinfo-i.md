@@ -2,7 +2,9 @@
 
 表示证书详细信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-certificateManager-export interface CertInfo--><!--Device-certificateManager-export interface CertInfo-End-->
 
@@ -18,7 +20,9 @@ cert: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-cert: Uint8Array--><!--Device-CertInfo-cert: Uint8Array-End-->
 
@@ -34,7 +38,9 @@ certAlias: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-certAlias: string--><!--Device-CertInfo-certAlias: string-End-->
 
@@ -50,7 +56,9 @@ fingerprintSha256: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-fingerprintSha256: string--><!--Device-CertInfo-fingerprintSha256: string-End-->
 
@@ -66,7 +74,9 @@ issuerName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-issuerName: string--><!--Device-CertInfo-issuerName: string-End-->
 
@@ -82,7 +92,9 @@ notAfter: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-notAfter: string--><!--Device-CertInfo-notAfter: string-End-->
 
@@ -98,7 +110,9 @@ notBefore: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-notBefore: string--><!--Device-CertInfo-notBefore: string-End-->
 
@@ -114,7 +128,9 @@ serial: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-serial: string--><!--Device-CertInfo-serial: string-End-->
 
@@ -130,7 +146,9 @@ state: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-state: boolean--><!--Device-CertInfo-state: boolean-End-->
 
@@ -146,7 +164,9 @@ subjectName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-subjectName: string--><!--Device-CertInfo-subjectName: string-End-->
 
@@ -162,7 +182,9 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CertInfo-uri: string--><!--Device-CertInfo-uri: string-End-->
 

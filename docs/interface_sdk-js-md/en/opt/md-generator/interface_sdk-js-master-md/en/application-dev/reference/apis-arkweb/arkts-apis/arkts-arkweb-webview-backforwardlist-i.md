@@ -4,6 +4,8 @@ Provides back and forward history list information method. related to [HistoryIt
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ getItemAtIndex(index: number): HistoryItem
 Get history entry at given index.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,7 +50,7 @@ Get history entry at given index.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## currentIndex
 
@@ -59,6 +63,8 @@ Current index in BackForwardList.
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -77,6 +83,8 @@ Size of in BackForwardList.
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

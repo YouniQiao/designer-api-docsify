@@ -2,9 +2,11 @@
 
 Enumerates call restriction modes.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum CallRestrictionMode--><!--Device-call-export enum CallRestrictionMode-End-->
 
@@ -20,9 +22,11 @@ RESTRICTION_MODE_DEACTIVATION = 0
 
 Call restriction deactivated.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0--><!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0-End-->
 
@@ -38,9 +42,11 @@ RESTRICTION_MODE_ACTIVATION = 1
 
 Call restriction activated.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1--><!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1-End-->
 

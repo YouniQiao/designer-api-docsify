@@ -2,7 +2,9 @@
 
 Describes the translation parameters.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface TranslateOptions--><!--Device-window-interface TranslateOptions-End-->
 
@@ -26,7 +28,9 @@ Distance to translate along the x-axis. The value is a floating-point number, th
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TranslateOptions-x?: double--><!--Device-TranslateOptions-x?: double-End-->
 
@@ -44,7 +48,9 @@ Distance to translate along the y-axis. The value is a floating-point number, th
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TranslateOptions-y?: double--><!--Device-TranslateOptions-y?: double-End-->
 
@@ -62,7 +68,9 @@ Distance to translate along the z-axis. The value is a floating-point number, th
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TranslateOptions-z?: double--><!--Device-TranslateOptions-z?: double-End-->
 

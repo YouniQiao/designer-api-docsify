@@ -1,11 +1,10 @@
 # Run
 
-Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)class.
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class to create a **Run** object.
 
-Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the  
-[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class to create a **Run** object.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-text-class Run--><!--Device-text-class Run-End-->
 
@@ -26,6 +25,8 @@ getAdvances(range: Range): Array<common2D.Point>
 Obtains the glyph width array of each glyph within the specified range of the run.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -54,6 +55,34 @@ advancesRange = runs[0].getAdvances({start:0, end:-10}); // -10 is an invalid va
 let advancesNull = runs[0].getAdvances(null); // null is an invalid value, and undefined is returned.
 ```
 
+## getAdvances
+
+```TypeScript
+getAdvances(range: Range): Array<common2D.Point> | undefined
+```
+
+Gets the glyph width array within the range.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;common2D.Point & gt; |
+
 ## getFont
 
 ```TypeScript
@@ -62,7 +91,9 @@ getFont(): drawing.Font
 
 Obtains the **Font** object of this run.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -90,7 +121,9 @@ getGlyphCount(): number
 
 Obtains the number of glyphs in this run.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -118,7 +151,9 @@ getGlyphs(): Array<number>
 
 Obtains the index of each glyph in this run.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -147,6 +182,8 @@ getGlyphs(range: Range): Array<number>
 Obtains the index of each glyph in the specified range of this run.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -194,25 +231,45 @@ struct Index {
 }
 ```
 
+## getGlyphs
+
+```TypeScript
+getGlyphs(range: Range): Array<number> | undefined
+```
+
+Gets the range glyph identifier for each character.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Run-getGlyphs(range: Range): Array<int> | undefined--><!--Device-Run-getGlyphs(range: Range): Array<int> | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;number & gt; |
+
 ## getImageBounds
 
 ```TypeScript
 getImageBounds(): common2D.Rect
 ```
 
-Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line.
+Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. > **NOTE：**> > The figure shows the image boundaries for the string " a b ". > >  > > The figure shows the image boundaries for the string "j" or "E". > > 
 
-> **NOTE：**
-> 
-> The figure shows the image boundaries for the string " a b ".
-> 
-> ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
-> 
-> The figure shows the image boundaries for the string "j" or "E".
-> 
-> ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -240,7 +297,9 @@ getOffsets(): Array<common2D.Point>
 
 Obtains the offset of each glyph in this run relative to its index.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -268,7 +327,9 @@ getPositions(): Array<common2D.Point>
 
 Obtains the position of each glyph relative to the respective line in this run.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -297,6 +358,8 @@ getPositions(range: Range): Array<common2D.Point>
 Obtains the position array of each glyph relative to the respective line within the specified range of this run.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -344,6 +407,34 @@ struct Index {
 }
 ```
 
+## getPositions
+
+```TypeScript
+getPositions(range: Range): Array<common2D.Point> | undefined
+```
+
+Gets the range font position offset.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;common2D.Point & gt; |
+
 ## getStringIndices
 
 ```TypeScript
@@ -353,6 +444,8 @@ getStringIndices(range?: Range): Array<number>
 Obtains an array of character indices for glyphs within a specified range of this run, where the indices are offsets relative to the entire paragraph.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -400,6 +493,34 @@ struct Index {
 }
 ```
 
+## getStringIndices
+
+```TypeScript
+getStringIndices(range?: Range): Array<number> | undefined
+```
+
+Gets the range of run glyph indices, the offset of the indices relative to the entire paragraph.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined--><!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;number & gt; |
+
 ## getStringRange
 
 ```TypeScript
@@ -408,7 +529,9 @@ getStringRange(): Range
 
 Obtains the range of glyphs generated by this run.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -438,7 +561,9 @@ getTextDirection(): TextDirection
 
 Obtains the text direction of the run.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -467,6 +592,8 @@ getTextStyle(): TextStyle
 Obtains the text style of this typesetting unit.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -547,20 +674,11 @@ function numberToRGBA(colorNum: number): common2D.Color {
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
+Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a " and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. > **NOTE：**> > The figure shows the typesetting boundaries for the string " a b ". > >  > > The figure shows the typesetting boundaries for the string "j" or "E". > > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
-> **NOTE：**
-> 
-> The figure shows the typesetting boundaries for the string " a b ".
-> 
-> ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
-> 
-> The figure shows the typesetting boundaries for the string "j" or "E".
-> 
-> !
-> [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -588,7 +706,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 Paints this run on the canvas with the coordinate point (x, y) as the upper left corner.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

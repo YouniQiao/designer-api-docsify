@@ -8,7 +8,9 @@ function getDefaultInputMethod(): InputMethodProperty
 
 获取默认输入法。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty-End-->
 
@@ -24,7 +26,7 @@ function getDefaultInputMethod(): InputMethodProperty
 
 | 错误码ID |
 | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 

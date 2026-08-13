@@ -14,9 +14,11 @@ function isCaptured(): boolean
 
 Checks whether the device's screen content is being captured.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function isCaptured(): boolean--><!--Device-display-function isCaptured(): boolean-End-->
 
@@ -32,7 +34,7 @@ Checks whether the device's screen content is being captured.
 
 | Error Code ID |
 | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 
@@ -52,6 +54,8 @@ function isCaptured(bundleNameList: Array<string>): boolean
 Check whether the device is captured, projected, or recorded by any app in the bundle name list.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,8 +81,8 @@ Check whether the device is captured, projected, or recorded by any app in the b
 
 | Error Code ID |
 | --- |
-| [1400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400004](../errorcode-display.md#1400004-parameter-error) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

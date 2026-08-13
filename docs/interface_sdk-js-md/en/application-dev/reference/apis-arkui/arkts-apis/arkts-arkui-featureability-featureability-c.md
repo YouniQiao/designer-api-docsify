@@ -6,7 +6,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** [FeatureAbility](ohos.ability.featureAbility.FeatureAbility)
+**Substitutes:** FeatureAbility
 
 <!--Device-unnamed-export declare class FeatureAbility--><!--Device-unnamed-export declare class FeatureAbility-End-->
 
@@ -80,7 +80,7 @@ FA call the interface to destroy itself and set the result as parameters.
 
 **Deprecated since:** 8
 
-**Substitutes:** [terminateSelfWithResult](ohos.ability.featureAbility.FeatureAbility#terminateSelfWithResult)
+**Substitutes:** terminateSelfWithResult
 
 <!--Device-FeatureAbility-static finishWithResult(param: FinishWithResultParams): Promise<Result>--><!--Device-FeatureAbility-static finishWithResult(param: FinishWithResultParams): Promise<Result>-End-->
 
@@ -166,7 +166,7 @@ Start a FA without callback result.
 
 **Deprecated since:** 8
 
-**Substitutes:** [startAbility](ohos.ability.featureAbility.FeatureAbility#startAbility)
+**Substitutes:** startAbility
 
 <!--Device-FeatureAbility-static startAbility(request: RequestParams): Promise<Result>--><!--Device-FeatureAbility-static startAbility(request: RequestParams): Promise<Result>-End-->
 
@@ -198,7 +198,7 @@ Start a FA with callback result.
 
 **Deprecated since:** 8
 
-**Substitutes:** [startAbilityForResult](ohos.ability.featureAbility.FeatureAbility#startAbilityForResult)
+**Substitutes:** startAbilityForResult
 
 <!--Device-FeatureAbility-static startAbilityForResult(request: RequestParams): Promise<Result>--><!--Device-FeatureAbility-static startAbilityForResult(request: RequestParams): Promise<Result>-End-->
 

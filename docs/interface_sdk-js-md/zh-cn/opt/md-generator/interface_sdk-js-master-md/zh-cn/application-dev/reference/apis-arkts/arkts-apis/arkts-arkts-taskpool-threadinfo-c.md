@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-taskpool-class ThreadInfo--><!--Device-taskpool-class ThreadInfo-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -19,6 +21,8 @@ priority?: Priority
 **类型：** Priority
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ taskIds?: number[]
 **类型：** number[]
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -57,6 +63,8 @@ tid: number
 **默认值：** 0
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

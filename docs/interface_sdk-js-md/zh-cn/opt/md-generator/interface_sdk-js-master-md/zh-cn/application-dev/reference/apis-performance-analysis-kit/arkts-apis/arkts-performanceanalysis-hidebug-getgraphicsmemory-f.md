@@ -8,9 +8,11 @@ function getGraphicsMemory(): Promise<number>
 
 获取应用显存总大小（gl + graph），使用Promise异步回调。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
 
@@ -26,7 +28,7 @@ function getGraphicsMemory(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
 
 ## 示例
 

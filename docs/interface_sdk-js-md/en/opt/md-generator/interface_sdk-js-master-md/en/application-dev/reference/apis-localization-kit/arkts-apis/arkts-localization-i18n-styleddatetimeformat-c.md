@@ -4,6 +4,8 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-i18n-export class StyledDateTimeFormat--><!--Device-i18n-export class StyledDateTimeFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -24,6 +26,8 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 Creates an object for formatting the time and date that need to be displayed in rich text.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -84,6 +88,8 @@ format(date: Date): StyledString
 Formats the date and time as a rich text object.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

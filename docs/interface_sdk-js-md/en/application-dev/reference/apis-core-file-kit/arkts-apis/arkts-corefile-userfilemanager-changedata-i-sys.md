@@ -74,7 +74,7 @@ Notification type.
 uris: Array<string>
 ```
 
-Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md#NotifyType).
+Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md#NotifyType-(System-API)).
 
 **Type:** Array&lt;string&gt;
 

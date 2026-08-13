@@ -8,7 +8,7 @@ Enumerates flags for using a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WantAgentFlags](ohos.app.ability.wantAgent/wantAgent#WantAgentFlags)
+**Substitutes:** [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md#WantAgentFlags)
 
 <!--Device-wantAgent-export enum WantAgentFlags--><!--Device-wantAgent-export enum WantAgentFlags-End-->
 
@@ -20,7 +20,7 @@ Enumerates flags for using a WantAgent.
 ONE_TIME_FLAG = 0
 ```
 
-Indicates that the WantAgent can be used only once.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that the WantAgent can be used only once. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ Indicates that the WantAgent can be used only once.This flag is valid only when 
 
 **Deprecated since:** 9
 
-**Substitutes:** [ONE_TIME_FLAG](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#ONE_TIME_FLAG)
+**Substitutes:** [ONE_TIME_FLAG](arkts-ability-wantagent-wantagentflags-e.md#ONE_TIME_FLAG)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +42,7 @@ Indicates that the WantAgent can be used only once.This flag is valid only when 
 NO_BUILD_FLAG
 ```
 
-Indicates that null is returned if the WantAgent does not exist.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that null is returned if the WantAgent does not exist. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -50,7 +50,7 @@ Indicates that null is returned if the WantAgent does not exist.This flag is val
 
 **Deprecated since:** 9
 
-**Substitutes:** [NO_BUILD_FLAG](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#NO_BUILD_FLAG)
+**Substitutes:** [NO_BUILD_FLAG](arkts-ability-wantagent-wantagentflags-e.md#NO_BUILD_FLAG)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +64,7 @@ Indicates that null is returned if the WantAgent does not exist.This flag is val
 CANCEL_PRESENT_FLAG
 ```
 
-Indicates that the existing WantAgent should be canceled before a new object is generated.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that the existing WantAgent should be canceled before a new object is generated. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ Indicates that the existing WantAgent should be canceled before a new object is 
 
 **Deprecated since:** 9
 
-**Substitutes:** [CANCEL_PRESENT_FLAG](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#CANCEL_PRESENT_FLAG)
+**Substitutes:** [CANCEL_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#CANCEL_PRESENT_FLAG)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -86,7 +86,7 @@ Indicates that the existing WantAgent should be canceled before a new object is 
 UPDATE_PRESENT_FLAG
 ```
 
-Indicates that the system only replaces the extra data of the existing WantAgent with that of the new object.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that the system only replaces the extra data of the existing WantAgent with that of the new object. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -94,7 +94,7 @@ Indicates that the system only replaces the extra data of the existing WantAgent
 
 **Deprecated since:** 9
 
-**Substitutes:** [UPDATE_PRESENT_FLAG](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#UPDATE_PRESENT_FLAG)
+**Substitutes:** [UPDATE_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#UPDATE_PRESENT_FLAG)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,7 +116,7 @@ Indicates that the created WantAgent should be immutable.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CONSTANT_FLAG](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#CONSTANT_FLAG)
+**Substitutes:** [CONSTANT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#CONSTANT_FLAG)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -138,7 +138,7 @@ Indicates that the current value of element can be replaced when the WantAgent i
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_ELEMENT](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#REPLACE_ELEMENT)
+**Substitutes:** [REPLACE_ELEMENT](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_ELEMENT)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,7 +160,7 @@ Indicates that the current value of action can be replaced when the WantAgent is
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_ACTION](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#REPLACE_ACTION)
+**Substitutes:** [REPLACE_ACTION](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_ACTION)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -182,7 +182,7 @@ Indicates that the current value of uri can be replaced when the WantAgent is tr
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_URI](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#REPLACE_URI)
+**Substitutes:** [REPLACE_URI](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_URI)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,7 +204,7 @@ Indicates that the current value of entities can be replaced when the WantAgent 
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_ENTITIES](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#REPLACE_ENTITIES)
+**Substitutes:** [REPLACE_ENTITIES](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_ENTITIES)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,7 +226,7 @@ Indicates that the current value of packageName can be replaced when the WantAge
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_BUNDLE](ohos.app.ability.wantAgent/wantAgent.WantAgentFlags#REPLACE_BUNDLE)
+**Substitutes:** [REPLACE_BUNDLE](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_BUNDLE)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -2,7 +2,9 @@
 
 Wi-Fi band type.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum WifiBandType--><!--Device-wifiManager-enum WifiBandType-End-->
 
@@ -16,7 +18,9 @@ WIFI_BAND_NONE
 
 Default.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiBandType-WIFI_BAND_NONE--><!--Device-WifiBandType-WIFI_BAND_NONE-End-->
 
@@ -30,7 +34,9 @@ WIFI_BAND_2G
 
 Band 2.4G.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiBandType-WIFI_BAND_2G--><!--Device-WifiBandType-WIFI_BAND_2G-End-->
 
@@ -44,7 +50,9 @@ WIFI_BAND_5G
 
 Band 5G.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiBandType-WIFI_BAND_5G--><!--Device-WifiBandType-WIFI_BAND_5G-End-->
 
@@ -58,7 +66,9 @@ WIFI_BAND_6G
 
 Band 6G.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiBandType-WIFI_BAND_6G--><!--Device-WifiBandType-WIFI_BAND_6G-End-->
 
@@ -72,7 +82,9 @@ WIFI_BAND_60G
 
 Band 60G.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiBandType-WIFI_BAND_60G--><!--Device-WifiBandType-WIFI_BAND_60G-End-->
 

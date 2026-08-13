@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [promptAction/promptAction](ohos.promptAction/promptAction)
+**Substitutes:** [promptAction/promptAction](arkts-arkui-promptaction-n.md#promptAction)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 
@@ -24,11 +24,11 @@ import { prompt } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu) | Displays the menu. |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu-1) | Displays the menu. |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog) | Displays the dialog box. |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog-1) | Displays the dialog box. |
-| [showToast](arkts-arkui-prompt-showtoast-f.md#showtoast) | Displays the notification text. |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showActionMenu) | Displays the menu. |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showActionMenu) | Displays the menu. |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md#showDialog) | Displays the dialog box. |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md#showDialog) | Displays the dialog box. |
+| [showToast](arkts-arkui-prompt-showtoast-f.md#showToast) | Displays the notification text. |
 
 ### Interfaces
 

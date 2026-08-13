@@ -2,13 +2,15 @@
 
 Context模块提供了Ability或Application的上下文的基础能力，包括允许访问特定于应用程序的资源、请求和验证权限等。
 
-**继承/实现关系：** Context extends [BaseContext](BaseContext)
+**继承/实现关系：** Context extends BaseContext
 
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
-<!--Device-unnamed-export interface Context extends BaseContext--><!--Device-unnamed-export interface Context extends BaseContext-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Context--><!--Device-unnamed-export interface Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,6 +26,8 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void--><!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void-End-->
@@ -34,7 +38,7 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | 是 | 回调函数，返回true表示该Ability的配置正在更改，否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | 是 | 回调函数，返回true表示该Ability的配置正在更改，否则返回false。 |
 
 ## getAbilityInfo
 
@@ -47,6 +51,8 @@ getAbilityInfo(): Promise<AbilityInfo>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -72,6 +78,8 @@ getAppType(callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getAppType(callback: AsyncCallback<string>): void--><!--Device-Context-getAppType(callback: AsyncCallback<string>): void-End-->
@@ -82,7 +90,7 @@ getAppType(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回此应用程序的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回此应用程序的类型。 |
 
 ## getAppType
 
@@ -95,6 +103,8 @@ getAppType(): Promise<string>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -120,6 +130,8 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void--><!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void-End-->
@@ -130,7 +142,7 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | 是 | 回调函数，返回应用版本信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | 是 | 回调函数，返回应用版本信息。 |
 
 ## getAppVersionInfo
 
@@ -143,6 +155,8 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -168,6 +182,8 @@ getApplicationContext(): Context
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getApplicationContext(): Context--><!--Device-Context-getApplicationContext(): Context-End-->
@@ -192,6 +208,8 @@ getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
@@ -202,7 +220,7 @@ getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | 是 | 回调函数，返回当前应用程序的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | 是 | 回调函数，返回当前应用程序的信息。 |
 
 ## getApplicationInfo
 
@@ -215,6 +233,8 @@ getApplicationInfo(): Promise<ApplicationInfo>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -240,6 +260,8 @@ getBundleName(callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getBundleName(callback: AsyncCallback<string>): void--><!--Device-Context-getBundleName(callback: AsyncCallback<string>): void-End-->
@@ -250,7 +272,7 @@ getBundleName(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回当前ability的Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回当前ability的Bundle名称。 |
 
 ## getBundleName
 
@@ -263,6 +285,8 @@ getBundleName(): Promise<string>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -288,6 +312,8 @@ getCacheDir(callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void-End-->
@@ -298,7 +324,7 @@ getCacheDir(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回该应用程序的内部存储目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回该应用程序的内部存储目录。 |
 
 ## getCacheDir
 
@@ -311,6 +337,8 @@ getCacheDir(): Promise<string>
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -336,6 +364,8 @@ getCallingBundle(callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void--><!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void-End-->
@@ -346,7 +376,7 @@ getCallingBundle(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回ability调用方的Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回ability调用方的Bundle名称。 |
 
 ## getCallingBundle
 
@@ -359,6 +389,8 @@ getCallingBundle(): Promise<string>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -384,6 +416,8 @@ getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void--><!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void-End-->
@@ -394,7 +428,7 @@ getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;bundle.DisplayOrientation&gt; | 是 | 回调函数，返回屏幕显示方向。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;bundle.DisplayOrientation&gt; | 是 | 回调函数，返回屏幕显示方向。 |
 
 ## getDisplayOrientation
 
@@ -407,6 +441,8 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -426,11 +462,13 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 getElementName(callback: AsyncCallback<ElementName>): void
 ```
 
-获取当前ability的ohos.bundleManager.ElementName对象。使用callback异步回调。此方法仅适用于页面功能。
+获取当前ability的ohos.bundleManager.ElementName对象。使用callback异步回调。 此方法仅适用于页面功能。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -442,7 +480,7 @@ getElementName(callback: AsyncCallback<ElementName>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | 是 | 回调函数，返回当前ability的ohos.bundleManager.ElementName对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | 是 | 回调函数，返回当前ability的ohos.bundleManager.ElementName对象。 |
 
 ## getElementName
 
@@ -450,11 +488,13 @@ getElementName(callback: AsyncCallback<ElementName>): void
 getElementName(): Promise<ElementName>
 ```
 
-获取当前能力的ohos.bundleManager.ElementName对象。使用Promise异步回调。此方法仅适用于页面功能。
+获取当前能力的ohos.bundleManager.ElementName对象。使用Promise异步回调。 此方法仅适用于页面功能。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -492,7 +532,7 @@ getExternalCacheDir(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回应用程序的缓存目录的绝对路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回应用程序的缓存目录的绝对路径。 |
 
 ## getExternalCacheDir
 
@@ -532,6 +572,8 @@ getFilesDir(callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void--><!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void-End-->
@@ -542,7 +584,7 @@ getFilesDir(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回内部存储器上此应用程序的文件目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回内部存储器上此应用程序的文件目录。 |
 
 ## getFilesDir
 
@@ -555,6 +597,8 @@ getFilesDir(): Promise<string>
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -580,6 +624,8 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void--><!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void-End-->
@@ -590,7 +636,7 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | 是 | 回调函数，返回应用的ModuleInfo对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | 是 | 回调函数，返回应用的ModuleInfo对象。 |
 
 ## getHapModuleInfo
 
@@ -603,6 +649,8 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -622,11 +670,13 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 getOrCreateDistributedDir(): Promise<string>
 ```
 
-获取Ability或应用的分布式文件路径。使用callback异步回调。如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
+获取Ability或应用的分布式文件路径。使用callback异步回调。 如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -646,11 +696,13 @@ getOrCreateDistributedDir(): Promise<string>
 getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 ```
 
-获取Ability或应用的分布式文件路径。使用Promise异步回调。如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
+获取Ability或应用的分布式文件路径。使用Promise异步回调。 如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -662,7 +714,7 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Promise对象，返回Ability或应用的分布式文件路径。若为首次调用，则将创建建目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Promise对象，返回Ability或应用的分布式文件路径。若为首次调用，则将创建建目录。 |
 
 ## getOrCreateLocalDir
 
@@ -670,11 +722,13 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 getOrCreateLocalDir(): Promise<string>
 ```
 
-获取应用程序的本地根目录。使用Promise异步回调。如果是第一次调用，将创建目录。
+获取应用程序的本地根目录。使用Promise异步回调。 如果是第一次调用，将创建目录。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -694,11 +748,13 @@ getOrCreateLocalDir(): Promise<string>
 getOrCreateLocalDir(callback: AsyncCallback<string>): void
 ```
 
-获取应用程序的本地根目录。使用callback异步回调。如果是第一次调用，将创建目录。
+获取应用程序的本地根目录。使用callback异步回调。 如果是第一次调用，将创建目录。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -710,7 +766,7 @@ getOrCreateLocalDir(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回应用程序的本地根目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回应用程序的本地根目录。 |
 
 ## getProcessInfo
 
@@ -724,6 +780,8 @@ getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void--><!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void-End-->
@@ -734,7 +792,7 @@ getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | 是 | 回调函数，返回当前进程的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | 是 | 回调函数，返回当前进程的信息。 |
 
 ## getProcessInfo
 
@@ -747,6 +805,8 @@ getProcessInfo(): Promise<ProcessInfo>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -772,6 +832,8 @@ getProcessName(callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-getProcessName(callback: AsyncCallback<string>): void--><!--Device-Context-getProcessName(callback: AsyncCallback<string>): void-End-->
@@ -782,7 +844,7 @@ getProcessName(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回当前进程的名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回当前进程的名称。 |
 
 ## getProcessName
 
@@ -795,6 +857,8 @@ getProcessName(): Promise<string>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -820,6 +884,8 @@ isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void--><!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void-End-->
@@ -830,7 +896,7 @@ isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示该Ability的配置正在更改，否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示该Ability的配置正在更改，否则返回false。 |
 
 ## isUpdatingConfigurations
 
@@ -843,6 +909,8 @@ isUpdatingConfigurations(): Promise<boolean>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -868,6 +936,8 @@ printDrawnCompleted(callback: AsyncCallback<void>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void-End-->
@@ -878,7 +948,7 @@ printDrawnCompleted(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知系统绘制此页面功能所需的时间成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当通知系统绘制此页面功能所需的时间成功，err为undefined，否则为错误对象。 |
 
 ## printDrawnCompleted
 
@@ -891,6 +961,8 @@ printDrawnCompleted(): Promise<void>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -920,6 +992,8 @@ requestPermissionsFromUser(
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void--><!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void-End-->
@@ -932,7 +1006,7 @@ requestPermissionsFromUser(
 | --- | --- | --- | --- |
 | permissions | Array&lt;string&gt; | 是 | 指示要请求的权限列表。此参数不能为null。 |
 | requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md#PermissionRequestResult)的请求代码。 |
-| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | 是 | 回调函数，返回授权结果信息。 |
+| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | 是 | 回调函数，返回授权结果信息。 |
 
 ## requestPermissionsFromUser
 
@@ -945,6 +1019,8 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -977,6 +1053,8 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCal
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void-End-->
@@ -988,7 +1066,7 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | orientation | bundle.DisplayOrientation | 是 | 指示当前能力的新方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置当前Ability的显示方向成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置当前Ability的显示方向成功，err为undefined，否则为错误对象。 |
 
 ## setDisplayOrientation
 
@@ -1001,6 +1079,8 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1047,7 +1127,7 @@ setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | show | boolean | 是 | 指定是否在锁屏顶部显示此功能。值true表示在锁屏上显示，值false表示不显示。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置每当显示锁屏时是否在锁屏顶部显示此功能并使该功能保持激活状态的操作成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置每当显示锁屏时是否在锁屏顶部显示此功能并使该功能保持激活状态的操作成功，err为undefined，否则为错误对象。 |
 
 ## setShowOnLockScreen
 
@@ -1097,7 +1177,7 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 12
 
-**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
+**替代接口：** setWakeUpScreen
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1110,7 +1190,7 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | wakeUp | boolean | 是 | 指定是否唤醒屏幕。值true表示唤醒它，值false表示不唤醒它。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置恢复此功能时是否唤醒屏幕成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置恢复此功能时是否唤醒屏幕成功，err为undefined，否则为错误对象。 |
 
 ## setWakeUpScreen
 
@@ -1126,7 +1206,7 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 
 **废弃版本：** 12
 
-**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
+**替代接口：** setWakeUpScreen
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1157,6 +1237,8 @@ verifyPermission(permission: string, options?: PermissionOptions): Promise<numbe
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1189,6 +1271,8 @@ verifyPermission(permission: string, options: PermissionOptions, callback: Async
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void-End-->
@@ -1201,7 +1285,7 @@ verifyPermission(permission: string, options: PermissionOptions, callback: Async
 | --- | --- | --- | --- |
 | permission | string | 是 | 指定权限的名称。 |
 | options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | 是 | 权限选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回权限验证结果，0有权限，-1无权限。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回权限验证结果，0有权限，-1无权限。 |
 
 ## verifyPermission
 
@@ -1215,6 +1299,8 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-Context-verifyPermission(permission: string, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, callback: AsyncCallback<number>): void-End-->
@@ -1226,5 +1312,5 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permission | string | 是 | 指定权限的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回权限验证结果，0有权限，-1无权限。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回权限验证结果，0有权限，-1无权限。 |
 

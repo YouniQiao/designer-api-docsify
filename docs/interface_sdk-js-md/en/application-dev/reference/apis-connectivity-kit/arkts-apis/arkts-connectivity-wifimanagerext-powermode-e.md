@@ -6,6 +6,8 @@ The power Mode enumeration.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-wifiManagerExt-export enum PowerMode--><!--Device-wifiManagerExt-export enum PowerMode-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
@@ -21,6 +23,8 @@ Sleeping Mode.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-PowerMode-SLEEPING = 0--><!--Device-PowerMode-SLEEPING = 0-End-->
 
@@ -38,6 +42,8 @@ General Mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-PowerMode-GENERAL = 1--><!--Device-PowerMode-GENERAL = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -53,6 +59,8 @@ Through wall Mode.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-PowerMode-THROUGH_WALL = 2--><!--Device-PowerMode-THROUGH_WALL = 2-End-->
 

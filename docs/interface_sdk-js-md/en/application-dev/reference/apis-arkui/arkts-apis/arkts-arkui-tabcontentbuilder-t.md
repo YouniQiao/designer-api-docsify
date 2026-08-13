@@ -10,6 +10,8 @@ Defines the content view container.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export type TabContentBuilder = () => void--><!--Device-unnamed-export type TabContentBuilder = () => void-End-->

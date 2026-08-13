@@ -1,15 +1,10 @@
 # CursorController
 
-Provides the capability to set cursor styles.
-
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getCursorController) in
-> **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
+Provides the capability to set cursor styles. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getCursorController) in > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class CursorController--><!--Device-unnamed-export class CursorController-End-->
 
@@ -31,6 +26,8 @@ Restores the default cursor style.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,13 +42,11 @@ Restores the default cursor style.
 setCursor(value: PointerStyle): void
 ```
 
-Sets the cursor style.
-
-> **NOTE：**
-> 
-> This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
+Sets the cursor style. > **NOTE：**> > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,13 +68,11 @@ Sets the cursor style.
 setCustomCursor(value: image.PixelMap, focusX?: number, focusY?: number): void
 ```
 
-Sets the custom cursor style.
-
-> **NOTE：**
-> 
-> This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
+Sets the custom cursor style. > **NOTE：**> > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

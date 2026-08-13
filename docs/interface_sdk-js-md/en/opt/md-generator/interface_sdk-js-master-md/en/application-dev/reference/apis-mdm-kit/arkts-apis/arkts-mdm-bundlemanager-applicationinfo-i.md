@@ -4,6 +4,8 @@ Defines the application information.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-bundleManager-interface ApplicationInfo--><!--Device-bundleManager-interface ApplicationInfo-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -20,12 +22,13 @@ import { bundleManager } from '@kit.MDMKit';
 readonly accessTokenId: number
 ```
 
-Access token ID of the application, which is used in the  
-[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md#checkAccessToken).
+Access token ID of the application, which is used in the [checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md#checkAccessToken).
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,12 +42,13 @@ Access token ID of the application, which is used in the
 readonly appDistributionType: string
 ```
 
-Distribution type of the application signing certificate. For details, see the **appProvisionType** field in  
-[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#ApplicationInfo).
+Distribution type of the application signing certificate. For details, see the **appProvisionType** field in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#ApplicationInfo).
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,6 +68,8 @@ Index of an application clone. It takes effect only for application clones.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly appIndex: number--><!--Device-ApplicationInfo-readonly appIndex: number-End-->
@@ -81,6 +87,8 @@ Type of the application signing certificate file. The options are **debug** and 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +108,8 @@ Installation directory of the application.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly codePath: string--><!--Device-ApplicationInfo-readonly codePath: string-End-->
@@ -112,11 +122,13 @@ Installation directory of the application.
 readonly dataUnclearable: boolean
 ```
 
-Whether the application data is unclearable. The value **true** means that the application data is unclearable,and **false** means the opposite.
+Whether the application data is unclearable. The value **true** means that the application data is unclearable, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,6 +148,8 @@ Whether the application is running in debug mode. **true** if in debug mode, **f
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly debug: boolean--><!--Device-ApplicationInfo-readonly debug: boolean-End-->
@@ -148,13 +162,13 @@ Whether the application is running in debug mode. **true** if in debug mode, **f
 readonly description: string
 ```
 
-Description of the application. It corresponds to the **description** field in  
-[app.json5](../../../quick-start/app-configuration-file.md). For details about **description**, see the  
-**descriptionResource** field in this table.
+Description of the application. It corresponds to the **description** field in [app.json5](../../../quick-start/app-configuration-file.md). For details about **description**, see the **descriptionResource** field in this table.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,6 +188,8 @@ Resource ID of the application description. It is automatically generated during
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly descriptionId: number--><!--Device-ApplicationInfo-readonly descriptionId: number-End-->
@@ -191,6 +207,8 @@ Resource information of the application description, including the bundle name, 
 **Type:** Resource
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,6 +228,8 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
@@ -222,13 +242,13 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 readonly icon: string
 ```
 
-Application icon. It corresponds to the **icon** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file. For details about **icon**, see the  
-**iconResource** field in this table.
+Application icon. It corresponds to the **icon** field in the [app.json5](../../../quick-start/app-configuration-file.md) file. For details about **icon**, see the **iconResource** field in this table.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,6 +268,8 @@ Application icon, which is in Base64 encoding format.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly iconData: string--><!--Device-ApplicationInfo-readonly iconData: string-End-->
@@ -265,6 +287,8 @@ Resource ID of the application icon. It is automatically generated during compil
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -284,6 +308,8 @@ Resource information of the application icon, including the bundle name, module 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly iconResource: Resource--><!--Device-ApplicationInfo-readonly iconResource: Resource-End-->
@@ -296,17 +322,13 @@ Resource information of the application icon, including the bundle name, module 
 readonly installSource: string
 ```
 
-Installation source of the application. The options are as follows:
-
-- **pre-installed**: The application is a preset application installed at initial device startup.  
-- **ota**: The application is a preset application added during system upgrade.  
-- **recovery**: The preset application is uninstalled and then restored.  
-- **bundleName**: The application corresponding to the bundle name is installed.  
-- **unknown**: The installation source is unknown.
+Installation source of the application. The options are as follows: - **pre-installed**: The application is a preset application installed at initial device startup. - **ota**: The application is a preset application added during system upgrade. - **recovery**: The preset application is uninstalled and then restored. - **bundleName**: The application corresponding to the bundle name is installed. - **unknown**: The installation source is unknown.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -326,6 +348,8 @@ Application label.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
@@ -343,6 +367,8 @@ Resource ID of the application label. It is automatically generated during compi
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,6 +388,8 @@ Resource information of the application label, including the bundle name, module
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly labelResource: Resource--><!--Device-ApplicationInfo-readonly labelResource: Resource-End-->
@@ -374,12 +402,13 @@ Resource information of the application label, including the bundle name, module
 readonly name: string
 ```
 
-Name of the application bundle. It corresponds to the **bundleName** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Name of the application bundle. It corresponds to the **bundleName** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -399,6 +428,8 @@ Local library file path of the application.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly nativeLibraryPath: string--><!--Device-ApplicationInfo-readonly nativeLibraryPath: string-End-->
@@ -417,6 +448,8 @@ Process name.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
@@ -429,11 +462,13 @@ Process name.
 readonly releaseType: string
 ```
 
-Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1,Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo)) to determine the compatibility.
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#@ohos.deviceInfo)) to determine the compatibility.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -453,6 +488,8 @@ Whether the application is removable. **true** if removable, **false** otherwise
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
@@ -471,6 +508,8 @@ Whether the application is a system application. **true** if it is a system appl
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
@@ -488,6 +527,8 @@ UID of the application.
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

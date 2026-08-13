@@ -1,7 +1,6 @@
 # KvStoreResultSet
 
-提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。在调用KvStoreResultSet的方法前，需要先通过  
-[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个KVStore实例。
+提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。 在调用KvStoreResultSet的方法前，需要先通过 getKVStore 构建一个KVStore实例。
 
 **起始版本：** 7
 
@@ -29,7 +28,7 @@ getCount(): number
 
 **废弃版本：** 9
 
-**替代接口：** [getCount](ohos.data.distributedKVStore.KVStoreResultSet#getCount)
+**替代接口：** getCount
 
 <!--Device-KvStoreResultSet-getCount(): number--><!--Device-KvStoreResultSet-getCount(): number-End-->
 
@@ -74,7 +73,7 @@ getEntry(): Entry
 
 **废弃版本：** 9
 
-**替代接口：** [getEntry](ohos.data.distributedKVStore.KVStoreResultSet#getEntry)
+**替代接口：** getEntry
 
 <!--Device-KvStoreResultSet-getEntry(): Entry--><!--Device-KvStoreResultSet-getEntry(): Entry-End-->
 
@@ -119,7 +118,7 @@ getPosition(): number
 
 **废弃版本：** 9
 
-**替代接口：** [getPosition](ohos.data.distributedKVStore.KVStoreResultSet#getPosition)
+**替代接口：** getPosition
 
 <!--Device-KvStoreResultSet-getPosition(): number--><!--Device-KvStoreResultSet-getPosition(): number-End-->
 
@@ -164,7 +163,7 @@ isAfterLast(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isAfterLast](ohos.data.distributedKVStore.KVStoreResultSet#isAfterLast)
+**替代接口：** isAfterLast
 
 <!--Device-KvStoreResultSet-isAfterLast(): boolean--><!--Device-KvStoreResultSet-isAfterLast(): boolean-End-->
 
@@ -209,7 +208,7 @@ isBeforeFirst(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isBeforeFirst](ohos.data.distributedKVStore.KVStoreResultSet#isBeforeFirst)
+**替代接口：** isBeforeFirst
 
 <!--Device-KvStoreResultSet-isBeforeFirst(): boolean--><!--Device-KvStoreResultSet-isBeforeFirst(): boolean-End-->
 
@@ -254,7 +253,7 @@ isFirst(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isFirst](ohos.data.distributedKVStore.KVStoreResultSet#isFirst)
+**替代接口：** isFirst
 
 <!--Device-KvStoreResultSet-isFirst(): boolean--><!--Device-KvStoreResultSet-isFirst(): boolean-End-->
 
@@ -299,7 +298,7 @@ isLast(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isLast](ohos.data.distributedKVStore.KVStoreResultSet#isLast)
+**替代接口：** isLast
 
 <!--Device-KvStoreResultSet-isLast(): boolean--><!--Device-KvStoreResultSet-isLast(): boolean-End-->
 
@@ -344,7 +343,7 @@ move(offset: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [move](ohos.data.distributedKVStore.KVStoreResultSet#move)
+**替代接口：** move
 
 <!--Device-KvStoreResultSet-move(offset: number): boolean--><!--Device-KvStoreResultSet-move(offset: number): boolean-End-->
 
@@ -395,7 +394,7 @@ moveToFirst(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [moveToFirst](ohos.data.distributedKVStore.KVStoreResultSet#moveToFirst)
+**替代接口：** moveToFirst
 
 <!--Device-KvStoreResultSet-moveToFirst(): boolean--><!--Device-KvStoreResultSet-moveToFirst(): boolean-End-->
 
@@ -440,7 +439,7 @@ moveToLast(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [moveToLast](ohos.data.distributedKVStore.KVStoreResultSet#moveToLast)
+**替代接口：** moveToLast
 
 <!--Device-KvStoreResultSet-moveToLast(): boolean--><!--Device-KvStoreResultSet-moveToLast(): boolean-End-->
 
@@ -485,7 +484,7 @@ moveToNext(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [moveToNext](ohos.data.distributedKVStore.KVStoreResultSet#moveToNext)
+**替代接口：** moveToNext
 
 <!--Device-KvStoreResultSet-moveToNext(): boolean--><!--Device-KvStoreResultSet-moveToNext(): boolean-End-->
 
@@ -530,7 +529,7 @@ moveToPosition(position: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [moveToPosition](ohos.data.distributedKVStore.KVStoreResultSet#moveToPosition)
+**替代接口：** moveToPosition
 
 <!--Device-KvStoreResultSet-moveToPosition(position: number): boolean--><!--Device-KvStoreResultSet-moveToPosition(position: number): boolean-End-->
 
@@ -581,7 +580,7 @@ moveToPrevious(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [moveToPrevious](ohos.data.distributedKVStore.KVStoreResultSet#moveToPrevious)
+**替代接口：** moveToPrevious
 
 <!--Device-KvStoreResultSet-moveToPrevious(): boolean--><!--Device-KvStoreResultSet-moveToPrevious(): boolean-End-->
 

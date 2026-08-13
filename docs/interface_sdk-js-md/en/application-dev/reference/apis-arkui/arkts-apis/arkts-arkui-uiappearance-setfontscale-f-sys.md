@@ -9,18 +9,20 @@ import { uiAppearance } from '@kit.ArkUI';
 ## setFontScale
 
 ```TypeScript
-function setFontScale(fontScale: double): Promise<void>
+function setFontScale(fontScale: number): Promise<void>
 ```
 
-Set the system font-scale.
+Sets the system font scale. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
-<!--Device-uiAppearance-function setFontScale(fontScale: double): Promise<void>--><!--Device-uiAppearance-function setFontScale(fontScale: double): Promise<void>-End-->
+<!--Device-uiAppearance-function setFontScale(fontScale: number): Promise<void>--><!--Device-uiAppearance-function setFontScale(fontScale: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
@@ -30,7 +32,7 @@ Set the system font-scale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontScale | double | Yes | indicates the font-scale to set |
+| fontScale | number | Yes | indicates the font-scale to set |
 
 **Return value:**
 
@@ -42,7 +44,28 @@ Set the system font-scale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiappearance.md#500001-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fontScale = 10;
+
+try {
+    uiAppearance.setFontScale(fontScale).then(() => {
+      console.info('Set fontScale successfully.');
+    }).catch((error:Error) => {
+      console.error('Set fontScale failed, ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('Set fontScale failed, ' + message);
+}
+```
 

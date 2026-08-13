@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ start(): void
 开启监听。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
@@ -59,6 +63,8 @@ stop(): void
 停止监听并移除Watcher对象。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 

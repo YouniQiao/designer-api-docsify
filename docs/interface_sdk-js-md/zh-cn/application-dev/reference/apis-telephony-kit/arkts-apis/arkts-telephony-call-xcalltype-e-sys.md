@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-call-export enum XCallType--><!--Device-call-export enum XCallType-End-->
 
@@ -22,7 +24,9 @@ XCALL_ECALL_TYPE = 0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-XCallType-XCALL_ECALL_TYPE = 0--><!--Device-XCallType-XCALL_ECALL_TYPE = 0-End-->
 
@@ -40,7 +44,9 @@ XCALL_BCALL_TYPE = 1
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-XCallType-XCALL_BCALL_TYPE = 1--><!--Device-XCallType-XCALL_BCALL_TYPE = 1-End-->
 
@@ -58,7 +64,9 @@ XCALL_ICALL_TYPE = 2
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-XCallType-XCALL_ICALL_TYPE = 2--><!--Device-XCallType-XCALL_ICALL_TYPE = 2-End-->
 

@@ -1,8 +1,10 @@
 # ControllerHandler
 
-Defines the onWindowNew callback, related to [onWindowNew](onWindowNew) method.
+Defines the onWindowNew callback, related to onWindowNew method.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class ControllerHandler--><!--Device-unnamed-declare class ControllerHandler-End-->
 
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ setWebController(controller: WebviewController): void
 Set WebController object.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

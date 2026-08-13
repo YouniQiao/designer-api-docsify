@@ -4,6 +4,8 @@ Defines a rectangle.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,13 +22,13 @@ import { webview } from '@kit.ArkWeb';
 height: number
 ```
 
-Height of the rectangle.
-
-Unit: px.
+Height of the rectangle. Unit: px.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-RectEvent-height: number--><!--Device-RectEvent-height: number-End-->
 
@@ -38,13 +40,13 @@ Unit: px.
 width: number
 ```
 
-Width of the rectangle.
-
-Unit: px.
+Width of the rectangle. Unit: px.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-RectEvent-width: number--><!--Device-RectEvent-width: number-End-->
 
@@ -62,6 +64,8 @@ X-axis coordinate of the upper left corner of the rectangle.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-RectEvent-x: number--><!--Device-RectEvent-x: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -77,6 +81,8 @@ Y-axis coordinate of the upper left corner of the rectangle.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-RectEvent-y: number--><!--Device-RectEvent-y: number-End-->
 

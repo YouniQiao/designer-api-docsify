@@ -1,17 +1,12 @@
 # ImageData
 
-An **ImageData** object stores pixel data rendered on a canvas.
-
-> **NOTE：**
-> 
-> A constructor used to create an **ImageData** object. To ensure successful drawing,
-> make sure the object's area does not exceed 16000 x 16000, with its width and height
-> not greater than 16384 px. If the created area exceeds 536870911 px, the returned
-> width and height are both 0 px, and **data** is **undefined**.
+An **ImageData** object stores pixel data rendered on a canvas. > **NOTE：**> > A constructor used to create an **ImageData** object. To ensure successful drawing, > make sure the object's area does not exceed 16000 x 16000, with its width and height > not greater than 16384 px. If the created area exceeds 536870911 px, the returned > width and height are both 0 px, and **data** is **undefined**.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ImageData--><!--Device-unnamed-declare class ImageData-End-->
 
@@ -23,11 +18,13 @@ An **ImageData** object stores pixel data rendered on a canvas.
 constructor(width: number, height: number, data?: Uint8ClampedArray)
 ```
 
-Creates an **ImageData** object with the specified width, height, and color.If data is not defined, it is populated with a one-dimensional array of 0s.
+Creates an **ImageData** object with the specified width, height, and color. If data is not defined, it is populated with a one-dimensional array of 0s.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,11 +48,13 @@ Creates an **ImageData** object with the specified width, height, and color.If d
 constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: LengthMetricsUnit)
 ```
 
-Creates an **ImageData** object with the specified width, height, and color.If data is not defined, it is populated with a one-dimensional array of 0s.The unit of the **ImageData** object can be configured using **unit**.
+Creates an **ImageData** object with the specified width, height, and color. If data is not defined, it is populated with a one-dimensional array of 0s. The unit of the **ImageData** object can be configured using **unit**.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +89,8 @@ A one-dimensional array of color values. The values range from 0 to 255.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -104,15 +105,15 @@ A one-dimensional array of color values. The values range from 0 to 255.
 readonly height: number
 ```
 
-Actual height of the rectangle on the canvas.
-
-The unit is px.
+Actual height of the rectangle on the canvas. The unit is px.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,20 +129,15 @@ The unit is px.
 readonly width: number
 ```
 
-Actual width of the rectangle on the canvas.
-
-The unit is px.
-
-> **NOTE：**
-> 
-> The [px2vp](UIContext#px2vp)
-> API can be used for unit conversion.
+Actual width of the rectangle on the canvas. The unit is px. > **NOTE：**> > The px2vp > API can be used for unit conversion.
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

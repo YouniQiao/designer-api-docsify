@@ -10,6 +10,8 @@ Callback function triggered when the image is successfully loaded.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type ImageCompleteCallback = (result: ImageLoadResult) => void--><!--Device-unnamed-export type ImageCompleteCallback = (result: ImageLoadResult) => void-End-->

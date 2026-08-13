@@ -1,9 +1,10 @@
 # CameraOutput
 
-CameraOutput implements output information used in [Session](arkts-camera-camera-session-i.md#Session). It is the base class of   
-**output**.
+CameraOutput implements output information used in [Session](arkts-camera-camera-session-i.md#Session). It is the base class of **output**.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface CameraOutput--><!--Device-camera-interface CameraOutput-End-->
 
@@ -23,7 +24,9 @@ release(callback: AsyncCallback<void>): void
 
 Releases output resources. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -41,7 +44,7 @@ Releases output resources. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## release
 
@@ -51,7 +54,9 @@ release(): Promise<void>
 
 Releases output resources. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -69,4 +74,4 @@ Releases output resources. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |

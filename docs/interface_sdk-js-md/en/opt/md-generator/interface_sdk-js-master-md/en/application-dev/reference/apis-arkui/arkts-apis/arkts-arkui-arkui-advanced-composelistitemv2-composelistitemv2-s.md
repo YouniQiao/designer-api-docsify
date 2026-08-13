@@ -4,7 +4,7 @@ Declare ComposeListItemV2
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ComposeListItemV2--><!--Device-unnamed-export declare struct ComposeListItemV2-End-->
 
@@ -19,7 +19,8 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 ## contentItemV2
 
 ```TypeScript
-contentItemV2?: ContentItemV2
+@Param
+  contentItemV2?: ContentItemV2
 ```
 
 The ContentItem.
@@ -28,20 +29,21 @@ The ContentItem.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ComposeListItemV2-contentItemV2?: ContentItemV2--><!--Device-ComposeListItemV2-contentItemV2?: ContentItemV2-End-->
+<!--Device-ComposeListItemV2-@Param  contentItemV2?: ContentItemV2--><!--Device-ComposeListItemV2-@Param  contentItemV2?: ContentItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## operateItemV2
 
 ```TypeScript
-operateItemV2?: OperateItemV2
+@Param
+  operateItemV2?: OperateItemV2
 ```
 
 The OperateItem.
@@ -50,12 +52,12 @@ The OperateItem.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ComposeListItemV2-operateItemV2?: OperateItemV2--><!--Device-ComposeListItemV2-operateItemV2?: OperateItemV2-End-->
+<!--Device-ComposeListItemV2-@Param  operateItemV2?: OperateItemV2--><!--Device-ComposeListItemV2-@Param  operateItemV2?: OperateItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

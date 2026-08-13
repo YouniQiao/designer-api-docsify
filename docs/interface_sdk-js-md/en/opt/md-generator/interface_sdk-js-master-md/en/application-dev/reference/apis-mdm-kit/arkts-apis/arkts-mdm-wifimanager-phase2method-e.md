@@ -4,6 +4,8 @@ Enumerates the Phase 2 authentication methods.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-wifiManager-enum Phase2Method--><!--Device-wifiManager-enum Phase2Method-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ PHASE2_NONE = 0
 Not specified.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ PAP.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_PAP = 1--><!--Device-Phase2Method-PHASE2_PAP = 1-End-->
@@ -49,6 +55,8 @@ PHASE2_MSCHAP = 2
 MS-CHAP.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ MS-CHAPv2.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3--><!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3-End-->
@@ -81,6 +91,8 @@ PHASE2_GTC = 4
 GTC.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ SIM.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_SIM = 5--><!--Device-Phase2Method-PHASE2_SIM = 5-End-->
@@ -114,6 +128,8 @@ AKA.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_AKA = 6--><!--Device-Phase2Method-PHASE2_AKA = 6-End-->
@@ -129,6 +145,8 @@ PHASE2_AKA_PRIME = 7
 AKA Prime.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

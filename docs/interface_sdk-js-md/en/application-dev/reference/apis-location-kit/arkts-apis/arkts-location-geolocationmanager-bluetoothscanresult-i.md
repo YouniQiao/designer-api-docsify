@@ -2,9 +2,11 @@
 
 Describes the contents of the bluetooth scan results.
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface BluetoothScanResult--><!--Device-geoLocationManager-export interface BluetoothScanResult-End-->
 
@@ -26,9 +28,11 @@ Connectable of the scanned device
 
 **Type:** boolean
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-connectable: boolean--><!--Device-BluetoothScanResult-connectable: boolean-End-->
 
@@ -44,9 +48,11 @@ The raw data of broadcast packet
 
 **Type:** ArrayBuffer
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-data?: ArrayBuffer--><!--Device-BluetoothScanResult-data?: ArrayBuffer-End-->
 
@@ -62,9 +68,11 @@ Address of the scanned device
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-deviceId: string--><!--Device-BluetoothScanResult-deviceId: string-End-->
 
@@ -80,9 +88,11 @@ The local name of the scanned device
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-deviceName: string--><!--Device-BluetoothScanResult-deviceName: string-End-->
 
@@ -96,11 +106,13 @@ rssi: int
 
 RSSI of the scanned device
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-rssi: int--><!--Device-BluetoothScanResult-rssi: int-End-->
 

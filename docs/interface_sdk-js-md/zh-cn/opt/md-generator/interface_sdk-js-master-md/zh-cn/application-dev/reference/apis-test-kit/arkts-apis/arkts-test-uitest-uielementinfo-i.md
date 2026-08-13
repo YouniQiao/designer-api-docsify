@@ -2,7 +2,9 @@
 
 UI事件的相关信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface UIElementInfo--><!--Device-unnamed-declare interface UIElementInfo-End-->
 
@@ -14,13 +16,13 @@ UI事件的相关信息。
 readonly bundleName: string
 ```
 
-应用包名。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+应用包名。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,15 +36,15 @@ readonly bundleName: string
 readonly componentEventType?: ComponentEventType
 ```
 
-控件操作事件类型，若非控件操作事件返回ComponentEventType.COMPONENT_UNDEFINED。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件操作事件类型，若非控件操作事件返回ComponentEventType.COMPONENT_UNDEFINED。 从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** [ComponentEventType](arkts-test-uitest-componenteventtype-e.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIElementInfo-readonly componentEventType?: ComponentEventType--><!--Device-UIElementInfo-readonly componentEventType?: ComponentEventType-End-->
 
@@ -54,15 +56,15 @@ readonly componentEventType?: ComponentEventType
 readonly componentId?: string
 ```
 
-控件id，若非控件操作事件返回空字符串。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件id，若非控件操作事件返回空字符串。 从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIElementInfo-readonly componentId?: string--><!--Device-UIElementInfo-readonly componentId?: string-End-->
 
@@ -74,15 +76,15 @@ readonly componentId?: string
 readonly componentRect?: Rect
 ```
 
-控件边框信息，若非控件操作事件则返回属性值均为0的Rect对象。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件边框信息，若非控件操作事件则返回属性值均为0的Rect对象。 从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** [Rect](arkts-test-uitest-rect-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIElementInfo-readonly componentRect?: Rect--><!--Device-UIElementInfo-readonly componentRect?: Rect-End-->
 
@@ -98,7 +100,9 @@ readonly text: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -112,13 +116,13 @@ readonly text: string
 readonly type: string
 ```
 
-控件/窗口类型。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+控件/窗口类型。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -132,15 +136,15 @@ readonly type: string
 readonly windowChangeType?: WindowChangeType
 ```
 
-窗口变化事件类型，若非窗口变化事件返回WindowChangeType.WINDOW_UNDEFINED。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+窗口变化事件类型，若非窗口变化事件返回WindowChangeType.WINDOW_UNDEFINED。 从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** [WindowChangeType](arkts-test-uitest-windowchangetype-e.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIElementInfo-readonly windowChangeType?: WindowChangeType--><!--Device-UIElementInfo-readonly windowChangeType?: WindowChangeType-End-->
 
@@ -152,15 +156,15 @@ readonly windowChangeType?: WindowChangeType
 readonly windowId?: number
 ```
 
-控件所属窗口id。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件所属窗口id。 从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIElementInfo-readonly windowId?: int--><!--Device-UIElementInfo-readonly windowId?: int-End-->
 

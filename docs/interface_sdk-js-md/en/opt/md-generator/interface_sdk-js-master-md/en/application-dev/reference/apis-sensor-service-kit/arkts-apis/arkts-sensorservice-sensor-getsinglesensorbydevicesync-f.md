@@ -14,7 +14,9 @@ function getSingleSensorByDeviceSync(type: SensorId, deviceId?: number): Array<S
 
 Obtains information about the sensor of a specific type.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sensor>-End-->
 

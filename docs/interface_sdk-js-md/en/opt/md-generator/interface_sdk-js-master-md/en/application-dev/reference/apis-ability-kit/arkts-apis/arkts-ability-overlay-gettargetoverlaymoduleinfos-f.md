@@ -14,7 +14,9 @@ function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCa
 
 Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
 
@@ -31,9 +33,9 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
 
 ## Examples
 
@@ -68,7 +70,9 @@ function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<Ov
 
 Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<OverlayModuleInfo>>--><!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<OverlayModuleInfo>>-End-->
 
@@ -90,9 +94,9 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
 
 ## Examples
 

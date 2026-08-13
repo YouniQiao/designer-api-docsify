@@ -1,10 +1,12 @@
 # HttpAuthHandler
 
-Defines the http auth request result, related to [onHttpAuthRequest](onHttpAuthRequest) method.
+Defines the http auth request result, related to onHttpAuthRequest method.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class HttpAuthHandler--><!--Device-unnamed-declare class HttpAuthHandler-End-->
 
@@ -21,6 +23,8 @@ Cancels HTTP authentication as requested by the user.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ Performs HTTP authentication with the user name and password provided by the use
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -71,6 +77,8 @@ Constructor.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpAuthHandler-constructor()--><!--Device-HttpAuthHandler-constructor()-End-->
@@ -88,6 +96,8 @@ Determine whether the credentials stored for the current host are suitable for u
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

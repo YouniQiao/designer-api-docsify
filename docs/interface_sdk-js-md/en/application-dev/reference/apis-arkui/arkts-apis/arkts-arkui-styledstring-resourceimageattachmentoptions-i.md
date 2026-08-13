@@ -6,6 +6,8 @@ Defines the ResourceImageAttachmentOptions.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface ResourceImageAttachmentOptions--><!--Device-unnamed-export declare interface ResourceImageAttachmentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Sets the color filter effect on the image attachment.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The Image Layout Style of the Resource Image.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ResourceImageAttachmentOptions-layoutStyle?: ImageAttachmentLayoutStyle--><!--Device-ResourceImageAttachmentOptions-layoutStyle?: ImageAttachmentLayoutStyle-End-->
@@ -63,6 +69,8 @@ Sets the zoom type of the ImageAttachment.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ The content of the ResourceImageAttachment.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ResourceImageAttachmentOptions-resourceValue: ResourceStr | undefined--><!--Device-ResourceImageAttachmentOptions-resourceValue: ResourceStr | undefined-End-->
@@ -104,6 +114,8 @@ size of the ResourceImage.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ResourceImageAttachmentOptions-size?: SizeOptions--><!--Device-ResourceImageAttachmentOptions-size?: SizeOptions-End-->
@@ -116,13 +128,15 @@ size of the ResourceImage.
 supportSvg2?: boolean
 ```
 
-Set the range of SVG parsing capabilities supported through enable switch.The default value is false.
+Set the range of SVG parsing capabilities supported through enable switch. The default value is false.
 
 **Type:** boolean
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +150,15 @@ Set the range of SVG parsing capabilities supported through enable switch.The de
 syncLoad?: boolean
 ```
 
-Sets the synchronous or asynchronous mode for image loading.The default parameter type is bool, and the default value is false.
+Sets the synchronous or asynchronous mode for image loading. The default parameter type is bool, and the default value is false.
 
 **Type:** boolean
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,6 +179,8 @@ Image vertical align.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

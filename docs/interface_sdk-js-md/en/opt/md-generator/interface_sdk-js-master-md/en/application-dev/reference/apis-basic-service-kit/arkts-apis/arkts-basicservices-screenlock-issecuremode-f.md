@@ -14,7 +14,7 @@ function isSecureMode(callback: AsyncCallback<boolean>): void
 
 Checks whether the screen lock of the current device is secure.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 9
 
@@ -51,7 +51,7 @@ function isSecureMode(): Promise<boolean>
 
 Checks whether the screen lock of the current device is secure.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 9
 

@@ -1,12 +1,6 @@
 # RichEditorParagraphStyleOptions
 
-Defines the paragraph style options.
-
-Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange).
-
-> **NOTE：**
-> 
-> Applicable scope of the API: spans involved in the specified range.
+Defines the paragraph style options. Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange). > **NOTE：**> > Applicable scope of the API: spans involved in the specified range.
 
 **Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange)
 
@@ -14,7 +8,9 @@ Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-declare interface RichEditorParagraphStyleOptions extends RichEditorRange--><!--Device-unnamed-declare interface RichEditorParagraphStyleOptions extends RichEditorRange-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface RichEditorParagraphStyleOptions--><!--Device-unnamed-declare interface RichEditorParagraphStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,6 +27,8 @@ Paragraph style.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

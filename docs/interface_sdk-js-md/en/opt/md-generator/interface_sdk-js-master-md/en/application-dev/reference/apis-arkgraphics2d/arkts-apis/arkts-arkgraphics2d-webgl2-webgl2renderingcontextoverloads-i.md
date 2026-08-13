@@ -4,6 +4,8 @@ WebGL 2.0
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface WebGL2RenderingContextOverloads--><!--Device-unnamed-interface WebGL2RenderingContextOverloads-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -17,6 +19,8 @@ bufferData(target: webgl.GLenum, size: webgl.GLsizeiptr, usage: webgl.GLenum): v
 Sets buffer data
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -41,6 +45,8 @@ bufferData(target: webgl.GLenum, srcData: BufferSource | null, usage: webgl.GLen
 Sets buffer data from BufferSource
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -72,6 +78,8 @@ Sets buffer data from ArrayBufferView with offset
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-bufferData(      target: webgl.GLenum,      srcData: ArrayBufferView,      usage: webgl.GLenum,      srcOffset: webgl.GLuint,      length?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-bufferData(      target: webgl.GLenum,      srcData: ArrayBufferView,      usage: webgl.GLenum,      srcOffset: webgl.GLuint,      length?: webgl.GLuint,    ): void-End-->
@@ -83,7 +91,7 @@ Sets buffer data from ArrayBufferView with offset
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 | usage | webgl.GLenum | Yes |
 | srcOffset | webgl.GLuint | Yes |
 | length | webgl.GLuint | No |
@@ -97,6 +105,8 @@ bufferSubData(target: webgl.GLenum, dstByteOffset: webgl.GLintptr, srcData: Buff
 Sets buffer sub data
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -128,6 +138,8 @@ Sets buffer sub data with offset
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-bufferSubData(      target: webgl.GLenum,      dstByteOffset: webgl.GLintptr,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,      length?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-bufferSubData(      target: webgl.GLenum,      dstByteOffset: webgl.GLintptr,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,      length?: webgl.GLuint,    ): void-End-->
@@ -140,7 +152,7 @@ Sets buffer sub data with offset
 | --- | --- | --- |
 | target | webgl.GLenum | Yes |
 | dstByteOffset | webgl.GLintptr | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 | length | webgl.GLuint | No |
 
@@ -162,6 +174,8 @@ compressedTexImage2D(
 Compressed texture image 2D from PBO offset
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -202,6 +216,8 @@ Compressed texture image 2D from ArrayBufferView
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-compressedTexImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-compressedTexImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void-End-->
@@ -218,7 +234,7 @@ Compressed texture image 2D from ArrayBufferView
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | border | webgl.GLint | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -241,6 +257,8 @@ compressedTexSubImage2D(
 Compressed texture sub image 2D from PBO offset
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -283,6 +301,8 @@ Compressed texture sub image 2D from ArrayBufferView
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-compressedTexSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-compressedTexSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void-End-->
@@ -300,7 +320,7 @@ Compressed texture sub image 2D from ArrayBufferView
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -322,6 +342,8 @@ Reads pixels from the framebuffer to ArrayBufferView
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-readPixels(      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      dstData: ArrayBufferView | null,    ): void--><!--Device-WebGL2RenderingContextOverloads-readPixels(      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      dstData: ArrayBufferView | null,    ): void-End-->
@@ -338,7 +360,7 @@ Reads pixels from the framebuffer to ArrayBufferView
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| dstData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## readPixels
 
@@ -357,6 +379,8 @@ readPixels(
 Reads pixels from the framebuffer to PBO offset
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -395,6 +419,8 @@ Reads pixels from the framebuffer to ArrayBufferView with offset
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-readPixels(      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      dstData: ArrayBufferView,      dstOffset: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-readPixels(      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      dstData: ArrayBufferView,      dstOffset: webgl.GLuint,    ): void-End-->
@@ -411,7 +437,7 @@ Reads pixels from the framebuffer to ArrayBufferView with offset
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| dstData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 | dstOffset | webgl.GLuint | Yes |
 
 ## texImage2D
@@ -434,6 +460,8 @@ Sets texture image 2D from pixels
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
@@ -452,7 +480,7 @@ Sets texture image 2D from pixels
 | border | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -470,6 +498,8 @@ texImage2D(
 Sets texture image 2D from TexImageSource
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -507,6 +537,8 @@ texImage2D(
 Sets texture image 2D from PBO offset
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -547,6 +579,8 @@ texImage2D(
 Sets texture image 2D from TexImageSource
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -589,6 +623,8 @@ Sets texture image 2D from ArrayBufferView with offset
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void-End-->
@@ -607,7 +643,7 @@ Sets texture image 2D from ArrayBufferView with offset
 | border | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 
 ## texSubImage2D
@@ -630,6 +666,8 @@ Sets texture sub image 2D from pixels
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
@@ -648,7 +686,7 @@ Sets texture sub image 2D from pixels
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texSubImage2D
 
@@ -667,6 +705,8 @@ texSubImage2D(
 Sets texture sub image 2D from TexImageSource
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -705,6 +745,8 @@ texSubImage2D(
 Sets texture sub image 2D from PBO offset
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -745,6 +787,8 @@ texSubImage2D(
 Sets texture sub image 2D from TexImageSource
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -787,6 +831,8 @@ Sets texture sub image 2D from ArrayBufferView with offset
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void-End-->
@@ -805,7 +851,7 @@ Sets texture sub image 2D from ArrayBufferView with offset
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 
 ## uniform1fv
@@ -822,6 +868,8 @@ uniform1fv(
 Sets uniform1fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -853,6 +901,8 @@ Sets uniform1iv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform1iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform1iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -882,6 +932,8 @@ uniform2fv(
 Sets uniform2fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -913,6 +965,8 @@ Sets uniform2iv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform2iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform2iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -942,6 +996,8 @@ uniform3fv(
 Sets uniform3fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -973,6 +1029,8 @@ Sets uniform3iv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform3iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform3iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -1002,6 +1060,8 @@ uniform4fv(
 Sets uniform4fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1033,6 +1093,8 @@ Sets uniform4iv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform4iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform4iv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Int32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -1063,6 +1125,8 @@ uniformMatrix2fv(
 Sets uniformMatrix2fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1096,6 +1160,8 @@ Sets uniformMatrix3fv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniformMatrix3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniformMatrix3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -1127,6 +1193,8 @@ uniformMatrix4fv(
 Sets uniformMatrix4fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

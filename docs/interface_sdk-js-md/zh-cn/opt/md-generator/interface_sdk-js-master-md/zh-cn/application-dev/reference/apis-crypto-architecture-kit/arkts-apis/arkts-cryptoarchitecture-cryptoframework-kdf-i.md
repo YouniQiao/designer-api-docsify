@@ -1,9 +1,10 @@
 # Kdf
 
-密钥派生函数（KDF）接口，定义基于密钥派生参数派生密钥的方法。调用前，需通过  
-[createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createKdf)方法创建一个Kdf实例。
+密钥派生函数（KDF）接口，定义基于密钥派生参数派生密钥的方法。调用前，需通过 [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createKdf)方法创建一个Kdf实例。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-interface Kdf--><!--Device-cryptoFramework-interface Kdf-End-->
 
@@ -19,7 +20,9 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 
 基于传入的密钥派生参数进行密钥派生。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,10 +43,10 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -99,7 +102,9 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 基于传入的密钥派生参数进行密钥派生。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -125,10 +130,10 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -182,13 +187,13 @@ kdfPromise.then(secret => {
 generateSecretSync(params: KdfSpec): DataBlob
 ```
 
-基于传入的密钥派生参数进行密钥派生，通过同步方式返回派生得到的密钥。
+基于传入的密钥派生参数进行密钥派生，通过同步方式返回派生得到的密钥。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，generateSecret。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[generateSecret](generateSecret)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob--><!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob-End-->
 
@@ -210,11 +215,11 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -262,7 +267,9 @@ readonly algName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

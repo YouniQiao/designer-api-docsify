@@ -6,6 +6,8 @@ Represents the details about a system update package.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-interface Package--><!--Device-systemManager-interface Package-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -22,13 +24,15 @@ import { systemManager } from '@kit.MDMKit';
 fd?: number
 ```
 
-File descriptor (FD) of the system update package. Currently, you cannot pass in **path** only. The **fd**parameter must also be passed in.
+File descriptor (FD) of the system update package. Currently, you cannot pass in **path** only. The **fd** parameter must also be passed in.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Path of the system update package. If **fd** is specified, pass in the update pa
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Package-path: string--><!--Device-Package-path: string-End-->
@@ -69,6 +75,8 @@ Type of the system update package.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

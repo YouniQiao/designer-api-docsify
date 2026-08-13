@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface GridColOptions--><!--Device-unnamed-export declare interface GridColOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ offset?: int | GridColColumnOption
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ order?: int | GridColColumnOption
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-GridColOptions-order?: int | GridColColumnOption--><!--Device-GridColOptions-order?: int | GridColColumnOption-End-->
@@ -56,13 +62,15 @@ order?: int | GridColColumnOption
 span?: int | GridColColumnOption
 ```
 
-栅格子组件占用栅格容器组件的列数。span为0表示该元素不参与布局计算，即不会被渲染。
+栅格子组件占用栅格容器组件的列数。 span为0表示该元素不参与布局计算，即不会被渲染。
 
 **类型：** int \| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

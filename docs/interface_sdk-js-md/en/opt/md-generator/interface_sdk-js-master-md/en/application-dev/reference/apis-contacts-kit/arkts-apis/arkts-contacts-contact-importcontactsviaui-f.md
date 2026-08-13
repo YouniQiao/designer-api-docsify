@@ -12,11 +12,11 @@ import { contact } from '@kit.ContactsKit';
 function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
-Imports multiple contacts through UI interaction.
-
- A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported.
+Imports multiple contacts through UI interaction. A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,15 +43,15 @@ Imports multiple contacts through UI interaction.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-operation-canceled) |
-| [16700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) |
-| [16700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) |
-| [16700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16700103](../errorcode-contacts.md#16700103-operation-canceled) |
+| [16700004](../errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum WebKeyboardAppearanceMode--><!--Device-unnamed-declare enum WebKeyboardAppearanceMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NONE_IMMERSIVE = 0
 默认皮肤模式，没有沉浸式风格。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ IMMERSIVE = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1--><!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1-End-->
@@ -50,6 +56,8 @@ LIGHT_IMMERSIVE = 2
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2--><!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2-End-->
@@ -65,6 +73,8 @@ DARK_IMMERSIVE = 3
 深色沉浸式风格。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

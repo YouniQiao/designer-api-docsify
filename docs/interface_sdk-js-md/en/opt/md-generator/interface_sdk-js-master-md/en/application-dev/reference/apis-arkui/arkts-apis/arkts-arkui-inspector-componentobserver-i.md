@@ -4,6 +4,8 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-inspector-interface ComponentObserver--><!--Device-inspector-interface ComponentObserver-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,90 +16,17 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 import { inspector } from '@kit.ArkUI';
 ```
 
-## off('layout')
-
-```TypeScript
-off(type: 'layout', callback?: () => void): void
-```
-
-Deregisters a callback with the corresponding query condition by using the handle.This callback is not triggered when the component layout complete.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ComponentObserver-off(type: 'layout', callback?: () => void): void--><!--Device-ComponentObserver-off(type: 'layout', callback?: () => void): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'layout' | Yes |
-| callback | () = & gt; void | No |
-
-## off('draw')
-
-```TypeScript
-off(type: 'draw', callback?: () => void): void
-```
-
-Deregisters a callback with the corresponding query condition by using the handle.This callback is not triggered when the component draw complete.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ComponentObserver-off(type: 'draw', callback?: () => void): void--><!--Device-ComponentObserver-off(type: 'draw', callback?: () => void): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'draw' | Yes |
-| callback | () = & gt; void | No |
-
-## off('drawChildren')
-
-```TypeScript
-off(type: 'drawChildren', callback?: Callback<void>): void
-```
-
-Deregisters a callback with the corresponding query condition by using the handle.This callback is not triggered when the child of component draw complete.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-ComponentObserver-off(type: 'drawChildren', callback?: Callback<void>): void--><!--Device-ComponentObserver-off(type: 'drawChildren', callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'drawChildren' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
 ## offDrawChildren
 
 ```TypeScript
 offDrawChildren(callback?: Callback<number[]>): void
 ```
 
-Deregisters a callback with the corresponding query condition by using the handle.This callback is not triggered when the child of component draw complete.
+Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the child of component draw complete.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,9 +85,11 @@ struct ImageExample {
 offLayoutChildren(callback?: Callback<void>): void
 ```
 
-Deregisters a callback with the corresponding query condition by using the handle.This callback will not be triggered when the child of component layout is complete.
+Deregisters a callback with the corresponding query condition by using the handle. This callback will not be triggered when the child of component layout is complete.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,7 +107,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 ## Examples
 
-The following example demonstrates how to register the component layout and drawing completion callbacks. In addition, you can use the [onLayoutChildren23+](#onlayoutchildren23) API to listen for the callback event triggered when the layout of a node in the subtree is complete.
+The following example demonstrates how to register the component layout and drawing completion callbacks. In addition, you can use the [onLayoutChildren23+](#onLayoutChildren) API to listen for the callback event triggered when the layout of a node in the subtree is complete.
 
 ```TypeScript
 import { inspector } from '@kit.ArkUI';
@@ -243,46 +174,23 @@ struct ImageExample {
 }
 ```
 
-## on('layout')
+## off_draw
 
 ```TypeScript
-on(type: 'layout', callback: () => void): void
+off(type: 'draw', callback?: () => void): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle.This callback is triggered when the component layout complete.
+Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the component draw complete.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ComponentObserver-on(type: 'layout', callback: () => void): void--><!--Device-ComponentObserver-on(type: 'layout', callback: () => void): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'layout' | Yes |
-| callback | () = & gt; void | Yes |
-
-## on('draw')
-
-```TypeScript
-on(type: 'draw', callback: () => void): void
-```
-
-Registers a callback with the corresponding query condition by using the handle.This callback is triggered when the component draw complete.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ComponentObserver-on(type: 'draw', callback: () => void): void--><!--Device-ComponentObserver-on(type: 'draw', callback: () => void): void-End-->
+<!--Device-ComponentObserver-off(type: 'draw', callback?: () => void): void--><!--Device-ComponentObserver-off(type: 'draw', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -291,23 +199,25 @@ Registers a callback with the corresponding query condition by using the handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'draw' | Yes |
-| callback | () = & gt; void | Yes |
+| callback | () = & gt; void | No |
 
-## on('drawChildren')
+## off_drawChildren
 
 ```TypeScript
-on(type: 'drawChildren', callback: Callback<void>): void
+off(type: 'drawChildren', callback?: Callback<void>): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle.This callback is triggered when the child of component draw complete.
+Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the child of component draw complete.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-ComponentObserver-on(type: 'drawChildren', callback: Callback<void>): void--><!--Device-ComponentObserver-on(type: 'drawChildren', callback: Callback<void>): void-End-->
+<!--Device-ComponentObserver-off(type: 'drawChildren', callback?: Callback<void>): void--><!--Device-ComponentObserver-off(type: 'drawChildren', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -316,7 +226,34 @@ Registers a callback with the corresponding query condition by using the handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'drawChildren' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+## off_layout
+
+```TypeScript
+off(type: 'layout', callback?: () => void): void
+```
+
+Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the component layout complete.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentObserver-off(type: 'layout', callback?: () => void): void--><!--Device-ComponentObserver-off(type: 'layout', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'layout' | Yes |
+| callback | () = & gt; void | No |
 
 ## onDrawChildren
 
@@ -324,9 +261,11 @@ Registers a callback with the corresponding query condition by using the handle.
 onDrawChildren(callback: Callback<number[]>): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle.This callback is triggered when the child of component draw complete.
+Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the child of component draw complete.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -344,7 +283,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 ## Examples
 
-The following example demonstrates how to register the component layout and drawing completion callbacks. A callback is registered through the [onDrawChildren24+](#ondrawchildren24) API. After the rendering of the node in the subtree is complete, the callback returns the unique ID of the node.
+The following example demonstrates how to register the component layout and drawing completion callbacks. A callback is registered through the [onDrawChildren24+](#onDrawChildren) API. After the rendering of the node in the subtree is complete, the callback returns the unique ID of the node.
 
 ```TypeScript
 import { inspector } from '@kit.ArkUI';
@@ -385,9 +324,11 @@ struct ImageExample {
 onLayoutChildren(callback: Callback<void>): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle.This callback will be triggered when the child of component layout is complete.
+Registers a callback with the corresponding query condition by using the handle. This callback will be triggered when the child of component layout is complete.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -402,3 +343,84 @@ Registers a callback with the corresponding query condition by using the handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+## on_draw
+
+```TypeScript
+on(type: 'draw', callback: () => void): void
+```
+
+Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the component draw complete.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentObserver-on(type: 'draw', callback: () => void): void--><!--Device-ComponentObserver-on(type: 'draw', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'draw' | Yes |
+| callback | () = & gt; void | Yes |
+
+## on_drawChildren
+
+```TypeScript
+on(type: 'drawChildren', callback: Callback<void>): void
+```
+
+Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the child of component draw complete.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ComponentObserver-on(type: 'drawChildren', callback: Callback<void>): void--><!--Device-ComponentObserver-on(type: 'drawChildren', callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'drawChildren' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+## on_layout
+
+```TypeScript
+on(type: 'layout', callback: () => void): void
+```
+
+Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the component layout complete.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentObserver-on(type: 'layout', callback: () => void): void--><!--Device-ComponentObserver-on(type: 'layout', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'layout' | Yes |
+| callback | () = & gt; void | Yes |

@@ -1,10 +1,12 @@
 # ShapeMask
 
-Defines ShapeMask.
+Describes the shape mask.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ShapeMask--><!--Device-unnamed-export declare class ShapeMask-End-->
 
@@ -16,13 +18,17 @@ Defines ShapeMask.
 constructor()
 ```
 
-Constructor.
+A constructor used to create a **ShapeMask** instance.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShapeMask-constructor()--><!--Device-ShapeMask-constructor()-End-->
 
@@ -34,13 +40,17 @@ Constructor.
 setCircleShape(circle: Circle): void
 ```
 
-Set the circle shape of the ShapeMask.
+Sets a round mask.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShapeMask-setCircleShape(circle: Circle): void--><!--Device-ShapeMask-setCircleShape(circle: Circle): void-End-->
 
@@ -50,7 +60,54 @@ Set the circle shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | The circle shape will be set. |
+| circle | [Circle](../../apis-na/arkts-apis/arkts-na-graphics-circle-i.md) | Yes | Round shape. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setCircleShape({ centerY: uiContext.vp2px(75), centerX: uiContext.vp2px(75), radius: uiContext.vp2px(75) });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setCommandPath
 
@@ -58,13 +115,17 @@ Set the circle shape of the ShapeMask.
 setCommandPath(path: CommandPath): void
 ```
 
-Set the command path of the ShapeMask.
+Sets the command for drawing a path.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShapeMask-setCommandPath(path: CommandPath): void--><!--Device-ShapeMask-setCommandPath(path: CommandPath): void-End-->
 
@@ -74,7 +135,55 @@ Set the command path of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | The command path will be set. |
+| path | [CommandPath](../../apis-na/arkts-apis/arkts-na-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+const mask = new ShapeMask();
+mask.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+mask.fillColor = 0X55FF0000;
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.shapeMask = mask;
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setOvalShape
 
@@ -82,13 +191,17 @@ Set the command path of the ShapeMask.
 setOvalShape(oval: Rect): void
 ```
 
-Set the oval shape of the ShapeMask.
+Sets an oval mask.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShapeMask-setOvalShape(oval: Rect): void--><!--Device-ShapeMask-setOvalShape(oval: Rect): void-End-->
 
@@ -98,7 +211,49 @@ Set the oval shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | [Rect](arkts-arkui-rect-t.md) | Yes | The oval shape will be set. |
+| oval | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Oval shape. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setOvalShape({ left: 0, right: uiContext.vp2px(150), top: 0, bottom: uiContext.vp2px(100) });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setRectShape
 
@@ -106,13 +261,17 @@ Set the oval shape of the ShapeMask.
 setRectShape(rect: Rect): void
 ```
 
-Set the rect shape of the ShapeMask.
+Sets a rectangle mask.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShapeMask-setRectShape(rect: Rect): void--><!--Device-ShapeMask-setRectShape(rect: Rect): void-End-->
 
@@ -122,7 +281,59 @@ Set the rect shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [Rect](arkts-arkui-rect-t.md) | Yes | The rect shape will be set. |
+| rect | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Shape of the rectangle. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setRectShape({
+      left: 0,
+      right: uiContext.vp2px(150),
+      top: 0,
+      bottom: uiContext.vp2px(150)
+    });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setRoundRectShape
 
@@ -130,13 +341,17 @@ Set the rect shape of the ShapeMask.
 setRoundRectShape(roundRect: RoundRect): void
 ```
 
-Set the round rect shape of the ShapeMask.
+Sets the mask in the shape of a rectangle with rounded corners.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShapeMask-setRoundRectShape(roundRect: RoundRect): void--><!--Device-ShapeMask-setRoundRectShape(roundRect: RoundRect): void-End-->
 
@@ -146,71 +361,134 @@ Set the round rect shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | Yes | The round rect shape will be set. |
+| roundRect | [RoundRect](../../apis-na/arkts-apis/arkts-na-graphics-roundrect-i.md) | Yes | Shape of the rectangle with rounded corners. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask,RoundRect} from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    const roundRect: RoundRect = {
+      rect: { left: 0, top: 0, right: uiContext.vp2px(150), bottom: uiContext.vp2px(150) },
+      corners: {
+        topLeft: { x: 32, y: 32 },
+        topRight: { x: 32, y: 32 },
+        bottomLeft: { x: 32, y: 32 },
+        bottomRight: { x: 32, y: 32 }
+      }
+    }
+    mask.setRoundRectShape(roundRect);
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## fillColor
 
 ```TypeScript
-fillColor: int
+fillColor: number
 ```
 
-The fill color of the ShapeMask.The value should be an integer.
+Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
 
-**Type:** int
+**Type:** number
 
 **Default:** 0XFF000000
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ShapeMask-fillColor: int--><!--Device-ShapeMask-fillColor: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-fillColor: number--><!--Device-ShapeMask-fillColor: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeColor
 
 ```TypeScript
-strokeColor: int
+strokeColor: number
 ```
 
-The stroke color of the ShapeMask.The value should be an integer.
+Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
 
-**Type:** int
+**Type:** number
 
 **Default:** 0XFF000000
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ShapeMask-strokeColor: int--><!--Device-ShapeMask-strokeColor: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-strokeColor: number--><!--Device-ShapeMask-strokeColor: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeWidth
 
 ```TypeScript
-strokeWidth: double
+strokeWidth: number
 ```
 
-The stroke width of the ShapeMask.
+Sets the stroke width for the mask, in px. The default value is **0**.
 
-**Type:** double
+**Type:** number
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ShapeMask-strokeWidth: double--><!--Device-ShapeMask-strokeWidth: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-strokeWidth: number--><!--Device-ShapeMask-strokeWidth: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

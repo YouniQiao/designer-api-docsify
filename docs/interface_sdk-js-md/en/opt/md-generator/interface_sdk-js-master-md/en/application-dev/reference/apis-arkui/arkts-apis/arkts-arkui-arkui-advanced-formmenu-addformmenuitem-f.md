@@ -9,6 +9,7 @@ import { AddFormMenuItem, AddFormOptions, FormMenuItemStyle } from '@kit.ArkUI';
 ## AddFormMenuItem
 
 ```TypeScript
+@Builder
 export declare function AddFormMenuItem(
   want: Want,
   componentId: string,
@@ -18,13 +19,13 @@ export declare function AddFormMenuItem(
 
 Build function of AddFormMenuItem.
 
-**Since:** 12
+**Since:** 23
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-unnamed-export declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void--><!--Device-unnamed-export declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void-End-->
+<!--Device-unnamed-@Builderexport declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void--><!--Device-unnamed-@Builderexport declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,4 +35,4 @@ Build function of AddFormMenuItem.
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | componentId | string | Yes |
-| options | [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | No |
+| options | AddFormOptions | No |

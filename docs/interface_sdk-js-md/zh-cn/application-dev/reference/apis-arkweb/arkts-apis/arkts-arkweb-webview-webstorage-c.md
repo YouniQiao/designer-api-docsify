@@ -1,12 +1,12 @@
 # WebStorage
 
-Implements a WebStorage object to manage the Web SQL database and HTML5 Web Storage APIs.All Web components in an application share a WebStorage object.
+通过WebStorage可管理Web SQL数据库接口和HTML5 Web存储接口，每个应用中的所有Web组件共享一个WebStorage。 > **说明：** > > - 本Class首批接口从API version 9开始支持。 > > - 示例效果请以真机运行为准。 > > - 目前调用WebStorage下的方法，都需要先加载Web组件。 > > - 本Class下的接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的管理失效。ArkWeb内核版本参考ArkWeb简介 > [约束与限制](../../../web/web-component-overview.md#约束与限制)。
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;You must load the Web component before calling the APIs in WebStorage.&lt;/p&gt;
+**起始版本：** 9
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 <!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
 
@@ -18,11 +18,15 @@ Implements a WebStorage object to manage the Web SQL database and HTML5 Web Stor
 static deleteAllData(incognito?: boolean): void
 ```
 
-Deletes all data in the Web SQL Database.
+清除被JavaScript存储API使用的所有存储数据，这包括Web SQL数据库和HTML5支持的Web存储API。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorage-static deleteAllData(incognito?: boolean): void--><!--Device-WebStorage-static deleteAllData(incognito?: boolean): void-End-->
 
@@ -32,7 +36,7 @@ Deletes all data in the Web SQL Database.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | Whether to delete all data in the Web SQL Database in incognito mode. {@code true} means to delete all data in the Web SQL Database in incognito mode; {@code false} means to delete all data in the Web SQL Database in normal non-incognito mode. |
+| incognito | boolean | 否 | true表示删除所有隐私模式下内存中的web数据，false表示删除正常非隐私模式下Web的SQL数据库当前使用的所有存储。&lt;br&gt;默认值：false。&lt;br&gt;传入 undefined或null时为false。<br>**起始版本：** 11 |
 
 ## deleteOrigin
 
@@ -40,11 +44,15 @@ Deletes all data in the Web SQL Database.
 static deleteOrigin(origin: string): void
 ```
 
-Deletes all data in the specified origin.
+清除指定源所使用的存储。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorage-static deleteOrigin(origin: string): void--><!--Device-WebStorage-static deleteOrigin(origin: string): void-End-->
 
@@ -54,28 +62,32 @@ Deletes all data in the specified origin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | Index of the origin, which is obtained through [getOrigins](#getOrigins). |
+| origin | string | 是 | 指定源的字符串索引，来自于 getOrigins。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
 
 ## getOriginQuota
 
 ```TypeScript
-static getOriginQuota(origin: string): Promise<double>
+static getOriginQuota(origin: string): Promise<number>
 ```
 
-Get the web storage quota with the origin.
+以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebStorage-static getOriginQuota(origin: string): Promise<double>--><!--Device-WebStorage-static getOriginQuota(origin: string): Promise<double>-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -83,34 +95,38 @@ Get the web storage quota with the origin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | The origin which to be inquired. |
+| origin | string | 是 | 指定源的字符串索引 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;double&gt; | the promise returned by the function. Unit: byte. |
+| Promise&lt;number&gt; | Promise实例，用于获取指定源的存储配额。 &lt;br&gt;单位：byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. @static |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
 
 ## getOriginQuota
 
 ```TypeScript
-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void
+static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 ```
 
-Get the web storage quota with the origin.
+使用callback回调异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -118,29 +134,33 @@ Get the web storage quota with the origin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | The origin which to be inquired. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | the callback of getOriginQuota. |
+| origin | string | 是 | 指定源的字符串索引。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 指定源的存储配额。&lt;br&gt;number是long型整数，范围为[-2147483648, 2147483647]。&lt;br&gt;单位：byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. @static |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
 
 ## getOriginUsage
 
 ```TypeScript
-static getOriginUsage(origin: string): Promise<double>
+static getOriginUsage(origin: string): Promise<number>
 ```
 
-Get the web amount of storage with the origin.
+以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebStorage-static getOriginUsage(origin: string): Promise<double>--><!--Device-WebStorage-static getOriginUsage(origin: string): Promise<double>-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -148,34 +168,38 @@ Get the web amount of storage with the origin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | The origin which to be inquired. |
+| origin | string | 是 | 指定源的字符串索引 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;double&gt; | the promise returned by the function. Unit: byte. |
+| Promise&lt;number&gt; | Promise实例，用于获取指定源的存储量。 &lt;br&gt;单位：byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. @static |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
 
 ## getOriginUsage
 
 ```TypeScript
-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void
+static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 ```
 
-Get the web amount of storage with the origin.
+以回调方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -183,15 +207,15 @@ Get the web amount of storage with the origin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | The origin which to be inquired. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | the callback of getOriginUsage. |
+| origin | string | 是 | 指定源的字符串索引 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 指定源的存储量。&lt;br&gt;单位：byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. @static |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
 
 ## getOrigins
 
@@ -199,11 +223,15 @@ Get the web amount of storage with the origin.
 static getOrigins(): Promise<Array<WebStorageOrigin>>
 ```
 
-Obtains information about all origins that are currently using the Web SQL Database.This API uses a promise to return the result.
+以Promise方式异步获取当前使用Web SQL数据库和HTML5支持的Web存储API的所有源的信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>--><!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>-End-->
 
@@ -213,14 +241,14 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. For details, see { |
+| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100012-无可获取的webstorage源) | Invalid web storage origin. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100012](../errorcode-webview.md#17100012-无可获取的webstorage源) | Invalid web storage origin. |
 
 ## getOrigins
 
@@ -228,11 +256,15 @@ Obtains information about all origins that are currently using the Web SQL Datab
 static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 ```
 
-Obtains information about all origins that are currently using the Web SQL Database.This API uses an asynchronous callback to return the result.
+以回调方式异步获取当前使用Web SQL数据库和HTML5支持的Web存储API的所有源的信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void--><!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void-End-->
 
@@ -242,12 +274,12 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | Callback used to return the information about the origins. For details, see [WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md#WebStorageOrigin). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100012-无可获取的webstorage源) | Invalid web storage origin. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100012](../errorcode-webview.md#17100012-无可获取的webstorage源) | Invalid web storage origin. |
 

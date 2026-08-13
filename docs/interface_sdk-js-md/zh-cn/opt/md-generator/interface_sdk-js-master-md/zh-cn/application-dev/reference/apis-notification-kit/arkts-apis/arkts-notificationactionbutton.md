@@ -1,4 +1,4 @@
-# notificationActionButton(Describes an action button displayed in a notification)
+# notificationActionButton
 
 ## 汇总
 

@@ -12,6 +12,8 @@ Defines GestureGroup Component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const GestureGroup: GestureGroupInterface--><!--Device-unnamed-declare const GestureGroup: GestureGroupInterface-End-->
@@ -29,6 +31,8 @@ Defines LongPressGesture Component.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,6 +52,8 @@ Defines PanGesture Component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const PanGesture: PanGestureInterface--><!--Device-unnamed-declare const PanGesture: PanGestureInterface-End-->
@@ -65,6 +71,8 @@ Defines PinchGesture Component.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,6 +92,8 @@ Defines RotationGesture Component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const RotationGesture: RotationGestureInterface--><!--Device-unnamed-declare const RotationGesture: RotationGestureInterface-End-->
@@ -102,6 +112,8 @@ Defines SwipeGesture Component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const SwipeGesture: SwipeGestureInterface--><!--Device-unnamed-declare const SwipeGesture: SwipeGestureInterface-End-->
@@ -119,6 +131,8 @@ Defines TapGesture Component.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,10 +1,12 @@
 # PickerColorMode
 
-PickerColorMode. include AUTO, LIGHT and DARK
+Enumerates the Picker color modes.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum PickerColorMode--><!--Device-unnamed-export declare enum PickerColorMode-End-->
 
@@ -16,13 +18,15 @@ PickerColorMode. include AUTO, LIGHT and DARK
 AUTO = 0
 ```
 
-AUTO. follow system color
+Same with the system.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerColorMode-AUTO = 0--><!--Device-PickerColorMode-AUTO = 0-End-->
 
@@ -34,13 +38,15 @@ AUTO. follow system color
 LIGHT = 1
 ```
 
-LIGHT. light color
+Light mode.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerColorMode-LIGHT = 1--><!--Device-PickerColorMode-LIGHT = 1-End-->
 
@@ -52,13 +58,15 @@ LIGHT. light color
 DARK = 2
 ```
 
-DARK. dark color
+Dark mode.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerColorMode-DARK = 2--><!--Device-PickerColorMode-DARK = 2-End-->
 

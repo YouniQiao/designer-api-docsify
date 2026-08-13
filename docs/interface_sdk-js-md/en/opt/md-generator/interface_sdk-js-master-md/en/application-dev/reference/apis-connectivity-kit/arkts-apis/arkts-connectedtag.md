@@ -4,6 +4,8 @@ Provides methods to operate or manage Connected Tag.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace connectedTag--><!--Device-unnamed-declare namespace connectedTag-End-->
 
 **System capability:** SystemCapability.Communication.ConnectedTag
@@ -22,18 +24,18 @@ import { connectedTag } from '@kit.ConnectivityKit';
 | --- |
 | [init](arkts-connectivity-connectedtag-init-f.md#init) |
 | [initialize](arkts-connectivity-connectedtag-initialize-f.md#initialize) |
-| [off](arkts-connectivity-connectedtag-off-f.md#off) |
-| [on](arkts-connectivity-connectedtag-on-f.md#on) |
+| [off_notify](arkts-connectivity-connectedtag-offnotify-f.md#off_notify) |
+| [on_notify](arkts-connectivity-connectedtag-onnotify-f.md#on_notify) |
 | [read](arkts-connectivity-connectedtag-read-f.md#read) |
-| [read](arkts-connectivity-connectedtag-read-f.md#read-1) |
-| [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md#readndeftag) |
-| [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md#readndeftag-1) |
+| [read](arkts-connectivity-connectedtag-read-f.md#read) |
+| [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md#readNdefTag) |
+| [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md#readNdefTag) |
 | [uninit](arkts-connectivity-connectedtag-uninit-f.md#uninit) |
 | [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md#uninitialize) |
 | [write](arkts-connectivity-connectedtag-write-f.md#write) |
-| [write](arkts-connectivity-connectedtag-write-f.md#write-1) |
-| [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md#writendeftag) |
-| [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md#writendeftag-1) |
+| [write](arkts-connectivity-connectedtag-write-f.md#write) |
+| [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md#writeNdefTag) |
+| [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md#writeNdefTag) |
 
 ### Enums
 

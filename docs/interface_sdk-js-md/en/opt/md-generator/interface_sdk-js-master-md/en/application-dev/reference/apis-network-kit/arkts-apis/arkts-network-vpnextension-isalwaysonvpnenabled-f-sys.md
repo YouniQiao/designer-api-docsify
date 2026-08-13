@@ -16,6 +16,8 @@ Get the Always on VPN mode status for a device.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -42,6 +44,6 @@ Get the Always on VPN mode status for a device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

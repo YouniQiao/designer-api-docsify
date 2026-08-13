@@ -2,9 +2,11 @@
 
 表示媒体源的类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum SourceType--><!--Device-webview-enum SourceType-End-->
 
@@ -18,9 +20,13 @@ URL = 0
 
 媒体源的类型是URL。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SourceType-URL = 0--><!--Device-SourceType-URL = 0-End-->
 
@@ -34,9 +40,13 @@ MSE = 1
 
 媒体源的类型是blob。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SourceType-MSE = 1--><!--Device-SourceType-MSE = 1-End-->
 

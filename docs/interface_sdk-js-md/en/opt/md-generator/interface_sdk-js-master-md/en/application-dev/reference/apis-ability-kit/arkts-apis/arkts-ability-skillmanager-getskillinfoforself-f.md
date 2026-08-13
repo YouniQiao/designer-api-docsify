@@ -16,6 +16,8 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,4 +45,4 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 | Error Code ID |
 | --- |
 | 17700093 |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |

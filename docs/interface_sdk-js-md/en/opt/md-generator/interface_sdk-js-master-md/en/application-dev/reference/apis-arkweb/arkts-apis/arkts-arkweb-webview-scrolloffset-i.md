@@ -4,6 +4,8 @@ Represents the current scrolling offset of a web page.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,17 +22,13 @@ import { webview } from '@kit.ArkWeb';
 x: number
 ```
 
-Horizontal scrolling offset of a web page. The value is the difference between the x-coordinate of the left boundary of the web page and that of the left boundary of the **Web** component.
-
-When the web page is scrolled rightwards, the value is negative.
-
-When the web page is not scrolled or scrolled leftwards, the value is **0** or positive.
-
-Unit: vp
+Horizontal scrolling offset of a web page. The value is the difference between the x-coordinate of the left boundary of the web page and that of the left boundary of the **Web** component. When the web page is scrolled rightwards, the value is negative. When the web page is not scrolled or scrolled leftwards, the value is **0** or positive. Unit: vp
 
 **Type:** number
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -44,17 +42,13 @@ Unit: vp
 y: number
 ```
 
-Vertical scrolling offset of a web page. The value is the difference between the y-coordinate of the upper boundary of the web page and that of the upper boundary of the **Web** component.
-
-When the web page is scrolled downwards, the value is negative.
-
-When the web page is not scrolled or scrolled upwards, the value is **0** or positive.
-
-Unit: vp
+Vertical scrolling offset of a web page. The value is the difference between the y-coordinate of the upper boundary of the web page and that of the upper boundary of the **Web** component. When the web page is scrolled downwards, the value is negative. When the web page is not scrolled or scrolled upwards, the value is **0** or positive. Unit: vp
 
 **Type:** number
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

@@ -1,20 +1,12 @@
 # OffscreenCanvas
 
-The **OffscreenCanvas** component is used to draw custom graphics.
-
-When the  
-[Canvas](Canvas)component or **CanvasRenderingContext2D** object is used, rendering, animation,and user interaction usually occur on the main thread of the application.Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
-
-> **NOTE：**
-> 
-> **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended
-> that you use the
-> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
-> for offscreen drawing in ServiceExtensionAbility.
+The **OffscreenCanvas** component is used to draw custom graphics. When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread. > **NOTE：**> > **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended > that you use the > [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) > for offscreen drawing in ServiceExtensionAbility.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class OffscreenCanvas--><!--Device-unnamed-declare class OffscreenCanvas-End-->
 
@@ -31,6 +23,8 @@ Constructs an OffscreenCanvas for creating an offscreen canvas object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -53,11 +47,13 @@ Constructs an OffscreenCanvas for creating an offscreen canvas object.
 constructor(width: number, height: number, unit: LengthMetricsUnit)
 ```
 
-Constructs an **OffscreenCanvas** object for creating an offscreen canvas object.The unit mode is configurable for the **OffscreenCanvas** object.
+Constructs an **OffscreenCanvas** object for creating an offscreen canvas object. The unit mode is configurable for the **OffscreenCanvas** object.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,6 +84,8 @@ Obtains the drawing context of the offscreen canvas.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,6 +120,8 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -142,15 +142,15 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 height: number
 ```
 
-Height of the offscreen canvas.
-
-Default unit: vp
+Height of the offscreen canvas. Default unit: vp
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -166,15 +166,15 @@ Default unit: vp
 width: number
 ```
 
-Width of the offscreen canvas.
-
-Default unit: vp
+Width of the offscreen canvas. Default unit: vp
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

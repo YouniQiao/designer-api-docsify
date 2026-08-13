@@ -6,7 +6,9 @@ export type RunningMultiAppInfo = _RunningMultiAppInfo
 
 Defines the information of an application in multi-app mode in the running state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appManager-export type RunningMultiAppInfo = _RunningMultiAppInfo--><!--Device-appManager-export type RunningMultiAppInfo = _RunningMultiAppInfo-End-->
 

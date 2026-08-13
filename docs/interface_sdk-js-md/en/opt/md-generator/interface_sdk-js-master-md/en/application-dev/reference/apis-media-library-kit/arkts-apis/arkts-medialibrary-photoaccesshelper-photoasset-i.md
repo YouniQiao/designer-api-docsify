@@ -2,7 +2,9 @@
 
 PhotoAsset provides APIs for encapsulating file asset attributes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoAsset--><!--Device-photoAccessHelper-interface PhotoAsset-End-->
 
@@ -22,7 +24,9 @@ clone(title: string): Promise<PhotoAsset>
 
 Clones a media asset. The file name can be set, but the file type cannot be changed. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -46,8 +50,8 @@ Clones a media asset. The file name can be set, but the file type cannot be chan
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## close
@@ -62,7 +66,7 @@ Closes the current file. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 11
 
-**Substitutes:** [close](@ohos.file.fs:fileIo.close)
+**Substitutes:** close
 
 <!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -80,7 +84,7 @@ Closes the current file. This API uses an asynchronous callback to return the re
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000011 |
 
 ## close
@@ -95,7 +99,7 @@ Closes the current file. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [close](@ohos.file.fs:fileIo.close)
+**Substitutes:** close
 
 <!--Device-PhotoAsset-close(fd: number): Promise<void>--><!--Device-PhotoAsset-close(fd: number): Promise<void>-End-->
 
@@ -118,7 +122,7 @@ Closes the current file. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000011 |
 
 ## commitModify
@@ -129,7 +133,9 @@ commitModify(callback: AsyncCallback<void>): void
 
 Commits the modification on the file metadata to the database. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -150,10 +156,10 @@ Commits the modification on the file metadata to the database. This API uses an 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
 | 13900012 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## commitModify
@@ -164,7 +170,9 @@ commitModify(): Promise<void>
 
 Commits the modification on the file metadata to the database. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -185,10 +193,10 @@ Commits the modification on the file metadata to the database. This API uses a p
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
 | 13900012 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## get
@@ -199,7 +207,9 @@ get(member: string): MemberType
 
 Obtains a **PhotoAsset** member parameter.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -232,15 +242,13 @@ Obtains a **PhotoAsset** member parameter.
 getReadOnlyFd(callback: AsyncCallback<number>): void
 ```
 
-Opens this file in read-only mode. This API uses an asynchronous callback to return the result.
-
-The returned FD must be closed when it is not required.
+Opens this file in read-only mode. This API uses an asynchronous callback to return the result. The returned FD must be closed when it is not required.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -259,8 +267,8 @@ The returned FD must be closed when it is not required.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## getReadOnlyFd
@@ -269,15 +277,13 @@ The returned FD must be closed when it is not required.
 getReadOnlyFd(): Promise<number>
 ```
 
-Opens this file in read-only mode. This API uses a promise to return the result.
-
-The returned FD must be closed when it is not required.
+Opens this file in read-only mode. This API uses a promise to return the result. The returned FD must be closed when it is not required.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -296,8 +302,8 @@ The returned FD must be closed when it is not required.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## getThumbnail
@@ -308,7 +314,9 @@ getThumbnail(callback: AsyncCallback<image.PixelMap>): void
 
 Obtains the thumbnail of a file. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -329,7 +337,7 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
 | 14000011 |
 
@@ -341,7 +349,9 @@ getThumbnail(size: image.Size, callback: AsyncCallback<image.PixelMap>): void
 
 Obtains the file thumbnail of the given size. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -363,7 +373,7 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
 | 14000011 |
 
@@ -375,7 +385,9 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 
 Obtains the file thumbnail of the given size. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -402,7 +414,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
 | 14000011 |
 
@@ -414,7 +426,9 @@ set(member: string, value: string): void
 
 Sets a **PhotoAsset** member parameter.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAsset-set(member: string, value: string): void--><!--Device-PhotoAsset-set(member: string, value: string): void-End-->
 
@@ -432,7 +446,7 @@ Sets a **PhotoAsset** member parameter.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000014 |
 
 ## displayName
@@ -445,7 +459,9 @@ File name, including the file name extension, to display. The string length rang
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -463,7 +479,9 @@ Type of the file.
 
 **Type:** PhotoType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -477,12 +495,13 @@ Type of the file.
 readonly uri: string
 ```
 
-Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayName.jpg**. For details, see   
-[Media File URI](../../../file-management/user-file-uri-intro.md#media-file-uri).
+Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayName.jpg**. For details, see [Media File URI](../../../file-management/user-file-uri-intro.md#media-file-uri).
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

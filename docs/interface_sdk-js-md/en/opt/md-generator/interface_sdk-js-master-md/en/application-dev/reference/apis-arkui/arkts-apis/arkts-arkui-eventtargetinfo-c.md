@@ -4,6 +4,8 @@ Provides the information about the component corresponding to the gesture recogn
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class EventTargetInfo--><!--Device-unnamed-declare class EventTargetInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getId(): string
 Obtains the ID of this component.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ getUniqueId(): number
 Returns the unique ID of the current component.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

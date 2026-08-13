@@ -2,7 +2,9 @@
 
 定义用于指定节点几何体形变目标的Morpher接口.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Morpher--><!--Device-unnamed-export interface Morpher-End-->
 
@@ -18,7 +20,9 @@ readonly targets: Record<string, number>
 
 **类型：** Record&lt;string, number&gt;
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Morpher-readonly targets: Record<string, double>--><!--Device-Morpher-readonly targets: Record<string, double>-End-->
 

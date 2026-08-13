@@ -2,7 +2,9 @@
 
 Provides callbacks for IDM.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface IIdmCallback--><!--Device-osAccount-interface IIdmCallback-End-->
 
@@ -24,37 +26,17 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: Uint8Array) => void
 
 Called to acquire IDM information.
 
-**Since:** 8
+**Type:** (module: number, acquire: number, extraInfo: Uint8Array) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IIdmCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void--><!--Device-IIdmCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| module | number | Yes |
-| acquire | number | Yes |
-| extraInfo | Uint8Array | Yes |
-
-## Examples
-
-```TypeScript
-let idmCallback: osAccount.IIdmCallback = {
-  onResult: (result: number, extraInfo: Object) => {
-    console.info('callback result = ' + result)
-    console.info('callback onResult = ' + JSON.stringify(extraInfo));
-  },
-  onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
-    console.info('callback module = ' + module);
-    console.info('callback acquire = ' + acquire);
-    console.info('callback onacquireinfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```
 
 ## onResult
 
@@ -64,28 +46,14 @@ onResult: (result: number, extraInfo: RequestResult) => void
 
 Called to return the result code and request result information.
 
-**Since:** 8
+**Type:** (result: number, extraInfo: RequestResult) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IIdmCallback-onResult: (result: int, extraInfo: RequestResult) => void--><!--Device-IIdmCallback-onResult: (result: int, extraInfo: RequestResult) => void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | number | Yes |
-| extraInfo | [RequestResult](arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes |
-
-## Examples
-
-```TypeScript
-let idmCallback: osAccount.IIdmCallback = {
-  onResult: (result: number, extraInfo: osAccount.RequestResult) => {
-    console.info('callback result = ' + result)
-    console.info('callback extraInfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```

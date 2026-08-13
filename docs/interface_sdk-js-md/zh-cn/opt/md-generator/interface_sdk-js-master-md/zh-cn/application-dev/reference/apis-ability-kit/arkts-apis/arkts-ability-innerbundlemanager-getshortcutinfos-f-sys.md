@@ -6,19 +6,13 @@
 function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<ShortcutInfo>>): void
 ```
 
-根据给定的Bundle名称获取快捷方式信息，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo)
-> 替代。
+根据给定的Bundle名称获取快捷方式信息，使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo（系统接口）) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getShortcutInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getShortcutInfo(bundleName)
+**替代接口：** [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo（系统接口）)(bundleName :string, callback: AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -42,19 +36,13 @@ function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<Shor
 function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 ```
 
-根据给定的Bundle名称获取快捷方式信息，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo)
-> 替代。
+根据给定的Bundle名称获取快捷方式信息，使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo（系统接口）) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getShortcutInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getShortcutInfo(bundleName)
+**替代接口：** [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo（系统接口）)(bundleName :string, callback: AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

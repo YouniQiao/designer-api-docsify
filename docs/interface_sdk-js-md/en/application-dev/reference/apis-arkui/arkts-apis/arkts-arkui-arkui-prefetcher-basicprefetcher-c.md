@@ -1,14 +1,16 @@
 # BasicPrefetcher
 
-Basic implementation of [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md#IPrefetcher).It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
+**BasicPrefetcher** is a fundamental implementation of **IPrefetcher**. It offers an intelligent data prefetching algorithm that decides the data items to prefetch based on real-time changes in the visible area on the screen and variations in the prefetch duration. It can also determine the prefetch requests to be canceled based on the user's scrolling actions. **BasicPrefetcher** objects do not support JSON serialization.
 
-**Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher<T>](IPrefetcher<T>)
+**Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-iprefetcher-i.md#IPrefetcher)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class BasicPrefetcher<T> implements IPrefetcher<T>--><!--Device-unnamed-export declare class BasicPrefetcher<T> implements IPrefetcher<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class BasicPrefetcher--><!--Device-unnamed-export class BasicPrefetcher-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,18 +23,22 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI
 ## constructor
 
 ```TypeScript
-constructor(dataSource?: IDataSourcePrefetching<T>)
+constructor(dataSource?: IDataSourcePrefetching)
 ```
 
-Constructs a basic prefetcher instance and optionally sets the data source.
+Passes the data source that supports prefetching and binds it to **Prefetcher** when an object is created. If no data source is passed during the creation, you can use **setDataSource** to set a data source after the creation.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BasicPrefetcher-constructor(dataSource?: IDataSourcePrefetching<T>)--><!--Device-BasicPrefetcher-constructor(dataSource?: IDataSourcePrefetching<T>)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BasicPrefetcher-constructor(dataSource?: IDataSourcePrefetching)--><!--Device-BasicPrefetcher-constructor(dataSource?: IDataSourcePrefetching)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,23 +46,27 @@ Constructs a basic prefetcher instance and optionally sets the data source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | No | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-idatasourceprefetching-i.md) | No | Prefetching-capable data source. If this parameter is not specified, the value is empty by default. You can set a data source using **setDataSource** later. |
 
 ## setDataSource
 
 ```TypeScript
-setDataSource(dataSource: IDataSourcePrefetching<T>): void
+setDataSource(dataSource: IDataSourcePrefetching): void
 ```
 
-Sets the data source to bind to this prefetcher.
+Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BasicPrefetcher-setDataSource(dataSource: IDataSourcePrefetching<T>): void--><!--Device-BasicPrefetcher-setDataSource(dataSource: IDataSourcePrefetching<T>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BasicPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void--><!--Device-BasicPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,23 +74,27 @@ Sets the data source to bind to this prefetcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-idatasourceprefetching-i.md) | Yes | Prefetching-capable data source. |
 
 ## visibleAreaChanged
 
 ```TypeScript
-visibleAreaChanged(minVisible: int, maxVisible: int): void
+visibleAreaChanged(minVisible: number, maxVisible: number): void
 ```
 
-Call this method when the visible area changed.
+Called when the boundary of the visible area changes. It notifies **Prefetcher** of the current visible area range so that **Prefetcher** can determine whether to prefetch or cancel the prefetching of data items. Before calling this API, ensure that the data source has been set using the constructor or the **setDataSource** API. This API works with the **List**, **Grid**, **WaterFlow**, and **Swiper** components.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BasicPrefetcher-visibleAreaChanged(minVisible: int, maxVisible: int): void--><!--Device-BasicPrefetcher-visibleAreaChanged(minVisible: int, maxVisible: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BasicPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void--><!--Device-BasicPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +102,6 @@ Call this method when the visible area changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minVisible | int | Yes | Index of the first visible data item. |
-| maxVisible | int | Yes | Index of the last visible data item. |
+| minVisible | number | Yes | Index of the first data item in the current visible area. |
+| maxVisible | number | Yes | Index of the last data item in the current visible area. |
 

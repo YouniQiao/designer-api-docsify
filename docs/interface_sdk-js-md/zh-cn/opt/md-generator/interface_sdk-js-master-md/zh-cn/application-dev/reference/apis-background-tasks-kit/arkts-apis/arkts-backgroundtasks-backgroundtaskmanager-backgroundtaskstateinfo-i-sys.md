@@ -2,7 +2,9 @@
 
 长时任务授权信息。
 
-**起始版本：** 22
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-interface BackgroundTaskStateInfo--><!--Device-backgroundTaskManager-interface BackgroundTaskStateInfo-End-->
 
@@ -16,11 +18,13 @@
 appIndex: number
 ```
 
-应用分身ID。取值范围为全体整数。
+应用分身ID。 取值范围为全体整数。
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +44,9 @@ authResult?: UserAuthResult
 
 **类型：** UserAuthResult
 
-**起始版本：** 22
+**起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,7 +66,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,11 +84,13 @@ bundleName: string
 userId: number
 ```
 
-用户ID。取值范围为全体整数。
+用户ID。 取值范围为全体整数。
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Enumerates the window types.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum WindowType--><!--Device-window-enum WindowType-End-->
 
@@ -17,6 +19,8 @@ TYPE_APP = 0
 Child window of an application.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -48,7 +52,9 @@ TYPE_FLOAT = 8
 
 Global floating window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +72,9 @@ TYPE_DIALOG = 16
 
 Modal window.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,11 +90,11 @@ Modal window.
 TYPE_MAIN = 32
 ```
 
-Main window of an application.
+Main window of an application. This window type cannot be used during window creation.
 
-This window type cannot be used during window creation.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-WindowType-TYPE_MAIN = 32--><!--Device-WindowType-TYPE_MAIN = 32-End-->
 

@@ -4,6 +4,8 @@ RGB white balance gain values.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-camera-interface WhiteBalanceGains--><!--Device-camera-interface WhiteBalanceGains-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -28,6 +30,8 @@ The blue gain component of the white balance value.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WhiteBalanceGains-blueGain: double--><!--Device-WhiteBalanceGains-blueGain: double-End-->
@@ -48,6 +52,8 @@ The green gain component of the white balance value.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WhiteBalanceGains-greenGain: double--><!--Device-WhiteBalanceGains-greenGain: double-End-->
@@ -67,6 +73,8 @@ The red gain component of the white balance value.
 **Type:** number
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

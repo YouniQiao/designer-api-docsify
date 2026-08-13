@@ -6,9 +6,7 @@
 function getAbilityInfo(bundleName: string, abilityName: string, callback: AsyncCallback<AbilityInfo>): void
 ```
 
-通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
@@ -28,7 +26,7 @@ function getAbilityInfo(bundleName: string, abilityName: string, callback: Async
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | abilityName | string | 是 | Ability名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | 是 | 程序启动作为入参的回调函数，返回Ability信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | 是 | 程序启动作为入参的回调函数，返回Ability信息。 |
 
 ## 示例
 
@@ -54,9 +52,7 @@ bundle.getAbilityInfo(bundleName, abilityName, (err, data) => {
 function getAbilityInfo(bundleName: string, abilityName: string): Promise<AbilityInfo>
 ```
 
-通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 

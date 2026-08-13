@@ -14,9 +14,11 @@ function isFeatureSupported(featureId: long): boolean
 
 Check whether the device supports a specified feature.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -28,7 +30,7 @@ Check whether the device supports a specified feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the ID of the feature. |
+| featureId | long | Yes | Indicates the ID of the feature. |
 
 **Return value:**
 
@@ -40,10 +42,10 @@ Check whether the device supports a specified feature.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2401000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
 
 ## Examples
 

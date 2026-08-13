@@ -1,0 +1,148 @@
+# readText
+
+## readText
+
+```TypeScript
+function readText(
+  filePath: string,
+  options?: ReadTextOptions
+): Promise<string>
+```
+
+Reads the text content of a file synchronously. This API returns the result synchronously. This API uses a promise to return the result.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-fileIo-function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>--><!--Device-fileIo-function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filePath | string | Yes | Application sandbox path of the file. |
+| options | [ReadTextOptions](arkts-na-file-fs-readtextoptions-i.md) | No | The options are as follows: &lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length. &lt;br&gt;- **encoding** (string): format of the data to be encoded. &lt;br&gt;It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Promise used to return the content read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900020 | Invalid argument |
+| 13900019 | Is a directory |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900044 | Network is unreachable |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
+| 13900041 | Quota exceeded |
+| 13900010 | Try again |
+| 13900042 | Unknown error |
+
+
+## readText
+
+```TypeScript
+function readText(filePath: string, callback: AsyncCallback<string>): void
+```
+
+Reads the text of a file. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-fileIo-function readText(filePath: string, callback: AsyncCallback<string>): void--><!--Device-fileIo-function readText(filePath: string, callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filePath | string | Yes | Application sandbox path of the file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the content read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900020 | Invalid argument |
+| 13900019 | Is a directory |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
+| 13900041 | Quota exceeded |
+| 13900010 | Try again |
+| 13900042 | Unknown error |
+
+
+## readText
+
+```TypeScript
+function readText(
+  filePath: string,
+  options: ReadTextOptions,
+  callback: AsyncCallback<string>
+): void
+```
+
+Reads the text of a file. Read options can be configured. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-fileIo-function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void--><!--Device-fileIo-function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filePath | string | Yes | Application sandbox path of the file. |
+| options | [ReadTextOptions](arkts-na-file-fs-readtextoptions-i.md) | Yes | The options are as follows: &lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length. &lt;br&gt;- **encoding** (string): format of the data to be encoded. The default value is **'utf-8'**, which is the only value supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the content read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900020 | Invalid argument |
+| 13900019 | Is a directory |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
+| 13900041 | Quota exceeded |
+| 13900010 | Try again |
+| 13900042 | Unknown error |
+

@@ -6,6 +6,8 @@ Enumerates TLS protocol versions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export enum Protocol--><!--Device-socket-export enum Protocol-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -22,6 +24,8 @@ Use TLSv1.2 protocol for communication.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Protocol-TLSv12 = "TLSv1.2"--><!--Device-Protocol-TLSv12 = "TLSv1.2"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -37,6 +41,8 @@ Use TLSv1.3 protocol for communication.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Protocol-TLSv13 = "TLSv1.3"--><!--Device-Protocol-TLSv13 = "TLSv1.3"-End-->
 

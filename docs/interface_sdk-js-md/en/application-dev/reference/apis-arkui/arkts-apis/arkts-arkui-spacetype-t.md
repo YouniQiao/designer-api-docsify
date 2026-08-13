@@ -10,6 +10,8 @@ Defines the space property with string, double and resource unit.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type SpaceType = string | double | Resource--><!--Device-unnamed-export type SpaceType = string | double | Resource-End-->

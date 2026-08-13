@@ -18,7 +18,7 @@ Implements event listening.
 import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (evt: Event): void | Promise<void>
@@ -30,7 +30,7 @@ Specifies the callback to invoke.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ohos.worker.WorkerEventListener.](ohos.worker.WorkerEventListener.(event:)
+**Substitutes:** ohos.worker.WorkerEventListener.(event: Event)
 
 <!--Device-EventListener-(evt: Event): void | Promise<void>--><!--Device-EventListener-(evt: Event): void | Promise<void>-End-->
 

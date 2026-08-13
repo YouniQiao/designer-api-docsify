@@ -6,7 +6,7 @@ Represents a USB port.
 
 **Deprecated since:** 9
 
-**Substitutes:** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md#USBPort)
+**Substitutes:** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md#USBPort-(System-API))
 
 <!--Device-usb-interface USBPort--><!--Device-usb-interface USBPort-End-->
 

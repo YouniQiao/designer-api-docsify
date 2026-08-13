@@ -10,6 +10,8 @@ Send key event.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-export declare function sendKeyEvent(event: KeyEvent): boolean--><!--Device-unnamed-export declare function sendKeyEvent(event: KeyEvent): boolean-End-->
@@ -20,7 +22,7 @@ Send key event.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [KeyEvent](arkts-arkui-common-keyevent-i.md) | 是 |
+| event | [KeyEvent](../../apis-na/arkts-apis/arkts-na-common-keyevent-i.md) | 是 |
 
 **返回值：**
 

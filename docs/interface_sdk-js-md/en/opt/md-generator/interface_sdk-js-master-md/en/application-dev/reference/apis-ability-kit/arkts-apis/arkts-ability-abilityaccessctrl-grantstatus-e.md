@@ -2,7 +2,9 @@
 
 Enumerates the permission grant states.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityAccessCtrl-export enum GrantStatus--><!--Device-abilityAccessCtrl-export enum GrantStatus-End-->
 
@@ -16,7 +18,9 @@ PERMISSION_DENIED = -1
 
 The permission is not granted.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ PERMISSION_GRANTED = 0
 
 The permission is granted.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

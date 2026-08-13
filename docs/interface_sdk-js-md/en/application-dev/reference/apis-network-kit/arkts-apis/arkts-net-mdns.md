@@ -6,6 +6,8 @@ Provides interfaces to discover DNS based services on a local network over Multi
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace mdns--><!--Device-unnamed-declare namespace mdns-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
@@ -22,13 +24,13 @@ import { mdns } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice) | Adds an mDNS service. |
-| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice-1) | Adds an mDNS service. |
-| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#creatediscoveryservice) | Create an mDNS based discovery service with context and serviceType. |
-| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice) | Removes an mDNS service. |
-| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice-1) | Removes an mDNS service. |
-| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice) | Resolves an mDNS service. |
-| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice-1) | Resolves an mDNS service. |
+| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addLocalService) | Adds an mDNS service. |
+| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addLocalService) | Adds an mDNS service. |
+| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#createDiscoveryService) | Create an mDNS based discovery service with context and serviceType. |
+| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removeLocalService) | Removes an mDNS service. |
+| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removeLocalService) | Removes an mDNS service. |
+| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolveLocalService) | Resolves an mDNS service. |
+| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolveLocalService) | Resolves an mDNS service. |
 
 ### Interfaces
 

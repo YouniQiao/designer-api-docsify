@@ -2,7 +2,9 @@
 
 要查询的应用包标志
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-freeInstall-export enum BundlePackFlag--><!--Device-freeInstall-export enum BundlePackFlag-End-->
 
@@ -18,7 +20,9 @@ GET_PACK_INFO_ALL = 0x00000000
 
 获取应用包pack.info的所有信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundlePackFlag-GET_PACK_INFO_ALL = 0x00000000--><!--Device-BundlePackFlag-GET_PACK_INFO_ALL = 0x00000000-End-->
 
@@ -34,7 +38,9 @@ GET_PACKAGES = 0x00000001
 
 获取应用包pack.info的package信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundlePackFlag-GET_PACKAGES = 0x00000001--><!--Device-BundlePackFlag-GET_PACKAGES = 0x00000001-End-->
 
@@ -50,7 +56,9 @@ GET_BUNDLE_SUMMARY = 0x00000002
 
 获取应用包pack.info的bundle摘要信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundlePackFlag-GET_BUNDLE_SUMMARY = 0x00000002--><!--Device-BundlePackFlag-GET_BUNDLE_SUMMARY = 0x00000002-End-->
 
@@ -66,7 +74,9 @@ GET_MODULE_SUMMARY = 0x00000004
 
 获取应用包pack.info的module摘要信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundlePackFlag-GET_MODULE_SUMMARY = 0x00000004--><!--Device-BundlePackFlag-GET_MODULE_SUMMARY = 0x00000004-End-->
 

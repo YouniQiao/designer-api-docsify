@@ -2,7 +2,9 @@
 
 Describe bundle version
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BundleVersion--><!--Device-unnamed-export interface BundleVersion-End-->
 
@@ -24,7 +26,9 @@ Indicates bundle's version code.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Indicates bundle's version name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

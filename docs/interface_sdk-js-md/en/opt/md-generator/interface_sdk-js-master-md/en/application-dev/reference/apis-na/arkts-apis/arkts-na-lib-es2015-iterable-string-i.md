@@ -1,0 +1,27 @@
+# String
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): IterableIterator<string>
+```
+
+Iterator
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-String-[Symbol.iterator](): IterableIterator<string>--><!--Device-String-[Symbol.iterator](): IterableIterator<string>-End-->
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |

@@ -2,7 +2,9 @@
 
 数据类型枚举。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-enum ValueType--><!--Device-distributedKVStore-enum ValueType-End-->
 
@@ -16,7 +18,9 @@ STRING = 0
 
 表示值类型为字符串。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ INTEGER = 1
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -48,6 +54,8 @@ FLOAT = 2
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -60,7 +68,9 @@ BYTE_ARRAY = 3
 
 表示值类型为字节数组。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,7 +86,9 @@ BOOLEAN = 4
 
 表示值类型为布尔值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,10 +104,30 @@ DOUBLE = 5
 
 表示值类型为双浮点数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## LONG
+
+```TypeScript
+LONG = 6
+```
+
+表示值类型为长整数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ValueType-LONG = 6--><!--Device-ValueType-LONG = 6-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

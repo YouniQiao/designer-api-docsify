@@ -4,6 +4,8 @@ Remote device operation methods.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -23,6 +25,8 @@ getAcbState(): AcbState
 Gets the ACB connection state.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -44,7 +48,7 @@ Gets the ACB connection state.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## getConnectionState
 
@@ -55,6 +59,8 @@ getConnectionState(): ConnectionState
 Gets the profile connection state.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -76,7 +82,7 @@ Gets the profile connection state.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## getDeviceClass
 
@@ -87,6 +93,8 @@ getDeviceClass(): DeviceClass
 Gets the type of the NearLink device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -108,7 +116,7 @@ Gets the type of the NearLink device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## getDeviceInformation
 
@@ -119,6 +127,8 @@ getDeviceInformation(): DeviceInformation
 Obtains the remote device information.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -140,7 +150,7 @@ Obtains the remote device information.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## getDeviceName
 
@@ -151,6 +161,8 @@ getDeviceName(): string
 Gets the name of the NearLink device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -172,7 +184,7 @@ Gets the name of the NearLink device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## getPairingState
 
@@ -183,6 +195,8 @@ getPairingState(): PairingState
 Gets the pairing state.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -204,7 +218,7 @@ Gets the pairing state.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## startPairing
 
@@ -215,6 +229,8 @@ startPairing(): Promise<void>
 Initiate pairing to remote NearLink device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -236,4 +252,4 @@ Initiate pairing to remote NearLink device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |

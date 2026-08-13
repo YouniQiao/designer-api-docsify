@@ -6,11 +6,11 @@
 const USER_SECURITY: string
 ```
 
-Provide the domain name for user security property.
+Provide the domain name for user security property. &lt;p&gt;This constants is a domain name for user security level key.
 
-&lt;p&gt;This constants is a domain name for user security level key.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-domainName-const USER_SECURITY: string--><!--Device-domainName-const USER_SECURITY: string-End-->
 

@@ -6,7 +6,9 @@ Implements the running environment of the Worker thread. The GlobalScope class i
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface GlobalScope extends WorkerEventTarget--><!--Device-unnamed-declare interface GlobalScope extends WorkerEventTarget-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface GlobalScope--><!--Device-unnamed-declare interface GlobalScope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -15,28 +17,6 @@ Implements the running environment of the Worker thread. The GlobalScope class i
 ```TypeScript
 import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
-
-## onerror
-
-```TypeScript
-onerror?: (ev: ErrorEvent) => void
-```
-
-Called when an exception occurs during worker execution. The event handler is executed in the Worker thread.In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
 
 ## name
 
@@ -50,9 +30,31 @@ Worker instance specified when there is a new Worker instance.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GlobalScope-readonly name: string--><!--Device-GlobalScope-readonly name: string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## onerror
+
+```TypeScript
+onerror?: (ev: ErrorEvent) => void
+```
+
+Called when an exception occurs during worker execution. The event handler is executed in the Worker thread. In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
+
+**Type:** (ev: ErrorEvent) =&gt; void
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,6 +69,8 @@ GlobalScope itself.
 **Type:** [GlobalScope](arkts-arkts-worker-globalscope-i.md) & typeof globalThis
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,10 +4,11 @@
 export declare type NodeIdentity = string | number
 ```
 
-Defines the type can be used for identiting the node, for the string type, it's the inspector id set through .[id](CommonMethod#id) attribute, and for the number type, it's the unique ID got from the FrameNode by  
-[getUniqueId](arkts-arkui-framenode-c.md#getUniqueId) method.
+Defines the type can be used for identiting the node, for the string type, it's the inspector id set through .id attribute, and for the number type, it's the unique ID got from the FrameNode by [getUniqueId](arkts-arkui-framenode-c.md#getUniqueId) method.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

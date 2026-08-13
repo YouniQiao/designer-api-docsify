@@ -2,7 +2,9 @@
 
 Represents event type information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface EventClassifyInfo--><!--Device-update-export interface EventClassifyInfo-End-->
 
@@ -26,7 +28,9 @@ Event type, which specifies the type of event to listen for. The value can be **
 
 **Type:** [EventClassify](arkts-basicservices-update-eventclassify-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EventClassifyInfo-eventClassify: EventClassify--><!--Device-EventClassifyInfo-eventClassify: EventClassify-End-->
 
@@ -44,7 +48,9 @@ Additional information, which is used to transfer the extended data. The default
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EventClassifyInfo-extraInfo: string--><!--Device-EventClassifyInfo-extraInfo: string-End-->
 

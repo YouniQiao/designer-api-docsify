@@ -20,7 +20,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes)
+**Substitutes:** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes-(System-API))
 
 <!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 

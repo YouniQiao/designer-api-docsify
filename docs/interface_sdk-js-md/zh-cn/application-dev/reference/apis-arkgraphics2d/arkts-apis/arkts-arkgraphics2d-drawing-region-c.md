@@ -1,18 +1,12 @@
 # Region
 
-区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。
+区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-drawing-class Region--><!--Device-drawing-class Region-End-->
 
@@ -26,9 +20,11 @@ constructor()
 
 构造一个区域对象。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-constructor()--><!--Device-Region-constructor()-End-->
 
@@ -42,9 +38,11 @@ constructor(region: Region)
 
 拷贝一个区域对象。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-constructor(region: Region)--><!--Device-Region-constructor(region: Region)-End-->
 
@@ -58,21 +56,17 @@ constructor(region: Region)
 
 ## constructor
 
-ArkTS-Dyn:
-```TypeScript
-constructor(left: number, top: number, right: number, bottom: number)
-```
-
-ArkTS-Sta:
 ```TypeScript
 constructor(left: int, top: int, right: int, bottom: int)
 ```
 
 构造矩形区域。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)--><!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)-End-->
 
@@ -82,10 +76,10 @@ constructor(left: int, top: int, right: int, bottom: int)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| left | int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## getBoundaryPath
 
@@ -98,6 +92,8 @@ getBoundaryPath(): Path
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-Region-getBoundaryPath(): Path--><!--Device-Region-getBoundaryPath(): Path-End-->
 
@@ -119,7 +115,9 @@ getBoundaryPath(): Path | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-getBoundaryPath(): Path | undefined--><!--Device-Region-getBoundaryPath(): Path | undefined-End-->
 
@@ -143,6 +141,8 @@ getBounds(): common2D.Rect
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-Region-getBounds(): common2D.Rect--><!--Device-Region-getBounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -163,7 +163,9 @@ getBounds(): common2D.Rect | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-getBounds(): common2D.Rect | undefined--><!--Device-Region-getBounds(): common2D.Rect | undefined-End-->
 
@@ -183,9 +185,11 @@ isComplex(): boolean
 
 判断当前区域是否包含多个矩形。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-isComplex(): boolean--><!--Device-Region-isComplex(): boolean-End-->
 
@@ -205,9 +209,11 @@ isEmpty(): boolean
 
 判断当前区域是否为空。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-isEmpty(): boolean--><!--Device-Region-isEmpty(): boolean-End-->
 
@@ -227,9 +233,11 @@ isEqual(other: Region): boolean
 
 判断指定区域是否与当前区域相等。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-isEqual(other: Region): boolean--><!--Device-Region-isEqual(other: Region): boolean-End-->
 
@@ -249,21 +257,17 @@ isEqual(other: Region): boolean
 
 ## isPointContained
 
-ArkTS-Dyn:
-```TypeScript
-isPointContained(x: number, y:number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 isPointContained(x: int, y:int): boolean
 ```
 
 判断测试点是否在区域内。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-isPointContained(x: int, y:int): boolean--><!--Device-Region-isPointContained(x: int, y:int): boolean-End-->
 
@@ -273,8 +277,8 @@ isPointContained(x: int, y:int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 测试点的x轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 测试点的y轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| x | int | 是 | 测试点的x轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| y | int | 是 | 测试点的y轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
@@ -286,7 +290,7 @@ isPointContained(x: int, y:int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isRect
 
@@ -298,7 +302,9 @@ isRect(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -320,9 +326,11 @@ isRegionContained(other: Region): boolean
 
 判断其他区域是否在当前区域内。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-isRegionContained(other: Region): boolean--><!--Device-Region-isRegionContained(other: Region): boolean-End-->
 
@@ -344,25 +352,21 @@ isRegionContained(other: Region): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
-ArkTS-Dyn:
-```TypeScript
-offset(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 offset(dx: int, dy: int): void
 ```
 
 对区域进行平移。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-offset(dx: int, dy: int): void--><!--Device-Region-offset(dx: int, dy: int): void-End-->
 
@@ -372,8 +376,8 @@ offset(dx: int, dy: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | x轴方向平移量，正数往x轴正方向平移，负数往x轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | y轴方向平移量，正数往y轴正方向平移，负数往y轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| dx | int | 是 | x轴方向平移量，正数往x轴正方向平移，负数往x轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| dy | int | 是 | y轴方向平移量，正数往y轴正方向平移，负数往y轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 ## op
 
@@ -383,9 +387,11 @@ op(region: Region, regionOp: RegionOp): boolean
 
 将当前区域与指定区域进行运算，并替换为运算结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-op(region: Region, regionOp: RegionOp): boolean--><!--Device-Region-op(region: Region, regionOp: RegionOp): boolean-End-->
 
@@ -408,16 +414,10 @@ op(region: Region, regionOp: RegionOp): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickContains
 
-ArkTS-Dyn:
-```TypeScript
-quickContains(left: number, top: number, right: number, bottom: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 quickContains(left: int, top: int, right: int, bottom: int): boolean
 ```
@@ -426,7 +426,9 @@ quickContains(left: int, top: int, right: int, bottom: int): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -438,10 +440,10 @@ quickContains(left: int, top: int, right: int, bottom: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| left | int | 是 | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | int | 是 | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | int | 是 | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | int | 是 | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
@@ -451,21 +453,17 @@ quickContains(left: int, top: int, right: int, bottom: int): boolean
 
 ## quickReject
 
-ArkTS-Dyn:
-```TypeScript
-quickReject(left: number, top: number, right: number, bottom: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 quickReject(left: int, top: int, right: int, bottom: int): boolean
 ```
 
 快速判断矩形和区域是否不相交。实际上比较的是矩形和区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -475,10 +473,10 @@ quickReject(left: int, top: int, right: int, bottom: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| left | int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
@@ -490,7 +488,7 @@ quickReject(left: int, top: int, right: int, bottom: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickRejectRegion
 
@@ -500,9 +498,11 @@ quickRejectRegion(region: Region): boolean
 
 判断当前区域是否与指定区域不相交。实际上比较的是两个区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-quickRejectRegion(region: Region): boolean--><!--Device-Region-quickRejectRegion(region: Region): boolean-End-->
 
@@ -528,9 +528,11 @@ setEmpty(): void
 
 设置当前区域为空。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-setEmpty(): void--><!--Device-Region-setEmpty(): void-End-->
 
@@ -544,9 +546,11 @@ setPath(path: Path, clip: Region): boolean
 
 设置一个与裁剪区域内路径轮廓相匹配的区域。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-setPath(path: Path, clip: Region): boolean--><!--Device-Region-setPath(path: Path, clip: Region): boolean-End-->
 
@@ -569,25 +573,21 @@ setPath(path: Path, clip: Region): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRect
 
-ArkTS-Dyn:
-```TypeScript
-setRect(left: number, top: number, right: number, bottom: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 setRect(left: int, top: int, right: int, bottom: int): boolean
 ```
 
 设置一个矩形区域。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -597,10 +597,10 @@ setRect(left: int, top: int, right: int, bottom: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| left | int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
@@ -612,7 +612,7 @@ setRect(left: int, top: int, right: int, bottom: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRegion
 
@@ -622,9 +622,11 @@ setRegion(region: Region): void
 
 设置当前区域为指定区域。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Region-setRegion(region: Region): void--><!--Device-Region-setRegion(region: Region): void-End-->
 

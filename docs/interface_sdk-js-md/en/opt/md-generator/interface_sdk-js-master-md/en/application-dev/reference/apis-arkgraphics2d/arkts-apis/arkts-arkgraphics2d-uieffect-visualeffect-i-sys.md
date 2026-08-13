@@ -2,7 +2,9 @@
 
 VisualEffect class, used to apply background color blending, border lighting, color gradient, and other effects to a component. Before calling VisualEffect methods, you need to first create a VisualEffect instance through createEffect.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
 
@@ -22,7 +24,9 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 A blender for changing the background color of the component. Currently, only the brightness blender is supported.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -65,7 +69,9 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 Adds a 3D lighting effect to the border of a rounded rectangle component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect-End-->
 
@@ -92,7 +98,7 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -146,7 +152,9 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 Adds a color gradient effect to the component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect-End-->
 
@@ -173,7 +181,7 @@ Adds a color gradient effect to the component.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -220,11 +228,11 @@ struct ColorGradientExample {
 distortionCollapse(distortionParam: DistortionParam): VisualEffect
 ```
 
-Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc.
-
-NOTE1. This visual effect supports drawing outside the bounds of the control, but it is still subject to the clipping (Clip) of the parent control.2. Because it contains a foreground Filter, some visual effects of the component itself and its child components (e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination  with the EffectComponent.3. It supports distorting the system material, but when used in combination with the EffectComponent, it will cause the background of the system material to be distorted.4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created. The content of the current component (including child components) is then drawn onto this offscreen canvas, and the existing content on the canvas is drawn with deformation.5. When using this implementation without combining with the EffectComponent, interfaces that require screen  capture, such as systemMaterial, backgroundEffect, brightness, and blur, will not be able to capture  the correct screen.
+Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc. NOTE 1. This visual effect supports drawing outside the bounds of the control, but it is still subject to the clipping (Clip) of the parent control. 2. Because it contains a foreground Filter, some visual effects of the component itself and its child components (e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination with the EffectComponent. 3. It supports distorting the system material, but when used in combination with the EffectComponent, it will cause the background of the system material to be distorted. 4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created. The content of the current component (including child components) is then drawn onto this offscreen canvas, and the existing content on the canvas is drawn with deformation. 5. When using this implementation without combining with the EffectComponent, interfaces that require screen capture, such as systemMaterial, backgroundEffect, brightness, and blur, will not be able to capture the correct screen.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -281,9 +289,11 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
       brightnessParam?: BrightnessParam): VisualEffect
 ```
 
-Adds a material effect to the component. The material effect simulates the optical properties(refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI,fluid material animation, frosted glass effects, etc.
+Adds a material effect to the component. The material effect simulates the optical properties (refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI, fluid material animation, frosted glass effects, etc.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect-End-->
 
@@ -310,7 +320,7 @@ Adds a material effect to the component. The material effect simulates the optic
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

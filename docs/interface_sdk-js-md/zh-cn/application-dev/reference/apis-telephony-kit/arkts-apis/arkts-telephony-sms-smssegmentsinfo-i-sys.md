@@ -2,9 +2,11 @@
 
 短信段信息。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface SmsSegmentsInfo--><!--Device-sms-export interface SmsSegmentsInfo-End-->
 
@@ -20,11 +22,13 @@ encodeCount: int
 
 编码计数
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-encodeCount: int--><!--Device-SmsSegmentsInfo-encodeCount: int-End-->
 
@@ -40,11 +44,13 @@ encodeCountRemaining: int
 
 剩余编码计数
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-encodeCountRemaining: int--><!--Device-SmsSegmentsInfo-encodeCountRemaining: int-End-->
 
@@ -62,9 +68,11 @@ scheme: SmsEncodingScheme
 
 **类型：** [SmsEncodingScheme](arkts-telephony-sms-smsencodingscheme-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-scheme: SmsEncodingScheme--><!--Device-SmsSegmentsInfo-scheme: SmsEncodingScheme-End-->
 
@@ -80,11 +88,13 @@ splitCount: int
 
 拆分计数
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-splitCount: int--><!--Device-SmsSegmentsInfo-splitCount: int-End-->
 

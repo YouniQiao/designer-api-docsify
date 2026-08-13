@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -65,6 +65,8 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void-End-->
@@ -102,11 +104,11 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>--><!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>-End-->
 
@@ -131,7 +133,7 @@ If the read, write, or read and write permission verification fails, the error c
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900005 |
 | 13900023 |
 | 13900033 |

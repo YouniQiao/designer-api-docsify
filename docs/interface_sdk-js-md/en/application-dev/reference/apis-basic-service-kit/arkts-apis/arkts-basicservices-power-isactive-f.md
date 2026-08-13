@@ -12,14 +12,13 @@ import { power } from '@kit.BasicServicesKit';
 function isActive(): boolean
 ```
 
-Checks whether the current device is active.
+Checks whether the current device is active. - A device with a screen is active when the screen is on and inactive when the screen is off. - A device without a screen is active when it exits the sleep mode and inactive when it enters the sleep mode.
 
-- A device with a screen is active when the screen is on and inactive when the screen is off.  
-- A device without a screen is active when it exits the sleep mode and inactive when it enters the sleep mode.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-power-function isActive(): boolean--><!--Device-power-function isActive(): boolean-End-->
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle--><!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@
 borderRadius?: LengthMetrics | BorderRadiuses
 ```
 
-设置圆角。
+设置圆角。 默认值：0 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-默认值：0
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +40,15 @@ borderRadius?: LengthMetrics | BorderRadiuses
 margin?: LengthMetrics | Margin
 ```
 
-设置图片外边距。
-
-默认值：0
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+设置图片外边距。 默认值：0 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Margin](arkts-arkui-margin-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,17 +62,15 @@ margin?: LengthMetrics | Margin
 padding?: LengthMetrics | Padding
 ```
 
-设置图片内边距。
+设置图片内边距。 默认值：0 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-默认值：0
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-units-padding-i.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-padding-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,6 +6,8 @@ The enum of model type
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum ModelType--><!--Device-unnamed-export declare enum ModelType-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -22,6 +24,8 @@ Render to texture, gpu would compose this texture to screen.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-ModelType-TEXTURE = 0--><!--Device-ModelType-TEXTURE = 0-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -37,6 +41,8 @@ Render to surface, special hardware would compose this surface to screen.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ModelType-SURFACE = 1--><!--Device-ModelType-SURFACE = 1-End-->
 

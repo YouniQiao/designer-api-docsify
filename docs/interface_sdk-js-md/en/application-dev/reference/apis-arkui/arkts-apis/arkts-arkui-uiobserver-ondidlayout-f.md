@@ -1,4 +1,4 @@
-# onDidLayout
+# on_didLayout
 
 ## Modules to Import
 
@@ -6,21 +6,25 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## onDidLayout
+## on_didLayout
 
 ```TypeScript
-export function onDidLayout(context: UIContext, callback: Callback<void>): void
+export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void
 ```
 
-Registers a callback function to be called when the layout is done.
+Listens for layout completion status in each frame.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiObserver-export function onDidLayout(context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function onDidLayout(context: UIContext, callback: Callback<void>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +32,29 @@ Registers a callback function to be called when the layout is done.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
+| type | 'didLayout' | Yes | Event type. The value **'didLayout'** indicates whether the layout has been completed. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { uiObserver } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  didLayoutCallback = () => {
+    console.info("Layout completed.");
+  }
+  build() {
+    Column() {
+      Button('Listen for Layout Completion')
+        .onClick(() => {
+          uiObserver.on('didLayout', this.getUIContext(), this.didLayoutCallback);
+        })
+    }
+  }
+}
+```
 

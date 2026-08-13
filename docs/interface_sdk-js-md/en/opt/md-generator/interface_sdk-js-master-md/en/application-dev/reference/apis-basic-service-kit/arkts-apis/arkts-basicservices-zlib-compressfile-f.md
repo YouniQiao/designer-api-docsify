@@ -12,14 +12,11 @@ import { zlib } from '@kit.BasicServicesKit';
 function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void
 ```
 
-Compresses a file. This API uses an asynchronous callback to return the result.
+Compresses a file. This API uses an asynchronous callback to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
-> **NOTE：**
-> 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
-> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,9 +37,9 @@ Compresses a file. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 
 ## Examples
 
@@ -80,14 +77,11 @@ try {
 function compressFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-Compresses a file. This API uses a promise to return the result.
+Compresses a file. This API uses a promise to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
-> **NOTE：**
-> 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
-> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -113,9 +107,9 @@ Compresses a file. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 
 ## Examples
 

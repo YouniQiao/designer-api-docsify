@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ExpectedFrameRateRange--><!--Device-unnamed-declare interface ExpectedFrameRateRange-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 expected: number
 ```
 
-期望的最优帧率，单位为帧/秒（fps）。
-
-取值范围为[min, max]。设置为0时，将跟随应用的帧率。
+期望的最优帧率，单位为帧/秒（fps）。 取值范围为[min, max]。设置为0时，将跟随应用的帧率。
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,15 +42,15 @@ expected: number
 max: number
 ```
 
-期望的最大帧率，单位为帧/秒（fps）。
-
-取值范围为[min, 设备最大帧率]。
+期望的最大帧率，单位为帧/秒（fps）。 取值范围为[min, 设备最大帧率]。
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,15 +66,15 @@ max: number
 min: number
 ```
 
-期望的最小帧率，单位为帧/秒（fps）。
-
-取值范围为[0, 设备最大帧率]。
+期望的最小帧率，单位为帧/秒（fps）。 取值范围为[0, 设备最大帧率]。
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

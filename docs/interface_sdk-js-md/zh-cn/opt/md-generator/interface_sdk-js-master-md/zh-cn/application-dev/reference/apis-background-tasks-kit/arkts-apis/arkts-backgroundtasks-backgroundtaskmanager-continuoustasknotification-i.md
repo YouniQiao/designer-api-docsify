@@ -2,7 +2,9 @@
 
 长时任务通知信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-interface ContinuousTaskNotification--><!--Device-backgroundTaskManager-interface ContinuousTaskNotification-End-->
 
@@ -18,9 +20,11 @@ contentType: notificationManager.ContentType
 
 **类型：** notificationManager.ContentType
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ContinuousTaskNotification-contentType: notificationManager.ContentType--><!--Device-ContinuousTaskNotification-contentType: notificationManager.ContentType-End-->
 
@@ -36,7 +40,9 @@ continuousTaskId?: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -54,9 +60,11 @@ notificationId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ContinuousTaskNotification-notificationId: int--><!--Device-ContinuousTaskNotification-notificationId: int-End-->
 
@@ -68,15 +76,15 @@ notificationId: number
 slotType: notificationManager.SlotType
 ```
 
-长时任务通知的渠道类型。
-
-**说明：** 长时任务申请或更新成功后不支持提示音。
+长时任务通知的渠道类型。 **说明：** 长时任务申请或更新成功后不支持提示音。
 
 **类型：** notificationManager.SlotType
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ContinuousTaskNotification-slotType: notificationManager.SlotType--><!--Device-ContinuousTaskNotification-slotType: notificationManager.SlotType-End-->
 

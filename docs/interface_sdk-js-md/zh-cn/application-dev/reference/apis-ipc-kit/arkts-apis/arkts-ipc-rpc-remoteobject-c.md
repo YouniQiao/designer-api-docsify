@@ -4,11 +4,13 @@
 
 **继承/实现关系：** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#IRemoteObject)
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-rpc-class RemoteObject extends IRemoteObject--><!--Device-rpc-class RemoteObject extends IRemoteObject-End-->
+**废弃版本：** -1
+
+<!--Device-rpc-class RemoteObject--><!--Device-rpc-class RemoteObject-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -26,7 +28,7 @@ attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [modifyLocalInterface](modifyLocalInterface(localInterface:)
+**替代接口：** [modifyLocalInterface](#modifyLocalInterface)(localInterface: IRemoteBroker, descriptor: string)
 
 <!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
@@ -75,9 +77,11 @@ constructor(descriptor: string)
 
 RemoteObject构造函数。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-constructor(descriptor: string)--><!--Device-RemoteObject-constructor(descriptor: string)-End-->
 
@@ -103,21 +107,17 @@ class TestRemoteObject extends rpc.RemoteObject {
 
 ## getCallingPid
 
-ArkTS-Dyn:
-```TypeScript
-getCallingPid(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCallingPid(): int
 ```
 
 获取通信对端的进程Pid。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-getCallingPid(): int--><!--Device-RemoteObject-getCallingPid(): int-End-->
 
@@ -127,7 +127,7 @@ getCallingPid(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回通信对端的进程Pid。 |
+| int | 返回通信对端的进程Pid。 |
 
 ## 示例
 
@@ -186,21 +186,17 @@ try {
 
 ## getCallingUid
 
-ArkTS-Dyn:
-```TypeScript
-getCallingUid(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCallingUid(): int
 ```
 
 获取通信对端的进程Uid。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-getCallingUid(): int--><!--Device-RemoteObject-getCallingUid(): int-End-->
 
@@ -210,7 +206,7 @@ getCallingUid(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Return the UID of the { |
+| int | Return the UID of the { |
 
 ## 示例
 
@@ -273,9 +269,11 @@ getDescriptor(): string
 
 获取对象的接口描述符。接口描述符为字符串。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-getDescriptor(): string--><!--Device-RemoteObject-getDescriptor(): string-End-->
 
@@ -291,7 +289,7 @@ getDescriptor(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
 
 ## 示例
 
@@ -381,9 +379,11 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 查询接口描述符的字符串。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -405,7 +405,7 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## 示例
 
@@ -444,9 +444,11 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 此接口用于把接口描述符和IRemoteBroker对象绑定。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
@@ -463,7 +465,7 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## 示例
 
@@ -500,17 +502,6 @@ let testRemoteObject = new TestRemoteObject("testObject");
 
 ## onRemoteMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-onRemoteMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption
-    ): boolean | Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 onRemoteMessageRequest(
       code: int,
@@ -520,17 +511,13 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果。
+sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果。 > **说明：** > >开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。 > >开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
 
-> **说明：**
-> 
-> 开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
-> 
-> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -542,7 +529,7 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 对端发送的服务请求码。 |
+| code | int | 是 | 对端发送的服务请求码。 |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
@@ -701,18 +688,6 @@ class TestRemoteObject extends rpc.RemoteObject {
 
 ## onRemoteMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-onRemoteMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption,
-      callingInfo?: CallingInfo
-    ): boolean | Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 onRemoteMessageRequest(
       code: int,
@@ -723,17 +698,13 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。
-
-> **说明：**
-> 
-> 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
-> 
-> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。 > **说明：** > > 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。 > > 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>--><!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>-End-->
 
@@ -743,7 +714,7 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 对端发送的服务请求码。 |
+| code | int | 是 | 对端发送的服务请求码。 |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
@@ -930,7 +901,7 @@ sendRequest请求的响应处理函数，服务端在该函数里处理请求，
 
 **废弃版本：** 9
 
-**替代接口：** [onRemoteMessageRequest](onRemoteMessageRequest(code:)
+**替代接口：** [onRemoteMessageRequest](#onRemoteMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -987,7 +958,7 @@ queryLocalInterface(descriptor: string): IRemoteBroker
 
 **废弃版本：** 9
 
-**替代接口：** [getLocalInterface](rpc.IRemoteObject#getLocalInterface(descriptor:)
+**替代接口：** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getLocalInterface)(descriptor: string)
 
 <!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -1033,17 +1004,6 @@ try {
 
 ## sendMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-sendMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption
-    ): Promise<RequestResult>
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendMessageRequest(
       code: int,
@@ -1053,11 +1013,13 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendMessageRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+以同步或异步方式向对端进程发送MessageSequence消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结 果将在sendMessageRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
@@ -1067,7 +1029,7 @@ sendMessageRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| code | int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
@@ -1082,7 +1044,7 @@ sendMessageRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## 示例
 
@@ -1181,18 +1143,6 @@ try {
 
 ## sendMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-sendMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption,
-      callback: AsyncCallback<RequestResult>
-    ): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendMessageRequest(
       code: int,
@@ -1203,11 +1153,13 @@ sendMessageRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendMessageRequest返回时收到回调，回复内容在reply报文里。
+以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则 将在sendMessageRequest返回时收到回调，回复内容在reply报文里。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
 
@@ -1217,17 +1169,17 @@ sendMessageRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| code | int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -1235,7 +1187,7 @@ sendMessageRequest(
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回复，回复内容在reply报文里。
+以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。 如果为选项设置了同步模式，则将在sendRequest返回时收到回复，回复内容在reply报文里。
 
 **起始版本：** 7
 
@@ -1243,7 +1195,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 
 **废弃版本：** 8
 
-**替代接口：** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -1311,7 +1263,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将 在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
 
 **起始版本：** 8
 
@@ -1319,7 +1271,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -1398,7 +1350,7 @@ sendRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回调，回复内容在reply报文里。
+以同步或异步方式向对端进程发送MessageParcel消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在 sendRequest返回时收到回调，回复内容在reply报文里。
 
 **起始版本：** 8
 
@@ -1406,7 +1358,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -1420,5 +1372,5 @@ sendRequest(
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
 

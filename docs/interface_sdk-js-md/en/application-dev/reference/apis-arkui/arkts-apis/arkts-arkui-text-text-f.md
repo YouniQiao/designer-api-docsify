@@ -3,6 +3,7 @@
 ## Text
 
 ```TypeScript
+@Builder
 export declare function Text(
     style: CustomBuilderT<TextAttribute>,
     content_?: CustomBuilder,
@@ -15,11 +16,11 @@ Defines Text Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-export declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-@Builderexport declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,19 +28,20 @@ Defines Text Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextAttribute](arkts-arkui-text-textattribute-i.md)&gt; | Yes | Text attribute instance. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | content. |
+| style | CustomBuilderT&lt;TextAttribute&gt; | Yes | Text attribute instance. |
+| content_ | CustomBuilder | No | content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAttribute](arkts-arkui-text-textattribute-i.md) |  |
+| TextAttribute |  |
 
 
 ## Text
 
 ```TypeScript
+@ComponentBuilder
 export declare function Text(
     content?: string | Resource, value?: TextOptions, 
     content_?: CustomBuilder,
@@ -52,9 +54,11 @@ Defines Text Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-export declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +68,11 @@ Defines Text Component.
 | --- | --- | --- | --- |
 | content | string \| [Resource](arkts-arkui-resource-t.md) | No |  |
 | value | [TextOptions](arkts-arkui-text-textoptions-i.md) | No |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAttribute](arkts-arkui-text-textattribute-i.md) |  |
+| TextAttribute |  |
 

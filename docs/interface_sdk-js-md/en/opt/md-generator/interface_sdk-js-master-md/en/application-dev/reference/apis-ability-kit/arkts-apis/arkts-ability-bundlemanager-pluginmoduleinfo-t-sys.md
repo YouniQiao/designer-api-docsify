@@ -6,7 +6,9 @@ export type PluginModuleInfo = _PluginModuleInfo
 
 Defines the module information of a plugin.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo--><!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo-End-->
 

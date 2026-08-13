@@ -3,28 +3,22 @@
 ## openToast
 
 ```TypeScript
-export function openToast(options: ShowToastOptions): Promise<int>
+function openToast(options: ShowToastOptions): Promise<number>
 ```
 
-显示即时反馈并通过Promise返回其id。
+显示即时反馈并通过Promise返回其id。 > **说明：** > > - 不支持在输入法类型窗口中使用子窗（showMode设置为TOP_MOST或者SYSTEM_TOP_MOST）的openToast，详情见输入法框架的约束与限制说明 > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel) > 。 > > - 直接使用openToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获 > 取到PromptAction对象，再通过该对象调用 > [openToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#opentoast18)实现。
 
-> **说明：**
-> 
-> - 不支持在输入法类型窗口中使用子窗（showMode设置为TOP_MOST或者SYSTEM_TOP_MOST）的openToast，详情见输入法框架的约束与限制说明
-> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel-1)
-> 。
-> 
-> - 直接使用openToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的
-> getPromptAction方法获取到PromptAction对象，再通过该对象调用
-> [openToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#opentoast18)实现。
+**起始版本：** 18
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-promptAction-export function openToast(options: ShowToastOptions): Promise<int>--><!--Device-promptAction-export function openToast(options: ShowToastOptions): Promise<int>-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-promptAction-function openToast(options: ShowToastOptions): Promise<number>--><!--Device-promptAction-function openToast(options: ShowToastOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,18 +26,65 @@ export function openToast(options: ShowToastOptions): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ShowToastOptions | 是 | Toast选项。 |
+| options | ShowToastOptions | 是 | Toast选项，用于配置Toast的显示内容和样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | 返回即时反馈的id，可供closeToast使用。 |
+| Promise&lt;number&gt; | 返回即时反馈的id，可供closeToast使用。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { PromptAction, UIContext } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct toastExample {
+  @State toastId: number = 0;
+  uiContext: UIContext = this.getUIContext();
+  promptAction: PromptAction = this.uiContext.getPromptAction();
+
+  build() {
+    Column() {
+      Button('Open Toast')
+        .height(100)
+        .type(ButtonType.Capsule)
+        .onClick(() => {
+          this.promptAction.openToast({
+            message: 'Toast Message',
+            duration: 10000,
+          }).then((toastId: number) => {
+            this.toastId = toastId;
+          })
+            .catch((error: BusinessError) => {
+              console.error(`openToast error code is ${error.code}, message is ${error.message}`);
+            })
+        })
+      Blank().height(50)
+      Button('Close Toast')
+        .height(100)
+        .type(ButtonType.Capsule)
+        .onClick(() => {
+          try {
+            this.promptAction.closeToast(this.toastId);
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`CloseToast error code is ${code}, message is ${message}`);
+          }
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
+```
 

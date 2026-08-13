@@ -1,14 +1,14 @@
 # ChipV2SuffixSymbolIconConfig
 
-ChipV2SuffixSymbolIconConfig定义后缀Symbol图标的属性配置。
-
-继承自[ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md#ChipV2SymbolIconConfig)。
+ChipV2SuffixSymbolIconConfig定义后缀Symbol图标的属性配置。 继承自[ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md#ChipV2SymbolIconConfig)。
 
 **继承/实现关系：** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md#ChipV2SymbolIconConfig)
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig extends ChipV2SymbolIconConfig--><!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig extends ChipV2SymbolIconConfig-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig--><!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ ChipV2SuffixSymbolIconConfig定义后缀Symbol图标的属性配置。
 action?: VoidCallback
 ```
 
-后缀图标点击事件回调函数。点击后缀图标时调用此回调函数。
+后缀图标点击事件回调函数。点击后缀图标时调用此回调函数。 默认值：不设定后缀图标事件。 值为undefined时，按默认值处理。
 
-默认值：不设定后缀图标事件。
-
-值为undefined时，按默认值处理。
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +40,13 @@ action?: VoidCallback
 activatedAccessibility?: ChipV2AccessibilityConfig
 ```
 
-激活态无障碍朗读功能属性。
-
-默认值：undefined，无朗读内容。
+激活态无障碍朗读功能属性。 默认值：undefined，无朗读内容。
 
 **类型：** [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,13 +62,13 @@ activatedAccessibility?: ChipV2AccessibilityConfig
 normalAccessibility?: ChipV2AccessibilityConfig
 ```
 
-非激活态无障碍朗读功能属性。
-
-默认值：undefined，无朗读内容。
+非激活态无障碍朗读功能属性。 默认值：undefined，无朗读内容。
 
 **类型：** [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

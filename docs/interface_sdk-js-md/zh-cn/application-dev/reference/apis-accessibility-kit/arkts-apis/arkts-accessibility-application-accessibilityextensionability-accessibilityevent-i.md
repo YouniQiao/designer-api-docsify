@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface AccessibilityEvent--><!--Device-unnamed-export declare interface AccessibilityEvent-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -24,6 +26,8 @@ elementId?: long
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-AccessibilityEvent-elementId?: long--><!--Device-AccessibilityEvent-elementId?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -35,23 +39,15 @@ eventType: accessibility.EventType | accessibility.WindowUpdateType |
         TouchGuideType | GestureType | PageUpdateType
 ```
 
-具体事件类型。
-
-EventType：无障碍事件类型；
-
-WindowUpdateType：窗口变化类型；
-
-TouchGuideType：触摸浏览事件类型；
-
-GestureType：手势事件类型；
-
-PageUpdateType：页面刷新类型。
+具体事件类型。 EventType：无障碍事件类型； WindowUpdateType：窗口变化类型； TouchGuideType：触摸浏览事件类型； GestureType：手势事件类型； PageUpdateType：页面刷新类型。
 
 **类型：** accessibility.EventType \| accessibility.WindowUpdateType \| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) \| [GestureType](arkts-accessibility-gesturetype-t.md) \| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType-End-->
 
@@ -71,6 +67,8 @@ extraInfo?: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-AccessibilityEvent-extraInfo?: string--><!--Device-AccessibilityEvent-extraInfo?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -88,6 +86,8 @@ target?: AccessibilityElement
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityEvent-target?: AccessibilityElement--><!--Device-AccessibilityEvent-target?: AccessibilityElement-End-->
 
@@ -107,6 +107,8 @@ textAnnouncedForAccessibility?: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string--><!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -124,6 +126,8 @@ timeStamp?: long
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityEvent-timeStamp?: long--><!--Device-AccessibilityEvent-timeStamp?: long-End-->
 

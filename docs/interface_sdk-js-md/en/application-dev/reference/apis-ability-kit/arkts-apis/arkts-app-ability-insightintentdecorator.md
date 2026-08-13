@@ -12,18 +12,18 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 
 | Name | Description |
 | --- | --- |
-| [InsightIntentEntity](arkts-ability-app-ability-insightintentdecorator-insightintententity-i.md) | Define InsightIntentEntity Annotation. |
-| [InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-i.md) | Define InsightIntentEntry Annotation. |
-| [InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-i.md) | Define InsightIntentForm Annotation. |
-| [InsightIntentFunction](arkts-ability-app-ability-insightintentdecorator-insightintentfunction-i.md) | Define InsightIntentFunction Annotation. |
-| [InsightIntentFunctionMethod](arkts-ability-app-ability-insightintentdecorator-insightintentfunctionmethod-i.md) | Define InsightIntentFunctionMethod Annotation. |
-| [InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-i.md) | Define InsightIntentLink Annotation. |
-| [InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-i.md) | Define InsightIntentPage Annotation. |
-| [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md) | Declare interface of LinkIntentParamMapping. |
+| [EntryIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-entryintentdecoratorinfo-i.md) | Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and is used to describe the parameters supported by the @InsightIntentEntry decorator. |
+| [FormIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-formintentdecoratorinfo-i.md) | Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and is used to describe the parameters supported by the @InsightIntentForm decorator. |
+| [FunctionIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-functionintentdecoratorinfo-i.md) | Parameter type of the @InsightIntentFunctionMethod decorator. All properties inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo). |
+| [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) | Common properties for intent decorators, used to define basic information about an intent (including the intent name and version number). It applies to all decorators provided by this module. > **NOTE：**> > If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the > system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**, > and **result** fields with the values from the matching standard intent. |
+| [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md) | Describes the parameters supported by the @InsightIntentEntity decorator. |
+| [LinkIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-linkintentdecoratorinfo-i.md) | LinkIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and describes the parameters supported by the @InsightIntentLink decorator, such as the URI information required for application redirection. |
+| [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md) | LinkIntentParamMapping defines the mapping between intent parameters and URI information for the @InsightIntentLink decorator. |
+| [PageIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-pageintentdecoratorinfo-i.md) | PageIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and describes the parameters supported by the @InsightIntentPage decorator, such as the name of [NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10) of the target page. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md) | Enum definition of the paramCategory [paramCategory](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramCategory),paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink [InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-i.md#InsightIntentLink). |
+| [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md) | Enumerates the intent parameter categories available for the @InsightIntentLink decorator. The enum is used to define how intent parameters should be passed. |
 

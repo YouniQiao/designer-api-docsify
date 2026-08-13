@@ -2,11 +2,13 @@
 
 定义RichText属性函数。
 
-**继承/实现关系：** RichTextAttribute extends [CommonMethod<RichTextAttribute>](CommonMethod<RichTextAttribute>)
+**继承/实现关系：** RichTextAttribute extends CommonMethod<RichTextAttribute>
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class RichTextAttribute extends CommonMethod<RichTextAttribute>--><!--Device-unnamed-declare class RichTextAttribute extends CommonMethod<RichTextAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class RichTextAttribute--><!--Device-unnamed-declare class RichTextAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ onComplete(callback: () => void)
 当富文本加载结束时触发。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11 - 11开始，该接口支持在原子化服务API中使用。
 
@@ -41,6 +45,8 @@ onStart(callback: () => void)
 当富文本加载开始时触发。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11 - 11开始，该接口支持在原子化服务API中使用。
 

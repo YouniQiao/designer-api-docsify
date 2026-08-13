@@ -1,13 +1,10 @@
 # NativeMediaPlayerHandler
 
-Implements a **NativeMediaPlayerHandler** object used as a parameter of the  
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The application uses this object to report the player status to the ArkWeb engine.
-
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
+Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The application uses this object to report the player status to the ArkWeb engine. > **NOTE：**> > - The sample effect is subject to the actual device.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface NativeMediaPlayerHandler--><!--Device-webview-interface NativeMediaPlayerHandler-End-->
 
@@ -28,6 +25,8 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 Called to notify the ArkWeb engine of the buffer time when the buffer time changes.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -51,6 +50,8 @@ Called to notify the ArkWeb engine of the total duration of the media.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void--><!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void-End-->
@@ -73,6 +74,8 @@ Called to notify the ArkWeb engine that the media playback ends.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleEnded(): void--><!--Device-NativeMediaPlayerHandler-handleEnded(): void-End-->
@@ -88,6 +91,8 @@ handleError(error: MediaError, errorMessage: string): void
 Called to notify the ArkWeb engine that an error occurs with the player.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -112,6 +117,8 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void--><!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void-End-->
@@ -133,6 +140,8 @@ handleMutedChanged(muted: boolean): void
 Called to notify the ArkWeb engine of the muted status of the player when the muted status changes.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -156,6 +165,8 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void--><!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void-End-->
@@ -177,6 +188,8 @@ handlePlaybackRateChanged(playbackRate: number): void
 Called to notify the ArkWeb engine of the playback rate of the player when the playback rate changes.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -200,6 +213,8 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void--><!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void-End-->
@@ -222,6 +237,8 @@ Called to notify the ArkWeb engine that the seek operation is complete.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void--><!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void-End-->
@@ -238,6 +255,8 @@ Called to notify the ArkWeb engine that the player enters the seek state.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleSeeking(): void--><!--Device-NativeMediaPlayerHandler-handleSeeking(): void-End-->
@@ -253,6 +272,8 @@ handleStatusChanged(status: PlaybackStatus): void
 Called to notify the ArkWeb engine of the playback status of the player when the playback status changes.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -276,6 +297,8 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void--><!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void-End-->
@@ -297,6 +320,8 @@ handleVideoSizeChanged(width: number, height: number): void
 Called to notify the ArkWeb engine of the video size of the player.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -320,6 +345,8 @@ handleVolumeChanged(volume: number): void
 Called to notify the ArkWeb engine of the volume of the player when the volume changes.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

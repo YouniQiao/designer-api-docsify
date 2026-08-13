@@ -6,6 +6,8 @@ Defines the MediaQuery event.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface MediaQueryEvent--><!--Device-unnamed-export interface MediaQueryEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,6 +31,8 @@ The result of match result.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SelectedDragPreviewStyle--><!--Device-unnamed-declare interface SelectedDragPreviewStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 color?: ResourceColor
 ```
 
-用于设置文本拖拽时的背板颜色。
-
-默认值：跟随主题。默认主题时，浅色模式显示白色，深色模式显示黑色。
+用于设置文本拖拽时的背板颜色。 默认值：跟随主题。默认主题时，浅色模式显示白色，深色模式显示黑色。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,9 +1,10 @@
 # MinSpeed
 
-Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is   
-[LOW_SPEED](arkts-basicservices-agent-faults-e.md#Faults).
+Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is [LOW_SPEED](arkts-basicservices-agent-faults-e.md#Faults).
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface MinSpeed--><!--Device-agent-interface MinSpeed-End-->
 
@@ -25,7 +26,9 @@ Duration during which the task speed can be lower than the minimum speed, in sec
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MinSpeed-duration: int--><!--Device-MinSpeed-duration: int-End-->
 
@@ -41,7 +44,9 @@ Minimum speed of a task, in byte/s. If the task speed is lower than this value f
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MinSpeed-speed: long--><!--Device-MinSpeed-speed: long-End-->
 

@@ -4,6 +4,8 @@ Channel represents an [ISO 7816-4] channel opened to a SE. It can be either a lo
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-omapi-export interface Channel--><!--Device-omapi-export interface Channel-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -20,9 +22,11 @@ import { omapi } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Closes this channel to the SE.If the method is called when the channel is already closed, this method SHALL be ignored.
+Closes this channel to the SE. If the method is called when the channel is already closed, this method SHALL be ignored.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Channel-close(): void--><!--Device-Channel-close(): void-End-->
 
@@ -32,7 +36,7 @@ Closes this channel to the SE.If the method is called when the channel is alread
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -60,6 +64,8 @@ Returns the data as received from the application select command, including the 
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Channel-getSelectResponse(): number[]--><!--Device-Channel-getSelectResponse(): number[]-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -74,7 +80,7 @@ Returns the data as received from the application select command, including the 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -103,6 +109,8 @@ Get the session that has opened this channel.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Channel-getSession(): Session--><!--Device-Channel-getSession(): Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -117,7 +125,7 @@ Get the session that has opened this channel.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -147,6 +155,8 @@ Checks whether this channel is the basic channel.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Channel-isBasicChannel(): boolean--><!--Device-Channel-isBasicChannel(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -161,7 +171,7 @@ Checks whether this channel is the basic channel.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -190,6 +200,8 @@ Checks if this channel is closed.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Channel-isClosed(): boolean--><!--Device-Channel-isClosed(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -204,7 +216,7 @@ Checks if this channel is closed.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -233,6 +245,8 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Channel-transmit(command: number[]): Promise<number[]>--><!--Device-Channel-transmit(command: number[]): Promise<number[]>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -253,11 +267,11 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -291,6 +305,8 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void--><!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -306,11 +322,11 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 

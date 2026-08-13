@@ -4,6 +4,8 @@ Enumeration of scenes of accessibility focus.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export enum AccessibilityFocusScene--><!--Device-unnamed-export enum AccessibilityFocusScene-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ HOVER_FOCUS = 1
 Hover to move the accessibility focus.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ Swipe finger to move the accessibility focus.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AccessibilityFocusScene-SWIPE_FOCUS = 2--><!--Device-AccessibilityFocusScene-SWIPE_FOCUS = 2-End-->
@@ -55,6 +61,8 @@ SCROLL_FOCUS = 3
 Move the accessibility focus after scrolling the component.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

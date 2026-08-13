@@ -4,6 +4,8 @@ Defines the options for initializing a **SubHeaderV2Select** object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SubHeaderV2SelectOptions--><!--Device-unnamed-export interface SubHeaderV2SelectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,45 +16,21 @@ Defines the options for initializing a **SubHeaderV2Select** object.
 import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2OperationItemType, SubHeaderV2OperationType, SubHeaderV2Title, SubHeaderV2OperationItem } from '@kit.ArkUI';
 ```
 
-## onSelect
-
-```TypeScript
-onSelect?: SubHeaderV2SelectOnSelect
-```
-
-Callback invoked when an item in the drop-down list box is selected.
-
-Default value: **undefined**
-
-**Since:** 18
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2SelectOptions-onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2SelectOptions-onSelect?: SubHeaderV2SelectOnSelect-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## defaultFocus
 
 ```TypeScript
 defaultFocus?: boolean
 ```
 
-Whether the drop-down button is the default focus.
-
-**true**: The drop-down button is the default focus.
-
-**false**: The drop-down button is not the default focus.
-
-Default value: **false**
+Whether the drop-down button is the default focus. **true**: The drop-down button is the default focus. **false**: The drop-down button is not the default focus. Default value: **false**
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +52,35 @@ Set the id for the SubHeaderV2Select.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-SubHeaderV2SelectOptions-id?: string--><!--Device-SubHeaderV2SelectOptions-id?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onSelect
+
+```TypeScript
+onSelect?: SubHeaderV2SelectOnSelect
+```
+
+Callback invoked when an item in the drop-down list box is selected. Default value: **undefined**
+
+**Type:** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeaderV2SelectOptions-onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2SelectOptions-onSelect?: SubHeaderV2SelectOnSelect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,9 +92,11 @@ options: SelectOption[]
 
 Options for the drop-down list box.
 
-**Type:** [SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)[]
+**Type:** SelectOption[]
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,6 +118,8 @@ Text content of the drop-down button. Default value: **''**. The Resource type i
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -128,15 +134,13 @@ Text content of the drop-down button. Default value: **''**. The Resource type i
 selectedIndex?: number
 ```
 
-Index of the initially selected item in the drop-down list box.
-
-The index of the first item is 0.
-
-If this property is not set, the default value **-1** is used, indicating that no item is selected.
+Index of the initially selected item in the drop-down list box. The index of the first item is 0. If this property is not set, the default value **-1** is used, indicating that no item is selected.
 
 **Type:** number
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

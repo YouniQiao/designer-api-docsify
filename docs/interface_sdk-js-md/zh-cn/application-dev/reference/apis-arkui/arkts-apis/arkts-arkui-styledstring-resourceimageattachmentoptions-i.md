@@ -6,6 +6,8 @@ ResourceStr类型图片设置项。
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface ResourceImageAttachmentOptions--><!--Device-unnamed-export declare interface ResourceImageAttachmentOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ colorFilter?: ColorFilterType
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ layoutStyle?: ImageAttachmentLayoutStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ResourceImageAttachmentOptions-layoutStyle?: ImageAttachmentLayoutStyle--><!--Device-ResourceImageAttachmentOptions-layoutStyle?: ImageAttachmentLayoutStyle-End-->
@@ -56,15 +62,15 @@ layoutStyle?: ImageAttachmentLayoutStyle
 objectFit?: ImageFit
 ```
 
-设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。
-
-默认值：ImageFit.Cover
+设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。 默认值：ImageFit.Cover
 
 **类型：** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,15 +84,15 @@ objectFit?: ImageFit
 resourceValue: ResourceStr | undefined
 ```
 
-设置图片数据源。
-
-取值为undefined时，按空处理。
+设置图片数据源。 取值为undefined时，按空处理。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,6 +114,8 @@ size?: SizeOptions
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ResourceImageAttachmentOptions-size?: SizeOptions--><!--Device-ResourceImageAttachmentOptions-size?: SizeOptions-End-->
@@ -120,17 +128,15 @@ size?: SizeOptions
 supportSvg2?: boolean
 ```
 
-控制是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
-
-true：支持SVG解析新能力；false：保持原有SVG解析能力。
-
-默认值：false
+控制是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。 true：支持SVG解析新能力；false：保持原有SVG解析能力。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -144,17 +150,15 @@ true：支持SVG解析新能力；false：保持原有SVG解析能力。
 syncLoad?: boolean
 ```
 
-是否同步加载图片，默认是异步加载。同步加载时阻塞UI线程，不会显示占位图。
-
-true：同步加载；false：异步加载。
-
-默认值：false
+是否同步加载图片，默认是异步加载。同步加载时阻塞UI线程，不会显示占位图。 true：同步加载；false：异步加载。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,15 +172,15 @@ true：同步加载；false：异步加载。
 verticalAlign?: ImageSpanAlignment
 ```
 
-设置图片基于文本的对齐方式。
-
-默认值：ImageSpanAlignment.BOTTOM
+设置图片基于文本的对齐方式。 默认值：ImageSpanAlignment.BOTTOM
 
 **类型：** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

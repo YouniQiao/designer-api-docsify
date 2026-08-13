@@ -4,6 +4,8 @@ Asynchronous lock.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-utils-namespace locks--><!--Device-utils-namespace locks-End-->
 
 **System capability:** SystemCapability.Utils.Lang

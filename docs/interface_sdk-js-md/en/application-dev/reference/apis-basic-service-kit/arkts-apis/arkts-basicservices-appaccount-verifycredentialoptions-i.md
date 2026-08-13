@@ -2,9 +2,11 @@
 
 Represents the options for verifying the user credential.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface VerifyCredentialOptions--><!--Device-appAccount-interface VerifyCredentialOptions-End-->
 
@@ -26,9 +28,11 @@ Credential value. The custom value, the value cannot exceed 1024 characters. By 
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VerifyCredentialOptions-credential?: string--><!--Device-VerifyCredentialOptions-credential?: string-End-->
 
@@ -44,9 +48,11 @@ Credential type. The custom type, the value cannot exceed 1024 characters. By de
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VerifyCredentialOptions-credentialType?: string--><!--Device-VerifyCredentialOptions-credentialType?: string-End-->
 
@@ -55,18 +61,20 @@ Credential type. The custom type, the value cannot exceed 1024 characters. By de
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: Record<string, RecordData>
 ```
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-VerifyCredentialOptions-parameters?: Record<string, Object>--><!--Device-VerifyCredentialOptions-parameters?: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-VerifyCredentialOptions-parameters?: Record<string, RecordData>--><!--Device-VerifyCredentialOptions-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

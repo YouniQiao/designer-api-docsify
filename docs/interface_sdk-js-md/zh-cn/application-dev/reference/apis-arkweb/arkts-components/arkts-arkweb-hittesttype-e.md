@@ -8,7 +8,7 @@
 
 **废弃版本：** 21
 
-**替代接口：** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#WebHitTestType)
+**替代接口：** [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md#WebHitTestType)
 
 <!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 

@@ -18,7 +18,7 @@ Writes the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [write](ohos.connectedTag/connectedTag#write)
+**Substitutes:** [write](arkts-connectivity-connectedtag-write-f.md#write)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -65,7 +65,7 @@ Writes the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [write](ohos.connectedTag/connectedTag#write)
+**Substitutes:** [write](arkts-connectivity-connectedtag-write-f.md#write)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

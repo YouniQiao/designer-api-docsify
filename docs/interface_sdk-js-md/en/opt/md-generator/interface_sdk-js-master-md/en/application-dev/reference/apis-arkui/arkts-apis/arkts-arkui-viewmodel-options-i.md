@@ -4,7 +4,9 @@ Options type
 
 **Since:** 4
 
-<!--Device-unnamed-export interface Options<T extends ViewModel, Data = DefaultData<T>>--><!--Device-unnamed-export interface Options<T extends ViewModel, Data = DefaultData<T>>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -17,6 +19,8 @@ onCreate?(): void
 Called when the application is created
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,6 +38,8 @@ Called when the application is destroyed or called when the page is redirected t
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Options-onDestroy?(): void--><!--Device-Options-onDestroy?(): void-End-->
@@ -46,9 +52,11 @@ Called when the application is destroyed or called when the page is redirected t
 onHide?(): void
 ```
 
-Listens for page hiding.Called when the page disappears.
+Listens for page hiding. Called when the page disappears.
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -66,6 +74,8 @@ Called when the page is initialized. This function can be called only once in a 
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Options-onInit?(): void--><!--Device-Options-onInit?(): void-End-->
@@ -82,6 +92,8 @@ Called when the page is created. This function can be called only once in a life
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Options-onReady?(): void--><!--Device-Options-onReady?(): void-End-->
@@ -97,6 +109,8 @@ onRestoreData?(data: Object): void
 Called when the user data need to be restored
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -119,6 +133,8 @@ onSaveData?(data: Object): boolean
 Called when the user data need to be saved
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -148,6 +164,8 @@ Called when the page is displayed.
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Options-onShow?(): void--><!--Device-Options-onShow?(): void-End-->
@@ -160,11 +178,13 @@ Called when the page is displayed.
 data?: Data
 ```
 
-Data model of the page that can be converted into a JSON object.The attribute name cannot start with \$ or an underscore (_) or contain the reserved words such as for, if, show, and tid.For a function, the return value must be an object.Set the value of data to the return value of the function during page initialization.
+Data model of the page that can be converted into a JSON object. The attribute name cannot start with \$ or an underscore (_) or contain the reserved words such as for, if, show, and tid. For a function, the return value must be an object. Set the value of data to the return value of the function during page initialization.
 
 **Type:** Data
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

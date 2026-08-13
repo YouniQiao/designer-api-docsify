@@ -8,9 +8,11 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 
 表示创建一个X.509证书对象。使用Callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -23,16 +25,16 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X.509证书序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | 是 | 回调函数。当创建X.509证书对象成功时，err为undefined，data为获取到的 X509Cert实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | 是 | 回调函数。当创建X.509证书对象成功时，err为undefined，data为获取到的 X509Cert实例；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 
@@ -83,9 +85,11 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 
 表示创建一个X.509证书对象。使用Promise方式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -109,10 +113,10 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 

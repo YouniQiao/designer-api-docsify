@@ -12,13 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function symlinkSync(target: string, srcPath: string): void
 ```
 
-Creates a symbolic link based on the file path. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> Since API version 11, this API cannot be used by third-party applications.
+Creates a symbolic link based on the file path. This API returns the result synchronously. > **NOTE：**> > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 

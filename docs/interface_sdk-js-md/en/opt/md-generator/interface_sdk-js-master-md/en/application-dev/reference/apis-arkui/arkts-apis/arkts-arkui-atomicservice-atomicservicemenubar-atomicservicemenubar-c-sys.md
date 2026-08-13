@@ -4,6 +4,8 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class AtomicServiceMenuBar--><!--Device-unnamed-export declare class AtomicServiceMenuBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ constructor(uiContext: UIContext)
 A constructor used to create an **AtomicServiceMenuBar** object.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +55,8 @@ public setVisible(visible: boolean): void
 Sets whether to display or hide the menu function capsule of the current atomic service.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

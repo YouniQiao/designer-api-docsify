@@ -1,7 +1,6 @@
 # PersistenceV2
 
-Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#AppStorageV2). For details, see  
-[PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
+Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#AppStorageV2). For details, see [PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
 
 **Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#AppStorageV2)
 
@@ -9,7 +8,9 @@ Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class PersistenceV2 extends AppStorageV2--><!--Device-unnamed-export declare class PersistenceV2 extends AppStorageV2-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PersistenceV2--><!--Device-unnamed-export declare class PersistenceV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,12 +28,13 @@ static globalConnect<T extends object>(
   ): T | undefined
 ```
 
-Stores key-value pair data on the application disk. If the given key already exists in  
-[PersistenceV2](../../../ui/state-management/arkts-new-persistencev2.md), the corresponding value is returned.Otherwise, a default value is constructed using the default value constructor and returned. If **globalConnect** is used for an [\@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorated object,changes to the object's [\@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) properties will trigger automatic refresh of the associated object, while changes to non-@Trace properties will not. If necessary,the [PersistenceV2.save](#save) API can be called to store the data manually.
+Stores key-value pair data on the application disk. If the given key already exists in [PersistenceV2](../../../ui/state-management/arkts-new-persistencev2.md), the corresponding value is returned. Otherwise, a default value is constructed using the default value constructor and returned. If **globalConnect** is used for an [\@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorated object, changes to the object's [\@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) properties will trigger automatic refresh of the associated object, while changes to non-@Trace properties will not. If necessary, the [PersistenceV2.save](#save) API can be called to store the data manually.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +64,13 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
   ): T | undefined
 ```
 
-Stores key-value pair data on the application disk. Supports the persistence of the following collection types:  
-[Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect).Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call  
-[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;&lt;ClassA&gt;>** persistence is not supported.
+Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;&lt;ClassA&gt;>** persistence is not supported.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,6 +104,8 @@ Called when persistence fails.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -127,6 +131,8 @@ Persists the specified key-value pair data once.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

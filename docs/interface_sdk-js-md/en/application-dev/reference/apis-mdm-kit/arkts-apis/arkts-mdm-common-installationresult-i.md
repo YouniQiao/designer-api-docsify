@@ -1,13 +1,12 @@
 # InstallationResult
 
-An object that holds the application installation result.
-
-This object is used as a callback parameter in  
-[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onMarketAppInstallResult).
+An object that holds the application installation result. This object is used as a callback parameter in [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onMarketAppInstallResult).
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-common-export interface InstallationResult--><!--Device-common-export interface InstallationResult-End-->
 
@@ -33,6 +32,8 @@ Application installation result message.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InstallationResult-message: string--><!--Device-InstallationResult-message: string-End-->
@@ -52,6 +53,8 @@ Application installation result. **SUCCESS** indicates that the application is s
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

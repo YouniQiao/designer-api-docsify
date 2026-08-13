@@ -4,6 +4,8 @@ Defines struct of the parameters used to configure the next accessibility focus 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface AccessibilityNextFocusParams--><!--Device-unnamed-declare interface AccessibilityNextFocusParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Defines struct of the parameters used to configure the next accessibility focus 
 isConsiderDescendants?: boolean
 ```
 
-isConsiderDescendants - Determines whether the focus search should consider focusable nodes within the  descendants of the target element during the next accessibility focus operation.
+isConsiderDescendants - Determines whether the focus search should consider focusable nodes within the descendants of the target element during the next accessibility focus operation.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

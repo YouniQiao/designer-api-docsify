@@ -8,7 +8,9 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 在当前显示模式下获取折叠折痕区域。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -26,7 +28,7 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 | 错误码ID |
 | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

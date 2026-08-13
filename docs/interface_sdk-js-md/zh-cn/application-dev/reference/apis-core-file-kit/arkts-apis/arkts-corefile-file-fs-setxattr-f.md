@@ -12,6 +12,8 @@ declare function setxattr(path: string, key: string, value: string): Promise<voi
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>--><!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -35,7 +37,7 @@ declare function setxattr(path: string, key: string, value: string): Promise<voi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |

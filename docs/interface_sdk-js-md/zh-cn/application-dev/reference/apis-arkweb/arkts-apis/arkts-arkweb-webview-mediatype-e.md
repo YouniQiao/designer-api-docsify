@@ -2,9 +2,11 @@
 
 表示媒体类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum MediaType--><!--Device-webview-enum MediaType-End-->
 
@@ -18,9 +20,13 @@ VIDEO = 0
 
 视频。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-VIDEO = 0--><!--Device-MediaType-VIDEO = 0-End-->
 
@@ -34,9 +40,13 @@ AUDIO = 1
 
 音频。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-AUDIO = 1--><!--Device-MediaType-AUDIO = 1-End-->
 

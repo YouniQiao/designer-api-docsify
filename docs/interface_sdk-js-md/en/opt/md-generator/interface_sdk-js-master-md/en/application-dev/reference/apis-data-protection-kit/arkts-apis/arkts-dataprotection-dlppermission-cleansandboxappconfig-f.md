@@ -12,11 +12,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function cleanSandboxAppConfig(): Promise<void>
 ```
 
-Clears the sandbox application configuration. After the API is successfully called, the sandbox application configuration is cleared and the default state is restored. This API uses a promise to return the result.
-
-This API clears the sandbox application configuration and restores the default state to prevent residual configurations from affecting subsequent use. This API can be called only in non-sandbox applications.
+Clears the sandbox application configuration. After the API is successfully called, the sandbox application configuration is cleared and the default state is restored. This API uses a promise to return the result. This API clears the sandbox application configuration and restores the default state to prevent residual configurations from affecting subsequent use. This API can be called only in non-sandbox applications.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function cleanSandboxAppConfig(): Promise<void>--><!--Device-dlpPermission-function cleanSandboxAppConfig(): Promise<void>-End-->
 
@@ -32,11 +32,11 @@ This API clears the sandbox application configuration and restores the default s
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100018-application-unauthorized) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 

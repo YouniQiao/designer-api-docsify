@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-audio-interface AppIdInfo--><!--Device-audio-interface AppIdInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -21,6 +23,8 @@ appFullTokenId: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ appPid: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AppIdInfo-appPid: int--><!--Device-AppIdInfo-appPid: int-End-->
@@ -62,6 +68,8 @@ appTokenId: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AppIdInfo-appTokenId: int--><!--Device-AppIdInfo-appTokenId: int-End-->
@@ -81,6 +89,8 @@ appUid: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

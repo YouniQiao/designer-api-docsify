@@ -4,11 +4,13 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface SelectionContainerInterface--><!--Device-unnamed-export interface SelectionContainerInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: SelectionContainerOptions): SelectionContainerAttribute
@@ -17,6 +19,8 @@
 定义SelectionContainer的构造函数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

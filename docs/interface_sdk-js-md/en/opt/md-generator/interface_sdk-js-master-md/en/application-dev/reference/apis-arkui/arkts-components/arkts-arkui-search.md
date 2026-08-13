@@ -1,14 +1,8 @@
 # Search
 
-The **Search** component provides an area for users to enter search queries.
+The **Search** component provides an area for users to enter search queries. > **NOTE** > > This component supports plain text only. For rich text, use the RichEditor component.
 
-> **NOTE**
->
-> This component supports plain text only. For rich text, use the [RichEditor]{@link ./rich_editor} component.
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## Search
 
@@ -19,6 +13,8 @@ Search(options?: SearchOptions)
 Defines the constructor of Search.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,11 +30,10 @@ Defines the constructor of Search.
 
 ## Summary
 
-- [CancelButtonOptions](arkts-arkui-search-cancelbuttonoptions-i.md)
-- [CancelButtonSymbolOptions](arkts-arkui-search-cancelbuttonsymboloptions-i.md)
-- [IconOptions](arkts-arkui-search-iconoptions-i.md)
-- [SearchButtonOptions](arkts-arkui-search-searchbuttonoptions-i.md)
-- [SearchOptions](arkts-arkui-search-searchoptions-i.md)
-- [SearchSubmitCallback](arkts-arkui-search-searchsubmitcallback-t.md)
-- [CancelButtonStyle](arkts-arkui-search-cancelbuttonstyle-e.md)
-- [SearchType](arkts-arkui-search-searchtype-e.md)
+- [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md)
+- [IconOptions](arkts-arkui-iconoptions-i.md)
+- [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md)
+- [SearchOptions](arkts-arkui-searchoptions-i.md)
+- [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md)
+- [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
+- [SearchType](arkts-arkui-searchtype-e.md)

@@ -8,7 +8,9 @@ Implements a long press gesture recognizer. Inherits from [GestureRecognizer](ar
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-declare class LongPressRecognizer extends GestureRecognizer--><!--Device-unnamed-declare class LongPressRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LongPressRecognizer--><!--Device-unnamed-declare class LongPressRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Obtains the maximum movement distance allowed for gesture recognition by the lon
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Obtains the minimum duration required for the long press gesture to be recognize
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -75,6 +81,8 @@ Checks whether the long press gesture recognizer is set to trigger repeated call
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

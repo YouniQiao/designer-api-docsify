@@ -26,7 +26,7 @@ bundle: string
 
 **废弃版本：** 9
 
-**替代接口：** [BundleOption](ohos.notificationManager/notificationManager#BundleOption)
+**替代接口：** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#BundleOption)
 
 <!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
 
@@ -46,7 +46,7 @@ uid?: number
 
 **废弃版本：** 9
 
-**替代接口：** [BundleOption](ohos.notificationManager/notificationManager#BundleOption)
+**替代接口：** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#BundleOption)
 
 <!--Device-BundleOption-uid?: number--><!--Device-BundleOption-uid?: number-End-->
 

@@ -6,6 +6,8 @@ Enumerates the key encryption types (exporting or importing keys).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksKeyWrapType--><!--Device-huks-export enum HuksKeyWrapType-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,6 +23,8 @@ Hardware unique key encryption type. &lt;!--Del--&gt;(not supported currently)&l
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

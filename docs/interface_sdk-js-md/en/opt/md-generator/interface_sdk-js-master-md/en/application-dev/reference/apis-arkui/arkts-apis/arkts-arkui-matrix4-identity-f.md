@@ -16,6 +16,8 @@ Constructs an identity matrix.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-matrix4-function identity(): Matrix4Transit--><!--Device-matrix4-function identity(): Matrix4Transit-End-->
@@ -26,4 +28,4 @@ Constructs an identity matrix.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| [Matrix4Transit](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md) |

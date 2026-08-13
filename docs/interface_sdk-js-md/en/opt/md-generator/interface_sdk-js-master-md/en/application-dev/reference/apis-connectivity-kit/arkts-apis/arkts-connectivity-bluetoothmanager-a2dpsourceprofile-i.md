@@ -8,9 +8,9 @@ Manager a2dp source profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** [A2dpSourceProfile](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile)
+**Substitutes:** [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md#A2dpSourceProfile)
 
-<!--Device-bluetoothManager-interface A2dpSourceProfile extends BaseProfile--><!--Device-bluetoothManager-interface A2dpSourceProfile extends BaseProfile-End-->
+<!--Device-bluetoothManager-interface A2dpSourceProfile--><!--Device-bluetoothManager-interface A2dpSourceProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,13 +26,13 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 connect(device: string): void
 ```
 
-Connect to device with a2dp.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
+Connect to device with a2dp. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [connect](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#connect)
+**Substitutes:** [connect](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md#connect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -52,10 +52,10 @@ Connect to device with a2dp.On API 10 and above, the permission required by this
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -66,13 +66,13 @@ Connect to device with a2dp.On API 10 and above, the permission required by this
 disconnect(device: string): void
 ```
 
-Disconnect to device with a2dp.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
+Disconnect to device with a2dp. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [disconnect](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#disconnect)
+**Substitutes:** [disconnect](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md#disconnect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -92,10 +92,10 @@ Disconnect to device with a2dp.On API 10 and above, the permission required by t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -106,13 +106,13 @@ Disconnect to device with a2dp.On API 10 and above, the permission required by t
 getPlayingState(device: string): PlayingState
 ```
 
-Obtains the playing state of device.On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Obtains the playing state of device. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [getPlayingState](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#getPlayingState)
+**Substitutes:** [getPlayingState](arkts-connectivity-a2dp-a2dpsourceprofile-i.md#getPlayingState)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -137,26 +137,26 @@ Obtains the playing state of device.On API 10 and above, the permission required
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
 | 2900001 |
 | 2900003 |
 | 2900099 |
 
-## off('connectionStateChange')
+## off_connectionStateChange
 
 ```TypeScript
 off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 ```
 
-Unsubscribe the event reported when the profile connection state changes.On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Unsubscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [connectionStateChange](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile.off#event:connectionStateChange)
+**Substitutes:** connectionStateChange
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -176,22 +176,22 @@ Unsubscribe the event reported when the profile connection state changes.On API 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
-## on('connectionStateChange')
+## on_connectionStateChange
 
 ```TypeScript
 on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 ```
 
-Subscribe the event reported when the profile connection state changes.On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Subscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [connectionStateChange](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile.on#event:connectionStateChange)
+**Substitutes:** connectionStateChange
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -211,5 +211,5 @@ Subscribe the event reported when the profile connection state changes.On API 10
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |

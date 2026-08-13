@@ -2,7 +2,9 @@
 
 表示域账号信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
 
@@ -18,7 +20,9 @@ accountName: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DomainAccountInfo-accountName: string--><!--Device-DomainAccountInfo-accountName: string-End-->
 
@@ -27,20 +31,20 @@ accountName: string
 ## additionalInfo
 
 ```TypeScript
-additionalInfo?: Record<string, Object>
+additionalInfo?: Record<string, RecordData>
 ```
 
-域账号附加信息。
+域账号附加信息。 此接口仅可在Stage模型下使用。
 
-此接口仅可在Stage模型下使用。
-
-**类型：** Record&lt;string, Object&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DomainAccountInfo-additionalInfo?: Record<string, Object>--><!--Device-DomainAccountInfo-additionalInfo?: Record<string, Object>-End-->
+<!--Device-DomainAccountInfo-additionalInfo?: Record<string, RecordData>--><!--Device-DomainAccountInfo-additionalInfo?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -54,7 +58,9 @@ domain: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DomainAccountInfo-domain: string--><!--Device-DomainAccountInfo-domain: string-End-->
 
@@ -70,7 +76,9 @@ serverConfigId?: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DomainAccountInfo-serverConfigId?: string--><!--Device-DomainAccountInfo-serverConfigId?: string-End-->
 

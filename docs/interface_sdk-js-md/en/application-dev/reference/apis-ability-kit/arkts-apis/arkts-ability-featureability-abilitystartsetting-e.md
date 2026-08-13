@@ -1,12 +1,12 @@
 # AbilityStartSetting
 
-Defines the window property corresponding to this ability. The **abilityStartSetting** property is an object defined in the format of [**key: string]: any**, where **key** is an enumerated value of **AbilityStartSetting** and **value** is an enumerated value of **AbilityWindowConfiguration**.
-
-The value is obtained through **featureAbility.AbilityStartSetting**.
+Defines the window property corresponding to this ability. The **abilityStartSetting** property is an object defined in the format of [**key: string]: any**, where **key** is an enumerated value of ** AbilityStartSetting** and **value** is an enumerated value of **AbilityWindowConfiguration**. The value is obtained through **featureAbility.AbilityStartSetting**.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-featureAbility-export enum AbilityStartSetting--><!--Device-featureAbility-export enum AbilityStartSetting-End-->
 
@@ -23,6 +23,8 @@ Ability window size.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,6 +44,8 @@ Ability window display mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityStartSetting-WINDOW_MODE_KEY = 'windowMode'--><!--Device-AbilityStartSetting-WINDOW_MODE_KEY = 'windowMode'-End-->
@@ -59,6 +63,8 @@ Display device ID.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

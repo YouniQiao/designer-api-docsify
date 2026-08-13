@@ -1,10 +1,10 @@
 # ExtensionAbilityInfo
 
-The module defines the ExtensionAbility information. An application can obtain its own ExtensionAbility information through  
-[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf), with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in to  
-[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag).
+The module defines the ExtensionAbility information. An application can obtain its own ExtensionAbility information through [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) , with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in to [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ExtensionAbilityInfo--><!--Device-unnamed-export interface ExtensionAbilityInfo-End-->
 
@@ -20,7 +20,9 @@ Index of an application clone. It takes effect only for cloned applications.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityInfo-readonly appIndex: int--><!--Device-ExtensionAbilityInfo-readonly appIndex: int-End-->
 
@@ -29,25 +31,18 @@ Index of an application clone. It takes effect only for cloned applications.
 ## applicationInfo
 
 ```TypeScript
-readonly applicationInfo: ApplicationInfo
+readonly applicationInfo: ApplicationInfo | null
 ```
 
-Application configuration information &lt;!--Del--&gt;. The information can be obtained by passing in  
-**GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION** to the **extensionAbilityFlags** parameter of  
-[queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryExtensionAbilityInfo)&lt;!--DelEnd--&gt;.
+Obtains configuration information about an application
 
-This field is not returned when the  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)or  
-[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getBundleInfo)is used to obtain ExtensionAbilityInfo information. You can obtain the related information by obtaining the  
-[bundleInfo](arkts-ability-bundleinfo-i.md#BundleInfo).appInfo object.
+**Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md) \| null
 
-**Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
+<!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo | null--><!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo | null-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -61,7 +56,9 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -79,7 +76,9 @@ ID of the ExtensionAbility description.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,7 +96,9 @@ Whether the ExtensionAbility is enabled. **true** if enabled, **false** otherwis
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,7 +116,9 @@ Whether the ExtensionAbility can be called by other applications. **true** if th
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -133,7 +136,9 @@ Type of the ExtensionAbility.
 
 **Type:** bundleManager.ExtensionAbilityType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -147,14 +152,15 @@ Type of the ExtensionAbility.
 readonly extensionAbilityTypeName: string
 ```
 
-Type of the ExtensionAbility. For details about available values, see  
-[the type field under the extensionabilities tag](../../../quick-start/module-configuration-file.md#extensionabilities).
+Type of the ExtensionAbility. For details about available values, see [the type field under the extensionabilities tag](../../../quick-start/module-configuration-file.md#extensionabilities) .
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ExtensionAbilityInfo-readonly extensionAbilityTypeName: string--><!--Device-ExtensionAbilityInfo-readonly extensionAbilityTypeName: string-End-->
 
@@ -170,7 +176,9 @@ ID of the ExtensionAbility icon.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -188,7 +196,9 @@ ID of the ExtensionAbility label.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,12 +212,13 @@ ID of the ExtensionAbility label.
 readonly metadata: Array<Metadata>
 ```
 
-Metadata of the ExtensionAbility. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags**parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Metadata of the ExtensionAbility. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** , **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -225,7 +236,9 @@ Name of the HAP file to which the ExtensionAbility belongs.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -243,7 +256,9 @@ Name of the ExtensionAbility.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -261,7 +276,9 @@ Permissions required for other bundles to call the ExtensionAbility.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -279,7 +296,9 @@ Permission required for reading data from the ExtensionAbility.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -297,9 +316,11 @@ Skills of the ExtensionAbility.
 
 **Type:** Array&lt;[Skill](arkts-ability-skill-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ExtensionAbilityInfo-readonly skills: Array<Skill>--><!--Device-ExtensionAbilityInfo-readonly skills: Array<Skill>-End-->
 
@@ -315,7 +336,9 @@ Permission required for writing data to the ExtensionAbility.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

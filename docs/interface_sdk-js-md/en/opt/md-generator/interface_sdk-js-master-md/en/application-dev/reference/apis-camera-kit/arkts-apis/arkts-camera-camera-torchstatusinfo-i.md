@@ -2,7 +2,9 @@
 
 Describes the flashlight status information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface TorchStatusInfo--><!--Device-camera-interface TorchStatusInfo-End-->
 
@@ -24,7 +26,9 @@ Whether the flashlight is activated. **true** if activated, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,7 +46,9 @@ Whether the flashlight is available. **true** if available, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -60,7 +66,9 @@ Flashlight brightness level. The value range is [0, 1]. A larger value indicates
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

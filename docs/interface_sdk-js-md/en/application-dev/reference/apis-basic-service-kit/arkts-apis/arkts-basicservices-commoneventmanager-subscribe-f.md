@@ -14,9 +14,11 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 Subscribes to a common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -29,16 +31,16 @@ Subscribes to a common event. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | subscriber | CommonEventSubscriber | Yes | Subscriber object. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;CommonEventData&gt; | Yes | Callback used to return the result. When a common event is successfully subscribed to, the common event data is returned by **data** when the event is triggered. If the subscription fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventData&gt; | Yes | Callback used to return the result. When a common event is successfully subscribed to, the common event data is returned by **data** when the event is triggered. If the subscription fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [1500007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500010-the-number-of-subscribers-exceeds-the-upper-limit) | The count of subscriber exceeds system specification.<br>**Applicable version:** 20 and later |
-| [1500008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
+| [1500010](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500010-the-number-of-subscribers-exceeds-the-upper-limit) | The count of subscriber exceeds system specification.<br>**Applicable version:** 20 and later |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
 
 ## Examples
 

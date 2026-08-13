@@ -6,11 +6,13 @@ type OnPlaybackRateDone = (rate: double) => void
 
 Describes the callback invoked for the event indicating that the playback rate setting is complete.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-media-type OnPlaybackRateDone = (rate: double) => void--><!--Device-media-type OnPlaybackRateDone = (rate: double) => void-End-->
 
@@ -20,5 +22,5 @@ Describes the callback invoked for the event indicating that the playback rate s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Playback rate. |
+| rate | double | Yes | Playback rate. |
 

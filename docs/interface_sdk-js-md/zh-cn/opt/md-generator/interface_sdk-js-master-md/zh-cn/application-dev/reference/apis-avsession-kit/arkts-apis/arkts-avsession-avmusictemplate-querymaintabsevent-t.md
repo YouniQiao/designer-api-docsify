@@ -8,6 +8,8 @@ type QueryMainTabsEvent = () => Promise<MediaTab[]>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-avMusicTemplate-type QueryMainTabsEvent = () => Promise<MediaTab[]>--><!--Device-avMusicTemplate-type QueryMainTabsEvent = () => Promise<MediaTab[]>-End-->

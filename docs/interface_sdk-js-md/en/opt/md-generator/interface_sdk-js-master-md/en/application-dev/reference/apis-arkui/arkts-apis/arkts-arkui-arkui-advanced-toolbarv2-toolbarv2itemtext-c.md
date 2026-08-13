@@ -4,7 +4,7 @@ Declare type ToolBarV2ItemText
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ToolBarV2ItemText--><!--Device-unnamed-export declare class ToolBarV2ItemText-End-->
 
@@ -26,6 +26,8 @@ The constructor used to create a ToolBarV2ItemText object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -43,7 +45,8 @@ The constructor used to create a ToolBarV2ItemText object.
 ## activatedColor
 
 ```TypeScript
-activatedColor?: ColorMetrics
+@Trace
+  activatedColor?: ColorMetrics
 ```
 
 Text fontColor when the item is activated.
@@ -52,18 +55,21 @@ Text fontColor when the item is activated.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2ItemText-activatedColor?: ColorMetrics--><!--Device-ToolBarV2ItemText-activatedColor?: ColorMetrics-End-->
+<!--Device-ToolBarV2ItemText-@Trace  activatedColor?: ColorMetrics--><!--Device-ToolBarV2ItemText-@Trace  activatedColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
 
 ```TypeScript
-color?: ColorMetrics
+@Trace
+  color?: ColorMetrics
 ```
 
 Define text fontColor.
@@ -72,18 +78,21 @@ Define text fontColor.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2ItemText-color?: ColorMetrics--><!--Device-ToolBarV2ItemText-color?: ColorMetrics-End-->
+<!--Device-ToolBarV2ItemText-@Trace  color?: ColorMetrics--><!--Device-ToolBarV2ItemText-@Trace  color?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
 
 ```TypeScript
-text: ResourceStr
+@Trace
+  text: ResourceStr
 ```
 
 Define text content.
@@ -92,10 +101,12 @@ Define text content.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2ItemText-text: ResourceStr--><!--Device-ToolBarV2ItemText-text: ResourceStr-End-->
+<!--Device-ToolBarV2ItemText-@Trace  text: ResourceStr--><!--Device-ToolBarV2ItemText-@Trace  text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

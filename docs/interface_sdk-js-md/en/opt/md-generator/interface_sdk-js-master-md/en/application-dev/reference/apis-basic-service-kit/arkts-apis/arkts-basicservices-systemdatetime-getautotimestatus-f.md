@@ -14,7 +14,9 @@ function getAutoTimeStatus(): boolean
 
 Obtains the switch status of the automatic time setting. This API returns the result synchronously.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-function getAutoTimeStatus(): boolean--><!--Device-systemDateTime-function getAutoTimeStatus(): boolean-End-->
 
@@ -30,7 +32,7 @@ Obtains the switch status of the automatic time setting. This API returns the re
 
 | Error Code ID |
 | --- |
-| [13000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) |
 
 ## Examples
 

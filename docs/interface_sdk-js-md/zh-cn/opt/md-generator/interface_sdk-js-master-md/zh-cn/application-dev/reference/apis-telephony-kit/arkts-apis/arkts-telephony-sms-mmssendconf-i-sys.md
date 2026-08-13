@@ -2,7 +2,9 @@
 
 彩信发送配置。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsSendConf--><!--Device-sms-export interface MmsSendConf-End-->
 
@@ -20,7 +22,9 @@ messageId?: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-messageId?: string--><!--Device-MmsSendConf-messageId?: string-End-->
 
@@ -38,7 +42,9 @@ responseState: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-responseState: int--><!--Device-MmsSendConf-responseState: int-End-->
 
@@ -56,7 +62,9 @@ transactionId: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-transactionId: string--><!--Device-MmsSendConf-transactionId: string-End-->
 
@@ -74,7 +82,9 @@ version: MmsVersionType
 
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-version: MmsVersionType--><!--Device-MmsSendConf-version: MmsVersionType-End-->
 

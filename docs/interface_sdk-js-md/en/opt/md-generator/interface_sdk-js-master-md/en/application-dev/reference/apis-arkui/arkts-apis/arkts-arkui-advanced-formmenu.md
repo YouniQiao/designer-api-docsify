@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.FormMenu(Defines the form menu)
+# @ohos.arkui.advanced.FormMenu
 
 ## Modules to Import
 

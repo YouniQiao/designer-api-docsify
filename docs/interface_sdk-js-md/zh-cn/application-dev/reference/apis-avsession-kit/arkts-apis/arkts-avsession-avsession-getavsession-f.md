@@ -6,15 +6,15 @@
 function getAVSession(context: Context): Promise<AVSession>
 ```
 
-获取会话对象。使用Promise异步回调。
+获取会话对象。使用Promise异步回调。 该接口可将当前进程已创建过的会话对象返回，如果没有创建过会话对象，该接口调用会失败并抛出异常。
 
-该接口可将当前进程已创建过的会话对象返回，如果没有创建过会话对象，该接口调用会失败并抛出异常。
+**起始版本：** 24
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-avSession-function getAVSession(context: Context): Promise<AVSession>--><!--Device-avSession-function getAVSession(context: Context): Promise<AVSession>-End-->
 
@@ -36,8 +36,8 @@ function getAVSession(context: Context): Promise<AVSession>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
 ## 示例
 

@@ -12,9 +12,11 @@ import { audio } from '@kit.AudioKit';
 function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>
 ```
 
-Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses a promise to return the capturer instance.This capture can be used to record both Mic-In audio data and echo reference signal, for application to process algorithm.Mic-In audio data and echo reference signal will be put in one buffer or multiple buffers according to configuration set by application.Capturer is also not allowed to be created when application is in background.
+Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses a promise to return the capturer instance. This capture can be used to record both Mic-In audio data and echo reference signal, for application to process algorithm. Mic-In audio data and echo reference signal will be put in one buffer or multiple buffers according to configuration set by application. Capturer is also not allowed to be created when application is in background.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -42,11 +44,11 @@ Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapt
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
 ## Examples
 

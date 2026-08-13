@@ -1,21 +1,10 @@
 # ParticleAnnulusRegion
 
-Configures the annular emitter area.
-
-> **NOTE：**
-> 
-> - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as
-> 0.
-> 
-> - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius
-> and the larger value is used as the new outer radius.
-> 
-> - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and
-> the larger value is used as the new end angle.
-> 
-> ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
+Configures the annular emitter area. > **NOTE：**> > - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as > 0. > > - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius > and the larger value is used as the new outer radius. > > - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and > the larger value is used as the new end angle. > > 
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ParticleAnnulusRegion--><!--Device-unnamed-declare interface ParticleAnnulusRegion-End-->
 
@@ -34,6 +23,8 @@ The coordinates of the center of the annulus
 **Default:** {x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,6 +48,8 @@ The end angle of the annulus, in degree
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -77,6 +70,8 @@ The inner radius of the annulus
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -96,6 +91,8 @@ The outer radius of the annulus
 **Type:** LengthMetrics
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,6 +115,8 @@ The start angle of the annulus, in degree
 **Default:** 0
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

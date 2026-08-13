@@ -1,12 +1,12 @@
 # GeolocationPermissions
 
-Implements a GeolocationPermissions object.
+Implements a **GeolocationPermissions** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **GeolocationPermissions**. > > - Required Permissions > **ohos.permission.LOCATION**, **ohos.permission.APPROXIMATELY_LOCATION**, and > **ohos.permission.LOCATION_IN_BACKGROUND**, which are required for accessing the location information. For details > about the permissions, see > [@ohos.geolocation (Geolocation)](../../apis-location-kit/arkts-apis/arkts-geolocation.md#@ohos.geolocation).
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;You must load the Web component before calling the APIs in GeolocationPermissions.&lt;/p&gt;
+**Since:** 9
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 <!--Device-webview-class GeolocationPermissions--><!--Device-webview-class GeolocationPermissions-End-->
 
@@ -26,9 +26,13 @@ static allowGeolocation(origin: string, incognito?: boolean): void
 
 Allows the specified origin to use the geolocation information.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void-End-->
 
@@ -39,14 +43,14 @@ Allows the specified origin to use the geolocation information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| incognito | boolean | No | Whether to allow the specified origin to use the geolocation information in incognito mode. {@code true} means to allow the specified origin to use the geolocation information in incognito mode; {@code false} means to allow the specified origin to use the geolocation information in normal non-incognito mode. |
+| incognito | boolean | No | Whether to allow the specified origin to use the geolocation information in incognito mode. The value **true** means to allow the specified origin to use the geolocation information in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## deleteAllGeolocation
 
@@ -56,9 +60,13 @@ static deleteAllGeolocation(incognito?: boolean): void
 
 Clears the geolocation permission status of all sources.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static deleteAllGeolocation(incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteAllGeolocation(incognito?: boolean): void-End-->
 
@@ -68,7 +76,7 @@ Clears the geolocation permission status of all sources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to clear the geolocation permission status of all sources in incognito mode. {@code true} means to clear the geolocation permission status of all sources in incognito mode; {@code false} means to clear the geolocation permission status of all sources in normal non-incognito mode. |
+| incognito | boolean | No | Whether to clear the geolocation permission status of all sources in incognito mode. The value **true** means to clear the geolocation permission status of all sources in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 ## deleteGeolocation
 
@@ -76,11 +84,15 @@ Clears the geolocation permission status of all sources.
 static deleteGeolocation(origin: string, incognito?: boolean): void
 ```
 
-Delete geolocation permissions for specifies source.
+Clears the geolocation permission status of a specified origin.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void-End-->
 
@@ -90,15 +102,15 @@ Delete geolocation permissions for specifies source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Url source. |
-| incognito | boolean | No | {@code true} delete geolocation permissions for specifies source in incognito mode; {@code false} otherwise. |
+| origin | string | Yes | Index of the origin. |
+| incognito | boolean | No | Whether to clear the geolocation permission status of a specified origin in incognito mode. The value **true** means to clear the geolocation permission status of a specified origin in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## getAccessibleGeolocation
 
@@ -106,11 +118,15 @@ Delete geolocation permissions for specifies source.
 static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<boolean>
 ```
 
-Gets the geolocation permission status of the specified source.
+Obtains the geolocation permission status of the specified origin. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<boolean>--><!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<boolean>-End-->
 
@@ -120,21 +136,21 @@ Gets the geolocation permission status of the specified source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Url source. |
-| incognito | boolean | No | {@code true} gets the geolocation permission status of the specified source in incognito mode; {@code false} otherwise. |
+| origin | string | Yes | Index of the origin. |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | A Promise instance that obtains the permission status of the specified source and obtains successfully, true for authorization, false for access denial. Failed to get, indicating that the permission status of the specified source does not exist. |
+| Promise&lt;boolean&gt; | Promise used to return the geolocation permission status of the specified origin. &lt;br&gt;If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite. &lt;br&gt;If the operation fails, the geolocation permission status of the specified origin is not found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## getAccessibleGeolocation
 
@@ -142,11 +158,15 @@ Gets the geolocation permission status of the specified source.
 static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void
 ```
 
-Gets the geolocation permission status of the specified source.
+Obtains the geolocation permission status of the specified origin. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void--><!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void-End-->
 
@@ -156,16 +176,16 @@ Gets the geolocation permission status of the specified source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Url source. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Returns the geolocation permission status for the specified source. Successful acquisition, true means authorized, false means access is denied. Failed to get, indicating that the permission status of the specified source does not exist. |
-| incognito | boolean | No | {@code true} gets the geolocation permission status of the specified source in incognito mode; {@code false} otherwise. |
+| origin | string | Yes | Index of the origin. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of the specified origin.&lt;br&gt;If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite.&lt;br&gt;If the operation fails, the geolocation permission status of the specified origin is not found. |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## getStoredGeolocation
 
@@ -173,11 +193,15 @@ Gets the geolocation permission status of the specified source.
 static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>
 ```
 
-Get all stored geolocation permission url source.
+Obtains the geolocation permission status of all origins. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>--><!--Device-GeolocationPermissions-static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>-End-->
 
@@ -187,19 +211,19 @@ Get all stored geolocation permission url source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | {@code true} get all stored geolocation permission url source in incognito mode; {@code false} otherwise. |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | A Promise instance that gets all source information about the stored geolocation permission state. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the geolocation permission status of all origins. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## getStoredGeolocation
 
@@ -207,11 +231,15 @@ Get all stored geolocation permission url source.
 static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void
 ```
 
-Get all stored geolocation permission url source.
+Obtains the geolocation permission status of all origins. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void--><!--Device-GeolocationPermissions-static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void-End-->
 
@@ -221,12 +249,12 @@ Get all stored geolocation permission url source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Returns all source information for stored geolocation permission states. |
-| incognito | boolean | No | {@code true} gets all stored geolocation permission url source in incognito mode; {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the geolocation permission status of all origins. |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 

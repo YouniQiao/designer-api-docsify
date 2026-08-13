@@ -4,7 +4,9 @@ Input method system panel manager.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -27,12 +29,12 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [connectSystemChannel](arkts-ime-inputmethodsystempanelmanager-connectsystemchannel-f-sys.md#connectsystemchannel) | Connect system channel for the panel and input method. |
-| [offSystemPanelStatusChange](arkts-ime-inputmethodsystempanelmanager-offsystempanelstatuschange-f-sys.md#offsystempanelstatuschange) | Unsubscribe from the system panel status change event. |
-| [offSystemPrivateCommand](arkts-ime-inputmethodsystempanelmanager-offsystemprivatecommand-f-sys.md#offsystemprivatecommand) | Unsubscribe from the event when the input method application sends private data commands. |
-| [onSystemPanelStatusChange](arkts-ime-inputmethodsystempanelmanager-onsystempanelstatuschange-f-sys.md#onsystempanelstatuschange) | Subscribe to the system panel status change event. |
-| [onSystemPrivateCommand](arkts-ime-inputmethodsystempanelmanager-onsystemprivatecommand-f-sys.md#onsystemprivatecommand) | Subscribe to the event when the input method application sends private data commands. |
-| [sendPrivateCommand](arkts-ime-inputmethodsystempanelmanager-sendprivatecommand-f-sys.md#sendprivatecommand) | Send private command. |
+| [connectSystemChannel](arkts-ime-inputmethodsystempanelmanager-connectsystemchannel-f-sys.md#connectSystemChannel) | Connect system channel for the panel and input method. |
+| [offSystemPanelStatusChange](arkts-ime-inputmethodsystempanelmanager-offsystempanelstatuschange-f-sys.md#offSystemPanelStatusChange) | Unsubscribe from the system panel status change event. |
+| [offSystemPrivateCommand](arkts-ime-inputmethodsystempanelmanager-offsystemprivatecommand-f-sys.md#offSystemPrivateCommand) | Unsubscribe from the event when the input method application sends private data commands. |
+| [onSystemPanelStatusChange](arkts-ime-inputmethodsystempanelmanager-onsystempanelstatuschange-f-sys.md#onSystemPanelStatusChange) | Subscribe to the system panel status change event. |
+| [onSystemPrivateCommand](arkts-ime-inputmethodsystempanelmanager-onsystemprivatecommand-f-sys.md#onSystemPrivateCommand) | Subscribe to the event when the input method application sends private data commands. |
+| [sendPrivateCommand](arkts-ime-inputmethodsystempanelmanager-sendprivatecommand-f-sys.md#sendPrivateCommand) | Send private command. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -12,10 +12,11 @@ import { window } from '@kit.ArkUI';
 function getSnapshot(windowId: number): Promise<image.PixelMap>
 ```
 
-Obtains a snapshot of the same size as the specified window. This API uses a promise to return the result. If privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setWindowPrivacyMode)), taking a screenshot will result in a blank screen.
+Obtains a snapshot of the same size as the specified window. This API uses a promise to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setWindowPrivacyMode) ), taking a screenshot will result in a blank screen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>--><!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>-End-->
 
@@ -39,10 +40,10 @@ Obtains a snapshot of the same size as the specified window. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -8,7 +8,9 @@ Defines the rotation gesture recognizer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class RotationRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class RotationRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class RotationRecognizer--><!--Device-unnamed-export declare class RotationRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Returns the rotation gesture's angle.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

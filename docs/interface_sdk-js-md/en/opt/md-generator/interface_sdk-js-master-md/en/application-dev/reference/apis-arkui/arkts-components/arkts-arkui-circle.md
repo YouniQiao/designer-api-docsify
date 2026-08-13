@@ -1,9 +1,6 @@
 # Circle
 
-The **Circle** component is used to draw a circle.
-> **Child Components**
->
-> None.
+The **Circle** component is used to draw a circle. > **Child Components** > > None.
 
 ## Circle
 
@@ -14,6 +11,8 @@ Circle(value?: CircleOptions)
 use new function to set the value.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +38,8 @@ set the value.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -55,4 +56,4 @@ set the value.
 
 ## Summary
 
-- [CircleOptions](arkts-arkui-circle-circleoptions-i.md)
+- [CircleOptions](arkts-arkui-circleoptions-i.md)

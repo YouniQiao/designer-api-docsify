@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Mat4x4--><!--Device-unnamed-export interface Mat4x4-End-->
 
@@ -22,7 +24,9 @@ w: Vec4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Mat4x4-w: Vec4--><!--Device-Mat4x4-w: Vec4-End-->
 
@@ -40,7 +44,9 @@ x: Vec4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Mat4x4-x: Vec4--><!--Device-Mat4x4-x: Vec4-End-->
 
@@ -58,7 +64,9 @@ y: Vec4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Mat4x4-y: Vec4--><!--Device-Mat4x4-y: Vec4-End-->
 
@@ -76,7 +84,9 @@ z: Vec4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Mat4x4-z: Vec4--><!--Device-Mat4x4-z: Vec4-End-->
 

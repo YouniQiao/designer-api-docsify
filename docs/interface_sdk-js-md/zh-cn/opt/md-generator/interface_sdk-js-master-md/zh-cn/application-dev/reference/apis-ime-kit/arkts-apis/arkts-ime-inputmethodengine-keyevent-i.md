@@ -2,7 +2,9 @@
 
 按键属性值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface KeyEvent--><!--Device-inputMethodEngine-interface KeyEvent-End-->
 
@@ -14,14 +16,13 @@
 readonly keyAction: number
 ```
 
-按键事件类型。
-
-- 当值为2时，表示按下事件；  
-- 当值为3时，表示抬起事件。
+按键事件类型。 - 当值为2时，表示按下事件； - 当值为3时，表示抬起事件。
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyEvent-readonly keyAction: int--><!--Device-KeyEvent-readonly keyAction: int-End-->
 
@@ -37,7 +38,9 @@ readonly keyCode: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyEvent-readonly keyCode: int--><!--Device-KeyEvent-readonly keyCode: int-End-->
 

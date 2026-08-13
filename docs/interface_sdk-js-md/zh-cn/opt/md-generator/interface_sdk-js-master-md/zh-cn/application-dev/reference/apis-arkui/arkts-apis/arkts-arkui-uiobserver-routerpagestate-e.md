@@ -1,9 +1,10 @@
 # RouterPageState
 
-routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo)中，作为  
-[routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback:Callback&lt;RouterPageInfo&gt;))无感监听的返回值。
+routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo)中，作为 [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#on_navDestinationUpdate)无感监听的返回值。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-uiObserver-export enum RouterPageState--><!--Device-uiObserver-export enum RouterPageState-End-->
 
@@ -18,6 +19,8 @@ ABOUT_TO_APPEAR = 0
 page即将显示。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +40,8 @@ page即将销毁。
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -54,6 +59,8 @@ ON_PAGE_SHOW = 2
 page显示。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,6 +80,8 @@ page隐藏。
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -90,6 +99,8 @@ ON_BACK_PRESS = 4
 page返回时。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

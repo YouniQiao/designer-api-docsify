@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-osAccount-interface OsAccountSubProfile--><!--Device-osAccount-interface OsAccountSubProfile-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -22,6 +24,8 @@ distributedInfo?: distributedAccount.DistributedInfo
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo--><!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo-End-->
@@ -36,11 +40,13 @@ distributedInfo?: distributedAccount.DistributedInfo
 id: number
 ```
 
-系统账号子profile的标识符。取值范围为全体整数。
+系统账号子profile的标识符。 取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,11 +62,13 @@ id: number
 index: number
 ```
 
-系统账号子profile的位置索引，取值范围：0~子profile个数减1。该索引在每个系统账号下唯一，由系统在创建子Profile时自动分配。取值范围为全体整数。
+系统账号子profile的位置索引，取值范围：0~子profile个数减1。 该索引在每个系统账号下唯一，由系统在创建子Profile时自动分配。 取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,11 +84,13 @@ index: number
 osAccountLocalId: number
 ```
 
-子profile所属系统账号的本地标识符。取值范围为全体整数。
+子profile所属系统账号的本地标识符。 取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

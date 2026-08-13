@@ -2,11 +2,13 @@
 
 CommonShapeMethod
 
-**Inheritance/Implementation:** CommonShapeMethod extends [CommonMethod<T>](CommonMethod<T>)
+**Inheritance/Implementation:** CommonShapeMethod extends CommonMethod<T>
 
 **Since:** 11
 
-<!--Device-unnamed-declare class CommonShapeMethod<T> extends CommonMethod<T>--><!--Device-unnamed-declare class CommonShapeMethod<T> extends CommonMethod<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CommonShapeMethod--><!--Device-unnamed-declare class CommonShapeMethod-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor()
 constructor.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

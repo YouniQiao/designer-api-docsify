@@ -16,6 +16,8 @@ Minimizes all main windows on a display while keeping one window open. This API 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-window-function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promise<void>--><!--Device-window-function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promise<void>-End-->
@@ -41,9 +43,9 @@ Minimizes all main windows on a display while keeping one window open. This API 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

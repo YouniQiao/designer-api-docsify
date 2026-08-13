@@ -8,9 +8,11 @@ export const SOURCE_APP_ABILITY_NAME = 'abilityName'
 
 export the const string of abilityName and provide it for sourceAppInfo.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,9 +30,11 @@ export const SOURCE_APP_BUNDLE_NAME = 'bundleName'
 
 export the const string of bundleName and provide it for sourceAppInfo.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,9 +52,11 @@ export const SOURCE_APP_MODULE_NAME = 'moduleName'
 
 export the const string of moduleName and provide it for sourceAppInfo.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +74,11 @@ export const SOURCE_APP_SCREEN_MODE = 'screenMode'
 
 export the const string of screenMode and provide it for sourceAppInfo.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,9 +96,11 @@ export const SOURCE_APP_WINDOW_ID = 'windowId'
 
 export the const string of windowId and provide it for sourceAppInfo.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

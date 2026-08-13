@@ -1,9 +1,10 @@
 # RdbPredicates
 
-Defines the predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. Multiple predicates statements can be concatenated by using **and()** by default.   
-**RdbPredicates** cannot be passed across threads using Sendable.
+Defines the predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. Multiple predicates statements can be concatenated by using **and()** by default. **RdbPredicates** cannot be passed across threads using Sendable.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-class RdbPredicates--><!--Device-relationalStore-class RdbPredicates-End-->
 
@@ -23,7 +24,9 @@ and(): RdbPredicates
 
 Creates an **RdbPredicates** object to add the AND condition.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-and(): RdbPredicates--><!--Device-RdbPredicates-and(): RdbPredicates-End-->
 
@@ -43,7 +46,9 @@ beginWrap(): RdbPredicates
 
 Creates an **RdbPredicates** object to add a left parenthesis.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
 
@@ -63,7 +68,9 @@ beginsWith(field: string, value: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that begin with the given value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates-End-->
 
@@ -86,7 +93,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## between
 
@@ -94,9 +101,11 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 between(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are within the given range (including the min.and max. values) in the specified column.
+Creates an **RdbPredicates** object to search for the records that are within the given range (including the min. and max. values) in the specified column.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
@@ -120,7 +129,7 @@ Creates an **RdbPredicates** object to search for the records that are within th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## constructor
 
@@ -130,7 +139,9 @@ constructor(name: string)
 
 Defines a constructor used to create an **RdbPredicates** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-constructor(name: string)--><!--Device-RdbPredicates-constructor(name: string)-End-->
 
@@ -146,7 +157,7 @@ Defines a constructor used to create an **RdbPredicates** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## contains
 
@@ -156,7 +167,9 @@ contains(field: string, value: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that contain the given value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates-End-->
 
@@ -179,7 +192,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## distinct
 
@@ -189,7 +202,9 @@ distinct(): RdbPredicates
 
 Creates an **RdbPredicates** object to filter out duplicate records.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-distinct(): RdbPredicates--><!--Device-RdbPredicates-distinct(): RdbPredicates-End-->
 
@@ -209,7 +224,9 @@ endWrap(): RdbPredicates
 
 Creates an **RdbPredicates** object to add a right parenthesis.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
 
@@ -229,7 +246,9 @@ endsWith(field: string, value: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that end with the given value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates-End-->
 
@@ -252,7 +271,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## equalTo
 
@@ -262,7 +281,9 @@ equalTo(field: string, value: ValueType): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that are equal to the given value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -285,7 +306,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## glob
 
@@ -295,7 +316,9 @@ glob(field: string, value: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that match the given string.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates-End-->
 
@@ -318,7 +341,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## greaterThan
 
@@ -328,7 +351,9 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that are greater than the given value in the specified column.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -351,7 +376,7 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## greaterThanOrEqualTo
 
@@ -361,7 +386,9 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that are greater than or equal to the given value in the specified column.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -384,7 +411,7 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## groupBy
 
@@ -394,7 +421,9 @@ groupBy(fields: Array<string>): RdbPredicates
 
 Creates a **RdbPredicates** object to group the query results based on the specified columns.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates--><!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates-End-->
 
@@ -416,7 +445,7 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## having
 
@@ -426,7 +455,9 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 
 Filters for group data that meets the conditions.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-having(conditions: string, args?: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-having(conditions: string, args?: Array<ValueType>): RdbPredicates-End-->
 
@@ -449,7 +480,7 @@ Filters for group data that meets the conditions.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
 
 ## in
 
@@ -457,15 +488,11 @@ Filters for group data that meets the conditions.
 in(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column.
-
-> **NOTE：**
-> 
-> The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (
-> such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the
-> **value** array is empty to avoid misoperations.
+Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column. > **NOTE：**> > The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation ( > such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the > **value** array is empty to avoid misoperations.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
@@ -488,7 +515,7 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## inAllDevices
 
@@ -498,7 +525,9 @@ inAllDevices(): RdbPredicates
 
 Creates an **RdbPredicates** object to specify all remote devices on the network to connect during distributed database sync.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-inAllDevices(): RdbPredicates--><!--Device-RdbPredicates-inAllDevices(): RdbPredicates-End-->
 
@@ -516,16 +545,11 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
+Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync. > **NOTE：**> > **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync] > [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync). > When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used, > data will be synced to all devices on the network by default.
 
-> **NOTE：**
-> 
-> **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
-> [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync).
-> When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,
-> data will be synced to all devices on the network by default.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates--><!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates-End-->
 
@@ -547,7 +571,42 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## inValues
+
+```TypeScript
+inValues(field: string, value: Array<ValueType>): RdbPredicates
+```
+
+Configure RdbPredicates to match the specified field whose data type is ValueType array and values are within a given range.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbPredicates-inValues(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-inValues(field: string, value: Array<ValueType>): RdbPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | Array & lt;ValueType & gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## indexedBy
 
@@ -557,7 +616,9 @@ indexedBy(field: string): RdbPredicates
 
 Creates a **RdbPredicates** object to specify the index column.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates--><!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates-End-->
 
@@ -579,7 +640,7 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## isNotNull
 
@@ -589,7 +650,9 @@ isNotNull(field: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that are not **null**.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates-End-->
 
@@ -611,7 +674,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## isNull
 
@@ -621,7 +684,9 @@ isNull(field: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that are **null**.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-isNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNull(field: string): RdbPredicates-End-->
 
@@ -643,7 +708,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## lessThan
 
@@ -653,7 +718,9 @@ lessThan(field: string, value: ValueType): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that are less than the given value in the specified column.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -676,7 +743,7 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## lessThanOrEqualTo
 
@@ -686,7 +753,9 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that are less than or equal to the given value in the specified column.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -709,7 +778,7 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## like
 
@@ -719,7 +788,9 @@ like(field: string, value: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that are similar to the given value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates-End-->
 
@@ -742,7 +813,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## limitAs
 
@@ -752,7 +823,9 @@ limitAs(value: number): RdbPredicates
 
 Creates a **RdbPredicates** object to limit the number of records.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-limitAs(value: int): RdbPredicates--><!--Device-RdbPredicates-limitAs(value: int): RdbPredicates-End-->
 
@@ -774,7 +847,7 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## notBetween
 
@@ -782,9 +855,11 @@ Creates a **RdbPredicates** object to limit the number of records.
 notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are out of the given range (excluding the min.and max. values) in the specified column.
+Creates an **RdbPredicates** object to search for the records that are out of the given range (excluding the min. and max. values) in the specified column.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
@@ -808,7 +883,7 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## notContains
 
@@ -818,7 +893,9 @@ notContains(field: string, value: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that do not contain the given value in the specified column.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-notContains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-notContains(field: string, value: string): RdbPredicates-End-->
 
@@ -841,7 +918,7 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## notEqualTo
 
@@ -851,7 +928,9 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that are not equal to the given value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -874,7 +953,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## notIn
 
@@ -885,6 +964,8 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 Creates an **RdbPredicates** object to search for the records that are out of the given range in the specified column.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
@@ -907,7 +988,42 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## notInValues
+
+```TypeScript
+notInValues(field: string, value: Array<ValueType>): RdbPredicates
+```
+
+Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RdbPredicates-notInValues(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-notInValues(field: string, value: Array<ValueType>): RdbPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | Array & lt;ValueType & gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## notLike
 
@@ -917,7 +1033,9 @@ notLike(field: string, value: string): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records in the specified column that are not similar to the given value.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-notLike(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-notLike(field: string, value: string): RdbPredicates-End-->
 
@@ -940,7 +1058,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## offsetAs
 
@@ -950,7 +1068,9 @@ offsetAs(rowOffset: number): RdbPredicates
 
 Creates an **RdbPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in a parameter less than or equal to **0** in **limitAs**.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-offsetAs(rowOffset: int): RdbPredicates--><!--Device-RdbPredicates-offsetAs(rowOffset: int): RdbPredicates-End-->
 
@@ -972,7 +1092,7 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## or
 
@@ -982,7 +1102,9 @@ or(): RdbPredicates
 
 Creates an **RdbPredicates** object to add the OR condition.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-or(): RdbPredicates--><!--Device-RdbPredicates-or(): RdbPredicates-End-->
 
@@ -1002,7 +1124,9 @@ orderByAsc(field: string): RdbPredicates
 
 Creates an **RdbPredicates** object to sort the records in the specified column in ascending order.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates-End-->
 
@@ -1024,7 +1148,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## orderByDesc
 
@@ -1034,7 +1158,9 @@ orderByDesc(field: string): RdbPredicates
 
 Creates an **RdbPredicates** object to sort the records in the specified column in descending order.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates-End-->
 
@@ -1056,4 +1182,4 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

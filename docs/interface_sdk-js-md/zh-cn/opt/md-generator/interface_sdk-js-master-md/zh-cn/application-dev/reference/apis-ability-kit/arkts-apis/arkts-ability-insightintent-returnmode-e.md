@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-insightIntent-enum ReturnMode--><!--Device-insightIntent-enum ReturnMode-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -14,11 +16,11 @@
 CALLBACK = 0
 ```
 
-表示意图执行结果将由[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor)中的  
-[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIAbilityForegroundMode)接口或  
-[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIExtensionAbility)接口返回。
+表示意图执行结果将由[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor)中的 [onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIAbilityForegroundMode) 接口或 [onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIExtensionAbility) 接口返回。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,11 +36,11 @@ CALLBACK = 0
 FUNCTION = 1
 ```
 
-表示意图执行结果会延迟返回，直到开发者主动调用[意图提供方管理能力](@ohos.app.ability.insightIntentProvider:insightIntentProvider)中的  
-[sendExecuteResult](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult)接口或  
-[sendIntentResult](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult)接口返回意图执行结果。
+表示意图执行结果会延迟返回，直到开发者主动调用意图提供方管理能力中的 sendExecuteResult接口或 sendIntentResult接口返回意图执行结 果。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

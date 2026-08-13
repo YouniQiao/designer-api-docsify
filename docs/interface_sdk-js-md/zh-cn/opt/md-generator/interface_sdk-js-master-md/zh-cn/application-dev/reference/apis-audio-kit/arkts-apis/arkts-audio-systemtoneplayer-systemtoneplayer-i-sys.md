@@ -1,9 +1,10 @@
 # SystemTonePlayer（系统接口）
 
-系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过  
-[getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getSystemTonePlayer)创建实例。
+系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过 [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getSystemTonePlayer) 创建实例。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface SystemTonePlayer--><!--Device-unnamed-export declare interface SystemTonePlayer-End-->
 
@@ -19,7 +20,9 @@ getAudioVolumeScale(): number
 
 获取当前音频音量大小，同步返回当前音量。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-getAudioVolumeScale(): double--><!--Device-SystemTonePlayer-getAudioVolumeScale(): double-End-->
 
@@ -37,7 +40,7 @@ getAudioVolumeScale(): number
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -61,7 +64,9 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 获取播放铃音时的振动风格，同步返回振动风格枚举值。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature--><!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature-End-->
 
@@ -79,8 +84,8 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 | 错误码ID |
 | --- |
-| [20700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-操作不支持) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -104,7 +109,9 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 获取当前支持的振动风格。使用Promise异步回调。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>--><!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>-End-->
 
@@ -122,8 +129,8 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 | 错误码ID |
 | --- |
-| [20700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-操作不支持) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -143,7 +150,9 @@ getTitle(): Promise<string>
 
 获取提示音标题。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-getTitle(): Promise<string>--><!--Device-SystemTonePlayer-getTitle(): Promise<string>-End-->
 
@@ -161,8 +170,8 @@ getTitle(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -176,17 +185,19 @@ systemTonePlayer.getTitle().then((value: string) => {
 });
 ```
 
-## off('playFinished')
+## offError
 
 ```TypeScript
-off(type: 'playFinished', callback?: Callback<number>): void
+offError(callback?: ErrorCallback): void
 ```
 
-取消监听铃音播放完成事件。使用callback异步回调。
+取消监听铃音播放过程中的错误事件。使用callback异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-<!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
+**废弃版本：** -1
+
+<!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -196,33 +207,47 @@ off(type: 'playFinished', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'playFinished' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## offPlayFinished
+
+```TypeScript
+offPlayFinished(callback?: Callback<number>): void
+```
+
+取消监听铃音播放完成事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## 示例
-
-```TypeScript
-// 取消该事件的所有监听。
-systemTonePlayer.off('playFinished');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let playFinishedCallback = (streamId: number) => {
-  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-};
-
-systemTonePlayer.on('playFinished', 0, playFinishedCallback);
-
-systemTonePlayer.off('playFinished', playFinishedCallback);
-```
-
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -231,6 +256,8 @@ off(type: 'error', callback?: ErrorCallback): void
 取消监听铃音播放过程中的错误事件。使用callback异步回调。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -249,8 +276,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -270,17 +297,170 @@ systemTonePlayer.on('error', callback);
 systemTonePlayer.off('error', callback);
 ```
 
-## on('playFinished')
+## off_playFinished
+
+```TypeScript
+off(type: 'playFinished', callback?: Callback<number>): void
+```
+
+取消监听铃音播放完成事件。使用callback异步回调。
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+<!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playFinished' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+systemTonePlayer.off('playFinished');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let playFinishedCallback = (streamId: number) => {
+  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+};
+
+systemTonePlayer.on('playFinished', 0, playFinishedCallback);
+
+systemTonePlayer.off('playFinished', playFinishedCallback);
+```
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+监听铃音播放过程中的错误事件（当铃音播放过程中发生错误时触发）。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(streamId: number, callback: Callback<number>): void
+```
+
+监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。 监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| streamId | number | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_error
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+监听铃音播放过程中的错误事件（当铃音播放过程中发生错误时触发）。使用callback异步回调。
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+<!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.on('error', (err: BusinessError) => {
+  console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## on_playFinished
 
 ```TypeScript
 on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 ```
 
-监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。
-
-监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
+监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。 监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void-End-->
 
@@ -300,8 +480,8 @@ on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -323,46 +503,6 @@ systemTonePlayer.start().then((value: number) => {
 });
 ```
 
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-监听铃音播放过程中的错误事件（当铃音播放过程中发生错误时触发）。使用callback异步回调。
-
-**起始版本：** 18
-
-<!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.SystemSound.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'error' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemTonePlayer.on('error', (err: BusinessError) => {
-  console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## prepare
 
 ```TypeScript
@@ -371,7 +511,9 @@ prepare(): Promise<void>
 
 准备播放提示音。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-prepare(): Promise<void>--><!--Device-SystemTonePlayer-prepare(): Promise<void>-End-->
 
@@ -389,9 +531,9 @@ prepare(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -413,7 +555,9 @@ release(): Promise<void>
 
 释放提示音播放器。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-release(): Promise<void>--><!--Device-SystemTonePlayer-release(): Promise<void>-End-->
 
@@ -431,7 +575,7 @@ release(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -453,7 +597,9 @@ setAudioVolumeScale(scale: number): void
 
 设置音频音量大小，无返回结果。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void--><!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void-End-->
 
@@ -471,10 +617,10 @@ setAudioVolumeScale(scale: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [20700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -497,11 +643,11 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-设置播放铃音时的振动风格。
+设置播放铃音时的振动风格。 调用本接口前，应该先调用[getSupportedHapticsFeatures](#getSupportedHapticsFeatures)查询 支持的振动风格，如果设置不支持的振动风格，则设置失败。
 
-调用本接口前，应该先调用[getSupportedHapticsFeatures](#getSupportedHapticsFeatures)查询支持的振动风格，如果设置不支持的振动风格，则设置失败。
+**起始版本：** 23
 
-**起始版本：** 13
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void--><!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void-End-->
 
@@ -519,10 +665,10 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [20700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-操作不支持) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -547,7 +693,9 @@ start(toneOptions?: SystemToneOptions): Promise<number>
 
 开始播放提示音。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -573,10 +721,10 @@ start(toneOptions?: SystemToneOptions): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -604,7 +752,9 @@ stop(id: number): Promise<void>
 
 停止播放提示音。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-stop(id: int): Promise<void>--><!--Device-SystemTonePlayer-stop(id: int): Promise<void>-End-->
 
@@ -628,9 +778,9 @@ stop(id: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

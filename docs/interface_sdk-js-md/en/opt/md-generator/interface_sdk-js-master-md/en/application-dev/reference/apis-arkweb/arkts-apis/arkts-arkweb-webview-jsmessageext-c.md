@@ -4,6 +4,8 @@ The message for indicating the of result of JavaScript code execution.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Get the array value of the the JavaScript code execution result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsMessageExt-getArray(): Array<string | number | boolean>--><!--Device-JsMessageExt-getArray(): Array<string | number | boolean>-End-->
@@ -40,7 +44,7 @@ Get the array value of the the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getArrayBuffer
 
@@ -51,6 +55,8 @@ getArrayBuffer(): ArrayBuffer
 Get the array buffer value of the JavaScript code execution result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,7 +74,7 @@ Get the array buffer value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getBoolean
 
@@ -79,6 +85,8 @@ getBoolean(): boolean
 Get the boolean value of the JavaScript code execution result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +104,7 @@ Get the boolean value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getErrorDescription
 
@@ -107,6 +115,8 @@ getErrorDescription(): string | null
 Get the object or exception of the the JavaScript code execution result and serialize it into a string.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-JsMessageExt-getErrorDescription(): string | null--><!--Device-JsMessageExt-getErrorDescription(): string | null-End-->
 
@@ -128,6 +138,8 @@ Get the number value of the JavaScript code execution result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsMessageExt-getNumber(): number--><!--Device-JsMessageExt-getNumber(): number-End-->
@@ -144,7 +156,7 @@ Get the number value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getString
 
@@ -155,6 +167,8 @@ getString(): string
 Get the string value of the JavaScript code execution result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -172,7 +186,7 @@ Get the string value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getType
 
@@ -183,6 +197,8 @@ getType(): JsMessageType
 Get the type of the JavaScript code execution result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -8,7 +8,9 @@ Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkt
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-declare class RotationRecognizer extends GestureRecognizer--><!--Device-unnamed-declare class RotationRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class RotationRecognizer--><!--Device-unnamed-declare class RotationRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Obtains the minimum angle change required for the rotation gesture to be recogni
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

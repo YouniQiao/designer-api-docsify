@@ -4,6 +4,8 @@ Indicates the options of the menu item.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface EditableTitleBarMenuItemV2Options--><!--Device-unnamed-export declare interface EditableTitleBarMenuItemV2Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,24 +15,6 @@ Indicates the options of the menu item.
 ```TypeScript
 import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from '@kit.ArkUI';
 ```
-
-## action
-
-```TypeScript
-action?: OnActionCallback
-```
-
-Callback function when click on this menu item.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -43,6 +27,8 @@ Accessibility description.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +44,15 @@ Accessibility description.
 accessibilityLevel?: string
 ```
 
-Accessibility level, options: 'auto', 'yes', 'no'.value: 'auto'.
+Accessibility level, options: 'auto', 'yes', 'no'. value: 'auto'.
 
 **Type:** string
 
 **Default:** 'auto'
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,11 +74,35 @@ Accessibility text for screen reader.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-accessibilityText?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2Options-accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+action?: OnActionCallback
+```
+
+Callback function when click on this menu item.
+
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,6 +119,8 @@ Whether to get focus by default.
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +144,8 @@ Whether to enable this menu item.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -149,6 +165,8 @@ Label text for long press dialog.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,6 +188,8 @@ Symbol icon style modifier.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -189,6 +209,8 @@ Icon resource, supports Symbol or Image.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

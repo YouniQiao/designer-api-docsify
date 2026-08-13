@@ -2,7 +2,9 @@
 
 Provides index management capabilities, such as obtaining the locale index list and text index values.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class IndexUtil--><!--Device-i18n-export class IndexUtil-End-->
 
@@ -22,7 +24,9 @@ addLocale(locale: string): void
 
 Adds the index list of a new locale to the index list of the current locale to form a composite list.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,7 +57,9 @@ getIndex(text: string): string
 
 Obtains the index of the **text** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,7 +96,9 @@ getIndexList(): Array<string>
 
 Obtains the index list of the current locale.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

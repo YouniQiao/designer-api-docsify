@@ -2,7 +2,9 @@
 
 作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-interface UsbDataTransferParams--><!--Device-usbManager-interface UsbDataTransferParams-End-->
 
@@ -18,7 +20,9 @@ buffer: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-buffer: Uint8Array--><!--Device-UsbDataTransferParams-buffer: Uint8Array-End-->
 
@@ -34,7 +38,9 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 **类型：** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-callback: AsyncCallback<SubmitTransferCallback>--><!--Device-UsbDataTransferParams-callback: AsyncCallback<SubmitTransferCallback>-End-->
 
@@ -50,7 +56,9 @@ devPipe: USBDevicePipe
 
 **类型：** USBDevicePipe
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-devPipe: USBDevicePipe--><!--Device-UsbDataTransferParams-devPipe: USBDevicePipe-End-->
 
@@ -66,7 +74,9 @@ endpoint: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-endpoint: int--><!--Device-UsbDataTransferParams-endpoint: int-End-->
 
@@ -82,7 +92,9 @@ USB传输标志。
 
 **类型：** [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-flags: UsbTransferFlags--><!--Device-UsbDataTransferParams-flags: UsbTransferFlags-End-->
 
@@ -98,7 +110,9 @@ isoPacketCount: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-isoPacketCount: int--><!--Device-UsbDataTransferParams-isoPacketCount: int-End-->
 
@@ -114,7 +128,9 @@ length: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-length: int--><!--Device-UsbDataTransferParams-length: int-End-->
 
@@ -130,7 +146,9 @@ timeout: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-timeout: int--><!--Device-UsbDataTransferParams-timeout: int-End-->
 
@@ -146,7 +164,9 @@ type: UsbEndpointTransferType
 
 **类型：** [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-type: UsbEndpointTransferType--><!--Device-UsbDataTransferParams-type: UsbEndpointTransferType-End-->
 
@@ -162,7 +182,9 @@ userData: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsbDataTransferParams-userData: Uint8Array--><!--Device-UsbDataTransferParams-userData: Uint8Array-End-->
 

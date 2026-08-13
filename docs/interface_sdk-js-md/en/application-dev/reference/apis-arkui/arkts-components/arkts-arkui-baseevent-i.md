@@ -6,6 +6,8 @@ Basic event type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BaseEvent--><!--Device-unnamed-declare interface BaseEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,13 @@ Basic event type.
 getModifierKeyState?(keys: Array<string>): boolean
 ```
 
-Obtains the pressed status of modifier keys. For details about the error message, see the following error codes.The Ctrl, Alt, and Shift keys are supported.
-
-> **NOTE：**
-> 
-> This API is not supported in stylus scenarios.
+Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The Ctrl, Alt, and Shift keys are supported. > **NOTE：**> > This API is not supported in stylus scenarios.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Obtains the pressed status of modifier keys. For details about the error message
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
@@ -58,19 +58,15 @@ Obtains the pressed status of modifier keys. For details about the error message
 axisHorizontal?: number
 ```
 
-Horizontal axis value.
-
-Default value: **0**
-
-**NOTE：**
-
-This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
+Horizontal axis value. Default value: **0** **NOTE：**This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,23 +84,15 @@ This value is available only when the pan gesture is triggered by mouse wheel sc
 axisPinch?: number
 ```
 
-Two-finger pinch scaling ratio.
-
-Default value: **0**
-
-**NOTE：**
-
-This value is available only when a pinch gesture is triggered by a two-finger scaling operation on a touchpad or during axis events.
-
-In other scenarios, the default value is returned. The scaling ratio represents the ratio of the current two-finger distance to the initial two-finger distance when first pressed during a pinch gesture.
-
-Value range: [0, +∞).
+Two-finger pinch scaling ratio. Default value: **0** **NOTE：**This value is available only when a pinch gesture is triggered by a two-finger scaling operation on a touchpad or during axis events. In other scenarios, the default value is returned. The scaling ratio represents the ratio of the current two-finger distance to the initial two-finger distance when first pressed during a pinch gesture. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,19 +110,15 @@ Value range: [0, +∞).
 axisVertical?: number
 ```
 
-Vertical axis value.
-
-Default value: **0**
-
-**NOTE：**
-
-This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
+Vertical axis value. Default value: **0** **NOTE：**This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,17 +136,15 @@ This value is available only when the pan gesture is triggered by mouse wheel sc
 deviceId?: number
 ```
 
-ID of the input device that triggers the event.
-
-Default value: **0**
-
-Value range: [0, +∞).
+ID of the input device that triggers the event. Default value: **0** Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,17 +160,15 @@ Value range: [0, +∞).
 pressure: number
 ```
 
-Press pressure.
-
-Default value: **0**
-
-Value range: [0, 1], typical value 0.913168, where higher values indicate greater pressure. On some devices, the return value may be greater than 1 due to different hardware parameter configurations.
+Press pressure. Default value: **0** Value range: [0, 1], typical value 0.913168, where higher values indicate greater pressure. On some devices, the return value may be greater than 1 due to different hardware parameter configurations.
 
 **Type:** number
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -204,15 +184,15 @@ Value range: [0, 1], typical value 0.913168, where higher values indicate greate
 rollAngle?: number
 ```
 
-Angle between the stylus and the device's surface.
-
-Unit: deg
+Angle between the stylus and the device's surface. Unit: deg
 
 **Type:** number
 
 **Since:** 17
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,6 +218,8 @@ Type of the event input device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -259,6 +241,8 @@ Event input source type.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -282,6 +266,8 @@ Object that triggers the gesture event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -296,17 +282,15 @@ Object that triggers the gesture event.
 targetDisplayId?: number
 ```
 
-ID of the screen where the event occurs.
-
-Default value: **0**
-
-Value range: [0, +∞).
+ID of the screen where the event occurs. Default value: **0** Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,17 +306,15 @@ Value range: [0, +∞).
 tiltX: number
 ```
 
-Angle between the projection of the stylus on the device plane and the x-axis.
-
-Unit: deg
-
-Default value: **0**
+Angle between the projection of the stylus on the device plane and the x-axis. Unit: deg Default value: **0**
 
 **Type:** number
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -348,17 +330,15 @@ Default value: **0**
 tiltY: number
 ```
 
-Angle between the projection of the stylus on the device plane and the y-axis.
-
-Unit: deg
-
-Default value: **0**
+Angle between the projection of the stylus on the device plane and the y-axis. Unit: deg Default value: **0**
 
 **Type:** number
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -374,15 +354,15 @@ Default value: **0**
 timestamp: number
 ```
 
-Timestamp of the event. It is the interval between the time when the event is triggered and the time when the system starts.
-
-Unit: ns
+Timestamp of the event. It is the interval between the time when the event is triggered and the time when the system starts. Unit: ns
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

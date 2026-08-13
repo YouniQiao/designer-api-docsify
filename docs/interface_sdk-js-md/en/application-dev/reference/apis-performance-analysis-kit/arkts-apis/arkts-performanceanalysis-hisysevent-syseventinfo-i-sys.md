@@ -2,9 +2,11 @@
 
 Defines a system event.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-interface SysEventInfo--><!--Device-hiSysEvent-interface SysEventInfo-End-->
 
@@ -28,9 +30,11 @@ Event domain.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SysEventInfo-domain: string--><!--Device-SysEventInfo-domain: string-End-->
 
@@ -48,9 +52,11 @@ Event type.
 
 **Type:** EventType
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SysEventInfo-eventType: EventType--><!--Device-SysEventInfo-eventType: EventType-End-->
 
@@ -68,9 +74,11 @@ Event name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SysEventInfo-name: string--><!--Device-SysEventInfo-name: string-End-->
 
@@ -81,18 +89,20 @@ Event name.
 ## params
 
 ```TypeScript
-params?: object
+params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined
 ```
 
 Event parameters.
 
-**Type:** object
+**Type:** Record&lt;string, boolean \| int \| double \| string \| bigint \| boolean[] \| int[] \| double[] \| string[] \| bigint[]&gt; \| null \| undefined
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-SysEventInfo-params?: object--><!--Device-SysEventInfo-params?: object-End-->
+**Deprecated since:** -1
+
+<!--Device-SysEventInfo-params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined--><!--Device-SysEventInfo-params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

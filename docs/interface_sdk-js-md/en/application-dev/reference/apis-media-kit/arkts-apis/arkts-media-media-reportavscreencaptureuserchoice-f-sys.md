@@ -12,11 +12,13 @@ import { media } from '@kit.MediaKit';
 function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>
 ```
 
-Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation.This API is called by the system application that creates the dialog box.
+Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation. This API is called by the system application that creates the dialog box.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>--><!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>-End-->
 
@@ -28,7 +30,7 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
+| sessionId | int | Yes | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
 | choice | string | Yes | User choice, including whether screen capture is agreed, selected display ID, and window ID. For details, see JsonData in the example below. |
 
 **Return value:**
@@ -41,8 +43,8 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
 ## Examples
 

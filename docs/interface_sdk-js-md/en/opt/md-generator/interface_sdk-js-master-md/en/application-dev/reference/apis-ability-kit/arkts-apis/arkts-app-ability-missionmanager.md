@@ -2,7 +2,9 @@
 
 The missionManager module provides APIs to lock, unlock, and clear missions, and switch a mission to the foreground.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace missionManager--><!--Device-unnamed-declare namespace missionManager-End-->
 
@@ -23,36 +25,39 @@ import { missionManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearallmissions) |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearallmissions-1) |
-| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission) |
-| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission-1) |
-| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getlowresolutionmissionsnapshot) |
-| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getlowresolutionmissionsnapshot-1) |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo) |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo-1) |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos) |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos-1) |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot) |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot-1) |
-| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission) |
-| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission-1) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront-1) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront-2) |
-| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#movemissionstobackground) |
-| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#movemissionstobackground-1) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#movemissionstoforeground) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#movemissionstoforeground-1) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#movemissionstoforeground-2) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#off) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#off-1) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#off-2) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#off-3) |
-| [on](arkts-ability-missionmanager-on-f-sys.md#on) |
-| [on](arkts-ability-missionmanager-on-f-sys.md#on-1) |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockmission) |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockmission-1) |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions-(System-API)) |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions-(System-API)) |
+| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearMission-(System-API)) |
+| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearMission-(System-API)) |
+| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getLowResolutionMissionSnapShot-(System-API)) |
+| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getLowResolutionMissionSnapShot-(System-API)) |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo-(System-API)) |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo-(System-API)) |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos-(System-API)) |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos-(System-API)) |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot-(System-API)) |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot-(System-API)) |
+| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission-(System-API)) |
+| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission-(System-API)) |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API)) |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API)) |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API)) |
+| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#moveMissionsToBackground-(System-API)) |
+| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#moveMissionsToBackground-(System-API)) |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#moveMissionsToForeground-(System-API)) |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#moveMissionsToForeground-(System-API)) |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#moveMissionsToForeground-(System-API)) |
+| [offMission](arkts-ability-missionmanager-offmission-f-sys.md#offMission-(System-API)) |
+| [offMission](arkts-ability-missionmanager-offmission-f-sys.md#offMission-(System-API)) |
+| [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) |
+| [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) |
+| [off_missionEvent](arkts-ability-missionmanager-offmissionevent-f-sys.md#off_missionEvent) |
+| [off_missionEvent](arkts-ability-missionmanager-offmissionevent-f-sys.md#off_missionEvent) |
+| [onMission](arkts-ability-missionmanager-onmission-f-sys.md#onMission-(System-API)) |
+| [on_mission](arkts-ability-missionmanager-onmission-f-sys.md) |
+| [on_missionEvent](arkts-ability-missionmanager-onmissionevent-f-sys.md#on_missionEvent) |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission-(System-API)) |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

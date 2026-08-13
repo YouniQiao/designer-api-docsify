@@ -1,12 +1,12 @@
 # AVInputCastPicker
 
-A picker view to show availale input device list.
+Picker used to show available input devices.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
@@ -18,41 +18,26 @@ A picker view to show availale input device list.
 import { AVInputCastPicker } from '@kit.AVSessionKit';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Decorator:** @Builder
-
-<!--Device-AVInputCastPicker-build(): void--><!--Device-AVInputCastPicker-build(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
-
 ## customPicker
 
 ```TypeScript
-customPicker?: CustomBuilder
+@Prop
+  customPicker?: CustomBuilder
 ```
 
-Set the custom builder for the picker appearance.If not set, system will show the default appearance for different device type.
+Custom picker.
 
-**Type:** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Decorator:** @BuilderParam
+**Deprecated since:** -1
 
-<!--Device-AVInputCastPicker-customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-customPicker?: CustomBuilder-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AVInputCastPicker-@Prop  customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-@Prop  customPicker?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
 
@@ -62,13 +47,17 @@ Set the custom builder for the picker appearance.If not set, system will show th
 onStateChange?: OnPickerStateCallback
 ```
 
-Picker state change callback.
+Called when the component state changes.
 
 **Type:** [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback--><!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback-End-->
 

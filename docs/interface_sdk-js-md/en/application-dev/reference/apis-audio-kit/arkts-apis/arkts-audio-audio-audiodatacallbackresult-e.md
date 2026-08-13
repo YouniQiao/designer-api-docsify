@@ -2,9 +2,11 @@
 
 Enumerates the audio data callback results.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioDataCallbackResult--><!--Device-audio-enum AudioDataCallbackResult-End-->
 
@@ -18,9 +20,11 @@ INVALID = -1
 
 The callback data is invalid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioDataCallbackResult-INVALID = -1--><!--Device-AudioDataCallbackResult-INVALID = -1-End-->
 
@@ -34,9 +38,11 @@ VALID = 0
 
 The callback data is valid.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioDataCallbackResult-VALID = 0--><!--Device-AudioDataCallbackResult-VALID = 0-End-->
 

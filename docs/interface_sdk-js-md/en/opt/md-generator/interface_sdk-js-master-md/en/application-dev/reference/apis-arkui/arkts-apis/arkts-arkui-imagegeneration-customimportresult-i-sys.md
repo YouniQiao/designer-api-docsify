@@ -4,6 +4,8 @@ The result of import operation for custom import icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface CustomImportResult--><!--Device-imageGeneration-interface CustomImportResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Text content for import operation.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomImportResult-content?: ResourceStr--><!--Device-CustomImportResult-content?: ResourceStr-End-->
@@ -47,6 +51,8 @@ Array of image items for import operation.
 **Type:** Array&lt;ImageItem&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

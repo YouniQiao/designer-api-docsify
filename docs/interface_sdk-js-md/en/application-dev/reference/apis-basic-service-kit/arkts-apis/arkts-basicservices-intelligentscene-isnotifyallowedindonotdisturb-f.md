@@ -16,7 +16,9 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_DONOTDISTURB_STATE
 
@@ -36,8 +38,8 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

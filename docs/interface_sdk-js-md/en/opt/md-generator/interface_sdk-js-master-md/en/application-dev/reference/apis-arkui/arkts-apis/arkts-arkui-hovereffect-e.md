@@ -4,6 +4,8 @@ Sets the hover effect of the component.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum HoverEffect--><!--Device-unnamed-declare enum HoverEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Auto
 Default hover effect.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Zoom-in and zoom-out effect.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HoverEffect-Scale--><!--Device-HoverEffect-Scale-End-->
@@ -50,6 +56,8 @@ Background fade-in and fade-out effect.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HoverEffect-Highlight--><!--Device-HoverEffect-Highlight-End-->
@@ -65,6 +73,8 @@ None
 No effect.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

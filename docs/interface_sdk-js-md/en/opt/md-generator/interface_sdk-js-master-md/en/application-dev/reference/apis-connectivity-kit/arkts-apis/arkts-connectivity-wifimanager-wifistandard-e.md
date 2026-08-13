@@ -2,7 +2,9 @@
 
 Wi-Fi standard.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum WifiStandard--><!--Device-wifiManager-enum WifiStandard-End-->
 
@@ -16,7 +18,9 @@ WIFI_STANDARD_UNDEFINED
 
 Undefined
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_UNDEFINED--><!--Device-WifiStandard-WIFI_STANDARD_UNDEFINED-End-->
 
@@ -30,7 +34,9 @@ WIFI_STANDARD_11A
 
 Wifi 802.11a
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_11A--><!--Device-WifiStandard-WIFI_STANDARD_11A-End-->
 
@@ -44,7 +50,9 @@ WIFI_STANDARD_11B
 
 Wifi 802.11b
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_11B--><!--Device-WifiStandard-WIFI_STANDARD_11B-End-->
 
@@ -58,7 +66,9 @@ WIFI_STANDARD_11G
 
 Wifi 802.11g
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_11G--><!--Device-WifiStandard-WIFI_STANDARD_11G-End-->
 
@@ -72,7 +82,9 @@ WIFI_STANDARD_11N
 
 Wifi 802.11n
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_11N--><!--Device-WifiStandard-WIFI_STANDARD_11N-End-->
 
@@ -86,7 +98,9 @@ WIFI_STANDARD_11AC
 
 Wifi 802.11ac
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_11AC--><!--Device-WifiStandard-WIFI_STANDARD_11AC-End-->
 
@@ -100,7 +114,9 @@ WIFI_STANDARD_11AX
 
 Wifi 802.11ax
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_11AX--><!--Device-WifiStandard-WIFI_STANDARD_11AX-End-->
 
@@ -114,7 +130,9 @@ WIFI_STANDARD_11AD
 
 Wifi 802.11ad
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiStandard-WIFI_STANDARD_11AD--><!--Device-WifiStandard-WIFI_STANDARD_11AD-End-->
 

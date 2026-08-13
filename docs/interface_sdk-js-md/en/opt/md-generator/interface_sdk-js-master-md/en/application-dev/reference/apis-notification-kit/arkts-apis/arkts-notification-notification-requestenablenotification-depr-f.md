@@ -12,7 +12,7 @@ Requests notification to be enabled for this application. This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestEnableNotification](ohos.notificationManager/notificationManager#requestEnableNotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
 
 <!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
 
@@ -37,7 +37,7 @@ Requests notification to be enabled for this application. This API uses a promis
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestEnableNotification](ohos.notificationManager/notificationManager#requestEnableNotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
 
 <!--Device-notification-function requestEnableNotification(): Promise<void>--><!--Device-notification-function requestEnableNotification(): Promise<void>-End-->
 

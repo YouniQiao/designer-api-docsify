@@ -2,7 +2,9 @@
 
 Describes the placeholder style.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface PlaceholderSpan--><!--Device-text-interface PlaceholderSpan-End-->
 
@@ -24,7 +26,9 @@ Vertical alignment of the placeholder relative to the surrounding text.
 
 **Type:** [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Type of the text baseline.
 
 **Type:** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -60,7 +66,9 @@ Offset to the text baseline, in units of px. The value is a floating point numbe
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -78,7 +86,9 @@ Height of the placeholder, in units of px. The value is a floating point number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -96,7 +106,9 @@ Width of the placeholder, in units of px. The value is a floating point number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

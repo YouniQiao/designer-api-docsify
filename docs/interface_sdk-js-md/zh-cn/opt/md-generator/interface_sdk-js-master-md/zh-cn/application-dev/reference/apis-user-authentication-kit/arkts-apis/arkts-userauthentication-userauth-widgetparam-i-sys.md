@@ -2,7 +2,9 @@
 
 用户认证界面配置相关参数。该接口用于配置认证界面的显示样式和交互方式，包括标题、导航按钮文本、窗口模式等。通过合理配置这些参数，可以为用户提供清晰的认证引导和良好的交互体验。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
 
@@ -19,6 +21,8 @@ appWindow?: window.Window
 **类型：** window.Window
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +46,9 @@ windowMode?: WindowModeType
 
 **默认值：** WindowModeType.DIALOG_BOX
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WidgetParam-windowMode?: WindowModeType--><!--Device-WidgetParam-windowMode?: WindowModeType-End-->
 

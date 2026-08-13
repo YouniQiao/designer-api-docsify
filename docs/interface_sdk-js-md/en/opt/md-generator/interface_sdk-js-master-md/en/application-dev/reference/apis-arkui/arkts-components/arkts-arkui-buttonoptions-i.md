@@ -4,6 +4,8 @@ Describes the button style.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ButtonOptions--><!--Device-unnamed-declare interface ButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,21 +16,15 @@ Describes the button style.
 buttonStyle?: ButtonStyleMode
 ```
 
-Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
-[fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
-
-Default value: **ButtonStyleMode.EMPHASIZED**
-
-**NOTE：**
-
-The button primacy is as follows, from high to low: emphasized button, normal button, text button.
+Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontColor), and [role](arkts-arkui-button-attribute.md#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting. Default value: **ButtonStyleMode.EMPHASIZED** **NOTE：**The button primacy is as follows, from high to low: emphasized button, normal button, text button.
 
 **Type:** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
 
 **Default:** ButtonStyleMode.EMPHASIZED
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +42,15 @@ The button primacy is as follows, from high to low: emphasized button, normal bu
 controlSize?: ControlSize
 ```
 
-Button size.
-
-Default value: **ControlSize.NORMAL**
+Button size. Default value: **ControlSize.NORMAL**
 
 **Type:** [ControlSize](arkts-arkui-controlsize-e.md)
 
 **Default:** ControlSize.NORMAL
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,17 +68,15 @@ Default value: **ControlSize.NORMAL**
 role?: ButtonRole
 ```
 
-Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
-[fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
-
-Default value: **ButtonRole.NORMAL**
+Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontColor), and [buttonStyle](arkts-arkui-button-attribute.md#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting. Default value: **ButtonRole.NORMAL**
 
 **Type:** [ButtonRole](arkts-arkui-buttonrole-e.md)
 
 **Default:** ButtonRole.NORMAL
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,19 +94,13 @@ Default value: **ButtonRole.NORMAL**
 stateEffect?: boolean
 ```
 
-Whether to enable the pressed state effect when the button is clicked.
-
-**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.
-
-Default value: **true**
-
-**NOTE：**
-
-When the pressed state effect is enabled and a custom pressed state style is configured, the resulting color displayed after pressing is a composite blend of the original background color and the newly defined pressed state color.
+Whether to enable the pressed state effect when the button is clicked. **true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled. Default value: **true** **NOTE：**When the pressed state effect is enabled and a custom pressed state style is configured, the resulting color displayed after pressing is a composite blend of the original background color and the newly defined pressed state color.
 
 **Type:** boolean
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,15 +116,13 @@ When the pressed state effect is enabled and a custom pressed state style is con
 type?: ButtonType
 ```
 
-Button display style.
-
-Default value: **ButtonType.ROUNDED_RECTANGLE**
-
-API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. Versions earlier than API version 18: The default value is **ButtonType.Capsule**.
+Button display style. Default value: **ButtonType.ROUNDED_RECTANGLE** API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. Versions earlier than API version 18: The default value is **ButtonType.Capsule**.
 
 **Type:** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

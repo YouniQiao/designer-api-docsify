@@ -1,8 +1,6 @@
 # RichEditorUpdateSymbolSpanStyleOptions
 
-Defines the symbol span style options.
-
-Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions).
+Defines the symbol span style options. Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions).
 
 **Inheritance/Implementation:** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)
 
@@ -10,7 +8,9 @@ Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.m
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-declare interface RichEditorUpdateSymbolSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateSymbolSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface RichEditorUpdateSymbolSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateSymbolSpanStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ Style of the symbol span.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

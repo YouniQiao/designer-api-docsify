@@ -1,8 +1,10 @@
 # SyncFolderAccessor (System API)
 
-A sync root management class that enables the File Manager to access the sync root information registered by third-party cloud disks.
+A sync root management class that enables the File Manager to access the sync root information registered by third- party cloud disks.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudDiskManager-class SyncFolderAccessor--><!--Device-cloudDiskManager-class SyncFolderAccessor-End-->
 
@@ -24,7 +26,9 @@ constructor()
 
 A constructor used to create a **SyncFolderAccessor** instance.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
@@ -38,8 +42,8 @@ A constructor used to create a **SyncFolderAccessor** instance.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -73,7 +77,9 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 Obtains information about all registered sync roots. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
@@ -93,12 +99,12 @@ Obtains information about all registered sync roots. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [34400014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400014-system-internal-error) |
-| [34400015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400015-cloud-disk-not-allowed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [34400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-system-internal-error) |
+| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-cloud-disk-not-allowed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) |
 
 ## Examples
 

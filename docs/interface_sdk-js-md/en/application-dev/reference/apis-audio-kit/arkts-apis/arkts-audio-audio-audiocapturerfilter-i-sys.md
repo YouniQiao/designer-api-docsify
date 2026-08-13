@@ -2,9 +2,11 @@
 
 Describe audio capturer filter.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioCapturerFilter--><!--Device-audio-interface AudioCapturerFilter-End-->
 
@@ -28,9 +30,11 @@ Capturer information.
 
 **Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerFilter-capturerInfo?: AudioCapturerInfo--><!--Device-AudioCapturerFilter-capturerInfo?: AudioCapturerInfo-End-->
 
@@ -46,11 +50,13 @@ uid?: int
 
 Application uid.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerFilter-uid?: int--><!--Device-AudioCapturerFilter-uid?: int-End-->
 

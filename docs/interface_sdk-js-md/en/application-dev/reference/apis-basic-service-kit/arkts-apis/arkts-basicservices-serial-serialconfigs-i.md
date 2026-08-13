@@ -4,7 +4,9 @@ Serial port communication configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-serial-interface SerialConfigs--><!--Device-serial-interface SerialConfigs-End-->
 
@@ -22,15 +24,17 @@ import { serial } from '@kit.BasicServicesKit';
 baudRate?: int
 ```
 
-Baud rate.The value must be an integer.Value constraint: standard baud rates.&lt;br&gt;Unit: bit/s&lt;br&gt;Default value: 115200
+Baud rate. The value must be an integer. Value constraint: standard baud rates. &lt;br&gt;Unit: bit/s &lt;br&gt;Default value: 115200
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Default:** 115200
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,7 @@ Baud rate.The value must be an integer.Value constraint: standard baud rates.&lt
 dataBits?: DataBits
 ```
 
-Data bits.&lt;br&gt;Default value: EIGHT
+Data bits. &lt;br&gt;Default value: EIGHT
 
 **Type:** DataBits
 
@@ -52,7 +56,9 @@ Data bits.&lt;br&gt;Default value: EIGHT
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +72,7 @@ Data bits.&lt;br&gt;Default value: EIGHT
 parity?: Parity
 ```
 
-Parity bit.&lt;br&gt;Default value: NONE
+Parity bit. &lt;br&gt;Default value: NONE
 
 **Type:** Parity
 
@@ -74,7 +80,9 @@ Parity bit.&lt;br&gt;Default value: NONE
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,7 +96,7 @@ Parity bit.&lt;br&gt;Default value: NONE
 rtscts?: boolean
 ```
 
-Whether to enable hardware-based automatic flow control.&lt;br&gt;Default value: false.
+Whether to enable hardware-based automatic flow control. &lt;br&gt;Default value: false.
 
 **Type:** boolean
 
@@ -96,7 +104,9 @@ Whether to enable hardware-based automatic flow control.&lt;br&gt;Default value:
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,9 +120,7 @@ Whether to enable hardware-based automatic flow control.&lt;br&gt;Default value:
 stopBits?: StopBits
 ```
 
-Stop bits.
-
-Default value: ONE
+Stop bits. Default value: ONE
 
 **Type:** StopBits
 
@@ -120,7 +128,9 @@ Default value: ONE
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,7 +144,7 @@ Default value: ONE
 xany?: boolean
 ```
 
-Whether to enable XANY to control the flow.&lt;br&gt;Default value: false
+Whether to enable XANY to control the flow. &lt;br&gt;Default value: false
 
 **Type:** boolean
 
@@ -142,7 +152,9 @@ Whether to enable XANY to control the flow.&lt;br&gt;Default value: false
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,7 +168,7 @@ Whether to enable XANY to control the flow.&lt;br&gt;Default value: false
 xoff?: boolean
 ```
 
-Whether to enable XOFF to control the reception of flows.&lt;br&gt;Default value: false
+Whether to enable XOFF to control the reception of flows. &lt;br&gt;Default value: false
 
 **Type:** boolean
 
@@ -164,7 +176,9 @@ Whether to enable XOFF to control the reception of flows.&lt;br&gt;Default value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,7 +192,7 @@ Whether to enable XOFF to control the reception of flows.&lt;br&gt;Default value
 xon?: boolean
 ```
 
-Whether to enable XON to control the sending of flows.&lt;br&gt;Default value: false
+Whether to enable XON to control the sending of flows. &lt;br&gt;Default value: false
 
 **Type:** boolean
 
@@ -186,7 +200,9 @@ Whether to enable XON to control the sending of flows.&lt;br&gt;Default value: f
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 编辑框中文本的扩展编辑操作类型，如剪切、复制等。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-export enum ExtendAction--><!--Device-inputMethodEngine-export enum ExtendAction-End-->
 
@@ -16,7 +18,9 @@ SELECT_ALL = 0
 
 全选。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtendAction-SELECT_ALL = 0--><!--Device-ExtendAction-SELECT_ALL = 0-End-->
 
@@ -30,7 +34,9 @@ CUT = 3
 
 剪切。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtendAction-CUT = 3--><!--Device-ExtendAction-CUT = 3-End-->
 
@@ -44,7 +50,9 @@ COPY = 4
 
 复制。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtendAction-COPY = 4--><!--Device-ExtendAction-COPY = 4-End-->
 
@@ -58,7 +66,9 @@ PASTE = 5
 
 粘贴。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtendAction-PASTE = 5--><!--Device-ExtendAction-PASTE = 5-End-->
 

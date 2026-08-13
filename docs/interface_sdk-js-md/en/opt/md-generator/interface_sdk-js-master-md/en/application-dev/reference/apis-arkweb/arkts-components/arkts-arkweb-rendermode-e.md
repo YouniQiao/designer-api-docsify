@@ -4,6 +4,8 @@ Enumerates the rendering modes of the **Web** component. By default, the asynchr
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum RenderMode--><!--Device-unnamed-declare enum RenderMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ ASYNC_RENDER = 0
 The **Web** component as a graphic surface node is rendered asynchronously and displayed independently. The maximum width of the **Web** component is 7,680 px (physical pixel)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,6 +37,8 @@ SYNC_RENDER = 1
 The **Web** component as a graphic canvas node is rendered synchronously and displayed together with the system component. The maximum width of the **Web** component is 500,000 px (physical pixel).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

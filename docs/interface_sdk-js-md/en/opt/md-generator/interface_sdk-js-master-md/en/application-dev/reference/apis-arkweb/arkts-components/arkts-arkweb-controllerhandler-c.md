@@ -1,8 +1,10 @@
 # ControllerHandler
 
-Defines the onWindowNew callback, related to [onWindowNew](onWindowNew) method.
+Defines the onWindowNew callback, related to onWindowNew method.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ControllerHandler--><!--Device-unnamed-declare class ControllerHandler-End-->
 
@@ -17,6 +19,8 @@ constructor()
 Constructs a **ControllerHandler** API.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ setWebController(controller: WebviewController): void
 Sets a **WebviewController** object. If opening a new window is not needed, set the parameter to **null**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

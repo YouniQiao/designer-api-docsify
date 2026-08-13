@@ -2,9 +2,11 @@
 
 Describes audio capturer information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioCapturerInfo--><!--Device-audio-interface AudioCapturerInfo-End-->
 
@@ -22,15 +24,15 @@ import { audio } from '@kit.AudioKit';
 capturerFlags: int
 ```
 
-Flags that control the capturer behavior.
+Flags that control the capturer behavior. Set this parameter to **0**.
 
-Set this parameter to **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerInfo-capturerFlags: int--><!--Device-AudioCapturerInfo-capturerFlags: int-End-->
 
@@ -46,9 +48,11 @@ Audio source type.
 
 **Type:** SourceType
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerInfo-source: SourceType--><!--Device-AudioCapturerInfo-source: SourceType-End-->
 

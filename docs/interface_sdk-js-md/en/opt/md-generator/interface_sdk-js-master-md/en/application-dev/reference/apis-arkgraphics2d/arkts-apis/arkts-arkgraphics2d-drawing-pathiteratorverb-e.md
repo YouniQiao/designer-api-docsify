@@ -2,7 +2,9 @@
 
 Enumerates the path operation types contained in an iterator. It is used to read path operation instructions.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum PathIteratorVerb--><!--Device-drawing-enum PathIteratorVerb-End-->
 
@@ -16,7 +18,9 @@ MOVE = 0
 
 Sets the start point.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathIteratorVerb-MOVE = 0--><!--Device-PathIteratorVerb-MOVE = 0-End-->
 
@@ -30,7 +34,9 @@ LINE = 1
 
 Adds a line segment.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathIteratorVerb-LINE = 1--><!--Device-PathIteratorVerb-LINE = 1-End-->
 
@@ -44,7 +50,9 @@ QUAD = 2
 
 Adds a quadratic Bezier curve for smooth transitions.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathIteratorVerb-QUAD = 2--><!--Device-PathIteratorVerb-QUAD = 2-End-->
 
@@ -58,7 +66,9 @@ CONIC = 3
 
 Adds a conic curve.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathIteratorVerb-CONIC = 3--><!--Device-PathIteratorVerb-CONIC = 3-End-->
 
@@ -72,7 +82,9 @@ CUBIC = 4
 
 Adds a cubic Bezier curve for smooth transitions.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathIteratorVerb-CUBIC = 4--><!--Device-PathIteratorVerb-CUBIC = 4-End-->
 
@@ -86,7 +98,9 @@ CLOSE = 5
 
 Closes a path.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathIteratorVerb-CLOSE = 5--><!--Device-PathIteratorVerb-CLOSE = 5-End-->
 
@@ -100,7 +114,9 @@ DONE = CLOSE + 1
 
 The path setting is complete.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PathIteratorVerb-DONE = CLOSE + 1--><!--Device-PathIteratorVerb-DONE = CLOSE + 1-End-->
 

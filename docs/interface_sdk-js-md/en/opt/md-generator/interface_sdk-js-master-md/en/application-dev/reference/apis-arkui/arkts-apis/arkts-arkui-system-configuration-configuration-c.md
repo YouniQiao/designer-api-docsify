@@ -2,6 +2,8 @@
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export default class Configuration--><!--Device-unnamed-export default class Configuration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -21,6 +23,8 @@ static getLocale(): LocaleResponse
 Obtains the current locale of the application, which is the same as the system locale.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

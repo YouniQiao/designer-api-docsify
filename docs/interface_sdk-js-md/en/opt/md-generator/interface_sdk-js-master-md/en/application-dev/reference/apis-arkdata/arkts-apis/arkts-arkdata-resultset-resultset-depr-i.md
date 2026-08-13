@@ -1,13 +1,12 @@
 # ResultSet
 
-A result set is a set of results returned after the relational database (RDB) query APIs are called. You can use the  
-**resultset** APIs to obtain required data.
+A result set is a set of results returned after the relational database (RDB) query APIs are called. You can use the **resultset** APIs to obtain required data.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [relationalStore](arkts-data-relationalstore.md#relationalStore)
+**Substitutes:** [relationalStore](arkts-data-relationalstore.md#@ohos.data.relationalStore)
 
 <!--Device-unnamed-export interface ResultSet--><!--Device-unnamed-export interface ResultSet-End-->
 
@@ -25,7 +24,7 @@ Closes this result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [close](ohos.data.relationalStore.ResultSet.close)
+**Substitutes:** close
 
 <!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
@@ -55,7 +54,7 @@ Obtains the value from the specified column in the current row as a byte array.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBlob](ohos.data.relationalStore.ResultSet.getBlob)
+**Substitutes:** getBlob
 
 <!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array--><!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array-End-->
 
@@ -91,7 +90,7 @@ Obtains the column index based on the column name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getColumnIndex](ohos.data.relationalStore.ResultSet.getColumnIndex)
+**Substitutes:** getColumnIndex
 
 <!--Device-ResultSet-getColumnIndex(columnName: string): number--><!--Device-ResultSet-getColumnIndex(columnName: string): number-End-->
 
@@ -133,7 +132,7 @@ Obtains the column name based on the column index.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getColumnName](ohos.data.relationalStore.ResultSet.getColumnName)
+**Substitutes:** getColumnName
 
 <!--Device-ResultSet-getColumnName(columnIndex: number): string--><!--Device-ResultSet-getColumnName(columnIndex: number): string-End-->
 
@@ -171,7 +170,7 @@ Obtains the value from the specified column in the current row as a Double.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDouble](ohos.data.relationalStore.ResultSet.getDouble)
+**Substitutes:** getDouble
 
 <!--Device-ResultSet-getDouble(columnIndex: number): number--><!--Device-ResultSet-getDouble(columnIndex: number): number-End-->
 
@@ -207,7 +206,7 @@ Obtains the value from the specified column in the current row as a Long.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLong](ohos.data.relationalStore.ResultSet.getLong)
+**Substitutes:** getLong
 
 <!--Device-ResultSet-getLong(columnIndex: number): number--><!--Device-ResultSet-getLong(columnIndex: number): number-End-->
 
@@ -243,7 +242,7 @@ Obtains the value from the specified column in the current row as a string.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getString](ohos.data.relationalStore.ResultSet.getString)
+**Substitutes:** getString
 
 <!--Device-ResultSet-getString(columnIndex: number): string--><!--Device-ResultSet-getString(columnIndex: number): string-End-->
 
@@ -279,7 +278,7 @@ Moves the result set forward or backward to the specified row with an offset rel
 
 **Deprecated since:** 9
 
-**Substitutes:** [goTo](ohos.data.relationalStore.ResultSet.goTo)
+**Substitutes:** goTo
 
 <!--Device-ResultSet-goTo(offset: number): boolean--><!--Device-ResultSet-goTo(offset: number): boolean-End-->
 
@@ -322,7 +321,7 @@ Moves the cursor to the first row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [goToFirstRow](ohos.data.relationalStore.ResultSet.goToFirstRow)
+**Substitutes:** goToFirstRow
 
 <!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
 
@@ -359,7 +358,7 @@ Moves the cursor to the last row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [goToLastRow](ohos.data.relationalStore.ResultSet.goToLastRow)
+**Substitutes:** goToLastRow
 
 <!--Device-ResultSet-goToLastRow(): boolean--><!--Device-ResultSet-goToLastRow(): boolean-End-->
 
@@ -396,7 +395,7 @@ Moves the cursor to the next row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [goToNextRow](ohos.data.relationalStore.ResultSet.goToNextRow)
+**Substitutes:** goToNextRow
 
 <!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
 
@@ -433,7 +432,7 @@ Moves the cursor to the previous row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [goToPreviousRow](ohos.data.relationalStore.ResultSet.goToPreviousRow)
+**Substitutes:** goToPreviousRow
 
 <!--Device-ResultSet-goToPreviousRow(): boolean--><!--Device-ResultSet-goToPreviousRow(): boolean-End-->
 
@@ -470,7 +469,7 @@ Moves the cursor to the specified row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [goToRow](ohos.data.relationalStore.ResultSet.goToRow)
+**Substitutes:** goToRow
 
 <!--Device-ResultSet-goToRow(position: number): boolean--><!--Device-ResultSet-goToRow(position: number): boolean-End-->
 
@@ -513,7 +512,7 @@ Checks whether the value in the specified column of the current row is null.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isColumnNull](ohos.data.relationalStore.ResultSet.isColumnNull)
+**Substitutes:** isColumnNull
 
 <!--Device-ResultSet-isColumnNull(columnIndex: number): boolean--><!--Device-ResultSet-isColumnNull(columnIndex: number): boolean-End-->
 
@@ -551,7 +550,7 @@ Number of columns in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [columnCount](ohos.data.relationalStore.ResultSet.columnCount)
+**Substitutes:** columnCount
 
 <!--Device-ResultSet-columnCount: number--><!--Device-ResultSet-columnCount: number-End-->
 
@@ -571,7 +570,7 @@ Names of all columns in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [columnNames](ohos.data.relationalStore.ResultSet.columnNames)
+**Substitutes:** columnNames
 
 <!--Device-ResultSet-columnNames: Array<string>--><!--Device-ResultSet-columnNames: Array<string>-End-->
 
@@ -591,7 +590,7 @@ Whether the cursor is in the first row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isAtFirstRow](ohos.data.relationalStore.ResultSet.isAtFirstRow)
+**Substitutes:** isAtFirstRow
 
 <!--Device-ResultSet-isAtFirstRow: boolean--><!--Device-ResultSet-isAtFirstRow: boolean-End-->
 
@@ -611,7 +610,7 @@ Whether the cursor is in the last row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isAtLastRow](ohos.data.relationalStore.ResultSet.isAtLastRow)
+**Substitutes:** isAtLastRow
 
 <!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
@@ -631,7 +630,7 @@ Whether the result set is closed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isClosed](ohos.data.relationalStore.ResultSet.isClosed)
+**Substitutes:** isClosed
 
 <!--Device-ResultSet-isClosed: boolean--><!--Device-ResultSet-isClosed: boolean-End-->
 
@@ -651,7 +650,7 @@ Whether the cursor is after the last row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isEnded](ohos.data.relationalStore.ResultSet.isEnded)
+**Substitutes:** isEnded
 
 <!--Device-ResultSet-isEnded: boolean--><!--Device-ResultSet-isEnded: boolean-End-->
 
@@ -671,7 +670,7 @@ Whether the cursor has been moved.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isStarted](ohos.data.relationalStore.ResultSet.isStarted)
+**Substitutes:** isStarted
 
 <!--Device-ResultSet-isStarted: boolean--><!--Device-ResultSet-isStarted: boolean-End-->
 
@@ -691,7 +690,7 @@ Number of rows in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rowCount](ohos.data.relationalStore.ResultSet.rowCount)
+**Substitutes:** rowCount
 
 <!--Device-ResultSet-rowCount: number--><!--Device-ResultSet-rowCount: number-End-->
 
@@ -711,7 +710,7 @@ Index of the current row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rowIndex](ohos.data.relationalStore.ResultSet.rowIndex)
+**Substitutes:** rowIndex
 
 <!--Device-ResultSet-rowIndex: number--><!--Device-ResultSet-rowIndex: number-End-->
 

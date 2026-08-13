@@ -6,7 +6,9 @@ export type NotificationRequest = _NotificationRequest
 
 Describes the notification request.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationRequest = _NotificationRequest--><!--Device-notificationManager-export type NotificationRequest = _NotificationRequest-End-->
 

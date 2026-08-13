@@ -15,7 +15,7 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [createSubscriber](@ohos.commonEventManager:commonEventManager.createSubscriber()
+**Substitutes:** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createSubscriber)( subscribeInfo: CommonEventSubscribeInfo, callback: AsyncCallback&lt;CommonEventSubscriber&gt; )
 
 <!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void--><!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void-End-->
 
@@ -68,7 +68,7 @@ Creates a subscriber. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createSubscriber](@ohos.commonEventManager:commonEventManager.createSubscriber(subscribeInfo:)
+**Substitutes:** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createSubscriber)(subscribeInfo: CommonEventSubscribeInfo)
 
 <!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>--><!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>-End-->
 

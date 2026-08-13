@@ -8,7 +8,9 @@ const LOCAL_NETWORK_ID: string
 
 Define local device network id for audio
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-const LOCAL_NETWORK_ID: string--><!--Device-audio-const LOCAL_NETWORK_ID: string-End-->
 

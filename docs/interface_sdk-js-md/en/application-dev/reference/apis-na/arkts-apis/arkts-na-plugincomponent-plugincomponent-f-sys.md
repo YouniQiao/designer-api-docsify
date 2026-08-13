@@ -1,0 +1,77 @@
+# PluginComponent (System API)
+
+## PluginComponent
+
+```TypeScript
+@ComponentBuilder
+export declare function PluginComponent(
+    options: PluginComponentOptions
+): PluginComponentAttribute
+```
+
+Defines PluginComponent Component.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-@ComponentBuilderexport declare function PluginComponent(    options: PluginComponentOptions): PluginComponentAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function PluginComponent(    options: PluginComponentOptions): PluginComponentAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PluginComponentOptions](arkts-na-plugincomponent-plugincomponentoptions-i-sys.md) | Yes | The options |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| PluginComponentAttribute |  |
+
+
+## PluginComponent
+
+```TypeScript
+@Builder
+export declare function PluginComponent(
+    style: CustomBuilderT<PluginComponentAttribute>
+): PluginComponentAttribute
+```
+
+Defines PluginComponent Component.It requires call setPluginComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-@Builderexport declare function PluginComponent(    style: CustomBuilderT<PluginComponentAttribute>): PluginComponentAttribute--><!--Device-unnamed-@Builderexport declare function PluginComponent(    style: CustomBuilderT<PluginComponentAttribute>): PluginComponentAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | CustomBuilderT&lt;PluginComponentAttribute&gt; | Yes | the callback to set up plugincomponent's attributes. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| PluginComponentAttribute | The attribute of the PluginComponent. |
+

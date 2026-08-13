@@ -2,7 +2,9 @@
 
 定义色调映射参数.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ToneMappingSettings--><!--Device-unnamed-export interface ToneMappingSettings-End-->
 
@@ -18,7 +20,9 @@ exposure?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ToneMappingSettings-exposure?: double--><!--Device-ToneMappingSettings-exposure?: double-End-->
 
@@ -34,7 +38,9 @@ type?: ToneMappingType
 
 **类型：** [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ToneMappingSettings-type?: ToneMappingType--><!--Device-ToneMappingSettings-type?: ToneMappingType-End-->
 

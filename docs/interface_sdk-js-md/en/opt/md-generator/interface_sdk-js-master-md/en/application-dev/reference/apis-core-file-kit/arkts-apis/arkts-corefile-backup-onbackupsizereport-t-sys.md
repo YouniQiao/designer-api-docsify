@@ -6,7 +6,9 @@ type OnBackupSizeReport = (reportInfo: string) => void
 
 function that returns backup datasize by bundleName.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-type OnBackupSizeReport = (reportInfo: string) => void--><!--Device-backup-type OnBackupSizeReport = (reportInfo: string) => void-End-->
 

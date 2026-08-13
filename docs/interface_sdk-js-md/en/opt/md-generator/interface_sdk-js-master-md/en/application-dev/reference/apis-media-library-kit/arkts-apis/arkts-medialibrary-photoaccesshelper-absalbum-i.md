@@ -2,7 +2,9 @@
 
 Defines the abstract interface of albums.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface AbsAlbum--><!--Device-photoAccessHelper-interface AbsAlbum-End-->
 
@@ -22,7 +24,9 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 
 Obtains image and video assets. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -42,9 +46,9 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## getAssets
@@ -55,7 +59,9 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 
 Obtains image and video assets. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -82,9 +88,9 @@ Obtains image and video assets. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## albumName
@@ -97,7 +103,9 @@ Name of the album. System albums are not writable, whereas user albums can be wr
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-albumName: string--><!--Device-AbsAlbum-albumName: string-End-->
 
@@ -113,7 +121,9 @@ Subtype of the album.
 
 **Type:** AlbumSubtype
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype--><!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype-End-->
 
@@ -129,7 +139,9 @@ Type of the album.
 
 **Type:** AlbumType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly albumType: AlbumType--><!--Device-AbsAlbum-readonly albumType: AlbumType-End-->
 
@@ -145,7 +157,9 @@ URI of the album.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly albumUri: string--><!--Device-AbsAlbum-readonly albumUri: string-End-->
 
@@ -157,11 +171,13 @@ URI of the album.
 readonly changeTime?: number
 ```
 
-Time when the album is changed.Unit: second, The value must be greater than or equal to 0.
+Time when the album is changed. Unit: second, The value must be greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly changeTime?: long--><!--Device-AbsAlbum-readonly changeTime?: long-End-->
 
@@ -177,7 +193,9 @@ Number of files in the album.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly count: int--><!--Device-AbsAlbum-readonly count: int-End-->
 
@@ -193,31 +211,10 @@ URI of the cover file of the album.
 
 **Type:** string
 
-**Since:** 10
-
-<!--Device-AbsAlbum-readonly coverUri: string--><!--Device-AbsAlbum-readonly coverUri: string-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## lpath
-
-```TypeScript
-readonly lpath?: string
-```
-
-Virtual path of the album.
-
-Albums and their virtual path values:
-
-- Camera application album: '/DCIM/Camera'  
-- Screenshot application album: '/Pictures/Screenshots'  
-- Screen recording application album: '/Pictures/Screenrecords'  
-- User-created album: '/Pictures/Users/{Custom album name}'
-
-**Type:** string
-
 **Since:** 23
 
-<!--Device-AbsAlbum-readonly lpath?: string--><!--Device-AbsAlbum-readonly lpath?: string-End-->
+**Deprecated since:** -1
+
+<!--Device-AbsAlbum-readonly coverUri: string--><!--Device-AbsAlbum-readonly coverUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

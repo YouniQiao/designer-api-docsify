@@ -4,6 +4,8 @@ HiPlay Device Information Definition
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-avSession-interface HiPlayDeviceInfo--><!--Device-avSession-interface HiPlayDeviceInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -22,11 +24,13 @@ import { avSession } from '@kit.AVSessionKit';
 castMode?: number
 ```
 
-HiPlay device cast mode.1: DEVICE_LEVEL_CAST2: APP_LEVEL_CAST
+HiPlay device cast mode. 1: DEVICE_LEVEL_CAST 2: APP_LEVEL_CAST
 
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ HiPlay device current cast uid.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -66,11 +72,13 @@ HiPlay device current cast uid.
 supportCastMode?: number
 ```
 
-HiPlay device supports cast mode.when device both support device level cast and app level cast, support cast mode is DEVICE_LEVEL_CAST|APP_LEVEL_CAST1: DEVICE_LEVEL_CAST2: APP_LEVEL_CAST
+HiPlay device supports cast mode. when device both support device level cast and app level cast, support cast mode is DEVICE_LEVEL_CAST| APP_LEVEL_CAST 1: DEVICE_LEVEL_CAST 2: APP_LEVEL_CAST
 
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

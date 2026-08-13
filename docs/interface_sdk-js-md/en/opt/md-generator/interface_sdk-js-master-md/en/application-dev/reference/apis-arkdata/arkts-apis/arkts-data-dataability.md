@@ -1,8 +1,10 @@
 # @ohos.data.dataAbility
 
-The **DataAbility** module provides APIs to create predicates for querying data from relational database (RDB)stores.
+The **DataAbility** module provides APIs to create predicates for querying data from relational database (RDB) stores.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace dataAbility--><!--Device-unnamed-declare namespace dataAbility-End-->
 
@@ -20,7 +22,7 @@ import { dataAbility } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md#createrdbpredicates) |
+| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md#createRdbPredicates) |
 
 ### Classes
 

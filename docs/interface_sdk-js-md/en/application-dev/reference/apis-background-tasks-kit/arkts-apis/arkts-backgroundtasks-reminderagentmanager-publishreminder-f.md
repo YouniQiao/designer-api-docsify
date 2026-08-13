@@ -12,18 +12,13 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void
 ```
 
-Publishes a reminder. This API uses an asynchronous callback to return the result.
+Publishes a reminder. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > permission is obtained. >
 
-> **NOTE：**
-> 
-> This API can be called only after the
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
-> permission is obtained.
-> 
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -36,16 +31,16 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | Yes | Request used for publishing the reminder. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 
 ## Examples
 
@@ -74,18 +69,13 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 function publishReminder(reminderReq: ReminderRequest): Promise<int>
 ```
 
-Publishes a reminder. This API uses a promise to return the result.
+Publishes a reminder. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > permission is obtained. >
 
-> **NOTE：**
-> 
-> This API can be called only after the
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
-> permission is obtained.
-> 
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -103,16 +93,16 @@ Publishes a reminder. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the published reminder ID. |
+| Promise&lt;int&gt; | Promise used to return the published reminder ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 
 ## Examples
 

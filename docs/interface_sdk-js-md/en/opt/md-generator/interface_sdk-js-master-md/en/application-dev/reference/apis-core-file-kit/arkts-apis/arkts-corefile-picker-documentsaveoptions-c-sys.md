@@ -4,6 +4,8 @@ Defines the options for saving documents.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-picker-class DocumentSaveOptions--><!--Device-picker-class DocumentSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -20,13 +22,15 @@ import { picker } from '@kit.CoreFileKit';
 themeColor?: CustomColors
 ```
 
-Theme color parameter. By default, it is left empty and follows the color settings of the **FilePicker**. When it is set to specific theme color properties, such as  
-[brand, fontPrimary, compBackgroundEmphasize, and iconFourth](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md#Colors), the launched  
-**FilePicker** will adapt to the theme color accordingly.This API can be called on smartphones but has no effect on other devices.
+Theme color parameter. By default, it is left empty and follows the color settings of the **FilePicker**. When it is set to specific theme color properties, such as [brand, fontPrimary, compBackgroundEmphasize, and iconFourth](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md#Colors), the launched **FilePicker** will adapt to the theme color accordingly. This API can be called on smartphones but has no effect on other devices.
 
 **Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-themeColor?: CustomColors--><!--Device-DocumentSaveOptions-themeColor?: CustomColors-End-->
 

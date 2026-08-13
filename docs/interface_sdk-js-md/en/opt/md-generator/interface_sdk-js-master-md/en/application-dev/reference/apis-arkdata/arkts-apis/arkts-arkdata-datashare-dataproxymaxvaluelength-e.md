@@ -4,6 +4,8 @@ The maximum length of [value](arkts-arkdata-datashare-proxydata-i.md#value), [va
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-dataShare-enum DataProxyMaxValueLength--><!--Device-dataShare-enum DataProxyMaxValueLength-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -17,6 +19,8 @@ MAX_LENGTH_4K = 4096
 The maximum length of value is 4096 bytes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ MAX_LENGTH_100K = 102400
 The maximum length of value is 102400 bytes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

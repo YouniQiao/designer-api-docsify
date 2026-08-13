@@ -2,7 +2,9 @@
 
 Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
 
@@ -24,6 +26,8 @@ Called when the system acquire the form data.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormExtensionAbility-onAcquireFormData?(formId: string): Record<string, Object>--><!--Device-FormExtensionAbility-onAcquireFormData?(formId: string): Record<string, Object>-End-->
@@ -43,7 +47,7 @@ Called when the system acquire the form data.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | object |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; |
 
 ## onShareForm
 
@@ -54,6 +58,8 @@ onShareForm?(formId: string): Record<string, Object>
 Called when the system shares the form.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,4 +80,48 @@ Called when the system shares the form.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | object |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; |
+
+## onAcquireFormData
+
+```TypeScript
+onAcquireFormData?: OnAcquireFormDataFn
+```
+
+Called when the system acquire the form data.
+
+**Type:** [OnAcquireFormDataFn](arkts-form-onacquireformdatafn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormExtensionAbility-onAcquireFormData?: OnAcquireFormDataFn--><!--Device-FormExtensionAbility-onAcquireFormData?: OnAcquireFormDataFn-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## onShareForm
+
+```TypeScript
+onShareForm?: OnShareFormFn
+```
+
+Called when the system shares the form.
+
+**Type:** [OnShareFormFn](arkts-form-onshareformfn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormExtensionAbility-onShareForm?: OnShareFormFn--><!--Device-FormExtensionAbility-onShareForm?: OnShareFormFn-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.

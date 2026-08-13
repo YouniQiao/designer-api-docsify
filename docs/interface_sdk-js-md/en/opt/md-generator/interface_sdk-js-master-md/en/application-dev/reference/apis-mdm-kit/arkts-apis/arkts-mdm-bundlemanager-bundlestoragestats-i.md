@@ -4,6 +4,8 @@ Storage usage information of the application.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-bundleManager-interface BundleStorageStats--><!--Device-bundleManager-interface BundleStorageStats-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -20,15 +22,13 @@ import { bundleManager } from '@kit.MDMKit';
 appSize: number
 ```
 
-Size of the application installation files, in bytes.
-
-Application installation file directory:
-
-/data/storage/el1/bundle
+Size of the application installation files, in bytes. Application installation file directory: /data/storage/el1/bundle
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +48,8 @@ Bundle name of the application.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleStorageStats-bundleName: string--><!--Device-BundleStorageStats-bundleName: string-End-->
@@ -60,26 +62,13 @@ Bundle name of the application.
 dataSize: number
 ```
 
-Size of the local data, distributed data, and database data of the application, in bytes.
-
-Local file directory (parent directory of the cache file directory):
-
-/data/storage/\${el1-el5}/base
-
-Distributed file directory:
-
-/data/storage/el2/distributedfiles
-
-Database file directory:
-
-/data/storage/\${el1-el5}/database
-
-**Note：**: **\${el1-el5}** refers to the directories
-[el1, el2, el3, el4, el5](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
+Size of the local data, distributed data, and database data of the application, in bytes. Local file directory (parent directory of the cache file directory): /data/storage/\${el1-el5}/base Distributed file directory: /data/storage/el2/distributedfiles Database file directory: /data/storage/\${el1-el5}/database **Note：**: **\${el1-el5}** refers to the directories [el1, el2, el3, el4, el5](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

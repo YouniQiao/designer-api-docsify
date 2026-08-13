@@ -1,8 +1,4 @@
-# @ohos.multimodalInput.touchEvent(Touch Event)
-
-The **touchEvent** module provides touch events reported by a device. It is inherited from
- [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent).
-
+# @ohos.multimodalInput.touchEvent
 
 ## 汇总
 

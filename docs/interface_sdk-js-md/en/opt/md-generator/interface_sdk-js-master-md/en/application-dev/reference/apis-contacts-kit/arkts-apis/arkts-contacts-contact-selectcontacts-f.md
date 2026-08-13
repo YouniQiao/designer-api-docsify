@@ -16,6 +16,8 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
@@ -32,7 +34,7 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
 
 ## Examples
 
@@ -60,6 +62,8 @@ function selectContacts(): Promise<Array<Contact>>
 Selects a contact. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,6 +100,8 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void-End-->
@@ -113,7 +119,7 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
 
 ## Examples
 
@@ -144,6 +150,8 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>-End-->
@@ -166,7 +174,7 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
 
 ## Examples
 

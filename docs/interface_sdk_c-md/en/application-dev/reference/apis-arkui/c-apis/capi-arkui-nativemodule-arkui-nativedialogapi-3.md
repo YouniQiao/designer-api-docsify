@@ -354,7 +354,7 @@ Sets the shadow of the dialog box background.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Pointer to the dialog box controller. |
-|  ArkUI_ShadowStyle shadow | Shadow style of the background, specified by an enumerated value. |
+|  [ArkUI_ShadowStyle](capi-native-type-visual-h.md#arkui_shadowstyle) shadow | Shadow style of the background, specified by an enumerated value. |
 
 **Returns**:
 
@@ -410,7 +410,7 @@ Sets the background blur style of the dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Pointer to the dialog box controller. |
-|  ArkUI_BlurStyle blurStyle | Background blur style, specified by an enumerated value. |
+|  [ArkUI_BlurStyle](capi-native-type-visual-h.md#arkui_blurstyle) blurStyle | Background blur style, specified by an enumerated value. |
 
 **Returns**:
 

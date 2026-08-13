@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-asset-enum Accessibility--><!--Device-asset-enum Accessibility-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -18,6 +20,8 @@ DEVICE_POWERED_ON = 0
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Accessibility-DEVICE_POWERED_ON = 0--><!--Device-Accessibility-DEVICE_POWERED_ON = 0-End-->
@@ -30,11 +34,11 @@ DEVICE_POWERED_ON = 0
 DEVICE_FIRST_UNLOCKED = 1
 ```
 
-首次解锁后可访问
-
-**说明：** 未设置锁屏密码时，等同于开机后可访问。
+首次解锁后可访问 **说明：** 未设置锁屏密码时，等同于开机后可访问。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -48,11 +52,11 @@ DEVICE_FIRST_UNLOCKED = 1
 DEVICE_UNLOCKED = 2
 ```
 
-解锁状态时可访问
-
-**说明：** 未设置锁屏密码时，等同于开机后可访问。
+解锁状态时可访问 **说明：** 未设置锁屏密码时，等同于开机后可访问。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

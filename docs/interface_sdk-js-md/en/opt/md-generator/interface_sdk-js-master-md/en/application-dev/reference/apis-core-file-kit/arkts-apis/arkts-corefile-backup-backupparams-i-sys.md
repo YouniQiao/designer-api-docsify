@@ -2,7 +2,9 @@
 
 Provides configuration parameters for backup and restore.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-interface BackupParams--><!--Device-backup-interface BackupParams-End-->
 
@@ -26,7 +28,9 @@ The optional parameters a json strings in the form of key value in backup or res
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BackupParams-parameters?: string--><!--Device-BackupParams-parameters?: string-End-->
 

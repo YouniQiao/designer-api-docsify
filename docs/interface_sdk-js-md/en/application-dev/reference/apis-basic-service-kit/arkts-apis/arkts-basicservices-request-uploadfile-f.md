@@ -12,18 +12,13 @@ import { request } from '@kit.BasicServicesKit';
 function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 ```
 
-Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use   
-[on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))to obtain the upload success or error information.
+Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) to obtain the upload success or error information. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -37,15 +32,15 @@ Uploads a file. This API uses an asynchronous callback to return the result. HTT
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
 | config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Yes | Upload configurations. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; | Yes | Callback used to return the **UploadTask** object. If the operation is successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; | Yes | Callback used to return the **UploadTask** object. If the operation is successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-| [13400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |
 
 ## Examples
 
@@ -83,18 +78,13 @@ try {
 function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>
 ```
 
-Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use   
-[on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))to obtain the upload success or error information.
+Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) to obtain the upload success or error information. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -119,9 +109,9 @@ Uploads a file. This API uses a promise to return the result. HTTP is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-| [13400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |
 
 ## Examples
 

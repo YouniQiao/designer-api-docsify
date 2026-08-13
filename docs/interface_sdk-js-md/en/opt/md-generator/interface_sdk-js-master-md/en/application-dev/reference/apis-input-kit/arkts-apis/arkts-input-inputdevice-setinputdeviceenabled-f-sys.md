@@ -12,9 +12,11 @@ import { inputDevice } from '@kit.InputKit';
 function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void>
 ```
 
-Sets the input switch status of an input device. Take the touchscreen as an example. If the input switch is off,the touchscreen does not respond when being touched. If the input switch is on, the touchscreen wakes up when being touched. This API uses a promise to return the result.
+Sets the input switch status of an input device. Take the touchscreen as an example. If the input switch is off, the touchscreen does not respond when being touched. If the input switch is on, the touchscreen wakes up when being touched. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
@@ -41,10 +43,10 @@ Sets the input switch status of an input device. Take the touchscreen as an exam
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [3900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900001-device-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) |
 
 ## Examples
 

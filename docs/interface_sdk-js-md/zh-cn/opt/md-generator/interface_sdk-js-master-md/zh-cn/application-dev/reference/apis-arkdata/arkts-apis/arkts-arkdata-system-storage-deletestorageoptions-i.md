@@ -16,6 +16,8 @@ complete?: () => void
 
 接口调用结束的回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 3
 
 **废弃版本：** 6
@@ -34,6 +36,8 @@ fail?: (data: string, code: number) => void
 
 接口调用失败的回调函数，data为错误信息，code为错误码。
 
+**类型：** (data: string, code: number) =&gt; void
+
 **起始版本：** 3
 
 **废弃版本：** 6
@@ -41,31 +45,6 @@ fail?: (data: string, code: number) => void
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DeleteStorageOptions-fail?: (data: string, code: number) => void--><!--Device-DeleteStorageOptions-fail?: (data: string, code: number) => void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
-| code | number | 是 |
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-接口调用成功的回调函数。
-
-**起始版本：** 3
-
-**废弃版本：** 6
-
-**模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-DeleteStorageOptions-success?: () => void--><!--Device-DeleteStorageOptions-success?: () => void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -86,5 +65,25 @@ key: string
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DeleteStorageOptions-key: string--><!--Device-DeleteStorageOptions-key: string-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+接口调用成功的回调函数。
+
+**类型：** () =&gt; void
+
+**起始版本：** 3
+
+**废弃版本：** 6
+
+**模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DeleteStorageOptions-success?: () => void--><!--Device-DeleteStorageOptions-success?: () => void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite

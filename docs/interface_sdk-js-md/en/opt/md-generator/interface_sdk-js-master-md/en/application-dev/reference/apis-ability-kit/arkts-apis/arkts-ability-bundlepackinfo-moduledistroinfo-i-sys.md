@@ -2,7 +2,9 @@
 
 ModuleDistroInfo: the bundle info summary class.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ModuleDistroInfo--><!--Device-unnamed-export interface ModuleDistroInfo-End-->
 
@@ -20,7 +22,9 @@ Whether it should be installed together with the application. **true** if it sho
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean--><!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean-End-->
 
@@ -34,11 +38,13 @@ Whether it should be installed together with the application. **true** if it sho
 readonly installationFree: boolean
 ```
 
-Whether the HAP file supports the installation-free feature. **true** if the HAP file supports the installation-free feature and meets installation-free constraints, **false** otherwise.
+Whether the HAP file supports the installation-free feature. **true** if the HAP file supports the installation- free feature and meets installation-free constraints, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleDistroInfo-readonly installationFree: boolean--><!--Device-ModuleDistroInfo-readonly installationFree: boolean-End-->
 
@@ -56,7 +62,9 @@ Module name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleDistroInfo-readonly moduleName: string--><!--Device-ModuleDistroInfo-readonly moduleName: string-End-->
 
@@ -74,7 +82,9 @@ Module type.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleDistroInfo-readonly moduleType: string--><!--Device-ModuleDistroInfo-readonly moduleType: string-End-->
 

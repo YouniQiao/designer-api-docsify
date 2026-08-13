@@ -1,4 +1,4 @@
-# SceneBoidsSim(Defines 3D boids swarm simulation related interfaces)
+# SceneBoidsSim
 
 ## Summary
 

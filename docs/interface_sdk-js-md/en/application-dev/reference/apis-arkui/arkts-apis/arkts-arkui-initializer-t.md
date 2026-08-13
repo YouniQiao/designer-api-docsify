@@ -1,30 +1,22 @@
 # Initializer
 
 ```TypeScript
-export type Initializer<T> = (...params: FixedArray<RecordData>) => T
+declare type Initializer<T> = () => T
 ```
 
-function that returns by the function updateConstructorParams.
+Defines a decorator for updating attributes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export type Initializer<T> = (...params: FixedArray<RecordData>) => T--><!--Device-unnamed-export type Initializer<T> = (...params: FixedArray<RecordData>) => T-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-declare type Initializer<T> = () => T--><!--Device-unnamed-declare type Initializer<T> = () => T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| params | FixedArray&lt;[RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T | - |
 

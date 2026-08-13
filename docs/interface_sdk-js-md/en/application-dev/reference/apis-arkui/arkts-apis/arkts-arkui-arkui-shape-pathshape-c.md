@@ -1,14 +1,16 @@
 # PathShape
 
-Defines a path drawing class.
+Represents a path used in the **clipShape** and **maskShape** APIs. This API inherits from [CommonShapeMethod](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#CommonShapeMethod).
 
-**Inheritance/Implementation:** PathShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod)
+**Inheritance/Implementation:** PathShape extends CommonShapeMethod<PathShape>
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class PathShape extends CommonShapeMethod--><!--Device-unnamed-export declare class PathShape extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PathShape--><!--Device-unnamed-export declare class PathShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,18 +23,24 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ## commands
 
 ```TypeScript
-commands(commands: string): this
+commands(commands: string): PathShape
 ```
 
-Sets the commands for drawing the PathShape.
+Sets the path drawing commands.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PathShape-commands(commands: string): this--><!--Device-PathShape-commands(commands: string): this-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-PathShape-commands(commands: string): PathShape--><!--Device-PathShape-commands(commands: string): PathShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,13 +48,13 @@ Sets the commands for drawing the PathShape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commands | string | Yes |  |
+| commands | string | Yes | Path drawing commands. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [PathShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-pathshape-c.md) | PathShape** object. |
 
 ## constructor
 
@@ -54,13 +62,19 @@ Sets the commands for drawing the PathShape.
 constructor(options?: PathShapeOptions)
 ```
 
-Constructor.
+A constructor used to create a **PathShape** object.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PathShape-constructor(options?: PathShapeOptions)--><!--Device-PathShape-constructor(options?: PathShapeOptions)-End-->
 
@@ -70,5 +84,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | No |  |
+| options | [PathShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-pathshapeoptions-i.md) | No | Path parameters. |
 

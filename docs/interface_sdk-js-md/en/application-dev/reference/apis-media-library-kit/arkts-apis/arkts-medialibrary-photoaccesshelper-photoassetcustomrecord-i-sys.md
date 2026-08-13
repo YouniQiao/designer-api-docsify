@@ -2,9 +2,11 @@
 
 Provides APIs for custom user behavior recording for Gallery.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoAssetCustomRecord--><!--Device-photoAccessHelper-interface PhotoAssetCustomRecord-End-->
 
@@ -26,11 +28,13 @@ readonly fileId: int
 
 File ID, which must be an integer greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecord-readonly fileId: int--><!--Device-PhotoAssetCustomRecord-readonly fileId: int-End-->
 
@@ -46,11 +50,13 @@ readonly lcdJumpCount: int
 
 Number of times the image or video was jumped to in large view. The value must be an integer greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecord-readonly lcdJumpCount: int--><!--Device-PhotoAssetCustomRecord-readonly lcdJumpCount: int-End-->
 
@@ -66,11 +72,13 @@ readonly shareCount: int
 
 Number of times that image or video was shared. The value must be an integer greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecord-readonly shareCount: int--><!--Device-PhotoAssetCustomRecord-readonly shareCount: int-End-->
 

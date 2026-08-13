@@ -1,11 +1,12 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService provides two callback functions,  
-[onAtomicServiceRequestSuccess](#onAtomicServiceRequestSuccess) and [onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure),to handle the results of successful and failed atomic service launch requests, respectively.
+CompletionHandlerForAtomicService provides two callback functions, [onAtomicServiceRequestSuccess](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestSuccess) and [onAtomicServiceRequestFailure](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestFailure) , to handle the results of successful and failed atomic service launch requests, respectively.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class CompletionHandlerForAtomicService--><!--Device-unnamed-declare class CompletionHandlerForAtomicService-End-->
 
@@ -20,36 +21,66 @@ import { FailureCode } from '@kit.AbilityKit';
 ## onAtomicServiceRequestFailure
 
 ```TypeScript
-onAtomicServiceRequestFailure: OnAtomicServiceRequestFailureFn
+onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMessage: string): void
 ```
 
-Notify the failure result of openAtomicService.
+Called when the atomic service fails to be launched.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestFailure: OnAtomicServiceRequestFailureFn--><!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestFailure: OnAtomicServiceRequestFailureFn-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMessage: string): void--><!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMessage: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appId | string | Yes | appId of the target atomic service. |
+| failureCode | [FailureCode](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes | Error code of the failure cause. |
+| failureMessage | string | Yes | Description of the failure cause. |
+
+## Examples
+
+For details, see CompletionHandlerForAtomicService Usage Example.
 
 ## onAtomicServiceRequestSuccess
 
 ```TypeScript
-onAtomicServiceRequestSuccess: OnAtomicServiceRequestSuccessFn
+onAtomicServiceRequestSuccess(appId: string): void
 ```
 
-Notify the success result of openAtomicService.
+Called when the atomic service is successfully launched.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestSuccess: OnAtomicServiceRequestSuccessFn--><!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestSuccess: OnAtomicServiceRequestSuccessFn-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestSuccess(appId: string): void--><!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestSuccess(appId: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appId | string | Yes | appId of the target atomic service. |
+
+## Examples
+
+For details, see CompletionHandlerForAtomicService Usage Example.
 

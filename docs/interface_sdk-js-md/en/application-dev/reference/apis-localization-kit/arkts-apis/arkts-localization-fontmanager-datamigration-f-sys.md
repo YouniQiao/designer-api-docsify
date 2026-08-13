@@ -16,7 +16,9 @@ Data migration API used during device upgrades to start a migration task, provid
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
@@ -36,14 +38,14 @@ Data migration API used during device upgrades to start a migration task, provid
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Result of the migration task startup. &lt;br&gt;- **0**: The migration task is started successfully. The migration task will be executed in the background and the progress and result will be notified through the callback. &lt;br&gt;- Other values: The migration task failed to start. Troubleshoot based on the error code. |
+| int | Result of the migration task startup. &lt;br&gt;- **0**: The migration task is started successfully. The migration task will be executed in the background and the progress and result will be notified through the callback. &lt;br&gt;- Other values: The migration task failed to start. Troubleshoot based on the error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [31100110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
-| [31100111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
+| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

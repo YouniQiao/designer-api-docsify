@@ -16,6 +16,8 @@ Create a video processing instance.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-videoProcessing-function createVideoProcessor(): VideoProcessor--><!--Device-videoProcessing-function createVideoProcessor(): VideoProcessor-End-->
@@ -32,6 +34,6 @@ Create a video processing instance.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-| [29200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200003-creation-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200007](../../apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [29200003](../../apis-image-kit/errorcode-videoprocessingengine.md#29200003-creation-failure) |

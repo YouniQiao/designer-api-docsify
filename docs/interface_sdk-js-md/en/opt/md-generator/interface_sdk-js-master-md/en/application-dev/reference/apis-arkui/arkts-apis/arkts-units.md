@@ -45,18 +45,28 @@
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |
 | [ColorMetrics](arkts-arkui-colormetrics-t.md) |
 | [Degree](arkts-arkui-degree-t.md) |
 | [Dimension](arkts-arkui-dimension-t.md) | Defines the dimension property with number with units(vp\|px\|fp\|lpx\|
+| [EdgeColors](arkts-arkui-edgecolors-t.md) |
+| [EdgeOutlineStyles](arkts-arkui-edgeoutlinestyles-t.md) |
+| [EdgeOutlineWidths](arkts-arkui-edgeoutlinewidths-t.md) |
+| [EdgeStyles](arkts-arkui-edgestyles-t.md) |
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) |
+| [EdgeWidths](arkts-arkui-edgewidths-t.md) |
 | [FP](arkts-arkui-fp-t.md) |
 | [LPX](arkts-arkui-lpx-t.md) |
 | [Length](arkts-arkui-length-t.md) |
+| [LengthConstrain](arkts-arkui-lengthconstrain-t.md) |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
 | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) |
 | [LocalizedMargin](arkts-arkui-localizedmargin-t.md) |
 | [Margin](arkts-arkui-margin-t.md) |
+| [Offset](arkts-arkui-offset-t.md) |
+| [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) |
 | [PX](arkts-arkui-px-t.md) |
+| [Padding](arkts-arkui-padding-t.md) |
 | [Percentage](arkts-arkui-percentage-t.md) |
 | [Resource](arkts-arkui-resource-t.md) |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) |

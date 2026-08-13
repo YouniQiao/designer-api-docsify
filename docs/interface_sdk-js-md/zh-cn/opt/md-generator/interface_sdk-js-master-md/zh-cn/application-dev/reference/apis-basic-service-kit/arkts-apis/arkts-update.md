@@ -1,6 +1,8 @@
 # @ohos.update
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace update--><!--Device-unnamed-declare namespace update-End-->
 
@@ -15,9 +17,9 @@
 
 | 名称 |
 | --- |
-| [getLocalUpdater](arkts-basicservices-update-getlocalupdater-f-sys.md#getlocalupdater) |
-| [getOnlineUpdater](arkts-basicservices-update-getonlineupdater-f-sys.md#getonlineupdater) |
-| [getRestorer](arkts-basicservices-update-getrestorer-f-sys.md#getrestorer) |
+| [getLocalUpdater](arkts-basicservices-update-getlocalupdater-f-sys.md#getLocalUpdater（系统接口）) |
+| [getOnlineUpdater](arkts-basicservices-update-getonlineupdater-f-sys.md#getOnlineUpdater（系统接口）) |
+| [getRestorer](arkts-basicservices-update-getrestorer-f-sys.md#getRestorer（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

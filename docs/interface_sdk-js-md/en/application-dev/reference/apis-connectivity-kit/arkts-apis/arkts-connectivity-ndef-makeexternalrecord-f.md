@@ -14,11 +14,13 @@ function makeExternalRecord(domainName: string, type: string, externalData: int[
 
 Creates an NDEF record with external data.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord--><!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord-End-->
 
@@ -30,7 +32,7 @@ Creates an NDEF record with external data.
 | --- | --- | --- | --- |
 | domainName | string | Yes | Domain name of issuing organization for the external data. |
 | type | string | Yes | Domain specific type of data for the external data. |
-| externalData | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Data payload of an NDEF record. |
+| externalData | int[] | Yes | Data payload of an NDEF record. |
 
 **Return value:**
 
@@ -42,5 +44,5 @@ Creates an NDEF record with external data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

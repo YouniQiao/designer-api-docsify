@@ -6,6 +6,8 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-fastbuffer-class FastBuffer--><!--Device-fastbuffer-class FastBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -22,11 +24,13 @@ import { fastbuffer } from '@kit.ArkTS';
 compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1
 ```
 
-Compares buf with target and returns a number indicating whether buf comes before, after,or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
+Compares buf with target and returns a number indicating whether buf comes before, after, or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -54,8 +58,8 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -79,11 +83,13 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf.If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
+Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf. If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -110,8 +116,8 @@ Copies data from a region of buf to a region in target, even if the target memor
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -144,6 +150,8 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -191,6 +199,8 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean--><!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean-End-->
@@ -213,7 +223,7 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -242,6 +252,8 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer--><!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer-End-->
@@ -267,8 +279,8 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -291,6 +303,8 @@ Returns true if value was found in buf, false otherwise
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -336,6 +350,8 @@ The index of the first occurrence of value in buf
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -379,6 +395,8 @@ Creates and returns an iterator of buf keys (indices).
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -424,6 +442,8 @@ The index of the last occurrence of value in buf
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -468,6 +488,8 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint-End-->
@@ -490,7 +512,7 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -515,6 +537,8 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint-End-->
@@ -537,7 +561,7 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -562,6 +586,8 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint-End-->
@@ -584,7 +610,7 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -609,6 +635,8 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint-End-->
@@ -631,7 +659,7 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -656,6 +684,8 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readDoubleBE(offset?: number): number--><!--Device-FastBuffer-readDoubleBE(offset?: number): number-End-->
@@ -678,7 +708,7 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -702,6 +732,8 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readDoubleLE(offset?: number): number--><!--Device-FastBuffer-readDoubleLE(offset?: number): number-End-->
@@ -724,7 +756,7 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -748,6 +780,8 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readFloatBE(offset?: number): number--><!--Device-FastBuffer-readFloatBE(offset?: number): number-End-->
@@ -770,7 +804,7 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -794,6 +828,8 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readFloatLE(offset?: number): number--><!--Device-FastBuffer-readFloatLE(offset?: number): number-End-->
@@ -816,7 +852,7 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -840,6 +876,8 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readInt16BE(offset?: number): number--><!--Device-FastBuffer-readInt16BE(offset?: number): number-End-->
@@ -862,7 +900,7 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -886,6 +924,8 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readInt16LE(offset?: number): number--><!--Device-FastBuffer-readInt16LE(offset?: number): number-End-->
@@ -908,7 +948,7 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -932,6 +972,8 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readInt32BE(offset?: number): number--><!--Device-FastBuffer-readInt32BE(offset?: number): number-End-->
@@ -954,7 +996,7 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -978,6 +1020,8 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readInt32LE(offset?: number): number--><!--Device-FastBuffer-readInt32LE(offset?: number): number-End-->
@@ -1000,7 +1044,7 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1024,6 +1068,8 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readInt8(offset?: number): number--><!--Device-FastBuffer-readInt8(offset?: number): number-End-->
@@ -1046,7 +1092,7 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
 ## Examples
 
@@ -1066,11 +1112,13 @@ console.info(buf.readInt8(1).toString());
 readIntBE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian,two's complement signed value supporting up to 48 bits of accuracy
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian, two's complement signed value supporting up to 48 bits of accuracy
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1095,7 +1143,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1114,11 +1162,13 @@ console.info(num.toString());
 readIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian,two's complement signed value supporting up to 48 bits of accuracy.
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian, two's complement signed value supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1143,7 +1193,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1167,6 +1217,8 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUInt16BE(offset?: number): number--><!--Device-FastBuffer-readUInt16BE(offset?: number): number-End-->
@@ -1189,7 +1241,7 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -1215,6 +1267,8 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUInt16LE(offset?: number): number--><!--Device-FastBuffer-readUInt16LE(offset?: number): number-End-->
@@ -1237,7 +1291,7 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -1263,6 +1317,8 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUInt32BE(offset?: number): number--><!--Device-FastBuffer-readUInt32BE(offset?: number): number-End-->
@@ -1285,7 +1341,7 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1309,6 +1365,8 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUInt32LE(offset?: number): number--><!--Device-FastBuffer-readUInt32LE(offset?: number): number-End-->
@@ -1331,7 +1389,7 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1355,6 +1413,8 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUInt8(offset?: number): number--><!--Device-FastBuffer-readUInt8(offset?: number): number-End-->
@@ -1377,7 +1437,7 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
 ## Examples
 
@@ -1403,6 +1463,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number-End-->
@@ -1426,7 +1488,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1444,11 +1506,13 @@ console.info(buf.readUIntBE(0, 6).toString(16));
 readUIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned,little-endian integer supporting up to 48 bits of accuracy.
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned, little-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1473,7 +1537,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1496,6 +1560,8 @@ Returns a new FastBuffer that references the same memory as the original, but of
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1543,6 +1609,8 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap16(): FastBuffer--><!--Device-FastBuffer-swap16(): FastBuffer-End-->
@@ -1559,7 +1627,7 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 16-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 16-bits |
 
 ## Examples
 
@@ -1586,6 +1654,8 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap32(): FastBuffer--><!--Device-FastBuffer-swap32(): FastBuffer-End-->
@@ -1602,7 +1672,7 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 32-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 32-bits |
 
 ## Examples
 
@@ -1629,6 +1699,8 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap64(): FastBuffer--><!--Device-FastBuffer-swap64(): FastBuffer-End-->
@@ -1645,7 +1717,7 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 64-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 64-bits |
 
 ## Examples
 
@@ -1671,6 +1743,8 @@ Returns a JSON representation of buf
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1707,6 +1781,8 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string-End-->
@@ -1731,7 +1807,7 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -1757,6 +1833,8 @@ Creates and returns an iterator for buf values (bytes).
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1804,6 +1882,8 @@ Writes string to buf at offset according to the character encoding in encoding
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number--><!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number-End-->
@@ -1829,8 +1909,8 @@ Writes string to buf at offset according to the character encoding in encoding
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -1860,6 +1940,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number-End-->
@@ -1883,7 +1965,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1908,6 +1990,8 @@ Writes value to buf at the specified offset as little-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number-End-->
@@ -1931,7 +2015,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1956,6 +2040,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number-End-->
@@ -1979,7 +2065,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2004,6 +2090,8 @@ Writes value to buf at the specified offset as little-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number-End-->
@@ -2027,7 +2115,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2052,6 +2140,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number-End-->
@@ -2075,7 +2165,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -2100,6 +2190,8 @@ Writes value to buf at the specified offset as little-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number-End-->
@@ -2123,7 +2215,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -2148,6 +2240,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number-End-->
@@ -2171,7 +2265,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -2196,6 +2290,8 @@ Writes value to buf at the specified offset as little-endian.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number-End-->
@@ -2219,7 +2315,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -2244,6 +2340,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number-End-->
@@ -2267,7 +2365,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2292,6 +2390,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number-End-->
@@ -2315,7 +2415,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2340,6 +2440,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number-End-->
@@ -2363,7 +2465,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2388,6 +2490,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number-End-->
@@ -2411,7 +2515,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2436,6 +2540,8 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt8(value: number, offset?: number): number-End-->
@@ -2459,7 +2565,7 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2487,6 +2593,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number-End-->
@@ -2511,7 +2619,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2535,6 +2643,8 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2560,7 +2670,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2585,6 +2695,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number-End-->
@@ -2608,7 +2720,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2636,6 +2748,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number-End-->
@@ -2659,7 +2773,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2687,6 +2801,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number-End-->
@@ -2710,7 +2826,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2735,6 +2851,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number-End-->
@@ -2758,7 +2876,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2783,6 +2901,8 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number-End-->
@@ -2806,7 +2926,7 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2840,6 +2960,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number-End-->
@@ -2864,7 +2986,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2888,6 +3010,8 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2913,7 +3037,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2940,6 +3064,8 @@ The arraybuffer underlying the FastBuffer object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-buffer: ArrayBuffer--><!--Device-FastBuffer-buffer: ArrayBuffer-End-->
@@ -2960,6 +3086,8 @@ The byteOffset of the Buffers underlying ArrayBuffer object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-byteOffset: number--><!--Device-FastBuffer-byteOffset: number-End-->
@@ -2979,6 +3107,8 @@ Returns the number of bytes in buf
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

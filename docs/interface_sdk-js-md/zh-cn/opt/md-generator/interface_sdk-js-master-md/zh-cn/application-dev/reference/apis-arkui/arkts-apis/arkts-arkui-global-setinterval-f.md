@@ -6,9 +6,11 @@
 export declare function setInterval(handler: Function | string, delay: number, ...arguments: any[]): number
 ```
 
-重复调用一个函数，在每次调用之间具有固定的时间延迟。删除该定时器需手动调用clearInterval()接口。
+重复调用一个函数，在每次调用之间具有固定的时间延迟。 删除该定时器需手动调用clearInterval()接口。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

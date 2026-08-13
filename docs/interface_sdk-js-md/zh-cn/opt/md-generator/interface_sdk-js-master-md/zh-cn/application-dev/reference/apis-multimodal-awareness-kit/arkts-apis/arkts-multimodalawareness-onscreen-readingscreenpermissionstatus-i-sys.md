@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-onScreen-export interface ReadingScreenPermissionStatus--><!--Device-onScreen-export interface ReadingScreenPermissionStatus-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -22,6 +24,8 @@ readingCode?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ReadingScreenPermissionStatus-readingCode?: int--><!--Device-ReadingScreenPermissionStatus-readingCode?: int-End-->
@@ -36,15 +40,13 @@ readingCode?: number
 readingState: number
 ```
 
-表示是否允许读屏。
-
-0：不允许读屏。
-
-1：允许读屏。
+表示是否允许读屏。 0：不允许读屏。 1：允许读屏。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

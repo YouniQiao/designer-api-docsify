@@ -2,7 +2,9 @@
 
 Defines a media data loader, which needs to be implemented by applications.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface MediaSourceLoader--><!--Device-unnamed-interface MediaSourceLoader-End-->
 
@@ -16,9 +18,13 @@ close: SourceCloseCallback
 
 Callback function is implemented by application, which is used to handle resource close request.
 
-**起始版本：** 18
+**类型：** [SourceCloseCallback](arkts-media-sourceclosecallback-t.md)
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSourceLoader-close: SourceCloseCallback--><!--Device-MediaSourceLoader-close: SourceCloseCallback-End-->
 
@@ -32,9 +38,13 @@ open: SourceOpenCallback
 
 Callback function is implemented by application, which is used to handle resource opening requests.
 
-**起始版本：** 18
+**类型：** [SourceOpenCallback](arkts-media-sourceopencallback-t.md)
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSourceLoader-open: SourceOpenCallback--><!--Device-MediaSourceLoader-open: SourceOpenCallback-End-->
 
@@ -48,9 +58,13 @@ read: SourceReadCallback
 
 Callback function is implemented by application, which is used to handle resource read requests.
 
-**起始版本：** 18
+**类型：** [SourceReadCallback](arkts-media-sourcereadcallback-t.md)
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSourceLoader-read: SourceReadCallback--><!--Device-MediaSourceLoader-read: SourceReadCallback-End-->
 

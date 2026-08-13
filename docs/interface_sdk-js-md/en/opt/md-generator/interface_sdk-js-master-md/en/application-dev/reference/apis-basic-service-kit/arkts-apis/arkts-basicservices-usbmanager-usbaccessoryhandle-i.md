@@ -2,7 +2,9 @@
 
 Describes the USB accessory handle.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBAccessoryHandle--><!--Device-usbManager-interface USBAccessoryHandle-End-->
 
@@ -24,7 +26,9 @@ Accessory file descriptor. A valid **accessoryFd** is a positive integer.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBAccessoryHandle-accessoryFd: int--><!--Device-USBAccessoryHandle-accessoryFd: int-End-->
 

@@ -2,7 +2,9 @@
 
 Describes the full download progress.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSyncManager-class DownloadProgress--><!--Device-cloudSyncManager-class DownloadProgress-End-->
 
@@ -20,12 +22,13 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 downloadedSize: number
 ```
 
-Size of the downloaded data, in bytes. The value range is  
-[0, INT64_MAX). If the progress is abnormal, **INT64_MAX** is returned.
+Size of the downloaded data, in bytes. The value range is [0, INT64_MAX). If the progress is abnormal, **INT64_MAX** is returned.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-downloadedSize: long--><!--Device-DownloadProgress-downloadedSize: long-End-->
 
@@ -37,12 +40,13 @@ Size of the downloaded data, in bytes. The value range is
 failedCount: number
 ```
 
-Number of files that fail to be downloaded. The value range is [0, INT32_MAX]. If the progress is abnormal,  
-**-1** is returned.
+Number of files that fail to be downloaded. The value range is [0, INT32_MAX]. If the progress is abnormal, **-1** is returned.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-failedCount: int--><!--Device-DownloadProgress-failedCount: int-End-->
 
@@ -58,7 +62,9 @@ Download state.
 
 **Type:** [DownloadState](arkts-corefile-cloudsyncmanager-downloadstate-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-state: DownloadState--><!--Device-DownloadProgress-state: DownloadState-End-->
 
@@ -74,7 +80,9 @@ Reason why the download stops.
 
 **Type:** [DownloadStopReason](arkts-corefile-cloudsyncmanager-downloadstopreason-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-stopReason: DownloadStopReason--><!--Device-DownloadProgress-stopReason: DownloadStopReason-End-->
 
@@ -90,7 +98,9 @@ Number of downloaded files. The value range is [0, INT32_MAX]. If the progress i
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-successfulCount: int--><!--Device-DownloadProgress-successfulCount: int-End-->
 
@@ -106,7 +116,9 @@ Total number of files to be downloaded. The value range is [0, INT32_MAX]. If th
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-totalCount: int--><!--Device-DownloadProgress-totalCount: int-End-->
 
@@ -118,12 +130,13 @@ Total number of files to be downloaded. The value range is [0, INT32_MAX]. If th
 totalSize: number
 ```
 
-Total size of the files to be downloaded, in bytes. The value range is  
-[0, INT64_MAX). If the progress is abnormal, **INT64_MAX** is returned.
+Total size of the files to be downloaded, in bytes. The value range is [0, INT64_MAX). If the progress is abnormal, **INT64_MAX** is returned.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-totalSize: long--><!--Device-DownloadProgress-totalSize: long-End-->
 

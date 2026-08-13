@@ -2,7 +2,9 @@
 
 Enumerates the compatible modes.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum CompatibleMode--><!--Device-photoAccessHelper-enum CompatibleMode-End-->
 
@@ -16,7 +18,9 @@ ORIGINAL_FORMAT_MODE = 0
 
 Maintains the original video format.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CompatibleMode-ORIGINAL_FORMAT_MODE = 0--><!--Device-CompatibleMode-ORIGINAL_FORMAT_MODE = 0-End-->
 
@@ -30,7 +34,9 @@ COMPATIBLE_FORMAT_MODE = 1
 
 Converts the HDR content to SDR format.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CompatibleMode-COMPATIBLE_FORMAT_MODE = 1--><!--Device-CompatibleMode-COMPATIBLE_FORMAT_MODE = 1-End-->
 

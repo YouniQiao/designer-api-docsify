@@ -4,6 +4,8 @@ Sets the number of columns, column spacing, and row spacing of the grid layout a
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface GridLayoutAlgorithmOptions--><!--Device-unnamed-interface GridLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,15 @@ Sets the number of columns, column spacing, and row spacing of the grid layout a
 columnsGap?: LengthMetrics
 ```
 
-Spacing between columns.
-
-Default value: **LengthMetrics.vp(0)**
-
-Invalid values are treated as the default value.
+Spacing between columns. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,17 +40,15 @@ Invalid values are treated as the default value.
 columnsTemplate?: string | ItemFillPolicy
 ```
 
-Number of columns in the grid layout.
-
-Default value: **'1fr'**
-
-Invalid values are treated as the default value.
+Number of columns in the grid layout. Default value: **'1fr'** Invalid values are treated as the default value.
 
 **Type:** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,17 +64,15 @@ Invalid values are treated as the default value.
 rowsGap?: LengthMetrics
 ```
 
-Spacing between rows.
-
-Default value: **LengthMetrics.vp(0)**
-
-Invalid values are treated as the default value.
+Spacing between rows. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

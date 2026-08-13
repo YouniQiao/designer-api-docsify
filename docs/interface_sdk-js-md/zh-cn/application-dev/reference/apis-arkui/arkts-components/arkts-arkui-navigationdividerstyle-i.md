@@ -6,6 +6,8 @@ Navigation分割线颜色及上下边距。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NavigationDividerStyle--><!--Device-unnamed-declare interface NavigationDividerStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Navigation分割线颜色及上下边距。
 color?: ResourceColor
 ```
 
-分割线的颜色。
-
-默认值：#33000000，灰色。
+分割线的颜色。 默认值：#33000000，灰色。
 
 **类型：** ResourceColor
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,19 +42,15 @@ color?: ResourceColor
 endMargin?: Length
 ```
 
-分割线与侧边栏底端的距离。
-
-默认值：0
-
-单位：vp
-
-取值范围：[0, +∞)
+分割线与侧边栏底端的距离。 默认值：0 单位：vp 取值范围：[0, +∞)
 
 **类型：** Length
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,19 +66,15 @@ endMargin?: Length
 startMargin?: Length
 ```
 
-分割线与侧边栏顶端的距离。
-
-默认值：0
-
-单位：vp
-
-取值范围：[0, +∞)
+分割线与侧边栏顶端的距离。 默认值：0 单位：vp 取值范围：[0, +∞)
 
 **类型：** Length
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -12,11 +12,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result.
-
-This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
+Obtains the sandbox applications in the retention state of an application. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result. This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>--><!--Device-dlpPermission-function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>-End-->
 
@@ -38,11 +38,11 @@ This API is used to query the sandbox retention information of a specified appli
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 
@@ -63,11 +63,11 @@ dlpPermission.getRetentionSandboxList().then((sandboxList) => { // Obtain the sa
 function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.
-
-This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
+Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result. This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void--><!--Device-dlpPermission-function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void-End-->
 
@@ -84,11 +84,11 @@ This API is used to query the sandbox retention information of a specified appli
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 
@@ -111,11 +111,11 @@ dlpPermission.getRetentionSandboxList("bundleName", (err, sandboxList) => {
 function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.
-
-This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.This API can be called only in non-DLP sandbox applications.
+Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result. This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.This API can be called only in non-DLP sandbox applications.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void--><!--Device-dlpPermission-function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void-End-->
 
@@ -131,11 +131,11 @@ This API is used to query the sandbox retention information of a specified appli
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 

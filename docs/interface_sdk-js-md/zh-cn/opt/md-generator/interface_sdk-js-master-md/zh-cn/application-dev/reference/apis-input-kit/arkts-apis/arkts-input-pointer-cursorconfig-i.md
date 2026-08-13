@@ -2,7 +2,9 @@
 
 自定义光标配置。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-pointer-interface CursorConfig--><!--Device-pointer-interface CursorConfig-End-->
 
@@ -18,7 +20,9 @@ followSystem : boolean
 
 **类型：** boolean
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CursorConfig-followSystem : boolean--><!--Device-CursorConfig-followSystem : boolean-End-->
 

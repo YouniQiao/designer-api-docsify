@@ -2,7 +2,9 @@
 
 Provides the context for the transition animation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface TransitionContext--><!--Device-window-interface TransitionContext-End-->
 
@@ -22,9 +24,11 @@ import { window } from '@kit.ArkUI';
 completeTransition(isCompleted: boolean): void
 ```
 
-Completes the transition. This API can be called only after [animateTo()](animateTo)is executed.
+Completes the transition. This API can be called only after animateTo() is executed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TransitionContext-completeTransition(isCompleted: boolean): void--><!--Device-TransitionContext-completeTransition(isCompleted: boolean): void-End-->
 
@@ -42,8 +46,8 @@ Completes the transition. This API can be called only after [animateTo()](animat
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -86,7 +90,9 @@ The target window with animation
 
 **Type:** [Window](arkts-arkui-window-window-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TransitionContext-toWindow: Window--><!--Device-TransitionContext-toWindow: Window-End-->
 

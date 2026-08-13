@@ -2,7 +2,9 @@
 
 Indicates the reference between tables.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface Reference--><!--Device-relationalStore-interface Reference-End-->
 
@@ -24,9 +26,11 @@ refFields: Record<string, string>
 
 Indicates the reference fields.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Reference-refFields: Record<string, string>--><!--Device-Reference-refFields: Record<string, string>-End-->
 
@@ -44,7 +48,9 @@ Indicates the table that references another table.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Reference-sourceTable: string--><!--Device-Reference-sourceTable: string-End-->
 
@@ -62,7 +68,9 @@ Indicates the table to be referenced.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Reference-targetTable: string--><!--Device-Reference-targetTable: string-End-->
 

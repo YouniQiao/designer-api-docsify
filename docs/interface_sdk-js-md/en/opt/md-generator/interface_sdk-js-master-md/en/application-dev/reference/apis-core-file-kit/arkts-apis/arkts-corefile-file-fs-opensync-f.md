@@ -16,6 +16,8 @@ Opens a file or directory. This API returns the result synchronously. This API s
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function openSync(path: string, mode?: number): File--><!--Device-unnamed-declare function openSync(path: string, mode?: number): File-End-->
@@ -27,7 +29,7 @@ Opens a file or directory. This API returns the result synchronously. This API s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.&lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|
+| mode | number | No | Mode for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode. & lt;br & gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode. & lt;br & gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode. & lt;br & gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode. & lt;br & gt;You can also specify the following options, separated by a bitwise OR operator (\ |
 
 **Return value:**
 

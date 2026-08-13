@@ -8,9 +8,11 @@ Defines span style option of RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare interface RichEditorSpanStyleOptions extends RichEditorRange--><!--Device-unnamed-export declare interface RichEditorSpanStyleOptions extends RichEditorRange-End-->
+<!--Device-unnamed-export declare interface RichEditorSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorSpanStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

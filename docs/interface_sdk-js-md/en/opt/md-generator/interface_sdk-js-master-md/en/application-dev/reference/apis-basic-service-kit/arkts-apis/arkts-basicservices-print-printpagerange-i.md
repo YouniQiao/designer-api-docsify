@@ -2,7 +2,9 @@
 
 Defines the print range.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-print-interface PrintPageRange--><!--Device-print-interface PrintPageRange-End-->
 
@@ -24,7 +26,9 @@ End page. The default value is the maximum number of pages of the file to be pri
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageRange-endPage?: int--><!--Device-PrintPageRange-endPage?: int-End-->
 
@@ -40,7 +44,9 @@ Page range set of the file to print. The default value is empty.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageRange-pages?: Array<int>--><!--Device-PrintPageRange-pages?: Array<int>-End-->
 
@@ -56,7 +62,9 @@ Start page. The default value is **1**.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageRange-startPage?: int--><!--Device-PrintPageRange-startPage?: int-End-->
 

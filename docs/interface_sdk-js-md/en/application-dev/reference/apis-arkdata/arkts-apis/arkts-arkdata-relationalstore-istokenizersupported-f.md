@@ -12,13 +12,13 @@ import { relationalStore } from '@kit.ArkData';
 function isTokenizerSupported(tokenizer: Tokenizer): boolean
 ```
 
-Checks whether the specified tokenizer is supported. This API returns the result synchronously.
+Checks whether the specified tokenizer is supported. This API returns the result synchronously. This API returns **true** if the specified tokenizer is supported; returns **false** otherwise.
 
-This API returns **true** if the specified tokenizer is supported; returns **false** otherwise.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean--><!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean-End-->
 
@@ -40,7 +40,7 @@ This API returns **true** if the specified tokenizer is supported; returns **fal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

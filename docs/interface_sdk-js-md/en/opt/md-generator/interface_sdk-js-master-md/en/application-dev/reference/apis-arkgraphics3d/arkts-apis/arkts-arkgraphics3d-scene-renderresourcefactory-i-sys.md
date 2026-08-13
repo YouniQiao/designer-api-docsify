@@ -2,7 +2,9 @@
 
 The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
 
@@ -17,6 +19,8 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 Create a new scene from a SceneLoadParams.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

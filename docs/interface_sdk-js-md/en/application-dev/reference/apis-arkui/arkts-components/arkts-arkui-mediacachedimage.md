@@ -14,6 +14,8 @@ Image resource to be obtained.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaCachedImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource): MediaCachedImageAttribute--><!--Device-MediaCachedImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource): MediaCachedImageAttribute-End-->
@@ -30,4 +32,4 @@ Image resource to be obtained.
 
 ## Summary
 
-- [ASTCResource](arkts-arkui-mediacachedimage-astcresource-i-sys.md)
+- [ASTCResource](arkts-arkui-astcresource-i-sys.md)

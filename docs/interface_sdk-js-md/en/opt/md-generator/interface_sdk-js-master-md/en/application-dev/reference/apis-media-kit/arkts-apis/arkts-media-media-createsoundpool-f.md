@@ -16,17 +16,11 @@ function createSoundPool(
   ): void
 ```
 
-Creates a SoundPool instance. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode.
-> Therefore, an application process can create only one SoundPool instance.
-> 
-> - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore,
-> an application process can create a maximum of 128 SoundPool instances.
+Creates a SoundPool instance. This API uses an asynchronous callback to return the result. > **NOTE：**> > - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. > Therefore, an application process can create only one SoundPool instance. > > - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, > an application process can create a maximum of 128 SoundPool instances.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-media-function createSoundPool(    maxStreams: number,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool>  ): void--><!--Device-media-function createSoundPool(    maxStreams: number,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool>  ): void-End-->
 
@@ -44,7 +38,7 @@ Creates a SoundPool instance. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 
@@ -72,20 +66,49 @@ media.createSoundPool(5, audioRendererInfo, (error, soundPool_: media.SoundPool)
 ## createSoundPool
 
 ```TypeScript
+function createSoundPool(
+    maxStreams: number,
+    audioRenderInfo: audio.AudioRendererInfo,
+    callback: AsyncCallback<SoundPool | undefined>
+  ): void
+```
+
+Creates a **SoundPool** instance. This API uses an asynchronous callback to return the result. **NOTE：**- In versions earlier than API version 18, the bottom layer of the created **SoundPool** object is in singleton mode. Therefore, an application process can create only one **SoundPool** instance. - In API version 18 and later versions, the bottom layer of the created **SoundPool** object is in multiton mode. Therefore, an application process can create a maximum of 128 **SoundPool** instances.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-media-function createSoundPool(    maxStreams: int,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool | undefined>  ): void--><!--Device-media-function createSoundPool(    maxStreams: int,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool | undefined>  ): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxStreams | number | Yes |
+| audioRenderInfo | audio.AudioRendererInfo | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SoundPool \| undefined & gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
+
+
+## createSoundPool
+
+```TypeScript
 function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-Creates a SoundPool instance. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode.
-> Therefore, an application process can create only one SoundPool instance.
-> 
-> - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore,
-> an application process can create a maximum of 128 SoundPool instances.
+Creates a SoundPool instance. This API uses a promise to return the result. > **NOTE：**> > - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. > Therefore, an application process can create only one SoundPool instance. > > - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, > an application process can create a maximum of 128 SoundPool instances.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-media-function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>--><!--Device-media-function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>-End-->
 
@@ -108,7 +131,7 @@ Creates a SoundPool instance. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 
@@ -133,3 +156,39 @@ media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) =
   console.error(`soundpool catchCallback, error message:${error.message}`);
 });
 ```
+
+
+## createSoundPool
+
+```TypeScript
+function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool | undefined>
+```
+
+Creates a **SoundPool** instance. This API uses a promise to return the result. **NOTE：**- In versions earlier than API version 18, the bottom layer of the created **SoundPool** object is in singleton mode. Therefore, an application process can create only one **SoundPool** instance. - In API version 18 and later versions, the bottom layer of the created **SoundPool** object is in multiton mode. Therefore, an application process can create a maximum of 128 **SoundPool** instances.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-media-function createSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool | undefined>--><!--Device-media-function createSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool | undefined>-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxStreams | number | Yes |
+| audioRenderInfo | audio.AudioRendererInfo | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;SoundPool \ | undefined & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |

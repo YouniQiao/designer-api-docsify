@@ -1,14 +1,6 @@
 # Row
 
-The **Row** component lays out child components horizontally.
-> **NOTE**
->
-> If no width or height is set for the **Row** component, the component automatically adapts to the size of its child
-> components in the main axis and cross axis respectively.
->
-> **Child Components**
->
-> Supported
+The **Row** component lays out child components horizontally. > **NOTE** > > If no width or height is set for the **Row** component, the component automatically adapts to the size of its child > components in the main axis and cross axis respectively. > > **Child Components** > > Supported
 
 ## Row
 
@@ -16,21 +8,13 @@ The **Row** component lays out child components horizontally.
 Row(options?: RowOptions)
 ```
 
-Creates a horizontal linear layout container. You can set the spacing between child components.
-
-> **NOTE：**
-> 
-> Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant
-> performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the
-> component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control
-> syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the
-> best practices, see
-> [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance)
-> .
+Creates a horizontal linear layout container. You can set the spacing between child components. > **NOTE：**> > Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant > performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the > component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control > syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the > best practices, see > [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance) > .
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,6 +42,8 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -76,5 +62,5 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 ## Summary
 
-- [RowOptions](arkts-arkui-row-rowoptions-i.md)
-- [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md)
+- [RowOptions](arkts-arkui-rowoptions-i.md)
+- [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md)

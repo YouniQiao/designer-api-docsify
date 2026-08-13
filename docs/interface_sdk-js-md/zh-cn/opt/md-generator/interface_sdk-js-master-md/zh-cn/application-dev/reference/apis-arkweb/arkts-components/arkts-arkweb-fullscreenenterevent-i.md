@@ -4,6 +4,8 @@ Web组件进入全屏回调事件的详情。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface FullScreenEnterEvent--><!--Device-unnamed-declare interface FullScreenEnterEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ handler: FullScreenExitHandler
 **类型：** [FullScreenExitHandler](arkts-arkweb-fullscreenexithandler-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ videoHeight?: number
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FullScreenEnterEvent-videoHeight?: number--><!--Device-FullScreenEnterEvent-videoHeight?: number-End-->
@@ -55,6 +61,8 @@ videoWidth?: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

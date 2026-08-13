@@ -1,14 +1,14 @@
 # AutoExposure
 
-**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery).
-
-It provides APIs related to auto exposure.
+**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery). It provides APIs related to auto exposure.
 
 **Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-camera-interface AutoExposure extends AutoExposureQuery--><!--Device-camera-interface AutoExposure extends AutoExposureQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface AutoExposure--><!--Device-camera-interface AutoExposure-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,50 +18,17 @@ It provides APIs related to auto exposure.
 import { camera } from '@kit.CameraKit';
 ```
 
-## getExposureMeteringMode
-
-```TypeScript
-getExposureMeteringMode(): ExposureMeteringMode
-```
-
-Obtains the exposure metering mode in use.
-
-**Since:** 24
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode--><!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## getExposureMode
 
 ```TypeScript
 getExposureMode(): ExposureMode
 ```
 
-Obtains the exposure mode in use.
+Obtains the exposure mode in use. > **NOTE：**> > This API directly returns an invalid value if you have not set the exposure mode using > [setExposureMode](#setExposureMode).
 
-> **NOTE：**
-> 
-> This API directly returns an invalid value if you have not set the exposure mode using
-> [setExposureMode](#setExposureMode).
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -79,7 +46,7 @@ Obtains the exposure mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## getExposureValue
 
@@ -89,7 +56,9 @@ getExposureValue(): number
 
 Obtains the exposure value in use.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -107,7 +76,7 @@ Obtains the exposure value in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## getMeteringPoint
 
@@ -117,7 +86,9 @@ getMeteringPoint(): Point
 
 Obtains the metering point of the camera device.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -135,7 +106,7 @@ Obtains the metering point of the camera device.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## offExposureStateChange
 
@@ -146,6 +117,8 @@ offExposureStateChange(callback?: Callback<ExposureState>): void
 Unregisters the listener for exposure state change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,6 +144,8 @@ Listens to exposure state change events. This API uses an asynchronous callback 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -191,12 +166,11 @@ Listens to exposure state change events. This API uses an asynchronous callback 
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV).
+Sets an exposure compensation value (EV). Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange) to obtain the supported values.
 
-Before the setting, you are advised to use   
-[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange) to obtain the supported values.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -214,39 +188,8 @@ Before the setting, you are advised to use
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-
-## setExposureMeteringMode
-
-```TypeScript
-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
-```
-
-Sets exposure metering mode.
-
-**Since:** 24
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void--><!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| aeMeteringMode | [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## setExposureMode
 
@@ -254,10 +197,11 @@ Sets exposure metering mode.
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-Sets an exposure mode. Before the setting, call   
-[isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported) to check whether the exposure mode is supported.
+Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported) to check whether the exposure mode is supported.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -275,8 +219,8 @@ Sets an exposure mode. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## setMeteringPoint
 
@@ -284,11 +228,11 @@ Sets an exposure mode. Before the setting, call
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}. The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
-The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -306,4 +250,4 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

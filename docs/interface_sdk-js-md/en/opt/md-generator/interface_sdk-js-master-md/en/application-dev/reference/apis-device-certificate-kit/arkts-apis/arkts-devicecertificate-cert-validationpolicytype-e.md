@@ -2,7 +2,9 @@
 
 Enumerates the types of the online certificate chain validation policy.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum ValidationPolicyType--><!--Device-cert-enum ValidationPolicyType-End-->
 
@@ -16,9 +18,11 @@ VALIDATION_POLICY_TYPE_X509 = 0
 
 Do not verify **sslHostname** or **dNSName** in the certificate. It is the default value.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_X509 = 0--><!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_X509 = 0-End-->
 
@@ -32,9 +36,11 @@ VALIDATION_POLICY_TYPE_SSL = 1
 
 Verify **sslHostname** or **dNSName** in the certificate.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_SSL = 1--><!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_SSL = 1-End-->
 

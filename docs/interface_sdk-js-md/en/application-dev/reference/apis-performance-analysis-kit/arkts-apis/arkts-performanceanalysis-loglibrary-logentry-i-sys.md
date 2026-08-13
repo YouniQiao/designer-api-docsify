@@ -2,9 +2,11 @@
 
 Defines a **LogEntry** object.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-logLibrary-interface LogEntry--><!--Device-logLibrary-interface LogEntry-End-->
 
@@ -26,11 +28,13 @@ mtime: long
 
 Time of the last modification to the file. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LogEntry-mtime: long--><!--Device-LogEntry-mtime: long-End-->
 
@@ -48,9 +52,11 @@ Log file name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LogEntry-name: string--><!--Device-LogEntry-name: string-End-->
 
@@ -66,11 +72,13 @@ size: long
 
 File size, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LogEntry-size: long--><!--Device-LogEntry-size: long-End-->
 

@@ -2,9 +2,11 @@
 
 报告类型。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export enum ReportType--><!--Device-sms-export enum ReportType-End-->
 
@@ -20,9 +22,11 @@ MMS_YES = 128
 
 YES
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ReportType-MMS_YES = 128--><!--Device-ReportType-MMS_YES = 128-End-->
 
@@ -38,9 +42,11 @@ MMS_NO = 129
 
 NO
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ReportType-MMS_NO = 129--><!--Device-ReportType-MMS_NO = 129-End-->
 

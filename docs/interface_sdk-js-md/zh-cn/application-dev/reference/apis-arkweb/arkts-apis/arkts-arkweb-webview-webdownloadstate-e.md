@@ -2,9 +2,11 @@
 
 Defines the state for download.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum WebDownloadState--><!--Device-webview-enum WebDownloadState-End-->
 
@@ -18,9 +20,13 @@ IN_PROGRESS = 0
 
 The web download is in progress.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadState-IN_PROGRESS = 0--><!--Device-WebDownloadState-IN_PROGRESS = 0-End-->
 
@@ -29,96 +35,120 @@ The web download is in progress.
 ## COMPLETED
 
 ```TypeScript
-COMPLETED
+COMPLETED = 1
 ```
 
 The web download has been completed.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebDownloadState-COMPLETED--><!--Device-WebDownloadState-COMPLETED-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDownloadState-COMPLETED = 1--><!--Device-WebDownloadState-COMPLETED = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## CANCELED
 
 ```TypeScript
-CANCELED
+CANCELED = 2
 ```
 
 The web download was canceled.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebDownloadState-CANCELED--><!--Device-WebDownloadState-CANCELED-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDownloadState-CANCELED = 2--><!--Device-WebDownloadState-CANCELED = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## INTERRUPTED
 
 ```TypeScript
-INTERRUPTED
+INTERRUPTED = 3
 ```
 
 The web download was interrupted.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebDownloadState-INTERRUPTED--><!--Device-WebDownloadState-INTERRUPTED-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDownloadState-INTERRUPTED = 3--><!--Device-WebDownloadState-INTERRUPTED = 3-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## PENDING
 
 ```TypeScript
-PENDING
+PENDING = 4
 ```
 
 The web download is pending.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebDownloadState-PENDING--><!--Device-WebDownloadState-PENDING-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDownloadState-PENDING = 4--><!--Device-WebDownloadState-PENDING = 4-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## PAUSED
 
 ```TypeScript
-PAUSED
+PAUSED = 5
 ```
 
 The web download has been paused.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebDownloadState-PAUSED--><!--Device-WebDownloadState-PAUSED-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDownloadState-PAUSED = 5--><!--Device-WebDownloadState-PAUSED = 5-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## UNKNOWN
 
 ```TypeScript
-UNKNOWN
+UNKNOWN = 6
 ```
 
 Unknown state.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebDownloadState-UNKNOWN--><!--Device-WebDownloadState-UNKNOWN-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDownloadState-UNKNOWN = 6--><!--Device-WebDownloadState-UNKNOWN = 6-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

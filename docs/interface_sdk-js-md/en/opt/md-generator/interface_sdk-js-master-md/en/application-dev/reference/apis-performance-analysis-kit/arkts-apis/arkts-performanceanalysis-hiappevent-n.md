@@ -1,13 +1,10 @@
 # hiAppEvent
 
-This module provides application logging and event subscription capabilities, including event storage, event subscription, event clearance, and logging configuration. HiAppEvent records the events triggered during application running in [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md#AppEventInfo), and classifies the events into system events and application events.
+This module provides application logging and event subscription capabilities, including event storage, event subscription, event clearance, and logging configuration. HiAppEvent records the events triggered during application running in [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md#AppEventInfo), and classifies the events into system events and application events. System events are triggered in system services and are predefined in the system. The fields of the event parameter object **params** of such events are defined by each system event. For details, see overviews of user guides. For example, [Crash Event Overview](../../../dfx/hiappevent-watcher-crash-events.md). Application events are defined by application developers and can be customized using the [Write](arkts-performanceanalysis-hiappevent-write-f.md#write) API as required.
 
-System events are triggered in system services and are predefined in the system. The fields of the event parameter object **params** of such events are defined by each system event. For details, see overviews of user guides. For example, [Crash Event Overview](../../../dfx/hiappevent-watcher-crash-events.md).
+**Since:** 23
 
-Application events are defined by application developers and can be customized using the  
-[Write](arkts-performanceanalysis-hiappevent-write-f.md#write) API as required.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hiAppEvent--><!--Device-unnamed-declare namespace hiAppEvent-End-->
 
@@ -25,9 +22,9 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [domain](arkts-performanceanalysis-hiappevent-domain-n.md) | Provides domain name constants.  \| Name\| Type \| Read Only \| Description \|  \| --- \| ------ \| ------ \| ---------- \|  \| OS \| string \| Yes\| System domain.\|
+| [domain](arkts-performanceanalysis-hiappevent-domain-n.md) | Provides domain name constants. \| Name\| Type \| Read Only \| Description \| \| --- \| ------ \| ------ \| ---------- \| \| OS \| string \| Yes\| System domain.\|
 | [event](arkts-performanceanalysis-hiappevent-event-n.md) |
-| [param](arkts-performanceanalysis-hiappevent-param-n.md) | Provides parameter name constants.  \| Name \| Type \| Read Only \| Description \|  \| ------------------------------- \| ------ \| ------ \| ------------------ \|  \| USER_ID \| string \| Yes\| Custom user ID. \|  \| DISTRIBUTED_SERVICE_NAME \| string \| Yes\| Distributed service name. \|  \| DISTRIBUTED_SERVICE_INSTANCE_ID \| string \| Yes\| Distributed service instance ID.\|
+| [param](arkts-performanceanalysis-hiappevent-param-n.md) | Provides parameter name constants. \| Name \| Type \| Read Only \| Description \| \| ------------------------------- \| ------ \| ------ \| ------------------ \| \| USER_ID \| string \| Yes\| Custom user ID. \| \| DISTRIBUTED_SERVICE_NAME \| string \| Yes\| Distributed service name. \| \| DISTRIBUTED_SERVICE_INSTANCE_ID \| string \| Yes\| Distributed service instance ID.\|
 
 ### Functions
 
@@ -35,20 +32,20 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | --- |
 | [configure](arkts-performanceanalysis-hiappevent-configure-f.md#configure) |
 | [write](arkts-performanceanalysis-hiappevent-write-f.md#write) |
-| [write](arkts-performanceanalysis-hiappevent-write-f.md#write-1) |
-| [setEventParam](arkts-performanceanalysis-hiappevent-seteventparam-f.md#seteventparam) |
-| [setEventConfig](arkts-performanceanalysis-hiappevent-seteventconfig-f.md#seteventconfig) |
-| [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher) |
-| [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) |
-| [clearData](arkts-performanceanalysis-hiappevent-cleardata-f.md#cleardata) |
-| [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid) |
-| [getUserId](arkts-performanceanalysis-hiappevent-getuserid-f.md#getuserid) |
-| [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty) |
-| [getUserProperty](arkts-performanceanalysis-hiappevent-getuserproperty-f.md#getuserproperty) |
-| [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor) |
-| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig) |
-| [removeProcessor](arkts-performanceanalysis-hiappevent-removeprocessor-f.md#removeprocessor) |
-| [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy) |
+| [write](arkts-performanceanalysis-hiappevent-write-f.md#write) |
+| [setEventParam](arkts-performanceanalysis-hiappevent-seteventparam-f.md#setEventParam) |
+| [setEventConfig](arkts-performanceanalysis-hiappevent-seteventconfig-f.md#setEventConfig) |
+| [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher) |
+| [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removeWatcher) |
+| [clearData](arkts-performanceanalysis-hiappevent-cleardata-f.md#clearData) |
+| [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setUserId) |
+| [getUserId](arkts-performanceanalysis-hiappevent-getuserid-f.md#getUserId) |
+| [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setUserProperty) |
+| [getUserProperty](arkts-performanceanalysis-hiappevent-getuserproperty-f.md#getUserProperty) |
+| [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addProcessor) |
+| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addProcessorFromConfig) |
+| [removeProcessor](arkts-performanceanalysis-hiappevent-removeprocessor-f.md#removeProcessor) |
+| [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy) |
 
 ### Classes
 

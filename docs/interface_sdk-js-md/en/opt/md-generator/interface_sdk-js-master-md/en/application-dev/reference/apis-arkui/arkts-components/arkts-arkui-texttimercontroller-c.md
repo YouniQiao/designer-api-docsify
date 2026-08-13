@@ -1,13 +1,12 @@
 # TextTimerController
 
-Defines the controller for controlling the **TextTimer** component. A **TextTimer** component can only be bound to one controller, and the relevant commands can only be called after the component has been created. A  
-**TextTimerController** can control only the last **TextTimer** component bound to it.
+Defines the controller for controlling the **TextTimer** component. A **TextTimer** component can only be bound to one controller, and the relevant commands can only be called after the component has been created. A **TextTimerController** can control only the last **TextTimer** component bound to it.
 
-## Objects to Import
-
-```ts textTimerController: TextTimerController = new TextTimerController()```
+## Objects to Import ```ts textTimerController: TextTimerController = new TextTimerController() ```
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class TextTimerController--><!--Device-unnamed-declare class TextTimerController-End-->
 
@@ -22,6 +21,8 @@ constructor()
 A constructor used to create a **TextTimerController** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,6 +42,8 @@ Pauses the timer.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -59,6 +62,8 @@ Resets the timer.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -76,6 +81,8 @@ start()
 Starts the timer.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

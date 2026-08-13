@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-mechanicManager-export interface MechEvent--><!--Device-mechanicManager-export interface MechEvent-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -22,6 +24,8 @@ event: MechEventType
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-MechEvent-event: MechEventType--><!--Device-MechEvent-event: MechEventType-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -34,11 +38,13 @@ event: MechEventType
 mechId: number
 ```
 
-具身设备ID。取值限定为整数。
+具身设备ID。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-MechEvent-mechId: int--><!--Device-MechEvent-mechId: int-End-->
 

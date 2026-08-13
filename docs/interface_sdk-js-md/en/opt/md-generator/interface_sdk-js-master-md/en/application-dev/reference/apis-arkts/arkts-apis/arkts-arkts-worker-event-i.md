@@ -4,6 +4,8 @@ Defines the event.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface Event--><!--Device-unnamed-export interface Event-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -26,6 +28,8 @@ Timestamp (accurate to millisecond) when the event is created. This parameter is
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Event-readonly timeStamp: number--><!--Device-Event-readonly timeStamp: number-End-->
@@ -43,6 +47,8 @@ Type of the Event.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

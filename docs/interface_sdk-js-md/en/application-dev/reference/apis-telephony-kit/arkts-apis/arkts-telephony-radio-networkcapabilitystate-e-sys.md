@@ -2,9 +2,11 @@
 
 Enum for network capability state.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum NetworkCapabilityState--><!--Device-radio-export enum NetworkCapabilityState-End-->
 
@@ -20,9 +22,11 @@ SERVICE_CAPABILITY_OFF = 0
 
 Indicates turn off network switch.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_OFF = 0--><!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_OFF = 0-End-->
 
@@ -38,9 +42,11 @@ SERVICE_CAPABILITY_ON = 1
 
 Indicates turn on network switch.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_ON = 1--><!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_ON = 1-End-->
 

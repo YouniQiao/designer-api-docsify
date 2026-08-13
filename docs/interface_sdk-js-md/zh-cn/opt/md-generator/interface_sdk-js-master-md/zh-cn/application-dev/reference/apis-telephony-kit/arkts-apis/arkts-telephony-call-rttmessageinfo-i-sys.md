@@ -2,7 +2,9 @@
 
 rtt通话消息
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
 
@@ -20,7 +22,9 @@ rtt通话id
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
 
@@ -38,7 +42,9 @@ rtt消息
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
 

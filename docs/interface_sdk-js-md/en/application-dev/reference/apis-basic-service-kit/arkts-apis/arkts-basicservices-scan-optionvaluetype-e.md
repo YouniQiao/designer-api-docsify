@@ -2,9 +2,11 @@
 
 Enumerates the option value types.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-scan-enum OptionValueType--><!--Device-scan-enum OptionValueType-End-->
 
@@ -18,9 +20,11 @@ SCAN_TYPE_BOOL = 0
 
 Boolean.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OptionValueType-SCAN_TYPE_BOOL = 0--><!--Device-OptionValueType-SCAN_TYPE_BOOL = 0-End-->
 
@@ -34,9 +38,11 @@ SCAN_TYPE_INT = 1
 
 Integer.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OptionValueType-SCAN_TYPE_INT = 1--><!--Device-OptionValueType-SCAN_TYPE_INT = 1-End-->
 
@@ -50,9 +56,11 @@ SCAN_TYPE_FIXED = 2
 
 Fixed-point number.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OptionValueType-SCAN_TYPE_FIXED = 2--><!--Device-OptionValueType-SCAN_TYPE_FIXED = 2-End-->
 
@@ -66,9 +74,11 @@ SCAN_TYPE_STRING = 3
 
 String.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OptionValueType-SCAN_TYPE_STRING = 3--><!--Device-OptionValueType-SCAN_TYPE_STRING = 3-End-->
 

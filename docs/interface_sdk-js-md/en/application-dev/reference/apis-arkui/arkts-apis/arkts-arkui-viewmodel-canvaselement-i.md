@@ -1,6 +1,6 @@
 # CanvasElement
 
-&lt;canvas&gt; provides a rectangular canvas component for drawing graphics on the screen.You can control each pixel to draw on the canvas.&lt;canvas&gt; offers a variety of functions for drawing paths, rectangles, circles, text, and allows for adding images to it.
+&lt;canvas&gt; provides a rectangular canvas component for drawing graphics on the screen. You can control each pixel to draw on the canvas. &lt;canvas&gt; offers a variety of functions for drawing paths, rectangles, circles, text, and allows for adding images to it.
 
 **Inheritance/Implementation:** CanvasElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
 
@@ -8,7 +8,9 @@
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
-<!--Device-unnamed-export interface CanvasElement extends Element--><!--Device-unnamed-export interface CanvasElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface CanvasElement--><!--Device-unnamed-export interface CanvasElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +20,13 @@
 getContext(type: "2d", options?: ContextAttrOptions): CanvasRenderingContext2D
 ```
 
-Obtains the context of 2D canvas drawing.Only parameters related to 2D canvas drawing are supported.The return value is a 2D drawing object that provides specific 2D drawing operations.
+Obtains the context of 2D canvas drawing. Only parameters related to 2D canvas drawing are supported. The return value is a 2D drawing object that provides specific 2D drawing operations.
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -49,11 +53,13 @@ Obtains the context of 2D canvas drawing.Only parameters related to 2D canvas dr
 getContext(type: "webgl", options?: WebGLContextAttributes): WebGLRenderingContext
 ```
 
-Obtains the context of webgl canvas drawing.Only parameters related to webgl canvas drawing are supported.The return value is a webgl drawing object that provides specific webgl drawing operations.
+Obtains the context of webgl canvas drawing. Only parameters related to webgl canvas drawing are supported. The return value is a webgl drawing object that provides specific webgl drawing operations.
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -80,11 +86,13 @@ Obtains the context of webgl canvas drawing.Only parameters related to webgl can
 getContext(type: "webgl2", options?: WebGLContextAttributes): WebGL2RenderingContext
 ```
 
-Obtains the context of webgl2 canvas drawing.Only parameters related to webgl2 canvas drawing are supported.The return value is a webgl2 drawing object that provides specific webgl2 drawing operations.
+Obtains the context of webgl2 canvas drawing. Only parameters related to webgl2 canvas drawing are supported. The return value is a webgl2 drawing object that provides specific webgl2 drawing operations.
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -116,6 +124,8 @@ Creates a data URI that contains the image display.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

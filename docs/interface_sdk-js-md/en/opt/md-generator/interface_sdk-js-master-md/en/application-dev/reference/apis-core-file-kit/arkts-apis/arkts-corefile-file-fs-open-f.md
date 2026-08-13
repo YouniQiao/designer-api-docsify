@@ -16,6 +16,8 @@ Opens a file or directory. This API uses a promise to return the result. This AP
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function open(path: string, mode?: number): Promise<File>--><!--Device-unnamed-declare function open(path: string, mode?: number): Promise<File>-End-->
@@ -27,7 +29,7 @@ Opens a file or directory. This API uses a promise to return the result. This AP
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.&lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|
+| mode | number | No | Mode for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode. & lt;br & gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode. & lt;br & gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode. & lt;br & gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode. & lt;br & gt;You can also specify the following options, separated by a bitwise OR operator (\ |
 
 **Return value:**
 
@@ -77,6 +79,8 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 Opens a file or directory. This API uses an asynchronous callback to return the result. This API supports the use of a URI.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,11 +133,11 @@ Opens a file or directory. This API uses an asynchronous callback to return the 
 declare function open(path: string, mode: number, callback: AsyncCallback<File>): void
 ```
 
-Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result.
-
-This API supports the use of a URI.
+Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result. This API supports the use of a URI.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -146,7 +150,7 @@ This API supports the use of a URI.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| mode | number | Yes | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.&lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|
+| mode | number | Yes | Mode for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode. & lt;br & gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode. & lt;br & gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode. & lt;br & gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode. & lt;br & gt;You can also specify the following options, separated by a bitwise OR operator (\ |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Yes |
 
 **Error codes:**

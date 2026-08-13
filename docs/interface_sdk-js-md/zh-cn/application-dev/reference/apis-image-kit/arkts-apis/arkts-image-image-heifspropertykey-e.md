@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-enum HeifsPropertyKey--><!--Device-image-enum HeifsPropertyKey-End-->
 
@@ -16,13 +18,13 @@
 HEIFS_DELAY_TIME = 'HeifsDelayTime'
 ```
 
-HEIF序列图片的每帧延迟时长。
-
-单位：毫秒（ms）。
+HEIF序列图片的每帧延迟时长。 单位：毫秒（ms）。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ HEIF序列图片的每帧延迟时长。
 HEIFS_UNCLAMPED_DELAY_TIME = 'HeifsUnclampedDelayTime'
 ```
 
-HEIF序列图片未钳制的帧延迟时长。
-
-单位：毫秒（ms）。
+HEIF序列图片未钳制的帧延迟时长。 单位：毫秒（ms）。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,13 +58,13 @@ HEIF序列图片未钳制的帧延迟时长。
 HEIFS_CANVAS_HEIGHT = 'HeifsCanvasHeight'
 ```
 
-HEIF序列图片的画布高度。
-
-单位：像素（px）。
+HEIF序列图片的画布高度。 单位：像素（px）。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,13 +78,13 @@ HEIF序列图片的画布高度。
 HEIFS_CANVAS_WIDTH = 'HeifsCanvasWidth'
 ```
 
-HEIF序列图片的画布宽度。
-
-单位：像素（px）。
+HEIF序列图片的画布宽度。 单位：像素（px）。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

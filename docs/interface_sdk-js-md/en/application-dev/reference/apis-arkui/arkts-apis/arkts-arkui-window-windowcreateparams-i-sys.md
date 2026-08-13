@@ -2,9 +2,11 @@
 
 Describes the window parameters during application startup.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface WindowCreateParams--><!--Device-window-interface WindowCreateParams-End-->
 
@@ -22,7 +24,7 @@ import { window } from '@kit.ArkUI';
 isWindowLimitsForcible?: boolean
 ```
 
-Whether to override system window limits.If true, the main window of the current ability can set a window limit that exceeds system restrictions.
+Whether to override system window limits. If true, the main window of the current ability can set a window limit that exceeds system restrictions.
 
 **Type:** boolean
 
@@ -30,7 +32,9 @@ Whether to override system window limits.If true, the main window of the current
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +50,15 @@ Whether to override system window limits.If true, the main window of the current
 systemAnimationParams?: StartAnimationSystemParams
 ```
 
-Describes the start animation configuration. This API works only for full-screen applications.
-
-The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
+Describes the start animation configuration. This API works only for full-screen applications. The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
 
 **Type:** [StartAnimationSystemParams](arkts-arkui-window-startanimationsystemparams-i-sys.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowCreateParams-systemAnimationParams?: StartAnimationSystemParams--><!--Device-WindowCreateParams-systemAnimationParams?: StartAnimationSystemParams-End-->
 

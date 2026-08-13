@@ -1,11 +1,10 @@
 # BoidsSimWorld（系统接口）
 
-群组模拟世界接口. 提供群组模拟的播放控制和组件管理.
-
-> **说明：**
-> 使用以下接口前，需先通过[BoidsSimPlugin.getDefaultBoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md#getDefaultBoidsSimWorld)获取群组模拟世界实例。
+群组模拟世界接口. 提供群组模拟的播放控制和组件管理. > **说明：** > 使用以下接口前，需先通过[BoidsSimPlugin.getDefaultBoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md#getDefaultBoidsSimWorld)获取群组模拟世界实例。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class BoidsSimWorld--><!--Device-unnamed-export declare class BoidsSimWorld-End-->
 
@@ -22,6 +21,8 @@ addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 在指定节点上添加群组模拟组件.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +75,8 @@ addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
@@ -119,6 +122,8 @@ addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 在指定节点上添加斥力场组件.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -166,6 +171,8 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null--><!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null-End-->
@@ -208,6 +215,8 @@ getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 获取指定节点上的引力场组件参数.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,6 +261,8 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null--><!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null-End-->
@@ -295,6 +306,8 @@ pause(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-pause(): void--><!--Device-BoidsSimWorld-pause(): void-End-->
@@ -323,6 +336,8 @@ play(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-play(): void--><!--Device-BoidsSimWorld-play(): void-End-->
@@ -350,6 +365,8 @@ removeBoidsSimComponent(node: Node): void
 从指定节点移除群组模拟组件.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -385,6 +402,8 @@ removeBoidsSimGravityComponent(node: Node): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void-End-->
@@ -419,6 +438,8 @@ removeBoidsSimRepulsionComponent(node: Node): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void-End-->
@@ -452,6 +473,8 @@ setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 更新指定节点上的群组模拟组件参数.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -494,6 +517,8 @@ setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
@@ -529,6 +554,8 @@ setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 更新指定节点上的斥力场组件参数.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -566,6 +593,8 @@ stop(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimWorld-stop(): void--><!--Device-BoidsSimWorld-stop(): void-End-->
@@ -583,23 +612,3 @@ function stopBoidsSim(world: BoidsSimWorld): void {
   world.stop();
 }
 ```
-
-## isPlaying
-
-```TypeScript
-get isPlaying(): boolean
-```
-
-模拟是否正在播放.
-
-**类型：** boolean
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BoidsSimWorld-get isPlaying(): boolean--><!--Device-BoidsSimWorld-get isPlaying(): boolean-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**系统接口：** 此接口为系统接口。

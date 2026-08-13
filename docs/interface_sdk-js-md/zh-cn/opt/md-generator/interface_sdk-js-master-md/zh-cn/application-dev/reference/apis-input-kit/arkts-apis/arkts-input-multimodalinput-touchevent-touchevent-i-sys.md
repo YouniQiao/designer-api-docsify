@@ -4,9 +4,11 @@
 
 **继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-unnamed-export declare interface TouchEvent extends InputEvent--><!--Device-unnamed-export declare interface TouchEvent extends InputEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare interface TouchEvent--><!--Device-unnamed-export declare interface TouchEvent-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -20,7 +22,9 @@ fixedMode?: FixedMode
 
 **类型：** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TouchEvent-fixedMode?: FixedMode--><!--Device-TouchEvent-fixedMode?: FixedMode-End-->
 
@@ -34,12 +38,13 @@ fixedMode?: FixedMode
 isInject?: boolean
 ```
 
-表示该触屏输入事件是否为注入事件。注入事件详细介绍可参考  
-[@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md#inputEventClient)。
+表示该触屏输入事件是否为注入事件。注入事件详细介绍可参考 [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md#@ohos.multimodalInput.inputEventClient)。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TouchEvent-isInject?: boolean--><!--Device-TouchEvent-isInject?: boolean-End-->
 

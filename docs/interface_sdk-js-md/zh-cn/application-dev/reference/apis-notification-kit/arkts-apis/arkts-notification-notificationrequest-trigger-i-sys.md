@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Trigger--><!--Device-unnamed-export interface Trigger-End-->
 
@@ -24,7 +26,9 @@ condition:Geofence
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Trigger-condition:Geofence--><!--Device-Trigger-condition:Geofence-End-->
 
@@ -40,11 +44,13 @@ displayTime?:int
 
 条件触发实况的展示时间，单位：秒，取值范围：[15, 1800]，默认值为900。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Trigger-displayTime?:int--><!--Device-Trigger-displayTime?:int-End-->
 
@@ -64,7 +70,9 @@ type:TriggerType
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Trigger-type:TriggerType--><!--Device-Trigger-type:TriggerType-End-->
 

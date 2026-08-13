@@ -14,7 +14,9 @@ function getTimezoneSync(): string
 
 Obtains the system time zone in synchronous mode.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
 

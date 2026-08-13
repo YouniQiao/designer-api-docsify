@@ -2,7 +2,9 @@
 
 Enumerates data role types.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-export enum DataRoleType--><!--Device-usbManager-export enum DataRoleType-End-->
 
@@ -18,7 +20,9 @@ NONE = 0
 
 没有功能。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
@@ -34,7 +38,9 @@ HOST = 1
 
 Host mode
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
@@ -50,7 +56,9 @@ DEVICE = 2
 
 Device mode
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
 

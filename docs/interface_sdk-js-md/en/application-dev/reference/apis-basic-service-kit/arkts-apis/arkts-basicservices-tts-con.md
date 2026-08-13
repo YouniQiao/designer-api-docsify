@@ -6,13 +6,11 @@
 const DEFAULT_TTS_PITCH: string
 ```
 
-Indicates the default pitch of the text-to-speech (TTS) engine.
+Indicates the default pitch of the text-to-speech (TTS) engine. &lt;p&gt;100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency.
 
-&lt;p&gt;100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency.
+**Since:** 23
 
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -28,9 +26,9 @@ const DEFAULT_TTS_RATE: string
 
 Indicates the default speech rate of the TTS engine. 100 = 1x.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -46,9 +44,9 @@ const DEFAULT_TTS_SYNTH: string
 
 Indicates the default TTS engine.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -64,9 +62,9 @@ const ENABLED_TTS_PLUGINS: string
 
 Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 

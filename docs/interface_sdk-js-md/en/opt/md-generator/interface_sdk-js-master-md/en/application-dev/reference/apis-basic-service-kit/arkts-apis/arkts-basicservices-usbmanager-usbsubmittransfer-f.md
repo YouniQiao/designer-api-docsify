@@ -12,17 +12,11 @@ import { usbManager } from '@kit.BasicServicesKit';
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Requests a USB data transfer.
+Requests a USB data transfer. > **NOTE：**> > This API uses an asynchronous callback to return the result. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > API to claim a communication interface.
 
-> **NOTE：**
-> 
-> This API uses an asynchronous callback to return the result.
-> 
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
-> API to claim a communication interface.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void-End-->
 
@@ -38,12 +32,12 @@ Requests a USB data transfer.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14400009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) |
-| [14400008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) |
-| [14400012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400012-io-error) |
-| [14400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) |
-| [14400007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14400009](../../apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) |
+| [14400012](../../apis-basic-services-kit/errorcode-usb.md#14400012-io-error) |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) |
+| [14400007](../../apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) |
 
 ## Examples
 

@@ -8,7 +8,9 @@ Called to return the command sent from the user authentication framework to the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-userAuth-type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void--><!--Device-userAuth-type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void-End-->
 

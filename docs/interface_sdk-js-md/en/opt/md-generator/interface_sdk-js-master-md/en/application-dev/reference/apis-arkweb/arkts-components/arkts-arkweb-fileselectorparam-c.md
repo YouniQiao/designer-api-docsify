@@ -1,8 +1,10 @@
 # FileSelectorParam
 
-Encompassed message information as parameters to [onFileSelectorShow](onFileSelectorShow) method.
+Encompassed message information as parameters to onFileSelectorShow method.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class FileSelectorParam--><!--Device-unnamed-declare class FileSelectorParam-End-->
 
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ getAcceptType(): Array<string>
 Gets an array of acceptable MIME type.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,6 +62,8 @@ Gets an array of selected types for web page files.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -75,6 +83,8 @@ getDefaultPath(): string
 Get the default path opened when pulling up the selector.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileSelectorParam-getDefaultPath(): string--><!--Device-FileSelectorParam-getDefaultPath(): string-End-->
 
@@ -96,6 +106,8 @@ Gets a description array of file types.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FileSelectorParam-getDescriptions(): Array<string>--><!--Device-FileSelectorParam-getDescriptions(): Array<string>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -116,6 +128,8 @@ Gets an array of raw acceptable MIME type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-FileSelectorParam-getMimeTypes(): Array<string>--><!--Device-FileSelectorParam-getMimeTypes(): Array<string>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -135,6 +149,8 @@ getMode(): FileSelectorMode
 Gets the FileSelectorMode of this file selector.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,6 +174,8 @@ Gets suggested file names.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FileSelectorParam-getSuggestedName(): string--><!--Device-FileSelectorParam-getSuggestedName(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -177,6 +195,8 @@ getTitle(): string
 Gets the title of this file selector.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -200,6 +220,8 @@ Gets whether to filter fully matching file types.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean--><!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -219,6 +241,8 @@ isCapture(): boolean
 Gets whether this file selector use a live media captured value.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

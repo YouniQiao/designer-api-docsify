@@ -4,6 +4,8 @@ Defines TLS security options. The CA certificate is mandatory, and other paramet
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface TLSSecureOptions--><!--Device-socket-export interface TLSSecureOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -26,6 +28,8 @@ Certificate used to verify the identity of the server, if it is not set, use sys
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-TLSSecureOptions-ca?: string | Array<string>--><!--Device-TLSSecureOptions-ca?: string | Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -40,7 +44,9 @@ Certificate proving the identity of the client
 
 **Type:** string \| Array&lt;string&gt;
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSecureOptions-cert?: string | Array<string>--><!--Device-TLSSecureOptions-cert?: string | Array<string>-End-->
 
@@ -58,6 +64,8 @@ Crypto suite specification
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-TLSSecureOptions-cipherSuite?: string--><!--Device-TLSSecureOptions-cipherSuite?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -72,7 +80,9 @@ Used to set up bidirectional authentication. The default value is false.
 
 **Type:** boolean
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSecureOptions-isBidirectionalAuthentication?: boolean--><!--Device-TLSSecureOptions-isBidirectionalAuthentication?: boolean-End-->
 
@@ -90,6 +100,8 @@ Private key of client certificate
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-TLSSecureOptions-key?: string--><!--Device-TLSSecureOptions-key?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -105,6 +117,8 @@ Password of the private key
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-TLSSecureOptions-password?: string--><!--Device-TLSSecureOptions-password?: string-End-->
 
@@ -122,6 +136,8 @@ TLS protocol version
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-TLSSecureOptions-protocols?: Protocol | Array<Protocol>--><!--Device-TLSSecureOptions-protocols?: Protocol | Array<Protocol>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -132,11 +148,13 @@ TLS protocol version
 signatureAlgorithms?: string
 ```
 
-&lt;P&gt;Supported signature algorithms. This string can contain summary algorithms(SHA256,MD5,etc),Public key algorithm(RSA-PSS,ECDSA,etc),Combination of the two(For example 'RSA+SHA384') or TLS v1.3 Scheme name(For example rsa_pss_pss_sha512)&lt;/P&gt;
+&lt;P&gt;Supported signature algorithms. This string can contain summary algorithms(SHA256,MD5,etc),Public key algorithm(RSA-PSS,ECDSA,etc), Combination of the two(For example 'RSA+SHA384') or TLS v1.3 Scheme name(For example rsa_pss_pss_sha512)&lt;/P&gt;
 
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-TLSSecureOptions-signatureAlgorithms?: string--><!--Device-TLSSecureOptions-signatureAlgorithms?: string-End-->
 
@@ -153,6 +171,8 @@ default is false, use local cipher.
 **Type:** boolean
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-TLSSecureOptions-useRemoteCipherPrefer?: boolean--><!--Device-TLSSecureOptions-useRemoteCipherPrefer?: boolean-End-->
 

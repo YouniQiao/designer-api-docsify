@@ -2,7 +2,9 @@
 
 某个应用或设备的访问记录。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-privacyManager-interface BundleUsedRecord--><!--Device-privacyManager-interface BundleUsedRecord-End-->
 
@@ -20,7 +22,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleUsedRecord-bundleName: string--><!--Device-BundleUsedRecord-bundleName: string-End-->
 
@@ -38,7 +42,9 @@ deviceId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleUsedRecord-deviceId: string--><!--Device-BundleUsedRecord-deviceId: string-End-->
 
@@ -52,11 +58,13 @@ deviceId: string
 deviceName?: string
 ```
 
-使用权限的应用所在设备名称，仅用于分布式场景。可用于在界面中展示更易理解的设备标识。默认值：空字符串。
+使用权限的应用所在设备名称，仅用于分布式场景。可用于在界面中展示更易理解的设备标识。 默认值：空字符串。
 
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-BundleUsedRecord-deviceName?: string--><!--Device-BundleUsedRecord-deviceName?: string-End-->
 
@@ -74,7 +82,9 @@ isRemote: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleUsedRecord-isRemote: boolean--><!--Device-BundleUsedRecord-isRemote: boolean-End-->
 
@@ -92,7 +102,9 @@ permissionRecords: Array<PermissionUsedRecord>
 
 **类型：** Array&lt;[PermissionUsedRecord](arkts-ability-privacymanager-permissionusedrecord-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>--><!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>-End-->
 
@@ -110,7 +122,9 @@ tokenId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleUsedRecord-tokenId: int--><!--Device-BundleUsedRecord-tokenId: int-End-->
 

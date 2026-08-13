@@ -4,6 +4,8 @@ Session represent a connection session to one of the SEs available on the device
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-omapi-export interface Session--><!--Device-omapi-export interface Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -24,6 +26,8 @@ Close the connection with the SE. This will close any channels opened by this ap
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-close(): void--><!--Device-Session-close(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -32,8 +36,8 @@ Close the connection with the SE. This will close any channels opened by this ap
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -62,6 +66,8 @@ Close any channels opened on this session.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-closeChannels(): void--><!--Device-Session-closeChannels(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -70,8 +76,8 @@ Close any channels opened on this session.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -96,9 +102,11 @@ try {
 getATR(): number[]
 ```
 
-Get the ATR of this SE.A empty array SHALL be returned if the ATR for this SE is not available.
+Get the ATR of this SE. A empty array SHALL be returned if the ATR for this SE is not available.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Session-getATR(): number[]--><!--Device-Session-getATR(): number[]-End-->
 
@@ -114,8 +122,8 @@ Get the ATR of this SE.A empty array SHALL be returned if the ATR for this SE is
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -145,6 +153,8 @@ Get the reader that provides this session.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-getReader(): Reader--><!--Device-Session-getReader(): Reader-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -159,7 +169,7 @@ Get the reader that provides this session.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -201,6 +211,8 @@ Check if this session is closed.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-isClosed(): boolean--><!--Device-Session-isClosed(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -215,7 +227,7 @@ Check if this session is closed.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -245,6 +257,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -265,12 +279,12 @@ This method is provided to ease the development of mobile applications and for b
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -311,6 +325,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -326,12 +342,12 @@ This method is provided to ease the development of mobile applications and for b
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -370,9 +386,11 @@ function secureElementDemo() {
 openBasicChannel(aid: number[], p2: number): Promise<Channel>
 ```
 
-Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class.Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed.Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases,a Null value SHALL be returned.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class. Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed. Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases, a Null value SHALL be returned. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
@@ -395,12 +413,12 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -438,9 +456,11 @@ function secureElementDemo() {
 openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void
 ```
 
-Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class.Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed.Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases,a Null value SHALL be returned.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class. Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed. Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases, a Null value SHALL be returned. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
 
@@ -458,12 +478,12 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -507,6 +527,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -527,12 +549,12 @@ This method is provided to ease the development of mobile applications and for b
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -573,6 +595,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -588,12 +612,12 @@ This method is provided to ease the development of mobile applications and for b
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -632,9 +656,11 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 ```
 
-Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0).If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS].If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0). If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS]. If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
@@ -657,12 +683,12 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -700,9 +726,11 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void
 ```
 
-Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0).If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS].If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0). If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS]. If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
 
@@ -720,12 +748,12 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 Enumerates the certificate scopes.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export enum CertScope--><!--Device-certificateManager-export enum CertScope-End-->
 
@@ -18,9 +20,11 @@ CURRENT_USER = 1
 
 The certificate is accessible only to the current user.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertScope-CURRENT_USER = 1--><!--Device-CertScope-CURRENT_USER = 1-End-->
 
@@ -34,9 +38,11 @@ GLOBAL_USER = 2
 
 The certificate is accessible to all users.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertScope-GLOBAL_USER = 2--><!--Device-CertScope-GLOBAL_USER = 2-End-->
 

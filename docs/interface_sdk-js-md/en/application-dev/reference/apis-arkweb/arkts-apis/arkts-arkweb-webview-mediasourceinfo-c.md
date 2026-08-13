@@ -1,14 +1,12 @@
 # MediaSourceInfo
 
-Implements a **MediaSourceInfo** object to provide the information about the media source.
+Implements a **MediaSourceInfo** object to provide the information about the media source. > **NOTE：**> > - The sample effect is subject to the actual device.
 
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
+**Since:** 12
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 <!--Device-webview-class MediaSourceInfo--><!--Device-webview-class MediaSourceInfo-End-->
 
@@ -30,9 +28,13 @@ Format of the media source, which may be empty. You need to determine the format
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaSourceInfo-format: string--><!--Device-MediaSourceInfo-format: string-End-->
 
@@ -48,9 +50,13 @@ Address of the media source.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaSourceInfo-source: string--><!--Device-MediaSourceInfo-source: string-End-->
 
@@ -66,9 +72,11 @@ Type of the media source.
 
 **Type:** SourceType
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-MediaSourceInfo-type: SourceType--><!--Device-MediaSourceInfo-type: SourceType-End-->
 

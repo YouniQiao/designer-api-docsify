@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-advertising-export class AdLoader--><!--Device-advertising-export class AdLoader-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -17,6 +19,8 @@ constructor(context: common.Context)
 构造函数。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +36,7 @@ constructor(context: common.Context)
 
 ## 示例
 
-其中context的获取方式参见[各类context的获取方式](../../application-models/application-context-stage.md#context的获取方式)。
+其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -54,6 +58,8 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void--><!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void-End-->
@@ -72,14 +78,14 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
-| [21800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-广告请求加载失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
+| [21800003](../errorcode-ads.md#21800003-广告请求加载失败) |
 
 ## 示例
 
-其中context的获取方式参见[各类context的获取方式](../../application-models/application-context-stage.md#context的获取方式)。
+其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -118,6 +124,8 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void--><!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void-End-->
@@ -136,14 +144,14 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
-| [21800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-广告请求加载失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
+| [21800003](../errorcode-ads.md#21800003-广告请求加载失败) |
 
 ## 示例
 
-其中context的获取方式参见[各类context的获取方式](../../application-models/application-context-stage.md#context的获取方式)。
+其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

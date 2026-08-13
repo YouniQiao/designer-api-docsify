@@ -2,7 +2,9 @@
 
 Defines the size of the printed page.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-print-interface PrintPageSize--><!--Device-print-interface PrintPageSize-End-->
 
@@ -24,7 +26,9 @@ Page height, in millimeters.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-height: int--><!--Device-PrintPageSize-height: int-End-->
 
@@ -40,7 +44,9 @@ Paper size ID.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-id: string--><!--Device-PrintPageSize-id: string-End-->
 
@@ -56,7 +62,9 @@ Paper size name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-name: string--><!--Device-PrintPageSize-name: string-End-->
 
@@ -72,7 +80,9 @@ Page width, in millimeters.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-width: int--><!--Device-PrintPageSize-width: int-End-->
 

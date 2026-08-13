@@ -1,9 +1,6 @@
 # ShortcutInfo
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager-ShortcutInfo](#ShortcutInfo) instead.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-ShortcutInfo](#ShortcutInfo) instead.
 
 **Since:** 7
 
@@ -33,7 +30,7 @@ Name of the bundle that contains the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleName](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#bundleName)
+**Substitutes:** bundleName
 
 <!--Device-ShortcutInfo-readonly bundleName: string--><!--Device-ShortcutInfo-readonly bundleName: string-End-->
 
@@ -75,7 +72,7 @@ Local ability information of the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hostAbility](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#hostAbility)
+**Substitutes:** hostAbility
 
 <!--Device-ShortcutInfo-readonly hostAbility: string--><!--Device-ShortcutInfo-readonly hostAbility: string-End-->
 
@@ -97,7 +94,7 @@ Icon of the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [icon](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#icon)
+**Substitutes:** icon
 
 <!--Device-ShortcutInfo-readonly icon: string--><!--Device-ShortcutInfo-readonly icon: string-End-->
 
@@ -119,7 +116,7 @@ Icon ID of the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [iconId](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#iconId)
+**Substitutes:** iconId
 
 <!--Device-ShortcutInfo-readonly iconId: number--><!--Device-ShortcutInfo-readonly iconId: number-End-->
 
@@ -141,7 +138,7 @@ ID of the application to which the shortcut belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** [id](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#id)
+**Substitutes:** id
 
 <!--Device-ShortcutInfo-readonly id: string--><!--Device-ShortcutInfo-readonly id: string-End-->
 
@@ -165,7 +162,7 @@ Whether the shortcut is enabled. **true** if enabled, **false** otherwise.
 
 **Deprecated since:** 9
 
-**Substitutes:** [visible](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#visible)
+**Substitutes:** visible
 
 <!--Device-ShortcutInfo-readonly isEnabled?: boolean--><!--Device-ShortcutInfo-readonly isEnabled?: boolean-End-->
 
@@ -189,7 +186,7 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sourceType](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#sourceType)
+**Substitutes:** sourceType
 
 <!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean--><!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean-End-->
 
@@ -213,7 +210,7 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sourceType](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#sourceType)
+**Substitutes:** sourceType
 
 <!--Device-ShortcutInfo-readonly isStatic?: boolean--><!--Device-ShortcutInfo-readonly isStatic?: boolean-End-->
 
@@ -235,7 +232,7 @@ Name of the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [label](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#label)
+**Substitutes:** label
 
 <!--Device-ShortcutInfo-readonly label: string--><!--Device-ShortcutInfo-readonly label: string-End-->
 
@@ -257,7 +254,7 @@ Name ID of the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [labelId](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#labelId)
+**Substitutes:** labelId
 
 <!--Device-ShortcutInfo-readonly labelId: number--><!--Device-ShortcutInfo-readonly labelId: number-End-->
 
@@ -279,7 +276,7 @@ Want list for the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [wants](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#wants)
+**Substitutes:** wants
 
 <!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>--><!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>-End-->
 

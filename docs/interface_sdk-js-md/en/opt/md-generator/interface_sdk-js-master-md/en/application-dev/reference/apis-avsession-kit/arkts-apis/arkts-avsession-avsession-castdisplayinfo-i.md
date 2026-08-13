@@ -2,7 +2,9 @@
 
 Define the information for extended display screen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface CastDisplayInfo--><!--Device-avSession-interface CastDisplayInfo-End-->
 
@@ -24,9 +26,11 @@ Display height, in pixels.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CastDisplayInfo-height: int--><!--Device-CastDisplayInfo-height: int-End-->
 
@@ -38,13 +42,15 @@ Display height, in pixels.
 id: number
 ```
 
-Display ID.The application can get more display information based on the same id from display interface.
+Display ID. The application can get more display information based on the same id from display interface.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CastDisplayInfo-id: long--><!--Device-CastDisplayInfo-id: long-End-->
 
@@ -60,9 +66,11 @@ Display name.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CastDisplayInfo-name: string--><!--Device-CastDisplayInfo-name: string-End-->
 
@@ -78,9 +86,11 @@ The state of display.
 
 **Type:** [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CastDisplayInfo-state: CastDisplayState--><!--Device-CastDisplayInfo-state: CastDisplayState-End-->
 
@@ -96,9 +106,11 @@ Display width, in pixels.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CastDisplayInfo-width: int--><!--Device-CastDisplayInfo-width: int-End-->
 

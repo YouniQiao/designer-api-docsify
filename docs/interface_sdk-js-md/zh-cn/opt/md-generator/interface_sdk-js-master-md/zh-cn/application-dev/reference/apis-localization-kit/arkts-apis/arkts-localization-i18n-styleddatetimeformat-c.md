@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-i18n-export class StyledDateTimeFormat--><!--Device-i18n-export class StyledDateTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
@@ -18,6 +20,8 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 创建需要富文本显示的时间日期格式化的对象。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -78,6 +82,8 @@ format(date: Date): StyledString
 对时间日期进行格式化，返回富文本对象。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

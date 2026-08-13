@@ -1,19 +1,10 @@
 # AudioLoopback
 
-提供音频返听的相关接口。
+提供音频返听的相关接口。 在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback)获取AudioLoopback实例。 当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与 [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SourceType)相匹配。 输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。 > **说明：** > > - 本Interface首批接口从API version 20开始支持。
 
-在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback)获取AudioLoopback实例。
+**起始版本：** 23
 
-当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与  
-[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SourceType)相匹配。
-
-输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 20开始支持。
-
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioLoopback--><!--Device-audio-interface AudioLoopback-End-->
 
@@ -27,7 +18,9 @@ enable(enable: boolean): Promise<boolean>
 
 启用或禁用音频返听器。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE
 
@@ -51,8 +44,8 @@ enable(enable: boolean): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## getEqualizerPreset
 
@@ -62,7 +55,9 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 获取当前音频返听器的均衡器类型。
 
-**起始版本：** 21
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset--><!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset-End-->
 
@@ -84,6 +79,8 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null--><!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null-End-->
@@ -104,7 +101,9 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 获取当前音频返听器的混响模式。
 
-**起始版本：** 21
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset--><!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset-End-->
 
@@ -124,7 +123,9 @@ getStatus(): Promise<AudioLoopbackStatus>
 
 获取音频返听状态。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>--><!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>-End-->
 
@@ -145,6 +146,8 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 获取当前设备连接状态下支持返听的音频输入输出设备组合。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,6 +171,8 @@ getVolume(): number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioLoopback-getVolume(): double--><!--Device-AudioLoopback-getVolume(): double-End-->
@@ -180,7 +185,35 @@ getVolume(): number
 | --- |
 | number |
 
-## off('statusChange')
+## offStatusChange
+
+```TypeScript
+offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
+```
+
+Unsubscribes audio loopback status change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## off_statusChange
 
 ```TypeScript
 off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
@@ -189,6 +222,8 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 取消监听音频状态事件。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void-End-->
 
@@ -205,9 +240,37 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('statusChange')
+## onStatusChange
+
+```TypeScript
+onStatusChange(callback: Callback<AudioLoopbackStatus>): void
+```
+
+Subscribes to audio loopback status changes.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## on_statusChange
 
 ```TypeScript
 on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
@@ -216,6 +279,8 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 监听返听状态变化事件（当AudioLoopback的状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void-End-->
 
@@ -232,7 +297,7 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## setEqualizerPreset
 
@@ -242,7 +307,9 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 设置音频返听器的均衡器类型。
 
-**起始版本：** 21
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean--><!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean-End-->
 
@@ -264,7 +331,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## setReverbPreset
 
@@ -274,7 +341,9 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 设置音频返听器的混响模式。
 
-**起始版本：** 21
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean--><!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean-End-->
 
@@ -296,7 +365,7 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## setVolume
 
@@ -306,7 +375,9 @@ setVolume(volume: number): Promise<void>
 
 设置音频返听的音量。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-setVolume(volume: double): Promise<void>--><!--Device-AudioLoopback-setVolume(volume: double): Promise<void>-End-->
 
@@ -328,4 +399,4 @@ setVolume(volume: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |

@@ -1,17 +1,12 @@
 # AudioRoutingManager
 
-This interface implements audio routing management.
+This interface implements audio routing management. Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getRoutingManager) to obtain an AudioRoutingManager instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 9.
 
-Before calling any API in AudioRoutingManager, you must use  
-[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getRoutingManager) to obtain an AudioRoutingManager instance.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The initial APIs of this interface are supported since API version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRoutingManager--><!--Device-audio-interface AudioRoutingManager-End-->
 
@@ -31,9 +26,11 @@ excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promi
 
 Exclude output devices. After calling this function successfully, audio will not be played on the specified devices. Note that only the external ouput device can be excluded by this function. Local output devices is not accepted.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
@@ -61,9 +58,9 @@ Exclude output devices. After calling this function successfully, audio will not
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -103,11 +100,13 @@ async function excludeOutputDevices(){
 getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 ```
 
-Gets the active output device descriptors for the current audio device.The activation policy is related to the audio device policy of the system.
+Gets the active output device descriptors for the current audio device. The activation policy is related to the audio device policy of the system.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,7 +126,7 @@ Gets the active output device descriptors for the current audio device.The activ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system application. |
 
 ## getExcludedDevices
 
@@ -137,9 +136,11 @@ getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors
 
 Get excluded devices by filter.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors-End-->
 
@@ -163,8 +164,8 @@ Get excluded devices by filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -187,9 +188,11 @@ getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescrip
 
 Get the preferred input device for the target audio capturer filter.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors-End-->
 
@@ -213,8 +216,8 @@ Get the preferred input device for the target audio capturer filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -246,9 +249,11 @@ getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescri
 
 Get the preferred output devices by the target audio renderer filter.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors-End-->
 
@@ -272,8 +277,8 @@ Get the preferred output devices by the target audio renderer filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -298,7 +303,75 @@ async function selectOutputDeviceByFilter(){
 }
 ```
 
-## off('preferredOutputDeviceChangeByFilter')
+## offPreferredInputDeviceChangeByFilter
+
+```TypeScript
+offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+Unsubscribes to preferred input device change events.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## offPreferredOutputDeviceChangeByFilter
+
+```TypeScript
+offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+UnSubscribes to preferred output device change events.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
+
+<!--Device-AudioRoutingManager-offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## off_preferredOutputDeviceChangeByFilter
 
 ```TypeScript
 off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void
@@ -309,6 +382,8 @@ UnSubscribes to prefer output device change events.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -321,14 +396,14 @@ UnSubscribes to prefer output device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## Examples
 
@@ -354,21 +429,23 @@ audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendere
 audioRoutingManager.off('preferredOutputDeviceChangeByFilter', preferredOutputDeviceChangeByFilterCallback);
 ```
 
-## offPreferredInputDeviceChangeByFilter
+## onPreferredInputDeviceChangeByFilter
 
 ```TypeScript
-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
+onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes to preferred input device change events.
+Subscribes to preferred input device change events. When the preferred device for target audio capturer filter changes, registered clients will receive a callback.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -378,28 +455,32 @@ Unsubscribes to preferred input device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+| filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | Yes | Filter for capturer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback to receive information about the changed preferred devices. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## offPreferredOutputDeviceChangeByFilter
+## onPreferredOutputDeviceChangeByFilter
 
 ```TypeScript
-offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
+onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-UnSubscribes to preferred output device change events.
+Subscribes to prefer output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-<!--Device-AudioRoutingManager-offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioRoutingManager-onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -409,16 +490,18 @@ UnSubscribes to preferred output device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## on('preferredOutputDeviceChangeByFilter')
+## on_preferredOutputDeviceChangeByFilter
 
 ```TypeScript
 on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
@@ -429,6 +512,8 @@ Subscribes to prefer output device change events. When preferred device for targ
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -442,15 +527,15 @@ Subscribes to prefer output device change events. When preferred device for targ
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## Examples
 
@@ -468,74 +553,6 @@ audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendere
 });
 ```
 
-## onPreferredInputDeviceChangeByFilter
-
-```TypeScript
-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void
-```
-
-Subscribes to preferred input device change events. When the preferred device for target audio capturer filter changes, registered clients will receive a callback.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | Yes | Filter for capturer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback to receive information about the changed preferred devices. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## onPreferredOutputDeviceChangeByFilter
-
-```TypeScript
-onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
-```
-
-Subscribes to prefer output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-<!--Device-AudioRoutingManager-onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
 ## restoreOutputDeviceByFilter
 
 ```TypeScript
@@ -546,7 +563,9 @@ Restores the output device for the specified audio renderer filter to the defaul
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -572,8 +591,8 @@ Restores the output device for the specified audio renderer filter to the defaul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## selectInputDevice
 
@@ -583,9 +602,11 @@ selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCall
 
 Select the input device. This method uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
 
@@ -598,7 +619,7 @@ Select the input device. This method uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -640,9 +661,11 @@ selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>
 
 Select the input device. This method uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
@@ -700,9 +723,11 @@ selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioD
 
 Select the input device with desired AudioCapturer. This method uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
@@ -727,8 +752,8 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -778,9 +803,11 @@ selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCa
 
 Select the output device. This method uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
 
@@ -793,7 +820,7 @@ Select the output device. This method uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -834,9 +861,11 @@ selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>
 
 Select the output device. This method uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
@@ -894,9 +923,11 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 
 Select the output device with desired AudioRenderer. This method uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
 
@@ -910,7 +941,7 @@ Select the output device with desired AudioRenderer. This method uses an asynchr
 | --- | --- | --- | --- |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes | Audio device description. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -960,9 +991,11 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 
 Select the output device with desired AudioRenderer. This method uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
@@ -1030,9 +1063,11 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 
 Select the output device with desired AudioRenderer. This method uses a promise to return the result.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>-End-->
 
@@ -1058,9 +1093,9 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## Examples
 
@@ -1106,9 +1141,11 @@ unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Pro
 
 Unexclude output devices. This function will unexclude target output devices belong to specific usage.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
@@ -1136,9 +1173,9 @@ Unexclude output devices. This function will unexclude target output devices bel
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -1180,9 +1217,11 @@ unexcludeOutputDevices(usage: DeviceUsage): Promise<void>
 
 Unexclude output devices. This function will unexclude all output devices belong to specific usage.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
@@ -1209,9 +1248,9 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

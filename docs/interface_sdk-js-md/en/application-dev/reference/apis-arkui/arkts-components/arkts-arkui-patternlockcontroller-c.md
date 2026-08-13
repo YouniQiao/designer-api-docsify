@@ -2,13 +2,13 @@
 
 Controller of the **PatternLock** component, which is used to reset the component status and challenge result of the pattern password.
 
-## Objects to Import
-
-```ts patternLockController: PatternLockController = new PatternLockController()```
+## Objects to Import ```ts patternLockController: PatternLockController = new PatternLockController() ```
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PatternLockController--><!--Device-unnamed-declare class PatternLockController-End-->
 
@@ -25,6 +25,8 @@ A constructor used to create a **PatternLockController** instance.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,6 +46,8 @@ Resets the component status.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PatternLockController-reset()--><!--Device-PatternLockController-reset()-End-->
@@ -61,6 +65,8 @@ Challenge result of the pattern password.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

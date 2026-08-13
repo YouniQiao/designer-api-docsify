@@ -2,7 +2,9 @@
 
 Audio capabilities.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface AudioCapabilities--><!--Device-avSession-interface AudioCapabilities-End-->
 
@@ -24,9 +26,11 @@ Audio stream information.
 
 **Type:** Array&lt;audio.AudioStreamInfo&gt;
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AudioCapabilities-readonly streamInfos: Array<audio.AudioStreamInfo>--><!--Device-AudioCapabilities-readonly streamInfos: Array<audio.AudioStreamInfo>-End-->
 

@@ -1,9 +1,10 @@
 # DataProxyHandle
 
-Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using  
-[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle).
+Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle).
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-dataShare-interface DataProxyHandle--><!--Device-dataShare-interface DataProxyHandle-End-->
 
@@ -21,9 +22,11 @@ import { dataShare } from '@kit.ArkData';
 delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 ```
 
-Deletes the specified shared configuration items based on URIs. This API uses a promise to return the result.Only the publisher is allowed to delete shared configuration items.
+Deletes the specified shared configuration items based on URIs. This API uses a promise to return the result. Only the publisher is allowed to delete shared configuration items.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +51,8 @@ Deletes the specified shared configuration items based on URIs. This API uses a 
 
 | Error Code ID |
 | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -74,9 +77,11 @@ dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyR
 deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 ```
 
-Deletes all the data published by the publisher.Only the data publisher can delete the data.
+Deletes all the data published by the publisher. Only the data publisher can delete the data.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +105,8 @@ Deletes all the data published by the publisher.Only the data publisher can dele
 
 | Error Code ID |
 | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -124,9 +129,11 @@ dataProxyHandle.deleteMyPublishedData(config).then((results: dataShare.DataProxy
 get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 ```
 
-Obtains a specified shared configuration item based on the URI. This API uses a promise to return the result.Only the publisher and applications in the allowed list can access the shared configuration item.
+Obtains a specified shared configuration item based on the URI. This API uses a promise to return the result. Only the publisher and applications in the allowed list can access the shared configuration item.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,8 +158,8 @@ Obtains a specified shared configuration item based on the URI. This API uses a 
 
 | Error Code ID |
 | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -177,10 +184,11 @@ dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResu
 getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 ```
 
-Obtains all multi-value data under a specified URI. Only the publisher and the applications in the  
-[allowList](arkts-arkdata-datashare-proxydata-i.md#allowList) can obtain the data. This API uses a promise to return the result.
+Obtains all multi-value data under a specified URI. Only the publisher and the applications in the [allowList](arkts-arkdata-datashare-proxydata-i.md#allowList) can obtain the data. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,9 +214,9 @@ Obtains all multi-value data under a specified URI. Only the publisher and the a
 | Error Code ID |
 | --- |
 | 15700015 |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -241,7 +249,50 @@ try {
 }
 ```
 
-## off
+## offDataChange
+
+```TypeScript
+offDataChange(
+      uris: string[],
+      config: DataProxyConfig,
+      callback?: Callback<DataProxyChangeInfo[]>
+    ): DataProxyResult[]
+```
+
+Deregisters observers to observe proxy data change specified by the given URIs.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uris | string[] | Yes |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+
+## off_dataChange
 
 ```TypeScript
 off(
@@ -255,6 +306,8 @@ off(
 Unsubscribes from the change event of the proxy data corresponding to a specified URI.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -281,8 +334,8 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 
 | Error Code ID |
 | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -307,7 +360,50 @@ results.forEach((result) => {
 });
 ```
 
-## on
+## onDataChange
+
+```TypeScript
+onDataChange(
+      uris: string[],
+      config: DataProxyConfig,
+      callback: Callback<DataProxyChangeInfo[]>
+    ): DataProxyResult[]
+```
+
+Registers observers to observe proxy data change specified by the given URIs.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uris | string[] | Yes |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+
+## on_dataChange
 
 ```TypeScript
 on(
@@ -318,12 +414,11 @@ on(
     ): DataProxyResult[]
 ```
 
-Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI, and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently.
-
-When the publisher calls the [publish](#publish) or  
-[delete](#delete) API to publish or delete a configuration, a notification is automatically triggered.
+Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI , and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently. When the publisher calls the [publish](#publish) or [delete](#delete) API to publish or delete a configuration, a notification is automatically triggered.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -350,8 +445,8 @@ When the publisher calls the [publish](#publish) or
 
 | Error Code ID |
 | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -384,7 +479,9 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 Publishes shared configuration items. This API uses a promise to return the result. After shared configuration items are published, the publisher and the applications in the allowlist can access these items. If the URI to be published already exists, the corresponding shared configuration item is updated. If any URI in the configuration item to be published exceeds the maximum length or fails the format verification, the current publish operation fails. Only the publisher can update shared configuration items. Each application supports a maximum of 32 shared configurations.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -409,8 +506,8 @@ Publishes shared configuration items. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -442,9 +539,11 @@ dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProx
 putValue(uri: string, key: number, value: ValueType, config: DataProxyConfig): Promise<void>
 ```
 
-Puts a value into the published data. This operation can be performed only on multi-value type data. If the input **key** does not exist, a new value is added. If the input **key** already exists, the value corresponding to the key is updated. By default, a maximum of 10 values can be added to a single data record (that is, a URI)for a single application, and the maximum length of each value is 4096 bytes. In addition, the total length of all values in a single data record is limited by the value of the **maxValueLength** parameter that is specified during data publishing. Note that the **maxValueLength** parameter does not take effect in this API. This API uses a promise to return the result.
+Puts a value into the published data. This operation can be performed only on multi-value type data. If the input **key** does not exist, a new value is added. If the input **key** already exists, the value corresponding to the key is updated. By default, a maximum of 10 values can be added to a single data record (that is, a URI) for a single application, and the maximum length of each value is 4096 bytes. In addition, the total length of all values in a single data record is limited by the value of the **maxValueLength** parameter that is specified during data publishing. Note that the **maxValueLength** parameter does not take effect in this API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -472,9 +571,9 @@ Puts a value into the published data. This operation can be performed only on mu
 | Error Code ID |
 | --- |
 | 15700015 |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -517,6 +616,8 @@ Removes the value corresponding to the key. This operation can be performed only
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataProxyHandle-removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>--><!--Device-DataProxyHandle-removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>-End-->
@@ -542,9 +643,9 @@ Removes the value corresponding to the key. This operation can be performed only
 | Error Code ID |
 | --- |
 | 15700015 |
-| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 

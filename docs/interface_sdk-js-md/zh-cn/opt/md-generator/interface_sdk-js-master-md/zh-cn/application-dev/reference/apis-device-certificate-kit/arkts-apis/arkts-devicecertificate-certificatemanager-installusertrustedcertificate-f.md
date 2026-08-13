@@ -10,6 +10,8 @@ function installUserTrustedCertificate(certificate: CertBlob) : Promise<CMResult
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -34,12 +36,12 @@ function installUserTrustedCertificate(certificate: CertBlob) : Promise<CMResult
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17500003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500003-证书或凭据无效) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) |
-| [17500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500007-设备进入坚盾守护模式) |
-| [17500004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17500003](../errorcode-certManager.md#17500003-证书或凭据无效) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
+| [17500007](../errorcode-certManager.md#17500007-设备进入坚盾守护模式) |
+| [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
 
 ## 示例
 

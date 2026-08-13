@@ -4,6 +4,8 @@ The **componentUtils** module provides API for obtaining the coordinates and siz
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace componentUtils--><!--Device-unnamed-declare namespace componentUtils-End-->
@@ -22,14 +24,14 @@ import { componentUtils } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid) |
+| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getRectangleById) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getitemsinshapepath) |
+| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getItemsInShapePath-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

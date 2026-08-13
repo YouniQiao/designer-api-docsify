@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Options](ohos.data.distributedKVStore.Options)
+**替代接口：** Options
 
 <!--Device-distributedData-interface Options--><!--Device-distributedData-interface Options-End-->
 
@@ -20,9 +20,7 @@
 autoSync?: boolean
 ```
 
-设置数据库文件是否自动同步。默认为false，即手动同步。
-
-ohos.permission.DISTRIBUTED_DATASYNC
+设置数据库文件是否自动同步。默认为false，即手动同步。 ohos.permission.DISTRIBUTED_DATASYNC
 
 **类型：** boolean
 
@@ -32,7 +30,7 @@ ohos.permission.DISTRIBUTED_DATASYNC
 
 **废弃版本：** 9
 
-**替代接口：** [autoSync](ohos.data.distributedKVStore.Options#autoSync)
+**替代接口：** autoSync
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -56,7 +54,7 @@ backup?: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [backup](ohos.data.distributedKVStore.Options#backup)
+**替代接口：** backup
 
 <!--Device-Options-backup?: boolean--><!--Device-Options-backup?: boolean-End-->
 
@@ -78,7 +76,7 @@ createIfMissing?: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [createIfMissing](ohos.data.distributedKVStore.Options#createIfMissing)
+**替代接口：** createIfMissing
 
 <!--Device-Options-createIfMissing?: boolean--><!--Device-Options-createIfMissing?: boolean-End-->
 
@@ -100,7 +98,7 @@ encrypt?: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [encrypt](ohos.data.distributedKVStore.Options#encrypt)
+**替代接口：** encrypt
 
 <!--Device-Options-encrypt?: boolean--><!--Device-Options-encrypt?: boolean-End-->
 
@@ -122,7 +120,7 @@ kvStoreType?: KVStoreType
 
 **废弃版本：** 9
 
-**替代接口：** [kvStoreType](ohos.data.distributedKVStore.Options#kvStoreType)
+**替代接口：** kvStoreType
 
 <!--Device-Options-kvStoreType?: KVStoreType--><!--Device-Options-kvStoreType?: KVStoreType-End-->
 
@@ -144,7 +142,7 @@ schema?: Schema
 
 **废弃版本：** 9
 
-**替代接口：** [schema](ohos.data.distributedKVStore.Options#schema)
+**替代接口：** schema
 
 <!--Device-Options-schema?: Schema--><!--Device-Options-schema?: Schema-End-->
 
@@ -166,7 +164,7 @@ securityLevel?: SecurityLevel
 
 **废弃版本：** 9
 
-**替代接口：** [securityLevel](ohos.data.distributedKVStore.Options#securityLevel)
+**替代接口：** securityLevel
 
 <!--Device-Options-securityLevel?: SecurityLevel--><!--Device-Options-securityLevel?: SecurityLevel-End-->
 

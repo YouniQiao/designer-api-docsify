@@ -18,7 +18,7 @@ Obtains the information about the found devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getP2pPeerDevices](ohos.wifiManager/wifiManager.getP2pPeerDevices)
+**Substitutes:** [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getP2pPeerDevices)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -45,7 +45,7 @@ Obtains the information about the found devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getP2pPeerDevices](ohos.wifiManager/wifiManager.getP2pPeerDevices)
+**Substitutes:** [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getP2pPeerDevices)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 

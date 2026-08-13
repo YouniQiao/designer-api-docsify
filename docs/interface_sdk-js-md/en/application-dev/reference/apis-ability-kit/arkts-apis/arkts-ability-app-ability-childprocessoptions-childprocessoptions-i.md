@@ -1,11 +1,12 @@
 # ChildProcessOptions
 
-The module describes the startup configuration of a child process. When starting a child process through  
-[childProcessManager](arkts-app-ability-childprocessmanager.md#childProcessManager), you can configure the startup configuration of the child process through **ChildProcessOptions**.
+The module describes the startup configuration of a child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md#@ohos.app.ability.childProcessManager), you can configure the startup configuration of the child process through **ChildProcessOptions**.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ChildProcessOptions--><!--Device-unnamed-export interface ChildProcessOptions-End-->
 
@@ -27,9 +28,11 @@ Controls the sandbox isolation level and network access permissions of the child
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,13 +46,15 @@ Controls the sandbox isolation level and network access permissions of the child
 isolationUid?: boolean
 ```
 
-Whether the child process uses an independent UID. **true** if the child process uses an independent UID; **false**if the child process and the main process share the same UID. The default value is **false**. This parameter is valid only when **isolationMode** is set to **true**.
+Whether the child process uses an independent UID. **true** if the child process uses an independent UID; **false** if the child process and the main process share the same UID. The default value is **false**. This parameter is valid only when **isolationMode** is set to **true**.
 
 **Type:** boolean
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

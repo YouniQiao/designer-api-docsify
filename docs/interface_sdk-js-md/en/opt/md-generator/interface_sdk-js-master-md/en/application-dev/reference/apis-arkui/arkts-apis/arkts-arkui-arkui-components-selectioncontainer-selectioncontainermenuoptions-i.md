@@ -4,6 +4,8 @@ Defines selection menu options for SelectionContainer.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SelectionContainerMenuOptions--><!--Device-unnamed-export interface SelectionContainerMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,13 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 onAppear?: Callback<string>
 ```
 
-Called when the selection menu appears.The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu appears. The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Called when the selection menu disappears.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -60,11 +66,13 @@ Called when the selection menu disappears.
 onMenuHide?: Callback<string>
 ```
 
-Called when the selection menu is hidden.The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu is hidden. The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,11 +88,13 @@ Called when the selection menu is hidden.The callback parameter is the selected 
 onMenuShow?: Callback<string>
 ```
 
-Called when the selection menu is displayed.The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu is displayed. The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

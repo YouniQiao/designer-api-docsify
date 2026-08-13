@@ -2,7 +2,9 @@
 
 服务对象，提供启动服务、停止服务、关闭服务、注册/取消注册服务端回调等方法。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-linkEnhance-interface Server--><!--Device-linkEnhance-interface Server-End-->
 
@@ -16,7 +18,9 @@ close(): void
 
 当业务执行完毕，服务端清理资源时，调用close()方法，销毁Server对象，释放相关资源。之后如果再次与对端设备交互，需要重新创建Server对象。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -30,7 +34,7 @@ close(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -53,7 +57,73 @@ try {
 }
 ```
 
-## off('connectionAccepted')
+## offConnectionAccepted
+
+```TypeScript
+offConnectionAccepted(callback?: Callback<Connection>): void
+```
+
+取消注册connectionAccepted事件的回调监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## offServerStopped
+
+```TypeScript
+offServerStopped(callback?: Callback<number>): void
+```
+
+取消注册serverStopped事件的回调监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## off_connectionAccepted
 
 ```TypeScript
 off(type: 'connectionAccepted', callback?: Callback<Connection>): void
@@ -62,6 +132,8 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 取消注册connectionAccepted事件的回调监听。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -82,8 +154,8 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -112,7 +184,7 @@ try {
 }
 ```
 
-## off('serverStopped')
+## off_serverStopped
 
 ```TypeScript
 off(type: 'serverStopped', callback?: Callback<number>): void
@@ -121,6 +193,8 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 取消注册serverStopped事件的回调监听。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -141,8 +215,8 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -171,7 +245,73 @@ try {
 }
 ```
 
-## on('connectionAccepted')
+## onConnectionAccepted
+
+```TypeScript
+onConnectionAccepted(callback: Callback<Connection>): void
+```
+
+创建服务成功后，注册connectionAccepted事件的回调监听，等待对端连接。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## onServerStopped
+
+```TypeScript
+onServerStopped(callback: Callback<number>): void
+```
+
+在创建服务成功后，注册serverStopped回调，监听服务异常停止。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## on_connectionAccepted
 
 ```TypeScript
 on(type: 'connectionAccepted', callback: Callback<Connection>): void
@@ -180,6 +320,8 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 创建服务成功后，注册connectionAccepted事件的回调监听，等待对端连接。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -200,8 +342,8 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -230,7 +372,7 @@ try {
 }
 ```
 
-## on('serverStopped')
+## on_serverStopped
 
 ```TypeScript
 on(type: 'serverStopped', callback: Callback<number>): void
@@ -239,6 +381,8 @@ on(type: 'serverStopped', callback: Callback<number>): void
 在创建服务成功后，注册serverStopped回调，监听服务异常停止。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -259,8 +403,8 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -297,7 +441,9 @@ start(): void
 
 创建服务成功后，需要调用start()开启该服务，方可被客户端连接，最大服务个数为10。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -311,9 +457,9 @@ start(): void
 
 | 错误码ID |
 | --- |
-| [32390300](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
-| [32390202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390202-服务个数超出限制) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
+| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-服务个数超出限制) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -343,7 +489,9 @@ stop(): void
 
 使用完服务时，调用`stop`停止服务，停止后可以调用`start`重新开启服务。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -357,7 +505,7 @@ stop(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

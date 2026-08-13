@@ -24,6 +24,8 @@ complete?: () => void
 
 Called when the execution is completed.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -42,6 +44,8 @@ fail?: (data: any, code: number) => void
 
 Called when the device information fails to be obtained.
 
+**Type:** (data: any, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -52,13 +56,6 @@ Called when the device information fails to be obtained.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | any | Yes |  |
-| code | number | Yes |  |
-
 ## success
 
 ```TypeScript
@@ -66,6 +63,8 @@ success?: (data: DeviceResponse) => void
 ```
 
 Called when the device information is obtained.
+
+**Type:** (data: DeviceResponse) =&gt; void
 
 **Since:** 3
 
@@ -76,10 +75,4 @@ Called when the device information is obtained.
 <!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void--><!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) | Yes |  |
 

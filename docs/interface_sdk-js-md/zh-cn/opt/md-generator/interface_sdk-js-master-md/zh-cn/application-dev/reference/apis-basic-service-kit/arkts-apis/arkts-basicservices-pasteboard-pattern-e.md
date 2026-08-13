@@ -2,7 +2,9 @@
 
 剪贴板支持检测的模式类型。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-pasteboard-enum Pattern--><!--Device-pasteboard-enum Pattern-End-->
 
@@ -16,7 +18,9 @@ URL = 0
 
 URL类型。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Pattern-URL = 0--><!--Device-Pattern-URL = 0-End-->
 
@@ -30,7 +34,9 @@ NUMBER = 1
 
 数字类型。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Pattern-NUMBER = 1--><!--Device-Pattern-NUMBER = 1-End-->
 
@@ -44,7 +50,9 @@ EMAIL_ADDRESS = 2
 
 邮箱地址类型。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Pattern-EMAIL_ADDRESS = 2--><!--Device-Pattern-EMAIL_ADDRESS = 2-End-->
 
@@ -56,9 +64,11 @@ EMAIL_ADDRESS = 2
 HTTP_URL = 3
 ```
 
-HTTP web链接类型。模型约束：此接口仅可在Stage模型下使用。
+HTTP web链接类型。 模型约束：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,9 +82,11 @@ HTTP web链接类型。模型约束：此接口仅可在Stage模型下使用。
 FLIGHT_NUMBER = 4
 ```
 
-航班号类型。模型约束：此接口仅可在Stage模型下使用。
+航班号类型。 模型约束：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Defines the routing stack operation options.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavigationOptions--><!--Device-unnamed-declare interface NavigationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@ Defines the routing stack operation options.
 animated?: boolean
 ```
 
-Whether to enable the transition animation.
-
-**true**: yes; **false**: no
-
-Default value: **true**
+Whether to enable the transition animation. **true**: yes; **false**: no Default value: **true**
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +38,13 @@ Default value: **true**
 launchMode?: LaunchMode
 ```
 
-Operation mode of the routing stack.
-
-Default value: **LaunchMode.STANDARD**
+Operation mode of the routing stack. Default value: **LaunchMode.STANDARD**
 
 **Type:** [LaunchMode](arkts-arkui-launchmode-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

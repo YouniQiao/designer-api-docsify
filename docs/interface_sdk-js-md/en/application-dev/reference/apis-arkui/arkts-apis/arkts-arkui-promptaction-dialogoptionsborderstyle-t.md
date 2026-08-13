@@ -1,18 +1,22 @@
 # DialogOptionsBorderStyle
 
 ```TypeScript
-export type DialogOptionsBorderStyle = BorderStyle | EdgeStyles
+declare type DialogOptionsBorderStyle = BorderStyle | EdgeStyles
 ```
 
-Border style type of DialogOptions.
+Defines the allowed data types for specifying the background border style of a dialog box.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-promptAction-export type DialogOptionsBorderStyle = BorderStyle | EdgeStyles--><!--Device-promptAction-export type DialogOptionsBorderStyle = BorderStyle | EdgeStyles-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-promptAction-declare type DialogOptionsBorderStyle = BorderStyle | EdgeStyles--><!--Device-promptAction-declare type DialogOptionsBorderStyle = BorderStyle | EdgeStyles-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

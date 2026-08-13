@@ -2,7 +2,9 @@
 
 Represents the configuration for saving images or videos to the media library, including the file name, file type, and other related parameters.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export interface CreationSetting--><!--Device-photoAccessHelper-export interface CreationSetting-End-->
 
@@ -24,11 +26,13 @@ File name extension, for example, **'jpg'**.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CreationSetting-fileNameExtension: string--><!--Device-CreationSetting-fileNameExtension: string-End-->
 
@@ -44,11 +48,13 @@ photoType: PhotoType
 
 **Type:** PhotoType
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CreationSetting-photoType: PhotoType--><!--Device-CreationSetting-photoType: PhotoType-End-->
 
@@ -60,22 +66,17 @@ photoType: PhotoType
 title?: string
 ```
 
-Title of the image or video.
-
-If this parameter is not passed, the system generates a value. The parameter specifications are as follows:
-
-- It must not contain a file name extension.  
-- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]  
-- The file name consists of the title and file name extension. The file name string length ranges from 1 to 255.   
-Therefore, the title length cannot be too long.
+Title of the image or video. If this parameter is not passed, the system generates a value. The parameter specifications are as follows: - It must not contain a file name extension. - It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ] - The file name consists of the title and file name extension. The file name string length ranges from 1 to 255. Therefore, the title length cannot be too long.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CreationSetting-title?: string--><!--Device-CreationSetting-title?: string-End-->
 

@@ -14,13 +14,15 @@ function createBleScanner(): BleScanner
 
 Create a ble scanner instance. Each ble scanner instance can be independently started or stopped.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ble-function createBleScanner(): BleScanner--><!--Device-ble-function createBleScanner(): BleScanner-End-->
 

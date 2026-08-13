@@ -2,7 +2,9 @@
 
 数据库中的字段结构。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface Field--><!--Device-cloudExtension-export interface Field-End-->
 
@@ -20,7 +22,9 @@ alias: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Field-alias: string--><!--Device-Field-alias: string-End-->
 
@@ -38,7 +42,9 @@ colName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Field-colName: string--><!--Device-Field-colName: string-End-->
 
@@ -56,7 +62,9 @@ nullable: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Field-nullable: boolean--><!--Device-Field-nullable: boolean-End-->
 
@@ -74,7 +82,9 @@ primary: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Field-primary: boolean--><!--Device-Field-primary: boolean-End-->
 
@@ -92,7 +102,9 @@ type: FieldType
 
 **类型：** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Field-type: FieldType--><!--Device-Field-type: FieldType-End-->
 

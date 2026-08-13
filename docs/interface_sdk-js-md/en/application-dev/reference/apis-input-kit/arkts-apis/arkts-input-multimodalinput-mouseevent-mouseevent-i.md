@@ -4,11 +4,13 @@ Defines the mouse event.
 
 **Inheritance/Implementation:** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export declare interface MouseEvent extends InputEvent--><!--Device-unnamed-export declare interface MouseEvent extends InputEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface MouseEvent--><!--Device-unnamed-export declare interface MouseEvent-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -28,9 +30,11 @@ Enumerates mouse event types.
 
 **Type:** [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-action: Action--><!--Device-MouseEvent-action: Action-End-->
 
@@ -42,15 +46,15 @@ Enumerates mouse event types.
 altKey: boolean
 ```
 
-Whether altKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether altKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-altKey: boolean--><!--Device-MouseEvent-altKey: boolean-End-->
 
@@ -66,9 +70,11 @@ Defines the mouse axis type and axis value.
 
 **Type:** [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)[]
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-axes: AxisValue[]--><!--Device-MouseEvent-axes: AxisValue[]-End-->
 
@@ -84,9 +90,11 @@ Enumerates mouse buttons.
 
 **Type:** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-button: Button--><!--Device-MouseEvent-button: Button-End-->
 
@@ -98,15 +106,15 @@ Enumerates mouse buttons.
 capsLock: boolean
 ```
 
-Whether capsLock is enabled.
-
-The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
+Whether capsLock is enabled. The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-capsLock: boolean--><!--Device-MouseEvent-capsLock: boolean-End-->
 
@@ -118,15 +126,15 @@ The value **true** indicates that capsLock is enabled, and the value **false** i
 ctrlKey: boolean
 ```
 
-Whether ctrlKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether ctrlKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-ctrlKey: boolean--><!--Device-MouseEvent-ctrlKey: boolean-End-->
 
@@ -138,15 +146,15 @@ The value **true** indicates that the key is pressed, and the value **false** in
 fnKey: boolean
 ```
 
-Whether fnKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether fnKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-fnKey: boolean--><!--Device-MouseEvent-fnKey: boolean-End-->
 
@@ -158,14 +166,15 @@ The value **true** indicates that the key is pressed, and the value **false** in
 globalX?: int
 ```
 
-X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
+X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#MouseEventData-(System-API)) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-globalX?: int--><!--Device-MouseEvent-globalX?: int-End-->
 
@@ -177,14 +186,15 @@ X coordinate of the mouse event in the global coordinate system with the upper l
 globalY?: int
 ```
 
-Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
+Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#MouseEventData-(System-API)) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-globalY?: int--><!--Device-MouseEvent-globalY?: int-End-->
 
@@ -196,15 +206,15 @@ Y coordinate of the mouse event in the global coordinate system with the upper l
 logoKey: boolean
 ```
 
-Whether logoKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether logoKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-logoKey: boolean--><!--Device-MouseEvent-logoKey: boolean-End-->
 
@@ -216,15 +226,15 @@ The value **true** indicates that the key is pressed, and the value **false** in
 numLock: boolean
 ```
 
-Whether numLock is enabled.
-
-The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
+Whether numLock is enabled. The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-numLock: boolean--><!--Device-MouseEvent-numLock: boolean-End-->
 
@@ -240,9 +250,11 @@ Button being pressed.
 
 **Type:** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-pressedButtons: Button[]--><!--Device-MouseEvent-pressedButtons: Button[]-End-->
 
@@ -258,9 +270,11 @@ List of pressed keys.
 
 **Type:** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)[]
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-pressedKeys: KeyCode[]--><!--Device-MouseEvent-pressedKeys: KeyCode[]-End-->
 
@@ -274,11 +288,13 @@ rawDeltaX: int
 
 X coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-rawDeltaX: int--><!--Device-MouseEvent-rawDeltaX: int-End-->
 
@@ -292,11 +308,13 @@ rawDeltaY: int
 
 Y coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-rawDeltaY: int--><!--Device-MouseEvent-rawDeltaY: int-End-->
 
@@ -310,11 +328,13 @@ screenX: int
 
 X coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-screenX: int--><!--Device-MouseEvent-screenX: int-End-->
 
@@ -328,11 +348,13 @@ screenY: int
 
 Y coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-screenY: int--><!--Device-MouseEvent-screenY: int-End-->
 
@@ -344,15 +366,15 @@ Y coordinate of the mouse event in the relative coordinate system with the upper
 scrollLock: boolean
 ```
 
-Whether scrollLock is enabled.
-
-The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
+Whether scrollLock is enabled. The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-scrollLock: boolean--><!--Device-MouseEvent-scrollLock: boolean-End-->
 
@@ -364,15 +386,15 @@ The value **true** indicates that scrollLock is enabled, and the value **false**
 shiftKey: boolean
 ```
 
-Whether shiftKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether shiftKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-shiftKey: boolean--><!--Device-MouseEvent-shiftKey: boolean-End-->
 
@@ -388,9 +410,11 @@ Tool type.
 
 **Type:** [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-toolType: ToolType--><!--Device-MouseEvent-toolType: ToolType-End-->
 
@@ -404,11 +428,13 @@ windowX: int
 
 X coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-windowX: int--><!--Device-MouseEvent-windowX: int-End-->
 
@@ -422,11 +448,13 @@ windowY: int
 
 Y coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseEvent-windowY: int--><!--Device-MouseEvent-windowY: int-End-->
 

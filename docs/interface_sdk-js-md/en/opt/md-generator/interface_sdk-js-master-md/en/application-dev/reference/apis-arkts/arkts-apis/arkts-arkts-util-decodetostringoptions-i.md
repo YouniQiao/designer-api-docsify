@@ -4,6 +4,8 @@ Describes the behavioral parameters for the **decodeToString** method when decod
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-util-interface DecodeToStringOptions--><!--Device-util-interface DecodeToStringOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -25,6 +27,8 @@ Whether the incomplete byte sequence at the end of the input needs to be appende
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

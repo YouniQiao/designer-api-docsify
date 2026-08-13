@@ -2,7 +2,9 @@
 
 Wi-Fi link type.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum WifiLinkType--><!--Device-wifiManager-enum WifiLinkType-End-->
 
@@ -16,7 +18,9 @@ DEFAULT_LINK = 0
 
 Default link.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiLinkType-DEFAULT_LINK = 0--><!--Device-WifiLinkType-DEFAULT_LINK = 0-End-->
 
@@ -30,7 +34,9 @@ WIFI7_SINGLE_LINK = 1
 
 Wi-Fi7 single link.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiLinkType-WIFI7_SINGLE_LINK = 1--><!--Device-WifiLinkType-WIFI7_SINGLE_LINK = 1-End-->
 
@@ -44,7 +50,9 @@ WIFI7_MLSR = 2
 
 Wi-Fi7 MLSR.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiLinkType-WIFI7_MLSR = 2--><!--Device-WifiLinkType-WIFI7_MLSR = 2-End-->
 
@@ -58,7 +66,9 @@ WIFI7_EMLSR = 3
 
 Wi-Fi7 EMLSR.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiLinkType-WIFI7_EMLSR = 3--><!--Device-WifiLinkType-WIFI7_EMLSR = 3-End-->
 
@@ -72,7 +82,9 @@ WIFI7_STR = 4
 
 Wi-Fi7 STR.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiLinkType-WIFI7_STR = 4--><!--Device-WifiLinkType-WIFI7_STR = 4-End-->
 

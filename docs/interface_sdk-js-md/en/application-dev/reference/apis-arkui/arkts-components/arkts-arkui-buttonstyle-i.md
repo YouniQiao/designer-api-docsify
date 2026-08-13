@@ -6,6 +6,8 @@ Describes the style of the sidebar control button.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ButtonStyle--><!--Device-unnamed-declare interface ButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,23 +18,15 @@ Describes the style of the sidebar control button.
 height?: number
 ```
 
-Height of the sidebar control button.
-
-Default value:
-
-API version 9 and earlier versions: **32vp**
-
-API version 10 and later versions: **24vp**
-
-Unit: vp
-
-Value range: [0, +∞).
+Height of the sidebar control button. Default value: API version 9 and earlier versions: **32vp** API version 10 and later versions: **24vp** Unit: vp Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,15 +40,15 @@ Value range: [0, +∞).
 icons?: ButtonIconOptions
 ```
 
-Icons of the sidebar control button.
-
-If the resource fails to be obtained or this attribute is not set, the default icon is used.
+Icons of the sidebar control button. If the resource fails to be obtained or this attribute is not set, the default icon is used.
 
 **Type:** [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md)
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,19 +62,15 @@ If the resource fails to be obtained or this attribute is not set, the default i
 left?: number
 ```
 
-Spacing between the sidebar control button and the left of the container.
-
-Default value: **16vp**
-
-Unit: vp
-
-Value range: [0, +∞).
+Spacing between the sidebar control button and the left of the container. Default value: **16vp** Unit: vp Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,19 +84,15 @@ Value range: [0, +∞).
 top?: number
 ```
 
-Spacing between the sidebar control button and the top of the container.
-
-Default value: **48vp**
-
-Unit: vp
-
-Value range: [0, +∞).
+Spacing between the sidebar control button and the top of the container. Default value: **48vp** Unit: vp Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -120,23 +106,15 @@ Value range: [0, +∞).
 width?: number
 ```
 
-Width of the sidebar control button.
-
-Default value:
-
-API version 9 and earlier versions: **32vp**
-
-API version 10 and later versions: **24vp**
-
-Unit: vp
-
-Value range: [0, +∞).
+Width of the sidebar control button. Default value: API version 9 and earlier versions: **32vp** API version 10 and later versions: **24vp** Unit: vp Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

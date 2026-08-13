@@ -6,20 +6,13 @@
 function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void
 ```
 
-获取地球上特定位置的地磁场，使用callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getGeomagneticInfo]
-> [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo)
-> 替代。
+获取地球上特定位置的地磁场，使用callback异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getGeomagneticInfo] > [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
+**替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo)(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void-End-->
 
@@ -58,19 +51,13 @@ sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 15804864
 function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>
 ```
 
-获取地球上特定位置的地磁场，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo-1)替
-> 代。
+获取地球上特定位置的地磁场，使用Promise异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo)替 > 代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
+**替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo)(locationOptions: LocationOptions, timeMillis: long)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>-End-->
 

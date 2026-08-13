@@ -1,12 +1,12 @@
 # CustomSpan
 
-Describes the custom span. Only the base class is provided. You need to define the specific implementation.
-
-The drag preview of a custom span is blank.
+Describes the custom span. Only the base class is provided. You need to define the specific implementation. The drag preview of a custom span is blank.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare abstract class CustomSpan--><!--Device-unnamed-declare abstract class CustomSpan-End-->
 
@@ -23,6 +23,8 @@ Manually triggers a refresh of the **Text** component that uses this **CustomSpa
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +45,8 @@ Called to draw a custom span.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +74,8 @@ Called to obtain the size of a custom span.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

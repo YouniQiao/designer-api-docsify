@@ -2,7 +2,9 @@
 
 Provides interfaces to get system capability.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace systemCapability--><!--Device-unnamed-declare namespace systemCapability-End-->
 
@@ -23,6 +25,6 @@ import { systemCapability } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities) |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities-1) |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querySystemCapabilities-(System-API)) |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querySystemCapabilities-(System-API)) |
 <!--DelEnd-->

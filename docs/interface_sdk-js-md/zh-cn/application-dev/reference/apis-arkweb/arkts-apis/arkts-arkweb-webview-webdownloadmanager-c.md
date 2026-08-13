@@ -1,10 +1,12 @@
 # WebDownloadManager
 
-You can trigger download manually through this interface, or resume failed or canceled downloads.
+可以通过该类提供的接口来恢复失败的下载任务。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebDownloadManager--><!--Device-webview-class WebDownloadManager-End-->
 
@@ -16,11 +18,15 @@ You can trigger download manually through this interface, or resume failed or ca
 static resumeDownload(webDownloadItem: WebDownloadItem): void
 ```
 
-Resume the canceled or failed download.
+恢复一个失败的下载任务。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void--><!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void-End-->
 
@@ -30,13 +36,13 @@ Resume the canceled or failed download.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webDownloadItem | [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | 是 | Download that need to be resume. |
+| webDownloadItem | [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | 是 | 待恢复的下载任务。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100018-没有设置一个委托类来接收下载状态) | No WebDownloadDelegate has been set yet. |
+| [17100018](../errorcode-webview.md#17100018-没有设置一个委托类来接收下载状态) | No WebDownloadDelegate has been set yet. |
 
 ## setDownloadDelegate
 
@@ -44,11 +50,15 @@ Resume the canceled or failed download.
 static setDownloadDelegate(delegate: WebDownloadDelegate): void
 ```
 
-Set a delegate used to receive the progress of the download triggered from WebDownloadManager.
+设置用于接收从WebDownloadManager触发的下载进度的委托。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
 
@@ -58,5 +68,5 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from WebDownloadManager. |
+| delegate | [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md) | 是 | 用来接收下载进度的委托。 |
 

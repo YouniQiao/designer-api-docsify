@@ -4,6 +4,8 @@ Interaction params for remote control
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-interface RemoteControlParams--><!--Device-abilityToolAccessCtrl-interface RemoteControlParams-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -21,6 +23,8 @@ Anti-replay challenge.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-RemoteControlParams-challenge?: string--><!--Device-RemoteControlParams-challenge?: string-End-->
 
@@ -40,6 +44,8 @@ Device name of controlled device.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-RemoteControlParams-controlledDeviceName?: string--><!--Device-RemoteControlParams-controlledDeviceName?: string-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -57,6 +63,8 @@ Device name of controller device.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-RemoteControlParams-controllerDeviceName?: string--><!--Device-RemoteControlParams-controllerDeviceName?: string-End-->
 
@@ -76,6 +84,8 @@ Remote control ticket for trusted devices.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-RemoteControlParams-remoteControlTicket?: string--><!--Device-RemoteControlParams-remoteControlTicket?: string-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -93,6 +103,8 @@ Extra message required for signature verification.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-RemoteControlParams-signVerifyMsg?: string--><!--Device-RemoteControlParams-signVerifyMsg?: string-End-->
 

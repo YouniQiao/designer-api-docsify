@@ -2,7 +2,9 @@
 
 表示系统账号信息。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface OsAccountInfo--><!--Device-osAccount-interface OsAccountInfo-End-->
 
@@ -14,11 +16,13 @@
 constraints: Array<string>
 ```
 
-系统账号[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)，默认为空。
+系统账号约束，默认为空。
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-constraints: Array<string>--><!--Device-OsAccountInfo-constraints: Array<string>-End-->
 
@@ -34,7 +38,9 @@ createTime: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-createTime: long--><!--Device-OsAccountInfo-createTime: long-End-->
 
@@ -50,7 +56,9 @@ distributedInfo: distributedAccount.DistributedInfo
 
 **类型：** distributedAccount.DistributedInfo
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo--><!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo-End-->
 
@@ -66,7 +74,9 @@ domainInfo: DomainAccountInfo
 
 **类型：** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-domainInfo: DomainAccountInfo--><!--Device-OsAccountInfo-domainInfo: DomainAccountInfo-End-->
 
@@ -82,7 +92,9 @@ isActivated: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-isActivated: boolean--><!--Device-OsAccountInfo-isActivated: boolean-End-->
 
@@ -94,9 +106,7 @@ isActivated: boolean
 isActived: boolean
 ```
 
-系统账号激活状态。true表示指定账号处于激活状态；false表示指定账号处于未激活状态。
-
-**说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isActivated。
+系统账号激活状态。true表示指定账号处于激活状态；false表示指定账号处于未激活状态。 **说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isActivated。
 
 **类型：** boolean
 
@@ -120,7 +130,9 @@ isCreateCompleted: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-isCreateCompleted: boolean--><!--Device-OsAccountInfo-isCreateCompleted: boolean-End-->
 
@@ -136,7 +148,9 @@ isUnlocked: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-isUnlocked: boolean--><!--Device-OsAccountInfo-isUnlocked: boolean-End-->
 
@@ -148,9 +162,7 @@ isUnlocked: boolean
 isVerified: boolean
 ```
 
-账号是否验证。true表示指定账号已验证；false表示指定账号未验证。
-
-**说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isUnlocked。
+账号是否验证。true表示指定账号已验证；false表示指定账号未验证。 **说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isUnlocked。
 
 **类型：** boolean
 
@@ -174,7 +186,9 @@ lastLoginTime: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-lastLoginTime: long--><!--Device-OsAccountInfo-lastLoginTime: long-End-->
 
@@ -190,7 +204,9 @@ localId: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-localId: int--><!--Device-OsAccountInfo-localId: int-End-->
 
@@ -206,7 +222,9 @@ localName: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-localName: string--><!--Device-OsAccountInfo-localName: string-End-->
 
@@ -222,7 +240,9 @@ photo: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-photo: string--><!--Device-OsAccountInfo-photo: string-End-->
 
@@ -238,7 +258,9 @@ serialNumber: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-serialNumber: long--><!--Device-OsAccountInfo-serialNumber: long-End-->
 
@@ -254,7 +276,9 @@ type: OsAccountType
 
 **类型：** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountInfo-type: OsAccountType--><!--Device-OsAccountInfo-type: OsAccountType-End-->
 

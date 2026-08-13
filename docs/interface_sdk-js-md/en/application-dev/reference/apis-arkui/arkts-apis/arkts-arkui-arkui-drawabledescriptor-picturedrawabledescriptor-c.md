@@ -1,14 +1,16 @@
 # PictureDrawableDescriptor
 
-Use the PictureDrawableDescriptor class to get the resource of picture or resource descriptor information.
+Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. This API inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
 
 **Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export declare class PictureDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export declare class PictureDrawableDescriptor extends DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class PictureDrawableDescriptor--><!--Device-unnamed-export class PictureDrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,13 +26,17 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 constructor(src: image.Picture)
 ```
 
-Creates a new PictureDrawableDescriptor.
+A constructor used to create a **PictureDrawableDescriptor** object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PictureDrawableDescriptor-constructor(src: image.Picture)--><!--Device-PictureDrawableDescriptor-constructor(src: image.Picture)-End-->
 
@@ -40,7 +46,7 @@ Creates a new PictureDrawableDescriptor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.Picture | Yes | Indicates the resource to create PictureDrawableDescriptor. |
+| src | image.Picture | Yes | Picture** object for creating **PictureDrawableDescriptor**. |
 
 ## setHdrComposition
 
@@ -48,13 +54,17 @@ Creates a new PictureDrawableDescriptor.
 setHdrComposition(config: HdrCompositionConfig): void
 ```
 
-Set HDR composition config.
+Sets HDR composition.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PictureDrawableDescriptor-setHdrComposition(config: HdrCompositionConfig): void--><!--Device-PictureDrawableDescriptor-setHdrComposition(config: HdrCompositionConfig): void-End-->
 
@@ -64,5 +74,5 @@ Set HDR composition config.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [HdrCompositionConfig](arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | Indicates the HDR composition config. |
+| config | [HdrCompositionConfig](arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | HDR composition configuration. |
 

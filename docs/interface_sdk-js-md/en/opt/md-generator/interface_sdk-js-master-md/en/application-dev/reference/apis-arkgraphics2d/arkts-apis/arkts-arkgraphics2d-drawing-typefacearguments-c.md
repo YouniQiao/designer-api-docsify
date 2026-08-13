@@ -1,17 +1,10 @@
 # TypefaceArguments
 
-This module defines a struct for setting typeface arguments.
+This module defines a struct for setting typeface arguments. > **NOTE：**> > - The initial APIs of this class are supported since API version 20. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 20.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-drawing-class TypefaceArguments--><!--Device-drawing-class TypefaceArguments-End-->
 
@@ -33,6 +26,8 @@ Defines the typeface weight.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TypefaceArguments-addVariation(axis: string, value: number)--><!--Device-TypefaceArguments-addVariation(axis: string, value: number)-End-->
@@ -50,7 +45,40 @@ Defines the typeface weight.
 
 | Error Code ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+
+## addVariation
+
+```TypeScript
+addVariation(axis: string, value: number) : void
+```
+
+Adds variation axis for the TypefaceArguments.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-TypefaceArguments-addVariation(axis: string, value: double) : void--><!--Device-TypefaceArguments-addVariation(axis: string, value: double) : void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| axis | string | Yes |
+| value | number | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## constructor
 
@@ -60,7 +88,9 @@ constructor()
 
 Constructor for typeface arguments.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

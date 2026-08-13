@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare interface AlertDialogParamWithOptions extends AlertDialogParam--><!--Device-unnamed-declare interface AlertDialogParamWithOptions extends AlertDialogParam-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface AlertDialogParamWithOptions--><!--Device-unnamed-declare interface AlertDialogParamWithOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,7 +20,7 @@
 buttonDirection?: DialogButtonDirection
 ```
 
-按钮排布方向默认为DialogButtonDirection.AUTO。建议3个以上按钮使用Auto模式，Auto模式下两个以上按钮会切换为纵向排布，通常能显示更多按钮。非Auto模式下，3个以上按钮可能会显示不全，超出显示范围的按钮会被截断。
+按钮排布方向默认为DialogButtonDirection.AUTO。建议3个以上按钮使用Auto模式，Auto模式下两个以上按钮会切换为纵向排布，通常能显示更多按钮。非Auto模式下，3个以上按钮可能会显示不全，超出显示范围的按钮会被截 断。
 
 **类型：** [DialogButtonDirection](arkts-arkui-dialogbuttondirection-e.md)
 
@@ -27,6 +29,8 @@ buttonDirection?: DialogButtonDirection
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +53,8 @@ buttons: Array<AlertDialogButtonOptions>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

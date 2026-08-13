@@ -14,6 +14,8 @@ Component3D(sceneOptions?: SceneOptions)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Component3DInterface-(sceneOptions?: SceneOptions): Component3DAttribute--><!--Device-Component3DInterface-(sceneOptions?: SceneOptions): Component3DAttribute-End-->
@@ -28,6 +30,6 @@ Component3D(sceneOptions?: SceneOptions)
 
 ## 汇总
 
-- [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md)
-- [Scene](arkts-arkui-component3d-scene-t.md)
-- [ModelType](arkts-arkui-component3d-modeltype-e.md)
+- [SceneOptions](arkts-arkui-sceneoptions-i.md)
+- [Scene](arkts-arkui-scene-t.md)
+- [ModelType](arkts-arkui-modeltype-e.md)

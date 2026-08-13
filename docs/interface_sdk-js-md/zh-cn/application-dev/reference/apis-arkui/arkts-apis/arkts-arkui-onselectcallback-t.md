@@ -1,18 +1,20 @@
 # OnSelectCallback
 
 ```TypeScript
-export type OnSelectCallback = (index: int, selectStr: string) => void
+declare type OnSelectCallback = (index: number, selectValue: string) => void
 ```
 
-Select组件选择项的回调函数类型。
+下拉菜单选中某一项的回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
-<!--Device-unnamed-export type OnSelectCallback = (index: int, selectStr: string) => void--><!--Device-unnamed-export type OnSelectCallback = (index: int, selectStr: string) => void-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-unnamed-declare type OnSelectCallback = (index: number, selectValue: string) => void--><!--Device-unnamed-declare type OnSelectCallback = (index: number, selectValue: string) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +22,6 @@ Select组件选择项的回调函数类型。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 选中的项的索引。 |
-| selectStr | string | 是 | 选中的项的文本内容。 |
+| index | number | 是 | 选中项的索引，索引从0开始。 |
+| selectValue | string | 是 | 选中项的值。 |
 

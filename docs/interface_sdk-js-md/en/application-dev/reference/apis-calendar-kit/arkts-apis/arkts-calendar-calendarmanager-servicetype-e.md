@@ -6,6 +6,8 @@ Enumerates the event service types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export enum ServiceType--><!--Device-calendarManager-export enum ServiceType-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -21,6 +23,8 @@ Join a meeting.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Watch a video.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-WATCHING = 'Watching'--><!--Device-ServiceType-WATCHING = 'Watching'-End-->
@@ -57,6 +63,8 @@ Make a payment.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,6 +84,8 @@ Watch live TV.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-LIVE = 'Live'--><!--Device-ServiceType-LIVE = 'Live'-End-->
@@ -93,6 +103,8 @@ Go shopping.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -112,6 +124,8 @@ View the trip.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-TRIP = 'Trip'--><!--Device-ServiceType-TRIP = 'Trip'-End-->
@@ -129,6 +143,8 @@ Join class.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -148,6 +164,8 @@ Watch a sports event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'--><!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'-End-->
@@ -165,6 +183,8 @@ Start exercising.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

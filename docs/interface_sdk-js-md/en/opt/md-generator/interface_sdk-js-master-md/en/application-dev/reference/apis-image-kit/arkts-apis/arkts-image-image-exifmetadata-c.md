@@ -1,14 +1,14 @@
 # ExifMetadata
 
-ExifMetadata implements Metadata
-
-Exchangeable Image File Format (Exif) metadata.
+ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata.
 
 **Inheritance/Implementation:** ExifMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **Since:** 23
 
-<!--Device-image-class ExifMetadata implements Metadata--><!--Device-image-class ExifMetadata implements Metadata-End-->
+**Deprecated since:** -1
+
+<!--Device-image-class ExifMetadata--><!--Device-image-class ExifMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -27,6 +27,8 @@ clone(): Promise<ExifMetadata>
 Clones the Exif metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +52,8 @@ Creates an empty [ExifMetadata](#ExifMetadata) instance.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-static createInstance(): ExifMetadata--><!--Device-ExifMetadata-static createInstance(): ExifMetadata-End-->
@@ -72,6 +76,8 @@ Obtains all properties and their values from the image metadata. This API return
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-ExifMetadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
@@ -82,7 +88,7 @@ Obtains all properties and their values from the image metadata. This API return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 ## getBlob
 
@@ -93,6 +99,8 @@ getBlob(): Promise<ArrayBuffer>
 Obtains the metadata in binary format. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,11 +120,11 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-Obtains the property values from image metadata. This API returns the result asynchronously through a promise.
-
-For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey).
+Obtains the property values from image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,13 +142,13 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## setBlob
 
@@ -151,6 +159,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 Replaces the current metadata with binary data. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,7 +184,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## setProperties
 
@@ -182,11 +192,11 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
-
-For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,7 +208,7 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; | Yes |
+| records | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string \| null & gt; | Yes |
 
 **Return value:**
 
@@ -210,7 +220,7 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | Error Code ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## apertureValue
 
@@ -223,6 +233,8 @@ Lens aperture. The unit is APEX.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,6 +254,8 @@ Name of the person who creates the image.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-artist?: string--><!--Device-ExifMetadata-artist?: string-End-->
@@ -259,6 +273,8 @@ Number of bits for each pixel component. For example, RGB has 3 components with 
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,6 +294,8 @@ Serial number of the camera body.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-bodySerialNumber?: string--><!--Device-ExifMetadata-bodySerialNumber?: string-End-->
@@ -295,6 +313,8 @@ Image brightness. The unit is APEX.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,6 +334,8 @@ Name of the camera owner.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-cameraOwnerName?: string--><!--Device-ExifMetadata-cameraOwnerName?: string-End-->
@@ -332,6 +354,8 @@ Color filter array (CFA) geometric pattern of the image sensor.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-cfaPattern?: ArrayBuffer--><!--Device-ExifMetadata-cfaPattern?: ArrayBuffer-End-->
@@ -344,11 +368,13 @@ Color filter array (CFA) geometric pattern of the image sensor.
 colorSpace?: number
 ```
 
-Color space information, which is usually recorded as a color space descriptor.The value range is all integers.
+Color space information, which is usually recorded as a color space descriptor. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,6 +394,8 @@ Information about the compressed data.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-componentsConfiguration?: string--><!--Device-ExifMetadata-componentsConfiguration?: string-End-->
@@ -380,11 +408,13 @@ Information about the compressed data.
 compositeImage?: number
 ```
 
-Whether the image is a composite image.The value range is all integers.
+Whether the image is a composite image. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,6 +434,8 @@ Image compression scheme. The unit is bit/pixel.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-compressedBitsPerPixel?: double--><!--Device-ExifMetadata-compressedBitsPerPixel?: double-End-->
@@ -416,11 +448,13 @@ Image compression scheme. The unit is bit/pixel.
 compression?: number
 ```
 
-Algorithm standard for image compression.The value range is all integers.
+Algorithm standard for image compression. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -434,11 +468,13 @@ Algorithm standard for image compression.The value range is all integers.
 contrast?: number
 ```
 
-Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction.The value range is all integers.
+Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -458,6 +494,8 @@ Copyright notice of the image.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-copyright?: string--><!--Device-ExifMetadata-copyright?: string-End-->
@@ -470,11 +508,13 @@ Copyright notice of the image.
 customRendered?: number
 ```
 
-Special processing of image data, such as HDR composition and AI scene enhancement.The value range is all integers.
+Special processing of image data, such as HDR composition and AI scene enhancement. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -488,11 +528,13 @@ Special processing of image data, such as HDR composition and AI scene enhanceme
 dateTime?: string
 ```
 
-Date and time when the image is created.In this standard, it refers to the file date and time. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).For example, 2025:12:15 18:44:59.
+Date and time when the image is created. In this standard, it refers to the file date and time. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock). For example, 2025:12:15 18:44:59.
 
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -506,11 +548,13 @@ Date and time when the image is created.In this standard, it refers to the file 
 dateTimeDigitized?: string
 ```
 
-Date and time when the image is stored as digital data.For example, if a DSC captures an image and records the file at the same time, the values of **DateTimeOriginal**and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
+Date and time when the image is stored as digital data. For example, if a DSC captures an image and records the file at the same time, the values of **DateTimeOriginal** and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
 
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -524,11 +568,13 @@ Date and time when the image is stored as digital data.For example, if a DSC cap
 dateTimeOriginal?: string
 ```
 
-Date and time when the original image data is generated.For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
+Date and time when the original image data is generated. For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY :MM:DD HH:MM:SS* (24-hour clock).
 
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -548,6 +594,8 @@ Capture condition information of a specific camera model.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer--><!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer-End-->
@@ -565,6 +613,8 @@ Digital zoom ratio used when the image is captured.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -584,6 +634,8 @@ Version of the supported Exif standard.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-exifVersion?: string--><!--Device-ExifMetadata-exifVersion?: string-End-->
@@ -601,6 +653,8 @@ Exposure bias.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -620,6 +674,8 @@ Exposure index selected at the time the image is captured.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-exposureIndex?: double--><!--Device-ExifMetadata-exposureIndex?: double-End-->
@@ -632,11 +688,13 @@ Exposure index selected at the time the image is captured.
 exposureMode?: number
 ```
 
-Exposure mode.The value range is all integers.
+Exposure mode. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -650,11 +708,13 @@ Exposure mode.The value range is all integers.
 exposureProgram?: number
 ```
 
-Class used for exposure setting when the camera captures a photo.The value range is all integers.
+Class used for exposure setting when the camera captures a photo. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -674,6 +734,8 @@ Exposure time.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-exposureTime?: double--><!--Device-ExifMetadata-exposureTime?: double-End-->
@@ -691,6 +753,8 @@ F number, for example, f/1.8.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -710,6 +774,8 @@ Image source.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-fileSource?: ArrayBuffer--><!--Device-ExifMetadata-fileSource?: ArrayBuffer-End-->
@@ -722,11 +788,13 @@ Image source.
 flash?: number
 ```
 
-Flash.The value range is all integers.
+Flash. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -746,6 +814,8 @@ Flash energy at the time the image is captured. The unit is beam candlepower sec
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-flashEnergy?: double--><!--Device-ExifMetadata-flashEnergy?: double-End-->
@@ -763,6 +833,8 @@ FlashPix format version supported by the FlashPix Extension Resource (FPXR), whi
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -782,6 +854,8 @@ Focal length of the lens, in milliseconds.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-focalLength?: double--><!--Device-ExifMetadata-focalLength?: double-End-->
@@ -794,11 +868,13 @@ Focal length of the lens, in milliseconds.
 focalLengthIn35mmFilm?: number
 ```
 
-Focal length of the 35 mm film.The value should be an integer.
+Focal length of the 35 mm film. The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -812,11 +888,13 @@ Focal length of the 35 mm film.The value should be an integer.
 focalPlaneResolutionUnit?: number
 ```
 
-Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**.The value range is all integers.
+Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -836,6 +914,8 @@ Number of pixels per unit physical length in the X-axis of the sensor's physical
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-focalPlaneXResolution?: double--><!--Device-ExifMetadata-focalPlaneXResolution?: double-End-->
@@ -854,6 +934,8 @@ Number of pixels per unit physical length in the Y-axis of the sensor's physical
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-focalPlaneYResolution?: double--><!--Device-ExifMetadata-focalPlaneYResolution?: double-End-->
@@ -866,11 +948,13 @@ Number of pixels per unit physical length in the Y-axis of the sensor's physical
 gainControl?: number
 ```
 
-Degree of overall image gain adjustment.The value range is all integers.
+Degree of overall image gain adjustment. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -890,6 +974,8 @@ Gamma value of each component.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gamma?: double--><!--Device-ExifMetadata-gamma?: double-End-->
@@ -908,6 +994,8 @@ GPS altitude based on **GPSAltitudeRef**.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsAltitude?: double--><!--Device-ExifMetadata-gpsAltitude?: double-End-->
@@ -920,11 +1008,13 @@ GPS altitude based on **GPSAltitudeRef**.
 gpsAltitudeRef?: number
 ```
 
-GPS altitude reference.The value range is all integers.
+GPS altitude reference. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -944,6 +1034,8 @@ String of the GPS area name.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsAreaInformation?: string--><!--Device-ExifMetadata-gpsAreaInformation?: string-End-->
@@ -961,6 +1053,8 @@ GPS date stamp.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -980,6 +1074,8 @@ Bearing to the destination.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsDestBearing?: double--><!--Device-ExifMetadata-gpsDestBearing?: double-End-->
@@ -997,6 +1093,8 @@ Bearing reference to the destination.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1016,6 +1114,8 @@ Distance to the destination.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsDestDistance?: double--><!--Device-ExifMetadata-gpsDestDistance?: double-End-->
@@ -1033,6 +1133,8 @@ Unit used to express the distance to the destination.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1052,6 +1154,8 @@ Latitude of the destination.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsDestLatitude?: double[]--><!--Device-ExifMetadata-gpsDestLatitude?: double[]-End-->
@@ -1069,6 +1173,8 @@ Latitude reference of the destination.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1088,6 +1194,8 @@ Longitude of the destination.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsDestLongitude?: double[]--><!--Device-ExifMetadata-gpsDestLongitude?: double[]-End-->
@@ -1106,6 +1214,8 @@ Longitude reference of the destination.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsDestLongitudeRef?: string--><!--Device-ExifMetadata-gpsDestLongitudeRef?: string-End-->
@@ -1118,11 +1228,13 @@ Longitude reference of the destination.
 gpsDifferential?: number
 ```
 
-Whether differential correction has been applied to the GPS data, which is crucial for precise positioning accuracy.The value range is all integers.
+Whether differential correction has been applied to the GPS data, which is crucial for precise positioning accuracy. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1142,6 +1254,8 @@ Dilution of Precision (DOP) of the GPS data.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsDop?: double--><!--Device-ExifMetadata-gpsDop?: double-End-->
@@ -1159,6 +1273,8 @@ Horizontal positioning error, in meters.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1178,6 +1294,8 @@ Image orientation at the time of capture.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsImgDirection?: double--><!--Device-ExifMetadata-gpsImgDirection?: double-End-->
@@ -1196,6 +1314,8 @@ Reference of the image orientation.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsImgDirectionRef?: string--><!--Device-ExifMetadata-gpsImgDirectionRef?: string-End-->
@@ -1208,12 +1328,13 @@ Reference of the image orientation.
 gpsLatitude?: number[]
 ```
 
-GPS latitude.The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.When using degrees and minutes, the minutes are stored with up to two decimal places, in the  
-**dd/1, mmmm/100, 0/1** format.
+GPS latitude. The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format. When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
 
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1233,6 +1354,8 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsLatitudeRef?: string--><!--Device-ExifMetadata-gpsLatitudeRef?: string-End-->
@@ -1245,12 +1368,13 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 gpsLongitude?: number[]
 ```
 
-GPS longitude.The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.When using degrees and minutes, the minutes are stored with up to two decimal places, in the  
-**dd/1, mmmm/100, 0/1** format.
+GPS longitude. The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format. When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
 
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1270,6 +1394,8 @@ GPS longitude reference. For example, **E** indicates east longitude, and **W** 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsLongitudeRef?: string--><!--Device-ExifMetadata-gpsLongitudeRef?: string-End-->
@@ -1287,6 +1413,8 @@ Geodetic data used by the GPS receiver.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1306,6 +1434,8 @@ GPS measurement mode.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsMeasureMode?: string--><!--Device-ExifMetadata-gpsMeasureMode?: string-End-->
@@ -1323,6 +1453,8 @@ Name of the positioning method.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1342,6 +1474,8 @@ GPS satellite used for measurement. Generally, the value is the GPS satellite's 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsSatellites?: string--><!--Device-ExifMetadata-gpsSatellites?: string-End-->
@@ -1359,6 +1493,8 @@ Speed of the GPS receiver.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1378,6 +1514,8 @@ Speed unit of the GPS receiver.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsSpeedRef?: string--><!--Device-ExifMetadata-gpsSpeedRef?: string-End-->
@@ -1395,6 +1533,8 @@ Status of the GPS receiver when the image is recorded.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1414,6 +1554,8 @@ GPS timestamp.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsTimestamp?: double[]--><!--Device-ExifMetadata-gpsTimestamp?: double[]-End-->
@@ -1431,6 +1573,8 @@ Movement direction of the GPS receiver.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1450,6 +1594,8 @@ Reference for the GPS receiver movement direction.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-gpsTrackRef?: string--><!--Device-ExifMetadata-gpsTrackRef?: string-End-->
@@ -1467,6 +1613,8 @@ GPS information format version identifier.
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1486,6 +1634,8 @@ Image description.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-imageDescription?: string--><!--Device-ExifMetadata-imageDescription?: string-End-->
@@ -1503,6 +1653,8 @@ Image length. The unit is px.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1522,6 +1674,8 @@ Unique ID assigned to each image.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-imageUniqueId?: string--><!--Device-ExifMetadata-imageUniqueId?: string-End-->
@@ -1540,6 +1694,8 @@ Image width. The unit is px.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-imageWidth?: int--><!--Device-ExifMetadata-imageWidth?: int-End-->
@@ -1552,11 +1708,13 @@ Image width. The unit is px.
 isoSpeedLatitudeyyy?: number
 ```
 
-Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV.The value should be an integer.
+Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV. The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1570,11 +1728,13 @@ Maximum dynamic range recordable by the camera sensor in a single exposure. The 
 isoSpeedLatitudezzz?: number
 ```
 
-Highlight retention capacity of the camera sensor in overexposure. The unit is EV.The value should be an integer.
+Highlight retention capacity of the camera sensor in overexposure. The unit is EV. The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1588,11 +1748,13 @@ Highlight retention capacity of the camera sensor in overexposure. The unit is E
 isoSpeedRatings?: number
 ```
 
-ISO speed and latitude of the camera or input device, which are specified in ISO 12232.The value range is all integers.
+ISO speed and latitude of the camera or input device, which are specified in ISO 12232. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1606,11 +1768,13 @@ ISO speed and latitude of the camera or input device, which are specified in ISO
 jpegInterchangeFormat?: number
 ```
 
-Start of Image (SOI) marker of the JPEG bitstream in interchange format.The value range is all integers.
+Start of Image (SOI) marker of the JPEG bitstream in interchange format. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1624,11 +1788,13 @@ Start of Image (SOI) marker of the JPEG bitstream in interchange format.The valu
 jpegInterchangeFormatLength?: number
 ```
 
-Number of bytes in the JPEG stream.The value range is all integers.
+Number of bytes in the JPEG stream. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1648,6 +1814,8 @@ Manufacturer of the lens.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-lensMake?: string--><!--Device-ExifMetadata-lensMake?: string-End-->
@@ -1665,6 +1833,8 @@ Model of the lens.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1684,6 +1854,8 @@ Serial number of the lens.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-lensSerialNumber?: string--><!--Device-ExifMetadata-lensSerialNumber?: string-End-->
@@ -1702,6 +1874,8 @@ Specifications of the lens.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-lensSpecification?: double[]--><!--Device-ExifMetadata-lensSpecification?: double[]-End-->
@@ -1714,11 +1888,13 @@ Specifications of the lens.
 lightSource?: number
 ```
 
-Light source.The value range is all integers.
+Light source. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1738,6 +1914,8 @@ Manufacturer name of the capture device.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-make?: string--><!--Device-ExifMetadata-make?: string-End-->
@@ -1755,6 +1933,8 @@ Information required by the Exif/Design rule for Camera File system (DCF) writer
 **Type:** ArrayBuffer
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1774,6 +1954,8 @@ Minimum aperture value of the lens.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-maxApertureValue?: double--><!--Device-ExifMetadata-maxApertureValue?: double-End-->
@@ -1786,11 +1968,13 @@ Minimum aperture value of the lens.
 meteringMode?: number
 ```
 
-Metering mode.The value range is all integers.
+Metering mode. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1810,6 +1994,8 @@ Camera model.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-model?: string--><!--Device-ExifMetadata-model?: string-End-->
@@ -1822,11 +2008,13 @@ Camera model.
 newSubfileType?: number
 ```
 
-Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats).The value range is all integers.
+Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats). The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1846,6 +2034,8 @@ Opto-Electric Conversion Function (OECF) specified in ISO 14524.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-oecf?: ArrayBuffer--><!--Device-ExifMetadata-oecf?: ArrayBuffer-End-->
@@ -1863,6 +2053,8 @@ Geographical time zone of the device.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1882,6 +2074,8 @@ Coordinated Universal Time (UTC) offset at the time of image digitization, which
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-offsetTimeDigitized?: string--><!--Device-ExifMetadata-offsetTimeDigitized?: string-End-->
@@ -1899,6 +2093,8 @@ Geographical time zone of the device.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1918,6 +2114,8 @@ Image orientation.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-orientation?: Orientation--><!--Device-ExifMetadata-orientation?: Orientation-End-->
@@ -1930,11 +2128,13 @@ Image orientation.
 photoMode?: number
 ```
 
-Image mode.The value range is all integers.
+Image mode. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1954,6 +2154,8 @@ Sensitivity of the camera or input device during image capture.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-photographicSensitivity?: int[]--><!--Device-ExifMetadata-photographicSensitivity?: int[]-End-->
@@ -1966,11 +2168,13 @@ Sensitivity of the camera or input device during image capture.
 photometricInterpretation?: number
 ```
 
-Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma).The value range is all integers.
+Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma) . The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1984,11 +2188,13 @@ Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-differen
 pixelXDimension?: number
 ```
 
-Image size on the X axis (horizontal axis in a two-dimensional coordinate system).The value range is all integers.
+Image size on the X axis (horizontal axis in a two-dimensional coordinate system). The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2002,11 +2208,13 @@ Image size on the X axis (horizontal axis in a two-dimensional coordinate system
 pixelYDimension?: number
 ```
 
-Image size on the Y axis (vertical axis in a two-dimensional coordinate system).The value range is all integers.
+Image size on the Y axis (vertical axis in a two-dimensional coordinate system). The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2020,11 +2228,13 @@ Image size on the Y axis (vertical axis in a two-dimensional coordinate system).
 planarConfiguration?: number
 ```
 
-Whether the pixel components are recorded in chunked or planar format.The value range is all integers.
+Whether the pixel components are recorded in chunked or planar format. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2044,6 +2254,8 @@ Chromaticity of the image primaries.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-primaryChromaticities?: double[]--><!--Device-ExifMetadata-primaryChromaticities?: double[]-End-->
@@ -2056,11 +2268,13 @@ Chromaticity of the image primaries.
 recommendedExposureIndex?: number
 ```
 
-GPS measurement mode.The value range is all integers.
+GPS measurement mode. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2080,6 +2294,8 @@ Reference black point value and white point value.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-referenceBlackWhite?: double[]--><!--Device-ExifMetadata-referenceBlackWhite?: double[]-End-->
@@ -2098,6 +2314,8 @@ Name of the audio file related to the image data.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-relatedSoundFile?: string--><!--Device-ExifMetadata-relatedSoundFile?: string-End-->
@@ -2110,11 +2328,13 @@ Name of the audio file related to the image data.
 resolutionUnit?: number
 ```
 
-Unit of the image resolution in the width and height directions.The value range is all integers.
+Unit of the image resolution in the width and height directions. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2128,11 +2348,13 @@ Unit of the image resolution in the width and height directions.The value range 
 rowsPerStrip?: number
 ```
 
-Number of rows per image strip.The value range is all integers.
+Number of rows per image strip. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2146,11 +2368,13 @@ Number of rows per image strip.The value range is all integers.
 samplesPerPixel?: number
 ```
 
-Number of color components per pixel, applicable to RGB and YCbCr color models.Since both the models are three-component models (three color channels, or one luminance component plus two chroma components), the standard value for this property is 3.For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker.The value range is all integers.
+Number of color components per pixel, applicable to RGB and YCbCr color models. Since both the models are three-component models (three color channels, or one luminance component plus two chroma components), the standard value for this property is 3. For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2164,11 +2388,13 @@ Number of color components per pixel, applicable to RGB and YCbCr color models.S
 saturation?: number
 ```
 
-Color saturation adjustment policy applied by the camera. For example, standard processing and saturation reduction.The value range is all integers.
+Color saturation adjustment policy applied by the camera. For example, standard processing and saturation reduction. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2182,11 +2408,13 @@ Color saturation adjustment policy applied by the camera. For example, standard 
 sceneCaptureType?: number
 ```
 
-Type of the scene that is captured.The value range is all integers.
+Type of the scene that is captured. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2206,6 +2434,8 @@ Scene type.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-sceneType?: ArrayBuffer--><!--Device-ExifMetadata-sceneType?: ArrayBuffer-End-->
@@ -2218,11 +2448,13 @@ Scene type.
 sensingMethod?: number
 ```
 
-Type of the image sensor on the camera.The value range is all integers.
+Type of the image sensor on the camera. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2236,11 +2468,13 @@ Type of the image sensor on the camera.The value range is all integers.
 sensitivityType?: number
 ```
 
-Sensitivity type.The value range is all integers.
+Sensitivity type. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2254,11 +2488,13 @@ Sensitivity type.The value range is all integers.
 sharpness?: number
 ```
 
-Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening.The value range is all integers.
+Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2278,6 +2514,8 @@ Shutter speed, expressed as an Additive System of Photographic Exposure (APEX) v
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-shutterSpeedValue?: double--><!--Device-ExifMetadata-shutterSpeedValue?: double-End-->
@@ -2295,6 +2533,8 @@ Name and version number of the software used to create the image.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2314,6 +2554,8 @@ Exposure time of source images for the composite image, for example, 1/33 s.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer--><!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer-End-->
@@ -2331,6 +2573,8 @@ Number of source images of the composite image.
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2350,6 +2594,8 @@ Spatial frequency table of the camera or input device.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer--><!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer-End-->
@@ -2368,6 +2614,8 @@ Spectral sensitivity of each channel of the camera.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-spectralSensitivity?: string--><!--Device-ExifMetadata-spectralSensitivity?: string-End-->
@@ -2380,11 +2628,13 @@ Spectral sensitivity of each channel of the camera.
 standardOutputSensitivity?: number
 ```
 
-Standard output sensitivity.The value range is all integers.
+Standard output sensitivity. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2404,6 +2654,8 @@ Number of bytes in each strip after compression.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-stripByteCounts?: int[]--><!--Device-ExifMetadata-stripByteCounts?: int[]-End-->
@@ -2416,11 +2668,13 @@ Number of bytes in each strip after compression.
 stripOffsets?: number[]
 ```
 
-Strip storage offset of the image data, in bytes.To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous blocks (called strips).This property stores the starting offset of each strip in the file sequentially.
+Strip storage offset of the image data, in bytes. To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous blocks (called strips). This property stores the starting offset of each strip in the file sequentially.
 
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2434,11 +2688,13 @@ Strip storage offset of the image data, in bytes.To improve the efficiency of la
 subfileType?: number
 ```
 
-Data type of a subfile. It has been deprecated. Use **newSubfileType** instead.The value range is all integers.
+Data type of a subfile. It has been deprecated. Use **newSubfileType** instead. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2458,6 +2714,8 @@ Location and area of the main object in the entire scene.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-subjectArea?: int[]--><!--Device-ExifMetadata-subjectArea?: int[]-End-->
@@ -2476,6 +2734,8 @@ Distance from the capture device to the photographed object, in meters.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-subjectDistance?: double--><!--Device-ExifMetadata-subjectDistance?: double-End-->
@@ -2488,11 +2748,13 @@ Distance from the capture device to the photographed object, in meters.
 subjectDistanceRange?: number
 ```
 
-Distance range to the object.The value range is all integers.
+Distance range to the object. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2512,6 +2774,8 @@ Pixel coordinates of the primary object in the image (based on the origin in the
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-subjectLocation?: int[]--><!--Device-ExifMetadata-subjectLocation?: int[]-End-->
@@ -2529,6 +2793,8 @@ Second fraction of **DateTime**.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2548,6 +2814,8 @@ Second of **DateTimeDigitized**.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-subsecTimeDigitized?: string--><!--Device-ExifMetadata-subsecTimeDigitized?: string-End-->
@@ -2565,6 +2833,8 @@ Second of **DateTimeOriginal**.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2584,6 +2854,8 @@ Transfer function for the image, which is usually used for color correction.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-transferFunction?: string--><!--Device-ExifMetadata-transferFunction?: string-End-->
@@ -2602,6 +2874,8 @@ User comments.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-userComment?: string--><!--Device-ExifMetadata-userComment?: string-End-->
@@ -2614,11 +2888,13 @@ User comments.
 whiteBalance?: number
 ```
 
-White balance.The value range is all integers.
+White balance. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2638,6 +2914,8 @@ Chromaticity of the image white point.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-whitePoint?: double[]--><!--Device-ExifMetadata-whitePoint?: double[]-End-->
@@ -2655,6 +2933,8 @@ Image resolution in the width direction.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2674,6 +2954,8 @@ Transformation matrix coefficients for converting RGB image data to YCbCr image 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-yCbCrCoefficients?: double[]--><!--Device-ExifMetadata-yCbCrCoefficients?: double[]-End-->
@@ -2686,11 +2968,13 @@ Transformation matrix coefficients for converting RGB image data to YCbCr image 
 yCbCrPositioning?: number
 ```
 
-Position of chroma components relative to the luminance component.The value range is all integers.
+Position of chroma components relative to the luminance component. The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2710,6 +2994,8 @@ Sampling ratios of the chroma components and luminance component.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExifMetadata-yCbCrSubSampling?: int[]--><!--Device-ExifMetadata-yCbCrSubSampling?: int[]-End-->
@@ -2727,6 +3013,8 @@ Image resolution in the height direction.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

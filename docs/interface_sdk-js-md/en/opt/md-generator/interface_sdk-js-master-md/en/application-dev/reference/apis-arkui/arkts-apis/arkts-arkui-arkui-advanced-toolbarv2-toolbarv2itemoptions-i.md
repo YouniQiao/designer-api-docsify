@@ -4,6 +4,8 @@ Declare the options of ToolBarV2Item
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ToolBarV2ItemOptions--><!--Device-unnamed-export interface ToolBarV2ItemOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,24 +15,6 @@ Declare the options of ToolBarV2Item
 ```TypeScript
 import { ToolBarV2ItemImageOptions, ToolBarV2Item, ToolBarV2ItemText, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemAction, ToolBarV2ItemOptions, ToolBarV2, ToolBarV2SymbolGlyph, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemState, ToolBarV2ItemTextOptions, ToolBarV2Modifier } from '@kit.ArkUI';
 ```
-
-## action
-
-```TypeScript
-action?: ToolBarV2ItemAction
-```
-
-Define the action event.
-
-**Since:** 18
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2ItemOptions-action?: ToolBarV2ItemAction--><!--Device-ToolBarV2ItemOptions-action?: ToolBarV2ItemAction-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -43,6 +27,8 @@ The accessibilityDescription of item.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +52,8 @@ The accessibilityLevel of item.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -86,11 +74,35 @@ The accessibilityText of item.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ToolBarV2ItemOptions-accessibilityText?: ResourceStr--><!--Device-ToolBarV2ItemOptions-accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+action?: ToolBarV2ItemAction
+```
+
+Define the action event.
+
+**Type:** [ToolBarV2ItemAction](arkts-arkui-toolbarv2itemaction-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2ItemOptions-action?: ToolBarV2ItemAction--><!--Device-ToolBarV2ItemOptions-action?: ToolBarV2ItemAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,6 +117,8 @@ Define text content.
 **Type:** [ToolBarV2ItemText](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,6 +140,8 @@ Define icon resource.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -145,6 +161,8 @@ Define item type.
 **Type:** [ToolBarV2ItemState](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

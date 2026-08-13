@@ -2,7 +2,9 @@
 
 相对坐标系下的坐标位置，以displayId对应的屏幕左上角为原点。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-display-interface RelativePosition--><!--Device-display-interface RelativePosition-End-->
 
@@ -18,7 +20,9 @@ displayId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RelativePosition-displayId: long--><!--Device-RelativePosition-displayId: long-End-->
 
@@ -34,7 +38,9 @@ position: Position
 
 **类型：** Position
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RelativePosition-position: Position--><!--Device-RelativePosition-position: Position-End-->
 

@@ -4,6 +4,8 @@ Enumerates the tab layout styles of the tab bar when not scrolling in scrollable
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum LayoutStyle--><!--Device-unnamed-declare enum LayoutStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,11 @@ Enumerates the tab layout styles of the tab bar when not scrolling in scrollable
 ALWAYS_CENTER = 0
 ```
 
-If the tab content exceeds the tab bar width, the tabs are scrollable.
-
-If not, the tabs are compactly centered on the tab bar and not scrollable.
+If the tab content exceeds the tab bar width, the tabs are scrollable. If not, the tabs are compactly centered on the tab bar and not scrollable.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,9 +36,11 @@ If not, the tabs are compactly centered on the tab bar and not scrollable.
 ALWAYS_AVERAGE_SPLIT = 1
 ```
 
-If the tab content exceeds the tab bar width, the tabs are scrollable.If not, the tabs are not scrollable, and the width of the tab bar is evenly distributed among all tabs.
+If the tab content exceeds the tab bar width, the tabs are scrollable. If not, the tabs are not scrollable, and the width of the tab bar is evenly distributed among all tabs.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,13 +56,11 @@ If the tab content exceeds the tab bar width, the tabs are scrollable.If not, th
 SPACE_BETWEEN_OR_CENTER = 2
 ```
 
-If the tab content exceeds the tab bar width, the tabs are scrollable.
-
-If the tab content exceeds half the width of the tab bar but is still within the tab bar width, the tabs are compactly centered and not scrollable.
-
-If the tab content does not exceed half the width of the tab bar, the tabs are centered within half the width of the tab bar with even spacing between them and are not scrollable.
+If the tab content exceeds the tab bar width, the tabs are scrollable. If the tab content exceeds half the width of the tab bar but is still within the tab bar width, the tabs are compactly centered and not scrollable. If the tab content does not exceed half the width of the tab bar, the tabs are centered within half the width of the tab bar with even spacing between them and are not scrollable.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ As an input parameter when connecting a web native messaging extension, it is us
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback--><!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ onConnect(connection: ConnectionNativeInfo): void
 Called when a connection is set up.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,6 +95,8 @@ Called when a connection is interrupted.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void-End-->
@@ -157,6 +163,8 @@ onFailed(code: NmErrorCode, errMsg: string): void
 Called when the connection fails.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,7 +14,7 @@ function cancelAllReminders(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [cancelAllReminders](reminderAgentManager.cancelAllReminders)
+**替代接口：** cancelAllReminders
 
 <!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
 
@@ -24,7 +24,7 @@ function cancelAllReminders(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步回调。 |
 
 ## 示例
 
@@ -52,7 +52,7 @@ function cancelAllReminders(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [cancelAllReminders](reminderAgentManager.cancelAllReminders)
+**替代接口：** cancelAllReminders
 
 <!--Device-reminderAgent-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgent-function cancelAllReminders(): Promise<void>-End-->
 

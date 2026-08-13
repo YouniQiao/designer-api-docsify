@@ -6,15 +6,15 @@
 function finishSyncTrace(level: HiTraceOutputLevel): void
 ```
 
-标记一个同步跟踪耗时任务的结束，分级控制跟踪输出。
+标记一个同步跟踪耗时任务的结束，分级控制跟踪输出。 finishSyncTrace的level必须与流程开始的[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startSyncTrace)对应参数值一致。
 
-finishSyncTrace的level必须与流程开始的[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startSyncTrace)对应参数值一致。
+**起始版本：** 23
 
-**起始版本：** 19
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiTraceMeter-function finishSyncTrace(level: HiTraceOutputLevel): void--><!--Device-hiTraceMeter-function finishSyncTrace(level: HiTraceOutputLevel): void-End-->
 

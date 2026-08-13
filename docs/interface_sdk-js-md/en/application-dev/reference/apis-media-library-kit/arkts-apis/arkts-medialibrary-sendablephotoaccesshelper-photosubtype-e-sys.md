@@ -6,6 +6,8 @@ Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoas
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-enum PhotoSubtype--><!--Device-sendablePhotoAccessHelper-enum PhotoSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,6 +23,8 @@ Screenshot Photo Type
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoSubtype-SCREENSHOT = 1--><!--Device-PhotoSubtype-SCREENSHOT = 1-End-->
 

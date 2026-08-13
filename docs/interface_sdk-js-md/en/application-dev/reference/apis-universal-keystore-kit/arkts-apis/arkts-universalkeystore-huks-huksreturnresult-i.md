@@ -6,6 +6,8 @@ Represents the result returned.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export interface HuksReturnResult--><!--Device-huks-export interface HuksReturnResult-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -30,6 +32,8 @@ Certificate chain information. The default value is **undefined**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksReturnResult-certChains?: Array<string>--><!--Device-HuksReturnResult-certChains?: Array<string>-End-->
@@ -42,14 +46,15 @@ Certificate chain information. The default value is **undefined**.
 outData?: Uint8Array
 ```
 
-Challenge obtained after the  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)operation. The default value is **undefined**.
+Challenge obtained after the [initSession](arkts-universalkeystore-huks-initsession-f.md#initSession) operation. The default value is **undefined**.
 
 **Type:** Uint8Array
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,14 +68,15 @@ Challenge obtained after the
 properties?: Array<HuksParam>
 ```
 
-Challenge obtained after the  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)operation. The default value is **undefined**.
+Challenge obtained after the [initSession](arkts-universalkeystore-huks-initsession-f.md#initSession) operation. The default value is **undefined**.
 
 **Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -91,6 +97,8 @@ Shared key.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

@@ -2,7 +2,9 @@
 
 Describes the vibration attribute.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
 
@@ -24,7 +26,9 @@ Indicates whether to bypass system management switches.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibrateAttribute-systemUsage?: boolean--><!--Device-VibrateAttribute-systemUsage?: boolean-End-->
 

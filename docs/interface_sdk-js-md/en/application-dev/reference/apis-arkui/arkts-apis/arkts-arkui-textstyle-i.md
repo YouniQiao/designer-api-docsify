@@ -6,6 +6,8 @@ Describes the word break rule of the message in the dialog box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextStyle--><!--Device-unnamed-declare interface TextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Describes the word break rule of the message in the dialog box.
 wordBreak?: WordBreak
 ```
 
-Word break rule.
-
-Default value: **WordBreak.BREAK_ALL**
+Word break rule. Default value: **WordBreak.BREAK_ALL**
 
 **Type:** WordBreak
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,7 +8,7 @@ USB设备端口角色信息。
 
 **废弃版本：** 9
 
-**替代接口：** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#USBPortStatus)
+**替代接口：** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#USBPortStatus（系统接口）)
 
 <!--Device-usb-interface USBPortStatus--><!--Device-usb-interface USBPortStatus-End-->
 

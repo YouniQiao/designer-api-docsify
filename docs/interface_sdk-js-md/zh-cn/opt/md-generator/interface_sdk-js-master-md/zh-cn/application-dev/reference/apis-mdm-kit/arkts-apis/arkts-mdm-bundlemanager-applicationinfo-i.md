@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-bundleManager-interface ApplicationInfo--><!--Device-bundleManager-interface ApplicationInfo-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -14,12 +16,13 @@
 readonly accessTokenId: number
 ```
 
-应用程序的accessTokenId，应用的身份标识，在程序访问控制校验接口  
-[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md#checkAccessToken)中使用。
+应用程序的accessTokenId，应用的身份标识，在程序访问控制校验接口 [checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md#checkAccessToken)中使用。
 
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +42,8 @@ readonly appDistributionType: string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly appDistributionType: string--><!--Device-ApplicationInfo-readonly appDistributionType: string-End-->
@@ -56,6 +61,8 @@ readonly appIndex: number
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,6 +82,8 @@ readonly appProvisionType: string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly appProvisionType: string--><!--Device-ApplicationInfo-readonly appProvisionType: string-End-->
@@ -92,6 +101,8 @@ readonly codePath: string
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -111,6 +122,8 @@ readonly dataUnclearable: boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly dataUnclearable: boolean--><!--Device-ApplicationInfo-readonly dataUnclearable: boolean-End-->
@@ -129,6 +142,8 @@ readonly debug: boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly debug: boolean--><!--Device-ApplicationInfo-readonly debug: boolean-End-->
@@ -141,11 +156,13 @@ readonly debug: boolean
 readonly description: string
 ```
 
-标识应用的描述信息，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的description字段。关于description的详细信息详见本表中的descriptionResource字段说明。
+标识应用的描述信息，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的description字段。关于description的详细信息详见本表中 的descriptionResource字段说明。
 
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -165,6 +182,8 @@ readonly descriptionId: number
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly descriptionId: number--><!--Device-ApplicationInfo-readonly descriptionId: number-End-->
@@ -182,6 +201,8 @@ readonly descriptionResource: Resource
 **类型：** Resource
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -201,6 +222,8 @@ readonly enabled: boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
@@ -213,11 +236,13 @@ readonly enabled: boolean
 readonly icon: string
 ```
 
-应用程序的图标，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的icon字段。关于icon的详细信息详见本表中的iconResource字段说明。
+应用程序的图标，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的icon字段。关于icon的详细信息详见本表中的iconResource字段说 明。
 
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -237,6 +262,8 @@ readonly iconData: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly iconData: string--><!--Device-ApplicationInfo-readonly iconData: string-End-->
@@ -254,6 +281,8 @@ readonly iconId: number
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -273,6 +302,8 @@ readonly iconResource: Resource
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly iconResource: Resource--><!--Device-ApplicationInfo-readonly iconResource: Resource-End-->
@@ -285,17 +316,13 @@ readonly iconResource: Resource
 readonly installSource: string
 ```
 
-应用程序的安装来源，支持的取值如下：
-
-- pre-installed表示应用为第一次开机时安装的预置应用。  
-- ota表示应用为系统升级时新增的预置应用。  
-- recovery表示卸载后再恢复的预置应用。  
-- bundleName表示应用由此包名对应的应用安装。  
-- unknown表示应用安装来源未知。
+应用程序的安装来源，支持的取值如下： - pre-installed表示应用为第一次开机时安装的预置应用。 - ota表示应用为系统升级时新增的预置应用。 - recovery表示卸载后再恢复的预置应用。 - bundleName表示应用由此包名对应的应用安装。 - unknown表示应用安装来源未知。
 
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -315,6 +342,8 @@ readonly label: string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
@@ -332,6 +361,8 @@ readonly labelId: number
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -351,6 +382,8 @@ readonly labelResource: Resource
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly labelResource: Resource--><!--Device-ApplicationInfo-readonly labelResource: Resource-End-->
@@ -368,6 +401,8 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -387,6 +422,8 @@ readonly nativeLibraryPath: string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly nativeLibraryPath: string--><!--Device-ApplicationInfo-readonly nativeLibraryPath: string-End-->
@@ -405,6 +442,8 @@ readonly process: string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
@@ -417,11 +456,13 @@ readonly process: string
 readonly releaseType: string
 ```
 
-标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo)）来判断兼容性。
+标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通 过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#@ohos.deviceInfo)）来判断兼容性。
 
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -441,6 +482,8 @@ readonly removable: boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
@@ -459,6 +502,8 @@ readonly systemApp: boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
@@ -476,6 +521,8 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

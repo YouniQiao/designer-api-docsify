@@ -1,14 +1,14 @@
 # ScaleRingStyleOptions
 
-Options of the ring style with scales.
-
-Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
+Options of the ring style with scales. Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
 **Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions--><!--Device-unnamed-declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ScaleRingStyleOptions--><!--Device-unnamed-declare interface ScaleRingStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +18,13 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoption
 scaleCount?: number
 ```
 
-Number of divisions on the ring-style process indicator.
-
-Default value: **120**
-
-Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
+Number of divisions on the ring-style process indicator. Default value: **120** Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +40,13 @@ Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside th
 scaleWidth?: Length
 ```
 
-Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used.
-
-Default value: **2.0vp**
+Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used. Default value: **2.0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +62,13 @@ Default value: **2.0vp**
 strokeWidth?: Length
 ```
 
-Stroke width of the progress indicator. Percentage values are not supported.
-
-Default value: **4.0vp**
+Stroke width of the progress indicator. Percentage values are not supported. Default value: **4.0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

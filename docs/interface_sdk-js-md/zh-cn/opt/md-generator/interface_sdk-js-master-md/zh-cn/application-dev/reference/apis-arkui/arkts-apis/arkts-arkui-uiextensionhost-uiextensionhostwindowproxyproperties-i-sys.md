@@ -2,7 +2,9 @@
 
 用于表示宿主应用窗口和UIExtensionComponent组件的信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uiExtensionHost-interface UIExtensionHostWindowProxyProperties--><!--Device-uiExtensionHost-interface UIExtensionHostWindowProxyProperties-End-->
 
@@ -20,7 +22,9 @@ UIExtensionComponent的位置和宽高。
 
 **类型：** window.Rect
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

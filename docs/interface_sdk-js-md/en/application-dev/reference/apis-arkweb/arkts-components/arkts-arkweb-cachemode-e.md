@@ -1,10 +1,12 @@
 # CacheMode
 
-Enum type supplied to [cacheMode](cacheMode) for setting the Web cache mode.
+Enum type supplied to cacheMode for setting the Web cache mode.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum CacheMode--><!--Device-unnamed-declare enum CacheMode-End-->
 
@@ -21,6 +23,8 @@ load cache when they are available and not expired, otherwise load online.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ load cache when they are available, otherwise load online.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CacheMode-None = 1--><!--Device-CacheMode-None = 1-End-->
@@ -58,6 +64,8 @@ Load online and not cache.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CacheMode-Online = 2--><!--Device-CacheMode-Online = 2-End-->
@@ -75,6 +83,8 @@ load cache and not online.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

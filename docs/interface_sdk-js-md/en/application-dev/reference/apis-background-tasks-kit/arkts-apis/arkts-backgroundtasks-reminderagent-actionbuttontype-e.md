@@ -28,7 +28,7 @@ Button for closing the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ACTION_BUTTON_TYPE_CLOSE](reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_CLOSE)
+**Substitutes:** ACTION_BUTTON_TYPE_CLOSE
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0-End-->
 
@@ -48,7 +48,7 @@ Button for snoozing the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ACTION_BUTTON_TYPE_SNOOZE](reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_SNOOZE)
+**Substitutes:** ACTION_BUTTON_TYPE_SNOOZE
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1-End-->
 

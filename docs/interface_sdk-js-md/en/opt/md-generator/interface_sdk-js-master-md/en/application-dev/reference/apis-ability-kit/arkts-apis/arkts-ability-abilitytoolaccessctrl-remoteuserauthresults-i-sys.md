@@ -4,6 +4,8 @@ Remote user authorization results.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults--><!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -22,6 +24,8 @@ Permission query information.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery--><!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -39,6 +43,8 @@ Authorization result list.
 **Type:** [RemoteUserAuthItem](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)[]
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]--><!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]-End-->
 

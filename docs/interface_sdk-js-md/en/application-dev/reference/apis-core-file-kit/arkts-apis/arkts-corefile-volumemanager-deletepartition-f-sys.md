@@ -16,7 +16,9 @@ Deletes a partition on a disk. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -33,7 +35,7 @@ Deletes a partition on a disk. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | diskId | string | Yes | Disk ID. |
-| partitionNum | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Partition number. |
+| partitionNum | int | Yes | Partition number. |
 
 **Return value:**
 
@@ -48,8 +50,8 @@ Deletes a partition on a disk. This API uses a promise to return the result.
 | 13600010 | The input parameter is invalid. |
 | 13600008 | No such object. |
 | 13600023 | Delete partition failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600005 | Incorrect volume state. |
 | 13600001 | IPC error. |
 

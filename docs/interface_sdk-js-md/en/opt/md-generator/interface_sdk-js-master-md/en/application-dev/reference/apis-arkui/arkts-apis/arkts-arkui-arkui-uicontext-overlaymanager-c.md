@@ -1,24 +1,10 @@
 # OverlayManager
 
-Provides the capability to draw overlays.
-
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getOverlayManager) in
-> **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.
-> 
-> - The nodes on **OverlayManager** are above the page level, but below such components as created through
-> **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**.
-> 
-> - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the
-> page, and the keyboard avoidance method is also the same as that of the page.
-> 
-> - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the
-> application to prevent changes in property values when switching pages, which could lead to service errors.
+Provides the capability to draw overlays. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getOverlayManager) in > **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance. > > - The nodes on **OverlayManager** are above the page level, but below such components as created through > **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**. > > - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the > page, and the keyboard avoidance method is also the same as that of the page. > > - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the > application to prevent changes in property values when switching pages, which could lead to service errors.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class OverlayManager--><!--Device-unnamed-export class OverlayManager-End-->
 
@@ -39,6 +25,8 @@ addComponentContent(content: ComponentContent, index?: number): void
 Adds a specified **ComponentContent** node to the **OverlayManager**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +49,11 @@ Adds a specified **ComponentContent** node to the **OverlayManager**.
 addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void
 ```
 
-Creates an overlay node with the specified display order.
-
-This API allows you to define the stacking order of the nodes when they are created.
+Creates an overlay node with the specified display order. This API allows you to define the stacking order of the nodes when they are created.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,6 +80,8 @@ Hides all **ComponentContent** nodes on the **OverlayManager**.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -109,6 +99,8 @@ hideComponentContent(content: ComponentContent): void
 Hides a specified **ComponentContent** node on the **OverlayManager**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,6 +125,8 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 Opens an overlay with the specified ComponentContent and options.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,7 +153,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Error Code ID |
 | --- |
-| [103307](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) |
+| [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) |
 
 ## removeComponentContent
 
@@ -170,6 +164,8 @@ removeComponentContent(content: ComponentContent): void
 Removes a specified node from the **OverlayManager**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,6 +191,8 @@ Shows all **ComponentContent** nodes on the **OverlayManager**.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -212,6 +210,8 @@ showComponentContent(content: ComponentContent): void
 Shows a specified **ComponentContent** node on the **OverlayManager**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

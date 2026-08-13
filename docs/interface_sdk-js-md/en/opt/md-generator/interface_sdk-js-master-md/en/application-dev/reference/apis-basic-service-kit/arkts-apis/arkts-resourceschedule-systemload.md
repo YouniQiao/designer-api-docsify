@@ -1,8 +1,10 @@
-# @ohos.resourceschedule.systemload(System Load Level Management)
+# @ohos.resourceschedule.systemload
 
-The **systemload** module allows the system to determine the system load level based on the current temperature,load, and scenario, and notifies registered applications of level changes, if any.
+The **systemload** module allows the system to determine the system load level based on the current temperature, load, and scenario, and notifies registered applications of level changes, if any.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace systemLoad--><!--Device-unnamed-declare namespace systemLoad-End-->
 
@@ -20,9 +22,11 @@ import { systemLoad } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getlevel) |
-| [off](arkts-basicservices-systemload-off-f.md#off) |
-| [on](arkts-basicservices-systemload-on-f.md#on) |
+| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getLevel) |
+| [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md#offSystemLoadChange) |
+| [off_systemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md) |
+| [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md#onSystemLoadChange) |
+| [on_systemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md) |
 
 ### Enums
 

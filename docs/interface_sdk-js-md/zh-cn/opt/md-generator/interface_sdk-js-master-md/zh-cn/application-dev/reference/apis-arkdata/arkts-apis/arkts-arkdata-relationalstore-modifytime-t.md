@@ -6,7 +6,9 @@ type ModifyTime = Map<PRIKeyType, UTCTime>
 
 用于存储数据库表的主键和修改时间的数据类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-type ModifyTime = Map<PRIKeyType, UTCTime>--><!--Device-relationalStore-type ModifyTime = Map<PRIKeyType, UTCTime>-End-->
 

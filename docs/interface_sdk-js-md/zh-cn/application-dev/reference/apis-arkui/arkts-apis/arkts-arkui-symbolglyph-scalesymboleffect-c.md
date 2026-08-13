@@ -8,7 +8,9 @@ ScaleSymbolEffect继承自父类SymbolEffect。
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class ScaleSymbolEffect extends SymbolEffect--><!--Device-unnamed-export declare class ScaleSymbolEffect extends SymbolEffect-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class ScaleSymbolEffect--><!--Device-unnamed-export declare class ScaleSymbolEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ ScaleSymbolEffect的构造函数，缩放动效。
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,15 +47,15 @@ ScaleSymbolEffect的构造函数，缩放动效。
 direction?: EffectDirection
 ```
 
-动效方向。
-
-默认值：EffectDirection.DOWN
+动效方向。 默认值：EffectDirection.DOWN
 
 **类型：** [EffectDirection](arkts-arkui-symbolglyph-effectdirection-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,15 +69,15 @@ direction?: EffectDirection
 scope?: EffectScope
 ```
 
-动效范围。
-
-默认值：EffectScope.LAYER
+动效范围。 默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

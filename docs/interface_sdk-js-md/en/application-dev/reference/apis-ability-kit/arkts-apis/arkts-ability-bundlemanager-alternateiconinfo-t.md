@@ -1,20 +1,22 @@
 # AlternateIconInfo
 
 ```TypeScript
-export type AlternateIconInfo = _BundleInfo.AlternateIconInfo
+export type AlternateIconInfo = _AlternateIconInfo
 ```
 
 Describes the alternate icon information of an application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-bundleManager-export type AlternateIconInfo = _BundleInfo.AlternateIconInfo--><!--Device-bundleManager-export type AlternateIconInfo = _BundleInfo.AlternateIconInfo-End-->
+<!--Device-bundleManager-export type AlternateIconInfo = _AlternateIconInfo--><!--Device-bundleManager-export type AlternateIconInfo = _AlternateIconInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.AlternateIconInfo
+**Property type:** _AlternateIconInfo
 

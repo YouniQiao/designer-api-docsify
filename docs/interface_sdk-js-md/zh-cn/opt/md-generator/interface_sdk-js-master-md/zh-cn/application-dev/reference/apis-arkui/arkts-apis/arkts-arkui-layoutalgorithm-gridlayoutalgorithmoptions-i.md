@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface GridLayoutAlgorithmOptions--><!--Device-unnamed-interface GridLayoutAlgorithmOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,19 +16,15 @@
 columnsGap?: LengthMetrics
 ```
 
-列与列之间的间距。
-
-默认值：LengthMetrics.vp(0) 
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+列与列之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,19 +40,15 @@ columnsGap?: LengthMetrics
 columnsTemplate?: string | ItemFillPolicy
 ```
 
-设置当前网格布局的列数。
-
-默认值：'1fr' 
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+设置当前网格布局的列数。 默认值：'1fr' 非法值：按默认值处理。 装饰器类型：@Trace
 
 **类型：** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,19 +64,15 @@ columnsTemplate?: string | ItemFillPolicy
 rowsGap?: LengthMetrics
 ```
 
-行与行之间的间距。
-
-默认值：LengthMetrics.vp(0) 
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+行与行之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

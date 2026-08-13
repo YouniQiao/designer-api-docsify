@@ -1,13 +1,10 @@
 # BundleResourceInfo (System API)
 
-The module provides resource information of an application, such as the icon and label. The information can be obtained by calling  
-[getBundleResourceInfo](./../@ohos.bundle.bundleResourceManager:bundleResourceManager.bundleResourceManager.getBundleResourceInfo(bundleName: string, resourceFlags?: int)).
+The module provides resource information of an application, such as the icon and label. The information can be obtained by calling getBundleResourceInfo . > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BundleResourceInfo--><!--Device-unnamed-export interface BundleResourceInfo-End-->
 
@@ -25,7 +22,9 @@ Index of an application clone.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleResourceInfo-readonly appIndex: int--><!--Device-BundleResourceInfo-readonly appIndex: int-End-->
 
@@ -43,7 +42,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleResourceInfo-readonly bundleName: string--><!--Device-BundleResourceInfo-readonly bundleName: string-End-->
 
@@ -54,16 +55,18 @@ Bundle name of the application.
 ## drawableDescriptor
 
 ```TypeScript
-readonly drawableDescriptor: DrawableDescriptor
+readonly drawableDescriptor: DrawableDescriptor | null
 ```
 
-drawableDescriptor object of the application icon.
+Indicates the drawable descriptor of this bundle icon
 
-**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor--><!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null--><!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -79,7 +82,9 @@ Application icon, which is encoded using Base64.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleResourceInfo-readonly icon: string--><!--Device-BundleResourceInfo-readonly icon: string-End-->
 
@@ -97,7 +102,9 @@ Application label.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleResourceInfo-readonly label: string--><!--Device-BundleResourceInfo-readonly label: string-End-->
 

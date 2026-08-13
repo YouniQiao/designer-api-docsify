@@ -14,9 +14,11 @@ function getAttachedMechDevices(): MechInfo[]
 
 Obtain the list of connected mechanical devices.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
 
@@ -32,7 +34,7 @@ Obtain the list of connected mechanical devices.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 
 ## Examples
 

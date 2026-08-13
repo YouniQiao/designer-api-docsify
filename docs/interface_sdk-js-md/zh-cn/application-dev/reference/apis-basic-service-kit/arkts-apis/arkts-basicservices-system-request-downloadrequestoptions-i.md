@@ -20,15 +20,39 @@ complete?: () => void
 
 接口调用结束的回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.request.agent.Task.on)
+**替代接口：** on
 
 <!--Device-DownloadRequestOptions-complete?: () => void--><!--Device-DownloadRequestOptions-complete?: () => void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+## description
+
+```TypeScript
+description?: string
+```
+
+Download description. The default value is the file name.
+
+**类型：** string
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+
+**废弃版本：** 9
+
+**替代接口：** description
+
+<!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -40,70 +64,17 @@ fail?: (data: any, code: number) => void
 
 Called when downloading fails.
 
+**类型：** (data: any, code: number) =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.request.agent.Task.on)
+**替代接口：** on
 
 <!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | any | 是 |  |
-| code | number | 是 |  |
-
-## success
-
-```TypeScript
-success?: (data: DownloadResponse) => void
-```
-
-Called when the files are successfully downloaded.
-
-**起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
-**废弃版本：** 9
-
-**替代接口：** [on](ohos.request.agent.Task.on)
-
-<!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md) | 是 |  |
-
-## description
-
-```TypeScript
-description?: string
-```
-
-Download description.The default value is the file name.
-
-**类型：** string
-
-**起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
-**废弃版本：** 9
-
-**替代接口：** [description](ohos.request.agent.Config.description)
-
-<!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -113,7 +84,7 @@ Download description.The default value is the file name.
 filename?: string
 ```
 
-Name of the file to downloaded.The value is obtained from the current request or resource URL by default.
+Name of the file to downloaded. The value is obtained from the current request or resource URL by default.
 
 **类型：** string
 
@@ -123,7 +94,7 @@ Name of the file to downloaded.The value is obtained from the current request or
 
 **废弃版本：** 9
 
-**替代接口：** [saveas](ohos.request.agent.Config.saveas)
+**替代接口：** saveas
 
 <!--Device-DownloadRequestOptions-filename?: string--><!--Device-DownloadRequestOptions-filename?: string-End-->
 
@@ -145,9 +116,31 @@ Request header.
 
 **废弃版本：** 9
 
-**替代接口：** [headers](ohos.request.agent.Config.headers)
+**替代接口：** headers
 
 <!--Device-DownloadRequestOptions-header?: string--><!--Device-DownloadRequestOptions-header?: string-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+## success
+
+```TypeScript
+success?: (data: DownloadResponse) => void
+```
+
+Called when the files are successfully downloaded.
+
+**类型：** (data: DownloadResponse) =&gt; void
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+
+**废弃版本：** 9
+
+**替代接口：** on
+
+<!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -167,7 +160,7 @@ Resource URL.
 
 **废弃版本：** 9
 
-**替代接口：** [url](ohos.request.agent.Config.url)
+**替代接口：** url
 
 <!--Device-DownloadRequestOptions-url: string--><!--Device-DownloadRequestOptions-url: string-End-->
 

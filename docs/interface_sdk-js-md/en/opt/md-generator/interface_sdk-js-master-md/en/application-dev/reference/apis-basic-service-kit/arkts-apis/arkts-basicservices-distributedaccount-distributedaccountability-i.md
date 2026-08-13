@@ -1,9 +1,10 @@
 # DistributedAccountAbility
 
-Provides APIs for querying and updating the login state of a distributed account. You must obtain a  
-**DistributedAccountAbility** instance first.
+Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
@@ -23,7 +24,9 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 Obtains the distributed account information. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -41,9 +44,9 @@ Obtains the distributed account information. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -75,7 +78,9 @@ getOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 Obtains the distributed account information. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -93,8 +98,8 @@ Obtains the distributed account information. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -121,19 +126,13 @@ try {
 queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 ```
 
-Queries the distributed account information. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)
-> instead.
+Queries the distributed account information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountDistributedInfo](#getOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.getOsAccountDistributedInfo(callback:)
+**Substitutes:** [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -170,13 +169,7 @@ accountAbility.queryOsAccountDistributedInfo(
 queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 ```
 
-Queries the distributed account information. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)
-> instead.
+Queries the distributed account information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountDistributedInfo](#getOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
@@ -216,9 +209,11 @@ accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.Di
 setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Sets the distributed account information. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
+Sets the distributed account information. This API uses an asynchronous callback to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -237,11 +232,11 @@ Sets the distributed account information. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300406 |
 
 ## Examples
@@ -274,9 +269,11 @@ try {
 setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Sets the distributed account information. This API uses a promise to return the result.This API can be called only by system applications.
+Sets the distributed account information. This API uses a promise to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -300,11 +297,11 @@ Sets the distributed account information. This API uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300406 |
 
 ## Examples
@@ -335,19 +332,13 @@ try {
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Updates the distributed account information. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)
-> instead.
+Updates the distributed account information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setOsAccountDistributedInfo](#setOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.setOsAccountDistributedInfo(accountInfo:)
+**Substitutes:** [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)(accountInfo: DistributedInfo, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -387,19 +378,13 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Updates the distributed account information. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](#setOsAccountDistributedInfo-1)
-> instead.
+Updates the distributed account information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setOsAccountDistributedInfo](#setOsAccountDistributedInfo) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.setOsAccountDistributedInfo(accountInfo:)
+**Substitutes:** [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)(accountInfo: DistributedInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 

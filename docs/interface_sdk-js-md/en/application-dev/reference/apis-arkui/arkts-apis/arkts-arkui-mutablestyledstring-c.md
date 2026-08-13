@@ -1,13 +1,6 @@
 # MutableStyledString
 
-Inherits from the [StyledString](arkts-arkui-styledstring-c.md#StyledString) class.
-
-> **An exception is thrown in the following cases:**
-> 
-> If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed
-> as **undefined**, an exception is thrown.
-> 
-> **styledKey** or **styledValue** is set to an invalid value or they do not match.
+Inherits from the [StyledString](arkts-arkui-styledstring-c.md#StyledString) class. > **An exception is thrown in the following cases:** > > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed > as **undefined**, an exception is thrown. > > **styledKey** or **styledValue** is set to an invalid value or they do not match.
 
 **Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md#StyledString)
 
@@ -15,7 +8,9 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md#StyledString) cla
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare class MutableStyledString extends StyledString--><!--Device-unnamed-declare class MutableStyledString extends StyledString-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class MutableStyledString--><!--Device-unnamed-declare class MutableStyledString-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +25,8 @@ Appends a styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,13 +48,13 @@ Appends a styled string.
 clearStyles(): void
 ```
 
-Removes all styles of this styled string.
-
-After a style is removed, the value set for the corresponding style attribute in the [Text](text) component is used. If the value is not set, the default value is used.
+Removes all styles of this styled string. After a style is removed, the value set for the corresponding style attribute in the Text component is used. If the value is not set, the default value is used.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +76,8 @@ Inserts a string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -98,7 +97,7 @@ Inserts a string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## insertStyledString
 
@@ -111,6 +110,8 @@ Inserts a new styled string at the specified position.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,7 +132,7 @@ Inserts a new styled string at the specified position.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeString
 
@@ -139,13 +140,13 @@ Inserts a new styled string at the specified position.
 removeString(start: number, length: number): void
 ```
 
-Removes the string in the specified range of this styled string.
-
-This API equally works when the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md#CustomSpan).
+Removes the string in the specified range of this styled string. This API equally works when the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md#CustomSpan).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,7 +167,7 @@ This API equally works when the styled string contains an image or [CustomSpan](
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeStyle
 
@@ -174,15 +175,13 @@ This API equally works when the styled string contains an image or [CustomSpan](
 removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 ```
 
-Removes the style for the specified range of this styled string.
-
-After a style is removed, the value set for the corresponding style attribute in the [Text](text) component is used. If the value is not set, the default value is used.
-
-This API equally works when the styled string contains an image.
+Removes the style for the specified range of this styled string. After a style is removed, the value set for the corresponding style attribute in the Text component is used. If the value is not set, the default value is used. This API equally works when the styled string contains an image.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,7 +203,7 @@ This API equally works when the styled string contains an image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeStyles
 
@@ -212,15 +211,13 @@ This API equally works when the styled string contains an image.
 removeStyles(start: number, length: number): void
 ```
 
-Removes all styles for the specified range of this styled string.
-
-After a style is removed, the value set for the corresponding style attribute in the [Text](text) component is used. If the value is not set, the default value is used.
-
-This API equally works when the styled string contains an image.
+Removes all styles for the specified range of this styled string. After a style is removed, the value set for the corresponding style attribute in the Text component is used. If the value is not set, the default value is used. This API equally works when the styled string contains an image.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -241,7 +238,7 @@ This API equally works when the styled string contains an image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceString
 
@@ -254,6 +251,8 @@ Replaces the string in the specified range of this styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,7 +274,7 @@ Replaces the string in the specified range of this styled string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceStyle
 
@@ -288,6 +287,8 @@ Replaces the style in the specified range of this styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -307,7 +308,7 @@ Replaces the style in the specified range of this styled string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceStyledString
 
@@ -320,6 +321,8 @@ Replaces the styled string in the specified range.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,7 +344,7 @@ Replaces the styled string in the specified range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## setStyle
 
@@ -354,6 +357,8 @@ Sets a new style for the specified range of this styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -373,5 +378,5 @@ Sets a new style for the specified range of this styled string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 

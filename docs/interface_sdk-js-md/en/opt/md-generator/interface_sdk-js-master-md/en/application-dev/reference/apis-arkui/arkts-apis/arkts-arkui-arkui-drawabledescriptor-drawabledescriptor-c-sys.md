@@ -4,6 +4,8 @@ Represents the base class providing overridable methods for [PixelMap](../../api
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class DrawableDescriptor--><!--Device-unnamed-export class DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ constructor()
 Creates a new DrawableDescriptor.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

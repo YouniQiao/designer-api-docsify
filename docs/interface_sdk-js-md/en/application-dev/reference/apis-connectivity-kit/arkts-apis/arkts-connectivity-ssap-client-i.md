@@ -1,10 +1,12 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) to create a ssap client instance.
+Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) to create a ssap client instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
 
@@ -26,7 +28,9 @@ Closes the client.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -42,7 +46,7 @@ Closes the client.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## connect
 
@@ -54,7 +58,9 @@ Connects to the server.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -76,7 +82,7 @@ Connects to the server.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## disconnect
 
@@ -88,7 +94,9 @@ Disconnects from or stops an ongoing connection to a server.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -110,7 +118,7 @@ Disconnects from or stops an ongoing connection to a server.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getServices
 
@@ -122,7 +130,9 @@ Starts discovering all services on server.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -144,7 +154,7 @@ Starts discovering all services on server.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## offConnectionStateChange
 
@@ -156,7 +166,9 @@ Unsubscribes from client connection state changed events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,16 +180,10 @@ Unsubscribes from client connection state changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
 
 ## offMtuChange
 
-ArkTS-Dyn:
-```TypeScript
-offMtuChange(callback?: Callback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 offMtuChange(callback?: Callback<int>): void
 ```
@@ -186,7 +192,9 @@ Unsubscribes from MTU changed events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,7 +206,7 @@ Unsubscribes from MTU changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
 
 ## offPropertyChange
 
@@ -210,7 +218,9 @@ Unsubscribe property value changed event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,7 +232,7 @@ Unsubscribe property value changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | No | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | No | Callback used to listen for the property value changed event. |
 
 ## onConnectionStateChange
 
@@ -230,13 +240,13 @@ Unsubscribe property value changed event.
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to client connection state changed events.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to client connection state changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,27 +258,21 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
 
 ## onMtuChange
 
-ArkTS-Dyn:
-```TypeScript
-onMtuChange(callback: Callback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMtuChange(callback: Callback<int>): void
 ```
 
-Subscribes to MTU changed events.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to MTU changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -280,7 +284,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
 
 ## onPropertyChange
 
@@ -288,13 +292,13 @@ This event is accessible only to applications that granted the ohos.permission.N
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-Subscribe property value changed event.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribe property value changed event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -306,7 +310,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Yes | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Yes | Callback used to listen for the property value changed event. |
 
 ## readProperty
 
@@ -318,7 +322,9 @@ Reads the property of a server.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -346,27 +352,23 @@ Reads the property of a server.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in property. |
 
 ## requestMtuSize
 
-ArkTS-Dyn:
-```TypeScript
-requestMtuSize(mtu: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 requestMtuSize(mtu: int): Promise<void>
 ```
 
-Negotiate the MTU size with server.The negotiation result needs to be obtained by subscribing to MTU event.
+Negotiate the MTU size with server. The negotiation result needs to be obtained by subscribing to MTU event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -380,7 +382,7 @@ Negotiate the MTU size with server.The negotiation result needs to be obtained b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mtu | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The maximum transmission unit. &lt;br&gt;Unit: byte. Recommended value range: [22, 1024]. |
+| mtu | int | Yes | The maximum transmission unit. &lt;br&gt;Unit: byte. Recommended value range: [22, 1024]. |
 
 **Return value:**
 
@@ -394,7 +396,7 @@ Negotiate the MTU size with server.The negotiation result needs to be obtained b
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## setPropertyNotification
 
@@ -406,7 +408,9 @@ Enables or disables notification of a property when value changed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -435,7 +439,7 @@ Enables or disables notification of a property when value changed.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in property. |
 
@@ -449,7 +453,9 @@ Writes the property of a server.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -478,7 +484,7 @@ Writes the property of a server.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in property. |
 

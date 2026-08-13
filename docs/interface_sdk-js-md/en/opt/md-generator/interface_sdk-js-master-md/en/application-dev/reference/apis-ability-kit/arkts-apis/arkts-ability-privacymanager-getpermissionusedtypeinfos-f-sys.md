@@ -16,7 +16,9 @@ function getPermissionUsedTypeInfos(
 
 Obtains information about how a sensitive permission is used by an application.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -43,12 +45,12 @@ Obtains information about how a sensitive permission is used by an application.
 
 | Error Code ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
 
 ## Examples
 

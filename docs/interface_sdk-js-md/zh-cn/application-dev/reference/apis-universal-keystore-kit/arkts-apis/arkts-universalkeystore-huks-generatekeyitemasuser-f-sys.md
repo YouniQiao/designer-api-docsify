@@ -6,11 +6,13 @@
 function generateKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>
 ```
 
-指定用户身份生成密钥，使用Promise方式异步返回结果。基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，通过promise不会返回密钥材料内容，只用于表示此次调用是否成功。
+指定用户身份生成密钥，使用Promise方式异步返回结果。基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，通过 promise不会返回密钥材料内容，只用于表示此次调用是否成功。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -38,25 +40,25 @@ function generateKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Hu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | api is not supported |
-| [12000017](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | the application permission is not sufficient, which may be caused by lack of &lt;br&gt;cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | non-system applications are not allowed to use system APIs. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
-| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
-| [12000002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
-| [12000001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-该子功能不支持特性) | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
-| [12000015](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
-| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | queried credential does not exist |
-| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application permission is not sufficient, which may be caused by lack of &lt;br&gt;cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | non-system applications are not allowed to use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
+| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
+| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
+| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
+| [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | queried credential does not exist |
+| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 
 ## 示例
 
-调用方必须是运行在User0~99（包含0和99）用户身份下的系统应用，同时需要申请ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。允许应用安装到User0的配置指导，请参考[singleton|bool|false|是否允许应用安装到单用户下(U0)](../../../../zh-cn/device-dev/subsystems/subsys-app-privilege-config-guide.md#可由设备厂商配置的特权)
+调用方必须是运行在User0~99（包含0和99）用户身份下的系统应用，同时需要申请ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。允许应用安装到User0的配置指导，请参考[singleton|bool|false|是否允许应用安装到单用户下(U0)](../../../../../zh-cn/device-dev/subsystems/subsys-app-privilege-config-guide.md#可由设备厂商配置的特权)
 
 ```TypeScript
 /* 以生成AES密钥为例 */

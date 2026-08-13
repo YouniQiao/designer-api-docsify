@@ -2,9 +2,11 @@
 
 Enumerates event IDs.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export enum EventId--><!--Device-update-export enum EventId-End-->
 
@@ -20,9 +22,11 @@ EVENT_TASK_BASE = EventClassify.TASK
 
 Task event.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_TASK_BASE = EventClassify.TASK--><!--Device-EventId-EVENT_TASK_BASE = EventClassify.TASK-End-->
 
@@ -38,9 +42,11 @@ EVENT_TASK_RECEIVE = 0x01000001
 
 Task received.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_TASK_RECEIVE = 0x01000001--><!--Device-EventId-EVENT_TASK_RECEIVE = 0x01000001-End-->
 
@@ -56,9 +62,11 @@ EVENT_TASK_CANCEL = 0x01000002
 
 Task cancelled.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_TASK_CANCEL = 0x01000002--><!--Device-EventId-EVENT_TASK_CANCEL = 0x01000002-End-->
 
@@ -74,9 +82,11 @@ EVENT_DOWNLOAD_WAIT = 0x01000003
 
 Waiting for download.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_DOWNLOAD_WAIT = 0x01000003--><!--Device-EventId-EVENT_DOWNLOAD_WAIT = 0x01000003-End-->
 
@@ -92,9 +102,11 @@ EVENT_DOWNLOAD_START = 0x01000004
 
 Download started.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_DOWNLOAD_START = 0x01000004--><!--Device-EventId-EVENT_DOWNLOAD_START = 0x01000004-End-->
 
@@ -110,9 +122,11 @@ EVENT_DOWNLOAD_UPDATE = 0x01000005
 
 Download progress update.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_DOWNLOAD_UPDATE = 0x01000005--><!--Device-EventId-EVENT_DOWNLOAD_UPDATE = 0x01000005-End-->
 
@@ -128,9 +142,11 @@ EVENT_DOWNLOAD_PAUSE = 0x01000006
 
 Download paused.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_DOWNLOAD_PAUSE = 0x01000006--><!--Device-EventId-EVENT_DOWNLOAD_PAUSE = 0x01000006-End-->
 
@@ -146,9 +162,11 @@ EVENT_DOWNLOAD_RESUME = 0x01000007
 
 Download resumed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_DOWNLOAD_RESUME = 0x01000007--><!--Device-EventId-EVENT_DOWNLOAD_RESUME = 0x01000007-End-->
 
@@ -164,9 +182,11 @@ EVENT_DOWNLOAD_SUCCESS = 0x01000008
 
 Download succeeded.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_DOWNLOAD_SUCCESS = 0x01000008--><!--Device-EventId-EVENT_DOWNLOAD_SUCCESS = 0x01000008-End-->
 
@@ -182,9 +202,11 @@ EVENT_DOWNLOAD_FAIL = 0x01000009
 
 Download failed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_DOWNLOAD_FAIL = 0x01000009--><!--Device-EventId-EVENT_DOWNLOAD_FAIL = 0x01000009-End-->
 
@@ -200,9 +222,11 @@ EVENT_UPGRADE_WAIT = 0x0100000a
 
 Waiting for upgrade.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_UPGRADE_WAIT = 0x0100000a--><!--Device-EventId-EVENT_UPGRADE_WAIT = 0x0100000a-End-->
 
@@ -218,9 +242,11 @@ EVENT_UPGRADE_START = 0x0100000b
 
 Upgrade started.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_UPGRADE_START = 0x0100000b--><!--Device-EventId-EVENT_UPGRADE_START = 0x0100000b-End-->
 
@@ -236,9 +262,11 @@ EVENT_UPGRADE_UPDATE = 0x0100000c
 
 Upgrade in progress.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_UPGRADE_UPDATE = 0x0100000c--><!--Device-EventId-EVENT_UPGRADE_UPDATE = 0x0100000c-End-->
 
@@ -254,9 +282,11 @@ EVENT_APPLY_WAIT = 0x0100000d
 
 Waiting for applying the upgrade.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_APPLY_WAIT = 0x0100000d--><!--Device-EventId-EVENT_APPLY_WAIT = 0x0100000d-End-->
 
@@ -272,9 +302,11 @@ EVENT_APPLY_START = 0x0100000e
 
 Applying the upgrade.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_APPLY_START = 0x0100000e--><!--Device-EventId-EVENT_APPLY_START = 0x0100000e-End-->
 
@@ -290,9 +322,11 @@ EVENT_UPGRADE_SUCCESS = 0x0100000f
 
 Upgrade succeeded.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_UPGRADE_SUCCESS = 0x0100000f--><!--Device-EventId-EVENT_UPGRADE_SUCCESS = 0x0100000f-End-->
 
@@ -308,9 +342,11 @@ EVENT_UPGRADE_FAIL = 0x01000010
 
 Update failed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventId-EVENT_UPGRADE_FAIL = 0x01000010--><!--Device-EventId-EVENT_UPGRADE_FAIL = 0x01000010-End-->
 

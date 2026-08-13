@@ -1,17 +1,19 @@
 # WindowSize
 
 ```TypeScript
-export type WindowSize = _AbilityInfo.WindowSize
+export type WindowSize = _WindowSize
 ```
 
 Defines the window size.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type WindowSize = _AbilityInfo.WindowSize--><!--Device-bundleManager-export type WindowSize = _AbilityInfo.WindowSize-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-bundleManager-export type WindowSize = _WindowSize--><!--Device-bundleManager-export type WindowSize = _WindowSize-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _AbilityInfo.WindowSize
+**Property type:** _WindowSize

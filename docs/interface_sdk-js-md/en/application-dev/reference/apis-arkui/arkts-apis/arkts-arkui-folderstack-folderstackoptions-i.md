@@ -6,6 +6,8 @@ FolderStack constructor options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface FolderStackOptions--><!--Device-unnamed-export interface FolderStackOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ FolderStack constructor options.
 upperItems?: Array<string>
 ```
 
-Define the IDs of the sub component that will be moved to the upper half screen when hovering.
-
-Anonymous Object Rectification
+Define the IDs of the sub component that will be moved to the upper half screen when hovering. Anonymous Object Rectification
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,9 +14,11 @@ function getDistanceBetweenLocations(location1: Location, location2: Location): 
 
 Obtains the distance between two locations.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double--><!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double-End-->
 

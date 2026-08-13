@@ -8,7 +8,9 @@ function getCardTypeSync(slotId: number): CardType
 
 Obtains the type of the SIM card inserted in a specified slot.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-function getCardTypeSync(slotId: int): CardType--><!--Device-sim-function getCardTypeSync(slotId: int): CardType-End-->
 

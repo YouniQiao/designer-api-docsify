@@ -2,7 +2,9 @@
 
 Defines device profile information filter options.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceProfileInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceProfileInfoFilterOptions-End-->
 
@@ -26,7 +28,9 @@ Device ID list.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfoFilterOptions-deviceIdList?: Array<string>--><!--Device-DeviceProfileInfoFilterOptions-deviceIdList?: Array<string>-End-->
 
@@ -44,7 +48,9 @@ Whether to request data from the cloud.
 
 **Type:** boolean
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfoFilterOptions-isCloud : boolean--><!--Device-DeviceProfileInfoFilterOptions-isCloud : boolean-End-->
 

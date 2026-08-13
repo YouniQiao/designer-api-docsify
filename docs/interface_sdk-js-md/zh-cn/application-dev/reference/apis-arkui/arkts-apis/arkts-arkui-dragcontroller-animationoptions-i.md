@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-dragController-interface AnimationOptions--><!--Device-dragController-interface AnimationOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 curve?: Curve | ICurve
 ```
 
-设置动画曲线。
-
-默认值：Curve.EaseInOut
+设置动画曲线。 默认值：Curve.EaseInOut
 
 **类型：** Curve \| ICurve
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,21 +42,15 @@ curve?: Curve | ICurve
 duration?: number
 ```
 
-动画持续时间，单位为毫秒。
-
-默认值：1000
-
-**说明：**
-
-- 设置小于0的值时按0处理。
-
-- 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
+动画持续时间，单位为毫秒。 默认值：1000 **说明：** - 设置小于0的值时按0处理。 - 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

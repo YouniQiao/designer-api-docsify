@@ -2,7 +2,9 @@
 
 Provides time zone management capabilities, such as time zone name translation, offset retrieval, and transition rule retrieval.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class TimeZone--><!--Device-i18n-export class TimeZone-End-->
 
@@ -20,9 +22,11 @@ import { i18n } from '@kit.LocalizationKit';
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-Obtains the default time zone object used by an application.If the default time zone has been set by calling setAppDefaultTimeZoneById, the default time zone object is returned. Otherwise, the system time zone object is returned.
+Obtains the default time zone object used by an application. If the default time zone has been set by calling setAppDefaultTimeZoneById, the default time zone object is returned. Otherwise, the system time zone object is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,7 +69,9 @@ static getAvailableIDs(): Array<string>
 
 Obtains the list of time zone IDs supported by the system.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,7 +102,9 @@ static getAvailableZoneCityIDs(): Array<string>
 
 Obtains the list of time zone city IDs supported by the system.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -127,7 +135,9 @@ static getCityDisplayName(cityID: string, locale: string): string
 
 Obtains time zone city display name in the specified language.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -164,7 +174,9 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 Obtains time zone display name in the specified language.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,7 +214,9 @@ getID(): string
 
 Obtains the ID of the specified **TimeZone** object.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -233,7 +247,9 @@ getOffset(date?: number): number
 
 Obtains the offset of the specified time zone at the specified time.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -270,7 +286,9 @@ getRawOffset(): number
 
 Obtains the raw offset of the specified time zone.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -301,7 +319,9 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 Creates a **TimeZone** object corresponding to the specified time zone city.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -337,7 +357,9 @@ static getTimezonesByLocation(longitude: number, latitude: number): Array<TimeZo
 
 Creates an array of **TimeZone** objects corresponding to the specified location.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -362,8 +384,8 @@ Creates an array of **TimeZone** objects corresponding to the specified location
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -385,12 +407,13 @@ try {
 public getZoneRules(): ZoneRules
 ```
 
-Obtains the time zone transition rules. For details about the time zone transition logic, see  
-[DST Transition](../../../internationalization/i18n-dst-transition.md).
+Obtains the time zone transition rules. For details about the time zone transition logic, see [DST Transition](../../../internationalization/i18n-dst-transition.md).
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TimeZone-public getZoneRules(): ZoneRules--><!--Device-TimeZone-public getZoneRules(): ZoneRules-End-->
 
@@ -411,6 +434,8 @@ public isDaylightSavingTime(date: Date): boolean
 Check if the given date use daylight saving time. The calculation will be based on the matched time zone rules.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -438,9 +463,11 @@ Check if the given date use daylight saving time. The calculation will be based 
 static setAppDefaultTimeZoneById(zoneID: string): void
 ```
 
-Sets the default time zone for the current app, the value will be used on the application's runtime lifecycle.When the date time formatting function is used, the default time zone ID of the app is used preferentially.
+Sets the default time zone for the current app, the value will be used on the application's runtime lifecycle. When the date time formatting function is used, the default time zone ID of the app is used preferentially.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -460,7 +487,7 @@ Sets the default time zone for the current app, the value will be used on the ap
 
 | Error Code ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## Examples
 

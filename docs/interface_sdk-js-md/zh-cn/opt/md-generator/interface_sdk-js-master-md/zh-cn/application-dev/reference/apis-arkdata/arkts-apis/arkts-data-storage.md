@@ -1,17 +1,12 @@
-# @ohos.data.storage(轻量级存储)
+# @ohos.data.storage
 
-轻量级存储为应用提供key-value键值型的文件数据处理能力，支持应用对数据进行轻量级存储及查询。数据存储形式为键值对，键的类型为字符串型，值的存储数据类型包括数字型、字符串型、布尔型。
-
-> **说明：**
-
-> - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> - 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.data.preferences](arkts-data-preferences.md#preferences).
+轻量级存储为应用提供key-value键值型的文件数据处理能力，支持应用对数据进行轻量级存储及查询。 数据存储形式为键值对，键的类型为字符串型，值的存储数据类型包括数字型、字符串型、布尔型。 > **说明：**> - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > - 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.data.preferences](arkts-data-preferences.md#@ohos.data.preferences).
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [preferences](ohos.preferences.preferences)
+**替代接口：** preferences
 
 <!--Device-unnamed-declare namespace storage--><!--Device-unnamed-declare namespace storage-End-->
 
@@ -23,15 +18,15 @@
 
 | 名称 |
 | --- |
-| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md#deletestorage) |
-| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md#deletestorage-1) |
-| [deleteStorageSync](arkts-arkdata-storage-deletestoragesync-f.md#deletestoragesync) |
-| [getStorage](arkts-arkdata-storage-getstorage-f.md#getstorage) |
-| [getStorage](arkts-arkdata-storage-getstorage-f.md#getstorage-1) |
-| [getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync) |
-| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md#removestoragefromcache) |
-| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md#removestoragefromcache-1) |
-| [removeStorageFromCacheSync](arkts-arkdata-storage-removestoragefromcachesync-f.md#removestoragefromcachesync) |
+| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md#deleteStorage) |
+| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md#deleteStorage) |
+| [deleteStorageSync](arkts-arkdata-storage-deletestoragesync-f.md#deleteStorageSync) |
+| [getStorage](arkts-arkdata-storage-getstorage-f.md#getStorage) |
+| [getStorage](arkts-arkdata-storage-getstorage-f.md#getStorage) |
+| [getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) |
+| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md#removeStorageFromCache) |
+| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md#removeStorageFromCache) |
+| [removeStorageFromCacheSync](arkts-arkdata-storage-removestoragefromcachesync-f.md#removeStorageFromCacheSync) |
 
 ### 接口
 
@@ -50,5 +45,5 @@
 
 | 名称 |
 | --- |
-| [MAX_KEY_LENGTH](arkts-arkdata-storage-con.md#max_key_length) |
-| [MAX_VALUE_LENGTH](arkts-arkdata-storage-con.md#max_value_length) |
+| [MAX_KEY_LENGTH](arkts-arkdata-storage-con.md#MAX_KEY_LENGTH) |
+| [MAX_VALUE_LENGTH](arkts-arkdata-storage-con.md#MAX_VALUE_LENGTH) |

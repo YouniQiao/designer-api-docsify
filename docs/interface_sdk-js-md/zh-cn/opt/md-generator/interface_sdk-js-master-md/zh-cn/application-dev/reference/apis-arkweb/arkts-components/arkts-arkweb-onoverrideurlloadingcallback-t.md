@@ -4,9 +4,11 @@
 type OnOverrideUrlLoadingCallback = (webResourceRequest: WebResourceRequest) => boolean
 ```
 
-The callback of onOverrideUrlLoading.Should not call WebviewController.loadUrl with the request's URL and then return true.
+The callback of onOverrideUrlLoading. Should not call WebviewController.loadUrl with the request's URL and then return true.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

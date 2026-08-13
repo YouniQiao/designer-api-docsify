@@ -2,7 +2,9 @@
 
 Describes the rotation parameters.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface RotateOptions--><!--Device-window-interface RotateOptions-End-->
 
@@ -26,7 +28,9 @@ X coordinate of the rotation center. The value is a floating-point number in the
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotateOptions-pivotX?: double--><!--Device-RotateOptions-pivotX?: double-End-->
 
@@ -44,7 +48,9 @@ Y coordinate of the rotation center. The value is a floating-point number in the
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotateOptions-pivotY?: double--><!--Device-RotateOptions-pivotY?: double-End-->
 
@@ -62,7 +68,9 @@ Rotation angle around the x-axis. The value is a floating-point number, and the 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotateOptions-x?: double--><!--Device-RotateOptions-x?: double-End-->
 
@@ -80,7 +88,9 @@ Rotation angle around the y-axis. The value is a floating-point number, and the 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotateOptions-y?: double--><!--Device-RotateOptions-y?: double-End-->
 
@@ -98,7 +108,9 @@ Rotation angle around the z-axis. The value is a floating-point number, and the 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotateOptions-z?: double--><!--Device-RotateOptions-z?: double-End-->
 

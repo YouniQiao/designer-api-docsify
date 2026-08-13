@@ -6,9 +6,11 @@ type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: numb
 
 Describes the action event callback of the PiP controller.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindow-type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int) => void--><!--Device-PiPWindow-type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int) => void-End-->
 

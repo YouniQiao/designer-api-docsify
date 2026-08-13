@@ -1,6 +1,8 @@
 # DeviceEventStats (System API)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-interface DeviceEventStats--><!--Device-usageStatistics-interface DeviceEventStats-End-->
 
@@ -24,7 +26,9 @@ The the event occurrence number.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceEventStats-count: int--><!--Device-DeviceEventStats-count: int-End-->
 
@@ -42,7 +46,9 @@ The event id.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceEventStats-eventId: int--><!--Device-DeviceEventStats-eventId: int-End-->
 
@@ -60,7 +66,9 @@ The bundle name or system event name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceEventStats-name: string--><!--Device-DeviceEventStats-name: string-End-->
 

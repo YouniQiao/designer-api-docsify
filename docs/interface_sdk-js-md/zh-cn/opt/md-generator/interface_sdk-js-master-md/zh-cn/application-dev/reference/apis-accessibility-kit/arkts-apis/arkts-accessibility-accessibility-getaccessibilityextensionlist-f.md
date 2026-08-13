@@ -8,7 +8,9 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 查询辅助应用列表，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -35,7 +37,7 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -90,7 +92,9 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 查询辅助应用列表，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -112,7 +116,7 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

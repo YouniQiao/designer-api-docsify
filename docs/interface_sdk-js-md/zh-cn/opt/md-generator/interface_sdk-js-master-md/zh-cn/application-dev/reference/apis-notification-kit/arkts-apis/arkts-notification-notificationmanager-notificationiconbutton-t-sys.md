@@ -8,6 +8,8 @@ export type NotificationIconButton = _NotificationIconButton
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-notificationManager-export type NotificationIconButton = _NotificationIconButton--><!--Device-notificationManager-export type NotificationIconButton = _NotificationIconButton-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

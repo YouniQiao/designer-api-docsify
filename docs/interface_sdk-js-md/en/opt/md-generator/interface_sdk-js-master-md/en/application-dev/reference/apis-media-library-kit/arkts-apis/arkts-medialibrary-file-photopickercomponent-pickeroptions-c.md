@@ -1,13 +1,14 @@
 # PickerOptions
 
-Describes the configuration of a Picker. It inherits from  
-[photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions).
+Describes the configuration of a Picker. It inherits from [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions).
 
 **Inheritance/Implementation:** PickerOptions extends [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions)
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class PickerOptions extends photoAccessHelper.BaseSelectOptions--><!--Device-unnamed-export declare class PickerOptions extends photoAccessHelper.BaseSelectOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PickerOptions--><!--Device-unnamed-export declare class PickerOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -29,6 +30,8 @@ Used to display only the album content corresponding to the specified bundle nam
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -49,6 +52,8 @@ Background color of the Picker grid page. The value is an 8-digit hexadecimal co
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerOptions-backgroundColor?: string--><!--Device-PickerOptions-backgroundColor?: string-End-->
@@ -61,11 +66,13 @@ Background color of the Picker grid page. The value is an 8-digit hexadecimal co
 backgroundOpacity?: number
 ```
 
-Background opacity of the picker. The value range is [0, 1]. **0** indicates completely transparent, and **1**indicates completely opaque.
+Background opacity of the picker. The value range is [0, 1]. **0** indicates completely transparent, and **1** indicates completely opaque.
 
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,12 +88,13 @@ Background opacity of the picker. The value range is [0, 1]. **0** indicates com
 badgeConfig?: BadgeConfig
 ```
 
-Badge configuration. Currently, the **PhotoPickerComponent** supports only one type of badge. For details, see  
-[BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md#BadgeType).
+Badge configuration. Currently, the **PhotoPickerComponent** supports only one type of badge. For details, see [BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md#BadgeType).
 
 **Type:** [BadgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -100,15 +108,13 @@ Badge configuration. Currently, the **PhotoPickerComponent** supports only one t
 checkBoxColor?: string
 ```
 
-Background color of the check box.
-
-The value is an 8-digit hexadecimal color code. The first two digits indicate the transparency, and the last six digits indicate the RGB color value.
-
-For example, '#FFFFFFFF' indicates a white opaque background, and '#80FF0000' indicates a semi-transparent red background.
+Background color of the check box. The value is an 8-digit hexadecimal color code. The first two digits indicate the transparency, and the last six digits indicate the RGB color value. For example, '#FFFFFFFF' indicates a white opaque background, and '#80FF0000' indicates a semi-transparent red background.
 
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,6 +134,8 @@ Text color in the check box. The value is an 8-digit hexadecimal color code. (Th
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerOptions-checkboxTextColor?: string--><!--Device-PickerOptions-checkboxTextColor?: string-End-->
@@ -146,6 +154,8 @@ Information for restoring the PhotoPicker's state from the last exit.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -160,13 +170,13 @@ Information for restoring the PhotoPicker's state from the last exit.
 edgeEffect?: EdgeEffect
 ```
 
-Scrolling effect when the Picker grid page reaches the edge.
-
-The default value is [EdgeEffect.Spring](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md#EdgeEffect).
+Scrolling effect when the Picker grid page reaches the edge. The default value is [EdgeEffect.Spring](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md#EdgeEffect).
 
 **Type:** [EdgeEffect](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,6 +198,8 @@ Space between the bottom of the component and the last row of the grid thumbnail
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PickerOptions-gridEndOffset?: number--><!--Device-PickerOptions-gridEndOffset?: number-End-->
@@ -205,6 +217,8 @@ Margin of the component on a grid page.
 **Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -224,6 +238,8 @@ Space between the top of the component and the first row of the grid thumbnail. 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PickerOptions-gridStartOffset?: number--><!--Device-PickerOptions-gridStartOffset?: number-End-->
@@ -236,12 +252,13 @@ Space between the top of the component and the first row of the grid thumbnail. 
 isRepeatSelectSupported?: boolean
 ```
 
-Whether a single image can be repeatedly selected. **true** if supported, **false** otherwise. The default value is  
-**false**.
+Whether a single image can be repeatedly selected. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -255,11 +272,13 @@ Whether a single image can be repeatedly selected. **true** if supported, **fals
 isSlidingSelectionSupported?: boolean
 ```
 
-Whether to support multiple selections by sliding. **true**: yes; **false**: no. The default value is **false**.This parameter is not available for repeat selection.
+Whether to support multiple selections by sliding. **true**: yes; **false**: no. The default value is **false**. This parameter is not available for repeat selection.
 
 **Type:** boolean
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -273,13 +292,13 @@ Whether to support multiple selections by sliding. **true**: yes; **false**: no.
 isSlidingSupported?: boolean
 ```
 
-Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures.
-
-The default value is **true**.
+Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures. The default value is **true**.
 
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -295,11 +314,13 @@ The default value is **true**.
 maxPhotoSelectNumber?: number
 ```
 
-Maximum number of images that can be selected. The maximum value is **500**, which is limited by **MaxSelected**.The default value is **500**.
+Maximum number of images that can be selected. The maximum value is **500**, which is limited by **MaxSelected**. The default value is **500**.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -315,11 +336,13 @@ Maximum number of images that can be selected. The maximum value is **500**, whi
 maxSelectedReminderMode?: ReminderMode
 ```
 
-Mode of the reminder when the number of selected items reaches the maximum. The options are **NONE**, **TOAST**,and **MASK**. The default value **TOAST**.
+Mode of the reminder when the number of selected items reaches the maximum. The options are **NONE**, **TOAST**, and **MASK**. The default value **TOAST**.
 
 **Type:** [ReminderMode](arkts-medialibrary-file-photopickercomponent-remindermode-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -339,6 +362,8 @@ Maximum number of videos that can be selected. The maximum value is **500**, and
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -353,12 +378,13 @@ Maximum number of videos that can be selected. The maximum value is **500**, and
 orientation?: PickerOrientation
 ```
 
-Sliding preview direction of the grid page. The options are **HORIZONTAL** and **VERTICAL**. The default value is  
-**VERTICAL**. (This parameter is supported since API version 20. In earlier versions, the system defaults to vertical.)
+Sliding preview direction of the grid page. The options are **HORIZONTAL** and **VERTICAL**. The default value is **VERTICAL**. (This parameter is supported since API version 20. In earlier versions, the system defaults to vertical.)
 
 **Type:** [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -372,12 +398,13 @@ Sliding preview direction of the grid page. The options are **HORIZONTAL** and *
 photoBrowserBackgroundColorMode?: PickerColorMode
 ```
 
-Background color of the photo browser page. The options are **AUTO**, **LIGHT**, and **DARK**. The default value is  
-**AUTO**.
+Background color of the photo browser page. The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
 
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -391,11 +418,13 @@ Background color of the photo browser page. The options are **AUTO**, **LIGHT**,
 photoBrowserCheckboxPosition?: [number, number]
 ```
 
-Position of the check box on the photo browser page. The first parameter specifies the offset in the X direction,and the second parameter specifies the offset in the Y direction. The value range is [0, 1], which indicates the offset (from 0% to 100%) to the upper-left corner of the component. The default value is [0, 0].
+Position of the check box on the photo browser page. The first parameter specifies the offset in the X direction, and the second parameter specifies the offset in the Y direction. The value range is [0, 1], which indicates the offset (from 0% to 100%) to the upper-left corner of the component. The default value is [0, 0].
 
 **Type:** [number, number]
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -415,6 +444,8 @@ Margin of the component on a photo browser page.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-PickerOptions-photoBrowserMargin?: Margin--><!--Device-PickerOptions-photoBrowserMargin?: Margin-End-->
@@ -433,6 +464,8 @@ Unique serial number used to distinguish different picker components. The defaul
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-PickerOptions-pickerIndex?: number--><!--Device-PickerOptions-pickerIndex?: number-End-->
@@ -445,12 +478,13 @@ Unique serial number used to distinguish different picker components. The defaul
 preselectedInfos?: Array<PreselectedInfo>
 ```
 
-Array of information previously selected by the user, so that the PhotoPickerComponent identified by  
-**pickerIndex** can display the information.
+Array of information previously selected by the user, so that the PhotoPickerComponent identified by **pickerIndex** can display the information.
 
 **Type:** Array&lt;[PreselectedInfo](arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)&gt;
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -470,6 +504,8 @@ Select mode, which can be **SINGLE_SELECT** or **MULTI_SELECT**. The default val
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerOptions-selectMode?: SelectMode--><!--Device-PickerOptions-selectMode?: SelectMode-End-->
@@ -488,6 +524,8 @@ Single-line display mode of a grid page. In single-line mode, the component does
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PickerOptions-singleLineConfig?: SingleLineConfig--><!--Device-PickerOptions-singleLineConfig?: SingleLineConfig-End-->
@@ -500,13 +538,13 @@ Single-line display mode of a grid page. In single-line mode, the component does
 uiComponentColorMode?: PickerColorMode
 ```
 
-Picker color mode. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/light color mode.
-
-When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark backgroundColor, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light backgroundColor for the same reason.
+Picker color mode. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/light color mode. When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark backgroundColor, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light backgroundColor for the same reason.
 
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

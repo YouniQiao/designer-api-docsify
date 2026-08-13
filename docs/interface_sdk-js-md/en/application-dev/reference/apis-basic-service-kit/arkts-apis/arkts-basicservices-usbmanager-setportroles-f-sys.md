@@ -20,7 +20,7 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Deprecated since:** 12
 
-**Substitutes:** [setPortRoleTypes](usbManager.setPortRoleTypes(portId:)
+**Substitutes:** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md#setPortRoleTypes)(portId: int, powerRole: PowerRoleType, dataRole: DataRoleType)
 
 <!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>--><!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>-End-->
 
@@ -46,5 +46,5 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

@@ -4,11 +4,11 @@
 type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>
 ```
 
-Defines an array that contains the audio effect mode corresponding to a specific audio content type (specified by  
-**ContentType**) and audio stream usage (specified by **StreamUsage**). The  
-[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md#AudioEffectMode) array is read-only.
+Defines an array that contains the audio effect mode corresponding to a specific audio content type (specified by **ContentType**) and audio stream usage (specified by **StreamUsage**). The [AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md#AudioEffectMode) array is read-only.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>--><!--Device-audio-type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>-End-->
 

@@ -4,6 +4,8 @@ Enumerate the album subtypes.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype--><!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -17,6 +19,8 @@ USER_GENERIC = 1
 User album.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-USER_GENERIC = 1--><!--Device-AlbumSubtype-USER_GENERIC = 1-End-->
 
@@ -32,6 +36,8 @@ Favorites.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-FAVORITE = 1025--><!--Device-AlbumSubtype-FAVORITE = 1025-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -45,6 +51,8 @@ VIDEO
 Video album.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-VIDEO--><!--Device-AlbumSubtype-VIDEO-End-->
 
@@ -60,6 +68,8 @@ Photo album.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -73,6 +83,8 @@ ANY = 2147483647
 Any album.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-ANY = 2147483647--><!--Device-AlbumSubtype-ANY = 2147483647-End-->
 

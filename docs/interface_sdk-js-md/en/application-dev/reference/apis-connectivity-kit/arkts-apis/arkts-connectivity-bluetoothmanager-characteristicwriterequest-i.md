@@ -8,7 +8,7 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **Deprecated since:** 10
 
-**Substitutes:** [CharacteristicWriteRequest](ohos.bluetooth.ble/ble.CharacteristicWriteRequest)
+**Substitutes:** [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md#CharacteristicWriteRequest)
 
 <!--Device-bluetoothManager-interface CharacteristicWriteRequest--><!--Device-bluetoothManager-interface CharacteristicWriteRequest-End-->
 
@@ -36,7 +36,7 @@ The UUID of a CharacteristicWriteRequest instance
 
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-characteristicwriterequest-i.md#characteristicUuid)
 
 <!--Device-CharacteristicWriteRequest-characteristicUuid: string--><!--Device-CharacteristicWriteRequest-characteristicUuid: string-End-->
 
@@ -58,7 +58,7 @@ Indicates the address of the client that initiates the write request
 
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-characteristicwriterequest-i.md#deviceId)
 
 <!--Device-CharacteristicWriteRequest-deviceId: string--><!--Device-CharacteristicWriteRequest-deviceId: string-End-->
 
@@ -80,7 +80,7 @@ Whether this request should be pending for later operation
 
 **Deprecated since:** 10
 
-**Substitutes:** [isPrepared](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#isPrepared)
+**Substitutes:** [isPrepared](arkts-connectivity-ble-characteristicwriterequest-i.md#isPrepared)
 
 <!--Device-CharacteristicWriteRequest-isPrep: boolean--><!--Device-CharacteristicWriteRequest-isPrep: boolean-End-->
 
@@ -102,7 +102,7 @@ Whether the remote client need a response
 
 **Deprecated since:** 10
 
-**Substitutes:** [needRsp](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#needRsp)
+**Substitutes:** [needRsp](arkts-connectivity-ble-characteristicwriterequest-i.md#needRsp)
 
 <!--Device-CharacteristicWriteRequest-needRsp: boolean--><!--Device-CharacteristicWriteRequest-needRsp: boolean-End-->
 
@@ -124,7 +124,7 @@ Indicates the byte offset of the start position for writing characteristic value
 
 **Deprecated since:** 10
 
-**Substitutes:** [offset](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#offset)
+**Substitutes:** [offset](arkts-connectivity-ble-characteristicwriterequest-i.md#offset)
 
 <!--Device-CharacteristicWriteRequest-offset: number--><!--Device-CharacteristicWriteRequest-offset: number-End-->
 
@@ -146,7 +146,7 @@ The UUID of the service to which the characteristic belongs
 
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-characteristicwriterequest-i.md#serviceUuid)
 
 <!--Device-CharacteristicWriteRequest-serviceUuid: string--><!--Device-CharacteristicWriteRequest-serviceUuid: string-End-->
 
@@ -168,7 +168,7 @@ The Id of the write request
 
 **Deprecated since:** 10
 
-**Substitutes:** [transId](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#transId)
+**Substitutes:** [transId](arkts-connectivity-ble-characteristicwriterequest-i.md#transId)
 
 <!--Device-CharacteristicWriteRequest-transId: number--><!--Device-CharacteristicWriteRequest-transId: number-End-->
 
@@ -190,7 +190,7 @@ Indicates the value to be written
 
 **Deprecated since:** 10
 
-**Substitutes:** [value](ohos.bluetooth.ble/ble.CharacteristicWriteRequest#value)
+**Substitutes:** [value](arkts-connectivity-ble-characteristicwriterequest-i.md#value)
 
 <!--Device-CharacteristicWriteRequest-value: ArrayBuffer--><!--Device-CharacteristicWriteRequest-value: ArrayBuffer-End-->
 

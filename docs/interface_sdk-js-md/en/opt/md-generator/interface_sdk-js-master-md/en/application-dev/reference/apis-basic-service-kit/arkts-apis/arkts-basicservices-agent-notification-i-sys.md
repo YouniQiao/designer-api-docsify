@@ -2,7 +2,9 @@
 
 Describes the custom information of the notification bar.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface Notification--><!--Device-agent-interface Notification-End-->
 
@@ -20,11 +22,13 @@ import { request } from '@kit.BasicServicesKit';
 disable?: boolean
 ```
 
-Disables the notification.If the value is false, a notification will be displayed, otherwise nothing will be displayed.If not specified, the value is false.
+Disables the notification. If the value is false, a notification will be displayed, otherwise nothing will be displayed. If not specified, the value is false.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Notification-disable?: boolean--><!--Device-Notification-disable?: boolean-End-->
 

@@ -2,7 +2,9 @@
 
 The **vibrator** module allows precise control over the vibration of device vibrators. With the APIs provided by this module, you can start vibration in various modes such as specified duration, preset effect, and custom effect and stop any or all of them.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace vibrator--><!--Device-unnamed-declare namespace vibrator-End-->
 
@@ -20,28 +22,30 @@ import { vibrator } from '@kit.SensorServiceKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getEffectInfoSync](arkts-sensorservice-vibrator-geteffectinfosync-f.md#geteffectinfosync) |
-| [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync) |
-| [isHdHapticSupported](arkts-sensorservice-vibrator-ishdhapticsupported-f.md#ishdhapticsupported) |
-| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect) |
-| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect-1) |
-| [isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync) |
-| [off](arkts-sensorservice-vibrator-off-f.md#off) |
-| [on](arkts-sensorservice-vibrator-on-f.md#on) |
-| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) |
-| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1) |
+| [getEffectInfoSync](arkts-sensorservice-vibrator-geteffectinfosync-f.md#getEffectInfoSync) |
+| [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync) |
+| [isHdHapticSupported](arkts-sensorservice-vibrator-ishdhapticsupported-f.md#isHdHapticSupported) |
+| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect) |
+| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect) |
+| [isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#isSupportEffectSync) |
+| [offVibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md#offVibratorStateChange) |
+| [off_vibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md) |
+| [onVibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md#onVibratorStateChange) |
+| [on_vibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md) |
+| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) |
+| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) |
 | [stop](arkts-sensorservice-vibrator-stop-f.md#stop) |
-| [stop](arkts-sensorservice-vibrator-stop-f.md#stop-1) |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration) |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1) |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-2) |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-3) |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-4) |
-| [stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md#stopvibrationsync) |
+| [stop](arkts-sensorservice-vibrator-stop-f.md#stop) |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) |
+| [stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md#stopVibrationSync) |
 | [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) |
-| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate-1) |
-| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate-2) |
-| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate-3) |
+| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) |
+| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) |
+| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) |
 
 ### Classes
 

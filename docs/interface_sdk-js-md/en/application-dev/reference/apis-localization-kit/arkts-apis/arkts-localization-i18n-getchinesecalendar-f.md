@@ -16,7 +16,9 @@ Obtains the ChineseCalendar object for the specified locale.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,5 +38,5 @@ Obtains the ChineseCalendar object for the specified locale.
 
 | Type | Description |
 | --- | --- |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
+| [ChineseCalendar](../../apis-na/arkts-apis/arkts-na-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
 

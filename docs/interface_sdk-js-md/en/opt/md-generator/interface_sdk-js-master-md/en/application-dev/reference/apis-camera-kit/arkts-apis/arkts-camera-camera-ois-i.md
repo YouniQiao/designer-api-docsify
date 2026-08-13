@@ -6,7 +6,9 @@ OIS (Optical Image Stabilization) interface.
 
 **Since:** 24
 
-<!--Device-camera-interface OIS extends OISQuery--><!--Device-camera-interface OIS extends OISQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface OIS--><!--Device-camera-interface OIS-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,6 +28,8 @@ Sets the OIS mode.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -44,8 +48,8 @@ Sets the OIS mode.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## setOISModeCustom
 
@@ -56,6 +60,8 @@ setOISModeCustom(pitch: number, yaw: number): void
 Sets custom OIS bias values for each axis.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,5 +82,5 @@ Sets custom OIS bias values for each axis.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

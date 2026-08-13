@@ -2,7 +2,9 @@
 
 表示应用保活的设置方类型。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appManager-export enum KeepAliveSetter--><!--Device-appManager-export enum KeepAliveSetter-End-->
 
@@ -18,7 +20,9 @@ SYSTEM = 0
 
 应用保活设置方为系统。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeepAliveSetter-SYSTEM = 0--><!--Device-KeepAliveSetter-SYSTEM = 0-End-->
 
@@ -34,7 +38,9 @@ USER = 1
 
 应用保活设置方为用户。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeepAliveSetter-USER = 1--><!--Device-KeepAliveSetter-USER = 1-End-->
 

@@ -2,7 +2,9 @@
 
 Indicates the operator of SIM.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-export enum OperatorSimCard--><!--Device-sim-export enum OperatorSimCard-End-->
 
@@ -18,7 +20,9 @@ CHINA_TELECOM_CARD = 'china_telecom_card'
 
 Indicates the China Telecom card.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperatorSimCard-CHINA_TELECOM_CARD = 'china_telecom_card'--><!--Device-OperatorSimCard-CHINA_TELECOM_CARD = 'china_telecom_card'-End-->
 

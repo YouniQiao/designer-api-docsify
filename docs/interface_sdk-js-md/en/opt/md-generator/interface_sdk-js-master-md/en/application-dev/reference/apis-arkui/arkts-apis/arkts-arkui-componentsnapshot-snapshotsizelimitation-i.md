@@ -4,6 +4,8 @@ Defines the size limit of a component screenshot.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-componentSnapshot-interface SnapshotSizeLimitation--><!--Device-componentSnapshot-interface SnapshotSizeLimitation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,15 +22,13 @@ import { componentSnapshot } from '@kit.ArkUI';
 maxHeight: number
 ```
 
-Maximum height of a component screenshot.
-
-Value range: (-∞, +∞)
-
-Unit: px.
+Maximum height of a component screenshot. Value range: (-∞, +∞) Unit: px.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,15 +44,13 @@ Unit: px.
 maxWidth: number
 ```
 
-Maximum width of a component screenshot.
-
-Value range: (-∞, +∞)
-
-Unit: px.
+Maximum width of a component screenshot. Value range: (-∞, +∞) Unit: px.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

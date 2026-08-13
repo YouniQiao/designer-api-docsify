@@ -2,7 +2,9 @@
 
 linkEnhance模块提供高效的蓝牙连接和数据传输功能，增强设备间连接的稳定性。使用多通道合并算法，增加设备间连接数，提升跨设备数据传输能力，改善用户使用体验。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -16,8 +18,8 @@ linkEnhance模块提供高效的蓝牙连接和数据传输功能，增强设备
 
 | 名称 |
 | --- |
-| [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md#createconnection) |
-| [createServer](arkts-distributedservice-linkenhance-createserver-f.md#createserver) |
+| [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md#createConnection) |
+| [createServer](arkts-distributedservice-linkenhance-createserver-f.md#createServer) |
 
 ### 接口
 

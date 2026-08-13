@@ -2,9 +2,11 @@
 
 Search result.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface SearchResult--><!--Device-mechanicManager-export interface SearchResult-End-->
 
@@ -26,11 +28,13 @@ targetCount: int
 
 Search result. Returns the number of targets found.0 means not found.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SearchResult-targetCount: int--><!--Device-SearchResult-targetCount: int-End-->
 

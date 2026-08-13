@@ -1,12 +1,10 @@
 # AudioHapticFileDescriptor
 
-Describes the audio-haptic file descriptor.
+Describes the audio-haptic file descriptor. > **NOTE：**> > Ensure that **fd** is an available file descriptor and the values of **offset** and **length** are correct.
 
-> **NOTE：**
-> 
-> Ensure that **fd** is an available file descriptor and the values of **offset** and **length** are correct.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticFileDescriptor--><!--Device-audioHaptic-interface AudioHapticFileDescriptor-End-->
 
@@ -28,7 +26,9 @@ File descriptor of the audio-haptic file, which is generally greater than or equ
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticFileDescriptor-fd: int--><!--Device-AudioHapticFileDescriptor-fd: int-End-->
 
@@ -44,7 +44,9 @@ Number of bytes to read. By default, the length is the number of bytes remaining
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticFileDescriptor-length?: long--><!--Device-AudioHapticFileDescriptor-length?: long-End-->
 
@@ -60,7 +62,9 @@ Offset for reading data from the file, in bytes. By default, the offset is 0.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticFileDescriptor-offset?: long--><!--Device-AudioHapticFileDescriptor-offset?: long-End-->
 

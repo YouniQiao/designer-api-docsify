@@ -4,7 +4,9 @@
 type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 ```
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>--><!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>-End-->
 

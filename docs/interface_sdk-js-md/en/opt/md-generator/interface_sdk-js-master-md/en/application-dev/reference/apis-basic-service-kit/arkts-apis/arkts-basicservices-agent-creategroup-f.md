@@ -12,10 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function createGroup(config: GroupConfig): Promise<string>
 ```
 
-Creates a group based on   
-[GroupConfig](arkts-basicservices-agent-groupconfig-i.md#GroupConfig). This API uses a promise to return the result.
+Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.md#GroupConfig). This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-function createGroup(config: GroupConfig): Promise<string>--><!--Device-agent-function createGroup(config: GroupConfig): Promise<string>-End-->
 
@@ -37,5 +38,5 @@ Creates a group based on
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

@@ -12,9 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -31,10 +33,10 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -59,9 +61,11 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notificationManager-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 
@@ -83,10 +87,10 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

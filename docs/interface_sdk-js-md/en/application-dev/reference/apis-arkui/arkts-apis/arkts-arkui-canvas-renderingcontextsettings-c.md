@@ -6,6 +6,8 @@ This object allows you to set properties when creating a rendering context
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class RenderingContextSettings--><!--Device-unnamed-export declare class RenderingContextSettings-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Create an RenderingContextSettings object based on the antialias and alpha.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RenderingContextSettings-constructor(antialias?: boolean)--><!--Device-RenderingContextSettings-constructor(antialias?: boolean)-End-->
@@ -33,24 +37,4 @@ Create an RenderingContextSettings object based on the antialias and alpha.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | antialias | boolean | No | Indicates whether anti-aliasing is enabled for canvas |
-
-## antialias
-
-```TypeScript
-set antialias(antialias: boolean | undefined)
-```
-
-Set the status whether anti-aliasing is enabled for canvas. The default value is false.
-
-**Type:** boolean
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RenderingContextSettings-set antialias(antialias: boolean | undefined)--><!--Device-RenderingContextSettings-set antialias(antialias: boolean | undefined)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -2,7 +2,9 @@
 
 Enumerates the modules from which information is obtained.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum Module--><!--Device-osAccount-enum Module-End-->
 
@@ -18,7 +20,9 @@ FACE_AUTH = 1
 
 Facial authentication module.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Module-FACE_AUTH = 1--><!--Device-Module-FACE_AUTH = 1-End-->
 

@@ -4,6 +4,8 @@ Nested scroll nested mode
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum NestedScrollMode--><!--Device-unnamed-declare enum NestedScrollMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SELF_ONLY
 Only Self response scrolling.
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ Self priority response scrolling.
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -54,6 +60,8 @@ Parent scrollable component priority response scrolling.
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -71,6 +79,8 @@ PARALLEL
 Both self and parent scrollable component response scrolling.
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

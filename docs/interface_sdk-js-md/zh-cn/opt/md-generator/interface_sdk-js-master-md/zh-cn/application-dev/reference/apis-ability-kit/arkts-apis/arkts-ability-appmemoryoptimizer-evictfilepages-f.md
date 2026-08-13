@@ -10,6 +10,8 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>--><!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>-End-->
@@ -32,4 +34,4 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [16000163](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000163-文件类型错误) |
+| [16000163](../errorcode-ability.md#16000163-文件类型错误) |

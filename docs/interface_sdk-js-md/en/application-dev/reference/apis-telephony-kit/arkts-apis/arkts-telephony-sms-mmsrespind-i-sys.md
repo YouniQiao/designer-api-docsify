@@ -2,9 +2,11 @@
 
 Defines an MMS response index.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsRespInd--><!--Device-sms-export interface MmsRespInd-End-->
 
@@ -28,9 +30,11 @@ Report allowed.
 
 **Type:** ReportType
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsRespInd-reportAllowed?: ReportType--><!--Device-MmsRespInd-reportAllowed?: ReportType-End-->
 
@@ -46,11 +50,13 @@ status: int
 
 Status.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsRespInd-status: int--><!--Device-MmsRespInd-status: int-End-->
 
@@ -68,9 +74,11 @@ Event ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsRespInd-transactionId: string--><!--Device-MmsRespInd-transactionId: string-End-->
 
@@ -88,9 +96,11 @@ Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsRespInd-version: MmsVersionType--><!--Device-MmsRespInd-version: MmsVersionType-End-->
 

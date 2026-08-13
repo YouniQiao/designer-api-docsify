@@ -8,9 +8,11 @@ function isValid(id: HiTraceId): boolean
 
 判断HiTraceId是否有效，同步接口。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean--><!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean-End-->
 

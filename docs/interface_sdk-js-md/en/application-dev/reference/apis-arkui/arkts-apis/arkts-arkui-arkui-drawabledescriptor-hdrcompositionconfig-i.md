@@ -1,12 +1,14 @@
 # HdrCompositionConfig
 
-Options for HDR composition configuration.
+Provides HDR composition configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export interface HdrCompositionConfig--><!--Device-unnamed-export interface HdrCompositionConfig-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface HdrCompositionConfig--><!--Device-unnamed-declare interface HdrCompositionConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +30,13 @@ Rectangle area for HDR composition.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HdrCompositionConfig-rect: Rectangle--><!--Device-HdrCompositionConfig-rect: Rectangle-End-->
 

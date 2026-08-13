@@ -4,6 +4,8 @@ MediaLibrary availability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-interface MediaLibraryAvailability--><!--Device-photoAccessHelper-interface MediaLibraryAvailability-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -26,6 +28,8 @@ MediaLibrary availability status.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaLibraryAvailability-availabilityStatus: AvailabilityStatus--><!--Device-MediaLibraryAvailability-availabilityStatus: AvailabilityStatus-End-->
@@ -43,6 +47,8 @@ MediaLibrary unavailability reason.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

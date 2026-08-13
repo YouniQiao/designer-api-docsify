@@ -4,6 +4,8 @@ Define the style of checkbox mark.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MarkStyle--><!--Device-unnamed-declare interface MarkStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Define the size of checkbox mark.
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Define the stroke color of checkbox mark.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -59,6 +65,8 @@ Define the stroke width of checkbox mark.
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

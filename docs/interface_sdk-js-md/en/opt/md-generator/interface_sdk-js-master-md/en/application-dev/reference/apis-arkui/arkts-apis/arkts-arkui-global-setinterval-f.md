@@ -14,6 +14,8 @@ Sets the interval for repeatedly calling a function.
 
 **Since:** 5
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function setInterval(  handler: Function,  delay: number,  ...arguments: any[]): number--><!--Device-unnamed-export declare function setInterval(  handler: Function,  delay: number,  ...arguments: any[]): number-End-->

@@ -2,7 +2,9 @@
 
 Enumerates shortcut menu triggering modes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-enum RightClickType--><!--Device-pointer-enum RightClickType-End-->
 
@@ -16,7 +18,9 @@ TOUCHPAD_RIGHT_BUTTON = 1
 
 Tapping the right-button area of the touchpad.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RightClickType-TOUCHPAD_RIGHT_BUTTON = 1--><!--Device-RightClickType-TOUCHPAD_RIGHT_BUTTON = 1-End-->
 
@@ -30,7 +34,9 @@ TOUCHPAD_LEFT_BUTTON = 2
 
 Tapping the left-button area of the touchpad.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RightClickType-TOUCHPAD_LEFT_BUTTON = 2--><!--Device-RightClickType-TOUCHPAD_LEFT_BUTTON = 2-End-->
 
@@ -44,7 +50,9 @@ TOUCHPAD_TWO_FINGER_TAP = 3
 
 Tapping or pressing the touchpad with two fingers.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RightClickType-TOUCHPAD_TWO_FINGER_TAP = 3--><!--Device-RightClickType-TOUCHPAD_TWO_FINGER_TAP = 3-End-->
 
@@ -58,7 +66,9 @@ TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON = 4
 
 Tapping or pressing the touchpad with two fingers, or tapping the right-button area of the touchpad.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RightClickType-TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON = 4--><!--Device-RightClickType-TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON = 4-End-->
 
@@ -72,7 +82,9 @@ TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON = 5
 
 Tapping or pressing the touchpad with two fingers, or tapping the left-button area of the touchpad.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RightClickType-TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON = 5--><!--Device-RightClickType-TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON = 5-End-->
 

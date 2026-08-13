@@ -12,7 +12,7 @@ function queryKey(id: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 10
 
-**替代接口：** [queryKey](contact.queryKey(context:)
+**替代接口：** [queryKey](#queryKey)(context: Context, id: number, callback: AsyncCallback&lt;string&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -53,6 +53,8 @@ function queryKey(context: Context, id: number, callback: AsyncCallback<string>)
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryKey(context: Context, id: number, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(context: Context, id: number, callback: AsyncCallback<string>): void-End-->
@@ -71,12 +73,12 @@ function queryKey(context: Context, id: number, callback: AsyncCallback<string>)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -107,7 +109,7 @@ function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): 
 
 **废弃版本：** 10
 
-**替代接口：** [queryKey](contact.queryKey(context:)
+**替代接口：** [queryKey](#queryKey)(context: Context, id: number, holder: Holder, callback: AsyncCallback&lt;string&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -153,6 +155,8 @@ function queryKey(context: Context, id: number, holder: Holder, callback: AsyncC
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryKey(context: Context, id: number, holder: Holder, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(context: Context, id: number, holder: Holder, callback: AsyncCallback<string>): void-End-->
@@ -172,12 +176,12 @@ function queryKey(context: Context, id: number, holder: Holder, callback: AsyncC
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -212,7 +216,7 @@ function queryKey(id: number, holder?: Holder): Promise<string>
 
 **废弃版本：** 10
 
-**替代接口：** [queryKey](contact.queryKey(context:)
+**替代接口：** [queryKey](#queryKey)(context: Context, id: number, holder?: Holder)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -259,6 +263,8 @@ function queryKey(context: Context, id: number, holder?: Holder): Promise<string
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryKey(context: Context, id: number, holder?: Holder): Promise<string>--><!--Device-contact-function queryKey(context: Context, id: number, holder?: Holder): Promise<string>-End-->
@@ -283,12 +289,12 @@ function queryKey(context: Context, id: number, holder?: Holder): Promise<string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

@@ -6,7 +6,9 @@ Defines the inline style options.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CounterV2InlineStyleOptions--><!--Device-unnamed-declare class CounterV2InlineStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,24 +17,6 @@ Defines the inline style options.
 ```TypeScript
 import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@kit.ArkUI';
 ```
-
-## onChange
-
-```TypeScript
-onChange?: OnInlineCounterV2Change
-```
-
-Trigger an event when the value of the counter has been changed.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change--><!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## max
 
@@ -47,6 +31,8 @@ Set maximum value of the counter component
 **Default:** 999
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +56,35 @@ Set minimum value of the counter component
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CounterV2InlineStyleOptions-min?: int--><!--Device-CounterV2InlineStyleOptions-min?: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onChange
+
+```TypeScript
+onChange?: OnInlineCounterV2Change
+```
+
+Trigger an event when the value of the counter has been changed.
+
+**Type:** [OnInlineCounterV2Change](arkts-arkui-oninlinecounterv2change-t.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change--><!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,13 +94,15 @@ Set minimum value of the counter component
 textWidth?: number
 ```
 
-Set text width of the counter component, ranges greater than or equal to 0.If undefined is passed, the text width will adapt to the text content.
+Set text width of the counter component, ranges greater than or equal to 0. If undefined is passed, the text width will adapt to the text content.
 
 **Type:** number
 
 **Default:** undefined
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,6 +125,8 @@ Set initial value of the counter component, ranges from min to max.
 **Default:** 0
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

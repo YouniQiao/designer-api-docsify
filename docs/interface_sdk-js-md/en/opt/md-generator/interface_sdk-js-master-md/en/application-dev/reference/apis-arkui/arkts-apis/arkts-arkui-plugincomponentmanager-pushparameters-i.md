@@ -4,6 +4,8 @@ Defines the parameters required when using the **PluginManager.Push** API.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-pluginComponentManager-interface PushParameters--><!--Device-pluginComponentManager-interface PushParameters-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Component data.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-data: KVObject--><!--Device-PushParameters-data: KVObject-End-->
@@ -44,6 +48,8 @@ Extra data.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-extraData: KVObject--><!--Device-PushParameters-extraData: KVObject-End-->
@@ -56,12 +62,13 @@ Extra data.
 jsonPath?: string
 ```
 
-Path to the  
-[external.json](../../../reference/apis-arkui/js-apis-plugincomponent.md#about-the-externaljson-file) file that stores the template path.
+Path to the external.json file that stores the template path.
 
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -81,6 +88,8 @@ Component name.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PushParameters-name: string--><!--Device-PushParameters-name: string-End-->
@@ -98,6 +107,8 @@ Ability information of the component user.
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

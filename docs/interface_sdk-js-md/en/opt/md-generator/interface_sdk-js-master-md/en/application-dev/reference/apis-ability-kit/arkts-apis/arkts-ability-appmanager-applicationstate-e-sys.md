@@ -1,9 +1,10 @@
 # ApplicationState (System API)
 
-Enumerates the application states. This enum can be used together with  
-[AbilityStateData](arkts-ability-abilitystatedata-c.md#AbilityStateData) to return the application state.
+Enumerates the application states. This enum can be used together with [AbilityStateData](arkts-ability-abilitystatedata-c.md#AbilityStateData) to return the application state.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appManager-export enum ApplicationState--><!--Device-appManager-export enum ApplicationState-End-->
 
@@ -19,7 +20,9 @@ STATE_CREATE
 
 The application is being created.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationState-STATE_CREATE--><!--Device-ApplicationState-STATE_CREATE-End-->
 
@@ -35,7 +38,9 @@ STATE_FOREGROUND
 
 The application is running in the foreground.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationState-STATE_FOREGROUND--><!--Device-ApplicationState-STATE_FOREGROUND-End-->
 
@@ -51,7 +56,9 @@ STATE_ACTIVE
 
 The application is active.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationState-STATE_ACTIVE--><!--Device-ApplicationState-STATE_ACTIVE-End-->
 
@@ -67,7 +74,9 @@ STATE_BACKGROUND
 
 The application is running in the background.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationState-STATE_BACKGROUND--><!--Device-ApplicationState-STATE_BACKGROUND-End-->
 
@@ -83,7 +92,9 @@ STATE_DESTROY
 
 The application is being destroyed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationState-STATE_DESTROY--><!--Device-ApplicationState-STATE_DESTROY-End-->
 

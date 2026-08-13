@@ -14,9 +14,11 @@ function isNfcOpen(): boolean
 
 Checks whether NFC is enabled.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-nfcController-function isNfcOpen(): boolean--><!--Device-nfcController-function isNfcOpen(): boolean-End-->
 

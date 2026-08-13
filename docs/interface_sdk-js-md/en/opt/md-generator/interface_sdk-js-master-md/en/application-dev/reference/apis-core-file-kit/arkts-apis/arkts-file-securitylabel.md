@@ -2,7 +2,9 @@
 
 The **securityLabel** module provides APIs for managing data security levels of files, including obtaining and setting file security levels.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace securityLabel--><!--Device-unnamed-declare namespace securityLabel-End-->
 
@@ -20,12 +22,12 @@ import { securityLabel } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getsecuritylabel) |
-| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getsecuritylabel-1) |
-| [getSecurityLabelSync](arkts-corefile-securitylabel-getsecuritylabelsync-f.md#getsecuritylabelsync) |
-| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setsecuritylabel) |
-| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setsecuritylabel-1) |
-| [setSecurityLabelSync](arkts-corefile-securitylabel-setsecuritylabelsync-f.md#setsecuritylabelsync) |
+| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getSecurityLabel) |
+| [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md#getSecurityLabel) |
+| [getSecurityLabelSync](arkts-corefile-securitylabel-getsecuritylabelsync-f.md#getSecurityLabelSync) |
+| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setSecurityLabel) |
+| [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md#setSecurityLabel) |
+| [setSecurityLabelSync](arkts-corefile-securitylabel-setsecuritylabelsync-f.md#setSecurityLabelSync) |
 
 ### Types
 

@@ -3,6 +3,7 @@
 ## ArcList
 
 ```TypeScript
+@ComponentBuilder
 export declare function ArcList(
     options?: ArkListOptions, 
     content_?: CustomBuilder,
@@ -15,7 +16,9 @@ export declare function ArcList(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-@ComponentBuilderexport declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -36,6 +39,7 @@ export declare function ArcList(
 ## ArcList
 
 ```TypeScript
+@Builder
 export declare function ArcList(
     style_: CustomBuilderT<ArcListAttribute>,
     content_?: CustomBuilder
@@ -48,11 +52,11 @@ export declare function ArcList(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute--><!--Device-unnamed-@Builderexport declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

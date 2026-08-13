@@ -8,7 +8,9 @@ Draw context object for the OffscreenCanvas component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer--><!--Device-unnamed-export declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class OffscreenCanvasRenderingContext2D--><!--Device-unnamed-export declare class OffscreenCanvasRenderingContext2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor of the canvas drawing context object, which is used to create a draw
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Generate a character string in the data url format.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,6 +87,8 @@ transfer the content to ImageBitmap
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

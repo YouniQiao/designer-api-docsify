@@ -2,9 +2,11 @@
 
 Describes the transferred file information.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-opp-interface OppTransferInformation--><!--Device-opp-interface OppTransferInformation-End-->
 
@@ -26,11 +28,13 @@ currentBytes: long
 
 Number of bytes of the file that have been transferred currently
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,11 +52,13 @@ currentCount: int
 
 Number of files currently transferred
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,9 +78,11 @@ File Transfer Direction
 
 **Type:** [DirectionType](arkts-connectivity-opp-directiontype-e-sys.md)
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,9 +102,11 @@ Path of the file to be transferred.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,9 +126,11 @@ Device Address of the peer transmission object
 
 **Type:** string
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,9 +150,11 @@ Device name of the peer transmission object
 
 **Type:** string
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,9 +174,11 @@ File transfer result
 
 **Type:** [TransferResult](arkts-connectivity-opp-transferresult-e-sys.md)
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,9 +198,11 @@ File transfer status
 
 **Type:** TransferStatus
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,11 +220,13 @@ totalBytes: long
 
 Total number of file bytes to transfer
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,11 +244,13 @@ totalCount: int
 
 Total number of transferred files
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

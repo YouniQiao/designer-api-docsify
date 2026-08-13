@@ -12,6 +12,8 @@ declare function stat(file: string | number): Promise<Stat>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function stat(file: string | number): Promise<Stat>--><!--Device-unnamed-declare function stat(file: string | number): Promise<Stat>-End-->
@@ -61,6 +63,8 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function stat(file: string | number, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function stat(file: string | number, callback: AsyncCallback<Stat>): void-End-->
@@ -72,7 +76,7 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string \| number | 是 | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。&lt;br&gt;**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
 
 **错误码：**
 

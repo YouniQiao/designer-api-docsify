@@ -18,7 +18,7 @@ Displays the notification text.
 
 **Deprecated since:** 9
 
-**Substitutes:** [showToast](ohos.arkui.UIContext.PromptAction#showToast)
+**Substitutes:** showToast
 
 <!--Device-prompt-function showToast(options: ShowToastOptions): void--><!--Device-prompt-function showToast(options: ShowToastOptions): void-End-->
 

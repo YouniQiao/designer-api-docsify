@@ -2,9 +2,11 @@
 
 字幕风格。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-accessibility-interface CaptionsStyle--><!--Device-accessibility-interface CaptionsStyle-End-->
 
@@ -16,19 +18,15 @@
 backgroundColor: int | string
 ```
 
-描述字幕背景颜色。
+描述字幕背景颜色。 number：HEX 格式颜色，支持 rgb 或 argb。 string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-number：HEX 格式颜色，支持 rgb 或 argb。
+**类型：** int \| string
 
-string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
+**起始版本：** 23
 
-例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
-
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -44,19 +42,15 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 fontColor: int | string
 ```
 
-描述字幕字体颜色。
+描述字幕字体颜色。 number：HEX 格式颜色，支持 rgb 或 argb。 string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-number：HEX 格式颜色，支持 rgb 或 argb。
+**类型：** int \| string
 
-string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
+**起始版本：** 23
 
-例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
-
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -76,9 +70,11 @@ fontEdgeType: CaptionsFontEdgeType
 
 **类型：** [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -98,9 +94,11 @@ fontFamily: CaptionsFontFamily
 
 **类型：** [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -118,11 +116,13 @@ fontScale: int
 
 描述字幕字体缩放系数，单位%，参数范围1~200。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -138,19 +138,15 @@ fontScale: int
 windowColor: int | string
 ```
 
-描述字幕窗口颜色。
+描述字幕窗口颜色。 number：HEX 格式颜色，支持 rgb 或 argb。 string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-number：HEX 格式颜色，支持 rgb 或 argb。
+**类型：** int \| string
 
-string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
+**起始版本：** 23
 
-例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
-
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

@@ -1,8 +1,10 @@
 # WebMessageType
 
-Enum type supplied to [onMessageEventExt](onMessageEventExt) for indicating the type of web message.
+Enum type supplied to [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onMessageEventExt) for indicating the type of web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebMessageType--><!--Device-webview-enum WebMessageType-End-->
 
@@ -17,6 +19,8 @@ NOT_SUPPORT = 0
 Unsupported data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ The string data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageType-STRING = 1--><!--Device-WebMessageType-STRING = 1-End-->
@@ -49,6 +55,8 @@ NUMBER = 2
 The number data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ The boolean data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageType-BOOLEAN = 3--><!--Device-WebMessageType-BOOLEAN = 3-End-->
@@ -81,6 +91,8 @@ ARRAY_BUFFER = 4
 The arraybuffer data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ The array data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageType-ARRAY = 5--><!--Device-WebMessageType-ARRAY = 5-End-->
@@ -113,6 +127,8 @@ ERROR = 6
 The error data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

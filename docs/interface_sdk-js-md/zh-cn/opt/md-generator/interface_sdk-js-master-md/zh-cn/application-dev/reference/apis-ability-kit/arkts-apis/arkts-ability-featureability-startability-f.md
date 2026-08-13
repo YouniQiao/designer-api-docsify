@@ -6,13 +6,11 @@
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<number>): void
 ```
 
-启动新的Ability。使用callback异步回调。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动新的Ability。使用callback异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -65,13 +63,11 @@ featureAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<number>
 ```
 
-启动新的Ability。使用Promise异步回调。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动新的Ability。使用Promise异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

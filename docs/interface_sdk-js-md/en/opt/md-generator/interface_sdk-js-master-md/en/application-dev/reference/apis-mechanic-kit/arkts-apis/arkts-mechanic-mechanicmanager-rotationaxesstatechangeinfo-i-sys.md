@@ -2,7 +2,9 @@
 
 Rotation axes state change information.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface RotationAxesStateChangeInfo--><!--Device-mechanicManager-export interface RotationAxesStateChangeInfo-End-->
 
@@ -26,7 +28,9 @@ ID of the mechanical device.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationAxesStateChangeInfo-mechId: int--><!--Device-RotationAxesStateChangeInfo-mechId: int-End-->
 
@@ -44,7 +48,9 @@ Rotate axis status.
 
 **Type:** [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus--><!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus-End-->
 

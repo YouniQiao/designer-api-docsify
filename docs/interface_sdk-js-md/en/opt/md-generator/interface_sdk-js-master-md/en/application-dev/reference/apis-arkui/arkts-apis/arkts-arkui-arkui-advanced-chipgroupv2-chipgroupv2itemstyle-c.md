@@ -4,7 +4,7 @@ Defines ChipGroupV2 item style.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ChipGroupV2ItemStyle--><!--Device-unnamed-export declare class ChipGroupV2ItemStyle-End-->
 
@@ -26,6 +26,8 @@ The constructor of ChipGroupV2ItemStyle
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ The constructor of ChipGroupV2ItemStyle
 ## backgroundColor
 
 ```TypeScript
-public backgroundColor?: ColorMetrics
+@Trace
+    public backgroundColor?: ColorMetrics
 ```
 
 ChipV2 item background color.
@@ -52,18 +55,21 @@ ChipV2 item background color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2ItemStyle-public backgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-public backgroundColor?: ColorMetrics-End-->
+<!--Device-ChipGroupV2ItemStyle-@Trace    public backgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace    public backgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
 
 ```TypeScript
-public backgroundSystemMaterial?: uiMaterial.Material
+@Trace
+  public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -72,18 +78,21 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2ItemStyle-public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-public backgroundSystemMaterial?: uiMaterial.Material-End-->
+<!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
 
 ```TypeScript
-public fontColor?: ColorMetrics
+@Trace
+    public fontColor?: ColorMetrics
 ```
 
 Text font color.
@@ -92,18 +101,21 @@ Text font color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2ItemStyle-public fontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-public fontColor?: ColorMetrics-End-->
+<!--Device-ChipGroupV2ItemStyle-@Trace    public fontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace    public fontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedBackgroundColor
 
 ```TypeScript
-public selectedBackgroundColor?: ColorMetrics
+@Trace
+    public selectedBackgroundColor?: ColorMetrics
 ```
 
 Selected chip item background color.
@@ -112,38 +124,44 @@ Selected chip item background color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2ItemStyle-public selectedBackgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-public selectedBackgroundColor?: ColorMetrics-End-->
+<!--Device-ChipGroupV2ItemStyle-@Trace    public selectedBackgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace    public selectedBackgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedBackgroundSystemMaterial
 
 ```TypeScript
-public selectedBackgroundSystemMaterial?: uiMaterial.Material
+@Trace
+  public selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component when selected. Different materials have different effects,which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component when selected. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2ItemStyle-public selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-public selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
+<!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedFontColor
 
 ```TypeScript
-public selectedFontColor?: ColorMetrics
+@Trace
+    public selectedFontColor?: ColorMetrics
 ```
 
 Selected Text font color.
@@ -152,18 +170,21 @@ Selected Text font color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2ItemStyle-public selectedFontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-public selectedFontColor?: ColorMetrics-End-->
+<!--Device-ChipGroupV2ItemStyle-@Trace    public selectedFontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace    public selectedFontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
 
 ```TypeScript
-public size?: ChipV2Size | SizeT<LengthMetrics>
+@Trace
+    public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
 ChipV2 size.
@@ -172,10 +193,12 @@ ChipV2 size.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2ItemStyle-public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipGroupV2ItemStyle-public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
+<!--Device-ChipGroupV2ItemStyle-@Trace    public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipGroupV2ItemStyle-@Trace    public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

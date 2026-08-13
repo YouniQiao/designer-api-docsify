@@ -4,6 +4,8 @@ Defines the settings for images of the ResourceStr type.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ResourceImageAttachmentOptions--><!--Device-unnamed-declare interface ResourceImageAttachmentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Image color filter of the styled string.
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Image layout.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -54,13 +60,13 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
-
-Default value: **ImageFit.Cover**
+Image scaling type. The **ImageFit.MATRIX** enum value is not supported. Default value: **ImageFit.Cover**
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +88,8 @@ Image data source.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -102,6 +110,8 @@ Image size.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -116,16 +126,13 @@ Image size.
 supportSvg2?: boolean
 ```
 
-Whether to enable  
-[enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
-
-**true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
-
-Default value: **false**
+Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md). **true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,15 +148,13 @@ Default value: **false**
 syncLoad?: boolean
 ```
 
-Whether to load the image synchronously. By default, the image is loaded asynchronously. During synchronous loading, the UI thread is blocked and the placeholder image is not displayed.
-
-**true**: synchronous loading; **false**: asynchronous loading.
-
-Default value: **false**
+Whether to load the image synchronously. By default, the image is loaded asynchronously. During synchronous loading, the UI thread is blocked and the placeholder image is not displayed. **true**: synchronous loading; **false**: asynchronous loading. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,13 +170,13 @@ Default value: **false**
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.
-
-Default value: **ImageSpanAlignment.BOTTOM**
+Alignment mode of the image with the text. Default value: **ImageSpanAlignment.BOTTOM**
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

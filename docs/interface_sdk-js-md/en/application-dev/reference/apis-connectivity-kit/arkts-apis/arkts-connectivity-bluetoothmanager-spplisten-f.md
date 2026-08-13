@@ -12,7 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function sppListen(name: string, option: SppOption, callback: AsyncCallback<number>): void
 ```
 
-Creates a Bluetooth server listening socket.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Creates a Bluetooth server listening socket. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Creates a Bluetooth server listening socket.On API 10 and above, the permission 
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppListen](ohos.bluetooth.socket/socket#sppListen)
+**Substitutes:** [sppListen](arkts-connectivity-socket-spplisten-f.md#sppListen)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -36,16 +36,16 @@ Creates a Bluetooth server listening socket.On API 10 and above, the permission 
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
 | option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md#SppOption). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900004 | Profile not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

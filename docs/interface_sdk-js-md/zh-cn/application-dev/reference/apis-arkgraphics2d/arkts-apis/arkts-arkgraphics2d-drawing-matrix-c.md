@@ -1,28 +1,12 @@
 # Matrix
 
-矩阵对象，用于图形的坐标变换，支持平移、旋转、缩放和倾斜等变换操作。通过矩阵变换可实现不同坐标系之间的映射。
+矩阵对象，用于图形的坐标变换，支持平移、旋转、缩放和倾斜等变换操作。通过矩阵变换可实现不同坐标系之间的映射。 表示为3×3的矩阵，如下图所示：  矩阵中的元素从左到右，从上到下分别表示水平缩放因子、水平倾斜系数、水平位移系数、垂直倾斜系数、垂直缩放因子、垂直位移系数、x轴透视系数、y轴透视系数、透视缩放因子。 设(x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;)为源坐标点，(x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;)为源坐标点通过矩阵变换后的坐标点，则两个坐标点的关系如下：  > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-表示为3×3的矩阵，如下图所示：
+**起始版本：** 23
 
-![matrix_3x3](../../../reference/apis-arkgraphics2d/figures/matrix3X3.PNG)
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-矩阵中的元素从左到右，从上到下分别表示水平缩放因子、水平倾斜系数、水平位移系数、垂直倾斜系数、垂直缩放因子、垂直位移系数、x轴透视系数、y轴透视系数、透视缩放因子。
-
-设(x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;)为源坐标点，(x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;)为源坐标点通过矩阵变换后的坐标点，则两个坐标点的关系如下：
-
-![matrix-xy](../../../reference/apis-arkgraphics2d/figures/matrix-xy.PNG)
-
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
-
-**起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-drawing-class Matrix--><!--Device-drawing-class Matrix-End-->
 
@@ -36,9 +20,11 @@ constructor()
 
 构造一个矩阵对象。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-constructor()--><!--Device-Matrix-constructor()-End-->
 
@@ -52,9 +38,11 @@ constructor(matrix: Matrix)
 
 拷贝一个矩阵。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-constructor(matrix: Matrix)--><!--Device-Matrix-constructor(matrix: Matrix)-End-->
 
@@ -78,6 +66,8 @@ getAll(): Array<number>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-Matrix-getAll(): Array<number>--><!--Device-Matrix-getAll(): Array<number>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -98,7 +88,9 @@ getAll(): Array<double> | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-getAll(): Array<double> | undefined--><!--Device-Matrix-getAll(): Array<double> | undefined-End-->
 
@@ -112,21 +104,17 @@ getAll(): Array<double> | undefined
 
 ## getValue
 
-ArkTS-Dyn:
-```TypeScript
-getValue(index: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getValue(index: int): double
 ```
 
 获取矩阵给定索引位的值。索引范围0-8。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-getValue(index: int): double--><!--Device-Matrix-getValue(index: int): double-End-->
 
@@ -136,19 +124,19 @@ getValue(index: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 索引位置，范围0-8，该参数为整数。 |
+| index | int | 是 | 索引位置，范围0-8，该参数为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 函数返回矩阵给定索引位对应的值，该返回值为整数。 |
+| double | 函数返回矩阵给定索引位对应的值，该返回值为整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## invert
 
@@ -158,9 +146,11 @@ invert(matrix: Matrix): boolean
 
 将矩阵matrix设置为当前矩阵的逆矩阵，并返回是否设置成功的结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-invert(matrix: Matrix): boolean--><!--Device-Matrix-invert(matrix: Matrix): boolean-End-->
 
@@ -182,7 +172,7 @@ invert(matrix: Matrix): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isAffine
 
@@ -192,9 +182,11 @@ isAffine(): boolean
 
 判断当前矩阵是否为仿射矩阵。仿射矩阵是一种包括平移、旋转、缩放等变换的矩阵。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-isAffine(): boolean--><!--Device-Matrix-isAffine(): boolean-End-->
 
@@ -214,9 +206,11 @@ isEqual(matrix: Matrix): boolean
 
 判断两个矩阵是否相等。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-isEqual(matrix: Matrix): boolean--><!--Device-Matrix-isEqual(matrix: Matrix): boolean-End-->
 
@@ -238,7 +232,7 @@ isEqual(matrix: Matrix): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isIdentity
 
@@ -248,9 +242,11 @@ isIdentity(): boolean
 
 判断矩阵是否是单位矩阵。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-isIdentity(): boolean--><!--Device-Matrix-isIdentity(): boolean-End-->
 
@@ -274,6 +270,8 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -294,7 +292,7 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## mapPoints
 
@@ -306,7 +304,9 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined-End-->
 
@@ -328,25 +328,21 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## mapRadius
 
-ArkTS-Dyn:
-```TypeScript
-mapRadius(radius: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 mapRadius(radius: double): double
 ```
 
 返回半径为radius的圆经过当前矩阵映射形成的椭圆的平均半径。平均半径的平方为椭圆长轴长度和短轴长度的乘积。若当前矩阵包含透视变换，则该结果无意义。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-mapRadius(radius: double): double--><!--Device-Matrix-mapRadius(radius: double): double-End-->
 
@@ -356,13 +352,13 @@ mapRadius(radius: double): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 用于计算的圆的半径，浮点数。如果是负数，则按照绝对值进行计算。单位为物理像素px。 |
+| radius | double | 是 | 用于计算的圆的半径，浮点数。如果是负数，则按照绝对值进行计算。单位为物理像素px。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回经过变换之后的平均半径。单位为物理像素px。 |
+| double | 返回经过变换之后的平均半径。单位为物理像素px。 |
 
 ## mapRect
 
@@ -370,13 +366,13 @@ mapRadius(radius: double): double
 mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 ```
 
-将目标矩形设置为源矩形通过矩阵变换后的图形的外接矩形。如下图所示，蓝色矩形为源矩形，假设黄色矩形为源矩形通过矩阵变换形成的图形，此时黄色矩形的边不与坐标轴平行，无法使用矩形对象表示，因此，将目标矩形设置为黄色矩形的外接矩形，即黑色矩形。
+将目标矩形设置为源矩形通过矩阵变换后的图形的外接矩形。如下图所示，蓝色矩形为源矩形，假设黄色矩形为源矩形通过矩阵变换形成的图形，此时黄色矩形的边不与坐标轴平行，无法使用矩形对象表示，因此，将目标矩形设置为黄色矩形的外接矩形，即 黑色矩形。 
 
-![mapRect](../../../reference/apis-arkgraphics2d/figures/matrix-mapRect.png)
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean--><!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean-End-->
 
@@ -399,7 +395,7 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postConcat
 
@@ -409,9 +405,11 @@ postConcat(matrix: Matrix): void
 
 将一个矩阵乘在当前矩阵的左侧，即新的变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用新变换，使用preConcat方法。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postConcat(matrix: Matrix): void--><!--Device-Matrix-postConcat(matrix: Matrix): void-End-->
 
@@ -425,21 +423,17 @@ postConcat(matrix: Matrix): void
 
 ## postRotate
 
-ArkTS-Dyn:
-```TypeScript
-postRotate(degree: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postRotate(degree: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵右乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用旋转变换，使用preRotate方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-postRotate(degree: double, px: double, py: double): void-End-->
 
@@ -449,33 +443,29 @@ postRotate(degree: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| degree | double | 是 | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
+| px | double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| py | double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postScale
 
-ArkTS-Dyn:
-```TypeScript
-postScale(sx: number, sy: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵右乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用缩放变换，使用preScale方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -485,34 +475,30 @@ postScale(sx: double, sy: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向缩放因子，负数表示先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向缩放因子，负数表示先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sx | double | 是 | x轴方向缩放因子，负数表示先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
+| sy | double | 是 | y轴方向缩放因子，负数表示先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
+| px | double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| py | double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postSkew
 
-ArkTS-Dyn:
-```TypeScript
-postSkew(kx: number, ky: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 当前矩阵右乘一个倾斜变换矩阵。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -522,28 +508,24 @@ postSkew(kx: double, ky: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| kx | double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
+| ky | double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
+| px | double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
+| py | double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
 
 ## postTranslate
 
-ArkTS-Dyn:
-```TypeScript
-postTranslate(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 postTranslate(dx: double, dy: double): void
 ```
 
 将矩阵设置为矩阵右乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用平移变换，使用preTranslate方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-postTranslate(dx: double, dy: double): void--><!--Device-Matrix-postTranslate(dx: double, dy: double): void-End-->
 
@@ -553,14 +535,14 @@ postTranslate(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preConcat
 
@@ -570,9 +552,11 @@ preConcat(matrix: Matrix): void
 
 将一个矩阵乘在当前矩阵的右侧，即新的变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用新变换，使用postConcat方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preConcat(matrix: Matrix): void--><!--Device-Matrix-preConcat(matrix: Matrix): void-End-->
 
@@ -588,25 +572,21 @@ preConcat(matrix: Matrix): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preRotate
 
-ArkTS-Dyn:
-```TypeScript
-preRotate(degree: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preRotate(degree: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵左乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用旋转变换，使用postRotate方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-preRotate(degree: double, px: double, py: double): void-End-->
 
@@ -616,33 +596,29 @@ preRotate(degree: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| degree | double | 是 | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
+| px | double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| py | double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preScale
 
-ArkTS-Dyn:
-```TypeScript
-preScale(sx: number, sy: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵左乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用缩放变换，使用postScale方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -652,34 +628,30 @@ preScale(sx: double, sy: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sx | double | 是 | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
+| sy | double | 是 | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
+| px | double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| py | double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preSkew
 
-ArkTS-Dyn:
-```TypeScript
-preSkew(kx: number, ky: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 当前矩阵左乘一个倾斜变换矩阵。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -689,28 +661,24 @@ preSkew(kx: double, ky: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| kx | double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
+| ky | double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
+| px | double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
+| py | double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
 
 ## preTranslate
 
-ArkTS-Dyn:
-```TypeScript
-preTranslate(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 preTranslate(dx: double, dy: double): void
 ```
 
 将矩阵设置为矩阵左乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用平移变换，使用postTranslate方法。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-preTranslate(dx: double, dy: double): void--><!--Device-Matrix-preTranslate(dx: double, dy: double): void-End-->
 
@@ -720,14 +688,14 @@ preTranslate(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rectStaysRect
 
@@ -737,9 +705,11 @@ rectStaysRect(): boolean
 
 判断经过该矩阵映射后的矩形的形状是否仍为矩形。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-rectStaysRect(): boolean--><!--Device-Matrix-rectStaysRect(): boolean-End-->
 
@@ -759,9 +729,11 @@ reset(): void
 
 重置当前矩阵为单位矩阵。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-reset(): void--><!--Device-Matrix-reset(): void-End-->
 
@@ -775,9 +747,11 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 
 用两个矩阵的乘积更新当前矩阵，即当前矩阵 = matrixA × matrixB。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void--><!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void-End-->
 
@@ -792,21 +766,17 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 
 ## setMatrix
 
-ArkTS-Dyn:
-```TypeScript
-setMatrix(values: Array<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setMatrix(values: Array<double>): void
 ```
 
 设置矩阵对象的各项参数。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setMatrix(values: Array<double>): void--><!--Device-Matrix-setMatrix(values: Array<double>): void-End-->
 
@@ -816,31 +786,27 @@ setMatrix(values: Array<double>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| values | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 长度为9的浮点数组，表示矩阵对象的各项参数。数组中的值按下标从小到大分别表示水平缩放因子、水平倾斜系数、水平位移系数（单位为物理像素px）、垂直倾斜系数、垂直 缩放因子、垂直位移系数（单位为物理像素px）、x轴透视系数、y轴透视系数和透视缩放因子。 |
+| values | Array&lt;double&gt; | 是 | 长度为9的浮点数组，表示矩阵对象的各项参数。数组中的值按下标从小到大分别表示水平缩放因子、水平倾斜系数、水平位移系数（单位为物理像素px）、垂直倾斜系数、垂直 缩放因子、垂直位移系数（单位为物理像素px）、x轴透视系数、y轴透视系数和透视缩放因子。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setMatrix
 
-ArkTS-Dyn:
-```TypeScript
-setMatrix(matrix: Array<number> | Matrix): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setMatrix(matrix: Array<double> | Matrix): void
 ```
 
 用一个矩阵对当前矩阵进行更新。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void--><!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void-End-->
 
@@ -850,25 +816,21 @@ setMatrix(matrix: Array<double> | Matrix): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| matrix | ArkTS-Dyn: Array&lt;number&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md)  <br>ArkTS-Sta：Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 用于更新的数组或矩阵。当类型为数组时，长度固定为9。 |
+| matrix | Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 用于更新的数组或矩阵。当类型为数组时，长度固定为9。 |
 
 ## setPolyToPoly
 
-ArkTS-Dyn:
-```TypeScript
-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean
 ```
 
 将当前矩阵设置为能够将源点数组映射到目标点数组的变换矩阵。源点和目标点的个数必须大于等于0，小于等于4。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean--><!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean-End-->
 
@@ -880,7 +842,7 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int
 | --- | --- | --- | --- |
 | src | Array&lt;common2D.Point&gt; | 是 | 源点数组，长度必须为count。 |
 | dst | Array&lt;common2D.Point&gt; | 是 | 目标点数组，长度必须为count。 |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | src和dst中点的数量，取值范围为[0, 4]，该参数为整数。 |
+| count | int | 是 | src和dst中点的数量，取值范围为[0, 4]，该参数为整数。 |
 
 **返回值：**
 
@@ -892,7 +854,7 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRectToRect
 
@@ -902,9 +864,11 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 将当前矩阵设置为能使源矩形映射到目标矩形的变换矩阵。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean--><!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean-End-->
 
@@ -928,25 +892,21 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setRotation
 
-ArkTS-Dyn:
-```TypeScript
-setRotation(degree: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setRotation(degree: double, px: double, py: double): void
 ```
 
 设置矩阵为单位矩阵，并围绕旋转中心点(px, py)进行旋转。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setRotation(degree: double, px: double, py: double): void--><!--Device-Matrix-setRotation(degree: double, px: double, py: double): void-End-->
 
@@ -956,33 +916,29 @@ setRotation(degree: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| degree | double | 是 | 角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
+| px | double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| py | double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setScale
 
-ArkTS-Dyn:
-```TypeScript
-setScale(sx: number, sy: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 设置矩阵为单位矩阵，并围绕缩放中心点(px, py)按sx和sy进行缩放。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void-End-->
 
@@ -992,34 +948,30 @@ setScale(sx: double, sy: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sx | double | 是 | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
+| sy | double | 是 | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
+| px | double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| py | double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setSinCos
 
-ArkTS-Dyn:
-```TypeScript
-setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setSinCos(sinValue: double, cosValue: double, px: double, py: double): void
 ```
 
-设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](#setRotation)功能类似，但setRotation直接传入角度值，而本方法传入正弦值和余弦值。
+设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](#setRotation)功能类似，但setRotation直接传入角度 值，而本方法传入正弦值和余弦值。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void--><!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void-End-->
 
@@ -1029,29 +981,24 @@ setSinCos(sinValue: double, cosValue: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sinValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转角度的正弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
-| cosValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转角度的余弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| sinValue | double | 是 | 旋转角度的正弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
+| cosValue | double | 是 | 旋转角度的余弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
+| px | double | 是 | 旋转中心的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
+| py | double | 是 | 旋转中心的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
 
 ## setSkew
 
-ArkTS-Dyn:
-```TypeScript
-setSkew(kx: number, ky: number, px: number, py: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
-设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](#setRotation)、  
-[setScale](#setScale)、[setTranslation](#setTranslation)类似，均为重置矩阵后施加单一变换。
+设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](#setRotation)、 [setScale](#setScale)、[setTranslation](#setTranslation)类似，均为重置矩阵后施加单一变换。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void-End-->
 
@@ -1061,28 +1008,24 @@ setSkew(kx: double, ky: double, px: double, py: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| kx | double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
+| ky | double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
+| px | double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
+| py | double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
 
 ## setTranslation
 
-ArkTS-Dyn:
-```TypeScript
-setTranslation(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setTranslation(dx: double, dy: double): void
 ```
 
 设置矩阵为单位矩阵，并平移(dx, dy)。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Matrix-setTranslation(dx: double, dy: double): void--><!--Device-Matrix-setTranslation(dx: double, dy: double): void-End-->
 
@@ -1092,12 +1035,12 @@ setTranslation(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

@@ -1,15 +1,6 @@
 # Polygon
 
-The **Polygon** component is used to draw a polygon.
-> **NOTE**
->
-> This component supports dynamic constructor parameter updates using the
-> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the
-> [AttributeUpdater](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20.
->
-> **Child Components**
->
-> None
+The **Polygon** component is used to draw a polygon. > **NOTE** > > This component supports dynamic constructor parameter updates using the > updateConstructorParams API of the > AttributeUpdater class since API version 20. > > **Child Components** > > None
 
 ## Polygon
 
@@ -17,11 +8,13 @@ The **Polygon** component is used to draw a polygon.
 Polygon(options?: PolygonOptions)
 ```
 
-Uses new to create Polygon.Anonymous Object Rectification.
+Uses new to create Polygon. Anonymous Object Rectification.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,6 +43,8 @@ Defines the constructor of Polygon component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -66,4 +61,4 @@ Defines the constructor of Polygon component.
 
 ## Summary
 
-- [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md)
+- [PolygonOptions](arkts-arkui-polygonoptions-i.md)

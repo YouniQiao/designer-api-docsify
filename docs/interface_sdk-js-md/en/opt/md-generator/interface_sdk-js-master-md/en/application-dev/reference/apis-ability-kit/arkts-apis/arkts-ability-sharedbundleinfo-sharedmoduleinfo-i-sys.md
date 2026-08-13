@@ -2,7 +2,9 @@
 
 Defines the shared module information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SharedModuleInfo--><!--Device-unnamed-export interface SharedModuleInfo-End-->
 
@@ -20,7 +22,9 @@ Description of the shared bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly description: string--><!--Device-SharedModuleInfo-readonly description: string-End-->
 
@@ -38,7 +42,9 @@ Description ID of the shared bundle.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly descriptionId: long--><!--Device-SharedModuleInfo-readonly descriptionId: long-End-->
 
@@ -56,7 +62,9 @@ Module name of the shared bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly name: string--><!--Device-SharedModuleInfo-readonly name: string-End-->
 
@@ -74,7 +82,9 @@ Version number of the shared bundle.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly versionCode: long--><!--Device-SharedModuleInfo-readonly versionCode: long-End-->
 
@@ -92,7 +102,9 @@ Version description of the shared bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly versionName: string--><!--Device-SharedModuleInfo-readonly versionName: string-End-->
 

@@ -1,8 +1,10 @@
-# @ohos.file.photoAccessHelper(Helper functions to access image and video assets)
+# @ohos.file.photoAccessHelper
 
 The module provides APIs for album management, including creating an album and accessing and modifying media data in an album.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace photoAccessHelper--><!--Device-unnamed-declare namespace photoAccessHelper-End-->
 
@@ -20,14 +22,16 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper) |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getphotoaccesshelper-1) |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getPhotoAccessHelper-(System-API)) |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getPhotoAccessHelper-(System-API)) |
 <!--DelEnd-->
 
 ### Classes
@@ -42,7 +46,6 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) |
 | [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) |
 | [MediaAssetManager](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md) |
-| [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c.md) |
 | [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md) |
 | [OperationItem](arkts-medialibrary-photoaccesshelper-operationitem-c.md) |
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md) |
@@ -70,6 +73,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) |
 | [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md) |
 | [MediaAssetEditData](arkts-medialibrary-photoaccesshelper-mediaasseteditdata-c-sys.md) |
+| [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md) |
 | [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) |
 | [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) |
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c-sys.md) |
@@ -133,6 +137,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) |
 | [DeepOptimizeSpaceProgress](arkts-medialibrary-photoaccesshelper-deepoptimizespaceprogress-i-sys.md) |
 | [Entity](arkts-medialibrary-photoaccesshelper-entity-i-sys.md) |
+| [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i-sys.md) |
 | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) |
 | [FusionAssetsInfo](arkts-medialibrary-photoaccesshelper-fusionassetsinfo-i-sys.md) |
 | [GalleryFormInfo](arkts-medialibrary-photoaccesshelper-galleryforminfo-i-sys.md) |
@@ -233,6 +238,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md) |
 | [PhotoPermissionType](arkts-medialibrary-photoaccesshelper-photopermissiontype-e-sys.md) |
 | [PhotoRiskStatus](arkts-medialibrary-photoaccesshelper-photoriskstatus-e-sys.md) |
+| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md) |
+| [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md) |
 | [RankingMethod](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md) |
 | [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e-sys.md) |
 | [RequestPhotoType](arkts-medialibrary-photoaccesshelper-requestphototype-e-sys.md) |

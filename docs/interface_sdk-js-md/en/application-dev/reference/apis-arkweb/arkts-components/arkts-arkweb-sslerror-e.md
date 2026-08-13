@@ -1,10 +1,12 @@
 # SslError
 
-Enum type supplied to [error](error) when onSslErrorEventReceive being called.
+Enum type supplied to error when onSslErrorEventReceive being called.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum SslError--><!--Device-unnamed-declare enum SslError-End-->
 
@@ -21,6 +23,8 @@ General error.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Hostname mismatch.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SslError-HostMismatch = 1--><!--Device-SslError-HostMismatch = 1-End-->
@@ -58,6 +64,8 @@ The certificate date is invalid.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SslError-DateInvalid = 2--><!--Device-SslError-DateInvalid = 2-End-->
@@ -75,6 +83,8 @@ The certificate authority is not trusted.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

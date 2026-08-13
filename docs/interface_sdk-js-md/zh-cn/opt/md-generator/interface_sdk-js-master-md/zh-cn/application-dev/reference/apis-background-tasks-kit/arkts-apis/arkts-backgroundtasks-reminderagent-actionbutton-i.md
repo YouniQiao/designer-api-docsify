@@ -26,7 +26,7 @@ title: string
 
 **废弃版本：** 9
 
-**替代接口：** [title](reminderAgentManager.ActionButton.title)
+**替代接口：** title
 
 <!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
 
@@ -46,7 +46,7 @@ type: ActionButtonType
 
 **废弃版本：** 9
 
-**替代接口：** [type](reminderAgentManager.ActionButton.type)
+**替代接口：** type
 
 <!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
 

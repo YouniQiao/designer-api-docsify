@@ -4,6 +4,8 @@ JS cross-thread communication tool
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace worker--><!--Device-unnamed-declare namespace worker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -35,5 +37,5 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [parentPort](arkts-arkts-worker-con.md#parentport) |
-| [workerPort](arkts-arkts-worker-con.md#workerport) |
+| [parentPort](arkts-arkts-worker-con.md#parentPort) |
+| [workerPort](arkts-arkts-worker-con.md#workerPort) |

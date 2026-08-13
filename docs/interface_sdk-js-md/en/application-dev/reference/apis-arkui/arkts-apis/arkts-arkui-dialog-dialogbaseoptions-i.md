@@ -6,6 +6,8 @@ Base options shared by all dialog types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 <!--Device-dialog-declare interface DialogBaseOptions--><!--Device-dialog-declare interface DialogBaseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -15,86 +17,6 @@ Base options shared by all dialog types.
 ```TypeScript
 import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
-
-## onDidAppear
-
-```TypeScript
-onDidAppear?: VoidCallback
-```
-
-Callback function when the dialog appears.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogBaseOptions-onDidAppear?: VoidCallback--><!--Device-DialogBaseOptions-onDidAppear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidDisappear
-
-```TypeScript
-onDidDisappear?: VoidCallback
-```
-
-Callback function when the dialog disappears.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillAppear
-
-```TypeScript
-onWillAppear?: VoidCallback
-```
-
-Callback function before the dialog open animation starts.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogBaseOptions-onWillAppear?: VoidCallback--><!--Device-DialogBaseOptions-onWillAppear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillDisappear
-
-```TypeScript
-onWillDisappear?: VoidCallback
-```
-
-Callback function before the dialog close animation starts.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignment
 
@@ -109,6 +31,8 @@ Alignment of the dialog.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +58,8 @@ Whether to allow dismissal by touching the mask or pressing the Back button.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -148,7 +74,7 @@ Whether to allow dismissal by touching the mask or pressing the Back button.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.&lt;br&gt;Setting this parameter to BlurStyle.NONE disables the background blur.
+Background blur style of the dialog box. &lt;br&gt;Setting this parameter to BlurStyle.NONE disables the background blur.
 
 **Type:** BlurStyle
 
@@ -157,6 +83,8 @@ Background blur style of the dialog box.&lt;br&gt;Setting this parameter to Blur
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,6 +108,8 @@ Background blur style with options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -194,7 +124,7 @@ Background blur style with options.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box.&lt;br&gt;When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
+Background color of the dialog box. &lt;br&gt;When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
 
 **Type:** ResourceColor
 
@@ -203,6 +133,8 @@ Background color of the dialog box.&lt;br&gt;When backgroundColor is set to a no
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,6 +158,8 @@ Background effect with options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -242,13 +176,15 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Border color of the dialog box.
 
-**Type:** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
+**Type:** ResourceColor \| EdgeColors \| LocalizedEdgeColors
 
 **Default:** Color.Black
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -274,6 +210,8 @@ Border radius of the background.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -290,13 +228,15 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Border style of the dialog box.
 
-**Type:** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
+**Type:** BorderStyle \| EdgeStyles
 
 **Default:** BorderStyle.Solid
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,13 +254,15 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Border width of the dialog box.
 
-**Type:** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** Dimension \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -344,6 +286,8 @@ Dialog controller.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -365,6 +309,8 @@ Dialog transition parameters for opening/closing the dialog content area.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -390,6 +336,8 @@ Defines the dialog display mode when show in subwindow.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -413,6 +361,8 @@ Whether to enable the hover mode.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -438,6 +388,8 @@ Whether the dialog box can get focus.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -459,6 +411,8 @@ Height of the dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -484,6 +438,8 @@ Display area of the dialog box in hover mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -507,6 +463,8 @@ Overlay effect for the page-level dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -532,6 +490,8 @@ Whether the dialog box is a modal.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -553,6 +513,8 @@ Distance between the dialog and system keyboard.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -578,6 +540,8 @@ Keyboard avoid mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -601,6 +565,8 @@ Display level of the dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -626,6 +592,8 @@ Display order of the dialog.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -640,13 +608,15 @@ Display order of the dialog.
 levelUniqueId?: int
 ```
 
-Unique ID of the node under the display level for the page-level dialog box.The value should be an integer.&lt;br&gt;This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
+Unique ID of the node under the display level for the page-level dialog box. The value should be an integer. &lt;br&gt;This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
 **Type:** int
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -669,6 +639,8 @@ Mask color of the dialog.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -694,6 +666,8 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -715,6 +689,8 @@ Mask transition parameters for opening/closing the mask.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -738,11 +714,109 @@ Offset of the dialog relative to the alignment position.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DialogBaseOptions-offset?: Offset--><!--Device-DialogBaseOptions-offset?: Offset-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidAppear
+
+```TypeScript
+onDidAppear?: VoidCallback
+```
+
+Callback function when the dialog appears.
+
+**Type:** VoidCallback
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseOptions-onDidAppear?: VoidCallback--><!--Device-DialogBaseOptions-onDidAppear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidDisappear
+
+```TypeScript
+onDidDisappear?: VoidCallback
+```
+
+Callback function when the dialog disappears.
+
+**Type:** VoidCallback
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillAppear
+
+```TypeScript
+onWillAppear?: VoidCallback
+```
+
+Callback function before the dialog open animation starts.
+
+**Type:** VoidCallback
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseOptions-onWillAppear?: VoidCallback--><!--Device-DialogBaseOptions-onWillAppear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillDisappear
+
+```TypeScript
+onWillDisappear?: VoidCallback
+```
+
+Callback function before the dialog close animation starts.
+
+**Type:** VoidCallback
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -752,13 +826,15 @@ Offset of the dialog relative to the alignment position.
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-Callback for interactive closure of the dialog box.&lt;br&gt;If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button.The reason parameter in the callback is used to determine whether the dialog can be closed.
+Callback for interactive closure of the dialog box. &lt;br&gt;If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
 
 **Type:** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -782,6 +858,8 @@ Shadow of the dialog box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -796,7 +874,7 @@ Shadow of the dialog box.
 showInSubWindow?: boolean
 ```
 
-Whether to display in a subwindow.&lt;br&gt;isModal = true and showInSubWindow = true cannot be used at the same time.
+Whether to display in a subwindow. &lt;br&gt;isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Type:** boolean
 
@@ -805,6 +883,8 @@ Whether to display in a subwindow.&lt;br&gt;isModal = true and showInSubWindow =
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -828,6 +908,8 @@ Set system-styled materials for dialog. Different materials have different effec
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -849,6 +931,8 @@ Width of the dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

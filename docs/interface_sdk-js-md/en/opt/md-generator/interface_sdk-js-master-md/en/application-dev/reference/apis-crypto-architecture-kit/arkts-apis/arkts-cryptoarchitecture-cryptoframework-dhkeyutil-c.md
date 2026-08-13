@@ -2,7 +2,9 @@
 
 Generates common parameters for a DH key based on the prime **p** length and the private key length.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-class DHKeyUtil--><!--Device-cryptoFramework-class DHKeyUtil-End-->
 
@@ -22,9 +24,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 ```
 
-Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see [DH](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#dh).
+Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see DH.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -51,10 +55,10 @@ Generates common parameters for a DH key based on the prime **p** length and the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 

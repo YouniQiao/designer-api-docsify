@@ -2,7 +2,9 @@
 
 色域标准三原色（红、绿、蓝）和白色，基于现实世界的色度，使用(x, y)表示其在色彩空间中的位置。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-colorSpaceManager-interface ColorSpacePrimaries--><!--Device-colorSpaceManager-interface ColorSpacePrimaries-End-->
 
@@ -18,7 +20,9 @@ blueX: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-blueX: double--><!--Device-ColorSpacePrimaries-blueX: double-End-->
 
@@ -34,7 +38,9 @@ blueY: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-blueY: double--><!--Device-ColorSpacePrimaries-blueY: double-End-->
 
@@ -50,7 +56,9 @@ greenX: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-greenX: double--><!--Device-ColorSpacePrimaries-greenX: double-End-->
 
@@ -66,7 +74,9 @@ greenY: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-greenY: double--><!--Device-ColorSpacePrimaries-greenY: double-End-->
 
@@ -82,7 +92,9 @@ redX: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-redX: double--><!--Device-ColorSpacePrimaries-redX: double-End-->
 
@@ -98,7 +110,9 @@ redY: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-redY: double--><!--Device-ColorSpacePrimaries-redY: double-End-->
 
@@ -114,7 +128,9 @@ whitePointX: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-whitePointX: double--><!--Device-ColorSpacePrimaries-whitePointX: double-End-->
 
@@ -130,7 +146,9 @@ whitePointY: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-whitePointY: double--><!--Device-ColorSpacePrimaries-whitePointY: double-End-->
 

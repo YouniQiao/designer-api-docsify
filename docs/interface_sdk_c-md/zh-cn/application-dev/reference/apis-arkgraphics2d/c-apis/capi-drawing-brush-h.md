@@ -18,7 +18,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md) | OH_NativeColorSpaceManager | 提供OH_NativeColorSpaceManager结构体声明。 |
+| [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md) | OH_NativeColorSpaceManager | 声明色彩空间管理对象，提供获取色彩空间基础属性的能力。 |
 
 ### 函数
 

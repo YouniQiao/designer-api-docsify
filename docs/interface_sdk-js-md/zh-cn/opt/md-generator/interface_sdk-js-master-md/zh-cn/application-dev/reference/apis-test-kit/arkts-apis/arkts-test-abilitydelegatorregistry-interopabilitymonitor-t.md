@@ -4,9 +4,11 @@
 export type InteropAbilityMonitor = _InteropAbilityMonitor
 ```
 
-提供匹配满足指定条件的监控对象的方法。最近匹配的Ability对象将保存在InteropAbilityMonitor对象中。
+提供匹配满足指定条件的监控对象的方法。 最近匹配的Ability对象将保存在InteropAbilityMonitor对象中。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

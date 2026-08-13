@@ -4,6 +4,8 @@ Sets the progress, maximum value, and color for a mask.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class ProgressMask--><!--Device-unnamed-declare class ProgressMask-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor(value: number, total: number, color: ResourceColor)
 Constructs a **ProgressMask** object.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Sets whether to enable the breathing animation when the progress indicator is fu
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -68,6 +74,8 @@ Updates the color of the progress mask.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -91,6 +99,8 @@ updateProgress(value: number): void
 Updates the progress value of the progress mask.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

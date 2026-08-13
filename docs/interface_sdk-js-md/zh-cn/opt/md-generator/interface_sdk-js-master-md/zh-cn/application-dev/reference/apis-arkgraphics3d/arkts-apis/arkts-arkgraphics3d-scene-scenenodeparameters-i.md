@@ -2,7 +2,9 @@
 
 场景节点参数类型.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SceneNodeParameters--><!--Device-unnamed-export interface SceneNodeParameters-End-->
 
@@ -18,7 +20,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneNodeParameters-name: string--><!--Device-SceneNodeParameters-name: string-End-->
 
@@ -34,7 +38,9 @@ path?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneNodeParameters-path?: string--><!--Device-SceneNodeParameters-path?: string-End-->
 

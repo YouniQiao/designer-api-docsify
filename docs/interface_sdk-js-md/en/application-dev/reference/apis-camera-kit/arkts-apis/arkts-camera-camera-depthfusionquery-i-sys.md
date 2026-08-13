@@ -2,9 +2,11 @@
 
 A class for querying depth fusion capabilities.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface DepthFusionQuery--><!--Device-camera-interface DepthFusionQuery-End-->
 
@@ -20,21 +22,17 @@ import { camera } from '@kit.CameraKit';
 
 ## getDepthFusionThreshold
 
-ArkTS-Dyn:
-```TypeScript
-getDepthFusionThreshold(): Array<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDepthFusionThreshold(): Array<double>
 ```
 
 Obtains the depth fusion threshold.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>--><!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>-End-->
 
@@ -46,14 +44,14 @@ Obtains the depth fusion threshold.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Depth fusion threshold. |
+| Array&lt;double&gt; | Depth fusion threshold. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -79,9 +77,11 @@ isDepthFusionSupported(): boolean
 
 Checks whether depth fusion is supported.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean--><!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean-End-->
 
@@ -99,8 +99,8 @@ Checks whether depth fusion is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

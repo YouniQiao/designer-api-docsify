@@ -2,9 +2,11 @@
 
 Enumerates power role types.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum PowerRoleType--><!--Device-usbManager-export enum PowerRoleType-End-->
 
@@ -20,9 +22,11 @@ NONE = 0
 
 No function.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
 
@@ -38,9 +42,11 @@ SOURCE = 1
 
 External power supply
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
 
@@ -56,9 +62,11 @@ SINK = 2
 
 Internal power supply
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
 

@@ -1,12 +1,8 @@
 # Button
 
-The **Button** component can be used to create different types of buttons.
+The **Button** component can be used to create different types of buttons. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-This component can contain only one child component.
+## Child Components This component can contain only one child component.
 
 ## Button
 
@@ -19,6 +15,8 @@ Creates an empty button.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +38,8 @@ Creates a button that can contain a single child component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -60,13 +60,13 @@ Creates a button that can contain a single child component.
 Button(label: ResourceStr, options?: ButtonOptions)
 ```
 
-Creates a button based on text content. In this case, the component cannot contain child components.
-
-By default, the text content is displayed in a one line.
+Creates a button based on text content. In this case, the component cannot contain child components. By default, the text content is displayed in a one line.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,11 +85,11 @@ By default, the text content is displayed in a one line.
 
 ## Summary
 
-- [ButtonConfiguration](arkts-arkui-button-buttonconfiguration-i.md)
-- [ButtonOptions](arkts-arkui-button-buttonoptions-i.md)
-- [LabelStyle](arkts-arkui-button-labelstyle-i.md)
-- [ButtonTriggerClickCallback](arkts-arkui-button-buttontriggerclickcallback-t.md)
-- [ButtonRole](arkts-arkui-button-buttonrole-e.md)
-- [ButtonStyleMode](arkts-arkui-button-buttonstylemode-e.md)
-- [ButtonType](arkts-arkui-button-buttontype-e.md)
-- [ControlSize](arkts-arkui-button-controlsize-e.md)
+- [ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)
+- [ButtonOptions](arkts-arkui-buttonoptions-i.md)
+- [LabelStyle](arkts-arkui-labelstyle-i.md)
+- [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md)
+- [ButtonRole](arkts-arkui-buttonrole-e.md)
+- [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
+- [ButtonType](arkts-arkui-buttontype-e.md)
+- [ControlSize](arkts-arkui-controlsize-e.md)

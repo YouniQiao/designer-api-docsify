@@ -2,11 +2,13 @@
 
 为开发者提供Web原生消息通信能力，继承自ExtensionAbility。
 
-**继承/实现关系：** WebNativeMessagingExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**继承/实现关系：** WebNativeMessagingExtensionAbility extends ExtensionAbility
 
 **起始版本：** 21
 
-<!--Device-unnamed-export default class WebNativeMessagingExtensionAbility extends ExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility extends ExtensionAbility-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export default class WebNativeMessagingExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -19,6 +21,8 @@ onConnectNative(info: ConnectionInfo): void
 Web原生消息连接建立时回调此方法。在此回调中，可以获取连接信息，用于后续的消息通信处理。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,6 +61,8 @@ WebNativeMessagingExtensionAbility销毁时回调。在此回调中，可以释�
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void--><!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void-End-->
@@ -85,6 +91,8 @@ onDisconnectNative(info: ConnectionInfo): void
 Web原生消息连接断开时回调此方法。在此回调中，可以释放与该连接相关的资源，并完成必要的清理工作。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,6 +131,8 @@ context: WebNativeMessagingExtensionContext
 **类型：** [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

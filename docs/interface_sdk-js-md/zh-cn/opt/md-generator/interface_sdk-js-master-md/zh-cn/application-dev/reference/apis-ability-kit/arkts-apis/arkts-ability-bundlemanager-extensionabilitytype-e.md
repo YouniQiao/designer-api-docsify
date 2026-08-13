@@ -1,12 +1,10 @@
 # ExtensionAbilityType
 
-扩展组件的类型。
+扩展组件的类型。 &lt;!--Table: 30%; 10%; 60%--&gt; &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
-&lt;!--Table: 30%; 10%; 60%--&gt;
+**起始版本：** 23
 
-&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-bundleManager-export enum ExtensionAbilityType--><!--Device-bundleManager-export enum ExtensionAbilityType-End-->
 
@@ -18,9 +16,11 @@
 FORM = 0
 ```
 
-[FormExtensionAbility](@ohos.app.form.FormExtensionAbility)：卡片扩展能力，提供卡片开发能力。
+FormExtensionAbility：卡片扩展能力，提供卡片开发能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +36,9 @@ WORK_SCHEDULER = 1
 
 [WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workschedulerextensionability-c.md#WorkSchedulerExtensionAbility)：延时任务扩展能力，允许应用在系统闲时执行实时性不高的任务。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-WORK_SCHEDULER = 1--><!--Device-ExtensionAbilityType-WORK_SCHEDULER = 1-End-->
 
@@ -48,9 +50,11 @@ WORK_SCHEDULER = 1
 INPUT_METHOD = 2
 ```
 
-[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)：输入法扩展能力，用于开发输入法应用。
+[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)：输入法扩展能力，用于开发输入 法应用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-INPUT_METHOD = 2--><!--Device-ExtensionAbilityType-INPUT_METHOD = 2-End-->
 
@@ -62,9 +66,11 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#ServiceExtensionAbility)：后台服务扩展能力，提供后台运行并对外提供相应能力。
+[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#ServiceExtensionAbility（系统接口）)：后台服务扩展能力，提供后台运 行并对外提供相应能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-SERVICE = 3--><!--Device-ExtensionAbilityType-SERVICE = 3-End-->
 
@@ -78,7 +84,9 @@ ACCESSIBILITY = 4
 
 AccessibilityExtensionAbility：无障碍服务扩展能力，支持访问与操作前台界面。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-ACCESSIBILITY = 4--><!--Device-ExtensionAbilityType-ACCESSIBILITY = 4-End-->
 
@@ -90,9 +98,11 @@ AccessibilityExtensionAbility：无障碍服务扩展能力，支持访问与操
 DATA_SHARE = 5
 ```
 
-[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md#DataShareExtensionAbility)：数据共享扩展能力，用于对外提供数据读写服务。
+[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md#DataShareExtensionAbility（系统接口）)：数据共享扩展能力，用于对外提供数据读写服务。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-DATA_SHARE = 5--><!--Device-ExtensionAbilityType-DATA_SHARE = 5-End-->
 
@@ -106,7 +116,9 @@ FILE_SHARE = 6
 
 FileShareExtensionAbility：文件共享扩展能力，用于应用间的文件分享。预留能力，仅系统应用支持。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-FILE_SHARE = 6--><!--Device-ExtensionAbilityType-FILE_SHARE = 6-End-->
 
@@ -118,9 +130,11 @@ FileShareExtensionAbility：文件共享扩展能力，用于应用间的文件�
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md#StaticSubscriberExtensionAbility)：静态广播扩展能力，用于处理静态事件，比如开机事件。
+[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md#StaticSubscriberExtensionAbility（系统接口）) ：静态广播扩展能力，用于处理静态事件，比如开机事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-STATIC_SUBSCRIBER = 7--><!--Device-ExtensionAbilityType-STATIC_SUBSCRIBER = 7-End-->
 
@@ -134,7 +148,9 @@ WALLPAPER = 8
 
 WallpaperExtensionAbility：壁纸扩展能力，用于实现桌面壁纸。预留能力，仅系统应用支持。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-WALLPAPER = 8--><!--Device-ExtensionAbilityType-WALLPAPER = 8-End-->
 
@@ -148,7 +164,9 @@ BACKUP = 9
 
 [BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability-backupextensionability-c.md#BackupExtensionAbility)：数据备份扩展能力，提供应用数据的备份恢复能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-BACKUP = 9--><!--Device-ExtensionAbilityType-BACKUP = 9-End-->
 
@@ -160,9 +178,11 @@ BACKUP = 9
 WINDOW = 10
 ```
 
-[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#WindowExtensionAbility)：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
+[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#WindowExtensionAbility（系统接口）)：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-WINDOW = 10--><!--Device-ExtensionAbilityType-WINDOW = 10-End-->
 
@@ -174,9 +194,11 @@ WINDOW = 10
 ENTERPRISE_ADMIN = 11
 ```
 
-[EnterpriseAdminExtensionAbility](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#EnterpriseAdminExtensionAbility)：企业设备管理扩展能力，提供企业管理时处理管理事件的能力。
+[EnterpriseAdminExtensionAbility](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#EnterpriseAdminExtensionAbility) ：企业设备管理扩展能力，提供企业管理时处理管理事件的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-ENTERPRISE_ADMIN = 11--><!--Device-ExtensionAbilityType-ENTERPRISE_ADMIN = 11-End-->
 
@@ -190,7 +212,9 @@ THUMBNAIL = 13
 
 ThumbnailExtensionAbility：文件缩略图扩展能力，用于为文件提供图标缩略图的能力。预留能力，仅系统应用支持。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-THUMBNAIL = 13--><!--Device-ExtensionAbilityType-THUMBNAIL = 13-End-->
 
@@ -204,7 +228,9 @@ PREVIEW = 14
 
 PreviewExtensionAbility：文件预览扩展能力，提供文件预览的能力，其他应用可以直接在应用中嵌入显示。预留能力，仅系统应用支持。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-PREVIEW = 14--><!--Device-ExtensionAbilityType-PREVIEW = 14-End-->
 
@@ -218,7 +244,9 @@ PRINT = 15
 
 PrintExtensionAbility：文件打印扩展能力，提供应用打印照片、文档等办公场景。仅系统应用支持。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-PRINT = 15--><!--Device-ExtensionAbilityType-PRINT = 15-End-->
 
@@ -230,9 +258,11 @@ PrintExtensionAbility：文件打印扩展能力，提供应用打印照片、�
 SHARE = 16
 ```
 
-[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility)：提供分享业务能力，为开发者提供基于UIExtension的分享业务模板。
+[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility)：提供分享业务能力，为开发者提供基于 UIExtension的分享业务模板。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-SHARE = 16--><!--Device-ExtensionAbilityType-SHARE = 16-End-->
 
@@ -246,7 +276,9 @@ PUSH = 17
 
 PushExtensionAbility：推送扩展能力，提供推送场景化消息能力。预留能力，仅系统应用支持。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-PUSH = 17--><!--Device-ExtensionAbilityType-PUSH = 17-End-->
 
@@ -258,9 +290,11 @@ PushExtensionAbility：推送扩展能力，提供推送场景化消息能力。
 DRIVER = 18
 ```
 
-[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md#DriverExtensionAbility)：驱动扩展能力，提供外设驱动扩展能力。应用配置了driver类型的ExtensionAbility后会被视为驱动应用，驱动应用在安装、卸载和恢复时不会区分用户，且创建新用户时也会安装设备上已有的驱动应用。例如，创建子用户时会默认安装主用户已有的驱动应用，在子用户上卸载驱动应用时，主用户上对应的驱动应用也会同时被卸载。
+[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md#DriverExtensionAbility)：驱动扩展能力，提供外设驱动扩展能力。应用配置了driver类型的 ExtensionAbility后会被视为驱动应用，驱动应用在安装、卸载和恢复时不会区分用户，且创建新用户时也会安装设备上已有的驱动应用。例如，创建子用户时会默认安装主用户已有的驱动应用，在子用户上卸载驱动应用时，主用户上对应 的驱动应用也会同时被卸载。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-DRIVER = 18--><!--Device-ExtensionAbilityType-DRIVER = 18-End-->
 
@@ -272,9 +306,11 @@ DRIVER = 18
 ACTION = 19
 ```
 
-[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md#ActionExtensionAbility)：自定义服务扩展能力，为开发者提供基于UIExtension的自定义操作业务模板。
+[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md#ActionExtensionAbility)：自定义服务扩展能力，为开发者提供基 于UIExtension的自定义操作业务模板。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-ACTION = 19--><!--Device-ExtensionAbilityType-ACTION = 19-End-->
 
@@ -288,7 +324,9 @@ ADS_SERVICE = 20
 
 AdsServiceExtensionAbility：广告服务扩展能力，对外提供后台自定义广告业务服务，仅系统应用支持。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-ADS_SERVICE = 20--><!--Device-ExtensionAbilityType-ADS_SERVICE = 20-End-->
 
@@ -300,9 +338,11 @@ AdsServiceExtensionAbility：广告服务扩展能力，对外提供后台自定
 EMBEDDED_UI = 21
 ```
 
-[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#EmbeddedUIExtensionAbility)：嵌入式UI扩展能力，提供跨进程界面嵌入的能力。
+[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#EmbeddedUIExtensionAbility)：嵌入式UI 扩展能力，提供跨进程界面嵌入的能力。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-EMBEDDED_UI = 21--><!--Device-ExtensionAbilityType-EMBEDDED_UI = 21-End-->
 
@@ -316,7 +356,9 @@ INSIGHT_INTENT_UI = 22
 
 InsightIntentUIExtensionAbility：为开发者提供能被小艺意图调用，以窗口形态呈现内容的扩展能力。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-INSIGHT_INTENT_UI = 22--><!--Device-ExtensionAbilityType-INSIGHT_INTENT_UI = 22-End-->
 
@@ -328,9 +370,11 @@ InsightIntentUIExtensionAbility：为开发者提供能被小艺意图调用，�
 FENCE = 24
 ```
 
-[FenceExtensionAbility](@ohos.app.ability.FenceExtensionAbility:FenceExtensionAbility)：为开发者提供地理围栏相关的能力，继承自ExtensionAbility。
+FenceExtensionAbility：为开发者提供地理围栏相关的能力，继承自 ExtensionAbility。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-FENCE = 24--><!--Device-ExtensionAbilityType-FENCE = 24-End-->
 
@@ -344,7 +388,9 @@ CALLER_INFO_QUERY = 25
 
 CallerInfoQueryExtensionAbility：为开发者提供来去电信息查询能力
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-CALLER_INFO_QUERY = 25--><!--Device-ExtensionAbilityType-CALLER_INFO_QUERY = 25-End-->
 
@@ -358,7 +404,9 @@ ASSET_ACCELERATION = 26
 
 AssetAccelerationExtensionAbility：资源预下载扩展能力，提供在设备闲时状态，进行后台资源预下载的能力。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-ASSET_ACCELERATION = 26--><!--Device-ExtensionAbilityType-ASSET_ACCELERATION = 26-End-->
 
@@ -370,9 +418,11 @@ AssetAccelerationExtensionAbility：资源预下载扩展能力，提供在设�
 FORM_EDIT = 27
 ```
 
-[FormEditExtensionAbility](@ohos.app.form.FormEditExtensionAbility:FormEditExtensionAbility)：为开发者提供卡片编辑的能力，继承自UIExtensionAbility。
+FormEditExtensionAbility：为开发者提供卡片编辑的能力， 继承自UIExtensionAbility。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-FORM_EDIT = 27--><!--Device-ExtensionAbilityType-FORM_EDIT = 27-End-->
 
@@ -384,9 +434,11 @@ FORM_EDIT = 27
 DISTRIBUTED = 28
 ```
 
-[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md#DistributedExtensionAbility)：提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
+[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md#DistributedExtensionAbility)：提供 分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-DISTRIBUTED = 28--><!--Device-ExtensionAbilityType-DISTRIBUTED = 28-End-->
 
@@ -398,9 +450,11 @@ DISTRIBUTED = 28
 APP_SERVICE = 29
 ```
 
-[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility)：为企业普通应用提供后台服务能力。
+[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility)：为企业普通 应用提供后台服务能力。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-APP_SERVICE = 29--><!--Device-ExtensionAbilityType-APP_SERVICE = 29-End-->
 
@@ -412,11 +466,13 @@ APP_SERVICE = 29
 LIVE_FORM = 30
 ```
 
-[LiveFormExtensionAbility](@ohos.app.form.LiveFormExtensionAbility)：互动卡片相关扩展能力，提供互动卡片创建、销毁的生命周期回调。
+LiveFormExtensionAbility：互动卡片相关扩展能力，提供互动卡片创建、销毁的生命周期回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ExtensionAbilityType-LIVE_FORM = 30--><!--Device-ExtensionAbilityType-LIVE_FORM = 30-End-->
 
@@ -428,11 +484,11 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-[SelectionExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md#SelectionExtensionAbility)：为开发者提供划词弹窗能力的ExtensionAbility。
-
-**模型约束**：此接口仅可在Stage模型下使用。
+[SelectionExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md#SelectionExtensionAbility（系统接口）)：为开发者提 供划词弹窗能力的ExtensionAbility。 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -446,9 +502,11 @@ SELECTION = 31
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)：为开发者提供Web原生消息通信能力的ExtensionAbility。
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)：为开发者提供Web原生消息通信能力的 ExtensionAbility。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-WEB_NATIVE_MESSAGING = 32--><!--Device-ExtensionAbilityType-WEB_NATIVE_MESSAGING = 32-End-->
 
@@ -462,7 +520,9 @@ FAULT_LOG = 33
 
 [FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility)：提供故障延迟通知的能力。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-FAULT_LOG = 33--><!--Device-ExtensionAbilityType-FAULT_LOG = 33-End-->
 
@@ -474,9 +534,11 @@ FAULT_LOG = 33
 NOTIFICATION_SUBSCRIBER = 34
 ```
 
-[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#NotificationSubscriberExtensionAbility)：提供通知订阅的相关功能。
+[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#NotificationSubscriberExtensionAbility) ：提供通知订阅的相关功能。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-NOTIFICATION_SUBSCRIBER = 34--><!--Device-ExtensionAbilityType-NOTIFICATION_SUBSCRIBER = 34-End-->
 
@@ -488,9 +550,11 @@ NOTIFICATION_SUBSCRIBER = 34
 CRYPTO = 35
 ```
 
-[CryptoExtensionAbility](../../../security/UniversalKeystoreKit/huks-extension-ability-support-dev.md)：提供外部密钥管理扩展的相关功能。
+[CryptoExtensionAbility](../../../security/UniversalKeystoreKit/huks-extension-ability-support-dev.md)：提供外部密钥管理扩 展的相关功能。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-CRYPTO = 35--><!--Device-ExtensionAbilityType-CRYPTO = 35-End-->
 
@@ -502,11 +566,11 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-[PartnerAgentExtensionAbility](@ohos.FusionConnectivity.PartnerAgentExtensionAbility)：基于蓝牙通信技术，提供设备发现与设备下线的通知功能。
-
-**模型约束**：此接口仅可在Stage模型下使用。
+PartnerAgentExtensionAbility：基于蓝牙通信技术，提供设备发现与设备下线的 通知功能。 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -520,11 +584,11 @@ PARTNER_AGENT = 36
 AGENT = 37
 ```
 
-[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)：提供智能体扩展能力，包括智能体服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。
-
-**模型约束**：此接口仅可在Stage模型下使用。
+AgentExtensionAbility：提供智能体扩展能 力，包括智能体服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -538,11 +602,11 @@ AGENT = 37
 AGENT_UI = 38
 ```
 
-[AgentUIExtensionAbility](../../../reference/apis-ability-kit/js-apis-agent-agentUIExtensionAbility.md)：为开发者提供接入端侧Agent UI界面显示能力。
-
-**模型约束**：此接口仅可在Stage模型下使用。
+AgentUIExtensionAbility：为开发者提供接入 端侧Agent UI界面显示能力。 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -560,6 +624,8 @@ MODULAR_OBJECT = 39
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExtensionAbilityType-MODULAR_OBJECT = 39--><!--Device-ExtensionAbilityType-MODULAR_OBJECT = 39-End-->
@@ -572,10 +638,11 @@ MODULAR_OBJECT = 39
 UNSPECIFIED = 255
 ```
 
-不指定类型&lt;!--Del--&gt;，配合  
-[queryExtensionAbilityInfo接口](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryExtensionAbilityInfo)可以查询所有类型的ExtensionAbility&lt;!--DelEnd--&gt;。
+不指定类型&lt;!--Del--&gt;，配合 [queryExtensionAbilityInfo接口](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryExtensionAbilityInfo（系统接口）) 可以查询所有类型的ExtensionAbility&lt;!--DelEnd--&gt;。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityType-UNSPECIFIED = 255--><!--Device-ExtensionAbilityType-UNSPECIFIED = 255-End-->
 

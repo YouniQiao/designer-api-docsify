@@ -1,14 +1,16 @@
 # IDataSourcePrefetching
 
-Implement this interface to provide data prefetching for the LazyForEach component.
+Extends the IDataSource API to provide a data source that can be prefetched.
 
-**Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource<T>](IDataSource<T>)
+**Inheritance/Implementation:** IDataSourcePrefetching extends IDataSource
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare interface IDataSourcePrefetching<T> extends IDataSource<T>--><!--Device-unnamed-export declare interface IDataSourcePrefetching<T> extends IDataSource<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface IDataSourcePrefetching--><!--Device-unnamed-export interface IDataSourcePrefetching-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,18 +23,22 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI
 ## cancel
 
 ```TypeScript
-default cancel(index: int): Promise<void> | undefined
+cancel?(index: number): Promise<void> | void
 ```
 
-Cancels prefetching data for the specified element in the data collection.This method can be either synchronous or asynchronous.
+Cancels the prefetching of a specified data item from the dataset. This API can be either synchronous or asynchronous. This API is optional. If the data source does not implement this API, the prefetching cancellation operation will not be performed.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IDataSourcePrefetching-default cancel(index: int): Promise<void> | undefined--><!--Device-IDataSourcePrefetching-default cancel(index: int): Promise<void> | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IDataSourcePrefetching-cancel?(index: number): Promise<void> | void--><!--Device-IDataSourcePrefetching-cancel?(index: number): Promise<void> | void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,29 +46,33 @@ Cancels prefetching data for the specified element in the data collection.This m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the item in the collection. |
+| index | number | Yes | Index of the data item whose prefetching is to be canceled. The value range is [0, **totalCount()** – 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |
 
 ## prefetch
 
 ```TypeScript
-prefetch(index: int): Promise<void> | undefined
+prefetch(index: number): Promise<void> | void
 ```
 
-Prefetches data for the specified element in the data collection.This method can be either synchronous or asynchronous.
+Prefetches a specified data item from the dataset. This API can be either synchronous or asynchronous. When the visible area changes, the prefetching algorithm calls this API if it determines that the data item about to enter the visible area needs to be prefetched.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IDataSourcePrefetching-prefetch(index: int): Promise<void> | undefined--><!--Device-IDataSourcePrefetching-prefetch(index: int): Promise<void> | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IDataSourcePrefetching-prefetch(index: number): Promise<void> | void--><!--Device-IDataSourcePrefetching-prefetch(index: number): Promise<void> | void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +80,11 @@ Prefetches data for the specified element in the data collection.This method can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the item in the collection. |
+| index | number | Yes | Index of the data item to be prefetched. The value range is [0, **totalCount()** – 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |
 

@@ -24,7 +24,7 @@ import { audio } from '@kit.AudioKit';
 actionType: InterruptActionType
 ```
 
-Event type.The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERRUPT means the audio interruption event.
+Event type. The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERRUPT means the audio interruption event.
 
 **Type:** [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
 
@@ -32,7 +32,7 @@ Event type.The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERRU
 
 **Deprecated since:** 9
 
-**Substitutes:** [eventType](ohos.multimedia.audio.InterruptEvent#eventType)
+**Substitutes:** eventType
 
 <!--Device-InterruptAction-actionType: InterruptActionType--><!--Device-InterruptAction-actionType: InterruptActionType-End-->
 
@@ -92,7 +92,7 @@ Type of the audio interruption event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [eventType](ohos.multimedia.audio.InterruptEvent#eventType)
+**Substitutes:** eventType
 
 <!--Device-InterruptAction-type?: InterruptType--><!--Device-InterruptAction-type?: InterruptType-End-->
 

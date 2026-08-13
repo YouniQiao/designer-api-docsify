@@ -4,6 +4,8 @@ Enumerates the union modes.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum UnionMode--><!--Device-unnamed-declare enum UnionMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ Smooth union mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UnionMode-SMOOTH_UNION = 0--><!--Device-UnionMode-SMOOTH_UNION = 0-End-->
@@ -34,15 +38,11 @@ Smooth union mode.
 GRAVITY_UNION = 1
 ```
 
-Gravity union mode.
-
-**NOTE：**
-
-This mode takes effect only when   
-[useUnionEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-use-union-effect-sys.md#useunioneffect-1)is used and **gravityCenter** of   
-[GravityCenterOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-use-union-effect-sys.md#gravitycenteroptions)is set to **true**.
+Gravity union mode. **NOTE：**This mode takes effect only when [useUnionEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-use-union-effect-sys.md#useunioneffect-1) is used and **gravityCenter** of [GravityCenterOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-use-union-effect-sys.md#gravitycenteroptions) is set to **true**.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

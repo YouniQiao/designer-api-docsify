@@ -2,9 +2,11 @@
 
 Declares interval type.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-export enum IntervalType--><!--Device-usageStatistics-export enum IntervalType-End-->
 
@@ -20,9 +22,11 @@ BY_OPTIMIZED = 0
 
 Indicates the interval type that will determine the optimal interval based on the start and end time.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IntervalType-BY_OPTIMIZED = 0--><!--Device-IntervalType-BY_OPTIMIZED = 0-End-->
 
@@ -38,9 +42,11 @@ BY_DAILY = 1
 
 Indicates the daily interval.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IntervalType-BY_DAILY = 1--><!--Device-IntervalType-BY_DAILY = 1-End-->
 
@@ -56,9 +62,11 @@ BY_WEEKLY = 2
 
 Indicates the weekly interval.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IntervalType-BY_WEEKLY = 2--><!--Device-IntervalType-BY_WEEKLY = 2-End-->
 
@@ -74,9 +82,11 @@ BY_MONTHLY = 3
 
 Indicates the monthly interval.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IntervalType-BY_MONTHLY = 3--><!--Device-IntervalType-BY_MONTHLY = 3-End-->
 
@@ -92,9 +102,11 @@ BY_ANNUALLY = 4
 
 Indicates the annually interval.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IntervalType-BY_ANNUALLY = 4--><!--Device-IntervalType-BY_ANNUALLY = 4-End-->
 

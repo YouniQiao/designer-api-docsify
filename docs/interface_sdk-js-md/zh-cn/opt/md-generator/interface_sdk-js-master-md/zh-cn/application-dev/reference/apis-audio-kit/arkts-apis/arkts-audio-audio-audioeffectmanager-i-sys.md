@@ -2,7 +2,9 @@
 
 Implements audio effect management.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->
 
@@ -18,7 +20,9 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 
 Gets current audio effect properties.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -38,9 +42,9 @@ Gets current audio effect properties.
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -64,7 +68,9 @@ getSupportedAudioEffectProperty(): Array<AudioEffectProperty>
 
 Gets supported audio effect properties based on current devices.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -84,9 +90,9 @@ Gets supported audio effect properties based on current devices.
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -112,6 +118,8 @@ isAudioSeparationEffectSupported(): boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean--><!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean-End-->
@@ -130,7 +138,7 @@ isAudioSeparationEffectSupported(): boolean
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -151,6 +159,8 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void--><!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void-End-->
@@ -169,8 +179,8 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -186,9 +196,11 @@ audioEffectManager.offAudioSeparationEffectEnabledChange();
 onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 ```
 
-订阅系统音频分离效果使能状态变更事件。系统中的音频分离效果状态可由系统播放控制器应用设定，其他应用程序可以使用此函数来监听change事件。
+订阅系统音频分离效果使能状态变更事件。 系统中的音频分离效果状态可由系统播放控制器应用设定， 其他应用程序可以使用此函数来监听change事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -208,7 +220,7 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -228,7 +240,9 @@ setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void
 
 Sets current audio effect properties.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -248,10 +262,10 @@ Sets current audio effect properties.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -274,9 +288,11 @@ try {
 setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
 ```
 
-设置特定应用进程的音频分离效果开关。或用于特定的音频播放流。该接口使用promise返回结果。
+设置特定应用进程的音频分离效果开关。 或用于特定的音频播放流。 该接口使用promise返回结果。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -306,11 +322,11 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
 ## 示例
 
@@ -334,6 +350,8 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number):
 设置特定音量类型的音频分离效果音量。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -362,11 +380,11 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number):
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
 ## 示例
 

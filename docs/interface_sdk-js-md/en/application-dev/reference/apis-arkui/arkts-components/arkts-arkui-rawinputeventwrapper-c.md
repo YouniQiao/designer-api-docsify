@@ -1,25 +1,12 @@
 # RawInputEventWrapper
 
-Raw input event wrapper class.
-
-Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.
-
-This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.
-
-This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
-
-> **NOTE：**
-> 
-> Since the listener is executed before events are dispatched to specific components, some fields in the event will
-> not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md#EventTarget), coordinates relative to the component
-> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getCurrentLocalPosition)
-> and [stopPropagation](arkts-arkui-touchevent-i.md#stopPropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventDefault) and
-> [getHistoricalPoints](arkts-arkui-touchevent-i.md#getHistoricalPoints) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metaKey)
-> attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getModifierKeyState) method of **KeyEvent**.
+Raw input event wrapper class. Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility. This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access. This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered. > **NOTE：**> > Since the listener is executed before events are dispatched to specific components, some fields in the event will > not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md#EventTarget), coordinates relative to the component > [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getCurrentLocalPosition) > and [stopPropagation](arkts-arkui-touchevent-i.md#stopPropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventDefault) and > [getHistoricalPoints](arkts-arkui-touchevent-i.md#getHistoricalPoints) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metaKey) > attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getModifierKeyState) method of **KeyEvent**.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare abstract class RawInputEventWrapper--><!--Device-unnamed-declare abstract class RawInputEventWrapper-End-->
 
@@ -36,6 +23,8 @@ Obtains the key event.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,6 +52,8 @@ Obtains the mouse event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -88,6 +79,8 @@ Obtains the touch event.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,6 +108,8 @@ Checks whether the event is a key event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -141,6 +136,8 @@ Checks whether the event is a mouse event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -166,6 +163,8 @@ Checks whether the event is a touch event.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

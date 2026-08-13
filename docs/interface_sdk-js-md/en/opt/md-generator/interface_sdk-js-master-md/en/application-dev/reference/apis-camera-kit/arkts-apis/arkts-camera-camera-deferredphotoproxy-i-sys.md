@@ -2,7 +2,9 @@
 
 A class object that functions as a thumbnail proxy.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface DeferredPhotoProxy--><!--Device-camera-interface DeferredPhotoProxy-End-->
 
@@ -24,7 +26,9 @@ getThumbnail(): Promise<image.PixelMap>
 
 Obtains the PixelMap of a thumbnail. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>--><!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>-End-->
 
@@ -42,7 +46,7 @@ Obtains the PixelMap of a thumbnail. This API uses a promise to return the resul
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -64,7 +68,9 @@ release(): Promise<void>
 
 Releases depth data output resources. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeferredPhotoProxy-release(): Promise<void>--><!--Device-DeferredPhotoProxy-release(): Promise<void>-End-->
 
@@ -82,7 +88,7 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

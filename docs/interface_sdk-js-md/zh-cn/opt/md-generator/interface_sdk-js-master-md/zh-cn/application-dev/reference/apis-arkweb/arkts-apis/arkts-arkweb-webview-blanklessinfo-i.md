@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-webview-interface BlanklessInfo--><!--Device-webview-interface BlanklessInfo-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ errCode: WebBlanklessErrorCode
 **类型：** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode--><!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode-End-->
 
@@ -36,6 +40,8 @@ loadingTime: number
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-BlanklessInfo-loadingTime: number--><!--Device-BlanklessInfo-loadingTime: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -51,6 +57,8 @@ similarity: number
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-BlanklessInfo-similarity: number--><!--Device-BlanklessInfo-similarity: number-End-->
 

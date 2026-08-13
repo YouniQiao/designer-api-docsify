@@ -2,7 +2,9 @@
 
 Describes wakeup hap information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface WakeupHapInfo--><!--Device-intelligentVoice-interface WakeupHapInfo-End-->
 
@@ -26,7 +28,9 @@ Ability name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WakeupHapInfo-abilityName: string--><!--Device-WakeupHapInfo-abilityName: string-End-->
 
@@ -44,7 +48,9 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WakeupHapInfo-bundleName: string--><!--Device-WakeupHapInfo-bundleName: string-End-->
 

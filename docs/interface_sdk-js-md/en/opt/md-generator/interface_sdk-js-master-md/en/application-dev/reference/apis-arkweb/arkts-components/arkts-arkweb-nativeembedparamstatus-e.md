@@ -4,7 +4,9 @@ Enum type supplied to [NativeEmbedParamItem](arkts-arkweb-nativeembedparamitem-i
 
 **Since:** 21
 
-<!--Device-unnamed-declare enum  NativeEmbedParamStatus--><!--Device-unnamed-declare enum  NativeEmbedParamStatus-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare enum NativeEmbedParamStatus--><!--Device-unnamed-declare enum NativeEmbedParamStatus-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -17,6 +19,8 @@ ADD = 0
 Triggered when a **param** element is added.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-NativeEmbedParamStatus-ADD = 0--><!--Device-NativeEmbedParamStatus-ADD = 0-End-->
 
@@ -32,6 +36,8 @@ Triggered when a **param** element is modified.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-NativeEmbedParamStatus-UPDATE = 1--><!--Device-NativeEmbedParamStatus-UPDATE = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -45,6 +51,8 @@ DELETE = 2
 Triggered when a **param** element is deleted.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-NativeEmbedParamStatus-DELETE = 2--><!--Device-NativeEmbedParamStatus-DELETE = 2-End-->
 

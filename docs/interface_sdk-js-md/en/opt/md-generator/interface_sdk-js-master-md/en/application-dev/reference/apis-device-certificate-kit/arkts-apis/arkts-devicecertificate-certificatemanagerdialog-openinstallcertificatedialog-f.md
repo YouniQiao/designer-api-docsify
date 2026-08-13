@@ -12,9 +12,11 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 function openInstallCertificateDialog(context: common.Context, certType: CertificateType, certScope: CertificateScope, cert: Uint8Array): Promise<string>
 ```
 
-Opens the Certificate Management Install Certificate dialog box. After the certificate is successfully installed,the unique identifier of the certificate is returned. Applications can use the identifier to use the certificate.Use Promise asynchronous callback.
+Opens the Certificate Management Install Certificate dialog box. After the certificate is successfully installed, the unique identifier of the certificate is returned. Applications can use the identifier to use the certificate. Use Promise asynchronous callback.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -43,14 +45,14 @@ Opens the Certificate Management Install Certificate dialog box. After the certi
 
 | Error Code ID |
 | --- |
-| [29700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700005-nonsecure-operation) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-internal-error) |
-| [29700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
-| [29700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700002-operation-canceled) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [29700005](../errorcode-certManagerDialog.md#29700005-nonsecure-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
+| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
+| [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

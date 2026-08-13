@@ -2,7 +2,9 @@
 
 设备总线类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-deviceManager-export enum BusType--><!--Device-deviceManager-export enum BusType-End-->
 
@@ -16,7 +18,9 @@ USB = 1
 
 USB总线类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BusType-USB = 1--><!--Device-BusType-USB = 1-End-->
 

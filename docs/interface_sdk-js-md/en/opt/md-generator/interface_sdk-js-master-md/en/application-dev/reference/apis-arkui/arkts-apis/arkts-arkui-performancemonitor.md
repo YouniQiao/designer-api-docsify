@@ -1,15 +1,22 @@
 # @ohos.arkui.performanceMonitor
 
-The **performanceMonitor** module provides APIs for monitoring performance metrics related to user scenes. By calling the **begin** and **end** APIs at the start and end of a scene respectively, you can obtain relevant performance metrics such as response latency, completion latency, and frame drops.
+/*
+ Copyright (C) 2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **NOTE：**
-> 
-> The APIs of this module are supported since API version 10. Updates will be marked with a superscript to indicate
-> their
-> 
-> The APIs provided by this module are system APIs.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,9 +39,9 @@ import { performanceMonitor } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin) |
-| [end](arkts-arkui-performancemonitor-end-f-sys.md#end) |
-| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordinputeventtime) |
+| [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin-(System-API)) |
+| [end](arkts-arkui-performancemonitor-end-f-sys.md#end-(System-API)) |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordInputEventTime-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

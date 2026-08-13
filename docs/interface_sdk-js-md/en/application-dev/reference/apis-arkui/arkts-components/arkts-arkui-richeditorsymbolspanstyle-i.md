@@ -6,6 +6,8 @@ Sets the symbol span style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorSymbolSpanStyle--><!--Device-unnamed-declare interface RichEditorSymbolSpanStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Sets the symbol span style.
 effectStrategy?: SymbolEffectStrategy
 ```
 
-Effect strategy of the symbol span.
-
-Default value: **SymbolEffectStrategy.NONE**
+Effect strategy of the symbol span. Default value: **SymbolEffectStrategy.NONE**
 
 **Type:** SymbolEffectStrategy
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,15 @@ Default value: **SymbolEffectStrategy.NONE**
 fontColor?: Array<ResourceColor>
 ```
 
-Color of the symbol span.
-
-Default value: depending on the rendering strategy
+Color of the symbol span. Default value: depending on the rendering strategy
 
 **Type:** Array&lt;ResourceColor&gt;
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,15 +66,15 @@ Default value: depending on the rendering strategy
 fontSize?: number | string | Resource
 ```
 
-Size of the symbol span. The default unit is fp.
-
-The default value follows the theme.
+Size of the symbol span. The default unit is fp. The default value follows the theme.
 
 **Type:** number \| string \| Resource
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,21 +90,15 @@ The default value follows the theme.
 fontWeight?: number | FontWeight | string
 ```
 
-Weight of the symbol span.
-
-For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.
-
-For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**,   
-**"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in   
-**FontWeight**.
-
-Default value: **FontWeight.Normal**
+Weight of the symbol span. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**. Default value: **FontWeight.Normal**
 
 **Type:** number \| FontWeight \| string
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,15 +114,15 @@ Default value: **FontWeight.Normal**
 renderingStrategy?: SymbolRenderingStrategy
 ```
 
-Rendering strategy of the symbol span.
-
-Default value: **SymbolRenderingStrategy.SINGLE**
+Rendering strategy of the symbol span. Default value: **SymbolRenderingStrategy.SINGLE**
 
 **Type:** SymbolRenderingStrategy
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

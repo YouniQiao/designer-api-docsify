@@ -20,7 +20,7 @@ Obtains the name of a peer Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemoteDeviceName](ohos.bluetoothManager/bluetoothManager.getRemoteDeviceName)
+**Substitutes:** [getRemoteDeviceName](arkts-connectivity-bluetoothmanager-getremotedevicename-f.md#getRemoteDeviceName)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

@@ -1,14 +1,14 @@
 # Zoom
 
-**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery).
-
-It provides APIs related to zoom operations.
+**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery). It provides APIs related to zoom operations.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface Zoom--><!--Device-camera-interface Zoom-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,7 +26,9 @@ getZoomCenterPoint(): Point
 
 Gets zoom center point.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Zoom-getZoomCenterPoint(): Point--><!--Device-Zoom-getZoomCenterPoint(): Point-End-->
 
@@ -44,8 +46,8 @@ Gets zoom center point.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## prepareZoom
 
@@ -55,7 +57,9 @@ prepareZoom(): void
 
 Instructs the bottom layer to prepare for zooming, for example, powering on the sensor.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Zoom-prepareZoom(): void--><!--Device-Zoom-prepareZoom(): void-End-->
 
@@ -67,8 +71,8 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -94,7 +98,9 @@ setZoomCenterPoint(point: Point): void
 
 Sets zoom center point.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Zoom-setZoomCenterPoint(point: Point): void--><!--Device-Zoom-setZoomCenterPoint(point: Point): void-End-->
 
@@ -112,8 +118,8 @@ Sets zoom center point.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## unprepareZoom
 
@@ -123,7 +129,9 @@ unprepareZoom(): void
 
 Instructs the bottom layer to unprepare for zooming.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Zoom-unprepareZoom(): void--><!--Device-Zoom-unprepareZoom(): void-End-->
 
@@ -135,8 +143,8 @@ Instructs the bottom layer to unprepare for zooming.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

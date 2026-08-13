@@ -2,7 +2,9 @@
 
 Enumerates text normalization modes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export enum NormalizerMode--><!--Device-i18n-export enum NormalizerMode-End-->
 
@@ -16,7 +18,9 @@ NFC = 1
 
 Normalization form C, characters are decomposed and then re-composed by canonical equivalence
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ NFD = 2
 
 Normalization form D, characters are decomposed by canonical equivalence
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ NFKC = 3
 
 Normalization form KC, characters are decomposed by compatibility, then re-composed by canonical equivalence
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +72,9 @@ NFKD = 4
 
 Normalization form KD, characters are decomposed by compatibility
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

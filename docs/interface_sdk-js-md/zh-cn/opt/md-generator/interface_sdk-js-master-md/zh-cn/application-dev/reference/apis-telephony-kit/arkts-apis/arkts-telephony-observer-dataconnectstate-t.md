@@ -6,7 +6,9 @@ type DataConnectState = data.DataConnectState
 
 描述蜂窝数据链路连接状态。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-observer-type DataConnectState = data.DataConnectState--><!--Device-observer-type DataConnectState = data.DataConnectState-End-->
 

@@ -1,14 +1,10 @@
 # Font
 
-Font用于管理自定义字体和系统字体信息，支持注册自定义字体、获取系统字体列表、查询字体详细信息等功能，适用于需要在应用中使用自定义字体或查询系统字体资源的场景。
-
-> **说明：**
-> 
-> - 以下API需先使用UIContext中的[getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFont)方法获取到Font对象，再通过该对象调用对应方法。
-> 
-> - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
+Font用于管理自定义字体和系统字体信息，支持注册自定义字体、获取系统字体列表、查询字体详细信息等功能，适用于需要在应用中使用自定义字体或查询系统字体资源的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFont)方法获取到Font对象，再通过该对象调用对应方法。 > > - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class Font--><!--Device-unnamed-export class Font-End-->
 
@@ -23,6 +19,8 @@ getFontByName(fontName: string): font.FontInfo
 根据传入的系统字体名称获取系统字体的相关信息。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,14 +48,11 @@ getFontByName(fontName: string): font.FontInfo
 getSystemFontList(): Array<string>
 ```
 
-获取系统支持的字体列表。
-
-该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。
-
-> **说明：**
-> 推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType)接口获取系统最新支持的字体列表数据。
+获取系统支持的字体列表。 该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。 > **说明：**> 推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType)接口获取系统最新支持的字体列表数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -79,13 +74,11 @@ getSystemFontList(): Array<string>
 registerFont(options: font.FontOptions): void
 ```
 
-在字体管理中注册自定义字体。
-
-推荐使用字体引擎的[loadFontSync](../apis-arkgraphics2d/js-apis-graphics-text.md#loadfontsync)接口注册自定义字体。
-
-该接口为异步接口，字体注册为异步过程，不支持并发调用。由于注册是异步完成的，建议在页面初始化阶段（如aboutToAppear）提前调用，以确保字体在使用前已注册完成。
+在字体管理中注册自定义字体。 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。 该接口为异步接口，字体注册为异步过程，不支持并发调用。由于注册是异步完成的，建议在页面初始化阶段（如aboutToAppear）提前调用，以确保字体在使用前已注册完成。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

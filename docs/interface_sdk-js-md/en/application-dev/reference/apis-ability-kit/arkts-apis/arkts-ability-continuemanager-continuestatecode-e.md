@@ -2,9 +2,11 @@
 
 Enumerates the status codes of the quick start result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-continueManager-enum ContinueStateCode--><!--Device-continueManager-enum ContinueStateCode-End-->
 
@@ -16,13 +18,13 @@ Enumerates the status codes of the quick start result.
 SUCCESS = 0
 ```
 
-Operation succeeded.
+Operation succeeded. This API can be used only in the stage model.
 
-This API can be used only in the stage model.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ This API can be used only in the stage model.
 SYSTEM_ERROR = 1
 ```
 
-Operation failed.
+Operation failed. This API can be used only in the stage model.
 
-This API can be used only in the stage model.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

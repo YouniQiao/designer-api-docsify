@@ -8,7 +8,7 @@ Defines the options for saving images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [SaveButtonOptions](SaveButtonOptions)
+**Substitutes:** SaveButtonOptions
 
 <!--Device-picker-class PhotoSaveOptions--><!--Device-picker-class PhotoSaveOptions-End-->
 
@@ -36,7 +36,7 @@ File name of the image or video to save. If this parameter is not specified, the
 
 **Deprecated since:** 18
 
-**Substitutes:** [SaveButtonOptions](SaveButtonOptions)
+**Substitutes:** SaveButtonOptions
 
 <!--Device-PhotoSaveOptions-newFileNames?: Array<string>--><!--Device-PhotoSaveOptions-newFileNames?: Array<string>-End-->
 

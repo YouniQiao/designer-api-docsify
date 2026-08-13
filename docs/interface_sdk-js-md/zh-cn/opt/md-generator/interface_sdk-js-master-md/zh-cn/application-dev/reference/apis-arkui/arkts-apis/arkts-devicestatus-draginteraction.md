@@ -1,12 +1,10 @@
 # @ohos.deviceStatus.dragInteraction
 
-拖拽功能模块，提供注册和取消拖拽状态监听的能力。
+拖拽功能模块，提供注册和取消拖拽状态监听的能力。 > **说明：** > > - 本模块接口均为系统接口。
 
-> **说明：**
-> 
-> - 本模块接口均为系统接口。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace dragInteraction--><!--Device-unnamed-declare namespace dragInteraction-End-->
 
@@ -21,11 +19,13 @@
 
 | 名称 |
 | --- |
-| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md#getdatasummary) |
-| [off](arkts-arkui-draginteraction-off-f-sys.md#off) |
-| [on](arkts-arkui-draginteraction-on-f-sys.md#on) |
-| [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md#setappdragswitchstate) |
-| [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md#setdragswitchstate) |
+| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md#getDataSummary（系统接口）) |
+| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md#offDragStateChange（系统接口）) |
+| [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#off_drag) |
+| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md#onDragStateChange（系统接口）) |
+| [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#on_drag) |
+| [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md#setAppDragSwitchState（系统接口）) |
+| [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md#setDragSwitchState（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

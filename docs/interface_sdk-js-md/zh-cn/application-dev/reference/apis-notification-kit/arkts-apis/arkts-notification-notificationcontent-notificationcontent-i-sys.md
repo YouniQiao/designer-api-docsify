@@ -2,9 +2,11 @@
 
 通知内容。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationContent--><!--Device-unnamed-export interface NotificationContent-End-->
 
@@ -20,9 +22,11 @@ liveView?: NotificationLiveViewContent
 
 **类型：** [NotificationLiveViewContent](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationContent-liveView?: NotificationLiveViewContent--><!--Device-NotificationContent-liveView?: NotificationLiveViewContent-End-->
 

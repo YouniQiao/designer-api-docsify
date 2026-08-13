@@ -12,7 +12,7 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 **废弃版本：** 9
 
-**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**替代接口：** showDialog
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void--><!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void-End-->
 
@@ -64,7 +64,7 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 **废弃版本：** 9
 
-**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**替代接口：** showDialog
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>--><!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>-End-->
 

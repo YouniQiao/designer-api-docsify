@@ -2,7 +2,9 @@
 
 Enumerates SIM card lock types.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-export enum LockReason--><!--Device-observer-export enum LockReason-End-->
 
@@ -16,7 +18,9 @@ SIM_NONE = 0
 
 No lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_NONE = 0--><!--Device-LockReason-SIM_NONE = 0-End-->
 
@@ -30,7 +34,9 @@ SIM_PIN = 1
 
 PIN lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PIN = 1--><!--Device-LockReason-SIM_PIN = 1-End-->
 
@@ -44,7 +50,9 @@ SIM_PUK = 2
 
 PUK lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PUK = 2--><!--Device-LockReason-SIM_PUK = 2-End-->
 
@@ -58,7 +66,9 @@ SIM_PN_PIN = 3
 
 Network PIN lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PN_PIN = 3--><!--Device-LockReason-SIM_PN_PIN = 3-End-->
 
@@ -72,7 +82,9 @@ SIM_PN_PUK = 4
 
 Network PUK lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PN_PUK = 4--><!--Device-LockReason-SIM_PN_PUK = 4-End-->
 
@@ -86,7 +98,9 @@ SIM_PU_PIN = 5
 
 Subnet PIN lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PU_PIN = 5--><!--Device-LockReason-SIM_PU_PIN = 5-End-->
 
@@ -100,7 +114,9 @@ SIM_PU_PUK = 6
 
 Subnet PUK lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PU_PUK = 6--><!--Device-LockReason-SIM_PU_PUK = 6-End-->
 
@@ -114,7 +130,9 @@ SIM_PP_PIN = 7
 
 Service provider PIN lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PP_PIN = 7--><!--Device-LockReason-SIM_PP_PIN = 7-End-->
 
@@ -128,7 +146,9 @@ SIM_PP_PUK = 8
 
 Service provider PUK lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PP_PUK = 8--><!--Device-LockReason-SIM_PP_PUK = 8-End-->
 
@@ -142,7 +162,9 @@ SIM_PC_PIN = 9
 
 Organization PIN lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PC_PIN = 9--><!--Device-LockReason-SIM_PC_PIN = 9-End-->
 
@@ -156,7 +178,9 @@ SIM_PC_PUK = 10
 
 Organization PUK lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PC_PUK = 10--><!--Device-LockReason-SIM_PC_PUK = 10-End-->
 
@@ -170,7 +194,9 @@ SIM_SIM_PIN = 11
 
 SIM PIN lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_SIM_PIN = 11--><!--Device-LockReason-SIM_SIM_PIN = 11-End-->
 
@@ -184,7 +210,9 @@ SIM_SIM_PUK = 12
 
 SIM PUK lock.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_SIM_PUK = 12--><!--Device-LockReason-SIM_SIM_PUK = 12-End-->
 

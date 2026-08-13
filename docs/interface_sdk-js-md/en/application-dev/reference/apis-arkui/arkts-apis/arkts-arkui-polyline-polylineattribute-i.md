@@ -2,33 +2,31 @@
 
 Defines Polyline attribute
 
-**Inheritance/Implementation:** PolylineAttribute extends [CommonShapeMethod](CommonShapeMethod)
+**Inheritance/Implementation:** PolylineAttribute extends CommonShapeMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface PolylineAttribute extends CommonShapeMethod--><!--Device-unnamed-export declare interface PolylineAttribute extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface PolylineAttribute--><!--Device-unnamed-export declare interface PolylineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PolylineAttribute-default attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PolylineAttribute-default attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PolylineAttribute-attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PolylineAttribute-attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -45,20 +43,16 @@ Call attributeModifier.
 ## points
 
 ```TypeScript
-default points(value: Array<ShapePoint> | undefined): this
+points(value: Array<ShapePoint> | undefined): this
 ```
 
-Called when the polyline is set to pass through the coordinate point list.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PolylineAttribute-default points(value: Array<ShapePoint> | undefined): this--><!--Device-PolylineAttribute-default points(value: Array<ShapePoint> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PolylineAttribute-points(value: Array<ShapePoint> | undefined): this--><!--Device-PolylineAttribute-points(value: Array<ShapePoint> | undefined): this-End-->
 
 **Parameters:**
 
@@ -75,30 +69,46 @@ Called when the polyline is set to pass through the coordinate point list.
 ## setPolylineOptions
 
 ```TypeScript
-default setPolylineOptions(options?: PolylineOptions): this
+setPolylineOptions(options?: PolylineOptions): this
 ```
 
-Set Polyline options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PolylineAttribute-default setPolylineOptions(options?: PolylineOptions): this--><!--Device-PolylineAttribute-default setPolylineOptions(options?: PolylineOptions): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PolylineAttribute-setPolylineOptions(options?: PolylineOptions): this--><!--Device-PolylineAttribute-setPolylineOptions(options?: PolylineOptions): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | No | Polyline constructor options. |
+| options | [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the PolylineAttribute. |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PolylineAttribute-default--><!--Device-PolylineAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

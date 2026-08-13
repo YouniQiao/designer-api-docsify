@@ -6,13 +6,13 @@
 export declare function sendMouseEvent(event: MouseEvent): boolean
 ```
 
-发送鼠标事件。
-
-此接口仅用于对应用的测试。由于耗时长，不建议使用。
+发送鼠标事件。 此接口仅用于对应用的测试。由于耗时长，不建议使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -24,7 +24,7 @@ export declare function sendMouseEvent(event: MouseEvent): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | MouseEvent | 是 | 鼠标事件，event参数见[MouseEvent](MouseEvent)介绍。 |
+| event | MouseEvent | 是 | 鼠标事件，event参数见MouseEvent介绍。 |
 
 **返回值：**
 

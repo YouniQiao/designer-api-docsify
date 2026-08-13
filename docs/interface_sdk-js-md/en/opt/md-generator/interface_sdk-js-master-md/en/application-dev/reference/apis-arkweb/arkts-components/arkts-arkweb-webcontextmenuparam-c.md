@@ -4,6 +4,8 @@ Defines the context menu param, related to [WebContextMenuParam](#WebContextMenu
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class WebContextMenuParam--><!--Device-unnamed-declare class WebContextMenuParam-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ existsImageContents(): boolean
 Long press menu location has image content.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,6 +62,8 @@ Returns the type of context node.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType--><!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -75,6 +83,8 @@ getEditStateFlags(): number
 Returns the context editable flags [ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md#ContextMenuEditStateFlags).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +108,8 @@ Returns input field type if the context menu was invoked on an input field.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebContextMenuParam-getInputFieldType(): ContextMenuInputFieldType--><!--Device-WebContextMenuParam-getInputFieldType(): ContextMenuInputFieldType-End-->
@@ -119,6 +131,8 @@ getLinkUrl(): string
 If the long-press location is the link returns the link's security-checked URL.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -142,6 +156,8 @@ Returns the type of context node.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebContextMenuParam-getMediaType(): ContextMenuMediaType--><!--Device-WebContextMenuParam-getMediaType(): ContextMenuMediaType-End-->
@@ -164,6 +180,8 @@ Returns the selection menu preview height.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-WebContextMenuParam-getPreviewHeight(): number--><!--Device-WebContextMenuParam-getPreviewHeight(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -184,6 +202,8 @@ Returns the selection menu preview width.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-WebContextMenuParam-getPreviewWidth(): number--><!--Device-WebContextMenuParam-getPreviewWidth(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -203,6 +223,8 @@ getSelectionText(): string
 Returns the text of the selection.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -226,6 +248,8 @@ Returns the context menu source type.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebContextMenuParam-getSourceType(): ContextMenuSourceType--><!--Device-WebContextMenuParam-getSourceType(): ContextMenuSourceType-End-->
@@ -247,6 +271,8 @@ getSourceUrl(): string
 Returns the SRC URL if the selected element has a SRC attribute.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -270,6 +296,8 @@ If the long-press location is the link returns the link's original URL.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebContextMenuParam-getUnfilteredLinkUrl(): string--><!--Device-WebContextMenuParam-getUnfilteredLinkUrl(): string-End-->
@@ -291,6 +319,8 @@ isEditable(): boolean
 Returns whether the context is editable.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -314,6 +344,8 @@ Horizontal offset coordinates of the menu within the Web component.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebContextMenuParam-x(): number--><!--Device-WebContextMenuParam-x(): number-End-->
@@ -335,6 +367,8 @@ y(): number
 Vertical offset coordinates for the menu within the Web component.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

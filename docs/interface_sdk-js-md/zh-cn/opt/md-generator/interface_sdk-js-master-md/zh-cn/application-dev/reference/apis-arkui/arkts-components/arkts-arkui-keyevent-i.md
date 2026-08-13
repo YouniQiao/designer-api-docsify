@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface KeyEvent--><!--Device-unnamed-declare interface KeyEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getModifierKeyState?(keys: Array<string>): boolean
 获取功能键按压状态。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,23 +46,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## stopPropagation
-
-```TypeScript
-stopPropagation: () => void
-```
-
-阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)传递。
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-KeyEvent-stopPropagation: () => void--><!--Device-KeyEvent-stopPropagation: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## deviceId
 
@@ -72,6 +60,8 @@ deviceId: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-KeyEvent-deviceId: number--><!--Device-KeyEvent-deviceId: number-End-->
@@ -84,15 +74,15 @@ deviceId: number
 intentionCode: IntentionCode
 ```
 
-按键对应的意图。
-
-默认值：IntentionCode.INTENTION_UNKNOWN。
+按键对应的意图。 默认值：IntentionCode.INTENTION_UNKNOWN。
 
 **类型：** [IntentionCode](arkts-arkui-intentioncode-t.md)
 
 **默认值：** IntentionCode.INTENTION_UNKNOWN
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,6 +104,8 @@ CapsLock是否锁定（true: 锁定；false: 解锁）。
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -133,6 +125,8 @@ NumLock是否锁定（true: 锁定；false: 解锁）。
 **类型：** boolean
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -154,6 +148,8 @@ ScrollLock是否锁定（true: 锁定；false: 解锁）。
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -174,6 +170,8 @@ keyCode: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-KeyEvent-keyCode: number--><!--Device-KeyEvent-keyCode: number-End-->
@@ -191,6 +189,8 @@ keySource: KeySource
 **类型：** [KeySource](../arkts-apis/arkts-arkui-keysource-e.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -210,6 +210,8 @@ keyText: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-KeyEvent-keyText: string--><!--Device-KeyEvent-keyText: string-End-->
@@ -228,9 +230,31 @@ metaKey: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-KeyEvent-metaKey: number--><!--Device-KeyEvent-metaKey: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## stopPropagation
+
+```TypeScript
+stopPropagation: () => void
+```
+
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)传递。
+
+**类型：** () =&gt; void
+
+**起始版本：** 7
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyEvent-stopPropagation: () => void--><!--Device-KeyEvent-stopPropagation: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -245,6 +269,8 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -264,6 +290,8 @@ type: KeyType
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-KeyEvent-type: KeyType--><!--Device-KeyEvent-type: KeyType-End-->
@@ -281,6 +309,8 @@ unicode?: number
 **类型：** number
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -8,6 +8,8 @@ Enumerates all the levels available for the image resolution quality.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare type ResolutionQuality = import('../api/@ohos.multimedia.image').default.ResolutionQuality--><!--Device-unnamed-declare type ResolutionQuality = import('../api/@ohos.multimedia.image').default.ResolutionQuality-End-->

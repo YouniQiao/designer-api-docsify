@@ -1,10 +1,12 @@
 # Circle
 
-Defines the Circle.
+Describes a circle.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Circle--><!--Device-unnamed-export interface Circle-End-->
 
@@ -13,60 +15,72 @@ Defines the Circle.
 ## centerX
 
 ```TypeScript
-centerX: double
+centerX: number
 ```
 
-The x-coordinate of the center of the Circle.
+X-coordinate of the center of the circle, in px.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Circle-centerX: double--><!--Device-Circle-centerX: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Circle-centerX: number--><!--Device-Circle-centerX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
 
 ```TypeScript
-centerY: double
+centerY: number
 ```
 
-The y-coordinate of the center of the Circle.
+Y-coordinate of the center of the circle, in px.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Circle-centerY: double--><!--Device-Circle-centerY: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Circle-centerY: number--><!--Device-Circle-centerY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
 
 ```TypeScript
-radius: double
+radius: number
 ```
 
-The radius of the Circle.
+Radius of the circle, in px. Value range: [0, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Circle-radius: double--><!--Device-Circle-radius: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Circle-radius: number--><!--Device-Circle-radius: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -6,7 +6,9 @@ Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](
 
 **Since:** 20
 
-<!--Device-unnamed-declare class RadialGradientStyle extends ShaderStyle--><!--Device-unnamed-declare class RadialGradientStyle extends ShaderStyle-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class RadialGradientStyle--><!--Device-unnamed-declare class RadialGradientStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options: RadialGradientOptions)
 A constructor used to create a **RadialGradientOptions** object.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,6 +49,8 @@ Options for displaying a radial gradient.
 **Type:** [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

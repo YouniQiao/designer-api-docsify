@@ -4,6 +4,8 @@ ScrollEvent type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-uiObserver-export enum ScrollEventType--><!--Device-uiObserver-export enum ScrollEventType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SCROLL_START = 0
 When the ScrollEvent starts.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ SCROLL_STOP = 1
 When the ScrollEvent stops.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

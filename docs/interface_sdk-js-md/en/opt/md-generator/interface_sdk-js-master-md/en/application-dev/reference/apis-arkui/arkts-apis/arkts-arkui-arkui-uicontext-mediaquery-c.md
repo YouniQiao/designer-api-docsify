@@ -4,6 +4,8 @@ class MediaQuery
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class MediaQuery--><!--Device-unnamed-export class MediaQuery-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ matchMediaSync(condition: string): mediaQuery.MediaQueryListener
 Sets the media query criteria and returns the corresponding listening handle
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class BackgroundColorStyle--><!--Device-unnamed-declare class BackgroundColorStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -30,7 +34,7 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [textBackgroundStyle](#textbackgroundstyle) | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | 是 |
+| [textBackgroundStyle](#textBackgroundStyle) | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | 是 |
 
 ## textBackgroundStyle
 
@@ -38,21 +42,13 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 readonly textBackgroundStyle: TextBackgroundStyle
 ```
 
-获取属性字符串的文本背景颜色。
-
-默认值：
-
-{
-
-color: Color.Transparent,
-
-radius: 0
-
-}
+获取属性字符串的文本背景颜色。 默认值： { color: Color.Transparent, radius: 0 }
 
 **类型：** [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md)
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

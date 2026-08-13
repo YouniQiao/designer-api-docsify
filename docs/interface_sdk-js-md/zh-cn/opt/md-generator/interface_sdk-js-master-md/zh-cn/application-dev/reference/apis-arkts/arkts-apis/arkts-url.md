@@ -1,20 +1,22 @@
 # @ohos.url(URL字符串解析)
 
-URL是统一资源定位符，本模块提供了常用的工具函数，实现了解析URL字符串、构造URL对象以及对URL查询参数的解析和操作等功能。
+/*
+ Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-模块主要包含以下核心类：
 
-- [URL](arkts-arkts-url-url-c.md#URL)：用于解析和构造完整URL。
+**起始版本：** 23
 
-- [URLParams](arkts-arkts-url-urlparams-c.md#URLParams)：用于操作URL查询参数。
-
-- [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md#URLSearchParams)：从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md#URLParams)替代。
-
-> **说明：**
-> 
-> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
-
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace url--><!--Device-unnamed-declare namespace url-End-->
 
@@ -29,3 +31,9 @@ URL是统一资源定位符，本模块提供了常用的工具函数，实现�
 | [URL](arkts-arkts-url-url-c.md) |
 | [URLParams](arkts-arkts-url-urlparams-c.md) |
 | [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) |
+
+### 类型
+
+| 名称 |
+| --- |
+| [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) |

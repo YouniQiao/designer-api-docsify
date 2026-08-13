@@ -12,11 +12,11 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function onReadData(callback: Callback<DataParams>): void
 ```
 
-Subscribes to the event reported when data is read from the port.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to the event reported when data is read from the port. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,5 +34,5 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 36100099 |

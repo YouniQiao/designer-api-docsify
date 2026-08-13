@@ -12,7 +12,7 @@ function getStorageSync(path: string): Storage
 
 **废弃版本：** 9
 
-**替代接口：** [getPreferences](ohos.preferences.preferences.getPreferences)
+**替代接口：** getPreferences
 
 <!--Device-storage-function getStorageSync(path: string): Storage--><!--Device-storage-function getStorageSync(path: string): Storage-End-->
 

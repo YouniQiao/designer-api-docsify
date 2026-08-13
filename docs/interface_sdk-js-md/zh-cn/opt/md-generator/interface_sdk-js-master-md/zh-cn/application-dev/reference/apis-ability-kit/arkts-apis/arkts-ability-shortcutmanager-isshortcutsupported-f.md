@@ -8,6 +8,10 @@ function isShortcutSupported(): boolean
 
 查询当前设备是否支持快捷方式。
 
+**起始版本：** 26.0.0
+
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-shortcutManager-function isShortcutSupported(): boolean--><!--Device-shortcutManager-function isShortcutSupported(): boolean-End-->

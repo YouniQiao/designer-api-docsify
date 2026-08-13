@@ -2,9 +2,11 @@
 
 Describes the image embedding functions of the multi-modal embedding model.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-interface ImageEmbedding--><!--Device-intelligence-interface ImageEmbedding-End-->
 
@@ -18,21 +20,17 @@ import { intelligence } from '@kit.ArkData';
 
 ## getEmbedding
 
-ArkTS-Dyn:
-```TypeScript
-getEmbedding(image: Image): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getEmbedding(image: Image): Promise<Array<double>>
 ```
 
-Obtains the embedding vector of the given image.The model can handle images below 20 MB in size in a single inference.
+Obtains the embedding vector of the given image. The model can handle images below 20 MB in size in a single inference.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>--><!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>-End-->
 
@@ -48,15 +46,15 @@ Obtains the embedding vector of the given image.The model can handle images belo
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | The promise used to return the embedding result. |
+| Promise&lt;Array&lt;double&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -82,9 +80,11 @@ loadModel(): Promise<void>
 
 Loads this image embedding model. If the loading fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageEmbedding-loadModel(): Promise<void>--><!--Device-ImageEmbedding-loadModel(): Promise<void>-End-->
 
@@ -100,8 +100,8 @@ Loads this image embedding model. If the loading fails, an error code is returne
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -125,9 +125,11 @@ releaseModel(): Promise<void>
 
 Releases this image embedding model. If the releasing fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageEmbedding-releaseModel(): Promise<void>--><!--Device-ImageEmbedding-releaseModel(): Promise<void>-End-->
 
@@ -143,8 +145,8 @@ Releases this image embedding model. If the releasing fails, an error code is re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 

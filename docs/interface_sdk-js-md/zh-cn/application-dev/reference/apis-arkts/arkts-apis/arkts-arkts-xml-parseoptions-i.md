@@ -1,10 +1,12 @@
 # ParseOptions
 
-XML解析选项，用于配置XmlPullParser的解析行为。开发者可通过supportDoctype和ignoreNameSpace控制解析范围，通过注册回调函数（tagValueCallbackFunction、attributeValueCallbackFunction、tokenValueCallbackFunction等）接收不同类型的解析事件。
+XML解析选项，用于配置XmlPullParser的解析行为。开发者可通过supportDoctype和ignoreNameSpace控制解析范围，通过注册回调函数（tagValueCallbackFunction、 attributeValueCallbackFunction、tokenValueCallbackFunction等）接收不同类型的解析事件。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-xml-interface ParseOptions--><!--Device-xml-interface ParseOptions-End-->
 
@@ -18,22 +20,19 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 
 解析属性和属性值，默认值undefined，表示不解析。
 
-**起始版本：** 8
+**类型：** (name: string, value: string) =&gt; boolean
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseOptions-attributeValueCallbackFunction?: (name: string, value: string) => boolean--><!--Device-ParseOptions-attributeValueCallbackFunction?: (name: string, value: string) => boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 |  |
-| value | string | 是 |  |
 
 ## attributeWithTagCallbackFunction
 
@@ -43,65 +42,19 @@ attributeWithTagCallbackFunction?: AttributeWithTagCb
 
 解析tagName标签，默认值undefined，表示不解析。
 
-**起始版本：** 20
+**类型：** [AttributeWithTagCb](arkts-arkts-xml-attributewithtagcb-t.md)
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseOptions-attributeWithTagCallbackFunction?: AttributeWithTagCb--><!--Device-ParseOptions-attributeWithTagCallbackFunction?: AttributeWithTagCb-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-## tagValueCallbackFunction
-
-```TypeScript
-tagValueCallbackFunction?: (name: string, value: string) => boolean
-```
-
-解析开始标签、标签值和结束标签，默认值undefined，表示不解析。
-
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean--><!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 |  |
-| value | string | 是 |  |
-
-## tokenValueCallbackFunction
-
-```TypeScript
-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
-```
-
-解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md#EventType))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md#ParseInfo)属性，默认值undefined，表示不解析。
-
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean--><!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventType | EventType | 是 |  |
-| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | 是 |  |
 
 ## ignoreNameSpace
 
@@ -113,9 +66,11 @@ ignoreNameSpace?: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -133,13 +88,59 @@ supportDoctype?: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseOptions-supportDoctype?: boolean--><!--Device-ParseOptions-supportDoctype?: boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## tagValueCallbackFunction
+
+```TypeScript
+tagValueCallbackFunction?: (name: string, value: string) => boolean
+```
+
+解析开始标签、标签值和结束标签，默认值undefined，表示不解析。
+
+**类型：** (name: string, value: string) =&gt; boolean
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean--><!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## tokenValueCallbackFunction
+
+```TypeScript
+tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
+```
+
+解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md#EventType))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md#ParseInfo)属性，默认值undefined，表示不解析。
+
+**类型：** (eventType: EventType, value: ParseInfo) =&gt; boolean
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean--><!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

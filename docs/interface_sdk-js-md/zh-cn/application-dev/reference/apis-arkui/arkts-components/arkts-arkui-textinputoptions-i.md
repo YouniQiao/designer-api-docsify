@@ -6,6 +6,8 @@ TextInput初始化参数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface TextInputOptions--><!--Device-unnamed-declare interface TextInputOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ controller?: TextInputController
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,6 +48,8 @@ placeholder?: ResourceStr
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextInputOptions-placeholder?: ResourceStr--><!--Device-TextInputOptions-placeholder?: ResourceStr-End-->
@@ -56,21 +62,15 @@ placeholder?: ResourceStr
 text?: ResourceStr
 ```
 
-设置输入框当前的文本内容。不设置时默认为空字符串。
-
-建议通过onChange事件将状态变量与文本实时绑定，
-
-避免组件刷新时TextInput中的文本内容异常。
-
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置输入框当前的文本内容。不设置时默认为空字符串。 建议通过onChange事件将状态变量与文本实时绑定， 避免组件刷新时TextInput中的文本内容异常。 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。 从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **类型：** ResourceStr
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

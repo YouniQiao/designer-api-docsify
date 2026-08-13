@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare struct SelectDialog--><!--Device-unnamed-export declare struct SelectDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ confirm?: ButtonOptions
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -34,13 +38,13 @@ confirm?: ButtonOptions
 content?: ResourceStr
 ```
 
-选择弹出框内容。
-
-默认不设置或设置为undefined，弹出框内容不显示。
+选择弹出框内容。 默认不设置或设置为undefined，弹出框内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,13 +60,13 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-选择弹出框控制器，用于控制弹出框的显示和隐藏。
-
-**说明：** 未使用@Require装饰，构造时不强制校验参数。
+选择弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +88,8 @@ radioContent: Array<SheetInfo>
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -98,15 +104,13 @@ radioContent: Array<SheetInfo>
 selectedIndex?: number
 ```
 
-选择弹出框的选中项。
-
-取值范围：大于等于-1的整数。
-
-默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
+选择弹出框的选中项。 取值范围：大于等于-1的整数。 默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,6 +132,8 @@ theme?: Theme | CustomTheme
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -142,13 +148,13 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
 
 **类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,13 +170,13 @@ themeColorMode?: ThemeColorMode
 title: ResourceStr
 ```
 
-选择弹出框标题。
-
-**说明：** 标题超过两行会显示“...”。
+选择弹出框标题。 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

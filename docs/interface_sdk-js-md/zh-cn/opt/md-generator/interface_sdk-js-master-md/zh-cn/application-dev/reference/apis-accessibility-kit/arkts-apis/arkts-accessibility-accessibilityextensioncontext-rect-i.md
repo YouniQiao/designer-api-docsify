@@ -2,7 +2,9 @@
 
 表示矩形区域。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
 
@@ -18,7 +20,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-height: int--><!--Device-Rect-height: int-End-->
 
@@ -34,7 +38,9 @@ left: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
 
@@ -50,7 +56,9 @@ top: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
 
@@ -66,7 +74,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-width: int--><!--Device-Rect-width: int-End-->
 

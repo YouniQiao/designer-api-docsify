@@ -12,16 +12,11 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>
 ```
 
-Unwraps a key. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> Unwrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)
-> requires the ohos.permission.ACCESS_SE_KEY permission.
-
-&lt;!--Del--&gt;This feature is not supported currently.&lt;!--DelEnd--&gt;
+Unwraps a key. This API uses a promise to return the result. > **NOTE：**> > Unwrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) > requires the ohos.permission.ACCESS_SE_KEY permission. &lt;!--Del--&gt;This feature is not supported currently.&lt;!--DelEnd--&gt;
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -47,12 +42,12 @@ Unwraps a key. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000015-failed-to-invoke-other-system-services) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
-| [12000026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000026-secure-element-fault) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) |

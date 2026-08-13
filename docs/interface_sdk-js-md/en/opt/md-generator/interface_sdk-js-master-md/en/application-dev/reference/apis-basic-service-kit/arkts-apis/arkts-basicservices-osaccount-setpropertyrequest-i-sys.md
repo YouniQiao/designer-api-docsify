@@ -2,7 +2,9 @@
 
 Defines the request for setting property information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface SetPropertyRequest--><!--Device-osAccount-interface SetPropertyRequest-End-->
 
@@ -26,7 +28,9 @@ Authentication credential type.
 
 **Type:** AuthType
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SetPropertyRequest-authType: AuthType--><!--Device-SetPropertyRequest-authType: AuthType-End-->
 
@@ -44,7 +48,9 @@ Type of the property to set.
 
 **Type:** [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SetPropertyRequest-key: SetPropertyType--><!--Device-SetPropertyRequest-key: SetPropertyType-End-->
 
@@ -62,7 +68,9 @@ Information to set.
 
 **Type:** Uint8Array
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SetPropertyRequest-setInfo: Uint8Array--><!--Device-SetPropertyRequest-setInfo: Uint8Array-End-->
 

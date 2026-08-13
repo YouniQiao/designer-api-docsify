@@ -4,6 +4,8 @@ Enumerates the data source types for printing.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-print-enum DocFlavor--><!--Device-print-enum DocFlavor-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -17,6 +19,8 @@ FILE_DESCRIPTOR = 0
 File data.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ BYTES = 1
 Binary data.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

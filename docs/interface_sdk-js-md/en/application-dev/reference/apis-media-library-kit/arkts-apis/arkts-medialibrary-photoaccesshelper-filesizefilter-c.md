@@ -2,9 +2,11 @@
 
 Describes the configuration for file size filtering.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class FileSizeFilter--><!--Device-photoAccessHelper-class FileSizeFilter-End-->
 
@@ -22,17 +24,17 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraFileSize?: long
 ```
 
-Maximum file size in **FilterOperator.BETWEEN** mode. The default value is **-1**.
+Maximum file size in **FilterOperator.BETWEEN** mode. The default value is **-1**. The unit is bytes.
 
-The unit is bytes.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 26.0.0
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FileSizeFilter-extraFileSize?: long--><!--Device-FileSizeFilter-extraFileSize?: long-End-->
 
@@ -44,17 +46,17 @@ The unit is bytes.
 fileSize: long
 ```
 
-File size used for filtering.
+File size used for filtering. The unit is bytes.
 
-The unit is bytes.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 26.0.0
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FileSizeFilter-fileSize: long--><!--Device-FileSizeFilter-fileSize: long-End-->
 
@@ -66,17 +68,17 @@ The unit is bytes.
 filterOperator: FilterOperator
 ```
 
-Filter operator.
-
-For example, files can be filtered based on being greater than or less than a certain file size.
+Filter operator. For example, files can be filtered based on being greater than or less than a certain file size.
 
 **Type:** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FileSizeFilter-filterOperator: FilterOperator--><!--Device-FileSizeFilter-filterOperator: FilterOperator-End-->
 

@@ -16,6 +16,8 @@ Authenticate a print job.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,6 +46,6 @@ Authenticate a print job.
 
 | Error Code ID |
 | --- |
-| [13100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100006-invalid-print-job) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13100006](../../apis-basic-services-kit/errorcode-print.md#13100006-invalid-print-job) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

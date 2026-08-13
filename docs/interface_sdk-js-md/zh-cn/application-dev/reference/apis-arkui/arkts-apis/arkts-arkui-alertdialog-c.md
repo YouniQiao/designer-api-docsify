@@ -18,14 +18,7 @@
 static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions)
 ```
 
-定义警告弹窗并弹出。
-
-> **说明：**
-
-showAlertDialog需先获取[UIContext](@ohos.arkui.UIContext)实例后再进行调用。
-
-> 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog)来明确UI的执行上下文。
+定义警告弹窗并弹出。 > **说明：** showAlertDialog需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)实例后再进行调用。 > 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog)来明确UI的执行上下文。
 
 **起始版本：** 7
 

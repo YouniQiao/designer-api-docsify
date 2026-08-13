@@ -2,7 +2,9 @@
 
 Session category for different scenes.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum SessionCategory--><!--Device-avSession-enum SessionCategory-End-->
 
@@ -18,7 +20,9 @@ CATEGORY_ACTIVE = 1
 
 The active session category which can be shown on system control entrance.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-SessionCategory-CATEGORY_ACTIVE = 1--><!--Device-SessionCategory-CATEGORY_ACTIVE = 1-End-->
 
@@ -34,7 +38,9 @@ CATEGORY_NOT_ACTIVE = 2
 
 The session category which is partially integrated with AVSession function.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-SessionCategory-CATEGORY_NOT_ACTIVE = 2--><!--Device-SessionCategory-CATEGORY_NOT_ACTIVE = 2-End-->
 
@@ -50,7 +56,9 @@ CATEGORY_ALL = 3
 
 The all session category including all the applications using AVSession.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-SessionCategory-CATEGORY_ALL = 3--><!--Device-SessionCategory-CATEGORY_ALL = 3-End-->
 
@@ -67,6 +75,8 @@ CATEGORY_HIPLAY = 4
 The session category for HiPlay casting AVSession.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

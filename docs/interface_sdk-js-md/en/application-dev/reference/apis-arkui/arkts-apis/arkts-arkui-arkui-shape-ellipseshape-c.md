@@ -1,14 +1,16 @@
 # EllipseShape
 
-Defines an ellipse drawing class.
+Represents an ellipse shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md#BaseShape).
 
-**Inheritance/Implementation:** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
+**Inheritance/Implementation:** EllipseShape extends BaseShape<EllipseShape>
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class EllipseShape extends BaseShape--><!--Device-unnamed-export declare class EllipseShape extends BaseShape-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class EllipseShape--><!--Device-unnamed-export declare class EllipseShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,13 +26,19 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 constructor(options?: ShapeSize)
 ```
 
-Constructor.
+A constructor used to create a **EllipseShape** object.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-EllipseShape-constructor(options?: ShapeSize)--><!--Device-EllipseShape-constructor(options?: ShapeSize)-End-->
 
@@ -40,5 +48,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No |  |
+| options | [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md) | No | Size of the shape. |
 

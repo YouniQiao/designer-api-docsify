@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-huks-export enum HuksSendType--><!--Device-huks-export enum HuksSendType-End-->
 
 **系统能力：** 
@@ -19,6 +21,8 @@ HUKS_SEND_TYPE_ASYNC = 0
 表示异步发送TAG。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ HUKS_SEND_TYPE_SYNC = 1
 表示同步发送TAG。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,6 +4,8 @@ Describes the image buffer data.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-image-interface ImageBufferData--><!--Device-image-interface ImageBufferData-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -26,6 +28,8 @@ Image data buffer.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageBufferData-readonly byteBuffer: ArrayBuffer--><!--Device-ImageBufferData-readonly byteBuffer: ArrayBuffer-End-->
@@ -44,6 +48,8 @@ Pixel stride of each component.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageBufferData-readonly pixelStride: int[]--><!--Device-ImageBufferData-readonly pixelStride: int[]-End-->
@@ -61,6 +67,8 @@ Row stride of each component.
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,9 +14,11 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 
 Concatenates an array of **Buffer** objects of the specified length into a new object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -29,7 +31,7 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | list | [Buffer](arkts-arkts-buffer-buffer-c.md)[] \| Uint8Array[] | Yes | Array of objects to concatenate. |
-| totalLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Total length of bytes to be copied. The default value is **0**. |
+| totalLength | int | No | Total length of bytes to be copied. The default value is **0**. |
 
 **Return value:**
 
@@ -41,7 +43,7 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
 
 ## Examples
 

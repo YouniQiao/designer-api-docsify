@@ -14,7 +14,7 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 **废弃版本：** 12
 
-**替代接口：** [setDeviceFunctions](usbManager.setDeviceFunctions(funcs:)
+**替代接口：** [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setDeviceFunctions)(funcs: FunctionType)
 
 <!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>--><!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>-End-->
 
@@ -38,6 +38,6 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| [14400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400002-hdc功能被禁用) | Permission denied. The HDC is disabled by the system. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [14400002](../../apis-basic-services-kit/errorcode-usb.md#14400002-hdc功能被禁用) | Permission denied. The HDC is disabled by the system. |
 

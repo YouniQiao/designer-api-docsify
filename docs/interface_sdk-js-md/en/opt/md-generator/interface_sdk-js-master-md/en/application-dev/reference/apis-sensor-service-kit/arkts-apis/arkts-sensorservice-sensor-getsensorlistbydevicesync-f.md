@@ -14,7 +14,9 @@ function getSensorListByDeviceSync(deviceId?: number): Array<Sensor>
 
 Obtains the information about all sensors on the device.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates default printer types.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum DefaultPrinterType--><!--Device-print-enum DefaultPrinterType-End-->
 
@@ -18,9 +20,11 @@ DEFAULT_PRINTER_TYPE_SET_BY_USER = 0
 
 The printer set by the user serves as the default printer.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DefaultPrinterType-DEFAULT_PRINTER_TYPE_SET_BY_USER = 0--><!--Device-DefaultPrinterType-DEFAULT_PRINTER_TYPE_SET_BY_USER = 0-End-->
 
@@ -34,9 +38,11 @@ DEFAULT_PRINTER_TYPE_LAST_USED_PRINTER = 1
 
 The printer used last time serves as the default printer.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DefaultPrinterType-DEFAULT_PRINTER_TYPE_LAST_USED_PRINTER = 1--><!--Device-DefaultPrinterType-DEFAULT_PRINTER_TYPE_LAST_USED_PRINTER = 1-End-->
 

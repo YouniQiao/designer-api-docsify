@@ -2,9 +2,11 @@
 
 ExtensionAbility: the extension ability forms class.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ExtensionAbility--><!--Device-unnamed-export interface ExtensionAbility-End-->
 
@@ -22,9 +24,11 @@ Widget information.
 
 **Type:** Array&lt;[AbilityFormInfo](arkts-ability-bundlepackinfo-abilityforminfo-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExtensionAbility-readonly forms: Array<AbilityFormInfo>--><!--Device-ExtensionAbility-readonly forms: Array<AbilityFormInfo>-End-->
 
@@ -42,9 +46,11 @@ Name of the ExtensionAbility.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExtensionAbility-readonly name: string--><!--Device-ExtensionAbility-readonly name: string-End-->
 

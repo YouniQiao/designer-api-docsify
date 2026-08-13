@@ -26,7 +26,7 @@ direction: number
 
 **废弃版本：** 8
 
-**替代接口：** [alpha](ohos.sensor/sensor#OrientationResponse.alpha)
+**替代接口：** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

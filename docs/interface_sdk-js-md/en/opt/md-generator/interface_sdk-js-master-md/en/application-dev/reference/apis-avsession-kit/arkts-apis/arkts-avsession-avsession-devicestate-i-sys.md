@@ -2,7 +2,9 @@
 
 Device state used to describe states including discovery, authentication and other scenes.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface DeviceState--><!--Device-avSession-interface DeviceState-End-->
 
@@ -26,7 +28,9 @@ Unique device descriptor.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceState-readonly deviceId: string--><!--Device-DeviceState-readonly deviceId: string-End-->
 
@@ -44,7 +48,9 @@ Device connection state.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceState-readonly deviceState: int--><!--Device-DeviceState-readonly deviceState: int-End-->
 
@@ -62,7 +68,9 @@ System radar error code returned by cast+services.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceState-readonly radarErrorCode: int--><!--Device-DeviceState-readonly radarErrorCode: int-End-->
 
@@ -80,7 +88,9 @@ Reason for connection failure, for example, user cancellation and timeout.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceState-readonly reasonCode: int--><!--Device-DeviceState-readonly reasonCode: int-End-->
 

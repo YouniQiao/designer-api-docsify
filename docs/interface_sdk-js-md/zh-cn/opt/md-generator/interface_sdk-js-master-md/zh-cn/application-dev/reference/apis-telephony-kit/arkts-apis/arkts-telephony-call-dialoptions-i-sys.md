@@ -2,7 +2,9 @@
 
 拨打电话的可选参数。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface DialOptions--><!--Device-call-export interface DialOptions-End-->
 
@@ -14,16 +16,13 @@
 accountId?: number
 ```
 
-帐户Id。
-
-- 0：卡槽1。  
-- 1：卡槽2。
-
-。此接口为系统接口。
+帐户Id。 - 0：卡槽1。 - 1：卡槽2。 。此接口为系统接口。
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DialOptions-accountId?: int--><!--Device-DialOptions-accountId?: int-End-->
 
@@ -41,7 +40,9 @@ dialScene?: DialScene
 
 **类型：** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DialOptions-dialScene?: DialScene--><!--Device-DialOptions-dialScene?: DialScene-End-->
 
@@ -59,7 +60,9 @@ dialType?: DialType
 
 **类型：** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DialOptions-dialType?: DialType--><!--Device-DialOptions-dialType?: DialType-End-->
 
@@ -77,7 +80,9 @@ videoState?: VideoStateType
 
 **类型：** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DialOptions-videoState?: VideoStateType--><!--Device-DialOptions-videoState?: VideoStateType-End-->
 

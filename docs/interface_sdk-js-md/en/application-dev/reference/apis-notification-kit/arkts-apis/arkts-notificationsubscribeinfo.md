@@ -1,4 +1,4 @@
-# notificationSubscribeInfo(Sets filter criteria of publishers for subscribing to desired notifications)
+# notificationSubscribeInfo
 
 ## Summary
 

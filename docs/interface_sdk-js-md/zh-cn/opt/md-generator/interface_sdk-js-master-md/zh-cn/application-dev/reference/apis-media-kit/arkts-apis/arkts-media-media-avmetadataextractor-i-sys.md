@@ -1,15 +1,10 @@
 # AVMetadataExtractor
 
-元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过  
-[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor)构建一个AVMetadataExtractor实例。
+元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过 [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) 构建一个AVMetadataExtractor实例。 获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。 > **说明：** > > - 本Interface首批接口从API version 11开始支持。
 
-获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 11开始支持。
-
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
 
@@ -23,7 +18,9 @@ getFrameIndexByTime(timeUs: number): Promise<number>
 
 Obtains the video frame number corresponding to a video timestamp. Only MP4 video files are supported.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>--><!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>-End-->
 
@@ -47,9 +44,9 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
 
 ## 示例
 
@@ -72,7 +69,9 @@ getTimeByFrameIndex(index: number): Promise<number>
 
 Obtains the video timestamp corresponding to a video frame number. Only MP4 video files are supported.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>--><!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>-End-->
 
@@ -96,9 +95,9 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
 
 ## 示例
 

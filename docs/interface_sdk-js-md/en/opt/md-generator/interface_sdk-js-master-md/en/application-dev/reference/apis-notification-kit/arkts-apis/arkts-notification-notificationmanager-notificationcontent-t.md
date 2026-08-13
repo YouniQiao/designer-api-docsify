@@ -6,7 +6,9 @@ export type NotificationContent = _NotificationContent
 
 Describes the notification content.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationContent = _NotificationContent--><!--Device-notificationManager-export type NotificationContent = _NotificationContent-End-->
 

@@ -4,9 +4,11 @@
 type ListItemGroup = TypedFrameNode<ListItemGroupInterface, ListItemGroupAttribute>
 ```
 
-Represents a FrameNode of the **ListItemGroup** type. Only [ListItem](../@internal/component/ets/list_item)child components can be added.
+Represents a FrameNode of the **ListItemGroup** type. Only ListItem child components can be added.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

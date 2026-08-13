@@ -4,6 +4,8 @@
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface MoreButtonOptions--><!--Device-unnamed-declare interface MoreButtonOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ backgroundBlurStyle?: BlurStyle
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -34,17 +38,13 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-更多图标的菜单背景模糊选项。
-
-**说明：**
-
-只在设置了backgroundBlurStyle时生效。
-
-不建议与backgroundEffect同时使用。
+更多图标的菜单背景模糊选项。 **说明：** 只在设置了backgroundBlurStyle时生效。 不建议与backgroundEffect同时使用。
 
 **类型：** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,15 +60,13 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置更多图标的菜单背景属性包括：模糊半径，亮度，饱和度，颜色等。
-
-**说明：**
-
-不建议与backgroundBlurStyleOptions同时使用。
+设置更多图标的菜单背景属性包括：模糊半径，亮度，饱和度，颜色等。 **说明：** 不建议与backgroundBlurStyleOptions同时使用。
 
 **类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

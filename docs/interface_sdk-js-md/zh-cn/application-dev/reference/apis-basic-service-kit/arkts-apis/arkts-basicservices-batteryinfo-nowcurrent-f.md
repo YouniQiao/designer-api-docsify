@@ -12,6 +12,8 @@ function nowCurrent(): int
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-function nowCurrent(): int--><!--Device-batteryInfo-function nowCurrent(): int-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

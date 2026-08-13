@@ -1,4 +1,4 @@
-# @ohos.selectionInput.SelectionExtensionAbility(SelectionExtensionAbility)
+# @ohos.selectionInput.SelectionExtensionAbility
 
 ## Modules to Import
 
@@ -8,8 +8,10 @@ import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 
 ## Summary
 
-### Classes
+<!--Del-->
+### Classes（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md) |
+| [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md) |
+<!--DelEnd-->

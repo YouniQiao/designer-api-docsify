@@ -2,9 +2,11 @@
 
 Describes the system memory information, including the total memory, free memory, and available memory.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-interface SystemMemInfo--><!--Device-hidebug-interface SystemMemInfo-End-->
 
@@ -22,14 +24,15 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 availableMem: bigint
 ```
 
-Available memory of the system, in KB. The value of this parameter is obtained by reading the value of  
-**MemAvailable** in the **\/proc/meminfo** node.
+Available memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemAvailable** in the **\/proc/meminfo** node.
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemMemInfo-availableMem: bigint--><!--Device-SystemMemInfo-availableMem: bigint-End-->
 
@@ -45,9 +48,11 @@ Free memory of the system, in KB. The value of this parameter is obtained by rea
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemMemInfo-freeMem: bigint--><!--Device-SystemMemInfo-freeMem: bigint-End-->
 
@@ -59,13 +64,15 @@ Free memory of the system, in KB. The value of this parameter is obtained by rea
 totalMem: bigint
 ```
 
-Total memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemTotal**in the **\/proc/meminfo** node.
+Total memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemTotal** in the **\/proc/meminfo** node.
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemMemInfo-totalMem: bigint--><!--Device-SystemMemInfo-totalMem: bigint-End-->
 

@@ -8,9 +8,11 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>--><!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>-End-->
 
@@ -33,7 +35,7 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 错误码ID |
 | --- |
-| [11105001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11105001-非法的参数值) |
+| [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) |
 
 ## 示例
 

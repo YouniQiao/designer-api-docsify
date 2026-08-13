@@ -2,7 +2,9 @@
 
 AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
 
@@ -121,7 +123,7 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
 
 **返回值：**
 
@@ -157,7 +159,9 @@ context: AccessibilityExtensionContext
 
 **类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext--><!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext-End-->
 

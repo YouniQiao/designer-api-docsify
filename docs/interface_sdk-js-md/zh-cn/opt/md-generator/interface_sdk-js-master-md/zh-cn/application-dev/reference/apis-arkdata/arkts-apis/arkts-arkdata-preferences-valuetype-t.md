@@ -1,27 +1,31 @@
 # ValueType
 
 ```TypeScript
-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint
+type ValueType = number | number | string | boolean | Array<number> | Array<number> | Array<string> | Array<boolean>
+    | Uint8Array | RecordData | bigint
 ```
 
-表示支持的值类型。
+Indicates possible value types
 
-**起始版本：** 9
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-preferences-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint--><!--Device-preferences-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint-End-->
+<!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint--><!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint-End-->
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+**系统能力：** 
+- API版本23+：SystemCapability.DistributedDataManager.Preferences.Core
 
 | 类型 |
 | --- |
-| number |
+| long |
+| double |
 | string |
 | boolean |
-| Array & lt;number & gt; |
+| Array & lt;long & gt; |
+| Array & lt;double & gt; |
 | Array & lt;string & gt; |
 | Array & lt;boolean & gt; |
 | Uint8Array |
-| object |
+| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) |
 | bigint |

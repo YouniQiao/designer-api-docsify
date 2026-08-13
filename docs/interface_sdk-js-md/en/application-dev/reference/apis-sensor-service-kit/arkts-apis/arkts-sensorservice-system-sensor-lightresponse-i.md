@@ -8,7 +8,7 @@ Defines a **LightResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [LightResponse](ohos.sensor/sensor#LightResponse)
+**Substitutes:** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md#LightResponse)
 
 <!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
 
@@ -36,7 +36,7 @@ Light intensity, in lux.
 
 **Deprecated since:** 8
 
-**Substitutes:** [intensity](ohos.sensor/sensor#LightResponse.intensity)
+**Substitutes:** [intensity](arkts-sensorservice-sensor-lightresponse-i.md#intensity)
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,14 +1,16 @@
 # BackupExtensionContext
 
-The context of an ability or an application. It allows access to application-specific resources.Can only be obtained through the ability.
+The context of an ability or an application. It allows access to application-specific resources. Can only be obtained through the ability.
 
-**Inheritance/Implementation:** BackupExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** BackupExtensionContext extends ExtensionContext
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class BackupExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -30,7 +32,9 @@ Indicates backup dir.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

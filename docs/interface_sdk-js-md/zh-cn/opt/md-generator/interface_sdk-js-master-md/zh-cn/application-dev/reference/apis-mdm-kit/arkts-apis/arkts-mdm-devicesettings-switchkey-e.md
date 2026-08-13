@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-deviceSettings-enum SwitchKey--><!--Device-deviceSettings-enum SwitchKey-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ NEARLINK = 0
 星闪开关。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ BLUETOOTH = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SwitchKey-BLUETOOTH = 1--><!--Device-SwitchKey-BLUETOOTH = 1-End-->
@@ -50,6 +56,8 @@ Wi-Fi开关。
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SwitchKey-WIFI = 2--><!--Device-SwitchKey-WIFI = 2-End-->
@@ -65,6 +73,8 @@ NFC = 3
 NFC开关。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

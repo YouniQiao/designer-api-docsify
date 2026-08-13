@@ -6,6 +6,8 @@ EditMenuOptions
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface EditMenuOptions--><!--Device-unnamed-declare interface EditMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Triggered when the menu is being created. Menu data can be configured within thi
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +58,8 @@ Triggered when the specified menu item is clicked.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -83,9 +89,13 @@ onPrepareMenu?: OnPrepareMenuCallback
 
 Callback invoked before the menu is displayed after the text selection area changes. Menu data can be configured within this callback.
 
+**Type:** [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md)
+
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

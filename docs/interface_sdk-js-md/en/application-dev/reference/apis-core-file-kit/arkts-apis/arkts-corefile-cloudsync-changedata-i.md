@@ -2,9 +2,11 @@
 
 Represents the data change information.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-interface ChangeData--><!--Device-cloudSync-interface ChangeData-End-->
 
@@ -26,9 +28,11 @@ Whether the URIs with data changed are of directories. The value **true** means 
 
 **Type:** Array&lt;boolean&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-isDirectory: Array<boolean>--><!--Device-ChangeData-isDirectory: Array<boolean>-End-->
 
@@ -44,9 +48,11 @@ Type of the data change.
 
 **Type:** NotifyType
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
 
@@ -62,9 +68,11 @@ List of URIs whose data needs to be changed.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
 

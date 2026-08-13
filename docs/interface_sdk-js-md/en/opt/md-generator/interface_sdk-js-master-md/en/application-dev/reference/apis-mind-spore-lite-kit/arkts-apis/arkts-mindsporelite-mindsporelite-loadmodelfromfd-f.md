@@ -16,7 +16,9 @@ function loadModelFromFd(
 
 Creates a Model instance file description
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +77,9 @@ function loadModelFromFd(
 
 Create a Model instance from file description
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,7 +131,9 @@ function loadModelFromFd(
 
 Create a Model instance from file description
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

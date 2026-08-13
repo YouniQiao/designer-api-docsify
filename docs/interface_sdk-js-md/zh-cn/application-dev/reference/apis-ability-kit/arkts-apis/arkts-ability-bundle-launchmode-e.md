@@ -1,11 +1,6 @@
 # LaunchMode
 
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType)替代。
-
-Ability组件的启动模式。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType)替代。 Ability组件的启动模式。
 
 **起始版本：** 7
 
@@ -33,7 +28,7 @@ Ability只有一个实例。
 
 **废弃版本：** 9
 
-**替代接口：** [SINGLETON](ohos.bundle.bundleManager/bundleManager.LaunchType#SINGLETON)
+**替代接口：** [SINGLETON](arkts-ability-bundlemanager-launchtype-e.md#SINGLETON)
 
 <!--Device-LaunchMode-SINGLETON = 0--><!--Device-LaunchMode-SINGLETON = 0-End-->
 

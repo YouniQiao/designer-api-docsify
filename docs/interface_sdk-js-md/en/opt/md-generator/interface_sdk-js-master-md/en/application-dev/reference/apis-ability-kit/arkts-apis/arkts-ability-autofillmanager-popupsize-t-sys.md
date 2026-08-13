@@ -1,19 +1,21 @@
 # PopupSize (System API)
 
 ```TypeScript
-export type PopupSize = _AutoFillPopupConfig.PopupSize
+export type PopupSize = _PopupSize
 ```
 
 Defines the width and height of an auto-fill pop-up.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-autoFillManager-export type PopupSize = _AutoFillPopupConfig.PopupSize--><!--Device-autoFillManager-export type PopupSize = _AutoFillPopupConfig.PopupSize-End-->
+<!--Device-autoFillManager-export type PopupSize = _PopupSize--><!--Device-autoFillManager-export type PopupSize = _PopupSize-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillPopupConfig.PopupSize
+**Property type:** _PopupSize

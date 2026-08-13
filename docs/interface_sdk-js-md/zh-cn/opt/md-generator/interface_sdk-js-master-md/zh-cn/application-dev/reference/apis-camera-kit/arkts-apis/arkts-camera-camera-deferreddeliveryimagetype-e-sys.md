@@ -2,7 +2,9 @@
 
 Enumerates the deferred delivery image types. In deferred delivery, photo and video capture are divided into two phases. In the first phase, an image or video is output to users at a relatively fast speed. In the second phase, a higher-resolution image or video is output again after optimization processing.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum DeferredDeliveryImageType--><!--Device-camera-enum DeferredDeliveryImageType-End-->
 
@@ -18,7 +20,9 @@ NONE = 0
 
 Deferred delivery is not supported.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeferredDeliveryImageType-NONE = 0--><!--Device-DeferredDeliveryImageType-NONE = 0-End-->
 
@@ -34,7 +38,9 @@ PHOTO = 1
 
 Deferred delivery for photo capture.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeferredDeliveryImageType-PHOTO = 1--><!--Device-DeferredDeliveryImageType-PHOTO = 1-End-->
 
@@ -50,7 +56,9 @@ VIDEO = 2
 
 Deferred delivery for video capture.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeferredDeliveryImageType-VIDEO = 2--><!--Device-DeferredDeliveryImageType-VIDEO = 2-End-->
 

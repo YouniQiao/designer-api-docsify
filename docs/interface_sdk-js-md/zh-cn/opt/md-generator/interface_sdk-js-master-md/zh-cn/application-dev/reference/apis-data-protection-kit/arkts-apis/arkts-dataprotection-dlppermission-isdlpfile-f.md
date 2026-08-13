@@ -6,11 +6,11 @@
 function isDLPFile(fd: number): Promise<boolean>
 ```
 
-根据文件的fd，查询该文件是否是DLP文件。使用Promise异步回调。
-
-在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
+根据文件的fd，查询该文件是否是DLP文件。使用Promise异步回调。 在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function isDLPFile(fd: number): Promise<boolean>--><!--Device-dlpPermission-function isDLPFile(fd: number): Promise<boolean>-End-->
 
@@ -32,9 +32,9 @@ function isDLPFile(fd: number): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 
@@ -63,11 +63,11 @@ dlpPermission.isDLPFile(file).then((isDLPFile: boolean) => {
 function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 ```
 
-根据文件的fd，查询该文件是否是DLP文件。调用成功后返回查询结果，true表示是DLP文件，false表示非DLP文件。使用callback异步回调。
-
-在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
+根据文件的fd，查询该文件是否是DLP文件。调用成功后返回查询结果，true表示是DLP文件，false表示非DLP文件。使用callback异步回调。 在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void--><!--Device-dlpPermission-function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -84,9 +84,9 @@ function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 

@@ -2,9 +2,11 @@
 
 Enumerates the audio states.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioState--><!--Device-audio-enum AudioState-End-->
 
@@ -18,9 +20,11 @@ STATE_INVALID = -1
 
 Invalid state.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioState-STATE_INVALID = -1--><!--Device-AudioState-STATE_INVALID = -1-End-->
 
@@ -34,9 +38,11 @@ STATE_NEW = 0
 
 Creating instance state.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioState-STATE_NEW = 0--><!--Device-AudioState-STATE_NEW = 0-End-->
 
@@ -50,9 +56,11 @@ STATE_PREPARED = 1
 
 Prepared.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioState-STATE_PREPARED = 1--><!--Device-AudioState-STATE_PREPARED = 1-End-->
 
@@ -66,9 +74,11 @@ STATE_RUNNING = 2
 
 Running.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioState-STATE_RUNNING = 2--><!--Device-AudioState-STATE_RUNNING = 2-End-->
 
@@ -82,9 +92,11 @@ STATE_STOPPED = 3
 
 Stopped.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioState-STATE_STOPPED = 3--><!--Device-AudioState-STATE_STOPPED = 3-End-->
 
@@ -98,9 +110,11 @@ STATE_RELEASED = 4
 
 Released.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioState-STATE_RELEASED = 4--><!--Device-AudioState-STATE_RELEASED = 4-End-->
 
@@ -114,9 +128,11 @@ STATE_PAUSED = 5
 
 Paused.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioState-STATE_PAUSED = 5--><!--Device-AudioState-STATE_PAUSED = 5-End-->
 

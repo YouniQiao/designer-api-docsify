@@ -16,6 +16,8 @@ complete?: () => void
 
 Called when the execution is completed.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 6
@@ -34,6 +36,8 @@ fail?: (data: string, code: number) => void
 
 Called when the stored content fails to be cleared.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 6
@@ -44,13 +48,6 @@ Called when the stored content fails to be cleared.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
 ## success
 
 ```TypeScript
@@ -58,6 +55,8 @@ success?: () => void
 ```
 
 Called when the stored content is cleared successfully.
+
+**Type:** () =&gt; void
 
 **Since:** 3
 

@@ -6,7 +6,9 @@ type NotifySnapshotCallback = (deviceId: string, mission: number) => void
 
 Callback function on snapshot changed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

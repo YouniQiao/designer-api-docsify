@@ -1,0 +1,80 @@
+# TranslateOption
+
+Set translation parameters
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-matrix4-export interface TranslateOption--><!--Device-matrix4-export interface TranslateOption-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## x
+
+```TypeScript
+x?: double
+```
+
+Indicates the translation distance of the x-axis, in px.
+
+**Type:** double
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TranslateOption-x?: double--><!--Device-TranslateOption-x?: double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## y
+
+```TypeScript
+y?: double
+```
+
+Indicates the translation distance of the y-axis, in px.
+
+**Type:** double
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TranslateOption-y?: double--><!--Device-TranslateOption-y?: double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## z
+
+```TypeScript
+z?: double
+```
+
+Indicates the translation distance of the z-axis, in px.
+
+**Type:** double
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TranslateOption-z?: double--><!--Device-TranslateOption-z?: double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

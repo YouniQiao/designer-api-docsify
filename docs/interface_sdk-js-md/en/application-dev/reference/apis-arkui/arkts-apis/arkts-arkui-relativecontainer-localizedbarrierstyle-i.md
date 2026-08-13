@@ -6,6 +6,8 @@ Specifies the Localized BarrierStyle of relative container
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface LocalizedBarrierStyle--><!--Device-unnamed-export declare interface LocalizedBarrierStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Specifies the id of localized barrier
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Specifies the localized barrier direction of barrier
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LocalizedBarrierStyle-localizedDirection: LocalizedBarrierDirection--><!--Device-LocalizedBarrierStyle-localizedDirection: LocalizedBarrierDirection-End-->
@@ -63,6 +69,8 @@ Specifies the referencedId of localized barrier
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

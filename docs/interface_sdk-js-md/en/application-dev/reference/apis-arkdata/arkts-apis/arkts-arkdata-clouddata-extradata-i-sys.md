@@ -2,9 +2,11 @@
 
 Represents the transparently transmitted data, which contains information required for a data change notification.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
 
@@ -28,9 +30,11 @@ Event ID. The value **cloud_data_change** indicates cloud data changes.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
 
@@ -44,14 +48,15 @@ Event ID. The value **cloud_data_change** indicates cloud data changes.
 extraData: string
 ```
 
-Data to be transmitted transparently. **extraData** is a JSON string that must contain the **data** field. The   
-**data** field contains information required for a change notification, including the account ID, application name, database name, database type, and database table name. All the fields cannot be empty.
+Data to be transmitted transparently. **extraData** is a JSON string that must contain the **data** field. The **data** field contains information required for a change notification, including the account ID, application name, database name, database type, and database table name. All the fields cannot be empty.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
 

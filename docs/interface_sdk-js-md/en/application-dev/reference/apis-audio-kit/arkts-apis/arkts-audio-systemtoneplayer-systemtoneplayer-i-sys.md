@@ -1,11 +1,12 @@
 # SystemTonePlayer (System API)
 
-The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related information. Before calling any API in SystemTonePlayer, you must use   
-[getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getSystemTonePlayer-1)to create a SystemTonePlayer instance.
+The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related information. Before calling any API in SystemTonePlayer, you must use [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getSystemTonePlayer) to create a SystemTonePlayer instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface SystemTonePlayer--><!--Device-unnamed-export declare interface SystemTonePlayer-End-->
 
@@ -15,21 +16,17 @@ The module provides APIs for playing and configuring SMS tones and notification 
 
 ## getAudioVolumeScale
 
-ArkTS-Dyn:
-```TypeScript
-getAudioVolumeScale(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAudioVolumeScale(): double
 ```
 
 Obtains the scale of the audio volume. This API returns the result synchronously.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-getAudioVolumeScale(): double--><!--Device-SystemTonePlayer-getAudioVolumeScale(): double-End-->
 
@@ -41,13 +38,13 @@ Obtains the scale of the audio volume. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Current audio volume. The value range is [0, 1]. |
+| double | Current audio volume. The value range is [0, 1]. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -71,9 +68,11 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 Obtains the haptics style of the ringtone. This API returns the result synchronously.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature--><!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature-End-->
 
@@ -91,8 +90,8 @@ Obtains the haptics style of the ringtone. This API returns the result synchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -116,9 +115,11 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 Obtains the supported haptics styles. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>--><!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>-End-->
 
@@ -136,8 +137,8 @@ Obtains the supported haptics styles. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -157,9 +158,11 @@ getTitle(): Promise<string>
 
 Obtains the title of a system tone. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-getTitle(): Promise<string>--><!--Device-SystemTonePlayer-getTitle(): Promise<string>-End-->
 
@@ -177,8 +180,8 @@ Obtains the title of a system tone. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -192,19 +195,21 @@ systemTonePlayer.getTitle().then((value: string) => {
 });
 ```
 
-## off('playFinished')
+## offError
 
 ```TypeScript
-off(type: 'playFinished', callback?: Callback<int>): void
+offError(callback?: ErrorCallback): void
 ```
 
-Unsubscribes from the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
+Unsubscribes the error events.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -214,33 +219,49 @@ Unsubscribes from the event indicating that the ringtone playback is finished. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback is finished. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the ID of the audio stream. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Error callback while receiving the error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+## offPlayFinished
 
 ```TypeScript
-// Cancel all subscriptions to the event.
-systemTonePlayer.off('playFinished');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let playFinishedCallback = (streamId: number) => {
-  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-};
-
-systemTonePlayer.on('playFinished', 0, playFinishedCallback);
-
-systemTonePlayer.off('playFinished', playFinishedCallback);
+offPlayFinished(callback?: Callback<int>): void
 ```
 
-## off('error')
+Unsubscribes the play finished events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to obtain the finished event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -251,6 +272,8 @@ Unsubscribes from error events that occur during ringtone playback. This API use
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -263,14 +286,14 @@ Unsubscribes from error events that occur during ringtone playback. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtone playback. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the error code and error information. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the error code and error information. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -290,19 +313,21 @@ systemTonePlayer.on('error', callback);
 systemTonePlayer.off('error', callback);
 ```
 
-## offError
+## off_playFinished
 
 ```TypeScript
-offError(callback?: ErrorCallback): void
+off(type: 'playFinished', callback?: Callback<int>): void
 ```
 
-Unsubscribes the error events.
+Unsubscribes from the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -312,28 +337,47 @@ Unsubscribes the error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Error callback while receiving the error event. |
+| type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback is finished. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the ID of the audio stream. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## offPlayFinished
+## Examples
 
 ```TypeScript
-offPlayFinished(callback?: Callback<int>): void
+// Cancel all subscriptions to the event.
+systemTonePlayer.off('playFinished');
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let playFinishedCallback = (streamId: number) => {
+  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+};
+
+systemTonePlayer.on('playFinished', 0, playFinishedCallback);
+
+systemTonePlayer.off('playFinished', playFinishedCallback);
 ```
 
-Unsubscribes the play finished events.
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes the error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -343,28 +387,106 @@ Unsubscribes the play finished events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to obtain the finished event. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Error callback while receiving the error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## on('playFinished')
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(streamId: int, callback: Callback<int>): void
+```
+
+Subscribes the play finished events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamId | int | Yes | Stream id, received from start(). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+
+## on_error
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+Subscribes to error events that occur during ringtone playback. This API uses an asynchronous callback to return the result.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+<!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtone playback. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code and error information. For details about the error codes, see [on('error')](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate) of the AVPlayer. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.on('error', (err: BusinessError) => {
+  console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## on_playFinished
 
 ```TypeScript
 on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 ```
 
-Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
-
-The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
+Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result. The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void-End-->
 
@@ -378,14 +500,14 @@ The object to listen for is an audio stream specified by **streamId**. If **stre
 | --- | --- | --- | --- |
 | type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback is finished. |
 | streamId | int | Yes | ID of the audio stream. **streamId** is obtained through [start](#start). If **streamId** is set to **0**, the playback complete event of all audio streams of the player is subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio stream that finishes playing. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio stream that finishes playing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -407,111 +529,6 @@ systemTonePlayer.start().then((value: number) => {
 });
 ```
 
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Subscribes to error events that occur during ringtone playback. This API uses an asynchronous callback to return the result.
-
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-<!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtone playback. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the error code and error information. For details about the error codes, see [on('error')](./../@ohos.multimedia.media:media.AVPlayer.on(type: 'error', callback: ErrorCallback)) of the AVPlayer. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemTonePlayer.on('error', (err: BusinessError) => {
-  console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Subscribes the error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Error callback while receiving the error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-
-## onPlayFinished
-
-```TypeScript
-onPlayFinished(streamId: int, callback: Callback<int>): void
-```
-
-Subscribes the play finished events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamId | int | Yes | Stream id, received from start(). |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-
 ## prepare
 
 ```TypeScript
@@ -520,9 +537,11 @@ prepare(): Promise<void>
 
 Prepares to play a system tone. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-prepare(): Promise<void>--><!--Device-SystemTonePlayer-prepare(): Promise<void>-End-->
 
@@ -540,9 +559,9 @@ Prepares to play a system tone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -564,9 +583,11 @@ release(): Promise<void>
 
 Releases the system tone player. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-release(): Promise<void>--><!--Device-SystemTonePlayer-release(): Promise<void>-End-->
 
@@ -584,7 +605,7 @@ Releases the system tone player. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -600,21 +621,17 @@ systemTonePlayer.release().then(() => {
 
 ## setAudioVolumeScale
 
-ArkTS-Dyn:
-```TypeScript
-setAudioVolumeScale(scale: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAudioVolumeScale(scale: double): void
 ```
 
 Sets the scale of the audio volume. No result is returned.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void--><!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void-End-->
 
@@ -626,16 +643,16 @@ Sets the scale of the audio volume. No result is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale of the audio volume. The value is in the range [0, 1]. |
+| scale | double | Yes | Scale of the audio volume. The value is in the range [0, 1]. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. For example, value is outside [0,1]. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. For example, value is outside [0,1]. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -658,13 +675,13 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-Sets a haptics style of the ringtone.
+Sets a haptics style of the ringtone. Before calling this API, call [getSupportedHapticsFeatures](#getSupportedHapticsFeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
 
-Before calling this API, call [getSupportedHapticsFeatures](#getSupportedHapticsFeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
+**Since:** 23
 
-**Since:** 13
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void--><!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void-End-->
 
@@ -682,10 +699,10 @@ Before calling this API, call [getSupportedHapticsFeatures](#getSupportedHaptics
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -704,21 +721,17 @@ systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSound
 
 ## start
 
-ArkTS-Dyn:
-```TypeScript
-start(toneOptions?: SystemToneOptions): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 start(toneOptions?: SystemToneOptions): Promise<int>
 ```
 
 Start playing the system tone. By default, the audio and haptic will not be muted. Using tone options to mute audio or haptics. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -738,16 +751,16 @@ Start playing the system tone. By default, the audio and haptic will not be mute
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the stream ID. |
+| Promise&lt;int&gt; | Promise used to return the stream ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -769,21 +782,17 @@ systemTonePlayer.start(systemToneOptions).then((value: number) => {
 
 ## stop
 
-ArkTS-Dyn:
-```TypeScript
-stop(id: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 stop(id: int): Promise<void>
 ```
 
 Stops playing a system tone. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemTonePlayer-stop(id: int): Promise<void>--><!--Device-SystemTonePlayer-stop(id: int): Promise<void>-End-->
 
@@ -795,7 +804,7 @@ Stops playing a system tone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Promise used to return the stream ID. |
+| id | int | Yes | Promise used to return the stream ID. |
 
 **Return value:**
 
@@ -807,9 +816,9 @@ Stops playing a system tone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 

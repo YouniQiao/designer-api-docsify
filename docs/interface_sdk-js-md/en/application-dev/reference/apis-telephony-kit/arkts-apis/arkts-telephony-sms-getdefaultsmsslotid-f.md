@@ -14,9 +14,11 @@ function getDefaultSmsSlotId(callback: AsyncCallback<int>): void
 
 Obtains the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void-End-->
 
@@ -26,7 +28,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2 |
 
 ## Examples
 
@@ -48,9 +50,11 @@ function getDefaultSmsSlotId(): Promise<int>
 
 Obtains the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-function getDefaultSmsSlotId(): Promise<int>--><!--Device-sms-function getDefaultSmsSlotId(): Promise<int>-End-->
 
@@ -60,7 +64,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2 |
+| Promise&lt;int&gt; | Promise used to return the result. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2 |
 
 ## Examples
 

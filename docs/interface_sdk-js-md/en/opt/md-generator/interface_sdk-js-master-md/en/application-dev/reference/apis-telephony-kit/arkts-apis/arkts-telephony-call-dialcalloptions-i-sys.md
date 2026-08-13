@@ -2,7 +2,9 @@
 
 Provides an option for determining whether a call is a video call.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface DialCallOptions--><!--Device-call-export interface DialCallOptions-End-->
 
@@ -22,14 +24,13 @@ import { call } from '@kit.TelephonyKit';
 accountId?: number
 ```
 
-Account ID.
-
-- **0**: card slot 1.  
-- **1**: card slot 2.
+Account ID. - **0**: card slot 1. - **1**: card slot 2.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-accountId?: int--><!--Device-DialCallOptions-accountId?: int-End-->
 
@@ -47,7 +48,9 @@ Dialup scenario.
 
 **Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-dialScene?: DialScene--><!--Device-DialCallOptions-dialScene?: DialScene-End-->
 
@@ -65,7 +68,9 @@ Dialup type.
 
 **Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-dialType?: DialType--><!--Device-DialCallOptions-dialType?: DialType-End-->
 
@@ -81,9 +86,11 @@ extraParams?: Record<string, Object>
 
 Indicates the extra call parameters.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-extraParams?: Record<string, Object>--><!--Device-DialCallOptions-extraParams?: Record<string, Object>-End-->
 
@@ -101,7 +108,9 @@ Video state type.
 
 **Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-videoState?: VideoStateType--><!--Device-DialCallOptions-videoState?: VideoStateType-End-->
 
@@ -120,6 +129,8 @@ XCALL type.
 **Type:** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-xCallType?: XCallType--><!--Device-DialCallOptions-xCallType?: XCallType-End-->
 

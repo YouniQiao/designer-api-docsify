@@ -12,6 +12,8 @@ Maximum length of a key, which is 1024 bytes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendablePreferences-const MAX_KEY_LENGTH: number--><!--Device-sendablePreferences-const MAX_KEY_LENGTH: number-End-->
@@ -29,6 +31,8 @@ Maximum length of a value, which is 16 MB.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

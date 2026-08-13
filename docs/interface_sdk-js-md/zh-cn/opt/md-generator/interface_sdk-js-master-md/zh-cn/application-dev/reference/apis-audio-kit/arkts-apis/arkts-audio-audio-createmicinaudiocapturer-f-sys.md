@@ -6,9 +6,11 @@
 function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>
 ```
 
-获取一个特殊的[AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer)实例。该方法使用promise返回录音实例。此捕获可用于记录Mic-In音频数据和回声参考信号，以便应用处理算法。Mic-In音频数据和回声参考信号将根据应用程序设置的配置被放入一个或多个缓冲。当应用程序处于后台时，不允许创建录音实例。
+获取一个特殊的[AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer)实例。该方法使用promise返回录音实例。 此捕获可用于记录Mic-In音频数据和回声参考信号，以便应用处理算法。 Mic-In音频数据和回声参考信号将根据应用程序设置的配置被放入一个或多个缓冲。 当应用程序处于后台时，不允许创建录音实例。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE
 
@@ -36,11 +38,11 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
 ## 示例
 

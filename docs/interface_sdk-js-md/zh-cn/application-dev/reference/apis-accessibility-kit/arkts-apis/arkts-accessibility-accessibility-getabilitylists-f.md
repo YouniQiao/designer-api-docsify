@@ -18,7 +18,7 @@ function getAbilityLists(
 
 **废弃版本：** 9
 
-**替代接口：** [getAccessibilityExtensionList](accessibility.getAccessibilityExtensionList(abilityType:)
+**替代接口：** [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getAccessibilityExtensionList)(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt;)
 
 <!--Device-accessibility-function getAbilityLists(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void--><!--Device-accessibility-function getAbilityLists(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void-End-->
 
@@ -30,7 +30,7 @@ function getAbilityLists(
 | --- | --- | --- | --- |
 | abilityType | AbilityType | 是 | 辅助应用的类型。 |
 | stateType | AbilityState | 是 | 辅助应用的状态。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信 息列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信 息列表；否则为错误对象。 |
 
 ## 示例
 
@@ -65,7 +65,7 @@ function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Pro
 
 **废弃版本：** 9
 
-**替代接口：** [getAccessibilityExtensionList](accessibility.getAccessibilityExtensionList(abilityType:)
+**替代接口：** [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getAccessibilityExtensionList)(abilityType: AbilityType, stateType: AbilityState)
 
 <!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>-End-->
 

@@ -12,16 +12,13 @@ import { zlib } from '@kit.BasicServicesKit';
 function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void
 ```
 
-Compresses a file. This API uses an asynchronous callback to return the result.
+Compresses a file. This API uses an asynchronous callback to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
-> **NOTE：**
-> 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
-> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,18 +30,18 @@ Compresses a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](./app/context) and [Stage Model](./app/context). The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) is used to decompress the folder. |
+| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
 | options | Options | Yes | Compression parameters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
 ## Examples
 
@@ -82,16 +79,13 @@ try {
 function compressFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-Compresses a file. This API uses a promise to return the result.
+Compresses a file. This API uses a promise to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
-> **NOTE：**
-> 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
-> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -103,7 +97,7 @@ Compresses a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](./app/context) and [Stage Model](./app/context). The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) is used to decompress the folder. |
+| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
 | options | Options | Yes | Compression parameters. |
 
@@ -117,9 +111,9 @@ Compresses a file. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
 ## Examples
 

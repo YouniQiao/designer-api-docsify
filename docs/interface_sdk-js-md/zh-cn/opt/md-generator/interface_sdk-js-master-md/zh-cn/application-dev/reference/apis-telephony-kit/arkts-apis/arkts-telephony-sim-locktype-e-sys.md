@@ -2,7 +2,9 @@
 
 Indicates the lock types.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-export enum LockType--><!--Device-sim-export enum LockType-End-->
 
@@ -18,7 +20,9 @@ PIN_LOCK = 1
 
 Indicates the SIM card password lock.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LockType-PIN_LOCK = 1--><!--Device-LockType-PIN_LOCK = 1-End-->
 
@@ -34,7 +38,9 @@ FDN_LOCK = 2
 
 Indicates the fixed dialing lock.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LockType-FDN_LOCK = 2--><!--Device-LockType-FDN_LOCK = 2-End-->
 

@@ -1,12 +1,12 @@
 # UrlStyle
 
-Describes the hyperlink style.
-
-The default color, font size, and font weight are **'#ff0a59f7'**, **'16fp'**, and **'FontWeight.Regular'**,respectively. If the styled string has **TextStyle** set, the **TextStyle** settings take precedence.
+Describes the hyperlink style. The default color, font size, and font weight are **'#ff0a59f7'**, **'16fp'**, and **'FontWeight.Regular'**, respectively. If the styled string has **TextStyle** set, the **TextStyle** settings take precedence.
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class UrlStyle--><!--Device-unnamed-declare class UrlStyle-End-->
 
@@ -23,6 +23,8 @@ A constructor used to create a URL object.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +53,8 @@ Hyperlink content of the styled string.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

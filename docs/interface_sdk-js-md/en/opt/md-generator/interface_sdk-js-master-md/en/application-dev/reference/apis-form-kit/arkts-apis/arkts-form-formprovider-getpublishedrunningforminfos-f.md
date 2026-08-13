@@ -14,9 +14,11 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 
 Obtains information about all widgets that have been added to the home screen. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formProvider-function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>>-End-->
 
@@ -32,9 +34,9 @@ Obtains information about all widgets that have been added to the home screen. T
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

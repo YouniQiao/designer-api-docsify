@@ -6,6 +6,8 @@ Defines the parameters of the tooltip.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TipsOptions--><!--Device-unnamed-declare interface TipsOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ Defines the parameters of the tooltip.
 appearingTime?: number
 ```
 
-Delay before the tooltip appears. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms.
-
-Default value: **700**.
-
-Unit: ms.
+Delay before the tooltip appears. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms. Default value: **700**. Unit: ms.
 
 **Type:** number
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,17 +42,15 @@ Unit: ms.
 appearingTimeWithContinuousOperation?: number
 ```
 
-Delay before the tooltip appears when multiple tooltips are displayed consecutively. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms.
-
-Default value: **300**.
-
-Unit: ms.
+Delay before the tooltip appears when multiple tooltips are displayed consecutively. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms. Default value: **300**. Unit: ms.
 
 **Type:** number
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,15 +66,7 @@ Unit: ms.
 arrowHeight?: Dimension
 ```
 
-Height of the tooltip arrow.
-
-Default value: **8**.
-
-Unit: vp.
-
-**NOTE：**
-
-Percentage values are not supported.
+Height of the tooltip arrow. Default value: **8**. Unit: vp. **NOTE：**Percentage values are not supported.
 
 **Type:** Dimension
 
@@ -85,6 +75,8 @@ Percentage values are not supported.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,16 +92,15 @@ Percentage values are not supported.
 arrowPointPosition?: ArrowPointPosition
 ```
 
-Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and   
-**End**, in both vertical and horizontal directions. These positions are within the parent component area and do not exceed its boundaries or cover rounded corners.
-
-Default value: **ArrowPointPosition.CENTER**.
+Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and **End**, in both vertical and horizontal directions. These positions are within the parent component area and do not exceed its boundaries or cover rounded corners. Default value: **ArrowPointPosition.CENTER**.
 
 **Type:** ArrowPointPosition
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,15 +116,7 @@ Default value: **ArrowPointPosition.CENTER**.
 arrowWidth?: Dimension
 ```
 
-Width of the tooltip arrow. If the set width exceeds the length of the edge minus twice the tooltip's corner radius, the arrow is not drawn.
-
-Default value: **16**.
-
-Unit: vp.
-
-**NOTE：**
-
-Percentage values are not supported.
+Width of the tooltip arrow. If the set width exceeds the length of the edge minus twice the tooltip's corner radius, the arrow is not drawn. Default value: **16**. Unit: vp. **NOTE：**Percentage values are not supported.
 
 **Type:** Dimension
 
@@ -142,6 +125,8 @@ Percentage values are not supported.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -157,17 +142,15 @@ Percentage values are not supported.
 disappearingTime?: number
 ```
 
-Delay before the tooltip disappears. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms.
-
-Default value: **300**.
-
-Unit: ms.
+Delay before the tooltip disappears. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms. Default value: **300**. Unit: ms.
 
 **Type:** number
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,17 +166,15 @@ Unit: ms.
 disappearingTimeWithContinuousOperation?: number
 ```
 
-Delay before the tooltip disappears when multiple tooltips are displayed consecutively. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms.
-
-Default value: **0**.
-
-Unit: ms.
+Delay before the tooltip disappears when multiple tooltips are displayed consecutively. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms. Default value: **0**. Unit: ms.
 
 **Type:** number
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,15 +190,7 @@ Unit: ms.
 enableArrow?: boolean
 ```
 
-Whether to display the tooltip arrow.
-
-Default value: **true**.
-
-**true**: yes. **false**: no.
-
-**NOTE：**
-
-If the available space on the screen is insufficient, the tooltip will cover part of the component and the arrow will not be displayed.
+Whether to display the tooltip arrow. Default value: **true**. **true**: yes. **false**: no. **NOTE：**If the available space on the screen is insufficient, the tooltip will cover part of the component and the arrow will not be displayed.
 
 **Type:** boolean
 
@@ -226,6 +199,8 @@ If the available space on the screen is insufficient, the tooltip will cover par
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -241,19 +216,15 @@ If the available space on the screen is insufficient, the tooltip will cover par
 showAtAnchor?: TipsAnchorType
 ```
 
-Anchor type of the tooltip.
-
-Default value: **TipsAnchorType.TARGET**.
-
-**NOTE：**
-
-If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does not display an arrow.
+Anchor type of the tooltip. Default value: **TipsAnchorType.TARGET**. **NOTE：**If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does not display an arrow.
 
 **Type:** TipsAnchorType
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -271,11 +242,13 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for tips. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of tips.
 
-**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

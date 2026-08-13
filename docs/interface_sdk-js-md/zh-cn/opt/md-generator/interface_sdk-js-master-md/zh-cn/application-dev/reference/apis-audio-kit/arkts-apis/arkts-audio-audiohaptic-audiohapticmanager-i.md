@@ -2,7 +2,9 @@
 
 管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager)创建实例。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
 
@@ -17,6 +19,8 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 创建音振播放器。使用Promise异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -41,11 +45,11 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -65,19 +69,57 @@ audioHapticManagerInstance.createPlayer(id, options).then((value: audioHaptic.Au
 });
 ```
 
+## createPlayer
+
+```TypeScript
+createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer | null>
+```
+
+Create an audio haptic player. This method uses a promise to return the result. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.VIBRATE
+
+<!--Device-AudioHapticManager-createPlayer(id: int, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer | null>--><!--Device-AudioHapticManager-createPlayer(id: int, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer | null>-End-->
+
+**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | number | 是 |
+| options | [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) \| null & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
 ## registerSource
 
 ```TypeScript
 registerSource(audioUri: string, hapticUri: string): Promise<number>
 ```
 
-通过Uri注册音频和振动资源。使用Promise异步回调。
+通过Uri注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
-> **注意：**
-> 
-> 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
 
@@ -87,7 +129,7 @@ registerSource(audioUri: string, hapticUri: string): Promise<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [audioUri](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-audio-c.md) | string | 是 |
+| audioUri | string | 是 |
 | hapticUri | string | 是 |
 
 **返回值：**
@@ -100,7 +142,7 @@ registerSource(audioUri: string, hapticUri: string): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -125,13 +167,11 @@ audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value: numb
 registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<number>
 ```
 
-通过文件描述符注册音频和振动资源。使用Promise异步回调。
+通过文件描述符注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
-> **注意：**
-> 
-> 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
@@ -190,7 +230,9 @@ setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
 
 设置音频时延模式。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
 
@@ -207,8 +249,8 @@ setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## 示例
 
@@ -230,7 +272,9 @@ setStreamUsage(id: number, usage: audio.StreamUsage): void
 
 设置音频流使用类型。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
@@ -247,8 +291,8 @@ setStreamUsage(id: number, usage: audio.StreamUsage): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## 示例
 
@@ -269,13 +313,11 @@ audioHapticManagerInstance.setStreamUsage(id, usage);
 unregisterSource(id: number): Promise<void>
 ```
 
-取消注册音频和振动资源。使用Promise异步回调。
+取消注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
 
-> **注意：**
-> 
-> 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
@@ -297,7 +339,7 @@ unregisterSource(id: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

@@ -3,6 +3,7 @@
 ## GridCol
 
 ```TypeScript
+@ComponentBuilder
 export declare function GridCol(
     option?: GridColOptions, 
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ export declare function GridCol(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-export declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,18 +29,19 @@ export declare function GridCol(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md) | 否 | 栅格布局子组件参数。 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | CustomBuilder | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridColAttribute](arkts-arkui-gridcol-gridcolattribute-i.md) |  |
+| GridColAttribute |  |
 
 
 ## GridCol
 
 ```TypeScript
+@Builder
 export declare function GridCol(
     style: CustomBuilderT<GridColAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines GridCol Component.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-export declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-@Builderexport declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,12 +66,12 @@ Defines GridCol Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridColAttribute](arkts-arkui-gridcol-gridcolattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
+| style | CustomBuilderT&lt;GridColAttribute&gt; | 是 | the callback to set up component's attributes. |
+| content_ | CustomBuilder | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridColAttribute](arkts-arkui-gridcol-gridcolattribute-i.md) |  |
+| GridColAttribute |  |
 

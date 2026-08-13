@@ -14,7 +14,9 @@ function getInclination(inclinationMatrix: Array<number>, callback: AsyncCallbac
 
 Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallback<double>): void--><!--Device-sensor-function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallback<double>): void-End-->
 
@@ -31,8 +33,8 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 
@@ -70,7 +72,9 @@ function getInclination(inclinationMatrix: Array<number>): Promise<number>
 
 Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>--><!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>-End-->
 
@@ -92,8 +96,8 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

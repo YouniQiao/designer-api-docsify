@@ -1,15 +1,14 @@
 # LayeredDrawableDescriptor
 
-Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from   
-[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
-
-The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
+Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
 
 **Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 10
 
-<!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class LayeredDrawableDescriptor--><!--Device-unnamed-export class LayeredDrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +31,8 @@ constructor(
 A constructor used to create a **LayeredDrawableDescriptor** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,6 +60,8 @@ Obtains the **DrawableDescriptor** object of the background.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -77,7 +80,7 @@ Obtains the **DrawableDescriptor** object of the background.
 
 | Error Code ID |
 | --- |
-| [111002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-resource-released) |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
 
 ## Examples
 
@@ -128,6 +131,8 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -146,7 +151,7 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 | Error Code ID |
 | --- |
-| [111002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-resource-released) |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
 
 ## Examples
 
@@ -202,6 +207,8 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -220,7 +227,7 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 | Error Code ID |
 | --- |
-| [111002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-resource-released) |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
 
 ## Examples
 
@@ -267,10 +274,11 @@ struct Index {
 static getMaskClipPath(): string
 ```
 
-Obtains the built-in clipping path parameters of the system. It is a static method of   
-**LayeredDrawableDescriptor**.
+Obtains the built-in clipping path parameters of the system. It is a static method of **LayeredDrawableDescriptor**.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,10 +326,11 @@ struct Index {
 setBlendMode(mode: drawing.BlendMode): void
 ```
 
-Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for multiple times on the same   
-**LayeredDrawableDescriptor** object, only the last call before the drawing completion takes effect. This API does not support dynamic switching. The default drawing order of **LayeredDrawableDescriptor** is background, mask, and foreground. After the blend mode is set, the drawing order changes to background, foreground, and mask. If the specified value is invalid, the default drawing order is used.
+Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for multiple times on the same **LayeredDrawableDescriptor** object, only the last call before the drawing completion takes effect. This API does not support dynamic switching. The default drawing order of **LayeredDrawableDescriptor** is background, mask, and foreground. After the blend mode is set, the drawing order changes to background, foreground, and mask. If the specified value is invalid, the default drawing order is used.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

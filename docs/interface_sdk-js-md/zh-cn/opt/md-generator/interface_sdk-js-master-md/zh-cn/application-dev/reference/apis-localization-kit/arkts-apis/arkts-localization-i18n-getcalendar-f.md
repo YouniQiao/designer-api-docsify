@@ -8,7 +8,9 @@ export function getCalendar(locale: string, type?: string): Calendar
 
 获取指定区域和历法的日历对象。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -27,4 +29,4 @@ export function getCalendar(locale: string, type?: string): Calendar
 
 | 类型 |
 | --- |
-| [Calendar](arkts-localization-i18n-calendar-c.md) |
+| [Calendar](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md) |

@@ -2,7 +2,9 @@
 
 Defines the cell broadcast configuration options.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface CBConfigOptions--><!--Device-sms-export interface CBConfigOptions-End-->
 
@@ -26,7 +28,9 @@ Whether to enable cell broadcast.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-enable: boolean--><!--Device-CBConfigOptions-enable: boolean-End-->
 
@@ -44,7 +48,9 @@ End message ID.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-endMessageId: int--><!--Device-CBConfigOptions-endMessageId: int-End-->
 
@@ -62,7 +68,9 @@ RAN type.
 
 **Type:** [RanType](arkts-telephony-sms-rantype-e-sys.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-ranType: RanType--><!--Device-CBConfigOptions-ranType: RanType-End-->
 
@@ -80,7 +88,9 @@ Card slot ID.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-slotId: int--><!--Device-CBConfigOptions-slotId: int-End-->
 
@@ -98,7 +108,9 @@ Start message ID.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-startMessageId: int--><!--Device-CBConfigOptions-startMessageId: int-End-->
 

@@ -6,7 +6,9 @@ export type NotificationSorting = _NotificationSorting
 
 提供有关活动通知的排序信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationSorting = _NotificationSorting--><!--Device-notificationManager-export type NotificationSorting = _NotificationSorting-End-->
 

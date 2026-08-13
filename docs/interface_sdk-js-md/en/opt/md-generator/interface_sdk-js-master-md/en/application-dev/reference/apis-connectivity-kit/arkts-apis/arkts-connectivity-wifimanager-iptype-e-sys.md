@@ -2,7 +2,9 @@
 
 Wi-Fi IP type enumeration.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->
 
@@ -18,7 +20,9 @@ STATIC
 
 Use statically configured IP settings
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
 
@@ -34,7 +38,9 @@ DHCP
 
 Use dynamically configured IP settings
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpType-DHCP--><!--Device-IpType-DHCP-End-->
 
@@ -50,7 +56,9 @@ UNKNOWN
 
 No IP details are assigned
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpType-UNKNOWN--><!--Device-IpType-UNKNOWN-End-->
 

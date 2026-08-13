@@ -2,7 +2,9 @@
 
 Describes the album sorting order.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface AlbumOrder--><!--Device-photoAccessHelper-interface AlbumOrder-End-->
 
@@ -26,7 +28,9 @@ Album ID.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-albumId: int--><!--Device-AlbumOrder-albumId: int-End-->
 
@@ -44,7 +48,9 @@ Sorting value of the album.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-albumOrder: int--><!--Device-AlbumOrder-albumOrder: int-End-->
 
@@ -62,7 +68,9 @@ Sorting section of the album.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-orderSection: int--><!--Device-AlbumOrder-orderSection: int-End-->
 
@@ -80,7 +88,9 @@ Sorting status of the album.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-orderStatus: int--><!--Device-AlbumOrder-orderStatus: int-End-->
 
@@ -98,7 +108,9 @@ Sorting type of the album.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-orderType: int--><!--Device-AlbumOrder-orderType: int-End-->
 

@@ -4,11 +4,13 @@
 
 **继承/实现关系：** DirectionalLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md#Light)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-export interface DirectionalLight extends Light--><!--Device-unnamed-export interface DirectionalLight extends Light-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface DirectionalLight--><!--Device-unnamed-export interface DirectionalLight-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

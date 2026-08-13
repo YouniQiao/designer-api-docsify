@@ -6,6 +6,8 @@ Path object, which provides basic methods for drawing paths.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class CanvasPath--><!--Device-unnamed-export declare class CanvasPath-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Draw an arc path
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +55,8 @@ Draw arc paths based on control points and radius
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasPath-arcTo(x1: double, y1: double, x2: double, y2: double, radius: double): void--><!--Device-CanvasPath-arcTo(x1: double, y1: double, x2: double, y2: double, radius: double): void-End-->
@@ -78,6 +84,8 @@ Drawing Cubic Bessel Curve Paths
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +116,8 @@ Returns the pen point to the start point of the current sub-path
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasPath-closePath(): void--><!--Device-CanvasPath-closePath(): void-End-->
@@ -126,6 +136,8 @@ Draw an Elliptic Path
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,6 +170,8 @@ Connect sub-path using straight lines
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasPath-lineTo(x: double, y: double): void--><!--Device-CanvasPath-lineTo(x: double, y: double): void-End-->
@@ -183,6 +197,8 @@ Moves the start point of a new sub-path to the (x, y) coordinate.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasPath-moveTo(x: double, y: double): void--><!--Device-CanvasPath-moveTo(x: double, y: double): void-End-->
@@ -207,6 +223,8 @@ Draw quadratic Bezier curve paths
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,6 +253,8 @@ Draw Rectangular Paths
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasPath-rect(x: double, y: double, w: double, h: double): void--><!--Device-CanvasPath-rect(x: double, y: double, w: double, h: double): void-End-->
@@ -262,6 +282,8 @@ Draw rounded Rectangular Paths
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasPath-roundRect(x: double, y: double, w: double, h: double, radii?: double | Array<double>): void--><!--Device-CanvasPath-roundRect(x: double, y: double, w: double, h: double, radii?: double | Array<double>): void-End-->
@@ -282,5 +304,5 @@ Draw rounded Rectangular Paths
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103701](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-parameter-error) | Parameter error. Possible causes: &lt;br&gt; 1. The param radii is a list that has zero or more than four elements. &lt;br&gt; 2. The param radii contains negative value. |
+| [103701](../errorcode-canvas.md#103701-parameter-error) | Parameter error. Possible causes: &lt;br&gt; 1. The param radii is a list that has zero or more than four elements. &lt;br&gt; 2. The param radii contains negative value. |
 

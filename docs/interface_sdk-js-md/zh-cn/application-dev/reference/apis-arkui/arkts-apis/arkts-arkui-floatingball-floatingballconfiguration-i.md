@@ -2,9 +2,11 @@
 
 创建闪控球控制器时需要提供的参数配置。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-floatingBall-interface FloatingBallConfiguration--><!--Device-floatingBall-interface FloatingBallConfiguration-End-->
 
@@ -20,9 +22,11 @@ context: BaseContext
 
 **类型：** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-FloatingBallConfiguration-context: BaseContext--><!--Device-FloatingBallConfiguration-context: BaseContext-End-->
 

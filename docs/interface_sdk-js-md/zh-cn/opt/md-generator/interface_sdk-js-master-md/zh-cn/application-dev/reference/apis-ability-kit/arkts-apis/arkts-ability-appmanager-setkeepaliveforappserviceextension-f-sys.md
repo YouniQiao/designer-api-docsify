@@ -6,13 +6,11 @@
 function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>
 ```
 
-为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
+为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。 该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 > **说明：** > > - 仅当应用安装在userId为1的用户下，且应用中entry类型的HAP的module.json5配置文件中的mainElement字段配置为AppServiceExtensionAbility时，该接口才生效。
 
-> **说明：**
-> 
-> - 仅当应用安装在userId为1的用户下，且应用中entry类型的HAP的module.json5配置文件中的mainElement字段配置为AppServiceExtensionAbility时，该接口才生效。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
@@ -39,14 +37,14 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [16000081](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000081-获取目标应用信息失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16000204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000204-指定的应用未安装在userid为1的用户下) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) |
-| [16000203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000204](../errorcode-ability.md#16000204-指定的应用未安装在userid为1的用户下) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000202](../errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) |
+| [16000203](../errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) |
 
 ## 示例
 

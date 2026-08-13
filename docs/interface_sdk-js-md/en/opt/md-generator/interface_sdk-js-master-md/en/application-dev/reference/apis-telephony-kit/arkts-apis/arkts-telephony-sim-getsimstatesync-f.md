@@ -14,7 +14,9 @@ function getSimStateSync(slotId: number): SimState
 
 Obtains the state of the SIM card in a specified slot.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getSimStateSync(slotId: int): SimState--><!--Device-sim-function getSimStateSync(slotId: int): SimState-End-->
 

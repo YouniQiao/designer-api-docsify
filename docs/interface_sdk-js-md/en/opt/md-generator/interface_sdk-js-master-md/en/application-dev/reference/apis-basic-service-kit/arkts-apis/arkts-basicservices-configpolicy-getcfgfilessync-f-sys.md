@@ -14,7 +14,9 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 
 Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>--><!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>-End-->
 
@@ -40,4 +42,4 @@ Obtains a list of all files of a specified file name based on the provided follo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

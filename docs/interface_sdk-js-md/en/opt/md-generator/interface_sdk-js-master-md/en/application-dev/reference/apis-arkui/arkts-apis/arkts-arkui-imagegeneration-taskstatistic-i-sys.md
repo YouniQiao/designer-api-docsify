@@ -4,6 +4,8 @@ Statistics Related to AI Image Generation Tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface TaskStatistic--><!--Device-imageGeneration-interface TaskStatistic-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Time taken for AI image generation task in seconds.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TaskStatistic-generationTime: double--><!--Device-TaskStatistic-generationTime: double-End-->
@@ -47,6 +51,8 @@ Number of images used for AI image generation tasks.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Whether the image AI generation task is a sticker generation task.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TaskStatistic-isSticker: boolean--><!--Device-TaskStatistic-isSticker: boolean-End-->
@@ -87,6 +95,8 @@ The style used in AI image generation tasks.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

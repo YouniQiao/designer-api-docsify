@@ -19,6 +19,8 @@ Adds an mDNS service.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void-End-->
@@ -31,18 +33,18 @@ Adds an mDNS service.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the context of application or capability. |
 | serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | Information about the mDNS service. [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md#LocalServiceInfo) |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback of addLocalService. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback of addLocalService. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2204003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204003-repeated-registration) | Callback duplicated. |
-| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [2204008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204008-service-deletion-failure) | Failed to delete the service instance. |
-| [2204010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2204003](../errorcode-net-mdns.md#2204003-repeated-registration) | Callback duplicated. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2204008](../errorcode-net-mdns.md#2204008-service-deletion-failure) | Failed to delete the service instance. |
+| [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
 
 ## Examples
 
@@ -85,6 +87,8 @@ Adds an mDNS service.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>-End-->
@@ -108,12 +112,12 @@ Adds an mDNS service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2204003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204003-repeated-registration) | Callback duplicated. |
-| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [2204008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204008-service-deletion-failure) | Failed to delete the service instance. |
-| [2204010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2204003](../errorcode-net-mdns.md#2204003-repeated-registration) | Callback duplicated. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2204008](../errorcode-net-mdns.md#2204008-service-deletion-failure) | Failed to delete the service instance. |
+| [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
 
 ## Examples
 

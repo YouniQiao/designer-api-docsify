@@ -1,10 +1,12 @@
 # PasteData
 
-剪贴板内容对象。剪贴板内容包含一个或者多个内容条目（[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md#PasteDataRecord)）以及属性描述对象（[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)）。在调用PasteData的接口前，需要先通过[createData()](arkts-basicservices-pasteboard-createdata-f.md#createData)或[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getData)获取一个PasteData对象。
+剪贴板内容对象。剪贴板内容包含一个或者多个内容条目（[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md#PasteDataRecord)） 以及属性描述对象（[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)）。 在调用PasteData的接口前，需要先通过[createData()](arkts-basicservices-pasteboard-createdata-f.md#createData) 或[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getData)获取一个PasteData对象。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-pasteboard-interface PasteData--><!--Device-pasteboard-interface PasteData-End-->
 
@@ -16,7 +18,7 @@
 addHtmlRecord(htmlText: string): void
 ```
 
-向当前剪贴板内容中添加一条HTML内容条目，并将MIMETYPE_TEXT_HTML添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。入参均不能为空，否则添加失败。
+向当前剪贴板内容中添加一条HTML内容条目，并将MIMETYPE_TEXT_HTML添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。 入参均不能为空，否则添加失败。
 
 **起始版本：** 7
 
@@ -24,7 +26,7 @@ addHtmlRecord(htmlText: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**替代接口：** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addHtmlRecord(htmlText: string): void--><!--Device-PasteData-addHtmlRecord(htmlText: string): void-End-->
 
@@ -50,11 +52,13 @@ pasteData.addHtmlRecord(html);
 addRecord(record: PasteDataRecord): void
 ```
 
-向当前剪贴板内容中添加一条条目，同时也会将条目类型添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。入参均不能为空，否则添加失败。
+向当前剪贴板内容中添加一条条目，同时也会将条目类型添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。 入参均不能为空，否则添加失败。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -85,11 +89,13 @@ pasteData.addRecord(htmlRecord);
 addRecord(mimeType: string, value: ValueType): void
 ```
 
-向当前剪贴板内容中添加一条数据内容条目，同时也会将数据类型添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。入参均不能为空，否则添加失败。当剪贴板内容需要包含多种类型的数据（如同时包含纯文本和HTML）时，使用此方法向已有的PasteData对象添加额外的数据条目。
+向当前剪贴板内容中添加一条数据内容条目，同时也会将数据类型添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。 入参均不能为空，否则添加失败。当剪贴板内容需要包含多种类型的数据（如同时包含纯文本和HTML）时，使用此方法向已有的PasteData对象添加额外的数据条目。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -108,8 +114,8 @@ addRecord(mimeType: string, value: ValueType): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| [12900002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900002-record数量超过最大限制) | The number of records exceeds the upper limit.<br>**适用版本：** 9+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [12900002](../../apis-basic-services-kit/errorcode-pasteboard.md#12900002-record数量超过最大限制) | The number of records exceeds the upper limit.<br>**适用版本：** 9+ |
 
 ## 示例
 
@@ -125,7 +131,7 @@ pasteData.addRecord('app/xml', dataXml);
 addTextRecord(text: string): void
 ```
 
-向当前剪贴板内容中添加一条纯文本条目，并将MIMETYPE_TEXT_PLAIN添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。入参均不能为空，否则添加失败。
+向当前剪贴板内容中添加一条纯文本条目，并将MIMETYPE_TEXT_PLAIN添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。 入参均不能为空，否则添加失败。
 
 **起始版本：** 7
 
@@ -133,7 +139,7 @@ addTextRecord(text: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**替代接口：** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addTextRecord(text: string): void--><!--Device-PasteData-addTextRecord(text: string): void-End-->
 
@@ -158,7 +164,7 @@ pasteData.addTextRecord('good');
 addUriRecord(uri: string): void
 ```
 
-向当前剪贴板内容中添加一条URI条目，并将MIMETYPE_TEXT_URI添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。入参均不能为空，否则添加失败。
+向当前剪贴板内容中添加一条URI条目，并将MIMETYPE_TEXT_URI添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。 入参均不能为空，否则添加失败。
 
 **起始版本：** 7
 
@@ -166,7 +172,7 @@ addUriRecord(uri: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**替代接口：** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addUriRecord(uri: string): void--><!--Device-PasteData-addUriRecord(uri: string): void-End-->
 
@@ -191,7 +197,7 @@ pasteData.addUriRecord('dataability:///com.example.myapplication1/user.txt');
 addWantRecord(want: Want): void
 ```
 
-向当前剪贴板内容中添加一条Want条目，并将MIMETYPE_TEXT_WANT添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。入参均不能为空，否则添加失败。
+向当前剪贴板内容中添加一条Want条目，并将MIMETYPE_TEXT_WANT添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes中。 入参均不能为空，否则添加失败。
 
 **起始版本：** 7
 
@@ -199,7 +205,7 @@ addWantRecord(want: Want): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**替代接口：** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addWantRecord(want: Want): void--><!--Device-PasteData-addWantRecord(want: Want): void-End-->
 
@@ -232,9 +238,11 @@ getMimeTypes(): Array<string>
 
 获取剪贴板中[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的mimeTypes列表，接口调用异常时返回undefined。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -263,9 +271,11 @@ getPrimaryHtml(): string
 
 获取第一条的HTML内容。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -300,9 +310,11 @@ getPrimaryMimeType(): string
 
 获取剪贴板内容中首个条目的数据类型。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -331,9 +343,11 @@ getPrimaryPixelMap(): image.PixelMap
 
 获取第一条的PixelMap内容。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -397,9 +411,11 @@ getPrimaryText(): string
 
 获取第一条纯文本内容。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -434,9 +450,11 @@ getPrimaryUri(): string
 
 获取第一条的URI内容。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -471,9 +489,11 @@ getPrimaryWant(): Want
 
 获取第一条的Want对象内容。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -509,9 +529,11 @@ getProperty(): PasteDataProperty
 
 获取剪贴板内容的属性描述对象。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -534,21 +556,17 @@ let property: pasteboard.PasteDataProperty = pasteData.getProperty();
 
 ## getRecord
 
-ArkTS-Dyn:
-```TypeScript
-getRecord(index: number): PasteDataRecord
-```
-
-ArkTS-Sta:
 ```TypeScript
 getRecord(index: int): PasteDataRecord
 ```
 
 获取剪贴板内容中指定下标的条目。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -560,7 +578,7 @@ getRecord(index: int): PasteDataRecord
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定条目的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
+| index | int | 是 | 指定条目的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
 
 **返回值：**
 
@@ -572,8 +590,8 @@ getRecord(index: int): PasteDataRecord
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
 
 ## 示例
 
@@ -605,7 +623,7 @@ getRecordAt(index: number): PasteDataRecord
 
 **废弃版本：** 9
 
-**替代接口：** [getRecord](pasteboard.PasteData.getRecord(index:)
+**替代接口：** [getRecord](#getRecord)(index: int)
 
 <!--Device-PasteData-getRecordAt(index: number): PasteDataRecord--><!--Device-PasteData-getRecordAt(index: number): PasteDataRecord-End-->
 
@@ -627,7 +645,7 @@ getRecordAt(index: number): PasteDataRecord
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -638,21 +656,17 @@ let record: pasteboard.PasteDataRecord = pasteData.getRecordAt(0);
 
 ## getRecordCount
 
-ArkTS-Dyn:
-```TypeScript
-getRecordCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getRecordCount(): int
 ```
 
 获取剪贴板内容中条目的个数。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -664,7 +678,7 @@ getRecordCount(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 条目的个数。 |
+| int | 条目的个数。 |
 
 ## 示例
 
@@ -690,9 +704,11 @@ getTag(): string
 
 获取剪贴板内容中用户自定义的标签内容，如果没有设置用户自定义的标签内容将返回空。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -727,7 +743,7 @@ hasMimeType(mimeType: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [hasType](pasteboard.PasteData.hasType(mimeType:)
+**替代接口：** [hasType](#hasType)(mimeType: string)
 
 <!--Device-PasteData-hasMimeType(mimeType: string): boolean--><!--Device-PasteData-hasMimeType(mimeType: string): boolean-End-->
 
@@ -737,7 +753,7 @@ hasMimeType(mimeType: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 待查询的数据类型。可以是 [常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括：HTML类型、Want类型、纯文本类型、URI类型、PixelMap类型，也可以是自定义的MIME类型，长度不能超过1024字节。 |
+| mimeType | string | 是 | 待查询的数据类型。可以是 [常量](arkts-pasteboard.md#常量)中已定义的类型， 包括：HTML类型、Want类型、纯文本类型、URI类型、PixelMap类型，也可以是自定义的MIME类型，长度不能超过1024字节。 |
 
 **返回值：**
 
@@ -749,7 +765,7 @@ hasMimeType(mimeType: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -766,9 +782,11 @@ hasType(mimeType: string): boolean
 
 检查剪贴板内容中是否有指定的MIME数据类型。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -780,7 +798,7 @@ hasType(mimeType: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 待查询的数据类型。 可以是[常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括：HTML类型、Want类型、纯文本类型、URI类型、PixelMap类型；也可以是自定义的MIME类型，数据类型的字符串长度不能超过1024字节。 |
+| mimeType | string | 是 | 待查询的数据类型。 可以是[常量](arkts-pasteboard.md#常量)中已定义的类型， 包括：HTML类型、Want类型、纯文本类型、URI类型、PixelMap类型；也可以是自定义的MIME类型，数据类型的字符串长度不能超过1024字节。 |
 
 **返回值：**
 
@@ -792,7 +810,7 @@ hasType(mimeType: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -807,11 +825,13 @@ let hasType: boolean = pasteData.hasType(pasteboard.MIMETYPE_TEXT_PLAIN);
 pasteComplete(): void
 ```
 
-通知剪贴板服务数据使用已完成，可释放跨设备通道等资源。应在调用pasteStart之后、完成数据处理后调用，避免资源浪费。未调用可能导致跨设备通道长时间占用，影响后续跨设备粘贴操作。pasteComplete与其他接口的使用步骤可参考：1. getData()获取剪贴板数据2. pasteStart()保留跨设备通道3. 使用剪贴板数据4. pasteComplete()释放通道
+通知剪贴板服务数据使用已完成，可释放跨设备通道等资源。 应在调用pasteStart之后、完成数据处理后调用，避免资源浪费。未调用可能导致跨设备通道长时间占用，影响后续跨设备粘贴操作。 pasteComplete与其他接口的使用步骤可参考： 1. getData()获取剪贴板数据 2. pasteStart()保留跨设备通道 3. 使用剪贴板数据 4. pasteComplete()释放通道
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PasteData-pasteComplete(): void--><!--Device-PasteData-pasteComplete(): void-End-->
 
@@ -859,15 +879,13 @@ systemPasteboard.getData((err: BusinessError | null, pasteData: pasteboard.Paste
 pasteStart(): void
 ```
 
-读取剪贴板数据前，通知剪贴板服务保留跨设备通道。访问剪贴板数据中的跨端文件数据前，通知剪贴板服务保留跨设备链路。跨设备链路用于连接远端设备并提供传输远端设备文件到本端设备的能力，如未调用此方法则跨设备链路将在30秒后自动断开。适用于跨设备粘贴场景。当需要确保跨设备剪贴板数据通道保持连接，以便后续读取远端设备剪贴板数据时使用。
+读取剪贴板数据前，通知剪贴板服务保留跨设备通道。访问剪贴板数据中的跨端文件数据前，通知剪贴板服务保留跨设备链路。 跨设备链路用于连接远端设备并提供传输远端设备文件到本端设备的能力，如未调用此方法则跨设备链路将在30秒后自动断开。 适用于跨设备粘贴场景。当需要确保跨设备剪贴板数据通道保持连接，以便后续读取远端设备剪贴板数据时使用。 - 必须与[pasteComplete](#pasteComplete)方法配对使用。 - 调用顺序：先调用pasteStart()通知保留通道，数据处理完成后必须调用pasteComplete()通知完成。 - 未调用pasteComplete()会导致跨设备通道未正确关闭，影响后续跨设备剪贴板操作。
 
-- 必须与[pasteComplete](#pasteComplete)方法配对使用。  
-- 调用顺序：先调用pasteStart()通知保留通道，数据处理完成后必须调用pasteComplete()通知完成。  
-- 未调用pasteComplete()会导致跨设备通道未正确关闭，影响后续跨设备剪贴板操作。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-PasteData-pasteStart(): void--><!--Device-PasteData-pasteStart(): void-End-->
 
@@ -911,21 +929,17 @@ systemPasteboard.getData((err: BusinessError | null, pasteData: pasteboard.Paste
 
 ## removeRecord
 
-ArkTS-Dyn:
-```TypeScript
-removeRecord(index: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeRecord(index: int): void
 ```
 
 移除剪贴板内容中指定下标的条目。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -937,14 +951,14 @@ removeRecord(index: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
+| index | int | 是 | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
 
 ## 示例
 
@@ -976,7 +990,7 @@ removeRecordAt(index: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [removeRecord](pasteboard.PasteData.removeRecord(index:)
+**替代接口：** [removeRecord](#removeRecord)(index: int)
 
 <!--Device-PasteData-removeRecordAt(index: number): boolean--><!--Device-PasteData-removeRecordAt(index: number): boolean-End-->
 
@@ -998,7 +1012,7 @@ removeRecordAt(index: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1009,21 +1023,17 @@ let isRemove: boolean = pasteData.removeRecordAt(0);
 
 ## replaceRecord
 
-ArkTS-Dyn:
-```TypeScript
-replaceRecord(index: number, record: PasteDataRecord): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 replaceRecord(index: int, record: PasteDataRecord): void
 ```
 
 替换剪贴板内容中指定下标的条目。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1035,15 +1045,15 @@ replaceRecord(index: int, record: PasteDataRecord): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
+| index | int | 是 | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
 | record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 是 | 被替换后的条目数据内容，设置后会替换指定下标位置的原始条目。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
 
 ## 示例
 
@@ -1077,7 +1087,7 @@ replaceRecordAt(index: number, record: PasteDataRecord): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [replaceRecord](pasteboard.PasteData.replaceRecord(index:)
+**替代接口：** [replaceRecord](#replaceRecord)(index: int, record: PasteDataRecord)
 
 <!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean--><!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean-End-->
 
@@ -1112,9 +1122,11 @@ setProperty(property: PasteDataProperty): void
 
 设置剪贴板内容的属性描述对象[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1132,7 +1144,7 @@ setProperty(property: PasteDataProperty): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1148,7 +1160,7 @@ prop.tag = 'TestTag';
 pasteData.setProperty(prop);
 ```
 
-[PasteDataProperty](#pastedataproperty7)的localOnly与shareOption属性互斥，最终结果以shareOption为准，shareOption会影响localOnly的值。
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)的localOnly与shareOption属性互斥，最终结果以shareOption为准，shareOption会影响localOnly的值。
 
 ```TypeScript
 (async () => {

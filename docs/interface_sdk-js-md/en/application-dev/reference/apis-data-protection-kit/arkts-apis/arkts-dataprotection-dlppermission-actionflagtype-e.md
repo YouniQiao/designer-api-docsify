@@ -6,6 +6,8 @@ Enumerates the operations that can be performed on a DLP file. For example, the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export enum ActionFlagType--><!--Device-dlpPermission-export enum ActionFlagType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -21,6 +23,8 @@ View the file.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ActionFlagType-ACTION_VIEW = 0x00000001--><!--Device-ActionFlagType-ACTION_VIEW = 0x00000001-End-->
 
@@ -38,6 +42,8 @@ Save the file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ActionFlagType-ACTION_SAVE = 0x00000002--><!--Device-ActionFlagType-ACTION_SAVE = 0x00000002-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -53,6 +59,8 @@ Save the file as another file.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ActionFlagType-ACTION_SAVE_AS = 0x00000004--><!--Device-ActionFlagType-ACTION_SAVE_AS = 0x00000004-End-->
 
@@ -70,6 +78,8 @@ Edit the file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ActionFlagType-ACTION_EDIT = 0x00000008--><!--Device-ActionFlagType-ACTION_EDIT = 0x00000008-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -85,6 +95,8 @@ Capture screenshots of the file.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ActionFlagType-ACTION_SCREEN_CAPTURE = 0x00000010--><!--Device-ActionFlagType-ACTION_SCREEN_CAPTURE = 0x00000010-End-->
 
@@ -102,6 +114,8 @@ Share the screen of the file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ActionFlagType-ACTION_SCREEN_SHARE = 0x00000020--><!--Device-ActionFlagType-ACTION_SCREEN_SHARE = 0x00000020-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -117,6 +131,8 @@ Record the screen on which the file is open.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ActionFlagType-ACTION_SCREEN_RECORD = 0x00000040--><!--Device-ActionFlagType-ACTION_SCREEN_RECORD = 0x00000040-End-->
 
@@ -134,6 +150,8 @@ Copy the file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ActionFlagType-ACTION_COPY = 0x00000080--><!--Device-ActionFlagType-ACTION_COPY = 0x00000080-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -149,6 +167,8 @@ Print the file.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ActionFlagType-ACTION_PRINT = 0x00000100--><!--Device-ActionFlagType-ACTION_PRINT = 0x00000100-End-->
 
@@ -166,6 +186,8 @@ Export the file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ActionFlagType-ACTION_EXPORT = 0x00000200--><!--Device-ActionFlagType-ACTION_EXPORT = 0x00000200-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -181,6 +203,8 @@ Modify the permissions on the file.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ActionFlagType-ACTION_PERMISSION_CHANGE = 0x00000400--><!--Device-ActionFlagType-ACTION_PERMISSION_CHANGE = 0x00000400-End-->
 

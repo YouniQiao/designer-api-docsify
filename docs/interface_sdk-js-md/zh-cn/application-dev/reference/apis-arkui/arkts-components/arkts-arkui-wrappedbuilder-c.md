@@ -6,35 +6,11 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>--><!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class WrappedBuilder--><!--Device-unnamed-declare class WrappedBuilder-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## builder
-
-```TypeScript
-builder: (...args: Args) => void
-```
-
-`@Builder`装饰的全局函数，用于生成对应的自定义构建内容。
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WrappedBuilder-builder: (...args: Args) => void--><!--Device-WrappedBuilder-builder: (...args: Args) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| args | Args | 是 |  |
 
 ## constructor
 
@@ -47,6 +23,8 @@ constructor(builder: (...args: Args) => void)
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,4 +52,28 @@ function myBuilder(value: string, size: number) {
 // 使用WrappedBuilder封装myBuilder
 let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
 ```
+
+## builder
+
+```TypeScript
+builder: (...args: Args) => void
+```
+
+`@Builder`装饰的全局函数，用于生成对应的自定义构建内容。
+
+**类型：** (...args: Args) =&gt; void
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WrappedBuilder-builder: (...args: Args) => void--><!--Device-WrappedBuilder-builder: (...args: Args) => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Firewall rule behavior enumeration.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-enum FirewallRuleAction--><!--Device-netFirewall-enum FirewallRuleAction-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -18,6 +20,8 @@ Allow access.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-FirewallRuleAction-RULE_ALLOW = 0--><!--Device-FirewallRuleAction-RULE_ALLOW = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -31,6 +35,8 @@ RULE_DENY = 1
 Deny access.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-FirewallRuleAction-RULE_DENY = 1--><!--Device-FirewallRuleAction-RULE_DENY = 1-End-->
 

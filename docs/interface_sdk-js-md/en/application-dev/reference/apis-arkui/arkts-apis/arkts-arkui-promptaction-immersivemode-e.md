@@ -1,10 +1,12 @@
 # ImmersiveMode
 
-Define the immersive mode of all kind of dialog
+Enumerates the display area modes of the dialog box overlay within a page.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum ImmersiveMode--><!--Device-unnamed-export enum ImmersiveMode-End-->
 
@@ -16,13 +18,17 @@ Define the immersive mode of all kind of dialog
 DEFAULT = 0
 ```
 
-Mask covering the parent node.
+The dialog box overlay follows the layout constraints of its parent node.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ImmersiveMode-DEFAULT = 0--><!--Device-ImmersiveMode-DEFAULT = 0-End-->
 
@@ -34,13 +40,17 @@ Mask covering the parent node.
 EXTEND = 1
 ```
 
-Mask extend safe area includes status bar and navigation bar.
+The dialog box overlay can extend to cover the status bar and navigation bar for a more immersive look.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ImmersiveMode-EXTEND = 1--><!--Device-ImmersiveMode-EXTEND = 1-End-->
 

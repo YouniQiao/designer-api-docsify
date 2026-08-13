@@ -6,7 +6,9 @@ type StatusObserver = (sessionId: string, networkId: string, status: string) => 
 
 定义获取分布式对象状态变更的监听回调函数。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void--><!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void-End-->
 

@@ -12,12 +12,13 @@ import { keyManager } from '@kit.CoreFileKit';
 function deactivateUserKey(userId: long):void
 ```
 
-When the screen is locked, the specified user key is uninstalled synchronously.  
-**(Currently, this API is available only to lock screen applications.)**
+When the screen is locked, the specified user key is uninstalled synchronously. **(Currently, this API is available only to lock screen applications.)**
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER_CRYPT
 
@@ -31,17 +32,17 @@ When the screen is locked, the specified user key is uninstalled synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | User ID. This parameter specifies the user who currently logs in to the lock screen application. |
+| userId | long | Yes | User ID. This parameter specifies the user who currently logs in to the lock screen application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. Possible causes: Mandatory parameters are left unspecified; Or input parameter has type different from the type the interface requires. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid. Possible causes: Mandatory parameters are left unspecified; Or input parameter has type different from the type the interface requires. |
 | 13600009 | User ID out of range. Possible causes: input parameter userId &lt; 100 or userId &gt; 10736. |
 | 13600008 | No such object. Possible causes: Cannot find userkey for the specified user. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

@@ -2,7 +2,9 @@
 
 Provides an option for number formatting.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface NumberFormatOptions--><!--Device-call-export interface NumberFormatOptions-End-->
 
@@ -24,7 +26,9 @@ Country code, for example, **CN** (China). All country codes are supported. The 
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NumberFormatOptions-countryCode?: string--><!--Device-NumberFormatOptions-countryCode?: string-End-->
 

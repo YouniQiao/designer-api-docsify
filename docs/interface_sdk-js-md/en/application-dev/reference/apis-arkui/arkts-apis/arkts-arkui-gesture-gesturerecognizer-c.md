@@ -6,6 +6,8 @@ Defines the gesture recognizer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class GestureRecognizer--><!--Device-unnamed-export declare class GestureRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Returns the event target information of the component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Returns the tap gesture's finger count.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizer-getFingerCount(): int--><!--Device-GestureRecognizer-getFingerCount(): int-End-->
@@ -69,6 +75,8 @@ Returns the gesture recognizer's state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,6 +102,8 @@ Returns the gesture's tag.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizer-getTag(): string--><!--Device-GestureRecognizer-getTag(): string-End-->
@@ -117,6 +127,8 @@ Returns the gesture's type.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,6 +154,8 @@ Returns whether the gesture recognizer is built in recognizer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizer-isBuiltIn(): boolean--><!--Device-GestureRecognizer-isBuiltIn(): boolean-End-->
@@ -165,6 +179,8 @@ Returns whether the gesture recognizer is enabled.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,6 +206,8 @@ Returns the tap gesture's limitFingerCount.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizer-isFingerCountLimit(): boolean--><!--Device-GestureRecognizer-isFingerCountLimit(): boolean-End-->
@@ -213,6 +231,8 @@ Check whether the current gesture binding node is a descendant of the passed-in 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,6 +264,8 @@ Returns whether the gesture recognizer is valid.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizer-isValid(): boolean--><!--Device-GestureRecognizer-isValid(): boolean-End-->
@@ -262,13 +284,13 @@ Returns whether the gesture recognizer is valid.
 preventBegin(): void
 ```
 
-Prevent the gesture recognizer from participating in this gesture recognition until all fingers are lifted.If the system has already made out the result of this gesture recognizer (success and failure), calling this function will have no any effect.
-
-[Note]: This method is different from GestureRecognizer.setEnabled(isEnabled: boolean), setEnabled does not prevent a gesture recognizer object from participating in the gesture recognition process, but only affects whether the gesture's corresponding callback function is executed.
+Prevent the gesture recognizer from participating in this gesture recognition until all fingers are lifted. If the system has already made out the result of this gesture recognizer (success and failure), calling this function will have no any effect. [Note]: This method is different from GestureRecognizer.setEnabled(isEnabled: boolean), setEnabled does not prevent a gesture recognizer object from participating in the gesture recognition process, but only affects whether the gesture's corresponding callback function is executed.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -287,6 +309,8 @@ set the enabled state of the gesture recognizer.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Defines the file filtering configuration used by **listFile()**.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Filter--><!--Device-unnamed-export interface Filter-End-->
 
@@ -26,9 +28,13 @@ Locate files that fuzzy match the specified file names, which are of the OR rela
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Filter-displayName?: Array<string>--><!--Device-Filter-displayName?: Array<string>-End-->
 
@@ -40,15 +46,17 @@ Locate files that fuzzy match the specified file names, which are of the OR rela
 excludeMedia?: boolean
 ```
 
-Whether to exclude the files already in **Media**.
-
-The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**. This parameter is reserved.
+Whether to exclude the files already in **Media**. The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Filter-excludeMedia?: boolean--><!--Device-Filter-excludeMedia?: boolean-End-->
 
@@ -57,36 +65,44 @@ The value **true** means to exclude the files already in **Media**; the value **
 ## fileSizeOver
 
 ```TypeScript
-fileSizeOver?: long
+fileSizeOver?: number
 ```
 
 Locate files that are greater than the specified size, in bytes.
 
-**Type:** long
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-Filter-fileSizeOver?: long--><!--Device-Filter-fileSizeOver?: long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Filter-fileSizeOver?: number--><!--Device-Filter-fileSizeOver?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## lastModifiedAfter
 
 ```TypeScript
-lastModifiedAfter?: double
+lastModifiedAfter?: number
 ```
 
 Locate files whose last modification time is the same or later than the specified time.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-Filter-lastModifiedAfter?: double--><!--Device-Filter-lastModifiedAfter?: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Filter-lastModifiedAfter?: number--><!--Device-Filter-lastModifiedAfter?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -100,9 +116,13 @@ Locate files that fully match the specified MIME types, which are of the OR rela
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Filter-mimeType?: Array<string>--><!--Device-Filter-mimeType?: Array<string>-End-->
 
@@ -118,9 +138,13 @@ Locate files that fully match the specified file name extensions, which are of t
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Filter-suffix?: Array<string>--><!--Device-Filter-suffix?: Array<string>-End-->
 

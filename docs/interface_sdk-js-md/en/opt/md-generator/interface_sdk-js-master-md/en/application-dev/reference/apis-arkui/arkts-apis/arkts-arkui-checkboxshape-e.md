@@ -4,6 +4,8 @@ common enum of the checkbox shape
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum CheckBoxShape--><!--Device-unnamed-declare enum CheckBoxShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ CIRCLE = 0
 Circle.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ ROUNDED_SQUARE = 1
 Rounded Square.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

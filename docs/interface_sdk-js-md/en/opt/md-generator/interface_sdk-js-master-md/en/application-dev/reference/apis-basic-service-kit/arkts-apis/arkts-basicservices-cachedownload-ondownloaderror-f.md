@@ -16,6 +16,8 @@ Subscribes to the pre-download error events. This API uses an asynchronous callb
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void--><!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent

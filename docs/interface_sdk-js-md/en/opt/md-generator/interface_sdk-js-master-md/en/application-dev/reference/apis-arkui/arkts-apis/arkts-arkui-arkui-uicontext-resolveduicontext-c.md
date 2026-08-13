@@ -1,19 +1,14 @@
 # ResolvedUIContext
 
-**ResolvedUIContext** instance object.
-
-> **NOTE：**
-> 
-> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
-> 
-> - **ResolvedUIContext** is inherited from [UIContext](@ohos.arkui.UIContext). Objects of this class contain
-> the [UIContext](@ohos.arkui.UIContext) instance and its parsing policy.
+**ResolvedUIContext** instance object. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - **ResolvedUIContext** is inherited from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext). Objects of this class contain > the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) instance and its parsing policy.
 
 **Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)
 
 **Since:** 22
 
-<!--Device-unnamed-export class ResolvedUIContext extends UIContext--><!--Device-unnamed-export class ResolvedUIContext extends UIContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ResolvedUIContext--><!--Device-unnamed-export class ResolvedUIContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,6 +29,8 @@ Resolving strategy of the UIContext.
 **Type:** [ResolveStrategy](arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 键鼠穿越可选控制参数，控制穿出点位置。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cooperate-interface CooperateOptions--><!--Device-cooperate-interface CooperateOptions-End-->
 
@@ -20,7 +22,9 @@ displayId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CooperateOptions-displayId: long--><!--Device-CooperateOptions-displayId: long-End-->
 
@@ -38,7 +42,9 @@ displayX: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CooperateOptions-displayX: int--><!--Device-CooperateOptions-displayX: int-End-->
 
@@ -56,7 +62,9 @@ displayY: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CooperateOptions-displayY: int--><!--Device-CooperateOptions-displayY: int-End-->
 

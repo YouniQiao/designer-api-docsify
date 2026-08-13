@@ -1,9 +1,4 @@
-# @ohos.atomicservice.AtomicServiceNavigation(This section describes the interfaces used by AtomicServiceNavigation)
-
-###### 子组件
- 可以包含子组件。
- 从API version 10开始，推荐使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md#NavPathStack)进行页面路由。
-
+# @ohos.atomicservice.AtomicServiceNavigation
 
 ## 汇总
 

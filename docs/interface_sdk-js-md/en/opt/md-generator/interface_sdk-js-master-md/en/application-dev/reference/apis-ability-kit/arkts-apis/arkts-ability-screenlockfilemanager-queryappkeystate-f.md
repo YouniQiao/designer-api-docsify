@@ -14,7 +14,9 @@ function queryAppKeyState(): KeyStatus
 
 Queries the status of the caller app's sensitive data key under the lock screen in synchronous mode.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
 
@@ -30,8 +32,8 @@ Queries the status of the caller app's sensitive data key under the lock screen 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-screenLockFileManager.md#29300002-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 描述通知标志位。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationFlags--><!--Device-unnamed-export interface NotificationFlags-End-->
 
@@ -14,11 +16,13 @@
 bannerEnabled?: NotificationFlagStatus
 ```
 
-是否启用横幅功能。默认值为TYPE_NONE。设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md#NotificationFlagStatus)会生效。
+是否启用横幅功能。默认值为TYPE_NONE。设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e-sys.md#NotificationFlagStatus（系统接口）)会生效。
 
-**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus-End-->
 
@@ -30,11 +34,13 @@ bannerEnabled?: NotificationFlagStatus
 lockScreenEnabled?: NotificationFlagStatus
 ```
 
-是否启用锁屏功能。默认值为TYPE_NONE。设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md#NotificationFlagStatus)会生效。
+是否启用锁屏功能。默认值为TYPE_NONE。设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e-sys.md#NotificationFlagStatus（系统接口）)会生效。
 
-**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus-End-->
 
@@ -46,11 +52,13 @@ lockScreenEnabled?: NotificationFlagStatus
 soundEnabled?: NotificationFlagStatus
 ```
 
-是否启用声音提示功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md#NotificationFlagStatus)会生效。
+是否启用声音提示功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e-sys.md#NotificationFlagStatus（系统接口）)会生效。
 
-**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus-End-->
 
@@ -62,11 +70,13 @@ soundEnabled?: NotificationFlagStatus
 vibrationEnabled?: NotificationFlagStatus
 ```
 
-是否启用振动提醒功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md#NotificationFlagStatus)会生效。
+是否启用振动提醒功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e-sys.md#NotificationFlagStatus（系统接口）)会生效。
 
-**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus-End-->
 

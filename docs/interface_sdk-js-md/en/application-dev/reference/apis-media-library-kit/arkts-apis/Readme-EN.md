@@ -6,13 +6,6 @@
   - [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
   - [AlbumPickerComponent](arkts-medialibrary-file-albumpickercomponent-albumpickercomponent-s.md)
   - [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md)
-- [@ohos.file.AlbumPickerComponent](arkts-file-albumpickercomponent.md)
-  - [AlbumInfo](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md)
-  - [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
-  - [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
-  - [AlbumPickerComponent](arkts-medialibrary-file-albumpickercomponent-albumpickercomponent-s.md)
-  - [AlbumClickCallback](arkts-medialibrary-albumclickcallback-t.md)
-  - [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md)
 - [@ohos.file.PhotoPickerComponent](arkts-file-photopickercomponent.md)
   - [AnimatorParams](arkts-medialibrary-file-photopickercomponent-animatorparams-c.md)
   - [BadgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
@@ -59,53 +52,6 @@
   - [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md)
   - [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
   - [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md)
-- [@ohos.file.PhotoPickerComponent](arkts-file-photopickercomponent.md)
-  - [AnimatorParams](arkts-medialibrary-file-photopickercomponent-animatorparams-c.md)
-  - [BadgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
-  - [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)
-  - [CompletedResult](arkts-medialibrary-file-photopickercomponent-completedresult-c.md)
-  - [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md)
-  - [MaxSelected](arkts-medialibrary-file-photopickercomponent-maxselected-c.md)
-  - [PhotoBrowserInfo](arkts-medialibrary-file-photopickercomponent-photobrowserinfo-c.md)
-  - [PickerController](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md)
-  - [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md)
-  - [PreselectedInfo](arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)
-  - [SingleLineConfig](arkts-medialibrary-file-photopickercomponent-singlelineconfig-c.md)
-  - [PhotoPickerComponent](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md)
-  - [CurrentAlbumDeletedCallback](arkts-medialibrary-currentalbumdeletedcallback-t.md)
-  - [DeSelectCallback](arkts-medialibrary-deselectcallback-t.md)
-  - [EnterPhotoBrowserCallback](arkts-medialibrary-enterphotobrowsercallback-t.md)
-  - [ExceedMaxSelectedCallback](arkts-medialibrary-exceedmaxselectedcallback-t.md)
-  - [ExitPhotoBrowserCallback](arkts-medialibrary-exitphotobrowsercallback-t.md)
-  - [ItemClickedCallback](arkts-medialibrary-itemclickedcallback-t.md)
-  - [ItemsDeletedCallback](arkts-medialibrary-itemsdeletedcallback-t.md)
-  - [PhotoBrowserChangedCallback](arkts-medialibrary-photobrowserchangedcallback-t.md)
-  - [PhotoBrowserZoomCallback](arkts-medialibrary-photobrowserzoomcallback-t.md)
-  - [PickerControllerReadyCallback](arkts-medialibrary-pickercontrollerreadycallback-t.md)
-  - [SelectCallback](arkts-medialibrary-selectcallback-t.md)
-  - [VideoPlayStateChangedCallback](arkts-medialibrary-videoplaystatechangedcallback-t.md)
-  - [BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md)
-  - [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md)
-  - [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md)
-  - [ItemDisplayRatio](arkts-medialibrary-file-photopickercomponent-itemdisplayratio-e.md)
-  - [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md)
-  - [MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md)
-  - [PhotoBrowserRange](arkts-medialibrary-file-photopickercomponent-photobrowserrange-e.md)
-  - [PhotoBrowserUIElement](arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md)
-  - [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
-  - [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md)
-  - [ReminderMode](arkts-medialibrary-file-photopickercomponent-remindermode-e.md)
-  - [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md)
-  - [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
-  - [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md)
-- [@ohos.file.RecentPhotoComponent](arkts-file-recentphotocomponent.md)
-  - [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md)
-  - [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
-  - [RecentPhotoComponent](arkts-medialibrary-file-recentphotocomponent-recentphotocomponent-s.md)
-  - [RecentPhotoCheckInfoCallback](arkts-medialibrary-recentphotocheckinfocallback-t.md)
-  - [RecentPhotoCheckResultCallback](arkts-medialibrary-recentphotocheckresultcallback-t.md)
-  - [RecentPhotoClickCallback](arkts-medialibrary-recentphotoclickcallback-t.md)
-  - [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
 - [@ohos.file.RecentPhotoComponent](arkts-file-recentphotocomponent.md)
   - [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md)
   - [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
@@ -146,7 +92,8 @@
   <!--Del-->
   - [MediaAssetEditData(system api)](arkts-medialibrary-photoaccesshelper-mediaasseteditdata-c-sys.md)<!--DelEnd-->
   - [MediaAssetManager](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md)
-  - [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c.md)
+  <!--Del-->
+  - [MediaAssetsChangeRequest(system api)](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [MediaHighlightAlbumChangeRequest(system api)](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md)<!--DelEnd-->
   - [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)
@@ -219,6 +166,8 @@
   - [Entity(system api)](arkts-medialibrary-photoaccesshelper-entity-i-sys.md)<!--DelEnd-->
   - [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md)
   - [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)
+  <!--Del-->
+  - [FetchResult(system api)](arkts-medialibrary-photoaccesshelper-fetchresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FormInfo(system api)](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -378,11 +327,15 @@
   - [PhotoRiskStatus(system api)](arkts-medialibrary-photoaccesshelper-photoriskstatus-e-sys.md)<!--DelEnd-->
   - [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md)
   - [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
+  <!--Del-->
+  - [PhotoSubtype(system api)](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md)<!--DelEnd-->
   - [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
   - [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
   - [PickerColorMode](arkts-medialibrary-photoaccesshelper-pickercolormode-e.md)
   - [PlayMode](arkts-medialibrary-photoaccesshelper-playmode-e.md)
   - [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
+  <!--Del-->
+  - [PositionType(system api)](arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md)<!--DelEnd-->
   - [PreferredCompatibleMode](arkts-medialibrary-photoaccesshelper-preferredcompatiblemode-e.md)
   <!--Del-->
   - [RankingMethod(system api)](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md)<!--DelEnd-->
@@ -451,22 +404,6 @@
   - [PositionType(system api)](arkts-medialibrary-sendablephotoaccesshelper-positiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ThumbnailVisibility(system api)](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)<!--DelEnd-->
-- [@ohos.multimedia.MovingPhotoView](arkts-multimedia-movingphotoview.md)
-  - [MovingPhotoView](arkts-medialibrary-multimedia-movingphotoview-movingphotoview-f.md)
-  - [MovingPhotoViewController](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c.md)
-  <!--Del-->
-  - [MovingPhotoViewController(system api)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c-sys.md)<!--DelEnd-->
-  - [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md)
-  <!--Del-->
-  - [MovingPhotoViewAttribute(system api)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i-sys.md)<!--DelEnd-->
-  - [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md)
-  <!--Del-->
-  - [MovingPhotoViewOptions(system api)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md)<!--DelEnd-->
-  - [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md)
-  <!--Del-->
-  - [DynamicRangeMode(system api)](arkts-medialibrary-multimedia-movingphotoview-dynamicrangemode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PixelMapFormat(system api)](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md)<!--DelEnd-->
 - [@ohos.multimedia.movingphotoview](arkts-multimedia-movingphotoview.md)
   - [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md)
   <!--Del-->

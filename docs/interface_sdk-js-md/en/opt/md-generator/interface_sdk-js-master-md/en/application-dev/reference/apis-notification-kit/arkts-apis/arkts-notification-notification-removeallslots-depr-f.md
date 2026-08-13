@@ -12,7 +12,7 @@ Removes all notification slots. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAllSlots](ohos.notificationManager/notificationManager#removeAllSlots)
+**Substitutes:** [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md#removeAllSlots)
 
 <!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void--><!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void-End-->
 
@@ -37,7 +37,7 @@ Removes all notification slots. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAllSlots](ohos.notificationManager/notificationManager#removeAllSlots)
+**Substitutes:** [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md#removeAllSlots)
 
 <!--Device-notification-function removeAllSlots(): Promise<void>--><!--Device-notification-function removeAllSlots(): Promise<void>-End-->
 

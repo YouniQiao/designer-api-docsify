@@ -2,9 +2,11 @@
 
 Provides usage information of the Web SQL Database.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface WebStorageOrigin--><!--Device-webview-interface WebStorageOrigin-End-->
 
@@ -26,9 +28,13 @@ Index of the origin.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorageOrigin-origin: string--><!--Device-WebStorageOrigin-origin: string-End-->
 
@@ -37,36 +43,44 @@ Index of the origin.
 ## quota
 
 ```TypeScript
-quota: double
+quota: number
 ```
 
 Storage quota of the origin.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebStorageOrigin-quota: double--><!--Device-WebStorageOrigin-quota: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebStorageOrigin-quota: number--><!--Device-WebStorageOrigin-quota: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## usage
 
 ```TypeScript
-usage: double
+usage: number
 ```
 
 Storage usage of the origin.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebStorageOrigin-usage: double--><!--Device-WebStorageOrigin-usage: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebStorageOrigin-usage: number--><!--Device-WebStorageOrigin-usage: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

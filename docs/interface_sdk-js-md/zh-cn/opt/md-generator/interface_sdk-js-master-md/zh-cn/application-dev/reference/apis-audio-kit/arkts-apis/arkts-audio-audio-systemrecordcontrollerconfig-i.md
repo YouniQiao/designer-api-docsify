@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-audio-interface SystemRecordControllerConfig--><!--Device-audio-interface SystemRecordControllerConfig-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
@@ -14,11 +16,13 @@
 sourceType: SourceType
 ```
 
-系统使用它来确定应用程序的录制场景，根据应用程序期望用于流式传输的源类型，并为用户提供选择匹配降噪模式的能力。支持的源类型包括[Source_TYPE_MIC](SourceType#Source_TYPE_MIC),[Source_TYPE_CAMCORDER](SourceType#Source_TYPE_CAMCORDER)，以及[Source_TYPE_LIVE](SourceType#Source_TYPE_LIVE)。
+系统使用它来确定应用程序的录制场景，根据 应用程序期望用于流式传输的源类型，并为用户提供 选择匹配降噪模式的能力。支持的源类型包括 Source_TYPE_MIC,Source_TYPE_CAMCORDER，以及 Source_TYPE_LIVE。
 
 **类型：** SourceType
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

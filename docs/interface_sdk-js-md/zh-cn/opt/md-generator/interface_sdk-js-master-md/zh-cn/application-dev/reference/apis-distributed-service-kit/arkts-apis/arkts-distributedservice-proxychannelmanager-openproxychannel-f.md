@@ -8,7 +8,9 @@ function openProxyChannel(channelInfo: ChannelInfo): Promise<number>
 
 打开代理通道，使用Promise异步回调返回结果。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
@@ -34,14 +36,14 @@ function openProxyChannel(channelInfo: ChannelInfo): Promise<number>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [32390006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-参数错误) |
-| [32390102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390102-操作失败或者连接超时) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [32390100](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-内部异常) |
-| [32390101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-调用受限) |
-| [32390002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-设备未配对) |
-| [32390001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-蓝牙已关闭) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-参数错误) |
+| [32390102](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390102-操作失败或者连接超时) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-内部异常) |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-调用受限) |
+| [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-设备未配对) |
+| [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-蓝牙已关闭) |
 
 ## 示例
 

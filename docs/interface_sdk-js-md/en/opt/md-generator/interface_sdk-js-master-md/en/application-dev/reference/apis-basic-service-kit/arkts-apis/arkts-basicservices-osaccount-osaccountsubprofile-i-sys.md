@@ -4,6 +4,8 @@ Definition of an OS account sub-profile.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-osAccount-interface OsAccountSubProfile--><!--Device-osAccount-interface OsAccountSubProfile-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -22,11 +24,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 createTime: number
 ```
 
-Time when the sub-profile was created.Unit: milliseconds.
+Time when the sub-profile was created. Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Distributed account information bound to the OS account sub-profile.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo--><!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo-End-->
@@ -68,6 +74,8 @@ Identifier of the OS account sub-profile.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfile-id: int--><!--Device-OsAccountSubProfile-id: int-End-->
@@ -82,11 +90,13 @@ Identifier of the OS account sub-profile.
 index: number
 ```
 
-Position index of the OS account sub-profile, ranging from 0 to the number of sub-profiles minus 1.This index is unique within each OS account and is automatically assigned by the system when the sub-profile is created.
+Position index of the OS account sub-profile, ranging from 0 to the number of sub-profiles minus 1. This index is unique within each OS account and is automatically assigned by the system when the sub-profile is created.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,6 +117,8 @@ Local ID of the OS account to which the sub-profile belongs.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Describes a left-closed and right-open interval.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface Range--><!--Device-text-interface Range-End-->
 
@@ -24,7 +26,9 @@ Index of the rightmost point of the interval. The value is an integer.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Index of the leftmost point of the interval. The value is an integer.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

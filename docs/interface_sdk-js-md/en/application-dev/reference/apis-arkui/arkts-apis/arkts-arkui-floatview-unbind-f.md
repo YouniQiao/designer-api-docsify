@@ -13,13 +13,13 @@ function unbind(floatViewController: FloatViewController,
     floatingBallController: floatingBall.FloatingBallController): Promise<void>
 ```
 
-Unbinds the float view and floating ball. The unbinding can be performed only after both the  
-[float view controller](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController) and  
-[floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController) are stopped. This API uses a promise to return the result.
+Unbinds the float view and floating ball. The unbinding can be performed only after both the [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController) and [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController) are stopped. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +44,7 @@ Unbinds the float view and floating ball. The unbinding can be performed only af
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
-| [1300025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floatingBallController has not been bound. |
-| [1300031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The floatViewController has not been bound. 3. The floatViewController and the floatingBallController are not bound together. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floatingBallController has not been bound. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The floatViewController has not been bound. 3. The floatViewController and the floatingBallController are not bound together. |
 

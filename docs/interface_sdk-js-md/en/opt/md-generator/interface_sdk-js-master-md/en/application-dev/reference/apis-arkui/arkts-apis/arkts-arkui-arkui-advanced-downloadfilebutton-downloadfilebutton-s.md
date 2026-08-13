@@ -4,7 +4,7 @@ Declare Component DownloadFileButton
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct DownloadFileButton--><!--Device-unnamed-export declare struct DownloadFileButton-End-->
 
@@ -19,7 +19,7 @@ import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLa
 ## contentOptions
 
 ```TypeScript
-contentOptions: DownloadContentOptions
+@State contentOptions: DownloadContentOptions
 ```
 
 Set DownloadFileButton Content.
@@ -28,18 +28,18 @@ Set DownloadFileButton Content.
 
 **Since:** 12
 
-**Decorator:** @State
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DownloadFileButton-contentOptions: DownloadContentOptions--><!--Device-DownloadFileButton-contentOptions: DownloadContentOptions-End-->
+<!--Device-DownloadFileButton-@State contentOptions: DownloadContentOptions--><!--Device-DownloadFileButton-@State contentOptions: DownloadContentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## styleOptions
 
 ```TypeScript
-styleOptions: DownloadStyleOptions
+@State styleOptions: DownloadStyleOptions
 ```
 
 Set DownloadFileButton Style.
@@ -48,10 +48,10 @@ Set DownloadFileButton Style.
 
 **Since:** 12
 
-**Decorator:** @State
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DownloadFileButton-styleOptions: DownloadStyleOptions--><!--Device-DownloadFileButton-styleOptions: DownloadStyleOptions-End-->
+<!--Device-DownloadFileButton-@State styleOptions: DownloadStyleOptions--><!--Device-DownloadFileButton-@State styleOptions: DownloadStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

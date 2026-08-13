@@ -1,10 +1,12 @@
 # OffscreenCanvas
 
-OffscreenCanvas provides a Canvas object that can be rendered off-screen.It works in both window and Web worker environments.
+OffscreenCanvas provides a Canvas object that can be rendered off-screen. It works in both window and Web worker environments.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class OffscreenCanvas--><!--Device-unnamed-export declare class OffscreenCanvas-End-->
 
@@ -21,6 +23,8 @@ The width of the offScreen Canvas object The height of the offScreen Canvas obje
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -48,6 +52,8 @@ Gets the context object for off-screen drawing.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -82,6 +88,8 @@ Converts the draw contents of the current off-screen draw object to a string in 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -115,6 +123,8 @@ Converts the draw content in the current off-screen draw object to a Bitmap obje
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -143,6 +153,8 @@ The height of the offScreen Canvas object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -164,6 +176,8 @@ The width of the offScreen Canvas object
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

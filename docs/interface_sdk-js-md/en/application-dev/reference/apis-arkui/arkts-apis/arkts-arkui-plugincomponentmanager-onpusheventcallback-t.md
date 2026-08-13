@@ -1,19 +1,21 @@
 # OnPushEventCallback
 
 ```TypeScript
-export type OnPushEventCallback = (source: Want, template: PluginComponentTemplate, data: KVObject,
+type OnPushEventCallback = (source: Want, template: PluginComponentTemplate, data: KVObject,
     extraData: KVObject) => void
 ```
 
-Plugin component push event callback.
+Registers the listener for the push event.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-pluginComponentManager-export type OnPushEventCallback = (source: Want, template: PluginComponentTemplate, data: KVObject,    extraData: KVObject) => void--><!--Device-pluginComponentManager-export type OnPushEventCallback = (source: Want, template: PluginComponentTemplate, data: KVObject,    extraData: KVObject) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-pluginComponentManager-type OnPushEventCallback = (source: Want, template: PluginComponentTemplate, data: KVObject,    extraData: KVObject) => void--><!--Device-pluginComponentManager-type OnPushEventCallback = (source: Want, template: PluginComponentTemplate, data: KVObject,    extraData: KVObject) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,8 +23,8 @@ Plugin component push event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Push request sender's relevant information. |
-| template | [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | Yes | Request component template name. |
-| data | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes | data info. |
-| extraData | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes | extra data info. |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the push request sender. |
+| template | [PluginComponentTemplate](../../apis-na/arkts-apis/arkts-na-plugincomponent-plugincomponenttemplate-i.md) | Yes | Name of the requested component template. |
+| data | [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md) | Yes | Data. |
+| extraData | [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md) | Yes | Extra data. |
 

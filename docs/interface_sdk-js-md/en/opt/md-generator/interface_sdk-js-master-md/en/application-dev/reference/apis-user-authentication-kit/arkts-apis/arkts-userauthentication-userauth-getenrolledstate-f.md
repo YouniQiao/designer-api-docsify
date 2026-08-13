@@ -14,11 +14,13 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 
 Obtains the credential state. This API is used to obtain the credential enrollment information of a specified authentication type, including the credential digest and quantity. The application can compare the current query result with the previously saved result to determine whether the user has added or deleted credentials, and then perform corresponding service processing.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState--><!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState-End-->
 
@@ -40,11 +42,11 @@ Obtains the credential state. This API is used to obtain the credential enrollme
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12500005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 

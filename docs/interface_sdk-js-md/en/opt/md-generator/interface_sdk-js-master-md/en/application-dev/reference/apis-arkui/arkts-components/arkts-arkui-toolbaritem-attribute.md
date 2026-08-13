@@ -1,8 +1,10 @@
 # ToolBarItem properties/events
 
-The [universal attributes](./common) are not supported.
+The universal attributes are not supported.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

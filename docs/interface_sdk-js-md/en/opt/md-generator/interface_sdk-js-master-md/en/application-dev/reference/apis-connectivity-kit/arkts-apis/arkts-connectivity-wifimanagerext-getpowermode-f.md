@@ -16,6 +16,8 @@ Obtains the current Wi-Fi power mode.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManagerExt-function getPowerMode(): Promise<PowerMode>--><!--Device-wifiManagerExt-function getPowerMode(): Promise<PowerMode>-End-->
@@ -32,9 +34,9 @@ Obtains the current Wi-Fi power mode.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2701000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2701000-ap-extension-module-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -60,6 +62,8 @@ Obtains the current Wi-Fi power mode.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManagerExt-function getPowerMode(callback: AsyncCallback<PowerMode>): void--><!--Device-wifiManagerExt-function getPowerMode(callback: AsyncCallback<PowerMode>): void-End-->
@@ -76,9 +80,9 @@ Obtains the current Wi-Fi power mode.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2701000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2701000-ap-extension-module-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

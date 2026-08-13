@@ -2,7 +2,9 @@
 
 Enumerates the photo quality prioritization strategies.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum PhotoQualityPrioritization--><!--Device-camera-enum PhotoQualityPrioritization-End-->
 
@@ -16,9 +18,11 @@ HIGH_QUALITY = 0
 
 Focuses on image quality, which may increase the time required for capturing photos to ensure high-quality output.
 
-**Since:** 21
+**Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-PhotoQualityPrioritization-HIGH_QUALITY = 0--><!--Device-PhotoQualityPrioritization-HIGH_QUALITY = 0-End-->
 
@@ -32,9 +36,11 @@ SPEED = 1
 
 Focuses on performance, trading off image quality for faster capture times.
 
-**Since:** 21
+**Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-PhotoQualityPrioritization-SPEED = 1--><!--Device-PhotoQualityPrioritization-SPEED = 1-End-->
 

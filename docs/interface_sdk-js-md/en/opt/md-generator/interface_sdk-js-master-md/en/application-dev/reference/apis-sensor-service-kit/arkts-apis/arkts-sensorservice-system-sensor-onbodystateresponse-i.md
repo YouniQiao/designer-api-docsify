@@ -32,7 +32,7 @@ Boolean value indicating whether the device is worn. The value **true** indicate
 
 **Deprecated since:** 8
 
-**Substitutes:** [value](ohos.sensor/sensor#WearDetectionResponse.value)
+**Substitutes:** [value](arkts-sensorservice-sensor-weardetectionresponse-i.md#value)
 
 **Model restriction:** This API can be used only in the FA model.
 

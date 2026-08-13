@@ -16,6 +16,8 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

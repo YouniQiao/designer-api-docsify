@@ -6,14 +6,13 @@
 export declare const DynamicLayout: DynamicLayoutInterface
 ```
 
-Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components.  
-> **Child Components**
-> 
-> Child components are supported.
+Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components. > **Child Components** > > Child components are supported.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +35,8 @@ Defines DynamicLayout Component instance.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

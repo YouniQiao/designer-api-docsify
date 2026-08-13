@@ -2,9 +2,11 @@
 
 材质类型枚举.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
 
@@ -18,9 +20,11 @@ SHADER = 1
 
 材质类型是Shader.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
 
@@ -34,9 +38,11 @@ METALLIC_ROUGHNESS = 2
 
 材质是基于物理的金属粗糙度材质.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MaterialType-METALLIC_ROUGHNESS = 2--><!--Device-MaterialType-METALLIC_ROUGHNESS = 2-End-->
 
@@ -52,7 +58,9 @@ UNLIT = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
 
@@ -68,7 +76,9 @@ OCCLUSION = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MaterialType-OCCLUSION = 4--><!--Device-MaterialType-OCCLUSION = 4-End-->
 

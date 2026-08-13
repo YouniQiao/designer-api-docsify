@@ -1,11 +1,6 @@
 # HuksHandle
 
-Defines the struct for a HUKS handle.
-
-> **NOTE：**
-> 
-> This API is deprecated since API version 9. You are advised to use
-> [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#HuksSessionHandle).
+Defines the struct for a HUKS handle. > **NOTE：**> > This API is deprecated since API version 9. You are advised to use > [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#HuksSessionHandle).
 
 **Since:** 8
 
@@ -13,7 +8,7 @@ Defines the struct for a HUKS handle.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 <!--Device-huks-export interface HuksHandle--><!--Device-huks-export interface HuksHandle-End-->
 
@@ -31,9 +26,7 @@ import { huks } from '@kit.UniversalKeystoreKit';
 errorCode: number
 ```
 
-Reserved field.
-
-Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field. Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -53,9 +46,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 handle: number
 ```
 
-Reserved field.
-
-Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field. Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -75,9 +66,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 token?: Uint8Array
 ```
 
-Reserved field.
-
-Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field. Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Uint8Array
 

@@ -18,6 +18,8 @@ fail?: (data: string, code: number) => void
 
 Called when the messages fail to be sent.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 5
 
 **ArkTS mode:** ArkTS-Dyn only, since version 5.
@@ -28,13 +30,6 @@ Called when the messages fail to be sent.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
 ## success
 
 ```TypeScript
@@ -42,6 +37,8 @@ success?: (data: SubscribeMessageResponse) => void
 ```
 
 Called when the messages are sent successfully.
+
+**Type:** (data: SubscribeMessageResponse) =&gt; void
 
 **Since:** 5
 
@@ -52,10 +49,4 @@ Called when the messages are sent successfully.
 <!--Device-SubscribeMessageOptions-success?: (data: SubscribeMessageResponse) => void--><!--Device-SubscribeMessageOptions-success?: (data: SubscribeMessageResponse) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [SubscribeMessageResponse](arkts-arkui-featureability-subscribemessageresponse-i.md) | Yes |  |
 

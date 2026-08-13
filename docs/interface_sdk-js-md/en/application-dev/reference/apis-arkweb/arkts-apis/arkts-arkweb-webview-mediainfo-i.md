@@ -1,11 +1,12 @@
 # MediaInfo
 
-Represents a **MediaInfo** object used as a parameter of the  
-[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
+Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface MediaInfo--><!--Device-webview-interface MediaInfo-End-->
 
@@ -27,9 +28,11 @@ Attributes in **&lt;video&gt;** or **&lt;audio&gt;**.
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-MediaInfo-attributes: Record<string, string>--><!--Device-MediaInfo-attributes: Record<string, string>-End-->
 
@@ -45,9 +48,13 @@ Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;*
 
 **Type:** string[]
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-controlList: string[]--><!--Device-MediaInfo-controlList: string[]-End-->
 
@@ -59,15 +66,17 @@ Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;*
 controlsShown: boolean
 ```
 
-Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**.
-
-The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false**means the opposite.
+Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**. The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-controlsShown: boolean--><!--Device-MediaInfo-controlsShown: boolean-End-->
 
@@ -83,9 +92,11 @@ ID of **&lt;video&gt;** or **&lt;audio&gt;** on the web page.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-MediaInfo-embedID: string--><!--Device-MediaInfo-embedID: string-End-->
 
@@ -101,9 +112,11 @@ HTTP headers that need to be included in the player's request for media resource
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-MediaInfo-headers: Record<string, string>--><!--Device-MediaInfo-headers: Record<string, string>-End-->
 
@@ -119,9 +132,13 @@ Source of the media. There may be multiple sources. The application needs to sel
 
 **Type:** [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md)[]
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-mediaSrcList: MediaSourceInfo[]--><!--Device-MediaInfo-mediaSrcList: MediaSourceInfo[]-End-->
 
@@ -137,9 +154,13 @@ Type of the media.
 
 **Type:** MediaType
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-mediaType: MediaType--><!--Device-MediaInfo-mediaType: MediaType-End-->
 
@@ -151,15 +172,17 @@ Type of the media.
 muted: boolean
 ```
 
-Whether to mute the player.
-
-The value **true** means to mute the player, and **false** means the opposite.
+Whether to mute the player. The value **true** means to mute the player, and **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-muted: boolean--><!--Device-MediaInfo-muted: boolean-End-->
 
@@ -175,9 +198,13 @@ URL of a poster.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-posterUrl: string--><!--Device-MediaInfo-posterUrl: string-End-->
 
@@ -193,9 +220,13 @@ Whether preloading is required.
 
 **Type:** [Preload](arkts-arkweb-webview-preload-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-preload: Preload--><!--Device-MediaInfo-preload: Preload-End-->
 
@@ -211,9 +242,13 @@ Surface information used for same-layer rendering.
 
 **Type:** [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaInfo-surfaceInfo: NativeMediaPlayerSurfaceInfo--><!--Device-MediaInfo-surfaceInfo: NativeMediaPlayerSurfaceInfo-End-->
 

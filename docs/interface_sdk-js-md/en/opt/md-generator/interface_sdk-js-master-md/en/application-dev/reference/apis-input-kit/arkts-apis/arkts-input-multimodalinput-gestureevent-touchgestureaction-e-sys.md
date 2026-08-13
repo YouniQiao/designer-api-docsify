@@ -2,7 +2,9 @@
 
 Enumerates touchscreen gesture types.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum TouchGestureAction--><!--Device-unnamed-export declare enum TouchGestureAction-End-->
 
@@ -18,7 +20,9 @@ SWIPE_DOWN = 0
 
 Multi-finger downward swipe.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchGestureAction-SWIPE_DOWN = 0--><!--Device-TouchGestureAction-SWIPE_DOWN = 0-End-->
 
@@ -34,7 +38,9 @@ SWIPE_UP = 1
 
 Multi-finger upward swipe.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchGestureAction-SWIPE_UP = 1--><!--Device-TouchGestureAction-SWIPE_UP = 1-End-->
 
@@ -50,7 +56,9 @@ SWIPE_LEFT = 2
 
 Multi-finger leftward swipe.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchGestureAction-SWIPE_LEFT = 2--><!--Device-TouchGestureAction-SWIPE_LEFT = 2-End-->
 
@@ -66,7 +74,9 @@ SWIPE_RIGHT = 3
 
 Multi-finger rightward swipe.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchGestureAction-SWIPE_RIGHT = 3--><!--Device-TouchGestureAction-SWIPE_RIGHT = 3-End-->
 
@@ -82,7 +92,9 @@ PINCH_CLOSED = 4
 
 Multi-finger pinch closed.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchGestureAction-PINCH_CLOSED = 4--><!--Device-TouchGestureAction-PINCH_CLOSED = 4-End-->
 
@@ -98,7 +110,9 @@ PINCH_OPENED = 5
 
 Multi-finger pinch opened.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchGestureAction-PINCH_OPENED = 5--><!--Device-TouchGestureAction-PINCH_OPENED = 5-End-->
 
@@ -114,7 +128,9 @@ GESTURE_END = 6
 
 Gesture ended.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchGestureAction-GESTURE_END = 6--><!--Device-TouchGestureAction-GESTURE_END = 6-End-->
 

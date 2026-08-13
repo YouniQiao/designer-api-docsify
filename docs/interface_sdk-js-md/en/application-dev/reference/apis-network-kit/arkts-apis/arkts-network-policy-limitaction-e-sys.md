@@ -6,6 +6,8 @@ The action when quota policy hit the limit.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-policy-export enum LimitAction--><!--Device-policy-export enum LimitAction-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -23,6 +25,8 @@ Default action, do nothing.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-LimitAction-LIMIT_ACTION_NONE = -1--><!--Device-LimitAction-LIMIT_ACTION_NONE = -1-End-->
 
@@ -42,6 +46,8 @@ When the quota policy reaches the limit, the system prohibits users from accessi
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-LimitAction-LIMIT_ACTION_ACCESS_DISABLED = 0--><!--Device-LimitAction-LIMIT_ACTION_ACCESS_DISABLED = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -59,6 +65,8 @@ When the quota policy reaches the upper limit, the system notifies the user.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-LimitAction-LIMIT_ACTION_ALERT_ONLY = 1--><!--Device-LimitAction-LIMIT_ACTION_ALERT_ONLY = 1-End-->
 

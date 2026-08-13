@@ -2,7 +2,9 @@
 
 备份恢复扩展能力。应用可通过该类实现自定义备份、恢复、进度上报和安全退出逻辑。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
 
@@ -16,7 +18,9 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 
 在应用备份阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,7 +50,9 @@ getBackupInfo(): string
 
 在调用方查询应用数据时执行，由应用返回自定义备份信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,7 +76,9 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 
 在应用恢复阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

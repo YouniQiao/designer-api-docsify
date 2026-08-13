@@ -2,7 +2,9 @@
 
 NDEF records definition, see NFCForum-TS-NDEF_1.0.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-tag-export interface NdefRecord--><!--Device-tag-export interface NdefRecord-End-->
 
@@ -24,9 +26,11 @@ id of NdefRecord
 
 **Type:** number[]
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NdefRecord-id: int[]--><!--Device-NdefRecord-id: int[]-End-->
 
@@ -42,9 +46,11 @@ payload of NdefRecord
 
 **Type:** number[]
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NdefRecord-payload: int[]--><!--Device-NdefRecord-payload: int[]-End-->
 
@@ -60,9 +66,11 @@ RTD type of NdefRecord
 
 **Type:** number[]
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NdefRecord-rtdType: int[]--><!--Device-NdefRecord-rtdType: int[]-End-->
 
@@ -78,9 +86,11 @@ tnf of NdefRecord
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NdefRecord-tnf: int--><!--Device-NdefRecord-tnf: int-End-->
 

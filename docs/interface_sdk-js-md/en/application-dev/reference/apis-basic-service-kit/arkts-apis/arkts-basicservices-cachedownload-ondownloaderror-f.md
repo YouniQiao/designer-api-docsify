@@ -16,7 +16,9 @@ Subscribes to the pre-download error events. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void--><!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void-End-->
 
@@ -27,7 +29,7 @@ Subscribes to the pre-download error events. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL to be registered, with a maximum of 8192 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | Yes | Callback used to return the error information about the pre- download. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | Yes | Callback used to return the error information about the pre- download. |
 
 ## Examples
 

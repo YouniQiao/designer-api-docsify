@@ -1,9 +1,10 @@
 # ErrorObserver
 
-定义异常监听，可以作为  
-[errorManager.on('error')](./../@ohos.app.ability.errorManager:errorManager.on(type: 'error', observer: ErrorObserver))的入参监听当前应用发生的异常。
+定义异常监听，可以作为 [errorManager.on('error')](arkts-ability-errormanager-onerror-f.md#on_error) 的入参监听当前应用发生的异常。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export default class ErrorObserver--><!--Device-unnamed-export default class ErrorObserver-End-->
 
@@ -18,6 +19,8 @@ onException?(errObject: Error): void
 应用产生异常，上报js层时的回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +69,8 @@ onUnhandledException(errMsg: string): void
 应用产生未捕获的异常时的回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

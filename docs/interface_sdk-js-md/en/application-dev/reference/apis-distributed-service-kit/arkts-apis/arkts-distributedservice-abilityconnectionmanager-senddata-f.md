@@ -14,9 +14,11 @@ function sendData(sessionId: int, data: ArrayBuffer): Promise<void>
 
 Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +30,7 @@ Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams fro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the collaboration session. |
+| sessionId | int | Yes | ID of the collaboration session. |
 | data | ArrayBuffer | Yes | Byte stream information. |
 
 **Return value:**
@@ -41,7 +43,7 @@ Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams fro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 

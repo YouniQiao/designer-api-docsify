@@ -4,11 +4,13 @@
 
 **继承/实现关系：** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-export interface MeshResource extends SceneResource--><!--Device-unnamed-export interface MeshResource extends SceneResource-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface MeshResource--><!--Device-unnamed-export interface MeshResource-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

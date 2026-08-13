@@ -2,9 +2,11 @@
 
 Enumeration of fusion asset type
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum FusionAssetType--><!--Device-photoAccessHelper-enum FusionAssetType-End-->
 
@@ -18,9 +20,11 @@ COMPATIBLE_ASSET = 0
 
 Compatible asset
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-FusionAssetType-COMPATIBLE_ASSET = 0--><!--Device-FusionAssetType-COMPATIBLE_ASSET = 0-End-->
 

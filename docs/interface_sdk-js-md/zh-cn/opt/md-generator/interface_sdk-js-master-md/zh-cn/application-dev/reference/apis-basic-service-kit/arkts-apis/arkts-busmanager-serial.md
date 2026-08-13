@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace serial--><!--Device-unnamed-declare namespace serial-End-->
@@ -16,14 +18,14 @@
 
 | 名称 |
 | --- |
-| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) |
+| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getSerialPortList) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addportauthorization) |
+| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addPortAuthorization（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

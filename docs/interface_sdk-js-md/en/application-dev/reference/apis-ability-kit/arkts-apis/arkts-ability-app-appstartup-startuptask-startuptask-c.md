@@ -1,11 +1,12 @@
 # StartupTask
 
-The module provides capabilities related to startup tasks in  
-[AppStartup](../../../application-models/app-startup.md).
+The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md).
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
@@ -20,18 +21,20 @@ import { StartupTask } from '@kit.AbilityKit';
 ## init
 
 ```TypeScript
-init(context: AbilityStageContext): Promise<Any> | Promise<void>
+init(context: AbilityStageContext): Promise<Object | void>
 ```
 
-Initializes current startup task.A developer could override this function to init current task and return a result for other tasks.
+Called when all the dependent startup tasks are complete. You can initialize the startup task in this callback. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Any> | Promise<void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Any> | Promise<void>-End-->
+<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -39,29 +42,55 @@ Initializes current startup task.A developer could override this function to ini
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Indicates ability stage context. |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Context environment of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Any&gt; | The result of initialization. |
+| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
+
+## Examples
+
+```TypeScript
+import { StartupTask, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Sendable
+export default class StartupTask_001 extends StartupTask {
+  constructor() {
+    super();
+  }
+  async init(context: common.AbilityStageContext) {
+    hilog.info(0x0000, 'testTag', 'StartupTask_001 init.');
+    // ...
+    
+    return "StartupTask_001";
+  }
+
+  onDependencyCompleted(dependency: string, result: Object): void {
+    // ...
+  }
+}
+```
 
 ## onDependencyCompleted
 
 ```TypeScript
-onDependencyCompleted(dependency: string, result: Any): void
+onDependencyCompleted?(dependency: string, result: Object): void
 ```
 
-Called when specific dependent task complete.
+Called when the dependent startup task is complete.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-StartupTask-onDependencyCompleted(dependency: string, result: Any): void--><!--Device-StartupTask-onDependencyCompleted(dependency: string, result: Any): void-End-->
+<!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void--><!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -69,6 +98,30 @@ Called when specific dependent task complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dependency | string | Yes | Indicates name of specific dependent startup task. |
-| result | Any | Yes | Indicates result of specific dependent startup task. |
+| dependency | string | Yes | Name of the dependent startup task. |
+| result | Object | Yes | Execution result of [init](#init) of the dependent startup task. |
+
+## Examples
+
+```TypeScript
+import { StartupTask, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Sendable
+export default class StartupTask_001 extends StartupTask {
+  constructor() {
+    super();
+  }
+
+  async init(context: common.AbilityStageContext) {
+    // ...
+  }
+
+  onDependencyCompleted(dependency: string, result: Object): void {
+    hilog.info(0x0000, 'testTag', 'StartupTask_001 onDependencyCompleted, dependency: %{public}s, result: %{public}s',
+      dependency, JSON.stringify(result));
+    // ...
+  }
+}
+```
 

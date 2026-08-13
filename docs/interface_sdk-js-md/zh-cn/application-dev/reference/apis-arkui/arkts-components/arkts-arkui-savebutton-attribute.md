@@ -1,14 +1,16 @@
 # SaveButton属性/事件
 
-不支持通用属性，除了继承[安全控件通用属性](./security_component)，还支持以下属性。不支持通用事件，仅支持以下事件。
+不支持通用属性，除了继承安全控件通用属性，还支持以下属性。 不支持通用事件，仅支持以下事件。
 
-**继承/实现关系：** SaveButtonAttribute extends [SecurityComponentMethod<SaveButtonAttribute>](SecurityComponentMethod<SaveButtonAttribute>)
+**继承/实现关系：** SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>--><!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class SaveButtonAttribute--><!--Device-unnamed-declare class SaveButtonAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ iconBorderRadius(radius: Dimension | BorderRadiuses)
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -52,6 +56,8 @@ iconSize(size: Dimension | SizeOptions)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -64,7 +70,7 @@ iconSize(size: Dimension | SizeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | Dimension \| SizeOptions | 是 | 图标尺寸，支持像素单位（vp、px等）。 &lt;br&gt;不支持设置百分比字符串。若设置Dimension类型入参的百分比字符串，则图标尺寸显示为默认值； 若设置SizeOptions类型入参的width或height属性为百分比字符串，则图标尺寸显示为0vp。&lt;br/&gt;对于保存控件提供的系统图标：&lt;br/&gt;- 使用Dimension类型入参时，宽 、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，若宽、高设定值不一致，则宽、高相等取两者较小值；若仅设定其中一个值，则取该值作为宽、高值。系统提供图标采用此规则是为保证图标的正方形显示和视觉一致 性。&lt;br/&gt;对于自定义图标：&lt;br/&gt;- 使用Dimension类型入参时，宽、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，建议同时设定宽和高，此时按照指定宽、高生效；若仅设定其中一个值，则宽 高均显示为该设定值。自定义图标允许灵活设定尺寸以适应不同图片比例。&lt;br/&gt;- 当设定的宽高与自定义图标的宽高比例不一致时，图片按[ImageFit.Cover](ImageFit)的方式填充显示区域。 |
+| size | Dimension \| SizeOptions | 是 | 图标尺寸，支持像素单位（vp、px等）。 &lt;br&gt;不支持设置百分比字符串。若设置Dimension类型入参的百分比字符串，则图标尺寸显示为默认值； 若设置SizeOptions类型入参的width或height属性为百分比字符串，则图标尺寸显示为0vp。&lt;br/&gt;对于保存控件提供的系统图标：&lt;br/&gt;- 使用Dimension类型入参时，宽 、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，若宽、高设定值不一致，则宽、高相等取两者较小值；若仅设定其中一个值，则取该值作为宽、高值。系统提供图标采用此规则是为保证图标的正方形显示和视觉一致 性。&lt;br/&gt;对于自定义图标：&lt;br/&gt;- 使用Dimension类型入参时，宽、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，建议同时设定宽和高，此时按照指定宽、高生效；若仅设定其中一个值，则宽 高均显示为该设定值。自定义图标允许灵活设定尺寸以适应不同图片比例。&lt;br/&gt;- 当设定的宽高与自定义图标的宽高比例不一致时，图片按ImageFit.Cover的方式填充显示区域。 |
 
 ## onClick
 
@@ -72,11 +78,13 @@ iconSize(size: Dimension | SizeOptions)
 onClick(event: SaveButtonCallback)
 ```
 
-点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
+点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](../../../reference/apis-arkui/arkui -ts/ts-security-components-savebutton.md#savebutton-1)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,6 +112,8 @@ setIcon(icon: Resource)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -118,7 +128,7 @@ setIcon(icon: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | Resource | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。 &lt;br&gt;可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image](./image)。当资源为非图片资源或不支持的格式时，图标显示为空白。&lt;br/&gt;从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。&lt;br/&gt;若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
+| icon | Resource | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。 &lt;br&gt;可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见Image。当资源为非图片资源或不支持的格式时，图标显示为空白。&lt;br/&gt;从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。&lt;br/&gt;若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
 
 ## setText
 
@@ -131,6 +141,8 @@ setText(text: string | Resource)
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -160,6 +172,8 @@ stateEffect(enabled: boolean)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -182,14 +196,13 @@ stateEffect(enabled: boolean)
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-设置保存控件Symbol图标粗细。
-
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的粗细不会生效。
+设置保存控件Symbol图标粗细。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的粗细不会生效。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -205,7 +218,7 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | 是 | 设置保存控件Symbol图标粗细。 &lt;br&gt;支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。&lt;br/&gt;支持string类型：可传入number类型的数字字符串（如"400"），或[FontWeight](FontWeight)的枚举值的小写字符串（如"normal"）。&lt;br/&gt;默认值：FontWeight.Normal（对应数值400）。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
+| fontWeight | number \| FontWeight \| string \| Resource | 是 | 设置保存控件Symbol图标粗细。 &lt;br&gt;支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。&lt;br/&gt;支持string类型：可传入number类型的数字字符串（如"400"），或FontWeight的枚举值的小写字符串（如"normal"）。&lt;br/&gt;默认值：FontWeight.Normal（对应数值400）。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
 
 ## symbolIconColor
 
@@ -213,15 +226,13 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-设置保存控件Symbol图标颜色。
-
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的颜色不会生效。  
-- 建议与[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy)配合使用，以实现不同的渲染效果。
+设置保存控件Symbol图标颜色。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的颜色不会生效。 - 建议与[symbolRenderingStrategy](#symbolRenderingStrategy)配合使用，以实现不同的渲染效果。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -237,7 +248,7 @@ symbolIconColor(color: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | 是 | 设置保存控件Symbol图标颜色。适用于Symbol图标需要与业务视觉风格保持一致的场景。 &lt;br&gt;默认值：随[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy)不同而变化。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
+| color | Array&lt;ResourceColor&gt; | 是 | 设置保存控件Symbol图标颜色。适用于Symbol图标需要与业务视觉风格保持一致的场景。 &lt;br&gt;默认值：随[symbolRenderingStrategy](#symbolRenderingStrategy)不同而变化。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
 
 ## symbolRenderingStrategy
 
@@ -245,15 +256,13 @@ symbolIconColor(color: Array<ResourceColor>)
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-设置保存控件Symbol图标渲染策略。
-
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的渲染策略不会生效。  
-- 与[symbolIconColor](SaveButtonAttribute#symbolIconColor)配合使用时，渲染策略会影响颜色数组的作用方式。
+设置保存控件Symbol图标渲染策略。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的渲染策略不会生效。 - 与[symbolIconColor](#symbolIconColor)配合使用时，渲染策略会影响颜色数组的作用方式。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -282,6 +291,8 @@ userCancelEvent(enabled: boolean)
 **起始版本：** 21
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

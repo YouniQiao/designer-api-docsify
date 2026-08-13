@@ -2,11 +2,13 @@
 
 定义懒加载列布局属性。
 
-**继承/实现关系：** LazyColumnLayoutAttribute extends [CommonMethod<LazyColumnLayoutAttribute>](CommonMethod<LazyColumnLayoutAttribute>)
+**继承/实现关系：** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class LazyColumnLayoutAttribute--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 设置行内容的水平对齐方式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,6 +54,8 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -79,6 +85,8 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 设置懒加载列布局的header。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +118,8 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -140,6 +150,8 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -169,6 +181,8 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 设置header和footer吸顶吸底样式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

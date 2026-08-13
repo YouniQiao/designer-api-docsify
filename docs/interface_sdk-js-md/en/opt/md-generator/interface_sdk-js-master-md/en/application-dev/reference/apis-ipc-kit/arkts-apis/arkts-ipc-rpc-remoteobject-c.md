@@ -4,9 +4,11 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 
 **Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#IRemoteObject)
 
-**Since:** 7
+**Since:** 23
 
-<!--Device-rpc-class RemoteObject extends IRemoteObject--><!--Device-rpc-class RemoteObject extends IRemoteObject-End-->
+**Deprecated since:** -1
+
+<!--Device-rpc-class RemoteObject--><!--Device-rpc-class RemoteObject-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -28,7 +30,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [modifyLocalInterface](modifyLocalInterface(localInterface:)
+**Substitutes:** [modifyLocalInterface](#modifyLocalInterface)(localInterface: IRemoteBroker, descriptor: string)
 
 <!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
@@ -77,7 +79,9 @@ constructor(descriptor: string)
 
 A constructor used to create a **RemoteObject** object.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-constructor(descriptor: string)--><!--Device-RemoteObject-constructor(descriptor: string)-End-->
 
@@ -109,7 +113,9 @@ getCallingPid(): number
 
 Obtains the PID of the remote process.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getCallingPid(): int--><!--Device-RemoteObject-getCallingPid(): int-End-->
 
@@ -153,7 +159,9 @@ getCallingUid(): number
 
 Obtains the UID of the remote process.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getCallingUid(): int--><!--Device-RemoteObject-getCallingUid(): int-End-->
 
@@ -197,7 +205,9 @@ getDescriptor(): string
 
 Obtains the interface descriptor of this object. The interface descriptor is a string.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getDescriptor(): string--><!--Device-RemoteObject-getDescriptor(): string-End-->
 
@@ -213,7 +223,7 @@ Obtains the interface descriptor of this object. The interface descriptor is a s
 
 | Error Code ID |
 | --- |
-| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
 
 ## Examples
 
@@ -301,7 +311,9 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 Obtains the string of the interface descriptor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -323,7 +335,7 @@ Obtains the string of the interface descriptor.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -360,7 +372,9 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 Binds an interface descriptor to an **IRemoteBroker** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
@@ -377,7 +391,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -423,17 +437,11 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or  asynchronously and returns the result in this API.
+Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API. > **NOTE：**> > - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and > asynchronous message processing. > > - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only > **onRemoteMessageRequest()** takes effect.
 
-> **NOTE：**
-> 
-> - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and
-> asynchronous message processing.
-> 
-> - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
-> **onRemoteMessageRequest()** takes effect.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -552,16 +560,11 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this  API. The IPC context can be obtained from the input parameter **callingInfo**.
-
-> **NOTE：**
-> 
-> You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
-> implement synchronous and asynchronous message processing.
-> If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
-> **onRemoteMessageRequest()** takes effect.
+Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**. > **NOTE：**> > You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to > implement synchronous and asynchronous message processing. > If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only > **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>--><!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>-End-->
 
@@ -676,13 +679,13 @@ class TestRemoteObject extends rpc.RemoteObject {
 onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Called to return a response to **sendRequest()**. The server processes the request and returns a response in this  function.
+Called to return a response to **sendRequest()**. The server processes the request and returns a response in this function.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [onRemoteMessageRequest](onRemoteMessageRequest(code:)
+**Substitutes:** [onRemoteMessageRequest](#onRemoteMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -737,7 +740,7 @@ Checks whether the remote object corresponding to the specified interface token 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLocalInterface](rpc.IRemoteObject#getLocalInterface(descriptor:)
+**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getLocalInterface)(descriptor: string)
 
 <!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -790,10 +793,11 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
- **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
@@ -818,7 +822,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -878,10 +882,11 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a callback will be called immediately, and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
- **options**, a callback will be invoked when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
 
@@ -901,7 +906,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## sendRequest
 
@@ -909,13 +914,13 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 7
 
 **Deprecated since:** 8
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -983,13 +988,13 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -1068,13 +1073,13 @@ sendRequest(
     ): void
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a callback will be called immediately, and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 

@@ -1,10 +1,12 @@
 # Type
 
-The Type represents four different encoding formats for base64
+Enumerates the Base64 encoding formats.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-util-enum Type--><!--Device-util-enum Type-End-->
 
@@ -13,64 +15,80 @@ The Type represents four different encoding formats for base64
 ## BASIC
 
 ```TypeScript
-BASIC
+BASIC = 0
 ```
 
-The value indicates that the encoding format of base64 is BASIC
+Basic format. This API can be used in atomic services since API version 11.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-Type-BASIC--><!--Device-Type-BASIC-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Type-BASIC = 0--><!--Device-Type-BASIC = 0-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## MIME
 
 ```TypeScript
-MIME
+MIME = 1
 ```
 
-The value indicates that the encoding format of base64 is MIME
+MIME format. This API can be used in atomic services since API version 11.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-Type-MIME--><!--Device-Type-MIME-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Type-MIME = 1--><!--Device-Type-MIME = 1-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## BASIC_URL_SAFE
 
 ```TypeScript
-BASIC_URL_SAFE
+BASIC_URL_SAFE = 2
 ```
 
-The value indicates that the encoding format of base64 is BASIC_URL_SAFE
+BASIC_URL_SAFE format. This value is supported since API version 12. This API can be used in atomic services since API version 12.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-Type-BASIC_URL_SAFE--><!--Device-Type-BASIC_URL_SAFE-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Type-BASIC_URL_SAFE = 2--><!--Device-Type-BASIC_URL_SAFE = 2-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## MIME_URL_SAFE
 
 ```TypeScript
-MIME_URL_SAFE
+MIME_URL_SAFE = 3
 ```
 
-The value indicates that the encoding format of base64 is MIME_URL_SAFE
+MIME_URL_SAFE format. This value is supported since API version 12. This API can be used in atomic services since API version 12.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-Type-MIME_URL_SAFE--><!--Device-Type-MIME_URL_SAFE-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Type-MIME_URL_SAFE = 3--><!--Device-Type-MIME_URL_SAFE = 3-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

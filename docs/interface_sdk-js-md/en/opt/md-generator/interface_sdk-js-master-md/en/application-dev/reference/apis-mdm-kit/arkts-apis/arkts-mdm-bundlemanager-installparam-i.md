@@ -4,6 +4,8 @@ Defines the parameters for application installation.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-bundleManager-interface InstallParam--><!--Device-bundleManager-interface InstallParam-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -20,13 +22,13 @@ import { bundleManager } from '@kit.MDMKit';
 installFlag?: number
 ```
 
-Installation flag.
-
-**0** (default value) indicates fresh installation of the application, **1** indicates overlay installation of the application, and **2** indicates installation-free.
+Installation flag. **0** (default value) indicates fresh installation of the application, **1** indicates overlay installation of the application, and **2** indicates installation-free.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +44,11 @@ parameters?: Record<string, string>
 
 Extended parameters. The default value is null. The key can be **ohos.bms.param.enterpriseForAllUser**. If the corresponding value is set **true**, the application is installed for all users.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,6 +67,8 @@ User ID, which must be greater than or equal to 0. The default value is the user
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

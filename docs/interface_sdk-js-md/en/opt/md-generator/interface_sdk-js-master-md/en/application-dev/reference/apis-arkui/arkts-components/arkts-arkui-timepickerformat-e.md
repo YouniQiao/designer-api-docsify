@@ -4,6 +4,8 @@ Enumerates time display formats of the time picker.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum TimePickerFormat--><!--Device-unnamed-declare enum TimePickerFormat-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ HOUR_MINUTE
 Time format displaying hours and minutes.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ HOUR_MINUTE_SECOND
 Time format displaying hours, minutes, and seconds.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

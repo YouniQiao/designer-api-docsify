@@ -2,7 +2,9 @@
 
 The module provides the kiosk status information, including whether the system is in kiosk mode and the information about the application in kiosk mode.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface KioskStatus--><!--Device-unnamed-export interface KioskStatus-End-->
 
@@ -18,7 +20,9 @@ Whether the system is in kiosk mode. **true** if in kiosk mode, **false** otherw
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,9 @@ Bundle name of the application in kiosk mode.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +60,9 @@ UID of the application in kiosk mode.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

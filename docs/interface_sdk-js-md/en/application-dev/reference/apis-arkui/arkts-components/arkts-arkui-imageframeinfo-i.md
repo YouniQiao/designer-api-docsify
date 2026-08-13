@@ -6,6 +6,8 @@ Image frame information set.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ImageFrameInfo--><!--Device-unnamed-interface ImageFrameInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ Image frame information set.
 duration?: number
 ```
 
-Playback duration of each image frame, in milliseconds.
-
-Default value: **0**
-
-Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a long time, affecting normal playback.
+Playback duration of each image frame, in milliseconds. Default value: **0** Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a long time, affecting normal playback.
 
 **Type:** number
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,18 +40,15 @@ Negative numbers are not supported. Setting negative values will cause the image
 height?: number | string
 ```
 
-Image height. When the value is a string, it can represent a numeric value with or without units, for example,  
-**"2"** or **"2px"**.
-
-Default value: **0**
-
-Unit: vp
+Image height. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
 
 **Type:** number \| string
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,17 +64,15 @@ Unit: vp
 left?: number | string
 ```
 
-Horizontal coordinate of the image relative to the upper left corner of the component. When the value is a string,it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
-
-Default value: **0**
-
-Unit: vp
+Horizontal coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
 
 **Type:** number \| string
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,15 +88,15 @@ Unit: vp
 src: string | Resource | PixelMap
 ```
 
-Image path. The image format can be .jpg, .jpeg, .svg, .png, .bmp, .webp, .ico, or .heif. The  
-[Resource](Resource) type is supported since API version 9, and the  
-[PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap) type is supported since API version12.
+Image path. The image format can be .jpg, .jpeg, .svg, .png, .bmp, .webp, .ico, or .heif. The Resource type is supported since API version 9, and the [PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap) type is supported since API version 12.
 
 **Type:** string \| Resource \| PixelMap
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -117,17 +112,15 @@ Image path. The image format can be .jpg, .jpeg, .svg, .png, .bmp, .webp, .ico, 
 top?: number | string
 ```
 
-Vertical coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
-
-Default value: **0**
-
-Unit: vp
+Vertical coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
 
 **Type:** number \| string
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -143,18 +136,15 @@ Unit: vp
 width?: number | string
 ```
 
-Image width. When the value is a string, it can represent a numeric value with or without units, for example,  
-**"2"** or **"2px"**.
-
-Default value: **0**
-
-Unit: vp
+Image width. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
 
 **Type:** number \| string
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

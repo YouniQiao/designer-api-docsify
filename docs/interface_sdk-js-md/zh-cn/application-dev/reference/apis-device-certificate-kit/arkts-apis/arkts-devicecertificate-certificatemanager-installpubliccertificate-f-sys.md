@@ -12,6 +12,8 @@ function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : P
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -39,13 +41,13 @@ function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter verification failed. Possible causes: &lt;br&gt;the keystore parameter is empty or exceeds the maximum length. |
-| [17500008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500008-密码错误) | Indicates that the password is error. |
-| [17500003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500003-证书或凭据无效) | Indicates that the certificate is in an invalid format. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [17500001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
-| [17500004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500004-证书或凭据数量达到上限) | Indicates that the number of certificates reaches the maximum allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. Possible causes: &lt;br&gt;the keystore parameter is empty or exceeds the maximum length. |
+| [17500008](../errorcode-certManager.md#17500008-密码错误) | Indicates that the password is error. |
+| [17500003](../errorcode-certManager.md#17500003-证书或凭据无效) | Indicates that the certificate is in an invalid format. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) | Indicates that the number of certificates reaches the maximum allowed. |
 
 ## 示例
 

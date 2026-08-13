@@ -8,7 +8,9 @@ The query compilation event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -21,7 +23,7 @@ The query compilation event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | compilationId | string | Yes | compilation id |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
+| pageIndex | int | Yes | page index |
 
 **Return value:**
 

@@ -1,16 +1,20 @@
-# ManualExposure
+# ManualExposure (System API)
 
-ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#ManualExposureQuery)Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#ManualExposureQuery-(System-API)) Provides APIs to obtain and set the exposure duration.
 
-**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#ManualExposureQuery)
+**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#ManualExposureQuery-(System-API))
 
-**Since:** 24
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface ManualExposure extends ManualExposureQuery--><!--Device-camera-interface ManualExposure extends ManualExposureQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface ManualExposure--><!--Device-camera-interface ManualExposure-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -18,63 +22,8 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposureq
 import { camera } from '@kit.CameraKit';
 ```
 
-## getExposure
-
-ArkTS-Dyn:
-```TypeScript
-getExposure(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getExposure(): int
-```
-
-Obtains the manual exposure duration in use.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
-<!--Device-ManualExposure-getExposure(): int--><!--Device-ManualExposure-getExposure(): int-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The current exposure value, in units of ms |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-## Examples
-
-```TypeScript
-function getExposure(nightPhotoSession: camera.NightPhotoSession): number | undefined {
-  let exposureRange: Array<number> = nightPhotoSession.getSupportedExposureRange();
-  if (exposureRange === undefined || exposureRange.length <= 0) {
-    return undefined;
-  }
-  let exposure: number = nightPhotoSession.getExposure();
-  return exposure;
-}
-```
-
 ## getExposureDuration
 
-ArkTS-Dyn:
-```TypeScript
-getExposureDuration(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getExposureDuration(): int
 ```
@@ -83,7 +32,9 @@ Gets current exposure value.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -95,60 +46,17 @@ Gets current exposure value.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The current exposure value, in units of microsecond |
+| int | The current exposure value, in units of microsecond |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, session or inputdevice maybe abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-
-## setExposure
-
-ArkTS-Dyn:
-```TypeScript
-setExposure(exposure: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setExposure(exposure: int): void
-```
-
-Sets the manual exposure duration. Before using this API, call  
-[getSupportedExposureRange](arkts-camera-camera-manualexposurequery-i.md#getSupportedExposureRange) to obtain the supported manual exposure durations, in ms.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
-<!--Device-ManualExposure-setExposure(exposure: int): void--><!--Device-ManualExposure-setExposure(exposure: int): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| exposure | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Manual exposure duration, which must be one of the supported durations obtained by running [getSupportedExposureRange](arkts-camera-camera-manualexposurequery-i.md#getSupportedExposureRange). |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, session or inputdevice maybe abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setExposureDuration
 
-ArkTS-Dyn:
-```TypeScript
-setExposureDuration(exposureDuration: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setExposureDuration(exposureDuration: int): void
 ```
@@ -157,7 +65,9 @@ Sets Exposure duration value, units: microseconds.This control is only effective
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -169,11 +79,11 @@ Sets Exposure duration value, units: microseconds.This control is only effective
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureDuration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Exposure duration value |
+| exposureDuration | int | Yes | Exposure duration value |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

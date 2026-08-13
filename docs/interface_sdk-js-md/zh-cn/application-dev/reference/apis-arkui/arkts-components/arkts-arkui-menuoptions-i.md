@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare interface MenuOptions extends ContextMenuOptions--><!--Device-unnamed-declare interface MenuOptions extends ContextMenuOptions-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface MenuOptions--><!--Device-unnamed-declare interface MenuOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +20,7 @@
 showInSubWindow?: boolean
 ```
 
-是否在子窗口显示菜单。
-
-true：在子窗口显示菜单；false：不在子窗显示菜单。
-
-默认值：2in1设备上为true，其他设备为false。
-
-**说明：**
-
-仅对2in1设备生效。
+是否在子窗口显示菜单。 true：在子窗口显示菜单；false：不在子窗显示菜单。 默认值：2in1设备上为true，其他设备为false。 **说明：** 仅对2in1设备生效。
 
 **类型：** boolean
 
@@ -35,6 +29,8 @@ true：在子窗口显示菜单；false：不在子窗显示菜单。
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,17 +46,15 @@ true：在子窗口显示菜单；false：不在子窗显示菜单。
 title?: ResourceStr
 ```
 
-菜单标题。
-
-**说明：**
-
-仅在content设置为Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt; 时生效。
+菜单标题。 **说明：** 仅在content设置为Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt; 时生效。
 
 **类型：** ResourceStr
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

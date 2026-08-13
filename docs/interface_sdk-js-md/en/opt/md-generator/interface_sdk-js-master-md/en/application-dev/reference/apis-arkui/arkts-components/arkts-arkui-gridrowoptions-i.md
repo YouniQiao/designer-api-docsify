@@ -4,6 +4,8 @@ Defines layout options of the **GridRow** container.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface GridRowOptions--><!--Device-unnamed-declare interface GridRowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,19 +16,13 @@ Defines layout options of the **GridRow** container.
 breakpoints?: BreakPoints
 ```
 
-Array of breakpoint values and the corresponding reference based on the application window or container size.
-
-Default value:
-
-```{ value: ["320vp", "600vp", "840vp"], reference: BreakpointsReference.WindowSize}```
-
-Invalid values are treated as the default value.
-
-Unit: vp.
+Array of breakpoint values and the corresponding reference based on the application window or container size. Default value: ``` { value: ["320vp", "600vp", "840vp"], reference: BreakpointsReference.WindowSize } ``` Invalid values are treated as the default value. Unit: vp.
 
 **Type:** [BreakPoints](arkts-arkui-breakpoints-i.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,18 +38,13 @@ Unit: vp.
 columns?: number | GridRowColumnOption
 ```
 
-Number of columns in the grid layout.
-
-The value is an integer greater than 0.
-
-- Before API version 20: The default value is 12.  
-- API version 20 or later: The default value is { xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }.
-
-Invalid values are treated as the default value.
+Number of columns in the grid layout. The value is an integer greater than 0. - Before API version 20: The default value is 12. - API version 20 or later: The default value is { xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }. Invalid values are treated as the default value.
 
 **Type:** number \| [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -69,15 +60,13 @@ Invalid values are treated as the default value.
 direction?: GridRowDirection
 ```
 
-Arrangement direction of the grid layout.
-
-Default value: **GridRowDirection.Row**
-
-Invalid values are treated as the default value.
+Arrangement direction of the grid layout. Default value: **GridRowDirection.Row** Invalid values are treated as the default value.
 
 **Type:** [GridRowDirection](arkts-arkui-gridrowdirection-e.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,17 +82,13 @@ Invalid values are treated as the default value.
 gutter?: Length | GutterOption
 ```
 
-Gutter of the grid layout.
-
-Default value: **0**
-
-Invalid values are treated as the default value.
-
-Unit: vp.
+Gutter of the grid layout. Default value: **0** Invalid values are treated as the default value. Unit: vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GutterOption](arkts-arkui-gutteroption-i.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

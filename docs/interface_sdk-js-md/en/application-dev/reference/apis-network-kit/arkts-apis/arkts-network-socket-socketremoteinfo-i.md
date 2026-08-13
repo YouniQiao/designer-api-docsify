@@ -6,6 +6,8 @@ Defines information about the socket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface SocketRemoteInfo--><!--Device-socket-export interface SocketRemoteInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,6 +32,8 @@ Bound IP address.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-SocketRemoteInfo-address: string--><!--Device-SocketRemoteInfo-address: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -47,6 +51,8 @@ Network protocol type. The options are as follows: IPv4, IPv6.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'--><!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'-End-->
 
@@ -66,6 +72,8 @@ Port number. The value ranges from 0 to 65535.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-SocketRemoteInfo-port: number--><!--Device-SocketRemoteInfo-port: number-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -83,6 +91,8 @@ Length of the server response message, in bytes.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-SocketRemoteInfo-size: number--><!--Device-SocketRemoteInfo-size: number-End-->
 

@@ -1,15 +1,10 @@
 # @ohos.multimedia.audio
 
-The module provides basic audio control capabilities, including volume adjustment, device management, data capture,and rendering.
+The module provides basic audio control capabilities, including volume adjustment, device management, data capture, and rendering. This module provides the following common audio-related functions: - [AudioManager](#@ohos.multimedia.audio): audio manager. - [AudioRenderer](#@ohos.multimedia.audio): audio renderer, used to play Pulse Code Modulation (PCM) audio data. - [AudioCapturer](#@ohos.multimedia.audio): audio capturer, used to record PCM audio data.
 
-This module provides the following common audio-related functions:
+**Since:** 23
 
-- [AudioManager](#audio): audio manager.  
-- [AudioRenderer](#audio): audio renderer, used to play Pulse Code Modulation (PCM) audio  
-data.  
-- [AudioCapturer](#audio): audio capturer, used to record PCM audio data.
-
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace audio--><!--Device-unnamed-declare namespace audio-End-->
 
@@ -28,23 +23,31 @@ import { audio } from '@kit.AudioKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer) |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer-1) |
-| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer-1) |
-| [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback) |
+| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createasrprocessingcontroller) |
-| [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md#createglobalaudioloopback) |
-| [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md#createmicinaudiocapturer) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer-1) |
+| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createAsrProcessingController-(System-API)) |
+| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createAsrProcessingController-(System-API)) |
+| [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md#createGlobalAudioLoopback-(System-API)) |
+| [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md#createMicInAudioCapturer-(System-API)) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer-(System-API)) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer-(System-API)) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer-(System-API)) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -246,13 +249,13 @@ import { audio } from '@kit.AudioKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DEFAULT_INTERRUPT_GROUP_ID](arkts-audio-audio-con.md#default_interrupt_group_id) |
-| [DEFAULT_VOLUME_GROUP_ID](arkts-audio-audio-con.md#default_volume_group_id) |
+| [DEFAULT_INTERRUPT_GROUP_ID](arkts-audio-audio-con.md#DEFAULT_INTERRUPT_GROUP_ID) |
+| [DEFAULT_VOLUME_GROUP_ID](arkts-audio-audio-con.md#DEFAULT_VOLUME_GROUP_ID) |
 
 <!--Del-->
 ### Constants（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [LOCAL_NETWORK_ID](arkts-audio-audio-con-sys.md#local_network_id) |
+| [LOCAL_NETWORK_ID](arkts-audio-audio-con-sys.md#LOCAL_NETWORK_ID) |
 <!--DelEnd-->

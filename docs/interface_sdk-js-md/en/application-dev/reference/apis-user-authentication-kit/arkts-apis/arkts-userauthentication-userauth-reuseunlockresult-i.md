@@ -1,22 +1,12 @@
 # ReuseUnlockResult
 
-Represents information about the authentication result reuse. This API is used to configure parameters related to authentication result reuse, including the reuse mode and validity period. By properly configuring authentication result reuse, you can ensure security while avoiding repeated authentication, improving user experience.
+Represents information about the authentication result reuse. This API is used to configure parameters related to authentication result reuse, including the reuse mode and validity period. By properly configuring authentication result reuse, you can ensure security while avoiding repeated authentication, improving user experience. > **NOTE：**> If the credential changes within the reuse duration after a successful identity authentication (including device > unlock authentication), the authentication result can still be reused and the actual **EnrolledState** is > returned in the authentication result. When the authentication credential used in the previous authentication has > been deleted when the authentication result is reused: > > - If the face or fingerprint credential is deleted, the authentication result can still be reused, but the values > of **credentialCount** and **credentialDigest** in the returned **EnrolledState** are both **0**. > > - If the screen lock password is deleted, the reuse will fail.
 
-> **NOTE：**
+**Since:** 23
 
-> If the credential changes within the reuse duration after a successful identity authentication (including device
-> unlock authentication), the authentication result can still be reused and the actual **EnrolledState** is
-> returned in the authentication result. When the authentication credential used in the previous authentication has
-> been deleted when the authentication result is reused:
-> 
-> - If the face or fingerprint credential is deleted, the authentication result can still be reused, but the values
-> of **credentialCount** and **credentialDigest** in the returned **EnrolledState** are both **0**.
-> 
-> - If the screen lock password is deleted, the reuse will fail.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-userAuth-interface ReuseUnlockResult--><!--Device-userAuth-interface ReuseUnlockResult-End-->
 
@@ -34,22 +24,17 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 reuseDuration: int
 ```
 
-Reuse duration of the authentication result, in milliseconds. The value must be greater than 0 and the maximum value is  
-[MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#MAX_ALLOWABLE_REUSE_DURATION)(300,000 milliseconds, that is, 5 minutes). You are advised to set a proper duration based on the service scenario:
+Reuse duration of the authentication result, in milliseconds. The value must be greater than 0 and the maximum value is [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#MAX_ALLOWABLE_REUSE_DURATION) (300,000 milliseconds, that is, 5 minutes). You are advised to set a proper duration based on the service scenario: - Advanced security scenarios (such as payment): A short duration (for example, 30 seconds to 1 minute) is recommended. - Medium security scenarios (such as application login): A medium duration (for example, 2 to 3 minutes) is recommended. - Low security scenarios (such as data query): The maximum duration can be used.
 
-- Advanced security scenarios (such as payment): A short duration (for example, 30 seconds to 1 minute) is  
-recommended.  
-- Medium security scenarios (such as application login): A medium duration (for example, 2 to 3 minutes) is  
-recommended.  
-- Low security scenarios (such as data query): The maximum duration can be used.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReuseUnlockResult-reuseDuration: int--><!--Device-ReuseUnlockResult-reuseDuration: int-End-->
 
@@ -61,24 +46,17 @@ recommended.
 reuseMode: ReuseMode
 ```
 
-Authentication result reuse mode. Select a proper reuse mode based on the security requirements of the service scenario:
-
-- **AUTH_TYPE_RELEVANT(1)**: Only the device unlock result that matches the authentication type is reused,  
-providing the highest security.  
-- **AUTH_TYPE_IRRELEVANT(2)**: Any type of device unlock result is reused, which is applicable to medium-security  
-scenarios.  
-- **CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT(3)**: Any authentication result that matches the authentication type is  
-reused, which is applicable to cross-application scenarios.  
-- **CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT(4)**: Any authentication result is reused, which provides the lowest  
-security but the best user experience.
+Authentication result reuse mode. Select a proper reuse mode based on the security requirements of the service scenario: - **AUTH_TYPE_RELEVANT(1)**: Only the device unlock result that matches the authentication type is reused, providing the highest security. - **AUTH_TYPE_IRRELEVANT(2)**: Any type of device unlock result is reused, which is applicable to medium-security scenarios. - **CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT(3)**: Any authentication result that matches the authentication type is reused, which is applicable to cross-application scenarios. - **CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT(4)**: Any authentication result is reused, which provides the lowest security but the best user experience.
 
 **Type:** [ReuseMode](arkts-userauthentication-userauth-reusemode-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReuseUnlockResult-reuseMode: ReuseMode--><!--Device-ReuseUnlockResult-reuseMode: ReuseMode-End-->
 

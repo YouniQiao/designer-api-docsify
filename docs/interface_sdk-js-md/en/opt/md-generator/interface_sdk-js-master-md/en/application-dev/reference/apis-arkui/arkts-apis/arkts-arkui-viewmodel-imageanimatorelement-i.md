@@ -4,6 +4,8 @@ Image animator element
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ImageAnimatorElement--><!--Device-unnamed-export interface ImageAnimatorElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -14,9 +16,11 @@ Image animator element
 getState(): "Playing" | "Paused" | "Stopped"
 ```
 
-Obtains the playback state. Available values are as follows:Playing Paused Stopped
+Obtains the playback state. Available values are as follows: Playing Paused Stopped
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -40,6 +44,8 @@ Pauses the frame animation playback of an image.
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ImageAnimatorElement-pause(): void--><!--Device-ImageAnimatorElement-pause(): void-End-->
@@ -55,6 +61,8 @@ resume(): void
 Resumes the frame animation playback of an image.
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -72,6 +80,8 @@ Starts to play the frame animation of an image. If this method is called again, 
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ImageAnimatorElement-start(): void--><!--Device-ImageAnimatorElement-start(): void-End-->
@@ -87,6 +97,8 @@ stop(): void
 Stops the frame animation playback of an image.
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

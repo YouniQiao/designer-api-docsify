@@ -2,9 +2,11 @@
 
 Parameters for configuring the location simulation function.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface LocationMockConfig--><!--Device-geoLocationManager-export interface LocationMockConfig-End-->
 
@@ -28,9 +30,11 @@ Mock location array.
 
 **Type:** Array&lt;Location&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocationMockConfig-locations: Array<Location>--><!--Device-LocationMockConfig-locations: Array<Location>-End-->
 
@@ -46,11 +50,13 @@ timeInterval: int
 
 Interval for reporting simulated locations.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocationMockConfig-timeInterval: int--><!--Device-LocationMockConfig-timeInterval: int-End-->
 

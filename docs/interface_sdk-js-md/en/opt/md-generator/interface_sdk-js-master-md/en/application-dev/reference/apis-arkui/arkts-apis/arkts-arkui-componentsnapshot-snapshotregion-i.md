@@ -4,6 +4,8 @@ Defines the rectangular region for capturing the component snapshot.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-componentSnapshot-interface SnapshotRegion--><!--Device-componentSnapshot-interface SnapshotRegion-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,15 +22,13 @@ import { componentSnapshot } from '@kit.ArkUI';
 bottom: number
 ```
 
-Y-coordinate of the lower right corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component height].
+Y-coordinate of the lower right corner of the rectangular region. Unit: px. Value range: [0, Component height].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,15 +44,13 @@ Value range: [0, Component height].
 left: number
 ```
 
-X-coordinate of the upper left corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component width].
+X-coordinate of the upper left corner of the rectangular region. Unit: px. Value range: [0, Component width].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,15 +66,13 @@ Value range: [0, Component width].
 right: number
 ```
 
-X-coordinate of the lower right corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component width].
+X-coordinate of the lower right corner of the rectangular region. Unit: px. Value range: [0, Component width].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,15 +88,13 @@ Value range: [0, Component width].
 top: number
 ```
 
-Y-coordinate of the upper left corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component height].
+Y-coordinate of the upper left corner of the rectangular region. Unit: px. Value range: [0, Component height].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

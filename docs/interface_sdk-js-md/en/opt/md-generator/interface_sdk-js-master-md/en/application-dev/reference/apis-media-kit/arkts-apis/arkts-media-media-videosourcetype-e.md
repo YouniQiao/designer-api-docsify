@@ -2,7 +2,9 @@
 
 Enumerates the video source types for video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-enum VideoSourceType--><!--Device-media-enum VideoSourceType-End-->
 
@@ -16,7 +18,9 @@ VIDEO_SOURCE_TYPE_SURFACE_YUV = 0
 
 The input surface carries raw data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_YUV = 0--><!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_YUV = 0-End-->
 
@@ -30,7 +34,9 @@ VIDEO_SOURCE_TYPE_SURFACE_ES = 1
 
 The input surface carries ES data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_ES = 1--><!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_ES = 1-End-->
 

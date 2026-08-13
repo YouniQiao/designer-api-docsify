@@ -10,6 +10,8 @@ function onDownloadSuccess(url: string, callback: Callback<void>): void
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-cacheDownload-function onDownloadSuccess(url: string, callback: Callback<void>): void--><!--Device-cacheDownload-function onDownloadSuccess(url: string, callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

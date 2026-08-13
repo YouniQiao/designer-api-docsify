@@ -4,6 +4,8 @@ Defines the offset property.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface Offset--><!--Device-componentUtils-interface Offset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { componentUtils } from '@kit.ArkUI';
 x: number
 ```
 
-X-coordinate.
-
-Unit: px
+X-coordinate. Unit: px
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Unit: px
 y: number
 ```
 
-Y-coordinate.
-
-Unit: px
+Y-coordinate. Unit: px
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

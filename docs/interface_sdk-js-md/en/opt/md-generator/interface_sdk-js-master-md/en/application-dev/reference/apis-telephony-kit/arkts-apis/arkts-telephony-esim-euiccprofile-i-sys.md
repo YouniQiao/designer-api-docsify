@@ -2,7 +2,9 @@
 
 Information about an embedded profile (subscription) on an eUICC.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface EuiccProfile--><!--Device-eSIM-export interface EuiccProfile-End-->
 
@@ -26,7 +28,9 @@ Optional access rules that specify which apps can manage this profile. Default p
 
 **Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-accessRules: Array<AccessRule>--><!--Device-EuiccProfile-accessRules: Array<AccessRule>-End-->
 
@@ -44,7 +48,9 @@ The iccid of the profile.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-iccid: string--><!--Device-EuiccProfile-iccid: string-End-->
 
@@ -62,7 +68,9 @@ An optional nickname for the profile.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-nickName: string--><!--Device-EuiccProfile-nickName: string-End-->
 
@@ -80,7 +88,9 @@ The operator Id of the profile.
 
 **Type:** [OperatorId](arkts-telephony-esim-operatorid-i-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-operatorId: OperatorId--><!--Device-EuiccProfile-operatorId: OperatorId-End-->
 
@@ -98,7 +108,9 @@ The policy rules of the profile.
 
 **Type:** [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-policyRules: PolicyRules--><!--Device-EuiccProfile-policyRules: PolicyRules-End-->
 
@@ -116,7 +128,9 @@ Profile class for the profile.
 
 **Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-profileClass: ProfileClass--><!--Device-EuiccProfile-profileClass: ProfileClass-End-->
 
@@ -134,7 +148,9 @@ The profile name.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-profileName: string--><!--Device-EuiccProfile-profileName: string-End-->
 
@@ -152,7 +168,9 @@ The service provider name for the profile.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-serviceProviderName: string--><!--Device-EuiccProfile-serviceProviderName: string-End-->
 
@@ -170,7 +188,9 @@ The profile state.
 
 **Type:** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EuiccProfile-state: ProfileState--><!--Device-EuiccProfile-state: ProfileState-End-->
 

@@ -2,7 +2,9 @@
 
 Enumerates the text badges.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-enum TextBadgeType--><!--Device-text-enum TextBadgeType-End-->
 
@@ -16,7 +18,9 @@ TEXT_BADGE_NONE = 0
 
 Disables the superscript and subscript.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -32,7 +36,9 @@ TEXT_SUPERSCRIPT = 1
 
 Enables the superscript.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -48,7 +54,9 @@ TEXT_SUBSCRIPT = 2
 
 Enables the subscript.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

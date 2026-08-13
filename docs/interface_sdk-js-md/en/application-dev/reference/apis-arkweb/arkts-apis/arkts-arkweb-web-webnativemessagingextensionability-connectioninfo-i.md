@@ -2,9 +2,11 @@
 
 Represents the information object of the web native messaging connection.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ConnectionInfo--><!--Device-unnamed-export interface ConnectionInfo-End-->
 
@@ -22,13 +24,15 @@ import { ConnectionInfo } from '@kit.ArkWeb';
 bundleName: string
 ```
 
-Application bundle name of the caller.
+App package name of the caller, used for identity identification and permission verification. It can be used to determine whether to allow the app to establish a connection or perform message interaction.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionInfo-bundleName: string--><!--Device-ConnectionInfo-bundleName: string-End-->
 
@@ -37,18 +41,20 @@ Application bundle name of the caller.
 ## connectionId
 
 ```TypeScript
-connectionId: int
+connectionId: number
 ```
 
-Connection ID.
+Unique identifier of the connection, used to distinguish and manage different Web native message connections. It can be used to locate a specific connection during logging, status tracking, or resource cleanup.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-<!--Device-ConnectionInfo-connectionId: int--><!--Device-ConnectionInfo-connectionId: int-End-->
+**Deprecated since:** -1
+
+<!--Device-ConnectionInfo-connectionId: number--><!--Device-ConnectionInfo-connectionId: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,13 +64,15 @@ Connection ID.
 extensionOrigin: string
 ```
 
-Original URL of the caller extension.
+Original URL of the caller extension, used for security control and origin identification. It can be used to determine the legitimacy of the extension or implement domain-based access policies.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionInfo-extensionOrigin: string--><!--Device-ConnectionInfo-extensionOrigin: string-End-->
 
@@ -73,36 +81,40 @@ Original URL of the caller extension.
 ## fdRead
 
 ```TypeScript
-fdRead: int
+fdRead: number
 ```
 
-Pipe file descriptor used to read data.
+Pipe file descriptor used for reading data. Messages can be read from the Web side through this file descriptor.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-<!--Device-ConnectionInfo-fdRead: int--><!--Device-ConnectionInfo-fdRead: int-End-->
+**Deprecated since:** -1
+
+<!--Device-ConnectionInfo-fdRead: number--><!--Device-ConnectionInfo-fdRead: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## fdWrite
 
 ```TypeScript
-fdWrite: int
+fdWrite: number
 ```
 
-Pipe file descriptor used to write data.
+Pipe file descriptor used for writing data. Messages can be sent to the Web side through this file descriptor.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-<!--Device-ConnectionInfo-fdWrite: int--><!--Device-ConnectionInfo-fdWrite: int-End-->
+**Deprecated since:** -1
+
+<!--Device-ConnectionInfo-fdWrite: number--><!--Device-ConnectionInfo-fdWrite: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

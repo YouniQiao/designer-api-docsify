@@ -6,7 +6,9 @@ OIS (Optical Image Stabilization) interface.
 
 **起始版本：** 24
 
-<!--Device-camera-interface OIS extends OISQuery--><!--Device-camera-interface OIS extends OISQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface OIS--><!--Device-camera-interface OIS-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -19,6 +21,8 @@ setOISMode(mode: OISMode): void
 Sets the OIS mode.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +42,8 @@ Sets the OIS mode.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## setOISModeCustom
 
@@ -50,6 +54,8 @@ setOISModeCustom(pitch: number, yaw: number): void
 Sets custom OIS bias values for each axis.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,5 +76,5 @@ Sets custom OIS bias values for each axis.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |

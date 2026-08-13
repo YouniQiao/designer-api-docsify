@@ -1,10 +1,10 @@
 # @ohos.util.stream
 
-The stream module provides APIs to process basic types of streams. With streams, data is read or written by chunk,instead of being loaded to the memory at a time.There are four fundamental stream types: writable streams ([Writable](arkts-arkts-stream-writable-c.md#Writable)), readable streams (  
-[Readable](arkts-arkts-stream-readableoptions-i.md#ReadableOptions)), duplex streams ([Duplex](arkts-arkts-stream-duplex-c.md#Duplex)), and transform streams (  
-[Transform](arkts-arkts-stream-transform-c.md#Transform)).
+The stream module provides APIs to process basic types of streams. With streams, data is read or written by chunk, instead of being loaded to the memory at a time. There are four fundamental stream types: writable streams ([Writable](arkts-arkts-stream-writable-c.md#Writable)), readable streams ( [Readable](arkts-arkts-stream-readableoptions-i.md#ReadableOptions)), duplex streams ([Duplex](arkts-arkts-stream-duplex-c.md#Duplex)), and transform streams ( [Transform](arkts-arkts-stream-transform-c.md#Transform)).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace stream--><!--Device-unnamed-declare namespace stream-End-->
 

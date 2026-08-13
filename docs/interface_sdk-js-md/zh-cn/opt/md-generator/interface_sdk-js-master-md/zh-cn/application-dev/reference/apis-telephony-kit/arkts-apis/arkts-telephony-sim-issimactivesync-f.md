@@ -8,7 +8,9 @@ function isSimActiveSync(slotId: number): boolean
 
 Checks whether the SIM card in a specified slot is activated.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-function isSimActiveSync(slotId: int): boolean--><!--Device-sim-function isSimActiveSync(slotId: int): boolean-End-->
 

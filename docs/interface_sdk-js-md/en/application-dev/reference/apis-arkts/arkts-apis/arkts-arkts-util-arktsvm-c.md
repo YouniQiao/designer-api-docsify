@@ -6,6 +6,8 @@ A class that provides VM maintenance and test capabilities for developers.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-util-class ArkTSVM--><!--Device-util-class ArkTSVM-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,6 +30,8 @@ Enable the local handle detection to avoid memory leakage in the event looper of
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ArkTSVM-static enableLocalHandleDetection(): void--><!--Device-ArkTSVM-static enableLocalHandleDetection(): void-End-->
@@ -45,6 +49,8 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void--><!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void-End-->
@@ -82,13 +90,13 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean
 ```
 
-Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC.It must be called on the main thread and only one callback can be registered.
-
-NOTE:There is no guarantee that the callback will be triggered before OOM.
+Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC. It must be called on the main thread and only one callback can be registered. NOTE: There is no guarantee that the callback will be triggered before OOM.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,7 +108,7 @@ NOTE:There is no guarantee that the callback will be triggered before OOM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
 | heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Yes | Indicates the percentage threshold of the heap memory to trigger the callback after a GC. The value range is [70, 95]. |
 
 **Return value:**
@@ -115,11 +123,13 @@ NOTE:There is no guarantee that the callback will be triggered before OOM.
 static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void
 ```
 
-Sets whether to enable multithreading detection. When **enabled** is set to **true**, the detection is turned on,and multithreading-related details will be included in the cppcrash files generated for multithreading issues.When **enabled** is set to **false**, the detection is turned off, and no such details will be present in the corresponding cppcrash files.
+Sets whether to enable multithreading detection. When **enabled** is set to **true**, the detection is turned on, and multithreading-related details will be included in the cppcrash files generated for multithreading issues. When **enabled** is set to **false**, the detection is turned off, and no such details will be present in the corresponding cppcrash files.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,6 +155,8 @@ Enable or disable tracking of the relationship between napi_ref and global handl
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

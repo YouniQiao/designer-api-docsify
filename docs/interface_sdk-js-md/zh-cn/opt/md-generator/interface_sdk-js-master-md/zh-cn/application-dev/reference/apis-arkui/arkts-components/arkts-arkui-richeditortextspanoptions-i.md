@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RichEditorTextSpanOptions--><!--Device-unnamed-declare interface RichEditorTextSpanOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ gesture?: RichEditorGesture
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -34,13 +38,13 @@ gesture?: RichEditorGesture
 offset?: number
 ```
 
-添加文本的位置。省略时，添加到所有内容的最后。
-
-当值小于0时，放在所有内容最前面；当值大于所有内容长度时，放在所有内容最后面。
+添加文本的位置。省略时，添加到所有内容的最后。 当值小于0时，放在所有内容最前面；当值大于所有内容长度时，放在所有内容最后面。
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,6 +66,8 @@ paragraphStyle?: RichEditorParagraphStyle
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -82,6 +88,8 @@ style?: RichEditorTextStyle
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -96,13 +104,13 @@ style?: RichEditorTextStyle
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。
-
-默认值：undefined
+url信息。 默认值：undefined
 
 **类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

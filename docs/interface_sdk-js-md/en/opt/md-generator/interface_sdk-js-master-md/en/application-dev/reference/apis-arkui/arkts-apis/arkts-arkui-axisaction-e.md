@@ -4,6 +4,8 @@ Enumerates the types of axis actions for axis events.
 
 **Since:** 17
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AxisAction--><!--Device-unnamed-declare enum AxisAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NONE = 0
 No axis event.
 
 **Since:** 17
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ The axis event begins.
 
 **Since:** 17
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -53,6 +59,8 @@ UPDATE = 2
 The axis event is in progress.
 
 **Since:** 17
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ The axis event ends.
 
 **Since:** 17
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -89,6 +99,8 @@ CANCEL = 4
 The axis event is canceled.
 
 **Since:** 17
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

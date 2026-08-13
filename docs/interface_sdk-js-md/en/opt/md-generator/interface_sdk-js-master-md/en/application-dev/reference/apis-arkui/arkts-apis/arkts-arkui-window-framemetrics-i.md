@@ -2,7 +2,9 @@
 
 Enumerates the metrics for frame performance.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface FrameMetrics--><!--Device-window-interface FrameMetrics-End-->
 
@@ -24,7 +26,9 @@ Whether the frame is the first frame. **true** for first frame, **false** otherw
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FrameMetrics-firstDrawFrame: boolean--><!--Device-FrameMetrics-firstDrawFrame: boolean-End-->
 
@@ -40,7 +44,9 @@ Duration of gesture handling in a frame, in nanoseconds.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FrameMetrics-inputHandlingDuration: long--><!--Device-FrameMetrics-inputHandlingDuration: long-End-->
 
@@ -56,7 +62,9 @@ Duration of layout measurement in a frame, in nanoseconds.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FrameMetrics-layoutMeasureDuration: long--><!--Device-FrameMetrics-layoutMeasureDuration: long-End-->
 
@@ -72,7 +80,9 @@ Timestamp marking the start of the current frame, in nanoseconds.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FrameMetrics-vsyncTimestamp: long--><!--Device-FrameMetrics-vsyncTimestamp: long-End-->
 

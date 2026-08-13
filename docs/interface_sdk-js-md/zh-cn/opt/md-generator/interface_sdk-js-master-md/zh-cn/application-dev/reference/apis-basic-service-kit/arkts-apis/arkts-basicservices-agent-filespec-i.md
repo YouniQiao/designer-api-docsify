@@ -2,7 +2,9 @@
 
 表单项的文件信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
 
@@ -18,7 +20,9 @@ contentType?: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
 
@@ -27,18 +31,18 @@ contentType?: string
 ## extras
 
 ```TypeScript
-extras?: object
+extras?: Record<string, string>
 ```
 
-文件信息的附加内容，该参数不会体现在HTTP请求中。默认值为空。
+The extras for the file information.
 
-**类型：** object
+**类型：** Record&lt;string, string&gt;
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-FileSpec-extras?: object--><!--Device-FileSpec-extras?: object-End-->
+<!--Device-FileSpec-extras?: Record<string, string>--><!--Device-FileSpec-extras?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -52,7 +56,9 @@ filename?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,9 +72,7 @@ filename?: string
 mimeType?: string
 ```
 
-文件的mimeType，通过文件名获取，默认值为文件名后缀。
-
-从 API version 18 开始废弃，建议使用contentType替代。
+文件的mimeType，通过文件名获取，默认值为文件名后缀。 从 API version 18 开始废弃，建议使用contentType替代。
 
 **类型：** string
 
@@ -90,31 +94,13 @@ mimeType?: string
 path: string
 ```
 
-文件路径。
-
-- 相对路径，位于调用方的缓存路径下。
-
-例如："./xxx/yyy/zzz.html"、"xxx/yyy/zzz.html"。
-
-- internal协议路径，支持"internal://"及其子路径。internal为调用方（即传入的context）对应路径，"internal://cache"对应context.cacheDir。
-
-例如："internal://cache/path/to/file.txt"。
-
-- 应用沙箱目录，只支持到base及其子目录下。
-
-例如："/data/storage/el1/base/path/to/file.txt"。
-
-- file协议路径，必须匹配应用包名，只支持到base及其子目录下。
-
-例如："file://com.example.test/data/storage/el2/base/file.txt"。
-
-- 用户公共文件，仅支持上传任务。
-
-例如："file://media/Photo/path/to/file.img"。仅支持前台任务。
+文件路径。 - 相对路径，位于调用方的缓存路径下。 例如："./xxx/yyy/zzz.html"、"xxx/yyy/zzz.html"。 - internal协议路径，支持"internal://"及其子路径。internal为调用方（即传入的context）对应路径，"internal://cache"对应context.cacheDir。 例如："internal://cache/path/to/file.txt"。 - 应用沙箱目录，只支持到base及其子目录下。 例如："/data/storage/el1/base/path/to/file.txt"。 - file协议路径，必须匹配应用包名，只支持到base及其子目录下。 例如："file://com.example.test/data/storage/el2/base/file.txt"。 - 用户公共文件，仅支持上传任务。 例如："file://media/Photo/path/to/file.img"。仅支持前台任务。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

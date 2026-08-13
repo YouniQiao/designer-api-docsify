@@ -18,6 +18,8 @@ Battery state of charge (SoC) of the device, in unit of percentage, which ranges
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-function batterySOC(): int--><!--Device-batteryInfo-function batterySOC(): int-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

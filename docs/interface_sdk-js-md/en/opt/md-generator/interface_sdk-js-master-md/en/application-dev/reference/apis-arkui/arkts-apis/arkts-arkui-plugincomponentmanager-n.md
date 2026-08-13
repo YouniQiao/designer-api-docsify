@@ -4,6 +4,8 @@ Implements a plugin component manager.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace pluginComponentManager--><!--Device-unnamed-declare namespace pluginComponentManager-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,15 +24,15 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 | --- |
 | [push](arkts-arkui-plugincomponentmanager-push-f.md#push) |
 | [request](arkts-arkui-plugincomponentmanager-request-f.md#request) |
-| [on](arkts-arkui-plugincomponentmanager-on-f.md#on) |
+| [on_string](arkts-arkui-plugincomponentmanager-onstring-f.md#on_string) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-1) |
-| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-1) |
+| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-(System-API)) |
+| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

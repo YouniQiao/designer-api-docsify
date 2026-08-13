@@ -14,7 +14,7 @@ Obtains the ID attached to the end of the path component of the given uri.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getId](ohos.app.ability.dataUriUtils/dataUriUtils#getId)
+**Substitutes:** [getId](arkts-ability-datauriutils-getid-f.md#getId)
 
 <!--Device-dataUriUtils-function getId(uri: string): number--><!--Device-dataUriUtils-function getId(uri: string): number-End-->
 

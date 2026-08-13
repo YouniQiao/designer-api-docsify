@@ -2,7 +2,9 @@
 
 上传任务的配置信息。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-request-interface UploadConfig--><!--Device-request-interface UploadConfig-End-->
 
@@ -18,7 +20,9 @@ begins?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UploadConfig-begins?: long--><!--Device-UploadConfig-begins?: long-End-->
 
@@ -34,7 +38,9 @@ data: Array<RequestData>
 
 **类型：** Array&lt;RequestData&gt;
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UploadConfig-data: Array<RequestData>--><!--Device-UploadConfig-data: Array<RequestData>-End-->
 
@@ -50,7 +56,9 @@ ends?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UploadConfig-ends?: long--><!--Device-UploadConfig-ends?: long-End-->
 
@@ -66,7 +74,9 @@ files: Array<File>
 
 **类型：** Array&lt;File&gt;
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UploadConfig-files: Array<File>--><!--Device-UploadConfig-files: Array<File>-End-->
 
@@ -75,16 +85,18 @@ files: Array<File>
 ## header
 
 ```TypeScript
-header: Object
+header: Record<string, string>
 ```
 
-添加要包含在上传请求中的HTTP或HTTPS标志头。
+Adds an HTTP or HTTPS header to be included with the upload request.
 
-**类型：** Object
+**类型：** Record&lt;string, string&gt;
 
-**起始版本：** 6
+**起始版本：** 23
 
-<!--Device-UploadConfig-header: Object--><!--Device-UploadConfig-header: Object-End-->
+**废弃版本：** -1
+
+<!--Device-UploadConfig-header: Record<string, string>--><!--Device-UploadConfig-header: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -98,7 +110,9 @@ index?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UploadConfig-index?: int--><!--Device-UploadConfig-index?: int-End-->
 
@@ -114,7 +128,9 @@ HTTP请求方法：POST、PUT，缺省为POST。使用POST新增资源，使用P
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UploadConfig-method: string--><!--Device-UploadConfig-method: string-End-->
 
@@ -126,12 +142,13 @@ HTTP请求方法：POST、PUT，缺省为POST。使用POST新增资源，使用P
 url: string
 ```
 
-资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持  
-[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
+资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持 [HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UploadConfig-url: string--><!--Device-UploadConfig-url: string-End-->
 

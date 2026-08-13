@@ -8,7 +8,9 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 创建标准色域对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager--><!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager-End-->
 
@@ -30,8 +32,8 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 
@@ -53,7 +55,9 @@ function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManage
 
 创建用户自定义色域对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager--><!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager-End-->
 
@@ -76,8 +80,8 @@ function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManage
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 

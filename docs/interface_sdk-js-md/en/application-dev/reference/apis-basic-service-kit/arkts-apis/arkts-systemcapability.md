@@ -2,9 +2,11 @@
 
 Provides interfaces to get system capability.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace systemCapability--><!--Device-unnamed-declare namespace systemCapability-End-->
 
@@ -25,7 +27,7 @@ import { systemCapability } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities) | Get System Capability. |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities-1) | Get System Capability. |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querySystemCapabilities) | Get System Capability. |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querySystemCapabilities-(System-API)) | Get System Capability. |
 <!--DelEnd-->
 

@@ -6,6 +6,8 @@ Defines the state information of the microphone before and after the callback is
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo--><!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ New state.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -41,6 +45,8 @@ Original state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState-End-->
 

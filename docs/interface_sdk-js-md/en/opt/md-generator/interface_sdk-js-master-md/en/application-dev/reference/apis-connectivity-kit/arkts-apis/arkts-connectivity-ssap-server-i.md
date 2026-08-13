@@ -1,8 +1,10 @@
 # Server
 
-Manages SSAP server. Before calling a SSAP server method,you must use [createServer](arkts-connectivity-ssap-createserver-f.md#createServer) to create a SSAP server instance.
+Manages SSAP server. Before calling a SSAP server method, you must use [createServer](arkts-connectivity-ssap-createserver-f.md#createServer) to create a SSAP server instance.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-ssap-interface Server--><!--Device-ssap-interface Server-End-->
 
@@ -24,6 +26,8 @@ Adds a SSAP service.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,7 +48,7 @@ Adds a SSAP service.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 36100044 |
 | 36100043 |
 
@@ -57,6 +61,8 @@ close(): void
 Closes this {@code Server} object and unregisters its callbacks.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -72,7 +78,7 @@ Closes this {@code Server} object and unregisters its callbacks.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## notifyPropertyChanged
 
@@ -83,6 +89,8 @@ notifyPropertyChanged(address: string, property: Property): Promise<void>
 Notifies the client that the value of a property on the server has changed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -111,7 +119,7 @@ Notifies the client that the value of a property on the server has changed.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 36100044 |
 | 36100043 |
 | 36100041 |
@@ -125,6 +133,8 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 Unsubscribes from server connection state changed events.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +158,8 @@ Unsubscribes from MTU changed events.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Server-offMtuChange(callback?: Callback<int>): void--><!--Device-Server-offMtuChange(callback?: Callback<int>): void-End-->
@@ -169,6 +181,8 @@ offPropertyRead(callback?: Callback<PropertyReadRequest>): void
 Unsubscribes from property read events from the client.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,6 +206,8 @@ Unsubscribes from property write events from the client.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Server-offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void--><!--Device-Server-offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void-End-->
@@ -210,11 +226,11 @@ Unsubscribes from property write events from the client.
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to server connection state changed events.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to server connection state changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,11 +250,11 @@ This event is accessible only to applications that granted the ohos.permission.N
 onMtuChange(callback: Callback<number>): void
 ```
 
-Subscribes to MTU changed events.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to MTU changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -258,11 +274,11 @@ This event is accessible only to applications that granted the ohos.permission.N
 onPropertyRead(callback: Callback<PropertyReadRequest>): void
 ```
 
-Subscribes to property read events from the client.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to property read events from the client. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,11 +298,11 @@ This event is accessible only to applications that granted the ohos.permission.N
 onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 ```
 
-Subscribes to property write events from the client.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to property write events from the client. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,6 +326,8 @@ Removes a specific SSAP service.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -330,7 +348,7 @@ Removes a specific SSAP service.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 36100044 |
 | 36100043 |
 
@@ -343,6 +361,8 @@ sendResponse(response: ServerResponse): void
 Responds to read or write requests from the client.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -364,5 +384,5 @@ Responds to read or write requests from the client.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 36100041 |

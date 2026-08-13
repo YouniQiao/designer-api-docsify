@@ -2,9 +2,11 @@
 
 Obtains dynamic icon information about a bundle
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DynamicIconInfo--><!--Device-unnamed-export interface DynamicIconInfo-End-->
 
@@ -20,11 +22,13 @@ readonly appIndex: int
 
 Indicates the index of the bundle.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DynamicIconInfo-readonly appIndex: int--><!--Device-DynamicIconInfo-readonly appIndex: int-End-->
 
@@ -42,9 +46,11 @@ Indicates the name of the bundle.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DynamicIconInfo-readonly bundleName: string--><!--Device-DynamicIconInfo-readonly bundleName: string-End-->
 
@@ -62,9 +68,11 @@ Indicates the name of the dynamic icon.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DynamicIconInfo-readonly moduleName: string--><!--Device-DynamicIconInfo-readonly moduleName: string-End-->
 
@@ -80,11 +88,13 @@ readonly userId: int
 
 Indicates the user id of the bundle.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DynamicIconInfo-readonly userId: int--><!--Device-DynamicIconInfo-readonly userId: int-End-->
 

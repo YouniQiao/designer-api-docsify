@@ -6,6 +6,8 @@ Defines the Web options.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface WebOptions--><!--Device-unnamed-declare interface WebOptions-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Sets the controller of the Web.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebOptions-controller: WebController | WebviewController--><!--Device-WebOptions-controller: WebController | WebviewController-End-->
@@ -36,15 +40,15 @@ Sets the controller of the Web.
 emulateTouchFromMouseEvent? : boolean
 ```
 
-设定鼠标事件是否被转换成触摸事件。
-
-默认值：false。
+设定鼠标事件是否被转换成触摸事件。 默认值：false。
 
 **类型：** boolean
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean-End-->
 
@@ -56,13 +60,15 @@ emulateTouchFromMouseEvent? : boolean
 incognitoMode? : boolean
 ```
 
-Sets the incognito mode of the Web, the parameter is optional and default value is false.When the Web is in incognito mode, cookies, records of websites, geolocation permissions will not save in persistent files.
+Sets the incognito mode of the Web, the parameter is optional and default value is false. When the Web is in incognito mode, cookies, records of websites, geolocation permissions will not save in persistent files.
 
 **类型：** boolean
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -84,6 +90,8 @@ Sets the render mode of the web.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebOptions-renderMode? : RenderMode--><!--Device-WebOptions-renderMode? : RenderMode-End-->
@@ -96,13 +104,15 @@ Sets the render mode of the web.
 sharedRenderProcessToken? : string
 ```
 
-Sets the shared render process token of the web.When the web is in multiprocess mode, web with the same sharedRenderProcessToken will attempt to reuse the same render process.The shared render process will remain active until all associated web are destroyed.
+Sets the shared render process token of the web. When the web is in multiprocess mode, web with the same sharedRenderProcessToken will attempt to reuse the same render process. The shared render process will remain active until all associated web are destroyed.
 
 **类型：** string
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebOptions-sharedRenderProcessToken? : string--><!--Device-WebOptions-sharedRenderProcessToken? : string-End-->
 
@@ -121,6 +131,8 @@ Sets the address of the web page to be displayed.
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,9 +2,11 @@
 
 Defines the effect parameters used to preheat an image.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface SettingParam--><!--Device-camera-interface SettingParam-End-->
 
@@ -24,14 +26,15 @@ import { camera } from '@kit.CameraKit';
 faceSlender: int
 ```
 
-Face slimming level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1**indicates level-1 slimming.
+Face slimming level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1** indicates level-1 slimming.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SettingParam-faceSlender: int--><!--Device-SettingParam-faceSlender: int-End-->
 
@@ -45,14 +48,15 @@ Face slimming level, which is obtained through
 skinSmoothLevel: int
 ```
 
-Skin smoothing level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1**indicates level-1 smoothing.
+Skin smoothing level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1** indicates level-1 smoothing.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SettingParam-skinSmoothLevel: int--><!--Device-SettingParam-skinSmoothLevel: int-End-->
 
@@ -66,15 +70,15 @@ Skin smoothing level, which is obtained through
 skinTone: int
 ```
 
-Skin tone perfection level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value  
-**0xBF986C** indicates a specific color.
+Skin tone perfection level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **0xBF986C** indicates a specific color.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SettingParam-skinTone: int--><!--Device-SettingParam-skinTone: int-End-->
 

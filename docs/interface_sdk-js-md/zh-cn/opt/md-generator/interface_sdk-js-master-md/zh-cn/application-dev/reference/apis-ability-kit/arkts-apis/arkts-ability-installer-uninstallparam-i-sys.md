@@ -2,7 +2,9 @@
 
 共享包卸载需指定的参数信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-installer-export interface UninstallParam--><!--Device-installer-export interface UninstallParam-End-->
 
@@ -20,7 +22,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UninstallParam-bundleName: string--><!--Device-UninstallParam-bundleName: string-End-->
 
@@ -38,7 +42,9 @@ versionCode?: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UninstallParam-versionCode?: int--><!--Device-UninstallParam-versionCode?: int-End-->
 

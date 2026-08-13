@@ -6,6 +6,8 @@ Defines MonitorDecoratorOptions interface
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MonitorDecoratorOptions--><!--Device-unnamed-declare interface MonitorDecoratorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines MonitorDecoratorOptions interface
 enableWildcard?: boolean
 ```
 
-Enables wildcard feature.Set to true to enable wildcard feature, set to false to disable it.The default value is true.
+Enables wildcard feature. Set to true to enable wildcard feature, set to false to disable it. The default value is true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

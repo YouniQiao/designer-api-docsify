@@ -1,22 +1,12 @@
 # TextSpanType
 
-[Span](./span)类型信息。
-
-> **说明：**
-> 
-> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：
-> 
-> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单
-> 
-> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单
-> 
-> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单
-> 
-> 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
+Span类型信息。 > **说明：** > > 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找： > > 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单 > > 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单 > > 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单 > > 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare enum TextSpanType--><!--Device-unnamed-declare enum TextSpanType-End-->
 
@@ -33,6 +23,8 @@ Span为文字类型。
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,6 +46,8 @@ Span为图像类型。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -74,6 +68,8 @@ Span为图文混合类型。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -93,6 +89,8 @@ DEFAULT = 3
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

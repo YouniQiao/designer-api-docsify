@@ -2,9 +2,11 @@
 
 Describes the configuration for video duration filtering.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class VideoDurationFilter--><!--Device-photoAccessHelper-class VideoDurationFilter-End-->
 
@@ -22,17 +24,17 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraVideoDuration?: int
 ```
 
-Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is **-1**.
+Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is **-1**. The unit is milliseconds (ms).
 
-The unit is milliseconds (ms).
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 26.0.0
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoDurationFilter-extraVideoDuration?: int--><!--Device-VideoDurationFilter-extraVideoDuration?: int-End-->
 
@@ -44,17 +46,17 @@ The unit is milliseconds (ms).
 filterOperator: FilterOperator
 ```
 
-Filter operator.
-
-For example, files can be filtered based on being greater than or less than a certain file size.
+Filter operator. For example, files can be filtered based on being greater than or less than a certain file size.
 
 **Type:** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoDurationFilter-filterOperator: FilterOperator--><!--Device-VideoDurationFilter-filterOperator: FilterOperator-End-->
 
@@ -66,17 +68,17 @@ For example, files can be filtered based on being greater than or less than a ce
 videoDuration: int
 ```
 
-Video duration used for filtering.
+Video duration used for filtering. The unit is milliseconds (ms).
 
-The unit is milliseconds (ms).
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 26.0.0
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoDurationFilter-videoDuration: int--><!--Device-VideoDurationFilter-videoDuration: int-End-->
 

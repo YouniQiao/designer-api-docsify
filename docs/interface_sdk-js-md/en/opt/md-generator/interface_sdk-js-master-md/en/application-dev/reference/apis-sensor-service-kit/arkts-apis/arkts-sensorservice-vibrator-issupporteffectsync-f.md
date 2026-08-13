@@ -14,7 +14,9 @@ function isSupportEffectSync(effectId: string): boolean
 
 Checks whether the preset vibration effect is supported.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean--><!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean-End-->
 
@@ -36,8 +38,8 @@ Checks whether the preset vibration effect is supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
 
 ## Examples
 

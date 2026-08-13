@@ -15,9 +15,11 @@ type AxisType =
 
 Defines the axis type of an input device.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-type AxisType =    'touchmajor'    | 'touchminor'    | 'orientation'    | 'x'    | 'y'    | 'pressure'    | 'toolminor'    | 'toolmajor'    | 'null'--><!--Device-inputDevice-type AxisType =    'touchmajor'    | 'touchminor'    | 'orientation'    | 'x'    | 'y'    | 'pressure'    | 'toolminor'    | 'toolmajor'    | 'null'-End-->
 

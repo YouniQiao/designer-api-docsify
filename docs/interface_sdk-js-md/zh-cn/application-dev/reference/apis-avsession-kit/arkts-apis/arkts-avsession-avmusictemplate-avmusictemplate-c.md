@@ -1,14 +1,12 @@
 # AVMusicTemplate
 
-调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。
-
-> **说明：**
-> 
-> - 本模块仅适用于API version 23及以上版本的Car设备。
+调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取 方法。随后，同步数据给模板控制方，以完成后续操作。 > **说明：** > > - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-avMusicTemplate-class AVMusicTemplate--><!--Device-avMusicTemplate-class AVMusicTemplate-End-->
 
@@ -24,7 +22,9 @@ destroy(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +42,7 @@ destroy(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function destroy can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function destroy can not work correctly due to limited device capabilities. |
 
 ## offClearSearchHistory
 
@@ -54,7 +54,9 @@ offClearSearchHistory(callback?: ClearSearchHistoryEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,9 +74,9 @@ offClearSearchHistory(callback?: ClearSearchHistoryEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offClearSearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offClearSearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offDownloadMediaEntity
 
@@ -86,7 +88,9 @@ offDownloadMediaEntity(callback?: DownloadMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,9 +108,9 @@ offDownloadMediaEntity(callback?: DownloadMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offDownloadMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offDownloadMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offExecuteAction
 
@@ -118,7 +122,9 @@ offExecuteAction(callback?: ExecuteActionEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,9 +142,9 @@ offExecuteAction(callback?: ExecuteActionEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offExecuteAction can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offExecuteAction can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offFavoriteMediaEntity
 
@@ -150,7 +156,9 @@ offFavoriteMediaEntity(callback?: FavoriteMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,9 +176,9 @@ offFavoriteMediaEntity(callback?: FavoriteMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offFavoriteMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offFavoriteMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offHandleMemberPurchase
 
@@ -182,7 +190,9 @@ offHandleMemberPurchase(callback?: HandleMemberPurchaseEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,9 +210,9 @@ offHandleMemberPurchase(callback?: HandleMemberPurchaseEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offHandleMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offHandleMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offLogin
 
@@ -214,7 +224,9 @@ offLogin(callback?: LoginEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,9 +244,9 @@ offLogin(callback?: LoginEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offLogin can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offLogin can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offPlayForSearch
 
@@ -246,7 +258,9 @@ offPlayForSearch(callback?: PlayForSearchEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -264,9 +278,9 @@ offPlayForSearch(callback?: PlayForSearchEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offPlayForSearch can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offPlayForSearch can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offPlayMediaEntity
 
@@ -278,7 +292,9 @@ offPlayMediaEntity(callback?: PlayMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -296,9 +312,9 @@ offPlayMediaEntity(callback?: PlayMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offPlayMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offPlayMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offProblemAndAdvice
 
@@ -310,7 +326,9 @@ offProblemAndAdvice(callback?: ProblemAndAdviceEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -328,9 +346,9 @@ offProblemAndAdvice(callback?: ProblemAndAdviceEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offProblemAndAdvice can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offProblemAndAdvice can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCompilation
 
@@ -342,7 +360,9 @@ offQueryCompilation(callback?: QueryCompilationEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -360,9 +380,9 @@ offQueryCompilation(callback?: QueryCompilationEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCompilation can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCompilation can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCompilationByKeyword
 
@@ -374,7 +394,9 @@ offQueryCompilationByKeyword(callback?: QueryCompilationByKeywordEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -392,9 +414,9 @@ offQueryCompilationByKeyword(callback?: QueryCompilationByKeywordEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCurrentSingle
 
@@ -406,7 +428,9 @@ offQueryCurrentSingle(callback?: QueryCurrentSingleEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -424,9 +448,9 @@ offQueryCurrentSingle(callback?: QueryCurrentSingleEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCurrentSingle can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCurrentSingle can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCustomContent
 
@@ -438,7 +462,9 @@ offQueryCustomContent(callback?: QueryCustomContentEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -456,9 +482,9 @@ offQueryCustomContent(callback?: QueryCustomContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCustomContent can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCustomContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryHotWords
 
@@ -470,7 +496,9 @@ offQueryHotWords(callback?: QueryHotWordsEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -488,9 +516,9 @@ offQueryHotWords(callback?: QueryHotWordsEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryHotWords can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryHotWords can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMainTabs
 
@@ -502,7 +530,9 @@ offQueryMainTabs(callback?: QueryMainTabsEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -520,9 +550,9 @@ offQueryMainTabs(callback?: QueryMainTabsEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMainTabs can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMainTabs can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMediaEntity
 
@@ -534,7 +564,9 @@ offQueryMediaEntity(callback?: QueryMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -552,9 +584,9 @@ offQueryMediaEntity(callback?: QueryMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMediaEntityByKeyword
 
@@ -566,7 +598,9 @@ offQueryMediaEntityByKeyword(callback?: QueryMediaEntityByKeywordEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -584,9 +618,9 @@ offQueryMediaEntityByKeyword(callback?: QueryMediaEntityByKeywordEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMediaTabContent
 
@@ -598,7 +632,9 @@ offQueryMediaTabContent(callback?: QueryMediaTabContentEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -616,9 +652,9 @@ offQueryMediaTabContent(callback?: QueryMediaTabContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaTabContent can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaTabContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMemberPurchase
 
@@ -630,7 +666,9 @@ offQueryMemberPurchase(callback?: QueryMemberPurchaseEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -648,9 +686,9 @@ offQueryMemberPurchase(callback?: QueryMemberPurchaseEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryPlaylist
 
@@ -662,7 +700,9 @@ offQueryPlaylist(callback?: QueryPlaylistEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -680,9 +720,9 @@ offQueryPlaylist(callback?: QueryPlaylistEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryPlaylist can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryPlaylist can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryRecommendMediaEntityList
 
@@ -694,7 +734,9 @@ offQueryRecommendMediaEntityList(callback?: QueryRecommendMediaEntityListEvent):
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -712,9 +754,9 @@ offQueryRecommendMediaEntityList(callback?: QueryRecommendMediaEntityListEvent):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQuerySearchHistory
 
@@ -726,7 +768,9 @@ offQuerySearchHistory(callback?: QuerySearchHistoryEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -744,9 +788,9 @@ offQuerySearchHistory(callback?: QuerySearchHistoryEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQuerySearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQuerySearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offRequestDialogInfo
 
@@ -758,7 +802,9 @@ offRequestDialogInfo(callback?: RequestDialogInfoEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -776,9 +822,9 @@ offRequestDialogInfo(callback?: RequestDialogInfoEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offRequestDialogInfo can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offRequestDialogInfo can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offSettingsChange
 
@@ -790,7 +836,9 @@ offSettingsChange(callback?: SettingsChangeEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -808,9 +856,9 @@ offSettingsChange(callback?: SettingsChangeEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offSettingsChange can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offSettingsChange can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onClearSearchHistory
 
@@ -822,7 +870,9 @@ onClearSearchHistory(callback: ClearSearchHistoryEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -840,9 +890,9 @@ onClearSearchHistory(callback: ClearSearchHistoryEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onClearSearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onClearSearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onDownloadMediaEntity
 
@@ -854,7 +904,9 @@ onDownloadMediaEntity(callback: DownloadMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -872,9 +924,9 @@ onDownloadMediaEntity(callback: DownloadMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onDownloadMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onDownloadMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onExecuteAction
 
@@ -886,7 +938,9 @@ onExecuteAction(callback: ExecuteActionEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -904,9 +958,9 @@ onExecuteAction(callback: ExecuteActionEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onExecuteAction can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onExecuteAction can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onFavoriteMediaEntity
 
@@ -918,7 +972,9 @@ onFavoriteMediaEntity(callback: FavoriteMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -936,9 +992,9 @@ onFavoriteMediaEntity(callback: FavoriteMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onFavoriteMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onFavoriteMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onHandleMemberPurchase
 
@@ -950,7 +1006,9 @@ onHandleMemberPurchase(callback: HandleMemberPurchaseEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -968,9 +1026,9 @@ onHandleMemberPurchase(callback: HandleMemberPurchaseEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onHandleMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onHandleMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onLogin
 
@@ -982,7 +1040,9 @@ onLogin(callback: LoginEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1000,9 +1060,9 @@ onLogin(callback: LoginEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onLogin can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onLogin can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onPlayForSearch
 
@@ -1014,7 +1074,9 @@ onPlayForSearch(callback: PlayForSearchEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1032,9 +1094,9 @@ onPlayForSearch(callback: PlayForSearchEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onPlayForSearch can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onPlayForSearch can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onPlayMediaEntity
 
@@ -1046,7 +1108,9 @@ onPlayMediaEntity(callback: PlayMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1064,9 +1128,9 @@ onPlayMediaEntity(callback: PlayMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onPlayMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onPlayMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onProblemAndAdvice
 
@@ -1078,7 +1142,9 @@ onProblemAndAdvice(callback: ProblemAndAdviceEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1096,9 +1162,9 @@ onProblemAndAdvice(callback: ProblemAndAdviceEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onProblemAndAdvice can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onProblemAndAdvice can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCompilation
 
@@ -1110,7 +1176,9 @@ onQueryCompilation(callback: QueryCompilationEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1128,9 +1196,9 @@ onQueryCompilation(callback: QueryCompilationEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCompilation can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCompilation can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCompilationByKeyword
 
@@ -1142,7 +1210,9 @@ onQueryCompilationByKeyword(callback: QueryCompilationByKeywordEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1160,9 +1230,9 @@ onQueryCompilationByKeyword(callback: QueryCompilationByKeywordEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCurrentSingle
 
@@ -1174,7 +1244,9 @@ onQueryCurrentSingle(callback: QueryCurrentSingleEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1192,9 +1264,9 @@ onQueryCurrentSingle(callback: QueryCurrentSingleEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCurrentSingle can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCurrentSingle can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCustomContent
 
@@ -1206,7 +1278,9 @@ onQueryCustomContent(callback: QueryCustomContentEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1224,9 +1298,9 @@ onQueryCustomContent(callback: QueryCustomContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCustomContent can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCustomContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryHotWords
 
@@ -1238,7 +1312,9 @@ onQueryHotWords(callback: QueryHotWordsEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1256,9 +1332,9 @@ onQueryHotWords(callback: QueryHotWordsEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryHotWords can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryHotWords can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMainTabs
 
@@ -1270,7 +1346,9 @@ onQueryMainTabs(callback: QueryMainTabsEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1288,9 +1366,9 @@ onQueryMainTabs(callback: QueryMainTabsEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMainTabs can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMainTabs can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMediaEntity
 
@@ -1302,7 +1380,9 @@ onQueryMediaEntity(callback: QueryMediaEntityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1320,9 +1400,9 @@ onQueryMediaEntity(callback: QueryMediaEntityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMediaEntityByKeyword
 
@@ -1334,7 +1414,9 @@ onQueryMediaEntityByKeyword(callback: QueryMediaEntityByKeywordEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1352,9 +1434,9 @@ onQueryMediaEntityByKeyword(callback: QueryMediaEntityByKeywordEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMediaTabContent
 
@@ -1366,7 +1448,9 @@ onQueryMediaTabContent(callback: QueryMediaTabContentEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1384,9 +1468,9 @@ onQueryMediaTabContent(callback: QueryMediaTabContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaTabContent can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaTabContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMemberPurchase
 
@@ -1398,7 +1482,9 @@ onQueryMemberPurchase(callback: QueryMemberPurchaseEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1416,9 +1502,9 @@ onQueryMemberPurchase(callback: QueryMemberPurchaseEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryPlaylist
 
@@ -1430,7 +1516,9 @@ onQueryPlaylist(callback: QueryPlaylistEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1448,9 +1536,9 @@ onQueryPlaylist(callback: QueryPlaylistEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryPlaylist can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryPlaylist can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryRecommendMediaEntityList
 
@@ -1462,7 +1550,9 @@ onQueryRecommendMediaEntityList(callback: QueryRecommendMediaEntityListEvent): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1480,9 +1570,9 @@ onQueryRecommendMediaEntityList(callback: QueryRecommendMediaEntityListEvent): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQuerySearchHistory
 
@@ -1494,7 +1584,9 @@ onQuerySearchHistory(callback: QuerySearchHistoryEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1512,9 +1604,9 @@ onQuerySearchHistory(callback: QuerySearchHistoryEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQuerySearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQuerySearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onRequestDialogInfo
 
@@ -1526,7 +1618,9 @@ onRequestDialogInfo(callback: RequestDialogInfoEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1544,9 +1638,9 @@ onRequestDialogInfo(callback: RequestDialogInfoEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onRequestDialogInfo can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onRequestDialogInfo can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onSettingsChange
 
@@ -1558,7 +1652,9 @@ onSettingsChange(callback: SettingsChangeEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1576,9 +1672,9 @@ onSettingsChange(callback: SettingsChangeEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onSettingsChange can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onSettingsChange can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## reportExecuteAction
 
@@ -1590,7 +1686,9 @@ reportExecuteAction(actionType: string, params: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1615,9 +1713,9 @@ reportExecuteAction(actionType: string, params: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function reportExecuteAction can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function reportExecuteAction can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setCurrentSingle
 
@@ -1629,7 +1727,9 @@ setCurrentSingle(single: Single): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1653,9 +1753,9 @@ setCurrentSingle(single: Single): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setCurrentSingle can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setCurrentSingle can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setCustomElements
 
@@ -1668,7 +1768,9 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1694,9 +1796,9 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setCustomElements can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setCustomElements can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setDialogCommand
 
@@ -1708,7 +1810,9 @@ setDialogCommand(type: DialogControlType, dialogInfo: DialogInfo): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1733,9 +1837,9 @@ setDialogCommand(type: DialogControlType, dialogInfo: DialogInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setDialogCommand can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setDialogCommand can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setDownloadMediaEntityStatus
 
@@ -1747,7 +1851,9 @@ setDownloadMediaEntityStatus(single: MediaEntity): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1771,9 +1877,9 @@ setDownloadMediaEntityStatus(single: MediaEntity): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setDownloadMediaEntityStatus can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setDownloadMediaEntityStatus can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setExtensionAbility
 
@@ -1785,7 +1891,9 @@ setExtensionAbility(want: WantAgent): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1809,9 +1917,9 @@ setExtensionAbility(want: WantAgent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setMediaEntities
 
@@ -1823,7 +1931,9 @@ setMediaEntities(entities: MediaEntity[]): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1847,9 +1957,9 @@ setMediaEntities(entities: MediaEntity[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setMediaEntities can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setMediaEntities can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setPlaylist
 
@@ -1861,7 +1971,9 @@ setPlaylist(playlist: PageMediaEntity): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1885,9 +1997,9 @@ setPlaylist(playlist: PageMediaEntity): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setPlaylist can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setPlaylist can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setSettings
 
@@ -1899,7 +2011,9 @@ setSettings(settingItems: SettingItem[]): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1923,9 +2037,9 @@ setSettings(settingItems: SettingItem[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setSettings can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setSettings can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setTabContent
 
@@ -1937,7 +2051,9 @@ setTabContent(tabId: string, tabContent: MediaTabContent): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1962,9 +2078,9 @@ setTabContent(tabId: string, tabContent: MediaTabContent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setTabContent can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setTabContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setUserInfo
 
@@ -1976,7 +2092,9 @@ setUserInfo(userInfo: UserInfo): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2000,9 +2118,9 @@ setUserInfo(userInfo: UserInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setUserInfo can not work correctly due to limited device capabilities. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setUserInfo can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## startTemplate
 
@@ -2014,7 +2132,9 @@ startTemplate(): Promise<OperResult>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2032,7 +2152,7 @@ startTemplate(): Promise<OperResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
 
 ## sessionId
 
@@ -2046,7 +2166,9 @@ sessionId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2066,7 +2188,9 @@ sessionTag: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,11 +2,15 @@
 
 The autoStartupManager module provides APIs for an application to query whether it is configured to start automatically at boot time.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace autoStartupManager--><!--Device-unnamed-declare namespace autoStartupManager-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -20,13 +24,22 @@ import { autoStartupManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f.md#cancelapplicationautostartup) |
-| [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f.md#cancelapplicationautostartup-1) |
-| [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md#getautostartupstatusforself) |
-| [isAutoStartupSupported](arkts-ability-autostartupmanager-isautostartupsupported-f.md#isautostartupsupported) |
-| [off](arkts-ability-autostartupmanager-off-f.md#off) |
-| [on](arkts-ability-autostartupmanager-on-f.md#on) |
-| [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f.md#queryallautostartupapplications) |
-| [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f.md#queryallautostartupapplications-1) |
-| [setApplicationAutoStartup](arkts-ability-autostartupmanager-setapplicationautostartup-f.md#setapplicationautostartup) |
-| [setApplicationAutoStartup](arkts-ability-autostartupmanager-setapplicationautostartup-f.md#setapplicationautostartup-1) |
+| [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md#getAutoStartupStatusForSelf) |
+| [isAutoStartupSupported](arkts-ability-autostartupmanager-isautostartupsupported-f.md#isAutoStartupSupported) |
+
+<!--Del-->
+### Functions（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md#cancelApplicationAutoStartup-(System-API)) |
+| [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md#cancelApplicationAutoStartup-(System-API)) |
+| [offSystemAutoStartup](arkts-ability-autostartupmanager-offsystemautostartup-f-sys.md#offSystemAutoStartup-(System-API)) |
+| [off_systemAutoStartup](arkts-ability-autostartupmanager-offsystemautostartup-f-sys.md) |
+| [onSystemAutoStartup](arkts-ability-autostartupmanager-onsystemautostartup-f-sys.md#onSystemAutoStartup-(System-API)) |
+| [on_systemAutoStartup](arkts-ability-autostartupmanager-onsystemautostartup-f-sys.md) |
+| [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f-sys.md#queryAllAutoStartupApplications-(System-API)) |
+| [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f-sys.md#queryAllAutoStartupApplications-(System-API)) |
+| [setApplicationAutoStartup](arkts-ability-autostartupmanager-setapplicationautostartup-f-sys.md#setApplicationAutoStartup-(System-API)) |
+| [setApplicationAutoStartup](arkts-ability-autostartupmanager-setapplicationautostartup-f-sys.md#setApplicationAutoStartup-(System-API)) |
+<!--DelEnd-->

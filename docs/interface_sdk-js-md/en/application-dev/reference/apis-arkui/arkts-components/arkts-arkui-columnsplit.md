@@ -1,7 +1,6 @@
 # ColumnSplit
 
-The **ColumnSplit** component lays out child components vertically and inserts a horizontal divider between every two
-child components.
+The **ColumnSplit** component lays out child components vertically and inserts a horizontal divider between every two child components.
 
 ## ColumnSplit
 
@@ -15,6 +14,8 @@ Creates a vertical split layout container with dividers between child components
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ColumnSplitInterface-(): ColumnSplitAttribute--><!--Device-ColumnSplitInterface-(): ColumnSplitAttribute-End-->
@@ -23,4 +24,4 @@ Creates a vertical split layout container with dividers between child components
 
 ## Summary
 
-- [ColumnSplitDividerStyle](arkts-arkui-columnsplit-columnsplitdividerstyle-i.md)
+- [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md)

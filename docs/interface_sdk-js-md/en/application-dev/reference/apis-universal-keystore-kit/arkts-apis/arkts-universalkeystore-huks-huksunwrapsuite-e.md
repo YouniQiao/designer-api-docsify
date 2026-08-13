@@ -6,6 +6,8 @@ Enumerates the algorithm suites for securely importing a key.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksUnwrapSuite--><!--Device-huks-export enum HuksUnwrapSuite-End-->
 
 **System capability:** 
@@ -23,6 +25,8 @@ Use X25519 for key agreement and then use AES-256 GCM to decrypt the key.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,6 +48,8 @@ Use ECDH for key agreement and then use AES-256 GCM to decrypt the key.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2--><!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2-End-->
@@ -63,6 +69,8 @@ Use the temporary SM4 key to encrypt the imported key and use the SM2 key that h
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

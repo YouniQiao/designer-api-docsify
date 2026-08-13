@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-print-interface PrintJobData--><!--Device-print-interface PrintJobData-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -19,6 +21,8 @@ binaryData?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ colorMode: PrintColorMode
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-colorMode: PrintColorMode--><!--Device-PrintJobData-colorMode: PrintColorMode-End-->
@@ -55,6 +61,8 @@ copyNumber: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ docFlavor: DocFlavor
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-docFlavor: DocFlavor--><!--Device-PrintJobData-docFlavor: DocFlavor-End-->
@@ -91,6 +101,8 @@ documentFormat: PrintDocumentFormat
 **类型：** [PrintDocumentFormat](arkts-basicservices-print-printdocumentformat-e.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +122,8 @@ duplexMode: PrintDuplexMode
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-duplexMode: PrintDuplexMode--><!--Device-PrintJobData-duplexMode: PrintDuplexMode-End-->
@@ -127,6 +141,8 @@ fdList?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +162,8 @@ isAutoRotate?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-isAutoRotate?: boolean--><!--Device-PrintJobData-isAutoRotate?: boolean-End-->
@@ -163,6 +181,8 @@ isBorderless?: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,6 +202,8 @@ isCollate?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-isCollate?: boolean--><!--Device-PrintJobData-isCollate?: boolean-End-->
@@ -199,6 +221,8 @@ isLandscape: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,6 +242,8 @@ isReverse?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-isReverse?: boolean--><!--Device-PrintJobData-isReverse?: boolean-End-->
@@ -235,6 +261,8 @@ isSequential?: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,6 +282,8 @@ jobId?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-jobId?: string--><!--Device-PrintJobData-jobId?: string-End-->
@@ -271,6 +301,8 @@ jobName: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,6 +322,8 @@ mediaType?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-mediaType?: string--><!--Device-PrintJobData-mediaType?: string-End-->
@@ -307,6 +341,8 @@ options?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -326,6 +362,8 @@ pageSize: PrintPageSize
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-pageSize: PrintPageSize--><!--Device-PrintJobData-pageSize: PrintPageSize-End-->
@@ -344,6 +382,8 @@ printQuality?: PrintQuality
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
@@ -361,6 +401,8 @@ printerId: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

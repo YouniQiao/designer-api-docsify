@@ -14,9 +14,11 @@ function queryAllApns(): Promise<Array<ApnInfo>>
 
 Query all APN info.
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
@@ -34,7 +36,7 @@ Query all APN info.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 系统事件订阅规则对象接口。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiSysEvent-interface WatchRule--><!--Device-hiSysEvent-interface WatchRule-End-->
 
@@ -20,7 +22,9 @@ domain: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WatchRule-domain: string--><!--Device-WatchRule-domain: string-End-->
 
@@ -38,7 +42,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WatchRule-name: string--><!--Device-WatchRule-name: string-End-->
 
@@ -56,7 +62,9 @@ ruleType: RuleType
 
 **类型：** [RuleType](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WatchRule-ruleType: RuleType--><!--Device-WatchRule-ruleType: RuleType-End-->
 
@@ -67,16 +75,18 @@ ruleType: RuleType
 ## tag
 
 ```TypeScript
-tag?: string
+tag?: string | null | undefined
 ```
 
 事件标签。
 
-**类型：** string
+**类型：** string \| null \| undefined
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-WatchRule-tag?: string--><!--Device-WatchRule-tag?: string-End-->
+**废弃版本：** -1
+
+<!--Device-WatchRule-tag?: string | null | undefined--><!--Device-WatchRule-tag?: string | null | undefined-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

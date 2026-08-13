@@ -12,13 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>
 ```
 
-Copies a file or directory. This API uses a promise to return the result.
-
-File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory.
-
-A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
+Copies a file or directory. This API uses a promise to return the result. File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>-End-->
 
@@ -42,7 +40,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900038 |
 | 13900034 |
 | 13900044 |
@@ -76,11 +74,11 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void
 ```
 
-Copies a file or directory. This API uses an asynchronous callback to return the result.
-
-File copy across devices is supported. This API forcibly overwrites the file or directory.The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
+Copies a file or directory. This API uses an asynchronous callback to return the result. File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -98,7 +96,7 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900038 |
 | 13900034 |
 | 13900041 |
@@ -131,11 +129,11 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void
 ```
 
-Copies a file or directory. This API uses an asynchronous callback to return the result.
-
-File copy across devices is supported. This API forcibly overwrites the file or directory.The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
+Copies a file or directory. This API uses an asynchronous callback to return the result. File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -154,7 +152,7 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900038 |
 | 13900034 |
 | 13900041 |

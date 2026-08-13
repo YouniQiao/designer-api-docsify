@@ -4,6 +4,8 @@ class OverlayManager
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export class OverlayManager--><!--Device-unnamed-export class OverlayManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ Adds a specified ComponentContent node to the OverlayManager.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -30,7 +34,7 @@ Adds a specified ComponentContent node to the OverlayManager.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| content | [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md) | 是 |
 | index | number | 否 |
 
 ## addComponentContentWithOrder
@@ -39,9 +43,11 @@ Adds a specified ComponentContent node to the OverlayManager.
 addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void
 ```
 
-Creates a floating layer node with the specified display order.This API allows you to define the stacking order of the nodes when they are created.
+Creates a floating layer node with the specified display order. This API allows you to define the stacking order of the nodes when they are created.
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,7 +61,7 @@ Creates a floating layer node with the specified display order.This API allows y
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| content | [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md) | 是 |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |
 
 ## hideAllComponentContents
@@ -67,6 +73,8 @@ hideAllComponentContents(): void
 Hide all ComponentContents on the OverlayManager.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,6 +94,8 @@ Hide the ComponentContent.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -98,7 +108,7 @@ Hide the ComponentContent.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| content | [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md) | 是 |
 
 ## openOrderOverlay
 
@@ -109,6 +119,8 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 打开具有指定ComponentContent和选项的浮层。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,7 +134,7 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| content | [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md) | 是 |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 |
 
 **返回值：**
@@ -135,7 +147,7 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 
 | 错误码ID |
 | --- |
-| [103307](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) |
+| [103307](../errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) |
 
 ## removeComponentContent
 
@@ -146,6 +158,8 @@ removeComponentContent(content: ComponentContent): void
 Removes a specified ComponentContent node from the OverlayManager
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,7 +173,7 @@ Removes a specified ComponentContent node from the OverlayManager
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| content | [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md) | 是 |
 
 ## showAllComponentContents
 
@@ -170,6 +184,8 @@ showAllComponentContents(): void
 Show all ComponentContents on the OverlayManager.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,6 +205,8 @@ Show the ComponentContent.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -201,4 +219,4 @@ Show the ComponentContent.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| content | [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md) | 是 |

@@ -6,6 +6,8 @@ Defines the marquee options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface TextMarqueeOptions--><!--Device-unnamed-export declare interface TextMarqueeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the marquee options.
 delay?: int
 ```
 
-The waiting time between each round of the marquee.The value should be an integer.
+The waiting time between each round of the marquee. The value should be an integer.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Set whether the text is faded out.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextMarqueeOptions-fadeout?: boolean--><!--Device-TextMarqueeOptions-fadeout?: boolean-End-->
@@ -64,6 +70,8 @@ The running direction of the marquee.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextMarqueeOptions-fromStart?: boolean--><!--Device-TextMarqueeOptions-fromStart?: boolean-End-->
@@ -76,13 +84,15 @@ The running direction of the marquee.
 loop?: int
 ```
 
-The rounds of the marquee.The value should be an integer.
+The rounds of the marquee. The value should be an integer.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,6 +114,8 @@ The start policy for marquee.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy--><!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy-End-->
@@ -116,13 +128,15 @@ The start policy for marquee.
 marqueeUpdatePolicy?: MarqueeUpdatePolicy
 ```
 
-Marquee scrolling policy after text update.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This attribute takes effect when the marquee is in the playing state and the text content width exceeds the width of the marquee component.Default value is MarqueeUpdatePolicy.DEFAULT.&lt;/p&gt;
+Marquee scrolling policy after text update. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This attribute takes effect when the marquee is in the playing state and the text content width exceeds the width of the marquee component. Default value is MarqueeUpdatePolicy.DEFAULT. &lt;/p&gt;
 
 **Type:** [MarqueeUpdatePolicy](arkts-arkui-text-marqueeupdatepolicy-e.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +150,15 @@ Marquee scrolling policy after text update.&lt;p&gt;&lt;strong&gt;NOTE&lt;/stron
 spacing?: LengthMetrics
 ```
 
-The spacing between two rounds of marquee.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Default value is 48vp.&lt;/p&gt;
+The spacing between two rounds of marquee. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;Default value is 48vp. &lt;/p&gt;
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,6 +180,8 @@ Is need start marquee.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextMarqueeOptions-start: boolean--><!--Device-TextMarqueeOptions-start: boolean-End-->
@@ -183,6 +201,8 @@ The step size of the marquee.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

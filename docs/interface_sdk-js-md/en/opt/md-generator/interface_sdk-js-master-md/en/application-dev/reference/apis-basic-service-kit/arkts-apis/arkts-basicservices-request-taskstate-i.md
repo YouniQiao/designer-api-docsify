@@ -1,10 +1,10 @@
 # TaskState
 
-Upload task information, which is the callback parameter of the   
-[on('complete' | 'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))and   
-[off('complete' | 'fail')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)APIs.
+Upload task information, which is the callback parameter of the [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) and [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#off_progress) APIs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-interface TaskState--><!--Device-request-interface TaskState-End-->
 
@@ -26,7 +26,9 @@ Description of the upload task result.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskState-message: string--><!--Device-TaskState-message: string-End-->
 
@@ -42,7 +44,9 @@ File path.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskState-path: string--><!--Device-TaskState-path: string-End-->
 
@@ -54,14 +58,13 @@ File path.
 responseCode: number
 ```
 
-Return value of an upload task. The value **0** means that the task is successful, and other values means that the task fails. For details about the task result, see **message**.
-
-You are advised to create an upload task by using   
-[request.agent.create](arkts-basicservices-agent-create-f.md#create-1)and handle exceptions based on standard error codes.
+Return value of an upload task. The value **0** means that the task is successful, and other values means that the task fails. For details about the task result, see **message**. You are advised to create an upload task by using [request.agent.create](arkts-basicservices-agent-create-f.md#create)and handle exceptions based on standard error codes.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskState-responseCode: int--><!--Device-TaskState-responseCode: int-End-->
 

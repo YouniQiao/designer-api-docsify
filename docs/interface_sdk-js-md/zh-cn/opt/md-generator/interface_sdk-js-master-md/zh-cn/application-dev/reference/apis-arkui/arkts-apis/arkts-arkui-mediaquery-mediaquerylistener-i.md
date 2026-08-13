@@ -1,18 +1,18 @@
 # MediaQueryListener
 
-媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width <= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。
-
-继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)。
+媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width <= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)。
 
 **继承/实现关系：** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)
 
 **起始版本：** 7
 
-<!--Device-mediaquery-interface MediaQueryListener extends MediaQueryResult--><!--Device-mediaquery-interface MediaQueryListener extends MediaQueryResult-End-->
+**废弃版本：** -1
+
+<!--Device-mediaquery-interface MediaQueryListener--><!--Device-mediaquery-interface MediaQueryListener-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## off('change')
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: Callback<MediaQueryResult>): void
@@ -21,6 +21,8 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 通过句柄向对应的查询条件取消注册回调，当媒体属性发生变更时不再触发指定的回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -54,19 +56,17 @@ listener.on('change', onPortrait) // 注册回调
 listener.off('change', onPortrait) // 注销回调
 ```
 
-## on('change')
+## on_change
 
 ```TypeScript
 on(type: 'change', callback: Callback<MediaQueryResult>): void
 ```
 
-通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。
-
-> **说明：**
-> 
-> 注册的回调中不允许进一步调用on或off。
+通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。 > **说明：** > > 注册的回调中不允许进一步调用on或off。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -85,4 +85,4 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 ## 示例
 
-详见[off('change')](#offchange)示例。
+详见off('change')示例。

@@ -3,6 +3,7 @@
 ## Ellipse
 
 ```TypeScript
+@ComponentBuilder
 export declare function Ellipse(
     options?: EllipseOptions
 ): EllipseAttribute
@@ -14,9 +15,11 @@ export declare function Ellipse(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Ellipse(    options?: EllipseOptions): EllipseAttribute--><!--Device-unnamed-export declare function Ellipse(    options?: EllipseOptions): EllipseAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Ellipse(    options?: EllipseOptions): EllipseAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Ellipse(    options?: EllipseOptions): EllipseAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ export declare function Ellipse(
 ## Ellipse
 
 ```TypeScript
+@Builder
 export declare function Ellipse(
     style: CustomBuilderT<EllipseAttribute>
 ): EllipseAttribute
@@ -47,11 +51,11 @@ export declare function Ellipse(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute--><!--Device-unnamed-export declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute--><!--Device-unnamed-@Builderexport declare function Ellipse(    style: CustomBuilderT<EllipseAttribute>): EllipseAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ export declare function Ellipse(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
+| style | CustomBuilderT&lt;[EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 

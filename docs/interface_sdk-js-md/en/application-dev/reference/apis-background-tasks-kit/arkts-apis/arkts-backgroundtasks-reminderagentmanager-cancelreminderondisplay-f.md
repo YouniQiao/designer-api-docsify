@@ -16,7 +16,9 @@ Cancels the notification card displayed in the notification center with the agen
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>-End-->
 
@@ -26,7 +28,7 @@ Cancels the notification card displayed in the notification center with the agen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called &lt;br&gt;The value range is all integers. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
@@ -38,8 +40,8 @@ Cancels the notification card displayed in the notification center with the agen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
-| [1700007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
 ## Examples
 

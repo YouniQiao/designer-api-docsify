@@ -14,9 +14,11 @@ function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>
 
 Asynchronous interface for writing data to the socket.
 
-**Since:** 18
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>--><!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>-End-->
 
@@ -26,7 +28,7 @@ Asynchronous interface for writing data to the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppConnect). |
+| clientSocket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppConnect). |
 | data | ArrayBuffer | Yes | Indicates the data to write. |
 
 **Return value:**
@@ -39,7 +41,7 @@ Asynchronous interface for writing data to the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2901054 | IO error. |
 | 2900099 | Operation failed. |
 

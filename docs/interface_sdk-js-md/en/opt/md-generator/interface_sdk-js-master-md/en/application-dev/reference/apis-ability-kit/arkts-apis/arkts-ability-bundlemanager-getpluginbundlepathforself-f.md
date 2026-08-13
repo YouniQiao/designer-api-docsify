@@ -12,10 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getPluginBundlePathForSelf(pluginBundleName: string): string
 ```
 
-Obtains the installation path of a specified plugin in the current  
-[application sandbox](../../../file-management/app-sandbox-directory.md).
+Obtains the installation path of a specified plugin in the current [application sandbox](../../../file-management/app-sandbox-directory.md).
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
 
@@ -25,7 +26,7 @@ Obtains the installation path of a specified plugin in the current
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | Yes |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i-sys.md) | string | Yes |
 
 **Return value:**
 
@@ -37,7 +38,7 @@ Obtains the installation path of a specified plugin in the current
 
 | Error Code ID |
 | --- |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 Describes evaluation result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface EvaluationResult--><!--Device-intelligentVoice-interface EvaluationResult-End-->
 
@@ -28,9 +30,11 @@ Describes evaluation result code.
 
 **Type:** [EvaluationResultCode](arkts-basicservices-intelligentvoice-evaluationresultcode-e-sys.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResult-resultCode: EvaluationResultCode--><!--Device-EvaluationResult-resultCode: EvaluationResultCode-End-->
 
@@ -46,11 +50,13 @@ score: int
 
 Evaluation score.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResult-score: int--><!--Device-EvaluationResult-score: int-End-->
 

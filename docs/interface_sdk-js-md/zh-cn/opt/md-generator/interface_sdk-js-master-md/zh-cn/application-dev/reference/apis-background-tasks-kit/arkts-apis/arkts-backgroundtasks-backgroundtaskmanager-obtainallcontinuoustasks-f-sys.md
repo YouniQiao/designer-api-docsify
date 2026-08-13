@@ -8,7 +8,9 @@ function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 
 获取所有长时任务信息，如长时任务ID、长时任务类型等。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 24
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BACKGROUND_TASK_INFO
 
@@ -30,9 +32,9 @@ function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 
 | 错误码ID |
 | --- |
-| [9800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

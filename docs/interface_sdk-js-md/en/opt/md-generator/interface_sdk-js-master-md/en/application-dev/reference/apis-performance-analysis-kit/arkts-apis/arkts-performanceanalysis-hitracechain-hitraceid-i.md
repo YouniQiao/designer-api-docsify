@@ -2,7 +2,9 @@
 
 Defines a **HiTraceId** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-interface HiTraceId--><!--Device-hiTraceChain-interface HiTraceId-End-->
 
@@ -24,7 +26,9 @@ Call chain ID.
 
 **Type:** bigint
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceId-chainId: bigint--><!--Device-HiTraceId-chainId: bigint-End-->
 
@@ -40,7 +44,9 @@ Trace flag. The default value is **0**.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceId-flags?: int--><!--Device-HiTraceId-flags?: int-End-->
 
@@ -56,7 +62,9 @@ Parent span ID. The default value is **0**.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceId-parentSpanId?: int--><!--Device-HiTraceId-parentSpanId?: int-End-->
 
@@ -72,7 +80,9 @@ Span ID. The default value is **0**.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceId-spanId?: int--><!--Device-HiTraceId-spanId?: int-End-->
 

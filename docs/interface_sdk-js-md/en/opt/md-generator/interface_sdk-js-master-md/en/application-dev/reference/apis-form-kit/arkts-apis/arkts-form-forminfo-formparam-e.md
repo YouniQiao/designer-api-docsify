@@ -2,7 +2,9 @@
 
 Enumerates widget parameters.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
 
@@ -14,9 +16,11 @@ Enumerates widget parameters.
 IDENTITY_KEY = "ohos.extra.param.key.form_identity"
 ```
 
-Indicates the key specifying the ID of the form to be obtained, which is represented as want: { "parameters": { IDENTITY_KEY: "119476135" }}.
+Indicates the key specifying the ID of the form to be obtained, which is represented as want: { "parameters": { IDENTITY_KEY: "119476135" } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -30,9 +34,11 @@ Indicates the key specifying the ID of the form to be obtained, which is represe
 DIMENSION_KEY = "ohos.extra.param.key.form_dimension"
 ```
 
-Indicates the key specifying the grid style of the form to be obtained, which is represented as want: { "parameters": { DIMENSION_KEY: FormDimension.Dimension_1_2 }}.
+Indicates the key specifying the grid style of the form to be obtained, which is represented as want: { "parameters": { DIMENSION_KEY: FormDimension.Dimension_1_2 } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,9 +52,11 @@ Indicates the key specifying the grid style of the form to be obtained, which is
 NAME_KEY = "ohos.extra.param.key.form_name"
 ```
 
-Indicates the key specifying the name of the form to be obtained, which is represented as want: { "parameters": { NAME_KEY: "formName" }}.
+Indicates the key specifying the name of the form to be obtained, which is represented as want: { "parameters": { NAME_KEY: "formName" } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,9 +70,11 @@ Indicates the key specifying the name of the form to be obtained, which is repre
 MODULE_NAME_KEY = "ohos.extra.param.key.module_name"
 ```
 
-Indicates the key specifying the name of the module to which the form to be obtained belongs, which is represented as want: { "parameters": { MODULE_NAME_KEY: "formEntry" }}.This constant is mandatory.
+Indicates the key specifying the name of the module to which the form to be obtained belongs, which is represented as want: { "parameters": { MODULE_NAME_KEY: "formEntry" } }. This constant is mandatory.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,9 +88,11 @@ Indicates the key specifying the name of the module to which the form to be obta
 WIDTH_KEY = "ohos.extra.param.key.form_width"
 ```
 
-Indicates the key specifying the width of the form to be obtained, which is represented as want: { "parameters": { WIDTH_KEY: 800 }}.
+Indicates the key specifying the width of the form to be obtained, which is represented as want: { "parameters": { WIDTH_KEY: 800 } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,9 +106,11 @@ Indicates the key specifying the width of the form to be obtained, which is repr
 HEIGHT_KEY = "ohos.extra.param.key.form_height"
 ```
 
-Indicates the key specifying the height of the form to be obtained, which is represented as want: { "parameters": { HEIGHT_KEY: 400 }}.
+Indicates the key specifying the height of the form to be obtained, which is represented as want: { "parameters": { HEIGHT_KEY: 400 } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,9 +124,11 @@ Indicates the key specifying the height of the form to be obtained, which is rep
 TEMPORARY_KEY = "ohos.extra.param.key.form_temporary"
 ```
 
-Indicates the key specifying whether a form is temporary, which is represented as want: { "parameters": { TEMPORARY_KEY: true }}.
+Indicates the key specifying whether a form is temporary, which is represented as want: { "parameters": { TEMPORARY_KEY: true } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -126,9 +142,11 @@ Indicates the key specifying whether a form is temporary, which is represented a
 BUNDLE_NAME_KEY = "ohos.extra.param.key.bundle_name"
 ```
 
-Indicates the key specifying the name of the bundle to be obtained, which is represented as want: { "parameters": { BUNDLE_NAME_KEY: "bundleName" }}.
+Indicates the key specifying the name of the bundle to be obtained, which is represented as want: { "parameters": { BUNDLE_NAME_KEY: "bundleName" } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -142,9 +160,11 @@ Indicates the key specifying the name of the bundle to be obtained, which is rep
 ABILITY_NAME_KEY = "ohos.extra.param.key.ability_name"
 ```
 
-Indicates the key specifying the name of the ability to be obtained, which is represented as want: { "parameters": { ABILITY_NAME_KEY: "abilityName" }}.
+Indicates the key specifying the name of the ability to be obtained, which is represented as want: { "parameters": { ABILITY_NAME_KEY: "abilityName" } }.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,9 +178,11 @@ Indicates the key specifying the name of the ability to be obtained, which is re
 LAUNCH_REASON_KEY = "ohos.extra.param.key.form_launch_reason"
 ```
 
-Indicates the key specifying the launch reason of the form to be obtained, which is represented as want: { "parameters": { LAUNCH_REASON_KEY: LaunchReason.FORM_DEFAULT }}.
+Indicates the key specifying the launch reason of the form to be obtained, which is represented as want: { "parameters": { LAUNCH_REASON_KEY: LaunchReason.FORM_DEFAULT } }.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -174,9 +196,11 @@ Indicates the key specifying the launch reason of the form to be obtained, which
 PARAM_FORM_CUSTOMIZE_KEY = "ohos.extra.param.key.form_customize"
 ```
 
-Indicates the key specifying the custom data of the form to be obtained, which is represented as want: { "parameters": { PARAM_FORM_CUSTOMIZE_KEY: { "key": "userData" } }}.
+Indicates the key specifying the custom data of the form to be obtained, which is represented as want: { "parameters": { PARAM_FORM_CUSTOMIZE_KEY: { "key": "userData" } } }.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -190,9 +214,11 @@ Indicates the key specifying the custom data of the form to be obtained, which i
 FORM_LOCATION_KEY = 'ohos.extra.param.key.form_location'
 ```
 
-Indicates the key specifying the form location, which is represented as want: { "parameters": { FORM_LOCATION_KEY: FormLocation.DESKTOP }}.
+Indicates the key specifying the form location, which is represented as want: { "parameters": { FORM_LOCATION_KEY: FormLocation.DESKTOP } }.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FormParam-FORM_LOCATION_KEY = 'ohos.extra.param.key.form_location'--><!--Device-FormParam-FORM_LOCATION_KEY = 'ohos.extra.param.key.form_location'-End-->
 
@@ -204,9 +230,11 @@ Indicates the key specifying the form location, which is represented as want: { 
 FORM_RENDERING_MODE_KEY = 'ohos.extra.param.key.form_rendering_mode'
 ```
 
-Indicates the key specifying the form rendering mode, which is represented as want: { "parameters": { FORM_RENDERING_MODE_KEY: FormRenderingMode.SINGLE_COLOR }}.
+Indicates the key specifying the form rendering mode, which is represented as want: { "parameters": { FORM_RENDERING_MODE_KEY: FormRenderingMode.SINGLE_COLOR } }.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -220,11 +248,13 @@ Indicates the key specifying the form rendering mode, which is represented as wa
 HOST_BG_INVERSE_COLOR_KEY = 'ohos.extra.param.key.host_bg_inverse_color'
 ```
 
-Indicates the key specifying the inverse of the host background color, which is represented as want: { "parameters": { HOST_BG_INVERSE_COLOR_KEY: "#FF000000" }}.
+Indicates the key specifying the inverse of the host background color, which is represented as want: { "parameters": { HOST_BG_INVERSE_COLOR_KEY: "#FF000000" } }.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormParam-HOST_BG_INVERSE_COLOR_KEY = 'ohos.extra.param.key.host_bg_inverse_color'--><!--Device-FormParam-HOST_BG_INVERSE_COLOR_KEY = 'ohos.extra.param.key.host_bg_inverse_color'-End-->
 
@@ -236,11 +266,13 @@ Indicates the key specifying the inverse of the host background color, which is 
 FORM_PERMISSION_NAME_KEY = 'ohos.extra.param.key.permission_name'
 ```
 
-Indicates the key specifying the user granted permission name, which is represented as want: { "parameters": { FORM_PERMISSION_NAME_KEY: "permissionName" }}.
+Indicates the key specifying the user granted permission name, which is represented as want: { "parameters": { FORM_PERMISSION_NAME_KEY: "permissionName" } }.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormParam-FORM_PERMISSION_NAME_KEY = 'ohos.extra.param.key.permission_name'--><!--Device-FormParam-FORM_PERMISSION_NAME_KEY = 'ohos.extra.param.key.permission_name'-End-->
 
@@ -252,11 +284,13 @@ Indicates the key specifying the user granted permission name, which is represen
 FORM_PERMISSION_GRANTED_KEY = 'ohos.extra.param.key.permission_granted'
 ```
 
-Indicates the key specifying whether the user granted, which is represented as want: { "parameters": { FORM_PERMISSION_GRANTED_KEY: true }}.
+Indicates the key specifying whether the user granted, which is represented as want: { "parameters": { FORM_PERMISSION_GRANTED_KEY: true } }.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormParam-FORM_PERMISSION_GRANTED_KEY = 'ohos.extra.param.key.permission_granted'--><!--Device-FormParam-FORM_PERMISSION_GRANTED_KEY = 'ohos.extra.param.key.permission_granted'-End-->
 
@@ -268,11 +302,13 @@ Indicates the key specifying whether the user granted, which is represented as w
 ORIGINAL_FORM_KEY = 'ohos.extra.param.key.original_form_id'
 ```
 
-Indicates the key specifying the original form id, used in conjunction with LaunchReason.FORM_SIZE_CHANGE.which is represented as want: { "parameters": { ORIGINAL_FORM_KEY: "119476135" }}.
+Indicates the key specifying the original form id, used in conjunction with LaunchReason.FORM_SIZE_CHANGE. which is represented as want: { "parameters": { ORIGINAL_FORM_KEY: "119476135" } }.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormParam-ORIGINAL_FORM_KEY = 'ohos.extra.param.key.original_form_id'--><!--Device-FormParam-ORIGINAL_FORM_KEY = 'ohos.extra.param.key.original_form_id'-End-->
 
@@ -284,11 +320,13 @@ Indicates the key specifying the original form id, used in conjunction with Laun
 EDIT_FORM_KEY = 'ohos.extra.param.key.edit_form_id'
 ```
 
-Indicates the key specifying the edit form id, used in conjunction with LaunchReason.FORM_EDIT_PREVIEW.which is represented as want: { "parameters": { EDIT_FORM_KEY: "119476135" }}.
+Indicates the key specifying the edit form id, used in conjunction with LaunchReason.FORM_EDIT_PREVIEW. which is represented as want: { "parameters": { EDIT_FORM_KEY: "119476135" } }.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormParam-EDIT_FORM_KEY = 'ohos.extra.param.key.edit_form_id'--><!--Device-FormParam-EDIT_FORM_KEY = 'ohos.extra.param.key.edit_form_id'-End-->
 
@@ -300,9 +338,11 @@ Indicates the key specifying the edit form id, used in conjunction with LaunchRe
 UPDATE_FORM_REASON_KEY = 'ohos.extra.param.key.update_form_reason'
 ```
 
-Indicates the key specifying the reason for the form update.which is represented as want: { "parameters": { UPDATE_FORM_REASON_KEY: FormUpdateReason.FORM_NODE_REUSE }}.
+Indicates the key specifying the reason for the form update. which is represented as want: { "parameters": { UPDATE_FORM_REASON_KEY: FormUpdateReason.FORM_NODE_REUSE } }.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,13 +1,12 @@
 # Display
 
-屏幕实例。描述Display对象的属性和方法。
+屏幕实例。描述Display对象的属性和方法。 下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)、 [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync)中的任一方法获取到Display实例，再通过此实例调用对应方法。
 
-下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)、  
-[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync)中的任一方法获取到Display实例，再通过此实例调用对应方法。
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-display-interface Display--><!--Device-display-interface Display-End-->
 
@@ -19,15 +18,15 @@
 getAvailableArea(): Promise<Rect>
 ```
 
-获取当前设备屏幕的可用区域，使用Promise异步回调。
+获取当前设备屏幕的可用区域，使用Promise异步回调。 可用区域是扣除系统UI（如状态栏、Dock栏）后，可供应用程序自由使用的区域。
 
-可用区域是扣除系统UI（如状态栏、Dock栏）后，可供应用程序自由使用的区域。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-getAvailableArea(): Promise<Rect>--><!--Device-Display-getAvailableArea(): Promise<Rect>-End-->
 
@@ -43,8 +42,8 @@ getAvailableArea(): Promise<Rect>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
 ## 示例
 
@@ -96,9 +95,11 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 获取挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。使用callback异步回调。建议应用布局规避该区域。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -110,13 +111,13 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CutoutInfo](arkts-arkui-display-cutoutinfo-i.md)&gt; | 是 | 回调函数。返回不可用屏幕区域对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CutoutInfo](arkts-arkui-display-cutoutinfo-i.md)&gt; | 是 | 回调函数。返回不可用屏幕区域对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
 ## 示例
 
@@ -159,9 +160,11 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 获取挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。使用Promise异步回调。建议应用布局规避该区域。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -179,7 +182,7 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 
 ## 示例
 
@@ -221,11 +224,13 @@ getDisplayCapability(): string
 
 Get current display capability, including foldstatus, displaymode, rotation, and orientation information.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-getDisplayCapability(): string--><!--Device-Display-getDisplayCapability(): string-End-->
 
@@ -241,9 +246,9 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## getLiveCreaseRegion
 
@@ -253,9 +258,11 @@ getLiveCreaseRegion(): FoldCreaseRegion
 
 获取当前显示模式下的实时折痕区域。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion--><!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion-End-->
 
@@ -271,8 +278,8 @@ getLiveCreaseRegion(): FoldCreaseRegion
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -315,7 +322,9 @@ getRoundedCorner(): Array<RoundedCorner>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -333,9 +342,9 @@ getRoundedCorner(): Array<RoundedCorner>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -352,56 +361,6 @@ try {
 }
 ```
 
-## off('availableAreaChange')
-
-```TypeScript
-off(type: 'availableAreaChange', callback?: Callback<Rect>): void
-```
-
-关闭当前设备屏幕可用区域变化的监听。
-
-**起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void--><!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'availableAreaChange' | 是 | 监听事件，固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-## 示例
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.off('availableAreaChange', callback);
-} catch (exception) {
-  console.error(`Failed to unregister callback. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## offAvailableAreaChange
 
 ```TypeScript
@@ -412,7 +371,9 @@ Unregister the callback for available area changes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void--><!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void-End-->
 
@@ -422,14 +383,14 @@ Unregister the callback for available area changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -450,21 +411,23 @@ try {
 }
 ```
 
-## on('availableAreaChange')
+## off_availableAreaChange
 
 ```TypeScript
-on(type: 'availableAreaChange', callback: Callback<Rect>): void
+off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 ```
 
-开启当前设备屏幕可用区域的监听。当屏幕旋转、进入/退出自由多窗模式、设置Dock栏/状态栏等系统控件可见性变化时，触发回调函数，返回可用区域信息。
+关闭当前设备屏幕可用区域变化的监听。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void--><!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void-End-->
+<!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void--><!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -472,16 +435,16 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'availableAreaChange' | 是 | 监听事件。固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 | 回调函数。返回改变后的可用区域。 |
+| type | 'availableAreaChange' | 是 | 监听事件，固定为'availableAreaChange'，表示屏幕可用区域变更。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -494,9 +457,9 @@ let callback: Callback<display.Rect> = (data: display.Rect) => {
 let displayClass: display.Display | null = null;
 try {
   displayClass = display.getDefaultDisplaySync();
-  displayClass.on('availableAreaChange', callback);
+  displayClass.off('availableAreaChange', callback);
 } catch (exception) {
-  console.error(`Failed to register callback. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to unregister callback. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -510,7 +473,9 @@ Register the callback for available area changes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void--><!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void-End-->
 
@@ -520,14 +485,14 @@ Register the callback for available area changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 | Callback used to return the available area |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | 是 | Callback used to return the available area |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -548,21 +513,73 @@ try {
 }
 ```
 
+## on_availableAreaChange
+
+```TypeScript
+on(type: 'availableAreaChange', callback: Callback<Rect>): void
+```
+
+开启当前设备屏幕可用区域的监听。当屏幕旋转、进入/退出自由多窗模式、设置Dock栏/状态栏等系统控件可见性变化时，触发回调函数，返回可用区域信息。
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void--><!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'availableAreaChange' | 是 | 监听事件。固定为'availableAreaChange'，表示屏幕可用区域变更。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | 是 | 回调函数。返回改变后的可用区域。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<display.Rect> = (data: display.Rect) => {
+  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
+};
+let displayClass: display.Display | null = null;
+try {
+  displayClass = display.getDefaultDisplaySync();
+  displayClass.on('availableAreaChange', callback);
+} catch (exception) {
+  console.error(`Failed to register callback. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
 ## alive
 
 ```TypeScript
 alive: boolean
 ```
 
-显示设备的启用状态，表示设备是否处于正常运行状态。true表示已启用，处于正常运行状态；false表示未启用，未处于正常运行状态。
-
-SystemCapability.WindowManager.WindowManager.Core
+显示设备的启用状态，表示设备是否处于正常运行状态。true表示已启用，处于正常运行状态；false表示未启用，未处于正常运行状态。 SystemCapability.WindowManager.WindowManager.Core
 
 **类型：** boolean
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -576,19 +593,17 @@ SystemCapability.WindowManager.WindowManager.Core
 availableHeight: long
 ```
 
-显示设备的可用区域高度，单位为px，该参数为大于0的整数。
+显示设备的可用区域高度，单位为px，该参数为大于0的整数。 SystemCapability.WindowManager.WindowManager.Core 该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过height属性获取当前设备屏幕的可用区域高度。
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** long
 
-该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过height属性获取当前设备屏幕的可用区域高度。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-availableHeight: long--><!--Device-Display-availableHeight: long-End-->
 
@@ -600,19 +615,17 @@ SystemCapability.WindowManager.WindowManager.Core
 availableWidth: long
 ```
 
-显示设备的可用区域宽度，单位为px，该参数为大于0的整数。
+显示设备的可用区域宽度，单位为px，该参数为大于0的整数。 SystemCapability.WindowManager.WindowManager.Core 该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过width属性获取当前设备屏幕的可用区域宽度。
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** long
 
-该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过width属性获取当前设备屏幕的可用区域宽度。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-availableWidth: long--><!--Device-Display-availableWidth: long-End-->
 
@@ -624,15 +637,15 @@ SystemCapability.WindowManager.WindowManager.Core
 colorSpaces: Array<colorSpaceManager.ColorSpace>
 ```
 
-显示设备支持的所有色域类型。
-
-SystemCapability.WindowManager.WindowManager.Core
+显示设备支持的所有色域类型。 SystemCapability.WindowManager.WindowManager.Core
 
 **类型：** Array&lt;colorSpaceManager.ColorSpace&gt;
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -646,15 +659,15 @@ SystemCapability.WindowManager.WindowManager.Core
 densityDPI: double
 ```
 
-显示设备的物理像素密度，表示每英寸上的像素点数。该参数为浮点数，单位为px。一般取值160.0、480.0等，实际能取到的值取决于不同设备设置里提供的可选值。
+显示设备的物理像素密度，表示每英寸上的像素点数。该参数为浮点数，单位为px。一般取值160.0、480.0等，实际能取到的值取决于不同设备设置里提供的可选值。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -668,17 +681,15 @@ SystemCapability.WindowManager.WindowManager.Core
 densityPixels: double
 ```
 
-显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为：![densityPixels](../../../reference/apis-arkui/figures/densityPixels.jpg)
+显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为： 该参数为浮点数，受densityDPI范围限制，取值范围在[0.5，4.0]。一般取值1.0、3.0等，实际取值取决于不同设备提供的densityDPI。 SystemCapability.WindowManager.WindowManager.Core
 
-该参数为浮点数，受densityDPI范围限制，取值范围在[0.5，4.0]。一般取值1.0、3.0等，实际取值取决于不同设备提供的densityDPI。
+**类型：** double
 
-SystemCapability.WindowManager.WindowManager.Core
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -692,15 +703,15 @@ SystemCapability.WindowManager.WindowManager.Core
 hdrFormats: Array<hdrCapability.HDRFormat>
 ```
 
-显示设备支持的所有HDR格式。
-
-SystemCapability.WindowManager.WindowManager.Core
+显示设备支持的所有HDR格式。 SystemCapability.WindowManager.WindowManager.Core
 
 **类型：** Array&lt;hdrCapability.HDRFormat&gt;
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -714,15 +725,15 @@ SystemCapability.WindowManager.WindowManager.Core
 height: long
 ```
 
-显示设备的屏幕高度，单位为px，该参数为整数。
+显示设备的屏幕高度，单位为px，该参数为整数。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -736,15 +747,15 @@ SystemCapability.WindowManager.WindowManager.Core
 id: long
 ```
 
-显示设备的屏幕ID，该参数为大于等于0的整数。
+显示设备的屏幕ID，该参数为大于等于0的整数。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -758,15 +769,15 @@ SystemCapability.WindowManager.WindowManager.Core
 name: string
 ```
 
-显示设备的名称。
-
-SystemCapability.WindowManager.WindowManager.Core
+显示设备的名称。 SystemCapability.WindowManager.WindowManager.Core
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -780,15 +791,15 @@ SystemCapability.WindowManager.WindowManager.Core
 orientation: Orientation
 ```
 
-表示显示设备当前显示的方向。
-
-SystemCapability.WindowManager.WindowManager.Core
+表示显示设备当前显示的方向。 SystemCapability.WindowManager.WindowManager.Core
 
 **类型：** Orientation
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -802,15 +813,15 @@ SystemCapability.WindowManager.WindowManager.Core
 refreshRate: int
 ```
 
-显示设备当前采用的刷新率，该参数为整数，单位为Hz。
+显示设备当前采用的刷新率，该参数为整数，单位为Hz。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -824,23 +835,15 @@ SystemCapability.WindowManager.WindowManager.Core
 rotation: int
 ```
 
-显示设备的屏幕顺时针旋转角度。
+显示设备的屏幕顺时针旋转角度。 值为0时，表示显示设备屏幕顺时针旋转为0°，表示显示设备的标准显示方向； 值为1时，表示显示设备屏幕顺时针旋转为90°； 值为2时，表示显示设备屏幕顺时针旋转为180°； 值为3时，表示显示设备屏幕顺时针旋转为270°。 SystemCapability.WindowManager.WindowManager.Core
 
-值为0时，表示显示设备屏幕顺时针旋转为0°，表示显示设备的标准显示方向；
+**类型：** int
 
-值为1时，表示显示设备屏幕顺时针旋转为90°；
+**起始版本：** 23
 
-值为2时，表示显示设备屏幕顺时针旋转为180°；
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-值为3时，表示显示设备屏幕顺时针旋转为270°。
-
-SystemCapability.WindowManager.WindowManager.Core
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -854,15 +857,15 @@ SystemCapability.WindowManager.WindowManager.Core
 scaledDensity: double
 ```
 
-显示设备上的字体的缩放因子。该参数为浮点数，通常与densityPixels相同。
+显示设备上的字体的缩放因子。该参数为浮点数，通常与densityPixels相同。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -876,17 +879,17 @@ SystemCapability.WindowManager.WindowManager.Core
 screenShape?: ScreenShape
 ```
 
-显示设备的屏幕形状，默认值为RECTANGLE。
-
-SystemCapability.WindowManager.WindowManager.Core
+显示设备的屏幕形状，默认值为RECTANGLE。 SystemCapability.WindowManager.WindowManager.Core
 
 **类型：** [ScreenShape](arkts-arkui-display-screenshape-e.md)
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-screenShape?: ScreenShape--><!--Device-Display-screenShape?: ScreenShape-End-->
 
@@ -898,17 +901,17 @@ SystemCapability.WindowManager.WindowManager.Core
 sourceMode?: DisplaySourceMode
 ```
 
-显示设备的显示模式枚举，默认值为DisplaySourceMode.NONE。
-
-SystemCapability.Window.SessionManager
+显示设备的显示模式枚举，默认值为DisplaySourceMode.NONE。 SystemCapability.Window.SessionManager
 
 **类型：** [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md)
 
-**起始版本：** 19
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-sourceMode?: DisplaySourceMode--><!--Device-Display-sourceMode?: DisplaySourceMode-End-->
 
@@ -920,15 +923,15 @@ SystemCapability.Window.SessionManager
 state: DisplayState
 ```
 
-显示设备的状态。
-
-SystemCapability.WindowManager.WindowManager.Core
+显示设备的状态。 SystemCapability.WindowManager.WindowManager.Core
 
 **类型：** [DisplayState](arkts-arkui-display-displaystate-e.md)
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -942,17 +945,17 @@ SystemCapability.WindowManager.WindowManager.Core
 supportedRefreshRates?: Array<int>
 ```
 
-显示设备支持的所有刷新率，从小到大排序。刷新率值为正整数，单位为Hz。默认为空。
+显示设备支持的所有刷新率，从小到大排序。刷新率值为正整数，单位为Hz。默认为空。 SystemCapability.Window.SessionManager
 
-SystemCapability.Window.SessionManager
+**类型：** Array&lt;int&gt;
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-supportedRefreshRates?: Array<int>--><!--Device-Display-supportedRefreshRates?: Array<int>-End-->
 
@@ -964,15 +967,15 @@ SystemCapability.Window.SessionManager
 width: long
 ```
 
-显示设备的屏幕宽度，单位为px，该参数为整数。
+显示设备的屏幕宽度，单位为px，该参数为整数。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -986,17 +989,17 @@ SystemCapability.WindowManager.WindowManager.Core
 x?: long
 ```
 
-显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。
+显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。 SystemCapability.Window.SessionManager
 
-SystemCapability.Window.SessionManager
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 19
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-x?: long--><!--Device-Display-x?: long-End-->
 
@@ -1008,15 +1011,15 @@ SystemCapability.Window.SessionManager
 xDPI: double
 ```
 
-x轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。
+x轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1030,17 +1033,17 @@ SystemCapability.WindowManager.WindowManager.Core
 y?: long
 ```
 
-显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。
+显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。 SystemCapability.Window.SessionManager
 
-SystemCapability.Window.SessionManager
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 19
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Display-y?: long--><!--Device-Display-y?: long-End-->
 
@@ -1052,15 +1055,15 @@ SystemCapability.Window.SessionManager
 yDPI: double
 ```
 
-y轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。
+y轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。 SystemCapability.WindowManager.WindowManager.Core
 
-SystemCapability.WindowManager.WindowManager.Core
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

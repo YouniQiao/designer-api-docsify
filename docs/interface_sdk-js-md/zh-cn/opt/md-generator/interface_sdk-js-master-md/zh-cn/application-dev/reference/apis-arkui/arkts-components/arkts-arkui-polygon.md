@@ -1,18 +1,8 @@
 # Polygon
 
-多边形绘制组件。该组件通过设置顶点坐标列表来定义多边形的形状，支持填充颜色、边框样式等属性配置。组件采用二维坐标系统，按照顶点顺序依次连接形成封闭多边形区域。适用于绘制三角形、四边形、五边形等自定义多边形形状，以及实现图表、图标等需要
-多边形元素的可视化场景。
+多边形绘制组件。该组件通过设置顶点坐标列表来定义多边形的形状，支持填充颜色、边框样式等属性配置。组件采用二维坐标系统，按照顶点顺序依次连接形成封闭多边形区域。适用于绘制三角形、四边形、五边形等自定义多边形形状，以及实现图表、图标等需要 多边形元素的可视化场景。 > **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > updateConstructorParams接口更新构造参数。
 
-> **说明：**
->
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
->
-> 该组件从API version 20开始支持使用[AttributeUpdater]{@link ../../../arkui/AttributeUpdater}类的
-> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
-
-## 子组件
-
-无
+## 子组件 无
 
 ## Polygon
 
@@ -20,9 +10,11 @@
 Polygon(options?: PolygonOptions)
 ```
 
-Uses new to create Polygon.Anonymous Object Rectification.
+Uses new to create Polygon. Anonymous Object Rectification.
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,6 +41,8 @@ Polygon(options?: PolygonOptions)
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -65,4 +59,4 @@ Polygon(options?: PolygonOptions)
 
 ## 汇总
 
-- [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md)
+- [PolygonOptions](arkts-arkui-polygonoptions-i.md)

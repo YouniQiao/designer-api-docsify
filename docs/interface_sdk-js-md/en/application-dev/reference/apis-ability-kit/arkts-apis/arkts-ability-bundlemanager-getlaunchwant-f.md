@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getLaunchWant(): Want
 ```
 
-Obtains the **Want** parameters of the  
-[entry UIAbility](../../../quick-start/application-package-glossary.md#uiability) of the current application.
+Obtains the **Want** parameters of the [entry UIAbility](../../../quick-start/application-package-glossary.md#uiability) of the current application.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-function getLaunchWant(): Want--><!--Device-bundleManager-function getLaunchWant(): Want-End-->
 
@@ -35,7 +36,7 @@ Obtains the **Want** parameters of the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700072](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700072-launch-want-does-not-exist) | The launch want is not found. |
+| [17700072](../errorcode-bundle.md#17700072-launch-want-does-not-exist) | The launch want is not found. |
 
 ## Examples
 

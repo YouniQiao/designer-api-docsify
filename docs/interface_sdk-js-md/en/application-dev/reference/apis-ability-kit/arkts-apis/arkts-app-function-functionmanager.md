@@ -6,6 +6,8 @@ The module provides the capability to manage and invoke functions in the system.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace functionManager--><!--Device-unnamed-declare namespace functionManager-End-->
@@ -27,8 +29,8 @@ import { functionManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md#invokefunction) | Invoke a function by functionNamespace and functionName. |
-| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md#queryfunctions) | Query all available functions. |
+| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md#invokeFunction) | Invoke a function by functionNamespace and functionName. |
+| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md#queryFunctions) | Query all available functions. |
 <!--DelEnd-->
 
 <!--Del-->

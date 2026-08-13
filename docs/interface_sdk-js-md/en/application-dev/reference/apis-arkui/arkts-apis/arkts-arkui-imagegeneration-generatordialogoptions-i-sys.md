@@ -6,6 +6,8 @@ Parameters used to open the ImageGeneratorDialog.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GeneratorDialogOptions--><!--Device-imageGeneration-interface GeneratorDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,6 +34,8 @@ Initial text information used for AI-generated image tasks.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorDialogOptions-content?: ResourceStr--><!--Device-GeneratorDialogOptions-content?: ResourceStr-End-->
@@ -53,6 +57,8 @@ Custom icons used on the AI generated image results page.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +82,8 @@ The following configuration parameters are used to customize the imported icon.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorDialogOptions-customImportIcon?: CustomImportIcon--><!--Device-GeneratorDialogOptions-customImportIcon?: CustomImportIcon-End-->
@@ -97,6 +105,8 @@ Model used for AI generate image tasks.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,6 +130,8 @@ Initial image parameters used for AI-generated image tasks.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorDialogOptions-images?: Array<ImageItem>--><!--Device-GeneratorDialogOptions-images?: Array<ImageItem>-End-->
@@ -141,6 +153,8 @@ Information for LiveView in AI image generation.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,6 +178,8 @@ Indicates whether to enable minimize during image generation.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorDialogOptions-minimizeDuringGeneration?: boolean--><!--Device-GeneratorDialogOptions-minimizeDuringGeneration?: boolean-End-->
@@ -180,11 +196,13 @@ onAreaDidChange?: Callback<common2D.Rect>
 
 Callback triggered when the ImageGeneratorDialog changes in size or position.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;common2D.Rect&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;common2D.Rect&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,13 +218,15 @@ Callback triggered when the ImageGeneratorDialog changes in size or position.
 recoverFromCache?: boolean
 ```
 
-Whether to recover from cache for AI image generation.The persistent cache file is used to store configuration parameters for AI image generation.
+Whether to recover from cache for AI image generation. The persistent cache file is used to store configuration parameters for AI image generation.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,6 +249,8 @@ Text polishing model used in AI generate image tasks.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

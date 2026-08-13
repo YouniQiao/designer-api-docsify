@@ -6,6 +6,8 @@ Defines the socket connection information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface SocketMessageInfo--><!--Device-socket-export interface SocketMessageInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,6 +32,8 @@ Receive the message event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-SocketMessageInfo-message: ArrayBuffer--><!--Device-SocketMessageInfo-message: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -47,6 +51,8 @@ Socket connection information.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-SocketMessageInfo-remoteInfo: SocketRemoteInfo--><!--Device-SocketMessageInfo-remoteInfo: SocketRemoteInfo-End-->
 

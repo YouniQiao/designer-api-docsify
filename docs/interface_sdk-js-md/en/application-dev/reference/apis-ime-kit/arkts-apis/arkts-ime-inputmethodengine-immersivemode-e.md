@@ -2,9 +2,11 @@
 
 Enumerates the immersive modes of the input method.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export enum ImmersiveMode--><!--Device-inputMethodEngine-export enum ImmersiveMode-End-->
 
@@ -18,9 +20,11 @@ NONE_IMMERSIVE = 0
 
 Default immersive mode, the panel is not in immersive mode.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImmersiveMode-NONE_IMMERSIVE = 0--><!--Device-ImmersiveMode-NONE_IMMERSIVE = 0-End-->
 
@@ -34,9 +38,11 @@ IMMERSIVE
 
 Immersive mode of the input method.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImmersiveMode-IMMERSIVE--><!--Device-ImmersiveMode-IMMERSIVE-End-->
 
@@ -50,9 +56,11 @@ LIGHT_IMMERSIVE
 
 Light immersive mode.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImmersiveMode-LIGHT_IMMERSIVE--><!--Device-ImmersiveMode-LIGHT_IMMERSIVE-End-->
 
@@ -66,9 +74,11 @@ DARK_IMMERSIVE
 
 Dark immersive mode.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImmersiveMode-DARK_IMMERSIVE--><!--Device-ImmersiveMode-DARK_IMMERSIVE-End-->
 

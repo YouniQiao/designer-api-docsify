@@ -4,6 +4,8 @@ Describes the translation parameters.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-matrix4-interface TranslateOption--><!--Device-matrix4-interface TranslateOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,17 +22,13 @@ import { matrix4 } from '@kit.ArkUI';
 x?: number
 ```
 
-Translation distance along the x-axis.
-
-Unit: px
-
-Default value: **0**
-
-Value range: (-∞, +∞)
+Translation distance along the x-axis. Unit: px Default value: **0** Value range: (-∞, +∞)
 
 **Type:** number
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,17 +42,13 @@ Value range: (-∞, +∞)
 y?: number
 ```
 
-Translation distance along the y-axis.
-
-Unit: px
-
-Default value: **0**
-
-Value range: (-∞, +∞)
+Translation distance along the y-axis. Unit: px Default value: **0** Value range: (-∞, +∞)
 
 **Type:** number
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,17 +62,13 @@ Value range: (-∞, +∞)
 z?: number
 ```
 
-Translation distance along the z-axis.
-
-Unit: px
-
-Default value: **0**
-
-Value range: (-∞, +∞)
+Translation distance along the z-axis. Unit: px Default value: **0** Value range: (-∞, +∞)
 
 **Type:** number
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

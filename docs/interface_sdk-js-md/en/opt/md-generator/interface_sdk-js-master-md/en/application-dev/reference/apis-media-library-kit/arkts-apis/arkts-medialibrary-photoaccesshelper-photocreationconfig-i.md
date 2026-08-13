@@ -2,7 +2,9 @@
 
 Represents the configuration for saving a media asset (image or video) to the media library, including the file name.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoCreationConfig--><!--Device-photoAccessHelper-interface PhotoCreationConfig-End-->
 
@@ -24,9 +26,11 @@ File name extension, for example, **'jpg'**.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhotoCreationConfig-fileNameExtension: string--><!--Device-PhotoCreationConfig-fileNameExtension: string-End-->
 
@@ -38,14 +42,15 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-Type of the file to create, which can be **IMAGE** or **VIDEO**. See   
-[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#PhotoType).
+Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#PhotoType).
 
 **Type:** PhotoType
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhotoCreationConfig-photoType: PhotoType--><!--Device-PhotoCreationConfig-photoType: PhotoType-End-->
 
@@ -57,14 +62,15 @@ Type of the file to create, which can be **IMAGE** or **VIDEO**. See
 subtype?: PhotoSubtype
 ```
 
-Image or video file subtype. The default value is **DEFAULT**. See   
-[PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md#PhotoSubtype).
+Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md#PhotoSubtype-(System-API)).
 
 **Type:** PhotoSubtype
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhotoCreationConfig-subtype?: PhotoSubtype--><!--Device-PhotoCreationConfig-subtype?: PhotoSubtype-End-->
 
@@ -76,18 +82,15 @@ Image or video file subtype. The default value is **DEFAULT**. See
 title?: string
 ```
 
-Title of the image or video. If this parameter is not passed, the system generates a title. The title must meet the following requirements:
-
-- It must not contain a file name extension.  
-- The total length of the file name, which is in the format of title+file name extension, must be between 1 and 2  
-55 characters.  
-- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]
+Title of the image or video. If this parameter is not passed, the system generates a title. The title must meet the following requirements: - It must not contain a file name extension. - The total length of the file name, which is in the format of title+file name extension, must be between 1 and 2 55 characters. - It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhotoCreationConfig-title?: string--><!--Device-PhotoCreationConfig-title?: string-End-->
 

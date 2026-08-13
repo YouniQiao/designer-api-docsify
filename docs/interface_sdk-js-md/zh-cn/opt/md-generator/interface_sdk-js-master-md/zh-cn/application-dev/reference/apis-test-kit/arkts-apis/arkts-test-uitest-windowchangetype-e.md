@@ -2,7 +2,9 @@
 
 支持监听的窗口变化事件类型。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare enum WindowChangeType--><!--Device-unnamed-declare enum WindowChangeType-End-->
 
@@ -14,13 +16,13 @@
 WINDOW_UNDEFINED = 0
 ```
 
-非窗口变化事件。
+非窗口变化事件。 **说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
 
-**说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
+**起始版本：** 23
 
-**起始版本：** 22
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 
@@ -34,9 +36,11 @@ WINDOW_ADDED = 1
 
 窗口出现事件。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
 
@@ -50,9 +54,11 @@ WINDOW_REMOVED = 2
 
 窗口消失事件。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowChangeType-WINDOW_REMOVED = 2--><!--Device-WindowChangeType-WINDOW_REMOVED = 2-End-->
 
@@ -66,9 +72,11 @@ WINDOW_BOUNDS_CHANGED = 3
 
 窗口边框变化事件。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 

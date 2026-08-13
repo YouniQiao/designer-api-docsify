@@ -2,7 +2,9 @@
 
 Describes the options for the audio-haptic player.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticPlayerOptions--><!--Device-audioHaptic-interface AudioHapticPlayerOptions-End-->
 
@@ -24,7 +26,9 @@ Whether to mute the audio. **true** to mute, **false** otherwise. If this parame
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayerOptions-muteAudio?: boolean--><!--Device-AudioHapticPlayerOptions-muteAudio?: boolean-End-->
 
@@ -40,7 +44,9 @@ Whether to mute haptics feedback. **true** to mute, **false** otherwise. If this
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayerOptions-muteHaptics?: boolean--><!--Device-AudioHapticPlayerOptions-muteHaptics?: boolean-End-->
 

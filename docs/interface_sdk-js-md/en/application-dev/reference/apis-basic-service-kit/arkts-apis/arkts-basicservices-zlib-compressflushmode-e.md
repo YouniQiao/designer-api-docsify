@@ -2,9 +2,11 @@
 
 CompressFlushMode
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-zlib-export enum CompressFlushMode--><!--Device-zlib-export enum CompressFlushMode-End-->
 
@@ -18,11 +20,13 @@ NO_FLUSH = 0
 
 Default value, indicating a normal operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompressFlushMode-NO_FLUSH = 0--><!--Device-CompressFlushMode-NO_FLUSH = 0-End-->
 
@@ -36,11 +40,13 @@ PARTIAL_FLUSH = 1
 
 Generates some refresh points in the stream.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompressFlushMode-PARTIAL_FLUSH = 1--><!--Device-CompressFlushMode-PARTIAL_FLUSH = 1-End-->
 
@@ -54,11 +60,13 @@ SYNC_FLUSH = 2
 
 Forcibly outputs all compressed data while maintaining the compression stream state.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompressFlushMode-SYNC_FLUSH = 2--><!--Device-CompressFlushMode-SYNC_FLUSH = 2-End-->
 
@@ -72,11 +80,13 @@ FULL_FLUSH = 3
 
 Resets the compression state.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompressFlushMode-FULL_FLUSH = 3--><!--Device-CompressFlushMode-FULL_FLUSH = 3-End-->
 
@@ -90,11 +100,13 @@ FINISH = 4
 
 Ends the compression or decompression process.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompressFlushMode-FINISH = 4--><!--Device-CompressFlushMode-FINISH = 4-End-->
 
@@ -108,11 +120,13 @@ BLOCK = 5
 
 Allows more precise control.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompressFlushMode-BLOCK = 5--><!--Device-CompressFlushMode-BLOCK = 5-End-->
 
@@ -126,11 +140,13 @@ TREES = 6
 
 Implements special purposes.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompressFlushMode-TREES = 6--><!--Device-CompressFlushMode-TREES = 6-End-->
 

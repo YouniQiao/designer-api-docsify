@@ -20,8 +20,7 @@ Enumerates the **DefaultChangeUri** subtypes.
 DEFAULT_PHOTO_URI
 ```
 
-Default **PhotoAsset** URI. The **PhotoAsset** change notifications are received based on this parameter and   
-**forSubUri{true}**.
+Default **PhotoAsset** URI. The **PhotoAsset** change notifications are received based on this parameter and **forSubUri{true}**.
 
 **Since:** 10
 
@@ -61,8 +60,7 @@ Default album URI. Album change notifications are received based on this paramet
 DEFAULT_AUDIO_URI
 ```
 
-Default **AudioAsset** URI. The **AudioAsset** change notifications are received based on this parameter and   
-**forSubUri{true}**.
+Default **AudioAsset** URI. The **AudioAsset** change notifications are received based on this parameter and **forSubUri{true}**.
 
 **Since:** 10
 

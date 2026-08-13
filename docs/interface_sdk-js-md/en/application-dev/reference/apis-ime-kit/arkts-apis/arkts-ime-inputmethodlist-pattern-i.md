@@ -2,9 +2,11 @@
 
 Define pattern of keyboard. The caller must be the current inputmethod.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Pattern--><!--Device-unnamed-export interface Pattern-End-->
 
@@ -26,9 +28,11 @@ Mandatory. Default icon.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pattern-icon: Resource--><!--Device-Pattern-icon: Resource-End-->
 
@@ -44,9 +48,11 @@ Mandatory. Icon for the selected option.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pattern-selectedIcon: Resource--><!--Device-Pattern-selectedIcon: Resource-End-->
 

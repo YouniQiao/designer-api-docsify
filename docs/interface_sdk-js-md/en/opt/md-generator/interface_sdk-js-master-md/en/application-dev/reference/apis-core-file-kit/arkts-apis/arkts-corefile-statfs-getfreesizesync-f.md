@@ -14,7 +14,9 @@ function getFreeSizeSync(path: string): number
 
 Obtains the free size of the specified file system, in bytes. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statfs-function getFreeSizeSync(path: string): long--><!--Device-statfs-function getFreeSizeSync(path: string): long-End-->
 

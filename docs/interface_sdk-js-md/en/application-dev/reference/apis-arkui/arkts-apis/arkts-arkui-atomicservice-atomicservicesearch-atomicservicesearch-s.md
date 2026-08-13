@@ -6,7 +6,7 @@
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AtomicServiceSearch--><!--Device-unnamed-export declare struct AtomicServiceSearch-End-->
 
@@ -32,6 +32,8 @@ Set the Search component controller.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceSearch-controller?: SearchController--><!--Device-AtomicServiceSearch-controller?: SearchController-End-->
@@ -52,6 +54,8 @@ Function settings in the selection area (right).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceSearch-operation?: OperationParams--><!--Device-AtomicServiceSearch-operation?: OperationParams-End-->
@@ -61,10 +65,11 @@ Function settings in the selection area (right).
 ## placeholder
 
 ```TypeScript
-placeholder?: ResourceStr
+@Prop
+  placeholder?: ResourceStr
 ```
 
-Indicates default prompt text displayed in the search box.The default value is Search, which supports globalization.
+Indicates default prompt text displayed in the search box. The default value is Search, which supports globalization.
 
 **Type:** ResourceStr
 
@@ -72,18 +77,19 @@ Indicates default prompt text displayed in the search box.The default value is S
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AtomicServiceSearch-placeholder?: ResourceStr--><!--Device-AtomicServiceSearch-placeholder?: ResourceStr-End-->
+<!--Device-AtomicServiceSearch-@Prop  placeholder?: ResourceStr--><!--Device-AtomicServiceSearch-@Prop  placeholder?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## search
 
 ```TypeScript
-search?: SearchParams
+@Prop
+  search?: SearchParams
 ```
 
 Events and styles supported by the search area.
@@ -94,18 +100,19 @@ Events and styles supported by the search area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AtomicServiceSearch-search?: SearchParams--><!--Device-AtomicServiceSearch-search?: SearchParams-End-->
+<!--Device-AtomicServiceSearch-@Prop  search?: SearchParams--><!--Device-AtomicServiceSearch-@Prop  search?: SearchParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## select
 
 ```TypeScript
-select?: SelectParams
+@Prop
+  select?: SelectParams
 ```
 
 Contents, events, and styles of the select area.
@@ -116,18 +123,19 @@ Contents, events, and styles of the select area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AtomicServiceSearch-select?: SelectParams--><!--Device-AtomicServiceSearch-select?: SelectParams-End-->
+<!--Device-AtomicServiceSearch-@Prop  select?: SelectParams--><!--Device-AtomicServiceSearch-@Prop  select?: SelectParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
 
 ```TypeScript
-value?: ResourceStr
+@Prop
+  value?: ResourceStr
 ```
 
 Sets the search text content that is currently displayed.
@@ -138,11 +146,11 @@ Sets the search text content that is currently displayed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AtomicServiceSearch-value?: ResourceStr--><!--Device-AtomicServiceSearch-value?: ResourceStr-End-->
+<!--Device-AtomicServiceSearch-@Prop  value?: ResourceStr--><!--Device-AtomicServiceSearch-@Prop  value?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

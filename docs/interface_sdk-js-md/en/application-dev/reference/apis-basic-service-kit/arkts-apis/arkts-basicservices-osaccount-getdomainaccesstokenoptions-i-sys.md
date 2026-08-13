@@ -2,9 +2,11 @@
 
 Defines the options for obtaining a domain access token.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface GetDomainAccessTokenOptions--><!--Device-osAccount-interface GetDomainAccessTokenOptions-End-->
 
@@ -21,18 +23,20 @@ import { osAccount } from '@kit.BasicServicesKit';
 ## businessParams
 
 ```TypeScript
-businessParams: Record<string, Object>
+businessParams: Record<string, RecordData>
 ```
 
-Service parameters customized by the service party based on the request protocol.
+Indicates the business parameters.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, Object>--><!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, RecordData>--><!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -46,11 +50,13 @@ callerUid: int
 
 Unique identifier of the caller.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDomainAccessTokenOptions-callerUid: int--><!--Device-GetDomainAccessTokenOptions-callerUid: int-End-->
 
@@ -68,9 +74,11 @@ Domain account information.
 
 **Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDomainAccessTokenOptions-domainAccountInfo: DomainAccountInfo--><!--Device-GetDomainAccessTokenOptions-domainAccountInfo: DomainAccountInfo-End-->
 
@@ -88,9 +96,11 @@ Token of the domain account.
 
 **Type:** Uint8Array
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDomainAccessTokenOptions-domainAccountToken: Uint8Array--><!--Device-GetDomainAccessTokenOptions-domainAccountToken: Uint8Array-End-->
 

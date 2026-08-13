@@ -4,6 +4,8 @@ Defines the option content in the dialog box. You can configure the text, icon, 
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface SheetInfo--><!--Device-unnamed-interface SheetInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,11 @@ action: VoidCallback
 
 Callback when the sheet is selected.
 
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -30,13 +36,13 @@ Callback when the sheet is selected.
 icon?: string | Resource
 ```
 
-Sheet icon. By default, no icon is displayed.
-
-The string type can be used to load local images and, more frequently, online images. The value can be a relative path to a local image, for example, **Image("common/test.jpg")**.
+Sheet icon. By default, no icon is displayed. The string type can be used to load local images and, more frequently, online images. The value can be a relative path to a local image, for example, **Image("common/test.jpg")**.
 
 **Type:** string \| Resource
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,13 +56,13 @@ The string type can be used to load local images and, more frequently, online im
 title: string | Resource
 ```
 
-Sheet text.
-
-If the text is too long to display, a scrollbar is displayed.
+Sheet text. If the text is too long to display, a scrollbar is displayed.
 
 **Type:** string \| Resource
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

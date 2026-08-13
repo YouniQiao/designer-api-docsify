@@ -4,6 +4,8 @@ Describes the calendar configuration information.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-interface CalendarConfig--><!--Device-calendarManager-interface CalendarConfig-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -20,11 +22,13 @@ import { calendarManager } from '@kit.CalendarKit';
 color?: number | string
 ```
 
-Calendar color. If the value is a number, the value ranges from 0x000001 to 0xFFFFFF or from 0x00000001 to 0xFFFFFFFF.If the value is a string, the value contains 7 or 9 characters, for example, **#FFFFFF** or **#FFFFFFFF**. If this parameter is not set, the default value **0xFF0A59F7** is used.
+Calendar color. If the value is a number, the value ranges from 0x000001 to 0xFFFFFF or from 0x00000001 to 0xFFFFFFFF. If the value is a string, the value contains 7 or 9 characters, for example, **#FFFFFF** or **#FFFFFFFF**. If this parameter is not set, the default value **0xFF0A59F7** is used.
 
 **Type:** number \| string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-CalendarConfig-color?: number | string--><!--Device-CalendarConfig-color?: number | string-End-->
 
@@ -41,6 +45,8 @@ Whether to enable the reminder for events in the calendar. The value **true** me
 **Type:** boolean
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-CalendarConfig-enableReminder?: boolean--><!--Device-CalendarConfig-enableReminder?: boolean-End-->
 

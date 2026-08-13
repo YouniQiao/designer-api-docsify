@@ -2,9 +2,11 @@
 
 Defines the personalized lock information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface PersoLockInfo--><!--Device-sim-export interface PersoLockInfo-End-->
 
@@ -28,9 +30,11 @@ Indicates the personalized lock type.
 
 **Type:** [PersoLockType](arkts-telephony-sim-persolocktype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PersoLockInfo-lockType: PersoLockType--><!--Device-PersoLockInfo-lockType: PersoLockType-End-->
 
@@ -48,9 +52,11 @@ Indicates the password.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PersoLockInfo-password: string--><!--Device-PersoLockInfo-password: string-End-->
 

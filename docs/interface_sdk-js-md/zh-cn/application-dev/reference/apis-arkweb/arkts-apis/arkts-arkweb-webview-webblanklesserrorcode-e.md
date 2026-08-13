@@ -1,10 +1,12 @@
 # WebBlanklessErrorCode
 
-Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) or [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo).
+无白屏加载的异常错误码。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum WebBlanklessErrorCode--><!--Device-webview-enum WebBlanklessErrorCode-End-->
 
@@ -16,11 +18,13 @@ Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWi
 SUCCESS = 0
 ```
 
-The operation is successful.
+成功。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebBlanklessErrorCode-SUCCESS = 0--><!--Device-WebBlanklessErrorCode-SUCCESS = 0-End-->
 
@@ -32,11 +36,13 @@ The operation is successful.
 ERR_UNKNOWN = -1
 ```
 
-Unknown error.
+未知错误，内部状态错误等。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_UNKNOWN = -1--><!--Device-WebBlanklessErrorCode-ERR_UNKNOWN = -1-End-->
 
@@ -48,11 +54,13 @@ Unknown error.
 ERR_INVALID_PARAM = -2
 ```
 
-Invalid parameter.
+参数不合法。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_INVALID_PARAM = -2--><!--Device-WebBlanklessErrorCode-ERR_INVALID_PARAM = -2-End-->
 
@@ -64,11 +72,13 @@ Invalid parameter.
 ERR_CONTROLLER_NOT_INITED = -3
 ```
 
-The web controller is not bound to any component.
+WebViewController未绑定组件。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_CONTROLLER_NOT_INITED = -3--><!--Device-WebBlanklessErrorCode-ERR_CONTROLLER_NOT_INITED = -3-End-->
 
@@ -80,11 +90,13 @@ The web controller is not bound to any component.
 ERR_KEY_NOT_MATCH = -4
 ```
 
-The key value is not matched. This error code is returned when the key values of setBlanklessLodingWithKey and getBlanklessInfoWithKey are not matched.
+未匹配到key值，对于 [setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey)需与 [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)配套使用并且key值一致， 否则返回该错误码。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_KEY_NOT_MATCH = -4--><!--Device-WebBlanklessErrorCode-ERR_KEY_NOT_MATCH = -4-End-->
 
@@ -96,11 +108,13 @@ The key value is not matched. This error code is returned when the key values of
 ERR_SIGNIFICANT_CHANGE = -5
 ```
 
-The system determines that the change is too large when the similarity is less than 0.33. As a result,the setBlanklessLodingWithKey API fails to enable frame interpolation.
+当相似度较低时，系统会判定为跳变太大， [setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey)接口不会成功启 用插帧。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_SIGNIFICANT_CHANGE = -5--><!--Device-WebBlanklessErrorCode-ERR_SIGNIFICANT_CHANGE = -5-End-->
 
@@ -112,13 +126,13 @@ The system determines that the change is too large when the similarity is less t
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-The value of BlanklessLoadingParam.duration is out of the valid value range.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+在[BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md#BlanklessLoadingParam)设置的历史帧失效时间超出范围。 此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -132,13 +146,13 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-The value of BlanklessLoadingParam.expirationTime is invalid.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+在[BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md#BlanklessLoadingParam)设置的历史帧失效时间超出范围。 此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

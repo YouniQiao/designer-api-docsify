@@ -6,6 +6,8 @@ Photo asset position
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-enum PositionType--><!--Device-sendablePhotoAccessHelper-enum PositionType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,6 +26,8 @@ Asset exists only in local device
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-PositionType-LOCAL = 1 << 0--><!--Device-PositionType-LOCAL = 1 << 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -41,6 +45,8 @@ Asset exists only in cloud
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-PositionType-CLOUD = 1 << 1--><!--Device-PositionType-CLOUD = 1 << 1-End-->
 

@@ -10,6 +10,8 @@ Define Env Decorator type
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -28,5 +30,5 @@ Define Env Decorator type
 
 | Type | Description |
 | --- | --- |
-| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) | Env decorator |
+| [PropertyDecorator](../../apis-na/arkts-apis/arkts-na-propertydecorator-t.md) | Env decorator |
 

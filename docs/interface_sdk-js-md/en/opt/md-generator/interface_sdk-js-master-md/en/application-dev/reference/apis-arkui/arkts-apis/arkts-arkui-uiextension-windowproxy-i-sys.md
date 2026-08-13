@@ -2,7 +2,9 @@
 
 The proxy of the UIExtension window.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiExtension-interface WindowProxy--><!--Device-uiExtension-interface WindowProxy-End-->
 
@@ -20,24 +22,11 @@ import { uiExtension } from '@kit.ArkUI';
 hideNonSecureWindows(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to hide non-secure windows. This API uses a promise to return the result.
+Sets whether to hide non-secure windows. This API uses a promise to return the result. > **NOTE：**> > - A non-secure window refers to any window that may obstruct the > EmbeddedComponent or > UIExtensionComponent, such as global floating windows > , host subwindows, and dialog box windows created by the host application (excluding windows of these types > created by system applications). > > - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this > API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear > when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed. > > - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when > **hideNonSecureWindows(true)** is called.
 
-> **NOTE：**
-> 
-> - A non-secure window refers to any window that may obstruct the
-> [EmbeddedComponent](./@internal/component/ets/embedded_component) or
-> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows
-> , host subwindows, and dialog box windows created by the host application (excluding windows of these types
-> created by system applications).
-> 
-> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this
-> API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear
-> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.
-> 
-> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when
-> **hideNonSecureWindows(true)** is called.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
 
@@ -65,10 +54,10 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -107,14 +96,11 @@ export default class EntryAbility extends UIExtensionAbility {
 setWaterMarkFlag(enable: boolean): Promise<void>
 ```
 
-Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
+Adds or deletes the watermark flag for this window. This API uses a promise to return the result. > **NOTE：**> > With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground > , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
-> **NOTE：**
-> 
-> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
-> , regardless of whether the window is displayed in full screen, floating, and split screen mode.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,9 +126,9 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300008](../errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 

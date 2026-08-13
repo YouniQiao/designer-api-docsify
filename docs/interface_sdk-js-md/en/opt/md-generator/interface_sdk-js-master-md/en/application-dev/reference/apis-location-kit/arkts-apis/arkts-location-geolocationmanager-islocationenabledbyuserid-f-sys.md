@@ -14,7 +14,9 @@ function isLocationEnabledByUserId(userId: number): boolean
 
 Obtaining the location switch status of a specified user.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-function isLocationEnabledByUserId(userId: int): boolean--><!--Device-geoLocationManager-function isLocationEnabledByUserId(userId: int): boolean-End-->
 
@@ -38,9 +40,9 @@ Obtaining the location switch status of a specified user.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [3301000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
 ## Examples
 

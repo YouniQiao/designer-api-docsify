@@ -8,6 +8,8 @@ Indicates multiple rows of data with an array.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-relationalStore-type RowsData = Array<RowData>--><!--Device-relationalStore-type RowsData = Array<RowData>-End-->

@@ -6,6 +6,8 @@ Defines the text information for editing.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorSelection--><!--Device-unnamed-export declare interface RichEditorSelection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,6 +29,8 @@ The location info.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorSelection-selection: [        int,        int    ]--><!--Device-RichEditorSelection-selection: [        int,        int    ]-End-->
@@ -46,6 +50,8 @@ The selected text content.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,9 +14,11 @@ function getRotationAxesStatus(mechId: int): RotationAxesStatus
 
 Obtains the status of the rotation axes.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus--><!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus-End-->
 
@@ -28,7 +30,7 @@ Obtains the status of the rotation axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
+| mechId | int | Yes | ID of the mechanical device. |
 
 **Return value:**
 
@@ -40,9 +42,9 @@ Obtains the status of the rotation axes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 

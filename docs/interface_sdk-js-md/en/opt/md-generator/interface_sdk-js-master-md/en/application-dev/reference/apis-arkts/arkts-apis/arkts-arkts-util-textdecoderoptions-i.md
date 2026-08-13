@@ -4,6 +4,8 @@ Describes decoding-related options, which include **fatal** and **ignoreBOM**.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-util-interface TextDecoderOptions--><!--Device-util-interface TextDecoderOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -26,6 +28,8 @@ Whether to display fatal errors. The value **true** means to display fatal error
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextDecoderOptions-fatal?: boolean--><!--Device-TextDecoderOptions-fatal?: boolean-End-->
@@ -43,6 +47,8 @@ Whether to ignore the BOM. The value **true** means to ignore the BOM, and **fal
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

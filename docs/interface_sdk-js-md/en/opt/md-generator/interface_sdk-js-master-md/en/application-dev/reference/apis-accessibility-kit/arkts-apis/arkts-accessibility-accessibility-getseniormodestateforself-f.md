@@ -16,6 +16,8 @@ Check if this application's senior mode is enabled.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-accessibility-function getSeniorModeStateForSelf(): Promise<boolean>--><!--Device-accessibility-function getSeniorModeStateForSelf(): Promise<boolean>-End-->
@@ -32,4 +34,4 @@ Check if this application's senior mode is enabled.
 
 | Error Code ID |
 | --- |
-| [9300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |

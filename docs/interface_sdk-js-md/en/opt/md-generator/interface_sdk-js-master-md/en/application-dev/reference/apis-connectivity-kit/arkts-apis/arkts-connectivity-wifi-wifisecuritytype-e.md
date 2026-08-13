@@ -6,7 +6,7 @@ Describes the wifi security type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiSecurityType](ohos.wifiManager/wifiManager.WifiSecurityType)
+**Substitutes:** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WifiSecurityType)
 
 <!--Device-wifi-enum WifiSecurityType--><!--Device-wifi-enum WifiSecurityType-End-->
 
@@ -24,7 +24,7 @@ Invalid security type
 
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_INVALID](ohos.wifiManager/wifiManager.WifiSecurityType.WIFI_SEC_TYPE_INVALID)
+**Substitutes:** [WIFI_SEC_TYPE_INVALID](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_INVALID)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_INVALID = 0--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_INVALID = 0-End-->
 
@@ -42,7 +42,7 @@ Open
 
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_OPEN](ohos.wifiManager/wifiManager.WifiSecurityType.WIFI_SEC_TYPE_OPEN)
+**Substitutes:** [WIFI_SEC_TYPE_OPEN](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_OPEN)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1-End-->
 
@@ -60,7 +60,7 @@ Wired Equivalent Privacy (WEP)
 
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_WEP](ohos.wifiManager/wifiManager.WifiSecurityType.WIFI_SEC_TYPE_WEP)
+**Substitutes:** [WIFI_SEC_TYPE_WEP](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_WEP)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2-End-->
 
@@ -78,7 +78,7 @@ Pre-shared key (PSK)
 
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_PSK](ohos.wifiManager/wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK)
+**Substitutes:** [WIFI_SEC_TYPE_PSK](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_PSK)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3-End-->
 
@@ -96,7 +96,7 @@ Simultaneous Authentication of Equals (SAE)
 
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_SAE](ohos.wifiManager/wifiManager.WifiSecurityType.WIFI_SEC_TYPE_SAE)
+**Substitutes:** [WIFI_SEC_TYPE_SAE](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_SAE)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4-End-->
 

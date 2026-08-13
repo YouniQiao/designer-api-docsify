@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface VoiceButtonOptions--><!--Device-unnamed-interface VoiceButtonOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,17 +20,15 @@
 enabled?: boolean
 ```
 
-输入框启用或禁用语音按钮。
-
-true表示启用语音按钮，false表示禁用语音按钮。
-
-默认值：false
+输入框启用或禁用语音按钮。 true表示启用语音按钮，false表示禁用语音按钮。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

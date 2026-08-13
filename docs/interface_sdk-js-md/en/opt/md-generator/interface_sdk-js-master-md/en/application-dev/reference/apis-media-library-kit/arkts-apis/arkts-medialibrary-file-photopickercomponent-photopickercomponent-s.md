@@ -1,21 +1,10 @@
 # PhotoPickerComponent
 
-PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) => void, onDeselect?: (uri: string) =>void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean, onItemClickedNotify?:ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean, onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean, onPickerControllerReady?: () => void, onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?:ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?:videoPlayStateChangedCallback, pickerController: PickerController })
-
-Allows the application to access images or videos in the user directory without any permission.
-
-> **NOTE：**
-> 
-> If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component
-> conflict with those of the photo browser page.
-> 
-> To prevent this problem, you can disable the swipe operation for the **Tabs** component in
-> **onEnterPhotoBrowser()** and enable it in **onExitPhotoBrowser()**. This conflict will be resolved in later
-> versions.
+PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) => void, onDeselect?: (uri: string) => void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean, onItemClickedNotify?: ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean, onExitPhotoBrowser? : (photoBrowserInfo: PhotoBrowserInfo) => boolean, onPickerControllerReady?: () => void, onPhotoBrowserChanged?: ( browserItemInfo: BaseItemInfo) => boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?: ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?: videoPlayStateChangedCallback, pickerController: PickerController }) Allows the application to access images or videos in the user directory without any permission. > **NOTE：**> > If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component > conflict with those of the photo browser page. > > To prevent this problem, you can disable the swipe operation for the **Tabs** component in > **onEnterPhotoBrowser()** and enable it in **onExitPhotoBrowser()**. This conflict will be resolved in later > versions.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct PhotoPickerComponent--><!--Device-unnamed-export declare struct PhotoPickerComponent-End-->
 
@@ -30,18 +19,19 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 ## build
 
 ```TypeScript
-build(): void
+@Builder
+  build(): void
 ```
 
 Build function of PhotoPickerComponent
 
 **Since:** 12
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-build(): void--><!--Device-PhotoPickerComponent-build(): void-End-->
+<!--Device-PhotoPickerComponent-@Builder  build(): void--><!--Device-PhotoPickerComponent-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -53,7 +43,11 @@ onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback
 
 Callback when the current album is deleted
 
+**Type:** [CurrentAlbumDeletedCallback](arkts-medialibrary-currentalbumdeletedcallback-t.md)
+
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -69,19 +63,17 @@ onDeselect?: (uri: string) => void
 
 Callback when Deselect photos or videos
 
+**Type:** (uri: string) =&gt; void
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoPickerComponent-onDeselect?: (uri: string) => void--><!--Device-PhotoPickerComponent-onDeselect?: (uri: string) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
 
 ## onEnterPhotoBrowser
 
@@ -91,19 +83,17 @@ onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean
 
 Callback when enter photo browser, will return photoBrowserInfo
 
+**Type:** (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoPickerComponent-onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean--><!--Device-PhotoPickerComponent-onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| photoBrowserInfo | [PhotoBrowserInfo](arkts-medialibrary-file-photopickercomponent-photobrowserinfo-c.md) | Yes |
 
 ## onError
 
@@ -113,7 +103,11 @@ onError?: ErrorCallback
 
 Callback when an error occurs in the PhotoPickerComponent.
 
+**Type:** [ErrorCallback](arkts-medialibrary-errorcallback-t.md)
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,7 +125,11 @@ onExceedMaxSelected?: ExceedMaxSelectedCallback
 
 Callback when exceed max selected
 
+**Type:** [ExceedMaxSelectedCallback](arkts-medialibrary-exceedmaxselectedcallback-t.md)
+
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -147,19 +145,17 @@ onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean
 
 Callback when exit photo browser, will return photoBrowserInfo
 
+**Type:** (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoPickerComponent-onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean--><!--Device-PhotoPickerComponent-onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| photoBrowserInfo | [PhotoBrowserInfo](arkts-medialibrary-file-photopickercomponent-photobrowserinfo-c.md) | Yes |
 
 ## onItemClicked
 
@@ -169,7 +165,11 @@ onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean
 
 Callback when click item. include click camera item and thumbnail item, will return itemInfo
 
+**Type:** (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -177,22 +177,19 @@ Callback when click item. include click camera item and thumbnail item, will ret
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [itemInfo](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md) | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes |
-| clickType | [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md) | Yes |
-
 ## onItemClickedNotify
 
 ```TypeScript
 onItemClickedNotify?: ItemClickedNotifyCallback
 ```
 
-Callback when click item. Includes camera items and thumbnail items. Returns itemInfo in the callback.Must be used in conjunction with the addData method.
+Callback when click item. Includes camera items and thumbnail items. Returns itemInfo in the callback. Must be used in conjunction with the addData method.
+
+**Type:** [ItemClickedNotifyCallback](arkts-medialibrary-itemclickednotifycallback-t.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,7 +207,11 @@ onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback
 
 Callback when moving photo badge state changed
 
+**Type:** [MovingPhotoBadgeStateChangedCallback](arkts-medialibrary-movingphotobadgestatechangedcallback-t.md)
+
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -226,7 +227,11 @@ onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback
 
 Callback when photo browser change start (upon user swipe release), will return targetPhotoInfo
 
+**Type:** [PhotoBrowserChangeStartCallback](arkts-medialibrary-photobrowserchangestartcallback-t.md)
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,19 +249,17 @@ onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean
 
 Callback when photo browser change, will return browserItemInfo
 
+**Type:** (browserItemInfo: BaseItemInfo) =&gt; boolean
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoPickerComponent-onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean--><!--Device-PhotoPickerComponent-onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| browserItemInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes |
 
 ## onPhotoBrowserZoom
 
@@ -266,7 +269,11 @@ onPhotoBrowserZoom?: PhotoBrowserZoomCallback
 
 Callback when the zoom scale changes during large image browsing.
 
+**Type:** [PhotoBrowserZoomCallback](arkts-medialibrary-photobrowserzoomcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,9 +289,13 @@ Callback when the zoom scale changes during large image browsing.
 onPickerControllerReady?: () => void
 ```
 
-Callback when pickerController is ready.Set data to picker component by pickerController is supported after pickerController is ready
+Callback when pickerController is ready. Set data to picker component by pickerController is supported after pickerController is ready
+
+**Type:** () =&gt; void
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -300,7 +311,11 @@ onPickerRecovery?: PickerRecoveryCallback
 
 Callback when the photo picker restores the previously grid state.
 
+**Type:** [PickerRecoveryCallback](arkts-medialibrary-pickerrecoverycallback-t.md)
+
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,7 +333,11 @@ onPinchGridSwitched?: PinchGridSwitchedCallback
 
 Callback when the grid's level is switched via pinch gesture.
 
+**Type:** [PinchGridSwitchedCallback](arkts-medialibrary-pinchgridswitchedcallback-t.md)
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -336,7 +355,11 @@ onScrollStopAtEnd?: ScrollStopAtEndCallback
 
 Callback when the grid stops scrolling at the ending position.
 
+**Type:** [ScrollStopAtEndCallback](arkts-medialibrary-scrollstopatendcallback-t.md)
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -354,7 +377,11 @@ onScrollStopAtStart?: ScrollStopAtStartCallback
 
 Callback when the grid stops scrolling at the starting position.
 
+**Type:** [ScrollStopAtStartCallback](arkts-medialibrary-scrollstopatstartcallback-t.md)
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -372,19 +399,17 @@ onSelect?: (uri: string) => void
 
 Callback when select photos or videos
 
+**Type:** (uri: string) =&gt; void
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoPickerComponent-onSelect?: (uri: string) => void--><!--Device-PhotoPickerComponent-onSelect?: (uri: string) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
 
 ## onSelectedItemsDeleted
 
@@ -394,7 +419,11 @@ onSelectedItemsDeleted?: ItemsDeletedCallback
 
 Callback when selected items are deleted
 
+**Type:** [ItemsDeletedCallback](arkts-medialibrary-itemsdeletedcallback-t.md)
+
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -410,7 +439,11 @@ onUnselectableItemClicked?: UnselectableItemClickedCallback
 
 Callback when an unselectable item is clicked.
 
+**Type:** [UnselectableItemClickedCallback](arkts-medialibrary-unselectableitemclickedcallback-t.md)
+
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -428,7 +461,11 @@ onVideoPlayStateChanged?: videoPlayStateChangedCallback
 
 Callback when the video play state changed
 
+**Type:** [videoPlayStateChangedCallback](arkts-medialibrary-videoplaystatechangedcallback-t.md)
+
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -439,7 +476,8 @@ Callback when the video play state changed
 ## pickerController
 
 ```TypeScript
-pickerController: PickerController
+@ObjectLink
+  pickerController: PickerController
 ```
 
 PickerController
@@ -448,11 +486,11 @@ PickerController
 
 **Since:** 12
 
-**Decorator:** @ObjectLink
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-pickerController: PickerController--><!--Device-PhotoPickerComponent-pickerController: PickerController-End-->
+<!--Device-PhotoPickerComponent-@ObjectLink  pickerController: PickerController--><!--Device-PhotoPickerComponent-@ObjectLink  pickerController: PickerController-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -467,6 +505,8 @@ PickerOptions
 **Type:** [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

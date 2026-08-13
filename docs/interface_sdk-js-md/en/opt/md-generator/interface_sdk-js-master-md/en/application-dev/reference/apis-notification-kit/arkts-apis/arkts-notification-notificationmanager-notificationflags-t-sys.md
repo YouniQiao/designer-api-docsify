@@ -6,7 +6,9 @@ export type NotificationFlags = _NotificationFlags
 
 Defines the notification flags.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationFlags = _NotificationFlags--><!--Device-notificationManager-export type NotificationFlags = _NotificationFlags-End-->
 

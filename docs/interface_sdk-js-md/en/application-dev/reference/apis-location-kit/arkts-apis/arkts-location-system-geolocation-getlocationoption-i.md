@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [CurrentLocationRequest](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest)
+**Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md#CurrentLocationRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -28,13 +28,15 @@ complete?: () => void
 
 Called when the execution is completed.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
-**Substitutes:** [callback](ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback)
+**Substitutes:** callback
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,70 +44,13 @@ Called when the execution is completed.
 
 **System capability:** SystemCapability.Location.Location.Lite
 
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-Called when the location types fail to be obtained
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 9
-
-**Substitutes:** [callback](ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback)
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetLocationOption-fail?: (data: string, code: number) => void--><!--Device-GetLocationOption-fail?: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.Location.Location.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
-## success
-
-```TypeScript
-success?: (data: GeolocationResponse) => void
-```
-
-Called when the geographic location is obtained.
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 9
-
-**Substitutes:** [callback](ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback)
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void--><!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void-End-->
-
-**System capability:** SystemCapability.Location.Location.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md) | Yes |  |
-
 ## coordType
 
 ```TypeScript
 coordType?: string
 ```
 
-Coordinate system type. Available types can be obtained using getSupportedCoordTypes.The default type is wgs84.
+Coordinate system type. Available types can be obtained using getSupportedCoordTypes. The default type is wgs84.
 
 **Type:** string
 
@@ -121,13 +66,61 @@ Coordinate system type. Available types can be obtained using getSupportedCoordT
 
 **System capability:** SystemCapability.Location.Location.Lite
 
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+Called when the location types fail to be obtained
+
+**Type:** (data: string, code: number) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** callback
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetLocationOption-fail?: (data: string, code: number) => void--><!--Device-GetLocationOption-fail?: (data: string, code: number) => void-End-->
+
+**System capability:** SystemCapability.Location.Location.Lite
+
+## success
+
+```TypeScript
+success?: (data: GeolocationResponse) => void
+```
+
+Called when the geographic location is obtained.
+
+**Type:** (data: GeolocationResponse) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** callback
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void--><!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void-End-->
+
+**System capability:** SystemCapability.Location.Location.Lite
+
 ## timeout
 
 ```TypeScript
 timeout?: number
 ```
 
-Timeout duration, in milliseconds.For the rich device, the default value is 30000.For the lite wearable device, the default value is 180000.The timeout duration is necessary in case no result is returned if the request to obtain the geographic location is rejected for the lack of the required permission, weak positioning signal, or incorrect location settings. After the timeout duration expires, the fail function will be called.The value is a 32-digit positive integer.If the value set is less than or equal to 0, the default value will be used.
+Timeout duration, in milliseconds. For the rich device, the default value is 30000. For the lite wearable device, the default value is 180000. The timeout duration is necessary in case no result is returned if the request to obtain the geographic location is rejected for the lack of the required permission, weak positioning signal, or incorrect location settings. After the timeout duration expires, the fail function will be called. The value is a 32-digit positive integer. If the value set is less than or equal to 0, the default value will be used.
 
 **Type:** number
 
@@ -137,7 +130,7 @@ Timeout duration, in milliseconds.For the rich device, the default value is 3000
 
 **Deprecated since:** 9
 
-**Substitutes:** [timeoutMs](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#timeoutMs)
+**Substitutes:** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutMs)
 
 **Model restriction:** This API can be used only in the FA model.
 

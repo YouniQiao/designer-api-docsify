@@ -8,7 +8,9 @@ Defines the gesture recognizer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class PanRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class PanRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PanRecognizer--><!--Device-unnamed-export declare class PanRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Returns the pan recognizer's direction attribute.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ Returns the pan recognizer's direction attribute.
 getDistance(): double
 ```
 
-Returns the pan recognizer's distance.The unit is vp.
+Returns the pan recognizer's distance. The unit is vp.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,11 +72,13 @@ Returns the pan recognizer's distance.The unit is vp.
 getDistanceMap(): Map<SourceTool, double>
 ```
 
-Returns the pan recognizer's distance map.The unit is vp.
+Returns the pan recognizer's distance map. The unit is vp.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,6 +103,8 @@ Returns the the pan gesture options of the recognizer.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

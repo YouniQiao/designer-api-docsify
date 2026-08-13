@@ -4,6 +4,8 @@ The enum of property descriptor type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-ssap-enum PropertyDescriptorType--><!--Device-ssap-enum PropertyDescriptorType-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ PROPERTY = 1
 Property description descriptor.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Client property configuration descriptor.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2--><!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2-End-->
@@ -49,6 +55,8 @@ SERVER_PROPERTY_CONFIG = 3
 Server property configuration descriptor.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Property format descriptor.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4--><!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4-End-->
@@ -81,6 +91,8 @@ TYPE_VENDOR = 255
 Vendor-defined.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

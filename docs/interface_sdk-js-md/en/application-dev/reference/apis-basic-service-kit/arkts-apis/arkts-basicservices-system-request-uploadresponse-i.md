@@ -34,7 +34,7 @@ HTTP status code returned by the server.
 
 **Deprecated since:** 9
 
-**Substitutes:** [statusCode](ohos.request.agent.HttpResponse.statusCode)
+**Substitutes:** statusCode
 
 <!--Device-UploadResponse-code: number--><!--Device-UploadResponse-code: number-End-->
 
@@ -56,7 +56,7 @@ Content returned by the server. The value type is determined by the type in the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [extras](ohos.request.agent.Progress.extras)
+**Substitutes:** extras
 
 <!--Device-UploadResponse-data: string--><!--Device-UploadResponse-data: string-End-->
 
@@ -78,7 +78,7 @@ Headers returned by the server.
 
 **Deprecated since:** 9
 
-**Substitutes:** [headers](ohos.request.agent.HttpResponse.headers)
+**Substitutes:** headers
 
 <!--Device-UploadResponse-headers: Object--><!--Device-UploadResponse-headers: Object-End-->
 

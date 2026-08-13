@@ -4,6 +4,8 @@ Defines the lazy vertical waterflow layout component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface--><!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,7 +16,7 @@ Defines the lazy vertical waterflow layout component.
 import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (): LazyVWaterFlowLayoutAttribute
@@ -23,6 +25,8 @@ import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayou
 Construct the lazy vertical waterflow attribute.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-contact-interface ContactSyncInfo--><!--Device-contact-interface ContactSyncInfo-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -14,13 +16,13 @@
 completedBatches: Array<number>
 ```
 
-表示已成功同步的联系人的批处理标识符数组。
-
-值的范围是从1到totalBatches。
+表示已成功同步的联系人的批处理标识符数组。 值的范围是从1到totalBatches。
 
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +44,8 @@ lastSyncTime: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -61,6 +65,8 @@ mode: ContactSyncMode
 **类型：** [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,6 +88,8 @@ syncId: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -101,6 +109,8 @@ totalBatches: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Defines the mouse pointer position for screen hopping.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cooperate-interface MouseLocation--><!--Device-cooperate-interface MouseLocation-End-->
 
@@ -26,7 +28,9 @@ Screen height, in pixels.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayHeight: int--><!--Device-MouseLocation-displayHeight: int-End-->
 
@@ -44,7 +48,9 @@ Screen width, in pixels.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayWidth: int--><!--Device-MouseLocation-displayWidth: int-End-->
 
@@ -62,7 +68,9 @@ Position of the mouse pointer on the X coordinate of the screen.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayX: int--><!--Device-MouseLocation-displayX: int-End-->
 
@@ -80,7 +88,9 @@ Position of the mouse pointer on the Y coordinate of the screen.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayY: int--><!--Device-MouseLocation-displayY: int-End-->
 

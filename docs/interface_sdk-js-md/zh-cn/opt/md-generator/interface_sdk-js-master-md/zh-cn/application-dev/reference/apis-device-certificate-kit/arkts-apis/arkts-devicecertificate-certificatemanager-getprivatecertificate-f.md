@@ -8,7 +8,9 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 
 获取私有凭据的详细信息，使用Callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -27,10 +29,10 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [17500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500002-证书不存在) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17500002](../errorcode-certManager.md#17500002-证书不存在) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
 
 ## 示例
 
@@ -65,7 +67,9 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 
 获取私有凭据详情。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -89,10 +93,10 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [17500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500002-证书不存在) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17500002](../errorcode-certManager.md#17500002-证书不存在) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
 
 ## 示例
 

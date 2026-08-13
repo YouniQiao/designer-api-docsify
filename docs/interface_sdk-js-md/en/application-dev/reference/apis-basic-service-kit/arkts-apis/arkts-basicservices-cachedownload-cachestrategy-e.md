@@ -4,7 +4,9 @@ Enumerates cache update strategies.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-enum CacheStrategy--><!--Device-cacheDownload-enum CacheStrategy-End-->
 
@@ -20,7 +22,9 @@ Forcibly updates the cache, regardless of whether the cache already exists.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CacheStrategy-FORCE = 0--><!--Device-CacheStrategy-FORCE = 0-End-->
 
@@ -36,7 +40,9 @@ Updates the cache only when the cache does not exist.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CacheStrategy-LAZY = 1--><!--Device-CacheStrategy-LAZY = 1-End-->
 

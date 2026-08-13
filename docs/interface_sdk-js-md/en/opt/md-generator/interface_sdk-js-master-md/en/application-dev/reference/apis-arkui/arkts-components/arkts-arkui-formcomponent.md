@@ -12,6 +12,8 @@ Set a new value of form info.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute--><!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,11 +28,11 @@ Set a new value of form info.
 
 ## Summary
 
-- [ErrorInformation](arkts-arkui-formcomponent-errorinformation-i-sys.md)
-- [FormCallbackInfo](arkts-arkui-formcomponent-formcallbackinfo-i-sys.md)
-- [FormInfo](arkts-arkui-formcomponent-forminfo-i-sys.md)
-- [FormSize](arkts-arkui-formcomponent-formsize-i-sys.md)
-- [FormColorMode](arkts-arkui-formcomponent-formcolormode-e-sys.md)
-- [FormDimension](arkts-arkui-formcomponent-formdimension-e-sys.md)
-- [FormRenderingMode](arkts-arkui-formcomponent-formrenderingmode-e-sys.md)
-- [FormShape](arkts-arkui-formcomponent-formshape-e-sys.md)
+- [ErrorInformation](arkts-arkui-errorinformation-i-sys.md)
+- [FormCallbackInfo](arkts-arkui-formcallbackinfo-i-sys.md)
+- [FormInfo](arkts-arkui-forminfo-i-sys.md)
+- [FormSize](arkts-arkui-formsize-i-sys.md)
+- [FormColorMode](arkts-arkui-formcolormode-e-sys.md)
+- [FormDimension](arkts-arkui-formdimension-e-sys.md)
+- [FormRenderingMode](arkts-arkui-formrenderingmode-e-sys.md)
+- [FormShape](arkts-arkui-formshape-e-sys.md)

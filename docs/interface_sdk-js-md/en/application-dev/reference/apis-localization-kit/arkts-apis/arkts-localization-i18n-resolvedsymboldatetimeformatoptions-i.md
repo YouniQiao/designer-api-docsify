@@ -1,14 +1,16 @@
 # ResolvedSymbolDateTimeFormatOptions
 
-Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get.
+Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. Define the resolved symbol element and value that need to get.
 
-**Inheritance/Implementation:** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](Intl.ResolvedDateTimeFormatOptions)
+**Inheritance/Implementation:** ResolvedSymbolDateTimeFormatOptions extends Intl.ResolvedDateTimeFormatOptions
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions extends Intl.ResolvedDateTimeFormatOptions--><!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions extends Intl.ResolvedDateTimeFormatOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions--><!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -30,7 +32,9 @@ AM and PM symbol of date time period part, such as "PM" of "2:23 PM". First para
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

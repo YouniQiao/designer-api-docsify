@@ -12,11 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>
 ```
 
-Obtains the [provision](bundleManager/AppProvisionInfo) configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
+Obtains the provision configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -30,7 +32,7 @@ Obtains the [provision](bundleManager/AppProvisionInfo) configuration file infor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) .&lt;br&gt;The default value is the user ID of the caller.&lt;br&gt;The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) .&lt;br&gt;The default value is the user ID of the caller.&lt;br&gt;The value must be greater than or equal to 0. |
 
 **Return value:**
 
@@ -42,9 +44,9 @@ Obtains the [provision](bundleManager/AppProvisionInfo) configuration file infor
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
 
 ## Examples
 

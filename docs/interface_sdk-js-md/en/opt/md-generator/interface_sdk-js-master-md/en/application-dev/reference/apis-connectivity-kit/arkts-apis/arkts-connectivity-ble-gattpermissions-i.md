@@ -2,7 +2,9 @@
 
 Describes the permission of a att attribute item.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface GattPermissions--><!--Device-ble-interface GattPermissions-End-->
 
@@ -24,11 +26,13 @@ The attribute field has the read permission.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-read?: boolean--><!--Device-GattPermissions-read?: boolean-End-->
 
@@ -44,11 +48,13 @@ The attribute field has the encrypted read permission.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-readEncrypted?: boolean--><!--Device-GattPermissions-readEncrypted?: boolean-End-->
 
@@ -64,11 +70,13 @@ The attribute field has the read permission for encryption authentication.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-readEncryptedMitm?: boolean--><!--Device-GattPermissions-readEncryptedMitm?: boolean-End-->
 
@@ -84,11 +92,13 @@ The attribute field has the write permission.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-write?: boolean--><!--Device-GattPermissions-write?: boolean-End-->
 
@@ -104,11 +114,13 @@ The attribute field has the encrypted write permission.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-writeEncrypted?: boolean--><!--Device-GattPermissions-writeEncrypted?: boolean-End-->
 
@@ -124,11 +136,13 @@ The attribute field has the write permission for encryption authentication.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-writeEncryptedMitm?: boolean--><!--Device-GattPermissions-writeEncryptedMitm?: boolean-End-->
 
@@ -144,11 +158,13 @@ The attribute field has the signed write permission.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-writeSigned?: boolean--><!--Device-GattPermissions-writeSigned?: boolean-End-->
 
@@ -164,11 +180,13 @@ The attribute field has the write permission for signature authentication.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattPermissions-writeSignedMitm?: boolean--><!--Device-GattPermissions-writeSignedMitm?: boolean-End-->
 

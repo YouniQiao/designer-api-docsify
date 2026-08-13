@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-print-enum WatermarkHandleResult--><!--Device-print-enum WatermarkHandleResult-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -17,6 +19,8 @@ WATERMARK_HANDLE_SUCCESS = 0
 表示强制水印处理成功。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ WATERMARK_HANDLE_FAILURE = 1
 表示强制水印处理失败。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

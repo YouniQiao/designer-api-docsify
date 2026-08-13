@@ -2,9 +2,11 @@
 
 Enumerates the RDB store rebuild types. Use the enum name rather than the enum value.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-enum RebuildType--><!--Device-relationalStore-enum RebuildType-End-->
 
@@ -18,9 +20,11 @@ NONE = 0
 
 The RDB store is not rebuilt.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RebuildType-NONE = 0--><!--Device-RebuildType-NONE = 0-End-->
 
@@ -34,9 +38,11 @@ REBUILT = 1
 
 The RDB store is rebuilt and creates an empty database. You need to create tables and restore data.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RebuildType-REBUILT = 1--><!--Device-RebuildType-REBUILT = 1-End-->
 
@@ -48,12 +54,13 @@ The RDB store is rebuilt and creates an empty database. You need to create table
 REPAIRED = 2
 ```
 
-The database is repaired and the undamaged data is restored. Currently, only the   
-[vector store](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) supports this capability.
+The database is repaired and the undamaged data is restored. Currently, only the [vector store](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) supports this capability.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RebuildType-REPAIRED = 2--><!--Device-RebuildType-REPAIRED = 2-End-->
 

@@ -4,6 +4,8 @@ This class is used to intercept requests for a specified scheme.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-class WebSchemeHandler--><!--Device-webview-class WebSchemeHandler-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -18,6 +20,8 @@ onRequestStart(
 当请求开始时的回调，在该回调函数中可以决定是否拦截该请求。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,7 +39,7 @@ onRequestStart(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## onRequestStop
 
@@ -46,6 +50,8 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 请求完成时的回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -63,4 +69,4 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

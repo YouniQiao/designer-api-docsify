@@ -1,4 +1,4 @@
-# @ohos.application.StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)
+# @ohos.application.StaticSubscriberExtensionContext
 
 ## Modules to Import
 

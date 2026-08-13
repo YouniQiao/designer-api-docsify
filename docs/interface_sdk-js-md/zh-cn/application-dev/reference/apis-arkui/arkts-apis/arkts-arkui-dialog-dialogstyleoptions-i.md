@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
-<!--Device-dialog-declare interface DialogStyleOptions extends DialogBaseOptions--><!--Device-dialog-declare interface DialogStyleOptions extends DialogBaseOptions-End-->
+**废弃版本：** -1
+
+<!--Device-dialog-declare interface DialogStyleOptions--><!--Device-dialog-declare interface DialogStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +30,8 @@ buttonDirection?: DialogButtonOrientation
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -42,13 +46,15 @@ buttonDirection?: DialogButtonOrientation
 buttons?: Array<DialogButton>
 ```
 
-对话框中的按钮数组。提供时，对话框显示为带有按钮的警报样式对话框。与图纸一起使用时，按钮显示在图纸列表下方。
+对话框中的按钮数组。 提供时，对话框显示为带有按钮的警报样式对话框。 与图纸一起使用时，按钮显示在图纸列表下方。
 
 **类型：** Array&lt;[DialogButton](arkts-arkui-dialog-dialogbutton-i.md)&gt;
 
 **起始版本：** 26.1.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,13 +70,15 @@ buttons?: Array<DialogButton>
 gridCount?: int
 ```
 
-对话框的网格计数。取值限定为整数。
+对话框的网格计数。 取值限定为整数。
 
 **类型：** int
 
 **起始版本：** 26.1.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,6 +102,8 @@ message?: DialogMessage
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -108,13 +118,15 @@ message?: DialogMessage
 sheets?: Array<DialogSheet>
 ```
 
-action-sheet样式的表单项数组。提供时，对话框将显示供用户选择的工作表项目。
+action-sheet样式的表单项数组。 提供时，对话框将显示供用户选择的工作表项目。
 
 **类型：** Array&lt;[DialogSheet](arkts-arkui-dialog-dialogsheet-i.md)&gt;
 
 **起始版本：** 26.1.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,6 +150,8 @@ subtitle?: ResourceStr
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -159,6 +173,8 @@ title?: ResourceStr
 **起始版本：** 26.1.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Defines the js result.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class JsResult--><!--Device-unnamed-declare class JsResult-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Handle the user's JavaScript result if cancel the dialog.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsResult-handleCancel(): void--><!--Device-JsResult-handleCancel(): void-End-->
@@ -50,6 +56,8 @@ Handle the user's JavaScript result if confirm the dialog.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsResult-handleConfirm(): void--><!--Device-JsResult-handleConfirm(): void-End-->
@@ -65,6 +73,8 @@ handlePromptConfirm(result: string): void
 Handle the user's JavaScript result if confirm the prompt dialog.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

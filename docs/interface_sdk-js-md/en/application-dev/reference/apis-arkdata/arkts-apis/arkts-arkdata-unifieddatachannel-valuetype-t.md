@@ -1,20 +1,20 @@
 # ValueType
 
 ```TypeScript
-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
+type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined
 ```
 
-Enumerates the data field types allowed in a unified data record.
+Indicates type of value.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined-End-->
+<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -28,7 +28,7 @@ Enumerates the data field types allowed in a unified data record.
 | image.PixelMap | The value is of the [image.PixelMap]{ |
 | Want | [Want]{ |
 | ArrayBuffer | ArrayBuffer. |
-| object | Object. |
+| RecordData | RecordData. |
 | null | Null. |
 | undefined | Undefined. |
 

@@ -14,7 +14,9 @@ function isScreenReaderOpenSync(): boolean
 
 Checks whether screen reader mode is enabled.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

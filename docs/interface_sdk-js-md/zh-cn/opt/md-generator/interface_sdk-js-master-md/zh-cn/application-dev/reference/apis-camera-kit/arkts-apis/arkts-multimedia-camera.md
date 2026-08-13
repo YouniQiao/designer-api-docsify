@@ -1,12 +1,10 @@
-# @ohos.multimedia.camera(AutoDeviceSwitch)
+# @ohos.multimedia.camera
 
-本模块为开发者提供一套简单且易于理解的相机服务接口，开发者通过调用接口可以开发相机应用。应用通过访问和操作相机硬件，实现基础操作，如预览、拍照和录像；还可以通过接口组合完成更多操作，如控制闪光灯和曝光时间、对焦或调焦等。
+本模块为开发者提供一套简单且易于理解的相机服务接口，开发者通过调用接口可以开发相机应用。应用通过访问和操作相机硬件，实现基础操作，如预览、拍照和录像；还可以通过接口组合完成更多操作，如控制闪光灯和曝光时间、对焦或调焦等。 > **说明：** > > - 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.multimedia.camera (相机管理)](#@ohos.multimedia.camera)。
 
-> **说明：**
-> 
-> - 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.multimedia.camera (相机管理)](#camera)。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace camera--><!--Device-unnamed-declare namespace camera-End-->
 
@@ -18,7 +16,7 @@
 
 | 名称 |
 | --- |
-| [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager) |
+| [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager) |
 
 <!--Del-->
 ### 类（系统接口）
@@ -32,8 +30,6 @@
 
 | 名称 |
 | --- |
-| [Aperture](arkts-camera-camera-aperture-i.md) |
-| [ApertureQuery](arkts-camera-camera-aperturequery-i.md) |
 | [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md) |
 | [AutoDeviceSwitchQuery](arkts-camera-camera-autodeviceswitchquery-i.md) |
 | [AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md) |
@@ -43,7 +39,6 @@
 | [CameraDevice](arkts-camera-camera-cameradevice-i.md) |
 | [CameraInput](arkts-camera-camera-camerainput-i.md) |
 | [CameraManager](arkts-camera-camera-cameramanager-i.md) |
-| [CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md) |
 | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) |
 | [CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md) |
@@ -56,7 +51,6 @@
 | [ControlCenter](arkts-camera-camera-controlcenter-i.md) |
 | [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md) |
 | [ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md) |
-| [ExposureInfo](arkts-camera-camera-exposureinfo-i.md) |
 | [Flash](arkts-camera-camera-flash-i.md) |
 | [FlashQuery](arkts-camera-camera-flashquery-i.md) |
 | [Focus](arkts-camera-camera-focus-i.md) |
@@ -65,23 +59,14 @@
 | [FrameRateRange](arkts-camera-camera-frameraterange-i.md) |
 | [FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md) |
 | [FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md) |
-| [IsoInfo](arkts-camera-camera-isoinfo-i.md) |
 | [Location](arkts-camera-camera-location-i.md) |
-| [Macro](arkts-camera-camera-macro-i.md) |
-| [MacroQuery](arkts-camera-camera-macroquery-i.md) |
 | [ManualExposure](arkts-camera-camera-manualexposure-i.md) |
 | [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md) |
-| [ManualFocus](arkts-camera-camera-manualfocus-i.md) |
 | [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md) |
-| [ManualIso](arkts-camera-camera-manualiso-i.md) |
 | [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md) |
 | [MetadataBarcodeObject](arkts-camera-camera-metadatabarcodeobject-i.md) |
-| [MetadataBasicFaceObject](arkts-camera-camera-metadatabasicfaceobject-i.md) |
 | [MetadataCatBodyObject](arkts-camera-camera-metadatacatbodyobject-i.md) |
-| [MetadataCatFaceObject](arkts-camera-camera-metadatacatfaceobject-i.md) |
 | [MetadataDogBodyObject](arkts-camera-camera-metadatadogbodyobject-i.md) |
-| [MetadataDogFaceObject](arkts-camera-camera-metadatadogfaceobject-i.md) |
-| [MetadataFaceObject](arkts-camera-camera-metadatafaceobject-i.md) |
 | [MetadataHumanBodyObject](arkts-camera-camera-metadatahumanbodyobject-i.md) |
 | [MetadataObject](arkts-camera-camera-metadataobject-i.md) |
 | [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) |
@@ -95,7 +80,6 @@
 | [PhotoOutput](arkts-camera-camera-photooutput-i.md) |
 | [PhotoSession](arkts-camera-camera-photosession-i.md) |
 | [PhotoSessionForSys](arkts-camera-camera-photosessionforsys-i.md) |
-| [PhysicalAperture](arkts-camera-camera-physicalaperture-i.md) |
 | [Point](arkts-camera-camera-point-i.md) |
 | [PortraitPhotoConflictFunctions](arkts-camera-camera-portraitphotoconflictfunctions-i.md) |
 | [PortraitPhotoFunctions](arkts-camera-camera-portraitphotofunctions-i.md) |
@@ -118,22 +102,25 @@
 | [WhiteBalance](arkts-camera-camera-whitebalance-i.md) |
 | [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md) |
 | [Zoom](arkts-camera-camera-zoom-i.md) |
-| [ZoomPointInfo](arkts-camera-camera-zoompointinfo-i.md) |
 | [ZoomQuery](arkts-camera-camera-zoomquery-i.md) |
-| [ZoomRange](arkts-camera-camera-zoomrange-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
 
 | 名称 |
 | --- |
+| [Aperture](arkts-camera-camera-aperture-i-sys.md) |
 | [ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md) |
+| [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md) |
 | [ApertureVideoSession](arkts-camera-camera-aperturevideosession-i-sys.md) |
+| [AutoExposure](arkts-camera-camera-autoexposure-i-sys.md) |
+| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i-sys.md) |
 | [Beauty](arkts-camera-camera-beauty-i-sys.md) |
 | [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) |
 | [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) |
 | [CameraInput](arkts-camera-camera-camerainput-i-sys.md) |
 | [CameraManager](arkts-camera-camera-cameramanager-i-sys.md) |
+| [CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md) |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i-sys.md) |
 | [CaptureSession](arkts-camera-camera-capturesession-i-sys.md) |
 | [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md) |
@@ -149,6 +136,7 @@
 | [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md) |
 | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) |
 | [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md) |
+| [ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md) |
 | [Flash](arkts-camera-camera-flash-i-sys.md) |
 | [FlashQuery](arkts-camera-camera-flashquery-i-sys.md) |
 | [FluorescencePhotoSession](arkts-camera-camera-fluorescencephotosession-i-sys.md) |
@@ -158,17 +146,31 @@
 | [HighResolutionPhotoSession](arkts-camera-camera-highresolutionphotosession-i-sys.md) |
 | [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md) |
 | [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md) |
+| [IsoInfo](arkts-camera-camera-isoinfo-i-sys.md) |
 | [LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md) |
 | [LightPaintingPhotoSession](arkts-camera-camera-lightpaintingphotosession-i-sys.md) |
 | [LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md) |
+| [Macro](arkts-camera-camera-macro-i-sys.md) |
 | [MacroPhotoSession](arkts-camera-camera-macrophotosession-i-sys.md) |
+| [MacroQuery](arkts-camera-camera-macroquery-i-sys.md) |
 | [MacroVideoSession](arkts-camera-camera-macrovideosession-i-sys.md) |
+| [ManualExposure](arkts-camera-camera-manualexposure-i-sys.md) |
+| [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i-sys.md) |
+| [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md) |
+| [ManualIso](arkts-camera-camera-manualiso-i-sys.md) |
+| [ManualIsoQuery](arkts-camera-camera-manualisoquery-i-sys.md) |
+| [MetadataBasicFaceObject](arkts-camera-camera-metadatabasicfaceobject-i-sys.md) |
+| [MetadataCatFaceObject](arkts-camera-camera-metadatacatfaceobject-i-sys.md) |
+| [MetadataDogFaceObject](arkts-camera-camera-metadatadogfaceobject-i-sys.md) |
+| [MetadataFaceObject](arkts-camera-camera-metadatafaceobject-i-sys.md) |
 | [MetadataObject](arkts-camera-camera-metadataobject-i-sys.md) |
+| [MetadataOutput](arkts-camera-camera-metadataoutput-i-sys.md) |
 | [NightPhotoSession](arkts-camera-camera-nightphotosession-i-sys.md) |
 | [PanoramaPhotoSession](arkts-camera-camera-panoramaphotosession-i-sys.md) |
 | [Photo](arkts-camera-camera-photo-i-sys.md) |
 | [PhotoOutput](arkts-camera-camera-photooutput-i-sys.md) |
 | [PhotoSession](arkts-camera-camera-photosession-i-sys.md) |
+| [PhysicalAperture](arkts-camera-camera-physicalaperture-i-sys.md) |
 | [Portrait](arkts-camera-camera-portrait-i-sys.md) |
 | [PortraitPhotoSession](arkts-camera-camera-portraitphotosession-i-sys.md) |
 | [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md) |
@@ -190,9 +192,13 @@
 | [TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md) |
 | [VideoOutput](arkts-camera-camera-videooutput-i-sys.md) |
 | [VideoSession](arkts-camera-camera-videosession-i-sys.md) |
+| [WhiteBalance](arkts-camera-camera-whitebalance-i-sys.md) |
 | [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) |
+| [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i-sys.md) |
 | [Zoom](arkts-camera-camera-zoom-i-sys.md) |
+| [ZoomPointInfo](arkts-camera-camera-zoompointinfo-i-sys.md) |
 | [ZoomQuery](arkts-camera-camera-zoomquery-i-sys.md) |
+| [ZoomRange](arkts-camera-camera-zoomrange-i-sys.md) |
 <!--DelEnd-->
 
 ### 枚举
@@ -208,8 +214,6 @@
 | [CameraType](arkts-camera-camera-cameratype-e.md) |
 | [ConnectionType](arkts-camera-camera-connectiontype-e.md) |
 | [ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md) |
-| [Emotion](arkts-camera-camera-emotion-e.md) |
-| [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) |
 | [ExposureMode](arkts-camera-camera-exposuremode-e.md) |
 | [ExposureState](arkts-camera-camera-exposurestate-e.md) |
 | [FlashMode](arkts-camera-camera-flashmode-e.md) |
@@ -217,7 +221,6 @@
 | [FocusMode](arkts-camera-camera-focusmode-e.md) |
 | [FocusState](arkts-camera-camera-focusstate-e.md) |
 | [FoldStatus](arkts-camera-camera-foldstatus-e.md) |
-| [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md) |
 | [ImageRotation](arkts-camera-camera-imagerotation-e.md) |
 | [MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md) |
 | [OISAxes](arkts-camera-camera-oisaxes-e.md) |
@@ -234,7 +237,6 @@
 | [TorchMode](arkts-camera-camera-torchmode-e.md) |
 | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) |
 | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) |
-| [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) |
 
 <!--Del-->
 ### 枚举（系统接口）
@@ -253,9 +255,13 @@
 | [DepthDataAccuracy](arkts-camera-camera-depthdataaccuracy-e-sys.md) |
 | [DepthDataQualityLevel](arkts-camera-camera-depthdataqualitylevel-e-sys.md) |
 | [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md) |
+| [Emotion](arkts-camera-camera-emotion-e-sys.md) |
+| [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e-sys.md) |
+| [ExposureMode](arkts-camera-camera-exposuremode-e-sys.md) |
 | [FocusDrivenType](arkts-camera-camera-focusdriventype-e-sys.md) |
 | [FocusRangeType](arkts-camera-camera-focusrangetype-e-sys.md) |
 | [FocusTrackingMode](arkts-camera-camera-focustrackingmode-e-sys.md) |
+| [HostDeviceType](arkts-camera-camera-hostdevicetype-e-sys.md) |
 | [LightPaintingType](arkts-camera-camera-lightpaintingtype-e-sys.md) |
 | [LightStatus](arkts-camera-camera-lightstatus-e-sys.md) |
 | [MetadataObjectType](arkts-camera-camera-metadataobjecttype-e-sys.md) |
@@ -271,6 +277,7 @@
 | [TripodStatus](arkts-camera-camera-tripodstatus-e-sys.md) |
 | [UsageType](arkts-camera-camera-usagetype-e-sys.md) |
 | [VideoMetaType](arkts-camera-camera-videometatype-e-sys.md) |
+| [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e-sys.md) |
 <!--DelEnd-->
 
 ### 类型

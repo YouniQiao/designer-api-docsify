@@ -4,6 +4,8 @@ Interface for defining time base metadata
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-media-interface AVTimedMetaData--><!--Device-media-interface AVTimedMetaData-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -26,6 +28,8 @@ The classification label of the time base metadata.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVTimedMetaData-classify?: string--><!--Device-AVTimedMetaData-classify?: string-End-->
@@ -40,9 +44,11 @@ contents: Record<string, object>
 
 Key-value pair set corresponding to time primitive information
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, object&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +62,13 @@ Key-value pair set corresponding to time primitive information
 duration: number
 ```
 
-Duration of the time primitive information The value should be an integer.&lt;br&gt;Unit:milliseconds.
+Duration of the time primitive information The value should be an integer. &lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +82,13 @@ Duration of the time primitive information The value should be an integer.&lt;br
 id?: string
 ```
 
-Defines the unique token of the time base metadata,The tag must be unique in other time metadata of the video source.
+Defines the unique token of the time base metadata, The tag must be unique in other time metadata of the video source.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,11 +102,13 @@ Defines the unique token of the time base metadata,The tag must be unique in oth
 start: number
 ```
 
-Defines the offset value of the time primitive information relative to the start time of the entire media.The value should be an integer.&lt;br&gt;Unit:milliseconds.
+Defines the offset value of the time primitive information relative to the start time of the entire media. The value should be an integer. &lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

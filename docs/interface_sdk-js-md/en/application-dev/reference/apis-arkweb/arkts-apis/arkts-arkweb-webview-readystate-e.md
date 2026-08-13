@@ -2,9 +2,11 @@
 
 Enumerates the cache states of the player.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum ReadyState--><!--Device-webview-enum ReadyState-End-->
 
@@ -18,9 +20,13 @@ HAVE_NOTHING = 0
 
 There is no data cached.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReadyState-HAVE_NOTHING = 0--><!--Device-ReadyState-HAVE_NOTHING = 0-End-->
 
@@ -34,9 +40,13 @@ HAVE_METADATA = 1
 
 Only media metadata is cached.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReadyState-HAVE_METADATA = 1--><!--Device-ReadyState-HAVE_METADATA = 1-End-->
 
@@ -50,9 +60,13 @@ HAVE_CURRENT_DATA = 2
 
 Data up to the current playback position is cached.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReadyState-HAVE_CURRENT_DATA = 2--><!--Device-ReadyState-HAVE_CURRENT_DATA = 2-End-->
 
@@ -66,9 +80,13 @@ HAVE_FUTURE_DATA = 3
 
 Data beyond the current playback position is cached, but there might still be stutters during playback.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReadyState-HAVE_FUTURE_DATA = 3--><!--Device-ReadyState-HAVE_FUTURE_DATA = 3-End-->
 
@@ -82,9 +100,13 @@ HAVE_ENOUGH_DATA = 4
 
 Sufficient data has been cached to ensure smooth playback.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReadyState-HAVE_ENOUGH_DATA = 4--><!--Device-ReadyState-HAVE_ENOUGH_DATA = 4-End-->
 

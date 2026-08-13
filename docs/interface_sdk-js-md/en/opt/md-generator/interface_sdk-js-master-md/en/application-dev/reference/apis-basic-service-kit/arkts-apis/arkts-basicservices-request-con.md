@@ -8,7 +8,9 @@ const ERROR_CANNOT_RESUME: number
 
 (Download error codes) Failure to resume the download due to network errors.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_CANNOT_RESUME: int--><!--Device-request-const ERROR_CANNOT_RESUME: int-End-->
 
@@ -22,7 +24,9 @@ const ERROR_DEVICE_NOT_FOUND: number
 
 (Download error codes) Failure to find a storage device such as a memory card.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_DEVICE_NOT_FOUND: int--><!--Device-request-const ERROR_DEVICE_NOT_FOUND: int-End-->
 
@@ -36,7 +40,9 @@ const ERROR_FILE_ALREADY_EXISTS: number
 
 (Download error codes) Failure to download the file because it already exists.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_FILE_ALREADY_EXISTS: int--><!--Device-request-const ERROR_FILE_ALREADY_EXISTS: int-End-->
 
@@ -50,7 +56,9 @@ const ERROR_FILE_ERROR: number
 
 (Download error codes) File operation failed.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_FILE_ERROR: int--><!--Device-request-const ERROR_FILE_ERROR: int-End-->
 
@@ -64,7 +72,9 @@ const ERROR_HTTP_DATA_ERROR: number
 
 (Download error codes) HTTP transmission failed.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_HTTP_DATA_ERROR: int--><!--Device-request-const ERROR_HTTP_DATA_ERROR: int-End-->
 
@@ -78,7 +88,9 @@ const ERROR_INSUFFICIENT_SPACE: number
 
 (Download error codes) Insufficient storage space.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_INSUFFICIENT_SPACE: int--><!--Device-request-const ERROR_INSUFFICIENT_SPACE: int-End-->
 
@@ -92,7 +104,9 @@ const ERROR_OFFLINE: number
 
 (Download error codes) No network connection.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_OFFLINE: int--><!--Device-request-const ERROR_OFFLINE: int-End-->
 
@@ -106,7 +120,9 @@ const ERROR_TOO_MANY_REDIRECTS: number
 
 (Download error codes) Error caused by too many network redirections.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_TOO_MANY_REDIRECTS: int--><!--Device-request-const ERROR_TOO_MANY_REDIRECTS: int-End-->
 
@@ -120,7 +136,9 @@ const ERROR_UNHANDLED_HTTP_CODE: number
 
 (Download error codes) Unidentified HTTP code.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_UNHANDLED_HTTP_CODE: int--><!--Device-request-const ERROR_UNHANDLED_HTTP_CODE: int-End-->
 
@@ -132,11 +150,11 @@ const ERROR_UNHANDLED_HTTP_CODE: number
 const ERROR_UNKNOWN: number
 ```
 
-(Download error codes) Unknown error.
+(Download error codes) Unknown error. In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error.
 
-In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_UNKNOWN: int--><!--Device-request-const ERROR_UNKNOWN: int-End-->
 
@@ -150,7 +168,9 @@ const ERROR_UNSUPPORTED_NETWORK_TYPE: number
 
 (Download error codes) Network type mismatch.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const ERROR_UNSUPPORTED_NETWORK_TYPE: int--><!--Device-request-const ERROR_UNSUPPORTED_NETWORK_TYPE: int-End-->
 
@@ -164,7 +184,9 @@ const EXCEPTION_FILEIO: number
 
 (Specific error codes) Abnormal file operation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_FILEIO: int--><!--Device-request-const EXCEPTION_FILEIO: int-End-->
 
@@ -178,7 +200,9 @@ const EXCEPTION_FILEPATH: number
 
 (Specific error codes) Abnormal file path.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_FILEPATH: int--><!--Device-request-const EXCEPTION_FILEPATH: int-End-->
 
@@ -192,7 +216,9 @@ const EXCEPTION_OTHERS: number
 
 (Specific error codes) Other errors.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_OTHERS: int--><!--Device-request-const EXCEPTION_OTHERS: int-End-->
 
@@ -206,7 +232,9 @@ const EXCEPTION_PARAMCHECK: number
 
 (Universal error codes) Parameter check failed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_PARAMCHECK: int--><!--Device-request-const EXCEPTION_PARAMCHECK: int-End-->
 
@@ -220,7 +248,9 @@ const EXCEPTION_PERMISSION: number
 
 (Universal error codes) Permission verification failed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_PERMISSION: int--><!--Device-request-const EXCEPTION_PERMISSION: int-End-->
 
@@ -234,7 +264,9 @@ const EXCEPTION_SERVICE: number
 
 (Specific error codes) Abnormal service.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_SERVICE: int--><!--Device-request-const EXCEPTION_SERVICE: int-End-->
 
@@ -248,7 +280,9 @@ const EXCEPTION_UNSUPPORTED: number
 
 (Universal error codes) The device does not support this API.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_UNSUPPORTED: int--><!--Device-request-const EXCEPTION_UNSUPPORTED: int-End-->
 
@@ -262,7 +296,9 @@ const NETWORK_MOBILE: number
 
 (Network type) Bit flag download allowed on a mobile network.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const NETWORK_MOBILE: int--><!--Device-request-const NETWORK_MOBILE: int-End-->
 
@@ -276,7 +312,9 @@ const NETWORK_WIFI: number
 
 (Network type) Bit flag download allowed on a WLAN.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const NETWORK_WIFI: int--><!--Device-request-const NETWORK_WIFI: int-End-->
 
@@ -290,7 +328,9 @@ const PAUSED_BY_USER: number
 
 (Causes of download pause) The user paused the session.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const PAUSED_BY_USER: int--><!--Device-request-const PAUSED_BY_USER: int-End-->
 
@@ -304,7 +344,9 @@ const PAUSED_QUEUED_FOR_WIFI: number
 
 (Causes of download pause) Download paused and queuing for a WLAN connection because the file size exceeds the maximum value allowed for a mobile network session.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const PAUSED_QUEUED_FOR_WIFI: int--><!--Device-request-const PAUSED_QUEUED_FOR_WIFI: int-End-->
 
@@ -318,7 +360,9 @@ const PAUSED_UNKNOWN: number
 
 (Causes of download pause) Download paused due to unknown reasons.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const PAUSED_UNKNOWN: int--><!--Device-request-const PAUSED_UNKNOWN: int-End-->
 
@@ -330,11 +374,11 @@ const PAUSED_UNKNOWN: number
 const PAUSED_WAITING_FOR_NETWORK: number
 ```
 
-(Causes of download pause) Download paused due to a network connection problem.
+(Causes of download pause) Download paused due to a network connection problem. Example: network disconnection
 
-Example: network disconnection
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-request-const PAUSED_WAITING_FOR_NETWORK: int--><!--Device-request-const PAUSED_WAITING_FOR_NETWORK: int-End-->
 
@@ -348,7 +392,9 @@ const PAUSED_WAITING_TO_RETRY: number
 
 (Causes of download pause) Download paused due to network error and then retried.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const PAUSED_WAITING_TO_RETRY: int--><!--Device-request-const PAUSED_WAITING_TO_RETRY: int-End-->
 
@@ -362,7 +408,9 @@ const SESSION_FAILED: number
 
 (Download task status codes) Download failure without retry.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const SESSION_FAILED: int--><!--Device-request-const SESSION_FAILED: int-End-->
 
@@ -376,7 +424,9 @@ const SESSION_PAUSED: number
 
 (Download task status codes) Download paused.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const SESSION_PAUSED: int--><!--Device-request-const SESSION_PAUSED: int-End-->
 
@@ -390,7 +440,9 @@ const SESSION_PENDING: number
 
 (Download task status codes) Download pending.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const SESSION_PENDING: int--><!--Device-request-const SESSION_PENDING: int-End-->
 
@@ -404,7 +456,9 @@ const SESSION_RUNNING: number
 
 (Download task status codes) Download in progress.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const SESSION_RUNNING: int--><!--Device-request-const SESSION_RUNNING: int-End-->
 
@@ -418,7 +472,9 @@ const SESSION_SUCCESSFUL: number
 
 (Download task status codes) Successful download.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-const SESSION_SUCCESSFUL: int--><!--Device-request-const SESSION_SUCCESSFUL: int-End-->
 

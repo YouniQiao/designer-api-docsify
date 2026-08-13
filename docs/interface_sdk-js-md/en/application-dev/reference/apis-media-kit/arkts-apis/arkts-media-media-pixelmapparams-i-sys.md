@@ -2,9 +2,11 @@
 
 Defines the format parameters of the video thumbnail to be obtained.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface PixelMapParams--><!--Device-media-interface PixelMapParams-End-->
 
@@ -22,15 +24,15 @@ import { media } from '@kit.MediaKit';
 autoFlip?: boolean
 ```
 
-Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizontal Flip).If the value is false, the returned thumbnail will not be flipped.
-
-**System API**: This is a system API.
+Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizontal Flip). If the value is false, the returned thumbnail will not be flipped. **System API**: This is a system API.
 
 **Type:** boolean
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMapParams-autoFlip?: boolean--><!--Device-PixelMapParams-autoFlip?: boolean-End-->
 
@@ -44,15 +46,15 @@ Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizo
 colorFormat?: PixelFormat
 ```
 
-Color format of the thumbnail.
-
-**System API**: This is a system API.
+Color format of the thumbnail. **System API**: This is a system API.
 
 **Type:** [PixelFormat](arkts-media-media-pixelformat-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMapParams-colorFormat?: PixelFormat--><!--Device-PixelMapParams-colorFormat?: PixelFormat-End-->
 

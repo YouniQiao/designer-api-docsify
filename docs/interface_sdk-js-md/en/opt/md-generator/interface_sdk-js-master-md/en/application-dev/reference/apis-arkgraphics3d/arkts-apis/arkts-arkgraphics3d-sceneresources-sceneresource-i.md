@@ -2,7 +2,9 @@
 
 Define scene resource extended by other 3d resource.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SceneResource--><!--Device-unnamed-export interface SceneResource-End-->
 
@@ -16,7 +18,9 @@ destroy(): void
 
 Release scene resource.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneResource-destroy(): void--><!--Device-SceneResource-destroy(): void-End-->
 
@@ -56,7 +60,9 @@ Scene resource name.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneResource-name: string--><!--Device-SceneResource-name: string-End-->
 
@@ -72,7 +78,9 @@ Scene resource type.
 
 **Type:** [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneResource-readonly resourceType: SceneResourceType--><!--Device-SceneResource-readonly resourceType: SceneResourceType-End-->
 
@@ -88,7 +96,9 @@ Scene resource uri.
 
 **Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneResource-readonly uri?: ResourceStr--><!--Device-SceneResource-readonly uri?: ResourceStr-End-->
 

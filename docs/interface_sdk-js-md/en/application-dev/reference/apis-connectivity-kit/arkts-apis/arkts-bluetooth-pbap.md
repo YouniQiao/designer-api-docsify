@@ -2,9 +2,11 @@
 
 Provides methods to accessing bluetooth PBAP(Phone Book Access Profile)-related capabilities.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace pbap--><!--Device-unnamed-declare namespace pbap-End-->
 
@@ -22,7 +24,7 @@ import { pbap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md#createpbapserverprofile) | create the instance of PBAP server profile. |
+| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md#createPbapServerProfile) | create the instance of PBAP server profile. |
 
 <!--Del-->
 ### Interfaces（系统接口）

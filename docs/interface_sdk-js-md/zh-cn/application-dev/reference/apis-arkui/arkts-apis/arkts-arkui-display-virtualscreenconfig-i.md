@@ -2,9 +2,11 @@
 
 创建虚拟屏幕的参数。
 
-**起始版本：** 16
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-display-interface VirtualScreenConfig--><!--Device-display-interface VirtualScreenConfig-End-->
 
@@ -18,11 +20,13 @@ density: double
 
 指定虚拟屏幕的密度，单位为px，该参数为浮点数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 16
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-density: double--><!--Device-VirtualScreenConfig-density: double-End-->
 
@@ -36,11 +40,13 @@ height: long
 
 指定虚拟屏幕的高度，单位为px，该参数应为正整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 16
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-height: long--><!--Device-VirtualScreenConfig-height: long-End-->
 
@@ -56,9 +62,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 16
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-name: string--><!--Device-VirtualScreenConfig-name: string-End-->
 
@@ -74,9 +82,11 @@ supportsFocus?: boolean
 
 **类型：** boolean
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-supportsFocus?: boolean--><!--Device-VirtualScreenConfig-supportsFocus?: boolean-End-->
 
@@ -92,9 +102,11 @@ surfaceId: string
 
 **类型：** string
 
-**起始版本：** 16
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-surfaceId: string--><!--Device-VirtualScreenConfig-surfaceId: string-End-->
 
@@ -108,11 +120,13 @@ width: long
 
 指定虚拟屏幕的宽度，单位为px，该参数应为正整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 16
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-width: long--><!--Device-VirtualScreenConfig-width: long-End-->
 

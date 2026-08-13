@@ -34,7 +34,7 @@ Returns an iterator allowing to go through all key/value pairs contained in this
 
 **Deprecated since:** 9
 
-**Substitutes:** [iterator]](ohos.url.URLParams.[Symbol.iterator])
+**Substitutes:** iterator]
 
 <!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
 
@@ -72,7 +72,7 @@ Appends a specified key/value pair as a new search parameter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [append](ohos.url.URLParams.append)
+**Substitutes:** append
 
 <!--Device-URLSearchParams-append(name: string, value: string): void--><!--Device-URLSearchParams-append(name: string, value: string): void-End-->
 
@@ -99,7 +99,7 @@ paramsObject.append('fod', '3');
 constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)
 ```
 
-A parameterized constructor used to create an URLSearchParams instance.As the input parameter of the constructor function, init supports four types.The input parameter is a character string two-dimensional array.The input parameter is the object list.The input parameter is a character string.The input parameter is the URLSearchParams object.
+A parameterized constructor used to create an URLSearchParams instance. As the input parameter of the constructor function, init supports four types. The input parameter is a character string two-dimensional array. The input parameter is the object list. The input parameter is a character string. The input parameter is the URLSearchParams object.
 
 **Since:** 7
 
@@ -107,7 +107,7 @@ A parameterized constructor used to create an URLSearchParams instance.As the in
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](ohos.url.URLParams.constructor)
+**Substitutes:** constructor
 
 <!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)--><!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)-End-->
 
@@ -143,7 +143,7 @@ Deletes the given search parameter and its associated value,from the list of all
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](ohos.url.URLParams.delete)
+**Substitutes:** delete
 
 <!--Device-URLSearchParams-delete(name: string): void--><!--Device-URLSearchParams-delete(name: string): void-End-->
 
@@ -169,7 +169,7 @@ paramsObject.delete('fod');
 entries(): IterableIterator<[string, string]>
 ```
 
-Returns an ES6 iterator. Each item of the iterator is a JavaScript Array.The first item of Array is name, and the second item of Array is value.
+Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value.
 
 **Since:** 7
 
@@ -177,7 +177,7 @@ Returns an ES6 iterator. Each item of the iterator is a JavaScript Array.The fir
 
 **Deprecated since:** 9
 
-**Substitutes:** [entries](ohos.url.URLParams.entries)
+**Substitutes:** entries
 
 <!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>--><!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>-End-->
 
@@ -215,7 +215,7 @@ Callback functions are used to traverse key-value pairs on the URLSearchParams i
 
 **Deprecated since:** 9
 
-**Substitutes:** [forEach](ohos.url.URLParams.forEach)
+**Substitutes:** forEach
 
 <!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void--><!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void-End-->
 
@@ -251,7 +251,7 @@ Returns the first value associated to the given search parameter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.url.URLParams.get)
+**Substitutes:** get
 
 <!--Device-URLSearchParams-get(name: string): string | null--><!--Device-URLSearchParams-get(name: string): string | null-End-->
 
@@ -292,7 +292,7 @@ Returns all key-value pairs associated with a given search parameter as an array
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAll](ohos.url.URLParams.getAll)
+**Substitutes:** getAll
 
 <!--Device-URLSearchParams-getAll(name: string): string[]--><!--Device-URLSearchParams-getAll(name: string): string[]-End-->
 
@@ -333,7 +333,7 @@ Returns a Boolean that indicates whether a parameter with the specified name exi
 
 **Deprecated since:** 9
 
-**Substitutes:** [has](ohos.url.URLParams.has)
+**Substitutes:** has
 
 <!--Device-URLSearchParams-has(name: string): boolean--><!--Device-URLSearchParams-has(name: string): boolean-End-->
 
@@ -373,7 +373,7 @@ Returns an iterator allowing to go through all keys contained in this object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [keys](ohos.url.URLParams.keys)
+**Substitutes:** keys
 
 <!--Device-URLSearchParams-keys(): IterableIterator<string>--><!--Device-URLSearchParams-keys(): IterableIterator<string>-End-->
 
@@ -411,7 +411,7 @@ Sets the value associated with a given search parameter to the given value. If t
 
 **Deprecated since:** 9
 
-**Substitutes:** [set](ohos.url.URLParams.set)
+**Substitutes:** set
 
 <!--Device-URLSearchParams-set(name: string, value: string): void--><!--Device-URLSearchParams-set(name: string, value: string): void-End-->
 
@@ -446,7 +446,7 @@ Sort all key/value pairs contained in this object in place and return undefined.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sort](ohos.url.URLParams.sort)
+**Substitutes:** sort
 
 <!--Device-URLSearchParams-sort(): void--><!--Device-URLSearchParams-sort(): void-End-->
 
@@ -474,7 +474,7 @@ Returns a query string suitable for use in a URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** [toString](ohos.url.URLParams.toString)
+**Substitutes:** toString
 
 <!--Device-URLSearchParams-toString(): string--><!--Device-URLSearchParams-toString(): string-End-->
 
@@ -509,7 +509,7 @@ Returns an iterator allowing to go through all values contained in this object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [values](ohos.url.URLParams.values)
+**Substitutes:** values
 
 <!--Device-URLSearchParams-values(): IterableIterator<string>--><!--Device-URLSearchParams-values(): IterableIterator<string>-End-->
 

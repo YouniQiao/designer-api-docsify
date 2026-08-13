@@ -1,0 +1,28 @@
+# OnInlineCounterV2Change
+
+```TypeScript
+export type OnInlineCounterV2Change = (value: int) => void
+```
+
+The change callback of the inline CounterV2.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-unnamed-export type OnInlineCounterV2Change = (value: int) => void--><!--Device-unnamed-export type OnInlineCounterV2Change = (value: int) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | int | Yes | value. <br>The value should be an integer. |
+

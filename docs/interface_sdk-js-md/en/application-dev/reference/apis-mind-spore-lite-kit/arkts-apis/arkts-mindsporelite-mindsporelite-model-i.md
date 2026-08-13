@@ -2,9 +2,11 @@
 
 Provides manages model function. Including get inputs, predict ,resize.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-interface Model--><!--Device-mindSporeLite-interface Model-End-->
 
@@ -28,9 +30,11 @@ exportModel(
 
 Export train model to file
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,9 +83,11 @@ exportWeightsCollaborateWithMicro(
 
 Export model's weights, which can be used in micro only. Only valid for Lite Train
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,9 +131,11 @@ getInputs(): MSTensor[]
 
 Get model input tensors.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,9 +171,11 @@ getWeights(): MSTensor[]
 
 Obtain all weights of the model
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,9 +229,11 @@ predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void
 
 Infer model
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,7 +246,7 @@ Infer model
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes | the callback of MSTensor array. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes | the callback of MSTensor array. |
 
 ## Examples
 
@@ -275,9 +287,11 @@ predict(inputs: MSTensor[]): Promise<MSTensor[]>
 
 Infer model
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -329,21 +343,17 @@ globalContext.getApplicationContext()
 
 ## resize
 
-ArkTS-Dyn:
-```TypeScript
-resize(inputs: MSTensor[], dims: Array<Array<number>>): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean
 ```
 
 resize model input
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -356,7 +366,7 @@ resize model input
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-| dims | ArkTS-Dyn: Array&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Array&lt;Array&lt;int&gt;&gt; | Yes | indicates the target new shape array |
+| dims | Array&lt;Array&lt;int&gt;&gt; | Yes | indicates the target new shape array |
 
 **Return value:**
 
@@ -383,9 +393,11 @@ runStep(inputs: MSTensor[]): boolean
 
 Train model by step
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -421,21 +433,17 @@ mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSp
 
 ## setupVirtualBatch
 
-ArkTS-Dyn:
-```TypeScript
-setupVirtualBatch(virtualBatchMultiplier: number, lr: number, momentum: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean
 ```
 
 Setup training with virtual batches
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -447,9 +455,9 @@ Setup training with virtual batches
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| virtualBatchMultiplier | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | virtual batch multiplier, use any number < 1 to disable |
-| lr | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | learning rate to use for virtual batch, -1 for internal configuration |
-| momentum | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | batch norm momentum to use for virtual batch, -1 for internal configuration |
+| virtualBatchMultiplier | int | Yes | virtual batch multiplier, use any number < 1 to disable |
+| lr | double | Yes | learning rate to use for virtual batch, -1 for internal configuration |
+| momentum | double | Yes | batch norm momentum to use for virtual batch, -1 for internal configuration |
 
 **Return value:**
 
@@ -492,9 +500,11 @@ updateWeights(weights: MSTensor[]): boolean
 
 Update weights of the model
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -550,11 +560,13 @@ learningRate?: double
 
 The learning rate of the training model
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -572,9 +584,11 @@ The running mode of the model
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

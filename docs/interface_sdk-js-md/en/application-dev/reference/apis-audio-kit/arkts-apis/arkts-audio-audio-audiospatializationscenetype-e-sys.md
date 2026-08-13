@@ -2,9 +2,11 @@
 
 Describes a spatialization scene type group.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioSpatializationSceneType--><!--Device-audio-enum AudioSpatializationSceneType-End-->
 
@@ -20,9 +22,11 @@ DEFAULT = 0
 
 Audio Spatialization Scene Type Default.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationSceneType-DEFAULT = 0--><!--Device-AudioSpatializationSceneType-DEFAULT = 0-End-->
 
@@ -38,9 +42,11 @@ MUSIC = 1
 
 Audio Spatialization Scene Type Music.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationSceneType-MUSIC = 1--><!--Device-AudioSpatializationSceneType-MUSIC = 1-End-->
 
@@ -56,9 +62,11 @@ MOVIE = 2
 
 Audio Spatialization Scene Type Movie.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationSceneType-MOVIE = 2--><!--Device-AudioSpatializationSceneType-MOVIE = 2-End-->
 
@@ -74,9 +82,11 @@ AUDIOBOOK = 3
 
 Audio Spatialization Scene Type Audio Book.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3--><!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3-End-->
 

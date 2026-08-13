@@ -6,7 +6,9 @@ export type RecoverableApplicationInfo = _RecoverableApplicationInfo
 
 Defines the information about a preinstalled application that can be restored after being uninstalled.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export type RecoverableApplicationInfo = _RecoverableApplicationInfo--><!--Device-bundleManager-export type RecoverableApplicationInfo = _RecoverableApplicationInfo-End-->
 

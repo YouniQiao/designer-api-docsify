@@ -6,7 +6,7 @@ The **FormProvider** module provides APIs related to the widget provider. You ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [formProvider](arkts-app-form-formprovider.md#formProvider)
+**Substitutes:** [formProvider](arkts-app-form-formprovider.md#@ohos.app.form.formProvider)
 
 <!--Device-unnamed-declare namespace formProvider--><!--Device-unnamed-declare namespace formProvider-End-->
 
@@ -18,7 +18,7 @@ The **FormProvider** module provides APIs related to the widget provider. You ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime) |
-| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime-1) |
-| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform) |
-| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform-1) |
+| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setFormNextRefreshTime) |
+| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setFormNextRefreshTime) |
+| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateForm) |
+| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateForm) |

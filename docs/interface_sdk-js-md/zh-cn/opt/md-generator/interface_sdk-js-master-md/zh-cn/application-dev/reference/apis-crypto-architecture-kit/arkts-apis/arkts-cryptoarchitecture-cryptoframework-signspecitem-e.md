@@ -1,14 +1,10 @@
 # SignSpecItem
 
-表示签名验签参数的枚举。这些参数支持通过  
-[setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setSignSpec)、  
-[setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setVerifySpec)接口设置，通过  
-[getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getSignSpec)、[getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getVerifySpec)接口获取。
+表示签名验签参数的枚举。这些参数支持通过 [setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setSignSpec)、 [setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setVerifySpec)接口设置，通过 [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getSignSpec)、[getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getVerifySpec) 接口获取。 &lt;br&gt;当前只支持RSA算法和SM2算法。详细规格请参考 [签名验签规格](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md)。
 
-&lt;br&gt;当前只支持RSA算法和SM2算法。详细规格请参考  
-[签名验签规格](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md)。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-enum SignSpecItem--><!--Device-cryptoFramework-enum SignSpecItem-End-->
 
@@ -24,7 +20,9 @@ PSS_MD_NAME_STR = 100
 
 表示RSA算法中，使用PSS模式时，消息摘要功能的算法名。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,7 +40,9 @@ PSS_MGF_NAME_STR = 101
 
 表示RSA算法中，使用PSS模式时，掩码生成算法（目前仅支持MGF1）。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -60,7 +60,9 @@ PSS_MGF1_MD_STR = 102
 
 表示RSA算法中，使用PSS模式时，MGF1掩码生成功能的消息摘要算法。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -76,20 +78,11 @@ PSS_MGF1_MD_STR = 102
 PSS_SALT_LEN_NUM = 103
 ```
 
-表示RSA算法中，使用PSS模式时，盐值的长度，长度以字节为单位。
+表示RSA算法中，使用PSS模式时，盐值的长度，长度以字节为单位。 &lt;br&gt;根据 FIPS 186-4 标准，sLen 应大于等于 0 且小于等于哈希长度。 &lt;br&gt;默认值： - 对于签名操作，自动计算最大盐值长度。 - 对于验证操作，自动计算盐值长度。 &lt;br&gt;特殊值： - 对于签名操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；或设置为 -2 或 -3，以自动计算最大盐值长度。推荐使用 -1。 - 对于验证操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；设置为 -2，以自动计算盐值长度；或设置为 -3，以使用最大盐值长度。 推荐使用 -2。
 
-&lt;br&gt;根据 FIPS 186-4 标准，sLen 应大于等于 0 且小于等于哈希长度。
+**起始版本：** 23
 
-&lt;br&gt;默认值：  
-- 对于签名操作，自动计算最大盐值长度。  
-- 对于验证操作，自动计算盐值长度。
-
-&lt;br&gt;特殊值：  
-- 对于签名操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；或设置为 -2 或 -3，以自动计算最大盐值长度。推荐使用 -1。  
-- 对于验证操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；设置为 -2，以自动计算盐值长度；或设置为 -3，以使用最大盐值长度。  
-推荐使用 -2。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -107,7 +100,9 @@ PSS_TRAILER_FIELD_NUM = 104
 
 表示RSA算法中，使用PSS模式时，用于编码操作的整数。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -125,7 +120,9 @@ SM2_USER_ID_UINT8ARR = 105
 
 表示SM2算法中，用户身份标识字段。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -145,6 +142,8 @@ ML_DSA_DETERMINISTIC_BOOL = 106
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -163,6 +162,8 @@ ML_DSA_MU_BOOL = 107
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -180,6 +181,8 @@ ML_DSA_CONTEXT_UINT8ARR = 108
 指示ML-DSA签名和验证过程中的上下文数据。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

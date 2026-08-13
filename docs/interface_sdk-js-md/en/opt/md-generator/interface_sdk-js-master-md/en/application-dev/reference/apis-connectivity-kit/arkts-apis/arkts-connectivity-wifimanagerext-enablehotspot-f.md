@@ -12,7 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function enableHotspot(): void
 ```
 
-Enable Wi-Fi hotspot function.This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
+Enable Wi-Fi hotspot function. This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
 **Since:** 9
 
@@ -28,9 +28,9 @@ Enable Wi-Fi hotspot function.This method is asynchronous. After the Wi-Fi hotsp
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2701000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2701000-ap-extension-module-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

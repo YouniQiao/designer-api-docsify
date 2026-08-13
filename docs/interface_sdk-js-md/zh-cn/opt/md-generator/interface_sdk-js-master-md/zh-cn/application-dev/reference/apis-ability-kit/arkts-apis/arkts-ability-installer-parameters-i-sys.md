@@ -2,7 +2,9 @@
 
 扩展参数信息。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-installer-export interface Parameters--><!--Device-installer-export interface Parameters-End-->
 
@@ -20,7 +22,9 @@ key: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Parameters-key: string--><!--Device-Parameters-key: string-End-->
 
@@ -38,7 +42,9 @@ value: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Parameters-value: string--><!--Device-Parameters-value: string-End-->
 

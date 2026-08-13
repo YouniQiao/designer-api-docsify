@@ -1,12 +1,10 @@
 # EventFilter
 
-Implements an event filter.
-
-You can use [filterById()](#filterById),  
-[filterByTime()](#filterByTime),  
-[filterByTitle()](#filterByTitle) to obtain an event filter, and then pass the filter in getEvents() for filtering.
+Implements an event filter. You can use [filterById()](#filterById), [filterByTime()](#filterByTime), [filterByTitle()](#filterByTitle) to obtain an event filter, and then pass the filter in getEvents() for filtering.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-calendarManager-class EventFilter--><!--Device-calendarManager-class EventFilter-End-->
 
@@ -27,6 +25,8 @@ static filterById(ids: number[]): EventFilter
 Defines a filter based on the event ID.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-EventFilter-static filterById(ids: number[]): EventFilter--><!--Device-EventFilter-static filterById(ids: number[]): EventFilter-End-->
 
@@ -108,6 +108,8 @@ Defines a filter based on the event time.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter--><!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -183,6 +185,8 @@ static filterByTitle(title: string): EventFilter
 Filters events by event title. This API supports fuzzy match.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-EventFilter-static filterByTitle(title: string): EventFilter--><!--Device-EventFilter-static filterByTitle(title: string): EventFilter-End-->
 

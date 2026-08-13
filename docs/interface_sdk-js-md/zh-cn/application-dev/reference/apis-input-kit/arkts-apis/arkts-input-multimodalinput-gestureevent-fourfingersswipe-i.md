@@ -2,9 +2,11 @@
 
 四指滑动手势事件。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface FourFingersSwipe--><!--Device-unnamed-export declare interface FourFingersSwipe-End-->
 
@@ -20,9 +22,11 @@ type: ActionType
 
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-FourFingersSwipe-type: ActionType--><!--Device-FourFingersSwipe-type: ActionType-End-->
 
@@ -36,11 +40,13 @@ x: int
 
 坐标x，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-FourFingersSwipe-x: int--><!--Device-FourFingersSwipe-x: int-End-->
 
@@ -54,11 +60,13 @@ y: int
 
 坐标y，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-FourFingersSwipe-y: int--><!--Device-FourFingersSwipe-y: int-End-->
 

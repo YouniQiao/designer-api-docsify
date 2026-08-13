@@ -6,6 +6,8 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class Matrix2D--><!--Device-unnamed-export declare class Matrix2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Constructs a 2D change matrix object. The default value is the unit matrix.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix2D-constructor(unit?: LengthMetricsUnit)--><!--Device-Matrix2D-constructor(unit?: LengthMetricsUnit)-End-->
@@ -32,7 +36,7 @@ Constructs a 2D change matrix object. The default value is the unit matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | No | the unit mode |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetricsunit-e.md) | No | the unit mode |
 
 ## identity
 
@@ -45,6 +49,8 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix2D-invert(): Matrix2D--><!--Device-Matrix2D-invert(): Matrix2D-End-->
@@ -93,6 +101,8 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,6 +136,8 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix2D-scale(sx?: double, sy?: double): Matrix2D--><!--Device-Matrix2D-scale(sx?: double, sy?: double): Matrix2D-End-->
@@ -157,6 +169,8 @@ Adds the translation effect of the X and Y axes to the current matrix.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix2D-translate(tx?: double, ty?: double): Matrix2D--><!--Device-Matrix2D-translate(tx?: double, ty?: double): Matrix2D-End-->
@@ -175,124 +189,4 @@ Adds the translation effect of the X and Y axes to the current matrix.
 | Type | Description |
 | --- | --- |
 | [Matrix2D](arkts-arkui-matrix2d-matrix2d-c.md) |  |
-
-## rotateX
-
-```TypeScript
-set rotateX(rotateX: double | undefined)
-```
-
-Set the horizontal tilt.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Matrix2D-set rotateX(rotateX: double | undefined)--><!--Device-Matrix2D-set rotateX(rotateX: double | undefined)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## rotateY
-
-```TypeScript
-set rotateY(rotateY: double | undefined)
-```
-
-Set the vertical tilt.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Matrix2D-set rotateY(rotateY: double | undefined)--><!--Device-Matrix2D-set rotateY(rotateY: double | undefined)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## scaleX
-
-```TypeScript
-set scaleX(scaleX: double | undefined)
-```
-
-Set the horizontal zoom.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Matrix2D-set scaleX(scaleX: double | undefined)--><!--Device-Matrix2D-set scaleX(scaleX: double | undefined)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## scaleY
-
-```TypeScript
-set scaleY(scaleY: double | undefined)
-```
-
-Set the vertical zoom.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Matrix2D-set scaleY(scaleY: double | undefined)--><!--Device-Matrix2D-set scaleY(scaleY: double | undefined)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## translateX
-
-```TypeScript
-set translateX(translateX: double | undefined)
-```
-
-Set the horizontal movement.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Matrix2D-set translateX(translateX: double | undefined)--><!--Device-Matrix2D-set translateX(translateX: double | undefined)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## translateY
-
-```TypeScript
-set translateY(translateY: double | undefined)
-```
-
-Set the vertical movement.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Matrix2D-set translateY(translateY: double | undefined)--><!--Device-Matrix2D-set translateY(translateY: double | undefined)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

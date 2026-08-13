@@ -1,12 +1,6 @@
 # Param
 
-Provides constants that define the names of all predefined event parameters.
-
-| Name | Type | Readable| Writable| Description |  
-| ------------------------------- | ------ | ---- | ---- | ------------------ |  
-| USER_ID | string | Yes | No | Custom user ID. |  
-| DISTRIBUTED_SERVICE_NAME | string | Yes | No | Distributed service name. |  
-| DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes | No | Distributed service instance ID.|
+Provides constants that define the names of all predefined event parameters. | Name | Type | Readable| Writable| Description | | ------------------------------- | ------ | ---- | ---- | ------------------ | | USER_ID | string | Yes | No | Custom user ID. | | DISTRIBUTED_SERVICE_NAME | string | Yes | No | Distributed service name. | | DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes | No | Distributed service instance ID.|
 
 **Since:** 7
 
@@ -14,7 +8,7 @@ Provides constants that define the names of all predefined event parameters.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Param](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Param)
+**Substitutes:** Param
 
 <!--Device-hiAppEvent-namespace Param--><!--Device-hiAppEvent-namespace Param-End-->
 
@@ -26,7 +20,7 @@ Provides constants that define the names of all predefined event parameters.
 
 | Name | Description |
 | --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-depr-con.md#user_id) | User id. |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-depr-con.md#distributed_service_name) | Distributed service name. |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-depr-con.md#distributed_service_instance_id) | Distributed service instance id. |
+| [USER_ID](arkts-performanceanalysis-param-depr-con.md#USER_ID) | User id. |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-depr-con.md#DISTRIBUTED_SERVICE_NAME) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-depr-con.md#DISTRIBUTED_SERVICE_INSTANCE_ID) | Distributed service instance id. |
 

@@ -1,20 +1,8 @@
 # EffectComponent
 
-特效合并容器组件，用于子节点特效绘制的合并，实现特效的绘制性能优化。
+特效合并容器组件，用于子节点特效绘制的合并，实现特效的绘制性能优化。 > **说明：** > > - 该组件从API Version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。 > > - 本模块为系统接口。 > - 目前该组件仅支持子组件背景模糊效果的绘制合并优化。 > > - 在对子组件的背景模糊特效进行绘制合并时，需要将子组件的backgroundBlurStyle(BlurStyle)属性替换成useEffect(true)。
 
-> **说明：**
->
-> - 该组件从API Version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
->
-> - 本模块为系统接口。
-
-> - 目前该组件仅支持子组件背景模糊效果的绘制合并优化。
->
-> - 在对子组件的背景模糊特效进行绘制合并时，需要将子组件的backgroundBlurStyle(BlurStyle)属性替换成useEffect(true)。
-
-## 子组件
-
-可以包含子组件。
+## 子组件 可以包含子组件。
 
 ## EffectComponent
 
@@ -25,6 +13,8 @@ EffectComponent()
 创建特效绘制合并组件，用于对子组件背景模糊特效的绘制合并。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +34,8 @@ EffectComponent(options?: EffectComponentOptions)
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-EffectComponentInterface-(options?: EffectComponentOptions): EffectComponentAttribute--><!--Device-EffectComponentInterface-(options?: EffectComponentOptions): EffectComponentAttribute-End-->
@@ -60,5 +52,5 @@ EffectComponent(options?: EffectComponentOptions)
 
 ## 汇总
 
-- [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md)
-- [EffectLayer](arkts-arkui-effectcomponent-effectlayer-e-sys.md)
+- [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md)
+- [EffectLayer](arkts-arkui-effectlayer-e-sys.md)

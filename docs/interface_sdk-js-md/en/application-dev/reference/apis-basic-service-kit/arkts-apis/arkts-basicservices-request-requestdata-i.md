@@ -2,9 +2,11 @@
 
 Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig).
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-request-interface RequestData--><!--Device-request-interface RequestData-End-->
 
@@ -26,9 +28,11 @@ Name of a form element.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
@@ -44,9 +48,11 @@ Value of a form element.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 

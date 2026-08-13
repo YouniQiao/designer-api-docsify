@@ -2,7 +2,9 @@
 
 同步根管理类，负责为系统文件管理应用提供获取三方网盘注册的同步根信息的能力。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudDiskManager-class SyncFolderAccessor--><!--Device-cloudDiskManager-class SyncFolderAccessor-End-->
 
@@ -18,7 +20,9 @@ constructor()
 
 SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
@@ -32,8 +36,8 @@ SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例�
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -68,7 +72,9 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 获取所有注册的同步根信息。使用Promise异步回调。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
@@ -88,12 +94,12 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [34400014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) |
-| [34400015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [34400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) |
+| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) |
 
 ## 示例
 

@@ -8,7 +8,9 @@ function createPixelMapFromSurface(surfaceId: string, region: Region): Promise<P
 
 Creates a PixelMap object from surface id.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-function createPixelMapFromSurface(surfaceId: string, region: Region): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurface(surfaceId: string, region: Region): Promise<PixelMap>-End-->
 
@@ -31,9 +33,9 @@ Creates a PixelMap object from surface id.
 
 | 错误码ID |
 | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
-| [62980178](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-pixelmap创建失败) |
-| [62980105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-图片获取数据错误) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
+| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
 
 ## 示例
 
@@ -59,7 +61,9 @@ function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>
 
 Creates a PixelMap object from surface id.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>-End-->
 
@@ -81,9 +85,9 @@ Creates a PixelMap object from surface id.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [62980178](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-pixelmap创建失败) |
-| [62980105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-图片获取数据错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
+| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
 
 ## 示例
 

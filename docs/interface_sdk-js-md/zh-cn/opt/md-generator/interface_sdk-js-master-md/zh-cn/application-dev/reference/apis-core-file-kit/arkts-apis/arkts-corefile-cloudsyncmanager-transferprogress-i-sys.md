@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-cloudSyncManager-interface TransferProgress--><!--Device-cloudSyncManager-interface TransferProgress-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -21,6 +23,8 @@ failedCount: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ state: TransferState
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TransferProgress-state: TransferState--><!--Device-TransferProgress-state: TransferState-End-->
@@ -61,6 +67,8 @@ stopReason: TransferStopReason
 **类型：** [TransferStopReason](arkts-corefile-cloudsyncmanager-transferstopreason-e-sys.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,6 +90,8 @@ successfulCount: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TransferProgress-successfulCount: int--><!--Device-TransferProgress-successfulCount: int-End-->
@@ -101,6 +111,8 @@ totalCount: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,6 +134,8 @@ totalSize: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TransferProgress-totalSize: long--><!--Device-TransferProgress-totalSize: long-End-->
@@ -141,6 +155,8 @@ transferredSize: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,7 +6,9 @@ type RatType = radio.RadioTechnology
 
 无线接入技术。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-observer-type RatType = radio.RadioTechnology--><!--Device-observer-type RatType = radio.RadioTechnology-End-->
 

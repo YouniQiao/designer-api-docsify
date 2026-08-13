@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontFallbackGroupInfo--><!--Device-font-interface UIFontFallbackGroupInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Fallback font list related.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIFontFallbackGroupInfo-fallback: Array<UIFontFallbackInfo>--><!--Device-UIFontFallbackGroupInfo-fallback: Array<UIFontFallbackInfo>-End-->
@@ -47,6 +51,8 @@ Indicates which font set uses following list for fallback font if the font set n
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

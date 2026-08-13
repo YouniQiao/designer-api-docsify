@@ -14,7 +14,9 @@ function getImageSourceSupportedFormats(): string[]
 
 Obtains the supported decoding formats, represented by MIME types.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-function getImageSourceSupportedFormats(): string[]--><!--Device-image-function getImageSourceSupportedFormats(): string[]-End-->
 

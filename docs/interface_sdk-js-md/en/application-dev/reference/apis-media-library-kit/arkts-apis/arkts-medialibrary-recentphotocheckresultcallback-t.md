@@ -4,13 +4,15 @@
 export type RecentPhotoCheckResultCallback = (recentPhotoExists: boolean) => void
 ```
 
-The callback of onRecentPhotoCheckResult event
+Called to return the query result of the recent image or video.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export type RecentPhotoCheckResultCallback = (recentPhotoExists: boolean) => void--><!--Device-unnamed-export type RecentPhotoCheckResultCallback = (recentPhotoExists: boolean) => void-End-->
 
@@ -20,5 +22,5 @@ The callback of onRecentPhotoCheckResult event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoExists | boolean | Yes | Does the recent photo exist? |
+| recentPhotoExists | boolean | Yes | Whether the recent image or video exists. **true** if it exists, **false** otherwise. The default value is **true**. |
 

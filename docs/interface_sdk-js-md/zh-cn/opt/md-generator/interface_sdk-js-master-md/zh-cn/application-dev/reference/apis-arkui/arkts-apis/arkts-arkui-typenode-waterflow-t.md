@@ -4,9 +4,11 @@
 type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>
 ```
 
-WaterFlow类型的FrameNode节点类型。只允许添加[FlowItem](../@internal/component/ets/flow_item)类型子组件。
+WaterFlow类型的FrameNode节点类型。只允许添加FlowItem类型子组件。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

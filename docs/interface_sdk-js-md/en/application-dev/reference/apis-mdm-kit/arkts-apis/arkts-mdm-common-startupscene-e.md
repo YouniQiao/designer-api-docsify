@@ -1,11 +1,12 @@
 # StartupScene
 
-Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first-time startup wizard are complete, the device system calls the  
-[onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onStartupGuideCompleted)API to notify the device administrator application.
+Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first- time startup wizard are complete, the device system calls the [onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onStartupGuideCompleted) API to notify the device administrator application.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-common-export enum StartupScene--><!--Device-common-export enum StartupScene-End-->
 
@@ -17,11 +18,13 @@ Startup wizard completion scenario. When the initial switch to a sub-user (only 
 USER_SETUP = 0
 ```
 
-A sub-user is switched to for the first time and the startup wizard for the sub-user is complete (only on PCs).The callback will not be triggered when the sub-user is switched again.
+A sub-user is switched to for the first time and the startup wizard for the sub-user is complete (only on PCs). The callback will not be triggered when the sub-user is switched again.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +44,8 @@ The OTA upgrade is complete.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartupScene-OTA = 1--><!--Device-StartupScene-OTA = 1-End-->
@@ -58,6 +63,8 @@ The initial startup wizard is complete.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

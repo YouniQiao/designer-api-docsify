@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export default class Animator--><!--Device-unnamed-export default class Animator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,20 +16,13 @@
 static create(options: AnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。
-
-> **说明：**
-> 
-> -
-> 
-> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator)来明确UI的执行上下文。
+创建animator动画结果对象（AnimatorResult）。 > **说明：** > > - > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator)来明确UI的执行上下文。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [createAnimator](ohos.arkui.UIContext.UIContext#createAnimator)
+**替代接口：** createAnimator
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -51,11 +46,11 @@ static create(options: AnimatorOptions): AnimatorResult
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[createAnimator](arkts-apis-uicontext-uicontext.md#createanimator)接口明确UI上下文。
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的createAnimator接口明确UI上下文。
 
 ```TypeScript
 import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';
@@ -79,10 +74,11 @@ animator.create(options); // 建议使用 UIContext.createAnimator()接口
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[create](#create)相比，新增对  
-[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[create](#create)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions)类型入参的支持。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,11 +104,11 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[createAnimator](arkts-apis-uicontext-uicontext.md#createanimator)接口明确UI上下文。
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的createAnimator接口明确UI上下文。
 
 ```TypeScript
 import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -126,15 +122,13 @@ animator.create(options); // 建议使用 UIContext.createAnimator()接口
 static createAnimator(options: AnimatorOptions): AnimatorResult
 ```
 
-创建动画。
-
-> **说明：**
+创建动画。 > **说明：**
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [create](Animator.create(options:)
+**替代接口：** [create](#create)(options: AnimatorOptions)
 
 <!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
 
@@ -154,7 +148,7 @@ static createAnimator(options: AnimatorOptions): AnimatorResult
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';

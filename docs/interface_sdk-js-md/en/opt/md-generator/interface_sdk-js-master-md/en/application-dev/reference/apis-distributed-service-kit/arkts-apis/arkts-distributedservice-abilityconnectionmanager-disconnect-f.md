@@ -14,7 +14,9 @@ function disconnect(sessionId: number): void
 
 Disconnects the UIAbility connection to end the collaboration session.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

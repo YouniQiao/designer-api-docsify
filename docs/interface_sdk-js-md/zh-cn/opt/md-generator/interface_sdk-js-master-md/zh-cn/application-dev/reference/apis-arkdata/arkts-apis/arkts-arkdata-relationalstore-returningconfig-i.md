@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-relationalStore-interface ReturningConfig--><!--Device-relationalStore-interface ReturningConfig-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -19,6 +21,8 @@ columns: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ maxReturningCount?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

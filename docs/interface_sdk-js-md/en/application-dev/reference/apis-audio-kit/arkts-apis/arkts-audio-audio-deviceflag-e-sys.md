@@ -2,9 +2,11 @@
 
 Enumerates the audio device flags.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum DeviceFlag--><!--Device-audio-enum DeviceFlag-End-->
 
@@ -18,9 +20,11 @@ NONE_DEVICES_FLAG = 0
 
 None devices.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceFlag-NONE_DEVICES_FLAG = 0--><!--Device-DeviceFlag-NONE_DEVICES_FLAG = 0-End-->
 
@@ -36,9 +40,11 @@ DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4
 
 Distributed output devices.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceFlag-DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4--><!--Device-DeviceFlag-DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4-End-->
 
@@ -54,9 +60,11 @@ DISTRIBUTED_INPUT_DEVICES_FLAG = 8
 
 Distributed input devices.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceFlag-DISTRIBUTED_INPUT_DEVICES_FLAG = 8--><!--Device-DeviceFlag-DISTRIBUTED_INPUT_DEVICES_FLAG = 8-End-->
 
@@ -72,9 +80,11 @@ ALL_DISTRIBUTED_DEVICES_FLAG = 12
 
 All Distributed devices.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceFlag-ALL_DISTRIBUTED_DEVICES_FLAG = 12--><!--Device-DeviceFlag-ALL_DISTRIBUTED_DEVICES_FLAG = 12-End-->
 

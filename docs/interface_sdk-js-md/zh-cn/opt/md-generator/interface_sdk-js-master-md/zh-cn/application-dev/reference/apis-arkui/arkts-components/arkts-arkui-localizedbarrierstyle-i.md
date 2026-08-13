@@ -4,6 +4,8 @@ barrier参数，用于定义一条支持镜像模式的barrier的id、方向和�
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface LocalizedBarrierStyle--><!--Device-unnamed-declare interface LocalizedBarrierStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ barrier的id，用于标识屏障，子组件可通过此id引用该屏障作为
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -34,17 +38,13 @@ barrier的id，用于标识屏障，子组件可通过此id引用该屏障作为
 localizedDirection : LocalizedBarrierDirection
 ```
 
-指定barrier的方向。
-
-水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（START/END，支持LTR/RTL镜像）仅能作为组件水平方向锚点（start或end），用于垂直方向锚点时位置视为0。
-
-默认值：LocalizedBarrierDirection.START
-
-非法值：按默认值处理。
+指定barrier的方向。 水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（START/END，支持LTR/RTL镜像）仅能作为组件水平方向锚点（start或end），用于垂直方向 锚点时位置视为0。 默认值：LocalizedBarrierDirection.START 非法值：按默认值处理。
 
 **类型：** [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,6 +65,8 @@ referencedId : Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,9 +2,11 @@
 
 Enum for coordinate system type.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum CoordinateSystemType--><!--Device-geoLocationManager-export enum CoordinateSystemType-End-->
 
@@ -18,9 +20,11 @@ WGS84 = 1
 
 WGS84 coordinates system.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CoordinateSystemType-WGS84 = 1--><!--Device-CoordinateSystemType-WGS84 = 1-End-->
 
@@ -34,9 +38,11 @@ GCJ02 = 2
 
 GCJ-02 coordinates system.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CoordinateSystemType-GCJ02 = 2--><!--Device-CoordinateSystemType-GCJ02 = 2-End-->
 

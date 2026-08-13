@@ -8,7 +8,9 @@ Callback function on receiving a custom message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void--><!--Device-inputMethodEngine-type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void-End-->
 

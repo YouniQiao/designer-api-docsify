@@ -2,7 +2,9 @@
 
 Enumerates volume adjustment types.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum VolumeAdjustType--><!--Device-audio-enum VolumeAdjustType-End-->
 
@@ -18,7 +20,9 @@ VOLUME_UP = 0
 
 Adjust volume up.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VolumeAdjustType-VOLUME_UP = 0--><!--Device-VolumeAdjustType-VOLUME_UP = 0-End-->
 
@@ -34,7 +38,9 @@ VOLUME_DOWN = 1
 
 Adjust volume down.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VolumeAdjustType-VOLUME_DOWN = 1--><!--Device-VolumeAdjustType-VOLUME_DOWN = 1-End-->
 

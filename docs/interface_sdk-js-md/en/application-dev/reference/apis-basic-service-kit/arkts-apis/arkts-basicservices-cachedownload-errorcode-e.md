@@ -4,7 +4,9 @@ Enumerates the specific types of returned error code.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-enum ErrorCode--><!--Device-cacheDownload-enum ErrorCode-End-->
 
@@ -20,7 +22,9 @@ Other types of errors that are not classified.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-OTHERS = 0xFF--><!--Device-ErrorCode-OTHERS = 0xFF-End-->
 
@@ -36,7 +40,9 @@ DNS-related errors.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-DNS = 0x00--><!--Device-ErrorCode-DNS = 0x00-End-->
 
@@ -52,7 +58,9 @@ TCP-related errors.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-TCP = 0x10--><!--Device-ErrorCode-TCP = 0x10-End-->
 
@@ -68,7 +76,9 @@ SSL-related errors.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-SSL = 0x20--><!--Device-ErrorCode-SSL = 0x20-End-->
 
@@ -84,7 +94,9 @@ HTTP-related errors.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-HTTP = 0x30--><!--Device-ErrorCode-HTTP = 0x30-End-->
 

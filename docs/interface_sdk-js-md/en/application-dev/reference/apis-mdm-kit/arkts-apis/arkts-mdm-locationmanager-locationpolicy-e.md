@@ -6,6 +6,8 @@ Enumerates the location service policies.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-locationManager-export enum LocationPolicy--><!--Device-locationManager-export enum LocationPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Default policy. The location service is not restricted and can be controlled by 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ The location service is disabled. This policy applies to scenarios where the loc
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LocationPolicy-DISALLOW_LOCATION_SERVICE = 1--><!--Device-LocationPolicy-DISALLOW_LOCATION_SERVICE = 1-End-->
@@ -57,6 +63,8 @@ The location service is forcibly enabled. This policy applies to scenarios where
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

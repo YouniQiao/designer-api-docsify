@@ -1,15 +1,8 @@
 # TextClock
 
-TextClock组件通过文本将当前系统时间显示在设备上，支持不同时区的时间显示和时间格式自定义，最高精度到秒级。适用于需要在应用界面上实时展示系统时间、支持多时区显示的场景，可帮助开发者快速实现时间文本展示功能，无需手动计算和更新时
-间。
+TextClock组件通过文本将当前系统时间显示在设备上，支持不同时区的时间显示和时间格式自定义，最高精度到秒级。适用于需要在应用界面上实时展示系统时间、支持多时区显示的场景，可帮助开发者快速实现时间文本展示功能，无需手动计算和更新时 间。 组件不可见时，时间变动将停止。组件的可见状态基于 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onVisibleAreaChange) 处理，可见阈值ratios大于0即视为可见状态。
 
-组件不可见时，时间变动将停止。组件的可见状态基于
-[onVisibleAreaChange]{@link CommonMethod#onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback)}
-处理，可见阈值ratios大于0即视为可见状态。
-
-## 子组件
-
-无
+## 子组件 无
 
 ## TextClock
 
@@ -20,6 +13,8 @@ TextClock(options?: TextClockOptions)
 创建文本时钟组件。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -37,5 +32,5 @@ TextClock(options?: TextClockOptions)
 
 ## 汇总
 
-- [TextClockConfiguration](arkts-arkui-textclock-textclockconfiguration-i.md)
-- [TextClockOptions](arkts-arkui-textclock-textclockoptions-i.md)
+- [TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)
+- [TextClockOptions](arkts-arkui-textclockoptions-i.md)

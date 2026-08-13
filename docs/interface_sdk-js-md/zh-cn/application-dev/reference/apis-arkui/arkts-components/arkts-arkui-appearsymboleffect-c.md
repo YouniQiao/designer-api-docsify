@@ -8,7 +8,9 @@ AppearSymbolEffect继承自父类SymbolEffect。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare class AppearSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class AppearSymbolEffect extends SymbolEffect-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class AppearSymbolEffect--><!--Device-unnamed-declare class AppearSymbolEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ AppearSymbolEffect的构造函数，出现动效。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,15 +50,15 @@ AppearSymbolEffect的构造函数，出现动效。
 scope?: EffectScope
 ```
 
-动效范围。具体枚举值及说明请参考EffectScope枚举说明。
-
-默认值：EffectScope.LAYER
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。 默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

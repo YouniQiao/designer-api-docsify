@@ -8,7 +8,9 @@ function genSessionId(): string
 
 随机创建一个sessionId。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDataObject-function genSessionId(): string--><!--Device-distributedDataObject-function genSessionId(): string-End-->
 

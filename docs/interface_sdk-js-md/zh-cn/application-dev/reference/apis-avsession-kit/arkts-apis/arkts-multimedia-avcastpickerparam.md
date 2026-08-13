@@ -1,8 +1,5 @@
 # @ohos.multimedia.avCastPickerParam
 
-投播组件参数
-
-
 ## 汇总
 
 ### 枚举

@@ -4,6 +4,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-font-interface FontInfo--><!--Device-font-interface FontInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ family: string
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ fullName: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FontInfo-fullName: string--><!--Device-FontInfo-fullName: string-End-->
@@ -54,17 +60,15 @@ fullName: string
 italic: boolean
 ```
 
-系统字体是否倾斜。
-
-默认值：false
-
-值为true，表示斜体字体，值为false，表示非斜体字体。
+系统字体是否倾斜。 默认值：false 值为true，表示斜体字体，值为false，表示非斜体字体。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,17 +82,15 @@ italic: boolean
 monoSpace: boolean
 ```
 
-系统字体是否等宽。
-
-默认值：false
-
-值为true，表示等宽字体，值为false，表示非等宽字体。
+系统字体是否等宽。 默认值：false 值为true，表示等宽字体，值为false，表示非等宽字体。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +112,8 @@ path: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FontInfo-path: string--><!--Device-FontInfo-path: string-End-->
@@ -129,6 +133,8 @@ postScriptName: string
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,6 +156,8 @@ subfamily: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FontInfo-subfamily: string--><!--Device-FontInfo-subfamily: string-End-->
@@ -162,17 +170,15 @@ subfamily: string
 symbolic: boolean
 ```
 
-系统字体是否支持符号字体。
-
-默认值：false
-
-值为true，表示支持符号字体，值为false，表示不支持符号字体。
+系统字体是否支持符号字体。 默认值：false 值为true，表示支持符号字体，值为false，表示不支持符号字体。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,18 +192,15 @@ symbolic: boolean
 weight: int
 ```
 
-系统字体的字重。
-
-取值范围：[100,900]，取值间隔为100，分别对应  
-[FontWeight](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#fontweight)枚举中的值。
-
-默认值：100
+系统字体的字重。 取值范围：[100,900]，取值间隔为100，分别对应 FontWeight枚举中的值。 默认值：100
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -211,15 +214,15 @@ weight: int
 width: int
 ```
 
-系统字体的宽度。
-
-取值范围：[1,9]，取值间隔为1，分别对应[FontWidth](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#fontwidth)枚举中的值。
+系统字体的宽度。 取值范围：[1,9]，取值间隔为1，分别对应FontWidth枚 举中的值。
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

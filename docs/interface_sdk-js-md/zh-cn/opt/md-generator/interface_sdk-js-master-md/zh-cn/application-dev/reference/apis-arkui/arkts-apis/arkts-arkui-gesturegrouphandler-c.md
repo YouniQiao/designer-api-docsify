@@ -2,11 +2,13 @@
 
 手势组处理器对象类型。
 
-**继承/实现关系：** GestureGroupHandler extends [GestureHandler<GestureGroupHandler>](GestureHandler<GestureGroupHandler>)
+**继承/实现关系：** GestureGroupHandler extends GestureHandler<GestureGroupHandler>
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class GestureGroupHandler extends GestureHandler<GestureGroupHandler>--><!--Device-unnamed-declare class GestureGroupHandler extends GestureHandler<GestureGroupHandler>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class GestureGroupHandler--><!--Device-unnamed-declare class GestureGroupHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 手势组处理器的构造函数。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,6 +47,8 @@ onCancel(event: Callback<void>): GestureGroupHandler
 设置手势组处理器取消回调。顺序组合手势（[GestureMode](arkts-arkui-gesturemode-e.md#GestureMode).Sequence）取消后触发回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

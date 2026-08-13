@@ -1,8 +1,10 @@
 # HceService
 
-A class for NFC host application.&lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
+A class for NFC host application. &lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cardEmulation-export class HceService--><!--Device-cardEmulation-export class HceService-End-->
 
@@ -14,7 +16,40 @@ A class for NFC host application.&lt;p&gt;The NFC host application use this clas
 import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
-## off('hceCmd')
+## offHceCmd
+
+```TypeScript
+offHceCmd(callback?: AsyncCallback<number[]>): void
+```
+
+Unsubscribe the event to receive the APDU data.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void--><!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## off_hceCmd
 
 ```TypeScript
 off(type: 'hceCmd', callback?: AsyncCallback<number[]>): void
@@ -23,6 +58,8 @@ off(type: 'hceCmd', callback?: AsyncCallback<number[]>): void
 Unsubscribe the event to receive the APDU data.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -43,8 +80,8 @@ Unsubscribe the event to receive the APDU data.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -81,7 +118,41 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## on('hceCmd')
+## onHceCmd
+
+```TypeScript
+onHceCmd(callback: AsyncCallback<number[]>): void
+```
+
+register HCE event to receive the APDU data.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void--><!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## on_hceCmd
 
 ```TypeScript
 on(type: 'hceCmd', callback: AsyncCallback<number[]>): void
@@ -90,6 +161,8 @@ on(type: 'hceCmd', callback: AsyncCallback<number[]>): void
 register HCE event to receive the APDU data.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -110,9 +183,9 @@ register HCE event to receive the APDU data.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## sendResponse
 
@@ -120,13 +193,13 @@ register HCE event to receive the APDU data.
 sendResponse(responseApdu: number[]): void
 ```
 
-Sends a response APDU to the remote device.&lt;p&gt;This method is used by a host application when swiping card.
+Sends a response APDU to the remote device. &lt;p&gt;This method is used by a host application when swiping card.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [transmit](ohos.nfc.cardEmulation/cardEmulation.HceService#transmit)
+**Substitutes:** [transmit](#transmit)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -150,11 +223,13 @@ start(elementName: ElementName, aidList: string[]): void
 
 Starts the HCE, register more aids and allows this application to be preferred while in foreground.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-start(elementName: ElementName, aidList: string[]): void--><!--Device-HceService-start(elementName: ElementName, aidList: string[]): void-End-->
 
@@ -171,10 +246,10 @@ Starts the HCE, register more aids and allows this application to be preferred w
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## startHCE
 
@@ -188,7 +263,7 @@ start HCE
 
 **Deprecated since:** 9
 
-**Substitutes:** [start](ohos.nfc.cardEmulation/cardEmulation.HceService#start)
+**Substitutes:** [start](#start)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -218,11 +293,13 @@ stop(elementName: ElementName): void
 
 Stops the HCE, and unset the preferred service while in foreground.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-stop(elementName: ElementName): void--><!--Device-HceService-stop(elementName: ElementName): void-End-->
 
@@ -238,10 +315,10 @@ Stops the HCE, and unset the preferred service while in foreground.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## stopHCE
 
@@ -255,7 +332,7 @@ stop HCE
 
 **Deprecated since:** 9
 
-**Substitutes:** [stop](ohos.nfc.cardEmulation/cardEmulation.HceService#stop)
+**Substitutes:** [stop](#stop)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -279,11 +356,13 @@ transmit(response: number[]): Promise<void>
 
 Sends a response APDU to the remote device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-transmit(response: int[]): Promise<void>--><!--Device-HceService-transmit(response: int[]): Promise<void>-End-->
 
@@ -305,10 +384,10 @@ Sends a response APDU to the remote device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -352,11 +431,13 @@ transmit(response: number[], callback: AsyncCallback<void>): void
 
 Sends a response APDU to the remote device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
 
@@ -373,10 +454,10 @@ Sends a response APDU to the remote device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

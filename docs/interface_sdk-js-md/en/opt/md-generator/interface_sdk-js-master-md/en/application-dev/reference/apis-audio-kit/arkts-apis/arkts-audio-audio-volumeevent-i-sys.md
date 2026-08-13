@@ -2,7 +2,9 @@
 
 Describes the event received by the application when the volume is changed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
 
@@ -24,7 +26,9 @@ Device network id
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VolumeEvent-networkId: string--><!--Device-VolumeEvent-networkId: string-End-->
 
@@ -44,6 +48,8 @@ Volume percentage, which is an integer ranging from [0, 100].
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-VolumeEvent-percentage?: int--><!--Device-VolumeEvent-percentage?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -60,7 +66,9 @@ volumeGroup id
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VolumeEvent-volumeGroupId: int--><!--Device-VolumeEvent-volumeGroupId: int-End-->
 

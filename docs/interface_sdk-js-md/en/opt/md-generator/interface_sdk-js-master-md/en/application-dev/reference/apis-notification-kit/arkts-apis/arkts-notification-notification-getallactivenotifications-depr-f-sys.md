@@ -12,7 +12,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllActiveNotifications](ohos.notificationManager/notificationManager#getAllActiveNotifications)
+**Substitutes:** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md#getAllActiveNotifications-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllActiveNotifications](ohos.notificationManager/notificationManager#getAllActiveNotifications)
+**Substitutes:** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md#getAllActiveNotifications-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

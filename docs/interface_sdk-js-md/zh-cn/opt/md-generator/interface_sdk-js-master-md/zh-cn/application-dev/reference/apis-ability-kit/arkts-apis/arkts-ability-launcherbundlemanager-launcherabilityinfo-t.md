@@ -6,7 +6,9 @@ export type LauncherAbilityInfo = _LauncherAbilityInfo
 
 LauncherAbilityInfo信息。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-launcherBundleManager-export type LauncherAbilityInfo = _LauncherAbilityInfo--><!--Device-launcherBundleManager-export type LauncherAbilityInfo = _LauncherAbilityInfo-End-->
 

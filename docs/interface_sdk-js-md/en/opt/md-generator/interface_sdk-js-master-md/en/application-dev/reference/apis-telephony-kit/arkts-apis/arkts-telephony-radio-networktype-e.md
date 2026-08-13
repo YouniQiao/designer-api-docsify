@@ -2,7 +2,9 @@
 
 Describes the network type.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum NetworkType--><!--Device-radio-export enum NetworkType-End-->
 
@@ -16,7 +18,9 @@ NETWORK_TYPE_UNKNOWN = 0
 
 Indicates unknown network type.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkType-NETWORK_TYPE_UNKNOWN = 0--><!--Device-NetworkType-NETWORK_TYPE_UNKNOWN = 0-End-->
 
@@ -30,7 +34,9 @@ NETWORK_TYPE_GSM = 1
 
 Indicates that the network type is GSM.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkType-NETWORK_TYPE_GSM = 1--><!--Device-NetworkType-NETWORK_TYPE_GSM = 1-End-->
 
@@ -44,7 +50,9 @@ NETWORK_TYPE_CDMA = 2
 
 Indicates that the network type is CDMA.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkType-NETWORK_TYPE_CDMA = 2--><!--Device-NetworkType-NETWORK_TYPE_CDMA = 2-End-->
 
@@ -58,7 +66,9 @@ NETWORK_TYPE_WCDMA = 3
 
 Indicates that the network type is WCDMA.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkType-NETWORK_TYPE_WCDMA = 3--><!--Device-NetworkType-NETWORK_TYPE_WCDMA = 3-End-->
 
@@ -72,7 +82,9 @@ NETWORK_TYPE_TDSCDMA = 4
 
 Indicates that the network type is TD-SCDMA.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkType-NETWORK_TYPE_TDSCDMA = 4--><!--Device-NetworkType-NETWORK_TYPE_TDSCDMA = 4-End-->
 
@@ -86,7 +98,9 @@ NETWORK_TYPE_LTE = 5
 
 Indicates that the network type is LTE.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkType-NETWORK_TYPE_LTE = 5--><!--Device-NetworkType-NETWORK_TYPE_LTE = 5-End-->
 
@@ -100,7 +114,9 @@ NETWORK_TYPE_NR = 6
 
 Indicates that the network type is 5G NR.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkType-NETWORK_TYPE_NR = 6--><!--Device-NetworkType-NETWORK_TYPE_NR = 6-End-->
 

@@ -2,7 +2,9 @@
 
 Describes the sensor data reporting frequency.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface Options--><!--Device-sensor-interface Options-End-->
 
@@ -24,7 +26,9 @@ Frequency at which a sensor reports data. The default value is 200,000,000 ns. T
 
 **Type:** number \| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,15 +42,15 @@ Frequency at which a sensor reports data. The default value is 200,000,000 ns. T
 sensorInfoParam?: SensorInfoParam
 ```
 
-Sensor parameters, including **deviceId** and **sensorIndex**.
-
-This API can be used in atomic services since API version 19.
+Sensor parameters, including **deviceId** and **sensorIndex**. This API can be used in atomic services since API version 19.
 
 **Type:** [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Options-sensorInfoParam?: SensorInfoParam--><!--Device-Options-sensorInfoParam?: SensorInfoParam-End-->
 

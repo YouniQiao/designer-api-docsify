@@ -1,13 +1,10 @@
 # DlpConnManager
 
-Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA.
-
-> **NOTE：**
-> 
-> **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback
-> capabilities from the SA.
+Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA. > **NOTE：**> > **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback > capabilities from the SA.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-export class DlpConnManager--><!--Device-dlpPermission-export class DlpConnManager-End-->
 
@@ -29,6 +26,8 @@ Represents a constructor for instantiating [DlpConnManager](#DlpConnManager).
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API version 21 - 24: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
@@ -41,8 +40,8 @@ Represents a constructor for instantiating [DlpConnManager](#DlpConnManager).
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -58,13 +57,11 @@ let dlpConnManager: dlpPermission.DlpConnManager = new dlpPermission.DlpConnMana
 static registerPlugin(plugin: DlpConnPlugin): number
 ```
 
-Registers a callback with the SA.
-
-> **NOTE：**
-> 
-> **registerPlugin** registers the callback with the SA.
+Registers a callback with the SA. > **NOTE：**> > **registerPlugin** registers the callback with the SA.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -90,12 +87,12 @@ Registers a callback with the SA.
 
 | Error Code ID |
 | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -128,15 +125,11 @@ let pluginId: number = dlpPermission.DlpConnManager.registerPlugin(new DataCapsu
 static unregisterPlugin(): void
 ```
 
-Unregisters a callback from the SA.
-
-This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
-
-> **NOTE：**
-> 
-> **unregisterPlugin** unregisters a plug-in from the SA.
+Unregisters a callback from the SA. This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released. > **NOTE：**> > **unregisterPlugin** unregisters a plug-in from the SA.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -150,12 +143,12 @@ This API unregisters a callback and releases resources when an application exits
 
 | Error Code ID |
 | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

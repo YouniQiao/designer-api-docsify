@@ -8,6 +8,8 @@ Function that returns array of file handle.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-backup-type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void--><!--Device-backup-type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void-End-->

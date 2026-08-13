@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ accessibilityStateDescription?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ accessibilityVisible?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-accessibilityVisible?: boolean--><!--Device-ElementAttributeValues-accessibilityVisible?: boolean-End-->
@@ -59,6 +65,8 @@ belongTreeId?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,6 +88,8 @@ childrenIds?: Array<number>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-childrenIds?: Array<long>--><!--Device-ElementAttributeValues-childrenIds?: Array<long>-End-->
@@ -99,6 +109,8 @@ childrenTreeId?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,6 +132,8 @@ currentItem?: AccessibilityGrid
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid--><!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid-End-->
@@ -139,6 +153,8 @@ Indicates the custom actions supported by the component.
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,6 +176,8 @@ isEssential?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-isEssential?: boolean--><!--Device-ElementAttributeValues-isEssential?: boolean-End-->
@@ -179,6 +197,8 @@ mainWindowId?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,6 +220,8 @@ navDestinationId?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-navDestinationId?: long--><!--Device-ElementAttributeValues-navDestinationId?: long-End-->
@@ -220,6 +242,8 @@ parentId?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-parentId?: long--><!--Device-ElementAttributeValues-parentId?: long-End-->
@@ -239,6 +263,8 @@ span?: AccessibilitySpan[]
 **类型：** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

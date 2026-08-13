@@ -6,11 +6,13 @@
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void-End-->
 
@@ -23,7 +25,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instanc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 | Callback used to return the tonePlayer instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 | Callback used to return the tonePlayer instance. |
 
 ## 示例
 
@@ -54,11 +56,13 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void-End-->
 
@@ -71,13 +75,13 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instanc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | 是 | Callback used to return the tonePlayer instance, or null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | 是 | Callback used to return the tonePlayer instance, or null when an error happens. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -108,11 +112,13 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses a promise to return the renderer instance.
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>-End-->
 
@@ -154,11 +160,13 @@ async function createTonePlayerBefore(){
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer（系统接口）) instance. This method uses a promise to return the renderer instance.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>-End-->
 
@@ -182,7 +190,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instanc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 

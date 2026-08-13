@@ -1,10 +1,12 @@
 # Size
 
-Size info.
+Returns the width and height of the component. The default unit is vp, but APIs that use the Size type may specify a different unit, in which case the unit specified by the API takes precedence.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Size--><!--Device-unnamed-export interface Size-End-->
 
@@ -13,40 +15,48 @@ Size info.
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
-Get the height of the Size.
+Height of the component. Unit: vp. Value range: [0, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Size-height: double--><!--Device-Size-height: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Size-height: number--><!--Device-Size-height: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
-Get the width of the Size.
+Width of the component. Unit: vp. Value range: [0, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Size-width: double--><!--Device-Size-width: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Size-width: number--><!--Device-Size-width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

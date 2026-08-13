@@ -1,12 +1,12 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
-**dmInstance**.
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
 
@@ -26,9 +26,11 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 
 Obtains the device icon. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -54,11 +56,11 @@ Obtains the device icon. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
 
 ## Examples
 
@@ -98,9 +100,11 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 
 Obtains the list of network devices according to the specified filter options.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -126,11 +130,11 @@ Obtains the list of network devices according to the specified filter options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
 
 ## Examples
 
@@ -163,9 +167,11 @@ getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise
 
 Obtains the list of devices under the same account. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -191,12 +197,12 @@ Obtains the list of devices under the same account. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
 
 ## Examples
 
@@ -227,7 +233,9 @@ Query device identification by device IDs.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM and ohos.permission.sec.ACCESS_UDID
 
@@ -255,10 +263,10 @@ Query device identification by device IDs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | User permission verify failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
 ## Examples
 
@@ -289,21 +297,17 @@ getDeviceUdids(deviceIds: Array<string>): void {
 
 ## getLocalDisplayDeviceName
 
-ArkTS-Dyn:
-```TypeScript
-getLocalDisplayDeviceName(maxNameLength: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLocalDisplayDeviceName(maxNameLength: int): Promise<string>
 ```
 
 Obtains the local device's display name with the specified length. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -317,7 +321,7 @@ Obtains the local device's display name with the specified length. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxNameLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the local device's display name, in bytes. The value range is [18, 100]. If the value is **0**, the length is not limited. |
+| maxNameLength | int | Yes | Length of the local device's display name, in bytes. The value range is [18, 100]. If the value is **0**, the length is not limited. |
 
 **Return value:**
 
@@ -329,10 +333,10 @@ Obtains the local device's display name with the specified length. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -356,12 +360,6 @@ try {
 
 ## getOsTypeByNetworkId
 
-ArkTS-Dyn:
-```TypeScript
-getOsTypeByNetworkId(networkId: string): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsTypeByNetworkId(networkId: string): int
 ```
@@ -370,7 +368,9 @@ Query the device operating system type by device network ID.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
 
@@ -392,18 +392,53 @@ Query the device operating system type by device network ID.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the device operating system type. Possible return: 1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
+| int | Returns the device operating system type. Possible return: 1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | User permission verify failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 11600110 | Invalid network ID. |
 
-## off('replyResult')
+## offReplyResult
+
+```TypeScript
+offReplyResult(callback?: Callback<ReplyResult>): void
+```
+
+Unregister uiStateChange, this interface can only be used by devicemanager ui.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## off_replyResult
 
 ```TypeScript
 off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
@@ -414,6 +449,8 @@ Unsubscribes from the reply to the UI operation result.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -428,15 +465,15 @@ Unsubscribes from the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -453,21 +490,23 @@ try {
 }
 ```
 
-## offReplyResult
+## onReplyResult
 
 ```TypeScript
-offReplyResult(callback?: Callback<ReplyResult>): void
+onReplyResult(callback: Callback<ReplyResult>): void
 ```
 
-Unregister uiStateChange, this interface can only be used by devicemanager ui.
+Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
-<!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
+<!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void--><!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -477,16 +516,16 @@ Unregister uiStateChange, this interface can only be used by devicemanager ui.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## on('replyResult')
+## on_replyResult
 
 ```TypeScript
 on(type: 'replyResult', callback: Callback<{ param: string; }>): void
@@ -497,6 +536,8 @@ Subscribes to the reply to the UI operation result.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -511,15 +552,15 @@ Subscribes to the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -549,56 +590,19 @@ try {
 }
 ```
 
-## onReplyResult
-
-```TypeScript
-onReplyResult(callback: Callback<ReplyResult>): void
-```
-
-Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void--><!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
 ## putDeviceProfileInfoList
 
-ArkTS-Dyn:
-```TypeScript
-putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<int>
 ```
 
 Updates the device list. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -618,16 +622,16 @@ Updates the device list. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
+| Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -651,21 +655,17 @@ try {
 
 ## replyUiAction
 
-ArkTS-Dyn:
-```TypeScript
-replyUiAction(action: number, actionResult: string): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 replyUiAction(action: int, actionResult: string): void
 ```
 
 Replies to the user's UI operation. This API can be used only by the PIN HAP of the **deviceManager**.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -679,16 +679,16 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User operation. &lt;br&gt;- **0**: Grant the permission. &lt;br&gt;- **1**. Remove the permission. &lt;br&gt;-**2**: Time out the user operation in the permission request dialog. &lt;br&gt;- **3**: Cancel the display of the PIN box. &lt;br&gt;- **4**: Cancel the display of the PIN input box. &lt;br&gt;- **5**: Confirm the input in the PIN input box. |
+| action | int | Yes | User operation. &lt;br&gt;- **0**: Grant the permission. &lt;br&gt;- **1**. Remove the permission. &lt;br&gt;-**2**: Time out the user operation in the permission request dialog. &lt;br&gt;- **3**: Cancel the display of the PIN box. &lt;br&gt;- **4**: Cancel the display of the PIN input box. &lt;br&gt;- **5**: Confirm the input in the PIN input box. |
 | actionResult | string | Yes | User operation result. The value is a string of 1 to 255 characters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -722,9 +722,9 @@ restoreLocalDeivceName(): void
 
 Restores the local device name by resetting the network settings.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 
@@ -742,9 +742,9 @@ Restores the local device name by resetting the network settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -771,7 +771,9 @@ Restores the local device name.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -787,9 +789,9 @@ Restores the local device name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -808,21 +810,17 @@ try {
 
 ## setHeartbeatPolicy
 
-ArkTS-Dyn:
-```TypeScript
-setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void
 ```
 
 Sets the heartbeat broadcast policy.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -837,16 +835,16 @@ Sets the heartbeat broadcast policy.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | policy | [StrategyForHeartbeat](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md) | Yes | Heartbeat broadcast policy. |
-| delayTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Duration for temporarily disabling heartbeat broadcast. The value ranges from 1000 to 15000, in milliseconds. |
+| delayTime | int | Yes | Duration for temporarily disabling heartbeat broadcast. The value ranges from 1000 to 15000, in milliseconds. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -867,21 +865,17 @@ try {
 
 ## setLocalDeviceName
 
-ArkTS-Dyn:
-```TypeScript
-setLocalDeviceName(deviceName: string): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setLocalDeviceName(deviceName: string): Promise<int>
 ```
 
 Sets the local device name. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -901,19 +895,19 @@ Sets the local device name. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
+| Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
-| [11600108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
+| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
 
 ## Examples
 
@@ -937,21 +931,17 @@ try {
 
 ## setRemoteDeviceName
 
-ArkTS-Dyn:
-```TypeScript
-setRemoteDeviceName(deviceId: string, deviceName: string): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>
 ```
 
 Sets the remote device name. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -972,19 +962,19 @@ Sets the remote device name. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
+| Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
-| [11600108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
+| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
 
 ## Examples
 

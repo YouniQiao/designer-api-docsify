@@ -1,10 +1,12 @@
 # WebLayoutMode
 
-Enum type supplied to [layoutMode](layoutMode) for setting the web layout mode.
+Enum type supplied to layoutMode for setting the web layout mode.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WebLayoutMode--><!--Device-unnamed-declare enum WebLayoutMode-End-->
 
@@ -21,6 +23,8 @@ Web layout follows the system.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ Adaptive web layout based on page size.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,6 +4,8 @@ Enum type supplied to [getMessageLevel](arkts-arkweb-consolemessage-c.md#getMess
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum MessageLevel--><!--Device-unnamed-declare enum MessageLevel-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ Debug = 1
 Debug level.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Info level.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MessageLevel-Info = 2--><!--Device-MessageLevel-Info = 2-End-->
@@ -50,6 +56,8 @@ Warn level.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MessageLevel-Warn = 3--><!--Device-MessageLevel-Warn = 3-End-->
@@ -65,6 +73,8 @@ Error = 4
 Error level.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

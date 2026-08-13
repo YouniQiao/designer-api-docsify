@@ -1,8 +1,6 @@
 # RectShape
 
-用于clipShape和maskShape接口的矩形形状。
-
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
+用于clipShape和maskShape接口的矩形形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
 
 **继承/实现关系：** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
 
@@ -10,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class RectShape extends BaseShape--><!--Device-unnamed-export declare class RectShape extends BaseShape-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class RectShape--><!--Device-unnamed-export declare class RectShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +25,8 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +51,8 @@ radius(radius: double | string | Array<double | string>): this
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,6 +84,8 @@ radiusHeight(rHeight: double | string): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RectShape-radiusHeight(rHeight: double | string): this--><!--Device-RectShape-radiusHeight(rHeight: double | string): this-End-->
@@ -90,7 +96,7 @@ radiusHeight(rHeight: double | string): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rHeight | double \| string | 是 | 矩形形状圆角半径的高度。 &lt;br/&gt; 类型为number时取值范围是 [0, +∞)，类型为string时是[Length](Length)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rHeight | double \| string | 是 | 矩形形状圆角半径的高度。 &lt;br/&gt; 类型为number时取值范围是 0, +∞)，类型为string时是[Length。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -110,6 +116,8 @@ radiusWidth(rWidth: double | string): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RectShape-radiusWidth(rWidth: double | string): this--><!--Device-RectShape-radiusWidth(rWidth: double | string): this-End-->
@@ -120,7 +128,7 @@ radiusWidth(rWidth: double | string): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rWidth | double \| string | 是 | 矩形形状圆角半径的宽度。&lt;br/&gt; 类型为double时取值范围是 [0, +∞)，类型为string时是[Length](Length)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rWidth | double \| string | 是 | 矩形形状圆角半径的宽度。&lt;br/&gt; 类型为double时取值范围是 0, +∞)，类型为string时是[Length。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

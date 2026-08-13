@@ -1,16 +1,16 @@
 # StackLayoutAlgorithm
 
-Defines the stack layout algorithm.
+Stack layout algorithm class. > **NOTE：**> > The object of the **StackLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as > the input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
-**Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
+**Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare class StackLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export declare class StackLayoutAlgorithm implements LayoutAlgorithm-End-->
+<!--Device-unnamed-export class StackLayoutAlgorithm--><!--Device-unnamed-export class StackLayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,13 +20,19 @@ Defines the stack layout algorithm.
 constructor(option?: StackLayoutAlgorithmOptions)
 ```
 
-Constructor.
+Constructs the stack layout algorithm class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-StackLayoutAlgorithm-constructor(option?: StackLayoutAlgorithmOptions)--><!--Device-StackLayoutAlgorithm-constructor(option?: StackLayoutAlgorithmOptions)-End-->
 
@@ -36,25 +42,31 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [StackLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | No | set properties of stack layout algorithm. |
+| option | [StackLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | No | Input parameters for constructing the stack layout algorithm, which are used to set the nine-box grid alignment mode. |
 
 ## alignContent
 
 ```TypeScript
-public alignContent?: LocalizedAlignment
+@Trace public alignContent?: LocalizedAlignment
 ```
 
-The align rules of child components in stack layout algorithm.
+Alignment mode of child components in the stack layout algorithm. Default value: **LocalizedAlignment.CENTER** Invalid values are treated as the default value.
 
-**Type:** [LocalizedAlignment](arkts-arkui-enums-localizedalignment-e.md)
+**Type:** [LocalizedAlignment](../../apis-na/arkts-apis/arkts-na-enums-localizedalignment-e.md)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-StackLayoutAlgorithm-public alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithm-public alignContent?: LocalizedAlignment-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

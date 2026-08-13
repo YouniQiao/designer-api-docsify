@@ -6,7 +6,7 @@
 
 | 名称 |
 | --- |
-| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#lazydynamiclayout) |
+| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#LazyDynamicLayout) |
 
 ### 类
 
@@ -18,4 +18,4 @@
 
 | 名称 |
 | --- |
-| [LazyDynamicLayoutInstance](arkts-arkui-arkui-components-arklazydynamiclayout-con.md#lazydynamiclayoutinstance) |
+| [LazyDynamicLayoutInstance](arkts-arkui-arkui-components-arklazydynamiclayout-con.md#LazyDynamicLayoutInstance) |

@@ -1,11 +1,12 @@
 # Indicator
 
-Sets the distance between the navigation indicator and the **Swiper** component. Note that due to its default interaction area height of 32 vp, the navigation indicator cannot be placed flush against the bottom edge. To implement the function of completely attaching to the bottom, you can use the  
-[IndicatorComponent](IndicatorComponentInterface) component to adjust the position more flexibly.
+Sets the distance between the navigation indicator and the **Swiper** component. Note that due to its default interaction area height of 32 vp, the navigation indicator cannot be placed flush against the bottom edge. To implement the function of completely attaching to the bottom, you can use the IndicatorComponent component to adjust the position more flexibly.
 
 **Since:** 10
 
-<!--Device-unnamed-declare class Indicator<T>--><!--Device-unnamed-declare class Indicator<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Indicator--><!--Device-unnamed-declare class Indicator-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,6 +19,8 @@ bottom(value: Length): T
 Sets the position of the navigation indicator relative to the bottom edge of the **Swiper** component.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +53,8 @@ bottom(bottom: LengthMetrics | Length, ignoreSize: boolean): T
 Sets the position of the navigation indicator relative to the bottom edge of the **Swiper** component. You can also choose to ignore the size of the navigation indicator using the **ignoreSize** property.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +89,8 @@ Returns a **DigitIndicator** object.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -109,6 +116,8 @@ static dot(): DotIndicator
 Returns a **DotIndicator** object.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,6 +145,8 @@ Sets the distance between the navigation point indicator and the left edge (in r
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -150,7 +161,7 @@ Sets the distance between the navigation point indicator and the left edge (in r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-lengthmetrics-t.md) | Yes |
 
 **Return value:**
 
@@ -167,6 +178,8 @@ left(value: Length): T
 Sets the position of the navigation indicator relative to the left edge of the **Swiper** component.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,6 +213,8 @@ Sets the position of the navigation indicator relative to the right edge of the 
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -232,6 +247,8 @@ Sets the distance between the navigation indicator and the right edge (in [RTL](
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -246,7 +263,7 @@ Sets the distance between the navigation indicator and the right edge (in [RTL](
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-lengthmetrics-t.md) | Yes |
 
 **Return value:**
 
@@ -263,6 +280,8 @@ top(value: Length): T
 Sets the position of the navigation indicator relative to the top edge of the **Swiper** component.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

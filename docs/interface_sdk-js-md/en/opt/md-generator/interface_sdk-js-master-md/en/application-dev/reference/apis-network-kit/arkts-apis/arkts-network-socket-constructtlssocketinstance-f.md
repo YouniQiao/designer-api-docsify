@@ -16,6 +16,8 @@ Creates a TLSSocket object.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-socket-function constructTLSSocketInstance(): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(): TLSSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -43,7 +45,9 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 
 Creates a TLSSocket object with a TCPSocket object.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket-End-->
 
@@ -65,8 +69,8 @@ Creates a TLSSocket object with a TCPSocket object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
 | 2303602 |
 | 2303601 |
 

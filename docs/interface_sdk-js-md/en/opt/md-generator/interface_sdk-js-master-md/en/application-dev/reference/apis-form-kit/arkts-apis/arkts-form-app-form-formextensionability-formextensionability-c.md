@@ -2,7 +2,9 @@
 
 Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
 
@@ -23,6 +25,8 @@ onAcquireFormState?(want: Want): formInfo.FormState
 Called to notify the widget provider that the widget host is requesting the widget state. By default, the initial widget state is returned. (You can override this API as required.)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +70,9 @@ onAddForm(want: Want): formBindingData.FormBindingData
 
 Called to notify the widget provider that a widget is being created.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,7 +122,9 @@ onCastToNormalForm(formId: string): void
 
 Called to notify the widget provider that a temporary widget has been converted to a normal one. Temporary widgets and normal widgets are concepts of the widget host. Temporary widgets have a brief existence, appearing following particular events or user interactions and vanishing automatically upon task completion. Normal widgets maintain a lasting presence, continuing to exist unless explicitly removed or altered by the user. Function widgets developed in normal cases are normal widgets. Currently, the widget host does not use temporary widgets.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,9 +159,11 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onChangeFormVisibility(newStatus: Record<string, number>): void
 ```
 
-Called to notify the widget provider that the widget visibility status is being changed.This API is valid only for system applications when **formVisibleNotify** is set to **true**.
+Called to notify the widget provider that the widget visibility status is being changed. This API is valid only for system applications when **formVisibleNotify** is set to **true**.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,7 +175,7 @@ Called to notify the widget provider that the widget visibility status is being 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | Yes |
+| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number&gt; | Yes |
 
 ## Examples
 
@@ -209,10 +219,11 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. &lt;!--Del--&gt;Since API version 20, for system applications, the   
-**onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.&lt;!--DelEnd--&gt;
+Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. &lt;!--Del--&gt;Since API version 20, for system applications, the **onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.&lt;!--DelEnd--&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,7 +262,9 @@ onFormEvent(formId: string, message: string): void
 
 Called to instruct the widget provider to process the widget event.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,11 +301,13 @@ onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): v
 
 Called when the widget location changes.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void--><!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void-End-->
 
@@ -332,7 +347,9 @@ onRemoveForm(formId: string): void
 
 Called to notify the widget provider that a widget is being destroyed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,11 +385,13 @@ onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: for
 
 Called when the widget size changes.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
 
@@ -408,6 +427,8 @@ Called when the widget process of the widget provider exits.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -434,10 +455,11 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 ```
 
-Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call   
-[updateForm](arkts-form-formprovider-updateform-f.md#updateForm) of **formProvider** to update the widget data.
+Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-formprovider-updateform-f.md#updateForm) of **formProvider** to update the widget data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -452,7 +474,7 @@ Called to notify the widget provider that a widget is being updated, with update
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | formId | string | Yes |
-| wantParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No |
+| wantParams | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | No |
 
 ## Examples
 
@@ -484,19 +506,62 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
-
-This API can be used in atomic services since API version 11.
+Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext). This API can be used in atomic services since API version 11.
 
 **Type:** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormExtensionAbility-context: FormExtensionContext--><!--Device-FormExtensionAbility-context: FormExtensionContext-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+## onAcquireFormState
+
+```TypeScript
+onAcquireFormState?: OnAcquireFormStateFn
+```
+
+Called to return a FormState object. &lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.&lt;/p&gt;
+
+**Type:** [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FormExtensionAbility-onAcquireFormState?: OnAcquireFormStateFn--><!--Device-FormExtensionAbility-onAcquireFormState?: OnAcquireFormStateFn-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+## onStop
+
+```TypeScript
+onStop?: OnStopFn
+```
+
+Called when this ability breaks the last link, notifying the provider that the provider process is about to stop.
+
+**Type:** [OnStopFn](arkts-form-onstopfn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FormExtensionAbility-onStop?: OnStopFn--><!--Device-FormExtensionAbility-onStop?: OnStopFn-End-->
 
 **System capability:** SystemCapability.Ability.Form

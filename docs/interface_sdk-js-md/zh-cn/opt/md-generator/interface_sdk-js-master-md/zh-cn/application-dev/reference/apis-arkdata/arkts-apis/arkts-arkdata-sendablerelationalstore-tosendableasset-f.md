@@ -10,6 +10,8 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-sendableRelationalStore-function toSendableAsset(asset: NonSendableAsset): Asset--><!--Device-sendableRelationalStore-function toSendableAsset(asset: NonSendableAsset): Asset-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,8 +32,8 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
 
 ## 示例
 

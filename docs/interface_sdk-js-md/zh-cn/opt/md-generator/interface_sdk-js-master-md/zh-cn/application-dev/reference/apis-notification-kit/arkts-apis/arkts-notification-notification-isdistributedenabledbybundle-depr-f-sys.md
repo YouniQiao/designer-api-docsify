@@ -12,7 +12,7 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 **废弃版本：** 9
 
-**替代接口：** [isDistributedEnabledByBundle](ohos.notificationManager/notificationManager#isDistributedEnabledByBundle)
+**替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isDistributedEnabledByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isDistributedEnabledByBundle](ohos.notificationManager/notificationManager#isDistributedEnabledByBundle)
+**替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isDistributedEnabledByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

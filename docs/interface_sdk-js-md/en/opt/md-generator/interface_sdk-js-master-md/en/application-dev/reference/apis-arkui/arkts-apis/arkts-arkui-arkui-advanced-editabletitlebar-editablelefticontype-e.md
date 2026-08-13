@@ -4,6 +4,8 @@ Declaration of the left icon type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum EditableLeftIconType--><!--Device-unnamed-export declare enum EditableLeftIconType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Back = 0
 Back.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ Cancel = 1
 Cancel.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

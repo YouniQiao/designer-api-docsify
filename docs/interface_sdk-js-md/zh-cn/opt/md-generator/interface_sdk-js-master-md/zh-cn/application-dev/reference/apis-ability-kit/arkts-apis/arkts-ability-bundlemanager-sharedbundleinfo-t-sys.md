@@ -6,7 +6,9 @@ export type SharedBundleInfo = _SharedBundleInfo
 
 共享包信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo--><!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo-End-->
 

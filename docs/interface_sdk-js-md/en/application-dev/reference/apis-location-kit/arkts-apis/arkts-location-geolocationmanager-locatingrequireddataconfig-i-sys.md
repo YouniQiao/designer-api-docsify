@@ -2,9 +2,11 @@
 
 Describes the request parameters for obtaining the data required for locating.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface LocatingRequiredDataConfig--><!--Device-geoLocationManager-export interface LocatingRequiredDataConfig-End-->
 
@@ -24,13 +26,15 @@ import { geoLocationManager } from '@kit.LocationKit';
 arfcn?: int[]
 ```
 
-Indicates absolute radio frequency channel number (ARFCN).Querying Cell Information by Specified ARFCN.
+Indicates absolute radio frequency channel number (ARFCN). Querying Cell Information by Specified ARFCN.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** int[]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +54,11 @@ Indicates whether to start scanning.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-needStartScan: boolean--><!--Device-LocatingRequiredDataConfig-needStartScan: boolean-End-->
 
@@ -68,11 +74,13 @@ plmnId?: int[]
 
 Indicates PLMN number of the SIM card.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** int[]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,13 +96,15 @@ Indicates PLMN number of the SIM card.
 scanInterval?: int
 ```
 
-Indicates the interval between scans. The unit is millisecond.This parameter needs to be set only when scanning information is continuously monitored.
+Indicates the interval between scans. The unit is millisecond. This parameter needs to be set only when scanning information is continuously monitored.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-scanInterval?: int--><!--Device-LocatingRequiredDataConfig-scanInterval?: int-End-->
 
@@ -108,13 +118,15 @@ Indicates the interval between scans. The unit is millisecond.This parameter nee
 scanTimeout?: int
 ```
 
-Indicates the timeout period of a single scan. The unit is millisecond. The default value is 10000.This parameter needs to be set only when getLocatingRequiredData is used.
+Indicates the timeout period of a single scan. The unit is millisecond. The default value is 10000. This parameter needs to be set only when getLocatingRequiredData is used.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-scanTimeout?: int--><!--Device-LocatingRequiredDataConfig-scanTimeout?: int-End-->
 
@@ -128,13 +140,15 @@ Indicates the timeout period of a single scan. The unit is millisecond. The defa
 slotId?: int
 ```
 
-Indicates SIM card slot number.The value should be an integer.
+Indicates SIM card slot number. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,9 +168,11 @@ Indicates the type of locating required data.
 
 **Type:** [LocatingRequiredDataType](arkts-location-geolocationmanager-locatingrequireddatatype-e-sys.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType--><!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType-End-->
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback--><!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ onConnect(connection: ConnectionNativeInfo): void
 建立连接时的回调函数。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,6 +89,8 @@ onDisconnect(connection: ConnectionNativeInfo): void
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void-End-->
@@ -151,6 +157,8 @@ onFailed(code: NmErrorCode, errMsg: string): void
 连接失败时的回调函数。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

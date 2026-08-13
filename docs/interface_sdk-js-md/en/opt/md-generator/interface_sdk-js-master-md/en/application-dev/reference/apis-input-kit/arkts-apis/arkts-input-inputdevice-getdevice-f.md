@@ -12,18 +12,13 @@ import { inputDevice } from '@kit.InputKit';
 function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void
 ```
 
-Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
+Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
+**Substitutes:** getDeviceInfo
 
 <!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void-End-->
 
@@ -70,18 +65,13 @@ struct Index {
 function getDevice(deviceId: number): Promise<InputDeviceData>
 ```
 
-Obtains the information about the input device with the specified ID. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
+Obtains the information about the input device with the specified ID. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
+**Substitutes:** getDeviceInfo
 
 <!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>--><!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>-End-->
 

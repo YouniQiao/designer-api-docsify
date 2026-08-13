@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class PanGestureOptions--><!--Device-unnamed-declare class PanGestureOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ constructor(value?: { fingers?: number; direction?: PanDirection; distance?: num
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PanGestureOptions-constructor(value?: { fingers?: number; direction?: PanDirection; distance?: number })--><!--Device-PanGestureOptions-constructor(value?: { fingers?: number; direction?: PanDirection; distance?: number })-End-->
@@ -32,7 +36,7 @@ constructor(value?: { fingers?: number; direction?: PanDirection; distance?: num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | 否 | 滑动手势配置参数对象。&lt;br/&gt;fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。&lt;br/&gt;默认值：1 &lt;br/&gt;direction用于指定触发滑动的手 势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All&lt;br/&gt;distance用于指定触发滑动手势事件的最小滑动距离，单位为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认 值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)组件滑动与该滑动手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。 &lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。&lt;br/&gt;当组件应用了[scale](CommonMethod#scale(value: ScaleOptions))缩放 变换时，distance的实际识别距离会按照scale比例进行缩放。 |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | 否 | 滑动手势配置参数对象。&lt;br/&gt;fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。&lt;br/&gt;默认值：1 &lt;br/&gt;direction用于指定触发滑动的手 势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All&lt;br/&gt;distance用于指定触发滑动手势事件的最小滑动距离，单位为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认 值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)组件滑动与该滑动手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。 &lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。&lt;br/&gt;当组件应用了scale缩放 变换时，distance的实际识别距离会按照scale比例进行缩放。 |
 
 ## getDirection
 
@@ -45,6 +49,8 @@ getDirection(): PanDirection
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +78,8 @@ getDistance(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -98,6 +106,8 @@ setDirection(value: PanDirection)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PanGestureOptions-setDirection(value: PanDirection)--><!--Device-PanGestureOptions-setDirection(value: PanDirection)-End-->
@@ -116,12 +126,13 @@ setDirection(value: PanDirection)
 setDistance(value: number)
 ```
 
-设置触发滑动手势事件的最小滑动距离，单位为vp。距离值不宜设置过大，避免因滑动脱手、响应时延过大等问题导致性能劣化，最佳实践请参考：  
-[减小拖动识别距离](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-application-latency-optimization-cases#section1116134115286)。
+设置触发滑动手势事件的最小滑动距离，单位为vp。距离值不宜设置过大，避免因滑动脱手、响应时延过大等问题导致性能劣化，最佳实践请参考： [减小拖动识别距离](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-application-latency-optimization-cases#section1116134115286)。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -133,7 +144,7 @@ setDistance(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 触发滑动手势事件的最小滑动距离，单位为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs组件](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)滑动与该滑动 手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。&lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。&lt;br/&gt; 当组件应用了[scale](CommonMethod#scale(value: ScaleOptions))缩放变换时，distance的实际识别距离会按照scale比例进行缩放。 |
+| value | number | 是 | 触发滑动手势事件的最小滑动距离，单位为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs组件](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)滑动与该滑动 手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。&lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。&lt;br/&gt; 当组件应用了scale缩放变换时，distance的实际识别距离会按照scale比例进行缩放。 |
 
 ## setFingers
 
@@ -146,6 +157,8 @@ setFingers(value: number)
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

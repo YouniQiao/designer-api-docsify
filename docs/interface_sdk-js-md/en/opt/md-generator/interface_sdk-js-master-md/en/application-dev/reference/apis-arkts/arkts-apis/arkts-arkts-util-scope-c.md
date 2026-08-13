@@ -92,7 +92,7 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](ohos.util.ScopeHelper.constructor)
+**Substitutes:** constructor
 
 <!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
@@ -273,7 +273,7 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Deprecated since:** 9
 
-**Substitutes:** [expand](ohos.util.ScopeHelper.expand)
+**Substitutes:** expand
 
 <!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
@@ -337,7 +337,7 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [expand](ohos.util.ScopeHelper.expand)
+**Substitutes:** expand
 
 <!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
 
@@ -401,7 +401,7 @@ Obtains the union set of this **Scope** and the given value.
 
 **Deprecated since:** 9
 
-**Substitutes:** [expand](ohos.util.ScopeHelper.expand)
+**Substitutes:** expand
 
 <!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
 
@@ -573,7 +573,7 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [intersect](ohos.util.ScopeHelper.intersect)
+**Substitutes:** intersect
 
 <!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
 
@@ -637,7 +637,7 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Deprecated since:** 9
 
-**Substitutes:** [intersect](ohos.util.ScopeHelper.intersect)
+**Substitutes:** intersect
 
 <!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 

@@ -14,7 +14,7 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 **废弃版本：** 9
 
-**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**替代接口：** showDialog
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void--><!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void-End-->
 
@@ -25,7 +25,7 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | 是 | 对话框响应结果回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ShowDialogSuccessResponse&gt; | 是 | 对话框响应结果回调。 |
 
 ## 示例
 
@@ -68,7 +68,7 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 **废弃版本：** 9
 
-**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**替代接口：** showDialog
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>--><!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>-End-->
 

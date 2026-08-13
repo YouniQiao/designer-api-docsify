@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -19,6 +21,8 @@ encoding?: string
 **类型：** string
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-Options-encoding?: string--><!--Device-Options-encoding?: string-End-->
 

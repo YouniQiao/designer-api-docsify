@@ -14,9 +14,11 @@ function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>
 
 Obtains the bundle name and clone index of a cloned application based on the given UID. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -28,7 +30,7 @@ Obtains the bundle name and clone index of a cloned application based on the giv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | UID of the application. |
+| uid | int | Yes | UID of the application. |
 
 **Return value:**
 
@@ -40,9 +42,9 @@ Obtains the bundle name and clone index of a cloned application based on the giv
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700021](../errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
 
 ## Examples
 

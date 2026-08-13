@@ -32,7 +32,7 @@ Direction of the device, in degrees.
 
 **Deprecated since:** 8
 
-**Substitutes:** [alpha](ohos.sensor/sensor#OrientationResponse.alpha)
+**Substitutes:** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,10 +1,18 @@
 # @ohos.file.trash
 
-The **file.trash** module provides APIs for querying, recovering, or permanently deleting the files or directories in Recently deleted (trash). Currently, only local files and directories are supported.You can use **delete()** of [@ohos.file.fileAccess](arkts-file-fileaccess.md#fileAccess) to move a file or directory to the trash.
+/*
+ Copyright (c) 2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **NOTE：**
-> 
-> - Currently, the APIs of this module can be called only by **FileManager**.
 
 **Since:** 10
 
@@ -31,9 +39,9 @@ import { trash } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md#completelydelete) |
-| [listFile](arkts-corefile-trash-listfile-f-sys.md#listfile) |
-| [recover](arkts-corefile-trash-recover-f-sys.md#recover) |
+| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md#completelyDelete-(System-API)) |
+| [listFile](arkts-corefile-trash-listfile-f-sys.md#listFile-(System-API)) |
+| [recover](arkts-corefile-trash-recover-f-sys.md#recover-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

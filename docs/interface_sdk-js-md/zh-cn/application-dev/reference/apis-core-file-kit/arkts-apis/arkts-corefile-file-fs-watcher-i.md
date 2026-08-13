@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,6 +23,8 @@ start(): void
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
@@ -65,6 +69,8 @@ stop(): void
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 

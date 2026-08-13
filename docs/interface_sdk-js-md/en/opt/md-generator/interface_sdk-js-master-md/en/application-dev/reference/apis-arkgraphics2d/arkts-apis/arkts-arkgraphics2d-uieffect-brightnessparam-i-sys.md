@@ -2,7 +2,9 @@
 
 Detailed description of the material brightness parameters.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface BrightnessParam--><!--Device-uiEffect-interface BrightnessParam-End-->
 
@@ -26,7 +28,9 @@ Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Va
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-cubicCoeff : double--><!--Device-BrightnessParam-cubicCoeff : double-End-->
 
@@ -40,11 +44,13 @@ Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Va
 fraction : number
 ```
 
-Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
+Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-fraction : double--><!--Device-BrightnessParam-fraction : double-End-->
 
@@ -58,11 +64,13 @@ Blending ratio for the brightness effect. The value range is [0, 1]. Values less
 lightUpDegree : number
 ```
 
-Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-lightUpDegree : double--><!--Device-BrightnessParam-lightUpDegree : double-End-->
 
@@ -76,11 +84,13 @@ Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are 
 negRgb : [number, number, number]
 ```
 
-Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates lower saturation.
+Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates lower saturation.
 
 **Type:** [number, number, number]
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-negRgb : [double, double, double]--><!--Device-BrightnessParam-negRgb : [double, double, double]-End-->
 
@@ -94,11 +104,13 @@ Negative adjustment coefficients based on the base saturation. The value range f
 posRgb : [number, number, number]
 ```
 
-Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates higher saturation.
+Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates higher saturation.
 
 **Type:** [number, number, number]
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-posRgb : [double, double, double]--><!--Device-BrightnessParam-posRgb : [double, double, double]-End-->
 
@@ -116,7 +128,9 @@ Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. V
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-quadCoeff : double--><!--Device-BrightnessParam-quadCoeff : double-End-->
 
@@ -130,11 +144,13 @@ Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. V
 rate : number
 ```
 
-Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-rate : double--><!--Device-BrightnessParam-rate : double-End-->
 
@@ -148,11 +164,13 @@ Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values 
 saturation : number
 ```
 
-Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
+Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BrightnessParam-saturation : double--><!--Device-BrightnessParam-saturation : double-End-->
 

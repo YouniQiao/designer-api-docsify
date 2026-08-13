@@ -1,11 +1,12 @@
 # DataAbilityResult
 
-The module defines the operation result on DataAbilities. When you call  
-[executeBatch](../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch) to operate the database, the operation result is returned through the DataAbilityResult object.
+The module defines the operation result on DataAbilities. When you call executeBatch to operate the database, the operation result is returned through the DataAbilityResult object.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DataAbilityResult--><!--Device-unnamed-export interface DataAbilityResult-End-->
 
@@ -24,6 +25,8 @@ Indicates the number of rows affected by the operation.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -44,6 +47,8 @@ Indicates the path of data to operate.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

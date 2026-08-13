@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,6 +23,8 @@ cancel(): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
 
@@ -121,11 +125,7 @@ try {
 onCancel(): Promise<string>
 ```
 
-> **说明：**
-> 
-> 从API version 12开始支持，从API version 24开始废弃。
-
-取消拷贝事件监听。
+> **说明：** > > 从API version 12开始支持，从API version 24开始废弃。 取消拷贝事件监听。
 
 **起始版本：** 12
 

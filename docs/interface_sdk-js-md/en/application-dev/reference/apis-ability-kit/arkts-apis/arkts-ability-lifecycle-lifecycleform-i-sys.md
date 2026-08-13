@@ -6,6 +6,8 @@ interface of form lifecycle.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface LifecycleForm--><!--Device-unnamed-export declare interface LifecycleForm-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -21,6 +23,8 @@ Called when the system shares the form.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -48,11 +52,13 @@ Called when the system shares the form.
 onShareForm?(formId: string): Record<string, Object>
 ```
 
-Called when the system shares the form.The ability of this function is same as onShare. If both are set, this function will be called.
+Called when the system shares the form. The ability of this function is same as onShare. If both are set, this function will be called.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

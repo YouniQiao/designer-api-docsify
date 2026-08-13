@@ -7,15 +7,13 @@ function getBundleInfo(bundleName: string,
     bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void
 ```
 
-根据给定的Bundle名称获取BundleInfo，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的Bundle名称获取BundleInfo，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -59,15 +57,13 @@ bundle.getBundleInfo(bundleName, bundleFlags, options, (err, data) => {
 function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-根据给定的Bundle名称获取BundleInfo，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的Bundle名称获取BundleInfo，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -107,15 +103,13 @@ bundle.getBundleInfo(bundleName, bundleFlags, (err, data) => {
 function getBundleInfo(bundleName: string, bundleFlags: number, options?: BundleOptions): Promise<BundleInfo>
 ```
 
-根据给定的Bundle名称获取BundleInfo，使用Promise异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的Bundle名称获取BundleInfo，使用Promise异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 

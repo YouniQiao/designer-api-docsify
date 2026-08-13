@@ -1,10 +1,10 @@
 # cloudData
 
-The **cloudData** module provides APIs for implementing device-cloud synergy and device-cloud sharing, and setting the device-cloud sync strategy.
+The **cloudData** module provides APIs for implementing device-cloud synergy and device-cloud sharing, and setting the device-cloud sync strategy. Device-cloud synergy enables sync of the structured data (in RDB stores) between devices and the cloud. The cloud serves as a data hub to implement data backup in the cloud and data consistency between the devices with the same account. This module also provides the capability of setting the device-cloud sync strategy.
 
-Device-cloud synergy enables sync of the structured data (in RDB stores) between devices and the cloud. The cloud serves as a data hub to implement data backup in the cloud and data consistency between the devices with the same account.This module also provides the capability of setting the device-cloud sync strategy.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cloudData--><!--Device-unnamed-declare namespace cloudData-End-->
 
@@ -28,9 +28,9 @@ import { cloudData } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md#setcloudstrategy) |
-| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md#onautosynctrigger) |
-| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md#offautosynctrigger) |
+| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md#setCloudStrategy) |
+| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md#onAutoSyncTrigger) |
+| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md#offAutoSyncTrigger) |
 
 <!--Del-->
 ### Classes（系统接口）
@@ -83,5 +83,5 @@ import { cloudData } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#data_change_event_id) |
+| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#DATA_CHANGE_EVENT_ID) |
 <!--DelEnd-->

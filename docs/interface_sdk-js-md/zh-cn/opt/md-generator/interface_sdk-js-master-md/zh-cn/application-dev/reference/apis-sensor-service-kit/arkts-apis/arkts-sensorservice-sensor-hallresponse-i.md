@@ -4,9 +4,11 @@
 
 **继承/实现关系：** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface HallResponse extends Response--><!--Device-sensor-interface HallResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface HallResponse--><!--Device-sensor-interface HallResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ status: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HallResponse-status: double--><!--Device-HallResponse-status: double-End-->
 

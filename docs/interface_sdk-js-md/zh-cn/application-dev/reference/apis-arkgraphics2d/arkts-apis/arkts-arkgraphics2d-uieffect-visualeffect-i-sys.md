@@ -1,10 +1,12 @@
 # VisualEffect
 
-VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createEffect)创建一个VisualEffect实例。
+VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。 在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createEffect)创建一个VisualEffect实例。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
 
@@ -18,9 +20,11 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 用于改变组件背景颜色的blender，目前仅支持提亮混合器。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -84,13 +88,6 @@ struct BackgroundColorBlender {
 
 ## borderLight
 
-ArkTS-Dyn:
-```TypeScript
-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: number,
-      borderWidth: number): VisualEffect
-```
-
-ArkTS-Sta:
 ```TypeScript
 borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
       borderWidth: double): VisualEffect
@@ -98,9 +95,11 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 为圆角矩形组件边框添加3D光照效果。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect-End-->
 
@@ -114,8 +113,8 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 | --- | --- | --- | --- |
 | lightPosition | common2D.Point3d | 是 | 光源在组件空间的3D位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角， z轴分量越大，光源离组件平面越远，可照射区域越大。 x轴分量取值范围为[-10, 10]，y轴分量取值范围为[-10, 10]，z轴分量取值范围为[0, 10]，超出范围会自动截断。 |
 | lightColor | common2D.Color | 是 | 光源颜色，各元素取值范围为[0, 1]，超出范围会自动截断。 |
-| lightIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 光源强度，取值范围为[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
-| borderWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 组件边框的受光宽度，取值范围为[0.0, 30.0]，超出范围会自动截断。 设置为0.0时，组件边框无光照效果，数值越大，光可照亮的区域越宽。 |
+| lightIntensity | double | 是 | 光源强度，取值范围为[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
+| borderWidth | double | 是 | 组件边框的受光宽度，取值范围为[0.0, 30.0]，超出范围会自动截断。 设置为0.0时，组件边框无光照效果，数值越大，光可照亮的区域越宽。 |
 
 **返回值：**
 
@@ -127,7 +126,7 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -225,13 +224,6 @@ struct Index {
 
 ## colorGradient
 
-ArkTS-Dyn:
-```TypeScript
-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<number>,
-      alphaMask?: Mask): VisualEffect
-```
-
-ArkTS-Sta:
 ```TypeScript
 colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
       alphaMask?: Mask): VisualEffect
@@ -239,9 +231,11 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 此方法为组件添加颜色渐变效果。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect-End-->
 
@@ -255,7 +249,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 | --- | --- | --- | --- |
 | colors | Array&lt;Color&gt; | 是 | 颜色数组，用于实现多颜色渐变。 数组长度范围0到12，每个颜色值取值范围需大于等于0。数组长度为0或大于12， 或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
 | positions | Array&lt;common2D.Point&gt; | 是 | 位置数组，颜色对应的位置。 数组长度范围为0到12。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
-| strengths | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 强度数组，表示颜色对应的强度。 数组长度范围为0到12，每一个强度值需大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致时，则无颜色渐变效果。 |
+| strengths | Array&lt;double&gt; | 是 | 强度数组，表示颜色对应的强度。 数组长度范围为0到12，每一个强度值需大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致时，则无颜色渐变效果。 |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 | 遮罩alpha，颜色对应的alpha遮罩。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制颜色渐变效果的 透明度分布（如局部透明或动态透明效果）时传入此参数。不设置时，颜色渐变效果的透明度 完全由colors参数决定。 |
 
 **返回值：**
@@ -268,7 +262,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -345,13 +339,13 @@ struct ColorGradient {
 distortionCollapse(distortionParam: DistortionParam): VisualEffect
 ```
 
-为组件添加非线性形变效果。典型应用场景包括页面坍塌动画、窗口关闭特效、卡片翻转动画、场景过渡效果等。
-
-1. 该视效支持控件范围外的绘制，但仍会受到父控件Clip的影响。2. 因包含前景Filter，未与EffectComponent组合使用时不兼容组件自身及子组件的部分视效（如BrightnessBlender或systemMaterial）。3. 支持对系统材质进行扭曲，但是与EffectComponent组合使用时，会导致系统材质的背景扭曲。4. 调用distortionCollapse时，会创建与形变后区域等大的离屏画布，再将当前组件（含子组件） 的内容绘制到离屏画布上，再对画布上的已有内容进行形变绘制。5. 使用该实现方式时，如果不与EffectComponent组合使用，将导致systemMaterial、 backgroundEffect、brightness、blur等需要截屏的接口无法截取到正确的画面。
+为组件添加非线性形变效果。典型应用场景包括页面坍塌动画、窗口关闭特效、卡片翻转动画、场景过渡效果等。 1. 该视效支持控件范围外的绘制，但仍会受到父控件Clip的影响。 2. 因包含前景Filter，未与EffectComponent组合使用时不兼容组件自身及子组件的部分视效（如BrightnessBlender或systemMaterial）。 3. 支持对系统材质进行扭曲，但是与EffectComponent组合使用时，会导致系统材质的背景扭曲。 4. 调用distortionCollapse时，会创建与形变后区域等大的离屏画布，再将当前组件（含子组件） 的内容绘制到离屏画布上，再对画布上的已有内容进行形变绘制。 5. 使用该实现方式时，如果不与EffectComponent组合使用，将导致systemMaterial、 backgroundEffect、brightness、blur等需要截屏的接口无法截取到正确的画面。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -382,9 +376,11 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 此方法为组件添加材质效果。材质效果通过模拟物理材质的光学特性（折射、反射）和动态扰动效果， 实现玻璃、金属等材质的视觉呈现。可用于模拟玻璃质感UI、流体材质动画、磨砂玻璃效果等场景。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect-End-->
 
@@ -411,7 +407,7 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 

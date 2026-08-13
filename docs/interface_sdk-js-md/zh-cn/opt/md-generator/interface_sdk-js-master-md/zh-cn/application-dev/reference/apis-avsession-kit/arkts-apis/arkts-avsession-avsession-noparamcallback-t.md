@@ -6,7 +6,9 @@ type NoParamCallback = () => void
 
 定义无参数的回调函数类型。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-type NoParamCallback = () => void--><!--Device-avSession-type NoParamCallback = () => void-End-->
 

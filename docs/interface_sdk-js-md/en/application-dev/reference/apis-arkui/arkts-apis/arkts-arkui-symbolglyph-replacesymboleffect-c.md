@@ -8,7 +8,9 @@ Defines ReplaceSymbolEffect class.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class ReplaceSymbolEffect extends SymbolEffect--><!--Device-unnamed-export declare class ReplaceSymbolEffect extends SymbolEffect-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class ReplaceSymbolEffect--><!--Device-unnamed-export declare class ReplaceSymbolEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ constructor.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +55,8 @@ The replace effect type of symbol effect.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReplaceSymbolEffect-replaceType?: ReplaceEffectType--><!--Device-ReplaceSymbolEffect-replaceType?: ReplaceEffectType-End-->
@@ -70,6 +76,8 @@ The scope type of symbol effect.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

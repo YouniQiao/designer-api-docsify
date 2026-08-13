@@ -16,7 +16,9 @@ Switch input method and subtype of a specified user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
@@ -34,7 +36,7 @@ Switch input method and subtype of a specified user.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | indicates the bundle name of the target input method. |
 | subtypeId | string | No | indicates the id of the input method subtype. If the param is not set, switch to the target input method with a default subtype. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
+| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
@@ -47,10 +49,10 @@ Switch input method and subtype of a specified user.
 | Error Code ID | Error Message |
 | --- | --- |
 | 12800023 | the specified user does not exist. |
-| [12800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) | configuration persistence error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) | configuration persistence error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 

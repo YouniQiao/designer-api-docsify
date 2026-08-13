@@ -2,7 +2,9 @@
 
 rtt通话事件
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface RttEventInfo--><!--Device-call-export interface RttEventInfo-End-->
 
@@ -20,7 +22,9 @@ rtt通话id
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttEventInfo-callId: int--><!--Device-RttEventInfo-callId: int-End-->
 
@@ -38,7 +42,9 @@ rtt通话事件类型
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttEventInfo-eventType: int--><!--Device-RttEventInfo-eventType: int-End-->
 
@@ -56,7 +62,9 @@ rtt事件原因
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttEventInfo-reason: int--><!--Device-RttEventInfo-reason: int-End-->
 

@@ -1,7 +1,6 @@
 # RotationGestureHandlerOptions
 
-Provides the parameters of the rotation gesture handler. Inherits from   
-[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions).
+Provides the parameters of the rotation gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions).
 
 **Inheritance/Implementation:** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)
 
@@ -9,7 +8,9 @@ Provides the parameters of the rotation gesture handler. Inherits from
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-interface RotationGestureHandlerOptions extends BaseHandlerOptions--><!--Device-unnamed-interface RotationGestureHandlerOptions extends BaseHandlerOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface RotationGestureHandlerOptions--><!--Device-unnamed-interface RotationGestureHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,19 +20,15 @@ Provides the parameters of the rotation gesture handler. Inherits from
 angle?: number
 ```
 
-Minimum angle change required to trigger the rotation gesture, in degrees (deg).
-
-Default value: **1**
-
-**NOTE：**
-
-If the value is less than or equal to 0 or greater than 360, it will be converted to the default value.
+Minimum angle change required to trigger the rotation gesture, in degrees (deg). Default value: **1** **NOTE：**If the value is less than or equal to 0 or greater than 360, it will be converted to the default value.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,19 +44,15 @@ If the value is less than or equal to 0 or greater than 360, it will be converte
 fingers?: number
 ```
 
-Minimum number of fingers required to trigger the rotation gesture. The value ranges from 2 to 5.
-
-Default value: **2**
-
-Value range: [2, 5]
-
-While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation.
+Minimum number of fingers required to trigger the rotation gesture. The value ranges from 2 to 5. Default value: **2** Value range: [2, 5] While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

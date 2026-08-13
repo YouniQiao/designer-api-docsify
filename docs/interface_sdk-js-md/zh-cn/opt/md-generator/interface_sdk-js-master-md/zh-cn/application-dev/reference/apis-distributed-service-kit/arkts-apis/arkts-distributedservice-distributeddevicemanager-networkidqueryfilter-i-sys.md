@@ -2,7 +2,9 @@
 
 设备网络ID过滤器选项。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDeviceManager-interface NetworkIdQueryFilter--><!--Device-distributedDeviceManager-interface NetworkIdQueryFilter-End-->
 
@@ -16,14 +18,13 @@
 onlineStatus : number
 ```
 
-设备在线状态，包括
-
-- 0：表示设备处于离线状态。  
-- 1：表示设备处于在线状态。
+设备在线状态，包括 - 0：表示设备处于离线状态。 - 1：表示设备处于在线状态。
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NetworkIdQueryFilter-onlineStatus : int--><!--Device-NetworkIdQueryFilter-onlineStatus : int-End-->
 
@@ -41,7 +42,9 @@ wiseDeviceId : string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NetworkIdQueryFilter-wiseDeviceId : string--><!--Device-NetworkIdQueryFilter-wiseDeviceId : string-End-->
 

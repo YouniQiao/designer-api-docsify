@@ -2,7 +2,9 @@
 
 Describes options for cross-device notifications. Not supported currently.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DistributedOptions--><!--Device-unnamed-export interface DistributedOptions-End-->
 
@@ -18,7 +20,9 @@ Notification reminder type.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedOptions-readonly remindType?: int--><!--Device-DistributedOptions-readonly remindType?: int-End-->
 

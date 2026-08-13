@@ -2,9 +2,11 @@
 
 Enumerates the screen orientations.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screen-enum Orientation--><!--Device-screen-enum Orientation-End-->
 
@@ -20,9 +22,11 @@ UNSPECIFIED = 0
 
 Unspecified. The screen orientation is determined by the system.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Orientation-UNSPECIFIED = 0--><!--Device-Orientation-UNSPECIFIED = 0-End-->
 
@@ -38,9 +42,11 @@ VERTICAL = 1
 
 Vertical.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Orientation-VERTICAL = 1--><!--Device-Orientation-VERTICAL = 1-End-->
 
@@ -56,9 +62,11 @@ HORIZONTAL = 2
 
 Horizontal.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Orientation-HORIZONTAL = 2--><!--Device-Orientation-HORIZONTAL = 2-End-->
 
@@ -74,9 +82,11 @@ REVERSE_VERTICAL = 3
 
 Reverse vertical.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Orientation-REVERSE_VERTICAL = 3--><!--Device-Orientation-REVERSE_VERTICAL = 3-End-->
 
@@ -92,9 +102,11 @@ REVERSE_HORIZONTAL = 4
 
 Reverse horizontal.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Orientation-REVERSE_HORIZONTAL = 4--><!--Device-Orientation-REVERSE_HORIZONTAL = 4-End-->
 

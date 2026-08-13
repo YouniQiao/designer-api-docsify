@@ -4,6 +4,8 @@ Information about continuousTask notification progress.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-backgroundTaskManager-export interface DataTransferProgress--><!--Device-backgroundTaskManager-export interface DataTransferProgress-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -20,11 +22,13 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 continuousTaskId: number
 ```
 
-Continuous task ID.The value should be an integer.
+Continuous task ID. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Notify progress data.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataTransferProgress-progressInfo: ProgressInfo--><!--Device-DataTransferProgress-progressInfo: ProgressInfo-End-->
@@ -61,6 +67,8 @@ Notification parameters, which are used to specify the target page that is redir
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

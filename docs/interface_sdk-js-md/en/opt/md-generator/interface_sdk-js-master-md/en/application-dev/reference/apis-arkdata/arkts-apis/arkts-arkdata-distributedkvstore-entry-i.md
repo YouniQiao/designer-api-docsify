@@ -2,7 +2,9 @@
 
 Provides key-value pairs stored in the distributedKVStore.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-interface Entry--><!--Device-distributedKVStore-interface Entry-End-->
 
@@ -24,7 +26,9 @@ Indicates the key
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Indicates the value
 
 **Type:** Value
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

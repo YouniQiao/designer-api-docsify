@@ -1,9 +1,10 @@
 # RectChangeOptions
 
-Provides the values and reasons returned when the rectangle (position and size) of the component (  
-**EmbeddedComponent** or **UIExtensionComponent**) changes.
+Provides the values and reasons returned when the rectangle (position and size) of the component ( **EmbeddedComponent** or **UIExtensionComponent**) changes.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiExtension-interface RectChangeOptions--><!--Device-uiExtension-interface RectChangeOptions-End-->
 
@@ -25,11 +26,13 @@ Reason for the rectangle change.
 
 **Type:** RectChangeReason
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeOptions-reason: RectChangeReason--><!--Device-RectChangeOptions-reason: RectChangeReason-End-->
 
@@ -45,11 +48,13 @@ New values of the rectangle of the component after the change.
 
 **Type:** window.Rect
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeOptions-rect: window.Rect--><!--Device-RectChangeOptions-rect: window.Rect-End-->
 

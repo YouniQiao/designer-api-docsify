@@ -4,7 +4,9 @@ Defines the attribute modifier.
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface AttributeModifier<T>--><!--Device-unnamed-declare interface AttributeModifier<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface AttributeModifier--><!--Device-unnamed-declare interface AttributeModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,6 +19,8 @@ applyDisabledAttribute?(instance: T) : void
 Defines the disabled update attribute function.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ Defines the focused update attribute function.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -65,6 +71,8 @@ applyHoveredAttribute?(instance: T) : void
 定义悬停更新属性函数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +98,8 @@ Defines the normal update attribute function.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -114,6 +124,8 @@ Defines the pressed update attribute function.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -137,6 +149,8 @@ applySelectedAttribute?(instance: T) : void
 Defines the selected update attribute function.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

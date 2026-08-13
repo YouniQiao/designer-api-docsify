@@ -2,7 +2,9 @@
 
 弹出的提醒中按钮的类型和标题。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
 
@@ -18,7 +20,9 @@ dataShareUpdate?: DataShareUpdate
 
 **类型：** [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ActionButton-dataShareUpdate?: DataShareUpdate--><!--Device-ActionButton-dataShareUpdate?: DataShareUpdate-End-->
 
@@ -36,7 +40,9 @@ wantAgent?: WantAgent
 
 **类型：** WantAgent
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ActionButton-wantAgent?: WantAgent--><!--Device-ActionButton-wantAgent?: WantAgent-End-->
 

@@ -8,6 +8,8 @@ Defines the attribute decorator, which is used to decorate attributes of the cus
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -26,4 +28,4 @@ Defines the attribute decorator, which is used to decorate attributes of the cus
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) |
+| [PropertyDecorator](../../apis-na/arkts-apis/arkts-na-propertydecorator-t.md) |

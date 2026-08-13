@@ -1,21 +1,10 @@
 # OffscreenCanvas
 
-OffscreenCanvas组件用于绘制自定义图形。
-
-使用[Canvas](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)组件或  
-[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务，从而避免影响应用程序主线程性能。
-
-> **说明：**
-> 
-> OffscreenCanvas无法在ServiceExtensionAbility中使用，ServiceExtensionAbility中建议使用
-> [Drawing模块](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
-> 进行离屏绘制。
-
-## 子组件
-
-不支持。
+OffscreenCanvas组件用于绘制自定义图形。 使用[Canvas](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)组件或 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md) 对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响 应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务， 从而避免影响应用程序主线程性能。 > **说明：** > > OffscreenCanvas无法在ServiceExtensionAbility中使用，ServiceExtensionAbility中建议使用 > [Drawing模块](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) > 进行离屏绘制。 ## 子组件 不支持。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class OffscreenCanvas--><!--Device-unnamed-declare class OffscreenCanvas-End-->
 
@@ -30,6 +19,8 @@ constructor(width: number, height: number)
 构造用于创建离屏画布对象的OffscreenCanvas。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,6 +47,8 @@ constructor(width: number, height: number, unit: LengthMetricsUnit)
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -72,7 +65,7 @@ constructor(width: number, height: number, unit: LengthMetricsUnit)
 | --- | --- | --- |
 | [width](#width) | number | 是 |
 | [height](#height) | number | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-lengthmetricsunit-t.md) | 是 |
 
 ## getContext
 
@@ -83,6 +76,8 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 返回OffscreenCanvas组件的绘图上下文。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,6 +110,8 @@ transferToImageBitmap(): ImageBitmap
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -135,11 +132,13 @@ transferToImageBitmap(): ImageBitmap
 height: number
 ```
 
-OffscreenCanvas组件的高度。&lt;br&gt;默认单位为vp。
+OffscreenCanvas组件的高度。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -155,11 +154,13 @@ OffscreenCanvas组件的高度。&lt;br&gt;默认单位为vp。
 width: number
 ```
 
-OffscreenCanvas组件的宽度。&lt;br&gt;默认单位为vp。
+OffscreenCanvas组件的宽度。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

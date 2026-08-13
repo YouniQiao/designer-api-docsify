@@ -12,15 +12,11 @@ import { startupManager } from '@kit.AbilityKit';
 function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 ```
 
-Runs startup tasks or loads .so files.
+Runs startup tasks or loads .so files. > **NOTE：**> > This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use > [startupManager.run](#run) > .
 
-> **NOTE：**
-> 
-> This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use
-> [startupManager.run](#run)
-> .
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,12 +41,12 @@ Runs startup tasks or loads .so files.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [28800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
-| [28800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800003-error-occurs-during-task-startup) |
-| [28800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [28800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
+| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
+| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
 
 ## Examples
 
@@ -88,10 +84,11 @@ export default class EntryAbility extends UIAbility {
 function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
 ```
 
-Runs startup tasks or loads .so files. You can specify  
-[AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext) for loading startup tasks. This API uses a promise to return the result.
+Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext) for loading startup tasks. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,11 +114,11 @@ Runs startup tasks or loads .so files. You can specify
 
 | Error Code ID |
 | --- |
-| [28800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
-| [28800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800003-error-occurs-during-task-startup) |
-| [28800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [28800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
+| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
+| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
+| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
 
 ## Examples
 

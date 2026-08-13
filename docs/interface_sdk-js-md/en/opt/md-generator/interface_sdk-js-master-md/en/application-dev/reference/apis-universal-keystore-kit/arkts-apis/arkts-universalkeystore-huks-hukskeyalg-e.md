@@ -4,6 +4,8 @@ Enumerates the key algorithms.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksKeyAlg--><!--Device-huks-export enum HuksKeyAlg-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -17,6 +19,8 @@ HUKS_ALG_RSA = 1
 RSA.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,6 +40,8 @@ ECC.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2--><!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2-End-->
@@ -53,6 +59,8 @@ HUKS_ALG_DSA = 3
 DSA&lt;!--RP5--&gt;&lt;!--RP5End--&gt;.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,6 +80,8 @@ AES.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_AES = 20--><!--Device-HuksKeyAlg-HUKS_ALG_AES = 20-End-->
@@ -87,6 +97,8 @@ HUKS_ALG_HMAC = 50
 HMAC.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,6 +118,8 @@ HKDF.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51--><!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51-End-->
@@ -123,6 +137,8 @@ HUKS_ALG_PBKDF2 = 52
 PBKDF2.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -142,6 +158,8 @@ ECDH.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100--><!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100-End-->
@@ -159,6 +177,8 @@ HUKS_ALG_X25519 = 101
 X25519.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -178,6 +198,8 @@ Ed25519.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102--><!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102-End-->
@@ -195,6 +217,8 @@ HUKS_ALG_DH = 103
 DH.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -214,6 +238,8 @@ SM2.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150--><!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150-End-->
@@ -231,6 +257,8 @@ HUKS_ALG_SM3 = 151
 SM3
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -250,6 +278,8 @@ SM4.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152--><!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152-End-->
@@ -264,9 +294,11 @@ SM4.
 HUKS_ALG_DES = 160
 ```
 
-DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt;standard devices&lt;!--RP5End--&gt; since API version 18).
+DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -280,9 +312,11 @@ DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since 
 HUKS_ALG_3DES = 161
 ```
 
-3DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt;standard devices&lt;!--RP5End--&gt; since API version 18).
+3DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -296,9 +330,11 @@ HUKS_ALG_3DES = 161
 HUKS_ALG_CMAC = 162
 ```
 
-CMAC (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt;standard devices&lt;!--RP5End--&gt; since API version 18).
+CMAC (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -316,6 +352,8 @@ ML-KEM.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200--><!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200-End-->
@@ -331,6 +369,8 @@ HUKS_ALG_ML_DSA = 201
 ML-DSA.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

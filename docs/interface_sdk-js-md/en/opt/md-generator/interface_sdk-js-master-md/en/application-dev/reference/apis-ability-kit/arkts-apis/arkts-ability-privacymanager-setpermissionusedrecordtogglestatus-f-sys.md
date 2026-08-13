@@ -12,12 +12,11 @@ import { privacyManager } from '@kit.AbilityKit';
 function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>
 ```
 
-Sets whether to record the permission usage of this user. Sets the permission usage record switch for this user.This API uses a promise to return the result.
+Sets whether to record the permission usage of this user. Sets the permission usage record switch for this user. This API uses a promise to return the result. When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord-(System-API)) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord-(System-API)) API does not generate permission usage records, and deletes the current user's historical records.
 
-When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord) API can add usage records normally; when **status** is **false**, the  
-[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord) API does not generate permission usage records, and deletes the current user's historical records.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_RECORD_TOGGLE
 
@@ -43,12 +42,12 @@ When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacy
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -71,12 +70,11 @@ privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
 function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: number): Promise<void>
 ```
 
-Sets whether permission usage records are collected for a specified sub-profile. A system application can call this API to set the permission usage record switch status for the specified sub-profile. This API uses a promise to return the result.
-
-When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord) API can add usage records normally; when **status** is **false**, the  
-[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord) API does not generate permission usage records, and deletes the historical records of the specified sub-profile.
+Sets whether permission usage records are collected for a specified sub-profile. A system application can call this API to set the permission usage record switch status for the specified sub-profile. This API uses a promise to return the result. When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord-(System-API)) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord-(System-API)) API does not generate permission usage records, and deletes the historical records of the specified sub-profile.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_RECORD_TOGGLE
 
@@ -105,10 +103,10 @@ When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacy
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |

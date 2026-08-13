@@ -1,4 +1,4 @@
-# Scene(Defines 3D scene related interfaces)
+# Scene
 
 ## Summary
 
@@ -23,14 +23,14 @@
 | Name | Description |
 | --- | --- |
 | [CameraParameters](arkts-arkgraphics3d-scene-cameraparameters-i.md) | Describes the camera parameters, which are used to define additional configuration options for camera initialization. |
-| [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | Special effect parameter configuration, which is used to specify the special effect ID required for creating a special effect.It is used as the input parameter of the createEffect API to create a special effect object. |
+| [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | Special effect parameter configuration, which is used to specify the special effect ID required for creating a special effect. It is used as the input parameter of the createEffect API to create a special effect object. |
 | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | How a raycast should be performed. |
 | [RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md) | Describes a result object from raycasting, containing details about the 3D object hit by the ray. |
 | [RenderConfiguration](arkts-arkgraphics3d-scene-renderconfiguration-i.md) | Describes the rendering configuration. |
 | [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | Render context defines the context for all rendering resources. Resources within the same render context may be shared between scenes created within the same render context. |
 | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | Describes the rendering parameters. |
 | [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | Represents a basic scene component, which is used to describe the component information of a scene node,including the component name and its properties. |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | Represents a basic scene component, which is used to describe the component information of a scene node, including the component name and its properties. |
 | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | The scene node parameters type. |
 | [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | The scene resource factory. |
 | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | The scene resource parameters type. |

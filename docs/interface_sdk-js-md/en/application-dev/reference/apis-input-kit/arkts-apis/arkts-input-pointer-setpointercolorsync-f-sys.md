@@ -12,15 +12,13 @@ import { pointer } from '@kit.InputKit';
 function setPointerColorSync(color: int): void
 ```
 
-Sets the pointer color. This API returns the result synchronously.
+Sets the pointer color. This API returns the result synchronously. > **NOTE：**> > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
-> **NOTE：**
-> 
-> When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-pointer-function setPointerColorSync(color: int): void--><!--Device-pointer-function setPointerColorSync(color: int): void-End-->
 
@@ -32,14 +30,14 @@ Sets the pointer color. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Pointer color. The default value is **black** (0x000000). |
+| color | int | Yes | Pointer color. The default value is **black** (0x000000). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 

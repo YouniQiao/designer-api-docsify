@@ -8,7 +8,9 @@ The &lt;dialog&gt; component is a custom pop-up container.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
-<!--Device-unnamed-export interface DialogElement extends Element--><!--Device-unnamed-export interface DialogElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface DialogElement--><!--Device-unnamed-export interface DialogElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Closes a dialog box.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -41,6 +45,8 @@ Shows a dialog box.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

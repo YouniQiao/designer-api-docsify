@@ -12,15 +12,11 @@ import { abilityManager } from '@kit.AbilityKit';
 function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 ```
 
-Obtains the UIAbility running information. This API uses a promise to return the result.
+Obtains the UIAbility running information. This API uses a promise to return the result. > **NOTE：**> > If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility > running information of all applications; otherwise, it can obtain the UIAbility running information of the > current application.
 
-> **NOTE：**
-> 
-> If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility
-> running information of all applications; otherwise, it can obtain the UIAbility running information of the
-> current application.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -38,7 +34,7 @@ Obtains the UIAbility running information. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 

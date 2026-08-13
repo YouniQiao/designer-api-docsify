@@ -2,9 +2,11 @@
 
 Enumerates the audio volume modes.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioVolumeMode--><!--Device-audio-enum AudioVolumeMode-End-->
 
@@ -18,9 +20,11 @@ SYSTEM_GLOBAL = 0
 
 System-level volume (default mode).
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeMode-SYSTEM_GLOBAL = 0--><!--Device-AudioVolumeMode-SYSTEM_GLOBAL = 0-End-->
 
@@ -34,9 +38,11 @@ APP_INDIVIDUAL = 1
 
 Application-level volume.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeMode-APP_INDIVIDUAL = 1--><!--Device-AudioVolumeMode-APP_INDIVIDUAL = 1-End-->
 

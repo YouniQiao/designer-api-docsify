@@ -6,6 +6,8 @@ Declare the type of search input box
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum SearchType--><!--Device-unnamed-export declare enum SearchType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Declare the type of search input box
 NORMAL = 0
 ```
 
-Basic input mode.The value can contain digits, letters, underscores (_), spaces, and special characters.
+Basic input mode. The value can contain digits, letters, underscores (_), spaces, and special characters.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Pure digital input mode.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchType-NUMBER = 2--><!--Device-SearchType-NUMBER = 2-End-->
@@ -52,11 +58,13 @@ Pure digital input mode.
 PHONE_NUMBER = 3
 ```
 
-Phone number entry mode.In this mode, the following are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#);the length is not limited.
+Phone number entry mode. In this mode, the following are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +78,13 @@ Phone number entry mode.In this mode, the following are allowed: digits, spaces,
 EMAIL = 5
 ```
 
-E-mail address input mode.This mode accepts only digits, letters, underscores (_), dots (.),and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
+E-mail address input mode. This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,11 +98,13 @@ E-mail address input mode.This mode accepts only digits, letters, underscores (_
 NUMBER_DECIMAL = 12
 ```
 
-Number decimal entry mode.The value can contain digits and one decimal point.
+Number decimal entry mode. The value can contain digits and one decimal point.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ URL entry mode.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchType-URL = 13--><!--Device-SearchType-URL = 13-End-->
@@ -129,6 +143,8 @@ One time code mode.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

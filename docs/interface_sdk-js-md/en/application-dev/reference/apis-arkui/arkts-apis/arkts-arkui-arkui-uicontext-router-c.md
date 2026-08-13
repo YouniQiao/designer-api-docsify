@@ -1,12 +1,14 @@
 # Router
 
-class Router
+Provides APIs to access pages through URLs. You can use the APIs to navigate to a specified page in an application, replace the current page with another one in the same application, and return to the previous page or a specified page. > **NOTE：**> In the following API examples, you must first use > [getRouter()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) in **UIContext** to > obtain a **Router** instance, and then call the APIs using the obtained instance.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-export declare class Router--><!--Device-unnamed-export declare class Router-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class Router--><!--Device-unnamed-export class Router-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +26,15 @@ back(options?: router.RouterOptions): void
 
 Returns to the previous page or a specified page.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-back(options?: router.RouterOptions): void--><!--Device-Router-back(options?: router.RouterOptions): void-End-->
 
@@ -38,23 +44,27 @@ Returns to the previous page or a specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | No | Options. |
+| options | router.RouterOptions | No | Description of the target page. The **url** parameter specifies the URL of the page to return to. If the page with the specified URL does not exist in the navigation stack, no action is performed. If the navigation stack contains the corresponding URL, the application returns to the page with. the largest index.&lt;br&gt;If no URL is set, the application returns to the previous page, and the page is not rebuilt. The page in the page stack is not reclaimed. It will be reclaimed after being popped up. |
 
 ## back
 
 ```TypeScript
-back(index: int, params?: Object): void
+back(index: number, params?: Object): void
 ```
 
 Returns to the specified page.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Router-back(index: int, params?: Object): void--><!--Device-Router-back(index: int, params?: Object): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Router-back(index: number, params?: Object): void--><!--Device-Router-back(index: number, params?: Object): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,8 +72,8 @@ Returns to the specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index of page. &lt;br&gt;Value range:[0, +∞) |
-| params | Object | No | params of page. |
+| index | number | Yes | Index of the target page to navigate to. &lt;br&gt;Value range: [0, +∞). |
+| params | Object | No | Parameters carried when returning to the page. |
 
 ## clear
 
@@ -71,13 +81,17 @@ Returns to the specified page.
 clear(): void
 ```
 
-Clears all historical pages and retains only the current page at the top of the stack.
+Clears all historical pages in the stack and retains only the current page at the top of the stack.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-clear(): void--><!--Device-Router-clear(): void-End-->
 
@@ -89,13 +103,19 @@ Clears all historical pages and retains only the current page at the top of the 
 getLength(): string
 ```
 
-Obtains the number of pages in the current stack.
+Obtains the number of pages in the current stack. > **NOTE：**
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** 23
+
+**Substitutes:** [getStackSize](#getStackSize)
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-getLength(): string--><!--Device-Router-getLength(): string-End-->
 
@@ -105,7 +125,7 @@ Obtains the number of pages in the current stack.
 
 | Type | Description |
 | --- | --- |
-| string | Number of pages in the stack. The maximum value is 32. |
+| string | Number of pages in the stack. The maximum value is **32**. |
 
 ## getParams
 
@@ -113,13 +133,17 @@ Obtains the number of pages in the current stack.
 getParams(): Object
 ```
 
-Obtains information about the current page params.
+Obtains the parameters passed from the page that initiates redirection to the current page.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-getParams(): Object--><!--Device-Router-getParams(): Object-End-->
 
@@ -129,23 +153,27 @@ Obtains information about the current page params.
 
 | Type | Description |
 | --- | --- |
-| Object | Page params. |
+| Object | Parameters passed from the page that initiates redirection to the current page. |
 
 ## getStackSize
 
 ```TypeScript
-getStackSize(): int
+getStackSize(): number
 ```
 
 Obtains the number of pages in the current stack.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Router-getStackSize(): int--><!--Device-Router-getStackSize(): int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Router-getStackSize(): number--><!--Device-Router-getStackSize(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -153,7 +181,7 @@ Obtains the number of pages in the current stack.
 
 | Type | Description |
 | --- | --- |
-| int | Number of pages in the stack. The maximum value is 32. |
+| number | Number of pages in the stack. The maximum value is **32**. |
 
 ## getState
 
@@ -161,13 +189,17 @@ Obtains the number of pages in the current stack.
 getState(): router.RouterState
 ```
 
-Obtains information about the current page state.
+Obtains state information about the current page.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-getState(): router.RouterState--><!--Device-Router-getState(): router.RouterState-End-->
 
@@ -177,23 +209,27 @@ Obtains information about the current page state.
 
 | Type | Description |
 | --- | --- |
-| router.RouterState | Page state. |
+| router.RouterState | Page routing state. |
 
 ## getStateByIndex
 
 ```TypeScript
-getStateByIndex(index: int): router.RouterState | undefined
+getStateByIndex(index: number): router.RouterState | undefined
 ```
 
-Obtains page information by index.
+Obtains the status information about a page by its index.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Router-getStateByIndex(index: int): router.RouterState | undefined--><!--Device-Router-getStateByIndex(index: int): router.RouterState | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Router-getStateByIndex(index: number): router.RouterState | undefined--><!--Device-Router-getStateByIndex(index: number): router.RouterState | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -201,13 +237,13 @@ Obtains page information by index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of page. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| index | number | Yes | Index of the target page. &lt;br&gt;Value range: [1, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| router.RouterState | Page state. |
+| router.RouterState | State information about the target page. **undefined** if the specified index does not exist. |
 
 ## getStateByUrl
 
@@ -215,13 +251,17 @@ Obtains page information by index.
 getStateByUrl(url: string): Array<router.RouterState>
 ```
 
-Obtains page information by url.
+Obtains the status information about a page by its URL.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Router-getStateByUrl(url: string): Array<router.RouterState>--><!--Device-Router-getStateByUrl(url: string): Array<router.RouterState>-End-->
 
@@ -231,13 +271,13 @@ Obtains page information by url.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | URL of page. |
+| url | string | Yes | URL of the target page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;router.RouterState&gt; | Page state. |
+| Array&lt;router.RouterState&gt; | Page routing state. |
 
 ## hideAlertBeforeBackPage
 
@@ -245,13 +285,17 @@ Obtains page information by url.
 hideAlertBeforeBackPage(): void
 ```
 
-Hide alert before back page.
+Disables the display of a confirm dialog box before returning to the previous page.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-hideAlertBeforeBackPage(): void--><!--Device-Router-hideAlertBeforeBackPage(): void-End-->
 
@@ -263,13 +307,17 @@ Hide alert before back page.
 pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a page using the named route. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>): void--><!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -279,17 +327,17 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushNamedRoute. |
+| options | router.NamedRouterOptions | Yes | Page routing parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## pushNamedRoute
 
@@ -297,13 +345,17 @@ Navigates to a specified page in the application based on the page URL and param
 pushNamedRoute(options: router.NamedRouterOptions): Promise<void>
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a page using the named route. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions): Promise<void>--><!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions): Promise<void>-End-->
 
@@ -313,22 +365,22 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
+| options | router.NamedRouterOptions | Yes | Page routing parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## pushNamedRoute
 
@@ -336,13 +388,17 @@ Navigates to a specified page in the application based on the page URL and param
 pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a page using the named route. This API uses an asynchronous callback to return the result. Compared with [pushNamedRoute](#pushNamedRoute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void--><!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void-End-->
 
@@ -352,18 +408,18 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushNamedRoute. |
+| options | router.NamedRouterOptions | Yes | Page routing parameters. |
+| mode | router.RouterMode | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## pushNamedRoute
 
@@ -371,13 +427,17 @@ Navigates to a specified page in the application based on the page URL and param
 pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a page using the named route. This API uses a promise to return the result. Compared with [pushNamedRoute](#pushNamedRoute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>--><!--Device-Router-pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>-End-->
 
@@ -387,23 +447,23 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
+| options | router.NamedRouterOptions | Yes | Page routing parameters. |
+| mode | router.RouterMode | Yes | Routing mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## pushUrl
 
@@ -411,13 +471,17 @@ Navigates to a specified page in the application based on the page URL and param
 pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a specified page in the application. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void--><!--Device-Router-pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -427,17 +491,17 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushUrl. |
+| options | router.RouterOptions | Yes | Page routing parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## pushUrl
 
@@ -445,13 +509,17 @@ Navigates to a specified page in the application based on the page URL and param
 pushUrl(options: router.RouterOptions): Promise<void>
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a specified page in the application. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushUrl(options: router.RouterOptions): Promise<void>--><!--Device-Router-pushUrl(options: router.RouterOptions): Promise<void>-End-->
 
@@ -461,22 +529,22 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
+| options | router.RouterOptions | Yes | Page routing parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## pushUrl
 
@@ -484,13 +552,17 @@ Navigates to a specified page in the application based on the page URL and param
 pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a specified page in the application. This API uses an asynchronous callback to return the result. Compared with [pushUrl](#pushUrl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void--><!--Device-Router-pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void-End-->
 
@@ -500,18 +572,18 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushUrl. |
+| options | router.RouterOptions | Yes | Page routing parameters. |
+| mode | router.RouterMode | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## pushUrl
 
@@ -519,13 +591,17 @@ Navigates to a specified page in the application based on the page URL and param
 pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a specified page in the application. This API uses a promise to return the result. Compared with [pushUrl](#pushUrl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>--><!--Device-Router-pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>-End-->
 
@@ -535,23 +611,23 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
+| options | router.RouterOptions | Yes | Page routing parameters. |
+| mode | router.RouterMode | Yes | Routing mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## replaceNamedRoute
 
@@ -559,13 +635,17 @@ Navigates to a specified page in the application based on the page URL and param
 replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one using the named route and destroys the current page. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>): void--><!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -575,16 +655,16 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceNamedRoute. |
+| options | router.NamedRouterOptions | Yes | Description of the new page. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## replaceNamedRoute
 
@@ -592,13 +672,17 @@ Replaces the current page with another one in the application. The current page 
 replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one using the named route and destroys the current page. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>--><!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>-End-->
 
@@ -608,21 +692,21 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
+| options | router.NamedRouterOptions | Yes | Description of the new page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## replaceNamedRoute
 
@@ -630,13 +714,17 @@ Replaces the current page with another one in the application. The current page 
 replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one using the named route and destroys the current page. This API uses an asynchronous callback to return the result. Compared with [replaceNamedRoute](#replaceNamedRoute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void--><!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void-End-->
 
@@ -646,17 +734,17 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceNamedRoute. |
+| options | router.NamedRouterOptions | Yes | Description of the new page. |
+| mode | router.RouterMode | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## replaceNamedRoute
 
@@ -664,13 +752,17 @@ Replaces the current page with another one in the application. The current page 
 replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one using the named route and destroys the current page. This API uses a promise to return the result. Compared with [replaceNamedRoute](#replaceNamedRoute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>--><!--Device-Router-replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>-End-->
 
@@ -680,22 +772,22 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
+| options | router.NamedRouterOptions | Yes | Description of the new page. |
+| mode | router.RouterMode | Yes | Routing mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## replaceUrl
 
@@ -703,13 +795,17 @@ Replaces the current page with another one in the application. The current page 
 replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one in the application and destroys the current page. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void--><!--Device-Router-replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -719,16 +815,16 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceUrl. |
+| options | router.RouterOptions | Yes | Description of the new page. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## replaceUrl
 
@@ -736,13 +832,17 @@ Replaces the current page with another one in the application. The current page 
 replaceUrl(options: router.RouterOptions): Promise<void>
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one in the application and destroys the current page. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceUrl(options: router.RouterOptions): Promise<void>--><!--Device-Router-replaceUrl(options: router.RouterOptions): Promise<void>-End-->
 
@@ -752,21 +852,21 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
+| options | router.RouterOptions | Yes | Description of the new page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## replaceUrl
 
@@ -774,13 +874,17 @@ Replaces the current page with another one in the application. The current page 
 replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one in the application and destroys the current page. This API uses an asynchronous callback to return the result. Compared with [replaceUrl](#replaceUrl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void--><!--Device-Router-replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void-End-->
 
@@ -790,17 +894,17 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceUrl. |
+| options | router.RouterOptions | Yes | Description of the new page. |
+| mode | router.RouterMode | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.&lt;br&gt;If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## replaceUrl
 
@@ -808,13 +912,17 @@ Replaces the current page with another one in the application. The current page 
 replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one in the application and destroys the current page. This API uses a promise to return the result. Compared with [replaceUrl](#replaceUrl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>--><!--Device-Router-replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>-End-->
 
@@ -824,22 +932,22 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Options. |
-| mode | router.RouterMode | Yes | RouterMode. |
+| options | router.RouterOptions | Yes | Description of the new page. |
+| mode | router.RouterMode | Yes | Routing mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## showAlertBeforeBackPage
 
@@ -847,13 +955,17 @@ Replaces the current page with another one in the application. The current page 
 showAlertBeforeBackPage(options: router.EnableAlertOptions): void
 ```
 
-Pop up alert dialog to ask whether to back.
+Enables the display of a confirm dialog box before returning to the previous page.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Router-showAlertBeforeBackPage(options: router.EnableAlertOptions): void--><!--Device-Router-showAlertBeforeBackPage(options: router.EnableAlertOptions): void-End-->
 
@@ -863,12 +975,12 @@ Pop up alert dialog to ask whether to back.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.EnableAlertOptions | Yes | Options. |
+| options | router.EnableAlertOptions | Yes | Description of the dialog box. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

@@ -2,7 +2,9 @@
 
 定义Vec2（二维向量）.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Vec2--><!--Device-unnamed-export interface Vec2-End-->
 
@@ -18,7 +20,9 @@ vec2的X分量.
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Vec2-x: double--><!--Device-Vec2-x: double-End-->
 
@@ -34,7 +38,9 @@ vec2的Y分量.
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Vec2-y: double--><!--Device-Vec2-y: double-End-->
 

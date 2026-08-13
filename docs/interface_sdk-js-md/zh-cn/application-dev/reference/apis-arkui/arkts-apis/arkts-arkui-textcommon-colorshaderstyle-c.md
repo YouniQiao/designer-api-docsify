@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
-<!--Device-unnamed-export declare class ColorShaderStyle extends ShaderStyle--><!--Device-unnamed-export declare class ColorShaderStyle extends ShaderStyle-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class ColorShaderStyle--><!--Device-unnamed-export declare class ColorShaderStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ constructor(color: ResourceColor)
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +53,8 @@ color: ResourceColor
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

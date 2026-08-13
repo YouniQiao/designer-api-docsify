@@ -1,0 +1,76 @@
+# ISO8601DateTimeFormat
+
+Provide a DateTime formatting interface which could format date to ISO 8601 standard string. [ISO8601](https://iso8601.com/).
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-i18n-export class ISO8601DateTimeFormat--><!--Device-i18n-export class ISO8601DateTimeFormat-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+## constructor
+
+```TypeScript
+public constructor(options?: ISO8601DateTimeFormatOptions)
+```
+
+A constructor used to create a ISO8601DateTimeFormat object.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ISO8601DateTimeFormat-public constructor(options?: ISO8601DateTimeFormatOptions)--><!--Device-ISO8601DateTimeFormat-public constructor(options?: ISO8601DateTimeFormatOptions)-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ISO8601DateTimeFormatOptions](arkts-na-i18n-iso8601datetimeformatoptions-i.md) | No | Options for creating a date formatting object that complies with ISO 8601. Default format is yyyy-MM-ddThh:mm:ssZZZZZ. |
+
+## format
+
+```TypeScript
+public format(date: Date): string
+```
+
+Formats a date to ISO 8601 formatted string.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ISO8601DateTimeFormat-public format(date: Date): string--><!--Device-ISO8601DateTimeFormat-public format(date: Date): string-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | Date | Yes | date to be formatted. Note: The month starts from 0. For example, 0 indicates January. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Date and time string that complies with ISO 8601. |
+

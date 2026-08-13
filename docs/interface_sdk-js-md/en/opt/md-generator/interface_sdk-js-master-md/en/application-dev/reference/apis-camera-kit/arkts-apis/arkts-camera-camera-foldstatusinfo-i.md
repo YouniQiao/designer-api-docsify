@@ -2,7 +2,9 @@
 
 Describes the fold state information about a foldable device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface FoldStatusInfo--><!--Device-camera-interface FoldStatusInfo-End-->
 
@@ -24,7 +26,9 @@ Fold state.
 
 **Type:** FoldStatus
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,7 +46,9 @@ List of cameras supported in the current fold state.
 
 **Type:** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

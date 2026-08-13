@@ -2,7 +2,9 @@
 
 Interface for device rotation radian
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceStatus-export interface DeviceRotationRadian--><!--Device-deviceStatus-export interface DeviceRotationRadian-End-->
 
@@ -26,7 +28,9 @@ indicates X-RotationRadian
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceRotationRadian-x: double--><!--Device-DeviceRotationRadian-x: double-End-->
 
@@ -44,7 +48,9 @@ indicates Y-RotationRadian
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceRotationRadian-y: double--><!--Device-DeviceRotationRadian-y: double-End-->
 
@@ -62,7 +68,9 @@ indicates Z-RotationRadian
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceRotationRadian-z: double--><!--Device-DeviceRotationRadian-z: double-End-->
 

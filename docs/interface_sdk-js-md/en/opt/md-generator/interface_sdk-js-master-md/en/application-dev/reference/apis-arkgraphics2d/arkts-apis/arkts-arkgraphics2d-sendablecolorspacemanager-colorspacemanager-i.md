@@ -1,14 +1,14 @@
 # ColorSpaceManager
 
-Implements management of color space objects. ColorSpaceManager is a core class used to manage and operate color space objects. It provides functions such as obtaining the color space type, white point value, and gamma value, and supports transfer between concurrent ArkTS instances.
-
-Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager.
+Implements management of color space objects. ColorSpaceManager is a core class used to manage and operate color space objects. It provides functions such as obtaining the color space type, white point value, and gamma value, and supports transfer between concurrent ArkTS instances. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager.
 
 **Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md#ISendable)
 
 **Since:** 12
 
-<!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendableColorSpaceManager-interface ColorSpaceManager--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -28,6 +28,8 @@ Obtains the color space type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -42,7 +44,7 @@ Obtains the color space type.
 
 | Error Code ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -61,6 +63,8 @@ Obtains the gamma of the color space.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-ColorSpaceManager-getGamma(): number--><!--Device-ColorSpaceManager-getGamma(): number-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -75,7 +79,7 @@ Obtains the gamma of the color space.
 
 | Error Code ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -94,6 +98,8 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>--><!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -108,7 +114,7 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 
 | Error Code ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 

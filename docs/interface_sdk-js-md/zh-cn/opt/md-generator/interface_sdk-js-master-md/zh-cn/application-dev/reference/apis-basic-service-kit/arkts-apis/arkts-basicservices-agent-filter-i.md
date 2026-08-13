@@ -2,7 +2,9 @@
 
 过滤条件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
 
@@ -14,15 +16,13 @@
 action?: Action
 ```
 
-任务操作选项。
-
-- UPLOAD表示上传任务。  
-- DOWNLOAD表示下载任务。  
-- 如果未填写，则查询所有任务。
+任务操作选项。 - UPLOAD表示上传任务。 - DOWNLOAD表示下载任务。 - 如果未填写，则查询所有任务。
 
 **类型：** Action
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Filter-action?: Action--><!--Device-Filter-action?: Action-End-->
 
@@ -38,7 +38,9 @@ after?: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Filter-after?: long--><!--Device-Filter-after?: long-End-->
 
@@ -54,7 +56,9 @@ before?: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Filter-before?: long--><!--Device-Filter-before?: long-End-->
 
@@ -66,15 +70,13 @@ before?: number
 mode?: Mode
 ```
 
-任务模式。
-
-- FOREGROUND表示前台任务。  
-- BACKGROUND表示后台任务。  
-- 如果未填写，则查询所有任务。
+任务模式。 - FOREGROUND表示前台任务。 - BACKGROUND表示后台任务。 - 如果未填写，则查询所有任务。
 
 **类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Filter-mode?: Mode--><!--Device-Filter-mode?: Mode-End-->
 
@@ -90,7 +92,9 @@ state?: State
 
 **类型：** State
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Filter-state?: State--><!--Device-Filter-state?: State-End-->
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-manager-enum NearlinkState--><!--Device-manager-enum NearlinkState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ STATE_TURNING_ON = 0
 表示星闪正在开启。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ STATE_ON = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-NearlinkState-STATE_ON = 1--><!--Device-NearlinkState-STATE_ON = 1-End-->
@@ -50,6 +56,8 @@ STATE_TURNING_OFF = 2
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-NearlinkState-STATE_TURNING_OFF = 2--><!--Device-NearlinkState-STATE_TURNING_OFF = 2-End-->
@@ -65,6 +73,8 @@ STATE_OFF = 3
 表示星闪已关闭。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

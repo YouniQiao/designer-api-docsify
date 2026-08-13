@@ -1,19 +1,18 @@
-# @ohos.enterprise.accountManager(Account Management)
+# @ohos.enterprise.accountManager
 
-This module provides device account management capabilities, including forbidding the creation of local accounts.
+This module provides device account management capabilities, including forbidding the creation of local accounts. > **NOTE：**> > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
-> **NOTE：**
-> 
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
-> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
-
-**Since:** 12
+**Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace accountManager--><!--Device-unnamed-declare namespace accountManager-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -27,20 +26,27 @@ import { accountManager } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [activateOsAccount](arkts-mdm-accountmanager-activateosaccount-f.md#activateosaccount) | Switches the system account. Currently, this API is supported only on phones and tablets, and can only switch between normal system accounts created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createNormalOsAccount) and the default system account (ID: 100). |
-| [addOsAccount](arkts-mdm-accountmanager-addosaccount-f.md#addosaccount) | Adds an account in the background. |
-| [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addosaccountasync) | Adds an account in the background. This API uses a promise to return the result. This API is applicable to scenarios where enterprises need to create accounts in batches or remotely manage accounts. Accounts can be created without user interaction, improving management efficiency.  > **NOTE：** >  > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait > for the asynchronous return of this API. |
-| [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createnormalosaccount) | Creates a normal system account. A maximum of two normal system accounts (  [osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#OsAccountType)) can be created.  > **NOTE：** >  > The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application > main thread must wait for the asynchronous return of this API. >  > Creating a system account has a significant impact on device performance. This API is supported only on phones > and tablets with 12 GB or more of RAM. |
-| [disallowAddLocalAccount](arkts-mdm-accountmanager-disallowaddlocalaccount-f.md#disallowaddlocalaccount) | Forbids the creation of local accounts on the device. This API uses an asynchronous callback to return the result. |
-| [disallowAddLocalAccount](arkts-mdm-accountmanager-disallowaddlocalaccount-f.md#disallowaddlocalaccount-1) | Forbids the creation of local accounts on the device. This API uses a promise to return the result. |
-| [disallowAddOsAccountByUser](arkts-mdm-accountmanager-disallowaddosaccountbyuser-f.md#disallowaddosaccountbyuser) | Disallows a user to add accounts. |
-| [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition) | Users are not allowed to add accounts. After the API is successfully called, the system forbids the specified user or all users from adding new accounts. This API is applicable to enterprise device management scenarios, such as preventing employees from creating local accounts and enhancing device security management. |
-| [getDomainAccountPolicy](arkts-mdm-accountmanager-getdomainaccountpolicy-f.md#getdomainaccountpolicy) | Obtains the domain account policy. This API is applicable to enterprise management scenarios, such as querying the current domain account policy configuration and auditing policy compliance. |
-| [isAddOsAccountByUserDisallowed](arkts-mdm-accountmanager-isaddosaccountbyuserdisallowed-f.md#isaddosaccountbyuserdisallowed) | Queries whether to disallow a user to add accounts. |
-| [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isosaccountadditiondisallowed) | Queries whether a user is not allowed to add an account. |
-| [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isosaccountadditiondisallowed-1) | Queries whether a user is not allowed to add an account. This API is applicable to enterprise audit and compliance check scenarios, helping administrators confirm the execution of account policies. |
-| [removeOsAccount](arkts-mdm-accountmanager-removeosaccount-f.md#removeosaccount) | Removes a system account. Currently, this API is supported only on phones and tablets. It can remove normal system accounts (of the normal type) created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createNormalOsAccount) and system accounts (of the admin, normal, and guest types) created via  [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addOsAccountAsync). The default system account (ID: 100) cannot be removed. |
-| [setDomainAccountPolicy](arkts-mdm-accountmanager-setdomainaccountpolicy-f.md#setdomainaccountpolicy) | Sets the domain account policy. |
+| [activateOsAccount](arkts-mdm-accountmanager-activateosaccount-f.md#activateOsAccount) | Switches the system account. Currently, this API is supported only on phones and tablets, and can only switch between normal system accounts created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createNormalOsAccount) and the default system account (ID: 100). |
+| [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addOsAccountAsync) | Adds an account in the background. This API uses a promise to return the result. This API is applicable to scenarios where enterprises need to create accounts in batches or remotely manage accounts. Accounts can be created without user interaction, improving management efficiency. > **NOTE：**> > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait > for the asynchronous return of this API. |
+| [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createNormalOsAccount) | Creates a normal system account. A maximum of two normal system accounts ( [osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#OsAccountType)) can be created. > **NOTE：**> > The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application > main thread must wait for the asynchronous return of this API. > > Creating a system account has a significant impact on device performance. This API is supported only on phones > and tablets with 12 GB or more of RAM. |
+| [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowOsAccountAddition) | Users are not allowed to add accounts. After the API is successfully called, the system forbids the specified user or all users from adding new accounts. This API is applicable to enterprise device management scenarios, such as preventing employees from creating local accounts and enhancing device security management. |
+| [getDomainAccountPolicy](arkts-mdm-accountmanager-getdomainaccountpolicy-f.md#getDomainAccountPolicy) | Obtains the domain account policy. This API is applicable to enterprise management scenarios, such as querying the current domain account policy configuration and auditing policy compliance. |
+| [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isOsAccountAdditionDisallowed) | Queries whether a user is not allowed to add an account. |
+| [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isOsAccountAdditionDisallowed) | Queries whether a user is not allowed to add an account. This API is applicable to enterprise audit and compliance check scenarios, helping administrators confirm the execution of account policies. |
+| [removeOsAccount](arkts-mdm-accountmanager-removeosaccount-f.md#removeOsAccount) | Removes a system account. Currently, this API is supported only on phones and tablets. It can remove normal system accounts (of the normal type) created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createNormalOsAccount) and system accounts (of the admin, normal, and guest types) created via [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addOsAccountAsync). The default system account (ID: 100) cannot be removed. |
+| [setDomainAccountPolicy](arkts-mdm-accountmanager-setdomainaccountpolicy-f.md#setDomainAccountPolicy) | Sets the domain account policy. |
+
+<!--Del-->
+### Functions（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [addOsAccount](arkts-mdm-accountmanager-addosaccount-f-sys.md#addOsAccount) | Adds an account in the background. |
+| [disallowAddLocalAccount](arkts-mdm-accountmanager-disallowaddlocalaccount-f-sys.md#disallowAddLocalAccount) | Forbids the creation of local accounts on the device. This API uses an asynchronous callback to return the result. |
+| [disallowAddLocalAccount](arkts-mdm-accountmanager-disallowaddlocalaccount-f-sys.md#disallowAddLocalAccount-(System-API)) | Forbids the creation of local accounts on the device. This API uses a promise to return the result. |
+| [disallowAddOsAccountByUser](arkts-mdm-accountmanager-disallowaddosaccountbyuser-f-sys.md#disallowAddOsAccountByUser) | Disallows a user to add accounts. |
+| [isAddOsAccountByUserDisallowed](arkts-mdm-accountmanager-isaddosaccountbyuserdisallowed-f-sys.md#isAddOsAccountByUserDisallowed) | Queries whether to disallow a user to add accounts. |
+<!--DelEnd-->
 
 ### Interfaces
 

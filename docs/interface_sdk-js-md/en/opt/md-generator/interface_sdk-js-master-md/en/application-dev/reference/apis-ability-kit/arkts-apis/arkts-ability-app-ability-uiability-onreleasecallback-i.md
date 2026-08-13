@@ -4,6 +4,8 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface OnReleaseCallback--><!--Device-unnamed-export interface OnReleaseCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -14,7 +16,7 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (msg: string): void
@@ -23,6 +25,8 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 Defines the callback of OnRelease.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

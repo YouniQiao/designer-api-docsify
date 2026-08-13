@@ -2,7 +2,9 @@
 
 Enumerates the types of the multi-app mode.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export enum MultiAppModeType--><!--Device-bundleManager-export enum MultiAppModeType-End-->
 
@@ -14,10 +16,11 @@ Enumerates the types of the multi-app mode.
 UNSPECIFIED = 0
 ```
 
-Unspecified. It is the default value of  
-[multiAppMode](../../../quick-start/app-configuration-file.md#multiappmode).
+Unspecified. It is the default value of [multiAppMode](../../../quick-start/app-configuration-file.md#multiappmode).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiAppModeType-UNSPECIFIED = 0--><!--Device-MultiAppModeType-UNSPECIFIED = 0-End-->
 
@@ -31,7 +34,9 @@ MULTI_INSTANCE = 1
 
 [Multi-instance mode](../../../quick-start/multiInstance.md). A resident process does not support this value.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiAppModeType-MULTI_INSTANCE = 1--><!--Device-MultiAppModeType-MULTI_INSTANCE = 1-End-->
 
@@ -45,7 +50,9 @@ APP_CLONE = 2
 
 [App clone mode](../../../quick-start/app-clone.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiAppModeType-APP_CLONE = 2--><!--Device-MultiAppModeType-APP_CLONE = 2-End-->
 

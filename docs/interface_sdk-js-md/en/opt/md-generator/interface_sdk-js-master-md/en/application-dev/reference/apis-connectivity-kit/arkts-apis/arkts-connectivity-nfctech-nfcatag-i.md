@@ -1,12 +1,14 @@
 # NfcATag
 
-Provides interfaces to control the read and write of tags that support the NFC-A technology.&lt;p&gt;This class is inherited from the [TagSession](TagSession) abstract class, and provides methods to create{@code NfcATag} objects and obtain the ATQA and SAK.
+Provides interfaces to control the read and write of tags that support the NFC-A technology. &lt;p&gt;This class is inherited from the TagSession abstract class, and provides methods to create {@code NfcATag} objects and obtain the ATQA and SAK.
 
-**Inheritance/Implementation:** NfcATag extends [TagSession](TagSession)
+**Inheritance/Implementation:** NfcATag extends TagSession
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface NfcATag extends TagSession--><!--Device-unnamed-export interface NfcATag extends TagSession-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface NfcATag--><!--Device-unnamed-export interface NfcATag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -18,9 +20,11 @@ getAtqa(): number[]
 
 Obtains the ATQA of an NFC-A tag.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcATag-getAtqa(): int[]--><!--Device-NfcATag-getAtqa(): int[]-End-->
 
@@ -50,9 +54,11 @@ getSak(): number
 
 Obtains the SAK of an NFC-A tag.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcATag-getSak(): int--><!--Device-NfcATag-getSak(): int-End-->
 

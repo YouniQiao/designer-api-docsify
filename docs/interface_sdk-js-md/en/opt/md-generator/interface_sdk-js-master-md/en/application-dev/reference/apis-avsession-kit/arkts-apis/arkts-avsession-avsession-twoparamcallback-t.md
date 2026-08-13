@@ -6,7 +6,9 @@ type TwoParamCallback<T, G> = (data1: T, data2: G) => void
 
 Defines the callback type including two parameters.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void--><!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void-End-->
 

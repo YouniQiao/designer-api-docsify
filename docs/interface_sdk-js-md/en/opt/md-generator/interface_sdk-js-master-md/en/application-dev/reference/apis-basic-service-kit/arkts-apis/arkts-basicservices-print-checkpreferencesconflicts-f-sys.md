@@ -16,6 +16,8 @@ Check preferences conflicts.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,6 +46,6 @@ Check preferences conflicts.
 
 | Error Code ID |
 | --- |
-| [13100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

@@ -1,14 +1,10 @@
 # AudioVolumeManager
 
-音量管理。
+音量管理。 在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getVolumeManager)获取AudioVolumeManager实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
-在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getVolumeManager)获取AudioVolumeManager实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
 
@@ -22,7 +18,9 @@ forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: number): void
 
 Interface for forcibly setting the volume type by pressing the volume key.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -43,10 +41,10 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -77,6 +75,8 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray--><!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray-End-->
@@ -95,8 +95,8 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## getAppVolumePercentageForUid
 
@@ -106,7 +106,9 @@ getAppVolumePercentageForUid(uid: number): Promise<number>
 
 Get the volume for specified app with range from 0 to 100. Applications with same uid share the same volume.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -132,9 +134,9 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -154,7 +156,9 @@ getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType
 
 Obtains volume type by stream type.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType--><!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType-End-->
 
@@ -178,8 +182,8 @@ Obtains volume type by stream type.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getMaxSystemVolume
 
@@ -189,7 +193,9 @@ getMaxSystemVolume(volumeType: AudioVolumeType): number
 
 Obtains the maximum volume allowed for a volume type.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int-End-->
 
@@ -213,8 +219,8 @@ Obtains the maximum volume allowed for a volume type.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getMinSystemVolume
 
@@ -224,7 +230,9 @@ getMinSystemVolume(volumeType: AudioVolumeType): number
 
 Obtains the minimum volume allowed for a volume type.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int-End-->
 
@@ -248,8 +256,8 @@ Obtains the minimum volume allowed for a volume type.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getMinSystemVolumePercentage
 
@@ -260,6 +268,8 @@ getMinSystemVolumePercentage(volumeType: AudioVolumeType): number
 Gets the minimum system volume percentage application can set for specified volume type.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
 
@@ -283,8 +293,8 @@ Gets the minimum system volume percentage application can set for specified volu
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -306,7 +316,9 @@ getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray
 
 Obtains stream types by volume type.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray--><!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray-End-->
 
@@ -330,8 +342,8 @@ Obtains stream types by volume type.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getSupportedAudioVolumeTypes
 
@@ -341,7 +353,9 @@ getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>
 
 Obtains system supported volume types.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>--><!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>-End-->
 
@@ -359,7 +373,7 @@ Obtains system supported volume types.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getSystemVolume
 
@@ -369,7 +383,9 @@ getSystemVolume(volumeType: AudioVolumeType): number
 
 Obtains the volume of a volume type.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int-End-->
 
@@ -393,8 +409,8 @@ Obtains the volume of a volume type.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getSystemVolumeByUid
 
@@ -404,7 +420,9 @@ getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: number): number
 
 Obtains the volume of streams in specific uid application.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int--><!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int-End-->
 
@@ -429,9 +447,9 @@ Obtains the volume of streams in specific uid application.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## getSystemVolumePercentage
 
@@ -442,6 +460,8 @@ getSystemVolumePercentage(volumeType: AudioVolumeType): number
 Gets the current system volume percentage for specified volume type.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
 
@@ -465,8 +485,8 @@ Gets the current system volume percentage for specified volume type.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -488,7 +508,9 @@ getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>
 
 Get the volume group list for a networkId. This method uses an asynchronous callback to return the result.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void-End-->
 
@@ -525,7 +547,9 @@ getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>
 
 Get the volume group list for a networkId. This method uses a promise to return the result.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>-End-->
 
@@ -562,7 +586,9 @@ getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos
 
 Get the volume group list for a networkId.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos--><!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos-End-->
 
@@ -586,8 +612,8 @@ Get the volume group list for a networkId.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## 示例
 
@@ -611,7 +637,9 @@ getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 Gets the volume db value that system calculate by volume type, volume level and device type.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double-End-->
 
@@ -624,7 +652,7 @@ Gets the volume db value that system calculate by volume type, volume level and 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
-| [volumeLevel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
+| [volumeLevel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
 | device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 |
 
 **返回值：**
@@ -637,8 +665,8 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isAppVolumeMutedForUid
 
@@ -646,9 +674,11 @@ Gets the volume db value that system calculate by volume type, volume level and 
 isAppVolumeMutedForUid(uid: number, owned: boolean): Promise<boolean>
 ```
 
-Checks whether the app volume is muted. If there are multiple callers setting muted states,only when all callers cancel muted state the volume of this app will be truly unmuted.
+Checks whether the app volume is muted. If there are multiple callers setting muted states, only when all callers cancel muted state the volume of this app will be truly unmuted.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -675,9 +705,9 @@ Checks whether the app volume is muted. If there are multiple callers setting mu
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -697,7 +727,9 @@ isSystemMuted(volumeType: AudioVolumeType): boolean
 
 Checks whether a volume type is muted.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean--><!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean-End-->
 
@@ -721,22 +753,22 @@ Checks whether a volume type is muted.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## off('appVolumeChangeForUid')
+## offActiveVolumeTypeChange
 
 ```TypeScript
-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void
+offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void
 ```
 
-Unsubscribes to the app volume change events..
+Unsubscribes from active volume type changes.
 
-**起始版本：** 19
+**起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+**废弃版本：** -1
 
-<!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -746,92 +778,30 @@ Unsubscribes to the app volume change events..
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-
-## 示例
-
-```TypeScript
-// 取消该事件的所有监听。
-audioVolumeManager.off('appVolumeChangeForUid');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let appVolumeChangeForUidCallback = (volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-};
-
-audioVolumeManager.on('appVolumeChangeForUid', appVolumeChangeForUidCallback);
-
-audioVolumeManager.off('appVolumeChangeForUid', appVolumeChangeForUidCallback);
-```
-
-## off('activeVolumeTypeChange')
-
-```TypeScript
-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
-```
-
-取消订阅 活跃的音量类型 事件
-
-**起始版本：** 20
-
-<!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activeVolumeTypeChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## 示例
-
-```TypeScript
-// 取消该事件的所有监听。
-audioVolumeManager.off('activeVolumeTypeChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let activeVolumeTypeChangeCallback = (volumeType: audio.AudioVolumeType) => {
-  console.info(`VolumeType of stream: ${volumeType} `);
-};
-
-audioVolumeManager.on('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
-
-audioVolumeManager.off('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
-```
-
-## off('systemVolumeChange')
+## offAppVolumeChangeForUid
 
 ```TypeScript
-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void
+offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the system volume change events.
+Unsubscribes to the app volume change events..
 
-**起始版本：** 20
+**起始版本：** 23
 
-<!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -841,31 +811,46 @@ Unsubscribes to the system volume change events.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'systemVolumeChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## 示例
+## offSystemVolumeChange
 
 ```TypeScript
-// 取消该事件的所有监听。
-audioVolumeManager.off('systemVolumeChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let systemVolumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
-  console.info(`Succeeded in using on or off function, VolumeEvent: ${volumeEvent}.`);
-};
-
-audioVolumeManager.on('systemVolumeChange', systemVolumeChangeCallback);
-
-audioVolumeManager.off('systemVolumeChange', systemVolumeChangeCallback);
+offSystemVolumeChange(callback?: Callback<VolumeEvent>): void
 ```
+
+Unsubscribes to the system volume change events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeManager-offSystemVolumeChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChange(callback?: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## offSystemVolumeChangeByFilter
 
@@ -876,6 +861,8 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 取消订阅系统音量变化事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -895,8 +882,8 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## offVolumePercentageChange
 
@@ -907,6 +894,8 @@ offVolumePercentageChange(callback?: Callback<VolumeEvent>): void
 Unsubscribes from system volume percentage change events.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void-End-->
 
@@ -924,8 +913,8 @@ Unsubscribes from system volume percentage change events.
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -946,15 +935,379 @@ audioVolumeManager.onVolumePercentageChange(volumePercentageChangeCallback);
 audioVolumeManager.offVolumePercentageChange(volumePercentageChangeCallback);
 ```
 
-## on('appVolumeChangeForUid')
+## off_activeVolumeTypeChange
+
+```TypeScript
+off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
+```
+
+取消订阅 活跃的音量类型 事件
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'activeVolumeTypeChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.off('activeVolumeTypeChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let activeVolumeTypeChangeCallback = (volumeType: audio.AudioVolumeType) => {
+  console.info(`VolumeType of stream: ${volumeType} `);
+};
+
+audioVolumeManager.on('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
+
+audioVolumeManager.off('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
+```
+
+## off_appVolumeChangeForUid
+
+```TypeScript
+off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void
+```
+
+Unsubscribes to the app volume change events..
+
+**起始版本：** 19
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'appVolumeChangeForUid' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.off('appVolumeChangeForUid');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let appVolumeChangeForUidCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+};
+
+audioVolumeManager.on('appVolumeChangeForUid', appVolumeChangeForUidCallback);
+
+audioVolumeManager.off('appVolumeChangeForUid', appVolumeChangeForUidCallback);
+```
+
+## off_systemVolumeChange
+
+```TypeScript
+off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void
+```
+
+Unsubscribes to the system volume change events.
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'systemVolumeChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.off('systemVolumeChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let systemVolumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`Succeeded in using on or off function, VolumeEvent: ${volumeEvent}.`);
+};
+
+audioVolumeManager.on('systemVolumeChange', systemVolumeChangeCallback);
+
+audioVolumeManager.off('systemVolumeChange', systemVolumeChangeCallback);
+```
+
+## onActiveVolumeTypeChange
+
+```TypeScript
+onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void
+```
+
+Subscribes to active volume type changes.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeManager-onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onAppVolumeChangeForUid
+
+```TypeScript
+onAppVolumeChangeForUid(uid: number, callback: Callback<VolumeEvent>): void
+```
+
+Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setAppVolumePercentageForUid).
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uid | number | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onSystemVolumeChange
+
+```TypeScript
+onSystemVolumeChange(callback: Callback<VolumeEvent>): void
+```
+
+Listens for system volume change events. This method uses a callback to get volume change events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeManager-onSystemVolumeChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChange(callback: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onSystemVolumeChangeByFilter
+
+```TypeScript
+onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
+```
+
+订阅系统音量变化事件。当系统体积为目标时 系统卷过滤器更改，已注册的客户端将收到回调。
+
+**起始版本：** 26.0.0
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onVolumePercentageChange
+
+```TypeScript
+onVolumePercentageChange(callback: Callback<VolumeEvent>): void
+```
+
+Subscribes to system volume percentage change events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Volume percentage: ${volumeEvent.percentage} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+});
+```
+
+## on_activeVolumeTypeChange
+
+```TypeScript
+on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
+```
+
+订阅 活跃的音量类型 变化事件
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'activeVolumeTypeChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+audioVolumeManager.on('activeVolumeTypeChange', (volumeType: audio.AudioVolumeType) => {
+  console.info(`VolumeType of stream: ${volumeType} `);
+});
+```
+
+## on_appVolumeChangeForUid
 
 ```TypeScript
 on(type: 'appVolumeChangeForUid', uid: number, callback: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events.The app volume may changed by [setAppVolumePercentageForUid](#setAppVolumePercentageForUid).
+Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setAppVolumePercentageForUid).
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -976,9 +1329,9 @@ Listens for specified app volume change events.The app volume may changed by [se
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -992,45 +1345,7 @@ audioVolumeManager.on('appVolumeChangeForUid', uid, (volumeEvent: audio.VolumeEv
 });
 ```
 
-## on('activeVolumeTypeChange')
-
-```TypeScript
-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
-```
-
-订阅 活跃的音量类型 变化事件
-
-**起始版本：** 20
-
-<!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activeVolumeTypeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-
-## 示例
-
-```TypeScript
-audioVolumeManager.on('activeVolumeTypeChange', (volumeType: audio.AudioVolumeType) => {
-  console.info(`VolumeType of stream: ${volumeType} `);
-});
-```
-
-## on('systemVolumeChange')
+## on_systemVolumeChange
 
 ```TypeScript
 on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void
@@ -1039,6 +1354,8 @@ on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void
 Listens for system volume change events. This method uses a callback to get volume change events.
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void-End-->
 
@@ -1057,8 +1374,8 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1068,87 +1385,17 @@ audioVolumeManager.on('systemVolumeChange', (volumeEvent: audio.VolumeEvent) => 
 });
 ```
 
-## onSystemVolumeChangeByFilter
-
-```TypeScript
-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
-```
-
-订阅系统音量变化事件。当系统体积为目标时系统卷过滤器更改，已注册的客户端将收到回调。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-
-## onVolumePercentageChange
-
-```TypeScript
-onVolumePercentageChange(callback: Callback<VolumeEvent>): void
-```
-
-Subscribes to system volume percentage change events.
-
-**起始版本：** 23
-
-<!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-
-## 示例
-
-```TypeScript
-onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Volume percentage: ${volumeEvent.percentage} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
-```
-
 ## setAppVolumeMutedForUid
 
 ```TypeScript
 setAppVolumeMutedForUid(uid: number, muted: boolean): Promise<void>
 ```
 
-Change mute state of specified application volume. If there are multiple callers setting muted states,only when all callers cancel muted state the volume of this app will be truly unmuted.
+Change mute state of specified application volume. If there are multiple callers setting muted states, only when all callers cancel muted state the volume of this app will be truly unmuted.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -1175,10 +1422,10 @@ Change mute state of specified application volume. If there are multiple callers
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -1198,7 +1445,9 @@ setAppVolumePercentageForUid(uid: number, volume: number): Promise<void>
 
 Sets the volume for specified app with range from 0 to 100. Applications with same uid share the same volume.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -1225,10 +1474,10 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -1249,7 +1498,9 @@ setSystemVolumeByUid(volumeType: AudioVolumeType, volume: number, callingUid: nu
 
 Sets the volume for specific uid application. This method uses a promise to return the result.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -1277,10 +1528,10 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## setSystemVolumePercentage
 
@@ -1288,9 +1539,11 @@ Sets the volume for specific uid application. This method uses a promise to retu
 setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: number): Promise<void>
 ```
 
-Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100.The volume percentage corresponds to volume levels, with each level tied to a specific percentage. When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels.Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly distributed between 1 and 99. When the volume percentage changes, the volume level changes accordingly.
+Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100. The volume percentage corresponds to volume levels, with each level tied to a specific percentage. When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels. Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly distributed between 1 and 99. When the volume percentage changes, the volume level changes accordingly.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -1317,10 +1570,10 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 

@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequest](ohos.geoLocationManager/geoLocationManager.LocationRequest)
+**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md#LocationRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -20,6 +20,28 @@
 import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from '@kit.LocationKit';
 ```
 
+## coordType
+
+```TypeScript
+coordType?: string
+```
+
+Coordinate system type. Available types can be obtained using getSupportedCoordTypes. The default type is wgs84.
+
+**Type:** string
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeLocationOption-coordType?: string--><!--Device-SubscribeLocationOption-coordType?: string-End-->
+
+**System capability:** SystemCapability.Location.Location.Lite
+
 ## fail
 
 ```TypeScript
@@ -27,6 +49,8 @@ fail?: (data: string, code: number) => void
 ```
 
 Called when the listening fails.
+
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -40,13 +64,6 @@ Called when the listening fails.
 
 **System capability:** SystemCapability.Location.Location.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
 ## success
 
 ```TypeScript
@@ -54,6 +71,8 @@ success: (data: GeolocationResponse) => void
 ```
 
 Called whenever the geographical location changes.
+
+**Type:** (data: GeolocationResponse) =&gt; void
 
 **Since:** 3
 
@@ -64,34 +83,6 @@ Called whenever the geographical location changes.
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-SubscribeLocationOption-success: (data: GeolocationResponse) => void--><!--Device-SubscribeLocationOption-success: (data: GeolocationResponse) => void-End-->
-
-**System capability:** SystemCapability.Location.Location.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md) | Yes |  |
-
-## coordType
-
-```TypeScript
-coordType?: string
-```
-
-Coordinate system type. Available types can be obtained using getSupportedCoordTypes.The default type is wgs84.
-
-**Type:** string
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 9
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-SubscribeLocationOption-coordType?: string--><!--Device-SubscribeLocationOption-coordType?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 

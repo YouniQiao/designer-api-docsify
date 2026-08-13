@@ -8,7 +8,9 @@ Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindop
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface SheetOptions extends BindOptions--><!--Device-unnamed-declare interface SheetOptions extends BindOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface SheetOptions--><!--Device-unnamed-declare interface SheetOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,7 +20,7 @@ Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindop
 blurSnapshot?: BlurSnapshotOptions
 ```
 
-Options for blur snapshot optimization of the sheet.When this property is set, blur optimization is enabled and the sheet background will be rendered using a blur snapshot.This property cannot be dynamically switched after the sheet is presented.
+Options for blur snapshot optimization of the sheet. When this property is set, blur optimization is enabled and the sheet background will be rendered using a blur snapshot. This property cannot be dynamically switched after the sheet is presented.
 
 **Type:** [BlurSnapshotOptions](arkts-arkui-blursnapshotoptions-i-sys.md)
 
@@ -27,6 +29,8 @@ Options for blur snapshot optimization of the sheet.When this property is set, b
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,7 @@ Options for blur snapshot optimization of the sheet.When this property is set, b
 edgeLightMode?: EdgeLightMode
 ```
 
-Edge light animation mode of the sheet.Default value: EdgeLightMode.EDGELIGHT_DISABLED .
+Edge light animation mode of the sheet. Default value: EdgeLightMode.EDGELIGHT_DISABLED .
 
 **Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 
@@ -51,6 +55,8 @@ Edge light animation mode of the sheet.Default value: EdgeLightMode.EDGELIGHT_DI
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,15 +72,15 @@ Edge light animation mode of the sheet.Default value: EdgeLightMode.EDGELIGHT_DI
 offset?: Position
 ```
 
-Offset of the sheet. Bottom spacing, which is effective only when the sheet is a bottom sheet. The **detents** property of [SheetOptions](arkts-arkui-sheetoptions-i.md#SheetOptions) is not supported. This property has no effect when the y-axis value is set to a negative number.
-
-Default value: 0 vp for both the x-axis and y-axis
+Offset of the sheet. Bottom spacing, which is effective only when the sheet is a bottom sheet. The **detents** property of [SheetOptions](arkts-arkui-sheetoptions-i.md#SheetOptions) is not supported. This property has no effect when the y-axis value is set to a negative number. Default value: 0 vp for both the x-axis and y-axis
 
 **Type:** Position
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

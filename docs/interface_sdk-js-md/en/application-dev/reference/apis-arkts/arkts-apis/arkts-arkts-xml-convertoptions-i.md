@@ -6,6 +6,8 @@ Options for conversion.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-xml-interface ConvertOptions--><!--Device-xml-interface ConvertOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -30,6 +32,8 @@ Name of the attribute key for **attributes** in the output object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-attributesKey: string--><!--Device-ConvertOptions-attributesKey: string-End-->
@@ -49,6 +53,8 @@ Name of the attribute key for **cdata** in the output object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,6 +76,8 @@ Name of the attribute key for **comment** in the output object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-commentKey: string--><!--Device-ConvertOptions-commentKey: string-End-->
@@ -89,6 +97,8 @@ Name of the attribute key for **declaration** in the output object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,6 +120,8 @@ Name of the attribute key for **doctype** in the output object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-doctypeKey: string--><!--Device-ConvertOptions-doctypeKey: string-End-->
@@ -129,6 +141,8 @@ Name of the attribute key for **elements** in the output object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -150,6 +164,8 @@ Whether to ignore the element's attribute information. The value **true** means 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-ignoreAttributes?: boolean--><!--Device-ConvertOptions-ignoreAttributes?: boolean-End-->
@@ -169,6 +185,8 @@ Whether to ignore the element's CDATA information. The value **true** means to i
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -190,6 +208,8 @@ Whether to ignore element comments. The value **true** means to ignore element c
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-ignoreComment?: boolean--><!--Device-ConvertOptions-ignoreComment?: boolean-End-->
@@ -202,13 +222,15 @@ Whether to ignore element comments. The value **true** means to ignore element c
 ignoreDeclaration?: boolean
 ```
 
-Whether to ignore the XML declaration. The value **true** means to ignore the XML declaration, and **false**means the opposite. The default value is **false**.
+Whether to ignore the XML declaration. The value **true** means to ignore the XML declaration, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -230,6 +252,8 @@ Whether to ignore the element's Doctype information. The value **true** means to
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-ignoreDoctype?: boolean--><!--Device-ConvertOptions-ignoreDoctype?: boolean-End-->
@@ -249,6 +273,8 @@ Whether to ignore the XML processing instruction. The value **true** means to ig
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -270,6 +296,8 @@ Whether to ignore the element's text information. The value **true** means to ig
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-ignoreText?: boolean--><!--Device-ConvertOptions-ignoreText?: boolean-End-->
@@ -289,6 +317,8 @@ Name of the attribute key for **instruction** in the output object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -310,6 +340,8 @@ Name of the attribute key for **name** in the output object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-nameKey: string--><!--Device-ConvertOptions-nameKey: string-End-->
@@ -329,6 +361,8 @@ Name of the attribute key for **parent** in the output object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -350,6 +384,8 @@ Name of the attribute key for **text** in the output object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-textKey: string--><!--Device-ConvertOptions-textKey: string-End-->
@@ -370,6 +406,8 @@ Whether to trim the whitespace characters before and after the text. The value *
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConvertOptions-trim: boolean--><!--Device-ConvertOptions-trim: boolean-End-->
@@ -389,6 +427,8 @@ Name of the attribute key for **type** in the output object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

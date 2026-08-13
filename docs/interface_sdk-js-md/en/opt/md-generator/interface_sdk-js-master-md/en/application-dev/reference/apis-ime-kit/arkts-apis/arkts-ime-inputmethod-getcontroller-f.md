@@ -14,7 +14,9 @@ function getController(): InputMethodController
 
 Input method controller
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function getController(): InputMethodController--><!--Device-inputMethod-function getController(): InputMethodController-End-->
 
@@ -30,7 +32,7 @@ Input method controller
 
 | Error Code ID |
 | --- |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 

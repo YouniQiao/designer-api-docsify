@@ -10,6 +10,8 @@ type TextSelectionChangeCallback = (selectionText: string) => void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type TextSelectionChangeCallback = (selectionText: string) => void--><!--Device-unnamed-type TextSelectionChangeCallback = (selectionText: string) => void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

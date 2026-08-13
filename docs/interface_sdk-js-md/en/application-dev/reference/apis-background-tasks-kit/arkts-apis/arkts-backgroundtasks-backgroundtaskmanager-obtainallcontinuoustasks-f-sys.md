@@ -14,9 +14,11 @@ function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 
 Obtains all continuous task information, including the task ID and type. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BACKGROUND_TASK_INFO
 
@@ -38,9 +40,9 @@ Obtains all continuous task information, including the task ID and type. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 

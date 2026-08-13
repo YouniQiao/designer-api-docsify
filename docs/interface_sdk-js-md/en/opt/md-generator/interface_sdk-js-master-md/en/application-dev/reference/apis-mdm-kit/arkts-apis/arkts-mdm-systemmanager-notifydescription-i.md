@@ -4,6 +4,8 @@ Represents the update notification defined by an enterprise.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-interface NotifyDescription--><!--Device-systemManager-interface NotifyDescription-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,6 +28,8 @@ Update tips provided by the enterprise.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotifyDescription-installTips?: string--><!--Device-NotifyDescription-installTips?: string-End-->
@@ -43,6 +47,8 @@ Details about the update tips customized by the enterprise.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

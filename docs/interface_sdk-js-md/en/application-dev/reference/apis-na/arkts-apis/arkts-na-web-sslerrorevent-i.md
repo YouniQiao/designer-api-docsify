@@ -1,0 +1,174 @@
+# SslErrorEvent
+
+Defines the ssl error event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface SslErrorEvent--><!--Device-unnamed-export declare interface SslErrorEvent-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## certChainData
+
+```TypeScript
+certChainData?: Array<Uint8Array>
+```
+
+Certificate chain data in DER format.
+
+**Type:** Array&lt;Uint8Array&gt;
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>--><!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## error
+
+```TypeScript
+error: SslError
+```
+
+Error codes.
+
+**Type:** [SslError](arkts-na-web-sslerror-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-error: SslError--><!--Device-SslErrorEvent-error: SslError-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## handler
+
+```TypeScript
+handler: SslErrorHandler
+```
+
+Notifies the user of the operation behavior of the web component.
+
+**Type:** [SslErrorHandler](arkts-na-web-sslerrorhandler-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-handler: SslErrorHandler--><!--Device-SslErrorEvent-handler: SslErrorHandler-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## isFatalError
+
+```TypeScript
+isFatalError: boolean
+```
+
+Whether the error is fatal.
+
+**Type:** boolean
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-isFatalError: boolean--><!--Device-SslErrorEvent-isFatalError: boolean-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## isMainFrame
+
+```TypeScript
+isMainFrame: boolean
+```
+
+Whether the request is main frame.
+
+**Type:** boolean
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-isMainFrame: boolean--><!--Device-SslErrorEvent-isMainFrame: boolean-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## originalUrl
+
+```TypeScript
+originalUrl: string
+```
+
+Original url.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-originalUrl: string--><!--Device-SslErrorEvent-originalUrl: string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## referrer
+
+```TypeScript
+referrer: string
+```
+
+Referrer.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-referrer: string--><!--Device-SslErrorEvent-referrer: string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## url
+
+```TypeScript
+url: string
+```
+
+Request url.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-SslErrorEvent-url: string--><!--Device-SslErrorEvent-url: string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

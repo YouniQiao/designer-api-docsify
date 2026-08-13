@@ -4,6 +4,8 @@ Represents the device Bluetooth information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-bluetoothManager-export interface BluetoothInfo--><!--Device-bluetoothManager-export interface BluetoothInfo-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,6 +28,8 @@ Bluetooth profile connection state of the device.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BluetoothInfo-connectionState: constant.ProfileConnectionState--><!--Device-BluetoothInfo-connectionState: constant.ProfileConnectionState-End-->
@@ -44,6 +48,8 @@ Bluetooth name of the device.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BluetoothInfo-name: string--><!--Device-BluetoothInfo-name: string-End-->
@@ -61,6 +67,8 @@ Bluetooth state of the device.
 **Type:** access.BluetoothState
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

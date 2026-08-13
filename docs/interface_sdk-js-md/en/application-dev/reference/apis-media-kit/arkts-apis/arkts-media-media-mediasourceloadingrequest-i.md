@@ -2,9 +2,11 @@
 
 The MediaSourceLoadingRequest class defines a loading request object. Applications use this object to obtain the location of the requested resource and to interact with the player for data exchange.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface MediaSourceLoadingRequest--><!--Device-media-interface MediaSourceLoadingRequest-End-->
 
@@ -18,23 +20,19 @@ import { media } from '@kit.MediaKit';
 
 ## finishLoading
 
-ArkTS-Dyn:
-```TypeScript
-finishLoading(uuid: number, state: LoadingRequestError): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 finishLoading(uuid: long, state: LoadingRequestError): void
 ```
 
 Notifies the player of the current request status. After pushing all the data for a single resource, the application should send the **LOADING_ERROR_SUCCESS** state to notify the player that the resource push is complete.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoadingRequest-finishLoading(uuid: long, state: LoadingRequestError): void--><!--Device-MediaSourceLoadingRequest-finishLoading(uuid: long, state: LoadingRequestError): void-End-->
 
@@ -44,7 +42,7 @@ Notifies the player of the current request status. After pushing all the data fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
+| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
 | state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes | Request status. |
 
 ## respondData
@@ -58,6 +56,8 @@ Sends data to the player.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -89,7 +89,9 @@ The interface for application used to send requested data to AVPlayer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaSourceLoadingRequest-respondData(uuid: long, offset: long, buffer: ArrayBuffer): int | undefined--><!--Device-MediaSourceLoadingRequest-respondData(uuid: long, offset: long, buffer: ArrayBuffer): int | undefined-End-->
 
@@ -111,24 +113,19 @@ The interface for application used to send requested data to AVPlayer.
 
 ## respondHeader
 
-ArkTS-Dyn:
-```TypeScript
-respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: string): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string): void
 ```
 
-Sends response header information to the player. This API must be called before the first call to   
-[respondData](#respondData).
+Sends response header information to the player. This API must be called before the first call to [respondData](#respondData).
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoadingRequest-respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string): void--><!--Device-MediaSourceLoadingRequest-respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string): void-End-->
 
@@ -138,7 +135,7 @@ Sends response header information to the player. This API must be called before 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
+| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
 | header | Record&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.&lt;br&gt; - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
 | redirectUrl | string | No | Redirect URL in the HTTP response. |
 
@@ -152,11 +149,13 @@ HTTP request header. If the header exists, the application should set the header
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoadingRequest-header?: Record<string, string>--><!--Device-MediaSourceLoadingRequest-header?: Record<string, string>-End-->
 
@@ -172,11 +171,13 @@ Resource URL, which is the path to the resource that the application needs to op
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoadingRequest-url: string--><!--Device-MediaSourceLoadingRequest-url: string-End-->
 

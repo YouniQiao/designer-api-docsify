@@ -1,9 +1,10 @@
 # Session
 
-**Session** implements a session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to take a photo or record a video.
+**Session** implements a session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to take a photo or record a video.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface Session--><!--Device-camera-interface Session-End-->
 
@@ -23,7 +24,9 @@ addInput(cameraInput: CameraInput): void
 
 Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance to this session.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -41,10 +44,10 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance 
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## addOutput
 
@@ -54,7 +57,9 @@ addOutput(cameraOutput: CameraOutput): void
 
 Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instance to this session.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -72,10 +77,10 @@ Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instan
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## beginConfig
 
@@ -85,7 +90,9 @@ beginConfig(): void
 
 Starts configuration for the session.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -97,8 +104,8 @@ Starts configuration for the session.
 
 | Error Code ID |
 | --- |
-| [7400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400105-session-configuration-locked) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400105](../errorcode-camera.md#7400105-session-configuration-locked) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## canAddInput
 
@@ -106,10 +113,11 @@ Starts configuration for the session.
 canAddInput(cameraInput: CameraInput): boolean
 ```
 
-Checks whether a **CameraInput** instance can be added to this session. This API must be called after   
-[beginConfig](#beginConfig) and before [commitConfig](#commitConfig).
+Checks whether a **CameraInput** instance can be added to this session. This API must be called after [beginConfig](#beginConfig) and before [commitConfig](#commitConfig).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -135,10 +143,11 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 canAddOutput(cameraOutput: CameraOutput): boolean
 ```
 
-Determines whether a CameraOutput instance can be added to this session. This API must be called after   
-[addInput](#addInput) and before [commitConfig](#commitConfig).
+Determines whether a CameraOutput instance can be added to this session. This API must be called after [addInput](#addInput) and before [commitConfig](#commitConfig).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -166,7 +175,9 @@ commitConfig(callback: AsyncCallback<void>): void
 
 Commits the configuration for this session. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -184,8 +195,8 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## commitConfig
 
@@ -195,7 +206,9 @@ commitConfig(): Promise<void>
 
 Commits the configuration for this session. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -213,8 +226,8 @@ Commits the configuration for this session. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## release
 
@@ -224,7 +237,9 @@ release(callback: AsyncCallback<void>): void
 
 Releases this session. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -242,7 +257,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## release
 
@@ -252,7 +267,9 @@ release(): Promise<void>
 
 Releases this session. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -270,7 +287,7 @@ Releases this session. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## removeInput
 
@@ -278,10 +295,11 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance from this session. This API must be called after   
-[beginConfig](#beginConfig) and before [commitConfig](#commitConfig).
+Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance from this session. This API must be called after [beginConfig](#beginConfig) and before [commitConfig](#commitConfig).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -299,10 +317,10 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instan
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## removeOutput
 
@@ -312,7 +330,9 @@ removeOutput(cameraOutput: CameraOutput): void
 
 Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instance from this session.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -330,10 +350,10 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) ins
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## start
 
@@ -343,7 +363,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts this session. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -361,9 +383,9 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## start
 
@@ -373,7 +395,9 @@ start(): Promise<void>
 
 Starts this session. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -391,9 +415,9 @@ Starts this session. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## stop
 
@@ -403,7 +427,9 @@ stop(callback: AsyncCallback<void>): void
 
 Stops this session. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -421,7 +447,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## stop
 
@@ -431,7 +457,9 @@ stop(): Promise<void>
 
 Stops this session. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -449,4 +477,4 @@ Stops this session. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |

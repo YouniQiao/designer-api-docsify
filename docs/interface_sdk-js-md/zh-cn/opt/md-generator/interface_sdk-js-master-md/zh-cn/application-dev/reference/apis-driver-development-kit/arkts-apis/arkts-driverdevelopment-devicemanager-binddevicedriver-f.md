@@ -7,13 +7,13 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
     callback: AsyncCallback<RemoteDeviceDriver>): void
 ```
 
-根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获取设备信息以及device。
+根据queryDevices()返回的设备信息绑定设备。 需要调用[deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获取设备信息以及device。
 
 **起始版本：** 11
 
 **废弃版本：** 19
 
-**替代接口：** [bindDriverWithDeviceId](deviceManager.bindDriverWithDeviceId(deviceId:)
+**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#bindDriverWithDeviceId)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -33,9 +33,9 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [22900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
 
 ## 示例
 
@@ -66,13 +66,13 @@ try {
 function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>
 ```
 
-根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获取设备信息以及device。
+根据queryDevices()返回的设备信息绑定设备。 需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获取设备信息以及device。
 
 **起始版本：** 11
 
 **废弃版本：** 19
 
-**替代接口：** [bindDriverWithDeviceId](deviceManager.bindDriverWithDeviceId(deviceId:)
+**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#bindDriverWithDeviceId)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -97,9 +97,9 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [22900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
 
 ## 示例
 

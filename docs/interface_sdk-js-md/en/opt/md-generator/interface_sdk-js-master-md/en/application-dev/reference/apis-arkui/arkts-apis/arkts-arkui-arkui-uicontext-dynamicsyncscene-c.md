@@ -4,6 +4,8 @@ Represents a dynamic synchronization scene.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class DynamicSyncScene--><!--Device-unnamed-export class DynamicSyncScene-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ getFrameRateRange(): ExpectedFrameRateRange
 Gets the FrameRateRange of the DynamicSyncScene.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ setFrameRateRange(range: ExpectedFrameRateRange): void
 Sets the FrameRateRange of the DynamicSyncScene.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

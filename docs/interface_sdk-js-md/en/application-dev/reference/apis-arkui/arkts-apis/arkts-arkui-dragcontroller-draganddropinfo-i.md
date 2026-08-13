@@ -6,6 +6,8 @@ Drag and drop information
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface DragAndDropInfo--><!--Device-dragController-interface DragAndDropInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ The information containing the drag event.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DragAndDropInfo-event: DragEvent--><!--Device-DragAndDropInfo-event: DragEvent-End-->
@@ -50,6 +54,8 @@ Additional information about the drag info.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DragAndDropInfo-extraParams?: string--><!--Device-DragAndDropInfo-extraParams?: string-End-->
@@ -69,6 +75,8 @@ The drag status.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

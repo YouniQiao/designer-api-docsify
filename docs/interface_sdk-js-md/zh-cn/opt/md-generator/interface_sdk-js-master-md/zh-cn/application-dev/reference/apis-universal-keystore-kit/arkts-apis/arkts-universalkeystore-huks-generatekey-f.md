@@ -6,19 +6,13 @@
 function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
 ```
 
-生成密钥。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.generateKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-generatekeyitem-f.md#generateKeyItem)
-> 替代。
+生成密钥。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [huks.generateKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-generatekeyitem-f.md#generateKeyItem) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [generateKeyItem](huks.generateKeyItem(keyAlias:)
+**替代接口：** [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generateKeyItem)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -76,18 +70,13 @@ huks.generateKey(keyAlias, options, (err, data) => {
 function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 ```
 
-生成密钥。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.generateKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-generatekeyitem-f.md#generateKeyItem-1)替代。
+生成密钥。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [huks.generateKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-generatekeyitem-f.md#generateKeyItem)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [generateKeyItem](huks.generateKeyItem(keyAlias:)
+**替代接口：** [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generateKeyItem)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 

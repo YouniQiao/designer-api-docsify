@@ -2,7 +2,9 @@
 
 ASR AEC mode.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AsrAecMode--><!--Device-audio-enum AsrAecMode-End-->
 
@@ -18,7 +20,9 @@ BYPASS = 0
 
 Bypass AEC.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AsrAecMode-BYPASS = 0--><!--Device-AsrAecMode-BYPASS = 0-End-->
 
@@ -34,7 +38,9 @@ STANDARD = 1
 
 Using standard AEC.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AsrAecMode-STANDARD = 1--><!--Device-AsrAecMode-STANDARD = 1-End-->
 

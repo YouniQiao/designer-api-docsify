@@ -2,9 +2,11 @@
 
 Obtains the option mode of NR.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum NROptionMode--><!--Device-radio-export enum NROptionMode-End-->
 
@@ -20,9 +22,11 @@ NR_OPTION_UNKNOWN = 0
 
 Indicates unknown NR networking mode.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NROptionMode-NR_OPTION_UNKNOWN = 0--><!--Device-NROptionMode-NR_OPTION_UNKNOWN = 0-End-->
 
@@ -38,9 +42,11 @@ NR_OPTION_NSA_ONLY = 1
 
 Indicates that the NR networking mode is NSA only.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NROptionMode-NR_OPTION_NSA_ONLY = 1--><!--Device-NROptionMode-NR_OPTION_NSA_ONLY = 1-End-->
 
@@ -56,9 +62,11 @@ NR_OPTION_SA_ONLY = 2
 
 Indicates that the NR networking mode is SA only.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NROptionMode-NR_OPTION_SA_ONLY = 2--><!--Device-NROptionMode-NR_OPTION_SA_ONLY = 2-End-->
 
@@ -74,9 +82,11 @@ NR_OPTION_NSA_AND_SA = 3
 
 Indicates that the NR networking mode is NSA and SA.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NROptionMode-NR_OPTION_NSA_AND_SA = 3--><!--Device-NROptionMode-NR_OPTION_NSA_AND_SA = 3-End-->
 

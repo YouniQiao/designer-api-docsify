@@ -2,7 +2,9 @@
 
 Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
 
@@ -14,9 +16,11 @@ Enumerates the material types in a scene. The material type defines how material
 UNLIT_SHADOW_ALPHA = 100
 ```
 
-Draws only shadows. When the [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md#Blend) property of the material is enabled,the material is blended with the background to simulate a transparent material effect.
+Draws only shadows. When the [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md#Blend) property of the material is enabled, the material is blended with the background to simulate a transparent material effect.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

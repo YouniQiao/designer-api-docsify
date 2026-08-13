@@ -12,13 +12,13 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 function debug(domain: number, tag: string, format: string, ...args: any[]): void
 ```
 
-Prints DEBUG logs.
-
-DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled.
+Prints DEBUG logs. DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,7 +60,9 @@ Prints DEBUG logs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

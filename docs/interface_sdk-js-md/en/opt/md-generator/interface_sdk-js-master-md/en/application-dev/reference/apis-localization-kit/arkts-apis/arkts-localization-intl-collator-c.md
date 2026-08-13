@@ -2,7 +2,9 @@
 
 Provides the string collation capability.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intl-export class Collator--><!--Device-intl-export class Collator-End-->
 
@@ -23,6 +25,8 @@ compare(first: string, second: string): number
 Compares two strings based on the specified collation rules.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,6 +68,8 @@ Creates a **Collator** object for the current system locale.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Collator-constructor()--><!--Device-Collator-constructor()-End-->
@@ -89,6 +95,8 @@ Creates a **Collator** object based on the specified locale and options.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)--><!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)-End-->
@@ -100,7 +108,7 @@ Creates a **Collator** object based on the specified locale and options.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | locale | string \| Array & lt;string & gt; | Yes |
-| options | [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | No |
+| options | [CollatorOptions](../../apis-na/arkts-apis/arkts-na-intl-collatoroptions-i.md) | No |
 
 ## Examples
 
@@ -121,6 +129,8 @@ Obtains the options for creating a **Collator** object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Collator-resolvedOptions(): CollatorOptions--><!--Device-Collator-resolvedOptions(): CollatorOptions-End-->
@@ -131,7 +141,7 @@ Obtains the options for creating a **Collator** object.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) |
+| [CollatorOptions](../../apis-na/arkts-apis/arkts-na-intl-collatoroptions-i.md) |
 
 ## Examples
 

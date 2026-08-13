@@ -12,6 +12,8 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -32,8 +34,8 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
 
 ## 示例
 
@@ -57,6 +59,8 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -78,8 +82,8 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
 
 ## 示例
 

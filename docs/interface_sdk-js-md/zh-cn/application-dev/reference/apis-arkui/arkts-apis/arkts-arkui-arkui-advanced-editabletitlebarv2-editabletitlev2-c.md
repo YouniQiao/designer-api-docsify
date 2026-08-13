@@ -4,9 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class EditableTitleV2--><!--Device-unnamed-export declare class EditableTitleV2-End-->
 
@@ -22,9 +22,13 @@ EditableTitleV2的构造函数。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EditableTitleV2-constructor(options?: EditableTitleV2Options)--><!--Device-EditableTitleV2-constructor(options?: EditableTitleV2Options)-End-->
 
@@ -39,12 +43,11 @@ EditableTitleV2的构造函数。
 ## mainTitle
 
 ```TypeScript
-public mainTitle: ResourceStr
+@Trace
+  public mainTitle: ResourceStr
 ```
 
-主标题内容。
-
-默认值：''，表示标题内容为空。
+主标题内容。 默认值：''，表示标题内容为空。
 
 **类型：** ResourceStr
 
@@ -52,18 +55,23 @@ public mainTitle: ResourceStr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-EditableTitleV2-public mainTitle: ResourceStr--><!--Device-EditableTitleV2-public mainTitle: ResourceStr-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EditableTitleV2-@Trace  public mainTitle: ResourceStr--><!--Device-EditableTitleV2-@Trace  public mainTitle: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## subTitle
 
 ```TypeScript
-public subTitle?: ResourceStr
+@Trace
+  public subTitle?: ResourceStr
 ```
 
 副标题内容。需要在标题下方显示补充说明信息时传入此参数。
@@ -72,11 +80,15 @@ public subTitle?: ResourceStr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-EditableTitleV2-public subTitle?: ResourceStr--><!--Device-EditableTitleV2-public subTitle?: ResourceStr-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EditableTitleV2-@Trace  public subTitle?: ResourceStr--><!--Device-EditableTitleV2-@Trace  public subTitle?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

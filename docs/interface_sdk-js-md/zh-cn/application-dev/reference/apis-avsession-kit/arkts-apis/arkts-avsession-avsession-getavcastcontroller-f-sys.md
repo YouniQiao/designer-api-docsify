@@ -6,13 +6,13 @@
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void
 ```
 
-设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。
-
-此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。 此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -27,17 +27,17 @@ function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastCo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 用于指定要获取的投播控制器的sessionId。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -78,11 +78,13 @@ struct Index {
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController | undefined>): void
 ```
 
-Register a callback to retrieve an avsession cast controller.This function can be used at both side to get the same controller to do the playback control.
+Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -97,16 +99,16 @@ Register a callback to retrieve an avsession cast controller.This function can b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | Specifies the sessionId to get controller. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 
 ## getAVCastController
@@ -115,13 +117,13 @@ Register a callback to retrieve an avsession cast controller.This function can b
 function getAVCastController(sessionId: string): Promise<AVCastController>
 ```
 
-设备建立连接后，获取投播控制器。结果通过Promise方式返回。
-
-此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+设备建立连接后，获取投播控制器。结果通过Promise方式返回。 此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -147,11 +149,11 @@ function getAVCastController(sessionId: string): Promise<AVCastController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | server exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 
 ## getAVCastController
@@ -160,11 +162,13 @@ function getAVCastController(sessionId: string): Promise<AVCastController>
 function getAVCastController(sessionId: string): Promise<AVCastController | undefined>
 ```
 
-Get the current session's remote controller client.If the avsession is not under casting state, the controller will return undefined.
+Get the current session's remote controller client. If the avsession is not under casting state, the controller will return undefined.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -190,8 +194,8 @@ Get the current session's remote controller client.If the avsession is not under
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | server exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 

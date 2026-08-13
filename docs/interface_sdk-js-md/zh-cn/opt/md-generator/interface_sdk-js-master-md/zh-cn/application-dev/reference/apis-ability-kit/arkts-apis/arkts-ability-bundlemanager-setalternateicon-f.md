@@ -10,6 +10,8 @@ function setAlternateIcon(alternateIconName: string): Promise<void>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-bundleManager-function setAlternateIcon(alternateIconName: string): Promise<void>--><!--Device-bundleManager-function setAlternateIcon(alternateIconName: string): Promise<void>-End-->
@@ -32,9 +34,9 @@ function setAlternateIcon(alternateIconName: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17700310](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700310-设置备用图标失败) |
-| [17700308](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700308-备用图标名称没有在配置文件中配置) |
-| [17700309](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700309-当前没有设置备用图标) |
+| [17700310](../errorcode-bundle.md#17700310-设置备用图标失败) |
+| [17700308](../errorcode-bundle.md#17700308-备用图标名称没有在配置文件中配置) |
+| [17700309](../errorcode-bundle.md#17700309-当前没有设置备用图标) |
 
 ## 示例
 

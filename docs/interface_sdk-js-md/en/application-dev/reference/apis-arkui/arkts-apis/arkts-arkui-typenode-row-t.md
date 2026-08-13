@@ -1,20 +1,24 @@
 # Row
 
 ```TypeScript
-type Row = RowFrameNode
+type Row = TypedFrameNode<RowInterface, RowAttribute>
 ```
 
-Define the FrameNode type for Row.
+Represents a FrameNode of the **Row** type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Row = RowFrameNode--><!--Device-typeNode-type Row = RowFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Row = TypedFrameNode<RowInterface, RowAttribute>--><!--Device-typeNode-type Row = TypedFrameNode<RowInterface, RowAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RowFrameNode
+**Property type:** TypedFrameNode<RowInterface, RowAttribute>
 

@@ -4,7 +4,9 @@ Serial port object, which provides information and communication capabilities of
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-serial-interface SerialPort--><!--Device-serial-interface SerialPort-End-->
 
@@ -26,7 +28,9 @@ Closes the serial port device. This API returns the result asynchronously throug
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +48,8 @@ Closes the serial port device. This API returns the result asynchronously throug
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## drain
 
@@ -57,7 +61,9 @@ Waits until all write requests are complete. This API returns the result asynchr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,9 +81,9 @@ Waits until all write requests are complete. This API returns the result asynchr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## flush
 
@@ -89,7 +95,9 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,9 +115,9 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getCts
 
@@ -121,7 +129,9 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,9 +149,9 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getDsr
 
@@ -153,7 +163,9 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,9 +183,9 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDataRead
 
@@ -185,7 +197,9 @@ Cancels listening for data receiving events on the serial port.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,14 +211,14 @@ Cancels listening for data receiving events on the serial port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. &lt;br&gt;Default value: Clear all listeners for data receiving events on the serial port. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. &lt;br&gt;Default value: Clear all listeners for data receiving events on the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDisconnect
 
@@ -216,7 +230,9 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,14 +244,14 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. &lt;br&gt;Default value: Clears all callbacks for USB virtual serial port disconnection events. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. &lt;br&gt;Default value: Clears all callbacks for USB virtual serial port disconnection events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDataRead
 
@@ -243,11 +259,13 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 onDataRead(callback: Callback<Uint8Array>): void
 ```
 
-Listens for data received by the serial port. This API uses an asynchronous callback to return the result.When [close](#close) is called, all callbacks are cleared.
+Listens for data received by the serial port. This API uses an asynchronous callback to return the result. When [close](#close) is called, all callbacks are cleared.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -259,15 +277,15 @@ Listens for data received by the serial port. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the data received by the serial port. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the data received by the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDisconnect
 
@@ -275,11 +293,13 @@ Listens for data received by the serial port. This API uses an asynchronous call
 onDisconnect(callback: Callback<void>): void
 ```
 
-This interface is used to listen to the disconnection event of the USB virtual serial port. Use Callback asynchronous callback.When the [close](#close) interface is invoked, all callbacks are cleared.
+This interface is used to listen to the disconnection event of the USB virtual serial port. Use Callback asynchronous callback. When the [close](#close) interface is invoked, all callbacks are cleared.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -291,14 +311,14 @@ This interface is used to listen to the disconnection event of the USB virtual s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback of the USB virtual serial port disconnection event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback of the USB virtual serial port disconnection event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## open
 
@@ -310,7 +330,9 @@ Enables the port. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,11 +356,11 @@ Enables the port. This API returns the result asynchronously through a promise.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-port-in-use) | Port already in use. |
-| [35700007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-user-authorization-rejected) | User authorization required. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700004](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-port-in-use) | Port already in use. |
+| [35700007](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-user-authorization-rejected) | User authorization required. |
 
 ## sendBrk
 
@@ -350,7 +372,9 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,9 +392,9 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setDtr
 
@@ -382,7 +406,9 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -406,9 +432,9 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setRts
 
@@ -420,7 +446,9 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -444,18 +472,12 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## write
 
-ArkTS-Dyn:
-```TypeScript
-write(data: Uint8Array, timeout?: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 write(data: Uint8Array, timeout?: int): Promise<int>
 ```
@@ -464,7 +486,9 @@ Sends data. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -477,23 +501,23 @@ Sends data. This API returns the result asynchronously through a promise.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | Uint8Array | Yes | Data to be sent. &lt;br&gt;Length range: (0, 4096] |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Timeout interval. &lt;br&gt;Length range: [0, 300000]. The value must be an integer, in milliseconds. The default value is 0, indicating that when data cannot be written to the port, the API does not wait and directly returns 0. |
+| timeout | int | No | Timeout interval. &lt;br&gt;Length range: [0, 300000]. The value must be an integer, in milliseconds. The default value is 0, indicating that when data cannot be written to the port, the API does not wait and directly returns 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the length of the data written. |
+| Promise&lt;int&gt; | Promise used to return the length of the data written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
-| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
-| [35700006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-transmission-timeout) | Transmission timeout. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700006](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-transmission-timeout) | Transmission timeout. |
 
 ## portInfo
 
@@ -507,7 +531,9 @@ Serial port information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

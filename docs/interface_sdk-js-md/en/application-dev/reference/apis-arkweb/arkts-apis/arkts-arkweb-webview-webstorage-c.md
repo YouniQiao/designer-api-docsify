@@ -1,20 +1,12 @@
 # WebStorage
 
-Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web**components in an application share a **WebStorage** object.
+Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **WebStorage**. > > - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel > discards Web SQL. For details about the ArkWeb kernel version, see > [Constraints](../../../web/web-component-overview.md#constraints).
 
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
-> 
-> - You must load the **Web** component before calling the APIs in **WebStorage**.
-> 
-> - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the
-> kernel discards Web SQL. For details about the ArkWeb kernel version, see
-> [Constraints](../../../web/web-component-overview.md#constraints).
+**Since:** 9
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 <!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
 
@@ -34,9 +26,13 @@ static deleteAllData(incognito?: boolean): void
 
 Deletes all storage data used by JavaScript storage APIs, including the Web SQL Database and HTML5-supported Web storage APIs.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static deleteAllData(incognito?: boolean): void--><!--Device-WebStorage-static deleteAllData(incognito?: boolean): void-End-->
 
@@ -46,7 +42,7 @@ Deletes all storage data used by JavaScript storage APIs, including the Web SQL 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **undefined** or **null** is passed, the value is **false**. |
+| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **undefined** or **null** is passed, the value is **false**.<br>**Since:** 11 |
 
 ## deleteOrigin
 
@@ -56,9 +52,13 @@ static deleteOrigin(origin: string): void
 
 Deletes all data in the specified origin.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static deleteOrigin(origin: string): void--><!--Device-WebStorage-static deleteOrigin(origin: string): void-End-->
 
@@ -68,63 +68,32 @@ Deletes all data in the specified origin.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin, which is obtained through [getOrigins](webview.WebStorage.static getOrigins(callback: AsyncCallback&lt;Array<WebStorageOrigin>&gt;&lt;WebStorageOrigin&gt;>)) . |
+| origin | string | Yes | Index of the origin, which is obtained through getOrigins. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## getOriginQuota
 
 ```TypeScript
-static getOriginQuota(origin: string): Promise<double>
+static getOriginQuota(origin: string): Promise<number>
 ```
 
-Get the web storage quota with the origin.
+Obtains the storage quota of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebStorage-static getOriginQuota(origin: string): Promise<double>--><!--Device-WebStorage-static getOriginQuota(origin: string): Promise<double>-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.Web.Webview.Core
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| origin | string | Yes | The origin which to be inquired. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;double&gt; | the promise returned by the function. Unit: byte. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. @static |
-
-## getOriginQuota
-
-```TypeScript
-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void
-```
-
-Obtains the storage quota of an origin in Web SQL Database and HTML5-supported Web Storage APIs, in bytes.This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void-End-->
+<!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -133,28 +102,71 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | Yes | The origin which to be inquired. - Storage quota of the origin.&lt;br&gt;**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;number&gt; | Promise used to return the storage quota of the origin. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+
+## getOriginQuota
+
+```TypeScript
+static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
+```
+
+Obtains the storage quota of an origin in Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| origin | string | Yes | Index of the origin. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Storage quota of the origin.&lt;br&gt;**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## getOriginUsage
 
 ```TypeScript
-static getOriginUsage(origin: string): Promise<double>
+static getOriginUsage(origin: string): Promise<number>
 ```
 
 Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebStorage-static getOriginUsage(origin: string): Promise<double>--><!--Device-WebStorage-static getOriginUsage(origin: string): Promise<double>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -168,28 +180,32 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;double&gt; | Promise used to return the storage usage of the origin. |
+| Promise&lt;number&gt; | Promise used to return the storage usage of the origin. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## getOriginUsage
 
 ```TypeScript
-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void
+static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 ```
 
 Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -198,14 +214,14 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | Yes | Storage usage of the origin. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Storage usage of the origin. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## getOrigins
 
@@ -215,9 +231,13 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 
 Obtains information about origins that are currently using the Web SQL Database and HTML5-supported Web Storage APIs. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>--><!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>-End-->
 
@@ -233,8 +253,8 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
 
 ## getOrigins
 
@@ -244,9 +264,13 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 Obtains information about origins that are currently using the Web SQL Database and HTML5-supported Web Storage APIs. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void--><!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void-End-->
 
@@ -256,12 +280,12 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
 

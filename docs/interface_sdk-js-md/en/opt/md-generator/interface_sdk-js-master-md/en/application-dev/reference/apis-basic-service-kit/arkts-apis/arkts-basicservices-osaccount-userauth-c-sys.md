@@ -2,7 +2,9 @@
 
 Provides APIs for user authentication.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-class UserAuth--><!--Device-osAccount-class UserAuth-End-->
 
@@ -29,7 +31,9 @@ auth(
 
 Performs authentication of the current user.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -60,26 +64,26 @@ Performs authentication of the current user.
 | --- |
 | 12300091 |
 | 12300090 |
-| [12300120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) |
+| [12300120](../../apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) |
 | 12300211 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
-| [12300112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) |
 | 12300119 |
-| [12300117](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
 | 12300020 |
-| [12300106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) |
-| [12300105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) |
-| [12300111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
-| [12300110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) |
-| [12300013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-network-exception) |
-| [12300109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
-| [12300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300105](../../apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-network-exception) |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) |
 
 ## Examples
 
@@ -117,7 +121,9 @@ auth(
 
 Starts user authentication based on the specified challenge value, authentication type (PIN, facial, or fingerprint authentication), authentication trust level, and optional parameters (such as the account ID and authentication intent).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -149,27 +155,27 @@ Starts user authentication based on the specified challenge value, authenticatio
 | --- |
 | 12300091 |
 | 12300090 |
-| [12300120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) |
+| [12300120](../../apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) |
 | 12300211 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
-| [12300112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) |
 | 12300119 |
-| [12300117](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
 | 12300020 |
-| [12300106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) |
-| [12300105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) |
-| [12300111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
-| [12300110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) |
-| [12300013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-network-exception) |
-| [12300109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
-| [12300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300105](../../apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-network-exception) |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) |
 
 ## Examples
 
@@ -210,7 +216,9 @@ authUser(
 
 Performs authentication of the specified user. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -242,27 +250,27 @@ Performs authentication of the specified user. This API uses an asynchronous cal
 | --- |
 | 12300091 |
 | 12300090 |
-| [12300120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) |
+| [12300120](../../apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) |
 | 12300211 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
-| [12300112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) |
 | 12300119 |
-| [12300117](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
 | 12300020 |
-| [12300106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) |
-| [12300105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) |
-| [12300111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
-| [12300110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) |
-| [12300013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-network-exception) |
-| [12300109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
-| [12300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300105](../../apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-network-exception) |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) |
 
 ## Examples
 
@@ -295,7 +303,9 @@ cancelAuth(contextID: Uint8Array): void
 
 Cancels an authentication.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -315,11 +325,11 @@ Cancels an authentication.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -351,7 +361,9 @@ constructor()
 
 A constructor used to create an instance for user authentication.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
@@ -363,7 +375,7 @@ A constructor used to create an instance for user authentication.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -379,7 +391,9 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
 
 Obtains the available status of the authentication capability corresponding to the specified authentication type and trust level.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -406,12 +420,12 @@ Obtains the available status of the authentication capability corresponding to t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300117](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) |
 
 ## Examples
 
@@ -438,7 +452,9 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 
 Obtains the executor property based on the request. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -459,11 +475,11 @@ Obtains the executor property based on the request. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300020 |
 
 ## Examples
@@ -503,7 +519,9 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 Obtains the executor property based on the request. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -529,11 +547,11 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300020 |
 
 ## Examples
@@ -569,9 +587,11 @@ try {
 getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>
 ```
 
-Obtains the specified property information of the associated executor based on the credential ID. This API uses a  promise to return the result.
+Obtains the specified property information of the associated executor based on the credential ID. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -598,11 +618,11 @@ Obtains the specified property information of the associated executor based on t
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 | 12300020 |
 
 ## Examples
@@ -652,7 +672,9 @@ getVersion(): number
 
 Obtains this version number.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UserAuth-getVersion(): int--><!--Device-UserAuth-getVersion(): int-End-->
 
@@ -670,7 +692,7 @@ Obtains this version number.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -688,7 +710,9 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 Prepares for remote authentication. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -716,11 +740,11 @@ Prepares for remote authentication. This API uses a promise to return the result
 | --- |
 | 12300091 |
 | 12300090 |
-| [12300111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -755,7 +779,9 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 
 Sets the property for the initialization algorithm. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -776,11 +802,11 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -815,7 +841,9 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 Sets the property for the initialization algorithm. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -841,11 +869,11 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 

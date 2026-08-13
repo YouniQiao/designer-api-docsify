@@ -2,13 +2,13 @@
 
 Implements the controller of the **TextClock** component. You can bind the controller to the component to control its start and stop. A **TextClock** component can be bound to only one controller.
 
-## Objects to Import
-
-```ts controller: TextClockController = new TextClockController()```
+## Objects to Import ```ts controller: TextClockController = new TextClockController() ```
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class TextClockController--><!--Device-unnamed-declare class TextClockController-End-->
 
@@ -25,6 +25,8 @@ A constructor used to create a **TextClockController** instance.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,6 +48,8 @@ Starts the **&lt;TextClock\&gt;** component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -65,6 +69,8 @@ Stops the **&lt;TextClock\&gt;** component.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

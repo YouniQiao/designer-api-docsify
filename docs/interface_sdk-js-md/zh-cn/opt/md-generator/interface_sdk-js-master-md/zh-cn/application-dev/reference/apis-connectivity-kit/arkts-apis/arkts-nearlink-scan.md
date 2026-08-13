@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
@@ -16,10 +18,10 @@
 
 | 名称 |
 | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offdevicefound) |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#ondevicefound) |
-| [startScan](arkts-connectivity-scan-startscan-f.md#startscan) |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopscan) |
+| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offDeviceFound) |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#onDeviceFound) |
+| [startScan](arkts-connectivity-scan-startscan-f.md#startScan) |
+| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopScan) |
 
 ### 接口
 

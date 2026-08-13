@@ -2,7 +2,9 @@
 
 Defines the layer mask of the node.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
 
@@ -16,7 +18,9 @@ getEnabled(index: number): boolean
 
 Checks whether the mask is enabled for a layer of a given index.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
 
@@ -64,7 +68,9 @@ setEnabled(index: number, enabled: boolean): void
 
 Enables the mask of a layer of a given index.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
 

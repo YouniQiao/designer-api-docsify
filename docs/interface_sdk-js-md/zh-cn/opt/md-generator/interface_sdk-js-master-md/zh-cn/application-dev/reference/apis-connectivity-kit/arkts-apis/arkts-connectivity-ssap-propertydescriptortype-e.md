@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-ssap-enum PropertyDescriptorType--><!--Device-ssap-enum PropertyDescriptorType-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ PROPERTY = 1
 属性说明描述符。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ CLIENT_PROPERTY_CONFIG = 2
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2--><!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2-End-->
@@ -49,6 +55,8 @@ SERVER_PROPERTY_CONFIG = 3
 服务端属性配置描述符。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ PROPERTY_FORMAT = 4
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4--><!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4-End-->
@@ -81,6 +91,8 @@ TYPE_VENDOR = 255
 厂商自定义。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

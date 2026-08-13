@@ -2,9 +2,11 @@
 
 Describes the notification information about the change of an album.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface AlbumChangeInfos--><!--Device-photoAccessHelper-interface AlbumChangeInfos-End-->
 
@@ -26,9 +28,11 @@ Array of changed albums. If all albums need to be queried again, **albumChangeDa
 
 **Type:** [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i.md)[] \| null
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfos-albumChangeDatas: AlbumChangeData[] | null--><!--Device-AlbumChangeInfos-albumChangeDatas: AlbumChangeData[] | null-End-->
 
@@ -40,17 +44,15 @@ Array of changed albums. If all albums need to be queried again, **albumChangeDa
 isForRecheck: boolean
 ```
 
-Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise.
-
-**NOTE：**
-
-In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
+Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise. **NOTE：**In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfos-isForRecheck: boolean--><!--Device-AlbumChangeInfos-isForRecheck: boolean-End-->
 
@@ -66,9 +68,11 @@ Type of the album change.
 
 **Type:** [NotifyChangeType](arkts-medialibrary-photoaccesshelper-notifychangetype-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfos-type: NotifyChangeType--><!--Device-AlbumChangeInfos-type: NotifyChangeType-End-->
 

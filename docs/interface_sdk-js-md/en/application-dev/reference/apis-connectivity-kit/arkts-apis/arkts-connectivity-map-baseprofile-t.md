@@ -6,9 +6,11 @@ type BaseProfile = baseProfile.BaseProfile
 
 Base interface of profile.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-map-type BaseProfile = baseProfile.BaseProfile--><!--Device-map-type BaseProfile = baseProfile.BaseProfile-End-->
 

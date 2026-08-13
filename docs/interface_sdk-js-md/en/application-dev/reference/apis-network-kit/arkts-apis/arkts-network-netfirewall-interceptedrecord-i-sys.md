@@ -6,6 +6,8 @@ Intercepted record.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-interface InterceptedRecord--><!--Device-netFirewall-interface InterceptedRecord-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -32,6 +34,8 @@ Application or service ID.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-InterceptedRecord-appUid?: number--><!--Device-InterceptedRecord-appUid?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -51,6 +55,8 @@ Blocked domain name information.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-InterceptedRecord-domain?: string--><!--Device-InterceptedRecord-domain?: string-End-->
 
@@ -72,6 +78,8 @@ Local IP.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-InterceptedRecord-localIp?: string--><!--Device-InterceptedRecord-localIp?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -91,6 +99,8 @@ Local port.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-InterceptedRecord-localPort?: number--><!--Device-InterceptedRecord-localPort?: number-End-->
 
@@ -112,6 +122,8 @@ Transport layer protocol.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-InterceptedRecord-protocol?: number--><!--Device-InterceptedRecord-protocol?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -131,6 +143,8 @@ Remote IP.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-InterceptedRecord-remoteIp?: string--><!--Device-InterceptedRecord-remoteIp?: string-End-->
 
@@ -152,6 +166,8 @@ Remote port.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-InterceptedRecord-remotePort?: number--><!--Device-InterceptedRecord-remotePort?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -171,6 +187,8 @@ Time stamp.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-InterceptedRecord-time: number--><!--Device-InterceptedRecord-time: number-End-->
 

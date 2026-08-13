@@ -2,9 +2,11 @@
 
 Wi-Fi IP information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface IpInfo--><!--Device-wifiManager-interface IpInfo-End-->
 
@@ -24,11 +26,13 @@ gateway: int
 
 The gateway of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-gateway: int--><!--Device-IpInfo-gateway: int-End-->
 
@@ -42,11 +46,13 @@ ipAddress: int
 
 The IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-ipAddress: int--><!--Device-IpInfo-ipAddress: int-End-->
 
@@ -60,11 +66,13 @@ leaseDuration: int
 
 The IP address lease duration of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-leaseDuration: int--><!--Device-IpInfo-leaseDuration: int-End-->
 
@@ -78,11 +86,13 @@ netmask: int
 
 The network mask of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-netmask: int--><!--Device-IpInfo-netmask: int-End-->
 
@@ -96,11 +106,13 @@ primaryDns: int
 
 The primary DNS server IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-primaryDns: int--><!--Device-IpInfo-primaryDns: int-End-->
 
@@ -114,11 +126,13 @@ secondDns: int
 
 The secondary DNS server IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-secondDns: int--><!--Device-IpInfo-secondDns: int-End-->
 
@@ -132,11 +146,13 @@ serverIp: int
 
 The DHCP server IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-serverIp: int--><!--Device-IpInfo-serverIp: int-End-->
 

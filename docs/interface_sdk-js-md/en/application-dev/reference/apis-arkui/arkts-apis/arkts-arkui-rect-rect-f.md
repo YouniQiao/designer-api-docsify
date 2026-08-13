@@ -3,6 +3,7 @@
 ## Rect
 
 ```TypeScript
+@ComponentBuilder
 export declare function Rect(
     options?: RectOptions | RoundedRectOptions
 ): RectAttribute
@@ -14,9 +15,11 @@ Rect is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute--><!--Device-unnamed-export declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Rect is returned when the parameter is transferred.
 ## Rect
 
 ```TypeScript
+@Builder
 export declare function Rect(
     style: CustomBuilderT<RectAttribute>,
 ): RectAttribute
@@ -47,11 +51,11 @@ Defines Rect Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute--><!--Device-unnamed-export declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute--><!--Device-unnamed-@Builderexport declare function Rect(    style: CustomBuilderT<RectAttribute>,): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Rect Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

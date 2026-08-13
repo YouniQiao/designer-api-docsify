@@ -2,9 +2,11 @@
 
 Defines the request information, which is used as an input parameter for binding the modal dialog box.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-dialogRequest-export interface RequestInfo--><!--Device-dialogRequest-export interface RequestInfo-End-->
 
@@ -26,9 +28,11 @@ Location attributes of a modal dialog box.
 
 **Type:** [WindowRect](arkts-ability-dialogrequest-windowrect-i.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Describes a geomagnetic response object.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface GeomagneticResponse--><!--Device-sensor-interface GeomagneticResponse-End-->
 
@@ -24,11 +26,13 @@ deflectionAngle: double
 
 Magnetic declination, which is the angle between true north (geographic north) and the magnetic north (the horizontal component of the field), in degrees.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-deflectionAngle: double--><!--Device-GeomagneticResponse-deflectionAngle: double-End-->
 
@@ -42,11 +46,13 @@ geomagneticDip: double
 
 Magnetic dip, also called magnetic inclination, which is the angle measured from the horizontal plane to the magnetic field vector, in degrees.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-geomagneticDip: double--><!--Device-GeomagneticResponse-geomagneticDip: double-End-->
 
@@ -60,11 +66,13 @@ levelIntensity: double
 
 Horizontal intensity of the magnetic field vector field, in nT.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-levelIntensity: double--><!--Device-GeomagneticResponse-levelIntensity: double-End-->
 
@@ -78,11 +86,13 @@ totalIntensity: double
 
 Total intensity of the magnetic field vector, in nT.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-totalIntensity: double--><!--Device-GeomagneticResponse-totalIntensity: double-End-->
 
@@ -96,11 +106,13 @@ x: double
 
 North component of the geomagnetic field, in nT.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-x: double--><!--Device-GeomagneticResponse-x: double-End-->
 
@@ -114,11 +126,13 @@ y: double
 
 East component of the geomagnetic field, in nT.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-y: double--><!--Device-GeomagneticResponse-y: double-End-->
 
@@ -132,11 +146,13 @@ z: double
 
 Vertical component of the geomagnetic field, in nT.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-z: double--><!--Device-GeomagneticResponse-z: double-End-->
 

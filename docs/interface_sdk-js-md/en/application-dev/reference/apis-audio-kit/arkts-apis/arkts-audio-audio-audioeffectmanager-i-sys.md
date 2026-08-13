@@ -2,9 +2,11 @@
 
 Implements audio effect management.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->
 
@@ -26,9 +28,11 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 
 Gets current audio effect properties.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -48,9 +52,9 @@ Gets current audio effect properties.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | System error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
 ## Examples
 
@@ -74,9 +78,11 @@ getSupportedAudioEffectProperty(): Array<AudioEffectProperty>
 
 Gets supported audio effect properties based on current devices.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -96,9 +102,9 @@ Gets supported audio effect properties based on current devices.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | System error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
 ## Examples
 
@@ -124,7 +130,9 @@ Checks whether the current device supports audio separation effect in system.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,7 +152,7 @@ Checks whether the current device supports audio separation effect in system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## offAudioSeparationEffectEnabledChange
 
@@ -156,7 +164,9 @@ Unsubscribes from the system audio separation effect enabled state change event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,14 +180,14 @@ Unsubscribes from the system audio separation effect enabled state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | The callback used in subscription function for unsubscribing. If not using this parameter, all callbacks subscribed in current process before will be unsubscribed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | The callback used in subscription function for unsubscribing. If not using this parameter, all callbacks subscribed in current process before will be unsubscribed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## onAudioSeparationEffectEnabledChange
 
@@ -185,11 +195,13 @@ Unsubscribes from the system audio separation effect enabled state change event.
 onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to system audio separation effect enabled state change event.The audio separation effect state in system can be set by system playback controller application,other applications can use this function to listen the change event.
+Subscribes to system audio separation effect enabled state change event. The audio separation effect state in system can be set by system playback controller application, other applications can use this function to listen the change event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -203,13 +215,13 @@ Subscribes to system audio separation effect enabled state change event.The audi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to listen the system audio separation effect enabled state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to listen the system audio separation effect enabled state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## setAudioEffectProperty
 
@@ -219,9 +231,11 @@ setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void
 
 Sets current audio effect properties.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -241,10 +255,10 @@ Sets current audio effect properties.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or category of the input audioEffectProperties is incorrect. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or category of the input audioEffectProperties is incorrect. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
 ## Examples
 
@@ -263,21 +277,17 @@ try {
 
 ## setAudioSeparationEffectEnabled
 
-ArkTS-Dyn:
-```TypeScript
-setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>
 ```
 
-Sets audio separation effect enable or disable for specific application process,or for specific audio playback stream.This API uses a promise to return the result.
+Sets audio separation effect enable or disable for specific application process, or for specific audio playback stream. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -294,8 +304,8 @@ Sets audio separation effect enable or disable for specific application process,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | The required effect state, true for enabled, false for disabled. |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The uid of target application process to add effect. &lt;br&gt;The value should be an integer. |
-| streamId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | The id of target audio playback stream to add effect, the playback application can use [getAudioStreamId](arkts-audio-audio-audiorenderer-i.md#getAudioStreamId) to obtain it. |
+| uid | int | Yes | The uid of target application process to add effect. &lt;br&gt;The value should be an integer. |
+| streamId | long | No | The id of target audio playback stream to add effect, the playback application can use [getAudioStreamId](arkts-audio-audio-audiorenderer-i.md#getAudioStreamId) to obtain it. |
 
 **Return value:**
 
@@ -307,29 +317,25 @@ Sets audio separation effect enable or disable for specific application process,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
 
 ## setAudioSeparationEffectVolume
 
-ArkTS-Dyn:
-```TypeScript
-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>
 ```
 
-Sets audio separation effect volume for specific volume type.This API uses a promise to return the result.
+Sets audio separation effect volume for specific volume type. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -346,7 +352,7 @@ Sets audio separation effect volume for specific volume type.This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | Yes | The type to set volume. |
-| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The target volume value. &lt;br&gt;Value range: [0,1]. |
+| volume | double | Yes | The target volume value. &lt;br&gt;Value range: [0,1]. |
 
 **Return value:**
 
@@ -358,9 +364,9 @@ Sets audio separation effect volume for specific volume type.This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
 

@@ -2,7 +2,9 @@
 
 Represents a version component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface VersionComponent--><!--Device-update-export interface VersionComponent-End-->
 
@@ -22,12 +24,13 @@ import { update } from '@kit.BasicServicesKit';
 componentId: string
 ```
 
-Component ID, which uniquely identifies a component in the upgrade package. The value is obtained from the   
-**versionComponents** array in the version check result and is used for subsequent description query or component information display.
+Component ID, which uniquely identifies a component in the upgrade package. The value is obtained from the **versionComponents** array in the version check result and is used for subsequent description query or component information display.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-componentId: string--><!--Device-VersionComponent-componentId: string-End-->
 
@@ -45,7 +48,9 @@ Component type.
 
 **Type:** ComponentType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-componentType: ComponentType--><!--Device-VersionComponent-componentType: ComponentType-End-->
 
@@ -63,7 +68,9 @@ Information about the version description file.
 
 **Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-descriptionInfo: DescriptionInfo--><!--Device-VersionComponent-descriptionInfo: DescriptionInfo-End-->
 
@@ -81,7 +88,9 @@ Display version number.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-displayVersion: string--><!--Device-VersionComponent-displayVersion: string-End-->
 
@@ -95,13 +104,13 @@ Display version number.
 effectiveMode: EffectiveMode
 ```
 
-Effective mode. The value **COLD** indicates the cold upgrade, which takes effect after the device is restarted;   
-**LIVE** indicates the hot upgrade, which does not require restarting the device to take effect;   
-**LIVE_AND_COLD** indicates the integrated upgrade, which combines the characteristics of **COLD** and **LIVE**.
+Effective mode. The value **COLD** indicates the cold upgrade, which takes effect after the device is restarted; **LIVE** indicates the hot upgrade, which does not require restarting the device to take effect; **LIVE_AND_COLD** indicates the integrated upgrade, which combines the characteristics of **COLD** and **LIVE**.
 
 **Type:** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-effectiveMode: EffectiveMode--><!--Device-VersionComponent-effectiveMode: EffectiveMode-End-->
 
@@ -119,7 +128,9 @@ Internal version number.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-innerVersion: string--><!--Device-VersionComponent-innerVersion: string-End-->
 
@@ -133,13 +144,13 @@ Internal version number.
 otaMode?: OtaMode
 ```
 
-OTA mode. Pass this parameter to specify a specific upgrade mode, which is applicable to special scenarios such as the upgrade with limited storage space, fast upgrade, and A/B partition device upgrade. The value   
-**REGULAR_OTA** indicates a regular upgrade, which is applicable to most common upgrade scenarios. **STREAM_OTA**indicates a streaming upgrade, which is applicable to scenarios where the storage space is limited or a fast upgrade is required. **AB_REGULAR_OTA** indicates the normal A/B upgrade and applies to the A/B partition device.  
-**AB_STREAM_OTA** indicates the A/B streaming upgrade and applies to the A/B partition device. If this parameter is not specified, the default value **REGULAR_OTA** is used, indicating that the regular upgrade mode is used.
+OTA mode. Pass this parameter to specify a specific upgrade mode, which is applicable to special scenarios such as the upgrade with limited storage space, fast upgrade, and A/B partition device upgrade. The value **REGULAR_OTA** indicates a regular upgrade, which is applicable to most common upgrade scenarios. **STREAM_OTA** indicates a streaming upgrade, which is applicable to scenarios where the storage space is limited or a fast upgrade is required. **AB_REGULAR_OTA** indicates the normal A/B upgrade and applies to the A/B partition device. **AB_STREAM_OTA** indicates the A/B streaming upgrade and applies to the A/B partition device. If this parameter is not specified, the default value **REGULAR_OTA** is used, indicating that the regular upgrade mode is used.
 
 **Type:** [OtaMode](arkts-basicservices-update-otamode-e-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-otaMode?: OtaMode--><!--Device-VersionComponent-otaMode?: OtaMode-End-->
 
@@ -157,7 +168,9 @@ Size of the upgrade package, in bytes. The value range is [0, +∞]. An exceptio
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-size: int--><!--Device-VersionComponent-size: int-End-->
 
@@ -175,7 +188,9 @@ Upgrade action. The value **UPGRADE** indicates that the upgrade package is a di
 
 **Type:** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VersionComponent-upgradeAction: UpgradeAction--><!--Device-VersionComponent-upgradeAction: UpgradeAction-End-->
 

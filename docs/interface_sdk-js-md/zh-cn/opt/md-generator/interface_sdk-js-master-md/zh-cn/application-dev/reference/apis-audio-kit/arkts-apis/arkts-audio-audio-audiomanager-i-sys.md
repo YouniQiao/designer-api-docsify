@@ -1,10 +1,10 @@
 # AudioManager
 
-音频音量和设备管理。
+音频音量和设备管理。 在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager)获取AudioManager实例。
 
-在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager)获取AudioManager实例。
+**起始版本：** 23
 
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
@@ -18,7 +18,9 @@ disableSafeMediaVolume(): Promise<void>
 
 user disable the safe media volume state.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -38,8 +40,8 @@ user disable the safe media volume state.
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -61,7 +63,9 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 获取协同播放管理实例
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager--><!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager-End-->
 
@@ -79,7 +83,7 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getEffectManager
 
@@ -87,9 +91,11 @@ getCollaborativeManager(): AudioCollaborativeManager
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager) instance.
+Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager（系统接口）) instance.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-getEffectManager(): AudioEffectManager--><!--Device-AudioManager-getEffectManager(): AudioEffectManager-End-->
 
@@ -107,7 +113,7 @@ Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#Au
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -125,7 +131,9 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 
 Obtains the values of a certain key. This method uses a promise to return the query result.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>--><!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>-End-->
 
@@ -150,9 +158,9 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -177,6 +185,8 @@ getRecordingManager(): AudioRecordingManager
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioManager-getRecordingManager(): AudioRecordingManager--><!--Device-AudioManager-getRecordingManager(): AudioRecordingManager-End-->
@@ -195,9 +205,44 @@ getRecordingManager(): AudioRecordingManager
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## on('volumeChange')
+## on_ringerModeChange
+
+```TypeScript
+on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
+```
+
+Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** ringerModeChange
+
+<!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Communication
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'ringerModeChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 |
+
+## 示例
+
+```TypeScript
+audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
+  console.info(`Updated ringermode: ${ringerMode}`);
+});
+```
+
+## on_volumeChange
 
 ```TypeScript
 on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
@@ -209,7 +254,7 @@ Listens for system volume change events. This method uses a callback to get volu
 
 **废弃版本：** 9
 
-**替代接口：** [volumeChange](ohos.multimedia.audio.AudioVolumeManager#event:volumeChange)
+**替代接口：** volumeChange
 
 <!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
 
@@ -234,41 +279,6 @@ audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
 });
 ```
 
-## on('ringerModeChange')
-
-```TypeScript
-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
-```
-
-Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [ringerModeChange](ohos.multimedia.audio.AudioVolumeGroupManager#event:ringerModeChange)
-
-<!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Communication
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'ringerModeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 |
-
-## 示例
-
-```TypeScript
-audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
-  console.info(`Updated ringermode: ${ringerMode}`);
-});
-```
-
 ## setAudioScene
 
 ```TypeScript
@@ -277,7 +287,9 @@ setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
 
 Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the result.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void-End-->
 
@@ -314,7 +326,9 @@ setAudioScene(scene: AudioScene): Promise<void>
 
 Sets the audio scene mode to change audio strategies. This method uses a promise to return the result.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>--><!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>-End-->
 
@@ -354,7 +368,9 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 
 Sets extra audio parameters. This method uses a promise to return the result.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -381,10 +397,10 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -12,19 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
-Obtains information about the running processes of the current application. This API uses a promise to return the result.
+Obtains information about the running processes of the current application. This API uses a promise to return the result. > **NOTE：**> > - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission, > which is available only for system applications. > > - Starting from API version 11, this API is used only to obtain the process information of the caller. No > permission is required.
 
-> **NOTE：**
-> 
-> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
-> which is available only for system applications.
-> 
-> - Starting from API version 11, this API is used only to obtain the process information of the caller. No
-> permission is required.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
@@ -45,7 +39,7 @@ Obtains information about the running processes of the current application. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -67,19 +61,13 @@ appManager.getRunningProcessInformation().then((data) => {
 function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result.
+Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result. > **NOTE：**> > - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission, > which is available only for system applications. > > - Starting from API version 11, this API is used only to obtain the process information of the caller. No > permission is required.
 
-> **NOTE：**
-> 
-> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
-> which is available only for system applications.
-> 
-> - Starting from API version 11, this API is used only to obtain the process information of the caller. No
-> permission is required.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
@@ -94,14 +82,14 @@ Obtains information about the running processes of the current application. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

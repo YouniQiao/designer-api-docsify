@@ -8,7 +8,9 @@ Defines the pinch gesture recognizer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class PinchRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class PinchRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PinchRecognizer--><!--Device-unnamed-export declare class PinchRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +20,13 @@ Defines the pinch gesture recognizer.
 getDistance(): double
 ```
 
-Returns the pinch gesture's distance.The unit is vp.
+Returns the pinch gesture's distance. The unit is vp.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

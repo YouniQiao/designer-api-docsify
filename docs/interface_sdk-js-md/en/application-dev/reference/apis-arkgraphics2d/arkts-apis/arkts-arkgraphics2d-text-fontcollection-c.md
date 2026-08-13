@@ -1,13 +1,12 @@
 # FontCollection
 
-Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance (  
-[getGlobalInstance](#getGlobalInstance)) and local instances (  
-[getLocalInstance](#getLocalInstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through  
-[loadFontSync](#loadFontSync) or [loadFont](#loadFont).
+Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance ( [getGlobalInstance](#getGlobalInstance)) and local instances ( [getLocalInstance](#getLocalInstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through [loadFontSync](#loadFontSync) or [loadFont](#loadFont).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-text-class FontCollection--><!--Device-text-class FontCollection-End-->
 
@@ -27,9 +26,11 @@ clearCaches(): void
 
 Clears the font typesetting cache. The font typesetting cache has a memory limit and an automatic clearing mechanism. It occupies limited memory. You are not advised to clear it unless there are special memory requirements.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -65,9 +66,11 @@ static getGlobalInstance(): FontCollection
 
 Obtains a global **FontCollection** instance.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -112,13 +115,15 @@ static getLocalInstance(): FontCollection
 
 Obtains the local **FontCollection** instance. This API is recommended for widgets.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-FontCollection-static getLocalInstance(): FontCollection--><!--Device-FontCollection-static getLocalInstance(): FontCollection-End-->
 
@@ -143,11 +148,13 @@ let fontCollection = text.FontCollection.getLocalInstance();
 loadFont(name: string, path: string | Resource): Promise<void>
 ```
 
-Loads the custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies**in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF and OTF.
+Loads the custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF and OTF.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -174,7 +181,7 @@ Loads the custom font. This API uses a promise to return the result. In this API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -209,12 +216,13 @@ struct RenderTest {
 loadFontSync(name: string, path: string | Resource): void
 ```
 
-Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in  
-**[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF and OTF.
+Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF and OTF.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -269,22 +277,17 @@ struct RenderTest {
 
 ## loadFontSyncWithCheck
 
-ArkTS-Dyn:
-```TypeScript
-loadFontSyncWithCheck(name: string, path: string | Resource, index?: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 loadFontSyncWithCheck(name: string, path: string | Resource, index?: int): void
 ```
 
-Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in  
-**[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF, OTF, and TTC.
+Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF, OTF, and TTC.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -300,20 +303,20 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font. Any string is acceptable. |
 | path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \\$rawfile('font file path'). |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. &lt;br&gt;The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
+| index | int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. &lt;br&gt;The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
-| [25900003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
-| [25900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900002-file-not-found) | File not found. |
-| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
-| [25900007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900007-empty-file) | Empty file. |
-| [25900006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
-| [25900005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
-| [25900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
+| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
+| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
+| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
+| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
+| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
+| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
 
 ## Examples
 
@@ -355,21 +358,17 @@ struct Index {
 
 ## loadFontWithCheck
 
-ArkTS-Dyn:
-```TypeScript
-loadFontWithCheck(name: string, path: string | Resource, index?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 loadFontWithCheck(name: string, path: string | Resource, index?: int): Promise<void>
 ```
 
-Loads a custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies**in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF, OTF, and TTC.
+Loads a custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF, OTF, and TTC.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -385,7 +384,7 @@ Loads a custom font. This API uses a promise to return the result. In this API, 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font. Any string is acceptable. |
 | path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \\$rawfile('font file path'). |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. &lt;br&gt;The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
+| index | int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. &lt;br&gt;The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Return value:**
 
@@ -397,14 +396,14 @@ Loads a custom font. This API uses a promise to return the result. In this API, 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
-| [25900003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
-| [25900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900002-file-not-found) | File not found. |
-| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
-| [25900007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900007-empty-file) | Empty file. |
-| [25900006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
-| [25900005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
-| [25900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
+| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
+| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
+| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
+| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
+| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
+| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
 
 ## Examples
 
@@ -458,7 +457,9 @@ Sets whether to enable the typesetting paragraph caching. Typesetting paragraph 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -480,20 +481,13 @@ Sets whether to enable the typesetting paragraph caching. Typesetting paragraph 
 unloadFont(name: string): Promise<void>
 ```
 
-Uninstalls a specified custom font. This API uses a promise to return the result.
+Uninstalls a specified custom font. This API uses a promise to return the result. After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available. All layout objects that use the font alias must be destroyed and recreated. - Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
 
-After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
+**Since:** 23
 
-All layout objects that use the font alias must be destroyed and recreated.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-- Unloading a non-existent font alias does not produce any effect and does not throw an error.  
-- This operation only affects future font usage.  
-- Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or  
-missing glyphs).
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -553,20 +547,13 @@ struct UnloadFontTest {
 unloadFontSync(name: string): void
 ```
 
-Uninstalls a specified custom font. This API is synchronous.
+Uninstalls a specified custom font. This API is synchronous. After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available. All layout objects that use the font alias must be destroyed and recreated. - Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
 
-After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
+**Since:** 23
 
-All layout objects that use the font alias must be destroyed and recreated.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-- Unloading a non-existent font alias does not produce any effect and does not throw an error.  
-- This operation only affects future font usage.  
-- Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or  
-missing glyphs).
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

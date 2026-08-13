@@ -6,9 +6,11 @@ type PartnerAgentExtensionAbilityDestroyReason = partnerAgent.PartnerAgentExtens
 
 The reasons for destroying partner agent extension ability.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

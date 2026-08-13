@@ -4,6 +4,8 @@ Data source of **LazyForEach**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface IDataSource--><!--Device-unnamed-declare interface IDataSource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getData(index: number): any
 Obtains the data item that matches the specified index.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,6 +50,8 @@ Registers a listener for data changes.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-IDataSource-registerDataChangeListener(listener: DataChangeListener): void--><!--Device-IDataSource-registerDataChangeListener(listener: DataChangeListener): void-End-->
@@ -68,6 +74,8 @@ Obtains the total number of data items.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-IDataSource-totalCount(): number--><!--Device-IDataSource-totalCount(): number-End-->
@@ -89,6 +97,8 @@ unregisterDataChangeListener(listener: DataChangeListener): void
 Unregisters the listener for data changes.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,6 +4,8 @@ Enumerates the ArkWeb render subprocess modes.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum RenderProcessMode--><!--Device-webview-enum RenderProcessMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ SINGLE = 0
 ArkWeb single render subprocess mode. In this mode, multiple **Web** components share one render subprocess.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,6 +37,8 @@ MULTIPLE = 1
 ArkWeb multi-render subprocess mode. In this mode, each **Web** component has a rendering subprocess.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

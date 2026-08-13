@@ -20,6 +20,8 @@ complete?: () => void
 
 接口调用结束的回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
@@ -38,6 +40,8 @@ fail?: (data: string, code: number) => void
 
 接口调用失败的回调函数。data为错误信息，code为错误码。
 
+**类型：** (data: string, code: number) =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
@@ -48,13 +52,6 @@ fail?: (data: string, code: number) => void
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | string | 是 |  |
-| code | number | 是 |  |
-
 ## success
 
 ```TypeScript
@@ -62,6 +59,8 @@ success?: () => void
 ```
 
 接口调用成功的回调函数。
+
+**类型：** () =&gt; void
 
 **起始版本：** 3
 
@@ -79,13 +78,7 @@ success?: () => void
 value: number
 ```
 
-屏幕亮度，值为1-255之间的整数。
-
-- 如果值小于等于0，系统按1处理。
-
-- 如果值大于255，系统按255处理。
-
-- 如果值为小数，系统将处理为整数。例如设置为8.1，系统按8处理。
+屏幕亮度，值为1-255之间的整数。 - 如果值小于等于0，系统按1处理。 - 如果值大于255，系统按255处理。 - 如果值为小数，系统将处理为整数。例如设置为8.1，系统按8处理。
 
 **类型：** number
 

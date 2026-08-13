@@ -14,9 +14,11 @@ function getGwpAsanGrayscaleState(): int
 
 Obtain the remaining days of GWP-ASan grayscale for your application.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
 
@@ -26,7 +28,7 @@ Obtain the remaining days of GWP-ASan grayscale for your application.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The remaining days of GWP-ASan grayscale. |
+| int | The remaining days of GWP-ASan grayscale. |
 
 ## Examples
 

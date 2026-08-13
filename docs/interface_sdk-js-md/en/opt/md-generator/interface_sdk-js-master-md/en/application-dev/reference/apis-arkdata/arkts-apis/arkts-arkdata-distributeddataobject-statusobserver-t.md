@@ -6,7 +6,9 @@ type StatusObserver = (sessionId: string, networkId: string, status: string) => 
 
 Defines an observer for obtaining the status change of a distributed object.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void--><!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void-End-->
 

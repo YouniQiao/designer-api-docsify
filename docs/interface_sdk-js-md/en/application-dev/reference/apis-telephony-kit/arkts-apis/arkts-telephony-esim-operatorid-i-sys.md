@@ -2,9 +2,11 @@
 
 Information about the eUICC chip/device.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface OperatorId--><!--Device-eSIM-export interface OperatorId-End-->
 
@@ -28,9 +30,11 @@ Group id level 1.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OperatorId-gid1: string--><!--Device-OperatorId-gid1: string-End-->
 
@@ -48,9 +52,11 @@ Group id level 2.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OperatorId-gid2: string--><!--Device-OperatorId-gid2: string-End-->
 
@@ -68,9 +74,11 @@ Mobile country code.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OperatorId-mcc: string--><!--Device-OperatorId-mcc: string-End-->
 
@@ -88,9 +96,11 @@ Mobile network code.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OperatorId-mnc: string--><!--Device-OperatorId-mnc: string-End-->
 

@@ -2,7 +2,9 @@
 
 本模块提供管理分布式账号的一些基础功能，主要包括查询和更新账号登录状态。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace distributedAccount--><!--Device-unnamed-declare namespace distributedAccount-End-->
 
@@ -14,7 +16,7 @@
 
 | 名称 |
 | --- |
-| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getdistributedaccountability) |
+| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getDistributedAccountAbility) |
 
 ### 接口
 

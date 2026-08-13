@@ -6,6 +6,8 @@ Defines the ImageAttachment Layout Style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle--><!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,11 +20,13 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 Border radius.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Outer Margin.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin--><!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin-End-->
@@ -58,11 +64,13 @@ padding?: LengthMetrics | Padding
 
 Inner margin.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-units-padding-i.md)
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-padding-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

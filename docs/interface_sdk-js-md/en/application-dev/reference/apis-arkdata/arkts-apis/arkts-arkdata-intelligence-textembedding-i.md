@@ -1,10 +1,12 @@
 # TextEmbedding
 
-Describes the text embedding functions of the multi-modal embedding model.Chinese and English are supported.
+Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-interface TextEmbedding--><!--Device-intelligence-interface TextEmbedding-End-->
 
@@ -18,21 +20,17 @@ import { intelligence } from '@kit.ArkData';
 
 ## getEmbedding
 
-ArkTS-Dyn:
-```TypeScript
-getEmbedding(text: string): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getEmbedding(text: string): Promise<Array<double>>
 ```
 
-Obtains the embedding vector of the given text.The model can process up to 512 characters of text per inference, supporting both Chinese and English.
+Obtains the embedding vector of the given text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>--><!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>-End-->
 
@@ -48,15 +46,15 @@ Obtains the embedding vector of the given text.The model can process up to 512 c
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | The promise used to return the embedding result. |
+| Promise&lt;Array&lt;double&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -76,21 +74,17 @@ textEmbedding.getEmbedding(text)
 
 ## getEmbedding
 
-ArkTS-Dyn:
-```TypeScript
-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<number>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>
 ```
 
-Obtains the embedding vector of a given batch of text.The model can process up to 512 characters of text per inference, supporting both Chinese and English.
+Obtains the embedding vector of a given batch of text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>--><!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>-End-->
 
@@ -106,15 +100,15 @@ Obtains the embedding vector of a given batch of text.The model can process up t
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;Array&lt;number&gt;&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;Array&lt;double&gt;&gt;&gt; | The promise used to return the embedding result. |
+| Promise&lt;Array&lt;Array&lt;double&gt;&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -140,9 +134,11 @@ loadModel(): Promise<void>
 
 Loads this text embedding model. If the loading fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-loadModel(): Promise<void>--><!--Device-TextEmbedding-loadModel(): Promise<void>-End-->
 
@@ -158,8 +154,8 @@ Loads this text embedding model. If the loading fails, an error code is returned
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -183,9 +179,11 @@ releaseModel(): Promise<void>
 
 Releases this text embedding model. If the releasing fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-releaseModel(): Promise<void>--><!--Device-TextEmbedding-releaseModel(): Promise<void>-End-->
 
@@ -201,8 +199,8 @@ Releases this text embedding model. If the releasing fails, an error code is ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 

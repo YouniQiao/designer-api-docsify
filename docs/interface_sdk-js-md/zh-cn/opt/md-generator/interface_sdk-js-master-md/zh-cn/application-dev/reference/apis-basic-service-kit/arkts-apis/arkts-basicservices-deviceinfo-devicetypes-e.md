@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-deviceInfo-enum DeviceTypes--><!--Device-deviceInfo-enum DeviceTypes-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
@@ -17,6 +19,8 @@ TYPE_DEFAULT = 'default'
 默认设备。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ TYPE_PHONE = 'phone'
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceTypes-TYPE_PHONE = 'phone'--><!--Device-DeviceTypes-TYPE_PHONE = 'phone'-End-->
@@ -49,6 +55,8 @@ TYPE_TABLET = 'tablet'
 平板。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ PC/2in1。
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceTypes-TYPE_2IN1 = '2in1'--><!--Device-DeviceTypes-TYPE_2IN1 = '2in1'-End-->
@@ -81,6 +91,8 @@ TYPE_TV = 'tv'
 智慧屏。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +110,8 @@ TYPE_WEARABLE = 'wearable'
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'--><!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'-End-->
@@ -113,6 +127,8 @@ TYPE_CAR = 'car'
 车机。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

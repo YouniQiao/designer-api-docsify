@@ -1,15 +1,10 @@
 # FlashQuery
 
-FlashQuery provides APIs to query the flash status and mode of a camera device.
+FlashQuery provides APIs to query the flash status and mode of a camera device. > **NOTE：**> > - This interface was first introduced in API version 12. In this version, a compatibility change was made that > preserved the initial version information of inner elements. As a result, you might see outer element's @since > version number being higher than that of the inner elements. However, this discrepancy does not affect the > functionality of the interface.
 
-> **NOTE：**
-> 
-> - This interface was first introduced in API version 12. In this version, a compatibility change was made that
-> preserved the initial version information of inner elements. As a result, you might see outer element's @since
-> version number being higher than that of the inner elements. However, this discrepancy does not affect the
-> functionality of the interface.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-camera-interface FlashQuery--><!--Device-camera-interface FlashQuery-End-->
 
@@ -29,7 +24,9 @@ hasFlash(): boolean
 
 Checks whether the camera device has flash.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -47,7 +44,7 @@ Checks whether the camera device has flash.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## isFlashModeSupported
 
@@ -57,7 +54,9 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 Checks whether a flash mode is supported.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -81,4 +80,4 @@ Checks whether a flash mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

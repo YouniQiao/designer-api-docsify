@@ -1,12 +1,8 @@
 # Select
 
-The **Select** component provides a drop-down menu that allows users to select among multiple options.
+The **Select** component provides a drop-down menu that allows users to select among multiple options. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## Select
 
@@ -18,6 +14,8 @@ Select(options: Array<SelectOption>)
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectInterface-(options: Array<SelectOption>): SelectAttribute--><!--Device-SelectInterface-(options: Array<SelectOption>): SelectAttribute-End-->
@@ -28,14 +26,13 @@ Select(options: Array<SelectOption>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | Yes | Options of the drop-down menu. |
+| options | Array&lt;SelectOption&gt; | Yes | Options of the drop-down menu. |
 
 ## Summary
 
-- [MenuItemConfiguration](arkts-arkui-select-menuitemconfiguration-i.md)
-- [MenuOutlineOptions](arkts-arkui-select-menuoutlineoptions-i.md)
-- [SelectOption](arkts-arkui-select-selectoption-i.md)
-- [OnSelectCallback](arkts-arkui-select-onselectcallback-t.md)
-- [ArrowPosition](arkts-arkui-select-arrowposition-e.md)
-- [AvoidanceMode](arkts-arkui-select-avoidancemode-e.md)
-- [MenuAlignType](arkts-arkui-select-menualigntype-e.md)
+- [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)
+- [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md)
+- [OnSelectCallback](arkts-arkui-onselectcallback-t.md)
+- [ArrowPosition](arkts-arkui-arrowposition-e.md)
+- [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
+- [MenuAlignType](arkts-arkui-menualigntype-e.md)

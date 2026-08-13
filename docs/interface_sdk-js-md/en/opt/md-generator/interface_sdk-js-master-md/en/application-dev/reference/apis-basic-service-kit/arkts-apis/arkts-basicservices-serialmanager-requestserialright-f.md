@@ -14,7 +14,9 @@ function requestSerialRight(portId: number): Promise<boolean>
 
 Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>--><!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>-End-->
 
@@ -36,10 +38,10 @@ Requests the permission for the application to access the serial port device. Af
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
-| [14400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400005-database-operation-exception) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
+| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-database-operation-exception) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
 
 ## Examples
 

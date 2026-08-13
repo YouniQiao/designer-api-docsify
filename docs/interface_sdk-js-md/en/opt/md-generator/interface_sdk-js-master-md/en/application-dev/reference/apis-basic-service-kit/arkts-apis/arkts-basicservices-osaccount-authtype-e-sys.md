@@ -2,7 +2,9 @@
 
 Enumerates the authentication credential types.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum AuthType--><!--Device-osAccount-enum AuthType-End-->
 
@@ -18,7 +20,9 @@ PIN = 1
 
 PIN authentication.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthType-PIN = 1--><!--Device-AuthType-PIN = 1-End-->
 
@@ -34,7 +38,9 @@ FACE = 2
 
 Facial authentication.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthType-FACE = 2--><!--Device-AuthType-FACE = 2-End-->
 
@@ -50,7 +56,9 @@ FINGERPRINT = 4
 
 Fingerprint authentication.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthType-FINGERPRINT = 4--><!--Device-AuthType-FINGERPRINT = 4-End-->
 
@@ -66,7 +74,9 @@ RECOVERY_KEY = 8
 
 Key recovery type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthType-RECOVERY_KEY = 8--><!--Device-AuthType-RECOVERY_KEY = 8-End-->
 
@@ -82,7 +92,9 @@ PRIVATE_PIN = 16
 
 Private PIN type.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthType-PRIVATE_PIN = 16--><!--Device-AuthType-PRIVATE_PIN = 16-End-->
 
@@ -100,6 +112,8 @@ Companion device authentication.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-AuthType-COMPANION_DEVICE = 64--><!--Device-AuthType-COMPANION_DEVICE = 64-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -115,6 +129,8 @@ CUSTOM = 128
 Custom authentication.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,7 +148,9 @@ DOMAIN = 1024
 
 Domain authentication.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthType-DOMAIN = 1024--><!--Device-AuthType-DOMAIN = 1024-End-->
 

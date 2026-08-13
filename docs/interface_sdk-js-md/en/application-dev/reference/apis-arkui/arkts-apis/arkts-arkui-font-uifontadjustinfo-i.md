@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontAdjustInfo--><!--Device-font-interface UIFontAdjustInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Font weight displayed in the app
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIFontAdjustInfo-to: int--><!--Device-UIFontAdjustInfo-to: int-End-->
@@ -47,6 +51,8 @@ Original weight of the font
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

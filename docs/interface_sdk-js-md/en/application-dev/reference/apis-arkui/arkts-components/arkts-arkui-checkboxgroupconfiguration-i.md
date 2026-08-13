@@ -1,15 +1,16 @@
 # CheckBoxGroupConfiguration
 
-You must customize this class to implement the ContentModifier interface. For details, see   
-[contentModifier](CheckboxGroupAttribute#contentModifier).
+You must customize this class to implement the ContentModifier interface. For details, see contentModifier.
 
-**Inheritance/Implementation:** CheckBoxGroupConfiguration extends [CommonConfiguration<CheckBoxGroupConfiguration>](CommonConfiguration<CheckBoxGroupConfiguration>)
+**Inheritance/Implementation:** CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-<!--Device-unnamed-declare interface CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>--><!--Device-unnamed-declare interface CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface CheckBoxGroupConfiguration--><!--Device-unnamed-declare interface CheckBoxGroupConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +27,8 @@ Name of the check box group.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +52,8 @@ Selected status of the check box group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -70,6 +75,8 @@ Triggers a change in the selection state of the check box group. The value true 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

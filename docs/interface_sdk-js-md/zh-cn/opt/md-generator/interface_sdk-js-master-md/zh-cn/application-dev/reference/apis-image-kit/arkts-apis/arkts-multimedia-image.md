@@ -1,47 +1,10 @@
 # @ohos.multimedia.image
 
-本模块提供图片的解码、编码、编辑、元数据处理和图片接收等能力。
+本模块提供图片的解码、编码、编辑、元数据处理和图片接收等能力。 本模块包含以下基础类： - [ImageSource](arkts-image-image-imagesource-i.md#ImageSource)类，提供获取[图片信息](arkts-image-image-imageinfo-i.md#ImageInfo)、将图片解码为PixelMap或Picture、读取和修改 [图片属性](arkts-image-image-propertykey-e.md#PropertyKey)的能力。[支持解码的图片格式](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性) 包括png、jpeg、bmp、gif、webp、dng、heic&lt;sup&gt;12+&lt;/sup&gt;、wbmp&lt;sup&gt;23+&lt;/sup&gt;、heifs&lt;sup&gt;23+&lt;/sup&gt;、tiff&lt;sup&gt;23+&lt;/sup&gt;。 - [ImagePacker](arkts-image-image-imagepacker-i.md#ImagePacker)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。 [支持编码的图片格式](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)包括jpeg、webp、png、heic&lt;sup&gt;12+&lt;/sup&gt;、 gif&lt;sup&gt;18+&lt;/sup&gt;。 - [PixelMap](arkts-image-image-pixelmap-i.md#PixelMap)类，位图对象，包含像素数据以及[图片信息](arkts-image-image-imageinfo-i.md#ImageInfo)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传 给Image组件用于显示。还提供了获取和设置图片色域、HDR元数据的方法。 - [Picture](arkts-image-image-picture-i.md#Picture)类，多图对象，由主图、辅助图和元数据组成。其中，主图包含了主要图像信息；辅助图用于存储与主图相关的附加信息；元数据用于存储与图片相关的其他信息。Picture提供获取主图 、合成HDR图、获取辅助图、设置辅助图、获取元数据、设置元数据等方法。 - [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md#AuxiliaryPicture)类，辅助图一般用于辅助主图进行特殊信息的展示，使图像包含更丰富的信息。目前支持的辅助图的类型可参考 [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md#AuxiliaryPictureType)。 - [Metadata](arkts-image-image-metadata-i.md#Metadata)类，以Key-Value的形式存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-image-metadatatype-e.md#MetadataType)，包含 Exif元数据、水印裁剪图元数据和HEIF序列图像元数据。Exif元数据的Key可参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)；水印裁剪图元数据的Key可参考 [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey)；HEIF序列图像元数据的Key可参考 [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。 - [ExifMetadata](arkts-image-image-exifmetadata-c.md#ExifMetadata)类，以Key-Value的形式存储图像的Exif元数据。Exif元数据的Key可参考 [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。 - [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md#MakerNoteHuaweiMetadata)类，以Key-Value的形式存储图像Huawei相机定义的照片元数据。Huawei相机定义的照片元数据的 Key可参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。 - [HeifsMetadata](arkts-image-image-heifsmetadata-c.md#HeifsMetadata)类，以Key-Value的形式存储图像的HEIF序列图像元数据。HEIF序列图像元数据的Key可参考 [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。 - [WebPMetadata](../../../reference/apis-image-kit/arkts-apis-image-WebPMetadata.md)类，以Key-Value的形式存储图像的WebP图像元数据。 WebP图像元数据的Key可参考[WebPPropertyKey](arkts-image-image-webppropertykey-e.md#WebPPropertyKey)。 - [GifMetadata](../../../reference/apis-image-kit/arkts-apis-image-GifMetadata.md)类，以Key-Value的形式存储图像的GIF图像元数据。GIF图像 元数据的Key可参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)。 - [JfifMetadata](../../../reference/apis-image-kit/arkts-apis-image-JfifMetadata.md)类，以Key-Value的形式存储图像的JFIF图像元数据。 JFIF图像元数据的Key可参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md#JfifPropertyKey)。 - [TiffMetadata](../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)类，以Key-Value的形式存储图像的TIFF图像元数据。 TIFF图像元数据的Key可参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md#TiffPropertyKey)。 - [PngMetadata](../../../reference/apis-image-kit/arkts-apis-image-PngMetadata.md)类，以Key-Value的形式存储图像的PNG图像元数据。PNG图像 元数据的Key可参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md#PngPropertyKey)。 - [AvisMetadata](../../../reference/apis-image-kit/arkts-apis-image-AvisMetadata.md)类，以Key-Value的形式存储图像的AVIS图像元数据。 AVIS图像元数据的Key可参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md#AvisPropertyKey)。 - [ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver)类，作为图片的消费者，用于从Surface中接收、读取图片。 - [ImageCreator](arkts-image-image-imagecreator-i.md#ImageCreator)类，作为图片的生产者，用于将图片写入到Surface中。 - [Image](arkts-image-image-image-i.md#Image)类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的 Image对象存储了JPEG文件。
 
-本模块包含以下基础类：
+**起始版本：** 23
 
-- [ImageSource](arkts-image-image-imagesource-i.md#ImageSource)类，提供获取[图片信息](arkts-image-image-imageinfo-i.md#ImageInfo)、将图片解码为PixelMap或Picture、读取和修改  
-[图片属性](arkts-image-image-propertykey-e.md#PropertyKey)的能力。[支持解码的图片格式](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)包括png、jpeg、bmp、gif、webp、dng、heic&lt;sup&gt;12+&lt;/sup&gt;、wbmp&lt;sup&gt;23+&lt;/sup&gt;、heifs&lt;sup&gt;23+&lt;/sup&gt;、tiff&lt;sup&gt;23+&lt;/sup&gt;。  
-- [ImagePacker](arkts-image-image-imagepacker-i.md#ImagePacker)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。  
-[支持编码的图片格式](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)包括jpeg、webp、png、heic&lt;sup&gt;12+&lt;/sup&gt;、gif&lt;sup&gt;18+&lt;/sup&gt;。  
-- [PixelMap](arkts-image-image-pixelmap-i.md#PixelMap)类，位图对象，包含像素数据以及[图片信息](arkts-image-image-imageinfo-i.md#ImageInfo)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传  
-给[Image组件](./@internal/component/ets/image)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。  
-- [Picture](arkts-image-image-picture-i.md#Picture)类，多图对象，由主图、辅助图和元数据组成。其中，主图包含了主要图像信息；辅助图用于存储与主图相关的附加信息；元数据用于存储与图片相关的其他信息。Picture提供获取主图  
-、合成HDR图、获取辅助图、设置辅助图、获取元数据、设置元数据等方法。  
-- [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md#AuxiliaryPicture)类，辅助图一般用于辅助主图进行特殊信息的展示，使图像包含更丰富的信息。目前支持的辅助图的类型可参考  
-[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md#AuxiliaryPictureType)。  
-- [Metadata](arkts-image-image-metadata-i.md#Metadata)类，以Key-Value的形式存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-image-metadatatype-e.md#MetadataType)，包含  
-Exif元数据、水印裁剪图元数据和HEIF序列图像元数据。Exif元数据的Key可参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)；水印裁剪图元数据的Key可参考  
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey)；HEIF序列图像元数据的Key可参考  
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。  
-- [ExifMetadata](arkts-image-image-exifmetadata-c.md#ExifMetadata)类，以Key-Value的形式存储图像的Exif元数据。Exif元数据的Key可参考  
-[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。  
-- [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md#MakerNoteHuaweiMetadata)类，以Key-Value的形式存储图像Huawei相机定义的照片元数据。Huawei相机定义的照片元数据的  
-Key可参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。  
-- [HeifsMetadata](arkts-image-image-heifsmetadata-c.md#HeifsMetadata)类，以Key-Value的形式存储图像的HEIF序列图像元数据。HEIF序列图像元数据的Key可参考  
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。  
-- [WebPMetadata](../../../reference/apis-image-kit/arkts-apis-image-WebPMetadata.md)类，以Key-Value的形式存储图像的WebP图像元数据。  
-WebP图像元数据的Key可参考[WebPPropertyKey](arkts-image-image-webppropertykey-e.md#WebPPropertyKey)。  
-- [GifMetadata](../../../reference/apis-image-kit/arkts-apis-image-GifMetadata.md)类，以Key-Value的形式存储图像的GIF图像元数据。GIF图像  
-元数据的Key可参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)。  
-- [JfifMetadata](../../../reference/apis-image-kit/arkts-apis-image-JfifMetadata.md)类，以Key-Value的形式存储图像的JFIF图像元数据。  
-JFIF图像元数据的Key可参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md#JfifPropertyKey)。  
-- [TiffMetadata](../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)类，以Key-Value的形式存储图像的TIFF图像元数据。  
-TIFF图像元数据的Key可参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md#TiffPropertyKey)。  
-- [PngMetadata](../../../reference/apis-image-kit/arkts-apis-image-PngMetadata.md)类，以Key-Value的形式存储图像的PNG图像元数据。PNG图像  
-元数据的Key可参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md#PngPropertyKey)。  
-- [AvisMetadata](../../../reference/apis-image-kit/arkts-apis-image-AvisMetadata.md)类，以Key-Value的形式存储图像的AVIS图像元数据。  
-AVIS图像元数据的Key可参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md#AvisPropertyKey)。  
-- [ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver)类，作为图片的消费者，用于从Surface中接收、读取图片。  
-- [ImageCreator](arkts-image-image-imagecreator-i.md#ImageCreator)类，作为图片的生产者，用于将图片写入到Surface中。  
-- [Image](arkts-image-image-image-i.md#Image)类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的  
-Image对象存储了JPEG文件。
-
-**起始版本：** 6
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace image--><!--Device-unnamed-declare namespace image-End-->
 
@@ -54,57 +17,67 @@ Image对象存储了JPEG文件。
 
 | 名称 |
 | --- |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource) |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource-1) |
-| [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture) |
-| [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md#createauxiliarypictureusingallocator) |
-| [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createemptypixelmap) |
-| [createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator) |
-| [createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator-1) |
-| [createImagePacker](arkts-image-image-createimagepacker-f.md#createimagepacker) |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver) |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver-1) |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver-2) |
-| [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) |
-| [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) |
-| [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-2) |
-| [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-3) |
-| [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-4) |
-| [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-5) |
-| [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-6) |
-| [createPicture](arkts-image-image-createpicture-f.md#createpicture) |
-| [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md#createpicturefromparcel) |
-| [createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap) |
-| [createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap-1) |
-| [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createpixelmapfromparcel) |
-| [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createpixelmapfrompixels) |
-| [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createpixelmapfrompixelssync) |
-| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface) |
-| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface-1) |
-| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md#createpixelmapfromsurfacesync) |
-| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md#createpixelmapfromsurfacesync-1) |
-| [createPixelMapFromSurfaceWithTransformation](arkts-image-image-createpixelmapfromsurfacewithtransformation-f.md#createpixelmapfromsurfacewithtransformation) |
-| [createPixelMapFromSurfaceWithTransformationSync](arkts-image-image-createpixelmapfromsurfacewithtransformationsync-f.md#createpixelmapfromsurfacewithtransformationsync) |
-| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createpixelmapsync) |
-| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createpixelmapsync-1) |
-| [createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator) |
-| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync) |
-| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync-1) |
-| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md#createpremultipliedpixelmap) |
-| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md#createpremultipliedpixelmap-1) |
-| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md#createunpremultipliedpixelmap) |
-| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md#createunpremultipliedpixelmap-1) |
-| [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md#getimagepackersupportedformats) |
-| [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getimagesourcesupportedformats) |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createIncrementalSource) |
+| [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createAuxiliaryPicture) |
+| [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md#createAuxiliaryPictureUsingAllocator) |
+| [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createEmptyPixelMap) |
+| [createImageCreator](arkts-image-image-createimagecreator-f.md#createImageCreator) |
+| [createImageCreator](arkts-image-image-createimagecreator-f.md#createImageCreator) |
+| [createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) |
+| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
+| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md#createIncrementalSource) |
+| [createPicture](arkts-image-image-createpicture-f.md#createPicture) |
+| [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md#createPictureFromParcel) |
+| [createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap) |
+| [createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap) |
+| [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createPixelMapFromParcel) |
+| [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) |
+| [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createPixelMapFromPixelsSync) |
+| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md#createPixelMapFromSurface) |
+| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md#createPixelMapFromSurface) |
+| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md#createPixelMapFromSurfaceSync) |
+| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md#createPixelMapFromSurfaceSync) |
+| [createPixelMapFromSurfaceWithTransformation](arkts-image-image-createpixelmapfromsurfacewithtransformation-f.md#createPixelMapFromSurfaceWithTransformation) |
+| [createPixelMapFromSurfaceWithTransformationSync](arkts-image-image-createpixelmapfromsurfacewithtransformationsync-f.md#createPixelMapFromSurfaceWithTransformationSync) |
+| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createPixelMapSync) |
+| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createPixelMapSync) |
+| [createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createPixelMapUsingAllocator) |
+| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createPixelMapUsingAllocatorSync) |
+| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createPixelMapUsingAllocatorSync) |
+| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md#createPremultipliedPixelMap) |
+| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md#createPremultipliedPixelMap) |
+| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md#createUnpremultipliedPixelMap) |
+| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md#createUnpremultipliedPixelMap) |
+| [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md#getImagePackerSupportedFormats) |
+| [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getImageSourceSupportedFormats) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap) |
-| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap-1) |
-| [decomposeToPicture](arkts-image-image-decomposetopicture-f-sys.md#decomposetopicture) |
+| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createPictureByHdrAndSdrPixelMap（系统接口）) |
+| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createPictureByHdrAndSdrPixelMap（系统接口）) |
+| [decomposeToPicture](arkts-image-image-decomposetopicture-f-sys.md#decomposeToPicture（系统接口）) |
 <!--DelEnd-->
 
 ### 类
@@ -229,23 +202,23 @@ Image对象存储了JPEG文件。
 
 | 名称 |
 | --- |
-| [CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_front_lens_night_view) |
-| [CAPTURE_MODE_LIGHT_GRAFFITI](arkts-image-image-con.md#capture_mode_light_graffiti) |
-| [CAPTURE_MODE_MOVING_PHOTO](arkts-image-image-con.md#capture_mode_moving_photo) |
-| [CAPTURE_MODE_PANORAMA](arkts-image-image-con.md#capture_mode_panorama) |
-| [CAPTURE_MODE_PORTRAIT](arkts-image-image-con.md#capture_mode_portrait) |
-| [CAPTURE_MODE_PROFESSIONAL](arkts-image-image-con.md#capture_mode_professional) |
-| [CAPTURE_MODE_REAR_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_rear_lens_night_view) |
-| [CAPTURE_MODE_SILKY_WATER](arkts-image-image-con.md#capture_mode_silky_water) |
-| [CAPTURE_MODE_SNAP_SHOT](arkts-image-image-con.md#capture_mode_snap_shot) |
-| [CAPTURE_MODE_STAR_TRACK](arkts-image-image-con.md#capture_mode_star_track) |
-| [CAPTURE_MODE_SUPER_MACRO](arkts-image-image-con.md#capture_mode_super_macro) |
-| [CAPTURE_MODE_TAIL_LIGHT](arkts-image-image-con.md#capture_mode_tail_light) |
-| [CAPTURE_MODE_WIDEAPERTURE](arkts-image-image-con.md#capture_mode_wideaperture) |
-| [DUBLIN_CORE](arkts-image-image-con.md#dublin_core) |
-| [EXIF](arkts-image-image-con.md#exif) |
-| [TIFF](arkts-image-image-con.md#tiff) |
-| [XMAGE_WATERMARK_MODE_AT_THE_BOTTOM](arkts-image-image-con.md#xmage_watermark_mode_at_the_bottom) |
-| [XMAGE_WATERMARK_MODE_BORDER](arkts-image-image-con.md#xmage_watermark_mode_border) |
-| [XMP_BASIC](arkts-image-image-con.md#xmp_basic) |
-| [XMP_RIGHTS](arkts-image-image-con.md#xmp_rights) |
+| [CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW](arkts-image-image-con.md#CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW) |
+| [CAPTURE_MODE_LIGHT_GRAFFITI](arkts-image-image-con.md#CAPTURE_MODE_LIGHT_GRAFFITI) |
+| [CAPTURE_MODE_MOVING_PHOTO](arkts-image-image-con.md#CAPTURE_MODE_MOVING_PHOTO) |
+| [CAPTURE_MODE_PANORAMA](arkts-image-image-con.md#CAPTURE_MODE_PANORAMA) |
+| [CAPTURE_MODE_PORTRAIT](arkts-image-image-con.md#CAPTURE_MODE_PORTRAIT) |
+| [CAPTURE_MODE_PROFESSIONAL](arkts-image-image-con.md#CAPTURE_MODE_PROFESSIONAL) |
+| [CAPTURE_MODE_REAR_LENS_NIGHT_VIEW](arkts-image-image-con.md#CAPTURE_MODE_REAR_LENS_NIGHT_VIEW) |
+| [CAPTURE_MODE_SILKY_WATER](arkts-image-image-con.md#CAPTURE_MODE_SILKY_WATER) |
+| [CAPTURE_MODE_SNAP_SHOT](arkts-image-image-con.md#CAPTURE_MODE_SNAP_SHOT) |
+| [CAPTURE_MODE_STAR_TRACK](arkts-image-image-con.md#CAPTURE_MODE_STAR_TRACK) |
+| [CAPTURE_MODE_SUPER_MACRO](arkts-image-image-con.md#CAPTURE_MODE_SUPER_MACRO) |
+| [CAPTURE_MODE_TAIL_LIGHT](arkts-image-image-con.md#CAPTURE_MODE_TAIL_LIGHT) |
+| [CAPTURE_MODE_WIDEAPERTURE](arkts-image-image-con.md#CAPTURE_MODE_WIDEAPERTURE) |
+| [DUBLIN_CORE](arkts-image-image-con.md#DUBLIN_CORE) |
+| [EXIF](arkts-image-image-con.md#EXIF) |
+| [TIFF](arkts-image-image-con.md#TIFF) |
+| [XMAGE_WATERMARK_MODE_AT_THE_BOTTOM](arkts-image-image-con.md#XMAGE_WATERMARK_MODE_AT_THE_BOTTOM) |
+| [XMAGE_WATERMARK_MODE_BORDER](arkts-image-image-con.md#XMAGE_WATERMARK_MODE_BORDER) |
+| [XMP_BASIC](arkts-image-image-con.md#XMP_BASIC) |
+| [XMP_RIGHTS](arkts-image-image-con.md#XMP_RIGHTS) |

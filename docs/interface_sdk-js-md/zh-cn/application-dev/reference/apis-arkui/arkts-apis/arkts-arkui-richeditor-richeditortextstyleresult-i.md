@@ -1,35 +1,12 @@
 # RichEditorTextStyleResult
 
-后端返回的文本样式信息。
-
-在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。
-
-而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
-
-转换关系如下：  
-| RichEditorTextStyle中的fontWeight | RichEditorTextStyleResult中的fontWeight |  
-| ---- | ----------------------------------- |  
-| 100 | 0 |  
-| 200 | 1 |  
-| 300 | 2 |  
-| 400 | 3 |  
-| 500 | 4 |  
-| 600 | 5 |  
-| 700 | 6 |  
-| 800 | 7 |  
-| 900 | 8 |  
-| Lighter | 12 |  
-| Normal | 10 |  
-| Regular | 14 |  
-| Medium | 13 |  
-| Bold | 9 |  
-| Bolder | 11 |
-
-RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和RichEditorTextStyleResult中fontWeight的转换关系一致。
+后端返回的文本样式信息。 在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。 而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。 转换关系如下： | RichEditorTextStyle中的fontWeight | RichEditorTextStyleResult中的fontWeight | | ---- | ----------------------------------- | | 100 | 0 | | 200 | 1 | | 300 | 2 | | 400 | 3 | | 500 | 4 | | 600 | 5 | | 700 | 6 | | 800 | 7 | | 900 | 8 | | Lighter | 12 | | Normal | 10 | | Regular | 14 | | Medium | 13 | | Bold | 9 | | Bolder | 11 | RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和 RichEditorTextStyleResult中fontWeight的转换关系一致。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface RichEditorTextStyleResult--><!--Device-unnamed-export declare interface RichEditorTextStyleResult-End-->
 
@@ -48,6 +25,8 @@ decoration: DecorationStyleResult
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,6 +48,8 @@ fontColor: ResourceColor
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyleResult-fontColor: ResourceColor--><!--Device-RichEditorTextStyleResult-fontColor: ResourceColor-End-->
@@ -88,6 +69,8 @@ fontFamily: string
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,6 +92,8 @@ fontFeature?: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyleResult-fontFeature?: string--><!--Device-RichEditorTextStyleResult-fontFeature?: string-End-->
@@ -128,6 +113,8 @@ fontSize: double
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -149,6 +136,8 @@ fontStyle: FontStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyleResult-fontStyle: FontStyle--><!--Device-RichEditorTextStyleResult-fontStyle: FontStyle-End-->
@@ -169,6 +158,8 @@ fontWeight: int
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyleResult-fontWeight: int--><!--Device-RichEditorTextStyleResult-fontWeight: int-End-->
@@ -181,17 +172,15 @@ fontWeight: int
 halfLeading?: boolean
 ```
 
-文本是否将行间距平分至行的顶部与底部。
-
-true表示将行间距平分至行的顶部与底部，false则不平分。
-
-默认值：false。
+文本是否将行间距平分至行的顶部与底部。 true表示将行间距平分至行的顶部与底部，false则不平分。 默认值：false。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -213,6 +202,8 @@ letterSpacing?: double
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyleResult-letterSpacing?: double--><!--Device-RichEditorTextStyleResult-letterSpacing?: double-End-->
@@ -232,6 +223,8 @@ lineHeight?: double
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -253,6 +246,8 @@ strokeColor?: ResourceColor
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyleResult-strokeColor?: ResourceColor--><!--Device-RichEditorTextStyleResult-strokeColor?: ResourceColor-End-->
@@ -265,17 +260,15 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+文本描边拐角样式。 默认值：StrokeJoinStyle.MITER_JOIN。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -289,17 +282,15 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: double
 ```
 
-文本描边宽度。
-
-单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+文本描边宽度。 单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -321,6 +312,8 @@ textBackgroundStyle?: TextBackgroundStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyleResult-textBackgroundStyle?: TextBackgroundStyle--><!--Device-RichEditorTextStyleResult-textBackgroundStyle?: TextBackgroundStyle-End-->
@@ -333,17 +326,15 @@ textBackgroundStyle?: TextBackgroundStyle
 textShadow?: Array<ShadowOptions>
 ```
 
-文字阴影效果。
-
-**说明：**
-
-仅支持查询阴影模糊半径、颜色和偏移量。
+文字阴影效果。 **说明：** 仅支持查询阴影模糊半径、颜色和偏移量。
 
 **类型：** Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Enumerates the PBKDF2 algorithms for the database. Use the enum name rather than the enum value.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-enum KdfAlgo--><!--Device-relationalStore-enum KdfAlgo-End-->
 
@@ -16,7 +18,9 @@ KDF_SHA1 = 0
 
 KDF_SHA1: PBKDF2_HMAC_SHA1 algorithm.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KdfAlgo-KDF_SHA1 = 0--><!--Device-KdfAlgo-KDF_SHA1 = 0-End-->
 
@@ -30,7 +34,9 @@ KDF_SHA256 = 1
 
 KDF_SHA256: PBKDF2_HMAC_SHA256 algorithm.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KdfAlgo-KDF_SHA256 = 1--><!--Device-KdfAlgo-KDF_SHA256 = 1-End-->
 
@@ -44,7 +50,9 @@ KDF_SHA512 = 2
 
 KDF_SHA512: PBKDF2_HMAC_SHA512 algorithm.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KdfAlgo-KDF_SHA512 = 2--><!--Device-KdfAlgo-KDF_SHA512 = 2-End-->
 

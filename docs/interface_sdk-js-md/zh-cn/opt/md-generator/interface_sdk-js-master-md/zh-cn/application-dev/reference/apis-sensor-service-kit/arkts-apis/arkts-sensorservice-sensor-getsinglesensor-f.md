@@ -8,7 +8,9 @@ function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 
 获取指定传感器类型的属性信息，使用Callback异步方式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void--><!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void-End-->
 
@@ -25,9 +27,9 @@ function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
-| [14500102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500102-设备不支持该传感器) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
+| [14500102](../errorcode-sensor.md#14500102-设备不支持该传感器) |
 
 ## 示例
 
@@ -67,7 +69,9 @@ function getSingleSensor(type: SensorId): Promise<Sensor>
 
 获取指定类型的传感器信息，使用Promise异步方式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>--><!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>-End-->
 
@@ -89,9 +93,9 @@ function getSingleSensor(type: SensorId): Promise<Sensor>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
-| [14500102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500102-设备不支持该传感器) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
+| [14500102](../errorcode-sensor.md#14500102-设备不支持该传感器) |
 
 ## 示例
 

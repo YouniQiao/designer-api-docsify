@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface MenuMaskType--><!--Device-unnamed-declare interface MenuMaskType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-设置蒙层模糊材质。
-
-默认值：BlurStyle.BACKGROUND_THIN
+设置蒙层模糊材质。 默认值：BlurStyle.BACKGROUND_THIN
 
 **类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
@@ -27,6 +27,8 @@ backgroundBlurStyle?: BlurStyle
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,15 +44,15 @@ backgroundBlurStyle?: BlurStyle
 color?: ResourceColor
 ```
 
-设置蒙层颜色。
-
-默认值：\$r('sys.color.ohos_id_color_mask_thin')
+设置蒙层颜色。 默认值：\$r('sys.color.ohos_id_color_mask_thin')
 
 **类型：** ResourceColor
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

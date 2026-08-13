@@ -1,14 +1,10 @@
 # PropertyKey
 
-表示Exif（Exchangeable image file format）图像信息的枚举。
+表示Exif（Exchangeable image file format）图像信息的枚举。 - 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。 - 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考： [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty)（修改单个Exif字段）、 [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties)（修 改多个Exif字段）、 [getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)（读取单个 Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties)（读取多个Exif字段）。
 
-- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
-- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
-[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty)（修改单个Exif字段）、  
-[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties)（修改多个Exif字段）、  
-[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)（读取单个Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties)（读取多个Exif字段）。
+**起始版本：** 23
 
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-image-enum PropertyKey--><!--Device-image-enum PropertyKey-End-->
 
@@ -23,6 +19,8 @@ XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
 个性色卡模板名称。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +40,8 @@ XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyKey-XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'-End-->
@@ -59,6 +59,8 @@ XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 个性色卡自定义饱和度。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,6 +80,8 @@ XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'-End-->
@@ -95,6 +99,8 @@ XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'
 个性色卡曝光参数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

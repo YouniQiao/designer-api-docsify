@@ -1,26 +1,18 @@
 # SearchController
 
-Search组件的控制器继承自[TextContentControllerBase](TextContentControllerBase)，涉及的接口有  
-[getTextContentRect](TextContentControllerBase#getTextContentRect)、  
-[getTextContentLineCount](TextContentControllerBase#getTextContentLineCount)、  
-[getCaretOffset](TextContentControllerBase#getCaretOffset)、[addText](TextContentControllerBase#addText)、  
-[deleteText](TextContentControllerBase#deleteText)、[getSelection](TextContentControllerBase#getSelection)、[clearPreviewText](TextContentControllerBase#clearPreviewText)、  
-[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder)、  
-[deleteBackward](TextContentControllerBase#deleteBackward)、  
-[scrollToVisible](TextContentControllerBase#scrollToVisible)&lt;!--Del--&gt;以及系统接口  
-[getText](TextContentControllerBase#getText)&lt;!--DelEnd--&gt;。
+Search组件的控制器继承自TextContentControllerBase，涉及的接口有 getTextContentRect、 getTextContentLineCount、 getCaretOffset、addText、 deleteText、getSelection 、clearPreviewText、 setStyledPlaceholder、 deleteBackward、 scrollToVisible&lt;!--Del--&gt;以及系统接口 getText&lt;!--DelEnd--&gt;。
 
-## 导入对象
+## 导入对象 ```ts controller: SearchController = new SearchController(); ```
 
-```ts controller: SearchController = new SearchController();```
-
-**继承/实现关系：** SearchController extends [TextContentControllerBase](TextContentControllerBase)
+**继承/实现关系：** SearchController extends TextContentControllerBase
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-<!--Device-unnamed-declare class SearchController extends TextContentControllerBase--><!--Device-unnamed-declare class SearchController extends TextContentControllerBase-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class SearchController--><!--Device-unnamed-declare class SearchController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,6 +27,8 @@ caretPosition(value: number): void
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -60,6 +54,8 @@ SearchController的构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SearchController-constructor()--><!--Device-SearchController-constructor()-End-->
@@ -72,19 +68,13 @@ SearchController的构造函数。
 setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void
 ```
 
-组件在获焦状态下，调用该接口设置文本选择区域并高亮显示，且只有在selectionStart小于selectionEnd时，文字才会被选取并高亮显示。
-
-> **说明：**
-> 
-> - 如果selectionStart或selectionEnd被赋值为undefined时，当作0处理。
-> 
-> - 如果selectionMenuHidden被赋值为true或设备为2in1时，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。
-> 
-> - 如果选中的文本含有emoji表情时，表情的起始位置包含在设置的文本选中区域内就会被选中。
+组件在获焦状态下，调用该接口设置文本选择区域并高亮显示，且只有在selectionStart小于selectionEnd时，文字才会被选取并高亮显示。 > **说明：** > > - 如果selectionStart或selectionEnd被赋值为undefined时，当作0处理。 > > - 如果selectionMenuHidden被赋值为true或设备为2in1时，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。 > > - 如果选中的文本含有emoji表情时，表情的起始位置包含在设置的文本选中区域内就会被选中。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,6 +103,8 @@ stopEditing(): void
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

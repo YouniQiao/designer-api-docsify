@@ -4,6 +4,8 @@ NavDestination可见性发生变化的原因。
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum VisibilityChangeReason--><!--Device-unnamed-declare enum VisibilityChangeReason-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TRANSITION = 0
 通过页面跳转的方式使NavDestination可见性发生变化。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ CONTENT_COVER = 1
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ APP_STATE = 2
 通过前后台切换使NavDestination可见性发生变化。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

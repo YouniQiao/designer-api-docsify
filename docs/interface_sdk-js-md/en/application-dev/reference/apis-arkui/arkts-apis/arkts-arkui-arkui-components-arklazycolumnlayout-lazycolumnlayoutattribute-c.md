@@ -2,13 +2,15 @@
 
 Defines the lazy column layout attribute.
 
-**Inheritance/Implementation:** LazyColumnLayoutAttribute extends [CommonMethod<LazyColumnLayoutAttribute>](CommonMethod<LazyColumnLayoutAttribute>)
+**Inheritance/Implementation:** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class LazyColumnLayoutAttribute--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +32,8 @@ Sets the horizontal alignment of the row content.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -42,13 +46,13 @@ Sets the horizontal alignment of the row content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. &lt;br&gt;Default value HorizontalAlign.Center. |
+| value | [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. &lt;br&gt;Default value HorizontalAlign.Center. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## footer
 
@@ -62,6 +66,8 @@ Sets the footer of the lazy column layout.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -74,13 +80,13 @@ Sets the footer of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function &lt;br&gt;Passing undefined will remove the footer. |
+| builder | CustomBuilder \| undefined | Yes | The footer builder function &lt;br&gt;Passing undefined will remove the footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## header
 
@@ -94,6 +100,8 @@ Sets the header of the lazy column layout.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -106,13 +114,13 @@ Sets the header of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function &lt;br&gt;Passing undefined will remove the header. |
+| builder | CustomBuilder \| undefined | Yes | The header builder function &lt;br&gt;Passing undefined will remove the header. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## onVisibleIndexesChange
 
@@ -126,6 +134,8 @@ Triggered when the index of child components in the visible area changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -138,13 +148,13 @@ Triggered when the index of child components in the visible area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](../../apis-na/arkts-apis/arkts-na-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## space
 
@@ -158,6 +168,8 @@ The spacing between rows.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -170,13 +182,13 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. &lt;br&gt;Default value: 0. &lt;br&gt;Range: [0, +∞). |
+| space | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. &lt;br&gt;Default value: 0. &lt;br&gt;Range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## sticky
 
@@ -190,6 +202,8 @@ Sets sticky style for header and footer.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -202,11 +216,11 @@ Sets sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](arkts-arkui-list-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
+| sticky | [StickyStyle](../../apis-na/arkts-apis/arkts-na-list-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 

@@ -18,6 +18,8 @@ Obtains the browser policy version of the current device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string--><!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string-End-->

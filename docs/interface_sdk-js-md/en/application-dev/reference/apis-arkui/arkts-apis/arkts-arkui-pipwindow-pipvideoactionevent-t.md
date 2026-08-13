@@ -6,9 +6,11 @@ type PiPVideoActionEvent = 'playbackStateChanged' | 'nextVideo' | 'previousVideo
 
 Defines the PiP action event during video playback.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

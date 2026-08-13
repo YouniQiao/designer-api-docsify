@@ -16,6 +16,8 @@ Open the about device settings page.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function openAboutDeviceSettingsPage(context: Context): void--><!--Device-settings-function openAboutDeviceSettingsPage(context: Context): void-End-->
@@ -32,8 +34,8 @@ Open the about device settings page.
 
 | Error Code ID |
 | --- |
-| [16900020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) |
-| [16900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) |
+| [16900020](../../apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) |
+| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) |
 
 ## Examples
 

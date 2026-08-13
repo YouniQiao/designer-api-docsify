@@ -2,7 +2,9 @@
 
 Mechanical device information.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface MechInfo--><!--Device-mechanicManager-export interface MechInfo-End-->
 
@@ -24,7 +26,9 @@ Type of the mechanical device.
 
 **Type:** [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MechInfo-mechDeviceType: MechDeviceType--><!--Device-MechInfo-mechDeviceType: MechDeviceType-End-->
 
@@ -40,7 +44,9 @@ ID of the mechanical device.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MechInfo-mechId: int--><!--Device-MechInfo-mechId: int-End-->
 
@@ -56,7 +62,9 @@ Name of the mechanical device.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MechInfo-mechName: string--><!--Device-MechInfo-mechName: string-End-->
 

@@ -1,16 +1,10 @@
 # ArcButton
 
-The **ArcButton** component offers various button styles, such as emphasized, normal, and warning. It is recommended for devices with circular screens.
-
-> **NOTE：**
-
-> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and
-> earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1
-> devices, tablets, and TVs, but the component can still run properly.
+The **ArcButton** component offers various button styles, such as emphasized, normal, and warning. It is recommended for devices with circular screens. > **NOTE：**> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and > earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 > devices, tablets, and TVs, but the component can still run properly.
 
 **Since:** 18
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
@@ -25,7 +19,8 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 ## options
 
 ```TypeScript
-readonly options: ArcButtonOptions
+@Require
+    readonly options: ArcButtonOptions
 ```
 
 Text, background color, shadow, and other parameters of the **ArcButton** component.
@@ -34,10 +29,10 @@ Text, background color, shadow, and other parameters of the **ArcButton** compon
 
 **Since:** 18
 
-**Decorator:** @Require
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcButton-readonly options: ArcButtonOptions--><!--Device-ArcButton-readonly options: ArcButtonOptions-End-->
+<!--Device-ArcButton-@Require    readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require    readonly options: ArcButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

@@ -1,20 +1,24 @@
 # Image
 
 ```TypeScript
-type Image = ImageFrameNode
+type Image = TypedFrameNode<ImageInterface, ImageAttribute>
 ```
 
-Define the FrameNode type for Image.
+Represents a FrameNode of the **Image** type. This type of node does not allow child components to be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Image = ImageFrameNode--><!--Device-typeNode-type Image = ImageFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Image = TypedFrameNode<ImageInterface, ImageAttribute>--><!--Device-typeNode-type Image = TypedFrameNode<ImageInterface, ImageAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ImageFrameNode
+**Property type:** TypedFrameNode<ImageInterface, ImageAttribute>
 

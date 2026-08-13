@@ -2,9 +2,11 @@
 
 Represents an update type.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export enum BusinessSubType--><!--Device-update-export enum BusinessSubType-End-->
 
@@ -18,11 +20,13 @@ Represents an update type.
 FIRMWARE = 1
 ```
 
-Firmware, indicating firmware upgrade,which is applicable to upgrade of the system firmware instead of the app. For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
+Firmware, indicating firmware upgrade,which is applicable to upgrade of the system firmware instead of the app. For details, see Upgrading Service Terms
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessSubType-FIRMWARE = 1--><!--Device-BusinessSubType-FIRMWARE = 1-End-->
 

@@ -1,14 +1,16 @@
 # ResolvedSymbolNumberFormatOptions
 
-Represents optional element for the ResolvedSymbolNumberFormatOptions object.Define the resolved symbol element and value that need to get.
+Represents optional element for the ResolvedSymbolNumberFormatOptions object. Define the resolved symbol element and value that need to get.
 
-**Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](Intl.ResolvedNumberFormatOptions)
+**Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions--><!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions--><!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -30,7 +32,9 @@ Grouping Separator symbol of localized number part, such as "," of "10,000".
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +56,9 @@ Infinity symbol of localized number part, such as "∞".
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +80,9 @@ Minus sign of localized number part, such as "-".
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +104,9 @@ NaN symbol of localized number part, such as "null".
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,7 +128,9 @@ Plus sign of localized number part, such as "+".
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,7 +152,9 @@ Zero symbol of localized number part, such as "0".
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

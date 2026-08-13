@@ -12,10 +12,7 @@ import { usb } from '@kit.BasicServicesKit';
 function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
-Connects to a USB device.
-
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, and then call  
-[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission.
+Connects to a USB device. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission.
 
 **Since:** 8
 
@@ -37,7 +34,7 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevicePipe&gt; |
+| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;USBDevicePipe&gt; |
 
 ## Examples
 

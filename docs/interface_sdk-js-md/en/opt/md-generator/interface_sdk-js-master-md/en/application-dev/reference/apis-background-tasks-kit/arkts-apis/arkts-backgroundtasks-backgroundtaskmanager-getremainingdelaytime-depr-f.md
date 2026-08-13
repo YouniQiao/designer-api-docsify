@@ -12,7 +12,7 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemainingDelayTime](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.getRemainingDelayTime(requestId:)
+**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md#getRemainingDelayTime)(requestId: int, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -54,7 +54,7 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemainingDelayTime](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.getRemainingDelayTime(requestId:)
+**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md#getRemainingDelayTime)(requestId: int)
 
 <!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>-End-->
 

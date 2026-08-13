@@ -4,6 +4,8 @@ Defining the reusable configuration parameters.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ReuseOptions--><!--Device-unnamed-declare interface ReuseOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,11 @@ reuseId? : ReuseIdCallback
 
 Defining reuseId function. The default reuseId is the custom component name.
 
+**类型：** [ReuseIdCallback](arkts-arkui-reuseidcallback-t.md)
+
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Enumerates key actions.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-enum KeyAction--><!--Device-systemManager-enum KeyAction-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ UNKNOWN = -1
 Any key action other than press and release.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Key press.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyAction-DOWN = 0--><!--Device-KeyAction-DOWN = 0-End-->
@@ -49,6 +55,8 @@ UP = 1
 Key release.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

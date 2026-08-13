@@ -4,6 +4,8 @@ Provides interaction methods such as pairing and connection with remote devices.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace remoteDevice--><!--Device-unnamed-declare namespace remoteDevice-End-->
@@ -22,21 +24,21 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md#createremotedevice) |
-| [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md#offacbstatechange) |
-| [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md#offconnectionstatechange) |
-| [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md#offpairingstatechange) |
-| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md#onacbstatechange) |
-| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md#onconnectionstatechange) |
-| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md#onpairingstatechange) |
+| [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md#createRemoteDevice) |
+| [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md#offAcbStateChange) |
+| [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md#offConnectionStateChange) |
+| [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md#offPairingStateChange) |
+| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md#onAcbStateChange) |
+| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md#onConnectionStateChange) |
+| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md#onPairingStateChange) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md#offpairingrequest) |
-| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onpairingrequest) |
+| [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md#offPairingRequest-(System-API)) |
+| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onPairingRequest-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

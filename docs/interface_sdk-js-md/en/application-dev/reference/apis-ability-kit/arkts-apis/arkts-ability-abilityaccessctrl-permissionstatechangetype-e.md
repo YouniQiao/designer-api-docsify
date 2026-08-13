@@ -2,9 +2,11 @@
 
 Enumerates the operations that trigger permission state changes.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-abilityAccessCtrl-export enum PermissionStateChangeType--><!--Device-abilityAccessCtrl-export enum PermissionStateChangeType-End-->
 
@@ -18,11 +20,13 @@ PERMISSION_REVOKED_OPER = 0
 
 Operation to revoke a permission.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStateChangeType-PERMISSION_REVOKED_OPER = 0--><!--Device-PermissionStateChangeType-PERMISSION_REVOKED_OPER = 0-End-->
 
@@ -36,11 +40,13 @@ PERMISSION_GRANTED_OPER = 1
 
 Operation to grant a permission.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStateChangeType-PERMISSION_GRANTED_OPER = 1--><!--Device-PermissionStateChangeType-PERMISSION_GRANTED_OPER = 1-End-->
 

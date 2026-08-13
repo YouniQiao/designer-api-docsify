@@ -1,19 +1,14 @@
 # ConcatArray
 
-该接口定义了支持数组连接操作的对象，并继承了`ISendable`接口，使其兼具高效数组拼接和跨线程传递能力。
-
-> **说明：**
-> 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> 文档中存在泛型的使用，涉及以下泛型标记符：
-
-- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
+该接口定义了支持数组连接操作的对象，并继承了`ISendable`接口，使其兼具高效数组拼接和跨线程传递能力。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > 文档中存在泛型的使用，涉及以下泛型标记符： - T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
 
 **继承/实现关系：** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md#ISendable)
 
 **起始版本：** 12
 
-<!--Device-collections-interface ConcatArray<T> extends ISendable--><!--Device-collections-interface ConcatArray<T> extends ISendable-End-->
+**废弃版本：** -1
+
+<!--Device-collections-interface ConcatArray--><!--Device-collections-interface ConcatArray-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,6 +21,8 @@ join(separator?: string): string
 将ConcatArray的所有元素连接成一个字符串，元素之间可以用指定的分隔符分隔。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -55,6 +52,8 @@ slice(start?: number, end?: number): ConcatArray<T>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>--><!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>-End-->
@@ -74,22 +73,6 @@ slice(start?: number, end?: number): ConcatArray<T>
 | --- |
 | [ConcatArray](arkts-arkts-collections-concatarray-i.md)&lt;T&gt; |
 
-## [index: number]
-
-```TypeScript
-readonly [index: number]: T
-```
-
-返回ConcatArray指定索引位置的元素。
-
-**类型：** T
-
-**起始版本：** 12
-
-<!--Device-ConcatArray-readonly [index: number]: T--><!--Device-ConcatArray-readonly [index: number]: T-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
 ## length
 
 ```TypeScript
@@ -101,6 +84,8 @@ ConcatArray的元素个数。
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ReaderIteratorResult--><!--Device-unnamed-export interface ReaderIteratorResult-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -20,6 +22,8 @@ done: boolean
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-ReaderIteratorResult-done: boolean--><!--Device-ReaderIteratorResult-done: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -35,6 +39,8 @@ value: string
 **类型：** string
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-ReaderIteratorResult-value: string--><!--Device-ReaderIteratorResult-value: string-End-->
 

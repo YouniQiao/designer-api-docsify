@@ -2,7 +2,9 @@
 
 Describes the direction in which the cursor moves when the text is selected.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface Movement--><!--Device-inputMethodEngine-export interface Movement-End-->
 
@@ -24,7 +26,9 @@ Direction in which the cursor moves when the text is selected.
 
 **Type:** Direction
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Movement-direction: Direction--><!--Device-Movement-direction: Direction-End-->
 

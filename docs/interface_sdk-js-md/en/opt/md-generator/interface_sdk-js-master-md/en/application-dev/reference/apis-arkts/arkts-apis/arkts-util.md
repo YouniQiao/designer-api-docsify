@@ -1,12 +1,22 @@
 # @ohos.util
 
-The util module provides common utility functions, such as [TextEncoder](arkts-arkts-util-textencoder-c.md#TextEncoder) and  
-[TextDecoder](arkts-arkts-util-textdecoderoptions-i.md#TextDecoderOptions) for string encoding and decoding,  
-[RationalNumber&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-rationalnumber-c.md#RationalNumber) for rational number operations,  
-[LRUCache&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#LRUCache) for cache management, [ScopeHelper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-scopehelper-c.md#ScopeHelper)for range determination, [Base64Helper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-base64helper-c.md#Base64Helper) for Base64 encoding and decoding,  
-[types&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-types-c.md#types) for built-in object type check, and [Aspect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkts-util-aspect-c.md#Aspect)for instrumentation and replacement on methods.
+/*
+ Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace util--><!--Device-unnamed-declare namespace util-End-->
 
@@ -24,17 +34,17 @@ import { util } from '@kit.ArkTS';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md#callbackwrapper) |
-| [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring) |
+| [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md#callbackWrapper) |
+| [errnoToString](arkts-arkts-util-errnotostring-f.md#errnoToString) |
 | [format](arkts-arkts-util-format-f.md#format) |
-| [generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid) |
-| [generateRandomUUID](arkts-arkts-util-generaterandomuuid-f.md#generaterandomuuid) |
-| [getErrorString](arkts-arkts-util-geterrorstring-f.md#geterrorstring) |
-| [getHash](arkts-arkts-util-gethash-f.md#gethash) |
-| [getMainThreadStackTrace](arkts-arkts-util-getmainthreadstacktrace-f.md#getmainthreadstacktrace) |
-| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseuuid) |
+| [generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generateRandomBinaryUUID) |
+| [generateRandomUUID](arkts-arkts-util-generaterandomuuid-f.md#generateRandomUUID) |
+| [getErrorString](arkts-arkts-util-geterrorstring-f.md#getErrorString) |
+| [getHash](arkts-arkts-util-gethash-f.md#getHash) |
+| [getMainThreadStackTrace](arkts-arkts-util-getmainthreadstacktrace-f.md#getMainThreadStackTrace) |
+| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseUUID) |
 | [printf](arkts-arkts-util-printf-f.md#printf) |
-| [promiseWrapper](arkts-arkts-util-promisewrapper-f.md#promisewrapper) |
+| [promiseWrapper](arkts-arkts-util-promisewrapper-f.md#promiseWrapper) |
 | [promisify](arkts-arkts-util-promisify-f.md#promisify) |
 
 ### Classes

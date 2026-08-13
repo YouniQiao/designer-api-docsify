@@ -12,12 +12,11 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function traceByValue(name: string, count: number): void
 ```
 
-Traces the value changes of an integer variable.
+Traces the value changes of an integer variable. Since API version 19, you are advised to use the [traceByValue](#traceByValue) API to specify the trace output level.
 
-Since API version 19, you are advised to use the  
-[traceByValue](#traceByValue-1) API to specify the trace output level.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -51,9 +50,11 @@ function traceByValue(level: HiTraceOutputLevel, name: string, count: number): v
 
 Traces an integer with the trace output level specified. It is used to mark the name and value of a predefined integer variable to be traced.
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void--><!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void-End-->
 

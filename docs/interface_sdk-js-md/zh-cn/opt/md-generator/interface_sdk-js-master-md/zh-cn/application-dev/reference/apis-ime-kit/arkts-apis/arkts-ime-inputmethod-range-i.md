@@ -2,7 +2,9 @@
 
 文本的选中范围。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export interface Range--><!--Device-inputMethod-export interface Range-End-->
 
@@ -18,7 +20,9 @@ end: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Range-end: int--><!--Device-Range-end: int-End-->
 
@@ -34,7 +38,9 @@ start: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Range-start: int--><!--Device-Range-start: int-End-->
 

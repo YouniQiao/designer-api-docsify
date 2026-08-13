@@ -2,9 +2,11 @@
 
 Defines the configuration of web custom scheme, related to [customizeSchemes](arkts-arkweb-webview-webviewcontroller-c.md#customizeSchemes) method.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface WebCustomScheme--><!--Device-webview-interface WebCustomScheme-End-->
 
@@ -26,9 +28,11 @@ If isCodeCacheSupported is true, then the js of this scheme can generate code ca
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebCustomScheme-isCodeCacheSupported?: boolean--><!--Device-WebCustomScheme-isCodeCacheSupported?: boolean-End-->
 
@@ -40,13 +44,17 @@ If isCodeCacheSupported is true, then the js of this scheme can generate code ca
 isCspBypassing?: boolean
 ```
 
-If isCspBypassing is true, then this scheme can bypass Content Security Policy (CSP)checks. In most cases, this value should not be true when isStandard is true.
+If isCspBypassing is true, then this scheme can bypass Content Security Policy (CSP) checks. In most cases, this value should not be true when isStandard is true.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebCustomScheme-isCspBypassing?: boolean--><!--Device-WebCustomScheme-isCspBypassing?: boolean-End-->
 
@@ -62,9 +70,13 @@ If isDisplayIsolated is true, then the scheme can only be displayed from other c
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebCustomScheme-isDisplayIsolated?: boolean--><!--Device-WebCustomScheme-isDisplayIsolated?: boolean-End-->
 
@@ -80,9 +92,13 @@ If isLocal is true, the same security rules as those applied to the "file" URL w
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebCustomScheme-isLocal?: boolean--><!--Device-WebCustomScheme-isLocal?: boolean-End-->
 
@@ -98,9 +114,13 @@ If isSecure is true, the same security rules as those applied to the "https" URL
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebCustomScheme-isSecure?: boolean--><!--Device-WebCustomScheme-isSecure?: boolean-End-->
 
@@ -112,13 +132,17 @@ If isSecure is true, the same security rules as those applied to the "https" URL
 isStandard?: boolean
 ```
 
-If isStandard is true, the scheme will be handled as a standard scheme. The standard schemes needs to comply with the URL normalization and parsing rules defined in Section 3.1 of RFC 1738,which can be found in the http://www.ietf.org/rfc/rfc1738.txt.
+If isStandard is true, the scheme will be handled as a standard scheme. The standard schemes needs to comply with the URL normalization and parsing rules defined in Section 3.1 of RFC 1738, which can be found in the http://www.ietf.org/rfc/rfc1738.txt.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebCustomScheme-isStandard?: boolean--><!--Device-WebCustomScheme-isStandard?: boolean-End-->
 
@@ -134,9 +158,13 @@ Whether Cross-Origin Resource Sharing is supported.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCustomScheme-isSupportCORS: boolean--><!--Device-WebCustomScheme-isSupportCORS: boolean-End-->
 
@@ -152,9 +180,13 @@ Whether fetch request is supported.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCustomScheme-isSupportFetch: boolean--><!--Device-WebCustomScheme-isSupportFetch: boolean-End-->
 
@@ -166,13 +198,17 @@ Whether fetch request is supported.
 schemeName: string
 ```
 
-Name of the custom scheme.
+Name of the custom scheme. The value can contain a maximum of 32 characters, including lowercase letters, digits, periods (.), plus signs (+), and hyphens (-), and must start with a letter.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCustomScheme-schemeName: string--><!--Device-WebCustomScheme-schemeName: string-End-->
 

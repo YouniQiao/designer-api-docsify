@@ -8,9 +8,11 @@ function getGwpAsanGrayscaleState(): number
 
 获取当前GWP-ASan剩余使能天数。
 
-**起始版本：** 20
+**起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为22。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function getGwpAsanGrayscaleState(): number--><!--Device-hidebug-function getGwpAsanGrayscaleState(): number-End-->
 
@@ -46,9 +48,11 @@ function getGwpAsanGrayscaleState(): int
 
 获取当前GWP-ASan剩余使能天数。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
 
@@ -58,7 +62,7 @@ function getGwpAsanGrayscaleState(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 获取当前GWP-ASan剩余使能天数。若当前未使能，返回值0。 |
+| int | 获取当前GWP-ASan剩余使能天数。若当前未使能，返回值0。 |
 
 ## 示例
 

@@ -26,6 +26,8 @@ complete?: () => void
 
 Called when an API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -44,6 +46,8 @@ fail?: (data: string, code: number) => void
 
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -51,31 +55,6 @@ Called when an API call has failed. **data** indicates the error information, an
 **Deprecated since:** 7
 
 <!--Device-SetBrightnessModeOptions-fail?: (data: string, code: number) => void--><!--Device-SetBrightnessModeOptions-fail?: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-Called when an API call is successful.
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 7
-
-<!--Device-SetBrightnessModeOptions-success?: () => void--><!--Device-SetBrightnessModeOptions-success?: () => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -96,6 +75,26 @@ The value **0** indicates the manual adjustment mode, and the value **1** indica
 **Deprecated since:** 7
 
 <!--Device-SetBrightnessModeOptions-mode: number--><!--Device-SetBrightnessModeOptions-mode: number-End-->
+
+**System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+Called when an API call is successful.
+
+**Type:** () =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 7
+
+<!--Device-SetBrightnessModeOptions-success?: () => void--><!--Device-SetBrightnessModeOptions-success?: () => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

@@ -1,20 +1,22 @@
 # @ohos.intl(国际化-Intl)
 
-本模块提供基础的应用国际化能力，包括时间日期格式化、数字格式化、排序等，相关接口在ECMA 402标准中定义。
+/*
+ Copyright (c) 2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-[国际化-I18n](arkts-i18n.md#i18n)提供其他非ECMA 402定义的国际化接口，与本模块共同使用可提供完整的国际化支持能力。
-
-> **说明：**
-> 
-> - 本模块接口基于[CLDR](https://cldr.unicode.org)国际化数据库实现，随着CLDR标准的迭代演进，接口处理结果可能会相应调整。例如数字格式化接口，其返回值仅适用于界面展示场景，开发者请勿对返回格式进行
-> 硬编码或假设性判断，否则可能导致版本兼容问题。其中，API version 12 对应[CLDR 42](https://cldr.unicode.org/downloads/cldr-42)版本，具体数据变更详情可查阅
-> [CLDR官方文档](https://cldr.unicode.org/)。
-> 
-> - 从API version 11开始，本模块部分接口支持在ArkTS卡片中使用。
-> 
-> - 从API version 12开始，本模块全接口支持在原子化服务中使用。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace intl--><!--Device-unnamed-declare namespace intl-End-->
 

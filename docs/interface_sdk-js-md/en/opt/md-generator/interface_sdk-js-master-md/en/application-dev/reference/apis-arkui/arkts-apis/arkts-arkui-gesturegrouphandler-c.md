@@ -2,11 +2,13 @@
 
 Defines a gesture group handler object.
 
-**Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler<GestureGroupHandler>](GestureHandler<GestureGroupHandler>)
+**Inheritance/Implementation:** GestureGroupHandler extends GestureHandler<GestureGroupHandler>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class GestureGroupHandler extends GestureHandler<GestureGroupHandler>--><!--Device-unnamed-declare class GestureGroupHandler extends GestureHandler<GestureGroupHandler>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class GestureGroupHandler--><!--Device-unnamed-declare class GestureGroupHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 Constructor used to create a gesture group handler instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,10 +44,11 @@ Constructor used to create a gesture group handler instance.
 onCancel(event: Callback<void>): GestureGroupHandler
 ```
 
-Sets the cancellation callback for the gesture group handler. The callback is triggered when a sequence gesture (  
-[GestureMode](arkts-arkui-gesturemode-e.md#GestureMode).Sequence) is cancelled.
+Sets the cancellation callback for the gesture group handler. The callback is triggered when a sequence gesture ( [GestureMode](arkts-arkui-gesturemode-e.md#GestureMode).Sequence) is cancelled.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

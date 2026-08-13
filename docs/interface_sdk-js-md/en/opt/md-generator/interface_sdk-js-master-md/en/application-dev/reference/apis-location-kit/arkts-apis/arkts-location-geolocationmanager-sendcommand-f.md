@@ -14,7 +14,9 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): v
 
 Send extended commands to location subsystem.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): void--><!--Device-geoLocationManager-function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): void-End-->
 
@@ -31,9 +33,9 @@ Send extended commands to location subsystem.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3301000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
 ## Examples
 
@@ -61,7 +63,9 @@ function sendCommand(command: LocationCommand): Promise<void>
 
 Send extended commands to location subsystem.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-function sendCommand(command: LocationCommand): Promise<void>--><!--Device-geoLocationManager-function sendCommand(command: LocationCommand): Promise<void>-End-->
 
@@ -83,9 +87,9 @@ Send extended commands to location subsystem.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3301000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
 ## Examples
 

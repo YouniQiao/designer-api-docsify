@@ -8,9 +8,11 @@ function create(config: PiPConfiguration): Promise<PiPController>
 
 创建画中画控制器，使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +36,7 @@ function create(config: PiPConfiguration): Promise<PiPController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## 示例
 
@@ -271,11 +273,13 @@ function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Pro
 
 创建画中画控制器，使用typeNode为画中画添加自定义UI节点。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>--><!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>-End-->
 
@@ -298,7 +302,7 @@ function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## 示例
 

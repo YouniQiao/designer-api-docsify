@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-featureAbility-export enum AbilityWindowConfiguration--><!--Device-featureAbility-export enum AbilityWindowConfiguration-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -17,6 +19,8 @@ WINDOW_MODE_UNDEFINED = 0
 未定义。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -34,6 +38,8 @@ WINDOW_MODE_FULLSCREEN = 1
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1-End-->
@@ -49,6 +55,8 @@ WINDOW_MODE_SPLIT_PRIMARY = 100
 屏幕如果是水平方向表示左分屏，屏幕如果是竖直方向表示上分屏。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -66,6 +74,8 @@ WINDOW_MODE_SPLIT_SECONDARY = 101
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101-End-->
@@ -81,6 +91,8 @@ WINDOW_MODE_FLOATING = 102
 悬浮窗。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

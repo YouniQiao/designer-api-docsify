@@ -2,9 +2,11 @@
 
 Sub mesh resource.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SubMesh--><!--Device-unnamed-export interface SubMesh-End-->
 
@@ -20,9 +22,11 @@ The axis aligned bounding box of the sub mesh.
 
 **Type:** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SubMesh-readonly aabb: Aabb--><!--Device-SubMesh-readonly aabb: Aabb-End-->
 
@@ -38,9 +42,11 @@ The material of the sub mesh.
 
 **Type:** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SubMesh-material: Material--><!--Device-SubMesh-material: Material-End-->
 
@@ -56,9 +62,11 @@ The name of the sub mesh.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SubMesh-name: string--><!--Device-SubMesh-name: string-End-->
 

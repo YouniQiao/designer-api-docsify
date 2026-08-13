@@ -6,6 +6,8 @@ Callback function for registering network UID policy changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-policy-export interface NetUidPolicyInfo--><!--Device-policy-export interface NetUidPolicyInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -32,6 +34,8 @@ Uid Specifies the Internet access policy in background mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-NetUidPolicyInfo-policy: NetUidPolicy--><!--Device-NetUidPolicyInfo-policy: NetUidPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -51,6 +55,8 @@ The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-NetUidPolicyInfo-uid: number--><!--Device-NetUidPolicyInfo-uid: number-End-->
 

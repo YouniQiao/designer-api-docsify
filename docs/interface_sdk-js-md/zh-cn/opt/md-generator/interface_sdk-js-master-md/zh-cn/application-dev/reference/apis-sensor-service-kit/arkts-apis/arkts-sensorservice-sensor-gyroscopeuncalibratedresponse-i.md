@@ -4,9 +4,11 @@
 
 **继承/实现关系：** GyroscopeUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response--><!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface GyroscopeUncalibratedResponse--><!--Device-sensor-interface GyroscopeUncalibratedResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ biasX: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasX: double--><!--Device-GyroscopeUncalibratedResponse-biasX: double-End-->
 
@@ -36,7 +40,9 @@ biasY: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasY: double--><!--Device-GyroscopeUncalibratedResponse-biasY: double-End-->
 
@@ -52,7 +58,9 @@ biasZ: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasZ: double--><!--Device-GyroscopeUncalibratedResponse-biasZ: double-End-->
 
@@ -68,7 +76,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-x: double--><!--Device-GyroscopeUncalibratedResponse-x: double-End-->
 
@@ -84,7 +94,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-y: double--><!--Device-GyroscopeUncalibratedResponse-y: double-End-->
 
@@ -100,7 +112,9 @@ z: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-z: double--><!--Device-GyroscopeUncalibratedResponse-z: double-End-->
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-enum NetworkState--><!--Device-webview-enum NetworkState-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ EMPTY = 0
 播放器还没有开始下载数据。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ IDLE = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NetworkState-IDLE = 1--><!--Device-NetworkState-IDLE = 1-End-->
@@ -50,6 +56,8 @@ LOADING = 2
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NetworkState-LOADING = 2--><!--Device-NetworkState-LOADING = 2-End-->
@@ -65,6 +73,8 @@ NETWORK_ERROR = 3
 发生了网络错误。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

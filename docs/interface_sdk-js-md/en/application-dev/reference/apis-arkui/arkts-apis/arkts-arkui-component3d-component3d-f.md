@@ -3,6 +3,7 @@
 ## Component3D
 
 ```TypeScript
+@ComponentBuilder
 export declare function Component3D(
     sceneOptions?: SceneOptions,
     content_?: CustomBuilder,
@@ -15,7 +16,9 @@ Defines Component3D.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute--><!--Device-unnamed-export declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -24,11 +27,11 @@ Defines Component3D.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sceneOptions | [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md) | No | The 3D scene controller |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Component3DAttribute](arkts-arkui-component3d-component3dattribute-i.md) |  |
+| Component3DAttribute |  |
 

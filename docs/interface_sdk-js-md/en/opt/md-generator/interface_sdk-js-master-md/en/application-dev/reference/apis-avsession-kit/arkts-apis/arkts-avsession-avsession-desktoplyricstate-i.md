@@ -4,6 +4,8 @@ Desktop lyric state definition.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avSession-interface DesktopLyricState--><!--Device-avSession-interface DesktopLyricState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -25,6 +27,8 @@ Desktop lyric lock state.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

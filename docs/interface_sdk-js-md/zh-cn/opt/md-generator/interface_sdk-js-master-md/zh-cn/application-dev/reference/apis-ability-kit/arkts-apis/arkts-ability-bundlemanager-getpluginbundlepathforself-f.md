@@ -8,7 +8,9 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 获取指定插件在当前[应用沙箱](../../../file-management/app-sandbox-directory.md)内的安装路径。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
 
@@ -18,7 +20,7 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i-sys.md) | string | 是 |
 
 **返回值：**
 
@@ -30,7 +32,7 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 | 错误码ID |
 | --- |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

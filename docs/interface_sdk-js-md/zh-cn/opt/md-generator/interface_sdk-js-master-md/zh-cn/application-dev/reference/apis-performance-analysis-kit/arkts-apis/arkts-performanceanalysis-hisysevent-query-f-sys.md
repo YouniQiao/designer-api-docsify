@@ -8,7 +8,9 @@ function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void
 
 查询系统事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
@@ -23,20 +25,20 @@ function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | queryArg | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | 是 |
-| rules | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | 是 |
+| [rules](arkts-performanceanalysis-hisysevent-watcher-i-sys.md) | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | 是 |
 | querier | [Querier](arkts-performanceanalysis-hisysevent-querier-i-sys.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11200302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200302-非法的查询规则) |
-| [11200303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200303-并发查询的数量超过限制) |
-| [11200301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [11200304](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200304-查询频率超过限制) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11200302](../errorcode-hisysevent-sys.md#11200302-非法的查询规则) |
+| [11200303](../errorcode-hisysevent-sys.md#11200303-并发查询的数量超过限制) |
+| [11200301](../errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [11200304](../errorcode-hisysevent-sys.md#11200304-查询频率超过限制) |
 
 ## 示例
 

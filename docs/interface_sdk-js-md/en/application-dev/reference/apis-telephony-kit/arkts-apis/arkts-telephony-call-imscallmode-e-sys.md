@@ -2,9 +2,11 @@
 
 Enumerates IMS call modes.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum ImsCallMode--><!--Device-call-export enum ImsCallMode-End-->
 
@@ -20,9 +22,11 @@ CALL_MODE_AUDIO_ONLY = 0
 
 Audio call only.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallMode-CALL_MODE_AUDIO_ONLY = 0--><!--Device-ImsCallMode-CALL_MODE_AUDIO_ONLY = 0-End-->
 
@@ -38,9 +42,11 @@ CALL_MODE_SEND_ONLY = 1
 
 Sending calls only.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallMode-CALL_MODE_SEND_ONLY = 1--><!--Device-ImsCallMode-CALL_MODE_SEND_ONLY = 1-End-->
 
@@ -56,9 +62,11 @@ CALL_MODE_RECEIVE_ONLY = 2
 
 Receiving calls only.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallMode-CALL_MODE_RECEIVE_ONLY = 2--><!--Device-ImsCallMode-CALL_MODE_RECEIVE_ONLY = 2-End-->
 
@@ -74,9 +82,11 @@ CALL_MODE_SEND_RECEIVE = 3
 
 Sending and receiving calls.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallMode-CALL_MODE_SEND_RECEIVE = 3--><!--Device-ImsCallMode-CALL_MODE_SEND_RECEIVE = 3-End-->
 
@@ -92,9 +102,11 @@ CALL_MODE_VIDEO_PAUSED = 4
 
 Pausing video calls.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsCallMode-CALL_MODE_VIDEO_PAUSED = 4--><!--Device-ImsCallMode-CALL_MODE_VIDEO_PAUSED = 4-End-->
 

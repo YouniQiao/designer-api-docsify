@@ -2,7 +2,9 @@
 
 短信段信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface SmsSegmentsInfo--><!--Device-sms-export interface SmsSegmentsInfo-End-->
 
@@ -20,7 +22,9 @@ encodeCount: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-encodeCount: int--><!--Device-SmsSegmentsInfo-encodeCount: int-End-->
 
@@ -38,7 +42,9 @@ encodeCountRemaining: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-encodeCountRemaining: int--><!--Device-SmsSegmentsInfo-encodeCountRemaining: int-End-->
 
@@ -56,7 +62,9 @@ scheme: SmsEncodingScheme
 
 **类型：** [SmsEncodingScheme](arkts-telephony-sms-smsencodingscheme-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-scheme: SmsEncodingScheme--><!--Device-SmsSegmentsInfo-scheme: SmsEncodingScheme-End-->
 
@@ -74,7 +82,9 @@ splitCount: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SmsSegmentsInfo-splitCount: int--><!--Device-SmsSegmentsInfo-splitCount: int-End-->
 

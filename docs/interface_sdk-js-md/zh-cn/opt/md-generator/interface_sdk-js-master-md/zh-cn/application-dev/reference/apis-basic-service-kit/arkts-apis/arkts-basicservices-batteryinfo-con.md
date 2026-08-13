@@ -10,6 +10,8 @@ const batteryCapacityLevel: BatteryCapacityLevel
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-const batteryCapacityLevel: BatteryCapacityLevel--><!--Device-batteryInfo-const batteryCapacityLevel: BatteryCapacityLevel-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -23,6 +25,8 @@ const batterySOC: number
 表示当前设备剩余电池电量百分比，取值范围是[0，100]。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,6 +44,8 @@ const batteryTemperature: number
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-const batteryTemperature: number--><!--Device-batteryInfo-const batteryTemperature: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -53,6 +59,8 @@ const chargingStatus: BatteryChargeState
 表示当前设备电池的充电状态。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -70,6 +78,8 @@ const healthStatus: BatteryHealthState
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-const healthStatus: BatteryHealthState--><!--Device-batteryInfo-const healthStatus: BatteryHealthState-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -83,6 +93,8 @@ const isBatteryPresent: boolean
 表示当前设备是否支持电池或者电池是否在位。true表示支持电池或电池在位，false表示不支持电池或电池不在位，默认为false。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-batteryInfo-const isBatteryPresent: boolean--><!--Device-batteryInfo-const isBatteryPresent: boolean-End-->
 
@@ -98,6 +110,8 @@ const nowCurrent: number
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-const nowCurrent: number--><!--Device-batteryInfo-const nowCurrent: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -111,6 +125,8 @@ const pluggedType: BatteryPluggedType
 表示当前设备连接的充电器类型。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 <!--Device-batteryInfo-const pluggedType: BatteryPluggedType--><!--Device-batteryInfo-const pluggedType: BatteryPluggedType-End-->
 
@@ -126,6 +142,8 @@ const technology: string
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-const technology: string--><!--Device-batteryInfo-const technology: string-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -139,6 +157,8 @@ const voltage: number
 表示当前设备电池的电压，单位微伏。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 <!--Device-batteryInfo-const voltage: number--><!--Device-batteryInfo-const voltage: number-End-->
 

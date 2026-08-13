@@ -10,6 +10,8 @@ function getTrustedDevices(): DeviceNodeInfo[]
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -30,10 +32,10 @@ function getTrustedDevices(): DeviceNodeInfo[]
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [2000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2000001-内部错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-内部错误) |
 
 ## 示例
 

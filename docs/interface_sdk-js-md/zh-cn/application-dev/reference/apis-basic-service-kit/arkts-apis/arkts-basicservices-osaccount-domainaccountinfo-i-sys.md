@@ -2,9 +2,11 @@
 
 表示域账号信息。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
 
@@ -16,15 +18,15 @@
 accountId?: string
 ```
 
-域账号标识。
-
-此接口为系统接口，默认为undefined。
+域账号标识。 此接口为系统接口，默认为undefined。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DomainAccountInfo-accountId?: string--><!--Device-DomainAccountInfo-accountId?: string-End-->
 
@@ -38,15 +40,15 @@ accountId?: string
 isAuthenticated?: boolean
 ```
 
-指示域账号是否已认证。true表示指定的域账号已认证；false表示指定的域账号未认证。
-
-此接口为系统接口，默认为false。
+指示域账号是否已认证。true表示指定的域账号已认证；false表示指定的域账号未认证。 此接口为系统接口，默认为false。
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DomainAccountInfo-isAuthenticated?: boolean--><!--Device-DomainAccountInfo-isAuthenticated?: boolean-End-->
 

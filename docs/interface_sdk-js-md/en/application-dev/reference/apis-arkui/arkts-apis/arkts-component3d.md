@@ -1,4 +1,4 @@
-# component3d(Defines 3D component)
+# component3d
 
 ## Summary
 

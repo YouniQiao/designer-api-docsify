@@ -4,7 +4,9 @@ Declare enum IconTypeV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum IconTypeV2--><!--Device-unnamed-export declare enum IconTypeV2-End-->
 
@@ -20,9 +22,13 @@ Badge type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-BADGE = 1--><!--Device-IconTypeV2-BADGE = 1-End-->
 
@@ -38,9 +44,13 @@ Normal icon type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-NORMAL_ICON = 2--><!--Device-IconTypeV2-NORMAL_ICON = 2-End-->
 
@@ -56,9 +66,13 @@ System icon type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-SYSTEM_ICON = 3--><!--Device-IconTypeV2-SYSTEM_ICON = 3-End-->
 
@@ -74,9 +88,13 @@ HeadSculpture type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-HEAD_SCULPTURE = 4--><!--Device-IconTypeV2-HEAD_SCULPTURE = 4-End-->
 
@@ -92,9 +110,13 @@ App icon type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-APP_ICON = 5--><!--Device-IconTypeV2-APP_ICON = 5-End-->
 
@@ -110,9 +132,13 @@ Preview type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-PREVIEW = 6--><!--Device-IconTypeV2-PREVIEW = 6-End-->
 
@@ -128,9 +154,13 @@ Longitudinal type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-LONGITUDINAL = 7--><!--Device-IconTypeV2-LONGITUDINAL = 7-End-->
 
@@ -146,9 +176,13 @@ Vertical type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IconTypeV2-VERTICAL = 8--><!--Device-IconTypeV2-VERTICAL = 8-End-->
 

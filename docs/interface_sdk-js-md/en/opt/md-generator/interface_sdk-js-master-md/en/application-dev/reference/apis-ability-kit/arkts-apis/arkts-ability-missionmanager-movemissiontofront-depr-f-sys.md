@@ -12,7 +12,7 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
+**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -61,7 +61,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
+**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -111,7 +111,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
+**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

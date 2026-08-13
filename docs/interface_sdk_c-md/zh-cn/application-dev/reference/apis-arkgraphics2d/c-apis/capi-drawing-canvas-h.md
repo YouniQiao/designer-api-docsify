@@ -29,7 +29,7 @@
 | 名称 | 描述 |
 | -- | -- |
 | [OH_Drawing_Canvas* OH_Drawing_CanvasCreate(void)](#oh_drawing_canvascreate) | 用于创建一个画布对象。画布自带一个默认画刷，画刷为黑色、开启抗锯齿、不具备其他任何样式，当且仅当画布中主动设置的画刷和画笔都不存在时生效。创建的画布对象在使用完毕后，必须调用[OH_Drawing_CanvasDestroy](capi-drawing-canvas-h.md#oh_drawing_canvasdestroy)销毁画布对象并释放资源，否则会导致内存泄漏。 |
-| [OH_Drawing_Canvas* OH_Drawing_CanvasCreateWithPixelMap(OH_Drawing_PixelMap* pixelMap)](#oh_drawing_canvascreatewithpixelmap) | 用于将一个像素图对象绑定到画布中，使得画布绘制的内容输出到像素图中（即CPU渲染）。绑定像素图对象后的画布为非录制类型画布。<br>像素图对象应该在调用[OH_Drawing_CanvasDestroy](capi-drawing-canvas-h.md#oh_drawing_canvasdestroy)销毁画布对象之后，再调用{@link OH_Drawing_PixelMapDissolve}解除绑定。 |
+| [OH_Drawing_Canvas* OH_Drawing_CanvasCreateWithPixelMap(OH_Drawing_PixelMap* pixelMap)](#oh_drawing_canvascreatewithpixelmap) | 用于将一个像素图对象绑定到画布中，使得画布绘制的内容输出到像素图中（即CPU渲染）。绑定像素图对象后的画布为非录制类型画布。<br>像素图对象应该在调用[OH_Drawing_CanvasDestroy](capi-drawing-canvas-h.md#oh_drawing_canvasdestroy)销毁画布对象之后，再调用{@link drawing_pixel_map.h#OH_Drawing_PixelMapDissolve}解除绑定。 |
 | [void OH_Drawing_CanvasDestroy(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasdestroy) | 用于销毁画布对象并回收该对象占用的内存。 |
 | [void OH_Drawing_CanvasBind(OH_Drawing_Canvas* canvas, OH_Drawing_Bitmap* bitmap)](#oh_drawing_canvasbind) | 用于将一个位图对象绑定到画布中，使得画布绘制的内容输出到位图中（即CPU渲染）。绑定位图对象后的画布为非录制类型画布。<br>本接口会产生错误码，可以通过[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget)查看错误码的取值。<br>canvas、bitmap任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
 | [void OH_Drawing_CanvasAttachPen(OH_Drawing_Canvas* canvas, const OH_Drawing_Pen* pen)](#oh_drawing_canvasattachpen) | 用于为画布设置画笔，画布将使用该画笔的样式和颜色绘制图形形状的轮廓。执行该方法后，若画笔的效果发生改变并且开发者希望该变化生效于接下来的绘制动作，需要再次执行该方法以确保变化生效。<br>本接口会产生错误码，可以通过[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget)查看错误码的取值。<br>canvas、pen任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
@@ -64,6 +64,7 @@
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacter(OH_Drawing_Canvas* canvas, const char* str, const OH_Drawing_Font* font, float x, float y)](#oh_drawing_canvasdrawsinglecharacter) | 用于绘制单个字符。当前字型中的字体不支持待绘制字符时，退化到使用系统字体绘制字符。与[OH_Drawing_CanvasDrawSingleCharacterWithFeatures](capi-drawing-canvas-h.md#oh_drawing_canvasdrawsinglecharacterwithfeatures)的区别是，本接口不支持设置字体特征。如需指定字体特征（如连字、字距调整等），请使用[OH_Drawing_CanvasDrawSingleCharacterWithFeatures](capi-drawing-canvas-h.md#oh_drawing_canvasdrawsinglecharacterwithfeatures)。 |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacterWithFeatures(OH_Drawing_Canvas* canvas, const char* str, const OH_Drawing_Font* font, float x, float y, OH_Drawing_FontFeatures* fontFeatures)](#oh_drawing_canvasdrawsinglecharacterwithfeatures) | 绘制单个字符，字符带有字体特征。当前字型中的字体不支持待绘制字符时，退化到使用系统字体绘制字符。 |
 | [void OH_Drawing_CanvasDrawTextBlob(OH_Drawing_Canvas* canvas, const OH_Drawing_TextBlob* textBlob, float x, float y)](#oh_drawing_canvasdrawtextblob) | 用于画一段文字。若构造OH_Drawing_TextBlob的字体不支持待绘制字符，则该部分字符无法绘制。<br>本接口会产生错误码，可以通过[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget)查看错误码的取值。<br>canvas、textBlob任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawGlyphs(const OH_Drawing_Canvas *canvas, const int *glyphIds, int glyphIdCount, int glyphIdOffset, const OH_Drawing_Point2D *positions, int positionCount, int positionOffset, int glyphCount, const OH_Drawing_Font *font)](#oh_drawing_canvasdrawglyphs) | 绘制具有指定字体的字形数组。如果字形计数小于或等于0，则不绘制任何内容。 |
 | [void OH_Drawing_CanvasClipRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvascliprect) | 用于裁剪一个矩形。<br>本接口会产生错误码，可以通过[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget)查看错误码的取值。<br>canvas、rect任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>clipOp不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
 | [void OH_Drawing_CanvasClipRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_RoundRect* roundRect, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvascliproundrect) | 用于裁剪一个圆角矩形。<br>本接口会产生错误码，可以通过[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget)查看错误码的取值。<br>canvas、roundRect任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>clipOp不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
 | [void OH_Drawing_CanvasClipPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path* path, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvasclippath) | 用于裁剪一个自定义路径。<br>本接口会产生错误码，可以通过[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget)查看错误码的取值。<br>canvas、path任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>clipOp不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
@@ -90,7 +91,7 @@
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasIsClipEmpty(OH_Drawing_Canvas* canvas, bool* isClipEmpty)](#oh_drawing_canvasisclipempty) | 用于判断裁剪后可绘制区域是否为空。 |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasGetImageInfo(OH_Drawing_Canvas* canvas, OH_Drawing_Image_Info* imageInfo)](#oh_drawing_canvasgetimageinfo) | 用于获取画布的图像信息。 |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawRecordCmd(OH_Drawing_Canvas* canvas, OH_Drawing_RecordCmd* recordCmd)](#oh_drawing_canvasdrawrecordcmd) | 用于绘制录制指令对象。 |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawRecordCmdNesting(OH_Drawing_Canvas* canvas, OH_Drawing_RecordCmd* recordCmd)](#oh_drawing_canvasdrawrecordcmdnesting) | 用于绘制录制指令对象，支持嵌套。<br>本接口支持{@link OH_Drawing_RecordCmdUtilsBeginRecording}接口生成的画布对象作为入参，嵌套调用。不建议多层嵌套，会影响性能。 |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawRecordCmdNesting(OH_Drawing_Canvas* canvas, OH_Drawing_RecordCmd* recordCmd)](#oh_drawing_canvasdrawrecordcmdnesting) | 用于绘制录制指令对象，支持嵌套。<br>本接口支持{@link drawing_record_cmd.h#OH_Drawing_RecordCmdUtilsBeginRecording}接口生成的画布对象作为入参，嵌套调用。不建议多层嵌套，会影响性能。 |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasQuickRejectPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path* path, bool* quickReject)](#oh_drawing_canvasquickrejectpath) | 判断路径与画布区域是否不相交。画布区域包含边界。 |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasQuickRejectRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, bool* quickReject)](#oh_drawing_canvasquickrejectrect) | 判断矩形和画布区域是否不相交。画布区域包含边界。 |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasIsOpaque(const OH_Drawing_Canvas* canvas, bool* isOpaque)](#oh_drawing_canvasisopaque) | 检查当前绘制到设备上的图层是否是不透明的。 |
@@ -215,7 +216,7 @@ OH_Drawing_Canvas* OH_Drawing_CanvasCreateWithPixelMap(OH_Drawing_PixelMap* pixe
 
 **描述**
 
-用于将一个像素图对象绑定到画布中，使得画布绘制的内容输出到像素图中（即CPU渲染）。绑定像素图对象后的画布为非录制类型画布。<br>像素图对象应该在调用[OH_Drawing_CanvasDestroy](capi-drawing-canvas-h.md#oh_drawing_canvasdestroy)销毁画布对象之后，再调用{@link OH_Drawing_PixelMapDissolve}解除绑定。
+用于将一个像素图对象绑定到画布中，使得画布绘制的内容输出到像素图中（即CPU渲染）。绑定像素图对象后的画布为非录制类型画布。<br>像素图对象应该在调用[OH_Drawing_CanvasDestroy](capi-drawing-canvas-h.md#oh_drawing_canvasdestroy)销毁画布对象之后，再调用{@link drawing_pixel_map.h#OH_Drawing_PixelMapDissolve}解除绑定。
 
 **起始版本：** 20
 
@@ -223,7 +224,7 @@ OH_Drawing_Canvas* OH_Drawing_CanvasCreateWithPixelMap(OH_Drawing_PixelMap* pixe
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md)* pixelMap | 指向像素图[OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md)的指针。像素图对象应该在销毁画布对象之后调用{@link OH_Drawing_PixelMapDissolve}解除绑定。 |
+| [OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md)* pixelMap | 指向像素图[OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md)的指针。像素图对象应该在销毁画布对象之后调用{@link drawing_pixel_map.h#OH_Drawing_PixelMapDissolve}解除绑定。 |
 
 **返回：**
 
@@ -977,6 +978,38 @@ void OH_Drawing_CanvasDrawTextBlob(OH_Drawing_Canvas* canvas, const OH_Drawing_T
 | float x | 文本对象基线左端点（靠近文本左下角）的横坐标，单位为物理像素px。 |
 | float y | 文本对象基线左端点（靠近文本左下角）的纵坐标，单位为物理像素px。 |
 
+### OH_Drawing_CanvasDrawGlyphs()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_CanvasDrawGlyphs(const OH_Drawing_Canvas *canvas, const int *glyphIds, int glyphIdCount, int glyphIdOffset, const OH_Drawing_Point2D *positions, int positionCount, int positionOffset, int glyphCount, const OH_Drawing_Font *font)
+```
+
+**描述**
+
+绘制具有指定字体的字形数组。如果字形计数小于或等于0，则不绘制任何内容。
+
+**起始版本：** 26.0.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) *canvas | 指向OH_Drawing_Canvas对象的指针。 |
+| const int *glyphIds | 字形ID的数组。 |
+| int glyphIdCount | 字形ID数组的大小，需小于等于数组真实大小，且需大于等于glyphIdOffset与glyphCount之和，超过数组长度无法校验，会导致绘制异常或卡顿。 |
+| int glyphIdOffset | 在字形ID数组绘制前要跳过的元素数量。<br>若glyphCount为n，跳过长度为m，则有效glyphIds数组范围为[glyphIds[m], glyphIds[m+n])的部分。 |
+| [const OH_Drawing_Point2D](capi-drawing-oh-drawing-point2d.md) *positions | 位置数组。 |
+| int positionCount | 位置数组的大小，需小于等于数组真实大小，且需大于等于positionOffset与glyphCount之和，超过数组长度无法校验，会导致绘制异常或卡顿。 |
+| int positionOffset | 在位置数组绘制之前要跳过的元素数量。<br>若glyphCount为n，跳过长度为m，则有效positions数组范围为[positions[m], positions[m+n])的部分。 |
+| int glyphCount | 要绘制的字形的数量。如果数量小于或等于0，则不绘制任何内容并返回错误码OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。<br>如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
+| [const OH_Drawing_Font](capi-drawing-oh-drawing-font.md) *font | 指向字型对象[OH_Drawing_Font](capi-drawing-oh-drawing-font.md)的指针。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | 返回OH_DRAWING_SUCCESS表示操作成功。<br>     <br>返回OH_DRAWING_ERROR_INCORRECT_PARAMETER，可能原因：canvas、glyphIds、positions和font中的任何一个为NULL。<br>     <br>返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE，可能原因如下：<br>     <br>- glyphIdOffset或positionOffset小于0；<br>     <br>- glyphIdCount小于glyphIdOffset + glyphCount；<br>     <br>- positionCount小于positionOffset + glyphCount；<br>     <br>- glyphIdOffset小于0；<br>     <br>- positionOffset小于0；<br>     <br>- glyphCount小于或等于0。 |
+
 ### OH_Drawing_CanvasClipRect()
 
 ```c
@@ -1212,7 +1245,7 @@ void OH_Drawing_CanvasGetLocalClipBounds(OH_Drawing_Canvas* canvas, OH_Drawing_R
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md)* canvas | 指向画布对象[OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md)的指针。 |
-| [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md)* rect | 指向矩形对象[OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md)的指针，开发者可调用{@link OH_Drawing_RectCreate}接口创建。 |
+| [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md)* rect | 指向矩形对象[OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md)的指针，开发者可调用{@link drawing_rect.h#OH_Drawing_RectCreate}接口创建。 |
 
 ### OH_Drawing_CanvasGetTotalMatrix()
 
@@ -1231,7 +1264,7 @@ void OH_Drawing_CanvasGetTotalMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matri
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md)* canvas | 指向画布对象[OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md)的指针。 |
-| [OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)* matrix | 指向矩阵对象[OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)的指针，开发者可调用{@link OH_Drawing_MatrixCreate}接口创建。 |
+| [OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)* matrix | 指向矩阵对象[OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)的指针，开发者可调用{@link drawing_matrix.h#OH_Drawing_MatrixCreate}接口创建。 |
 
 ### OH_Drawing_CanvasConcatMatrix()
 
@@ -1313,7 +1346,7 @@ void OH_Drawing_CanvasSetMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* ma
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md)* canvas | 指向画布对象[OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md)的指针。 |
-| [OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)* matrix | 指向矩阵对象[OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)的指针，开发者可调用{@link OH_Drawing_MatrixCreate}接口创建。 |
+| [OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)* matrix | 指向矩阵对象[OH_Drawing_Matrix](capi-drawing-oh-drawing-matrix.md)的指针，开发者可调用{@link drawing_matrix.h#OH_Drawing_MatrixCreate}接口创建。 |
 
 ### OH_Drawing_CanvasResetMatrix()
 
@@ -1566,7 +1599,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasDrawRecordCmdNesting(OH_Drawing_Canvas* ca
 
 **描述**
 
-用于绘制录制指令对象，支持嵌套。<br>本接口支持{@link OH_Drawing_RecordCmdUtilsBeginRecording}接口生成的画布对象作为入参，嵌套调用。不建议多层嵌套，会影响性能。
+用于绘制录制指令对象，支持嵌套。<br>本接口支持{@link drawing_record_cmd.h#OH_Drawing_RecordCmdUtilsBeginRecording}接口生成的画布对象作为入参，嵌套调用。不建议多层嵌套，会影响性能。
 
 **起始版本：** 19
 

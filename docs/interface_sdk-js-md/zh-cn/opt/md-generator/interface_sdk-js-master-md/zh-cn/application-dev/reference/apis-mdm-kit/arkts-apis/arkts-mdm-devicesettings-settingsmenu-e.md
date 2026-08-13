@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-deviceSettings-enum SettingsMenu--><!--Device-deviceSettings-enum SettingsMenu-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ ACCOUNT_ID = 0
 账号。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ WLAN菜单
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-WIFI = 1--><!--Device-SettingsMenu-WIFI = 1-End-->
@@ -49,6 +55,8 @@ WIFI_PROXY_SETTINGS = 2
 WLAN 代理。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ WALN IP设置
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-WIFI_IP_SETTINGS = 3--><!--Device-SettingsMenu-WIFI_IP_SETTINGS = 3-End-->
@@ -81,6 +91,8 @@ BLUETOOTH = 4
 星闪和蓝牙/蓝牙。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +110,8 @@ NETWORK = 5
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-NETWORK = 5--><!--Device-SettingsMenu-NETWORK = 5-End-->
@@ -113,6 +127,8 @@ MOBILE_NETWORK = 6
 移动网络。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,6 +146,8 @@ SUPER_DEVICE = 7
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-SUPER_DEVICE = 7--><!--Device-SettingsMenu-SUPER_DEVICE = 7-End-->
@@ -145,6 +163,8 @@ MORE_CONNECTIVITY_OPTIONS = 8
 多设备协同。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,6 +182,8 @@ HOME_SCREEN_STYLE = 9
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-HOME_SCREEN_STYLE = 9--><!--Device-SettingsMenu-HOME_SCREEN_STYLE = 9-End-->
@@ -177,6 +199,8 @@ DISPLAY_BRIGHTNESS = 10
 显示和亮度。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -194,6 +218,8 @@ SOUND_VIBRATION = 11
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-SOUND_VIBRATION = 11--><!--Device-SettingsMenu-SOUND_VIBRATION = 11-End-->
@@ -209,6 +235,8 @@ NOTIFICATIONS = 12
 通知和状态栏。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -226,6 +254,8 @@ BIOMETRICS_PASSWORD = 13
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-BIOMETRICS_PASSWORD = 13--><!--Device-SettingsMenu-BIOMETRICS_PASSWORD = 13-End-->
@@ -241,6 +271,8 @@ APPS_AND_SERVICES = 14
 应用和元服务。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -258,6 +290,8 @@ BATTERY = 15
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-BATTERY = 15--><!--Device-SettingsMenu-BATTERY = 15-End-->
@@ -273,6 +307,8 @@ STORAGE = 16
 存储。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,6 +326,8 @@ PRIVACY_AND_SECURITY = 17
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-PRIVACY_AND_SECURITY = 17--><!--Device-SettingsMenu-PRIVACY_AND_SECURITY = 17-End-->
@@ -305,6 +343,8 @@ DIGITAL_BALANCE = 18
 健康使用设备。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -322,6 +362,8 @@ SMART_ASSISTANT = 19
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-SMART_ASSISTANT = 19--><!--Device-SettingsMenu-SMART_ASSISTANT = 19-End-->
@@ -337,6 +379,8 @@ ACCESSIBILITY = 20
 关怀和无障碍。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -354,6 +398,8 @@ SYSTEM = 21
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-SYSTEM = 21--><!--Device-SettingsMenu-SYSTEM = 21-End-->
@@ -369,6 +415,8 @@ ABOUT_DEVICE = 22
 关于本机。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -386,6 +434,8 @@ SYSTEM_NAVIGATION = 23
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-SYSTEM_NAVIGATION = 23--><!--Device-SettingsMenu-SYSTEM_NAVIGATION = 23-End-->
@@ -401,6 +451,8 @@ LANGUAGE_REGION = 24
 系统-语言和地区。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -418,6 +470,8 @@ INPUT_METHODS = 25
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-INPUT_METHODS = 25--><!--Device-SettingsMenu-INPUT_METHODS = 25-End-->
@@ -433,6 +487,8 @@ DATE_TIME = 26
 系统-日期和时间。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -450,6 +506,8 @@ DATA_CLONE = 27
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-DATA_CLONE = 27--><!--Device-SettingsMenu-DATA_CLONE = 27-End-->
@@ -465,6 +523,8 @@ BACKUP_SETTINGS = 28
 系统-备份和恢复。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -482,6 +542,8 @@ RESET = 29
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-RESET = 29--><!--Device-SettingsMenu-RESET = 29-End-->
@@ -497,6 +559,8 @@ SUPERHUB = 30
 系统-中转站。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -514,6 +578,8 @@ USER_EXPERIENCE = 31
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-USER_EXPERIENCE = 31--><!--Device-SettingsMenu-USER_EXPERIENCE = 31-End-->
@@ -529,6 +595,8 @@ SCREEN_CAST = 32
 多设备协同-无线投屏。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -546,6 +614,8 @@ PRINTERS_SCANNERS = 33
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-PRINTERS_SCANNERS = 33--><!--Device-SettingsMenu-PRINTERS_SCANNERS = 33-End-->
@@ -561,6 +631,8 @@ MOBILE_DATA = 34
 移动网络-移动数据。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -578,6 +650,8 @@ PERSONAL_HOTSPOT = 35
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-PERSONAL_HOTSPOT = 35--><!--Device-SettingsMenu-PERSONAL_HOTSPOT = 35-End-->
@@ -593,6 +667,8 @@ SIM_MANAGEMENT = 36
 移动网络-SIM卡管理。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -610,6 +686,8 @@ AIRPLANE_MODE = 37
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-AIRPLANE_MODE = 37--><!--Device-SettingsMenu-AIRPLANE_MODE = 37-End-->
@@ -625,6 +703,8 @@ MANAGE_DATA_USAGE = 38
 移动网络-流量管理。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -642,6 +722,8 @@ VPN_SETTINGS = 39
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-VPN_SETTINGS = 39--><!--Device-SettingsMenu-VPN_SETTINGS = 39-End-->
@@ -657,6 +739,8 @@ TEXT_DISPLAY_SIZE = 40
 显示和亮度-字体大小和界面缩放。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -674,6 +758,8 @@ APP_DUPLICATOR = 41
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SettingsMenu-APP_DUPLICATOR = 41--><!--Device-SettingsMenu-APP_DUPLICATOR = 41-End-->
@@ -689,6 +775,8 @@ SEARCH = 42
 搜索。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

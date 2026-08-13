@@ -1,14 +1,12 @@
 # FolderStackOptions
 
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's @since version number is higher than inner elements'. This does not affect interface usability.
+> **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface FolderStackOptions--><!--Device-unnamed-interface FolderStackOptions-End-->
 
@@ -20,15 +18,15 @@
 upperItems?: Array<string>
 ```
 
-Array of IDs of child components that will be moved to the upper half screen in the hover state.
-
-On hover, child components with IDs in this array automatically shift away from the crease area and move to the upper half screen, while other components are stacked in the lower half screen.
+Array of IDs of child components that will be moved to the upper half screen in the hover state. On hover, child components with IDs in this array automatically shift away from the crease area and move to the upper half screen, while other components are stacked in the lower half screen.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

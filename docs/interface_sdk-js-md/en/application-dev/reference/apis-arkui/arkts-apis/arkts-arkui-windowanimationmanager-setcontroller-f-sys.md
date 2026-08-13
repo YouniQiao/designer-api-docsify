@@ -14,9 +14,11 @@ function setController(controller: WindowAnimationController): void
 
 Set the window animation controller.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void--><!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void-End-->
 

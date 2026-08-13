@@ -1,14 +1,16 @@
 # Context
 
-The context of an ability or an application. It allows access to application-specific resources, request and verification permissions.Can only be obtained through the ability.
+The context of an ability or an application. It allows access to application-specific resources, request and verification permissions. Can only be obtained through the ability.
 
-**Inheritance/Implementation:** Context extends [BaseContext](BaseContext)
+**Inheritance/Implementation:** Context extends BaseContext
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-<!--Device-unnamed-export interface Context extends BaseContext--><!--Device-unnamed-export interface Context extends BaseContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Context--><!--Device-unnamed-export interface Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,6 +26,8 @@ Checks the detailed information of this ability.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void--><!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void-End-->
@@ -34,7 +38,7 @@ Checks the detailed information of this ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Return the detailed information of the current belonging Ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Return the detailed information of the current belonging Ability. |
 
 ## getAbilityInfo
 
@@ -47,6 +51,8 @@ Checks the detailed information of this ability.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -72,6 +78,8 @@ Obtains the application type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getAppType(callback: AsyncCallback<string>): void--><!--Device-Context-getAppType(callback: AsyncCallback<string>): void-End-->
@@ -82,7 +90,7 @@ Obtains the application type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns the type of the current application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the type of the current application. |
 
 ## getAppType
 
@@ -95,6 +103,8 @@ Obtains the application type.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -120,6 +130,8 @@ Obtains the application version information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void--><!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void-End-->
@@ -130,7 +142,7 @@ Obtains the application version information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | Yes | Return application version information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | Yes | Return application version information. |
 
 ## getAppVersionInfo
 
@@ -143,6 +155,8 @@ Obtains the application version information.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -168,6 +182,8 @@ Obtains the context of this application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getApplicationContext(): Context--><!--Device-Context-getApplicationContext(): Context-End-->
@@ -192,6 +208,8 @@ Obtains information about the current application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
@@ -202,7 +220,7 @@ Obtains information about the current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Returns information about the current application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Returns information about the current application. |
 
 ## getApplicationInfo
 
@@ -215,6 +233,8 @@ Obtains information about the current application.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -240,6 +260,8 @@ Obtains the bundle name of the current ability.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getBundleName(callback: AsyncCallback<string>): void--><!--Device-Context-getBundleName(callback: AsyncCallback<string>): void-End-->
@@ -250,7 +272,7 @@ Obtains the bundle name of the current ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns the Bundle name of the current capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the Bundle name of the current capability. |
 
 ## getBundleName
 
@@ -263,6 +285,8 @@ Obtains the bundle name of the current ability.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -288,6 +312,8 @@ Obtains the cache directory of this application on the internal storage.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void-End-->
@@ -298,7 +324,7 @@ Obtains the cache directory of this application on the internal storage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns the internal storage directory of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the internal storage directory of the application. |
 
 ## getCacheDir
 
@@ -311,6 +337,8 @@ Obtains the cache directory of this application on the internal storage.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -336,6 +364,8 @@ Obtains the bundle name of the ability that called the current ability.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void--><!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void-End-->
@@ -346,7 +376,7 @@ Obtains the bundle name of the ability that called the current ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns the Bundle name of the ability caller. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the Bundle name of the ability caller. |
 
 ## getCallingBundle
 
@@ -359,6 +389,8 @@ Obtains the bundle name of the ability that called the current ability.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -384,6 +416,8 @@ Obtains the current display orientation of this ability.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void--><!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void-End-->
@@ -394,7 +428,7 @@ Obtains the current display orientation of this ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;bundle.DisplayOrientation&gt; | Yes | Indicates the realistic direction of the screen. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;bundle.DisplayOrientation&gt; | Yes | Indicates the realistic direction of the screen. |
 
 ## getDisplayOrientation
 
@@ -407,6 +441,8 @@ Obtains the current display orientation of this ability.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -432,6 +468,8 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void--><!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void-End-->
@@ -442,7 +480,7 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Yes | Returns the ohos.bundle.ElementName of the current capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Yes | Returns the ohos.bundle.ElementName of the current capability. |
 
 ## getElementName
 
@@ -455,6 +493,8 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -492,7 +532,7 @@ Obtains the absolute path to the application-specific cache directory
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns the absolute path of the application's cache directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the absolute path of the application's cache directory. |
 
 ## getExternalCacheDir
 
@@ -532,6 +572,8 @@ Obtains the file directory of this application on the internal storage.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void--><!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void-End-->
@@ -542,7 +584,7 @@ Obtains the file directory of this application on the internal storage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Return the file directory of this application on internal storage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Return the file directory of this application on internal storage. |
 
 ## getFilesDir
 
@@ -555,6 +597,8 @@ Obtains the file directory of this application on the internal storage.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -580,6 +624,8 @@ Obtains the ModuleInfo object for this application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void--><!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void-End-->
@@ -590,7 +636,7 @@ Obtains the ModuleInfo object for this application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | Yes | Returns the ModuleInfo object of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | Yes | Returns the ModuleInfo object of the application. |
 
 ## getHapModuleInfo
 
@@ -603,6 +649,8 @@ Obtains the ModuleInfo object for this application.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -622,11 +670,13 @@ Obtains the ModuleInfo object for this application.
 getOrCreateDistributedDir(): Promise<string>
 ```
 
-Obtains the distributed file path for storing ability or application data files.If the distributed file path does not exist, the system will create a path and return the created path.
+Obtains the distributed file path for storing ability or application data files. If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -646,11 +696,13 @@ Obtains the distributed file path for storing ability or application data files.
 getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 ```
 
-Obtains the distributed file path for storing ability or application data files.If the distributed file path does not exist, the system will create a path and return the created path.
+Obtains the distributed file path for storing ability or application data files. If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -662,7 +714,7 @@ Obtains the distributed file path for storing ability or application data files.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns the distributed file path of Ability or application. If the path does not exist,the system will create a path and return the created path. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the distributed file path of Ability or application. If the path does not exist,the system will create a path and return the created path. |
 
 ## getOrCreateLocalDir
 
@@ -670,11 +722,13 @@ Obtains the distributed file path for storing ability or application data files.
 getOrCreateLocalDir(): Promise<string>
 ```
 
-Get the local root dir of an app. If it is the first call, the dir will be created.If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
+Get the local root dir of an app. If it is the first call, the dir will be created. If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -694,11 +748,13 @@ Get the local root dir of an app. If it is the first call, the dir will be creat
 getOrCreateLocalDir(callback: AsyncCallback<string>): void
 ```
 
-Get the local root dir of an app. If it is the first call, the dir will be created.If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
+Get the local root dir of an app. If it is the first call, the dir will be created. If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -710,7 +766,7 @@ Get the local root dir of an app. If it is the first call, the dir will be creat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns the local root directory of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the local root directory of the application. |
 
 ## getProcessInfo
 
@@ -724,6 +780,8 @@ Obtains information about the current process, including the process ID and name
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void--><!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void-End-->
@@ -734,7 +792,7 @@ Obtains information about the current process, including the process ID and name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | Yes | Return current process information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | Yes | Return current process information. |
 
 ## getProcessInfo
 
@@ -747,6 +805,8 @@ Obtains information about the current process, including the process ID and name
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -772,6 +832,8 @@ Obtains the name of the current process.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getProcessName(callback: AsyncCallback<string>): void--><!--Device-Context-getProcessName(callback: AsyncCallback<string>): void-End-->
@@ -782,7 +844,7 @@ Obtains the name of the current process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Return current process name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Return current process name. |
 
 ## getProcessName
 
@@ -795,6 +857,8 @@ Obtains the name of the current process.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -820,6 +884,8 @@ Checks whether the configuration of this ability is changing.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void--><!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void-End-->
@@ -830,7 +896,7 @@ Checks whether the configuration of this ability is changing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | True if the configuration of the capability is being changed, otherwise false. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | True if the configuration of the capability is being changed, otherwise false. |
 
 ## isUpdatingConfigurations
 
@@ -843,6 +909,8 @@ Checks whether the configuration of this ability is changing.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -868,6 +936,8 @@ Inform the system of the time required for drawing this Page ability.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void-End-->
@@ -878,7 +948,7 @@ Inform the system of the time required for drawing this Page ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 ## printDrawnCompleted
 
@@ -891,6 +961,8 @@ Inform the system of the time required for drawing this Page ability.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -920,6 +992,8 @@ Requests certain permissions from the system.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void--><!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void-End-->
@@ -932,7 +1006,7 @@ Requests certain permissions from the system.
 | --- | --- | --- | --- |
 | permissions | Array&lt;string&gt; | Yes | Indicates the list of permissions to be requested.parameter cannot be null. |
 | requestCode | number | Yes | Indicates the request code to be passed to the PermissionRequestResult |
-| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | Yes | Return authorization result information. |
+| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | Yes | Return authorization result information. |
 
 ## requestPermissionsFromUser
 
@@ -945,6 +1019,8 @@ Requests certain permissions from the system.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -977,6 +1053,8 @@ Sets the display orientation of the current ability.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void-End-->
@@ -988,7 +1066,7 @@ Sets the display orientation of the current ability.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | orientation | bundle.DisplayOrientation | Yes | Indicates the new orientation for the current ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the realistic direction of the screen. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the realistic direction of the screen. |
 
 ## setDisplayOrientation
 
@@ -1001,6 +1079,8 @@ Sets the display orientation of the current ability.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1026,7 +1106,7 @@ Sets the display orientation of the current ability.
 setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state.The interface can only take effect in API8 and below versions.
+Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state. The interface can only take effect in API8 and below versions.
 
 **Since:** 7
 
@@ -1047,7 +1127,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | show | boolean | Yes | Specifies whether to show this ability on top of the lock screen. The value true means to show it on the lock screen, and the value false means not. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Returns the callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns the callback result. |
 
 ## setShowOnLockScreen
 
@@ -1055,7 +1135,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 setShowOnLockScreen(show: boolean): Promise<void>
 ```
 
-Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state.The interface can only take effect in API8 and below versions.
+Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state. The interface can only take effect in API8 and below versions.
 
 **Since:** 7
 
@@ -1097,7 +1177,7 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
+**Substitutes:** setWakeUpScreen
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1110,7 +1190,7 @@ Sets whether to wake up the screen when this ability is restored.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wakeUp | boolean | Yes | Specifies whether to wake up the screen. The value true means to wake it up, and the value false means not. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Returns the callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns the callback result. |
 
 ## setWakeUpScreen
 
@@ -1126,7 +1206,7 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
+**Substitutes:** setWakeUpScreen
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1152,11 +1232,13 @@ Sets whether to wake up the screen when this ability is restored.
 verifyPermission(permission: string, options?: PermissionOptions): Promise<number>
 ```
 
-Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
+Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1183,11 +1265,13 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void
 ```
 
-Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
+Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1201,7 +1285,7 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 | --- | --- | --- | --- |
 | permission | string | Yes | The name of the specified permission |
 | options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | Yes | Permission Options |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
 
 ## verifyPermission
 
@@ -1209,11 +1293,13 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 verifyPermission(permission: string, callback: AsyncCallback<number>): void
 ```
 
-Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
+Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1226,5 +1312,5 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permission | string | Yes | The name of the specified permission |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
 

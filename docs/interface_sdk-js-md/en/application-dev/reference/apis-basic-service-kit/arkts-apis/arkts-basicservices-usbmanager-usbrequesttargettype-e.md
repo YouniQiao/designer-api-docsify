@@ -2,9 +2,11 @@
 
 Enumerates request target types.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum USBRequestTargetType--><!--Device-usbManager-export enum USBRequestTargetType-End-->
 
@@ -18,9 +20,11 @@ USB_REQUEST_TARGET_DEVICE = 0
 
 Device.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0-End-->
 
@@ -34,9 +38,11 @@ USB_REQUEST_TARGET_INTERFACE = 1
 
 Interface.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1-End-->
 
@@ -50,9 +56,11 @@ USB_REQUEST_TARGET_ENDPOINT = 2
 
 Endpoint.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2-End-->
 
@@ -66,9 +74,11 @@ USB_REQUEST_TARGET_OTHER = 3
 
 Other.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3-End-->
 

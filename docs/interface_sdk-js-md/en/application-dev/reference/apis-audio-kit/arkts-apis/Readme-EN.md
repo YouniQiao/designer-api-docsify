@@ -253,34 +253,52 @@
 - [@ohos.multimedia.avVolumePanel](arkts-multimedia-avvolumepanel.md)
   - [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
   - [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
-- [@ohos.multimedia.avVolumePanel](arkts-multimedia-avvolumepanel.md)
-  - [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
-  - [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 - [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md)
-  - [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md)
+  <!--Del-->
+  - [createCustomizedToneAttrs(system api)](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md)<!--DelEnd-->
   - [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md)
-  - [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md)
-  - [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md)
-  - [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md)
-  - [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md)
-  - [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i.md)
-  - [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t.md)
-  - [RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t.md)
+  <!--Del-->
+  - [getSystemSoundManager(system api)](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SystemSoundManager(system api)](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneAttrs(system api)](arkts-audio-systemsoundmanager-toneattrs-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneHapticsAttrs(system api)](arkts-audio-systemsoundmanager-tonehapticsattrs-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneHapticsSettings(system api)](arkts-audio-systemsoundmanager-tonehapticssettings-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RingtoneOptions(system api)](arkts-audio-systemsoundmanager-ringtoneoptions-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RingtonePlayer(system api)](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)<!--DelEnd-->
   - [SystemSoundPlayer](arkts-audio-systemsoundmanager-systemsoundplayer-t.md)
-  - [SystemToneOptions](arkts-audio-systemsoundmanager-systemtoneoptions-t.md)
-  - [SystemTonePlayer](arkts-audio-systemsoundmanager-systemtoneplayer-t.md)
-  - [ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t.md)
-  - [ToneHapticsAttrsArray](arkts-audio-systemsoundmanager-tonehapticsattrsarray-t.md)
-  - [MediaType](arkts-audio-systemsoundmanager-mediatype-e.md)
-  - [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md)
-  - [SystemSoundError](arkts-audio-systemsoundmanager-systemsounderror-e.md)
+  <!--Del-->
+  - [SystemToneOptions(system api)](arkts-audio-systemsoundmanager-systemtoneoptions-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SystemTonePlayer(system api)](arkts-audio-systemsoundmanager-systemtoneplayer-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneAttrsArray(system api)](arkts-audio-systemsoundmanager-toneattrsarray-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneHapticsAttrsArray(system api)](arkts-audio-systemsoundmanager-tonehapticsattrsarray-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MediaType(system api)](arkts-audio-systemsoundmanager-mediatype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RingtoneType(system api)](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SystemSoundError(system api)](arkts-audio-systemsoundmanager-systemsounderror-e-sys.md)<!--DelEnd-->
   - [SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md)
-  - [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md)
-  - [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e.md)
-  - [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e.md)
-  - [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md)
-  - [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md)
-  - [Constants](arkts-audio-systemsoundmanager-con-sys.md)
+  <!--Del-->
+  - [SystemToneType(system api)](arkts-audio-systemsoundmanager-systemtonetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneCustomizedType(system api)](arkts-audio-systemsoundmanager-tonecustomizedtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneHapticsFeature(system api)](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneHapticsMode(system api)](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToneHapticsType(system api)](arkts-audio-systemsoundmanager-tonehapticstype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Constants(system api)](arkts-audio-systemsoundmanager-con-sys.md)<!--DelEnd-->
 - multimedia<!--arkts-audiokit-multimedia-->
   - [SystemSoundPlayer](arkts-systemsoundplayer.md)
     - [SystemSoundPlayer](arkts-audio-systemsoundplayer-i.md)

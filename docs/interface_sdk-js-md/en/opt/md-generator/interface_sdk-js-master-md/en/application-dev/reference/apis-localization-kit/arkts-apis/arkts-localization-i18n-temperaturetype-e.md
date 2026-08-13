@@ -2,7 +2,9 @@
 
 Enumerates temperature units.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export enum TemperatureType--><!--Device-i18n-export enum TemperatureType-End-->
 
@@ -16,9 +18,11 @@ CELSIUS = 1
 
 Celsius.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TemperatureType-CELSIUS = 1--><!--Device-TemperatureType-CELSIUS = 1-End-->
 
@@ -32,9 +36,11 @@ FAHRENHEIT = 2
 
 Fahrenheit.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TemperatureType-FAHRENHEIT = 2--><!--Device-TemperatureType-FAHRENHEIT = 2-End-->
 
@@ -48,9 +54,11 @@ KELVIN = 3
 
 Kelvin.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TemperatureType-KELVIN = 3--><!--Device-TemperatureType-KELVIN = 3-End-->
 

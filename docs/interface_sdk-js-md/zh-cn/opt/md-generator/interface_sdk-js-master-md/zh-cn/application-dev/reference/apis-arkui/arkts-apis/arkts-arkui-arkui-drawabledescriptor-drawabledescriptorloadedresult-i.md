@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface DrawableDescriptorLoadedResult--><!--Device-unnamed-export interface DrawableDescriptorLoadedResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 imageHeight: number
 ```
 
-图片的高度。
-
-单位：px
+图片的高度。 单位：px
 
 **类型：** number
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ imageHeight: number
 imageWidth: number
 ```
 
-图片的宽度。
-
-单位：px
+图片的宽度。 单位：px
 
 **类型：** number
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

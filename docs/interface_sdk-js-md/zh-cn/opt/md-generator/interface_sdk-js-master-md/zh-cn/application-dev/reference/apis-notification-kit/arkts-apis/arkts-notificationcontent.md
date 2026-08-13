@@ -1,4 +1,4 @@
-# notificationContent(Some notification types and content)
+# notificationContent
 
 ## 汇总
 

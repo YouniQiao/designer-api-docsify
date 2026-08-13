@@ -2,7 +2,9 @@
 
 Enumerates service change type.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-enum ServiceChangeType--><!--Device-intelligentVoice-enum ServiceChangeType-End-->
 
@@ -18,7 +20,9 @@ SERVICE_UNAVAILABLE = 0
 
 Service unavailable.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ServiceChangeType-SERVICE_UNAVAILABLE = 0--><!--Device-ServiceChangeType-SERVICE_UNAVAILABLE = 0-End-->
 

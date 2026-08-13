@@ -6,7 +6,7 @@ Parameters for requesting to report cache location information
 
 **Deprecated since:** 9
 
-**Substitutes:** [CachedGnssLocationsRequest](ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest)
+**Substitutes:** [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md#CachedGnssLocationsRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,7 +32,7 @@ reportingPeriodSec: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [reportingPeriodSec](ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest#reportingPeriodSec)
+**Substitutes:** [reportingPeriodSec](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md#reportingPeriodSec)
 
 <!--Device-CachedGnssLocationsRequest-reportingPeriodSec: number--><!--Device-CachedGnssLocationsRequest-reportingPeriodSec: number-End-->
 
@@ -50,7 +50,7 @@ wakeUpCacheQueueFull: boolean
 
 **Deprecated since:** 9
 
-**Substitutes:** [wakeUpCacheQueueFull](ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest#wakeUpCacheQueueFull)
+**Substitutes:** [wakeUpCacheQueueFull](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md#wakeUpCacheQueueFull)
 
 <!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean--><!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean-End-->
 

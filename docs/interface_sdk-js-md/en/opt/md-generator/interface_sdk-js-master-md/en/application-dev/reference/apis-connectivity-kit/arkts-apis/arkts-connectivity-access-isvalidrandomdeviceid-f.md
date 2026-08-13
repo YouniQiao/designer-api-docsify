@@ -14,11 +14,13 @@ function isValidRandomDeviceId(deviceId: string): boolean
 
 Determine whether the randomized device address application can still be used.
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
-**Atomic service API:** This API can be used in atomic services since API version 16.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-access-function isValidRandomDeviceId(deviceId: string): boolean--><!--Device-access-function isValidRandomDeviceId(deviceId: string): boolean-End-->
 
@@ -40,9 +42,9 @@ Determine whether the randomized device address application can still be used.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 

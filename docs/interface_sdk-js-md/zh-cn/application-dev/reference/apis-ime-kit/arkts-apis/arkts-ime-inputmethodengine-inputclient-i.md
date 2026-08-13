@@ -1,44 +1,12 @@
 # InputClient
 
-InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的  
-[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。  
-**核心功能概述：**
+InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的 on('inputStart') 事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。 **核心功能概述：** - **文本获取**：通过 [getForward](#getForward)/ [getForwardSync](#getForwardSync)获取光标前的文本，通过 [getBackward](#getBackward)/ [getBackwardSync](#getBackwardSync)获取光标后的文本，用于分析已输入内容并提供智能补全。 - **文本编辑**：通过 [insertText](#insertText)/ [insertTextSync](#insertTextSync)插入文本，通过 [deleteForward](#deleteForward)/ [deleteForwardSync](#deleteForwardSync)删除光标前的文本，通过 [deleteBackward](#deleteBackward) /[deleteBackwardSync](#deleteBackwardSync)删除光标后的文本。 - **功能键与光标**：通过 [sendKeyFunction](#sendKeyFunction) 发送功能键（如回车键），通过 [moveCursor](#moveCursor)/ [moveCursorSync](#moveCursorSync)移动光标。 - **选区操作**：通过 [selectByRange](#selectByRange)/ [selectByRangeSync](#selectByRangeSync)按范围选中文本，通过 [selectByMovement](#selectByMovement) /[selectByMovementSync](#selectByMovementSync)按方向选中文本。 - **编辑框属性**：通过 [getEditorAttribute](#getEditorAttribute) /[getEditorAttributeSync](#getEditorAttributeSync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键 盘布局。 - **文本预览**：通过[setPreviewText](#setPreviewText)/ [setPreviewTextSync](#setPreviewTextSync)设置预览文本，通过 [finishTextPreview](#finishTextPreview)/ [finishTextPreviewSync](#finishTextPreviewSync)结束文本预览。 - **私有通信**：通过[sendPrivateCommand](#sendPrivateCommand)向应用发送私有命令，通过 [sendMessage](#sendMessage)/ [recvMessage](#recvMessage)进行消息通信。 下列API均需使用 on('inputStart') 获取到InputClient实例后，通过实例调用。
 
-- **文本获取**：通过  
-[getForward](#getForward)/  
-[getForwardSync](#getForwardSync)获取光标前的文本，通过  
-[getBackward](#getBackward)/  
-[getBackwardSync](#getBackwardSync)获取光标后的文本，用于分析已输入内容并提供智能补全。  
-- **文本编辑**：通过  
-[insertText](#insertText)/  
-[insertTextSync](#insertTextSync)插入文本，通过  
-[deleteForward](#deleteForward)/  
-[deleteForwardSync](#deleteForwardSync)删除光标前的文本，通过  
-[deleteBackward](#deleteBackward)/[deleteBackwardSync](#deleteBackwardSync)删除光标后的文本。  
-- **功能键与光标**：通过  
-[sendKeyFunction](#sendKeyFunction)发送功能键（如回车键），通过  
-[moveCursor](#moveCursor)/  
-[moveCursorSync](#moveCursorSync)移动光标。  
-- **选区操作**：通过  
-[selectByRange](#selectByRange)/  
-[selectByRangeSync](#selectByRangeSync)按范围选中文本，通过  
-[selectByMovement](#selectByMovement)/[selectByMovementSync](#selectByMovementSync)按方向选中文本。  
-- **编辑框属性**：通过  
-[getEditorAttribute](#getEditorAttribute)/[getEditorAttributeSync](#getEditorAttributeSync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。  
-- **文本预览**：通过[setPreviewText](#setPreviewText)/  
-[setPreviewTextSync](#setPreviewTextSync)设置预览文本，通过  
-[finishTextPreview](#finishTextPreview)/  
-[finishTextPreviewSync](#finishTextPreviewSync)结束文本预览。  
-- **私有通信**：通过[sendPrivateCommand](#sendPrivateCommand)向应用发送私有命令，通过  
-[sendMessage](#sendMessage)/  
-[recvMessage](#recvMessage)进行消息通信。
+**起始版本：** 23
 
-下列API均需使用  
-[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))获取到InputClient实例后，通过实例调用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface InputClient--><!--Device-inputMethodEngine-interface InputClient-End-->
 
@@ -46,25 +14,17 @@ InputClient是输入法客户端对象，代表当前绑定到输入法应用的
 
 ## deleteBackward
 
-ArkTS-Dyn:
-```TypeScript
-deleteBackward(length: number, callback: AsyncCallback<boolean>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-删除光标后固定长度的文本。使用callback异步回调。
+删除光标后固定长度的文本。使用callback异步回调。 **使用场景：** 实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。 **使用后效果：** 成功时返回true，编辑框中光标后指定长度的文本被删除。
 
-**使用场景：** 实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。
+**起始版本：** 23
 
-**使用后效果：** 成功时返回true，编辑框中光标后指定长度的文本被删除。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -74,16 +34,16 @@ deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
+| length | int | 是 | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -127,21 +87,17 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 
 ## deleteBackward
 
-ArkTS-Dyn:
-```TypeScript
-deleteBackward(length: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 deleteBackward(length: int): Promise<boolean>
 ```
 
 删除光标后固定长度的文本。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-deleteBackward(length: int): Promise<boolean>--><!--Device-InputClient-deleteBackward(length: int): Promise<boolean>-End-->
 
@@ -151,7 +107,7 @@ deleteBackward(length: int): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
+| length | int | 是 | 文本长度。不能小于0。 |
 
 **返回值：**
 
@@ -163,9 +119,9 @@ deleteBackward(length: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -205,21 +161,17 @@ inputClient.deleteBackward(length).then((result: boolean) => {
 
 ## deleteBackwardSync
 
-ArkTS-Dyn:
-```TypeScript
-deleteBackwardSync(length: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 deleteBackwardSync(length: int): void
 ```
 
 删除光标后固定长度的文本。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-deleteBackwardSync(length: int): void--><!--Device-InputClient-deleteBackwardSync(length: int): void-End-->
 
@@ -229,15 +181,15 @@ deleteBackwardSync(length: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
+| length | int | 是 | 文本长度。不能小于0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -257,25 +209,17 @@ inputClient.deleteBackwardSync(length);
 
 ## deleteForward
 
-ArkTS-Dyn:
-```TypeScript
-deleteForward(length: number, callback: AsyncCallback<boolean>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 deleteForward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-删除光标前固定长度的文本。使用callback异步回调。
+删除光标前固定长度的文本。使用callback异步回调。 **使用场景：** 实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。 **使用后效果：** 成功时返回true，编辑框中光标前指定长度的文本被删除。
 
-**使用场景：** 实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。
+**起始版本：** 23
 
-**使用后效果：** 成功时返回true，编辑框中光标前指定长度的文本被删除。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -285,16 +229,16 @@ deleteForward(length: int, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
+| length | int | 是 | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -338,21 +282,17 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 
 ## deleteForward
 
-ArkTS-Dyn:
-```TypeScript
-deleteForward(length: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 deleteForward(length: int): Promise<boolean>
 ```
 
 删除光标前固定长度的文本。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-deleteForward(length: int): Promise<boolean>--><!--Device-InputClient-deleteForward(length: int): Promise<boolean>-End-->
 
@@ -362,7 +302,7 @@ deleteForward(length: int): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
+| length | int | 是 | 文本长度。不能小于0。 |
 
 **返回值：**
 
@@ -374,9 +314,9 @@ deleteForward(length: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -416,21 +356,17 @@ inputClient.deleteForward(length).then((result: boolean) => {
 
 ## deleteForwardSync
 
-ArkTS-Dyn:
-```TypeScript
-deleteForwardSync(length: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 deleteForwardSync(length: int): void
 ```
 
 删除光标前固定长度的文本。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-deleteForwardSync(length: int): void--><!--Device-InputClient-deleteForwardSync(length: int): void-End-->
 
@@ -440,15 +376,15 @@ deleteForwardSync(length: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
+| length | int | 是 | 文本长度。不能小于0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -474,9 +410,11 @@ finishTextPreview(): Promise<void>
 
 结束预上屏。使用promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-finishTextPreview(): Promise<void>--><!--Device-InputClient-finishTextPreview(): Promise<void>-End-->
 
@@ -492,8 +430,8 @@ finishTextPreview(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
 
 ## 示例
 
@@ -515,9 +453,11 @@ finishTextPreviewSync(): void
 
 结束预上屏。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-finishTextPreviewSync(): void--><!--Device-InputClient-finishTextPreviewSync(): void-End-->
 
@@ -527,8 +467,8 @@ finishTextPreviewSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
 
 ## 示例
 
@@ -548,6 +488,8 @@ getAttachOptions(): AttachOptions
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
 
+**废弃版本：** -1
+
 <!--Device-InputClient-getAttachOptions(): AttachOptions--><!--Device-InputClient-getAttachOptions(): AttachOptions-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -562,7 +504,7 @@ getAttachOptions(): AttachOptions
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 ## 示例
 
@@ -581,7 +523,9 @@ getAttachOptions(): AttachOptions | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getAttachOptions(): AttachOptions | null--><!--Device-InputClient-getAttachOptions(): AttachOptions | null-End-->
 
@@ -595,21 +539,17 @@ getAttachOptions(): AttachOptions | null
 
 ## getBackward
 
-ArkTS-Dyn:
-```TypeScript
-getBackward(length: number, callback: AsyncCallback<string>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBackward(length: int, callback: AsyncCallback<string>): void
 ```
 
 获取光标后固定长度的文本。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void-End-->
 
@@ -619,16 +559,16 @@ getBackward(length: int, callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| length | int | 是 | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -664,21 +604,17 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 
 ## getBackward
 
-ArkTS-Dyn:
-```TypeScript
-getBackward(length: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBackward(length: int): Promise<string>
 ```
 
 获取光标后固定长度的文本。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getBackward(length: int): Promise<string>--><!--Device-InputClient-getBackward(length: int): Promise<string>-End-->
 
@@ -688,7 +624,7 @@ getBackward(length: int): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
+| length | int | 是 | 文本长度。不能小于0。 |
 
 **返回值：**
 
@@ -700,9 +636,9 @@ getBackward(length: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -734,21 +670,17 @@ inputClient.getBackward(length).then((text: string) => {
 
 ## getBackwardSync
 
-ArkTS-Dyn:
-```TypeScript
-getBackwardSync(length: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBackwardSync(length: int): string
 ```
 
 获取光标后固定长度的文本。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getBackwardSync(length: int): string--><!--Device-InputClient-getBackwardSync(length: int): string-End-->
 
@@ -758,7 +690,7 @@ getBackwardSync(length: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
+| length | int | 是 | 文本长度。不能小于0。 |
 
 **返回值：**
 
@@ -770,9 +702,9 @@ getBackwardSync(length: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -804,6 +736,8 @@ getCallingWindowInfo(): Promise<WindowInfo>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -818,9 +752,9 @@ getCallingWindowInfo(): Promise<WindowInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
-| [12800012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) | the input method panel does not exist. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800012](../errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) | the input method panel does not exist. |
 
 ## 示例
 
@@ -845,7 +779,9 @@ getCallingWindowInfo(): Promise<WindowInfo | null>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>-End-->
 
@@ -861,9 +797,9 @@ getCallingWindowInfo(): Promise<WindowInfo | null>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
-| [12800012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) | the input method panel does not exist. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800012](../errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) | the input method panel does not exist. |
 
 ## getEditorAttribute
 
@@ -871,15 +807,13 @@ getCallingWindowInfo(): Promise<WindowInfo | null>
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
 
-获取编辑框属性值。使用callback异步回调。
-
-**使用场景：** 根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。
-
-**使用后效果：** 返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。
+获取编辑框属性值。使用callback异步回调。 **使用场景：** 根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。 **使用后效果：** 返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
 
@@ -889,13 +823,13 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## 示例
 
@@ -922,7 +856,9 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void-End-->
 
@@ -932,13 +868,13 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## getEditorAttribute
 
@@ -951,6 +887,8 @@ getEditorAttribute(): Promise<EditorAttribute>
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
 
@@ -966,7 +904,7 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## 示例
 
@@ -991,7 +929,9 @@ getEditorAttribute(): Promise<EditorAttribute | null>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>-End-->
 
@@ -1007,7 +947,7 @@ getEditorAttribute(): Promise<EditorAttribute | null>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## getEditorAttributeSync
 
@@ -1020,6 +960,8 @@ getEditorAttributeSync(): EditorAttribute
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getEditorAttributeSync(): EditorAttribute--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute-End-->
 
@@ -1035,7 +977,7 @@ getEditorAttributeSync(): EditorAttribute
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## 示例
 
@@ -1055,7 +997,9 @@ getEditorAttributeSync(): EditorAttribute | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null-End-->
 
@@ -1071,27 +1015,21 @@ getEditorAttributeSync(): EditorAttribute | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## getForward
 
-ArkTS-Dyn:
-```TypeScript
-getForward(length: number, callback: AsyncCallback<string>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getForward(length: int, callback: AsyncCallback<string>): void
 ```
 
-获取光标前固定长度的文本。使用callback异步回调。  
-**使用场景：** 分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。  
-**使用后效果：** 成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
+获取光标前固定长度的文本。使用callback异步回调。 **使用场景：** 分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。 **使用后效果：** 成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void-End-->
 
@@ -1101,16 +1039,16 @@ getForward(length: int, callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| length | int | 是 | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -1146,21 +1084,17 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 
 ## getForward
 
-ArkTS-Dyn:
-```TypeScript
-getForward(length: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getForward(length: int): Promise<string>
 ```
 
 获取光标前固定长度的文本。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getForward(length: int): Promise<string>--><!--Device-InputClient-getForward(length: int): Promise<string>-End-->
 
@@ -1170,7 +1104,7 @@ getForward(length: int): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0 |
+| length | int | 是 | 文本长度。不能小于0 |
 
 **返回值：**
 
@@ -1182,9 +1116,9 @@ getForward(length: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -1216,21 +1150,17 @@ inputClient.getForward(length).then((text: string) => {
 
 ## getForwardSync
 
-ArkTS-Dyn:
-```TypeScript
-getForwardSync(length: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 getForwardSync(length: int): string
 ```
 
 获取光标前固定长度的文本。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getForwardSync(length: int): string--><!--Device-InputClient-getForwardSync(length: int): string-End-->
 
@@ -1240,7 +1170,7 @@ getForwardSync(length: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本长度。不能小于0。 |
+| length | int | 是 | 文本长度。不能小于0。 |
 
 **返回值：**
 
@@ -1252,9 +1182,9 @@ getForwardSync(length: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -1276,21 +1206,17 @@ console.info(`Succeeded in getting forward, text: ${text}`);
 
 ## getTextIndexAtCursor
 
-ArkTS-Dyn:
-```TypeScript
-getTextIndexAtCursor(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getTextIndexAtCursor(callback: AsyncCallback<int>): void
 ```
 
 获取光标所在处的文本索引。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void--><!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void-End-->
 
@@ -1300,14 +1226,14 @@ getTextIndexAtCursor(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为 undefined。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为 undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -1341,21 +1267,17 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: int) => {
 
 ## getTextIndexAtCursor
 
-ArkTS-Dyn:
-```TypeScript
-getTextIndexAtCursor(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getTextIndexAtCursor(): Promise<int>
 ```
 
 获取光标所在处的文本索引。使用promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getTextIndexAtCursor(): Promise<int>--><!--Device-InputClient-getTextIndexAtCursor(): Promise<int>-End-->
 
@@ -1365,14 +1287,14 @@ getTextIndexAtCursor(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回光标所在处的文本索引。 |
+| Promise&lt;int&gt; | Promise对象，返回光标所在处的文本索引。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -1402,21 +1324,17 @@ inputClient.getTextIndexAtCursor().then((index: int) => {
 
 ## getTextIndexAtCursorSync
 
-ArkTS-Dyn:
-```TypeScript
-getTextIndexAtCursorSync(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getTextIndexAtCursorSync(): int
 ```
 
 获取光标所在处的文本索引。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-getTextIndexAtCursorSync(): int--><!--Device-InputClient-getTextIndexAtCursorSync(): int-End-->
 
@@ -1426,14 +1344,14 @@ getTextIndexAtCursorSync(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回光标所在处的文本索引。 |
+| int | 返回光标所在处的文本索引。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -1457,15 +1375,13 @@ console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
-插入文本。使用callback异步回调。
+插入文本。使用callback异步回调。 **使用场景：** 插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。 **使用后效果：** 成功时返回true，文本已插入到编辑框光标位置。
 
-**使用场景：** 插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。
+**起始版本：** 23
 
-**使用后效果：** 成功时返回true，文本已插入到编辑框光标位置。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -1476,15 +1392,15 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 文本内容。建议长度不超过1KB。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -1513,9 +1429,11 @@ insertText(text: string): Promise<boolean>
 
 插入文本。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-insertText(text: string): Promise<boolean>--><!--Device-InputClient-insertText(text: string): Promise<boolean>-End-->
 
@@ -1537,9 +1455,9 @@ insertText(text: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -1565,9 +1483,11 @@ insertTextSync(text: string): void
 
 插入文本。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-insertTextSync(text: string): void--><!--Device-InputClient-insertTextSync(text: string): void-End-->
 
@@ -1583,9 +1503,9 @@ insertTextSync(text: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
 ## 示例
 
@@ -1595,25 +1515,17 @@ inputClient.insertTextSync('test');
 
 ## moveCursor
 
-ArkTS-Dyn:
-```TypeScript
-moveCursor(direction: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveCursor(direction: int, callback: AsyncCallback<void>): void
 ```
 
-移动光标。使用callback异步回调。
+移动光标。使用callback异步回调。 **使用场景：** 实现光标移动到特定位置、实现上下左右移动光标功能、实现快速定位、实现自定义光标控制等。 **使用后效果：** 成功时编辑框中的光标按指定方向移动一步。direction取值参见
 
-**使用场景：** 实现光标移动到特定位置、实现上下左右移动光标功能、实现快速定位、实现自定义光标控制等。
+**起始版本：** 23
 
-**使用后效果：** 成功时编辑框中的光标按指定方向移动一步。direction取值参见
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void--><!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void-End-->
 
@@ -1623,15 +1535,15 @@ moveCursor(direction: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
+| direction | int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -1649,21 +1561,17 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 
 ## moveCursor
 
-ArkTS-Dyn:
-```TypeScript
-moveCursor(direction: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveCursor(direction: int): Promise<void>
 ```
 
 移动光标。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-moveCursor(direction: int): Promise<void>--><!--Device-InputClient-moveCursor(direction: int): Promise<void>-End-->
 
@@ -1673,7 +1581,7 @@ moveCursor(direction: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
+| direction | int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
 
 **返回值：**
 
@@ -1685,8 +1593,8 @@ moveCursor(direction: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -1702,21 +1610,17 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 
 ## moveCursorSync
 
-ArkTS-Dyn:
-```TypeScript
-moveCursorSync(direction: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveCursorSync(direction: int): void
 ```
 
 移动光标。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-moveCursorSync(direction: int): void--><!--Device-InputClient-moveCursorSync(direction: int): void-End-->
 
@@ -1726,56 +1630,19 @@ moveCursorSync(direction: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
+| direction | int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
 ```TypeScript
 inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
-```
-
-## off('attachOptionsDidChange')
-
-```TypeScript
-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
-```
-
-取消订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
-
-**起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-<!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void--><!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
-
-## 示例
-
-```TypeScript
-let attachOptionsDidChangeCallback: (attachOptions: inputMethodEngine.AttachOptions) => void =
-  (_attachOptions: inputMethodEngine.AttachOptions) => {
-    console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
-  };
-
-inputClient.on('attachOptionsDidChange', attachOptionsDidChangeCallback);
-console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
-inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
-console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 ```
 
 ## offAttachOptionsDidChange
@@ -1788,7 +1655,9 @@ offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void--><!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void-End-->
 
@@ -1798,7 +1667,7 @@ offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有attachOptionsDidChange事件的订阅。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 否 | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有attachOptionsDidChange事件的订阅。 |
 
 ## 示例
 
@@ -1818,7 +1687,88 @@ inputMethodEngine.getInputMethodAbility()
 });
 ```
 
-## on('attachOptionsDidChange')
+## off_attachOptionsDidChange
+
+```TypeScript
+off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
+```
+
+取消订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
+
+**起始版本：** 19
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
+
+<!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void--><!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+let attachOptionsDidChangeCallback: (attachOptions: inputMethodEngine.AttachOptions) => void =
+  (_attachOptions: inputMethodEngine.AttachOptions) => {
+    console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
+  };
+
+inputClient.on('attachOptionsDidChange', attachOptionsDidChangeCallback);
+console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
+inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
+console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
+```
+
+## onAttachOptionsDidChange
+
+```TypeScript
+onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
+```
+
+订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void--><!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+
+## 示例
+
+```TypeScript
+let attachOptionsDidChangeCallback = (attachOptions: inputMethodEngine.AttachOptions) => {
+  console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
+};
+
+inputMethodEngine.getInputMethodAbility()
+  .onInputStart((kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
+  let keyboardController = kbController;
+  let inputClient = client;
+  inputClient.onAttachOptionsDidChange(attachOptionsDidChangeCallback);
+  console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
+  inputClient.offAttachOptionsDidChange(attachOptionsDidChangeCallback);
+  console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
+});
+```
+
+## on_attachOptionsDidChange
 
 ```TypeScript
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
@@ -1830,6 +1780,8 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
 
+**废弃版本：** -1
+
 <!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void--><!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1839,13 +1791,13 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 ## 示例
 
@@ -1864,46 +1816,6 @@ inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
 console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 ```
 
-## onAttachOptionsDidChange
-
-```TypeScript
-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
-```
-
-订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void--><!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
-
-## 示例
-
-```TypeScript
-let attachOptionsDidChangeCallback = (attachOptions: inputMethodEngine.AttachOptions) => {
-  console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
-};
-
-inputMethodEngine.getInputMethodAbility()
-  .onInputStart((kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
-  let keyboardController = kbController;
-  let inputClient = client;
-  inputClient.onAttachOptionsDidChange(attachOptionsDidChangeCallback);
-  console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
-  inputClient.offAttachOptionsDidChange(attachOptionsDidChangeCallback);
-  console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
-});
-```
-
 ## recvMessage
 
 ```TypeScript
@@ -1912,9 +1824,11 @@ recvMessage(msgHandler?: MessageHandler): void
 
 注册或取消注册Messagehandler。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void-End-->
 
@@ -1924,13 +1838,13 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象将通过 [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onMessage-1)接收来自已绑定当前 输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)接收终止此对象订阅的消息。 &lt;br&gt;若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler)对象，同时触发其 [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)回调函数。 |
+| msgHandler | MessageHandler | 否 | 该对象将通过 [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onMessage)接收来自已绑定当前 输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)接收终止此对象订阅的消息。 &lt;br&gt;若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler)对象，同时触发其 [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## 示例
 
@@ -1960,9 +1874,11 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 
 根据光标移动方向选中文本。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void-End-->
 
@@ -1973,14 +1889,14 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | movement | Movement | 是 | 选中时光标移动的方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -2006,9 +1922,11 @@ selectByMovement(movement: Movement): Promise<void>
 
 根据光标移动方向选中文本。使用promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>--><!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>-End-->
 
@@ -2030,8 +1948,8 @@ selectByMovement(movement: Movement): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -2055,9 +1973,11 @@ selectByMovementSync(movement: Movement): void
 
 根据光标移动方向选中文本。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-selectByMovementSync(movement: Movement): void--><!--Device-InputClient-selectByMovementSync(movement: Movement): void-End-->
 
@@ -2073,8 +1993,8 @@ selectByMovementSync(movement: Movement): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 
@@ -2092,9 +2012,11 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 
 根据索引范围选中文本。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void-End-->
 
@@ -2105,14 +2027,14 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | range | Range | 是 | 选中文本的范围。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -2139,9 +2061,11 @@ selectByRange(range: Range): Promise<void>
 
 根据索引范围选中文本。使用promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-selectByRange(range: Range): Promise<void>--><!--Device-InputClient-selectByRange(range: Range): Promise<void>-End-->
 
@@ -2163,8 +2087,8 @@ selectByRange(range: Range): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -2189,9 +2113,11 @@ selectByRangeSync(range: Range): void
 
 根据索引范围选中文本。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-selectByRangeSync(range: Range): void--><!--Device-InputClient-selectByRangeSync(range: Range): void-End-->
 
@@ -2207,8 +2133,8 @@ selectByRangeSync(range: Range): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -2227,9 +2153,11 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 
 发送扩展编辑操作。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void--><!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void-End-->
 
@@ -2240,15 +2168,15 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | ExtendAction | 是 | 要发送的扩展操作。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -2272,9 +2200,11 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 发送扩展编辑操作。使用promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>--><!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>-End-->
 
@@ -2296,9 +2226,9 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
-| [12800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 
@@ -2314,21 +2244,17 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 
 ## sendKeyFunction
 
-ArkTS-Dyn:
-```TypeScript
-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 ```
 
 发送功能键。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -2338,15 +2264,15 @@ sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 功能键键值。&lt;br/&gt;- 当值为0时，表示无效按键。&lt;br/&gt;- 当值为1时，表示确认键（即回车键）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
+| action | int | 是 | 功能键键值。&lt;br/&gt;- 当值为0时，表示无效按键。&lt;br/&gt;- 当值为1时，表示确认键（即回车键）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 
@@ -2392,21 +2318,17 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 
 ## sendKeyFunction
 
-ArkTS-Dyn:
-```TypeScript
-sendKeyFunction(action: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendKeyFunction(action: int): Promise<boolean>
 ```
 
 发送功能键。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>--><!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>-End-->
 
@@ -2416,7 +2338,7 @@ sendKeyFunction(action: int): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 功能键键值。&lt;br/&gt;当值为0时，表示无效按键；&lt;br/&gt;当值为1时，表示确认键（即回车键）。 |
+| action | int | 是 | 功能键键值。&lt;br/&gt;当值为0时，表示无效按键；&lt;br/&gt;当值为1时，表示确认键（即回车键）。 |
 
 **返回值：**
 
@@ -2428,8 +2350,8 @@ sendKeyFunction(action: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 
@@ -2475,9 +2397,11 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 
 发送自定义通信至已绑定当前输入法应用的编辑框应用。使用Promise异步回调。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
 
@@ -2500,12 +2424,12 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
-| [12800016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800016-输入法客户端未处于编辑状态) | input method client is not editable. |
-| [12800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
-| [12800015](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800015-消息接收端无法接收自定义通信数据) | the other side does not accept the request. |
-| [12800014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800014-输入法应用非完全访问模式) | the input method is in basic mode. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-输入法客户端未处于编辑状态) | input method client is not editable. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| [12800015](../errorcode-inputmethod-framework.md#12800015-消息接收端无法接收自定义通信数据) | the other side does not accept the request. |
+| [12800014](../errorcode-inputmethod-framework.md#12800014-输入法应用非完全访问模式) | the input method is in basic mode. |
 
 ## 示例
 
@@ -2529,9 +2453,11 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 发送私有数据至需要与输入法应用通信的系统其他部分。使用promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
 
@@ -2553,9 +2479,9 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 ## 示例
 
@@ -2585,9 +2511,11 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 设置预上屏文本。使用promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>--><!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>-End-->
 
@@ -2610,9 +2538,9 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
 
 ## 示例
 
@@ -2637,9 +2565,11 @@ setPreviewTextSync(text: string, range: Range): void
 
 设置预上屏文本。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void--><!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void-End-->
 
@@ -2656,9 +2586,9 @@ setPreviewTextSync(text: string, range: Range): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
 
 ## 示例
 

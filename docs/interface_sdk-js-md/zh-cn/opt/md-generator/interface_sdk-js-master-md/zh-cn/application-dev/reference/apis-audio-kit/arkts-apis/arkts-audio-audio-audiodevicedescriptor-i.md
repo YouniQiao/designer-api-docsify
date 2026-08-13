@@ -2,7 +2,9 @@
 
 描述音频设备。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
 
@@ -14,13 +16,13 @@
 readonly address: string
 ```
 
-设备静态MAC地址。
-
-如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+设备静态MAC地址。 如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,7 +40,9 @@ readonly capabilities?: Array<AudioStreamInfo>
 
 **类型：** Array&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>--><!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>-End-->
 
@@ -54,7 +58,9 @@ readonly channelCounts: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +78,9 @@ readonly channelMasks: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +98,9 @@ readonly deviceRole: DeviceRole
 
 **类型：** [DeviceRole](arkts-audio-audio-devicerole-e.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -108,7 +118,9 @@ readonly deviceType: DeviceType
 
 **类型：** DeviceType
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -126,7 +138,9 @@ readonly displayName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -144,7 +158,9 @@ readonly encodingTypes?: Array<AudioEncodingType>
 
 **类型：** Array&lt;[AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -162,7 +178,9 @@ readonly id: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -180,7 +198,9 @@ readonly model?: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly model?: string--><!--Device-AudioDeviceDescriptor-readonly model?: string-End-->
 
@@ -192,13 +212,13 @@ readonly model?: string
 readonly name: string
 ```
 
-设备名称。
-
-如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+设备名称。 如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -216,7 +236,9 @@ readonly sampleRates: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -234,7 +256,9 @@ readonly spatializationSupported?: boolean
 
 **类型：** boolean
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean-End-->
 

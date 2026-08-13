@@ -4,6 +4,8 @@ Gif metadata.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-class GifMetadata--><!--Device-image-class GifMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -20,11 +22,13 @@ import { image } from '@kit.ImageKit';
 readonly canvasHeight?: number
 ```
 
-Canvas height.Unit: px, The value should be an integer.
+Canvas height. Unit: px, The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ Canvas height.Unit: px, The value should be an integer.
 readonly canvasWidth?: number
 ```
 
-Canvas width.Unit: px, The value should be an integer.
+Canvas width. Unit: px, The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +62,13 @@ Canvas width.Unit: px, The value should be an integer.
 readonly delayTime?: number
 ```
 
-Delay of each frame in milliseconds.Unit: ms, The value should be an integer.
+Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +82,13 @@ Delay of each frame in milliseconds.Unit: ms, The value should be an integer.
 readonly disposalType?: number
 ```
 
-Disposal type of each frame in the image.0 - No disposal specified.1 - Do not dispose.2 - Restore to background color.3 - Restore to previous.The value range is all integers.
+Disposal type of each frame in the image. 0 - No disposal specified. 1 - Do not dispose. 2 - Restore to background color. 3 - Restore to previous. The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ whether the GIF image has a global color map.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GifMetadata-readonly hasGlobalColorMap?: boolean--><!--Device-GifMetadata-readonly hasGlobalColorMap?: boolean-End-->
@@ -110,11 +122,13 @@ whether the GIF image has a global color map.
 readonly loopCount?: number
 ```
 
-Loop count.The value range is all integers.
+Loop count. The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,11 +142,13 @@ Loop count.The value range is all integers.
 readonly unclampedDelayTime?: number
 ```
 
-Unclamped delay of each frame in milliseconds.Unit: ms, The value should be an integer.
+Unclamped delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

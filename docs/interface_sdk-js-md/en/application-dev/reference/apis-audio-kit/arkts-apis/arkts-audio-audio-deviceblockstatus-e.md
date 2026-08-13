@@ -2,9 +2,11 @@
 
 Enumerates the blocked statuses of audio devices.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum DeviceBlockStatus--><!--Device-audio-enum DeviceBlockStatus-End-->
 
@@ -18,9 +20,11 @@ UNBLOCKED = 0
 
 The audio device is not blocked.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceBlockStatus-UNBLOCKED = 0--><!--Device-DeviceBlockStatus-UNBLOCKED = 0-End-->
 
@@ -34,9 +38,11 @@ BLOCKED = 1
 
 The audio device is blocked.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceBlockStatus-BLOCKED = 1--><!--Device-DeviceBlockStatus-BLOCKED = 1-End-->
 

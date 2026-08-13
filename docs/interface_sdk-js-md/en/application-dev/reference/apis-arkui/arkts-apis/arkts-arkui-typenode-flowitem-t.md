@@ -1,20 +1,24 @@
 # FlowItem
 
 ```TypeScript
-type FlowItem = FlowItemFrameNode
+type FlowItem = TypedFrameNode<FlowItemInterface, FlowItemAttribute>
 ```
 
-Define the FrameNode type for FlowItem.
+Represents a FrameNode of the **FlowItem** type. This type of node allows only one child component to be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type FlowItem = FlowItemFrameNode--><!--Device-typeNode-type FlowItem = FlowItemFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type FlowItem = TypedFrameNode<FlowItemInterface, FlowItemAttribute>--><!--Device-typeNode-type FlowItem = TypedFrameNode<FlowItemInterface, FlowItemAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** FlowItemFrameNode
+**Property type:** TypedFrameNode<FlowItemInterface, FlowItemAttribute>
 

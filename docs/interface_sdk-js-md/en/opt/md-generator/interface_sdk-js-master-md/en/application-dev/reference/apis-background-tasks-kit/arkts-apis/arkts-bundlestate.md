@@ -1,4 +1,4 @@
-# @ohos.bundleState(Device Usage Statistics)
+# @ohos.bundleState
 
 This module provides APIs for collecting statistics on device usage.
 
@@ -22,24 +22,24 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate) |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate-1) |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryappusageprioritygroup) |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryappusageprioritygroup-1) |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#querycurrentbundleactivestates) |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#querycurrentbundleactivestates-1) |
+| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isIdleState) |
+| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isIdleState) |
+| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryAppUsagePriorityGroup) |
+| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryAppUsagePriorityGroup) |
+| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#queryCurrentBundleActiveStates) |
+| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#queryCurrentBundleActiveStates) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#querybundleactivestates) |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#querybundleactivestates-1) |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval) |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval-1) |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos) |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos-1) |
+| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#queryBundleActiveStates-(System-API)) |
+| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#queryBundleActiveStates-(System-API)) |
+| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#queryBundleStateInfoByInterval-(System-API)) |
+| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#queryBundleStateInfoByInterval-(System-API)) |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#queryBundleStateInfos-(System-API)) |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#queryBundleStateInfos-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

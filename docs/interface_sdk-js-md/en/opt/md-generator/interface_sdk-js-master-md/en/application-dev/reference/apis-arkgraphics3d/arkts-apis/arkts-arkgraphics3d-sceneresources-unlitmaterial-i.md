@@ -6,7 +6,9 @@ Unlit material resource
 
 **Since:** 23
 
-<!--Device-unnamed-export interface UnlitMaterial extends Material--><!--Device-unnamed-export interface UnlitMaterial extends Material-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface UnlitMaterial--><!--Device-unnamed-export interface UnlitMaterial-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,11 +18,13 @@ Unlit material resource
 baseColor: MaterialProperty
 ```
 
-Base color factor of unlit material.Value of factor.xyzw defines rgba color.
+Base color factor of unlit material. Value of factor.xyzw defines rgba color.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UnlitMaterial-baseColor: MaterialProperty--><!--Device-UnlitMaterial-baseColor: MaterialProperty-End-->
 

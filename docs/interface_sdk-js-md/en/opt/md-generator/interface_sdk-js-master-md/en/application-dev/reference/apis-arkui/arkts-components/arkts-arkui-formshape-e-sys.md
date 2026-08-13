@@ -4,6 +4,8 @@ Defines the FormShape enum.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FormShape--><!--Device-unnamed-declare enum FormShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ The rect shape.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-FormShape-RECT = 1--><!--Device-FormShape-RECT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,6 +39,8 @@ CIRCLE = 2
 The circle shape.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-FormShape-CIRCLE = 2--><!--Device-FormShape-CIRCLE = 2-End-->
 

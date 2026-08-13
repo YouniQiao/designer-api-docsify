@@ -1,10 +1,10 @@
 # PlayParameters
 
-Describes the playback parameters of the sound pool.
+Describes the playback parameters of the sound pool. These parameters are used to control the playback volume, number of loops, and priority.
 
-These parameters are used to control the playback volume, number of loops, and priority.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
 
@@ -16,13 +16,13 @@ These parameters are used to control the playback volume, number of loops, and p
 leftVolume?: number
 ```
 
-Volume of the left channel. The value range is [0.0, 1.0], and the default value is **1.0**.
-
-When the volume exceeds the boundary value, the boundary value is automatically used.
+Volume of the left channel. The value range is [0.0, 1.0], and the default value is **1.0**. When the volume exceeds the boundary value, the boundary value is automatically used.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-leftVolume?: double--><!--Device-PlayParameters-leftVolume?: double-End-->
 
@@ -34,19 +34,13 @@ When the volume exceeds the boundary value, the boundary value is automatically 
 loop?: number
 ```
 
-Number of loops.
-
-If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.
-
-If this parameter is set to a value less than 0, the content is played repeatedly.
-
-The default value is **0**, indicating that the content is played only once.
-
-If this parameter is set to a floating-point number, only the integer part is used.
+Number of loops. If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1. If this parameter is set to a value less than 0, the content is played repeatedly. The default value is **0**, indicating that the content is played only once. If this parameter is set to a floating-point number, only the integer part is used.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-loop?: int--><!--Device-PlayParameters-loop?: int-End-->
 
@@ -64,6 +58,8 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayParameters-pitch?: double--><!--Device-PlayParameters-pitch?: double-End-->
@@ -76,15 +72,13 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 priority?: number
 ```
 
-Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority.
-
-The playback priority is determined by comparing the values. The value must be an integer greater than or equal to 0. The default value is **0**.
-
-If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
+Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority. The playback priority is determined by comparing the values. The value must be an integer greater than or equal to 0. The default value is **0**. If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-priority?: int--><!--Device-PlayParameters-priority?: int-End-->
 
@@ -100,7 +94,9 @@ Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audi
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-rate?: int--><!--Device-PlayParameters-rate?: int-End-->
 
@@ -112,13 +108,13 @@ Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audi
 rightVolume?: number
 ```
 
-Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**.
-
-When the volume exceeds the boundary value, the boundary value is automatically used.
+Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**. When the volume exceeds the boundary value, the boundary value is automatically used.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-rightVolume?: double--><!--Device-PlayParameters-rightVolume?: double-End-->
 

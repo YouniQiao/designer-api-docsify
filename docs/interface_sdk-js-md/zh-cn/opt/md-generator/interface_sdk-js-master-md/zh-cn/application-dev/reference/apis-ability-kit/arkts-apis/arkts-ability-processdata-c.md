@@ -1,10 +1,10 @@
 # ProcessData
 
-进程数据的对象定义。使用接口  
-[appManager.on('applicationState')](@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))注册生命周期变化监听后，当应用或组件的生命周期变化时，系统通过[ApplicationStateObserver](./application/ApplicationStateObserver)的  
-[onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated)等方法回调给开发者。
+进程数据的对象定义。使用接口 [appManager.on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) 注册生命周期变化监听后，当应用或组件的生命周期变化时，系统通过ApplicationStateObserver的 [onProcessCreated](arkts-ability-applicationstateobserver-c.md#onProcessCreated) 等方法回调给开发者。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class ProcessData--><!--Device-unnamed-declare class ProcessData-End-->
 
@@ -20,7 +20,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProcessData-bundleName: string--><!--Device-ProcessData-bundleName: string-End-->
 
@@ -36,7 +38,9 @@ isContinuousTask: boolean
 
 **类型：** boolean
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProcessData-isContinuousTask: boolean--><!--Device-ProcessData-isContinuousTask: boolean-End-->
 
@@ -52,7 +56,9 @@ isKeepAlive: boolean
 
 **类型：** boolean
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProcessData-isKeepAlive: boolean--><!--Device-ProcessData-isKeepAlive: boolean-End-->
 
@@ -68,7 +74,9 @@ pid: number
 
 **类型：** number
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProcessData-pid: int--><!--Device-ProcessData-pid: int-End-->
 
@@ -80,21 +88,13 @@ pid: number
 state: number
 ```
 
-应用的状态，取值及对应的状态为：
-
-0 - 初始化状态，进程正在初始化，
-
-1 - 就绪状态，进程已初始化完毕，
-
-2 - 前台，
-
-4 - 后台，
-
-5 - 已终止。
+应用的状态，取值及对应的状态为： 0 - 初始化状态，进程正在初始化， 1 - 就绪状态，进程已初始化完毕， 2 - 前台， 4 - 后台， 5 - 已终止。
 
 **类型：** number
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProcessData-state: int--><!--Device-ProcessData-state: int-End-->
 
@@ -110,7 +110,9 @@ uid: number
 
 **类型：** number
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProcessData-uid: int--><!--Device-ProcessData-uid: int-End-->
 

@@ -2,9 +2,11 @@
 
 Defines the authorization information of a continuous task.
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-interface BackgroundTaskStateInfo--><!--Device-backgroundTaskManager-interface BackgroundTaskStateInfo-End-->
 
@@ -26,11 +28,13 @@ appIndex: int
 
 AppIndex of the application applying for special continuous task.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +54,11 @@ Type of user authorization status.
 
 **Type:** UserAuthResult
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,9 +78,11 @@ BundleName of the application applying for special continuous task.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,11 +100,13 @@ userId: int
 
 UserId of the application applying for special continuous task
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

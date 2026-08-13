@@ -6,9 +6,11 @@ export type NotificationPictureContent = _NotificationPictureContent
 
 Describes the picture-attached notification.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationPictureContent = _NotificationPictureContent--><!--Device-notificationManager-export type NotificationPictureContent = _NotificationPictureContent-End-->
 

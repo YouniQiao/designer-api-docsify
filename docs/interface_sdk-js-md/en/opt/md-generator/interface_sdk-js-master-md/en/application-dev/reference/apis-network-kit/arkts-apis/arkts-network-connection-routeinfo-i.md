@@ -2,7 +2,9 @@
 
 Defines network route information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface RouteInfo--><!--Device-connection-export interface RouteInfo-End-->
 
@@ -24,7 +26,9 @@ Destination Address
 
 **Type:** LinkAddress
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RouteInfo-destination: LinkAddress--><!--Device-RouteInfo-destination: LinkAddress-End-->
 
@@ -40,7 +44,9 @@ Gateway address.
 
 **Type:** NetAddress
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RouteInfo-gateway: NetAddress--><!--Device-RouteInfo-gateway: NetAddress-End-->
 
@@ -56,9 +62,29 @@ Whether a gateway is present.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RouteInfo-hasGateway: boolean--><!--Device-RouteInfo-hasGateway: boolean-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Core
+
+## iface
+
+```TypeScript
+iface: string
+```
+
+Network card name.
+
+**Type:** string
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RouteInfo-iface: string--><!--Device-RouteInfo-iface: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -74,6 +100,8 @@ Network card name.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-RouteInfo-interface: string--><!--Device-RouteInfo-interface: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -88,7 +116,9 @@ Whether the route is the default route.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RouteInfo-isDefaultRoute: boolean--><!--Device-RouteInfo-isDefaultRoute: boolean-End-->
 
@@ -105,6 +135,8 @@ Whether the route is the excluded route.
 **Type:** boolean
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-RouteInfo-isExcludedRoute?: boolean--><!--Device-RouteInfo-isExcludedRoute?: boolean-End-->
 

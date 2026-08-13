@@ -8,9 +8,11 @@ const CURSOR_DOWN: int
 
 The caret moves downward.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_DOWN: int--><!--Device-inputMethodEngine-const CURSOR_DOWN: int-End-->
 
@@ -24,9 +26,11 @@ const CURSOR_LEFT: int
 
 The caret moves leftward.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_LEFT: int--><!--Device-inputMethodEngine-const CURSOR_LEFT: int-End-->
 
@@ -40,9 +44,11 @@ const CURSOR_RIGHT: int
 
 The caret moves rightward.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_RIGHT: int--><!--Device-inputMethodEngine-const CURSOR_RIGHT: int-End-->
 
@@ -56,9 +62,11 @@ const CURSOR_UP: int
 
 The caret moves upward.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_UP: int--><!--Device-inputMethodEngine-const CURSOR_UP: int-End-->
 
@@ -72,9 +80,11 @@ const DISPLAY_MODE_FULL: int
 
 The edit box is displayed in full screen.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int-End-->
 
@@ -88,9 +98,11 @@ const DISPLAY_MODE_PART: int
 
 The edit box is displayed in half-screen mode.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int-End-->
 
@@ -104,9 +116,11 @@ const ENTER_KEY_TYPE_DONE: int
 
 Key that indicates that a task or input is complete.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int-End-->
 
@@ -120,9 +134,11 @@ const ENTER_KEY_TYPE_GO: int
 
 Key that executes a command or navigates to a specific location.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int-End-->
 
@@ -136,9 +152,11 @@ const ENTER_KEY_TYPE_NEWLINE: int
 
 Key that inserts a new line.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int-End-->
 
@@ -152,9 +170,11 @@ const ENTER_KEY_TYPE_NEXT: int
 
 Key that moves the focus to the next item in a sequence.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int-End-->
 
@@ -168,9 +188,11 @@ const ENTER_KEY_TYPE_PREVIOUS: int
 
 Key that moves the focus to the previous item in a sequence.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int-End-->
 
@@ -184,9 +206,11 @@ const ENTER_KEY_TYPE_SEARCH: int
 
 Key that initiates a search operation.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int-End-->
 
@@ -200,9 +224,11 @@ const ENTER_KEY_TYPE_SEND: int
 
 Key that sends the text to its target.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int-End-->
 
@@ -216,9 +242,11 @@ const ENTER_KEY_TYPE_UNSPECIFIED: int
 
 No function is specified for the key.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int-End-->
 
@@ -232,9 +260,11 @@ const FLAG_SELECTING: int
 
 The edit box is being selected.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const FLAG_SELECTING: int--><!--Device-inputMethodEngine-const FLAG_SELECTING: int-End-->
 
@@ -248,9 +278,11 @@ const FLAG_SINGLE_LINE: int
 
 The edit box allows only single-line input.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int--><!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int-End-->
 
@@ -264,9 +296,11 @@ const OPTION_ASCII: int
 
 ASCII values are allowed.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_ASCII: int--><!--Device-inputMethodEngine-const OPTION_ASCII: int-End-->
 
@@ -280,9 +314,11 @@ const OPTION_AUTO_CAP_CHARACTERS: int
 
 Characters are allowed.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int-End-->
 
@@ -296,9 +332,11 @@ const OPTION_AUTO_CAP_SENTENCES: int
 
 Sentences are allowed.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int-End-->
 
@@ -312,9 +350,11 @@ const OPTION_AUTO_WORDS: int
 
 Words are allowed.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int-End-->
 
@@ -328,9 +368,11 @@ const OPTION_MULTI_LINE: int
 
 Multiple lines are allowed.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int--><!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int-End-->
 
@@ -344,9 +386,11 @@ const OPTION_NONE: int
 
 No input attribute is specified.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
 
@@ -360,9 +404,11 @@ const OPTION_NO_FULLSCREEN: int
 
 Half-screen style.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
 
@@ -376,9 +422,11 @@ const PATTERN_DATETIME: int
 
 Date edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_DATETIME: int--><!--Device-inputMethodEngine-const PATTERN_DATETIME: int-End-->
 
@@ -392,9 +440,11 @@ const PATTERN_EMAIL: int
 
 Email edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_EMAIL: int--><!--Device-inputMethodEngine-const PATTERN_EMAIL: int-End-->
 
@@ -408,9 +458,11 @@ const PATTERN_NEW_PASSWORD: int
 
 New password edit box. The value is fixed at 11.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,9 +478,11 @@ const PATTERN_NULL: int
 
 Any type of edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_NULL: int--><!--Device-inputMethodEngine-const PATTERN_NULL: int-End-->
 
@@ -442,9 +496,11 @@ const PATTERN_NUMBER: int
 
 Number edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER: int-End-->
 
@@ -458,9 +514,11 @@ const PATTERN_NUMBER_DECIMAL: int
 
 Edit box for numbers with decimal points. The value is fixed at 12.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -476,9 +534,11 @@ const PATTERN_ONE_TIME_CODE: int
 
 Verification code edit box. The value is fixed at 13.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -494,9 +554,11 @@ const PATTERN_PASSWORD: int
 
 Password edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD: int-End-->
 
@@ -510,9 +572,11 @@ const PATTERN_PASSWORD_NUMBER: int
 
 Numeric password edit box.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int-End-->
 
@@ -526,9 +590,11 @@ const PATTERN_PASSWORD_SCREEN_LOCK: int
 
 Screen lock password edit box.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int-End-->
 
@@ -542,9 +608,11 @@ const PATTERN_PHONE: int
 
 Phone number edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PHONE: int--><!--Device-inputMethodEngine-const PATTERN_PHONE: int-End-->
 
@@ -558,9 +626,11 @@ const PATTERN_TEXT: int
 
 Text edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_TEXT: int--><!--Device-inputMethodEngine-const PATTERN_TEXT: int-End-->
 
@@ -574,9 +644,11 @@ const PATTERN_URI: int
 
 URI edit box.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_URI: int--><!--Device-inputMethodEngine-const PATTERN_URI: int-End-->
 
@@ -590,9 +662,11 @@ const PATTERN_USER_NAME: int
 
 User name edit box. The value is fixed at 10.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -608,9 +682,11 @@ const WINDOW_TYPE_INPUT_METHOD_FLOAT: int
 
 The input method is displayed in a floating window.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int--><!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int-End-->
 

@@ -6,6 +6,8 @@ TextStyleInterface
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface TextStyleInterface--><!--Device-unnamed-export declare interface TextStyleInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ The fontColor value of the font property object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The fontConfigs value of the text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextStyleInterface-fontConfigs?: FontConfigs--><!--Device-TextStyleInterface-fontConfigs?: FontConfigs-End-->
@@ -63,6 +69,8 @@ The fontFamily value of the font property object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ The fontSize value of the font property object.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextStyleInterface-fontSize?: LengthMetrics--><!--Device-TextStyleInterface-fontSize?: LengthMetrics-End-->
@@ -103,6 +113,8 @@ The fontStyle value of the font property object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,6 +136,8 @@ The font variation value of the text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextStyleInterface-fontVariations?: Array<FontVariation>--><!--Device-TextStyleInterface-fontVariations?: Array<FontVariation>-End-->
@@ -143,6 +157,8 @@ The fontWeight value of the font property object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,6 +180,8 @@ The stroke color of the text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextStyleInterface-strokeColor?: ResourceColor--><!--Device-TextStyleInterface-strokeColor?: ResourceColor-End-->
@@ -183,6 +201,8 @@ The stroke join style of the StyledString.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,6 +224,8 @@ The stroke width of the text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextStyleInterface-strokeWidth?: LengthMetrics--><!--Device-TextStyleInterface-strokeWidth?: LengthMetrics-End-->
@@ -223,6 +245,8 @@ The superscript value of the font property object.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

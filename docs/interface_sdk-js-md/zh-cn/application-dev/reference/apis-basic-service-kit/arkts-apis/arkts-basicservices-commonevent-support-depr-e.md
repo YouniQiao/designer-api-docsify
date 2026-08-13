@@ -20,9 +20,7 @@
 COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 ```
 
-提示用户已完成引导并加载系统。
-
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）。
+提示用户已完成引导并加载系统。 要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -730,7 +728,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 
 **废弃版本：** 9
 
-**替代接口：** [COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE](ohos.commonEventManage/commonEventManager.Support#COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE)
+**替代接口：** COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE
 
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'-End-->
 
@@ -922,9 +920,7 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 ```
 
-提示用户正在切换。
-
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+提示用户正在切换。 要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -944,9 +940,7 @@ COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 ```
 
-（预留事件，暂未支持）提示用户正在启动。
-
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示用户正在启动。 要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -986,9 +980,7 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 ```
 
-（预留事件，暂未支持）提示要停止用户。
-
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示要停止用户。 要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -1128,9 +1120,7 @@ COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'
 COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 ```
 
-提示Wi-Fi接入点已被扫描并证明可用。
-
-要订阅此事件，您的应用必须具备ohos.permission.LOCATION权限。
+提示Wi-Fi接入点已被扫描并证明可用。 要订阅此事件，您的应用必须具备ohos.permission.LOCATION权限。
 
 **起始版本：** 7
 
@@ -1150,9 +1140,7 @@ COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 ```
 
-提示Wi-Fi信号强度（RSSI）改变。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示Wi-Fi信号强度（RSSI）改变。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1212,9 +1200,7 @@ COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 ```
 
-提示有客户端加入当前设备Wi-Fi热点。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示有客户端加入当前设备Wi-Fi热点。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1234,9 +1220,7 @@ COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 ```
 
-提示客户端已断开与当前设备Wi-Fi热点的连接。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示客户端已断开与当前设备Wi-Fi热点的连接。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1276,9 +1260,7 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 ```
 
-提示Wi-Fi P2P连接状态改变。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO和ohos.permission.LOCATION权限。
+提示Wi-Fi P2P连接状态改变。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO和ohos.permission.LOCATION权限。
 
 **起始版本：** 7
 
@@ -1298,9 +1280,7 @@ COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 ```
 
-提示Wi-Fi P2P状态发生变更，如启用和禁用。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示Wi-Fi P2P状态发生变更，如启用和禁用。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1320,9 +1300,7 @@ COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'
 ```
 
-提示Wi-Fi P2P对等体状态变化。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示Wi-Fi P2P对等体状态变化。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1342,9 +1320,7 @@ COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE
 COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'
 ```
 
-提示Wi-Fi P2P发现状态变化。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示Wi-Fi P2P发现状态变化。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1364,9 +1340,7 @@ COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER
 COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'
 ```
 
-提示Wi-Fi P2P当前设备状态变化。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示Wi-Fi P2P当前设备状态变化。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1386,9 +1360,7 @@ COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRE
 COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'
 ```
 
-提示Wi-Fi P2P群组信息已更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+提示Wi-Fi P2P群组信息已更改。 要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 7
 
@@ -1408,9 +1380,7 @@ COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CH
 COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙免提通信连接状态。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙免提通信连接状态。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1430,9 +1400,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetoot
 COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示连接到具有蓝牙免提功能的设备处于活动状态。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示连接到具有蓝牙免提功能的设备处于活动状态。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1452,9 +1420,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetoo
 COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP连接状态已更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP连接状态已更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1474,9 +1440,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP连接状态。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP连接状态。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1496,9 +1460,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示使用蓝牙A2DP连接的设备处于活动状态。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示使用蓝牙A2DP连接的设备处于活动状态。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1518,9 +1480,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP播放状态发生改变。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP播放状态发生改变。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1540,9 +1500,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP的AVRCP连接状态已更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP的AVRCP连接状态已更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1562,9 +1520,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.blue
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP音频编解码状态更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP音频编解码状态更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1584,9 +1540,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotedevice.DISCOVERED'
 ```
 
-（预留事件，暂未支持）提示发现远程蓝牙设备。
-
-要订阅此事件，您的应用必须具备ohos.permission.LOCATION和ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示发现远程蓝牙设备。 要订阅此事件，您的应用必须具备ohos.permission.LOCATION和ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1606,9 +1560,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备的蓝牙类别已更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示远程蓝牙设备的蓝牙类别已更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1628,9 +1580,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remotedevice.ACL_CONNECTED'
 ```
 
-（预留事件，暂未支持）提示已与远程蓝牙设备建立低级别（ACL）连接。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示已与远程蓝牙设备建立低级别（ACL）连接。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1650,9 +1600,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remot
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'
 ```
 
-（预留事件，暂未支持）提示低级别（ACL）连接已从远程蓝牙设备断开。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示低级别（ACL）连接已从远程蓝牙设备断开。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1672,9 +1620,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.re
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remotedevice.NAME_UPDATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备的友好名称首次被检索或自上次检索以来被更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示远程蓝牙设备的友好名称首次被检索或自上次检索以来被更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1694,9 +1640,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remoted
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotedevice.PAIR_STATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备连接状态更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示远程蓝牙设备连接状态更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1716,9 +1660,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备的电池电量首次被检索或自上次检索以来被更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示远程蓝牙设备的电池电量首次被检索或自上次检索以来被更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1758,9 +1700,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotedevice.UUID_VALUE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备UUID连接状态。
-
-要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
+（预留事件，暂未支持）提示远程蓝牙设备UUID连接状态。 要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1780,9 +1720,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remotedevice.PAIRING_REQ'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备配对请求。
-
-要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
+（预留事件，暂未支持）提示远程蓝牙设备配对请求。 要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -1962,9 +1900,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetoo
 COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙适配器状态已更改，例如蓝牙已打开或关闭。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙适配器状态已更改，例如蓝牙已打开或关闭。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2004,9 +1940,7 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_D
 COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 ```
 
-（预留事件，暂未支持）提示用户打开蓝牙请求。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示用户打开蓝牙请求。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2026,9 +1960,7 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABLE'
 ```
 
-（预留事件，暂未支持）提示用户关闭蓝牙请求。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示用户关闭蓝牙请求。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2048,9 +1980,7 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABL
 COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_MODE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示设备蓝牙扫描模式更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示设备蓝牙扫描模式更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2070,9 +2000,7 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_
 COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISCOVERY_STARTED'
 ```
 
-（预留事件，暂未支持）提示设备上已启动蓝牙扫描。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示设备上已启动蓝牙扫描。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2092,9 +2020,7 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISC
 COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DISCOVERY_FINISHED'
 ```
 
-（预留事件，暂未支持）提示设备上蓝牙扫描完成。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示设备上蓝牙扫描完成。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2114,9 +2040,7 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DIS
 COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDATE'
 ```
 
-（预留事件，暂未支持）提示设备蓝牙适配器名称已更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示设备蓝牙适配器名称已更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2136,9 +2060,7 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDAT
 COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP宿的连接状态已更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP宿的连接状态已更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2158,9 +2080,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2
 COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP宿的播放状态发生改变。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP宿的播放状态发生改变。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2180,9 +2100,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2
 COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP宿的音频状态已更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+（预留事件，暂未支持）提示蓝牙A2DP宿的音频状态已更改。 要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 7
 
@@ -2222,9 +2140,7 @@ COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_
 COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'
 ```
 
-（预留事件，暂未支持）提示检测到NFC设备RF字段处于使能状态。
-
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SECURE_SETTINGS权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示检测到NFC设备RF字段处于使能状态。 要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SECURE_SETTINGS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2244,9 +2160,7 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'
 ```
 
-（预留事件，暂未支持）提示检测到NFC设备RF字段处于关闭状态。
-
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SECURE_SETTINGS权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示检测到NFC设备RF字段处于关闭状态。 要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SECURE_SETTINGS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2346,9 +2260,7 @@ COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'
 COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 ```
 
-提示用户已添加到系统中。
-
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+提示用户已添加到系统中。 要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2368,9 +2280,7 @@ COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 ```
 
-提示用户已从系统中删除。
-
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+提示用户已从系统中删除。 要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2390,9 +2300,7 @@ COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 ```
 
-（预留事件，暂未支持）提示有某个能力已被添加。
-
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+（预留事件，暂未支持）提示有某个能力已被添加。 要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
 
 **起始版本：** 7
 
@@ -2412,9 +2320,7 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 ```
 
-（预留事件，暂未支持）提示已删除某个能力。
-
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+（预留事件，暂未支持）提示已删除某个能力。 要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
 
 **起始版本：** 7
 
@@ -2434,9 +2340,7 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 ```
 
-（预留事件，暂未支持）提示能力已更新。
-
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+（预留事件，暂未支持）提示能力已更新。 要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
 
 **起始版本：** 7
 
@@ -2776,9 +2680,7 @@ COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCES
 COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 ```
 
-（预留事件，暂未支持）提示外部存储设备状态变更为移除。
-
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示外部存储设备状态变更为移除。 要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2798,9 +2700,7 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 ```
 
-（预留事件，暂未支持）提示外部存储设备状态变更为卸载。
-
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示外部存储设备状态变更为卸载。 要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2820,9 +2720,7 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 ```
 
-（预留事件，暂未支持）提示外部存储设备状态变更为挂载。
-
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示外部存储设备状态变更为挂载。 要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2842,9 +2740,7 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 ```
 
-（预留事件，暂未支持）提示外部存储设备在挂载状态下被移除。
-
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示外部存储设备在挂载状态下被移除。 要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2864,9 +2760,7 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 ```
 
-（预留事件，暂未支持）提示外部存储设备在插卡情况下无法挂载。
-
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示外部存储设备在插卡情况下无法挂载。 要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2886,9 +2780,7 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 ```
 
-（预留事件，暂未支持）提示用户已作出弹出外部存储介质的操作（系统软件层面的交互操作，非直接物理弹出）。
-
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示用户已作出弹出外部存储介质的操作（系统软件层面的交互操作，非直接物理弹出）。 要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2908,9 +2800,7 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'
 ```
 
-（预留事件，暂未支持）提示账户发生可见性的更改。
-
-要订阅此事件，您的应用必须具备ohos.permission.GET_APP_ACCOUNTS权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示账户发生可见性的更改。 要订阅此事件，您的应用必须具备ohos.permission.GET_APP_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2930,9 +2820,7 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 ```
 
-（预留事件，暂未支持）提示有账户被删除。
-
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示有账户被删除。 要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 
@@ -2952,9 +2840,7 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 ```
 
-（预留事件，暂未支持）提示foundation已准备好。
-
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）。
+（预留事件，暂未支持）提示foundation已准备好。 要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）。
 
 **起始版本：** 7
 

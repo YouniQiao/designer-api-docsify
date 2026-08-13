@@ -2,7 +2,9 @@
 
 Contract request data
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface ContractRequestData--><!--Device-eSIM-export interface ContractRequestData-End-->
 
@@ -26,7 +28,9 @@ Nonce required to get contract info
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContractRequestData-nonce: string--><!--Device-ContractRequestData-nonce: string-End-->
 
@@ -44,7 +48,9 @@ Euicc Ci PKID to be used, required to get contract info
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContractRequestData-pkid: string--><!--Device-ContractRequestData-pkid: string-End-->
 
@@ -62,7 +68,9 @@ Public key required to get contract info
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContractRequestData-publicKey: string--><!--Device-ContractRequestData-publicKey: string-End-->
 

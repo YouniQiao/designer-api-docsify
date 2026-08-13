@@ -2,7 +2,9 @@
 
 Describes enroll intelligent voice engine.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngineDescriptor--><!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngineDescriptor-End-->
 
@@ -26,7 +28,9 @@ Wakeup phrase.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnrollIntelligentVoiceEngineDescriptor-wakeupPhrase: string--><!--Device-EnrollIntelligentVoiceEngineDescriptor-wakeupPhrase: string-End-->
 

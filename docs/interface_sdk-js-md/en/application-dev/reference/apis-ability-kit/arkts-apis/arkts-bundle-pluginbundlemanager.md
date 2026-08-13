@@ -4,7 +4,9 @@ This module is used to manage plugins for applications.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -24,9 +26,9 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getalllocalplugininfoforself) | Obtains information about all local plugins installed on the current application. |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installlocalplugin) | Install the plugin for self application. |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstalllocalplugin) | Uninstall the plugin for self application. |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getAllLocalPluginInfoForSelf) | Obtains information about all local plugins installed on the current application. |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installLocalPlugin) | Install the plugin for self application. |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstallLocalPlugin) | Uninstall the plugin for self application. |
 
 ### Types
 

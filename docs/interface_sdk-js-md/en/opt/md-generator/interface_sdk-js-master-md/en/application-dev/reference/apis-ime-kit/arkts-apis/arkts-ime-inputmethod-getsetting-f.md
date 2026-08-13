@@ -14,7 +14,9 @@ function getSetting(): InputMethodSetting
 
 Input method setting
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function getSetting(): InputMethodSetting--><!--Device-inputMethod-function getSetting(): InputMethodSetting-End-->
 
@@ -30,7 +32,7 @@ Input method setting
 
 | Error Code ID |
 | --- |
-| [12800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800007-input-method-setter-error) |
+| [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) |
 
 ## Examples
 

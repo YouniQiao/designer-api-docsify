@@ -1,10 +1,10 @@
 # DownloadTask
 
-下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile-1)获取，callback形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)获取。
+下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过 [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)获取，callback形式通过 [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) 获取。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
 
@@ -16,13 +16,11 @@
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-移除下载的任务，使用callback异步回调。
+移除下载的任务，使用callback异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -40,7 +38,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -75,13 +73,11 @@ try {
 delete(): Promise<boolean>
 ```
 
-移除下载的任务，使用Promise异步回调。
+移除下载的任务，使用Promise异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -99,7 +95,7 @@ delete(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -131,13 +127,11 @@ try {
 getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-查询下载的任务，使用callback异步回调。
+查询下载的任务，使用callback异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -155,7 +149,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -190,13 +184,11 @@ try {
 getTaskInfo(): Promise<DownloadInfo>
 ```
 
-查询下载任务的信息，使用Promise异步回调。
+查询下载任务的信息，使用Promise异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -214,7 +206,7 @@ getTaskInfo(): Promise<DownloadInfo>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -247,13 +239,11 @@ try {
 getTaskMimeType(callback: AsyncCallback<string>): void
 ```
 
-查询下载任务的 MimeType（HTTP中表示资源的媒体类型），使用callback异步回调。
+查询下载任务的 MimeType（HTTP中表示资源的媒体类型），使用callback异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -271,7 +261,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -306,13 +296,11 @@ try {
 getTaskMimeType(): Promise<string>
 ```
 
-查询下载的任务的MimeType(HTTP中表示资源的媒体类型)，使用Promise异步回调。
+查询下载的任务的MimeType(HTTP中表示资源的媒体类型)，使用Promise异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -330,7 +318,7 @@ getTaskMimeType(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -357,17 +345,19 @@ try {
 }
 ```
 
-## off('progress')
+## offComplete
 
 ```TypeScript
-off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => void): void
+offComplete(callback?: DownloadCompleteCallback): void
 ```
 
-取消订阅下载任务进度事件。
+Called when the current download session complete.
 
-**起始版本：** 6
+**起始版本：** 23
 
-<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
+**废弃版本：** -1
+
+<!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -375,48 +365,97 @@ off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'progress' | 是 |
-| callback | (receivedSize: number, totalSize: number) = & gt; void | 否 |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 否 |
 
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## 示例
+## offFail
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let progressCallback1 = (receivedSize: number, totalSize: number) => {
-      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
-    };
-    let progressCallback2 = (receivedSize: number, totalSize: number) => {
-      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
-    };
-    downloadTask.on('progress', progressCallback1);
-    downloadTask.on('progress', progressCallback2);
-    // 表示取消progressCallback1的订阅
-    downloadTask.off('progress', progressCallback1);
-    // 表示取消订阅下载任务进度事件的所有回调
-    downloadTask.off('progress');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
+offFail(callback?: DownloadFailCallback): void
 ```
 
-## off('complete' | 'pause' | 'remove')
+Called when the current download session fails.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 否 |
+
+## offPause
+
+```TypeScript
+offPause(callback?: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 否 |
+
+## offProgress
+
+```TypeScript
+offProgress(callback?: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 否 |
+
+## offRemove
+
+```TypeScript
+offRemove(callback?: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 否 |
+
+## off_complete
 
 ```TypeScript
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
@@ -425,6 +464,8 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 取消订阅下载任务相关的事件。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
@@ -441,7 +482,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -501,177 +542,7 @@ try {
 }
 ```
 
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-取消订阅下载任务相关的事件。
-
-**起始版本：** 7
-
-<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // 表示取消completeCallback1的订阅
-    downloadTask.off('complete', completeCallback1);
-    // 表示取消订阅下载任务完成的所有回调
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // 表示取消pauseCallback1的订阅
-    downloadTask.off('pause', pauseCallback1);
-    // 表示取消订阅下载任务暂停的所有回调
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // 表示取消removeCallback1的订阅
-    downloadTask.off('remove', removeCallback1);
-    // 表示取消订阅下载任务移除的所有回调
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-取消订阅下载任务相关的事件。
-
-**起始版本：** 7
-
-<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () = & gt; void | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // 表示取消completeCallback1的订阅
-    downloadTask.off('complete', completeCallback1);
-    // 表示取消订阅下载任务完成的所有回调
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // 表示取消pauseCallback1的订阅
-    downloadTask.off('pause', pauseCallback1);
-    // 表示取消订阅下载任务暂停的所有回调
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // 表示取消removeCallback1的订阅
-    downloadTask.off('remove', removeCallback1);
-    // 表示取消订阅下载任务移除的所有回调
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## off('fail')
+## off_fail
 
 ```TypeScript
 off(type: 'fail', callback?: (err: number) => void): void
@@ -680,6 +551,8 @@ off(type: 'fail', callback?: (err: number) => void): void
 取消订阅下载任务失败事件。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
 
@@ -696,7 +569,7 @@ off(type: 'fail', callback?: (err: number) => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -730,21 +603,106 @@ try {
 }
 ```
 
-## on('progress')
+## off_pause
 
 ```TypeScript
-on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void): void
+off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 ```
 
-订阅下载任务进度事件，使用callback异步回调。
+取消订阅下载任务相关的事件。
 
-> **说明：**
-> 
-> 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
+**起始版本：** 7
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | 是 |
+| callback | () = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.on('complete', completeCallback1);
+    downloadTask.on('complete', completeCallback2);
+    // 表示取消completeCallback1的订阅
+    downloadTask.off('complete', completeCallback1);
+    // 表示取消订阅下载任务完成的所有回调
+    downloadTask.off('complete');
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.on('pause', pauseCallback1);
+    downloadTask.on('pause', pauseCallback2);
+    // 表示取消pauseCallback1的订阅
+    downloadTask.off('pause', pauseCallback1);
+    // 表示取消订阅下载任务暂停的所有回调
+    downloadTask.off('pause');
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.on('remove', removeCallback1);
+    downloadTask.on('remove', removeCallback2);
+    // 表示取消removeCallback1的订阅
+    downloadTask.off('remove', removeCallback1);
+    // 表示取消订阅下载任务移除的所有回调
+    downloadTask.off('remove');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## off_progress
+
+```TypeScript
+off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => void): void
+```
+
+取消订阅下载任务进度事件。
 
 **起始版本：** 6
 
-<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
+**废弃版本：** -1
+
+<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -753,13 +711,13 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'progress' | 是 |
-| callback | (receivedSize: number, totalSize: number) = & gt; void | 是 |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -773,10 +731,18 @@ try {
   // 需要手动将url替换为真实服务器的HTTP协议地址
   request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
     let downloadTask: request.DownloadTask = data;
-    let progressCallback = (receivedSize: number, totalSize: number) => {
-      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    let progressCallback1 = (receivedSize: number, totalSize: number) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
     };
-    downloadTask.on('progress', progressCallback);
+    let progressCallback2 = (receivedSize: number, totalSize: number) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
+    };
+    downloadTask.on('progress', progressCallback1);
+    downloadTask.on('progress', progressCallback2);
+    // 表示取消progressCallback1的订阅
+    downloadTask.off('progress', progressCallback1);
+    // 表示取消订阅下载任务进度事件的所有回调
+    downloadTask.off('progress');
   }).catch((err: BusinessError) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
   })
@@ -785,7 +751,204 @@ try {
 }
 ```
 
-## on('complete' | 'pause' | 'remove')
+## off_remove
+
+```TypeScript
+off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
+```
+
+取消订阅下载任务相关的事件。
+
+**起始版本：** 7
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | 是 |
+| callback | () = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.on('complete', completeCallback1);
+    downloadTask.on('complete', completeCallback2);
+    // 表示取消completeCallback1的订阅
+    downloadTask.off('complete', completeCallback1);
+    // 表示取消订阅下载任务完成的所有回调
+    downloadTask.off('complete');
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.on('pause', pauseCallback1);
+    downloadTask.on('pause', pauseCallback2);
+    // 表示取消pauseCallback1的订阅
+    downloadTask.off('pause', pauseCallback1);
+    // 表示取消订阅下载任务暂停的所有回调
+    downloadTask.off('pause');
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.on('remove', removeCallback1);
+    downloadTask.on('remove', removeCallback2);
+    // 表示取消removeCallback1的订阅
+    downloadTask.off('remove', removeCallback1);
+    // 表示取消订阅下载任务移除的所有回调
+    downloadTask.off('remove');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onComplete
+
+```TypeScript
+onComplete(callback: DownloadCompleteCallback): void
+```
+
+Called when the current download session complete.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 是 |
+
+## onFail
+
+```TypeScript
+onFail(callback: DownloadFailCallback): void
+```
+
+Called when the current download session fails.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 是 |
+
+## onPause
+
+```TypeScript
+onPause(callback: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 是 |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 是 |
+
+## onRemove
+
+```TypeScript
+onRemove(callback: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 是 |
+
+## on_complete
 
 ```TypeScript
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
@@ -794,6 +957,8 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 订阅下载任务相关的事件，使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
@@ -810,7 +975,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -846,129 +1011,7 @@ try {
 }
 ```
 
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-订阅下载任务相关的事件，使用callback异步回调。
-
-**起始版本：** 7
-
-<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-订阅下载任务相关的事件，使用callback异步回调。
-
-**起始版本：** 7
-
-<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () = & gt; void | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## on('fail')
+## on_fail
 
 ```TypeScript
 on(type: 'fail', callback: (err: number) => void): void
@@ -977,6 +1020,8 @@ on(type: 'fail', callback: (err: number) => void): void
 订阅下载任务失败事件，使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
 
@@ -993,7 +1038,7 @@ on(type: 'fail', callback: (err: number) => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1019,24 +1064,198 @@ try {
 }
 ```
 
+## on_pause
+
+```TypeScript
+on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
+```
+
+订阅下载任务相关的事件，使用callback异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | 是 |
+| callback | () = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.on('complete', completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.on('pause', pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.on('remove', removeCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on_progress
+
+```TypeScript
+on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void): void
+```
+
+订阅下载任务进度事件，使用callback异步回调。 > **说明：** > > 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
+
+**起始版本：** 6
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'progress' | 是 |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let progressCallback = (receivedSize: number, totalSize: number) => {
+      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    };
+    downloadTask.on('progress', progressCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on_remove
+
+```TypeScript
+on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
+```
+
+订阅下载任务相关的事件，使用callback异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** -1
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | 是 |
+| callback | () = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.on('complete', completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.on('pause', pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.on('remove', removeCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## pause
 
 ```TypeScript
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停下载正在运行中的任务，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [suspend](#suspend)替代。
+暂停下载正在运行中的任务，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [suspend](#suspend)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [suspend](request.DownloadTask.suspend(callback:)
+**替代接口：** [suspend](#suspend)(callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1054,7 +1273,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1074,11 +1293,7 @@ downloadTask.pause((err: BusinessError) => {
 pause(): Promise<void>
 ```
 
-暂停下载正在运行中的任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
+暂停下载正在运行中的任务，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
 
 **起始版本：** 7
 
@@ -1102,7 +1317,7 @@ pause(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1120,18 +1335,13 @@ downloadTask.pause().then(() => {
 query(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-查询下载任务，返回下载任务的信息，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskInfo](#getTaskInfo)替代。
+查询下载任务，返回下载任务的信息，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [getTaskInfo](#getTaskInfo)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getTaskInfo](request.DownloadTask.getTaskInfo(callback:)
+**替代接口：** [getTaskInfo](#getTaskInfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1149,7 +1359,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1169,11 +1379,7 @@ downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo) => {
 query(): Promise<DownloadInfo>
 ```
 
-查询下载任务，返回下载任务的信息，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#getTaskInfo)替代。
+查询下载任务，返回下载任务的信息，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#getTaskInfo)替代。
 
 **起始版本：** 7
 
@@ -1197,7 +1403,7 @@ query(): Promise<DownloadInfo>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1215,18 +1421,13 @@ downloadTask.query().then((downloadInfo) => {
 queryMimeType(callback: AsyncCallback<string>): void
 ```
 
-查询下载的任务的MimeType，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskMimeType](#getTaskMimeType)替代。
+查询下载的任务的MimeType，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [getTaskMimeType](#getTaskMimeType)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getTaskMimeType](request.DownloadTask.getTaskMimeType(callback:)
+**替代接口：** [getTaskMimeType](#getTaskMimeType)(callback: AsyncCallback&lt;string&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1244,7 +1445,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1264,11 +1465,7 @@ downloadTask.queryMimeType((err: BusinessError, data: string) => {
 queryMimeType(): Promise<string>
 ```
 
-查询下载任务的MimeType，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#getTaskMimeType)替代。
+查询下载任务的MimeType，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#getTaskMimeType)替代。
 
 **起始版本：** 7
 
@@ -1292,7 +1489,7 @@ queryMimeType(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1310,18 +1507,13 @@ downloadTask.queryMimeType().then((data: string) => {
 remove(callback: AsyncCallback<boolean>): void
 ```
 
-移除下载的任务，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+移除下载的任务，使用callback异步回调。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [delete](request.UploadTask.delete(callback:)
+**替代接口：** [delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1339,7 +1531,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1359,11 +1551,7 @@ downloadTask.remove((err, result) => {
 remove(): Promise<boolean>
 ```
 
-移除下载的任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+移除下载的任务，使用Promise异步回调。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **起始版本：** 6
 
@@ -1387,7 +1575,7 @@ remove(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1405,13 +1593,11 @@ downloadTask.remove().then((result) => {
 restore(callback: AsyncCallback<boolean>): void
 ```
 
-重新启动被暂停的下载任务，使用callback异步回调。
+重新启动被暂停的下载任务，使用callback异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1429,7 +1615,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1464,13 +1650,11 @@ try {
 restore(): Promise<boolean>
 ```
 
-重新启动被暂停的下载任务，使用Promise异步回调。
+重新启动被暂停的下载任务，使用Promise异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1488,7 +1672,7 @@ restore(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1521,18 +1705,13 @@ try {
 resume(callback: AsyncCallback<void>): void
 ```
 
-重新启动被暂停的下载任务，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [restore](#restore)替代。
+重新启动被暂停的下载任务，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [restore](#restore)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [restore](request.DownloadTask.restore(callback:)
+**替代接口：** [restore](#restore)(callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1550,7 +1729,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1570,11 +1749,7 @@ downloadTask.resume((err: BusinessError) => {
 resume(): Promise<void>
 ```
 
-重新启动被暂停的下载任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
+重新启动被暂停的下载任务，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
 
 **起始版本：** 7
 
@@ -1598,7 +1773,7 @@ resume(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1616,13 +1791,11 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用callback异步回调。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用callback异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1640,7 +1813,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1675,13 +1848,11 @@ try {
 suspend(): Promise<boolean>
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用Promise异步回调。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用Promise异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1699,7 +1870,7 @@ suspend(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

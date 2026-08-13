@@ -2,7 +2,9 @@
 
 描述已授权的包信息。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface GrantedBundleInfo--><!--Device-unnamed-export interface GrantedBundleInfo-End-->
 
@@ -14,11 +16,13 @@
 readonly appIndex: number
 ```
 
-应用的分身索引标识，仅在分身应用中生效。从[ApplicationInfo](@link ./bundleManager/ApplicationInfo::ApplicationInfo)中appIndex获取。
+应用的分身索引标识，仅在分身应用中生效。 从ApplicationInfo中appIndex获取。
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GrantedBundleInfo-readonly appIndex: int--><!--Device-GrantedBundleInfo-readonly appIndex: int-End-->
 
@@ -30,11 +34,13 @@ readonly appIndex: number
 readonly appName?: string
 ```
 
-应用的名称。从[ApplicationInfo](@link ./bundleManager/ApplicationInfo::ApplicationInfo)中label获取。
+应用的名称。 从ApplicationInfo中label获取。
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GrantedBundleInfo-readonly appName?: string--><!--Device-GrantedBundleInfo-readonly appName?: string-End-->
 
@@ -50,7 +56,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GrantedBundleInfo-bundleName: string--><!--Device-GrantedBundleInfo-bundleName: string-End-->
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface EffectComponentOptions--><!--Device-unnamed-export declare interface EffectComponentOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +20,15 @@
 effectLayer?: EffectLayer
 ```
 
-EffectComponent的渲染层级。
-
-默认值：EffectLayer.NONE
+EffectComponent的渲染层级。 默认值：EffectLayer.NONE
 
 **类型：** [EffectLayer](arkts-arkui-effectcomponent-effectlayer-e-sys.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

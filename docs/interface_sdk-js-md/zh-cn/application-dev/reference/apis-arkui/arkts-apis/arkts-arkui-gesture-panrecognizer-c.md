@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class PanRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class PanRecognizer extends GestureRecognizer-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class PanRecognizer--><!--Device-unnamed-export declare class PanRecognizer-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ getDirection(): PanDirection
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ getDistance(): double
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanRecognizer-getDistance(): double--><!--Device-PanRecognizer-getDistance(): double-End-->
@@ -66,16 +72,13 @@ getDistance(): double
 getDistanceMap(): Map<SourceTool, double>
 ```
 
-返回滑动手势识别器在不同输入源的情况下触发的最小滑动距离。
-
-> **说明：**
-> 
-> 仅支持对通过Pan手势初始化配置修改的设备类型进行阈值查询。对于默认滑动阈值，可通过查询
-> [SourceTool](SourceTool).Unknown类型获取。其他未主动设置的类型则无法获取。
+返回滑动手势识别器在不同输入源的情况下触发的最小滑动距离。 > **说明：** > > 仅支持对通过Pan手势初始化配置修改的设备类型进行阈值查询。对于默认滑动阈值，可通过查询 > SourceTool.Unknown类型获取。其他未主动设置的类型则无法获取。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,6 +103,8 @@ getPanGestureOptions(): PanGestureOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

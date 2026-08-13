@@ -6,6 +6,8 @@ Describes the **ListItemGroup** component parameter.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ListItemGroupOptions--><!--Device-unnamed-declare interface ListItemGroupOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Footer of the list item group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ListItemGroupOptions-footer?: CustomBuilder--><!--Device-ListItemGroupOptions-footer?: CustomBuilder-End-->
@@ -36,13 +40,15 @@ Footer of the list item group.
 footerComponent?: ComponentContent
 ```
 
-Footer of the list item group, in the type of ComponentContent.This parameter takes precedence over the footer parameter. This means that, if both footer and footerComponent are set, the value of footerComponent is used.To avoid display issues, do not assign the same footerComponent to different ListItemGroup components.
+Footer of the list item group, in the type of ComponentContent. This parameter takes precedence over the footer parameter. This means that, if both footer and footerComponent are set, the value of footerComponent is used. To avoid display issues, do not assign the same footerComponent to different ListItemGroup components.
 
 **Type:** ComponentContent
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +64,7 @@ Footer of the list item group, in the type of ComponentContent.This parameter ta
 footerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-Footer style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the footer component is displayed in floating mode during scrolling.
+Footer style of ListItemGroup. If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the footer component is displayed in floating mode during scrolling.
 
 **Type:** [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md)
 
@@ -67,6 +73,8 @@ Footer style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFoo
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Header of the list item group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ListItemGroupOptions-header?: CustomBuilder--><!--Device-ListItemGroupOptions-header?: CustomBuilder-End-->
@@ -102,13 +112,15 @@ Header of the list item group.
 headerComponent?: ComponentContent
 ```
 
-Header of the list item group, in the type of ComponentContent.This parameter takes precedence over the header parameter. This means that, if both header and headerComponent are set, the value of headerComponent is used.To avoid display issues, do not assign the same headerComponent to different ListItemGroup components.
+Header of the list item group, in the type of ComponentContent. This parameter takes precedence over the header parameter. This means that, if both header and headerComponent are set, the value of headerComponent is used. To avoid display issues, do not assign the same headerComponent to different ListItemGroup components.
 
 **Type:** ComponentContent
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,7 +136,7 @@ Header of the list item group, in the type of ComponentContent.This parameter ta
 headerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-Header style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the header component is displayed in floating mode during scrolling.
+Header style of ListItemGroup. If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the header component is displayed in floating mode during scrolling.
 
 **Type:** [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md)
 
@@ -133,6 +145,8 @@ Header style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFoo
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,7 +162,7 @@ Header style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFoo
 space?: number | string
 ```
 
-Spacing between list items.This parameter only affects the spacing between list items,but not spacing between the header and list items or between the footer and list items.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp
+Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. &lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp
 
 **Type:** number \| string
 
@@ -157,6 +171,8 @@ Spacing between list items.This parameter only affects the spacing between list 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -170,13 +186,15 @@ Spacing between list items.This parameter only affects the spacing between list 
 spaceWidth?: Dimension
 ```
 
-Spacing between list items.This parameter only affects the spacing between list items,but not spacing between the header and list items or between the footer and list items.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp&lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence.When **spaceWidth** is **undefined** or **null**, **space** takes effect.
+Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. &lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp &lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence. When **spaceWidth** is **undefined** or **null**, **space** takes effect.
 
 **Type:** Dimension
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -199,6 +217,8 @@ Style of the list item.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

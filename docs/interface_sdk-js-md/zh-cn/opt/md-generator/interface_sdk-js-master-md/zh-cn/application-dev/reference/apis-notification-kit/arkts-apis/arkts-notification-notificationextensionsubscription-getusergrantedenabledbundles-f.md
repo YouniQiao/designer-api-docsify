@@ -14,7 +14,9 @@ function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 
 获取本应用中“已获取的本机通知”通知开关开启的应用列表。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -32,9 +34,9 @@ function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

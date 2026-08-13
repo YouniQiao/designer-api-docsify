@@ -1,10 +1,6 @@
 # ResultSet
 
-结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。
-
-> **说明：**
-> 
-> 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet)。
+结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。 > **说明：** > > 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet)。
 
 **起始版本：** 7
 
@@ -12,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [relationalStore](arkts-data-relationalstore.md#relationalStore)
+**替代接口：** [relationalStore](arkts-data-relationalstore.md#@ohos.data.relationalStore)
 
 <!--Device-unnamed-export interface ResultSet--><!--Device-unnamed-export interface ResultSet-End-->
 
@@ -32,7 +28,7 @@ close(): void
 
 **废弃版本：** 9
 
-**替代接口：** [close](ohos.data.relationalStore.ResultSet.close)
+**替代接口：** close
 
 <!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
@@ -64,7 +60,7 @@ getBlob(columnIndex: number): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** [getBlob](ohos.data.relationalStore.ResultSet.getBlob)
+**替代接口：** getBlob
 
 <!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array--><!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array-End-->
 
@@ -102,7 +98,7 @@ getColumnIndex(columnName: string): number
 
 **废弃版本：** 9
 
-**替代接口：** [getColumnIndex](ohos.data.relationalStore.ResultSet.getColumnIndex)
+**替代接口：** getColumnIndex
 
 <!--Device-ResultSet-getColumnIndex(columnName: string): number--><!--Device-ResultSet-getColumnIndex(columnName: string): number-End-->
 
@@ -146,7 +142,7 @@ getColumnName(columnIndex: number): string
 
 **废弃版本：** 9
 
-**替代接口：** [getColumnName](ohos.data.relationalStore.ResultSet.getColumnName)
+**替代接口：** getColumnName
 
 <!--Device-ResultSet-getColumnName(columnIndex: number): string--><!--Device-ResultSet-getColumnName(columnIndex: number): string-End-->
 
@@ -186,7 +182,7 @@ getDouble(columnIndex: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [getDouble](ohos.data.relationalStore.ResultSet.getDouble)
+**替代接口：** getDouble
 
 <!--Device-ResultSet-getDouble(columnIndex: number): number--><!--Device-ResultSet-getDouble(columnIndex: number): number-End-->
 
@@ -224,7 +220,7 @@ getLong(columnIndex: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [getLong](ohos.data.relationalStore.ResultSet.getLong)
+**替代接口：** getLong
 
 <!--Device-ResultSet-getLong(columnIndex: number): number--><!--Device-ResultSet-getLong(columnIndex: number): number-End-->
 
@@ -240,7 +236,7 @@ getLong(columnIndex: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 以Long形式返回指定列的值。&lt;br/&gt;该接口支持的数据范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议使用 [getDouble](../../../reference/apis-arkdata/js-apis-data-resultset.md#getdouble)。 |
+| number | 以Long形式返回指定列的值。&lt;br/&gt;该接口支持的数据范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议使用 getDouble。 |
 
 ## 示例
 
@@ -262,7 +258,7 @@ getString(columnIndex: number): string
 
 **废弃版本：** 9
 
-**替代接口：** [getString](ohos.data.relationalStore.ResultSet.getString)
+**替代接口：** getString
 
 <!--Device-ResultSet-getString(columnIndex: number): string--><!--Device-ResultSet-getString(columnIndex: number): string-End-->
 
@@ -300,7 +296,7 @@ goTo(offset: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [goTo](ohos.data.relationalStore.ResultSet.goTo)
+**替代接口：** goTo
 
 <!--Device-ResultSet-goTo(offset: number): boolean--><!--Device-ResultSet-goTo(offset: number): boolean-End-->
 
@@ -345,7 +341,7 @@ goToFirstRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [goToFirstRow](ohos.data.relationalStore.ResultSet.goToFirstRow)
+**替代接口：** goToFirstRow
 
 <!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
 
@@ -384,7 +380,7 @@ goToLastRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [goToLastRow](ohos.data.relationalStore.ResultSet.goToLastRow)
+**替代接口：** goToLastRow
 
 <!--Device-ResultSet-goToLastRow(): boolean--><!--Device-ResultSet-goToLastRow(): boolean-End-->
 
@@ -423,7 +419,7 @@ goToNextRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [goToNextRow](ohos.data.relationalStore.ResultSet.goToNextRow)
+**替代接口：** goToNextRow
 
 <!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
 
@@ -461,7 +457,7 @@ goToPreviousRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [goToPreviousRow](ohos.data.relationalStore.ResultSet.goToPreviousRow)
+**替代接口：** goToPreviousRow
 
 <!--Device-ResultSet-goToPreviousRow(): boolean--><!--Device-ResultSet-goToPreviousRow(): boolean-End-->
 
@@ -499,7 +495,7 @@ goToRow(position: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [goToRow](ohos.data.relationalStore.ResultSet.goToRow)
+**替代接口：** goToRow
 
 <!--Device-ResultSet-goToRow(position: number): boolean--><!--Device-ResultSet-goToRow(position: number): boolean-End-->
 
@@ -544,7 +540,7 @@ isColumnNull(columnIndex: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isColumnNull](ohos.data.relationalStore.ResultSet.isColumnNull)
+**替代接口：** isColumnNull
 
 <!--Device-ResultSet-isColumnNull(columnIndex: number): boolean--><!--Device-ResultSet-isColumnNull(columnIndex: number): boolean-End-->
 
@@ -574,9 +570,7 @@ const isColumnNull = resultSet.isColumnNull(resultSet.getColumnIndex("CODES"));
 columnCount: number
 ```
 
-columnCount: number
-
-获取结果集中的列数。
+columnCount: number 获取结果集中的列数。
 
 **类型：** number
 
@@ -586,7 +580,7 @@ columnCount: number
 
 **废弃版本：** 9
 
-**替代接口：** [columnCount](ohos.data.relationalStore.ResultSet.columnCount)
+**替代接口：** columnCount
 
 <!--Device-ResultSet-columnCount: number--><!--Device-ResultSet-columnCount: number-End-->
 
@@ -598,9 +592,7 @@ columnCount: number
 columnNames: Array<string>
 ```
 
-columnNames: Array&lt;string&gt;
-
-获取结果集中所有列的名称。
+columnNames: Array&lt;string&gt; 获取结果集中所有列的名称。
 
 **类型：** Array&lt;string&gt;
 
@@ -610,7 +602,7 @@ columnNames: Array&lt;string&gt;
 
 **废弃版本：** 9
 
-**替代接口：** [columnNames](ohos.data.relationalStore.ResultSet.columnNames)
+**替代接口：** columnNames
 
 <!--Device-ResultSet-columnNames: Array<string>--><!--Device-ResultSet-columnNames: Array<string>-End-->
 
@@ -622,9 +614,7 @@ columnNames: Array&lt;string&gt;
 isAtFirstRow: boolean
 ```
 
-isAtFirstRow: boolean
-
-检查结果集是否位于第一行。
+isAtFirstRow: boolean 检查结果集是否位于第一行。
 
 **类型：** boolean
 
@@ -634,7 +624,7 @@ isAtFirstRow: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isAtFirstRow](ohos.data.relationalStore.ResultSet.isAtFirstRow)
+**替代接口：** isAtFirstRow
 
 <!--Device-ResultSet-isAtFirstRow: boolean--><!--Device-ResultSet-isAtFirstRow: boolean-End-->
 
@@ -646,9 +636,7 @@ isAtFirstRow: boolean
 isAtLastRow: boolean
 ```
 
-isAtLastRow: boolean
-
-检查结果集是否位于最后一行。
+isAtLastRow: boolean 检查结果集是否位于最后一行。
 
 **类型：** boolean
 
@@ -658,7 +646,7 @@ isAtLastRow: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isAtLastRow](ohos.data.relationalStore.ResultSet.isAtLastRow)
+**替代接口：** isAtLastRow
 
 <!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
@@ -670,9 +658,7 @@ isAtLastRow: boolean
 isClosed: boolean
 ```
 
-isClosed: boolean
-
-检查当前结果集是否关闭。
+isClosed: boolean 检查当前结果集是否关闭。
 
 **类型：** boolean
 
@@ -682,7 +668,7 @@ isClosed: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isClosed](ohos.data.relationalStore.ResultSet.isClosed)
+**替代接口：** isClosed
 
 <!--Device-ResultSet-isClosed: boolean--><!--Device-ResultSet-isClosed: boolean-End-->
 
@@ -694,9 +680,7 @@ isClosed: boolean
 isEnded: boolean
 ```
 
-isEnded: boolean
-
-检查结果集是否位于最后一行之后。
+isEnded: boolean 检查结果集是否位于最后一行之后。
 
 **类型：** boolean
 
@@ -706,7 +690,7 @@ isEnded: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isEnded](ohos.data.relationalStore.ResultSet.isEnded)
+**替代接口：** isEnded
 
 <!--Device-ResultSet-isEnded: boolean--><!--Device-ResultSet-isEnded: boolean-End-->
 
@@ -718,9 +702,7 @@ isEnded: boolean
 isStarted: boolean
 ```
 
-isStarted: boolean
-
-检查指针是否移动过。
+isStarted: boolean 检查指针是否移动过。
 
 **类型：** boolean
 
@@ -730,7 +712,7 @@ isStarted: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isStarted](ohos.data.relationalStore.ResultSet.isStarted)
+**替代接口：** isStarted
 
 <!--Device-ResultSet-isStarted: boolean--><!--Device-ResultSet-isStarted: boolean-End-->
 
@@ -742,9 +724,7 @@ isStarted: boolean
 rowCount: number
 ```
 
-rowCount: number
-
-获取结果集中的行数。
+rowCount: number 获取结果集中的行数。
 
 **类型：** number
 
@@ -754,7 +734,7 @@ rowCount: number
 
 **废弃版本：** 9
 
-**替代接口：** [rowCount](ohos.data.relationalStore.ResultSet.rowCount)
+**替代接口：** rowCount
 
 <!--Device-ResultSet-rowCount: number--><!--Device-ResultSet-rowCount: number-End-->
 
@@ -766,9 +746,7 @@ rowCount: number
 rowIndex: number
 ```
 
-rowIndex: number
-
-获取结果集当前行的索引。
+rowIndex: number 获取结果集当前行的索引。
 
 **类型：** number
 
@@ -778,7 +756,7 @@ rowIndex: number
 
 **废弃版本：** 9
 
-**替代接口：** [rowIndex](ohos.data.relationalStore.ResultSet.rowIndex)
+**替代接口：** rowIndex
 
 <!--Device-ResultSet-rowIndex: number--><!--Device-ResultSet-rowIndex: number-End-->
 

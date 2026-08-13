@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface PasteEvent--><!--Device-unnamed-declare interface PasteEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 preventDefault?: Callback<void>
 ```
 
-阻止系统默认粘贴事件。
-
-省略时，执行系统默认粘贴行为。
+阻止系统默认粘贴事件。 省略时，执行系统默认粘贴行为。
 
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

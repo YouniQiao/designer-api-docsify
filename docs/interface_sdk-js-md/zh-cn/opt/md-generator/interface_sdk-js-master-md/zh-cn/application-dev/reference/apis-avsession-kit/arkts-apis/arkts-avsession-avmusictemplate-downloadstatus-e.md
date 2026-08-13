@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-avMusicTemplate-enum DownloadStatus--><!--Device-avMusicTemplate-enum DownloadStatus-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -17,6 +19,8 @@ DOWNLOAD_SUCCESS = 0
 下载成功。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ DOWNLOADING = 1
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DownloadStatus-DOWNLOADING = 1--><!--Device-DownloadStatus-DOWNLOADING = 1-End-->
@@ -49,6 +55,8 @@ DOWNLOAD_FAIL = 2
 下载失败。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

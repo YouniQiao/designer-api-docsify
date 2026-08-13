@@ -1,16 +1,14 @@
 # ApplicationContext
 
-ApplicationContext作为应用上下文，继承自[Context](./../app/context)，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
+ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。 > **说明：** > > 本模块接口仅可在Stage模型下使用。
 
-> **说明：**
-> 
-> 本模块接口仅可在Stage模型下使用。
+**继承/实现关系：** ApplicationContext extends Context
 
-**继承/实现关系：** ApplicationContext extends [Context](Context)
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
-<!--Device-unnamed-declare class ApplicationContext extends Context--><!--Device-unnamed-declare class ApplicationContext extends Context-End-->
+<!--Device-unnamed-declare class ApplicationContext--><!--Device-unnamed-declare class ApplicationContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,7 +20,9 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 
 Preload UIExtensionAbility.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -50,14 +50,14 @@ Preload UIExtensionAbility.
 
 | 错误码ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 

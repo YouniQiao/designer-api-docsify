@@ -26,7 +26,7 @@ Obtains the Context object associated with a component on the page.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | 否 |
+| [component](../../apis-na/arkts-apis/arkts-na-interop-compatiblecomponentinfo-i.md) | Object | 否 |
 
 **返回值：**
 

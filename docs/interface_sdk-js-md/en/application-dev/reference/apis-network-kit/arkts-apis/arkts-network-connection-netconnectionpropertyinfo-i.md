@@ -2,9 +2,11 @@
 
 Get information about network connections.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface NetConnectionPropertyInfo--><!--Device-connection-export interface NetConnectionPropertyInfo-End-->
 
@@ -26,9 +28,11 @@ Defines the network connection properties.
 
 **Type:** [ConnectionProperties](arkts-network-connection-connectionproperties-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties--><!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties-End-->
 
@@ -44,9 +48,11 @@ Defines the handle of the data network.
 
 **Type:** NetHandle
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetConnectionPropertyInfo-netHandle: NetHandle--><!--Device-NetConnectionPropertyInfo-netHandle: NetHandle-End-->
 

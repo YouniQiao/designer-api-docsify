@@ -2,9 +2,11 @@
 
 Describes the device connection status and device information.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface DeviceChangeAction--><!--Device-audio-interface DeviceChangeAction-End-->
 
@@ -26,9 +28,11 @@ Device information.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors--><!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors-End-->
 
@@ -44,9 +48,11 @@ Device change type.
 
 **Type:** [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceChangeAction-type: DeviceChangeType--><!--Device-DeviceChangeAction-type: DeviceChangeType-End-->
 

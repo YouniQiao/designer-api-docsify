@@ -2,7 +2,9 @@
 
 State of the TCP network port.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-export enum TcpState--><!--Device-connection-export enum TcpState-End-->
 
@@ -16,7 +18,9 @@ TCP_ESTABLISHED = 1
 
 The TCP connection is in the ESTABLISHED state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ TCP_SYN_SENT = 2
 
 The TCP connection is in the SYN_SENT state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ TCP_SYN_RECV = 3
 
 The TCP connection is in the SYN_RECV state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +72,9 @@ TCP_FIN_WAIT1 = 4
 
 The TCP connection is in the FIN_WAIT1 state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +90,9 @@ TCP_FIN_WAIT2 = 5
 
 The TCP connection is in the FIN_WAIT2 state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +108,9 @@ TCP_TIME_WAIT = 6
 
 The TCP connection is in the TIME_WAIT state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,7 +126,9 @@ TCP_CLOSE = 7
 
 The TCP connection is in the CLOSE state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,7 +144,9 @@ TCP_CLOSE_WAIT = 8
 
 The TCP connection is in the CLOSE_WAIT state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,7 +162,9 @@ TCP_LAST_ACK = 9
 
 The TCP connection is in the LAST_ACK state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,7 +180,9 @@ TCP_LISTEN = 10
 
 The TCP connection is in the LISTEN state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,7 +198,9 @@ TCP_CLOSING = 11
 
 The TCP connection is in the CLOSING state.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

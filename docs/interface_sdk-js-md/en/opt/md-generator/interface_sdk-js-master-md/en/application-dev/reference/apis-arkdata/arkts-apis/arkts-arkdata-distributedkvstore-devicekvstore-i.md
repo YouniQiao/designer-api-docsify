@@ -1,13 +1,14 @@
 # DeviceKVStore
 
-Provides APIs for querying data in a device KV store and performing cross-device data sync. This class inherits from **SingleKVStore**. The **SingleKVStore** APIs such as **put** and **putBatch** can be used.Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified.For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted.Before calling any method in **DeviceKVStore**, you must use  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) to obtain a **DeviceKVStore** object.
+Provides APIs for querying data in a device KV store and performing cross-device data sync. This class inherits from **SingleKVStore**. The **SingleKVStore** APIs such as **put** and **putBatch** can be used. Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified. For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted. Before calling any method in **DeviceKVStore**, you must use getKVStore to obtain a **DeviceKVStore** object.
 
 **Inheritance/Implementation:** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#SingleKVStore)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore--><!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore-End-->
+**Deprecated since:** -1
+
+<!--Device-distributedKVStore-interface DeviceKVStore--><!--Device-distributedKVStore-interface DeviceKVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -25,7 +26,9 @@ get(key: string, callback: AsyncCallback<boolean | string | number | number | Ui
 
 Obtains the value of the specified key for this device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +47,10 @@ Obtains the value of the specified key for this device. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## get
 
@@ -57,7 +60,9 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 
 Obtains the value of the specified key for this device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,10 +86,10 @@ Obtains the value of the specified key for this device. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## get
 
@@ -92,16 +97,11 @@ Obtains the value of the specified key for this device. This API uses a promise 
 get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
 ```
 
-Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
+Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,10 +121,10 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## get
 
@@ -132,16 +132,11 @@ Obtains a string value that matches the specified device ID and key. This API us
 get(deviceId: string, key: string): Promise<boolean | string | number | number | Uint8Array>
 ```
 
-Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
+Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,10 +161,10 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## getEntries
 
@@ -179,7 +174,9 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 Obtains all KV pairs that match the specified key prefix for this device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,9 +195,9 @@ Obtains all KV pairs that match the specified key prefix for this device. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -253,7 +250,9 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 Obtains all KV pairs that match the specified key prefix for this device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -277,9 +276,9 @@ Obtains all KV pairs that match the specified key prefix for this device. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -325,16 +324,11 @@ try {
 getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to  return the result.
+Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -354,9 +348,9 @@ Obtains all KV pairs that match the specified device ID and key prefix. This API
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -407,16 +401,11 @@ try {
 getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
-Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result.
+Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -441,9 +430,9 @@ Obtains all KV pairs that match the specified device ID and key prefix. This API
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -494,7 +483,9 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 Obtains all KV pairs that match the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -513,9 +504,9 @@ Obtains all KV pairs that match the specified **Query** object for this device. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -569,9 +560,11 @@ try {
 getEntries(query: Query): Promise<Entry[]>
 ```
 
-Obtains all KV pairs that match the specified **Query** object for this device. This API uses a promise to return  the result.
+Obtains all KV pairs that match the specified **Query** object for this device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -595,9 +588,9 @@ Obtains all KV pairs that match the specified **Query** object for this device. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -646,16 +639,11 @@ try {
 getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
+Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -675,9 +663,9 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -733,16 +721,11 @@ try {
 getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
-Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result.
+Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -767,9 +750,9 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -821,7 +804,9 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 Obtains a result set with the specified prefix for this device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -840,10 +825,10 @@ Obtains a result set with the specified prefix for this device. This API uses an
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -904,7 +889,9 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 Obtains a result set with the specified prefix for this device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -928,10 +915,10 @@ Obtains a result set with the specified prefix for this device. This API uses a 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -982,16 +969,11 @@ try {
 getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1011,10 +993,10 @@ Obtains a **KVStoreResultSet** object that matches the specified device ID and k
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1052,16 +1034,11 @@ try {
 getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1086,10 +1063,10 @@ Obtains a **KVStoreResultSet** object that matches the specified device ID and k
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1123,16 +1100,11 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified **Query** object for this device. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1151,10 +1123,10 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1217,7 +1189,9 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 Obtains a **KVStoreResultSet** object that matches the specified **Query** object for this device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1241,10 +1215,10 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1290,16 +1264,11 @@ try {
 getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an  asynchronous callback to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1319,10 +1288,10 @@ Obtains a **KVStoreResultSet** object that matches the specified device ID and *
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1383,16 +1352,11 @@ try {
 getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1417,10 +1381,10 @@ Obtains a **KVStoreResultSet** object that matches the specified device ID and *
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1480,7 +1444,9 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 Obtains the number of results that match the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1499,10 +1465,10 @@ Obtains the number of results that match the specified **Query** object for this
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1554,7 +1520,9 @@ getResultSize(query: Query): Promise<number>
 
 Obtains the number of results that match the specified **Query** object for this device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1578,10 +1546,10 @@ Obtains the number of results that match the specified **Query** object for this
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1625,16 +1593,11 @@ try {
 getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
+Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1654,10 +1617,10 @@ Obtains the number of results that match the specified device ID and **Query** o
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1707,16 +1670,11 @@ try {
 getResultSize(deviceId: string, query: Query): Promise<number>
 ```
 
-Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to  return the result.
+Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to return the result. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1741,10 +1699,10 @@ Obtains the number of results that match the specified device ID and **Query** o
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 

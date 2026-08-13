@@ -6,13 +6,15 @@ Implements a **UIExtensionProxy** instance for the component host to send data t
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface UIExtensionProxy--><!--Device-unnamed-declare interface UIExtensionProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
 
-## off('asyncReceiverRegister')
+## off_asyncReceiverRegister
 
 ```TypeScript
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -23,6 +25,8 @@ Unsubscribes from asynchronous registration of the started UIExtensionAbility th
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +43,7 @@ Unsubscribes from asynchronous registration of the started UIExtensionAbility th
 | type | 'asyncReceiverRegister' | Yes | Event type. The value is fixed at **'asyncReceiverRegister'**. |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's asynchronous registration.&lt;br&gt; If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
-## off('syncReceiverRegister')
+## off_syncReceiverRegister
 
 ```TypeScript
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -50,6 +54,8 @@ Unsubscribes from synchronous registration of the started UIExtensionAbility thr
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +72,7 @@ Unsubscribes from synchronous registration of the started UIExtensionAbility thr
 | type | 'syncReceiverRegister' | Yes | Event type. The value is fixed at **'syncReceiverRegister'**. |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's synchronous registration.&lt;br&gt; If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
-## on('asyncReceiverRegister')
+## on_asyncReceiverRegister
 
 ```TypeScript
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
@@ -77,6 +83,8 @@ Subscribes to asynchronous registration of the started UIExtensionAbility throug
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,7 +101,7 @@ Subscribes to asynchronous registration of the started UIExtensionAbility throug
 | type | 'asyncReceiverRegister' | Yes | Event type. The value is fixed at **'asyncReceiverRegister'**. |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback. It is triggered after UIExtensionAbility registers the **setReceiveDataCallback** method.<br>**Since:** 18 |
 
-## on('syncReceiverRegister')
+## on_syncReceiverRegister
 
 ```TypeScript
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
@@ -104,6 +112,8 @@ Subscribes to synchronous registration of the started UIExtensionAbility through
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,6 +142,8 @@ Asynchronously sends data from the component host to the started UIExtensionAbil
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionProxy-send(data: Record<string, Object>): void--><!--Device-UIExtensionProxy-send(data: Record<string, Object>): void-End-->
@@ -158,6 +170,8 @@ Synchronously sends data from the component host to the started UIExtensionAbili
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>--><!--Device-UIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>-End-->
@@ -183,6 +197,6 @@ Synchronously sends data from the component host to the started UIExtensionAbili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100011-no-synchronous-callback-registered) | No callback has been registered to respond to this request. |
-| [100012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100012-data-transfer-failure) | Transferring data failed. |
+| [100011](../errorcode-uiextension.md#100011-no-synchronous-callback-registered) | No callback has been registered to respond to this request. |
+| [100012](../errorcode-uiextension.md#100012-data-transfer-failure) | Transferring data failed. |
 

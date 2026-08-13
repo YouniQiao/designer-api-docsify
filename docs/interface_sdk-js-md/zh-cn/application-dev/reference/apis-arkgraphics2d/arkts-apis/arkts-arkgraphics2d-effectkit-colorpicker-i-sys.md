@@ -1,11 +1,12 @@
 # ColorPicker
 
-取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  
-[createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker)创建一个ColorPicker实例。
+取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景， 可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过 [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker)创建一个ColorPicker实例。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
 
@@ -21,7 +22,9 @@ discriminatePictureLightDegree(): PictureLightDegree
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,12 +72,6 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 
 ## getAlphaZeroTransparentProportion
 
-ArkTS-Dyn:
-```TypeScript
-getAlphaZeroTransparentProportion(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAlphaZeroTransparentProportion(): double
 ```
@@ -83,7 +80,9 @@ getAlphaZeroTransparentProportion(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
@@ -97,13 +96,13 @@ getAlphaZeroTransparentProportion(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 完全透明的像素占比，比例的取值范围为[0, 1]。 |
+| double | 完全透明的像素占比，比例的取值范围为[0, 1]。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -141,11 +140,13 @@ getComplexityDegree(): PictureComplexityDegree
 
 获取图像内容复杂度。当无法判别图像内容复杂度时，返回默认值UNKNOWN_COMPLEXITY_DEGREE_PICTURE。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**废弃版本：** -1
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree--><!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree-End-->
 
@@ -163,7 +164,7 @@ getComplexityDegree(): PictureComplexityDegree
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -203,7 +204,9 @@ getDeepenImmersionColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -259,7 +262,9 @@ getImmersiveBackgroundColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -315,7 +320,9 @@ getImmersiveForegroundColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -371,7 +378,9 @@ getMorandiShadowColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -423,12 +432,13 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getReverseColor(): Color
 ```
 
-基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#Color)里。根据  
-[discriminatePictureLightDegree](#discriminatePictureLightDegree)接口获取的图片明亮类型得到一个反色，仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
+基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#Color)里。根据 [discriminatePictureLightDegree](#discriminatePictureLightDegree)接口获取的图片明亮类型得到一个反色， 仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -482,11 +492,13 @@ getShadeDegree(): PictureShadeDegree
 
 获取图像颜色深浅度。当无法判别图像颜色深浅度时，返回默认值UNKNOWN_SHADE_DEGREE_PICTURE。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**废弃版本：** -1
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree--><!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree-End-->
 
@@ -504,7 +516,7 @@ getShadeDegree(): PictureShadeDegree
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -536,23 +548,19 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 
 ## getTopProportionColorsAndPercentage
 
-ArkTS-Dyn:
-```TypeScript
-getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, number | null>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>
 ```
 
 同步返回图像占比靠前的颜色值及其对应比例，个数由`colorCount`指定。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**废弃版本：** -1
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>--><!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>-End-->
 
@@ -564,19 +572,19 @@ getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 颜色值及对应比例的个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]， 取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
+| colorCount | int | 是 | 颜色值及对应比例的个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]， 取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Map&lt;Color \| null, number \| null&gt;  <br>ArkTS-Sta：Map&lt;Color \| null, double \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。 - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。 - 取色失败或取色个数小于1返回`Map()`。 |
+| Map&lt;Color \| null, double \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。 - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。 - 取色失败或取色个数小于1返回`Map()`。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 

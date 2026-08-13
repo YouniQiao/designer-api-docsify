@@ -2,7 +2,9 @@
 
 Defines OAuth authenticator information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface AuthenticatorInfo--><!--Device-appAccount-interface AuthenticatorInfo-End-->
 
@@ -24,7 +26,9 @@ ID of the authenticator icon.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthenticatorInfo-iconId: long--><!--Device-AuthenticatorInfo-iconId: long-End-->
 
@@ -40,7 +44,9 @@ ID of the authenticator label.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthenticatorInfo-labelId: long--><!--Device-AuthenticatorInfo-labelId: long-End-->
 
@@ -56,7 +62,9 @@ Owner of the authenticator. The value is the Bundle name of the application.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthenticatorInfo-owner: string--><!--Device-AuthenticatorInfo-owner: string-End-->
 

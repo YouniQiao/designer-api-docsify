@@ -2,7 +2,9 @@
 
 Describes audio renderer configurations.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRendererOptions--><!--Device-audio-interface AudioRendererOptions-End-->
 
@@ -24,7 +26,9 @@ Whether the audio stream can be recorded by other applications. The default valu
 
 **Type:** [AudioPrivacyType](arkts-audio-audio-audioprivacytype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType--><!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType-End-->
 
@@ -40,7 +44,9 @@ Describes audio renderer information.
 
 **Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo--><!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo-End-->
 
@@ -56,7 +62,9 @@ Describes audio stream information.
 
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo--><!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo-End-->
 

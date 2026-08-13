@@ -8,7 +8,9 @@ function alloc(size: number, fill?: string | Buffer | number | number | number, 
 
 创建指定字节长度的Buffer对象，并使用指定值进行初始化填充（默认填充0）。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,7 +4,7 @@ Declare CustomDialog SelectDialogV2
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct SelectDialogV2--><!--Device-unnamed-export declare struct SelectDialogV2-End-->
 
@@ -19,7 +19,8 @@ import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Butto
 ## confirm
 
 ```TypeScript
-confirm?: AdvancedDialogV2Button
+@Param
+  confirm?: AdvancedDialogV2Button
 ```
 
 Sets the SelectDialogV2 confirm button.
@@ -28,20 +29,21 @@ Sets the SelectDialogV2 confirm button.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SelectDialogV2-confirm?: AdvancedDialogV2Button--><!--Device-SelectDialogV2-confirm?: AdvancedDialogV2Button-End-->
+<!--Device-SelectDialogV2-@Param  confirm?: AdvancedDialogV2Button--><!--Device-SelectDialogV2-@Param  confirm?: AdvancedDialogV2Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-content?: ResourceStr
+@Param
+  content?: ResourceStr
 ```
 
 Sets the SelectDialogV2 content.
@@ -50,20 +52,22 @@ Sets the SelectDialogV2 content.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SelectDialogV2-content?: ResourceStr--><!--Device-SelectDialogV2-content?: ResourceStr-End-->
+<!--Device-SelectDialogV2-@Param  content?: ResourceStr--><!--Device-SelectDialogV2-@Param  content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radioContent
 
 ```TypeScript
-radioContent: SheetInfo[]
+@Require
+  @Param
+  radioContent: SheetInfo[]
 ```
 
 Sets the SelectDialog sheets.
@@ -72,20 +76,21 @@ Sets the SelectDialog sheets.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SelectDialogV2-radioContent: SheetInfo[]--><!--Device-SelectDialogV2-radioContent: SheetInfo[]-End-->
+<!--Device-SelectDialogV2-@Require  @Param  radioContent: SheetInfo[]--><!--Device-SelectDialogV2-@Require  @Param  radioContent: SheetInfo[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedIndex
 
 ```TypeScript
-selectedIndex?: number
+@Param
+  selectedIndex?: number
 ```
 
 Sets the SelectDialogV2 selected index.
@@ -94,20 +99,22 @@ Sets the SelectDialogV2 selected index.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SelectDialogV2-selectedIndex?: number--><!--Device-SelectDialogV2-selectedIndex?: number-End-->
+<!--Device-SelectDialogV2-@Param  selectedIndex?: number--><!--Device-SelectDialogV2-@Param  selectedIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
 
 ```TypeScript
-title: ResourceStr
+@Require
+  @Param
+  title: ResourceStr
 ```
 
 Sets the SelectDialogV2 title.
@@ -116,12 +123,12 @@ Sets the SelectDialogV2 title.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SelectDialogV2-title: ResourceStr--><!--Device-SelectDialogV2-title: ResourceStr-End-->
+<!--Device-SelectDialogV2-@Require  @Param  title: ResourceStr--><!--Device-SelectDialogV2-@Require  @Param  title: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

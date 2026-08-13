@@ -28,7 +28,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 | [GlobalScope](arkts-arkts-worker-globalscope-i.md) | Implements the running environment of the Worker thread. The GlobalScope class inherits from WorkerEventTarget. |
 | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Holds the data transferred between worker threads. |
 | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Holds the data transferred between Worker threads. |
-| [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | Defines the object for which the ownership is to be transferred during data transfer. The object must be an ArrayBuffer instance.After the ownership is transferred, the object becomes unavailable in the sender and can be used only in the receiver. |
+| [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | Defines the object for which the ownership is to be transferred during data transfer. The object must be an ArrayBuffer instance. After the ownership is transferred, the object becomes unavailable in the sender and can be used only in the receiver. |
 | [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md) | Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class inherits from GlobalScope9+. |
 | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Implements event listening. |
 | [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md) | Processes worker listening events. |
@@ -39,8 +39,8 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 
 | Name | Description |
 | --- | --- |
-| [Priority](arkts-arkts-worker-priority-e.md) | Enumerates the priorities available for EventHandler.For details about the mappings between priorities and EventHandler levels, see EventHandler Level. |
-| [ThreadWorkerPriority](arkts-arkts-worker-threadworkerpriority-e.md) | Enumerates the priorities available for Worker threads.For details about the mappings between priorities and QoS levels, see QoS Level. |
+| [Priority](arkts-arkts-worker-priority-e.md) | Enumerates the priorities available for EventHandler. For details about the mappings between priorities and EventHandler levels, see EventHandler Level. |
+| [ThreadWorkerPriority](arkts-arkts-worker-threadworkerpriority-e.md) | Enumerates the priorities available for Worker threads. For details about the mappings between priorities and QoS levels, see QoS Level. |
 
 ### Types
 

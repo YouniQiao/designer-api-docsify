@@ -6,15 +6,15 @@
 function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void
 ```
 
-标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。
+标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。 finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)对应参数值一致。
 
-finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)对应参数值一致。
+**起始版本：** 23
 
-**起始版本：** 19
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void--><!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void-End-->
 
@@ -26,7 +26,7 @@ finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace
 | --- | --- | --- | --- |
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | 是 | 跟踪输出级别，必须与流程开始的 [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)的level参数值一致。 |
 | name | string | 是 | 要跟踪的任务名称，必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)的name 参数值一致。 |
-| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 任务id，必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)的taskId参数值一致。 |
+| taskId | int | 是 | 任务id，必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)的taskId参数值一致。 |
 
 ## 示例
 

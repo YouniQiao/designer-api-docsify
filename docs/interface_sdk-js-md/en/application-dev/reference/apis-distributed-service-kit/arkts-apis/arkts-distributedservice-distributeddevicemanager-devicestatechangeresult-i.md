@@ -4,7 +4,9 @@ Device status change result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceStateChangeResult--><!--Device-distributedDeviceManager-interface DeviceStateChangeResult-End-->
 
@@ -28,7 +30,9 @@ The state of the nearby devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceStateChangeResult-action: DeviceStateChange--><!--Device-DeviceStateChangeResult-action: DeviceStateChange-End-->
 
@@ -46,7 +50,9 @@ Basic description information of a distributed device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceStateChangeResult-device: DeviceBasicInfo--><!--Device-DeviceStateChangeResult-device: DeviceBasicInfo-End-->
 

@@ -34,7 +34,7 @@ Download token, which is used to obtain the download status
 
 **Deprecated since:** 9
 
-**Substitutes:** [tid](ohos.request.agent.Task.tid)
+**Substitutes:** tid
 
 <!--Device-DownloadResponse-token: string--><!--Device-DownloadResponse-token: string-End-->
 

@@ -4,6 +4,8 @@ Defines the writable system environment key.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class WritableEnvKey--><!--Device-unnamed-declare class WritableEnvKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Defines the system environment key direction.
 **Type:** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;Direction&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Defines the system environment key fontScale.
 **Type:** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;number&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

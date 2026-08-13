@@ -2,7 +2,9 @@
 
 Defines the ICC account information.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
 
@@ -18,7 +20,9 @@ Indicates the iccId for card.
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IccAccountInfo-iccId: string--><!--Device-IccAccountInfo-iccId: string-End-->
 
@@ -34,7 +38,9 @@ Indicates the active status for card.
 
 **类型：** boolean
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IccAccountInfo-isActive: boolean--><!--Device-IccAccountInfo-isActive: boolean-End-->
 
@@ -50,7 +56,9 @@ Indicates the mark card is eSim or not.
 
 **类型：** boolean
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IccAccountInfo-isEsim: boolean--><!--Device-IccAccountInfo-isEsim: boolean-End-->
 
@@ -66,7 +74,9 @@ Indicates the display name for card.
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IccAccountInfo-showName: string--><!--Device-IccAccountInfo-showName: string-End-->
 
@@ -82,7 +92,9 @@ Indicates the display number for card.
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IccAccountInfo-showNumber: string--><!--Device-IccAccountInfo-showNumber: string-End-->
 
@@ -98,7 +110,9 @@ Indicates the sim Id for card.
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IccAccountInfo-simId: int--><!--Device-IccAccountInfo-simId: int-End-->
 
@@ -110,11 +124,13 @@ Indicates the sim Id for card.
 slotIndex: number
 ```
 
-Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device.
+Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IccAccountInfo-slotIndex: int--><!--Device-IccAccountInfo-slotIndex: int-End-->
 

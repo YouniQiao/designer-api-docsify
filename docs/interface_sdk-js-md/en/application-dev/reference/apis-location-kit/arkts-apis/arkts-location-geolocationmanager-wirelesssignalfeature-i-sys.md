@@ -2,9 +2,11 @@
 
 Indicates wireless signal feature.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface WirelessSignalFeature--><!--Device-geoLocationManager-export interface WirelessSignalFeature-End-->
 
@@ -28,9 +30,11 @@ Indicates MAC array.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,15 @@ Indicates MAC array.
 rssiAvg: int
 ```
 
-Indicates average RSSI value.The value range is all integers.
+Indicates average RSSI value. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +76,13 @@ rssiStandardDeviation: double
 
 Indicates RSSI standard deviation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

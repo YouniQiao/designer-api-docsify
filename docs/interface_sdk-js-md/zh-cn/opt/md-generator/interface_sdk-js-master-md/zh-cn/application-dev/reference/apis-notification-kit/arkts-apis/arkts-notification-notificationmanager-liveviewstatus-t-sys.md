@@ -6,7 +6,9 @@ export type LiveViewStatus = _LiveViewStatus
 
 描述普通实况通知的状态。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus--><!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus-End-->
 

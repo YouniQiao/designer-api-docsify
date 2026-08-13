@@ -2,7 +2,9 @@
 
 Defines the Gallery widget information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface FormInfo--><!--Device-photoAccessHelper-interface FormInfo-End-->
 
@@ -26,7 +28,9 @@ Widget ID, which is provided when a widget is created in Gallery.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-formId: string--><!--Device-FormInfo-formId: string-End-->
 
@@ -44,7 +48,9 @@ URI of the image bound to the widget. When a widget is created, **uri** can be e
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-uri: string--><!--Device-FormInfo-uri: string-End-->
 

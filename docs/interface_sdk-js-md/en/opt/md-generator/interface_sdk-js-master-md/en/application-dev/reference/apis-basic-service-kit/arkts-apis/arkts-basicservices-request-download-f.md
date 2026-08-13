@@ -18,7 +18,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](request.downloadFile(context:)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -39,7 +39,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -69,7 +69,7 @@ Downloads a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](request.downloadFile(context:)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -95,7 +95,7 @@ Downloads a file. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

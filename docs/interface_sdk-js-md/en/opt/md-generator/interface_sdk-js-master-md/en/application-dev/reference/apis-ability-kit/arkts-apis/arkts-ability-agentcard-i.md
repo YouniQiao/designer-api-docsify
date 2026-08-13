@@ -4,6 +4,8 @@ AgentCard describes the basic information and capabilities provided by an Agent.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface AgentCard--><!--Device-unnamed-export interface AgentCard-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -19,6 +21,8 @@ A unique identifier for the agent card.
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Application-related information for the agent.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -59,6 +65,8 @@ Capability set supported by the agent.
 **Type:** [AgentCapabilities](arkts-ability-agentcard-agentcapabilities-i.md)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +88,8 @@ The category of this agent.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -94,11 +104,13 @@ The category of this agent.
 defaultInputModes: Array<string>
 ```
 
-The set of interaction modes that the agent supports across all skills.This can be overridden per skill. Defined as media types.
+The set of interaction modes that the agent supports across all skills. This can be overridden per skill. Defined as media types.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,6 +132,8 @@ The media types supported as outputs from this agent.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -139,6 +153,8 @@ The description of the Agent's function.
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,6 +176,8 @@ Url for the Agent's documentation.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -179,6 +197,8 @@ Extension configuration items for the agent.
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,6 +220,8 @@ A url to an icon for the agent.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -219,6 +241,8 @@ The name of the Agent.
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -240,6 +264,8 @@ Service provider information for the Agent.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -260,6 +286,8 @@ Skills represent the abilities of an agent.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -274,13 +302,15 @@ Skills represent the abilities of an agent.
 type?: agentConstant.AgentCardType
 ```
 
-The type of the AgentCard.When `type` is `agentConstant.AgentCardType.LOW_CODE`, the corresponding application must be a system application.Otherwise, the agent card cannot be registered, installed, or updated.
+The type of the AgentCard. When `type` is `agentConstant.AgentCardType.LOW_CODE`, the corresponding application must be a system application. Otherwise, the agent card cannot be registered, installed, or updated.
 
 **Type:** agentConstant.AgentCardType
 
 **Default:** AgentCardType.APP
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -301,6 +331,8 @@ Version of the Agent (format defined by provider, e.g., "1.0.0").
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Provides APIs for selecting and saving audio clips. Before using the APIs of **AudioViewPicker**, you need to create an **AudioViewPicker** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-picker-class AudioViewPicker--><!--Device-picker-class AudioViewPicker-End-->
 
@@ -22,9 +24,11 @@ constructor()
 
 A constructor used to create an **AudioViewPicker** instance. This constructor is not recommended due to the potential risk of operation failure.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AudioViewPicker-constructor()--><!--Device-AudioViewPicker-constructor()-End-->
 
@@ -42,12 +46,13 @@ let audioPicker = new picker.AudioViewPicker(); // Construction without paramete
 constructor(context: Context)
 ```
 
-A constructor used to create an **AudioViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see  
-[getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12).
+A constructor used to create an **AudioViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getHostContext).
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AudioViewPicker-constructor(context: Context)--><!--Device-AudioViewPicker-constructor(context: Context)-End-->
 
@@ -95,7 +100,9 @@ save(option?: AudioSaveOptions): Promise<Array<string>>
 
 Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or more audio clips. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -146,7 +153,9 @@ save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or more audio clips. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -192,7 +201,9 @@ save(callback: AsyncCallback<Array<string>>): void
 
 Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or more audio clips. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -235,7 +246,9 @@ select(option?: AudioSelectOptions): Promise<Array<string>>
 
 Starts an **audioPicker** page for the user to select one or more audio clips. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -285,7 +298,9 @@ select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void
 
 Starts an **audioPicker** page for the user to select one or more audio clips. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -328,10 +343,11 @@ async function example14(context: common.UIAbilityContext) { // Ensure that cont
 select(callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts an **audioPicker** page for the user to select one or more audio clips. This API uses an asynchronous callback to return the result.  
-**System capability**: SystemCapability.FileManagement.UserFileService
+Starts an **audioPicker** page for the user to select one or more audio clips. This API uses an asynchronous callback to return the result. **System capability**: SystemCapability.FileManagement.UserFileService
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
 

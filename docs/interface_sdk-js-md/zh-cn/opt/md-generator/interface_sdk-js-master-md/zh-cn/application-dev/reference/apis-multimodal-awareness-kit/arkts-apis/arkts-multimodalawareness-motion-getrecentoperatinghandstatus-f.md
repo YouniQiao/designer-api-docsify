@@ -8,7 +8,9 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 
 获取最新触控操作手状态。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本20+：ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE
@@ -28,9 +30,9 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [31500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

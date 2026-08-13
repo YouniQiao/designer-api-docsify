@@ -1,10 +1,10 @@
 # DowngradeDownload（系统接口）
 
-全量下载：为云盘管理应用提供集中下载云端数据的能力。
+全量下载：为云盘管理应用提供集中下载云端数据的能力。 云盘全量下载对象，用于支撑云盘管理应用完成云盘文件的全量下载流程。
 
-云盘全量下载对象，用于支撑云盘管理应用完成云盘文件的全量下载流程。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-cloudSyncManager-class DowngradeDownload--><!--Device-cloudSyncManager-class DowngradeDownload-End-->
 
@@ -20,7 +20,9 @@ constructor(bundleName: string)
 
 全量下载对象的构造函数，用于获取指定包名的DowngradeDownload类的实例。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -42,8 +44,8 @@ constructor(bundleName: string)
 | --- |
 | 13900020 |
 | 22400005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -67,7 +69,9 @@ getCloudFileInfo(): Promise<CloudFileInfo>
 
 获取需要全量下载的应用仅位于本地、仅位于云端或者本地和云端均有的文件大小和个数信息。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -88,8 +92,8 @@ getCloudFileInfo(): Promise<CloudFileInfo>
 | 错误码ID |
 | --- |
 | 22400005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900010 |
 
@@ -113,11 +117,11 @@ downgradeMgr.getCloudFileInfo().then((fileInfo: cloudSyncManager.CloudFileInfo) 
 startDownload(callback: Callback<DownloadProgress>): Promise<void>
 ```
 
-启动指定应用的云文件的全量下载，使用Promise异步回调。使用callback异步回调。
+启动指定应用的云文件的全量下载，使用Promise异步回调。使用callback异步回调。 同一应用存在正在执行的全量下载任务的情况下，重复触发会返回错误信息（22400006）。
 
-同一应用存在正在执行的全量下载任务的情况下，重复触发会返回错误信息（22400006）。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -146,8 +150,8 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 | 13900020 |
 | 22400005 |
 | 22400006 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900010 |
 
@@ -179,11 +183,11 @@ downgradeMgr.startDownload(callback).then(() => {
 startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 ```
 
-将云盘目录下已完成本地下载的文件搬迁至指定目录，过程中通过回调上报搬迁进度。使用callback异步回调。
-
-同一应用存在正在执行的搬迁任务的情况下，重复触发会返回错误信息（22400006）。
+将云盘目录下已完成本地下载的文件搬迁至指定目录，过程中通过回调上报搬迁进度。使用callback异步回调。 同一应用存在正在执行的搬迁任务的情况下，重复触发会返回错误信息（22400006）。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -210,8 +214,8 @@ startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 | 22400006 |
 | 13900001 |
 | 13900002 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900010 |
 
 ## 示例
@@ -239,7 +243,9 @@ stopDownload(): Promise<void>
 
 停止由[startDownload](#startDownload)触发的全量下载任务，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -260,8 +266,8 @@ stopDownload(): Promise<void>
 | 错误码ID |
 | --- |
 | 22400005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例

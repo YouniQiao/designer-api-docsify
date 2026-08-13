@@ -1,12 +1,14 @@
 # ColorMetrics
 
-用于混合颜色。
+提供颜色的统一表示与封装，支持颜色混合以及 RGB、Alpha 分量的获取。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-export declare class ColorMetrics--><!--Device-unnamed-export declare class ColorMetrics-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,11 +18,13 @@
 static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用默认曝光的HDR颜色创建ColorMetrics类。使用默认曝光（0.0表示对数，1.0表示线性）创建HDR颜色值。当没有指定曝光值时，RGB通道值可以超过1.0以实现HDR亮度。这与iOS UIColor行为匹配，其中RGB值> 1.0启用HDR渲染。
+使用ColorSpace和rgba格式颜色实例化支持HDR的ColorMetrics类。适用于无需调整曝光系数、直接指定HDR颜色分量的场景，如HDR纯色背景绘制、固定HDR色彩配置。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,34 +38,36 @@ static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | ColorSpace | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
-| red | double | 是 | 红色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
-| green | double | 是 | 绿色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
-| blue | double | 是 | 蓝色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
-| alpha | double | 否 | Alpha（不透明度）分量值。有效范围：【0,1】。 默认值为1.0（完全不透明）。 |
+| colorSpace | ColorSpace | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要在当前窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setWindowColorSpace)接口，将当前窗口设置为广色 域模式。 |
+| red | double | 是 | 颜色的R分量（红色），取值范围：[0, +∞)。大于1.0的值会使能HDR特性。传入负数时将被自动钳位到0.0。 |
+| green | double | 是 | 颜色的G分量（绿色），取值范围：[0, +∞)。大于1.0的值会使能HDR特性。传入负数时将被自动钳位到0.0。 |
+| blue | double | 是 | 颜色的B分量（蓝色），取值范围：[0, +∞)。大于1.0的值会使能HDR特性。传入负数时将被自动钳位到0.0。 |
+| alpha | double | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 支持HDR的ColorMetrics类的实例，可用于表示HDR颜色及进行后续色彩空间查询、HDR状态判断和RGB分量获取等操作。 |
 
 ## createHDRColorWithLinearExposure
 
 ```TypeScript
 static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
-      red: double, green: double, blue: double, alpha?: double): ColorMetrics
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用具有线性曝光的HDR颜色创建ColorMetrics类。创建具有指定线性曝光的HDR颜色值。曝光值控制线性色彩空间中颜色的亮度。使用线性曝光时，RGB通道值通常在【0,1】范围内。
+使用ColorSpace、线性曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。如不需要通过曝光系数调节，可使用 [createHDRColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c-sys.md#createHDRColor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按线性比例均匀调整HDR亮度的场景，如HDR图像预览、视频播放器色彩调 节。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,35 +77,37 @@ static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: Colo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| linearExposure | double | 是 | 曝光值中的线性曝光值。 有效范围：[1, +∞)。 值为1.0表示标准曝光。 大于1.0的值会线性增加亮度。 |
-| colorSpace | ColorSpace | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
-| red | double | 是 | 红色分量值。有效范围：【0,1】。 |
-| green | double | 是 | 绿色分量值。有效范围：【0,1】。 |
-| blue | double | 是 | 蓝色分量值。有效范围：【0,1】。 |
-| alpha | double | 否 | Alpha（不透明度）分量值。有效范围：【0,1】。 默认值为1.0（完全不透明）。 |
+| linearExposure | double | 是 | 线性曝光系数，取值范围：[1, +∞)。1.0表示标准曝光系数，大于1.0的值表示线性增加的曝光程度。传入小于1.0的值时将被自动钳位到1.0。 |
+| colorSpace | ColorSpace | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要在当前窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setWindowColorSpace)接口，将当前窗口设置为广色 域模式。 |
+| red | double | 是 | 颜色的R分量（红色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| green | double | 是 | 颜色的G分量（绿色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| blue | double | 是 | 颜色的B分量（蓝色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| alpha | double | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 支持HDR的ColorMetrics类的实例，可用于表示HDR颜色及进行后续色彩空间查询、HDR状态判断和RGB分量获取等操作。 |
 
 ## createHDRColorWithLogExposure
 
 ```TypeScript
 static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
-      red: double, green: double, blue: double, alpha?: double): ColorMetrics
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用具有对数曝光的HDR颜色创建ColorMetrics类。使用指定的对数曝光（色度）创建HDR颜色值。曝光值控制对数（感知）色彩空间中的亮度。使用对数曝光时，RGB通道值通常在【0,1】范围内。
+使用ColorSpace、对数型曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。与 [createHDRColorWithLinearExposure](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c-sys.md#createHDRColorWithLinearExposure)相比，两者均通过曝光系数创建HDR色彩，区别在于本方法使 用对数型曝光系数（指数级增加曝光程度），后者使用线性曝光系数（线性增加曝光程度），开发者可根据所需的曝光调节方式选择。如不需要通过曝光系数调节，可使用 [createHDRColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c-sys.md#createHDRColor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按对数关系调整HDR亮度（更贴近人眼感知）的场景，如HDR照片编辑、影 视后期调色。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,18 +117,18 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exposure | double | 是 | 对数曝光值，单位为秒。 有效范围：[0, +∞)。 值0.0表示标准曝光。 每增加1.0将使亮度加倍（一次停止）。 |
-| colorSpace | ColorSpace | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
-| red | double | 是 | 红色分量值。有效范围：【0,1】。 |
-| green | double | 是 | 绿色分量值。有效范围：【0,1】。 |
-| blue | double | 是 | 蓝色分量值。有效范围：【0,1】。 |
-| alpha | double | 否 | Alpha（不透明度）分量值。有效范围：【0,1】。 默认值为1.0（完全不透明）。 |
+| exposure | double | 是 | 对数型曝光系数，取值范围：[0, +∞)。0.0表示标准曝光系数，大于0.0的值表示指数级增加的曝光程度。传入负数时将被自动钳位到0.0。 |
+| colorSpace | ColorSpace | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要在当前窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setWindowColorSpace)接口，将当前窗口设置为广色 域模式。 |
+| red | double | 是 | 颜色的R分量（红色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| green | double | 是 | 颜色的G分量（绿色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| blue | double | 是 | 颜色的B分量（蓝色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| alpha | double | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 支持HDR的ColorMetrics类的实例，可用于表示HDR颜色及进行后续色彩空间查询、HDR状态判断和RGB分量获取等操作。 |
 
 ## getBlueValue
 
@@ -128,11 +136,13 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 getBlueValue(): double
 ```
 
-获取蓝色值。以浮点数形式返回蓝色通道值。对于SDR颜色，值在【0,1】范围内。对于HDR颜色，值可以大于1.0以表示扩展亮度。
+获取ColorMetrics颜色的B分量（蓝色）。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,7 +156,7 @@ getBlueValue(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 蓝色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | 颜色的B分量（蓝色），值是大于等于0的浮点数。 |
 
 ## getColorSpace
 
@@ -154,11 +164,13 @@ getBlueValue(): double
 getColorSpace(): ColorSpace
 ```
 
-获取ColorMetrics的颜色空间。返回创建此颜色时使用的颜色空间。
+获取ColorMetrics的色彩空间。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,7 +184,7 @@ getColorSpace(): ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpace | The color space of the ColorMetrics. Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
+| ColorSpace | 当前ColorMetrics对象所配置的色彩空间，可用于判断当前颜色使用的色彩空间类型。 |
 
 ## getGreenValue
 
@@ -180,11 +192,13 @@ getColorSpace(): ColorSpace
 getGreenValue(): double
 ```
 
-获取绿色值。以浮点数形式返回绿色通道值。对于SDR颜色，值在【0,1】范围内。对于HDR颜色，值可以大于1.0以表示扩展亮度。
+获取ColorMetrics颜色的G分量（绿色）。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,7 +212,7 @@ getGreenValue(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 绿色的值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | 颜色的G分量（绿色），值是大于等于0的浮点数。 |
 
 ## getRedValue
 
@@ -206,11 +220,13 @@ getGreenValue(): double
 getRedValue(): double
 ```
 
-获取红色值。以浮点数形式返回红色通道值。对于SDR颜色，值在【0,1】范围内。对于HDR颜色，值可以大于1.0以表示扩展亮度。
+获取ColorMetrics颜色的R分量（红色）。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,7 +240,7 @@ getRedValue(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 红色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | 颜色的R分量（红色），值是大于等于0的浮点数。 |
 
 ## isHDR
 
@@ -232,11 +248,13 @@ getRedValue(): double
 isHDR(): boolean
 ```
 
-检查ColorMetrics是否代表HDR颜色。如果颜色是使用createHDRColorWithXx()创建的，或者RGB值> 1.0，则返回true。
+获取ColorMetrics是否呈现了HDR色彩。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -250,5 +268,5 @@ isHDR(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | ColorMetrics是否是HDR颜色。 如果满足以下条件，则返回true： -颜色是使用createHDRColorWithXx()方法创建的。 -任何RGB通道值都大于1.0。 |
+| boolean | ColorMetrics是否呈现了HDR色彩。当色彩是通过createHDRColorWith系列方法（如 [createHDRColorWithLinearExposure]{ |
 

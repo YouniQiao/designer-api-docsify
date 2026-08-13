@@ -2,7 +2,9 @@
 
 Enumerates the resource information flags, which indicate the type of resource information to obtain.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleResourceManager-enum ResourceFlag--><!--Device-bundleResourceManager-enum ResourceFlag-End-->
 
@@ -18,7 +20,9 @@ GET_RESOURCE_INFO_ALL = 0x00000001
 
 Both the application icon and label are obtained.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceFlag-GET_RESOURCE_INFO_ALL = 0x00000001--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ALL = 0x00000001-End-->
 
@@ -34,7 +38,9 @@ GET_RESOURCE_INFO_WITH_LABEL = 0x00000002
 
 Only the application label is obtained.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002-End-->
 
@@ -50,7 +56,9 @@ GET_RESOURCE_INFO_WITH_ICON = 0x00000004
 
 Only the application icon is obtained.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004-End-->
 
@@ -64,10 +72,11 @@ Only the application icon is obtained.
 GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
 ```
 
-The obtained information is sorted by label. It must be used together with **GET_RESOURCE_INFO_ALL** or  
-**GET_RESOURCE_INFO_WITH_LABEL**.
+The obtained information is sorted by label. It must be used together with **GET_RESOURCE_INFO_ALL** or **GET_RESOURCE_INFO_WITH_LABEL**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008-End-->
 
@@ -81,9 +90,11 @@ The obtained information is sorted by label. It must be used together with **GET
 GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010
 ```
 
-The [drawableDescriptor](@ohos.arkui.drawableDescriptor) object of the application icon is obtained.
+The drawableDescriptor object of the application icon is obtained.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010-End-->
 
@@ -97,11 +108,11 @@ The [drawableDescriptor](@ohos.arkui.drawableDescriptor) object of the applicati
 GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
 ```
 
-The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the  
-[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo)and  
-[getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getAllLauncherAbilityResourceInfo)APIs.
+The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo-(System-API)) and [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getAllLauncherAbilityResourceInfo-(System-API)) APIs.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020-End-->
 

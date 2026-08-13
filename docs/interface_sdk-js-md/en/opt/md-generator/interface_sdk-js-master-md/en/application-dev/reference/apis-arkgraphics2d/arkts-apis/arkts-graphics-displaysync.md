@@ -2,7 +2,9 @@
 
 The displaySync module allows your application to draw its custom UI content at a specified frame rate.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace displaySync--><!--Device-unnamed-declare namespace displaySync-End-->
 

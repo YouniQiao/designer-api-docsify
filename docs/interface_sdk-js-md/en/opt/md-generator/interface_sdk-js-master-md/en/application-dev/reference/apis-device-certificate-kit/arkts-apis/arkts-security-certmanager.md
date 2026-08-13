@@ -1,10 +1,10 @@
 # @ohos.security.certManager
 
-The **certManager** module provides system-level certificate management capabilities to implement management and secure use of certificates throughout their lifecycle (installation, storage, use, and destruction).
+The **certManager** module provides system-level certificate management capabilities to implement management and secure use of certificates throughout their lifecycle (installation, storage, use, and destruction). It can be used to verify the HTTPS certificate chain of the application server , and log in to the website or application server using two-way HTTPS.
 
-It can be used to verify the HTTPS certificate chain of the application server , and log in to the website or application server using two-way HTTPS.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace certificateManager--><!--Device-unnamed-declare namespace certificateManager-End-->
 
@@ -23,58 +23,58 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [abort](arkts-devicecertificate-certificatemanager-abort-f.md#abort) |
-| [abort](arkts-devicecertificate-certificatemanager-abort-f.md#abort-1) |
+| [abort](arkts-devicecertificate-certificatemanager-abort-f.md#abort) |
 | [finish](arkts-devicecertificate-certificatemanager-finish-f.md#finish) |
-| [finish](arkts-devicecertificate-certificatemanager-finish-f.md#finish-1) |
-| [finish](arkts-devicecertificate-certificatemanager-finish-f.md#finish-2) |
-| [getAllUserTrustedCertificates](arkts-devicecertificate-certificatemanager-getallusertrustedcertificates-f.md#getallusertrustedcertificates) |
-| [getAllUserTrustedCertificates](arkts-devicecertificate-certificatemanager-getallusertrustedcertificates-f.md#getallusertrustedcertificates-1) |
-| [getCertificateStorePath](arkts-devicecertificate-certificatemanager-getcertificatestorepath-f.md#getcertificatestorepath) |
-| [getPrivateCertificate](arkts-devicecertificate-certificatemanager-getprivatecertificate-f.md#getprivatecertificate) |
-| [getPrivateCertificate](arkts-devicecertificate-certificatemanager-getprivatecertificate-f.md#getprivatecertificate-1) |
-| [getPrivateCertificates](arkts-devicecertificate-certificatemanager-getprivatecertificates-f.md#getprivatecertificates) |
-| [getPublicCertificate](arkts-devicecertificate-certificatemanager-getpubliccertificate-f.md#getpubliccertificate) |
-| [getUkeyCertificate](arkts-devicecertificate-certificatemanager-getukeycertificate-f.md#getukeycertificate) |
-| [getUkeyCertificateList](arkts-devicecertificate-certificatemanager-getukeycertificatelist-f.md#getukeycertificatelist) |
-| [getUserTrustedCertificate](arkts-devicecertificate-certificatemanager-getusertrustedcertificate-f.md#getusertrustedcertificate) |
-| [importUkeyCertificate](arkts-devicecertificate-certificatemanager-importukeycertificate-f.md#importukeycertificate) |
+| [finish](arkts-devicecertificate-certificatemanager-finish-f.md#finish) |
+| [finish](arkts-devicecertificate-certificatemanager-finish-f.md#finish) |
+| [getAllUserTrustedCertificates](arkts-devicecertificate-certificatemanager-getallusertrustedcertificates-f.md#getAllUserTrustedCertificates) |
+| [getAllUserTrustedCertificates](arkts-devicecertificate-certificatemanager-getallusertrustedcertificates-f.md#getAllUserTrustedCertificates) |
+| [getCertificateStorePath](arkts-devicecertificate-certificatemanager-getcertificatestorepath-f.md#getCertificateStorePath) |
+| [getPrivateCertificate](arkts-devicecertificate-certificatemanager-getprivatecertificate-f.md#getPrivateCertificate) |
+| [getPrivateCertificate](arkts-devicecertificate-certificatemanager-getprivatecertificate-f.md#getPrivateCertificate) |
+| [getPrivateCertificates](arkts-devicecertificate-certificatemanager-getprivatecertificates-f.md#getPrivateCertificates) |
+| [getPublicCertificate](arkts-devicecertificate-certificatemanager-getpubliccertificate-f.md#getPublicCertificate) |
+| [getUkeyCertificate](arkts-devicecertificate-certificatemanager-getukeycertificate-f.md#getUkeyCertificate) |
+| [getUkeyCertificateList](arkts-devicecertificate-certificatemanager-getukeycertificatelist-f.md#getUkeyCertificateList) |
+| [getUserTrustedCertificate](arkts-devicecertificate-certificatemanager-getusertrustedcertificate-f.md#getUserTrustedCertificate) |
+| [importUkeyCertificate](arkts-devicecertificate-certificatemanager-importukeycertificate-f.md#importUkeyCertificate) |
 | [init](arkts-devicecertificate-certificatemanager-init-f.md#init) |
-| [init](arkts-devicecertificate-certificatemanager-init-f.md#init-1) |
-| [installPrivateCertificate](arkts-devicecertificate-certificatemanager-installprivatecertificate-f.md#installprivatecertificate) |
-| [installPrivateCertificate](arkts-devicecertificate-certificatemanager-installprivatecertificate-f.md#installprivatecertificate-1) |
-| [installPrivateCertificate](arkts-devicecertificate-certificatemanager-installprivatecertificate-f.md#installprivatecertificate-2) |
-| [installUserTrustedCertificate](arkts-devicecertificate-certificatemanager-installusertrustedcertificate-f.md#installusertrustedcertificate) |
-| [installUserTrustedCertificateSync](arkts-devicecertificate-certificatemanager-installusertrustedcertificatesync-f.md#installusertrustedcertificatesync) |
-| [isAuthorizedApp](arkts-devicecertificate-certificatemanager-isauthorizedapp-f.md#isauthorizedapp) |
-| [uninstallPrivateCertificate](arkts-devicecertificate-certificatemanager-uninstallprivatecertificate-f.md#uninstallprivatecertificate) |
-| [uninstallPrivateCertificate](arkts-devicecertificate-certificatemanager-uninstallprivatecertificate-f.md#uninstallprivatecertificate-1) |
-| [uninstallUserTrustedCertificateSync](arkts-devicecertificate-certificatemanager-uninstallusertrustedcertificatesync-f.md#uninstallusertrustedcertificatesync) |
+| [init](arkts-devicecertificate-certificatemanager-init-f.md#init) |
+| [installPrivateCertificate](arkts-devicecertificate-certificatemanager-installprivatecertificate-f.md#installPrivateCertificate) |
+| [installPrivateCertificate](arkts-devicecertificate-certificatemanager-installprivatecertificate-f.md#installPrivateCertificate) |
+| [installPrivateCertificate](arkts-devicecertificate-certificatemanager-installprivatecertificate-f.md#installPrivateCertificate) |
+| [installUserTrustedCertificate](arkts-devicecertificate-certificatemanager-installusertrustedcertificate-f.md#installUserTrustedCertificate) |
+| [installUserTrustedCertificateSync](arkts-devicecertificate-certificatemanager-installusertrustedcertificatesync-f.md#installUserTrustedCertificateSync) |
+| [isAuthorizedApp](arkts-devicecertificate-certificatemanager-isauthorizedapp-f.md#isAuthorizedApp) |
+| [uninstallPrivateCertificate](arkts-devicecertificate-certificatemanager-uninstallprivatecertificate-f.md#uninstallPrivateCertificate) |
+| [uninstallPrivateCertificate](arkts-devicecertificate-certificatemanager-uninstallprivatecertificate-f.md#uninstallPrivateCertificate) |
+| [uninstallUserTrustedCertificateSync](arkts-devicecertificate-certificatemanager-uninstallusertrustedcertificatesync-f.md#uninstallUserTrustedCertificateSync) |
 | [update](arkts-devicecertificate-certificatemanager-update-f.md#update) |
-| [update](arkts-devicecertificate-certificatemanager-update-f.md#update-1) |
+| [update](arkts-devicecertificate-certificatemanager-update-f.md#update) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAllAppPrivateCertificates](arkts-devicecertificate-certificatemanager-getallappprivatecertificates-f-sys.md#getallappprivatecertificates) |
-| [getAllAppPrivateCertificates](arkts-devicecertificate-certificatemanager-getallappprivatecertificates-f-sys.md#getallappprivatecertificates-1) |
-| [getAllAppPrivateCertificatesByUid](arkts-devicecertificate-certificatemanager-getallappprivatecertificatesbyuid-f-sys.md#getallappprivatecertificatesbyuid) |
-| [getAllPublicCertificates](arkts-devicecertificate-certificatemanager-getallpubliccertificates-f-sys.md#getallpubliccertificates) |
-| [getAllSystemAppCertificates](arkts-devicecertificate-certificatemanager-getallsystemappcertificates-f-sys.md#getallsystemappcertificates) |
-| [getAuthorizedAppList](arkts-devicecertificate-certificatemanager-getauthorizedapplist-f-sys.md#getauthorizedapplist) |
-| [getSystemAppCertificate](arkts-devicecertificate-certificatemanager-getsystemappcertificate-f-sys.md#getsystemappcertificate) |
-| [getSystemTrustedCertificate](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificate-f-sys.md#getsystemtrustedcertificate) |
-| [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist) |
-| [grantPublicCertificate](arkts-devicecertificate-certificatemanager-grantpubliccertificate-f-sys.md#grantpubliccertificate) |
-| [installPublicCertificate](arkts-devicecertificate-certificatemanager-installpubliccertificate-f-sys.md#installpubliccertificate) |
-| [installSystemAppCertificate](arkts-devicecertificate-certificatemanager-installsystemappcertificate-f-sys.md#installsystemappcertificate) |
-| [removeGrantedPublicCertificate](arkts-devicecertificate-certificatemanager-removegrantedpubliccertificate-f-sys.md#removegrantedpubliccertificate) |
-| [setCertificateStatus](arkts-devicecertificate-certificatemanager-setcertificatestatus-f-sys.md#setcertificatestatus) |
-| [uninstallAllAppCertificate](arkts-devicecertificate-certificatemanager-uninstallallappcertificate-f-sys.md#uninstallallappcertificate) |
-| [uninstallAllUserTrustedCertificate](arkts-devicecertificate-certificatemanager-uninstallallusertrustedcertificate-f-sys.md#uninstallallusertrustedcertificate) |
-| [uninstallPublicCertificate](arkts-devicecertificate-certificatemanager-uninstallpubliccertificate-f-sys.md#uninstallpubliccertificate) |
-| [uninstallSystemAppCertificate](arkts-devicecertificate-certificatemanager-uninstallsystemappcertificate-f-sys.md#uninstallsystemappcertificate) |
+| [getAllAppPrivateCertificates](arkts-devicecertificate-certificatemanager-getallappprivatecertificates-f-sys.md#getAllAppPrivateCertificates-(System-API)) |
+| [getAllAppPrivateCertificates](arkts-devicecertificate-certificatemanager-getallappprivatecertificates-f-sys.md#getAllAppPrivateCertificates-(System-API)) |
+| [getAllAppPrivateCertificatesByUid](arkts-devicecertificate-certificatemanager-getallappprivatecertificatesbyuid-f-sys.md#getAllAppPrivateCertificatesByUid-(System-API)) |
+| [getAllPublicCertificates](arkts-devicecertificate-certificatemanager-getallpubliccertificates-f-sys.md#getAllPublicCertificates-(System-API)) |
+| [getAllSystemAppCertificates](arkts-devicecertificate-certificatemanager-getallsystemappcertificates-f-sys.md#getAllSystemAppCertificates-(System-API)) |
+| [getAuthorizedAppList](arkts-devicecertificate-certificatemanager-getauthorizedapplist-f-sys.md#getAuthorizedAppList-(System-API)) |
+| [getSystemAppCertificate](arkts-devicecertificate-certificatemanager-getsystemappcertificate-f-sys.md#getSystemAppCertificate-(System-API)) |
+| [getSystemTrustedCertificate](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificate-f-sys.md#getSystemTrustedCertificate-(System-API)) |
+| [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getSystemTrustedCertificateList-(System-API)) |
+| [grantPublicCertificate](arkts-devicecertificate-certificatemanager-grantpubliccertificate-f-sys.md#grantPublicCertificate-(System-API)) |
+| [installPublicCertificate](arkts-devicecertificate-certificatemanager-installpubliccertificate-f-sys.md#installPublicCertificate-(System-API)) |
+| [installSystemAppCertificate](arkts-devicecertificate-certificatemanager-installsystemappcertificate-f-sys.md#installSystemAppCertificate-(System-API)) |
+| [removeGrantedPublicCertificate](arkts-devicecertificate-certificatemanager-removegrantedpubliccertificate-f-sys.md#removeGrantedPublicCertificate-(System-API)) |
+| [setCertificateStatus](arkts-devicecertificate-certificatemanager-setcertificatestatus-f-sys.md#setCertificateStatus-(System-API)) |
+| [uninstallAllAppCertificate](arkts-devicecertificate-certificatemanager-uninstallallappcertificate-f-sys.md#uninstallAllAppCertificate-(System-API)) |
+| [uninstallAllUserTrustedCertificate](arkts-devicecertificate-certificatemanager-uninstallallusertrustedcertificate-f-sys.md#uninstallAllUserTrustedCertificate-(System-API)) |
+| [uninstallPublicCertificate](arkts-devicecertificate-certificatemanager-uninstallpubliccertificate-f-sys.md#uninstallPublicCertificate-(System-API)) |
+| [uninstallSystemAppCertificate](arkts-devicecertificate-certificatemanager-uninstallsystemappcertificate-f-sys.md#uninstallSystemAppCertificate-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

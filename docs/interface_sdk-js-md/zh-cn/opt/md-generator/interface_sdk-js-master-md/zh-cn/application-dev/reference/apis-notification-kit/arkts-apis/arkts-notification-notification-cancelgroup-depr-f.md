@@ -12,7 +12,7 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [cancelGroup](ohos.notificationManager/notificationManager#cancelGroup)
+**替代接口：** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelGroup)
 
 <!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ function cancelGroup(groupName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [cancelGroup](ohos.notificationManager/notificationManager#cancelGroup)
+**替代接口：** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelGroup)
 
 <!--Device-notification-function cancelGroup(groupName: string): Promise<void>--><!--Device-notification-function cancelGroup(groupName: string): Promise<void>-End-->
 

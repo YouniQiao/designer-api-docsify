@@ -2,7 +2,9 @@
 
 数据变更通知类型。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-enum NotifyType--><!--Device-cloudSync-enum NotifyType-End-->
 
@@ -16,7 +18,9 @@ NOTIFY_ADDED = 0
 
 文件已新建。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotifyType-NOTIFY_ADDED = 0--><!--Device-NotifyType-NOTIFY_ADDED = 0-End-->
 
@@ -30,7 +34,9 @@ NOTIFY_MODIFIED = 1
 
 文件已修改。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotifyType-NOTIFY_MODIFIED = 1--><!--Device-NotifyType-NOTIFY_MODIFIED = 1-End-->
 
@@ -44,7 +50,9 @@ NOTIFY_DELETED = 2
 
 文件已被删除。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotifyType-NOTIFY_DELETED = 2--><!--Device-NotifyType-NOTIFY_DELETED = 2-End-->
 
@@ -58,7 +66,9 @@ NOTIFY_RENAMED = 3
 
 文件被重命名或者移动。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotifyType-NOTIFY_RENAMED = 3--><!--Device-NotifyType-NOTIFY_RENAMED = 3-End-->
 

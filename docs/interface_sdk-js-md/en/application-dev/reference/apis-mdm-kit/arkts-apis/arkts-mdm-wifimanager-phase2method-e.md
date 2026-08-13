@@ -6,6 +6,8 @@ Enumerates the Phase 2 authentication methods.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-wifiManager-enum Phase2Method--><!--Device-wifiManager-enum Phase2Method-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Not specified.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ PAP.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_PAP = 1--><!--Device-Phase2Method-PHASE2_PAP = 1-End-->
@@ -57,6 +63,8 @@ MS-CHAP.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ MS-CHAPv2.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3--><!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3-End-->
@@ -93,6 +103,8 @@ GTC.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ SIM.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_SIM = 5--><!--Device-Phase2Method-PHASE2_SIM = 5-End-->
@@ -130,6 +144,8 @@ AKA.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Phase2Method-PHASE2_AKA = 6--><!--Device-Phase2Method-PHASE2_AKA = 6-End-->
@@ -147,6 +163,8 @@ AKA Prime.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

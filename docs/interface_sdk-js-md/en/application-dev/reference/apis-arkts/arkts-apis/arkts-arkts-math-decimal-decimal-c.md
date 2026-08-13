@@ -2,9 +2,11 @@
 
 An arbitrary-precision Decimal type
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Decimal--><!--Device-unnamed-declare class Decimal-End-->
 
@@ -24,11 +26,13 @@ abs(): Decimal
 
 Return a new Decimal whose value is the absolute value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-abs(): Decimal--><!--Device-Decimal-abs(): Decimal-End-->
 
@@ -48,11 +52,13 @@ static abs(n: Value): Decimal
 
 Return a new Decimal whose value is the absolute value of `n`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static abs(n: Value): Decimal--><!--Device-Decimal-static abs(n: Value): Decimal-End-->
 
@@ -74,7 +80,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## acos
 
@@ -84,11 +90,13 @@ acos(): Decimal
 
 Return a new Decimal whose value is the arccosine (inverse cosine) in radians of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-acos(): Decimal--><!--Device-Decimal-acos(): Decimal-End-->
 
@@ -104,7 +112,7 @@ Return a new Decimal whose value is the arccosine (inverse cosine) in radians of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acos
 
@@ -114,11 +122,13 @@ static acos(n: Value): Decimal
 
 Return a new Decimal whose value is the arccosine in radians of `n`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static acos(n: Value): Decimal--><!--Device-Decimal-static acos(n: Value): Decimal-End-->
 
@@ -140,8 +150,8 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -151,11 +161,13 @@ acosh(): Decimal
 
 Return a new Decimal whose value is the inverse of the hyperbolic cosine in radians of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-acosh(): Decimal--><!--Device-Decimal-acosh(): Decimal-End-->
 
@@ -171,7 +183,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine in radi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -179,13 +191,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine in radi
 static acosh(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`, rounded to`precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static acosh(n: Value): Decimal--><!--Device-Decimal-static acosh(n: Value): Decimal-End-->
 
@@ -207,8 +221,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## add
 
@@ -216,13 +230,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 add(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal plus `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the value of this Decimal plus `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-add(n: Value): Decimal--><!--Device-Decimal-add(n: Value): Decimal-End-->
 
@@ -244,7 +260,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## add
 
@@ -254,11 +270,13 @@ static add(x: Value, y: Value): Decimal
 
 Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static add(x: Value, y: Value): Decimal--><!--Device-Decimal-static add(x: Value, y: Value): Decimal-End-->
 
@@ -281,7 +299,7 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## asin
 
@@ -291,11 +309,13 @@ asin(): Decimal
 
 Return a new Decimal whose value is the arcsine (inverse sine) in radians of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-asin(): Decimal--><!--Device-Decimal-asin(): Decimal-End-->
 
@@ -311,7 +331,7 @@ Return a new Decimal whose value is the arcsine (inverse sine) in radians of the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asin
 
@@ -319,13 +339,15 @@ Return a new Decimal whose value is the arcsine (inverse sine) in radians of the
 static asin(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static asin(n: Value): Decimal--><!--Device-Decimal-static asin(n: Value): Decimal-End-->
 
@@ -347,8 +369,8 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -358,11 +380,13 @@ asinh(): Decimal
 
 Return a new Decimal whose value is the inverse of the hyperbolic sine in radians of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-asinh(): Decimal--><!--Device-Decimal-asinh(): Decimal-End-->
 
@@ -378,7 +402,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine in radian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -386,13 +410,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine in radian
 static asinh(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, rounded to`precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static asinh(n: Value): Decimal--><!--Device-Decimal-static asinh(n: Value): Decimal-End-->
 
@@ -414,8 +440,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -425,11 +451,13 @@ atan(): Decimal
 
 Return a new Decimal whose value is the arctangent (inverse tangent) in radians of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-atan(): Decimal--><!--Device-Decimal-atan(): Decimal-End-->
 
@@ -445,7 +473,7 @@ Return a new Decimal whose value is the arctangent (inverse tangent) in radians 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -453,13 +481,15 @@ Return a new Decimal whose value is the arctangent (inverse tangent) in radians 
 static atan(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the arctangent in radians of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the arctangent in radians of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static atan(n: Value): Decimal--><!--Device-Decimal-static atan(n: Value): Decimal-End-->
 
@@ -481,8 +511,8 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan2
 
@@ -490,13 +520,15 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 static atan2(y: Value, x: Value): Decimal
 ```
 
-Return a new Decimal whose value is the arctangent in radians of `y/x` in the range -pi to pi(inclusive), rounded to `precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the arctangent in radians of `y/x` in the range -pi to pi (inclusive), rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static atan2(y: Value, x: Value): Decimal--><!--Device-Decimal-static atan2(y: Value, x: Value): Decimal-End-->
 
@@ -519,8 +551,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -530,11 +562,13 @@ atanh(): Decimal
 
 Return a new Decimal whose value is the inverse of the hyperbolic tangent in radians of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-atanh(): Decimal--><!--Device-Decimal-atanh(): Decimal-End-->
 
@@ -550,7 +584,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent in rad
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -558,13 +592,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent in rad
 static atanh(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`, rounded to`precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static atanh(n: Value): Decimal--><!--Device-Decimal-static atanh(n: Value): Decimal-End-->
 
@@ -586,8 +622,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## cbrt
 
@@ -595,13 +631,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 cbrt(): Decimal
 ```
 
-Return a new Decimal whose value is the cube root of the value of this Decimal, rounded to`precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the cube root of the value of this Decimal, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-cbrt(): Decimal--><!--Device-Decimal-cbrt(): Decimal-End-->
 
@@ -621,11 +659,13 @@ static cbrt(n: Value): Decimal
 
 Return a new Decimal whose value is the cube root of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static cbrt(n: Value): Decimal--><!--Device-Decimal-static cbrt(n: Value): Decimal-End-->
 
@@ -647,7 +687,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ceil
 
@@ -657,11 +697,13 @@ ceil(): Decimal
 
 Return a new Decimal whose value is the value of this Decimal rounded to a whole number in the direction of positive Infinity.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-ceil(): Decimal--><!--Device-Decimal-ceil(): Decimal-End-->
 
@@ -681,11 +723,13 @@ static ceil(n: Value): Decimal
 
 Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static ceil(n: Value): Decimal--><!--Device-Decimal-static ceil(n: Value): Decimal-End-->
 
@@ -707,7 +751,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## clamp
 
@@ -717,11 +761,13 @@ clamp(min: Value, max: Value): Decimal
 
 Return a new Decimal whose value is the value of this Decimal clamped to the range delineated by `min` and `max`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-clamp(min: Value, max: Value): Decimal--><!--Device-Decimal-clamp(min: Value, max: Value): Decimal-End-->
 
@@ -744,8 +790,8 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## clamp
 
@@ -755,11 +801,13 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 Return a new Decimal whose value is `n` clamped to the range delineated by `min` and `max`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static clamp(n: Value, min: Value, max: Value): Decimal--><!--Device-Decimal-static clamp(n: Value, min: Value, max: Value): Decimal-End-->
 
@@ -783,30 +831,24 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## comparedTo
 
-ArkTS-Dyn:
-```TypeScript
-comparedTo(n: Value): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 comparedTo(n: Value): double
 ```
 
-Return1 if the value of this Decimal is greater than the value of `n`,  
--1 if the value of this Decimal is less than the value of `n`,  
-0 if they have the same value,NaN if the value of either Decimal is NaN.
+Return 1 if the value of this Decimal is greater than the value of `n`, -1 if the value of this Decimal is less than the value of `n`, 0 if they have the same value, NaN if the value of either Decimal is NaN.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-comparedTo(n: Value): double--><!--Device-Decimal-comparedTo(n: Value): double-End-->
 
@@ -822,13 +864,13 @@ Return1 if the value of this Decimal is greater than the value of `n`,
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the number type |
+| double | the number type |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## constructor
 
@@ -838,11 +880,13 @@ constructor(n: Value)
 
 Return a new Decimal whose value is the absolute value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-constructor(n: Value)--><!--Device-Decimal-constructor(n: Value)-End-->
 
@@ -858,7 +902,7 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cos
 
@@ -868,11 +912,13 @@ cos(): Decimal
 
 Return a new Decimal whose value is the cosine of the value in radians of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-cos(): Decimal--><!--Device-Decimal-cos(): Decimal-End-->
 
@@ -892,11 +938,13 @@ static cos(n: Value): Decimal
 
 Return a new Decimal whose value is the cosine of `n`, rounded to `precision` significant digits using rounding mode `rounding`
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static cos(n: Value): Decimal--><!--Device-Decimal-static cos(n: Value): Decimal-End-->
 
@@ -918,7 +966,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cosh
 
@@ -928,11 +976,13 @@ cosh(): Decimal
 
 Return a new Decimal whose value is the hyperbolic cosine of the value in radians of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-cosh(): Decimal--><!--Device-Decimal-cosh(): Decimal-End-->
 
@@ -952,11 +1002,13 @@ static cosh(n: Value): Decimal
 
 Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to precision significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static cosh(n: Value): Decimal--><!--Device-Decimal-static cosh(n: Value): Decimal-End-->
 
@@ -978,27 +1030,23 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## decimalPlaces
 
-ArkTS-Dyn:
-```TypeScript
-decimalPlaces(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 decimalPlaces(): double
 ```
 
 Return the number of decimal places of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-decimalPlaces(): double--><!--Device-Decimal-decimalPlaces(): double-End-->
 
@@ -1008,7 +1056,7 @@ Return the number of decimal places of the value of this Decimal.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the number type |
+| double | the number type |
 
 ## div
 
@@ -1016,13 +1064,15 @@ Return the number of decimal places of the value of this Decimal.
 div(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal divided by `n`, rounded to`precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the value of this Decimal divided by `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-div(n: Value): Decimal--><!--Device-Decimal-div(n: Value): Decimal-End-->
 
@@ -1044,7 +1094,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## div
 
@@ -1054,11 +1104,13 @@ static div(x: Value, y: Value): Decimal
 
 Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static div(x: Value, y: Value): Decimal--><!--Device-Decimal-static div(x: Value, y: Value): Decimal-End-->
 
@@ -1081,7 +1133,7 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -1091,11 +1143,13 @@ dividedToIntegerBy(n: Value): Decimal
 
 Return a new Decimal whose value is the integer part of dividing the value of this Decimal by the value of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-dividedToIntegerBy(n: Value): Decimal--><!--Device-Decimal-dividedToIntegerBy(n: Value): Decimal-End-->
 
@@ -1117,7 +1171,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## equals
 
@@ -1127,11 +1181,13 @@ equals(n: Value): boolean
 
 Return true if the value of this Decimal is equal to the value of `n`, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-equals(n: Value): boolean--><!--Device-Decimal-equals(n: Value): boolean-End-->
 
@@ -1153,7 +1209,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## exp
 
@@ -1161,13 +1217,15 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 exp(): Decimal
 ```
 
-Return a new Decimal whose value is the natural exponential of the value of this Decimal,i.e. the base e raised to the power the value of this Decimal, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the natural exponential of the value of this Decimal, i.e. the base e raised to the power the value of this Decimal, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-exp(): Decimal--><!--Device-Decimal-exp(): Decimal-End-->
 
@@ -1183,7 +1241,7 @@ Return a new Decimal whose value is the natural exponential of the value of this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## exp
 
@@ -1191,13 +1249,15 @@ Return a new Decimal whose value is the natural exponential of the value of this
 static exp(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the natural exponential of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the natural exponential of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static exp(n: Value): Decimal--><!--Device-Decimal-static exp(n: Value): Decimal-End-->
 
@@ -1219,8 +1279,8 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## floor
 
@@ -1230,11 +1290,13 @@ floor(): Decimal
 
 Return a new Decimal whose value is the value of this Decimal rounded to a whole number in the direction of negative Infinity.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-floor(): Decimal--><!--Device-Decimal-floor(): Decimal-End-->
 
@@ -1254,11 +1316,13 @@ static floor(n: Value): Decimal
 
 Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static floor(n: Value): Decimal--><!--Device-Decimal-static floor(n: Value): Decimal-End-->
 
@@ -1280,7 +1344,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1290,11 +1354,13 @@ greaterThan(n: Value): boolean
 
 Return true if the value of this Decimal is greater than the value of `n`, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-greaterThan(n: Value): boolean--><!--Device-Decimal-greaterThan(n: Value): boolean-End-->
 
@@ -1316,7 +1382,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1324,13 +1390,15 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 greaterThanOrEqualTo(n: Value): boolean
 ```
 
-Return true if the value of this Decimal is greater than or equal to the value of `n`,otherwise return false.
+Return true if the value of this Decimal is greater than or equal to the value of `n`, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-greaterThanOrEqualTo(n: Value): boolean--><!--Device-Decimal-greaterThanOrEqualTo(n: Value): boolean-End-->
 
@@ -1352,7 +1420,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## hypot
 
@@ -1360,13 +1428,15 @@ Return true if the value of this Decimal is greater than or equal to the value o
 static hypot(...n: Value[]): Decimal
 ```
 
-Return a new Decimal whose value is the square root of the sum of the squares of the arguments,rounded to `precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the square root of the sum of the squares of the arguments, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static hypot(...n: Value[]): Decimal--><!--Device-Decimal-static hypot(...n: Value[]): Decimal-End-->
 
@@ -1388,7 +1458,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1398,11 +1468,13 @@ isFinite(): boolean
 
 Return true if the value of this Decimal is a finite number, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isFinite(): boolean--><!--Device-Decimal-isFinite(): boolean-End-->
 
@@ -1422,11 +1494,13 @@ isInteger(): boolean
 
 Return true if the value of this Decimal is an integer, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isInteger(): boolean--><!--Device-Decimal-isInteger(): boolean-End-->
 
@@ -1446,11 +1520,13 @@ isNaN(): boolean
 
 Return true if the value of this Decimal is NaN, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isNaN(): boolean--><!--Device-Decimal-isNaN(): boolean-End-->
 
@@ -1470,11 +1546,13 @@ isNegative(): boolean
 
 Return true if the value of this Decimal is negative, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isNegative(): boolean--><!--Device-Decimal-isNegative(): boolean-End-->
 
@@ -1494,11 +1572,13 @@ isPositive(): boolean
 
 Return true if the value of this Decimal is positive, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isPositive(): boolean--><!--Device-Decimal-isPositive(): boolean-End-->
 
@@ -1518,11 +1598,13 @@ isZero(): boolean
 
 Return true if the value of this Decimal is 0 or -0, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isZero(): boolean--><!--Device-Decimal-isZero(): boolean-End-->
 
@@ -1542,11 +1624,13 @@ lessThan(n: Value): boolean
 
 Return true if the value of this Decimal is less than `n`, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-lessThan(n: Value): boolean--><!--Device-Decimal-lessThan(n: Value): boolean-End-->
 
@@ -1568,7 +1652,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1578,11 +1662,13 @@ lessThanOrEqualTo(n: Value): boolean
 
 Return true if the value of this Decimal is less than or equal to `n`, otherwise return false.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-lessThanOrEqualTo(n: Value): boolean--><!--Device-Decimal-lessThanOrEqualTo(n: Value): boolean-End-->
 
@@ -1604,7 +1690,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ln
 
@@ -1612,13 +1698,15 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 ln(): Decimal
 ```
 
-Return a new Decimal whose value is the natural logarithm of the value of this Decimal,rounded to `precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the natural logarithm of the value of this Decimal, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-ln(): Decimal--><!--Device-Decimal-ln(): Decimal-End-->
 
@@ -1634,7 +1722,7 @@ Return a new Decimal whose value is the natural logarithm of the value of this D
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## ln
 
@@ -1642,13 +1730,15 @@ Return a new Decimal whose value is the natural logarithm of the value of this D
 static ln(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the natural logarithm of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the natural logarithm of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static ln(n: Value): Decimal--><!--Device-Decimal-static ln(n: Value): Decimal-End-->
 
@@ -1670,8 +1760,8 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1679,13 +1769,15 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 log(n: Value): Decimal
 ```
 
-Return the logarithm of the value of this Decimal to the specified base, rounded to `precision`significant digits using rounding mode `rounding`.
+Return the logarithm of the value of this Decimal to the specified base, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-log(n: Value): Decimal--><!--Device-Decimal-log(n: Value): Decimal-End-->
 
@@ -1707,8 +1799,8 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1716,13 +1808,15 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 static log(n: Value, base: Value): Decimal
 ```
 
-Return a new Decimal whose value is the log of `n` to the base `base`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the log of `n` to the base `base`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static log(n: Value, base: Value): Decimal--><!--Device-Decimal-static log(n: Value, base: Value): Decimal-End-->
 
@@ -1745,8 +1839,8 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log10
 
@@ -1754,13 +1848,15 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 static log10(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static log10(n: Value): Decimal--><!--Device-Decimal-static log10(n: Value): Decimal-End-->
 
@@ -1782,8 +1878,8 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log2
 
@@ -1791,13 +1887,15 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 static log2(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static log2(n: Value): Decimal--><!--Device-Decimal-static log2(n: Value): Decimal-End-->
 
@@ -1819,8 +1917,8 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## max
 
@@ -1830,11 +1928,13 @@ static max(...n: Value[]): Decimal
 
 Return a new Decimal whose value is the maximum of the arguments.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static max(...n: Value[]): Decimal--><!--Device-Decimal-static max(...n: Value[]): Decimal-End-->
 
@@ -1856,7 +1956,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## min
 
@@ -1866,11 +1966,13 @@ static min(...n: Value[]): Decimal
 
 Return a new Decimal whose value is the minimum of the arguments.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static min(...n: Value[]): Decimal--><!--Device-Decimal-static min(...n: Value[]): Decimal-End-->
 
@@ -1892,7 +1994,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1900,13 +2002,15 @@ Return a new Decimal whose value is the minimum of the arguments.
 mod(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal modulo `n`, rounded to`precision` significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the value of this Decimal modulo `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-mod(n: Value): Decimal--><!--Device-Decimal-mod(n: Value): Decimal-End-->
 
@@ -1928,7 +2032,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1938,11 +2042,13 @@ static mod(x: Value, y: Value): Decimal
 
 Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static mod(x: Value, y: Value): Decimal--><!--Device-Decimal-static mod(x: Value, y: Value): Decimal-End-->
 
@@ -1965,7 +2071,7 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1975,11 +2081,13 @@ mul(n: Value): Decimal
 
 Return a new Decimal whose value is this Decimal times `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-mul(n: Value): Decimal--><!--Device-Decimal-mul(n: Value): Decimal-End-->
 
@@ -2001,7 +2109,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -2011,11 +2119,13 @@ static mul(x: Value, y: Value): Decimal
 
 Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static mul(x: Value, y: Value): Decimal--><!--Device-Decimal-static mul(x: Value, y: Value): Decimal-End-->
 
@@ -2038,7 +2148,7 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## negate
 
@@ -2048,11 +2158,13 @@ negate(): Decimal
 
 Return a new Decimal whose value is the value of this Decimal negated, i.e. as if multiplied by -1.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-negate(): Decimal--><!--Device-Decimal-negate(): Decimal-End-->
 
@@ -2072,11 +2184,13 @@ pow(n: Value): Decimal
 
 Return a new Decimal whose value is the value of this Decimal raised to the power `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-pow(n: Value): Decimal--><!--Device-Decimal-pow(n: Value): Decimal-End-->
 
@@ -2098,8 +2212,8 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## pow
 
@@ -2109,11 +2223,13 @@ static pow(base: Value, exponent: Value): Decimal
 
 Return a new Decimal whose value is `base` raised to the power `exponent`, rounded to precision significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static pow(base: Value, exponent: Value): Decimal--><!--Device-Decimal-static pow(base: Value, exponent: Value): Decimal-End-->
 
@@ -2136,28 +2252,24 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## precision
 
-ArkTS-Dyn:
-```TypeScript
-precision(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 precision(): double
 ```
 
 Return the number of significant digits of the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-precision(): double--><!--Device-Decimal-precision(): double-End-->
 
@@ -2167,27 +2279,23 @@ Return the number of significant digits of the value of this Decimal.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the number type |
+| double | the number type |
 
 ## precision
 
-ArkTS-Dyn:
-```TypeScript
-precision(includeZeros: boolean | number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 precision(includeZeros: boolean | int): double
 ```
 
 Return the number of significant digits of the value of this Decimal, whether to count integer-part trailing zeros.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-precision(includeZeros: boolean | int): double--><!--Device-Decimal-precision(includeZeros: boolean | int): double-End-->
 
@@ -2197,19 +2305,19 @@ Return the number of significant digits of the value of this Decimal, whether to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| includeZeros | ArkTS-Dyn: boolean \| number  <br>ArkTS-Sta：boolean \| int | Yes | Whether to count integer-part trailing zeros: true, false, 1 or 0. |
+| includeZeros | boolean \| int | Yes | Whether to count integer-part trailing zeros: true, false, 1 or 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the number type |
+| double | the number type |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `includeZeros` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `includeZeros` is out of range. |
 
 ## random
 
@@ -2219,11 +2327,13 @@ static random(): Decimal
 
 Returns a new Decimal with a random value equal to or greater than 0 and less than 1.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static random(): Decimal--><!--Device-Decimal-static random(): Decimal-End-->
 
@@ -2239,27 +2349,23 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## random
 
-ArkTS-Dyn:
-```TypeScript
-static random(significantDigits: number): Decimal
-```
-
-ArkTS-Sta:
 ```TypeScript
 static random(significantDigits: double): Decimal
 ```
 
-Returns a new Decimal with a random value equal to or greater than 0 and less than 1, and with`significantDigits` significant digits (or less if trailing zeros are produced).
+Returns a new Decimal with a random value equal to or greater than 0 and less than 1, and with `significantDigits` significant digits (or less if trailing zeros are produced).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static random(significantDigits: double): Decimal--><!--Device-Decimal-static random(significantDigits: double): Decimal-End-->
 
@@ -2269,7 +2375,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | {number} Significant digits. Integer, 0 to MAX_DIGITS inclusive. [since 12 - 17] |
+| significantDigits | double | Yes | {number} Significant digits. Integer, 0 to MAX_DIGITS inclusive. [since 12 - 17] |
 
 **Return value:**
 
@@ -2281,8 +2387,8 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## round
 
@@ -2292,11 +2398,13 @@ static round(n: Value): Decimal
 
 Return a new Decimal whose value is `n` rounded to an integer using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static round(n: Value): Decimal--><!--Device-Decimal-static round(n: Value): Decimal-End-->
 
@@ -2318,7 +2426,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## set
 
@@ -2328,11 +2436,13 @@ static set(config: DecimalConfig): void
 
 Configures the 'global' settings for this particular Decimal constructor.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static set(config: DecimalConfig): void--><!--Device-Decimal-static set(config: DecimalConfig): void-End-->
 
@@ -2348,33 +2458,25 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
 
 ## sign
 
-ArkTS-Dyn:
-```TypeScript
-static sign(n: Value): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 static sign(n: Value): double
 ```
 
-Return the sign of the passed value to the method.1 if x > 0,  
--1 if x < 0,  
-0 if x is 0,  
--0 if x is -0,  
-NaN otherwise
+Return the sign of the passed value to the method. 1 if x > 0, -1 if x < 0, 0 if x is 0, -0 if x is -0, NaN otherwise
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static sign(n: Value): double--><!--Device-Decimal-static sign(n: Value): double-End-->
 
@@ -2391,13 +2493,13 @@ NaN otherwise
 | Type | Description |
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type<br>**Applicable version:** 12 - 17 |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the Decimal type<br>**Applicable version:** 18 and later |
+| double | the Decimal type<br>**Applicable version:** 18 and later |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sin
 
@@ -2407,11 +2509,13 @@ sin(): Decimal
 
 Return a new Decimal whose value is the sine of the value in radians of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sin(): Decimal--><!--Device-Decimal-sin(): Decimal-End-->
 
@@ -2431,11 +2535,13 @@ static sin(n: Value): Decimal
 
 Return a new Decimal whose value is the sine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static sin(n: Value): Decimal--><!--Device-Decimal-static sin(n: Value): Decimal-End-->
 
@@ -2457,7 +2563,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sinh
 
@@ -2467,11 +2573,13 @@ sinh(): Decimal
 
 Return a new Decimal whose value is the hyperbolic sine of the value in radians of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sinh(): Decimal--><!--Device-Decimal-sinh(): Decimal-End-->
 
@@ -2489,13 +2597,15 @@ Return a new Decimal whose value is the hyperbolic sine of the value in radians 
 static sinh(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static sinh(n: Value): Decimal--><!--Device-Decimal-static sinh(n: Value): Decimal-End-->
 
@@ -2517,7 +2627,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sqrt
 
@@ -2525,13 +2635,15 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 sqrt(): Decimal
 ```
 
-Return a new Decimal whose value is the square root of this Decimal, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the square root of this Decimal, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sqrt(): Decimal--><!--Device-Decimal-sqrt(): Decimal-End-->
 
@@ -2551,11 +2663,13 @@ static sqrt(n: Value): Decimal
 
 Return a new Decimal whose value is the square root of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static sqrt(n: Value): Decimal--><!--Device-Decimal-static sqrt(n: Value): Decimal-End-->
 
@@ -2577,7 +2691,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2585,13 +2699,15 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 sub(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal minus `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the value of this Decimal minus `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sub(n: Value): Decimal--><!--Device-Decimal-sub(n: Value): Decimal-End-->
 
@@ -2613,7 +2729,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2623,11 +2739,13 @@ static sub(x: Value, y: Value): Decimal
 
 Return a new Decimal whose value is `x` minus `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static sub(x: Value, y: Value): Decimal--><!--Device-Decimal-static sub(x: Value, y: Value): Decimal-End-->
 
@@ -2650,7 +2768,7 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sum
 
@@ -2658,15 +2776,15 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 static sum(...n: Value[]): Decimal
 ```
 
-Return a new Decimal whose value is the sum of the arguments, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the sum of the arguments, rounded to `precision` significant digits using rounding mode `rounding`. Only the result is rounded, not the intermediate calculations.
 
-Only the result is rounded, not the intermediate calculations.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static sum(...n: Value[]): Decimal--><!--Device-Decimal-static sum(...n: Value[]): Decimal-End-->
 
@@ -2688,7 +2806,7 @@ Only the result is rounded, not the intermediate calculations.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tan
 
@@ -2698,11 +2816,13 @@ tan(): Decimal
 
 Return a new Decimal whose value is the tangent of the value in radians of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-tan(): Decimal--><!--Device-Decimal-tan(): Decimal-End-->
 
@@ -2722,11 +2842,13 @@ static tan(n: Value): Decimal
 
 Return a new Decimal whose value is the tangent of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static tan(n: Value): Decimal--><!--Device-Decimal-static tan(n: Value): Decimal-End-->
 
@@ -2748,7 +2870,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tanh
 
@@ -2758,11 +2880,13 @@ tanh(): Decimal
 
 Return a new Decimal whose value is the hyperbolic tangent of the value in radians of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-tanh(): Decimal--><!--Device-Decimal-tanh(): Decimal-End-->
 
@@ -2780,13 +2904,15 @@ Return a new Decimal whose value is the hyperbolic tangent of the value in radia
 static tanh(n: Value): Decimal
 ```
 
-Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static tanh(n: Value): Decimal--><!--Device-Decimal-static tanh(n: Value): Decimal-End-->
 
@@ -2808,7 +2934,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toBinary
 
@@ -2818,11 +2944,13 @@ toBinary(): string
 
 Return a string representing the value of this Decimal in base 2.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toBinary(): string--><!--Device-Decimal-toBinary(): string-End-->
 
@@ -2836,23 +2964,19 @@ Return a string representing the value of this Decimal in base 2.
 
 ## toBinary
 
-ArkTS-Dyn:
-```TypeScript
-toBinary(significantDigits: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toBinary(significantDigits: double): string
 ```
 
-Return a string representing the value of this Decimal in base 2, round to `significantDigits`significant digits.
+Return a string representing the value of this Decimal in base 2, round to `significantDigits` significant digits.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toBinary(significantDigits: double): string--><!--Device-Decimal-toBinary(significantDigits: double): string-End-->
 
@@ -2862,7 +2986,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -2874,27 +2998,23 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toBinary
 
-ArkTS-Dyn:
-```TypeScript
-toBinary(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toBinary(significantDigits: double, rounding: Rounding): string
 ```
 
-Return a string representing the value of this Decimal in base 2, round to `significantDigits`significant digits using rounding mode `rounding`.
+Return a string representing the value of this Decimal in base 2, round to `significantDigits` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toBinary(significantDigits: double, rounding: Rounding): string--><!--Device-Decimal-toBinary(significantDigits: double, rounding: Rounding): string-End-->
 
@@ -2904,7 +3024,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -2917,7 +3037,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2927,11 +3047,13 @@ toDecimalPlaces(): Decimal
 
 Return a new Decimal whose value is the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toDecimalPlaces(): Decimal--><!--Device-Decimal-toDecimalPlaces(): Decimal-End-->
 
@@ -2945,23 +3067,19 @@ Return a new Decimal whose value is the value of this Decimal.
 
 ## toDecimalPlaces
 
-ArkTS-Dyn:
-```TypeScript
-toDecimalPlaces(decimalPlaces: number): Decimal
-```
-
-ArkTS-Sta:
 ```TypeScript
 toDecimalPlaces(decimalPlaces: double): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces`decimal places.
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces` decimal places.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toDecimalPlaces(decimalPlaces: double): Decimal--><!--Device-Decimal-toDecimalPlaces(decimalPlaces: double): Decimal-End-->
 
@@ -2971,7 +3089,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| decimalPlaces | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -2983,27 +3101,23 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toDecimalPlaces
 
-ArkTS-Dyn:
-```TypeScript
-toDecimalPlaces(decimalPlaces: number, rounding: Rounding): Decimal
-```
-
-ArkTS-Sta:
 ```TypeScript
 toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces`decimal places using rounding mode `rounding`.
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces` decimal places using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal--><!--Device-Decimal-toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal-End-->
 
@@ -3013,7 +3127,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| decimalPlaces | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3026,7 +3140,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toExponential
 
@@ -3036,11 +3150,13 @@ toExponential(): string
 
 Return a string representing the value of this Decimal in exponential notation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toExponential(): string--><!--Device-Decimal-toExponential(): string-End-->
 
@@ -3054,23 +3170,19 @@ Return a string representing the value of this Decimal in exponential notation.
 
 ## toExponential
 
-ArkTS-Dyn:
-```TypeScript
-toExponential(decimalPlaces: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toExponential(decimalPlaces: double): string
 ```
 
-Return a string representing the value of this Decimal in exponential notation rounded to`decimalPlaces` fixed decimal places.
+Return a string representing the value of this Decimal in exponential notation rounded to `decimalPlaces` fixed decimal places.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toExponential(decimalPlaces: double): string--><!--Device-Decimal-toExponential(decimalPlaces: double): string-End-->
 
@@ -3080,7 +3192,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| decimalPlaces | double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3092,27 +3204,23 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toExponential
 
-ArkTS-Dyn:
-```TypeScript
-toExponential(decimalPlaces: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toExponential(decimalPlaces: double, rounding: Rounding): string
 ```
 
-Return a string representing the value of this Decimal in exponential notation rounded to`decimalPlaces` fixed decimal places using rounding mode `rounding`.
+Return a string representing the value of this Decimal in exponential notation rounded to `decimalPlaces` fixed decimal places using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toExponential(decimalPlaces: double, rounding: Rounding): string--><!--Device-Decimal-toExponential(decimalPlaces: double, rounding: Rounding): string-End-->
 
@@ -3122,7 +3230,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| decimalPlaces | double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3135,7 +3243,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFixed
 
@@ -3145,11 +3253,13 @@ toFixed(): string
 
 Return a string representing the value of this Decimal in normal (fixed-point).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFixed(): string--><!--Device-Decimal-toFixed(): string-End-->
 
@@ -3163,23 +3273,19 @@ Return a string representing the value of this Decimal in normal (fixed-point).
 
 ## toFixed
 
-ArkTS-Dyn:
-```TypeScript
-toFixed(decimalPlaces: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toFixed(decimalPlaces: double): string
 ```
 
-Return a string representing the value of this Decimal in normal (fixed-point) notation to`decimalPlaces` fixed decimal places.
+Return a string representing the value of this Decimal in normal (fixed-point) notation to `decimalPlaces` fixed decimal places.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFixed(decimalPlaces: double): string--><!--Device-Decimal-toFixed(decimalPlaces: double): string-End-->
 
@@ -3190,7 +3296,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| decimalPlaces | double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3202,27 +3308,23 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toFixed
 
-ArkTS-Dyn:
-```TypeScript
-toFixed(decimalPlaces: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toFixed(decimalPlaces: double, rounding: Rounding): string
 ```
 
-Return a string representing the value of this Decimal in normal (fixed-point) notation to`decimalPlaces` fixed decimal places and rounded using rounding mode `rounding`.
+Return a string representing the value of this Decimal in normal (fixed-point) notation to `decimalPlaces` fixed decimal places and rounded using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFixed(decimalPlaces: double, rounding: Rounding): string--><!--Device-Decimal-toFixed(decimalPlaces: double, rounding: Rounding): string-End-->
 
@@ -3232,7 +3334,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| decimalPlaces | double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3245,7 +3347,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFraction
 
@@ -3255,11 +3357,13 @@ toFraction(): Decimal[]
 
 Return an array representing the value of this Decimal as a simple fraction with an integer numerator and an integer denominator.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFraction(): Decimal[]--><!--Device-Decimal-toFraction(): Decimal[]-End-->
 
@@ -3279,11 +3383,13 @@ toFraction(maxDenominator: Value): Decimal[]
 
 Return an array representing the value of this Decimal as a simple fraction with an integer numerator and an integer denominator. The denominator will be a positive non-zero value less than or equal to `max_denominator`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFraction(maxDenominator: Value): Decimal[]--><!--Device-Decimal-toFraction(maxDenominator: Value): Decimal[]-End-->
 
@@ -3305,7 +3411,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toHexadecimal
 
@@ -3315,11 +3421,13 @@ toHexadecimal(): string
 
 Return a string representing the value of this Decimal in base 16
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toHexadecimal(): string--><!--Device-Decimal-toHexadecimal(): string-End-->
 
@@ -3333,23 +3441,19 @@ Return a string representing the value of this Decimal in base 16
 
 ## toHexadecimal
 
-ArkTS-Dyn:
-```TypeScript
-toHexadecimal(significantDigits: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toHexadecimal(significantDigits: double): string
 ```
 
 Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toHexadecimal(significantDigits: double): string--><!--Device-Decimal-toHexadecimal(significantDigits: double): string-End-->
 
@@ -3359,7 +3463,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3371,27 +3475,23 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toHexadecimal
 
-ArkTS-Dyn:
-```TypeScript
-toHexadecimal(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toHexadecimal(significantDigits: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toHexadecimal(significantDigits: double, rounding: Rounding): string--><!--Device-Decimal-toHexadecimal(significantDigits: double, rounding: Rounding): string-End-->
 
@@ -3401,7 +3501,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3414,7 +3514,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toNearest
 
@@ -3424,11 +3524,13 @@ toNearest(n: Value): Decimal
 
 Returns a new Decimal whose value is the nearest multiple of `n`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toNearest(n: Value): Decimal--><!--Device-Decimal-toNearest(n: Value): Decimal-End-->
 
@@ -3450,7 +3552,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toNearest
 
@@ -3460,11 +3562,13 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 Returns a new Decimal whose value is the nearest multiple of `n` in the direction of rounding mode `rounding`, to the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toNearest(n: Value, rounding: Rounding): Decimal--><!--Device-Decimal-toNearest(n: Value, rounding: Rounding): Decimal-End-->
 
@@ -3487,28 +3591,24 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `rounding` is out of range. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `rounding` is out of range. |
 
 ## toNumber
 
-ArkTS-Dyn:
-```TypeScript
-toNumber(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 toNumber(): double
 ```
 
 Return the value of this Decimal converted to a number primitive. Zero keeps its sign.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toNumber(): double--><!--Device-Decimal-toNumber(): double-End-->
 
@@ -3518,7 +3618,7 @@ Return the value of this Decimal converted to a number primitive. Zero keeps its
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the number type |
+| double | the number type |
 
 ## toOctal
 
@@ -3528,11 +3628,13 @@ toOctal(): string
 
 Return a string representing the value of this Decimal in base 8.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toOctal(): string--><!--Device-Decimal-toOctal(): string-End-->
 
@@ -3546,23 +3648,19 @@ Return a string representing the value of this Decimal in base 8.
 
 ## toOctal
 
-ArkTS-Dyn:
-```TypeScript
-toOctal(significantDigits: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toOctal(significantDigits: double): string
 ```
 
 Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toOctal(significantDigits: double): string--><!--Device-Decimal-toOctal(significantDigits: double): string-End-->
 
@@ -3572,7 +3670,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | {double \| string \| Decimal} |
+| significantDigits | double | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -3584,27 +3682,23 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toOctal
 
-ArkTS-Dyn:
-```TypeScript
-toOctal(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toOctal(significantDigits: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toOctal(significantDigits: double, rounding: Rounding): string--><!--Device-Decimal-toOctal(significantDigits: double, rounding: Rounding): string-End-->
 
@@ -3614,7 +3708,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | {double \| string \| Decimal} |
+| significantDigits | double | Yes | {double \| string \| Decimal} |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3627,7 +3721,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toPrecision
 
@@ -3637,11 +3731,13 @@ toPrecision(): string
 
 Return a string representing the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toPrecision(): string--><!--Device-Decimal-toPrecision(): string-End-->
 
@@ -3655,23 +3751,19 @@ Return a string representing the value of this Decimal.
 
 ## toPrecision
 
-ArkTS-Dyn:
-```TypeScript
-toPrecision(significantDigits: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toPrecision(significantDigits: double): string
 ```
 
 Return a string representing the value of this Decimal rounded to `significantDigits` significant digits.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toPrecision(significantDigits: double): string--><!--Device-Decimal-toPrecision(significantDigits: double): string-End-->
 
@@ -3681,7 +3773,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3693,27 +3785,23 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toPrecision
 
-ArkTS-Dyn:
-```TypeScript
-toPrecision(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 toPrecision(significantDigits: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal rounded to `significantDigits` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toPrecision(significantDigits: double, rounding: Rounding): string--><!--Device-Decimal-toPrecision(significantDigits: double, rounding: Rounding): string-End-->
 
@@ -3723,7 +3811,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3736,7 +3824,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toSignificantDigits
 
@@ -3746,11 +3834,13 @@ toSignificantDigits(): Decimal
 
 Return a new Decimal whose value is the value of this Decimal.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toSignificantDigits(): Decimal--><!--Device-Decimal-toSignificantDigits(): Decimal-End-->
 
@@ -3764,23 +3854,19 @@ Return a new Decimal whose value is the value of this Decimal.
 
 ## toSignificantDigits
 
-ArkTS-Dyn:
-```TypeScript
-toSignificantDigits(significantDigits: number): Decimal
-```
-
-ArkTS-Sta:
 ```TypeScript
 toSignificantDigits(significantDigits: double): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits`significant digits.
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits` significant digits.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toSignificantDigits(significantDigits: double): Decimal--><!--Device-Decimal-toSignificantDigits(significantDigits: double): Decimal-End-->
 
@@ -3790,7 +3876,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3802,27 +3888,23 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toSignificantDigits
 
-ArkTS-Dyn:
-```TypeScript
-toSignificantDigits(significantDigits: number, rounding: Rounding): Decimal
-```
-
-ArkTS-Sta:
 ```TypeScript
 toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 ```
 
-Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits`significant digits using rounding mode `rounding`.
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits` significant digits using rounding mode `rounding`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal--><!--Device-Decimal-toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal-End-->
 
@@ -3832,7 +3914,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| significantDigits | double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3845,7 +3927,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toString
 
@@ -3853,13 +3935,15 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 toString(): string
 ```
 
-Return a string representing the value of this Decimal.Return exponential notation if this Decimal has a positive exponent equal to or greater than`toExpPos`, or a negative exponent equal to or less than `toExpNeg`.
+Return a string representing the value of this Decimal. Return exponential notation if this Decimal has a positive exponent equal to or greater than `toExpPos`, or a negative exponent equal to or less than `toExpNeg`.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toString(): string--><!--Device-Decimal-toString(): string-End-->
 
@@ -3879,11 +3963,13 @@ trunc(): Decimal
 
 Return a new Decimal whose value is the value of this Decimal truncated to a whole number.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-trunc(): Decimal--><!--Device-Decimal-trunc(): Decimal-End-->
 
@@ -3903,11 +3989,13 @@ static trunc(n: Value): Decimal
 
 Return a new Decimal whose value is `n` truncated to an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static trunc(n: Value): Decimal--><!--Device-Decimal-static trunc(n: Value): Decimal-End-->
 
@@ -3929,7 +4017,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## valueOf
 
@@ -3937,13 +4025,15 @@ Return a new Decimal whose value is `n` truncated to an integer.
 valueOf(): string
 ```
 
-Return a string representing the value of this Decimal.Unlike `toString`, negative zero will include the minus sign.
+Return a string representing the value of this Decimal. Unlike `toString`, negative zero will include the minus sign.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-valueOf(): string--><!--Device-Decimal-valueOf(): string-End-->
 
@@ -3958,200 +4048,220 @@ Return a string representing the value of this Decimal.Unlike `toString`, negati
 ## EUCLIDEAN
 
 ```TypeScript
-static readonly EUCLIDEAN : 9
+static readonly EUCLIDEAN: int
 ```
 
-Not a rounding mode, see modulo
+Not a rounding mode, see modulo The value should be an integer.
 
-**Type:** 9
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly EUCLIDEAN : 9--><!--Device-Decimal-static readonly EUCLIDEAN : 9-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly EUCLIDEAN: int--><!--Device-Decimal-static readonly EUCLIDEAN: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_CEILING
 
 ```TypeScript
-static readonly ROUND_CEILING : 2
+static readonly ROUND_CEILING: int
 ```
 
-Rounds towards Infinity
+Rounds towards Infinity The value should be an integer.
 
-**Type:** 2
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_CEILING : 2--><!--Device-Decimal-static readonly ROUND_CEILING : 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_CEILING: int--><!--Device-Decimal-static readonly ROUND_CEILING: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_DOWN
 
 ```TypeScript
-static readonly ROUND_DOWN : 1
+static readonly ROUND_DOWN: int
 ```
 
-Rounds towards zero
+Rounds towards zero The value should be an integer.
 
-**Type:** 1
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_DOWN : 1--><!--Device-Decimal-static readonly ROUND_DOWN : 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_DOWN: int--><!--Device-Decimal-static readonly ROUND_DOWN: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_FLOOR
 
 ```TypeScript
-static readonly ROUND_FLOOR : 3
+static readonly ROUND_FLOOR: int
 ```
 
-Rounds towards -Infinity
+Rounds towards -Infinity The value should be an integer.
 
-**Type:** 3
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_FLOOR : 3--><!--Device-Decimal-static readonly ROUND_FLOOR : 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_FLOOR: int--><!--Device-Decimal-static readonly ROUND_FLOOR: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_HALF_CEILING
 
 ```TypeScript
-static readonly ROUND_HALF_CEILING : 7
+static readonly ROUND_HALF_CEILING: int
 ```
 
-Rounds towards nearest neighbour. If equidistant, rounds towards Infinity
+Rounds towards nearest neighbour. If equidistant, rounds towards Infinity The value should be an integer.
 
-**Type:** 7
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_HALF_CEILING : 7--><!--Device-Decimal-static readonly ROUND_HALF_CEILING : 7-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_HALF_CEILING: int--><!--Device-Decimal-static readonly ROUND_HALF_CEILING: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_HALF_DOWN
 
 ```TypeScript
-static readonly ROUND_HALF_DOWN : 5
+static readonly ROUND_HALF_DOWN: int
 ```
 
-Rounds towards nearest neighbour. If equidistant, rounds towards zero
+Rounds towards nearest neighbour. If equidistant, rounds towards zero The value should be an integer.
 
-**Type:** 5
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_HALF_DOWN : 5--><!--Device-Decimal-static readonly ROUND_HALF_DOWN : 5-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_HALF_DOWN: int--><!--Device-Decimal-static readonly ROUND_HALF_DOWN: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_HALF_EVEN
 
 ```TypeScript
-static readonly ROUND_HALF_EVEN : 6
+static readonly ROUND_HALF_EVEN: int
 ```
 
-Rounds towards nearest neighbour. If equidistant, rounds towards even neighbour
+Rounds towards nearest neighbour. If equidistant, rounds towards even neighbour The value should be an integer.
 
-**Type:** 6
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_HALF_EVEN : 6--><!--Device-Decimal-static readonly ROUND_HALF_EVEN : 6-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_HALF_EVEN: int--><!--Device-Decimal-static readonly ROUND_HALF_EVEN: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_HALF_FLOOR
 
 ```TypeScript
-static readonly ROUND_HALF_FLOOR : 8
+static readonly ROUND_HALF_FLOOR: int
 ```
 
-Rounds towards nearest neighbour. If equidistant, rounds towards -Infinity
+Rounds towards nearest neighbour. If equidistant, rounds towards -Infinity The value should be an integer.
 
-**Type:** 8
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_HALF_FLOOR : 8--><!--Device-Decimal-static readonly ROUND_HALF_FLOOR : 8-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_HALF_FLOOR: int--><!--Device-Decimal-static readonly ROUND_HALF_FLOOR: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_HALF_UP
 
 ```TypeScript
-static readonly ROUND_HALF_UP : 4
+static readonly ROUND_HALF_UP: int
 ```
 
-Rounds towards nearest neighbour. If equidistant, rounds away from zero
+Rounds towards nearest neighbour. If equidistant, rounds away from zero The value should be an integer.
 
-**Type:** 4
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_HALF_UP : 4--><!--Device-Decimal-static readonly ROUND_HALF_UP : 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_HALF_UP: int--><!--Device-Decimal-static readonly ROUND_HALF_UP: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## ROUND_UP
 
 ```TypeScript
-static readonly ROUND_UP : 0
+static readonly ROUND_UP: int
 ```
 
-Rounds away from zero
+Rounds away from zero The value should be an integer.
 
-**Type:** 0
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-Decimal-static readonly ROUND_UP : 0--><!--Device-Decimal-static readonly ROUND_UP : 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Decimal-static readonly ROUND_UP: int--><!--Device-Decimal-static readonly ROUND_UP: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -4167,51 +4277,13 @@ The numbers of decimal digits.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Decimal-readonly d: number[]--><!--Device-Decimal-readonly d: number[]-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## e
-
-```TypeScript
-get e(): double
-```
-
-The number of decimal exponent.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Decimal-get e(): double--><!--Device-Decimal-get e(): double-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## s
-
-```TypeScript
-get s(): double
-```
-
-The number of decimal sign.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Decimal-get s(): double--><!--Device-Decimal-get s(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

@@ -1,10 +1,10 @@
 # AccessibilityElement
 
-Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call   
-[AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement-1)or   
-[AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement-1)to obtain an **AccessibilityElement** instance.
+Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
@@ -184,8 +184,8 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-attribute-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) |
 
 ## Examples
 
@@ -237,8 +237,8 @@ Obtains the attribute value based on an attribute name. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-attribute-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) |
 
 ## Examples
 
@@ -284,7 +284,7 @@ Finds an element based on the content type. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -336,7 +336,7 @@ Finds an element based on the content type. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -381,7 +381,7 @@ Finds an element based on the focus type. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -434,7 +434,7 @@ Finds an element based on the focus type. This API uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -480,7 +480,7 @@ Finds an element based on the focus direction. This API uses an asynchronous cal
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -533,7 +533,7 @@ Finds an element based on the focus direction. This API uses a promise to return
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -579,8 +579,8 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-operation-not-supported) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) |
 
 ## Examples
 
@@ -633,8 +633,8 @@ Performs an action based on the specified action name. This API uses a promise t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-operation-not-supported) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) |
 
 ## Examples
 
@@ -724,8 +724,8 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-operation-not-supported) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) |
 
 ## Examples
 

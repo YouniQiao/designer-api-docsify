@@ -1,13 +1,14 @@
 # PortraitPhotoSession（系统接口）
 
-PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement,Portrait, Aperture Implements a portrait photo session, which sets the parameters of the portrait photo mode and saves all  
-[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture Implements a portrait photo session, which sets the parameters of the portrait photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
 
-**继承/实现关系：** PortraitPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Flash](arkts-camera-camera-flash-i.md#Flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [Portrait](arkts-camera-camera-portrait-i-sys.md#Portrait), [Aperture](arkts-camera-camera-aperture-i.md#Aperture)
+**继承/实现关系：** PortraitPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Flash](arkts-camera-camera-flash-i.md#Flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty（系统接口）), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect（系统接口）), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [Portrait](arkts-camera-camera-portrait-i-sys.md#Portrait（系统接口）), [Aperture](arkts-camera-camera-aperture-i-sys.md#Aperture（系统接口）)
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-camera-interface PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture--><!--Device-camera-interface PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface PortraitPhotoSession--><!--Device-camera-interface PortraitPhotoSession-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -21,7 +22,9 @@ getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>
 
 Gets session conflict functions.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>--><!--Device-PortraitPhotoSession-getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>-End-->
 
@@ -39,7 +42,7 @@ Gets session conflict functions.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getSessionFunctions
 
@@ -49,7 +52,9 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPho
 
 Gets session functions.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPhotoFunctions>--><!--Device-PortraitPhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPhotoFunctions>-End-->
 
@@ -73,10 +78,112 @@ Gets session functions.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## off('error')
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
+
+## offLcdFlashStatus
+
+```TypeScript
+offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
+```
+
+Unsubscribes from lcd flash status.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## offSmoothZoomInfoAvailable
+
+```TypeScript
+offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Unsubscribes from zoom info event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -85,6 +192,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from PortraitSession error events.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PortraitPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -107,7 +216,7 @@ function unregisterSessionError(portraitPhotoSession: camera.PortraitPhotoSessio
 }
 ```
 
-## off('focusStateChange')
+## off_focusStateChange
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -116,6 +225,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -138,7 +249,46 @@ function unregisterFocusStateChange(portraitPhotoSession: camera.PortraitPhotoSe
 }
 ```
 
-## off('smoothZoomInfoAvailable')
+## off_lcdFlashStatus
+
+```TypeScript
+off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
+```
+
+Unsubscribes from LCD flash status change events.
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'lcdFlashStatus' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+function unregisterLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
+  portraitPhotoSession.off('lcdFlashStatus');
+}
+```
+
+## off_smoothZoomInfoAvailable
 
 ```TypeScript
 off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
@@ -147,6 +297,8 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 Unsubscribes from smooth zoom state change events.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
@@ -169,17 +321,19 @@ function unregisterSmoothZoomInfo(portraitPhotoSession: camera.PortraitPhotoSess
 }
 ```
 
-## off('lcdFlashStatus')
+## onError
 
 ```TypeScript
-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
+onError(callback: ErrorCallback): void
 ```
 
-Unsubscribes from LCD flash status change events.
+Subscribes to error events.
 
-**起始版本：** 13
+**起始版本：** 23
 
-<!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void-End-->
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void--><!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -189,24 +343,87 @@ Unsubscribes from LCD flash status change events.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'lcdFlashStatus' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |
+
+## onLcdFlashStatus
+
+```TypeScript
+onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+```
+
+Subscribes to lcd flash status.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## 示例
+## onSmoothZoomInfoAvailable
 
 ```TypeScript
-function unregisterLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
-  portraitPhotoSession.off('lcdFlashStatus');
-}
+onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-## on('error')
+Subscribes zoom info event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -215,6 +432,8 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to PortraitSession error events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-PortraitPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -243,7 +462,7 @@ function registerSessionError(portraitPhotoSession: camera.PortraitPhotoSession)
 }
 ```
 
-## on('focusStateChange')
+## on_focusStateChange
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -252,6 +471,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -284,7 +505,57 @@ function registerFocusStateChange(portraitPhotoSession: camera.PortraitPhotoSess
 }
 ```
 
-## on('smoothZoomInfoAvailable')
+## on_lcdFlashStatus
+
+```TypeScript
+on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
+```
+
+Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+<!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'lcdFlashStatus' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, lcdFlashStatus: camera.LcdFlashStatus): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`isLcdFlashNeeded: ${lcdFlashStatus.isLcdFlashNeeded}`);
+  console.info(`lcdCompensation: ${lcdFlashStatus.lcdCompensation}`);
+}
+
+function registerLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
+  portraitPhotoSession.on('lcdFlashStatus', callback);
+}
+```
+
+## on_smoothZoomInfoAvailable
 
 ```TypeScript
 on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
@@ -293,6 +564,8 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-PortraitPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
 
@@ -322,53 +595,5 @@ function callback(err: BusinessError, smoothZoomInfo: camera.SmoothZoomInfo): vo
 
 function registerSmoothZoomInfo(portraitPhotoSession: camera.PortraitPhotoSession): void {
   portraitPhotoSession.on('smoothZoomInfoAvailable', callback);
-}
-```
-
-## on('lcdFlashStatus')
-
-```TypeScript
-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
-```
-
-Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
-
-**起始版本：** 13
-
-<!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'lcdFlashStatus' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, lcdFlashStatus: camera.LcdFlashStatus): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`isLcdFlashNeeded: ${lcdFlashStatus.isLcdFlashNeeded}`);
-  console.info(`lcdCompensation: ${lcdFlashStatus.lcdCompensation}`);
-}
-
-function registerLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
-  portraitPhotoSession.on('lcdFlashStatus', callback);
 }
 ```

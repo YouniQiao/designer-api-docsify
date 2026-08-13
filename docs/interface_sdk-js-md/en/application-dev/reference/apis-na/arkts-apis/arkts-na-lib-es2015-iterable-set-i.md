@@ -1,0 +1,98 @@
+# Set
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Set--><!--Device-unnamed-interface Set-End-->
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): IterableIterator<T>
+```
+
+Iterates over values in the set.
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Set-[Symbol.iterator](): IterableIterator<T>--><!--Device-Set-[Symbol.iterator](): IterableIterator<T>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
+
+## entries
+
+```TypeScript
+entries(): IterableIterator<[T, T]>
+```
+
+Returns an iterable of [v,v] pairs for every value `v` in the set.
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Set-entries(): IterableIterator<[T, T]>--><!--Device-Set-entries(): IterableIterator<[T, T]>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |  |
+
+## keys
+
+```TypeScript
+keys(): IterableIterator<T>
+```
+
+Despite its name, returns an iterable of the values in the set.
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Set-keys(): IterableIterator<T>--><!--Device-Set-keys(): IterableIterator<T>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
+
+## values
+
+```TypeScript
+values(): IterableIterator<T>
+```
+
+Returns an iterable of values in the set.
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Set-values(): IterableIterator<T>--><!--Device-Set-values(): IterableIterator<T>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
+

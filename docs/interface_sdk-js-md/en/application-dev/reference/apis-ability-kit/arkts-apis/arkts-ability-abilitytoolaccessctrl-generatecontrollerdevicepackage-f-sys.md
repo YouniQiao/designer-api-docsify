@@ -7,11 +7,13 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
     Promise<RemoteAuthPackage[]>
 ```
 
-Generates an authorization package for the controller device.This function generates a remote authorization package based on the remote user authorization results.The generated package can be sent to the controlled device for permission verification.
+Generates an authorization package for the controller device. This function generates a remote authorization package based on the remote user authorization results. The generated package can be sent to the controlled device for permission verification.
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
@@ -37,8 +39,8 @@ Generates an authorization package for the controller device.This function gener
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 24010002 | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
 | 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
 | 24010000 | Invalid parameter. OperationType and operationInfo do not match, specified callerTokenId does not exist, etc. |

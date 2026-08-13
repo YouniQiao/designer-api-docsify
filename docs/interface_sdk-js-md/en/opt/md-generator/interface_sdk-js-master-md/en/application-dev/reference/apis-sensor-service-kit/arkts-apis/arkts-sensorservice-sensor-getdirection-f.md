@@ -18,7 +18,7 @@ Obtains the device direction based on the rotation matrix. This API uses an asyn
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOrientation](sensor.getOrientation(rotationMatrix:)
+**Substitutes:** [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)(rotationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -62,7 +62,7 @@ Obtains the device direction based on the rotation matrix. This API uses a promi
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOrientation](sensor.getOrientation(rotationMatrix:)
+**Substitutes:** [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)(rotationMatrix: Array&lt;double&gt;)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>-End-->
 

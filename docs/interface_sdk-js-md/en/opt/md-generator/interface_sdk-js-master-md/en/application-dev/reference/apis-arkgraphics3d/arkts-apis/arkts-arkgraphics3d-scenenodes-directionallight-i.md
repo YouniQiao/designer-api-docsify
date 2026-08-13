@@ -4,8 +4,10 @@ Defines directional light.
 
 **Inheritance/Implementation:** DirectionalLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md#Light)
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface DirectionalLight extends Light--><!--Device-unnamed-export interface DirectionalLight extends Light-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface DirectionalLight--><!--Device-unnamed-export interface DirectionalLight-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

@@ -10,6 +10,8 @@ function getPersistentPolicy(tokenID: number): Promise<Array<PolicyInfo>>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_FILE_ACCESS_PERSIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -37,10 +39,10 @@ function getPersistentPolicy(tokenID: number): Promise<Array<PolicyInfo>>
 | 错误码ID |
 | --- |
 | 13900020 |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900011 |
 
 ## 示例

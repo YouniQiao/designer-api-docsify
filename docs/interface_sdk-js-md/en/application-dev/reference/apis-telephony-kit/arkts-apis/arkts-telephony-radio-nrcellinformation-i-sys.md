@@ -2,9 +2,11 @@
 
 Obtains NR cell information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface NrCellInformation--><!--Device-radio-export interface NrCellInformation-End-->
 
@@ -28,9 +30,11 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-mcc: string--><!--Device-NrCellInformation-mcc: string-End-->
 
@@ -48,9 +52,11 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-mnc: string--><!--Device-NrCellInformation-mnc: string-End-->
 
@@ -66,11 +72,13 @@ nci: int
 
 Indicates the 5G network cell ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-nci: int--><!--Device-NrCellInformation-nci: int-End-->
 
@@ -86,11 +94,13 @@ nrArfcn: int
 
 Indicates the NR-ARFCN(NR Absolute Radio Frequency Channel Number).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-nrArfcn: int--><!--Device-NrCellInformation-nrArfcn: int-End-->
 
@@ -106,11 +116,13 @@ pci: int
 
 Indicates the physical cell identification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-pci: int--><!--Device-NrCellInformation-pci: int-End-->
 
@@ -126,11 +138,13 @@ tac: int
 
 Indicates the tracking area code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-tac: int--><!--Device-NrCellInformation-tac: int-End-->
 

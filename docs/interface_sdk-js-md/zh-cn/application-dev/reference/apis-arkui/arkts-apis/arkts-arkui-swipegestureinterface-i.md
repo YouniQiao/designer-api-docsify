@@ -2,17 +2,19 @@
 
 用于触发快滑手势，滑动速度需大于速度阈值，默认最小速度为100vp/s。
 
-**继承/实现关系：** SwipeGestureInterface extends [GestureInterface<SwipeGestureInterface>](GestureInterface<SwipeGestureInterface>)
+**继承/实现关系：** SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-<!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>--><!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-interface SwipeGestureInterface--><!--Device-unnamed-interface SwipeGestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
@@ -23,6 +25,8 @@
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,17 +46,19 @@
 | --- | --- |
 | [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options?: SwipeGestureHandlerOptions): SwipeGestureInterface
 ```
 
-设置快滑手势事件。与[SwipeGesture](SwipeGestureInterface(value?: { fingers?: number; direction?: SwipeDirection; speed?: number))}相比，options参数新增了isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
+设置快滑手势事件。与SwipeGesture)}相比， options参数新增了isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,6 +91,8 @@ Swipe手势识别成功时触发回调。
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -10,6 +10,8 @@ function clearMemoryCache(): void
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-cacheDownload-function clearMemoryCache(): void--><!--Device-cacheDownload-function clearMemoryCache(): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

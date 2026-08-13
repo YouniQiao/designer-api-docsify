@@ -2,9 +2,11 @@
 
 Describes the codec type.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-a2dp-enum CodecType--><!--Device-a2dp-enum CodecType-End-->
 
@@ -18,9 +20,11 @@ CODEC_TYPE_INVALID = -1
 
 invalid codec type.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_INVALID = -1--><!--Device-CodecType-CODEC_TYPE_INVALID = -1-End-->
 
@@ -34,9 +38,11 @@ CODEC_TYPE_SBC = 0
 
 SBC - Sub-band coding.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_SBC = 0--><!--Device-CodecType-CODEC_TYPE_SBC = 0-End-->
 
@@ -50,9 +56,11 @@ CODEC_TYPE_AAC = 1
 
 AAC - Advanced Audio Coding.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_AAC = 1--><!--Device-CodecType-CODEC_TYPE_AAC = 1-End-->
 
@@ -66,9 +74,11 @@ CODEC_TYPE_L2HC = 2
 
 L2HC.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_L2HC = 2--><!--Device-CodecType-CODEC_TYPE_L2HC = 2-End-->
 
@@ -82,9 +92,11 @@ CODEC_TYPE_L2HCST = 3
 
 L2HCST.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_L2HCST = 3--><!--Device-CodecType-CODEC_TYPE_L2HCST = 3-End-->
 
@@ -98,9 +110,11 @@ CODEC_TYPE_LDAC = 4
 
 LDAC.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_LDAC = 4--><!--Device-CodecType-CODEC_TYPE_LDAC = 4-End-->
 

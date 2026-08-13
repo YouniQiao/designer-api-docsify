@@ -8,7 +8,9 @@ Callback function on receiving a custom message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void--><!--Device-inputMethod-type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void-End-->
 

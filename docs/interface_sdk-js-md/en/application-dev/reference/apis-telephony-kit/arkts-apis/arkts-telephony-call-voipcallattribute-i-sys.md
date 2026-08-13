@@ -2,9 +2,11 @@
 
 Defines the VoIP call information.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface VoipCallAttribute--><!--Device-call-export interface VoipCallAttribute-End-->
 
@@ -28,9 +30,11 @@ Ability name of the third-party application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-abilityName: string--><!--Device-VoipCallAttribute-abilityName: string-End-->
 
@@ -48,9 +52,11 @@ Process ID of the third-party application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-extensionId: string--><!--Device-VoipCallAttribute-extensionId: string-End-->
 
@@ -68,9 +74,11 @@ Whether the call is a conference call.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-isConferenceCall?: boolean--><!--Device-VoipCallAttribute-isConferenceCall?: boolean-End-->
 
@@ -88,9 +96,11 @@ Whether call answering with voice commands is supported.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean--><!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean-End-->
 
@@ -108,9 +118,11 @@ Whether to display the incoming call banner.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean--><!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean-End-->
 
@@ -128,9 +140,11 @@ User nickname.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-userName: string--><!--Device-VoipCallAttribute-userName: string-End-->
 
@@ -148,9 +162,11 @@ User profile picture.
 
 **Type:** image.PixelMap
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-userProfile: image.PixelMap--><!--Device-VoipCallAttribute-userProfile: image.PixelMap-End-->
 
@@ -168,9 +184,11 @@ Bundle name of the third-party application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-voipBundleName: string--><!--Device-VoipCallAttribute-voipBundleName: string-End-->
 
@@ -188,9 +206,11 @@ Unique ID of a VoIP call.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VoipCallAttribute-voipCallId: string--><!--Device-VoipCallAttribute-voipCallId: string-End-->
 

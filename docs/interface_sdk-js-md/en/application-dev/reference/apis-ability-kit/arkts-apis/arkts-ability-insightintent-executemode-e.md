@@ -2,9 +2,11 @@
 
 Enumerates the intent execution modes. It specifies the mode of execution passed when the intent is triggered by a system entry point. The supported execution modes for each intent are defined during intent development.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-insightIntent-enum ExecuteMode--><!--Device-insightIntent-enum ExecuteMode-End-->
 
@@ -18,13 +20,15 @@ UI_ABILITY_FOREGROUND = 0
 
 Display a UIAbility in the foreground.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0--><!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0-End-->
 
@@ -38,13 +42,15 @@ UI_ABILITY_BACKGROUND = 1
 
 Start a UIAbility in the background.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ExecuteMode-UI_ABILITY_BACKGROUND = 1--><!--Device-ExecuteMode-UI_ABILITY_BACKGROUND = 1-End-->
 
@@ -58,9 +64,11 @@ UI_EXTENSION_ABILITY = 2
 
 Start a UIExtensionAbility.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

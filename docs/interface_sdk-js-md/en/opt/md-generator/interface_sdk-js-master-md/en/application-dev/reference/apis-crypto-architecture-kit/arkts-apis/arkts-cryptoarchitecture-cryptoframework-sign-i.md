@@ -1,23 +1,10 @@
 # Sign
 
-Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign**instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign). Invoke **init()**,  
-**update()**, and **sign()** in this class in sequence to complete the signing operation.For details about the sample code, see  
-[Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
+Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode) . &lt;br&gt;The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization. &lt;br&gt;The signing mode is determined by **createSign()**, and the key is set by **init()**. &lt;br&gt;If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**. &lt;br&gt;If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data. &lt;br&gt;When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data. &lt;br&gt;If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
 
-&lt;br&gt;The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization.
+**Since:** 23
 
-&lt;br&gt;The signing mode is determined by **createSign()**, and the key is set by **init()**.
-
-&lt;br&gt;If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**.
-
-&lt;br&gt;If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data.
-
-&lt;br&gt;When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call  
-**sign()** to sign the data.
-
-&lt;br&gt;If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Sign--><!--Device-cryptoFramework-interface Sign-End-->
 
@@ -39,7 +26,9 @@ getSignSpec(itemType: SignSpecItem): string | number
 
 Obtains signing specifications. Currently, only RSA is supported.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -65,11 +54,11 @@ Obtains signing specifications. Currently, only RSA is supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -90,12 +79,11 @@ function testGetSignSpec() {
 init(priKey: PriKey, callback: AsyncCallback<void>): void
 ```
 
-Initializes the **Sign** object using a private key. This API uses an asynchronous callback to return the result.  
-**init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.
+Initializes the **Sign** object using a private key. This API uses an asynchronous callback to return the result. **init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional. &lt;br&gt;The **Sign** instance does not support repeated use of **init**.
 
-&lt;br&gt;The **Sign** instance does not support repeated use of **init**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,11 +104,11 @@ Initializes the **Sign** object using a private key. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## init
 
@@ -128,13 +116,11 @@ Initializes the **Sign** object using a private key. This API uses an asynchrono
 init(priKey: PriKey): Promise<void>
 ```
 
-Initializes the **Sign** object using a private key. This API uses a promise to return the result.
+Initializes the **Sign** object using a private key. This API uses a promise to return the result. **init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional. &lt;br&gt;The **Sign** instance does not support repeated use of **init**.
 
-**init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.
+**Since:** 23
 
-&lt;br&gt;The **Sign** instance does not support repeated use of **init**.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,11 +146,11 @@ Initializes the **Sign** object using a private key. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## initSync
 
@@ -172,17 +158,13 @@ Initializes the **Sign** object using a private key. This API uses a promise to 
 initSync(priKey: PriKey): void
 ```
 
-Initializes the **Sign** instance with a private key. This API returns the result synchronously.
+Initializes the **Sign** instance with a private key. This API returns the result synchronously. **initSync**, **updateSync**, and **signSync** must be used together. **initSync** and **signSync** are mandatory, and **updateSync** is optional. &lt;br&gt;The **Sign** instance does not support repeated use of **initSync**. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-**initSync**, **updateSync**, and **signSync** must be used together. **initSync** and **signSync** are mandatory, and **updateSync** is optional.
+**Since:** 23
 
-&lt;br&gt;The **Sign** instance does not support repeated use of **initSync**.
+**Deprecated since:** -1
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [init](init). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Sign-initSync(priKey: PriKey): void--><!--Device-Sign-initSync(priKey: PriKey): void-End-->
 
@@ -198,11 +180,11 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## setSignSpec
 
@@ -210,12 +192,11 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 setSignSpec(itemType: SignSpecItem, itemValue: number): void
 ```
 
-Sets signing specifications. You can use this API to set signing parameters that cannot be set by  
-[createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign).
-
-&lt;br&gt;Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
+Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign). &lt;br&gt;Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -236,11 +217,11 @@ Sets signing specifications. You can use this API to set signing parameters that
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -260,11 +241,11 @@ function testSetSignSpec() {
 setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 ```
 
-Sets the specified parameter for the Sign instance.
+Sets the specified parameter for the Sign instance. &lt;br&gt;Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
 
-&lt;br&gt;Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -285,13 +266,13 @@ Sets the specified parameter for the Sign instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## setSignSpec
 
@@ -299,11 +280,11 @@ Sets the specified parameter for the Sign instance.
 setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): void
 ```
 
-Sets the specified parameter for the Sign instance.
-
-&lt;br&gt;Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU, and ML_DSA_CONTEXT in ML-DSA are supported.
+Sets the specified parameter for the Sign instance. &lt;br&gt;Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU, and ML_DSA_CONTEXT in ML-DSA are supported.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,12 +305,12 @@ Sets the specified parameter for the Sign instance.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -342,6 +323,41 @@ function testSetSignSpec() {
 }
 ```
 
+## setSignSpec
+
+```TypeScript
+setSignSpec(itemType: SignSpecItem, itemValue: boolean): void
+```
+
+Sets the specified parameter for the Sign instance. &lt;br&gt;Currently, only ML_DSA_DETERMINISTIC and ML_DSA_MU in ML-DSA are supported. For ML_DSA_CONTEXT parameter, use [setSignSpec()](#setSignSpec).
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: boolean): void--><!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: boolean): void-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Signature
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [itemType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | Yes |
+| itemValue | boolean | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+
 ## sign
 
 ```TypeScript
@@ -351,6 +367,8 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 Signs the data, including data added via the update interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -371,11 +389,11 @@ Signs the data, including data added via the update interface. This API uses an 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## sign
 
@@ -385,7 +403,9 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 
 Signs data. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -406,11 +426,11 @@ Signs data. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## sign
 
@@ -421,6 +441,8 @@ sign(data: DataBlob): Promise<DataBlob>
 Signs the data, including data added via the update interface. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -446,11 +468,11 @@ Signs the data, including data added via the update interface. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## sign
 
@@ -460,7 +482,9 @@ sign(data: DataBlob | null): Promise<DataBlob>
 
 Signs data. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -486,11 +510,11 @@ Signs data. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## signSync
 
@@ -498,13 +522,13 @@ Signs data. This API uses a promise to return the result.
 signSync(data: DataBlob | null): DataBlob
 ```
 
-Signs the data. This API returns the result synchronously.
+Signs the data. This API returns the result synchronously. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, sign. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [sign](#sign). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Sign-signSync(data: DataBlob | null): DataBlob--><!--Device-Sign-signSync(data: DataBlob | null): DataBlob-End-->
 
@@ -526,15 +550,15 @@ Signs the data. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
-For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -596,7 +620,7 @@ function signByCallback() {
 }
 ```
 
-For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -660,7 +684,7 @@ async function signByPromise() {
 }
 ```
 
-For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -730,30 +754,11 @@ function signBySync() {
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates data to be signed. This API uses an asynchronous callback to return the result.
+Updates data to be signed. This API uses an asynchronous callback to return the result. &lt;br&gt;This API can be called only after the Sign instance is initialized by using [init](#init) or [initSync](#initSync). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call sign after > [init](#init)), depending on the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-&lt;br&gt;This API can be called only after the [Sign](#Sign) instance is initialized by using  
-[init](#init) or [initSync](#initSync).
+**Since:** 23
 
-> **NOTE：**
-> 
-> You can call **update** multiple times or do not use **update** (call [sign](#Sign) after
-> [init](#init)), depending on the data volume.
-> 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
-> prevents too much memory from being requested at a time.
-> 
-> For details about the sample code for calling **update()** multiple times in signing, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
-> . The operations of other algorithms are similar.
-> 
-> **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data.
-> 
-> If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported.
-> If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -774,11 +779,11 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## update
 
@@ -786,31 +791,11 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 update(data: DataBlob): Promise<void>
 ```
 
-Updates data to be signed. This API uses a promise to return the result.
+Updates data to be signed. This API uses a promise to return the result. &lt;br&gt;Before using this API, you must initialize the Sign instance by using [init()](#init). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > sign after > [init](#init)), depending on the > data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-&lt;br&gt;Before using this API, you must initialize the [Sign](#Sign) instance by using  
-[init()](#init).
+**Since:** 23
 
-> **NOTE：**
-> 
-> You can call **update** multiple times or do not use **update** (call
-> [sign](#sign) after
-> [init](#init)), depending on the
-> data volume.
-> 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
-> prevents too much memory from being requested at a time.
-> For details about the sample code for calling **update()** multiple times in signing, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
-> . The operations of other algorithms are similar.
-> 
-> **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data.
-> 
-> If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported.
-> If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -836,11 +821,11 @@ Updates data to be signed. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## updateSync
 
@@ -848,36 +833,13 @@ Updates data to be signed. This API uses a promise to return the result.
 updateSync(data: DataBlob): void
 ```
 
-Updates data to be signed. This API returns the result synchronously.
+Updates data to be signed. This API returns the result synchronously. &lt;br&gt;This API can be called only after the Sign instance is initialized by using [initSync()](#initSync). > **NOTE：**> > You can call **updateSync** multiple times or do not use **updateSync** (call > [signSync](#signSync) after [initSync](#initSync)), > depending on the data volume. > > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > > For details about the sample code for calling **updateSync** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in > data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not > supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;This API can be called only after the [Sign](#Sign) instance is initialized by using  
-[initSync()](#initSync).
+**Since:** 23
 
-> **NOTE：**
-> 
-> You can call **updateSync** multiple times or do not use **updateSync** (call
-> [signSync](#signSync) after [initSync](#initSync)),
-> depending on the data volume.
-> 
-> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is
-> a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.
-> This prevents too much memory from being requested at a time.
-> 
-> For details about the sample code for calling **updateSync** multiple times in signing, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
-> . The operations of other algorithms are similar.
-> 
-> **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in
-> data.
-> 
-> If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not
-> supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+**Deprecated since:** -1
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [update](update). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Sign-updateSync(data: DataBlob): void--><!--Device-Sign-updateSync(data: DataBlob): void-End-->
 
@@ -893,11 +855,11 @@ Updates data to be signed. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## algName
 
@@ -909,7 +871,9 @@ Indicates the algorithm name of the Sign instance.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

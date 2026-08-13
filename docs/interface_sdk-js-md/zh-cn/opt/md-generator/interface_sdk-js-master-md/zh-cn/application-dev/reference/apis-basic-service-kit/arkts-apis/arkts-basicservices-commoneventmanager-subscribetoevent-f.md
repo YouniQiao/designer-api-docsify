@@ -8,9 +8,11 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 
 订阅公共事件，并返回订阅成功或失败信息。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>--><!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>-End-->
 
@@ -33,10 +35,10 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
-| [1500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500010-订阅者数量超限) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [1500010](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500010-订阅者数量超限) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
 
 ## 示例
 

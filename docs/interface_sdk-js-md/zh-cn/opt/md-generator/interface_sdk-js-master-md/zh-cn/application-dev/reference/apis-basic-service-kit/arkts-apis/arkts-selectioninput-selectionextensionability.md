@@ -1,9 +1,11 @@
-# @ohos.selectionInput.SelectionExtensionAbility(划词扩展能力)
+# @ohos.selectionInput.SelectionExtensionAbility
 
 ## 汇总
 
-### 类
+<!--Del-->
+### 类（系统接口）
 
 | 名称 |
 | --- |
-| [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md) |
+| [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md) |
+<!--DelEnd-->

@@ -2,7 +2,9 @@
 
 Enumerates the parity check modes.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-enum Parity--><!--Device-serialManager-enum Parity-End-->
 
@@ -16,7 +18,9 @@ PARITY_NONE = 0
 
 No parity.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parity-PARITY_NONE = 0--><!--Device-Parity-PARITY_NONE = 0-End-->
 
@@ -30,7 +34,9 @@ PARITY_ODD = 1
 
 Odd parity.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parity-PARITY_ODD = 1--><!--Device-Parity-PARITY_ODD = 1-End-->
 
@@ -44,7 +50,9 @@ PARITY_EVEN = 2
 
 Even parity.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parity-PARITY_EVEN = 2--><!--Device-Parity-PARITY_EVEN = 2-End-->
 
@@ -58,7 +66,9 @@ PARITY_MARK = 3
 
 Mark parity, whose parity bit is fixed at **1**.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parity-PARITY_MARK = 3--><!--Device-Parity-PARITY_MARK = 3-End-->
 
@@ -72,7 +82,9 @@ PARITY_SPACE = 4
 
 Space parity, whose parity bit is fixed at **0**.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parity-PARITY_SPACE = 4--><!--Device-Parity-PARITY_SPACE = 4-End-->
 

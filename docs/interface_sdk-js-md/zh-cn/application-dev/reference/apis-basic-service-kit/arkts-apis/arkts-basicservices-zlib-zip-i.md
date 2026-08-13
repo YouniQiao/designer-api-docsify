@@ -2,9 +2,11 @@
 
 压缩解压缩对象实例，支持以zlib、deflate、gzip格式对数据进行压缩与解压。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-zlib-interface Zip--><!--Device-zlib-interface Zip-End-->
 
@@ -12,23 +14,19 @@
 
 ## compress
 
-ArkTS-Dyn:
-```TypeScript
-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<ZipOutputInfo>
-```
-
-ArkTS-Sta:
 ```TypeScript
 compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>
 ```
 
 将源缓冲区压缩到目标缓冲区。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
 
@@ -40,7 +38,7 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| sourceLen | long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -52,8 +50,8 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
 ## 示例
 
@@ -78,23 +76,19 @@ zip.compress(arrayBufferOut, arrayBufferIn, 20).then((data) => {
 
 ## compress2
 
-ArkTS-Dyn:
-```TypeScript
-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: number,): Promise<ZipOutputInfo>
-```
-
-ArkTS-Sta:
 ```TypeScript
 compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>
 ```
 
 将源缓冲区压缩到目标缓冲区。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>--><!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>-End-->
 
@@ -107,7 +101,7 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| sourceLen | long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -119,29 +113,25 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## compressBound
 
-ArkTS-Dyn:
-```TypeScript
-compressBound(sourceLen: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 compressBound(sourceLen: int): Promise<int>
 ```
 
 计算返回压缩大小的上限。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-compressBound(sourceLen: int): Promise<int>--><!--Device-Zip-compressBound(sourceLen: int): Promise<int>-End-->
 
@@ -151,19 +141,19 @@ compressBound(sourceLen: int): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 源数据长度。 |
+| sourceLen | int | 是 | 源数据长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
+| Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -195,11 +185,13 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 压缩数据。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
@@ -222,9 +214,9 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -261,23 +253,19 @@ async function demo() {
 
 ## deflateBound
 
-ArkTS-Dyn:
-```TypeScript
-deflateBound(strm: ZStream, sourceLength: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 ```
 
 计算压缩大小的上限。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>--><!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>-End-->
 
@@ -288,19 +276,19 @@ deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| sourceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 源数据长度。 |
+| sourceLength | long | 是 | 源数据长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
+| Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -343,11 +331,13 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 复制压缩流。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>-End-->
 
@@ -369,8 +359,8 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -413,11 +403,13 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 解压流的所有动态分配的数据结构都被释放。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -439,8 +431,8 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -488,11 +480,13 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 获取当前压缩流中使用的解压缩字典内容及其长度。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
 
@@ -515,8 +509,8 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -564,11 +558,13 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 初始化压缩流并设置指定压缩级别。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>--><!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>-End-->
 
@@ -591,8 +587,8 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -624,13 +620,6 @@ async function demo() {
 
 ## deflateInit2
 
-ArkTS-Dyn:
-```TypeScript
-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: number,
-        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,
         memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>
@@ -638,11 +627,13 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 初始化压缩流并设置压缩级别、压缩方法、窗口大小、内存级别和压缩策略。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
@@ -655,7 +646,7 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
 | method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | 是 | 参考[CompressMethod枚举定义](arkts-basicservices-zlib-compressmethod-e.md#CompressMethod)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
+| windowBits | int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 | memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 | 参考[MemLevel枚举定义](arkts-basicservices-zlib-memlevel-e.md#MemLevel)。 |
 | strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy)。 |
 
@@ -669,8 +660,8 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -709,11 +700,13 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 动态更新压缩级别和压缩策略。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
@@ -737,8 +730,8 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -781,11 +774,13 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 返回已生成但尚未在可用输出中提供的输出的字节数和位数。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>--><!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>-End-->
 
@@ -807,8 +802,8 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -845,23 +840,19 @@ async function demo() {
 
 ## deflatePrime
 
-ArkTS-Dyn:
-```TypeScript
-deflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 ```
 
 在压缩流中插入位和值。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
 
@@ -872,8 +863,8 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要插入的位数，取值范围在0~16。 |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 与位数相对应的位值。 |
+| bits | int | 是 | 要插入的位数，取值范围在0~16。 |
+| value | int | 是 | 与位数相对应的位值。 |
 
 **返回值：**
 
@@ -885,8 +876,8 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -929,11 +920,13 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 这个函数相当于先调用deflateEnd再调用deflateInit，但是并不会释放和重新分配内部解压缩状态。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -955,8 +948,8 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -999,11 +992,13 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 重置初始化的deflate压缩流，但保留其设置的压缩参数和字典。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -1025,8 +1020,8 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1069,11 +1064,13 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 从给定的字节序列初始化压缩字典。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
 
@@ -1096,8 +1093,8 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1140,11 +1137,13 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 当deflateInit2()请求gzip流时，提供gzip标头信息。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>-End-->
 
@@ -1167,8 +1166,8 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1206,23 +1205,19 @@ async function demo() {
 
 ## deflateTune
 
-ArkTS-Dyn:
-```TypeScript
-deflateTune(strm: ZStream, goodLength: number, maxLazy: number, niceLength: number, maxChain: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>
 ```
 
 微调deflate的内部压缩参数。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>--><!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>-End-->
 
@@ -1233,10 +1228,10 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| goodLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 匹配的长度阈值。 |
-| maxLazy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 压缩算法在构建哈夫曼树时的延迟匹配策略，取值范围为0到4的整数。1到4，值越大，算法越‘懒’，匹配过程越慢，但可能生成更优的压缩结果。0：禁用懒惰匹配， 算法会尽快构建哈夫曼树，压缩速度快，但压缩率低。 |
-| niceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 适合的延迟长度阈值。 |
-| maxChain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 最大链条长度。 |
+| goodLength | int | 是 | 匹配的长度阈值。 |
+| maxLazy | int | 是 | 压缩算法在构建哈夫曼树时的延迟匹配策略，取值范围为0到4的整数。1到4，值越大，算法越‘懒’，匹配过程越慢，但可能生成更优的压缩结果。0：禁用懒惰匹配， 算法会尽快构建哈夫曼树，压缩速度快，但压缩率低。 |
+| niceLength | int | 是 | 适合的延迟长度阈值。 |
+| maxChain | int | 是 | 最大链条长度。 |
 
 **返回值：**
 
@@ -1248,8 +1243,8 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1296,6 +1291,8 @@ getZStream(): Promise<ZStream>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-getZStream(): Promise<ZStream>--><!--Device-Zip-getZStream(): Promise<ZStream>-End-->
@@ -1330,7 +1327,9 @@ getZStream(): Promise<ZStream | undefined>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1352,11 +1351,13 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 解压数据。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
@@ -1379,9 +1380,9 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1449,6 +1450,8 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>-End-->
@@ -1475,8 +1478,8 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1625,7 +1628,9 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1653,8 +1658,8 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## inflateBackEnd
 
@@ -1664,11 +1669,13 @@ inflateBackEnd(strm: ZStream): Promise<ReturnStatus>
 
 inflateBackInit()函数分配的所有内存都被释放。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -1690,32 +1697,28 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
-参考[inflateBack](#inflateback12)中的示例代码。
+参考[inflateBack](#inflateBack)中的示例代码。
 
 ## inflateBackInit
 
-ArkTS-Dyn:
-```TypeScript
-inflateBackInit(strm: ZStream, windowBits: number, window: ArrayBuffer): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>
 ```
 
 使用inflateBack()函数前初始化内部流状态以进行解压缩。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>-End-->
 
@@ -1726,7 +1729,7 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于1 5。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
+| windowBits | long | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于1 5。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 | window | ArrayBuffer | 是 | 预设的窗口缓冲区。 |
 
 **返回值：**
@@ -1739,32 +1742,28 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
-参考[inflateBack](#inflateback12)中的示例代码。
+参考[inflateBack](#inflateBack)中的示例代码。
 
 ## inflateCodesUsed
 
-ArkTS-Dyn:
-```TypeScript
-inflateCodesUsed(strm: ZStream): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 inflateCodesUsed(strm: ZStream): Promise<long>
 ```
 
 当前解压缩流中使用的霍夫曼编码树的数量。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>--><!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>-End-->
 
@@ -1780,13 +1779,13 @@ inflateCodesUsed(strm: ZStream): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回已使用的霍夫曼编码树的数量。 |
+| Promise&lt;long&gt; | Promise对象。返回已使用的霍夫曼编码树的数量。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -1824,11 +1823,13 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 复制解压流。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>-End-->
 
@@ -1850,8 +1851,8 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1890,11 +1891,13 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 解压流的所有动态分配的数据结构都被释放。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -1916,8 +1919,8 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1960,11 +1963,13 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 获取当前解压缩流中使用的解压缩字典内容及其长度。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
 
@@ -1987,8 +1992,8 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2026,11 +2031,13 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 用于在解压缩数据前设置gzip文件头部信息。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>-End-->
 
@@ -2053,8 +2060,8 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2092,11 +2099,13 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 初始化解压缩流。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2118,7 +2127,7 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -2146,23 +2155,19 @@ zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut
 
 ## inflateInit2
 
-ArkTS-Dyn:
-```TypeScript
-inflateInit2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 ```
 
 初始化解压缩流并设置指定的 windowBits 参数。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
 
@@ -2173,7 +2178,7 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
+| windowBits | int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 
 **返回值：**
 
@@ -2185,8 +2190,8 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2214,23 +2219,19 @@ zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOu
 
 ## inflateMark
 
-ArkTS-Dyn:
-```TypeScript
-inflateMark(strm: ZStream): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 inflateMark(strm: ZStream): Promise<int>
 ```
 
 用于标记输入数据中的位置以供随机访问。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateMark(strm: ZStream): Promise<int>--><!--Device-Zip-inflateMark(strm: ZStream): Promise<int>-End-->
 
@@ -2246,13 +2247,13 @@ inflateMark(strm: ZStream): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回位置信息。 |
+| Promise&lt;int&gt; | Promise对象。返回位置信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -2284,23 +2285,19 @@ async function demo() {
 
 ## inflatePrime
 
-ArkTS-Dyn:
-```TypeScript
-inflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 ```
 
 在指定解压缩流中设置初始比特数和比特值，用于在解压流开始时预填充比特缓冲区，以正确处理流起始位置的数据。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
 
@@ -2311,8 +2308,8 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定要写入比特缓冲区的比特数。 |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 用于填充比特缓冲区的比特值。 |
+| bits | int | 是 | 指定要写入比特缓冲区的比特数。 |
+| value | int | 是 | 用于填充比特缓冲区的比特值。 |
 
 **返回值：**
 
@@ -2324,8 +2321,8 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2363,11 +2360,13 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 重置指定解压缩流的状态，使其恢复到初始化状态以重新开始新的解压操作。不会释放或重新分配内部缓冲区。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2389,8 +2388,8 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2422,23 +2421,19 @@ async function demo() {
 
 ## inflateReset2
 
-ArkTS-Dyn:
-```TypeScript
-inflateReset2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 ```
 
 重置指定解压缩流的状态并更新窗口大小配置，以重新开始新的解压操作。不会释放或重新分配内部缓冲区。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
 
@@ -2449,7 +2444,7 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
+| windowBits | int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 
 **返回值：**
 
@@ -2461,8 +2456,8 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2500,11 +2495,13 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 重置解压缩流的状态，以保留分配的霍夫曼解码树和预设字典。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2526,8 +2523,8 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2565,11 +2562,13 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 使用给定的字典数据初始化当前解压缩流的字典内容。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
 
@@ -2592,9 +2591,9 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2669,11 +2668,13 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 跳过无效的压缩数据，直到找到一个可能的完整刷新点为止。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2695,10 +2696,10 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| [17800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2767,11 +2768,13 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 查找当前解压缩流的同步点。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2793,8 +2796,8 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2826,23 +2829,19 @@ async function demo() {
 
 ## inflateValidate
 
-ArkTS-Dyn:
-```TypeScript
-inflateValidate(strm: ZStream, check: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
 ```TypeScript
 inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 ```
 
 验证压缩流结构内部的校验和。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>--><!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>-End-->
 
@@ -2853,7 +2852,7 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| check | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 预期的校验和。 |
+| check | int | 是 | 预期的校验和。 |
 
 **返回值：**
 
@@ -2865,8 +2864,8 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -2898,23 +2897,19 @@ async function demo() {
 
 ## uncompress
 
-ArkTS-Dyn:
-```TypeScript
-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<ZipOutputInfo>
-```
-
-ArkTS-Sta:
 ```TypeScript
 uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>
 ```
 
 将压缩后的数据解压缩为原始的未压缩形式。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
 
@@ -2926,7 +2921,7 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| sourceLen | long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -2938,9 +2933,9 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| [17800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
 ## 示例
 
@@ -2971,23 +2966,19 @@ async function demo() {
 
 ## uncompress2
 
-ArkTS-Dyn:
-```TypeScript
-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<DecompressionOutputInfo>
-```
-
-ArkTS-Sta:
 ```TypeScript
 uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>
 ```
 
 将压缩后的数据解压缩为原始的未压缩形式。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>--><!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>-End-->
 
@@ -2999,7 +2990,7 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| sourceLen | long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -3011,9 +3002,9 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| [17800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
 ## 示例
 
@@ -3044,23 +3035,19 @@ async function demo() {
 
 ## zlibCompileFlags
 
-ArkTS-Dyn:
-```TypeScript
-zlibCompileFlags(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 zlibCompileFlags(): Promise<int>
 ```
 
 返回指示编译时选项的标志。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-zlibCompileFlags(): Promise<int>--><!--Device-Zip-zlibCompileFlags(): Promise<int>-End-->
 
@@ -3070,7 +3057,7 @@ zlibCompileFlags(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回指示编译时选项的标志。 |
+| Promise&lt;int&gt; | Promise对象。返回指示编译时选项的标志。 |
 
 ## 示例
 
@@ -3092,11 +3079,13 @@ zlibVersion(): Promise<string>
 
 获取当前链接的zlib库的版本信息。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-zlibVersion(): Promise<string>--><!--Device-Zip-zlibVersion(): Promise<string>-End-->
 

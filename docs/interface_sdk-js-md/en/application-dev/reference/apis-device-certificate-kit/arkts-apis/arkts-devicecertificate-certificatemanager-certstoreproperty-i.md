@@ -2,9 +2,11 @@
 
 Represents the storage information about a certificate, including the certificate type and location.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export interface CertStoreProperty--><!--Device-certificateManager-export interface CertStoreProperty-End-->
 
@@ -22,13 +24,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 certAlg?: CertAlgorithm
 ```
 
-Certificate algorithm. This parameter is valid only when **certType** is set to **CA_CERT_SYSTEM**. The default value is **INTERNATIONAL**.Devices outside China do not support the SM algorithm.
+Certificate algorithm. This parameter is valid only when **certType** is set to **CA_CERT_SYSTEM**. The default value is **INTERNATIONAL**. Devices outside China do not support the SM algorithm.
 
 **Type:** [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertStoreProperty-certAlg?: CertAlgorithm--><!--Device-CertStoreProperty-certAlg?: CertAlgorithm-End-->
 
@@ -44,9 +48,11 @@ Scope of the certificate. This parameter is mandatory when **certType** is **CA_
 
 **Type:** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertStoreProperty-certScope?: CertScope--><!--Device-CertStoreProperty-certScope?: CertScope-End-->
 
@@ -62,9 +68,11 @@ Type of the certificate.
 
 **Type:** CertType
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertStoreProperty-certType: CertType--><!--Device-CertStoreProperty-certType: CertType-End-->
 

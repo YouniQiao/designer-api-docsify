@@ -2,7 +2,9 @@
 
 Wi-Fi IP information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface IpInfo--><!--Device-wifiManager-interface IpInfo-End-->
 
@@ -24,7 +26,9 @@ The gateway of the Wi-Fi connection
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-gateway: int--><!--Device-IpInfo-gateway: int-End-->
 
@@ -40,7 +44,9 @@ The IP address of the Wi-Fi connection
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-ipAddress: int--><!--Device-IpInfo-ipAddress: int-End-->
 
@@ -56,7 +62,9 @@ The IP address lease duration of the Wi-Fi connection
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-leaseDuration: int--><!--Device-IpInfo-leaseDuration: int-End-->
 
@@ -72,7 +80,9 @@ The network mask of the Wi-Fi connection
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-netmask: int--><!--Device-IpInfo-netmask: int-End-->
 
@@ -88,7 +98,9 @@ The primary DNS server IP address of the Wi-Fi connection
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-primaryDns: int--><!--Device-IpInfo-primaryDns: int-End-->
 
@@ -104,7 +116,9 @@ The secondary DNS server IP address of the Wi-Fi connection
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-secondDns: int--><!--Device-IpInfo-secondDns: int-End-->
 
@@ -120,7 +134,9 @@ The DHCP server IP address of the Wi-Fi connection
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IpInfo-serverIp: int--><!--Device-IpInfo-serverIp: int-End-->
 

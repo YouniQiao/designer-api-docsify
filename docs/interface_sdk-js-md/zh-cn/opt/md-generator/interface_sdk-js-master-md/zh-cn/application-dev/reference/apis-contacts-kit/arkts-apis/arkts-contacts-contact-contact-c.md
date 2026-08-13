@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-contact-class Contact--><!--Device-contact-class Contact-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -19,6 +21,8 @@ static readonly INVALID_CONTACT_ID: -1
 **类型：** -1
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ contactAttributes?: ContactAttributes
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-contactAttributes?: ContactAttributes--><!--Device-Contact-contactAttributes?: ContactAttributes-End-->
@@ -55,6 +61,8 @@ emails?: Email[]
 **类型：** Email[]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ events?: Event[]
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-events?: Event[]--><!--Device-Contact-events?: Event[]-End-->
@@ -91,6 +101,8 @@ groups?: Group[]
 **类型：** [Group](arkts-contacts-contact-group-c.md)[]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +122,8 @@ readonly id?: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-readonly id?: number--><!--Device-Contact-readonly id?: number-End-->
@@ -127,6 +141,8 @@ imAddresses?: ImAddress[]
 **类型：** [ImAddress](arkts-contacts-contact-imaddress-c.md)[]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -146,6 +162,8 @@ readonly key?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-readonly key?: string--><!--Device-Contact-readonly key?: string-End-->
@@ -163,6 +181,8 @@ name?: Name
 **类型：** [Name](arkts-contacts-contact-name-c.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -182,6 +202,8 @@ nickName?: NickName
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-nickName?: NickName--><!--Device-Contact-nickName?: NickName-End-->
@@ -199,6 +221,8 @@ note?: Note
 **类型：** [Note](arkts-contacts-contact-note-c.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -218,6 +242,8 @@ organization?: Organization
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-organization?: Organization--><!--Device-Contact-organization?: Organization-End-->
@@ -235,6 +261,8 @@ phoneNumbers?: PhoneNumber[]
 **类型：** PhoneNumber[]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -254,6 +282,8 @@ portrait?: Portrait
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-portrait?: Portrait--><!--Device-Contact-portrait?: Portrait-End-->
@@ -271,6 +301,8 @@ postalAddresses?: PostalAddress[]
 **类型：** [PostalAddress](arkts-contacts-contact-postaladdress-c.md)[]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -290,6 +322,8 @@ relations?: Relation[]
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-relations?: Relation[]--><!--Device-Contact-relations?: Relation[]-End-->
@@ -308,6 +342,8 @@ sipAddresses?: SipAddress[]
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-sipAddresses?: SipAddress[]--><!--Device-Contact-sipAddresses?: SipAddress[]-End-->
@@ -325,6 +361,8 @@ websites?: Website[]
 **类型：** [Website](arkts-contacts-contact-website-c.md)[]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

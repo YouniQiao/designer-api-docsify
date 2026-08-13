@@ -6,6 +6,8 @@ Enumeration of moving photo effect mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-enum MovingPhotoEffectMode--><!--Device-sendablePhotoAccessHelper-enum MovingPhotoEffectMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,6 +25,8 @@ Default
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-DEFAULT = 0--><!--Device-MovingPhotoEffectMode-DEFAULT = 0-End-->
 
@@ -42,6 +46,8 @@ Bounce play
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-MovingPhotoEffectMode-BOUNCE_PLAY = 1--><!--Device-MovingPhotoEffectMode-BOUNCE_PLAY = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -59,6 +65,8 @@ Loop play
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-LOOP_PLAY = 2--><!--Device-MovingPhotoEffectMode-LOOP_PLAY = 2-End-->
 
@@ -78,6 +86,8 @@ Long exposure
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-MovingPhotoEffectMode-LONG_EXPOSURE = 3--><!--Device-MovingPhotoEffectMode-LONG_EXPOSURE = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -95,6 +105,8 @@ Multi exposure
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-MULTI_EXPOSURE = 4--><!--Device-MovingPhotoEffectMode-MULTI_EXPOSURE = 4-End-->
 
@@ -114,6 +126,8 @@ Cinema graph
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-MovingPhotoEffectMode-CINEMA_GRAPH = 5--><!--Device-MovingPhotoEffectMode-CINEMA_GRAPH = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -131,6 +145,8 @@ Image only
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-IMAGE_ONLY = 10--><!--Device-MovingPhotoEffectMode-IMAGE_ONLY = 10-End-->
 

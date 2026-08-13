@@ -2,11 +2,13 @@
 
 Defines a long press gesture handler object.
 
-**Inheritance/Implementation:** LongPressGestureHandler extends [GestureHandler<LongPressGestureHandler>](GestureHandler<LongPressGestureHandler>)
+**Inheritance/Implementation:** LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>--><!--Device-unnamed-declare class LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LongPressGestureHandler--><!--Device-unnamed-declare class LongPressGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options?: LongPressGestureHandlerOptions)
 Constructor used to create a long press gesture handler instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ onAction(event: Callback<GestureEvent>): LongPressGestureHandler
 Sets the callback for successful long press gesture recognition.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +80,8 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -100,10 +108,11 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
-[onActionCancel](#onActionCancel), this API returns gesture event information.
+Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onActionCancel), this API returns gesture event information.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +143,8 @@ onActionEnd(event: Callback<GestureEvent>): LongPressGestureHandler
 Sets the callback for long press gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,11 +6,11 @@
 function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 ```
 
-获取设备的姿态数据。
+获取设备的姿态数据。 姿态数据包含x、y、z三轴的姿态旋转角，即三轴的欧拉角，三轴定义与设备sensor定义相同，为右手系。姿态旋转角在ZXY旋转顺序、内旋下计算，通过传感器融合获取的四元数计算得到结果。
 
-姿态数据包含x、y、z三轴的姿态旋转角，即三轴的欧拉角，三轴定义与设备sensor定义相同，为右手系。姿态旋转角在ZXY旋转顺序、内旋下计算，通过传感器融合获取的四元数计算得到结果。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>--><!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>-End-->
 
@@ -28,9 +28,9 @@ function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [32500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-服务异常) |
 
 ## 示例
 

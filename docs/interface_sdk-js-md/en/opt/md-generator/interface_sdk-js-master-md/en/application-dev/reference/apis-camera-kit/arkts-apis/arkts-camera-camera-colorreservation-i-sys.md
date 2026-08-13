@@ -1,12 +1,14 @@
 # ColorReservation (System API)
 
-ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery)Provides API for obtaining and setting a color reservation type.
+ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery-(System-API)) Provides API for obtaining and setting a color reservation type.
 
-**Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery)
+**Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery-(System-API))
 
-**Since:** 15
+**Since:** 23
 
-<!--Device-camera-interface ColorReservation extends ColorReservationQuery--><!--Device-camera-interface ColorReservation extends ColorReservationQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface ColorReservation--><!--Device-camera-interface ColorReservation-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,7 +28,9 @@ getColorReservation(): ColorReservationType
 
 Obtains the color reservation type in use.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorReservation-getColorReservation(): ColorReservationType--><!--Device-ColorReservation-getColorReservation(): ColorReservationType-End-->
 
@@ -44,8 +48,8 @@ Obtains the color reservation type in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -71,10 +75,11 @@ function getColorReservation(session: camera.VideoSessionForSys): camera.ColorRe
 setColorReservation(type: ColorReservationType): void
 ```
 
-Sets a color reservation type. Before the setting, call  
-[getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes) to obtain the supported color reservation types.
+Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes) to obtain the supported color reservation types.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void--><!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void-End-->
 
@@ -92,11 +97,11 @@ Sets a color reservation type. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

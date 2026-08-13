@@ -6,7 +6,7 @@ Defines the options for filtering the played audio streams to be recorded.
 
 **Deprecated since:** 12
 
-**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
+**Substitutes:** OH_AVScreenCapture in native interface.
 
 <!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
 
@@ -32,7 +32,7 @@ Filter by stream usages. But not allow to capture voice streams.
 
 **Deprecated since:** 12
 
-**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
+**Substitutes:** OH_AVScreenCapture in native interface.
 
 <!--Device-CaptureFilterOptions-usages: Array<StreamUsage>--><!--Device-CaptureFilterOptions-usages: Array<StreamUsage>-End-->
 

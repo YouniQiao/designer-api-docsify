@@ -6,15 +6,13 @@
 function offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用  
-[onGenericEventData](emitter.onGenericEventData&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))或  
-[onceGenericEventData](emitter.onceGenericEventData&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
-
-使用该接口取消事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未执行的事件将被取消。
+取消订阅当前Emitter类实例的事件。仅当已使用 onGenericEventData或 onceGenericEventData接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。 使用该接口取消事件订阅后，已通过emit接口发布但尚未执行的事件将被取消。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-emitter-function offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
@@ -25,7 +23,7 @@ function offGenericEventData<T>(eventId: string, callback: Callback<GenericEvent
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
 
 ## 示例
 

@@ -8,9 +8,11 @@ function getRule() : bigint
 
 获取当前线程规则、进程规则、告警规则的合集。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
 

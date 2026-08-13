@@ -2,7 +2,9 @@
 
 字幕风格。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-accessibility-interface CaptionsStyle--><!--Device-accessibility-interface CaptionsStyle-End-->
 
@@ -14,17 +16,13 @@
 backgroundColor: number | string
 ```
 
-描述字幕背景颜色。
-
-number：HEX 格式颜色，支持 rgb 或 argb。
-
-string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
-
-例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
+描述字幕背景颜色。 number：HEX 格式颜色，支持 rgb 或 argb。 string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
 **类型：** number \| string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -40,17 +38,13 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 fontColor: number | string
 ```
 
-描述字幕字体颜色。
-
-number：HEX 格式颜色，支持 rgb 或 argb。
-
-string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
-
-例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
+描述字幕字体颜色。 number：HEX 格式颜色，支持 rgb 或 argb。 string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
 **类型：** number \| string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -70,7 +64,9 @@ fontEdgeType: CaptionsFontEdgeType
 
 **类型：** [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +86,9 @@ fontFamily: CaptionsFontFamily
 
 **类型：** [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -110,7 +108,9 @@ fontScale: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -126,17 +126,13 @@ fontScale: number
 windowColor: number | string
 ```
 
-描述字幕窗口颜色。
-
-number：HEX 格式颜色，支持 rgb 或 argb。
-
-string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
-
-例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
+描述字幕窗口颜色。 number：HEX 格式颜色，支持 rgb 或 argb。 string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
 **类型：** number \| string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

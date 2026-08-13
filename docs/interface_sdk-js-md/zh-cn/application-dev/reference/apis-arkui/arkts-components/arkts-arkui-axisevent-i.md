@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
 
-<!--Device-unnamed-declare interface AxisEvent extends BaseEvent--><!--Device-unnamed-declare interface AxisEvent extends BaseEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface AxisEvent--><!--Device-unnamed-declare interface AxisEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ getCurrentLocalPosition?(): Coordinate2D
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,6 +54,8 @@ getHorizontalAxisValue(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -75,6 +81,8 @@ getPinchAxisScaleValue(): number
 **起始版本：** 21
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,6 +110,8 @@ getVerticalAxisValue(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -127,6 +137,8 @@ hasAxis(axisType: AxisType): boolean
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,6 +174,8 @@ action: AxisAction
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -176,15 +190,15 @@ action: AxisAction
 displayX: number
 ```
 
-鼠标光标在当前应用屏幕坐标系中的X坐标。
-
-单位：vp
+鼠标光标在当前应用屏幕坐标系中的X坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,15 +214,15 @@ displayX: number
 displayY: number
 ```
 
-鼠标光标在当前应用屏幕坐标系中的Y坐标。
-
-单位：vp
+鼠标光标在当前应用屏幕坐标系中的Y坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,19 +238,15 @@ displayY: number
 eventHandleId?: number
 ```
 
-用于事件处理的唯一标识。
-
-取值范围：[0, +∞)
-
-**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
-
-多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
+用于事件处理的唯一标识。 取值范围：[0, +∞) **说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy)接口分发事件时会使用该字段，事件每分 发一次字段会增加100000。 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
 **类型：** number
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,17 +262,15 @@ eventHandleId?: number
 globalDisplayX?: number
 ```
 
-鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -278,17 +286,15 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -312,6 +318,8 @@ propagation: Callback<void>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -326,15 +334,15 @@ propagation: Callback<void>
 scrollStep?: number
 ```
 
-鼠标轴滚动步长配置。
-
-**说明：** 仅支持鼠标滚轮，取值范围：[0~65535]
+鼠标轴滚动步长配置。 **说明：** 仅支持鼠标滚轮，取值范围：[0~65535]
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -350,15 +358,15 @@ scrollStep?: number
 windowX: number
 ```
 
-鼠标光标在当前应用窗口坐标系中的X坐标。
-
-单位：vp
+鼠标光标在当前应用窗口坐标系中的X坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -374,15 +382,15 @@ windowX: number
 windowY: number
 ```
 
-鼠标光标在当前应用窗口坐标系中的Y坐标。
-
-单位：vp
+鼠标光标在当前应用窗口坐标系中的Y坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -398,15 +406,15 @@ windowY: number
 x: number
 ```
 
-鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
-
-单位：vp
+鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -422,15 +430,15 @@ x: number
 y: number
 ```
 
-鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
-
-单位：vp
+鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

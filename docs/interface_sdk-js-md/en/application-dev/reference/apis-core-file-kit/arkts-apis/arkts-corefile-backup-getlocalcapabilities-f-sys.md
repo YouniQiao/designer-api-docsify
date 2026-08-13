@@ -14,9 +14,11 @@ function getLocalCapabilities(): Promise<FileData>
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -61,7 +63,7 @@ async function getLocalCapabilities() {
 }
 ```
 
-The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fileiostat) of the [@ohos.file.fs](js-apis-file-fs.md) module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -89,9 +91,11 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -105,7 +109,7 @@ Obtain a Json file that describes local capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -139,7 +143,7 @@ try {
 }
 ```
 
-The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fileiostat-1) of the [@ohos.file.fs](js-apis-file-fs.md) module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -167,9 +171,11 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 Obtain a json file that describes local capabilities.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -195,10 +201,10 @@ Obtain a json file that describes local capabilities.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |

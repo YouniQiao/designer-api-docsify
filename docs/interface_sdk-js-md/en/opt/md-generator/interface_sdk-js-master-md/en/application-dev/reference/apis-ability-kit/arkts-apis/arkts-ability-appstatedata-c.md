@@ -1,10 +1,10 @@
 # AppStateData
 
-The module defines the application state information. Once an application state change listener is registered using  
-[on](@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver)), the system triggers the  
-[onForegroundApplicationChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronforegroundapplicationchanged) callback of [ApplicationStateObserver](./application/ApplicationStateObserver) to deliver notifications whenever  the state of an application, process, or ability changes.
+The module defines the application state information. Once an application state change listener is registered using [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState), the system triggers the [onForegroundApplicationChanged](arkts-ability-applicationstateobserver-c.md#onForegroundApplicationChanged) callback of ApplicationStateObserver to deliver notifications whenever the state of an application, process, or ability changes.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AppStateData--><!--Device-unnamed-declare class AppStateData-End-->
 
@@ -20,7 +20,9 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppStateData-bundleName: string--><!--Device-AppStateData-bundleName: string-End-->
 
@@ -32,15 +34,13 @@ Bundle name.
 isFloatingWindowMode: boolean
 ```
 
-Whether the application is in floating window mode.
-
-**true**: The application is in floating window mode.
-
-**false**: The application is not in floating window mode.
+Whether the application is in floating window mode. **true**: The application is in floating window mode. **false**: The application is not in floating window mode.
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppStateData-isFloatingWindowMode: boolean--><!--Device-AppStateData-isFloatingWindowMode: boolean-End-->
 
@@ -52,15 +52,13 @@ Whether the application is in floating window mode.
 isSplitScreenMode: boolean
 ```
 
-Whether the application is in split-screen mode.
-
-**true**: The application is in split-screen mode.
-
-**false**: The application is not in split-screen mode.
+Whether the application is in split-screen mode. **true**: The application is in split-screen mode. **false**: The application is not in split-screen mode.
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppStateData-isSplitScreenMode: boolean--><!--Device-AppStateData-isSplitScreenMode: boolean-End-->
 
@@ -72,23 +70,13 @@ Whether the application is in split-screen mode.
 state: number
 ```
 
-Application state.
-
-**0**: The application is being initialized.
-
-**1**: The application has been initialized and is ready.
-
-**2**: The application is running in the foreground.
-
-**3**: The application is having the focus. (This state is reserved.)
-
-**4**: The application is running in the background.
-
-**5**: The application has exited.
+Application state. **0**: The application is being initialized. **1**: The application has been initialized and is ready. **2**: The application is running in the foreground. **3**: The application is having the focus. (This state is reserved.) **4**: The application is running in the background. **5**: The application has exited.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppStateData-state: int--><!--Device-AppStateData-state: int-End-->
 
@@ -104,7 +92,9 @@ UID of the application.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppStateData-uid: int--><!--Device-AppStateData-uid: int-End-->
 

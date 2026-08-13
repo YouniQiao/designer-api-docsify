@@ -6,6 +6,8 @@ Custom icon object in the generation result page of ImageGeneratorDialog.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GeneratorResultPageIcon--><!--Device-imageGeneration-interface GeneratorResultPageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,11 +28,13 @@ callback: Callback<GeneratorResult>
 
 Icon click event callback.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GeneratorResult](arkts-arkui-imagegeneration-generatorresult-i-sys.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GeneratorResult](arkts-arkui-imagegeneration-generatorresult-i-sys.md)&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +58,8 @@ Icon image information.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorResultPageIcon-image: image.PixelMap | string | Resource--><!--Device-GeneratorResultPageIcon-image: image.PixelMap | string | Resource-End-->
@@ -75,6 +81,8 @@ Icon text description.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

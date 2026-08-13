@@ -6,7 +6,9 @@ export type MissionSnapshot = _MissionSnapshot
 
 Mission snapshot corresponding to mission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot--><!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot-End-->
 

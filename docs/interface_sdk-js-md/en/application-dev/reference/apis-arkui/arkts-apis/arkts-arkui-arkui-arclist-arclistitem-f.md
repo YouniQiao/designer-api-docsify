@@ -9,6 +9,7 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@k
 ## ArcListItem
 
 ```TypeScript
+@ComponentBuilder
 export declare function ArcListItem(
     content_?: CustomBuilder,
 ): ArcListItemAttribute
@@ -20,7 +21,9 @@ Defines ArcListItem Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute--><!--Device-unnamed-export declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-@ComponentBuilderexport declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -34,12 +37,13 @@ Defines ArcListItem Component.
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
+| ArcListItemAttribute |  |
 
 
 ## ArcListItem
 
 ```TypeScript
+@Builder
 export declare function ArcListItem(
     style_: CustomBuilderT<ArcListItemAttribute>,
     content_?: CustomBuilder
@@ -52,11 +56,11 @@ Defines ArcListItem Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ArcListItem(    style_: CustomBuilderT<ArcListItemAttribute>,    content_?: CustomBuilder): ArcListItemAttribute--><!--Device-unnamed-export declare function ArcListItem(    style_: CustomBuilderT<ArcListItemAttribute>,    content_?: CustomBuilder): ArcListItemAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ArcListItem(    style_: CustomBuilderT<ArcListItemAttribute>,    content_?: CustomBuilder): ArcListItemAttribute--><!--Device-unnamed-@Builderexport declare function ArcListItem(    style_: CustomBuilderT<ArcListItemAttribute>,    content_?: CustomBuilder): ArcListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -64,12 +68,12 @@ Defines ArcListItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md)&gt; | Yes | The style to create an ArcListItem. |
+| style_ | CustomBuilderT&lt;ArcListItemAttribute&gt; | Yes | The style to create an ArcListItem. |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | The attribute of the ArcListItem. |
+| ArcListItemAttribute | The attribute of the ArcListItem. |
 

@@ -2,7 +2,9 @@
 
 音频选择器对象，用来支撑选择和保存音频类文件等用户场景。在使用前，需要先创建AudioViewPicker实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-picker-class AudioViewPicker--><!--Device-picker-class AudioViewPicker-End-->
 
@@ -16,9 +18,11 @@ constructor()
 
 创建AudioViewPicker对象，不推荐使用该构造函数，会出现概率性失败问题。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AudioViewPicker-constructor()--><!--Device-AudioViewPicker-constructor()-End-->
 
@@ -36,12 +40,13 @@ let audioPicker = new picker.AudioViewPicker(); // 不推荐使用无参构造�
 constructor(context: Context)
 ```
 
-创建AudioViewPicker对象，推荐使用该构造函数，获取context参考  
-[getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12)。
+创建AudioViewPicker对象，推荐使用该构造函数，获取context参考 [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getHostContext)。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AudioViewPicker-constructor(context: Context)--><!--Device-AudioViewPicker-constructor(context: Context)-End-->
 
@@ -87,9 +92,11 @@ struct Index {
 save(option?: AudioSaveOptions): Promise<Array<string>>
 ```
 
-通过保存模式拉起audioPicker界面（目前拉起的是documentPicker，audioPicker在规划中），用户可以保存一个或多个音频文件。使用Promise异步回调。
+通过保存模式拉起audioPicker界面（目前拉起的是documentPicker，audioPicker在规划中）， 用户可以保存一个或多个音频文件。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -138,9 +145,11 @@ async function example16(context: common.UIAbilityContext) { // 需确保 contex
 save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-通过保存模式拉起audioPicker界面（目前拉起的是documentPicker，audioPicker在规划中），用户可以保存一个或多个音频文件。使用callback异步回调。
+通过保存模式拉起audioPicker界面（目前拉起的是documentPicker，audioPicker在规划中）， 用户可以保存一个或多个音频文件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -184,9 +193,11 @@ async function example17(context: common.UIAbilityContext) { // 需确保 contex
 save(callback: AsyncCallback<Array<string>>): void
 ```
 
-通过保存模式拉起audioPicker界面（目前拉起的是documentPicker，audioPicker在规划中），用户可以保存一个或多个音频文件。使用callback异步回调。
+通过保存模式拉起audioPicker界面（目前拉起的是documentPicker，audioPicker在规划中）， 用户可以保存一个或多个音频文件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -229,7 +240,9 @@ select(option?: AudioSelectOptions): Promise<Array<string>>
 
 通过选择模式拉起audioPicker界面，用户可以选择一个或多个音频文件。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -279,7 +292,9 @@ select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void
 
 通过选择模式拉起audioPicker界面，用户可以选择一个或多个音频文件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -322,10 +337,11 @@ async function example14(context: common.UIAbilityContext) { // 需确保 contex
 select(callback: AsyncCallback<Array<string>>): void
 ```
 
-通过选择模式拉起audioPicker界面，用户可以选择一个或多个音频文件。使用callback异步回调。  
-**系统能力**：SystemCapability.FileManagement.UserFileService
+通过选择模式拉起audioPicker界面，用户可以选择一个或多个音频文件。使用callback异步回调。 **系统能力**：SystemCapability.FileManagement.UserFileService
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
 

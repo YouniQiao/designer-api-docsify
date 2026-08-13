@@ -1,18 +1,12 @@
 # ImageSource
 
-The **ImageSource** class provides APIs to obtain image information.
+The **ImageSource** class provides APIs to obtain image information. Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) to create an ImageSource instance. All APIs in ImageSource cannot be called concurrently. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Before calling any API in ImageSource, you must use   
-[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-1) to create an ImageSource instance.
+**Since:** 23
 
-All APIs in ImageSource cannot be called concurrently.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
 
@@ -30,11 +24,13 @@ import { image } from '@kit.ImageKit';
 createWideGamutSdrPixelMap(): Promise<PixelMap>
 ```
 
-Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSource, decodes to a SDR PixelMap using its native color space.For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap.For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB color space.
+Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSource, decodes to a SDR PixelMap using its native color space. For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap. For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB color space.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>--><!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>-End-->
 
@@ -52,10 +48,10 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
 ## createWideGamutSdrPixelMap
 
@@ -63,11 +59,13 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 createWideGamutSdrPixelMap(): Promise<PixelMap | undefined>
 ```
 
-Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSource, decodes to a SDR PixelMap using its native color space.For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap.For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB color space.
+Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSource, decodes to a SDR PixelMap using its native color space. For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap. For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB color space.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap | undefined>--><!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap | undefined>-End-->
 
@@ -85,10 +83,10 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
 ## isJpegProgressive
 
@@ -98,9 +96,11 @@ isJpegProgressive(): Promise<boolean>
 
 Checks whether a JPEG image is progressive. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,8 +120,8 @@ Checks whether a JPEG image is progressive. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 
 ## Examples
 
@@ -148,7 +148,9 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,8 +176,8 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700304](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 

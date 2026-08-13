@@ -2,7 +2,9 @@
 
 表示旋转的四元数.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Quaternion--><!--Device-unnamed-export interface Quaternion-End-->
 
@@ -18,7 +20,9 @@ w: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Quaternion-w: double--><!--Device-Quaternion-w: double-End-->
 
@@ -34,7 +38,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Quaternion-x: double--><!--Device-Quaternion-x: double-End-->
 
@@ -50,7 +56,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Quaternion-y: double--><!--Device-Quaternion-y: double-End-->
 
@@ -66,7 +74,9 @@ z: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Quaternion-z: double--><!--Device-Quaternion-z: double-End-->
 

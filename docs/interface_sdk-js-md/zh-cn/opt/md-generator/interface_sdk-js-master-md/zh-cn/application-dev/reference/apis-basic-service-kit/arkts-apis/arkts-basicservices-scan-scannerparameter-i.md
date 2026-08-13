@@ -2,7 +2,9 @@
 
 定义扫描仪参数的接口。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-scan-interface ScannerParameter--><!--Device-scan-interface ScannerParameter-End-->
 
@@ -18,7 +20,9 @@ optionConstraintInt?: number[]
 
 **类型：** number[]
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionConstraintInt?: int[]--><!--Device-ScannerParameter-optionConstraintInt?: int[]-End-->
 
@@ -34,7 +38,9 @@ optionConstraintRange?: Range
 
 **类型：** Range
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionConstraintRange?: Range--><!--Device-ScannerParameter-optionConstraintRange?: Range-End-->
 
@@ -50,7 +56,9 @@ optionConstraintString?: string[]
 
 **类型：** string[]
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionConstraintString?: string[]--><!--Device-ScannerParameter-optionConstraintString?: string[]-End-->
 
@@ -66,7 +74,9 @@ optionConstraintType: ConstraintType
 
 **类型：** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionConstraintType: ConstraintType--><!--Device-ScannerParameter-optionConstraintType: ConstraintType-End-->
 
@@ -82,7 +92,9 @@ optionDesc: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionDesc: string--><!--Device-ScannerParameter-optionDesc: string-End-->
 
@@ -98,7 +110,9 @@ optionIndex: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionIndex: int--><!--Device-ScannerParameter-optionIndex: int-End-->
 
@@ -114,7 +128,9 @@ optionName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionName: string--><!--Device-ScannerParameter-optionName: string-End-->
 
@@ -130,7 +146,9 @@ optionTitle: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionTitle: string--><!--Device-ScannerParameter-optionTitle: string-End-->
 
@@ -146,7 +164,9 @@ optionType: OptionValueType
 
 **类型：** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionType: OptionValueType--><!--Device-ScannerParameter-optionType: OptionValueType-End-->
 
@@ -162,7 +182,9 @@ optionUnit: PhysicalUnit
 
 **类型：** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerParameter-optionUnit: PhysicalUnit--><!--Device-ScannerParameter-optionUnit: PhysicalUnit-End-->
 

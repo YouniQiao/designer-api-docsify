@@ -6,7 +6,9 @@ Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseop
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface AlertDialogButtonOptions extends AlertDialogButtonBaseOptions--><!--Device-unnamed-declare interface AlertDialogButtonOptions extends AlertDialogButtonBaseOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AlertDialogButtonOptions--><!--Device-unnamed-declare interface AlertDialogButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,14 +18,13 @@ Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseop
 primary?: boolean
 ```
 
-Whether the button responds to the **Enter** key by default when the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation. If there are multiple buttons, set this parameter to **true** for only one button. Otherwise, no button will respond. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. This parameter does not take effect when **defaultFocus** is set to   
-**true**. **true**: The button responds to the **Enter** key by default. **false**: The button does not respond to the **Enter** key by default.
-
-Default value: **false**.
+Whether the button responds to the **Enter** key by default when the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation. If there are multiple buttons, set this parameter to **true** for only one button. Otherwise, no button will respond. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. This parameter does not take effect when **defaultFocus** is set to **true**. **true**: The button responds to the **Enter** key by default. **false**: The button does not respond to the **Enter** key by default. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,20 +1,22 @@
 # ExtensionAbilityInfo
 
 ```TypeScript
-export type ExtensionAbilityInfo = _ExtensionAbilityInfo.ExtensionAbilityInfo
+export type ExtensionAbilityInfo = _ExtensionAbilityInfo
 ```
 
 Defines the ExtensionAbility information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type ExtensionAbilityInfo = _ExtensionAbilityInfo.ExtensionAbilityInfo--><!--Device-bundleManager-export type ExtensionAbilityInfo = _ExtensionAbilityInfo.ExtensionAbilityInfo-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-bundleManager-export type ExtensionAbilityInfo = _ExtensionAbilityInfo--><!--Device-bundleManager-export type ExtensionAbilityInfo = _ExtensionAbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _ExtensionAbilityInfo.ExtensionAbilityInfo
+**Property type:** _ExtensionAbilityInfo
 

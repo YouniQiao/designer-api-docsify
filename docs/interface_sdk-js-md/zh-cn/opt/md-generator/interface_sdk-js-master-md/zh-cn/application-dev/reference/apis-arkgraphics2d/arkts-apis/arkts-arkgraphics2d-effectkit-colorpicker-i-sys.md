@@ -1,9 +1,10 @@
 # ColorPicker
 
-取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  
-[createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker)创建一个ColorPicker实例。
+取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景， 可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过 [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker)创建一个ColorPicker实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
 
@@ -18,6 +19,8 @@ discriminatePictureLightDegree(): PictureLightDegree
 获取图片的明亮程度。当无法判别图片明亮程度时，返回UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,6 +76,8 @@ getAlphaZeroTransparentProportion(): number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double--><!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double-End-->
@@ -91,7 +96,7 @@ getAlphaZeroTransparentProportion(): number
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -129,9 +134,11 @@ getComplexityDegree(): PictureComplexityDegree
 
 获取图像内容复杂度。当无法判别图像内容复杂度时，返回默认值UNKNOWN_COMPLEXITY_DEGREE_PICTURE。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**废弃版本：** -1
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree--><!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree-End-->
 
@@ -149,7 +156,7 @@ getComplexityDegree(): PictureComplexityDegree
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -188,6 +195,8 @@ getDeepenImmersionColor(): Color
 生成与背景色融合且比背景色更深的强沉浸感颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#Color)里。该接口通过颜色混合算法，创建一种既与背景色协调又具有更强沉浸感的颜色效果。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -243,6 +252,8 @@ getImmersiveBackgroundColor(): Color
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -296,6 +307,8 @@ getImmersiveForegroundColor(): Color
 生成能够创造沉浸式视觉效果的沉浸式前景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#Color)里。该接口基于主色生成适合作为沉浸式前景的颜色值。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -351,6 +364,8 @@ getMorandiShadowColor(): Color
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -401,10 +416,11 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getReverseColor(): Color
 ```
 
-基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#Color)里。根据  
-[discriminatePictureLightDegree](#discriminatePictureLightDegree)接口获取的图片明亮类型得到一个反色，仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
+基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#Color)里。根据 [discriminatePictureLightDegree](#discriminatePictureLightDegree)接口获取的图片明亮类型得到一个反色， 仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -458,9 +474,11 @@ getShadeDegree(): PictureShadeDegree
 
 获取图像颜色深浅度。当无法判别图像颜色深浅度时，返回默认值UNKNOWN_SHADE_DEGREE_PICTURE。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**废弃版本：** -1
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree--><!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree-End-->
 
@@ -478,7 +496,7 @@ getShadeDegree(): PictureShadeDegree
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -516,9 +534,11 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 同步返回图像占比靠前的颜色值及其对应比例，个数由`colorCount`指定。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**废弃版本：** -1
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>--><!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>-End-->
 
@@ -542,7 +562,7 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

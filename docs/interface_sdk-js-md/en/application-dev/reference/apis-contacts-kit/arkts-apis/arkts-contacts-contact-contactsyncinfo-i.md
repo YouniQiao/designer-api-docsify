@@ -6,6 +6,8 @@ Information about contact synchronization for the calling application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-contact-interface ContactSyncInfo--><!--Device-contact-interface ContactSyncInfo-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -22,15 +24,15 @@ import { contact } from '@kit.ContactsKit';
 completedBatches: Array<int>
 ```
 
-Indicates the array of batch identifiers for contacts that have been synchronized successfully.
-
-The range of values is from 1 to totalBatches.
+Indicates the array of batch identifiers for contacts that have been synchronized successfully. The range of values is from 1 to totalBatches.
 
 **Type:** Array&lt;int&gt;
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +56,8 @@ Indicates the latest timestamp the contacts were synchronized in milliseconds.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -75,6 +79,8 @@ The contact synchronization mode.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +104,8 @@ Indicates the sync identifier used for synchronizing all contacts.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -119,6 +127,8 @@ Indicates the total number of batches of contacts to be synchronized.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

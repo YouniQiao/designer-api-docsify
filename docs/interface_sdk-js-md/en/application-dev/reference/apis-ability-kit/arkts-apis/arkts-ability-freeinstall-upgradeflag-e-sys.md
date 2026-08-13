@@ -2,9 +2,11 @@
 
 Upgrade flag, which is for internal use only.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-freeInstall-export enum UpgradeFlag--><!--Device-freeInstall-export enum UpgradeFlag-End-->
 
@@ -20,9 +22,11 @@ NOT_UPGRADE = 0
 
 No module needs an upgrade.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeFlag-NOT_UPGRADE = 0--><!--Device-UpgradeFlag-NOT_UPGRADE = 0-End-->
 
@@ -38,9 +42,11 @@ SINGLE_UPGRADE = 1
 
 A single module needs an upgrade.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeFlag-SINGLE_UPGRADE = 1--><!--Device-UpgradeFlag-SINGLE_UPGRADE = 1-End-->
 
@@ -56,9 +62,11 @@ RELATION_UPGRADE = 2
 
 The module that has a relationship with the current one needs an upgrade.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeFlag-RELATION_UPGRADE = 2--><!--Device-UpgradeFlag-RELATION_UPGRADE = 2-End-->
 

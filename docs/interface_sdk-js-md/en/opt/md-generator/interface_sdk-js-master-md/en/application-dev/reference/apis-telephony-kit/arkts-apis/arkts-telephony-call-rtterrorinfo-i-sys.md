@@ -2,7 +2,9 @@
 
 Indicates the info of the rtt error.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface RttErrorInfo--><!--Device-call-export interface RttErrorInfo-End-->
 
@@ -26,7 +28,9 @@ Indicates the id of rtt.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-callId: int--><!--Device-RttErrorInfo-callId: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the code of rtt cause.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-causeCode: int--><!--Device-RttErrorInfo-causeCode: int-End-->
 
@@ -62,7 +68,9 @@ Indicates the type of rtt operation.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-operationType: int--><!--Device-RttErrorInfo-operationType: int-End-->
 
@@ -80,7 +88,9 @@ Indicates the text of rtt fail reason.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-reasonText: string--><!--Device-RttErrorInfo-reasonText: string-End-->
 

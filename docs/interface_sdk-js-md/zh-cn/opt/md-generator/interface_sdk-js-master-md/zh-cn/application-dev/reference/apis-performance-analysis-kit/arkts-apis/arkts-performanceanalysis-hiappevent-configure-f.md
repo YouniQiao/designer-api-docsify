@@ -8,7 +8,9 @@ function configure(config: ConfigOption): void
 
 应用事件打点配置方法，支持配置打点开关和目录存储配额大小。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -26,8 +28,8 @@ function configure(config: ConfigOption): void
 
 | 错误码ID |
 | --- |
-| [11103001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11103001-非法的最大存储配额值) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11103001](../errorcode-hiappevent.md#11103001-非法的最大存储配额值) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

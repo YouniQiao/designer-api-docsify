@@ -8,7 +8,7 @@ Defines the response to the cipher interface called.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-unnamed-export interface CipherResponse--><!--Device-unnamed-export interface CipherResponse-End-->
 
@@ -36,7 +36,7 @@ Response content.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherResponse-text: string--><!--Device-CipherResponse-text: string-End-->
 

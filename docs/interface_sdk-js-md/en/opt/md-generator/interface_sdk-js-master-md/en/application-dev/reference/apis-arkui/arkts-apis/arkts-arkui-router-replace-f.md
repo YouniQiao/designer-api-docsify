@@ -18,7 +18,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)(options: router.RouterOptions)
 
 <!--Device-router-function replace(options: RouterOptions): void--><!--Device-router-function replace(options: RouterOptions): void-End-->
 

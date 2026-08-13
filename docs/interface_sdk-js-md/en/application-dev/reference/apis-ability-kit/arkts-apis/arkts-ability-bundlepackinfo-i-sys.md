@@ -2,9 +2,11 @@
 
 The bundle pack info class.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BundlePackInfo--><!--Device-unnamed-export interface BundlePackInfo-End-->
 
@@ -22,9 +24,11 @@ Package configuration information in the **pack.info** file.
 
 **Type:** Array&lt;[PackageConfig](arkts-ability-bundlepackinfo-packageconfig-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BundlePackInfo-readonly packages: Array<PackageConfig>--><!--Device-BundlePackInfo-readonly packages: Array<PackageConfig>-End-->
 
@@ -42,9 +46,11 @@ Package summary information in the **pack.info** file.
 
 **Type:** [PackageSummary](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BundlePackInfo-readonly summary: PackageSummary--><!--Device-BundlePackInfo-readonly summary: PackageSummary-End-->
 

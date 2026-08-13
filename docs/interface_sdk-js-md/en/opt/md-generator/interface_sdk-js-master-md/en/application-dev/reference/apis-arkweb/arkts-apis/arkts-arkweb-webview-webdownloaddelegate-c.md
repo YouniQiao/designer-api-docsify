@@ -4,6 +4,8 @@ The download state is notified through this delegate.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-webview-class WebDownloadDelegate--><!--Device-webview-class WebDownloadDelegate-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 Callback will be triggered before web download start.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,6 +50,8 @@ Callback will be triggered when web download is interrupted or canceled.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadDelegate-onDownloadFailed(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadFailed(callback: Callback<WebDownloadItem>): void-End-->
@@ -68,6 +74,8 @@ Callback will be triggered when web download is completed.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadDelegate-onDownloadFinish(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadFinish(callback: Callback<WebDownloadItem>): void-End-->
@@ -89,6 +97,8 @@ onDownloadUpdated(callback: Callback<WebDownloadItem>): void
 Callback will be triggered when web download is processing.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -2,9 +2,11 @@
 
 Enumerates thumbnail types.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum ThumbnailType--><!--Device-photoAccessHelper-enum ThumbnailType-End-->
 
@@ -20,9 +22,11 @@ LCD = 1
 
 LCD thumbnail.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailType-LCD = 1--><!--Device-ThumbnailType-LCD = 1-End-->
 
@@ -38,9 +42,11 @@ THM = 2
 
 THM thumbnail.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailType-THM = 2--><!--Device-ThumbnailType-THM = 2-End-->
 

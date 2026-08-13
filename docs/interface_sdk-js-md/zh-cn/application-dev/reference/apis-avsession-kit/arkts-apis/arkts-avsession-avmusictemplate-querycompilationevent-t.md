@@ -8,7 +8,9 @@ type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -21,7 +23,7 @@ type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | compilationId | string | 是 | 合集的ID。 |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 页面的索引。 |
+| pageIndex | int | 是 | 页面的索引。 |
 
 **返回值：**
 

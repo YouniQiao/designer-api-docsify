@@ -1,9 +1,10 @@
 # @ohos.app.ability.AbilityConstant
 
-AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchReason](arkts-ability-abilityconstant-launchreason-e.md#LaunchReason)、上次退出原因  
-[LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md#LastExitReason)、迁移结果[OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md#OnContinueResult)等。
+AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchReason](arkts-ability-abilityconstant-launchreason-e.md#LaunchReason)、上次退出原因 [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md#LastExitReason)、迁移结果[OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md#OnContinueResult) 等。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,4 +48,4 @@ AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchRea
 
 | 名称 |
 | --- |
-| [REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-ability-abilityconstant-con.md#reason_message_desktop_shortcut) |
+| [REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-ability-abilityconstant-con.md#REASON_MESSAGE_DESKTOP_SHORTCUT) |

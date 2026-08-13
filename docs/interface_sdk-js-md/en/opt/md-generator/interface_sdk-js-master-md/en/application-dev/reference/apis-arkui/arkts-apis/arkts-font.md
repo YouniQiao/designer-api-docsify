@@ -1,17 +1,22 @@
 # @ohos.font(Custom Font Registration)
 
-The **font** module provides APIs for registering custom fonts.
+/*
+ Copyright (c) 2022-2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **NOTE：**
-> 
-> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
-> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](@ohos.arkui.UIContext).
-> 
-> - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync) API of the
-> font engine to register custom fonts.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace font--><!--Device-unnamed-declare namespace font-End-->
 
@@ -29,10 +34,10 @@ import { font } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getFontByName](arkts-arkui-font-getfontbyname-f.md#getfontbyname) |
-| [getSystemFontList](arkts-arkui-font-getsystemfontlist-f.md#getsystemfontlist) |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getuifontconfig) |
-| [registerFont](arkts-arkui-font-registerfont-f.md#registerfont) |
+| [getFontByName](arkts-arkui-font-getfontbyname-f.md#getFontByName) |
+| [getSystemFontList](arkts-arkui-font-getsystemfontlist-f.md#getSystemFontList) |
+| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getUIFontConfig) |
+| [registerFont](arkts-arkui-font-registerfont-f.md#registerFont) |
 
 ### Interfaces
 

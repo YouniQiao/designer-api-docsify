@@ -4,6 +4,8 @@ Defines position of exchange data.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ExchangeIndex--><!--Device-unnamed-interface ExchangeIndex-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Second position for the exchange. The value range is [0, data source length - 1]
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ First position for the exchange. The value range is [0, data source length - 1].
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

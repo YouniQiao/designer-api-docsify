@@ -6,6 +6,8 @@ Describes the animation information of the **Swiper** component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SwiperAnimationEvent--><!--Device-unnamed-declare interface SwiperAnimationEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@ Describes the animation information of the **Swiper** component.
 currentOffset: number
 ```
 
-Offset of the currently displayed element relative to the start position of the **Swiper** along the main axis.Unit: vp
-
-Default value: **0**
+Offset of the currently displayed element relative to the start position of the **Swiper** along the main axis. Unit: vp Default value: **0**
 
 **Type:** number
 
@@ -27,6 +27,8 @@ Default value: **0**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +44,7 @@ Default value: **0**
 targetOffset: number
 ```
 
-Offset of the target element relative to the start position of the **Swiper** along the main axis. Unit: vp
-
-Default value: **0**
+Offset of the target element relative to the start position of the **Swiper** along the main axis. Unit: vp Default value: **0**
 
 **Type:** number
 
@@ -53,6 +53,8 @@ Default value: **0**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +70,7 @@ Default value: **0**
 velocity: number
 ```
 
-Hands-off velocity at the beginning of the animation. Unit: VP/S
-
-Default value: **0**
+Hands-off velocity at the beginning of the animation. Unit: VP/S Default value: **0**
 
 **Type:** number
 
@@ -79,6 +79,8 @@ Default value: **0**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

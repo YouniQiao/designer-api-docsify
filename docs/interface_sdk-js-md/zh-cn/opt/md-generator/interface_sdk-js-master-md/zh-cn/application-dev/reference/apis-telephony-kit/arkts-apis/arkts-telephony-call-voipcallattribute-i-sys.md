@@ -2,7 +2,9 @@
 
 VoIP通话信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface VoipCallAttribute--><!--Device-call-export interface VoipCallAttribute-End-->
 
@@ -20,7 +22,9 @@ abilityName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-abilityName: string--><!--Device-VoipCallAttribute-abilityName: string-End-->
 
@@ -38,7 +42,9 @@ extensionId: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-extensionId: string--><!--Device-VoipCallAttribute-extensionId: string-End-->
 
@@ -56,7 +62,9 @@ isConferenceCall?: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-isConferenceCall?: boolean--><!--Device-VoipCallAttribute-isConferenceCall?: boolean-End-->
 
@@ -74,7 +82,9 @@ isVoiceAnswerSupported?: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean--><!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean-End-->
 
@@ -92,7 +102,9 @@ showBannerForIncomingCall?: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean--><!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean-End-->
 
@@ -110,7 +122,9 @@ userName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-userName: string--><!--Device-VoipCallAttribute-userName: string-End-->
 
@@ -128,7 +142,9 @@ userProfile: image.PixelMap
 
 **类型：** image.PixelMap
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-userProfile: image.PixelMap--><!--Device-VoipCallAttribute-userProfile: image.PixelMap-End-->
 
@@ -146,7 +162,9 @@ voipBundleName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-voipBundleName: string--><!--Device-VoipCallAttribute-voipBundleName: string-End-->
 
@@ -164,7 +182,9 @@ VoIP通话唯一Id。
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-voipCallId: string--><!--Device-VoipCallAttribute-voipCallId: string-End-->
 

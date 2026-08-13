@@ -6,6 +6,8 @@ Enumerates event types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-enum EventType--><!--Device-calendarManager-enum EventType-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -21,6 +23,8 @@ Normal event, such as conference or an alarm clock.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ Important event, such as wedding anniversary, are not recommended for third-part
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

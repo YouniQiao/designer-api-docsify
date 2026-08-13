@@ -2,13 +2,15 @@
 
 Class of the photo editor ExtensionAbility, which provides APIs for you to edit photos.
 
-**Inheritance/Implementation:** PhotoEditorExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** PhotoEditorExtensionAbility extends ExtensionAbility
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class PhotoEditorExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class PhotoEditorExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class PhotoEditorExtensionAbility--><!--Device-unnamed-declare class PhotoEditorExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
@@ -26,9 +28,11 @@ onBackground(): void
 
 Called back when the state of an UI extension changes to background.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,9 +62,11 @@ onCreate(): void
 
 Called back when an UI extension is started for initialization.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,6 +99,8 @@ Called back before an UI extension is destroyed.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,7 +150,9 @@ Called back before an UI extension is destroyed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,9 +174,11 @@ onForeground(): void
 
 Called back when the state of an UI extension changes to foreground.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,9 +208,11 @@ onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSessio
 
 Called back when an UI extension session is created and original image is ready.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,9 +252,11 @@ Indicates configuration information about an Photo editor extension ability cont
 
 **Type:** [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

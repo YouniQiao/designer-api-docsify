@@ -6,14 +6,13 @@
 function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-Creates a **SoundPool** instance. This API uses a promise to return the result.
+Creates a **SoundPool** instance. This API uses a promise to return the result. If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
 
-If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using  
-**createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>--><!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>-End-->
 
@@ -25,7 +24,7 @@ If a **SoundPool** instance created using [createSoundPool](arkts-media-media-cr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxStreams | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
+| maxStreams | int | 是 | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | 是 | Audio renderer parameters. |
 
 **返回值：**
@@ -38,8 +37,8 @@ If a **SoundPool** instance created using [createSoundPool](arkts-media-media-cr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | System API error. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API error. Return by promise. |
 
 ## 示例
 

@@ -4,6 +4,8 @@ Provides information about window size layout breakpoint changes.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-uiObserver-export class WindowSizeLayoutBreakpointInfo--><!--Device-uiObserver-export class WindowSizeLayoutBreakpointInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Layout breakpoint for window height.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -45,6 +49,8 @@ Layout breakpoint for window width.
 **Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,9 @@ export type NotificationBasicContent = _NotificationBasicContent
 
 普通文本通知。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationBasicContent = _NotificationBasicContent--><!--Device-notificationManager-export type NotificationBasicContent = _NotificationBasicContent-End-->
 

@@ -2,7 +2,9 @@
 
 数据处理者可以上报事件的描述配置。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiAppEvent-interface AppEventReportConfig--><!--Device-hiAppEvent-interface AppEventReportConfig-End-->
 
@@ -18,9 +20,11 @@ domain?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AppEventReportConfig-domain?: string--><!--Device-AppEventReportConfig-domain?: string-End-->
 
@@ -36,9 +40,11 @@ isRealTime?: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AppEventReportConfig-isRealTime?: boolean--><!--Device-AppEventReportConfig-isRealTime?: boolean-End-->
 
@@ -54,9 +60,11 @@ name?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AppEventReportConfig-name?: string--><!--Device-AppEventReportConfig-name?: string-End-->
 

@@ -1,13 +1,10 @@
 # PanelType
 
-输入法面板类型枚举。
+输入法面板类型枚举。 | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | SOFT_KEYBOARD | 0 | 软键盘类型。 | | STATUS_BAR | 1 | 状态栏类型。 |
 
-| 名称 | 值 | 说明 |
-| ------------ | -- | ------------------ |
-| [SOFT_KEYBOARD](#soft_keyboard) | 0 | 软键盘类型。 |
-| [STATUS_BAR](#status_bar) | 1 |
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-export enum PanelType--><!--Device-inputMethodEngine-export enum PanelType-End-->
 
@@ -21,7 +18,9 @@ SOFT_KEYBOARD = 0
 
 软键盘类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PanelType-SOFT_KEYBOARD = 0--><!--Device-PanelType-SOFT_KEYBOARD = 0-End-->
 
@@ -35,7 +34,9 @@ STATUS_BAR
 
 状态栏类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PanelType-STATUS_BAR--><!--Device-PanelType-STATUS_BAR-End-->
 

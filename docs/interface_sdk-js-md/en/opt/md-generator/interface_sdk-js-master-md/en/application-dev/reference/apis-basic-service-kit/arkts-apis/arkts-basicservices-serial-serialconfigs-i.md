@@ -4,6 +4,8 @@ Serial port communication configuration.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-serial-interface SerialConfigs--><!--Device-serial-interface SerialConfigs-End-->
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -20,13 +22,15 @@ import { serial } from '@kit.BasicServicesKit';
 baudRate?: number
 ```
 
-Baud rate.The value must be an integer.Value constraint: standard baud rates.&lt;br&gt;Unit: bit/s&lt;br&gt;Default value: 115200
+Baud rate. The value must be an integer. Value constraint: standard baud rates. &lt;br&gt;Unit: bit/s &lt;br&gt;Default value: 115200
 
 **Type:** number
 
 **Default:** 115200
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +44,15 @@ Baud rate.The value must be an integer.Value constraint: standard baud rates.&lt
 dataBits?: DataBits
 ```
 
-Data bits.&lt;br&gt;Default value: EIGHT
+Data bits. &lt;br&gt;Default value: EIGHT
 
 **Type:** DataBits
 
 **Default:** EIGHT
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,13 +66,15 @@ Data bits.&lt;br&gt;Default value: EIGHT
 parity?: Parity
 ```
 
-Parity bit.&lt;br&gt;Default value: NONE
+Parity bit. &lt;br&gt;Default value: NONE
 
 **Type:** Parity
 
 **Default:** NONE
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,13 +88,15 @@ Parity bit.&lt;br&gt;Default value: NONE
 rtscts?: boolean
 ```
 
-Whether to enable hardware-based automatic flow control.&lt;br&gt;Default value: false.
+Whether to enable hardware-based automatic flow control. &lt;br&gt;Default value: false.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,15 +110,15 @@ Whether to enable hardware-based automatic flow control.&lt;br&gt;Default value:
 stopBits?: StopBits
 ```
 
-Stop bits.
-
-Default value: ONE
+Stop bits. Default value: ONE
 
 **Type:** StopBits
 
 **Default:** ONE
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,13 +132,15 @@ Default value: ONE
 xany?: boolean
 ```
 
-Whether to enable XANY to control the flow.&lt;br&gt;Default value: false
+Whether to enable XANY to control the flow. &lt;br&gt;Default value: false
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,13 +154,15 @@ Whether to enable XANY to control the flow.&lt;br&gt;Default value: false
 xoff?: boolean
 ```
 
-Whether to enable XOFF to control the reception of flows.&lt;br&gt;Default value: false
+Whether to enable XOFF to control the reception of flows. &lt;br&gt;Default value: false
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,13 +176,15 @@ Whether to enable XOFF to control the reception of flows.&lt;br&gt;Default value
 xon?: boolean
 ```
 
-Whether to enable XON to control the sending of flows.&lt;br&gt;Default value: false
+Whether to enable XON to control the sending of flows. &lt;br&gt;Default value: false
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

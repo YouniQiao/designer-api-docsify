@@ -2,9 +2,11 @@
 
 Describes the immersive effect.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
 
@@ -22,15 +24,15 @@ import { inputMethodEngine } from '@kit.IMEKit';
 fluidLightMode?: FluidLightMode
 ```
 
-Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default.
-
-This attribute is available only to system applications.
+Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default. This attribute is available only to system applications.
 
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode--><!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode-End-->
 

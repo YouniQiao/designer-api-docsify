@@ -1,11 +1,10 @@
-# @ohos.multimodalAwareness.onScreen(屏上感知)
+# @ohos.multimodalAwareness.onScreen
 
-本模块提供屏上感知能力。
+本模块提供屏上感知能力。 > **说明：** >
 
-> **说明：**
-> 
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace onScreen--><!--Device-unnamed-declare namespace onScreen-End-->
 
@@ -18,16 +17,16 @@
 
 | 名称 |
 | --- |
-| [apperceive](arkts-multimodalawareness-onscreen-apperceive-f-sys.md#apperceive) |
-| [capture](arkts-multimodalawareness-onscreen-capture-f-sys.md#capture) |
-| [getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md#getpagecontent) |
-| [interact](arkts-multimodalawareness-onscreen-interact-f-sys.md#interact) |
-| [offReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-offreadingscreenpermissionlistener-f-sys.md#offreadingscreenpermissionlistener) |
-| [onReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-onreadingscreenpermissionlistener-f-sys.md#onreadingscreenpermissionlistener) |
-| [sendControlEvent](arkts-multimodalawareness-onscreen-sendcontrolevent-f-sys.md#sendcontrolevent) |
-| [subscribe](arkts-multimodalawareness-onscreen-subscribe-f-sys.md#subscribe) |
-| [trigger](arkts-multimodalawareness-onscreen-trigger-f-sys.md#trigger) |
-| [unsubscribe](arkts-multimodalawareness-onscreen-unsubscribe-f-sys.md#unsubscribe) |
+| [apperceive](arkts-multimodalawareness-onscreen-apperceive-f-sys.md#apperceive（系统接口）) |
+| [capture](arkts-multimodalawareness-onscreen-capture-f-sys.md#capture（系统接口）) |
+| [getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md#getPageContent（系统接口）) |
+| [interact](arkts-multimodalawareness-onscreen-interact-f-sys.md#interact（系统接口）) |
+| [offReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-offreadingscreenpermissionlistener-f-sys.md#offReadingScreenPermissionListener（系统接口）) |
+| [onReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-onreadingscreenpermissionlistener-f-sys.md#onReadingScreenPermissionListener（系统接口）) |
+| [sendControlEvent](arkts-multimodalawareness-onscreen-sendcontrolevent-f-sys.md#sendControlEvent（系统接口）) |
+| [subscribe](arkts-multimodalawareness-onscreen-subscribe-f-sys.md#subscribe（系统接口）) |
+| [trigger](arkts-multimodalawareness-onscreen-trigger-f-sys.md#trigger（系统接口）) |
+| [unsubscribe](arkts-multimodalawareness-onscreen-unsubscribe-f-sys.md#unsubscribe（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

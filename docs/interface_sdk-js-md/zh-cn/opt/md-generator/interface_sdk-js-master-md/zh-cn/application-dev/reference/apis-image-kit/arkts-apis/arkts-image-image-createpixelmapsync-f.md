@@ -6,11 +6,11 @@
 function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap
 ```
 
-Create pixelmap by data buffer.
+Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createPixelMapFromPixelsSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createPixelMapFromPixelsSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-image-function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap--><!--Device-image-function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap-End-->
 
@@ -27,13 +27,13 @@ Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync
 
 | 类型 |
 | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
+| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -69,11 +69,11 @@ function createPixelMapSync() {
 function createPixelMapSync(options: InitializationOptions): PixelMap
 ```
 
-Create an empty pixelmap.
+Create an empty pixelmap. Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createEmptyPixelMap) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createEmptyPixelMap) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-image-function createPixelMapSync(options: InitializationOptions): PixelMap--><!--Device-image-function createPixelMapSync(options: InitializationOptions): PixelMap-End-->
 
@@ -89,13 +89,13 @@ Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-i
 
 | 类型 |
 | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
+| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

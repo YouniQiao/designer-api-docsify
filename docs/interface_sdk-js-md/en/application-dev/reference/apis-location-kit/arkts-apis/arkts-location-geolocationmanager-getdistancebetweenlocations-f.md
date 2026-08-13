@@ -14,11 +14,13 @@ function getDistanceBetweenLocations(location1: Location, location2: Location): 
 
 Obtains the distance between two locations.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double--><!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double-End-->
 
@@ -35,7 +37,7 @@ Obtains the distance between two locations.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Returns the distance between two locations. |
+| double | Returns the distance between two locations. |
 
 ## Examples
 

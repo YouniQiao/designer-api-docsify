@@ -2,7 +2,9 @@
 
 SIM卡消息选项。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface SimMessageOptions--><!--Device-sms-export interface SimMessageOptions-End-->
 
@@ -20,7 +22,9 @@ pdu: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SimMessageOptions-pdu: string--><!--Device-SimMessageOptions-pdu: string-End-->
 
@@ -38,7 +42,9 @@ slotId: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SimMessageOptions-slotId: int--><!--Device-SimMessageOptions-slotId: int-End-->
 
@@ -56,7 +62,9 @@ smsc: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SimMessageOptions-smsc: string--><!--Device-SimMessageOptions-smsc: string-End-->
 
@@ -74,7 +82,9 @@ status: SimMessageStatus
 
 **类型：** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SimMessageOptions-status: SimMessageStatus--><!--Device-SimMessageOptions-status: SimMessageStatus-End-->
 

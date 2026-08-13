@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-scan-interface ScanFilters--><!--Device-scan-interface ScanFilters-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -14,11 +16,13 @@
 address?: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+设备地址。 长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ deviceName?: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ScanFilters-deviceName?: string--><!--Device-ScanFilters-deviceName?: string-End-->
@@ -55,6 +61,8 @@ manufacturerData?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ manufacturerDataMask?: ArrayBuffer
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ScanFilters-manufacturerDataMask?: ArrayBuffer--><!--Device-ScanFilters-manufacturerDataMask?: ArrayBuffer-End-->
@@ -86,11 +96,13 @@ manufacturerDataMask?: ArrayBuffer
 manufacturerId?: number
 ```
 
-厂商ID。取值范围为全体整数。
+厂商ID。 取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,11 +116,13 @@ manufacturerId?: number
 rssi?: number
 ```
 
-接收信号强度指示。单位为： 分贝毫瓦，取值应为[-128,127]内的整数。
+接收信号强度指示。 单位为： 分贝毫瓦，取值应为[-128,127]内的整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

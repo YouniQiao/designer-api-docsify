@@ -12,7 +12,7 @@ Obtains the information about a given mission. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionInfo](ohos.app.ability.missionManager/missionManager#getMissionInfo)
+**Substitutes:** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -65,7 +65,7 @@ Obtains the information about a given mission. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionInfo](ohos.app.ability.missionManager/missionManager#getMissionInfo)
+**Substitutes:** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

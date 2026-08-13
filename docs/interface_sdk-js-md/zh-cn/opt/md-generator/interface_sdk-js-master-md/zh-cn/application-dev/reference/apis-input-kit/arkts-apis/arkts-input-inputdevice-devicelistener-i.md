@@ -2,7 +2,9 @@
 
 描述输入设备热插拔的信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-interface DeviceListener--><!--Device-inputDevice-interface DeviceListener-End-->
 
@@ -18,7 +20,9 @@ deviceId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceListener-deviceId: int--><!--Device-DeviceListener-deviceId: int-End-->
 
@@ -34,7 +38,9 @@ type: ChangedType
 
 **类型：** [ChangedType](arkts-input-inputdevice-changedtype-t.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceListener-type: ChangedType--><!--Device-DeviceListener-type: ChangedType-End-->
 

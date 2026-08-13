@@ -1,10 +1,4 @@
-# @ohos.arkui.drawableDescriptor(DrawableDescriptor)
-
-本模块提供分层图标合成（包括前景，背景，蒙版），动图播放与控制，基础图像处理的能力。
- > **说明：**
- >
- > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
-
+# @ohos.arkui.drawableDescriptor
 
 ## 汇总
 

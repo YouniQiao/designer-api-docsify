@@ -6,7 +6,9 @@ type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>
 
 数组类型，AudioCapturerChangeInfo数组，只读。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>--><!--Device-audio-type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>-End-->
 

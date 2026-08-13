@@ -2,7 +2,9 @@
 
 射线检测命中结果.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RaycastResult--><!--Device-unnamed-export interface RaycastResult-End-->
 
@@ -18,7 +20,9 @@ centerDistance: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RaycastResult-centerDistance: double--><!--Device-RaycastResult-centerDistance: double-End-->
 
@@ -34,7 +38,9 @@ hitPosition: Position3
 
 **类型：** [Position3](arkts-arkgraphics3d-position3-t.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RaycastResult-hitPosition: Position3--><!--Device-RaycastResult-hitPosition: Position3-End-->
 
@@ -50,7 +56,9 @@ node: Node
 
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RaycastResult-node: Node--><!--Device-RaycastResult-node: Node-End-->
 

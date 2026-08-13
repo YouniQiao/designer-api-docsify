@@ -14,9 +14,11 @@ function getGraphicsMemorySummary(interval?: number): Promise<GraphicsMemorySumm
 
 Obtains the size of the GPU memory summary. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>--><!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>-End-->
 
@@ -38,7 +40,7 @@ Obtains the size of the GPU memory summary. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [11400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
 
 ## Examples
 

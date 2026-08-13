@@ -4,6 +4,8 @@ Defines the connection of the LocalSocket client and server.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface LocalSocketConnection--><!--Device-socket-export interface LocalSocketConnection-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -24,6 +26,8 @@ Closes a LocalSocket client connection.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocketConnection-close(): Promise<void>--><!--Device-LocalSocketConnection-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -38,7 +42,7 @@ Closes a LocalSocket client connection.
 
 | Error Code ID |
 | --- |
-| [2301009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) |
 
 ## Examples
 
@@ -63,7 +67,9 @@ getLocalAddress(): Promise<string>
 
 Obtains the local address of a LocalSocket client connection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketConnection-getLocalAddress(): Promise<string>--><!--Device-LocalSocketConnection-getLocalAddress(): Promise<string>-End-->
 
@@ -79,13 +85,13 @@ Obtains the local address of a LocalSocket client connection.
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2301009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) |
-| [2303188](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -125,7 +131,9 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the LocalSocketConnection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketConnection-getSocketFd(): Promise<int>--><!--Device-LocalSocketConnection-getSocketFd(): Promise<int>-End-->
 
@@ -139,7 +147,7 @@ Obtains the file descriptor of the LocalSocketConnection.
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -165,7 +173,99 @@ server.listen(listenAddr).then(() => {
 })
 ```
 
-## off('message')
+## off_close
+
+```TypeScript
+off(type: 'close', callback?: Callback<void>): void
+```
+
+Cancels listening for close events of the LocalSocketConnection.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-LocalSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-LocalSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'close' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let callback = () => {
+  console.info("on close success");
+}
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.on('close', callback);
+  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+  connection.off('close', callback);
+  connection.off('close');
+});
+```
+
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Cancels listening for error events of the LocalSocketConnection.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-LocalSocketConnection-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocketConnection-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'error' | Yes |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let callback = (err: Object) => {
+  console.error("on error, err: " + JSON.stringify(err));
+}
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.on('error', callback);
+  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+  connection.off('error', callback);
+  connection.off('error');
+});
+```
+
+## off_message
 
 ```TypeScript
 off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
@@ -174,6 +274,8 @@ off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
 Cancels listening for message receiving events of the LocalSocketConnection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketConnection-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocketConnection-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void-End-->
 
@@ -190,7 +292,7 @@ Cancels listening for message receiving events of the LocalSocketConnection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -215,17 +317,19 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 });
 ```
 
-## off('close')
+## on_close
 
 ```TypeScript
-off(type: 'close', callback?: Callback<void>): void
+on(type: 'close', callback: Callback<void>): void
 ```
 
-Cancels listening for close events of the LocalSocketConnection.
+Listens for close events of the LocalSocketConnection.
 
 **Since:** 12
 
-<!--Device-LocalSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-LocalSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-LocalSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-LocalSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -234,13 +338,13 @@ Cancels listening for close events of the LocalSocketConnection.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'close' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -248,28 +352,26 @@ Cancels listening for close events of the LocalSocketConnection.
 import { socket } from '@kit.NetworkKit';
 
 let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let callback = () => {
-  console.info("on close success");
-}
 server.on('connect', (connection: socket.LocalSocketConnection) => {
-  connection.on('close', callback);
-  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-  connection.off('close', callback);
-  connection.off('close');
+  connection.on('close', () => {
+    console.info("on close success")
+  });
 });
 ```
 
-## off('error')
+## on_error
 
 ```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
-Cancels listening for error events of the LocalSocketConnection.
+Listens for error events of the LocalSocketConnection.
 
 **Since:** 12
 
-<!--Device-LocalSocketConnection-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocketConnection-off(type: 'error', callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+<!--Device-LocalSocketConnection-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocketConnection-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -278,32 +380,28 @@ Cancels listening for error events of the LocalSocketConnection.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
 
-let callback = (err: Object) => {
-  console.error("on error, err: " + JSON.stringify(err));
-}
 let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
 server.on('connect', (connection: socket.LocalSocketConnection) => {
-  connection.on('error', callback);
-  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-  connection.off('error', callback);
-  connection.off('error');
+  connection.on('error', (err: Object) => {
+    console.error("on error, err:" + JSON.stringify(err))
+  });
 });
 ```
 
-## on('message')
+## on_message
 
 ```TypeScript
 on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
@@ -312,6 +410,8 @@ on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
 Listens for message receiving events of the LocalSocketConnection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketConnection-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocketConnection-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void-End-->
 
@@ -328,11 +428,11 @@ Listens for message receiving events of the LocalSocketConnection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -362,86 +462,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 });
 ```
 
-## on('close')
-
-```TypeScript
-on(type: 'close', callback: Callback<void>): void
-```
-
-Listens for close events of the LocalSocketConnection.
-
-**Since:** 12
-
-<!--Device-LocalSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-LocalSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'close' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-server.on('connect', (connection: socket.LocalSocketConnection) => {
-  connection.on('close', () => {
-    console.info("on close success")
-  });
-});
-```
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Listens for error events of the LocalSocketConnection.
-
-**Since:** 12
-
-<!--Device-LocalSocketConnection-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocketConnection-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-server.on('connect', (connection: socket.LocalSocketConnection) => {
-  connection.on('error', (err: Object) => {
-    console.error("on error, err:" + JSON.stringify(err))
-  });
-});
-```
-
 ## send
 
 ```TypeScript
@@ -451,6 +471,8 @@ send(options: LocalSendOptions): Promise<void>
 Sends data over a LocalSocketServer connection to client.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketConnection-send(options: LocalSendOptions): Promise<void>--><!--Device-LocalSocketConnection-send(options: LocalSendOptions): Promise<void>-End-->
 
@@ -473,7 +495,7 @@ Sends data over a LocalSocketServer connection to client.
 | Error Code ID |
 | --- |
 | 2301011 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -505,6 +527,8 @@ The id of a client connects to the LocalSocketServer.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocketConnection-clientId: number--><!--Device-LocalSocketConnection-clientId: number-End-->
 

@@ -6,9 +6,11 @@ type HttpProxy = connection.HttpProxy
 
 Http Proxy Configuration Information.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-http-type HttpProxy = connection.HttpProxy--><!--Device-http-type HttpProxy = connection.HttpProxy-End-->
 

@@ -2,9 +2,11 @@
 
 Enum for DownloadIconStyle
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum DownloadIconStyle--><!--Device-unnamed-export declare enum DownloadIconStyle-End-->
 
@@ -18,11 +20,13 @@ FULL_FILLED = 1
 
 FULL_FILLED type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadIconStyle-FULL_FILLED = 1--><!--Device-DownloadIconStyle-FULL_FILLED = 1-End-->
 
@@ -36,11 +40,13 @@ LINES = 2
 
 LINES type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadIconStyle-LINES = 2--><!--Device-DownloadIconStyle-LINES = 2-End-->
 

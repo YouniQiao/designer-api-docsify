@@ -4,6 +4,8 @@ The **GesturePath** module provides APIs for creating gesture path information r
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class GesturePath--><!--Device-unnamed-export declare class GesturePath-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -59,6 +61,8 @@ Total gesture duration, in milliseconds.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-GesturePath-durationTime: long--><!--Device-GesturePath-durationTime: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -74,6 +78,8 @@ Gesture touch point.
 **Type:** Array&lt;[GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-GesturePath-points: Array<GesturePoint>--><!--Device-GesturePath-points: Array<GesturePoint>-End-->
 

@@ -12,18 +12,11 @@ import { securityManager } from '@kit.MDMKit';
 function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void
 ```
 
-Sets a screen watermark policy, which takes effect for all users.
-
-> **NOTE：**
-> 
-> 1. The screen watermark policy tiles the configured image across the entire screen. It is advised to use an image
-> with transparency to ensure that the device screen content remains visible.
-> 
-> 2. If the watermark image size is smaller than the screen, the image will be stretched. If the watermark image
-> size is larger than the screen, the image will be compressed. This implementation differs from the repeated
-> tiling approach used for application-level watermarks.
+Sets a screen watermark policy, which takes effect for all users. > **NOTE：**> > 1. The screen watermark policy tiles the configured image across the entire screen. It is advised to use an image > with transparency to ensure that the device screen content remains visible. > > 2. If the watermark image size is smaller than the screen, the image will be stretched. If the watermark image > size is larger than the screen, the image will be compressed. This implementation differs from the repeated > tiling approach used for application-level watermarks.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -44,10 +37,10 @@ Sets a screen watermark policy, which takes effect for all users.
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

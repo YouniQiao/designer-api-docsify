@@ -1,10 +1,10 @@
 # AVRecorderConfig
 
-音视频录制的参数。
+音视频录制的参数。 audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频录制和音视频录制。纯音频录制仅设置audioSourceType。纯视频录制仅设置videoSourceType。音视频录制需同时设置audioSourceType和videoSourceType。
 
-audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频录制和音视频录制。纯音频录制仅设置audioSourceType。纯视频录制仅设置videoSourceType。音视频录制需同时设置audioSourceType和videoSourceType。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-unnamed-interface AVRecorderConfig--><!--Device-unnamed-interface AVRecorderConfig-End-->
 
@@ -20,7 +20,9 @@ audioSourceType?: AudioSourceType
 
 **类型：** [AudioSourceType](arkts-media-multimedia-media-audiosourcetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,7 +40,9 @@ fileGenerationMode?: FileGenerationMode
 
 **类型：** [FileGenerationMode](arkts-media-multimedia-media-filegenerationmode-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode--><!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode-End-->
 
@@ -58,7 +62,7 @@ location?: Location
 
 **废弃版本：** 12
 
-**替代接口：** [location](ohos.multimedia.media/media.AVMetadata#location)
+**替代接口：** [location](arkts-media-media-avmetadata-i.md#location)
 
 <!--Device-AVRecorderConfig-location?: Location--><!--Device-AVRecorderConfig-location?: Location-End-->
 
@@ -74,7 +78,9 @@ maxDuration?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-maxDuration?: int--><!--Device-AVRecorderConfig-maxDuration?: int-End-->
 
@@ -90,7 +96,9 @@ metadata?: AVMetadata
 
 **类型：** AVMetadata
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-metadata?: AVMetadata--><!--Device-AVRecorderConfig-metadata?: AVMetadata-End-->
 
@@ -106,7 +114,9 @@ profile: AVRecorderProfile
 
 **类型：** [AVRecorderProfile](arkts-media-multimedia-media-avrecorderprofile-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -144,7 +154,9 @@ url: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -162,7 +174,9 @@ videoSourceType?: VideoSourceType
 
 **类型：** [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType--><!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType-End-->
 

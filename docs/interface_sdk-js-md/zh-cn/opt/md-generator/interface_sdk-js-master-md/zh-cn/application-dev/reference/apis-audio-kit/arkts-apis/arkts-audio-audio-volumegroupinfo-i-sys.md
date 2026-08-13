@@ -2,7 +2,9 @@
 
 Describes an audio volume group.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface VolumeGroupInfo--><!--Device-audio-interface VolumeGroupInfo-End-->
 
@@ -20,7 +22,9 @@ Volume group id.
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VolumeGroupInfo-readonly groupId: int--><!--Device-VolumeGroupInfo-readonly groupId: int-End-->
 
@@ -38,7 +42,9 @@ Volume group name.
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VolumeGroupInfo-readonly groupName: string--><!--Device-VolumeGroupInfo-readonly groupName: string-End-->
 
@@ -56,7 +62,9 @@ Volume mapping group id.
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VolumeGroupInfo-readonly mappingId: int--><!--Device-VolumeGroupInfo-readonly mappingId: int-End-->
 
@@ -74,7 +82,9 @@ Device network id.
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VolumeGroupInfo-readonly networkId: string--><!--Device-VolumeGroupInfo-readonly networkId: string-End-->
 
@@ -92,7 +102,9 @@ Connect type of device for this group.
 
 **类型：** [ConnectType](arkts-audio-audio-connecttype-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VolumeGroupInfo-readonly type: ConnectType--><!--Device-VolumeGroupInfo-readonly type: ConnectType-End-->
 

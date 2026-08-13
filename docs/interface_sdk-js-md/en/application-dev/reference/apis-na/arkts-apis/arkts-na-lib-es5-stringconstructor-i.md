@@ -1,0 +1,104 @@
+# StringConstructor
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface StringConstructor--><!--Device-unnamed-interface StringConstructor-End-->
+
+## constructor
+
+```TypeScript
+new(value?: any): String
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-StringConstructor-new(value?: any): String--><!--Device-StringConstructor-new(value?: any): String-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| String |  |
+
+## constructor
+
+```TypeScript
+(value?: any): string
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-StringConstructor-(value?: any): string--><!--Device-StringConstructor-(value?: any): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string |  |
+
+## fromCharCode
+
+```TypeScript
+fromCharCode(...codes: number[]): string
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-StringConstructor-fromCharCode(...codes: number[]): string--><!--Device-StringConstructor-fromCharCode(...codes: number[]): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| codes | number[] | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string |  |
+
+## prototype
+
+```TypeScript
+readonly prototype: String
+```
+
+**Type:** String
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-StringConstructor-readonly prototype: String--><!--Device-StringConstructor-readonly prototype: String-End-->
+

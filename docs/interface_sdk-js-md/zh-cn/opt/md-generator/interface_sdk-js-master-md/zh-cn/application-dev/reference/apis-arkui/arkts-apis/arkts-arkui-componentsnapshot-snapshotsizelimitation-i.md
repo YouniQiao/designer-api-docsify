@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-componentSnapshot-interface SnapshotSizeLimitation--><!--Device-componentSnapshot-interface SnapshotSizeLimitation-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@
 maxHeight: number
 ```
 
-组件截图的最大高度限制。
-
-取值范围：（-∞，+∞）
-
-单位：px
+组件截图的最大高度限制。 取值范围：（-∞，+∞） 单位：px
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +38,13 @@ maxHeight: number
 maxWidth: number
 ```
 
-组件截图的最大宽度限制。
-
-取值范围：（-∞，+∞）
-
-单位：px
+组件截图的最大宽度限制。 取值范围：（-∞，+∞） 单位：px
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

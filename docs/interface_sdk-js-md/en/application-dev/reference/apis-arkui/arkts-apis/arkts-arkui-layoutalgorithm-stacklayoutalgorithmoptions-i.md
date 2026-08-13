@@ -1,10 +1,12 @@
 # StackLayoutAlgorithmOptions
 
-StackLayoutAlgorithm constructor options.
+Sets the alignment method of the stack layout algorithm.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface StackLayoutAlgorithmOptions--><!--Device-unnamed-interface StackLayoutAlgorithmOptions-End-->
 
@@ -16,17 +18,23 @@ StackLayoutAlgorithm constructor options.
 alignContent?: LocalizedAlignment
 ```
 
-Defines the align rules of child components in stack layout algorithm.
+Alignment mode of child components in the stack layout algorithm. Default value: **LocalizedAlignment.CENTER** Invalid values are treated as the default value.
 
-**Type:** [LocalizedAlignment](arkts-arkui-enums-localizedalignment-e.md)
+**Type:** [LocalizedAlignment](../../apis-na/arkts-apis/arkts-na-enums-localizedalignment-e.md)
 
 **Default:** LocalizedAlignment.Center
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-StackLayoutAlgorithmOptions-alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithmOptions-alignContent?: LocalizedAlignment-End-->
 

@@ -2,9 +2,11 @@
 
 Policy information to manager permissions on a path.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-fileShare-export interface PathPolicyInfo--><!--Device-fileShare-export interface PathPolicyInfo-End-->
 
@@ -26,9 +28,11 @@ Indicates the mode of operation for the path.
 
 **Type:** [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PathPolicyInfo-operationMode: OperationMode--><!--Device-PathPolicyInfo-operationMode: OperationMode-End-->
 
@@ -44,9 +48,11 @@ Indicates the path of the policy information.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PathPolicyInfo-path: string--><!--Device-PathPolicyInfo-path: string-End-->
 

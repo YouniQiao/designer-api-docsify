@@ -1,14 +1,16 @@
 # ItemInfo
 
-ItemInfo
+It inherits from [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#BaseItemInfo), adding the parameter **itemType**. Represents basic image and video information.
 
 **Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#BaseItemInfo)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class ItemInfo extends BaseItemInfo--><!--Device-unnamed-export declare class ItemInfo extends BaseItemInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class ItemInfo--><!--Device-unnamed-export declare class ItemInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -21,20 +23,22 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 ## itemType
 
 ```TypeScript
-public itemType?: ItemType
+itemType?: ItemType
 ```
 
-itemType. include CAMERA and THUMBNAIL.
+Type of the item, which can be **THUMBNAIL** or **CAMERA**.
 
 **Type:** [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ItemInfo-public itemType?: ItemType--><!--Device-ItemInfo-public itemType?: ItemType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ItemInfo-itemType?: ItemType--><!--Device-ItemInfo-itemType?: ItemType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

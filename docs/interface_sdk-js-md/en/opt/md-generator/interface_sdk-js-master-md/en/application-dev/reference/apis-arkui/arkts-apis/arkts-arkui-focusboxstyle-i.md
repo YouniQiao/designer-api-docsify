@@ -4,6 +4,8 @@ Sets the system focus box style for the component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FocusBoxStyle--><!--Device-unnamed-declare interface FocusBoxStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Sets the system focus box style for the component.
 margin?: LengthMetrics
 ```
 
-Distance of the focus box from the component's edge.
-
-A positive number indicates the outside, and a negative number indicates the inside. The value cannot be in percentage.
+Distance of the focus box from the component's edge. A positive number indicates the outside, and a negative number indicates the inside. The value cannot be in percentage.
 
 **Type:** LengthMetrics
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +44,8 @@ Stroke color of the focus box.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -56,13 +60,13 @@ Stroke color of the focus box.
 strokeWidth?: LengthMetrics
 ```
 
-Stroke width of the focus box.
-
-Negative numbers and percentages are not supported.
+Stroke width of the focus box. Negative numbers and percentages are not supported.
 
 **Type:** LengthMetrics
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,6 +6,8 @@ Represents the options of the preview menu.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PreviewMenuOptions--><!--Device-unnamed-declare interface PreviewMenuOptions-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,9 +18,7 @@ Represents the options of the preview menu.
 hapticFeedbackMode?: HapticFeedbackMode
 ```
 
-Vibration effect when the menu is displayed. The **ohos.permission.VIBRATE** permission is required.
-
-Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
+Vibration effect when the menu is displayed. The **ohos.permission.VIBRATE** permission is required. Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
 
 **Type:** HapticFeedbackMode
 
@@ -27,6 +27,8 @@ Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode--><!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode-End-->
 

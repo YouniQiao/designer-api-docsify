@@ -4,6 +4,8 @@ Declare CustomDialog SelectDialog
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare struct SelectDialog--><!--Device-unnamed-export declare struct SelectDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Sets the SelectDialog confirm button.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Sets the SelectDialog content.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Sets the SelectDialog Controller.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,6 +93,8 @@ Sets the SelectDialog sheets.
 **Type:** Array&lt;[SheetInfo](arkts-arkui-sheetinfo-i.md)&gt;
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ Sets the SelectDialog selected index.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -125,6 +137,8 @@ Custom Theme.
 **Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +160,8 @@ Sets the SelectDialog dark or light Mode.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -165,6 +181,8 @@ Sets the SelectDialog title.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

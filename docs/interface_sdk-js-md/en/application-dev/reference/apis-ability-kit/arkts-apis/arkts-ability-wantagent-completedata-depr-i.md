@@ -8,7 +8,7 @@ Describes the data returned by after wantAgent.trigger is called.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CompleteData](ohos.app.ability.wantAgent/wantAgent#CompleteData)
+**Substitutes:** [CompleteData](arkts-ability-wantagent-completedata-i.md#CompleteData)
 
 <!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 
@@ -30,7 +30,7 @@ Extra data collected by the common event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [extraInfo](ohos.app.ability.wantAgent/wantAgent.CompleteData#extraInfo)
+**Substitutes:** [extraInfo](arkts-ability-wantagent-completedata-i.md#extraInfo)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,7 +54,7 @@ Request code used to trigger the WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [finalCode](ohos.app.ability.wantAgent/wantAgent.CompleteData#finalCode)
+**Substitutes:** [finalCode](arkts-ability-wantagent-completedata-i.md#finalCode)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +78,7 @@ Final data collected by the common event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [finalData](ohos.app.ability.wantAgent/wantAgent.CompleteData#finalData)
+**Substitutes:** [finalData](arkts-ability-wantagent-completedata-i.md#finalData)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -102,7 +102,7 @@ Triggered WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [info](ohos.app.ability.wantAgent/wantAgent.CompleteData#info)
+**Substitutes:** [info](arkts-ability-wantagent-completedata-i.md#info)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,7 +126,7 @@ Existing Want that is triggered.
 
 **Deprecated since:** 9
 
-**Substitutes:** [want](ohos.app.ability.wantAgent/wantAgent.CompleteData#want)
+**Substitutes:** [want](arkts-ability-wantagent-completedata-i.md#want)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

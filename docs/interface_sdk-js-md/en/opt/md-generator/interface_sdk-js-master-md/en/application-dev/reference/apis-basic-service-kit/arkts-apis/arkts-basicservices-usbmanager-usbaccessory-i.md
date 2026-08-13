@@ -2,7 +2,9 @@
 
 Describes the USB accessory information.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBAccessory--><!--Device-usbManager-interface USBAccessory-End-->
 
@@ -24,7 +26,9 @@ Description of an accessory.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBAccessory-description: string--><!--Device-USBAccessory-description: string-End-->
 
@@ -40,7 +44,9 @@ Manufacturer of an accessory.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBAccessory-manufacturer: string--><!--Device-USBAccessory-manufacturer: string-End-->
 
@@ -56,7 +62,9 @@ Product type of an accessory.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBAccessory-product: string--><!--Device-USBAccessory-product: string-End-->
 
@@ -72,7 +80,9 @@ SN of an accessory.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBAccessory-serialNumber: string--><!--Device-USBAccessory-serialNumber: string-End-->
 
@@ -88,7 +98,9 @@ Version of an accessory.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBAccessory-version: string--><!--Device-USBAccessory-version: string-End-->
 

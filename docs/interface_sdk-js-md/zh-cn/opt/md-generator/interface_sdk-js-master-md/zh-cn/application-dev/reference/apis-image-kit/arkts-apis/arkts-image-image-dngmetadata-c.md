@@ -4,6 +4,8 @@ Dng图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-image-class DngMetadata--><!--Device-image-class DngMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -19,6 +21,8 @@ readonly activeArea?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ readonly analogBalance?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly analogBalance?: double[]--><!--Device-DngMetadata-readonly analogBalance?: double[]-End-->
@@ -55,6 +61,8 @@ readonly antiAliasStrength?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ readonly asShotICCProfile?: ArrayBuffer
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly asShotICCProfile?: ArrayBuffer--><!--Device-DngMetadata-readonly asShotICCProfile?: ArrayBuffer-End-->
@@ -91,6 +101,8 @@ readonly asShotNeutral?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +122,8 @@ readonly asShotPreProfileMatrix?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly asShotPreProfileMatrix?: double[]--><!--Device-DngMetadata-readonly asShotPreProfileMatrix?: double[]-End-->
@@ -127,6 +141,8 @@ readonly asShotProfileName?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +162,8 @@ readonly asShotWhiteXY?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly asShotWhiteXY?: double[]--><!--Device-DngMetadata-readonly asShotWhiteXY?: double[]-End-->
@@ -163,6 +181,8 @@ readonly baselineExposure?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,6 +202,8 @@ readonly baselineExposureOffset?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly baselineExposureOffset?: double--><!--Device-DngMetadata-readonly baselineExposureOffset?: double-End-->
@@ -199,6 +221,8 @@ readonly baselineNoise?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,6 +242,8 @@ readonly baselineSharpness?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly baselineSharpness?: double--><!--Device-DngMetadata-readonly baselineSharpness?: double-End-->
@@ -235,6 +261,8 @@ Bayer图像中两个绿色通道的分离程度。
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,6 +282,8 @@ readonly bestQualityScale?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly bestQualityScale?: double--><!--Device-DngMetadata-readonly bestQualityScale?: double-End-->
@@ -271,6 +301,8 @@ readonly blackLevel?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,6 +322,8 @@ readonly blackLevelDeltaH?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly blackLevelDeltaH?: double[]--><!--Device-DngMetadata-readonly blackLevelDeltaH?: double[]-End-->
@@ -307,6 +341,8 @@ readonly blackLevelDeltaV?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -326,6 +362,8 @@ readonly blackLevelRepeatDim?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly blackLevelRepeatDim?: int[]--><!--Device-DngMetadata-readonly blackLevelRepeatDim?: int[]-End-->
@@ -343,6 +381,8 @@ readonly calibrationIlluminant1?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -362,6 +402,8 @@ readonly calibrationIlluminant2?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly calibrationIlluminant2?: int--><!--Device-DngMetadata-readonly calibrationIlluminant2?: int-End-->
@@ -379,6 +421,8 @@ readonly cameraCalibration1?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -398,6 +442,8 @@ readonly cameraCalibration2?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly cameraCalibration2?: double[]--><!--Device-DngMetadata-readonly cameraCalibration2?: double[]-End-->
@@ -415,6 +461,8 @@ readonly cameraCalibrationSignature?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -434,6 +482,8 @@ readonly cameraSerialNumber?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly cameraSerialNumber?: string--><!--Device-DngMetadata-readonly cameraSerialNumber?: string-End-->
@@ -451,6 +501,8 @@ CFA（Color Filter Array）布局类型。
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -470,6 +522,8 @@ CFA（Color Filter Array）各平面的颜色通道定义。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly cfaPlaneColor?: int[]--><!--Device-DngMetadata-readonly cfaPlaneColor?: int[]-End-->
@@ -487,6 +541,8 @@ readonly chromaBlurRadius?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -506,6 +562,8 @@ readonly colorMatrix1?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly colorMatrix1?: double[]--><!--Device-DngMetadata-readonly colorMatrix1?: double[]-End-->
@@ -523,6 +581,8 @@ readonly colorMatrix2?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -542,6 +602,8 @@ readonly colorimetricReference?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly colorimetricReference?: int--><!--Device-DngMetadata-readonly colorimetricReference?: int-End-->
@@ -559,6 +621,8 @@ readonly currentICCProfile?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -578,6 +642,8 @@ readonly currentPreProfileMatrix?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly currentPreProfileMatrix?: double[]--><!--Device-DngMetadata-readonly currentPreProfileMatrix?: double[]-End-->
@@ -595,6 +661,8 @@ readonly defaultBlackRender?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -614,6 +682,8 @@ readonly defaultCropOrigin?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly defaultCropOrigin?: double[]--><!--Device-DngMetadata-readonly defaultCropOrigin?: double[]-End-->
@@ -631,6 +701,8 @@ readonly defaultCropSize?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -650,6 +722,8 @@ readonly defaultScale?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly defaultScale?: double[]--><!--Device-DngMetadata-readonly defaultScale?: double[]-End-->
@@ -667,6 +741,8 @@ readonly defaultUserCrop?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -686,6 +762,8 @@ DNG文件向后兼容的最低版本号。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly dngBackwardVersion?: int[]--><!--Device-DngMetadata-readonly dngBackwardVersion?: int[]-End-->
@@ -703,6 +781,8 @@ readonly dngPrivateData?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -722,6 +802,8 @@ DNG图片的版本号。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly dngVersion?: int[]--><!--Device-DngMetadata-readonly dngVersion?: int[]-End-->
@@ -739,6 +821,8 @@ readonly extraCameraProfiles?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -758,6 +842,8 @@ readonly forwardMatrix1?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly forwardMatrix1?: double[]--><!--Device-DngMetadata-readonly forwardMatrix1?: double[]-End-->
@@ -775,6 +861,8 @@ readonly forwardMatrix2?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -794,6 +882,8 @@ readonly lensInfo?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly lensInfo?: double[]--><!--Device-DngMetadata-readonly lensInfo?: double[]-End-->
@@ -811,6 +901,8 @@ readonly linearResponseLimit?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -830,6 +922,8 @@ readonly linearizationTable?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly linearizationTable?: int[]--><!--Device-DngMetadata-readonly linearizationTable?: int[]-End-->
@@ -847,6 +941,8 @@ readonly localizedCameraModel?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -866,6 +962,8 @@ EXIF MakerNote是否安全可保留。true表示安全，false表示不安全。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly makerNoteSafety?: boolean--><!--Device-DngMetadata-readonly makerNoteSafety?: boolean-End-->
@@ -883,6 +981,8 @@ readonly maskedAreas?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -902,6 +1002,8 @@ readonly newRawImageDigest?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly newRawImageDigest?: string--><!--Device-DngMetadata-readonly newRawImageDigest?: string-End-->
@@ -919,6 +1021,8 @@ readonly noiseProfile?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -938,6 +1042,8 @@ readonly noiseReductionApplied?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly noiseReductionApplied?: double--><!--Device-DngMetadata-readonly noiseReductionApplied?: double-End-->
@@ -955,6 +1061,8 @@ readonly opcodeList1?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -974,6 +1082,8 @@ readonly opcodeList2?: ArrayBuffer
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly opcodeList2?: ArrayBuffer--><!--Device-DngMetadata-readonly opcodeList2?: ArrayBuffer-End-->
@@ -991,6 +1101,8 @@ readonly opcodeList3?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1010,6 +1122,8 @@ readonly originalBestQualityFinalSize?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly originalBestQualityFinalSize?: int[]--><!--Device-DngMetadata-readonly originalBestQualityFinalSize?: int[]-End-->
@@ -1027,6 +1141,8 @@ readonly originalDefaultCropSize?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1046,6 +1162,8 @@ readonly originalDefaultFinalSize?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly originalDefaultFinalSize?: int[]--><!--Device-DngMetadata-readonly originalDefaultFinalSize?: int[]-End-->
@@ -1063,6 +1181,8 @@ readonly originalRawFileData?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1082,6 +1202,8 @@ readonly originalRawFileDigest?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly originalRawFileDigest?: string--><!--Device-DngMetadata-readonly originalRawFileDigest?: string-End-->
@@ -1099,6 +1221,8 @@ readonly originalRawFileName?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1118,6 +1242,8 @@ readonly previewApplicationName?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly previewApplicationName?: string--><!--Device-DngMetadata-readonly previewApplicationName?: string-End-->
@@ -1135,6 +1261,8 @@ readonly previewApplicationVersion?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1154,6 +1282,8 @@ readonly previewColorSpace?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly previewColorSpace?: int--><!--Device-DngMetadata-readonly previewColorSpace?: int-End-->
@@ -1171,6 +1301,8 @@ readonly previewDateTime?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1190,6 +1322,8 @@ readonly previewSettingsDigest?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly previewSettingsDigest?: string--><!--Device-DngMetadata-readonly previewSettingsDigest?: string-End-->
@@ -1207,6 +1341,8 @@ readonly previewSettingsName?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1226,6 +1362,8 @@ readonly profileCalibrationSignature?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileCalibrationSignature?: string--><!--Device-DngMetadata-readonly profileCalibrationSignature?: string-End-->
@@ -1243,6 +1381,8 @@ readonly profileCopyright?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1262,6 +1402,8 @@ readonly profileEmbedPolicy?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileEmbedPolicy?: int--><!--Device-DngMetadata-readonly profileEmbedPolicy?: int-End-->
@@ -1279,6 +1421,8 @@ readonly profileHueSatMapData1?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1298,6 +1442,8 @@ readonly profileHueSatMapData2?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileHueSatMapData2?: double[]--><!--Device-DngMetadata-readonly profileHueSatMapData2?: double[]-End-->
@@ -1315,6 +1461,8 @@ readonly profileHueSatMapDims?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1334,6 +1482,8 @@ readonly profileHueSatMapEncoding?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileHueSatMapEncoding?: int--><!--Device-DngMetadata-readonly profileHueSatMapEncoding?: int-End-->
@@ -1351,6 +1501,8 @@ readonly profileLookTableData?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1370,6 +1522,8 @@ ProfileLookTableData的维度。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileLookTableDims?: int[]--><!--Device-DngMetadata-readonly profileLookTableDims?: int[]-End-->
@@ -1387,6 +1541,8 @@ readonly profileLookTableEncoding?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1406,6 +1562,8 @@ readonly profileName?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileName?: string--><!--Device-DngMetadata-readonly profileName?: string-End-->
@@ -1423,6 +1581,8 @@ readonly profileToneCurve?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1442,6 +1602,8 @@ readonly rawDataUniqueID?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly rawDataUniqueID?: string--><!--Device-DngMetadata-readonly rawDataUniqueID?: string-End-->
@@ -1459,6 +1621,8 @@ readonly rawImageDigest?: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1478,6 +1642,8 @@ readonly rawToPreviewGain?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly rawToPreviewGain?: double--><!--Device-DngMetadata-readonly rawToPreviewGain?: double-End-->
@@ -1495,6 +1661,8 @@ readonly reductionMatrix1?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1514,6 +1682,8 @@ readonly reductionMatrix2?: number[]
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly reductionMatrix2?: double[]--><!--Device-DngMetadata-readonly reductionMatrix2?: double[]-End-->
@@ -1531,6 +1701,8 @@ readonly rowInterleaveFactor?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1550,6 +1722,8 @@ readonly shadowScale?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly shadowScale?: double--><!--Device-DngMetadata-readonly shadowScale?: double-End-->
@@ -1567,6 +1741,8 @@ readonly subTileBlockSize?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1586,6 +1762,8 @@ readonly uniqueCameraModel?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly uniqueCameraModel?: string--><!--Device-DngMetadata-readonly uniqueCameraModel?: string-End-->
@@ -1603,6 +1781,8 @@ readonly whiteLevel?: number[]
 **类型：** number[]
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

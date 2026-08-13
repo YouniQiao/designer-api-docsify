@@ -4,6 +4,8 @@ Provides information about the drag event.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DragEvent--><!--Device-unnamed-declare interface DragEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ enableInternalDropAnimation(configuration: string): void
 Sets whether to enable the system's built-in drop animation effect. This API is available only to system applications and can only be used during the **onDrop** phase.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,9 +40,9 @@ Sets whether to enable the system's built-in drop animation effect. This API is 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [190003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## executeFollowHandMorphDropAnimation
 
@@ -46,16 +50,11 @@ Sets whether to enable the system's built-in drop animation effect. This API is 
 executeFollowHandMorphDropAnimation(onAnimationFinished: Callback<void>, animationOption?: string): void
 ```
 
-Sets a callback to be executed after the follow-hand morph drop animation is completed. This callback is triggered by the system after the drag framework animation ends. This callback uses an asynchronous callback.
-
-> **NOTE：**
-> 
-> 1. This API takes effect only when [dragAnimationType](#dragAnimationType) is
-> set to **DragAnimationType.FOLLOW_HAND_MORPH**.
-> 
-> 2. Do not implement logic unrelated to the animation in the callback to avoid affecting execution efficiency.
+Sets a callback to be executed after the follow-hand morph drop animation is completed. This callback is triggered by the system after the drag framework animation ends. This callback uses an asynchronous callback. > **NOTE：**> > 1. This API takes effect only when [dragAnimationType](#dragAnimationType) is > set to **DragAnimationType.FOLLOW_HAND_MORPH**. > > 2. Do not implement logic unrelated to the animation in the callback to avoid affecting execution efficiency.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,22 +77,15 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 dragAnimationType?: DragAnimationType
 ```
 
-Sets the drag animation type. This attribute can only be set during the  
-[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart) phase and can be obtained in the  
-[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart), [onDragEnter](arkts-arkui-commonmethod-c.md#onDragEnter),  
-[onDragMove](arkts-arkui-commonmethod-c.md#onDragMove), [onDragLeave](arkts-arkui-commonmethod-c.md#onDragLeave),  
-[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)), and  
-[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd) callbacks.
-
-Default value: **DEFAULT**
-
-**System API:** This is a system API.
+Sets the drag animation type. This attribute can only be set during the [onDragStart](arkts-arkui-commonmethod-c.md#onDragStart) phase and can be obtained in the [onDragStart](arkts-arkui-commonmethod-c.md#onDragStart), [onDragEnter](arkts-arkui-commonmethod-c.md#onDragEnter), [onDragMove](arkts-arkui-commonmethod-c.md#onDragMove), [onDragLeave](arkts-arkui-commonmethod-c.md#onDragLeave), onDrop, and [onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd) callbacks. Default value: **DEFAULT** **System API:** This is a system API.
 
 **Type:** [DragAnimationType](arkts-arkui-draganimationtype-e-sys.md)
 
 **Default:** DragAnimationType.DEFAULT
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -18,6 +18,8 @@ Charger type of the device.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-function pluggedType(): BatteryPluggedType--><!--Device-batteryInfo-function pluggedType(): BatteryPluggedType-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

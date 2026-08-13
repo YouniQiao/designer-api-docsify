@@ -14,7 +14,9 @@ function getAllUserTrustedCertificates(): Promise<CMResult>
 
 Obtains all user trusted root CA certificates of the device. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -32,8 +34,8 @@ Obtains all user trusted root CA certificates of the device. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 
@@ -69,7 +71,9 @@ function getAllUserTrustedCertificates(scope: CertScope): Promise<CMResult>
 
 Obtains the user root CA certificates based on the certificate scope. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -93,9 +97,9 @@ Obtains the user root CA certificates based on the certificate scope. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 

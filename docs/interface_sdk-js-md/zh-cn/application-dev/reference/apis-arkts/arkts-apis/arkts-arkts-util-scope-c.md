@@ -92,7 +92,7 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **废弃版本：** 9
 
-**替代接口：** [constructor](ohos.util.ScopeHelper.constructor)
+**替代接口：** constructor
 
 <!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
@@ -279,7 +279,7 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 **废弃版本：** 9
 
-**替代接口：** [expand](ohos.util.ScopeHelper.expand)
+**替代接口：** expand
 
 <!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
@@ -345,7 +345,7 @@ expand(range: Scope): Scope
 
 **废弃版本：** 9
 
-**替代接口：** [expand](ohos.util.ScopeHelper.expand)
+**替代接口：** expand
 
 <!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
 
@@ -411,7 +411,7 @@ expand(value: ScopeType): Scope
 
 **废弃版本：** 9
 
-**替代接口：** [expand](ohos.util.ScopeHelper.expand)
+**替代接口：** expand
 
 <!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
 
@@ -589,7 +589,7 @@ intersect(range: Scope): Scope
 
 **废弃版本：** 9
 
-**替代接口：** [intersect](ohos.util.ScopeHelper.intersect)
+**替代接口：** intersect
 
 <!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
 
@@ -655,7 +655,7 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 **废弃版本：** 9
 
-**替代接口：** [intersect](ohos.util.ScopeHelper.intersect)
+**替代接口：** intersect
 
 <!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 

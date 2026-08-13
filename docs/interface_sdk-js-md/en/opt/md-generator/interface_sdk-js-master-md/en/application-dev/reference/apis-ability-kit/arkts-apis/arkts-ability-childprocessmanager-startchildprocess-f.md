@@ -12,18 +12,11 @@ import { childProcessManager } from '@kit.AbilityKit';
 function startChildProcess(srcEntry: string, startMode: StartMode): Promise<number>
 ```
 
-Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
+Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160 00061 is returned. > **NOTE：**> > If the child process is created successfully, its PID is returned, and its > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the > function is done, the child process is automatically destroyed. > > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only > synchronous ArkTS API calls.
 
-> **NOTE：**
-> 
-> If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
-> function is done, the child process is automatically destroyed.
-> 
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
-> synchronous ArkTS API calls.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +41,10 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
-| [16000062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
+| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) |
 
 ## Examples
 
@@ -94,18 +87,11 @@ try {
 function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<number>): void
 ```
 
-Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
+Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160 00061 is returned. > **NOTE：**> > If the child process is created successfully, its PID is returned, and its > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the > function is done, the child process is automatically destroyed. > > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only > synchronous ArkTS API calls.
 
-> **NOTE：**
-> 
-> If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
-> function is done, the child process is automatically destroyed.
-> 
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
-> synchronous ArkTS API calls.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,10 +111,10 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
-| [16000062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
+| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) |
 
 ## Examples
 

@@ -1,10 +1,12 @@
 # GestureObserverConfigs
 
-The observer options for global gesture listener.
+Specifies the gesture callback phases to listen for (passing an empty array will be ineffective). Notifications are sent only when the gesture triggers the specified phases.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface GestureObserverConfigs--><!--Device-unnamed-export interface GestureObserverConfigs-End-->
 
@@ -22,15 +24,19 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 actionPhases: Array<GestureActionPhase>
 ```
 
-The gesture callback phases want to monitor. Only the specific action phases can be notified when the gesture is triggered. If empty array provided, the register will has no any effect.
+Gesture event object.
 
 **Type:** Array&lt;[GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>--><!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>-End-->
 

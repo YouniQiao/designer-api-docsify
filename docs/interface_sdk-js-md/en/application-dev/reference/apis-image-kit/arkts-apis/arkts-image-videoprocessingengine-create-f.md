@@ -14,11 +14,13 @@ function create(): ImageProcessor
 
 Create an image processing instance.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-videoProcessingEngine-function create(): ImageProcessor--><!--Device-videoProcessingEngine-function create(): ImageProcessor-End-->
 
@@ -34,9 +36,9 @@ Create an image processing instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function create can not work correctly due to limited &lt;br&gt;device capabilities. |
-| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create image processing instance. For example, &lt;br&gt;the number of instances exceeds the upper limit. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function create can not work correctly due to limited &lt;br&gt;device capabilities. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200003](../errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create image processing instance. For example, &lt;br&gt;the number of instances exceeds the upper limit. |
 
 ## Examples
 

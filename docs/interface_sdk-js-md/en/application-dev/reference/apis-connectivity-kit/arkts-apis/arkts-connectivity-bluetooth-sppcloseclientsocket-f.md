@@ -20,7 +20,7 @@ Disables an spp client socket and releases related resources.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppCloseClientSocket](ohos.bluetoothManager/bluetoothManager.sppCloseClientSocket)
+**Substitutes:** [sppCloseClientSocket](arkts-connectivity-bluetoothmanager-sppcloseclientsocket-f.md#sppCloseClientSocket)
 
 <!--Device-bluetooth-function sppCloseClientSocket(socket: number): void--><!--Device-bluetooth-function sppCloseClientSocket(socket: number): void-End-->
 

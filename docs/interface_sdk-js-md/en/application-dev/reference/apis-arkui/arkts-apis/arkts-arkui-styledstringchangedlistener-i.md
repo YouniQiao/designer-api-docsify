@@ -6,6 +6,8 @@ Defines the listener for changes of the styled string text content.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface StyledStringChangedListener--><!--Device-unnamed-declare interface StyledStringChangedListener-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,9 +20,13 @@ onDidChange?: OnDidChangeCallback
 
 Callback invoked when text is changed.
 
+**Type:** [OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md)
+
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +49,8 @@ Callback invoked when text is about to change.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

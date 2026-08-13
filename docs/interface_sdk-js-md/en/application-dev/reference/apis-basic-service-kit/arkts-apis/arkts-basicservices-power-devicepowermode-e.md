@@ -2,9 +2,11 @@
 
 Enumerates power modes.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-power-export enum DevicePowerMode--><!--Device-power-export enum DevicePowerMode-End-->
 
@@ -18,9 +20,11 @@ MODE_NORMAL = 600
 
 Standard mode. It is the default value.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DevicePowerMode-MODE_NORMAL = 600--><!--Device-DevicePowerMode-MODE_NORMAL = 600-End-->
 
@@ -34,9 +38,11 @@ MODE_POWER_SAVE
 
 Power saving mode.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DevicePowerMode-MODE_POWER_SAVE--><!--Device-DevicePowerMode-MODE_POWER_SAVE-End-->
 
@@ -50,9 +56,11 @@ MODE_PERFORMANCE
 
 Performance mode.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DevicePowerMode-MODE_PERFORMANCE--><!--Device-DevicePowerMode-MODE_PERFORMANCE-End-->
 
@@ -66,9 +74,11 @@ MODE_EXTREME_POWER_SAVE
 
 Ultra power saving mode.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DevicePowerMode-MODE_EXTREME_POWER_SAVE--><!--Device-DevicePowerMode-MODE_EXTREME_POWER_SAVE-End-->
 
@@ -82,9 +92,11 @@ MODE_CUSTOM_POWER_SAVE = 650
 
 Custom power saving mode.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DevicePowerMode-MODE_CUSTOM_POWER_SAVE = 650--><!--Device-DevicePowerMode-MODE_CUSTOM_POWER_SAVE = 650-End-->
 

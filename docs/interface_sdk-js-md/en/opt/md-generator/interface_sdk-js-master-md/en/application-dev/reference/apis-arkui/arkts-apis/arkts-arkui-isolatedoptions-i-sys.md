@@ -4,6 +4,8 @@ Describes the optional construction parameters during **IsolatedComponent** cons
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface IsolatedOptions--><!--Device-unnamed-declare interface IsolatedOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ want: Want
 **Type:** [Want](arkts-arkui-want-t-sys.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Restricted Worker thread where the .abc file is running.
 **Type:** [RestrictedWorker](arkts-arkui-restrictedworker-t-sys.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

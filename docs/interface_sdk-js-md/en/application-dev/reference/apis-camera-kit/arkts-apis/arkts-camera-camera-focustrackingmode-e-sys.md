@@ -2,9 +2,11 @@
 
 Enumerates the focus tracking modes.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum FocusTrackingMode--><!--Device-camera-enum FocusTrackingMode-End-->
 
@@ -20,9 +22,11 @@ AUTO = 0
 
 Automatic.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusTrackingMode-AUTO = 0--><!--Device-FocusTrackingMode-AUTO = 0-End-->
 

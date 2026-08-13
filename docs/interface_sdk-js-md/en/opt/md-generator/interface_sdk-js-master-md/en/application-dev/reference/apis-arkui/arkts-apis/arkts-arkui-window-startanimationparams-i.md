@@ -1,12 +1,10 @@
 # StartAnimationParams
 
-Describes the parameters for the startup animation.
+Describes the parameters for the startup animation. The configuration is valid only for transitions between different abilities within the same application. The configuration is valid only full-screen applications.
 
-The configuration is valid only for transitions between different abilities within the same application.
+**Since:** 23
 
-The configuration is valid only full-screen applications.
-
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-window-interface StartAnimationParams--><!--Device-window-interface StartAnimationParams-End-->
 
@@ -28,7 +26,9 @@ The type of window animation
 
 **Type:** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StartAnimationParams-type: AnimationType--><!--Device-StartAnimationParams-type: AnimationType-End-->
 

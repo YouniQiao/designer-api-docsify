@@ -14,9 +14,11 @@ function getTimezoneSync(): string
 
 Obtains the system time zone in synchronous mode.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
 
@@ -26,7 +28,7 @@ Obtains the system time zone in synchronous mode.
 
 | Type | Description |
 | --- | --- |
-| string | System time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-date-time.md#supported-system-time-zones) . |
+| string | System time zone. For details, see Supported System Time Zones . |
 
 ## Examples
 

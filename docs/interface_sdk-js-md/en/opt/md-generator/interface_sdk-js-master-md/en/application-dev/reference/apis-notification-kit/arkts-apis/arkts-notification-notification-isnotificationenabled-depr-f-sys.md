@@ -6,13 +6,13 @@
 function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for a specified application.This API uses an asynchronous callback to return the result.
+Checks whether notification is enabled for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**Substitutes:** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ Checks whether notification is enabled for a specified application. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**Substitutes:** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -71,13 +71,13 @@ Checks whether notification is enabled for a specified application. This API use
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for this application.This API uses an asynchronous callback to return the result.
+Checks whether notification is enabled for this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**Substitutes:** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -106,7 +106,7 @@ Checks whether notification is enabled for this application. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**Substitutes:** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -129,13 +129,13 @@ Checks whether notification is enabled for this application. This API uses a pro
 function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for a specified user.This API uses an asynchronous callback to return the result.
+Checks whether notification is enabled for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**Substitutes:** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -165,7 +165,7 @@ Checks whether notification is enabled for a specified user. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
+**Substitutes:** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isNotificationEnabled-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

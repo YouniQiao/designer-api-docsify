@@ -1,11 +1,22 @@
 # @ohos.arkui.uiMaterial
 
-本模块提供系统材质的接口定义。不同的系统材质对应不同的UI效果，包括背景色  
-[backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、边框颜色  
-[borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影  
-[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))效果。
+/*
+ Copyright (c) 2025-2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**起始版本：** 26.0.0
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -13,20 +24,29 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**系统接口：** 此接口为系统接口。
+
 ## 汇总
 
 ### 函数
 
 | 名称 |
 | --- |
-| [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md#getmaterialinfo) |
+| [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md#getMaterialInfo) |
 
 ### 类
 
 | 名称 |
 | --- |
-| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](arkts-arkui-uimaterial-materialtype-e.md#MaterialType)。  沉浸式材质根据设备算力有分档表现，设备算力的高、中、低档由设备厂商决定，定义在系统配置文件中。在高档和中档算力设备上，影响材质层滤镜效果和阴影  [shadow](CommonMethod#shadow(value: ShadowOptions \| ShadowStyle))效果。在低档算力设备上，影响背景色  [backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、边框颜色[borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影  [shadow](CommonMethod#shadow(value: ShadowOptions \|
-| [Material](arkts-arkui-uimaterial-material-c.md) |
+| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) |
+
+<!--Del-->
+### 类（系统接口）
+
+| 名称 |
+| --- |
+| [Material](arkts-arkui-uimaterial-material-c-sys.md) |
+<!--DelEnd-->
 
 ### 接口
 
@@ -35,7 +55,14 @@
 | [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md) |
 | [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) |
 | [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) |
-| [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i.md) |
+
+<!--Del-->
+### 接口（系统接口）
+
+| 名称 |
+| --- |
+| [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i-sys.md) |
+<!--DelEnd-->
 
 ### 枚举
 
@@ -44,3 +71,11 @@
 | [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md) |
 | [MaterialState](arkts-arkui-uimaterial-materialstate-e.md) |
 | [MaterialType](arkts-arkui-uimaterial-materialtype-e.md) |
+
+<!--Del-->
+### 枚举（系统接口）
+
+| 名称 |
+| --- |
+| [MaterialType](arkts-arkui-uimaterial-materialtype-e-sys.md) |
+<!--DelEnd-->

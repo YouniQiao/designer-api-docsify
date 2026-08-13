@@ -12,19 +12,15 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 ```
 
-Sets the minimum log level of the current application process.
+Sets the minimum log level of the current application process. You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function. > **NOTE：**> > This function does not take effect for debug applications.
 
-You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function.
+**Since:** 23
 
-> **NOTE：**
-> 
-> This function does not take effect for debug applications.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 21
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hilog-function setLogLevel(level: LogLevel, prefer: PreferStrategy): void--><!--Device-hilog-function setLogLevel(level: LogLevel, prefer: PreferStrategy): void-End-->
 

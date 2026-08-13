@@ -8,7 +8,7 @@ Provides APIs to manage the file retrieval result.
 
 **Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#FetchResult)
 
-<!--Device-userFileManager-interface FetchResult<T>--><!--Device-userFileManager-interface FetchResult<T>-End-->
+<!--Device-userFileManager-interface FetchResult--><!--Device-userFileManager-interface FetchResult-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -42,7 +42,7 @@ Releases and invalidates the **FetchFileResult** instance. After this instance i
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -92,7 +92,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -143,7 +143,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -189,7 +189,7 @@ Obtains the total number of files in the result set.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -235,7 +235,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -286,7 +286,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -332,7 +332,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -383,7 +383,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -407,9 +407,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
-
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -431,7 +429,7 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -463,9 +461,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result.
-
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -487,7 +483,7 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -543,7 +539,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -606,7 +602,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -656,7 +652,7 @@ Checks whether the cursor is in the last row of the result set.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

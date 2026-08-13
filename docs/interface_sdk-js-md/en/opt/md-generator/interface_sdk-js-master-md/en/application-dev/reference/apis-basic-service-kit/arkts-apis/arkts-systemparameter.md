@@ -1,25 +1,12 @@
 # @ohos.systemparameter
 
-The **SystemParameter** module provides system services with easy access to key-value pairs. You can use the APIs provided by this module to describe the service status and change the service behavior. The basic operation primitives are **get** and **set**. You can obtain the values of system parameters through getters and modify the values through setters.
-
-For details about the system parameter design principles and definitions, see   
-[Parameter Management](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md).
-
-> **NOTE：**
-> 
-> - The APIs of this module are no longer maintained since API version 9. You are advised to use
-> [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md#systemParameterEnhance) instead.
-> 
-> - The APIs provided by this module are system APIs.
-> 
-> - Third-party applications cannot use the APIs provided by this module because system parameters each require
-> specific discretionary access control (DAC) and mandatory access control (MAC) permissions.
+The **SystemParameter** module provides system services with easy access to key-value pairs. You can use the APIs provided by this module to describe the service status and change the service behavior. The basic operation primitives are **get** and **set**. You can obtain the values of system parameters through getters and modify the values through setters. For details about the system parameter design principles and definitions, see [Parameter Management](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md). > **NOTE：**> > - The APIs of this module are no longer maintained since API version 9. You are advised to use > [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md#@ohos.systemParameterEnhance) instead. > > - The APIs provided by this module are system APIs. > > - Third-party applications cannot use the APIs provided by this module because system parameters each require > specific discretionary access control (DAC) and mandatory access control (MAC) permissions.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [systemParameterEnhance](arkts-systemparameterenhance.md#systemParameterEnhance)
+**Substitutes:** [systemParameterEnhance](arkts-systemparameterenhance.md#@ohos.systemParameterEnhance)
 
 <!--Device-unnamed-declare namespace systemParameter--><!--Device-unnamed-declare namespace systemParameter-End-->
 
@@ -40,11 +27,11 @@ import { systemParameter } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md#get) |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md#get-1) |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md#get-2) |
-| [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md#getsync) |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md#set) |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md#set-1) |
-| [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md#setsync) |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md#get-(System-API)) |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md#get-(System-API)) |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md#get-(System-API)) |
+| [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md#getSync-(System-API)) |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md#set-(System-API)) |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md#set-(System-API)) |
+| [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md#setSync-(System-API)) |
 <!--DelEnd-->

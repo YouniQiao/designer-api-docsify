@@ -14,7 +14,9 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 订阅通知扩展。使用蓝牙模块相关接口获取蓝牙设备的唯一地址后方可订阅。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -24,9 +26,9 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 **参见：**
 
-[unsubscribe](notificationExtensionSubscription.unsubscribe(): Promise<void>) 取消通知扩展订阅。
+unsubscribe 取消通知扩展订阅。
 
-[getSubscribeInfo](notificationExtensionSubscription.getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>) 获取应用通知扩展订阅信息。
+getSubscribeInfo 获取应用通知扩展订阅信息。
 
 **参数：**
 
@@ -44,10 +46,10 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
 
 ## 示例
 

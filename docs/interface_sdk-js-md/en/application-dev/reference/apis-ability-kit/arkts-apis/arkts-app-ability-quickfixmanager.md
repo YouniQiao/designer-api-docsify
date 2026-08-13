@@ -2,9 +2,11 @@
 
 The quickFixManager module provides APIs for quick fix. With quick fix, you can fix bugs in your application by applying patches, which is more efficient than by updating the entire application.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace quickFixManager--><!--Device-unnamed-declare namespace quickFixManager-End-->
 
@@ -25,12 +27,12 @@ import { quickFixManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix) | Applies a quick fix patch. This API uses an asynchronous callback to return the result. |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix-1) | Applies a quick fix patch. This API uses a promise to return the result. |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo) | Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result. |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo-1) | Obtains the quick fix information of the application. This API uses a promise to return the result. |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix) | Revokes quick fix. This API uses an asynchronous callback to return the result. |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix-1) | Revokes quick fix. This API uses a promise to return the result. |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyQuickFix) | Applies a quick fix patch. This API uses an asynchronous callback to return the result. |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyQuickFix-(System-API)) | Applies a quick fix patch. This API uses a promise to return the result. |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getApplicationQuickFixInfo) | Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result. |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getApplicationQuickFixInfo-(System-API)) | Obtains the quick fix information of the application. This API uses a promise to return the result. |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokeQuickFix) | Revokes quick fix. This API uses an asynchronous callback to return the result. |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokeQuickFix-(System-API)) | Revokes quick fix. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -4,7 +4,9 @@ Defines the TransferProgress data structure.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSyncManager-interface TransferProgress--><!--Device-cloudSyncManager-interface TransferProgress-End-->
 
@@ -24,13 +26,15 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 failedCount: int
 ```
 
-failed count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
+failed count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +56,9 @@ Describes the state type of transfer task.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +80,9 @@ Describes the state type of transfer stop reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,13 +98,15 @@ Describes the state type of transfer stop reason.
 successfulCount: int
 ```
 
-successful count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
+successful count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,13 +122,15 @@ successful count in TransferProgress.The value should be an integer.&lt;br&gt;Un
 totalCount: int
 ```
 
-total count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
+total count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,13 +146,15 @@ total count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pc
 totalSize: long
 ```
 
-Total size in TransferProgress.&lt;br&gt;Unit:Byte.
+Total size in TransferProgress. &lt;br&gt;Unit:Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,13 +170,15 @@ Total size in TransferProgress.&lt;br&gt;Unit:Byte.
 transferredSize: long
 ```
 
-transferred size in TransferProgress.&lt;br&gt;Unit:Byte.
+transferred size in TransferProgress. &lt;br&gt;Unit:Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

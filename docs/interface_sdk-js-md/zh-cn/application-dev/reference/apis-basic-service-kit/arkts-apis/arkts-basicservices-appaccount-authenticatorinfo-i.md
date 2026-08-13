@@ -2,9 +2,11 @@
 
 表示OAuth认证器信息。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-appAccount-interface AuthenticatorInfo--><!--Device-appAccount-interface AuthenticatorInfo-End-->
 
@@ -18,11 +20,13 @@ iconId: long
 
 认证器的图标标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-iconId: long--><!--Device-AuthenticatorInfo-iconId: long-End-->
 
@@ -36,11 +40,13 @@ labelId: long
 
 认证器的标签标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-labelId: long--><!--Device-AuthenticatorInfo-labelId: long-End-->
 
@@ -56,9 +62,11 @@ owner: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-owner: string--><!--Device-AuthenticatorInfo-owner: string-End-->
 

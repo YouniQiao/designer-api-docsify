@@ -4,9 +4,11 @@ The mesh instance owned by the mesh node
 
 **Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface Mesh extends SceneResource--><!--Device-unnamed-export interface Mesh extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Mesh--><!--Device-unnamed-export interface Mesh-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,7 +22,9 @@ The axis aligned bounding box of the mesh.
 
 **Type:** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mesh-readonly aabb: Aabb--><!--Device-Mesh-readonly aabb: Aabb-End-->
 
@@ -36,7 +40,9 @@ The material override sub mesh's material.
 
 **Type:** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mesh-materialOverride?: Material--><!--Device-Mesh-materialOverride?: Material-End-->
 
@@ -52,7 +58,9 @@ The sub meshes of the mesh.
 
 **Type:** [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md)[]
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mesh-readonly subMeshes: SubMesh[]--><!--Device-Mesh-readonly subMeshes: SubMesh[]-End-->
 

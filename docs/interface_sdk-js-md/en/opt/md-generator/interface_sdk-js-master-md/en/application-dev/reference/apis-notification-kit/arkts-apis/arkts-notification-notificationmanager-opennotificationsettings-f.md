@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function openNotificationSettings(context: UIAbilityContext): Promise<void>
 ```
 
-Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to set the notification enabling and notification mode. This API uses a promise to return the result.
+Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to set the notification enabling and notification mode. This API uses a promise to return the result. This is suitable for scenarios where users need to manually modify notification settings, such as a secondary request after a user denies authorization, or when the notification reminder method (vibration, ringtone, etc.) needs to be modified. When the requestEnableNotification dialog box is denied by the user, you can call this API to guide the user to the notification settings page to manually enable it.
 
-This is suitable for scenarios where users need to manually modify notification settings, such as a secondary request after a user denies authorization, or when the notification reminder method(vibration, ringtone, etc.) needs to be modified. When the requestEnableNotification dialog box is denied by the user, you can call this API to guide the user to the notification settings page to manually enable it.
+**Since:** 23
 
-**Since:** 13
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,11 +26,11 @@ This is suitable for scenarios where users need to manually modify notification 
 
 **See also:**
 
-[requestEnableNotification](notificationManager.requestEnableNotification(context: UIAbilityContext): Promise<void>) requests notification
+requestEnableNotification requests notification
 
-[isNotificationEnabled](notificationManager.isNotificationEnabled(): Promise<boolean>) checks whether notification is
+isNotificationEnabled checks whether notification is
 
-[getNotificationSetting](notificationManager.getNotificationSetting(): Promise<NotificationSetting>) obtains the notification settings
+getNotificationSetting obtains the notification settings
 
 **Parameters:**
 
@@ -48,10 +48,10 @@ This is suitable for scenarios where users need to manually modify notification 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

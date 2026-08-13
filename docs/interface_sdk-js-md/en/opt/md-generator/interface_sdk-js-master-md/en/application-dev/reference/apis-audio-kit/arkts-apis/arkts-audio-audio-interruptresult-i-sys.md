@@ -2,7 +2,9 @@
 
 Describes audio interrupt operation results.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface InterruptResult--><!--Device-audio-interface InterruptResult-End-->
 
@@ -26,7 +28,9 @@ Interrupt node as a unit to receive interrupt change event.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InterruptResult-interruptNode: int--><!--Device-InterruptResult-interruptNode: int-End-->
 
@@ -44,7 +48,9 @@ Interrupt request or abandon result.
 
 **Type:** [InterruptRequestResultType](arkts-audio-audio-interruptrequestresulttype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InterruptResult-requestResult: InterruptRequestResultType--><!--Device-InterruptResult-requestResult: InterruptRequestResultType-End-->
 

@@ -2,7 +2,9 @@
 
 Enumerates the number of data bits.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-enum DataBits--><!--Device-serialManager-enum DataBits-End-->
 
@@ -16,7 +18,9 @@ DATABIT_8 = 8
 
 The number of data bits is 8.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataBits-DATABIT_8 = 8--><!--Device-DataBits-DATABIT_8 = 8-End-->
 
@@ -30,7 +34,9 @@ DATABIT_7 = 7
 
 The number of data bits is 7.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataBits-DATABIT_7 = 7--><!--Device-DataBits-DATABIT_7 = 7-End-->
 
@@ -44,7 +50,9 @@ DATABIT_6 = 6
 
 The number of data bits is 6.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataBits-DATABIT_6 = 6--><!--Device-DataBits-DATABIT_6 = 6-End-->
 
@@ -58,7 +66,9 @@ DATABIT_5 = 5
 
 The number of data bits is 5.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataBits-DATABIT_5 = 5--><!--Device-DataBits-DATABIT_5 = 5-End-->
 

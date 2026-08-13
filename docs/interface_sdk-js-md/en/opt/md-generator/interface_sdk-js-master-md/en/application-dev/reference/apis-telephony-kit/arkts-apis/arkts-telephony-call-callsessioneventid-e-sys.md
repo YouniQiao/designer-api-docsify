@@ -2,7 +2,9 @@
 
 Enumerates video call event types.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum CallSessionEventId--><!--Device-call-export enum CallSessionEventId-End-->
 
@@ -18,7 +20,9 @@ EVENT_CONTROL_CAMERA_FAILURE = 0
 
 Camera setting failed.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_FAILURE = 0--><!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_FAILURE = 0-End-->
 
@@ -34,7 +38,9 @@ EVENT_CONTROL_CAMERA_READY = 1
 
 Camera setting succeeded.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_READY = 1--><!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_READY = 1-End-->
 
@@ -50,7 +56,9 @@ EVENT_DISPLAY_SURFACE_RELEASED = 100
 
 Remote display window released.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallSessionEventId-EVENT_DISPLAY_SURFACE_RELEASED = 100--><!--Device-CallSessionEventId-EVENT_DISPLAY_SURFACE_RELEASED = 100-End-->
 
@@ -66,7 +74,9 @@ EVENT_PREVIEW_SURFACE_RELEASED = 101
 
 Local preview window released.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallSessionEventId-EVENT_PREVIEW_SURFACE_RELEASED = 101--><!--Device-CallSessionEventId-EVENT_PREVIEW_SURFACE_RELEASED = 101-End-->
 

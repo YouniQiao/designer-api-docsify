@@ -4,6 +4,8 @@ Defines the icon type of the element on the left of the **ComposeListItem** comp
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum IconType--><!--Device-unnamed-export declare enum IconType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ BADGE = 1
 Badge with an icon size of 8 x 8 vp.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Small icon with an icon size of 16 x 16 vp.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -53,6 +59,8 @@ SYSTEM_ICON = 3
 System icon with an icon size of 24 x 24 vp.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ Profile picture with an icon size of 40 x 40 vp.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -89,6 +99,8 @@ APP_ICON = 5
 Application icon with an icon size of 64 x 64 vp.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +120,8 @@ Preview image with an icon size of 96 x 96 vp.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -126,6 +140,8 @@ Icon with a horizontal special ratio (width is greater than height), keeping the
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -143,6 +159,8 @@ VERTICAL = 8
 Icon with a vertical special ratio (height is greater than width), keeping the longest side at 96 vp.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

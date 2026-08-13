@@ -12,13 +12,15 @@ import { i18n } from '@kit.LocalizationKit';
 export function getTimeZone(zoneID?: string): TimeZone
 ```
 
-Obtains the TimeZone object corresponding to the specified time zone ID.
+Obtains the **TimeZone** object corresponding to the specified time zone ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-i18n-export function getTimeZone(zoneID?: string): TimeZone--><!--Device-i18n-export function getTimeZone(zoneID?: string): TimeZone-End-->
 
@@ -34,5 +36,5 @@ Obtains the TimeZone object corresponding to the specified time zone ID.
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone object corresponding to the time zone ID. |
+| [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md) | TimeZone** object corresponding to the time zone ID. |
 

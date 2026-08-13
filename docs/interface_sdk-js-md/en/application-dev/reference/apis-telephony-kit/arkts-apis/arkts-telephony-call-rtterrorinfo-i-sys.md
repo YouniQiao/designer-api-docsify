@@ -2,9 +2,11 @@
 
 Indicates the info of the rtt error.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface RttErrorInfo--><!--Device-call-export interface RttErrorInfo-End-->
 
@@ -26,11 +28,13 @@ callId: int
 
 Indicates the id of rtt.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-callId: int--><!--Device-RttErrorInfo-callId: int-End-->
 
@@ -46,11 +50,13 @@ causeCode: int
 
 Indicates the code of rtt cause.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-causeCode: int--><!--Device-RttErrorInfo-causeCode: int-End-->
 
@@ -66,11 +72,13 @@ operationType: int
 
 Indicates the type of rtt operation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-operationType: int--><!--Device-RttErrorInfo-operationType: int-End-->
 
@@ -88,9 +96,11 @@ Indicates the text of rtt fail reason.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-reasonText: string--><!--Device-RttErrorInfo-reasonText: string-End-->
 

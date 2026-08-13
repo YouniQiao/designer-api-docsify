@@ -1,32 +1,14 @@
 # RenderOptions
 
-RenderOptions info.
+Provides optional parameters for creating a BuilderNode.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderOptions--><!--Device-unnamed-export interface RenderOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## enableMinimized
-
-```TypeScript
-enableMinimized?: boolean
-```
-
-Indicates whether minimized mode is enabled.If this option is enabled, the FrameNode obtained through BuilderNode.getFrameNode()is a minimized FrameNode, which provide the smallest set of capabilities.Default value: false.
-
-**Type:** boolean
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RenderOptions-enableMinimized?: boolean--><!--Device-RenderOptions-enableMinimized?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,15 +18,19 @@ Indicates whether minimized mode is enabled.If this option is enabled, the Frame
 selfIdealSize?: Size
 ```
 
-The ideal size of the node.
+Ideal size of the node. Default value: **{ width: 0, height: 0 }**.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RenderOptions-selfIdealSize?: Size--><!--Device-RenderOptions-selfIdealSize?: Size-End-->
 
@@ -56,15 +42,19 @@ The ideal size of the node.
 surfaceId?: string
 ```
 
-The surfaceId of a texture consumer.
+Surface ID of the texture receiver. Typically, the texture receiver is [OH_NativeImage](../../../reference/apis-arkgraphics2d/capi-oh-nativeimage-oh-nativeimage.md). This parameter is effective only when **type** is set to **NodeRenderType.RENDER_TYPE_TEXTURE**. Default value: **""**.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RenderOptions-surfaceId?: string--><!--Device-RenderOptions-surfaceId?: string-End-->
 
@@ -76,15 +66,19 @@ The surfaceId of a texture consumer.
 type?: NodeRenderType
 ```
 
-Render type of the node.
+Rendering type of the node. Default value: **NodeRenderType.RENDER_TYPE_DISPLAY**.
 
-**Type:** [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md)
+**Type:** [NodeRenderType](../../apis-na/arkts-apis/arkts-na-buildernode-noderendertype-e.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RenderOptions-type?: NodeRenderType--><!--Device-RenderOptions-type?: NodeRenderType-End-->
 

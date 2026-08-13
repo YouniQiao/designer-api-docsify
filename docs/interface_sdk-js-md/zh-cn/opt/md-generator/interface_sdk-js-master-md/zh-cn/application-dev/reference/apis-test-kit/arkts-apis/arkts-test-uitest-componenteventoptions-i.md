@@ -2,7 +2,9 @@
 
 控件操作事件监听的扩展配置，用于指定监听过程配置及事件筛选条件。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface ComponentEventOptions--><!--Device-unnamed-declare interface ComponentEventOptions-End-->
 
@@ -14,15 +16,15 @@
 on?: On
 ```
 
-监听目标控件的属性要求，默认监听所有控件。
-
-**说明：** 仅支持监听指定属性要求的控件，不支持监听指定On.isBefore、On.isAfter、On.within等相对位置的控件。
+监听目标控件的属性要求，默认监听所有控件。 **说明：** 仅支持监听指定属性要求的控件，不支持监听指定On.isBefore、On.isAfter、On.within等相对位置的控件。
 
 **类型：** [On](arkts-test-uitest-on-c.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentEventOptions-on?: On--><!--Device-ComponentEventOptions-on?: On-End-->
 
@@ -38,9 +40,11 @@ timeout?: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentEventOptions-timeout?: int--><!--Device-ComponentEventOptions-timeout?: int-End-->
 

@@ -2,7 +2,9 @@
 
 Defines arguments for an event query.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-interface QueryArg--><!--Device-hiSysEvent-interface QueryArg-End-->
 
@@ -26,7 +28,9 @@ Start time of the system event to be queried. The value is a 13-digit timestamp,
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-QueryArg-beginTime: long--><!--Device-QueryArg-beginTime: long-End-->
 
@@ -44,7 +48,9 @@ End time of the system event to be queried. The value is a 13-digit timestamp, i
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-QueryArg-endTime: long--><!--Device-QueryArg-endTime: long-End-->
 
@@ -55,16 +61,18 @@ End time of the system event to be queried. The value is a 13-digit timestamp, i
 ## fromSeq
 
 ```TypeScript
-fromSeq?: number
+fromSeq?: number | null | undefined
 ```
 
 Start SN of the events to be queried. The default value is **-1**
 
-**Type:** number
+**Type:** number \| null \| undefined
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-QueryArg-fromSeq?: long--><!--Device-QueryArg-fromSeq?: long-End-->
+**Deprecated since:** -1
+
+<!--Device-QueryArg-fromSeq?: long | null | undefined--><!--Device-QueryArg-fromSeq?: long | null | undefined-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -80,7 +88,9 @@ Maximum number of events that can be queried.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-QueryArg-maxEvents: long--><!--Device-QueryArg-maxEvents: long-End-->
 
@@ -91,16 +101,18 @@ Maximum number of events that can be queried.
 ## toSeq
 
 ```TypeScript
-toSeq?: number
+toSeq?: number | null | undefined
 ```
 
 End SN of the system events to be queried. The default value is **-1**.
 
-**Type:** number
+**Type:** number \| null \| undefined
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-QueryArg-toSeq?: long--><!--Device-QueryArg-toSeq?: long-End-->
+**Deprecated since:** -1
+
+<!--Device-QueryArg-toSeq?: long | null | undefined--><!--Device-QueryArg-toSeq?: long | null | undefined-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

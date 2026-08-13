@@ -10,6 +10,8 @@ function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Call
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-motion-function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Callback<HoverHandAction>): void--><!--Device-motion-function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Callback<HoverHandAction>): void-End-->
@@ -29,10 +31,10 @@ function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Call
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [31500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
-| [31500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500002-订阅失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
+| [31500002](../../apis-multimodalawareness-kit/errorcode-motion.md#31500002-订阅失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 
 ## onHoverHandChange
@@ -45,6 +47,8 @@ function onHoverHandChange(
 订阅悬停手势事件，并立即开始检测。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,7 +70,7 @@ function onHoverHandChange(
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [31500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
-| [31500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500002-订阅失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
+| [31500002](../../apis-multimodalawareness-kit/errorcode-motion.md#31500002-订阅失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

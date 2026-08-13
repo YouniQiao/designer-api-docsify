@@ -1,8 +1,10 @@
 # Content
 
-Defines the base class for [ComponentContent](ComponentContent) and [NodeContent](arkts-arkui-nodecontent-c.md#NodeContent).
+Defines the base class for ComponentContent and [NodeContent](arkts-arkui-nodecontent-c.md#NodeContent).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

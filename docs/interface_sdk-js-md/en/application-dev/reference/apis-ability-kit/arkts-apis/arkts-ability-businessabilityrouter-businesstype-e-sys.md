@@ -2,9 +2,11 @@
 
 This enumeration value is used to identify various types of business ability info
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-businessAbilityRouter-export enum BusinessType--><!--Device-businessAbilityRouter-export enum BusinessType-End-->
 
@@ -20,9 +22,11 @@ SHARE = 0
 
 Indicates business ability info with type of share
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessType-SHARE = 0--><!--Device-BusinessType-SHARE = 0-End-->
 
@@ -38,9 +42,11 @@ UNSPECIFIED = 255
 
 Indicates business ability info with type of unspecified
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessType-UNSPECIFIED = 255--><!--Device-BusinessType-UNSPECIFIED = 255-End-->
 

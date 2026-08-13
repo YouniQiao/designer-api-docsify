@@ -14,9 +14,11 @@ function getPointerStyleSync(windowId: int): PointerStyle
 
 Queries the mouse pointer style type of a specified window, such as east arrow, west arrow, south arrow, and north arrow. This API can obtain only the mouse pointer style type of windows within the current application process.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle--><!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle-End-->
 
@@ -26,7 +28,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. &lt;br&gt;If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. &lt;br&gt;If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. &lt;br&gt;If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setPointerStyleSync), this API can obtain the mouse pointer style properly. |
+| windowId | int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. &lt;br&gt;If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. &lt;br&gt;If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. &lt;br&gt;If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setPointerStyleSync), this API can obtain the mouse pointer style properly. |
 
 **Return value:**
 
@@ -38,7 +40,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

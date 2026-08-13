@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [NodeController](arkts-arkui-nodecontroller-c.md) | Defines the controller of the node container. Provides lifecycle callbacks for the associated NodeContainer and methods to control the child node of the NodeContainer. |
+| [NodeController](arkts-arkui-nodecontroller-c.md) | The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component. > **NOTE：**> > - NodeController objects do not support JSON serialization. |
 

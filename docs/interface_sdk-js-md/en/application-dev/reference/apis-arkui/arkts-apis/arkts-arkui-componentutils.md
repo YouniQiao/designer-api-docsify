@@ -6,6 +6,8 @@ This module provides functionality for component coordinates and sizes.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace componentUtils--><!--Device-unnamed-declare namespace componentUtils-End-->
@@ -25,7 +27,7 @@ import { componentUtils } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getitemsinshapepath) | Get the image objects located within the selected area. |
+| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getItemsInShapePath) | Get the image objects located within the selected area. |
 <!--DelEnd-->
 
 ### Interfaces

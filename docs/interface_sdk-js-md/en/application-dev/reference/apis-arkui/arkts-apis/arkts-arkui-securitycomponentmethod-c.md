@@ -1,37 +1,16 @@
 # SecurityComponentMethod
 
-The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
+The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors. This module is mainly used in the following scenarios: - Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as PasteButton and SaveButton. - Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints, see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints). - Reuse the universal attribute capabilities of security components through chained calls.
 
-This module is mainly used in the following scenarios:  
-- Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
-such as [PasteButton](./paste_button) and [SaveButton](./save_button).  
-- Adjust the display effect and interaction experience of security components while ensuring compliance with  
-the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  
-- Reuse the universal attribute capabilities of security components through chained calls.
-
-## Key Enums
-
-- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md#SecurityComponentLayoutDirection): Enumeration of icon and text  
-layout directions for the security component. Specifies horizontal or vertical layout.  
-- [ButtonType](@global:ButtonType): Enumeration of button styles for the security component.  
-Specifies capsule, circle, rounded rectangle, or normal button style.
-
-## Key APIs
-
-- [SecurityComponentMethod](#SecurityComponentMethod): A collection of universal attribute methods for  
-security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
-
-## Child Components
-
-- Not supported
-
-Defines the method of a security component.
+## Key Enums - [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md#SecurityComponentLayoutDirection): Enumeration of icon and text layout directions for the security component. Specifies horizontal or vertical layout. - ButtonType: Enumeration of button styles for the security component. Specifies capsule, circle, rounded rectangle, or normal button style. ###### Key APIs - [SecurityComponentMethod](#SecurityComponentMethod): A collection of universal attribute methods for security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components. ###### Child Components - Not supported Defines the method of a security component.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare class SecurityComponentMethod<T>--><!--Device-unnamed-declare class SecurityComponentMethod<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class SecurityComponentMethod--><!--Device-unnamed-declare class SecurityComponentMethod-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +25,8 @@ Sets the initial focus for the screen reader on the page, specifying the compone
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +60,8 @@ Provides an accessibility description for the component. You can set detailed te
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -110,6 +93,8 @@ Specifies the next focus component for the screen reader.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,6 +128,8 @@ Sets the accessibility component type. Each component type is announced in a spe
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -175,6 +162,8 @@ Sets the alignment of the icon and text on the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -201,11 +190,13 @@ Sets the alignment of the icon and text on the security component.
 alignRules(alignRule: AlignRuleOption): T
 ```
 
-Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer](./relative_container).
+Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is RelativeContainer.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,7 +210,7 @@ Sets the alignment rules for child components within a relative container. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | AlignRuleOption | Yes | Alignment rule configuration object that defines anchor alignment options ( **top**, **bottom**, **left**, **right**, and **center**). Specifies the alignment position and method of the security component in [RelativeContainer](./relative_container). |
+| alignRule | AlignRuleOption | Yes | Alignment rule configuration object that defines anchor alignment options ( **top**, **bottom**, **left**, **right**, and **center**). Specifies the alignment position and method of the security component in RelativeContainer. |
 
 **Return value:**
 
@@ -233,11 +224,13 @@ Sets the alignment rules for child components within a relative container. This 
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer](./relative_container). In the horizontal direction, this method replaces **left** and **right** in the [alignRules](#alignRules) above with **start**and **end**, respectively, allowing the layout to be mirrored in RTL mode. You are advised to use this method preferentially.
+Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is RelativeContainer. In the horizontal direction, this method replaces **left** and **right** in the [alignRules](#alignRules) above with **start** and **end**, respectively, allowing the layout to be mirrored in RTL mode. You are advised to use this method preferentially.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,7 +244,7 @@ Sets the alignment rules for child components within a relative container. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | LocalizedAlignRuleOptions | Yes | Alignment rule configuration object that uses **start** and **end** in place of **left** and **right** to support RTL layout mirroring. Includes anchor alignment settings for **top**, **bottom**, **start**, **end**, and **center**, specifying the alignment position and method of the security component within [RelativeContainer](./relative_container). |
+| alignRule | LocalizedAlignRuleOptions | Yes | Alignment rule configuration object that uses **start** and **end** in place of **left** and **right** to support RTL layout mirroring. Includes anchor alignment settings for **top**, **bottom**, **start**, **end**, and **center**, specifying the alignment position and method of the security component within RelativeContainer. |
 
 **Return value:**
 
@@ -270,6 +263,8 @@ Sets the background color of the security component.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -303,6 +298,8 @@ Sets the border color of the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -329,13 +326,13 @@ Sets the border color of the security component.
 borderRadius(value: Dimension): T
 ```
 
-Sets the border radius of the security component.
-
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](@global:ButtonType).
+Sets the border radius of the security component. The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -363,13 +360,13 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 borderRadius(radius: Dimension | BorderRadiuses): T
 ```
 
-Sets the border radius of the security component, allowing individual setting of the four corner radii.
-
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](@global:ButtonType).
+Sets the border radius of the security component, allowing individual setting of the four corner radii. The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -403,6 +400,8 @@ Sets the border style of the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -435,6 +434,8 @@ Sets the border width of the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -461,11 +462,13 @@ Sets the border width of the security component.
 chainMode(direction: Axis, style: ChainStyle): T
 ```
 
-Sets the parameters of the chain in which the component is the head. This API takes effect only when the parent container is [RelativeContainer](./relative_container).
+Sets the parameters of the chain in which the component is the head. This API takes effect only when the parent container is RelativeContainer.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -479,8 +482,8 @@ Sets the parameters of the chain in which the component is the head. This API ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | Axis | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the [RelativeContainer](./relative_container). |
-| style | ChainStyle | Yes | Style of the chain layout. Controls how child components are distributed within the chain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values and effects, see [ChainStyle](ChainStyle). |
+| direction | Axis | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the RelativeContainer. |
+| style | ChainStyle | Yes | Style of the chain layout. Controls how child components are distributed within the chain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values and effects, see ChainStyle. |
 
 **Return value:**
 
@@ -499,6 +502,8 @@ Sets the constraint size, limiting the size range during component layout.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -532,6 +537,8 @@ Sets whether the security component is interactive.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -558,14 +565,13 @@ Sets whether the security component is interactive.
 fallbackLineSpacing(enabled: boolean): T
 ```
 
-Enables adaptive line height based on the actual text height for multi-line text.
-
-The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of  
-[RichEditorTextStyle](RichEditorTextStyle). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
+Enables adaptive line height based on the actual text height for multi-line text. The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of RichEditorTextStyle. When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -599,6 +605,8 @@ Sets the style of the system focus box for the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -630,6 +638,8 @@ Sets the font color of the text on the security component.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -663,6 +673,8 @@ Sets the font family of the text on the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -694,6 +706,8 @@ Sets the font size of the text for the security component.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -727,6 +741,8 @@ Sets the font style of the text on the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -758,6 +774,8 @@ Sets the font weight of the text on the security component.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -791,6 +809,8 @@ Sets the height of the security component. If not set, the height adapts to the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -817,20 +837,13 @@ Sets the height of the security component. If not set, the height adapts to the 
 heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 ```
 
-Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.
-
-The security component text is laid out at [maxFontSize](#maxFontSize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise,adaptation proceeds according to the specified policy, as follows:&lt;br&gt;**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxLines) attribute for adjusting the text height. If the layout size with **maxLines**exceeds the layout constraints, the security component attempts to reduce the font size within the range of  
-[minFontSize](#minFontSize) and  
-[maxFontSize](#maxFontSize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text.&lt;br&gt;**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the  
-[minFontSize](#minFontSize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxFontSize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxLines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text.&lt;br&gt;**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height.&lt;br&gt;If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and  
-[maxFontSize](#maxFontSize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the  
-[maxLines](#maxLines) attribute is set, the number of lines does not exceed the  
-**maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines.If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**,  
-**maxLines**, **width**, and **height**.For details, see [Example](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#example-3)
+Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments. The security component text is laid out at [maxFontSize](#maxFontSize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows: &lt;br&gt;**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxLines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and [maxFontSize](#maxFontSize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text. &lt;br&gt;**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minFontSize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxFontSize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxLines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text. &lt;br&gt;**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. &lt;br&gt;If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and [maxFontSize](#maxFontSize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxLines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**. For details, see [Example](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#example-3)
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -864,6 +877,8 @@ Sets the icon color of the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -895,6 +910,8 @@ Sets the icon size of the security component.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -928,6 +945,8 @@ Unique ID you assigned for the component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -959,6 +978,8 @@ Sets the layout direction of the icon and text on the security component.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -992,6 +1013,8 @@ Sets the anchor of the security component for moving the component with its top-
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1018,14 +1041,13 @@ Sets the anchor of the security component for moving the component with its top-
 maxFontScale(scale: number | Resource): T
 ```
 
-Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.
-
-This API can be used in conjunction with [minFontScale](#minFontScale).  
-**maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
+Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor. This API can be used in conjunction with [minFontScale](#minFontScale). **maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1053,19 +1075,13 @@ This API can be used in conjunction with [minFontScale](#minFontScale).
 maxFontSize(maxSize: number | string | Resource): T
 ```
 
-Sets the maximum font size for text display.
-
-- When used in conjunction with [minFontSize](#minFontSize) and  
-[maxLines](#maxLines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
-- **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,  
-**minFontSize** will be treated as **maxFontSize**.  
-- When adaptive font size is effective, the **fontSize** setting does not take effect.  
-- If the security component text is not fully displayed, clicking does not trigger authorization. The  
-**maxFontSize** setting affects text visibility, which in turn affects authorization behavior.
+Sets the maximum font size for text display. - When used in conjunction with [minFontSize](#minFontSize) and [maxLines](#maxLines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect. - **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**, **minFontSize** will be treated as **maxFontSize**. - When adaptive font size is effective, the **fontSize** setting does not take effect. - If the security component text is not fully displayed, clicking does not trigger authorization. The **maxFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1093,14 +1109,13 @@ Sets the maximum font size for text display.
 maxLines(line: number | Resource): T
 ```
 
-Sets the maximum number of lines for text. By default, text wraps automatically. When this attribute is specified,the text will display at most the specified number of lines. It can be used independently to limit text lines, or in conjunction with [minFontSize](#minFontSize),  
-[maxFontSize](#maxFontSize), and  
-[heightAdaptivePolicy](#heightAdaptivePolicy). When used with adaptive font size attributes, if the security component text is not fully displayed, the click will not trigger authorization. The  
-**maxLines** setting affects whether the text can be fully displayed, thereby affecting the authorization behavior of the security component.
+Sets the maximum number of lines for text. By default, text wraps automatically. When this attribute is specified, the text will display at most the specified number of lines. It can be used independently to limit text lines, or in conjunction with [minFontSize](#minFontSize), [maxFontSize](#maxFontSize), and [heightAdaptivePolicy](#heightAdaptivePolicy). When used with adaptive font size attributes, if the security component text is not fully displayed, the click will not trigger authorization. The **maxLines** setting affects whether the text can be fully displayed, thereby affecting the authorization behavior of the security component.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1128,14 +1143,13 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 minFontScale(scale: number | Resource): T
 ```
 
-Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.
-
-This API can be used in conjunction with [maxFontScale](#maxFontScale).  
-**minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
+Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor. This API can be used in conjunction with [maxFontScale](#maxFontScale). **minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1163,20 +1177,13 @@ This API can be used in conjunction with [maxFontScale](#maxFontScale).
 minFontSize(minSize: number | string | Resource): T
 ```
 
-Sets the minimum font size for text display.
-
-- When used in conjunction with [maxFontSize](#maxFontSize) and  
-[maxLines](#maxLines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
-- **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,  
-**maxFontSize** is used instead.  
-- When **minFontSize** is less than or equal to 0, adaptive font size does not take effect.  
-- When adaptive font size is effective, the **fontSize** setting does not take effect.  
-- If the security component text is not fully displayed, clicking does not trigger authorization. The  
-**minFontSize** setting affects text visibility, which in turn affects authorization behavior.
+Sets the minimum font size for text display. - When used in conjunction with [maxFontSize](#maxFontSize) and [maxLines](#maxLines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect. - **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. - When **minFontSize** is less than or equal to 0, adaptive font size does not take effect. - When adaptive font size is effective, the **fontSize** setting does not take effect. - If the security component text is not fully displayed, clicking does not trigger authorization. The **minFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1210,6 +1217,8 @@ Sets the coordinate offset of the security component relative to its own layout 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1242,6 +1251,8 @@ Sets the padding of the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1254,7 +1265,7 @@ Sets the padding of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension | Yes | Padding of the security component. &lt;br&gt;Default value: 8 vp for the top and bottom and 16 vp for the left and right. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
+| value | Padding \| Dimension | Yes | Padding of the security component. &lt;br&gt;Default value: 8 vp for the top and bottom and 16 vp for the left and right. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
 
 **Return value:**
 
@@ -1273,6 +1284,8 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1300,12 +1313,13 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 size(value: SizeOptions): T
 ```
 
-Sets the width and height. If not set, the width and height adapt to the element content. The **size** method is used to set both width and height at the same time. To set the width or height individually, use the  
-[width](#width) or [height](#height) method.
+Sets the width and height. If not set, the width and height adapt to the element content. The **size** method is used to set both width and height at the same time. To set the width or height individually, use the [width](#width) or [height](#height) method.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1339,6 +1353,8 @@ Sets the spacing between the icon and text in the security component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1370,6 +1386,8 @@ Sets the width of the security component. If not set, the width adapts to the el
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -7,25 +7,13 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
     delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void
 ```
 
-在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过回调返回结果并支持在回调中获取离屏组件绘制区域坐标和大小。
-
-> **说明：**
-> 
-> - 从API version 12开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。
-> 
-> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
-> 
-> - builder中的组件不支持设置动画相关的属性，如[transition](common)。
-> 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](image)组件、[Web](web)组件。
+在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过回调返回结果并支持在回调中获取离屏组件绘制区域坐标和大小。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。 > > - builder中的组件不支持设置动画相关的属性，如transition。 > > - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [createFromBuilder](ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder)
+**替代接口：** createFromBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,9 +37,9 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [160001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-图像加载错误) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [160001](../errorcode-snapshot.md#160001-图像加载错误) |
 
 ## 示例
 
@@ -123,25 +111,13 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
     checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过Promise返回结果，支持获取离屏组件绘制区域的坐标和大小。
-
-> **说明：**
-> 
-> - 从API version 12开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。
-> 
-> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
-> 
-> - builder中的组件不支持设置动画相关的属性，如[transition](common)。
-> 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](image)组件、[Web](web)组件。
+在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过Promise返回结果，支持获取离屏组件绘制区域的坐标和大小。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。 > > - builder中的组件不支持设置动画相关的属性，如transition。 > > - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [createFromBuilder](ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder)
+**替代接口：** createFromBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,9 +146,9 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [160001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-图像加载错误) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [160001](../errorcode-snapshot.md#160001-图像加载错误) |
 
 ## 示例
 

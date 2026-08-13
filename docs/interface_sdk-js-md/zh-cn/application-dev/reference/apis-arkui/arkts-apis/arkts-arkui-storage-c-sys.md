@@ -1,10 +1,12 @@
 # Storage（系统接口）
 
-持久化存储后端接口，提供基于键值对（key-value）的数据持久化能力，包括数据的读取、写入、清除和删除。PersistentStorage通过该接口实现AppStorage数据的本地持久化，适用于需要对应用数据进行灵活本地持久化存储的场景。
+持久化存储后端接口，提供基于键值对（key-value）的数据持久化能力，包括数据的读取、写入、清除和删除。PersistentStorage通过该接口实现AppStorage数据的本地持久化，适用于需要对应用数据进行灵活本地持久化存 储的场景。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class Storage--><!--Device-unnamed-declare class Storage-End-->
 
@@ -24,6 +26,8 @@ clear(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-Storage-clear(): void--><!--Device-Storage-clear(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,6 +45,8 @@ constructor(needCrossThread?: boolean, file?: string)
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-Storage-constructor(needCrossThread?: boolean, file?: string)--><!--Device-Storage-constructor(needCrossThread?: boolean, file?: string)-End-->
 
@@ -67,6 +73,8 @@ delete(key: string): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-Storage-delete(key: string): void--><!--Device-Storage-delete(key: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -90,6 +98,8 @@ get(key: string): string | undefined
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-Storage-get(key: string): string | undefined--><!--Device-Storage-get(key: string): string | undefined-End-->
 
@@ -118,6 +128,8 @@ set(key: string, val: any): void
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-Storage-set(key: string, val: any): void--><!--Device-Storage-set(key: string, val: any): void-End-->
 

@@ -8,9 +8,11 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 拷贝文件，将文件从源路径拷贝到目标路径。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MIGRATE_DATA
 
@@ -37,15 +39,15 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700086](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700086-发生系统错误) | System error occurred during copy execution. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700084](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700084-源路径中存在未开启权限路径) | There are inaccessible path in the source paths. |
-| [17700085](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700085-目标路径未开启写权限) | The destination path cannot be accessed. |
-| [17700082](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700082-用户身份认证失败) | User authentication failed. |
-| [17700083](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700083-用户身份认证超时) | Waiting for user authentication timeout. |
-| [17700080](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700080-源路径中存在无效路径) | The source paths are invalid. |
-| [17700081](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700081-目标路径为无效路径) | The destination path is invalid. |
+| [17700086](../errorcode-bundle.md#17700086-发生系统错误) | System error occurred during copy execution. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700084](../errorcode-bundle.md#17700084-源路径中存在未开启权限路径) | There are inaccessible path in the source paths. |
+| [17700085](../errorcode-bundle.md#17700085-目标路径未开启写权限) | The destination path cannot be accessed. |
+| [17700082](../errorcode-bundle.md#17700082-用户身份认证失败) | User authentication failed. |
+| [17700083](../errorcode-bundle.md#17700083-用户身份认证超时) | Waiting for user authentication timeout. |
+| [17700080](../errorcode-bundle.md#17700080-源路径中存在无效路径) | The source paths are invalid. |
+| [17700081](../errorcode-bundle.md#17700081-目标路径为无效路径) | The destination path is invalid. |
 
 ## 示例
 

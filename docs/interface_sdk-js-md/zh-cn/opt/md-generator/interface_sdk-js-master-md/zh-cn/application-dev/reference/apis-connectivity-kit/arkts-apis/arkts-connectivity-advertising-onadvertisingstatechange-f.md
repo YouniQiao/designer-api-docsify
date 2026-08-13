@@ -6,11 +6,11 @@
 function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>): void
 ```
 
-订阅广播状态变化事件。
-
-只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
+订阅广播状态变化事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,4 +28,4 @@ function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |

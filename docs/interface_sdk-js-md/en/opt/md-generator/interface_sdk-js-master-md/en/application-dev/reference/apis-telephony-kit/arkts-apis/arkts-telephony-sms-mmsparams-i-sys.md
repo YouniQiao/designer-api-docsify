@@ -2,7 +2,9 @@
 
 Defines the parameters for sending SMS messages.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsParams--><!--Device-sms-export interface MmsParams-End-->
 
@@ -26,7 +28,9 @@ MMS PDU address.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsParams-data: string--><!--Device-MmsParams-data: string-End-->
 
@@ -40,11 +44,13 @@ MMS PDU address.
 mmsConfig?: MmsConfig
 ```
 
-MMS configuration file. For details, see [MmsParams](#MmsParams).
+MMS configuration file. For details, see [MmsParams](#MmsParams-(System-API)).
 
 **Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
 
@@ -62,7 +68,9 @@ MMSC address.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsParams-mmsc: string--><!--Device-MmsParams-mmsc: string-End-->
 
@@ -76,14 +84,13 @@ MMSC address.
 slotId: number
 ```
 
-Slot ID of the SIM card used for sending SMS messages.
-
-- **0**: card slot 1  
-- **1**: card slot 2
+Slot ID of the SIM card used for sending SMS messages. - **0**: card slot 1 - **1**: card slot 2
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsParams-slotId: int--><!--Device-MmsParams-slotId: int-End-->
 

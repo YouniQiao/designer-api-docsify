@@ -2,9 +2,11 @@
 
 窗口的标志属性信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface WindowFilter--><!--Device-unnamed-declare interface WindowFilter-End-->
 
@@ -16,17 +18,17 @@
 active?: boolean
 ```
 
-窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowFilter-active?: boolean--><!--Device-WindowFilter-active?: boolean-End-->
 
@@ -38,9 +40,7 @@ active?: boolean
 actived?: boolean
 ```
 
-窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
-
-从API version 11开始废弃，建议使用active替代。
+窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。 从API version 11开始废弃，建议使用active替代。
 
 **类型：** boolean
 
@@ -50,7 +50,7 @@ actived?: boolean
 
 **废弃版本：** 11
 
-**替代接口：** [active](ohos.UiTest.WindowFilter#active)
+**替代接口：** active
 
 <!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 
@@ -62,15 +62,15 @@ actived?: boolean
 bundleName?: string
 ```
 
-窗口归属应用的包名，默认值为空，用于在多窗口场景下根据应用包名筛选目标窗口。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+窗口归属应用的包名，默认值为空，用于在多窗口场景下根据应用包名筛选目标窗口。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,17 +84,17 @@ bundleName?: string
 displayId?: int
 ```
 
-窗口所属的屏幕ID。取值大于或等于0的整数。默认值为设备默认屏幕ID。
+窗口所属的屏幕ID。取值大于或等于0的整数。默认值为设备默认屏幕ID。 从API version 20开始，该接口支持在原子化服务中使用。
 
-从API version 20开始，该接口支持在原子化服务中使用。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowFilter-displayId?: int--><!--Device-WindowFilter-displayId?: int-End-->
 
@@ -106,15 +106,15 @@ displayId?: int
 focused?: boolean
 ```
 
-窗口是否处于获焦状态，true：获焦状态，false：未获焦状态，默认值为false。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+窗口是否处于获焦状态，true：获焦状态，false：未获焦状态，默认值为false。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -132,9 +132,11 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

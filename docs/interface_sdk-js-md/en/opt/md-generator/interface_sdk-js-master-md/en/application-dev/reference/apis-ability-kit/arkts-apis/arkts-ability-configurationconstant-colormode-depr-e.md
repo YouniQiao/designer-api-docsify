@@ -6,7 +6,7 @@ Enumerates the color modes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ColorMode](ohos.app.ability.ConfigurationConstant/ConfigurationConstant#ColorMode)
+**Substitutes:** [ColorMode](arkts-ability-configurationconstant-colormode-e.md#ColorMode)
 
 <!--Device-ConfigurationConstant-export enum ColorMode--><!--Device-ConfigurationConstant-export enum ColorMode-End-->
 
@@ -24,7 +24,7 @@ Unspecified color mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_NOT_SET](ohos.app.ability.ConfigurationConstant/ConfigurationConstant.ColorMode#COLOR_MODE_NOT_SET)
+**Substitutes:** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_NOT_SET)
 
 <!--Device-ColorMode-COLOR_MODE_NOT_SET = -1--><!--Device-ColorMode-COLOR_MODE_NOT_SET = -1-End-->
 
@@ -42,7 +42,7 @@ Dark mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_DARK](ohos.app.ability.ConfigurationConstant/ConfigurationConstant.ColorMode#COLOR_MODE_DARK)
+**Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_DARK)
 
 <!--Device-ColorMode-COLOR_MODE_DARK = 0--><!--Device-ColorMode-COLOR_MODE_DARK = 0-End-->
 
@@ -60,7 +60,7 @@ Light mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_LIGHT](ohos.app.ability.ConfigurationConstant/ConfigurationConstant.ColorMode#COLOR_MODE_LIGHT)
+**Substitutes:** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_LIGHT)
 
 <!--Device-ColorMode-COLOR_MODE_LIGHT = 1--><!--Device-ColorMode-COLOR_MODE_LIGHT = 1-End-->
 

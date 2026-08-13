@@ -4,6 +4,8 @@ Defines a custom paste event.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PasteEvent--><!--Device-unnamed-declare interface PasteEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Prevents the default paste event.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

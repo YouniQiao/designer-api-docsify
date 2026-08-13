@@ -2,9 +2,11 @@
 
 表示 Schema 实例的节点，提供定义存储在数据库中的值的方法。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
 
@@ -18,9 +20,11 @@ appendChild(child: FieldNode): boolean
 
 在当前 FieldNode 中添加一个子节点。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,7 +48,7 @@ appendChild(child: FieldNode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -76,9 +80,11 @@ constructor(name: string)
 
 用于创建带有string字段FieldNode实例的构造函数。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,7 +102,7 @@ constructor(name: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
 ## default
 
@@ -112,67 +118,9 @@ default: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## defaultValue
-
-```TypeScript
-set defaultValue(defaultValue: string)
-```
-
-设置FieldNode的默认值.
-
-**类型：** string
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FieldNode-set defaultValue(defaultValue: string)--><!--Device-FieldNode-set defaultValue(defaultValue: string)-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## nullable
-
-```TypeScript
-set nullable(isnullable: boolean)
-```
-
-设置数据库字段是否为空.
-
-**类型：** boolean
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FieldNode-set nullable(isnullable: boolean)--><!--Device-FieldNode-set nullable(isnullable: boolean)-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## type
-
-```TypeScript
-set type(type: int)
-```
-
-设置节点对应的数据类型。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FieldNode-set type(type: int)--><!--Device-FieldNode-set type(type: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

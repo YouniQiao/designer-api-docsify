@@ -6,6 +6,8 @@ The replace effect type of symbol.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum ReplaceEffectType--><!--Device-unnamed-export declare enum ReplaceEffectType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ The default replace effect of symbol, the current symbol fully disappears before
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReplaceEffectType-SEQUENTIAL = 0--><!--Device-ReplaceEffectType-SEQUENTIAL = 0-End-->
@@ -34,11 +38,13 @@ The default replace effect of symbol, the current symbol fully disappears before
 CROSS_FADE = 1
 ```
 
-The current symbol fades out while the new symbol fades in at the same time,producing a smoother and faster transition.
+The current symbol fades out while the new symbol fades in at the same time, producing a smoother and faster transition.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,11 +58,13 @@ The current symbol fades out while the new symbol fades in at the same time,prod
 SLASH_OVERLAY = 2
 ```
 
-Replaces the current symbol with a symbol that includes a diagonal slash overlay,typically used to indicate a disabled or inactive state.If a corresponding slashed symbol variant is not available, the symbol is replaced without animation.
+Replaces the current symbol with a symbol that includes a diagonal slash overlay, typically used to indicate a disabled or inactive state. If a corresponding slashed symbol variant is not available, the symbol is replaced without animation.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

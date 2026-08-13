@@ -14,9 +14,11 @@ function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>
 
 Query APN IDs.
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
@@ -34,13 +36,13 @@ Query APN IDs.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Returns IDs of all APNs that meet the query conditions. |
+| Promise&lt;Array&lt;int&gt;&gt; | Returns IDs of all APNs that meet the query conditions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-calendarManager-export enum AttendeeRole--><!--Device-calendarManager-export enum AttendeeRole-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -17,6 +19,8 @@ ORGANIZER = 'organizer'
 会议组织者。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ PARTICIPANT = 'participant'
 会议参与者。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

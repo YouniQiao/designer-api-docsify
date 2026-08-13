@@ -2,11 +2,13 @@
 
 继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod)。
 
-**继承/实现关系：** BaseShape extends [CommonShapeMethod<T>](CommonShapeMethod<T>)
+**继承/实现关系：** BaseShape extends CommonShapeMethod<T>
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class BaseShape<T> extends CommonShapeMethod<T>--><!--Device-unnamed-declare class BaseShape<T> extends CommonShapeMethod<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class BaseShape--><!--Device-unnamed-declare class BaseShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ height(height: Length): T
 设置形状的高度。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,6 +56,8 @@ size(size: SizeOptions): T
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -83,6 +89,8 @@ width(width: Length): T
 设置形状的宽度。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

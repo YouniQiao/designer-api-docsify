@@ -4,7 +4,9 @@ The definition of the AVMusicTemplateController.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-avMusicTemplate-class AVMusicTemplateController--><!--Device-avMusicTemplate-class AVMusicTemplateController-End-->
 
@@ -26,7 +28,9 @@ Clear search history.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +48,10 @@ Clear search history.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## destroy
 
@@ -59,7 +63,9 @@ Destroy the controller.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,7 +83,7 @@ Destroy the controller.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 
 ## downloadMediaEntity
 
@@ -89,7 +95,9 @@ Download media entity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,10 +122,10 @@ Download media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## executeAction
 
@@ -129,7 +137,9 @@ Execute action.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,10 +164,10 @@ Execute action.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## favoriteMediaEntity
 
@@ -169,7 +179,9 @@ Favorite media entity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,10 +206,10 @@ Favorite media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## handleMemberPurchase
 
@@ -209,7 +221,9 @@ Handle member purchase.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -233,10 +247,10 @@ Handle member purchase.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## login
 
@@ -248,7 +262,9 @@ Login.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -273,10 +289,10 @@ Login.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## offCurrentSingleChange
 
@@ -288,7 +304,9 @@ Unregister report current single callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -300,14 +318,14 @@ Unregister report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Single&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offCustomElementsChange
@@ -320,7 +338,9 @@ Unregister report custom elements change callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,8 +358,8 @@ Unregister report custom elements change callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offDialogCommandChange
@@ -352,7 +372,9 @@ Unregister report dialog command callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -370,8 +392,8 @@ Unregister report dialog command callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offDownloadMediaEntityStatusChange
@@ -384,7 +406,9 @@ Unregister report download media entity status callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -396,14 +420,14 @@ Unregister report download media entity status callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | No | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | No | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offExtensionAbilityChange
@@ -416,7 +440,9 @@ Unregister report extension ability callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -434,8 +460,8 @@ Unregister report extension ability callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offMediaEntitiesChange
@@ -448,7 +474,9 @@ Unregister report media entities change callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -460,14 +488,14 @@ Unregister report media entities change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | No | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | No | The callback used to handle ('reportMediaEntitiesChange') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offPlaylistChange
@@ -480,7 +508,9 @@ Unregister report playlist callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -492,14 +522,14 @@ Unregister report playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | No | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | No | The callback used to handle ('reportPlaylist') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offReportExecuteAction
@@ -512,7 +542,9 @@ Unregister report execute action callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -530,8 +562,8 @@ Unregister report execute action callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offSettingsChange
@@ -544,7 +576,9 @@ Unregister report settings callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -556,14 +590,14 @@ Unregister report settings callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | No | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | No | The callback used to handle ('reportSettings') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offTabContentChange
@@ -576,7 +610,9 @@ Unregister report tab content callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -594,8 +630,8 @@ Unregister report tab content callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offUserInfoChange
@@ -608,7 +644,9 @@ Unregister report user info callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -620,14 +658,14 @@ Unregister report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserInfo&gt; | No | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | No | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onCurrentSingleChange
@@ -640,7 +678,9 @@ Register report current single callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -652,14 +692,14 @@ Register report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Single&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onCustomElementsChange
@@ -672,7 +712,9 @@ Register report custom elements change callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -690,8 +732,8 @@ Register report custom elements change callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onDialogCommandChange
@@ -704,7 +746,9 @@ Register report dialog command callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -722,8 +766,8 @@ Register report dialog command callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onDownloadMediaEntityStatusChange
@@ -736,7 +780,9 @@ Register report download media entity status callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -748,14 +794,14 @@ Register report download media entity status callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | Yes | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | Yes | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onExtensionAbilityChange
@@ -768,7 +814,9 @@ Register report extension ability callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -786,8 +834,8 @@ Register report extension ability callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onMediaEntitiesChange
@@ -800,7 +848,9 @@ Register report media entities change callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -812,14 +862,14 @@ Register report media entities change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | Yes | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | Yes | The callback used to handle ('reportMediaEntitiesChange') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onPlaylistChange
@@ -832,7 +882,9 @@ Register report playlist callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -844,14 +896,14 @@ Register report playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Yes | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Yes | The callback used to handle ('reportPlaylist') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onReportExecuteAction
@@ -864,7 +916,9 @@ Register report execute action callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -882,8 +936,8 @@ Register report execute action callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onSettingsChange
@@ -896,7 +950,9 @@ Register report settings callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -908,14 +964,14 @@ Register report settings callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | Yes | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | Yes | The callback used to handle ('reportSettings') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onTabContentChange
@@ -928,7 +984,9 @@ Register report tab content callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -946,8 +1004,8 @@ Register report tab content callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onUserInfoChange
@@ -960,7 +1018,9 @@ Register report user info callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -972,14 +1032,14 @@ Register report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserInfo&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## playForSearch
@@ -992,7 +1052,9 @@ Play for search.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1017,10 +1079,10 @@ Play for search.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## playMediaEntity
 
@@ -1032,7 +1094,9 @@ Play media entity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1056,19 +1120,13 @@ Play media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryCompilation
 
-ArkTS-Dyn:
-```TypeScript
-queryCompilation(compilationId: string, pageIndex: number): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>
 ```
@@ -1077,7 +1135,9 @@ Query compilation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1090,7 +1150,7 @@ Query compilation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | compilationId | string | Yes | compilation id |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
+| pageIndex | int | Yes | page index |
 
 **Return value:**
 
@@ -1102,10 +1162,10 @@ Query compilation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryCompilationByKeyword
 
@@ -1117,7 +1177,9 @@ Query compilation by keyword.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1141,10 +1203,10 @@ Query compilation by keyword.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryCurrentSingle
 
@@ -1156,7 +1218,9 @@ Query current single.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1174,10 +1238,10 @@ Query current single.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryCustomContent
 
@@ -1189,7 +1253,9 @@ Query custom content.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1213,10 +1279,10 @@ Query custom content.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryHotWords
 
@@ -1228,7 +1294,9 @@ Query hot words.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1246,10 +1314,10 @@ Query hot words.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryMainTabs
 
@@ -1261,7 +1329,9 @@ Query main tabs.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1279,10 +1349,10 @@ Query main tabs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryMediaEntity
 
@@ -1294,7 +1364,9 @@ Query media entity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1318,19 +1390,13 @@ Query media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryMediaEntityByKeyword
 
-ArkTS-Dyn:
-```TypeScript
-queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: number): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>
 ```
@@ -1339,7 +1405,9 @@ Query media entity by keyword.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1353,7 +1421,7 @@ Query media entity by keyword.
 | --- | --- | --- | --- |
 | keyword | string | Yes | keyword |
 | searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Yes | search type |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
+| pageIndex | int | Yes | page index |
 
 **Return value:**
 
@@ -1365,10 +1433,10 @@ Query media entity by keyword.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryMediaTabContent
 
@@ -1380,7 +1448,9 @@ Query media tab content.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1404,10 +1474,10 @@ Query media tab content.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryMemberPurchase
 
@@ -1419,7 +1489,9 @@ Query member purchase.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1443,19 +1515,13 @@ Query member purchase.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryPlaylist
 
-ArkTS-Dyn:
-```TypeScript
-queryPlaylist(pageIndex: number, sort: Sort): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>
 ```
@@ -1464,7 +1530,9 @@ Query playlist.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1476,7 +1544,7 @@ Query playlist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
+| pageIndex | int | Yes | page index |
 | sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes | sort type |
 
 **Return value:**
@@ -1489,10 +1557,10 @@ Query playlist.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## queryRecommendMediaEntityList
 
@@ -1504,7 +1572,9 @@ Query recommend media entity list.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1522,10 +1592,10 @@ Query recommend media entity list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## querySearchHistory
 
@@ -1537,7 +1607,9 @@ Query search history.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1555,10 +1627,10 @@ Query search history.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## reportProblemAndAdvice
 
@@ -1570,7 +1642,9 @@ Report problem and advice.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1594,10 +1668,10 @@ Report problem and advice.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## requestDialogInfo
 
@@ -1609,7 +1683,9 @@ Request dialog info.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1634,10 +1710,10 @@ Request dialog info.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## sendCustomCommand
 
@@ -1649,7 +1725,9 @@ Send custom commands to AVMusicTemplate
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1674,9 +1752,9 @@ Send custom commands to AVMusicTemplate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## updateSettings
 
@@ -1688,7 +1766,9 @@ Report settings change.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1712,10 +1792,10 @@ Report settings change.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
 
 ## isDestroy
 
@@ -1729,7 +1809,9 @@ Mark the controller is or not destroy.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1749,7 +1831,9 @@ Unique id of the AVMusicTemplateController.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

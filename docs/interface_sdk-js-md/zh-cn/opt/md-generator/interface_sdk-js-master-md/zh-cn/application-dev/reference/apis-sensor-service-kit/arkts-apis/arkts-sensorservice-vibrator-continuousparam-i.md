@@ -1,8 +1,10 @@
 # ContinuousParam
 
-连续振动参数。用于[VibratorPatternBuilder.addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addContinuousEvent)的options参数，指定长振事件的振动强度、频率、振动调节曲线和通道编号。
+连续振动参数。用于[VibratorPatternBuilder.addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addContinuousEvent)的 options参数，指定长振事件的振动强度、频率、振动调节曲线和通道编号。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-vibrator-interface ContinuousParam--><!--Device-vibrator-interface ContinuousParam-End-->
 
@@ -18,7 +20,9 @@ frequency?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousParam-frequency?: int--><!--Device-ContinuousParam-frequency?: int-End-->
 
@@ -34,7 +38,9 @@ index?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousParam-index?: int--><!--Device-ContinuousParam-index?: int-End-->
 
@@ -50,7 +56,9 @@ intensity?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousParam-intensity?: int--><!--Device-ContinuousParam-intensity?: int-End-->
 
@@ -66,7 +74,9 @@ points?: VibratorCurvePoint[]
 
 **类型：** [VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md)[]
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousParam-points?: VibratorCurvePoint[]--><!--Device-ContinuousParam-points?: VibratorCurvePoint[]-End-->
 

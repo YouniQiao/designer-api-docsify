@@ -4,6 +4,8 @@ Defines a contact's event.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Event--><!--Device-contact-class Event-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -26,6 +28,8 @@ Custom event type, the default value is **0**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-static readonly CUSTOM_LABEL: 0--><!--Device-Event-static readonly CUSTOM_LABEL: 0-End-->
@@ -43,6 +47,8 @@ Anniversary event type, the default value is **1**.
 **Type:** 1
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,6 +68,8 @@ Birthday event, the default value is **3**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-static readonly EVENT_BIRTHDAY: 3--><!--Device-Event-static readonly EVENT_BIRTHDAY: 3-End-->
@@ -79,6 +87,8 @@ Other event type, the default value is **2**.
 **Type:** 2
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +108,8 @@ Invalid event type, the default value is **-1**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
@@ -115,6 +127,8 @@ Event date.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,6 +148,8 @@ Event type.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-labelId?: number--><!--Device-Event-labelId?: number-End-->
@@ -151,6 +167,8 @@ Name of the Event type.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

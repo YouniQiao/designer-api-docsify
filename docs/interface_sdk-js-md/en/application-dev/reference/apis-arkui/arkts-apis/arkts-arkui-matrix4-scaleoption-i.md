@@ -1,12 +1,14 @@
 # ScaleOption
 
-Set scaling parameters
+Describes the scale parameters.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-matrix4-export interface ScaleOption--><!--Device-matrix4-export interface ScaleOption-End-->
+**Deprecated since:** -1
+
+<!--Device-matrix4-interface ScaleOption--><!--Device-matrix4-interface ScaleOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,100 +21,110 @@ import { matrix4 } from '@kit.ArkUI';
 ## centerX
 
 ```TypeScript
-centerX?: double
+centerX?: number
 ```
 
-Transform the x-axis coordinate of the center point.
+X-coordinate of the center point. Unit: px Default value: X-coordinate of the component center Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ScaleOption-centerX?: double--><!--Device-ScaleOption-centerX?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleOption-centerX?: number--><!--Device-ScaleOption-centerX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
 
 ```TypeScript
-centerY?: double
+centerY?: number
 ```
 
-Transform the y-axis coordinate of the center point.
+Y-coordinate of the center point. Unit: px Default value: Y-coordinate of the component center Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ScaleOption-centerY?: double--><!--Device-ScaleOption-centerY?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleOption-centerY?: number--><!--Device-ScaleOption-centerY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
-Zoom factor of the x-axis.
+Scaling multiple along the x-axis. x > 1: The image is scaled up along the x-axis. 0 < x < 1: The image is scaled down along the x-axis. x < 0: The image is scaled in the reverse direction along the x-axis. Default value: **1** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ScaleOption-x?: double--><!--Device-ScaleOption-x?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleOption-x?: number--><!--Device-ScaleOption-x?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
-Zoom factor of the y-axis.
+Scaling multiple along the y-axis. y > 1: The image is scaled up along the y-axis. 0 < y < 1: The image is scaled down along the y-axis. y < 0: The image is scaled in the reverse direction along the y-axis. Default value: **1** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ScaleOption-y?: double--><!--Device-ScaleOption-y?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleOption-y?: number--><!--Device-ScaleOption-y?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z?: double
+z?: number
 ```
 
-Zoom factor of the z-axis.
+Scaling multiple along the z-axis. z > 1: The image is scaled up along the z-axis. 0 < z < 1: The image is scaled down along the z-axis. z < 0: The image is scaled in the reverse direction along the z-axis. Default value: **1** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ScaleOption-z?: double--><!--Device-ScaleOption-z?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleOption-z?: number--><!--Device-ScaleOption-z?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

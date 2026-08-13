@@ -2,9 +2,11 @@
 
 Enumerates the custom ringtone types.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export enum RingtoneType--><!--Device-notificationManager-export enum RingtoneType-End-->
 
@@ -20,9 +22,11 @@ RINGTONE_TYPE_SYSTEM = 0
 
 System ringtone.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneType-RINGTONE_TYPE_SYSTEM = 0--><!--Device-RingtoneType-RINGTONE_TYPE_SYSTEM = 0-End-->
 
@@ -38,9 +42,11 @@ RINGTONE_TYPE_LOCAL = 1
 
 Local ringtone.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneType-RINGTONE_TYPE_LOCAL = 1--><!--Device-RingtoneType-RINGTONE_TYPE_LOCAL = 1-End-->
 
@@ -56,9 +62,11 @@ RINGTONE_TYPE_ONLINE = 2
 
 Online ringtone.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneType-RINGTONE_TYPE_ONLINE = 2--><!--Device-RingtoneType-RINGTONE_TYPE_ONLINE = 2-End-->
 
@@ -74,9 +82,11 @@ RINGTONE_TYPE_NONE = 3
 
 Non-custom ringtone.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneType-RINGTONE_TYPE_NONE = 3--><!--Device-RingtoneType-RINGTONE_TYPE_NONE = 3-End-->
 

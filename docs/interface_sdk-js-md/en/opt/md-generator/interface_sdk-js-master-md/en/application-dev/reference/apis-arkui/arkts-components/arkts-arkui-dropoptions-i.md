@@ -4,6 +4,8 @@ Sets parameters for the drop process.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DropOptions--><!--Device-unnamed-declare interface DropOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@ Sets parameters for the drop process.
 disableDataPrefetch?: boolean
 ```
 
-Whether to disable data prefetching for the drag-and-drop operation. The value **true** means to disable data prefetching for the drag-and-drop operation, and **false** means the opposite. Default value: **false**.
-
-**NOTE：**
-
-Set this parameter to **true** when using [startDataLoading](arkts-arkui-dragevent-i.md#startDataLoading) to enable data prefetching.
+Whether to disable data prefetching for the drag-and-drop operation. The value **true** means to disable data prefetching for the drag-and-drop operation, and **false** means the opposite. Default value: **false**. **NOTE：**Set this parameter to **true** when using [startDataLoading](arkts-arkui-dragevent-i.md#startDataLoading) to enable data prefetching.
 
 **Type:** boolean
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface AnimationController--><!--Device-unnamed-export interface AnimationController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getStatus(): AnimationStatus
 获取当前动图播放的状态。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,6 +89,8 @@ pause(): void
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -129,6 +135,8 @@ resume(): void
 在当前帧恢复播放动图。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -175,6 +183,8 @@ start(): void
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -219,6 +229,8 @@ stop(): void
 停止动图的播放并回到首帧。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

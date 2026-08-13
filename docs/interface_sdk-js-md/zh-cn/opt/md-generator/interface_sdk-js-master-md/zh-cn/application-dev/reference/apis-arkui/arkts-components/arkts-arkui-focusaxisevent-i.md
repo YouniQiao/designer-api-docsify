@@ -6,7 +6,9 @@
 
 **起始版本：** 15
 
-<!--Device-unnamed-declare interface FocusAxisEvent extends BaseEvent--><!--Device-unnamed-declare interface FocusAxisEvent extends BaseEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface FocusAxisEvent--><!--Device-unnamed-declare interface FocusAxisEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ axisMap: Map<AxisModel, number>
 **类型：** Map&lt;[AxisModel](../arkts-apis/arkts-arkui-axismodel-e.md), number&gt;
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +45,8 @@ stopPropagation: Callback<void>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

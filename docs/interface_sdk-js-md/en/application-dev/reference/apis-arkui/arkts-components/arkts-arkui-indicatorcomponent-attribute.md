@@ -2,13 +2,15 @@
 
 Defines the IndicatorComponent attribute functions.
 
-**Inheritance/Implementation:** IndicatorComponentAttribute extends [CommonMethod<IndicatorComponentAttribute>](CommonMethod<IndicatorComponentAttribute>)
+**Inheritance/Implementation:** IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
-<!--Device-unnamed-declare class IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>--><!--Device-unnamed-declare class IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class IndicatorComponentAttribute--><!--Device-unnamed-declare class IndicatorComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Sets the total number of indicator.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +56,8 @@ Called when the index value of the displayed subcomponent is set in the containe
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -79,6 +85,8 @@ Called when setting whether to turn on cyclic sliding.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +116,8 @@ Called when the index value changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -136,6 +146,8 @@ Sets the indicator style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -163,6 +175,8 @@ Called when setting whether to slide vertically.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

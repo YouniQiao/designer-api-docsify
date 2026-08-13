@@ -8,7 +8,9 @@ const CURSOR_DOWN: number
 
 The caret moves downward.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_DOWN: int--><!--Device-inputMethodEngine-const CURSOR_DOWN: int-End-->
 
@@ -22,7 +24,9 @@ const CURSOR_LEFT: number
 
 The caret moves leftward.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_LEFT: int--><!--Device-inputMethodEngine-const CURSOR_LEFT: int-End-->
 
@@ -36,7 +40,9 @@ const CURSOR_RIGHT: number
 
 The caret moves rightward.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_RIGHT: int--><!--Device-inputMethodEngine-const CURSOR_RIGHT: int-End-->
 
@@ -50,7 +56,9 @@ const CURSOR_UP: number
 
 The caret moves upward.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const CURSOR_UP: int--><!--Device-inputMethodEngine-const CURSOR_UP: int-End-->
 
@@ -64,7 +72,9 @@ const DISPLAY_MODE_FULL: number
 
 The edit box is displayed in full screen.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int-End-->
 
@@ -78,7 +88,9 @@ const DISPLAY_MODE_PART: number
 
 The edit box is displayed in half-screen mode.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int-End-->
 
@@ -92,7 +104,9 @@ const ENTER_KEY_TYPE_DONE: number
 
 Key that indicates that a task or input is complete.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int-End-->
 
@@ -106,7 +120,9 @@ const ENTER_KEY_TYPE_GO: number
 
 Key that executes a command or navigates to a specific location.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int-End-->
 
@@ -120,7 +136,9 @@ const ENTER_KEY_TYPE_NEWLINE: number
 
 Key that inserts a new line.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int-End-->
 
@@ -134,7 +152,9 @@ const ENTER_KEY_TYPE_NEXT: number
 
 Key that moves the focus to the next item in a sequence.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int-End-->
 
@@ -148,7 +168,9 @@ const ENTER_KEY_TYPE_PREVIOUS: number
 
 Key that moves the focus to the previous item in a sequence.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int-End-->
 
@@ -162,7 +184,9 @@ const ENTER_KEY_TYPE_SEARCH: number
 
 Key that initiates a search operation.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int-End-->
 
@@ -176,7 +200,9 @@ const ENTER_KEY_TYPE_SEND: number
 
 Key that sends the text to its target.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int-End-->
 
@@ -190,7 +216,9 @@ const ENTER_KEY_TYPE_UNSPECIFIED: number
 
 No function is specified for the key.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int-End-->
 
@@ -204,7 +232,9 @@ const FLAG_SELECTING: number
 
 The edit box is being selected.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const FLAG_SELECTING: int--><!--Device-inputMethodEngine-const FLAG_SELECTING: int-End-->
 
@@ -218,7 +248,9 @@ const FLAG_SINGLE_LINE: number
 
 The edit box allows only single-line input.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int--><!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int-End-->
 
@@ -232,7 +264,9 @@ const OPTION_ASCII: number
 
 ASCII values are allowed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_ASCII: int--><!--Device-inputMethodEngine-const OPTION_ASCII: int-End-->
 
@@ -246,7 +280,9 @@ const OPTION_AUTO_CAP_CHARACTERS: number
 
 Characters are allowed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int-End-->
 
@@ -260,7 +296,9 @@ const OPTION_AUTO_CAP_SENTENCES: number
 
 Sentences are allowed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int-End-->
 
@@ -274,7 +312,9 @@ const OPTION_AUTO_WORDS: number
 
 Words are allowed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int-End-->
 
@@ -288,7 +328,9 @@ const OPTION_MULTI_LINE: number
 
 Multiple lines are allowed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int--><!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int-End-->
 
@@ -302,7 +344,9 @@ const OPTION_NONE: number
 
 No input attribute is specified.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
 
@@ -316,7 +360,9 @@ const OPTION_NO_FULLSCREEN: number
 
 Half-screen style.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
 
@@ -330,7 +376,9 @@ const PATTERN_DATETIME: number
 
 Date edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_DATETIME: int--><!--Device-inputMethodEngine-const PATTERN_DATETIME: int-End-->
 
@@ -344,7 +392,9 @@ const PATTERN_EMAIL: number
 
 Email edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_EMAIL: int--><!--Device-inputMethodEngine-const PATTERN_EMAIL: int-End-->
 
@@ -358,7 +408,9 @@ const PATTERN_NEW_PASSWORD: number
 
 New password edit box. The value is fixed at 11.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -374,7 +426,9 @@ const PATTERN_NULL: number
 
 Any type of edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_NULL: int--><!--Device-inputMethodEngine-const PATTERN_NULL: int-End-->
 
@@ -388,7 +442,9 @@ const PATTERN_NUMBER: number
 
 Number edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER: int-End-->
 
@@ -402,7 +458,9 @@ const PATTERN_NUMBER_DECIMAL: number
 
 Edit box for numbers with decimal points. The value is fixed at 12.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -418,7 +476,9 @@ const PATTERN_ONE_TIME_CODE: number
 
 Verification code edit box. The value is fixed at 13.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -434,7 +494,9 @@ const PATTERN_PASSWORD: number
 
 Password edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD: int-End-->
 
@@ -448,7 +510,9 @@ const PATTERN_PASSWORD_NUMBER: number
 
 Numeric password edit box.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int-End-->
 
@@ -462,7 +526,9 @@ const PATTERN_PASSWORD_SCREEN_LOCK: number
 
 Screen lock password edit box.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int-End-->
 
@@ -476,7 +542,9 @@ const PATTERN_PHONE: number
 
 Phone number edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_PHONE: int--><!--Device-inputMethodEngine-const PATTERN_PHONE: int-End-->
 
@@ -490,7 +558,9 @@ const PATTERN_TEXT: number
 
 Text edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_TEXT: int--><!--Device-inputMethodEngine-const PATTERN_TEXT: int-End-->
 
@@ -504,7 +574,9 @@ const PATTERN_URI: number
 
 URI edit box.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const PATTERN_URI: int--><!--Device-inputMethodEngine-const PATTERN_URI: int-End-->
 
@@ -518,7 +590,9 @@ const PATTERN_USER_NAME: number
 
 User name edit box. The value is fixed at 10.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -534,7 +608,9 @@ const WINDOW_TYPE_INPUT_METHOD_FLOAT: number
 
 The input method is displayed in a floating window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int--><!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int-End-->
 

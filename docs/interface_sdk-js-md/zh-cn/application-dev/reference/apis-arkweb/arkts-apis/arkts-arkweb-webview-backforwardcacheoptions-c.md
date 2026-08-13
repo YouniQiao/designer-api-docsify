@@ -1,10 +1,12 @@
 # BackForwardCacheOptions
 
-This class is used to set back forward cache options.
+前进后退缓存相关设置对象，用来控制Web组件前进后退缓存相关选项。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-class BackForwardCacheOptions--><!--Device-webview-class BackForwardCacheOptions-End-->
 
@@ -16,9 +18,11 @@ This class is used to set back forward cache options.
 constructor()
 ```
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-BackForwardCacheOptions-constructor()--><!--Device-BackForwardCacheOptions-constructor()-End-->
 
@@ -27,36 +31,40 @@ constructor()
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
-Set the maximum size of pages that can cache.Default is 1, max is 50.
+设置每个Web组件允许缓存的最大页面个数。 默认为1，最大可设置为50。 设置为0或负数时，前进后退缓存功能不生效。 Web会根据内存压力对缓存进行回收。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-BackForwardCacheOptions-size: int--><!--Device-BackForwardCacheOptions-size: int-End-->
+**废弃版本：** -1
+
+<!--Device-BackForwardCacheOptions-size: number--><!--Device-BackForwardCacheOptions-size: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## timeToLive
 
 ```TypeScript
-timeToLive: int
+timeToLive: number
 ```
 
-Set the lifetime in seconds in the BackForwardCache.The value should be an integer.Unit: seconds. Default is 600.
+设置每个Web组件允许页面在前进后退缓存中停留的时间。 设置为0或负数时，前进后退缓存功能不生效。 单位：秒。默认值：600。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-BackForwardCacheOptions-timeToLive: int--><!--Device-BackForwardCacheOptions-timeToLive: int-End-->
+**废弃版本：** -1
+
+<!--Device-BackForwardCacheOptions-timeToLive: number--><!--Device-BackForwardCacheOptions-timeToLive: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

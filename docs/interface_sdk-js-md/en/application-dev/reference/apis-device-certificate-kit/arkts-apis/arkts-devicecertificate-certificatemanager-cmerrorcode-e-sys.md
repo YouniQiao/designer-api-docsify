@@ -2,9 +2,11 @@
 
 Enumerates the error codes used in the certificate management APIs.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export enum CMErrorCode--><!--Device-certificateManager-export enum CMErrorCode-End-->
 
@@ -16,13 +18,13 @@ Enumerates the error codes used in the certificate management APIs.
 CM_ERROR_NOT_SYSTEM_APP = 202
 ```
 
-The caller is not a system application.
+The caller is not a system application. This is a system API.
 
-This is a system API.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_NOT_SYSTEM_APP = 202--><!--Device-CMErrorCode-CM_ERROR_NOT_SYSTEM_APP = 202-End-->
 
@@ -41,6 +43,8 @@ Indicates that the password is incorrect.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,15 +12,13 @@ import { startupManager } from '@kit.AbilityKit';
 function removeStartupTaskResult(startupTask: string): void
 ```
 
-Removes the initialization result of a startup task or .so file preloading task.
+Removes the initialization result of a startup task or .so file preloading task. - If a startup task name is passed, the initialization result of that startup task is removed. - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not removed.
 
-- If a startup task name is passed, the initialization result of that startup task is removed.  
-- If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not  
-removed.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +36,7 @@ removed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

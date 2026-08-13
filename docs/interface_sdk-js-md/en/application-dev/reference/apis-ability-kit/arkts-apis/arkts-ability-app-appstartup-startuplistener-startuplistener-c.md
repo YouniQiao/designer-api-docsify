@@ -2,9 +2,11 @@
 
 The module defines the task listener used in [App Startup](../../../application-models/app-startup.md).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
 
@@ -28,6 +30,8 @@ Called when all startup tasks complete.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void--><!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void-End-->
@@ -38,7 +42,7 @@ Called when all startup tasks complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | Yes | Indicates the error during execution. |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | Indicates the error during execution. |
 
 ## Examples
 
@@ -79,9 +83,13 @@ onCompleted?: OnCompletedFn
 
 Called when all startup tasks complete.
 
+**Type:** [OnCompletedFn](arkts-ability-oncompletedfn-t.md)
+
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

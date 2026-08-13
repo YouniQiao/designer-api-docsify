@@ -2,9 +2,11 @@
 
 Enumerates the reminder types.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-export enum ReminderType--><!--Device-reminderAgentManager-export enum ReminderType-End-->
 
@@ -18,9 +20,11 @@ REMINDER_TYPE_TIMER = 0
 
 Countdown reminder.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderType-REMINDER_TYPE_TIMER = 0--><!--Device-ReminderType-REMINDER_TYPE_TIMER = 0-End-->
 
@@ -34,9 +38,11 @@ REMINDER_TYPE_CALENDAR = 1
 
 Calendar reminder.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1--><!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1-End-->
 
@@ -50,9 +56,11 @@ REMINDER_TYPE_ALARM = 2
 
 Alarm reminder.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderType-REMINDER_TYPE_ALARM = 2--><!--Device-ReminderType-REMINDER_TYPE_ALARM = 2-End-->
 

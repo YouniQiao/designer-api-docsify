@@ -2,9 +2,11 @@
 
 Defines the parameters of the PGO configuration file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-installer-export interface PGOParam--><!--Device-installer-export interface PGOParam-End-->
 
@@ -28,9 +30,11 @@ Module name of the bundle.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PGOParam-moduleName: string--><!--Device-PGOParam-moduleName: string-End-->
 
@@ -48,9 +52,11 @@ Path of the PGO configuration file.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PGOParam-pgoFilePath: string--><!--Device-PGOParam-pgoFilePath: string-End-->
 

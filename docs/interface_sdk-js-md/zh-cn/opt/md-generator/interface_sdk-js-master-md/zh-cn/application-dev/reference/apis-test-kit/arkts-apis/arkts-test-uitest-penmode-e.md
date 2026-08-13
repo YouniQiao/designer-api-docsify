@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum PenMode--><!--Device-unnamed-declare enum PenMode-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -17,6 +19,8 @@ HANDWRITING = 0
 手写模式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ AIR_MOUSE = 1
 空鼠模式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-webview-class WebDownloadManager--><!--Device-webview-class WebDownloadManager-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ static resumeDownload(webDownloadItem: WebDownloadItem): void
 恢复一个失败的下载任务。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +38,7 @@ static resumeDownload(webDownloadItem: WebDownloadItem): void
 
 | 错误码ID |
 | --- |
-| [17100018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100018-没有设置一个委托类来接收下载状态) |
+| [17100018](../errorcode-webview.md#17100018-没有设置一个委托类来接收下载状态) |
 
 ## setDownloadDelegate
 
@@ -45,6 +49,8 @@ static setDownloadDelegate(delegate: WebDownloadDelegate): void
 设置用于接收从WebDownloadManager触发的下载进度的委托。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

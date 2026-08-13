@@ -6,7 +6,9 @@ The definition of Album.
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface Album extends MediaEntity--><!--Device-avMusicTemplate-interface Album extends MediaEntity-End-->
+**Deprecated since:** -1
+
+<!--Device-avMusicTemplate-interface Album--><!--Device-avMusicTemplate-interface Album-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,6 +30,8 @@ Total number of episodes in the program
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Album-episodeCounts?: string--><!--Device-Album-episodeCounts?: string-End-->
@@ -45,6 +49,8 @@ Favorite/Subscribe information.
 **Type:** [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,6 +70,8 @@ Play counts.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Album-playCounts: string--><!--Device-Album-playCounts: string-End-->
@@ -81,6 +89,8 @@ Singer name.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

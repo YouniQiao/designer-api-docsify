@@ -2,11 +2,13 @@
 
 用户手势数据。
 
-**继承/实现关系：** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md#UserFacesData)
+**继承/实现关系：** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md#UserFacesData（系统接口）)
 
 **起始版本：** 26.0.0
 
-<!--Device-userStatus-export interface UserGesturesData extends UserFacesData--><!--Device-userStatus-export interface UserGesturesData extends UserFacesData-End-->
+**废弃版本：** -1
+
+<!--Device-userStatus-export interface UserGesturesData--><!--Device-userStatus-export interface UserGesturesData-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -23,6 +25,8 @@ directionAngle?: number[]
 **类型：** number[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ gestureSpeed?: number[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserGesturesData-gestureSpeed?: double[]--><!--Device-UserGesturesData-gestureSpeed?: double[]-End-->
@@ -63,6 +69,8 @@ handPosition?: number[]
 **类型：** number[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +92,8 @@ handType?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserGesturesData-handType?: int--><!--Device-UserGesturesData-handType?: int-End-->
@@ -104,6 +114,8 @@ isHandExist?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserGesturesData-isHandExist?: boolean--><!--Device-UserGesturesData-isHandExist?: boolean-End-->
@@ -123,6 +135,8 @@ motionGesture?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

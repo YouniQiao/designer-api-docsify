@@ -2,7 +2,9 @@
 
 Represents the access records of a permission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-privacyManager-interface PermissionUsedRecord--><!--Device-privacyManager-interface PermissionUsedRecord-End-->
 
@@ -26,7 +28,9 @@ Total number of accesses for this permission, indicating the cumulative number o
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-accessCount: int--><!--Device-PermissionUsedRecord-accessCount: int-End-->
 
@@ -40,13 +44,13 @@ Total number of accesses for this permission, indicating the cumulative number o
 accessRecords: Array<UsedRecordDetail>
 ```
 
-Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
-
-Default value: Query the last 10 successful access records.
+Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL. Default value: Query the last 10 successful access records.
 
 **Type:** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>-End-->
 
@@ -66,6 +70,8 @@ Extension identity, with a maximum length of 48 characters.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionUsedRecord-enhancedIdentity?: string--><!--Device-PermissionUsedRecord-enhancedIdentity?: string-End-->
@@ -80,11 +86,13 @@ Extension identity, with a maximum length of 48 characters.
 lastAccessDuration: number
 ```
 
-Last access duration.Unit: milliseconds.
+Last access duration. Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-lastAccessDuration: long--><!--Device-PermissionUsedRecord-lastAccessDuration: long-End-->
 
@@ -98,11 +106,13 @@ Last access duration.Unit: milliseconds.
 lastAccessTime: number
 ```
 
-Last time when the permission was accessed.Unit: milliseconds.
+Last time when the permission was accessed. Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-lastAccessTime: long--><!--Device-PermissionUsedRecord-lastAccessTime: long-End-->
 
@@ -116,11 +126,13 @@ Last time when the permission was accessed.Unit: milliseconds.
 lastRejectTime: number
 ```
 
-Last time when the access to the permission was rejected.Unit: milliseconds.
+Last time when the access to the permission was rejected. Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-lastRejectTime: long--><!--Device-PermissionUsedRecord-lastRejectTime: long-End-->
 
@@ -138,7 +150,9 @@ Permission name, used to identify the sensitive permission corresponding to the 
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-permissionName: Permissions--><!--Device-PermissionUsedRecord-permissionName: Permissions-End-->
 
@@ -156,7 +170,9 @@ Total number of rejections for this permission, indicating the cumulative number
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-rejectCount: int--><!--Device-PermissionUsedRecord-rejectCount: int-End-->
 
@@ -170,13 +186,13 @@ Total number of rejections for this permission, indicating the cumulative number
 rejectRecords: Array<UsedRecordDetail>
 ```
 
-Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
-
-Default value: Query the last 10 failed or rejected records.
+Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL. Default value: Query the last 10 failed or rejected records.
 
 **Type:** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>-End-->
 

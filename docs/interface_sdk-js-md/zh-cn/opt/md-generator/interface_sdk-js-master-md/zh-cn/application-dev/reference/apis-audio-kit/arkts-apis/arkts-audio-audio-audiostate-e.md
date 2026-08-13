@@ -2,7 +2,9 @@
 
 表示音频状态的枚举。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum AudioState--><!--Device-audio-enum AudioState-End-->
 
@@ -16,7 +18,9 @@ STATE_INVALID = -1
 
 无效状态。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioState-STATE_INVALID = -1--><!--Device-AudioState-STATE_INVALID = -1-End-->
 
@@ -30,7 +34,9 @@ STATE_NEW = 0
 
 创建新实例状态。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioState-STATE_NEW = 0--><!--Device-AudioState-STATE_NEW = 0-End-->
 
@@ -44,7 +50,9 @@ STATE_PREPARED = 1
 
 准备状态。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioState-STATE_PREPARED = 1--><!--Device-AudioState-STATE_PREPARED = 1-End-->
 
@@ -58,7 +66,9 @@ STATE_RUNNING = 2
 
 运行状态。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioState-STATE_RUNNING = 2--><!--Device-AudioState-STATE_RUNNING = 2-End-->
 
@@ -72,7 +82,9 @@ STATE_STOPPED = 3
 
 停止状态。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioState-STATE_STOPPED = 3--><!--Device-AudioState-STATE_STOPPED = 3-End-->
 
@@ -86,7 +98,9 @@ STATE_RELEASED = 4
 
 释放状态。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioState-STATE_RELEASED = 4--><!--Device-AudioState-STATE_RELEASED = 4-End-->
 
@@ -100,7 +114,9 @@ STATE_PAUSED = 5
 
 暂停状态。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioState-STATE_PAUSED = 5--><!--Device-AudioState-STATE_PAUSED = 5-End-->
 

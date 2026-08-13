@@ -6,9 +6,11 @@
 function setRetentionState(docUris: Array<string>): Promise<void>
 ```
 
-设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用Promise异步回调。
+设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景 ，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用Promise异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function setRetentionState(docUris: Array<string>): Promise<void>--><!--Device-dlpPermission-function setRetentionState(docUris: Array<string>): Promise<void>-End-->
 
@@ -30,10 +32,10 @@ function setRetentionState(docUris: Array<string>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100006-非dlp沙箱应用) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 
@@ -57,9 +59,11 @@ dlpPermission.isInSandbox().then(async (inSandbox) => {
 function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用callback异步回调。
+设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景 ，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void--><!--Device-dlpPermission-function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void-End-->
 
@@ -76,10 +80,10 @@ function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100006-非dlp沙箱应用) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 

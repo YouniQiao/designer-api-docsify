@@ -8,7 +8,9 @@ ReplaceSymbolEffect继承自父类SymbolEffect。
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class ReplaceSymbolEffect extends SymbolEffect--><!--Device-unnamed-export declare class ReplaceSymbolEffect extends SymbolEffect-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class ReplaceSymbolEffect--><!--Device-unnamed-export declare class ReplaceSymbolEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,15 +47,15 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 replaceType?: ReplaceEffectType
 ```
 
-替换动效类型。
-
-默认值：ReplaceEffectType.SEQUENTIAL
+替换动效类型。 默认值：ReplaceEffectType.SEQUENTIAL
 
 **类型：** [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,15 +69,15 @@ replaceType?: ReplaceEffectType
 scope?: EffectScope
 ```
 
-动效范围。
-
-默认值：EffectScope.LAYER
+动效范围。 默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

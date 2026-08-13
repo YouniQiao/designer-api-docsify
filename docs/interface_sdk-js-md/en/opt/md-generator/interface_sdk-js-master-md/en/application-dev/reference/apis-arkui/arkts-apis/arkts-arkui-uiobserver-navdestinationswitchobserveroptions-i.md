@@ -4,6 +4,8 @@ Provides the observer options for the page switching event of the **Navigation**
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-uiObserver-export interface NavDestinationSwitchObserverOptions--><!--Device-uiObserver-export interface NavDestinationSwitchObserverOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ ID of the target **Navigation** component.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

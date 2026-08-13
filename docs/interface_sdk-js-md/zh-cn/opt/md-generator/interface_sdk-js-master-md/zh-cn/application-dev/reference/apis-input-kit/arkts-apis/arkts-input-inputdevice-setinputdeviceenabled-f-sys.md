@@ -8,7 +8,9 @@ function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void
 
 设置输入设备的开关状态。以触摸屏为例：关闭时，点击触摸屏设备不响应；开启时，可正常操作触摸屏。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
@@ -35,10 +37,10 @@ function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [3900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900001-指定的设备不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) |
 
 ## 示例
 

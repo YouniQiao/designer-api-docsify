@@ -18,7 +18,7 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Deprecated since:** 8
 
-**Substitutes:** [getAllApplicationInfo](ohos.bundle.bundleManager#getAllApplicationInfo)
+**Substitutes:** getAllApplicationInfo
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -60,13 +60,13 @@ bundle.getApplicationInfos(bundleFlags, userId, (err, data) => {
 function getApplicationInfos(bundleFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void
 ```
 
-Obtains information about installed apps for the user to which the caller belongs.This API uses an asynchronous callback to return the result.
+Obtains information about installed apps for the user to which the caller belongs. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 8
 
-**Substitutes:** [getAllApplicationInfo](ohos.bundle.bundleManager#getAllApplicationInfo)
+**Substitutes:** getAllApplicationInfo
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -112,7 +112,7 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Deprecated since:** 8
 
-**Substitutes:** [getAllApplicationInfo](ohos.bundle.bundleManager#getAllApplicationInfo)
+**Substitutes:** getAllApplicationInfo
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

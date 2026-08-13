@@ -6,6 +6,8 @@ Defines the options for LazyForEach.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LazyForEachOptions--><!--Device-unnamed-declare interface LazyForEachOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Freeze mode for cached custom nodes that have been removed from the component tr
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Memory optimization strategy for LazyForEach.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -62,7 +68,7 @@ Memory optimization strategy for LazyForEach.
 releaseStrategy?: LazyForEachReleaseStrategy
 ```
 
-Resource release strategy for LazyForEach discarded nodes.Default value: LazyForEachReleaseStrategy.BATCH.
+Resource release strategy for LazyForEach discarded nodes. Default value: LazyForEachReleaseStrategy.BATCH.
 
 **Type:** [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md)
 
@@ -71,6 +77,8 @@ Resource release strategy for LazyForEach discarded nodes.Default value: LazyFor
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

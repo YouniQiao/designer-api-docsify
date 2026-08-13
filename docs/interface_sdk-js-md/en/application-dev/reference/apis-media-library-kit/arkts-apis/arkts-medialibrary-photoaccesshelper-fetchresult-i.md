@@ -2,11 +2,13 @@
 
 FetchResult provides APIs to manage the file retrieval result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-photoAccessHelper-interface FetchResult<T>--><!--Device-photoAccessHelper-interface FetchResult<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-interface FetchResult--><!--Device-photoAccessHelper-interface FetchResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,9 +26,11 @@ close(): void
 
 Closes this FetchResult instance to invalidate it. After this instance is released, the APIs in this instance cannot be invoked.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -51,7 +55,9 @@ Checks whether the specified file asset is contained in the result set. This API
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,9 +87,11 @@ getAllObjects(callback: AsyncCallback<Array<T>>): void
 
 Obtains all the file assets in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -95,7 +103,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback function. If all file assets in the result set are successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback function. If all file assets in the result set are successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -112,9 +120,11 @@ getAllObjects(): Promise<Array<T>>
 
 Obtains all the file assets in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -137,21 +147,17 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 ## getCount
 
-ArkTS-Dyn:
-```TypeScript
-getCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCount(): int
 ```
 
 Obtains the total number of files in the result set.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -163,7 +169,7 @@ Obtains the total number of files in the result set.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Total number of files obtained. |
+| int | Total number of files obtained. |
 
 **Error codes:**
 
@@ -180,9 +186,11 @@ getFirstObject(callback: AsyncCallback<T>): void
 
 Obtains the first file asset in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -194,7 +202,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback function. If the first file asset in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback function. If the first file asset in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -211,9 +219,11 @@ getFirstObject(): Promise<T>
 
 Obtains the first file asset in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -236,12 +246,6 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 ## getIndex
 
-ArkTS-Dyn:
-```TypeScript
-getIndex(object: T): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIndex(object: T): Promise<int>
 ```
@@ -250,7 +254,9 @@ Obtains the index of a specified file asset in the result set. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -270,7 +276,7 @@ Obtains the index of a specified file asset in the result set. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. If the object exists in the result set, the corresponding index is returned. Otherwise, **-1** is returned. |
+| Promise&lt;int&gt; | Promise used to return the result. If the object exists in the result set, the corresponding index is returned. Otherwise, **-1** is returned. |
 
 ## getLastObject
 
@@ -280,9 +286,11 @@ getLastObject(callback: AsyncCallback<T>): void
 
 Obtains the last file asset in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -294,7 +302,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback function. If the last file asset in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback function. If the last file asset in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -311,9 +319,11 @@ getLastObject(): Promise<T>
 
 Obtains the last file asset in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -340,13 +350,13 @@ Obtains the last file asset in the result set. This API uses a promise to return
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -358,7 +368,7 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback function. If the next file asset in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback function. If the next file asset in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -373,13 +383,13 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result.
+Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -402,21 +412,17 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 
 ## getObjectByPosition
 
-ArkTS-Dyn:
-```TypeScript
-getObjectByPosition(index: number, callback: AsyncCallback<T>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getObjectByPosition(index: int, callback: AsyncCallback<T>): void
 ```
 
 Obtains a file asset with the specified index in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -428,8 +434,8 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the file asset to obtain. The value starts from **0**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback function. If the file asset with the specified index in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
+| index | int | Yes | Index of the file asset to obtain. The value starts from **0**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback function. If the file asset with the specified index in the result set is successfully obtained, **err** is **undefined**, and **data** is the specific search result. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -440,21 +446,17 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 ## getObjectByPosition
 
-ArkTS-Dyn:
-```TypeScript
-getObjectByPosition(index: number): Promise<T>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getObjectByPosition(index: int): Promise<T>
 ```
 
 Obtains a file asset with the specified index in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -466,7 +468,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the file asset to obtain. The value starts from **0**. |
+| index | int | Yes | Index of the file asset to obtain. The value starts from **0**. |
 
 **Return value:**
 
@@ -483,12 +485,6 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 ## getObjectsByIndexSet
 
-ArkTS-Dyn:
-```TypeScript
-getObjectsByIndexSet(indexSet: number[]): Promise<T[]>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getObjectsByIndexSet(indexSet: int[]): Promise<T[]>
 ```
@@ -497,7 +493,9 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -511,7 +509,7 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indexSet | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Specified index set. |
+| indexSet | int[] | Yes | Specified index set. |
 
 **Return value:**
 
@@ -523,50 +521,7 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1.The indexSet is null, undefined or empty. &lt;br&gt;2.The indexSet length is bigger than 500. &lt;br&gt;3.The max value of indexSet is equal or bigger than the fetch result length. &lt;br&gt;4.The min value of indexSet is less than 0. |
-
-## getRangeObjects
-
-ArkTS-Dyn:
-```TypeScript
-getRangeObjects(index: number, offset: number): Promise<T[]>
-```
-
-ArkTS-Sta:
-```TypeScript
-getRangeObjects(index: int, offset: int): Promise<T[]>
-```
-
-Obtains the file asset array of a specified length (second parameter) from the specified index (first parameter) in the result set. This API uses a promise to return the result.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
-<!--Device-FetchResult-getRangeObjects(index: int, offset: int): Promise<T[]>--><!--Device-FetchResult-getRangeObjects(index: int, offset: int): Promise<T[]>-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the file asset to be obtained. The value must be greater than or equal to 0 and less than the number of objects in the result set. |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of file assets to be obtained. The value must be greater than 0. &lt;br&gt;The sum of **index** and **offset** must be less than the total number of objects in the result set. Otherwise, error code **23800151** is thrown. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;T[]&gt; | Promise array. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application<br>**Applicable version:** 21 - 22 |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: index or offset validity check failed. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1.The indexSet is null, undefined or empty. &lt;br&gt;2.The indexSet length is bigger than 500. &lt;br&gt;3.The max value of indexSet is equal or bigger than the fetch result length. &lt;br&gt;4.The min value of indexSet is less than 0. |
 
 ## isAfterLast
 
@@ -576,9 +531,11 @@ isAfterLast(): boolean
 
 Checks whether the cursor is in the last row of the result set.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

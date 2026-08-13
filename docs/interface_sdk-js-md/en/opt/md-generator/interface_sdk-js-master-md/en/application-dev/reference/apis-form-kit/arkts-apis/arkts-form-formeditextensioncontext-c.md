@@ -1,18 +1,14 @@
 # FormEditExtensionContext
 
-**FormEditExtensionContext**, inherited from   
-[UIExtensionContext](./application/UIExtensionContext:UIExtensionContext), is the context of   
-[FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#FormEditExtensionAbility).
+**FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext), is the context of [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#FormEditExtensionAbility). > **NOTE：**> - The APIs of this module can be used only in the stage model.
 
-> **NOTE：**
+**Inheritance/Implementation:** FormEditExtensionContext extends UIExtensionContext
 
-> - The APIs of this module can be used only in the stage model.
+**Since:** 23
 
-**Inheritance/Implementation:** FormEditExtensionContext extends [UIExtensionContext](UIExtensionContext)
+**Deprecated since:** -1
 
-**Since:** 18
-
-<!--Device-unnamed-declare class FormEditExtensionContext extends UIExtensionContext--><!--Device-unnamed-declare class FormEditExtensionContext extends UIExtensionContext-End-->
+<!--Device-unnamed-declare class FormEditExtensionContext--><!--Device-unnamed-declare class FormEditExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -24,7 +20,9 @@ startSecondPage(want: Want): Promise<AbilityResult>
 
 Starts the widget provider page to be edited. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +46,10 @@ Starts the widget provider page to be edited. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## startUIAbility
 
@@ -62,6 +60,8 @@ startUIAbility(want: Want): Promise<void>
 Starts UIAbility of the application to which a widget belongs. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,11 +85,11 @@ Starts UIAbility of the application to which a widget belongs. This API uses a p
 
 | Error Code ID |
 | --- |
-| [16000130](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16501014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501014-semimodal-widget-editing-page-not-in-foreground) |
-| [16000121](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000121-target-component-is-not-a-uiability) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16000130](../../apis-ability-kit/errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16501014](../errorcode-form.md#16501014-semimodal-widget-editing-page-not-in-foreground) |
+| [16000121](../../apis-ability-kit/errorcode-ability.md#16000121-target-component-is-not-a-uiability) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

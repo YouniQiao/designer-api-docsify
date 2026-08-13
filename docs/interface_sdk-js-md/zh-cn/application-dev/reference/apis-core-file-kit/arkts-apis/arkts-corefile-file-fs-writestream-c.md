@@ -1,7 +1,6 @@
 # WriteStream
 
-文件可写流，需要先通过  
-[fileIo.createWriteStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12)方法来构建一个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)。
+文件可写流，需要先通过 fileIo.createWriteStream方法来构建一 个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)。
 
 **继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)
 
@@ -9,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare class WriteStream extends stream.Writable--><!--Device-unnamed-declare class WriteStream extends stream.Writable-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class WriteStream--><!--Device-unnamed-declare class WriteStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -24,6 +25,8 @@ close(): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
@@ -60,6 +63,8 @@ The WriteStream constructor.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -75,6 +80,8 @@ seek(offset: number, whence?: WhenceType): number
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
 
@@ -98,7 +105,7 @@ seek(offset: number, whence?: WhenceType): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
@@ -126,6 +133,8 @@ readonly bytesWritten: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -143,6 +152,8 @@ readonly path: string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 

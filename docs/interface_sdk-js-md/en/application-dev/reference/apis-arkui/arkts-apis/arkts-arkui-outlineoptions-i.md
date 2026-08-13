@@ -6,6 +6,8 @@ Defines the options of outline.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OutlineOptions--><!--Device-unnamed-declare interface OutlineOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,11 +20,13 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the outline color.
 
-**Type:** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** [EdgeColors](arkts-arkui-edgecolors-t.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ radius?: OutlineRadiuses | Dimension
 
 Defines the outline radius.
 
-**Type:** [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| [Dimension](arkts-arkui-dimension-t.md)
+**Type:** [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,11 +72,13 @@ style?: EdgeOutlineStyles | OutlineStyle
 
 Defines the outline style.
 
-**Type:** [EdgeOutlineStyles](arkts-arkui-units-edgeoutlinestyles-i.md) \| OutlineStyle
+**Type:** [EdgeOutlineStyles](arkts-arkui-edgeoutlinestyles-t.md) \| OutlineStyle
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,11 +98,13 @@ width?: EdgeOutlineWidths | Dimension
 
 Defines the outline width.
 
-**Type:** [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| [Dimension](arkts-arkui-dimension-t.md)
+**Type:** [EdgeOutlineWidths](arkts-arkui-edgeoutlinewidths-t.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

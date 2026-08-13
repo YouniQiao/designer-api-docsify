@@ -16,6 +16,8 @@ Pushes the component and data to the component user.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-pluginComponentManager-function push(param: PushParameters, callback: AsyncCallback<void>): void--><!--Device-pluginComponentManager-function push(param: PushParameters, callback: AsyncCallback<void>): void-End-->

@@ -1,13 +1,10 @@
 # PermissionDef（系统接口）
 
-[module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息，通过接口  
-[bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getPermissionDef)获取。
+[module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息，通过接口 [bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getPermissionDef（系统接口）) 获取。 > **说明：** > > 本模块为系统接口。
 
-> **说明：**
-> 
-> 本模块为系统接口。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
@@ -25,7 +22,9 @@ readonly descriptionId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionDef-readonly descriptionId: long--><!--Device-PermissionDef-readonly descriptionId: long-End-->
 
@@ -43,7 +42,9 @@ readonly grantMode: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionDef-readonly grantMode: int--><!--Device-PermissionDef-readonly grantMode: int-End-->
 
@@ -61,7 +62,9 @@ readonly labelId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionDef-readonly labelId: long--><!--Device-PermissionDef-readonly labelId: long-End-->
 
@@ -79,7 +82,9 @@ readonly permissionName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionDef-readonly permissionName: string--><!--Device-PermissionDef-readonly permissionName: string-End-->
 

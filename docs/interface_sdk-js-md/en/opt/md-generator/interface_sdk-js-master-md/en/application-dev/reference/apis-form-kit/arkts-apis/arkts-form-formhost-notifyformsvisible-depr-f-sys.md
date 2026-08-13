@@ -12,7 +12,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -43,7 +43,7 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

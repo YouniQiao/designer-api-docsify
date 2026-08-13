@@ -16,7 +16,9 @@ Sets the output type for hilog for the domainID list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -29,7 +31,7 @@ Sets the output type for hilog for the domainID list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) | Yes | output type for hilog. |
-| domainIDs | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | domainID list, if isExclude is true, the output type for the domainID list is set to DEFAULT, and the output type for the remaining domainIDs is set to the currently specified output type; if isExclude is false, the output type for the domainID list is set to the currently specified output type, and the output type for the remaining domainIDs is set to DEFAULT |
+| domainIDs | Array&lt;int&gt; | Yes | domainID list, if isExclude is true, the output type for the domainID list is set to DEFAULT, and the output type for the remaining domainIDs is set to the currently specified output type; if isExclude is false, the output type for the domainID list is set to the currently specified output type, and the output type for the remaining domainIDs is set to DEFAULT |
 | isExclude | boolean | Yes | determine whether the domainIDs take effect for the currently specified output type. |
 
 **Return value:**

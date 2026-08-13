@@ -34,5 +34,5 @@
 
 | 名称 |
 | --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainer) |
-| [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainerinstance) |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#SelectionContainer) |
+| [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#SelectionContainerInstance) |

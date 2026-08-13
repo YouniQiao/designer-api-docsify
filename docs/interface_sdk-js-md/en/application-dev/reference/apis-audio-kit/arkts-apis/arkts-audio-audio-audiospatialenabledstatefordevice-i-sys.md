@@ -2,9 +2,11 @@
 
 This interface is used to notify the listener of any device Spatialization or Head Tracking enable or Adaptive Spatial Rendering state change.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioSpatialEnabledStateForDevice--><!--Device-audio-interface AudioSpatialEnabledStateForDevice-End-->
 
@@ -28,9 +30,11 @@ Audio device description.
 
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatialEnabledStateForDevice-deviceDescriptor: AudioDeviceDescriptor--><!--Device-AudioSpatialEnabledStateForDevice-deviceDescriptor: AudioDeviceDescriptor-End-->
 
@@ -48,9 +52,11 @@ Spatialization or Head Tracking or Adaptive Spatial Rendering enable state.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatialEnabledStateForDevice-enabled: boolean--><!--Device-AudioSpatialEnabledStateForDevice-enabled: boolean-End-->
 

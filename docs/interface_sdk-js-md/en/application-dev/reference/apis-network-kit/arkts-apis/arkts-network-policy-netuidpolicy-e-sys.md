@@ -6,6 +6,8 @@ Uid Specifies the Internet access policy in background mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-policy-export enum NetUidPolicy--><!--Device-policy-export enum NetUidPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -23,6 +25,8 @@ Default net policy.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-NetUidPolicy-NET_POLICY_NONE = 0--><!--Device-NetUidPolicy-NET_POLICY_NONE = 0-End-->
 
@@ -42,6 +46,8 @@ Allow on metered networks when app in background.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-NetUidPolicy-NET_POLICY_ALLOW_METERED_BACKGROUND = 1 << 0--><!--Device-NetUidPolicy-NET_POLICY_ALLOW_METERED_BACKGROUND = 1 << 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -59,6 +65,8 @@ Reject on metered networks when app in background.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-NetUidPolicy-NET_POLICY_REJECT_METERED_BACKGROUND = 1 << 1--><!--Device-NetUidPolicy-NET_POLICY_REJECT_METERED_BACKGROUND = 1 << 1-End-->
 

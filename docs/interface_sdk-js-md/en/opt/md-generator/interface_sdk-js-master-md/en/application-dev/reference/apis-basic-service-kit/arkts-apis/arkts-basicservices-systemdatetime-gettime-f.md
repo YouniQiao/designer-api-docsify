@@ -14,7 +14,9 @@ function getTime(isNanoseconds?: boolean): number
 
 Obtains the time elapsed since the Unix epoch. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long-End-->
 

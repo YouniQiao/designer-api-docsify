@@ -12,15 +12,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function moveFileSync(src: string, dest: string, mode?: number): void
 ```
 
-Moves a file. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> This API is not supported in a distributed directory.
+Moves a file. This API returns the result synchronously. > **NOTE：**> > This API is not supported in a distributed directory.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function moveFileSync(src: string, dest: string, mode?: number): void--><!--Device-unnamed-declare function moveFileSync(src: string, dest: string, mode?: number): void-End-->
 

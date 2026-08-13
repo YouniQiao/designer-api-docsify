@@ -2,7 +2,9 @@
 
 Provides utilities for ECC key parameter generation and point conversion based on the specified elliptic curve.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-class ECCKeyUtil--><!--Device-cryptoFramework-class ECCKeyUtil-End-->
 
@@ -22,19 +24,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 ```
 
-Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported.
+Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported. > **NOTE：**> > According to section 2.2 in RFC 5480: > 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate. > 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented > as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the > coordinate y is an even number).
 
-> **NOTE：**
-> 
-> According to section 2.2 in RFC 5480:
-> 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate.
-> 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented
-> as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the
-> coordinate y is an even number).
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point--><!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point-End-->
 
@@ -57,9 +53,9 @@ Converts the specified point data into a **Point** object based on the curve nam
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -81,11 +77,11 @@ console.info('returnPoint: ' + returnPoint.x.toString(16));
 static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 ```
 
-Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see  
-[ECC](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#ecc) and  
-[SM2](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#sm2).
+Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see ECC and SM2.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -111,9 +107,9 @@ Generates common parameters for an asymmetric key pair based on the specified na
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -137,9 +133,11 @@ static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Ar
 
 Obtains the point data in the specified format from a **Point** object. Currently, compressed and uncompressed point data is supported.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array--><!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array-End-->
 
@@ -163,9 +161,9 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 

@@ -4,6 +4,8 @@ Defines an intent filter, which specifies the criteria for selecting target inte
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-insightIntentDriver-interface InsightIntentInfoFilter--><!--Device-insightIntentDriver-interface InsightIntentInfoFilter-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -28,6 +30,8 @@ Bundle name of the application to which the intent belongs.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfoFilter-bundleName?: string--><!--Device-InsightIntentInfoFilter-bundleName?: string-End-->
@@ -42,12 +46,13 @@ Bundle name of the application to which the intent belongs.
 intentFlags: number
 ```
 
-Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo)). It is used to query full or brief intent information. For details, see  
-[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#GetInsightIntentFlag).
+Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo-(System-API))). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#GetInsightIntentFlag-(System-API)).
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,6 +74,8 @@ Intent name.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfoFilter-intentName?: string--><!--Device-InsightIntentInfoFilter-intentName?: string-End-->
@@ -89,6 +96,8 @@ Module name of the application to which the intent belongs.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfoFilter-moduleName?: string--><!--Device-InsightIntentInfoFilter-moduleName?: string-End-->
@@ -103,15 +112,13 @@ Module name of the application to which the intent belongs.
 userId?: number
 ```
 
-ID of the user to which the intent belongs.
-
-**NOTE：**
-
-If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+ID of the user to which the intent belongs. **NOTE：**If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

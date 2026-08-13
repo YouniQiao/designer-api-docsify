@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface MenuAlignParams--><!--Device-unnamed-export interface MenuAlignParams-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ alignType: MenuAlignType
 **类型：** [MenuAlignType](../arkts-components/arkts-arkui-menualigntype-e.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ offset?: Offset
 **类型：** Offset
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

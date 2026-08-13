@@ -2,7 +2,9 @@
 
 A class for querying depth fusion capabilities.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface DepthFusionQuery--><!--Device-camera-interface DepthFusionQuery-End-->
 
@@ -24,7 +26,9 @@ getDepthFusionThreshold(): Array<number>
 
 Obtains the depth fusion threshold.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>--><!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>-End-->
 
@@ -42,8 +46,8 @@ Obtains the depth fusion threshold.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -69,7 +73,9 @@ isDepthFusionSupported(): boolean
 
 Checks whether depth fusion is supported.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean--><!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean-End-->
 
@@ -87,8 +93,8 @@ Checks whether depth fusion is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

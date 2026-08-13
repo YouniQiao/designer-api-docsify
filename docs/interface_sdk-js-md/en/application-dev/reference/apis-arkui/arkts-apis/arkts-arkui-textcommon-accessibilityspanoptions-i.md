@@ -6,6 +6,8 @@ Configuration for Accessibility .
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface AccessibilitySpanOptions--><!--Device-unnamed-export declare interface AccessibilitySpanOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Configuration for Accessibility .
 accessibilityDescription?: ResourceStr
 ```
 
-Indicates more detailed description text of component,which is used to further describe the component.
+Indicates more detailed description text of component, which is used to further describe the component.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Set accessibility level.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilitySpanOptions-accessibilityLevel?: string--><!--Device-AccessibilitySpanOptions-accessibilityLevel?: string-End-->
@@ -65,6 +71,8 @@ Indicates the accessibility text of component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

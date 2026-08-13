@@ -4,6 +4,8 @@ Defines sheet size type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SheetSize--><!--Device-unnamed-declare enum SheetSize-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ MEDIUM = 0
 Defines the sheet size medium height type. The height is half the screen height
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Defines the sheet size large height type. The height is almost screen height.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -53,6 +59,8 @@ FIT_CONTENT = 2
 Defines the sheet size fit content height type. The height fit content.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

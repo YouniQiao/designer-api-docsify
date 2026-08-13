@@ -8,7 +8,9 @@ Callback function on unlocking the screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-type ScreenUnlockCallback = (finishCallback: WindowAnimationFinishedCallback) => void--><!--Device-windowAnimationManager-type ScreenUnlockCallback = (finishCallback: WindowAnimationFinishedCallback) => void-End-->
 

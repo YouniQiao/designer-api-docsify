@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-update-export enum FactoryResetScope--><!--Device-update-export enum FactoryResetScope-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -19,6 +21,8 @@ DATA = 1
 用户数据。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ DATA_AND_OS = 2
 用户数据和操作系统。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

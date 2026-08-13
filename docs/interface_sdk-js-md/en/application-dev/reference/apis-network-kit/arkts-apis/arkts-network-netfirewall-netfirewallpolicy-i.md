@@ -6,6 +6,8 @@ Firewall policy.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-interface NetFirewallPolicy--><!--Device-netFirewall-interface NetFirewallPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -30,6 +32,8 @@ Inbound connections are allowed or denied by default.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallPolicy-inAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-inAction: FirewallRuleAction-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -48,6 +52,8 @@ Whether the firewall is open.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallPolicy-isOpen: boolean--><!--Device-NetFirewallPolicy-isOpen: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -65,6 +71,8 @@ Outbound connections are allowed or denied by default.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallPolicy-outAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-outAction: FirewallRuleAction-End-->
 

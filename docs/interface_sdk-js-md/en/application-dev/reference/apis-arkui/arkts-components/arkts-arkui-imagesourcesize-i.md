@@ -6,6 +6,8 @@ Defines source size of image.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ImageSourceSize--><!--Device-unnamed-interface ImageSourceSize-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines source size of image.
 height: number
 ```
 
-Image decode height. The unit of the number type is vp.Anonymous Object Rectification.
+Image decode height. The unit of the number type is vp. Anonymous Object Rectification.
 
 **Type:** number
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -38,13 +42,15 @@ Image decode height. The unit of the number type is vp.Anonymous Object Rectific
 width: number
 ```
 
-Image decode width. The unit of the number type is vp.Anonymous Object Rectification.
+Image decode width. The unit of the number type is vp. Anonymous Object Rectification.
 
 **Type:** number
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

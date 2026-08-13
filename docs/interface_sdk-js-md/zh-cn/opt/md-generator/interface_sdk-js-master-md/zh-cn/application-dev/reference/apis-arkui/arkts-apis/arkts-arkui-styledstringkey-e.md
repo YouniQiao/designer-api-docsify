@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum StyledStringKey--><!--Device-unnamed-declare enum StyledStringKey-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ FONT = 0
 字体样式键。[TextStyle](arkts-arkui-textstyle-c.md#TextStyle)所属键。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ DECORATION = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ BASELINE_OFFSET = 2
 文本基线偏移量样式键。[BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md#BaselineOffsetStyle)所属键。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +80,8 @@ LETTER_SPACING = 3
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -89,6 +99,8 @@ TEXT_SHADOW = 4
 文本阴影样式键。[TextShadowStyle](arkts-arkui-textshadowstyle-c.md#TextShadowStyle)所属键。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,6 +120,8 @@ LINE_HEIGHT = 5
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -125,6 +139,8 @@ BACKGROUND_COLOR = 6
 文本背景色样式键。[BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md#BackgroundColorStyle)所属键。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -144,6 +160,8 @@ URL = 7
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -161,6 +179,8 @@ LINE_SPACING = 8
 文本行间距样式键。[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md#LineSpacingStyle)所属键。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -180,6 +200,8 @@ GESTURE = 100
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -197,6 +219,8 @@ PARAGRAPH_STYLE = 200
 段落样式键。[ParagraphStyle](arkts-arkui-paragraphstyle-c.md#ParagraphStyle)所属键。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -216,6 +240,8 @@ IMAGE = 300
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -234,6 +260,8 @@ CUSTOM_SPAN = 400
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -251,6 +279,8 @@ USER_DATA = 500
 UserDataSpan键。[UserDataSpan](arkts-arkui-userdataspan-c.md#UserDataSpan)所属键。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

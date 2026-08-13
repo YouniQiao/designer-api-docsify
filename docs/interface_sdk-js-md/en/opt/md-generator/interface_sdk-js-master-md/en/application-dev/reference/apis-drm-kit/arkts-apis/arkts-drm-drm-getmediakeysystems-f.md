@@ -14,7 +14,9 @@ function getMediaKeySystems(): MediaKeySystemDescription[]
 
 Obtains the list of plugins supported by the device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -32,8 +34,8 @@ Obtains the list of plugins supported by the device.
 
 | Error Code ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## Examples
 

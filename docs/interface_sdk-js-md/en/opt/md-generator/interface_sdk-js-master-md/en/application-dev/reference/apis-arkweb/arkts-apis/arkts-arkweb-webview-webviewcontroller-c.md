@@ -1,9 +1,10 @@
 # WebviewController
 
-Represents a **WebviewController** object used to control various behaviors of **Web** components, including page navigation, lifecycle status, and JavaScript interaction. A **WebviewController** object can control only one  
-**Web** component, and the APIs (except static APIs) in the **WebviewController** can be invoked only after it has been bound to the target **Web** component.
+Represents a **WebviewController** object used to control various behaviors of **Web** components, including page navigation, lifecycle status, and JavaScript interaction. A **WebviewController** object can control only one **Web** component, and the APIs (except static APIs) in the **WebviewController** can be invoked only after it has been bound to the target **Web** component.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebviewController--><!--Device-webview-class WebviewController-End-->
 
@@ -25,6 +26,8 @@ Checks whether the web page can go back.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-accessBackward(): boolean--><!--Device-WebviewController-accessBackward(): boolean-End-->
@@ -41,7 +44,7 @@ Checks whether the web page can go back.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## accessForward
 
@@ -52,6 +55,8 @@ accessForward(): boolean
 Checks whether the web page can go forward.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -69,7 +74,7 @@ Checks whether the web page can go forward.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## accessStep
 
@@ -80,6 +85,8 @@ accessStep(step: number): boolean
 Checks whether the web page can go back or forward the given number of steps.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -103,8 +110,8 @@ Checks whether the web page can go back or forward the given number of steps.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## addIntelligentTrackingPreventionBypassingList
 
@@ -115,6 +122,8 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 Add bypassing hosts for Intelligent Tracking Prevention.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -132,8 +141,8 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## avoidVisibleViewportBottom
 
@@ -141,25 +150,11 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 avoidVisibleViewportBottom(avoidHeight: number): void
 ```
 
-Sets the bottom avoidance height of the visible viewport on the web page.
-
-> **NOTE：**
-> 
-> - The valid value range of **avoidHeight** is [0, height of the **Web** component]. Values outside this range
-> are adjusted to the nearest boundary.
-> 
-> - When a non-zero value is specified for **avoidHeight**, the position and size of the **Web** component remain
-> unchanged, but the visible viewport shift upwards by the specified height, lifting the web page content by the
-> **avoidHeight**. This API is used to customize the avoidance area at the bottom of a web page. It is not
-> recommended that this API be used when the editable area of the web page is tapped to pull up the keyboard. If
-> this API is used in this scenario, the keyboard avoidance mode is set to **OVERLAYS_CONTENT**.
-> 
-> - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance
-> mode is specified by
-> [keyboardAvoidMode()](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#keyboardavoidmode12)
-> .
+Sets the bottom avoidance height of the visible viewport on the web page. > **NOTE：**> > - The valid value range of **avoidHeight** is [0, height of the **Web** component]. Values outside this range > are adjusted to the nearest boundary. > > - When a non-zero value is specified for **avoidHeight**, the position and size of the **Web** component remain > unchanged, but the visible viewport shift upwards by the specified height, lifting the web page content by the > **avoidHeight**. This API is used to customize the avoidance area at the bottom of a web page. It is not > recommended that this API be used when the editable area of the web page is tapped to pull up the keyboard. If > this API is used in this scenario, the keyboard avoidance mode is set to **OVERLAYS_CONTENT**. > > - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance > mode is specified by > [keyboardAvoidMode()](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#keyboardavoidmode12) > .
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void--><!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void-End-->
 
@@ -175,8 +170,8 @@ Sets the bottom avoidance height of the visible viewport on the web page.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## backOrForward
 
@@ -187,6 +182,8 @@ backOrForward(step: number): void
 Goes forward or back backOrForward in the history of the web page.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -204,8 +201,8 @@ Goes forward or back backOrForward in the history of the web page.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## backward
 
@@ -217,6 +214,8 @@ Goes back in the history of the web page.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-backward(): void--><!--Device-WebviewController-backward(): void-End-->
@@ -227,7 +226,7 @@ Goes back in the history of the web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearBlanklessLoadingCache
 
@@ -235,15 +234,11 @@ Goes back in the history of the web page.
 static clearBlanklessLoadingCache(keys?: Array<string>) : void
 ```
 
-Clears the blankless loading cache of the page with a specified key value.
-
-In an applet or web application, when the content changes significantly during page loading, an obvious scene change may occur. If you are concerned about this change, you can use this API to clear the page cache.
-
-> **NOTE：**
-> 
-> - After the page is cleared, the optimization effect appears when the page is loaded for the third time.
+Clears the blankless loading cache of the page with a specified key value. In an applet or web application, when the content changes significantly during page loading, an obvious scene change may occur. If you are concerned about this change, you can use this API to clear the page cache. > **NOTE：**> > - After the page is cleared, the optimization effect appears when the page is loaded for the third time.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void--><!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void-End-->
 
@@ -259,7 +254,7 @@ In an applet or web application, when the content changes significantly during p
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## clearClientAuthenticationCache
 
@@ -271,6 +266,8 @@ Clears the client authentication certificate cache in the Web.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-clearClientAuthenticationCache(): void--><!--Device-WebviewController-clearClientAuthenticationCache(): void-End-->
@@ -281,7 +278,7 @@ Clears the client authentication certificate cache in the Web.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearHistory
 
@@ -293,6 +290,8 @@ Clears the history in the Web.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-clearHistory(): void--><!--Device-WebviewController-clearHistory(): void-End-->
@@ -303,7 +302,7 @@ Clears the history in the Web.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearHostIP
 
@@ -314,6 +313,8 @@ static clearHostIP(hostName: string): void
 Clear the host name IP address.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -331,7 +332,7 @@ Clear the host name IP address.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## clearIntelligentTrackingPreventionBypassingList
 
@@ -343,6 +344,8 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void--><!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void-End-->
@@ -353,7 +356,7 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## clearMatches
 
@@ -365,6 +368,8 @@ Clears the matches found through [searchAllAsync](#searchAllAsync).
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-clearMatches(): void--><!--Device-WebviewController-clearMatches(): void-End-->
@@ -375,7 +380,7 @@ Clears the matches found through [searchAllAsync](#searchAllAsync).
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearPrefetchedResource
 
@@ -383,10 +388,11 @@ Clears the matches found through [searchAllAsync](#searchAllAsync).
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by  
-[prefetchResource](#prefetchResource).
+Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by [prefetchResource](#prefetchResource).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -410,6 +416,8 @@ Clear all web service worker scheme handlers.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void--><!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void-End-->
@@ -426,6 +434,8 @@ Clears the ssl cache in the Web.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-clearSslCache(): void--><!--Device-WebviewController-clearSslCache(): void-End-->
@@ -436,7 +446,7 @@ Clears the ssl cache in the Web.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearWebSchemeHandler
 
@@ -448,6 +458,8 @@ Clear all web scheme handlers for related web component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-clearWebSchemeHandler(): void--><!--Device-WebviewController-clearWebSchemeHandler(): void-End-->
@@ -458,7 +470,7 @@ Clear all web scheme handlers for related web component.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## closeAllMediaPresentations
 
@@ -470,6 +482,8 @@ Closes all full-screen videos on a web page.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-closeAllMediaPresentations(): void--><!--Device-WebviewController-closeAllMediaPresentations(): void-End-->
@@ -480,7 +494,7 @@ Closes all full-screen videos on a web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## closeCamera
 
@@ -492,6 +506,8 @@ Disables the camera capture of the current web page.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-closeCamera(): void--><!--Device-WebviewController-closeCamera(): void-End-->
@@ -502,7 +518,7 @@ Disables the camera capture of the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## constructor
 
@@ -513,6 +529,8 @@ constructor(webTag?: string)
 Constructs a WebviewController object.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -536,6 +554,8 @@ Obtains the data stream of a specified web page using an asynchronous callback.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void-End-->
@@ -553,8 +573,8 @@ Obtains the data stream of a specified web page using an asynchronous callback.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## createPdf
 
@@ -565,6 +585,8 @@ createPdf(configuration: PdfConfiguration): Promise<PdfData>
 Obtains the data stream of a specified web page using a promise.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -588,8 +610,8 @@ Obtains the data stream of a specified web page using a promise.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## createWebMessagePorts
 
@@ -600,6 +622,8 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 Create web message ports
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -623,8 +647,8 @@ Create web message ports
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## createWebPrintDocumentAdapter
 
@@ -635,6 +659,8 @@ createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 Creates a **PrintDocumentAdapter** instance to provide content for printing.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter--><!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter-End-->
 
@@ -656,8 +682,8 @@ Creates a **PrintDocumentAdapter** instance to provide content for printing.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## customizeSchemes
 
@@ -665,9 +691,11 @@ Creates a **PrintDocumentAdapter** instance to provide content for printing.
 static customizeSchemes(schemes: Array<WebCustomScheme>): void
 ```
 
-Grant the Web kernel the permission to initiate cross-domain requests for custom protocol URLs and to initiate fetch requests for custom protocol URLs. When the Web performs a cross-domain fetch of a custom protocol URL,this fetch request can be intercepted by the onInterceptRequest event interface, allowing developers to further process the request. It is recommended to call this interface before any Web component is initialized.
+Grant the Web kernel the permission to initiate cross-domain requests for custom protocol URLs and to initiate fetch requests for custom protocol URLs. When the Web performs a cross-domain fetch of a custom protocol URL, this fetch request can be intercepted by the onInterceptRequest event interface, allowing developers to further process the request. It is recommended to call this interface before any Web component is initialized.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -685,8 +713,8 @@ Grant the Web kernel the permission to initiate cross-domain requests for custom
 
 | Error Code ID |
 | --- |
-| [17100020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## customizeSchemes
 
@@ -694,9 +722,11 @@ Grant the Web kernel the permission to initiate cross-domain requests for custom
 static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void
 ```
 
-Grant the Web kernel the permission to initiate cross-domain requests for custom protocol URLs and to initiate fetch requests for custom protocol URLs. When the Web performs a cross-domain fetch of a custom protocol URL,this fetch request can be intercepted by the onInterceptRequest event interface, allowing developers to further process the request. It is recommended to call this interface before any Web component is initialized.
+Grant the Web kernel the permission to initiate cross-domain requests for custom protocol URLs and to initiate fetch requests for custom protocol URLs. When the Web performs a cross-domain fetch of a custom protocol URL, this fetch request can be intercepted by the onInterceptRequest event interface, allowing developers to further process the request. It is recommended to call this interface before any Web component is initialized.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -715,8 +745,8 @@ Grant the Web kernel the permission to initiate cross-domain requests for custom
 
 | Error Code ID |
 | --- |
-| [17100020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## deleteJavaScriptRegister
 
@@ -727,6 +757,8 @@ deleteJavaScriptRegister(name: string): void
 Deletes a registered JavaScript object with given name.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -744,9 +776,9 @@ Deletes a registered JavaScript object with given name.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100008](../errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) |
 
 ## enableAdsBlock
 
@@ -757,6 +789,8 @@ enableAdsBlock(enable: boolean): void
 Enable the ability to block Ads, disabled by default.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -774,9 +808,9 @@ Enable the ability to block Ads, disabled by default.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## enableAdvancedSecurityMode
 
@@ -787,6 +821,8 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 Enable the application disable some features such as PDFViewer to enhance the security level of web application
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -806,9 +842,11 @@ Enable the application disable some features such as PDFViewer to enhance the se
 static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 ```
 
-Enable the BackForwardCache and indicate features that are allowed to enter BackForwardCache.Default is disabled.
+Enable the BackForwardCache and indicate features that are allowed to enter BackForwardCache. Default is disabled.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void--><!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void-End-->
 
@@ -830,6 +868,8 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void--><!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void-End-->
@@ -846,9 +886,9 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## enablePrivateNetworkAccess
 
@@ -856,9 +896,11 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 static enablePrivateNetworkAccess(enable: boolean): void
 ```
 
-After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight request before issuing any sub-resource private network requests to request explicit permission from the target server. After disable PrivateNetworkAccess, ArkWeb will no longer check whether the private network request is legitimate.By default, PrivateNetworkAccess feature is enabled.
+After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight request before issuing any sub-resource private network requests to request explicit permission from the target server. After disable PrivateNetworkAccess, ArkWeb will no longer check whether the private network request is legitimate. By default, PrivateNetworkAccess feature is enabled.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void--><!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void-End-->
 
@@ -876,9 +918,11 @@ After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight req
 enableSafeBrowsing(enable: boolean): void
 ```
 
-Enable the ability to check website security risks.Illegal and fraudulent websites are mandatory enabled and can't be disabled by this function.
+Enable the ability to check website security risks. Illegal and fraudulent websites are mandatory enabled and can't be disabled by this function.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -896,7 +940,7 @@ Enable the ability to check website security risks.Illegal and fraudulent websit
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## enableWholeWebPageDrawing
 
@@ -907,6 +951,8 @@ static enableWholeWebPageDrawing(): void
 Enables the full drawing capability for the web page. This API works only during **Web** component initialization.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -923,6 +969,8 @@ executeAIPageCommand(command: string): Promise<string>
 Asynchronously executes AI page command operations.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -946,8 +994,8 @@ Asynchronously executes AI page command operations.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100024-aipagecommand-format-error) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100024](../errorcode-webview.md#17100024-aipagecommand-format-error) |
 
 ## forward
 
@@ -959,6 +1007,8 @@ Goes forward in the history of the web page.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-forward(): void--><!--Device-WebviewController-forward(): void-End-->
@@ -969,7 +1019,7 @@ Goes forward in the history of the web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getActiveWebEngineVersion
 
@@ -980,6 +1030,8 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 Obtains the current ArkWeb kernel version.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion--><!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion-End-->
 
@@ -1001,6 +1053,8 @@ Get whether webviewController is attached to a web component.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-WebviewController-getAttachState(): ControllerAttachState--><!--Device-WebviewController-getAttachState(): ControllerAttachState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1017,11 +1071,11 @@ Get whether webviewController is attached to a web component.
 getBackForwardEntries(): BackForwardList
 ```
 
-Get back forward stack list from current webview.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;onLoadIntercept is triggered when the loading starts. At this time, no entry is generated.Therefore, the entries obtained by calling **getBackForwardEntries** in **onLoadIntercept**does not include the page that is being loaded.&lt;/p&gt;
+Get back forward stack list from current webview. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; onLoadIntercept is triggered when the loading starts. At this time, no entry is generated. Therefore, the entries obtained by calling **getBackForwardEntries** in **onLoadIntercept** does not include the page that is being loaded. &lt;/p&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1039,7 +1093,7 @@ Get back forward stack list from current webview.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getBlanklessInfoWithKey
 
@@ -1047,35 +1101,11 @@ Get back forward stack list from current webview.
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-Obtains the prediction information about blankless loading (for details, see  
-[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](#setBlanklessLoadingWithKey)API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component.
-
-> **NOTE：**
-> 
-> - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity
-> by calling [setBlanklessLoadingCacheCapacity](#setBlanklessLoadingCacheCapacity)
-> . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated
-> based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than
-> seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page
-> is loaded for the third time.
-> 
-> - If the snapshot similarity (**similarity** in [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo))
-> is extremely low, check whether the **key** value is correct.
-> 
-> - After this API is called, page loading snapshot detection and transition frame generation calculation are
-> enabled, which generates certain resource overhead.
-> 
-> - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When
-> the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by
-> about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does
-> not affect the stable memory usage. When the size of the solid-state application cache is increased, the
-> increased cache of each page is about **w × h/10** B and the cache is located in the application cache.
-> 
-> - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5**
-> . For details, see
-> [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](#setBlanklessLoadingWithKey) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component. > **NOTE：**> > - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity > by calling [setBlanklessLoadingCacheCapacity](#setBlanklessLoadingCacheCapacity) > . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated > based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than > seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page > is loaded for the third time. > > - If the snapshot similarity (**similarity** in [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo)) > is extremely low, check whether the **key** value is correct. > > - After this API is called, page loading snapshot detection and transition frame generation calculation are > enabled, which generates certain resource overhead. > > - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When > the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by > about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does > not affect the stable memory usage. When the size of the solid-state application cache is increased, the > increased cache of each page is about **w × h/10** B and the cache is located in the application cache. > > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5** > . For details, see > [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo--><!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo-End-->
 
@@ -1097,7 +1127,7 @@ Obtains the prediction information about blankless loading (for details, see
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## getCertificate
 
@@ -1108,6 +1138,8 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 Get certificate for the current website.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1125,7 +1157,7 @@ Get certificate for the current website.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getCertificate
 
@@ -1136,6 +1168,8 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 Get certificate for the current website.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1153,8 +1187,8 @@ Get certificate for the current website.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getCustomUserAgent
 
@@ -1165,6 +1199,8 @@ getCustomUserAgent(): string
 Get custom user agent.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1182,7 +1218,7 @@ Get custom user agent.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getDefaultUserAgent
 
@@ -1193,6 +1229,8 @@ static getDefaultUserAgent(): string
 Get the default user agent.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static getDefaultUserAgent(): string--><!--Device-WebviewController-static getDefaultUserAgent(): string-End-->
 
@@ -1214,6 +1252,8 @@ Get whether default error page feature is enabled.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-WebviewController-getErrorPageEnabled(): boolean--><!--Device-WebviewController-getErrorPageEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1228,7 +1268,7 @@ Get whether default error page feature is enabled.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getFavicon
 
@@ -1239,6 +1279,8 @@ getFavicon(): image.PixelMap
 Gets the favicon of current Web page.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1256,7 +1298,7 @@ Gets the favicon of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getHitTest
 
@@ -1288,7 +1330,7 @@ Obtains the element type of the area being clicked.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getHitTestValue
 
@@ -1320,7 +1362,7 @@ Obtains the element information of the area being clicked.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getLastHitTest
 
@@ -1331,6 +1373,8 @@ getLastHitTest(): HitTestValue
 Obtains the element information of the area being clicked last time.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-getLastHitTest(): HitTestValue--><!--Device-WebviewController-getLastHitTest(): HitTestValue-End-->
 
@@ -1346,7 +1390,7 @@ Obtains the element information of the area being clicked last time.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getLastJavascriptProxyCallingFrameUrl
 
@@ -1354,9 +1398,11 @@ Obtains the element information of the area being clicked last time.
 getLastJavascriptProxyCallingFrameUrl(): string
 ```
 
-Get the url of the last frame that calls the JavaScriptProxy.This should be called on the UI thread.
+Get the url of the last frame that calls the JavaScriptProxy. This should be called on the UI thread.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1374,7 +1420,7 @@ Get the url of the last frame that calls the JavaScriptProxy.This should be call
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getLastPostMessageURL
 
@@ -1385,6 +1431,8 @@ getLastPostMessageURL(): string
 Gets URL of frame that sent the latest postMessage to native application.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1402,7 +1450,7 @@ Gets URL of frame that sent the latest postMessage to native application.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getMediaPlaybackState
 
@@ -1413,6 +1461,8 @@ getMediaPlaybackState(): MediaPlaybackState
 Queries the audio and video playback status of the current web page.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1430,7 +1480,7 @@ Queries the audio and video playback status of the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getOriginalUrl
 
@@ -1441,6 +1491,8 @@ getOriginalUrl(): string
 Gets the original url of current Web page.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1458,7 +1510,7 @@ Gets the original url of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getPageHeight
 
@@ -1466,10 +1518,11 @@ Gets the original url of current Web page.
 getPageHeight(): number
 ```
 
-Obtains the height of this web page. For details, see  
-[Obtaining the Web Page Content Height](../../../web/web-getpage-height.md).
+Obtains the height of this web page. For details, see [Obtaining the Web Page Content Height](../../../web/web-getpage-height.md).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1487,7 +1540,7 @@ Obtains the height of this web page. For details, see
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getPageOffset
 
@@ -1498,6 +1551,8 @@ getPageOffset(): ScrollOffset
 Obtains the current scrolling offset of the web page (excluding the over-scrolling offset).
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-getPageOffset(): ScrollOffset--><!--Device-WebviewController-getPageOffset(): ScrollOffset-End-->
 
@@ -1513,7 +1568,7 @@ Obtains the current scrolling offset of the web page (excluding the over-scrolli
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## getPrintBackground
 
@@ -1524,6 +1579,8 @@ getPrintBackground(): boolean
 Obtains whether the web page background is printed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1541,7 +1598,7 @@ Obtains whether the web page background is printed.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getProgress
 
@@ -1552,6 +1609,8 @@ getProgress() : number
 Gets the loading progress for the current page.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-getProgress() : number--><!--Device-WebviewController-getProgress() : number-End-->
 
@@ -1567,7 +1626,7 @@ Gets the loading progress for the current page.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## getRenderProcessMode
 
@@ -1578,6 +1637,8 @@ static getRenderProcessMode(): RenderProcessMode
 Obtains the ArkWeb render subprocess mode.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1601,6 +1662,8 @@ Obtains the current scrolling offset (including the over-scrolling offset) of th
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
@@ -1623,6 +1686,8 @@ Obtains whether this web page is scrollable.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-getScrollable(): boolean--><!--Device-WebviewController-getScrollable(): boolean-End-->
@@ -1639,7 +1704,7 @@ Obtains whether this web page is scrollable.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getSecurityLevel
 
@@ -1650,6 +1715,8 @@ getSecurityLevel(): SecurityLevel
 Get the security level of the current page.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1667,7 +1734,7 @@ Get the security level of the current page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getSiteIsolationMode
 
@@ -1678,6 +1745,8 @@ static getSiteIsolationMode(): SiteIsolationMode
 Queries the currently effective site isolation mode.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode--><!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode-End-->
 
@@ -1699,6 +1768,8 @@ Get whether default error page feature is enabled for subframes.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean--><!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean-End-->
@@ -1715,7 +1786,7 @@ Get whether default error page feature is enabled for subframes.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getSurfaceId
 
@@ -1723,14 +1794,11 @@ Get whether default error page feature is enabled for subframes.
 getSurfaceId(): string
 ```
 
-Obtains the ID of the surface corresponding to ArkWeb. The ID can be used to capture a screenshot of the web page.
-
-> **NOTE：**
-> 
-> This API is valid only when the **Web** component rendering mode is **ASYNC_RENDER**. The value of
-> **getSurfaceId** can be obtained only after the **Web** component is initialized.
+Obtains the ID of the surface corresponding to ArkWeb. The ID can be used to capture a screenshot of the web page. > **NOTE：**> > This API is valid only when the **Web** component rendering mode is **ASYNC_RENDER**. The value of > **getSurfaceId** can be obtained only after the **Web** component is initialized.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1754,6 +1822,8 @@ Gets the title of current Web page.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-getTitle(): string--><!--Device-WebviewController-getTitle(): string-End-->
@@ -1770,7 +1840,7 @@ Gets the title of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getUrl
 
@@ -1781,6 +1851,8 @@ getUrl(): string
 Gets the url of current Web page.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1798,7 +1870,7 @@ Gets the url of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getUserAgent
 
@@ -1809,6 +1881,8 @@ getUserAgent(): string
 Gets the default user agent.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1826,7 +1900,7 @@ Gets the default user agent.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getUserAgentClientHintsEnabled
 
@@ -1837,6 +1911,8 @@ static getUserAgentClientHintsEnabled(): boolean
 Get if the UserAgent Client Hints enabled.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean--><!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean-End-->
 
@@ -1857,6 +1933,8 @@ getUserAgentMetadata(userAgent: string): UserAgentMetadata
 Get the User-Agent metadata corresponding to the User-Agent.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata--><!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata-End-->
 
@@ -1884,6 +1962,8 @@ Obtains the index value of this Web component, which can be used for **Web** com
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-getWebId(): number--><!--Device-WebviewController-getWebId(): number-End-->
@@ -1900,7 +1980,7 @@ Obtains the index value of this Web component, which can be used for **Web** com
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## hasImage
 
@@ -1911,6 +1991,8 @@ hasImage(): Promise<boolean>
 Checks whether this page contains images. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1928,8 +2010,8 @@ Checks whether this page contains images. This API uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## hasImage
 
@@ -1940,6 +2022,8 @@ hasImage(callback: AsyncCallback<boolean>): void
 Checks whether this page contains images. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1957,8 +2041,8 @@ Checks whether this page contains images. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## initializeWebEngine
 
@@ -1969,6 +2053,8 @@ static initializeWebEngine(): void
 Loads the dynamic link library (DLL) file of the web engine. This API can be called before the Web component is initialized to improve the startup performance. The frequently visited websites are automatically pre-connected. initializeWebEngine cannot be called in an asynchronous thread. Otherwise, the system breaks down. initializeWebEngine takes effect globally and needs to be called only once in an application lifecycle.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1982,19 +2068,11 @@ Loads the dynamic link library (DLL) file of the web engine. This API can be cal
 injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 ```
 
-Injects local offline resources to the memory cache to improve the initial page startup speed.
-
-Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache.
-
-Under normal circumstances, the validity period of the resources is controlled by the provided Cache-Control or Expires response header, with a default validity period of 86,400 seconds, which is one day.
-
-The MIME type of the resources is configured through the provided Content-Type response header. The Content-Type must comply with standards; otherwise, the resources cannot be used correctly. For resources of type MODULE_JS, a valid MIME type must be provided. For other types, the MIME type is optional.
-
-Resources injected in this mode can be loaded only through HTML tags. If a **script** tag on the web page uses the **crossorigin** attribute, the **Cross-Origin** response header must be set in the **responseHeaders**parameter of the API. The value for this header should be **anonymous** or **use-credentials**.
-
-After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)** is called, the application starts the multi-rendering process mode. This API does not take effect in this scenario.
+Injects local offline resources to the memory cache to improve the initial page startup speed. Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache. Under normal circumstances, the validity period of the resources is controlled by the provided Cache-Control or Expires response header, with a default validity period of 86,400 seconds, which is one day. The MIME type of the resources is configured through the provided Content-Type response header. The Content-Type must comply with standards; otherwise, the resources cannot be used correctly. For resources of type MODULE_JS, a valid MIME type must be provided. For other types, the MIME type is optional. Resources injected in this mode can be loaded only through HTML tags. If a **script** tag on the web page uses the **crossorigin** attribute, the **Cross-Origin** response header must be set in the **responseHeaders** parameter of the API. The value for this header should be **anonymous** or **use-credentials**. After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)** is called, the application starts the multi-rendering process mode. This API does not take effect in this scenario.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void--><!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void-End-->
 
@@ -2010,9 +2088,9 @@ After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## isActiveWebEngineEvergreen
 
@@ -2023,6 +2101,8 @@ static isActiveWebEngineEvergreen(): boolean
 Checks whether the system is using the evergreen kernel, that is, the latest kernel.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean--><!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean-End-->
 
@@ -2044,6 +2124,8 @@ Get whether Ads block is enabled.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-isAdsBlockEnabled(): boolean--><!--Device-WebviewController-isAdsBlockEnabled(): boolean-End-->
@@ -2060,7 +2142,7 @@ Get whether Ads block is enabled.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## isAdsBlockEnabledForCurPage
 
@@ -2071,6 +2153,8 @@ isAdsBlockEnabledForCurPage(): boolean
 Get whether Ads block is enabled for current Webpage.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2088,7 +2172,7 @@ Get whether Ads block is enabled for current Webpage.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## isAutoPreconnectEnabled
 
@@ -2099,6 +2183,8 @@ static isAutoPreconnectEnabled(): boolean
 ‌Retrieve whether the automatic pre-connection feature is enabled‌.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean--><!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean-End-->
 
@@ -2120,6 +2206,8 @@ Whether the incognito mode is set.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-isIncognitoMode(): boolean--><!--Device-WebviewController-isIncognitoMode(): boolean-End-->
@@ -2136,7 +2224,7 @@ Whether the incognito mode is set.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## isIntelligentTrackingPreventionEnabled
 
@@ -2147,6 +2235,8 @@ isIntelligentTrackingPreventionEnabled(): boolean
 Get whether Intelligent Tracking Prevention is enabled.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2164,8 +2254,8 @@ Get whether Intelligent Tracking Prevention is enabled.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2176,6 +2266,8 @@ static isPrivateNetworkAccessEnabled(): boolean
 Get whether PrivateNetworkAccess is enabled.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean--><!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean-End-->
 
@@ -2197,6 +2289,8 @@ Get whether checking website security risks is enabled.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-isSafeBrowsingEnabled(): boolean--><!--Device-WebviewController-isSafeBrowsingEnabled(): boolean-End-->
@@ -2215,13 +2309,11 @@ Get whether checking website security risks is enabled.
 loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void
 ```
 
-Loads the data or URL.
-
-When both **baseUrl** and **historyUrl** are empty:
-
-If **encoding** is not base64 (including null values), ASCII encoding is used for octets within the secure URL character range, and the standard %xx hexadecimal encoding of the URL is used for octets outside the secure URL character range.
+Loads the data or URL. When both **baseUrl** and **historyUrl** are empty: If **encoding** is not base64 (including null values), ASCII encoding is used for octets within the secure URL character range, and the standard %xx hexadecimal encoding of the URL is used for octets outside the secure URL character range.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2243,9 +2335,9 @@ If **encoding** is not base64 (including null values), ASCII encoding is used fo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## loadUrl
 
@@ -2256,6 +2348,8 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 Loads the data or URL.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2274,12 +2368,12 @@ Loads the data or URL.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
-| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
-## off('controllerAttachStateChange')
+## off_controllerAttachStateChange
 
 ```TypeScript
 off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void
@@ -2288,6 +2382,8 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 Unregister the callback for controller attach state change.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void--><!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void-End-->
 
@@ -2300,27 +2396,6 @@ Unregister the callback for controller attach state change.
 | type | 'controllerAttachStateChange' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No |
 
-## on('controllerAttachStateChange')
-
-```TypeScript
-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void
-```
-
-Register the callback for controller attach state change.
-
-**Since:** 20
-
-<!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'controllerAttachStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes |
-
 ## onActive
 
 ```TypeScript
@@ -2330,6 +2405,8 @@ onActive(): void
 Called when the Web component enters the active state. The application can interact with the user while in the active foreground state, and it remains in this state until the focus is moved away from it due to some event (for example, an incoming call is received or the device screen is turned off).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2341,7 +2418,7 @@ Called when the Web component enters the active state. The application can inter
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## onCreateNativeMediaPlayer
 
@@ -2349,12 +2426,11 @@ Called when the Web component enters the active state. The application can inter
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-Called when the  
-[application takes over media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12)and a media file is played on the web page.
-
-If the application does not take over media playback on the web page, this callback is not invoked.
+Called when the [application takes over media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enableNativeMediaPlayer) and a media file is played on the web page. If the application does not take over media playback on the web page, this callback is not invoked.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2374,9 +2450,11 @@ If the application does not take over media playback on the web page, this callb
 onInactive(): void
 ```
 
-Called when the Web component enters the inactive state. You can implement the behavior to perform after the application loses focus. When this API is called, any content that can be safely paused,such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use pauseAllTimers. To reactivate the Web component,use onActive.
+Called when the Web component enters the inactive state. You can implement the behavior to perform after the application loses focus. When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use pauseAllTimers. To reactivate the Web component, use onActive.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2388,7 +2466,30 @@ Called when the Web component enters the inactive state. You can implement the b
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+
+## on_controllerAttachStateChange
+
+```TypeScript
+on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void
+```
+
+Register the callback for controller attach state change.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+<!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'controllerAttachStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes |
 
 ## pageDown
 
@@ -2399,6 +2500,8 @@ pageDown(bottom: boolean): void
 Scrolls the page down by half the viewport or jumps to the bottom of the page.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2416,8 +2519,8 @@ Scrolls the page down by half the viewport or jumps to the bottom of the page.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pageUp
 
@@ -2428,6 +2531,8 @@ pageUp(top: boolean): void
 Scrolls the page up by half the viewport or jumps to the top of the page.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2445,8 +2550,8 @@ Scrolls the page up by half the viewport or jumps to the top of the page.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pauseAllMedia
 
@@ -2458,6 +2563,8 @@ Pauses all audio and video on a web page.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-pauseAllMedia(): void--><!--Device-WebviewController-pauseAllMedia(): void-End-->
@@ -2468,7 +2575,7 @@ Pauses all audio and video on a web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pauseAllTimers
 
@@ -2476,9 +2583,11 @@ Pauses all audio and video on a web page.
 static pauseAllTimers(): void
 ```
 
-Called when the Web component enters the inactive state. You can implement the behavior to perform after the application loses focus. When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally,use pauseAllTimers. To reactivate the Web component, use onActive.
+Called when the Web component enters the inactive state. You can implement the behavior to perform after the application loses focus. When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use pauseAllTimers. To reactivate the Web component, use onActive.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2490,7 +2599,7 @@ Called when the Web component enters the inactive state. You can implement the b
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pauseMicrophone
 
@@ -2502,6 +2611,8 @@ Pauses microphone capture on the current web page.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-WebviewController-pauseMicrophone(): void--><!--Device-WebviewController-pauseMicrophone(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2510,7 +2621,7 @@ Pauses microphone capture on the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## postMessage
 
@@ -2521,6 +2632,8 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 Post web message port to html
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2540,8 +2653,8 @@ Post web message port to html
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## postUrl
 
@@ -2552,6 +2665,8 @@ postUrl(url: string, postData: ArrayBuffer): void
 Loads the URL use "POST" method with post data.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2570,9 +2685,9 @@ Loads the URL use "POST" method with post data.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## precompileJavaScript
 
@@ -2580,11 +2695,11 @@ Loads the URL use "POST" method with post data.
 precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>
 ```
 
-Precompiles JavaScript to generate the bytecode cache or update the existing bytecode cache based on the provided parameters.
-
-The API determines whether to update the existing bytecode cache based on the provided file information, E-Tag response header, and Last-Modified response header.
+Precompiles JavaScript to generate the bytecode cache or update the existing bytecode cache based on the provided parameters. The API determines whether to update the existing bytecode cache based on the provided file information, E-Tag response header, and Last-Modified response header.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>--><!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>-End-->
 
@@ -2608,8 +2723,8 @@ The API determines whether to update the existing bytecode cache based on the pr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## prefetchPage
 
@@ -2617,10 +2732,11 @@ The API determines whether to update the existing bytecode cache based on the pr
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 ```
 
-Prefetch the resources required by the page, but will not execute js or render the page.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The downloaded page resources are cached for about 5 minutes. After this period, the **Web** component automatically releases the resources.  
-**prefetchPage** can also prefetch 302 redirect pages.When a page is loaded after **prefetchPage** is executed, the prefetched resources are directly loaded from the cache.The **prefetchPage** has a 500ms interval restriction. If multiple URLs are prefetched consecutively within a short time, only the first one will take effect.&lt;/p&gt;
+Prefetch the resources required by the page, but will not execute js or render the page. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The downloaded page resources are cached for about 5 minutes. After this period, the **Web** component automatically releases the resources. **prefetchPage** can also prefetch 302 redirect pages. When a page is loaded after **prefetchPage** is executed, the prefetched resources are directly loaded from the cache. The **prefetchPage** has a 500ms interval restriction. If multiple URLs are prefetched consecutively within a short time, only the first one will take effect. &lt;/p&gt;
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2639,8 +2755,8 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## prefetchPage
 
@@ -2648,12 +2764,11 @@ Prefetch the resources required by the page, but will not execute js or render t
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void
 ```
 
-Prefetch the resources required by the page, but will not execute js or render the page.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The downloaded page resources are cached for about 5 minutes. After this period, the **Web** component automatically releases the resources.  
-**prefetchPage** can also prefetch 302 redirect pages.When a page is loaded after **prefetchPage** is executed, the prefetched resources are directly loaded from the cache.?prefetchPage? does not cache resources with Cache-Control: no-store by default, and only allows one prefetch within 500ms.Prefetch behavior can be customized via ?prefetchOptions?, including ignoring Cache-Control: no-store and adjusting the throttling interval.
+Prefetch the resources required by the page, but will not execute js or render the page. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The downloaded page resources are cached for about 5 minutes. After this period, the **Web** component automatically releases the resources. **prefetchPage** can also prefetch 302 redirect pages. When a page is loaded after **prefetchPage** is executed, the prefetched resources are directly loaded from the cache. ?prefetchPage? does not cache resources with Cache-Control: no-store by default, and only allows one prefetch within 500ms. Prefetch behavior can be customized via ?prefetchOptions?, including ignoring Cache-Control: no-store and adjusting the throttling interval.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void-End-->
 
@@ -2671,8 +2786,8 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## prefetchResource
 
@@ -2681,12 +2796,11 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
       cacheValidTime?: number): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading.Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call  
-[clearPrefetchedResource](#clearPrefetchedResource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value **ArkWebPostCacheKey** to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
-
-Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache.
+Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call [clearPrefetchedResource](#clearPrefetchedResource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value **ArkWebPostCacheKey** to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache. Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2707,8 +2821,8 @@ Resources in the memory cache are automatically managed by the ArkWeb engine. Wh
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## prepareForPageLoad
 
@@ -2719,6 +2833,8 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 Preresolve or Preconnect the url. This API can be called before loading the url to make loading faster.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2738,8 +2854,8 @@ Preresolve or Preconnect the url. This API can be called before loading the url 
 
 | Error Code ID |
 | --- |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
-| [17100013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100013](../errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) |
 
 ## refresh
 
@@ -2751,6 +2867,8 @@ Refreshes the current URL.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-refresh(): void--><!--Device-WebviewController-refresh(): void-End-->
@@ -2761,7 +2879,7 @@ Refreshes the current URL.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## refresh
 
@@ -2772,6 +2890,8 @@ refresh(ignoreCache: boolean): void
 Refreshes the current URL.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-refresh(ignoreCache: boolean): void--><!--Device-WebviewController-refresh(ignoreCache: boolean): void-End-->
 
@@ -2787,7 +2907,7 @@ Refreshes the current URL.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## registerJavaScriptProxy
 
@@ -2796,11 +2916,11 @@ registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string
         asyncMethodList?: Array<string>, permission?: string): void
 ```
 
-Registers the supplied ArkTs object into this Web component.The object is registered into all frames of the web page, including all iframes, using the specified name.This allows the methods of the ArkTs object to be accessed from JavaScript.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Registed objects will not appear in JavaScript until the page is next (re)load.To avoid memory leaks, registerJavaScriptProxy must be used together with deleteJavaScriptProxy.To avoid security risks, it is recommended that registerJavaScriptProxy be used with trusted web components.If the same method is registered repeatedly in both synchronous and asynchronous list, it will default to an asynchronous method. The synchronous function list and asynchronous function list cannot be empty at the same time. otherwise, this registration will fail.&lt;p&gt;
+Registers the supplied ArkTs object into this Web component. The object is registered into all frames of the web page, including all iframes, using the specified name. This allows the methods of the ArkTs object to be accessed from JavaScript. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Registed objects will not appear in JavaScript until the page is next (re)load. To avoid memory leaks, registerJavaScriptProxy must be used together with deleteJavaScriptProxy. To avoid security risks, it is recommended that registerJavaScriptProxy be used with trusted web components. If the same method is registered repeatedly in both synchronous and asynchronous list, it will default to an asynchronous method. The synchronous function list and asynchronous function list cannot be empty at the same time. otherwise, this registration will fail. &lt;p&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2812,7 +2932,7 @@ Registers the supplied ArkTs object into this Web component.The object is regist
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [jsObject](arkts-arkweb-web-javascriptproxy-i.md) | object | Yes |
+| [jsObject](../../apis-na/arkts-apis/arkts-na-web-javascriptproxy-i.md) | object | Yes |
 | name | string | Yes |
 | methodList | Array & lt;string & gt; | Yes |
 | asyncMethodList | Array & lt;string & gt; | No |
@@ -2822,8 +2942,8 @@ Registers the supplied ArkTs object into this Web component.The object is regist
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## removeAllCache
 
@@ -2834,6 +2954,8 @@ static removeAllCache(clearRom: boolean): void
 Remove resource cache in application. So this method will remove all cache for all web components in the same application.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static removeAllCache(clearRom: boolean): void--><!--Device-WebviewController-static removeAllCache(clearRom: boolean): void-End-->
 
@@ -2849,7 +2971,7 @@ Remove resource cache in application. So this method will remove all cache for a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## removeCache
 
@@ -2860,6 +2982,8 @@ removeCache(clearRom: boolean): void
 Clears the cache in the application. This API will clear the cache for all webviews in the same application.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2877,8 +3001,8 @@ Clears the cache in the application. This API will clear the cache for all webvi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## removeIntelligentTrackingPreventionBypassingList
 
@@ -2889,6 +3013,8 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 Remove bypassing hosts for Intelligent Tracking Prevention.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2906,8 +3032,8 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## requestFocus
 
@@ -2919,6 +3045,8 @@ Requests focus for this web page.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-requestFocus(): void--><!--Device-WebviewController-requestFocus(): void-End-->
@@ -2929,7 +3057,7 @@ Requests focus for this web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## restoreWebState
 
@@ -2940,6 +3068,8 @@ restoreWebState(state: Uint8Array) : void
 Restores the page status history from the serialized data of the current WebView. If the value of state is too large, exceptions may occur. It is recommended that the page status history be not restored when the state value is greater than 512 KB.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2957,8 +3087,8 @@ Restores the page status history from the serialized data of the current WebView
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## resumeAllMedia
 
@@ -2970,6 +3100,8 @@ Resumes the playback of the audio and video that are paused by the pauseAllMedia
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-resumeAllMedia(): void--><!--Device-WebviewController-resumeAllMedia(): void-End-->
@@ -2980,7 +3112,7 @@ Resumes the playback of the audio and video that are paused by the pauseAllMedia
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## resumeAllTimers
 
@@ -2992,6 +3124,8 @@ Resume all timers suspended from the pauseAllTimers() interface.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-static resumeAllTimers(): void--><!--Device-WebviewController-static resumeAllTimers(): void-End-->
@@ -3002,7 +3136,7 @@ Resume all timers suspended from the pauseAllTimers() interface.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## resumeMicrophone
 
@@ -3010,11 +3144,11 @@ Resume all timers suspended from the pauseAllTimers() interface.
 resumeMicrophone(): void
 ```
 
-Resumes microphone capture on the current web page. Before using the microphone , add the  
-**ohos.permission.MICROPHONE** permission to **module.json5**. For details about how to add the permission, see  
-[Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md).
+Resumes microphone capture on the current web page. Before using the microphone , add the **ohos.permission.MICROPHONE** permission to **module.json5**. For details about how to add the permission, see [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-resumeMicrophone(): void--><!--Device-WebviewController-resumeMicrophone(): void-End-->
 
@@ -3024,7 +3158,7 @@ Resumes microphone capture on the current web page. Before using the microphone 
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## runJavaScript
 
@@ -3032,11 +3166,11 @@ Resumes microphone capture on the current web page. Before using the microphone 
 runJavaScript(script: string): Promise<string>
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through a via Promise.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;br&gt;If you cannot obtain the return value by executing the asynchronous method,you need to determine whether to use synchronous or asynchronous mode based on the specific situation.&lt;p&gt;
+Asynchronously execute JavaScript in the context of the currently displayed page. The result of the script execution will be returned through a via Promise. This method must be used on the UI thread, and the callback will also be invoked on the UI thread. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The state of JavaScript is no longer persisted across navigations like loadUrl. For example, global variables and functions defined before calling loadUrl will not exist in the loaded page. It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;br&gt; If you cannot obtain the return value by executing the asynchronous method, you need to determine whether to use synchronous or asynchronous mode based on the specific situation. &lt;p&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3060,9 +3194,9 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## runJavaScript
 
@@ -3070,11 +3204,11 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 runJavaScript(script: string, callback: AsyncCallback<string>): void
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;p&gt;
+Asynchronously execute JavaScript in the context of the currently displayed page. The result of the script execution will be returned through an asynchronous callback. This method must be used on the UI thread, and the callback will also be invoked on the UI thread. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The state of JavaScript is no longer persisted across navigations like loadUrl. For example, global variables and functions defined before calling loadUrl will not exist in the loaded page. It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations. &lt;p&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3093,9 +3227,9 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## runJavaScriptExt
 
@@ -3106,6 +3240,8 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 Execute JavaScript code in the context of the currently displayed page, and return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3129,8 +3265,8 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## runJavaScriptExt
 
@@ -3141,6 +3277,8 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 Execute JavaScript code in the context of the currently displayed page, and return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3159,8 +3297,8 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## scrollBy
 
@@ -3171,6 +3309,8 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 Scrolls the page by the specified amount within a specified period.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3190,8 +3330,8 @@ Scrolls the page by the specified amount within a specified period.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## scrollByWithResult
 
@@ -3202,6 +3342,8 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 Scrolls the page by the specified amount and returns value to indicate whether the scrolling is successful.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean--><!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean-End-->
 
@@ -3224,8 +3366,8 @@ Scrolls the page by the specified amount and returns value to indicate whether t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## scrollTo
 
@@ -3236,6 +3378,8 @@ scrollTo(x: number, y: number, duration?: number): void
 Scrolls the page to the specified absolute position within a specified period.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3255,8 +3399,8 @@ Scrolls the page to the specified absolute position within a specified period.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## searchAllAsync
 
@@ -3264,10 +3408,11 @@ Scrolls the page to the specified absolute position within a specified period.
 searchAllAsync(searchString: string): void
 ```
 
-Searches the web page for content that matches the keyword specified by **'searchString'** and highlights the matches on the page. This API returns the result asynchronously through  
-[onSearchResultReceive](@ohos.web.WebAttribute#onsearchresultreceive).
+Searches the web page for content that matches the keyword specified by **'searchString'** and highlights the matches on the page. This API returns the result asynchronously through onSearchResultReceive .
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3285,8 +3430,8 @@ Searches the web page for content that matches the keyword specified by **'searc
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## searchNext
 
@@ -3297,6 +3442,8 @@ searchNext(forward: boolean): void
 Highlights and scrolls to the next match search.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3314,8 +3461,8 @@ Highlights and scrolls to the next match search.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## serializeWebState
 
@@ -3326,6 +3473,8 @@ serializeWebState(): Uint8Array
 Serialize the access stack of the web, that is, the history of access.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3343,7 +3492,7 @@ Serialize the access stack of the web, that is, the history of access.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setActiveWebEngineVersion
 
@@ -3351,16 +3500,11 @@ Serialize the access stack of the web, that is, the history of access.
 static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 ```
 
-Sets the ArkWeb kernel version. If the system does not support the specified version, the setting is invalid.This API is a global static API and must be called before **initializeWebEngine** is called. If any **Web**component has been loaded, the setting of this API is invalid.
-
-> **NOTE：**
-> 
-> - **setActiveWebEngineVersion** cannot be called in an asynchronous thread.
-> 
-> - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application
-> lifecycle.
+Sets the ArkWeb kernel version. If the system does not support the specified version, the setting is invalid. This API is a global static API and must be called before **initializeWebEngine** is called. If any **Web** component has been loaded, the setting of this API is invalid. > **NOTE：**> > - **setActiveWebEngineVersion** cannot be called in an asynchronous thread. > > - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application > lifecycle.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void--><!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void-End-->
 
@@ -3378,11 +3522,11 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Set the default User-Agent for the application.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows:1. The User-Agent set by setCustomUserAgent is used first.2. If not set, it will check whether a specific User-Agent has been assigned to the current page via setUserAgentForHosts.3. If no specific User-Agent is assigned, the application will fall back to using the User-Agent set by setAppCustomUserAgent.4. If the app's default User-Agent is also not specified, the web's default User-Agent will be used as the final fallback.&lt;/p&gt;
+Set the default User-Agent for the application. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows: 1. The User-Agent set by setCustomUserAgent is used first. 2. If not set, it will check whether a specific User-Agent has been assigned to the current page via setUserAgentForHosts. 3. If no specific User-Agent is assigned, the application will fall back to using the User-Agent set by setAppCustomUserAgent. 4. If the app's default User-Agent is also not specified, the web's default User-Agent will be used as the final fallback. &lt;/p&gt;
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void--><!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void-End-->
 
@@ -3404,6 +3548,8 @@ Mutes this web page.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-setAudioMuted(mute: boolean): void--><!--Device-WebviewController-setAudioMuted(mute: boolean): void-End-->
@@ -3420,8 +3566,8 @@ Mutes this web page.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setAutoPreconnect
 
@@ -3432,6 +3578,8 @@ static setAutoPreconnect(enabled: boolean): void
 Configure whether to enable automatic pre-connection to high-frequency URLs accessed during the application's previous lifecycle after web initialization.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void--><!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void-End-->
 
@@ -3453,6 +3601,8 @@ Configure the BackForwardCache.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void--><!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3467,7 +3617,7 @@ Configure the BackForwardCache.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setBlanklessLoadingCacheCapacity
 
@@ -3478,6 +3628,8 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 Sets the persistent cache capacity of the blankless loading solution and returns the value that takes effect. If the API is not explicitly called, the default cache capacity is 30 MB. When this limit is exceeded, transition frames that are not frequently used are eliminated.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number--><!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number-End-->
 
@@ -3499,7 +3651,7 @@ Sets the persistent cache capacity of the blankless loading solution and returns
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## setBlanklessLoadingWithKey
 
@@ -3507,23 +3659,11 @@ Sets the persistent cache capacity of the blankless loading solution and returns
 setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode
 ```
 
-Sets whether to enable blankless loading. This API must be used together with  
-[getBlanklessInfoWithKey](#getBlanklessInfoWithKey).
-
-> **NOTE：**
-> 
-> - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
-> [getBlanklessInfoWithKey](#getBlanklessInfoWithKey).
-> 
-> - The page must be loaded in the component that calls this API.
-> 
-> - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail.
-> 
-> - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5**
-> . For details, see
-> [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+Sets whether to enable blankless loading. This API must be used together with [getBlanklessInfoWithKey](#getBlanklessInfoWithKey). > **NOTE：**> > - This API must be called after the page loading API is triggered. Other restrictions are the same as those of > [getBlanklessInfoWithKey](#getBlanklessInfoWithKey). > > - The page must be loaded in the component that calls this API. > > - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail. > > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5** > . For details, see > [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode-End-->
 
@@ -3546,7 +3686,7 @@ Sets whether to enable blankless loading. This API must be used together with
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## setBlanklessLoadingWithParams
 
@@ -3555,11 +3695,11 @@ setBlanklessLoadingWithParams(key: string,
       param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3584,7 +3724,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## setConnectionTimeout
 
@@ -3595,6 +3735,8 @@ static setConnectionTimeout(timeout: number): void
 Set web engine socket connection timeout. Unit: seconds. the default timeout interval is **30** seconds.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3612,7 +3754,7 @@ Set web engine socket connection timeout. Unit: seconds. the default timeout int
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setCustomUserAgent
 
@@ -3623,6 +3765,8 @@ setCustomUserAgent(userAgent: string): void
 Set custom user agent.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3640,8 +3784,8 @@ Set custom user agent.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setDownloadDelegate
 
@@ -3649,9 +3793,11 @@ Set custom user agent.
 setDownloadDelegate(delegate: WebDownloadDelegate): void
 ```
 
-Set delegate for download.Used to notify the progress of the download triggered from web.
+Set delegate for download. Used to notify the progress of the download triggered from web.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3669,7 +3815,7 @@ Set delegate for download.Used to notify the progress of the download triggered 
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setErrorPageEnabled
 
@@ -3680,6 +3826,8 @@ setErrorPageEnabled(enable: boolean): void
 Set whether enable the error page. onOverrideErrorPage will be triggered when the page error.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void-End-->
 
@@ -3695,7 +3843,7 @@ Set whether enable the error page. onOverrideErrorPage will be triggered when th
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setErrorPageEnabled
 
@@ -3706,6 +3854,8 @@ setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 Set whether to enable error page. onOverrideErrorPage will be triggered when the page error.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3724,7 +3874,7 @@ Set whether to enable error page. onOverrideErrorPage will be triggered when the
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setHostIP
 
@@ -3735,6 +3885,8 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 Set IP address for host name.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3754,7 +3906,7 @@ Set IP address for host name.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setHttpDns
 
@@ -3765,6 +3917,8 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 Set web engine to use HttpDns server to resolve dns.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3783,7 +3937,7 @@ Set web engine to use HttpDns server to resolve dns.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setNetworkAvailable
 
@@ -3794,6 +3948,8 @@ setNetworkAvailable(enable: boolean): void
 Put network state for web. Which is used to set window.navigator.onLine property in JavaScript.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3811,8 +3967,8 @@ Put network state for web. Which is used to set window.navigator.onLine property
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setPathAllowingUniversalAccess
 
@@ -3820,15 +3976,11 @@ Put network state for web. Which is used to set window.navigator.onLine property
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list.The behavior of [fileAccess](fileAccess) will be overwritten by that of this API.
-
-The paths in the list must be any of the following(sub path and module name must be provided):
-
-1. The path of subdirectory of the application file directory, like "/data/storage/el2/base/files/example"or "/data/storage/el2/base/haps/entry/files/example".The application file directory is obtained using Context.filesDir in the Ability Kit.2. The path of application resource directory or its subdirectory, like "/data/storage/el1/bundle/entry/resource/resfile"or "/data/storage/el1/bundle/entry/resource/resfile/example".The application resource directory is obtained from Context.resourceDir in the Ability Kit.
-
-If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the [fileAccess](fileAccess).
+Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list. The behavior of fileAccess will be overwritten by that of this API. The paths in the list must be any of the following(sub path and module name must be provided): 1. The path of subdirectory of the application file directory, like "/data/storage/el2/base/files/example" or "/data/storage/el2/base/haps/entry/files/example". The application file directory is obtained using Context.filesDir in the Ability Kit. 2. The path of application resource directory or its subdirectory, like "/data/storage/el1/bundle/entry/resource/resfile" or "/data/storage/el1/bundle/entry/resource/resfile/example". The application resource directory is obtained from Context.resourceDir in the Ability Kit. If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void--><!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void-End-->
 
@@ -3844,8 +3996,8 @@ If a path in the list is not of the preceding paths, error code 401 is reported 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setPrintBackground
 
@@ -3853,10 +4005,11 @@ If a path in the list is not of the preceding paths, error code 401 is reported 
 setPrintBackground(enable: boolean): void
 ```
 
-Sets whether to print the background of a web page. If the setting of this API is inconsistent with that of  
-[PrintAttributes](../../../reference/apis-basic-services-kit/js-apis-print.md#printattributes11), the setting of this API takes precedence.
+Sets whether to print the background of a web page. If the setting of this API is inconsistent with that of [PrintAttributes](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-print-printattributes-i.md#PrintAttributes), the setting of this API takes precedence.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3874,8 +4027,8 @@ Sets whether to print the background of a web page. If the setting of this API i
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setRenderProcessMode
 
@@ -3886,6 +4039,8 @@ static setRenderProcessMode(mode: RenderProcessMode): void
 Sets the ArkWeb render subprocess mode.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3903,7 +4058,7 @@ Sets the ArkWeb render subprocess mode.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setScrollable
 
@@ -3914,6 +4069,8 @@ setScrollable(enable: boolean, type?: ScrollType): void
 Sets whether this web page is scrollable.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3932,8 +4089,8 @@ Sets whether this web page is scrollable.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setScrollbarMode
 
@@ -3941,21 +4098,11 @@ Sets whether this web page is scrollable.
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-Sets the global scrollbar mode in the web page. When this API is not explicitly called,  
-[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md#ScrollbarMode) is used by default,indicating that the scroll bar is not always displayed.
-
-> **NOTE：**
-> 
-> - You can set whether to always display the web scrollbar of the current application based on the scrollbar
-> mode.
-> 
-> - If the
-> [forceDisplayScrollBar](@ohos.web.WebAttribute#forcedisplayscrollbar)
-> API is set at the same time as this API, the setting of **forceDisplayScrollBar** does not take effect.
-> 
-> - This API must be called before WebViewController is bound to a **Web** component.
+Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md#ScrollbarMode) is used by default, indicating that the scroll bar is not always displayed. > **NOTE：**> > - You can set whether to always display the web scrollbar of the current application based on the scrollbar > mode. > > - If the > forceDisplayScrollBar > API is set at the same time as this API, the setting of **forceDisplayScrollBar** does not take effect. > > - This API must be called before WebViewController is bound to a **Web** component.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void--><!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void-End-->
 
@@ -3977,6 +4124,8 @@ Set web scheme handler for specific scheme. This is used for service worker.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
@@ -3994,7 +4143,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setSiteIsolationMode
 
@@ -4005,6 +4154,8 @@ static setSiteIsolationMode(mode: SiteIsolationMode): void
 Set the site isolation mode.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void--><!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void-End-->
 
@@ -4020,7 +4171,7 @@ Set the site isolation mode.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setSocketIdleTimeout
 
@@ -4028,11 +4179,11 @@ Set the site isolation mode.
 static setSocketIdleTimeout(timeout: number): void
 ```
 
-Set web engine socket idle timeout.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Unit: seconds, minimum 30s, maximum 5 minutes. If not set, the default is five minutes.&lt;/p&gt;
+Set web engine socket idle timeout. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Unit: seconds, minimum 30s, maximum 5 minutes. If not set, the default is five minutes. &lt;/p&gt;
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void--><!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void-End-->
 
@@ -4054,6 +4205,8 @@ Set the behavior mode of the soft keyboard. If this API is not explicitly called
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void--><!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4068,7 +4221,7 @@ Set the behavior mode of the soft keyboard. If this API is not explicitly called
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setUrlTrustList
 
@@ -4076,9 +4229,11 @@ Set the behavior mode of the soft keyboard. If this API is not explicitly called
 setUrlTrustList(urlTrustList: string): void
 ```
 
-Set the URL trust list for the ArkWeb.When the URL trust list has been set, only the URLs in the list can be accessed.
+Set the URL trust list for the ArkWeb. When the URL trust list has been set, only the URLs in the list can be accessed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -4096,8 +4251,8 @@ Set the URL trust list for the ArkWeb.When the URL trust list has been set, only
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setUrlTrustList
 
@@ -4105,15 +4260,11 @@ Set the URL trust list for the ArkWeb.When the URL trust list has been set, only
 setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void
 ```
 
-Sets the URL trust list for the ArkWeb.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;When the URL trust list is set, only the URLs in the list can be accessed.
-
-Example of the urlTrustList:
-
-{ "UrlPermissionList": [ { "scheme": "https", "host": "www.example1.com", "port": 443, "path": "pathA/pathB" }, { "scheme": "http", "host": "*.example2.com", "port": 80, "path": "test1/test2/test3" } ]}&lt;/p&gt;
+Sets the URL trust list for the ArkWeb. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; When the URL trust list is set, only the URLs in the list can be accessed. Example of the urlTrustList: { "UrlPermissionList": [ { "scheme": "https", "host": "www.example1.com", "port": 443, "path": "pathA/pathB" }, { "scheme": "http", "host": "*.example2.com", "port": 80, "path": "test1/test2/test3" } ] } &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void-End-->
 
@@ -4131,8 +4282,8 @@ Example of the urlTrustList:
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setUserAgentClientHintsEnabled
 
@@ -4143,6 +4294,8 @@ static setUserAgentClientHintsEnabled(enabled: boolean): void
 Enable the UserAgent Client Hints.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void--><!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void-End-->
 
@@ -4160,11 +4313,11 @@ Enable the UserAgent Client Hints.
 static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 ```
 
-Set the User-Agent to be used for specified hosts, with a maximum of 20,000 hosts.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Setting the same host list multiple times for the same User-Agent will override the previous settings. That is, if you want to cancel certain hosts from using the specified User-Agent, you need to reset the host list for that User-Agent.&lt;/p&gt;
+Set the User-Agent to be used for specified hosts, with a maximum of 20,000 hosts. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Setting the same host list multiple times for the same User-Agent will override the previous settings. That is, if you want to cancel certain hosts from using the specified User-Agent, you need to reset the host list for that User-Agent. &lt;/p&gt;
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void--><!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void-End-->
 
@@ -4183,19 +4336,11 @@ Set the User-Agent to be used for specified hosts, with a maximum of 20,000 host
 setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 ```
 
-Sets the User-Agent metadata corresponding to the User-Agent.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.
-
-The User-Agent can be set with setCustomUserAgent or setAppCustomUserAgent or setUserAgentForHosts.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent and the overridden User-Agent contains the system default User-Agent, the system default value will be used.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent but the overridden User-Agent does not contain the system default User-Agent, only the low-entry User-Agent client hints will be generated.
-
-&lt;/p&gt;
+Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device. The User-Agent can be set with setCustomUserAgent or setAppCustomUserAgent or setUserAgentForHosts. If the UserAgentMetadata is not found according to the overridden User-Agent and the overridden User-Agent contains the system default User-Agent, the system default value will be used. If the UserAgentMetadata is not found according to the overridden User-Agent but the overridden User-Agent does not contain the system default User-Agent, only the low-entry User-Agent client hints will be generated. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void--><!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void-End-->
 
@@ -4214,11 +4359,11 @@ If the UserAgentMetadata is not found according to the overridden User-Agent but
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-Sets whether to enable web debugging. By default, web debugging is disabled.For details, see Debugging Frontend Pages by Using DevTools.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Enabling web debugging allows users to check and modify the internal status of the web page,which poses security risks. Therefore, you are advised not to enable this function in the officially released version of the app.&lt;/p&gt;
+Sets whether to enable web debugging. By default, web debugging is disabled. For details, see Debugging Frontend Pages by Using DevTools. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this function in the officially released version of the app. &lt;/p&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4236,7 +4381,7 @@ Sets whether to enable web debugging. By default, web debugging is disabled.For 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setWebDebuggingAccess
 
@@ -4244,11 +4389,11 @@ Sets whether to enable web debugging. By default, web debugging is disabled.For 
 static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
-Enables debugging of web contents.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The port numbers from 0 to 1024 are prohibited. Ports less than 0 or greater than 65535 are considered invalid.If an attempt is made to set these disabled or invalid ports, an exception will be thrown.&lt;/p&gt;
+Enables debugging of web contents. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The port numbers from 0 to 1024 are prohibited. Ports less than 0 or greater than 65535 are considered invalid. If an attempt is made to set these disabled or invalid ports, an exception will be thrown. &lt;/p&gt;
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void-End-->
 
@@ -4265,7 +4410,7 @@ Enables debugging of web contents.
 
 | Error Code ID |
 | --- |
-| [17100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100023-port-number-not-allowed) |
+| [17100023](../errorcode-webview.md#17100023-port-number-not-allowed) |
 
 ## setWebDestroyMode
 
@@ -4273,9 +4418,11 @@ Enables debugging of web contents.
 static setWebDestroyMode(mode: WebDestroyMode): void
 ```
 
-Sets the destroy mode of the Web component. The destroy mode of the Web component affects the time when web kernel resources, such as the JavaScript running context and rendering context, are released. The default value is WebDestroyMode.NORMAL_MODE(normal mode), indicating that the system determines the destroy time. You can set WebDestroyMode.FAST_MODE (fast mode) to destroy resources immediately, improving performance in specific scenarios.
+Sets the destroy mode of the Web component. The destroy mode of the Web component affects the time when web kernel resources, such as the JavaScript running context and rendering context, are released. The default value is WebDestroyMode.NORMAL_MODE (normal mode), indicating that the system determines the destroy time. You can set WebDestroyMode.FAST_MODE (fast mode) to destroy resources immediately, improving performance in specific scenarios.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void--><!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void-End-->
 
@@ -4297,6 +4444,8 @@ Set web scheme handler for specific scheme. This is only used for related web co
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
@@ -4314,8 +4463,8 @@ Set web scheme handler for specific scheme. This is only used for related web co
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## slideScroll
 
@@ -4326,6 +4475,8 @@ slideScroll(vx: number, vy: number): void
 Simulates a slide-to-scroll action on the page at the specified velocity.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4344,8 +4495,8 @@ Simulates a slide-to-scroll action on the page at the specified velocity.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## startCamera
 
@@ -4353,10 +4504,11 @@ Simulates a slide-to-scroll action on the page at the specified velocity.
 startCamera(): void
 ```
 
-Enables the camera capture of the current web page. Before using the camera, add the **ohos.permission.CAMERA**permission to **module.json5**. For details about how to add the permission, see  
-[Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md).
+Enables the camera capture of the current web page. Before using the camera, add the **ohos.permission.CAMERA** permission to **module.json5**. For details about how to add the permission, see [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -4368,7 +4520,7 @@ Enables the camera capture of the current web page. Before using the camera, add
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## startDownload
 
@@ -4379,6 +4531,8 @@ startDownload(url: string): void
 Start a download.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4396,8 +4550,8 @@ Start a download.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## stop
 
@@ -4409,6 +4563,8 @@ Stops the current load.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-stop(): void--><!--Device-WebviewController-stop(): void-End-->
@@ -4419,7 +4575,7 @@ Stops the current load.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## stopAllMedia
 
@@ -4431,6 +4587,8 @@ Stops all audio and video on a web page.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-stopAllMedia(): void--><!--Device-WebviewController-stopAllMedia(): void-End-->
@@ -4441,7 +4599,7 @@ Stops all audio and video on a web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## stopCamera
 
@@ -4453,6 +4611,8 @@ Stops the camera capture of the current web page.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-stopCamera(): void--><!--Device-WebviewController-stopCamera(): void-End-->
@@ -4463,7 +4623,7 @@ Stops the camera capture of the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## stopMicrophone
 
@@ -4475,6 +4635,8 @@ Stops microphone capture on the current web page.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-WebviewController-stopMicrophone(): void--><!--Device-WebviewController-stopMicrophone(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4483,7 +4645,7 @@ Stops microphone capture on the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## storeWebArchive
 
@@ -4494,6 +4656,8 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 Stores the current page as a web archive.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4518,9 +4682,9 @@ Stores the current page as a web archive.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## storeWebArchive
 
@@ -4531,6 +4695,8 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 Stores the current page as a web archive.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4550,9 +4716,9 @@ Stores the current page as a web archive.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## terminateRenderProcess
 
@@ -4560,9 +4726,11 @@ Stores the current page as a web archive.
 terminateRenderProcess(): boolean
 ```
 
-Terminates this render process.Calling this API will destroy the associated render process. If the render process has not been started or has been destroyed, there is no impact. In addition, destroying the render process affects all other instances associated with the render process.
+Terminates this render process. Calling this API will destroy the associated render process. If the render process has not been started or has been destroyed, there is no impact. In addition, destroying the render process affects all other instances associated with the render process.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-terminateRenderProcess(): boolean--><!--Device-WebviewController-terminateRenderProcess(): boolean-End-->
 
@@ -4578,7 +4746,7 @@ Terminates this render process.Calling this API will destroy the associated rend
 
 | Error Code ID |
 | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## trimMemoryByPressureLevel
 
@@ -4589,6 +4757,8 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 Trim memory by different memory pressure level.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -4606,7 +4776,7 @@ Trim memory by different memory pressure level.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## waitForAttached
 
@@ -4614,9 +4784,11 @@ Trim memory by different memory pressure level.
 waitForAttached(timeout: number): Promise<ControllerAttachState>
 ```
 
-Asynchronously waits for the WebViewController to be attached to the Web component. If the attachment is complete or times out,a callback is triggered to return the current ControllerAttachState through a promise.
+Asynchronously waits for the WebViewController to be attached to the Web component. If the attachment is complete or times out, a callback is triggered to return the current ControllerAttachState through a promise.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>--><!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>-End-->
 
@@ -4644,6 +4816,8 @@ Warmup the registered service worker associated the url.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebviewController-static warmupServiceWorker(url: string): void--><!--Device-WebviewController-static warmupServiceWorker(url: string): void-End-->
@@ -4660,7 +4834,7 @@ Warmup the registered service worker associated the url.
 
 | Error Code ID |
 | --- |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## webPageSnapshot
 
@@ -4668,16 +4842,11 @@ Warmup the registered service worker associated the url.
 webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void
 ```
 
-Obtains the full drawing result of the web page.
-
-> **NOTE：**
-> 
-> Only static images and texts in the rendering process can be captured.
-> 
-> If there is a video on the page, the placeholder image of the video is displayed when you take a snapshot. If
-> there is no placeholder image, the page is blank.
+Obtains the full drawing result of the web page. > **NOTE：**> > Only static images and texts in the rendering process can be captured. > > If there is a video on the page, the placeholder image of the video is displayed when you take a snapshot. If > there is no placeholder image, the page is blank.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -4698,10 +4867,11 @@ Obtains the full drawing result of the web page.
 zoom(factor: number): void
 ```
 
-Zooms in or out of this web page. This API is effective only when  
-[zoomAccess](@ohos.web.WebAttribute#zoomAccess) is **true**.
+Zooms in or out of this web page. This API is effective only when zoomAccess is **true**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4719,9 +4889,9 @@ Zooms in or out of this web page. This API is effective only when
 
 | Error Code ID |
 | --- |
-| [17100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## zoomIn
 
@@ -4733,6 +4903,8 @@ Zooms in on this web page by 25%.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-zoomIn(): void--><!--Device-WebviewController-zoomIn(): void-End-->
@@ -4743,8 +4915,8 @@ Zooms in on this web page by 25%.
 
 | Error Code ID |
 | --- |
-| [17100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## zoomOut
 
@@ -4756,6 +4928,8 @@ Zooms out of this web page by 20%.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebviewController-zoomOut(): void--><!--Device-WebviewController-zoomOut(): void-End-->
@@ -4766,5 +4940,5 @@ Zooms out of this web page by 20%.
 
 | Error Code ID |
 | --- |
-| [17100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) |
-| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |

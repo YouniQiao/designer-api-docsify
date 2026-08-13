@@ -6,6 +6,8 @@ Enumerates application window states.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-applicationManager-enum WindowState--><!--Device-applicationManager-enum WindowState-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ The window has been created but is currently unavailable.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ The window has been created and is available for use.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowState-CONNECT = 1--><!--Device-WindowState-CONNECT = 1-End-->
@@ -57,6 +63,8 @@ Foreground state, indicating that the window has entered the foreground display.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Foreground active state, indicating that the window is currently displayed in th
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowState-ACTIVE = 3--><!--Device-WindowState-ACTIVE = 3-End-->
@@ -94,6 +104,8 @@ Foreground inactive state, indicating that the window is about to enter the back
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowState-INACTIVE = 4--><!--Device-WindowState-INACTIVE = 4-End-->
@@ -111,6 +123,8 @@ Background state, indicating that the window has been moved to the background an
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

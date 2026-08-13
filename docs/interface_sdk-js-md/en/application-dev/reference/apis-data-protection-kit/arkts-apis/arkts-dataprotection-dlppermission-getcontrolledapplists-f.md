@@ -12,15 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getControlledAppLists(): Promise<Array<string>>
 ```
 
-Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result.
-
-> **NOTE：**
-> This API can only be used to query the list of applications controlled by enterprise DLP, which is set using
-> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setControlledAppLists).
+Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result. > **NOTE：**> This API can only be used to query the list of applications controlled by enterprise DLP, which is set using > [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setControlledAppLists).
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 
@@ -40,7 +38,7 @@ Obtains the list of applications controlled by enterprise DLP for the current us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

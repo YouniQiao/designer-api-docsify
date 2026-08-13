@@ -18,7 +18,7 @@ Obtains information about the current group.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentGroup](ohos.wifiManager/wifiManager.getCurrentGroup)
+**Substitutes:** [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getCurrentGroup)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -45,7 +45,7 @@ Obtains information about the current group.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentGroup](ohos.wifiManager/wifiManager.getCurrentGroup)
+**Substitutes:** [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getCurrentGroup)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 

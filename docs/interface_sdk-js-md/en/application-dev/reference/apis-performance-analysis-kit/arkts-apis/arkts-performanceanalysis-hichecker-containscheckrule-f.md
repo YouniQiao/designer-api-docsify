@@ -14,9 +14,11 @@ function containsCheckRule(rule: bigint) : boolean
 
 Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean--><!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean-End-->
 
@@ -38,7 +40,7 @@ Checks whether the specified rule exists in the collection of added rules. If th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | the parameter check failed, only one bigint type parameter is needed |
 
 ## Examples
 

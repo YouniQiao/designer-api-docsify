@@ -2,7 +2,9 @@
 
 表示设备连接状态变化的枚举。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum DeviceChangeType--><!--Device-audio-enum DeviceChangeType-End-->
 
@@ -16,7 +18,9 @@ CONNECT = 0
 
 设备连接。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceChangeType-CONNECT = 0--><!--Device-DeviceChangeType-CONNECT = 0-End-->
 
@@ -30,7 +34,9 @@ DISCONNECT = 1
 
 断开设备连接。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceChangeType-DISCONNECT = 1--><!--Device-DeviceChangeType-DISCONNECT = 1-End-->
 

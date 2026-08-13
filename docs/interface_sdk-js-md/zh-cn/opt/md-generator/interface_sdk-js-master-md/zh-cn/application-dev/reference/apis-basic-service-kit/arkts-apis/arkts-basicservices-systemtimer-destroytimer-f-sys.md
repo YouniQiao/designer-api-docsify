@@ -8,7 +8,9 @@ function destroyTimer(timer: number, callback: AsyncCallback<void>): void
 
 销毁定时器，使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void-End-->
 
@@ -27,8 +29,8 @@ function destroyTimer(timer: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -72,7 +74,9 @@ function destroyTimer(timer: number): Promise<void>
 
 销毁定时器，使用Promise进行异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>--><!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>-End-->
 
@@ -96,8 +100,8 @@ function destroyTimer(timer: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

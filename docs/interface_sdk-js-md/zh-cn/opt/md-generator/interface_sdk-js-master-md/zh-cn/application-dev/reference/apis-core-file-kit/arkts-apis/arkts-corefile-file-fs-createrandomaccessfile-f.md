@@ -11,6 +11,8 @@ declare function createRandomAccessFile(file: string | File, mode?: number,
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function createRandomAccessFile(file: string | File, mode?: number,  options?: RandomAccessFileOptions): Promise<RandomAccessFile>--><!--Device-unnamed-declare function createRandomAccessFile(file: string | File, mode?: number,  options?: RandomAccessFileOptions): Promise<RandomAccessFile>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -72,6 +74,8 @@ declare function createRandomAccessFile(file: string | File, callback: AsyncCall
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function createRandomAccessFile(file: string | File, callback: AsyncCallback<RandomAccessFile>): void--><!--Device-unnamed-declare function createRandomAccessFile(file: string | File, callback: AsyncCallback<RandomAccessFile>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -124,6 +128,8 @@ declare function createRandomAccessFile(file: string | File, mode: number, callb
 基于文件路径或文件对象创建RandomAccessFile对象，使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function createRandomAccessFile(file: string | File, mode: number, callback: AsyncCallback<RandomAccessFile>): void--><!--Device-unnamed-declare function createRandomAccessFile(file: string | File, mode: number, callback: AsyncCallback<RandomAccessFile>): void-End-->
 

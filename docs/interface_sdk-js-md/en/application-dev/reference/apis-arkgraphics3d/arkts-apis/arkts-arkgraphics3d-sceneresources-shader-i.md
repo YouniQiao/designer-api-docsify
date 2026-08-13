@@ -4,22 +4,18 @@ Shader resource, which inherits from [SceneResource](arkts-arkgraphics3d-scenere
 
 **Inheritance/Implementation:** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface Shader extends SceneResource--><!--Device-unnamed-export interface Shader extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Shader--><!--Device-unnamed-export interface Shader-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## setShaderInputs
 
-ArkTS-Dyn:
-```TypeScript
-setShaderInputs(inputs: Record<string, number | Vec2 | Vec3 | Vec4 | Image>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setShaderInputs(inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>): void
 ```
@@ -28,7 +24,9 @@ Sets the inputs for the shader. This API delivers better performance than direct
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +38,7 @@ Sets the inputs for the shader. This API delivers better performance than direct
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | ArkTS-Dyn: Record&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;  <br>ArkTS-Sta：Record&lt;string, double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | Yes | A mapping of strings to values for setting shader inputs. |
+| inputs | Record&lt;string, double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | Yes | A mapping of strings to values for setting shader inputs. |
 
 ## Examples
 
@@ -89,11 +87,13 @@ readonly inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>
 
 Inputs of the shader.
 
-**Type:** ArkTS-Dyn: Record&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;  <br>ArkTS-Sta：Record&lt;string, double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;
+**Type:** Record&lt;string, double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Shader-readonly inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>--><!--Device-Shader-readonly inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>-End-->
 

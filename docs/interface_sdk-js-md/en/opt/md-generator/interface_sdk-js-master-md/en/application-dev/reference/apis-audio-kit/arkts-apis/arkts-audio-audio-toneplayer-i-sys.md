@@ -2,7 +2,9 @@
 
 Provides APIs for tone playing.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface TonePlayer--><!--Device-audio-interface TonePlayer-End-->
 
@@ -24,7 +26,9 @@ load(type: ToneType, callback: AsyncCallback<void>): void
 
 Loads tone. This method uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void--><!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void-End-->
 
@@ -62,7 +66,9 @@ load(type: ToneType): Promise<void>
 
 Loads tone. This method uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-load(type: ToneType): Promise<void>--><!--Device-TonePlayer-load(type: ToneType): Promise<void>-End-->
 
@@ -100,7 +106,9 @@ release(callback: AsyncCallback<void>): void
 
 Releases the player. This method uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-release(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -137,7 +145,9 @@ release(): Promise<void>
 
 Releases the player. This method uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-release(): Promise<void>--><!--Device-TonePlayer-release(): Promise<void>-End-->
 
@@ -169,7 +179,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts player. This method uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-start(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-start(callback: AsyncCallback<void>): void-End-->
 
@@ -206,7 +218,9 @@ start(): Promise<void>
 
 Starts player. This method uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-start(): Promise<void>--><!--Device-TonePlayer-start(): Promise<void>-End-->
 
@@ -238,7 +252,9 @@ stop(callback: AsyncCallback<void>): void
 
 Stops player. This method uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -275,7 +291,9 @@ stop(): Promise<void>
 
 Stops player. This method uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TonePlayer-stop(): Promise<void>--><!--Device-TonePlayer-stop(): Promise<void>-End-->
 

@@ -2,7 +2,9 @@
 
 Describes the camera metadata, which is the data source of [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput). The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface MetadataObject--><!--Device-camera-interface MetadataObject-End-->
 
@@ -24,7 +26,9 @@ Metadata rectangle.
 
 **Type:** Rect
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -44,6 +48,8 @@ Whether the focus is locked and being tracked currently.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -62,7 +68,9 @@ Timestamp, in ns.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -80,7 +88,9 @@ Metadata object type.
 
 **Type:** [MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

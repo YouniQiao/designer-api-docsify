@@ -2,11 +2,13 @@
 
 Defines the abstract interface of albums.
 
-**Inheritance/Implementation:** AbsAlbum extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** AbsAlbum extends lang.ISendable
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface AbsAlbum extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface AbsAlbum extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface AbsAlbum-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -25,6 +27,8 @@ getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhoto
 Fetch shared photo assets in an album.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
@@ -50,7 +54,7 @@ Fetch shared photo assets in an album.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |

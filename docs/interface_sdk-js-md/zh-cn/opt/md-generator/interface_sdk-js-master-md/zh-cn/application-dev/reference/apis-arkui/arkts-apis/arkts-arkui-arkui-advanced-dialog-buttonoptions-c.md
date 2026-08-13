@@ -1,12 +1,10 @@
 # ButtonOptions
 
-> **说明：**
-> 
-> buttonStyle和role优先级高于fontColor和background。当buttonStyle和role设置的是默认值时，fontColor和background生效。
-> 
-> 若同时给多个按钮设置defaultFocus，则默认焦点为设置defaultFocus按钮中显示顺序的第一个按钮。
+> **说明：** > > buttonStyle和role优先级高于fontColor和background。当buttonStyle和role设置的是默认值时，fontColor和background生效。 > > 若同时给多个按钮设置defaultFocus，则默认焦点为设置defaultFocus按钮中显示顺序的第一个按钮。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class ButtonOptions--><!--Device-unnamed-export declare class ButtonOptions-End-->
 
@@ -20,7 +18,11 @@ action?: () => void
 
 按钮的点击事件。
 
+**类型：** () =&gt; void
+
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ action?: () => void
 background?: ResourceColor
 ```
 
-按钮的背景色。
-
-默认值跟随buttonStyle。
+按钮的背景色。 默认值跟随buttonStyle。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,15 +60,15 @@ background?: ResourceColor
 buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式。
-
-默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
+按钮的样式。 默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
 
 **类型：** [ButtonStyleMode](../arkts-components/arkts-arkui-buttonstylemode-e.md)
 
 **默认值：** ButtonStyleMode.TEXTUAL
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,19 +84,15 @@ buttonStyle?: ButtonStyleMode
 defaultFocus?: boolean
 ```
 
-按钮是否设置默认焦点。
-
-true：按钮是默认焦点。
-
-false：按钮不是默认焦点。
-
-默认值：false
+按钮是否设置默认焦点。 true：按钮是默认焦点。 false：按钮不是默认焦点。 默认值：false
 
 **类型：** boolean
 
 **默认值：** { false }
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,13 +108,13 @@ false：按钮不是默认焦点。
 fontColor?: ResourceColor
 ```
 
-按钮的字体颜色。
-
-默认值跟随buttonStyle。
+按钮的字体颜色。 默认值跟随buttonStyle。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -132,15 +130,15 @@ fontColor?: ResourceColor
 role?: ButtonRole
 ```
 
-按钮的角色。
-
-默认值：ButtonRole.NORMAL
+按钮的角色。 默认值：ButtonRole.NORMAL
 
 **类型：** [ButtonRole](../arkts-components/arkts-arkui-buttonrole-e.md)
 
 **默认值：** ButtonRole.NORMAL
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,15 +154,15 @@ role?: ButtonRole
 textAlign?: TextAlign
 ```
 
-按钮文本的对齐方式。
-
-默认值：TextAlign.Start
+按钮文本的对齐方式。 默认值：TextAlign.Start
 
 **类型：** TextAlign
 
 **默认值：** { TextAlign.Start }
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -185,6 +183,8 @@ value: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

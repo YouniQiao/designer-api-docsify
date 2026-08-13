@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface BoardStyle--><!--Device-unnamed-interface BoardStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,19 +16,15 @@
 borderRadius?: Length
 ```
 
-背板的圆角半径（不支持百分比设置）。
-
-默认值：8.0
-
-单位：vp
-
-取值范围：[0, +∞)。异常值时取默认值。
+背板的圆角半径（不支持百分比设置）。 默认值：8.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 8.0vp [since 11]
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-cloudData-interface ClearConfig--><!--Device-cloudData-interface ClearConfig-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -21,6 +23,8 @@ dbInfo: Record<string, DBActionInfo>
 **类型：** Record&lt;string, [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md)&gt;
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

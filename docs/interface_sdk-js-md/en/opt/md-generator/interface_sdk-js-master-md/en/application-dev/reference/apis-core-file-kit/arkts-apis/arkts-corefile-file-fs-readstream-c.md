@@ -1,16 +1,14 @@
 # ReadStream
 
-Defines a readable stream. You need to use  
-[fileIo.createReadStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatereadstream12) to create a **ReadStream** instance, which is inherited from  
-[stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md#ReadableOptions).
-
-The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
+Defines a readable stream. You need to use [fileIo.createReadStream](arkts-corefile-file-fs-createreadstream-f.md#createReadStream) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md#ReadableOptions). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
 **Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#Readable)
 
 **Since:** 12
 
-<!--Device-unnamed-declare class ReadStream extends stream.Readable--><!--Device-unnamed-declare class ReadStream extends stream.Readable-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ReadStream--><!--Device-unnamed-declare class ReadStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -29,6 +27,8 @@ close(): void
 Closes this readable stream.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
 
@@ -63,6 +63,8 @@ The ReadStream constructor.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -76,6 +78,8 @@ seek(offset: number, whence?: WhenceType): number
 Adjusts the position of the readable stream offset pointer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number--><!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number-End-->
 
@@ -99,7 +103,7 @@ Adjusts the position of the readable stream offset pointer.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900026 |
 | 13900042 |
 
@@ -125,6 +129,8 @@ Number of bytes read by the readable stream.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-ReadStream-readonly bytesRead: number--><!--Device-ReadStream-readonly bytesRead: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -140,6 +146,8 @@ Path of the file corresponding to the readable stream.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
 

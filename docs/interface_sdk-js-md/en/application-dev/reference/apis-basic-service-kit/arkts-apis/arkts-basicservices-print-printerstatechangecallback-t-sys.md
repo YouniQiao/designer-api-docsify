@@ -4,11 +4,13 @@
 type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void
 ```
 
-Defines the callback type used in registering to listen for PrinterState.The value of state indicates the state of printer.The value of info indicates the latest printer info.
+Defines the callback type used in registering to listen for PrinterState. The value of state indicates the state of printer. The value of info indicates the latest printer info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void--><!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void-End-->
 
@@ -21,5 +23,5 @@ Defines the callback type used in registering to listen for PrinterState.The val
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | Yes | the state of printer |
-| info | [PrinterInfo](arkts-basicservices-print-printerinfo-i.md) | Yes | the information of the latest printer |
+| info | [PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md) | Yes | the information of the latest printer |
 

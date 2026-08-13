@@ -1,21 +1,10 @@
 # InputMethodSetting
 
-InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能：
+InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能： - **输入法变化订阅**：通过 on('imeChange') 订阅输入法及子类型变化事件，当用户切换输入法时收到通知。 - **输入法列表查询**：通过 [getInputMethods](#getInputMethods) 查询已激活/未激活输入法列表，通过 [getAllInputMethods](#getAllInputMethods) 查询所有已安装输入法列表，通过 [listInputMethodSubtype](#listInputMethodSubtype) 查询指定输入法的子类型列表。 - **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。 - **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。 需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取InputMethodSetting实例后使用。 下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取到InputMethodSetting实例后，通过实例调用。
 
-- **输入法变化订阅**：通过  
-[on('imeChange')](inputMethod.InputMethodSetting.on( type: 'imeChange', callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void ))订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
-- **输入法列表查询**：通过  
-[getInputMethods](#getInputMethods)查询已激活/未激活输入法列表，通过  
-[getAllInputMethods](#getAllInputMethods)查询所有已安装输入法列表，通过  
-[listInputMethodSubtype](#listInputMethodSubtype)查询指定输入法的子类型列表。  
-- **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。  
-- **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。
+**起始版本：** 23
 
-需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取InputMethodSetting实例后使用。
-
-下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取到InputMethodSetting实例后，通过实例调用。
-
-**起始版本：** 8
+**废弃版本：** -1
 
 <!--Device-inputMethod-interface InputMethodSetting--><!--Device-inputMethod-interface InputMethodSetting-End-->
 
@@ -33,7 +22,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void--><!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void-End-->
 
@@ -71,7 +60,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>--><!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>-End-->
 
@@ -103,7 +92,9 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 获取所有输入法应用列表。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
@@ -119,8 +110,8 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 错误码ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -144,7 +135,9 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 获取所有输入法应用列表。使用promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>-End-->
 
@@ -160,8 +153,8 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 | 错误码ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -183,7 +176,9 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 获取所有输入法应用列表。同步接口。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>-End-->
 
@@ -199,8 +194,8 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 | 错误码ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -216,7 +211,9 @@ getInputMethodState(): Promise<EnabledState>
 
 查询输入法的启用状态。使用promise异步回调。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
 
@@ -232,8 +229,8 @@ getInputMethodState(): Promise<EnabledState>
 
 | 错误码ID |
 | --- |
-| [12800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -255,7 +252,9 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 
 获取已激活/未激活的输入法应用列表。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
@@ -272,9 +271,9 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -298,7 +297,9 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 获取已激活/未激活的输入法应用列表。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>-End-->
 
@@ -320,9 +321,9 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -344,7 +345,9 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 获取已激活/未激活的输入法应用列表。同步接口。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>-End-->
 
@@ -366,9 +369,9 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -384,7 +387,9 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 查询当前输入法应用的所有子类型。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void-End-->
 
@@ -400,8 +405,8 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 | 错误码ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -427,7 +432,9 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 查询当前输入法应用的所有子类型。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>-End-->
 
@@ -443,8 +450,8 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 | 错误码ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -546,7 +553,9 @@ listInputMethodSubtype(
 
 获取指定输入法应用的所有子类型。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void--><!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void-End-->
 
@@ -563,9 +572,9 @@ listInputMethodSubtype(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -597,7 +606,9 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 获取指定输入法应用的所有子类型。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>-End-->
 
@@ -619,9 +630,9 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -642,7 +653,29 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
 })
 ```
 
-## off('imeChange')
+## offImeChange
+
+```TypeScript
+offImeChange(callback?: ImeChangeCallback): void
+```
+
+取消订阅输入法或子类型切换事件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void--><!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 否 |
+
+## off_imeChange
 
 ```TypeScript
 off(
@@ -654,6 +687,8 @@ off(
 取消订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
 
@@ -672,7 +707,29 @@ off(
 inputMethod.getSetting().off('imeChange');
 ```
 
-## on('imeChange')
+## onImeChange
+
+```TypeScript
+onImeChange(callback: ImeChangeCallback): void
+```
+
+订阅输入法或子类型切换事件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void--><!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 是 |
+
+## on_imeChange
 
 ```TypeScript
 on(
@@ -684,6 +741,8 @@ on(
 订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
 
@@ -720,7 +779,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 18
 
-**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void-End-->
 
@@ -736,7 +795,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -768,7 +827,7 @@ showOptionalInputMethods(): Promise<boolean>
 
 **废弃版本：** 18
 
-**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>--><!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>-End-->
 
@@ -784,7 +843,7 @@ showOptionalInputMethods(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 

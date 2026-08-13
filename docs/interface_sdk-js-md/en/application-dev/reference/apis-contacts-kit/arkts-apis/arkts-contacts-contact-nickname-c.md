@@ -6,6 +6,8 @@ Defines a contact's nickname.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-contact-class NickName--><!--Device-contact-class NickName-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -29,6 +31,8 @@ Contact nickname.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

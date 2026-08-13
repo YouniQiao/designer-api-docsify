@@ -1,8 +1,10 @@
 # PointerMatrix
 
-Implements a **PointerMatrix** object that stores coordinates and behaviors of each action of each finger in a multi-touch operation. After creating an object using [create](create), use [setPoint](#setPoint) to set the coordinates of each finger at each step. Then pass the coordinates to [injectMultiPointerAction](arkts-test-uitest-driver-c.md#injectMultiPointerAction) to perform a multi-finger operation.
+Implements a **PointerMatrix** object that stores coordinates and behaviors of each action of each finger in a multi-touch operation. After creating an object using create, use [setPoint](#setPoint) to set the coordinates of each finger at each step. Then pass the coordinates to [injectMultiPointerAction](arkts-test-uitest-driver-c.md#injectMultiPointerAction) to perform a multi-finger operation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PointerMatrix--><!--Device-unnamed-declare class PointerMatrix-End-->
 
@@ -22,7 +24,9 @@ static create(fingers: number, steps: number): PointerMatrix
 
 Creates a **PointerMatrix** object and returns the object created. This API is a static API.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,7 +51,7 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -66,9 +70,11 @@ async function demo() {
 setPoint(finger: number, step: number, point: Point): void
 ```
 
-Sets the coordinates for the action corresponding to the specified finger and step in the **PointerMatrix**object.
+Sets the coordinates for the action corresponding to the specified finger and step in the **PointerMatrix** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,7 +94,7 @@ Sets the coordinates for the action corresponding to the specified finger and st
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

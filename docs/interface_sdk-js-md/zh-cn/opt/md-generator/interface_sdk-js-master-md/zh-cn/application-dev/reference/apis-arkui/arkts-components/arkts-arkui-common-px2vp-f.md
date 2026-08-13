@@ -6,13 +6,13 @@
 declare function px2vp(value: number): number
 ```
 
-Converts a number in units of px to a number in units of vp.By default, the virtual pixel ratio of the screen where the current UI instance is located is used for conversion.If no UI instance is available, the virtual pixel ratio of the default screen is used instead.
+Converts a number in units of px to a number in units of vp. By default, the virtual pixel ratio of the screen where the current UI instance is located is used for conversion. If no UI instance is available, the virtual pixel ratio of the default screen is used instead.
 
 **起始版本：** 11
 
 **废弃版本：** 18
 
-**替代接口：** [px2vp](ohos.arkui.UIContext.UIContext#px2vp)
+**替代接口：** px2vp
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

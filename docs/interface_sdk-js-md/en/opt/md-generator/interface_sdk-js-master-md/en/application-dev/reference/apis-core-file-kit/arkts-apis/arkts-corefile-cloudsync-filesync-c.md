@@ -1,8 +1,10 @@
 # FileSync
 
-Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit.Before using the APIs of this class, you need to create a **FileSync** instance.
+Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit. Before using the APIs of this class, you need to create a **FileSync** instance.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-class FileSync--><!--Device-cloudSync-class FileSync-End-->
 
@@ -22,7 +24,9 @@ constructor()
 
 A constructor used to create a **FileSync** instance.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-constructor()--><!--Device-FileSync-constructor()-End-->
 
@@ -32,7 +36,7 @@ A constructor used to create a **FileSync** instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -48,7 +52,9 @@ getLastSyncTime(): Promise<number>
 
 Obtains the last sync time. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-getLastSyncTime(): Promise<long>--><!--Device-FileSync-getLastSyncTime(): Promise<long>-End-->
 
@@ -64,7 +70,7 @@ Obtains the last sync time. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
 ## Examples
@@ -90,7 +96,9 @@ getLastSyncTime(callback: AsyncCallback<number>): void
 
 Obtains the last sync time. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-getLastSyncTime(callback: AsyncCallback<long>): void--><!--Device-FileSync-getLastSyncTime(callback: AsyncCallback<long>): void-End-->
 
@@ -106,7 +114,7 @@ Obtains the last sync time. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
 ## Examples
@@ -126,7 +134,36 @@ fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
 });
 ```
 
-## off
+## offProgress
+
+```TypeScript
+offProgress(callback?: Callback<SyncProgress>): void
+```
+
+Unsubscribes from sync progress event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-FileSync-offProgress(callback?: Callback<SyncProgress>): void--><!--Device-FileSync-offProgress(callback?: Callback<SyncProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+
+## off_progress
 
 ```TypeScript
 off(event: 'progress', callback?: Callback<SyncProgress>): void
@@ -135,6 +172,8 @@ off(event: 'progress', callback?: Callback<SyncProgress>): void
 Removes the specified callback from the device-cloud sync progress.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-off(event: 'progress', callback?: Callback<SyncProgress>): void--><!--Device-FileSync-off(event: 'progress', callback?: Callback<SyncProgress>): void-End-->
 
@@ -151,7 +190,7 @@ Removes the specified callback from the device-cloud sync progress.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
 ## Examples
@@ -168,7 +207,36 @@ fileSync.on('progress', callback);
 fileSync.off('progress', callback);
 ```
 
-## on
+## onProgress
+
+```TypeScript
+onProgress(callback: Callback<SyncProgress>): void
+```
+
+Subscribes to sync progress change event. This method uses a callback to get sync progress changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-FileSync-onProgress(callback: Callback<SyncProgress>): void--><!--Device-FileSync-onProgress(callback: Callback<SyncProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+
+## on_progress
 
 ```TypeScript
 on(event: 'progress', callback: Callback<SyncProgress>): void
@@ -177,6 +245,8 @@ on(event: 'progress', callback: Callback<SyncProgress>): void
 Registers a listener for the device-cloud sync progress.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-on(event: 'progress', callback: Callback<SyncProgress>): void--><!--Device-FileSync-on(event: 'progress', callback: Callback<SyncProgress>): void-End-->
 
@@ -193,7 +263,7 @@ Registers a listener for the device-cloud sync progress.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
 ## Examples
@@ -215,7 +285,9 @@ start(): Promise<void>
 
 Starts device-cloud sync of a file. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-start(): Promise<void>--><!--Device-FileSync-start(): Promise<void>-End-->
 
@@ -231,7 +303,7 @@ Starts device-cloud sync of a file. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 22400001 |
 | 22400003 |
 | 22400002 |
@@ -265,7 +337,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts device-cloud sync of a file. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-start(callback: AsyncCallback<void>): void--><!--Device-FileSync-start(callback: AsyncCallback<void>): void-End-->
 
@@ -281,7 +355,7 @@ Starts device-cloud sync of a file. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 22400001 |
 | 22400003 |
 | 22400002 |
@@ -309,11 +383,11 @@ fileSync.start((err: BusinessError) => {
 stop(): Promise<void>
 ```
 
-Stops device-cloud sync of a file. This API uses a promise to return the result.
+Stops device-cloud sync of a file. This API uses a promise to return the result. Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
-Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-FileSync-stop(): Promise<void>--><!--Device-FileSync-stop(): Promise<void>-End-->
 
@@ -329,7 +403,7 @@ Calling **stop** will stop the sync process. To resume the sync, call [start](#s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
 ## Examples
@@ -352,11 +426,11 @@ fileSync.stop().then(() => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.
+Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result. Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
-Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-FileSync-stop(callback: AsyncCallback<void>): void--><!--Device-FileSync-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -372,7 +446,7 @@ Calling **stop** will stop the sync process. To resume the sync, call [start](#s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
 ## Examples

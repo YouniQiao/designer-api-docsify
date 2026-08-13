@@ -14,7 +14,9 @@ function getOrientation(rotationMatrix: Array<number>, callback: AsyncCallback<A
 
 Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void-End-->
 
@@ -31,8 +33,8 @@ Obtains the device direction based on the rotation matrix. This API uses an asyn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 
@@ -74,7 +76,9 @@ function getOrientation(rotationMatrix: Array<number>): Promise<Array<number>>
 
 Obtains the device direction based on the rotation matrix. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>-End-->
 
@@ -96,8 +100,8 @@ Obtains the device direction based on the rotation matrix. This API uses a promi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

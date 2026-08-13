@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-image-interface ImageRawData--><!--Device-image-interface ImageRawData-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
@@ -19,6 +21,8 @@ bitsPerPixel: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ buffer: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

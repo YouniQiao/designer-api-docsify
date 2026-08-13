@@ -14,7 +14,7 @@ function enableAirplaneMode(enable: boolean, callback: AsyncCallback<void>): voi
 
 Enables or disables airplane mode.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 
@@ -51,7 +51,7 @@ function enableAirplaneMode(enable: boolean): Promise<void>
 
 Enables or disables airplane mode.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 

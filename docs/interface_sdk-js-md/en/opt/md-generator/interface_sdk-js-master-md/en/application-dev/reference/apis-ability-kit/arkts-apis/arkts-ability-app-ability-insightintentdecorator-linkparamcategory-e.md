@@ -1,9 +1,10 @@
 # LinkParamCategory
 
-Enumerates the intent parameter categories available for the  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator. The enum is used to define how intent parameters should be passed.
+Enumerates the intent parameter categories available for the @InsightIntentLink decorator. The enum is used to define how intent parameters should be passed.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum LinkParamCategory--><!--Device-unnamed-declare enum LinkParamCategory-End-->
 
@@ -19,6 +20,8 @@ Category of link. Intent parameters are appended to the end of a URI link and pa
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -33,10 +36,11 @@ Category of link. Intent parameters are appended to the end of a URI link and pa
 WANT = 'want'
 ```
 
-Category of want. Intent parameters are passed to the application through the **parameters** field in  
-[Want](arkts-ability-app-ability-want-want-c.md#Want).
+Category of want. Intent parameters are passed to the application through the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md#Want).
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

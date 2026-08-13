@@ -4,6 +4,8 @@ Enumerates the account types.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-enum CalendarType--><!--Device-calendarManager-enum CalendarType-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -17,6 +19,8 @@ LOCAL = 'local'
 Local account.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Email account.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CalendarType-EMAIL = 'email'--><!--Device-CalendarType-EMAIL = 'email'-End-->
@@ -49,6 +55,8 @@ BIRTHDAY = 'birthday'
 Birthday account.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ CalDAV account.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CalendarType-CALDAV = 'caldav'--><!--Device-CalendarType-CALDAV = 'caldav'-End-->
@@ -81,6 +91,8 @@ SUBSCRIBED = 'subscribed'
 Subscription account.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

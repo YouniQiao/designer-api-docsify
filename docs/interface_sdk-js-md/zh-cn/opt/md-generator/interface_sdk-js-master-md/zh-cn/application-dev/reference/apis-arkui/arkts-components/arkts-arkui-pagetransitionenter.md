@@ -12,6 +12,8 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PageTransitionEnterInterface-(value: PageTransitionOptions): PageTransitionEnterInterface--><!--Device-PageTransitionEnterInterface-(value: PageTransitionOptions): PageTransitionEnterInterface-End-->
@@ -34,6 +36,8 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PageTransitionEnterInterface-onEnter(event: PageTransitionCallback): PageTransitionEnterInterface--><!--Device-PageTransitionEnterInterface-onEnter(event: PageTransitionCallback): PageTransitionEnterInterface-End-->
@@ -48,8 +52,7 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 ## 汇总
 
-- [PageTransitionExitInterface](arkts-arkui-pagetransitionenter-pagetransitionexitinterface-i.md)
-- [PageTransitionOptions](arkts-arkui-pagetransitionenter-pagetransitionoptions-i.md)
-- [PageTransitionCallback](arkts-arkui-pagetransitionenter-pagetransitioncallback-t.md)
-- [RouteType](arkts-arkui-pagetransitionenter-routetype-e.md)
-- [SlideEffect](arkts-arkui-pagetransitionenter-slideeffect-e.md)
+- [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md)
+- [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md)
+- [RouteType](arkts-arkui-routetype-e.md)
+- [SlideEffect](arkts-arkui-slideeffect-e.md)

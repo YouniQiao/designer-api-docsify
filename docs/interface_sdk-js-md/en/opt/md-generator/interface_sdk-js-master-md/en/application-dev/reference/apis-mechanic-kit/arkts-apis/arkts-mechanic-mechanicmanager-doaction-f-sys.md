@@ -16,6 +16,8 @@ Execute an action sequence.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>--><!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -39,7 +41,7 @@ Execute an action sequence.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) |
-| [33300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-function-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) |

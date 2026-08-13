@@ -8,7 +8,7 @@ Wi-Fi device configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiDeviceConfig](ohos.wifiManager/wifiManager.WifiDeviceConfig)
+**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#WifiDeviceConfig)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
@@ -36,7 +36,7 @@ The UID of the Wi-Fi configuration creator
 
 **Deprecated since:** 9
 
-**Substitutes:** [creatorUid](ohos.wifiManager/wifiManager.WifiDeviceConfig.creatorUid)
+**Substitutes:** [creatorUid](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#creatorUid)
 
 <!--Device-WifiDeviceConfig-creatorUid: number--><!--Device-WifiDeviceConfig-creatorUid: number-End-->
 
@@ -60,7 +60,7 @@ Disable reason
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableReason](ohos.wifiManager/wifiManager.WifiDeviceConfig.disableReason)
+**Substitutes:** [disableReason](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#disableReason)
 
 <!--Device-WifiDeviceConfig-disableReason: number--><!--Device-WifiDeviceConfig-disableReason: number-End-->
 
@@ -84,7 +84,7 @@ IP Type
 
 **Deprecated since:** 9
 
-**Substitutes:** [ipType](ohos.wifiManager/wifiManager.WifiDeviceConfig.ipType)
+**Substitutes:** [ipType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#ipType)
 
 <!--Device-WifiDeviceConfig-ipType: IpType--><!--Device-WifiDeviceConfig-ipType: IpType-End-->
 
@@ -108,7 +108,7 @@ Allocated networkId
 
 **Deprecated since:** 9
 
-**Substitutes:** [netId](ohos.wifiManager/wifiManager.WifiDeviceConfig.netId)
+**Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i.md#netId)
 
 <!--Device-WifiDeviceConfig-netId: number--><!--Device-WifiDeviceConfig-netId: number-End-->
 
@@ -132,7 +132,7 @@ Random mac address, the length is 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [randomMacAddr](ohos.wifiManager/wifiManager.WifiDeviceConfig.randomMacAddr)
+**Substitutes:** [randomMacAddr](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randomMacAddr)
 
 <!--Device-WifiDeviceConfig-randomMacAddr: string--><!--Device-WifiDeviceConfig-randomMacAddr: string-End-->
 
@@ -156,7 +156,7 @@ Random mac type
 
 **Deprecated since:** 9
 
-**Substitutes:** [randomMacType](ohos.wifiManager/wifiManager.WifiDeviceConfig.randomMacType)
+**Substitutes:** [randomMacType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randomMacType)
 
 <!--Device-WifiDeviceConfig-randomMacType: number--><!--Device-WifiDeviceConfig-randomMacType: number-End-->
 
@@ -180,7 +180,7 @@ IP config of static
 
 **Deprecated since:** 9
 
-**Substitutes:** [staticIp](ohos.wifiManager/wifiManager.WifiDeviceConfig.staticIp)
+**Substitutes:** [staticIp](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#staticIp)
 
 <!--Device-WifiDeviceConfig-staticIp: IpConfig--><!--Device-WifiDeviceConfig-staticIp: IpConfig-End-->
 

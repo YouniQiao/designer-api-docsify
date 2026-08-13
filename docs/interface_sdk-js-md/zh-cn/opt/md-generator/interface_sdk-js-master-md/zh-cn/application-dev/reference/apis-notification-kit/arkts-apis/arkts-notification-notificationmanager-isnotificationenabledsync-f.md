@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function isNotificationEnabledSync(): boolean
 ```
 
-同步查询当前应用通知授权状态。
+同步查询当前应用通知授权状态。 用于在发布通知前快速检查当前应用是否被允许发送通知。此接口为同步接口， 调用后立即返回结果，适用于需要在同步代码流程中获取使能状态的场景。
 
-用于在发布通知前快速检查当前应用是否被允许发送通知。此接口为同步接口，调用后立即返回结果，适用于需要在同步代码流程中获取使能状态的场景。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-notificationManager-function isNotificationEnabledSync(): boolean--><!--Device-notificationManager-function isNotificationEnabledSync(): boolean-End-->
 
@@ -24,7 +24,7 @@ function isNotificationEnabledSync(): boolean
 
 **参见：**
 
-[requestEnableNotification](notificationManager.requestEnableNotification(context: UIAbilityContext): Promise<void>) 请求通知使能。
+requestEnableNotification 请求通知使能。
 
 **返回值：**
 
@@ -36,9 +36,9 @@ function isNotificationEnabledSync(): boolean
 
 | 错误码ID |
 | --- |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

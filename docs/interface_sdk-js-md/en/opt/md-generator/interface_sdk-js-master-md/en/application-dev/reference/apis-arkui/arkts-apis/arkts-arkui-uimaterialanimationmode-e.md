@@ -4,6 +4,8 @@ Enumerates the component animation modes under the UI material effect.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum UIMaterialAnimationMode--><!--Device-unnamed-declare enum UIMaterialAnimationMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ IMMERSIVE = 0
 When the material is enabled for the component, the animation effect is automatically enabled.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ NONE = 1
 Disable the animation effect.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

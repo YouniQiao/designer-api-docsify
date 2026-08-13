@@ -8,7 +8,9 @@ function getLocalCapabilities(): Promise<FileData>
 
 获取描述本地能力的JSON文件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -53,7 +55,7 @@ async function getLocalCapabilities() {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](js-apis-file-fs.md)提供的[fileIo.stat](js-apis-file-fs.md#fileiostat)等相关接口获取，能力文件内容示例：
+能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md#fileIo)提供的fileIo.stat等相关接口获取，能力文件内容示例：
 
 ```TypeScript
 {
@@ -81,7 +83,9 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 获取描述本地能力的JSON文件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -129,7 +133,7 @@ try {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](js-apis-file-fs.md)提供的[fileIo.stat](js-apis-file-fs.md#fileiostat)等相关接口获取，能力文件内容示例：
+能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md#fileIo)提供的fileIo.stat等相关接口获取，能力文件内容示例：
 
 ```TypeScript
 {
@@ -157,7 +161,9 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 获取描述本地能力的JSON文件。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -171,7 +177,7 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [dataList](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md) | Array&lt;[IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md)&gt; | 是 |
+| dataList | Array&lt;[IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
@@ -183,10 +189,10 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900025 |
 | 13600001 |
 | 13900042 |

@@ -14,7 +14,7 @@ function getCurrentFunctions(): FunctionType
 
 **废弃版本：** 9
 
-**替代接口：** [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getCurrentFunctions)
+**替代接口：** [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getCurrentFunctions（系统接口）)
 
 <!--Device-usb-function getCurrentFunctions(): FunctionType--><!--Device-usb-function getCurrentFunctions(): FunctionType-End-->
 

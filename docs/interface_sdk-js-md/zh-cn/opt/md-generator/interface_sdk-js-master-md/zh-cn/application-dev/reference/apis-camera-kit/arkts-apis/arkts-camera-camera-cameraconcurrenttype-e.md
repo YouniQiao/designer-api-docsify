@@ -2,7 +2,9 @@
 
 枚举，镜头并发类型。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum CameraConcurrentType--><!--Device-camera-enum CameraConcurrentType-End-->
 
@@ -16,7 +18,9 @@ CAMERA_FULL_CAPABILITY = 1
 
 镜头全量能力并发。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +36,9 @@ CAMERA_LIMITED_CAPABILITY = 0
 
 镜头受限能力并发。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

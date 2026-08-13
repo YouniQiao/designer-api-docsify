@@ -1,4 +1,4 @@
-# @ohos.file.AlbumPickerComponent(A component which supports applications to select album)
+# @ohos.file.AlbumPickerComponent
 
 ## Modules to Import
 
@@ -12,20 +12,19 @@ import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOpt
 
 | Name | Description |
 | --- | --- |
-| [AlbumInfo](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md) | AlbumInfo: include album uri |
-| [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md) | The class for AlbumPickerController |
-| [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md) | AlbumPickerOptions Object |
+| [AlbumInfo](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md) | Represents album information. |
+| [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md) | A controller that enables applications to send data to the **AlbumPickerComponent**. |
+| [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md) | Represents the **AlbumPicker** configuration. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [AlbumPickerComponent](arkts-medialibrary-file-albumpickercomponent-albumpickercomponent-s.md) | AlbumPickerComponent: can select a certain album and display the images in that album through PhotoPickerComponent |
+| [AlbumPickerComponent](arkts-medialibrary-file-albumpickercomponent-albumpickercomponent-s.md) | AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (albumInfo: AlbumInfo) => boolean, onEmptyAreaClick?: EmptyAreaClickCallback, albumPickerController?: AlbumPickerController }) The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the user directory without any permission. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AlbumClickCallback](arkts-medialibrary-albumclickcallback-t.md) | The callback of onAlbumClick event |
-| [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md) | The callback of onEmptyAreaClick event |
+| [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md) | Called when the blank area of the **AlbumPickerComponent** is tapped. |
 

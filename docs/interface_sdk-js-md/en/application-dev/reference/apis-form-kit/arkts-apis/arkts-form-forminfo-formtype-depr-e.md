@@ -8,7 +8,7 @@ Enumerates the widget types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormType](ohos.app.form.formInfo/formInfo#FormType)
+**Substitutes:** [FormType](arkts-form-forminfo-formtype-e.md#FormType)
 
 <!--Device-formInfo-enum FormType--><!--Device-formInfo-enum FormType-End-->
 
@@ -28,7 +28,7 @@ JS widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** [JS](ohos.app.form.formInfo/formInfo.FormType#JS)
+**Substitutes:** [JS](arkts-form-forminfo-formtype-e.md#JS)
 
 <!--Device-FormType-JS = 1--><!--Device-FormType-JS = 1-End-->
 

@@ -18,7 +18,7 @@ Registers the continuation management service and obtains a token. This API does
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,13 +55,13 @@ continuationManager.register((err, data) => {
 function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void
 ```
 
-Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return  the result.
+Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,7 +109,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 

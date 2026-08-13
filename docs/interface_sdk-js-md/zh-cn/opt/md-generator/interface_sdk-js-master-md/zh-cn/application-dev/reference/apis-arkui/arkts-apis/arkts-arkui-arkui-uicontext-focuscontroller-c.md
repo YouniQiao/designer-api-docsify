@@ -1,12 +1,10 @@
 # FocusController
 
-提供控制焦点的能力，如清除、移动和激活焦点等功能。
-
-> **说明：**
-> 
-> 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController)方法获取FocusController实例，再通过该实例调用对应方法。
+提供控制焦点的能力，如清除、移动和激活焦点等功能。 > **说明：** > > 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController)方法获取FocusController实例，再通过该实例调用对应方法。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class FocusController--><!--Device-unnamed-export class FocusController-End-->
 
@@ -22,6 +20,8 @@ activate(isActive: boolean, autoInactive?: boolean): void
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -34,7 +34,7 @@ activate(isActive: boolean, autoInactive?: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isActive](#isactive) | boolean | 是 |
+| [isActive](#isActive) | boolean | 是 |
 | autoInactive | boolean | 否 |
 
 ## clearFocus
@@ -46,6 +46,8 @@ clearFocus(): void
 清除焦点，将焦点强制转移到页面根容器节点，焦点链路上其他节点失焦。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,11 +63,11 @@ clearFocus(): void
 isActive(): boolean
 ```
 
-返回UI实例的焦点激活态。
-
-焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
+返回UI实例的焦点激活态。 焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,6 +93,8 @@ requestFocus(key: string): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -109,9 +113,9 @@ requestFocus(key: string): void
 
 | 错误码ID |
 | --- |
-| [150002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-focus.md#150002-祖先节点无法获得焦点) |
-| [150003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-focus.md#150003-节点不存在) |
-| [150001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-focus.md#150001-节点无法获得焦点) |
+| [150002](../errorcode-focus.md#150002-祖先节点无法获得焦点) |
+| [150003](../errorcode-focus.md#150003-节点不存在) |
+| [150001](../errorcode-focus.md#150001-节点无法获得焦点) |
 
 ## setAutoFocusTransfer
 
@@ -122,6 +126,8 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 设置页面切换时，新的页面是否需要主动获取焦点。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +152,8 @@ setKeyProcessingMode(mode: KeyProcessingMode): void
 设置按键事件处理的优先级。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

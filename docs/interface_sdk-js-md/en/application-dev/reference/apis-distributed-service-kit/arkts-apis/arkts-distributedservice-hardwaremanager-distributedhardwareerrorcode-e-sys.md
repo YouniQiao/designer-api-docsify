@@ -2,9 +2,11 @@
 
 Enumerates the error codes used for the distributed hardware.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hardwareManager-enum DistributedHardwareErrorCode--><!--Device-hardwareManager-enum DistributedHardwareErrorCode-End-->
 
@@ -20,9 +22,11 @@ ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101
 
 The distributed hardware is not started.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareErrorCode-ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101--><!--Device-DistributedHardwareErrorCode-ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101-End-->
 
@@ -38,9 +42,11 @@ ERR_CODE_DEVICE_NOT_CONNECTED = 24200102
 
 The source device is not connected.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareErrorCode-ERR_CODE_DEVICE_NOT_CONNECTED = 24200102--><!--Device-DistributedHardwareErrorCode-ERR_CODE_DEVICE_NOT_CONNECTED = 24200102-End-->
 

@@ -14,7 +14,9 @@ function uninstallFont(fullName: string): Promise<number>
 
 Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
@@ -40,8 +42,8 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 | Error Code ID |
 | --- |
-| [31100107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) |
-| [31100108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100108-failed-to-delete-font-file) |
-| [31100109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) |
+| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) |
+| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

@@ -8,6 +8,8 @@ Defines the level-2 module DataAbilityHelper.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ability-export type DataAbilityHelper = _DataAbilityHelper--><!--Device-ability-export type DataAbilityHelper = _DataAbilityHelper-End-->

@@ -4,6 +4,8 @@ Defines the options for initializing a **SubHeaderV2Title** object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SubHeaderV2TitleOptions--><!--Device-unnamed-export interface SubHeaderV2TitleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Set the id of the title.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -40,13 +44,13 @@ Set the id of the title.
 primaryTitle?: ResourceStr
 ```
 
-Primary title.
-
-Default value: **undefined**
+Primary title. Default value: **undefined**
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +66,13 @@ Default value: **undefined**
 primaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the primary title, such as the font color, font size, and font weight.
-
-Default value: **undefined**
+Text attributes of the primary title, such as the font color, font size, and font weight. Default value: **undefined**
 
 **Type:** TextModifier
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,13 +88,13 @@ Default value: **undefined**
 secondaryTitle?: ResourceStr
 ```
 
-Secondary title.
-
-Default value: **undefined**
+Secondary title. Default value: **undefined**
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,13 +110,13 @@ Default value: **undefined**
 secondaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the secondary title, such as the font color, font size, and font weight.
-
-Default value: **undefined**
+Text attributes of the secondary title, such as the font color, font size, and font weight. Default value: **undefined**
 
 **Type:** TextModifier
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,15 +132,13 @@ Default value: **undefined**
 titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title.
-
-Default value: **undefined**
-
-If the value is **undefined**, the title content displayed by the component is read by default.
+Customized content to be read in the title. Default value: **undefined** If the value is **undefined**, the title content displayed by the component is read by default.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ The position of ellipsis.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EllipsisMode--><!--Device-unnamed-declare enum EllipsisMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ START = 0
 An ellipsis is used at the start of the line of text. This applies to single-line text scenarios.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ An ellipsis is used at the center of the line of text. This applies to single-li
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,6 +59,8 @@ END = 2
 An ellipsis is used at the end of the line of text. This applies to single-line and multi-line text scenarios.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ An ellipsis is used at the start of the line of text. This applies to single-lin
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -89,6 +99,8 @@ MULTILINE_CENTER = 4
 An ellipsis is used at the center of the line of text. This applies to single-line and multi-line text scenarios.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

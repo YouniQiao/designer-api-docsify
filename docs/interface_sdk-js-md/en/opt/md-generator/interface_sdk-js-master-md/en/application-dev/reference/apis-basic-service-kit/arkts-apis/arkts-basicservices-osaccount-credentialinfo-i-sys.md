@@ -2,7 +2,9 @@
 
 Defines the credential information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface CredentialInfo--><!--Device-osAccount-interface CredentialInfo-End-->
 
@@ -26,7 +28,9 @@ OS account ID, which is **undefined** by default.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-accountId?: int--><!--Device-CredentialInfo-accountId?: int-End-->
 
@@ -46,6 +50,8 @@ Additional information about the credential, which is an empty string by default
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CredentialInfo-additionalInfo?: string--><!--Device-CredentialInfo-additionalInfo?: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -62,7 +68,9 @@ Authentication credential subtype.
 
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-credSubType: AuthSubType--><!--Device-CredentialInfo-credSubType: AuthSubType-End-->
 
@@ -80,7 +88,9 @@ Authentication credential type.
 
 **Type:** AuthType
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-credType: AuthType--><!--Device-CredentialInfo-credType: AuthType-End-->
 
@@ -98,7 +108,9 @@ Authentication token, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-token: Uint8Array--><!--Device-CredentialInfo-token: Uint8Array-End-->
 

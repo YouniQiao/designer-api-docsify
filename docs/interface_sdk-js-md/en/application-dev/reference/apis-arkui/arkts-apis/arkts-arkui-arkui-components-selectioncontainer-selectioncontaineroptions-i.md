@@ -6,6 +6,8 @@ Describes the initialization options of the SelectionContainer component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SelectionContainerOptions--><!--Device-unnamed-export interface SelectionContainerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,6 +31,8 @@ SelectionContainer controller.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontConfig--><!--Device-font-interface UIFontConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ The fallback font info.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIFontConfig-fallbackGroups: Array<UIFontFallbackGroupInfo>--><!--Device-UIFontConfig-fallbackGroups: Array<UIFontFallbackGroupInfo>-End-->
@@ -48,6 +52,8 @@ The paths of system font files.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIFontConfig-fontDir: Array<string>--><!--Device-UIFontConfig-fontDir: Array<string>-End-->
@@ -67,6 +73,8 @@ The generic font info.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

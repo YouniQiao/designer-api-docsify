@@ -2,7 +2,9 @@
 
 Enumerates the text input type.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export enum TextInputType--><!--Device-inputMethod-export enum TextInputType-End-->
 
@@ -16,7 +18,9 @@ NONE = -1
 
 The text input type is NONE.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-NONE = -1--><!--Device-TextInputType-NONE = -1-End-->
 
@@ -30,7 +34,9 @@ TEXT = 0
 
 The text input type is TEXT.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-TEXT = 0--><!--Device-TextInputType-TEXT = 0-End-->
 
@@ -44,7 +50,9 @@ MULTILINE
 
 The text input type is MULTILINE.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-MULTILINE--><!--Device-TextInputType-MULTILINE-End-->
 
@@ -58,7 +66,9 @@ NUMBER
 
 The text input type is NUMBER.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-NUMBER--><!--Device-TextInputType-NUMBER-End-->
 
@@ -72,7 +82,9 @@ PHONE
 
 The text input type is PHONE.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-PHONE--><!--Device-TextInputType-PHONE-End-->
 
@@ -86,7 +98,9 @@ DATETIME
 
 The text input type is DATETIME.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-DATETIME--><!--Device-TextInputType-DATETIME-End-->
 
@@ -100,7 +114,9 @@ EMAIL_ADDRESS
 
 The text input type is EMAIL_ADDRESS.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-EMAIL_ADDRESS--><!--Device-TextInputType-EMAIL_ADDRESS-End-->
 
@@ -114,7 +130,9 @@ URL
 
 The text input type is URL.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-URL--><!--Device-TextInputType-URL-End-->
 
@@ -128,7 +146,9 @@ VISIBLE_PASSWORD
 
 The text input type is VISIBLE_PASSWORD.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-VISIBLE_PASSWORD--><!--Device-TextInputType-VISIBLE_PASSWORD-End-->
 
@@ -142,7 +162,9 @@ NUMBER_PASSWORD
 
 The text input type is NUMBER_PASSWORD.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-NUMBER_PASSWORD--><!--Device-TextInputType-NUMBER_PASSWORD-End-->
 
@@ -156,7 +178,9 @@ SCREEN_LOCK_PASSWORD
 
 The text input type is SCREEN_LOCK_PASSWORD.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-SCREEN_LOCK_PASSWORD--><!--Device-TextInputType-SCREEN_LOCK_PASSWORD-End-->
 
@@ -170,7 +194,9 @@ USER_NAME
 
 The text input type is USER_NAME.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-USER_NAME--><!--Device-TextInputType-USER_NAME-End-->
 
@@ -184,7 +210,9 @@ NEW_PASSWORD
 
 The text input type is NEW_PASSWORD.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-NEW_PASSWORD--><!--Device-TextInputType-NEW_PASSWORD-End-->
 
@@ -198,7 +226,9 @@ NUMBER_DECIMAL
 
 The text input type is NUMBER_DECIMAL.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-NUMBER_DECIMAL--><!--Device-TextInputType-NUMBER_DECIMAL-End-->
 
@@ -212,7 +242,9 @@ ONE_TIME_CODE
 
 The text input type is ONE_TIME_CODE.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextInputType-ONE_TIME_CODE--><!--Device-TextInputType-ONE_TIME_CODE-End-->
 

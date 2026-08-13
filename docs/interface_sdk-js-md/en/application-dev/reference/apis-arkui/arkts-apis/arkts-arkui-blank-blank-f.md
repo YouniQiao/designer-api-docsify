@@ -3,6 +3,7 @@
 ## Blank
 
 ```TypeScript
+@ComponentBuilder
 export declare function Blank(
     min?: double | string,
 ): BlankAttribute
@@ -14,9 +15,11 @@ Defines Blank Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Blank(    min?: double | string,): BlankAttribute--><!--Device-unnamed-export declare function Blank(    min?: double | string,): BlankAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Blank(    min?: double | string,): BlankAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Blank(    min?: double | string,): BlankAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines Blank Component.
 
 | Type | Description |
 | --- | --- |
-| [BlankAttribute](arkts-arkui-blank-blankattribute-i.md) |  |
+| BlankAttribute |  |
 
 
 ## Blank
 
 ```TypeScript
+@Builder
 export declare function Blank(
     style: CustomBuilderT<BlankAttribute>
 ): BlankAttribute
@@ -47,11 +51,11 @@ Defines Blank Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Blank(    style: CustomBuilderT<BlankAttribute>): BlankAttribute--><!--Device-unnamed-export declare function Blank(    style: CustomBuilderT<BlankAttribute>): BlankAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Blank(    style: CustomBuilderT<BlankAttribute>): BlankAttribute--><!--Device-unnamed-@Builderexport declare function Blank(    style: CustomBuilderT<BlankAttribute>): BlankAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines Blank Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[BlankAttribute](arkts-arkui-blank-blankattribute-i.md)&gt; | Yes | Blank options. |
+| style | CustomBuilderT&lt;BlankAttribute&gt; | Yes | Blank options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BlankAttribute](arkts-arkui-blank-blankattribute-i.md) |  |
+| BlankAttribute |  |
 

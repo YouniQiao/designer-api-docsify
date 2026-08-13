@@ -6,7 +6,9 @@ type PlayParameters = _PlayParameters
 
 Describes the playback parameters of the sound pool.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-type PlayParameters = _PlayParameters--><!--Device-media-type PlayParameters = _PlayParameters-End-->
 

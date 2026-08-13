@@ -2,9 +2,11 @@
 
 Enumerates the print direction modes.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrintDirectionMode--><!--Device-print-enum PrintDirectionMode-End-->
 
@@ -18,9 +20,11 @@ DIRECTION_MODE_AUTO = 0
 
 Automatic.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDirectionMode-DIRECTION_MODE_AUTO = 0--><!--Device-PrintDirectionMode-DIRECTION_MODE_AUTO = 0-End-->
 
@@ -34,9 +38,11 @@ DIRECTION_MODE_PORTRAIT = 1
 
 Portrait mode.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDirectionMode-DIRECTION_MODE_PORTRAIT = 1--><!--Device-PrintDirectionMode-DIRECTION_MODE_PORTRAIT = 1-End-->
 
@@ -50,9 +56,11 @@ DIRECTION_MODE_LANDSCAPE = 2
 
 Landscape mode.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDirectionMode-DIRECTION_MODE_LANDSCAPE = 2--><!--Device-PrintDirectionMode-DIRECTION_MODE_LANDSCAPE = 2-End-->
 

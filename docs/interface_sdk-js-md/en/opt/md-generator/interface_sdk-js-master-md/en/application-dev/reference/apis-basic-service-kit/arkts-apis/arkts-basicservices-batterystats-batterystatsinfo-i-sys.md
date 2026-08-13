@@ -2,7 +2,9 @@
 
 Describes the device power consumption information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-batteryStats-interface BatteryStatsInfo--><!--Device-batteryStats-interface BatteryStatsInfo-End-->
 
@@ -26,7 +28,9 @@ The power consumption, in unit of mAh.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BatteryStatsInfo-power: double--><!--Device-BatteryStatsInfo-power: double-End-->
 
@@ -44,7 +48,9 @@ The power consumption type.
 
 **Type:** [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BatteryStatsInfo-type: ConsumptionType--><!--Device-BatteryStatsInfo-type: ConsumptionType-End-->
 
@@ -62,7 +68,9 @@ The uid related with the power consumption info.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BatteryStatsInfo-uid: int--><!--Device-BatteryStatsInfo-uid: int-End-->
 

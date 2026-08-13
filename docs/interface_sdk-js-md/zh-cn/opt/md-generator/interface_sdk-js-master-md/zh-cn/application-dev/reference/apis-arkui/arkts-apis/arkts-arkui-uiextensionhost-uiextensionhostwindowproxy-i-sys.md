@@ -2,7 +2,9 @@
 
 Transition Controller
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy--><!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy-End-->
 
@@ -18,7 +20,9 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 
 创建该UIExtensionHostWindowProxy实例下的子窗口，使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,9 +50,9 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 | 错误码ID |
 | --- |
 | 1300035 |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -104,9 +108,11 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
         followCreatorLifecycle: boolean): Promise<window.Window>
 ```
 
-创建该UIExtensionHostWindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或UIExtensionComponent）的生命周期，使用Promise异步回调。
+创建该UIExtensionHostWindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或 UIExtensionComponent）的生命周期，使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -135,8 +141,8 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
 | 错误码ID |
 | --- |
 | 1300035 |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -193,7 +199,9 @@ getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 
 获取宿主应用窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与宿主窗口内容重叠时，需要宿主窗口内容避让的区域。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -219,7 +227,7 @@ getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -245,20 +253,11 @@ export default class EntryAbility extends UIExtensionAbility {
 hideNonSecureWindows(shouldHide: boolean): Promise<void>
 ```
 
-设置是否隐藏不安全窗口，使用Promise异步回调。
+设置是否隐藏不安全窗口，使用Promise异步回调。 > **说明：** > > - 不安全窗口是指可能遮挡EmbeddedComponent（或 > UIExtensionComponent）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口 > （不包括系统应用创建的上述类型窗口）。 > > - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或 > UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。 > > - 针对PC/2in1设备，当调用hideNonSecureWindows(true)时，不安全窗口中的全局悬浮窗不会被隐藏。
 
-> **说明：**
-> 
-> - 不安全窗口是指可能遮挡[EmbeddedComponent](./@internal/component/ets/embedded_component)（或
-> [UIExtensionComponent](./@internal/component/ets/ui_extension_component)）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
-> （不包括系统应用创建的上述类型窗口）。
-> 
-> - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或
-> UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。
-> 
-> - 针对PC/2in1设备，当调用hideNonSecureWindows(true)时，不安全窗口中的全局悬浮窗不会被隐藏。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本12+：ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
@@ -287,10 +286,10 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -328,15 +327,11 @@ export default class EntryAbility extends UIExtensionAbility {
 hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 ```
 
-设置UIExtension组件在非系统截图时的隐私内容保护开关，使用Promise异步回调。
+设置UIExtension组件在非系统截图时的隐私内容保护开关，使用Promise异步回调。 > **说明：** > > 开启截图隐私内容保护后，使用窗口截图[window.snapshot](../../../reference/apis-arkui/arkts-apis-window-Window.md#snapshot9)或者组件截图 > [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getComponentSnapshot) > 将无法截取到当前组件的内容（不包括该组件下创建的子窗）。
 
-> **说明：**
-> 
-> 开启截图隐私内容保护后，使用窗口截图[window.snapshot](../../../reference/apis-arkui/arkts-apis-window-Window.md#snapshot9)或者组件截图
-> [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)
-> 将无法截取到当前组件的内容（不包括该组件下创建的子窗）。
+**起始版本：** 23
 
-**起始版本：** 13
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -362,9 +357,9 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -386,7 +381,71 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## off('avoidAreaChange')
+## offAvoidAreaChange
+
+```TypeScript
+offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void
+```
+
+Unregister the callback of avoidAreaChange
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void--><!--Device-UIExtensionHostWindowProxy-offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+
+## offWindowSizeChange
+
+```TypeScript
+offWindowSizeChange(callback?: Callback<window.Size>): void
+```
+
+Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size change event.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+
+## off_avoidAreaChange
 
 ```TypeScript
 off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
@@ -395,6 +454,8 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 注销系统避让区变化的监听。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -415,8 +476,8 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -433,7 +494,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## off('windowSizeChange')
+## off_windowSizeChange
 
 ```TypeScript
 off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
@@ -442,6 +503,8 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 注销组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -462,8 +525,8 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -480,7 +543,71 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## on('avoidAreaChange')
+## onAvoidAreaChange
+
+```TypeScript
+onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void
+```
+
+Register the callback of avoidAreaChange
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void--><!--Device-UIExtensionHostWindowProxy-onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+
+## onWindowSizeChange
+
+```TypeScript
+onWindowSizeChange(callback: Callback<window.Size>): void
+```
+
+Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size change event.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+
+## on_avoidAreaChange
 
 ```TypeScript
 on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
@@ -489,6 +616,8 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 注册系统避让区变化的监听。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -509,8 +638,8 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -529,7 +658,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## on('windowSizeChange')
+## on_windowSizeChange
 
 ```TypeScript
 on(type: 'windowSizeChange', callback: Callback<window.Size>): void
@@ -538,6 +667,8 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 注册组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -558,8 +689,8 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -584,13 +715,11 @@ export default class EntryAbility extends UIExtensionAbility {
 setWaterMarkFlag(enable: boolean): Promise<void>
 ```
 
-为当前窗口添加或删除安全水印标志，使用Promise异步回调。
+为当前窗口添加或删除安全水印标志，使用Promise异步回调。 > **说明：** > > 添加安全水印标志后，窗口在前台时会将当前全屏幕覆盖水印。全屏、悬浮窗、分屏等场景下只要有添加了安全水印标志的窗口在前台，就会显示全屏水印。
 
-> **说明：**
-> 
-> 添加安全水印标志后，窗口在前台时会将当前全屏幕覆盖水印。全屏、悬浮窗、分屏等场景下只要有添加了安全水印标志的窗口在前台，就会显示全屏水印。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -616,9 +745,9 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300008-显示设备异常) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300008](../errorcode-window.md#1300008-显示设备异常) |
 
 ## 示例
 
@@ -655,15 +784,13 @@ export default class EntryAbility extends UIExtensionAbility {
 properties: UIExtensionHostWindowProxyProperties
 ```
 
-UIExtensionComponent组件以及宿主窗口的信息。
-
-**约束：** 由于架构约束，不建议在  
-[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)阶段同步获取该值，建议在收到  
-[on('windowSizeChange')](@ohos.uiExtensionHost:uiExtensionHost.UIExtensionHostWindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))回调之后获取。
+UIExtensionComponent组件以及宿主窗口的信息。 **约束：** 由于架构约束，不建议在 [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)阶段同步获取该值，建议在收到 [on('windowSizeChange')](#on_avoidAreaChange) 回调之后获取。
 
 **类型：** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

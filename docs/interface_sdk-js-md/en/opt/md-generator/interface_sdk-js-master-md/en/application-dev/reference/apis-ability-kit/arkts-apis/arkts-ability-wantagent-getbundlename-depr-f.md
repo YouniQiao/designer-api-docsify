@@ -12,7 +12,7 @@ Obtains the bundle name of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBundleName](ohos.app.ability.wantAgent/wantAgent#getBundleName)
+**Substitutes:** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,7 +94,7 @@ Obtains the bundle name of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBundleName](ohos.app.ability.wantAgent/wantAgent#getBundleName)
+**Substitutes:** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

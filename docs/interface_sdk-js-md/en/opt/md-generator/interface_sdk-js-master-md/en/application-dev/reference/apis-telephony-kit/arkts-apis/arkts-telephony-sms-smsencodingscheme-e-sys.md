@@ -2,7 +2,9 @@
 
 Enumerates SMS encoding schemes.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export enum SmsEncodingScheme--><!--Device-sms-export enum SmsEncodingScheme-End-->
 
@@ -18,7 +20,9 @@ SMS_ENCODING_UNKNOWN = 0
 
 Unknown code.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsEncodingScheme-SMS_ENCODING_UNKNOWN = 0--><!--Device-SmsEncodingScheme-SMS_ENCODING_UNKNOWN = 0-End-->
 
@@ -34,7 +38,9 @@ SMS_ENCODING_7BIT = 1
 
 7-digit code.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT = 1--><!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT = 1-End-->
 
@@ -50,7 +56,9 @@ SMS_ENCODING_8BIT = 2
 
 8-digit code.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT = 2--><!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT = 2-End-->
 
@@ -66,7 +74,9 @@ SMS_ENCODING_16BIT = 3
 
 16-digit code.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT = 3--><!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT = 3-End-->
 

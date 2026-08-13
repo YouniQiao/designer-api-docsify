@@ -6,7 +6,7 @@ Represents a **Schema** instance, which provides the APIs for defining the value
 
 **Deprecated since:** 9
 
-**Substitutes:** [FieldNode](ohos.data.distributedKVStore.FieldNode)
+**Substitutes:** FieldNode
 
 <!--Device-distributedData-class FieldNode--><!--Device-distributedData-class FieldNode-End-->
 
@@ -24,7 +24,7 @@ Appends a child node to this **FieldNode**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [appendChild](ohos.data.distributedKVStore.FieldNode#appendChild)
+**Substitutes:** appendChild
 
 <!--Device-FieldNode-appendChild(child: FieldNode): boolean--><!--Device-FieldNode-appendChild(child: FieldNode): boolean-End-->
 
@@ -76,7 +76,7 @@ A constructor used to create a **FieldNode** instance with a string field.
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](ohos.data.distributedKVStore.FieldNode#constructor)
+**Substitutes:** constructor
 
 <!--Device-FieldNode-constructor(name: string)--><!--Device-FieldNode-constructor(name: string)-End-->
 
@@ -102,7 +102,7 @@ Default value of a **FieldNode**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [default](ohos.data.distributedKVStore.FieldNode#default)
+**Substitutes:** default
 
 <!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
 
@@ -122,7 +122,7 @@ Whether the database field can be null.
 
 **Deprecated since:** 9
 
-**Substitutes:** [nullable](ohos.data.distributedKVStore.FieldNode#nullable)
+**Substitutes:** nullable
 
 <!--Device-FieldNode-nullable: boolean--><!--Device-FieldNode-nullable: boolean-End-->
 
@@ -142,7 +142,7 @@ Value of the data type corresponding to the specified node.
 
 **Deprecated since:** 9
 
-**Substitutes:** [type](ohos.data.distributedKVStore.FieldNode#type)
+**Substitutes:** type
 
 <!--Device-FieldNode-type: number--><!--Device-FieldNode-type: number-End-->
 

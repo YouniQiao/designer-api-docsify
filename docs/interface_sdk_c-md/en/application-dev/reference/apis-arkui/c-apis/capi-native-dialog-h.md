@@ -703,7 +703,7 @@ Sets the shadow of the dialog box background.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| ArkUI_ShadowStyle shadow | Shadow style of the background, specified by an enumerated value. |
+| [ArkUI_ShadowStyle](capi-native-type-visual-h.md#arkui_shadowstyle) shadow | Shadow style of the background, specified by an enumerated value. |
 
 **Returns**:
 
@@ -753,7 +753,7 @@ Sets the background blur style of the dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| ArkUI_BlurStyle blurStyle | Background blur style, specified by an enumerated value. |
+| [ArkUI_BlurStyle](capi-native-type-visual-h.md#arkui_blurstyle) blurStyle | Background blur style, specified by an enumerated value. |
 
 **Returns**:
 
@@ -1214,7 +1214,7 @@ Sets the system material of the dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
+| ArkUI_ImmersiveMaterialHandle material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
 
 **Returns**:
 
@@ -1239,7 +1239,7 @@ Sets the system material of the dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
-| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
+| ArkUI_ImmersiveMaterialHandle material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
 
 **Returns**:
 

@@ -3,6 +3,7 @@
 ## Polygon
 
 ```TypeScript
+@ComponentBuilder
 export declare function Polygon(
     options?: PolygonOptions
 ): PolygonAttribute
@@ -14,9 +15,11 @@ export declare function Polygon(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Polygon(    options?: PolygonOptions): PolygonAttribute--><!--Device-unnamed-export declare function Polygon(    options?: PolygonOptions): PolygonAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Polygon(    options?: PolygonOptions): PolygonAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Polygon(    options?: PolygonOptions): PolygonAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ export declare function Polygon(
 ## Polygon
 
 ```TypeScript
+@Builder
 export declare function Polygon(
     style: CustomBuilderT<PolygonAttribute>,
 ): PolygonAttribute
@@ -47,11 +51,11 @@ export declare function Polygon(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute--><!--Device-unnamed-export declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute--><!--Device-unnamed-@Builderexport declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ export declare function Polygon(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
+| style | CustomBuilderT&lt;[PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 

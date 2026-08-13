@@ -14,9 +14,11 @@ function getDefaultCellularDataSlotIdSync(): int
 
 Get the default cellular data card.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-data-function getDefaultCellularDataSlotIdSync(): int--><!--Device-data-function getDefaultCellularDataSlotIdSync(): int-End-->
 
@@ -26,7 +28,7 @@ Get the default cellular data card.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns default cellular data slot id. |
+| int | Returns default cellular data slot id. |
 
 ## Examples
 

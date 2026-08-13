@@ -6,6 +6,8 @@ SpanStyle
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface SpanStyle--><!--Device-unnamed-export declare interface SpanStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ SpanStyle
 length: int
 ```
 
-The length of the modifiedStyledString's characters.The value should be an integer.
+The length of the modifiedStyledString's characters. The value should be an integer.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ The length of the modifiedStyledString's characters.The value should be an integ
 start: int
 ```
 
-The start position of the SpanStyle.The value should be an integer.
+The start position of the SpanStyle. The value should be an integer.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,6 +70,8 @@ The attribute key of the SpanStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SpanStyle-styledKey: StyledStringKey--><!--Device-SpanStyle-styledKey: StyledStringKey-End-->
@@ -83,6 +91,8 @@ The attribute value of the SpanStyle.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 描述通知智能聚合信息字段。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface UnifiedGroupInfo--><!--Device-unnamed-export interface UnifiedGroupInfo-End-->
 
@@ -22,9 +24,11 @@ content?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UnifiedGroupInfo-content?: string--><!--Device-UnifiedGroupInfo-content?: string-End-->
 
@@ -35,18 +39,20 @@ content?: string
 ## extraInfo
 
 ```TypeScript
-extraInfo?: { [key: string]: any }
+extraInfo?: Record<string, RecordData>
 ```
 
 其他聚合信息。
 
-**类型：** { [key: string]: any }
+**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }--><!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }-End-->
+**废弃版本：** -1
+
+<!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>--><!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -62,9 +68,11 @@ key?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UnifiedGroupInfo-key?: string--><!--Device-UnifiedGroupInfo-key?: string-End-->
 
@@ -82,9 +90,11 @@ sceneName?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UnifiedGroupInfo-sceneName?: string--><!--Device-UnifiedGroupInfo-sceneName?: string-End-->
 
@@ -102,9 +112,11 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UnifiedGroupInfo-title?: string--><!--Device-UnifiedGroupInfo-title?: string-End-->
 

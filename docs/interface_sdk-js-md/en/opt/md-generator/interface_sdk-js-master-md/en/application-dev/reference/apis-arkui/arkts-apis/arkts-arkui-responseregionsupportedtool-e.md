@@ -4,6 +4,8 @@ Sets the type of the input tool applicable to the touch target.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ResponseRegionSupportedTool--><!--Device-unnamed-declare enum ResponseRegionSupportedTool-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ ALL = 0
 All input tool types.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Finger.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -54,6 +60,8 @@ Stylus.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -71,6 +79,8 @@ MOUSE = 3
 Mouse.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,7 @@ Enumerates the subscription types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SubscribeType](ohos.data.distributedKVStore.SubscribeType)
+**Substitutes:** SubscribeType
 
 <!--Device-distributedData-enum SubscribeType--><!--Device-distributedData-enum SubscribeType-End-->
 
@@ -24,7 +24,7 @@ Local data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SUBSCRIBE_TYPE_LOCAL](ohos.data.distributedKVStore.SubscribeType#SUBSCRIBE_TYPE_LOCAL)
+**Substitutes:** SUBSCRIBE_TYPE_LOCAL
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0-End-->
 
@@ -42,7 +42,7 @@ Remote data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SUBSCRIBE_TYPE_REMOTE](ohos.data.distributedKVStore.SubscribeType#SUBSCRIBE_TYPE_REMOTE)
+**Substitutes:** SUBSCRIBE_TYPE_REMOTE
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1-End-->
 
@@ -60,7 +60,7 @@ Local and remote data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SUBSCRIBE_TYPE_ALL](ohos.data.distributedKVStore.SubscribeType#SUBSCRIBE_TYPE_ALL)
+**Substitutes:** SUBSCRIBE_TYPE_ALL
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2--><!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2-End-->
 

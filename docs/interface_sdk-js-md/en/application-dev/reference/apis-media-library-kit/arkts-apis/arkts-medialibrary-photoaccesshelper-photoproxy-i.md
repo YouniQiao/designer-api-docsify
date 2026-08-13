@@ -2,9 +2,11 @@
 
 Photo proxy object, which is used by the camera application to write image data.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoProxy--><!--Device-photoAccessHelper-interface PhotoProxy-End-->
 

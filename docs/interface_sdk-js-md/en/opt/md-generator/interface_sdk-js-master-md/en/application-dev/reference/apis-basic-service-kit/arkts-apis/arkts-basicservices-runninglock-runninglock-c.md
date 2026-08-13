@@ -2,7 +2,9 @@
 
 Defines a **RunningLock** object.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
 
@@ -22,7 +24,9 @@ hold(timeout: number): void
 
 Holds a running lock.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -40,8 +44,8 @@ Holds a running lock.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -82,7 +86,9 @@ isHolding(): boolean
 
 Checks whether this running lock is being held.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
 
@@ -205,7 +211,9 @@ unhold(): void
 
 Releases this running lock.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -217,7 +225,7 @@ Releases this running lock.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

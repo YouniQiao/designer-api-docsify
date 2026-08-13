@@ -2,7 +2,9 @@
 
 Rectangular area of the text, indicating the rectangular space occupied by the text during layout.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface TextBox--><!--Device-text-interface TextBox-End-->
 
@@ -24,7 +26,9 @@ Text direction.
 
 **Type:** TextDirection
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Rectangular area information, in physical pixels (px).
 
 **Type:** common2D.Rect
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

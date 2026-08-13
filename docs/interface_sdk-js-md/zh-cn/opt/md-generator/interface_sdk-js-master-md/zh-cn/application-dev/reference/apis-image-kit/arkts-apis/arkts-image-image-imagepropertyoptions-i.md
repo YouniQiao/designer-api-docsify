@@ -2,7 +2,9 @@
 
 表示查询图片属性的索引。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-interface ImagePropertyOptions--><!--Device-image-interface ImagePropertyOptions-End-->
 
@@ -18,7 +20,9 @@ defaultValue?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImagePropertyOptions-defaultValue?: string--><!--Device-ImagePropertyOptions-defaultValue?: string-End-->
 
@@ -34,7 +38,9 @@ index?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImagePropertyOptions-index?: int--><!--Device-ImagePropertyOptions-index?: int-End-->
 

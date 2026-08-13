@@ -1,8 +1,10 @@
 # Filter
 
-Filter effect class, used to apply corresponding effects to specified components.Before calling Filter methods, you need to first create a Filter instance through createFilter.
+Filter effect class, used to apply corresponding effects to specified components. Before calling Filter methods, you need to first create a Filter instance through createFilter.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
 
@@ -20,9 +22,11 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 bezierWarp(controlPoints: Array<common2D.Point>): Filter
 ```
 
-Adds a Bezier curve deformation effect to the component. This effect achieves precise distortion and shape adjustment of the image by creating closed Bezier curves at the layer boundary.There are four Bezier curve segments, connected head to tail in sequence, with each segment containing one vertex and two tangent points. Typical application scenarios include face deformation effects,card perspective distortion, etc.
+Adds a Bezier curve deformation effect to the component. This effect achieves precise distortion and shape adjustment of the image by creating closed Bezier curves at the layer boundary. There are four Bezier curve segments, connected head to tail in sequence, with each segment containing one vertex and two tangent points. Typical application scenarios include face deformation effects, card perspective distortion, etc.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter--><!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter-End-->
 
@@ -46,7 +50,7 @@ Adds a Bezier curve deformation effect to the component. This effect achieves pr
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -81,6 +85,8 @@ blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 Applies a blur bubbles rise effect to the image, simulating a dreamy, bubbly distortion similar to rising bubbles in liquid.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,7 +169,9 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 Adds a color gradient effect to the component content.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter--><!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter-End-->
 
@@ -190,7 +198,7 @@ Adds a color gradient effect to the component content.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -232,7 +240,9 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 
 Adds a 3D lighting effect to the component content.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter--><!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter-End-->
 
@@ -259,7 +269,7 @@ Adds a 3D lighting effect to the component content.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -307,9 +317,11 @@ struct Index {
 directionLight(direction: common2D.Point3d, color: Color, intensity: number, mask?: Mask, factor?: number): Filter
 ```
 
-Provides a Mask-based and directional light lighting effect for the component content.Directional light illuminates the component plane from a uniform direction, with all light rays in the same direction, not attenuating with distance, and the light intensity is evenly distributed across the component,suitable for simulating distant light sources such as sunlight. Unlike the point light source of contentLight,directional light does not need to specify the specific position of the light source.Through the Mask, you can control lighting details, and through the factor, you can combine height maps to enhance the relief effect.
+Provides a Mask-based and directional light lighting effect for the component content. Directional light illuminates the component plane from a uniform direction, with all light rays in the same direction, not attenuating with distance, and the light intensity is evenly distributed across the component, suitable for simulating distant light sources such as sunlight. Unlike the point light source of contentLight, directional light does not need to specify the specific position of the light source. Through the Mask, you can control lighting details, and through the factor, you can combine height maps to enhance the relief effect.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter--><!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter-End-->
 
@@ -322,7 +334,7 @@ Provides a Mask-based and directional light lighting effect for the component co
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | direction | common2D.Point3d | Yes |
-| color | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Yes |
+| color | [Color](../../apis-na/arkts-apis/arkts-na-enums-color-e.md) | Yes |
 | intensity | number | Yes |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No |
 | [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | No |
@@ -337,7 +349,7 @@ Provides a Mask-based and directional light lighting effect for the component co
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -385,7 +397,9 @@ displacementDistort(displacementMap: Mask, factor?: [number, number]): Filter
 
 Adds a distortion effect to the component content.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter--><!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter-End-->
 
@@ -410,7 +424,7 @@ Adds a distortion effect to the component content.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -443,7 +457,9 @@ distort(distortionK: number): Filter
 
 Adds a lens distortion effect to the component.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-distort(distortionK: double): Filter--><!--Device-Filter-distort(distortionK: double): Filter-End-->
 
@@ -467,7 +483,7 @@ Adds a lens distortion effect to the component.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -483,9 +499,11 @@ filter.distort(-0.5)
 edgeLight(alpha: number, color?: Color, mask?: Mask, bloom?: boolean): Filter
 ```
 
-Detects edges of the component content and adds an edge highlight effect.This effect automatically detects the edge contours of the component content and overlays a highlight stroke.
+Detects edges of the component content and adds an edge highlight effect. This effect automatically detects the edge contours of the component content and overlays a highlight stroke.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter--><!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter-End-->
 
@@ -498,7 +516,7 @@ Detects edges of the component content and adds an edge highlight effect.This ef
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | alpha | number | Yes |
-| color | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | No |
+| color | [Color](../../apis-na/arkts-apis/arkts-na-enums-color-e.md) | No |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No |
 | bloom | boolean | No |
 
@@ -512,7 +530,7 @@ Detects edges of the component content and adds an edge highlight effect.This ef
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -545,9 +563,11 @@ struct EdgeLightExample {
 flyInFlyOutEffect(degree: number, flyMode: FlyMode): Filter
 ```
 
-Adds a fly-in or fly-out deformation effect to the component.Typical application scenarios include page transition animations, window entry/exit animations,dialog pop-up animations, list item entry/exit animations, etc.
+Adds a fly-in or fly-out deformation effect to the component. Typical application scenarios include page transition animations, window entry/exit animations, dialog pop-up animations, list item entry/exit animations, etc.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter--><!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter-End-->
 
@@ -572,7 +592,7 @@ Adds a fly-in or fly-out deformation effect to the component.Typical application
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -580,6 +600,55 @@ Adds a fly-in or fly-out deformation effect to the component.Typical application
 // Add the fly in/out transformation effect to the component.
 let filter = uiEffect.createFilter()
 filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
+```
+
+## hdrBrightnessRatio
+
+```TypeScript
+hdrBrightnessRatio(ratio: number): Filter
+```
+
+Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure. The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR. The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance. > **NOTE：**> > Using the HDR brightening effect incurs certain performance and power consumption overhead. > It is recommended to use it in scenarios where HDR images or videos already exist.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 24+: ohos.permission.HDR_BRIGHTNESS
+
+<!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter--><!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [ratio](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+// Create a Filter instance
+let filter: uiEffect.Filter = uiEffect.createFilter();
+// Set the HDR brightness ratio to 2.0
+filter.hdrBrightnessRatio(2.0);
 ```
 
 ## heatDistortion
@@ -591,6 +660,8 @@ heatDistortion(param: HeatDistortionEffectParam): Filter
 Applies a heat distortion effect to the image, simulating the visual distortion caused by hot air flow.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -653,7 +724,9 @@ maskDispersion(dispersionMap: Mask, alpha: number, rFactor?: [number, number], g
 
 Adds a dispersion effect controlled by a displacement map to the component content, simulating the dispersion phenomenon when light passes through a prism. Typical application scenarios include colorful effects, prism refraction simulation, etc.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter--><!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter-End-->
 
@@ -681,7 +754,7 @@ Adds a dispersion effect controlled by a displacement map to the component conte
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## maskTransition
 
@@ -689,11 +762,11 @@ Adds a dispersion effect controlled by a displacement map to the component conte
 maskTransition(alphaMask: Mask, factor?: number, inverse?: boolean): Filter
 ```
 
-Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.
+Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc. It is not recommended to use this effect during screen size changes, such as screen rotation, foldable screen opening/closing, etc.
 
-It is not recommended to use this effect during screen size changes, such as screen rotation,foldable screen opening/closing, etc.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter--><!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter-End-->
 
@@ -719,7 +792,7 @@ It is not recommended to use this effect during screen size changes, such as scr
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -775,7 +848,9 @@ pixelStretch(stretchSizes: Array<number>, tileMode: TileMode): Filter
 
 Adds a pixel stretch effect to the component.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter--><!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter-End-->
 
@@ -812,7 +887,9 @@ radiusGradientBlur(radius: number, gradientParam: LinearGradientBlurOptions): Fi
 
 Adds a radius linear gradient blur effect to the component content.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter--><!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter-End-->
 
@@ -837,7 +914,7 @@ Adds a radius linear gradient blur effect to the component content.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## variableRadiusBlur
 
@@ -847,7 +924,9 @@ variableRadiusBlur(radius: number, radiusMap: Mask): Filter
 
 Provides a Mask-based gradient blur effect for the component content.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter--><!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter-End-->
 
@@ -872,7 +951,7 @@ Provides a Mask-based gradient blur effect for the component content.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -905,7 +984,9 @@ waterRipple(progress: number, waveCount: number, x: number, y: number, rippleMod
 
 Adds a water ripple effect to the component.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter--><!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter-End-->
 
@@ -933,7 +1014,7 @@ Adds a water ripple effect to the component.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

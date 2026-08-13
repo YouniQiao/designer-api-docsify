@@ -2,7 +2,9 @@
 
 Defines an HTTP Interceptor. User can implement this interface to define the handle function.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface HttpInterceptor--><!--Device-http-export interface HttpInterceptor-End-->
 
@@ -22,9 +24,11 @@ interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Pro
 
 Intercept an HTTP process and do changes as disired.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>--><!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>-End-->
 
@@ -91,9 +95,11 @@ The type of this interceptor. It defines when this intercptor would be called.
 
 **Type:** [InterceptorType](arkts-network-http-interceptortype-e.md)
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpInterceptor-interceptorType: InterceptorType--><!--Device-HttpInterceptor-interceptorType: InterceptorType-End-->
 

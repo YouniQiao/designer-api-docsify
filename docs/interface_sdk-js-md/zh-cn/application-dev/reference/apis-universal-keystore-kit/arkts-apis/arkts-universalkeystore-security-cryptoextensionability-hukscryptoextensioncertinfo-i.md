@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface HuksCryptoExtensionCertInfo--><!--Device-unnamed-export interface HuksCryptoExtensionCertInfo-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -23,6 +25,8 @@ cert: Uint8Array
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-HuksCryptoExtensionCertInfo-cert: Uint8Array--><!--Device-HuksCryptoExtensionCertInfo-cert: Uint8Array-End-->
 
@@ -42,6 +46,8 @@ purpose: certificateManager.CertificatePurpose
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-HuksCryptoExtensionCertInfo-purpose: certificateManager.CertificatePurpose--><!--Device-HuksCryptoExtensionCertInfo-purpose: certificateManager.CertificatePurpose-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -59,6 +65,8 @@ resourceId: string
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-HuksCryptoExtensionCertInfo-resourceId: string--><!--Device-HuksCryptoExtensionCertInfo-resourceId: string-End-->
 

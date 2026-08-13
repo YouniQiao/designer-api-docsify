@@ -8,7 +8,9 @@ function isFloatingBallEnabled(): boolean
 
 判断当前设备是否支持闪控球功能。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-floatingBall-function isFloatingBallEnabled(): boolean--><!--Device-floatingBall-function isFloatingBallEnabled(): boolean-End-->
 

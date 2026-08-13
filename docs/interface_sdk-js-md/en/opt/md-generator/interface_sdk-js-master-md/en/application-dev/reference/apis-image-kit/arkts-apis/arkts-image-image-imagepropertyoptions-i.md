@@ -2,7 +2,9 @@
 
 Describes the image properties.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface ImagePropertyOptions--><!--Device-image-interface ImagePropertyOptions-End-->
 
@@ -24,7 +26,9 @@ Default property value. The default value is null.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePropertyOptions-defaultValue?: string--><!--Device-ImagePropertyOptions-defaultValue?: string-End-->
 
@@ -40,7 +44,9 @@ Index of the image. The default value is **0**.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePropertyOptions-index?: int--><!--Device-ImagePropertyOptions-index?: int-End-->
 

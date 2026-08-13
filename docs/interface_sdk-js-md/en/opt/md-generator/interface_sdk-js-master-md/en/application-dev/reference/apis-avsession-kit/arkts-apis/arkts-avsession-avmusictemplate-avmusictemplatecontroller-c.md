@@ -4,6 +4,8 @@ The definition of the AVMusicTemplateController.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-class AVMusicTemplateController--><!--Device-avMusicTemplate-class AVMusicTemplateController-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -24,6 +26,8 @@ Clear search history.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateController-clearSearchHistory(): Promise<OperResult>--><!--Device-AVMusicTemplateController-clearSearchHistory(): Promise<OperResult>-End-->
@@ -40,10 +44,10 @@ Clear search history.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## destroy
 
@@ -54,6 +58,8 @@ destroy(): Promise<void>
 Destroy the controller.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,7 +77,7 @@ Destroy the controller.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## downloadMediaEntity
 
@@ -82,6 +88,8 @@ downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity):
 Download media entity.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,10 +114,10 @@ Download media entity.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## executeAction
 
@@ -120,6 +128,8 @@ executeAction(actionType: string, params: string): Promise<string>
 Execute action.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,10 +154,10 @@ Execute action.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## favoriteMediaEntity
 
@@ -158,6 +168,8 @@ favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Pr
 Favorite media entity.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,10 +194,10 @@ Favorite media entity.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## handleMemberPurchase
 
@@ -196,6 +208,8 @@ handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>
 Handle member purchase.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,10 +233,10 @@ Handle member purchase.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## login
 
@@ -233,6 +247,8 @@ login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>
 Login.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -257,10 +273,10 @@ Login.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## offCurrentSingleChange
 
@@ -271,6 +287,8 @@ offCurrentSingleChange(callback?: Callback<Single>): void
 Unregister report current single callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,8 +306,8 @@ Unregister report current single callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offCustomElementsChange
@@ -301,6 +319,8 @@ offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void
 Unregister report custom elements change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,8 +338,8 @@ Unregister report custom elements change callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offDialogCommandChange
@@ -331,6 +351,8 @@ offDialogCommandChange(callback?: ReportDialogCommandEvent): void
 Unregister report dialog command callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -348,8 +370,8 @@ Unregister report dialog command callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offDownloadMediaEntityStatusChange
@@ -361,6 +383,8 @@ offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void
 Unregister report download media entity status callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -378,8 +402,8 @@ Unregister report download media entity status callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offExtensionAbilityChange
@@ -391,6 +415,8 @@ offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void
 Unregister report extension ability callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,8 +434,8 @@ Unregister report extension ability callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offMediaEntitiesChange
@@ -421,6 +447,8 @@ offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void
 Unregister report media entities change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -438,8 +466,8 @@ Unregister report media entities change callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offPlaylistChange
@@ -451,6 +479,8 @@ offPlaylistChange(callback?: Callback<PageMediaEntity>): void
 Unregister report playlist callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -468,8 +498,8 @@ Unregister report playlist callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offReportExecuteAction
@@ -481,6 +511,8 @@ offReportExecuteAction(callback?: ReportExecuteActionEvent): void
 Unregister report execute action callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -498,8 +530,8 @@ Unregister report execute action callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offSettingsChange
@@ -511,6 +543,8 @@ offSettingsChange(callback?: Callback<SettingItem[]>): void
 Unregister report settings callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -528,8 +562,8 @@ Unregister report settings callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offTabContentChange
@@ -541,6 +575,8 @@ offTabContentChange(callback?: ReportTabContentEvent): void
 Unregister report tab content callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -558,8 +594,8 @@ Unregister report tab content callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## offUserInfoChange
@@ -571,6 +607,8 @@ offUserInfoChange(callback?: Callback<UserInfo>): void
 Unregister report user info callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -588,8 +626,8 @@ Unregister report user info callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onCurrentSingleChange
@@ -601,6 +639,8 @@ onCurrentSingleChange(callback: Callback<Single>): void
 Register report current single callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -618,8 +658,8 @@ Register report current single callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onCustomElementsChange
@@ -631,6 +671,8 @@ onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void
 Register report custom elements change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -648,8 +690,8 @@ Register report custom elements change callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onDialogCommandChange
@@ -661,6 +703,8 @@ onDialogCommandChange(callback: ReportDialogCommandEvent): void
 Register report dialog command callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -678,8 +722,8 @@ Register report dialog command callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onDownloadMediaEntityStatusChange
@@ -691,6 +735,8 @@ onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void
 Register report download media entity status callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -708,8 +754,8 @@ Register report download media entity status callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onExtensionAbilityChange
@@ -721,6 +767,8 @@ onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void
 Register report extension ability callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -738,8 +786,8 @@ Register report extension ability callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onMediaEntitiesChange
@@ -751,6 +799,8 @@ onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void
 Register report media entities change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -768,8 +818,8 @@ Register report media entities change callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onPlaylistChange
@@ -781,6 +831,8 @@ onPlaylistChange(callback: Callback<PageMediaEntity>): void
 Register report playlist callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -798,8 +850,8 @@ Register report playlist callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onReportExecuteAction
@@ -811,6 +863,8 @@ onReportExecuteAction(callback: ReportExecuteActionEvent): void
 Register report execute action callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -828,8 +882,8 @@ Register report execute action callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onSettingsChange
@@ -841,6 +895,8 @@ onSettingsChange(callback: Callback<SettingItem[]>): void
 Register report settings callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -858,8 +914,8 @@ Register report settings callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onTabContentChange
@@ -871,6 +927,8 @@ onTabContentChange(callback: ReportTabContentEvent): void
 Register report tab content callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -888,8 +946,8 @@ Register report tab content callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## onUserInfoChange
@@ -901,6 +959,8 @@ onUserInfoChange(callback: Callback<UserInfo>): void
 Register report user info callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -918,8 +978,8 @@ Register report user info callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 35000012 |
 
 ## playForSearch
@@ -931,6 +991,8 @@ playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperRe
 Play for search.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -955,10 +1017,10 @@ Play for search.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## playMediaEntity
 
@@ -969,6 +1031,8 @@ playMediaEntity(mediaEntity: MediaEntity): Promise<void>
 Play media entity.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -992,10 +1056,10 @@ Play media entity.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCompilation
 
@@ -1006,6 +1070,8 @@ queryCompilation(compilationId: string, pageIndex: number): Promise<PageMediaEnt
 Query compilation.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1030,10 +1096,10 @@ Query compilation.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCompilationByKeyword
 
@@ -1044,6 +1110,8 @@ queryCompilationByKeyword(keyword: string): Promise<Compilation[]>
 Query compilation by keyword.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1067,10 +1135,10 @@ Query compilation by keyword.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCurrentSingle
 
@@ -1081,6 +1149,8 @@ queryCurrentSingle(): Promise<Single>
 Query current single.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1098,10 +1168,10 @@ Query current single.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCustomContent
 
@@ -1112,6 +1182,8 @@ queryCustomContent(queryType: CustomType[]): Promise<CustomElement>
 Query custom content.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1135,10 +1207,10 @@ Query custom content.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryHotWords
 
@@ -1149,6 +1221,8 @@ queryHotWords(): Promise<string[]>
 Query hot words.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1166,10 +1240,10 @@ Query hot words.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMainTabs
 
@@ -1180,6 +1254,8 @@ queryMainTabs(): Promise<MediaTab[]>
 Query main tabs.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1197,10 +1273,10 @@ Query main tabs.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMediaEntity
 
@@ -1211,6 +1287,8 @@ queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>
 Query media entity.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1234,10 +1312,10 @@ Query media entity.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMediaEntityByKeyword
 
@@ -1248,6 +1326,8 @@ queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: nu
 Query media entity by keyword.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1273,10 +1353,10 @@ Query media entity by keyword.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMediaTabContent
 
@@ -1287,6 +1367,8 @@ queryMediaTabContent(tabId: string): Promise<MediaTabContent>
 Query media tab content.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1310,10 +1392,10 @@ Query media tab content.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMemberPurchase
 
@@ -1324,6 +1406,8 @@ queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurch
 Query member purchase.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1347,10 +1431,10 @@ Query member purchase.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryPlaylist
 
@@ -1361,6 +1445,8 @@ queryPlaylist(pageIndex: number, sort: Sort): Promise<PageMediaEntity>
 Query playlist.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1385,10 +1471,10 @@ Query playlist.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryRecommendMediaEntityList
 
@@ -1399,6 +1485,8 @@ queryRecommendMediaEntityList(): Promise<MediaEntity[]>
 Query recommend media entity list.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1416,10 +1504,10 @@ Query recommend media entity list.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## querySearchHistory
 
@@ -1430,6 +1518,8 @@ querySearchHistory(): Promise<string[]>
 Query search history.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1447,10 +1537,10 @@ Query search history.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## reportProblemAndAdvice
 
@@ -1461,6 +1551,8 @@ reportProblemAndAdvice(advice: string): Promise<OperResult>
 Report problem and advice.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1484,10 +1576,10 @@ Report problem and advice.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## requestDialogInfo
 
@@ -1498,6 +1590,8 @@ requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): 
 Request dialog info.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1522,10 +1616,10 @@ Request dialog info.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## sendCustomCommand
 
@@ -1536,6 +1630,8 @@ sendCustomCommand(command: string, args: string): Promise<OperResult>
 Send custom commands to AVMusicTemplate
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1560,9 +1656,9 @@ Send custom commands to AVMusicTemplate
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## updateSettings
 
@@ -1573,6 +1669,8 @@ updateSettings(settingItem: SettingItem): Promise<SettingItem>
 Report settings change.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1596,10 +1694,10 @@ Report settings change.
 
 | Error Code ID |
 | --- |
-| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## isDestroy
 
@@ -1612,6 +1710,8 @@ Mark the controller is or not destroy.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1630,6 +1730,8 @@ Unique id of the AVMusicTemplateController.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

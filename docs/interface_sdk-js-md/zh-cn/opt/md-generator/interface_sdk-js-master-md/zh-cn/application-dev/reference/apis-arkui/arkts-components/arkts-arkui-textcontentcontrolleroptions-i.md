@@ -4,6 +4,8 @@ Defines the span options of TextContentController.
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface TextContentControllerOptions--><!--Device-unnamed-declare interface TextContentControllerOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ the offset that add a text at.
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

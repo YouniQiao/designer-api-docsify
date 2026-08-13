@@ -8,7 +8,9 @@ Defines the LongPressGesture handler.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class LongPressGestureHandler extends GestureHandler--><!--Device-unnamed-export declare class LongPressGestureHandler extends GestureHandler-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class LongPressGestureHandler--><!--Device-unnamed-export declare class LongPressGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor parameters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ LongPress gesture recognition success callback.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +84,8 @@ The LongPress gesture is successfully recognized and a callback is triggered whe
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LongPressGestureHandler-onActionCancel(event: Callback<GestureEvent>): this--><!--Device-LongPressGestureHandler-onActionCancel(event: Callback<GestureEvent>): this-End-->
@@ -107,6 +115,8 @@ The LongPress gesture is successfully recognized. When the finger is lifted, the
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -22,6 +22,8 @@ complete?: () => void
 
 Called when the execution is completed.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 9
@@ -40,6 +42,8 @@ fail?: (data: string, code: number) => void
 
 Called when the location types fail to be obtained.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 9
@@ -50,13 +54,6 @@ Called when the location types fail to be obtained.
 
 **System capability:** SystemCapability.Location.Location.Lite
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
 ## success
 
 ```TypeScript
@@ -64,6 +61,8 @@ success?: (data: GetLocationTypeResponse) => void
 ```
 
 Called when the location types are obtained.
+
+**Type:** (data: GetLocationTypeResponse) =&gt; void
 
 **Since:** 3
 
@@ -74,9 +73,3 @@ Called when the location types are obtained.
 <!--Device-GetLocationTypeOption-success?: (data: GetLocationTypeResponse) => void--><!--Device-GetLocationTypeOption-success?: (data: GetLocationTypeResponse) => void-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [GetLocationTypeResponse](arkts-location-system-geolocation-getlocationtyperesponse-i.md) | Yes |

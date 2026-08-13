@@ -2,7 +2,9 @@
 
 Enumerates the video fill modes during screen capture.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-enum AVScreenCaptureFillMode--><!--Device-media-enum AVScreenCaptureFillMode-End-->
 
@@ -16,7 +18,9 @@ PRESERVE_ASPECT_RATIO = 0
 
 Keeps the original aspect ratio, matching the aspect ratio of the physical screen.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureFillMode-PRESERVE_ASPECT_RATIO = 0--><!--Device-AVScreenCaptureFillMode-PRESERVE_ASPECT_RATIO = 0-End-->
 
@@ -30,7 +34,9 @@ SCALE_TO_FILL = 1
 
 Stretches the image to fit the specified dimensions.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureFillMode-SCALE_TO_FILL = 1--><!--Device-AVScreenCaptureFillMode-SCALE_TO_FILL = 1-End-->
 

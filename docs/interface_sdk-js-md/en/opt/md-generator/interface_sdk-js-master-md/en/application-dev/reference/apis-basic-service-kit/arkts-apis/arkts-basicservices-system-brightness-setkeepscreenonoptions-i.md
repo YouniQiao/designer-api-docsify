@@ -24,6 +24,8 @@ complete?: () => void
 
 Called when an API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 7
@@ -40,34 +42,13 @@ fail?: (data: string, code: number) => void
 
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 7
 
 <!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void--><!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-Called when an API call is successful.
-
-**Since:** 3
-
-**Deprecated since:** 7
-
-<!--Device-SetKeepScreenOnOptions-success?: () => void--><!--Device-SetKeepScreenOnOptions-success?: () => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -86,5 +67,23 @@ The value **true** means to keep the screen steady on, and the value **false** i
 **Deprecated since:** 7
 
 <!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean--><!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean-End-->
+
+**System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+Called when an API call is successful.
+
+**Type:** () =&gt; void
+
+**Since:** 3
+
+**Deprecated since:** 7
+
+<!--Device-SetKeepScreenOnOptions-success?: () => void--><!--Device-SetKeepScreenOnOptions-success?: () => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite

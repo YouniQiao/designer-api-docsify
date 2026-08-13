@@ -6,6 +6,8 @@ Defines the default theme and color mode for components within the **WithTheme**
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface WithThemeOptions--><!--Device-unnamed-declare interface WithThemeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Defines the default theme and color mode for components within the **WithTheme**
 colorMode?: ThemeColorMode
 ```
 
-Color mode for components in the **WithTheme** scope.
-
-Default value: **ThemeColorMode.SYSTEM**
+Color mode for components in the **WithTheme** scope. Default value: **ThemeColorMode.SYSTEM**
 
 **Type:** ThemeColorMode
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,16 +42,15 @@ Default value: **ThemeColorMode.SYSTEM**
 theme?: CustomTheme
 ```
 
-Default theme for components in the **WithTheme** scope.
-
-Default value: **undefined**. The default style follows the  
-[default token style](../../../ui/theme_skinning.md#system-default-token-color-values).
+Default theme for components in the **WithTheme** scope. Default value: **undefined**. The default style follows the [default token style](../../../ui/theme_skinning.md#system-default-token-color-values).
 
 **Type:** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

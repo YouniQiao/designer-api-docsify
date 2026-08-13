@@ -12,12 +12,13 @@ import { pointer } from '@kit.InputKit';
 function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void
 ```
 
-Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
-[setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setCustomCursor).
+Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setCustomCursor).
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void--><!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void-End-->
 
@@ -27,16 +28,16 @@ Sets a custom pointer style for a specified window synchronously. This API can s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value must be an integer greater than 0. |
+| windowId | int | Yes | Window ID. The value must be an integer greater than 0. |
 | pixelMap | image.PixelMap | Yes | Custom cursor resource. |
-| focusX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
-| focusY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusX | int | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusY | int | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

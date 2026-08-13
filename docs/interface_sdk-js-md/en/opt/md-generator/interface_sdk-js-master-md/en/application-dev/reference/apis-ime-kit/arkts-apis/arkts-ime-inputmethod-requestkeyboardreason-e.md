@@ -2,7 +2,9 @@
 
 requestKeyboardReason of input click
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export enum RequestKeyboardReason--><!--Device-inputMethod-export enum RequestKeyboardReason-End-->
 
@@ -16,7 +18,9 @@ NONE = 0
 
 The request keyboard reason is NONE.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestKeyboardReason-NONE = 0--><!--Device-RequestKeyboardReason-NONE = 0-End-->
 
@@ -30,7 +34,9 @@ MOUSE = 1
 
 The request keyboard reason is MOUSE.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestKeyboardReason-MOUSE = 1--><!--Device-RequestKeyboardReason-MOUSE = 1-End-->
 
@@ -44,7 +50,9 @@ TOUCH = 2
 
 The request keyboard reason is TOUCH.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestKeyboardReason-TOUCH = 2--><!--Device-RequestKeyboardReason-TOUCH = 2-End-->
 
@@ -58,7 +66,9 @@ OTHER = 20
 
 The request keyboard reason is OTHER.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestKeyboardReason-OTHER = 20--><!--Device-RequestKeyboardReason-OTHER = 20-End-->
 

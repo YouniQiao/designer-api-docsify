@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface NotificationClassification--><!--Device-unnamed-export interface NotificationClassification-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -21,6 +23,8 @@ readonly classification?: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +45,8 @@ readonly subClassification?: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

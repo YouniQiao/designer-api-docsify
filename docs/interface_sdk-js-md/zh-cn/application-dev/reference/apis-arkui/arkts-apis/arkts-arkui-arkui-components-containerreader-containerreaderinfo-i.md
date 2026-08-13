@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ContainerReaderInfo--><!--Device-unnamed-export interface ContainerReaderInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ heightBreakpoint?: HeightBreakpoint
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +46,13 @@ size: Size
 
 获取到的当前ContainerReader组件的尺寸，用于布局分析和断点计算。&lt;br/&gt;**说明：**&lt;br/&gt;该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。绑定后组件尺寸值变化时，size绑定的变量值会自动更新。
 
-**类型：** [Size](arkts-arkui-graphics-size-i.md)
+**类型：** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,6 +77,8 @@ widthBreakpoint?: WidthBreakpoint
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 随机数接口，定义随机数生成的方法。调用前，需通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createRandom)创建一个Random实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-interface Random--><!--Device-cryptoFramework-interface Random-End-->
 
@@ -18,11 +20,13 @@ enableHardwareEntropy(): void
 
 开启硬件熵源。将从TEE中获取安全随机数作为该随机数实例的熵源。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Random-enableHardwareEntropy(): void--><!--Device-Random-enableHardwareEntropy(): void-End-->
 
@@ -32,10 +36,10 @@ enableHardwareEntropy(): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
 
 ## 示例
 
@@ -68,7 +72,9 @@ generateRandom(len: number, callback: AsyncCallback<DataBlob>): void
 
 生成指定长度的随机数。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -93,9 +99,9 @@ generateRandom(len: number, callback: AsyncCallback<DataBlob>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -120,7 +126,9 @@ generateRandom(len: number): Promise<DataBlob>
 
 生成指定长度的随机数。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,9 +156,9 @@ generateRandom(len: number): Promise<DataBlob>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -241,11 +249,11 @@ export default {
 generateRandomSync(len: number): DataBlob
 ```
 
-同步生成指定长度的随机数。
+同步生成指定长度的随机数。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，[generateRandom](#generateRandom)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[generateRandom](#generateRandom)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -275,9 +283,9 @@ generateRandomSync(len: number): DataBlob
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -376,7 +384,9 @@ setSeed(seed: DataBlob): void
 
 设置指定的种子。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -400,7 +410,7 @@ setSeed(seed: DataBlob): void
 
 | 错误码ID |
 | --- |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -434,7 +444,9 @@ readonly algName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

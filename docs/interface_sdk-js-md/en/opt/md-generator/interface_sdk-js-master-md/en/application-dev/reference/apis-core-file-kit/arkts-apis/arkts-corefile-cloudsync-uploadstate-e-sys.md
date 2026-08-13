@@ -4,6 +4,8 @@ Describes the State type of file upload.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cloudSync-enum UploadState--><!--Device-cloudSync-enum UploadState-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -19,6 +21,8 @@ WAITING = 0
 Indicates that the upload task is in waiting state.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Indicates that the upload task is in process now.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UploadState-RUNNING = 1--><!--Device-UploadState-RUNNING = 1-End-->
@@ -55,6 +61,8 @@ COMPLETED = 2
 Indicates that the upload task finished.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Indicates that the upload task failed.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UploadState-FAILED = 3--><!--Device-UploadState-FAILED = 3-End-->
@@ -92,6 +102,8 @@ Indicates that the upload task stopped.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UploadState-STOPPED = 4--><!--Device-UploadState-STOPPED = 4-End-->
@@ -109,6 +121,8 @@ PAUSED = 5
 Indicates that the upload task paused.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -20,7 +20,7 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelReminder](reminderAgentManager.cancelReminder)
+**Substitutes:** cancelReminder
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -31,7 +31,7 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderId | number | Yes | ID of the reminder. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -58,7 +58,7 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelReminder](reminderAgentManager.cancelReminder)
+**Substitutes:** cancelReminder
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>--><!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>-End-->
 

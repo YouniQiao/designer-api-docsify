@@ -2,7 +2,9 @@
 
 Enumerates audio device types.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum AudioDeviceType--><!--Device-call-export enum AudioDeviceType-End-->
 
@@ -18,7 +20,9 @@ DEVICE_EARPIECE = 0
 
 Headset device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceType-DEVICE_EARPIECE = 0--><!--Device-AudioDeviceType-DEVICE_EARPIECE = 0-End-->
 
@@ -34,7 +38,9 @@ DEVICE_SPEAKER = 1
 
 Speaker device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceType-DEVICE_SPEAKER = 1--><!--Device-AudioDeviceType-DEVICE_SPEAKER = 1-End-->
 
@@ -50,7 +56,9 @@ DEVICE_WIRED_HEADSET = 2
 
 Wired headset device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2--><!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2-End-->
 
@@ -66,7 +74,9 @@ DEVICE_BLUETOOTH_SCO = 3
 
 Bluetooth SCO device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3--><!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3-End-->
 
@@ -82,7 +92,9 @@ DEVICE_DISTRIBUTED_AUTOMOTIVE = 4
 
 Distributed head unit.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4--><!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4-End-->
 

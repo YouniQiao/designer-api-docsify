@@ -4,6 +4,8 @@ OffscreenCanvas支持以下属性：
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class CanvasGradient--><!--Device-unnamed-declare class CanvasGradient-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ addColorStop(offset: number, color: string): void
 设置渐变断点值，包括偏移和颜色。调用多次addColorStop可设置多个断点，断点按offset值从小到大排序，渲染时在相邻断点间进行颜色插值。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,9 +76,11 @@ struct AddColorStop {
 addColorStop(offset: number, color: string | ColorMetrics): void
 ```
 
-设置渐变断点值，包括偏移和颜色。支持设置rgb或argb格式颜色。支持通过传入[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md#ColorMetrics)类型设置P3广色域颜色值，从API版本26.0.0开始，新增支持BT2020广色域和HDR提亮。
+设置渐变断点值，包括偏移和颜色。支持设置rgb或argb格式颜色。支持通过传入[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md#ColorMetrics)类型设置P3广色域颜色值，从API版 本26.0.0开始，新增支持BT2020广色域和HDR提亮。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,17 +97,17 @@ addColorStop(offset: number, color: string | ColorMetrics): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | offset | number | 是 |
-| color | string \| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 |
+| color | string \| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [103701](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-参数错误) |
+| [103701](../errorcode-canvas.md#103701-参数错误) |
 
 ## 示例
 
-通过addColorStop设置指定色域的渐变断点值，包括偏移和颜色。设置窗口色域模式为广色域参照方法[setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace9)。
+通过addColorStop设置指定色域的渐变断点值，包括偏移和颜色。设置窗口色域模式为广色域参照方法[setWindowColorSpace](../arkts-apis-window-Window.md#setWindowColorSpace)。
 
 ```TypeScript
 // xxx.ets
@@ -155,7 +161,7 @@ struct AddColorStop {
 }
 ```
 
-从API版本26.0.0开始，[addColorStop](#addcolorstop20)接口新增支持通过[ColorMetrics](../js-apis-arkui-graphics.md#colormetrics12)类型入参进行HDR提亮。
+从API版本26.0.0开始，[addColorStop](#addColorStop)接口新增支持通过ColorMetrics类型入参进行HDR提亮。
 
 ```TypeScript
 // xxx.ets

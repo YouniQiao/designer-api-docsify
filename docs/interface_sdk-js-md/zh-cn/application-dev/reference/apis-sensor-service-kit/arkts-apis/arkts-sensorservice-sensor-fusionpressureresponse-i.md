@@ -4,11 +4,13 @@
 
 **继承/实现关系：** FusionPressureResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-sensor-interface FusionPressureResponse extends Response--><!--Device-sensor-interface FusionPressureResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface FusionPressureResponse--><!--Device-sensor-interface FusionPressureResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,11 +22,13 @@ fusionPressure: double
 
 融合压力值，表示施加在融合压力传感器上的压力值百分比。单位：%（百分比）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-FusionPressureResponse-fusionPressure: double--><!--Device-FusionPressureResponse-fusionPressure: double-End-->
 

@@ -2,9 +2,11 @@
 
 FA模型的使用信息属性集合。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-interface HapModuleInfo--><!--Device-usageStatistics-interface HapModuleInfo-End-->
 
@@ -20,11 +22,13 @@ abilityDescriptionId?: long
 
 FA的MainAbility descriptionId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-abilityDescriptionId?: long--><!--Device-HapModuleInfo-abilityDescriptionId?: long-End-->
 
@@ -40,11 +44,13 @@ abilityIconId?: long
 
 FA的MainAbility iconId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-abilityIconId?: long--><!--Device-HapModuleInfo-abilityIconId?: long-End-->
 
@@ -60,11 +66,13 @@ abilityLableId?: long
 
 FA的MainAbility labelId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-abilityLableId?: long--><!--Device-HapModuleInfo-abilityLableId?: long-End-->
 
@@ -82,9 +90,11 @@ FA的MainAbility名。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-abilityName?: string--><!--Device-HapModuleInfo-abilityName?: string-End-->
 
@@ -100,11 +110,13 @@ appLabelId?: long
 
 FA的应用labelId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-appLabelId?: long--><!--Device-HapModuleInfo-appLabelId?: long-End-->
 
@@ -122,9 +134,11 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-bundleName: string--><!--Device-HapModuleInfo-bundleName: string-End-->
 
@@ -140,11 +154,13 @@ descriptionId?: long
 
 FA所属的应用descriptionId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-descriptionId?: long--><!--Device-HapModuleInfo-descriptionId?: long-End-->
 
@@ -162,9 +178,11 @@ deviceId?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-deviceId?: string--><!--Device-HapModuleInfo-deviceId?: string-End-->
 
@@ -182,9 +200,11 @@ FA中卡片的使用记录。
 
 **类型：** Array&lt;[HapFormInfo](arkts-backgroundtasks-usagestatistics-hapforminfo-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-formRecords: Array<HapFormInfo>--><!--Device-HapModuleInfo-formRecords: Array<HapFormInfo>-End-->
 
@@ -200,11 +220,13 @@ labelId?: long
 
 FA所属module的labelId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-labelId?: long--><!--Device-HapModuleInfo-labelId?: long-End-->
 
@@ -220,11 +242,13 @@ lastModuleUsedTime: long
 
 FA的上一次使用时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-lastModuleUsedTime: long--><!--Device-HapModuleInfo-lastModuleUsedTime: long-End-->
 
@@ -240,11 +264,13 @@ launchedCount: int
 
 FA的启动次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-launchedCount: int--><!--Device-HapModuleInfo-launchedCount: int-End-->
 
@@ -262,9 +288,11 @@ FA所属module名。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HapModuleInfo-moduleName: string--><!--Device-HapModuleInfo-moduleName: string-End-->
 

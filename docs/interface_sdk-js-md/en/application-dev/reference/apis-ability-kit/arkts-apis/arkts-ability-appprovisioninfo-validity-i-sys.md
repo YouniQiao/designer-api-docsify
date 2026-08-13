@@ -2,9 +2,11 @@
 
 Validity period in the configuration file.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Validity--><!--Device-unnamed-export interface Validity-End-->
 
@@ -20,11 +22,13 @@ readonly notAfter: long
 
 End time of the validity period of the configuration file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Validity-readonly notAfter: long--><!--Device-Validity-readonly notAfter: long-End-->
 
@@ -40,11 +44,13 @@ readonly notBefore: long
 
 Start time of the validity period of the configuration file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Validity-readonly notBefore: long--><!--Device-Validity-readonly notBefore: long-End-->
 

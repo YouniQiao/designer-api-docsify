@@ -2,7 +2,9 @@
 
 Enumerates the certificate types.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export enum CertType--><!--Device-certificateManager-export enum CertType-End-->
 
@@ -16,7 +18,9 @@ CA_CERT_SYSTEM = 0
 
 System CA certificate.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertType-CA_CERT_SYSTEM = 0--><!--Device-CertType-CA_CERT_SYSTEM = 0-End-->
 
@@ -30,7 +34,9 @@ CA_CERT_USER = 1
 
 User CA certificate.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertType-CA_CERT_USER = 1--><!--Device-CertType-CA_CERT_USER = 1-End-->
 

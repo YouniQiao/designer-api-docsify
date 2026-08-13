@@ -8,7 +8,9 @@ ArrayList中sort方法的比较器类型。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -29,5 +31,5 @@ ArrayList中sort方法的比较器类型。
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 通过回调函数返回的值，ArrayList根据该比较规则维护元素的顺序。返回负数表示firstValue小于secondValue（firstValue排在secondValue之前）， 返回0表示两者相等，返回正数表示firstValue大于secondValue（firstValue排在secondValue之后）。 |
+| double | 通过回调函数返回的值，ArrayList根据该比较规则维护元素的顺序。返回负数表示firstValue小于secondValue（firstValue排在secondValue之前）， 返回0表示两者相等，返回正数表示firstValue大于secondValue（firstValue排在secondValue之后）。 |
 

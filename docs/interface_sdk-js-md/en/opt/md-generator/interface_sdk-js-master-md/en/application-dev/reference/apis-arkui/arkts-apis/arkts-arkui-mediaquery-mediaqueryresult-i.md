@@ -4,6 +4,8 @@ Provides the media query result.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-mediaquery-interface MediaQueryResult--><!--Device-mediaquery-interface MediaQueryResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,13 @@ import { mediaquery } from '@kit.ArkUI';
 readonly matches: boolean
 ```
 
-Whether the media query condition is met. The value **true** means that the query conditions are met, and **false** means the opposite.This parameter is read-only.
+Whether the media query condition is met. The value **true** means that the query conditions are met, and **false** means the opposite. This parameter is read-only.
 
 **Type:** boolean
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,11 +44,13 @@ Whether the media query condition is met. The value **true** means that the quer
 readonly media: string
 ```
 
-Matching condition of a media event.This parameter is read-only.
+Matching condition of a media event. This parameter is read-only.
 
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

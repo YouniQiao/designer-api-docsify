@@ -2,9 +2,11 @@
 
 Provides callbacks for credential inputers.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface IInputer--><!--Device-osAccount-interface IInputer-End-->
 
@@ -26,41 +28,17 @@ onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDat
 
 Called to notify the caller that data is obtained.
 
-**Since:** 8
+**Type:** (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) =&gt; void
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IInputer-onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) => void--><!--Device-IInputer-onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) => void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authSubType | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | Yes |  |
-| callback | [IInputData](arkts-basicservices-osaccount-iinputdata-i-sys.md) | Yes |  |
-| options | [GetInputDataOptions](arkts-basicservices-osaccount-getinputdataoptions-i-sys.md) | Yes |  |
-
-## Examples
-
-```TypeScript
-let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);
-let passwordNumber: Uint8Array = new Uint8Array([1, 2, 3, 4]);
-let inputer: osAccount.IInputer = {
-  onGetData: (authSubType: osAccount.AuthSubType,
-    callback: osAccount.IInputData, options: osAccount.GetInputDataOptions) => {
-      if (authSubType == osAccount.AuthSubType.PIN_NUMBER) {
-        callback.onSetData(authSubType, passwordNumber);
-      } else {
-        callback.onSetData(authSubType, password);
-      }
-  }
-};
-let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
-let result = pinAuth.registerInputer(inputer);
-console.info('registerInputer result: ' + result);
-```
 

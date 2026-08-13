@@ -2,9 +2,11 @@
 
 快速拉起的结果状态码的枚举值。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-continueManager-enum ContinueStateCode--><!--Device-continueManager-enum ContinueStateCode-End-->
 
@@ -16,13 +18,13 @@
 SUCCESS = 0
 ```
 
-操作成功。
+操作成功。 此接口仅可在Stage模型下使用。
 
-此接口仅可在Stage模型下使用。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ SUCCESS = 0
 SYSTEM_ERROR = 1
 ```
 
-操作失败。
+操作失败。 此接口仅可在Stage模型下使用。
 
-此接口仅可在Stage模型下使用。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

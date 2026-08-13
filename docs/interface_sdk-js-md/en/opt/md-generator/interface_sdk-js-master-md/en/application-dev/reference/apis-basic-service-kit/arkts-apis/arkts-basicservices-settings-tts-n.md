@@ -1,8 +1,10 @@
 # TTS
 
-Provides methods for setting information about text-to-speech (TTS) conversion, including the pitch, speech rate,engine, and plug-ins.
+Provides methods for setting information about text-to-speech (TTS) conversion, including the pitch, speech rate, engine, and plug-ins.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-settings-namespace TTS--><!--Device-settings-namespace TTS-End-->
 
@@ -20,7 +22,7 @@ import { settings } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DEFAULT_TTS_PITCH](arkts-basicservices-tts-con.md#default_tts_pitch) |
-| [DEFAULT_TTS_RATE](arkts-basicservices-tts-con.md#default_tts_rate) |
-| [DEFAULT_TTS_SYNTH](arkts-basicservices-tts-con.md#default_tts_synth) |
-| [ENABLED_TTS_PLUGINS](arkts-basicservices-tts-con.md#enabled_tts_plugins) |
+| [DEFAULT_TTS_PITCH](arkts-basicservices-tts-con.md#DEFAULT_TTS_PITCH) |
+| [DEFAULT_TTS_RATE](arkts-basicservices-tts-con.md#DEFAULT_TTS_RATE) |
+| [DEFAULT_TTS_SYNTH](arkts-basicservices-tts-con.md#DEFAULT_TTS_SYNTH) |
+| [ENABLED_TTS_PLUGINS](arkts-basicservices-tts-con.md#ENABLED_TTS_PLUGINS) |

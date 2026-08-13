@@ -2,7 +2,9 @@
 
 Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
 
@@ -23,7 +25,9 @@ writeCharacteristicValueWithContext(
 
 Writes the characteristic of a BLE peripheral device with context.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -53,15 +57,15 @@ Writes the characteristic of a BLE peripheral device with context.
 | Error Code ID |
 | --- |
 | 2901004 |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901005 |
 | 2901006 |
 | 2901007 |
 | 2901001 |
 | 2900011 |
 | 2901003 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 2900099 |
 
 ## Examples

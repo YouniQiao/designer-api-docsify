@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SelectionMenuOptionsExt--><!--Device-unnamed-declare interface SelectionMenuOptionsExt-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -16,17 +18,15 @@
 menuType?: MenuType
 ```
 
-自定义选择菜单类型。
-
-默认值：`MenuType.SELECTION_MENU`。
-
-从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
+自定义选择菜单类型。 默认值：`MenuType.SELECTION_MENU`。 从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
 
 **类型：** MenuType
 
 **起始版本：** 13
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 <!--Device-SelectionMenuOptionsExt-menuType?: MenuType--><!--Device-SelectionMenuOptionsExt-menuType?: MenuType-End-->
 
@@ -46,6 +46,8 @@ onAppear?: Callback<void>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
+**废弃版本：** -1
+
 <!--Device-SelectionMenuOptionsExt-onAppear?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onAppear?: Callback<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -63,6 +65,8 @@ onDisappear?: Callback<void>
 **起始版本：** 13
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 <!--Device-SelectionMenuOptionsExt-onDisappear?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onDisappear?: Callback<void>-End-->
 
@@ -82,6 +86,8 @@ onMenuHide?: Callback<void>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
 
+**废弃版本：** -1
+
 <!--Device-SelectionMenuOptionsExt-onMenuHide?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onMenuHide?: Callback<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -99,6 +105,8 @@ onMenuShow?: Callback<void>
 **起始版本：** 21
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-SelectionMenuOptionsExt-onMenuShow?: Callback<void>--><!--Device-SelectionMenuOptionsExt-onMenuShow?: Callback<void>-End-->
 
@@ -118,6 +126,8 @@ preview?: CustomBuilder
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
+**废弃版本：** -1
+
 <!--Device-SelectionMenuOptionsExt-preview?: CustomBuilder--><!--Device-SelectionMenuOptionsExt-preview?: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -135,6 +145,8 @@ previewMenuOptions?: PreviewMenuOptions
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-SelectionMenuOptionsExt-previewMenuOptions?: PreviewMenuOptions--><!--Device-SelectionMenuOptionsExt-previewMenuOptions?: PreviewMenuOptions-End-->
 

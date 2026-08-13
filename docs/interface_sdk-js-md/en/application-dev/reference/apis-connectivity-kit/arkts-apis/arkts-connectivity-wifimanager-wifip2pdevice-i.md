@@ -2,9 +2,11 @@
 
 P2P device information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface WifiP2pDevice--><!--Device-wifiManager-interface WifiP2pDevice-End-->
 
@@ -26,9 +28,11 @@ Device mac address
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
 
@@ -44,9 +48,11 @@ Device mac address type
 
 **Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType--><!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType-End-->
 
@@ -62,9 +68,11 @@ Device name
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
 
@@ -80,9 +88,11 @@ Device status
 
 **Type:** P2pDeviceStatus
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
 
@@ -96,11 +106,13 @@ groupCapabilities: int
 
 Device group capabilities
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-groupCapabilities: int--><!--Device-WifiP2pDevice-groupCapabilities: int-End-->
 
@@ -116,9 +128,11 @@ Primary device type
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
 

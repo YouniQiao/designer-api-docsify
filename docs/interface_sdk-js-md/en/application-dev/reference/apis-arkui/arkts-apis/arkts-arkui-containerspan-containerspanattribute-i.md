@@ -6,6 +6,8 @@ Define the ContainerSpan attribute functions.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface ContainerSpanAttribute--><!--Device-unnamed-export declare interface ContainerSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,75 +15,63 @@ Define the ContainerSpan attribute functions.
 ## applyAttributesFinish
 
 ```TypeScript
-default applyAttributesFinish(): void
+applyAttributesFinish(): void
 ```
 
-Notify the component is finished setting up its attributes.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContainerSpanAttribute-default applyAttributesFinish(): void--><!--Device-ContainerSpanAttribute-default applyAttributesFinish(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ContainerSpanAttribute-applyAttributesFinish(): void--><!--Device-ContainerSpanAttribute-applyAttributesFinish(): void-End-->
 
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this
+attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this
 ```
 
-Sets the attribute modifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContainerSpanAttribute-default attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this--><!--Device-ContainerSpanAttribute-default attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ContainerSpanAttribute-attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this--><!--Device-ContainerSpanAttribute-attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; \| undefined | Yes | . |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | the attribute of the ContainerSpanAttribute. |
+| this |  |
 
 ## debugLine
 
 ```TypeScript
-default debugLine(sourceLine: string, moduleName?: string): this
+debugLine(sourceLine: string, moduleName?: string): this
 ```
 
-Set the component's source code redirection information.
+**Since:** -1
 
-**Since:** 26.0.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContainerSpanAttribute-default debugLine(sourceLine: string, moduleName?: string): this--><!--Device-ContainerSpanAttribute-default debugLine(sourceLine: string, moduleName?: string): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ContainerSpanAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-ContainerSpanAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceLine | string | Yes | the source code line. |
-| moduleName | string | No | module to which the component belongs. |
+| sourceLine | string | Yes |  |
+| moduleName | string | No |  |
 
 **Return value:**
 
@@ -92,54 +82,66 @@ Set the component's source code redirection information.
 ## setContainerSpanOptions
 
 ```TypeScript
-default setContainerSpanOptions(): this
+setContainerSpanOptions(): this
 ```
 
-Set ContainerSpan options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContainerSpanAttribute-default setContainerSpanOptions(): this--><!--Device-ContainerSpanAttribute-default setContainerSpanOptions(): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| this | Returns the instance of the ContainerSpanAttribute. |
-
-## textBackgroundStyle
-
-```TypeScript
-default textBackgroundStyle(style: TextBackgroundStyle | undefined): this
-```
-
-Span background style.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContainerSpanAttribute-default textBackgroundStyle(style: TextBackgroundStyle | undefined): this--><!--Device-ContainerSpanAttribute-default textBackgroundStyle(style: TextBackgroundStyle | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| style | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) \| undefined | Yes | The background style of span. |
+<!--Device-ContainerSpanAttribute-setContainerSpanOptions(): this--><!--Device-ContainerSpanAttribute-setContainerSpanOptions(): this-End-->
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | this |  |
+
+## textBackgroundStyle
+
+```TypeScript
+textBackgroundStyle(style: TextBackgroundStyle | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-ContainerSpanAttribute-textBackgroundStyle(style: TextBackgroundStyle | undefined): this--><!--Device-ContainerSpanAttribute-textBackgroundStyle(style: TextBackgroundStyle | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Notify the component is finished setting up its attributes.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ContainerSpanAttribute-default--><!--Device-ContainerSpanAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

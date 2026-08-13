@@ -6,13 +6,11 @@
 function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 ```
 
-DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。
-
-调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closeDLPFile)释放资源。
-
-DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。
+DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。 调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closeDLPFile)释放资源。 DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -39,20 +37,20 @@ DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先�
 
 | 错误码ID |
 | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) |
-| [19100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100005-凭据认证服务器错误) |
-| [19100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [19100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100009-操作dlp文件失败) |
-| [19100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100008-非dlp文件) |
-| [19100019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100019-dlp文件已过期) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100018-应用未授权) |
-| [19100020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100020-网络未连接) |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
+| [19100008](../errorcode-dlp.md#19100008-非dlp文件) |
+| [19100019](../errorcode-dlp.md#19100019-dlp文件已过期) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100018](../errorcode-dlp.md#19100018-应用未授权) |
+| [19100020](../errorcode-dlp.md#19100020-网络未连接) |
 
 ## 示例
 
@@ -92,9 +90,11 @@ ExampleFunction();
 function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void
 ```
 
-DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资源泄露。
+DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资 源泄露。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -116,20 +116,20 @@ DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。
 
 | 错误码ID |
 | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) |
-| [19100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100005-凭据认证服务器错误) |
-| [19100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [19100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100009-操作dlp文件失败) |
-| [19100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100008-非dlp文件) |
-| [19100019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100019-dlp文件已过期) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100018-应用未授权) |
-| [19100020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100020-网络未连接) |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
+| [19100008](../errorcode-dlp.md#19100008-非dlp文件) |
+| [19100019](../errorcode-dlp.md#19100019-dlp文件已过期) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100018](../errorcode-dlp.md#19100018-应用未授权) |
+| [19100020](../errorcode-dlp.md#19100020-网络未连接) |
 
 ## 示例
 

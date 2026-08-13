@@ -4,6 +4,8 @@ The parameter of setting orientation
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-screen-interface OrientationOptions--><!--Device-screen-interface OrientationOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -22,13 +24,15 @@ import { screen } from '@kit.ArkUI';
 ignoreRotationLock?: boolean
 ```
 
-Whether to ignore rotation lock.The value true means allowing the screen to rotate even if some system windows lock screen rotation, while false means preventing the screen from rotating when any system windows lock it.
+Whether to ignore rotation lock. The value true means allowing the screen to rotate even if some system windows lock screen rotation, while false means preventing the screen from rotating when any system windows lock it.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +48,15 @@ Whether to ignore rotation lock.The value true means allowing the screen to rota
 needAnimation?: boolean
 ```
 
-Whether to need animation.The value true means rotating the screen with animation, while false means rotating the screen without animation.
+Whether to need animation. The value true means rotating the screen with animation, while false means rotating the screen without animation.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

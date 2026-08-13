@@ -14,7 +14,9 @@ function isSimActive(slotId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether the SIM card in a specified slot is activated.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -47,7 +49,9 @@ function isSimActive(slotId: number): Promise<boolean>
 
 Checks whether the SIM card in a specified slot is activated.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function isSimActive(slotId: int): Promise<boolean>--><!--Device-sim-function isSimActive(slotId: int): Promise<boolean>-End-->
 

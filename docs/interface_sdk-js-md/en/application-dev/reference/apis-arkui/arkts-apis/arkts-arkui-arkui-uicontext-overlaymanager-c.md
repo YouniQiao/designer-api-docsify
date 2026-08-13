@@ -1,12 +1,14 @@
 # OverlayManager
 
-class OverlayManager
+Provides the capability to draw overlays. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getOverlayManager) in > **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance. > > - The nodes on **OverlayManager** are above the page level, but below such components as created through > **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**. > > - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the > page, and the keyboard avoidance method is also the same as that of the page. > > - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the > application to prevent changes in property values when switching pages, which could lead to service errors.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class OverlayManager--><!--Device-unnamed-export declare class OverlayManager-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class OverlayManager--><!--Device-unnamed-export class OverlayManager-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,18 +21,22 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 ## addComponentContent
 
 ```TypeScript
-addComponentContent<T>(content: ComponentContent<T>, index?: int): void
+addComponentContent(content: ComponentContent, index?: number): void
 ```
 
-Add the ComponentContent to the OverlayManager.
+Adds a specified **ComponentContent** node to the **OverlayManager**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OverlayManager-addComponentContent<T>(content: ComponentContent<T>, index?: int): void--><!--Device-OverlayManager-addComponentContent<T>(content: ComponentContent<T>, index?: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OverlayManager-addComponentContent(content: ComponentContent, index?: number): void--><!--Device-OverlayManager-addComponentContent(content: ComponentContent, index?: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,24 +44,28 @@ Add the ComponentContent to the OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
-| index | int | No |  |
+| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**.&lt;br&gt; **NOTE：**&lt;br&gt; By default, the new node is centered on the page and stacked according to its stacking level. |
+| index | number | No |  |
 
 ## addComponentContentWithOrder
 
 ```TypeScript
-addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: LevelOrder): void
+addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void
 ```
 
-Add the ComponentContent to the OverlayManager with order.
+Creates an overlay node with the specified display order. This API allows you to define the stacking order of the nodes when they are created.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OverlayManager-addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: LevelOrder): void--><!--Device-OverlayManager-addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: LevelOrder): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-OverlayManager-addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void--><!--Device-OverlayManager-addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,7 +73,7 @@ Add the ComponentContent to the OverlayManager with order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
+| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**. &lt;br&gt;**NOTE：**&lt;br&gt; By default, the new node is centered on the page and stacked according to its stacking level. |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |  |
 
 ## hideAllComponentContents
@@ -72,13 +82,17 @@ Add the ComponentContent to the OverlayManager with order.
 hideAllComponentContents(): void
 ```
 
-Hide all ComponentContents on the OverlayManager.
+Hides all **ComponentContent** nodes on the **OverlayManager**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OverlayManager-hideAllComponentContents(): void--><!--Device-OverlayManager-hideAllComponentContents(): void-End-->
 
@@ -87,18 +101,22 @@ Hide all ComponentContents on the OverlayManager.
 ## hideComponentContent
 
 ```TypeScript
-hideComponentContent<T>(content: ComponentContent<T>): void
+hideComponentContent(content: ComponentContent): void
 ```
 
-Hide the ComponentContent.
+Hides a specified **ComponentContent** node on the **OverlayManager**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OverlayManager-hideComponentContent<T>(content: ComponentContent<T>): void--><!--Device-OverlayManager-hideComponentContent<T>(content: ComponentContent<T>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OverlayManager-hideComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-hideComponentContent(content: ComponentContent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,23 +124,27 @@ Hide the ComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | The content will be hidden. |
+| content | ComponentContent | Yes | Content to hide on the **OverlayManager**. |
 
 ## openOrderOverlay
 
 ```TypeScript
-openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOptions): Promise<void>
+openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Promise<void>
 ```
 
 Opens an overlay with the specified ComponentContent and options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OverlayManager-openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOptions): Promise<void>--><!--Device-OverlayManager-openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOptions): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OverlayManager-openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Promise<void>--><!--Device-OverlayManager-openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,7 +152,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;Object&gt; | Yes | The content will be added to the OverlayManager. |
+| content | ComponentContent | Yes | Content to add to the new node on the OverlayManager. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;By default, the new node is centered on the page and stacked according to its stacking level. &lt;/p&gt; |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
@@ -143,23 +165,27 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103307](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) | The overlay cannot be opened due to the system pop-up window. |
+| [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) | The overlay cannot be opened due to the system pop-up window. |
 
 ## removeComponentContent
 
 ```TypeScript
-removeComponentContent<T>(content: ComponentContent<T>): void
+removeComponentContent(content: ComponentContent): void
 ```
 
-Remove the ComponentContent from the OverlayManager.
+Removes a specified node from the **OverlayManager**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OverlayManager-removeComponentContent<T>(content: ComponentContent<T>): void--><!--Device-OverlayManager-removeComponentContent<T>(content: ComponentContent<T>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OverlayManager-removeComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-removeComponentContent(content: ComponentContent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -167,7 +193,7 @@ Remove the ComponentContent from the OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | The content will be removed from the OverlayManager. |
+| content | ComponentContent | Yes | Content to remove from the **OverlayManager**. |
 
 ## showAllComponentContents
 
@@ -175,13 +201,17 @@ Remove the ComponentContent from the OverlayManager.
 showAllComponentContents(): void
 ```
 
-Show all ComponentContents on the OverlayManager.
+Shows all **ComponentContent** nodes on the **OverlayManager**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OverlayManager-showAllComponentContents(): void--><!--Device-OverlayManager-showAllComponentContents(): void-End-->
 
@@ -190,18 +220,22 @@ Show all ComponentContents on the OverlayManager.
 ## showComponentContent
 
 ```TypeScript
-showComponentContent<T>(content: ComponentContent<T>): void
+showComponentContent(content: ComponentContent): void
 ```
 
-Show the ComponentContent.
+Shows a specified **ComponentContent** node on the **OverlayManager**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OverlayManager-showComponentContent<T>(content: ComponentContent<T>): void--><!--Device-OverlayManager-showComponentContent<T>(content: ComponentContent<T>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OverlayManager-showComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-showComponentContent(content: ComponentContent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,5 +243,5 @@ Show the ComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | The content will be shown. |
+| content | ComponentContent | Yes | Content to show on the **OverlayManager**. |
 

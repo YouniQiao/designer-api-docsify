@@ -1,12 +1,6 @@
 # PermissionDef（系统接口）
 
-配置文件中定义的权限详细信息。
-
-> **说明：**
-> 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef)替代。
-> 
-> 本模块为系统接口。
+配置文件中定义的权限详细信息。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef（系统接口）)替代。 > > 本模块为系统接口。
 
 **起始版本：** 8
 
@@ -14,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef)
+**替代接口：** [PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef（系统接口）)
 
 <!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
@@ -40,7 +34,7 @@ descriptionId: number
 
 **废弃版本：** 9
 
-**替代接口：** [descriptionId](ohos.bundle.bundleManager/bundleManager.PermissionDef#descriptionId)
+**替代接口：** descriptionId
 
 <!--Device-PermissionDef-descriptionId: number--><!--Device-PermissionDef-descriptionId: number-End-->
 
@@ -66,7 +60,7 @@ grantMode: number
 
 **废弃版本：** 9
 
-**替代接口：** [grantMode](ohos.bundle.bundleManager/bundleManager.PermissionDef#grantMode)
+**替代接口：** grantMode
 
 <!--Device-PermissionDef-grantMode: number--><!--Device-PermissionDef-grantMode: number-End-->
 
@@ -92,7 +86,7 @@ labelId: number
 
 **废弃版本：** 9
 
-**替代接口：** [labelId](ohos.bundle.bundleManager/bundleManager.PermissionDef#labelId)
+**替代接口：** labelId
 
 <!--Device-PermissionDef-labelId: number--><!--Device-PermissionDef-labelId: number-End-->
 
@@ -118,7 +112,7 @@ permissionName: string
 
 **废弃版本：** 9
 
-**替代接口：** [permissionName](ohos.bundle.bundleManager/bundleManager.PermissionDef#permissionName)
+**替代接口：** permissionName
 
 <!--Device-PermissionDef-permissionName: string--><!--Device-PermissionDef-permissionName: string-End-->
 

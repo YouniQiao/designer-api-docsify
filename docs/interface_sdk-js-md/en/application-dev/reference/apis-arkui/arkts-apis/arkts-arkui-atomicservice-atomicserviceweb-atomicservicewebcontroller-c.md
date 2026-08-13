@@ -1,13 +1,12 @@
 # AtomicServiceWebController
 
-Implements an **AtomicServiceWebController** object for controlling the behavior of the **AtomicServiceWeb**component. An **AtomicServiceWebController** can control only one **AtomicServiceWeb** component, and the APIs on the  
-**AtomicServiceWebController** can be called only after it has been bound to the target **AtomicServiceWeb**component.
+Implements an **AtomicServiceWebController** object for controlling the behavior of the **AtomicServiceWeb** component. An **AtomicServiceWebController** can control only one **AtomicServiceWeb** component, and the APIs on the **AtomicServiceWebController** can be called only after it has been bound to the target **AtomicServiceWeb** component.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Decorator:** @Observed
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class AtomicServiceWebController--><!--Device-unnamed-export declare class AtomicServiceWebController-End-->
 
@@ -31,6 +30,8 @@ Checks whether going to the previous page can be performed on this page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWebController-accessBackward(): boolean--><!--Device-AtomicServiceWebController-accessBackward(): boolean-End-->
@@ -47,7 +48,7 @@ Checks whether going to the previous page can be performed on this page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessForward
 
@@ -60,6 +61,8 @@ Checks whether going to the next page can be performed on this page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -77,7 +80,7 @@ Checks whether going to the next page can be performed on this page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessStep
 
@@ -90,6 +93,8 @@ Checks whether this page can navigate forward or backward by the specified numbe
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -113,8 +118,8 @@ Checks whether this page can navigate forward or backward by the specified numbe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## backward
 
@@ -122,12 +127,13 @@ Checks whether this page can navigate forward or backward by the specified numbe
 backward(): void
 ```
 
-Moves to the previous page based on the history stack. This API is generally used together with  
-[accessBackward](#accessBackward).
+Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](#accessBackward).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -139,7 +145,7 @@ Moves to the previous page based on the history stack. This API is generally use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## forward
 
@@ -147,12 +153,13 @@ Moves to the previous page based on the history stack. This API is generally use
 forward(): void
 ```
 
-Moves to the next page based on the history stack. This API is generally used together with  
-[accessForward](#accessForward).
+Moves to the next page based on the history stack. This API is generally used together with [accessForward](#accessForward).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -164,7 +171,7 @@ Moves to the next page based on the history stack. This API is generally used to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getCustomUserAgent
 
@@ -177,6 +184,8 @@ Obtains a custom user agent.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,7 +203,7 @@ Obtains a custom user agent.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getUserAgent
 
@@ -207,6 +216,8 @@ Obtains the default user agent of this web page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -224,7 +235,7 @@ Obtains the default user agent of this web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## loadUrl
 
@@ -237,6 +248,8 @@ Loads a specified URL.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -255,10 +268,10 @@ Loads a specified URL.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | Invalid url. |
-| [17100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | Invalid url. |
+| [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
 
 ## refresh
 
@@ -272,6 +285,8 @@ Refreshes the web page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWebController-refresh(): void--><!--Device-AtomicServiceWebController-refresh(): void-End-->
@@ -282,7 +297,7 @@ Refreshes the web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## setCustomUserAgent
 
@@ -290,19 +305,13 @@ Refreshes the web page.
 setCustomUserAgent(userAgent: string): void
 ```
 
-Sets a custom user agent, which will override the default user agent.
-
-Set the user agent in the **onControllerAttached** callback to ensure that it takes effect. For details about the setting, see the example. Avoid setting the user agent in **onLoadIntercept**. Otherwise, the setting may fail occasionally.
-
-> **NOTE：**
-> 
-> If a URL is set for the **Web** component **src** and **UserAgent** is not set in the **onControllerAttached**
-> callback, calling **setCustomUserAgent** may cause mismatches between the loaded page and the intended user
-> agent.
+Sets a custom user agent, which will override the default user agent. Set the user agent in the **onControllerAttached** callback to ensure that it takes effect. For details about the setting, see the example. Avoid setting the user agent in **onLoadIntercept**. Otherwise, the setting may fail occasionally. > **NOTE：**> > If a URL is set for the **Web** component **src** and **UserAgent** is not set in the **onControllerAttached** > callback, calling **setCustomUserAgent** may cause mismatches between the loaded page and the intended user > agent.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -320,6 +329,6 @@ Set the user agent in the **onControllerAttached** callback to ensure that it ta
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 

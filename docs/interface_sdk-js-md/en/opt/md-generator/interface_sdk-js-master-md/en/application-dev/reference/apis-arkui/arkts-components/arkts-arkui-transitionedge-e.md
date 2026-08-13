@@ -4,6 +4,8 @@ Enumerates the transition edge types.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum TransitionEdge--><!--Device-unnamed-declare enum TransitionEdge-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TOP = 0
 Top edge of the window.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Bottom edge of the window.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -58,6 +64,8 @@ Start edge of the window, which is the left edge for left-to-right scripts and t
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -77,6 +85,8 @@ END = 3
 End edge of the window, which is the right edge for left-to-right scripts and the left edge for right-to-left scripts.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

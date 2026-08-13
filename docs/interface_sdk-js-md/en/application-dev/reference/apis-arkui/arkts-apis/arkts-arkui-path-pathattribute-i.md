@@ -2,33 +2,31 @@
 
 Provides methods for attribute path component.
 
-**Inheritance/Implementation:** PathAttribute extends [CommonShapeMethod](CommonShapeMethod)
+**Inheritance/Implementation:** PathAttribute extends CommonShapeMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface PathAttribute extends CommonShapeMethod--><!--Device-unnamed-export declare interface PathAttribute extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface PathAttribute--><!--Device-unnamed-export declare interface PathAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PathAttribute-default attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PathAttribute-default attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PathAttribute-attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PathAttribute-attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -45,20 +43,16 @@ Call attributeModifier.
 ## commands
 
 ```TypeScript
-default commands(value: ResourceStr | undefined): this
+commands(value: ResourceStr | undefined): this
 ```
 
-Set a series of path commands that define the path to be drawn
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PathAttribute-default commands(value: ResourceStr | undefined): this--><!--Device-PathAttribute-default commands(value: ResourceStr | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PathAttribute-commands(value: ResourceStr | undefined): this--><!--Device-PathAttribute-commands(value: ResourceStr | undefined): this-End-->
 
 **Parameters:**
 
@@ -75,30 +69,46 @@ Set a series of path commands that define the path to be drawn
 ## setPathOptions
 
 ```TypeScript
-default setPathOptions(options?: PathOptions): this
+setPathOptions(options?: PathOptions): this
 ```
 
-Set Path options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PathAttribute-default setPathOptions(options?: PathOptions): this--><!--Device-PathAttribute-default setPathOptions(options?: PathOptions): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-PathAttribute-setPathOptions(options?: PathOptions): this--><!--Device-PathAttribute-setPathOptions(options?: PathOptions): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathOptions](arkts-arkui-path-pathoptions-i.md) | No | Path constructor options. |
+| options | [PathOptions](arkts-arkui-path-pathoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the PathAttribute. |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PathAttribute-default--><!--Device-PathAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

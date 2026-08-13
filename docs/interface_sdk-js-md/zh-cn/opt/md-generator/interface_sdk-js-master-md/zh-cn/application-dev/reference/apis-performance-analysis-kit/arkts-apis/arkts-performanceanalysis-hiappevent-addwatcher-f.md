@@ -8,7 +8,9 @@ function addWatcher(watcher: Watcher): AppEventPackageHolder
 
 添加事件观察者。可通过事件观察者的回调函数监听事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -32,12 +34,12 @@ function addWatcher(watcher: Watcher): AppEventPackageHolder
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11102001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102001-非法的观察者名称) |
-| [11102003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102003-非法的条数值) |
-| [11102002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102002-非法的过滤事件领域) |
-| [11102005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102005-非法的超时值) |
-| [11102004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102004-非法的大小值) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11102001](../errorcode-hiappevent.md#11102001-非法的观察者名称) |
+| [11102003](../errorcode-hiappevent.md#11102003-非法的条数值) |
+| [11102002](../errorcode-hiappevent.md#11102002-非法的过滤事件领域) |
+| [11102005](../errorcode-hiappevent.md#11102005-非法的超时值) |
+| [11102004](../errorcode-hiappevent.md#11102004-非法的大小值) |
 
 ## 示例
 

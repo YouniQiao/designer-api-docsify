@@ -1,15 +1,12 @@
 # Storage
 
-Provides APIs for obtaining and modifying storage data.
-
-Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) or   
-[data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) to obtain the **Storage** instance.
+Provides APIs for obtaining and modifying storage data. Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) or [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) to obtain the **Storage** instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [preferences](ohos.preferences.preferences)
+**Substitutes:** preferences
 
 <!--Device-storage-interface Storage--><!--Device-storage-interface Storage-End-->
 
@@ -27,7 +24,7 @@ Clears this **Storage** object. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [clear](ohos.preferences.preferences.clear)
+**Substitutes:** clear
 
 <!--Device-Storage-clear(callback: AsyncCallback<void>): void--><!--Device-Storage-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -61,7 +58,7 @@ Clears this **Storage** object. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [clear](ohos.preferences.preferences.clear)
+**Substitutes:** clear
 
 <!--Device-Storage-clear(): Promise<void>--><!--Device-Storage-clear(): Promise<void>-End-->
 
@@ -94,7 +91,7 @@ Clears this **Storage** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [clear](ohos.preferences.preferences.clear)
+**Substitutes:** clear
 
 <!--Device-Storage-clearSync(): void--><!--Device-Storage-clearSync(): void-End-->
 
@@ -116,7 +113,7 @@ Deletes data with the specified key from this storage object. This API uses an a
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](ohos.preferences.preferences.delete)
+**Substitutes:** delete
 
 <!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void-End-->
 
@@ -151,7 +148,7 @@ Deletes data with the specified key from this storage object. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](ohos.preferences.preferences.delete)
+**Substitutes:** delete
 
 <!--Device-Storage-delete(key: string): Promise<void>--><!--Device-Storage-delete(key: string): Promise<void>-End-->
 
@@ -190,7 +187,7 @@ Deletes data with the specified key from this storage object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](ohos.preferences.preferences.delete)
+**Substitutes:** delete
 
 <!--Device-Storage-deleteSync(key: string): void--><!--Device-Storage-deleteSync(key: string): void-End-->
 
@@ -218,7 +215,7 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Deprecated since:** 9
 
-**Substitutes:** [flush](ohos.preferences.preferences.flush)
+**Substitutes:** flush
 
 <!--Device-Storage-flush(callback: AsyncCallback<void>): void--><!--Device-Storage-flush(callback: AsyncCallback<void>): void-End-->
 
@@ -252,7 +249,7 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Deprecated since:** 9
 
-**Substitutes:** [flush](ohos.preferences.preferences.flush)
+**Substitutes:** flush
 
 <!--Device-Storage-flush(): Promise<void>--><!--Device-Storage-flush(): Promise<void>-End-->
 
@@ -285,7 +282,7 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Deprecated since:** 9
 
-**Substitutes:** [flush](ohos.preferences.preferences.flush)
+**Substitutes:** flush
 
 <!--Device-Storage-flushSync(): void--><!--Device-Storage-flushSync(): void-End-->
 
@@ -307,7 +304,7 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.preferences.preferences.get)
+**Substitutes:** get
 
 <!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void--><!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void-End-->
 
@@ -343,7 +340,7 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.preferences.preferences.get)
+**Substitutes:** get
 
 <!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>--><!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>-End-->
 
@@ -383,7 +380,7 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.preferences.preferences.get)
+**Substitutes:** get
 
 <!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType--><!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType-End-->
 
@@ -419,7 +416,7 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 **Deprecated since:** 9
 
-**Substitutes:** [has](ohos.preferences.preferences.has)
+**Substitutes:** has
 
 <!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean--><!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean-End-->
 
@@ -462,7 +459,7 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 **Deprecated since:** 9
 
-**Substitutes:** [has](ohos.preferences.preferences.has)
+**Substitutes:** has
 
 <!--Device-Storage-has(key: string): Promise<boolean>--><!--Device-Storage-has(key: string): Promise<boolean>-End-->
 
@@ -503,7 +500,7 @@ Checks whether the storage object contains data with a given key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [has](ohos.preferences.preferences.has)
+**Substitutes:** has
 
 <!--Device-Storage-hasSync(key: string): boolean--><!--Device-Storage-hasSync(key: string): boolean-End-->
 
@@ -528,7 +525,7 @@ if (isExist) {
 }
 ```
 
-## off('change')
+## off_change
 
 ```TypeScript
 off(type: 'change', callback: Callback<StorageObserver>): void
@@ -540,7 +537,7 @@ Unsubscribes from data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**Substitutes:** off
 
 <!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void-End-->
 
@@ -560,7 +557,7 @@ let observer = function (key) {
 storage.off('change', observer);
 ```
 
-## on('change')
+## on_change
 
 ```TypeScript
 on(type: 'change', callback: Callback<StorageObserver>): void
@@ -572,7 +569,7 @@ Subscribes to data changes. The **StorageObserver** needs to be implemented. Whe
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.preferences.preferences.on)
+**Substitutes:** on
 
 <!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void-End-->
 
@@ -606,7 +603,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Deprecated since:** 9
 
-**Substitutes:** [put](ohos.preferences.preferences.put)
+**Substitutes:** put
 
 <!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void--><!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void-End-->
 
@@ -642,7 +639,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Deprecated since:** 9
 
-**Substitutes:** [put](ohos.preferences.preferences.put)
+**Substitutes:** put
 
 <!--Device-Storage-put(key: string, value: ValueType): Promise<void>--><!--Device-Storage-put(key: string, value: ValueType): Promise<void>-End-->
 
@@ -682,7 +679,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Deprecated since:** 9
 
-**Substitutes:** [put](ohos.preferences.preferences.put)
+**Substitutes:** put
 
 <!--Device-Storage-putSync(key: string, value: ValueType): void--><!--Device-Storage-putSync(key: string, value: ValueType): void-End-->
 

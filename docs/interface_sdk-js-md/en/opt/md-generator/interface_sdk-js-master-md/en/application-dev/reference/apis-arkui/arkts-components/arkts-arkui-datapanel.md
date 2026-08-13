@@ -1,14 +1,8 @@
 # DataPanel
 
-The **DataPanel** component is used to display proportions in a chart.
+The **DataPanel** component is used to display proportions in a chart. > **NOTE** > > - This component supports WithTheme since API version 26.0.0
 
-> **NOTE**
->
-> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## DataPanel
 
@@ -19,6 +13,8 @@ DataPanel(options: DataPanelOptions)
 Creates a data panel component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,8 +32,8 @@ Creates a data panel component.
 
 ## Summary
 
-- [ColorStop](arkts-arkui-datapanel-colorstop-i.md)
-- [DataPanelConfiguration](arkts-arkui-datapanel-datapanelconfiguration-i.md)
-- [DataPanelOptions](arkts-arkui-datapanel-datapaneloptions-i.md)
-- [DataPanelShadowOptions](arkts-arkui-datapanel-datapanelshadowoptions-i.md)
-- [DataPanelType](arkts-arkui-datapanel-datapaneltype-e.md)
+- [ColorStop](arkts-arkui-colorstop-i.md)
+- [DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md)
+- [DataPanelOptions](arkts-arkui-datapaneloptions-i.md)
+- [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md)
+- [DataPanelType](arkts-arkui-datapaneltype-e.md)

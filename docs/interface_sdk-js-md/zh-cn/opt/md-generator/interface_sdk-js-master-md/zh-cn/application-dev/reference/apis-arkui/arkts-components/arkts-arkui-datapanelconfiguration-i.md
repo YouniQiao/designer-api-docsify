@@ -2,11 +2,13 @@
 
 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration)。
 
-**继承/实现关系：** DataPanelConfiguration extends [CommonConfiguration<DataPanelConfiguration>](CommonConfiguration<DataPanelConfiguration>)
+**继承/实现关系：** DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>--><!--Device-unnamed-declare interface DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface DataPanelConfiguration--><!--Device-unnamed-declare interface DataPanelConfiguration-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,17 +18,13 @@
 maxValue: number
 ```
 
-DataPanel显示的最大值。
-
-默认值：100。
-
-**说明：**
-
-如果小于或等于0，maxValue将被设为values数组中所有项的总和，并按比例显示。
+DataPanel显示的最大值。 默认值：100。 **说明：** 如果小于或等于0，maxValue将被设为values数组中所有项的总和，并按比例显示。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,17 +40,13 @@ DataPanel显示的最大值。
 values: number[]
 ```
 
-当前DataPanel的数据值。
-
-数组长度范围是[0, 9]。
-
-**说明：**
-
-如果数组长度大于9，则取前9项。
+当前DataPanel的数据值。 数组长度范围是[0, 9]。 **说明：** 如果数组长度大于9，则取前9项。
 
 **类型：** number[]
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

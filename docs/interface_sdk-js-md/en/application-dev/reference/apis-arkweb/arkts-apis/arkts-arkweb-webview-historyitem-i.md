@@ -2,9 +2,11 @@
 
 Provides information for history item in BackForwardList.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
 
@@ -26,9 +28,13 @@ Original request url of this history item.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HistoryItem-historyRawUrl: string--><!--Device-HistoryItem-historyRawUrl: string-End-->
 
@@ -44,9 +50,13 @@ Url of this history item.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HistoryItem-historyUrl: string--><!--Device-HistoryItem-historyUrl: string-End-->
 
@@ -62,9 +72,13 @@ Pixelmap of icon.
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HistoryItem-icon: image.PixelMap--><!--Device-HistoryItem-icon: image.PixelMap-End-->
 
@@ -80,9 +94,13 @@ Title of this history item.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HistoryItem-title: string--><!--Device-HistoryItem-title: string-End-->
 

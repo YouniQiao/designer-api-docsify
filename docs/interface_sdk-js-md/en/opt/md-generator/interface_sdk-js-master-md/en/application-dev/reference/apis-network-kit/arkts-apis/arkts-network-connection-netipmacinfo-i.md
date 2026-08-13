@@ -2,7 +2,9 @@
 
 The correspondence information between IP and MAC address.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface NetIpMacInfo--><!--Device-connection-export interface NetIpMacInfo-End-->
 
@@ -24,7 +26,9 @@ Interface name of the network.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-NetIpMacInfo-iface: string--><!--Device-NetIpMacInfo-iface: string-End-->
 
@@ -40,7 +44,9 @@ Link address of the network.
 
 **Type:** NetAddress
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-NetIpMacInfo-ipAddress: NetAddress--><!--Device-NetIpMacInfo-ipAddress: NetAddress-End-->
 
@@ -56,7 +62,9 @@ Mac address of the network.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-NetIpMacInfo-macAddress: string--><!--Device-NetIpMacInfo-macAddress: string-End-->
 

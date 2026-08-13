@@ -6,6 +6,8 @@ Certificate pinning option.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-http-interface CertificatePinning--><!--Device-http-interface CertificatePinning-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,6 +32,8 @@ Certificate public key hash algorithm.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'--><!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -47,6 +51,8 @@ Public key hash.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-CertificatePinning-publicKeyHash: string--><!--Device-CertificatePinning-publicKeyHash: string-End-->
 

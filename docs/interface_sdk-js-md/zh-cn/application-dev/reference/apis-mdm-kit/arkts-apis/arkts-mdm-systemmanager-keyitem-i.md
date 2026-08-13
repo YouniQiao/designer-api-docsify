@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-systemManager-interface KeyItem--><!--Device-systemManager-interface KeyItem-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -23,6 +25,8 @@ downTime: number
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ keyCode: KeyCode
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KeyItem-keyCode: KeyCode--><!--Device-KeyItem-keyCode: KeyCode-End-->
@@ -63,6 +69,8 @@ pressed: boolean
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

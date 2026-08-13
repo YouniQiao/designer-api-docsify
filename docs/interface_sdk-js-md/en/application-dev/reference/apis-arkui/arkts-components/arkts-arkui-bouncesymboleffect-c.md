@@ -8,7 +8,9 @@ Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare class BounceSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class BounceSymbolEffect extends SymbolEffect-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class BounceSymbolEffect--><!--Device-unnamed-declare class BounceSymbolEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,15 +51,15 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 direction?: EffectDirection
 ```
 
-Effect direction.
-
-Default value: **EffectDirection.DOWN**
+Effect direction. Default value: **EffectDirection.DOWN**
 
 **Type:** [EffectDirection](arkts-arkui-effectdirection-e.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,15 +77,15 @@ Default value: **EffectDirection.DOWN**
 scope?: EffectScope
 ```
 
-Effect scope.
-
-Default value: **EffectScope.LAYER**
+Effect scope. Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

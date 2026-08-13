@@ -4,6 +4,8 @@ Defines the options for saving documents.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-picker-class DocumentSaveOptions--><!--Device-picker-class DocumentSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -20,13 +22,15 @@ import { picker } from '@kit.CoreFileKit';
 autoCreateEmptyFile?: boolean
 ```
 
-A Boolean value indicates whether to pre-create empty files when saving files. The default value is **true**, in which case the Picker pre-creates empty files and returns an array of the file URIs. If it is set to **false**,no empty files are pre-created, and only an array of the file URIs is returned.
+Whether to create empty files, The default value is true, indicating that empty files will be created.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +44,15 @@ A Boolean value indicates whether to pre-create empty files when saving files. T
 defaultFilePathUri?: string
 ```
 
-URI of the file or directory that can be selected. It is empty by default (the recently opened page is displayed).
+Path of the document or directory to save.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-defaultFilePathUri?: string--><!--Device-DocumentSaveOptions-defaultFilePathUri?: string-End-->
 
@@ -58,15 +64,15 @@ URI of the file or directory that can be selected. It is empty by default (the r
 fileSuffixChoices?: Array<string>
 ```
 
-Document suffix of the document to save.
-
-The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix.If there is no "|", the option does not have the description. By default, all documents are saved.
+Document suffix of the document to save. The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix. If there is no "|", the option does not have the description. By default, all documents are saved.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>--><!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>-End-->
 
@@ -78,13 +84,15 @@ The value is a string array. Each element specifies an option, which includes at
 newFileNames?: Array<string>
 ```
 
-Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
+Name of the document to save. If this parameter is not specified, the user needs to enter the the document name.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-newFileNames?: Array<string>--><!--Device-DocumentSaveOptions-newFileNames?: Array<string>-End-->
 
@@ -96,16 +104,15 @@ Name of the document to save. If this parameter is not specified, the user needs
 pickerMode?: DocumentPickerMode
 ```
 
-Mode for starting Picker.
-
-Default value: **DEFAULT**. If **pickerMode** is **DOWNLOAD**, the settings of **newFileNames**,  
-**defaultFilePathUri**, and **fileSuffixChoices** do not take effect.
+Mode for starting Picker. Default value: DEFAULT. If pickerMode is DOWNLOAD, the settings of newFileNames, defaultFilePathUri, and fileSuffixChoices do not take effect.
 
 **Type:** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode--><!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode-End-->
 

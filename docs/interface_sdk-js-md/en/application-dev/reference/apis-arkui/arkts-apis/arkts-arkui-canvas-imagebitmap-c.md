@@ -6,6 +6,8 @@ Bitmap image object that can be drawn onto the current Canvas
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ImageBitmap--><!--Device-unnamed-export declare class ImageBitmap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Releases all graphics resources associated with an ImageBitmap.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Create an ImageBitmap object based on the transferred image path or PixelMap obj
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,6 +71,8 @@ Create an ImageBitmap object based on the transferred image path or PixelMap obj
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageBitmap-constructor(src: Resource | PixelMap | string, unit?: LengthMetricsUnit)--><!--Device-ImageBitmap-constructor(src: Resource | PixelMap | string, unit?: LengthMetricsUnit)-End-->
@@ -77,44 +85,4 @@ Create an ImageBitmap object based on the transferred image path or PixelMap obj
 | --- | --- | --- | --- |
 | src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| string | Yes | image path or PixelMap object or Resource object |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
-
-## height
-
-```TypeScript
-get height(): double
-```
-
-Indicates the height of the CSS pixel unit of ImageData.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageBitmap-get height(): double--><!--Device-ImageBitmap-get height(): double-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## width
-
-```TypeScript
-get width(): double
-```
-
-Indicates the width of the CSS pixel unit of ImageData.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageBitmap-get width(): double--><!--Device-ImageBitmap-get width(): double-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -2,9 +2,11 @@
 
 编辑框的配置信息。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export interface TextConfig--><!--Device-inputMethod-export interface TextConfig-End-->
 
@@ -22,9 +24,11 @@ capitalizeMode?: CapitalizeMode
 
 **默认值：** CapitalizeMode.NONE
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TextConfig-capitalizeMode?: CapitalizeMode--><!--Device-TextConfig-capitalizeMode?: CapitalizeMode-End-->
 
@@ -40,9 +44,11 @@ cursorInfo?: CursorInfo
 
 **类型：** [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TextConfig-cursorInfo?: CursorInfo--><!--Device-TextConfig-cursorInfo?: CursorInfo-End-->
 
@@ -58,9 +64,11 @@ inputAttribute: InputAttribute
 
 **类型：** [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TextConfig-inputAttribute: InputAttribute--><!--Device-TextConfig-inputAttribute: InputAttribute-End-->
 
@@ -76,9 +84,11 @@ newEditBox?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TextConfig-newEditBox?: boolean--><!--Device-TextConfig-newEditBox?: boolean-End-->
 
@@ -94,9 +104,11 @@ selection?: Range
 
 **类型：** Range
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TextConfig-selection?: Range--><!--Device-TextConfig-selection?: Range-End-->
 
@@ -108,15 +120,15 @@ selection?: Range
 windowId?: int
 ```
 
-编辑框所在的窗口Id，该参数应为整数。
+编辑框所在的窗口Id，该参数应为整数。 推荐使用[getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getWindowProperties)方法获取窗口id属性。
 
-推荐使用[getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getWindowProperties)方法获取窗口id属性。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-TextConfig-windowId?: int--><!--Device-TextConfig-windowId?: int-End-->
 

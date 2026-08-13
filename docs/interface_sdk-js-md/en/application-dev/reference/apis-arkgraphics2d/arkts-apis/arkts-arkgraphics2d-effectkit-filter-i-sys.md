@@ -1,10 +1,12 @@
 # Filter
 
-An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image.
+An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects, you need to call getEffectPixelMap to obtain the processed image.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
 
@@ -18,13 +20,6 @@ import { effectKit } from '@kit.ArkGraphics2D';
 
 ## ellipticalGradientBlur
 
-ArkTS-Dyn:
-```TypeScript
-ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
-      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
-```
-
-ArkTS-Sta:
 ```TypeScript
 ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
       maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
@@ -34,7 +29,9 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +45,10 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Blur radius, in pixels. The blur effect is proportional to the configured value. A larger value indicates a more obvious effect. |
+| blurRadius | double | Yes | Blur radius, in pixels. The blur effect is proportional to the configured value. A larger value indicates a more obvious effect. |
 | center | [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | Yes | Set the center point of the ellipse. [0, 0] represents the top-left corner of the component, and floating-point numbers are allowed. Values exceeding the boundary will be automatically truncated during implementation. |
 | maskRadius | [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | Yes | Set the major axis and minor axis of the ellipse. A radius of 1 is equal to the height of the component. The value range is [0, 10], and floating-point numbers are allowed. Values exceeding the boundary will be automatically truncated during implementation. |
-| fractionStops | [FractionStop](../../apis-arkui/arkts-apis/arkts-arkui-fractionstop-t.md)[] | Yes | Gradient blur position and intensity array. The array length ranges from 0 to 12. It has no effect if the length is 0 or greater than 12. Both position and intensity values are between 0 and 1. Position 0 corresponds to the ellipse center, and position 1 corresponds to the ellipse boundary. Intensity 0 means no blur, while intensity 1 equals the blur effect of the input blur radius. |
+| fractionStops | [FractionStop](../../apis-na/arkts-apis/arkts-na-fractionstop-t.md)[] | Yes | Gradient blur position and intensity array. The array length ranges from 0 to 12. It has no effect if the length is 0 or greater than 12. Both position and intensity values are between 0 and 1. Position 0 corresponds to the ellipse center, and position 1 corresponds to the ellipse boundary. Intensity 0 means no blur, while intensity 1 equals the blur effect of the input blur radius. |
 
 **Return value:**
 
@@ -63,7 +60,7 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

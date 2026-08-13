@@ -10,6 +10,8 @@ const estimatedRemainingChargeTime: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-const estimatedRemainingChargeTime: number--><!--Device-batteryInfo-const estimatedRemainingChargeTime: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -26,6 +28,8 @@ const remainingEnergy: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-const remainingEnergy: number--><!--Device-batteryInfo-const remainingEnergy: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -41,6 +45,8 @@ const totalEnergy: number
 表示当前设备电池的总容量，单位毫安时。此接口为系统接口。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-batteryInfo-const totalEnergy: number--><!--Device-batteryInfo-const totalEnergy: number-End-->
 

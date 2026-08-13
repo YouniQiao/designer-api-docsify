@@ -2,33 +2,31 @@
 
 rect attribute declaration.
 
-**Inheritance/Implementation:** RectAttribute extends [CommonShapeMethod](CommonShapeMethod)
+**Inheritance/Implementation:** RectAttribute extends CommonShapeMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface RectAttribute extends CommonShapeMethod--><!--Device-unnamed-export declare interface RectAttribute extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface RectAttribute--><!--Device-unnamed-export declare interface RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RectAttribute-default attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RectAttribute-default attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-RectAttribute-attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RectAttribute-attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -45,20 +43,16 @@ Call attributeModifier.
 ## radius
 
 ```TypeScript
-default radius(value: Length | Array<RadiusItem> | undefined): this
+radius(value: Length | Array<RadiusItem> | undefined): this
 ```
 
-Called when the fillet size is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RectAttribute-default radius(value: Length | Array<RadiusItem> | undefined): this--><!--Device-RectAttribute-default radius(value: Length | Array<RadiusItem> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-RectAttribute-radius(value: Length | Array<RadiusItem> | undefined): this--><!--Device-RectAttribute-radius(value: Length | Array<RadiusItem> | undefined): this-End-->
 
 **Parameters:**
 
@@ -75,20 +69,16 @@ Called when the fillet size is set.
 ## radiusHeight
 
 ```TypeScript
-default radiusHeight(value: Length | undefined): this
+radiusHeight(value: Length | undefined): this
 ```
 
-Called when the fillet height is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RectAttribute-default radiusHeight(value: Length | undefined): this--><!--Device-RectAttribute-default radiusHeight(value: Length | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-RectAttribute-radiusHeight(value: Length | undefined): this--><!--Device-RectAttribute-radiusHeight(value: Length | undefined): this-End-->
 
 **Parameters:**
 
@@ -105,20 +95,16 @@ Called when the fillet height is set.
 ## radiusWidth
 
 ```TypeScript
-default radiusWidth(value: Length | undefined): this
+radiusWidth(value: Length | undefined): this
 ```
 
-Called when the fillet width is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RectAttribute-default radiusWidth(value: Length | undefined): this--><!--Device-RectAttribute-default radiusWidth(value: Length | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-RectAttribute-radiusWidth(value: Length | undefined): this--><!--Device-RectAttribute-radiusWidth(value: Length | undefined): this-End-->
 
 **Parameters:**
 
@@ -135,30 +121,46 @@ Called when the fillet width is set.
 ## setRectOptions
 
 ```TypeScript
-default setRectOptions(options?: RectOptions | RoundedRectOptions): this
+setRectOptions(options?: RectOptions | RoundedRectOptions): this
 ```
 
-Set Rect options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RectAttribute-default setRectOptions(options?: RectOptions | RoundedRectOptions): this--><!--Device-RectAttribute-default setRectOptions(options?: RectOptions | RoundedRectOptions): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-RectAttribute-setRectOptions(options?: RectOptions | RoundedRectOptions): this--><!--Device-RectAttribute-setRectOptions(options?: RectOptions | RoundedRectOptions): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | No | Rect constructor options. |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the RectAttribute. |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RectAttribute-default--><!--Device-RectAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

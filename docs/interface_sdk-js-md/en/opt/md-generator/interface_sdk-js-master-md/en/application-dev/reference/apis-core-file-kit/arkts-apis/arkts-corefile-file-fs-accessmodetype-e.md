@@ -4,6 +4,8 @@ Enumerates the access modes to verify. If this parameter is left blank, the syst
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AccessModeType--><!--Device-unnamed-declare enum AccessModeType-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ EXIST = 0
 Whether the file exists.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,6 +38,8 @@ Verify the write permission on the file.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AccessModeType-WRITE = 2--><!--Device-AccessModeType-WRITE = 2-End-->
@@ -50,6 +56,8 @@ Verify the read permission on the file.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AccessModeType-READ = 4--><!--Device-AccessModeType-READ = 4-End-->
@@ -65,6 +73,8 @@ READ_WRITE = 6
 Verify the read/write permission on the file.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -2,9 +2,11 @@
 
 WallpaperInfo definition including folding status, rotation status, and resource path.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wallpaper-interface WallpaperInfo--><!--Device-wallpaper-interface WallpaperInfo-End-->
 
@@ -28,9 +30,11 @@ Indicates the folding status for wallpaper.
 
 **Type:** [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md)
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperInfo-foldState: FoldState--><!--Device-WallpaperInfo-foldState: FoldState-End-->
 
@@ -48,9 +52,11 @@ Indicates the rotation status for wallpaper.
 
 **Type:** [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md)
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperInfo-rotateState: RotateState--><!--Device-WallpaperInfo-rotateState: RotateState-End-->
 
@@ -68,9 +74,11 @@ Indicates the resource path for wallpaper.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperInfo-source: string--><!--Device-WallpaperInfo-source: string-End-->
 

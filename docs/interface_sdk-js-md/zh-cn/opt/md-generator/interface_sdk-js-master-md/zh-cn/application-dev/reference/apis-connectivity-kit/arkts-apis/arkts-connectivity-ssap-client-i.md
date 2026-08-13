@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -18,6 +20,8 @@ close(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -30,9 +34,9 @@ close(): void
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## connect
 
@@ -43,6 +47,8 @@ connect(): Promise<void>
 连接服务端。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -62,9 +68,9 @@ connect(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## disconnect
 
@@ -75,6 +81,8 @@ disconnect(): Promise<void>
 断开或停止与服务端的连接。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -94,9 +102,9 @@ disconnect(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## getServices
 
@@ -107,6 +115,8 @@ getServices(): Promise<Service[]>
 开始发现服务端的所有服务。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -126,9 +136,9 @@ getServices(): Promise<Service[]>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## offConnectionStateChange
 
@@ -139,6 +149,8 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 取消订阅客户端连接状态更改事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,6 +174,8 @@ offMtuChange(callback?: Callback<number>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Client-offMtuChange(callback?: Callback<int>): void--><!--Device-Client-offMtuChange(callback?: Callback<int>): void-End-->
@@ -184,6 +198,8 @@ offPropertyChange(callback?: Callback<Property>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Client-offPropertyChange(callback?: Callback<Property>): void--><!--Device-Client-offPropertyChange(callback?: Callback<Property>): void-End-->
@@ -202,11 +218,11 @@ offPropertyChange(callback?: Callback<Property>): void
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-订阅客户端连接状态更改事件。
-
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
+订阅客户端连接状态更改事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -226,11 +242,11 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 onMtuChange(callback: Callback<number>): void
 ```
 
-订阅MTU变化事件。
-
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+订阅MTU变化事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -250,11 +266,11 @@ onMtuChange(callback: Callback<number>): void
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-订阅属性值变更事件。
-
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+订阅属性值变更事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -277,6 +293,8 @@ readProperty(property: Property): Promise<Property>
 读取服务端的属性。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -302,11 +320,11 @@ readProperty(property: Property): Promise<Property>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [36100044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100043-无效uuid) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
 
 ## requestMtuSize
 
@@ -314,9 +332,11 @@ readProperty(property: Property): Promise<Property>
 requestMtuSize(mtu: number): Promise<void>
 ```
 
-与服务端协商MTU大小。协商结果需要通过订阅MTU事件获取。
+与服务端协商MTU大小。 协商结果需要通过订阅MTU事件获取。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -342,9 +362,9 @@ requestMtuSize(mtu: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## setPropertyNotification
 
@@ -355,6 +375,8 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 启用或禁用属性值变更通知。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -381,11 +403,11 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [36100044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100043-无效uuid) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
 
 ## writeProperty
 
@@ -396,6 +418,8 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 写入服务端的属性。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -422,8 +446,8 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [36100044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100043-无效uuid) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |

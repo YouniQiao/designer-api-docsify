@@ -1,8 +1,10 @@
 # RationalNumber
 
-Provides APIs to compare rational numbers and obtain numerators and denominators. For example, the **toString()**API can be used to convert a rational number into a string.
+Provides APIs to compare rational numbers and obtain numerators and denominators. For example, the **toString()** API can be used to convert a rational number into a string.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-util-class RationalNumber--><!--Device-util-class RationalNumber-End-->
 
@@ -23,6 +25,8 @@ compare(another: RationalNumber): number
 Compares the current RationalNumber object to the given object.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,7 +58,7 @@ Compares the current RationalNumber object to the given object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [compare](ohos.util.compare)
+**Substitutes:** compare
 
 <!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
 
@@ -113,6 +117,8 @@ A constructor used to create a **RationalNumber** object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-constructor()--><!--Device-RationalNumber-constructor()-End-->
@@ -131,15 +137,11 @@ let rationalNumber = new util.RationalNumber();
 static createRationalFromString(rationalString: string): RationalNumber
 ```
 
-Creates a **RationalNumber** object based on the given string.
-
-> **NOTE：**
-> 
-> The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not
-> intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is
-> displayed.
+Creates a **RationalNumber** object based on the given string. > **NOTE：**> > The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not > intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is > displayed.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -174,6 +176,8 @@ equals(obj: Object): boolean
 Checks whether this **RationalNumber** object equals the given object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -250,14 +254,11 @@ Obtains the greatest common divisor of two specified integers.
 static getCommonFactor(number1: number, number2: number): number
 ```
 
-Obtains the greatest common divisor of two specified integers.
-
-> **NOTE：**
-> 
-> The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is
-> not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
+Obtains the greatest common divisor of two specified integers. > **NOTE：**> > The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is > not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -295,6 +296,8 @@ getDenominator(): number
 Obtains the denominator of this **RationalNumber** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -336,6 +339,8 @@ Obtains the numerator of this **RationalNumber** object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-getNumerator(): number--><!--Device-RationalNumber-getNumerator(): number-End-->
@@ -375,6 +380,8 @@ isFinite(): boolean
 Checks whether this **RationalNumber** object represents a finite value.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -416,6 +423,8 @@ Checks whether this **RationalNumber** object is a Not a Number (NaN).
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-isNaN(): boolean--><!--Device-RationalNumber-isNaN(): boolean-End-->
@@ -456,6 +465,8 @@ Checks whether this **RationalNumber** object is **0**.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-isZero(): boolean--><!--Device-RationalNumber-isZero(): boolean-End-->
@@ -492,15 +503,11 @@ console.info("result = " + result);
 static parseRationalNumber(numerator: number, denominator: number): RationalNumber
 ```
 
-Creates a **RationalNumber** instance with a given numerator and denominator.
-
-> **NOTE：**
-> 
-> The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the
-> function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer"
-> is displayed.
+Creates a **RationalNumber** instance with a given numerator and denominator. > **NOTE：**> > The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the > function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer" > is displayed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -536,6 +543,8 @@ toString(): string
 Obtains the string representation of this **RationalNumber** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -576,6 +585,8 @@ valueOf(): number
 Obtains the integer or floating-point value of this **RationalNumber** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

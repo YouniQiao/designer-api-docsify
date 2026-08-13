@@ -14,7 +14,7 @@ Defines the constructor of GridContainer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColInterface](grid_col/GridColInterface)
+**Substitutes:** grid_col/GridColInterface and grid_row/GridRowInterface
 
 <!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute--><!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute-End-->
 
@@ -28,5 +28,5 @@ Defines the constructor of GridContainer.
 
 ## Summary
 
-- [GridContainerOptions](arkts-arkui-gridcontainer-gridcontaineroptions-i.md)
-- [SizeType](arkts-arkui-gridcontainer-sizetype-e.md)
+- [GridContainerOptions](arkts-arkui-gridcontaineroptions-i.md)
+- [SizeType](arkts-arkui-sizetype-e.md)

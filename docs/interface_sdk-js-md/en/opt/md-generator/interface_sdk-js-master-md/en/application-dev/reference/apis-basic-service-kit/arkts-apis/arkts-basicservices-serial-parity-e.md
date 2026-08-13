@@ -4,6 +4,8 @@ Parity bits in serial port communication.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-serial-enum Parity--><!--Device-serial-enum Parity-End-->
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -17,6 +19,8 @@ NONE = 'none'
 No parity bit.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Even parity.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Parity-EVEN = 'even'--><!--Device-Parity-EVEN = 'even'-End-->
@@ -49,6 +55,8 @@ ODD = 'odd'
 Odd parity.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Mark parity. The parity bit is always 1.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Parity-MARK = 'mark'--><!--Device-Parity-MARK = 'mark'-End-->
@@ -81,6 +91,8 @@ SPACE = 'space'
 Space parity. The parity bit is always 0.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

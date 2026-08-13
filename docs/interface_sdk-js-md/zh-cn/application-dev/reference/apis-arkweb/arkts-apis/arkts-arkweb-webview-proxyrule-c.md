@@ -2,9 +2,11 @@
 
 The ProxyRule used by insertProxyRule.
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-webview-class ProxyRule--><!--Device-webview-class ProxyRule-End-->
 
@@ -16,11 +18,15 @@ The ProxyRule used by insertProxyRule.
 getSchemeFilter(): ProxySchemeFilter
 ```
 
-Returns the scheme filter used for this rule.
+获取代理规则中的ProxySchemeFilter信息。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter--><!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter-End-->
 
@@ -30,7 +36,7 @@ Returns the scheme filter used for this rule.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
+| [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | 代理规则中的ProxySchemeFilter信息。 |
 
 ## getUrl
 
@@ -38,11 +44,15 @@ Returns the scheme filter used for this rule.
 getUrl(): string
 ```
 
-Returns the proxy URL.
+获取代理规则中的代理的Url信息。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProxyRule-getUrl(): string--><!--Device-ProxyRule-getUrl(): string-End-->
 
@@ -52,5 +62,5 @@ Returns the proxy URL.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | The proxy URL. |
+| string | 代理规则中的代理的Url信息。 |
 

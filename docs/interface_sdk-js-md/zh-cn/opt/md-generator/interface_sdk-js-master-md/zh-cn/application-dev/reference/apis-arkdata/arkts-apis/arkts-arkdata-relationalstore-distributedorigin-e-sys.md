@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-relationalStore-enum DistributedOrigin--><!--Device-relationalStore-enum DistributedOrigin-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -19,6 +21,8 @@ ORI_LOCAL = 0
 表示本地数据。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ ORI_CLOUD = 1
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DistributedOrigin-ORI_CLOUD = 1--><!--Device-DistributedOrigin-ORI_CLOUD = 1-End-->
@@ -55,6 +61,8 @@ ORI_REMOTE = 2
 表示端端同步的数据。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,9 +1,10 @@
 # ISO8601DateTimeFormat
 
-Provide a DateTime formatting interface which could format date to ISO 8601 standard string.  
-[ISO8601](https://iso8601.com/).
+Provide a DateTime formatting interface which could format date to ISO 8601 standard string. [ISO8601](https://iso8601.com/).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class ISO8601DateTimeFormat--><!--Device-i18n-export class ISO8601DateTimeFormat-End-->
 
@@ -24,6 +25,8 @@ public constructor(options?: ISO8601DateTimeFormatOptions)
 A constructor used to create a ISO8601DateTimeFormat object.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +51,8 @@ public format(date: Date): string
 Formats a date to ISO 8601 formatted string.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

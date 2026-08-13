@@ -2,7 +2,9 @@
 
 Represents detailed information about a credential.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export interface Credential--><!--Device-certificateManager-export interface Credential-End-->
 
@@ -24,7 +26,9 @@ Alias of a credential. The value contains up to 128 bytes.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Credential-alias: string--><!--Device-Credential-alias: string-End-->
 
@@ -40,7 +44,9 @@ Number of certificates contained in the credential.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Credential-certNum: int--><!--Device-Credential-certNum: int-End-->
 
@@ -56,7 +62,9 @@ Credential usage. The default value is **CertificatePurpose.PURPOSE_DEFAULT**.
 
 **Type:** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Credential-certPurpose?: CertificatePurpose--><!--Device-Credential-certPurpose?: CertificatePurpose-End-->
 
@@ -72,7 +80,9 @@ Binary data of a credential. The value contains up to 20480 bytes.
 
 **Type:** Uint8Array
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Credential-credentialData: Uint8Array--><!--Device-Credential-credentialData: Uint8Array-End-->
 
@@ -88,7 +98,9 @@ Number of keys contained in the credential.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Credential-keyNum: int--><!--Device-Credential-keyNum: int-End-->
 
@@ -104,7 +116,9 @@ Unique identifier of a credential. The value contains up to 256 bytes.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Credential-keyUri: string--><!--Device-Credential-keyUri: string-End-->
 
@@ -120,7 +134,9 @@ Type of a credential. The value contains up to 8 bytes.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Credential-type: string--><!--Device-Credential-type: string-End-->
 

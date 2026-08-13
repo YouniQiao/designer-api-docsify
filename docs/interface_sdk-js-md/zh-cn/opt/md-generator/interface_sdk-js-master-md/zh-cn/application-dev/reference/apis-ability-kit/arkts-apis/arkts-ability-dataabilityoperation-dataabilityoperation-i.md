@@ -1,9 +1,10 @@
 # DataAbilityOperation
 
-定义DataAbility数据操作方式，可以作为  
-[executeBatch](../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch)的入参，操作数据库的信息。
+定义DataAbility数据操作方式，可以作为 executeBatch 的入参，操作数据库的信息。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DataAbilityOperation--><!--Device-unnamed-export interface DataAbilityOperation-End-->
 
@@ -20,6 +21,8 @@ expectedCount?: number
 **类型：** number
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -39,6 +42,8 @@ interrupted?: boolean
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityOperation-interrupted?: boolean--><!--Device-DataAbilityOperation-interrupted?: boolean-End-->
@@ -56,6 +61,8 @@ predicates?: dataAbility.DataAbilityPredicates
 **类型：** dataAbility.DataAbilityPredicates
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -75,6 +82,8 @@ predicatesBackReferences?: Map<number, number>
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityOperation-predicatesBackReferences?: Map<number, number>--><!--Device-DataAbilityOperation-predicatesBackReferences?: Map<number, number>-End-->
@@ -92,6 +101,8 @@ type: featureAbility.DataAbilityOperationType
 **类型：** featureAbility.DataAbilityOperationType
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -111,6 +122,8 @@ uri: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityOperation-uri: string--><!--Device-DataAbilityOperation-uri: string-End-->
@@ -129,6 +142,8 @@ valueBackReferences?: rdb.ValuesBucket
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityOperation-valueBackReferences?: rdb.ValuesBucket--><!--Device-DataAbilityOperation-valueBackReferences?: rdb.ValuesBucket-End-->
@@ -146,6 +161,8 @@ valuesBucket?: rdb.ValuesBucket
 **类型：** rdb.ValuesBucket
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

@@ -2,7 +2,9 @@
 
 Describes a text decoration.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface Decoration--><!--Device-text-interface Decoration-End-->
 
@@ -24,7 +26,9 @@ Color of the decoration. The default value is the text color.
 
 **Type:** common2D.Color
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Style of the decoration. The default value is **SOLID**.
 
 **Type:** TextDecorationStyle
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -56,12 +62,13 @@ Style of the decoration. The default value is **SOLID**.
 decorationThicknessScale?: number
 ```
 
-Scale factor for the thickness of the decoration line. The value is a floating point number. The default value is  
-**1.0**. If the value is less than or equal to 0, no decoration line is drawn.
+Scale factor for the thickness of the decoration line. The value is a floating point number. The default value is **1.0**. If the value is less than or equal to 0, no decoration line is drawn.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -79,7 +86,9 @@ Type of the decoration. The default value is **NONE**.
 
 **Type:** TextDecorationType
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

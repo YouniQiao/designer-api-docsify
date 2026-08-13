@@ -2,9 +2,11 @@
 
 Defines the call transfer information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface CallTransferInfo--><!--Device-call-export interface CallTransferInfo-End-->
 
@@ -26,11 +28,13 @@ endHour?: int
 
 Hour in the end time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferInfo-endHour?: int--><!--Device-CallTransferInfo-endHour?: int-End-->
 
@@ -46,11 +50,13 @@ endMinute?: int
 
 Minute in the end time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferInfo-endMinute?: int--><!--Device-CallTransferInfo-endMinute?: int-End-->
 
@@ -68,9 +74,11 @@ Enumerates call transfer setting types.
 
 **Type:** [CallTransferSettingType](arkts-telephony-call-calltransfersettingtype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferInfo-settingType: CallTransferSettingType--><!--Device-CallTransferInfo-settingType: CallTransferSettingType-End-->
 
@@ -86,11 +94,13 @@ startHour?: int
 
 Hour in the start time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferInfo-startHour?: int--><!--Device-CallTransferInfo-startHour?: int-End-->
 
@@ -106,11 +116,13 @@ startMinute?: int
 
 Minute in the start time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferInfo-startMinute?: int--><!--Device-CallTransferInfo-startMinute?: int-End-->
 
@@ -128,9 +140,11 @@ Call transfer number.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferInfo-transferNum: string--><!--Device-CallTransferInfo-transferNum: string-End-->
 
@@ -146,11 +160,13 @@ type: CallTransferType
 
 Call transfer type.
 
-**Type:** [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
+**Type:** [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferInfo-type: CallTransferType--><!--Device-CallTransferInfo-type: CallTransferType-End-->
 

@@ -2,7 +2,9 @@
 
 控制面板控件类型枚举。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-PiPWindow-enum PiPControlType--><!--Device-PiPWindow-enum PiPControlType-End-->
 
@@ -16,9 +18,11 @@ VIDEO_PLAY_PAUSE = 0
 
 播放/暂停直播控件组。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0--><!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0-End-->
 
@@ -32,9 +36,11 @@ VIDEO_PREVIOUS = 1
 
 视频上一个控件。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-VIDEO_PREVIOUS = 1--><!--Device-PiPControlType-VIDEO_PREVIOUS = 1-End-->
 
@@ -48,9 +54,11 @@ VIDEO_NEXT = 2
 
 视频下一个控件。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-VIDEO_NEXT = 2--><!--Device-PiPControlType-VIDEO_NEXT = 2-End-->
 
@@ -64,9 +72,11 @@ FAST_FORWARD = 3
 
 视频快进控件
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-FAST_FORWARD = 3--><!--Device-PiPControlType-FAST_FORWARD = 3-End-->
 
@@ -80,9 +90,11 @@ FAST_BACKWARD = 4
 
 视频快退控件。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-FAST_BACKWARD = 4--><!--Device-PiPControlType-FAST_BACKWARD = 4-End-->
 
@@ -96,9 +108,11 @@ HANG_UP_BUTTON = 5
 
 挂断控件。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-HANG_UP_BUTTON = 5--><!--Device-PiPControlType-HANG_UP_BUTTON = 5-End-->
 
@@ -112,9 +126,11 @@ MICROPHONE_SWITCH = 6
 
 打开/关闭麦克风控件。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-MICROPHONE_SWITCH = 6--><!--Device-PiPControlType-MICROPHONE_SWITCH = 6-End-->
 
@@ -128,9 +144,11 @@ CAMERA_SWITCH = 7
 
 打开/关闭摄像头控件。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-CAMERA_SWITCH = 7--><!--Device-PiPControlType-CAMERA_SWITCH = 7-End-->
 
@@ -144,9 +162,11 @@ MUTE_SWITCH = 8
 
 打开/关闭静音控件。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPControlType-MUTE_SWITCH = 8--><!--Device-PiPControlType-MUTE_SWITCH = 8-End-->
 

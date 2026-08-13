@@ -12,17 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void
 ```
 
-Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use   
-[on('complete'|'pause'|'remove')](request.DownloadTask.on(type: 'complete' | 'pause' | 'remove', callback: () => void))to obtain the download task state, including task completion, pause, and removal. You can also use   
-[on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void)) to obtain the task download error information.
+Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'|'pause'|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -42,11 +36,11 @@ Downloads a file. This API uses an asynchronous callback to return the result. H
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [13400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
-| [13400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## Examples
 
@@ -79,17 +73,11 @@ try {
 function downloadFile(context: BaseContext, config: DownloadConfig): Promise<DownloadTask>
 ```
 
-Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use   
-[on('complete'|'pause'|'remove')](request.DownloadTask.on(type: 'complete' | 'pause' | 'remove', callback: () => void))to obtain the download task state, including task completion, pause, and removal. You can also use   
-[on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void)) to obtain the task download error information.
+Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'|'pause'|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -114,11 +102,11 @@ Downloads a file. This API uses a promise to return the result. HTTP is supporte
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [13400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
-| [13400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## Examples
 

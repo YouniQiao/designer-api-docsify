@@ -2,7 +2,9 @@
 
 彩信确认索引。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsAcknowledgeInd--><!--Device-sms-export interface MmsAcknowledgeInd-End-->
 
@@ -20,7 +22,9 @@ reportAllowed?: ReportType
 
 **类型：** [ReportType](arkts-telephony-sms-reporttype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAcknowledgeInd-reportAllowed?: ReportType--><!--Device-MmsAcknowledgeInd-reportAllowed?: ReportType-End-->
 
@@ -38,7 +42,9 @@ transactionId: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAcknowledgeInd-transactionId: string--><!--Device-MmsAcknowledgeInd-transactionId: string-End-->
 
@@ -56,7 +62,9 @@ version: MmsVersionType
 
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAcknowledgeInd-version: MmsVersionType--><!--Device-MmsAcknowledgeInd-version: MmsVersionType-End-->
 

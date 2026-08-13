@@ -12,11 +12,11 @@ import { asset } from '@kit.AssetStoreKit';
 function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 ```
 
-Adds assets in batches based on an attributes array.To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#IS_PERSISTENT), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
-
-Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) can be added in batches.
+Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#IS_PERSISTENT), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) can be added in batches.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>--><!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>-End-->
 
@@ -38,16 +38,16 @@ Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) a
 
 | Error Code ID |
 | --- |
-| [24000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000014-file-operation-failed) |
-| [24000015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
-| [24000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000012-account-system-service-abnormal) |
-| [24000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000013-access-token-service-abnormal) |
-| [24000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000010-ipc-failed) |
-| [24000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
-| [24000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000008-database-operation-failed) |
-| [24000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000009-cryptographic-operation-failed) |
-| [24000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000006-insufficient-memory) |
-| [24000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000007-asset-corrupted) |
-| [24000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000005-incorrect-screen-lock-status) |
-| [24000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000001-asset-store-service-unavailable) |
-| [24000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000019-inconsistent-attribute-values) |
+| [24000014](../errorcode-asset.md#24000014-file-operation-failed) |
+| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) |
+| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) |
+| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) |

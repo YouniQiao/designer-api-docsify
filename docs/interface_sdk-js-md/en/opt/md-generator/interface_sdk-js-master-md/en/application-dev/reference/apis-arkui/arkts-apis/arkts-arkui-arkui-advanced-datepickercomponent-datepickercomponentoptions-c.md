@@ -4,6 +4,8 @@ DatePickerComponentOptions defines options for the date time picker component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class DatePickerComponentOptions--><!--Device-unnamed-export declare class DatePickerComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Date options.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -40,15 +44,15 @@ Date options.
 displayMode?: DisplayMode
 ```
 
-Display mode of the picker.
-
-Default value: DisplayMode.DATE
+Display mode of the picker. Default value: DisplayMode.DATE
 
 **Type:** [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
 
 **Default:** DisplayMode.DATE
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,6 +73,8 @@ Time options.
 **Type:** [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

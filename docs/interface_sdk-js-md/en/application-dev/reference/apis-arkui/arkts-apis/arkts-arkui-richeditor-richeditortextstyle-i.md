@@ -6,6 +6,8 @@ Defines the span text style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorTextStyle--><!--Device-unnamed-export declare interface RichEditorTextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Font decoration.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ font color.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-fontColor?: ResourceColor--><!--Device-RichEditorTextStyle-fontColor?: ResourceColor-End-->
@@ -64,6 +70,8 @@ font family.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-fontFamily?: ResourceStr--><!--Device-RichEditorTextStyle-fontFamily?: ResourceStr-End-->
@@ -76,13 +84,15 @@ font family.
 fontFeature?: string
 ```
 
-Set font feature, advanced text styles and effects as designed by the font author.The format is the like the CSS font-feature-settings attribute.
+Set font feature, advanced text styles and effects as designed by the font author. The format is the like the CSS font-feature-settings attribute.
 
 **Type:** string
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,6 +114,8 @@ font size.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-fontSize?: Length | double--><!--Device-RichEditorTextStyle-fontSize?: Length | double-End-->
@@ -123,6 +135,8 @@ font style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,6 +158,8 @@ font weight.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-fontWeight?: int | FontWeight | string--><!--Device-RichEditorTextStyle-fontWeight?: int | FontWeight | string-End-->
@@ -163,6 +179,8 @@ Set the text with half leading.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,6 +202,8 @@ letter spacing.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-letterSpacing?: double | string--><!--Device-RichEditorTextStyle-letterSpacing?: double | string-End-->
@@ -203,6 +223,8 @@ line height.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,6 +246,8 @@ The stroke color of the text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-strokeColor?: ResourceColor--><!--Device-RichEditorTextStyle-strokeColor?: ResourceColor-End-->
@@ -244,6 +268,8 @@ The stroke join style of the text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-strokeJoinStyle?: StrokeJoinStyle--><!--Device-RichEditorTextStyle-strokeJoinStyle?: StrokeJoinStyle-End-->
@@ -258,11 +284,13 @@ strokeWidth?: LengthMetrics | double
 
 The stroke width of the text.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| double
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -284,6 +312,8 @@ Text background style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextStyle-textBackgroundStyle?: TextBackgroundStyle--><!--Device-RichEditorTextStyle-textBackgroundStyle?: TextBackgroundStyle-End-->
@@ -303,6 +333,8 @@ Text shadow
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

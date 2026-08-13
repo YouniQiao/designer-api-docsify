@@ -6,6 +6,8 @@ Defines a contact's event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Event--><!--Device-contact-class Event-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,6 +32,8 @@ Custom event type, the default value is **0**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-static readonly CUSTOM_LABEL: 0--><!--Device-Event-static readonly CUSTOM_LABEL: 0-End-->
@@ -49,6 +53,8 @@ Anniversary event type, the default value is **1**.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,6 +76,8 @@ Birthday event, the default value is **3**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-static readonly EVENT_BIRTHDAY: 3--><!--Device-Event-static readonly EVENT_BIRTHDAY: 3-End-->
@@ -89,6 +97,8 @@ Other event type, the default value is **2**.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,6 +120,8 @@ Invalid event type, the default value is **-1**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
@@ -129,6 +141,8 @@ Event date.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -150,6 +164,8 @@ Event type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-labelId?: number--><!--Device-Event-labelId?: number-End-->
@@ -169,6 +185,8 @@ Name of the Event type.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

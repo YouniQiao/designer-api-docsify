@@ -4,9 +4,11 @@ Defines a touch event.
 
 **Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-export declare interface TouchEvent extends InputEvent--><!--Device-unnamed-export declare interface TouchEvent extends InputEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface TouchEvent--><!--Device-unnamed-export declare interface TouchEvent-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,7 +28,9 @@ Event type.
 
 **Type:** [Action](arkts-input-multimodalinput-touchevent-action-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchEvent-action: Action--><!--Device-TouchEvent-action: Action-End-->
 
@@ -42,7 +46,9 @@ Device type of the touch source.
 
 **Type:** [SourceType](arkts-input-multimodalinput-touchevent-sourcetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchEvent-sourceType: SourceType--><!--Device-TouchEvent-sourceType: SourceType-End-->
 
@@ -58,7 +64,9 @@ Current touch point.
 
 **Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchEvent-touch: Touch--><!--Device-TouchEvent-touch: Touch-End-->
 
@@ -74,7 +82,9 @@ All touch points.
 
 **Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchEvent-touches: Touch[]--><!--Device-TouchEvent-touches: Touch[]-End-->
 

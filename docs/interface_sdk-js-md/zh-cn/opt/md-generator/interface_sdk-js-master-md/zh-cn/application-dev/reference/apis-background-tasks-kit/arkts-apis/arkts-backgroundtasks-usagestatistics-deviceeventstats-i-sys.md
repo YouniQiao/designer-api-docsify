@@ -2,7 +2,9 @@
 
 FA模型的使用信息属性集合。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-interface DeviceEventStats--><!--Device-usageStatistics-interface DeviceEventStats-End-->
 
@@ -20,7 +22,9 @@ count: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceEventStats-count: int--><!--Device-DeviceEventStats-count: int-End-->
 
@@ -38,7 +42,9 @@ eventId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceEventStats-eventId: int--><!--Device-DeviceEventStats-eventId: int-End-->
 
@@ -56,7 +62,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceEventStats-name: string--><!--Device-DeviceEventStats-name: string-End-->
 

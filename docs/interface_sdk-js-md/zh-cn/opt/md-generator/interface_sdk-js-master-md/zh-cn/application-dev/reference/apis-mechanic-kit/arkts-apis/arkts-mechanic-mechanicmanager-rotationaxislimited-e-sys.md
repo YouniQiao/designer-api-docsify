@@ -2,7 +2,9 @@
 
 旋转轴限位状态
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export enum RotationAxisLimited--><!--Device-mechanicManager-export enum RotationAxisLimited-End-->
 
@@ -18,7 +20,9 @@ NOT_LIMITED = 0
 
 不限位
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAxisLimited-NOT_LIMITED = 0--><!--Device-RotationAxisLimited-NOT_LIMITED = 0-End-->
 
@@ -34,7 +38,9 @@ NEGATIVE_LIMITED = 1
 
 负限位
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1--><!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1-End-->
 
@@ -50,7 +56,9 @@ POSITIVE_LIMITED = 2
 
 Positive limited.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAxisLimited-POSITIVE_LIMITED = 2--><!--Device-RotationAxisLimited-POSITIVE_LIMITED = 2-End-->
 

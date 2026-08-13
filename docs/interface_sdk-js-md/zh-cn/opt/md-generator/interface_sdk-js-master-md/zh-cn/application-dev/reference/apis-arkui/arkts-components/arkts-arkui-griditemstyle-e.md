@@ -1,12 +1,10 @@
 # GridItemStyle
 
-GridItem样式枚举，用于定义GridItem的交互态样式。
-
-> **说明：**
-> 
-> GridItem焦点态样式设置：Grid组件需要设置4vp规格以上的内边距，用于显示GridItem的焦点框。
+GridItem样式枚举，用于定义GridItem的交互态样式。 > **说明：** > > GridItem焦点态样式设置：Grid组件需要设置4vp规格以上的内边距，用于显示GridItem的焦点框。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare enum GridItemStyle--><!--Device-unnamed-declare enum GridItemStyle-End-->
 
@@ -21,6 +19,8 @@ NONE = 0
 无样式，不显示Hover、Press态样式。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +39,8 @@ PLAIN = 1
 显示Hover、Press态样式。Hover态为鼠标悬停时的样式，Press态为按下时的样式。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

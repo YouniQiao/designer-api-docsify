@@ -2,7 +2,9 @@
 
 Define the rotation state of wallpaper
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wallpaper-enum RotateState--><!--Device-wallpaper-enum RotateState-End-->
 
@@ -18,7 +20,9 @@ PORTRAIT = 0
 
 Indicates the screen type is vertical screen.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotateState-PORTRAIT = 0--><!--Device-RotateState-PORTRAIT = 0-End-->
 
@@ -34,7 +38,9 @@ LANDSCAPE = 1
 
 Indicates the screen type is horizontal screen.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotateState-LANDSCAPE = 1--><!--Device-RotateState-LANDSCAPE = 1-End-->
 

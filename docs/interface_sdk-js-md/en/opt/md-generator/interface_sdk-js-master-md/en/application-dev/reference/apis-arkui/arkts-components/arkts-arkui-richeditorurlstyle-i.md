@@ -4,6 +4,8 @@ URL information.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorUrlStyle--><!--Device-unnamed-declare interface RichEditorUrlStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ URL information.
 url?: ResourceStr
 ```
 
-URL.
-
-Default value: **undefined**
+URL. Default value: **undefined**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

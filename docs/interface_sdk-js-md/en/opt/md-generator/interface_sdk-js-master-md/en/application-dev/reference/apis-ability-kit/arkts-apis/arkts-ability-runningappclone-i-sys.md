@@ -2,7 +2,9 @@
 
 The RunningAppClone module defines the information of an application clone in the running state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RunningAppClone--><!--Device-unnamed-export interface RunningAppClone-End-->
 
@@ -20,7 +22,9 @@ Index of an application clone.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningAppClone-appCloneIndex: int--><!--Device-RunningAppClone-appCloneIndex: int-End-->
 
@@ -38,7 +42,9 @@ Process ID set of the application.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningAppClone-pids: Array<int>--><!--Device-RunningAppClone-pids: Array<int>-End-->
 
@@ -56,7 +62,9 @@ UID of the application.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningAppClone-uid: int--><!--Device-RunningAppClone-uid: int-End-->
 

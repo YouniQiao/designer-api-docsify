@@ -1,10 +1,10 @@
 # EllipsisMode
 
-省略号类型枚举。
+省略号类型枚举。 EllipsisMode.START和EllipsisMode.MIDDLE仅在单行超长文本生效。
 
-EllipsisMode.START和EllipsisMode.MIDDLE仅在单行超长文本生效。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-text-enum EllipsisMode--><!--Device-text-enum EllipsisMode-End-->
 
@@ -18,7 +18,9 @@ START = 0
 
 开头省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中设置maxLines为1时生效。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +36,9 @@ MIDDLE = 1
 
 中间省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中设置maxLines为1时生效。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +54,9 @@ END = 2
 
 末尾省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中maxLines设置为任何值时均有效。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -68,6 +74,8 @@ MULTILINE_START = 3
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EllipsisMode-MULTILINE_START = 3--><!--Device-EllipsisMode-MULTILINE_START = 3-End-->
@@ -83,6 +91,8 @@ MULTILINE_MIDDLE = 4
 中间省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中maxLines设置为任何值时均有效。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 

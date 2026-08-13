@@ -2,7 +2,9 @@
 
 事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export enum EventClassify--><!--Device-update-export enum EventClassify-End-->
 
@@ -18,7 +20,9 @@ TASK = 0x01000000
 
 任务事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventClassify-TASK = 0x01000000--><!--Device-EventClassify-TASK = 0x01000000-End-->
 

@@ -2,9 +2,11 @@
 
 Defines the shared module information.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SharedModuleInfo--><!--Device-unnamed-export interface SharedModuleInfo-End-->
 
@@ -22,9 +24,11 @@ Description of the shared bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly description: string--><!--Device-SharedModuleInfo-readonly description: string-End-->
 
@@ -40,11 +44,13 @@ readonly descriptionId: long
 
 Description ID of the shared bundle.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly descriptionId: long--><!--Device-SharedModuleInfo-readonly descriptionId: long-End-->
 
@@ -62,9 +68,11 @@ Module name of the shared bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly name: string--><!--Device-SharedModuleInfo-readonly name: string-End-->
 
@@ -80,11 +88,13 @@ readonly versionCode: long
 
 Version number of the shared bundle.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly versionCode: long--><!--Device-SharedModuleInfo-readonly versionCode: long-End-->
 
@@ -102,9 +112,11 @@ Version description of the shared bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedModuleInfo-readonly versionName: string--><!--Device-SharedModuleInfo-readonly versionName: string-End-->
 

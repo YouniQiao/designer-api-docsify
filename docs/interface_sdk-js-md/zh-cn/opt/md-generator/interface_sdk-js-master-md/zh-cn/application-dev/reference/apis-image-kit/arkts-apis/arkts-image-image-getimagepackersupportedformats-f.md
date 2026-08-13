@@ -8,7 +8,9 @@ function getImagePackerSupportedFormats(): string[]
 
 获取支持编码的图片格式，图片格式以mime type表示。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-function getImagePackerSupportedFormats(): string[]--><!--Device-image-function getImagePackerSupportedFormats(): string[]-End-->
 

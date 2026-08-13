@@ -16,6 +16,8 @@ Opens the settings page for double-pressing the function key.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-settingsLite-function openDoubleClickSettingsPage(): void--><!--Device-settingsLite-function openDoubleClickSettingsPage(): void-End-->

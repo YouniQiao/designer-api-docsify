@@ -2,9 +2,11 @@
 
 Provides information about the document to print. This API must be implemented by a third-party application.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-interface PrintDocumentAdapter--><!--Device-print-interface PrintDocumentAdapter-End-->
 
@@ -24,9 +26,11 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 
 Registers a listener for print job state changes.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -45,8 +49,8 @@ Registers a listener for print job state changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -77,13 +81,6 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
 
 ## onStartLayoutWrite
 
-ArkTS-Dyn:
-```TypeScript
-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: number,
-      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
       writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
@@ -91,9 +88,11 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 
 Sends an empty PDF file descriptor to a third-party application. The third-party application updates the file with the new print attributes and then calls **writeResultCallback** to print the file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -108,15 +107,15 @@ Sends an empty PDF file descriptor to a third-party application. The third-party
 | jobId | string | Yes | ID of the print job. |
 | oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Old print attributes. |
 | newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | New print attributes. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | PDF file descriptor sent to the API caller. |
+| fd | int | Yes | PDF file descriptor sent to the API caller. |
 | writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | Yes | Callback used to print the updated file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 The **notificationSubscribe** module provides APIs for notification subscription, notification unsubscription, subscription removal, and more. In general cases, only system applications can call these APIs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace notificationSubscribe--><!--Device-unnamed-declare namespace notificationSubscribe-End-->
 
@@ -23,26 +25,26 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [distributeOperation](arkts-notification-notificationsubscribe-distributeoperation-f-sys.md#distributeoperation) |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove) |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-1) |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-2) |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-3) |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-4) |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-5) |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall) |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-1) |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-2) |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-3) |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-4) |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe) |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-1) |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-2) |
-| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification) |
-| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification-1) |
-| [subscribeSelf](arkts-notification-notificationsubscribe-subscribeself-f-sys.md#subscribeself) |
-| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe) |
-| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe-1) |
+| [distributeOperation](arkts-notification-notificationsubscribe-distributeoperation-f-sys.md#distributeOperation-(System-API)) |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API)) |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API)) |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API)) |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API)) |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API)) |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API)) |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API)) |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API)) |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API)) |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API)) |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API)) |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-(System-API)) |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-(System-API)) |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-(System-API)) |
+| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribeNotification-(System-API)) |
+| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribeNotification-(System-API)) |
+| [subscribeSelf](arkts-notification-notificationsubscribe-subscribeself-f-sys.md#subscribeSelf-(System-API)) |
+| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe-(System-API)) |
+| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

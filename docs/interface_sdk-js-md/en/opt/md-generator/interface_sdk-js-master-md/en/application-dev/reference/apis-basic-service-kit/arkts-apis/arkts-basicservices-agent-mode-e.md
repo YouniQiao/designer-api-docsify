@@ -1,10 +1,10 @@
 # Mode
 
-Defines mode options.
+Defines mode options. After foreground tasks of an application are switched to the background for a period of time, background tasks are not affected but foreground tasks will fail or pause.
 
-After foreground tasks of an application are switched to the background for a period of time, background tasks are not affected but foreground tasks will fail or pause.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-agent-enum Mode--><!--Device-agent-enum Mode-End-->
 
@@ -18,7 +18,9 @@ BACKGROUND
 
 Background task.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +36,9 @@ FOREGROUND
 
 Foreground task.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

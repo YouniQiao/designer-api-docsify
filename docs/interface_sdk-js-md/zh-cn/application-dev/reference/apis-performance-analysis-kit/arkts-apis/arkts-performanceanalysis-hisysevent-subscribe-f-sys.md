@@ -8,9 +8,11 @@ function subscribe(rules: QueryRule[]): long
 
 订阅实时系统事件(事件需满足低频率或偶发性的约束条件)，事件发生时立即以文件格式写入应用沙箱固定目录(/data/storage/el2/base/cache/hiview/event/)。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
@@ -30,17 +32,17 @@ function subscribe(rules: QueryRule[]): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 接口调用时间戳。 |
+| long | 接口调用时间戳。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [11200302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200302-非法的查询规则) | Invalid query rule. |
-| [11200301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) | The number of query rules exceeds the limit. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [11200302](../errorcode-hisysevent-sys.md#11200302-非法的查询规则) | Invalid query rule. |
+| [11200301](../errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) | The number of query rules exceeds the limit. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
 
 ## 示例
 

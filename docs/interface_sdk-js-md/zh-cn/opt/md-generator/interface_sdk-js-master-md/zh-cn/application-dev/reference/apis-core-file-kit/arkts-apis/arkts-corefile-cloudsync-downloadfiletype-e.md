@@ -2,7 +2,9 @@
 
 云盘缓存文件类型的枚举。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-enum DownloadFileType--><!--Device-cloudSync-enum DownloadFileType-End-->
 
@@ -16,7 +18,9 @@ CONTENT = 0
 
 content类型文件。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadFileType-CONTENT = 0--><!--Device-DownloadFileType-CONTENT = 0-End-->
 
@@ -30,7 +34,9 @@ THUMBNAIL = 1
 
 thumbnail类型文件。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadFileType-THUMBNAIL = 1--><!--Device-DownloadFileType-THUMBNAIL = 1-End-->
 
@@ -44,7 +50,9 @@ LCD = 2
 
 lcd类型文件。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadFileType-LCD = 2--><!--Device-DownloadFileType-LCD = 2-End-->
 

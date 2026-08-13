@@ -8,7 +8,7 @@ Route information.
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack](Navigation#NavPathStack)
+**Substitutes:** NavPathStack and navDestination
 
 <!--Device-unnamed-declare interface RouteInfo--><!--Device-unnamed-declare interface RouteInfo-End-->
 
@@ -30,7 +30,7 @@ Name of the navigation destination page to be redirected to.
 
 **Deprecated since:** 13
 
-**Substitutes:** [name](Navigation.NavPathInfo#name)
+**Substitutes:** name
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +56,7 @@ Parameter transferred during redirection.
 
 **Deprecated since:** 13
 
-**Substitutes:** [param](Navigation.NavPathInfo#param)
+**Substitutes:** param
 
 **Model restriction:** This API can be used only in the stage model.
 

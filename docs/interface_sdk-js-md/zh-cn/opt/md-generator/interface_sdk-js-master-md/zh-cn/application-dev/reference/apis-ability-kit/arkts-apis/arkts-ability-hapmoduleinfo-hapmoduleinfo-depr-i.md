@@ -1,11 +1,6 @@
 # HapModuleInfo
 
-Hap模块信息，未做特殊说明的属性，均通过  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2)获取。
-
-> **说明：**
-> 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-HapModuleInfo](#HapModuleInfo)替代。
+Hap模块信息，未做特殊说明的属性，均通过 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) 获取。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-HapModuleInfo](#HapModuleInfo)替代。
 
 **起始版本：** 7
 
@@ -33,7 +28,7 @@ Ability信息。
 
 **废弃版本：** 9
 
-**替代接口：** [abilitiesInfo](arkts-ability-hapmoduleinfo-i.md#abilitiesInfo)
+**替代接口：** abilitiesInfo
 
 <!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>--><!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>-End-->
 
@@ -75,7 +70,7 @@ readonly description: string
 
 **废弃版本：** 9
 
-**替代接口：** [description](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#description)
+**替代接口：** description
 
 <!--Device-HapModuleInfo-readonly description: string--><!--Device-HapModuleInfo-readonly description: string-End-->
 
@@ -97,7 +92,7 @@ readonly descriptionId: number
 
 **废弃版本：** 9
 
-**替代接口：** [descriptionId](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#descriptionId)
+**替代接口：** descriptionId
 
 <!--Device-HapModuleInfo-readonly descriptionId: number--><!--Device-HapModuleInfo-readonly descriptionId: number-End-->
 
@@ -119,7 +114,7 @@ readonly deviceTypes: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [deviceTypes](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#deviceTypes)
+**替代接口：** deviceTypes
 
 <!--Device-HapModuleInfo-readonly deviceTypes: Array<string>--><!--Device-HapModuleInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -141,7 +136,7 @@ readonly icon: string
 
 **废弃版本：** 9
 
-**替代接口：** [icon](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#icon)
+**替代接口：** icon
 
 <!--Device-HapModuleInfo-readonly icon: string--><!--Device-HapModuleInfo-readonly icon: string-End-->
 
@@ -163,7 +158,7 @@ readonly iconId: number
 
 **废弃版本：** 9
 
-**替代接口：** [iconId](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#iconId)
+**替代接口：** iconId
 
 <!--Device-HapModuleInfo-readonly iconId: number--><!--Device-HapModuleInfo-readonly iconId: number-End-->
 
@@ -185,7 +180,7 @@ readonly installationFree: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [installationFree](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#installationFree)
+**替代接口：** installationFree
 
 <!--Device-HapModuleInfo-readonly installationFree: boolean--><!--Device-HapModuleInfo-readonly installationFree: boolean-End-->
 
@@ -207,7 +202,7 @@ readonly label: string
 
 **废弃版本：** 9
 
-**替代接口：** [label](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#label)
+**替代接口：** label
 
 <!--Device-HapModuleInfo-readonly label: string--><!--Device-HapModuleInfo-readonly label: string-End-->
 
@@ -229,7 +224,7 @@ readonly labelId: number
 
 **废弃版本：** 9
 
-**替代接口：** [labelId](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#labelId)
+**替代接口：** labelId
 
 <!--Device-HapModuleInfo-readonly labelId: number--><!--Device-HapModuleInfo-readonly labelId: number-End-->
 
@@ -271,7 +266,7 @@ readonly moduleName: string
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name)
+**替代接口：** name
 
 <!--Device-HapModuleInfo-readonly moduleName: string--><!--Device-HapModuleInfo-readonly moduleName: string-End-->
 
@@ -293,7 +288,7 @@ readonly name: string
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name)
+**替代接口：** name
 
 <!--Device-HapModuleInfo-readonly name: string--><!--Device-HapModuleInfo-readonly name: string-End-->
 

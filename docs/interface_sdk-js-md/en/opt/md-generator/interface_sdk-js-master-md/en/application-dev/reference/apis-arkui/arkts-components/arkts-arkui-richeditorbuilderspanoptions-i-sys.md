@@ -4,6 +4,8 @@ Sets the offset and style of the builder.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorBuilderSpanOptions--><!--Device-unnamed-declare interface RichEditorBuilderSpanOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ Background color of the builder when it is dragged independently. If no valid va
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorBuilderSpanOptions-dragBackgroundColor? : ColorMetrics--><!--Device-RichEditorBuilderSpanOptions-dragBackgroundColor? : ColorMetrics-End-->
@@ -34,13 +38,13 @@ Background color of the builder when it is dragged independently. If no valid va
 isDragShadowNeeded?: boolean
 ```
 
-Whether to apply a shadow when the builder is dragged independently. If no valid value is specified, a shadow is applied. The value **true** means to apply a shadow, and **false** means the opposite.
-
-Default value: **true**
+Whether to apply a shadow when the builder is dragged independently. If no valid value is specified, a shadow is applied. The value **true** means to apply a shadow, and **false** means the opposite. Default value: **true**
 
 **Type:** boolean
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

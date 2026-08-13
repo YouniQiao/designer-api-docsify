@@ -12,13 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function isNotificationEnabledSync(): boolean
 ```
 
-Synchronously queries the notification authorization status of the current application.
+Synchronously queries the notification authorization status of the current application. This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called, suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
 
-This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called,suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function isNotificationEnabledSync(): boolean--><!--Device-notificationManager-function isNotificationEnabledSync(): boolean-End-->
 
@@ -26,7 +26,7 @@ This API is used to quickly check whether the current application is allowed to 
 
 **See also:**
 
-[requestEnableNotification](notificationManager.requestEnableNotification(context: UIAbilityContext): Promise<void>) requests notification
+requestEnableNotification requests notification
 
 **Return value:**
 
@@ -38,9 +38,9 @@ This API is used to quickly check whether the current application is allowed to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 

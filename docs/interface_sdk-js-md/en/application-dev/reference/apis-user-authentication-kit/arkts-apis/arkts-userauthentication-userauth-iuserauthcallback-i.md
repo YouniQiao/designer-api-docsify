@@ -26,11 +26,9 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void
 ```
 
-Called to acquire authentication tip information. This API is optional.
+Called to acquire authentication tip information. This API is optional. - **module**: ID of the module that sends the tip information. - **acquire**: Authentication tip information. - **extraInfo**: Reserved field.
 
-- **module**: ID of the module that sends the tip information.  
-- **acquire**: Authentication tip information.  
-- **extraInfo**: Reserved field.
+**Type:** (module: number, acquire: number, extraInfo: any) =&gt; void
 
 **Since:** 8
 
@@ -44,58 +42,15 @@ Called to acquire authentication tip information. This API is optional.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| module | number | Yes |  |
-| acquire | number | Yes |  |
-| extraInfo | any | Yes |  |
-
-## Examples
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let auth = new userAuth.UserAuth();
-let challenge = new Uint8Array([]);
-auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
-  onResult: (result, extraInfo) => {
-    try {
-      console.info(`auth onResult result = ${result}`);
-      console.info(`auth onResult extraInfo = ${JSON.stringify(extraInfo)}`);
-      if (result == userAuth.ResultCode.SUCCESS) {
-        // Add the logic to be executed when the authentication is successful.
-      }  else {
-        // Add the logic to be executed when the authentication fails.
-      }
-    } catch (error) {
-      console.error(`auth onResult error = ${error}`);
-    }
-  },
-  onAcquireInfo: (module, acquire, extraInfo : userAuth.AuthResult) => {
-    try {
-      console.info(`auth onAcquireInfo module = ${module}`);
-      console.info(`auth onAcquireInfo acquire = ${acquire}`);
-      console.info(`auth onAcquireInfo extraInfo = ${JSON.stringify(extraInfo)}`);
-    } catch (error) {
-      console.error(`auth onAcquireInfo error = ${error}`);
-    }
-  }
-});
-```
-
 ## onResult
 
 ```TypeScript
 onResult: (result: number, extraInfo: AuthResult) => void
 ```
 
-Called to return the authentication result.
+Called to return the authentication result. - **result**: Authentication result. For details, see [ResultCode](arkts-userauthentication-userauth-resultcode-e.md#ResultCode). - **extraInfo**: Extended information, which varies depending on the authentication result. If the authentication is successful, the user authentication token will be returned in **extraInfo**. If the authentication fails, the remaining number of authentication times will be returned in **extraInfo**. If the authentication executor is locked, the freeze time will be returned in **extraInfo**.
 
-- **result**: Authentication result. For details, see [ResultCode](arkts-userauthentication-userauth-resultcode-e.md#ResultCode).  
-- **extraInfo**: Extended information, which varies depending on the authentication result. If the authentication  
-is successful, the user authentication token will be returned in **extraInfo**. If the authentication fails, the remaining number of authentication times will be returned in **extraInfo**. If the authentication executor is locked, the freeze time will be returned in **extraInfo**.
+**Type:** (result: number, extraInfo: AuthResult) =&gt; void
 
 **Since:** 8
 
@@ -108,35 +63,4 @@ is successful, the user authentication token will be returned in **extraInfo**. 
 <!--Device-IUserAuthCallback-onResult: (result: number, extraInfo: AuthResult) => void--><!--Device-IUserAuthCallback-onResult: (result: number, extraInfo: AuthResult) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | number | Yes |  |
-| extraInfo | AuthResult | Yes |  |
-
-## Examples
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let auth = new userAuth.UserAuth();
-let challenge = new Uint8Array([]);
-auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
-  onResult: (result, extraInfo) => {
-    try {
-      console.info(`auth onResult result = ${result}`);
-      console.info(`auth onResult extraInfo = ${JSON.stringify(extraInfo)}`);
-      if (result == userAuth.ResultCode.SUCCESS) {
-        // Add the logic to be executed when the authentication is successful.
-      }  else {
-        // Add the logic to be executed when the authentication fails.
-      }
-    } catch (error) {
-      console.error(`auth onResult error = ${error}`);
-    }
-  }
-});
-```
 

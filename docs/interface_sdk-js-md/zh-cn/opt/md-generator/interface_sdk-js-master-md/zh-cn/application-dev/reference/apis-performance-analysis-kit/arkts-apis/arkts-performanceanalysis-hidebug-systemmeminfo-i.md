@@ -2,7 +2,9 @@
 
 描述系统内存信息，包括总内存、空闲内存和可用内存。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-interface SystemMemInfo--><!--Device-hidebug-interface SystemMemInfo-End-->
 
@@ -18,7 +20,9 @@ availableMem: bigint
 
 **类型：** bigint
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemMemInfo-availableMem: bigint--><!--Device-SystemMemInfo-availableMem: bigint-End-->
 
@@ -34,7 +38,9 @@ freeMem: bigint
 
 **类型：** bigint
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemMemInfo-freeMem: bigint--><!--Device-SystemMemInfo-freeMem: bigint-End-->
 
@@ -50,7 +56,9 @@ totalMem: bigint
 
 **类型：** bigint
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemMemInfo-totalMem: bigint--><!--Device-SystemMemInfo-totalMem: bigint-End-->
 

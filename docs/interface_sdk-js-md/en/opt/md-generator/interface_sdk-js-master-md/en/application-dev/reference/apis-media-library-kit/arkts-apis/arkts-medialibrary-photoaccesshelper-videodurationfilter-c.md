@@ -2,7 +2,9 @@
 
 Describes the configuration for video duration filtering.
 
-**Since:** 19
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class VideoDurationFilter--><!--Device-photoAccessHelper-class VideoDurationFilter-End-->
 
@@ -20,15 +22,15 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraVideoDuration?: number
 ```
 
-Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is **-1**.
-
-The unit is milliseconds (ms).
+Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is **-1**. The unit is milliseconds (ms).
 
 **Type:** number
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoDurationFilter-extraVideoDuration?: int--><!--Device-VideoDurationFilter-extraVideoDuration?: int-End-->
 
@@ -40,15 +42,15 @@ The unit is milliseconds (ms).
 filterOperator: FilterOperator
 ```
 
-Filter operator.
-
-For example, files can be filtered based on being greater than or less than a certain file size.
+Filter operator. For example, files can be filtered based on being greater than or less than a certain file size.
 
 **Type:** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoDurationFilter-filterOperator: FilterOperator--><!--Device-VideoDurationFilter-filterOperator: FilterOperator-End-->
 
@@ -60,15 +62,15 @@ For example, files can be filtered based on being greater than or less than a ce
 videoDuration: number
 ```
 
-Video duration used for filtering.
-
-The unit is milliseconds (ms).
+Video duration used for filtering. The unit is milliseconds (ms).
 
 **Type:** number
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoDurationFilter-videoDuration: int--><!--Device-VideoDurationFilter-videoDuration: int-End-->
 

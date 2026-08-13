@@ -2,7 +2,9 @@
 
 Country code structure.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface CountryCode--><!--Device-geoLocationManager-export interface CountryCode-End-->
 
@@ -24,7 +26,9 @@ Country code character string.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CountryCode-country: string--><!--Device-CountryCode-country: string-End-->
 
@@ -40,7 +44,9 @@ Country code source.
 
 **Type:** [CountryCodeType](arkts-location-geolocationmanager-countrycodetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CountryCode-type: CountryCodeType--><!--Device-CountryCode-type: CountryCodeType-End-->
 

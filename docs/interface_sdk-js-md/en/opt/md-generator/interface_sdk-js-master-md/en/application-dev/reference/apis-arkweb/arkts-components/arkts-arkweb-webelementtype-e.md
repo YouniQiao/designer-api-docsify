@@ -4,6 +4,8 @@ Enumerates the web element types.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum WebElementType--><!--Device-unnamed-declare enum WebElementType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ IMAGE = 1
 Image.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 <!--Device-WebElementType-IMAGE = 1--><!--Device-WebElementType-IMAGE = 1-End-->
 
@@ -32,6 +36,8 @@ Hyperlink.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-WebElementType-LINK = 2--><!--Device-WebElementType-LINK = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -45,6 +51,8 @@ TEXT = 3
 Text or editable area.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-WebElementType-TEXT = 3--><!--Device-WebElementType-TEXT = 3-End-->
 

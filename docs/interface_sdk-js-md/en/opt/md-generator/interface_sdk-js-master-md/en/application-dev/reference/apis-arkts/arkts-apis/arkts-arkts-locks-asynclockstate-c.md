@@ -4,6 +4,8 @@ Information about all lock operations on the AsyncLock instance.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-locks-class AsyncLockState--><!--Device-locks-class AsyncLockState-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -26,6 +28,8 @@ Held locks information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyncLockState-held: AsyncLockInfo[]--><!--Device-AsyncLockState-held: AsyncLockInfo[]-End-->
@@ -43,6 +47,8 @@ Pending locks information.
 **Type:** [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md)[]
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

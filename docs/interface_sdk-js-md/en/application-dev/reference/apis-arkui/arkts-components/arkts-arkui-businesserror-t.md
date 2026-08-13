@@ -4,13 +4,13 @@
 declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError<T>
 ```
 
-Represents the error information returned when an error occurs during image loading.
-
-The table below describes the **ImageError** error codes. The **error** property of **ImageError** contains error details with **code** and **message** fields, representing the error code and error message, respectively.
+Represents the error information returned when an error occurs during image loading. The table below describes the **ImageError** error codes. The **error** property of **ImageError** contains error details with **code** and **message** fields, representing the error code and error message, respectively.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

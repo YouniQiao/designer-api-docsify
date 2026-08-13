@@ -1,14 +1,16 @@
 # PartnerAgentExtensionAbility
 
-Class for the PartnerAgentExtensionAbility.Applications can use this ability to discover devices.
+Class for the PartnerAgentExtensionAbility. Applications can use this ability to discover devices.
 
-**Inheritance/Implementation:** PartnerAgentExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** PartnerAgentExtensionAbility extends ExtensionAbility
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export default class PartnerAgentExtensionAbility extends ExtensionAbility--><!--Device-unnamed-export default class PartnerAgentExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export default class PartnerAgentExtensionAbility--><!--Device-unnamed-export default class PartnerAgentExtensionAbility-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -24,11 +26,13 @@ import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
 onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void
 ```
 
-Called when the PartnerAgentExtensionAbility is to be destroyed.Applications can clean up resources in this callback function.
+Called when the PartnerAgentExtensionAbility is to be destroyed. Applications can clean up resources in this callback function.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,9 +64,11 @@ onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void
 
 Called when a device is discovered.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,9 +102,11 @@ Context of the PartnerAgentExtensionAbility.
 
 **Type:** [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md)
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

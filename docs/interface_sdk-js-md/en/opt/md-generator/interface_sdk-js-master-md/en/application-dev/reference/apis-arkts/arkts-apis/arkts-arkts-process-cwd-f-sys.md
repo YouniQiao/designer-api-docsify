@@ -16,6 +16,8 @@ Return the current work directory;
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-process-function cwd(): string--><!--Device-process-function cwd(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang

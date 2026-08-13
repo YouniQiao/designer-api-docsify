@@ -4,7 +4,7 @@ Declare CustomDialog ConfirmDialogV2
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ConfirmDialogV2--><!--Device-unnamed-export declare struct ConfirmDialogV2-End-->
 
@@ -16,30 +16,11 @@ Declare CustomDialog ConfirmDialogV2
 import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from '@kit.ArkUI';
 ```
 
-## onCheckedChange
-
-```TypeScript
-onCheckedChange?: AdvancedDialogV2OnCheckedChange
-```
-
-Sets the ConfirmDialogV2 CheckBox Callback.
-
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ConfirmDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-ConfirmDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## checkTips
 
 ```TypeScript
-checkTips?: ResourceStr
+@Param
+  checkTips?: ResourceStr
 ```
 
 Sets the ConfirmDialogV2 checkbox tips.
@@ -48,20 +29,21 @@ Sets the ConfirmDialogV2 checkbox tips.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConfirmDialogV2-checkTips?: ResourceStr--><!--Device-ConfirmDialogV2-checkTips?: ResourceStr-End-->
+<!--Device-ConfirmDialogV2-@Param  checkTips?: ResourceStr--><!--Device-ConfirmDialogV2-@Param  checkTips?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checked
 
 ```TypeScript
-checked?: boolean
+@Param
+  checked?: boolean
 ```
 
 Sets the ConfirmDialogV2 checkbox state.
@@ -70,20 +52,21 @@ Sets the ConfirmDialogV2 checkbox state.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConfirmDialogV2-checked?: boolean--><!--Device-ConfirmDialogV2-checked?: boolean-End-->
+<!--Device-ConfirmDialogV2-@Param  checked?: boolean--><!--Device-ConfirmDialogV2-@Param  checked?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-content?: ResourceStr
+@Param
+  content?: ResourceStr
 ```
 
 Sets the ConfirmDialogV2 content.
@@ -92,20 +75,44 @@ Sets the ConfirmDialogV2 content.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConfirmDialogV2-content?: ResourceStr--><!--Device-ConfirmDialogV2-content?: ResourceStr-End-->
+<!--Device-ConfirmDialogV2-@Param  content?: ResourceStr--><!--Device-ConfirmDialogV2-@Param  content?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onCheckedChange
+
+```TypeScript
+@Param
+  onCheckedChange?: AdvancedDialogV2OnCheckedChange
+```
+
+Sets the ConfirmDialogV2 CheckBox Callback.
+
+**Type:** [AdvancedDialogV2OnCheckedChange](arkts-arkui-advanceddialogv2oncheckedchange-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-ConfirmDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryButton
 
 ```TypeScript
-primaryButton?: AdvancedDialogV2Button
+@Param
+  primaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the ConfirmDialogV2 primary button.
@@ -114,20 +121,21 @@ Sets the ConfirmDialogV2 primary button.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConfirmDialogV2-primaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-primaryButton?: AdvancedDialogV2Button-End-->
+<!--Device-ConfirmDialogV2-@Param  primaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-@Param  primaryButton?: AdvancedDialogV2Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryButton
 
 ```TypeScript
-secondaryButton?: AdvancedDialogV2Button
+@Param
+  secondaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the ConfirmDialogV2 secondary button.
@@ -136,20 +144,22 @@ Sets the ConfirmDialogV2 secondary button.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConfirmDialogV2-secondaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-secondaryButton?: AdvancedDialogV2Button-End-->
+<!--Device-ConfirmDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
 
 ```TypeScript
-title: ResourceStr
+@Require
+  @Param
+  title: ResourceStr
 ```
 
 Sets the ConfirmDialogV2 title.
@@ -158,12 +168,12 @@ Sets the ConfirmDialogV2 title.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConfirmDialogV2-title: ResourceStr--><!--Device-ConfirmDialogV2-title: ResourceStr-End-->
+<!--Device-ConfirmDialogV2-@Require  @Param  title: ResourceStr--><!--Device-ConfirmDialogV2-@Require  @Param  title: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

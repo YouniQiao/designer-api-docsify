@@ -12,20 +12,13 @@ import { router } from '@kit.ArkUI';
 function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](@ohos.arkui.UIContext:Router#pushUrl(options:)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushUrl)(options: router.RouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,10 +37,10 @@ Navigates to a specified page in the application.
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## Examples
 
@@ -91,20 +84,13 @@ router.pushUrl({
 function pushUrl(options: RouterOptions): Promise<void>
 ```
 
-Navigates to a specified page in the application.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](@ohos.arkui.UIContext:Router#pushUrl(options:)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushUrl)(options: router.RouterOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,10 +114,10 @@ Navigates to a specified page in the application.
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## Examples
 
@@ -177,20 +163,13 @@ router.pushUrl({
 function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](@ohos.arkui.UIContext:Router#pushUrl(options:)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushUrl)(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -210,10 +189,10 @@ Navigates to a specified page in the application.
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## Examples
 
@@ -257,20 +236,13 @@ router.pushUrl({
 function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Navigates to a specified page in the application.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](@ohos.arkui.UIContext:Router#pushUrl(options:)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushUrl)(options: router.RouterOptions, mode: router.RouterMode)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -295,10 +267,10 @@ Navigates to a specified page in the application.
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## Examples
 

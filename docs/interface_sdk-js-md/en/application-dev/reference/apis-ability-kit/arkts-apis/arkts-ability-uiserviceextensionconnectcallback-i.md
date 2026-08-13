@@ -1,14 +1,12 @@
 # UIServiceExtensionConnectCallback
 
-UIServiceExtensionConnectCallback provides callbacks for the connection to a UIServiceExtensionAbility.
+UIServiceExtensionConnectCallback provides callbacks for the connection to a UIServiceExtensionAbility. > **NOTE：**> > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
-> **NOTE：**
-> 
-> - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
+**Since:** 23
 
-**Since:** 14
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default interface UIServiceExtensionConnectCallback--><!--Device-unnamed-export default interface UIServiceExtensionConnectCallback-End-->
 
@@ -20,16 +18,13 @@ UIServiceExtensionConnectCallback provides callbacks for the connection to a UIS
 onData(data: Record<string, Object>): void
 ```
 
-Called to receive data when a connection to the UIServiceExtensionAbility is established.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Called to receive data when a connection to the UIServiceExtensionAbility is established. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,7 +136,9 @@ Called back when data is sent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,20 +158,17 @@ Called back when data is sent.
 onDisconnect(): void
 ```
 
-Called when the connection to the UIServiceExtensionAbility is interrupted.
+Called when the connection to the UIServiceExtensionAbility is interrupted. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 14
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIServiceExtensionConnectCallback-onDisconnect(): void--><!--Device-UIServiceExtensionConnectCallback-onDisconnect(): void-End-->
 

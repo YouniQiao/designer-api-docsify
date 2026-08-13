@@ -4,9 +4,11 @@ Describes the proximity sensor data. It extends from [Response](arkts-sensorserv
 
 **Inheritance/Implementation:** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-sensor-interface ProximityResponse extends Response--><!--Device-sensor-interface ProximityResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface ProximityResponse--><!--Device-sensor-interface ProximityResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,7 +28,9 @@ Proximity between the visible object and the device monitor. The value **0** mea
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProximityResponse-distance: double--><!--Device-ProximityResponse-distance: double-End-->
 

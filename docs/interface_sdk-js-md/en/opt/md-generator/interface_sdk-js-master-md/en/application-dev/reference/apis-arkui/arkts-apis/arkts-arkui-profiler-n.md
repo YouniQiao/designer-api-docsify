@@ -4,6 +4,8 @@ Profiler tools for inspectors.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace Profiler--><!--Device-unnamed-declare namespace Profiler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,6 @@ Profiler tools for inspectors.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md#registervsynccallback) |
-| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md#unregistervsynccallback) |
+| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md#registerVsyncCallback-(System-API)) |
+| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md#unregisterVsyncCallback-(System-API)) |
 <!--DelEnd-->

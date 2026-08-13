@@ -6,6 +6,8 @@ Defines the chain animation options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ChainAnimationOptions--><!--Device-unnamed-declare interface ChainAnimationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,6 +29,8 @@ Conductivity of chain animation.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +56,8 @@ Damping of chain spring.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChainAnimationOptions-damping?: number--><!--Device-ChainAnimationOptions-damping?: number-End-->
@@ -75,6 +81,8 @@ Edge effect of chain animation.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +108,8 @@ Intensity of chain animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChainAnimationOptions-intensity?: number--><!--Device-ChainAnimationOptions-intensity?: number-End-->
@@ -114,13 +124,15 @@ Intensity of chain animation.
 maxSpace: Length
 ```
 
-Maximum space for chain animation.&lt;br&gt;Unit: same as **Length**.
+Maximum space for chain animation. &lt;br&gt;Unit: same as **Length**.
 
 **Type:** Length
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +148,15 @@ Maximum space for chain animation.&lt;br&gt;Unit: same as **Length**.
 minSpace: Length
 ```
 
-Minimum space for chain animation.&lt;br&gt;Unit: same as **Length**.
+Minimum space for chain animation. &lt;br&gt;Unit: same as **Length**.
 
 **Type:** Length
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,6 +181,8 @@ Stiffness of chain spring.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

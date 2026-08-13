@@ -12,13 +12,11 @@ import { floatView } from '@kit.ArkUI';
 function isFloatViewEnabled(): boolean
 ```
 
-Checks whether the device supports the float view.
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Description|
-|------------|------------|
-| boolean |
+Checks whether the device supports the float view. | Type| Description| |------------|------------| | boolean | Whether the device supports the float view. **true** to support; **false** otherwise.|
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

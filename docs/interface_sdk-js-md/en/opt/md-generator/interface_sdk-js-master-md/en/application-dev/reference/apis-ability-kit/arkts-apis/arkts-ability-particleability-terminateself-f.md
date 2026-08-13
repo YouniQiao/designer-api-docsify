@@ -16,6 +16,8 @@ Terminates this ParticleAbility. This API uses an asynchronous callback to retur
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-particleAbility-function terminateSelf(callback: AsyncCallback<void>): void--><!--Device-particleAbility-function terminateSelf(callback: AsyncCallback<void>): void-End-->
@@ -52,6 +54,8 @@ function terminateSelf(): Promise<void>
 Terminates this ParticleAbility. This API uses a promise to return the result.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

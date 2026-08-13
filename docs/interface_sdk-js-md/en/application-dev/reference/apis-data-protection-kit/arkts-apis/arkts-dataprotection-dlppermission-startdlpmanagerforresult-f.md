@@ -12,18 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>
 ```
 
-Starts the DLP manager application on the current   
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) page in borderless mode. This API uses a promise to return the result.
-
-This API starts the DLP manager application to configure file permissions and return the user operation result to the caller.
-
-> **NOTE：**
-> 
-> This API can be called only by domain accounts.
+Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) page in borderless mode. This API uses a promise to return the result. This API starts the DLP manager application to configure file permissions and return the user operation result to the caller. > **NOTE：**> > This API can be called only by domain accounts.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,12 +43,12 @@ This API starts the DLP manager application to configure file permissions and re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100017-displayname-missing-in-parameters-of-want) | The displayName field is missing in the want parameter. |
-| [19100016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100016-uri-missing-in-want) | The uri field is missing in the want parameter. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100017](../errorcode-dlp.md#19100017-displayname-missing-in-parameters-of-want) | The displayName field is missing in the want parameter. |
+| [19100016](../errorcode-dlp.md#19100016-uri-missing-in-want) | The uri field is missing in the want parameter. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 
 ## Examples
 

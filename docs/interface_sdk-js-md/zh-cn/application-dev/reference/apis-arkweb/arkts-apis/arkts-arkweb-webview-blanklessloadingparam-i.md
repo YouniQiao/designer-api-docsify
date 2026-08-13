@@ -1,12 +1,12 @@
 # BlanklessLoadingParam
 
-Defines the blankless loading parameter.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+1.插帧加载参数 设备行为差异:仅支持手机平台，其他平台返回801
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface BlanklessLoadingParam--><!--Device-webview-interface BlanklessLoadingParam-End-->
 
@@ -18,15 +18,15 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 callback?: Callback<BlanklessFrameInterpolationInfo>
 ```
 
-Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information.
+白屏插帧回调函数，用于返回白屏插帧信息 设备行为差异:仅支持手机平台，其他平台返回801
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,22 +37,22 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ## duration
 
 ```TypeScript
-duration?: int
+duration?: number
 ```
 
-Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000].
+本次插入帧的存续时间，单位ms 有效时长范围为 {0} 和[200, 2000]的并集 设备行为差异:仅支持手机平台，其他平台返回801 取值限定为整数。
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.&lt;br&gt;Unit: ms.
-
-**类型：** int
+**类型：** number
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-BlanklessLoadingParam-duration?: int--><!--Device-BlanklessLoadingParam-duration?: int-End-->
+<!--Device-BlanklessLoadingParam-duration?: number--><!--Device-BlanklessLoadingParam-duration?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -62,15 +62,15 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 enable: boolean
 ```
 
-Whether to enable frame interpolation. The value true indicates to enable frame interpolation, and false indicates the opposite.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+本次是否使能开始插帧，true：使能，false：不使能 设备行为差异:仅支持手机平台，其他平台返回801
 
 **类型：** boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,22 +81,22 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ## expirationTime
 
 ```TypeScript
-expirationTime?: int
+expirationTime?: number
 ```
 
-Expiration time of the historical frame, in ms (UTC time). T indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms.The value range is the union of (T, T + 2592000000] and {0}.0 indicates that the expiration time is not specified and the default expiration time (7 days) is used.
+历史帧失效时间，UTC时间，单位：ms。用T表示当前UTC时间，同时已知30天为2592000000ms，取值范围：(T, T + 2592000000] 和 {0}的并集，其中0表示不指定失效时间，采用系统默认失效时间（7天）。 设备行为差异:仅支持手机平台，其他平台返回801
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-
-**类型：** int
+**类型：** number
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-BlanklessLoadingParam-expirationTime?: int--><!--Device-BlanklessLoadingParam-expirationTime?: int-End-->
+<!--Device-BlanklessLoadingParam-expirationTime?: number--><!--Device-BlanklessLoadingParam-expirationTime?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -2,9 +2,11 @@
 
 Enumerates the video scale modes.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum VideoScaleType--><!--Device-media-enum VideoScaleType-End-->
 
@@ -18,9 +20,11 @@ VIDEO_SCALE_TYPE_FIT = 0
 
 Default mode. The video will be stretched to fit the window.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,9 +40,11 @@ VIDEO_SCALE_TYPE_FIT_CROP = 1
 
 Maintains the video's aspect ratio, and scales to fill the shortest side of the window, with the longer side cropped.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,11 +60,13 @@ VIDEO_SCALE_TYPE_SCALED_ASPECT = 2
 
 Maintains the video's aspect ratio, and scales to fill the longer side of the window, with the shorter side centered and unfilled parts left black.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-VideoScaleType-VIDEO_SCALE_TYPE_SCALED_ASPECT = 2--><!--Device-VideoScaleType-VIDEO_SCALE_TYPE_SCALED_ASPECT = 2-End-->
 

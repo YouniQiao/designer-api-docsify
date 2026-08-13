@@ -18,7 +18,7 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Deprecated since:** 12
 
-**Substitutes:** [setPortRoleTypes](usbManager.setPortRoleTypes(portId:)
+**Substitutes:** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md#setPortRoleTypes-(System-API))(portId: int, powerRole: PowerRoleType, dataRole: DataRoleType)
 
 <!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>--><!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>-End-->
 
@@ -44,4 +44,4 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

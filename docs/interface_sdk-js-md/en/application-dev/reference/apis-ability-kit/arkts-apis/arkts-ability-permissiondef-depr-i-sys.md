@@ -1,13 +1,6 @@
 # PermissionDef (System API)
 
-The module provides permission details defined in the configuration file.
-
-> **NOTE：**
-> 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef) instead.
-> 
-> The APIs provided by this module are system APIs.
+The module provides permission details defined in the configuration file. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef-(System-API)) instead. > > The APIs provided by this module are system APIs.
 
 **Since:** 8
 
@@ -15,7 +8,7 @@ The module provides permission details defined in the configuration file.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef)
+**Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef-(System-API))
 
 <!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
@@ -41,7 +34,7 @@ ID of the permission description.
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptionId](ohos.bundle.bundleManager/bundleManager.PermissionDef#descriptionId)
+**Substitutes:** descriptionId
 
 <!--Device-PermissionDef-descriptionId: number--><!--Device-PermissionDef-descriptionId: number-End-->
 
@@ -67,7 +60,7 @@ Grant mode of the permission. The value **0** means that the system automaticall
 
 **Deprecated since:** 9
 
-**Substitutes:** [grantMode](ohos.bundle.bundleManager/bundleManager.PermissionDef#grantMode)
+**Substitutes:** grantMode
 
 <!--Device-PermissionDef-grantMode: number--><!--Device-PermissionDef-grantMode: number-End-->
 
@@ -93,7 +86,7 @@ ID of the permission label.
 
 **Deprecated since:** 9
 
-**Substitutes:** [labelId](ohos.bundle.bundleManager/bundleManager.PermissionDef#labelId)
+**Substitutes:** labelId
 
 <!--Device-PermissionDef-labelId: number--><!--Device-PermissionDef-labelId: number-End-->
 
@@ -119,7 +112,7 @@ Name of the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [permissionName](ohos.bundle.bundleManager/bundleManager.PermissionDef#permissionName)
+**Substitutes:** permissionName
 
 <!--Device-PermissionDef-permissionName: string--><!--Device-PermissionDef-permissionName: string-End-->
 

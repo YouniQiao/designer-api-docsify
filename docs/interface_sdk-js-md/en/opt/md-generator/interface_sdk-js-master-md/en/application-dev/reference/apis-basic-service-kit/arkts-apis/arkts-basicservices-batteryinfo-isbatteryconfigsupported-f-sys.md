@@ -16,6 +16,8 @@ Checks whether the battery configuration is enabled based on the specified scena
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-function isBatteryConfigSupported(sceneName: string): boolean--><!--Device-batteryInfo-function isBatteryConfigSupported(sceneName: string): boolean-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -38,9 +40,9 @@ Checks whether the battery configuration is enabled based on the specified scena
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5100101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-battery-info.md#5100101-service-connection-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-service-connection-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

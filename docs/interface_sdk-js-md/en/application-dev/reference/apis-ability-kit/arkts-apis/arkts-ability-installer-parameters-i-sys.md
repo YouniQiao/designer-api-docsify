@@ -2,9 +2,11 @@
 
 Describes the extended parameter information.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-installer-export interface Parameters--><!--Device-installer-export interface Parameters-End-->
 
@@ -28,9 +30,11 @@ Key of an extended parameter.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Parameters-key: string--><!--Device-Parameters-key: string-End-->
 
@@ -48,9 +52,11 @@ Value of the extended parameter.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Parameters-value: string--><!--Device-Parameters-value: string-End-->
 

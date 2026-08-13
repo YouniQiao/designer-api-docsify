@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class BottomTabBarStyle--><!--Device-unnamed-declare class BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ BottomTabBarStyle的构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)--><!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)-End-->
@@ -32,7 +36,7 @@ BottomTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
+| icon | ResourceStr \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
 | text | ResourceStr | 是 | 页签内的文字内容。 |
 
 ## iconStyle
@@ -46,6 +50,8 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -79,6 +85,8 @@ id(value: string): BottomTabBarStyle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -110,6 +118,8 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -143,6 +153,8 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -175,6 +187,8 @@ BottomTabBarStyle的静态构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -187,7 +201,7 @@ BottomTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
+| icon | ResourceStr \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
 | text | ResourceStr | 是 | 页签内的文字内容。 |
 
 **返回值：**
@@ -208,6 +222,8 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -220,7 +236,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Dimension \| LocalizedPadding | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、 优化视觉效果时传入自定义值。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}&lt;br/&gt;使用LocalizedPadding时，支持镜像能力。&lt;br /&gt;默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),&lt;br/&gt;top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**起始版本：** 10 - 11 |
+| value | Padding \| Dimension \| LocalizedPadding | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、 优化视觉效果时传入自定义值。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}&lt;br/&gt;使用LocalizedPadding时，支持镜像能力。&lt;br /&gt;默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),&lt;br/&gt;top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**起始版本：** 10 - 11 |
 
 **返回值：**
 
@@ -239,6 +255,8 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -271,6 +289,8 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

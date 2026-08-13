@@ -16,6 +16,8 @@ Converts the array data that cannot be passed across threads into the data that 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>--><!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -36,7 +38,7 @@ Converts the array data that cannot be passed across threads into the data that 
 
 | Error Code ID |
 | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
 
 ## Examples
 

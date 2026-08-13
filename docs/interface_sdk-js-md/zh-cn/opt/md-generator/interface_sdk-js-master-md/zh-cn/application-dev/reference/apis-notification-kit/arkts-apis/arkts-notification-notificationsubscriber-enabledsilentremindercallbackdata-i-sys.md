@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface EnabledSilentReminderCallbackData--><!--Device-unnamed-export interface EnabledSilentReminderCallbackData-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -22,6 +24,8 @@ readonly bundle: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-EnabledSilentReminderCallbackData-readonly bundle: string--><!--Device-EnabledSilentReminderCallbackData-readonly bundle: string-End-->
@@ -36,15 +40,13 @@ readonly bundle: string
 readonly enableStatus: notificationManager.SwitchState
 ```
 
-应用通知的静默提醒开关状态。  
-- USER_MODIFIED_OFF：用户设置的关闭状态。  
-- USER_MODIFIED_ON：用户设置的开启状态。  
-- SYSTEM_DEFAULT_OFF：用户设置前的初始关闭状态。  
-- SYSTEM_DEFAULT_ON：用户设置前的初始开启状态。
+应用通知的静默提醒开关状态。 - USER_MODIFIED_OFF：用户设置的关闭状态。 - USER_MODIFIED_ON：用户设置的开启状态。 - SYSTEM_DEFAULT_OFF：用户设置前的初始关闭状态。 - SYSTEM_DEFAULT_ON：用户设置前的初始开启状态。
 
 **类型：** notificationManager.SwitchState
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,6 +67,8 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

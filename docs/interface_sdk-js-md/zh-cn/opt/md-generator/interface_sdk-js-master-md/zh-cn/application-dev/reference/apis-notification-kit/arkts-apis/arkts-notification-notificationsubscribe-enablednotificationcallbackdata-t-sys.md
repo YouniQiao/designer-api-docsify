@@ -6,7 +6,9 @@ export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData
 
 回调返回监听到的应用信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData--><!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData-End-->
 

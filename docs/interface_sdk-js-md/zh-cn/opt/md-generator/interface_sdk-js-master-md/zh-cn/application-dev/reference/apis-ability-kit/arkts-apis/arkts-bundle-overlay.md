@@ -1,15 +1,10 @@
 # @ohos.bundle.overlay
 
-本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#OverlayModuleInfo)信息查询以及禁用使能的能力。
+本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#OverlayModuleInfo)信息查询以及禁用使能的能力。 overlay特征应用指应用中包含有overlay资源包，overlay资源包详见 [overlay机制](../../../quick-start/resource-categories-and-access.md#overlay机制)。 > **说明：** > > 本模块接口仅适用于stage模型，且仅适用于[静态overlay](../../../quick-start/resource-categories-and-access.md#静态overlay配置方式)。
 
-overlay特征应用指应用中包含有overlay资源包，overlay资源包详见  
-[overlay机制](../../../quick-start/resource-categories-and-access.md#overlay机制)。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 本模块接口仅适用于stage模型，且仅适用于[静态overlay](../../../quick-start/resource-categories-and-access.md#静态overlay配置方式)。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace overlay--><!--Device-unnamed-declare namespace overlay-End-->
 
@@ -21,26 +16,26 @@ overlay特征应用指应用中包含有overlay资源包，overlay资源包详�
 
 | 名称 |
 | --- |
-| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo) |
-| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo-1) |
-| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#gettargetoverlaymoduleinfos) |
-| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#gettargetoverlaymoduleinfos-1) |
-| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled) |
-| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled-1) |
+| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getOverlayModuleInfo) |
+| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getOverlayModuleInfo) |
+| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#getTargetOverlayModuleInfos) |
+| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#getTargetOverlayModuleInfos) |
+| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setOverlayEnabled) |
+| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setOverlayEnabled) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename) |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-1) |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-2) |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename) |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-1) |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-2) |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setoverlayenabledbybundlename) |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setoverlayenabledbybundlename-1) |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getOverlayModuleInfoByBundleName（系统接口）) |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getOverlayModuleInfoByBundleName（系统接口）) |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getOverlayModuleInfoByBundleName（系统接口）) |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#getTargetOverlayModuleInfosByBundleName（系统接口）) |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#getTargetOverlayModuleInfosByBundleName（系统接口）) |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#getTargetOverlayModuleInfosByBundleName（系统接口）) |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setOverlayEnabledByBundleName（系统接口）) |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setOverlayEnabledByBundleName（系统接口）) |
 <!--DelEnd-->
 
 ### 类型

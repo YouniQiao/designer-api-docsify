@@ -2,9 +2,11 @@
 
 Enumerates the print error codes.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrintErrorCode--><!--Device-print-enum PrintErrorCode-End-->
 
@@ -18,9 +20,11 @@ E_PRINT_NONE = 0
 
 No error.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_NONE = 0--><!--Device-PrintErrorCode-E_PRINT_NONE = 0-End-->
 
@@ -34,9 +38,11 @@ E_PRINT_NO_PERMISSION = 201
 
 No permission.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_NO_PERMISSION = 201--><!--Device-PrintErrorCode-E_PRINT_NO_PERMISSION = 201-End-->
 
@@ -50,9 +56,11 @@ E_PRINT_INVALID_PARAMETER = 401
 
 Invalid parameters.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_INVALID_PARAMETER = 401--><!--Device-PrintErrorCode-E_PRINT_INVALID_PARAMETER = 401-End-->
 
@@ -66,9 +74,11 @@ E_PRINT_GENERIC_FAILURE = 13100001
 
 Printing failure.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_GENERIC_FAILURE = 13100001--><!--Device-PrintErrorCode-E_PRINT_GENERIC_FAILURE = 13100001-End-->
 
@@ -82,9 +92,11 @@ E_PRINT_RPC_FAILURE = 13100002
 
 RPC failure.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_RPC_FAILURE = 13100002--><!--Device-PrintErrorCode-E_PRINT_RPC_FAILURE = 13100002-End-->
 
@@ -98,9 +110,11 @@ E_PRINT_SERVER_FAILURE = 13100003
 
 Print service failure.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_SERVER_FAILURE = 13100003--><!--Device-PrintErrorCode-E_PRINT_SERVER_FAILURE = 13100003-End-->
 
@@ -114,9 +128,11 @@ E_PRINT_INVALID_EXTENSION = 13100004
 
 Invalid printer extension.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_INVALID_EXTENSION = 13100004--><!--Device-PrintErrorCode-E_PRINT_INVALID_EXTENSION = 13100004-End-->
 
@@ -130,9 +146,11 @@ E_PRINT_INVALID_PRINTER = 13100005
 
 Invalid printer.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_INVALID_PRINTER = 13100005--><!--Device-PrintErrorCode-E_PRINT_INVALID_PRINTER = 13100005-End-->
 
@@ -146,9 +164,11 @@ E_PRINT_INVALID_PRINT_JOB = 13100006
 
 Invalid print job.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_INVALID_PRINT_JOB = 13100006--><!--Device-PrintErrorCode-E_PRINT_INVALID_PRINT_JOB = 13100006-End-->
 
@@ -162,9 +182,11 @@ E_PRINT_FILE_IO = 13100007
 
 Incorrect file input/output.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_FILE_IO = 13100007--><!--Device-PrintErrorCode-E_PRINT_FILE_IO = 13100007-End-->
 
@@ -178,9 +200,11 @@ E_PRINT_TOO_MANY_FILES = 13100010
 
 Excessive files. Maximum number: 99.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintErrorCode-E_PRINT_TOO_MANY_FILES = 13100010--><!--Device-PrintErrorCode-E_PRINT_TOO_MANY_FILES = 13100010-End-->
 
@@ -196,7 +220,9 @@ The SMB account is locked due to multiple failed login attempts.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,7 +240,9 @@ SMB Connection Failure (A network error occurs, the host is unreachable, or the 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -232,7 +260,9 @@ The login account or password is invalid.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

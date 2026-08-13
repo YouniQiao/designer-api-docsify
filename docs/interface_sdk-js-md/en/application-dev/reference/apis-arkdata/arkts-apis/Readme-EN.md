@@ -23,14 +23,6 @@
   - [UpdateFn(system api)](arkts-arkdata-updatefn-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateOperation(system api)](arkts-arkdata-updateoperation-t-sys.md)<!--DelEnd-->
-- [@ohos.data.DataShareResultSet](arkts-data-datashareresultset.md)
-  <!--Del-->
-  - [DataShareResultSet(system api)](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DataType(system api)](arkts-arkdata-data-datashareresultset-datatype-e-sys.md)<!--DelEnd-->
-- [@ohos.data.UdmfComponents](arkts-data-udmfcomponents.md)
-  - [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md)
-  - [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
 - [@ohos.data.UdmfComponents](arkts-data-udmfcomponents.md)
   - [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md)
   - [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
@@ -168,32 +160,49 @@
   - [ValueType](arkts-arkdata-dataability-valuetype-t.md)
 - [@ohos.data.dataShare](arkts-data-datashare.md)
   - [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md)
-  - [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md)
-  - [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f.md)
-  - [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f.md)
-  - [ChangeInfo](arkts-arkdata-datashare-changeinfo-i.md)
+  <!--Del-->
+  - [createDataShareHelper(system api)](arkts-arkdata-datashare-createdatasharehelper-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [disableSilentProxy(system api)](arkts-arkdata-datashare-disablesilentproxy-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [enableSilentProxy(system api)](arkts-arkdata-datashare-enablesilentproxy-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ChangeInfo(system api)](arkts-arkdata-datashare-changeinfo-i-sys.md)<!--DelEnd-->
   - [DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)
   - [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)
   - [DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)
   - [DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)
   - [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)
-  - [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i.md)
-  - [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i.md)
-  - [OperationResult](arkts-arkdata-datashare-operationresult-i.md)
+  <!--Del-->
+  - [DataShareHelper(system api)](arkts-arkdata-datashare-datasharehelper-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DataShareHelperOptions(system api)](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OperationResult(system api)](arkts-arkdata-datashare-operationresult-i-sys.md)<!--DelEnd-->
   - [ProxyData](arkts-arkdata-datashare-proxydata-i.md)
-  - [PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i.md)
-  - [PublishedItem](arkts-arkdata-datashare-publisheditem-i.md)
-  - [RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i.md)
-  - [Template](arkts-arkdata-datashare-template-i.md)
-  - [TemplateId](arkts-arkdata-datashare-templateid-i.md)
-  - [UpdateOperation](arkts-arkdata-datashare-updateoperation-i.md)
-  - [ChangeType](arkts-arkdata-datashare-changetype-e.md)
+  <!--Del-->
+  - [PublishedDataChangeNode(system api)](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PublishedItem(system api)](arkts-arkdata-datashare-publisheditem-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RdbDataChangeNode(system api)](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Template(system api)](arkts-arkdata-datashare-template-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TemplateId(system api)](arkts-arkdata-datashare-templateid-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [UpdateOperation(system api)](arkts-arkdata-datashare-updateoperation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ChangeType(system api)](arkts-arkdata-datashare-changetype-e-sys.md)<!--DelEnd-->
   - [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)
   - [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md)
   - [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
-  - [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md)
+  <!--Del-->
+  - [SubscriptionType(system api)](arkts-arkdata-datashare-subscriptiontype-e-sys.md)<!--DelEnd-->
 - [@ohos.data.dataSharePredicates](arkts-data-datasharepredicates.md)
   - [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
+  <!--Del-->
+  - [DataSharePredicates(system api)](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md)<!--DelEnd-->
 - [@ohos.data.distributedData](arkts-data-distributeddata.md)
   - [distributedData](arkts-arkdata-distributeddata-n.md)
     - [Constants](arkts-arkdata-distributeddata-constants-n.md)
@@ -415,8 +424,10 @@
   - [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md)
   - [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md)
   - [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md)
-  - [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md)
-  - [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md)
+  <!--Del-->
+  - [removeAppShareOptions(system api)](arkts-arkdata-unifieddatachannel-removeappshareoptions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setAppShareOptions(system api)](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md)<!--DelEnd-->
   - [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md)
   - [ApplicationDefinedRecord](arkts-arkdata-unifieddatachannel-applicationdefinedrecord-c.md)
   - [Audio](arkts-arkdata-unifieddatachannel-audio-c.md)
@@ -448,6 +459,8 @@
   - [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md)
   - [FileConflictOptions](arkts-arkdata-unifieddatachannel-fileconflictoptions-e.md)
   - [Intention](arkts-arkdata-unifieddatachannel-intention-e.md)
+  <!--Del-->
+  - [Intention(system api)](arkts-arkdata-unifieddatachannel-intention-e-sys.md)<!--DelEnd-->
   - [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md)
   - [ProgressIndicator](arkts-arkdata-unifieddatachannel-progressindicator-e.md)
   - [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)

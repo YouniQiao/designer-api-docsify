@@ -4,7 +4,7 @@ Declare type OperateButtonV2
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class OperateButtonV2--><!--Device-unnamed-export declare class OperateButtonV2-End-->
 
@@ -26,6 +26,8 @@ The constructor of OperateButtonV2.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ The constructor of OperateButtonV2.
 ## accessibilityDescription
 
 ```TypeScript
-public accessibilityDescription?: ResourceStr
+@Trace
+  public accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of the button.
@@ -52,18 +55,21 @@ The accessibilityDescription of the button.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateButtonV2-public accessibilityDescription?: ResourceStr--><!--Device-OperateButtonV2-public accessibilityDescription?: ResourceStr-End-->
+<!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-public accessibilityLevel?: string
+@Trace
+  public accessibilityLevel?: string
 ```
 
 The accessibilityLevel of the button.
@@ -74,18 +80,21 @@ The accessibilityLevel of the button.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateButtonV2-public accessibilityLevel?: string--><!--Device-OperateButtonV2-public accessibilityLevel?: string-End-->
+<!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-public accessibilityText?: ResourceStr
+@Trace
+  public accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of the button.
@@ -94,18 +103,21 @@ The accessibilityText of the button.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateButtonV2-public accessibilityText?: ResourceStr--><!--Device-OperateButtonV2-public accessibilityText?: ResourceStr-End-->
+<!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
 
 ```TypeScript
-public text?: ResourceStr
+@Trace
+  public text?: ResourceStr
 ```
 
 The text on the button.
@@ -114,10 +126,12 @@ The text on the button.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateButtonV2-public text?: ResourceStr--><!--Device-OperateButtonV2-public text?: ResourceStr-End-->
+<!--Device-OperateButtonV2-@Trace  public text?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

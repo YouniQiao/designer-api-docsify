@@ -2,7 +2,9 @@
 
 Returns child class objects specific to the network type.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface SignalInformation--><!--Device-radio-export interface SignalInformation-End-->
 
@@ -24,7 +26,9 @@ rsrp for LTE and NR; dbm for CDMA and EVDO; rscp for WCDMA; rssi for GSM.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SignalInformation-dBm: int--><!--Device-SignalInformation-dBm: int-End-->
 
@@ -40,7 +44,9 @@ Obtains the signal level of the current network.
 
 **Type:** number
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SignalInformation-signalLevel: int--><!--Device-SignalInformation-signalLevel: int-End-->
 
@@ -56,7 +62,9 @@ Obtains the network type corresponding to the signal.
 
 **Type:** NetworkType
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SignalInformation-signalType: NetworkType--><!--Device-SignalInformation-signalType: NetworkType-End-->
 

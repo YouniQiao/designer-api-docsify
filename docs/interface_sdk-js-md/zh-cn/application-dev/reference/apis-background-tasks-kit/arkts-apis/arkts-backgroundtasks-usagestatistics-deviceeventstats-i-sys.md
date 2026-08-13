@@ -2,9 +2,11 @@
 
 FA模型的使用信息属性集合。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-interface DeviceEventStats--><!--Device-usageStatistics-interface DeviceEventStats-End-->
 
@@ -20,11 +22,13 @@ count: int
 
 应用通知次数或者系统事件触发次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceEventStats-count: int--><!--Device-DeviceEventStats-count: int-End-->
 
@@ -40,11 +44,13 @@ eventId: int
 
 应用事件类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceEventStats-eventId: int--><!--Device-DeviceEventStats-eventId: int-End-->
 
@@ -62,9 +68,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceEventStats-name: string--><!--Device-DeviceEventStats-name: string-End-->
 

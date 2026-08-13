@@ -6,6 +6,8 @@ Creating an Object
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum PanDirection--><!--Device-unnamed-export declare enum PanDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Default.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Sliding left.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-Left = 1--><!--Device-PanDirection-Left = 1-End-->
@@ -57,6 +63,8 @@ Sliding right.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Sliding horizontally.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-Horizontal = 3--><!--Device-PanDirection-Horizontal = 3-End-->
@@ -93,6 +103,8 @@ Sliding up.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ Sliding up or left.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-UP_LEFT = 5--><!--Device-PanDirection-UP_LEFT = 5-End-->
@@ -129,6 +143,8 @@ Sliding up or right.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +164,8 @@ Sliding up or horizontally.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-UP_HORIZONTAL = 7--><!--Device-PanDirection-UP_HORIZONTAL = 7-End-->
@@ -165,6 +183,8 @@ Sliding down.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,6 +204,8 @@ Sliding down or left.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-DOWN_LEFT = 9--><!--Device-PanDirection-DOWN_LEFT = 9-End-->
@@ -201,6 +223,8 @@ Sliding down or right.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,6 +244,8 @@ Sliding down or horizontally.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-DOWN_HORIZONTAL = 11--><!--Device-PanDirection-DOWN_HORIZONTAL = 11-End-->
@@ -237,6 +263,8 @@ Sliding vertical.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -256,6 +284,8 @@ Sliding vertical or left.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-VERTICAL_LEFT = 13--><!--Device-PanDirection-VERTICAL_LEFT = 13-End-->
@@ -274,6 +304,8 @@ Sliding vertical or right.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanDirection-VERTICAL_RIGHT = 14--><!--Device-PanDirection-VERTICAL_RIGHT = 14-End-->
@@ -291,6 +323,8 @@ Sliding in all directions.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

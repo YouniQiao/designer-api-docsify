@@ -2,11 +2,13 @@
 
 Defines user gesture data.
 
-**Inheritance/Implementation:** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md#UserFacesData)
+**Inheritance/Implementation:** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md#UserFacesData-(System-API))
 
 **Since:** 26.0.0
 
-<!--Device-userStatus-export interface UserGesturesData extends UserFacesData--><!--Device-userStatus-export interface UserGesturesData extends UserFacesData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface UserGesturesData--><!--Device-userStatus-export interface UserGesturesData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -24,11 +26,13 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 directionAngle?: number[]
 ```
 
-Angle between user gesture and screen directions.The value ranges from 0 to 90, in degrees.
+Angle between user gesture and screen directions. The value ranges from 0 to 90, in degrees.
 
 **Type:** number[]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Gesture speed, in frames per second (fps).
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserGesturesData-gestureSpeed?: double[]--><!--Device-UserGesturesData-gestureSpeed?: double[]-End-->
@@ -70,6 +76,8 @@ Hand position relative to screen. The normalized coordinate system ranges from 0
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserGesturesData-handPosition?: double[]--><!--Device-UserGesturesData-handPosition?: double[]-End-->
@@ -84,11 +92,13 @@ Hand position relative to screen. The normalized coordinate system ranges from 0
 handType?: number
 ```
 
-User static gesture type.The value ranges from 0 to 3. 0: Palm, 1: Fist, 2: Scissors, 3: Finger heart.
+User static gesture type. The value ranges from 0 to 3. 0: Palm, 1: Fist, 2: Scissors, 3: Finger heart.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +120,8 @@ Whether user hand exists.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserGesturesData-isHandExist?: boolean--><!--Device-UserGesturesData-isHandExist?: boolean-End-->
@@ -124,11 +136,13 @@ Whether user hand exists.
 motionGesture?: number
 ```
 
-User dynamic gesture type.The value ranges from 0 to 3. 0: Up, 1: Down, 2: Screen capture, 3: Release.
+User dynamic gesture type. The value ranges from 0 to 3. 0: Up, 1: Down, 2: Screen capture, 3: Release.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

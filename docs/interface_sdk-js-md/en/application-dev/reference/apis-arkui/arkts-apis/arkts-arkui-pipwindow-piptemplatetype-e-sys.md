@@ -2,9 +2,11 @@
 
 Enumerates the PiP template types.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-enum PiPTemplateType--><!--Device-PiPWindow-enum PiPTemplateType-End-->
 
@@ -16,13 +18,13 @@ Enumerates the PiP template types.
 VIDEO_DRIVE = 4
 ```
 
-Indicate the content to show in picture-in-picture window is video drive
-
-Device Behavior Differences:Only supported by car
+Indicate the content to show in picture-in-picture window is video drive Device Behavior Differences:Only supported by car
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

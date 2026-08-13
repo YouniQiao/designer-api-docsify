@@ -4,6 +4,8 @@ Represents the callback invoked when a screen capture request is received.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnScreenCaptureRequestEvent--><!--Device-unnamed-declare interface OnScreenCaptureRequestEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ User operation.
 **Type:** [ScreenCaptureHandler](arkts-arkweb-screencapturehandler-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

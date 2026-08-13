@@ -1,10 +1,12 @@
 # TemplateStatus (System API)
 
-Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services,and associated device status.
+Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services, and associated device status.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-companionDeviceAuth-interface TemplateStatus--><!--Device-companionDeviceAuth-interface TemplateStatus-End-->
 
@@ -30,7 +32,9 @@ Template adding time. Timestamp when the template is created. The value is a Uni
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,15 @@ Template adding time. Timestamp when the template is created. The value is a Uni
 deviceStatus: DeviceStatus
 ```
 
-Device status information. It specifies the current status of the companion device associated with the template,including the online status and device name.
+Device status information. It specifies the current status of the companion device associated with the template, including the online status and device name.
 
 **Type:** [DeviceStatus](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md)
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,14 +74,15 @@ Device status information. It specifies the current status of the companion devi
 enabledBusinessIds: int[]
 ```
 
-List of supported service IDs. It specifies the service scenarios where the template is enabled. You can update the service scenarios by calling the  
-[updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateEnabledBusinessIds) API.
+List of supported service IDs. It specifies the service scenarios where the template is enabled. You can update the service scenarios by calling the [updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateEnabledBusinessIds-(System-API)) API.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** int[]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,7 +104,9 @@ Data confirmation status. The value **true** indicates that the data is real-tim
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,13 +122,15 @@ Data confirmation status. The value **true** indicates that the data is real-tim
 isValid: boolean
 ```
 
-Template validity. The value **true** indicates that the template is valid and can be used for authentication.The value **false** indicates that the template is invalid, may have been deleted or expired, and cannot be used for authentication.
+Template validity. The value **true** indicates that the template is valid and can be used for authentication. The value **false** indicates that the template is invalid, may have been deleted or expired, and cannot be used for authentication.
 
 **Type:** boolean
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,11 +148,13 @@ localUserId: int
 
 Local user ID. It specifies the user ID associated with the template on the primary device. The value is a positive integer greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,7 +176,9 @@ Template ID. Unique ID of a companion device authentication template, which is u
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

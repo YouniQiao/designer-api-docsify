@@ -2,9 +2,11 @@
 
 BaseContext抽象类用于表示继承的子类Context是Stage模型还是FA模型，是所有Context类型的父类。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export default abstract class BaseContext--><!--Device-unnamed-export default abstract class BaseContext-End-->
 
@@ -16,14 +18,15 @@ BaseContext抽象类用于表示继承的子类Context是Stage模型还是FA模�
 stageMode: boolean
 ```
 
-表示是否Stage模型。&lt;br&gt;true：[Stage模型](../../../application-models/ability-terminology.md#stage模型)。&lt;br&gt;false：  
-[FA模型](../../../application-models/ability-terminology.md#fa模型)。
+表示是否Stage模型。&lt;br&gt;true：[Stage模型](../../../application-models/ability-terminology.md#stage模型)。&lt;br&gt;false： [FA模型](../../../application-models/ability-terminology.md#fa模型)。
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

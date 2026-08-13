@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-matrix4-export interface Point--><!--Device-matrix4-export interface Point-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 x: double
 ```
 
-x轴坐标。
-
-取值范围：(-∞, +∞)
+x轴坐标。 取值范围：(-∞, +∞)
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +40,15 @@ x轴坐标。
 y: double
 ```
 
-y轴坐标。
-
-取值范围：(-∞, +∞)
+y轴坐标。 取值范围：(-∞, +∞)
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

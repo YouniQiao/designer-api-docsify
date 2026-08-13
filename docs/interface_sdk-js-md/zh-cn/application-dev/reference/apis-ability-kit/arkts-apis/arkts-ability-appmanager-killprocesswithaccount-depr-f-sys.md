@@ -14,7 +14,7 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 
 **废弃版本：** 9
 
-**替代接口：** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
+**替代接口：** [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killProcessWithAccount（系统接口）)
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -69,7 +69,7 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 
 **废弃版本：** 9
 
-**替代接口：** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
+**替代接口：** [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killProcessWithAccount（系统接口）)
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -85,7 +85,7 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | accountId | number | 是 | 系统账号的账号ID，详情参考[getOsAccountCount] [getOsAccountCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当切断account进程成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当切断account进程成功，err为undefined，否则为错误对象。 |
 
 ## 示例
 

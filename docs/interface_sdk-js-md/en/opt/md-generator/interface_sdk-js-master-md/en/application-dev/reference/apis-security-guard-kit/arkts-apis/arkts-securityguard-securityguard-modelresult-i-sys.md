@@ -4,6 +4,8 @@ Provides the ModelResult type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-securityGuard-interface ModelResult--><!--Device-securityGuard-interface ModelResult-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -27,6 +29,8 @@ The result of security model.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-ModelResult-result: string--><!--Device-ModelResult-result: string-End-->
 

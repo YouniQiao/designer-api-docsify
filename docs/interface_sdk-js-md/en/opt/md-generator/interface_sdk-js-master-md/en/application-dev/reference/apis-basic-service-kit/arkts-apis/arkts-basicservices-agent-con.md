@@ -3,27 +3,35 @@
 ## VISIBILITY_COMPLETION
 
 ```TypeScript
-const VISIBILITY_COMPLETION: 1
+const VISIBILITY_COMPLETION: number
 ```
 
-([Notification](arkts-basicservices-agent-notification-i.md#Notification) visibility type) Displays completion notifications.
+Indicates to show completion notification.
 
-**Since:** 21
+**Since:** 23
 
-<!--Device-agent-const VISIBILITY_COMPLETION: 1--><!--Device-agent-const VISIBILITY_COMPLETION: 1-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-agent-const VISIBILITY_COMPLETION: int--><!--Device-agent-const VISIBILITY_COMPLETION: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## VISIBILITY_PROGRESS
 
 ```TypeScript
-const VISIBILITY_PROGRESS: 2
+const VISIBILITY_PROGRESS: number
 ```
 
-([Notification](arkts-basicservices-agent-notification-i.md#Notification) visibility type) Displays progress notifications.
+Indicates to show progress notification.
 
-**Since:** 21
+**Since:** 23
 
-<!--Device-agent-const VISIBILITY_PROGRESS: 2--><!--Device-agent-const VISIBILITY_PROGRESS: 2-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-agent-const VISIBILITY_PROGRESS: int--><!--Device-agent-const VISIBILITY_PROGRESS: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent

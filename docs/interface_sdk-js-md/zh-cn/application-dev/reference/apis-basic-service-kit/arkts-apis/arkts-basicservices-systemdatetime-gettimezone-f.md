@@ -8,9 +8,11 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 获取系统时区，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 
@@ -20,7 +22,7 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见 支持的系统时区。 |
 
 ## 示例
 
@@ -71,9 +73,11 @@ function getTimezone(): Promise<string>
 
 获取系统时区，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getTimezone(): Promise<string>--><!--Device-systemDateTime-function getTimezone(): Promise<string>-End-->
 
@@ -83,7 +87,7 @@ function getTimezone(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
+| Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见 支持的系统时区。 |
 
 ## 示例
 

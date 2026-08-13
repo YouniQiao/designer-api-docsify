@@ -1,0 +1,38 @@
+# ResolvedUIContext
+
+Defines the result of UIContext.resolveUIContext. This class is a subclass of UIContext and additionally provides the strategy used to obtain this UIContext.
+
+**Inheritance/Implementation:** ResolvedUIContext extends [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class ResolvedUIContext--><!--Device-unnamed-export declare class ResolvedUIContext-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## strategy
+
+```TypeScript
+strategy: ResolveStrategy
+```
+
+Resolving strategy of the UIContext.
+
+**Type:** [ResolveStrategy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ResolvedUIContext-strategy: ResolveStrategy--><!--Device-ResolvedUIContext-strategy: ResolveStrategy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

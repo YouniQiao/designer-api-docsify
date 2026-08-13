@@ -1,14 +1,10 @@
 # NativeMediaPlayerBridge
 
-Instance of the API class between the web media player and the ArkWeb kernel.
-
-The ArkWeb kernel uses an object of this interface class to control the player created by the application to take over web page media.
-
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
+Instance of the API class between the web media player and the ArkWeb kernel. The ArkWeb kernel uses an object of this interface class to control the player created by the application to take over web page media. > **NOTE：**> > - The sample effect is subject to the actual device.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface NativeMediaPlayerBridge--><!--Device-webview-interface NativeMediaPlayerBridge-End-->
 
@@ -30,6 +26,8 @@ Enables the player to enter full screen mode.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-enterFullscreen(): void--><!--Device-NativeMediaPlayerBridge-enterFullscreen(): void-End-->
@@ -45,6 +43,8 @@ exitFullscreen(): void
 Enables the player to exit full screen mode.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,6 +62,8 @@ Pauses playback.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-pause(): void--><!--Device-NativeMediaPlayerBridge-pause(): void-End-->
@@ -77,6 +79,8 @@ play(): void
 Plays this video.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,6 +98,8 @@ Releases this player.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-release(): void--><!--Device-NativeMediaPlayerBridge-release(): void-End-->
@@ -110,6 +116,8 @@ Resumes the player and its status information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-NativeMediaPlayerBridge-resumePlayer?(): void--><!--Device-NativeMediaPlayerBridge-resumePlayer?(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -123,6 +131,8 @@ seek(targetTime: number): void
 Seeks to a specific time point in the media.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -146,6 +156,8 @@ Sets the muted status.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void--><!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void-End-->
@@ -167,6 +179,8 @@ setPlaybackRate(playbackRate: number): void
 Sets the playback rate.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -190,6 +204,8 @@ Sets the playback volume.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void--><!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void-End-->
@@ -212,6 +228,8 @@ Suspends the player and save its status information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void--><!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -231,6 +249,8 @@ updateRect(x: number, y: number, width: number, height: number): void
 Updates the surface position information.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

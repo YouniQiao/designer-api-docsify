@@ -1,10 +1,12 @@
 # BackForwardList
 
-Provides back and forward history list information method. related to [HistoryItem](arkts-arkweb-webview-historyitem-i.md#HistoryItem).
+Provides back and forward history list information method. related to [HistoryItem](../../apis-na/arkts-apis/arkts-na-webview-historyitem-i.md#HistoryItem).
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
 
@@ -13,16 +15,20 @@ Provides back and forward history list information method. related to [HistoryIt
 ## getItemAtIndex
 
 ```TypeScript
-getItemAtIndex(index: int): HistoryItem
+getItemAtIndex(index: number): HistoryItem
 ```
 
-Get history entry at given index.
+获取历史列表中指定索引的历史记录项信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-BackForwardList-getItemAtIndex(index: int): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: int): HistoryItem-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,53 +36,61 @@ Get history entry at given index.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | Index of back forward list entry. |
+| index | number | 是 | 指定历史列表中的索引。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | HistoryItem at given index in back forward list. |
+| [HistoryItem](../../apis-na/arkts-apis/arkts-na-webview-historyitem-i.md) | 历史记录项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## currentIndex
 
 ```TypeScript
-currentIndex: int
+currentIndex: number
 ```
 
-Current index in BackForwardList.
+当前在页面历史列表中的索引。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-BackForwardList-currentIndex: int--><!--Device-BackForwardList-currentIndex: int-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BackForwardList-currentIndex: number--><!--Device-BackForwardList-currentIndex: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
-Size of in BackForwardList.
+历史列表中索引的数量，最多保存50条，超过时起始记录会被覆盖。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-BackForwardList-size: int--><!--Device-BackForwardList-size: int-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BackForwardList-size: number--><!--Device-BackForwardList-size: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

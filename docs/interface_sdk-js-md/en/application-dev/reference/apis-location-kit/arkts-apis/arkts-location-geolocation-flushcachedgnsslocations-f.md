@@ -12,7 +12,7 @@ import { geolocation } from '@kit.LocationKit';
 function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void
 ```
 
-All prepared GNSS locations are returned to the application through the callback function,and the bottom-layer buffer is cleared.
+All prepared GNSS locations are returned to the application through the callback function, and the bottom-layer buffer is cleared.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Deprecated since:** 9
 
-**Substitutes:** [flushCachedGnssLocations](ohos.geoLocationManager/geoLocationManager.flushCachedGnssLocations)
+**Substitutes:** [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,7 +32,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the result. |
 
 ## Examples
 
@@ -55,7 +55,7 @@ geolocation.flushCachedGnssLocations((err, result) => {
 function flushCachedGnssLocations(): Promise<boolean>
 ```
 
-All prepared GNSS locations are returned to the application through the callback function,and the bottom-layer buffer is cleared.
+All prepared GNSS locations are returned to the application through the callback function, and the bottom-layer buffer is cleared.
 
 **Since:** 8
 
@@ -63,7 +63,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Deprecated since:** 9
 
-**Substitutes:** [flushCachedGnssLocations](ohos.geoLocationManager/geoLocationManager.flushCachedGnssLocations)
+**Substitutes:** [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations)
 
 **Required permissions:** ohos.permission.LOCATION
 

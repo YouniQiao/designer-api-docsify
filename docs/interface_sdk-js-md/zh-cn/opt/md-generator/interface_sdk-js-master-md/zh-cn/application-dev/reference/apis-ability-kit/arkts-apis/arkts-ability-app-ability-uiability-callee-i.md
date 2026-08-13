@@ -2,13 +2,15 @@
 
 系统为UIAbility创建的后台通信对象，Callee UIAbility（被调用方）可以通过Callee对象接收Caller对象发送的数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Callee--><!--Device-unnamed-export interface Callee-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## off
+## off_string
 
 ```TypeScript
 off(method: string): void
@@ -16,7 +18,9 @@ off(method: string): void
 
 解除通用组件服务端注册消息通知callback。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,9 +38,9 @@ off(method: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200005-方法未注册) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200005](../errorcode-ability.md#16200005-方法未注册) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 
@@ -58,7 +62,7 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on(method: string, callback: CalleeCallback): void
@@ -66,7 +70,9 @@ on(method: string, callback: CalleeCallback): void
 
 通用组件服务端注册消息通知callback。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,9 +91,9 @@ on(method: string, callback: CalleeCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200004-方法已注册) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200004](../errorcode-ability.md#16200004-方法已注册) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 

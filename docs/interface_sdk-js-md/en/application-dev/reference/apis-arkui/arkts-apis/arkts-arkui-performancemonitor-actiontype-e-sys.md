@@ -1,10 +1,12 @@
 # ActionType (System API)
 
-Enumerates the input event type.
+Enumerates the trigger modes for user scenes (typically scenes involving animations).
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-performanceMonitor-export enum ActionType--><!--Device-performanceMonitor-export enum ActionType-End-->
 
@@ -18,11 +20,13 @@ Enumerates the input event type.
 LAST_DOWN = 0
 ```
 
-The user presses the finger on the screen.
+Pressing against the screen.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ The user presses the finger on the screen.
 LAST_UP = 1
 ```
 
-The user lifts up the finger from the screen.
+Lifting a finger off the screen.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,11 +64,13 @@ The user lifts up the finger from the screen.
 FIRST_MOVE = 2
 ```
 
-The user first moves the finger after pressing down the screen.
+First swiping on the screen.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

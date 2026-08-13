@@ -20,7 +20,7 @@ Obtains the connection state of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getProfileConnectionState](ohos.bluetoothManager/bluetoothManager.getProfileConnectionState)
+**Substitutes:** [getProfileConnectionState](arkts-connectivity-bluetoothmanager-getprofileconnectionstate-f.md#getProfileConnectionState)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

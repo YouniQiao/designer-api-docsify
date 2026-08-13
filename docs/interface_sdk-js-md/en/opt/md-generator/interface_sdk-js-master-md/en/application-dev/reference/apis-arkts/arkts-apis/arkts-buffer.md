@@ -1,9 +1,22 @@
 # @ohos.buffer
 
-A **Buffer** object represents a byte sequence of a fixed length. It is used to store binary data.  
-**Recommended use case**: Use Buffer when you need to process images and a large amount of binary data, and receive or upload files.
+/*
+ Copyright (c) 2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (The type of "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 9
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace buffer--><!--Device-unnamed-declare namespace buffer-End-->
 
@@ -22,18 +35,21 @@ import { buffer } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [alloc](arkts-arkts-buffer-alloc-f.md#alloc) |
-| [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocuninitialized) |
-| [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool) |
-| [byteLength](arkts-arkts-buffer-bytelength-f.md#bytelength) |
+| [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocUninitialized) |
+| [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocUninitializedFromPool) |
+| [byteLength](arkts-arkts-buffer-bytelength-f.md#byteLength) |
+| [byteLength](arkts-arkts-buffer-bytelength-f.md#byteLength) |
+| [compare](arkts-arkts-buffer-compare-f.md#compare) |
 | [compare](arkts-arkts-buffer-compare-f.md#compare) |
 | [concat](arkts-arkts-buffer-concat-f.md#concat) |
 | [from](arkts-arkts-buffer-from-f.md#from) |
-| [from](arkts-arkts-buffer-from-f.md#from-1) |
-| [from](arkts-arkts-buffer-from-f.md#from-2) |
-| [from](arkts-arkts-buffer-from-f.md#from-3) |
-| [from](arkts-arkts-buffer-from-f.md#from-4) |
-| [isBuffer](arkts-arkts-buffer-isbuffer-f.md#isbuffer) |
-| [isEncoding](arkts-arkts-buffer-isencoding-f.md#isencoding) |
+| [from](arkts-arkts-buffer-from-f.md#from) |
+| [from](arkts-arkts-buffer-from-f.md#from) |
+| [from](arkts-arkts-buffer-from-f.md#from) |
+| [from](arkts-arkts-buffer-from-f.md#from) |
+| [from](arkts-arkts-buffer-from-f.md#from) |
+| [isBuffer](arkts-arkts-buffer-isbuffer-f.md#isBuffer) |
+| [isEncoding](arkts-arkts-buffer-isencoding-f.md#isEncoding) |
 | [transcode](arkts-arkts-buffer-transcode-f.md#transcode) |
 
 ### Classes
@@ -47,10 +63,13 @@ import { buffer } from '@kit.ArkTS';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [BlobOptions](arkts-arkts-buffer-bloboptions-i.md) |
 | [TypedArray](arkts-arkts-buffer-typedarray-i.md) |
 
 ### Types
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [ArrayUnionType](arkts-arkts-buffer-arrayuniontype-t.md) |
 | [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md) |
+| [TypedArray](arkts-arkts-buffer-typedarray-t.md) |

@@ -2,7 +2,9 @@
 
 Defines network link information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface LinkAddress--><!--Device-connection-export interface LinkAddress-End-->
 
@@ -24,7 +26,9 @@ Link address.
 
 **Type:** NetAddress
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LinkAddress-address: NetAddress--><!--Device-LinkAddress-address: NetAddress-End-->
 
@@ -40,7 +44,9 @@ The length of the link address prefix.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LinkAddress-prefixLength: int--><!--Device-LinkAddress-prefixLength: int-End-->
 

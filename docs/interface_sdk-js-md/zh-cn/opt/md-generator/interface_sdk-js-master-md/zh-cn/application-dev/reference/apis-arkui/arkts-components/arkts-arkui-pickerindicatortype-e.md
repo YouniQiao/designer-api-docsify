@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum PickerIndicatorType--><!--Device-unnamed-declare enum PickerIndicatorType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ BACKGROUND = 0
 通过给选中项添加背景，标识选中项。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ DIVIDER = 1
 通过在选中项的上下边缘添加分割线，标识选中项。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

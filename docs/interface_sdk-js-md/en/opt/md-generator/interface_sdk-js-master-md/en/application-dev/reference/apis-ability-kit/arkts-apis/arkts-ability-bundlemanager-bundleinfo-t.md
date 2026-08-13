@@ -1,17 +1,17 @@
 # BundleInfo
 
 ```TypeScript
-export type BundleInfo = _BundleInfo.BundleInfo
+export type BundleInfo = _BundleInfo
 ```
 
 Defines the bundle information.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type BundleInfo = _BundleInfo.BundleInfo--><!--Device-bundleManager-export type BundleInfo = _BundleInfo.BundleInfo-End-->
+<!--Device-bundleManager-export type BundleInfo = _BundleInfo--><!--Device-bundleManager-export type BundleInfo = _BundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.BundleInfo
+**Property type:** _BundleInfo

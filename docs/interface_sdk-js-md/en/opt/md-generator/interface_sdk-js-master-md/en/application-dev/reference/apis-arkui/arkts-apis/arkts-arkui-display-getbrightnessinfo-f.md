@@ -12,12 +12,13 @@ import { display } from '@kit.ArkUI';
 function getBrightnessInfo(displayId: number): BrightnessInfo
 ```
 
-Obtains the screen brightness information of a display. If the screen does not support HDR, the  
-**currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo)object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
+Obtains the screen brightness information of a display. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function getBrightnessInfo(displayId: long): BrightnessInfo--><!--Device-display-function getBrightnessInfo(displayId: long): BrightnessInfo-End-->
 
@@ -39,9 +40,9 @@ Obtains the screen brightness information of a display. If the screen does not s
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1400004](../errorcode-display.md#1400004-parameter-error) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

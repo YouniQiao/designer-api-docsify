@@ -6,7 +6,7 @@ Data struct describes geographic locations.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GeoAddress](ohos.geoLocationManager/geoLocationManager.GeoAddress)
+**Substitutes:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md#GeoAddress)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,7 +34,7 @@ Indicates website URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** [addressUrl](ohos.geoLocationManager/geoLocationManager.GeoAddress#addressUrl)
+**Substitutes:** [addressUrl](arkts-location-geolocationmanager-geoaddress-i.md#addressUrl)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -56,7 +56,7 @@ Indicates administrative region name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [administrativeArea](ohos.geoLocationManager/geoLocationManager.GeoAddress#administrativeArea)
+**Substitutes:** [administrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#administrativeArea)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -78,7 +78,7 @@ Indicates country code.
 
 **Deprecated since:** 9
 
-**Substitutes:** [countryCode](ohos.geoLocationManager/geoLocationManager.GeoAddress#countryCode)
+**Substitutes:** [countryCode](arkts-location-geolocationmanager-geoaddress-i.md#countryCode)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -100,7 +100,7 @@ Indicates country name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [countryName](ohos.geoLocationManager/geoLocationManager.GeoAddress#countryName)
+**Substitutes:** [countryName](arkts-location-geolocationmanager-geoaddress-i.md#countryName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -122,7 +122,7 @@ Indicates additional information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptions](ohos.geoLocationManager/geoLocationManager.GeoAddress#descriptions)
+**Substitutes:** [descriptions](arkts-location-geolocationmanager-geoaddress-i.md#descriptions)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -144,7 +144,7 @@ Indicates the amount of additional descriptive information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptionsSize](ohos.geoLocationManager/geoLocationManager.GeoAddress#descriptionsSize)
+**Substitutes:** [descriptionsSize](arkts-location-geolocationmanager-geoaddress-i.md#descriptionsSize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -158,7 +158,7 @@ Indicates the amount of additional descriptive information.
 latitude?: number
 ```
 
-Indicates latitude information.A positive value indicates north latitude,and a negative value indicates south latitude.
+Indicates latitude information. A positive value indicates north latitude, and a negative value indicates south latitude.
 
 **Type:** number
 
@@ -166,7 +166,7 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 
 **Deprecated since:** 9
 
-**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.GeoAddress#latitude)
+**Substitutes:** [latitude](arkts-location-geolocationmanager-geoaddress-i.md#latitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -180,7 +180,7 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 locale?: string
 ```
 
-Indicates language used for the location description.zh indicates Chinese, and en indicates English.
+Indicates language used for the location description. zh indicates Chinese, and en indicates English.
 
 **Type:** string
 
@@ -188,7 +188,7 @@ Indicates language used for the location description.zh indicates Chinese, and e
 
 **Deprecated since:** 9
 
-**Substitutes:** [locale](ohos.geoLocationManager/geoLocationManager.GeoAddress#locale)
+**Substitutes:** [locale](arkts-location-geolocationmanager-geoaddress-i.md#locale)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -210,7 +210,7 @@ Indicates locality information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [locality](ohos.geoLocationManager/geoLocationManager.GeoAddress#locality)
+**Substitutes:** [locality](arkts-location-geolocationmanager-geoaddress-i.md#locality)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -224,7 +224,7 @@ Indicates locality information.
 longitude?: number
 ```
 
-Indicates longitude information.A positive value indicates east longitude ,and a negative value indicates west longitude .
+Indicates longitude information. A positive value indicates east longitude , and a negative value indicates west longitude .
 
 **Type:** number
 
@@ -232,7 +232,7 @@ Indicates longitude information.A positive value indicates east longitude ,and a
 
 **Deprecated since:** 9
 
-**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.GeoAddress#longitude)
+**Substitutes:** [longitude](arkts-location-geolocationmanager-geoaddress-i.md#longitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -254,7 +254,7 @@ Indicates phone number.
 
 **Deprecated since:** 9
 
-**Substitutes:** [phoneNumber](ohos.geoLocationManager/geoLocationManager.GeoAddress#phoneNumber)
+**Substitutes:** [phoneNumber](arkts-location-geolocationmanager-geoaddress-i.md#phoneNumber)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -276,7 +276,7 @@ Indicates landmark of the location.
 
 **Deprecated since:** 9
 
-**Substitutes:** [placeName](ohos.geoLocationManager/geoLocationManager.GeoAddress#placeName)
+**Substitutes:** [placeName](arkts-location-geolocationmanager-geoaddress-i.md#placeName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -298,7 +298,7 @@ Indicates postal code.
 
 **Deprecated since:** 9
 
-**Substitutes:** [postalCode](ohos.geoLocationManager/geoLocationManager.GeoAddress#postalCode)
+**Substitutes:** [postalCode](arkts-location-geolocationmanager-geoaddress-i.md#postalCode)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -320,7 +320,7 @@ Indicates house information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [premises](ohos.geoLocationManager/geoLocationManager.GeoAddress#premises)
+**Substitutes:** [premises](arkts-location-geolocationmanager-geoaddress-i.md#premises)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -342,7 +342,7 @@ Indicates road name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [roadName](ohos.geoLocationManager/geoLocationManager.GeoAddress#roadName)
+**Substitutes:** [roadName](arkts-location-geolocationmanager-geoaddress-i.md#roadName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -364,7 +364,7 @@ Indicates sub-administrative region name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [subAdministrativeArea](ohos.geoLocationManager/geoLocationManager.GeoAddress#subAdministrativeArea)
+**Substitutes:** [subAdministrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#subAdministrativeArea)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -386,7 +386,7 @@ Indicates sub-locality information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [subLocality](ohos.geoLocationManager/geoLocationManager.GeoAddress#subLocality)
+**Substitutes:** [subLocality](arkts-location-geolocationmanager-geoaddress-i.md#subLocality)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -408,7 +408,7 @@ Indicates auxiliary road information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [subRoadName](ohos.geoLocationManager/geoLocationManager.GeoAddress#subRoadName)
+**Substitutes:** [subRoadName](arkts-location-geolocationmanager-geoaddress-i.md#subRoadName)
 
 **Required permissions:** ohos.permission.LOCATION
 

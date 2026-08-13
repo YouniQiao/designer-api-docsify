@@ -2,7 +2,9 @@
 
 Defines the return value of the listener callback.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
 
@@ -24,7 +26,9 @@ sharedAlbumAssets of the same type
 
 **Type:** Array&lt;[SharedAlbumAsset](arkts-medialibrary-photoaccesshelper-sharedalbumasset-i-sys.md)&gt;
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>--><!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>-End-->
 
@@ -42,7 +46,9 @@ sharedExtraPhotoAssets of the same type
 
 **Type:** Array&lt;SharedPhotoAsset&gt;
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>-End-->
 
@@ -60,7 +66,9 @@ sharedPhotoAssets of the same type
 
 **Type:** Array&lt;SharedPhotoAsset&gt;
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>-End-->
 

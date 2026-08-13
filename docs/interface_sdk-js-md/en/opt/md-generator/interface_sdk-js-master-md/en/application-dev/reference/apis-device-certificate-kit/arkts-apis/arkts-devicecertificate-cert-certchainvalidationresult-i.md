@@ -2,7 +2,9 @@
 
 Represents the return value of certificate chain validation.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface CertChainValidationResult--><!--Device-cert-interface CertChainValidationResult-End-->
 
@@ -24,7 +26,9 @@ Entity certificate.
 
 **Type:** X509Cert
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Trust anchor.
 
 **Type:** [X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -18,6 +18,8 @@ Creates a TCPSocket object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-function constructTCPSocketInstance(): TCPSocket--><!--Device-socket-function constructTCPSocketInstance(): TCPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

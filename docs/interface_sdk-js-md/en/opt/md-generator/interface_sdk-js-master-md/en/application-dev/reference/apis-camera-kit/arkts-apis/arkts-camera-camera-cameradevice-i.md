@@ -2,7 +2,9 @@
 
 Describes the camera device information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
 
@@ -26,6 +28,8 @@ Automotive camera position attribute.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -44,7 +48,9 @@ Camera ID.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -62,7 +68,9 @@ Camera installation angle, which does not change as the screen rotates. The valu
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -80,7 +88,9 @@ Camera position.
 
 **Type:** [CameraPosition](arkts-camera-camera-cameraposition-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -98,7 +108,9 @@ Camera type.
 
 **Type:** [CameraType](arkts-camera-camera-cameratype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -116,7 +128,9 @@ Camera connection type.
 
 **Type:** [ConnectionType](arkts-camera-camera-connectiontype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -136,47 +150,13 @@ List of physical cameras that form the logical camera.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>--><!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## hostDeviceName
-
-```TypeScript
-readonly hostDeviceName: string
-```
-
-Remote device name. If no remote device is available, an empty value is returned.
-
-**Type:** string
-
-**Since:** 15
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraDevice-readonly hostDeviceName: string--><!--Device-CameraDevice-readonly hostDeviceName: string-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## hostDeviceType
-
-```TypeScript
-readonly hostDeviceType: HostDeviceType
-```
-
-Remote device type.
-
-**Type:** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
-
-**Since:** 15
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType--><!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -191,6 +171,8 @@ Whether a camera is a logical camera (consisting of multiple physical cameras). 
 **Type:** boolean
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,29 +194,13 @@ Array of lens distortion parameters.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-CameraDevice-readonly lensDistortion?: Array<double>--><!--Device-CameraDevice-readonly lensDistortion?: Array<double>-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## lensEquivalentFocalLength
-
-```TypeScript
-readonly lensEquivalentFocalLength?: Array<number>
-```
-
-Equivalent focal length of the camera lens.
-
-**Type:** Array&lt;number&gt;
-
-**Since:** 24
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>--><!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -249,6 +215,8 @@ Actual focal length of the lens.
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -270,6 +238,8 @@ Array of lens intrinsic calibration parameters.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -289,6 +259,8 @@ Minimum focus distance of the camera.
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,6 +282,8 @@ Arrangement mode of the sensor color filter.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -330,6 +304,8 @@ Physical dimensions (width and height) of the sensor.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -349,6 +325,8 @@ Pixel array dimensions (width and height, in pixels) of the sensor.
 **Type:** Array&lt;number&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

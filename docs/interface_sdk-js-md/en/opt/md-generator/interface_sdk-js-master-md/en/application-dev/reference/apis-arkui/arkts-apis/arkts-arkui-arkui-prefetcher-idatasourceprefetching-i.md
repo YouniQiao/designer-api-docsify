@@ -6,7 +6,9 @@ Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md#IData
 
 **Since:** 12
 
-<!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource--><!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface IDataSourcePrefetching--><!--Device-unnamed-export interface IDataSourcePrefetching-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ cancel?(index: number): Promise<void> | void
 Cancels the prefetching of a specified data item from the dataset. This API can be either synchronous or asynchronous. This API is optional. If the data source does not implement this API, the prefetching cancellation operation will not be performed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,6 +59,8 @@ prefetch(index: number): Promise<void> | void
 Prefetches a specified data item from the dataset. This API can be either synchronous or asynchronous. When the visible area changes, the prefetching algorithm calls this API if it determines that the data item about to enter the visible area needs to be prefetched.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

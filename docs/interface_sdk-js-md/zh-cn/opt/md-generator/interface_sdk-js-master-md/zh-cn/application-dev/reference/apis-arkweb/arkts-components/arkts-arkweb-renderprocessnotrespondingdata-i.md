@@ -4,6 +4,8 @@ Defines the render process not responding info.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RenderProcessNotRespondingData--><!--Device-unnamed-declare interface RenderProcessNotRespondingData-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ JavaScript stack info of the webpage when render process not responding.
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-RenderProcessNotRespondingData-jsStack: string--><!--Device-RenderProcessNotRespondingData-jsStack: string-End-->
 
@@ -36,6 +40,8 @@ Process id of render process not responding.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-RenderProcessNotRespondingData-pid: number--><!--Device-RenderProcessNotRespondingData-pid: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -51,6 +57,8 @@ Reason for the render process not responding.
 **类型：** [RenderProcessNotRespondingReason](arkts-arkweb-renderprocessnotrespondingreason-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-RenderProcessNotRespondingData-reason: RenderProcessNotRespondingReason--><!--Device-RenderProcessNotRespondingData-reason: RenderProcessNotRespondingReason-End-->
 

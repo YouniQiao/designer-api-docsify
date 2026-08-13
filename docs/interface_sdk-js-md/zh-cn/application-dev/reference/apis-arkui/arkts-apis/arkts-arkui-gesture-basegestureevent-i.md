@@ -1,14 +1,16 @@
 # BaseGestureEvent
 
-基础手势事件类型。继承自[BaseEvent](BaseEvent)。
+基础手势事件类型。继承自BaseEvent。
 
-**继承/实现关系：** BaseGestureEvent extends [BaseEvent](BaseEvent)
+**继承/实现关系：** BaseGestureEvent extends BaseEvent
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export interface BaseGestureEvent extends BaseEvent--><!--Device-unnamed-export interface BaseGestureEvent extends BaseEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface BaseGestureEvent--><!--Device-unnamed-export interface BaseGestureEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ fingerInfos?: FingerInfo[]
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +49,8 @@ fingerList: FingerInfo[]
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

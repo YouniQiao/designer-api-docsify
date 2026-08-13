@@ -1,15 +1,4 @@
-# @ohos.atomicservice.AtomicServiceWeb(Defines the atomicService web component)
-
-###### Required Permissions
- **ohos.permission.INTERNET**, required for accessing online web pages. For details about how to apply for a
- permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
- ###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](./@internal/component/ets/common) are not supported.
- ###### Events
- The [universal events](./@internal/component/ets/common) are not supported.
-
+# @ohos.atomicservice.AtomicServiceWeb
 
 ## Modules to Import
 
@@ -23,13 +12,13 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md) | Implements an **AtomicServiceWebController** object for controlling the behavior of the **AtomicServiceWeb**component. An **AtomicServiceWebController** can control only one **AtomicServiceWeb** component, and the APIs on the  **AtomicServiceWebController** can be called only after it has been bound to the target **AtomicServiceWeb**component. |
+| [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md) | Implements an **AtomicServiceWebController** object for controlling the behavior of the **AtomicServiceWeb** component. An **AtomicServiceWebController** can control only one **AtomicServiceWeb** component, and the APIs on the **AtomicServiceWebController** can be called only after it has been bound to the target **AtomicServiceWeb** component. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceWeb](arkts-arkui-atomicservice-atomicserviceweb-atomicserviceweb-s.md) | **AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.  > **NOTE：** >  > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. |
+| [AtomicServiceWeb](arkts-arkui-atomicservice-atomicserviceweb-atomicserviceweb-s.md) | **AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. |
 
 ### Interfaces
 

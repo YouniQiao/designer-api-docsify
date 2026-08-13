@@ -1,11 +1,12 @@
 # VideoPlayControlGroup
 
-Enumerates the video playback component groups. They are used only when  
-[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_PLAY**.
+Enumerates the video playback component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_PLAY**.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-enum VideoPlayControlGroup--><!--Device-PiPWindow-enum VideoPlayControlGroup-End-->
 
@@ -17,15 +18,15 @@ Enumerates the video playback component groups. They are used only when
 VIDEO_PREVIOUS_NEXT = 101
 ```
 
-Previous/Next component group for video playback.
+Previous/Next component group for video playback. This component group is mutually exclusive with the fast-forward/rewind component group. It cannot be added if the fast-forward/rewind component group is added.
 
-This component group is mutually exclusive with the fast-forward/rewind component group. It cannot be added if the fast-forward/rewind component group is added.
+**Since:** 26.0.0
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101--><!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101-End-->
 
@@ -37,15 +38,15 @@ This component group is mutually exclusive with the fast-forward/rewind componen
 FAST_FORWARD_BACKWARD = 102
 ```
 
-Fast-forward/Rewind component group for video playback.
+Fast-forward/Rewind component group for video playback. This component group is mutually exclusive with the previous/next component group. It cannot be added if the previous/next component group is added.
 
-This component group is mutually exclusive with the previous/next component group. It cannot be added if the previous/next component group is added.
+**Since:** 26.0.0
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102--><!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102-End-->
 

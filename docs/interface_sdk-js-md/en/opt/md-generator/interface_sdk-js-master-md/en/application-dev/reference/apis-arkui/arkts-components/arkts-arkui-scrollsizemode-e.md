@@ -4,6 +4,8 @@ Define the scroll size mode of the sheet.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ScrollSizeMode--><!--Device-unnamed-declare enum ScrollSizeMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ FOLLOW_DETENT = 0
 Sheet change scroll size after the slide ends.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ CONTINUOUS = 1
 Sheet change scroll size during the sliding process.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

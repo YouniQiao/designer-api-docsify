@@ -1,20 +1,22 @@
 # ModuleAbilityInfo (System API)
 
 ```TypeScript
-export type ModuleAbilityInfo = _PackInfo.ModuleAbilityInfo
+export type ModuleAbilityInfo = _ModuleAbilityInfo
 ```
 
 Defines the ability information of the module.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-freeInstall-export type ModuleAbilityInfo = _PackInfo.ModuleAbilityInfo--><!--Device-freeInstall-export type ModuleAbilityInfo = _PackInfo.ModuleAbilityInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-freeInstall-export type ModuleAbilityInfo = _ModuleAbilityInfo--><!--Device-freeInstall-export type ModuleAbilityInfo = _ModuleAbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.ModuleAbilityInfo
+**Property type:** _ModuleAbilityInfo
 

@@ -2,9 +2,11 @@
 
 呼叫能力事件Id。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export enum CallAbilityEventId--><!--Device-call-export enum CallAbilityEventId-End-->
 
@@ -20,9 +22,11 @@ EVENT_DIAL_NO_CARRIER = 1
 
 拨号无载波事件。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_DIAL_NO_CARRIER = 1--><!--Device-CallAbilityEventId-EVENT_DIAL_NO_CARRIER = 1-End-->
 
@@ -38,9 +42,11 @@ EVENT_INVALID_FDN_NUMBER = 2
 
 无效的FDN号事件。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_INVALID_FDN_NUMBER = 2--><!--Device-CallAbilityEventId-EVENT_INVALID_FDN_NUMBER = 2-End-->
 
@@ -56,9 +62,11 @@ EVENT_HOLD_CALL_FAILED = 3
 
 保持通话失败事件。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_HOLD_CALL_FAILED = 3--><!--Device-CallAbilityEventId-EVENT_HOLD_CALL_FAILED = 3-End-->
 
@@ -74,9 +82,11 @@ EVENT_SWAP_CALL_FAILED = 4
 
 保持当前通话并接听等待中电话失败事件。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_SWAP_CALL_FAILED = 4--><!--Device-CallAbilityEventId-EVENT_SWAP_CALL_FAILED = 4-End-->
 
@@ -92,9 +102,11 @@ EVENT_COMBINE_CALL_FAILED = 5
 
 合并通话失败。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_COMBINE_CALL_FAILED = 5--><!--Device-CallAbilityEventId-EVENT_COMBINE_CALL_FAILED = 5-End-->
 
@@ -110,9 +122,11 @@ EVENT_SPLIT_CALL_FAILED = 6
 
 分离通话失败。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_SPLIT_CALL_FAILED = 6--><!--Device-CallAbilityEventId-EVENT_SPLIT_CALL_FAILED = 6-End-->
 
@@ -128,9 +142,11 @@ EVENT_SHOW_FULL_SCREEN = 7
 
 全屏显示通话界面。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_SHOW_FULL_SCREEN = 7--><!--Device-CallAbilityEventId-EVENT_SHOW_FULL_SCREEN = 7-End-->
 
@@ -146,9 +162,11 @@ EVENT_SHOW_FLOAT_WINDOW = 8
 
 悬浮窗显示通话界面。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallAbilityEventId-EVENT_SHOW_FLOAT_WINDOW = 8--><!--Device-CallAbilityEventId-EVENT_SHOW_FLOAT_WINDOW = 8-End-->
 

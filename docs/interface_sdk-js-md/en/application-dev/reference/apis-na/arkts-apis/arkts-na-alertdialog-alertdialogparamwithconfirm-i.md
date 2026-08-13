@@ -1,0 +1,38 @@
+# AlertDialogParamWithConfirm
+
+Defines the AlertDialog with confirm button.
+
+**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#AlertDialogParam)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface AlertDialogParamWithConfirm--><!--Device-unnamed-export declare interface AlertDialogParamWithConfirm-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## confirm
+
+```TypeScript
+confirm?: AlertDialogButtonBaseOptions
+```
+
+Invoke the commit function. Anonymous Object Rectification.
+
+**Type:** [AlertDialogButtonBaseOptions](arkts-na-alertdialog-alertdialogbuttonbaseoptions-i.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AlertDialogParamWithConfirm-confirm?: AlertDialogButtonBaseOptions--><!--Device-AlertDialogParamWithConfirm-confirm?: AlertDialogButtonBaseOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

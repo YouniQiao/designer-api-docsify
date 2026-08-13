@@ -1,8 +1,6 @@
 # ForEach
 
-ForEach接口基于数组类型数据进行循环渲染，可基于数组数据快速生成结构相同、内容不同的子组件，适用于动态列表、批量数据展示等场景，需与容器组件配合使用。
-
-开发者指南见：[ForEach开发者指南](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)。
+ForEach接口基于数组类型数据进行循环渲染，可基于数组数据快速生成结构相同、内容不同的子组件，适用于动态列表、批量数据展示等场景，需与容器组件配合使用。 开发者指南见：[ForEach开发者指南](../../../ui/rendering-control/arkts-rendering-control-foreach.md)。
 
 ## ForEach
 
@@ -14,12 +12,13 @@ ForEach(
   )
 ```
 
-该接口需要与容器组件配合使用，且接口返回的组件应当是允许包含在ForEach父容器组件中的子组件。例如，[ListItem]{@link ./list_item}组件要求ForEach的父容器组件必须为  
-[List]{@link ./list}组件或[ListItemGroup]{@link ./list_item_group}组件。
+该接口需要与容器组件配合使用，且接口返回的组件应当是允许包含在ForEach父容器组件中的子组件。例如，ListItem组件要求ForEach的父容器组件必须为 List组件或ListItemGroup组件。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

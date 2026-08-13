@@ -16,6 +16,8 @@ Query whether the specified volume is currently in use. This API uses a promise 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,7 +45,7 @@ Query whether the specified volume is currently in use. This API uses a promise 
 | Error Code ID |
 | --- |
 | 13600010 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13600033 |

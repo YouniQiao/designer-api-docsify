@@ -4,6 +4,8 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -23,6 +25,8 @@ next(): ReaderIteratorResult
 Obtains the **ReaderIterator** result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
 

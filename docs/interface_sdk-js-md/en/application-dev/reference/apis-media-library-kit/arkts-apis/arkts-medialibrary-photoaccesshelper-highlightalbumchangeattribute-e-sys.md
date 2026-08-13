@@ -2,9 +2,11 @@
 
 Enumerates the attributes of a highlights album.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum HighlightAlbumChangeAttribute--><!--Device-photoAccessHelper-enum HighlightAlbumChangeAttribute-End-->
 
@@ -20,9 +22,11 @@ IS_VIEWED = 0
 
 Whether the highlights album has been viewed.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightAlbumChangeAttribute-IS_VIEWED = 0--><!--Device-HighlightAlbumChangeAttribute-IS_VIEWED = 0-End-->
 
@@ -38,9 +42,11 @@ NOTIFICATION_TIME = 1
 
 Time when the application sends a highlight notification.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightAlbumChangeAttribute-NOTIFICATION_TIME = 1--><!--Device-HighlightAlbumChangeAttribute-NOTIFICATION_TIME = 1-End-->
 
@@ -56,9 +62,11 @@ IS_FAVORITE = 2
 
 Whether the highlights album is marked as a favorite.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightAlbumChangeAttribute-IS_FAVORITE = 2--><!--Device-HighlightAlbumChangeAttribute-IS_FAVORITE = 2-End-->
 

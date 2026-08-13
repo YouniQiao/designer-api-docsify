@@ -2,9 +2,11 @@
 
 Describes wakeup intelligent voice engine callback information.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineCallbackInfo--><!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineCallbackInfo-End-->
 
@@ -28,9 +30,11 @@ Describes wakeup event context.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEngineCallbackInfo-context: string--><!--Device-WakeupIntelligentVoiceEngineCallbackInfo-context: string-End-->
 
@@ -48,9 +52,11 @@ Wakeup event id.
 
 **Type:** [WakeupIntelligentVoiceEventType](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceeventtype-e-sys.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEngineCallbackInfo-eventId: WakeupIntelligentVoiceEventType--><!--Device-WakeupIntelligentVoiceEngineCallbackInfo-eventId: WakeupIntelligentVoiceEventType-End-->
 
@@ -68,9 +74,11 @@ Is success.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEngineCallbackInfo-isSuccess: boolean--><!--Device-WakeupIntelligentVoiceEngineCallbackInfo-isSuccess: boolean-End-->
 

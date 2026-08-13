@@ -6,7 +6,7 @@ Enumerates the event types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [EventType](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType)
+**Substitutes:** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md#EventType)
 
 <!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
 
@@ -24,7 +24,7 @@ Fault event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FAULT](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#FAULT)
+**Substitutes:** [FAULT](arkts-performanceanalysis-hiappevent-eventtype-e.md#FAULT)
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
@@ -42,7 +42,7 @@ Statistic event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATISTIC](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#STATISTIC)
+**Substitutes:** [STATISTIC](arkts-performanceanalysis-hiappevent-eventtype-e.md#STATISTIC)
 
 <!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
@@ -60,7 +60,7 @@ Security event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SECURITY](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#SECURITY)
+**Substitutes:** [SECURITY](arkts-performanceanalysis-hiappevent-eventtype-e.md#SECURITY)
 
 <!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
@@ -78,7 +78,7 @@ User behavior event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BEHAVIOR](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#BEHAVIOR)
+**Substitutes:** [BEHAVIOR](arkts-performanceanalysis-hiappevent-eventtype-e.md#BEHAVIOR)
 
 <!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 

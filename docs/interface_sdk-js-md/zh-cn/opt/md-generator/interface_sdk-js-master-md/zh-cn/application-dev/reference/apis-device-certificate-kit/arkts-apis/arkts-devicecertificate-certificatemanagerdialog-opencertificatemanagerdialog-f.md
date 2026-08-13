@@ -8,7 +8,9 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 
 打开证书管理对话框，显示相应的页面。调用成功后，用户可以在弹出的对话框中对证书进行查看、安装、卸载等操作。使用Promise异步回调。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -35,9 +37,9 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

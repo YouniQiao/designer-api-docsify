@@ -2,9 +2,11 @@
 
 Describes the event emit priority.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-emitter-export interface Options--><!--Device-emitter-export interface Options-End-->
 
@@ -26,9 +28,11 @@ Event priority. The default value is **EventPriority.LOW**.
 
 **Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

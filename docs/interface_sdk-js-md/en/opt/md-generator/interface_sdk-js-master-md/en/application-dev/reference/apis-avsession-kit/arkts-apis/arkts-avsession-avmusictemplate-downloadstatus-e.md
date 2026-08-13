@@ -4,6 +4,8 @@ Enumeration of DownloadStatus.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-enum DownloadStatus--><!--Device-avMusicTemplate-enum DownloadStatus-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -17,6 +19,8 @@ DOWNLOAD_SUCCESS = 0
 DOWNLOAD_SUCCESS
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ DOWNLOADING
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DownloadStatus-DOWNLOADING = 1--><!--Device-DownloadStatus-DOWNLOADING = 1-End-->
@@ -49,6 +55,8 @@ DOWNLOAD_FAIL = 2
 DOWNLOAD_FAIL
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

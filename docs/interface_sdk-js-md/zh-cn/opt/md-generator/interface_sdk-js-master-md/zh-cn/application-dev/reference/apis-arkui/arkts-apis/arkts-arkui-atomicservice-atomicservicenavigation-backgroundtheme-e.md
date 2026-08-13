@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum BackgroundTheme--><!--Device-unnamed-export declare enum BackgroundTheme-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DARK = 1
 背景底色为黑色。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ LIGHT = 2
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BackgroundTheme-LIGHT = 2--><!--Device-BackgroundTheme-LIGHT = 2-End-->
@@ -49,6 +55,8 @@ DEFAULT = 3
 背景底色为灰白色。颜色值`#F1F3F5` 。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

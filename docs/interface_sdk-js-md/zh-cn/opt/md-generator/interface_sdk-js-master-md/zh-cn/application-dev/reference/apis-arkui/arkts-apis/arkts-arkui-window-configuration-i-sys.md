@@ -2,7 +2,9 @@
 
 创建子窗口或系统窗口时的参数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface Configuration--><!--Device-window-interface Configuration-End-->
 
@@ -14,21 +16,13 @@
 defaultDensityEnabled?: boolean
 ```
 
-是否使用系统默认Density，使用系统默认Density之后，窗口不会跟随系统显示大小变化重新布局。
-
-当创建的系统窗口设置此参数为true时，表示当前窗口使用系统默认Density，且不会受到  
-[setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
-[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setDefaultDensityEnabled)设置的本窗口的相关影响。
-
-当创建的系统窗口设置此参数为false时，表示当前窗口不使用系统默认Density，且会受到  
-[setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
-[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setDefaultDensityEnabled)设置的本窗口的相关影响。
-
-默认为false。
+是否使用系统默认Density，使用系统默认Density之后，窗口不会跟随系统显示大小变化重新布局。 当创建的系统窗口设置此参数为true时，表示当前窗口使用系统默认Density，且不会受到 [setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12) 和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setCustomDensity)设置的主窗口以及 [setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setDefaultDensityEnabled)设置的本窗口的相关影响。 当创建的系统窗口设置此参数为false时，表示当前窗口不使用系统默认Density，且会受到 [setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12) 和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setCustomDensity)设置的主窗口以及 [setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setDefaultDensityEnabled)设置的本窗口的相关影响。 默认为false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Configuration-defaultDensityEnabled?: boolean--><!--Device-Configuration-defaultDensityEnabled?: boolean-End-->
 
@@ -46,7 +40,9 @@ zIndex?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Configuration-zIndex?: int--><!--Device-Configuration-zIndex?: int-End-->
 

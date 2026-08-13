@@ -1,16 +1,12 @@
 # @ohos.prompt
 
-创建并显示文本提示框、对话框和操作菜单。
-
-> **说明：**
-> 
-> 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md#promptAction)。
+创建并显示文本提示框、对话框和操作菜单。 > **说明：** > > 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md#promptAction)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [promptAction/promptAction](ohos.promptAction/promptAction)
+**替代接口：** [promptAction/promptAction](arkts-arkui-promptaction-n.md#promptAction)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 
@@ -22,11 +18,11 @@
 
 | 名称 |
 | --- |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu) |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu-1) |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog) |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog-1) |
-| [showToast](arkts-arkui-prompt-showtoast-f.md#showtoast) |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showActionMenu) |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showActionMenu) |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md#showDialog) |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md#showDialog) |
+| [showToast](arkts-arkui-prompt-showtoast-f.md#showToast) |
 
 ### 接口
 

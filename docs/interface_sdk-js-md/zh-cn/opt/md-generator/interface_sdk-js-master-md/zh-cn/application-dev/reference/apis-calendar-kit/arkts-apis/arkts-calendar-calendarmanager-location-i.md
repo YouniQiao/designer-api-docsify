@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-calendarManager-interface Location--><!--Device-calendarManager-interface Location-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -19,6 +21,8 @@ latitude?: number
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ location?: string
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Location-location?: string--><!--Device-Location-location?: string-End-->
@@ -55,6 +61,8 @@ longitude?: number
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

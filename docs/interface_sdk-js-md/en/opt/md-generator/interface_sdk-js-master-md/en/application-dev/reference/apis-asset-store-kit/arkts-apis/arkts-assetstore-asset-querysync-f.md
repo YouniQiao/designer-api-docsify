@@ -12,14 +12,11 @@ import { asset } from '@kit.AssetStoreKit';
 function querySync(query: AssetMap): Array<AssetMap>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset, call  
-[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync) before this API and call  
-[asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postQuerySync) after this API. For details about the development procedure, see  
-[Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md).This API returns the result synchronously.
-
-If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
+Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync) before this API and call [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postQuerySync) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API returns the result synchronously. If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -43,20 +40,20 @@ If no asset is found, an exception indicating that no asset is found is thrown i
 
 | Error Code ID |
 | --- |
-| [24000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000012-account-system-service-abnormal) |
-| [24000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000013-access-token-service-abnormal) |
-| [24000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000010-ipc-failed) |
-| [24000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
-| [24000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000008-database-operation-failed) |
-| [24000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000009-cryptographic-operation-failed) |
-| [24000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000006-insufficient-memory) |
-| [24000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000007-asset-corrupted) |
-| [24000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000004-access-denied) |
-| [24000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000005-incorrect-screen-lock-status) |
-| [24000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000002-asset-not-found) |
-| [24000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000001-asset-store-service-unavailable) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24000017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000017-function-not-supported) |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) |
+| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) |
+| [24000004](../errorcode-asset.md#24000004-access-denied) |
+| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) |
+| [24000002](../errorcode-asset.md#24000002-asset-not-found) |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24000017](../errorcode-asset.md#24000017-function-not-supported) |
 
 ## Examples
 

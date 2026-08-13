@@ -14,7 +14,7 @@ Clear up application data by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
+**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData-(System-API))
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -67,7 +67,7 @@ Clear up application data by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
+**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData-(System-API))
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -82,7 +82,7 @@ Clear up application data by bundle name
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | bundle name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 ## Examples
 

@@ -3,6 +3,7 @@
 ## SaveButton
 
 ```TypeScript
+@ComponentBuilder
 export declare function SaveButton(
     options?: SaveButtonOptions 
 ): SaveButtonAttribute
@@ -14,9 +15,11 @@ Set a save button.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function SaveButton(    options?: SaveButtonOptions ): SaveButtonAttribute--><!--Device-unnamed-export declare function SaveButton(    options?: SaveButtonOptions ): SaveButtonAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function SaveButton(    options?: SaveButtonOptions ): SaveButtonAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function SaveButton(    options?: SaveButtonOptions ): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

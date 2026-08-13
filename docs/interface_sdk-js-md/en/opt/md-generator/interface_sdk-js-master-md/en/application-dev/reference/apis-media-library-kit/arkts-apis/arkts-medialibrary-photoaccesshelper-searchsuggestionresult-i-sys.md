@@ -4,6 +4,8 @@ Search suggestion result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-interface SearchSuggestionResult--><!--Device-photoAccessHelper-interface SearchSuggestionResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,11 +24,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 count: number
 ```
 
-Number of photos in the scenario where a recommendation word is searched.The value range is all integers.
+Number of photos in the scenario where a recommendation word is searched. The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Search Suggestion Type
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchSuggestionResult-type: SearchSuggestionType--><!--Device-SearchSuggestionResult-type: SearchSuggestionType-End-->
@@ -67,6 +73,8 @@ Search suggestion
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

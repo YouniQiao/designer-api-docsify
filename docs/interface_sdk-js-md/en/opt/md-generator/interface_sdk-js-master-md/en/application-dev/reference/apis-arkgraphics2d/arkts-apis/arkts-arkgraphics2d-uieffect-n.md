@@ -1,11 +1,10 @@
 # uiEffect
 
-This module provides basic capabilities for component effects, including blur, brightening, and more.Effects are categorized into the Filter and VisualEffect classes, and effects of the same class can be cascaded under an instance of that effect class. Using this module, you can quickly implement complex visual effects without needing to master underlying image processing algorithms, reducing development complexity and improving user experience.In actual development, blur can be used for background blurring, and brightening can be used for bright screen display, etc.
+This module provides basic capabilities for component effects, including blur, brightening, and more. Effects are categorized into the Filter and VisualEffect classes, and effects of the same class can be cascaded under an instance of that effect class. Using this module, you can quickly implement complex visual effects without needing to master underlying image processing algorithms, reducing development complexity and improving user experience. In actual development, blur can be used for background blurring, and brightening can be used for bright screen display, etc. - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md#Filter): Used to add specified Filter effects to a component. - [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md#VisualEffect): Used to add specified VisualEffect effects to a component.
 
-- [Filter](arkts-arkgraphics2d-uieffect-filter-i.md#Filter): Used to add specified Filter effects to a component.  
-- [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md#VisualEffect): Used to add specified VisualEffect effects to a component.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace uiEffect--><!--Device-unnamed-declare namespace uiEffect-End-->
 
@@ -23,17 +22,17 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter) |
-| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect) |
+| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createFilter) |
+| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createEffect) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createBrightnessBlender](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md#createbrightnessblender) |
-| [createHdrBrightnessBlender](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md#createhdrbrightnessblender) |
-| [createHdrDarkenBlender](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md#createhdrdarkenblender) |
+| [createBrightnessBlender](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md#createBrightnessBlender-(System-API)) |
+| [createHdrBrightnessBlender](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md#createHdrBrightnessBlender-(System-API)) |
+| [createHdrDarkenBlender](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md#createHdrDarkenBlender-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

@@ -1,0 +1,78 @@
+# ArrayBufferConstructor
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface ArrayBufferConstructor--><!--Device-unnamed-interface ArrayBufferConstructor-End-->
+
+## constructor
+
+```TypeScript
+new(byteLength: number): ArrayBuffer
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-ArrayBufferConstructor-new(byteLength: number): ArrayBuffer--><!--Device-ArrayBufferConstructor-new(byteLength: number): ArrayBuffer-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteLength | number | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArrayBuffer |  |
+
+## isView
+
+```TypeScript
+isView(arg: any): arg is ArrayBufferView
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-ArrayBufferConstructor-isView(arg: any): arg is ArrayBufferView--><!--Device-ArrayBufferConstructor-isView(arg: any): arg is ArrayBufferView-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arg | any | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| arg is ArrayBufferView |  |
+
+## prototype
+
+```TypeScript
+readonly prototype: ArrayBuffer
+```
+
+**Type:** ArrayBuffer
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-ArrayBufferConstructor-readonly prototype: ArrayBuffer--><!--Device-ArrayBufferConstructor-readonly prototype: ArrayBuffer-End-->
+

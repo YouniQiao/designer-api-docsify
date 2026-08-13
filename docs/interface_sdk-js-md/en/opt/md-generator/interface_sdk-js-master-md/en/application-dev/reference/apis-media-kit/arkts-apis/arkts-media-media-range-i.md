@@ -2,7 +2,9 @@
 
 Provides Range with lower and upper limit.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface Range--><!--Device-media-interface Range-End-->
 
@@ -24,7 +26,9 @@ Maximum value.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Range-max: int--><!--Device-Range-max: int-End-->
 
@@ -40,7 +44,9 @@ Minimum value.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Range-min: int--><!--Device-Range-min: int-End-->
 

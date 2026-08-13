@@ -2,9 +2,11 @@
 
 Class of fence extension ability.
 
-**Since:** 14
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default class FenceExtensionAbility--><!--Device-unnamed-export default class FenceExtensionAbility-End-->
 
@@ -24,9 +26,11 @@ onDestroy(): void
 
 Called back before a fence extension is destroyed.
 
-**Since:** 14
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,9 +59,11 @@ onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions
 
 Called back when geofence status is change.
 
-**Since:** 14
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,9 +135,11 @@ Indicates the fence extension context.
 
 **Type:** [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md)
 
-**Since:** 14
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

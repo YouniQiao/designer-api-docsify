@@ -16,6 +16,8 @@ Get the ethernet mac address list.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>--><!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>-End-->
@@ -34,9 +36,9 @@ Get the ethernet mac address list.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [2201005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201005-device-information-not-exist) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
 
 ## Examples
 

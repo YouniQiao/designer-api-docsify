@@ -12,9 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Promise<void>
 ```
 
-Delete ip of vlan interface by vlanId.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Delete ip of vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -44,12 +46,12 @@ Delete ip of vlan interface by vlanId.To invoke this method, you must have the {
 
 | Error Code ID |
 | --- |
-| [2100400](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100400-incorrect-nic-name-nonethernet) |
-| [2100401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100401-no-ip-address-configured-on-the-vlan-is-found) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-nonethernet) |
+| [2100401](../errorcode-net-connection.md#2100401-no-ip-address-configured-on-the-vlan-is-found) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -8,6 +8,8 @@ Used for ide.
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-type DefaultData<T> = object--><!--Device-unnamed-type DefaultData<T> = object-End-->

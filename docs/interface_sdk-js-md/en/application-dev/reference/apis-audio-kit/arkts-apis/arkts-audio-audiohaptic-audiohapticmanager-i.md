@@ -1,11 +1,12 @@
 # AudioHapticManager
 
-Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use   
-[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager) to create an AudioHapticManager instance.
+Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager) to create an AudioHapticManager instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
 
@@ -28,6 +29,8 @@ Create an audio haptic player. This method uses a promise to return the result. 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -52,11 +55,11 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -86,7 +89,9 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -111,35 +116,24 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## registerSource
 
-ArkTS-Dyn:
-```TypeScript
-registerSource(audioUri: string, hapticUri: string): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 registerSource(audioUri: string, hapticUri: string): Promise<int>
 ```
 
-Registers audio and haptic resources via URIs. This API uses a promise to return the result.
+Registers audio and haptic resources via URIs. This API uses a promise to return the result. > **NOTE：**> > A maximum of 128 resources can be registered at the same time for an application. Any attempt to register > beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number > of registered resources. For resources that are no longer used, you are advised to unregister them in a timely > manner.
 
-> **NOTE：**
-> 
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
-> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
-> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
-> manner.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
 
@@ -149,20 +143,20 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioUri | string | Yes | URI of the audio source.&lt;br&gt;- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#media).&lt;br&gt;- For details about the supported audio resource formats in the low-latency mode, see [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool). The path format must meet the requirements described in [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).&lt;br&gt;- In both modes, you are advised to pass in the absolute path of the file. |
-| hapticUri | string | Yes | URI of the haptic source.&lt;br&gt;For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#HapticFileDescriptor). The path format must meet the requirements described in [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).&lt;br&gt;You are advised to pass in the absolute path of the file. |
+| audioUri | string | Yes | URI of the audio source.&lt;br&gt;- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#@ohos.multimedia.media).&lt;br&gt;- For details about the supported audio resource formats in the low-latency mode, see SoundPool. The path format must meet the requirements described in fileIo.open.&lt;br&gt;- In both modes, you are advised to pass in the absolute path of the file. |
+| hapticUri | string | Yes | URI of the haptic source.&lt;br&gt;For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#HapticFileDescriptor). The path format must meet the requirements described in fileIo.open.&lt;br&gt;You are advised to pass in the absolute path of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise, which returns the registered resource ID. &lt;br&gt;In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
+| Promise&lt;int&gt; | Promise, which returns the registered resource ID. &lt;br&gt;In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -183,28 +177,17 @@ audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value: numb
 
 ## registerSourceFromFd
 
-ArkTS-Dyn:
-```TypeScript
-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>
 ```
 
-Registers audio and haptic resources via file descriptors. This API uses a promise to return the result.
+Registers audio and haptic resources via file descriptors. This API uses a promise to return the result. > **NOTE：**> > A maximum of 128 resources can be registered at the same time for an application. Any attempt to register > beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number > of registered resources. For resources that are no longer used, you are advised to unregister them in a timely > manner.
 
-> **NOTE：**
-> 
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
-> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
-> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
-> manner.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
@@ -221,7 +204,7 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise, which returns the registered resource ID. &lt;br&gt;In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
+| Promise&lt;int&gt; | Promise, which returns the registered resource ID. &lt;br&gt;In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 ## Examples
 
@@ -257,21 +240,17 @@ audioHapticManagerInstance.registerSourceFromFd(audioFd, hapticFd).then((value: 
 
 ## setAudioLatencyMode
 
-ArkTS-Dyn:
-```TypeScript
-setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void
 ```
 
 Sets the latency mode for an audio-haptic source.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
 
@@ -281,15 +260,15 @@ Sets the latency mode for an audio-haptic source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Source ID. |
+| id | int | Yes | Source ID. |
 | latencyMode | [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | Yes | Audio latency mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
 ## Examples
 
@@ -305,21 +284,17 @@ audioHapticManagerInstance.setAudioLatencyMode(id, latencyMode);
 
 ## setStreamUsage
 
-ArkTS-Dyn:
-```TypeScript
-setStreamUsage(id: number, usage: audio.StreamUsage): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setStreamUsage(id: int, usage: audio.StreamUsage): void
 ```
 
 Sets the stream usage for an audio-haptic source.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
@@ -329,15 +304,15 @@ Sets the stream usage for an audio-haptic source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Source ID. |
+| id | int | Yes | Source ID. |
 | usage | audio.StreamUsage | Yes | Stream usage. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
 ## Examples
 
@@ -354,26 +329,17 @@ audioHapticManagerInstance.setStreamUsage(id, usage);
 
 ## unregisterSource
 
-ArkTS-Dyn:
-```TypeScript
-unregisterSource(id: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 unregisterSource(id: int): Promise<void>
 ```
 
-Unregisters an audio-haptic source. This API uses a promise to return the result.
+Unregisters an audio-haptic source. This API uses a promise to return the result. > **NOTE：**> > For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues > such as resource leaks or the number of resources exceeding the upper limit.
 
-> **NOTE：**
-> 
-> For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues
-> such as resource leaks or the number of resources exceeding the upper limit.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
@@ -383,7 +349,7 @@ Unregisters an audio-haptic source. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Source ID. |
+| id | int | Yes | Source ID. |
 
 **Return value:**
 
@@ -395,7 +361,7 @@ Unregisters an audio-haptic source. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 

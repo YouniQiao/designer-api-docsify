@@ -1,10 +1,10 @@
 # CameraInput
 
-**CameraInput** defines the camera input object.
+**CameraInput** defines the camera input object. It provides camera device information used in [Session](arkts-camera-camera-session-i.md#Session).
 
-It provides camera device information used in [Session](arkts-camera-camera-session-i.md#Session).
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-camera-interface CameraInput--><!--Device-camera-interface CameraInput-End-->
 
@@ -24,7 +24,9 @@ close(callback: AsyncCallback<void>): void
 
 Closes this camera device. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,7 +44,7 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## close
 
@@ -52,7 +54,9 @@ close(): Promise<void>
 
 Closes this camera device. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -70,7 +74,7 @@ Closes this camera device. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## getPhysicalCameraOrientation
 
@@ -80,9 +84,11 @@ getPhysicalCameraOrientation(): number
 
 Obtains the physical camera orientation in the current fold state of the device.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CameraInput-getPhysicalCameraOrientation(): int--><!--Device-CameraInput-getPhysicalCameraOrientation(): int-End-->
 
@@ -102,9 +108,11 @@ isPhysicalCameraOrientationVariable(): boolean
 
 Checks whether the physical camera orientation is adjustable in different fold states of the device.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CameraInput-isPhysicalCameraOrientationVariable(): boolean--><!--Device-CameraInput-isPhysicalCameraOrientationVariable(): boolean-End-->
 
@@ -116,7 +124,52 @@ Checks whether the physical camera orientation is adjustable in different fold s
 | --- |
 | boolean |
 
-## off('error')
+## offCameraOcclusionDetection
+
+```TypeScript
+offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
+```
+
+Unsubscribes from camera occlusion detection results.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CameraInput-offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | No |
+
+## offError
+
+```TypeScript
+offError(camera: CameraDevice, callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CameraInput-offError(camera: CameraDevice, callback?: ErrorCallback): void--><!--Device-CameraInput-offError(camera: CameraDevice, callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
@@ -125,6 +178,8 @@ off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
 Unsubscribes from CameraInput error events.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -140,19 +195,19 @@ Unsubscribes from CameraInput error events.
 | [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
 
-## off('cameraOcclusionDetection')
+## onCameraOcclusionDetection
 
 ```TypeScript
-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
+onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void
 ```
 
-Unsubscribes from **CameraInput** occlusion events. This API uses an asynchronous callback to return the result.
+Subscribes to camera occlusion detection results.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
 
-<!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+<!--Device-CameraInput-onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -160,28 +215,42 @@ Unsubscribes from **CameraInput** occlusion events. This API uses an asynchronou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'cameraOcclusionDetection' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | Yes |
 
-**Error codes:**
+## onError
 
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+```TypeScript
+onError(camera: CameraDevice, callback: ErrorCallback): void
+```
 
-## on('error')
+Subscribes to error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CameraInput-onError(camera: CameraDevice, callback: ErrorCallback): void--><!--Device-CameraInput-onError(camera: CameraDevice, callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 ```
 
-Subscribes to CameraInput error events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to CameraInput error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -197,39 +266,6 @@ Subscribes to CameraInput error events. This API uses an asynchronous callback t
 | [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
-## on('cameraOcclusionDetection')
-
-```TypeScript
-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void
-```
-
-Subscribes to **CameraInput** occlusion events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'cameraOcclusionDetection' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## open
 
 ```TypeScript
@@ -238,7 +274,9 @@ open(callback: AsyncCallback<void>): void
 
 Opens this camera device. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -256,9 +294,9 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [7400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-camera-conflict) |
-| [7400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400107](../errorcode-camera.md#7400107-camera-conflict) |
+| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
 
 ## open
 
@@ -268,7 +306,9 @@ open(): Promise<void>
 
 Opens this camera device. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -286,10 +326,10 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [7400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-camera-conflict) |
-| [7400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400107](../errorcode-camera.md#7400107-camera-conflict) |
+| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
 
 ## open
 
@@ -299,7 +339,9 @@ open(isSecureEnabled: boolean): Promise<bigint>
 
 Opens this camera device. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -323,9 +365,9 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [7400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-camera-conflict) |
-| [7400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400107](../errorcode-camera.md#7400107-camera-conflict) |
+| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
 
 ## open
 
@@ -335,7 +377,9 @@ open(type: CameraConcurrentType): Promise<void>
 
 Opens the camera with the specified concurrency type. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -359,10 +403,10 @@ Opens the camera with the specified concurrency type. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [7400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-camera-conflict) |
-| [7400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400107](../errorcode-camera.md#7400107-camera-conflict) |
+| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) |
 
 ## usePhysicalCameraOrientation
 
@@ -372,9 +416,11 @@ usePhysicalCameraOrientation(isUsed: boolean): void
 
 Enables or disables the use of the physical camera orientation.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CameraInput-usePhysicalCameraOrientation(isUsed: boolean): void--><!--Device-CameraInput-usePhysicalCameraOrientation(isUsed: boolean): void-End-->
 
@@ -390,5 +436,5 @@ Enables or disables the use of the physical camera orientation.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |

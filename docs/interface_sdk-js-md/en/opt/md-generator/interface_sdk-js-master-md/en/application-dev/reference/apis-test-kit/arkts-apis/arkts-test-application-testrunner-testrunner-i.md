@@ -1,8 +1,10 @@
 # TestRunner
 
-Base class for the test framework.If you want to implement your own unit test framework, you must inherit this class and overrides all its methods.
+Base class for the test framework. If you want to implement your own unit test framework, you must inherit this class and overrides all its methods.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface TestRunner--><!--Device-unnamed-interface TestRunner-End-->
 
@@ -23,6 +25,8 @@ onPrepare(): void
 Prepare the unit testing environment for running test cases.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,6 +61,8 @@ Run all test cases.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TestRunner-onRun(): void--><!--Device-TestRunner-onRun(): void-End-->
@@ -80,6 +86,42 @@ export default class UserTestRunner implements TestRunner {
 }
 ```
 
+## onPrepare
+
+```TypeScript
+onPrepare: OnPrepareFn
+```
+
+Prepare the unit testing environment for running test cases.
+
+**Type:** [OnPrepareFn](arkts-test-onpreparefn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TestRunner-onPrepare: OnPrepareFn--><!--Device-TestRunner-onPrepare: OnPrepareFn-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## onRun
+
+```TypeScript
+onRun: OnRunFn
+```
+
+Run all test cases.
+
+**Type:** [OnRunFn](arkts-test-onrunfn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TestRunner-onRun: OnRunFn--><!--Device-TestRunner-onRun: OnRunFn-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## onStop
 
 ```TypeScript
@@ -88,7 +130,11 @@ onStop?: OnStopFn
 
 Stop all test cases.
 
+**Type:** [OnStopFn](arkts-test-onstopfn-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,10 @@
 # IPCSkeleton
 
-Obtains IPC context, including the UID and PID, local and remote device IDs, and whether the method is invoked on  the same device.
+Obtains IPC context, including the UID and PID, local and remote device IDs, and whether the method is invoked on the same device.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-rpc-class IPCSkeleton--><!--Device-rpc-class IPCSkeleton-End-->
 
@@ -20,9 +22,11 @@ import { rpc } from '@kit.IPCKit';
 static flushCmdBuffer(object: IRemoteObject): void
 ```
 
-Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API  is a static method. You are advised to call this API before performing any sensitive operation.
+Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void--><!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void-End-->
 
@@ -38,7 +42,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -73,13 +77,13 @@ try {
 static flushCommands(object: IRemoteObject): number
 ```
 
-Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API  is a static method. You are advised to call this API before performing any sensitive operation.
+Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [static](static)
+**Substitutes:** static flushCmdBuffer(object: IRemoteObject)
 
 <!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
 
@@ -132,7 +136,9 @@ static getCallingDeviceID(): string
 
 Obtains the ID of the device hosting the caller's process. This API is a static method.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static getCallingDeviceID(): string--><!--Device-IPCSkeleton-static getCallingDeviceID(): string-End-->
 
@@ -170,9 +176,11 @@ class Stub extends rpc.RemoteObject {
 static getCallingPid(): number
 ```
 
-Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in  the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the  PID of the process will be returned.
+Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the PID of the process will be returned.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static getCallingPid(): int--><!--Device-IPCSkeleton-static getCallingPid(): int-End-->
 
@@ -212,7 +220,9 @@ static getCallingTokenId(): number
 
 Obtains the caller's token ID, which is used to verify the caller identity.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static getCallingTokenId(): long--><!--Device-IPCSkeleton-static getCallingTokenId(): long-End-->
 
@@ -250,9 +260,11 @@ class Stub extends rpc.RemoteObject {
 static getCallingUid(): number
 ```
 
-Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in  the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the  UID of the process will be returned.
+Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the UID of the process will be returned.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static getCallingUid(): int--><!--Device-IPCSkeleton-static getCallingUid(): int-End-->
 
@@ -292,7 +304,9 @@ static getContextObject(): IRemoteObject
 
 Obtains the system capability manager. This API is a static method.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static getContextObject(): IRemoteObject--><!--Device-IPCSkeleton-static getContextObject(): IRemoteObject-End-->
 
@@ -326,7 +340,9 @@ static getLocalDeviceID(): string
 
 Obtains the local device ID. This API is a static method.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static getLocalDeviceID(): string--><!--Device-IPCSkeleton-static getLocalDeviceID(): string-End-->
 
@@ -366,7 +382,9 @@ static isLocalCalling(): boolean
 
 Checks whether the peer process is a process of the local device. This API is a static method.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static isLocalCalling(): boolean--><!--Device-IPCSkeleton-static isLocalCalling(): boolean-End-->
 
@@ -404,9 +422,11 @@ class Stub extends rpc.RemoteObject {
 static resetCallingIdentity(): string
 ```
 
-Resets the UID and PID of the remote user to those of the local user. This API is a static method and is used in  scenarios such as identity authentication.
+Resets the UID and PID of the remote user to those of the local user. This API is a static method and is used in scenarios such as identity authentication.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static resetCallingIdentity(): string--><!--Device-IPCSkeleton-static resetCallingIdentity(): string-End-->
 
@@ -444,10 +464,11 @@ class Stub extends rpc.RemoteObject {
 static restoreCallingIdentity(identity: string): void
 ```
 
-Restores the UID and PID of the remote user. This API is a static method. It is usually called after  
- **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are  required.
+Restores the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void--><!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void-End-->
 
@@ -463,7 +484,7 @@ Restores the UID and PID of the remote user. This API is a static method. It is 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -492,14 +513,13 @@ class Stub extends rpc.RemoteObject {
 static setCallingIdentity(identity: string): boolean
 ```
 
-Sets the UID and PID of the remote user. This API is a static method. It is usually called after  
- **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are  required.
+Sets the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [static](static)
+**Substitutes:** static restoreCallingIdentity(identity: string)
 
 <!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
 

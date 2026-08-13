@@ -2,7 +2,9 @@
 
 ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台服务创建、销毁、连接、断开等生命周期回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class ServiceExtensionAbility--><!--Device-unnamed-declare class ServiceExtensionAbility-End-->
 
@@ -18,7 +20,9 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 当Extension更新配置信息时调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,7 +58,9 @@ onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 
 Extension生命周期回调，如果是connectAbility拉起的服务，会在onCreate之后回调。返回一个RemoteObject对象，用于客户端和服务端进行通信。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -131,7 +137,9 @@ onCreate(want: Want): void
 
 Extension生命周期回调，在创建时回调，执行初始化业务逻辑操作。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,7 +175,9 @@ onDestroy(): void
 
 Extension生命周期回调，在销毁时回调，执行资源清理等操作。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,6 +208,8 @@ onDisconnect(want: Want): void | Promise<void>
 Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -240,6 +252,38 @@ class ServiceExt extends ServiceExtensionAbility {
 }
 ```
 
+## onDisconnect
+
+```TypeScript
+onDisconnect(want: Want): Promise<void> | undefined
+```
+
+Extension的生命周期回调，客户端执行断开连接服务时回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionAbility-onDisconnect(want: Want): Promise<void> | undefined--><!--Device-ServiceExtensionAbility-onDisconnect(want: Want): Promise<void> | undefined-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
 ## onDump
 
 ```TypeScript
@@ -248,7 +292,9 @@ onDump(params: Array<string>): Array<string>
 
 转储客户端信息时调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -293,6 +339,8 @@ Extension的生命周期回调，当所有以前的客户端都断开连接之�
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ServiceExtensionAbility-onReconnect(want: Want): void--><!--Device-ServiceExtensionAbility-onReconnect(want: Want): void-End-->
@@ -327,7 +375,9 @@ onRequest(want: Want, startId: number): void
 
 Extension生命周期回调，如果是startAbility或者startServiceExtensionAbility拉起的服务，会在onCreate之后回调。每次拉起服务都会回调，startId会递增。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -364,9 +414,11 @@ context: ServiceExtensionContext
 
 ServiceExtension的上下文环境，继承自ExtensionContext。
 
-**类型：** [ServiceExtensionContext](../../apis-default/arkts-apis/arkts-serviceextensioncontext-c-sys.md)
+**类型：** [ServiceExtensionContext](../../apis-na/arkts-apis/arkts-na-serviceextensioncontext-c-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

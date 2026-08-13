@@ -2,9 +2,11 @@
 
 Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum CullMode--><!--Device-unnamed-export enum CullMode-End-->
 
@@ -18,9 +20,11 @@ NONE = 0
 
 Culling is disabled.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
 
@@ -34,9 +38,11 @@ FRONT = 1
 
 Culls the front faces of geometric objects.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CullMode-FRONT = 1--><!--Device-CullMode-FRONT = 1-End-->
 
@@ -50,9 +56,11 @@ BACK = 2
 
 Culls the back faces of geometric objects.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
 

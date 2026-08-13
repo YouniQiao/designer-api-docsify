@@ -1,9 +1,10 @@
 # SingleKVStore
 
-Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data  changes or across-device data sync completion events.Before calling any method in **SingleKVStore**, you must use  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) to obtain a **SingleKVStore** instance.
+Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events. Before calling any method in **SingleKVStore**, you must use getKVStore to obtain a **SingleKVStore** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
 
@@ -23,7 +24,9 @@ backup(file: string, callback: AsyncCallback<void>): void
 
 Backs up a distributed KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,8 +45,8 @@ Backs up a distributed KV store. This API uses an asynchronous callback to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -73,7 +76,9 @@ backup(file: string): Promise<void>
 
 Backs up an RDB store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +102,8 @@ Backs up an RDB store. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -128,6 +133,8 @@ Backs up a database by specifying {@code BackupConfig}.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SingleKVStore-backupEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-backupEx(backupConfig: BackupConfig): Promise<void>-End-->
@@ -150,8 +157,8 @@ Backs up a database by specifying {@code BackupConfig}.
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100000-invalid-parameter) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) |
 
 ## Examples
 
@@ -180,10 +187,11 @@ try {
 closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KVStoreResultSet** object returned by  
-[SingleKvStore.getResultSet](#getResultSet-1). This API uses an asynchronous callback to return the result.
+Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](#getResultSet). This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,7 +210,7 @@ Closes the **KVStoreResultSet** object returned by
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -240,10 +248,11 @@ try {
 closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 ```
 
-Closes the **KVStoreResultSet** object returned by  
-[SingleKvStore.getResultSet](#getResultSet-1). This API uses a promise to return the result.
+Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](#getResultSet). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -267,7 +276,7 @@ Closes the **KVStoreResultSet** object returned by
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -304,7 +313,9 @@ commit(callback: AsyncCallback<void>): void
 
 Commits the transaction in this single KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,7 +333,7 @@ Commits the transaction in this single KV store. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -351,7 +362,9 @@ commit(): Promise<void>
 
 Commits the transaction in this single KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -369,7 +382,7 @@ Commits the transaction in this single KV store. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -396,7 +409,9 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 Deletes a KV pair from this KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -415,10 +430,10 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -458,7 +473,9 @@ delete(key: string): Promise<void>
 
 Deletes a KV pair from this KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -482,10 +499,10 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -521,7 +538,9 @@ deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, number
 
 Deletes a backup file. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -540,7 +559,7 @@ Deletes a backup file. This API uses an asynchronous callback to return the resu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -570,7 +589,9 @@ deleteBackup(files: Array<string>): Promise<Array<[string, number]>>
 
 Deletes a backup file. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -594,7 +615,7 @@ Deletes a backup file. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -624,6 +645,8 @@ Delete database backup file by specifying {@code BackupConfig}.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SingleKVStore-deleteBackupEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-deleteBackupEx(backupConfig: BackupConfig): Promise<void>-End-->
@@ -646,7 +669,7 @@ Delete database backup file by specifying {@code BackupConfig}.
 
 | Error Code ID |
 | --- |
-| [15100000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100000-invalid-parameter) |
+| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) |
 
 ## Examples
 
@@ -677,7 +700,9 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 Batch deletes KV pairs from this single KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -696,10 +721,10 @@ Batch deletes KV pairs from this single KV store. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -752,7 +777,9 @@ deleteBatch(keys: string[]): Promise<void>
 
 Batch deletes KV pairs from this single KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -776,10 +803,10 @@ Batch deletes KV pairs from this single KV store. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -828,7 +855,9 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 
 Sets cross-device data sync, which can be enabled or disabled. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -847,7 +876,7 @@ Sets cross-device data sync, which can be enabled or disabled. This API uses an 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -876,7 +905,9 @@ enableSync(enabled: boolean): Promise<void>
 
 Sets cross-device data sync, which can be enabled or disabled. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -900,7 +931,7 @@ Sets cross-device data sync, which can be enabled or disabled. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -927,7 +958,9 @@ get(key: string, callback: AsyncCallback<boolean | string | number | number | Ui
 
 Obtains the value of the specified key. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -946,10 +979,10 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## get
 
@@ -959,7 +992,9 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 
 Obtains the value of the specified key. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -983,10 +1018,10 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## getEntries
 
@@ -996,7 +1031,9 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 Obtains all KV pairs that match the specified key prefix. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1015,9 +1052,9 @@ Obtains all KV pairs that match the specified key prefix. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1070,7 +1107,9 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 Obtains all KV pairs that match the specified key prefix. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1094,9 +1133,9 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1145,7 +1184,9 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1164,9 +1205,9 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1222,7 +1263,9 @@ getEntries(query: Query): Promise<Entry[]>
 
 Obtains the KV pairs that match the specified **Query** object. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1246,9 +1289,9 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1299,7 +1342,9 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 Obtains a result set with the specified prefix from this single KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1318,10 +1363,10 @@ Obtains a result set with the specified prefix from this single KV store. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1382,7 +1427,9 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 Obtains a result set with the specified prefix from this single KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1406,10 +1453,10 @@ Obtains a result set with the specified prefix from this single KV store. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1462,7 +1509,9 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1481,10 +1530,10 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1537,7 +1586,9 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1561,10 +1612,10 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -1610,7 +1661,9 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1629,10 +1682,10 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1684,7 +1737,9 @@ getResultSize(query: Query): Promise<number>
 
 Obtains the number of results that match the specified **Query** object. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1708,10 +1763,10 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -1757,7 +1812,9 @@ getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 
 Obtains the security level of this KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1775,7 +1832,7 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -1804,7 +1861,9 @@ getSecurityLevel(): Promise<SecurityLevel>
 
 Obtains the security level of this KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1822,7 +1881,7 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -1841,7 +1900,61 @@ try {
 }
 ```
 
-## off
+## offDataChange
+
+```TypeScript
+offDataChange(listener?: Callback<ChangeNotification>): void
+```
+
+Unsubscribe from the SingleKVStore database based on the specified subscribeType and listener.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+
+## offSyncComplete
+
+```TypeScript
+offSyncComplete(syncCallback?: Callback<Array<[string, number]>>): void
+```
+
+Unregister the database synchronization callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No |
+
+## off_dataChange
 
 ```TypeScript
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
@@ -1850,6 +1963,8 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 Unsubscribes from data changes.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -1866,8 +1981,8 @@ Unsubscribes from data changes.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -1903,7 +2018,7 @@ class KvstoreModel {
 }
 ```
 
-## off
+## off_syncComplete
 
 ```TypeScript
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
@@ -1912,6 +2027,8 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 Unsubscribes from the cross-device data sync completion events.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -1928,7 +2045,7 @@ Unsubscribes from the cross-device data sync completion events.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1964,7 +2081,63 @@ class KvstoreModel {
 }
 ```
 
-## on
+## onDataChange
+
+```TypeScript
+onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
+```
+
+Register a callback to the database and when data in the distributed database has changed, the callback will be invoked.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+
+## onSyncComplete
+
+```TypeScript
+onSyncComplete(syncCallback: Callback<Array<[string, number]>>): void
+```
+
+Register a databases synchronization callback to the database. &lt;p&gt; Sync result is returned through asynchronous callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes |
+
+## on_dataChange
 
 ```TypeScript
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
@@ -1973,6 +2146,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 Subscribes to data changes of the specified type.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -1990,9 +2165,9 @@ Subscribes to data changes of the specified type.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) |
 
 ## Examples
 
@@ -2009,7 +2184,7 @@ try {
 }
 ```
 
-## on
+## on_syncComplete
 
 ```TypeScript
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
@@ -2018,6 +2193,8 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 Subscribes to the cross-device data sync completion events.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -2034,7 +2211,7 @@ Subscribes to the cross-device data sync completion events.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -2067,7 +2244,9 @@ put(key: string, value: Uint8Array | string | number | number | boolean, callbac
 
 Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2087,10 +2266,10 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## put
 
@@ -2100,7 +2279,9 @@ put(key: string, value: Uint8Array | string | number | number | boolean): Promis
 
 Adds a KV pair of the specified type to this KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2125,10 +2306,10 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## putBatch
 
@@ -2138,7 +2319,9 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 Batch inserts KV pairs to this single KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2150,17 +2333,17 @@ Batch inserts KV pairs to this single KV store. This API uses an asynchronous ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| entries | [Entry[]](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | Yes |
+| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -2215,7 +2398,9 @@ putBatch(entries: Entry[]): Promise<void>
 
 Batch inserts KV pairs to this single KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2227,7 +2412,7 @@ Batch inserts KV pairs to this single KV store. This API uses a promise to retur
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| entries | [Entry[]](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | Yes |
+| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | Yes |
 
 **Return value:**
 
@@ -2239,10 +2424,10 @@ Batch inserts KV pairs to this single KV store. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -2292,6 +2477,8 @@ Update the key used to encrypt the database.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SingleKVStore-rekey(): Promise<void>--><!--Device-SingleKVStore-rekey(): Promise<void>-End-->
@@ -2308,9 +2495,9 @@ Update the key used to encrypt the database.
 
 | Error Code ID |
 | --- |
-| [15100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100006-failed-to-update-the-kv-store-encryption-key) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [15100006](../errorcode-distributedKVStore.md#15100006-failed-to-update-the-kv-store-encryption-key) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -2333,18 +2520,11 @@ try {
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of a device. This API uses an asynchronous callback to return the result.
+Deletes data of a device. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2363,8 +2543,8 @@ Deletes data of a device. This API uses an asynchronous callback to return the r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -2412,18 +2592,11 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of a device. This API uses a promise to return the result.
+Deletes data of a device. This API uses a promise to return the result. > **NOTE：**> > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2447,8 +2620,8 @@ Deletes data of a device. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -2488,7 +2661,9 @@ restore(file: string, callback: AsyncCallback<void>): void
 
 Restores a distributed KV store from a database file. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2507,8 +2682,8 @@ Restores a distributed KV store from a database file. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -2538,7 +2713,9 @@ restore(file: string): Promise<void>
 
 Restores a distributed KV store from a database file. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2562,8 +2739,8 @@ Restores a distributed KV store from a database file. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -2593,6 +2770,8 @@ Restores a database by specifying {@code BackupConfig}.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SingleKVStore-restoreEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-restoreEx(backupConfig: BackupConfig): Promise<void>-End-->
@@ -2615,8 +2794,8 @@ Restores a database by specifying {@code BackupConfig}.
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [15100000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100000-invalid-parameter) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) |
 
 ## Examples
 
@@ -2647,7 +2826,9 @@ rollback(callback: AsyncCallback<void>): void
 
 Rolls back the transaction in this single KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2665,7 +2846,7 @@ Rolls back the transaction in this single KV store. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -2694,7 +2875,9 @@ rollback(): Promise<void>
 
 Rolls back the transaction in this single KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2712,7 +2895,7 @@ Rolls back the transaction in this single KV store. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
 
 ## Examples
 
@@ -2737,14 +2920,11 @@ try {
 setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result.
+Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result. > **NOTE：**> > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
-> **NOTE：**
-> 
-> After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode) will not trigger the cross-
-> device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2763,7 +2943,7 @@ Sets the default delay for cross-device data sync. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -2791,14 +2971,11 @@ try {
 setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 ```
 
-Sets the default delay for cross-device data sync. This API uses a promise to return the result.
+Sets the default delay for cross-device data sync. This API uses a promise to return the result. > **NOTE：**> > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
-> **NOTE：**
-> 
-> After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode) will not trigger the cross-
-> device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2822,7 +2999,7 @@ Sets the default delay for cross-device data sync. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -2850,7 +3027,9 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 
 Sets the data sync range. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2870,7 +3049,7 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -2901,7 +3080,9 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 Sets the data sync range. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2926,7 +3107,7 @@ Sets the data sync range. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -2955,7 +3136,9 @@ startTransaction(callback: AsyncCallback<void>): void
 
 Starts the transaction in this single KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2973,8 +3156,8 @@ Starts the transaction in this single KV store. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -3034,7 +3217,9 @@ startTransaction(): Promise<void>
 
 Starts the transaction in this single KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3052,8 +3237,8 @@ Starts the transaction in this single KV store. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) |
 
 ## Examples
 
@@ -3081,18 +3266,11 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. For details about the sync modes of KV stores, see  
-[Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md).
+Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md). > **NOTE：**> > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > .
 
-> **NOTE：**
-> 
-> **deviceIds** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3114,9 +3292,9 @@ Starts cross-device data sync manually. For details about the sync modes of KV s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -3179,17 +3357,11 @@ export default class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md).
+Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md). > **NOTE：**> > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > .
 
-> **NOTE：**
-> 
-> **deviceIds** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -3212,9 +3384,9 @@ Starts cross-device data sync manually. This API returns the result synchronousl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 Enumerates the types of buttons displayed for a reminder.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-export enum ActionButtonType--><!--Device-reminderAgentManager-export enum ActionButtonType-End-->
 
@@ -18,9 +20,11 @@ ACTION_BUTTON_TYPE_CLOSE = 0
 
 Button for closing the reminder.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0-End-->
 
@@ -32,12 +36,13 @@ Button for closing the reminder.
 ACTION_BUTTON_TYPE_SNOOZE = 1
 ```
 
-Button for snoozing the reminder, with the frequency and timing configured via **snoozeTimes** and   
-**timeInterval** in the [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest) struct.
+Button for snoozing the reminder, with the frequency and timing configured via **snoozeTimes** and **timeInterval** in the [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest) struct.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1-End-->
 

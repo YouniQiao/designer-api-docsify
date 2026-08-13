@@ -2,13 +2,15 @@
 
 Define configuration of the ipsec VPN network.
 
-**Inheritance/Implementation:** IpsecVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig)
+**Inheritance/Implementation:** IpsecVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig-(System-API))
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-vpn-export interface IpsecVpnConfig extends SysVpnConfig--><!--Device-vpn-export interface IpsecVpnConfig extends SysVpnConfig-End-->
+**Deprecated since:** -1
+
+<!--Device-vpn-export interface IpsecVpnConfig--><!--Device-vpn-export interface IpsecVpnConfig-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -34,6 +36,8 @@ The ca cert config for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-IpsecVpnConfig-ipsecCaCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecCaCertConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -53,6 +57,8 @@ The ca cert file path for the ipsec VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-IpsecVpnConfig-ipsecCaCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecCaCertFilePath?: string-End-->
 
@@ -74,6 +80,8 @@ The identifier for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-IpsecVpnConfig-ipsecIdentifier?: string--><!--Device-IpsecVpnConfig-ipsecIdentifier?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -93,6 +101,8 @@ The pre share key for the ipsec VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-IpsecVpnConfig-ipsecPreSharedKey?: string--><!--Device-IpsecVpnConfig-ipsecPreSharedKey?: string-End-->
 
@@ -114,6 +124,8 @@ The private server cert config for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-IpsecVpnConfig-ipsecPrivateServerCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPrivateServerCertConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -133,6 +145,8 @@ The private server cert file path for the ipsec VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-IpsecVpnConfig-ipsecPrivateServerCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPrivateServerCertFilePath?: string-End-->
 
@@ -154,6 +168,8 @@ The private user cert config for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-IpsecVpnConfig-ipsecPrivateUserCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPrivateUserCertConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -173,6 +189,8 @@ The private user cert file path for the ipsec VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-IpsecVpnConfig-ipsecPrivateUserCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPrivateUserCertFilePath?: string-End-->
 
@@ -194,6 +212,8 @@ The public server cert config for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-IpsecVpnConfig-ipsecPublicServerCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPublicServerCertConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -213,6 +233,8 @@ The public server cert file path for the ipsec VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-IpsecVpnConfig-ipsecPublicServerCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPublicServerCertFilePath?: string-End-->
 
@@ -234,6 +256,8 @@ The public user cert config for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-IpsecVpnConfig-ipsecPublicUserCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPublicUserCertConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -253,6 +277,8 @@ The public user cert file path for the ipsec VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-IpsecVpnConfig-ipsecPublicUserCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPublicUserCertFilePath?: string-End-->
 
@@ -274,6 +300,8 @@ The strongSwan config for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-IpsecVpnConfig-strongSwanConfig?: string--><!--Device-IpsecVpnConfig-strongSwanConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -293,6 +321,8 @@ The swanctl config for the ipsec VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-IpsecVpnConfig-swanctlConfig?: string--><!--Device-IpsecVpnConfig-swanctlConfig?: string-End-->
 

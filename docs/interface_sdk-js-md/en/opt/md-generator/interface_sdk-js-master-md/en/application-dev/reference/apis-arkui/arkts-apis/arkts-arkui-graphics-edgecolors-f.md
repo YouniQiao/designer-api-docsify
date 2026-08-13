@@ -10,6 +10,8 @@ Generates an **edgeColors** object with the specified edge color for all edges.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.

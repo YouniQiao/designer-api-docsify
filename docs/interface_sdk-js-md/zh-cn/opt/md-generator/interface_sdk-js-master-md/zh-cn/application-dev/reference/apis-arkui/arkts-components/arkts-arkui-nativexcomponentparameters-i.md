@@ -1,8 +1,10 @@
 # NativeXComponentParameters
 
-定义native xcomponent参数。使用此类构造参数创建的XComponent可以将其对应的[FrameNode](../../../arkui/FrameNode)对象传递到Native侧，从而能够使用NDK接口进行surface生命周期相关设置和[组件事件监听](../../../ui/ndk-listen-to-component-events.md)。
+定义native xcomponent参数。使用此类构造参数创建的XComponent可以将其对应的FrameNode对象传递到Native侧，从而能够使用NDK接口进行surface生命周期相关设置和[组件事件监听](../../../ui/ndk-listen-to-component-events.md)。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface NativeXComponentParameters--><!--Device-unnamed-declare interface NativeXComponentParameters-End-->
 
@@ -19,6 +21,8 @@ imageAIOptions?: ImageAIOptions
 **类型：** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +43,8 @@ XComponent的类型。
 **类型：** [XComponentType](../arkts-apis/arkts-arkui-xcomponenttype-e.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

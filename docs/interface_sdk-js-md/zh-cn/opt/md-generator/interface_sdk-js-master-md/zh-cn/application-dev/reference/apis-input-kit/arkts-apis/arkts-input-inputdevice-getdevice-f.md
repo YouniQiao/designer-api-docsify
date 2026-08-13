@@ -6,15 +6,13 @@
 function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void
 ```
 
-获取指定id的输入设备信息，使用callback异步回调。
-
-> **说明：**
+获取指定id的输入设备信息，使用callback异步回调。 > **说明：**
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
+**替代接口：** getDeviceInfo
 
 <!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void-End-->
 
@@ -61,15 +59,13 @@ struct Index {
 function getDevice(deviceId: number): Promise<InputDeviceData>
 ```
 
-获取指定id的输入设备信息，使用Promise异步回调。
-
-> **说明：**
+获取指定id的输入设备信息，使用Promise异步回调。 > **说明：**
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
+**替代接口：** getDeviceInfo
 
 <!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>--><!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>-End-->
 

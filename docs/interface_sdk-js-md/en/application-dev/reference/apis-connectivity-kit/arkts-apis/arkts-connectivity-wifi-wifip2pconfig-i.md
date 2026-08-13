@@ -8,7 +8,7 @@ P2P config.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2PConfig](ohos.wifiManager/wifiManager.WifiP2PConfig)
+**Substitutes:** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md#WifiP2PConfig)
 
 <!--Device-wifi-interface WifiP2PConfig--><!--Device-wifi-interface WifiP2PConfig-End-->
 
@@ -36,7 +36,7 @@ Device mac address s
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceAddress](ohos.wifiManager/wifiManager.WifiP2PConfig.deviceAddress)
+**Substitutes:** [deviceAddress](arkts-connectivity-wifimanager-wifip2pconfig-i.md#deviceAddress)
 
 <!--Device-WifiP2PConfig-deviceAddress: string--><!--Device-WifiP2PConfig-deviceAddress: string-End-->
 
@@ -58,7 +58,7 @@ Group owner band
 
 **Deprecated since:** 9
 
-**Substitutes:** [goBand](ohos.wifiManager/wifiManager.WifiP2PConfig.goBand)
+**Substitutes:** [goBand](arkts-connectivity-wifimanager-wifip2pconfig-i.md#goBand)
 
 <!--Device-WifiP2PConfig-goBand: GroupOwnerBand--><!--Device-WifiP2PConfig-goBand: GroupOwnerBand-End-->
 
@@ -80,7 +80,7 @@ Group name
 
 **Deprecated since:** 9
 
-**Substitutes:** [groupName](ohos.wifiManager/wifiManager.WifiP2PConfig.groupName)
+**Substitutes:** [groupName](arkts-connectivity-wifimanager-wifip2pconfig-i.md#groupName)
 
 <!--Device-WifiP2PConfig-groupName: string--><!--Device-WifiP2PConfig-groupName: string-End-->
 
@@ -92,8 +92,7 @@ Group name
 netId: number
 ```
 
-Group network ID. When creating a group, -1 indicates creates a temporary group,  
--2: indicates creates a persistent group
+Group network ID. When creating a group, -1 indicates creates a temporary group, -2: indicates creates a persistent group
 
 **Type:** number
 
@@ -103,7 +102,7 @@ Group network ID. When creating a group, -1 indicates creates a temporary group,
 
 **Deprecated since:** 9
 
-**Substitutes:** [netId](ohos.wifiManager/wifiManager.WifiP2PConfig.netId)
+**Substitutes:** [netId](arkts-connectivity-wifimanager-wifip2pconfig-i.md#netId)
 
 <!--Device-WifiP2PConfig-netId: number--><!--Device-WifiP2PConfig-netId: number-End-->
 
@@ -125,7 +124,7 @@ The passphrase of this {@code WifiP2pConfig} instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [passphrase](ohos.wifiManager/wifiManager.WifiP2PConfig.passphrase)
+**Substitutes:** [passphrase](arkts-connectivity-wifimanager-wifip2pconfig-i.md#passphrase)
 
 <!--Device-WifiP2PConfig-passphrase: string--><!--Device-WifiP2PConfig-passphrase: string-End-->
 

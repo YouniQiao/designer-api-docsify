@@ -14,7 +14,9 @@ function isPowerSaveMode(pid: number): Promise<boolean>
 
 Queries whether the process is in power saving mode. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
 
@@ -38,9 +40,9 @@ Queries whether the process is in power saving mode. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

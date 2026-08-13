@@ -1,28 +1,18 @@
 # TextAreaController
 
-The controller for the **TextArea** component inherits from  
-[TextContentControllerBase](TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API  
-[getText](TextContentControllerBase#getText) and other APIs like&lt;!--DelEnd--&gt;  
-[getTextContentRect](TextContentControllerBase#getTextContentRect),  
-[getTextContentLineCount](TextContentControllerBase#getTextContentLineCount),  
-[getCaretOffset](TextContentControllerBase#getCaretOffset), [addText](TextContentControllerBase#addText),  
-[deleteText](TextContentControllerBase#deleteText),  
-[getSelection](TextContentControllerBase#getSelection),  
-[clearPreviewText](TextContentControllerBase#clearPreviewText),  
-[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder), and  
-[deleteBackward](TextContentControllerBase#deleteBackward).
+The controller for the **TextArea** component inherits from TextContentControllerBase. The APIs involved are as follows:&lt;!--Del--&gt; system API getText and other APIs like&lt;!--DelEnd--&gt; getTextContentRect, getTextContentLineCount, getCaretOffset, addText, deleteText, getSelection, clearPreviewText, setStyledPlaceholder, and deleteBackward.
 
-## Objects to Import
+## Objects to Import ```ts controller: TextAreaController = new TextAreaController(); ```
 
-```ts controller: TextAreaController = new TextAreaController();```
-
-**Inheritance/Implementation:** TextAreaController extends [TextContentControllerBase](TextContentControllerBase)
+**Inheritance/Implementation:** TextAreaController extends TextContentControllerBase
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-declare class TextAreaController extends TextContentControllerBase--><!--Device-unnamed-declare class TextAreaController extends TextContentControllerBase-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class TextAreaController--><!--Device-unnamed-declare class TextAreaController-End-->
 
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
@@ -38,6 +28,8 @@ Sets the position of the caret.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,6 +55,8 @@ A constructor used to create a **TextAreaController** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextAreaController-constructor()--><!--Device-TextAreaController-constructor()-End-->
@@ -80,6 +74,8 @@ Sets the text selection range and highlights the selected text when the componen
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +104,8 @@ Exits the editing state.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

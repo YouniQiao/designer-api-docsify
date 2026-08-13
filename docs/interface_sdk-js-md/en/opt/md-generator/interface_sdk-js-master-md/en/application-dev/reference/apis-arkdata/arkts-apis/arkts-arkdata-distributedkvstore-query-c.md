@@ -2,7 +2,9 @@
 
 Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object supports a maximum of 256 predicates.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-class Query--><!--Device-distributedKVStore-class Query-End-->
 
@@ -22,7 +24,9 @@ and(): Query
 
 Creates a **Query** object with the AND condition.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +68,9 @@ beginGroup(): Query
 
 Creates a **Query** object for a query condition group with a left parenthesis.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +112,9 @@ constructor()
 
 Defines a constructor used to create a **Query** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,16 +128,11 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix.
+Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,7 +144,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [deviceId](#deviceid) | string | Yes |
+| [deviceId](#deviceId) | string | Yes |
 
 **Return value:**
 
@@ -153,7 +156,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -180,7 +183,9 @@ endGroup(): Query
 
 Creates a **Query** object for a query condition group with a right parenthesis.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,17 +225,11 @@ try {
 equalTo(field: string, value: number | number | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is equal to the given value.
+Creates a **Query** object to match the specified field whose value is equal to the given value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -255,7 +254,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getSqlLike
 
@@ -265,7 +264,9 @@ getSqlLike(): string
 
 Obtains the query statement of the **Query** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,17 +303,11 @@ try {
 greaterThan(field: string, value: number | number | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than the specified value.
+Creates a **Query** object to match the specified field whose value is greater than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -337,7 +332,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## greaterThanOrEqualTo
 
@@ -345,17 +340,11 @@ Creates a **Query** object to match the specified field whose value is greater t
 greaterThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
+Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -380,7 +369,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## inNumber
 
@@ -388,17 +377,11 @@ Creates a **Query** object to match the specified field whose value is greater t
 inNumber(field: string, valueList: number[] | number[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
+Creates a **Query** object to match the specified field whose value is within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -423,7 +406,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## inString
 
@@ -431,17 +414,11 @@ Creates a **Query** object to match the specified field whose value is within th
 inString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of strings.
+Creates a **Query** object to match the specified field whose value is within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -466,7 +443,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -492,17 +469,11 @@ try {
 isNotNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not **null**.
+Creates a **Query** object to match the specified field whose value is not **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -526,7 +497,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -552,17 +523,11 @@ try {
 isNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is **null**.
+Creates a **Query** object to match the specified field whose value is **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -586,7 +551,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -612,17 +577,11 @@ try {
 lessThan(field: string, value: number | number | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than the specified value.
+Creates a **Query** object to match the specified field whose value is less than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -647,7 +606,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## lessThanOrEqualTo
 
@@ -655,17 +614,11 @@ Creates a **Query** object to match the specified field whose value is less than
 lessThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
+Creates a **Query** object to match the specified field whose value is less than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -690,7 +643,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## like
 
@@ -698,17 +651,11 @@ Creates a **Query** object to match the specified field whose value is less than
 like(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is similar to the specified string.
+Creates a **Query** object to match the specified field whose value is similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -733,7 +680,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -759,9 +706,11 @@ try {
 limit(total: number, offset: number): Query
 ```
 
-Creates a **Query** object to specify the number of records of the query result and where to start. This API must  be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query**object.
+Creates a **Query** object to specify the number of records of the query result and where to start. This API must be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -786,7 +735,7 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -815,17 +764,11 @@ try {
 notEqualTo(field: string, value: number | number | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not equal to the specified value.
+Creates a **Query** object to match the specified field whose value is not equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -850,7 +793,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## notInNumber
 
@@ -858,17 +801,11 @@ Creates a **Query** object to match the specified field whose value is not equal
 notInNumber(field: string, valueList: number[] | number[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
+Creates a **Query** object to match the specified field whose value is not within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -893,7 +830,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## notInString
 
@@ -901,17 +838,11 @@ Creates a **Query** object to match the specified field whose value is not withi
 notInString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
+Creates a **Query** object to match the specified field whose value is not within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -936,7 +867,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -964,7 +895,9 @@ or(): Query
 
 Creates a **Query** object with the OR condition.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1004,17 +937,11 @@ try {
 orderByAsc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in ascending order.
+Creates a **Query** object to sort the query results in ascending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1038,7 +965,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1065,17 +992,11 @@ try {
 orderByDesc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in descending order.
+Creates a **Query** object to sort the query results in descending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1099,7 +1020,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1128,7 +1049,9 @@ prefixKey(prefix: string): Query
 
 Creates a **Query** object with a specified key prefix.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1152,7 +1075,7 @@ Creates a **Query** object with a specified key prefix.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1181,7 +1104,9 @@ reset(): Query
 
 Resets the **Query** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1223,7 +1148,9 @@ setSuggestIndex(index: string): Query
 
 Creates a **Query** object with an index preferentially used for query.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1247,7 +1174,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1274,17 +1201,11 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not similar to the specified string.
+Creates a **Query** object to match the specified field whose value is not similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1309,7 +1230,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -1,15 +1,10 @@
 # Brush
 
-Defines a brush, which is used to describe the style and color to fill in a shape.
+Defines a brush, which is used to describe the style and color to fill in a shape. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-drawing-class Brush--><!--Device-drawing-class Brush-End-->
 
@@ -29,7 +24,9 @@ constructor()
 
 A constructor used to create a **Brush** object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-constructor()--><!--Device-Brush-constructor()-End-->
 
@@ -43,7 +40,9 @@ constructor(brush: Brush)
 
 Copies a **Brush** object to create a new one.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-constructor(brush: Brush)--><!--Device-Brush-constructor(brush: Brush)-End-->
 
@@ -59,7 +58,7 @@ Copies a **Brush** object to create a new one.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getAlpha
 
@@ -69,7 +68,9 @@ getAlpha(): number
 
 Obtains the alpha value of this brush.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getAlpha(): int--><!--Device-Brush-getAlpha(): int-End-->
 
@@ -91,7 +92,31 @@ Obtains the color of this brush.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-Brush-getColor(): common2D.Color--><!--Device-Brush-getColor(): common2D.Color-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Color |
+
+## getColor
+
+```TypeScript
+getColor(): common2D.Color | undefined
+```
+
+Obtains the color of this brush.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Brush-getColor(): common2D.Color | undefined--><!--Device-Brush-getColor(): common2D.Color | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -111,7 +136,31 @@ Obtains the brush color. The difference between this method and [getColor](#getC
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-Brush-getColor4f(): common2D.Color4f--><!--Device-Brush-getColor4f(): common2D.Color4f-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Color4f |
+
+## getColor4f
+
+```TypeScript
+getColor4f(): common2D.Color4f | undefined
+```
+
+Obtains the color of a brush. The color is used by the brush to outline a shape.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+<!--Device-Brush-getColor4f(): common2D.Color4f | undefined--><!--Device-Brush-getColor4f(): common2D.Color4f | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -131,7 +180,31 @@ Obtains the color filter of this brush.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-Brush-getColorFilter(): ColorFilter--><!--Device-Brush-getColorFilter(): ColorFilter-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
+
+## getColorFilter
+
+```TypeScript
+getColorFilter(): ColorFilter | undefined
+```
+
+Obtains the color filter of this brush.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Brush-getColorFilter(): ColorFilter | undefined--><!--Device-Brush-getColorFilter(): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -149,7 +222,9 @@ getHexColor(): number
 
 Obtains the color of this brush.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getHexColor(): int--><!--Device-Brush-getHexColor(): int-End-->
 
@@ -169,7 +244,9 @@ isAntiAlias(): boolean
 
 Checks whether anti-aliasing is enabled for this brush.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-isAntiAlias(): boolean--><!--Device-Brush-isAntiAlias(): boolean-End-->
 
@@ -189,7 +266,9 @@ reset(): void
 
 Resets this brush to the initial state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-reset(): void--><!--Device-Brush-reset(): void-End-->
 
@@ -203,7 +282,9 @@ setAlpha(alpha: number): void
 
 Sets an alpha value for this brush.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setAlpha(alpha: int): void--><!--Device-Brush-setAlpha(alpha: int): void-End-->
 
@@ -219,7 +300,7 @@ Sets an alpha value for this brush.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setAntiAlias
 
@@ -229,7 +310,9 @@ setAntiAlias(aa: boolean): void
 
 Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the content smoother. If this API is not called, anti-aliasing is disabled by default.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setAntiAlias(aa: boolean): void--><!--Device-Brush-setAntiAlias(aa: boolean): void-End-->
 
@@ -245,7 +328,7 @@ Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the conte
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setBlendMode
 
@@ -255,7 +338,9 @@ setBlendMode(mode: BlendMode): void
 
 Sets a blend mode for this brush. If this API is not called, the default blend mode is **SRC_OVER**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setBlendMode(mode: BlendMode): void--><!--Device-Brush-setBlendMode(mode: BlendMode): void-End-->
 
@@ -265,13 +350,13 @@ Sets a blend mode for this brush. If this API is not called, the default blend m
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes |
+| mode | [BlendMode](../../apis-na/arkts-apis/arkts-na-common-blendmode-e.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setColor
 
@@ -281,7 +366,9 @@ setColor(color: common2D.Color): void
 
 Sets a color for this brush.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor(color: common2D.Color): void--><!--Device-Brush-setColor(color: common2D.Color): void-End-->
 
@@ -297,7 +384,7 @@ Sets a color for this brush.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setColor
 
@@ -305,10 +392,11 @@ Sets a color for this brush.
 setColor(alpha: number, red: number, green: number, blue: number): void
 ```
 
-Sets a color for this brush. This API provides better performance than  
-[setColor](#setColor) and is recommended.
+Sets a color for this brush. This API provides better performance than [setColor](#setColor) and is recommended.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
@@ -327,7 +415,7 @@ Sets a color for this brush. This API provides better performance than
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setColor
 
@@ -337,7 +425,9 @@ setColor(color: number): void
 
 Sets a color for this brush.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor(color: int): void--><!--Device-Brush-setColor(color: int): void-End-->
 
@@ -353,7 +443,7 @@ Sets a color for this brush.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setColor4f
 
@@ -361,10 +451,11 @@ Sets a color for this brush.
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this brush. The difference between this method and  
-[setColor](#setColor) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this brush. The difference between this method and [setColor](#setColor) is that the color gamut can be set separately.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
@@ -385,7 +476,9 @@ setColorFilter(filter: ColorFilter | null): void
 
 Sets a color filter for this brush.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColorFilter(filter: ColorFilter | null): void--><!--Device-Brush-setColorFilter(filter: ColorFilter | null): void-End-->
 
@@ -401,7 +494,7 @@ Sets a color filter for this brush.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setImageFilter
 
@@ -411,7 +504,9 @@ setImageFilter(filter: ImageFilter | null): void
 
 Sets an image filter for this brush.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setImageFilter(filter: ImageFilter | null): void--><!--Device-Brush-setImageFilter(filter: ImageFilter | null): void-End-->
 
@@ -427,7 +522,7 @@ Sets an image filter for this brush.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setMaskFilter
 
@@ -437,7 +532,9 @@ setMaskFilter(filter: MaskFilter | null): void
 
 Adds a mask filter for this brush.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void-End-->
 
@@ -453,7 +550,7 @@ Adds a mask filter for this brush.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setShaderEffect
 
@@ -463,7 +560,9 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 Sets the shader effect for this brush.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
 
@@ -479,7 +578,7 @@ Sets the shader effect for this brush.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setShadowLayer
 
@@ -489,7 +588,9 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 Sets a shadow layer for this brush. The shadow layer effect takes effect only when text is drawn.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
@@ -505,4 +606,4 @@ Sets a shadow layer for this brush. The shadow layer effect takes effect only wh
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

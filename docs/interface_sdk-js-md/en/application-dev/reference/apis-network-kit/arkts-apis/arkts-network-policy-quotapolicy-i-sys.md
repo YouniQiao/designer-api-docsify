@@ -6,6 +6,8 @@ Policies that limit network quota.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-policy-export interface QuotaPolicy--><!--Device-policy-export interface QuotaPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -32,6 +34,8 @@ The time of the last limit reminder. For notifying only, default: REMIND_NEVER.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-QuotaPolicy-lastLimitRemind?: number--><!--Device-QuotaPolicy-lastLimitRemind?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -52,6 +56,8 @@ The time of the last warning reminder. For notifying only, default: REMIND_NEVER
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-QuotaPolicy-lastWarningRemind?: number--><!--Device-QuotaPolicy-lastWarningRemind?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -64,13 +70,15 @@ The time of the last warning reminder. For notifying only, default: REMIND_NEVER
 limitAction: LimitAction
 ```
 
-The action while the used bytes reach the limit, see [LimitAction](arkts-network-policy-limitaction-e-sys.md#LimitAction).
+The action while the used bytes reach the limit, see [LimitAction](arkts-network-policy-limitaction-e-sys.md#LimitAction-(System-API)).
 
 **Type:** [LimitAction](arkts-network-policy-limitaction-e-sys.md)
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-QuotaPolicy-limitAction: LimitAction--><!--Device-QuotaPolicy-limitAction: LimitAction-End-->
 
@@ -92,6 +100,8 @@ The limit threshold of traffic, default: DATA_USAGE_UNKNOWN.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-QuotaPolicy-limitBytes: number--><!--Device-QuotaPolicy-limitBytes: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -111,6 +121,8 @@ Is metered network or not.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-QuotaPolicy-metered: boolean--><!--Device-QuotaPolicy-metered: boolean-End-->
 
@@ -132,6 +144,8 @@ The period and the start time for quota policy, default: "M1" (Monthly cycle).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-QuotaPolicy-periodDuration: string--><!--Device-QuotaPolicy-periodDuration: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -151,6 +165,8 @@ The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-QuotaPolicy-warningBytes: number--><!--Device-QuotaPolicy-warningBytes: number-End-->
 

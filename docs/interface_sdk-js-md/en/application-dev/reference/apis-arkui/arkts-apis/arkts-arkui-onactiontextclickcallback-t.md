@@ -8,9 +8,13 @@ Declare the callback function type to be called when clicking the icon button.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-unnamed-declare type OnActionTextClickCallback = () => void--><!--Device-unnamed-declare type OnActionTextClickCallback = () => void-End-->
 

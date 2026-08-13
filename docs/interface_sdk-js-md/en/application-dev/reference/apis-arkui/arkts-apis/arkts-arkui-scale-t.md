@@ -4,13 +4,17 @@
 export type Scale = Vector2
 ```
 
-Scale info.
+Sets the scale factor of the component.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export type Scale = Vector2--><!--Device-unnamed-export type Scale = Vector2-End-->
 

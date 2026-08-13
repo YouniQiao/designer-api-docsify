@@ -2,7 +2,9 @@
 
 The **UserStatus** module, designed for user state awareness, empowers the system to perceive specific conditions of users, such as determining their age group or recognizing environmental sounds, among other functions.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace userStatus--><!--Device-unnamed-declare namespace userStatus-End-->
 
@@ -20,18 +22,20 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [off](arkts-multimodalawareness-userstatus-off-f.md#off) |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#on) |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offUserAgeGroupDetected) |
+| [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onUserAgeGroupDetected) |
+| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) |
-| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) |
-| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) |
+| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure-(System-API)) |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#queryCapabilities-(System-API)) |
+| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe-(System-API)) |
+| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

@@ -6,6 +6,8 @@ Defines the size limitation for component snapshot taking.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-componentSnapshot-export interface SnapshotSizeLimitation--><!--Device-componentSnapshot-export interface SnapshotSizeLimitation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Maximum height limitation for component snapshot, in PX.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SnapshotSizeLimitation-maxHeight: int--><!--Device-SnapshotSizeLimitation-maxHeight: int-End-->
@@ -49,6 +53,8 @@ Maximum width limitation for component snapshot, in PX.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

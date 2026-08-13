@@ -2,11 +2,13 @@
 
 Defines the abstract interface of albums.
 
-**Inheritance/Implementation:** AbsAlbum extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** AbsAlbum extends lang.ISendable
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface AbsAlbum extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface AbsAlbum extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface AbsAlbum-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -25,6 +27,8 @@ getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAss
 Obtains media assets. This API uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -48,8 +52,8 @@ Obtains media assets. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## albumName
@@ -63,6 +67,8 @@ Album name.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-albumName: string--><!--Device-AbsAlbum-albumName: string-End-->
 
@@ -80,6 +86,8 @@ Album subtype
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype--><!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -95,6 +103,8 @@ Album type
 **Type:** AlbumType
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly albumType: AlbumType--><!--Device-AbsAlbum-readonly albumType: AlbumType-End-->
 
@@ -112,6 +122,8 @@ Album uri.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-AbsAlbum-readonly albumUri: string--><!--Device-AbsAlbum-readonly albumUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -128,6 +140,8 @@ Number of assets in the album
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-AbsAlbum-readonly count: number--><!--Device-AbsAlbum-readonly count: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -143,6 +157,8 @@ Cover uri for the album
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly coverUri: string--><!--Device-AbsAlbum-readonly coverUri: string-End-->
 

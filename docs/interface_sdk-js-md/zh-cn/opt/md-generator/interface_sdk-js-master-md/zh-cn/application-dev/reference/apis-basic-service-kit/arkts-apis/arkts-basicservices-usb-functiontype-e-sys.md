@@ -6,7 +6,7 @@ USB设备侧功能。
 
 **废弃版本：** 9
 
-**替代接口：** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#FunctionType)
+**替代接口：** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#FunctionType（系统接口）)
 
 <!--Device-usb-export enum FunctionType--><!--Device-usb-export enum FunctionType-End-->
 

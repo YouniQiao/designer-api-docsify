@@ -2,7 +2,9 @@
 
 段落风格的文本制表符，储存了对齐方式和位置。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-text-interface TextTab--><!--Device-text-interface TextTab-End-->
 
@@ -18,7 +20,9 @@ alignment: TextAlign
 
 **类型：** TextAlign
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ location: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

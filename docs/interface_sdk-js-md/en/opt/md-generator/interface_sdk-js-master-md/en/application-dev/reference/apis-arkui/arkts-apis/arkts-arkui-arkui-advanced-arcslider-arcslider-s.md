@@ -1,12 +1,10 @@
 # ArcSlider
 
-The **ArcSlider** component is designed for circular screens on wearables to quickly adjust settings, such as the volume and brightness.
-
-> **NOTE：**
+The **ArcSlider** component is designed for circular screens on wearables to quickly adjust settings, such as the volume and brightness. > **NOTE：**
 
 **Since:** 18
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare struct ArcSlider--><!--Device-unnamed-declare struct ArcSlider-End-->
 
@@ -24,13 +22,13 @@ import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSli
 options: ArcSliderOptions
 ```
 
-Parameters of the arc slider.
-
-Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md#ArcSliderOptions)
+Parameters of the arc slider. Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md#ArcSliderOptions)
 
 **Type:** [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -1,10 +1,12 @@
 # PickerOrientation
 
-PickerOrientation. include VERTICAL and HORIZONTAL
+Enumerates the sliding preview directions of the Picker grid page. This capability can be configured since API version 20. If this capability is set since API version 12 to 19, the setting does not take effect and the default direction (vertical) is used.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum PickerOrientation--><!--Device-unnamed-export declare enum PickerOrientation-End-->
 
@@ -16,13 +18,15 @@ PickerOrientation. include VERTICAL and HORIZONTAL
 VERTICAL = 0
 ```
 
-VERTICAL. vertical display
+Vertical direction.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerOrientation-VERTICAL = 0--><!--Device-PickerOrientation-VERTICAL = 0-End-->
 
@@ -34,13 +38,15 @@ VERTICAL. vertical display
 HORIZONTAL = 1
 ```
 
-HORIZONTAL. horizontal display
+Horizontal direction.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerOrientation-HORIZONTAL = 1--><!--Device-PickerOrientation-HORIZONTAL = 1-End-->
 

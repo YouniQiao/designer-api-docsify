@@ -1,15 +1,12 @@
 # @ohos.app.form.formInfo
 
-The **formInfo** module provides types and enums related to the widget information and state.
+The **formInfo** module provides types and enums related to the widget information and state. > **NOTE：**> - This topic describes only system APIs provided by the module. For details about its public APIs, see > [@ohos.app.form.formInfo (formInfo)](#@ohos.app.form.formInfo).
 
-> **NOTE：**
+**Since:** 23
 
-> - This topic describes only system APIs provided by the module. For details about its public APIs, see
-> [@ohos.app.form.formInfo (formInfo)](#formInfo).
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace formInfo--><!--Device-unnamed-declare namespace formInfo-End-->
 
@@ -32,7 +29,6 @@ import { formInfo } from '@kit.FormKit';
 | [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md) | Provides state information about a form. |
 | [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md) | Provides OverflowInfo about funInteraction or sceneAnimation form |
 | [Rect](arkts-form-forminfo-rect-i.md) | Indicates rectangle, unit is vp. |
-| [RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md) | The class of a running form information. |
 
 <!--Del-->
 ### Interfaces（系统接口）
@@ -48,6 +44,7 @@ import { formInfo } from '@kit.FormKit';
 | [OverflowRequest](arkts-form-forminfo-overflowrequest-i-sys.md) | Provides OverflowRequest about request/cancel form's overflow |
 | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | PublishFormCrossBundleInfo |
 | [PublishFormResult](arkts-form-forminfo-publishformresult-i-sys.md) | The result of publish form. |
+| [RunningFormInfo](arkts-form-forminfo-runningforminfo-i-sys.md) | The class of a running form information. |
 | [SceneAnimationParams](arkts-form-forminfo-sceneanimationparams-i-sys.md) | The scene animation form params. |
 | [TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md) | TemplateFormDetailInfo |
 <!--DelEnd-->
@@ -72,6 +69,7 @@ import { formInfo } from '@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
+| [FormLocation](arkts-form-forminfo-formlocation-e-sys.md) | Enumerates the widget locations. |
 | [FormParam](arkts-form-forminfo-formparam-e-sys.md) | Enumerates widget parameters. |
 | [FormUsageState](arkts-form-forminfo-formusagestate-e-sys.md) | Enumerates the usage statuses of a widget. |
 | [PublishFormErrorCode](arkts-form-forminfo-publishformerrorcode-e-sys.md) | Enumerates the result codes that may be used for the operation of adding a widget to the home screen. |

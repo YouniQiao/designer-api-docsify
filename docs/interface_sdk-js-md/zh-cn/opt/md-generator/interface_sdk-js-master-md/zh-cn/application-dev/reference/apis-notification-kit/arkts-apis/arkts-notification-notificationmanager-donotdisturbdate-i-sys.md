@@ -2,7 +2,9 @@
 
 免打扰时间选项。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export interface DoNotDisturbDate--><!--Device-notificationManager-export interface DoNotDisturbDate-End-->
 
@@ -26,7 +28,9 @@ begin: Date
 
 **类型：** Date
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbDate-begin: Date--><!--Device-DoNotDisturbDate-begin: Date-End-->
 
@@ -44,7 +48,9 @@ end: Date
 
 **类型：** Date
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbDate-end: Date--><!--Device-DoNotDisturbDate-end: Date-End-->
 
@@ -62,7 +68,9 @@ type: DoNotDisturbType
 
 **类型：** DoNotDisturbType
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbDate-type: DoNotDisturbType--><!--Device-DoNotDisturbDate-type: DoNotDisturbType-End-->
 

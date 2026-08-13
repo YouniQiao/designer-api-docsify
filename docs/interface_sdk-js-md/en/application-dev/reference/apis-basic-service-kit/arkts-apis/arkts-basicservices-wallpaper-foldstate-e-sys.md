@@ -2,9 +2,11 @@
 
 Define the folding state of wallpaper
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wallpaper-enum FoldState--><!--Device-wallpaper-enum FoldState-End-->
 
@@ -20,9 +22,11 @@ NORMAL = 0
 
 Indicates the device type is normal device.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FoldState-NORMAL = 0--><!--Device-FoldState-NORMAL = 0-End-->
 
@@ -38,9 +42,11 @@ UNFOLD_ONCE_STATE = 1
 
 Indicates the once unfold state.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FoldState-UNFOLD_ONCE_STATE = 1--><!--Device-FoldState-UNFOLD_ONCE_STATE = 1-End-->
 
@@ -56,9 +62,11 @@ UNFOLD_TWICE_STATE = 2
 
 Indicates the secondary unfold state.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FoldState-UNFOLD_TWICE_STATE = 2--><!--Device-FoldState-UNFOLD_TWICE_STATE = 2-End-->
 

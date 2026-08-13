@@ -6,6 +6,8 @@ Declare the type of input content
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum ContentType--><!--Device-unnamed-export declare enum ContentType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Declare the type of input content
 USER_NAME = 0
 ```
 
-User name content type.Password Vault, when enabled, can automatically save and fill in usernames.
+User name content type. Password Vault, when enabled, can automatically save and fill in usernames.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +38,13 @@ User name content type.Password Vault, when enabled, can automatically save and 
 PASSWORD = 1
 ```
 
-Password content type.Password Vault, when enabled, can automatically save and fill in passwords.
+Password content type. Password Vault, when enabled, can automatically save and fill in passwords.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,11 +58,13 @@ Password content type.Password Vault, when enabled, can automatically save and f
 NEW_PASSWORD = 2
 ```
 
-New password content type.Password Vault, when enabled, can automatically generate a new password.
+New password content type. Password Vault, when enabled, can automatically generate a new password.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +78,13 @@ New password content type.Password Vault, when enabled, can automatically genera
 FULL_STREET_ADDRESS = 3
 ```
 
-Full street address content type.The scenario-based autofill feature, when enabled,can automatically save and fill in full street addresses.
+Full street address content type. The scenario-based autofill feature, when enabled, can automatically save and fill in full street addresses.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,11 +98,13 @@ Full street address content type.The scenario-based autofill feature, when enabl
 HOUSE_NUMBER = 4
 ```
 
-House number content type.The scenario-based autofill feature, when enabled,can automatically save and fill in house numbers.
+House number content type. The scenario-based autofill feature, when enabled, can automatically save and fill in house numbers.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,11 +118,13 @@ House number content type.The scenario-based autofill feature, when enabled,can 
 DISTRICT_ADDRESS = 5
 ```
 
-District address content type.The scenario-based autofill feature, when enabled,can automatically save and fill in districts and counties.
+District address content type. The scenario-based autofill feature, when enabled, can automatically save and fill in districts and counties.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,11 +138,13 @@ District address content type.The scenario-based autofill feature, when enabled,
 CITY_ADDRESS = 6
 ```
 
-City address content type.The scenario-based autofill feature, when enabled,can automatically save and fill in cities.
+City address content type. The scenario-based autofill feature, when enabled, can automatically save and fill in cities.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,11 +158,13 @@ City address content type.The scenario-based autofill feature, when enabled,can 
 PROVINCE_ADDRESS = 7
 ```
 
-Province address content type.The scenario-based autofill feature, when enabled,can automatically save and fill in provinces.
+Province address content type. The scenario-based autofill feature, when enabled, can automatically save and fill in provinces.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,11 +178,13 @@ Province address content type.The scenario-based autofill feature, when enabled,
 COUNTRY_ADDRESS = 8
 ```
 
-Country address content type.The scenario-based autofill feature, when enabled,can automatically save and fill in countries.
+Country address content type. The scenario-based autofill feature, when enabled, can automatically save and fill in countries.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,11 +198,13 @@ Country address content type.The scenario-based autofill feature, when enabled,c
 PERSON_FULL_NAME = 9
 ```
 
-Person full name content type.The scenario-based autofill feature, when enabled,can automatically save and fill in full names.
+Person full name content type. The scenario-based autofill feature, when enabled, can automatically save and fill in full names.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,11 +218,13 @@ Person full name content type.The scenario-based autofill feature, when enabled,
 PERSON_LAST_NAME = 10
 ```
 
-Person last name content type.The scenario-based autofill feature, when enabled,can automatically save and fill in last names.
+Person last name content type. The scenario-based autofill feature, when enabled, can automatically save and fill in last names.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,11 +238,13 @@ Person last name content type.The scenario-based autofill feature, when enabled,
 PERSON_FIRST_NAME = 11
 ```
 
-Person first name content type.The scenario-based autofill feature, when enabled,can automatically save and fill in first names.
+Person first name content type. The scenario-based autofill feature, when enabled, can automatically save and fill in first names.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -232,11 +258,13 @@ Person first name content type.The scenario-based autofill feature, when enabled
 PHONE_NUMBER = 12
 ```
 
-Phone number content type.The scenario-based autofill feature, when enabled,can automatically save and fill in phone numbers.
+Phone number content type. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,11 +278,13 @@ Phone number content type.The scenario-based autofill feature, when enabled,can 
 PHONE_COUNTRY_CODE = 13
 ```
 
-Phone country code content type.The scenario-based autofill feature, when enabled,can automatically save and fill in country codes.
+Phone country code content type. The scenario-based autofill feature, when enabled, can automatically save and fill in country codes.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -268,11 +298,13 @@ Phone country code content type.The scenario-based autofill feature, when enable
 FULL_PHONE_NUMBER = 14
 ```
 
-Full phone number content type.The scenario-based autofill feature, when enabled,can automatically save and fill in phone numbers with country codes.
+Full phone number content type. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers with country codes.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -286,11 +318,13 @@ Full phone number content type.The scenario-based autofill feature, when enabled
 EMAIL_ADDRESS = 15
 ```
 
-Email address content type.The scenario-based autofill feature, when enabled,can automatically save and fill in email addresses.
+Email address content type. The scenario-based autofill feature, when enabled, can automatically save and fill in email addresses.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -304,11 +338,13 @@ Email address content type.The scenario-based autofill feature, when enabled,can
 BANK_CARD_NUMBER = 16
 ```
 
-Bank card number content type.The scenario-based autofill feature, when enabled,can automatically save and fill in bank card numbers.
+Bank card number content type. The scenario-based autofill feature, when enabled, can automatically save and fill in bank card numbers.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,11 +358,13 @@ Bank card number content type.The scenario-based autofill feature, when enabled,
 ID_CARD_NUMBER = 17
 ```
 
-ID card number content type.The scenario-based autofill feature, when enabled,can automatically save and fill in ID card numbers.
+ID card number content type. The scenario-based autofill feature, when enabled, can automatically save and fill in ID card numbers.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -340,11 +378,13 @@ ID card number content type.The scenario-based autofill feature, when enabled,ca
 NICKNAME = 23
 ```
 
-Nickname content type.The scenario-based autofill feature, when enabled,can automatically save and fill in nicknames.
+Nickname content type. The scenario-based autofill feature, when enabled, can automatically save and fill in nicknames.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -358,11 +398,13 @@ Nickname content type.The scenario-based autofill feature, when enabled,can auto
 DETAIL_INFO_WITHOUT_STREET = 24
 ```
 
-Detail info without street content type.The scenario-based autofill feature, when enabled,can automatically save and fill in address information without street addresses.
+Detail info without street content type. The scenario-based autofill feature, when enabled, can automatically save and fill in address information without street addresses.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -376,11 +418,13 @@ Detail info without street content type.The scenario-based autofill feature, whe
 FORMAT_ADDRESS = 25
 ```
 
-Format address content type.The scenario-based autofill feature, when enabled,can automatically save and fill in standard addresses.
+Format address content type. The scenario-based autofill feature, when enabled, can automatically save and fill in standard addresses.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -394,11 +438,13 @@ Format address content type.The scenario-based autofill feature, when enabled,ca
 PASSPORT_NUMBER = 26
 ```
 
-Passport number content type.The scenario-based autofill feature, when enabled,can automatically save and fill in passport numbers.
+Passport number content type. The scenario-based autofill feature, when enabled, can automatically save and fill in passport numbers.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -412,11 +458,13 @@ Passport number content type.The scenario-based autofill feature, when enabled,c
 VALIDITY = 27
 ```
 
-Passport validity content type.The scenario-based autofill feature, when enabled,can automatically save and fill in passport validity periods.
+Passport validity content type. The scenario-based autofill feature, when enabled, can automatically save and fill in passport validity periods.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -430,11 +478,13 @@ Passport validity content type.The scenario-based autofill feature, when enabled
 ISSUE_AT = 28
 ```
 
-Place of issue content type.The scenario-based autofill feature, when enabled,can automatically save and fill in the place of issue for passports.
+Place of issue content type. The scenario-based autofill feature, when enabled, can automatically save and fill in the place of issue for passports.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -448,11 +498,13 @@ Place of issue content type.The scenario-based autofill feature, when enabled,ca
 ORGANIZATION = 29
 ```
 
-Invoice organization content type.The scenario-based autofill feature, when enabled,can automatically save and fill in invoice titles.
+Invoice organization content type. The scenario-based autofill feature, when enabled, can automatically save and fill in invoice titles.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -466,11 +518,13 @@ Invoice organization content type.The scenario-based autofill feature, when enab
 TAX_ID = 30
 ```
 
-Invoice tax id content type.The scenario-based autofill feature, when enabled,can automatically save and fill in tax IDs.
+Invoice tax id content type. The scenario-based autofill feature, when enabled, can automatically save and fill in tax IDs.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -484,11 +538,13 @@ Invoice tax id content type.The scenario-based autofill feature, when enabled,ca
 ADDRESS_CITY_AND_STATE = 31
 ```
 
-Address city and state content type.The scenario-based autofill feature, when enabled,can automatically save and fill in locations.
+Address city and state content type. The scenario-based autofill feature, when enabled, can automatically save and fill in locations.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -502,11 +558,13 @@ Address city and state content type.The scenario-based autofill feature, when en
 FLIGHT_NUMBER = 32
 ```
 
-Airline flight number content type.Currently not supported for automatic saving and auto-filling.
+Airline flight number content type. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -520,11 +578,13 @@ Airline flight number content type.Currently not supported for automatic saving 
 LICENSE_NUMBER = 33
 ```
 
-License number for drivers content type.Currently not supported for automatic saving and auto-filling.
+License number for drivers content type. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -538,11 +598,13 @@ License number for drivers content type.Currently not supported for automatic sa
 LICENSE_FILE_NUMBER = 34
 ```
 
-License file number for drivers content type.Currently not supported for automatic saving and auto-filling.
+License file number for drivers content type. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -556,11 +618,13 @@ License file number for drivers content type.Currently not supported for automat
 LICENSE_PLATE = 35
 ```
 
-License plate for vehicles content type.The scenario-based autofill feature, when enabled,can automatically save and fill in license plate numbers.
+License plate for vehicles content type. The scenario-based autofill feature, when enabled, can automatically save and fill in license plate numbers.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -574,11 +638,13 @@ License plate for vehicles content type.The scenario-based autofill feature, whe
 ENGINE_NUMBER = 36
 ```
 
-Engine number for vehicles content type.Currently not supported for automatic saving and auto-filling.
+Engine number for vehicles content type. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -592,11 +658,13 @@ Engine number for vehicles content type.Currently not supported for automatic sa
 LICENSE_CHASSIS_NUMBER = 37
 ```
 
-License chassis number for vehicles content type.Currently not supported for automatic saving and auto-filling.
+License chassis number for vehicles content type. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

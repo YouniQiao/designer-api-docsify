@@ -2,7 +2,9 @@
 
 Provides APIs for managing OS accounts.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
 
@@ -22,7 +24,9 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -38,8 +42,8 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -69,7 +73,9 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 Checks whether multiple OS accounts are supported. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
 
@@ -85,7 +91,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -111,12 +117,7 @@ try {
 checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -139,11 +140,11 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -175,12 +176,7 @@ try {
 checkOsAccountActivated(localId: number): Promise<boolean>
 ```
 
-Checks whether an OS account is activated. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -208,11 +204,11 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -242,12 +238,7 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -271,11 +262,11 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -308,12 +299,7 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -342,11 +328,11 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -379,7 +365,9 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -395,8 +383,8 @@ Checks whether this OS account is a test account. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -426,7 +414,9 @@ checkOsAccountTestable(): Promise<boolean>
 
 Checks whether this OS account is a test account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
 
@@ -442,7 +432,7 @@ Checks whether this OS account is a test account. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -468,12 +458,7 @@ try {
 checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this OS account is unlocked. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
-> [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
+Checks whether this OS account is unlocked. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. You are advised to use > [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
 
 **Since:** 9
 
@@ -495,7 +480,7 @@ Checks whether this OS account is unlocked. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -523,12 +508,7 @@ try {
 checkOsAccountVerified(): Promise<boolean>
 ```
 
-Checks whether this OS account has been verified. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
-> [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
+Checks whether this OS account has been verified. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. You are advised to use > [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
 
 **Since:** 9
 
@@ -550,7 +530,7 @@ Checks whether this OS account has been verified. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -576,12 +556,7 @@ try {
 checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -604,11 +579,11 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -638,12 +613,7 @@ try {
 checkOsAccountVerified(localId: number): Promise<boolean>
 ```
 
-Checks whether an OS account has been verified. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -671,11 +641,11 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -705,7 +675,9 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 
 Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
 
@@ -721,8 +693,8 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -755,7 +727,9 @@ getActivatedOsAccountLocalIds(): Promise<Array<number>>
 
 Obtains information about all activated OS accounts. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
 
@@ -771,7 +745,7 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -797,18 +771,13 @@ try {
 getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountCount](#getOsAccountCount) instead.
+Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountCount](#getOsAccountCount) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountCount](osAccount.AccountManager.getOsAccountCount(callback:)
+**Substitutes:** [getOsAccountCount](#getOsAccountCount)(callback: AsyncCallback&lt;int&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -843,12 +812,7 @@ accountManager.getCreatedOsAccountsCount((err: BusinessError, count: number)=>{
 getCreatedOsAccountsCount(): Promise<number>
 ```
 
-Obtains the number of OS accounts created. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountCount](#getOsAccountCount) instead.
+Obtains the number of OS accounts created. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountCount](#getOsAccountCount) instead.
 
 **Since:** 7
 
@@ -887,12 +851,7 @@ accountManager.getCreatedOsAccountsCount().then((count: number) => {
 getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -916,8 +875,8 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -945,12 +904,7 @@ try {
 getCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -974,8 +928,8 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1001,19 +955,13 @@ try {
 getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 ```
 
-Obtains the ID of a distributed virtual device. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)
-> instead.
+Obtains the ID of a distributed virtual device. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryDistributedVirtualDeviceId](osAccount.AccountManager.queryDistributedVirtualDeviceId(callback:)
+**Substitutes:** [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)(callback: AsyncCallback&lt;string&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1048,12 +996,7 @@ accountManager.getDistributedVirtualDeviceId((err: BusinessError, virtualID: str
 getDistributedVirtualDeviceId(): Promise<string>
 ```
 
-Obtains the ID of this distributed virtual device. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) instead.
+Obtains the ID of this distributed virtual device. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) instead.
 
 **Since:** 7
 
@@ -1094,7 +1037,9 @@ getForegroundOsAccountLocalId(): Promise<number>
 
 Obtains the ID of the foreground OS account. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
 
@@ -1110,7 +1055,7 @@ Obtains the ID of the foreground OS account. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1136,18 +1081,13 @@ try {
 getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**Substitutes:** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1187,18 +1127,13 @@ accountManager.getOsAccountAllConstraints(localId, (err: BusinessError, constrai
 getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 ```
 
-Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**Substitutes:** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1241,12 +1176,7 @@ accountManager.getOsAccountAllConstraints(localId).then((constraints: string[]) 
 getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -1269,11 +1199,11 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1305,12 +1235,7 @@ try {
 getOsAccountConstraints(localId: number): Promise<Array<string>>
 ```
 
-Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -1338,11 +1263,11 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1372,9 +1297,11 @@ try {
 getOsAccountCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
+Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1392,9 +1319,9 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1422,9 +1349,11 @@ try {
 getOsAccountCount(): Promise<number>
 ```
 
-Obtains the number of OS accounts created. This API uses a promise to return the result.This API can be called only by system applications.
+Obtains the number of OS accounts created. This API uses a promise to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1442,8 +1371,8 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1473,6 +1402,8 @@ Obtains the domain account information associated with a specified OS account. T
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
@@ -1495,10 +1426,10 @@ Obtains the domain account information associated with a specified OS account. T
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1520,15 +1451,55 @@ accountManager.getOsAccountDomainInfo(localId).then((domainAccountInfo: osAccoun
 })
 ```
 
+## getOsAccountDomainInfo
+
+```TypeScript
+getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo | null>
+```
+
+Obtains the domain account information associated with a specified OS account. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountDomainInfo(localId: int): Promise<DomainAccountInfo | null>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: int): Promise<DomainAccountInfo | null>-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| localId | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+
 ## getOsAccountLocalId
 
 ```TypeScript
 getOsAccountLocalId(callback: AsyncCallback<number>): void
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback  to return the result.
+Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
 
@@ -1544,8 +1515,8 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1575,7 +1546,9 @@ getOsAccountLocalId(): Promise<number>
 
 Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
 
@@ -1591,7 +1564,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1617,19 +1590,13 @@ try {
 getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)
-> instead.
+Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
 
@@ -1666,19 +1633,13 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber, (err: BusinessErr
 getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 ```
 
-Obtains the OS account ID based on the SN. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber-1)
-> instead.
+Obtains the OS account ID based on the SN. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
@@ -1718,9 +1679,11 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber).then((localId: nu
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
+Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1739,11 +1702,11 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1772,9 +1735,11 @@ try {
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.This API can be called only by system applications.
+Obtains the OS account ID based on the domain account information. This API uses a promise to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1798,11 +1763,11 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1831,7 +1796,9 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 
 Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
 
@@ -1848,10 +1815,10 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1885,7 +1852,9 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 
 Obtains the OS account ID based on the SN. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
 
@@ -1907,10 +1876,10 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1942,7 +1911,9 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 
 Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
 
@@ -1959,9 +1930,9 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1995,7 +1966,9 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 
 Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
 
@@ -2017,9 +1990,9 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2051,7 +2024,9 @@ getOsAccountLocalIdForUidSync(uid: number): number
 
 Obtains the OS account ID based on the process UID. The API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
 
@@ -2073,8 +2048,8 @@ Obtains the OS account ID based on the process UID. The API returns the result s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
 
 ## Examples
 
@@ -2101,19 +2076,13 @@ try {
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)
-> instead.
+Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**Substitutes:** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;int&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2150,19 +2119,13 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo, (err: BusinessError, lo
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain-1)
-> instead.
+Obtains the OS account ID based on the domain account information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**Substitutes:** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2202,19 +2165,13 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) 
 getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback  to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalId](#getOsAccountLocalId)
-> instead.
+Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalId](#getOsAccountLocalId) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalId](osAccount.AccountManager.getOsAccountLocalId(callback:)
+**Substitutes:** [getOsAccountLocalId](#getOsAccountLocalId)(callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
 
@@ -2247,12 +2204,7 @@ accountManager.getOsAccountLocalIdFromProcess((err: BusinessError, localId: numb
 getOsAccountLocalIdFromProcess(): Promise<number>
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalId](#getOsAccountLocalId) instead.
+Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalId](#getOsAccountLocalId) instead.
 
 **Since:** 7
 
@@ -2289,19 +2241,13 @@ accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
 getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)
-> instead.
+Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**Substitutes:** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2338,18 +2284,13 @@ accountManager.getOsAccountLocalIdFromUid(uid, (err: BusinessError, localId: num
 getOsAccountLocalIdFromUid(uid: number): Promise<number>
 ```
 
-Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid-1) instead.
+Obtains the OS account ID based on the process UID. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**Substitutes:** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
@@ -2393,6 +2334,8 @@ Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS a
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2411,8 +2354,8 @@ Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS a
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2440,7 +2383,9 @@ getOsAccountName(): Promise<string>
 
 Obtains the name of the OS account of the caller. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
 
@@ -2456,7 +2401,7 @@ Obtains the name of the OS account of the caller. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2486,6 +2431,8 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2510,10 +2457,10 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 | Error Code ID |
 | --- |
-| [12300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2541,7 +2488,9 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -2557,8 +2506,8 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2588,7 +2537,9 @@ getOsAccountType(): Promise<OsAccountType>
 
 Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
 
@@ -2604,7 +2555,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2630,19 +2581,13 @@ try {
 getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountType](#getOsAccountType)
-> instead.
+Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountType](#getOsAccountType) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountType](osAccount.AccountManager.getOsAccountType(callback:)
+**Substitutes:** [getOsAccountType](#getOsAccountType)(callback: AsyncCallback&lt;OsAccountType&gt;)
 
 <!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -2675,12 +2620,7 @@ accountManager.getOsAccountTypeFromProcess((err: BusinessError, accountType: osA
 getOsAccountTypeFromProcess(): Promise<OsAccountType>
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountType](#getOsAccountType) instead.
+Obtains the type of the account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountType](#getOsAccountType) instead.
 
 **Since:** 7
 
@@ -2717,19 +2657,13 @@ accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAcco
 getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)
-> instead.
+Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**Substitutes:** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int, callback: AsyncCallback&lt;long&gt;)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2767,19 +2701,13 @@ accountManager.getSerialNumberByOsAccountLocalId(localId, (err: BusinessError, s
 getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 ```
 
-Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId-1)
-> instead.
+Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**Substitutes:** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
@@ -2822,7 +2750,9 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 
 Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
 
@@ -2839,10 +2769,10 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2876,7 +2806,9 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 
 Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
 
@@ -2898,10 +2830,10 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2931,19 +2863,13 @@ try {
 isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)
-> instead.
+Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkMultiOsAccountEnabled](osAccount.AccountManager.checkMultiOsAccountEnabled(callback:)
+**Substitutes:** [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -2976,12 +2902,7 @@ accountManager.isMultiOsAccountEnable((err: BusinessError, isEnabled: boolean) =
 isMultiOsAccountEnable(): Promise<boolean>
 ```
 
-Checks whether multiple OS accounts are supported. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) instead.
+Checks whether multiple OS accounts are supported. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) instead.
 
 **Since:** 7
 
@@ -3018,18 +2939,13 @@ accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
 isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**Substitutes:** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3069,18 +2985,13 @@ accountManager.isOsAccountActived(localId, (err: BusinessError, isActived: boole
 isOsAccountActived(localId: number): Promise<boolean>
 ```
 
-Checks whether an OS account is activated. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**Substitutes:** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3123,18 +3034,13 @@ accountManager.isOsAccountActived(localId).then((isActived: boolean) => {
 isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**Substitutes:** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3176,18 +3082,13 @@ accountManager.isOsAccountConstraintEnable(localId, constraint, (err: BusinessEr
 isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**Substitutes:** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3234,7 +3135,9 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 Checks whether a constraint is enabled for this OS account. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
 
@@ -3256,8 +3159,8 @@ Checks whether a constraint is enabled for this OS account. This API uses a prom
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3288,7 +3191,9 @@ isOsAccountUnlocked(): Promise<boolean>
 
 Checks whether this OS account is unlocked. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
 
@@ -3304,7 +3209,7 @@ Checks whether this OS account is unlocked. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3330,19 +3235,13 @@ try {
 isOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountVerified](#checkOsAccountVerified)
-> instead.
+Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkOsAccountVerified](#checkOsAccountVerified) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(callback:)
+**Substitutes:** [checkOsAccountVerified](#checkOsAccountVerified)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3377,18 +3276,13 @@ accountManager.isOsAccountVerified((err: BusinessError, isVerified: boolean) => 
 isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**Substitutes:** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3426,18 +3320,13 @@ accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boo
 isOsAccountVerified(localId?: number): Promise<boolean>
 ```
 
-Checks whether an OS account has been verified. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**Substitutes:** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3476,19 +3365,13 @@ accountManager.isOsAccountVerified().then((isVerified: boolean) => {
 isTestOsAccount(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountTestable](#checkOsAccountTestable)
-> instead.
+Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkOsAccountTestable](#checkOsAccountTestable) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountTestable](osAccount.AccountManager.checkOsAccountTestable(callback:)
+**Substitutes:** [checkOsAccountTestable](#checkOsAccountTestable)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
 
@@ -3521,12 +3404,7 @@ accountManager.isTestOsAccount((err: BusinessError, isTestable: boolean) => {
 isTestOsAccount(): Promise<boolean>
 ```
 
-Checks whether this OS account is a test account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountTestable](#checkOsAccountTestable) instead.
+Checks whether this OS account is a test account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkOsAccountTestable](#checkOsAccountTestable) instead.
 
 **Since:** 7
 
@@ -3563,19 +3441,13 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)
-> instead.
+Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getActivatedOsAccountLocalIds](osAccount.AccountManager.getActivatedOsAccountLocalIds(callback:)
+**Substitutes:** [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)(callback: AsyncCallback&lt;Array&lt;int&gt;&gt;)
 
 <!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -3611,12 +3483,7 @@ accountManager.queryActivatedOsAccountIds((err: BusinessError, idArray: number[]
 queryActivatedOsAccountIds(): Promise<Array<number>>
 ```
 
-Obtains information about all activated OS accounts. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) instead.
+Obtains information about all activated OS accounts. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) instead.
 
 **Since:** 8
 
@@ -3653,18 +3520,13 @@ accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
 queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentOsAccount](osAccount.AccountManager.getCurrentOsAccount(callback:)
+**Substitutes:** [getCurrentOsAccount](#getCurrentOsAccount)(callback: AsyncCallback&lt;OsAccountInfo&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3699,12 +3561,7 @@ accountManager.queryCurrentOsAccount((err: BusinessError, curAccountInfo: osAcco
 queryCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -3745,7 +3602,9 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 Queries the ID of a distributed virtual device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3763,9 +3622,9 @@ Queries the ID of a distributed virtual device. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3795,7 +3654,9 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 Queries the ID of this distributed virtual device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3813,8 +3674,8 @@ Queries the ID of this distributed virtual device. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 

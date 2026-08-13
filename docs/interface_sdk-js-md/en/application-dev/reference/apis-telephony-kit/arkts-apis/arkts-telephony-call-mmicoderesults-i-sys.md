@@ -2,9 +2,11 @@
 
 Defines the MMI code result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface MmiCodeResults--><!--Device-call-export interface MmiCodeResults-End-->
 
@@ -28,9 +30,11 @@ MMI code message.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmiCodeResults-message: string--><!--Device-MmiCodeResults-message: string-End-->
 
@@ -48,9 +52,11 @@ Defines the MMI code result.
 
 **Type:** [MmiCodeResult](arkts-telephony-call-mmicoderesult-e-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmiCodeResults-result: MmiCodeResult--><!--Device-MmiCodeResults-result: MmiCodeResult-End-->
 

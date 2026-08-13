@@ -6,15 +6,13 @@
 function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 ```
 
-发生JS_CRASH异常时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。
+发生JS_CRASH异常时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。 如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。 若接口参数为空，后续注册的处理器将无法与前序已注册的处理器建立关联，从而中断链式调用。
 
-如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
+**起始版本：** 24
 
-若接口参数为空，后续注册的处理器将无法与前序已注册的处理器建立关联，从而中断链式调用。
+**废弃版本：** -1
 
-**起始版本：** 21
-
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler--><!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler-End-->
 
@@ -36,7 +34,7 @@ function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 
 | 错误码ID |
 | --- |
-| [16000205](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-当前接口未在主线程中调用) |
+| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) |
 
 ## 示例
 

@@ -6,6 +6,8 @@ Represents an OTA update policy.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-export interface OtaUpdatePolicy--><!--Device-systemManager-export interface OtaUpdatePolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,6 +32,8 @@ Period for which the update is postponed, in hours.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OtaUpdatePolicy-delayUpdateTime?: number--><!--Device-OtaUpdatePolicy-delayUpdateTime?: number-End-->
@@ -42,15 +46,15 @@ Period for which the update is postponed, in hours.
 disableSystemOtaUpdate?: boolean
 ```
 
-Whether to disable public network upgrade. The value **true** indicates that public network upgrade is disabled,and the value **false** indicates the opposite. If this field is used as an input parameter of  
-[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setOtaUpdatePolicy), the default value can be retained.The current configuration can be obtained via the  
-[systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getOtaUpdatePolicy) API. After public network upgrade is disabled, you can perform intranet upgrade.
+Whether to disable public network upgrade. The value **true** indicates that public network upgrade is disabled, and the value **false** indicates the opposite. If this field is used as an input parameter of [systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setOtaUpdatePolicy), the default value can be retained. The current configuration can be obtained via the [systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getOtaUpdatePolicy) API. After public network upgrade is disabled, you can perform intranet upgrade.
 
 **Type:** boolean
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +76,8 @@ End time (timestamp) of the installation window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OtaUpdatePolicy-installEndTime?: number--><!--Device-OtaUpdatePolicy-installEndTime?: number-End-->
@@ -91,6 +97,8 @@ Start time (timestamp) of the installation window.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +120,8 @@ Latest update time (timestamp).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OtaUpdatePolicy-latestUpdateTime?: number--><!--Device-OtaUpdatePolicy-latestUpdateTime?: number-End-->
@@ -132,6 +142,8 @@ Type of the update policy.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OtaUpdatePolicy-policyType: PolicyType--><!--Device-OtaUpdatePolicy-policyType: PolicyType-End-->
@@ -151,6 +163,8 @@ Version of the software to update.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

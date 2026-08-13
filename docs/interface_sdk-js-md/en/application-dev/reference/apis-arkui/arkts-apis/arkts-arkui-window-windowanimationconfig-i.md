@@ -2,9 +2,11 @@
 
 Describes the configuration for window animation.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface WindowAnimationConfig--><!--Device-window-interface WindowAnimationConfig-End-->
 
@@ -26,11 +28,13 @@ Type of animation curve.
 
 **Type:** [WindowAnimationCurve](arkts-arkui-window-windowanimationcurve-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowAnimationConfig-curve: WindowAnimationCurve--><!--Device-WindowAnimationConfig-curve: WindowAnimationCurve-End-->
 
@@ -42,19 +46,17 @@ Type of animation curve.
 duration?: long
 ```
 
-Duration for playing the animation, in milliseconds (ms).
+Duration for playing the animation, in milliseconds (ms). The default value is 0, and the maximum value is 3000. Whether it is required depends on the animation curve type.
 
-The default value is 0, and the maximum value is 3000.
+**Type:** long
 
-Whether it is required depends on the animation curve type.
+**Since:** 23
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 20
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowAnimationConfig-duration?: long--><!--Device-WindowAnimationConfig-duration?: long-End-->
 
@@ -70,11 +72,13 @@ Parameters for the animation curve. Whether it is required depends on the animat
 
 **Type:** [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowAnimationConfig-param?: WindowAnimationCurveParam--><!--Device-WindowAnimationConfig-param?: WindowAnimationCurveParam-End-->
 

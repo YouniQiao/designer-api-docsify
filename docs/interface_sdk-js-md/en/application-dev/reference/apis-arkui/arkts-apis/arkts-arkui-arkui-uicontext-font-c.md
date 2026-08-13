@@ -1,12 +1,14 @@
 # Font
 
-class Font
+Provides APIs for registering custom fonts. > **NOTE：**> > - In the following API examples, you must first use [getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFont) in **UIContext** to obtain > a **Font** instance, and then call the APIs using the obtained instance. > > - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync) API of the > font engine to register custom fonts.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-export declare class Font--><!--Device-unnamed-export declare class Font-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class Font--><!--Device-unnamed-export class Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getFontByName(fontName: string): font.FontInfo
 ```
 
-Get font details according to the font name.
+Obtains information about a system font based on the font name.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Font-getFontByName(fontName: string): font.FontInfo--><!--Device-Font-getFontByName(fontName: string): font.FontInfo-End-->
 
@@ -38,13 +44,13 @@ Get font details according to the font name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontName | string | Yes | font name |
+| fontName | string | Yes | System font name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| font.FontInfo | Returns the font info |
+| font.FontInfo | Detailed information of the font. &lt;br&gt;If no font is found, **undefined** is returned. |
 
 ## getSystemFontList
 
@@ -52,13 +58,17 @@ Get font details according to the font name.
 getSystemFontList(): Array<string>
 ```
 
-Gets a list of fonts supported by system.
+Obtains the list of supported fonts. This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices. You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType) API to obtain the latest system-supported font list data.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Font-getSystemFontList(): Array<string>--><!--Device-Font-getSystemFontList(): Array<string>-End-->
 
@@ -68,7 +78,7 @@ Gets a list of fonts supported by system.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | A list of font names |
+| Array&lt;string&gt; | List of supported fonts. |
 
 ## registerFont
 
@@ -76,13 +86,17 @@ Gets a list of fonts supported by system.
 registerFont(options: font.FontOptions): void
 ```
 
-Register a customized font in the FontManager.
+Registers a custom font with the font manager. This API is asynchronous and does not support concurrent calls.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Font-registerFont(options: font.FontOptions): void--><!--Device-Font-registerFont(options: font.FontOptions): void-End-->
 
@@ -92,5 +106,5 @@ Register a customized font in the FontManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | font.FontOptions | Yes | FontOptions |
+| options | font.FontOptions | Yes | Information about the custom font to register.&lt;br&gt;**NOTE：**&lt;br&gt;When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |
 

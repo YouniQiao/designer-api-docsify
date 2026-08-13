@@ -4,6 +4,8 @@ The font weight of the text
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum FontWeight--><!--Device-unnamed-declare enum FontWeight-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Lighter = 0
 Defines a lighter value than [Inherited Value]..
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,6 +40,8 @@ Normal font. Equivalent to a digital value of 400.
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -53,6 +59,8 @@ Regular = 2
 Defines a more general value than [Inherited Value].
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,6 +80,8 @@ Defines a value that is more centered than [Inherited Value].
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -90,6 +100,8 @@ Bold. Equivalent to a numeric value of 700.
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -107,6 +119,8 @@ Bolder = 5
 Defines a value that is heavier than [Inherited Value].
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

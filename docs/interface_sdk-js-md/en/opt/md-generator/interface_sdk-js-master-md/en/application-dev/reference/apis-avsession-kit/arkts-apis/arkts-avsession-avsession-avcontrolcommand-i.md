@@ -2,7 +2,9 @@
 
 The definition of command to be sent to the session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface AVControlCommand--><!--Device-avSession-interface AVControlCommand-End-->
 
@@ -24,7 +26,9 @@ The command value [AVControlCommandType](arkts-avsession-avsession-avcontrolcomm
 
 **Type:** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ The command value [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#Comma
 
 **Type:** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVControlCommand-commandInfo?: CommandInfo--><!--Device-AVControlCommand-commandInfo?: CommandInfo-End-->
 
@@ -54,11 +60,13 @@ The command value [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#Comma
 parameter?: LoopMode | string | number
 ```
 
-parameter of the command. Whether this command requires parameters, see [AVSessionCommand](AVSessionCommand)seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a [LoopMode](arkts-avsession-avsession-loopmode-e.md#LoopMode) parameter.toggleFavorite command requires assetId [assetId](arkts-avsession-avsession-avmetadata-i.md#assetId) parameter other commands need no parameter
+parameter of the command. Whether this command requires parameters, see AVSessionCommand seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a [LoopMode](arkts-avsession-avsession-loopmode-e.md#LoopMode) parameter. toggleFavorite command requires assetId [assetId](arkts-avsession-avsession-avmetadata-i.md#assetId) parameter other commands need no parameter
 
 **Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -6,6 +6,8 @@ Defines DrawingRenderingContext.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class DrawingRenderingContext--><!--Device-unnamed-export declare class DrawingRenderingContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Create DrawingRenderingContext with setting LengthMetricsUnit.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,49 +50,11 @@ Invalidate the component, which will cause a re-render of the component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DrawingRenderingContext-invalidate(): void--><!--Device-DrawingRenderingContext-invalidate(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## canvas
-
-```TypeScript
-get canvas(): DrawingCanvas | undefined
-```
-
-Get canvas of the DrawingRenderingContext.
-
-**Type:** DrawingCanvas
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DrawingRenderingContext-get canvas(): DrawingCanvas | undefined--><!--Device-DrawingRenderingContext-get canvas(): DrawingCanvas | undefined-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## size
-
-```TypeScript
-get size(): Size
-```
-
-Get size of the DrawingRenderingContext.
-
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DrawingRenderingContext-get size(): Size--><!--Device-DrawingRenderingContext-get size(): Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

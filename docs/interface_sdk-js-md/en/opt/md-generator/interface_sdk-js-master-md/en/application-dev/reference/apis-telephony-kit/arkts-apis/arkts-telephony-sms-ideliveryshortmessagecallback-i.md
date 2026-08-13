@@ -2,7 +2,9 @@
 
 Provides the callback for the SMS message delivery report.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface IDeliveryShortMessageCallback--><!--Device-sms-export interface IDeliveryShortMessageCallback-End-->
 
@@ -24,7 +26,9 @@ SMS message delivery report.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IDeliveryShortMessageCallback-pdu: Array<int>--><!--Device-IDeliveryShortMessageCallback-pdu: Array<int>-End-->
 

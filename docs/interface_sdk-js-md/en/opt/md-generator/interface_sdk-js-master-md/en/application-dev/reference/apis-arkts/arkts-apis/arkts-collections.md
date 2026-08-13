@@ -1,23 +1,10 @@
-# @arkts.collections(Defines the collections for ArkTS)
+# @arkts.collections
 
-The collections module provides ArkTS containers for efficient data transfer in concurrency scenarios. The ArkTS containers provide similar functionalities as their JavaScript counterparts, except that their properties cannot be added or updated through `.` or `[]`.By default, ArkTS containers are passed by reference between concurrent instances. This means that multiple concurrent instances can simultaneously operate the same container instance. Pass-by-copy is also supported. In this mode, each concurrent instance holds an ArkTS container instance.ArkTS containers are not thread-safe. They adopt the fail-fast approach. An exception is thrown if multiple concurrent instances make structural changes to a container instance at the same time. Therefore, in multi-thread read/write scenarios, you must use the ArkTS asynchronous lock to ensure secure access to the ArkTS containers.Currently, the following ArkTS containers are provided: [Array](./arkts/@arkts.collections:collections),  
-[Map](./arkts/@arkts.collections:collections), [Set](./arkts/@arkts.collections:collections), TypedArray([Int8Array](./arkts/@arkts.collections:collections),  
-[Uint8Array](./arkts/@arkts.collections:collections),  
-[Int16Array](./arkts/@arkts.collections:collections),  
-[Uint16Array](./arkts/@arkts.collections:collections),  
-[Int32Array](./arkts/@arkts.collections:collections),  
-[Uint32Array](./arkts/@arkts.collections:collections),  
-[Uint8ClampedArray](./arkts/@arkts.collections:collections) and  
-[Float32Array](./arkts/@arkts.collections:collections)),  
-[ArrayBuffer](./arkts/@arkts.collections:collections),  
-[BitVector](./arkts/@arkts.collections:collections), and  
-[ConcatArray](./arkts/@arkts.collections:collections).
-
-> **NOTE：**
-> 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
+The collections module provides ArkTS containers for efficient data transfer in concurrency scenarios. The ArkTS containers provide similar functionalities as their JavaScript counterparts, except that their properties cannot be added or updated through `.` or `[]`. By default, ArkTS containers are passed by reference between concurrent instances. This means that multiple concurrent instances can simultaneously operate the same container instance. Pass-by-copy is also supported. In this mode, each concurrent instance holds an ArkTS container instance. ArkTS containers are not thread-safe. They adopt the fail-fast approach. An exception is thrown if multiple concurrent instances make structural changes to a container instance at the same time. Therefore, in multi-thread read/write scenarios, you must use the ArkTS asynchronous lock to ensure secure access to the ArkTS containers. Currently, the following ArkTS containers are provided: [Array](#@arkts.collections), [Map](#@arkts.collections), [Set](#@arkts.collections), TypedArray ([Int8Array](#@arkts.collections), [Uint8Array](#@arkts.collections), [Int16Array](#@arkts.collections), [Uint16Array](#@arkts.collections), [Int32Array](#@arkts.collections), [Uint32Array](#@arkts.collections), [Uint8ClampedArray](#@arkts.collections) and [Float32Array](#@arkts.collections)), [ArrayBuffer](#@arkts.collections), [BitVector](#@arkts.collections), and [ConcatArray](#@arkts.collections). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace collections--><!--Device-unnamed-declare namespace collections-End-->
 

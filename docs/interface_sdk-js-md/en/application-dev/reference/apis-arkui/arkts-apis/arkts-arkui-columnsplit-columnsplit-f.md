@@ -3,6 +3,7 @@
 ## ColumnSplit
 
 ```TypeScript
+@ComponentBuilder
 export declare function ColumnSplit(
     
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines ColumnSplit Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ColumnSplit(        content_?: CustomBuilder,): ColumnSplitAttribute--><!--Device-unnamed-export declare function ColumnSplit(        content_?: CustomBuilder,): ColumnSplitAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function ColumnSplit(        content_?: CustomBuilder,): ColumnSplitAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ColumnSplit(        content_?: CustomBuilder,): ColumnSplitAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,18 +28,19 @@ Defines ColumnSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md) |  |
+| ColumnSplitAttribute |  |
 
 
 ## ColumnSplit
 
 ```TypeScript
+@Builder
 export declare function ColumnSplit(
     style: CustomBuilderT<ColumnSplitAttribute>,
     content_?: CustomBuilder,
@@ -49,11 +53,11 @@ Defines ColumnSplit Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ColumnSplit(    style: CustomBuilderT<ColumnSplitAttribute>,    content_?: CustomBuilder,): ColumnSplitAttribute--><!--Device-unnamed-export declare function ColumnSplit(    style: CustomBuilderT<ColumnSplitAttribute>,    content_?: CustomBuilder,): ColumnSplitAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ColumnSplit(    style: CustomBuilderT<ColumnSplitAttribute>,    content_?: CustomBuilder,): ColumnSplitAttribute--><!--Device-unnamed-@Builderexport declare function ColumnSplit(    style: CustomBuilderT<ColumnSplitAttribute>,    content_?: CustomBuilder,): ColumnSplitAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,12 +65,12 @@ Defines ColumnSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;ColumnSplitAttribute&gt; | Yes | the callback to set up component's attributes. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md) |  |
+| ColumnSplitAttribute |  |
 

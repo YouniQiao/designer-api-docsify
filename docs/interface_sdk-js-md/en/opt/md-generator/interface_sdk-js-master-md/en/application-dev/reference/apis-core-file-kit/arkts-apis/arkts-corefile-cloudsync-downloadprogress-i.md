@@ -2,7 +2,9 @@
 
 Represents information about the download progress of a cloud file.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-interface DownloadProgress--><!--Device-cloudSync-interface DownloadProgress-End-->
 
@@ -24,7 +26,9 @@ Download error type.
 
 **Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-error: DownloadErrorType--><!--Device-DownloadProgress-error: DownloadErrorType-End-->
 
@@ -40,7 +44,9 @@ Size of the downloaded data, in bytes. The value range is [0, 922337203685477580
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-processed: long--><!--Device-DownloadProgress-processed: long-End-->
 
@@ -56,7 +62,9 @@ Size of the cloud file, in bytes. The value range is [0, 9223372036854775807].
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-size: long--><!--Device-DownloadProgress-size: long-End-->
 
@@ -72,7 +80,9 @@ File download state.
 
 **Type:** State
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-state: State--><!--Device-DownloadProgress-state: State-End-->
 
@@ -88,7 +98,9 @@ URI of the cloud file.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProgress-uri: string--><!--Device-DownloadProgress-uri: string-End-->
 

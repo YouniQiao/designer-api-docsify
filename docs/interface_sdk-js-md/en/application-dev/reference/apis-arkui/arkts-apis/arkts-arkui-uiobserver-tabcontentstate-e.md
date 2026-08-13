@@ -2,9 +2,11 @@
 
 TabContent state.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export enum TabContentState--><!--Device-uiObserver-export enum TabContentState-End-->
 
@@ -18,11 +20,15 @@ ON_SHOW = 0
 
 When the TabContent is shown.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TabContentState-ON_SHOW = 0--><!--Device-TabContentState-ON_SHOW = 0-End-->
 
@@ -36,11 +42,15 @@ ON_HIDE = 1
 
 When the TabContent is hidden.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TabContentState-ON_HIDE = 1--><!--Device-TabContentState-ON_HIDE = 1-End-->
 

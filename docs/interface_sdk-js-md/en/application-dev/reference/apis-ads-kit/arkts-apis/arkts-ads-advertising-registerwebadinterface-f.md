@@ -12,11 +12,13 @@ import { advertising } from '@kit.AdsKit';
 function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void
 ```
 
-Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
+Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,8 +37,8 @@ Injects an ad JavaScript object to the **Web** component(this API is only open t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 
@@ -75,11 +77,13 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
     needRefresh: boolean): void
 ```
 
-Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
+Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications).
 
 **Since:** 16
 
 **ArkTS mode:** ArkTS-Dyn only, since version 16.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
@@ -99,8 +103,8 @@ Injects an ad JavaScript object to the **Web** component(this API is only open t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 

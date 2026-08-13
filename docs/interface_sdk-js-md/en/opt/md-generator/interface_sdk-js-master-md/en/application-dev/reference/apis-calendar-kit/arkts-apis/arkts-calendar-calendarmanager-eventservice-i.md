@@ -4,6 +4,8 @@ Describes the event service.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export interface EventService--><!--Device-calendarManager-export interface EventService-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -26,6 +28,8 @@ Description of the service, with a maximum of 5,000 characters. If this paramete
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventService-description?: string--><!--Device-EventService-description?: string-End-->
@@ -44,6 +48,8 @@ Service type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventService-type: ServiceType--><!--Device-EventService-type: ServiceType-End-->
@@ -61,6 +67,8 @@ Service URI, in the DeepLink format. The URI can then redirect the user to the c
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

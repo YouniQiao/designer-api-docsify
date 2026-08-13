@@ -2,9 +2,11 @@
 
 辅助功能超链接文本信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)中的属性spans。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface AccessibilitySpan--><!--Device-unnamed-interface AccessibilitySpan-End-->
 
@@ -22,9 +24,11 @@ accessibilityDescription: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilitySpan-accessibilityDescription: string--><!--Device-AccessibilitySpan-accessibilityDescription: string-End-->
 
@@ -42,9 +46,11 @@ accessibilityLevel: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilitySpan-accessibilityLevel: string--><!--Device-AccessibilitySpan-accessibilityLevel: string-End-->
 
@@ -62,9 +68,11 @@ accessibilityText: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilitySpan-accessibilityText: string--><!--Device-AccessibilitySpan-accessibilityText: string-End-->
 
@@ -80,11 +88,13 @@ spanId: int
 
 超链接文本编号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilitySpan-spanId: int--><!--Device-AccessibilitySpan-spanId: int-End-->
 
@@ -102,9 +112,11 @@ spanText: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilitySpan-spanText: string--><!--Device-AccessibilitySpan-spanText: string-End-->
 

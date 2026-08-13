@@ -2,7 +2,9 @@
 
 Represents information about the version description file.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface DescriptionInfo--><!--Device-update-export interface DescriptionInfo-End-->
 
@@ -26,7 +28,9 @@ Content of the description file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DescriptionInfo-content: string--><!--Device-DescriptionInfo-content: string-End-->
 
@@ -44,7 +48,9 @@ Description type. The value **CONTENT** indicates that the description is conten
 
 **Type:** [DescriptionType](arkts-basicservices-update-descriptiontype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DescriptionInfo-descriptionType: DescriptionType--><!--Device-DescriptionInfo-descriptionType: DescriptionType-End-->
 

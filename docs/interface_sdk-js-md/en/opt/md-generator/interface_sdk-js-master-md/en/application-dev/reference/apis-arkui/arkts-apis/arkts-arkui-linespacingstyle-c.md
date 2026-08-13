@@ -4,6 +4,8 @@ Describes the text line spacing style.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class LineSpacingStyle--><!--Device-unnamed-declare class LineSpacingStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,11 @@ Describes the text line spacing style.
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-A constructor used to create a text line spacing style.
-
-**Since**: 26.0.0
+A constructor used to create a text line spacing style. **Since**: 26.0.0
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +34,7 @@ A constructor used to create a text line spacing style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [lineSpacing](#linespacing) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| [lineSpacing](#lineSpacing) | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-lengthmetrics-t.md) | Yes |
 | [options](#options) | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No |
 
 ## lineSpacing
@@ -41,15 +43,13 @@ A constructor used to create a text line spacing style.
 readonly lineSpacing: number
 ```
 
-Text line spacing.
-
-Value range: [0, +∞)
-
-Unit: [vp](common)
+Text line spacing. Value range: 0, +∞) Unit: [vp
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +70,8 @@ Line spacing options.
 **Type:** [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

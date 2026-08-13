@@ -18,6 +18,8 @@ Obtains the PIN authentication state. This API uses a promise to return the resu
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-huksExternalCrypto-function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryptoParam>): Promise<HuksExternalPinAuthState>--><!--Device-huksExternalCrypto-function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryptoParam>): Promise<HuksExternalPinAuthState>-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -26,7 +28,7 @@ Obtains the PIN authentication state. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog-1) . The result contains **resourceId**. |
+| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog) . The result contains **resourceId**. |
 | params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | No | Operation parameters. If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType), the parameter is invalid. |
 
 **Return value:**
@@ -39,15 +41,15 @@ Obtains the PIN authentication state. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported. |
-| [12000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) | the UKey driver operation failed. |
-| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed. |
-| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
-| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
-| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
-| [12000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist. This may happen because the resource ID has not been opened. |
-| [12000024](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | the UKey driver operation failed. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist. This may happen because the resource ID has not been opened. |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy. |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 Describes the image decoding options.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
 
@@ -22,15 +24,15 @@ import { image } from '@kit.ImageKit';
 cropAndScaleStrategy?: CropAndScaleStrategy
 ```
 
-If **desiredRegion** and **desiredSize** are both specified, the order of cropping and scaling is determined.
-
-Only **SCALE_FIRST** and **CROP_FIRST** are supported.
+If **desiredRegion** and **desiredSize** are both specified, the order of cropping and scaling is determined. Only **SCALE_FIRST** and **CROP_FIRST** are supported.
 
 **Type:** [CropAndScaleStrategy](arkts-image-image-cropandscalestrategy-e.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy--><!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy-End-->
 
@@ -46,9 +48,11 @@ Target color space. The default value is **UNKNOWN**.
 
 **Type:** colorSpaceManager.ColorSpaceManager
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager--><!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager-End-->
 
@@ -60,18 +64,15 @@ Target color space. The default value is **UNKNOWN**.
 desiredDynamicRange?: DecodingDynamicRange
 ```
 
-Desired dynamic range. The default value is **SDR**.
-
-This property cannot be set for an image source created using   
-[CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#CreateIncrementalSource). By default, the image source is decoded as SDR content.
-
-If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
+Desired dynamic range. The default value is **SDR**. This property cannot be set for an image source created using [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createIncrementalSource). By default, the image source is decoded as SDR content. If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
 
 **Type:** [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange--><!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange-End-->
 
@@ -87,9 +88,11 @@ Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, B
 
 **Type:** PixelMapFormat
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -105,16 +108,15 @@ Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, B
 desiredRegion?: Region
 ```
 
-Rectangle specified by **Region** in the decoded image. When the original image is large and only a specific part of the image is required, you can set this parameter to improve performance. The default value is the original image size.
-
-Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include   
-**cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
+Rectangle specified by **Region** in the decoded image. When the original image is large and only a specific part of the image is required, you can set this parameter to improve performance. The default value is the original image size. Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include **cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
 
 **Type:** Region
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,16 +132,15 @@ Note: If both **desiredSize** and **desiredRegion** are passed to the decoding A
 desiredSize?: Size
 ```
 
-Expected output size. The value must be a positive integer and defaults to the original image size. If the output size is different from the original size, the output is stretched or scaled to the specified size.
-
-Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include   
-**cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
+Expected output size. The value must be a positive integer and defaults to the original image size. If the output size is different from the original size, the output is stretched or scaled to the specified size. Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include **cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
 
 **Type:** Size
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -159,9 +160,11 @@ Whether the image is editable. **true** if editable, **false** otherwise. The de
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -179,11 +182,13 @@ fitDensity?: int
 
 Pixel density, in ppi. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -201,11 +206,13 @@ index?: int
 
 Index of the image to decode. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -223,11 +230,13 @@ rotate?: int
 
 Rotation angle. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -245,11 +254,13 @@ sampleSize?: int
 
 Sampling size of the thumbnail. The default value is **1**. Currently, the value can only be **1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

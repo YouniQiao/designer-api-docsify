@@ -2,7 +2,9 @@
 
 用户认证界面配置相关参数。该接口用于配置认证界面的显示样式和交互方式，包括标题、导航按钮文本、窗口模式等。通过合理配置这些参数，可以为用户提供清晰的认证引导和良好的交互体验。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
 
@@ -18,7 +20,9 @@ navigationButtonText?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ title: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -50,16 +56,15 @@ title: string
 uiContext?: Context
 ```
 
-以模应用弹窗方式显示身份认证对话框，从API版本18开始，支持在2in1设备上使用。传入有效的uiContext后，认证对话框将以模应用弹窗方式显示，认证结果返回后应用需先获取控件释放消息（订阅  
-[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))并等待收到authTipInfo.tipCode为WIDGET_RELEASED的回调）才能弹出其他窗口。如果没有此参数或其他类型的设备，身份认证对话框将以模系统弹窗方式显示，此时控件释放后应用可直接进行后续操作。
-
-**默认值：** 以模系统弹窗方式显示身份认证对话框。
+以模应用弹窗方式显示身份认证对话框，从API版本18开始，支持在2in1设备上使用。传入有效的uiContext后，认证对话框将以模应用弹窗方式显示，认证结果返回后应用需先获取控件释放消息（订阅 [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on_result)并等待收到 authTipInfo.tipCode为WIDGET_RELEASED的回调）才能弹出其他窗口。如果没有此参数或其他类型的设备，身份认证对话框将以模系统弹窗方式显示，此时控件释放后应用可直接进行后续操作。 **默认值：** 以模系统弹窗方式显示身份认证对话框。
 
 **类型：** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WidgetParam-uiContext?: Context--><!--Device-WidgetParam-uiContext?: Context-End-->
 

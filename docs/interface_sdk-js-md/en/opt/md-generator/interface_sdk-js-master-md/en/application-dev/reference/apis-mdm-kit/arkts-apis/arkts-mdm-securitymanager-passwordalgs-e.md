@@ -4,6 +4,8 @@ Enumerates the encryption algorithms used to process password data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-securityManager-export enum PasswordAlgs--><!--Device-securityManager-export enum PasswordAlgs-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ SCRYPT_HKDF_AES = 0
 SCRYPT-HKDF-AES combined encryption algorithm.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ SCRYPT_HKDF_SM4 = 1
 SCRYPT-HKDF-SM4 combined encryption algorithm.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

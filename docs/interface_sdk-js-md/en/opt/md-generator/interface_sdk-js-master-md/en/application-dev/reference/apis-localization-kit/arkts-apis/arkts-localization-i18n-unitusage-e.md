@@ -4,6 +4,8 @@ Enumerates unit formatting scenarios.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-i18n-export enum UnitUsage--><!--Device-i18n-export enum UnitUsage-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -17,6 +19,8 @@ AREA_LAND_AGRICULT = 1
 Area land agricult scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Area land commercl scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -53,6 +59,8 @@ AREA_LAND_RESIDNTL = 3
 Area land residntl scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ Length person scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -89,6 +99,8 @@ LENGTH_PERSON_SMALL = 5
 Length person small scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +120,8 @@ Length rainfall scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -125,6 +139,8 @@ LENGTH_ROAD = 7
 Length road scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,6 +160,8 @@ Length road small scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -161,6 +179,8 @@ LENGTH_SNOWFALL = 9
 Length snowfall scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,6 +200,8 @@ Length vehicle scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -197,6 +219,8 @@ LENGTH_VISIBLTY = 11
 Length visiblty scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -216,6 +240,8 @@ Length visiblty small scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -233,6 +259,8 @@ LENGTH_PERSON_INFORMAL = 13
 Length person informal scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,6 +280,8 @@ Length person small informal scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -269,6 +299,8 @@ LENGTH_ROAD_INFORMAL = 15
 Length road informal scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,6 +320,8 @@ Speed road travel scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -305,6 +339,8 @@ SPEED_WIND = 17
 Speed wind scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,6 +360,8 @@ Temperature person scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -341,6 +379,8 @@ TEMPERATURE_WEATHER = 19
 Temperature weather scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -360,6 +400,8 @@ Volume vehicle fuel scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -377,6 +419,8 @@ ELAPSED_TIME_SECOND = 21
 Elapsed time second scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -396,6 +440,8 @@ Size file byte scenario.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -413,6 +459,8 @@ SIZE_SHORTFILE_BYTE = 23
 Size shortfile byte scenario.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

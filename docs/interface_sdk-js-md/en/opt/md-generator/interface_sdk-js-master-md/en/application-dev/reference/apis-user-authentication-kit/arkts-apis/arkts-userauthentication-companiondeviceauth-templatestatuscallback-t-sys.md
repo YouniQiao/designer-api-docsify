@@ -8,6 +8,8 @@ Defines the callback triggered for receiving notifications of template status ch
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-companionDeviceAuth-type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void--><!--Device-companionDeviceAuth-type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void-End-->

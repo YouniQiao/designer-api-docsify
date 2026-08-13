@@ -2,7 +2,9 @@
 
 文件数据，包含一个已经打开的文件描述符，在与备份服务进行IPC时使用。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backup-interface FileData--><!--Device-backup-interface FileData-End-->
 
@@ -20,7 +22,9 @@ fd: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FileData-fd: int--><!--Device-FileData-fd: int-End-->
 

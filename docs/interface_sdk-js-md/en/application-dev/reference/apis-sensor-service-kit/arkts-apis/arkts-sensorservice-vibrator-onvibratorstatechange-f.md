@@ -16,7 +16,9 @@ Register a callback function to be called when a vibrator plugin or unplug event
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-function onVibratorStateChange(callback: Callback<VibratorStatusEvent>): void--><!--Device-vibrator-function onVibratorStateChange(callback: Callback<VibratorStatusEvent>): void-End-->
 
@@ -26,11 +28,11 @@ Register a callback function to be called when a vibrator plugin or unplug event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | Yes | The callback function to be executed when &lt;br&gt; the event is triggered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | Yes | The callback function to be executed when &lt;br&gt; the event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 

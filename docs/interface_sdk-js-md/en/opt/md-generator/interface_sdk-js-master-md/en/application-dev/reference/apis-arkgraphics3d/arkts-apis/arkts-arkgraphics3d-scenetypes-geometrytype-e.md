@@ -2,7 +2,9 @@
 
 Types of geometric shapes.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->
 
@@ -16,7 +18,9 @@ CUSTOM = 0
 
 A custom geometric shape.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeometryType-CUSTOM = 0--><!--Device-GeometryType-CUSTOM = 0-End-->
 
@@ -30,7 +34,9 @@ CUBE = 1
 
 A cube.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
 
@@ -44,7 +50,9 @@ PLANE = 2
 
 A plane.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeometryType-PLANE = 2--><!--Device-GeometryType-PLANE = 2-End-->
 
@@ -58,7 +66,9 @@ SPHERE = 3
 
 A sphere.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeometryType-SPHERE = 3--><!--Device-GeometryType-SPHERE = 3-End-->
 
@@ -73,6 +83,8 @@ CYLINDER = 4
 A cylinder.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 

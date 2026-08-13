@@ -6,6 +6,8 @@ Provides the information about the custom tab switching animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TabContentAnimatedTransition--><!--Device-unnamed-declare interface TabContentAnimatedTransition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,14 +18,7 @@ Provides the information about the custom tab switching animation.
 timeout?: number
 ```
 
-Timeout for the custom tab switching animation. The timer starts when the switching begins. If this timeframe passes without you calling the **finishTransition** API in  
-[TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md#TabContentTransitionProxy), the component will assume that the custom animation has ended and will proceed directly with subsequent operations.
-
-Default value: **1000**
-
-Unit: ms
-
-Value range: [0, +∞)
+Timeout for the custom tab switching animation. The timer starts when the switching begins. If this timeframe passes without you calling the **finishTransition** API in [TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md#TabContentTransitionProxy), the component will assume that the custom animation has ended and will proceed directly with subsequent operations. Default value: **1000** Unit: ms Value range: [0, +∞)
 
 **Type:** number
 
@@ -32,6 +27,8 @@ Value range: [0, +∞)
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,6 +53,8 @@ Content of the custom tab switching animation.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

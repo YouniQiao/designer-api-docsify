@@ -6,7 +6,9 @@ type ValueType = null | number | number | string | boolean | Uint8Array | Asset 
 
 Indicates possible value types
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets | Float32Array | bigint--><!--Device-relationalStore-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets | Float32Array | bigint-End-->
 

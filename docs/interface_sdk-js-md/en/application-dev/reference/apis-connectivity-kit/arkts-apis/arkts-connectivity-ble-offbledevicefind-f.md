@@ -1,28 +1,32 @@
-# offBLEDeviceFind
+# off_BLEDeviceFind
 
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## offBLEDeviceFind
+## off_BLEDeviceFind
 
 ```TypeScript
-function offBLEDeviceFind(callback?: Callback<Array<ScanResult>>): void
+function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void
 ```
 
-Unsubscribe BLE scan result.
+Unsubscribe BLE scan result. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
-**Since:** 26.0.0
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+**Deprecated since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**Substitutes:** BLEDeviceFind
 
-<!--Device-ble-function offBLEDeviceFind(callback?: Callback<Array<ScanResult>>): void--><!--Device-ble-function offBLEDeviceFind(callback?: Callback<Array<ScanResult>>): void-End-->
+**Required permissions:** 
+- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 9: ohos.permission.USE_BLUETOOTH
+
+<!--Device-BLE-function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void--><!--Device-BLE-function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,13 +34,30 @@ Unsubscribe BLE scan result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ScanResult&gt;&gt; | No | Callback used to listen for the scan result event. |
+| type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ScanResult&gt;&gt; | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+function onReceiveEvent(data: Array<bluetoothManager.ScanResult>) {
+    console.info('bluetooth device find = '+ JSON.stringify(data));
+}
+try {
+    bluetoothManager.BLE.on('BLEDeviceFind', onReceiveEvent);
+    bluetoothManager.BLE.off('BLEDeviceFind', onReceiveEvent);
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
 

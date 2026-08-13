@@ -26,7 +26,7 @@ Obtains the Context object associated with a component on the page.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | No |
+| [component](../../apis-na/arkts-apis/arkts-na-interop-compatiblecomponentinfo-i.md) | Object | No |
 
 **Return value:**
 

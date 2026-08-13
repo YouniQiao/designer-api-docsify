@@ -1,10 +1,12 @@
 # JsMessageType
 
-Enum type supplied to [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runJavaScriptExt) for indicating the result of JavaScript code execution.
+Enum type supplied to [runJavaScriptExt](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#runJavaScriptExt) for indicating the result of JavaScript code execution.
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum JsMessageType--><!--Device-webview-enum JsMessageType-End-->
 
@@ -13,96 +15,120 @@ Enum type supplied to [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-
 ## NOT_SUPPORT
 
 ```TypeScript
-NOT_SUPPORT
+NOT_SUPPORT = 0
 ```
 
-Unsupported data type.
+不支持的数据类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-JsMessageType-NOT_SUPPORT--><!--Device-JsMessageType-NOT_SUPPORT-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageType-NOT_SUPPORT = 0--><!--Device-JsMessageType-NOT_SUPPORT = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## STRING
 
 ```TypeScript
-STRING
+STRING = 1
 ```
 
-The string data type.
+字符串类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-JsMessageType-STRING--><!--Device-JsMessageType-STRING-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageType-STRING = 1--><!--Device-JsMessageType-STRING = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NUMBER
 
 ```TypeScript
-NUMBER
+NUMBER = 2
 ```
 
-The number data type.
+数值类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-JsMessageType-NUMBER--><!--Device-JsMessageType-NUMBER-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageType-NUMBER = 2--><!--Device-JsMessageType-NUMBER = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## BOOLEAN
 
 ```TypeScript
-BOOLEAN
+BOOLEAN = 3
 ```
 
-The boolean data type.
+布尔类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-JsMessageType-BOOLEAN--><!--Device-JsMessageType-BOOLEAN-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageType-BOOLEAN = 3--><!--Device-JsMessageType-BOOLEAN = 3-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## ARRAY_BUFFER
 
 ```TypeScript
-ARRAY_BUFFER
+ARRAY_BUFFER = 4
 ```
 
-The arraybuffer data type.
+原始二进制数据缓冲区。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-JsMessageType-ARRAY_BUFFER--><!--Device-JsMessageType-ARRAY_BUFFER-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageType-ARRAY_BUFFER = 4--><!--Device-JsMessageType-ARRAY_BUFFER = 4-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## ARRAY
 
 ```TypeScript
-ARRAY
+ARRAY = 5
 ```
 
-The array data type.
+数组类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-JsMessageType-ARRAY--><!--Device-JsMessageType-ARRAY-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageType-ARRAY = 5--><!--Device-JsMessageType-ARRAY = 5-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -1,26 +1,16 @@
 # TextInputController
 
-The controller for the **TextInput** component inherits from  
-[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API  
-[getText](TextContentControllerBase#getText) and other APIs like&lt;!--DelEnd--&gt;  
-[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentRect),  
-[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentLineCount),  
-[getCaretOffset](TextContentControllerBase#getCaretOffset), [addText](TextContentControllerBase#addText),  
-[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deleteText),  
-[getSelection](TextContentControllerBase#getSelection),  
-[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearPreviewText),  
-[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder), and  
-[deleteBackward](TextContentControllerBase#deleteBackward).
+The controller for the **TextInput** component inherits from [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API getText and other APIs like&lt;!--DelEnd--&gt; [getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentRect), [getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentLineCount), getCaretOffset, addText, [deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deleteText), getSelection, [clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearPreviewText), setStyledPlaceholder, and deleteBackward.
 
-## Objects to Import
-
-```ts controller: TextInputController = new TextInputController();```
+## Objects to Import ```ts controller: TextInputController = new TextInputController(); ```
 
 **Inheritance/Implementation:** TextInputController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase)
 
 **Since:** 8
 
-<!--Device-unnamed-declare class TextInputController extends TextContentControllerBase--><!--Device-unnamed-declare class TextInputController extends TextContentControllerBase-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class TextInputController--><!--Device-unnamed-declare class TextInputController-End-->
 
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
@@ -34,6 +24,8 @@ caretPosition(value: number): void
 Sets the position of the caret. If the value is less than 0, the value **0** is used. If the value exceeds the text length, the caret is placed at the end of the text.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,6 +49,8 @@ A constructor used to create a **TextInputController** object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextInputController-constructor()--><!--Device-TextInputController-constructor()-End-->
@@ -72,6 +66,8 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 Sets the text selection area, which will be highlighted.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +94,8 @@ stopEditing(): void
 Exits the editing state.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,16 +1,16 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)。
-
-闪光灯类，对设备闪光灯操作。
+Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)。 闪光灯类，对设备闪光灯操作。
 
 **继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-camera-interface Flash extends FlashQuery--><!--Device-camera-interface Flash extends FlashQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface Flash--><!--Device-camera-interface Flash-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -20,13 +20,13 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)。
 enableLcdFlash(enabled: boolean): void
 ```
 
-Enables or disables the LCD flash.
+Enables or disables the LCD flash. Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#isLcdFlashSupported) to check whether the device supports the LCD flash.
 
-Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#isLcdFlashSupported) to check whether the device supports the LCD flash.
+**起始版本：** 23
 
-**起始版本：** 13
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-Flash-enableLcdFlash(enabled: boolean): void--><!--Device-Flash-enableLcdFlash(enabled: boolean): void-End-->
 
@@ -44,8 +44,8 @@ Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 

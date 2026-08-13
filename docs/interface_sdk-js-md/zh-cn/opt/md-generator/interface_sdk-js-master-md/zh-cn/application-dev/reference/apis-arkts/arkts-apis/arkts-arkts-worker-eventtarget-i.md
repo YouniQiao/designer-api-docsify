@@ -24,7 +24,7 @@ addEventListener(type: string, listener: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** [addEventListener](ohos.worker.WorkerEventTarget.addEventListener)
+**替代接口：** addEventListener
 
 <!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
 
@@ -62,7 +62,7 @@ dispatchEvent(event: Event): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [dispatchEvent](ohos.worker.WorkerEventTarget.dispatchEvent)
+**替代接口：** dispatchEvent
 
 <!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
 
@@ -135,7 +135,7 @@ removeAllListener(): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAllListener](ohos.worker.WorkerEventTarget.removeAllListener)
+**替代接口：** removeAllListener
 
 <!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
 
@@ -168,7 +168,7 @@ removeEventListener(type: string, callback?: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeEventListener](ohos.worker.WorkerEventTarget.removeEventListener)
+**替代接口：** removeEventListener
 
 <!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
 

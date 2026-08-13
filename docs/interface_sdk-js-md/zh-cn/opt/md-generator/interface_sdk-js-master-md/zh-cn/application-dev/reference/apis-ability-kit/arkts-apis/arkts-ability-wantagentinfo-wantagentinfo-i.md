@@ -1,9 +1,10 @@
 # WantAgentInfo
 
-定义触发WantAgent所需要的信息，可以作为  
-[getWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent)的入参创建指定的WantAgent对象。
+定义触发WantAgent所需要的信息，可以作为 getWantAgent的入参创建指定的 WantAgent对象。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface WantAgentInfo--><!--Device-unnamed-export interface WantAgentInfo-End-->
 
@@ -19,7 +20,9 @@ actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 
 **类型：** Array&lt;abilityWantAgent.WantAgentFlags&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -37,7 +40,9 @@ actionType?: abilityWantAgent.OperationType
 
 **类型：** abilityWantAgent.OperationType
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,36 +53,36 @@ actionType?: abilityWantAgent.OperationType
 ## extraInfo
 
 ```TypeScript
-extraInfo?: { [key: string]: any }
+extraInfo?: Record<string, RecordData>
 ```
 
-额外数据。
+启动应用的额外信息。 如果没有需要设置的额外信息，此常量可以留空。
 
-**类型：** { [key: string]: any }
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**起始版本：** 7
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-WantAgentInfo-extraInfo?: { [key: string]: any }--><!--Device-WantAgentInfo-extraInfo?: { [key: string]: any }-End-->
+<!--Device-WantAgentInfo-extraInfo?: Record<string, RecordData>--><!--Device-WantAgentInfo-extraInfo?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## extraInfos
 
 ```TypeScript
-extraInfos?: Record<string, Object>
+extraInfos?: Record<string, RecordData>
 ```
 
 额外数据。推荐使用该属性替代extraInfo，设置该属性后，extraInfo不再生效。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-WantAgentInfo-extraInfos?: Record<string, Object>--><!--Device-WantAgentInfo-extraInfos?: Record<string, Object>-End-->
+<!--Device-WantAgentInfo-extraInfos?: Record<string, RecordData>--><!--Device-WantAgentInfo-extraInfos?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -87,9 +92,7 @@ extraInfos?: Record<string, Object>
 operationType?: wantAgent.OperationType
 ```
 
-动作类型。
-
-从API version 7 开始支持，从API version 11 开始废弃，建议使用actionType&lt;sup&gt;11+&lt;/sup&gt;替代。
+动作类型。 从API version 7 开始支持，从API version 11 开始废弃，建议使用actionType&lt;sup&gt;11+&lt;/sup&gt;替代。
 
 **类型：** wantAgent.OperationType
 
@@ -115,7 +118,9 @@ requestCode: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -129,9 +134,7 @@ requestCode: number
 wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 ```
 
-动作执行属性。
-
-从API version 7 开始支持，从API version 11 开始废弃，建议使用actionFlags&lt;sup&gt;11+&lt;/sup&gt;替代。
+动作执行属性。 从API version 7 开始支持，从API version 11 开始废弃，建议使用actionFlags&lt;sup&gt;11+&lt;/sup&gt;替代。
 
 **类型：** Array&lt;wantAgent.WantAgentFlags&gt;
 
@@ -157,7 +160,9 @@ wants: Array<Want>
 
 **类型：** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

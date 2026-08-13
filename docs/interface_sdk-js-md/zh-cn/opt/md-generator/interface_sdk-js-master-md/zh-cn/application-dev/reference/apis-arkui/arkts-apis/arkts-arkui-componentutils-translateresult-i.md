@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-componentUtils-interface TranslateResult--><!--Device-componentUtils-interface TranslateResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 x: number
 ```
 
-x轴平移距离。
-
-单位: vp
+x轴平移距离。 单位: vp
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ x轴平移距离。
 y: number
 ```
 
-y轴平移距离。
-
-单位: vp
+y轴平移距离。 单位: vp
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,13 +60,13 @@ y轴平移距离。
 z: number
 ```
 
-z轴平移距离。
-
-单位: vp
+z轴平移距离。 单位: vp
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

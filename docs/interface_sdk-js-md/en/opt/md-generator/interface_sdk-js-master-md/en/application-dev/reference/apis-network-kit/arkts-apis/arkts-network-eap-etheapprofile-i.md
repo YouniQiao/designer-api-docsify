@@ -2,7 +2,9 @@
 
 Eth EAP profile.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eap-interface EthEapProfile--><!--Device-eap-interface EthEapProfile-End-->
 
@@ -24,7 +26,9 @@ Alternate subject match
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-altSubjectMatch: string--><!--Device-EthEapProfile-altSubjectMatch: string-End-->
 
@@ -40,7 +44,9 @@ Anonymous identity
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-anonymousIdentity: string--><!--Device-EthEapProfile-anonymousIdentity: string-End-->
 
@@ -56,7 +62,9 @@ CA certificate alias
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-caCertAliases: string--><!--Device-EthEapProfile-caCertAliases: string-End-->
 
@@ -72,7 +80,9 @@ CA certificate path
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-caPath: string--><!--Device-EthEapProfile-caPath: string-End-->
 
@@ -88,7 +98,9 @@ content of user's certificate
 
 **Type:** Uint8Array
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-certEntry: Uint8Array--><!--Device-EthEapProfile-certEntry: Uint8Array-End-->
 
@@ -104,7 +116,9 @@ Password of user's certificate
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-certPassword: string--><!--Device-EthEapProfile-certPassword: string-End-->
 
@@ -120,7 +134,9 @@ Client certificate alias
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-clientCertAliases: string--><!--Device-EthEapProfile-clientCertAliases: string-End-->
 
@@ -136,7 +152,9 @@ Domain suffix match
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-domainSuffixMatch: string--><!--Device-EthEapProfile-domainSuffixMatch: string-End-->
 
@@ -152,7 +170,9 @@ EAP authentication method
 
 **Type:** EapMethod
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-eapMethod: EapMethod--><!--Device-EthEapProfile-eapMethod: EapMethod-End-->
 
@@ -168,7 +188,9 @@ Sub ID of the SIM card
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-eapSubId: number--><!--Device-EthEapProfile-eapSubId: number-End-->
 
@@ -184,7 +206,9 @@ The identity
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-identity: string--><!--Device-EthEapProfile-identity: string-End-->
 
@@ -200,7 +224,9 @@ Password
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-password: string--><!--Device-EthEapProfile-password: string-End-->
 
@@ -216,7 +242,9 @@ Phase 2 authentication method
 
 **Type:** Phase2Method
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-phase2Method: Phase2Method--><!--Device-EthEapProfile-phase2Method: Phase2Method-End-->
 
@@ -232,7 +260,9 @@ Public Land Mobile Network of the provider of Passpoint credential
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-plmn: string--><!--Device-EthEapProfile-plmn: string-End-->
 
@@ -248,7 +278,9 @@ Realm for Passpoint credential
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EthEapProfile-realm: string--><!--Device-EthEapProfile-realm: string-End-->
 

@@ -12,8 +12,7 @@ import { image } from '@kit.ImageKit';
 function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator
 ```
 
-Creates an ImageCreator instance by specifying the image width, height, format, and capacity.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call   
-[release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageCreator instance by specifying the image width, height, format, and capacity. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -21,7 +20,7 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 
 **Deprecated since:** 11
 
-**Substitutes:** [createImageCreator](image.createImageCreator(size:)
+**Substitutes:** [createImageCreator](#createImageCreator)(size: Size, format: ImageFormat, capacity: int)
 
 <!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
 
@@ -55,12 +54,13 @@ let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.Ima
 function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator
 ```
 
-Creates an ImageCreator instance by specifying the image size, format, and capacity.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call   
-[release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageCreator instance by specifying the image size, format, and capacity. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator--><!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator-End-->
 
@@ -72,7 +72,7 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 | --- | --- | --- | --- |
 | size | Size | Yes | Default size of the image. |
 | format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, for example, YCBCR_422_SP or JPEG. |
-| capacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
+| capacity | int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
@@ -84,7 +84,7 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
 
 ## Examples
 

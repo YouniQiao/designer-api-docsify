@@ -6,13 +6,11 @@
 function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
-重置USB外设。
+重置USB外设。 > **说明：** > > 本接口调用后会重置此前设置的配置和替换接口，请在调用之前确认相关业务已结束。
 
-> **说明：**
-> 
-> 本接口调用后会重置此前设置的配置和替换接口，请在调用之前确认相关业务已结束。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean--><!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean-End-->
 
@@ -34,12 +32,12 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [14400010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) |
-| [14400008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) |
-| [14400013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400013-参数合法性检查失败) |
-| [14400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
-| [14400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) |
+| [14400013](../../apis-basic-services-kit/errorcode-usb.md#14400013-参数合法性检查失败) |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
 
 ## 示例
 

@@ -16,6 +16,8 @@ Checks whether animation reduction mode is enabled with a synchronous method.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-accessibility-function isAnimationReduceEnabledSync(): boolean--><!--Device-accessibility-function isAnimationReduceEnabledSync(): boolean-End-->

@@ -4,6 +4,8 @@ Callback triggered when the navigation is complete.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnRefreshAccessedHistoryEvent--><!--Device-unnamed-declare interface OnRefreshAccessedHistoryEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -14,11 +16,13 @@ Callback triggered when the navigation is complete.
 isMainFrame?: boolean
 ```
 
-Whether the event is triggered by the main frame.The value **true** indicates that the event is triggered by the main frame, and **false** indicates the opposite.
+Whether the event is triggered by the main frame. The value **true** indicates that the event is triggered by the main frame, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-OnRefreshAccessedHistoryEvent-isMainFrame?: boolean--><!--Device-OnRefreshAccessedHistoryEvent-isMainFrame?: boolean-End-->
 
@@ -30,12 +34,13 @@ Whether the event is triggered by the main frame.The value **true** indicates th
 isRefreshed: boolean
 ```
 
-Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the  
-[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) API, and **false**means the opposite.
+Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) API, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,6 +59,8 @@ URL to be accessed.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -2,7 +2,9 @@
 
 Enumerates the sensor types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-enum SensorId--><!--Device-sensor-enum SensorId-End-->
 
@@ -14,11 +16,11 @@ Enumerates the sensor types.
 COLOR = 14
 ```
 
-Color sensor.
+Color sensor. System API: This is a system API.
 
-System API: This is a system API.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-SensorId-COLOR = 14--><!--Device-SensorId-COLOR = 14-End-->
 
@@ -32,11 +34,11 @@ System API: This is a system API.
 SAR = 15
 ```
 
-Sodium Adsorption Ratio (SAR) sensor.
+Sodium Adsorption Ratio (SAR) sensor. System API: This is a system API.
 
-System API: This is a system API.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-SensorId-SAR = 15--><!--Device-SensorId-SAR = 15-End-->
 

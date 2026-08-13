@@ -1,9 +1,10 @@
 # Curve
 
-Defines an interpolation curve. For details about the curves and animations, see &lt;!--RP1--&gt;  
-[Bezier Curve](../../../../design/ux-design/animation-attributes.md)&lt;!--RP1End--&gt;.
+Defines an interpolation curve. For details about the curves and animations, see &lt;!--RP1--&gt; [Bezier Curve](../../../../design/ux-design/animation-attributes.md)&lt;!--RP1End--&gt;.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-curves-enum Curve--><!--Device-curves-enum Curve-End-->
 
@@ -19,6 +20,8 @@ Linear. Indicates that the animation has the same velocity from start to finish.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Curve-Linear--><!--Device-Curve-Linear-End-->
@@ -31,9 +34,11 @@ Linear. Indicates that the animation has the same velocity from start to finish.
 Ease
 ```
 
-Ease. Indicates that the animation starts at a low speed, then speeds up, and slows down before the end,CubicBezier(0.25, 0.1, 0.25, 1.0).
+Ease. Indicates that the animation starts at a low speed, then speeds up, and slows down before the end, CubicBezier(0.25, 0.1, 0.25, 1.0).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,6 +56,8 @@ EaseIn. Indicates that the animation starts at a low speed, Cubic Bezier (0.42, 
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Curve-EaseIn--><!--Device-Curve-EaseIn-End-->
@@ -66,6 +73,8 @@ EaseOut
 EaseOut. Indicates that the animation ends at low speed, CubicBezier (0.0, 0.0, 0.58, 1.0).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -83,6 +92,8 @@ EaseInOut. Indicates that the animation starts and ends at low speed, CubicBezie
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Curve-EaseInOut--><!--Device-Curve-EaseInOut-End-->
@@ -98,6 +109,8 @@ FastOutSlowIn
 FastOutSlowIn. Standard curve, cubic-bezier (0.4, 0.0, 0.2, 1.0).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,6 +128,8 @@ LinearOutSlowIn. Deceleration curve, cubic-bezier (0.0, 0.0, 0.2, 1.0).
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Curve-LinearOutSlowIn--><!--Device-Curve-LinearOutSlowIn-End-->
@@ -130,6 +145,8 @@ FastOutLinearIn
 FastOutLinearIn. Acceleration curve, cubic-bezier (0.4, 0.0, 1.0, 1.0).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -147,6 +164,8 @@ ExtremeDeceleration. Abrupt curve, cubic-bezier (0.0, 0.0, 0.0, 1.0).
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Curve-ExtremeDeceleration--><!--Device-Curve-ExtremeDeceleration-End-->
@@ -162,6 +181,8 @@ Sharp
 Sharp. Sharp curves, cubic-bezier (0.33, 0.0, 0.67, 1.0).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -179,6 +200,8 @@ Rhythm. Rhythmic curve, cubic-bezier (0.7, 0.0, 0.2, 1.0).
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Curve-Rhythm--><!--Device-Curve-Rhythm-End-->
@@ -195,6 +218,8 @@ Smooth. Smooth curves, cubic-bezier (0.4, 0.0, 0.4, 1.0).
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Curve-Smooth--><!--Device-Curve-Smooth-End-->
@@ -210,6 +235,8 @@ Friction
 Friction. Damping curves, CubicBezier (0.2, 0.0, 0.2, 1.0).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,8 +1,10 @@
 # ConnectCallback (System API)
 
-Callback provided when the [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableAbilityWithCallback) API is called to enable an accessibility extension ability. This callback will be invoked when the connection to an auxiliary extension ability is disconnected.
+Callback provided when the [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableAbilityWithCallback-(System-API)) API is called to enable an accessibility extension ability. This callback will be invoked when the connection to an auxiliary extension ability is disconnected.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-config-export interface ConnectCallback--><!--Device-config-export interface ConnectCallback-End-->
 
@@ -24,7 +26,11 @@ onDisconnect: OnDisconnectCallback
 
 Callback to be invoked when the connection to an auxiliary extension ability is disconnected.
 
+**Type:** [OnDisconnectCallback](arkts-accessibility-config-ondisconnectcallback-t-sys.md)
+
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

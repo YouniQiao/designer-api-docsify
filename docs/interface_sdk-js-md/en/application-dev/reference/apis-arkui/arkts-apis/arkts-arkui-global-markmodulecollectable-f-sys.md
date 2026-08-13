@@ -12,6 +12,8 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare function markModuleCollectable(namespace: Object): void--><!--Device-unnamed-export declare function markModuleCollectable(namespace: Object): void-End-->
@@ -30,5 +32,5 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if type of object is not moduleNameSpace. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | if type of object is not moduleNameSpace. |
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RectResult--><!--Device-unnamed-declare interface RectResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 height: number
 ```
 
-内容高度大小。
-
-单位：vp
+内容高度大小。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ height: number
 width: number
 ```
 
-内容宽度大小。
-
-单位：vp
+内容宽度大小。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,13 +60,13 @@ width: number
 x: number
 ```
 
-水平方向横坐标。
-
-单位：vp
+水平方向横坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,13 +82,13 @@ x: number
 y: number
 ```
 
-竖直方向纵坐标。
-
-单位：vp
+竖直方向纵坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

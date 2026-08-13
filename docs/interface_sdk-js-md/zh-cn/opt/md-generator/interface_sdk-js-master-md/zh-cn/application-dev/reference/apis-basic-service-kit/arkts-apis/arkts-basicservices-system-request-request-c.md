@@ -22,7 +22,7 @@ static download(options: DownloadRequestOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** [downloadFile](@ohos.request:request.downloadFile(context:)
+**替代接口：** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
 
 <!--Device-Request-static download(options: DownloadRequestOptions): void--><!--Device-Request-static download(options: DownloadRequestOptions): void-End-->
 
@@ -46,7 +46,7 @@ static onDownloadComplete(options: OnDownloadCompleteOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** [show](ohos.request.agent.Task.show(id:)
+**替代接口：** show(id: string)
 
 <!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void--><!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void-End-->
 
@@ -70,7 +70,7 @@ static upload(options: UploadRequestOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** [uploadFile](@ohos.request:request.uploadFile(context:)
+**替代接口：** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
 
 <!--Device-Request-static upload(options: UploadRequestOptions): void--><!--Device-Request-static upload(options: UploadRequestOptions): void-End-->
 

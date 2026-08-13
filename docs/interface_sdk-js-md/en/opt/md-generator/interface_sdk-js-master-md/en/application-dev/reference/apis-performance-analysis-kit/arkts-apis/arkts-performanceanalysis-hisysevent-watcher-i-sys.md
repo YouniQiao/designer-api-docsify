@@ -2,7 +2,9 @@
 
 Defines a watcher for event subscription.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-interface Watcher--><!--Device-hiSysEvent-interface Watcher-End-->
 
@@ -22,21 +24,19 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 onEvent: (info: SysEventInfo) => void
 ```
 
-Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#SysEventInfo)) => void
+Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#SysEventInfo-(System-API))) => void
 
-**Since:** 9
+**Type:** (info: SysEventInfo) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Watcher-onEvent: (info: SysEventInfo) => void--><!--Device-Watcher-onEvent: (info: SysEventInfo) => void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Yes |
 
 ## onServiceDied
 
@@ -46,7 +46,11 @@ onServiceDied: () => void
 
 Callback for disabling of event subscription: () => void
 
-**Since:** 9
+**Type:** () =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Watcher-onServiceDied: () => void--><!--Device-Watcher-onServiceDied: () => void-End-->
 
@@ -64,7 +68,9 @@ Array of matching event subscription rules.
 
 **Type:** [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)[]
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Watcher-rules: WatchRule[]--><!--Device-Watcher-rules: WatchRule[]-End-->
 

@@ -1,10 +1,12 @@
-# @ohos.multimodalAwareness.userStatus(用户状态感知)
+# @ohos.multimodalAwareness.userStatus
 
 本模块提供用户状态感知能力，包括年龄群组检测等功能。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace userStatus--><!--Device-unnamed-declare namespace userStatus-End-->
 
@@ -16,10 +18,10 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [off](arkts-multimodalawareness-userstatus-off-f.md#off) | 取消订阅年龄群组检测功能。 |
-| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offuseragegroupdetected) | 取消订阅年龄群组检测功能。 |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#on) | 订阅年龄群组检测功能。  订阅成功后，可以获取用户年龄群组的分类结果，应用可根据此结果做相应的内容推荐。 |
-| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onuseragegroupdetected) | 订阅年龄群组检测功能。 |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offUserAgeGroupDetected) | 取消订阅年龄群组检测功能。 |
+| off_userAgeGroupDetected | 取消订阅年龄群组检测功能。 |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onUserAgeGroupDetected) | 订阅年龄群组检测功能。 |
+| on_userAgeGroupDetected | 订阅年龄群组检测功能。 订阅成功后，可以获取用户年龄群组的分类结果，应用可根据此结果做相应的内容推荐。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -27,7 +29,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) | 配置特性参数。 |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) | 查询设备支持的原子能力。 |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#queryCapabilities) | 查询设备支持的原子能力。 |
 | [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) | 订阅用户状态监测。 |
 | [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) | 取消订阅用户状态监测。 |
 <!--DelEnd-->

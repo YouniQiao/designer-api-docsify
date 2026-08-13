@@ -2,7 +2,9 @@
 
 Describes audio renderer information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRendererInfo--><!--Device-audio-interface AudioRendererInfo-End-->
 
@@ -28,7 +30,7 @@ Audio content type.
 
 **Deprecated since:** 10
 
-**Substitutes:** [usage](ohos.multimedia.audio.AudioRendererInfo#usage)
+**Substitutes:** usage
 
 <!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 
@@ -40,13 +42,13 @@ Audio content type.
 rendererFlags: number
 ```
 
-Flags that control the renderer behavior.
-
-Set this parameter to **0**.
+Flags that control the renderer behavior. Set this parameter to **0**.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +66,9 @@ Audio stream usage.
 
 **Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,7 +86,9 @@ Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-a
 
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode--><!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode-End-->
 

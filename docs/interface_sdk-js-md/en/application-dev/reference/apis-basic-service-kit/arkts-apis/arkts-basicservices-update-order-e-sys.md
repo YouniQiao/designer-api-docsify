@@ -2,9 +2,11 @@
 
 Enumerates update commands.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export enum Order--><!--Device-update-export enum Order-End-->
 
@@ -20,9 +22,11 @@ DOWNLOAD = 1
 
 Download. This command is applicable to the scenario where only the upgrade package is downloaded.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Order-DOWNLOAD = 1--><!--Device-Order-DOWNLOAD = 1-End-->
 
@@ -38,9 +42,11 @@ INSTALL = 2
 
 Install. This command is applicable to the scenario where the downloaded upgrade package is directly installed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Order-INSTALL = 2--><!--Device-Order-INSTALL = 2-End-->
 
@@ -56,9 +62,11 @@ DOWNLOAD_AND_INSTALL = 3
 
 Download and install. This command is applicable to the scenario where the upgrade package is downloaded and installed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Order-DOWNLOAD_AND_INSTALL = 3--><!--Device-Order-DOWNLOAD_AND_INSTALL = 3-End-->
 
@@ -74,9 +82,11 @@ APPLY = 4
 
 Apply. This command is applicable only to the scenario where the installed upgrade package takes effect. The device will restart to apply the new version. This command is applicable to the scenario where the installation is complete and the device needs to be restarted for the installation to take effect.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Order-APPLY = 4--><!--Device-Order-APPLY = 4-End-->
 
@@ -92,9 +102,11 @@ INSTALL_AND_APPLY = 6
 
 Install and apply. After the installation, the device restarts to apply the new version. This command is applicable to the scenario where the system upgrade needs to be completed quickly and take effect immediately.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Order-INSTALL_AND_APPLY = 6--><!--Device-Order-INSTALL_AND_APPLY = 6-End-->
 

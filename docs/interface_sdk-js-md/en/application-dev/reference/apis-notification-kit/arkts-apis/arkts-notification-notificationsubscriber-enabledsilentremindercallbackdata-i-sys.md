@@ -4,7 +4,9 @@ Returns the application notification silent reminder switch state.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface EnabledSilentReminderCallbackData--><!--Device-unnamed-export interface EnabledSilentReminderCallbackData-End-->
 
@@ -24,7 +26,9 @@ Bundle name of the application.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,17 +44,15 @@ Bundle name of the application.
 readonly enableStatus: notificationManager.SwitchState
 ```
 
-Enabling state of the application's silent reminder.  
-- **USER_MODIFIED_OFF**: disabled state set by the user.  
-- **USER_MODIFIED_ON**: enabled state set by the user.  
-- **SYSTEM_DEFAULT_OFF**: initial disabled state before user setting.  
-- **SYSTEM_DEFAULT_ON**: initial enabled state before user setting.
+Enabling state of the application's silent reminder. - **USER_MODIFIED_OFF**: disabled state set by the user. - **USER_MODIFIED_ON**: enabled state set by the user. - **SYSTEM_DEFAULT_OFF**: initial disabled state before user setting. - **SYSTEM_DEFAULT_ON**: initial enabled state before user setting.
 
 **Type:** notificationManager.SwitchState
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,11 +70,13 @@ readonly uid: int
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

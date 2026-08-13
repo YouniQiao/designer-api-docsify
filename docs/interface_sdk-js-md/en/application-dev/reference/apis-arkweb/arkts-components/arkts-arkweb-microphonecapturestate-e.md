@@ -6,6 +6,8 @@ Enumerates the microphone capture states.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum MicrophoneCaptureState--><!--Device-unnamed-declare enum MicrophoneCaptureState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ The microphone is not working.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MicrophoneCaptureState-NONE = 0--><!--Device-MicrophoneCaptureState-NONE = 0-End-->
 
@@ -38,6 +42,8 @@ The microphone is paused.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-MicrophoneCaptureState-PAUSED = 1--><!--Device-MicrophoneCaptureState-PAUSED = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -53,6 +59,8 @@ The microphone is active.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MicrophoneCaptureState-ACTIVE = 2--><!--Device-MicrophoneCaptureState-ACTIVE = 2-End-->
 

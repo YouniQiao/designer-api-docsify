@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-fontManager-interface DataMigrationProgress--><!--Device-fontManager-interface DataMigrationProgress-End-->
 
@@ -18,13 +20,15 @@
 progressPercentage: int
 ```
 
-数据迁移百分比进度，进度值根据已迁移的字体文件数量或大小计算，可能不是均匀增长。当progressPercentage为100时，迁移任务即将完成，onResult回调即将被调用。取值范围为[0, 100]。
+数据迁移百分比进度，进度值根据已迁移的字体文件数量或大小计算，可能不是均匀增长。当progressPercentage为100时，迁移任务即将完成，onResult回调即将被调用。 取值范围为[0, 100]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataMigrationProgress-progressPercentage: int--><!--Device-DataMigrationProgress-progressPercentage: int-End-->
 
@@ -38,13 +42,15 @@ progressPercentage: int
 timeRemaining: int
 ```
 
-预计剩余时间，可能因设备性能、文件大小、系统负载等因素而有所差异。取值范围为非负整数，最小值为0。单位为s。
+预计剩余时间，可能因设备性能、文件大小、系统负载等因素而有所差异。 取值范围为非负整数，最小值为0。 单位为s。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataMigrationProgress-timeRemaining: int--><!--Device-DataMigrationProgress-timeRemaining: int-End-->
 

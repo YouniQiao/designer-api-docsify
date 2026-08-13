@@ -9,16 +9,20 @@ import { util } from '@kit.ArkTS';
 ## promisify
 
 ```TypeScript
-function promisify(original: Function): PromisifiedFunc
+function promisify(original: (err: Object, value: Object) => void): Function
 ```
 
-Takes a function following the common error-first callback style, i.e taking an (err, value) =>callback as the last argument, and return a function that returns promises.
+Receives a function that uses the error-first callback mode, that is, uses `(err, value) => callback` as the last parameter, and uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-util-function promisify(original: Function): PromisifiedFunc--><!--Device-util-function promisify(original: Function): PromisifiedFunc-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,11 +30,30 @@ Takes a function following the common error-first callback style, i.e taking an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| original | Function | Yes | Asynchronous Function |
+| original | (err: Object, value: Object) =&gt; void | Yes | Function, in which the first parameter **err** indicates the cause of the rejection (the value is **null** if the promise has been resolved) and the second parameter **value** indicates the resolved value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PromisifiedFunc](arkts-arkts-util-promisifiedfunc-t.md) | Return a function that returns promises |
+| [function](arkts-arkts-taskpool-task-c.md) | Return a function that returns promises<br>**Applicable version:** 9 - 11 |
+| Function | Promise function.<br>**Applicable version:** 10 and later |
+
+## Examples
+
+```TypeScript
+async function fn() {
+  return 'hello world';
+}
+const addCall = util.promisify(util.callbackWrapper(fn));
+(async () => {
+  try {
+    let res: string = await addCall();
+    console.info(res);
+    // Output: hello world
+  } catch (err) {
+    console.info(err);
+  }
+})();
+```
 

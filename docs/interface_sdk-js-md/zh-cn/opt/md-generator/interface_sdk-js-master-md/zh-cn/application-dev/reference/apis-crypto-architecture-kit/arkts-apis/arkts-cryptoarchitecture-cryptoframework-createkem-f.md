@@ -10,6 +10,8 @@ function createKem(algNameId: KemAlgNameId): Kem
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -34,10 +36,10 @@ function createKem(algNameId: KemAlgNameId): Kem
 
 | 错误码ID |
 | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 

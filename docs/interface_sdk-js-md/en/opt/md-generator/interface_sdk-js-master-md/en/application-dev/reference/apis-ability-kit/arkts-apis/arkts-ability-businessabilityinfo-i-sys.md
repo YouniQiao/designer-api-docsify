@@ -2,7 +2,9 @@
 
 Contains basic business ability information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BusinessAbilityInfo--><!--Device-unnamed-export interface BusinessAbilityInfo-End-->
 
@@ -20,7 +22,9 @@ Obtains configuration information about an application
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-BusinessAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
@@ -38,7 +42,9 @@ Indicates the name of the bundle
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly bundleName: string--><!--Device-BusinessAbilityInfo-readonly bundleName: string-End-->
 
@@ -56,7 +62,9 @@ Enumerates types of the business ability info
 
 **Type:** businessAbilityRouter.BusinessType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly businessType: businessAbilityRouter.BusinessType--><!--Device-BusinessAbilityInfo-readonly businessType: businessAbilityRouter.BusinessType-End-->
 
@@ -74,7 +82,9 @@ Indicates the description id of the business ability info
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly descriptionId: int--><!--Device-BusinessAbilityInfo-readonly descriptionId: int-End-->
 
@@ -92,7 +102,9 @@ Indicates the icon id of the business ability info
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly iconId: int--><!--Device-BusinessAbilityInfo-readonly iconId: int-End-->
 
@@ -110,7 +122,9 @@ Indicates the label id of the business ability info
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly labelId: int--><!--Device-BusinessAbilityInfo-readonly labelId: int-End-->
 
@@ -128,7 +142,9 @@ Indicates the name of the module
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly moduleName: string--><!--Device-BusinessAbilityInfo-readonly moduleName: string-End-->
 
@@ -146,7 +162,9 @@ Indicates the name of the business ability info
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityInfo-readonly name: string--><!--Device-BusinessAbilityInfo-readonly name: string-End-->
 

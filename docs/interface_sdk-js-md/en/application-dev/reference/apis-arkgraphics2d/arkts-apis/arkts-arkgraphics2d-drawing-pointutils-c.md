@@ -4,7 +4,9 @@ This class offers a comprehensive set of operations for handling common2D Point 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-class PointUtils--><!--Device-drawing-class PointUtils-End-->
 
@@ -26,7 +28,9 @@ Negates the point's coordinates.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,12 +46,6 @@ Negates the point's coordinates.
 
 ## offset
 
-ArkTS-Dyn:
-```TypeScript
-static offset(point: common2D.Point, dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 static offset(point: common2D.Point, dx: double, dy: double): void
 ```
@@ -56,7 +54,9 @@ Offsets the point's coordinates by dx, dy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,6 +69,6 @@ Offsets the point's coordinates by dx, dy.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | point | common2D.Point | Yes | Specifies the point to be offset. |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Indicates the distance to offset on the x-axis in pixels. |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Indicates the distance to offset on the y-axis in pixels. |
+| dx | double | Yes | Indicates the distance to offset on the x-axis in pixels. |
+| dy | double | Yes | Indicates the distance to offset on the y-axis in pixels. |
 

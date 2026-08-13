@@ -2,9 +2,11 @@
 
 The http body stream of the request.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
 
@@ -13,16 +15,20 @@ The http body stream of the request.
 ## getPosition
 
 ```TypeScript
-getPosition(): long
+getPosition(): number
 ```
 
-Get the current position of the data stream. Unit: bytes.
+读取WebHttpBodyStream中当前的读取位置。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebHttpBodyStream-getPosition(): long--><!--Device-WebHttpBodyStream-getPosition(): long-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-getPosition(): number--><!--Device-WebHttpBodyStream-getPosition(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,21 +36,25 @@ Get the current position of the data stream. Unit: bytes.
 
 | 类型 | 说明 |
 | --- | --- |
-| long | Return position in post data stream. |
+| number | WebHttpBodyStream中当前的读取位置。单位：字节。 |
 
 ## getSize
 
 ```TypeScript
-getSize(): long
+getSize(): number
 ```
 
-Get the total size of the data stream. When data is chunked, always return zero. Unit: bytes.
+获取WebHttpBodyStream中的数据大小，分块传输时总是返回零。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebHttpBodyStream-getSize(): long--><!--Device-WebHttpBodyStream-getSize(): long-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-getSize(): number--><!--Device-WebHttpBodyStream-getSize(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -52,7 +62,7 @@ Get the total size of the data stream. When data is chunked, always return zero.
 
 | 类型 | 说明 |
 | --- | --- |
-| long | Return size of data stream size. |
+| number | 获取WebHttpBodyStream中的数据大小。单位：字节。 |
 
 ## initialize
 
@@ -60,11 +70,15 @@ Get the total size of the data stream. When data is chunked, always return zero.
 initialize(): Promise<void>
 ```
 
-Initialize data stream.
+初始化WebHttpBodyStream。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-initialize(): Promise<void>--><!--Device-WebHttpBodyStream-initialize(): Promise<void>-End-->
 
@@ -74,13 +88,13 @@ Initialize data stream.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise of data stream is initialized. |
+| Promise&lt;void&gt; | Promise实例，用于获取WebHttpBodyStream是否初始化成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100022-webhttpbodystream初始化失败) | Failed to initialize the HTTP body stream. |
+| [17100022](../errorcode-webview.md#17100022-webhttpbodystream初始化失败) | Failed to initialize the HTTP body stream. |
 
 ## isChunked
 
@@ -88,11 +102,15 @@ Initialize data stream.
 isChunked(): boolean
 ```
 
-Whether data stream is chunked.
+WebHttpBodyStream是否采用分块传输。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-isChunked(): boolean--><!--Device-WebHttpBodyStream-isChunked(): boolean-End-->
 
@@ -102,7 +120,7 @@ Whether data stream is chunked.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether data stream is chunked. |
+| boolean | WebHttpBodyStream是否采用分块传输，如果采用分块传输则返回true，否则返回false。 |
 
 ## isEof
 
@@ -110,11 +128,15 @@ Whether data stream is chunked.
 isEof(): boolean
 ```
 
-Whether all data stream has been consumed. For chunked uploads,returns false until the first read attempt.
+判断WebHttpBodyStream中的所有数据是否都已被读取。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-isEof(): boolean--><!--Device-WebHttpBodyStream-isEof(): boolean-End-->
 
@@ -124,7 +146,7 @@ Whether all data stream has been consumed. For chunked uploads,returns false unt
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether data stream has been consumed. |
+| boolean | WebHttpBodyStream中的所有数据是否都已被读取。 &lt;br&gt;如果所有数据都已被读取，则返回true。对于分块传输类型的WebHttpBodyStream，在第一次读取尝试之前返回false。 |
 
 ## isInMemory
 
@@ -132,11 +154,15 @@ Whether all data stream has been consumed. For chunked uploads,returns false unt
 isInMemory(): boolean
 ```
 
-Returns true if the upload data in the stream is entirely in memory, and all read requests will succeed synchronously. Expected to return false for chunked requests.
+判断WebHttpBodyStream中的上传数据是否在内存中。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-isInMemory(): boolean--><!--Device-WebHttpBodyStream-isInMemory(): boolean-End-->
 
@@ -146,21 +172,25 @@ Returns true if the upload data in the stream is entirely in memory, and all rea
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether the data stream is in memory. |
+| boolean | WebHttpBodyStream中的上传数据是否在内存中。 &lt;br&gt;如果WebHttpBodyStream中的上传数据完全在内存中，并且所有读取请求都将同步成功，则返回true。对于分块传输类型的数据，预期返回false。 |
 
 ## read
 
 ```TypeScript
-read(size: int): Promise<ArrayBuffer>
+read(size: number): Promise<ArrayBuffer>
 ```
 
-Read the data stream to the buffer. Unit: bytes.
+读取WebHttpBodyStream中的数据。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebHttpBodyStream-read(size: int): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: int): Promise<ArrayBuffer>-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -168,17 +198,17 @@ Read the data stream to the buffer. Unit: bytes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | int | 是 | Read size. The value should be an integer. |
+| size | number | 是 | 读取WebHttpBodyStream中的字节数。单位：字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Read array buffer of result. |
+| Promise&lt;ArrayBuffer&gt; | Promise实例，用于获取WebHttpBodyStream中读取的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 

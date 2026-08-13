@@ -2,11 +2,13 @@
 
 Defines a rotation gesture handler object.
 
-**Inheritance/Implementation:** RotationGestureHandler extends [GestureHandler<RotationGestureHandler>](GestureHandler<RotationGestureHandler>)
+**Inheritance/Implementation:** RotationGestureHandler extends GestureHandler<RotationGestureHandler>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class RotationGestureHandler extends GestureHandler<RotationGestureHandler>--><!--Device-unnamed-declare class RotationGestureHandler extends GestureHandler<RotationGestureHandler>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class RotationGestureHandler--><!--Device-unnamed-declare class RotationGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options?: RotationGestureHandlerOptions)
 Constructor used to create a rotation gesture handler instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ onActionCancel(event: Callback<void>): RotationGestureHandler
 Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,10 +76,11 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 onActionCancel(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
-Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
-[onActionCancel](#onActionCancel), this API returns gesture event information.
+Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onActionCancel), this API returns gesture event information.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,6 +112,8 @@ Sets the callback for rotation gesture recognition completion. This callback is 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -135,6 +144,8 @@ Sets the callback for successful rotation gesture recognition.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -164,6 +175,8 @@ onActionUpdate(event: Callback<GestureEvent>): RotationGestureHandler
 Sets the callback for rotation gesture movement updates. The callback is triggered when the rotation gesture moves.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

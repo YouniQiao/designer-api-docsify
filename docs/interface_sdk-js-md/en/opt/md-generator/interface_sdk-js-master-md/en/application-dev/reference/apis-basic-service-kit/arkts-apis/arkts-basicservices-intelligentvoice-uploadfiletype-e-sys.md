@@ -2,7 +2,9 @@
 
 Enumerates upload file type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-enum UploadFileType--><!--Device-intelligentVoice-enum UploadFileType-End-->
 
@@ -18,7 +20,9 @@ ENROLL_FILE = 0
 
 Enroll file.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadFileType-ENROLL_FILE = 0--><!--Device-UploadFileType-ENROLL_FILE = 0-End-->
 
@@ -34,7 +38,9 @@ WAKEUP_FILE = 1
 
 Wakeup file.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadFileType-WAKEUP_FILE = 1--><!--Device-UploadFileType-WAKEUP_FILE = 1-End-->
 

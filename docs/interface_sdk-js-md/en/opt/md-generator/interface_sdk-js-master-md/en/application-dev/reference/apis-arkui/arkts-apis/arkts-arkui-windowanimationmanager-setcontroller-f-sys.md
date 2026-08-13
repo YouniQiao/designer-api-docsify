@@ -14,7 +14,9 @@ function setController(controller: WindowAnimationController): void
 
 Set the window animation controller.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void--><!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void-End-->
 

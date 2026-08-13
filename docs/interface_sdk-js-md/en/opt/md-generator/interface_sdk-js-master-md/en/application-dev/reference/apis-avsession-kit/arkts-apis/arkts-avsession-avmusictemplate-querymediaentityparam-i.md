@@ -4,6 +4,8 @@ The definition of QueryMediaEntityParam.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface QueryMediaEntityParam--><!--Device-avMusicTemplate-interface QueryMediaEntityParam-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ entityId.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-QueryMediaEntityParam-entityId: string--><!--Device-QueryMediaEntityParam-entityId: string-End-->
@@ -43,6 +47,8 @@ episodeRange.
 **Type:** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ pageIndex.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-QueryMediaEntityParam-pageIndex: int--><!--Device-QueryMediaEntityParam-pageIndex: int-End-->
@@ -79,6 +87,8 @@ sort.
 **Type:** [Sort](arkts-avsession-avmusictemplate-sort-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ subEntityType.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-QueryMediaEntityParam-subEntityType?: EntityType--><!--Device-QueryMediaEntityParam-subEntityType?: EntityType-End-->
@@ -115,6 +127,8 @@ type.
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

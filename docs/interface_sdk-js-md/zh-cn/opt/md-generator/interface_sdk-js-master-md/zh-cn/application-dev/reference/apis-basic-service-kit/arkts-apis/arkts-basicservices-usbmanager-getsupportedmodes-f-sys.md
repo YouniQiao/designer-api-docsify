@@ -12,7 +12,7 @@ function getSupportedModes(portId: number): PortModeType
 
 **废弃版本：** 12
 
-**替代接口：** [getPortSupportModes](usbManager.getPortSupportModes(portId:)
+**替代接口：** [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md#getPortSupportModes（系统接口）)(portId: int)
 
 <!--Device-usbManager-function getSupportedModes(portId: number): PortModeType--><!--Device-usbManager-function getSupportedModes(portId: number): PortModeType-End-->
 
@@ -36,4 +36,4 @@ function getSupportedModes(portId: number): PortModeType
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

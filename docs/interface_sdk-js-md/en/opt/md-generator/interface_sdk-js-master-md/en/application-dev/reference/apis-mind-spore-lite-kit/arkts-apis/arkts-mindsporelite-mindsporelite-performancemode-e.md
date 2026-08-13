@@ -2,7 +2,9 @@
 
 Enum for performance mode
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-export enum PerformanceMode--><!--Device-mindSporeLite-export enum PerformanceMode-End-->
 
@@ -16,7 +18,9 @@ PERFORMANCE_NONE = 0
 
 No performance mode preference
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ PERFORMANCE_LOW = 1
 
 Low power consumption mode
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ PERFORMANCE_MEDIUM = 2
 
 Medium performance mode
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +72,9 @@ PERFORMANCE_HIGH = 3
 
 High performance mode
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +90,9 @@ PERFORMANCE_EXTREME = 4
 
 Ultimate performance mode
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

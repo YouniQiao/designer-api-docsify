@@ -2,9 +2,11 @@
 
 Enumerates the image quality levels.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-enum ResolutionQuality--><!--Device-image-enum ResolutionQuality-End-->
 
@@ -20,9 +22,11 @@ LOW = 1
 
 Low image quality, requiring a short decoding time.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResolutionQuality-LOW = 1--><!--Device-ResolutionQuality-LOW = 1-End-->
 
@@ -38,9 +42,11 @@ MEDIUM = 2
 
 Medium image quality, requiring a medium decoding time
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResolutionQuality-MEDIUM = 2--><!--Device-ResolutionQuality-MEDIUM = 2-End-->
 
@@ -56,9 +62,11 @@ HIGH = 3
 
 High image quality, requiring a long decoding time.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResolutionQuality-HIGH = 3--><!--Device-ResolutionQuality-HIGH = 3-End-->
 

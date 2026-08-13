@@ -1,12 +1,12 @@
 # EventTarget
 
-Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
-
-Represents the display area of the element object that triggers the event.
+Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent). Represents the display area of the element object that triggers the event.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface EventTarget--><!--Device-unnamed-declare interface EventTarget-End-->
 
@@ -25,6 +25,8 @@ Area information of the target element.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,6 +49,8 @@ Custom node [ID](arkts-arkui-commonmethod-c.md#id). Default value: **undefined**
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

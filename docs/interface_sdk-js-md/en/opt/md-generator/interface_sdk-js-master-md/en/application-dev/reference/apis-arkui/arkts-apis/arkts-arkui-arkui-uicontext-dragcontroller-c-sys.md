@@ -1,13 +1,10 @@
 # DragController
 
-Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
-
-> **NOTE：**
-> 
-> In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) in
-> **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
+Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. > **NOTE：**> > In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) in > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class DragController--><!--Device-unnamed-export class DragController-End-->
 
@@ -28,6 +25,8 @@ interruptFollowHandMorphDropAnimation(): boolean
 Interrupt the pending follow-hand morph drop animation and trigger the finish sequence immediately.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

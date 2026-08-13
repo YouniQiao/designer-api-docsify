@@ -18,7 +18,7 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [uploadFile](request.uploadFile(context:)
+**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -39,7 +39,7 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -74,7 +74,7 @@ Uploads a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [uploadFile](request.uploadFile(context:)
+**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -100,7 +100,7 @@ Uploads a file. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

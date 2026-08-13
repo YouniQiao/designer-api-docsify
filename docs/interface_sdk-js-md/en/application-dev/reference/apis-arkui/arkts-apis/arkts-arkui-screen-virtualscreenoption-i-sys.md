@@ -2,9 +2,11 @@
 
 Defines virtual screen parameters.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screen-interface VirtualScreenOption--><!--Device-screen-interface VirtualScreenOption-End-->
 
@@ -26,11 +28,13 @@ density: double
 
 Density of the virtual screen, in px. The value must be a floating-point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-density: double--><!--Device-VirtualScreenOption-density: double-End-->
 
@@ -46,11 +50,13 @@ height: long
 
 Height of the virtual screen, in px. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-height: long--><!--Device-VirtualScreenOption-height: long-End-->
 
@@ -68,9 +74,11 @@ Name of a virtual screen.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-name: string--><!--Device-VirtualScreenOption-name: string-End-->
 
@@ -84,14 +92,15 @@ Name of a virtual screen.
 supportsFocus?: boolean
 ```
 
-Whether the virtual screen is focusable. **true** if focusable; **false** otherwise. The default value is  
-**true**.
+Whether the virtual screen is focusable. **true** if focusable; **false** otherwise. The default value is **true**.
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-supportsFocus?: boolean--><!--Device-VirtualScreenOption-supportsFocus?: boolean-End-->
 
@@ -109,9 +118,11 @@ Surface ID of the virtual screen.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-surfaceId: string--><!--Device-VirtualScreenOption-surfaceId: string-End-->
 
@@ -127,11 +138,13 @@ userId?: int
 
 User ID of the virtual screen, which is an integer. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,11 +162,13 @@ width: long
 
 Width of the virtual screen, in px. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-width: long--><!--Device-VirtualScreenOption-width: long-End-->
 

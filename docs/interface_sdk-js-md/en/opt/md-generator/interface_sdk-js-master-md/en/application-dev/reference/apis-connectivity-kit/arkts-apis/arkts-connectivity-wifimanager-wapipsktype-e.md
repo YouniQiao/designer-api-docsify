@@ -2,7 +2,9 @@
 
 Describes the WAPI pre-shared key Type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum WapiPskType--><!--Device-wifiManager-enum WapiPskType-End-->
 
@@ -16,7 +18,9 @@ WAPI_PSK_ASCII = 0
 
 ASCII character type of WAPI pre-shared key.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WapiPskType-WAPI_PSK_ASCII = 0--><!--Device-WapiPskType-WAPI_PSK_ASCII = 0-End-->
 
@@ -30,7 +34,9 @@ WAPI_PSK_HEX = 1
 
 HEX character type of WAPI pre-shared key.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WapiPskType-WAPI_PSK_HEX = 1--><!--Device-WapiPskType-WAPI_PSK_HEX = 1-End-->
 

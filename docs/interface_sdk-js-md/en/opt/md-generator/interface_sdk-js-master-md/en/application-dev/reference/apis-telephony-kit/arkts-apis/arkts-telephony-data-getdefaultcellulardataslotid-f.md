@@ -14,7 +14,9 @@ function getDefaultCellularDataSlotId(callback: AsyncCallback<number>): void
 
 Get the default cellular data card.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void--><!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void-End-->
 
@@ -50,7 +52,9 @@ function getDefaultCellularDataSlotId(): Promise<number>
 
 Get the default cellular data card.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>--><!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>-End-->
 

@@ -6,13 +6,13 @@
 function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 ```
 
-查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。
-
-该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
+查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。 该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>--><!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>-End-->
 
@@ -28,9 +28,9 @@ function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 
@@ -51,13 +51,13 @@ dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // 获取DLP�
 function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void
 ```
 
-查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。使用callback异步回调。
-
-该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
+查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。使用callback异步回调。 该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void--><!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void-End-->
 
@@ -67,16 +67,16 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 

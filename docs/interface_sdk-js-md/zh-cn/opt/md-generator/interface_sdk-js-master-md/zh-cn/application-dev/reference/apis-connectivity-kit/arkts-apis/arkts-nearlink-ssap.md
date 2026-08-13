@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace ssap--><!--Device-unnamed-declare namespace ssap-End-->
@@ -16,8 +18,8 @@
 
 | 名称 |
 | --- |
-| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) |
-| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) |
+| [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) |
+| [createServer](arkts-connectivity-ssap-createserver-f.md#createServer) |
 
 ### 接口
 

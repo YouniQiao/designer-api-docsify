@@ -16,6 +16,8 @@ Create an ad playback controller associated with the player instance.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-media-function createAVAdsController(player: AVPlayer): Promise<AVAdsController | undefined>--><!--Device-media-function createAVAdsController(player: AVPlayer): Promise<AVAdsController | undefined>-End-->
@@ -38,4 +40,4 @@ Create an ad playback controller associated with the player instance.
 
 | Error Code ID |
 | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |

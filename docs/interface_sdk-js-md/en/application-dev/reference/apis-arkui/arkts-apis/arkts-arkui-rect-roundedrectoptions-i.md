@@ -6,6 +6,8 @@ Define options used to construct a rectangle with rounded corners.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RoundedRectOptions--><!--Device-unnamed-export declare interface RoundedRectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Rectangle height.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Height of the corner radius.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RoundedRectOptions-radiusHeight?: Length--><!--Device-RoundedRectOptions-radiusHeight?: Length-End-->
@@ -64,6 +70,8 @@ Width of the corner radius.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RoundedRectOptions-radiusWidth?: Length--><!--Device-RoundedRectOptions-radiusWidth?: Length-End-->
@@ -83,6 +91,8 @@ Rectangle width.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

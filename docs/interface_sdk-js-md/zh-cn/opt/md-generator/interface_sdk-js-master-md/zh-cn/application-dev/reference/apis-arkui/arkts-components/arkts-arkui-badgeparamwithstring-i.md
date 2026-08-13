@@ -6,7 +6,9 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare interface BadgeParamWithString extends BadgeParam--><!--Device-unnamed-declare interface BadgeParamWithString extends BadgeParam-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface BadgeParamWithString--><!--Device-unnamed-declare interface BadgeParamWithString-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,17 +18,13 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam
 value: ResourceStr
 ```
 
-提示内容的文本字符串。
-
-**说明：**
-
-value为空字符串时不显示文本，仅显示圆点标记。
-
-从API version 20开始，支持ResourceStr类型。
+提示内容的文本字符串。 **说明：** value为空字符串时不显示文本，仅显示圆点标记。 从API version 20开始，支持ResourceStr类型。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

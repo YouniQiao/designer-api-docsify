@@ -2,7 +2,9 @@
 
 Gzip相关接口。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
 
@@ -16,9 +18,11 @@ gzbuffer(size: number): Promise<number>
 
 为当前库函数设置内部缓冲区尺寸。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzbuffer(size: long): Promise<int>--><!--Device-GZip-gzbuffer(size: long): Promise<int>-End-->
 
@@ -40,8 +44,8 @@ gzbuffer(size: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -92,9 +96,11 @@ gzclearerr(): Promise<void>
 
 清除文件的错误和文件结束标志。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclearerr(): Promise<void>--><!--Device-GZip-gzclearerr(): Promise<void>-End-->
 
@@ -165,9 +171,11 @@ gzclose(): Promise<ReturnStatus>
 
 清除文件的所有挂起输出，如有必要，关闭文件和释放（解）压缩状态。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclose(): Promise<ReturnStatus>--><!--Device-GZip-gzclose(): Promise<ReturnStatus>-End-->
 
@@ -183,8 +191,8 @@ gzclose(): Promise<ReturnStatus>
 
 | 错误码ID |
 | --- |
-| [17800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -232,9 +240,11 @@ gzcloser(): Promise<ReturnStatus>
 
 与gzclose()功能相同，仅适用于读取时。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzcloser(): Promise<ReturnStatus>--><!--Device-GZip-gzcloser(): Promise<ReturnStatus>-End-->
 
@@ -250,7 +260,7 @@ gzcloser(): Promise<ReturnStatus>
 
 | 错误码ID |
 | --- |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -300,9 +310,11 @@ gzclosew(): Promise<ReturnStatus>
 
 与gzclose()功能相同，仅适用于写入或追加时。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclosew(): Promise<ReturnStatus>--><!--Device-GZip-gzclosew(): Promise<ReturnStatus>-End-->
 
@@ -318,8 +330,8 @@ gzclosew(): Promise<ReturnStatus>
 
 | 错误码ID |
 | --- |
-| [17800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -367,9 +379,11 @@ gzdirect(): Promise<number>
 
 检查指定的gzip文件句柄文件是否直接访问原始未压缩数据，重新分配缓冲区。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzdirect(): Promise<int>--><!--Device-GZip-gzdirect(): Promise<int>-End-->
 
@@ -428,9 +442,11 @@ gzdopen(fd: number, mode: string): Promise<void>
 
 将gzFile与文件描述符fd相关联，打开文件，用于进行读取并解压缩，或者压缩并写入。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>--><!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>-End-->
 
@@ -453,8 +469,8 @@ gzdopen(fd: number, mode: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) |
 
 ## 示例
 
@@ -503,9 +519,11 @@ gzeof(): Promise<number>
 
 检查gzip压缩文件的读取位置是否已到达文件的末尾。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzeof(): Promise<int>--><!--Device-GZip-gzeof(): Promise<int>-End-->
 
@@ -574,9 +592,11 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 文件上发生的最后一个错误的错误消息。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>--><!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>-End-->
 
@@ -592,7 +612,7 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 | 错误码ID |
 | --- |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -653,9 +673,11 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 将所有挂起的输出刷新到文件中。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
@@ -677,8 +699,8 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -727,9 +749,11 @@ gzfread(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 从gzip压缩文件中解压缩并读取数据。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
 
@@ -753,8 +777,8 @@ gzfread(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -812,9 +836,11 @@ gzfwrite(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 将大小为size，数量为nitems的数据块从buf压缩并写入文件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
 
@@ -838,8 +864,8 @@ gzfwrite(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -893,9 +919,11 @@ gzgetc(): Promise<number>
 
 从文件中读取并解压缩一个字节。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzgetc(): Promise<int>--><!--Device-GZip-gzgetc(): Promise<int>-End-->
 
@@ -911,7 +939,7 @@ gzgetc(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -963,9 +991,11 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 从文件中读取字节并将其解压缩到buf中，直到读取len-1字符，或者直到读取换行符并将其传输到buf，或者遇到文件结束条件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>--><!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>-End-->
 
@@ -987,8 +1017,8 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1041,9 +1071,11 @@ gzoffset(): Promise<number>
 
 返回文件的当前压缩（实际）读或写偏移量。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzoffset(): Promise<long>--><!--Device-GZip-gzoffset(): Promise<long>-End-->
 
@@ -1059,7 +1091,7 @@ gzoffset(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1108,9 +1140,11 @@ gzopen(path: string, mode: string): Promise<void>
 
 打开位于指定路径的gzip(.gz)文件，用于进行读取并解压缩，或者压缩并写入。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzopen(path: string, mode: string): Promise<void>--><!--Device-GZip-gzopen(path: string, mode: string): Promise<void>-End-->
 
@@ -1133,8 +1167,8 @@ gzopen(path: string, mode: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) |
 
 ## 示例
 
@@ -1182,9 +1216,11 @@ gzprintf(format: string, ...args: Array<string | number>): Promise<number>
 
 在字符串格式的控制下，将参数转换和格式化后，压缩并写入文件，如fprintf中所示。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>--><!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>-End-->
 
@@ -1207,9 +1243,9 @@ gzprintf(format: string, ...args: Array<string | number>): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1258,9 +1294,11 @@ gzputc(ch: number): Promise<number>
 
 将转换为无符号字符的c压缩并写入文件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzputc(ch: int): Promise<int>--><!--Device-GZip-gzputc(ch: int): Promise<int>-End-->
 
@@ -1282,8 +1320,8 @@ gzputc(ch: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1332,9 +1370,11 @@ gzputs(str: string): Promise<number>
 
 压缩给定的以null结尾的字符串并将其写入文件，不包括终止的null字符。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzputs(str: string): Promise<int>--><!--Device-GZip-gzputs(str: string): Promise<int>-End-->
 
@@ -1356,8 +1396,8 @@ gzputs(str: string): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1406,9 +1446,11 @@ gzread(buf: ArrayBuffer): Promise<number>
 
 从文件中读取最多len个未压缩字节并将其解压缩到buf中。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>--><!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>-End-->
 
@@ -1430,8 +1472,8 @@ gzread(buf: ArrayBuffer): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1489,9 +1531,11 @@ gzrewind(): Promise<ReturnStatus>
 
 将文件指针重新定位到文件的开头，此功能仅用于读取。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzrewind(): Promise<ReturnStatus>--><!--Device-GZip-gzrewind(): Promise<ReturnStatus>-End-->
 
@@ -1507,7 +1551,7 @@ gzrewind(): Promise<ReturnStatus>
 
 | 错误码ID |
 | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1558,9 +1602,11 @@ gzseek(offset: number, whence: OffsetReferencePoint): Promise<number>
 
 将起始位置设置为相对于文件中下一个gzread或gzwrite的偏移位置。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>--><!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>-End-->
 
@@ -1583,8 +1629,8 @@ gzseek(offset: number, whence: OffsetReferencePoint): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1633,9 +1679,11 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 动态更新文件的压缩级别和压缩策略。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
@@ -1658,8 +1706,8 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1709,9 +1757,11 @@ gztell(): Promise<number>
 
 返回文件中下一个gzread或gzwrite的起始位置。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gztell(): Promise<long>--><!--Device-GZip-gztell(): Promise<long>-End-->
 
@@ -1727,7 +1777,7 @@ gztell(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1776,9 +1826,11 @@ gzungetc(c: number): Promise<number>
 
 将c推回到流中，以便在下次读取文件时将作为第一个字符读取。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzungetc(c: int): Promise<int>--><!--Device-GZip-gzungetc(c: int): Promise<int>-End-->
 
@@ -1800,8 +1852,8 @@ gzungetc(c: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 
@@ -1853,9 +1905,11 @@ gzwrite(buf: ArrayBuffer, len: number): Promise<number>
 
 将buf中的len长度的未压缩字节进行压缩并将其写入文件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>--><!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>-End-->
 
@@ -1878,8 +1932,8 @@ gzwrite(buf: ArrayBuffer, len: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) |
 
 ## 示例
 

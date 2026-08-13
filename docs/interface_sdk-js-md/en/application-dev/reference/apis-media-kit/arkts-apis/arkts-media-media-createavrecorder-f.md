@@ -12,17 +12,13 @@ import { media } from '@kit.MediaKit';
 function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 ```
 
-Creates an AVRecorder instance. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> An application can create multiple AVRecorder instances. However, because the device shares a common audio
-> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
-> recording fails due to audio channel conflicts.
+Creates an AVRecorder instance. This API uses an asynchronous callback to return the result. > **NOTE：**> > An application can create multiple AVRecorder instances. However, because the device shares a common audio > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio > recording fails due to audio channel conflicts.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void-End-->
 
@@ -32,13 +28,13 @@ Creates an AVRecorder instance. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md)&gt; | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md)&gt; | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 
 ## Examples
 
@@ -67,7 +63,9 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void-End-->
 
@@ -77,13 +75,13 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 
 
 ## createAVRecorder
@@ -92,17 +90,13 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 function createAVRecorder(): Promise<AVRecorder>
 ```
 
-Creates an AVRecorder instance. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> An application can create multiple AVRecorder instances. However, because the device shares a common audio
-> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
-> recording fails due to audio channel conflicts.
+Creates an AVRecorder instance. This API uses a promise to return the result. > **NOTE：**> > An application can create multiple AVRecorder instances. However, because the device shares a common audio > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio > recording fails due to audio channel conflicts.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -120,7 +114,7 @@ Creates an AVRecorder instance. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
 ## Examples
 
@@ -150,7 +144,9 @@ Creates an **AVRecorder** instance. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createAVRecorder(): Promise<AVRecorder | undefined>--><!--Device-media-function createAVRecorder(): Promise<AVRecorder | undefined>-End-->
 
@@ -166,5 +162,5 @@ Creates an **AVRecorder** instance. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 

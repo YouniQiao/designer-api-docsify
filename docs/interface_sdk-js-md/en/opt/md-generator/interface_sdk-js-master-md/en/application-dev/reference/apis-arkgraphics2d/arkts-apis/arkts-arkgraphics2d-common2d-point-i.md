@@ -2,7 +2,9 @@
 
 Describes a coordinate point.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-common2D-interface Point--><!--Device-common2D-interface Point-End-->
 
@@ -24,7 +26,9 @@ Horizontal coordinate. The value is a floating point number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Vertical coordinate. The value is a floating point number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

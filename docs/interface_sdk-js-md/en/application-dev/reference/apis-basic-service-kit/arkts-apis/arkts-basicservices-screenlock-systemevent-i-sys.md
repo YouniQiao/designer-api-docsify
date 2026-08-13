@@ -2,9 +2,11 @@
 
 Indicates the system event type and parameter related to the screenlock management service.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screenLock-interface SystemEvent--><!--Device-screenLock-interface SystemEvent-End-->
 
@@ -28,9 +30,11 @@ Indicates the system event type related to the screenlock management service.
 
 **Type:** EventType
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemEvent-eventType: EventType--><!--Device-SystemEvent-eventType: EventType-End-->
 
@@ -48,9 +52,11 @@ Identifies the customized extended parameter of an event.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemEvent-params: string--><!--Device-SystemEvent-params: string-End-->
 

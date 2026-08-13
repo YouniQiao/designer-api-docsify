@@ -12,6 +12,8 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream--><!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -40,7 +42,7 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900004 | Interrupted system call |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

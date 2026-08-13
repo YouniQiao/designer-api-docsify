@@ -1,12 +1,8 @@
 # Toggle
 
-The **Toggle** component provides a clickable element of the checkbox, button, or switch type.
+The **Toggle** component provides a clickable element of the checkbox, button, or switch type. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-This component can contain child components only when **ToggleType** is set to **Button**.
+## Child Components This component can contain child components only when **ToggleType** is set to **Button**.
 
 ## Toggle
 
@@ -17,6 +13,8 @@ Toggle(options: ToggleOptions)
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +32,7 @@ Toggle(options: ToggleOptions)
 
 ## Summary
 
-- [SwitchStyle](arkts-arkui-toggle-switchstyle-i.md)
-- [ToggleConfiguration](arkts-arkui-toggle-toggleconfiguration-i.md)
-- [ToggleOptions](arkts-arkui-toggle-toggleoptions-i.md)
-- [ToggleType](arkts-arkui-toggle-toggletype-e.md)
+- [SwitchStyle](arkts-arkui-switchstyle-i.md)
+- [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)
+- [ToggleOptions](arkts-arkui-toggleoptions-i.md)
+- [ToggleType](arkts-arkui-toggletype-e.md)

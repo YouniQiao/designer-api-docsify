@@ -2,7 +2,9 @@
 
 Defines the call restriction information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface CallRestrictionInfo--><!--Device-call-export interface CallRestrictionInfo-End-->
 
@@ -26,7 +28,9 @@ Enumerates call restriction modes.
 
 **Type:** [CallRestrictionMode](arkts-telephony-call-callrestrictionmode-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallRestrictionInfo-mode: CallRestrictionMode--><!--Device-CallRestrictionInfo-mode: CallRestrictionMode-End-->
 
@@ -44,7 +48,9 @@ Password.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallRestrictionInfo-password: string--><!--Device-CallRestrictionInfo-password: string-End-->
 
@@ -62,7 +68,9 @@ Call restriction type.
 
 **Type:** [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallRestrictionInfo-type: CallRestrictionType--><!--Device-CallRestrictionInfo-type: CallRestrictionType-End-->
 

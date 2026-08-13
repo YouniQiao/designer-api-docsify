@@ -2,9 +2,11 @@
 
 Describes a font variation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-text-interface FontVariation--><!--Device-text-interface FontVariation-End-->
 
@@ -22,13 +24,15 @@ import { text } from '@kit.ArkGraphics2D';
 axis: string
 ```
 
-Keyword identifier in the variable font property key-value pair, such as 'wght' (weight), 'wdth' (width), and 'ital' (italic).
+Keyword identifier in the variable font property key-value pair, such as 'wght' (weight), 'wdth' (width), and ' ital' (italic).
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -48,7 +52,9 @@ Whether to normalize. If the value is **true**, the value range of the value fie
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -64,11 +70,13 @@ value: double
 
 Value in the font variation key-value pair.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -2,7 +2,9 @@
 
 Defines information about the call status.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-export interface CallStateInfo--><!--Device-observer-export interface CallStateInfo-End-->
 
@@ -26,6 +28,8 @@ Phone number.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-CallStateInfo-number: string--><!--Device-CallStateInfo-number: string-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -40,8 +44,28 @@ Call type.
 
 **Type:** CallState
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallStateInfo-state: CallState--><!--Device-CallStateInfo-state: CallState-End-->
+
+**System capability:** SystemCapability.Telephony.StateRegistry
+
+## teleNumber
+
+```TypeScript
+teleNumber: string
+```
+
+Indicates call number.
+
+**Type:** string
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CallStateInfo-teleNumber: string--><!--Device-CallStateInfo-teleNumber: string-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

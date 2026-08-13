@@ -1,12 +1,12 @@
 # BlanklessFrameInterpolationInfo
 
-Defines the frame interpolation information.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+1.定义插帧状态信息 2.ArkWeb使能白屏插帧优化的场景 设备行为差异:仅支持手机平台，其他平台返回801
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface BlanklessFrameInterpolationInfo--><!--Device-webview-interface BlanklessFrameInterpolationInfo-End-->
 
@@ -18,15 +18,15 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 key: string
 ```
 
-Key value that uniquely identifies the page.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+1.唯一标识本页面的key值 设备行为差异:仅支持手机平台，其他平台返回801
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,15 +40,15 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 reason: string
 ```
 
-Reason for the frame interpolation failure.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+插帧失败的原因 设备行为差异:仅支持手机平台，其他平台返回801
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,15 +62,15 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 state: BlanklessFrameInterpolationState
 ```
 
-Current frame interpolation state.
+1.当前插帧状态 设备行为差异:仅支持手机平台，其他平台返回801
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-
-**类型：** [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md)
+**类型：** [BlanklessFrameInterpolationState](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationstate-e.md)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,22 +81,22 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ## timestamp
 
 ```TypeScript
-timestamp: int
+timestamp: number
 ```
 
-Time when a frame is interpolated or removed.
+帧插入或者移除的时间点 设备行为差异:仅支持手机平台，其他平台返回801 取值限定为整数。
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.&lt;br&gt;Unit: ms.
-
-**类型：** int
+**类型：** number
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-BlanklessFrameInterpolationInfo-timestamp: int--><!--Device-BlanklessFrameInterpolationInfo-timestamp: int-End-->
+<!--Device-BlanklessFrameInterpolationInfo-timestamp: number--><!--Device-BlanklessFrameInterpolationInfo-timestamp: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

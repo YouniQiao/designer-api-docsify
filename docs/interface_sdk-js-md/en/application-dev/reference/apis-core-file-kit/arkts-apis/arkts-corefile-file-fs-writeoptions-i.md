@@ -1,14 +1,16 @@
 # WriteOptions
 
-Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md#Options).
+Defines the options used in **write()**. It inherits from [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#Options).
 
-**Inheritance/Implementation:** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md#Options)
+**Inheritance/Implementation:** WriteOptions extends [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#Options)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-export interface WriteOptions extends Options--><!--Device-unnamed-export interface WriteOptions extends Options-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface WriteOptions--><!--Device-unnamed-export interface WriteOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -21,36 +23,44 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 ## length
 
 ```TypeScript
-length?: long
+length?: number
 ```
 
 Length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.
 
-**Type:** long
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-WriteOptions-length?: long--><!--Device-WriteOptions-length?: long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WriteOptions-length?: number--><!--Device-WriteOptions-length?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## offset
 
 ```TypeScript
-offset?: long
+offset?: number
 ```
 
 Start position of the file to write, in bytes. This parameter is optional. By default, data is written from the current position.
 
-**Type:** long
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-WriteOptions-offset?: long--><!--Device-WriteOptions-offset?: long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WriteOptions-offset?: number--><!--Device-WriteOptions-offset?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

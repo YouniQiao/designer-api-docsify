@@ -2,9 +2,11 @@
 
 Enumerates the print directions.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrintOrientationMode--><!--Device-print-enum PrintOrientationMode-End-->
 
@@ -18,9 +20,11 @@ ORIENTATION_MODE_PORTRAIT = 0
 
 Portrait mode.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_PORTRAIT = 0--><!--Device-PrintOrientationMode-ORIENTATION_MODE_PORTRAIT = 0-End-->
 
@@ -34,9 +38,11 @@ ORIENTATION_MODE_LANDSCAPE= 1
 
 Landscape mode.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_LANDSCAPE= 1--><!--Device-PrintOrientationMode-ORIENTATION_MODE_LANDSCAPE= 1-End-->
 
@@ -50,9 +56,11 @@ ORIENTATION_MODE_REVERSE_LANDSCAPE = 2
 
 Reverse landscape mode.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_LANDSCAPE = 2--><!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_LANDSCAPE = 2-End-->
 
@@ -66,9 +74,11 @@ ORIENTATION_MODE_REVERSE_PORTRAIT = 3
 
 Reverse portrait mode.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_PORTRAIT = 3--><!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_PORTRAIT = 3-End-->
 
@@ -82,9 +92,11 @@ ORIENTATION_MODE_NONE = 4
 
 Adaptive mode.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_NONE = 4--><!--Device-PrintOrientationMode-ORIENTATION_MODE_NONE = 4-End-->
 

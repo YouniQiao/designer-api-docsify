@@ -4,6 +4,8 @@ Provides the parameters of the basic gesture handler.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface BaseHandlerOptions--><!--Device-unnamed-interface BaseHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Provides the parameters of the basic gesture handler.
 isFingerCountLimited?: boolean
 ```
 
-Whether to enforce the exact number of fingers touching the screen. **true**: Enforce the exact number of fingers touching the screen. **false**: Do not enforce the exact number of fingers touching the screen.
-
-Default value: **false**
+Whether to enforce the exact number of fingers touching the screen. **true**: Enforce the exact number of fingers touching the screen. **false**: Do not enforce the exact number of fingers touching the screen. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

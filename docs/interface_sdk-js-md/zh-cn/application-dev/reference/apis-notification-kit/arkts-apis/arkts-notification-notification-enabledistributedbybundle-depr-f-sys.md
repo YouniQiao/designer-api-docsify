@@ -14,7 +14,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 
 **废弃版本：** 9
 
-**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle)
+**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -30,7 +30,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | enable | boolean | 是 | 是否支持。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 应用程序是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 应用程序是否支持分布式通知的回调函数。 |
 
 
 ## enableDistributedByBundle
@@ -47,7 +47,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promi
 
 **废弃版本：** 9
 
-**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle)
+**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

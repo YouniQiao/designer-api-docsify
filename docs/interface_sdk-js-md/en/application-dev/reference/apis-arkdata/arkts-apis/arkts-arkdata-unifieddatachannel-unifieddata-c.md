@@ -2,9 +2,11 @@
 
 Provides APIs for encapsulating a set of data records.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-class UnifiedData--><!--Device-unifiedDataChannel-class UnifiedData-End-->
 
@@ -24,9 +26,11 @@ addRecord(record: UnifiedRecord): void
 
 Adds a data record to this **UnifiedRecord** object.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,7 @@ Adds a data record to this **UnifiedRecord** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -77,9 +81,11 @@ constructor(record: UnifiedRecord)
 
 Defines a constructor used to create a **UnifiedData** object with a data record.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,7 +105,7 @@ Defines a constructor used to create a **UnifiedData** object with a data record
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -122,13 +128,15 @@ constructor()
 
 Defines a constructor used to create a **UnifiedData** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedData-constructor()--><!--Device-UnifiedData-constructor()-End-->
 
@@ -148,9 +156,11 @@ getRecords(): Array<UnifiedRecord>
 
 Obtains all data records from this **UnifiedData** object. The data obtained is of the **UnifiedRecord** type. Before using the data, you need to use [getType](#getTypes) to obtain the data type and convert the data type to a child class.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,13 +219,15 @@ getTypes(): Array<string>
 
 Obtains the types of all data records in this **UnifiedData** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedData-getTypes(): Array<string>--><!--Device-UnifiedData-getTypes(): Array<string>-End-->
 
@@ -257,17 +269,17 @@ let types = unifiedData.getTypes();
 hasType(type: string): boolean
 ```
 
-Checks whether this **UnifiedData** object contains the specified data type, including the data types added by using the [addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addEntry) function.
+Checks whether this **UnifiedData** object contains the specified data type, including the data types added by using the [addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addEntry) function. For file types, if the type set of **UnifiedData** includes **general.jpeg**, calling the **hasType** API to check for the **general.image** type will return **true**. This is because the **general.jpeg** type belongs to the **general.image** type.
 
-For file types, if the type set of **UnifiedData** includes **general.jpeg**, calling the **hasType** API to check for the **general.image** type will return **true**. This is because the **general.jpeg** type belongs to the **general.image** type.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UnifiedData-hasType(type: string): boolean--><!--Device-UnifiedData-hasType(type: string): boolean-End-->
 
@@ -289,7 +301,7 @@ For file types, if the type set of **UnifiedData** includes **general.jpeg**, ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -315,26 +327,4 @@ unifiedData.addRecord(link);
 let hasPlainText = unifiedData.hasType(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT);
 let hasLink = unifiedData.hasType(uniformTypeDescriptor.UniformDataType.HYPERLINK);
 ```
-
-## properties
-
-```TypeScript
-set properties(value: UnifiedDataProperties)
-```
-
-UnifiedData properties.
-
-**Type:** [UnifiedDataProperties](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md)
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UnifiedData-set properties(value: UnifiedDataProperties)--><!--Device-UnifiedData-set properties(value: UnifiedDataProperties)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

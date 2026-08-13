@@ -1,13 +1,10 @@
 # TextSpanType
 
-Provides the [span](./span) type information.
-
-> **NOTE：**
-> 
-> The system follows the priority order below when determining the menu type to display during text interactions:
-> 
+Provides the span type information. > **NOTE：**> > The system follows the priority order below when determining the menu type to display during text interactions: >
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum TextSpanType--><!--Device-unnamed-declare enum TextSpanType-End-->
 
@@ -22,6 +19,8 @@ TEXT = 0
 Text span.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +40,8 @@ Image span.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -59,6 +60,8 @@ Mixed span, which contains both text and imagery.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -76,6 +79,8 @@ DEFAULT = 3
 When this type is registered but **TEXT**, **IMAGE**, or **MIXED** types are not registered, this type will be triggered and displayed for those registered types.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

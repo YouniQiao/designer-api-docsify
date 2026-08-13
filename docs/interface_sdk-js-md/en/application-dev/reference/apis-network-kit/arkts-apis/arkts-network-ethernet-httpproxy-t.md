@@ -8,6 +8,8 @@ type HttpProxy = connection.HttpProxy
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ethernet-type HttpProxy = connection.HttpProxy--><!--Device-ethernet-type HttpProxy = connection.HttpProxy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet

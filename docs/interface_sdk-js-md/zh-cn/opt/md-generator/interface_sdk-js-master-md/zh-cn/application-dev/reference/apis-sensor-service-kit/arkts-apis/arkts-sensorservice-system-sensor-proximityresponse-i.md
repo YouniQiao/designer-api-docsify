@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [ProximityResponse](ohos.sensor/sensor#ProximityResponse)
+**替代接口：** [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md#ProximityResponse)
 
 <!--Device-unnamed-export interface ProximityResponse--><!--Device-unnamed-export interface ProximityResponse-End-->
 
@@ -26,7 +26,7 @@ distance: number
 
 **废弃版本：** 8
 
-**替代接口：** [distance](ohos.sensor/sensor#ProximityResponse.distance)
+**替代接口：** [distance](arkts-sensorservice-sensor-proximityresponse-i.md#distance)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

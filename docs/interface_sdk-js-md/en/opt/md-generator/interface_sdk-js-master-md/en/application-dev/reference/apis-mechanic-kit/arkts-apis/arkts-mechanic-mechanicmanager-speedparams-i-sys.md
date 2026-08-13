@@ -4,6 +4,8 @@ Parameters for moving or turning at a speed.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-mechanicManager-export interface SpeedParams--><!--Device-mechanicManager-export interface SpeedParams-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -28,6 +30,8 @@ Turning angle, unit degree.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-SpeedParams-angle: double--><!--Device-SpeedParams-angle: double-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -46,6 +50,8 @@ Movement mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-SpeedParams-mode?: MarchingMode--><!--Device-SpeedParams-mode?: MarchingMode-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -58,11 +64,13 @@ Movement mode.
 speed: number
 ```
 
-Turning or moving speed, unit cm.The value should be an integer.
+Turning or moving speed, unit cm. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-SpeedParams-speed: int--><!--Device-SpeedParams-speed: int-End-->
 

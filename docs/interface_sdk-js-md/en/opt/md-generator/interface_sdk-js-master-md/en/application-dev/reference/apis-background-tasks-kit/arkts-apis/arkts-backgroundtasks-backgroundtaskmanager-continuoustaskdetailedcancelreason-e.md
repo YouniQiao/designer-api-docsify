@@ -4,6 +4,8 @@ Describes the detailed reason for canceling a continuous task.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-backgroundTaskManager-export enum ContinuousTaskDetailedCancelReason--><!--Device-backgroundTaskManager-export enum ContinuousTaskDetailedCancelReason-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -17,6 +19,8 @@ USER_CANCEL_REMOVE_NOTIFICATION = 3
 User removal notification.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ A continuous task of the **DATA_TRANSFER** type is requested, but the data trans
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4-End-->
@@ -49,6 +55,8 @@ SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6
 A continuous task of the **AUDIO_PLAYBACK** type is requested, but the audio and video are not played.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ A continuous task of the **AUDIO_RECORDING** type is requested, but audio record
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7-End-->
@@ -81,6 +91,8 @@ SYSTEM_CANCEL_NOT_USE_LOCATION = 8
 A continuous task of the **LOCATION** type is requested, but the location service is not in use.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ A continuous task of the **BLUETOOTH_INTERACTION** type is requested, but Blueto
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9-End-->
@@ -113,6 +127,8 @@ SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10
 A continuous task of the **MULTI_DEVICE_CONNECTION** type is requested, but the multi-device connection service is not in use.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +146,8 @@ A continuous task of an invalid type is used. For example, a continuous task of 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_USE_ILLEGALLY = 11--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_USE_ILLEGALLY = 11-End-->
@@ -142,9 +160,11 @@ A continuous task of an invalid type is used. For example, a continuous task of 
 SYSTEM_CANCEL_DATA_TRANSFER_NOT_UPDATE = 12
 ```
 
-A continuous task of the **DATA_TRANSFER** type is requested, but the progress is not updated for a long time (the first update takes more than 10 minutes).
+A continuous task of the **DATA_TRANSFER** type is requested, but the progress is not updated for a long time ( the first update takes more than 10 minutes).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,6 +182,8 @@ A continuous task of the **VOIP** type is requested, but no audio stream or reco
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_VOIP_NOT_RUNNING = 13--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_VOIP_NOT_RUNNING = 13-End-->
@@ -177,6 +199,8 @@ SYSTEM_CANCEL_USER_UNAUTHORIZED = 14
 A continuous task of the special scenario type is requested, but the user is not authorized.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

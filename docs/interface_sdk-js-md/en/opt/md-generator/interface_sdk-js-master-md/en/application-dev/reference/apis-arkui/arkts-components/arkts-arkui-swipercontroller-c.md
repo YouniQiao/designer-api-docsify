@@ -4,6 +4,8 @@ Implements the controller for the **Swiper** component. Bind this object to a **
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class SwiperController--><!--Device-unnamed-declare class SwiperController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ changeIndex(index: number, useAnimation?: boolean)
 Goes to a specified page.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,15 +45,11 @@ Goes to a specified page.
 changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 ```
 
-Moves to a specific page.
-
-> **NOTE：**
-> 
-> This API itself supports jumping without animation (set **animationMode** to **false** or
-> **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it
-> with **finishAnimation** to achieve animation-free jumping.
+Moves to a specific page. > **NOTE：**> > This API itself supports jumping without animation (set **animationMode** to **false** or > **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it > with **finishAnimation** to achieve animation-free jumping.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +78,8 @@ A constructor used to create a **SwiperController** object.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -92,26 +94,11 @@ A constructor used to create a **SwiperController** object.
 fakeDragBy(offset: number): boolean
 ```
 
-Sets the drag distance of drag simulation.
-
-> **NOTE：**
-> 
-> - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout,
-> so that the drag effect can be displayed after the current frame layout. If this API is called multiple times
-> before the layout, only the drag distance passed in the last call takes effect during the current frame layout.
-> 
-> - In the loop scenario where [loop](SwiperAttribute#loop) is set to **true**, if the drag distance of drag
-> simulation is greater than the total layout length, the drag distance will be adjusted to the distance required
-> to drag just far enough to display the first child node (when dragging toward the start of the layout) or the
-> last child node (when dragging toward the end of the layout).
-> 
-> - The [onGestureSwipe](SwiperAttribute#onGestureSwipe) and
-> [onContentWillScroll](SwiperAttribute#onContentWillScroll) events are not triggered during the drag. The
-> [customContentTransition](SwiperAttribute#customContentTransition) event is triggered before the layout.
-> Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the
-> returned node display information may be inconsistent with the layout result when the event is triggered.
+Sets the drag distance of drag simulation. > **NOTE：**> > - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout, > so that the drag effect can be displayed after the current frame layout. If this API is called multiple times > before the layout, only the drag distance passed in the last call takes effect during the current frame layout. > > - In the loop scenario where loop is set to **true**, if the drag distance of drag > simulation is greater than the total layout length, the drag distance will be adjusted to the distance required > to drag just far enough to display the first child node (when dragging toward the start of the layout) or the > last child node (when dragging toward the end of the layout). > > - The onGestureSwipe and > onContentWillScroll events are not triggered during the drag. The > customContentTransition event is triggered before the layout. > Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the > returned node display information may be inconsistent with the layout result when the event is triggered.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,6 +132,8 @@ Stops an animation.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -169,6 +158,8 @@ Obtains whether drag simulation is enabled.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -191,19 +182,11 @@ Obtains whether drag simulation is enabled.
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-Preloads child nodes for **Swiper**. After this API is called, all specified child nodes will be loaded at once.Therefore, for performance considerations, it is recommended that you load child nodes in batches. This API uses a promise to return the result.
-
-If the **SwiperController** object is not bound to any **Swiper** component, any attempt to call APIs on it will result in a JavaScript exception, together with the error code 100004. Therefore, you are advised to use  
-**try-catch** to handle potential exceptions when calling APIs on **SwiperController**.
-
-When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and custom components, be aware that [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) only retains custom components within the cache range. Components outside this range are removed. Therefore, make sure the indexes of nodes to be preloaded via this API are within the cache range to avoid issues.
-
-> **NOTE：**
-> 
-> **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the
-> first preloading in the [onAppear](CommonMethod#onAppear) lifecycle of **Swiper**.
+Preloads child nodes for **Swiper**. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches. This API uses a promise to return the result. If the **SwiperController** object is not bound to any **Swiper** component, any attempt to call APIs on it will result in a JavaScript exception, together with the error code 100004. Therefore, you are advised to use **try-catch** to handle potential exceptions when calling APIs on **SwiperController**. When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and custom components, be aware that [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) only retains custom components within the cache range. Components outside this range are removed. Therefore, make sure the indexes of nodes to be preloaded via this API are within the cache range to avoid issues. > **NOTE：**> > **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the > first preloading in the onAppear lifecycle of **Swiper**.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,7 +202,7 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes |
 
 **Return value:**
 
@@ -231,8 +214,8 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) |
 
 ## showNext
 
@@ -240,10 +223,11 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 showNext()
 ```
 
-Turns to the next page. The page turning includes a transition animation, with the duration set by the  
-[duration](SwiperAttribute#duration) attribute of the **Swiper** component.
+Turns to the next page. The page turning includes a transition animation, with the duration set by the duration attribute of the **Swiper** component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -259,10 +243,11 @@ Turns to the next page. The page turning includes a transition animation, with t
 showPrevious()
 ```
 
-Turns to the previous page. The page turning includes a transition animation, with the duration set by the  
-[duration](SwiperAttribute#duration) attribute of the **Swiper** component.
+Turns to the previous page. The page turning includes a transition animation, with the duration set by the duration attribute of the **Swiper** component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -278,16 +263,11 @@ Turns to the previous page. The page turning includes a transition animation, wi
 startFakeDrag(): boolean
 ```
 
-Enables drag simulation.
-
-> **NOTE：**
-> 
-> - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns
-> **false**, indicating that the operation fails.
-> 
-> - Simulated drag cannot trigger nested scrolling.
+Enables drag simulation. > **NOTE：**> > - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns > **false**, indicating that the operation fails. > > - Simulated drag cannot trigger nested scrolling.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -311,13 +291,11 @@ Enables drag simulation.
 stopFakeDrag(): boolean
 ```
 
-Disables drag simulation.
-
-> **NOTE：**
-> 
-> After drag simulation is enabled, it will end if a real drag gesture is received.
+Disables drag simulation. > **NOTE：**> > After drag simulation is enabled, it will end if a real drag gesture is received.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Defines a key.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface Key--><!--Device-unnamed-export declare interface Key-End-->
 
@@ -24,7 +26,9 @@ Key code.
 
 **Type:** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,7 +66,9 @@ Time when the key is pressed, in microseconds (μs) since the system starts.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

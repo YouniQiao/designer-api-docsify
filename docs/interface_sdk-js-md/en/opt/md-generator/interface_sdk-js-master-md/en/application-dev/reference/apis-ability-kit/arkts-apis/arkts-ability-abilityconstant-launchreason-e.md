@@ -1,9 +1,10 @@
 # LaunchReason
 
-Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in  
-[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) of the UIAbility to complete different operations.
+Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in [onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) of the UIAbility to complete different operations.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export enum LaunchReason--><!--Device-AbilityConstant-export enum LaunchReason-End-->
 
@@ -17,7 +18,9 @@ UNKNOWN = 0
 
 Unknown reason.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,10 +36,11 @@ Unknown reason.
 START_ABILITY = 1
 ```
 
-The ability is started by calling  
-[startAbility](arkts-ability-uiabilitycontext-c.md#startAbility).
+The ability is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) .
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +56,11 @@ The ability is started by calling
 CALL = 2
 ```
 
-The ability is started by calling  
-[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall).
+The ability is started by calling [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,7 +78,9 @@ CONTINUATION = 3
 
 The ability is started by means of cross-device migration.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,7 +98,9 @@ APP_RECOVERY = 4
 
 The ability is automatically started when the application is restored from a fault.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,7 +118,9 @@ SHARE = 5
 
 The ability is started by means of atomic service sharing.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,7 +138,9 @@ AUTO_STARTUP = 8
 
 The ability is automatically started upon system boot.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,11 +156,13 @@ INSIGHT_INTENT = 9
 
 The ability is started by the InsightIntent framework..
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchReason-INSIGHT_INTENT = 9--><!--Device-LaunchReason-INSIGHT_INTENT = 9-End-->
 
@@ -161,11 +176,13 @@ PREPARE_CONTINUATION = 10
 
 The ability is started in advance during cross-device migration.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchReason-PREPARE_CONTINUATION = 10--><!--Device-LaunchReason-PREPARE_CONTINUATION = 10-End-->
 
@@ -179,11 +196,13 @@ PRELOAD = 11
 
 The ability is started through preloading.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchReason-PRELOAD = 11--><!--Device-LaunchReason-PRELOAD = 11-End-->
 

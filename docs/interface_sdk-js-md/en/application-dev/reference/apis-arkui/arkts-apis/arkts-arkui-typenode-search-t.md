@@ -1,20 +1,24 @@
 # Search
 
 ```TypeScript
-type Search = SearchFrameNode
+type Search = TypedFrameNode<SearchInterface, SearchAttribute>
 ```
 
-Define the FrameNode type for Search.
+Represents a FrameNode of the **Search** type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Search = SearchFrameNode--><!--Device-typeNode-type Search = SearchFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Search = TypedFrameNode<SearchInterface, SearchAttribute>--><!--Device-typeNode-type Search = TypedFrameNode<SearchInterface, SearchAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SearchFrameNode
+**Property type:** TypedFrameNode<SearchInterface, SearchAttribute>
 

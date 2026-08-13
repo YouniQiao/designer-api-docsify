@@ -1,18 +1,12 @@
 # @ohos.app.ability.dialogRequest
 
-The dialogRequest module provides APIs related to modal dialog box processing, including obtaining the request information (used to bind a modal dialog box) and request callback (used to set the request result).
+The dialogRequest module provides APIs related to modal dialog box processing, including obtaining the request information (used to bind a modal dialog box) and request callback (used to set the request result). A modal dialog box is a system-level dialog box that blocks interactions such as mouse clicks, keyboard input, and touch events on the underlying page. The page can only be interacted with after the modal dialog box is closed. > **NOTE：**> > - The APIs provided by this module are used in ServiceExtensionAbilities. For a ServiceExtensionAbility that > implements modal dialog boxes, you can use the APIs to obtain the request information and request callback and > return the request result.
 
-A modal dialog box is a system-level dialog box that blocks interactions such as mouse clicks, keyboard input, and touch events on the underlying page. The page can only be interacted with after the modal dialog box is closed.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The APIs provided by this module are used in ServiceExtensionAbilities. For a ServiceExtensionAbility that
-> implements modal dialog boxes, you can use the APIs to obtain the request information and request callback and
-> return the request result.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace dialogRequest--><!--Device-unnamed-declare namespace dialogRequest-End-->
 
@@ -30,8 +24,8 @@ import { dialogRequest } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback) | Obtains the request callback from Want.  > **NOTE：** >  > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo) | > **NOTE：** >  > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained.  Obtains the request information from Want. |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getRequestCallback) | Obtains the request callback from Want. > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getRequestInfo) | > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. Obtains the request information from Want. |
 
 ### Interfaces
 

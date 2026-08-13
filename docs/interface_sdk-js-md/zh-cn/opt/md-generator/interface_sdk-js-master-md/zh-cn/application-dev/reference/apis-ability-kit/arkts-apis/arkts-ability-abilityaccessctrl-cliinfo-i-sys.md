@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-abilityAccessCtrl-interface CliInfo--><!--Device-abilityAccessCtrl-interface CliInfo-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
@@ -21,6 +23,8 @@ CLI名称。该字段不能为空，且长度不能超过256个字符。
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +45,8 @@ CLI子命令名称。该字段可以为空，但长度不能超过256个字符�
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

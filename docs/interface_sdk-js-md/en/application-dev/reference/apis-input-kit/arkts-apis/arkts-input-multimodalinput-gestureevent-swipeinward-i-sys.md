@@ -2,9 +2,11 @@
 
 Defines an inward swipe event.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface SwipeInward--><!--Device-unnamed-export declare interface SwipeInward-End-->
 
@@ -28,9 +30,11 @@ Type of the inward swipe event. The value is fixed at **SwipeInward**.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SwipeInward-type: ActionType--><!--Device-SwipeInward-type: ActionType-End-->
 
@@ -46,11 +50,13 @@ x: int
 
 X-coordinate of the swipe event trigger point, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SwipeInward-x: int--><!--Device-SwipeInward-x: int-End-->
 
@@ -66,11 +72,13 @@ y: int
 
 Y-coordinate of the swipe event trigger point, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SwipeInward-y: int--><!--Device-SwipeInward-y: int-End-->
 

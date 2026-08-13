@@ -16,6 +16,8 @@ Creates a spring curve. The curve shape is subject to the spring parameters, and
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-curves-function springCurve(velocity: number, mass: number, stiffness: number, damping: number): ICurve--><!--Device-curves-function springCurve(velocity: number, mass: number, stiffness: number, damping: number): ICurve-End-->

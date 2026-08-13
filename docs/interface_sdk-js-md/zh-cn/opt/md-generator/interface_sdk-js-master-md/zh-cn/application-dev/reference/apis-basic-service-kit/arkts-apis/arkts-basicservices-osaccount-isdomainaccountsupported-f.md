@@ -10,6 +10,8 @@ function isDomainAccountSupported(): Promise<boolean>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>--><!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>-End-->
@@ -26,7 +28,7 @@ function isDomainAccountSupported(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 

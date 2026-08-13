@@ -2,9 +2,11 @@
 
 Enumerates the audio loopback statuses.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioLoopbackStatus--><!--Device-audio-enum AudioLoopbackStatus-End-->
 
@@ -18,9 +20,11 @@ UNAVAILABLE_DEVICE = -2
 
 Loopback is unavailable due to issues with the input or output device (for example, changes in the audio output device).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackStatus-UNAVAILABLE_DEVICE = -2--><!--Device-AudioLoopbackStatus-UNAVAILABLE_DEVICE = -2-End-->
 
@@ -34,9 +38,11 @@ UNAVAILABLE_SCENE = -1
 
 Loopback is unavailable due to restrictions in the audio scene (for example, audio focus or low-latency management).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackStatus-UNAVAILABLE_SCENE = -1--><!--Device-AudioLoopbackStatus-UNAVAILABLE_SCENE = -1-End-->
 
@@ -50,9 +56,11 @@ AVAILABLE_IDLE = 0
 
 Loopback is available but currently idle.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackStatus-AVAILABLE_IDLE = 0--><!--Device-AudioLoopbackStatus-AVAILABLE_IDLE = 0-End-->
 
@@ -66,9 +74,11 @@ AVAILABLE_RUNNING = 1
 
 Loopback is actively running.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackStatus-AVAILABLE_RUNNING = 1--><!--Device-AudioLoopbackStatus-AVAILABLE_RUNNING = 1-End-->
 

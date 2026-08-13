@@ -2,9 +2,11 @@
 
 Defines the event configuration for the data processor to report.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiAppEvent-interface AppEventReportConfig--><!--Device-hiAppEvent-interface AppEventReportConfig-End-->
 
@@ -22,15 +24,17 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 domain?: string
 ```
 
-Event domain. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters(a to z)(A to Z), and underscore (_). It must start with a letter and cannot end with an underscore (_). The default value is an empty string.
+Event domain. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), and underscore (_). It must start with a letter and cannot end with an underscore (_). The default value is an empty string.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AppEventReportConfig-domain?: string--><!--Device-AppEventReportConfig-domain?: string-End-->
 
@@ -46,11 +50,13 @@ Whether to report events in real time. The value **true** indicates that events 
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AppEventReportConfig-isRealTime?: boolean--><!--Device-AppEventReportConfig-isRealTime?: boolean-End-->
 
@@ -66,11 +72,13 @@ Event name. The value is string that contains a maximum of 48 characters, includ
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AppEventReportConfig-name?: string--><!--Device-AppEventReportConfig-name?: string-End-->
 

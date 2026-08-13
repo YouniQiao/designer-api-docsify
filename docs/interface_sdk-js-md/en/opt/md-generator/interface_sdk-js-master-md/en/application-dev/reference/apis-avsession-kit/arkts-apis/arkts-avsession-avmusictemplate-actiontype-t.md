@@ -8,6 +8,8 @@ Action type add & remove.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avMusicTemplate-type ActionType = 'add' | 'remove'--><!--Device-avMusicTemplate-type ActionType = 'add' | 'remove'-End-->

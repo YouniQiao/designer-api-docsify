@@ -12,7 +12,7 @@ Checks whether DND mode is supported. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md#isSupportDoNotDisturbMode)
+**Substitutes:** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md#isSupportDoNotDisturbMode-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ Checks whether DND mode is supported. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md#isSupportDoNotDisturbMode)
+**Substitutes:** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md#isSupportDoNotDisturbMode-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

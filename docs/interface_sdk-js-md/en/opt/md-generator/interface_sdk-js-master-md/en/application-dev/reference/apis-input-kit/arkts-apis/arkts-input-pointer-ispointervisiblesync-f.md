@@ -14,7 +14,9 @@ function isPointerVisibleSync(): boolean
 
 Checks whether the mouse pointer is visible in the current window. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function isPointerVisibleSync(): boolean--><!--Device-pointer-function isPointerVisibleSync(): boolean-End-->
 

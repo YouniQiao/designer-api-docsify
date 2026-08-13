@@ -1,14 +1,16 @@
 # IndicatorComponent属性/事件
 
-除支持[通用属性](common)外，还支持以下属性。
+除支持通用属性外，还支持以下属性。
 
-**继承/实现关系：** IndicatorComponentAttribute extends [CommonMethod<IndicatorComponentAttribute>](CommonMethod<IndicatorComponentAttribute>)
+**继承/实现关系：** IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
-<!--Device-unnamed-declare class IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>--><!--Device-unnamed-declare class IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class IndicatorComponentAttribute--><!--Device-unnamed-declare class IndicatorComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,13 @@
 count(totalCount: number)
 ```
 
-设置导航点总数量。
-
-单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
+设置导航点总数量。 单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,13 +50,13 @@ count(totalCount: number)
 initialIndex(index: number)
 ```
 
-设置首次显示时当前导航点的索引值。传入值小于0或大于等于导航点数量时，按照默认值0处理。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+设置首次显示时当前导航点的索引值。传入值小于0或大于等于导航点数量时，按照默认值0处理。 单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,13 +80,13 @@ initialIndex(index: number)
 loop(isLoop: boolean)
 ```
 
-设置是否开启循环。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+设置是否开启循环。 单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,6 +116,8 @@ Called when the index value changes.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -142,6 +146,8 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -164,13 +170,13 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 vertical(isVertical: boolean)
 ```
 
-设置是否为纵向滑动。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+设置是否为纵向滑动。 单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

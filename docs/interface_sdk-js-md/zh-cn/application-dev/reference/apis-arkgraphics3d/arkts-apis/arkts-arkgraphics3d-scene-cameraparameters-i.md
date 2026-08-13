@@ -2,9 +2,11 @@
 
 相机创建参数. 可用于定义相机创建的额外选项.
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface CameraParameters--><!--Device-unnamed-export interface CameraParameters-End-->
 
@@ -22,9 +24,11 @@ msaa?: boolean
 
 **默认值：** false
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CameraParameters-msaa?: boolean--><!--Device-CameraParameters-msaa?: boolean-End-->
 
@@ -42,9 +46,11 @@ renderingPipeline?: RenderingPipelineType
 
 **默认值：** RenderingPipelineType.FORWARD_LIGHTWEIGHT 前向轻量级渲染管线
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType--><!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType-End-->
 

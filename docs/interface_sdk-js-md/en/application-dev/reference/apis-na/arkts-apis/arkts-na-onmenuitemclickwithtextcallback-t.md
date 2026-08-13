@@ -1,0 +1,33 @@
+# OnMenuItemClickWithTextCallback
+
+```TypeScript
+export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean
+```
+
+Invoke upon clicking an item, capable of intercepting the default system menu execution behavior.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean--><!--Device-unnamed-export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| menuItem | TextMenuItem | Yes | current clicked menu item. |
+| value | string | Yes | selected text content. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Return true if the event is consumed; false otherwise. |
+

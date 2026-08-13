@@ -4,6 +4,8 @@ Customize the import icon, which is used to add images and text from the applica
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface CustomImportIcon--><!--Device-imageGeneration-interface CustomImportIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +26,11 @@ callback: CustomImportCallback
 
 Async callback function for import operation.
 
+**Type:** [CustomImportCallback](arkts-arkui-imagegeneration-customimportcallback-t-sys.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +52,8 @@ Icon image information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomImportIcon-image: image.PixelMap | ResourceStr--><!--Device-CustomImportIcon-image: image.PixelMap | ResourceStr-End-->
@@ -65,6 +73,8 @@ Icon text description.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

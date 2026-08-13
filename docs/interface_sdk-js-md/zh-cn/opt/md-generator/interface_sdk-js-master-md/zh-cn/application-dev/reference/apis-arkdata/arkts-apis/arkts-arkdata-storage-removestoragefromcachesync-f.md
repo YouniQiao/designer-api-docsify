@@ -12,7 +12,7 @@ function removeStorageFromCacheSync(path: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [removePreferencesFromCache](ohos.preferences.preferences.removePreferencesFromCache)
+**替代接口：** removePreferencesFromCache
 
 <!--Device-storage-function removeStorageFromCacheSync(path: string): void--><!--Device-storage-function removeStorageFromCacheSync(path: string): void-End-->
 

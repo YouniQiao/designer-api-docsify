@@ -4,6 +4,8 @@ Defines an application that creates the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Holder--><!--Device-contact-class Holder-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -26,6 +28,8 @@ Bundle name. The default value is **com.ohos.contacts**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-Holder-readonly bundleName: string--><!--Device-Holder-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -42,6 +46,8 @@ Application name.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-Holder-readonly displayName?: string--><!--Device-Holder-readonly displayName?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -57,6 +63,8 @@ Application ID.
 **Type:** number
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-Holder-holderId?: number--><!--Device-Holder-holderId?: number-End-->
 

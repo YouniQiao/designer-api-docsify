@@ -1,15 +1,12 @@
 # ContinuousTaskRequest
 
-Specifies details of the continuous task being requested or updated. It is typically used as input for the   
-[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning-3)and   
-[updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)APIs. Note that:
+Specifies details of the continuous task being requested or updated. It is typically used as input for the [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning) and [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning) APIs. Note that: 1. When requesting a continuous task via [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning), notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application, and the **combinedTaskNotification** value is **true** for both tasks. Otherwise, notifications will not be combined. 2. Notifications will not be combined if the continuous task has no notification. For details about whether notifications are sent for the continuous task, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode). 3. Notifications cannot be combined if the continuous task includes data transmission. 4. Notifications that have been combined cannot be canceled. If notifications have been combined, they cannot be updated to uncombined. 5. After notifications are combined, tapping the notification will redirect to the UIAbility corresponding to the first requested continuous task. If the update API is called, the redirection will target the UIAbility corresponding to the last updated continuous task. 6. When the [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning) API is called to update a continuous task, the input **continuousTaskId** must exist. Otherwise, the update fails. 7. Continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode) type are supported since API version 22. This task type must be used independently and notifications cannot be combined. Specifically, when you request or update a continuous task, it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type. Otherwise, an error is returned.
 
-1. When requesting a continuous task via  
-[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning-3),notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application,and the **combinedTaskNotification** value is **true** for both tasks.Otherwise, notifications will not be combined.2. Notifications will not be combined if the continuous task has no notification.For details about whether notifications are sent for the continuous task,see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode).3. Notifications cannot be combined if the continuous task includes data transmission.4. Notifications that have been combined cannot be canceled.If notifications have been combined, they cannot be updated to uncombined.5. After notifications are combined, tapping the notification will redirect to the UIAbility corresponding to the first requested continuous task.If the update API is called,the redirection will target the UIAbility corresponding to the last updated continuous task.6. When the [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)API is called to update a continuous task, the input **continuousTaskId** must exist. Otherwise, the update fails.7. Continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode) type are supported since API version 22. This task type must be used independently and notifications cannot be combined.Specifically, when you request or update a continuous task,it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type.Otherwise, an error is returned.
+**Since:** 24
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export class ContinuousTaskRequest--><!--Device-backgroundTaskManager-export class ContinuousTaskRequest-End-->
 
@@ -27,11 +24,13 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>
 ```
 
-Checks whether the user has authorized tasks to run continuously in the background. This API uses a promise to return the result.An exception will be thrown if unauthorized.
+Checks whether the user has authorized tasks to run continuously in the background. This API uses a promise to return the result. An exception will be thrown if unauthorized.
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -45,7 +44,7 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. &lt;br&gt;For details about the application context of the FA model, see [Context](./app/context).&lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context).&lt;br&gt; Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | Context | Yes | Application context. &lt;br&gt;For details about the application context of the FA model, see Context.&lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context).&lt;br&gt; Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
 
 **Return value:**
 
@@ -57,9 +56,9 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -90,11 +89,13 @@ export default class EntryAbility extends UIAbility {
 checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>
 ```
 
-Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING.No exception will be thrown whether authorized or not.
+Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING. No exception will be thrown whether authorized or not.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -120,9 +121,9 @@ Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING.No ex
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## isModeSupported
 
@@ -130,13 +131,13 @@ Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING.No ex
 isModeSupported(): boolean
 ```
 
-Checks whether **BackgroundTaskMode** specified in   
-[ContinuousTaskRequest](#ContinuousTaskRequest) is supported. For details, see   
-[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode).
+Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](#ContinuousTaskRequest) is supported. For details, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode).
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -156,8 +157,8 @@ Checks whether **BackgroundTaskMode** specified in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -188,12 +189,13 @@ export default class EntryAbility extends UIAbility {
 requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 ```
 
-Requests user authorization to run tasks continuously in the background. This API uses an asynchronous callback to return the result. If the API call is successful, a banner notification with a sound is sent. This API is applicable only to continuous tasks of the  
-[MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode) type.
+Requests user authorization to run tasks continuously in the background. This API uses an asynchronous callback to return the result. If the API call is successful, a banner notification with a sound is sent. This API is applicable only to continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode) type.
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -207,16 +209,16 @@ Requests user authorization to run tasks continuously in the background. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. &lt;br&gt;For details about the application context of the FA model, see [Context](./app/context).&lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context).&lt;br&gt; Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserAuthResult&gt; | Yes | Callback used to return the user authorization result. |
+| context | Context | Yes | Application context. &lt;br&gt;For details about the application context of the FA model, see Context.&lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context).&lt;br&gt; Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | Callback used to return the user authorization result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -256,7 +258,9 @@ Requesting MODE_SPECIAL_SCENARIO_PROCESSING authorization from users, a dialog b
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -271,59 +275,15 @@ Requesting MODE_SPECIAL_SCENARIO_PROCESSING authorization from users, a dialog b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | App running context. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserAuthResult&gt; | Yes | The callback of the function. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | The callback of the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-
-## backgroundTaskModes
-
-```TypeScript
-set backgroundTaskModes(value: BackgroundTaskMode[])
-```
-
-Main type of a continuous task.
-
-Note: The main type must match the subtype.
-
-**Type:** [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)[]
-
-**Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
-## backgroundTaskSubmodes
-
-```TypeScript
-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
-```
-
-Subtype of a continuous task.
-
-Note: The main type must match the subtype.
-
-**Type:** [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)[]
-
-**Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## combinedTaskNotification
 
@@ -331,17 +291,15 @@ Note: The main type must match the subtype.
 combinedTaskNotification?: boolean
 ```
 
-Whether to combine notifications. The value **true** means to combine notifications, and the value **false** (default) means the opposite.
-
-Note: This property does not take effect in   
-[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)API. If notifications need to be combined for an existing task, request the task again and set the value to   
-**true**.
+Whether to combine notifications. The value **true** means to combine notifications, and the value **false** ( default) means the opposite. Note: This property does not take effect in [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning) API. If notifications need to be combined for an existing task, request the task again and set the value to **true**.
 
 **Type:** boolean
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -355,21 +313,15 @@ Note: This property does not take effect in
 continuousTaskId?: number
 ```
 
-Continuous task ID. The default value is **-1**.
-
-Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist.
-
-Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the   
-[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)API.
-
-You can call the   
-[getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getAllContinuousTasks-1)API to view information about all continuous tasks.
+Continuous task ID. The default value is **-1**. Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist. Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning) API. You can call the [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getAllContinuousTasks) API to view information about all continuous tasks.
 
 **Type:** number
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -389,31 +341,13 @@ Notify progress data.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo--><!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
-## wantAgent
-
-```TypeScript
-set wantAgent(value: WantAgent)
-```
-
-Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
-
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
-
-**Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)--><!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

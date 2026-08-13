@@ -1,8 +1,10 @@
 # TriggerInfo
 
-作为[trigger](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagenttrigger)的入参定义触发WantAgent所需要的信息。
+作为trigger的入参定义触发WantAgent所需 要的信息。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface TriggerInfo--><!--Device-unnamed-export interface TriggerInfo-End-->
 
@@ -18,7 +20,9 @@ startOptions?: StartOptions
 
 **类型：** [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

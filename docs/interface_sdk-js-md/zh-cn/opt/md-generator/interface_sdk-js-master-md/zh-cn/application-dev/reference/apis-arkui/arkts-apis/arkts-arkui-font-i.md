@@ -4,6 +4,8 @@ Defines the font used for text.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface Font--><!--Device-unnamed-declare interface Font-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ font family.
 **类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ font size.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-size?: Length--><!--Device-Font-size?: Length-End-->
@@ -56,6 +62,8 @@ font style.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-style?: FontStyle--><!--Device-Font-style?: FontStyle-End-->
@@ -73,6 +81,8 @@ font weight.
 **类型：** FontWeight \| number \| string
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

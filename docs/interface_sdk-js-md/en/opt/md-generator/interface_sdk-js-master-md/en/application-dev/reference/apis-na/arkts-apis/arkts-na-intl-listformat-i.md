@@ -1,0 +1,59 @@
+# ListFormat
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-Intl-interface ListFormat--><!--Device-Intl-interface ListFormat-End-->
+
+## format
+
+```TypeScript
+format(list: Iterable<string>): string
+```
+
+Returns a string with a language-specific representation of the list.
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-ListFormat-format(list: Iterable<string>): string--><!--Device-ListFormat-format(list: Iterable<string>): string-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| list | Iterable & lt;string & gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## formatToParts
+
+```TypeScript
+formatToParts(list: Iterable<string>): { type: "element" | "literal", value: string; }[]
+```
+
+Returns an Array of objects representing the different components that can be used to format a list of values in a locale-aware fashion.
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-ListFormat-formatToParts(list: Iterable<string>): { type: "element" | "literal", value: string; }[]--><!--Device-ListFormat-formatToParts(list: Iterable<string>): { type: "element" | "literal", value: string; }[]-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| list | Iterable & lt;string & gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| { type: "element" \| "literal", value: string; }[] |

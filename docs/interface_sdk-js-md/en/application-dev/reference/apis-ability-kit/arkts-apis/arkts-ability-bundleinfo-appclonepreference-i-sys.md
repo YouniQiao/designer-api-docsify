@@ -4,7 +4,9 @@ Defines the application clone preference configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AppClonePreference--><!--Device-unnamed-export interface AppClonePreference-End-->
 
@@ -18,13 +20,15 @@ Defines the application clone preference configuration.
 appIndex?: int
 ```
 
-Index of the application clone.This value is valid only when the mode is CLONE_APP.The value ranges from 1 to 5 (maximum 5 clones are supported).The value should be an integer.
+Index of the application clone. This value is valid only when the mode is CLONE_APP. The value ranges from 1 to 5 (maximum 5 clones are supported). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,9 @@ Preference mode for application cloning.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

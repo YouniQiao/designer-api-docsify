@@ -1,9 +1,10 @@
 # CompletionHandlerForAbilityStartCallback
 
-CompletionHandlerForAbilityStartCallback provides two callback functions, **onRequestSuccess** and  
-**onRequestFailure**, which are invoked when launching the specified ability succeeds or fails, respectively.
+CompletionHandlerForAbilityStartCallback provides two callback functions, **onRequestSuccess** and **onRequestFailure**, which are invoked when launching the specified ability succeeds or fails, respectively.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class CompletionHandlerForAbilityStartCallback--><!--Device-unnamed-export class CompletionHandlerForAbilityStartCallback-End-->
 
@@ -21,15 +22,17 @@ import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } fro
 onRequestFailure?: OnRequestFailureFn
 ```
 
-Callback invoked when launching the specified ability fails.
+Callback invoked when launching the specified ability fails. This API can be used in atomic services since API version 21.
 
-This API can be used in atomic services since API version 21.
+**Type:** [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompletionHandlerForAbilityStartCallback-onRequestFailure?: OnRequestFailureFn--><!--Device-CompletionHandlerForAbilityStartCallback-onRequestFailure?: OnRequestFailureFn-End-->
 
@@ -41,15 +44,17 @@ This API can be used in atomic services since API version 21.
 onRequestSuccess?: OnRequestSuccessFn
 ```
 
-Callback invoked when the specified ability is successfully launched.
+Callback invoked when the specified ability is successfully launched. This API can be used in atomic services since API version 21.
 
-This API can be used in atomic services since API version 21.
+**Type:** [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md)
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CompletionHandlerForAbilityStartCallback-onRequestSuccess?: OnRequestSuccessFn--><!--Device-CompletionHandlerForAbilityStartCallback-onRequestSuccess?: OnRequestSuccessFn-End-->
 

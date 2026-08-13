@@ -1,0 +1,41 @@
+# RootScene (System API)
+
+## RootScene
+
+```TypeScript
+@ComponentBuilder
+export declare function RootScene(
+    session: RootSceneSession,
+    content_?: CustomBuilder,
+): RootSceneAttribute
+```
+
+Defines the RootScene Component.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-@ComponentBuilderexport declare function RootScene(    session: RootSceneSession,    content_?: CustomBuilder,): RootSceneAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function RootScene(    session: RootSceneSession,    content_?: CustomBuilder,): RootSceneAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| session | [RootSceneSession](arkts-na-rootscene-rootscenesession-i.md) | Yes |  |
+| content_ | CustomBuilder | No | container |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [RootSceneAttribute](arkts-na-rootscene-rootsceneattribute-i.md) |  |
+

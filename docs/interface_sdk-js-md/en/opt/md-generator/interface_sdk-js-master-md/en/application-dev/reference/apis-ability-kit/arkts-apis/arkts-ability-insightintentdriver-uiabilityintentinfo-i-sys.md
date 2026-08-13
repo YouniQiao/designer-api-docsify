@@ -1,9 +1,10 @@
 # UIAbilityIntentInfo (System API)
 
-Describes the information of the UIAbility bound to the  
-[intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
+Describes the information of the UIAbility bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-interface UIAbilityIntentInfo--><!--Device-insightIntentDriver-interface UIAbilityIntentInfo-End-->
 
@@ -29,6 +30,8 @@ Name of the UIAbility bound to the intent.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityIntentInfo-readonly abilityName: string--><!--Device-UIAbilityIntentInfo-readonly abilityName: string-End-->
@@ -48,6 +51,8 @@ Intent execution mode.
 **Type:** [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md)[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

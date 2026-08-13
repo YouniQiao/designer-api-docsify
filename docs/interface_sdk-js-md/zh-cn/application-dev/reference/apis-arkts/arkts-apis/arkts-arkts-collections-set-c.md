@@ -1,22 +1,14 @@
 # Set
 
-一种存储唯一值的非线性数据结构，能够高效地进行元素存在性检测和去重操作。
-
-> **说明：**
-> 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> 本节使用以下标识来表示泛型的使用：
-
-- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。  
-**装饰器类型：** \@Sendable
+一种存储唯一值的非线性数据结构，能够高效地进行元素存在性检测和去重操作。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > 本节使用以下标识来表示泛型的使用： - T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器类型：** \@Sendable
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
-<!--Device-collections-class Set<T>--><!--Device-collections-class Set<T>-End-->
+<!--Device-collections-class Set--><!--Device-collections-class Set-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,11 +18,13 @@
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。说明：本接口不支持在.ets文件中使用。
+返回一个迭代器，迭代器的每一项都是一个JavaScript对象。 说明： 本接口不支持在.ets文件中使用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,7 +42,7 @@
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## add
 
@@ -61,6 +55,8 @@ add(value: T): Set<T>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -84,8 +80,8 @@ add(value: T): Set<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## clear
 
@@ -99,6 +95,8 @@ clear(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
@@ -109,8 +107,8 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -123,6 +121,8 @@ constructor(values?: readonly T[] | null)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -140,7 +140,7 @@ constructor(values?: readonly T[] | null)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Set's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -153,6 +153,8 @@ constructor(iterable: Iterable<T>)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -170,7 +172,7 @@ constructor(iterable: Iterable<T>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Set's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## delete
 
@@ -183,6 +185,8 @@ delete(value: T): boolean
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -206,8 +210,8 @@ delete(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The delete method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The delete method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## entries
 
@@ -220,6 +224,8 @@ entries(): IterableIterator<[T, T]>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -237,8 +243,8 @@ entries(): IterableIterator<[T, T]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -251,6 +257,8 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -268,8 +276,8 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## has
 
@@ -282,6 +290,8 @@ has(value: T): boolean
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -305,8 +315,8 @@ has(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -319,6 +329,8 @@ keys(): IterableIterator<T>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -336,8 +348,8 @@ keys(): IterableIterator<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -350,6 +362,8 @@ values(): IterableIterator<T>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -367,8 +381,8 @@ values(): IterableIterator<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound with non-sendable. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## size
 
@@ -383,6 +397,8 @@ Set的元素个数。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

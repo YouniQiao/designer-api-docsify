@@ -1,15 +1,10 @@
 # ZoomQuery
 
-ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range.
+ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range. > **NOTE：**> > - This interface was first introduced in API version 12. In this version, a compatibility change was made that > preserved the initial version information of inner elements. As a result, you might see outer element's @since > version number being higher than that of the inner elements. However, this discrepancy does not affect the > functionality of the interface.
 
-> **NOTE：**
-> 
-> - This interface was first introduced in API version 12. In this version, a compatibility change was made that
-> preserved the initial version information of inner elements. As a result, you might see outer element's @since
-> version number being higher than that of the inner elements. However, this discrepancy does not affect the
-> functionality of the interface.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
 
@@ -21,6 +16,39 @@ ZoomQuery provides APIs to query the zoom feature of a device camera, including 
 import { camera } from '@kit.CameraKit';
 ```
 
+## getZoomPointInfos
+
+```TypeScript
+getZoomPointInfos(): Array<ZoomPointInfo>
+```
+
+Obtains the equivalent focal length information list in the current mode.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>--><!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[ZoomPointInfo](arkts-camera-camera-zoompointinfo-i-sys.md)&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
 ## isZoomCenterPointSupported
 
 ```TypeScript
@@ -29,7 +57,9 @@ isZoomCenterPointSupported(): boolean
 
 Checks whether zoom center point is supported.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean--><!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean-End-->
 
@@ -47,5 +77,5 @@ Checks whether zoom center point is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

@@ -4,6 +4,8 @@ Defines the home page **NavDestination** information.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface HomePathInfo--><!--Device-unnamed-declare interface HomePathInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Name of the home page **NavDestination**.
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Detailed parameters of the home page **NavDestination**.
 **Type:** Object
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

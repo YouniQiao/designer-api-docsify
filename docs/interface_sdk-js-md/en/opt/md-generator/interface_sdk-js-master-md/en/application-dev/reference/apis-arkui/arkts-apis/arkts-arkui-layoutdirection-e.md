@@ -4,6 +4,8 @@ Enumerates system layout directions.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum LayoutDirection--><!--Device-unnamed-declare enum LayoutDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ LTR
 Left-to-right layout.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Right-to-left layout.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LayoutDirection-RTL--><!--Device-LayoutDirection-RTL-End-->
@@ -49,6 +55,8 @@ Auto
 Automatic layout direction based on the system.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

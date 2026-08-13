@@ -2,7 +2,9 @@
 
 Defines the response to an HTTP request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface HttpResponse--><!--Device-http-export interface HttpResponse-End-->
 
@@ -24,7 +26,9 @@ Information details of HTTP request.
 
 **Type:** [ConnectionExtraInfo](arkts-network-http-connectionextrainfo-i.md)
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo--><!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo-End-->
 
@@ -40,9 +44,11 @@ Cookies returned by the server.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-cookies: string--><!--Device-HttpResponse-cookies: string-End-->
 
@@ -58,9 +64,11 @@ All headers in the response from the server.
 
 **Type:** Object
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-header: Object--><!--Device-HttpResponse-header: Object-End-->
 
@@ -76,7 +84,9 @@ The time taken of various stages of HTTP request.
 
 **Type:** [PerformanceTiming](arkts-network-http-performancetiming-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HttpResponse-performanceTiming: PerformanceTiming--><!--Device-HttpResponse-performanceTiming: PerformanceTiming-End-->
 
@@ -92,9 +102,11 @@ Server status code.
 
 **Type:** [ResponseCode](arkts-network-http-responsecode-e.md) \| number
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-responseCode: ResponseCode | int--><!--Device-HttpResponse-responseCode: ResponseCode | int-End-->
 
@@ -106,13 +118,15 @@ Server status code.
 result: string | Object | ArrayBuffer
 ```
 
-result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8.If [expectDataType](arkts-network-http-httprequestoptions-i.md#expectDataType) is set, the system preferentially returns this parameter.
+result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8. If [expectDataType](arkts-network-http-httprequestoptions-i.md#expectDataType) is set, the system preferentially returns this parameter.
 
 **Type:** string \| Object \| ArrayBuffer
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-result: string | Object | ArrayBuffer--><!--Device-HttpResponse-result: string | Object | ArrayBuffer-End-->
 
@@ -124,13 +138,15 @@ result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated fr
 resultType: HttpDataType
 ```
 
-If the resultType is string, you can get result directly.If the resultType is Object, you can get result such as this: result['key'].If the resultType is ArrayBuffer, you can use ArrayBuffer to create the binary objects.
+If the resultType is string, you can get result directly. If the resultType is Object, you can get result such as this: result['key']. If the resultType is ArrayBuffer, you can use ArrayBuffer to create the binary objects.
 
 **Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-resultType: HttpDataType--><!--Device-HttpResponse-resultType: HttpDataType-End-->
 

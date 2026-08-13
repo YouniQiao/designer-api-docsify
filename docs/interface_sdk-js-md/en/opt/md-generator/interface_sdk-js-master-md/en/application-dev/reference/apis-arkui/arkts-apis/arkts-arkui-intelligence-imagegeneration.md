@@ -4,6 +4,8 @@ Module for AI-generated images using UI Component.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace imageGeneration--><!--Device-unnamed-declare namespace imageGeneration-End-->
@@ -25,15 +27,15 @@ import { imageGeneration } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [closeGeneratorDialog](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md#closegeneratordialog) |
-| [closeGeneratorNodeGraph](arkts-arkui-imagegeneration-closegeneratornodegraph-f-sys.md#closegeneratornodegraph) |
-| [hasRecoverCacheInGeneratorDialog](arkts-arkui-imagegeneration-hasrecovercacheingeneratordialog-f-sys.md#hasrecovercacheingeneratordialog) |
-| [hideGeneratorDialog](arkts-arkui-imagegeneration-hidegeneratordialog-f-sys.md#hidegeneratordialog) |
-| [hideGeneratorNodeGraph](arkts-arkui-imagegeneration-hidegeneratornodegraph-f-sys.md#hidegeneratornodegraph) |
-| [openGeneratorNodeGraph](arkts-arkui-imagegeneration-opengeneratornodegraph-f-sys.md#opengeneratornodegraph) |
-| [restoreGeneratorDialog](arkts-arkui-imagegeneration-restoregeneratordialog-f-sys.md#restoregeneratordialog) |
-| [restoreGeneratorNodeGraph](arkts-arkui-imagegeneration-restoregeneratornodegraph-f-sys.md#restoregeneratornodegraph) |
-| [showGeneratorDialog](arkts-arkui-imagegeneration-showgeneratordialog-f-sys.md#showgeneratordialog) |
+| [closeGeneratorDialog](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md#closeGeneratorDialog-(System-API)) |
+| [closeGeneratorNodeGraph](arkts-arkui-imagegeneration-closegeneratornodegraph-f-sys.md#closeGeneratorNodeGraph-(System-API)) |
+| [hasRecoverCacheInGeneratorDialog](arkts-arkui-imagegeneration-hasrecovercacheingeneratordialog-f-sys.md#hasRecoverCacheInGeneratorDialog-(System-API)) |
+| [hideGeneratorDialog](arkts-arkui-imagegeneration-hidegeneratordialog-f-sys.md#hideGeneratorDialog-(System-API)) |
+| [hideGeneratorNodeGraph](arkts-arkui-imagegeneration-hidegeneratornodegraph-f-sys.md#hideGeneratorNodeGraph-(System-API)) |
+| [openGeneratorNodeGraph](arkts-arkui-imagegeneration-opengeneratornodegraph-f-sys.md#openGeneratorNodeGraph-(System-API)) |
+| [restoreGeneratorDialog](arkts-arkui-imagegeneration-restoregeneratordialog-f-sys.md#restoreGeneratorDialog-(System-API)) |
+| [restoreGeneratorNodeGraph](arkts-arkui-imagegeneration-restoregeneratornodegraph-f-sys.md#restoreGeneratorNodeGraph-(System-API)) |
+| [showGeneratorDialog](arkts-arkui-imagegeneration-showgeneratordialog-f-sys.md#showGeneratorDialog-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

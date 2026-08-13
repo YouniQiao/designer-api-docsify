@@ -2,9 +2,11 @@
 
 URLParams是一个用于解析、构造和操作URL参数的实用类。该类提供了统一的接口来处理URL查询参数。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-url-class URLParams--><!--Device-url-class URLParams-End-->
 
@@ -20,7 +22,9 @@ $_iterator(): IterableIterator<[string, string]>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -55,6 +59,8 @@ for (let pair of paramsObject) {
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
@@ -88,11 +94,13 @@ for (let pair of iter) {
 append(name: string, value: string): void
 ```
 
-将新的键值对插入到查询字符串。与[set](#set)方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
+将新的键值对插入到查询字符串。与[set](#set)方法不同，append不会替换已存在的键名对应的值， 而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -124,13 +132,13 @@ paramsObject.append('fod', '3');
 constructor(init?: string[][] | Record<string, string> | string | URLParams)
 ```
 
-ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams)
-
-URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
+ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams) URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -187,11 +195,13 @@ let objectParams4 = urlObject1.params;
 constructor(init?: [string, string][] | Record<string, string> | string | URLParams)
 ```
 
-用于创建URLParams实例的参数化构造函数。作为构造函数的输入参数，init支持四种类型。输入参数是字符串二维数组。输入参数是对象列表。输入参数是字符串。输入参数是URLParams对象。
+用于创建URLParams实例的参数化构造函数。 作为构造函数的输入参数，init支持四种类型。 输入参数是字符串二维数组。 输入参数是对象列表。 输入参数是字符串。 输入参数是URLParams对象。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -213,9 +223,11 @@ delete(name: string): void
 
 删除指定名称的所有键值对。如果指定名称不存在，则不做任何操作。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -248,9 +260,11 @@ entries(): IterableIterator<[string, string]>
 
 返回一个ES6的迭代器，迭代器的每一项都是一个Array。Array的第一项是name，Array的第二项是value。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -310,6 +324,8 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => voi
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void--><!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void-End-->
@@ -344,7 +360,9 @@ forEach(callbackFn: UrlCbFn): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -386,6 +404,8 @@ get(name: string): string | null
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-URLParams-get(name: string): string | null--><!--Device-URLParams-get(name: string): string | null-End-->
@@ -419,15 +439,13 @@ let absentValue = paramsObject.get('abc'); // undefined
 get(name: string): string | undefined
 ```
 
-根据指定的键获取第一个键值对的值。
-
-> **说明：**
-> 
-> 若查找一个不存在的键值对名称时返回值为undefined。
+根据指定的键获取第一个键值对的值。 > **说明：** > > 若查找一个不存在的键值对名称时返回值为undefined。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -455,9 +473,11 @@ getAll(name: string): string[]
 
 获取指定名称的所有键对应值的集合。若查找一个不存在的键值对名称时返回值为空数组。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -496,9 +516,11 @@ has(name: string): boolean
 
 判断一个指定的键名对应的值是否存在。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -537,9 +559,11 @@ keys(): IterableIterator<string>
 
 返回一个包含所有键值对的name的迭代器。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -574,13 +598,13 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-将与name关联的URLParams对象中的值设置为value。
+将与name关联的URLParams对象中的值设置为value。 如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
 
-如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -609,11 +633,13 @@ paramsObject.set('baz', '3'); // Add a third parameter.
 sort(): void
 ```
 
-对包含在此对象中的所有键值对进行排序，适用于URL规范化场景（如URL签名、缓存键生成等需要参数顺序一致的场景）。排序顺序是根据键的Unicode代码点。该方法使用稳定的排序算法（保留具有相等键的键值对之间的相对顺序）。
+对包含在此对象中的所有键值对进行排序，适用于URL规范化场景（如URL签名、缓存键生成等需要参数顺序一致的场景）。 排序顺序是根据键的Unicode代码点。该方法使用稳定的排序算法（保留具有相等键的键值对之间的相对顺序）。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -637,9 +663,11 @@ toString(): string
 
 返回序列化为字符串的搜索参数，必要时对字符进行百分比编码。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -674,9 +702,11 @@ values(): IterableIterator<string>
 
 返回一个包含所有键值对的value的迭代器。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

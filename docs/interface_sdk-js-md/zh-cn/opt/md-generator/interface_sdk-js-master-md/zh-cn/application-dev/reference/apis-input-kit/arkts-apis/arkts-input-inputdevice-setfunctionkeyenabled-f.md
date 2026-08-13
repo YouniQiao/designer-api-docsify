@@ -8,7 +8,9 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 设置功能键（如：CapsLock键）使能状态。使用Promise异步回调。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INPUT_KEYBOARD_CONTROLLER
 
@@ -33,10 +35,10 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [3900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900003-非输入法应用调用) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [3900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900002-键盘设备没有连接) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3900003](../errorcode-inputdevice.md#3900003-非输入法应用调用) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) |
 
 ## 示例
 

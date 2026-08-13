@@ -6,6 +6,8 @@ Provides the options for customizing the context menu on selection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 16.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextMenuOptions--><!--Device-unnamed-declare interface TextMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Provides the options for customizing the context menu on selection.
 showMode?: TextMenuShowMode
 ```
 
-Menu display mode.
-
-Default value: **TextMenuShowMode.DEFAULT**
+Menu display mode. Default value: **TextMenuShowMode.DEFAULT**
 
 **Type:** [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md)
 
 **Since:** 16
 
 **ArkTS mode:** ArkTS-Dyn only, since version 16.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

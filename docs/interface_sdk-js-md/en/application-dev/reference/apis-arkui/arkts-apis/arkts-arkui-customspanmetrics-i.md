@@ -6,6 +6,8 @@ Defines the CustomSpanMetrics interface.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CustomSpanMetrics--><!--Device-unnamed-declare interface CustomSpanMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Defines the CustomSpanMetrics interface.
 height?: number
 ```
 
-Height of the custom span.
-
-Unit: [vp](common)
+Height of the custom span. Unit: vp
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +42,7 @@ Unit: [vp](common)
 width: number
 ```
 
-Width of the custom span.
-
-Unit: [vp](common)
+Width of the custom span. Unit: vp
 
 **Type:** number
 
@@ -51,6 +51,8 @@ Unit: [vp](common)
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

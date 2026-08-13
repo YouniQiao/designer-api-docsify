@@ -14,9 +14,11 @@ function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: Asyn
 
 Get history play list information records.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -30,18 +32,18 @@ Get history play list information records.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum size of the returned value array. |
-| maxAppSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum app size of the returned value array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | Yes | async callback for an array of AVQueueInfo. If provided '0' or not provided, the maximum value is determined by the system. |
+| maxSize | int | Yes | Specifies the maximum size of the returned value array. |
+| maxAppSize | int | Yes | Specifies the maximum app size of the returned value array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | Yes | async callback for an array of AVQueueInfo. If provided '0' or not provided, the maximum value is determined by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -66,9 +68,11 @@ function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array
 
 Get history play list information records.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -82,21 +86,21 @@ Get history play list information records.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum size of the returned value array. |
-| maxAppSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum app size of the returned value array. |
+| maxSize | int | Yes | Specifies the maximum size of the returned value array. |
+| maxAppSize | int | Yes | Specifies the maximum app size of the returned value array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | Promise for an array of AVQueueInfo |
+| Promise&lt;Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | Promise for an array of AVQueueInfo |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## Examples
 

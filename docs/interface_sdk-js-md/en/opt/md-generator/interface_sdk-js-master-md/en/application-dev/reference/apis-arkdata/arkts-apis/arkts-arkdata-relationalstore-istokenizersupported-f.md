@@ -12,11 +12,11 @@ import { relationalStore } from '@kit.ArkData';
 function isTokenizerSupported(tokenizer: Tokenizer): boolean
 ```
 
-Checks whether the specified tokenizer is supported. This API returns the result synchronously.
+Checks whether the specified tokenizer is supported. This API returns the result synchronously. This API returns **true** if the specified tokenizer is supported; returns **false** otherwise.
 
-This API returns **true** if the specified tokenizer is supported; returns **false** otherwise.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean--><!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean-End-->
 
@@ -38,7 +38,7 @@ This API returns **true** if the specified tokenizer is supported; returns **fal
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

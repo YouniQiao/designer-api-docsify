@@ -1,12 +1,14 @@
 # LayoutConstraint
 
-Layout constraint, including the max size, the min size and the reference size for children to calculate percent.
+Describes the layout constraints of the component.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare interface LayoutConstraint--><!--Device-unnamed-export declare interface LayoutConstraint-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface LayoutConstraint--><!--Device-unnamed-declare interface LayoutConstraint-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,19 @@ Layout constraint, including the max size, the min size and the reference size f
 maxSize: Size
 ```
 
-MaxSize
+Maximum size.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LayoutConstraint-maxSize: Size--><!--Device-LayoutConstraint-maxSize: Size-End-->
 
@@ -36,15 +42,19 @@ MaxSize
 minSize: Size
 ```
 
-MinSize
+Minimum size.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LayoutConstraint-minSize: Size--><!--Device-LayoutConstraint-minSize: Size-End-->
 
@@ -56,15 +66,19 @@ MinSize
 percentReference: Size
 ```
 
-PercentReference, if the size unit of the child nodes is percentage, then they use PercentReference to calculate the px size.
+Size reference for calculating the percentage of a child node.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LayoutConstraint-percentReference: Size--><!--Device-LayoutConstraint-percentReference: Size-End-->
 

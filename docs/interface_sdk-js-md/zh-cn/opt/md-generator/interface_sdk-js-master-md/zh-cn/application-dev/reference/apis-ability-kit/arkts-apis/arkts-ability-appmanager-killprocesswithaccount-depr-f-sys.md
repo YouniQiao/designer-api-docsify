@@ -12,7 +12,7 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 
 **废弃版本：** 9
 
-**替代接口：** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
+**替代接口：** [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killProcessWithAccount（系统接口）)
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -65,7 +65,7 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 
 **废弃版本：** 9
 
-**替代接口：** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
+**替代接口：** [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killProcessWithAccount（系统接口）)
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 

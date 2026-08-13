@@ -18,7 +18,7 @@ Creates a Bluetooth server listening socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppListen](ohos.bluetoothManager/bluetoothManager.sppListen)
+**Substitutes:** [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#sppListen)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

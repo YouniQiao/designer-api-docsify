@@ -8,7 +8,9 @@ animation element
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
-<!--Device-unnamed-export interface AnimationElement extends Element--><!--Device-unnamed-export interface AnimationElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface AnimationElement--><!--Device-unnamed-export interface AnimationElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Cancels the animation.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,6 +46,8 @@ Ends the animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationElement-finish(): void--><!--Device-AnimationElement-finish(): void-End-->
@@ -59,6 +65,8 @@ Pauses the animation.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -78,6 +86,8 @@ Starts the animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationElement-play(): void--><!--Device-AnimationElement-play(): void-End-->
@@ -95,6 +105,8 @@ Plays the animation in reverse direction.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

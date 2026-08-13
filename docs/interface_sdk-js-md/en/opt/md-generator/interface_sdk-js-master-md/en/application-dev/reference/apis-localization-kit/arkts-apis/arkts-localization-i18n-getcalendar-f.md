@@ -14,7 +14,9 @@ export function getCalendar(locale: string, type?: string): Calendar
 
 Obtains the **Calendar** object for the specified locale and calendar type.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,4 +35,4 @@ Obtains the **Calendar** object for the specified locale and calendar type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Calendar](arkts-localization-i18n-calendar-c.md) |
+| [Calendar](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md) |

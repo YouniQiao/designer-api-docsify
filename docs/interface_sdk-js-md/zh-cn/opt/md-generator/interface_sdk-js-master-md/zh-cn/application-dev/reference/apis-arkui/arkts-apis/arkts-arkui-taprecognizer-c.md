@@ -6,7 +6,9 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-declare class TapRecognizer extends GestureRecognizer--><!--Device-unnamed-declare class TapRecognizer extends GestureRecognizer-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class TapRecognizer--><!--Device-unnamed-declare class TapRecognizer-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ getTapCount(): number
 返回预设点击手势识别器连续点击次数阈值。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

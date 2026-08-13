@@ -8,7 +8,9 @@ function setScannerParameter(scannerId: string, optionIndex: number, value: Scan
 
 设置扫描仪参数。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PRINT
 
@@ -34,7 +36,7 @@ function setScannerParameter(scannerId: string, optionIndex: number, value: Scan
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

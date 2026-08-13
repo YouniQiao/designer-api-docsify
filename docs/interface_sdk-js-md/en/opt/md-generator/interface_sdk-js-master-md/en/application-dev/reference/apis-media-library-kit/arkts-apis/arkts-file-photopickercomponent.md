@@ -1,17 +1,4 @@
-# @ohos.file.PhotoPickerComponent(PhotoPickerComponent)
-
-You can embed the **PhotoPickerComponent** in your application's layout to let users pick images or videos without
- requiring extra permissions. Once the users have made their selection, your application gets read-only access to the
- chosen images or videos.
- Note that **PhotoPickerComponent** does not support nesting. Additionally, prevent overlaying components with the
- **overlay** attribute or of higher levels on top it, as this will prevent it from receiving gesture events.
- Once embedded, users can directly select images or videos within the **PhotoPickerComponent**.
- > **NOTE**
- >
- > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
- ###### Attributes
- The [universal attributes](common) are supported.
-
+# @ohos.file.PhotoPickerComponent
 
 ## Modules to Import
 

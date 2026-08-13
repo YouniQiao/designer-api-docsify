@@ -2,7 +2,9 @@
 
 Enumerates the result codes that may be used for the operation of adding a widget to the home screen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum PublishFormErrorCode--><!--Device-formInfo-enum PublishFormErrorCode-End-->
 
@@ -18,7 +20,9 @@ SUCCESS = 0
 
 The widget is added to the home screen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,9 @@ NO_SPACE = 1
 
 There is no space for adding widgets.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +60,9 @@ PARAM_ERROR = 2
 
 Parameter check fails.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,7 +80,9 @@ INTERNAL_ERROR = 3
 
 An internal error occurs during widget processing.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,6 +101,8 @@ NOT_SUPPORT = 4
 Indicates that the host does not support the form dimension.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

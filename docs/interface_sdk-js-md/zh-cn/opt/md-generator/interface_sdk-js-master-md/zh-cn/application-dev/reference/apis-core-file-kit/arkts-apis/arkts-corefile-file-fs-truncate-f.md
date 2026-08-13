@@ -10,6 +10,8 @@ declare function truncate(file: string | number, len?: number): Promise<void>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function truncate(file: string | number, len?: number): Promise<void>--><!--Device-unnamed-declare function truncate(file: string | number, len?: number): Promise<void>-End-->
@@ -61,6 +63,8 @@ declare function truncate(file: string | number, callback: AsyncCallback<void>):
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function truncate(file: string | number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function truncate(file: string | number, callback: AsyncCallback<void>): void-End-->
@@ -105,6 +109,8 @@ declare function truncate(file: string | number, len: number, callback: AsyncCal
 截断文件，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

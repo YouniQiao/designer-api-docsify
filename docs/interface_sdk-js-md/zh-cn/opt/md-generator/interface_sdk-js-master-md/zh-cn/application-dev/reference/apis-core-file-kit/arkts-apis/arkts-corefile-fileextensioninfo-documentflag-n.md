@@ -21,8 +21,8 @@
 
 | 名称 |
 | --- |
-| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#represents_file) |
-| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#represents_dir) |
-| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#supports_read) |
-| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#supports_write) |
+| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#REPRESENTS_FILE) |
+| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#REPRESENTS_DIR) |
+| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#SUPPORTS_READ) |
+| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#SUPPORTS_WRITE) |
 <!--DelEnd-->

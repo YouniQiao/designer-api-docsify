@@ -12,7 +12,7 @@ Triggers a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [trigger](ohos.app.ability.wantAgent/wantAgent#trigger)
+**Substitutes:** [trigger](arkts-ability-wantagent-trigger-f.md#trigger)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

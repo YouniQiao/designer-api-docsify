@@ -17,12 +17,7 @@ function bulkTransfer(
   ): Promise<number>
 ```
 
-Performs bulk transfer.
-
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and endpoints, call  
-[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call  
-[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call  
-[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface.
+Performs bulk transfer. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface.
 
 **Since:** 8
 

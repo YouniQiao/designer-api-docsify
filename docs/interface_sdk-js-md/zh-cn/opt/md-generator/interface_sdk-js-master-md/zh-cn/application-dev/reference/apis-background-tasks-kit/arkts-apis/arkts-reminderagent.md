@@ -1,14 +1,12 @@
-# @ohos.reminderAgent(后台代理提醒)
+# @ohos.reminderAgent
 
-本模块提供后台代理提醒的能力。
-
-开发应用时，开发者可以调用相关接口创建定时提醒，包括倒计时、日历、闹钟这三类提醒类型。使用后台代理提醒能力后，应用被冻结或退出后，计时和弹出提醒的功能将被后台系统服务代理。
+本模块提供后台代理提醒的能力。 开发应用时，开发者可以调用相关接口创建定时提醒，包括倒计时、日历、闹钟这三类提醒类型。使用后台代理提醒能力后，应用被冻结或退出后，计时和弹出提醒的功能将被后台系统服务代理。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager](arkts-reminderagentmanager.md#reminderAgentManager)
+**替代接口：** [reminderAgentManager](arkts-reminderagentmanager.md#@ohos.reminderAgentManager)
 
 <!--Device-unnamed-declare namespace reminderAgent--><!--Device-unnamed-declare namespace reminderAgent-End-->
 
@@ -20,18 +18,18 @@
 
 | 名称 |
 | --- |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addnotificationslot) |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addnotificationslot-1) |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelallreminders) |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelallreminders-1) |
-| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelreminder) |
-| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelreminder-1) |
-| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders) |
-| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders-1) |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder) |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder-1) |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot) |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot-1) |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addNotificationSlot) |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addNotificationSlot) |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelAllReminders) |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelAllReminders) |
+| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelReminder) |
+| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelReminder) |
+| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getValidReminders) |
+| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getValidReminders) |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishReminder) |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishReminder) |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removeNotificationSlot) |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removeNotificationSlot) |
 
 ### 接口
 

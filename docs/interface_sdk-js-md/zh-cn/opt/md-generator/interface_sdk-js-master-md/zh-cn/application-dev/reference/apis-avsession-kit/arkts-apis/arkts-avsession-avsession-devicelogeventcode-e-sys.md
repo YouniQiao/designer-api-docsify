@@ -2,7 +2,9 @@
 
 设备日志事件返回值的枚举。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-enum DeviceLogEventCode--><!--Device-avSession-enum DeviceLogEventCode-End-->
 
@@ -18,7 +20,9 @@ DEVICE_LOG_FULL = 1
 
 日志已满。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1--><!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1-End-->
 
@@ -34,7 +38,9 @@ DEVICE_LOG_EXCEPTION = 2
 
 日志写入异常。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2--><!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2-End-->
 

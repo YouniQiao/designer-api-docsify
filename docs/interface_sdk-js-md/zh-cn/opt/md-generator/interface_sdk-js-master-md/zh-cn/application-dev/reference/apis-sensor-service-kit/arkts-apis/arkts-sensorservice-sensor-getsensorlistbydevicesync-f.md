@@ -8,7 +8,9 @@ function getSensorListByDeviceSync(deviceId?: number): Array<Sensor>
 
 同步获取设备的所有传感器信息。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>-End-->
 

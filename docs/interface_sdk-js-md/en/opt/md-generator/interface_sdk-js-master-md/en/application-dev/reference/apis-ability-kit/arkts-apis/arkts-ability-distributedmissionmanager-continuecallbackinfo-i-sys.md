@@ -2,7 +2,9 @@
 
 Defines the information about the callback that is triggered for mission continuation state changes.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedMissionManager-interface ContinueCallbackInfo--><!--Device-distributedMissionManager-interface ContinueCallbackInfo-End-->
 
@@ -26,7 +28,9 @@ Continuation information of the mission.
 
 **Type:** ContinuableInfo
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,9 @@ Continuation state of the mission.
 
 **Type:** ContinueState
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

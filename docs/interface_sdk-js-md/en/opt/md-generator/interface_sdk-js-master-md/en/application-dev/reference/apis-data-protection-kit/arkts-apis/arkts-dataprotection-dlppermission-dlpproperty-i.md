@@ -1,34 +1,22 @@
-# DLPProperty
+# DLPProperty (System API)
 
 Represents the authorization information.
 
-**Since:** 21
+**Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-export interface DLPProperty--><!--Device-dlpPermission-export interface DLPProperty-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
-
-## actionUponExpiry
-
-```TypeScript
-actionUponExpiry?: ActionType
-```
-
-Whether the file can be opened after the permission expires (with the editing permission). This parameter is valid only when **expireTime** is not empty. This parameter is left empty by default.
-
-**Type:** ActionType
-
-**Since:** 21
-
-<!--Device-DLPProperty-actionUponExpiry?: ActionType--><!--Device-DLPProperty-actionUponExpiry?: ActionType-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
 
 ## allowedOpenCount
 
@@ -42,39 +30,9 @@ Number of allowed opening times. The default value is **0**. No value range rest
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-DLPProperty-allowedOpenCount?: number--><!--Device-DLPProperty-allowedOpenCount?: number-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## authUserList
-
-```TypeScript
-authUserList?: Array<AuthUser>
-```
-
-List of users who are authorized to access the DLP file. By default, this parameter is left blank.
-
-**Type:** Array&lt;[AuthUser](arkts-dataprotection-dlppermission-authuser-i.md)&gt;
-
-**Since:** 21
-
-<!--Device-DLPProperty-authUserList?: Array<AuthUser>--><!--Device-DLPProperty-authUserList?: Array<AuthUser>-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## contactAccount
-
-```TypeScript
-contactAccount: string
-```
-
-Account of the contact. The value contains 1 to 255 bytes. If the value is out of range, error code 401 is thrown.
-
-**Type:** string
-
-**Since:** 21
-
-<!--Device-DLPProperty-contactAccount: string--><!--Device-DLPProperty-contactAccount: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -90,41 +48,11 @@ Validity period for file viewing, in seconds. The default value is 0. After the 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DLPProperty-countdown?: number--><!--Device-DLPProperty-countdown?: number-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## everyoneAccessList
-
-```TypeScript
-everyoneAccessList?: Array<DLPFileAccess>
-```
-
-Permission granted to everyone. This parameter is left blank by default.
-
-**Type:** Array&lt;[DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)&gt;
-
-**Since:** 21
-
-<!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>--><!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## expireTime
-
-```TypeScript
-expireTime?: number
-```
-
-Timestamp when the file permission has expired. This parameter is left blank by default. The value must be greater than or equal to 0. If the value is out of range, an error code is thrown. Unit: s.
-
-**Type:** number
-
-**Since:** 21
-
-<!--Device-DLPProperty-expireTime?: number--><!--Device-DLPProperty-expireTime?: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -136,9 +64,11 @@ extensionFields?: Record<string, Object>
 
 Extended attribute of a DLP file. This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,71 +88,9 @@ System account ID. This parameter is left empty by default. The value contains a
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-DLPProperty-fileId?: string--><!--Device-DLPProperty-fileId?: string-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## offlineAccess
-
-```TypeScript
-offlineAccess: boolean
-```
-
-Whether the file can be accessed offline. **true**: yes; **false**: no.
-
-**Type:** boolean
-
-**Since:** 21
-
-<!--Device-DLPProperty-offlineAccess: boolean--><!--Device-DLPProperty-offlineAccess: boolean-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## ownerAccount
-
-```TypeScript
-ownerAccount: string
-```
-
-Account of the owner who can set the permission. The value contains 1 to 255 bytes. If the value is out of range, error code 401 is thrown.
-
-**Type:** string
-
-**Since:** 21
-
-<!--Device-DLPProperty-ownerAccount: string--><!--Device-DLPProperty-ownerAccount: string-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## ownerAccountID
-
-```TypeScript
-ownerAccountID: string
-```
-
-Account ID of the owner. The value contains a maximum of 255 bytes. If the value is out of range, error code 401 is thrown.
-
-**Type:** string
-
-**Since:** 21
-
-<!--Device-DLPProperty-ownerAccountID: string--><!--Device-DLPProperty-ownerAccountID: string-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## ownerAccountType
-
-```TypeScript
-ownerAccountType: AccountType
-```
-
-Account type of the owner.
-
-**Type:** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
-
-**Since:** 21
-
-<!--Device-DLPProperty-ownerAccountType: AccountType--><!--Device-DLPProperty-ownerAccountType: AccountType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -237,6 +105,8 @@ Whether watermarks are required. **true**: yes; **false**: no. This parameter is
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DLPProperty-waterMarkConfig?: boolean--><!--Device-DLPProperty-waterMarkConfig?: boolean-End-->
 

@@ -4,6 +4,8 @@ Web组件返回的请求/响应头对象。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface WebHeader--><!--Device-unnamed-export declare interface WebHeader-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ headerKey: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ headerValue: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

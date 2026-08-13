@@ -14,7 +14,9 @@ function sppReadAsync(clientSocket: number): Promise<ArrayBuffer>
 
 Asynchronous interface for reading data from the socket.
 
-**Since:** 18
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>--><!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>-End-->
 
@@ -36,7 +38,7 @@ Asynchronous interface for reading data from the socket.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901054 |
 | 2900099 |
 

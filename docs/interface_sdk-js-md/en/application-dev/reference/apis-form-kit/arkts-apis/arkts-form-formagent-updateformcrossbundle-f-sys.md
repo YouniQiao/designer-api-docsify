@@ -16,7 +16,9 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_FORM_CROSS_BUNDLE
 
@@ -45,12 +47,12 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) | The form to be operated has been deleted already. |
-| [16501001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
-| [16501000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) | Possible cause internal functional error. Such as virtualization failed. |
-| [16501007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501007-untrusted-widget) | The form to be operated is not trusted. |
-| [16500060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) | Possible cause Service State error. Such as the form is recovering. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [16500050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) | Possible cause IPC connection error. Such as the remote object dose not exist. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form to be operated has been deleted already. |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | Possible cause internal functional error. Such as virtualization failed. |
+| [16501007](../errorcode-form.md#16501007-untrusted-widget) | The form to be operated is not trusted. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Possible cause Service State error. Such as the form is recovering. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | Possible cause IPC connection error. Such as the remote object dose not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 

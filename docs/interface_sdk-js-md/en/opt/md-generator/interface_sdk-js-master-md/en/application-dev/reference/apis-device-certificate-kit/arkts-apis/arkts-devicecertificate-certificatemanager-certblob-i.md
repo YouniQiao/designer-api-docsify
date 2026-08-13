@@ -4,6 +4,8 @@ Indicates the certificate file data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-certificateManager-export interface CertBlob--><!--Device-certificateManager-export interface CertBlob-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
@@ -26,6 +28,8 @@ Certificate file data. When certFormat is transferred to PEM_DER, the maximum le
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CertBlob-certData: Uint8Array--><!--Device-CertBlob-certData: Uint8Array-End-->
@@ -38,11 +42,13 @@ Certificate file data. When certFormat is transferred to PEM_DER, the maximum le
 certFormat? : CertFileFormat
 ```
 
-Indicates the certificate file format.Default value: PEM_DER.
+Indicates the certificate file format. Default value: PEM_DER.
 
 **Type:** [CertFileFormat](arkts-devicecertificate-certificatemanager-certfileformat-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +62,13 @@ Indicates the certificate file format.Default value: PEM_DER.
 certScope? : CertScope
 ```
 
-Indicates the storage location of the user CA certificate.Default value: Current_USER.
+Indicates the storage location of the user CA certificate. Default value: Current_USER.
 
 **Type:** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

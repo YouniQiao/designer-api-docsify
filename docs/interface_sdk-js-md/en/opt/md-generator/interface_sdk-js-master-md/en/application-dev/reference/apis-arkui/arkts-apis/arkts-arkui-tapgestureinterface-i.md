@@ -1,32 +1,28 @@
 # TapGestureInterface
 
-TapGesture is used to trigger a tap gesture with one, two, or more taps.
+TapGesture is used to trigger a tap gesture with one, two, or more taps. > **NOTE：**> > When both double-tap and single-tap gestures are bound to a component with the double-tap gesture bound first, the > single-tap gesture will have a 300 ms delay.
 
-> **NOTE：**
-> 
-> When both double-tap and single-tap gestures are bound to a component with the double-tap gesture bound first, the
-> single-tap gesture will have a 300 ms delay.
-
-**Inheritance/Implementation:** TapGestureInterface extends [GestureInterface<TapGestureInterface>](GestureInterface<TapGestureInterface>)
+**Inheritance/Implementation:** TapGestureInterface extends GestureInterface<TapGestureInterface>
 
 **Since:** 7
 
-<!--Device-unnamed-interface TapGestureInterface extends GestureInterface<TapGestureInterface>--><!--Device-unnamed-interface TapGestureInterface extends GestureInterface<TapGestureInterface>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface TapGestureInterface--><!--Device-unnamed-interface TapGestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: TapGestureParameters): TapGestureInterface
 ```
 
-Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
-
-When triggered by keyboard or gamepad input, the gesture event's [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md#SourceTool) is **Unknown**, and   
-[SourceType](SourceType) is **KEY** or **JOYSTICK**.
+Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface). When triggered by keyboard or gamepad input, the gesture event's [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md#SourceTool) is **Unknown**, and SourceType is **KEY** or **JOYSTICK**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,6 +51,8 @@ onAction(event: (event: GestureEvent) => void): TapGestureInterface
 Triggered when the tap gesture is recognized.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

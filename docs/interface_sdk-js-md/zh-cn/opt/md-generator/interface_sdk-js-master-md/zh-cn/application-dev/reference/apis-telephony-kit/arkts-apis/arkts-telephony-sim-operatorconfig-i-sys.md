@@ -2,7 +2,9 @@
 
 Defines the carrier configuration.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->
 
@@ -20,7 +22,9 @@ Indicates the field.
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperatorConfig-field: string--><!--Device-OperatorConfig-field: string-End-->
 
@@ -38,7 +42,9 @@ Indicates the value.
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperatorConfig-value: string--><!--Device-OperatorConfig-value: string-End-->
 

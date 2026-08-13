@@ -6,6 +6,8 @@ Defines the ImageAttachment Layout Style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ImageAttachmentLayoutStyle--><!--Device-unnamed-declare interface ImageAttachmentLayoutStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ Defines the ImageAttachment Layout Style.
 borderRadius?: LengthMetrics | BorderRadiuses
 ```
 
-Radius of the image border corners.
-
-Default value: **0**.
-
-Unit: [vp](common)
+Radius of the image border corners. Default value: **0**. Unit: vp
 
 **Type:** LengthMetrics \| BorderRadiuses
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,17 +42,15 @@ Unit: [vp](common)
 margin?: LengthMetrics | Margin
 ```
 
-Image margin.
-
-Default value: **0**.
-
-Unit: [vp](common)
+Image margin. Default value: **0**. Unit: vp
 
 **Type:** LengthMetrics \| Margin
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,17 +66,15 @@ Unit: [vp](common)
 padding?: LengthMetrics | Padding
 ```
 
-Image padding.
+Image padding. Default value: **0**. Unit: vp
 
-Default value: **0**.
-
-Unit: [vp](common)
-
-**Type:** LengthMetrics \| [Padding](arkts-arkui-units-padding-i.md)
+**Type:** LengthMetrics \| Padding
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,6 +6,8 @@ Enumerates the reference sizes of the available layout area when the preview ima
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AvailableLayoutArea--><!--Device-unnamed-declare enum AvailableLayoutArea-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ The reference size of the available layout area is the window size minus the saf
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

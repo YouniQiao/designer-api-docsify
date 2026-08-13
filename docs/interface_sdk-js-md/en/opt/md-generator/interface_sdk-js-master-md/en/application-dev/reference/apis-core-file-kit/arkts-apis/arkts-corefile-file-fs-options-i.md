@@ -4,6 +4,8 @@ Defines the options used in **readLines()**.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -25,6 +27,8 @@ File encoding format. It is optional.
 **Type:** string
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-Options-encoding?: string--><!--Device-Options-encoding?: string-End-->
 

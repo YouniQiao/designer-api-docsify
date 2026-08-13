@@ -1,13 +1,10 @@
 # FocusController
 
-Provides capabilities to control focus, including features such as clearing, moving, and activating focus.
-
-> **NOTE：**
-> 
-> In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController) in
-> **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
+Provides capabilities to control focus, including features such as clearing, moving, and activating focus. > **NOTE：**> > In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController) in > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class FocusController--><!--Device-unnamed-export class FocusController-End-->
 
@@ -29,6 +26,8 @@ Sets the [focus activation state](../../../ui/arkts-common-events-focus-event.md
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -41,7 +40,7 @@ Sets the [focus activation state](../../../ui/arkts-common-events-focus-event.md
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [isActive](#isactive) | boolean | Yes |
+| [isActive](#isActive) | boolean | Yes |
 | autoInactive | boolean | No |
 
 ## clearFocus
@@ -53,6 +52,8 @@ clearFocus(): void
 Clears the focus and forcibly moves the focus to the root container node of the page, causing other nodes in the focus chain to lose focus.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,12 +69,11 @@ Clears the focus and forcibly moves the focus to the root container node of the 
 isActive(): boolean
 ```
 
-Obtains the focus activation state of the UI instance.
-
-For details about the focus activation state, see  
-[Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
+Obtains the focus activation state of the UI instance. For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,6 +99,8 @@ Transfers focus to a component node by the component ID, which is effective imme
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -117,9 +119,9 @@ Transfers focus to a component node by the component ID, which is effective imme
 
 | Error Code ID |
 | --- |
-| [150002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-focus.md#150002-ancestor-component-not-focusable) |
-| [150003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-focus.md#150003-component-does-not-exist) |
-| [150001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-focus.md#150001-component-not-focusable) |
+| [150002](../errorcode-focus.md#150002-ancestor-component-not-focusable) |
+| [150003](../errorcode-focus.md#150003-component-does-not-exist) |
+| [150001](../errorcode-focus.md#150001-component-not-focusable) |
 
 ## setAutoFocusTransfer
 
@@ -130,6 +132,8 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 Sets whether the new page automatically obtains focus during page switching.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,6 +158,8 @@ setKeyProcessingMode(mode: KeyProcessingMode): void
 Sets the mode for processing key events.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,4 +1,4 @@
-# @ohos.advertising.AdComponent(Ad Component)
+# @ohos.advertising.AdComponent
 
 ## Modules to Import
 

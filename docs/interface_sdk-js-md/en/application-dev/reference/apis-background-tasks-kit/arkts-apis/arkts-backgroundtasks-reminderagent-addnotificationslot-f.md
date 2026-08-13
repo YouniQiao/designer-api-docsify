@@ -20,7 +20,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [addNotificationSlot](reminderAgentManager.addNotificationSlot)
+**Substitutes:** addNotificationSlot
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
 
@@ -31,7 +31,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot, whose type can be set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -62,7 +62,7 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [addNotificationSlot](reminderAgentManager.addNotificationSlot)
+**Substitutes:** addNotificationSlot
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
 

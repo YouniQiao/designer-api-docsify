@@ -6,6 +6,8 @@ Configuration result for AI-generated image tasks.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GenerateImageTaskResult--><!--Device-imageGeneration-interface GenerateImageTaskResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -31,6 +33,8 @@ The image result corresponding to AI-generated image task.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

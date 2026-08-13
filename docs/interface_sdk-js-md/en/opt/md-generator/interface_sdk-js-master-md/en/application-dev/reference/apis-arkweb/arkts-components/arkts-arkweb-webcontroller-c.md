@@ -6,7 +6,7 @@ Defines the Web controller.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WebviewController](ohos.web.webview.webview.WebviewController)
+**Substitutes:** WebviewController
 
 <!--Device-unnamed-declare class WebController--><!--Device-unnamed-declare class WebController-End-->
 
@@ -24,7 +24,7 @@ Checks whether the web page can go back.
 
 **Deprecated since:** 9
 
-**Substitutes:** [accessBackward](ohos.web.webview.webview.WebviewController#accessBackward)
+**Substitutes:** accessBackward
 
 <!--Device-WebController-accessBackward(): boolean--><!--Device-WebController-accessBackward(): boolean-End-->
 
@@ -48,7 +48,7 @@ Checks whether the web page can go forward.
 
 **Deprecated since:** 9
 
-**Substitutes:** [accessForward](ohos.web.webview.webview.WebviewController#accessForward)
+**Substitutes:** accessForward
 
 <!--Device-WebController-accessForward(): boolean--><!--Device-WebController-accessForward(): boolean-End-->
 
@@ -72,7 +72,7 @@ Checks whether the web page can go back or forward the given number of steps.
 
 **Deprecated since:** 9
 
-**Substitutes:** [accessStep](ohos.web.webview.webview.WebviewController#accessStep)
+**Substitutes:** accessStep
 
 <!--Device-WebController-accessStep(step: number): boolean--><!--Device-WebController-accessStep(step: number): boolean-End-->
 
@@ -102,7 +102,7 @@ Goes back in the history of the web page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [backward](ohos.web.webview.webview.WebviewController#backward)
+**Substitutes:** backward
 
 <!--Device-WebController-backward()--><!--Device-WebController-backward()-End-->
 
@@ -120,7 +120,7 @@ Clears the history in the Web.
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearHistory](ohos.web.webview.webview.WebviewController#clearHistory)
+**Substitutes:** clearHistory
 
 <!--Device-WebController-clearHistory(): void--><!--Device-WebController-clearHistory(): void-End-->
 
@@ -138,7 +138,7 @@ Constructor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](ohos.web.webview.webview.WebviewController#constructor)
+**Substitutes:** constructor
 
 <!--Device-WebController-constructor()--><!--Device-WebController-constructor()-End-->
 
@@ -156,7 +156,7 @@ Deletes a registered JavaScript object with given name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteJavaScriptRegister](ohos.web.webview.webview.WebviewController#deleteJavaScriptRegister)
+**Substitutes:** deleteJavaScriptRegister
 
 <!--Device-WebController-deleteJavaScriptRegister(name: string)--><!--Device-WebController-deleteJavaScriptRegister(name: string)-End-->
 
@@ -180,7 +180,7 @@ Goes forward in the history of the web page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [forward](ohos.web.webview.webview.WebviewController#forward)
+**Substitutes:** forward
 
 <!--Device-WebController-forward()--><!--Device-WebController-forward()-End-->
 
@@ -246,7 +246,7 @@ Loads the data or URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** [loadData](ohos.web.webview.webview.WebviewController#loadData)
+**Substitutes:** loadData
 
 <!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })--><!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })-End-->
 
@@ -270,7 +270,7 @@ Loads the given URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** [loadUrl](ohos.web.webview.webview.WebviewController#loadUrl)
+**Substitutes:** loadUrl
 
 <!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })--><!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })-End-->
 
@@ -288,14 +288,13 @@ Loads the given URL.
 onActive(): void
 ```
 
-Called when the **Web** component enters the active state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-[onActive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onActive) instead.
+Called when the **Web** component enters the active state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onActive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onActive) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [onActive](ohos.web.webview.webview.WebviewController#onActive)
+**Substitutes:** onActive
 
 <!--Device-WebController-onActive(): void--><!--Device-WebController-onActive(): void-End-->
 
@@ -307,14 +306,13 @@ Called when the **Web** component enters the active state.This API is supported 
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-[onInactive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onInactive) instead.
+Called when the **Web** component enters the inactive state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onInactive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onInactive) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [onInactive](ohos.web.webview.webview.WebviewController#onInactive)
+**Substitutes:** onInactive
 
 <!--Device-WebController-onInactive(): void--><!--Device-WebController-onInactive(): void-End-->
 
@@ -332,7 +330,7 @@ refreshes the current URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** [refresh](ohos.web.webview.webview.WebviewController#refresh)
+**Substitutes:** refresh
 
 <!--Device-WebController-refresh()--><!--Device-WebController-refresh()-End-->
 
@@ -350,7 +348,7 @@ Registers the JavaScript object and method list.
 
 **Deprecated since:** 9
 
-**Substitutes:** [registerJavaScriptProxy](ohos.web.webview.webview.WebviewController#registerJavaScriptProxy)
+**Substitutes:** registerJavaScriptProxy
 
 <!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })--><!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })-End-->
 
@@ -374,7 +372,7 @@ Gets the request focus.
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestFocus](ohos.web.webview.webview.WebviewController#requestFocus)
+**Substitutes:** requestFocus
 
 <!--Device-WebController-requestFocus()--><!--Device-WebController-requestFocus()-End-->
 
@@ -386,13 +384,13 @@ Gets the request focus.
 runJavaScript(options: { script: string, callback?: (result: string) => void })
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;p&gt;
+Asynchronously execute JavaScript in the context of the currently displayed page. The result of the script execution will be returned through an asynchronous callback. This method must be used on the UI thread, and the callback will also be invoked on the UI thread. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The state of JavaScript is no longer persisted across navigations like loadUrl. For example, global variables and functions defined before calling loadUrl will not exist in the loaded page. It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations. &lt;p&gt;
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [runJavaScript](ohos.web.webview.webview.WebviewController#runJavaScript)
+**Substitutes:** runJavaScript
 
 <!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })--><!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })-End-->
 
@@ -416,7 +414,7 @@ Stops the current load.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stop](ohos.web.webview.webview.WebviewController#stop)
+**Substitutes:** stop
 
 <!--Device-WebController-stop()--><!--Device-WebController-stop()-End-->
 

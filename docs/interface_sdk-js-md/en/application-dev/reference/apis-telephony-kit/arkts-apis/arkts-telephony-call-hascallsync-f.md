@@ -14,9 +14,11 @@ function hasCallSync(): boolean
 
 Checks whether a call is in progress.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-function hasCallSync(): boolean--><!--Device-call-function hasCallSync(): boolean-End-->
 

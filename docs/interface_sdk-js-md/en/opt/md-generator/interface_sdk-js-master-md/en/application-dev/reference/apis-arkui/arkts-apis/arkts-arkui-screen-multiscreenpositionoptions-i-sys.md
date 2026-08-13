@@ -2,7 +2,9 @@
 
 Describes the screen position information.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screen-interface MultiScreenPositionOptions--><!--Device-screen-interface MultiScreenPositionOptions-End-->
 
@@ -26,7 +28,9 @@ Screen ID. The value must be a positive integer. Any non-positive integer values
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiScreenPositionOptions-id: long--><!--Device-MultiScreenPositionOptions-id: long-End-->
 
@@ -44,7 +48,9 @@ Start X coordinate of the screen. The top-left vertex of the bounding rectangle 
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiScreenPositionOptions-startX: long--><!--Device-MultiScreenPositionOptions-startX: long-End-->
 
@@ -62,7 +68,9 @@ Start Y coordinate of the screen. The top-left vertex of the bounding rectangle 
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiScreenPositionOptions-startY: long--><!--Device-MultiScreenPositionOptions-startY: long-End-->
 

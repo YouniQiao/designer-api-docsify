@@ -6,6 +6,8 @@ Enumerates the key sizes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksKeySize--><!--Device-huks-export enum HuksKeySize-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,6 +23,8 @@ Rivest-Shamir-Adleman (RSA) key of 512 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,6 +46,8 @@ RSA key of 768 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_RSA_KEY_SIZE_768 = 768--><!--Device-HuksKeySize-HUKS_RSA_KEY_SIZE_768 = 768-End-->
@@ -61,6 +67,8 @@ RSA key of 1024 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,6 +90,8 @@ RSA key of 2048 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_RSA_KEY_SIZE_2048 = 2048--><!--Device-HuksKeySize-HUKS_RSA_KEY_SIZE_2048 = 2048-End-->
@@ -101,6 +111,8 @@ RSA key of 3072 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,6 +134,8 @@ RSA key of 4096 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_RSA_KEY_SIZE_4096 = 4096--><!--Device-HuksKeySize-HUKS_RSA_KEY_SIZE_4096 = 4096-End-->
@@ -141,6 +155,8 @@ Elliptic Curve Cryptography (ECC) key of 224 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,6 +178,8 @@ ECC key of 256 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_ECC_KEY_SIZE_256 = 256--><!--Device-HuksKeySize-HUKS_ECC_KEY_SIZE_256 = 256-End-->
@@ -181,6 +199,8 @@ ECC key of 384 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,6 +222,8 @@ ECC key of 521 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_ECC_KEY_SIZE_521 = 521--><!--Device-HuksKeySize-HUKS_ECC_KEY_SIZE_521 = 521-End-->
@@ -222,6 +244,8 @@ Advanced Encryption Standard (AES) key of 128 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksKeySize-HUKS_AES_KEY_SIZE_128 = 128--><!--Device-HuksKeySize-HUKS_AES_KEY_SIZE_128 = 128-End-->
@@ -239,6 +263,8 @@ AES key of 192 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,6 +284,8 @@ AES key of 256 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksKeySize-HUKS_AES_KEY_SIZE_256 = 256--><!--Device-HuksKeySize-HUKS_AES_KEY_SIZE_256 = 256-End-->
@@ -270,9 +298,7 @@ AES key of 256 bits.
 HUKS_AES_KEY_SIZE_512 = 512
 ```
 
-AES key of 512 bits.
-
-Note: This parameter is supported since API version 8 and deprecated since API version 11.
+AES key of 512 bits. Note: This parameter is supported since API version 8 and deprecated since API version 11.
 
 **Since:** 8
 
@@ -296,6 +322,8 @@ Curve25519 key of 256 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_CURVE25519_KEY_SIZE_256 = 256--><!--Device-HuksKeySize-HUKS_CURVE25519_KEY_SIZE_256 = 256-End-->
@@ -315,6 +343,8 @@ Diffie-Hellman (DH) key of 2048 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -336,6 +366,8 @@ DH key of 3072 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_DH_KEY_SIZE_3072 = 3072--><!--Device-HuksKeySize-HUKS_DH_KEY_SIZE_3072 = 3072-End-->
@@ -355,6 +387,8 @@ DH key of 4096 bits.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -376,6 +410,8 @@ ShangMi2 (SM2) key of 256 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_SM2_KEY_SIZE_256 = 256--><!--Device-HuksKeySize-HUKS_SM2_KEY_SIZE_256 = 256-End-->
@@ -395,6 +431,8 @@ ShangMi4 (SM4) key of 128 bits.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -416,6 +454,8 @@ DES key of 64 bits.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_DES_KEY_SIZE_64 = 64--><!--Device-HuksKeySize-HUKS_DES_KEY_SIZE_64 = 64-End-->
@@ -433,6 +473,8 @@ HUKS_3DES_KEY_SIZE_128 = 128
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -452,6 +494,8 @@ HUKS_3DES_KEY_SIZE_192 = 192
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeySize-HUKS_3DES_KEY_SIZE_192 = 192--><!--Device-HuksKeySize-HUKS_3DES_KEY_SIZE_192 = 192-End-->
@@ -469,6 +513,8 @@ ML-DSA-44 parameter set.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -488,6 +534,8 @@ ML-DSA-65 parameter set.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HuksKeySize-HUKS_ML_DSA_KEY_PARAM_SET_65 = 65--><!--Device-HuksKeySize-HUKS_ML_DSA_KEY_PARAM_SET_65 = 65-End-->
@@ -505,6 +553,8 @@ ML-DSA-87 parameter set.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -524,6 +574,8 @@ ML-KEM-768 parameter set.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HuksKeySize-HUKS_ML_KEM_KEY_PARAM_SET_768 = 768--><!--Device-HuksKeySize-HUKS_ML_KEM_KEY_PARAM_SET_768 = 768-End-->
@@ -541,6 +593,8 @@ ML-KEM-1024 parameter set.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

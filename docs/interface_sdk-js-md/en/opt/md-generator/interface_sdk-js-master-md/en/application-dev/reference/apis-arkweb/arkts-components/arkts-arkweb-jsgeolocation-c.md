@@ -4,6 +4,8 @@ Defines the js geolocation request.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class JsGeolocation--><!--Device-unnamed-declare class JsGeolocation-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ invoke(origin: string, allow: boolean, retain: boolean): void
 Sets the geolocation permission status of a web page.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

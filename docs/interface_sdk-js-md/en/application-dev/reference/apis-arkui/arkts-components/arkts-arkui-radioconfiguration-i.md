@@ -1,15 +1,16 @@
 # RadioConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration.
 
-**Inheritance/Implementation:** RadioConfiguration extends [CommonConfiguration<RadioConfiguration>](CommonConfiguration<RadioConfiguration>)
+**Inheritance/Implementation:** RadioConfiguration extends CommonConfiguration<RadioConfiguration>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface RadioConfiguration extends CommonConfiguration<RadioConfiguration>--><!--Device-unnamed-declare interface RadioConfiguration extends CommonConfiguration<RadioConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface RadioConfiguration--><!--Device-unnamed-declare interface RadioConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,17 +20,15 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 checked: boolean
 ```
 
-Whether the radio button is selected.
-
-Default value: **false**
-
-**true**: The radio button is selected. **false**: The radio button is not selected.
+Whether the radio button is selected. Default value: **false** **true**: The radio button is selected. **false**: The radio button is not selected.
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,15 +44,15 @@ Default value: **false**
 triggerChange: Callback<boolean>
 ```
 
-Changes the selected state of the radio button.
-
-The value **true** means that the radio button changes from unselected to selected, and **false** means that the radio button changes from selected to unselected.
+Changes the selected state of the radio button. The value **true** means that the radio button changes from unselected to selected, and **false** means that the radio button changes from selected to unselected.
 
 **Type:** Callback&lt;boolean&gt;
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +75,8 @@ Current value of the radio button.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

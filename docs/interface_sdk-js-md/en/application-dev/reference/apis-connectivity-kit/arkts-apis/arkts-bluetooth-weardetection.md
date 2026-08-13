@@ -2,9 +2,11 @@
 
 Provides methods to manage the wearing detection function.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace wearDetection--><!--Device-unnamed-declare namespace wearDetection-End-->
 
@@ -23,13 +25,13 @@ import { wearDetection } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableweardetection) | Turn off the wearing detection switch. |
-| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableweardetection-1) | Turn off the wearing detection switch. |
-| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableweardetection) | Turn on the wearing detection switch. |
-| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableweardetection-1) | Turn on the wearing detection switch. |
-| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isweardetectionenabled) | Check whether the wearing detection is enabled. |
-| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isweardetectionenabled-1) | Check whether the wearing detection is enabled. |
-| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isweardetectionsupported) | Checks whether the device supports wear detection. |
-| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isweardetectionsupported-1) | Checks whether the device supports wear detection. |
+| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableWearDetection) | Turn off the wearing detection switch. |
+| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableWearDetection-(System-API)) | Turn off the wearing detection switch. |
+| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableWearDetection) | Turn on the wearing detection switch. |
+| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableWearDetection-(System-API)) | Turn on the wearing detection switch. |
+| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isWearDetectionEnabled) | Check whether the wearing detection is enabled. |
+| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isWearDetectionEnabled-(System-API)) | Check whether the wearing detection is enabled. |
+| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isWearDetectionSupported) | Checks whether the device supports wear detection. |
+| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isWearDetectionSupported-(System-API)) | Checks whether the device supports wear detection. |
 <!--DelEnd-->
 

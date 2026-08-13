@@ -6,7 +6,9 @@ type Assets = Asset[]
 
 表示[Asset](arkts-arkdata-relationalstore-asset-i.md#Asset)类型的数组。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-type Assets = Asset[]--><!--Device-relationalStore-type Assets = Asset[]-End-->
 

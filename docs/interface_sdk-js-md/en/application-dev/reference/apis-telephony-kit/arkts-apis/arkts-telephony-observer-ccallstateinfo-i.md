@@ -4,7 +4,9 @@ Defines information about the call status.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-observer-export interface CCallStateInfo--><!--Device-observer-export interface CCallStateInfo-End-->
 
@@ -28,7 +30,9 @@ Call type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CCallStateInfo-state: CCallState--><!--Device-CCallStateInfo-state: CCallState-End-->
 
@@ -46,7 +50,9 @@ Phone number.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CCallStateInfo-teleNumber: string--><!--Device-CCallStateInfo-teleNumber: string-End-->
 

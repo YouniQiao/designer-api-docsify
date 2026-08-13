@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 ```
 
-Adds a specified untrusted hotspot configuration.
-
-&lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
+Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 
@@ -82,9 +80,7 @@ try {
 function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void
 ```
 
-Adds a specified untrusted hotspot configuration.
-
-&lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
+Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 
@@ -105,7 +101,7 @@ Adds a specified untrusted hotspot configuration.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
 
 ## Examples
 

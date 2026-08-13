@@ -4,6 +4,8 @@ Web组件使用HTTPDNS的模式。
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-webview-enum SecureDnsMode--><!--Device-webview-enum SecureDnsMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ OFF = 0
 不使用HTTPDNS， 可以用于撤销之前使用的HTTPDNS配置。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ AUTO = 1
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecureDnsMode-AUTO = 1--><!--Device-SecureDnsMode-AUTO = 1-End-->
@@ -49,6 +55,8 @@ SECURE_ONLY = 2
 强制使用设定的HTTPDNS服务器进行域名解析。如果解析失败，将不会回退到系统 DNS，这将直接导致页面加载失败。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

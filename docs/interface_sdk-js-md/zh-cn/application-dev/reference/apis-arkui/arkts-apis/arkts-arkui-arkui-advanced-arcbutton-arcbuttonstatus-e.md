@@ -2,9 +2,11 @@
 
 定义ArcButton可设置的弧形按钮状态。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum ArcButtonStatus--><!--Device-unnamed-export declare enum ArcButtonStatus-End-->
 
@@ -18,9 +20,13 @@ NORMAL = 0
 
 正常状态。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcButtonStatus-NORMAL = 0--><!--Device-ArcButtonStatus-NORMAL = 0-End-->
 
@@ -34,9 +40,13 @@ PRESSED = 1
 
 按压状态。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcButtonStatus-PRESSED = 1--><!--Device-ArcButtonStatus-PRESSED = 1-End-->
 
@@ -50,9 +60,13 @@ DISABLED = 2
 
 禁用状态。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcButtonStatus-DISABLED = 2--><!--Device-ArcButtonStatus-DISABLED = 2-End-->
 

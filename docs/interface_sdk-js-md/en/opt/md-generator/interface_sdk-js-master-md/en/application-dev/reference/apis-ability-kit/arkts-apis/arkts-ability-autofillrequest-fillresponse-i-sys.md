@@ -2,7 +2,9 @@
 
 Defines the information about the response to an auto-fill request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface FillResponse--><!--Device-unnamed-export interface FillResponse-End-->
 
@@ -18,9 +20,11 @@ viewData: ViewData
 
 Page data.
 
-**Type:** [ViewData](arkts-ability-viewdata-i.md)
+**Type:** [ViewData](arkts-ability-viewdata-i-sys.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

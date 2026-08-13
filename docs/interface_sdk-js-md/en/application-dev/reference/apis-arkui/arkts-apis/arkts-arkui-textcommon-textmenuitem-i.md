@@ -6,6 +6,8 @@ TextMenuItem
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface TextMenuItem--><!--Device-unnamed-export declare interface TextMenuItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Customize what the menu displays.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Customize the icon before the menu displays content.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextMenuItem-icon?: ResourceStr--><!--Device-TextMenuItem-icon?: ResourceStr-End-->
@@ -64,6 +70,8 @@ Distinguish clicked menu content by Id.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextMenuItem-id: TextMenuItemId--><!--Device-TextMenuItem-id: TextMenuItemId-End-->
@@ -83,6 +91,8 @@ Customize what the menu item shortcut displays.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

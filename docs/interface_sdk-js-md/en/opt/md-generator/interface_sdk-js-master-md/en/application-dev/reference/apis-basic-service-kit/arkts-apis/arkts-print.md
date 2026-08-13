@@ -2,7 +2,9 @@
 
 The **print** module provides APIs for basic print operations.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace print--><!--Device-unnamed-declare namespace print-End-->
 
@@ -20,100 +22,112 @@ import { print } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addPrinter](arkts-basicservices-print-addprinter-f.md#addprinter) |
-| [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addprintertodiscovery) |
-| [connectPrinter](arkts-basicservices-print-connectprinter-f.md#connectprinter) |
-| [connectPrinter](arkts-basicservices-print-connectprinter-f.md#connectprinter-1) |
-| [getAddedPrinters](arkts-basicservices-print-getaddedprinters-f.md#getaddedprinters) |
-| [getPrinterInformationById](arkts-basicservices-print-getprinterinformationbyid-f.md#getprinterinformationbyid) |
-| [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md#notifywatermarkcomplete) |
-| [off](arkts-basicservices-print-off-f.md#off-3) |
-| [on](arkts-basicservices-print-on-f.md#on-3) |
+| [addPrinter](arkts-basicservices-print-addprinter-f.md#addPrinter) |
+| [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addPrinterToDiscovery) |
+| [getAddedPrinters](arkts-basicservices-print-getaddedprinters-f.md#getAddedPrinters) |
+| [getPrinterInformationById](arkts-basicservices-print-getprinterinformationbyid-f.md#getPrinterInformationById) |
+| [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md#notifyWatermarkComplete) |
+| [offPrinterChange](arkts-basicservices-print-offprinterchange-f.md#offPrinterChange) |
+| [off_printerChange](arkts-basicservices-print-offprinterchange-f.md) |
+| [onPrinterChange](arkts-basicservices-print-onprinterchange-f.md#onPrinterChange) |
+| [on_printerChange](arkts-basicservices-print-onprinterchange-f.md) |
 | [print](arkts-basicservices-print-f.md#print) |
-| [print](arkts-basicservices-print-f.md#print-1) |
-| [print](arkts-basicservices-print-f.md#print-2) |
-| [print](arkts-basicservices-print-f.md#print-3) |
-| [print](arkts-basicservices-print-f.md#print-4) |
-| [registerWatermarkCallback](arkts-basicservices-print-registerwatermarkcallback-f.md#registerwatermarkcallback) |
-| [removePrinterFromDiscovery](arkts-basicservices-print-removeprinterfromdiscovery-f.md#removeprinterfromdiscovery) |
-| [startDiscoverPrinter](arkts-basicservices-print-startdiscoverprinter-f.md#startdiscoverprinter) |
-| [startDiscoverPrinter](arkts-basicservices-print-startdiscoverprinter-f.md#startdiscoverprinter-1) |
-| [startPrint](arkts-basicservices-print-startprint-f.md#startprint) |
-| [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f.md#stopdiscoverprinter) |
-| [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f.md#stopdiscoverprinter-1) |
-| [unregisterWatermarkCallback](arkts-basicservices-print-unregisterwatermarkcallback-f.md#unregisterwatermarkcallback) |
-| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate) |
-| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate-1) |
-| [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md#updateprinterindiscovery) |
-| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md#updateprinterinformation) |
+| [print](arkts-basicservices-print-f.md#print) |
+| [print](arkts-basicservices-print-f.md#print) |
+| [print](arkts-basicservices-print-f.md#print) |
+| [print](arkts-basicservices-print-f.md#print) |
+| [registerWatermarkCallback](arkts-basicservices-print-registerwatermarkcallback-f.md#registerWatermarkCallback) |
+| [removePrinterFromDiscovery](arkts-basicservices-print-removeprinterfromdiscovery-f.md#removePrinterFromDiscovery) |
+| [startPrint](arkts-basicservices-print-startprint-f.md#startPrint) |
+| [unregisterWatermarkCallback](arkts-basicservices-print-unregisterwatermarkcallback-f.md#unregisterWatermarkCallback) |
+| [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md#updatePrinterInDiscovery) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addPrinterToCups](arkts-basicservices-print-addprintertocups-f-sys.md#addprintertocups) |
-| [addPrinters](arkts-basicservices-print-addprinters-f-sys.md#addprinters) |
-| [addPrinters](arkts-basicservices-print-addprinters-f-sys.md#addprinters-1) |
-| [analyzePrintEvents](arkts-basicservices-print-analyzeprintevents-f-sys.md#analyzeprintevents) |
-| [authPrintJob](arkts-basicservices-print-authprintjob-f-sys.md#authprintjob) |
-| [authSmbDeviceAsRegisteredUser](arkts-basicservices-print-authsmbdeviceasregistereduser-f-sys.md#authsmbdeviceasregistereduser) |
-| [cancelPrintJob](arkts-basicservices-print-cancelprintjob-f-sys.md#cancelprintjob) |
-| [cancelPrintJob](arkts-basicservices-print-cancelprintjob-f-sys.md#cancelprintjob-1) |
-| [checkPreferencesConflicts](arkts-basicservices-print-checkpreferencesconflicts-f-sys.md#checkpreferencesconflicts) |
-| [connectPrinterByIdAndPpd](arkts-basicservices-print-connectprinterbyidandppd-f-sys.md#connectprinterbyidandppd) |
-| [connectPrinterByIpAndPpd](arkts-basicservices-print-connectprinterbyipandppd-f-sys.md#connectprinterbyipandppd) |
-| [deletePrinterFromCups](arkts-basicservices-print-deleteprinterfromcups-f-sys.md#deleteprinterfromcups) |
-| [disconnectPrinter](arkts-basicservices-print-disconnectprinter-f-sys.md#disconnectprinter) |
-| [disconnectPrinter](arkts-basicservices-print-disconnectprinter-f-sys.md#disconnectprinter-1) |
-| [discoverUsbPrinters](arkts-basicservices-print-discoverusbprinters-f-sys.md#discoverusbprinters) |
-| [getPrinterDefaultPreferences](arkts-basicservices-print-getprinterdefaultpreferences-f-sys.md#getprinterdefaultpreferences) |
-| [getPrinterInfoById](arkts-basicservices-print-getprinterinfobyid-f-sys.md#getprinterinfobyid) |
-| [getSharedHosts](arkts-basicservices-print-getsharedhosts-f-sys.md#getsharedhosts) |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md#notifyprintservice) |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md#notifyprintservice-1) |
-| [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent) |
-| [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent-1) |
-| [off](arkts-basicservices-print-off-f-sys.md#off) |
-| [off](arkts-basicservices-print-off-f-sys.md#off-1) |
-| [off](arkts-basicservices-print-off-f-sys.md#off-2) |
-| [offPrinterInfoQuery](arkts-basicservices-print-offprinterinfoquery-f-sys.md#offprinterinfoquery) |
-| [on](arkts-basicservices-print-on-f-sys.md#on) |
-| [on](arkts-basicservices-print-on-f-sys.md#on-1) |
-| [on](arkts-basicservices-print-on-f-sys.md#on-2) |
-| [onPrinterInfoQuery](arkts-basicservices-print-onprinterinfoquery-f-sys.md#onprinterinfoquery) |
-| [queryAllActivePrintJobs](arkts-basicservices-print-queryallactiveprintjobs-f-sys.md#queryallactiveprintjobs) |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs) |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs-1) |
-| [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryallprinterextensioninfos) |
-| [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryallprinterextensioninfos-1) |
-| [queryAllPrinterPpds](arkts-basicservices-print-queryallprinterppds-f-sys.md#queryallprinterppds) |
-| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md#queryprintjobbyid) |
-| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md#queryprintjobbyid-1) |
-| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md#queryprintjoblist) |
-| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md#queryprintjoblist-1) |
-| [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryprintercapability) |
-| [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryprintercapability-1) |
-| [queryPrinterCapabilityByUri](arkts-basicservices-print-queryprintercapabilitybyuri-f-sys.md#queryprintercapabilitybyuri) |
-| [queryPrinterInfoByIp](arkts-basicservices-print-queryprinterinfobyip-f-sys.md#queryprinterinfobyip) |
-| [queryRecommendDriversById](arkts-basicservices-print-queryrecommenddriversbyid-f-sys.md#queryrecommenddriversbyid) |
-| [removePrinters](arkts-basicservices-print-removeprinters-f-sys.md#removeprinters) |
-| [removePrinters](arkts-basicservices-print-removeprinters-f-sys.md#removeprinters-1) |
-| [requestPrintPreview](arkts-basicservices-print-requestprintpreview-f-sys.md#requestprintpreview) |
-| [requestPrintPreview](arkts-basicservices-print-requestprintpreview-f-sys.md#requestprintpreview-1) |
-| [restartPrintJob](arkts-basicservices-print-restartprintjob-f-sys.md#restartprintjob) |
-| [savePdfFileJob](arkts-basicservices-print-savepdffilejob-f-sys.md#savepdffilejob) |
-| [setDefaultPrinter](arkts-basicservices-print-setdefaultprinter-f-sys.md#setdefaultprinter) |
-| [setPrinterPreferences](arkts-basicservices-print-setprinterpreferences-f-sys.md#setprinterpreferences) |
-| [startGettingPrintFile](arkts-basicservices-print-startgettingprintfile-f-sys.md#startgettingprintfile) |
-| [startPrintJob](arkts-basicservices-print-startprintjob-f-sys.md#startprintjob) |
-| [startPrintJob](arkts-basicservices-print-startprintjob-f-sys.md#startprintjob-1) |
-| [updateExtensionInfo](arkts-basicservices-print-updateextensioninfo-f-sys.md#updateextensioninfo) |
-| [updateExtensionInfo](arkts-basicservices-print-updateextensioninfo-f-sys.md#updateextensioninfo-1) |
-| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updateprinterstate) |
-| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updateprinterstate-1) |
-| [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md#updateprinters) |
-| [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md#updateprinters-1) |
+| [addPrinterToCups](arkts-basicservices-print-addprintertocups-f-sys.md#addPrinterToCups-(System-API)) |
+| [addPrinters](arkts-basicservices-print-addprinters-f-sys.md#addPrinters-(System-API)) |
+| [addPrinters](arkts-basicservices-print-addprinters-f-sys.md#addPrinters-(System-API)) |
+| [analyzePrintEvents](arkts-basicservices-print-analyzeprintevents-f-sys.md#analyzePrintEvents-(System-API)) |
+| [authPrintJob](arkts-basicservices-print-authprintjob-f-sys.md#authPrintJob-(System-API)) |
+| [authSmbDeviceAsRegisteredUser](arkts-basicservices-print-authsmbdeviceasregistereduser-f-sys.md#authSmbDeviceAsRegisteredUser-(System-API)) |
+| [cancelPrintJob](arkts-basicservices-print-cancelprintjob-f-sys.md#cancelPrintJob-(System-API)) |
+| [cancelPrintJob](arkts-basicservices-print-cancelprintjob-f-sys.md#cancelPrintJob-(System-API)) |
+| [checkPreferencesConflicts](arkts-basicservices-print-checkpreferencesconflicts-f-sys.md#checkPreferencesConflicts-(System-API)) |
+| [connectPrinter](arkts-basicservices-print-connectprinter-f-sys.md#connectPrinter-(System-API)) |
+| [connectPrinter](arkts-basicservices-print-connectprinter-f-sys.md#connectPrinter-(System-API)) |
+| [connectPrinterByIdAndPpd](arkts-basicservices-print-connectprinterbyidandppd-f-sys.md#connectPrinterByIdAndPpd-(System-API)) |
+| [connectPrinterByIpAndPpd](arkts-basicservices-print-connectprinterbyipandppd-f-sys.md#connectPrinterByIpAndPpd-(System-API)) |
+| [deletePrinterFromCups](arkts-basicservices-print-deleteprinterfromcups-f-sys.md#deletePrinterFromCups-(System-API)) |
+| [disconnectPrinter](arkts-basicservices-print-disconnectprinter-f-sys.md#disconnectPrinter-(System-API)) |
+| [disconnectPrinter](arkts-basicservices-print-disconnectprinter-f-sys.md#disconnectPrinter-(System-API)) |
+| [discoverUsbPrinters](arkts-basicservices-print-discoverusbprinters-f-sys.md#discoverUsbPrinters-(System-API)) |
+| [getPrinterDefaultPreferences](arkts-basicservices-print-getprinterdefaultpreferences-f-sys.md#getPrinterDefaultPreferences-(System-API)) |
+| [getPrinterInfoById](arkts-basicservices-print-getprinterinfobyid-f-sys.md#getPrinterInfoById-(System-API)) |
+| [getSharedHosts](arkts-basicservices-print-getsharedhosts-f-sys.md#getSharedHosts-(System-API)) |
+| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md#notifyPrintService-(System-API)) |
+| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md#notifyPrintService-(System-API)) |
+| [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyPrintServiceEvent-(System-API)) |
+| [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyPrintServiceEvent-(System-API)) |
+| [notifyPrintServiceSpoolerCloseForCancelled](arkts-basicservices-print-notifyprintservicespoolercloseforcancelled-f-sys.md#notifyPrintServiceSpoolerCloseForCancelled-(System-API)) |
+| [notifyPrintServiceSpoolerCloseForCancelled](arkts-basicservices-print-notifyprintservicespoolercloseforcancelled-f-sys.md#notifyPrintServiceSpoolerCloseForCancelled-(System-API)) |
+| [notifyPrintServiceSpoolerCloseForStarted](arkts-basicservices-print-notifyprintservicespoolercloseforstarted-f-sys.md#notifyPrintServiceSpoolerCloseForStarted-(System-API)) |
+| [notifyPrintServiceSpoolerCloseForStarted](arkts-basicservices-print-notifyprintservicespoolercloseforstarted-f-sys.md#notifyPrintServiceSpoolerCloseForStarted-(System-API)) |
+| [offExtInfoChange](arkts-basicservices-print-offextinfochange-f-sys.md#offExtInfoChange-(System-API)) |
+| [offJobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md#offJobStateChange-(System-API)) |
+| [offPrinterInfoQuery](arkts-basicservices-print-offprinterinfoquery-f-sys.md#offPrinterInfoQuery-(System-API)) |
+| [offPrinterStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md#offPrinterStateChange-(System-API)) |
+| [off_extInfoChange](arkts-basicservices-print-offextinfochange-f-sys.md) |
+| [off_jobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md) |
+| [off_printerStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md) |
+| [onExtInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md#onExtInfoChange-(System-API)) |
+| [onJobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md#onJobStateChange-(System-API)) |
+| [onPrinterInfoQuery](arkts-basicservices-print-onprinterinfoquery-f-sys.md#onPrinterInfoQuery-(System-API)) |
+| [onPrinterStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md#onPrinterStateChange-(System-API)) |
+| [on_extInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md) |
+| [on_jobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md) |
+| [on_printerStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md) |
+| [queryAllActivePrintJobs](arkts-basicservices-print-queryallactiveprintjobs-f-sys.md#queryAllActivePrintJobs-(System-API)) |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryAllPrintJobs-(System-API)) |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryAllPrintJobs-(System-API)) |
+| [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryAllPrinterExtensionInfos-(System-API)) |
+| [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryAllPrinterExtensionInfos-(System-API)) |
+| [queryAllPrinterPpds](arkts-basicservices-print-queryallprinterppds-f-sys.md#queryAllPrinterPpds-(System-API)) |
+| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md#queryPrintJobById-(System-API)) |
+| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md#queryPrintJobById-(System-API)) |
+| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md#queryPrintJobList-(System-API)) |
+| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md#queryPrintJobList-(System-API)) |
+| [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryPrinterCapability-(System-API)) |
+| [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryPrinterCapability-(System-API)) |
+| [queryPrinterCapabilityByUri](arkts-basicservices-print-queryprintercapabilitybyuri-f-sys.md#queryPrinterCapabilityByUri-(System-API)) |
+| [queryPrinterInfoByIp](arkts-basicservices-print-queryprinterinfobyip-f-sys.md#queryPrinterInfoByIp-(System-API)) |
+| [queryRecommendDriversById](arkts-basicservices-print-queryrecommenddriversbyid-f-sys.md#queryRecommendDriversById-(System-API)) |
+| [removePrinters](arkts-basicservices-print-removeprinters-f-sys.md#removePrinters-(System-API)) |
+| [removePrinters](arkts-basicservices-print-removeprinters-f-sys.md#removePrinters-(System-API)) |
+| [requestPrintPreview](arkts-basicservices-print-requestprintpreview-f-sys.md#requestPrintPreview-(System-API)) |
+| [requestPrintPreview](arkts-basicservices-print-requestprintpreview-f-sys.md#requestPrintPreview-(System-API)) |
+| [restartPrintJob](arkts-basicservices-print-restartprintjob-f-sys.md#restartPrintJob-(System-API)) |
+| [savePdfFileJob](arkts-basicservices-print-savepdffilejob-f-sys.md#savePdfFileJob-(System-API)) |
+| [setDefaultPrinter](arkts-basicservices-print-setdefaultprinter-f-sys.md#setDefaultPrinter-(System-API)) |
+| [setPrinterPreferences](arkts-basicservices-print-setprinterpreferences-f-sys.md#setPrinterPreferences-(System-API)) |
+| [startDiscoverPrinter](arkts-basicservices-print-startdiscoverprinter-f-sys.md#startDiscoverPrinter-(System-API)) |
+| [startDiscoverPrinter](arkts-basicservices-print-startdiscoverprinter-f-sys.md#startDiscoverPrinter-(System-API)) |
+| [startGettingPrintFile](arkts-basicservices-print-startgettingprintfile-f-sys.md#startGettingPrintFile-(System-API)) |
+| [startPrintJob](arkts-basicservices-print-startprintjob-f-sys.md#startPrintJob-(System-API)) |
+| [startPrintJob](arkts-basicservices-print-startprintjob-f-sys.md#startPrintJob-(System-API)) |
+| [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f-sys.md#stopDiscoverPrinter-(System-API)) |
+| [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f-sys.md#stopDiscoverPrinter-(System-API)) |
+| [updateExtensionInfo](arkts-basicservices-print-updateextensioninfo-f-sys.md#updateExtensionInfo-(System-API)) |
+| [updateExtensionInfo](arkts-basicservices-print-updateextensioninfo-f-sys.md#updateExtensionInfo-(System-API)) |
+| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f-sys.md#updatePrintJobState-(System-API)) |
+| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f-sys.md#updatePrintJobState-(System-API)) |
+| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f-sys.md#updatePrinterInformation-(System-API)) |
+| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updatePrinterState-(System-API)) |
+| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updatePrinterState-(System-API)) |
+| [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md#updatePrinters-(System-API)) |
+| [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md#updatePrinters-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -121,22 +135,16 @@ import { print } from '@kit.BasicServicesKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [PpdInfo](arkts-basicservices-print-ppdinfo-i.md) |
-| [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md) |
 | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) |
 | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) |
 | [PrintJob](arkts-basicservices-print-printjob-i.md) |
 | [PrintJobData](arkts-basicservices-print-printjobdata-i.md) |
-| [PrintMargin](arkts-basicservices-print-printmargin-i.md) |
 | [PrintPageRange](arkts-basicservices-print-printpagerange-i.md) |
 | [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) |
-| [PrintResolution](arkts-basicservices-print-printresolution-i.md) |
 | [PrintTask](arkts-basicservices-print-printtask-i.md) |
 | [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md) |
-| [PrinterCapability](arkts-basicservices-print-printercapability-i.md) |
-| [PrinterInfo](arkts-basicservices-print-printerinfo-i.md) |
 | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) |
 | [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md) |
-| [PrinterRange](arkts-basicservices-print-printerrange-i.md) |
 | [SharedHost](arkts-basicservices-print-sharedhost-i.md) |
 
 <!--Del-->
@@ -144,7 +152,14 @@ import { print } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [PreviewAttribute](arkts-basicservices-print-previewattribute-i-sys.md) |
+| [PrintJob](arkts-basicservices-print-printjob-i-sys.md) |
+| [PrintMargin](arkts-basicservices-print-printmargin-i-sys.md) |
+| [PrintResolution](arkts-basicservices-print-printresolution-i-sys.md) |
+| [PrinterCapability](arkts-basicservices-print-printercapability-i-sys.md) |
 | [PrinterExtensionInfo](arkts-basicservices-print-printerextensioninfo-i-sys.md) |
+| [PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md) |
+| [PrinterRange](arkts-basicservices-print-printerrange-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
@@ -183,5 +198,8 @@ import { print } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [ExtInfoChangeCallback](arkts-basicservices-print-extinfochangecallback-t-sys.md) |
+| [PrintJobStateChangeCallback](arkts-basicservices-print-printjobstatechangecallback-t-sys.md) |
 | [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) |
+| [PrinterStateChangeCallback](arkts-basicservices-print-printerstatechangecallback-t-sys.md) |
 <!--DelEnd-->

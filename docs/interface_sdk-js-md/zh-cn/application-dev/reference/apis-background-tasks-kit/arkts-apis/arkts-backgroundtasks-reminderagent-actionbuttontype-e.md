@@ -28,7 +28,7 @@ ACTION_BUTTON_TYPE_CLOSE = 0
 
 **废弃版本：** 9
 
-**替代接口：** [ACTION_BUTTON_TYPE_CLOSE](reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_CLOSE)
+**替代接口：** ACTION_BUTTON_TYPE_CLOSE
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0-End-->
 
@@ -48,7 +48,7 @@ ACTION_BUTTON_TYPE_SNOOZE = 1
 
 **废弃版本：** 9
 
-**替代接口：** [ACTION_BUTTON_TYPE_SNOOZE](reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_SNOOZE)
+**替代接口：** ACTION_BUTTON_TYPE_SNOOZE
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1-End-->
 

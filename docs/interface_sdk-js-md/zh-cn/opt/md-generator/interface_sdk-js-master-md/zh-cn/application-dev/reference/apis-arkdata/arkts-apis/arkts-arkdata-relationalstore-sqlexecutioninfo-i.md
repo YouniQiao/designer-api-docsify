@@ -2,7 +2,9 @@
 
 描述数据库执行的SQL语句的统计信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-interface SqlExecutionInfo--><!--Device-relationalStore-interface SqlExecutionInfo-End-->
 
@@ -18,7 +20,9 @@ executeTime: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SqlExecutionInfo-executeTime: long--><!--Device-SqlExecutionInfo-executeTime: long-End-->
 
@@ -34,7 +38,9 @@ prepareTime: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SqlExecutionInfo-prepareTime: long--><!--Device-SqlExecutionInfo-prepareTime: long-End-->
 
@@ -46,12 +52,13 @@ prepareTime: number
 sql: Array<string>
 ```
 
-表示执行的SQL语句的数组。当  
-[batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)的参数太大时，可能有多个SQL。
+表示执行的SQL语句的数组。当 [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert) 的参数太大时，可能有多个SQL。
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SqlExecutionInfo-sql: Array<string>--><!--Device-SqlExecutionInfo-sql: Array<string>-End-->
 
@@ -67,7 +74,9 @@ totalTime: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SqlExecutionInfo-totalTime: long--><!--Device-SqlExecutionInfo-totalTime: long-End-->
 
@@ -83,7 +92,9 @@ waitTime: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SqlExecutionInfo-waitTime: long--><!--Device-SqlExecutionInfo-waitTime: long-End-->
 

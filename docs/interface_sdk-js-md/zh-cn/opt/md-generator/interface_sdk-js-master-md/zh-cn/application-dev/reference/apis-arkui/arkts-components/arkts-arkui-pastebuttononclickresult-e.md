@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum PasteButtonOnClickResult--><!--Device-unnamed-declare enum PasteButtonOnClickResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SUCCESS = 0
 粘贴控件点击后权限授权成功。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ TEMPORARY_AUTHORIZATION_FAILED = 1
 粘贴控件点击后权限授权失败。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

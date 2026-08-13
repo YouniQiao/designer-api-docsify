@@ -6,6 +6,8 @@ Defines display options for the first frame of the video.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PosterOptions--><!--Device-unnamed-declare interface PosterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,12 +18,7 @@ Defines display options for the first frame of the video.
 contentTransitionEffect?: ContentTransitionEffect
 ```
 
-Transition effect to apply when the video preview image changes. This parameter does not take effect if   
-**showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md#VideoOptions) is not provided.
-
-Default value: **ContentTransitionEffect.IDENTITY**.
-
-If this parameter is set to **undefined** or **null**, it defaults to **ContentTransitionEffect.IDENTITY**.
+Transition effect to apply when the video preview image changes. This parameter does not take effect if **showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md#VideoOptions) is not provided. Default value: **ContentTransitionEffect.IDENTITY**. If this parameter is set to **undefined** or **null**, it defaults to **ContentTransitionEffect.IDENTITY**.
 
 **Type:** ContentTransitionEffect
 
@@ -30,6 +27,8 @@ If this parameter is set to **undefined** or **null**, it defaults to **ContentT
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,13 +44,7 @@ If this parameter is set to **undefined** or **null**, it defaults to **ContentT
 showFirstFrame?: boolean
 ```
 
-Whether to enable first frame display, showing the first frame of the video as a preview. When first frame display is enabled, the previewUri field in [VideoOptions](arkts-arkui-videooptions-i.md#VideoOptions) has no effect.
-
-**true**: Enable first frame display.
-
-**false**: Disable first frame display.
-
-Default value: **false**.
+Whether to enable first frame display, showing the first frame of the video as a preview. When first frame display is enabled, the previewUri field in [VideoOptions](arkts-arkui-videooptions-i.md#VideoOptions) has no effect. **true**: Enable first frame display. **false**: Disable first frame display. Default value: **false**.
 
 **Type:** boolean
 
@@ -60,6 +53,8 @@ Default value: **false**.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,7 +4,9 @@ Defines the class of System Env Key.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class SystemEnvKey<T>--><!--Device-unnamed-declare class SystemEnvKey<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class SystemEnvKey--><!--Device-unnamed-declare class SystemEnvKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,6 +19,8 @@ protected constructor()
 constructor.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ The corresponding type of the system env key.
 **Type:** T
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

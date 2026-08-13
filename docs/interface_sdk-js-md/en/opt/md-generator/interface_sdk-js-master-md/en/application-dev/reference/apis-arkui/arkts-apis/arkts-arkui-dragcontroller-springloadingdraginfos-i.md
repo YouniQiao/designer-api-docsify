@@ -4,6 +4,8 @@ Defines the drag event information when hover detection is triggered. This API p
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface SpringLoadingDragInfos--><!--Device-dragController-interface SpringLoadingDragInfos-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Summary of the dragged data. The default value is null.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -45,6 +49,8 @@ Additional information about the drag event. The default value is an empty strin
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

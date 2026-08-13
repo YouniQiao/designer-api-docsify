@@ -1,16 +1,10 @@
-# @ohos.userIAM.companionDeviceAuth(Companion Device Authentication)
+# @ohos.userIAM.companionDeviceAuth
 
-The **companionDeviceAuth** module is an important part of the OpenHarmony user identity and access management (UserIAM) system. It is dedicated to companion device authentication management. This module provides the system application with capabilities such as querying and subscribing to companion devices, and managing the service scope.
-
-This module applies to the following scenarios:
-
-- Managing the authentication relationship between a companion device and the primary device.  
-- Querying and subscribing to the status changes of a companion device.  
-- Managing the service scope supported by a companion device.  
-- Implementing continuous authentication.  
-- Processing device selection and registration.
+The **companionDeviceAuth** module is an important part of the OpenHarmony user identity and access management ( UserIAM) system. It is dedicated to companion device authentication management. This module provides the system application with capabilities such as querying and subscribing to companion devices, and managing the service scope. This module applies to the following scenarios: - Managing the authentication relationship between a companion device and the primary device. - Querying and subscribing to the status changes of a companion device. - Managing the service scope supported by a companion device. - Implementing continuous authentication. - Processing device selection and registration.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,10 +27,10 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor) |
-| [registerDeviceSelectCallback](arkts-userauthentication-companiondeviceauth-registerdeviceselectcallback-f-sys.md#registerdeviceselectcallback) |
-| [unregisterDeviceSelectCallback](arkts-userauthentication-companiondeviceauth-unregisterdeviceselectcallback-f-sys.md#unregisterdeviceselectcallback) |
-| [updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateenabledbusinessids) |
+| [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor-(System-API)) |
+| [registerDeviceSelectCallback](arkts-userauthentication-companiondeviceauth-registerdeviceselectcallback-f-sys.md#registerDeviceSelectCallback-(System-API)) |
+| [unregisterDeviceSelectCallback](arkts-userauthentication-companiondeviceauth-unregisterdeviceselectcallback-f-sys.md#unregisterDeviceSelectCallback-(System-API)) |
+| [updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateEnabledBusinessIds-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

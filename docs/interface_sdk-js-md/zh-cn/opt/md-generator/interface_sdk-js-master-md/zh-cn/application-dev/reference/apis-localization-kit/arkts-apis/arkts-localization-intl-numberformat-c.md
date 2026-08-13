@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 <!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
@@ -17,6 +19,8 @@ constructor()
 使用当前系统区域创建数字格式化对象。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,6 +46,8 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 根据指定的区域和配置项创建数字格式化对象。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +80,8 @@ format(num: number): string
 对数字进行格式化，返回格式化后的数字字符串。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -120,6 +128,8 @@ formatRange(startRange: number, endRange: number): string
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
@@ -157,6 +167,8 @@ resolvedOptions(): NumberOptions
 获取创建数字格式化对象时设置的配置项。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

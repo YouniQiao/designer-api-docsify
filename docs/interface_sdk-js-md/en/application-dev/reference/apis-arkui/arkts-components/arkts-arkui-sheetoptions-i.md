@@ -8,35 +8,11 @@ Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindop
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface SheetOptions extends BindOptions--><!--Device-unnamed-declare interface SheetOptions extends BindOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface SheetOptions--><!--Device-unnamed-declare interface SheetOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## shouldDismiss
-
-```TypeScript
-shouldDismiss?: (sheetDismiss: SheetDismiss) => void
-```
-
-Callback function when the sheet interactive dismiss
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SheetOptions-shouldDismiss?: (sheetDismiss: SheetDismiss) => void--><!--Device-SheetOptions-shouldDismiss?: (sheetDismiss: SheetDismiss) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sheetDismiss | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | Yes |  |
 
 ## blurStyle
 
@@ -54,6 +30,8 @@ Defines sheet background blur Style
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -70,11 +48,13 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Defines the sheet's border color.
 
-**Type:** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
+**Type:** ResourceColor \| EdgeColors \| LocalizedEdgeColors
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,11 +72,13 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the sheet's border style.
 
-**Type:** BorderStyle \| [EdgeStyles](../arkts-apis/arkts-arkui-units-edgestyles-i.md)
+**Type:** BorderStyle \| EdgeStyles
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,11 +96,13 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Defines the sheet's border width.
 
-**Type:** Dimension \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** Dimension \| EdgeWidths \| LocalizedEdgeWidths
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,6 +128,8 @@ Select a detent from detents property
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -165,6 +151,8 @@ Defines sheet detents
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,6 +178,8 @@ Defines whether the control bar is displayed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -213,6 +203,8 @@ Sets whether the sheet edge has spring effect.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,6 +230,8 @@ Defines whether the sheet dragbar is floating, when it's displayed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -261,6 +255,8 @@ Defines whether to respond to the hover mode.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -286,6 +282,8 @@ Set whether interaction is allowed outside the sheet
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -309,6 +307,8 @@ Defines sheet height
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,6 +334,8 @@ Defines the sheet's display area in hover mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -358,6 +360,8 @@ Determine the mode of sheet how to avoid keyboard.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -379,6 +383,8 @@ Defines sheet maskColor
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,6 +410,8 @@ Defines transition type when preferType is SheetType.CONTENT_COVER
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -428,6 +436,8 @@ Determine the level sheet shows, whether sheet should be displayed within the pa
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -449,6 +459,8 @@ Called when detents of the sheet changed
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -472,6 +484,8 @@ Called when height of the sheet is changed
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -493,6 +507,8 @@ Called when the sheet type changed
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -516,6 +532,8 @@ Called when width of the sheet changed
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -537,6 +555,8 @@ Callback function when the sheet will dismiss
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -560,6 +580,8 @@ Sheet springs back callback when dismiss
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -574,7 +596,7 @@ Sheet springs back callback when dismiss
 placement?: Placement
 ```
 
-The placement of popup sheet type.Supports all positions defined in Placement.
+The placement of popup sheet type. Supports all positions defined in Placement.
 
 **Type:** Placement
 
@@ -583,6 +605,8 @@ The placement of popup sheet type.Supports all positions defined in Placement.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -608,6 +632,8 @@ placement On target node
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -629,6 +655,8 @@ Defines the sheet prefer type
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -652,6 +680,8 @@ Defines sheet radius
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -666,9 +696,7 @@ Defines sheet radius
 radiusRenderStrategy?: RenderStrategy
 ```
 
-Define strategy for drawing rounded corners.NOTE
-
-1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly onto the canvas with rounded corners applied.2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
+Define strategy for drawing rounded corners. NOTE 1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly onto the canvas with rounded corners applied. 2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
 
 **Type:** RenderStrategy
 
@@ -677,6 +705,8 @@ Define strategy for drawing rounded corners.NOTE
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -702,6 +732,8 @@ Determine sheet scroll size mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -724,11 +756,37 @@ Defines the sheet's shadow.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SheetOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-SheetOptions-shadow?: ShadowOptions | ShadowStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shouldDismiss
+
+```TypeScript
+shouldDismiss?: (sheetDismiss: SheetDismiss) => void
+```
+
+Callback function when the sheet interactive dismiss
+
+**Type:** (sheetDismiss: SheetDismiss) =&gt; void
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SheetOptions-shouldDismiss?: (sheetDismiss: SheetDismiss) => void--><!--Device-SheetOptions-shouldDismiss?: (sheetDismiss: SheetDismiss) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -747,6 +805,8 @@ Defines whether the close icon is displayed
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -772,6 +832,8 @@ Whether to display in the sub window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -788,11 +850,13 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for sheet. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of sheet.
 
-**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -816,6 +880,8 @@ Defines the sheet title
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -838,6 +904,8 @@ The UIContext that the sheet belongs to
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -859,6 +927,8 @@ Defines the sheet's width.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

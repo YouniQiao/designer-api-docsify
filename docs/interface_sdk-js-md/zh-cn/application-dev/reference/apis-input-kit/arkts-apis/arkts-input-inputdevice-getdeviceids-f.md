@@ -6,9 +6,7 @@
 function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-获取所有输入设备的ID列表，使用callback异步回调。
-
-> **说明：**
+获取所有输入设备的ID列表，使用callback异步回调。 > **说明：**
 
 **起始版本：** 8
 
@@ -26,7 +24,7 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。当获取成功，err为undefined，data为所有输入设备的ID列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。当获取成功，err为undefined，data为所有输入设备的ID列表；否则为错误对象。 |
 
 ## 示例
 
@@ -62,9 +60,7 @@ struct Index {
 function getDeviceIds(): Promise<Array<number>>
 ```
 
-获取所有输入设备的ID列表，使用Promise异步回调。
-
-> **说明：**
+获取所有输入设备的ID列表，使用Promise异步回调。 > **说明：**
 
 **起始版本：** 8
 

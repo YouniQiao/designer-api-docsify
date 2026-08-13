@@ -16,6 +16,8 @@ Check whether the specific action type is supported.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-mechanicManager-function isSupportAction(mechId: int, actionType: ActionType): boolean--><!--Device-mechanicManager-function isSupportAction(mechId: int, actionType: ActionType): boolean-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -39,6 +41,6 @@ Check whether the specific action type is supported.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |

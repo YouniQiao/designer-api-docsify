@@ -26,7 +26,7 @@ actionType: InterruptActionType
 
 **废弃版本：** 9
 
-**替代接口：** [eventType](ohos.multimedia.audio.InterruptEvent#eventType)
+**替代接口：** eventType
 
 <!--Device-InterruptAction-actionType: InterruptActionType--><!--Device-InterruptAction-actionType: InterruptActionType-End-->
 
@@ -86,7 +86,7 @@ type?: InterruptType
 
 **废弃版本：** 9
 
-**替代接口：** [eventType](ohos.multimedia.audio.InterruptEvent#eventType)
+**替代接口：** eventType
 
 <!--Device-InterruptAction-type?: InterruptType--><!--Device-InterruptAction-type?: InterruptType-End-->
 

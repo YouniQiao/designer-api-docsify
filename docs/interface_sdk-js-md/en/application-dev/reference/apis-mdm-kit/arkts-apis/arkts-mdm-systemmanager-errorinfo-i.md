@@ -6,6 +6,8 @@ Represents the update error information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-interface ErrorInfo--><!--Device-systemManager-interface ErrorInfo-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,6 +32,8 @@ Error code.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ErrorInfo-code: number--><!--Device-ErrorInfo-code: number-End-->
@@ -49,6 +53,8 @@ Error message.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

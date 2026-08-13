@@ -4,11 +4,13 @@
 
 **继承/实现关系：** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-sensor-interface MagneticFieldUncalibratedResponse extends Response--><!--Device-sensor-interface MagneticFieldUncalibratedResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface MagneticFieldUncalibratedResponse--><!--Device-sensor-interface MagneticFieldUncalibratedResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,11 +22,13 @@ biasX: double
 
 x轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MagneticFieldUncalibratedResponse-biasX: double--><!--Device-MagneticFieldUncalibratedResponse-biasX: double-End-->
 
@@ -38,11 +42,13 @@ biasY: double
 
 y轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MagneticFieldUncalibratedResponse-biasY: double--><!--Device-MagneticFieldUncalibratedResponse-biasY: double-End-->
 
@@ -56,11 +62,13 @@ biasZ: double
 
 z轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MagneticFieldUncalibratedResponse-biasZ: double--><!--Device-MagneticFieldUncalibratedResponse-biasZ: double-End-->
 
@@ -74,11 +82,13 @@ x: double
 
 x轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MagneticFieldUncalibratedResponse-x: double--><!--Device-MagneticFieldUncalibratedResponse-x: double-End-->
 
@@ -92,11 +102,13 @@ y: double
 
 y轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MagneticFieldUncalibratedResponse-y: double--><!--Device-MagneticFieldUncalibratedResponse-y: double-End-->
 
@@ -110,11 +122,13 @@ z: double
 
 z轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MagneticFieldUncalibratedResponse-z: double--><!--Device-MagneticFieldUncalibratedResponse-z: double-End-->
 

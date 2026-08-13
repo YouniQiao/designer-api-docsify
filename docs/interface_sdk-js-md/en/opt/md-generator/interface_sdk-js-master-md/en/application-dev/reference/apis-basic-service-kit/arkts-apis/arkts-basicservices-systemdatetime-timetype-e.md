@@ -2,7 +2,9 @@
 
 Enumerates the types of time to obtain.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-enum TimeType--><!--Device-systemDateTime-enum TimeType-End-->
 
@@ -16,7 +18,9 @@ STARTUP = 0
 
 Number of milliseconds elapsed since system startup, including the deep sleep time.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeType-STARTUP = 0--><!--Device-TimeType-STARTUP = 0-End-->
 
@@ -30,7 +34,9 @@ ACTIVE = 1
 
 Number of milliseconds elapsed since system startup, excluding the deep sleep time.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeType-ACTIVE = 1--><!--Device-TimeType-ACTIVE = 1-End-->
 

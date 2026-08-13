@@ -2,7 +2,9 @@
 
 appManager模块提供App管理的能力，包括查询当前是否处于稳定性测试场景、查询是否为ram受限设备、获取应用程序的内存大小、获取有关运行进程的信息等。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace appManager--><!--Device-unnamed-declare namespace appManager-End-->
 
@@ -14,61 +16,70 @@ appManager模块提供App管理的能力，包括查询当前是否处于稳定�
 
 | 名称 |
 | --- |
-| [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getappmemorysize) |
-| [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getappmemorysize-1) |
-| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation) |
-| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1) |
-| [isAppRunning](arkts-ability-appmanager-isapprunning-f.md#isapprunning) |
-| [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice) |
-| [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice-1) |
-| [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md#isrunninginstabilitytest) |
-| [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md#isrunninginstabilitytest-1) |
-| [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md#killprocessesbybundlename-1) |
-| [off](arkts-ability-appmanager-off-f.md#off) |
-| [off](arkts-ability-appmanager-off-f.md#off-1) |
-| [on](arkts-ability-appmanager-on-f.md#on) |
-| [on](arkts-ability-appmanager-on-f.md#on-1) |
+| [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getAppMemorySize) |
+| [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getAppMemorySize) |
+| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation) |
+| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation) |
+| [isAppRunning](arkts-ability-appmanager-isapprunning-f.md#isAppRunning) |
+| [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isRamConstrainedDevice) |
+| [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isRamConstrainedDevice) |
+| [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md#isRunningInStabilityTest) |
+| [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md#isRunningInStabilityTest) |
+| [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md#killProcessesByBundleName) |
+| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md#offApplicationStateChange) |
+| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md#offApplicationStateChange) |
+| [off_applicationState](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState) |
+| [off_applicationState](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState) |
+| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md#onApplicationStateChange) |
+| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md#onApplicationStateChange) |
+| [on_applicationState](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) |
+| [on_applicationState](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [clearUpAppData](arkts-ability-appmanager-clearupappdata-f-sys.md#clearupappdata) |
-| [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearupapplicationdata) |
-| [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearupapplicationdata-1) |
-| [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getforegroundapplications) |
-| [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getforegroundapplications-1) |
-| [getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions) |
-| [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles) |
-| [getProcessMemoryByPid](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md#getprocessmemorybypid) |
-| [getProcessMemoryByPid](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md#getprocessmemorybypid-1) |
-| [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo) |
-| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename) |
-| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-1) |
-| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-2) |
-| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-3) |
-| [getRunningProcessInformationByBundleType](arkts-ability-appmanager-getrunningprocessinformationbybundletype-f-sys.md#getrunningprocessinformationbybundletype) |
-| [getSupportedProcessCachePids](arkts-ability-appmanager-getsupportedprocesscachepids-f-sys.md#getsupportedprocesscachepids) |
-| [isApplicationRunning](arkts-ability-appmanager-isapplicationrunning-f-sys.md#isapplicationrunning) |
-| [isApplicationRunning](arkts-ability-appmanager-isapplicationrunning-f-sys.md#isapplicationrunning-1) |
-| [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md#issharedbundlerunning) |
-| [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md#issharedbundlerunning-1) |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount) |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount-1) |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount-2) |
-| [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killprocessesbybundlename) |
-| [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killprocessesbybundlename-2) |
-| [killProcessesInBatch](arkts-ability-appmanager-killprocessesinbatch-f-sys.md#killprocessesinbatch) |
-| [off](arkts-ability-appmanager-off-f-sys.md#off-2) |
-| [off](arkts-ability-appmanager-off-f-sys.md#off-3) |
-| [on](arkts-ability-appmanager-on-f-sys.md#on-2) |
-| [on](arkts-ability-appmanager-on-f-sys.md#on-3) |
-| [on](arkts-ability-appmanager-on-f-sys.md#on-4) |
-| [preloadApplication](arkts-ability-appmanager-preloadapplication-f-sys.md#preloadapplication) |
-| [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md#setkeepaliveforappserviceextension) |
-| [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md#setkeepaliveforbundle) |
-| [terminateMission](arkts-ability-appmanager-terminatemission-f-sys.md#terminatemission) |
+| [clearUpAppData](arkts-ability-appmanager-clearupappdata-f-sys.md#clearUpAppData（系统接口）) |
+| [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData（系统接口）) |
+| [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData（系统接口）) |
+| [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications（系统接口）) |
+| [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications（系统接口）) |
+| [getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getKeepAliveAppServiceExtensions（系统接口）) |
+| [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getKeepAliveBundles（系统接口）) |
+| [getProcessMemoryByPid](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md#getProcessMemoryByPid（系统接口）) |
+| [getProcessMemoryByPid](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md#getProcessMemoryByPid（系统接口）) |
+| [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getRunningMultiAppInfo（系统接口）) |
+| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getRunningProcessInfoByBundleName（系统接口）) |
+| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getRunningProcessInfoByBundleName（系统接口）) |
+| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getRunningProcessInfoByBundleName（系统接口）) |
+| [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getRunningProcessInfoByBundleName（系统接口）) |
+| [getRunningProcessInformationByBundleType](arkts-ability-appmanager-getrunningprocessinformationbybundletype-f-sys.md#getRunningProcessInformationByBundleType（系统接口）) |
+| [getSupportedProcessCachePids](arkts-ability-appmanager-getsupportedprocesscachepids-f-sys.md#getSupportedProcessCachePids（系统接口）) |
+| [isApplicationRunning](arkts-ability-appmanager-isapplicationrunning-f-sys.md#isApplicationRunning（系统接口）) |
+| [isApplicationRunning](arkts-ability-appmanager-isapplicationrunning-f-sys.md#isApplicationRunning（系统接口）) |
+| [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md#isSharedBundleRunning（系统接口）) |
+| [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md#isSharedBundleRunning（系统接口）) |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killProcessWithAccount（系统接口）) |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killProcessWithAccount（系统接口）) |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killProcessWithAccount（系统接口）) |
+| [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killProcessesByBundleName（系统接口）) |
+| [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killProcessesByBundleName（系统接口）) |
+| [killProcessesInBatch](arkts-ability-appmanager-killprocessesinbatch-f-sys.md#killProcessesInBatch（系统接口）) |
+| [offAbilityFirstFrameStateChange](arkts-ability-appmanager-offabilityfirstframestatechange-f-sys.md#offAbilityFirstFrameStateChange（系统接口）) |
+| [offAppForegroundStateChange](arkts-ability-appmanager-offappforegroundstatechange-f-sys.md#offAppForegroundStateChange（系统接口）) |
+| [off_abilityFirstFrameState](arkts-ability-appmanager-offabilityfirstframestate-f-sys.md#off_abilityFirstFrameState) |
+| [off_appForegroundState](arkts-ability-appmanager-offappforegroundstate-f-sys.md#off_appForegroundState) |
+| [onAbilityFirstFrameStateChange](arkts-ability-appmanager-onabilityfirstframestatechange-f-sys.md#onAbilityFirstFrameStateChange（系统接口）) |
+| [onAppForegroundStateChange](arkts-ability-appmanager-onappforegroundstatechange-f-sys.md#onAppForegroundStateChange（系统接口）) |
+| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f-sys.md#onApplicationStateChange（系统接口）) |
+| [on_abilityFirstFrameState](arkts-ability-appmanager-onabilityfirstframestate-f-sys.md#on_abilityFirstFrameState) |
+| [on_appForegroundState](arkts-ability-appmanager-onappforegroundstate-f-sys.md#on_appForegroundState) |
+| [on_applicationState](arkts-ability-appmanager-onapplicationstate-f-sys.md#on_applicationState) |
+| [preloadApplication](arkts-ability-appmanager-preloadapplication-f-sys.md#preloadApplication（系统接口）) |
+| [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md#setKeepAliveForAppServiceExtension（系统接口）) |
+| [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md#setKeepAliveForBundle（系统接口）) |
+| [terminateMission](arkts-ability-appmanager-terminatemission-f-sys.md#terminateMission（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

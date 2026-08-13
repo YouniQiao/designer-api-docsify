@@ -2,7 +2,9 @@
 
 Set configures of a watermark to AVRecorder. The position starts at top left corner.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface WatermarkConfig--><!--Device-media-interface WatermarkConfig-End-->
 
@@ -26,7 +28,9 @@ Offset of the watermark to the left line of pixel.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatermarkConfig-left: int--><!--Device-WatermarkConfig-left: int-End-->
 
@@ -44,7 +48,9 @@ Offset of the watermark to the top line of pixel.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatermarkConfig-top: int--><!--Device-WatermarkConfig-top: int-End-->
 

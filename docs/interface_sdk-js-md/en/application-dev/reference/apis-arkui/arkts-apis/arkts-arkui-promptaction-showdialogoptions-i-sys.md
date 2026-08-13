@@ -1,12 +1,14 @@
 # ShowDialogOptions
 
-Show dialog options.
+Describes the options for showing the dialog box.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-promptAction-export interface ShowDialogOptions--><!--Device-promptAction-export interface ShowDialogOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-interface ShowDialogOptions--><!--Device-promptAction-interface ShowDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +32,9 @@ Sets the distortion animation Mode of the dialog.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +58,9 @@ Sets the edgeLight animation Mode of the dialog.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

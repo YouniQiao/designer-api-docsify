@@ -1,12 +1,12 @@
 # ValueType
 
-Indicates the {@code ValueType}.
+Indicates the {@code ValueType}. &lt;p&gt;{@code ValueType} is obtained based on the value.
 
-&lt;p&gt;{@code ValueType} is obtained based on the value.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-enum ValueType--><!--Device-distributedKVStore-enum ValueType-End-->
 
@@ -20,9 +20,11 @@ STRING = 0
 
 Indicates that the value type is string.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +44,8 @@ Indicates that the value type is int.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -58,6 +62,8 @@ Indicates that the value type is float.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -70,9 +76,11 @@ BYTE_ARRAY = 3
 
 Indicates that the value type is byte array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,9 +96,11 @@ BOOLEAN = 4
 
 Indicates that the value type is boolean.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,9 +116,11 @@ DOUBLE = 5
 
 Indicates that the value type is double.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,7 +138,9 @@ Indicates that the value type is long.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

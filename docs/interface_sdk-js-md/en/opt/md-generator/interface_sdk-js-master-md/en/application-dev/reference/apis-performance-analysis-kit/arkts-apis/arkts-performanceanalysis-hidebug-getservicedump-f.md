@@ -12,9 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getServiceDump(serviceid : number, fd : number, args : Array<string>) : void
 ```
 
-Obtains system service information.It need dump permission.This API can be called only by system application.
+Obtains system service information. It need dump permission. This API can be called only by system application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DUMP
 
@@ -34,8 +36,8 @@ Obtains system service information.It need dump permission.This API can be calle
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) |
 
 ## Examples
 

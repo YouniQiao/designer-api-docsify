@@ -4,6 +4,8 @@ interface of form lifecycle.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface LifecycleForm--><!--Device-unnamed-export declare interface LifecycleForm-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -17,6 +19,8 @@ onShare?(formId: string): { [key: string]: any }
 Called when the system shares the form.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -44,9 +48,11 @@ Called when the system shares the form.
 onShareForm?(formId: string): Record<string, Object>
 ```
 
-Called when the system shares the form.The ability of this function is same as onShare. If both are set, this function will be called.
+Called when the system shares the form. The ability of this function is same as onShare. If both are set, this function will be called.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -66,4 +72,4 @@ Called when the system shares the form.The ability of this function is same as o
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; |

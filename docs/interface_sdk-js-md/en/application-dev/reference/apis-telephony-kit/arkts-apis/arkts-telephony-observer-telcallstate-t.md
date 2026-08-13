@@ -6,9 +6,11 @@ type TelCallState = call.TelCallState
 
 Enumerates call states.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-observer-type TelCallState = call.TelCallState--><!--Device-observer-type TelCallState = call.TelCallState-End-->
 

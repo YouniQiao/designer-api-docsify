@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnLoadFinishedEvent--><!--Device-unnamed-declare interface OnLoadFinishedEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ url: string
 **类型：** string
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-OnLoadFinishedEvent-url: string--><!--Device-OnLoadFinishedEvent-url: string-End-->
 

@@ -8,6 +8,8 @@ type MessageType = 'message' | 'messageerror'
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-type MessageType = 'message' | 'messageerror'--><!--Device-unnamed-type MessageType = 'message' | 'messageerror'-End-->

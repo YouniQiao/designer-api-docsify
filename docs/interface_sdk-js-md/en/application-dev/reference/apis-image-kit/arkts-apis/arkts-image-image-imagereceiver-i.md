@@ -1,15 +1,12 @@
 # ImageReceiver
 
-The **ImageReceiver** class provides APIs to obtain the surface ID of a component, read the latest image, read the next image, and release the ImageReceiver instance. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput).Before calling any APIs in ImageReceiver, you must use   
-[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver-2)to create an ImageReceiver instance.Since API version 23, you are advised to use   
-[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver-2) to create an **ImageReceiver** instance based on the passed   
-[ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md#ImageReceiverOptions). Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **ImageReceiver** class provides APIs to obtain the surface ID of a component, read the latest image, read the next image, and release the ImageReceiver instance. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput) . Before calling any APIs in ImageReceiver, you must use [image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver) to create an ImageReceiver instance. Since API version 23, you are advised to use [image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver) to create an **ImageReceiver** instance based on the passed [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md#ImageReceiverOptions). Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface ImageReceiver--><!--Device-image-interface ImageReceiver-End-->
 
@@ -29,9 +26,11 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 
 Obtains a surface ID for the camera or other components. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-getReceivingSurfaceId(callback: AsyncCallback<string>): void--><!--Device-ImageReceiver-getReceivingSurfaceId(callback: AsyncCallback<string>): void-End-->
 
@@ -41,7 +40,7 @@ Obtains a surface ID for the camera or other components. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the surface ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the surface ID obtained. Otherwise, **err** is an error object. |
 
 ## getReceivingSurfaceId
 
@@ -51,9 +50,11 @@ getReceivingSurfaceId(): Promise<string>
 
 Obtains a surface ID for the camera or other components. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>--><!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>-End-->
 
@@ -65,7 +66,31 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the surface ID. |
 
-## off('imageArrival')
+## offImageArrival
+
+```TypeScript
+offImageArrival(callback?: AsyncCallback<void>): void
+```
+
+Remove callback subscriptions when releasing buffer.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageReceiver
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to be removed. |
+
+## off_imageArrival
 
 ```TypeScript
 off(type: 'imageArrival', callback?: AsyncCallback<void>): void
@@ -77,6 +102,8 @@ Unregisters the callback function that is triggered when the buffer is released.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 <!--Device-ImageReceiver-off(type: 'imageArrival', callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-off(type: 'imageArrival', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -86,52 +113,7 @@ Unregisters the callback function that is triggered when the buffer is released.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | Yes | Type of event, which is **'imageArrival'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback to unregister. |
-
-## offImageArrival
-
-```TypeScript
-offImageArrival(callback?: AsyncCallback<void>): void
-```
-
-Remove callback subscriptions when releasing buffer.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.ImageReceiver
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback to be removed. |
-
-## on('imageArrival')
-
-```TypeScript
-on(type: 'imageArrival', callback: AsyncCallback<void>): void
-```
-
-Listens for image arrival events. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-<!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.ImageReceiver
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to unregister. |
 
 ## onImageArrival
 
@@ -143,7 +125,9 @@ Subscribe callback when receiving an image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void-End-->
 
@@ -153,7 +137,32 @@ Subscribe callback when receiving an image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return image. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return image. |
+
+## on_imageArrival
+
+```TypeScript
+on(type: 'imageArrival', callback: AsyncCallback<void>): void
+```
+
+Listens for image arrival events. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+<!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageReceiver
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readLatestImage
 
@@ -161,19 +170,13 @@ Subscribe callback when receiving an image.
 readLatestImage(callback: AsyncCallback<Image>): void
 ```
 
-Reads the latest image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
+Reads the latest image from the ImageReceiver instance. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called to receive data only after the > [on](#on_imageArrival) callback is triggered. > When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call > [release](arkts-image-image-image-i.md#release) to release the > object. New data can be received only after the release.
 
-> **NOTE：**
-> 
-> This API can be called to receive data only after the
-> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
-> When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call
-> [release](arkts-image-image-image-i.md#release) to release the
-> object. New data can be received only after the release.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readLatestImage(callback: AsyncCallback<Image>): void--><!--Device-ImageReceiver-readLatestImage(callback: AsyncCallback<Image>): void-End-->
 
@@ -183,7 +186,7 @@ Reads the latest image from the ImageReceiver instance. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
 
 ## readLatestImage
 
@@ -191,19 +194,13 @@ Reads the latest image from the ImageReceiver instance. This API uses an asynchr
 readLatestImage(): Promise<Image>
 ```
 
-Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
+Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the > [on](#on_imageArrival) callback is triggered. > When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call > [release](arkts-image-image-image-i.md#release) to release the > object. New data can be received only after the release.
 
-> **NOTE：**
-> 
-> This API can be called to receive data only after the
-> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
-> When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call
-> [release](arkts-image-image-image-i.md#release) to release the
-> object. New data can be received only after the release.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readLatestImage(): Promise<Image>--><!--Device-ImageReceiver-readLatestImage(): Promise<Image>-End-->
 
@@ -221,19 +218,13 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 readNextImage(callback: AsyncCallback<Image>): void
 ```
 
-Reads the next image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
+Reads the next image from the ImageReceiver instance. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called to receive data only after the > [on](#on_imageArrival) callback is triggered. > When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call > [release](arkts-image-image-image-i.md#release) to release the > object. New data can be received only after the release.
 
-> **NOTE：**
-> 
-> This API can be called to receive data only after the
-> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
-> When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call
-> [release](arkts-image-image-image-i.md#release) to release the
-> object. New data can be received only after the release.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readNextImage(callback: AsyncCallback<Image>): void--><!--Device-ImageReceiver-readNextImage(callback: AsyncCallback<Image>): void-End-->
 
@@ -243,7 +234,7 @@ Reads the next image from the ImageReceiver instance. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the next image obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the next image obtained. Otherwise, **err** is an error object. |
 
 ## readNextImage
 
@@ -251,19 +242,13 @@ Reads the next image from the ImageReceiver instance. This API uses an asynchron
 readNextImage(): Promise<Image>
 ```
 
-Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
+Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the > [on](#on_imageArrival) callback is triggered. > When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call > [release](arkts-image-image-image-i.md#release) to release the > object. New data can be received only after the release.
 
-> **NOTE：**
-> 
-> This API can be called to receive data only after the
-> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
-> When the [Image](arkts-image-image-image-i.md#Image) object returned by this API is no longer needed, call
-> [release](arkts-image-image-image-i.md#release) to release the
-> object. New data can be received only after the release.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readNextImage(): Promise<Image>--><!--Device-ImageReceiver-readNextImage(): Promise<Image>-End-->
 
@@ -281,15 +266,13 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageReceiver instance. This API uses an asynchronous callback to return the result.
+Releases this ImageReceiver instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-release(callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-release(callback: AsyncCallback<void>): void-End-->
 
@@ -299,7 +282,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -307,15 +290,13 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this ImageReceiver instance. This API uses a promise to return the result.
+Releases this ImageReceiver instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-release(): Promise<void>--><!--Device-ImageReceiver-release(): Promise<void>-End-->
 
@@ -333,13 +314,15 @@ Before releasing the instance, ensure that all asynchronous operations associate
 readonly capacity: int
 ```
 
-Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.The actual capacity is determined by the device hardware.
+Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readonly capacity: int--><!--Device-ImageReceiver-readonly capacity: int-End-->
 
@@ -351,13 +334,15 @@ Maximum number of images that can be accessed at the same time. This parameter i
 readonly format: ImageFormat
 ```
 
-Image format. The value is an enum value of [ImageFormat](arkts-image-image-imageformat-e.md#ImageFormat). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned depends on the producer, for example, camera.)
+Image format. The value is an enum value of [ImageFormat](arkts-image-image-imageformat-e.md#ImageFormat). ( Currently, only **ImageFormat:JPEG** is supported. The format actually returned depends on the producer, for example, camera.)
 
 **Type:** [ImageFormat](arkts-image-image-imageformat-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readonly format: ImageFormat--><!--Device-ImageReceiver-readonly format: ImageFormat-End-->
 
@@ -373,9 +358,11 @@ Image size. This parameter does not affect the size of the received image. The a
 
 **Type:** Size
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readonly size: Size--><!--Device-ImageReceiver-readonly size: Size-End-->
 

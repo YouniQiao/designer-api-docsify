@@ -2,7 +2,9 @@
 
 Defines the data structure of a notification request, which is used to describe all information about a notification, including the notification content, identifier, display style, and interaction behavior.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationRequest--><!--Device-unnamed-export interface NotificationRequest-End-->
 
@@ -18,7 +20,9 @@ Information about the agent bundle for creating notifications. This parameter is
 
 **Type:** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly agentBundle?: BundleOption--><!--Device-NotificationRequest-readonly agentBundle?: BundleOption-End-->
 
@@ -36,7 +40,9 @@ Application instance key. This parameter is left empty by default.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly appInstanceKey?: string--><!--Device-NotificationRequest-readonly appInstanceKey?: string-End-->
 
@@ -54,7 +60,9 @@ Notification classification. Not supported currently.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-classification?: string--><!--Device-NotificationRequest-classification?: string-End-->
 
@@ -94,7 +102,9 @@ Device ID of the notification source. Not supported currently.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly deviceId?: string--><!--Device-NotificationRequest-readonly deviceId?: string-End-->
 
@@ -105,16 +115,18 @@ Device ID of the notification source. Not supported currently.
 ## extendInfo
 
 ```TypeScript
-extendInfo?: Record<string, Object>
+extendInfo?: Record<string, RecordData>
 ```
 
-Extended parameters customized for the system applications to publish notifications.This parameter is left empty by default.
+Extended parameters customized for the system applications to publish notifications. This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 20
+**Since:** 23
 
-<!--Device-NotificationRequest-extendInfo?: Record<string, Object>--><!--Device-NotificationRequest-extendInfo?: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-NotificationRequest-extendInfo?: Record<string, RecordData>--><!--Device-NotificationRequest-extendInfo?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -126,16 +138,15 @@ Extended parameters customized for the system applications to publish notificati
 forceDistributed?: boolean
 ```
 
-Whether notifications are forcibly displayed in all scenario across devices. The default value is **false**.  
-**NOTE：**This field takes effect only when the application is in the cross-device collaborative management list and **notDistributed** is set to **false**. Check whether the **collaborationFilter** field in the **notification_config.json** file contains the UID or bundle name of the application. For details about the file configuration path, see the **NOTIFICATION_CONFIG_FILE** property in [notification_config_parse.h](https://gitcode.com/openharmony/notification_distributed_notification_service/blob/master/services/ans/include/notification_config_parse.h). If yes, the application is on the cross-device collaborative management list.
-- **true**: Notifications are displayed on all collaboration devices.
-- **false**: Notifications are displayed on the applications that are on the collaborative management list.
+Whether notifications are forcibly displayed in all scenario across devices. The default value is **false**. **NOTE：**This field takes effect only when the application is in the cross-device collaborative management list and **notDistributed** is set to **false**. Check whether the **collaborationFilter** field in the **notification_config.json** file contains the UID or bundle name of the application. For details about the file configuration path, see the **NOTIFICATION_CONFIG_FILE** property in [notification_config_parse.h](https://gitcode.com/openharmony/notification_distributed_notification_service/blob/master/services/ans/include/notification_config_parse.h). If yes, the application is on the cross-device collaborative management list. - **true**: Notifications are displayed on all collaboration devices. - **false**: Notifications are displayed on the applications that are on the collaborative management list.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-forceDistributed?: boolean--><!--Device-NotificationRequest-forceDistributed?: boolean-End-->
 
@@ -155,6 +166,8 @@ Custom group notification information. This parameter is left empty by default.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotificationRequest-groupInfo?: GroupInfo--><!--Device-NotificationRequest-groupInfo?: GroupInfo-End-->
@@ -169,16 +182,15 @@ Custom group notification information. This parameter is left empty by default.
 isRemoveAllowed?: boolean
 ```
 
-Whether the notification can be removed. If a notification is not removable, it will not be deleted when the user touches the delete button below the notification, and it also cannot be deleted by swiping left on the notification and touching the delete button. The default value is **true**.
-
-- **true**: The notification can be removed.  
-- **false**: The notification cannot be removed.
+Whether the notification can be removed. If a notification is not removable, it will not be deleted when the user touches the delete button below the notification, and it also cannot be deleted by swiping left on the notification and touching the delete button. The default value is **true**. - **true**: The notification can be removed. - **false**: The notification cannot be removed.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 11+: ohos.permission.SET_UNREMOVABLE_NOTIFICATION
@@ -195,16 +207,15 @@ Whether the notification can be removed. If a notification is not removable, it 
 notDistributed?: boolean
 ```
 
-Whether notifications are not displayed in all scenarios across devices. The default value is **false**.  
-**NOTE：**This field is mutually exclusive with the **forceDistributed** field. When both fields are set to **true**, only the **notDistributed** field takes effect.
-- **true**: Notifications are displayed only on the local device.
-- **false**: Notifications are displayed on all collaboration devices.
+Whether notifications are not displayed in all scenarios across devices. The default value is **false**. **NOTE：**This field is mutually exclusive with the **forceDistributed** field. When both fields are set to **true**, only the **notDistributed** field takes effect. - **true**: Notifications are displayed only on the local device. - **false**: Notifications are displayed on all collaboration devices.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-notDistributed?: boolean--><!--Device-NotificationRequest-notDistributed?: boolean-End-->
 
@@ -222,9 +233,31 @@ Notification mode control. The default value is **0**. This API can be used to r
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-notificationControlFlags?: long--><!--Device-NotificationRequest-notificationControlFlags?: long-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+## overlayIcon
+
+```TypeScript
+overlayIcon?: image.PixelMap
+```
+
+Notification overlay icon. This parameter is left empty by default. The total bytes of the icon pixels cannot exceed 192 KB.
+
+**Type:** image.PixelMap
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-NotificationRequest-overlayIcon?: image.PixelMap--><!--Device-NotificationRequest-overlayIcon?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -240,7 +273,9 @@ Information about the proxied bundle. This parameter is left empty by default.
 
 **Type:** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-representativeBundle?: BundleOption--><!--Device-NotificationRequest-representativeBundle?: BundleOption-End-->
 
@@ -258,7 +293,9 @@ Notification source. Not supported currently.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly source?: int--><!--Device-NotificationRequest-readonly source?: int-End-->
 
@@ -278,6 +315,8 @@ Condition object. This parameter is left empty by default.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-NotificationRequest-trigger?:Trigger--><!--Device-NotificationRequest-trigger?:Trigger-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -294,7 +333,9 @@ Intelligent notification unification information. This parameter is left empty b
 
 **Type:** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-unifiedGroupInfo?: UnifiedGroupInfo--><!--Device-NotificationRequest-unifiedGroupInfo?: UnifiedGroupInfo-End-->
 

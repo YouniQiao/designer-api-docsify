@@ -12,11 +12,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPSuffix(): string
 ```
 
-Obtains the DLP file name extension. After the API is called successfully, the DLP file name extension (for example, .dlp) is returned. This API returns the result synchronously.
-
-This API is used to obtain the standard extension of the DLP file, which can be used to construct the DLP file name or the determination of the file type.
+Obtains the DLP file name extension. After the API is called successfully, the DLP file name extension (for example, .dlp) is returned. This API returns the result synchronously. This API is used to obtain the standard extension of the DLP file, which can be used to construct the DLP file name or the determination of the file type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getDLPSuffix(): string--><!--Device-dlpPermission-function getDLPSuffix(): string-End-->
 
@@ -32,8 +32,8 @@ This API is used to obtain the standard extension of the DLP file, which can be 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 

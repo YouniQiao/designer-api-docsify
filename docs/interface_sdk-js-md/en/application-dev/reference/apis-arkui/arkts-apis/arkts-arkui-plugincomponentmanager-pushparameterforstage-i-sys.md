@@ -2,11 +2,13 @@
 
 Plugin component push parameters which is used in push function.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-pluginComponentManager-export interface PushParameterForStage--><!--Device-pluginComponentManager-export interface PushParameterForStage-End-->
+**Deprecated since:** -1
+
+<!--Device-pluginComponentManager-interface PushParameterForStage--><!--Device-pluginComponentManager-interface PushParameterForStage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,13 +28,13 @@ data: KVObject
 
 Defines data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-data: KVObject--><!--Device-PushParameterForStage-data: KVObject-End-->
 
@@ -48,13 +50,13 @@ extraData: KVObject
 
 Defines extraData.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-extraData: KVObject--><!--Device-PushParameterForStage-extraData: KVObject-End-->
 
@@ -72,11 +74,11 @@ Defines jsonPath.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-jsonPath?: string--><!--Device-PushParameterForStage-jsonPath?: string-End-->
 
@@ -94,11 +96,11 @@ Defines name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-name: string--><!--Device-PushParameterForStage-name: string-End-->
 
@@ -116,11 +118,11 @@ Defines owner.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-owner: Want--><!--Device-PushParameterForStage-owner: Want-End-->
 
@@ -138,11 +140,11 @@ Defines target.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-target: Want--><!--Device-PushParameterForStage-target: Want-End-->
 

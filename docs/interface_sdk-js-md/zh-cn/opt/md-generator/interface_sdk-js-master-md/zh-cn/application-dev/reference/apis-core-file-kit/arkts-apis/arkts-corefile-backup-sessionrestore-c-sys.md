@@ -2,7 +2,9 @@
 
 恢复流程对象，用于支撑应用全量恢复流程。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backup-class SessionRestore--><!--Device-backup-class SessionRestore-End-->
 
@@ -18,7 +20,9 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], infos?: s
 
 添加需要恢复的应用及其扩展信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -155,7 +159,9 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], callback:
 
 添加需要恢复的应用。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -266,7 +272,9 @@ cancel(bundleName: string): number
 
 取消指定应用的恢复任务。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -292,9 +300,9 @@ cancel(bundleName: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -371,7 +379,9 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 清理指定应用的临时目录。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -397,8 +407,8 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -474,7 +484,9 @@ constructor(callbacks: GeneralCallbacks)
 
 构造SessionRestore实例。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -549,6 +561,8 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.BACKUP
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -578,8 +592,8 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例
@@ -659,7 +673,9 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 获取指定应用的兼容性信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -686,8 +702,8 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -760,9 +776,11 @@ async function getRestoreCompatibilityInfo() {
 getFileHandle(fileMeta: FileMeta): Promise<void>
 ```
 
-向服务端请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReady回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
+向服务端请求共享文件，该接口属于零拷贝能力。 开发者可通过onFileReady回调获取文件。 客户端完成文件处理后，调用publishFile发布文件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -861,9 +879,11 @@ async function getFileHandle() {
 getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-向服务端请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReady回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
+向服务端请求共享文件，该接口属于零拷贝能力。 开发者可通过onFileReady回调获取文件。 客户端完成文件处理后，调用publishFile发布文件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -954,9 +974,11 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 getFileHandles(fileMeta: FileMeta): Promise<void>
 ```
 
-向服务端批量请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReadyBatch回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
+向服务端批量请求共享文件，该接口属于零拷贝能力。 开发者可通过onFileReadyBatch回调获取文件。 客户端完成文件处理后，调用publishFile发布文件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -986,8 +1008,8 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例
@@ -1073,7 +1095,9 @@ getLocalCapabilities(): Promise<FileData>
 
 获取描述本地能力的JSON文件。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -1095,8 +1119,8 @@ getLocalCapabilities(): Promise<FileData>
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900042 |
 
@@ -1209,7 +1233,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](js-apis-file-fs.md)提供的[fileIo.stat](js-apis-file-fs.md#fileiostat)等相关接口获取，能力文件内容示例：
+能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md#fileIo)提供的fileIo.stat等相关接口获取，能力文件内容示例：
 
 ```TypeScript
 {
@@ -1237,6 +1261,8 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 将文件从源路径迁移到目标路径。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -1267,8 +1293,8 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例
@@ -1353,9 +1379,11 @@ async function testMigrateFile() {
 publishFile(fileMeta: FileMeta): Promise<void>
 ```
 
-向备份服务发布文件句柄，通知服务端文件内容已准备完成。该接口属于零拷贝能力。
+向备份服务发布文件句柄，通知服务端文件内容已准备完成。 该接口属于零拷贝能力。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -1466,9 +1494,11 @@ g_session = createSessionRestore();
 publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-向备份服务发布文件句柄，通知服务端文件内容已准备完成。该接口属于零拷贝能力。
+向备份服务发布文件句柄，通知服务端文件内容已准备完成。 该接口属于零拷贝能力。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -1578,7 +1608,9 @@ release(): Promise<void>
 
 结束恢复流程，断开应用与备份恢复服务的连接。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -1598,11 +1630,11 @@ release(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900005 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900042 |
 

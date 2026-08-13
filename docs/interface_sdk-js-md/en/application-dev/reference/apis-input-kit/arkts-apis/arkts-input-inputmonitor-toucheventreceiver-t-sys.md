@@ -6,9 +6,11 @@ type TouchEventReceiver = (touchEvent: TouchEvent) => boolean
 
 Callback used to return the touch event.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMonitor-type TouchEventReceiver = (touchEvent: TouchEvent) => boolean--><!--Device-inputMonitor-type TouchEventReceiver = (touchEvent: TouchEvent) => boolean-End-->
 

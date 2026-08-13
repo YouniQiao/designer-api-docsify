@@ -2,9 +2,11 @@
 
 The state of the supplicant enumeration.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-export enum SuppState--><!--Device-wifiManager-export enum SuppState-End-->
 
@@ -20,9 +22,11 @@ DISCONNECTED
 
 The supplicant is not associated with or is disconnected from the AP.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-DISCONNECTED--><!--Device-SuppState-DISCONNECTED-End-->
 
@@ -38,9 +42,11 @@ INTERFACE_DISABLED
 
 The network interface is disabled.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
 
@@ -56,9 +62,11 @@ INACTIVE
 
 The supplicant is disabled.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-INACTIVE--><!--Device-SuppState-INACTIVE-End-->
 
@@ -74,9 +82,11 @@ SCANNING
 
 The supplicant is scanning for a Wi-Fi connection.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-SCANNING--><!--Device-SuppState-SCANNING-End-->
 
@@ -92,9 +102,11 @@ AUTHENTICATING
 
 The supplicant is authenticating with a specified AP.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-AUTHENTICATING--><!--Device-SuppState-AUTHENTICATING-End-->
 
@@ -110,9 +122,11 @@ ASSOCIATING
 
 The supplicant is associating with a specified AP.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-ASSOCIATING--><!--Device-SuppState-ASSOCIATING-End-->
 
@@ -128,9 +142,11 @@ ASSOCIATED
 
 The supplicant is associated with a specified AP.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-ASSOCIATED--><!--Device-SuppState-ASSOCIATED-End-->
 
@@ -146,9 +162,11 @@ FOUR_WAY_HANDSHAKE
 
 The four-way handshake is ongoing.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
 
@@ -164,9 +182,11 @@ GROUP_HANDSHAKE
 
 The group handshake is ongoing.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 
@@ -182,9 +202,11 @@ COMPLETED
 
 All authentication is completed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-COMPLETED--><!--Device-SuppState-COMPLETED-End-->
 
@@ -200,9 +222,11 @@ UNINITIALIZED
 
 Failed to establish a connection to the supplicant.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-UNINITIALIZED--><!--Device-SuppState-UNINITIALIZED-End-->
 
@@ -218,9 +242,11 @@ INVALID
 
 The supplicant is in an unknown or invalid state.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuppState-INVALID--><!--Device-SuppState-INVALID-End-->
 

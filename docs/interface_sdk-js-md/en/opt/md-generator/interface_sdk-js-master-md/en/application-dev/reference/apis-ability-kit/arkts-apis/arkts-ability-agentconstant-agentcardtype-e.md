@@ -4,6 +4,8 @@ The type of an AgentCard.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-agentConstant-export enum AgentCardType--><!--Device-agentConstant-export enum AgentCardType-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -17,6 +19,8 @@ APP = 0
 Application-type agent card.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ ATOMIC_SERVICE = 1
 Atomic service-type agent card.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

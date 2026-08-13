@@ -2,7 +2,9 @@
 
 阻止系统睡眠的锁。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
 
@@ -16,7 +18,9 @@ hold(timeout: number): void
 
 锁定和持有RunningLock。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -34,8 +38,8 @@ hold(timeout: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -80,7 +84,9 @@ isHolding(): boolean
 
 查询当前RunningLock是持有状态还是释放状态。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
 
@@ -203,7 +209,9 @@ unhold(): void
 
 释放RunningLock锁。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -215,7 +223,7 @@ unhold(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

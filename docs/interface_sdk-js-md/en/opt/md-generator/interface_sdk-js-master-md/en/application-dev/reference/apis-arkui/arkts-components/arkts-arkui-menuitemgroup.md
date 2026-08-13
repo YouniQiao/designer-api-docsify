@@ -1,19 +1,8 @@
 # MenuItemGroup
 
-The **MenuItemGroup** component represents a group of menu items.
+The **MenuItemGroup** component represents a group of menu items. > **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
 
-> **NOTE**
->
-> This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate 
-> their
-
-## Child Components
-
-This component contains the [MenuItem]{@link menu_item} child component.
-
-## Sample
-
-For details, see [Example in Menu](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-menu.md#example).
+## Child Components This component contains the MenuItem child component. ###### Sample For details, see [Example in Menu](../../../reference/apis-arkui/arkui-ts/ts-basic-components-menu.md#example).
 
 ## MenuItemGroup
 
@@ -22,6 +11,8 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 ```
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,4 +28,4 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 ## Summary
 
-- [MenuItemGroupOptions](arkts-arkui-menuitemgroup-menuitemgroupoptions-i.md)
+- [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md)

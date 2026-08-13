@@ -1,10 +1,12 @@
 # RouterPageInfo
 
-Router page info.
+Provides the information contained in **RouterPageInfo**, returned by the system to developers.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export class RouterPageInfo--><!--Device-uiObserver-export class RouterPageInfo-End-->
 
@@ -22,15 +24,19 @@ import { uiObserver } from '@kit.ArkUI';
 context: UIAbilityContext | UIContext
 ```
 
-The context of the changed router page.
+Context of the router page that invokes the lifecycle callback.
 
 **Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageInfo-context: UIAbilityContext | UIContext--><!--Device-RouterPageInfo-context: UIAbilityContext | UIContext-End-->
 
@@ -39,20 +45,24 @@ The context of the changed router page.
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-The index of the changed router page in router stack.The value should be an integer.
+Position of the router page that invokes the lifecycle callback, in the navigation stack. The value must be greater than or equal to 0.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RouterPageInfo-index: int--><!--Device-RouterPageInfo-index: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RouterPageInfo-index: number--><!--Device-RouterPageInfo-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,15 +72,19 @@ The index of the changed router page in router stack.The value should be an inte
 name: string
 ```
 
-The name of the changed router page.
+Name of the page that invokes the lifecycle callback.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageInfo-name: string--><!--Device-RouterPageInfo-name: string-End-->
 
@@ -82,15 +96,19 @@ The name of the changed router page.
 pageId: string
 ```
 
-The unique identifier of the router page.
+Unique ID of the router page that invokes the lifecycle callback.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageInfo-pageId: string--><!--Device-RouterPageInfo-pageId: string-End-->
 
@@ -102,15 +120,19 @@ The unique identifier of the router page.
 path: string
 ```
 
-The path of the changed router page.
+Path of the page that invokes the lifecycle callback.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageInfo-path: string--><!--Device-RouterPageInfo-path: string-End-->
 
@@ -122,15 +144,19 @@ The path of the changed router page.
 size?: Size
 ```
 
-The size of the router page.
+Size of the router page, in vp.
 
 **Type:** Size
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RouterPageInfo-size?: Size--><!--Device-RouterPageInfo-size?: Size-End-->
 
@@ -142,15 +168,19 @@ The size of the router page.
 state: RouterPageState
 ```
 
-The state of the changed router page.
+State of the router page that invokes the lifecycle callback.
 
 **Type:** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageInfo-state: RouterPageState--><!--Device-RouterPageInfo-state: RouterPageState-End-->
 

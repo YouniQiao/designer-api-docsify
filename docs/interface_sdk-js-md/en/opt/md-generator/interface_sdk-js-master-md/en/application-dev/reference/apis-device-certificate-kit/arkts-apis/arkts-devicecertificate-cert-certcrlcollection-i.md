@@ -2,7 +2,9 @@
 
 Provides APIs for locating certificates or CRLs in a **CertCRLCollection** object.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface CertCRLCollection--><!--Device-cert-interface CertCRLCollection-End-->
 
@@ -22,7 +24,9 @@ selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>
 
 Selects CRLs that match the specified parameters. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,9 +50,9 @@ Selects CRLs that match the specified parameters. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 
@@ -157,7 +161,9 @@ selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>
 
 Selects CRLs that match the specified parameters. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -176,9 +182,9 @@ Selects CRLs that match the specified parameters. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 
@@ -287,7 +293,9 @@ selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
 
 Selects certificates that match the specified parameters. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -311,9 +319,9 @@ Selects certificates that match the specified parameters. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 
@@ -386,7 +394,9 @@ selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Ce
 
 Selects certificates that match the specified parameters. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -405,9 +415,9 @@ Selects certificates that match the specified parameters. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 

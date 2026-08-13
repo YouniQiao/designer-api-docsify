@@ -16,6 +16,8 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
@@ -55,6 +57,8 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
@@ -65,7 +69,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | Yes |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| [SharedArrayBuffer](../../apis-na/arkts-apis/arkts-na-lib-es2017-sharedmemory-sharedarraybuffer-i.md) | Yes |
 | byteOffset | number | No |
 | length | number | No |
 
@@ -79,8 +83,8 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -104,6 +108,8 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer--><!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer-End-->
@@ -126,7 +132,7 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 | Error Code ID |
 | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -157,6 +163,8 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 Creates a new FastBuffer containing string. The encoding parameter identifies the character encoding to be used when converting string into bytes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

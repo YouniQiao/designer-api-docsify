@@ -1,10 +1,12 @@
 # GestureTriggerInfo
 
-The information when one gesture specific callback is triggered.
+Defines the information provided when a specific gesture callback is triggered.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface GestureTriggerInfo--><!--Device-unnamed-export interface GestureTriggerInfo-End-->
 
@@ -22,15 +24,19 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 current: GestureRecognizer
 ```
 
-The gesture recognizer object. You can obtain the detailed information of the gesture from it,but please do not keep this object locally, as it might be unavailable when the node is released.
+Gesture recognizer object. Detailed gesture information can be obtained from this object. However, avoid retaining this object locally as it may become invalid after the node is released.
 
 **Type:** GestureRecognizer
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureTriggerInfo-current: GestureRecognizer--><!--Device-GestureTriggerInfo-current: GestureRecognizer-End-->
 
@@ -42,15 +48,19 @@ The gesture recognizer object. You can obtain the detailed information of the ge
 currentPhase: GestureActionPhase
 ```
 
-The gesture action callback phase.
+Phase of the gesture action callback.
 
 **Type:** [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureTriggerInfo-currentPhase: GestureActionPhase--><!--Device-GestureTriggerInfo-currentPhase: GestureActionPhase-End-->
 
@@ -62,15 +72,19 @@ The gesture action callback phase.
 event: GestureEvent
 ```
 
-The gesture event object.
+Gesture event object.
 
 **Type:** GestureEvent
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureTriggerInfo-event: GestureEvent--><!--Device-GestureTriggerInfo-event: GestureEvent-End-->
 
@@ -82,15 +96,19 @@ The gesture event object.
 node?: FrameNode
 ```
 
-The node which the gesture is being triggered on.
+Node that triggers the gesture. The default value is **null**, indicating that no specific node triggers the gesture.
 
 **Type:** FrameNode
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureTriggerInfo-node?: FrameNode--><!--Device-GestureTriggerInfo-node?: FrameNode-End-->
 

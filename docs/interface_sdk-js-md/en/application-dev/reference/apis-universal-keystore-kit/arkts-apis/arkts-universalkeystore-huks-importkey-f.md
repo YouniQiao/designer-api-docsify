@@ -20,7 +20,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [importKeyItem](huks.importKeyItem(keyAlias:)
+**Substitutes:** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md#importKeyItem)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -32,7 +32,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and key to import. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -97,7 +97,7 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [importKeyItem](huks.importKeyItem(keyAlias:)
+**Substitutes:** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md#importKeyItem)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 

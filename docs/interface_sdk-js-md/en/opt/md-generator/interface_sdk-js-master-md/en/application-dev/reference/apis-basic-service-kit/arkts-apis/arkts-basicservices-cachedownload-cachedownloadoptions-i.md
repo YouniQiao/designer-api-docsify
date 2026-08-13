@@ -2,7 +2,9 @@
 
 Provides configuration options for download and cache, including HTTP options, transmission options, and task options.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-interface CacheDownloadOptions--><!--Device-cacheDownload-interface CacheDownloadOptions-End-->
 
@@ -24,7 +26,9 @@ CA certificate path. Currently, only the .pem certificate is supported. The CA c
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
 
@@ -42,6 +46,8 @@ Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy i
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy--><!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -54,9 +60,11 @@ headers?: Record<string, string>
 
 Request header used by a download task during HTTP transfer. The default value is empty.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-headers?: Record<string, string>--><!--Device-CacheDownloadOptions-headers?: Record<string, string>-End-->
 
@@ -74,6 +82,8 @@ Task retry configuration.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CacheDownloadOptions-retry?: RetryOptions--><!--Device-CacheDownloadOptions-retry?: RetryOptions-End-->
@@ -90,7 +100,9 @@ Secure communication protocol, such as TSL or TLCP. TLS is used by default. Curr
 
 **Type:** SslType
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-sslType?: SslType--><!--Device-CacheDownloadOptions-sslType?: SslType-End-->
 
@@ -107,6 +119,8 @@ Task timeout configuration.
 **Type:** [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,14 @@
 # SymbolDateTimeFormatOptions
 
-Represents optional configuration items for the SymbolDateTimeFormat object.Define the symbol element and value that need to be replaced.
+Represents optional configuration items for the SymbolDateTimeFormat object. Define the symbol element and value that need to be replaced.
 
-**Inheritance/Implementation:** SymbolDateTimeFormatOptions extends [Intl.DateTimeFormatOptions](Intl.DateTimeFormatOptions)
+**Inheritance/Implementation:** SymbolDateTimeFormatOptions extends Intl.DateTimeFormatOptions
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export interface SymbolDateTimeFormatOptions extends Intl.DateTimeFormatOptions--><!--Device-i18n-export interface SymbolDateTimeFormatOptions extends Intl.DateTimeFormatOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export interface SymbolDateTimeFormatOptions--><!--Device-i18n-export interface SymbolDateTimeFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -22,11 +24,13 @@ import { i18n } from '@kit.LocalizationKit';
 amPMSymbol?: string[] | undefined
 ```
 
-AM and PM symbol of date time period part, such as "PM" of "2:23 PM". The parameter array  must be greater than 2, If greater than 2, the first two will be selected.
+AM and PM symbol of date time period part, such as "PM" of "2:23 PM". The parameter array must be greater than 2, If greater than 2, the first two will be selected.
 
 **Type:** string[] \| undefined
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

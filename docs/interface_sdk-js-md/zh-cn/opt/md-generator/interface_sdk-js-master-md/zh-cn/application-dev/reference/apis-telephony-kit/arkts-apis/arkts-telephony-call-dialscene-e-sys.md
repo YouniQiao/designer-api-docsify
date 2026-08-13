@@ -2,7 +2,9 @@
 
 拨号场景。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export enum DialScene--><!--Device-call-export enum DialScene-End-->
 
@@ -18,7 +20,9 @@ CALL_NORMAL = 0
 
 呼叫正常。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DialScene-CALL_NORMAL = 0--><!--Device-DialScene-CALL_NORMAL = 0-End-->
 
@@ -34,7 +38,9 @@ CALL_PRIVILEGED = 1
 
 呼叫特权。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DialScene-CALL_PRIVILEGED = 1--><!--Device-DialScene-CALL_PRIVILEGED = 1-End-->
 
@@ -50,7 +56,9 @@ CALL_EMERGENCY = 2
 
 拨打紧急电话。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DialScene-CALL_EMERGENCY = 2--><!--Device-DialScene-CALL_EMERGENCY = 2-End-->
 

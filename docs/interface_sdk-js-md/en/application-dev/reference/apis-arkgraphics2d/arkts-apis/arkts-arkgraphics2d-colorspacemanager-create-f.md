@@ -14,9 +14,11 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 Creates a standard color space object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager--><!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager-End-->
 
@@ -38,8 +40,8 @@ Creates a standard color space object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
 
 ## Examples
 
@@ -61,9 +63,11 @@ function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManage
 
 Creates a custom color space object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager--><!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager-End-->
 
@@ -74,7 +78,7 @@ Creates a custom color space object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | primaries | [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | Yes | Primaries of the color space. |
-| gamma | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Gamma value of the color space, which is a floating point number greater than 0. |
+| gamma | double | Yes | Gamma value of the color space, which is a floating point number greater than 0. |
 
 **Return value:**
 
@@ -86,8 +90,8 @@ Creates a custom color space object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
 
 ## Examples
 

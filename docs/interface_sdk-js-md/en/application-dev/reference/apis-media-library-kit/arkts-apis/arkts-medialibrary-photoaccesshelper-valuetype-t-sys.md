@@ -6,9 +6,11 @@ type ValueType = int | long | double | string | boolean | Uint8Array | null
 
 Defines the type of value in a KV pair. The type varies with the parameter function.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-type ValueType = int | long | double | string | boolean | Uint8Array | null--><!--Device-photoAccessHelper-type ValueType = int | long | double | string | boolean | Uint8Array | null-End-->
 

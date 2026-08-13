@@ -6,7 +6,9 @@ export type ContinuableInfo = _ContinuableInfo
 
 Continuable information corresponding to ability.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

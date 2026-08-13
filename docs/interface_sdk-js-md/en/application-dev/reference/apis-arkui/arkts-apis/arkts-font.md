@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace font--><!--Device-unnamed-declare namespace font-End-->
@@ -22,7 +24,7 @@ import { font } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getuifontconfig) | Get font details according to the font name. |
+| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getUIFontConfig) | Get font details according to the font name. |
 
 ### Interfaces
 

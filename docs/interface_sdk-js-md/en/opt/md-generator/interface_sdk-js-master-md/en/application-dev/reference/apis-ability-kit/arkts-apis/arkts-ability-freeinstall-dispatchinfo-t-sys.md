@@ -6,7 +6,9 @@ export type DispatchInfo = _DispatchInfo
 
 Defines the installation-free structure and API version information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-freeInstall-export type DispatchInfo = _DispatchInfo--><!--Device-freeInstall-export type DispatchInfo = _DispatchInfo-End-->
 

@@ -10,6 +10,8 @@ function registerVsyncCallback(callback: (info: string) => void): void
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void--><!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

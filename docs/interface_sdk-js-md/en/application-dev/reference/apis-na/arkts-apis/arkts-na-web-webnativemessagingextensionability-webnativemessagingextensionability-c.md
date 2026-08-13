@@ -1,0 +1,110 @@
+# WebNativeMessagingExtensionAbility
+
+class of web native messaging extension ability.
+
+**Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends ExtensionAbility
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class WebNativeMessagingExtensionAbility--><!--Device-unnamed-declare class WebNativeMessagingExtensionAbility-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## onConnectNative
+
+```TypeScript
+onConnectNative(info: ConnectionInfo): void
+```
+
+Called when a web native messaging connection is established.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [ConnectionInfo](arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
+
+## onDestroy
+
+```TypeScript
+onDestroy(): void
+```
+
+Called when the WebNativeMessagingExtensionAbility is destroyed.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void--><!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## onDisconnectNative
+
+```TypeScript
+onDisconnectNative(info: ConnectionInfo): void
+```
+
+Called when a web native messaging connection is disconnected.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [ConnectionInfo](arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
+
+## context
+
+```TypeScript
+context: WebNativeMessagingExtensionContext
+```
+
+Context of web native messaging.
+
+**Type:** [WebNativeMessagingExtensionContext](arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebNativeMessagingExtensionAbility-context: WebNativeMessagingExtensionContext--><!--Device-WebNativeMessagingExtensionAbility-context: WebNativeMessagingExtensionContext-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

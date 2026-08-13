@@ -6,6 +6,8 @@ Border image option
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BorderImageOption--><!--Device-unnamed-declare interface BorderImageOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Border image option
 fill?: boolean
 ```
 
-Whether to fill the center of the border image.true: Fill the center of the border image.false: Do not fill the center of the border image.
+Whether to fill the center of the border image. true: Fill the center of the border image. false: Do not fill the center of the border image.
 
 **Type:** boolean
 
@@ -25,6 +27,8 @@ Whether to fill the center of the border image.true: Fill the center of the bord
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,13 +46,15 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Amount by which the border image is extended beyond the border box.
 
-**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** Length \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,6 +80,8 @@ Repeat mode of the source image's slices on the border.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -88,15 +96,17 @@ Repeat mode of the source image's slices on the border.
 slice?: Length | EdgeWidths | LocalizedEdgeWidths
 ```
 
-Slice width of the upper left corner, upper right corner, lower left corner,and lower right corner of the border image.
+Slice width of the upper left corner, upper right corner, lower left corner, and lower right corner of the border image.
 
-**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** Length \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -112,15 +122,15 @@ Slice width of the upper left corner, upper right corner, lower left corner,and 
 source?: string | Resource | LinearGradient
 ```
 
-Source or gradient color of the border image.When the type is string, this parameter sets the border image source.For details about how to reference image resources, see Loading Image Resources.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The border image source applies only to container components, such as Row, Column, and Flex.&lt;/p&gt;
+Source or gradient color of the border image. When the type is string, this parameter sets the border image source. For details about how to reference image resources, see Loading Image Resources. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The border image source applies only to container components, such as Row, Column, and Flex. &lt;/p&gt;
 
 **Type:** string \| Resource \| [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -138,13 +148,15 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Width of the border image.
 
-**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** Length \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

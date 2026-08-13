@@ -6,7 +6,7 @@ The **formHost** module provides APIs related to the widget host, which is an ap
 
 **Deprecated since:** 9
 
-**Substitutes:** [formHost](arkts-app-form-formhost.md#formHost)
+**Substitutes:** [formHost](arkts-app-form-formhost.md#@ohos.app.form.formHost)
 
 <!--Device-unnamed-declare namespace formHost--><!--Device-unnamed-declare namespace formHost-End-->
 
@@ -21,38 +21,38 @@ The **formHost** module provides APIs related to the widget host, which is an ap
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [acquireFormState](arkts-form-formhost-acquireformstate-depr-f-sys.md#acquireformstate) |
-| [acquireFormState](arkts-form-formhost-acquireformstate-depr-f-sys.md#acquireformstate-1) |
-| [castTempForm](arkts-form-formhost-casttempform-depr-f-sys.md#casttempform) |
-| [castTempForm](arkts-form-formhost-casttempform-depr-f-sys.md#casttempform-1) |
-| [deleteForm](arkts-form-formhost-deleteform-depr-f-sys.md#deleteform) |
-| [deleteForm](arkts-form-formhost-deleteform-depr-f-sys.md#deleteform-1) |
-| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md#deleteinvalidforms) |
-| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md#deleteinvalidforms-1) |
-| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-depr-f-sys.md#disableformsupdate) |
-| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-depr-f-sys.md#disableformsupdate-1) |
-| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-depr-f-sys.md#enableformsupdate) |
-| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-depr-f-sys.md#enableformsupdate-1) |
-| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-depr-f-sys.md#getallformsinfo) |
-| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-depr-f-sys.md#getallformsinfo-1) |
-| [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo) |
-| [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo-1) |
-| [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo-2) |
-| [isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#issystemready) |
-| [isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#issystemready-1) |
-| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyformsenableupdate) |
-| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyformsenableupdate-1) |
-| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible) |
-| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible-1) |
-| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md#notifyinvisibleforms) |
-| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md#notifyinvisibleforms-1) |
-| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyvisibleforms) |
-| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyvisibleforms-1) |
-| [off](arkts-form-formhost-off-depr-f-sys.md#off) |
-| [on](arkts-form-formhost-on-depr-f-sys.md#on) |
-| [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseform) |
-| [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseform-1) |
-| [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseform-2) |
-| [requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestform) |
-| [requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestform-1) |
+| [acquireFormState](arkts-form-formhost-acquireformstate-depr-f-sys.md#acquireFormState) |
+| [acquireFormState](arkts-form-formhost-acquireformstate-depr-f-sys.md#acquireFormState) |
+| [castTempForm](arkts-form-formhost-casttempform-depr-f-sys.md#castTempForm) |
+| [castTempForm](arkts-form-formhost-casttempform-depr-f-sys.md#castTempForm) |
+| [deleteForm](arkts-form-formhost-deleteform-depr-f-sys.md#deleteForm) |
+| [deleteForm](arkts-form-formhost-deleteform-depr-f-sys.md#deleteForm) |
+| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md#deleteInvalidForms) |
+| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md#deleteInvalidForms) |
+| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-depr-f-sys.md#disableFormsUpdate) |
+| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-depr-f-sys.md#disableFormsUpdate) |
+| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-depr-f-sys.md#enableFormsUpdate) |
+| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-depr-f-sys.md#enableFormsUpdate) |
+| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-depr-f-sys.md#getAllFormsInfo) |
+| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-depr-f-sys.md#getAllFormsInfo) |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getFormsInfo) |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getFormsInfo) |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getFormsInfo) |
+| [isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#isSystemReady) |
+| [isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#isSystemReady) |
+| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyFormsEnableUpdate) |
+| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyFormsEnableUpdate) |
+| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyFormsVisible) |
+| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyFormsVisible) |
+| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md#notifyInvisibleForms) |
+| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md#notifyInvisibleForms) |
+| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyVisibleForms) |
+| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyVisibleForms) |
+| [off_formUninstall](arkts-form-formhost-offformuninstall-depr-f-sys.md#off_formUninstall) |
+| [on_formUninstall](arkts-form-formhost-onformuninstall-depr-f-sys.md#on_formUninstall) |
+| [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseForm) |
+| [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseForm) |
+| [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseForm) |
+| [requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestForm) |
+| [requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestForm) |
 <!--DelEnd-->

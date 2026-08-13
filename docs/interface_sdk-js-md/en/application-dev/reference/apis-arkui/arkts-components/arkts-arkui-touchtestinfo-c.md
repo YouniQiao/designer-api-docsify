@@ -6,6 +6,8 @@ Provides information about the coordinate system, ID, and size of the component 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class TouchTestInfo--><!--Device-unnamed-declare class TouchTestInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Unique ID of the child component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -38,15 +42,15 @@ Unique ID of the child component.
 parentX: number
 ```
 
-X-coordinate of the touch point relative to the upper left corner of the parent component.
-
-Unit: vp.
+X-coordinate of the touch point relative to the upper left corner of the parent component. Unit: vp.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +66,15 @@ Unit: vp.
 parentY: number
 ```
 
-Y-coordinate of the touch point relative to the upper left corner of the parent component.
-
-Unit: vp.
+Y-coordinate of the touch point relative to the upper left corner of the parent component. Unit: vp.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,6 +98,8 @@ Position, width, and height of the child component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -108,15 +114,15 @@ Position, width, and height of the child component.
 windowX: number
 ```
 
-X-coordinate of the touch point relative to the upper left corner of the window.
-
-Unit: vp.
+X-coordinate of the touch point relative to the upper left corner of the window. Unit: vp.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,15 +138,15 @@ Unit: vp.
 windowY: number
 ```
 
-Y-coordinate of the touch point relative to the upper left corner of the window.
-
-Unit: vp.
+Y-coordinate of the touch point relative to the upper left corner of the window. Unit: vp.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,15 +162,15 @@ Unit: vp.
 x: number
 ```
 
-X-coordinate of the touch point relative to the upper left corner of the child component.
-
-Unit: vp.
+X-coordinate of the touch point relative to the upper left corner of the child component. Unit: vp.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,15 +186,15 @@ Unit: vp.
 y: number
 ```
 
-Y-coordinate of the touch point relative to the upper left corner of the child component.
-
-Unit: vp.
+Y-coordinate of the touch point relative to the upper left corner of the child component. Unit: vp.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

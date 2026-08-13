@@ -12,7 +12,7 @@ function enableNotification(bundle: BundleOption, enable: boolean, callback: Asy
 
 **废弃版本：** 9
 
-**替代接口：** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
+**替代接口：** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,7 +43,7 @@ function enableNotification(bundle: BundleOption, enable: boolean): Promise<void
 
 **废弃版本：** 9
 
-**替代接口：** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
+**替代接口：** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

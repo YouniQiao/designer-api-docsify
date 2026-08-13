@@ -2,7 +2,9 @@
 
 下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo)接口的回调参数。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-request-interface DownloadInfo--><!--Device-request-interface DownloadInfo-End-->
 
@@ -18,7 +20,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-description: string--><!--Device-DownloadInfo-description: string-End-->
 
@@ -34,7 +38,9 @@ downloadId: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-downloadId: long--><!--Device-DownloadInfo-downloadId: long-End-->
 
@@ -50,7 +56,9 @@ downloadTitle: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-downloadTitle: string--><!--Device-DownloadInfo-downloadTitle: string-End-->
 
@@ -66,7 +74,9 @@ downloadTotalBytes: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
 
@@ -82,7 +92,9 @@ downloadedBytes: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
 
@@ -94,12 +106,13 @@ downloadedBytes: number
 failedReason: number
 ```
 
-下载失败原因，可以是任何  
-[下载任务的错误码](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
+下载失败原因，可以是任何 下载任务的错误码常量。
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-failedReason: int--><!--Device-DownloadInfo-failedReason: int-End-->
 
@@ -115,7 +128,9 @@ fileName: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-fileName: string--><!--Device-DownloadInfo-fileName: string-End-->
 
@@ -131,7 +146,9 @@ filePath: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-filePath: string--><!--Device-DownloadInfo-filePath: string-End-->
 
@@ -143,12 +160,13 @@ filePath: string
 pausedReason: number
 ```
 
-会话暂停的原因，可以是任何  
-[下载任务暂停原因](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
+会话暂停的原因，可以是任何 下载任务暂停原因常量。
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-pausedReason: int--><!--Device-DownloadInfo-pausedReason: int-End-->
 
@@ -160,12 +178,13 @@ pausedReason: number
 status: number
 ```
 
-下载状态码，可以是任何  
-[下载任务状态码](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
+下载状态码，可以是任何 下载任务状态码常量。
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-status: int--><!--Device-DownloadInfo-status: int-End-->
 
@@ -181,7 +200,9 @@ targetURI: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadInfo-targetURI: string--><!--Device-DownloadInfo-targetURI: string-End-->
 

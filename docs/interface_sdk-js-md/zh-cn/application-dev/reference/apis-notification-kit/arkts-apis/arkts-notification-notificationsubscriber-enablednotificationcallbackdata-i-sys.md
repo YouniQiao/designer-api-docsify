@@ -2,9 +2,11 @@
 
 应用使能状态变化的回调函数类型。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface EnabledNotificationCallbackData--><!--Device-unnamed-export interface EnabledNotificationCallbackData-End-->
 
@@ -22,9 +24,11 @@ readonly bundle: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EnabledNotificationCallbackData-readonly bundle: string--><!--Device-EnabledNotificationCallbackData-readonly bundle: string-End-->
 
@@ -38,15 +42,15 @@ readonly bundle: string
 readonly enable: boolean
 ```
 
-应用通知使能状态。  
-- true：允许。  
-- false：禁止。
+应用通知使能状态。 - true：允许。 - false：禁止。
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EnabledNotificationCallbackData-readonly enable: boolean--><!--Device-EnabledNotificationCallbackData-readonly enable: boolean-End-->
 
@@ -62,11 +66,13 @@ readonly uid: int
 
 应用的uid。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EnabledNotificationCallbackData-readonly uid: int--><!--Device-EnabledNotificationCallbackData-readonly uid: int-End-->
 

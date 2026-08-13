@@ -6,15 +6,11 @@
 function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<void>
 ```
 
-关闭当前打开的所有符合指定选项的企业DLP文件。使用Promise异步回调。
-
-在需要批量关闭企业DLP文件、清理文件资源或应用退出前释放文件句柄时调用该接口。
-
-> **说明：**
-> 
-> 该接口仅能关闭调用方应用通过[generateDlpFileForEnterprise](arkts-dataprotection-dlppermission-generatedlpfileforenterprise-f.md#generateDlpFileForEnterprise)生成的企业DLP文件。
+关闭当前打开的所有符合指定选项的企业DLP文件。使用Promise异步回调。 在需要批量关闭企业DLP文件、清理文件资源或应用退出前释放文件句柄时调用该接口。 > **说明：** > > 该接口仅能关闭调用方应用通过[generateDlpFileForEnterprise](arkts-dataprotection-dlppermission-generatedlpfileforenterprise-f-sys.md#generateDlpFileForEnterprise（系统接口）)生成的企业DLP文件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
@@ -40,10 +36,10 @@ function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<v
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

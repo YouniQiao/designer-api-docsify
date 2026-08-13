@@ -2,7 +2,9 @@
 
 需要授予或激活URI访问权限的策略信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-fileShare-export interface PolicyInfo--><!--Device-fileShare-export interface PolicyInfo-End-->
 
@@ -14,11 +16,13 @@
 operationMode: number
 ```
 
-授予或激活权限的URI访问模式，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
+授予或激活权限的URI访问模式，例如 { OperationMode.READ_MODE } 或 { OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PolicyInfo-operationMode: int--><!--Device-PolicyInfo-operationMode: int-End-->
 
@@ -34,7 +38,9 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PolicyInfo-uri: string--><!--Device-PolicyInfo-uri: string-End-->
 

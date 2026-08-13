@@ -16,6 +16,8 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_DONOTDISTURB_STATE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,8 +36,8 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 | Error Code ID |
 | --- |
-| [35200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

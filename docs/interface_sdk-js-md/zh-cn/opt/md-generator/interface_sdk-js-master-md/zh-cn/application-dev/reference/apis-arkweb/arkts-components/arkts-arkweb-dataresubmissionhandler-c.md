@@ -1,8 +1,10 @@
 # DataResubmissionHandler
 
-Defines the onDataResubmission callback, related to [onDataResubmission](onDataResubmission) method.
+Defines the onDataResubmission callback, related to onDataResubmission method.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class DataResubmissionHandler--><!--Device-unnamed-declare class DataResubmissionHandler-End-->
 
@@ -17,6 +19,8 @@ cancel(): void
 取消重新发送表单数据。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ Constructor.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DataResubmissionHandler-constructor()--><!--Device-DataResubmissionHandler-constructor()-End-->
@@ -49,6 +55,8 @@ resend(): void
 重新发送表单数据。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -1,12 +1,14 @@
 # GestureHandlingResolution
 
-Class GestureHandlingResolution. Represents the developer's decision result for smart gesture handling.
+Class for declaring the result of smart gesture handling.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export declare class GestureHandlingResolution--><!--Device-unnamed-export declare class GestureHandlingResolution-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class GestureHandlingResolution--><!--Device-unnamed-export class GestureHandlingResolution-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor(isConsumed: boolean)
 ```
 
-GestureHandlingResolution constructor.
+Constructor for the smart gesture handling result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-GestureHandlingResolution-constructor(isConsumed: boolean)--><!--Device-GestureHandlingResolution-constructor(isConsumed: boolean)-End-->
 
@@ -38,7 +44,7 @@ GestureHandlingResolution constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isConsumed | boolean | Yes | Whether to consume the current gesture event. |
+| isConsumed | boolean | Yes | Whether to consume the current smart gesture.&lt;br/&gt;**true**: The smart gesture is consumed. If [selectedProposal](#selectedProposal) is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.&lt;br/&gt;**false**: The smart gesture is not consumed, and the system treats it as unhandled. |
 
 ## isConsumed
 
@@ -46,15 +52,19 @@ GestureHandlingResolution constructor.
 isConsumed: boolean
 ```
 
-Determines whether to consume the current gesture event. If the gesture is not consumed, it will inform the consumer that the gesture is not supported.
+Whether to consume the current smart gesture. **true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used. **false**: The smart gesture is not consumed, and the system treats it as unhandled.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-GestureHandlingResolution-isConsumed: boolean--><!--Device-GestureHandlingResolution-isConsumed: boolean-End-->
 
@@ -66,15 +76,19 @@ Determines whether to consume the current gesture event. If the gesture is not c
 selectedProposal?: BaseGestureHandlingProposal
 ```
 
-The final gesture handling proposal selected by the developer.
+The smart gesture handling behavior specified by the user. When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used. When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
 
 **Type:** [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-GestureHandlingResolution-selectedProposal?: BaseGestureHandlingProposal--><!--Device-GestureHandlingResolution-selectedProposal?: BaseGestureHandlingProposal-End-->
 

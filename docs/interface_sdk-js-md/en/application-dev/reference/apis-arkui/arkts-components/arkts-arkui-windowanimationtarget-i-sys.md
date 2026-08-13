@@ -6,6 +6,8 @@ Window animation target.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface WindowAnimationTarget--><!--Device-unnamed-interface WindowAnimationTarget-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ readonly abilityName: string
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnimationTarget-readonly abilityName: string--><!--Device-WindowAnimationTarget-readonly abilityName: string-End-->
 
@@ -42,6 +46,8 @@ readonly bundleName: string
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-WindowAnimationTarget-readonly bundleName: string--><!--Device-WindowAnimationTarget-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -60,6 +66,8 @@ readonly missionId: number
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-WindowAnimationTarget-readonly missionId: number--><!--Device-WindowAnimationTarget-readonly missionId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -77,6 +85,8 @@ readonly windowBounds: RRect
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnimationTarget-readonly windowBounds: RRect--><!--Device-WindowAnimationTarget-readonly windowBounds: RRect-End-->
 

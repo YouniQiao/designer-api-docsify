@@ -4,6 +4,8 @@ Parameters for checking certificate revocation status.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cert-interface X509CertRevokedParams--><!--Device-cert-interface X509CertRevokedParams-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -20,17 +22,15 @@ import { cert } from '@kit.DeviceCertificateKit';
 allowDownloadCrl?: boolean
 ```
 
-Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
-
-> **NOTE：**
-> 
-> Skip download if matching CRL exists in crls.
+Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL. > **NOTE：**> > Skip download if matching CRL exists in crls.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,20 +46,15 @@ Indicates whether to allow CRL download. The default value is false. true: The C
 allowOcspCheckOnline?: boolean
 ```
 
-Indicates whether to allow online OCSP check. The default value is false.  
-- **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the  
-certificate and send a request to obtain a response;  
-- **false**: does not perform online OCSP check.
-
-> **NOTE：**
-> 
-> Skip online OCSP check if a matching OCSP response is found in ocspResponses.
+Indicates whether to allow online OCSP check. The default value is false. - **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the certificate and send a request to obtain a response; - **false**: does not perform online OCSP check. > **NOTE：**> > Skip online OCSP check if a matching OCSP response is found in ocspResponses.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +75,8 @@ CRL list. Maximum count: 100.
 **Type:** Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -103,6 +100,8 @@ Digest algorithm used by OCSP requests. The default value is SHA256.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -123,6 +122,8 @@ Preconfigured OCSP response data. Maximum count: 100.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -142,6 +143,8 @@ Revocation check flag. Array length range: [1,4]. The array must contain either 
 **Type:** Array&lt;[CertRevocationFlag](arkts-devicecertificate-cert-certrevocationflag-e.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

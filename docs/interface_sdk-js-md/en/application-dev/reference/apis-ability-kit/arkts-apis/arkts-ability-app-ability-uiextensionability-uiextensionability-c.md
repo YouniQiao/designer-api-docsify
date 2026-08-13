@@ -1,18 +1,16 @@
 # UIExtensionAbility
 
-UIExtensionAbility is an ExtensionAbility component with a User Interface (UI). It inherits from  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility) and provides basic lifecycle capabilities such as component creation, destruction, and foreground/background switching. Unlike the UIAbility, the UIExtensionAbility does not appear as a separate mission in the mission view. The foreground/background state and visibility of the UIExtensionAbility follow those of its host window.You cannot directly inherit from the UIExtensionAbility. However, you can choose other components that inherit from UIExtensionAbility based on specific service scenarios. For example, when handling data shared from other applications, you can use the  
-[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility); when providing widget editing functionality, you can use the  
-[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#FormEditExtensionAbility).For details about the inheritance relationship of each ability, see  
-[Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).
+UIExtensionAbility is an ExtensionAbility component with a User Interface (UI). It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility) and provides basic lifecycle capabilities such as component creation, destruction, and foreground/background switching. Unlike the UIAbility, the UIExtensionAbility does not appear as a separate mission in the mission view. The foreground/background state and visibility of the UIExtensionAbility follow those of its host window. You cannot directly inherit from the UIExtensionAbility. However, you can choose other components that inherit from UIExtensionAbility based on specific service scenarios. For example, when handling data shared from other applications, you can use the [ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility); when providing widget editing functionality, you can use the [FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#FormEditExtensionAbility). For details about the inheritance relationship of each ability, see Inheritance Relationship .
 
-**Inheritance/Implementation:** UIExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** UIExtensionAbility extends ExtensionAbility
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class UIExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class UIExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class UIExtensionAbility--><!--Device-unnamed-declare class UIExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,9 +28,11 @@ onBackground(): void
 
 Called when a UIExtensionAbility transitions from the foreground to the background. You can release resources when the UI is no longer invisible within this callback.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,9 +63,11 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 
 Called when a UIExtensionAbility instance is created. You can execute initialization logic (such as defining variables and loading resources) within this callback.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,11 +102,13 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onDestroy(): void | Promise<void>
 ```
 
-Called when a UIExtensionAbility is destroyed. You can clear resources and save data during this lifecycle. This API returns the result synchronously or uses a promise to return the result.After the **onDestroy()** lifecycle callback is executed, the application may exit. Consequently, the asynchronous function (for example, asynchronously writing data to the database) in **onDestroy()** may fail to be executed.Using a Promise for asynchronous callback is recommended to prevent such issues.
+Called when a UIExtensionAbility is destroyed. You can clear resources and save data during this lifecycle. This API returns the result synchronously or uses a promise to return the result. After the **onDestroy()** lifecycle callback is executed, the application may exit. Consequently, the asynchronous function (for example, asynchronously writing data to the database) in **onDestroy()** may fail to be executed. Using a Promise for asynchronous callback is recommended to prevent such issues.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,7 +170,9 @@ Called back before an UI extension is destroyed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,9 +194,11 @@ onForeground(): void
 
 Called when a UIExtensionAbility is initially launched into the foreground or transitions from the background to the foreground. You can apply for resources when the UI becomes visible within this callback.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,11 +227,13 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onSessionCreate(want: Want, session: UIExtensionContentSession): void
 ```
 
-Called when a [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#UIExtensionContentSession) instance is created.You can load a page through the UIExtensionContentSession instance within this callback.
+Called when a [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#UIExtensionContentSession) instance is created. You can load a page through the UIExtensionContentSession instance within this callback.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -269,9 +279,11 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 Called when a UIExtensionContentSession is destroyed. It informs applications that the UIExtensionContentSession instance is no longer available for use.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,9 +322,11 @@ Context of the UIExtensionAbility.
 
 **Type:** [UIExtensionContext](arkts-ability-uiextensioncontext-c.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

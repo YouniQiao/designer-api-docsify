@@ -1,12 +1,10 @@
 # EapMethod
 
-Enumerates the EAP authentication methods.
-
-> **NOTE：**
-> 
-> Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported.
+Enumerates the EAP authentication methods. > **NOTE：**> > Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum EapMethod--><!--Device-wifiManager-enum EapMethod-End-->
 
@@ -21,6 +19,8 @@ EAP_NONE = 0
 Not specified.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +38,8 @@ Protected Extensible Authentication Protocol (PEAP). It first establishes a secu
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_PEAP = 1--><!--Device-EapMethod-EAP_PEAP = 1-End-->
@@ -53,6 +55,8 @@ EAP_TLS = 2
 Transport Layer Security (TLS). It implements mutual certificate authentication.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +74,8 @@ Tunnel Transport Layer Security (TTLS). It is similar to PEAP, but supports a mo
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_TTLS = 3--><!--Device-EapMethod-EAP_TTLS = 3-End-->
@@ -85,6 +91,8 @@ EAP_PWD = 4
 Password Authentication (PWD). It enables password-based authentication and does not require a server certificate.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,6 +110,8 @@ Subscriber Identity Module (SIM). It performs authentication using the keys and 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_SIM = 5--><!--Device-EapMethod-EAP_SIM = 5-End-->
@@ -117,6 +127,8 @@ EAP_AKA = 6
 Authentication and Key Agreement (AKA). It performs authentication using enhanced keys and algorithms stored in a USIM card (applicable to 3G/4G/5G SIM cards).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +146,8 @@ AKA Prime. It is an enhanced version of EAP-AKA and binds the network name durin
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EapMethod-EAP_AKA_PRIME = 7--><!--Device-EapMethod-EAP_AKA_PRIME = 7-End-->
@@ -149,6 +163,8 @@ EAP_UNAUTH_TLS = 8
 Unauthenticated TLS (UNAUTH TLS). It implements one-way authentication (client authentication only) while establishing an encrypted communication channel.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

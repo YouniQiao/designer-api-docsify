@@ -2,6 +2,8 @@
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace utils--><!--Device-unnamed-declare namespace utils-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -25,7 +27,7 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [isSendable](arkts-arkts-utils-issendable-f.md#issendable) |
+| [isSendable](arkts-arkts-utils-issendable-f.md#isSendable) |
 
 ### Classes
 

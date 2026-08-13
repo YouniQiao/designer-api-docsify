@@ -12,15 +12,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function symlink(target: string, srcPath: string): Promise<void>
 ```
 
-Creates a symbolic link based on a file path. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> Since API version 11, this API cannot be used by third-party applications.
+Creates a symbolic link based on a file path. This API uses a promise to return the result. > **NOTE：**> > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>--><!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>-End-->
 
@@ -65,15 +63,13 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void
 ```
 
-Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Since API version 11, this API cannot be used by third-party applications.
+Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result. > **NOTE：**> > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
 
@@ -85,7 +81,7 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | target | string | Yes | Application sandbox path of the target file. |
 | srcPath | string | Yes | Application sandbox path of the symbolic link. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

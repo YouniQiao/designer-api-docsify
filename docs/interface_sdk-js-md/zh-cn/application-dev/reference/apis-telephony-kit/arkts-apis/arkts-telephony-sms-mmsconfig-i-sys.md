@@ -2,9 +2,11 @@
 
 彩信配置文件。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsConfig--><!--Device-sms-export interface MmsConfig-End-->
 
@@ -22,9 +24,11 @@ userAgent: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsConfig-userAgent: string--><!--Device-MmsConfig-userAgent: string-End-->
 
@@ -42,9 +46,11 @@ userAgentProfile: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsConfig-userAgentProfile: string--><!--Device-MmsConfig-userAgentProfile: string-End-->
 

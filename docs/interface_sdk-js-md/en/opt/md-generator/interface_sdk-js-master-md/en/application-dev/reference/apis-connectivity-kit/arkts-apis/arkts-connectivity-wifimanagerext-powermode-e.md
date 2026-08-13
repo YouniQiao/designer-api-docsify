@@ -4,6 +4,8 @@ The power Mode enumeration.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-wifiManagerExt-export enum PowerMode--><!--Device-wifiManagerExt-export enum PowerMode-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
@@ -17,6 +19,8 @@ SLEEPING = 0
 Sleeping Mode.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-PowerMode-SLEEPING = 0--><!--Device-PowerMode-SLEEPING = 0-End-->
 
@@ -32,6 +36,8 @@ General Mode.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-PowerMode-GENERAL = 1--><!--Device-PowerMode-GENERAL = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -45,6 +51,8 @@ THROUGH_WALL = 2
 Through wall Mode.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-PowerMode-THROUGH_WALL = 2--><!--Device-PowerMode-THROUGH_WALL = 2-End-->
 

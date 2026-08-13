@@ -14,7 +14,9 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 
 Subscribes to the change of a file. The callback returns the changed data.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void--><!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void-End-->
 
@@ -32,7 +34,7 @@ Subscribes to the change of a file. The callback returns the changed data.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900001 |
 | 13900002 |
 | 14000002 |

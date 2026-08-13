@@ -2,7 +2,9 @@
 
 表示UDMF统一数据对象，提供封装一组数据记录的方法。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unifiedDataChannel-class UnifiedData--><!--Device-unifiedDataChannel-class UnifiedData-End-->
 
@@ -16,7 +18,9 @@ addRecord(record: UnifiedRecord): void
 
 在当前统一数据对象中添加一条数据记录。调用成功后，指定的数据记录被添加到当前统一数据对象中。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,7 @@ addRecord(record: UnifiedRecord): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -68,7 +72,9 @@ constructor(record: UnifiedRecord)
 
 用于创建带有一条数据记录的统一数据对象。调用成功后，返回包含指定数据记录的UnifiedData对象。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,7 +94,7 @@ constructor(record: UnifiedRecord)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -111,11 +117,13 @@ constructor()
 
 用于创建统一数据对象。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UnifiedData-constructor()--><!--Device-UnifiedData-constructor()-End-->
 
@@ -133,9 +141,11 @@ let unifiedData = new unifiedDataChannel.UnifiedData();
 getRecords(): Array<UnifiedRecord>
 ```
 
-将当前统一数据对象中的所有数据记录取出。通过本接口取出的数据为UnifiedRecord类型，需通过[getType](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#getType)获取数据类型后转为子类再使用。
+将当前统一数据对象中的所有数据记录取出。通过本接口取出的数据为UnifiedRecord类型，需通过[getType](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#getType)获取数据类型 后转为子类再使用。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -194,11 +204,13 @@ getTypes(): Array<string>
 
 获取当前统一数据对象所有数据记录的类型。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UnifiedData-getTypes(): Array<string>--><!--Device-UnifiedData-getTypes(): Array<string>-End-->
 
@@ -240,15 +252,15 @@ let types = unifiedData.getTypes();
 hasType(type: string): boolean
 ```
 
-检查当前统一数据对象中是否有指定的数据类型，检查范围包括使用[addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addEntry)函数添加的数据类型。
+检查当前统一数据对象中是否有指定的数据类型，检查范围包括使用[addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addEntry)函数添加的数据类型。 针对文件类型，若UnifiedData的类型集合中包含"general.jpeg"，在调用hasType接口判断是否包括"general.image"类型时，结果返回true（类型"general.jpeg"归属于类型" general.image"）。
 
-针对文件类型，若UnifiedData的类型集合中包含"general.jpeg"，在调用hasType接口判断是否包括"general.image"类型时，结果返回true（类型"general.jpeg"归属于类型"general.image"）。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UnifiedData-hasType(type: string): boolean--><!--Device-UnifiedData-hasType(type: string): boolean-End-->
 
@@ -270,7 +282,7 @@ hasType(type: string): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -296,23 +308,3 @@ unifiedData.addRecord(link);
 let hasPlainText = unifiedData.hasType(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT);
 let hasLink = unifiedData.hasType(uniformTypeDescriptor.UniformDataType.HYPERLINK);
 ```
-
-## properties
-
-```TypeScript
-set properties(value: UnifiedDataProperties)
-```
-
-当前统一数据对象中所有数据记录的属性，包含时间戳、标签、粘贴范围以及一些附加数据等。
-
-**类型：** [UnifiedDataProperties](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md)
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UnifiedData-set properties(value: UnifiedDataProperties)--><!--Device-UnifiedData-set properties(value: UnifiedDataProperties)-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

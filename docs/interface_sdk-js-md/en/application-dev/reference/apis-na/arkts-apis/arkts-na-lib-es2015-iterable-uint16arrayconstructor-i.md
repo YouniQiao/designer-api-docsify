@@ -1,0 +1,66 @@
+# Uint16ArrayConstructor
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Uint16ArrayConstructor--><!--Device-unnamed-interface Uint16ArrayConstructor-End-->
+
+## constructor
+
+```TypeScript
+new (elements: Iterable<number>): Uint16Array
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Uint16ArrayConstructor-new (elements: Iterable<number>): Uint16Array--><!--Device-Uint16ArrayConstructor-new (elements: Iterable<number>): Uint16Array-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elements | Iterable&lt;number&gt; | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Uint16Array |  |
+
+## from
+
+```TypeScript
+from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint16Array
+```
+
+Creates an array from an array-like or iterable object.
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Uint16ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint16Array--><!--Device-Uint16ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint16Array-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arrayLike | Iterable&lt;number&gt; | Yes |  |
+| mapfn | (v: number, k: number) =&gt; number | No |  |
+| thisArg | any | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Uint16Array |  |
+

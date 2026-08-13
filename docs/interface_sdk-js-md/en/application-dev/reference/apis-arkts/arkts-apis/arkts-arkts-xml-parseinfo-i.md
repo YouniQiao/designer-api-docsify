@@ -2,9 +2,11 @@
 
 The current parse info.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
 
@@ -18,21 +20,17 @@ import { xml } from '@kit.ArkTS';
 
 ## getAttributeCount
 
-ArkTS-Dyn:
-```TypeScript
-getAttributeCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAttributeCount(): int
 ```
 
 Obtains the number of attributes for the current start tag.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +42,7 @@ Obtains the number of attributes for the current start tag.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
+| int |  |
 
 ## Examples
 
@@ -68,21 +66,17 @@ console.info(str);
 
 ## getColumnNumber
 
-ArkTS-Dyn:
-```TypeScript
-getColumnNumber(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColumnNumber(): int
 ```
 
 Obtains the current column number, starting from 1.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,7 +88,7 @@ Obtains the current column number, starting from 1.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
+| int |  |
 
 ## Examples
 
@@ -118,21 +112,17 @@ console.info(str);
 
 ## getDepth
 
-ArkTS-Dyn:
-```TypeScript
-getDepth(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDepth(): int
 ```
 
 Obtains the depth of this element.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -144,7 +134,7 @@ Obtains the depth of this element.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
+| int |  |
 
 ## Examples
 
@@ -172,21 +162,17 @@ console.info(str);
 
 ## getLineNumber
 
-ArkTS-Dyn:
-```TypeScript
-getLineNumber(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLineNumber(): int
 ```
 
 Obtains the current line number, starting from 1.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -198,7 +184,7 @@ Obtains the current line number, starting from 1.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
+| int |  |
 
 ## Examples
 
@@ -228,9 +214,11 @@ getName(): string
 
 Obtains the name of this element.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -272,9 +260,11 @@ getNamespace(): string
 
 Obtains the namespace of this element.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -320,9 +310,11 @@ getPrefix(): string
 
 Obtains the prefix of this element.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -368,9 +360,11 @@ getText(): string
 
 Obtains the text of the current event.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -412,9 +406,11 @@ isEmptyElementTag(): boolean
 
 Checks whether the current element is empty.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -460,9 +456,11 @@ isWhitespace(): boolean
 
 Checks whether the current event contains only whitespace characters.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

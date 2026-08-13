@@ -6,6 +6,8 @@ AnimateStyle
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface AnimateStyle--><!--Device-unnamed-export interface AnimateStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ AnimateStyle
 backgroundColor: string
 ```
 
-Background color applied to the component after the animation is executed.The default value is none.
+Background color applied to the component after the animation is executed. The default value is none.
 
 **Type:** string
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -36,13 +40,15 @@ Background color applied to the component after the animation is executed.The de
 backgroundPosition: string
 ```
 
-The value format is "x y", in percentage or pixels.The first value indicates the horizontal position, and the second value indicates the vertical position.If only one value is specified, the other value is 50% by default.
+The value format is "x y", in percentage or pixels. The first value indicates the horizontal position, and the second value indicates the vertical position. If only one value is specified, the other value is 50% by default.
 
 **Type:** string
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -64,6 +70,8 @@ bottom offset applied to the component after the animation is executed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-bottom: number--><!--Device-AnimateStyle-bottom: number-End-->
@@ -83,6 +91,8 @@ Height value applied to the component after the animation is executed.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -104,6 +114,8 @@ left offset applied to the component after the animation is executed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-left: number--><!--Device-AnimateStyle-left: number-End-->
@@ -116,13 +128,15 @@ left offset applied to the component after the animation is executed.
 offset?: number
 ```
 
-The value of offset must be within (0.0,1.0] and sorted in ascending order if it is provided.If there are only two frames, offset can be left empty.If there are more than two frames, offset is mandatory.
+The value of offset must be within (0.0,1.0] and sorted in ascending order if it is provided. If there are only two frames, offset can be left empty. If there are more than two frames, offset is mandatory.
 
 **Type:** number
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -136,13 +150,15 @@ The value of offset must be within (0.0,1.0] and sorted in ascending order if it
 opacity: number
 ```
 
-Opacity applied to the component. The value ranges from 0 to 1.The default value is 1.
+Opacity applied to the component. The value ranges from 0 to 1. The default value is 1.
 
 **Type:** number
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -164,6 +180,8 @@ right offset applied to the component after the animation is executed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-right: number--><!--Device-AnimateStyle-right: number-End-->
@@ -183,6 +201,8 @@ top offset applied to the component after the animation is executed.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -204,6 +224,8 @@ Transformation type applied to an element.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-transform: "none" | TransformObject--><!--Device-AnimateStyle-transform: "none" | TransformObject-End-->
@@ -216,13 +238,15 @@ Transformation type applied to an element.
 transformOrigin: string
 ```
 
-Origin position of the transformed element.The first value indicates the x-axis position. The value can be left, center, right, a length, or percentage.The second value indicates the y-axis position. The value can be top, center, bottom, a length, or a percentage.
+Origin position of the transformed element. The first value indicates the x-axis position. The value can be left, center, right, a length, or percentage. The second value indicates the y-axis position. The value can be top, center, bottom, a length, or a percentage.
 
 **Type:** string
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -243,6 +267,8 @@ Width value applied to the component after the animation is executed.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -4,6 +4,8 @@ Information about the **NavDestination** component, returned by the system to de
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-uiObserver-export interface NavDestinationInfo--><!--Device-uiObserver-export interface NavDestinationInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,13 @@ import { uiObserver } from '@kit.ArkUI';
 index: number
 ```
 
-Index of the **NavDestination** component in the navigation stack.The value must be greater than or equal to 0.
+Index of the **NavDestination** component in the navigation stack. The value must be greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,11 +44,13 @@ Index of the **NavDestination** component in the navigation stack.The value must
 mode?: NavDestinationMode
 ```
 
-Mode of the **NavDestination** component.Default value: NavDestinationMode.Standard.
+Mode of the **NavDestination** component. Default value: NavDestinationMode.Standard.
 
 **Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Name of the **NavDestination** component.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,6 +93,8 @@ Unique ID of the **NavDestination** component.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ ID of the **Navigation** component that contains the target **NavDestination** c
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -125,6 +137,8 @@ Parameters of the **NavDestination** component.
 **Type:** Object
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +160,8 @@ Size of the **NavDestination** component, in vp.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -166,6 +182,8 @@ State of the **NavDestination** component.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -185,6 +203,8 @@ Unique ID of the **NavDestination** component.
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

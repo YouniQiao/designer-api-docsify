@@ -1,12 +1,8 @@
 # CheckboxGroup
 
-The **CheckboxGroup** component is used to select or deselect all check boxes in a group.
+The **CheckboxGroup** component is used to select or deselect all check boxes in a group. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## CheckboxGroup
 
@@ -14,12 +10,11 @@ Not supported
 CheckboxGroup(options?: CheckboxGroupOptions)
 ```
 
-Creates a check box group for controlling the select-all or deselect-all state of check boxes within the group. Check boxes and check box groups with the same **group** value belong to the same group.
-
-When this API is used with components that come with the caching mechanism, such as the [List]{@link list} component, those check boxes that have not been created yet need to be manually selected or unselected. For details, see   
-[Example 4](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md#example-4-implementing-the-select-all-functionality).
+Creates a check box group for controlling the select-all or deselect-all state of check boxes within the group. Check boxes and check box groups with the same **group** value belong to the same group. When this API is used with components that come with the caching mechanism, such as the List component, those check boxes that have not been created yet need to be manually selected or unselected. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md#example-4-implementing-the-select-all-functionality).
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,8 +32,8 @@ When this API is used with components that come with the caching mechanism, such
 
 ## Summary
 
-- [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroup-checkboxgroupconfiguration-i.md)
-- [CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md)
-- [CheckboxGroupResult](arkts-arkui-checkboxgroup-checkboxgroupresult-i.md)
-- [OnCheckboxGroupChangeCallback](arkts-arkui-checkboxgroup-oncheckboxgroupchangecallback-t.md)
-- [SelectStatus](arkts-arkui-checkboxgroup-selectstatus-e.md)
+- [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md)
+- [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md)
+- [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md)
+- [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md)
+- [SelectStatus](arkts-arkui-selectstatus-e.md)

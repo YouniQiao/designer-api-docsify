@@ -2,7 +2,9 @@
 
 Defines the detailed information about a device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 
@@ -26,7 +28,9 @@ Device ID.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-deviceId: long--><!--Device-DeviceInfo-deviceId: long-End-->
 
@@ -44,7 +48,9 @@ UID of the driver matching the device.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-driverUid?: string--><!--Device-DeviceInfo-driverUid?: string-End-->
 
@@ -58,11 +64,13 @@ UID of the driver matching the device.
 isDriverMatched: boolean
 ```
 
-Whether the device matches the driver. The value `true` indicates the device matches the driver, and the value`false` indicates the opposite.
+Whether the device matches the driver. The value `true` indicates the device matches the driver, and the value `false` indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-isDriverMatched: boolean--><!--Device-DeviceInfo-isDriverMatched: boolean-End-->
 

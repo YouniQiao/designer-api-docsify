@@ -2,7 +2,9 @@
 
 Describes the activation information of a continuous task.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo-End-->
 
@@ -24,7 +26,9 @@ ID of the activated continuous task.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContinuousTaskActiveInfo-id: int--><!--Device-ContinuousTaskActiveInfo-id: int-End-->
 

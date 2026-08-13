@@ -8,7 +8,9 @@ The &lt;div&gt; component provides a div container.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-<!--Device-unnamed-export interface DivElement extends Element--><!--Device-unnamed-export interface DivElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface DivElement--><!--Device-unnamed-export interface DivElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Returns the offset of the current scrolling. The return value type is Object.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -47,6 +51,8 @@ Scrolls the div for a certain distance.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

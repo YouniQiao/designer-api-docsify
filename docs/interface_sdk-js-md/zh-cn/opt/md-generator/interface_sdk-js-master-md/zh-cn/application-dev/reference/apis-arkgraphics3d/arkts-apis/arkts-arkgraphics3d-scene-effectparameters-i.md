@@ -2,7 +2,9 @@
 
 特效参数
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface EffectParameters--><!--Device-unnamed-export interface EffectParameters-End-->
 
@@ -18,7 +20,9 @@ Id of the effect to create.
 
 **类型：** string
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectParameters-effectId: string--><!--Device-EffectParameters-effectId: string-End-->
 

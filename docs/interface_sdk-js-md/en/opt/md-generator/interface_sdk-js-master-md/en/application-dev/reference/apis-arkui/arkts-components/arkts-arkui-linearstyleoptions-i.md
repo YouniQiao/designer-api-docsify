@@ -1,15 +1,14 @@
 # LinearStyleOptions
 
-Linear style options.
-
-Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions) and  
-[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
+Linear style options. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
 **Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface LinearStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions--><!--Device-unnamed-declare interface LinearStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface LinearStyleOptions--><!--Device-unnamed-declare interface LinearStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,15 +18,15 @@ Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectO
 strokeRadius?: PX | VP | LPX | Resource
 ```
 
-Border radius of the linear progress indicator.
-
-Value range: [0, strokeWidth/2] Default value: **strokeWidth/2**
+Border radius of the linear progress indicator. Value range: [0, strokeWidth/2] Default value: **strokeWidth/2**
 
 **Type:** PX \| VP \| LPX \| Resource
 
 **Default:** strokeWidth / 2
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,13 +42,13 @@ Value range: [0, strokeWidth/2] Default value: **strokeWidth/2**
 strokeWidth?: Length
 ```
 
-Stroke width of the progress indicator. Percentage values are not supported.
-
-Default value: **4.0vp**
+Stroke width of the progress indicator. Percentage values are not supported. Default value: **4.0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

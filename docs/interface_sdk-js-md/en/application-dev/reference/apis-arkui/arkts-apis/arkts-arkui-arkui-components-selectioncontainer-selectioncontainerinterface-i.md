@@ -6,6 +6,8 @@ Provides a SelectionContainer component interface.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SelectionContainerInterface--><!--Device-unnamed-export interface SelectionContainerInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Provides a SelectionContainer component interface.
 import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: SelectionContainerOptions): SelectionContainerAttribute
@@ -27,6 +29,8 @@ Defines the constructor of SelectionContainer.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,5 +50,5 @@ Defines the constructor of SelectionContainer.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
+| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
 

@@ -20,7 +20,7 @@ Sets the current USB function list in Device mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setCurrentFunctions)
+**Substitutes:** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setCurrentFunctions-(System-API))
 
 <!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>--><!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>-End-->
 

@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured in  
-[metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array.
+Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,11 +44,11 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700029](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700024](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
-| [17700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
-| [17700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not existed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not existed. |
 
 ## Examples
 

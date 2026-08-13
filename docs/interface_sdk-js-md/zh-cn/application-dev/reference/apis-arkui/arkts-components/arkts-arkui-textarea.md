@@ -1,12 +1,8 @@
 # TextArea
 
-多行文本输入框组件，当输入的文本内容超过组件宽度时会自动换行显示，适用于评论输入、反馈表单、内容编辑等需要多行文本输入的场景。
+多行文本输入框组件，当输入的文本内容超过组件宽度时会自动换行显示，适用于评论输入、反馈表单、内容编辑等需要多行文本输入的场景。 高度未设置时，组件无默认高度，自适应内容高度。宽度未设置时，默认撑满最大宽度。
 
-高度未设置时，组件无默认高度，自适应内容高度。宽度未设置时，默认撑满最大宽度。
-
-## 子组件
-
-无
+## 子组件 无
 
 ## TextArea
 
@@ -19,6 +15,8 @@ TextArea(value?: TextAreaOptions)
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +32,6 @@ TextArea(value?: TextAreaOptions)
 
 ## 汇总
 
-- [TextAreaOptions](arkts-arkui-textarea-textareaoptions-i.md)
-- [TextAreaSubmitCallback](arkts-arkui-textarea-textareasubmitcallback-t.md)
-- [TextAreaType](arkts-arkui-textarea-textareatype-e.md)
+- [TextAreaOptions](arkts-arkui-textareaoptions-i.md)
+- [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md)
+- [TextAreaType](arkts-arkui-textareatype-e.md)

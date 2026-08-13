@@ -14,7 +14,9 @@ function getAppNet(callback: AsyncCallback<NetHandle>): void
 
 Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).
 
-**Since:** 9
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void-End-->
 
@@ -30,9 +32,9 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 
@@ -58,7 +60,9 @@ function getAppNet(): Promise<NetHandle>
 
 Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).
 
-**Since:** 9
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-function getAppNet(): Promise<NetHandle>--><!--Device-connection-function getAppNet(): Promise<NetHandle>-End-->
 
@@ -74,8 +78,8 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound
 
 | Error Code ID |
 | --- |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 

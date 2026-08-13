@@ -8,6 +8,8 @@ declare type RestrictedWorker = import('../api/@ohos.worker').default.Restricted
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare type RestrictedWorker = import('../api/@ohos.worker').default.RestrictedWorker--><!--Device-unnamed-declare type RestrictedWorker = import('../api/@ohos.worker').default.RestrictedWorker-End-->

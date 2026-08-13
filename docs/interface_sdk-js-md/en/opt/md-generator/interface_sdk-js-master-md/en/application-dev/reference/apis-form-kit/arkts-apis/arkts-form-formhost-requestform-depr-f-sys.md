@@ -12,7 +12,7 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestForm)
+**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,7 +42,7 @@ Requests a widget update. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestForm)
+**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

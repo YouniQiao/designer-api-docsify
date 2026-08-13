@@ -14,7 +14,9 @@ function setSimpleKeyboardEnabled(enable: boolean): void
 
 Set simple keyboard mode.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void--><!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void-End-->
 

@@ -10,6 +10,8 @@ Get a TCPSocket object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-connection-type TCPSocket = socket.TCPSocket--><!--Device-connection-type TCPSocket = socket.TCPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

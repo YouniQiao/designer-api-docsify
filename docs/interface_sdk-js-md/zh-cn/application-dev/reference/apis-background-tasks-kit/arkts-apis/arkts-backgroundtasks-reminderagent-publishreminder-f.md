@@ -6,8 +6,7 @@
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void
 ```
 
-发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限  
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)后才能调用。
+发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限 [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification) 后才能调用。
 
 **起始版本：** 7
 
@@ -15,7 +14,7 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 **废弃版本：** 9
 
-**替代接口：** [publishReminder](reminderAgentManager.publishReminder)
+**替代接口：** publishReminder
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -28,7 +27,7 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | 是 | 需要发布的提醒实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步回调，返回当前发布的提醒的id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步回调，返回当前发布的提醒的id。 |
 
 ## 示例
 
@@ -53,8 +52,7 @@ reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) =>
 function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ```
 
-发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限  
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)后才能调用。
+发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限 [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification) 后才能调用。
 
 **起始版本：** 7
 
@@ -62,7 +60,7 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [publishReminder](reminderAgentManager.publishReminder)
+**替代接口：** publishReminder
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 

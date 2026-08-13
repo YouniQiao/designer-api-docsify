@@ -1,7 +1,6 @@
 # MessageParcel
 
-Provides APIs for reading and writing data in specific format. During RPC, the sender can use the **write()** method provided by **MessageParcel** to write data in specific format to a **MessageParcel** object. The  receiver can use the **read()** method provided by **MessageParcel** to read data in specific format from a  
- **MessageParcel** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
+Provides APIs for reading and writing data in specific format. During RPC, the sender can use the **write()** method provided by **MessageParcel** to write data in specific format to a **MessageParcel** object. The receiver can use the **read()** method provided by **MessageParcel** to read data in specific format from a **MessageParcel** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
 
 **Since:** 7
 
@@ -31,7 +30,7 @@ Closes a file descriptor. This API is a static method.
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeFileDescriptor](rpc.MessageSequence.closeFileDescriptor(fd:)
+**Substitutes:** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closeFileDescriptor)(fd: int)
 
 <!--Device-MessageParcel-static closeFileDescriptor(fd: number): void--><!--Device-MessageParcel-static closeFileDescriptor(fd: number): void-End-->
 
@@ -156,7 +155,7 @@ Duplicates a file descriptor. This API is a static method.
 
 **Deprecated since:** 9
 
-**Substitutes:** [dupFileDescriptor](rpc.MessageSequence.dupFileDescriptor(fd:)
+**Substitutes:** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupFileDescriptor)(fd: int)
 
 <!--Device-MessageParcel-static dupFileDescriptor(fd: number): number--><!--Device-MessageParcel-static dupFileDescriptor(fd: number): number-End-->
 
@@ -562,7 +561,7 @@ Reads the Boolean array from this **MessageParcel** object and writes it to the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [readBooleanArray](rpc.MessageSequence#readBooleanArray(dataIn:)
+**Substitutes:** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readBooleanArray)(dataIn: boolean[])
 
 <!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void-End-->
 
@@ -686,7 +685,7 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 
 **Deprecated since:** 9
 
-**Substitutes:** [readByteArray](rpc.MessageSequence#readByteArray(dataIn:)
+**Substitutes:** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readByteArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readByteArray(dataIn: number[]): void--><!--Device-MessageParcel-readByteArray(dataIn: number[]): void-End-->
 
@@ -811,7 +810,7 @@ Reads the character array from this **MessageParcel** object and writes it to th
 
 **Deprecated since:** 9
 
-**Substitutes:** [readCharArray](rpc.MessageSequence#readCharArray(dataIn:)
+**Substitutes:** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readCharArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readCharArray(dataIn: number[]): void--><!--Device-MessageParcel-readCharArray(dataIn: number[]): void-End-->
 
@@ -935,7 +934,7 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [readDoubleArray](rpc.MessageSequence#readDoubleArray(dataIn:)
+**Substitutes:** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readDoubleArray)(dataIn: double[])
 
 <!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void--><!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void-End-->
 
@@ -1026,7 +1025,7 @@ Reads the exception information from this **MessageParcel** object.
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -1196,7 +1195,7 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [readFloatArray](rpc.MessageSequence#readFloatArray(dataIn:)
+**Substitutes:** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readFloatArray)(dataIn: double[])
 
 <!--Device-MessageParcel-readFloatArray(dataIn: number[]): void--><!--Device-MessageParcel-readFloatArray(dataIn: number[]): void-End-->
 
@@ -1320,7 +1319,7 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [readIntArray](rpc.MessageSequence#readIntArray(dataIn:)
+**Substitutes:** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readIntArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readIntArray(dataIn: number[]): void--><!--Device-MessageParcel-readIntArray(dataIn: number[]): void-End-->
 
@@ -1397,7 +1396,7 @@ try {
 readInterfaceToken(): string
 ```
 
-Reads the interface token from this **MessageParcel** object. The interface token is read in the sequence in  which it is written to the **MessageParcel** object. The local object can use it to verify the communication.
+Reads the interface token from this **MessageParcel** object. The interface token is read in the sequence in which it is written to the **MessageParcel** object. The local object can use it to verify the communication.
 
 **Since:** 7
 
@@ -1484,7 +1483,7 @@ Reads the long array from this **MessageParcel** object and writes it to the cre
 
 **Deprecated since:** 9
 
-**Substitutes:** [readLongArray](rpc.MessageSequence#readLongArray(dataIn:)
+**Substitutes:** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readLongArray)(dataIn: long[])
 
 <!--Device-MessageParcel-readLongArray(dataIn: number[]): void--><!--Device-MessageParcel-readLongArray(dataIn: number[]): void-End-->
 
@@ -1567,7 +1566,7 @@ Reads raw data from this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readRawDataBuffer](rpc.MessageSequence#readRawDataBuffer(size:)
+**Substitutes:** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readRawDataBuffer)(size: int)
 
 <!--Device-MessageParcel-readRawData(size: number): number[]--><!--Device-MessageParcel-readRawData(size: number): number[]-End-->
 
@@ -1609,8 +1608,7 @@ try {
 readRemoteObject(): IRemoteObject
 ```
 
-Reads the remote object from this **MessageParcel** object. You can use this method to deserialize the  
- **MessageParcel** object to generate an **IRemoteObject**. The remote objects are read in the order in which  they are written to this **MessageParcel** object.
+Reads the remote object from this **MessageParcel** object. You can use this method to deserialize the **MessageParcel** object to generate an **IRemoteObject**. The remote objects are read in the order in which they are written to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1668,7 +1666,7 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 
 **Deprecated since:** 9
 
-**Substitutes:** [readRemoteObjectArray](rpc.MessageSequence#readRemoteObjectArray(objects:)
+**Substitutes:** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readRemoteObjectArray)(objects: IRemoteObject[])
 
 <!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
@@ -1722,7 +1720,7 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readRemoteObjectArray](rpc.MessageSequence#readRemoteObjectArray(objects:)
+**Substitutes:** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readRemoteObjectArray)(objects: IRemoteObject[])
 
 <!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]-End-->
 
@@ -1776,7 +1774,7 @@ Reads member variables from this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readParcelable](rpc.MessageSequence#readParcelable(dataIn:)
+**Substitutes:** [readParcelable](arkts-ipc-rpc-messagesequence-c.md#readParcelable)(dataIn: Parcelable)
 
 <!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean--><!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean-End-->
 
@@ -1844,7 +1842,7 @@ Reads the **Sequenceable** array from this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readParcelableArray](rpc.MessageSequence#readParcelableArray(parcelableArray:)
+**Substitutes:** [readParcelableArray](arkts-ipc-rpc-messagesequence-c.md#readParcelableArray)(parcelableArray: Parcelable[])
 
 <!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void--><!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void-End-->
 
@@ -1949,7 +1947,7 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 
 **Deprecated since:** 9
 
-**Substitutes:** [readShortArray](rpc.MessageSequence#readShortArray(dataIn:)
+**Substitutes:** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readShortArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readShortArray(dataIn: number[]): void--><!--Device-MessageParcel-readShortArray(dataIn: number[]): void-End-->
 
@@ -2073,7 +2071,7 @@ Reads the string array from this **MessageParcel** object and writes it to the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [readStringArray](rpc.MessageSequence#readStringArray(dataIn:)
+**Substitutes:** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readStringArray)(dataIn: string[])
 
 <!--Device-MessageParcel-readStringArray(dataIn: string[]): void--><!--Device-MessageParcel-readStringArray(dataIn: string[]): void-End-->
 
@@ -2188,7 +2186,7 @@ Moves the read pointer to the specified position.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rewindRead](rpc.MessageSequence#rewindRead(pos:)
+**Substitutes:** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindRead)(pos: int)
 
 <!--Device-MessageParcel-rewindRead(pos: number): boolean--><!--Device-MessageParcel-rewindRead(pos: number): boolean-End-->
 
@@ -2238,7 +2236,7 @@ Moves the write pointer to the specified position.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rewindWrite](rpc.MessageSequence#rewindWrite(pos:)
+**Substitutes:** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindWrite)(pos: int)
 
 <!--Device-MessageParcel-rewindWrite(pos: number): boolean--><!--Device-MessageParcel-rewindWrite(pos: number): boolean-End-->
 
@@ -2286,7 +2284,7 @@ Sets the storage capacity of this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCapacity](rpc.MessageSequence#setCapacity(size:)
+**Substitutes:** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setCapacity)(size: int)
 
 <!--Device-MessageParcel-setCapacity(size: number): boolean--><!--Device-MessageParcel-setCapacity(size: number): boolean-End-->
 
@@ -2331,7 +2329,7 @@ Sets the size of data contained in this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSize](rpc.MessageSequence#setSize(size:)
+**Substitutes:** [setSize](arkts-ipc-rpc-messagesequence-c.md#setSize)(size: int)
 
 <!--Device-MessageParcel-setSize(size: number): boolean--><!--Device-MessageParcel-setSize(size: number): boolean-End-->
 
@@ -2376,7 +2374,7 @@ Writes an anonymous shared object to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeAshmem](rpc.MessageSequence#writeAshmem(ashmem:)
+**Substitutes:** [writeAshmem](arkts-ipc-rpc-messagesequence-c.md#writeAshmem)(ashmem: Ashmem)
 
 <!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean--><!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean-End-->
 
@@ -2422,7 +2420,7 @@ Writes a Boolean value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeBoolean](rpc.MessageSequence#writeBoolean(val:)
+**Substitutes:** [writeBoolean](arkts-ipc-rpc-messagesequence-c.md#writeBoolean)(val: boolean)
 
 <!--Device-MessageParcel-writeBoolean(val: boolean): boolean--><!--Device-MessageParcel-writeBoolean(val: boolean): boolean-End-->
 
@@ -2467,7 +2465,7 @@ Writes a Boolean array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeBooleanArray](rpc.MessageSequence#writeBooleanArray(booleanArray:)
+**Substitutes:** [writeBooleanArray](arkts-ipc-rpc-messagesequence-c.md#writeBooleanArray)(booleanArray: boolean[])
 
 <!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean--><!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean-End-->
 
@@ -2512,7 +2510,7 @@ Writes a Byte value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeByte](rpc.MessageSequence#writeByte(val:)
+**Substitutes:** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writeByte)(val: int)
 
 <!--Device-MessageParcel-writeByte(val: number): boolean--><!--Device-MessageParcel-writeByte(val: number): boolean-End-->
 
@@ -2557,7 +2555,7 @@ Writes a byte array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeByteArray](rpc.MessageSequence#writeByteArray(byteArray:)
+**Substitutes:** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writeByteArray)(byteArray: int[])
 
 <!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean--><!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean-End-->
 
@@ -2603,7 +2601,7 @@ Writes a single character value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeChar](rpc.MessageSequence#writeChar(val:)
+**Substitutes:** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writeChar)(val: int)
 
 <!--Device-MessageParcel-writeChar(val: number): boolean--><!--Device-MessageParcel-writeChar(val: number): boolean-End-->
 
@@ -2648,7 +2646,7 @@ Writes a single character array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeCharArray](rpc.MessageSequence#writeCharArray(charArray:)
+**Substitutes:** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writeCharArray)(charArray: int[])
 
 <!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean--><!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean-End-->
 
@@ -2693,7 +2691,7 @@ Writes a double value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeDouble](rpc.MessageSequence#writeDouble(val:)
+**Substitutes:** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writeDouble)(val: double)
 
 <!--Device-MessageParcel-writeDouble(val: number): boolean--><!--Device-MessageParcel-writeDouble(val: number): boolean-End-->
 
@@ -2738,7 +2736,7 @@ Writes a double array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeDoubleArray](rpc.MessageSequence#writeDoubleArray(doubleArray:)
+**Substitutes:** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writeDoubleArray)(doubleArray: double[])
 
 <!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean--><!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean-End-->
 
@@ -2783,7 +2781,7 @@ Writes a file descriptor to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeFileDescriptor](rpc.MessageSequence#writeFileDescriptor(fd:)
+**Substitutes:** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writeFileDescriptor)(fd: int)
 
 <!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean--><!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean-End-->
 
@@ -2831,7 +2829,7 @@ Writes a double value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeFloat](rpc.MessageSequence#writeFloat(val:)
+**Substitutes:** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writeFloat)(val: double)
 
 <!--Device-MessageParcel-writeFloat(val: number): boolean--><!--Device-MessageParcel-writeFloat(val: number): boolean-End-->
 
@@ -2876,7 +2874,7 @@ Writes a double array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeFloatArray](rpc.MessageSequence#writeFloatArray(floatArray:)
+**Substitutes:** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writeFloatArray)(floatArray: double[])
 
 <!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean--><!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean-End-->
 
@@ -2921,7 +2919,7 @@ Writes an int value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeInt](rpc.MessageSequence#writeInt(val:)
+**Substitutes:** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeInt)(val: int)
 
 <!--Device-MessageParcel-writeInt(val: number): boolean--><!--Device-MessageParcel-writeInt(val: number): boolean-End-->
 
@@ -2966,7 +2964,7 @@ Writes an integer array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeIntArray](rpc.MessageSequence#writeIntArray(intArray:)
+**Substitutes:** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeIntArray)(intArray: int[])
 
 <!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean--><!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean-End-->
 
@@ -3005,13 +3003,13 @@ try {
 writeInterfaceToken(token: string): boolean
 ```
 
-Writes an interface token to this **MessageParcel** object. The remote object can use this interface token to  verify the communication.
+Writes an interface token to this **MessageParcel** object. The remote object can use this interface token to verify the communication.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeInterfaceToken](rpc.MessageSequence#writeInterfaceToken(token:)
+**Substitutes:** [writeInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#writeInterfaceToken)(token: string)
 
 <!--Device-MessageParcel-writeInterfaceToken(token: string): boolean--><!--Device-MessageParcel-writeInterfaceToken(token: string): boolean-End-->
 
@@ -3056,7 +3054,7 @@ Writes a long int value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeLong](rpc.MessageSequence#writeLong(val:)
+**Substitutes:** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writeLong)(val: long)
 
 <!--Device-MessageParcel-writeLong(val: number): boolean--><!--Device-MessageParcel-writeLong(val: number): boolean-End-->
 
@@ -3101,7 +3099,7 @@ Writes a long array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeLongArray](rpc.MessageSequence#writeLongArray(longArray:)
+**Substitutes:** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writeLongArray)(longArray: long[])
 
 <!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean--><!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean-End-->
 
@@ -3193,7 +3191,7 @@ Writes raw data to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeRawDataBuffer](rpc.MessageSequence#writeRawDataBuffer(rawData:)
+**Substitutes:** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writeRawDataBuffer)(rawData: ArrayBuffer, size: int)
 
 <!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean--><!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean-End-->
 
@@ -3240,7 +3238,7 @@ Serializes a remote object and writes it to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeRemoteObject](rpc.MessageSequence#writeRemoteObject(obj:)
+**Substitutes:** [writeRemoteObject](arkts-ipc-rpc-messagesequence-c.md#writeRemoteObject)(obj: IRemoteObject)
 
 <!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean--><!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean-End-->
 
@@ -3295,7 +3293,7 @@ Writes an **IRemoteObject** array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeRemoteObjectArray](rpc.MessageSequence#writeRemoteObjectArray(objectArray:)
+**Substitutes:** [writeRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#writeRemoteObjectArray)(objectArray: IRemoteObject[])
 
 <!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean--><!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean-End-->
 
@@ -3352,7 +3350,7 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeParcelable](rpc.MessageSequence#writeParcelable(val:)
+**Substitutes:** [writeParcelable](arkts-ipc-rpc-messagesequence-c.md#writeParcelable)(val: Parcelable)
 
 <!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean--><!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean-End-->
 
@@ -3417,7 +3415,7 @@ Writes a **Sequenceable** array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeParcelableArray](rpc.MessageSequence#writeParcelableArray(parcelableArray:)
+**Substitutes:** [writeParcelableArray](arkts-ipc-rpc-messagesequence-c.md#writeParcelableArray)(parcelableArray: Parcelable[])
 
 <!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean--><!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean-End-->
 
@@ -3485,7 +3483,7 @@ Writes a short int value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeShort](rpc.MessageSequence#writeShort(val:)
+**Substitutes:** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeShort)(val: int)
 
 <!--Device-MessageParcel-writeShort(val: number): boolean--><!--Device-MessageParcel-writeShort(val: number): boolean-End-->
 
@@ -3530,7 +3528,7 @@ Writes a short array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeShortArray](rpc.MessageSequence#writeShortArray(shortArray:)
+**Substitutes:** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeShortArray)(shortArray: int[])
 
 <!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean--><!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean-End-->
 
@@ -3575,7 +3573,7 @@ Writes a string to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeString](rpc.MessageSequence#writeString(val:)
+**Substitutes:** [writeString](arkts-ipc-rpc-messagesequence-c.md#writeString)(val: string)
 
 <!--Device-MessageParcel-writeString(val: string): boolean--><!--Device-MessageParcel-writeString(val: string): boolean-End-->
 
@@ -3620,7 +3618,7 @@ Writes a string array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeStringArray](rpc.MessageSequence#writeStringArray(stringArray:)
+**Substitutes:** [writeStringArray](arkts-ipc-rpc-messagesequence-c.md#writeStringArray)(stringArray: string[])
 
 <!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean--><!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean-End-->
 

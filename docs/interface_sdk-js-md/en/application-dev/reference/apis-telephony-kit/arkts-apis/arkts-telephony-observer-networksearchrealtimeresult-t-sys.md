@@ -8,7 +8,9 @@ Indicates the result of network search.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-observer-type NetworkSearchRealTimeResult = radio.NetworkSearchRealTimeResult--><!--Device-observer-type NetworkSearchRealTimeResult = radio.NetworkSearchRealTimeResult-End-->
 

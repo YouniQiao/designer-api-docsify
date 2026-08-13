@@ -1,13 +1,14 @@
 # FormEditExtensionAbility
 
-The **FormEditExtensionAbility** module, inherited from   
-[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), provides the widget editing function.
+The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), provides the widget editing function.
 
 **Inheritance/Implementation:** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-unnamed-declare class FormEditExtensionAbility extends UIExtensionAbility--><!--Device-unnamed-declare class FormEditExtensionAbility extends UIExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class FormEditExtensionAbility--><!--Device-unnamed-declare class FormEditExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -29,8 +30,30 @@ Indicates configuration information about a form edit extension ability context.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormEditExtensionAbility-context: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-context: FormEditExtensionContext-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+## formEditContext
+
+```TypeScript
+formEditContext: FormEditExtensionContext
+```
+
+Indicates configuration information about a form edit extension ability context.
+
+**Type:** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormEditExtensionAbility-formEditContext: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-formEditContext: FormEditExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form

@@ -12,11 +12,11 @@ import { contact } from '@kit.ContactsKit';
 function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
-Synchronizes multiple contacts to the contacts database in batches.
-
-A maximum of 400 contacts can be synchronized at a time. The caller must be running in the foreground.
+Synchronizes multiple contacts to the contacts database in batches. A maximum of 400 contacts can be synchronized at a time. The caller must be running in the foreground.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -47,16 +47,16 @@ A maximum of 400 contacts can be synchronized at a time. The caller must be runn
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-operation-canceled) |
-| [16700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) |
-| [16700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) |
-| [16700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700003-background-service-calling-prohibited) |
-| [16700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16700103](../errorcode-contacts.md#16700103-operation-canceled) |
+| [16700004](../errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
+| [16700003](../errorcode-contacts.md#16700003-background-service-calling-prohibited) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

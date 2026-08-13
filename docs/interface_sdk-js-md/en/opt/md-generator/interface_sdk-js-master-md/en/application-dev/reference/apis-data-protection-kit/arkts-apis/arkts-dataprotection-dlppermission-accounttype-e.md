@@ -1,40 +1,16 @@
-# AccountType
+# AccountType (System API)
 
 Enumerates the types of authorized accounts.
 
-**Since:** 21
+**Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-export enum AccountType--><!--Device-dlpPermission-export enum AccountType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
-## CLOUD_ACCOUNT
-
-```TypeScript
-CLOUD_ACCOUNT = 1
-```
-
-Cloud account.
-
-**Since:** 21
-
-<!--Device-AccountType-CLOUD_ACCOUNT = 1--><!--Device-AccountType-CLOUD_ACCOUNT = 1-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-## DOMAIN_ACCOUNT
-
-```TypeScript
-DOMAIN_ACCOUNT = 2
-```
-
-Domain account.
-
-**Since:** 21
-
-<!--Device-AccountType-DOMAIN_ACCOUNT = 2--><!--Device-AccountType-DOMAIN_ACCOUNT = 2-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
+**System API:** This is a system API.
 
 ## ENTERPRISE_ACCOUNT
 
@@ -45,6 +21,8 @@ ENTERPRISE_ACCOUNT = 4
 Enterprise account.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-AccountType-ENTERPRISE_ACCOUNT = 4--><!--Device-AccountType-ENTERPRISE_ACCOUNT = 4-End-->
 

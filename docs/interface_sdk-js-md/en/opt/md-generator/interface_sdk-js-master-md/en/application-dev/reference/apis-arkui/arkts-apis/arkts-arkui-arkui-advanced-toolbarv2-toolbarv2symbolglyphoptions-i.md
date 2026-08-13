@@ -4,6 +4,8 @@ Declare the options of ToolBarV2SymbolGlyph
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Modifier of toolbarV2's activated symbol.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Modifier of toolbarV2's normal symbol.
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,11 +14,13 @@ function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<Abilit
 
 Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_ABILITY_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>--><!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>-End-->
 
@@ -41,8 +43,8 @@ Obtains the ability information based on the given resource identifier and abili
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 
 ## Examples
 

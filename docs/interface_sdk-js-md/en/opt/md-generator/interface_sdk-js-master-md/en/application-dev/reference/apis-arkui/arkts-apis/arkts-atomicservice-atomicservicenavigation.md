@@ -1,9 +1,4 @@
-# @ohos.atomicservice.AtomicServiceNavigation(This section describes the interfaces used by AtomicServiceNavigation)
-
-###### Child Components
- Supported
- Since API version 10, you are advised to use [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md#NavPathStack) for page routing.
-
+# @ohos.atomicservice.AtomicServiceNavigation
 
 ## Modules to Import
 

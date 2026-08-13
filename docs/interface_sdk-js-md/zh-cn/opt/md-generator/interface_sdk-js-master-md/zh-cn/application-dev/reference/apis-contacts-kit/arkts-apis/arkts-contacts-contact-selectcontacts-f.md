@@ -10,6 +10,8 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
@@ -26,7 +28,7 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -54,6 +56,8 @@ function selectContacts(): Promise<Array<Contact>>
 调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,6 +94,8 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void-End-->
@@ -107,7 +113,7 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -138,6 +144,8 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>-End-->
@@ -160,7 +168,7 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

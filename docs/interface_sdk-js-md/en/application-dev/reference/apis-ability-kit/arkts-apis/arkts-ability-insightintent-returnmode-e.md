@@ -4,7 +4,9 @@ Enumerates the modes that define how the execution result of an intent is return
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-insightIntent-enum ReturnMode--><!--Device-insightIntent-enum ReturnMode-End-->
 
@@ -16,13 +18,13 @@ Enumerates the modes that define how the execution result of an intent is return
 CALLBACK = 0
 ```
 
-The intent execution result is returned through the  
-[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIAbilityForegroundMode)or  
-[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIExtensionAbility)API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor).
+The intent execution result is returned through the [onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIAbilityForegroundMode) or [onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIExtensionAbility) API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,14 +40,13 @@ The intent execution result is returned through the
 FUNCTION = 1
 ```
 
-The intent execution result is returned after the  
-[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) or  
-[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult) API in  
-[intent provider management](arkts-app-ability-insightintentprovider.md#insightIntentProvider) is called.
+The intent execution result is returned after the [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) or [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult) API in [intent provider management](arkts-app-ability-insightintentprovider.md#@ohos.app.ability.insightIntentProvider) is called.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

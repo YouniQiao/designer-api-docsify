@@ -12,15 +12,13 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 function begin(name: string, flags?: int): HiTraceId
 ```
 
-Starts call chain trace. This API returns the result synchronously.
+Starts call chain trace. This API returns the result synchronously. If the current thread's TLS does not contain a valid HiTrace ID, this function generates one, stores it in TLS, and returns it. If the current thread's TLS already contains a valid HiTrace ID, this function does not start tracing and returns an invalid HiTrace ID with all property values being 0.
 
-If the current thread's TLS does not contain a valid HiTrace ID, this function generates one, stores it in TLS, and returns it.
+**Since:** 23
 
-If the current thread's TLS already contains a valid HiTrace ID, this function does not start tracing and returns an invalid HiTrace ID with all property values being 0.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId--><!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId-End-->
 
@@ -31,7 +29,7 @@ If the current thread's TLS already contains a valid HiTrace ID, this function d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Traced service name. It is recommended that the length of this parameter be less than or equal to 63 bytes. The excess part will be truncated. |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md#HiTraceFlag). The default value is **0**. |
+| flags | int | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md#HiTraceFlag). The default value is **0**. |
 
 **Return value:**
 

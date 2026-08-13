@@ -8,9 +8,11 @@ function getGraphicsMemorySummary(interval?: number): Promise<GraphicsMemorySumm
 
 获取应用显存数据，使用Promise进行异步回调。
 
-**起始版本：** 21
+**起始版本：** 23
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>--><!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>-End-->
 
@@ -32,7 +34,7 @@ function getGraphicsMemorySummary(interval?: number): Promise<GraphicsMemorySumm
 
 | 错误码ID |
 | --- |
-| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
 
 ## 示例
 

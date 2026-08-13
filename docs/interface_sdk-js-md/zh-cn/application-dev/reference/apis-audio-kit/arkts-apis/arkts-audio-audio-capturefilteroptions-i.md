@@ -8,7 +8,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** [OH_AVScreenCapture](OH_AVScreenCapture)
+**替代接口：** OH_AVScreenCapture in native interface.
 
 <!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
 
@@ -30,7 +30,7 @@ Filter by stream usages. But not allow to capture voice streams.
 
 **废弃版本：** 12
 
-**替代接口：** [OH_AVScreenCapture](OH_AVScreenCapture)
+**替代接口：** OH_AVScreenCapture in native interface.
 
 <!--Device-CaptureFilterOptions-usages: Array<StreamUsage>--><!--Device-CaptureFilterOptions-usages: Array<StreamUsage>-End-->
 

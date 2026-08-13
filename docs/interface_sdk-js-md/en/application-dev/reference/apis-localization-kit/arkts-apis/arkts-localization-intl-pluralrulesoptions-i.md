@@ -8,7 +8,7 @@ Defines the options for creating a **PluralRules** object. Since API version 9, 
 
 **Deprecated since:** 20
 
-**Substitutes:** [PluralRulesOptions]]([Intl.PluralRulesOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options))
+**Substitutes:** [Intl.PluralRulesOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)
 
 <!--Device-intl-export interface PluralRulesOptions--><!--Device-intl-export interface PluralRulesOptions-End-->
 
@@ -26,9 +26,7 @@ import { intl } from '@kit.LocalizationKit';
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be **lookup** or **best fit**.
-
-The default value is **best fit**.
+Locale matching algorithm. The value can be **lookup** or **best fit**. The default value is **best fit**.
 
 **Type:** string
 
@@ -38,7 +36,7 @@ The default value is **best fit**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [localeMatcher]]([Intl.PluralRulesOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#localematcher))
+**Substitutes:** [Intl.PluralRulesOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#localematcher)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,9 +50,7 @@ The default value is **best fit**.
 maximumFractionDigits?: int
 ```
 
-Maximum number of digits in the fraction part of a number. The value ranges from **1** to **21**.
-
-The default value is **3**.
+Maximum number of digits in the fraction part of a number. The value ranges from **1** to **21**. The default value is **3**.
 
 **Type:** int
 
@@ -64,7 +60,7 @@ The default value is **3**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [maximumFractionDigits]]([Intl.PluralRulesOptions.maximumFractionDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#maximumfractiondigits))
+**Substitutes:** [Intl.PluralRulesOptions.maximumFractionDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#maximumfractiondigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,9 +74,7 @@ The default value is **3**.
 maximumSignificantDigits?: int
 ```
 
-Maximum number of the least significant digits. The value ranges from **1** to **21**.
-
-The default value is **21**.
+Maximum number of the least significant digits. The value ranges from **1** to **21**. The default value is **21**.
 
 **Type:** int
 
@@ -90,7 +84,7 @@ The default value is **21**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [maximumSignificantDigits]]([Intl.PluralRulesOptions.maximumSignificantDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#maximumsignificantdigits))
+**Substitutes:** [Intl.PluralRulesOptions.maximumSignificantDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#maximumsignificantdigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,9 +98,7 @@ The default value is **21**.
 minimumFractionDigits?: int
 ```
 
-Minimum number of digits in the fraction part of a number. The value ranges from **0** to **20**.
-
-The default value is **0**.
+Minimum number of digits in the fraction part of a number. The value ranges from **0** to **20**. The default value is **0**.
 
 **Type:** int
 
@@ -116,7 +108,7 @@ The default value is **0**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [minimumFractionDigits]]([Intl.PluralRulesOptions.minimumFractionDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumfractiondigits))
+**Substitutes:** [Intl.PluralRulesOptions.minimumFractionDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumfractiondigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,9 +122,7 @@ The default value is **0**.
 minimumIntegerDigits?: int
 ```
 
-Minimum number of digits allowed in the integer part of a number. The value ranges from **1** to **21**.
-
-The default value is **1**.
+Minimum number of digits allowed in the integer part of a number. The value ranges from **1** to **21**. The default value is **1**.
 
 **Type:** int
 
@@ -142,7 +132,7 @@ The default value is **1**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [minimumIntegerDigits]]([Intl.PluralRulesOptions.minimumIntegerDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumintegerdigits))
+**Substitutes:** [Intl.PluralRulesOptions.minimumIntegerDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumintegerdigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -156,9 +146,7 @@ The default value is **1**.
 minimumSignificantDigits?: int
 ```
 
-Minimum number of the least significant digits. The value ranges from **1** to **21**.
-
-The default value is **1**.
+Minimum number of the least significant digits. The value ranges from **1** to **21**. The default value is **1**.
 
 **Type:** int
 
@@ -168,7 +156,7 @@ The default value is **1**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [minimumSignificantDigits]]([Intl.PluralRulesOptions.minimumSignificantDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumsignificantdigits))
+**Substitutes:** [Intl.PluralRulesOptions.minimumSignificantDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumsignificantdigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -182,11 +170,7 @@ The default value is **1**.
 type?: string
 ```
 
-Collation type. The value can be **cardinal** or **ordinal**.
-
-The default value is **cardinal**.
-
-The value **cardinal** indicates a cardinal number and the value **ordinal** indicates an ordinal number.
+Collation type. The value can be **cardinal** or **ordinal**. The default value is **cardinal**. The value **cardinal** indicates a cardinal number and the value **ordinal** indicates an ordinal number.
 
 **Type:** string
 
@@ -196,7 +180,7 @@ The value **cardinal** indicates a cardinal number and the value **ordinal** ind
 
 **Deprecated since:** 20
 
-**Substitutes:** [type]]([Intl.PluralRulesOptions.type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#type))
+**Substitutes:** [Intl.PluralRulesOptions.type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#type)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

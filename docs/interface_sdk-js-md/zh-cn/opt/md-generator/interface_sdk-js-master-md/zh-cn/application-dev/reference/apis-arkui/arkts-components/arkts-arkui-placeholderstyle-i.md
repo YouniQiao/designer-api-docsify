@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface PlaceholderStyle--><!--Device-unnamed-declare interface PlaceholderStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 font?: Font
 ```
 
-设置提示文本样式。
-
-默认值遵循主题设置。
+设置提示文本样式。 默认值遵循主题设置。
 
 **类型：** Font
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-设置提示文本颜色。
-
-默认值遵循主题设置。
+设置提示文本颜色。 默认值遵循主题设置。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

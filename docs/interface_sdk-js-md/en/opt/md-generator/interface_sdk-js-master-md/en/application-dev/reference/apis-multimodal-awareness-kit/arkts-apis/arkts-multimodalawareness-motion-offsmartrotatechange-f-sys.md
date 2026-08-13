@@ -16,6 +16,8 @@ Unsubscribe to smart rotate sensor event.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-motion-function offSmartRotateChange(callback?: Callback<SmartRotateEvent>): void--><!--Device-motion-function offSmartRotateChange(callback?: Callback<SmartRotateEvent>): void-End-->
@@ -34,5 +36,5 @@ Unsubscribe to smart rotate sensor event.
 
 | Error Code ID |
 | --- |
-| [31500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500001-service-exception) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-service-exception) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

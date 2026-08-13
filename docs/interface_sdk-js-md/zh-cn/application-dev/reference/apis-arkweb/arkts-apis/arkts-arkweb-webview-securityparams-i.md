@@ -1,10 +1,12 @@
 # SecurityParams
 
-Defines the parameters for enableAdvancedSecurityMode.
+定义enableAdvancedSecurityMode参数。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface SecurityParams--><!--Device-webview-interface SecurityParams-End-->
 
@@ -16,13 +18,15 @@ Defines the parameters for enableAdvancedSecurityMode.
 disableJITCompilation?: boolean
 ```
 
-Decide whether JIT is disabled, the default value is false.
+决定是否关闭JIT。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +40,15 @@ Decide whether JIT is disabled, the default value is false.
 disableMathML?: boolean
 ```
 
-Decide whether MathML is disabled, the default value is false.
+决定是否禁用MathML。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,13 +62,15 @@ Decide whether MathML is disabled, the default value is false.
 disableNonProxyUDP?: boolean
 ```
 
-Decide whether NonProxyUDP is disabled, the default value is false.
+判断NonProxyUDP是否关闭。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,13 +84,15 @@ Decide whether NonProxyUDP is disabled, the default value is false.
 disablePDFViewer?: boolean
 ```
 
-是否禁用PDF查看器。true表示禁用，false表示不禁用。默认值：false。内置PDF解析引擎在解析复杂二进制格式和嵌入式脚本时容易存在漏洞，攻击者可构造特殊PDF文件利用字体解析或内存破坏漏洞控制应用主进程。禁用后无法在ArkWeb中加载PDF。非文档办公类App建议禁用，引导用户使用外部应用打开PDF。
+是否禁用PDF查看器。true表示禁用，false表示不禁用。默认值：false。 内置PDF解析引擎在解析复杂二进制格式和嵌入式脚本时容易存在漏洞，攻击者可构造特殊PDF文件利用字体解析或内存破坏漏洞控制应用主进程。 禁用后无法在ArkWeb中加载PDF。非文档办公类App建议禁用，引导用户使用外部应用打开PDF。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,13 +106,15 @@ disablePDFViewer?: boolean
 disableServiceWorker?: boolean
 ```
 
-Decide whether ServiceWorker is disabled, the default value is false.
+判断是否禁用ServiceWorker，默认为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,13 +128,15 @@ Decide whether ServiceWorker is disabled, the default value is false.
 disableWebAssembly?: boolean
 ```
 
-Decide whether WASM is disabled, the default value is false.
+判断是否关闭WASM。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,13 +150,15 @@ Decide whether WASM is disabled, the default value is false.
 disableWebGL?: boolean
 ```
 
-Decide whether WebGL is disabled, the default value is false.
+判断是否禁用WebGL。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

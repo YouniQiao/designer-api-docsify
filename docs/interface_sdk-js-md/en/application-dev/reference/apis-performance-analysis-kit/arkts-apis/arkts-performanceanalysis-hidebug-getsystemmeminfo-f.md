@@ -14,9 +14,11 @@ function getSystemMemInfo(): SystemMemInfo
 
 Obtains system memory information. This API is implemented by reading data from the **\/proc/meminfo** node.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
 

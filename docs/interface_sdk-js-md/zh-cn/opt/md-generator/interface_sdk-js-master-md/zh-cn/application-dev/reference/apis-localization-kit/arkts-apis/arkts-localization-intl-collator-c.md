@@ -2,7 +2,9 @@
 
 提供字符串排序的能力。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-intl-export class Collator--><!--Device-intl-export class Collator-End-->
 
@@ -17,6 +19,8 @@ compare(first: string, second: string): number
 根据配置项的排序规则，比较两个字符串。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -58,6 +62,8 @@ constructor()
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Collator-constructor()--><!--Device-Collator-constructor()-End-->
@@ -82,6 +88,8 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 根据指定的区域和配置项创建排序对象。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -114,6 +122,8 @@ resolvedOptions(): CollatorOptions
 获取创建排序对象时设置的配置项。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

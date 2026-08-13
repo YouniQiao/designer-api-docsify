@@ -2,11 +2,13 @@
 
 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration)。
 
-**继承/实现关系：** LoadingProgressConfiguration extends [CommonConfiguration<LoadingProgressConfiguration>](CommonConfiguration<LoadingProgressConfiguration>)
+**继承/实现关系：** LoadingProgressConfiguration extends CommonConfiguration<LoadingProgressConfiguration>
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface LoadingProgressConfiguration extends CommonConfiguration<LoadingProgressConfiguration>--><!--Device-unnamed-declare interface LoadingProgressConfiguration extends CommonConfiguration<LoadingProgressConfiguration>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface LoadingProgressConfiguration--><!--Device-unnamed-declare interface LoadingProgressConfiguration-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,13 +18,13 @@
 enableLoading: boolean
 ```
 
-LoadingProgress动画是否显示。
-
-默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。
+LoadingProgress动画是否显示。 默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

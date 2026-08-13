@@ -1,10 +1,12 @@
 # WebCustomScheme
 
-Defines the configuration of web custom scheme, related to [customizeSchemes](arkts-arkweb-webview-webviewcontroller-c.md#customizeSchemes) method.
+Defines the configuration of web custom scheme, related to [customizeSchemes](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#customizeSchemes) method.
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface WebCustomScheme--><!--Device-webview-interface WebCustomScheme-End-->
 
@@ -20,9 +22,11 @@ If isCodeCacheSupported is true, then the js of this scheme can generate code ca
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebCustomScheme-isCodeCacheSupported?: boolean--><!--Device-WebCustomScheme-isCodeCacheSupported?: boolean-End-->
 
@@ -34,13 +38,17 @@ If isCodeCacheSupported is true, then the js of this scheme can generate code ca
 isCspBypassing?: boolean
 ```
 
-If isCspBypassing is true, then this scheme can bypass Content Security Policy (CSP)checks. In most cases, this value should not be true when isStandard is true.
+If isCspBypassing is true, then this scheme can bypass Content Security Policy (CSP) checks. In most cases, this value should not be true when isStandard is true.
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isCspBypassing?: boolean--><!--Device-WebCustomScheme-isCspBypassing?: boolean-End-->
 
@@ -56,9 +64,13 @@ If isDisplayIsolated is true, then the scheme can only be displayed from other c
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isDisplayIsolated?: boolean--><!--Device-WebCustomScheme-isDisplayIsolated?: boolean-End-->
 
@@ -74,9 +86,13 @@ If isLocal is true, the same security rules as those applied to the "file" URL w
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isLocal?: boolean--><!--Device-WebCustomScheme-isLocal?: boolean-End-->
 
@@ -92,9 +108,13 @@ If isSecure is true, the same security rules as those applied to the "https" URL
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isSecure?: boolean--><!--Device-WebCustomScheme-isSecure?: boolean-End-->
 
@@ -106,13 +126,17 @@ If isSecure is true, the same security rules as those applied to the "https" URL
 isStandard?: boolean
 ```
 
-If isStandard is true, the scheme will be handled as a standard scheme. The standard schemes needs to comply with the URL normalization and parsing rules defined in Section 3.1 of RFC 1738,which can be found in the http://www.ietf.org/rfc/rfc1738.txt.
+If isStandard is true, the scheme will be handled as a standard scheme. The standard schemes needs to comply with the URL normalization and parsing rules defined in Section 3.1 of RFC 1738, which can be found in the http://www.ietf.org/rfc/rfc1738.txt.
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isStandard?: boolean--><!--Device-WebCustomScheme-isStandard?: boolean-End-->
 
@@ -128,9 +152,13 @@ Whether Cross-Origin Resource Sharing is supported.
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isSupportCORS: boolean--><!--Device-WebCustomScheme-isSupportCORS: boolean-End-->
 
@@ -146,9 +174,13 @@ Whether fetch request is supported.
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-isSupportFetch: boolean--><!--Device-WebCustomScheme-isSupportFetch: boolean-End-->
 
@@ -164,9 +196,13 @@ Name of the custom scheme.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCustomScheme-schemeName: string--><!--Device-WebCustomScheme-schemeName: string-End-->
 

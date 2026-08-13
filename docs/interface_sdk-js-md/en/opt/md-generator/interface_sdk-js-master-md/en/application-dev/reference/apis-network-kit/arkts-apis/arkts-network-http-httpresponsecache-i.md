@@ -2,7 +2,9 @@
 
 Defines an object that stores the response to an HTTP request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface HttpResponseCache--><!--Device-http-export interface HttpResponseCache-End-->
 
@@ -22,9 +24,11 @@ delete(callback: AsyncCallback<void>): void
 
 Disables a cache and deletes the data in it.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void-End-->
 
@@ -94,9 +98,11 @@ delete(): Promise<void>
 
 Disables a cache and deletes the data in it.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponseCache-delete(): Promise<void>--><!--Device-HttpResponseCache-delete(): Promise<void>-End-->
 
@@ -154,9 +160,11 @@ flush(callback: AsyncCallback<void>): void
 
 Writes data in the cache to the file system so that all the cached data can be accessed in the next HTTP request.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void-End-->
 
@@ -225,6 +233,8 @@ flush(): Promise<void>
 Writes data in the cache to the file system so that all the cached data can be accessed in the next HTTP request.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

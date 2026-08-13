@@ -1,11 +1,12 @@
 # MediaKeySystem
 
-支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用  
-[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem-1)创建一个MediaKeySystem实例。
+支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem)创建一个MediaKeySystem实例。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
 
@@ -19,9 +20,11 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 
 删除指定媒体密钥标识的离线媒体密钥。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -39,9 +42,9 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -54,6 +57,8 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -77,10 +82,10 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -92,7 +97,9 @@ Create a MediaKeySession instance with level.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined-End-->
 
@@ -114,10 +121,10 @@ Create a MediaKeySession instance with level.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -130,6 +137,8 @@ createMediaKeySession(): MediaKeySession
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -147,9 +156,9 @@ createMediaKeySession(): MediaKeySession
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -161,7 +170,9 @@ Create a MediaKeySession instance.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined-End-->
 
@@ -177,9 +188,9 @@ Create a MediaKeySession instance.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## destroy
 
@@ -189,9 +200,11 @@ destroy(): void
 
 销毁MediaKeySystem实例。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -203,8 +216,8 @@ destroy(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## generateKeySystemRequest
 
@@ -212,13 +225,13 @@ destroy(): void
 generateKeySystemRequest(): Promise<ProvisionRequest>
 ```
 
-生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。
+生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。 如果设备上已存在设备证书，调用此接口会返回失败。
 
-如果设备上已存在设备证书，调用此接口会返回失败。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -236,8 +249,8 @@ generateKeySystemRequest(): Promise<ProvisionRequest>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getCertificateStatus
 
@@ -247,9 +260,11 @@ getCertificateStatus(): CertificateStatus
 
 获取设备证书状态值。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -267,8 +282,8 @@ getCertificateStatus(): CertificateStatus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getConfigurationByteArray
 
@@ -278,9 +293,11 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 获取数组类型的配置信息。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -304,9 +321,9 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getConfigurationString
 
@@ -316,9 +333,11 @@ getConfigurationString(configName: string): string
 
 获取字符串类型的配置属性值。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -342,9 +361,9 @@ getConfigurationString(configName: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getMaxContentProtectionLevel
 
@@ -354,9 +373,11 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 获取当前DRM解决方案支持的最大内容保护级别。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -374,8 +395,8 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getOfflineMediaKeyIds
 
@@ -385,9 +406,11 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 获取离线媒体密钥标识列表。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -405,8 +428,8 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getOfflineMediaKeyStatus
 
@@ -416,9 +439,11 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 
 获取指定离线媒体密钥标识的媒体密钥的状态值。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -442,9 +467,9 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## getStatistics
 
@@ -454,9 +479,11 @@ getStatistics(): StatisticKeyValue[]
 
 获取性能度量记录。其中包括当前会话数、插件版本信息、每个会话最大三次解密耗时、解密次数和解密失败次数。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -474,40 +501,8 @@ getStatistics(): StatisticKeyValue[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## off('keySystemRequired')
-
-```TypeScript
-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
-```
-
-注销设备证书请求事件的监听。使用callback异步回调。
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keySystemRequired' | 是 | 监听事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem-1)成功创建MediaKeySystem实例 后可监听。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## offKeySystemRequired
 
@@ -519,7 +514,9 @@ Unregister keySystemRequired events.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
@@ -535,23 +532,25 @@ Unregister keySystemRequired events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on('keySystemRequired')
+## off_keySystemRequired
 
 ```TypeScript
-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
+off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-监听设备证书请求事件，获取事件信息。使用callback异步回调。
+注销设备证书请求事件的监听。使用callback异步回调。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -559,15 +558,15 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | 是 | 事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem-1)成功创建MediaKeySystem实例 后可监听，需要设备证书时触发该事件。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。只要有该事件返回就证明需请求设备证书。 |
+| type | 'keySystemRequired' | 是 | 监听事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem)成功创建MediaKeySystem实例 后可监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## onKeySystemRequired
 
@@ -579,7 +578,9 @@ Register keySystemRequired events.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void-End-->
 
@@ -595,7 +596,41 @@ Register keySystemRequired events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+
+## on_keySystemRequired
+
+```TypeScript
+on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
+```
+
+监听设备证书请求事件，获取事件信息。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keySystemRequired' | 是 | 事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem)成功创建MediaKeySystem实例 后可监听，需要设备证书时触发该事件。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。只要有该事件返回就证明需请求设备证书。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## processKeySystemResponse
 
@@ -603,13 +638,13 @@ Register keySystemRequired events.
 processKeySystemResponse(response: Uint8Array): Promise<void>
 ```
 
-处理获得的设备证书请求的响应。使用Promise异步回调。
+处理获得的设备证书请求的响应。使用Promise异步回调。 如果设备上已存在设备证书，调用此接口会返回失败。
 
-如果设备上已存在设备证书，调用此接口会返回失败。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -633,9 +668,9 @@ processKeySystemResponse(response: Uint8Array): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## setConfigurationByteArray
 
@@ -645,9 +680,11 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 设置数组类型的配置信息。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -666,9 +703,9 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## setConfigurationString
 
@@ -678,9 +715,11 @@ setConfigurationString(configName: string, value: string): void
 
 设置字符串类型的配置信息。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -699,7 +738,7 @@ setConfigurationString(configName: string, value: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 

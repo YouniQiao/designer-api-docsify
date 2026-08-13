@@ -30,7 +30,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** [access](@ohos.file.fs:fileIo.access(path:)
+**Substitutes:** access(path: string, mode?: AccessModeType)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -130,7 +130,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Deprecated since:** 23
 
-**Substitutes:** [access](@ohos.file.fs:fileIo.access(path:)
+**Substitutes:** access(path: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -227,7 +227,7 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
+**Substitutes:** copy(srcUri: string, destUri: string, options?: CopyOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -263,7 +263,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
+**Substitutes:** copy(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -328,7 +328,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
+**Substitutes:** copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -394,7 +394,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](@ohos.file.fs:fileIo.copyFile(src:)
+**Substitutes:** copyFile(src: string | number, dest: string | number, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -429,8 +429,8 @@ Copies a file with an alternative file name. This API uses a promise to return t
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -486,7 +486,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](@ohos.file.fs:fileIo.copyFile(src:)
+**Substitutes:** copyFile(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -516,8 +516,8 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -572,7 +572,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](@ohos.file.fs:fileIo.createRandomAccessFile(file:)
+**Substitutes:** createRandomAccessFile(file: string | File, mode?: number, options?: RandomAccessFileOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -675,7 +675,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](@ohos.file.fs:fileIo.createRandomAccessFile(file:)
+**Substitutes:** createRandomAccessFile(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -960,7 +960,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
+**Substitutes:** stat(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1015,7 +1015,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
+**Substitutes:** stat(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1069,7 +1069,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
+**Substitutes:** stat(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1125,7 +1125,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
+**Substitutes:** stat(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1174,8 +1174,7 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use   
-[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo-(System-API)).
 
 **Since:** 9
 
@@ -1271,8 +1270,7 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use   
-[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo-(System-API)).
 
 **Since:** 9
 
@@ -1375,7 +1373,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](@ohos.file.fs:fileIo.mkdir(path:)
+**Substitutes:** mkdir(path: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1478,7 +1476,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](@ohos.file.fs:fileIo.mkdir(path:)
+**Substitutes:** mkdir(path: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1573,7 +1571,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
+**Substitutes:** moveFile(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1588,7 +1586,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | sourceFile | string | Yes |
-| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | Yes |
+| [destFile](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md) | string | Yes |
 
 **Return value:**
 
@@ -1671,7 +1669,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
+**Substitutes:** moveFile(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1686,7 +1684,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | sourceFile | string | Yes |
-| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | Yes |
+| [destFile](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
@@ -1760,13 +1758,13 @@ try {
 moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 ```
 
-Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses a promise to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
+Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses a promise to return the result. If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory. Currently, this API does not support move of files across devices.
 
 **Since:** 11
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
+**Substitutes:** moveFile(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1801,8 +1799,8 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -1852,13 +1850,13 @@ async function moveFile01() {
 moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void
 ```
 
-Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses an asynchronous callback to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
+Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses an asynchronous callback to return the result. If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory. Currently, this API does not support move of files across devices.
 
 **Since:** 11
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
+**Substitutes:** moveFile(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1888,8 +1886,8 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -1941,13 +1939,13 @@ try {
 moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>
 ```
 
-Moves a file or directory. This API uses a promise to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
+Moves a file or directory. This API uses a promise to return the result. You can forcibly overwrite the file with the same name in the destination directory. Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
+**Substitutes:** moveFile(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1982,8 +1980,8 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2008,13 +2006,13 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result.Currently, this API does not support move of files or directories across devices.
+Moves a file or directory. This API uses an asynchronous callback to return the result. Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
+**Substitutes:** moveFile(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2043,8 +2041,8 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2104,13 +2102,13 @@ try {
 moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
+Moves a file or directory. This API uses an asynchronous callback to return the result. You can forcibly overwrite the file with the same name in the destination directory. Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
+**Substitutes:** moveFile(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2140,8 +2138,8 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2207,7 +2205,7 @@ Opens a file. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open(path:)
+**Substitutes:** open(path: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2303,7 +2301,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open(path:)
+**Substitutes:** open(path: string, callback: AsyncCallback&lt;File&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2397,7 +2395,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
+**Substitutes:** stat(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2454,7 +2452,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
+**Substitutes:** stat(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2511,7 +2509,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 **Deprecated since:** 23
 
-**Substitutes:** [createWatcher](@ohos.file.fs:fileIo.createWatcher)
+**Substitutes:** createWatcher
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2547,7 +2545,7 @@ Renames a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [rename](@ohos.file.fs:fileIo.rename(oldPath:)
+**Substitutes:** rename(oldPath: string, newPath: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2644,7 +2642,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [rename](@ohos.file.fs:fileIo.rename(oldPath:)
+**Substitutes:** rename(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 

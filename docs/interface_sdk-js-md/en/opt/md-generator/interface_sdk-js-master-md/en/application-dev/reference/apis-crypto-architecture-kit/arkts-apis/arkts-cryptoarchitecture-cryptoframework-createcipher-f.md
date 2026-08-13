@@ -12,25 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createCipher(transformation: string): Cipher
 ```
 
-Creates a **Cipher** instance.
+Creates a **Cipher** instance. &lt;br&gt;For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications. > **NOTE：**> > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding > length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding > is applied in 16-byte blocks. **NoPadding** means no padding is applied. > You need to understand the differences between different block cipher modes and use the correct parameter > specifications. For example, padding is required for ECB and CBC. Otherwise, ensure that the plaintext > length is an integer multiple of the block size. No padding is recommended for other modes. In this case, > the ciphertext length is the same as the plaintext length. > 2. When RSA or SM2 is used for asymmetric encryption and decryption, two **Cipher** objects must be created > to perform encryption and decryption separately. This is not required for symmetric encryption and > decryption. If the algorithm specifications are the same, the same **Cipher** object can be used for > encryption and decryption.
 
-&lt;br&gt;For details about the supported specifications, see[Encryption and Decryption Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md).
+**Since:** 23
 
-> **NOTE：**
-> 
-> 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding
-> length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding
-> is applied in 16-byte blocks. **NoPadding** means no padding is applied.
-> You need to understand the differences between different block cipher modes and use the correct parameter
-> specifications. For example, padding is required for ECB and CBC. Otherwise, ensure that the plaintext
-> length is an integer multiple of the block size. No padding is recommended for other modes. In this case,
-> the ciphertext length is the same as the plaintext length.
-> 2. When RSA or SM2 is used for asymmetric encryption and decryption, two **Cipher** objects must be created
-> to perform encryption and decryption separately. This is not required for symmetric encryption and
-> decryption. If the algorithm specifications are the same, the same **Cipher** object can be used for
-> encryption and decryption.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,9 +42,9 @@ Creates a **Cipher** instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 

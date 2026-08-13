@@ -6,9 +6,11 @@
 export function generateControlledDevicePackage(permissionQuery: PermissionQuery[]): Promise<RemoteAuthPackage[]>
 ```
 
-Generates an authorization package for the controlled device.This function generates a remote authorization package based on the permission query list.The generated package can be sent to the controller device for permission verification.
+Generates an authorization package for the controlled device. This function generates a remote authorization package based on the permission query list. The generated package can be sent to the controller device for permission verification.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
@@ -34,8 +36,8 @@ Generates an authorization package for the controlled device.This function gener
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 24010002 |
 | 24010003 |
 | 24010000 |

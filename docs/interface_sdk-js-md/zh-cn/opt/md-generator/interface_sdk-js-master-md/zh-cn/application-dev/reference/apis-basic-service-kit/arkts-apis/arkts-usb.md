@@ -1,17 +1,24 @@
 # @ohos.usb(USB Manager)
 
-本模块主要提供管理USB设备的相关功能，包括查询USB设备列表、批量数据传输、控制命令传输、权限控制等。
+/*
+ Copyright (c) 2021-2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **说明：**
-> 
-> 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.usbManager](arkts-usbmanager.md#usbManager)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [usbManager](arkts-usbmanager.md#usbManager)
+**替代接口：** [usbManager](arkts-usbmanager.md#@ohos.usbManager)
 
 <!--Device-unnamed-declare namespace usb--><!--Device-unnamed-declare namespace usb-End-->
 
@@ -23,32 +30,32 @@
 
 | 名称 |
 | --- |
-| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulktransfer) |
-| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) |
-| [closePipe](arkts-basicservices-usb-closepipe-f.md#closepipe) |
-| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) |
-| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controltransfer) |
-| [getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) |
-| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getfiledescriptor) |
-| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getrawdescriptor) |
-| [hasRight](arkts-basicservices-usb-hasright-f.md#hasright) |
-| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseinterface) |
-| [requestRight](arkts-basicservices-usb-requestright-f.md#requestright) |
-| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setconfiguration) |
-| [setInterface](arkts-basicservices-usb-setinterface-f.md#setinterface) |
+| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulkTransfer) |
+| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) |
+| [closePipe](arkts-basicservices-usb-closepipe-f.md#closePipe) |
+| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) |
+| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controlTransfer) |
+| [getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) |
+| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getFileDescriptor) |
+| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getRawDescriptor) |
+| [hasRight](arkts-basicservices-usb-hasright-f.md#hasRight) |
+| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseInterface) |
+| [requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) |
+| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setConfiguration) |
+| [setInterface](arkts-basicservices-usb-setinterface-f.md#setInterface) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getCurrentFunctions](arkts-basicservices-usb-getcurrentfunctions-f-sys.md#getcurrentfunctions) |
-| [getPorts](arkts-basicservices-usb-getports-f-sys.md#getports) |
-| [getSupportedModes](arkts-basicservices-usb-getsupportedmodes-f-sys.md#getsupportedmodes) |
-| [setCurrentFunctions](arkts-basicservices-usb-setcurrentfunctions-f-sys.md#setcurrentfunctions) |
-| [setPortRoles](arkts-basicservices-usb-setportroles-f-sys.md#setportroles) |
-| [usbFunctionsFromString](arkts-basicservices-usb-usbfunctionsfromstring-f-sys.md#usbfunctionsfromstring) |
-| [usbFunctionsToString](arkts-basicservices-usb-usbfunctionstostring-f-sys.md#usbfunctionstostring) |
+| [getCurrentFunctions](arkts-basicservices-usb-getcurrentfunctions-f-sys.md#getCurrentFunctions（系统接口）) |
+| [getPorts](arkts-basicservices-usb-getports-f-sys.md#getPorts（系统接口）) |
+| [getSupportedModes](arkts-basicservices-usb-getsupportedmodes-f-sys.md#getSupportedModes（系统接口）) |
+| [setCurrentFunctions](arkts-basicservices-usb-setcurrentfunctions-f-sys.md#setCurrentFunctions（系统接口）) |
+| [setPortRoles](arkts-basicservices-usb-setportroles-f-sys.md#setPortRoles（系统接口）) |
+| [usbFunctionsFromString](arkts-basicservices-usb-usbfunctionsfromstring-f-sys.md#usbFunctionsFromString（系统接口）) |
+| [usbFunctionsToString](arkts-basicservices-usb-usbfunctionstostring-f-sys.md#usbFunctionsToString（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

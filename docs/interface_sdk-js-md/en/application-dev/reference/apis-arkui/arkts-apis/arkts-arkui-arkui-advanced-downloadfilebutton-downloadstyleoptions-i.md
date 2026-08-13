@@ -2,9 +2,11 @@
 
 Defines the DownloadFileButton style option.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DownloadStyleOptions--><!--Device-unnamed-export interface DownloadStyleOptions-End-->
 
@@ -26,11 +28,13 @@ Font color.
 
 **Type:** ResourceColor
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-fontColor?: ResourceColor--><!--Device-DownloadStyleOptions-fontColor?: ResourceColor-End-->
 
@@ -46,11 +50,13 @@ Font family.
 
 **Type:** string \| Resource
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-fontFamily?: string | Resource--><!--Device-DownloadStyleOptions-fontFamily?: string | Resource-End-->
 
@@ -66,11 +72,13 @@ Font size.
 
 **Type:** Dimension
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-fontSize?: Dimension--><!--Device-DownloadStyleOptions-fontSize?: Dimension-End-->
 
@@ -86,11 +94,13 @@ Font Style.
 
 **Type:** FontStyle
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-fontStyle?: FontStyle--><!--Device-DownloadStyleOptions-fontStyle?: FontStyle-End-->
 
@@ -99,20 +109,22 @@ Font Style.
 ## fontWeight
 
 ```TypeScript
-fontWeight?: int | FontWeight | string
+fontWeight?: number | FontWeight | string
 ```
 
 Font weight.
 
-**Type:** int \| FontWeight \| string
+**Type:** number \| FontWeight \| string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-DownloadStyleOptions-fontWeight?: int | FontWeight | string--><!--Device-DownloadStyleOptions-fontWeight?: int | FontWeight | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadStyleOptions-fontWeight?: number | FontWeight | string--><!--Device-DownloadStyleOptions-fontWeight?: number | FontWeight | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +138,13 @@ Icon color.
 
 **Type:** ResourceColor
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-iconColor?: ResourceColor--><!--Device-DownloadStyleOptions-iconColor?: ResourceColor-End-->
 
@@ -146,11 +160,13 @@ Icon size.
 
 **Type:** Dimension
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-iconSize?: Dimension--><!--Device-DownloadStyleOptions-iconSize?: Dimension-End-->
 
@@ -164,13 +180,15 @@ layoutDirection?: DownloadLayoutDirection
 
 Layout direction.
 
-**Type:** [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md)
+**Type:** [DownloadLayoutDirection](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-layoutDirection?: DownloadLayoutDirection--><!--Device-DownloadStyleOptions-layoutDirection?: DownloadLayoutDirection-End-->
 
@@ -186,11 +204,13 @@ Text and Icon space.
 
 **Type:** Dimension
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-textIconSpace?: Dimension--><!--Device-DownloadStyleOptions-textIconSpace?: Dimension-End-->
 

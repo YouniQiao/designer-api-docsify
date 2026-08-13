@@ -4,6 +4,8 @@ Indicates network policy.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-intelligence-enum NetworkPolicy--><!--Device-intelligence-enum NetworkPolicy-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -17,6 +19,8 @@ WIFI_ONLY = 0
 Using WiFi.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ WIFI_AND_CELLULAR = 1
 Using WiFi and Cellular.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

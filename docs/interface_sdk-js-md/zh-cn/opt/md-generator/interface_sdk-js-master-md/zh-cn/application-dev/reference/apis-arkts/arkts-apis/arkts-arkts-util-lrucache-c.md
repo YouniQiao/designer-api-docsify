@@ -1,10 +1,12 @@
 # LRUCache
 
-提供在缓存已满时丢弃最近最少使用的数据以腾出空间给新元素的 API。此类使用最近最少使用（LRU）算法，该算法认为最近使用的数据可能在不久的将来再次被访问，而最少访问的数据是最不具价值的数据，应从缓存中移除。
+提供在缓存已满时丢弃最近最少使用的数据以腾出空间给新元素的 API。此类使用最近最少使用（LRU）算法，该算法认为最近 使用的数据可能在不久的将来再次被访问，而最少访问的数据是最不具价值的数据，应从缓存中移除。
 
 **起始版本：** 9
 
-<!--Device-util-class LRUCache<K, V>--><!--Device-util-class LRUCache<K, V>-End-->
+**废弃版本：** -1
+
+<!--Device-util-class LRUCache--><!--Device-util-class LRUCache-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -17,6 +19,8 @@
 指定对象的默认迭代器。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -51,18 +55,11 @@ for (let value of pro) {
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如  
-[get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、  
-[remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和  
-[updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity)。
-
-> **NOTE：**
-> 
-> 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和
-> [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) 后执行回调方法，并且输入的 **key** 和
-> **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
+在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如 [get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、 [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity)。 > **NOTE：**> > 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) 后执行回调方法，并且输入的 **key** 和 > **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -88,6 +85,8 @@ clear(): void
 清除此缓存中的键值对。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -119,6 +118,8 @@ constructor(capacity?: number)
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-constructor(capacity?: number)--><!--Device-LRUCache-constructor(capacity?: number)-End-->
@@ -146,6 +147,8 @@ contains(key: K): boolean
 判断此缓存是否包含指定的 key。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -185,6 +188,8 @@ createDefault(key: K): V
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-createDefault(key: K): V--><!--Device-LRUCache-createDefault(key: K): V-End-->
@@ -222,6 +227,8 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-entries(): IterableIterator<[K, V]>--><!--Device-LRUCache-entries(): IterableIterator<[K, V]>-End-->
@@ -255,10 +262,11 @@ for (let value of pair) {
 get(key: K): V | undefined
 ```
 
-获取 key 对应的值。如果该 key 不在缓存中，则调用  
-[createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) 创建该 key。如果 **createDefault** 中指定的值不为 **undefined**，则调用 [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) 返回 **createDefault**中指定的值。
+获取 key 对应的值。如果该 key 不在缓存中，则调用 [createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) 创建该 key。如果 **createDefault** 中指定的值 不为 **undefined**，则调用 [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) 返回 **createDefault** 中指定的值。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -298,6 +306,8 @@ getCapacity(): number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-getCapacity(): number--><!--Device-LRUCache-getCapacity(): number-End-->
@@ -328,6 +338,8 @@ getCreateCount(): number
 获取创建对象的次数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -373,6 +385,8 @@ getMatchCount(): number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-getMatchCount(): number--><!--Device-LRUCache-getMatchCount(): number-End-->
@@ -405,6 +419,8 @@ getMissCount(): number
 获取查询值未匹配的次数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -439,6 +455,8 @@ getPutCount(): number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-getPutCount(): number--><!--Device-LRUCache-getPutCount(): number-End-->
@@ -470,6 +488,8 @@ getRemovalCount(): number
 获取此缓存中键值对被回收的次数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -505,6 +525,8 @@ isEmpty(): boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-isEmpty(): boolean--><!--Device-LRUCache-isEmpty(): boolean-End-->
@@ -536,6 +558,8 @@ keys(): K[]
 获取此缓存中的所有 key，按从最近最少访问到最近最多访问的顺序排列。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -579,6 +603,8 @@ put(key: K, value: V): V
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-put(key: K, value: V): V--><!--Device-LRUCache-put(key: K, value: V): V-End-->
@@ -616,6 +642,8 @@ remove(key: K): V | undefined
 从此缓存中移除 key 及其关联的值，并返回与该 key 关联的值。如果 key 不存在，则返回 **undefined**。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -655,6 +683,8 @@ toString(): string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-toString(): string--><!--Device-LRUCache-toString(): string-End-->
@@ -689,6 +719,8 @@ updateCapacity(newCapacity: number): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LRUCache-updateCapacity(newCapacity: number): void--><!--Device-LRUCache-updateCapacity(newCapacity: number): void-End-->
@@ -717,6 +749,8 @@ values(): V[]
 获取此缓存中的所有值，按从最近最少访问到最近最多访问的顺序排列。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -761,6 +795,8 @@ length: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

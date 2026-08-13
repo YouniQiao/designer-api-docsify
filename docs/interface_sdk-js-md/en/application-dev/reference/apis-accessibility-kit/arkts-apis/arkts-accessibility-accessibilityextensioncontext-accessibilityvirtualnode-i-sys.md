@@ -4,7 +4,9 @@ Defines the **AccessibilityVirtualNode**.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface AccessibilityVirtualNode--><!--Device-unnamed-export declare interface AccessibilityVirtualNode-End-->
 
@@ -18,13 +20,15 @@ Defines the **AccessibilityVirtualNode**.
 accessibilityFocused?: boolean
 ```
 
-Whether the accessibility virtual node is focused for accessibility purposes.The value **true** indicates that the element is focused, and **false** indicates the opposite.
+Whether the accessibility virtual node is focused for accessibility purposes. The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +44,15 @@ Whether the accessibility virtual node is focused for accessibility purposes.The
 accessibilityGroup?: boolean
 ```
 
-Whether the accessibility virtual node is an accessibility group.The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
+Whether the accessibility virtual node is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +74,9 @@ This property determines whether the component can be recognized by accessibilit
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +98,9 @@ Accessibility text information of an accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,13 +116,15 @@ Accessibility text information of an accessibility virtual node.
 checkable?: boolean
 ```
 
-Whether the accessibility virtual node is checkable. The value **true** indicates that the node is checkable,and **false** indicates the opposite.
+Whether the accessibility virtual node is checkable. The value **true** indicates that the node is checkable, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,13 +140,15 @@ Whether the accessibility virtual node is checkable. The value **true** indicate
 checked?: boolean
 ```
 
-Whether the accessibility virtual node is checked. The value **true** indicates that the node is checked,and **false** indicates the opposite.
+Whether the accessibility virtual node is checked. The value **true** indicates that the node is checked, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,11 +166,13 @@ childNodeIds?: Array<long>
 
 List of child accessibility virtual node ids of a component.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**Type:** Array&lt;long&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,13 +188,15 @@ List of child accessibility virtual node ids of a component.
 clickable?: boolean
 ```
 
-Whether the accessibility virtual node is clickable. The value **true** indicates that the node is clickable,and **false** indicates the opposite.
+Whether the accessibility virtual node is clickable. The value **true** indicates that the node is clickable, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,7 +218,9 @@ Component type of the accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,11 +238,13 @@ elementId?: long
 
 The id of accessibility element.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,13 +260,15 @@ The id of accessibility element.
 enabled?: boolean
 ```
 
-Whether the accessibility virtual node is enabled. The value **true** indicates that the node is enabled,and **false** indicates the opposite.
+Whether the accessibility virtual node is enabled. The value **true** indicates that the node is enabled, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,11 +286,13 @@ parentId?: long
 
 Parent element id of the accessibility element.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,7 +314,9 @@ Area of the accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -304,13 +332,15 @@ Area of the accessibility virtual node.
 selected?: boolean
 ```
 
-Whether the accessibility virtual node is selected. The value **true** indicates that the node is selected,and **false** indicates the opposite.
+Whether the accessibility virtual node is selected. The value **true** indicates that the node is selected, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,7 +362,9 @@ Supported action names.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -354,7 +386,9 @@ Text of the accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -376,7 +410,9 @@ Click position of the accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -392,13 +428,15 @@ Click position of the accessibility virtual node.
 virtualNodeId: long
 ```
 
-ID of the accessibility virtual node.Default value: **-1**.
+ID of the accessibility virtual node. Default value: **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

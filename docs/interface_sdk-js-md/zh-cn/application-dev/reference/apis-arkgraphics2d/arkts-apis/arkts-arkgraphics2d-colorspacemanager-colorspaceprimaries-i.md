@@ -2,9 +2,11 @@
 
 色域标准三原色（红、绿、蓝）和白色，基于现实世界的色度，使用(x, y)表示其在色彩空间中的位置。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-colorSpaceManager-interface ColorSpacePrimaries--><!--Device-colorSpaceManager-interface ColorSpacePrimaries-End-->
 
@@ -18,11 +20,13 @@ blueX: double
 
 标准蓝色在色彩空间的x坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-blueX: double--><!--Device-ColorSpacePrimaries-blueX: double-End-->
 
@@ -36,11 +40,13 @@ blueY: double
 
 标准蓝色在色彩空间的y坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-blueY: double--><!--Device-ColorSpacePrimaries-blueY: double-End-->
 
@@ -54,11 +60,13 @@ greenX: double
 
 标准绿色在色彩空间的x坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-greenX: double--><!--Device-ColorSpacePrimaries-greenX: double-End-->
 
@@ -72,11 +80,13 @@ greenY: double
 
 标准绿色在色彩空间的y坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-greenY: double--><!--Device-ColorSpacePrimaries-greenY: double-End-->
 
@@ -90,11 +100,13 @@ redX: double
 
 标准红色在色彩空间的x坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-redX: double--><!--Device-ColorSpacePrimaries-redX: double-End-->
 
@@ -108,11 +120,13 @@ redY: double
 
 标准红色在色彩空间的y坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-redY: double--><!--Device-ColorSpacePrimaries-redY: double-End-->
 
@@ -126,11 +140,13 @@ whitePointX: double
 
 标准白色在色彩空间的x坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-whitePointX: double--><!--Device-ColorSpacePrimaries-whitePointX: double-End-->
 
@@ -144,11 +160,13 @@ whitePointY: double
 
 标准白色在色彩空间的y坐标值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-whitePointY: double--><!--Device-ColorSpacePrimaries-whitePointY: double-End-->
 

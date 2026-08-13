@@ -1,8 +1,10 @@
 # WebLayoutMode
 
-Enum type supplied to [layoutMode](layoutMode) for setting the web layout mode.
+Enum type supplied to layoutMode for setting the web layout mode.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WebLayoutMode--><!--Device-unnamed-declare enum WebLayoutMode-End-->
 
@@ -17,6 +19,8 @@ NONE = 0
 Web layout follows the system.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ FIT_CONTENT = 1
 Adaptive web layout based on page size.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

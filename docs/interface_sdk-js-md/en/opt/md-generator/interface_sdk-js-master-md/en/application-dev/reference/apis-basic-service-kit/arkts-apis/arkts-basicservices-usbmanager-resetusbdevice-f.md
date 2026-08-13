@@ -12,14 +12,11 @@ import { usbManager } from '@kit.BasicServicesKit';
 function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
-Resets a USB peripheral.
+Resets a USB peripheral. > **NOTE：**> > Previous configurations and APIs will be reset. Ensure that the related services have been completed before > calling this API.
 
-> **NOTE：**
-> 
-> Previous configurations and APIs will be reset. Ensure that the related services have been completed before
-> calling this API.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean--><!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean-End-->
 
@@ -41,12 +38,12 @@ Resets a USB peripheral.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14400010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) |
-| [14400008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) |
-| [14400013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400013-parameter-validity-check-failed) |
-| [14400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) |
-| [14400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) |
+| [14400013](../../apis-basic-services-kit/errorcode-usb.md#14400013-parameter-validity-check-failed) |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) |
 
 ## Examples
 

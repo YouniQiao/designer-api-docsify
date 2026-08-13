@@ -36,7 +36,7 @@ Audio content type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
+**Substitutes:** rendererInfo
 
 <!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
 
@@ -48,8 +48,7 @@ Audio content type.
 pauseWhenDucked: boolean
 ```
 
-Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused,  
-**false** otherwise.
+Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused, **false** otherwise.
 
 **Type:** boolean
 
@@ -81,7 +80,7 @@ Audio stream usage.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
+**Substitutes:** rendererInfo
 
 <!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
 

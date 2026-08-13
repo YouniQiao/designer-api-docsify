@@ -4,6 +4,8 @@ User gesture event.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorGesture--><!--Device-unnamed-declare interface RichEditorGesture-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ User gesture event.
 onDoubleClick?: Callback<GestureEvent>
 ```
 
-[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md#GestureEvent) indicates the double-tap event.
-
-Callback event when the double-tap is complete.
+[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md#GestureEvent) indicates the double-tap event. Callback event when the double-tap is complete.
 
 **Type:** Callback&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

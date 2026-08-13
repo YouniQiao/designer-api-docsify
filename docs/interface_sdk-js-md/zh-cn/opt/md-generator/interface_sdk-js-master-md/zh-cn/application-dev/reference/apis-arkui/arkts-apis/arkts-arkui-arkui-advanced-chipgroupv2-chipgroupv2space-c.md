@@ -4,7 +4,7 @@ ChipGroupV2Space定义了ChipGroupV2左右内边距，以及ChipV2与ChipV2之�
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class ChipGroupV2Space--><!--Device-unnamed-export declare class ChipGroupV2Space-End-->
 
@@ -19,6 +19,8 @@ constructor(config: ChipGroupV2SpaceConfig)
 ChipGroupV2Space的构造函数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,85 +39,68 @@ ChipGroupV2Space的构造函数。
 ## endSpace
 
 ```TypeScript
-public endSpace?: Length
+@Trace
+  public endSpace?: Length
 ```
 
-右侧内边距（不支持百分比）。
-
-默认值：16
-
-单位：vp
-
-值为undefined时，按默认值处理。
+右侧内边距（不支持百分比）。 默认值：16 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupV2Space-public endSpace?: Length--><!--Device-ChipGroupV2Space-public endSpace?: Length-End-->
+<!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemSpace
 
 ```TypeScript
-public itemSpace?: string | number
+@Trace
+  public itemSpace?: string | number
 ```
 
-ChipV2与ChipV2之间的间距（不支持百分比）。
-
-取值范围：
-
-- number类型：[0, +∞)，如0、8、16、24.5。  
-- string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符串，如"8vp"、"16fp"、"12px"、"10lpx"。  
-- 不支持：负数、百分比单位、无效字符串格式。
-
-传入不在取值范围内或不支持格式的值时，按默认值处理。
-
-默认值：8
-
-单位：vp
-
-值为undefined时，按默认值处理。
+ChipV2与ChipV2之间的间距（不支持百分比）。 取值范围： - number类型：[0, +∞)，如0、8、16、24.5。 - string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符串，如"8vp"、"16fp"、"12px"、"10lpx"。 - 不支持：负数、百分比单位、无效字符串格式。 传入不在取值范围内或不支持格式的值时，按默认值处理。 默认值：8 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** string \| number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupV2Space-public itemSpace?: string | number--><!--Device-ChipGroupV2Space-public itemSpace?: string | number-End-->
+<!--Device-ChipGroupV2Space-@Trace  public itemSpace?: string | number--><!--Device-ChipGroupV2Space-@Trace  public itemSpace?: string | number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## startSpace
 
 ```TypeScript
-public startSpace?: Length
+@Trace
+  public startSpace?: Length
 ```
 
-左侧内边距（不支持百分比）。
-
-默认值：16
-
-单位：vp
-
-值为undefined时，按默认值处理。
+左侧内边距（不支持百分比）。 默认值：16 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupV2Space-public startSpace?: Length--><!--Device-ChipGroupV2Space-public startSpace?: Length-End-->
+<!--Device-ChipGroupV2Space-@Trace  public startSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public startSpace?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

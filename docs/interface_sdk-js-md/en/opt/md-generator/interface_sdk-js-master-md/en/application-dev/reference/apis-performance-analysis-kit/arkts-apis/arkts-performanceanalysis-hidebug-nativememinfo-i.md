@@ -2,7 +2,9 @@
 
 Describes memory information of the application process.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-interface NativeMemInfo--><!--Device-hidebug-interface NativeMemInfo-End-->
 
@@ -24,7 +26,9 @@ Size of the private clean memory, in KB. The value of this parameter is obtained
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NativeMemInfo-privateClean: bigint--><!--Device-NativeMemInfo-privateClean: bigint-End-->
 
@@ -40,7 +44,9 @@ Size of the private dirty memory, in KB. The value of this parameter is obtained
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NativeMemInfo-privateDirty: bigint--><!--Device-NativeMemInfo-privateDirty: bigint-End-->
 
@@ -52,11 +58,13 @@ Size of the private dirty memory, in KB. The value of this parameter is obtained
 pss: bigint
 ```
 
-Size of the occupied physical memory (including the proportionally allocated memory occupied by the shared library), in KB. The value of this parameter is obtained by summing up the values of Pss and SwapPss in the/proc/{pid}/smaps_rollup node.
+Size of the occupied physical memory (including the proportionally allocated memory occupied by the shared library), in KB. The value of this parameter is obtained by summing up the values of Pss and SwapPss in the /proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NativeMemInfo-pss: bigint--><!--Device-NativeMemInfo-pss: bigint-End-->
 
@@ -68,11 +76,13 @@ Size of the occupied physical memory (including the proportionally allocated mem
 rss: bigint
 ```
 
-Size of the occupied physical memory (including the memory occupied by the shared library), in KB.The value of this parameter is obtained by reading the value of Rss in the /proc/{pid}/smaps_rollup node.
+Size of the occupied physical memory (including the memory occupied by the shared library), in KB. The value of this parameter is obtained by reading the value of Rss in the /proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NativeMemInfo-rss: bigint--><!--Device-NativeMemInfo-rss: bigint-End-->
 
@@ -88,7 +98,9 @@ Size of the shared clean memory, in KB. The value of this parameter is obtained 
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NativeMemInfo-sharedClean: bigint--><!--Device-NativeMemInfo-sharedClean: bigint-End-->
 
@@ -104,7 +116,9 @@ Size of the shared dirty memory, in KB. The value of this parameter is obtained 
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NativeMemInfo-sharedDirty: bigint--><!--Device-NativeMemInfo-sharedDirty: bigint-End-->
 
@@ -120,7 +134,9 @@ Size of the occupied virtual memory (including the memory occupied by the shared
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NativeMemInfo-vss: bigint--><!--Device-NativeMemInfo-vss: bigint-End-->
 

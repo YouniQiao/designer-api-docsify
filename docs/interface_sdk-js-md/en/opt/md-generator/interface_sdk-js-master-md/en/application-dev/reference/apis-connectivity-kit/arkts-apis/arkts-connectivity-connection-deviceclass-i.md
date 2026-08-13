@@ -2,7 +2,9 @@
 
 Describes the class of a bluetooth device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-interface DeviceClass--><!--Device-connection-interface DeviceClass-End-->
 
@@ -24,7 +26,9 @@ Class of the device.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Major classes of Bluetooth devices.
 
 **Type:** MajorClass
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Major and minor classes of Bluetooth devices.
 
 **Type:** MajorMinorClass
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,20 +1,19 @@
 # Modulo
 
 ```TypeScript
-type Modulo = Rounding | 9
+type Modulo = number
 ```
 
 The type used to set modulo
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-unnamed-type Modulo = Rounding | 9--><!--Device-unnamed-type Modulo = Rounding | 9-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-unnamed-type Modulo = int--><!--Device-unnamed-type Modulo = int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Rounding](arkts-arkts-rounding-t.md) |
-| 9 |
+**Property type:** int

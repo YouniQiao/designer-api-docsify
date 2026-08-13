@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface StackLayoutAlgorithmOptions--><!--Device-unnamed-interface StackLayoutAlgorithmOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,15 @@
 alignContent?: LocalizedAlignment
 ```
 
-设置子组件在堆叠布局算法中对齐格式。
-
-默认值：LocalizedAlignment.CENTER 
-
-非法值：按默认值处理。
+设置子组件在堆叠布局算法中对齐格式。 默认值：LocalizedAlignment.CENTER 非法值：按默认值处理。
 
 **类型：** [LocalizedAlignment](arkts-arkui-localizedalignment-e.md)
 
 **默认值：** LocalizedAlignment.Center
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

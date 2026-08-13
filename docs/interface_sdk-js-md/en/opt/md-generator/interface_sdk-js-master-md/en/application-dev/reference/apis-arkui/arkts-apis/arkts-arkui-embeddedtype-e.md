@@ -4,6 +4,8 @@ Enum of EmbeddedType
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EmbeddedType--><!--Device-unnamed-declare enum EmbeddedType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ EMBEDDED_UI_EXTENSION = 0
 The EmbeddedComponent show the UI in EmbeddedUIExtensionAbility.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

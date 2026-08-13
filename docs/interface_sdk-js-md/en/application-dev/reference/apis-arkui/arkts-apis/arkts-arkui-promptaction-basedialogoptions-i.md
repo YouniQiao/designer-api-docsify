@@ -1,12 +1,14 @@
 # BaseDialogOptions
 
-Dialog base options
+Defines the options of the dialog box.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-promptAction-export interface BaseDialogOptions--><!--Device-promptAction-export interface BaseDialogOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-interface BaseDialogOptions--><!--Device-promptAction-interface BaseDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +24,19 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 alignment?: DialogAlignment
 ```
 
-Defines the dialog alignment of the screen.
+Alignment mode of the dialog box in the vertical direction. &lt;br&gt;Default value: **DialogAlignment.Default** &lt;br&gt;**NOTE：**&lt;br&gt;If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
 
 **Type:** DialogAlignment
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-alignment?: DialogAlignment--><!--Device-BaseDialogOptions-alignment?: DialogAlignment-End-->
 
@@ -42,17 +48,21 @@ Defines the dialog alignment of the screen.
 autoCancel?: boolean
 ```
 
-Allows users to click the mask layer to exit.
+Whether to dismiss the dialog box when the mask is touched. The value **true** means to dismiss the dialog box when the mask is touched, and **false** means the opposite.&lt;br&gt;Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-autoCancel?: boolean--><!--Device-BaseDialogOptions-autoCancel?: boolean-End-->
 
@@ -64,15 +74,19 @@ Allows users to click the mask layer to exit.
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Defines the customDialog's background blur style with options
+Options for customizing the background blur style. For details about the default value, see **BackgroundBlurStyleOptions**.
 
 **Type:** BackgroundBlurStyleOptions
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-BaseDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-BaseDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
@@ -84,15 +98,19 @@ Defines the customDialog's background blur style with options
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Defines the customDialog's background effect with options
+Options for customizing the background effect. For details about the default value, see **BackgroundEffectOptions**.
 
 **Type:** BackgroundEffectOptions
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-BaseDialogOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-BaseDialogOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
@@ -104,15 +122,19 @@ Defines the customDialog's background effect with options
 dialogTransition?: TransitionEffect
 ```
 
-Dialog transition parameters of opening/closing custom dialog.
+Transition effect for the dialog box content. By default, there is no transition effect.
 
 **Type:** TransitionEffect
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-BaseDialogOptions-dialogTransition?: TransitionEffect--><!--Device-BaseDialogOptions-dialogTransition?: TransitionEffect-End-->
 
@@ -132,9 +154,13 @@ Defines the dialog display mode when show in subwindow.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-BaseDialogOptions-displayModeInSubWindow?: DialogDisplayMode--><!--Device-BaseDialogOptions-displayModeInSubWindow?: DialogDisplayMode-End-->
 
@@ -146,17 +172,21 @@ Defines the dialog display mode when show in subwindow.
 enableHoverMode?: boolean
 ```
 
-Defines whether to respond to the hover mode.
+Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode. &lt;br&gt;Default value: **false**, meaning not to respond when the device is in semi-folded mode. &lt;br&gt;**NOTE：**&lt;br&gt;For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-BaseDialogOptions-enableHoverMode?: boolean--><!--Device-BaseDialogOptions-enableHoverMode?: boolean-End-->
 
@@ -168,17 +198,21 @@ Defines whether to respond to the hover mode.
 focusable?: boolean
 ```
 
-Specifies whether to get focus when the custom dialog is displayed.
+Whether the dialog box can gain focus. &lt;br&gt;**true**: The dialog box can gain focus. &lt;br&gt;**false**: The dialog box cannot gain focus. &lt;br&gt;Default value: **true**. &lt;br&gt;**NOTE：**&lt;br&gt;Only dialog boxes that are displayed on top of the current window can gain focus.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-BaseDialogOptions-focusable?: boolean--><!--Device-BaseDialogOptions-focusable?: boolean-End-->
 
@@ -190,17 +224,21 @@ Specifies whether to get focus when the custom dialog is displayed.
 hoverModeArea?: HoverModeAreaType
 ```
 
-Defines the dialog's display area in hover mode.
+Display area of the dialog box in the hover state. &lt;br&gt;Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-BaseDialogOptions-hoverModeArea?: HoverModeAreaType--><!--Device-BaseDialogOptions-hoverModeArea?: HoverModeAreaType-End-->
 
@@ -212,17 +250,21 @@ Defines the dialog's display area in hover mode.
 immersiveMode?: ImmersiveMode
 ```
 
-Determine the immersive mode of the dialog.
+Overlay effect for the page-level dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **ImmersiveMode.DEFAULT** &lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-BaseDialogOptions-immersiveMode?: ImmersiveMode--><!--Device-BaseDialogOptions-immersiveMode?: ImmersiveMode-End-->
 
@@ -234,17 +276,21 @@ Determine the immersive mode of the dialog.
 isModal?: boolean
 ```
 
-Whether it is a modal dialog
+Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box. &lt;br&gt;**true**: The dialog box is a modal. &lt;br&gt;**false**: The dialog box is not a modal. &lt;br&gt;Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-isModal?: boolean--><!--Device-BaseDialogOptions-isModal?: boolean-End-->
 
@@ -256,15 +302,19 @@ Whether it is a modal dialog
 keyboardAvoidDistance?: LengthMetrics
 ```
 
-Defines the distance between the customDialog and system keyboard.
+Distance between the dialog box and the keyboard after keyboard avoidance is applied. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **16vp** &lt;br&gt;- Default unit: vp &lt;br&gt;- This parameter takes effect only when **keyboardAvoidMode** is set to **DEFAULT**.
 
 **Type:** LengthMetrics
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-BaseDialogOptions-keyboardAvoidDistance?: LengthMetrics--><!--Device-BaseDialogOptions-keyboardAvoidDistance?: LengthMetrics-End-->
 
@@ -276,17 +326,21 @@ Defines the distance between the customDialog and system keyboard.
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-Defines the customDialog's keyboard avoid mode
+How the dialog box avoids the soft keyboard when it is brought up. &lt;br&gt;Default value: **KeyboardAvoidMode.DEFAULT**
 
 **Type:** KeyboardAvoidMode
 
 **Default:** KeyboardAvoidMode.DEFAULT
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-keyboardAvoidMode?: KeyboardAvoidMode--><!--Device-BaseDialogOptions-keyboardAvoidMode?: KeyboardAvoidMode-End-->
 
@@ -298,17 +352,21 @@ Defines the customDialog's keyboard avoid mode
 levelMode?: LevelMode
 ```
 
-Determine the display level of the dialog.
+Display level of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelMode.OVERLAY** &lt;br&gt;- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-BaseDialogOptions-levelMode?: LevelMode--><!--Device-BaseDialogOptions-levelMode?: LevelMode-End-->
 
@@ -320,17 +378,21 @@ Determine the display level of the dialog.
 levelOrder?: LevelOrder
 ```
 
-Determine the display order of the dialog.
+Display order of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelOrder.clamp(0)** &lt;br&gt;- Dynamic updating is not supported.
 
 **Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **Default:** The value returned by LevelOrder.clamp(0)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-BaseDialogOptions-levelOrder?: LevelOrder--><!--Device-BaseDialogOptions-levelOrder?: LevelOrder-End-->
 
@@ -339,20 +401,24 @@ Determine the display order of the dialog.
 ## levelUniqueId
 
 ```TypeScript
-levelUniqueId?: int
+levelUniqueId?: number
 ```
 
-The uniqueId of any node in the router or navigation page.
+Unique ID of the node under the display level for the page-level dialog box. &lt;br&gt;Value range: a number no less than 0 &lt;br&gt;**NOTE：**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseDialogOptions-levelUniqueId?: int--><!--Device-BaseDialogOptions-levelUniqueId?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-BaseDialogOptions-levelUniqueId?: number--><!--Device-BaseDialogOptions-levelUniqueId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -362,15 +428,19 @@ The uniqueId of any node in the router or navigation page.
 maskColor?: ResourceColor
 ```
 
-Defines custom dialog maskColor
+Mask color. &lt;br&gt;Default value: **0x33000000**
 
 **Type:** ResourceColor
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-maskColor?: ResourceColor--><!--Device-BaseDialogOptions-maskColor?: ResourceColor-End-->
 
@@ -382,15 +452,19 @@ Defines custom dialog maskColor
 maskRect?: Rectangle
 ```
 
-Mask Region of dialog. The size can't exceed the main window.
+Mask area. &lt;br&gt;Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }** &lt;br&gt;**NOTE：**&lt;br&gt;**maskRect** does not take effect when **showInSubWindow** is set to **true**. &lt;br&gt;If only some properties in [Rectangle](../arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set, the unset properties default to 0.
 
 **Type:** Rectangle
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-maskRect?: Rectangle--><!--Device-BaseDialogOptions-maskRect?: Rectangle-End-->
 
@@ -402,15 +476,19 @@ Mask Region of dialog. The size can't exceed the main window.
 maskTransition?: TransitionEffect
 ```
 
-Mask transition parameters of opening/closing custom dialog.
+Transition effect for the mask. By default, there is no transition effect.
 
 **Type:** TransitionEffect
 
-**Since:** 23
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-BaseDialogOptions-maskTransition?: TransitionEffect--><!--Device-BaseDialogOptions-maskTransition?: TransitionEffect-End-->
 
@@ -422,15 +500,19 @@ Mask transition parameters of opening/closing custom dialog.
 offset?: Offset
 ```
 
-Defines the dialog offset.
+Offset of the dialog box based on the **alignment** settings. &lt;br&gt;Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
 
 **Type:** Offset
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-offset?: Offset--><!--Device-BaseDialogOptions-offset?: Offset-End-->
 
@@ -439,80 +521,96 @@ Defines the dialog offset.
 ## onDidAppear
 
 ```TypeScript
-onDidAppear?: VoidCallback
+onDidAppear?: () => void
 ```
 
-Callback function when the dialog appears.
+Event callback after the dialog box appears. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. &lt;br&gt;3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. &lt;br&gt;4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
 
-**Type:** VoidCallback
+**Type:** () =&gt; void
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseDialogOptions-onDidAppear?: VoidCallback--><!--Device-BaseDialogOptions-onDidAppear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onDidAppear?: () => void--><!--Device-BaseDialogOptions-onDidAppear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidDisappear
 
 ```TypeScript
-onDidDisappear?: VoidCallback
+onDidDisappear?: () => void
 ```
 
-Callback function when the dialog disappears.
+Event callback after the dialog box disappears. &lt;br&gt;**NOTE：**&lt;br&gt;The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
 
-**Type:** VoidCallback
+**Type:** () =&gt; void
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseDialogOptions-onDidDisappear?: VoidCallback--><!--Device-BaseDialogOptions-onDidDisappear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onDidDisappear?: () => void--><!--Device-BaseDialogOptions-onDidDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillAppear
 
 ```TypeScript
-onWillAppear?: VoidCallback
+onWillAppear?: () => void
 ```
 
-Callback function before the dialog openAnimation starts.
+Event callback when the dialog box is about to appear. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** VoidCallback
+**Type:** () =&gt; void
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseDialogOptions-onWillAppear?: VoidCallback--><!--Device-BaseDialogOptions-onWillAppear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onWillAppear?: () => void--><!--Device-BaseDialogOptions-onWillAppear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDisappear
 
 ```TypeScript
-onWillDisappear?: VoidCallback
+onWillDisappear?: () => void
 ```
 
-Callback function before the dialog closeAnimation starts.
+Event callback when the dialog box is about to disappear. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
-**Type:** VoidCallback
+**Type:** () =&gt; void
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseDialogOptions-onWillDisappear?: VoidCallback--><!--Device-BaseDialogOptions-onWillDisappear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onWillDisappear?: () => void--><!--Device-BaseDialogOptions-onWillDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -522,15 +620,19 @@ Callback function before the dialog closeAnimation starts.
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-Callback function when the CustomDialog interactive dismiss.
+Callback for interactive dismissal of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**. &lt;br&gt;2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-onWillDismiss?: Callback<DismissDialogAction>--><!--Device-BaseDialogOptions-onWillDismiss?: Callback<DismissDialogAction>-End-->
 
@@ -542,17 +644,21 @@ Callback function when the CustomDialog interactive dismiss.
 showInSubWindow?: boolean
 ```
 
-Whether to display in the sub window.
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. &lt;br&gt;**true**: The dialog box is shown in a subwindow. &lt;br&gt;Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-showInSubWindow?: boolean--><!--Device-BaseDialogOptions-showInSubWindow?: boolean-End-->
 
@@ -561,22 +667,24 @@ Whether to display in the sub window.
 ## systemMaterial
 
 ```TypeScript
-systemMaterial?: uiMaterial.Material
+systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+System material of the dialog box. Different materials have different effects and can affect visual attributes such as the background color, border, and shadow of the dialog box.
 
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
-
-**Type:** uiMaterial.Material
+**Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseDialogOptions-systemMaterial?: uiMaterial.Material--><!--Device-BaseDialogOptions-systemMaterial?: uiMaterial.Material-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-BaseDialogOptions-systemMaterial?: SystemUiMaterial--><!--Device-BaseDialogOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -586,15 +694,19 @@ Device Behavior Differences:The effect of same material may vary across differen
 transition?: TransitionEffect
 ```
 
-Transition parameters of opening/closing custom dialog.
+Transition effect for the appearance and disappearance of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt; 1. If this parameter is not set, the default effect is used. &lt;br&gt; 2. Touching the Back button during the appearance animation pauses the appearance animation and starts the disappearance animation. The final effect is one obtained after the curves of the appearance and disappearance animations are combined. &lt;br&gt; 3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application.
 
 **Type:** TransitionEffect
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BaseDialogOptions-transition?: TransitionEffect--><!--Device-BaseDialogOptions-transition?: TransitionEffect-End-->
 

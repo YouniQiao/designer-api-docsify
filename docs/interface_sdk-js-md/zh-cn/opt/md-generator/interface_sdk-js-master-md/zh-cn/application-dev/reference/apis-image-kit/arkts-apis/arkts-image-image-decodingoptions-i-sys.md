@@ -2,7 +2,9 @@
 
 图像解码设置选项。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
 
@@ -18,7 +20,9 @@ resolutionQuality?: ResolutionQuality
 
 **类型：** ResolutionQuality
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality--><!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality-End-->
 

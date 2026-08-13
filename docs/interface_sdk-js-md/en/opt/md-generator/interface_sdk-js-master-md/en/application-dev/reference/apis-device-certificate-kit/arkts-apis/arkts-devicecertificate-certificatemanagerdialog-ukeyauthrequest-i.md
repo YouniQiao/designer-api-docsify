@@ -2,7 +2,9 @@
 
 USB key PIN authentication request.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManagerDialog-export interface UkeyAuthRequest--><!--Device-certificateManagerDialog-export interface UkeyAuthRequest-End-->
 
@@ -20,12 +22,13 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 keyUri: string
 ```
 
-Unique identifier of the USB Key credential. The value contains up to 256 bytes.The value of this parameter can be obtained from the CertReference returned by invoking the  
-[openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog) interface.
+Unique identifier of the USB Key credential. The value contains up to 256 bytes. The value of this parameter can be obtained from the CertReference returned by invoking the [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog) interface.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

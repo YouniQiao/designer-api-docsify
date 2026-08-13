@@ -4,6 +4,8 @@ Enumerates the modes of the file selector.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FileSelectorMode--><!--Device-unnamed-declare enum FileSelectorMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ FileOpenMode = 0
 Open and upload a file.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Open and upload multiple files.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FileSelectorMode-FileOpenMultipleMode = 1--><!--Device-FileSelectorMode-FileOpenMultipleMode = 1-End-->
@@ -50,6 +56,8 @@ Open and upload a folder.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FileSelectorMode-FileOpenFolderMode = 2--><!--Device-FileSelectorMode-FileOpenFolderMode = 2-End-->
@@ -65,6 +73,8 @@ FileSaveMode = 3
 Save a file.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

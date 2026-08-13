@@ -4,7 +4,9 @@ Defines the switch information of a device-cloud synergy database.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-interface DBSwitchInfo--><!--Device-cloudData-interface DBSwitchInfo-End-->
 
@@ -30,7 +32,9 @@ Whether to enable device-cloud synergy for the database. The value **true** indi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DBSwitchInfo-enable: boolean--><!--Device-DBSwitchInfo-enable: boolean-End-->
 
@@ -44,14 +48,15 @@ Whether to enable device-cloud synergy for the database. The value **true** indi
 tableInfo?: Record<string, boolean>
 ```
 
-Device-cloud synergy configuration of a table. The key is the table name, and the value is the switch status of the table. The value **true** indicates that device-cloud synergy is enabled for the table, and the value  
-**false** indicates the opposite. If this parameter is not set, the device-cloud synergy is enabled for the database by default.
+Device-cloud synergy configuration of a table. The key is the table name, and the value is the switch status of the table. The value **true** indicates that device-cloud synergy is enabled for the table, and the value **false** indicates the opposite. If this parameter is not set, the device-cloud synergy is enabled for the database by default.
 
 **Type:** Record&lt;string, boolean&gt;
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DBSwitchInfo-tableInfo?: Record<string, boolean>--><!--Device-DBSwitchInfo-tableInfo?: Record<string, boolean>-End-->
 

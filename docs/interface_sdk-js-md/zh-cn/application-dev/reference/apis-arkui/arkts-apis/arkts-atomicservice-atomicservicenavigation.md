@@ -1,9 +1,4 @@
-# @ohos.atomicservice.AtomicServiceNavigation(This section describes the interfaces used by AtomicServiceNavigation)
-
-###### 子组件
- 可以包含子组件。
- 从API version 10开始，推荐使用[NavPathStack](NavPathStack)进行页面路由。
-
+# @ohos.atomicservice.AtomicServiceNavigation
 
 ## 汇总
 
@@ -11,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | 作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示  [NavDestination](./@internal/component/ets/nav_destination)的子组件，首页和非首页通过路由进行切换。 |
+| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | 作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示 NavDestination的子组件，首页和非首页通过路由进行切换。 |
 
 ### 接口
 

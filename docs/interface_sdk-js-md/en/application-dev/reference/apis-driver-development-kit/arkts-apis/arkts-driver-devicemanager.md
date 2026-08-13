@@ -2,9 +2,11 @@
 
 The **deviceManager** module provides APIs for managing peripheral devices, including querying the peripheral device list and binding or unbinding a peripheral device.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
 
@@ -22,23 +24,23 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 
 | Name | Description |
 | --- | --- |
-| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#binddevice) | Binds a peripheral device based on the device information returned by **queryDevices()**.You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
-| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#binddevice-1) | Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
-| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#binddevicedriver) | Binds a peripheral device based on the device information returned by **queryDevices()**.You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
-| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#binddevicedriver-1) | Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
-| [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#binddriverwithdeviceid) | Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device list. |
-| [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) | Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is returned. |
-| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbinddevice) | Unbinds a peripheral device. |
-| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbinddevice-1) | Unbinds a peripheral device. This API uses a promise to return the result. |
-| [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid) | Unbinds a peripheral device. This API uses a promise to return the result. |
+| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#bindDevice) | Binds a peripheral device based on the device information returned by **queryDevices()**. You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
+| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#bindDevice) | Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
+| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#bindDeviceDriver) | Binds a peripheral device based on the device information returned by **queryDevices()**. You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
+| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#bindDeviceDriver) | Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device. |
+| [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#bindDriverWithDeviceId) | Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device list. |
+| [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) | Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is returned. |
+| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbindDevice) | Unbinds a peripheral device. |
+| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbindDevice) | Unbinds a peripheral device. This API uses a promise to return the result. |
+| [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbindDriverWithDeviceId) | Unbinds a peripheral device. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [queryDeviceInfo](arkts-driverdevelopment-devicemanager-querydeviceinfo-f-sys.md#querydeviceinfo) | Obtains the list of detailed information about peripherals. If the device has no peripheral device connected, an empty list is returned. |
-| [queryDriverInfo](arkts-driverdevelopment-devicemanager-querydriverinfo-f-sys.md#querydriverinfo) | Obtains the list of detailed information about peripheral drivers. If the device has no peripheral device connected, an empty list is returned. |
+| [queryDeviceInfo](arkts-driverdevelopment-devicemanager-querydeviceinfo-f-sys.md#queryDeviceInfo) | Obtains the list of detailed information about peripherals. If the device has no peripheral device connected, an empty list is returned. |
+| [queryDriverInfo](arkts-driverdevelopment-devicemanager-querydriverinfo-f-sys.md#queryDriverInfo) | Obtains the list of detailed information about peripheral drivers. If the device has no peripheral device connected, an empty list is returned. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -56,8 +58,8 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 | --- | --- |
 | [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md) | Defines the detailed information about a device. |
 | [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md) | Defines detailed information about a driver. |
-| [USBDeviceInfo](arkts-driverdevelopment-devicemanager-usbdeviceinfo-i-sys.md) | Defines detailed information about the USB device. It is inherited from  [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo). |
-| [USBDriverInfo](arkts-driverdevelopment-devicemanager-usbdriverinfo-i-sys.md) | Defines detailed information about the USB device driver. It is inherited from  [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#DriverInfo). |
+| [USBDeviceInfo](arkts-driverdevelopment-devicemanager-usbdeviceinfo-i-sys.md) | Defines detailed information about the USB device. It is inherited from [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo-(System-API)). |
+| [USBDriverInfo](arkts-driverdevelopment-devicemanager-usbdriverinfo-i-sys.md) | Defines detailed information about the USB device driver. It is inherited from [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#DriverInfo-(System-API)). |
 | [USBInterfaceDesc](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md) | Defines the interface descriptor of a USB device. |
 <!--DelEnd-->
 

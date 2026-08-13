@@ -2,7 +2,9 @@
 
 Represents request options.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface RequestOptions--><!--Device-photoAccessHelper-interface RequestOptions-End-->
 
@@ -20,13 +22,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 compatibleMode?: CompatibleMode
 ```
 
-HDR video transcoding policy, which can be **FAST_ORIGINAL_FORMAT_MODE** (maintaining the original HDR format) or  
-**COMPATIBLE_FORMAT_MODE** (converting HDR content to SDR format). The default value is   
-**FAST_ORIGINAL_FORMAT_MODE**.
+HDR video transcoding policy, which can be **FAST_ORIGINAL_FORMAT_MODE** (maintaining the original HDR format) or **COMPATIBLE_FORMAT_MODE** (converting HDR content to SDR format). The default value is **FAST_ORIGINAL_FORMAT_MODE**.
 
 **Type:** [CompatibleMode](arkts-medialibrary-photoaccesshelper-compatiblemode-e.md)
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestOptions-compatibleMode?: CompatibleMode--><!--Device-RequestOptions-compatibleMode?: CompatibleMode-End-->
 
@@ -42,7 +44,9 @@ Delivery mode of the requested asset. The value can be **FAST_MODE**, **HIGH_QUA
 
 **Type:** [DeliveryMode](arkts-medialibrary-photoaccesshelper-deliverymode-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestOptions-deliveryMode: DeliveryMode--><!--Device-RequestOptions-deliveryMode: DeliveryMode-End-->
 
@@ -58,7 +62,9 @@ Callback used to return the HDR-to-SDR conversion progress.
 
 **Type:** [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md)
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestOptions-mediaAssetProgressHandler?: MediaAssetProgressHandler--><!--Device-RequestOptions-mediaAssetProgressHandler?: MediaAssetProgressHandler-End-->
 

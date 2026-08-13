@@ -1,14 +1,16 @@
 # ChineseCalendar
 
-Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month.
+Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar, such as leap month.
 
-**Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md#Calendar)
+**Inheritance/Implementation:** ChineseCalendar extends [Calendar](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md#Calendar)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-i18n-export class ChineseCalendar extends Calendar--><!--Device-i18n-export class ChineseCalendar extends Calendar-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export class ChineseCalendar--><!--Device-i18n-export class ChineseCalendar-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -28,7 +30,9 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +46,9 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gregorianYear | int | Yes | Gregorian year to check, supported range is from 1900 to 2100 &lt;br&gt;The value range is all integers. |
-| cyclicalYear | int | Yes | Cyclical year to check, supported range is from 1 to 60 &lt;br&gt;The value range is all integers. |
-| month | int | Yes | Month to check. Note: The month starts from 0. For example, 0 indicates January &lt;br&gt;The value range is all integers. |
+| gregorianYear | int | Yes | Gregorian year to check, supported range is from 1900 to 2100. &lt;br&gt;The value range is all integers. &lt;br&gt;Year. |
+| cyclicalYear | int | Yes | Cyclical year to check, supported range is from 1 to 60. &lt;br&gt;The value range is all integers. &lt;br&gt;Year. |
+| month | int | Yes | Month to check. Note: The month starts from 0. For example, 0 indicates January. &lt;br&gt;The value range is all integers. &lt;br&gt;Month. |
 
 **Return value:**
 
@@ -56,7 +60,7 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setChineseCalendarTime
 
@@ -68,7 +72,9 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,5 +88,5 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
+| chineseCalendarTime | [ChineseCalendarTime](../../apis-na/arkts-apis/arkts-na-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
 

@@ -1,0 +1,34 @@
+# OnScreenCaptureRequestEvent
+
+Represents the callback invoked when a screen capture request is received.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface OnScreenCaptureRequestEvent--><!--Device-unnamed-export declare interface OnScreenCaptureRequestEvent-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## handler
+
+```TypeScript
+handler: ScreenCaptureHandler
+```
+
+User operation.
+
+**Type:** [ScreenCaptureHandler](arkts-na-web-screencapturehandler-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-OnScreenCaptureRequestEvent-handler: ScreenCaptureHandler--><!--Device-OnScreenCaptureRequestEvent-handler: ScreenCaptureHandler-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

@@ -4,6 +4,8 @@ Specifies the list of field names to return after returning-related APIs are cal
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-relationalStore-interface ReturningConfig--><!--Device-relationalStore-interface ReturningConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -26,6 +28,8 @@ Fields returned in the result set. One to four fields are supported for input. N
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReturningConfig-columns: Array<string>--><!--Device-ReturningConfig-columns: Array<string>-End-->
@@ -38,12 +42,13 @@ Fields returned in the result set. One to four fields are supported for input. N
 maxReturningCount?: number
 ```
 
-Maximum number of rows returned in the result set. The default value is **1024**, and the maximum value is   
-**32766**. Note: If the actual number of modified rows exceeds the value set for **maxReturningCount**, the system will discard the excess data.
+Maximum number of rows returned in the result set. The default value is **1024**, and the maximum value is **32766**. Note: If the actual number of modified rows exceeds the value set for **maxReturningCount**, the system will discard the excess data.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,12 @@
 # @ohos.i18n
 
-Provides international settings related APIs.
+This module provides system-related and enhanced [i18n](../../../internationalization/i18n-l10n.md) capabilities, such as locale management, phone number formatting, and calendar, through supplementary i18n APIs that are not defined in [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/). The [intl](../../apis-na/arkts-apis/arkts-intl.md#@ohos.intl) module provides basic i18n capabilities through the standard i18n APIs defined in ECMA 402. It works with the **i18n** module to provide a complete suite of i18n capabilities. The terms used in the APIs are defined as follows: - Pattern string, which is a string consisting of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and custom text enclosed by single quotation marks. - Skeleton string: a string that consists of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text. > **NOTE：**> > - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The > processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the > [date and time formatting API](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md#SimpleNumberFormat) is used only for UI display. Do not hardcode the > return value or make assumptions about the return value. Otherwise, version compatibility problems may occur. API > version 12 corresponds to [CLDR 42](https://cldr.unicode.org/index/downloads/cldr-42). For details about data > changes, see the official CLDR documentation. > > - Since API version 11, some APIs of this module are supported in ArkTS widgets.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace i18n--><!--Device-unnamed-declare namespace i18n-End-->
 
@@ -22,50 +24,65 @@ import { i18n } from '@kit.LocalizationKit';
 
 | Name | Description |
 | --- | --- |
-| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getcalendar) | Obtains the Calendar object for the specified locale and calendar type. |
-| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getchinesecalendar) | Obtains the ChineseCalendar object for the specified locale. |
-| [getInstance](arkts-localization-i18n-getinstance-f.md#getinstance) | Creates an IndexUtil object. |
-| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getlineinstance) | Obtains a BreakIterator object. The BreakIterator object maintains an internal break iterator that can be used to access various line break points. |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) | Obtains a SimpleDateTimeFormat object based on the specified pattern string. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatBySkeleton,see SimpleDateTimeFormat. |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) | Obtains a SimpleDateTimeFormat object based on the specified skeleton. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatByPattern, see SimpleDateTimeFormat. |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) | Obtains a SimpleNumberFormat object based on the specified skeleton. |
-| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#gettimezone) | Obtains the TimeZone object corresponding to the specified time zone ID. |
-| [isRTL](arkts-localization-i18n-isrtl-f.md#isrtl) | Checks whether the input character is of the right to left (RTL) language. |
+| [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md#addPreferredLanguage) | Adds a preferred language to the specified position on the preferred language list. |
+| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getCalendar) | Obtains the **Calendar** object for the specified locale and calendar type. |
+| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getChineseCalendar) | Obtains the ChineseCalendar object for the specified locale. |
+| [getDisplayCountry](arkts-localization-i18n-getdisplaycountry-f.md#getDisplayCountry) | Obtains the localized name of the specified country/region. |
+| [getDisplayLanguage](arkts-localization-i18n-getdisplaylanguage-f.md#getDisplayLanguage) | Obtains the localized script for the specified language. |
+| [getFirstPreferredLanguage](arkts-localization-i18n-getfirstpreferredlanguage-f.md#getFirstPreferredLanguage) | Obtains the first language in the preferred language list. |
+| [getInstance](arkts-localization-i18n-getinstance-f.md#getInstance) | Creates an **IndexUtil** object. |
+| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getLineInstance) | Obtains a **BreakIterator** object. The **BreakIterator** object maintains an internal break iterator that can be used to access various line break points. |
+| [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md#getPreferredLanguageList) | Obtains the list of preferred languages. |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) | Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) | Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) | Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) | Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) | Obtains a **SimpleNumberFormat** object based on the specified skeleton. |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) | Obtains a **SimpleNumberFormat** object based on the specified skeleton. |
+| [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md#getSystemLanguage) | Obtains the system language. |
+| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md#getSystemLocale) | Obtains the system locale. |
+| [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md#getSystemRegion) | Obtains the system region. |
+| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#getTimeZone) | Obtains the **TimeZone** object corresponding to the specified time zone ID. |
+| [is24HourClock](arkts-localization-i18n-is24hourclock-f.md#is24HourClock) | Checks whether the 24-hour clock is used. |
+| [isRTL](arkts-localization-i18n-isrtl-f.md#isRTL) | Checks whether a language is an RTL language. For an RTL language, [UI mirroring](../../../internationalization/i18n-ui-design.md#ui-mirroring) is required. |
+| [removePreferredLanguage](arkts-localization-i18n-removepreferredlanguage-f.md#removePreferredLanguage) | Removes a preferred language from the specified position on the preferred language list. |
+| [set24HourClock](arkts-localization-i18n-set24hourclock-f.md#set24HourClock) | Sets the 24-hour clock. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
 | [AdvancedMeasureFormat](arkts-localization-i18n-advancedmeasureformat-c.md) | Provides the number formatting capability, supporting automatic unit conversion based on specific application scenarios. |
-| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | The BreakIterator class is used for finding the location of break point in text. |
-| [Calendar](arkts-localization-i18n-calendar-c.md) | Provides the API for accessing Calendar name, time and date related information. |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month. |
-| [EntityRecognizer](arkts-localization-i18n-entityrecognizer-c.md) | Provide some functions to find named entity in text. |
-| [HolidayManager](arkts-localization-i18n-holidaymanager-c.md) | Provide some functions to manage holidays in a country or region. Partly follows the RFC2445 standard. |
-| [I18NUtil](arkts-localization-i18n-i18nutil-c.md) | Provides util functions. |
-| [ISO8601DateTimeFormat](arkts-localization-i18n-iso8601datetimeformat-c.md) | Provide a DateTime formatting interface which could format date to ISO 8601 standard string.  [ISO8601](https://iso8601.com/). |
-| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | Sequence text can be grouped under the specified area,and grouping index with different lengths can be specified. |
-| [Normalizer](arkts-localization-i18n-normalizer-c.md) | Provides the API for text encoding normalization. |
-| [PhoneNumberFormat](arkts-localization-i18n-phonenumberformat-c.md) | Provides the API for formatting phone number strings |
+| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | Provides text line breaking capabilities, such as obtaining, moving, and identifying break points. |
+| [Calendar](arkts-localization-i18n-calendar-c.md) | Provides calendar management capabilities, such as calendar name retrieval and date calculation. |
+| [Character](arkts-localization-i18n-character-c.md) | Provides the API for accessing unicode character properties. For example, determine whether a character is a number. |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar, such as leap month. |
+| [EntityRecognizer](arkts-localization-i18n-entityrecognizer-c.md) | Provides entity recognition capabilities, which can be used to obtain the type and start and end positions of an entity in the text. Currently, supported entities include phone numbers, and date and time. |
+| [HolidayManager](arkts-localization-i18n-holidaymanager-c.md) | Provides holiday data parsing capabilities, such as determining holidays and obtaining the holiday list of a specified year. |
+| [I18NUtil](arkts-localization-i18n-i18nutil-c.md) | Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval, time segment name retrieval, region matching, and path localization. |
+| [ISO8601DateTimeFormat](arkts-localization-i18n-iso8601datetimeformat-c.md) | Provide a DateTime formatting interface which could format date to ISO 8601 standard string. [ISO8601](https://iso8601.com/). |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | Provides index management capabilities, such as obtaining the locale index list and text index values. |
+| [Normalizer](arkts-localization-i18n-normalizer-c.md) | Provides the text normalization capabilities. |
+| [PhoneNumberFormat](arkts-localization-i18n-phonenumberformat-c.md) | Provides phone number management capabilities, such as phone number validity verification, formatting, and home location retrieval. |
 | [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Provide a simple date time formatting interface. |
-| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Provide a simple number formatting interface. |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Formats a number based on the specified skeleton string. |
 | [StyledDateTimeFormat](arkts-localization-i18n-styleddatetimeformat-c.md) | Provide a DateTime formatting interface which could format DateTime to StyleString. |
 | [StyledNumberFormat](arkts-localization-i18n-stylednumberformat-c.md) | Provide a number formatting interface which could format number to StyleString. |
-| [SymbolDateTimeFormat](arkts-localization-i18n-symboldatetimeformat-c.md) | Provide a DateTime formatting interface that supports custom symbols.This interface formats date time values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "2:23 PM" with "2:23 afternoon"). |
-| [SymbolNumberFormat](arkts-localization-i18n-symbolnumberformat-c.md) | Provide a Number formatting interface that supports custom symbols.This interface formats number values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols (e.g., replacing "null" to "NA"). |
-| [System](arkts-localization-i18n-system-c.md) | Provides system functions. |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | Provides the API for accessing TimeZone name, rawOffset and offset information. |
-| [Transliterator](arkts-localization-i18n-transliterator-c.md) | Provides the API for transliterate text from one format to another. |
-| [Unicode](arkts-localization-i18n-unicode-c.md) | Provides the API for accessing unicode character properties. For example, determine whether a character is a number. |
+| [SymbolDateTimeFormat](arkts-localization-i18n-symboldatetimeformat-c.md) | Provide a DateTime formatting interface that supports custom symbols. This interface formats date time values into strings with custom symbols, and can replace variable symbols in the formatted result with custom fixed symbols (e.g., replacing "2:23 PM" with "2:23 afternoon"). |
+| [SymbolNumberFormat](arkts-localization-i18n-symbolnumberformat-c.md) | Provide a Number formatting interface that supports custom symbols. This interface formats number values into strings with custom symbols, and can replace variable symbols in the formatted result with custom fixed symbols (e.g., replacing "null" to "NA"). |
+| [System](arkts-localization-i18n-system-c.md) | Provides system attribute configuration functions, including translating language and country/region names, obtaining the list of supported languages and countries/regions, and obtaining the system language and region. |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | Provides time zone management capabilities, such as time zone name translation, offset retrieval, and transition rule retrieval. |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) | Provides text transliteration capabilities, such as obtaining the supported language IDs and transliterating text. |
+| [Unicode](arkts-localization-i18n-unicode-c.md) | Provides character attribute management capabilities, such as checking whether a character is a space, digit, or letter. |
 | [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | Provides the API for obtaining a timezone transition information. |
-| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Provides the API for obtaining timezone offset changing rules information. |
+| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Queries the time zone transition rule. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [System](arkts-localization-i18n-system-c-sys.md) | Provides system functions. |
+| [System](arkts-localization-i18n-system-c-sys.md) | Provides system attribute configuration functions, including translating language and country/region names, obtaining the list of supported languages and countries/regions, and obtaining the system language and region. |
 | [SystemLocaleManager](arkts-localization-i18n-systemlocalemanager-c-sys.md) | Provide some functions for settings and startup guide to select language or region. |
 <!--DelEnd-->
 
@@ -79,15 +96,16 @@ import { i18n } from '@kit.LocalizationKit';
 | [EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md) | Defines a list of entities. |
 | [HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md) | Represents the holiday information. |
 | [HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md) | Represents the name of a holiday in different languages. |
-| [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | Represents optional configuration items for the ISO8601DateTimeFormat object.These options determine which elements need to be displayed after formatting and the corresponding format. |
-| [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | Options for PhoneNumberFormat object initialization. |
-| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get. |
-| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | Represents optional element for the ResolvedSymbolNumberFormatOptions object.Define the resolved symbol element and value that need to get. |
-| [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | Represents optional configuration items for the DateTimeFormat object. |
-| [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | Represents optional configuration items for the NumberFormat object. |
-| [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | Represents optional configuration items for the SymbolDateTimeFormat object.Define the symbol element and value that need to be replaced. |
-| [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | Represents optional configuration items for the SymbolNumberFormat object.Define the symbol element and value that need to be replaced. |
+| [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | Represents optional configuration items for the ISO8601DateTimeFormat object. These options determine which elements need to be displayed after formatting and the corresponding format. |
+| [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | Options for **PhoneNumberFormat** object initialization. |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. Define the resolved symbol element and value that need to get. |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | Represents optional element for the ResolvedSymbolNumberFormatOptions object. Define the resolved symbol element and value that need to get. |
+| [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | Optional configuration items for creating the time and date formatting object for rich text display. |
+| [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | Represents optional configuration items for the **NumberFormat** object. |
+| [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | Represents optional configuration items for the SymbolDateTimeFormat object. Define the symbol element and value that need to be replaced. |
+| [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | Represents optional configuration items for the SymbolNumberFormat object. Define the symbol element and value that need to be replaced. |
 | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Defines the measurement unit information. |
+| [Util](arkts-localization-i18n-util-i.md) | Provides util functions. |
 
 <!--Del-->
 ### Interfaces（系统接口）
@@ -105,7 +123,7 @@ import { i18n } from '@kit.LocalizationKit';
 | --- | --- |
 | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Enumerates text normalization modes. |
 | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Enumerates temperature units. |
-| [UnitUsage](arkts-localization-i18n-unitusage-e.md) | Enumerates Scenarios for MeasureFormat. |
+| [UnitUsage](arkts-localization-i18n-unitusage-e.md) | Enumerates unit formatting scenarios. |
 | [WeekDay](arkts-localization-i18n-weekday-e.md) | Enumerates the first day of a week. The value ranges from Monday to Sunday. |
 
 <!--Del-->

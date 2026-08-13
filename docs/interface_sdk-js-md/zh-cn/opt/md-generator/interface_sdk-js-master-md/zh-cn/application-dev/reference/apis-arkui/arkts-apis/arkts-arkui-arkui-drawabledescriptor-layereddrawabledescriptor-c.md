@@ -1,15 +1,14 @@
 # LayeredDrawableDescriptor
 
-当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自  
-[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)。
-
-drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
+当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自 [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)。 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
 
 **继承/实现关系：** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **起始版本：** 10
 
-<!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export class LayeredDrawableDescriptor--><!--Device-unnamed-export class LayeredDrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +25,8 @@ constructor(
 LayeredDrawableDescriptor的构造函数。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,6 +54,8 @@ getBackground(): DrawableDescriptor
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -71,7 +74,7 @@ getBackground(): DrawableDescriptor
 
 | 错误码ID |
 | --- |
-| [111002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-资源已释放) |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
 
 ## 示例
 
@@ -122,6 +125,8 @@ getForeground(): DrawableDescriptor
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -140,7 +145,7 @@ getForeground(): DrawableDescriptor
 
 | 错误码ID |
 | --- |
-| [111002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-资源已释放) |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
 
 ## 示例
 
@@ -196,6 +201,8 @@ getMask(): DrawableDescriptor
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -214,7 +221,7 @@ getMask(): DrawableDescriptor
 
 | 错误码ID |
 | --- |
-| [111002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-资源已释放) |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
 
 ## 示例
 
@@ -265,6 +272,8 @@ LayeredDrawableDescriptor的静态方法，获取系统内置的裁切路径参�
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -311,9 +320,11 @@ struct Index {
 setBlendMode(mode: drawing.BlendMode): void
 ```
 
-设置LayeredDrawableDescriptor的混合模式。对同一LayeredDrawableDescriptor对象多次调用setBlendMode接口时，仅在绘制完成前的最后一次调用生效。该接口不支持动态切换。LayeredDrawableDescriptor的默认绘制顺序为背景、蒙版、前景。设置了混合模式后，绘制顺序变为背景、前景、蒙版。若设置的值无效，则按照未设置混合模式进行绘制。
+设置LayeredDrawableDescriptor的混合模式。对同一LayeredDrawableDescriptor对象多次调用setBlendMode接口时， 仅在绘制完成前的最后一次调用生效。该接口不支持动态切换。 LayeredDrawableDescriptor的默认绘制顺序为背景、蒙版、前景。设置了混合模式后，绘制顺序变为背景、前景、蒙版。 若设置的值无效，则按照未设置混合模式进行绘制。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

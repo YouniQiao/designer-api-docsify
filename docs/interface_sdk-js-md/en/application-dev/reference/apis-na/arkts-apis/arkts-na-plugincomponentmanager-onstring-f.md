@@ -1,0 +1,29 @@
+# on_string
+
+## on_string
+
+```TypeScript
+export function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCallback): void
+```
+
+Plugin component event listener.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-pluginComponentManager-export function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCallback): void--><!--Device-pluginComponentManager-export function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCallback): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventType | string | Yes |  |
+| callback | [OnPushEventCallback](arkts-na-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-na-plugincomponentmanager-onrequesteventcallback-t.md) | Yes |  |
+

@@ -2,7 +2,9 @@
 
 为备份恢复提供可选配置参数。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backup-interface BackupParams--><!--Device-backup-interface BackupParams-End-->
 
@@ -20,7 +22,9 @@ parameters?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BackupParams-parameters?: string--><!--Device-BackupParams-parameters?: string-End-->
 

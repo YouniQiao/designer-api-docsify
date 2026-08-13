@@ -4,6 +4,8 @@ Declare custom parameters used for volume panel.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class AVVolumePanelParameter--><!--Device-unnamed-export declare class AVVolumePanelParameter-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -25,6 +27,8 @@ Sets the position of volume panel.
 **Type:** Position
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

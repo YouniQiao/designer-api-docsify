@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function scan(): boolean
 ```
 
-Scans Wi-Fi hotspot.
-
-&lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
+Scans Wi-Fi hotspot. &lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
 
 **Since:** 6
 
@@ -22,7 +20,7 @@ Scans Wi-Fi hotspot.
 
 **Deprecated since:** 9
 
-**Substitutes:** [scan](ohos.wifiManager/wifiManager.scan)
+**Substitutes:** [scan](arkts-connectivity-wifimanager-scan-f.md#scan)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.LOCATION
 

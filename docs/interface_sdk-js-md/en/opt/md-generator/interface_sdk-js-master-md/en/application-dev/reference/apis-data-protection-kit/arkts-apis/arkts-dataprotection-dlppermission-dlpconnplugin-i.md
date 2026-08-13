@@ -1,14 +1,10 @@
 # DlpConnPlugin
 
-Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API.
-
-> **NOTE：**
-> 
-> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerPlugin) requires identical parameters to this API.
-> [connectServer](#connectServer) is called by the SA and the parameters are
-> returned through the callback.
+Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API. > **NOTE：**> > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerPlugin) requires identical parameters to this API. > [connectServer](#connectServer) is called by the SA and the parameters are > returned through the callback.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-export interface DlpConnPlugin--><!--Device-dlpPermission-export interface DlpConnPlugin-End-->
 
@@ -26,15 +22,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 connectServer(requestId: string, requestData: string, callback: Callback<string>): void
 ```
 
-This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.
-
-This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
-
-> **NOTE：**
-> 
-> **connectServer** indicates a call from the system capability side to the frontend.
+This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback. This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server. > **NOTE：**> > **connectServer** indicates a call from the system capability side to the frontend.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -56,9 +48,9 @@ This API can be used in enterprise account authentication and cloud permission v
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

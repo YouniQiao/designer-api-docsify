@@ -4,6 +4,8 @@ Enumerates the app rotation.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AppRotation--><!--Device-unnamed-declare enum AppRotation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ ROTATION_0 = 0
 App does not rotate to display vertically.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ App rotates 90 degrees clockwise to display horizontally.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -54,6 +60,8 @@ App rotates 180 degrees clockwise to display vertically in reverse.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,6 +79,8 @@ ROTATION_270 = 3
 App rotates 270 degrees clockwise to display horizontally in reverse.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

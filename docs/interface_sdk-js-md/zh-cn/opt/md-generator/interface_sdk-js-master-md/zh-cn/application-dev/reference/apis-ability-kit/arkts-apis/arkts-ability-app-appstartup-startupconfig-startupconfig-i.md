@@ -2,7 +2,9 @@
 
 本模块提供[应用启动框架](../../../application-models/app-startup.md)配置信息的定义。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export default interface StartupConfig--><!--Device-unnamed-export default interface StartupConfig-End-->
 
@@ -18,7 +20,9 @@ startupListener?: StartupListener
 
 **类型：** [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +42,9 @@ timeoutMs?: number
 
 **默认值：** 10000
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

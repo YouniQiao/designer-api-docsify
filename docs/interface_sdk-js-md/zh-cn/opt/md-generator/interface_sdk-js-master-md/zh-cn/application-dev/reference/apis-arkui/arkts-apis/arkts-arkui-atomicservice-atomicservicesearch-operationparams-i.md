@@ -4,6 +4,8 @@ AtomicServiceSearch中“功能区”的初始化参数。
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface OperationParams--><!--Device-unnamed-export interface OperationParams-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ auxiliaryItem?: OperationOption
 **类型：** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ independentItem?: OperationOption
 **类型：** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

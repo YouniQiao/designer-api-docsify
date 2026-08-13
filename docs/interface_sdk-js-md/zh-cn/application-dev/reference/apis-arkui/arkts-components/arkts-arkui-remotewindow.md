@@ -2,9 +2,7 @@
 
 远程控制窗口组件，可以通过此组件控制应用窗口，提供启动退出过程中控件动画和应用窗口联动动画的能力。
 
-## 子组件
-
-不可以包含子组件
+## 子组件 不可以包含子组件
 
 ## RemoteWindow
 
@@ -17,6 +15,8 @@ RemoteWindow(target: WindowAnimationTarget)
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-RemoteWindowInterface-(target: WindowAnimationTarget): RemoteWindowAttribute--><!--Device-RemoteWindowInterface-(target: WindowAnimationTarget): RemoteWindowAttribute-End-->
 
@@ -32,5 +32,5 @@ RemoteWindow(target: WindowAnimationTarget)
 
 ## 汇总
 
-- [RRect](arkts-arkui-remotewindow-rrect-i-sys.md)
-- [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md)
+- [RRect](arkts-arkui-rrect-i-sys.md)
+- [WindowAnimationTarget](arkts-arkui-windowanimationtarget-i-sys.md)

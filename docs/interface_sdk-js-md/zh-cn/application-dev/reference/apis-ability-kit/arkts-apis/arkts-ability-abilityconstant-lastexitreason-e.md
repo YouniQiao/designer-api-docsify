@@ -1,10 +1,12 @@
 # LastExitReason
 
-Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)方法根据launchParam.lastExitReason的不同类型执行相应操作。
+Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)方法根据 launchParam.lastExitReason的不同类型执行相应操作。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityConstant-export enum LastExitReason--><!--Device-AbilityConstant-export enum LastExitReason-End-->
 
@@ -18,9 +20,11 @@ UNKNOWN = 0
 
 未知原因。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,13 +62,13 @@ Ability组件未响应。
 NORMAL = 2
 ```
 
-用户主动关闭应用，应用程序正常退出。
+用户主动关闭应用，应用程序正常退出。 **说明：**当开发者直接调用process.exit()、内核kill命令等非Ability Kit提供的能 力强制退出应用进程时，也会返回NORMAL。
 
-**说明：**当开发者直接调用[process.exit()](../apis-arkts/js-apis-process.md#processexitdeprecated)、内核kill命令等非Ability Kit提供的能力强制退出应用进程时，也会返回NORMAL。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,9 +86,11 @@ CPP_CRASH = 3
 
 [进程崩溃](../../../dfx/cppcrash-guidelines.md)导致的应用程序退出。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,9 +108,11 @@ JS_ERROR = 4
 
 当应用存在JS语法错误并未被开发者捕获时，触发JS_ERROR故障，导致应用程序退出。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,9 +130,11 @@ APP_FREEZE = 5
 
 [应用冻屏](../../../dfx/appfreeze-guidelines.md)导致的应用程序退出。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,13 +150,13 @@ APP_FREEZE = 5
 PERFORMANCE_CONTROL = 6
 ```
 
-因系统性能问题（如设备内存不足）导致的应用程序退出。
+因系统性能问题（如设备内存不足）导致的应用程序退出。 **说明：**该接口即将废弃，建议使用RESOURCE_CONTROL替代。
 
-**说明：**该接口即将废弃，建议使用RESOURCE_CONTROL替代。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,18 +172,13 @@ PERFORMANCE_CONTROL = 6
 RESOURCE_CONTROL = 7
 ```
 
-系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam)获取，可能原因如下: 
+系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam)获取，可能原因如下: - CPU Highload，CPU高负载。 - CPU_EXT Highload，快速CPU负载检测。 - IO Manage Control，I/O管控。 - App Memory Deterioration，应用内存超限劣化。 - Temperature Control，温度管控。 - Memory Pressure，整机低内存触发按优先级由低到高终止进程。
 
-- CPU Highload，CPU高负载。  
-- CPU_EXT Highload，快速CPU负载检测。  
-- IO Manage Control，I/O管控。  
-- App Memory Deterioration，应用内存超限劣化。  
-- Temperature Control，温度管控。  
-- Memory Pressure，整机低内存触发按优先级由低到高终止进程。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -191,9 +196,11 @@ UPGRADE = 8
 
 应用升级导致的应用程序退出。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -211,13 +218,15 @@ USER_REQUEST = 9
 
 应用程序因多任务中心请求而退出。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LastExitReason-USER_REQUEST = 9--><!--Device-LastExitReason-USER_REQUEST = 9-End-->
 
@@ -231,13 +240,15 @@ SIGNAL = 10
 
 应用程序因收到系统kill指令信号而退出。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
 

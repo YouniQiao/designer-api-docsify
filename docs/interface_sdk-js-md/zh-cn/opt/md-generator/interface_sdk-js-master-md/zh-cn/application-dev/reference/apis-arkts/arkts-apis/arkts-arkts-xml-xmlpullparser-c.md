@@ -2,7 +2,9 @@
 
 XmlPullParser接口用于解析现有的XML文件，适用于对XML文本进行随机访问和灵活解析的场景。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-xml-class XmlPullParser--><!--Device-xml-class XmlPullParser-End-->
 
@@ -16,7 +18,9 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 构造并返回一个XmlPullParser对象。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -108,9 +112,11 @@ parseXml(option: ParseOptions): void
 
 解析XML，调用后将根据ParseOptions中配置的回调函数触发相应的解析事件，通过回调函数传递标签、属性、文本等解析信息。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XmlPullParser-parseXml(option: ParseOptions): void--><!--Device-XmlPullParser-parseXml(option: ParseOptions): void-End-->
 

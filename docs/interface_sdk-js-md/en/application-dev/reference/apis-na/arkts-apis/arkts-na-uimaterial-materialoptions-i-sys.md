@@ -1,0 +1,42 @@
+# MaterialOptions (System API)
+
+Define the interface containing various material parameters.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-uiMaterial-export interface MaterialOptions--><!--Device-uiMaterial-export interface MaterialOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## type
+
+```TypeScript
+type?: MaterialType
+```
+
+The type of the material.
+
+**Type:** MaterialType
+
+**Default:** uiMaterial.MaterialType.NONE
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MaterialOptions-type?: MaterialType--><!--Device-MaterialOptions-type?: MaterialType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+

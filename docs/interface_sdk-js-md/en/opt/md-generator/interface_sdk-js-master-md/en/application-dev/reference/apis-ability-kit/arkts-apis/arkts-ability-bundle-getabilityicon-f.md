@@ -12,15 +12,13 @@ import { bundle } from '@kit.AbilityKit';
 function getAbilityIcon(bundleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) of the icon corresponding to a given bundle name and ability name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) of the icon corresponding to a given bundle name and ability name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -43,15 +41,13 @@ No permission is required for obtaining the caller's own information.
 function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) of the icon corresponding to a given bundle name and ability name. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) of the icon corresponding to a given bundle name and ability name. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 

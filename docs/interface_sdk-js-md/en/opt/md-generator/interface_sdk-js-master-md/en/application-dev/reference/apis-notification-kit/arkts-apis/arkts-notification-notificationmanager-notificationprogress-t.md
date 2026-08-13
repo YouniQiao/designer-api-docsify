@@ -6,7 +6,9 @@ export type NotificationProgress = _NotificationProgress
 
 Describes the notification progress.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationProgress = _NotificationProgress--><!--Device-notificationManager-export type NotificationProgress = _NotificationProgress-End-->
 

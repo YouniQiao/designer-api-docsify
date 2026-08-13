@@ -12,10 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function search(callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md#Filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -31,8 +32,8 @@ Searches for task IDs based on
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## search
@@ -41,10 +42,11 @@ Searches for task IDs based on
 function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses an asynchronous callback to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -61,8 +63,8 @@ Searches for task IDs based on
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## search
@@ -71,10 +73,11 @@ Searches for task IDs based on
 function search(filter?: Filter): Promise<Array<string>>
 ```
 
-Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses a promise to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-function search(filter?: Filter): Promise<Array<string>>--><!--Device-agent-function search(filter?: Filter): Promise<Array<string>>-End-->
 
@@ -96,5 +99,5 @@ Searches for task IDs based on
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

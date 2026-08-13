@@ -4,6 +4,8 @@ Menu divider mode.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum DividerMode--><!--Device-unnamed-declare enum DividerMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ FLOATING_ABOVE_MENU = 0
 Menu divider mode floating above menu.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ EMBEDDED_IN_MENU = 1
 Menu divider mode embedded in menu.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

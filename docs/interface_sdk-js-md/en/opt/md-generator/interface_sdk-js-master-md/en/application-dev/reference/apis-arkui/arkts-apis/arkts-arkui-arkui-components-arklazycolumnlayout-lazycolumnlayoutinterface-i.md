@@ -4,6 +4,8 @@ Defines the lazy column layout component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface LazyColumnLayoutInterface--><!--Device-unnamed-export interface LazyColumnLayoutInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,7 +16,7 @@ Defines the lazy column layout component.
 import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (): LazyColumnLayoutAttribute
@@ -23,6 +25,8 @@ import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 Construct the lazy column layout attribute.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

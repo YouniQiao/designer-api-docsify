@@ -20,7 +20,7 @@ Obtains the information about the remote ability that matches the given element 
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -35,7 +35,7 @@ Obtains the information about the remote ability that matches the given element 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-elementname-depr-i.md) | Yes | ElementName**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | Yes | Callback used to return the remote ability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | Yes | Callback used to return the remote ability information. |
 
 
 ## getRemoteAbilityInfo
@@ -52,7 +52,7 @@ Obtains the information about the remote ability that matches the given element 
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

@@ -1,20 +1,24 @@
 # Slider
 
 ```TypeScript
-type Slider = SliderFrameNode
+type Slider = TypedFrameNode<SliderInterface, SliderAttribute>
 ```
 
-Define the FrameNode type for Slider.
+Represents a FrameNode of the **Slider** type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Slider = SliderFrameNode--><!--Device-typeNode-type Slider = SliderFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-typeNode-type Slider = TypedFrameNode<SliderInterface, SliderAttribute>--><!--Device-typeNode-type Slider = TypedFrameNode<SliderInterface, SliderAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SliderFrameNode
+**Property type:** TypedFrameNode<SliderInterface, SliderAttribute>
 

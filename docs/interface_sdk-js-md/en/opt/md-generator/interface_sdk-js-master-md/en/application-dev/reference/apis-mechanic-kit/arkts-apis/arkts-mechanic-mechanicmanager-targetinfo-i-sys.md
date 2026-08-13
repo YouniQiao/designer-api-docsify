@@ -2,7 +2,9 @@
 
 Target information.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface TargetInfo--><!--Device-mechanicManager-export interface TargetInfo-End-->
 
@@ -26,7 +28,9 @@ Target type.
 
 **Type:** [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md)
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TargetInfo-targetType: TargetType--><!--Device-TargetInfo-targetType: TargetType-End-->
 

@@ -18,7 +18,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValidReminders](reminderAgentManager.getValidReminders)
+**Substitutes:** getValidReminders
 
 <!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
 
@@ -74,7 +74,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValidReminders](reminderAgentManager.getValidReminders)
+**Substitutes:** getValidReminders
 
 <!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 

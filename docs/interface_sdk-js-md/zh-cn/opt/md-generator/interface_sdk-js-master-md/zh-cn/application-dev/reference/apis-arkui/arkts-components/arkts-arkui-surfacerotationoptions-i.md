@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SurfaceRotationOptions--><!--Device-unnamed-declare interface SurfaceRotationOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@
 lock?: boolean
 ```
 
-屏幕旋转时是否锁定surface的方向。如果不设置此参数，默认值为false，表示不锁定方向。
-
-**true**：屏幕旋转时锁定surface的方向。
-
-**false**：屏幕旋转时不锁定surface的方向。
+屏幕旋转时是否锁定surface的方向。 如果不设置此参数，默认值为false，表示不锁定方向。 **true**：屏幕旋转时锁定surface的方向。 **false**：屏幕旋转时不锁定surface的方向。
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Describes a geomagnetic response object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface GeomagneticResponse--><!--Device-sensor-interface GeomagneticResponse-End-->
 
@@ -24,7 +26,9 @@ Magnetic declination, which is the angle between true north (geographic north) a
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-deflectionAngle: double--><!--Device-GeomagneticResponse-deflectionAngle: double-End-->
 
@@ -40,7 +44,9 @@ Magnetic dip, also called magnetic inclination, which is the angle measured from
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-geomagneticDip: double--><!--Device-GeomagneticResponse-geomagneticDip: double-End-->
 
@@ -56,7 +62,9 @@ Horizontal intensity of the magnetic field vector field, in nT.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-levelIntensity: double--><!--Device-GeomagneticResponse-levelIntensity: double-End-->
 
@@ -72,7 +80,9 @@ Total intensity of the magnetic field vector, in nT.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-totalIntensity: double--><!--Device-GeomagneticResponse-totalIntensity: double-End-->
 
@@ -88,7 +98,9 @@ North component of the geomagnetic field, in nT.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-x: double--><!--Device-GeomagneticResponse-x: double-End-->
 
@@ -104,7 +116,9 @@ East component of the geomagnetic field, in nT.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-y: double--><!--Device-GeomagneticResponse-y: double-End-->
 
@@ -120,7 +134,9 @@ Vertical component of the geomagnetic field, in nT.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-z: double--><!--Device-GeomagneticResponse-z: double-End-->
 

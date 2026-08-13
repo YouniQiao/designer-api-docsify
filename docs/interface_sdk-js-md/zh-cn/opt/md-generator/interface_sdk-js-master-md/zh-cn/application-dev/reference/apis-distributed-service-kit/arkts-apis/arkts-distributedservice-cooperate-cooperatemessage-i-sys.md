@@ -2,7 +2,9 @@
 
 键鼠穿越的消息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cooperate-interface CooperateMessage--><!--Device-cooperate-interface CooperateMessage-End-->
 
@@ -20,7 +22,9 @@ networkId: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CooperateMessage-networkId: string--><!--Device-CooperateMessage-networkId: string-End-->
 
@@ -38,7 +42,9 @@ state: CooperateState
 
 **类型：** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CooperateMessage-state: CooperateState--><!--Device-CooperateMessage-state: CooperateState-End-->
 

@@ -2,7 +2,9 @@
 
 描述extensionAbilities的配置信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ExtensionAbility--><!--Device-unnamed-export interface ExtensionAbility-End-->
 
@@ -20,7 +22,9 @@ readonly forms: Array<AbilityFormInfo>
 
 **类型：** Array&lt;[AbilityFormInfo](arkts-ability-bundlepackinfo-abilityforminfo-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbility-readonly forms: Array<AbilityFormInfo>--><!--Device-ExtensionAbility-readonly forms: Array<AbilityFormInfo>-End-->
 
@@ -38,7 +42,9 @@ readonly name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbility-readonly name: string--><!--Device-ExtensionAbility-readonly name: string-End-->
 

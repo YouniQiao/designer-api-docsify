@@ -10,6 +10,8 @@ The callback of onNativeEmbedVisibilityChange.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void--><!--Device-unnamed-type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core

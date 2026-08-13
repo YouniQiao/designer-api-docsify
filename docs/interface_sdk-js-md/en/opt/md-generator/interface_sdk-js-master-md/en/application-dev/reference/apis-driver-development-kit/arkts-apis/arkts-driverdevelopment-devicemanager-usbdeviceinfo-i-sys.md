@@ -1,13 +1,14 @@
 # USBDeviceInfo (System API)
 
-Defines detailed information about the USB device. It is inherited from  
-[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo).
+Defines detailed information about the USB device. It is inherited from [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo-(System-API)).
 
-**Inheritance/Implementation:** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo)
+**Inheritance/Implementation:** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo-(System-API))
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-deviceManager-interface USBDeviceInfo extends DeviceInfo--><!--Device-deviceManager-interface USBDeviceInfo extends DeviceInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-deviceManager-interface USBDeviceInfo--><!--Device-deviceManager-interface USBDeviceInfo-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -27,9 +28,11 @@ interfaceDescList: Array<Readonly<USBInterfaceDesc>>
 
 List of interface descriptors of the USB device.
 
-**Type:** Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[USBInterfaceDesc](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)&gt;&gt;
+**Type:** Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[USBInterfaceDesc](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)&gt;&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBDeviceInfo-interfaceDescList: Array<Readonly<USBInterfaceDesc>>--><!--Device-USBDeviceInfo-interfaceDescList: Array<Readonly<USBInterfaceDesc>>-End-->
 
@@ -47,7 +50,9 @@ Product ID of the USB device.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBDeviceInfo-productId: int--><!--Device-USBDeviceInfo-productId: int-End-->
 
@@ -65,7 +70,9 @@ Vendor ID of the USB device.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBDeviceInfo-vendorId: int--><!--Device-USBDeviceInfo-vendorId: int-End-->
 

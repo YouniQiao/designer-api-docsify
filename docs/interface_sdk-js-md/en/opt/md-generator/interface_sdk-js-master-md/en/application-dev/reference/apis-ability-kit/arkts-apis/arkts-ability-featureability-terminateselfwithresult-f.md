@@ -12,10 +12,11 @@ import { featureAbility } from '@kit.AbilityKit';
 function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void
 ```
 
-Terminates this ability. This API uses an asynchronous callback to return the result. If the ability is started by calling  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
+Terminates this ability. This API uses an asynchronous callback to return the result. If the ability is started by calling [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult) , the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -74,10 +75,11 @@ featureAbility.terminateSelfWithResult(
 function terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
-Terminates this ability. This API uses a promise to return the result. If the ability is started by calling  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
+Terminates this ability. This API uses a promise to return the result. If the ability is started by calling [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult) , the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -2,7 +2,9 @@
 
 Describes the size of an image.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface Size--><!--Device-image-interface Size-End-->
 
@@ -20,13 +22,13 @@ import { image } from '@kit.ImageKit';
 height: number
 ```
 
-Height
-
-Unit:px.
+Height Unit:px.
 
 **Type:** number
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,13 +44,13 @@ Unit:px.
 width: number
 ```
 
-Width
-
-Unit:px.
+Width Unit:px.
 
 **Type:** number
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

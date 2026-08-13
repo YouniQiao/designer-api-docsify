@@ -6,11 +6,11 @@
 function isTokenizerSupported(tokenizer: Tokenizer): boolean
 ```
 
-判断当前平台是否支持传入的分词器，此为同步接口。
+判断当前平台是否支持传入的分词器，此为同步接口。 如果当前平台支持传入的分词器时，此接口返回值为true；反之，返回值为false。
 
-如果当前平台支持传入的分词器时，此接口返回值为true；反之，返回值为false。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 <!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean--><!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean-End-->
 
@@ -32,7 +32,7 @@ function isTokenizerSupported(tokenizer: Tokenizer): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

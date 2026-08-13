@@ -14,7 +14,7 @@ Unlocks a given mission. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
+**Substitutes:** [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -29,7 +29,7 @@ Unlocks a given mission. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is unlocked, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is unlocked, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Unlocks a given mission. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
+**Substitutes:** [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

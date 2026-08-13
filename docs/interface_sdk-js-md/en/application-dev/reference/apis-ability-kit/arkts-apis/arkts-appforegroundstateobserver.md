@@ -3,10 +3,10 @@
 ## Summary
 
 <!--Del-->
-### Interfaces（系统接口）
+### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | The module defines the listener used to listen for application startup and exit state changes. It can be used as an input parameter of  [appManager.on('appForegroundState')](./../@ohos.app.ability.appManager:appManager.on(type:'appForegroundState', observer: AppForegroundStateObserver))to listen for the state changes of all applications. |
+| [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-c-sys.md) | The module defines the listener used to listen for application startup and exit state changes. It can be used as an input parameter of [appManager.on('appForegroundState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) to listen for the state changes of all applications. |
 <!--DelEnd-->
 

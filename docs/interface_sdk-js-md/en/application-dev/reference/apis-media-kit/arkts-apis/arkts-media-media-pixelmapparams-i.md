@@ -2,9 +2,11 @@
 
 Defines the format parameters of the video thumbnail to be obtained.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface PixelMapParams--><!--Device-media-interface PixelMapParams-End-->
 
@@ -22,13 +24,15 @@ import { media } from '@kit.MediaKit';
 height?: int
 ```
 
-Height of the thumbnail. Unit: px.The value must be greater than 0 and less than or equal to the height of the original video.Otherwise, the returned thumbnail will not be scaled.
+Height of the thumbnail. Unit: px. The value must be greater than 0 and less than or equal to the height of the original video. Otherwise, the returned thumbnail will not be scaled.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMapParams-height?: int--><!--Device-PixelMapParams-height?: int-End-->
 
@@ -40,13 +44,15 @@ Height of the thumbnail. Unit: px.The value must be greater than 0 and less than
 width?: int
 ```
 
-Width of the thumbnail. Unit: px.The value must be greater than 0 and less than or equal to the width of the original video.Otherwise, the returned thumbnail will not be scaled.
+Width of the thumbnail. Unit: px. The value must be greater than 0 and less than or equal to the width of the original video. Otherwise, the returned thumbnail will not be scaled.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMapParams-width?: int--><!--Device-PixelMapParams-width?: int-End-->
 

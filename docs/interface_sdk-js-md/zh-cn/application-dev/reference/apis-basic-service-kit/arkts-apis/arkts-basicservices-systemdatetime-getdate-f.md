@@ -14,7 +14,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **废弃版本：** 10
 
-**替代接口：** [new](new)
+**替代接口：** new Date()
 
 <!--Device-systemDateTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemDateTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -24,13 +24,13 @@ function getDate(callback: AsyncCallback<Date>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | 是 | 回调函数，返回当前系统日期。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Date&gt; | 是 | 回调函数，返回当前系统日期。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
 ## 示例
 
@@ -66,7 +66,7 @@ function getDate(): Promise<Date>
 
 **废弃版本：** 10
 
-**替代接口：** [new](new)
+**替代接口：** new Date()
 
 <!--Device-systemDateTime-function getDate(): Promise<Date>--><!--Device-systemDateTime-function getDate(): Promise<Date>-End-->
 
@@ -82,7 +82,7 @@ function getDate(): Promise<Date>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
 ## 示例
 

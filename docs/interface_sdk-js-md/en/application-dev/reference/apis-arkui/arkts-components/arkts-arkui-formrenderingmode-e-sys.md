@@ -6,6 +6,8 @@ Enumerates the widget rendering modes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FormRenderingMode--><!--Device-unnamed-declare enum FormRenderingMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Full color mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-FormRenderingMode-FULL_COLOR = 0--><!--Device-FormRenderingMode-FULL_COLOR = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,6 +45,8 @@ Single color mode.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-FormRenderingMode-SINGLE_COLOR = 1--><!--Device-FormRenderingMode-SINGLE_COLOR = 1-End-->
 

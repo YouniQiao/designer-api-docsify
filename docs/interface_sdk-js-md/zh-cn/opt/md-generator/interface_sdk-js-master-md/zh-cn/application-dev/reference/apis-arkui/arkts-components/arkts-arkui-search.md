@@ -1,14 +1,8 @@
 # Search
 
-搜索框组件，支持搜索图标、清除按钮、搜索按钮、placeholder提示文本、自定义键盘等功能配置，适用于浏览器的搜索内容输入框、应用内搜索等场景。
+搜索框组件，支持搜索图标、清除按钮、搜索按钮、placeholder提示文本、自定义键盘等功能配置，适用于浏览器的搜索内容输入框、应用内搜索等场景。 > **说明：** > > 该组件仅支持单文本样式，若需实现富文本样式，建议使用RichEditor组件。
 
-> **说明：**
->
-> 该组件仅支持单文本样式，若需实现富文本样式，建议使用[RichEditor]{@link ./rich_editor}组件。
-
-## 子组件
-
-无
+## 子组件 无
 
 ## Search
 
@@ -19,6 +13,8 @@ Search(options?: SearchOptions)
 定义搜索组件构造函数。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,11 +30,10 @@ Search(options?: SearchOptions)
 
 ## 汇总
 
-- [CancelButtonOptions](arkts-arkui-search-cancelbuttonoptions-i.md)
-- [CancelButtonSymbolOptions](arkts-arkui-search-cancelbuttonsymboloptions-i.md)
-- [IconOptions](arkts-arkui-search-iconoptions-i.md)
-- [SearchButtonOptions](arkts-arkui-search-searchbuttonoptions-i.md)
-- [SearchOptions](arkts-arkui-search-searchoptions-i.md)
-- [SearchSubmitCallback](arkts-arkui-search-searchsubmitcallback-t.md)
-- [CancelButtonStyle](arkts-arkui-search-cancelbuttonstyle-e.md)
-- [SearchType](arkts-arkui-search-searchtype-e.md)
+- [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md)
+- [IconOptions](arkts-arkui-iconoptions-i.md)
+- [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md)
+- [SearchOptions](arkts-arkui-searchoptions-i.md)
+- [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md)
+- [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
+- [SearchType](arkts-arkui-searchtype-e.md)

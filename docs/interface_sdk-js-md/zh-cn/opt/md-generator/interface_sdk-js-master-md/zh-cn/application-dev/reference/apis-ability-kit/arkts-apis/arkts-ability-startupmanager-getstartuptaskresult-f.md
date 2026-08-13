@@ -10,6 +10,8 @@ function getStartupTaskResult(startupTask: string): Object
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object-End-->
@@ -32,7 +34,7 @@ function getStartupTaskResult(startupTask: string): Object
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -70,3 +72,34 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+
+## getStartupTaskResult
+
+```TypeScript
+function getStartupTaskResult(startupTask: string): Any
+```
+
+获取指定启动任务或so预加载任务的执行结果。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-startupManager-function getStartupTaskResult(startupTask: string): Any--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Any-End-->
+
+**系统能力：** SystemCapability.Ability.AppStartup
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startupTask | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Any |

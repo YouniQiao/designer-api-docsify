@@ -2,7 +2,9 @@
 
 相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface MetadataObject--><!--Device-camera-interface MetadataObject-End-->
 
@@ -18,7 +20,9 @@ Confidence of the detection, with a value range of [0, 1].
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MetadataObject-readonly confidence: double--><!--Device-MetadataObject-readonly confidence: double-End-->
 
@@ -36,7 +40,9 @@ Metadata object ID.
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MetadataObject-readonly objectId: int--><!--Device-MetadataObject-readonly objectId: int-End-->
 

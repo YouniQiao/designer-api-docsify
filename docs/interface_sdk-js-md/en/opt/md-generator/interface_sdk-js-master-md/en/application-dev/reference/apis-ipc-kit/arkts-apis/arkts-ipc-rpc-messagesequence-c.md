@@ -1,9 +1,10 @@
 # MessageSequence
 
-Provides APIs for reading and writing data in specific format. During RPC or IPC, the sender can use the  
- **write()** method provided by **MessageSequence** to write data in specific format to a **MessageSequence** object. The receiver can use the **read()** method provided by **MessageSequence** to read data in specific  format from a **MessageSequence** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
+Provides APIs for reading and writing data in specific format. During RPC or IPC, the sender can use the **write()** method provided by **MessageSequence** to write data in specific format to a **MessageSequence** object. The receiver can use the **read()** method provided by **MessageSequence** to read data in specific format from a **MessageSequence** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-rpc-class MessageSequence--><!--Device-rpc-class MessageSequence-End-->
 
@@ -23,7 +24,9 @@ static closeFileDescriptor(fd: number): void
 
 Closes a file descriptor. This API is a static method.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-static closeFileDescriptor(fd: int): void--><!--Device-MessageSequence-static closeFileDescriptor(fd: int): void-End-->
 
@@ -39,7 +42,7 @@ Closes a file descriptor. This API is a static method.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -68,7 +71,9 @@ containFileDescriptors(): boolean
 
 Checks whether this **MessageSequence** object contains file descriptors.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-containFileDescriptors(): boolean--><!--Device-MessageSequence-containFileDescriptors(): boolean-End-->
 
@@ -109,7 +114,9 @@ static create(): MessageSequence
 
 Creates a **MessageSequence** object. This API is a static method.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-static create(): MessageSequence--><!--Device-MessageSequence-static create(): MessageSequence-End-->
 
@@ -150,7 +157,9 @@ static dupFileDescriptor(fd: number): number
 
 Duplicates a file descriptor. This API is a static method.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-static dupFileDescriptor(fd: int): int--><!--Device-MessageSequence-static dupFileDescriptor(fd: int): int-End-->
 
@@ -172,8 +181,8 @@ Duplicates a file descriptor. This API is a static method.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900013-failed-to-invoke-dup) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900013](../errorcode-rpc.md#1900013-failed-to-invoke-dup) |
 
 ## Examples
 
@@ -202,7 +211,9 @@ getCapacity(): number
 
 Obtains the capacity of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getCapacity(): int--><!--Device-MessageSequence-getCapacity(): int-End-->
 
@@ -240,7 +251,9 @@ getRawDataCapacity(): number
 
 Obtains the maximum amount of raw data that can be held by this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getRawDataCapacity(): int--><!--Device-MessageSequence-getRawDataCapacity(): int-End-->
 
@@ -278,7 +291,9 @@ getReadPosition(): number
 
 Obtains the read position of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getReadPosition(): int--><!--Device-MessageSequence-getReadPosition(): int-End-->
 
@@ -317,7 +332,9 @@ getReadableBytes(): number
 
 Obtains the readable capacity of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getReadableBytes(): int--><!--Device-MessageSequence-getReadableBytes(): int-End-->
 
@@ -356,7 +373,9 @@ getSize(): number
 
 Obtains the data size of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getSize(): int--><!--Device-MessageSequence-getSize(): int-End-->
 
@@ -394,7 +413,9 @@ getWritableBytes(): number
 
 Obtains the writable capacity (in bytes) of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getWritableBytes(): int--><!--Device-MessageSequence-getWritableBytes(): int-End-->
 
@@ -433,7 +454,9 @@ getWritePosition(): number
 
 Obtains the write position of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getWritePosition(): int--><!--Device-MessageSequence-getWritePosition(): int-End-->
 
@@ -472,7 +495,9 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 Reads data of the ArrayBuffer type from this **MessageSequence**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer--><!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer-End-->
 
@@ -494,8 +519,8 @@ Reads data of the ArrayBuffer type from this **MessageSequence**.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -531,7 +556,9 @@ readAshmem(): Ashmem
 
 Reads the anonymous shared object from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readAshmem(): Ashmem--><!--Device-MessageSequence-readAshmem(): Ashmem-End-->
 
@@ -547,7 +574,7 @@ Reads the anonymous shared object from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -597,7 +624,9 @@ readBoolean(): boolean
 
 Reads the Boolean value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readBoolean(): boolean--><!--Device-MessageSequence-readBoolean(): boolean-End-->
 
@@ -613,7 +642,7 @@ Reads the Boolean value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -642,7 +671,9 @@ readBooleanArray(dataIn: boolean[]): void
 
 Reads the Boolean array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void-End-->
 
@@ -658,8 +689,8 @@ Reads the Boolean array from this **MessageSequence** object and writes it to th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -689,7 +720,9 @@ readBooleanArray(): boolean[]
 
 Reads the Boolean array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readBooleanArray(): boolean[]--><!--Device-MessageSequence-readBooleanArray(): boolean[]-End-->
 
@@ -705,7 +738,7 @@ Reads the Boolean array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -734,7 +767,9 @@ readByte(): number
 
 Reads the byte value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readByte(): int--><!--Device-MessageSequence-readByte(): int-End-->
 
@@ -750,7 +785,7 @@ Reads the byte value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -779,7 +814,9 @@ readByteArray(dataIn: number[]): void
 
 Reads the byte array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readByteArray(dataIn: int[]): void--><!--Device-MessageSequence-readByteArray(dataIn: int[]): void-End-->
 
@@ -795,8 +832,8 @@ Reads the byte array from this **MessageSequence** object and writes it to the c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -828,7 +865,9 @@ readByteArray(): number[]
 
 Reads the byte array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readByteArray(): int[]--><!--Device-MessageSequence-readByteArray(): int[]-End-->
 
@@ -844,7 +883,7 @@ Reads the byte array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -875,7 +914,9 @@ readChar(): number
 
 Reads the character from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readChar(): int--><!--Device-MessageSequence-readChar(): int-End-->
 
@@ -891,7 +932,7 @@ Reads the character from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -920,7 +961,9 @@ readCharArray(dataIn: number[]): void
 
 Reads the character array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readCharArray(dataIn: int[]): void--><!--Device-MessageSequence-readCharArray(dataIn: int[]): void-End-->
 
@@ -936,8 +979,8 @@ Reads the character array from this **MessageSequence** object and writes it to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -967,7 +1010,9 @@ readCharArray(): number[]
 
 Reads the character array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readCharArray(): int[]--><!--Device-MessageSequence-readCharArray(): int[]-End-->
 
@@ -983,7 +1028,7 @@ Reads the character array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1012,7 +1057,9 @@ readDouble(): number
 
 Reads the double value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readDouble(): double--><!--Device-MessageSequence-readDouble(): double-End-->
 
@@ -1028,7 +1075,7 @@ Reads the double value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1057,7 +1104,9 @@ readDoubleArray(dataIn: number[]): void
 
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void--><!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void-End-->
 
@@ -1073,8 +1122,8 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1104,7 +1153,9 @@ readDoubleArray(): number[]
 
 Reads the double array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readDoubleArray(): double[]--><!--Device-MessageSequence-readDoubleArray(): double[]-End-->
 
@@ -1120,7 +1171,7 @@ Reads the double array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1149,7 +1200,9 @@ readException(): void
 
 Reads the exception information from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readException(): void--><!--Device-MessageSequence-readException(): void-End-->
 
@@ -1159,11 +1212,11 @@ Reads the exception information from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -1247,7 +1300,9 @@ readFileDescriptor(): number
 
 Reads the file descriptor from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFileDescriptor(): int--><!--Device-MessageSequence-readFileDescriptor(): int-End-->
 
@@ -1263,7 +1318,7 @@ Reads the file descriptor from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1295,7 +1350,9 @@ readFloat(): number
 
 Reads the double value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFloat(): double--><!--Device-MessageSequence-readFloat(): double-End-->
 
@@ -1311,7 +1368,7 @@ Reads the double value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1340,7 +1397,9 @@ readFloatArray(dataIn: number[]): void
 
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFloatArray(dataIn: double[]): void--><!--Device-MessageSequence-readFloatArray(dataIn: double[]): void-End-->
 
@@ -1356,8 +1415,8 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1387,7 +1446,9 @@ readFloatArray(): number[]
 
 Reads the double array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFloatArray(): double[]--><!--Device-MessageSequence-readFloatArray(): double[]-End-->
 
@@ -1403,7 +1464,7 @@ Reads the double array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1432,7 +1493,9 @@ readInt(): number
 
 Reads the integer from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -1450,7 +1513,7 @@ Reads the integer from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1480,7 +1543,9 @@ readIntArray(dataIn: number[]): void
 
 Reads the integer array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readIntArray(dataIn: int[]): void--><!--Device-MessageSequence-readIntArray(dataIn: int[]): void-End-->
 
@@ -1496,8 +1561,8 @@ Reads the integer array from this **MessageSequence** object and writes it to th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1527,7 +1592,9 @@ readIntArray(): number[]
 
 Reads the integer array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readIntArray(): int[]--><!--Device-MessageSequence-readIntArray(): int[]-End-->
 
@@ -1543,7 +1610,7 @@ Reads the integer array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1570,9 +1637,11 @@ try {
 readInterfaceToken(): string
 ```
 
-Reads the interface token from this **MessageSequence** object. The interface token is read in the sequence in  which it is written to the **MessageSequence** object. The local object can use it to verify the  communication.
+Reads the interface token from this **MessageSequence** object. The interface token is read in the sequence in which it is written to the **MessageSequence** object. The local object can use it to verify the communication.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readInterfaceToken(): string--><!--Device-MessageSequence-readInterfaceToken(): string-End-->
 
@@ -1588,7 +1657,7 @@ Reads the interface token from this **MessageSequence** object. The interface to
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1617,7 +1686,9 @@ readLong(): number
 
 Reads the long integer from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readLong(): long--><!--Device-MessageSequence-readLong(): long-End-->
 
@@ -1633,7 +1704,7 @@ Reads the long integer from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1662,7 +1733,9 @@ readLongArray(dataIn: number[]): void
 
 Reads the long array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readLongArray(dataIn: long[]): void--><!--Device-MessageSequence-readLongArray(dataIn: long[]): void-End-->
 
@@ -1678,8 +1751,8 @@ Reads the long array from this **MessageSequence** object and writes it to the c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1709,7 +1782,9 @@ readLongArray(): number[]
 
 Reads the long integer array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readLongArray(): long[]--><!--Device-MessageSequence-readLongArray(): long[]-End-->
 
@@ -1725,7 +1800,7 @@ Reads the long integer array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1754,7 +1829,9 @@ readParcelable(dataIn: Parcelable): void
 
 Reads the **Parcelable** object from this **MessageSequence** object to the specified object (**dataIn**).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void--><!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void-End-->
 
@@ -1770,9 +1847,9 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 
 | Error Code ID |
 | --- |
-| [1900012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js-callback-execution-failed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1821,7 +1898,9 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 
 Reads the **Parcelable** array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
@@ -1837,9 +1916,9 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js-callback-execution-failed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1895,7 +1974,7 @@ Reads raw data from this **MessageSequence** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [readRawDataBuffer](readRawDataBuffer(size:)
+**Substitutes:** [readRawDataBuffer](#readRawDataBuffer)(size: int)
 
 <!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
@@ -1917,8 +1996,8 @@ Reads raw data from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1949,7 +2028,9 @@ readRawDataBuffer(size: number): ArrayBuffer
 
 Reads raw data from this **MessageSequence** object.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer--><!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer-End-->
 
@@ -1971,8 +2052,8 @@ Reads raw data from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2006,9 +2087,11 @@ try {
 readRemoteObject(): IRemoteObject
 ```
 
-Reads the remote object from **MessageSequence**. You can use this API to deserialize the **MessageSequence** object to generate an **IRemoteObject**. The remote object is read in the order in which it is written to  this **MessageSequence** object.
+Reads the remote object from **MessageSequence**. You can use this API to deserialize the **MessageSequence** object to generate an **IRemoteObject**. The remote object is read in the order in which it is written to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRemoteObject(): IRemoteObject--><!--Device-MessageSequence-readRemoteObject(): IRemoteObject-End-->
 
@@ -2024,8 +2107,8 @@ Reads the remote object from **MessageSequence**. You can use this API to deseri
 
 | Error Code ID |
 | --- |
-| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2066,7 +2149,9 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 Reads the **IRemoteObject** array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
@@ -2082,8 +2167,8 @@ Reads the **IRemoteObject** array from this **MessageSequence** object and write
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2125,7 +2210,9 @@ readRemoteObjectArray(): IRemoteObject[]
 
 Reads the **IRemoteObject** array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]-End-->
 
@@ -2141,7 +2228,7 @@ Reads the **IRemoteObject** array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2181,7 +2268,9 @@ readShort(): number
 
 Reads the short integer from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readShort(): int--><!--Device-MessageSequence-readShort(): int-End-->
 
@@ -2197,7 +2286,7 @@ Reads the short integer from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2226,7 +2315,9 @@ readShortArray(dataIn: number[]): void
 
 Reads the short array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readShortArray(dataIn: int[]): void--><!--Device-MessageSequence-readShortArray(dataIn: int[]): void-End-->
 
@@ -2242,8 +2333,8 @@ Reads the short array from this **MessageSequence** object and writes it to the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2273,7 +2364,9 @@ readShortArray(): number[]
 
 Reads the short array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readShortArray(): int[]--><!--Device-MessageSequence-readShortArray(): int[]-End-->
 
@@ -2289,7 +2382,7 @@ Reads the short array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2318,7 +2411,9 @@ readString(): string
 
 Reads the string from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2336,7 +2431,7 @@ Reads the string from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2366,7 +2461,9 @@ readStringArray(dataIn: string[]): void
 
 Reads the string array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readStringArray(dataIn: string[]): void--><!--Device-MessageSequence-readStringArray(dataIn: string[]): void-End-->
 
@@ -2382,8 +2479,8 @@ Reads the string array from this **MessageSequence** object and writes it to the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2413,7 +2510,9 @@ readStringArray(): string[]
 
 Reads the string array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readStringArray(): string[]--><!--Device-MessageSequence-readStringArray(): string[]-End-->
 
@@ -2429,7 +2528,7 @@ Reads the string array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2458,7 +2557,9 @@ reclaim(): void
 
 Reclaims the **MessageSequence** object that is no longer used.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-reclaim(): void--><!--Device-MessageSequence-reclaim(): void-End-->
 
@@ -2489,7 +2590,9 @@ rewindRead(pos: number): void
 
 Moves the read pointer to the specified position.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-rewindRead(pos: int): void--><!--Device-MessageSequence-rewindRead(pos: int): void-End-->
 
@@ -2505,8 +2608,8 @@ Moves the read pointer to the specified position.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2539,7 +2642,9 @@ rewindWrite(pos: number): void
 
 Moves the write pointer to the specified position.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-rewindWrite(pos: int): void--><!--Device-MessageSequence-rewindWrite(pos: int): void-End-->
 
@@ -2555,8 +2660,8 @@ Moves the write pointer to the specified position.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2587,7 +2692,9 @@ setCapacity(size: number): void
 
 Sets the storage capacity of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-setCapacity(size: int): void--><!--Device-MessageSequence-setCapacity(size: int): void-End-->
 
@@ -2603,9 +2710,9 @@ Sets the storage capacity of this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
-| [1900011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900011-memory-allocation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [1900011](../errorcode-rpc.md#1900011-memory-allocation-failed) |
 
 ## Examples
 
@@ -2632,7 +2739,9 @@ setSize(size: number): void
 
 Sets the size of the data contained in this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-setSize(size: int): void--><!--Device-MessageSequence-setSize(size: int): void-End-->
 
@@ -2648,8 +2757,8 @@ Sets the size of the data contained in this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2677,7 +2786,9 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 
 Writes data of the ArrayBuffer type to this **MessageSequence** object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void--><!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void-End-->
 
@@ -2694,8 +2805,8 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2728,7 +2839,9 @@ writeAshmem(ashmem: Ashmem): void
 
 Writes an anonymous shared object to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void--><!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void-End-->
 
@@ -2744,8 +2857,8 @@ Writes an anonymous shared object to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2785,7 +2898,9 @@ writeBoolean(val: boolean): void
 
 Writes a Boolean value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeBoolean(val: boolean): void--><!--Device-MessageSequence-writeBoolean(val: boolean): void-End-->
 
@@ -2801,8 +2916,8 @@ Writes a Boolean value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2829,7 +2944,9 @@ writeBooleanArray(booleanArray: boolean[]): void
 
 Writes a Boolean array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void--><!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void-End-->
 
@@ -2845,8 +2962,8 @@ Writes a Boolean array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2873,7 +2990,9 @@ writeByte(val: number): void
 
 Writes a byte value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeByte(val: int): void--><!--Device-MessageSequence-writeByte(val: int): void-End-->
 
@@ -2889,8 +3008,8 @@ Writes a byte value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2917,7 +3036,9 @@ writeByteArray(byteArray: number[]): void
 
 Writes a byte array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeByteArray(byteArray: int[]): void--><!--Device-MessageSequence-writeByteArray(byteArray: int[]): void-End-->
 
@@ -2933,8 +3054,8 @@ Writes a byte array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2963,7 +3084,9 @@ writeChar(val: number): void
 
 Writes a character to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeChar(val: int): void--><!--Device-MessageSequence-writeChar(val: int): void-End-->
 
@@ -2979,8 +3102,8 @@ Writes a character to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3007,7 +3130,9 @@ writeCharArray(charArray: number[]): void
 
 Writes a character array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeCharArray(charArray: int[]): void--><!--Device-MessageSequence-writeCharArray(charArray: int[]): void-End-->
 
@@ -3023,8 +3148,8 @@ Writes a character array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3051,7 +3176,9 @@ writeDouble(val: number): void
 
 Writes a double value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeDouble(val: double): void--><!--Device-MessageSequence-writeDouble(val: double): void-End-->
 
@@ -3067,8 +3194,8 @@ Writes a double value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3095,7 +3222,9 @@ writeDoubleArray(doubleArray: number[]): void
 
 Writes a double array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void--><!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void-End-->
 
@@ -3111,8 +3240,8 @@ Writes a double array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3139,7 +3268,9 @@ writeFileDescriptor(fd: number): void
 
 Writes a file descriptor to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeFileDescriptor(fd: int): void--><!--Device-MessageSequence-writeFileDescriptor(fd: int): void-End-->
 
@@ -3155,8 +3286,8 @@ Writes a file descriptor to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3186,7 +3317,9 @@ writeFloat(val: number): void
 
 Writes a double value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeFloat(val: double): void--><!--Device-MessageSequence-writeFloat(val: double): void-End-->
 
@@ -3202,8 +3335,8 @@ Writes a double value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3230,7 +3363,9 @@ writeFloatArray(floatArray: number[]): void
 
 Writes a double array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void--><!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void-End-->
 
@@ -3246,8 +3381,8 @@ Writes a double array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3274,7 +3409,9 @@ writeInt(val: number): void
 
 Writes an integer to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -3292,8 +3429,8 @@ Writes an integer to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3321,7 +3458,9 @@ writeIntArray(intArray: number[]): void
 
 Writes an integer array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeIntArray(intArray: int[]): void--><!--Device-MessageSequence-writeIntArray(intArray: int[]): void-End-->
 
@@ -3337,8 +3476,8 @@ Writes an integer array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3363,9 +3502,11 @@ try {
 writeInterfaceToken(token: string): void
 ```
 
-Writes an interface token to this **MessageSequence** object. The remote object can use this interface token to  verify the communication.
+Writes an interface token to this **MessageSequence** object. The remote object can use this interface token to verify the communication.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeInterfaceToken(token: string): void--><!--Device-MessageSequence-writeInterfaceToken(token: string): void-End-->
 
@@ -3381,8 +3522,8 @@ Writes an interface token to this **MessageSequence** object. The remote object 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3410,7 +3551,9 @@ writeLong(val: number): void
 
 Writes a long integer to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeLong(val: long): void--><!--Device-MessageSequence-writeLong(val: long): void-End-->
 
@@ -3426,8 +3569,8 @@ Writes a long integer to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3454,7 +3597,9 @@ writeLongArray(longArray: number[]): void
 
 Writes a long array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeLongArray(longArray: long[]): void--><!--Device-MessageSequence-writeLongArray(longArray: long[]): void-End-->
 
@@ -3470,8 +3615,8 @@ Writes a long array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3498,7 +3643,9 @@ writeNoException(): void
 
 Writes information to this **MessageSequence** object indicating that no exception occurred.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeNoException(): void--><!--Device-MessageSequence-writeNoException(): void-End-->
 
@@ -3508,7 +3655,7 @@ Writes information to this **MessageSequence** object indicating that no excepti
 
 | Error Code ID |
 | --- |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3549,7 +3696,9 @@ writeParcelable(val: Parcelable): void
 
 Writes a **Parcelable** object to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeParcelable(val: Parcelable): void--><!--Device-MessageSequence-writeParcelable(val: Parcelable): void-End-->
 
@@ -3565,8 +3714,8 @@ Writes a **Parcelable** object to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3613,7 +3762,9 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 
 Writes the **Parcelable** array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
@@ -3629,8 +3780,8 @@ Writes the **Parcelable** array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3678,20 +3829,13 @@ try {
 writeRawData(rawData: number[], size: number): void
 ```
 
-Writes raw data to this **MessageSequence** object.
-
-> **NOTE：**
-> 
-> - This API cannot be called for multiple times in one parcel communication.
-> 
-> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,
-> pay attention to the SELinux configuration.
+Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API cannot be called for multiple times in one parcel communication. > > - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, > pay attention to the SELinux configuration.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeRawDataBuffer](writeRawDataBuffer(rawData:)
+**Substitutes:** [writeRawDataBuffer](#writeRawDataBuffer)(rawData: ArrayBuffer, size: int)
 
 <!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
@@ -3708,8 +3852,8 @@ Writes raw data to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3735,16 +3879,11 @@ try {
 writeRawDataBuffer(rawData: ArrayBuffer, size: number): void
 ```
 
-Writes raw data to this **MessageSequence** object.
+Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API cannot be called for multiple times in one parcel communication. > > - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, > pay attention to the SELinux configuration.
 
-> **NOTE：**
-> 
-> - This API cannot be called for multiple times in one parcel communication.
-> 
-> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,
-> pay attention to the SELinux configuration.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void--><!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void-End-->
 
@@ -3761,8 +3900,8 @@ Writes raw data to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3795,7 +3934,9 @@ writeRemoteObject(obj: IRemoteObject): void
 
 Serializes the remote object and writes it to the [MessageSequence](#MessageSequence) object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void--><!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void-End-->
 
@@ -3811,9 +3952,9 @@ Serializes the remote object and writes it to the [MessageSequence](#MessageSequ
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3853,7 +3994,9 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 Writes an **IRemoteObject** array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void--><!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void-End-->
 
@@ -3869,8 +4012,8 @@ Writes an **IRemoteObject** array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3909,7 +4052,9 @@ writeShort(val: number): void
 
 Writes a short integer to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeShort(val: int): void--><!--Device-MessageSequence-writeShort(val: int): void-End-->
 
@@ -3925,8 +4070,8 @@ Writes a short integer to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3953,7 +4098,9 @@ writeShortArray(shortArray: number[]): void
 
 Writes a short array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeShortArray(shortArray: int[]): void--><!--Device-MessageSequence-writeShortArray(shortArray: int[]): void-End-->
 
@@ -3969,8 +4116,8 @@ Writes a short array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3997,7 +4144,9 @@ writeString(val: string): void
 
 Writes a string to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -4015,8 +4164,8 @@ Writes a string to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -4044,7 +4193,9 @@ writeStringArray(stringArray: string[]): void
 
 Writes a string array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeStringArray(stringArray: string[]): void--><!--Device-MessageSequence-writeStringArray(stringArray: string[]): void-End-->
 
@@ -4060,8 +4211,8 @@ Writes a string array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 

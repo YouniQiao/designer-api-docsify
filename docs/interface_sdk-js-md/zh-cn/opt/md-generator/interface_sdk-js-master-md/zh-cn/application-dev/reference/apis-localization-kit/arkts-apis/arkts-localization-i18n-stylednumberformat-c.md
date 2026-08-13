@@ -2,7 +2,9 @@
 
 提供富文本数字格式化的能力。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class StyledNumberFormat--><!--Device-i18n-export class StyledNumberFormat-End-->
 
@@ -16,9 +18,11 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 创建需要富文本显示的数字格式化的对象。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
 
@@ -79,7 +83,7 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 **废弃版本：** 20
 
-**替代接口：** [constructor](i18n.StyledNumberFormat.constructor(numberFormat:)
+**替代接口：** [constructor](#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -138,9 +142,11 @@ format(value: number): StyledString
 
 使用数字格式化对象对数字进行格式化，返回富文本对象。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledNumberFormat-format(value: double): StyledString--><!--Device-StyledNumberFormat-format(value: double): StyledString-End-->
 

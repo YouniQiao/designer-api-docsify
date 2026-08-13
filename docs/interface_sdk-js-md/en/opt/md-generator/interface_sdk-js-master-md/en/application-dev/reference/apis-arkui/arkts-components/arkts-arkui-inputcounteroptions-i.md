@@ -4,6 +4,8 @@ Provides configuration options for the character counter.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface InputCounterOptions--><!--Device-unnamed-declare interface InputCounterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ Text color of the character counter. When the input character count exceeds the 
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -34,17 +38,13 @@ Text color of the character counter. When the input character count exceeds the 
 counterTextOverflowColor?: ColorMetrics
 ```
 
-Text color of the character counter when the maximum limit is exceeded. When the user input exceeds the maximum character count, both the counter text and border switch to this color to indicate overflow. If  
-**counterTextOverflowColor** is not set, the default red color is used.
-
-**NOTE：**
-
-The border color is changed only when the **highlightBorder** attribute of  
-[InputCounterOptions](#InputCounterOptions) is set.
+Text color of the character counter when the maximum limit is exceeded. When the user input exceeds the maximum character count, both the counter text and border switch to this color to indicate overflow. If **counterTextOverflowColor** is not set, the default red color is used. **NOTE：**The border color is changed only when the **highlightBorder** attribute of [InputCounterOptions](#InputCounterOptions) is set.
 
 **Type:** ColorMetrics
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,13 +60,15 @@ The border color is changed only when the **highlightBorder** attribute of
 highlightBorder?: boolean
 ```
 
-Whether to highlight the text box border and character counter subscript in red. If **InputCounterOptions** is not set, the text box border and character counter subscript turn red when the number of characters entered reaches the  limit. If the character counter is displayed and **thresholdPercentage** is set to a valid value, the text box border and character counter subscript turn red when the number of entered characters exceeds the limit. If this parameter is **true**, the red border is displayed; if **false**, it is not displayed.
+Whether to highlight the text box border and character counter subscript in red. If **InputCounterOptions** is not set, the text box border and character counter subscript turn red when the number of characters entered reaches the limit. If the character counter is displayed and **thresholdPercentage** is set to a valid value, the text box border and character counter subscript turn red when the number of entered characters exceeds the limit. If this parameter is **true**, the red border is displayed; if **false**, it is not displayed.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,6 +89,8 @@ Threshold percentage for displaying the character counter. The character counter
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

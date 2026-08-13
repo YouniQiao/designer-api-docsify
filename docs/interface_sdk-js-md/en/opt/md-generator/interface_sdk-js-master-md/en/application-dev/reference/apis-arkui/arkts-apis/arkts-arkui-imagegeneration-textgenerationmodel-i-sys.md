@@ -4,6 +4,8 @@ AI Text Model Abstract Interface.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-export interface TextGenerationModel--><!--Device-imageGeneration-export interface TextGenerationModel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ cancelTextGeneration(sessionId: number): void
 Cancel AI text generation task.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ onComplain(sessionId: number, request: string, result: GenerateTextTaskResult): 
 User use complaint menu to complain the result of an AI-generated text task.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +82,8 @@ requestTextGeneration(sessionId: number, value: string,
 Request AI text generation task to get the generated text.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

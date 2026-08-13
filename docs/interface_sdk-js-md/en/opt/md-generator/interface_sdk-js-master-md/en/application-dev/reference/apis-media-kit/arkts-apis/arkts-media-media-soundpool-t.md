@@ -6,7 +6,9 @@ type SoundPool = _SoundPool
 
 SoundPool, which provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-type SoundPool = _SoundPool--><!--Device-media-type SoundPool = _SoundPool-End-->
 

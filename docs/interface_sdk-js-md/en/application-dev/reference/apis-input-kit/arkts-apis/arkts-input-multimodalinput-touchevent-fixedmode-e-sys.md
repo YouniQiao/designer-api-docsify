@@ -2,9 +2,11 @@
 
 Enumerates coordinate correction modes.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum FixedMode--><!--Device-unnamed-export declare enum FixedMode-End-->
 
@@ -20,9 +22,11 @@ NONE = 0
 
 Normal mode.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FixedMode-NONE = 0--><!--Device-FixedMode-NONE = 0-End-->
 
@@ -38,9 +42,11 @@ AUTO = 1
 
 One-handed mode.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FixedMode-AUTO = 1--><!--Device-FixedMode-AUTO = 1-End-->
 

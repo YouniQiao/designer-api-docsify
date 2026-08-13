@@ -1,15 +1,10 @@
 # FrameCallback
 
-Implements the API for setting the task that needs to be executed during the next frame rendering.
-
-> **NOTE：**
-> 
-> - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback) and
-> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postDelayedFrameCallback) from [UIContext](@ohos.arkui.UIContext).
-> Extend this class and override either the [onFrame](#onFrame) or
-> [onIdle](#onIdle) method to implement specific service logic.
+Implements the API for setting the task that needs to be executed during the next frame rendering. > **NOTE：**> > - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback) and > [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postDelayedFrameCallback) from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext). > Extend this class and override either the [onFrame](#onFrame) or > [onIdle](#onIdle) method to implement specific service logic.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export abstract class FrameCallback--><!--Device-unnamed-export abstract class FrameCallback-End-->
 
@@ -30,6 +25,8 @@ onFrame(frameTimeInNano: number): void
 Called when the next frame is rendered.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +51,8 @@ onIdle(timeLeftInNano: number): void
 Called after the rendering of the subsequent frame has finished and there is more than 1 millisecond left before the next VSync signal. If the time left is not more than 1 millisecond, the execution of this API will be deferred to a later frame.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

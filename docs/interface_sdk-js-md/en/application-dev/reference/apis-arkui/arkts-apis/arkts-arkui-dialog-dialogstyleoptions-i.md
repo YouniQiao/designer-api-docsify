@@ -8,7 +8,9 @@ Options for the fixed-style dialog.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
-<!--Device-dialog-declare interface DialogStyleOptions extends DialogBaseOptions--><!--Device-dialog-declare interface DialogStyleOptions extends DialogBaseOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-dialog-declare interface DialogStyleOptions--><!--Device-dialog-declare interface DialogStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,6 +36,8 @@ The arrangement of buttons.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -48,13 +52,15 @@ The arrangement of buttons.
 buttons?: Array<DialogButton>
 ```
 
-Array of buttons in the dialog box.When provided, the dialog displays as an alert-style dialog with buttons.When used together with sheets, buttons are displayed below the sheet list.
+Array of buttons in the dialog box. When provided, the dialog displays as an alert-style dialog with buttons. When used together with sheets, buttons are displayed below the sheet list.
 
 **Type:** Array&lt;[DialogButton](arkts-arkui-dialog-dialogbutton-i.md)&gt;
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,13 +76,15 @@ Array of buttons in the dialog box.When provided, the dialog displays as an aler
 gridCount?: int
 ```
 
-Grid count of dialog.The value should be an integer.
+Grid count of dialog. The value should be an integer.
 
 **Type:** int
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +108,8 @@ Message content and text style of the dialog box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -114,13 +124,15 @@ Message content and text style of the dialog box.
 sheets?: Array<DialogSheet>
 ```
 
-Array of sheet items for action-sheet style.When provided, the dialog displays sheet items for user selection.
+Array of sheet items for action-sheet style. When provided, the dialog displays sheet items for user selection.
 
 **Type:** Array&lt;[DialogSheet](arkts-arkui-dialog-dialogsheet-i.md)&gt;
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,6 +156,8 @@ Subtitle of the dialog box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -165,6 +179,8 @@ Title of the dialog box.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

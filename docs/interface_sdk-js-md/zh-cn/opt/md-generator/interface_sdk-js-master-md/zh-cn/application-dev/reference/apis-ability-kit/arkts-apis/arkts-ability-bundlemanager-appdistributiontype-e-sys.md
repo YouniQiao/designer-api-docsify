@@ -2,7 +2,9 @@
 
 标识应用[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-export enum AppDistributionType--><!--Device-bundleManager-export enum AppDistributionType-End-->
 
@@ -18,7 +20,9 @@ APP_GALLERY = 1
 
 应用市场安装的应用。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppDistributionType-APP_GALLERY = 1--><!--Device-AppDistributionType-APP_GALLERY = 1-End-->
 
@@ -34,7 +38,9 @@ ENTERPRISE = 2
 
 企业应用，可以安装到个人设备上。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
 
@@ -50,7 +56,9 @@ ENTERPRISE_NORMAL = 3
 
 普通企业应用，只能通过企业MDM应用安装在企业设备上。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
 
@@ -64,10 +72,11 @@ ENTERPRISE_NORMAL = 3
 ENTERPRISE_MDM = 4
 ```
 
-企业MDM应用，只能安装在企业设备上。需要被激活  
-[adminManager.enableAdmin](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md#enableAdmin)后，才能安装普通企业应用。
+企业MDM应用，只能安装在企业设备上。需要被激活 [adminManager.enableAdmin](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableAdmin（系统接口）) 后，才能安装普通企业应用。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppDistributionType-ENTERPRISE_MDM = 4--><!--Device-AppDistributionType-ENTERPRISE_MDM = 4-End-->
 
@@ -83,7 +92,9 @@ OS_INTEGRATION = 5
 
 系统预置应用。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppDistributionType-OS_INTEGRATION = 5--><!--Device-AppDistributionType-OS_INTEGRATION = 5-End-->
 
@@ -99,7 +110,9 @@ CROWDTESTING = 6
 
 众包测试应用，是由应用市场分发给部分用户，有一定的有效期的特定应用，系统检测到应用的有效期到期后，会通知用户到应用市场更新release版本的应用。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
 
@@ -115,7 +128,9 @@ NONE = 7
 
 其他。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppDistributionType-NONE = 7--><!--Device-AppDistributionType-NONE = 7-End-->
 

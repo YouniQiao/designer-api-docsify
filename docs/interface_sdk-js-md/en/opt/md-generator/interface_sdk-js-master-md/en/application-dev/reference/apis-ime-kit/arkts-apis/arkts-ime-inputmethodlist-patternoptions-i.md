@@ -2,7 +2,9 @@
 
 Define pattern options of keyboard.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
 
@@ -22,17 +24,15 @@ action: (index: number) => void
 
 Mandatory. Callback invoked when the pattern option changes.
 
-**Since:** 11
+**Type:** (index: number) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PatternOptions-action: (index: int) => void--><!--Device-PatternOptions-action: (index: int) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
 
 ## defaultSelected
 
@@ -44,7 +44,9 @@ Optional. Default selected pattern.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PatternOptions-defaultSelected?: int--><!--Device-PatternOptions-defaultSelected?: int-End-->
 
@@ -60,7 +62,9 @@ Mandatory. Resource of the pattern option.
 
 **Type:** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PatternOptions-patterns: Array<Pattern>--><!--Device-PatternOptions-patterns: Array<Pattern>-End-->
 

@@ -4,9 +4,11 @@ LazyCustomLayoutAlgorithm constructor options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export interface LazyCustomLayoutAlgorithmOptions--><!--Device-unnamed-export interface LazyCustomLayoutAlgorithmOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface LazyCustomLayoutAlgorithmOptions--><!--Device-unnamed-interface LazyCustomLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +20,19 @@ axis?: Axis
 
 Defines the lazy layout axis.
 
-**Type:** [Axis](arkts-arkui-enums-axis-e.md)
+**Type:** [Axis](../../apis-na/arkts-apis/arkts-na-enums-axis-e.md)
 
 **Default:** Axis.Vertical
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-LazyCustomLayoutAlgorithmOptions-axis?: Axis--><!--Device-LazyCustomLayoutAlgorithmOptions-axis?: Axis-End-->
 

@@ -2,7 +2,9 @@
 
 Describes the parameters of the Gatt client's characteristic read request.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface CharacteristicReadRequest--><!--Device-ble-interface CharacteristicReadRequest-End-->
 
@@ -24,7 +26,9 @@ The UUID of a CharacteristicReadRequest instance
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,9 @@ Indicates the address of the client that initiates the read request
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +70,9 @@ Indicates the byte offset of the start position for reading characteristic value
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +92,9 @@ The UUID of the service to which the characteristic belongs
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,7 +114,9 @@ The Id of the read request
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

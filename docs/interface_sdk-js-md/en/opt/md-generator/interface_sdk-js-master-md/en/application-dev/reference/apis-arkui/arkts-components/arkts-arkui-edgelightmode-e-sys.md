@@ -4,6 +4,8 @@ Edge light animation mode enumeration.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EdgeLightMode--><!--Device-unnamed-declare enum EdgeLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,11 @@ Edge light animation mode enumeration.
 EDGELIGHT_AUTO = 0
 ```
 
-Adaptive edge light animation.
-
-Turned off on low-performance devices and turned on on medium/high-performance devices.
+Adaptive edge light animation. Turned off on low-performance devices and turned on on medium/high-performance devices.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +42,8 @@ Enable edge light animation.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightMode-EDGELIGHT_ENABLED = 1--><!--Device-EdgeLightMode-EDGELIGHT_ENABLED = 1-End-->
@@ -57,6 +61,8 @@ EDGELIGHT_DISABLED = 2
 Disable edge light animation.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

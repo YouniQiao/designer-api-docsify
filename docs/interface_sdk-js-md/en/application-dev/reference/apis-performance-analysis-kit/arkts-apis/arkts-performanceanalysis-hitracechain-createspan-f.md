@@ -12,14 +12,13 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 function createSpan(): HiTraceId
 ```
 
-Creates a trace span. This API works in synchronous manner.
+Creates a trace span. This API works in synchronous manner. Specifically, create a **HiTraceId**, use the **chainId** and **spanId** in the TLS of the current thread to initialize the **chainId** and **parentSpanId** of the **HiTraceId**, generate a new **spanId** for the **HiTraceId**, and return the **HiTraceId**.
 
-Specifically, create a **HiTraceId**, use the **chainId** and **spanId** in the TLS of the current thread to initialize the **chainId** and **parentSpanId** of the **HiTraceId**, generate a new **spanId** for the  
-**HiTraceId**, and return the **HiTraceId**.
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function createSpan(): HiTraceId--><!--Device-hiTraceChain-function createSpan(): HiTraceId-End-->
 

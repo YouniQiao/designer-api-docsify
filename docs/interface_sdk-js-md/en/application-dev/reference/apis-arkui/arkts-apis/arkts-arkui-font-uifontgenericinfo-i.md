@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontGenericInfo--><!--Device-font-interface UIFontGenericInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Adjust info of the font set.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIFontGenericInfo-adjust: Array<UIFontAdjustInfo>--><!--Device-UIFontGenericInfo-adjust: Array<UIFontAdjustInfo>-End-->
@@ -48,6 +52,8 @@ Alias info of the font set.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIFontGenericInfo-alias: Array<UIFontAliasInfo>--><!--Device-UIFontGenericInfo-alias: Array<UIFontAliasInfo>-End-->
@@ -67,6 +73,8 @@ Name of the font set.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

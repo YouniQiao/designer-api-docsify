@@ -2,7 +2,9 @@
 
 Provides an option for determining whether a call is a video call.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface DialOptions--><!--Device-call-export interface DialOptions-End-->
 
@@ -20,14 +22,13 @@ import { call } from '@kit.TelephonyKit';
 accountId?: number
 ```
 
-Account ID.
-
-- **0**: card slot 1.  
-- **1**: card slot 2.<br
+Account ID. - **0**: card slot 1. - **1**: card slot 2.<br
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialOptions-accountId?: int--><!--Device-DialOptions-accountId?: int-End-->
 
@@ -45,7 +46,9 @@ Dialup scenario. This is a system API.
 
 **Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialOptions-dialScene?: DialScene--><!--Device-DialOptions-dialScene?: DialScene-End-->
 
@@ -63,7 +66,9 @@ Dialup type. This is a system API.
 
 **Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialOptions-dialType?: DialType--><!--Device-DialOptions-dialType?: DialType-End-->
 
@@ -81,7 +86,9 @@ Video state type. This is a system API.
 
 **Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialOptions-videoState?: VideoStateType--><!--Device-DialOptions-videoState?: VideoStateType-End-->
 

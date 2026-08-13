@@ -12,14 +12,15 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function unregisterTraceListener(index: int): int
 ```
 
-Unregisters the callback function used to notify whether the trace capture is enabled, which is registered using  
-**registerTraceListener()**.
+Unregisters the callback function used to notify whether the trace capture is enabled, which is registered using **registerTraceListener()**.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function unregisterTraceListener(index: int): int--><!--Device-hiTraceMeter-function unregisterTraceListener(index: int): int-End-->
 
@@ -29,13 +30,13 @@ Unregisters the callback function used to notify whether the trace capture is en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registerTraceListener) is successfully called. |
+| index | int | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registerTraceListener) is successfully called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Callback deregistration status. **0**: Deregistration succeeded. **-1**: The callback corresponding to the index is not registered. **-2**: Invalid index. The index value is not within the range of 0 to 9. |
+| int | Callback deregistration status. **0**: Deregistration succeeded. **-1**: The callback corresponding to the index is not registered. **-2**: Invalid index. The index value is not within the range of 0 to 9. |
 
 ## Examples
 

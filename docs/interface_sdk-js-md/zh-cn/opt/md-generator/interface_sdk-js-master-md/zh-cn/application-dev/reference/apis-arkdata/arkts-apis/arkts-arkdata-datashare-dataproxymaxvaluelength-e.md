@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-dataShare-enum DataProxyMaxValueLength--><!--Device-dataShare-enum DataProxyMaxValueLength-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -17,6 +19,8 @@ MAX_LENGTH_4K = 4096
 表示共享配置的值允许的最大长度为4096字节。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ MAX_LENGTH_100K = 102400
 表示共享配置的值允许的最大长度为102400字节。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,14 +1,18 @@
 # @ohos.uiAppearance
 
-Provide APIs to set system uiAppearance.
+This module provides basic capabilities for obtaining system appearance configurations, including color mode (dark/ light) settings, font size scale factors, and font weight scale factors. > **NOTE：**
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace uiAppearance--><!--Device-unnamed-declare namespace uiAppearance-End-->
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -18,28 +22,25 @@ import { uiAppearance } from '@kit.ArkUI';
 
 ## Summary
 
-### Functions
-
-| Name | Description |
-| --- | --- |
-| [getDarkMode](arkts-arkui-uiappearance-getdarkmode-f.md#getdarkmode) | Acquire the current dark-mode. |
-| [getFontScale](arkts-arkui-uiappearance-getfontscale-f.md#getfontscale) | Acquire the current font-scale. |
-| [getFontWeightScale](arkts-arkui-uiappearance-getfontweightscale-f.md#getfontweightscale) | Acquire the current font-weight-scale. |
-
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setdarkmode) | Set the system dark-mode. |
-| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setdarkmode-1) | Set the system dark-mode. |
-| [setFontScale](arkts-arkui-uiappearance-setfontscale-f-sys.md#setfontscale) | Set the system font-scale. |
-| [setFontWeightScale](arkts-arkui-uiappearance-setfontweightscale-f-sys.md#setfontweightscale) | Set the system font-weight-scale. |
+| [getDarkMode](arkts-arkui-uiappearance-getdarkmode-f-sys.md#getDarkMode) | Obtains the current system dark mode configuration. &lt;!--Del--&gt; > **NOTE：**> This API is a system API in API version 19 and earlier. Using this API requires the > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) > permission. &lt;!--DelEnd--&gt; |
+| [getFontScale](arkts-arkui-uiappearance-getfontscale-f-sys.md#getFontScale) | Obtains the current font size scale factor. &lt;!--Del--&gt; > **NOTE：**> This API is a system API in API version 19 and earlier. Using this API requires the > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) > permission. &lt;!--DelEnd--&gt; |
+| [getFontWeightScale](arkts-arkui-uiappearance-getfontweightscale-f-sys.md#getFontWeightScale) | Obtains the current font weight scale factor. &lt;!--Del--&gt; > **NOTE：**> This API is a system API in API version 19 and earlier. Using this API requires the > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) > permission. &lt;!--DelEnd--&gt; |
+| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setDarkMode) | Sets the system color mode. This API uses an asynchronous callback to return the result. **Permission required**: ohos.permission.UPDATE_CONFIGURATION |
+| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setDarkMode-(System-API)) | Sets the system color mode. This API uses a promise to return the result. **Permission required**: ohos.permission.UPDATE_CONFIGURATION |
+| [setFontScale](arkts-arkui-uiappearance-setfontscale-f-sys.md#setFontScale) | Sets the system font scale. **Permission required**: ohos.permission.UPDATE_CONFIGURATION |
+| [setFontWeightScale](arkts-arkui-uiappearance-setfontweightscale-f-sys.md#setFontWeightScale) | Sets the system font weight scale. **Permission required**: ohos.permission.UPDATE_CONFIGURATION |
 <!--DelEnd-->
 
-### Enums
+<!--Del-->
+### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | Enumerates dark-mode. |
+| [DarkMode](arkts-arkui-uiappearance-darkmode-e-sys.md) | Enumerates the color modes. |
+<!--DelEnd-->
 

@@ -6,7 +6,9 @@ export type Rect = _Rect
 
 Defines a rectangle. For details, see [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md#Rect).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type Rect = _Rect--><!--Device-unnamed-export type Rect = _Rect-End-->
 

@@ -2,9 +2,11 @@
 
 Writes an object to a **MessageSequence** and reads it from the **MessageSequence** during IPC.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-rpc-interface Parcelable--><!--Device-rpc-interface Parcelable-End-->
 
@@ -24,9 +26,11 @@ marshalling(dataOut: MessageSequence): boolean
 
 Marshals this **Parcelable** object into a **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Parcelable-marshalling(dataOut: MessageSequence): boolean--><!--Device-Parcelable-marshalling(dataOut: MessageSequence): boolean-End-->
 
@@ -89,9 +93,11 @@ unmarshalling(dataIn: MessageSequence): boolean
 
 Unmarshals this **Parcelable** object from a **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Parcelable-unmarshalling(dataIn: MessageSequence): boolean--><!--Device-Parcelable-unmarshalling(dataIn: MessageSequence): boolean-End-->
 

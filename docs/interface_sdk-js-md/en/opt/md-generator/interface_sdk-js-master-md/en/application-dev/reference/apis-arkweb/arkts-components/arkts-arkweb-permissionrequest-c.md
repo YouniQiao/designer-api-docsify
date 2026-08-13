@@ -1,17 +1,10 @@
 # PermissionRequest
 
-Implements the **PermissionRequest** object.For details about the sample code,see [onPermissionRequest](./arkts-basic-components-web-events.md#onpermissionrequest9).
-
-> **NOTE：**
-> 
-> - The initial APIs of this component are supported since API version 8.
-> Updates will be marked with a superscript to indicate their earliest API version.
-> 
-> - The initial APIs of this class are supported since API version 9.
-> 
-> - The sample effect is subject to the actual device.
+Implements the **PermissionRequest** object.For details about the sample code, see [onPermissionRequest](./arkts-basic-components-web-events.md#onPermissionRequest). > **NOTE：**> > - The initial APIs of this component are supported since API version 8. > Updates will be marked with a superscript to indicate their earliest API version. > > - The initial APIs of this class are supported since API version 9. > > - The sample effect is subject to the actual device.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PermissionRequest--><!--Device-unnamed-declare class PermissionRequest-End-->
 
@@ -26,6 +19,8 @@ constructor()
 Constructs a **PermissionRequest** object.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,6 +38,8 @@ Denies the permission requested by the web page.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PermissionRequest-deny(): void--><!--Device-PermissionRequest-deny(): void-End-->
@@ -55,10 +52,11 @@ Denies the permission requested by the web page.
 getAccessibleResource(): Array<string>
 ```
 
-Obtains the list of accessible resources requested for the web page. For details about the resource types, see  
-[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#ProtectedResourceType).
+Obtains the list of accessible resources requested for the web page. For details about the resource types, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#ProtectedResourceType).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,6 +80,8 @@ Obtains the origin of this web page.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PermissionRequest-getOrigin(): string--><!--Device-PermissionRequest-getOrigin(): string-End-->
@@ -103,6 +103,8 @@ grant(resources: Array<string>): void
 Grants the permission for resources requested by the web page.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

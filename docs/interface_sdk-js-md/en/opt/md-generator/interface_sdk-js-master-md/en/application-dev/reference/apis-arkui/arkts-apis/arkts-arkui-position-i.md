@@ -4,6 +4,8 @@ Defines the position.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface Position--><!--Device-unnamed-declare interface Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Coordinate x of the Position.
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ Coordinate y of the Position.
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

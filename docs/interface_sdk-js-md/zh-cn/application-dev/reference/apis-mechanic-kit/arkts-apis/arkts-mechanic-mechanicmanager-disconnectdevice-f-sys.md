@@ -10,7 +10,9 @@ function disconnectDevice(mechId: int): Promise<Result>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
@@ -26,7 +28,7 @@ function disconnectDevice(mechId: int): Promise<Result>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
+| mechId | int | 是 | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
 
 **返回值：**
 
@@ -38,7 +40,7 @@ function disconnectDevice(mechId: int): Promise<Result>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 

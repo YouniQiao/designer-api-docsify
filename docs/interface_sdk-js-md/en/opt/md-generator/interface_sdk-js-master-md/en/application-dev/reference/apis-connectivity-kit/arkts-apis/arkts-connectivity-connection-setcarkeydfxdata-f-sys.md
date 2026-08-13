@@ -16,6 +16,8 @@ Set the dfx data of car key.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-connection-function setCarKeyDfxData(deviceId: string, action: CarKeyActionType): void--><!--Device-connection-function setCarKeyDfxData(deviceId: string, action: CarKeyActionType): void-End-->
@@ -35,7 +37,7 @@ Set the dfx data of car key.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 2900003 |
 | 2900099 |

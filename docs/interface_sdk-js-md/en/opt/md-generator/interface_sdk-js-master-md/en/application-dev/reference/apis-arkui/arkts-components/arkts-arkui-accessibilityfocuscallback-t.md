@@ -8,6 +8,8 @@ Defines the callback type used in accessibility focus. The value of isFocus indi
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -22,4 +24,4 @@ Defines the callback type used in accessibility focus. The value of isFocus indi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [isFocus](../../apis-ability-kit/arkts-apis/arkts-ability-pagenodeinfo-i.md) | boolean | Yes |
+| [isFocus](../../apis-ability-kit/arkts-apis/arkts-ability-pagenodeinfo-i-sys.md) | boolean | Yes |

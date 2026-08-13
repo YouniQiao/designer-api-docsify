@@ -16,6 +16,8 @@ Get the connected VPN App Info.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>--><!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>-End-->
@@ -34,7 +36,7 @@ Get the connected VPN App Info.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [19900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900002-system-internal-error) |
-| [19900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900001-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) |
+| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) |

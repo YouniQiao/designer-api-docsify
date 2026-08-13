@@ -2,11 +2,11 @@
 
 一个VideoController对象可以控制一个或多个Video。
 
-## 导入对象
-
-```ts let controller: VideoController = new VideoController();```
+## 导入对象 ```ts let controller: VideoController = new VideoController(); ```
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class VideoController--><!--Device-unnamed-declare class VideoController-End-->
 
@@ -21,6 +21,8 @@ constructor()
 VideoController的构造函数。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +40,8 @@ exitFullscreen()
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-VideoController-exitFullscreen()--><!--Device-VideoController-exitFullscreen()-End-->
@@ -54,6 +58,8 @@ pause()
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-VideoController-pause()--><!--Device-VideoController-pause()-End-->
@@ -69,6 +75,8 @@ requestFullscreen(value: boolean)
 请求全屏播放。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -92,6 +100,8 @@ reset(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -106,13 +116,11 @@ reset(): void
 setCurrentTime(value: number)
 ```
 
-指定视频播放的进度位置。
-
-> **说明：**
-> 
-> 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
+指定视频播放的进度位置。 > **说明：** > > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -132,13 +140,11 @@ setCurrentTime(value: number)
 setCurrentTime(value: number, seekMode: SeekMode)
 ```
 
-指定视频播放的进度位置，并指定跳转模式。
-
-> **说明：**
-> 
-> 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
+指定视频播放的进度位置，并指定跳转模式。 > **说明：** > > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -163,6 +169,8 @@ start()
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-VideoController-start()--><!--Device-VideoController-start()-End-->
@@ -178,6 +186,8 @@ stop()
 停止播放，显示当前帧，再次播放时从头开始播放。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

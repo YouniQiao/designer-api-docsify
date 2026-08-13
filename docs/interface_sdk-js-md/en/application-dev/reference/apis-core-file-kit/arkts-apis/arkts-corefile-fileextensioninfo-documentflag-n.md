@@ -29,9 +29,9 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#represents_file) | File. |
-| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#represents_dir) | Directory. |
-| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#supports_read) | The device supports read. |
-| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#supports_write) | The device supports write. |
+| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#REPRESENTS_FILE) | File. |
+| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#REPRESENTS_DIR) | Directory. |
+| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#SUPPORTS_READ) | The device supports read. |
+| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#SUPPORTS_WRITE) | The device supports write. |
 <!--DelEnd-->
 

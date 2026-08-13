@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 在类对象的方法后插入一个函数。最终的返回值为被插入函数的返回值。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +102,8 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 在类对象的方法前插入一个函数。被插入的函数会先于类对象的原方法执行。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -188,6 +194,8 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 使用另一个函数替换类对象的方法。替换后，仅执行新函数的逻辑。最终的返回值为新函数的返回值。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

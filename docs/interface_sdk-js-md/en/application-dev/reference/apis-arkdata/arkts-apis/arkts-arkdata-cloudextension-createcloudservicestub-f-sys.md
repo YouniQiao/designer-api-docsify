@@ -12,11 +12,13 @@ import { cloudExtension } from '@kit.ArkData';
 function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>
 ```
 
-Creates a RemoteObject instance based on a CloudService instance.The system uses this object to call the APIs of the CloudService instance.This API uses a promise to return the result.
+Creates a RemoteObject instance based on a CloudService instance. The system uses this object to call the APIs of the CloudService instance. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>-End-->
 

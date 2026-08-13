@@ -8,6 +8,8 @@ Defines the value types.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-dataAbility-type ValueType = number | string | boolean--><!--Device-dataAbility-type ValueType = number | string | boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core

@@ -2,7 +2,9 @@
 
 表示认证状态信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface AuthStatusInfo--><!--Device-osAccount-interface AuthStatusInfo-End-->
 
@@ -20,7 +22,9 @@ freezingTime: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthStatusInfo-freezingTime: int--><!--Device-AuthStatusInfo-freezingTime: int-End-->
 
@@ -38,7 +42,9 @@ remainTimes: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthStatusInfo-remainTimes: int--><!--Device-AuthStatusInfo-remainTimes: int-End-->
 

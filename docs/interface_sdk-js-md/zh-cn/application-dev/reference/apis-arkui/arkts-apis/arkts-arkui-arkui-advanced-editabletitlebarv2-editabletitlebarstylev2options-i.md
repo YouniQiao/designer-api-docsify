@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface EditableTitleBarStyleV2Options--><!--Device-unnamed-export declare interface EditableTitleBarStyleV2Options-End-->
 
@@ -16,17 +18,19 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式。
-
-默认值：BlurStyle.NONE，表示无模糊效果。
+标题栏背景模糊样式。 默认值：BlurStyle.NONE，表示无模糊效果。
 
 **类型：** BlurStyle
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EditableTitleBarStyleV2Options-backgroundBlurStyle?: BlurStyle--><!--Device-EditableTitleBarStyleV2Options-backgroundBlurStyle?: BlurStyle-End-->
 
@@ -38,17 +42,19 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景色。
-
-默认值：'#00000000'，表示背景透明。
+标题栏背景色。 默认值：'#00000000'，表示背景透明。
 
 **类型：** ResourceColor
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EditableTitleBarStyleV2Options-backgroundColor?: ResourceColor--><!--Device-EditableTitleBarStyleV2Options-backgroundColor?: ResourceColor-End-->
 
@@ -60,25 +66,19 @@ backgroundColor?: ResourceColor
 contentMargin?: LocalizedMargin
 ```
 
-标题栏外边距，不支持设置负数。
-
-默认值：
-
-{
-
-start: LengthMetrics.resource(\$r('sys.float.margin_left')),
-
-end: LengthMetrics.resource(\$r('sys.float.margin_right'))
-
-}。
+标题栏外边距，不支持设置负数。 默认值： { start: LengthMetrics.resource(\$r('sys.float.margin_left')), end: LengthMetrics.resource(\$r('sys.float.margin_right')) }。
 
 **类型：** LocalizedMargin
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EditableTitleBarStyleV2Options-contentMargin?: LocalizedMargin--><!--Device-EditableTitleBarStyleV2Options-contentMargin?: LocalizedMargin-End-->
 
@@ -90,17 +90,19 @@ end: LengthMetrics.resource(\$r('sys.float.margin_right'))
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-扩展安全区域的方向。
-
-默认值：[SafeAreaEdge.TOP]。
+扩展安全区域的方向。 默认值：[SafeAreaEdge.TOP]。
 
 **类型：** Array&lt;SafeAreaEdge&gt;
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EditableTitleBarStyleV2Options-safeAreaEdges?: Array<SafeAreaEdge>--><!--Device-EditableTitleBarStyleV2Options-safeAreaEdges?: Array<SafeAreaEdge>-End-->
 
@@ -112,17 +114,19 @@ safeAreaEdges?: Array<SafeAreaEdge>
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-扩展安全区域的类型。
-
-默认值：[SafeAreaType.SYSTEM]。
+扩展安全区域的类型。 默认值：[SafeAreaType.SYSTEM]。
 
 **类型：** Array&lt;SafeAreaType&gt;
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EditableTitleBarStyleV2Options-safeAreaTypes?: Array<SafeAreaType>--><!--Device-EditableTitleBarStyleV2Options-safeAreaTypes?: Array<SafeAreaType>-End-->
 

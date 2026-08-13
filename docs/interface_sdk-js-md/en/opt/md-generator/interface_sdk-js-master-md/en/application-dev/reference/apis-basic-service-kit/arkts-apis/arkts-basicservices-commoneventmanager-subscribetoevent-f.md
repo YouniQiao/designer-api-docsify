@@ -14,9 +14,11 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 
 Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or failure.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>--><!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>-End-->
 
@@ -39,10 +41,10 @@ Subscribes to a common event. This API uses a promise to return the result, indi
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
-| [1500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500010-the-number-of-subscribers-exceeds-the-upper-limit) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
+| [1500010](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500010-the-number-of-subscribers-exceeds-the-upper-limit) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
 
 ## Examples
 

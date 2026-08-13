@@ -14,7 +14,9 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 Encodes metadata into an image. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>--><!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>-End-->
 
@@ -39,9 +41,9 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [32100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [32100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-encoding-failed) |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32100002](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-encoding-failed) |
 
 ## Examples
 

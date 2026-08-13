@@ -10,6 +10,8 @@ function chdir(dir: string): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-process-function chdir(dir: string): void--><!--Device-process-function chdir(dir: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

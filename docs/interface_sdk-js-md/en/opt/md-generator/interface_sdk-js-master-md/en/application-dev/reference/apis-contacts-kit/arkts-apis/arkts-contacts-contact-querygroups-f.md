@@ -18,7 +18,7 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups](contact.queryGroups(context:)
+**Substitutes:** [queryGroups](#queryGroups)(context: Context, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -58,6 +58,8 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void-End-->
@@ -75,12 +77,12 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,7 +113,7 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups](contact.queryGroups(context:)
+**Substitutes:** [queryGroups](#queryGroups)(context: Context, holder: Holder, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -156,6 +158,8 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void-End-->
@@ -174,12 +178,12 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -214,7 +218,7 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups](contact.queryGroups(context:)
+**Substitutes:** [queryGroups](#queryGroups)(context: Context, holder?: Holder)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -260,6 +264,8 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>--><!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>-End-->
@@ -283,12 +289,12 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain UIAbilityContext, where this refers to a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain UIAbilityContext, where this refers to a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

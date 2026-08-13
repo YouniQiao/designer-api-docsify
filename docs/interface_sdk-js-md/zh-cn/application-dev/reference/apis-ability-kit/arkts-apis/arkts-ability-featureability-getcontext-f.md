@@ -12,6 +12,8 @@ function getContext(): Context
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function getContext(): Context--><!--Device-featureAbility-function getContext(): Context-End-->

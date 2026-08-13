@@ -6,7 +6,9 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-declare class SwipeRecognizer extends GestureRecognizer--><!--Device-unnamed-declare class SwipeRecognizer extends GestureRecognizer-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class SwipeRecognizer--><!--Device-unnamed-declare class SwipeRecognizer-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ getDirection(): SwipeDirection
 返回预设快滑手势识别器触发快滑手势滑动方向。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,6 +47,8 @@ getVelocityThreshold(): number
 返回预设快滑手势识别器识别滑动最小速度阈值。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

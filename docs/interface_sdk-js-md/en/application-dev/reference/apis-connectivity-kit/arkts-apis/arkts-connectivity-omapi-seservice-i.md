@@ -6,6 +6,8 @@ SEService realizes the communication to available SEs on the device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-omapi-export interface SEService--><!--Device-omapi-export interface SEService-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -22,11 +24,13 @@ import { omapi } from '@kit.ConnectivityKit';
 getReaders(): Reader[]
 ```
 
-Returns the list of available SE readers. There must be no duplicated objects in the returned list.All available readers SHALL be listed even if no card is inserted.
+Returns the list of available SE readers. There must be no duplicated objects in the returned list. All available readers SHALL be listed even if no card is inserted.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-SEService-getReaders(): Reader[]--><!--Device-SEService-getReaders(): Reader[]-End-->
 
@@ -42,7 +46,7 @@ Returns the list of available SE readers. There must be no duplicated objects in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -82,6 +86,8 @@ Returns the version of the Open Mobile API Specification this implementation is 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-SEService-getVersion(): string--><!--Device-SEService-getVersion(): string-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -96,7 +102,7 @@ Returns the version of the Open Mobile API Specification this implementation is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -129,6 +135,8 @@ Checks whether or not the service is connected.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-SEService-isConnected(): boolean--><!--Device-SEService-isConnected(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -143,7 +151,7 @@ Checks whether or not the service is connected.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -180,6 +188,8 @@ Releases all SE resources allocated by this SEService. As a result isConnected()
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-SEService-shutdown(): void--><!--Device-SEService-shutdown(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -188,7 +198,7 @@ Releases all SE resources allocated by this SEService. As a result isConnected()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 

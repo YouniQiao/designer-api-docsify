@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function disableHotspot(): boolean
 ```
 
-Disables a Wi-Fi hotspot.
-
-&lt;p&gt;This method is asynchronous. If Wi-Fi is enabled after the Wi-Fi hotspot is disabled, Wi-Fi may be re-enabled.
+Disables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. If Wi-Fi is enabled after the Wi-Fi hotspot is disabled, Wi-Fi may be re-enabled.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Disables a Wi-Fi hotspot.
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableHotspot](ohos.wifiManager/wifiManager.disableHotspot)
+**Substitutes:** [disableHotspot](arkts-connectivity-wifimanager-disablehotspot-f-sys.md#disableHotspot-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 

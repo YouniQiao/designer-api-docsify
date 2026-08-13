@@ -1,12 +1,8 @@
 # Slider
 
-The **Slider** component is used to quickly adjust settings, such as the volume and brightness.
+The **Slider** component is used to quickly adjust settings, such as the volume and brightness. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## Slider
 
@@ -17,6 +13,8 @@ Slider(options?: SliderOptions)
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,18 +32,18 @@ Slider(options?: SliderOptions)
 
 ## Summary
 
-- [ColorMetricsStop](arkts-arkui-slider-colormetricsstop-i.md)
-- [SlideRange](arkts-arkui-slider-sliderange-i.md)
-- [SliderBlockStyle](arkts-arkui-slider-sliderblockstyle-i.md)
-- [SliderConfiguration](arkts-arkui-slider-sliderconfiguration-i.md)
-- [SliderCustomContentOptions](arkts-arkui-slider-slidercustomcontentoptions-i.md)
-- [SliderOptions](arkts-arkui-slider-slideroptions-i.md)
-- [SliderPrefixOptions](arkts-arkui-slider-sliderprefixoptions-i.md)
-- [SliderShowStepOptions](arkts-arkui-slider-slidershowstepoptions-i.md)
-- [SliderStepItemAccessibility](arkts-arkui-slider-sliderstepitemaccessibility-i.md)
-- [SliderSuffixOptions](arkts-arkui-slider-slidersuffixoptions-i.md)
-- [SliderTriggerChangeCallback](arkts-arkui-slider-slidertriggerchangecallback-t.md)
-- [SliderBlockType](arkts-arkui-slider-sliderblocktype-e.md)
-- [SliderChangeMode](arkts-arkui-slider-sliderchangemode-e.md)
-- [SliderInteraction](arkts-arkui-slider-sliderinteraction-e.md)
-- [SliderStyle](arkts-arkui-slider-sliderstyle-e.md)
+- [ColorMetricsStop](arkts-arkui-colormetricsstop-i.md)
+- [SlideRange](arkts-arkui-sliderange-i.md)
+- [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md)
+- [SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)
+- [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md)
+- [SliderOptions](arkts-arkui-slideroptions-i.md)
+- [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md)
+- [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md)
+- [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md)
+- [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md)
+- [SliderTriggerChangeCallback](arkts-arkui-slidertriggerchangecallback-t.md)
+- [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
+- [SliderChangeMode](arkts-arkui-sliderchangemode-e.md)
+- [SliderInteraction](arkts-arkui-sliderinteraction-e.md)
+- [SliderStyle](arkts-arkui-sliderstyle-e.md)

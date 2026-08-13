@@ -4,7 +4,9 @@ DatePickerComponentResult defines the selection result of the date time picker.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class DatePickerComponentResult--><!--Device-unnamed-export declare class DatePickerComponentResult-End-->
 
@@ -22,15 +24,19 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 day?: int
 ```
 
-Day of the selected date.The value should be an integer.
+Day of the selected date. The value should be an integer.
 
 **Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentResult-day?: int--><!--Device-DatePickerComponentResult-day?: int-End-->
 
@@ -42,15 +48,19 @@ Day of the selected date.The value should be an integer.
 hour?: int
 ```
 
-Hour part of the selected time.The value should be an integer.
+Hour part of the selected time. The value should be an integer.
 
 **Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentResult-hour?: int--><!--Device-DatePickerComponentResult-hour?: int-End-->
 
@@ -62,15 +72,19 @@ Hour part of the selected time.The value should be an integer.
 minute?: int
 ```
 
-Minute part of the selected time.The value should be an integer.
+Minute part of the selected time. The value should be an integer.
 
 **Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentResult-minute?: int--><!--Device-DatePickerComponentResult-minute?: int-End-->
 
@@ -82,15 +96,19 @@ Minute part of the selected time.The value should be an integer.
 month?: int
 ```
 
-Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December.The value should be an integer.
+Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December. The value should be an integer.
 
 **Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentResult-month?: int--><!--Device-DatePickerComponentResult-month?: int-End-->
 
@@ -102,15 +120,19 @@ Month index of the selected date, starting from 0, where 0 indicates January and
 second?: int
 ```
 
-Second part of the selected time.The value should be an integer.
+Second part of the selected time. The value should be an integer.
 
 **Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentResult-second?: int--><!--Device-DatePickerComponentResult-second?: int-End-->
 
@@ -122,15 +144,19 @@ Second part of the selected time.The value should be an integer.
 year?: int
 ```
 
-Year of the selected date.The value should be an integer.
+Year of the selected date. The value should be an integer.
 
 **Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentResult-year?: int--><!--Device-DatePickerComponentResult-year?: int-End-->
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-observer-export interface CCallStateInfo--><!--Device-observer-export interface CCallStateInfo-End-->
 
@@ -22,7 +24,9 @@ state: CCallState
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CCallStateInfo-state: CCallState--><!--Device-CCallStateInfo-state: CCallState-End-->
 
@@ -40,7 +44,9 @@ teleNumber: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CCallStateInfo-teleNumber: string--><!--Device-CCallStateInfo-teleNumber: string-End-->
 

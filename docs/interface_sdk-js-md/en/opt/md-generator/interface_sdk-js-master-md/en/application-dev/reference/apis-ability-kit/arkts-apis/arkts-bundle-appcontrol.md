@@ -1,12 +1,10 @@
 # @ohos.bundle.appControl
 
-The module provides APIs for setting, obtaining, and deleting the disposed status of an application. An application in the disposed status is forbidden to run. When a user clicks the application icon on the home screen, the corresponding page is displayed based on the disposal intent.
+The module provides APIs for setting, obtaining, and deleting the disposed status of an application. An application in the disposed status is forbidden to run. When a user clicks the application icon on the home screen, the corresponding page is displayed based on the disposal intent. > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace appControl--><!--Device-unnamed-declare namespace appControl-End-->
 
@@ -27,23 +25,23 @@ import { appControl } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus) |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus-1) |
-| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md#deletedisposedstatussync) |
-| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md#deleteuninstalldisposedrule) |
-| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md#getalldisposedrules) |
-| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md#getdisposedrule) |
-| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md#getdisposedrulesbybundle) |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus) |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus-1) |
-| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md#getdisposedstatussync) |
-| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md#getuninstalldisposedrule) |
-| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md#setdisposedrule) |
-| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md#setdisposedrules) |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus) |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus-1) |
-| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md#setdisposedstatussync) |
-| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md#setuninstalldisposedrule) |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deleteDisposedStatus-(System-API)) |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deleteDisposedStatus-(System-API)) |
+| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md#deleteDisposedStatusSync-(System-API)) |
+| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md#deleteUninstallDisposedRule-(System-API)) |
+| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md#getAllDisposedRules-(System-API)) |
+| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md#getDisposedRule-(System-API)) |
+| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md#getDisposedRulesByBundle-(System-API)) |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getDisposedStatus-(System-API)) |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getDisposedStatus-(System-API)) |
+| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md#getDisposedStatusSync-(System-API)) |
+| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md#getUninstallDisposedRule-(System-API)) |
+| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md#setDisposedRule-(System-API)) |
+| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md#setDisposedRules-(System-API)) |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setDisposedStatus-(System-API)) |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setDisposedStatus-(System-API)) |
+| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md#setDisposedStatusSync-(System-API)) |
+| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md#setUninstallDisposedRule-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

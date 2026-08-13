@@ -2,7 +2,9 @@
 
 Provide a number formatting interface which could format number to StyleString.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class StyledNumberFormat--><!--Device-i18n-export class StyledNumberFormat-End-->
 
@@ -22,9 +24,11 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 Creates a **NumberFormat** object for rich text display.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
 
@@ -85,7 +89,7 @@ Creates a **NumberFormat** object for rich text display.
 
 **Deprecated since:** 20
 
-**Substitutes:** [constructor](i18n.StyledNumberFormat.constructor(numberFormat:)
+**Substitutes:** [constructor](#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -144,9 +148,11 @@ format(value: number): StyledString
 
 Formats a number as a rich text object.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledNumberFormat-format(value: double): StyledString--><!--Device-StyledNumberFormat-format(value: double): StyledString-End-->
 

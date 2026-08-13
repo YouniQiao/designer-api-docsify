@@ -2,7 +2,9 @@
 
 Enumerates the types of audio streams captured.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum SourceType--><!--Device-audio-enum SourceType-End-->
 
@@ -14,9 +16,11 @@ Enumerates the types of audio streams captured.
 SOURCE_TYPE_WAKEUP = 3
 ```
 
-Wakeup source type.Permission ohos.permission.MANAGE_INTELLIGENT_VOICE is needed when calling createAudioCapturer with this type.
+Wakeup source type. Permission ohos.permission.MANAGE_INTELLIGENT_VOICE is needed when calling createAudioCapturer with this type.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_WAKEUP = 3--><!--Device-SourceType-SOURCE_TYPE_WAKEUP = 3-End-->
 
@@ -30,9 +34,11 @@ Wakeup source type.Permission ohos.permission.MANAGE_INTELLIGENT_VOICE is needed
 SOURCE_TYPE_VOICE_CALL = 4
 ```
 
-Voice call source type.Permission ohos.permission.RECORD_VOICE_CALL is needed when calling createAudioCapturer with this type.
+Voice call source type. Permission ohos.permission.RECORD_VOICE_CALL is needed when calling createAudioCapturer with this type.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_VOICE_CALL = 4--><!--Device-SourceType-SOURCE_TYPE_VOICE_CALL = 4-End-->
 
@@ -48,7 +54,9 @@ SOURCE_TYPE_VOICE_TRANSCRIPTION = 12
 
 Source type for voice transcription and processing.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_VOICE_TRANSCRIPTION = 12--><!--Device-SourceType-SOURCE_TYPE_VOICE_TRANSCRIPTION = 12-End-->
 
@@ -65,6 +73,8 @@ SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT = 19
 Unprocessed voice assistant source type.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

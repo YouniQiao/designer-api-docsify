@@ -12,7 +12,7 @@ function getAllDisplay(callback: AsyncCallback<Array<Display>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getAllDisplays](display.getAllDisplays(callback:)
+**替代接口：** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)(callback: AsyncCallback&lt;Array&lt;Display&gt;&gt;)
 
 <!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void-End-->
 

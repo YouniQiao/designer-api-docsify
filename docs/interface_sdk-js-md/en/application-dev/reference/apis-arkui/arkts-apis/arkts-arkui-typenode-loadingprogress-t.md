@@ -1,20 +1,24 @@
 # LoadingProgress
 
 ```TypeScript
-type LoadingProgress = LoadingProgressFrameNode
+type LoadingProgress = TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>
 ```
 
-Define the FrameNode type for LoadingProgress.
+Represents a FrameNode of the **LoadingProgress** type. This type of node does not allow child components to be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type LoadingProgress = LoadingProgressFrameNode--><!--Device-typeNode-type LoadingProgress = LoadingProgressFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type LoadingProgress = TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>--><!--Device-typeNode-type LoadingProgress = TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** LoadingProgressFrameNode
+**Property type:** TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>
 

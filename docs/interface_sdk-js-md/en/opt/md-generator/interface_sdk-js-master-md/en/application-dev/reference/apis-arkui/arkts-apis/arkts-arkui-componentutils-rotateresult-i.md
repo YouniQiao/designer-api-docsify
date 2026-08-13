@@ -4,6 +4,8 @@ Rotation Result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface RotateResult--><!--Device-componentUtils-interface RotateResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { componentUtils } from '@kit.ArkUI';
 angle: number
 ```
 
-Rotation angle.
-
-Unit: deg
+Rotation angle. Unit: deg
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Unit: deg
 centerX: number
 ```
 
-X-coordinate of the center point.
-
-Unit: vp
+X-coordinate of the center point. Unit: vp
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +66,13 @@ Unit: vp
 centerY: number
 ```
 
-Y-coordinate of the center point.
-
-Unit: vp
+Y-coordinate of the center point. Unit: vp
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,6 +94,8 @@ X-coordinate of the rotation vector.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -112,6 +116,8 @@ Y-coordinate of the rotation vector.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -131,6 +137,8 @@ Z coordinate of the rotation vector.
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

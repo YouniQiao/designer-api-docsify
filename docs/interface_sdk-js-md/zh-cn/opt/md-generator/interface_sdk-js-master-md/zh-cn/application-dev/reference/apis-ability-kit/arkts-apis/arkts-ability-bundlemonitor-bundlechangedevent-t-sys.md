@@ -8,6 +8,8 @@ type BundleChangedEvent = 'add' | 'update' | 'remove'
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-bundleMonitor-type BundleChangedEvent = 'add' | 'update' | 'remove'--><!--Device-bundleMonitor-type BundleChangedEvent = 'add' | 'update' | 'remove'-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

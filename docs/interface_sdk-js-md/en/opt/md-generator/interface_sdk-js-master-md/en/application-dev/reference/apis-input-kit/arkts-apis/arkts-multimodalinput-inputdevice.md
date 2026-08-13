@@ -1,8 +1,10 @@
-# @ohos.multimodalInput.inputDevice(Input Device)
+# @ohos.multimodalInput.inputDevice
 
 The inputDevice module implements input device management functions such as listening for the connection and disconnection of input devices and querying input device information such as the device name.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace inputDevice--><!--Device-unnamed-declare namespace inputDevice-End-->
 
@@ -20,41 +22,43 @@ import { inputDevice } from '@kit.InputKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice) |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice-1) |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids) |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids-1) |
-| [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) |
-| [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo-1) |
-| [getDeviceInfoSync](arkts-input-inputdevice-getdeviceinfosync-f.md#getdeviceinfosync) |
-| [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist) |
-| [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist-1) |
-| [getIntervalSinceLastInput](arkts-input-inputdevice-getintervalsincelastinput-f.md#getintervalsincelastinput) |
-| [getKeyboardType](arkts-input-inputdevice-getkeyboardtype-f.md#getkeyboardtype) |
-| [getKeyboardType](arkts-input-inputdevice-getkeyboardtype-f.md#getkeyboardtype-1) |
-| [getKeyboardTypeSync](arkts-input-inputdevice-getkeyboardtypesync-f.md#getkeyboardtypesync) |
-| [isFunctionKeyEnabled](arkts-input-inputdevice-isfunctionkeyenabled-f.md#isfunctionkeyenabled) |
-| [off](arkts-input-inputdevice-off-f.md#off) |
-| [on](arkts-input-inputdevice-on-f.md#on) |
-| [setFunctionKeyEnabled](arkts-input-inputdevice-setfunctionkeyenabled-f.md#setfunctionkeyenabled) |
-| [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportkeys) |
-| [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportkeys-1) |
-| [supportKeysSync](arkts-input-inputdevice-supportkeyssync-f.md#supportkeyssync) |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getDevice) |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getDevice) |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getDeviceIds) |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getDeviceIds) |
+| [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) |
+| [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) |
+| [getDeviceInfoSync](arkts-input-inputdevice-getdeviceinfosync-f.md#getDeviceInfoSync) |
+| [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) |
+| [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) |
+| [getIntervalSinceLastInput](arkts-input-inputdevice-getintervalsincelastinput-f.md#getIntervalSinceLastInput) |
+| [getKeyboardType](arkts-input-inputdevice-getkeyboardtype-f.md#getKeyboardType) |
+| [getKeyboardType](arkts-input-inputdevice-getkeyboardtype-f.md#getKeyboardType) |
+| [getKeyboardTypeSync](arkts-input-inputdevice-getkeyboardtypesync-f.md#getKeyboardTypeSync) |
+| [isFunctionKeyEnabled](arkts-input-inputdevice-isfunctionkeyenabled-f.md#isFunctionKeyEnabled) |
+| [offChange](arkts-input-inputdevice-offchange-f.md#offChange) |
+| off_change |
+| [onChange](arkts-input-inputdevice-onchange-f.md#onChange) |
+| on_change |
+| [setFunctionKeyEnabled](arkts-input-inputdevice-setfunctionkeyenabled-f.md#setFunctionKeyEnabled) |
+| [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportKeys) |
+| [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportKeys) |
+| [supportKeysSync](arkts-input-inputdevice-supportkeyssync-f.md#supportKeysSync) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getKeyboardRepeatDelay](arkts-input-inputdevice-getkeyboardrepeatdelay-f-sys.md#getkeyboardrepeatdelay) |
-| [getKeyboardRepeatDelay](arkts-input-inputdevice-getkeyboardrepeatdelay-f-sys.md#getkeyboardrepeatdelay-1) |
-| [getKeyboardRepeatRate](arkts-input-inputdevice-getkeyboardrepeatrate-f-sys.md#getkeyboardrepeatrate) |
-| [getKeyboardRepeatRate](arkts-input-inputdevice-getkeyboardrepeatrate-f-sys.md#getkeyboardrepeatrate-1) |
-| [setInputDeviceEnabled](arkts-input-inputdevice-setinputdeviceenabled-f-sys.md#setinputdeviceenabled) |
-| [setKeyboardRepeatDelay](arkts-input-inputdevice-setkeyboardrepeatdelay-f-sys.md#setkeyboardrepeatdelay) |
-| [setKeyboardRepeatDelay](arkts-input-inputdevice-setkeyboardrepeatdelay-f-sys.md#setkeyboardrepeatdelay-1) |
-| [setKeyboardRepeatRate](arkts-input-inputdevice-setkeyboardrepeatrate-f-sys.md#setkeyboardrepeatrate) |
-| [setKeyboardRepeatRate](arkts-input-inputdevice-setkeyboardrepeatrate-f-sys.md#setkeyboardrepeatrate-1) |
+| [getKeyboardRepeatDelay](arkts-input-inputdevice-getkeyboardrepeatdelay-f-sys.md#getKeyboardRepeatDelay-(System-API)) |
+| [getKeyboardRepeatDelay](arkts-input-inputdevice-getkeyboardrepeatdelay-f-sys.md#getKeyboardRepeatDelay-(System-API)) |
+| [getKeyboardRepeatRate](arkts-input-inputdevice-getkeyboardrepeatrate-f-sys.md#getKeyboardRepeatRate-(System-API)) |
+| [getKeyboardRepeatRate](arkts-input-inputdevice-getkeyboardrepeatrate-f-sys.md#getKeyboardRepeatRate-(System-API)) |
+| [setInputDeviceEnabled](arkts-input-inputdevice-setinputdeviceenabled-f-sys.md#setInputDeviceEnabled-(System-API)) |
+| [setKeyboardRepeatDelay](arkts-input-inputdevice-setkeyboardrepeatdelay-f-sys.md#setKeyboardRepeatDelay-(System-API)) |
+| [setKeyboardRepeatDelay](arkts-input-inputdevice-setkeyboardrepeatdelay-f-sys.md#setKeyboardRepeatDelay-(System-API)) |
+| [setKeyboardRepeatRate](arkts-input-inputdevice-setkeyboardrepeatrate-f-sys.md#setKeyboardRepeatRate-(System-API)) |
+| [setKeyboardRepeatRate](arkts-input-inputdevice-setkeyboardrepeatrate-f-sys.md#setKeyboardRepeatRate-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

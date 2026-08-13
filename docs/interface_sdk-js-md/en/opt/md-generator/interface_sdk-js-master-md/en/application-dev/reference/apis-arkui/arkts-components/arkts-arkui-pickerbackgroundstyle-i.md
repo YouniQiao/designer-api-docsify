@@ -4,6 +4,8 @@ Defines the background style configuration for selected picker items.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PickerBackgroundStyle--><!--Device-unnamed-declare interface PickerBackgroundStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,19 +16,15 @@ Defines the background style configuration for selected picker items.
 borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Border radius of the selected item.
+Border radius of the selected item. Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corners. **NOTE：**1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics): uniform radius with a customizable unit 2. BorderRadiuses: per-corner radius values (vp units only) 3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md#LocalizedBorderRadiuses): per-corner radius values with individual units
 
-Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corners.
-
-**NOTE：**
-
-1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics): uniform radius with a customizable unit2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md#BorderRadiuses): per-corner radius values (vp units only)3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md#LocalizedBorderRadiuses): per-corner radius values with individual units
-
-**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** LengthMetrics \| BorderRadiuses \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { value:24, unit:LengthUnit.VP }
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,15 +40,15 @@ Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corne
 color?: ResourceColor
 ```
 
-Background color of the selected item.
-
-Default value: 'sys.color.comp_background_tertiary'
+Background color of the selected item. Default value: 'sys.color.comp_background_tertiary'
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** 'sys.color.comp_background_tertiary'
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

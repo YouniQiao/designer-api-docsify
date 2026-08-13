@@ -1,10 +1,12 @@
 # TagSession
 
-Controls tag read and write.&lt;p&gt;Classes for different types of tags inherit from this abstract class to control connections to tags, read data from tags, and write data to tags.
+Controls tag read and write. &lt;p&gt;Classes for different types of tags inherit from this abstract class to control connections to tags, read data from tags, and write data to tags.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface TagSession--><!--Device-unnamed-export interface TagSession-End-->
 
@@ -18,13 +20,15 @@ connect(): void
 
 Connects to a tag. Must be called before data is read from or written to the tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-connect(): void--><!--Device-TagSession-connect(): void-End-->
 
@@ -34,9 +38,9 @@ Connects to a tag. Must be called before data is read from or written to the tag
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -60,7 +64,7 @@ try {
 connectTag(): boolean
 ```
 
-Connects to a tag.&lt;p&gt;This method must be called before data is read from or written to the tag.
+Connects to a tag. &lt;p&gt;This method must be called before data is read from or written to the tag.
 
 **Since:** 7
 
@@ -68,7 +72,7 @@ Connects to a tag.&lt;p&gt;This method must be called before data is read from o
 
 **Deprecated since:** 9
 
-**Substitutes:** [connect](tagSession.TagSession#connect)
+**Substitutes:** connect
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -136,25 +140,21 @@ console.info("tag maxSendLen: " + maxSendLen);
 
 ## getMaxTransmitSize
 
-ArkTS-Dyn:
-```TypeScript
-getMaxTransmitSize(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMaxTransmitSize(): int
 ```
 
 Obtains the maximum length of data that can be sent to a tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-getMaxTransmitSize(): int--><!--Device-TagSession-getMaxTransmitSize(): int-End-->
 
@@ -164,15 +164,15 @@ Obtains the maximum length of data that can be sent to a tag.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the maximum length of the data to be sent to the tag. |
+| int | Returns the maximum length of the data to be sent to the tag. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -244,7 +244,7 @@ Obtains the tag information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTagInfo](ohos.nfc.tag/tag#getTagInfo)
+**Substitutes:** [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md#getTagInfo)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -272,25 +272,21 @@ console.info("tag tagInfo: " + tagInfo);
 
 ## getTimeout
 
-ArkTS-Dyn:
-```TypeScript
-getTimeout(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getTimeout(): int
 ```
 
 Obtains the timeout duration (ms) for sending data to a tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-getTimeout(): int--><!--Device-TagSession-getTimeout(): int-End-->
 
@@ -300,15 +296,15 @@ Obtains the timeout duration (ms) for sending data to a tag.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the timeout duration. |
+| int | Returns the timeout duration. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -334,11 +330,13 @@ isConnected(): boolean
 
 Checks whether a connection has been set up with a tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
 
@@ -354,7 +352,7 @@ Checks whether a connection has been set up with a tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -386,7 +384,7 @@ Checks whether a connection has been set up with a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isConnected](tagSession.TagSession#isConnected)
+**Substitutes:** isConnected
 
 <!--Device-TagSession-isTagConnected(): boolean--><!--Device-TagSession-isTagConnected(): boolean-End-->
 
@@ -451,13 +449,15 @@ resetConnection(): void
 
 Resets a connection with a tag and restores the default timeout duration for writing data to the tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-resetConnection(): void--><!--Device-TagSession-resetConnection(): void-End-->
 
@@ -467,9 +467,9 @@ Resets a connection with a tag and restores the default timeout duration for wri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -501,7 +501,7 @@ Writes data to a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** [transmit](tagSession.TagSession#transmit)
+**Substitutes:** transmit
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -562,7 +562,7 @@ Writes data to a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** [transmit](tagSession.TagSession#transmit)
+**Substitutes:** transmit
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -575,7 +575,7 @@ Writes data to a tag.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | number[] | Yes | Indicates the data to be written to the tag. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | The callback. data fails to be written to the tag. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | The callback. data fails to be written to the tag. |
 
 ## Examples
 
@@ -611,7 +611,7 @@ function tagSessionDemo() {
 setSendDataTimeout(timeout: number): boolean
 ```
 
-Sets the timeout duration (ms) for sending data to a tag.&lt;p&gt;If data is not sent to the tag within the duration, data sending fails.
+Sets the timeout duration (ms) for sending data to a tag. &lt;p&gt;If data is not sent to the tag within the duration, data sending fails.
 
 **Since:** 7
 
@@ -619,7 +619,7 @@ Sets the timeout duration (ms) for sending data to a tag.&lt;p&gt;If data is not
 
 **Deprecated since:** 9
 
-**Substitutes:** [setTimeout](tagSession.TagSession#setTimeout)
+**Substitutes:** setTimeout
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -654,25 +654,21 @@ console.info("tag setSendDataTimeout setStatus: " + setStatus);
 
 ## setTimeout
 
-ArkTS-Dyn:
-```TypeScript
-setTimeout(timeout: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setTimeout(timeout: int): void
 ```
 
 Sets the timeout duration (ms) for sending data to a tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-setTimeout(timeout: int): void--><!--Device-TagSession-setTimeout(timeout: int): void-End-->
 
@@ -682,16 +678,16 @@ Sets the timeout duration (ms) for sending data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the timeout duration to be set. |
+| timeout | int | Yes | Indicates the timeout duration to be set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -712,25 +708,21 @@ try {
 
 ## transmit
 
-ArkTS-Dyn:
-```TypeScript
-transmit(data: number[]): Promise<number[]>
-```
-
-ArkTS-Sta:
 ```TypeScript
 transmit(data: int[]): Promise<int[]>
 ```
 
 Writes data to a tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-transmit(data: int[]): Promise<int[]>--><!--Device-TagSession-transmit(data: int[]): Promise<int[]>-End-->
 
@@ -740,23 +732,23 @@ Writes data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Indicates the data to be written to the tag. |
+| data | int[] | Yes | Indicates the data to be written to the tag. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number[]&gt;  <br>ArkTS-Sta：Promise&lt;int[]&gt; | Returns bytes received in response. Or bytes with a length of 0 if the data fails to be written to the tag. |
+| Promise&lt;int[]&gt; | Returns bytes received in response. Or bytes with a length of 0 if the data fails to be written to the tag. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -794,25 +786,21 @@ function tagSessionDemo() {
 
 ## transmit
 
-ArkTS-Dyn:
-```TypeScript
-transmit(data: number[], callback: AsyncCallback<number[]>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 transmit(data: int[], callback: AsyncCallback<int[]>): void
 ```
 
 Writes data to a tag.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
 
@@ -822,18 +810,18 @@ Writes data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Indicates the data to be written to the tag. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | The callback. |
+| data | int[] | Yes | Indicates the data to be written to the tag. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | The callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

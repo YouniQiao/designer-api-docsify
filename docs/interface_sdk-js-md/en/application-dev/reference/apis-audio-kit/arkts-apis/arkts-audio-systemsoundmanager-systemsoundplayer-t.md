@@ -8,7 +8,9 @@ Represents the system sound effect player object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-systemSoundManager-type SystemSoundPlayer = _SystemSoundPlayer--><!--Device-systemSoundManager-type SystemSoundPlayer = _SystemSoundPlayer-End-->
 

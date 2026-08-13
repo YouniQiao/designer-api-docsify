@@ -2,9 +2,11 @@
 
 Stream from which data can be read. A readable stream is used to read data from a source, such as a file or a network socket.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-stream-export class Readable--><!--Device-stream-export class Readable-End-->
 
@@ -24,11 +26,13 @@ constructor()
 
 A constructor used to create a **Readable** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-constructor()--><!--Device-Readable-constructor()-End-->
 
@@ -48,11 +52,13 @@ constructor(options: ReadableOptions)
 
 A constructor used to create a **Readable** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-constructor(options: ReadableOptions)--><!--Device-Readable-constructor(options: ReadableOptions)-End-->
 
@@ -79,14 +85,15 @@ let readableStream = new stream.Readable(option);
 doInitialize(callback: Function): void
 ```
 
-You need to implement this API. It is called when the readable stream calls  
-[on](stream.Writable#on(event: string, callback: Callback&lt;emitter.EventData&gt;)) for the first time. This API uses an asynchronous callback to return the result.
+You need to implement this API. It is called when the readable stream calls [on](arkts-arkts-stream-writable-c.md#on_string) for the first time. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-doInitialize(callback: Function): void--><!--Device-Readable-doInitialize(callback: Function): void-End-->
 
@@ -118,23 +125,19 @@ myReadable.on('data', () => {
 
 ## doRead
 
-ArkTS-Dyn:
-```TypeScript
-doRead(size: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 doRead(size: int): void
 ```
 
 A data read API that needs to be implemented in child classes.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-doRead(size: int): void--><!--Device-Readable-doRead(size: int): void-End-->
 
@@ -144,7 +147,7 @@ A data read API that needs to be implemented in child classes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 0 <= size <= Number.MAX_VALUE |
+| size | int | Yes | Number of bytes to read. Value range: 0 <= size <= Number.MAX_VALUE |
 
 ## Examples
 
@@ -170,13 +173,15 @@ readable.on('data', () => {
 isPaused(): boolean
 ```
 
-Checks whether the readable stream is paused. The stream is paused after [pause()](#pause)is called and resumes from the paused state after [resume()](#resume) is called.
+Checks whether the readable stream is paused. The stream is paused after [pause()](#pause) is called and resumes from the paused state after [resume()](#resume) is called.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-isPaused(): boolean--><!--Device-Readable-isPaused(): boolean-End-->
 
@@ -206,7 +211,7 @@ readableStream.pause();
 console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused true
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(event: string, callback?: Callback<emitter.EventData>): void
@@ -217,6 +222,8 @@ Unregisters an event processing callback used to listen for different events on 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -229,7 +236,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
 
 ## Examples
 
@@ -256,7 +263,7 @@ readable.push('test');
 // After off is used to unregister the listening of the readable stream events, the read function is not called and "read() called" is not printed.
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(event: string, callback?: Function): void
@@ -266,7 +273,9 @@ Cancel event message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -281,7 +290,7 @@ Cancel event message.
 | event | string | Yes | Registering Events. |
 | callback | Function | No | Event callback. |
 
-## on
+## on_string
 
 ```TypeScript
 on(event: string, callback: Callback<emitter.EventData>): void
@@ -292,6 +301,8 @@ Registers an event processing callback to listen for different events on the rea
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -304,7 +315,7 @@ Registers an event processing callback to listen for different events on the rea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
 
 ## Examples
 
@@ -326,7 +337,7 @@ readable.on('error', () => {
 });
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on(event: string, callback: Function): void
@@ -336,7 +347,9 @@ Registering Event Messages.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -359,11 +372,13 @@ pause(): Readable
 
 Pauses the readable stream in flowing mode. You can use **isPaused** to check whether the stream is paused.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-pause(): Readable--><!--Device-Readable-pause(): Readable-End-->
 
@@ -400,11 +415,13 @@ pipe(destination: Writable, options?: Object): Writable
 
 Attaches a writable stream to the readable stream to implement automatic data transmission.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-pipe(destination: Writable, options?: Object): Writable--><!--Device-Readable-pipe(destination: Writable, options?: Object): Writable-End-->
 
@@ -461,11 +478,13 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 Pushes data into the buffer of the readable stream.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean--><!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean-End-->
 
@@ -514,6 +533,8 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Readable-read(size?: number): string | null--><!--Device-Readable-read(size?: number): string | null-End-->
@@ -536,7 +557,7 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200038](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
 
 ## Examples
 
@@ -567,7 +588,9 @@ Reads a buffer of a specified size from the buffer. If the available buffer is s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -591,7 +614,7 @@ Reads a buffer of a specified size from the buffer. If the available buffer is s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200038](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
 
 ## resume
 
@@ -601,11 +624,13 @@ resume(): Readable
 
 Resumes an explicitly paused readable stream. You can use **isPaused** to check whether the stream is paused.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-resume(): Readable--><!--Device-Readable-resume(): Readable-End-->
 
@@ -640,13 +665,15 @@ console.info("Readable test resume", !readableStream.isPaused()); // After a suc
 setEncoding(encoding?: string): boolean
 ```
 
-Sets an encoding format for the readable stream.If the buffer contains data, setting the encoding format is not allowed, and **false** is returned.
+Sets an encoding format for the readable stream. If the buffer contains data, setting the encoding format is not allowed, and **false** is returned.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-setEncoding(encoding?: string): boolean--><!--Device-Readable-setEncoding(encoding?: string): boolean-End-->
 
@@ -689,11 +716,13 @@ unpipe(destination?: Writable): Readable
 
 Detaches a writable stream previously attached to the readable stream.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-unpipe(destination?: Writable): Readable--><!--Device-Readable-unpipe(destination?: Writable): Readable-End-->
 
@@ -744,144 +773,4 @@ readable.on('data', () => {
 });
 // After successful detaching, the data event is not triggered and "Readable test unpipe data event triggered" is not printed.
 ```
-
-## readable
-
-```TypeScript
-get readable(): boolean
-```
-
-Is true if it is safe to call readable.read(), which means the stream has not been destroyed or emitted 'error' or 'end'.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readable(): boolean--><!--Device-Readable-get readable(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableEncoding
-
-```TypeScript
-get readableEncoding(): string | null
-```
-
-Getter for the property encoding of a given Readable stream. The encoding property can be set using the readable.setEncoding() method.
-
-**Type:** string
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableEncoding(): string | null--><!--Device-Readable-get readableEncoding(): string | null-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableEnded
-
-```TypeScript
-get readableEnded(): boolean
-```
-
-Whether all data has been generated.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableEnded(): boolean--><!--Device-Readable-get readableEnded(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableFlowing
-
-```TypeScript
-get readableFlowing(): boolean | null
-```
-
-This property reflects the current state of the readable stream null/true/false.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableFlowing(): boolean | null--><!--Device-Readable-get readableFlowing(): boolean | null-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableHighWatermark
-
-```TypeScript
-get readableHighWatermark(): int
-```
-
-Returns the value of highWatermark passed when creating this Readable.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableHighWatermark(): int--><!--Device-Readable-get readableHighWatermark(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableLength
-
-```TypeScript
-get readableLength(): int
-```
-
-Size of the data that can be read, in bytes or objects.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableLength(): int--><!--Device-Readable-get readableLength(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableObjectMode
-
-```TypeScript
-get readableObjectMode(): boolean
-```
-
-Returns boolean indicating whether it is in ObjectMode.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableObjectMode(): boolean--><!--Device-Readable-get readableObjectMode(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
 

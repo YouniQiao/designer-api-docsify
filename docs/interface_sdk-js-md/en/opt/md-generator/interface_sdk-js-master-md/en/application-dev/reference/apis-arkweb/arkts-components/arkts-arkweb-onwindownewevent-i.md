@@ -4,6 +4,8 @@ Represents the callback invoked when the web page requests the user to create a 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnWindowNewEvent--><!--Device-unnamed-declare interface OnWindowNewEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ handler: ControllerHandler
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnWindowNewEvent-handler: ControllerHandler--><!--Device-OnWindowNewEvent-handler: ControllerHandler-End-->
@@ -32,11 +36,13 @@ handler: ControllerHandler
 isAlert: boolean
 ```
 
-Whether to open the target URL in a new window. The value **true** means to open the target URL in a new window,and **false** means to open the target URL in a new tab.
+Whether to open the target URL in a new window. The value **true** means to open the target URL in a new window, and **false** means to open the target URL in a new tab.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -50,11 +56,13 @@ Whether to open the target URL in a new window. The value **true** means to open
 isUserTrigger: boolean
 ```
 
-Whether the creation is triggered by the user. The value **true** means that the creation is triggered by the user,and **false** means the opposite.
+Whether the creation is triggered by the user. The value **true** means that the creation is triggered by the user, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -73,6 +81,8 @@ Target URL.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

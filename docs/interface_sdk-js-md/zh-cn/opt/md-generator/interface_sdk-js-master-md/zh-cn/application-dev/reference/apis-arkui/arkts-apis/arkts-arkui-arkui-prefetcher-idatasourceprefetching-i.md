@@ -6,7 +6,9 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource--><!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface IDataSourcePrefetching--><!--Device-unnamed-export interface IDataSourcePrefetching-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ cancel?(index: number): Promise<void> | void
 取消从数据集中预取指定的数据项。该方法可以为同步，也可为异步。该方法为可选方法，若数据源未实现该方法，则不执行取消预取操作。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +53,8 @@ prefetch(index: number): Promise<void> | void
 从数据集中预取指定的数据项。该方法可以为同步，也可为异步。当可见区域发生变化时，预取算法判断即将进入可见区域的数据项需要预取时，会调用该方法。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

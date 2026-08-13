@@ -2,7 +2,9 @@
 
 全量下载任务的进度信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSyncManager-class DownloadProgress--><!--Device-cloudSyncManager-class DownloadProgress-End-->
 
@@ -18,7 +20,9 @@ downloadedSize: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadProgress-downloadedSize: long--><!--Device-DownloadProgress-downloadedSize: long-End-->
 
@@ -34,7 +38,9 @@ failedCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadProgress-failedCount: int--><!--Device-DownloadProgress-failedCount: int-End-->
 
@@ -50,7 +56,9 @@ state: DownloadState
 
 **类型：** [DownloadState](arkts-corefile-cloudsyncmanager-downloadstate-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadProgress-state: DownloadState--><!--Device-DownloadProgress-state: DownloadState-End-->
 
@@ -66,7 +74,9 @@ stopReason: DownloadStopReason
 
 **类型：** [DownloadStopReason](arkts-corefile-cloudsyncmanager-downloadstopreason-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadProgress-stopReason: DownloadStopReason--><!--Device-DownloadProgress-stopReason: DownloadStopReason-End-->
 
@@ -82,7 +92,9 @@ successfulCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadProgress-successfulCount: int--><!--Device-DownloadProgress-successfulCount: int-End-->
 
@@ -98,7 +110,9 @@ totalCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadProgress-totalCount: int--><!--Device-DownloadProgress-totalCount: int-End-->
 
@@ -114,7 +128,9 @@ totalSize: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DownloadProgress-totalSize: long--><!--Device-DownloadProgress-totalSize: long-End-->
 

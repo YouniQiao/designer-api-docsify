@@ -8,7 +8,9 @@ RecordData is used for input parameter obj of the equal function
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-preferences-type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>--><!--Device-preferences-type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>-End-->
 

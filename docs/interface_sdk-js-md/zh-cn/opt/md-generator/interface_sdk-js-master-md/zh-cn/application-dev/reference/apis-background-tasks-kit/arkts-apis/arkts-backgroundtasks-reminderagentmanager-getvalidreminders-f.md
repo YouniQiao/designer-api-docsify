@@ -8,7 +8,9 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
 
@@ -24,8 +26,8 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) |
 
 ## 示例
 
@@ -71,7 +73,9 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 
@@ -87,8 +91,8 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) |
 
 ## 示例
 

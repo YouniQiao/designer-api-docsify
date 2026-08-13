@@ -1,10 +1,12 @@
 # DisplaySync
 
-An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback.Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md#create) to create a **DisplaySync** instance.
+An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback. Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md#create) to create a **DisplaySync** instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-displaySync-interface DisplaySync--><!--Device-displaySync-interface DisplaySync-End-->
 
@@ -16,7 +18,31 @@ An object that implements the setting of the frame rate and callback. It provide
 import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
-## off('frame')
+## offFrame
+
+```TypeScript
+offFrame(callback?: Callback<IntervalInfo>): void
+```
+
+Unsubscribes from change events of each frame.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+
+## off_frame
 
 ```TypeScript
 off(type: 'frame', callback?: Callback<IntervalInfo>): void
@@ -28,6 +54,8 @@ Unsubscribes from change events of each frame.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,7 +65,7 @@ Unsubscribes from change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 ## Examples
 
@@ -52,19 +80,21 @@ backDisplaySync?.on("frame", callback)
 backDisplaySync?.off("frame", callback)
 ```
 
-## offFrame
+## onFrame
 
 ```TypeScript
-offFrame(callback?: Callback<IntervalInfo>): void
+onFrame(callback: Callback<IntervalInfo>): void
 ```
 
-Unsubscribes from change events of each frame.
+Subscribes to change events of each frame.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,9 +102,9 @@ Unsubscribes from change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
 
-## on('frame')
+## on_frame
 
 ```TypeScript
 on(type: 'frame', callback: Callback<IntervalInfo>): void
@@ -86,6 +116,8 @@ Subscribes to change events of each frame.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -95,7 +127,7 @@ Subscribes to change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
 
 ## Examples
 
@@ -108,28 +140,6 @@ let callback = (frameInfo: displaySync.IntervalInfo) => {
 backDisplaySync?.on("frame", callback)
 ```
 
-## onFrame
-
-```TypeScript
-onFrame(callback: Callback<IntervalInfo>): void
-```
-
-Subscribes to change events of each frame.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
-
 ## setExpectedFrameRateRange
 
 ```TypeScript
@@ -138,9 +148,11 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 Sets the expected frame rate range.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
 
@@ -150,13 +162,13 @@ Sets the expected frame rate range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-apis/arkts-arkui-common-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
+| rateRange | [ExpectedFrameRateRange](../../apis-na/arkts-apis/arkts-na-common-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
 
 ## Examples
 
@@ -179,9 +191,11 @@ start(): void
 
 Starts callback for each frame.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
 
@@ -242,9 +256,11 @@ stop(): void
 
 Stops callback for each frame.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
 

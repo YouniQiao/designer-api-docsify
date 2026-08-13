@@ -4,6 +4,8 @@ Configuration stream result for AI-generated image tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GenerateImageTaskPartialResult--><!--Device-imageGeneration-interface GenerateImageTaskPartialResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Image data of the image corresponding to AI-generated image task, available in p
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskPartialResult-imageData?: string--><!--Device-GenerateImageTaskPartialResult-imageData?: string-End-->
@@ -47,6 +51,8 @@ Sequence number of the image corresponding to AI-generated image task, available
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Information of the partial error corresponding to AI-generated image task, avail
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskPartialResult-partialFail?: BusinessError--><!--Device-GenerateImageTaskPartialResult-partialFail?: BusinessError-End-->
@@ -88,6 +96,8 @@ Total number of the image corresponding to AI-generated image task, available in
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskPartialResult-totalCount?: int--><!--Device-GenerateImageTaskPartialResult-totalCount?: int-End-->
@@ -107,6 +117,8 @@ The type information used for AI-generated image task.
 **Type:** [PartialResultType](arkts-arkui-imagegeneration-partialresulttype-e-sys.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

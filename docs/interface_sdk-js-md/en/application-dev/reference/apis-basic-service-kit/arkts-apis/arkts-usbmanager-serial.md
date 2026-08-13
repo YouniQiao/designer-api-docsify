@@ -1,10 +1,24 @@
 # @ohos.usbManager.serial
 
-This module provides the serial port management functions, including enabling and disabling the serial port of the device, writing and reading data, setting and obtaining the configuration parameters of the serial port, and managing permissions.
+/*
+ Copyright (c) 2025 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace serialManager--><!--Device-unnamed-declare namespace serialManager-End-->
 
@@ -22,25 +36,25 @@ import { serialManager } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md#cancelserialright) | Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device. |
+| [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md#cancelSerialRight) | Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device. |
 | [close](arkts-basicservices-serialmanager-close-f.md#close) | Closes the serial port device. |
-| [getAttribute](arkts-basicservices-serialmanager-getattribute-f.md#getattribute) | Obtains the configuration parameters of a specified serial port. |
-| [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist) | Obtains the serial port device list, including the device name and port number. |
-| [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md#hasserialright) | Checks whether the application has the permission to access the serial port device. When an application is restarted after exits, you need to request the permission from the user again. |
+| [getAttribute](arkts-basicservices-serialmanager-getattribute-f.md#getAttribute) | Obtains the configuration parameters of a specified serial port. |
+| [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList) | Obtains the serial port device list, including the device name and port number. |
+| [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md#hasSerialRight) | Checks whether the application has the permission to access the serial port device. When an application is restarted after exits, you need to request the permission from the user again. |
 | [open](arkts-basicservices-serialmanager-open-f.md#open) | Opens a serial port device. |
 | [read](arkts-basicservices-serialmanager-read-f.md#read) | Reads data from the serial port device asynchronously. This API uses a promise to return the result. |
-| [readSync](arkts-basicservices-serialmanager-readsync-f.md#readsync) | Reads data from the serial port device synchronously. |
-| [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright) | Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result. |
-| [setAttribute](arkts-basicservices-serialmanager-setattribute-f.md#setattribute) | Sets the parameters of the serial port. If this method is not called, the default configuration parameters are used (baud rate: 9600 bit/s; data bit: 8; parity bit: 0; stop bit: 1). |
-| [write](arkts-basicservices-serialmanager-write-f.md#write) | Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB;otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result. |
-| [writeSync](arkts-basicservices-serialmanager-writesync-f.md#writesync) | Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB;otherwise, data loss may occur. You are advised to write long data in multiple packets. |
+| [readSync](arkts-basicservices-serialmanager-readsync-f.md#readSync) | Reads data from the serial port device synchronously. |
+| [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestSerialRight) | Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result. |
+| [setAttribute](arkts-basicservices-serialmanager-setattribute-f.md#setAttribute) | Sets the parameters of the serial port. If this method is not called, the default configuration parameters are used (baud rate: 9600 bit/s; data bit: 8; parity bit: 0; stop bit: 1). |
+| [write](arkts-basicservices-serialmanager-write-f.md#write) | Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result. |
+| [writeSync](arkts-basicservices-serialmanager-writesync-f.md#writeSync) | Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addSerialRight](arkts-basicservices-serialmanager-addserialright-f-sys.md#addserialright) | Adds the permission to an application for accessing the serial port device.serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. |
+| [addSerialRight](arkts-basicservices-serialmanager-addserialright-f-sys.md#addSerialRight) | Adds the permission to an application for accessing the serial port device. serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted , you need to request the permission again. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -10,6 +10,8 @@ export type ElementAttributeKeys = keyof ElementAttributeValues
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export type ElementAttributeKeys = keyof ElementAttributeValues--><!--Device-unnamed-export type ElementAttributeKeys = keyof ElementAttributeValues-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

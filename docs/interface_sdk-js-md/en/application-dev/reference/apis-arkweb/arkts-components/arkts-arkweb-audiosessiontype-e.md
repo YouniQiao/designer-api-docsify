@@ -6,6 +6,8 @@ Enumerates the web audio types in the application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AudioSessionType--><!--Device-unnamed-declare enum AudioSessionType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Web game sounds and system music can be played at the same time. This value is a
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionType-AMBIENT = 3--><!--Device-AudioSessionType-AMBIENT = 3-End-->
 

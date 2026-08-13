@@ -9,16 +9,20 @@ import { util } from '@kit.ArkTS';
 ## generateRandomBinaryUUID
 
 ```TypeScript
-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array | undefined
+function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array
 ```
 
-Generate a random RFC 4122 version 4 binary UUID using a cryptographically secure random number generator.
+Uses a secure random number generator to generate a random universally unique identifier (UUID) of RFC 4122 version 4.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array | undefined--><!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array | undefined-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array--><!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,11 +30,19 @@ Generate a random RFC 4122 version 4 binary UUID using a cryptographically secur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entropyCache | boolean | No | Whether to generate the UUID with using the cache. Default: true. |
+| entropyCache | boolean | No | Whether to use a cached UUID. The value **true** means to use a cached UUID, and **false** means the opposite. The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Return a Uint8Array representing this UUID, or undefined on failure. |
+| Uint8Array | A Uint8Array value representing the UUID generated. |
+
+## Examples
+
+```TypeScript
+let uuid = util.generateRandomBinaryUUID(true);
+console.info(JSON.stringify(uuid));
+// Output a random UUID.
+```
 

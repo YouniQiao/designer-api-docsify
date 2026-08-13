@@ -4,6 +4,8 @@ Used to intercept url requests. Response headers and body can be sent through We
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-class WebResourceHandler--><!--Device-webview-class WebResourceHandler-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Notify that this request should be failed.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void-End-->
@@ -40,8 +44,8 @@ Notify that this request should be failed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didFail
 
@@ -52,6 +56,8 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 Notify that this request should be failed.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void-End-->
 
@@ -68,8 +74,8 @@ Notify that this request should be failed.
 
 | Error Code ID |
 | --- |
-| [17100101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100101-incorrect-network-error-code) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [17100101](../errorcode-webview.md#17100101-incorrect-network-error-code) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didFail
 
@@ -80,6 +86,8 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 Notify that this request should be failed.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void-End-->
 
@@ -97,7 +105,7 @@ Notify that this request should be failed.
 
 | Error Code ID |
 | --- |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didFinish
 
@@ -109,6 +117,8 @@ Notify that this request should be finished and there is no more data available.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebResourceHandler-didFinish(): void--><!--Device-WebResourceHandler-didFinish(): void-End-->
@@ -119,7 +129,7 @@ Notify that this request should be finished and there is no more data available.
 
 | Error Code ID |
 | --- |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didReceiveResponse
 
@@ -130,6 +140,8 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 Pass response headers to intercepted requests.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -147,8 +159,8 @@ Pass response headers to intercepted requests.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didReceiveResponseBody
 
@@ -159,6 +171,8 @@ didReceiveResponseBody(data: ArrayBuffer): void
 Pass response body data to intercepted requests.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -176,5 +190,5 @@ Pass response body data to intercepted requests.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |

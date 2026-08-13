@@ -8,7 +8,9 @@ Defines a onAbilityWillContinue function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-type OnAbilityWillContinueFn = (ability: UIAbility) => void--><!--Device-unnamed-type OnAbilityWillContinueFn = (ability: UIAbility) => void-End-->
 

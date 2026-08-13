@@ -6,6 +6,8 @@ Defines the moving photo view interface.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface MovingPhotoViewInterface--><!--Device-unnamed-interface MovingPhotoViewInterface-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -16,7 +18,7 @@ Defines the moving photo view interface.
 import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from '@kit.MediaLibraryKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options: MovingPhotoViewOptions): MovingPhotoViewAttribute
@@ -27,6 +29,8 @@ Set the options.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

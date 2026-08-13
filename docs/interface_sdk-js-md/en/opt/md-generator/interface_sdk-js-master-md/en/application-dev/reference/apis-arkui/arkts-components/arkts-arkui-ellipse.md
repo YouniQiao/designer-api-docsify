@@ -1,9 +1,6 @@
 # Ellipse
 
-The **Ellipse** component is used to draw an ellipse.
-> **Child Components**
->
-> None
+The **Ellipse** component is used to draw an ellipse. > **Child Components** > > None
 
 ## Ellipse
 
@@ -11,9 +8,11 @@ The **Ellipse** component is used to draw an ellipse.
 Ellipse(options?: EllipseOptions)
 ```
 
-use new function to set the value.Anonymous Object Rectification.
+use new function to set the value. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +38,8 @@ Set the value.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -55,4 +56,4 @@ Set the value.
 
 ## Summary
 
-- [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md)
+- [EllipseOptions](arkts-arkui-ellipseoptions-i.md)

@@ -1,8 +1,10 @@
 # @ohos.account.appAccount
 
-The **appAccount** module provides APIs for adding, deleting, modifying, and querying application account information, and supports inter-application authentication and distributed data synchronization.
+The **appAccount** module provides APIs for adding, deleting, modifying, and querying application account information , and supports inter-application authentication and distributed data synchronization.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace appAccount--><!--Device-unnamed-declare namespace appAccount-End-->
 
@@ -20,7 +22,7 @@ import { appAccount } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md#createappaccountmanager) |
+| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md#createAppAccountManager) |
 
 ### Classes
 

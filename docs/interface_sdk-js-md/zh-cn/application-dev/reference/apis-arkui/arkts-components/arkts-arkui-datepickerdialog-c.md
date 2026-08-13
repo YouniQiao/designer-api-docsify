@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class DatePickerDialog--><!--Device-unnamed-declare class DatePickerDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,12 +18,7 @@
 static show(options?: DatePickerDialogOptions)
 ```
 
-定义日期滑动选择器弹窗并弹出。
-
-> **说明：**
-> 
-> 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showDatePickerDialog)来明确UI的执行上下文。
+定义日期滑动选择器弹窗并弹出。 > **说明：** > > 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showDatePickerDialog)来明确UI的执行上下文。
 
 **起始版本：** 8
 

@@ -2,7 +2,9 @@
 
 描述数据库表的端云同步过程的统计信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-interface Statistic--><!--Device-relationalStore-interface Statistic-End-->
 
@@ -18,7 +20,9 @@ failed: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Statistic-failed: int--><!--Device-Statistic-failed: int-End-->
 
@@ -34,7 +38,9 @@ remained: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Statistic-remained: int--><!--Device-Statistic-remained: int-End-->
 
@@ -50,7 +56,9 @@ successful: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Statistic-successful: int--><!--Device-Statistic-successful: int-End-->
 
@@ -66,7 +74,9 @@ total: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Statistic-total: int--><!--Device-Statistic-total: int-End-->
 

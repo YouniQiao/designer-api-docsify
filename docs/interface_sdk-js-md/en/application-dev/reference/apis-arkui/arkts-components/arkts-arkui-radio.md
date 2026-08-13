@@ -1,15 +1,8 @@
 # Radio
 
-The **Radio** component allows users to select from a set of mutually exclusive options.
+The **Radio** component allows users to select from a set of mutually exclusive options. > **NOTE** > > Since API version 12, the default indicator type for the **Radio** component changes from > **RadioIndicatorType.DOT** to **RadioIndicatorType.TICK**.
 
-> **NOTE**
->
-> Since API version 12, the default indicator type for the **Radio** component changes from 
-> **RadioIndicatorType.DOT** to **RadioIndicatorType.TICK**.
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## Radio
 
@@ -22,6 +15,8 @@ Creates a radio button.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,8 +34,8 @@ Creates a radio button.
 
 ## Summary
 
-- [RadioConfiguration](arkts-arkui-radio-radioconfiguration-i.md)
-- [RadioOptions](arkts-arkui-radio-radiooptions-i.md)
-- [RadioStyle](arkts-arkui-radio-radiostyle-i.md)
-- [OnRadioChangeCallback](arkts-arkui-radio-onradiochangecallback-t.md)
-- [RadioIndicatorType](arkts-arkui-radio-radioindicatortype-e.md)
+- [RadioConfiguration](arkts-arkui-radioconfiguration-i.md)
+- [RadioOptions](arkts-arkui-radiooptions-i.md)
+- [RadioStyle](arkts-arkui-radiostyle-i.md)
+- [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)
+- [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md)

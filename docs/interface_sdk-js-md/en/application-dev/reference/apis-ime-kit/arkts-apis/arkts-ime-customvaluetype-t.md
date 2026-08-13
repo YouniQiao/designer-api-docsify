@@ -6,9 +6,11 @@ export type CustomValueType = int | string | boolean
 
 Represents the extension information type. The specific type of the parameter depends on its functionality.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type CustomValueType = int | string | boolean--><!--Device-unnamed-export type CustomValueType = int | string | boolean-End-->
 

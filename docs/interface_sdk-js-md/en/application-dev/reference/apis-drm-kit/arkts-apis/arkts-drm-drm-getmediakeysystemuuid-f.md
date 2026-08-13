@@ -14,9 +14,11 @@ function getMediaKeySystemUuid(name: string): string
 
 Obtains the UUID of the DRM content protection system supported by the specified DRM solution.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -28,7 +30,7 @@ Obtains the UUID of the DRM content protection system supported by the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | DRM solution name. You can check whether the solution name is supported by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-2). |
+| name | string | Yes | DRM solution name. You can check whether the solution name is supported by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported). |
 
 **Return value:**
 
@@ -40,9 +42,9 @@ Obtains the UUID of the DRM content protection system supported by the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed.Possibly because: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possibly because: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## Examples
 

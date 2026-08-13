@@ -12,11 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function factoryReset(): Promise<void>
 ```
 
-factory reset network settings
+factory reset network settings To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
-To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -36,10 +36,10 @@ To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INT
 
 | Error Code ID |
 | --- |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

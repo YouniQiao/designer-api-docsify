@@ -2,7 +2,9 @@
 
 Describes the screenshot options.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screenshot-interface ScreenshotOptions--><!--Device-screenshot-interface ScreenshotOptions-End-->
 
@@ -26,7 +28,9 @@ ID of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) device o
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-displayId?: long--><!--Device-ScreenshotOptions-displayId?: long-End-->
 
@@ -44,7 +48,9 @@ Region of the screen to capture. If no value is passed, the region of the logica
 
 **Type:** Size
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-imageSize?: Size--><!--Device-ScreenshotOptions-imageSize?: Size-End-->
 
@@ -58,12 +64,13 @@ Region of the screen to capture. If no value is passed, the region of the logica
 isCaptureFullOfScreen?: boolean
 ```
 
-Whether to capture all displays on the current screen. If the screen contains multiple displays, the value  
-**true** means that the entire screen is captured, and **false** means that only the region of the logical screen associated with the specified display ID is captured.
+Whether to capture all displays on the current screen. If the screen contains multiple displays, the value **true** means that the entire screen is captured, and **false** means that only the region of the logical screen associated with the specified display ID is captured.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-isCaptureFullOfScreen?: boolean--><!--Device-ScreenshotOptions-isCaptureFullOfScreen?: boolean-End-->
 
@@ -77,12 +84,13 @@ Whether to capture all displays on the current screen. If the screen contains mu
 isNotificationNeeded?: boolean
 ```
 
-Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through  
-[captureStatusChange](@ohos.display:display.on(type: 'captureStatusChange', callback: Callback&lt;boolean&gt;)).
+Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through captureStatusChange.
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-isNotificationNeeded?: boolean--><!--Device-ScreenshotOptions-isNotificationNeeded?: boolean-End-->
 
@@ -96,12 +104,13 @@ Whether to send a notification after a snapshot is captured. **true** to send, *
 rotation?: number
 ```
 
-Angle by which the captured image should be rotated. Currently, the value can be **0** only. The default value is  
-**0**.
+Angle by which the captured image should be rotated. Currently, the value can be **0** only. The default value is **0**.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-rotation?: int--><!--Device-ScreenshotOptions-rotation?: int-End-->
 
@@ -119,7 +128,9 @@ Region of the screen to capture. If no value is passed, the region of the logica
 
 **Type:** Rect
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-screenRect?: Rect--><!--Device-ScreenshotOptions-screenRect?: Rect-End-->
 

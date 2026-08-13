@@ -6,6 +6,8 @@ Provides detailed information about clicking or touching and holding a same-laye
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NativeEmbedMouseInfo--><!--Device-unnamed-declare interface NativeEmbedMouseInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Unique ID of the same-layer tag.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-NativeEmbedMouseInfo-embedId?: string--><!--Device-NativeEmbedMouseInfo-embedId?: string-End-->
 
@@ -42,6 +46,8 @@ Information about clicking or touching and holding using the mouse or touchpad.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-NativeEmbedMouseInfo-mouseEvent?: MouseEvent--><!--Device-NativeEmbedMouseInfo-mouseEvent?: MouseEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -59,6 +65,8 @@ Mouse event consumption result.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-NativeEmbedMouseInfo-result?: EventResult--><!--Device-NativeEmbedMouseInfo-result?: EventResult-End-->
 

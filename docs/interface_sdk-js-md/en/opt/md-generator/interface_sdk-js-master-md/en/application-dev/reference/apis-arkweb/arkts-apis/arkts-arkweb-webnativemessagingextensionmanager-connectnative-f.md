@@ -16,6 +16,8 @@ Connects the current ability to the specified web native message extension abili
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 
 **Model restriction:** This API can be used only in the stage model.
@@ -42,7 +44,7 @@ Connects the current ability to the specified web native message extension abili
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

@@ -1,10 +1,12 @@
 # ShareCenter (System API)
 
-Provides APIs for interacting with the sharedCenter service.You need to inherit this class and implement APIs of this class.The system calls these APIs to initiate, cancel, or exit a device-cloud share.
+Provides APIs for interacting with the sharedCenter service. You need to inherit this class and implement APIs of this class. The system calls these APIs to initiate, cancel, or exit a device-cloud share.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface ShareCenter--><!--Device-cloudExtension-export interface ShareCenter-End-->
 
@@ -20,17 +22,6 @@ import { cloudExtension } from '@kit.ArkData';
 
 ## changeConfirmation
 
-ArkTS-Dyn:
-```TypeScript
-changeConfirmation(
-      userId: number,
-      bundleName: string,
-      sharingResource: string,
-      state: cloudData.sharing.State
-    ): Promise<Result<void>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 changeConfirmation(
       userId: int,
@@ -40,11 +31,13 @@ changeConfirmation(
     ): Promise<Result<void>>
 ```
 
-Changes the confirmation state of a share invitation. This API uses a promise to return the result.The application, shared resource ID, and the new conformation state need to be specified.This API uses a promise to return the result.
+Changes the confirmation state of a share invitation. This API uses a promise to return the result. The application, shared resource ID, and the new conformation state need to be specified. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-changeConfirmation(      userId: int,      bundleName: string,      sharingResource: string,      state: cloudData.sharing.State    ): Promise<Result<void>>--><!--Device-ShareCenter-changeConfirmation(      userId: int,      bundleName: string,      sharingResource: string,      state: cloudData.sharing.State    ): Promise<Result<void>>-End-->
 
@@ -56,7 +49,7 @@ Changes the confirmation state of a share invitation. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
 | state | cloudData.sharing.State | Yes | New confirmation state. |
@@ -91,17 +84,6 @@ class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## changePrivilege
 
-ArkTS-Dyn:
-```TypeScript
-changePrivilege(
-      userId: number,
-      bundleName: string,
-      sharingResource: string,
-      participants: Array<cloudData.sharing.Participant>
-    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 changePrivilege(
       userId: int,
@@ -111,11 +93,13 @@ changePrivilege(
     ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
 ```
 
-Changes the privilege (operation permissions) on the shared data.This API uses a promise to return the result.The application, shared resource ID, and the participants with new privilege need to be specified.
+Changes the privilege (operation permissions) on the shared data. This API uses a promise to return the result. The application, shared resource ID, and the participants with new privilege need to be specified.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-changePrivilege(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-changePrivilege(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
 
@@ -127,7 +111,7 @@ Changes the privilege (operation permissions) on the shared data.This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
 | participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
@@ -172,17 +156,6 @@ class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## confirmInvitation
 
-ArkTS-Dyn:
-```TypeScript
-confirmInvitation(
-      userId: number,
-      bundleName: string,
-      invitationCode: string,
-      state: cloudData.sharing.State
-    ): Promise<Result<string>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 confirmInvitation(
       userId: int,
@@ -192,11 +165,13 @@ confirmInvitation(
     ): Promise<Result<string>>
 ```
 
-Confirms the invitation for a share. This API uses a promise to return the result.The application, invitation code for the share, and the confirmation state need to be specified.
+Confirms the invitation for a share. This API uses a promise to return the result. The application, invitation code for the share, and the confirmation state need to be specified.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-confirmInvitation(      userId: int,      bundleName: string,      invitationCode: string,      state: cloudData.sharing.State    ): Promise<Result<string>>--><!--Device-ShareCenter-confirmInvitation(      userId: int,      bundleName: string,      invitationCode: string,      state: cloudData.sharing.State    ): Promise<Result<string>>-End-->
 
@@ -208,7 +183,7 @@ Confirms the invitation for a share. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | invitationCode | string | Yes | Invitation code for the share. |
 | state | cloudData.sharing.State | Yes | Confirmation state of the invitation. |
@@ -244,21 +219,17 @@ class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## exit
 
-ArkTS-Dyn:
-```TypeScript
-exit(userId: number, bundleName: string, sharingResource: string): Promise<Result<void>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>
 ```
 
-Exits a device-cloud share. This API uses a promise to return the result.The application and shared resource ID need to be specified.
+Exits a device-cloud share. This API uses a promise to return the result. The application and shared resource ID need to be specified.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>--><!--Device-ShareCenter-exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>-End-->
 
@@ -270,7 +241,7 @@ Exits a device-cloud share. This API uses a promise to return the result.The app
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
 
@@ -304,16 +275,6 @@ class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## queryParticipants
 
-ArkTS-Dyn:
-```TypeScript
-queryParticipants(
-      userId: number,
-      bundleName: string,
-      sharingResource: string
-    ): Promise<Result<Array<cloudData.sharing.Participant>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryParticipants(
       userId: int,
@@ -322,11 +283,13 @@ queryParticipants(
     ): Promise<Result<Array<cloudData.sharing.Participant>>>
 ```
 
-Queries the participants of a share. This API uses a promise to return the result.The application and shared resource ID need to be specified.
+Queries the participants of a share. This API uses a promise to return the result. The application and shared resource ID need to be specified.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-queryParticipants(      userId: int,      bundleName: string,      sharingResource: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>--><!--Device-ShareCenter-queryParticipants(      userId: int,      bundleName: string,      sharingResource: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>-End-->
 
@@ -338,7 +301,7 @@ Queries the participants of a share. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
 
@@ -402,16 +365,6 @@ class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## queryParticipantsByInvitation
 
-ArkTS-Dyn:
-```TypeScript
-queryParticipantsByInvitation(
-      userId: number,
-      bundleName: string,
-      invitationCode: string
-    ): Promise<Result<Array<cloudData.sharing.Participant>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryParticipantsByInvitation(
       userId: int,
@@ -420,11 +373,13 @@ queryParticipantsByInvitation(
     ): Promise<Result<Array<cloudData.sharing.Participant>>>
 ```
 
-Queries the participants of a share based on the invitation code.This API uses a promise to return the result.The application and the invitation code of the shared data need to be specified.
+Queries the participants of a share based on the invitation code. This API uses a promise to return the result. The application and the invitation code of the shared data need to be specified.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-queryParticipantsByInvitation(      userId: int,      bundleName: string,      invitationCode: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>--><!--Device-ShareCenter-queryParticipantsByInvitation(      userId: int,      bundleName: string,      invitationCode: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>-End-->
 
@@ -436,7 +391,7 @@ Queries the participants of a share based on the invitation code.This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | invitationCode | string | Yes | Invitation code for the share. |
 
@@ -500,17 +455,6 @@ class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## share
 
-ArkTS-Dyn:
-```TypeScript
-share(
-      userId: number,
-      bundleName: string,
-      sharingResource: string,
-      participants: Array<cloudData.sharing.Participant>
-    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 share(
       userId: int,
@@ -520,11 +464,13 @@ share(
     ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
 ```
 
-Shares data. This API uses a promise to return the result.The application that initiates the share, shared resource ID, participants of the share need to be specified.
+Shares data. This API uses a promise to return the result. The application that initiates the share, shared resource ID, participants of the share need to be specified.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-share(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-share(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
 
@@ -536,7 +482,7 @@ Shares data. This API uses a promise to return the result.The application that i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
 | participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
@@ -581,17 +527,6 @@ class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## unshare
 
-ArkTS-Dyn:
-```TypeScript
-unshare(
-      userId: number,
-      bundleName: string,
-      sharingResource: string,
-      participants: Array<cloudData.sharing.Participant>
-    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 unshare(
       userId: int,
@@ -601,11 +536,13 @@ unshare(
     ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
 ```
 
-Unshares data. This API uses a promise to return the result.The application, shared resource ID, and participants for the data to unshare need to be specified.
+Unshares data. This API uses a promise to return the result. The application, shared resource ID, and participants for the data to unshare need to be specified.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ShareCenter-unshare(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-unshare(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
 
@@ -617,7 +554,7 @@ Unshares data. This API uses a promise to return the result.The application, sha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
 | participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |

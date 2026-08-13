@@ -2,7 +2,9 @@
 
 Fusion assets information.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface FusionAssetsInfo--><!--Device-photoAccessHelper-interface FusionAssetsInfo-End-->
 
@@ -26,7 +28,9 @@ Assets count.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-FusionAssetsInfo-assetsCount: int--><!--Device-FusionAssetsInfo-assetsCount: int-End-->
 
@@ -44,7 +48,9 @@ Assets path.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-FusionAssetsInfo-assetsPath: string--><!--Device-FusionAssetsInfo-assetsPath: string-End-->
 
@@ -62,7 +68,9 @@ Assets type.
 
 **Type:** [FusionAssetType](arkts-medialibrary-photoaccesshelper-fusionassettype-e-sys.md)
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-FusionAssetsInfo-assetsType: FusionAssetType--><!--Device-FusionAssetsInfo-assetsType: FusionAssetType-End-->
 

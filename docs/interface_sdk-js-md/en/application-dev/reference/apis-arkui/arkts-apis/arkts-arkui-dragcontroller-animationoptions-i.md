@@ -6,6 +6,8 @@ Defines the animation options for drag preview.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface AnimationOptions--><!--Device-dragController-interface AnimationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Animation curve.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnimationOptions-curve?: Curve | ICurve--><!--Device-AnimationOptions-curve?: Curve | ICurve-End-->
@@ -49,6 +53,8 @@ Animation duration, in ms.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

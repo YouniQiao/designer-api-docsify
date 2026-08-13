@@ -6,6 +6,8 @@ Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper co
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ItemFillPolicy--><!--Device-unnamed-declare interface ItemFillPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Specify the number of columns for different responsive breakpoints.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

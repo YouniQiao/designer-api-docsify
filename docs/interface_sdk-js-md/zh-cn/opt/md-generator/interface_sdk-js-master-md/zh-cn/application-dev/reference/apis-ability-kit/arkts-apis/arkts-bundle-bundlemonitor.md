@@ -2,7 +2,9 @@
 
 本模块提供监听应用安装，卸载，更新的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace bundleMonitor--><!--Device-unnamed-declare namespace bundleMonitor-End-->
 
@@ -17,8 +19,14 @@
 
 | 名称 |
 | --- |
-| [off](arkts-ability-bundlemonitor-off-f-sys.md#off) |
-| [on](arkts-ability-bundlemonitor-on-f-sys.md#on) |
+| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md#offAdd（系统接口）) |
+| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md#offRemove（系统接口）) |
+| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md#offUpdate（系统接口）) |
+| [off_BundleChangedEvent](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_BundleChangedEvent) |
+| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md#onAdd（系统接口）) |
+| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md#onRemove（系统接口）) |
+| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md#onUpdate（系统接口）) |
+| [on_BundleChangedEvent](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_BundleChangedEvent) |
 <!--DelEnd-->
 
 <!--Del-->

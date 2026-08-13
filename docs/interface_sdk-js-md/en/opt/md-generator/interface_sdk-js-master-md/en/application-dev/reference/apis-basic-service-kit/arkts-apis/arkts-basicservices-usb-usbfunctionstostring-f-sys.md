@@ -18,7 +18,7 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 **Deprecated since:** 9
 
-**Substitutes:** [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbFunctionsToString)
+**Substitutes:** [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbFunctionsToString-(System-API))
 
 <!--Device-usb-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usb-function usbFunctionsToString(funcs: FunctionType): string-End-->
 

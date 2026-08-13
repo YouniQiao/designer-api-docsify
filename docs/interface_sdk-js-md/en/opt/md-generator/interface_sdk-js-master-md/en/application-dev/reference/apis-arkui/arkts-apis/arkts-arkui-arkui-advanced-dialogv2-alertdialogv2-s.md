@@ -4,7 +4,7 @@ Declare CustomDialog AlertDialogV2.
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AlertDialogV2--><!--Device-unnamed-export declare struct AlertDialogV2-End-->
 
@@ -19,7 +19,9 @@ import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Butto
 ## content
 
 ```TypeScript
-content: ResourceStr
+@Require
+  @Param
+  content: ResourceStr
 ```
 
 Sets the AlertDialogV2 content.
@@ -28,20 +30,21 @@ Sets the AlertDialogV2 content.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AlertDialogV2-content: ResourceStr--><!--Device-AlertDialogV2-content: ResourceStr-End-->
+<!--Device-AlertDialogV2-@Require  @Param  content: ResourceStr--><!--Device-AlertDialogV2-@Require  @Param  content: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryButton
 
 ```TypeScript
-primaryButton?: AdvancedDialogV2Button
+@Param
+  primaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the AlertDialogV2 primary button.
@@ -50,20 +53,21 @@ Sets the AlertDialogV2 primary button.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AlertDialogV2-primaryButton?: AdvancedDialogV2Button--><!--Device-AlertDialogV2-primaryButton?: AdvancedDialogV2Button-End-->
+<!--Device-AlertDialogV2-@Param  primaryButton?: AdvancedDialogV2Button--><!--Device-AlertDialogV2-@Param  primaryButton?: AdvancedDialogV2Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitle
 
 ```TypeScript
-primaryTitle?: ResourceStr
+@Param
+  primaryTitle?: ResourceStr
 ```
 
 Sets the AlertDialogV2 title.
@@ -72,20 +76,21 @@ Sets the AlertDialogV2 title.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AlertDialogV2-primaryTitle?: ResourceStr--><!--Device-AlertDialogV2-primaryTitle?: ResourceStr-End-->
+<!--Device-AlertDialogV2-@Param  primaryTitle?: ResourceStr--><!--Device-AlertDialogV2-@Param  primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryButton
 
 ```TypeScript
-secondaryButton?: AdvancedDialogV2Button
+@Param
+  secondaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the AlertDialogV2 secondary button.
@@ -94,20 +99,21 @@ Sets the AlertDialogV2 secondary button.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AlertDialogV2-secondaryButton?: AdvancedDialogV2Button--><!--Device-AlertDialogV2-secondaryButton?: AdvancedDialogV2Button-End-->
+<!--Device-AlertDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button--><!--Device-AlertDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitle
 
 ```TypeScript
-secondaryTitle?: ResourceStr
+@Param
+  secondaryTitle?: ResourceStr
 ```
 
 Sets the AlertDialogV2 secondary title.
@@ -116,12 +122,12 @@ Sets the AlertDialogV2 secondary title.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AlertDialogV2-secondaryTitle?: ResourceStr--><!--Device-AlertDialogV2-secondaryTitle?: ResourceStr-End-->
+<!--Device-AlertDialogV2-@Param  secondaryTitle?: ResourceStr--><!--Device-AlertDialogV2-@Param  secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class BaseShape extends CommonShapeMethod--><!--Device-unnamed-export declare class BaseShape extends CommonShapeMethod-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class BaseShape--><!--Device-unnamed-export declare class BaseShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +26,8 @@ height(height: Length): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BaseShape-height(height: Length): this--><!--Device-BaseShape-height(height: Length): this-End-->
@@ -34,7 +38,7 @@ height(height: Length): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [Length](arkts-arkui-length-t.md) | 是 | 形状的高度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| height | [Length](../../apis-na/arkts-apis/arkts-na-length-t.md) | 是 | 形状的高度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -54,6 +58,8 @@ size(size: SizeOptions): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BaseShape-size(size: SizeOptions): this--><!--Device-BaseShape-size(size: SizeOptions): this-End-->
@@ -64,7 +70,7 @@ size(size: SizeOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | 是 | 形状的大小。 |
+| size | [SizeOptions](../../apis-na/arkts-apis/arkts-na-units-sizeoptions-i.md) | 是 | 形状的大小。 |
 
 **返回值：**
 
@@ -84,6 +90,8 @@ width(width: Length): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BaseShape-width(width: Length): this--><!--Device-BaseShape-width(width: Length): this-End-->
@@ -94,7 +102,7 @@ width(width: Length): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | [Length](arkts-arkui-length-t.md) | 是 | 形状的宽度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| width | [Length](../../apis-na/arkts-apis/arkts-na-length-t.md) | 是 | 形状的宽度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

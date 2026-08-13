@@ -4,6 +4,8 @@ USB设备ID信息。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-usbManager-export interface UsbDeviceId--><!--Device-usbManager-export interface UsbDeviceId-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -19,6 +21,8 @@ productId: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ vendorId: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

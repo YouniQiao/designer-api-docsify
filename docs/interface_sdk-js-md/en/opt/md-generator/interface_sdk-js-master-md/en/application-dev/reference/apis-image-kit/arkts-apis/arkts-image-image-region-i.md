@@ -2,7 +2,9 @@
 
 Describes the region information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface Region--><!--Device-image-interface Region-End-->
 
@@ -24,7 +26,9 @@ Region size.
 
 **Type:** Size
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +48,9 @@ X coordinate of the top-left corner of the region, in px.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +70,9 @@ Y coordinate of the top-left corner of the region, in px.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

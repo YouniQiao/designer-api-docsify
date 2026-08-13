@@ -4,6 +4,8 @@ Declare CustomDialog TipsDialog
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare struct TipsDialog--><!--Device-unnamed-export declare struct TipsDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,11 @@ checkAction?: (isChecked: boolean) => void
 
 Sets the TipsDialog CheckBox Callback.
 
+**Type:** (isChecked: boolean) =&gt; void
+
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,12 +37,6 @@ Sets the TipsDialog CheckBox Callback.
 <!--Device-TipsDialog-checkAction?: (isChecked: boolean) => void--><!--Device-TipsDialog-checkAction?: (isChecked: boolean) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [isChecked](#ischecked) | boolean | Yes |
 
 ## checkTips
 
@@ -49,6 +49,8 @@ Sets the TipsDialog checkbox tips.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +72,8 @@ Sets the TipsDialog content.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -89,6 +93,8 @@ Sets the TipsDialog Controller.
 **Type:** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +116,8 @@ Sets the TipsDialog imageRes.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -130,6 +138,8 @@ Sets the TipsDialog image size.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -141,7 +151,7 @@ Sets the TipsDialog image size.
 ## isChecked
 
 ```TypeScript
-isChecked?: boolean
+@Prop isChecked?: boolean
 ```
 
 Sets the TipsDialog checkbox check state.
@@ -150,13 +160,13 @@ Sets the TipsDialog checkbox check state.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TipsDialog-isChecked?: boolean--><!--Device-TipsDialog-isChecked?: boolean-End-->
+<!--Device-TipsDialog-@Prop isChecked?: boolean--><!--Device-TipsDialog-@Prop isChecked?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,6 +181,8 @@ Sets the TipsDialog CheckBox Callback.
 **Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,6 +204,8 @@ Sets the TipsDialog primary button.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -211,6 +225,8 @@ Sets the TipsDialog secondary button.
 **Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -232,6 +248,8 @@ Custom Theme.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -252,6 +270,8 @@ Sets the TipsDialog dark or light Mode.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -271,6 +291,8 @@ Sets the TipsDialog title.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

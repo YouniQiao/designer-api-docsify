@@ -2,7 +2,9 @@
 
 Defines a number mark.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface NumberMarkInfo--><!--Device-call-export interface NumberMarkInfo-End-->
 
@@ -22,14 +24,13 @@ import { call } from '@kit.TelephonyKit';
 isCloud?: boolean
 ```
 
-Whether the number mark is from the cloud. The default value is **false**.
-
-- **true**: yes  
-- **false**: no
+Whether the number mark is from the cloud. The default value is **false**. - **true**: yes - **false**: no
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-isCloud?: boolean--><!--Device-NumberMarkInfo-isCloud?: boolean-End-->
 
@@ -47,7 +48,9 @@ Mark content. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the returned
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markContent?: string--><!--Device-NumberMarkInfo-markContent?: string-End-->
 
@@ -65,7 +68,9 @@ Mark count.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markCount?: int--><!--Device-NumberMarkInfo-markCount?: int-End-->
 
@@ -83,7 +88,9 @@ Mark details. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the value of
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markDetails?: string--><!--Device-NumberMarkInfo-markDetails?: string-End-->
 
@@ -101,7 +108,9 @@ Mark source.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markSource?: string--><!--Device-NumberMarkInfo-markSource?: string-End-->
 
@@ -119,7 +128,9 @@ Mark type.
 
 **Type:** [MarkType](arkts-telephony-call-marktype-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markType: MarkType--><!--Device-NumberMarkInfo-markType: MarkType-End-->
 

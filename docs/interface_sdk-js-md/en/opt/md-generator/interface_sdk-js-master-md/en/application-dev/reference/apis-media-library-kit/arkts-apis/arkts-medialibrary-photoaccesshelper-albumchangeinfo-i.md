@@ -2,7 +2,9 @@
 
 Describes the information about an album.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface AlbumChangeInfo--><!--Device-photoAccessHelper-interface AlbumChangeInfo-End-->
 
@@ -24,7 +26,9 @@ Album name.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-albumName: string--><!--Device-AlbumChangeInfo-albumName: string-End-->
 
@@ -40,7 +44,9 @@ Subtype of the album.
 
 **Type:** AlbumSubtype
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-albumSubtype: AlbumSubtype--><!--Device-AlbumChangeInfo-albumSubtype: AlbumSubtype-End-->
 
@@ -56,7 +62,9 @@ Type of the album.
 
 **Type:** AlbumType
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-albumType: AlbumType--><!--Device-AlbumChangeInfo-albumType: AlbumType-End-->
 
@@ -72,7 +80,9 @@ URI of the album.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-albumUri: string--><!--Device-AlbumChangeInfo-albumUri: string-End-->
 
@@ -88,7 +98,9 @@ Total number of assets in the album, including images and videos.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-count: int--><!--Device-AlbumChangeInfo-count: int-End-->
 
@@ -104,7 +116,9 @@ URI of the album cover asset.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-coverUri: string--><!--Device-AlbumChangeInfo-coverUri: string-End-->
 
@@ -120,7 +134,9 @@ Number of images in the album.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-imageCount: int--><!--Device-AlbumChangeInfo-imageCount: int-End-->
 
@@ -136,7 +152,9 @@ Number of videos in the album.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-videoCount: int--><!--Device-AlbumChangeInfo-videoCount: int-End-->
 

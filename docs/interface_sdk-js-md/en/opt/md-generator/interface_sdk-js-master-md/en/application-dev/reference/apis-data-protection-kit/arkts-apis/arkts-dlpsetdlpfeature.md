@@ -1,18 +1,22 @@
 # @ohos.dlpSetDlpFeature(DLP)
 
-This module provides APIs for controlling the Data Loss Prevention (DLP) feature, including enabling or disabling the DLP feature and returning the DLP status. It helps enterprises meet data security compliance requirements and implement access control and encryption protection for confidential files.
+/*
+ Copyright (c) 2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Use scenarios**
-
-- Data security compliance requirements must be met.  
-- Access control and encryption protection are provided for confidential files.
-
-> **NOTE：**
-> - The initial APIs of this module are supported since API version 26.0.0. Newly added APIs will be marked with a
-> - superscript to indicate their earliest API version.
-> - The APIs provided by this module are system APIs.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,7 +39,7 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md#setdlpfeature) |
+| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md#setDlpFeature-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

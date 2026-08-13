@@ -4,6 +4,8 @@ Enumerates modes in which a popup responds when the keyboard is displayed.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum KeyboardAvoidMode--><!--Device-unnamed-declare enum KeyboardAvoidMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 Automatically avoids the soft keyboard and compresses the height when reaching the maximum limit.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ NONE = 1
 Does not avoid the soft keyboard.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

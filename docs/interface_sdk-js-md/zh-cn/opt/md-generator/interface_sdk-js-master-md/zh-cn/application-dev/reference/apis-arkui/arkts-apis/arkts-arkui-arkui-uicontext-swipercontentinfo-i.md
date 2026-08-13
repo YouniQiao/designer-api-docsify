@@ -4,6 +4,8 @@ Swiper组件的内容区信息。
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface SwiperContentInfo--><!--Device-unnamed-export interface SwiperContentInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Swiper组件的id。
 **类型：** string
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ swiperItemInfos: Array<SwiperItemInfo>
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -59,6 +65,8 @@ Swiper子组件的唯一标识符。
 **类型：** number
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

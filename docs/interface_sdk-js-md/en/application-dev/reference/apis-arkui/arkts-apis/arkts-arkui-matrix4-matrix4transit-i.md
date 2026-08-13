@@ -1,12 +1,14 @@
 # Matrix4Transit
 
-Matrix4Transit.
+Implements a **Matrix4Transit** object.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-matrix4-export interface Matrix4Transit--><!--Device-matrix4-export interface Matrix4Transit-End-->
+**Deprecated since:** -1
+
+<!--Device-matrix4-interface Matrix4Transit--><!--Device-matrix4-interface Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,15 @@ import { matrix4 } from '@kit.ArkUI';
 combine(options: Matrix4Transit): Matrix4Transit
 ```
 
-Matrix superposition function Which can superpose the effects of two matrices to generate a new matrix object.
+Combines the effects of two matrices to generate a new matrix object. The matrix that calls this API will be changed.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Matrix4Transit-combine(options: Matrix4Transit): Matrix4Transit--><!--Device-Matrix4Transit-combine(options: Matrix4Transit): Matrix4Transit-End-->
 
@@ -38,13 +42,13 @@ Matrix superposition function Which can superpose the effects of two matrices to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Matrix4Transit | Yes |  |
+| options | Matrix4Transit | Yes | Matrix object to be combined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Object after matrix combination. |
 
 ## copy
 
@@ -52,13 +56,15 @@ Matrix superposition function Which can superpose the effects of two matrices to
 copy(): Matrix4Transit
 ```
 
-Copy function of Matrix, which can copy a copy of the current matrix object.
+Copies this matrix object.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Matrix4Transit-copy(): Matrix4Transit--><!--Device-Matrix4Transit-copy(): Matrix4Transit-End-->
 
@@ -68,7 +74,7 @@ Copy function of Matrix, which can copy a copy of the current matrix object.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Copy object of the current matrix. |
 
 ## invert
 
@@ -76,13 +82,15 @@ Copy function of Matrix, which can copy a copy of the current matrix object.
 invert(): Matrix4Transit
 ```
 
-The inverse function of Matrix returns an inverse matrix of the current matrix object That is, the effect is exactly the opposite.
+Inverts this matrix object. The matrix that calls this API will be changed.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Matrix4Transit-invert(): Matrix4Transit--><!--Device-Matrix4Transit-invert(): Matrix4Transit-End-->
 
@@ -92,7 +100,7 @@ The inverse function of Matrix returns an inverse matrix of the current matrix o
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Inverse matrix object of the current matrix. |
 
 ## rotate
 
@@ -100,13 +108,15 @@ The inverse function of Matrix returns an inverse matrix of the current matrix o
 rotate(options: RotateOption): Matrix4Transit
 ```
 
-Rotation function of the Matrix.You can add the x-axis, Y-axis, or Z-axis rotation effect to the current matrix.
+Rotates this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Matrix4Transit-rotate(options: RotateOption): Matrix4Transit--><!--Device-Matrix4Transit-rotate(options: RotateOption): Matrix4Transit-End-->
 
@@ -116,13 +126,13 @@ Rotation function of the Matrix.You can add the x-axis, Y-axis, or Z-axis rotati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes |  |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Matrix object after the rotation. |
 
 ## scale
 
@@ -130,13 +140,15 @@ Rotation function of the Matrix.You can add the x-axis, Y-axis, or Z-axis rotati
 scale(options: ScaleOption): Matrix4Transit
 ```
 
-Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scaling effect to the current matrix.
+Scales this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Matrix4Transit-scale(options: ScaleOption): Matrix4Transit--><!--Device-Matrix4Transit-scale(options: ScaleOption): Matrix4Transit-End-->
 
@@ -146,13 +158,13 @@ Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes |  |
+| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes | Scaling configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Matrix object after the scaling. |
 
 ## setPolyToPoly
 
@@ -160,13 +172,17 @@ Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scali
 setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 ```
 
-Sets matrix to map src to dst.
+Maps the vertex coordinates of a polygon to those of another polygon.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Matrix4Transit-setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit--><!--Device-Matrix4Transit-setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit-End-->
 
@@ -176,29 +192,33 @@ Sets matrix to map src to dst.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | polyToPoly options |
+| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | Parameters for mapping. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Matrix object after the mapping. |
 
 ## skew
 
 ```TypeScript
-skew(x: double, y: double): Matrix4Transit
+skew(x: number, y: number): Matrix4Transit
 ```
 
-Skew function of the Matrix, which can add the x-axis, y-axis skew effect to the current matrix.Skew function takes a generic point with coordinates (x0, y0, z0) to the point (x0 + x*y0, y0 + y*x0, z0),where x, y are fixed parameters, called the shear factors.
+Skews this matrix object along the x and y axes. The matrix that calls this API will be changed.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Matrix4Transit-skew(x: double, y: double): Matrix4Transit--><!--Device-Matrix4Transit-skew(x: double, y: double): Matrix4Transit-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Matrix4Transit-skew(x: number, y: number): Matrix4Transit--><!--Device-Matrix4Transit-skew(x: number, y: number): Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,36 +226,32 @@ Skew function of the Matrix, which can add the x-axis, y-axis skew effect to the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | the shear factor of x-axis. |
-| y | double | Yes | the shear factor of y-axis. |
+| x | number | Yes | Amount of skewing on the x-axis. |
+| y | number | Yes | Amount of skewing on the y-axis. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Matrix object after the skewing. |
 
 ## transformPoint
 
 ```TypeScript
-transformPoint(options: [
-            double,
-            double
-        ]): [
-            double,
-            double
-        ]
+transformPoint(options: [number, number]): [number, number]
 ```
 
-Matrix coordinate point conversion function Which can apply the current transformation effect to a coordinate point.
+Applies the current transformation effect to a coordinate point.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-Matrix4Transit-transformPoint(options: [            double,            double        ]): [            double,            double        ]--><!--Device-Matrix4Transit-transformPoint(options: [            double,            double        ]): [            double,            double        ]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Matrix4Transit-transformPoint(options: [number, number]): [number, number]--><!--Device-Matrix4Transit-transformPoint(options: [number, number]): [number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -243,13 +259,13 @@ Matrix coordinate point conversion function Which can apply the current transfor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [             double,             double         ] | Yes |  |
+| options | [number, number] | Yes | Point to be transformed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [             double,             double         ] | Return to Matrix4Transit |
+| [number, number] | Point object after matrix transformation |
 
 ## translate
 
@@ -257,13 +273,15 @@ Matrix coordinate point conversion function Which can apply the current transfor
 translate(options: TranslateOption): Matrix4Transit
 ```
 
-Matrix translation function Which can add the x-axis, Y-axis, or Z-axis translation effect to the current matrix.
+Translates this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Matrix4Transit-translate(options: TranslateOption): Matrix4Transit--><!--Device-Matrix4Transit-translate(options: TranslateOption): Matrix4Transit-End-->
 
@@ -273,11 +291,11 @@ Matrix translation function Which can add the x-axis, Y-axis, or Z-axis translat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes |  |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | Translation configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Matrix object after the translation. |
 

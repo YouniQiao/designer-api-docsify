@@ -6,9 +6,11 @@ export type GrantedBundleInfo = _GrantedBundleInfo
 
 Describes the bundle information of the authorized application.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationExtensionSubscription-export type GrantedBundleInfo = _GrantedBundleInfo--><!--Device-notificationExtensionSubscription-export type GrantedBundleInfo = _GrantedBundleInfo-End-->
 

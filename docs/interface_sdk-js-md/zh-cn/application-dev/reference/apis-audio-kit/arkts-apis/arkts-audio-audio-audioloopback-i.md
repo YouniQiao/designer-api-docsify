@@ -1,21 +1,12 @@
 # AudioLoopback
 
-提供音频返听的相关接口。
+提供音频返听的相关接口。 在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback)获取AudioLoopback实例。 当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与 [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SourceType)相匹配。 输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。 > **说明：** > > - 本Interface首批接口从API version 20开始支持。
 
-在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback)获取AudioLoopback实例。
+**起始版本：** 23
 
-当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与  
-[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SourceType)相匹配。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 20开始支持。
-
-**起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioLoopback--><!--Device-audio-interface AudioLoopback-End-->
 
@@ -29,9 +20,11 @@ enable(enable: boolean): Promise<boolean>
 
 启用或禁用音频返听器。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE
 
@@ -55,8 +48,8 @@ enable(enable: boolean): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getEqualizerPreset
 
@@ -66,9 +59,11 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 获取当前音频返听器的均衡器类型。
 
-**起始版本：** 21
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset--><!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset-End-->
 
@@ -90,7 +85,9 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,9 +109,11 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 获取当前音频返听器的混响模式。
 
-**起始版本：** 21
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset--><!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset-End-->
 
@@ -134,9 +133,11 @@ getStatus(): Promise<AudioLoopbackStatus>
 
 获取音频返听状态。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>--><!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>-End-->
 
@@ -158,7 +159,9 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -174,12 +177,6 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 ## getVolume
 
-ArkTS-Dyn:
-```TypeScript
-getVolume(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getVolume(): double
 ```
@@ -188,7 +185,9 @@ getVolume(): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,36 +199,7 @@ getVolume(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
-
-## off('statusChange')
-
-```TypeScript
-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
-```
-
-取消监听音频状态事件。使用callback异步回调。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-<!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当取消监听音频状态事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| double | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
 
 ## offStatusChange
 
@@ -241,7 +211,9 @@ Unsubscribes audio loopback status change event callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
 
@@ -251,27 +223,29 @@ Unsubscribes audio loopback status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | Callback used to listen for the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | Callback used to listen for the audio loopback status change event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on('statusChange')
+## off_statusChange
 
 ```TypeScript
-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
+off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 ```
 
-监听返听状态变化事件（当AudioLoopback的状态发生变化时触发）。使用callback异步回调。
+取消监听音频状态事件。使用callback异步回调。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -279,14 +253,14 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当AudioLoopback的状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
+| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当取消监听音频状态事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onStatusChange
 
@@ -298,7 +272,9 @@ Subscribes to audio loopback status changes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
 
@@ -308,13 +284,44 @@ Subscribes to audio loopback status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | Callback used to return the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | Callback used to return the audio loopback status change event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+## on_statusChange
+
+```TypeScript
+on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
+```
+
+监听返听状态变化事件（当AudioLoopback的状态发生变化时触发）。使用callback异步回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+<!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当AudioLoopback的状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setEqualizerPreset
 
@@ -324,9 +331,11 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 设置音频返听器的均衡器类型。
 
-**起始版本：** 21
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean--><!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean-End-->
 
@@ -348,7 +357,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setReverbPreset
 
@@ -358,9 +367,11 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 设置音频返听器的混响模式。
 
-**起始版本：** 21
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean--><!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean-End-->
 
@@ -382,25 +393,21 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setVolume
 
-ArkTS-Dyn:
-```TypeScript
-setVolume(volume: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setVolume(volume: double): Promise<void>
 ```
 
 设置音频返听的音量。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioLoopback-setVolume(volume: double): Promise<void>--><!--Device-AudioLoopback-setVolume(volume: double): Promise<void>-End-->
 
@@ -410,7 +417,7 @@ setVolume(volume: double): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 音量值范围为[0.0, 1.0]。 |
+| volume | double | 是 | 音量值范围为[0.0, 1.0]。 |
 
 **返回值：**
 
@@ -422,5 +429,5 @@ setVolume(volume: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed, form 0.0 to 1.0. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, form 0.0 to 1.0. |
 

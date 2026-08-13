@@ -2,9 +2,11 @@
 
 Defines a screen hopping status change event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cooperate-interface CooperateMessage--><!--Device-cooperate-interface CooperateMessage-End-->
 
@@ -28,9 +30,11 @@ Descriptor of the target device for screen hopping.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CooperateMessage-networkId: string--><!--Device-CooperateMessage-networkId: string-End-->
 
@@ -48,9 +52,11 @@ Screen hopping status.
 
 **Type:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CooperateMessage-state: CooperateState--><!--Device-CooperateMessage-state: CooperateState-End-->
 

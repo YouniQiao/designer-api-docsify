@@ -2,9 +2,11 @@
 
 Parameters for obtaining detailed information on network interface traffic usage.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface IfaceInfo--><!--Device-statistics-export interface IfaceInfo-End-->
 
@@ -26,11 +28,13 @@ endTime: int
 
 End time for querying traffic.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IfaceInfo-endTime: int--><!--Device-IfaceInfo-endTime: int-End-->
 
@@ -48,9 +52,11 @@ Network interface for querying traffic.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IfaceInfo-iface: string--><!--Device-IfaceInfo-iface: string-End-->
 
@@ -66,11 +72,13 @@ startTime: int
 
 Start time for querying traffic.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IfaceInfo-startTime: int--><!--Device-IfaceInfo-startTime: int-End-->
 

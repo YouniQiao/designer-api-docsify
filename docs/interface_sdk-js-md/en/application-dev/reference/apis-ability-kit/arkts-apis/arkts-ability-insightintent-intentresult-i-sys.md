@@ -1,13 +1,14 @@
 # IntentResult
 
-Defines the return result of intent execution. The  
-[generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
+Defines the return result of intent execution. The [generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
 
-**Since:** 20
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-insightIntent-interface IntentResult<T>--><!--Device-insightIntent-interface IntentResult<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-insightIntent-interface IntentResult--><!--Device-insightIntent-interface IntentResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,7 +30,9 @@ Interaction information returned after the intent execution completes.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

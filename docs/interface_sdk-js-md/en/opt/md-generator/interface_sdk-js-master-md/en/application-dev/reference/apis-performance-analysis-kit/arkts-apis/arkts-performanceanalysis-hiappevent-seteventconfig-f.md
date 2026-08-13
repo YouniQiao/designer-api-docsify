@@ -12,26 +12,13 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>
 ```
 
-Sets event configuration. This method uses a promise to return the result. In the same lifecycle, you can set event configuration by event name.
+Sets event configuration. This method uses a promise to return the result. In the same lifecycle, you can set event configuration by event name. Configuration items vary depending on events. Currently, only the following events are supported: - **MAIN_THREAD_JANK** (For details about the parameter configuration, see [Main Thread Jank Event Overview](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#parameters-of-seteventconfig). ) - **APP_CRASH** (For details about the parameter configuration, see [Crash Log Configuration Parameters](../../../dfx/hiappevent-watcher-crash-events.md#customizing-crash-log-specifications). ) - **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see [Resource Leak Event Overview](../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications). ) > **NOTE：**> > Since API version 26.0.0, all settings of this API are supported by > [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy). You are advised to use > [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy).
 
-Configuration items vary depending on events. Currently, only the following events are supported:
+**Since:** 23
 
-- **MAIN_THREAD_JANK** (For details about the parameter configuration, see  
-[Main Thread Jank Event Overview](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#parameters-of-seteventconfig).)  
-- **APP_CRASH** (For details about the parameter configuration, see  
-[Crash Log Configuration Parameters](../../../dfx/hiappevent-watcher-crash-events.md#customizing-crash-log-specifications).)  
-- **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see  
-[Resource Leak Event Overview](../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).)
+**Deprecated since:** -1
 
-> **NOTE：**
-> 
-> Since API version 26.0.0, all settings of this API are supported by
-> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy). You are advised to use
-> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy).
-
-**Since:** 15
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiAppEvent-function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>--><!--Device-hiAppEvent-function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>-End-->
 
@@ -42,7 +29,7 @@ Configuration items vary depending on events. Currently, only the following even
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | name | string | Yes |
-| config | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes |
+| config | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -54,7 +41,7 @@ Configuration items vary depending on events. Currently, only the following even
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

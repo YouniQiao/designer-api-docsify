@@ -2,9 +2,11 @@
 
 The **keyCode** module provides key codes of key devices, including keyboards, CDs, and gamepads.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum KeyCode--><!--Device-unnamed-export declare enum KeyCode-End-->
 
@@ -18,9 +20,11 @@ KEYCODE_FN = 0
 
 Function (Fn) key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FN = 0--><!--Device-KeyCode-KEYCODE_FN = 0-End-->
 
@@ -34,9 +38,11 @@ KEYCODE_UNKNOWN = -1
 
 Unknown key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_UNKNOWN = -1--><!--Device-KeyCode-KEYCODE_UNKNOWN = -1-End-->
 
@@ -50,9 +56,11 @@ KEYCODE_HOME = 1
 
 Function (Home) key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_HOME = 1--><!--Device-KeyCode-KEYCODE_HOME = 1-End-->
 
@@ -66,9 +74,11 @@ KEYCODE_BACK = 2
 
 Back key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BACK = 2--><!--Device-KeyCode-KEYCODE_BACK = 2-End-->
 
@@ -82,9 +92,11 @@ KEYCODE_SEARCH = 9
 
 Search key
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SEARCH = 9--><!--Device-KeyCode-KEYCODE_SEARCH = 9-End-->
 
@@ -96,15 +108,13 @@ Search key
 KEYCODE_MEDIA_PLAY_PAUSE = 10
 ```
 
-Play/Pause key
+Play/Pause key Difference between this key and **KEYCODE_PLAYPAUSE**: **KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
-Difference between this key and **KEYCODE_PLAYPAUSE**:
+**Since:** 23
 
-**KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -120,9 +130,11 @@ KEYCODE_MEDIA_STOP = 11
 
 Media: Stop Key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -138,9 +150,11 @@ KEYCODE_MEDIA_NEXT = 12
 
 Next key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -156,9 +170,11 @@ KEYCODE_MEDIA_PREVIOUS = 13
 
 Previous key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -174,9 +190,11 @@ KEYCODE_MEDIA_REWIND = 14
 
 Rewind key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -192,9 +210,11 @@ KEYCODE_MEDIA_FAST_FORWARD = 15
 
 Fast forward key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -210,9 +230,11 @@ KEYCODE_VOLUME_UP = 16
 
 Volume Up key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VOLUME_UP = 16--><!--Device-KeyCode-KEYCODE_VOLUME_UP = 16-End-->
 
@@ -226,9 +248,11 @@ KEYCODE_VOLUME_DOWN = 17
 
 Volume Down key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VOLUME_DOWN = 17--><!--Device-KeyCode-KEYCODE_VOLUME_DOWN = 17-End-->
 
@@ -242,9 +266,11 @@ KEYCODE_POWER = 18
 
 Power key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_POWER = 18--><!--Device-KeyCode-KEYCODE_POWER = 18-End-->
 
@@ -258,9 +284,11 @@ KEYCODE_CAMERA = 19
 
 Camera key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CAMERA = 19--><!--Device-KeyCode-KEYCODE_CAMERA = 19-End-->
 
@@ -274,9 +302,11 @@ KEYCODE_VOLUME_MUTE = 22
 
 Speaker Mute key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VOLUME_MUTE = 22--><!--Device-KeyCode-KEYCODE_VOLUME_MUTE = 22-End-->
 
@@ -290,9 +320,11 @@ KEYCODE_MUTE = 23
 
 Mute key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MUTE = 23--><!--Device-KeyCode-KEYCODE_MUTE = 23-End-->
 
@@ -306,9 +338,11 @@ KEYCODE_BRIGHTNESS_UP = 40
 
 Brightness Up key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BRIGHTNESS_UP = 40--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_UP = 40-End-->
 
@@ -322,9 +356,11 @@ KEYCODE_BRIGHTNESS_DOWN = 41
 
 Brightness Down key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BRIGHTNESS_DOWN = 41--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_DOWN = 41-End-->
 
@@ -338,9 +374,11 @@ KEYCODE_0 = 2000
 
 Key 0
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_0 = 2000--><!--Device-KeyCode-KEYCODE_0 = 2000-End-->
 
@@ -354,9 +392,11 @@ KEYCODE_1 = 2001
 
 Key 1
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_1 = 2001--><!--Device-KeyCode-KEYCODE_1 = 2001-End-->
 
@@ -370,9 +410,11 @@ KEYCODE_2 = 2002
 
 Key 2
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_2 = 2002--><!--Device-KeyCode-KEYCODE_2 = 2002-End-->
 
@@ -386,9 +428,11 @@ KEYCODE_3 = 2003
 
 Key 3
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_3 = 2003--><!--Device-KeyCode-KEYCODE_3 = 2003-End-->
 
@@ -402,9 +446,11 @@ KEYCODE_4 = 2004
 
 Key 4
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_4 = 2004--><!--Device-KeyCode-KEYCODE_4 = 2004-End-->
 
@@ -418,9 +464,11 @@ KEYCODE_5 = 2005
 
 Key 5
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_5 = 2005--><!--Device-KeyCode-KEYCODE_5 = 2005-End-->
 
@@ -434,9 +482,11 @@ KEYCODE_6 = 2006
 
 Key 6
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_6 = 2006--><!--Device-KeyCode-KEYCODE_6 = 2006-End-->
 
@@ -450,9 +500,11 @@ KEYCODE_7 = 2007
 
 Key 7
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_7 = 2007--><!--Device-KeyCode-KEYCODE_7 = 2007-End-->
 
@@ -466,9 +518,11 @@ KEYCODE_8 = 2008
 
 Key 8
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_8 = 2008--><!--Device-KeyCode-KEYCODE_8 = 2008-End-->
 
@@ -482,9 +536,11 @@ KEYCODE_9 = 2009
 
 Key 9
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_9 = 2009--><!--Device-KeyCode-KEYCODE_9 = 2009-End-->
 
@@ -498,9 +554,11 @@ KEYCODE_STAR = 2010
 
 Key /
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_STAR = 2010--><!--Device-KeyCode-KEYCODE_STAR = 2010-End-->
 
@@ -514,9 +572,11 @@ KEYCODE_POUND = 2011
 
 Key /
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_POUND = 2011--><!--Device-KeyCode-KEYCODE_POUND = 2011-End-->
 
@@ -530,9 +590,11 @@ KEYCODE_DPAD_UP = 2012
 
 Up key on D-pad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DPAD_UP = 2012--><!--Device-KeyCode-KEYCODE_DPAD_UP = 2012-End-->
 
@@ -546,9 +608,11 @@ KEYCODE_DPAD_DOWN = 2013
 
 Down key on D-pad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DPAD_DOWN = 2013--><!--Device-KeyCode-KEYCODE_DPAD_DOWN = 2013-End-->
 
@@ -562,9 +626,11 @@ KEYCODE_DPAD_LEFT = 2014
 
 Left key on D-pad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DPAD_LEFT = 2014--><!--Device-KeyCode-KEYCODE_DPAD_LEFT = 2014-End-->
 
@@ -578,9 +644,11 @@ KEYCODE_DPAD_RIGHT = 2015
 
 Right key on D-pad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DPAD_RIGHT = 2015--><!--Device-KeyCode-KEYCODE_DPAD_RIGHT = 2015-End-->
 
@@ -594,9 +662,11 @@ KEYCODE_DPAD_CENTER = 2016
 
 Center key on D-pad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DPAD_CENTER = 2016--><!--Device-KeyCode-KEYCODE_DPAD_CENTER = 2016-End-->
 
@@ -610,9 +680,11 @@ KEYCODE_A = 2017
 
 Key A
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_A = 2017--><!--Device-KeyCode-KEYCODE_A = 2017-End-->
 
@@ -626,9 +698,11 @@ KEYCODE_B = 2018
 
 Key B
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_B = 2018--><!--Device-KeyCode-KEYCODE_B = 2018-End-->
 
@@ -642,9 +716,11 @@ KEYCODE_C = 2019
 
 Key C
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_C = 2019--><!--Device-KeyCode-KEYCODE_C = 2019-End-->
 
@@ -658,9 +734,11 @@ KEYCODE_D = 2020
 
 Key D
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_D = 2020--><!--Device-KeyCode-KEYCODE_D = 2020-End-->
 
@@ -674,9 +752,11 @@ KEYCODE_E = 2021
 
 Key E
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_E = 2021--><!--Device-KeyCode-KEYCODE_E = 2021-End-->
 
@@ -690,9 +770,11 @@ KEYCODE_F = 2022
 
 Key F
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F = 2022--><!--Device-KeyCode-KEYCODE_F = 2022-End-->
 
@@ -706,9 +788,11 @@ KEYCODE_G = 2023
 
 Key G
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_G = 2023--><!--Device-KeyCode-KEYCODE_G = 2023-End-->
 
@@ -722,9 +806,11 @@ KEYCODE_H = 2024
 
 Key H
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_H = 2024--><!--Device-KeyCode-KEYCODE_H = 2024-End-->
 
@@ -738,9 +824,11 @@ KEYCODE_I = 2025
 
 Key I
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_I = 2025--><!--Device-KeyCode-KEYCODE_I = 2025-End-->
 
@@ -754,9 +842,11 @@ KEYCODE_J = 2026
 
 Key J
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_J = 2026--><!--Device-KeyCode-KEYCODE_J = 2026-End-->
 
@@ -770,9 +860,11 @@ KEYCODE_K = 2027
 
 Key K
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_K = 2027--><!--Device-KeyCode-KEYCODE_K = 2027-End-->
 
@@ -786,9 +878,11 @@ KEYCODE_L = 2028
 
 Key L
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_L = 2028--><!--Device-KeyCode-KEYCODE_L = 2028-End-->
 
@@ -802,9 +896,11 @@ KEYCODE_M = 2029
 
 Key M
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_M = 2029--><!--Device-KeyCode-KEYCODE_M = 2029-End-->
 
@@ -818,9 +914,11 @@ KEYCODE_N = 2030
 
 Key N
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_N = 2030--><!--Device-KeyCode-KEYCODE_N = 2030-End-->
 
@@ -834,9 +932,11 @@ KEYCODE_O = 2031
 
 Key O
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_O = 2031--><!--Device-KeyCode-KEYCODE_O = 2031-End-->
 
@@ -850,9 +950,11 @@ KEYCODE_P = 2032
 
 Key P
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_P = 2032--><!--Device-KeyCode-KEYCODE_P = 2032-End-->
 
@@ -866,9 +968,11 @@ KEYCODE_Q = 2033
 
 Key Q
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_Q = 2033--><!--Device-KeyCode-KEYCODE_Q = 2033-End-->
 
@@ -882,9 +986,11 @@ KEYCODE_R = 2034
 
 Key R
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_R = 2034--><!--Device-KeyCode-KEYCODE_R = 2034-End-->
 
@@ -898,9 +1004,11 @@ KEYCODE_S = 2035
 
 Key S
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_S = 2035--><!--Device-KeyCode-KEYCODE_S = 2035-End-->
 
@@ -914,9 +1022,11 @@ KEYCODE_T = 2036
 
 Key T
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_T = 2036--><!--Device-KeyCode-KEYCODE_T = 2036-End-->
 
@@ -930,9 +1040,11 @@ KEYCODE_U = 2037
 
 Key U
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_U = 2037--><!--Device-KeyCode-KEYCODE_U = 2037-End-->
 
@@ -946,9 +1058,11 @@ KEYCODE_V = 2038
 
 Key V
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_V = 2038--><!--Device-KeyCode-KEYCODE_V = 2038-End-->
 
@@ -962,9 +1076,11 @@ KEYCODE_W = 2039
 
 Key W
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_W = 2039--><!--Device-KeyCode-KEYCODE_W = 2039-End-->
 
@@ -978,9 +1094,11 @@ KEYCODE_X = 2040
 
 Key X
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_X = 2040--><!--Device-KeyCode-KEYCODE_X = 2040-End-->
 
@@ -994,9 +1112,11 @@ KEYCODE_Y = 2041
 
 Key Y
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_Y = 2041--><!--Device-KeyCode-KEYCODE_Y = 2041-End-->
 
@@ -1010,9 +1130,11 @@ KEYCODE_Z = 2042
 
 Key Z
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_Z = 2042--><!--Device-KeyCode-KEYCODE_Z = 2042-End-->
 
@@ -1026,9 +1148,11 @@ KEYCODE_COMMA = 2043
 
 Key ,
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_COMMA = 2043--><!--Device-KeyCode-KEYCODE_COMMA = 2043-End-->
 
@@ -1042,9 +1166,11 @@ KEYCODE_PERIOD = 2044
 
 Key .
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PERIOD = 2044--><!--Device-KeyCode-KEYCODE_PERIOD = 2044-End-->
 
@@ -1058,9 +1184,11 @@ KEYCODE_ALT_LEFT = 2045
 
 Left Alt key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ALT_LEFT = 2045--><!--Device-KeyCode-KEYCODE_ALT_LEFT = 2045-End-->
 
@@ -1074,9 +1202,11 @@ KEYCODE_ALT_RIGHT = 2046
 
 Right Alt key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ALT_RIGHT = 2046--><!--Device-KeyCode-KEYCODE_ALT_RIGHT = 2046-End-->
 
@@ -1090,9 +1220,11 @@ KEYCODE_SHIFT_LEFT = 2047
 
 Left Shift key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SHIFT_LEFT = 2047--><!--Device-KeyCode-KEYCODE_SHIFT_LEFT = 2047-End-->
 
@@ -1106,9 +1238,11 @@ KEYCODE_SHIFT_RIGHT = 2048
 
 Right Shift key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SHIFT_RIGHT = 2048--><!--Device-KeyCode-KEYCODE_SHIFT_RIGHT = 2048-End-->
 
@@ -1122,9 +1256,11 @@ KEYCODE_TAB = 2049
 
 Tab key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_TAB = 2049--><!--Device-KeyCode-KEYCODE_TAB = 2049-End-->
 
@@ -1138,9 +1274,11 @@ KEYCODE_SPACE = 2050
 
 Space key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SPACE = 2050--><!--Device-KeyCode-KEYCODE_SPACE = 2050-End-->
 
@@ -1154,9 +1292,11 @@ KEYCODE_SYM = 2051
 
 Symbol key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SYM = 2051--><!--Device-KeyCode-KEYCODE_SYM = 2051-End-->
 
@@ -1170,9 +1310,11 @@ KEYCODE_EXPLORER = 2052
 
 Explorer key, which is used to start the explorer application
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_EXPLORER = 2052--><!--Device-KeyCode-KEYCODE_EXPLORER = 2052-End-->
 
@@ -1186,9 +1328,11 @@ KEYCODE_ENVELOPE = 2053
 
 Email key, which is used to start the email application
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ENVELOPE = 2053--><!--Device-KeyCode-KEYCODE_ENVELOPE = 2053-End-->
 
@@ -1202,9 +1346,11 @@ KEYCODE_ENTER = 2054
 
 Enter key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ENTER = 2054--><!--Device-KeyCode-KEYCODE_ENTER = 2054-End-->
 
@@ -1218,9 +1364,11 @@ KEYCODE_DEL = 2055
 
 Delete key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DEL = 2055--><!--Device-KeyCode-KEYCODE_DEL = 2055-End-->
 
@@ -1234,9 +1382,11 @@ KEYCODE_GRAVE = 2056
 
 Key /
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_GRAVE = 2056--><!--Device-KeyCode-KEYCODE_GRAVE = 2056-End-->
 
@@ -1250,9 +1400,11 @@ KEYCODE_MINUS = 2057
 
 Key -
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MINUS = 2057--><!--Device-KeyCode-KEYCODE_MINUS = 2057-End-->
 
@@ -1266,9 +1418,11 @@ KEYCODE_EQUALS = 2058
 
 Key =
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_EQUALS = 2058--><!--Device-KeyCode-KEYCODE_EQUALS = 2058-End-->
 
@@ -1282,9 +1436,11 @@ KEYCODE_LEFT_BRACKET = 2059
 
 Key [
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_LEFT_BRACKET = 2059--><!--Device-KeyCode-KEYCODE_LEFT_BRACKET = 2059-End-->
 
@@ -1298,9 +1454,11 @@ KEYCODE_RIGHT_BRACKET = 2060
 
 Key ]
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_RIGHT_BRACKET = 2060--><!--Device-KeyCode-KEYCODE_RIGHT_BRACKET = 2060-End-->
 
@@ -1314,9 +1472,11 @@ KEYCODE_BACKSLASH = 2061
 
 Key \
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BACKSLASH = 2061--><!--Device-KeyCode-KEYCODE_BACKSLASH = 2061-End-->
 
@@ -1330,9 +1490,11 @@ KEYCODE_SEMICOLON = 2062
 
 Key ;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SEMICOLON = 2062--><!--Device-KeyCode-KEYCODE_SEMICOLON = 2062-End-->
 
@@ -1346,9 +1508,11 @@ KEYCODE_APOSTROPHE = 2063
 
 Key '
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_APOSTROPHE = 2063--><!--Device-KeyCode-KEYCODE_APOSTROPHE = 2063-End-->
 
@@ -1362,9 +1526,11 @@ KEYCODE_SLASH = 2064
 
 Key /
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SLASH = 2064--><!--Device-KeyCode-KEYCODE_SLASH = 2064-End-->
 
@@ -1378,9 +1544,11 @@ KEYCODE_AT = 2065
 
 Key /
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_AT = 2065--><!--Device-KeyCode-KEYCODE_AT = 2065-End-->
 
@@ -1394,9 +1562,11 @@ KEYCODE_PLUS = 2066
 
 Key +
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PLUS = 2066--><!--Device-KeyCode-KEYCODE_PLUS = 2066-End-->
 
@@ -1410,9 +1580,11 @@ KEYCODE_MENU = 2067
 
 Menu key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MENU = 2067--><!--Device-KeyCode-KEYCODE_MENU = 2067-End-->
 
@@ -1426,9 +1598,11 @@ KEYCODE_PAGE_UP = 2068
 
 Page Up key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PAGE_UP = 2068--><!--Device-KeyCode-KEYCODE_PAGE_UP = 2068-End-->
 
@@ -1442,9 +1616,11 @@ KEYCODE_PAGE_DOWN = 2069
 
 Page Down key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PAGE_DOWN = 2069--><!--Device-KeyCode-KEYCODE_PAGE_DOWN = 2069-End-->
 
@@ -1458,9 +1634,11 @@ KEYCODE_ESCAPE = 2070
 
 Esc key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ESCAPE = 2070--><!--Device-KeyCode-KEYCODE_ESCAPE = 2070-End-->
 
@@ -1474,9 +1652,11 @@ KEYCODE_FORWARD_DEL = 2071
 
 Forward Delete key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FORWARD_DEL = 2071--><!--Device-KeyCode-KEYCODE_FORWARD_DEL = 2071-End-->
 
@@ -1490,9 +1670,11 @@ KEYCODE_CTRL_LEFT = 2072
 
 Left Ctrl key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CTRL_LEFT = 2072--><!--Device-KeyCode-KEYCODE_CTRL_LEFT = 2072-End-->
 
@@ -1506,9 +1688,11 @@ KEYCODE_CTRL_RIGHT = 2073
 
 Right Ctrl key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CTRL_RIGHT = 2073--><!--Device-KeyCode-KEYCODE_CTRL_RIGHT = 2073-End-->
 
@@ -1522,9 +1706,11 @@ KEYCODE_CAPS_LOCK = 2074
 
 Caps Lock key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CAPS_LOCK = 2074--><!--Device-KeyCode-KEYCODE_CAPS_LOCK = 2074-End-->
 
@@ -1538,9 +1724,11 @@ KEYCODE_SCROLL_LOCK = 2075
 
 Scroll Lock key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SCROLL_LOCK = 2075--><!--Device-KeyCode-KEYCODE_SCROLL_LOCK = 2075-End-->
 
@@ -1554,9 +1742,11 @@ KEYCODE_META_LEFT = 2076
 
 Left Meta key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_META_LEFT = 2076--><!--Device-KeyCode-KEYCODE_META_LEFT = 2076-End-->
 
@@ -1570,9 +1760,11 @@ KEYCODE_META_RIGHT = 2077
 
 Right Meta key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_META_RIGHT = 2077--><!--Device-KeyCode-KEYCODE_META_RIGHT = 2077-End-->
 
@@ -1586,9 +1778,11 @@ KEYCODE_FUNCTION = 2078
 
 Function key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FUNCTION = 2078--><!--Device-KeyCode-KEYCODE_FUNCTION = 2078-End-->
 
@@ -1602,9 +1796,11 @@ KEYCODE_SYSRQ = 2079
 
 System Request/Print Screen key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SYSRQ = 2079--><!--Device-KeyCode-KEYCODE_SYSRQ = 2079-End-->
 
@@ -1618,9 +1814,11 @@ KEYCODE_BREAK = 2080
 
 Break/Pause key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BREAK = 2080--><!--Device-KeyCode-KEYCODE_BREAK = 2080-End-->
 
@@ -1634,9 +1832,11 @@ KEYCODE_MOVE_HOME = 2081
 
 Move to Home key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MOVE_HOME = 2081--><!--Device-KeyCode-KEYCODE_MOVE_HOME = 2081-End-->
 
@@ -1650,9 +1850,11 @@ KEYCODE_MOVE_END = 2082
 
 Move to End key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MOVE_END = 2082--><!--Device-KeyCode-KEYCODE_MOVE_END = 2082-End-->
 
@@ -1666,9 +1868,11 @@ KEYCODE_INSERT = 2083
 
 Insert key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_INSERT = 2083--><!--Device-KeyCode-KEYCODE_INSERT = 2083-End-->
 
@@ -1682,9 +1886,11 @@ KEYCODE_FORWARD = 2084
 
 Forward key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FORWARD = 2084--><!--Device-KeyCode-KEYCODE_FORWARD = 2084-End-->
 
@@ -1698,9 +1904,11 @@ KEYCODE_MEDIA_PLAY = 2085
 
 Play key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1716,9 +1924,11 @@ KEYCODE_MEDIA_PAUSE = 2086
 
 Media: Pause Key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1734,9 +1944,11 @@ KEYCODE_MEDIA_CLOSE = 2087
 
 Media: Close Key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MEDIA_CLOSE = 2087--><!--Device-KeyCode-KEYCODE_MEDIA_CLOSE = 2087-End-->
 
@@ -1750,9 +1962,11 @@ KEYCODE_MEDIA_EJECT = 2088
 
 Media: Eject Key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MEDIA_EJECT = 2088--><!--Device-KeyCode-KEYCODE_MEDIA_EJECT = 2088-End-->
 
@@ -1766,9 +1980,11 @@ KEYCODE_MEDIA_RECORD = 2089
 
 Record key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MEDIA_RECORD = 2089--><!--Device-KeyCode-KEYCODE_MEDIA_RECORD = 2089-End-->
 
@@ -1782,9 +1998,11 @@ KEYCODE_F1 = 2090
 
 F1 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F1 = 2090--><!--Device-KeyCode-KEYCODE_F1 = 2090-End-->
 
@@ -1798,9 +2016,11 @@ KEYCODE_F2 = 2091
 
 F2 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F2 = 2091--><!--Device-KeyCode-KEYCODE_F2 = 2091-End-->
 
@@ -1814,9 +2034,11 @@ KEYCODE_F3 = 2092
 
 F3 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F3 = 2092--><!--Device-KeyCode-KEYCODE_F3 = 2092-End-->
 
@@ -1830,9 +2052,11 @@ KEYCODE_F4 = 2093
 
 F4 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F4 = 2093--><!--Device-KeyCode-KEYCODE_F4 = 2093-End-->
 
@@ -1846,9 +2070,11 @@ KEYCODE_F5 = 2094
 
 F5 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F5 = 2094--><!--Device-KeyCode-KEYCODE_F5 = 2094-End-->
 
@@ -1862,9 +2088,11 @@ KEYCODE_F6 = 2095
 
 F6 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F6 = 2095--><!--Device-KeyCode-KEYCODE_F6 = 2095-End-->
 
@@ -1878,9 +2106,11 @@ KEYCODE_F7 = 2096
 
 F7 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F7 = 2096--><!--Device-KeyCode-KEYCODE_F7 = 2096-End-->
 
@@ -1894,9 +2124,11 @@ KEYCODE_F8 = 2097
 
 F8 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F8 = 2097--><!--Device-KeyCode-KEYCODE_F8 = 2097-End-->
 
@@ -1910,9 +2142,11 @@ KEYCODE_F9 = 2098
 
 F9 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F9 = 2098--><!--Device-KeyCode-KEYCODE_F9 = 2098-End-->
 
@@ -1926,9 +2160,11 @@ KEYCODE_F10 = 2099
 
 F10 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F10 = 2099--><!--Device-KeyCode-KEYCODE_F10 = 2099-End-->
 
@@ -1942,9 +2178,11 @@ KEYCODE_F11 = 2100
 
 F11 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F11 = 2100--><!--Device-KeyCode-KEYCODE_F11 = 2100-End-->
 
@@ -1958,9 +2196,11 @@ KEYCODE_F12 = 2101
 
 F12 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F12 = 2101--><!--Device-KeyCode-KEYCODE_F12 = 2101-End-->
 
@@ -1974,9 +2214,11 @@ KEYCODE_NUM_LOCK = 2102
 
 Number Lock key on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUM_LOCK = 2102--><!--Device-KeyCode-KEYCODE_NUM_LOCK = 2102-End-->
 
@@ -1990,9 +2232,11 @@ KEYCODE_NUMPAD_0 = 2103
 
 Key 0 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_0 = 2103--><!--Device-KeyCode-KEYCODE_NUMPAD_0 = 2103-End-->
 
@@ -2006,9 +2250,11 @@ KEYCODE_NUMPAD_1 = 2104
 
 Key 1 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_1 = 2104--><!--Device-KeyCode-KEYCODE_NUMPAD_1 = 2104-End-->
 
@@ -2022,9 +2268,11 @@ KEYCODE_NUMPAD_2 = 2105
 
 Key 2 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_2 = 2105--><!--Device-KeyCode-KEYCODE_NUMPAD_2 = 2105-End-->
 
@@ -2038,9 +2286,11 @@ KEYCODE_NUMPAD_3 = 2106
 
 Key 3 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_3 = 2106--><!--Device-KeyCode-KEYCODE_NUMPAD_3 = 2106-End-->
 
@@ -2054,9 +2304,11 @@ KEYCODE_NUMPAD_4 = 2107
 
 Key 4 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_4 = 2107--><!--Device-KeyCode-KEYCODE_NUMPAD_4 = 2107-End-->
 
@@ -2070,9 +2322,11 @@ KEYCODE_NUMPAD_5 = 2108
 
 Key 5 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_5 = 2108--><!--Device-KeyCode-KEYCODE_NUMPAD_5 = 2108-End-->
 
@@ -2086,9 +2340,11 @@ KEYCODE_NUMPAD_6 = 2109
 
 Key 6 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_6 = 2109--><!--Device-KeyCode-KEYCODE_NUMPAD_6 = 2109-End-->
 
@@ -2102,9 +2358,11 @@ KEYCODE_NUMPAD_7 = 2110
 
 Key 7 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_7 = 2110--><!--Device-KeyCode-KEYCODE_NUMPAD_7 = 2110-End-->
 
@@ -2118,9 +2376,11 @@ KEYCODE_NUMPAD_8 = 2111
 
 Key 8 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_8 = 2111--><!--Device-KeyCode-KEYCODE_NUMPAD_8 = 2111-End-->
 
@@ -2134,9 +2394,11 @@ KEYCODE_NUMPAD_9 = 2112
 
 Key 9 on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_9 = 2112--><!--Device-KeyCode-KEYCODE_NUMPAD_9 = 2112-End-->
 
@@ -2150,9 +2412,11 @@ KEYCODE_NUMPAD_DIVIDE = 2113
 
 Key / on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_DIVIDE = 2113--><!--Device-KeyCode-KEYCODE_NUMPAD_DIVIDE = 2113-End-->
 
@@ -2166,9 +2430,11 @@ KEYCODE_NUMPAD_MULTIPLY = 2114
 
 Key * on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_MULTIPLY = 2114--><!--Device-KeyCode-KEYCODE_NUMPAD_MULTIPLY = 2114-End-->
 
@@ -2182,9 +2448,11 @@ KEYCODE_NUMPAD_SUBTRACT = 2115
 
 Key - on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_SUBTRACT = 2115--><!--Device-KeyCode-KEYCODE_NUMPAD_SUBTRACT = 2115-End-->
 
@@ -2198,9 +2466,11 @@ KEYCODE_NUMPAD_ADD = 2116
 
 Key + on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_ADD = 2116--><!--Device-KeyCode-KEYCODE_NUMPAD_ADD = 2116-End-->
 
@@ -2214,9 +2484,11 @@ KEYCODE_NUMPAD_DOT = 2117
 
 Key . on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_DOT = 2117--><!--Device-KeyCode-KEYCODE_NUMPAD_DOT = 2117-End-->
 
@@ -2230,9 +2502,11 @@ KEYCODE_NUMPAD_COMMA = 2118
 
 Key , on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_COMMA = 2118--><!--Device-KeyCode-KEYCODE_NUMPAD_COMMA = 2118-End-->
 
@@ -2246,9 +2520,11 @@ KEYCODE_NUMPAD_ENTER = 2119
 
 Enter key on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_ENTER = 2119--><!--Device-KeyCode-KEYCODE_NUMPAD_ENTER = 2119-End-->
 
@@ -2262,9 +2538,11 @@ KEYCODE_NUMPAD_EQUALS = 2120
 
 Key = on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_EQUALS = 2120--><!--Device-KeyCode-KEYCODE_NUMPAD_EQUALS = 2120-End-->
 
@@ -2278,9 +2556,11 @@ KEYCODE_NUMPAD_LEFT_PAREN = 2121
 
 Key ( on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_LEFT_PAREN = 2121--><!--Device-KeyCode-KEYCODE_NUMPAD_LEFT_PAREN = 2121-End-->
 
@@ -2294,9 +2574,11 @@ KEYCODE_NUMPAD_RIGHT_PAREN = 2122
 
 Key ) on numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_RIGHT_PAREN = 2122--><!--Device-KeyCode-KEYCODE_NUMPAD_RIGHT_PAREN = 2122-End-->
 
@@ -2310,9 +2592,11 @@ KEYCODE_VIRTUAL_MULTITASK = 2210
 
 Multi-task key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VIRTUAL_MULTITASK = 2210--><!--Device-KeyCode-KEYCODE_VIRTUAL_MULTITASK = 2210-End-->
 
@@ -2326,9 +2610,11 @@ KEYCODE_BUTTON_A = 2301
 
 Joystick key A
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_A = 2301--><!--Device-KeyCode-KEYCODE_BUTTON_A = 2301-End-->
 
@@ -2342,9 +2628,11 @@ KEYCODE_BUTTON_B = 2302
 
 Joystick key B
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_B = 2302--><!--Device-KeyCode-KEYCODE_BUTTON_B = 2302-End-->
 
@@ -2358,9 +2646,11 @@ KEYCODE_BUTTON_X = 2304
 
 Joystick key X
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_X = 2304--><!--Device-KeyCode-KEYCODE_BUTTON_X = 2304-End-->
 
@@ -2374,9 +2664,11 @@ KEYCODE_BUTTON_Y = 2305
 
 Joystick key Y
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_Y = 2305--><!--Device-KeyCode-KEYCODE_BUTTON_Y = 2305-End-->
 
@@ -2390,9 +2682,11 @@ KEYCODE_BUTTON_L1 = 2307
 
 Joystick key L1
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_L1 = 2307--><!--Device-KeyCode-KEYCODE_BUTTON_L1 = 2307-End-->
 
@@ -2406,9 +2700,11 @@ KEYCODE_BUTTON_R1 = 2308
 
 Joystick key R1
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_R1 = 2308--><!--Device-KeyCode-KEYCODE_BUTTON_R1 = 2308-End-->
 
@@ -2422,9 +2718,11 @@ KEYCODE_BUTTON_L2 = 2309
 
 Joystick key L2
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_L2 = 2309--><!--Device-KeyCode-KEYCODE_BUTTON_L2 = 2309-End-->
 
@@ -2438,9 +2736,11 @@ KEYCODE_BUTTON_R2 = 2310
 
 Joystick key R2
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_R2 = 2310--><!--Device-KeyCode-KEYCODE_BUTTON_R2 = 2310-End-->
 
@@ -2454,9 +2754,11 @@ KEYCODE_BUTTON_SELECT = 2311
 
 Joystick key Select
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_SELECT = 2311--><!--Device-KeyCode-KEYCODE_BUTTON_SELECT = 2311-End-->
 
@@ -2470,9 +2772,11 @@ KEYCODE_BUTTON_START = 2312
 
 Joystick key Start
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_START = 2312--><!--Device-KeyCode-KEYCODE_BUTTON_START = 2312-End-->
 
@@ -2486,9 +2790,11 @@ KEYCODE_BUTTON_MODE = 2313
 
 Joystick key Mode
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_MODE = 2313--><!--Device-KeyCode-KEYCODE_BUTTON_MODE = 2313-End-->
 
@@ -2502,9 +2808,11 @@ KEYCODE_BUTTON_THUMBL = 2314
 
 Joystick key THUMBL
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_THUMBL = 2314--><!--Device-KeyCode-KEYCODE_BUTTON_THUMBL = 2314-End-->
 
@@ -2518,9 +2826,11 @@ KEYCODE_BUTTON_THUMBR = 2315
 
 Joystick key THUMBR
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTON_THUMBR = 2315--><!--Device-KeyCode-KEYCODE_BUTTON_THUMBR = 2315-End-->
 
@@ -2534,9 +2844,11 @@ KEYCODE_SLEEP = 2600
 
 Sleep key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SLEEP = 2600--><!--Device-KeyCode-KEYCODE_SLEEP = 2600-End-->
 
@@ -2550,9 +2862,11 @@ KEYCODE_ZENKAKU_HANKAKU = 2601
 
 Zenkaku/Hankaku key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ZENKAKU_HANKAKU = 2601--><!--Device-KeyCode-KEYCODE_ZENKAKU_HANKAKU = 2601-End-->
 
@@ -2566,9 +2880,11 @@ KEYCODE_102ND = 2602
 
 International Keyboard Extension key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_102ND = 2602--><!--Device-KeyCode-KEYCODE_102ND = 2602-End-->
 
@@ -2582,9 +2898,11 @@ KEYCODE_RO = 2603
 
 Ro key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_RO = 2603--><!--Device-KeyCode-KEYCODE_RO = 2603-End-->
 
@@ -2598,9 +2916,11 @@ KEYCODE_KATAKANA = 2604
 
 Katakana key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KATAKANA = 2604--><!--Device-KeyCode-KEYCODE_KATAKANA = 2604-End-->
 
@@ -2614,9 +2934,11 @@ KEYCODE_HIRAGANA = 2605
 
 Hiragana key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_HIRAGANA = 2605--><!--Device-KeyCode-KEYCODE_HIRAGANA = 2605-End-->
 
@@ -2630,9 +2952,11 @@ KEYCODE_HENKAN = 2606
 
 Henkan key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_HENKAN = 2606--><!--Device-KeyCode-KEYCODE_HENKAN = 2606-End-->
 
@@ -2646,9 +2970,11 @@ KEYCODE_KATAKANA_HIRAGANA = 2607
 
 Katakana/Hiragana key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KATAKANA_HIRAGANA = 2607--><!--Device-KeyCode-KEYCODE_KATAKANA_HIRAGANA = 2607-End-->
 
@@ -2662,9 +2988,11 @@ KEYCODE_MUHENKAN = 2608
 
 Muhenkan key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MUHENKAN = 2608--><!--Device-KeyCode-KEYCODE_MUHENKAN = 2608-End-->
 
@@ -2678,9 +3006,11 @@ KEYCODE_LINEFEED = 2609
 
 Linefeed key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_LINEFEED = 2609--><!--Device-KeyCode-KEYCODE_LINEFEED = 2609-End-->
 
@@ -2694,9 +3024,11 @@ KEYCODE_MACRO = 2610
 
 Macro key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MACRO = 2610--><!--Device-KeyCode-KEYCODE_MACRO = 2610-End-->
 
@@ -2710,9 +3042,11 @@ KEYCODE_NUMPAD_PLUSMINUS = 2611
 
 Plus/Minus key on the numeric keypad
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NUMPAD_PLUSMINUS = 2611--><!--Device-KeyCode-KEYCODE_NUMPAD_PLUSMINUS = 2611-End-->
 
@@ -2726,9 +3060,11 @@ KEYCODE_SCALE = 2612
 
 Scale key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SCALE = 2612--><!--Device-KeyCode-KEYCODE_SCALE = 2612-End-->
 
@@ -2742,9 +3078,11 @@ KEYCODE_HANGUEL = 2613
 
 Hanguel key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_HANGUEL = 2613--><!--Device-KeyCode-KEYCODE_HANGUEL = 2613-End-->
 
@@ -2758,9 +3096,11 @@ KEYCODE_HANJA = 2614
 
 Hanja key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_HANJA = 2614--><!--Device-KeyCode-KEYCODE_HANJA = 2614-End-->
 
@@ -2774,9 +3114,11 @@ KEYCODE_YEN = 2615
 
 Yen key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_YEN = 2615--><!--Device-KeyCode-KEYCODE_YEN = 2615-End-->
 
@@ -2790,9 +3132,11 @@ KEYCODE_STOP = 2616
 
 Stop key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_STOP = 2616--><!--Device-KeyCode-KEYCODE_STOP = 2616-End-->
 
@@ -2806,9 +3150,11 @@ KEYCODE_AGAIN = 2617
 
 Again key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_AGAIN = 2617--><!--Device-KeyCode-KEYCODE_AGAIN = 2617-End-->
 
@@ -2822,9 +3168,11 @@ KEYCODE_PROPS = 2618
 
 Props key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PROPS = 2618--><!--Device-KeyCode-KEYCODE_PROPS = 2618-End-->
 
@@ -2838,9 +3186,11 @@ KEYCODE_UNDO = 2619
 
 Undo key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_UNDO = 2619--><!--Device-KeyCode-KEYCODE_UNDO = 2619-End-->
 
@@ -2854,9 +3204,11 @@ KEYCODE_COPY = 2620
 
 Copy key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_COPY = 2620--><!--Device-KeyCode-KEYCODE_COPY = 2620-End-->
 
@@ -2870,9 +3222,11 @@ KEYCODE_OPEN = 2621
 
 Open key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_OPEN = 2621--><!--Device-KeyCode-KEYCODE_OPEN = 2621-End-->
 
@@ -2886,9 +3240,11 @@ KEYCODE_PASTE = 2622
 
 Paste key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PASTE = 2622--><!--Device-KeyCode-KEYCODE_PASTE = 2622-End-->
 
@@ -2902,9 +3258,11 @@ KEYCODE_FIND = 2623
 
 Find key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FIND = 2623--><!--Device-KeyCode-KEYCODE_FIND = 2623-End-->
 
@@ -2918,9 +3276,11 @@ KEYCODE_CUT = 2624
 
 Cut key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CUT = 2624--><!--Device-KeyCode-KEYCODE_CUT = 2624-End-->
 
@@ -2934,9 +3294,11 @@ KEYCODE_HELP = 2625
 
 Help key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_HELP = 2625--><!--Device-KeyCode-KEYCODE_HELP = 2625-End-->
 
@@ -2950,9 +3312,11 @@ KEYCODE_CALC = 2626
 
 Calc key, which is used to start the calculator application
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CALC = 2626--><!--Device-KeyCode-KEYCODE_CALC = 2626-End-->
 
@@ -2966,9 +3330,11 @@ KEYCODE_FILE = 2627
 
 File key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FILE = 2627--><!--Device-KeyCode-KEYCODE_FILE = 2627-End-->
 
@@ -2982,9 +3348,11 @@ KEYCODE_BOOKMARKS = 2628
 
 Bookmarks key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BOOKMARKS = 2628--><!--Device-KeyCode-KEYCODE_BOOKMARKS = 2628-End-->
 
@@ -2998,9 +3366,11 @@ KEYCODE_NEXT = 2629
 
 Page Down key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NEXT = 2629--><!--Device-KeyCode-KEYCODE_NEXT = 2629-End-->
 
@@ -3012,15 +3382,13 @@ Page Down key
 KEYCODE_PLAYPAUSE = 2630
 ```
 
-Play/Pause key
+Play/Pause key Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**: **KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
-Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:
+**Since:** 23
 
-**KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PLAYPAUSE = 2630--><!--Device-KeyCode-KEYCODE_PLAYPAUSE = 2630-End-->
 
@@ -3034,9 +3402,11 @@ KEYCODE_PREVIOUS = 2631
 
 Page Up key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PREVIOUS = 2631--><!--Device-KeyCode-KEYCODE_PREVIOUS = 2631-End-->
 
@@ -3050,9 +3420,11 @@ KEYCODE_STOPCD = 2632
 
 Stop CD key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_STOPCD = 2632--><!--Device-KeyCode-KEYCODE_STOPCD = 2632-End-->
 
@@ -3066,9 +3438,11 @@ KEYCODE_CONFIG = 2634
 
 Config key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CONFIG = 2634--><!--Device-KeyCode-KEYCODE_CONFIG = 2634-End-->
 
@@ -3082,9 +3456,11 @@ KEYCODE_REFRESH = 2635
 
 Refresh key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_REFRESH = 2635--><!--Device-KeyCode-KEYCODE_REFRESH = 2635-End-->
 
@@ -3098,9 +3474,11 @@ KEYCODE_EXIT = 2636
 
 Exit key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_EXIT = 2636--><!--Device-KeyCode-KEYCODE_EXIT = 2636-End-->
 
@@ -3114,9 +3492,11 @@ KEYCODE_EDIT = 2637
 
 Edit key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_EDIT = 2637--><!--Device-KeyCode-KEYCODE_EDIT = 2637-End-->
 
@@ -3130,9 +3510,11 @@ KEYCODE_SCROLLUP = 2638
 
 Scroll Up key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SCROLLUP = 2638--><!--Device-KeyCode-KEYCODE_SCROLLUP = 2638-End-->
 
@@ -3146,9 +3528,11 @@ KEYCODE_SCROLLDOWN = 2639
 
 Scroll Down key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SCROLLDOWN = 2639--><!--Device-KeyCode-KEYCODE_SCROLLDOWN = 2639-End-->
 
@@ -3162,9 +3546,11 @@ KEYCODE_NEW = 2640
 
 New key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NEW = 2640--><!--Device-KeyCode-KEYCODE_NEW = 2640-End-->
 
@@ -3178,9 +3564,11 @@ KEYCODE_REDO = 2641
 
 Redo key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_REDO = 2641--><!--Device-KeyCode-KEYCODE_REDO = 2641-End-->
 
@@ -3194,9 +3582,11 @@ KEYCODE_CLOSE = 2642
 
 Close key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CLOSE = 2642--><!--Device-KeyCode-KEYCODE_CLOSE = 2642-End-->
 
@@ -3210,9 +3600,11 @@ KEYCODE_PLAY = 2643
 
 Play key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PLAY = 2643--><!--Device-KeyCode-KEYCODE_PLAY = 2643-End-->
 
@@ -3226,9 +3618,11 @@ KEYCODE_BASSBOOST = 2644
 
 Bass Boost key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BASSBOOST = 2644--><!--Device-KeyCode-KEYCODE_BASSBOOST = 2644-End-->
 
@@ -3242,9 +3636,11 @@ KEYCODE_PRINT = 2645
 
 Print key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PRINT = 2645--><!--Device-KeyCode-KEYCODE_PRINT = 2645-End-->
 
@@ -3258,9 +3654,11 @@ KEYCODE_CHAT = 2646
 
 Chat key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CHAT = 2646--><!--Device-KeyCode-KEYCODE_CHAT = 2646-End-->
 
@@ -3274,9 +3672,11 @@ KEYCODE_FINANCE = 2647
 
 Finance key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FINANCE = 2647--><!--Device-KeyCode-KEYCODE_FINANCE = 2647-End-->
 
@@ -3290,9 +3690,11 @@ KEYCODE_CANCEL = 2648
 
 Cancel key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CANCEL = 2648--><!--Device-KeyCode-KEYCODE_CANCEL = 2648-End-->
 
@@ -3306,9 +3708,11 @@ KEYCODE_KBDILLUM_TOGGLE = 2649
 
 Keyboard Illumination Toggle key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDILLUM_TOGGLE = 2649--><!--Device-KeyCode-KEYCODE_KBDILLUM_TOGGLE = 2649-End-->
 
@@ -3322,9 +3726,11 @@ KEYCODE_KBDILLUM_DOWN = 2650
 
 Keyboard Illumination Down key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDILLUM_DOWN = 2650--><!--Device-KeyCode-KEYCODE_KBDILLUM_DOWN = 2650-End-->
 
@@ -3338,9 +3744,11 @@ KEYCODE_KBDILLUM_UP = 2651
 
 Keyboard Illumination Up key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDILLUM_UP = 2651--><!--Device-KeyCode-KEYCODE_KBDILLUM_UP = 2651-End-->
 
@@ -3354,9 +3762,11 @@ KEYCODE_SEND = 2652
 
 Send key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SEND = 2652--><!--Device-KeyCode-KEYCODE_SEND = 2652-End-->
 
@@ -3370,9 +3780,11 @@ KEYCODE_REPLY = 2653
 
 Reply key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_REPLY = 2653--><!--Device-KeyCode-KEYCODE_REPLY = 2653-End-->
 
@@ -3386,9 +3798,11 @@ KEYCODE_FORWARDMAIL = 2654
 
 Forward Mail key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FORWARDMAIL = 2654--><!--Device-KeyCode-KEYCODE_FORWARDMAIL = 2654-End-->
 
@@ -3402,9 +3816,11 @@ KEYCODE_SAVE = 2655
 
 Save key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SAVE = 2655--><!--Device-KeyCode-KEYCODE_SAVE = 2655-End-->
 
@@ -3418,9 +3834,11 @@ KEYCODE_DOCUMENTS = 2656
 
 Documents key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DOCUMENTS = 2656--><!--Device-KeyCode-KEYCODE_DOCUMENTS = 2656-End-->
 
@@ -3434,9 +3852,11 @@ KEYCODE_VIDEO_NEXT = 2657
 
 Next Video key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VIDEO_NEXT = 2657--><!--Device-KeyCode-KEYCODE_VIDEO_NEXT = 2657-End-->
 
@@ -3450,9 +3870,11 @@ KEYCODE_VIDEO_PREV = 2658
 
 Previous Video key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VIDEO_PREV = 2658--><!--Device-KeyCode-KEYCODE_VIDEO_PREV = 2658-End-->
 
@@ -3466,9 +3888,11 @@ KEYCODE_BRIGHTNESS_CYCLE = 2659
 
 Brightness Cycle key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BRIGHTNESS_CYCLE = 2659--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_CYCLE = 2659-End-->
 
@@ -3482,9 +3906,11 @@ KEYCODE_BRIGHTNESS_ZERO = 2660
 
 Brightness Zero key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BRIGHTNESS_ZERO = 2660--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_ZERO = 2660-End-->
 
@@ -3498,9 +3924,11 @@ KEYCODE_DISPLAY_OFF = 2661
 
 Display Off key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DISPLAY_OFF = 2661--><!--Device-KeyCode-KEYCODE_DISPLAY_OFF = 2661-End-->
 
@@ -3514,9 +3942,11 @@ KEYCODE_BTN_MISC = 2662
 
 Misc Button key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_MISC = 2662--><!--Device-KeyCode-KEYCODE_BTN_MISC = 2662-End-->
 
@@ -3530,9 +3960,11 @@ KEYCODE_GOTO = 2663
 
 Goto key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_GOTO = 2663--><!--Device-KeyCode-KEYCODE_GOTO = 2663-End-->
 
@@ -3546,9 +3978,11 @@ KEYCODE_INFO = 2664
 
 Info key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_INFO = 2664--><!--Device-KeyCode-KEYCODE_INFO = 2664-End-->
 
@@ -3562,9 +3996,11 @@ KEYCODE_PROGRAM = 2665
 
 Program key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PROGRAM = 2665--><!--Device-KeyCode-KEYCODE_PROGRAM = 2665-End-->
 
@@ -3578,9 +4014,11 @@ KEYCODE_PVR = 2666
 
 PVR key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PVR = 2666--><!--Device-KeyCode-KEYCODE_PVR = 2666-End-->
 
@@ -3594,9 +4032,11 @@ KEYCODE_SUBTITLE = 2667
 
 Subtitle key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SUBTITLE = 2667--><!--Device-KeyCode-KEYCODE_SUBTITLE = 2667-End-->
 
@@ -3610,9 +4050,11 @@ KEYCODE_FULL_SCREEN = 2668
 
 Full Screen key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FULL_SCREEN = 2668--><!--Device-KeyCode-KEYCODE_FULL_SCREEN = 2668-End-->
 
@@ -3626,9 +4068,11 @@ KEYCODE_KEYBOARD = 2669
 
 Keyboard.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KEYBOARD = 2669--><!--Device-KeyCode-KEYCODE_KEYBOARD = 2669-End-->
 
@@ -3642,9 +4086,11 @@ KEYCODE_ASPECT_RATIO = 2670
 
 Aspect Ratio key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ASPECT_RATIO = 2670--><!--Device-KeyCode-KEYCODE_ASPECT_RATIO = 2670-End-->
 
@@ -3658,9 +4104,11 @@ KEYCODE_PC = 2671
 
 Port Control key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PC = 2671--><!--Device-KeyCode-KEYCODE_PC = 2671-End-->
 
@@ -3674,9 +4122,11 @@ KEYCODE_TV = 2672
 
 TV key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_TV = 2672--><!--Device-KeyCode-KEYCODE_TV = 2672-End-->
 
@@ -3690,9 +4140,11 @@ KEYCODE_TV2 = 2673
 
 TV key 2
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_TV2 = 2673--><!--Device-KeyCode-KEYCODE_TV2 = 2673-End-->
 
@@ -3706,9 +4158,11 @@ KEYCODE_VCR = 2674
 
 VCR key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VCR = 2674--><!--Device-KeyCode-KEYCODE_VCR = 2674-End-->
 
@@ -3722,9 +4176,11 @@ KEYCODE_VCR2 = 2675
 
 VCR key 2
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VCR2 = 2675--><!--Device-KeyCode-KEYCODE_VCR2 = 2675-End-->
 
@@ -3738,9 +4194,11 @@ KEYCODE_SAT = 2676
 
 SAT key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SAT = 2676--><!--Device-KeyCode-KEYCODE_SAT = 2676-End-->
 
@@ -3754,9 +4212,11 @@ KEYCODE_CD = 2677
 
 CD key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CD = 2677--><!--Device-KeyCode-KEYCODE_CD = 2677-End-->
 
@@ -3770,9 +4230,11 @@ KEYCODE_TAPE = 2678
 
 Tape key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_TAPE = 2678--><!--Device-KeyCode-KEYCODE_TAPE = 2678-End-->
 
@@ -3786,9 +4248,11 @@ KEYCODE_TUNER = 2679
 
 Tuner key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_TUNER = 2679--><!--Device-KeyCode-KEYCODE_TUNER = 2679-End-->
 
@@ -3802,9 +4266,11 @@ KEYCODE_PLAYER = 2680
 
 Player key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PLAYER = 2680--><!--Device-KeyCode-KEYCODE_PLAYER = 2680-End-->
 
@@ -3818,9 +4284,11 @@ KEYCODE_DVD = 2681
 
 DVD key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DVD = 2681--><!--Device-KeyCode-KEYCODE_DVD = 2681-End-->
 
@@ -3834,9 +4302,11 @@ KEYCODE_AUDIO = 2682
 
 Audio key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_AUDIO = 2682--><!--Device-KeyCode-KEYCODE_AUDIO = 2682-End-->
 
@@ -3850,9 +4320,11 @@ KEYCODE_VIDEO = 2683
 
 Video key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VIDEO = 2683--><!--Device-KeyCode-KEYCODE_VIDEO = 2683-End-->
 
@@ -3866,9 +4338,11 @@ KEYCODE_MEMO = 2684
 
 Memo key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MEMO = 2684--><!--Device-KeyCode-KEYCODE_MEMO = 2684-End-->
 
@@ -3882,9 +4356,11 @@ KEYCODE_CALENDAR = 2685
 
 Calendar key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CALENDAR = 2685--><!--Device-KeyCode-KEYCODE_CALENDAR = 2685-End-->
 
@@ -3898,9 +4374,11 @@ KEYCODE_RED = 2686
 
 Red indicator.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_RED = 2686--><!--Device-KeyCode-KEYCODE_RED = 2686-End-->
 
@@ -3914,9 +4392,11 @@ KEYCODE_GREEN = 2687
 
 Green indicator.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_GREEN = 2687--><!--Device-KeyCode-KEYCODE_GREEN = 2687-End-->
 
@@ -3930,9 +4410,11 @@ KEYCODE_YELLOW = 2688
 
 Yellow indicator.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_YELLOW = 2688--><!--Device-KeyCode-KEYCODE_YELLOW = 2688-End-->
 
@@ -3946,9 +4428,11 @@ KEYCODE_BLUE = 2689
 
 Blue indicator.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BLUE = 2689--><!--Device-KeyCode-KEYCODE_BLUE = 2689-End-->
 
@@ -3962,9 +4446,11 @@ KEYCODE_CHANNELUP = 2690
 
 Channel Up key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CHANNELUP = 2690--><!--Device-KeyCode-KEYCODE_CHANNELUP = 2690-End-->
 
@@ -3978,9 +4464,11 @@ KEYCODE_CHANNELDOWN = 2691
 
 Channel Down key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CHANNELDOWN = 2691--><!--Device-KeyCode-KEYCODE_CHANNELDOWN = 2691-End-->
 
@@ -3994,9 +4482,11 @@ KEYCODE_LAST = 2692
 
 Last key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_LAST = 2692--><!--Device-KeyCode-KEYCODE_LAST = 2692-End-->
 
@@ -4010,9 +4500,11 @@ KEYCODE_RESTART = 2693
 
 Restart key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_RESTART = 2693--><!--Device-KeyCode-KEYCODE_RESTART = 2693-End-->
 
@@ -4026,9 +4518,11 @@ KEYCODE_SLOW = 2694
 
 Slow key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SLOW = 2694--><!--Device-KeyCode-KEYCODE_SLOW = 2694-End-->
 
@@ -4042,9 +4536,11 @@ KEYCODE_SHUFFLE = 2695
 
 Shuffle key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SHUFFLE = 2695--><!--Device-KeyCode-KEYCODE_SHUFFLE = 2695-End-->
 
@@ -4058,9 +4554,11 @@ KEYCODE_VIDEOPHONE = 2696
 
 Videophone key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VIDEOPHONE = 2696--><!--Device-KeyCode-KEYCODE_VIDEOPHONE = 2696-End-->
 
@@ -4074,9 +4572,11 @@ KEYCODE_GAMES = 2697
 
 Games key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_GAMES = 2697--><!--Device-KeyCode-KEYCODE_GAMES = 2697-End-->
 
@@ -4090,9 +4590,11 @@ KEYCODE_ZOOMIN = 2698
 
 Zoom in
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ZOOMIN = 2698--><!--Device-KeyCode-KEYCODE_ZOOMIN = 2698-End-->
 
@@ -4106,9 +4608,11 @@ KEYCODE_ZOOMOUT = 2699
 
 Zoom out
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ZOOMOUT = 2699--><!--Device-KeyCode-KEYCODE_ZOOMOUT = 2699-End-->
 
@@ -4122,9 +4626,11 @@ KEYCODE_ZOOMRESET = 2700
 
 Zoom Reset key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ZOOMRESET = 2700--><!--Device-KeyCode-KEYCODE_ZOOMRESET = 2700-End-->
 
@@ -4138,9 +4644,11 @@ KEYCODE_WORDPROCESSOR = 2701
 
 Word Processor key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_WORDPROCESSOR = 2701--><!--Device-KeyCode-KEYCODE_WORDPROCESSOR = 2701-End-->
 
@@ -4154,9 +4662,11 @@ KEYCODE_EDITOR = 2702
 
 Editor key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_EDITOR = 2702--><!--Device-KeyCode-KEYCODE_EDITOR = 2702-End-->
 
@@ -4170,9 +4680,11 @@ KEYCODE_SPREADSHEET = 2703
 
 Spreadsheet key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SPREADSHEET = 2703--><!--Device-KeyCode-KEYCODE_SPREADSHEET = 2703-End-->
 
@@ -4186,9 +4698,11 @@ KEYCODE_GRAPHICSEDITOR = 2704
 
 Graphics Editor key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_GRAPHICSEDITOR = 2704--><!--Device-KeyCode-KEYCODE_GRAPHICSEDITOR = 2704-End-->
 
@@ -4202,9 +4716,11 @@ KEYCODE_PRESENTATION = 2705
 
 Presentation key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PRESENTATION = 2705--><!--Device-KeyCode-KEYCODE_PRESENTATION = 2705-End-->
 
@@ -4218,9 +4734,11 @@ KEYCODE_DATABASE = 2706
 
 Database key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DATABASE = 2706--><!--Device-KeyCode-KEYCODE_DATABASE = 2706-End-->
 
@@ -4234,9 +4752,11 @@ KEYCODE_NEWS = 2707
 
 News key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_NEWS = 2707--><!--Device-KeyCode-KEYCODE_NEWS = 2707-End-->
 
@@ -4250,9 +4770,11 @@ KEYCODE_VOICEMAIL = 2708
 
 Voicemail key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_VOICEMAIL = 2708--><!--Device-KeyCode-KEYCODE_VOICEMAIL = 2708-End-->
 
@@ -4266,9 +4788,11 @@ KEYCODE_ADDRESSBOOK = 2709
 
 Address book key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ADDRESSBOOK = 2709--><!--Device-KeyCode-KEYCODE_ADDRESSBOOK = 2709-End-->
 
@@ -4282,9 +4806,11 @@ KEYCODE_MESSENGER = 2710
 
 Messenger key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MESSENGER = 2710--><!--Device-KeyCode-KEYCODE_MESSENGER = 2710-End-->
 
@@ -4298,9 +4824,11 @@ KEYCODE_BRIGHTNESS_TOGGLE = 2711
 
 Brightness Toggle key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BRIGHTNESS_TOGGLE = 2711--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_TOGGLE = 2711-End-->
 
@@ -4314,9 +4842,11 @@ KEYCODE_SPELLCHECK = 2712
 
 Spell Check key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SPELLCHECK = 2712--><!--Device-KeyCode-KEYCODE_SPELLCHECK = 2712-End-->
 
@@ -4330,9 +4860,11 @@ KEYCODE_COFFEE = 2713
 
 Coffee key, which is used to launch screen lock or screen saver
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_COFFEE = 2713--><!--Device-KeyCode-KEYCODE_COFFEE = 2713-End-->
 
@@ -4346,9 +4878,11 @@ KEYCODE_MEDIA_REPEAT = 2714
 
 Media Repeat key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MEDIA_REPEAT = 2714--><!--Device-KeyCode-KEYCODE_MEDIA_REPEAT = 2714-End-->
 
@@ -4362,9 +4896,11 @@ KEYCODE_IMAGES = 2715
 
 Images key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_IMAGES = 2715--><!--Device-KeyCode-KEYCODE_IMAGES = 2715-End-->
 
@@ -4378,9 +4914,11 @@ KEYCODE_BUTTONCONFIG = 2716
 
 Button Configuration key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BUTTONCONFIG = 2716--><!--Device-KeyCode-KEYCODE_BUTTONCONFIG = 2716-End-->
 
@@ -4394,9 +4932,11 @@ KEYCODE_TASKMANAGER = 2717
 
 Task Manager key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_TASKMANAGER = 2717--><!--Device-KeyCode-KEYCODE_TASKMANAGER = 2717-End-->
 
@@ -4410,9 +4950,11 @@ KEYCODE_JOURNAL = 2718
 
 Log key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_JOURNAL = 2718--><!--Device-KeyCode-KEYCODE_JOURNAL = 2718-End-->
 
@@ -4426,9 +4968,11 @@ KEYCODE_CONTROLPANEL = 2719
 
 Control Panel key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CONTROLPANEL = 2719--><!--Device-KeyCode-KEYCODE_CONTROLPANEL = 2719-End-->
 
@@ -4442,9 +4986,11 @@ KEYCODE_APPSELECT = 2720
 
 App Select key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_APPSELECT = 2720--><!--Device-KeyCode-KEYCODE_APPSELECT = 2720-End-->
 
@@ -4458,9 +5004,11 @@ KEYCODE_SCREENSAVER = 2721
 
 Screen Saver key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SCREENSAVER = 2721--><!--Device-KeyCode-KEYCODE_SCREENSAVER = 2721-End-->
 
@@ -4474,9 +5022,11 @@ KEYCODE_ASSISTANT = 2722
 
 Smart key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ASSISTANT = 2722--><!--Device-KeyCode-KEYCODE_ASSISTANT = 2722-End-->
 
@@ -4490,9 +5040,11 @@ KEYCODE_KBD_LAYOUT_NEXT = 2723
 
 Next Keyboard Layout key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBD_LAYOUT_NEXT = 2723--><!--Device-KeyCode-KEYCODE_KBD_LAYOUT_NEXT = 2723-End-->
 
@@ -4506,9 +5058,11 @@ KEYCODE_BRIGHTNESS_MIN = 2724
 
 Min Brightness key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BRIGHTNESS_MIN = 2724--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_MIN = 2724-End-->
 
@@ -4522,9 +5076,11 @@ KEYCODE_BRIGHTNESS_MAX = 2725
 
 Max Brightness key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BRIGHTNESS_MAX = 2725--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_MAX = 2725-End-->
 
@@ -4538,9 +5094,11 @@ KEYCODE_KBDINPUTASSIST_PREV = 2726
 
 Assist_Previous key, used to view historical inputs
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREV = 2726--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREV = 2726-End-->
 
@@ -4554,9 +5112,11 @@ KEYCODE_KBDINPUTASSIST_NEXT = 2727
 
 Assist_Next key, used to view predictive inputs
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXT = 2727--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXT = 2727-End-->
 
@@ -4570,9 +5130,11 @@ KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728
 
 Assist_Previous_Group key, used to switch to the previous input method in the input group
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728-End-->
 
@@ -4586,9 +5148,11 @@ KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729
 
 Assist_Next_Group key, used to switch to the next input method in the input group
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729-End-->
 
@@ -4602,9 +5166,11 @@ KEYCODE_KBDINPUTASSIST_ACCEPT = 2730
 
 Keyboard Input-assisted Accept key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_ACCEPT = 2730--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_ACCEPT = 2730-End-->
 
@@ -4618,9 +5184,11 @@ KEYCODE_KBDINPUTASSIST_CANCEL = 2731
 
 Keyboard Input-assisted Cancel key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_CANCEL = 2731--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_CANCEL = 2731-End-->
 
@@ -4632,15 +5200,13 @@ Keyboard Input-assisted Cancel key
 KEYCODE_MOUSE_ASSISTANT = 2732
 ```
 
-Mouse AI assistant key.
-
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
+Mouse AI assistant key. **Starting Version:** 26.0.0 **Model constraint:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4654,15 +5220,13 @@ Mouse AI assistant key.
 KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733
 ```
 
-Mouse smart selection key.
-
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
+Mouse smart selection key. **Starting Version:** 26.0.0 **Model constraint:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4676,15 +5240,13 @@ Mouse smart selection key.
 KEYCODE_AOD_SINGLE_CLICK = 2740
 ```
 
-Phone touchscreen single-click event, used in Always-On Display (AOD) mode.
-
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
+Phone touchscreen single-click event, used in Always-On Display (AOD) mode. **Starting Version:** 26.0.0 **Model constraint:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4700,9 +5262,11 @@ KEYCODE_FRONT = 2800
 
 Front key, which is used to launch the windshield defogger
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_FRONT = 2800--><!--Device-KeyCode-KEYCODE_FRONT = 2800-End-->
 
@@ -4716,9 +5280,11 @@ KEYCODE_SETUP = 2801
 
 Setup key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SETUP = 2801--><!--Device-KeyCode-KEYCODE_SETUP = 2801-End-->
 
@@ -4732,9 +5298,11 @@ KEYCODE_WAKEUP = 2802
 
 Wakeup key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_WAKEUP = 2802--><!--Device-KeyCode-KEYCODE_WAKEUP = 2802-End-->
 
@@ -4748,9 +5316,11 @@ KEYCODE_SENDFILE = 2803
 
 Send File key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SENDFILE = 2803--><!--Device-KeyCode-KEYCODE_SENDFILE = 2803-End-->
 
@@ -4764,9 +5334,11 @@ KEYCODE_DELETEFILE = 2804
 
 Delete File key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DELETEFILE = 2804--><!--Device-KeyCode-KEYCODE_DELETEFILE = 2804-End-->
 
@@ -4780,9 +5352,11 @@ KEYCODE_XFER = 2805
 
 XFER key, which is used to start file transfer
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_XFER = 2805--><!--Device-KeyCode-KEYCODE_XFER = 2805-End-->
 
@@ -4796,9 +5370,11 @@ KEYCODE_PROG1 = 2806
 
 Program key 1
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PROG1 = 2806--><!--Device-KeyCode-KEYCODE_PROG1 = 2806-End-->
 
@@ -4812,9 +5388,11 @@ KEYCODE_PROG2 = 2807
 
 Program key 2
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PROG2 = 2807--><!--Device-KeyCode-KEYCODE_PROG2 = 2807-End-->
 
@@ -4828,9 +5406,11 @@ KEYCODE_MSDOS = 2808
 
 DOS key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MSDOS = 2808--><!--Device-KeyCode-KEYCODE_MSDOS = 2808-End-->
 
@@ -4844,9 +5424,11 @@ KEYCODE_SCREENLOCK = 2809
 
 Screen Lock key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SCREENLOCK = 2809--><!--Device-KeyCode-KEYCODE_SCREENLOCK = 2809-End-->
 
@@ -4860,9 +5442,11 @@ KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810
 
 Directional Rotation Display key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810--><!--Device-KeyCode-KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810-End-->
 
@@ -4876,9 +5460,11 @@ KEYCODE_CYCLEWINDOWS = 2811
 
 Window Cycle key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CYCLEWINDOWS = 2811--><!--Device-KeyCode-KEYCODE_CYCLEWINDOWS = 2811-End-->
 
@@ -4892,9 +5478,11 @@ KEYCODE_COMPUTER = 2812
 
 Key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_COMPUTER = 2812--><!--Device-KeyCode-KEYCODE_COMPUTER = 2812-End-->
 
@@ -4908,9 +5496,11 @@ KEYCODE_EJECTCLOSECD = 2813
 
 Eject CD key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_EJECTCLOSECD = 2813--><!--Device-KeyCode-KEYCODE_EJECTCLOSECD = 2813-End-->
 
@@ -4924,9 +5514,11 @@ KEYCODE_ISO = 2814
 
 ISO key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ISO = 2814--><!--Device-KeyCode-KEYCODE_ISO = 2814-End-->
 
@@ -4940,9 +5532,11 @@ KEYCODE_MOVE = 2815
 
 Move key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_MOVE = 2815--><!--Device-KeyCode-KEYCODE_MOVE = 2815-End-->
 
@@ -4956,9 +5550,11 @@ KEYCODE_F13 = 2816
 
 F13 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F13 = 2816--><!--Device-KeyCode-KEYCODE_F13 = 2816-End-->
 
@@ -4972,9 +5568,11 @@ KEYCODE_F14 = 2817
 
 F14 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F14 = 2817--><!--Device-KeyCode-KEYCODE_F14 = 2817-End-->
 
@@ -4988,9 +5586,11 @@ KEYCODE_F15 = 2818
 
 F15 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F15 = 2818--><!--Device-KeyCode-KEYCODE_F15 = 2818-End-->
 
@@ -5004,9 +5604,11 @@ KEYCODE_F16 = 2819
 
 F16 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F16 = 2819--><!--Device-KeyCode-KEYCODE_F16 = 2819-End-->
 
@@ -5020,9 +5622,11 @@ KEYCODE_F17 = 2820
 
 F17 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F17 = 2820--><!--Device-KeyCode-KEYCODE_F17 = 2820-End-->
 
@@ -5036,9 +5640,11 @@ KEYCODE_F18 = 2821
 
 F18 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F18 = 2821--><!--Device-KeyCode-KEYCODE_F18 = 2821-End-->
 
@@ -5052,9 +5658,11 @@ KEYCODE_F19 = 2822
 
 F19 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F19 = 2822--><!--Device-KeyCode-KEYCODE_F19 = 2822-End-->
 
@@ -5068,9 +5676,11 @@ KEYCODE_F20 = 2823
 
 F20 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F20 = 2823--><!--Device-KeyCode-KEYCODE_F20 = 2823-End-->
 
@@ -5084,9 +5694,11 @@ KEYCODE_F21 = 2824
 
 F21 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F21 = 2824--><!--Device-KeyCode-KEYCODE_F21 = 2824-End-->
 
@@ -5100,9 +5712,11 @@ KEYCODE_F22 = 2825
 
 F22 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F22 = 2825--><!--Device-KeyCode-KEYCODE_F22 = 2825-End-->
 
@@ -5116,9 +5730,11 @@ KEYCODE_F23 = 2826
 
 F23 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F23 = 2826--><!--Device-KeyCode-KEYCODE_F23 = 2826-End-->
 
@@ -5132,9 +5748,11 @@ KEYCODE_F24 = 2827
 
 F24 key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_F24 = 2827--><!--Device-KeyCode-KEYCODE_F24 = 2827-End-->
 
@@ -5148,9 +5766,11 @@ KEYCODE_PROG3 = 2828
 
 Program key 3
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PROG3 = 2828--><!--Device-KeyCode-KEYCODE_PROG3 = 2828-End-->
 
@@ -5164,9 +5784,11 @@ KEYCODE_PROG4 = 2829
 
 Program key 4
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_PROG4 = 2829--><!--Device-KeyCode-KEYCODE_PROG4 = 2829-End-->
 
@@ -5180,9 +5802,11 @@ KEYCODE_DASHBOARD = 2830
 
 Dashboard key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DASHBOARD = 2830--><!--Device-KeyCode-KEYCODE_DASHBOARD = 2830-End-->
 
@@ -5196,9 +5820,11 @@ KEYCODE_SUSPEND = 2831
 
 Suspend key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SUSPEND = 2831--><!--Device-KeyCode-KEYCODE_SUSPEND = 2831-End-->
 
@@ -5212,9 +5838,11 @@ KEYCODE_HP = 2832
 
 HP key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_HP = 2832--><!--Device-KeyCode-KEYCODE_HP = 2832-End-->
 
@@ -5228,9 +5856,11 @@ KEYCODE_SOUND = 2833
 
 Sound key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SOUND = 2833--><!--Device-KeyCode-KEYCODE_SOUND = 2833-End-->
 
@@ -5244,9 +5874,11 @@ KEYCODE_QUESTION = 2834
 
 Question key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_QUESTION = 2834--><!--Device-KeyCode-KEYCODE_QUESTION = 2834-End-->
 
@@ -5260,9 +5892,11 @@ KEYCODE_CONNECT = 2836
 
 Connect key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CONNECT = 2836--><!--Device-KeyCode-KEYCODE_CONNECT = 2836-End-->
 
@@ -5276,9 +5910,11 @@ KEYCODE_SPORT = 2837
 
 Sport key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SPORT = 2837--><!--Device-KeyCode-KEYCODE_SPORT = 2837-End-->
 
@@ -5292,9 +5928,11 @@ KEYCODE_SHOP = 2838
 
 Shop key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SHOP = 2838--><!--Device-KeyCode-KEYCODE_SHOP = 2838-End-->
 
@@ -5308,9 +5946,11 @@ KEYCODE_ALTERASE = 2839
 
 Alternate key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_ALTERASE = 2839--><!--Device-KeyCode-KEYCODE_ALTERASE = 2839-End-->
 
@@ -5324,9 +5964,11 @@ KEYCODE_SWITCHVIDEOMODE = 2841
 
 Switch Video Mode key (monitor, LCD, and TV, etc.)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_SWITCHVIDEOMODE = 2841--><!--Device-KeyCode-KEYCODE_SWITCHVIDEOMODE = 2841-End-->
 
@@ -5340,9 +5982,11 @@ KEYCODE_BATTERY = 2842
 
 Battery key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BATTERY = 2842--><!--Device-KeyCode-KEYCODE_BATTERY = 2842-End-->
 
@@ -5356,9 +6000,11 @@ KEYCODE_BLUETOOTH = 2843
 
 Bluetooth key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BLUETOOTH = 2843--><!--Device-KeyCode-KEYCODE_BLUETOOTH = 2843-End-->
 
@@ -5372,9 +6018,11 @@ KEYCODE_WLAN = 2844
 
 WLAN key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_WLAN = 2844--><!--Device-KeyCode-KEYCODE_WLAN = 2844-End-->
 
@@ -5388,9 +6036,11 @@ KEYCODE_UWB = 2845
 
 Ultra-wideband key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_UWB = 2845--><!--Device-KeyCode-KEYCODE_UWB = 2845-End-->
 
@@ -5404,9 +6054,11 @@ KEYCODE_WWAN_WIMAX = 2846
 
 Mobile Network Control key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_WWAN_WIMAX = 2846--><!--Device-KeyCode-KEYCODE_WWAN_WIMAX = 2846-End-->
 
@@ -5420,9 +6072,11 @@ KEYCODE_RFKILL = 2847
 
 RF Kill key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_RFKILL = 2847--><!--Device-KeyCode-KEYCODE_RFKILL = 2847-End-->
 
@@ -5436,9 +6090,11 @@ KEYCODE_CHANNEL = 3001
 
 Channel key
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_CHANNEL = 3001--><!--Device-KeyCode-KEYCODE_CHANNEL = 3001-End-->
 
@@ -5452,9 +6108,11 @@ KEYCODE_BTN_0 = 3100
 
 Button 0
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_0 = 3100--><!--Device-KeyCode-KEYCODE_BTN_0 = 3100-End-->
 
@@ -5468,9 +6126,11 @@ KEYCODE_BTN_1 = 3101
 
 Button 1
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_1 = 3101--><!--Device-KeyCode-KEYCODE_BTN_1 = 3101-End-->
 
@@ -5484,9 +6144,11 @@ KEYCODE_BTN_2 = 3102
 
 Button 2
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_2 = 3102--><!--Device-KeyCode-KEYCODE_BTN_2 = 3102-End-->
 
@@ -5500,9 +6162,11 @@ KEYCODE_BTN_3 = 3103
 
 Button 3
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_3 = 3103--><!--Device-KeyCode-KEYCODE_BTN_3 = 3103-End-->
 
@@ -5516,9 +6180,11 @@ KEYCODE_BTN_4 = 3104
 
 Button 4
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_4 = 3104--><!--Device-KeyCode-KEYCODE_BTN_4 = 3104-End-->
 
@@ -5532,9 +6198,11 @@ KEYCODE_BTN_5 = 3105
 
 Button 5
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_5 = 3105--><!--Device-KeyCode-KEYCODE_BTN_5 = 3105-End-->
 
@@ -5548,9 +6216,11 @@ KEYCODE_BTN_6 = 3106
 
 Button 6
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_6 = 3106--><!--Device-KeyCode-KEYCODE_BTN_6 = 3106-End-->
 
@@ -5564,9 +6234,11 @@ KEYCODE_BTN_7 = 3107
 
 Button 7
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_7 = 3107--><!--Device-KeyCode-KEYCODE_BTN_7 = 3107-End-->
 
@@ -5580,9 +6252,11 @@ KEYCODE_BTN_8 = 3108
 
 Button 8
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_8 = 3108--><!--Device-KeyCode-KEYCODE_BTN_8 = 3108-End-->
 
@@ -5596,9 +6270,11 @@ KEYCODE_BTN_9 = 3109
 
 Button 9
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_BTN_9 = 3109--><!--Device-KeyCode-KEYCODE_BTN_9 = 3109-End-->
 
@@ -5612,9 +6288,11 @@ KEYCODE_DAGGER_CLICK = 3211
 
 Single tapping the smart watch's X-TAP sensor
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DAGGER_CLICK = 3211--><!--Device-KeyCode-KEYCODE_DAGGER_CLICK = 3211-End-->
 
@@ -5628,9 +6306,11 @@ KEYCODE_DAGGER_DOUBLE_CLICK = 3212
 
 Double tapping the smart watch's X-TAP sensor
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DAGGER_DOUBLE_CLICK = 3212--><!--Device-KeyCode-KEYCODE_DAGGER_DOUBLE_CLICK = 3212-End-->
 
@@ -5644,9 +6324,11 @@ KEYCODE_DAGGER_LONG_PRESS = 3213
 
 Long-pressing the smart watch's X-TAP sensor
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DAGGER_LONG_PRESS = 3213--><!--Device-KeyCode-KEYCODE_DAGGER_LONG_PRESS = 3213-End-->
 
@@ -5660,9 +6342,11 @@ KEYCODE_DIV = 3220
 
 Left button of the smart watch
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyCode-KEYCODE_DIV = 3220--><!--Device-KeyCode-KEYCODE_DIV = 3220-End-->
 
@@ -5674,15 +6358,13 @@ Left button of the smart watch
 KEYCODE_XKEY = 3232
 ```
 
-Custom hotkey
+Custom hotkey **Since:** 26.0.0 **Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can only be used in the stage model.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5696,15 +6378,13 @@ Custom hotkey
 KEYCODE_FINGERPRINT_SLIDE_UP = 3233
 ```
 
-Smart control key slide-up
+Smart control key slide-up **Since:** 26.0.0 **Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can only be used in the stage model.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5718,15 +6398,13 @@ Smart control key slide-up
 KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234
 ```
 
-Smart control key slide-down
+Smart control key slide-down **Since:** 26.0.0 **Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can only be used in the stage model.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

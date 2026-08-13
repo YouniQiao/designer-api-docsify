@@ -4,40 +4,13 @@
 
 **继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-camera-interface PreviewOutput extends CameraOutput--><!--Device-camera-interface PreviewOutput extends CameraOutput-End-->
+**废弃版本：** -1
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## addDeferredSurface
-
-```TypeScript
-addDeferredSurface(surfaceId: string): void
-```
-
-配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitConfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后运行。
-
-**起始版本：** 24
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void--><!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void-End-->
+<!--Device-camera-interface PreviewOutput--><!--Device-camera-interface PreviewOutput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| surfaceId | string | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## enableBandwidthCompression
 
@@ -45,16 +18,11 @@ addDeferredSurface(surfaceId: string): void
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-使能预览带宽压缩。
-
-使能之前，可先使用方法[isBandwidthCompressionSupported](#isBandwidthCompressionSupported)对设备是否支持预览带宽压缩进行检查。
-
-> **说明：**
-> 
-> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之前调用，否则会影响预览流
-> 出流格式。
+使能预览带宽压缩。 使能之前，可先使用方法[isBandwidthCompressionSupported](#isBandwidthCompressionSupported)对设备是否支持预览 带宽压缩进行检查。 > **说明：** > > 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之前调用，否则会影响预览流 > 出流格式。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -72,9 +40,9 @@ enableBandwidthCompression(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## getActiveFrameRate
 
@@ -82,11 +50,11 @@ enableBandwidthCompression(enabled: boolean): void
 getActiveFrameRate(): FrameRateRange
 ```
 
-获取已设置的帧率范围。
+获取已设置的帧率范围。 使用[setFrameRate](#setFrameRate)接口对预览流设置过帧率后可查询。
 
-使用[setFrameRate](#setFrameRate)接口对预览流设置过帧率后可查询。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -108,7 +76,9 @@ getActiveProfile(): Profile
 
 获取当前生效的配置信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -126,7 +96,7 @@ getActiveProfile(): Profile
 
 | 错误码ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## getPreviewRotation
 
@@ -134,14 +104,11 @@ getActiveProfile(): Profile
 getPreviewRotation(displayRotation?: number): ImageRotation
 ```
 
-获取预览旋转角度。
+获取预览旋转角度。 - 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。 - 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。 - [屏幕旋转角度](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction#section737072712182)： 显示设备的屏幕顺时针旋转角度。
 
-- 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。  
-- 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。  
--   
-[屏幕旋转角度](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction#section737072712182)：显示设备的屏幕顺时针旋转角度。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,8 +134,8 @@ getPreviewRotation(displayRotation?: number): ImageRotation
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## getSupportedFrameRates
 
@@ -178,7 +145,9 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 查询支持的帧率范围。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -202,6 +171,8 @@ isBandwidthCompressionSupported(): boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PreviewOutput-isBandwidthCompressionSupported(): boolean--><!--Device-PreviewOutput-isBandwidthCompressionSupported(): boolean-End-->
@@ -220,13 +191,11 @@ isBandwidthCompressionSupported(): boolean
 isLogViewAssistSupported(): boolean
 ```
 
-LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，预览画面还原至原色域，录制出的视频仍然是LOG视频格式。
-
-> **说明：**
-> 
-> 辅助监看效果仅支持1080P及以下分辨率。
+LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，预览画面还原至原色域，录制出的视频仍然是LOG视频格式。 > **说明：** > > 辅助监看效果仅支持1080P及以下分辨率。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,19 +211,19 @@ LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，�
 | --- |
 | boolean |
 
-## off('frameStart')
+## offError
 
 ```TypeScript
-off(type: 'frameStart', callback?: AsyncCallback<void>): void
+offError(callback?: ErrorCallback): void
 ```
 
-注销预览帧启动的监听。
+Unsubscribes from error events.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-offError(callback?: ErrorCallback): void--><!--Device-PreviewOutput-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -262,22 +231,21 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'frameStart' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
-## off('frameEnd')
+## offFrameEnd
 
 ```TypeScript
-off(type: 'frameEnd', callback?: AsyncCallback<void>): void
+offFrameEnd(callback?: AsyncCallback<void>): void
 ```
 
-注销监听预览帧结束。
+Unsubscribes from frame end event callback.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -285,10 +253,31 @@ off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'frameEnd' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
 
-## off('error')
+## offFrameStart
+
+```TypeScript
+offFrameStart(callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes from frame start event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -297,6 +286,8 @@ off(type: 'error', callback?: ErrorCallback): void
 注销监听预览输出的错误事件。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -311,50 +302,21 @@ off(type: 'error', callback?: ErrorCallback): void
 | type | 'error' | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
-## on('frameStart')
+## off_frameEnd
 
 ```TypeScript
-on(type: 'frameStart', callback: AsyncCallback<void>): void
+off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 ```
 
-监听预览帧启动，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+注销监听预览帧结束。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'frameStart' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-## on('frameEnd')
-
-```TypeScript
-on(type: 'frameEnd', callback: AsyncCallback<void>): void
-```
-
-监听预览帧结束，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -363,21 +325,110 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frameEnd' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
+
+## off_frameStart
+
+```TypeScript
+off(type: 'frameStart', callback?: AsyncCallback<void>): void
+```
+
+注销预览帧启动的监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'frameStart' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-onError(callback: ErrorCallback): void--><!--Device-PreviewOutput-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+## onFrameEnd
+
+```TypeScript
+onFrameEnd(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame end event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-## on('error')
+## onFrameStart
+
+```TypeScript
+onFrameStart(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame start event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听预览输出的错误事件，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听预览输出的错误事件，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -392,21 +443,67 @@ on(type: 'error', callback: ErrorCallback): void
 | type | 'error' | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
+## on_frameEnd
+
+```TypeScript
+on(type: 'frameEnd', callback: AsyncCallback<void>): void
+```
+
+监听预览帧结束，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'frameEnd' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+## on_frameStart
+
+```TypeScript
+on(type: 'frameStart', callback: AsyncCallback<void>): void
+```
+
+监听预览帧启动，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'frameStart' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
 ## setFrameRate
 
 ```TypeScript
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-设置预览流帧率范围，设置的范围必须在支持的帧率范围内。
+设置预览流帧率范围，设置的范围必须在支持的帧率范围内。 进行设置前，可通过[getSupportedFrameRates](#getSupportedFrameRates)接口查询支持的帧率范围。 > **说明：** > > 仅在[PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession)或[VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)模式下支持。
 
-进行设置前，可通过[getSupportedFrameRates](#getSupportedFrameRates)接口查询支持的帧率范围。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession)或[VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)模式下支持。
-
-**起始版本：** 12
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -425,8 +522,8 @@ setFrameRate(minFps: number, maxFps: number): void
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-与当前配置存在冲突) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400110](../errorcode-camera.md#7400110-与当前配置存在冲突) |
 
 ## setLogViewAssistEnable
 
@@ -434,15 +531,11 @@ setFrameRate(minFps: number, maxFps: number): void
 setLogViewAssistEnable(enable: boolean): void
 ```
 
-LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](#isLogViewAssistSupported)查询设备是否支持预览辅助监看。
-
-> **说明：**
-> 
-> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之后调用。
-> 
-> - 预览辅助监看效果仅支持1080P及以下分辨率。
+LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](#isLogViewAssistSupported)查询设备是否支持预览辅助 监看。 > **说明：** > > - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之后调用。 > > - 预览辅助监看效果仅支持1080P及以下分辨率。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -462,9 +555,9 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## setPreviewRotation
 
@@ -474,7 +567,9 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 
 设置预览旋转角度。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -493,8 +588,8 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## start
 
@@ -502,17 +597,13 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 start(callback: AsyncCallback<void>): void
 ```
 
-开始输出预览流，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+开始输出预览流，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [start](camera.Session.start(callback:)
+**替代接口：** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void-End-->
 
@@ -528,7 +619,7 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## start
 
@@ -536,11 +627,7 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-开始输出预览流。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+开始输出预览流。使用Promise异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -562,7 +649,7 @@ start(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## stop
 
@@ -570,17 +657,13 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止输出预览流，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+停止输出预览流，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [stop](camera.Session.stop(callback:)
+**替代接口：** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -598,11 +681,7 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-停止输出预览流。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+停止输出预览流。使用Promise异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 

@@ -2,7 +2,9 @@
 
 Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Element Access Control specification.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface AccessRule--><!--Device-eSIM-export interface AccessRule-End-->
 
@@ -24,7 +26,9 @@ The type of access.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessRule-accessType: int--><!--Device-AccessRule-accessType: int-End-->
 
@@ -40,7 +44,9 @@ Certificate hash hexadecimal string.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessRule-certificateHashHexStr: string--><!--Device-AccessRule-certificateHashHexStr: string-End-->
 
@@ -56,7 +62,9 @@ The name of package.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessRule-packageName: string--><!--Device-AccessRule-packageName: string-End-->
 

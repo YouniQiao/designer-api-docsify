@@ -2,9 +2,11 @@
 
 Enum for the type of Bluetooth address.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-common-export enum BluetoothAddressType--><!--Device-common-export enum BluetoothAddressType-End-->
 
@@ -18,9 +20,11 @@ VIRTUAL = 1
 
 virtual address.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothAddressType-VIRTUAL = 1--><!--Device-BluetoothAddressType-VIRTUAL = 1-End-->
 
@@ -34,9 +38,11 @@ REAL = 2
 
 real address.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothAddressType-REAL = 2--><!--Device-BluetoothAddressType-REAL = 2-End-->
 

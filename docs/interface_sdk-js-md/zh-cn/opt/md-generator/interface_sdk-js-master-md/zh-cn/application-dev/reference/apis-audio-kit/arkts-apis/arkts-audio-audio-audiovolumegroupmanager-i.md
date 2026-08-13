@@ -1,15 +1,10 @@
 # AudioVolumeGroupManager
 
-管理音频组音量。
+管理音频组音量。 在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager) 获取AudioVolumeGroupManager实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
-在使用AudioVolumeGroupManager的接口之前，需先通过  
-[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager)获取AudioVolumeGroupManager实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
 
@@ -23,7 +18,9 @@ getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<numbe
 
 获取输入设备音频流的最大电平值，取值范围为[0, 1]。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>-End-->
 
@@ -45,9 +42,9 @@ getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<numbe
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## getMaxAmplitudeForOutputDevice
 
@@ -57,7 +54,9 @@ getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<num
 
 获取输出设备音频流的最大电平值，取值范围为[0, 1]。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>-End-->
 
@@ -79,9 +78,9 @@ getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<num
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## getMaxVolume
 
@@ -91,7 +90,7 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 获取指定流的最大音量等级。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -116,7 +115,7 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 
 获取指定流的最大音量等级。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -146,7 +145,7 @@ getMaxVolumeSync(volumeType: AudioVolumeType): number
 
 获取指定流的最大音量等级。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -172,8 +171,8 @@ getMaxVolumeSync(volumeType: AudioVolumeType): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## getMinVolume
 
@@ -183,7 +182,7 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 获取指定流的最小音量等级。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -208,7 +207,7 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 
 获取指定流的最小音量等级。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -238,7 +237,7 @@ getMinVolumeSync(volumeType: AudioVolumeType): number
 
 获取指定流的最小音量等级。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -264,8 +263,8 @@ getMinVolumeSync(volumeType: AudioVolumeType): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## getRingerMode
 
@@ -275,7 +274,9 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 
 获取铃声模式。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
 
@@ -295,7 +296,9 @@ getRingerMode(): Promise<AudioRingMode>
 
 获取铃声模式。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>-End-->
 
@@ -315,7 +318,9 @@ getRingerModeSync(): AudioRingMode
 
 获取铃声模式。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode--><!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode-End-->
 
@@ -335,7 +340,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 获取音量增益dB值。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -350,7 +355,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
-| [volumeLevel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
+| [volumeLevel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
 | device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
@@ -358,9 +363,9 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## getSystemVolumeInDb
 
@@ -370,7 +375,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 获取音量增益dB值。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -385,7 +390,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
-| [volumeLevel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
+| [volumeLevel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
 | device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 |
 
 **返回值：**
@@ -398,9 +403,9 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## getSystemVolumeInDbSync
 
@@ -410,7 +415,7 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device
 
 获取音量增益dB值。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -425,7 +430,7 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
-| [volumeLevel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
+| [volumeLevel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
 | device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 |
 
 **返回值：**
@@ -438,8 +443,8 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## getVolume
 
@@ -449,7 +454,7 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 获取指定流的音量等级。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -474,7 +479,7 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 
 获取指定流的音量等级。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -504,7 +509,7 @@ getVolumeSync(volumeType: AudioVolumeType): number
 
 获取指定流的音量等级。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -530,8 +535,8 @@ getVolumeSync(volumeType: AudioVolumeType): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## isMicrophoneMute
 
@@ -541,7 +546,9 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 
 获取麦克风静音状态。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void-End-->
 
@@ -561,7 +568,9 @@ isMicrophoneMute(): Promise<boolean>
 
 获取麦克风静音状态。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>-End-->
 
@@ -581,7 +590,9 @@ isMicrophoneMuteSync(): boolean
 
 获取麦克风静音状态。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean--><!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean-End-->
 
@@ -601,7 +612,7 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 获取指定音量流静音状态。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -626,7 +637,7 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 
 获取指定音量流是否被静音。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -656,7 +667,7 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 
 获取指定音量流是否被静音。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -682,8 +693,8 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## isVolumeUnadjustable
 
@@ -693,7 +704,9 @@ isVolumeUnadjustable(): boolean
 
 获取固定音量模式开关状态，打开时进入固定音量模式，此时音量固定无法被调节。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean--><!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean-End-->
 
@@ -705,17 +718,19 @@ isVolumeUnadjustable(): boolean
 | --- |
 | boolean |
 
-## off('ringerModeChange')
+## offMicStateChange
 
 ```TypeScript
-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
+offMicStateChange(callback?: Callback<MicStateChangeEvent>): void
 ```
 
-取消监听铃声模式变化事件。使用callback异步回调。
+Unsubscribes to the microphone state change events.
 
-**起始版本：** 18
+**起始版本：** 23
 
-<!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -723,16 +738,43 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'ringerModeChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## offRingerModeChange
+
+```TypeScript
+offRingerModeChange(callback?: Callback<AudioRingMode>): void
+```
+
+Unsubscribes to the ringer mode state change events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## off('micStateChange')
+## off_micStateChange
 
 ```TypeScript
 off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
@@ -741,6 +783,8 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 取消监听系统麦克风状态更改事件。使用callback异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void-End-->
 
@@ -757,20 +801,22 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('ringerModeChange')
+## off_ringerModeChange
 
 ```TypeScript
-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
+off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 ```
 
-监听铃声模式变化事件（当[AudioRingMode](arkts-audio-audio-audioringmode-e.md#AudioRingMode)发生变化时触发）。使用callback异步回调。
+取消监听铃声模式变化事件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 18
 
-<!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -779,26 +825,81 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'ringerModeChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## onMicStateChange
+
+```TypeScript
+onMicStateChange(callback: Callback<MicStateChangeEvent>): void
+```
+
+Listens for system microphone state change events. This method uses a callback to get microphone change events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## onRingerModeChange
+
+```TypeScript
+onRingerModeChange(callback: Callback<AudioRingMode>): void
+```
+
+Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('micStateChange')
+## on_micStateChange
 
 ```TypeScript
 on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 ```
 
-监听系统麦克风状态更改事件（当检测到系统麦克风状态发生改变时触发）。使用callback异步回调。
-
-目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅）。因此，推荐使用单一AudioManager实例进行开发。
+监听系统麦克风状态更改事件（当检测到系统麦克风状态发生改变时触发）。使用callback异步回调。 目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅）。因此，推荐使用单一AudioManager实例进行开发。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void-End-->
 
@@ -815,8 +916,38 @@ on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## on_ringerModeChange
+
+```TypeScript
+on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
+```
+
+监听铃声模式变化事件（当[AudioRingMode](arkts-audio-audio-audioringmode-e.md#AudioRingMode)发生变化时触发）。使用callback异步回调。
+
+**起始版本：** 9
+
+**废弃版本：** -1
+
+<!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'ringerModeChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## setMicrophoneMute
 
@@ -824,11 +955,7 @@ on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置麦克风静音状态。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。
+设置麦克风静音状态。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。
 
 **起始版本：** 9
 
@@ -853,11 +980,7 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 setMicrophoneMute(mute: boolean): Promise<void>
 ```
 
-设置麦克风静音状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。
+设置麦克风静音状态。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。
 
 **起始版本：** 9
 

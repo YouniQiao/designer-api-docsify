@@ -1,12 +1,12 @@
 # ArcButton
 
-Declare Component ArcButton
+The **ArcButton** component offers various button styles, such as emphasized, normal, and warning. It is recommended for devices with circular screens. > **NOTE：**> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and > earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 > devices, tablets, and TVs, but the component can still run properly.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
@@ -18,41 +18,26 @@ Declare Component ArcButton
 import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Decorator:** @Builder
-
-<!--Device-ArcButton-build(): void--><!--Device-ArcButton-build(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
 ## options
 
 ```TypeScript
-readonly options: ArcButtonOptions
+@Require
+    readonly options: ArcButtonOptions
 ```
 
-Describes the arc button options.
+Text, background color, shadow, and other parameters of the **ArcButton** component.
 
-**Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**Type:** [ArcButtonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
-<!--Device-ArcButton-readonly options: ArcButtonOptions--><!--Device-ArcButton-readonly options: ArcButtonOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButton-@Require    readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require    readonly options: ArcButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

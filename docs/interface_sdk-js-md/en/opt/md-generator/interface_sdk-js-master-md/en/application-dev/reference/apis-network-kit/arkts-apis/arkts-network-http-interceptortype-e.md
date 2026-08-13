@@ -2,7 +2,9 @@
 
 Types of an HTTP interceptor.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-http-export enum InterceptorType--><!--Device-http-export enum InterceptorType-End-->
 
@@ -16,9 +18,11 @@ INITIAL_REQUEST = 'INITIAL_REQUEST'
 
 Intercept after the initial HTTP request is assembled.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InterceptorType-INITIAL_REQUEST = 'INITIAL_REQUEST'--><!--Device-InterceptorType-INITIAL_REQUEST = 'INITIAL_REQUEST'-End-->
 
@@ -32,9 +36,11 @@ REDIRECTION = 'REDIRECTION'
 
 Intercept when we get a redirection responsed and is going to send another request.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InterceptorType-REDIRECTION = 'REDIRECTION'--><!--Device-InterceptorType-REDIRECTION = 'REDIRECTION'-End-->
 
@@ -48,9 +54,11 @@ CACHE_CHECKED = 'READ_CACHE'
 
 Intercept after we checked the HTTP cache.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InterceptorType-CACHE_CHECKED = 'READ_CACHE'--><!--Device-InterceptorType-CACHE_CHECKED = 'READ_CACHE'-End-->
 
@@ -64,9 +72,11 @@ NETWORK_CONNECT = 'CONNECT_NETWORK'
 
 Intercept when we perform network connection, such as TLS and TCP.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InterceptorType-NETWORK_CONNECT = 'CONNECT_NETWORK'--><!--Device-InterceptorType-NETWORK_CONNECT = 'CONNECT_NETWORK'-End-->
 
@@ -80,9 +90,11 @@ FINAL_RESPONSE = 'FINAL_RESPONSE'
 
 Intercept when we get the final HTTP response.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InterceptorType-FINAL_RESPONSE = 'FINAL_RESPONSE'--><!--Device-InterceptorType-FINAL_RESPONSE = 'FINAL_RESPONSE'-End-->
 

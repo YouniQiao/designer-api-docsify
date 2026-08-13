@@ -1,8 +1,10 @@
 # agent
 
-The request agent api.Supports "background" and "frontend" tasks as while.Though "background" and "frontend" here do not the same with process's concept.All tasks will be executed at request manager service and recorded.Background tasks is for concurrent transfer, such as caching videos for a later play.Frontend tasks is for instant transfer, such as submitting forms for a consumption bill.Background tasks use notification to tell user tasks' status information.Frontend tasks use callback to tell caller tasks' status information.Background has some automatically restore mechanism.Frontend tasks controlled by caller.Uses `multipart/form-data` in client request for upload.A `Content-Disposition: attachment; filename=&lt;filename&gt;` response from server leads to download.More details, please see the architecture documents of the request subsystem.Only front-end mode is supported in cross-platform scenarios.
+The request agent api. Supports "background" and "frontend" tasks as while. Though "background" and "frontend" here do not the same with process's concept. All tasks will be executed at request manager service and recorded. Background tasks is for concurrent transfer, such as caching videos for a later play. Frontend tasks is for instant transfer, such as submitting forms for a consumption bill. Background tasks use notification to tell user tasks' status information. Frontend tasks use callback to tell caller tasks' status information. Background has some automatically restore mechanism. Frontend tasks controlled by caller. Uses `multipart/form-data` in client request for upload. A `Content-Disposition: attachment; filename=&lt;filename&gt;` response from server leads to download. More details, please see the architecture documents of the request subsystem. Only front-end mode is supported in cross-platform scenarios.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-request-namespace agent--><!--Device-request-namespace agent-End-->
 
@@ -15,28 +17,28 @@ The request agent api.Supports "background" and "frontend" tasks as while.Though
 | 名称 |
 | --- |
 | [create](arkts-basicservices-agent-create-f.md#create) |
-| [create](arkts-basicservices-agent-create-f.md#create-1) |
-| [getTask](arkts-basicservices-agent-gettask-f.md#gettask) |
+| [create](arkts-basicservices-agent-create-f.md#create) |
+| [getTask](arkts-basicservices-agent-gettask-f.md#getTask) |
 | [remove](arkts-basicservices-agent-remove-f.md#remove) |
-| [remove](arkts-basicservices-agent-remove-f.md#remove-1) |
+| [remove](arkts-basicservices-agent-remove-f.md#remove) |
 | [show](arkts-basicservices-agent-show-f.md#show) |
-| [show](arkts-basicservices-agent-show-f.md#show-1) |
+| [show](arkts-basicservices-agent-show-f.md#show) |
 | [touch](arkts-basicservices-agent-touch-f.md#touch) |
-| [touch](arkts-basicservices-agent-touch-f.md#touch-1) |
+| [touch](arkts-basicservices-agent-touch-f.md#touch) |
 | [search](arkts-basicservices-agent-search-f.md#search) |
-| [search](arkts-basicservices-agent-search-f.md#search-1) |
-| [search](arkts-basicservices-agent-search-f.md#search-2) |
-| [createGroup](arkts-basicservices-agent-creategroup-f.md#creategroup) |
-| [attachGroup](arkts-basicservices-agent-attachgroup-f.md#attachgroup) |
-| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md#deletegroup) |
+| [search](arkts-basicservices-agent-search-f.md#search) |
+| [search](arkts-basicservices-agent-search-f.md#search) |
+| [createGroup](arkts-basicservices-agent-creategroup-f.md#createGroup) |
+| [attachGroup](arkts-basicservices-agent-attachgroup-f.md#attachGroup) |
+| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md#deleteGroup) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [query](arkts-basicservices-agent-query-f-sys.md#query) |
-| [query](arkts-basicservices-agent-query-f-sys.md#query-1) |
+| [query](arkts-basicservices-agent-query-f-sys.md#query（系统接口）) |
+| [query](arkts-basicservices-agent-query-f-sys.md#query（系统接口）) |
 <!--DelEnd-->
 
 ### 接口
@@ -78,9 +80,15 @@ The request agent api.Supports "background" and "frontend" tasks as while.Though
 | [Faults](arkts-basicservices-agent-faults-e.md) |
 | [WaitingReason](arkts-basicservices-agent-waitingreason-e.md) |
 
+### 类型
+
+| 名称 |
+| --- |
+| [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) |
+
 ### 常量
 
 | 名称 |
 | --- |
-| [VISIBILITY_COMPLETION](arkts-basicservices-agent-con.md#visibility_completion) |
-| [VISIBILITY_PROGRESS](arkts-basicservices-agent-con.md#visibility_progress) |
+| [VISIBILITY_COMPLETION](arkts-basicservices-agent-con.md#VISIBILITY_COMPLETION) |
+| [VISIBILITY_PROGRESS](arkts-basicservices-agent-con.md#VISIBILITY_PROGRESS) |

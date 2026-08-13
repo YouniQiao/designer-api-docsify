@@ -6,6 +6,8 @@ Defines the icon options
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface IconOptions--><!--Device-unnamed-export interface IconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Set the icon color
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IconOptions-color?: ResourceColor--><!--Device-IconOptions-color?: ResourceColor-End-->
@@ -36,15 +40,15 @@ Set the icon color
 size?: Length
 ```
 
-Set the icon size
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;It cannot be set in percentage.&lt;/p&gt;
+Set the icon size &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;It cannot be set in percentage. &lt;/p&gt;
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,6 +69,8 @@ Set the icon resource
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

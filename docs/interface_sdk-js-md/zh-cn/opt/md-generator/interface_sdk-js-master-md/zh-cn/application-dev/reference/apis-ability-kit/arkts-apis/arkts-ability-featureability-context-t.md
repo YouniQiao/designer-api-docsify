@@ -8,6 +8,8 @@ Context模块。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-export type Context = _Context--><!--Device-featureAbility-export type Context = _Context-End-->

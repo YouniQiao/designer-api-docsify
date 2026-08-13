@@ -16,6 +16,8 @@ Sets the output type of hilog.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-hilog-function setOutputType(type: OutputType): OutputType--><!--Device-hilog-function setOutputType(type: OutputType): OutputType-End-->

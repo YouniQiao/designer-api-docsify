@@ -4,6 +4,8 @@ Set the indicator item's icon for a specified index.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface IndicatorIconInfo--><!--Device-unnamed-declare interface IndicatorIconInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Icon that needs to be set.
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +40,13 @@ Icon that needs to be set.
 index: number
 ```
 
-The specified index.The value should be an integer.
+The specified index. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

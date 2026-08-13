@@ -4,6 +4,8 @@ Defines the options of the visible interface on the screen.
 
 **Since:** 3
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ScreenOnVisibleOptions--><!--Device-unnamed-export interface ScreenOnVisibleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,11 @@ complete?: () => void
 
 Called when the API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,20 +44,17 @@ fail?: (data: string, code: number) => void
 
 Callback upon failure.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenOnVisibleOptions-fail?: (data: string, code: number) => void--><!--Device-ScreenOnVisibleOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
 
 ## success
 
@@ -61,7 +64,11 @@ success?: () => void
 
 Callback upon success.
 
+**Type:** () =&gt; void
+
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,6 +87,8 @@ Whether to keep the application visible. The default value is **false**.
 **Type:** boolean
 
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

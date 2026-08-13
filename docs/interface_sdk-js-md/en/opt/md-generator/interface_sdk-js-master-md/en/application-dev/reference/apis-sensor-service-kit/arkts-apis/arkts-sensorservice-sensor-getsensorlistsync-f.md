@@ -14,7 +14,9 @@ function getSensorListSync(): Array<Sensor>
 
 Obtains information about all sensors on the device. This API returns the result synchronously.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSensorListSync(): Array<Sensor>--><!--Device-sensor-function getSensorListSync(): Array<Sensor>-End-->
 
@@ -30,7 +32,7 @@ Obtains information about all sensors on the device. This API returns the result
 
 | Error Code ID |
 | --- |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

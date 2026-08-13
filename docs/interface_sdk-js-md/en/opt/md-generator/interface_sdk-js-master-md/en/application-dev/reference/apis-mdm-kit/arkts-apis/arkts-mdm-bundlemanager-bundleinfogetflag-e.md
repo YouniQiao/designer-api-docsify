@@ -4,6 +4,8 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-bundleManager-export enum BundleInfoGetFlag--><!--Device-bundleManager-export enum BundleInfoGetFlag-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ DEFAULT = 0
 Obtains the default bundle information, excluding **applicationInfo** and **signatureInfo**.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Obtains the default bundle information and **applicationInfo** (excluding **icon
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfoGetFlag-WITH_APPLICATION_INFO = 1 << 0--><!--Device-BundleInfoGetFlag-WITH_APPLICATION_INFO = 1 << 0-End-->
@@ -50,6 +56,8 @@ Obtains the default bundle information and **signatureInfo**.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfoGetFlag-WITH_SIGNATURE_INFO = 1 << 1--><!--Device-BundleInfoGetFlag-WITH_SIGNATURE_INFO = 1 << 1-End-->
@@ -65,6 +73,8 @@ WITH_APPLICATION_ICON_INFO = 1 << 2
 Obtains the default bundle information and **applicationInfo** (including **iconData**).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

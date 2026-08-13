@@ -10,6 +10,8 @@ function initCurve(curve?: Curve): ICurve
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-curves-function initCurve(curve?: Curve): ICurve--><!--Device-curves-function initCurve(curve?: Curve): ICurve-End-->
@@ -26,4 +28,4 @@ function initCurve(curve?: Curve): ICurve
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-icurve-t.md) |
+| [ICurve](../../apis-na/arkts-apis/arkts-na-icurve-t.md) |

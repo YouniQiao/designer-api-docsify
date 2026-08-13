@@ -1,13 +1,14 @@
 # TimeLapsePhotoSession (System API)
 
-TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance,Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all  
-[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
 
-**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Focus](arkts-camera-camera-focus-i.md#Focus), [ManualFocus](arkts-camera-camera-manualfocus-i.md#ManualFocus), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [ManualExposure](arkts-camera-camera-manualexposure-i.md#ManualExposure), [ManualIso](arkts-camera-camera-manualiso-i.md#ManualIso), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect)
+**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Focus](arkts-camera-camera-focus-i.md#Focus), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md#ManualFocus-(System-API)), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [ManualExposure](arkts-camera-camera-manualexposure-i.md#ManualExposure-(System-API)), [ManualIso](arkts-camera-camera-manualiso-i-sys.md#ManualIso-(System-API)), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance-(System-API)), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect-(System-API))
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-camera-interface TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect--><!--Device-camera-interface TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface TimeLapsePhotoSession--><!--Device-camera-interface TimeLapsePhotoSession-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,7 +28,9 @@ getSupportedTimeLapseIntervalRange(): Array<number>
 
 Obtains the supported time-lapse shooting interval range.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-getSupportedTimeLapseIntervalRange(): Array<int>--><!--Device-TimeLapsePhotoSession-getSupportedTimeLapseIntervalRange(): Array<int>-End-->
 
@@ -45,8 +48,8 @@ Obtains the supported time-lapse shooting interval range.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -74,7 +77,9 @@ getTimeLapseInterval(): number
 
 Obtains the current time-lapse shooting interval.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-getTimeLapseInterval(): int--><!--Device-TimeLapsePhotoSession-getTimeLapseInterval(): int-End-->
 
@@ -92,8 +97,8 @@ Obtains the current time-lapse shooting interval.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -121,7 +126,9 @@ getTimeLapsePreviewType(): TimeLapsePreviewType
 
 Obtains the time-lapse preview type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-getTimeLapsePreviewType(): TimeLapsePreviewType--><!--Device-TimeLapsePhotoSession-getTimeLapsePreviewType(): TimeLapsePreviewType-End-->
 
@@ -139,8 +146,8 @@ Obtains the time-lapse preview type.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -168,7 +175,9 @@ getTimeLapseRecordState(): TimeLapseRecordState
 
 Obtains the time-lapse shooting state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-getTimeLapseRecordState(): TimeLapseRecordState--><!--Device-TimeLapsePhotoSession-getTimeLapseRecordState(): TimeLapseRecordState-End-->
 
@@ -186,8 +195,8 @@ Obtains the time-lapse shooting state.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -215,7 +224,9 @@ isTryAENeeded(): boolean
 
 Checks whether Try AE is required.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-isTryAENeeded(): boolean--><!--Device-TimeLapsePhotoSession-isTryAENeeded(): boolean-End-->
 
@@ -233,8 +244,8 @@ Checks whether Try AE is required.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -254,7 +265,187 @@ function isTryAENeeded(timeLapsePhotoSession: camera.TimeLapsePhotoSession): boo
 }
 ```
 
-## off('error')
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offExposureInfoChange
+
+```TypeScript
+offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void
+```
+
+Unsubscribes from exposure info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offIsoInfoChange
+
+```TypeScript
+offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void
+```
+
+Unsubscribes from ISO info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offLuminationInfoChange
+
+```TypeScript
+offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void
+```
+
+Unsubscribes from lumination info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offTryAEInfoChange
+
+```TypeScript
+offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void
+```
+
+Unsubscribes from try AE info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -263,6 +454,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from HighResolutionPhotoSession error events.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -281,7 +474,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -291,7 +484,46 @@ function unregisterSessionError(timeLapsePhotoSession: camera.TimeLapsePhotoSess
 }
 ```
 
-## off('focusStateChange')
+## off_exposureInfoChange
+
+```TypeScript
+off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void
+```
+
+Unsubscribes from exposure information change events.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'exposureInfoChange' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+function unregisterExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
+  timeLapsePhotoSession.off('exposureInfoChange');
+}
+```
+
+## off_focusStateChange
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -300,6 +532,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -318,7 +552,7 @@ Unsubscribes from focus state change events.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -328,7 +562,7 @@ function unregisterFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhoto
 }
 ```
 
-## off('isoInfoChange')
+## off_isoInfoChange
 
 ```TypeScript
 off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void
@@ -337,6 +571,8 @@ off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void
 Unsubscribes from automatic ISO change events.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void-End-->
 
@@ -349,13 +585,13 @@ Unsubscribes from automatic ISO change events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'isoInfoChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -365,44 +601,7 @@ function unregisterIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSess
 }
 ```
 
-## off('exposureInfoChange')
-
-```TypeScript
-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void
-```
-
-Unsubscribes from exposure information change events.
-
-**Since:** 12
-
-<!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'exposureInfoChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-function unregisterExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.off('exposureInfoChange');
-}
-```
-
-## off('luminationInfoChange')
+## off_luminationInfoChange
 
 ```TypeScript
 off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void
@@ -411,6 +610,8 @@ off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): voi
 Unsubscribes from illumination change events.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void-End-->
 
@@ -429,7 +630,7 @@ Unsubscribes from illumination change events.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -439,7 +640,7 @@ function unregisterLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePh
 }
 ```
 
-## off('tryAEInfoChange')
+## off_tryAEInfoChange
 
 ```TypeScript
 off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void
@@ -448,6 +649,8 @@ off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void
 Unsubscribes from Try AE change events.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void-End-->
 
@@ -466,7 +669,7 @@ Unsubscribes from Try AE change events.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -476,7 +679,187 @@ function unregisterTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSe
 }
 ```
 
-## on('error')
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onExposureInfoChange
+
+```TypeScript
+onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void
+```
+
+Subscribes exposure info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onIsoInfoChange
+
+```TypeScript
+onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void
+```
+
+Subscribes ISO info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onLuminationInfoChange
+
+```TypeScript
+onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void
+```
+
+Subscribes lumination info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onTryAEInfoChange
+
+```TypeScript
+onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void
+```
+
+Subscribes try AE info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -485,6 +868,8 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -503,7 +888,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -519,101 +904,7 @@ function registerSessionError(timeLapsePhotoSession: camera.TimeLapsePhotoSessio
 }
 ```
 
-## on('focusStateChange')
-
-```TypeScript
-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
-```
-
-Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-<!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'focusStateChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, focusState: camera.FocusState): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`Focus state: ${focusState}`);
-}
-
-function registerFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('focusStateChange', callback);
-}
-```
-
-## on('isoInfoChange')
-
-```TypeScript
-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void
-```
-
-Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-<!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'isoInfoChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isoInfoCallback(err: BusinessError, info: camera.IsoInfo): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`ISO value: ${info.iso}`);
-}
-
-function registerIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('isoInfoChange', isoInfoCallback);
-}
-```
-
-## on('exposureInfoChange')
+## on_exposureInfoChange
 
 ```TypeScript
 on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void
@@ -622,6 +913,8 @@ on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void
 Subscribes to exposure information change events to obtain the exposure information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void-End-->
 
@@ -634,13 +927,13 @@ Subscribes to exposure information change events to obtain the exposure informat
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'exposureInfoChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -660,7 +953,105 @@ function registerExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoS
 }
 ```
 
-## on('luminationInfoChange')
+## on_focusStateChange
+
+```TypeScript
+on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'focusStateChange' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, focusState: camera.FocusState): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`Focus state: ${focusState}`);
+}
+
+function registerFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
+  timeLapsePhotoSession.on('focusStateChange', callback);
+}
+```
+
+## on_isoInfoChange
+
+```TypeScript
+on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void
+```
+
+Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'isoInfoChange' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isoInfoCallback(err: BusinessError, info: camera.IsoInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`ISO value: ${info.iso}`);
+}
+
+function registerIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
+  timeLapsePhotoSession.on('isoInfoChange', isoInfoCallback);
+}
+```
+
+## on_luminationInfoChange
 
 ```TypeScript
 on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void
@@ -669,6 +1060,8 @@ on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void
 Subscribes to illumination change events to obtain real-time illumination information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void-End-->
 
@@ -687,7 +1080,7 @@ Subscribes to illumination change events to obtain real-time illumination inform
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -707,7 +1100,7 @@ function registerLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhot
 }
 ```
 
-## on('tryAEInfoChange')
+## on_tryAEInfoChange
 
 ```TypeScript
 on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void
@@ -716,6 +1109,8 @@ on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void
 Subscribes to Try AE change events to obtain real-time Try AE parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void-End-->
 
@@ -734,7 +1129,7 @@ Subscribes to Try AE change events to obtain real-time Try AE parameters. This A
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -762,7 +1157,9 @@ setTimeLapseInterval(interval: number): void
 
 Sets a time-lapse shooting interval.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-setTimeLapseInterval(interval: int): void--><!--Device-TimeLapsePhotoSession-setTimeLapseInterval(interval: int): void-End-->
 
@@ -780,9 +1177,9 @@ Sets a time-lapse shooting interval.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -809,7 +1206,9 @@ setTimeLapsePreviewType(type: TimeLapsePreviewType): void
 
 Sets the time-lapse preview type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-setTimeLapsePreviewType(type: TimeLapsePreviewType): void--><!--Device-TimeLapsePhotoSession-setTimeLapsePreviewType(type: TimeLapsePreviewType): void-End-->
 
@@ -827,9 +1226,9 @@ Sets the time-lapse preview type.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -855,7 +1254,9 @@ setTimeLapseRecordState(state: TimeLapseRecordState): void
 
 Sets the time-lapse shooting state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-setTimeLapseRecordState(state: TimeLapseRecordState): void--><!--Device-TimeLapsePhotoSession-setTimeLapseRecordState(state: TimeLapseRecordState): void-End-->
 
@@ -873,9 +1274,9 @@ Sets the time-lapse shooting state.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -901,7 +1302,9 @@ startTryAE(): void
 
 Starts to execute Try AE.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-startTryAE(): void--><!--Device-TimeLapsePhotoSession-startTryAE(): void-End-->
 
@@ -913,9 +1316,9 @@ Starts to execute Try AE.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -941,7 +1344,9 @@ stopTryAE(): void
 
 Stops the execution of Try AE.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-stopTryAE(): void--><!--Device-TimeLapsePhotoSession-stopTryAE(): void-End-->
 
@@ -953,9 +1358,9 @@ Stops the execution of Try AE.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

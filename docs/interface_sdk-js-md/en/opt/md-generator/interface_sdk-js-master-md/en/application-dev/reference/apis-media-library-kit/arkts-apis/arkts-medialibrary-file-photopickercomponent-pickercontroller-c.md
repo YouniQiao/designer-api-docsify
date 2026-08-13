@@ -4,7 +4,7 @@ Defines an instance used to send data to the **PhotoPickerComponent**.
 
 **Since:** 12
 
-**Decorator:** @Observed
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class PickerController--><!--Device-unnamed-export declare class PickerController-End-->
 
@@ -25,6 +25,8 @@ addData(dataType: DataType, data: Object): void
 Sends additional configuration data to the **PhotoPickerComponent**. The [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md#DataType) parameter identifies the type of data to send. In versions earlier than API version 23, only the **SET_BADGE_CONFIGS** type is supported.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -48,6 +50,8 @@ completed(): Promise<CompletedResult>
 This API is used by an application to obtain the complete data after a selection operation is completed on the Picker page. The data can be used to restore the scene when the Picker is started next time.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,6 +77,8 @@ Sends removal configuration data to the **PhotoPickerComponent**. The [DataType]
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-PickerController-deleteData(dataType: DataType, data: Object): void--><!--Device-PickerController-deleteData(dataType: DataType, data: Object): void-End-->
@@ -96,6 +102,8 @@ Exits the photo browser page.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-PickerController-exitPhotoBrowser(): void--><!--Device-PickerController-exitPhotoBrowser(): void-End-->
@@ -111,6 +119,8 @@ replacePhotoPickerPreview(originalUri: string, newUri: string, callback: AsyncCa
 Replaces the image selected by the user in the **PhotoPickerComponent** with the image edited by the application.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -133,10 +143,11 @@ saveTrustedPhotoAssets(trustedUris: Array<string>, callback: AsyncCallback<Array
     configs?: Array<photoAccessHelper.PhotoCreationConfig>, saveMode?: SaveMode): void
 ```
 
-Saves files in a URI list. Generally, this API is used together with  
-[replacePhotoPickerPreview](#replacePhotoPickerPreview) to save the new images or videos in the application sandbox path to Gallery.
+Saves files in a URI list. Generally, this API is used together with [replacePhotoPickerPreview](#replacePhotoPickerPreview) to save the new images or videos in the application sandbox path to Gallery.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -160,15 +171,11 @@ saveTrustedPhotoAssetsEx(trustedUris: Array<string>,settings?: Array<photoAccess
     saveMode?: SaveMode): Promise<Array<string>>
 ```
 
-Saves files in a URI list. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is usually used together with
-> [replacePhotoPickerPreview](#replacePhotoPickerPreview) to save the new images or videos in
-> the application sandbox path to Gallery.
+Saves files in a URI list. This API uses a promise to return the result. > **NOTE：**> > This API is usually used together with > [replacePhotoPickerPreview](#replacePhotoPickerPreview) to save the new images or videos in > the application sandbox path to Gallery.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,6 +209,8 @@ Sends data of the specified type to the **PhotoPickerComponent**.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerController-setData(dataType: DataType, data: Object): void--><!--Device-PickerController-setData(dataType: DataType, data: Object): void-End-->
@@ -225,6 +234,8 @@ Sets the maximum number of images, videos, or images and videos that can be sele
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerController-setMaxSelected(maxSelected: MaxSelected): void--><!--Device-PickerController-setMaxSelected(maxSelected: MaxSelected): void-End-->
@@ -243,11 +254,11 @@ Sets the maximum number of images, videos, or images and videos that can be sele
 setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>
 ```
 
-Sets the state of the moving photo on the photo browser page. This API uses a promise to return the result.
-
-This parameter takes effect only on the photo browser page. **NOT_MOVING_PHOTO** cannot be set.
+Sets the state of the moving photo on the photo browser page. This API uses a promise to return the result. This parameter takes effect only on the photo browser page. **NOT_MOVING_PHOTO** cannot be set.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -273,8 +284,8 @@ This parameter takes effect only on the photo browser page. **NOT_MOVING_PHOTO**
 
 | Error Code ID |
 | --- |
-| [23800202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800202-invalid-scenario-call) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800202](../errorcode-medialibrary.md#23800202-invalid-scenario-call) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## setPhotoBrowserItem
 
@@ -285,6 +296,8 @@ setPhotoBrowserItem(uri: string, photoBrowserRange?: PhotoBrowserRange): void
 Switches from the **PhotoPickerComponent** to the photo browser page or from the photo browser page to the image to be viewed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -309,6 +322,8 @@ Sets whether other UI elements are visible on the photo browser page. By default
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-PickerController-setPhotoBrowserUIElementVisibility(elements: Array<PhotoBrowserUIElement>, isVisible: boolean): void--><!--Device-PickerController-setPhotoBrowserUIElementVisibility(elements: Array<PhotoBrowserUIElement>, isVisible: boolean): void-End-->
@@ -331,6 +346,8 @@ updatePickerOptions(updateConfig: UpdatablePickerConfigs): Promise<void>
 Updates the attributes of the **PhotoPickerComponent**. This API uses a promise to return the result.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

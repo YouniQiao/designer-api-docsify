@@ -1,13 +1,25 @@
 # @system.storage(数据存储)
 
-> **说明：**
+/*
+ Copyright (c) 2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+ > **说明：**
  >
  > - 模块维护策略：
  >
  > - 对于Lite Wearable设备类型，该模块长期维护，可正常使用。
  >
- > - 对于支持该模块的其他设备类型，该模块从API version 6开始不再维护，可以使用模块[`@ohos.data.storage`](arkts-data-storage.md#storage)。在API
- > version 9后，推荐使用新模块[`@ohos.data.preferences`](arkts-data-preferences.md#preferences)。
+ > - 对于支持该模块的其他设备类型，该模块从API version 6开始不再维护，可以使用模块[`@ohos.data.storage`](arkts-data-storage.md#@ohos.data.storage)。在API
+ > version 9后，推荐使用新模块[`@ohos.data.preferences`](arkts-data-preferences.md#@ohos.data.preferences)。
  >
  > - 本模块接口仅可在FA模型下使用。
  >

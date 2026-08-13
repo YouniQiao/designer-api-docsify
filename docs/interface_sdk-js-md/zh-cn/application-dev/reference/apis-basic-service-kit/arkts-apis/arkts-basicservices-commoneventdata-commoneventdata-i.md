@@ -1,10 +1,12 @@
 # CommonEventData
 
-表示公共事件的数据。CommonEventData用于在公共事件订阅场景中承载订阅者接收到的公共事件数据，包含事件名称、发布者包名、code数据、data数据及附加参数等信息，适用于应用订阅并处理公共事件、解析事件携带数据的场景。
+表示公共事件的数据。CommonEventData用于在公共事件订阅场景中承载 订阅者接收到的公共事件数据，包含事件名称、发布者包名、code数据、 data数据及附加参数等信息，适用于应用订阅并处理公共事件、 解析事件携带数据的场景。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface CommonEventData--><!--Device-unnamed-export interface CommonEventData-End-->
 
@@ -20,9 +22,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,16 +40,17 @@ bundleName?: string
 code?: int
 ```
 
-表示订阅者接收到的公共事件数据。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`code`字段传递的数据一致。取值范围[-2147483648, 2147483647]，默认值为0。
+表示订阅者接收到的公共事件数据。该字段取值与发布者使用 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish) 发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`code`字段传递的数据一致。取值范围[-2147483648, 2147483647]，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **默认值：** 0
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -59,14 +64,15 @@ code?: int
 data?: string
 ```
 
-表示订阅者接收到的公共事件数据，数据大小不超过64KB。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`data`字段传递的数据一致。
+表示订阅者接收到的公共事件数据，数据大小不超过64KB。该字段取值与发布者使用 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish) 发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`data`字段传递的数据一致。
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,9 +90,11 @@ event: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -97,21 +105,20 @@ event: string
 ## parameters
 
 ```TypeScript
-parameters?: { [key: string]: any }
+parameters?: Record<string, RecordData>
 ```
 
-表示订阅者接收到的公共事件的附加信息。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`parameters`字段传递的数据一致。
+表示订阅者接收到的公共事件的附加信息。该字段取值与发布者使用 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish) 发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`parameters`字段传递的数据一致。
 
-**类型：** { [key: string]: any }
+**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-CommonEventData-parameters?: { [key: string]: any }--><!--Device-CommonEventData-parameters?: { [key: string]: any }-End-->
+<!--Device-CommonEventData-parameters?: Record<string, RecordData>--><!--Device-CommonEventData-parameters?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

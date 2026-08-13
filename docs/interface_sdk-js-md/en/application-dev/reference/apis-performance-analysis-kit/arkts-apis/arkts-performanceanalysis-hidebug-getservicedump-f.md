@@ -12,11 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void
 ```
 
-Obtains system service information.It need dump permission.This API can be called only by system application.
+Obtains system service information. It need dump permission. This API can be called only by system application.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DUMP
 
@@ -28,16 +30,16 @@ Obtains system service information.It need dump permission.This API can be calle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serviceid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Service ID used to obtain system service information. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor to which data is written by the API. |
+| serviceid | int | Yes | Service ID used to obtain system service information. |
+| fd | int | Yes | File descriptor to which data is written by the API. |
 | args | Array&lt;string&gt; | Yes | Parameter list of the **Dump** API of the system service. The maximum length of a string is 254 characters. The excess part will be truncated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Possible causes: 1.The parameter type error. 2.The args parameter is not string array. |
-| [11400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) | ServiceId invalid. The system ability does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Possible causes: 1.The parameter type error. 2.The args parameter is not string array. |
+| [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) | ServiceId invalid. The system ability does not exist. |
 
 ## Examples
 

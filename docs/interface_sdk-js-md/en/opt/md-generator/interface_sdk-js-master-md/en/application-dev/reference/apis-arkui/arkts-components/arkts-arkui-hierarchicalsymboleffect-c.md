@@ -6,7 +6,9 @@ Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
-<!--Device-unnamed-declare class HierarchicalSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class HierarchicalSymbolEffect extends SymbolEffect-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class HierarchicalSymbolEffect--><!--Device-unnamed-declare class HierarchicalSymbolEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(fillStyle?: EffectFillStyle)
 A constructor used to create a **HierarchicalSymbolEffect** instance, which comes with a hierarchical animation effect.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +38,7 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [fillStyle](#fillstyle) | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No |
+| [fillStyle](#fillStyle) | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No |
 
 ## fillStyle
 
@@ -42,13 +46,13 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 fillStyle?: EffectFillStyle
 ```
 
-Effect fill style.
-
-Default value: **EffectFillStyle.CUMULATIVE**
+Effect fill style. Default value: **EffectFillStyle.CUMULATIVE**
 
 **Type:** [EffectFillStyle](arkts-arkui-effectfillstyle-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

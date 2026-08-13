@@ -2,7 +2,9 @@
 
 公共消息选项，使用指定的标志类型，构造指定的MessageOption对象。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-rpc-class MessageOption--><!--Device-rpc-class MessageOption-End-->
 
@@ -17,6 +19,8 @@ constructor(syncFlags?: number, waitTime?: number)
 MessageOption构造函数。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -53,6 +57,8 @@ MessageOption构造函数。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageOption-constructor(async?: boolean)--><!--Device-MessageOption-constructor(async?: boolean)-End-->
@@ -77,6 +83,89 @@ class TestRemoteObject extends rpc.MessageOption {
 }
 ```
 
+## constructor
+
+```TypeScript
+constructor(isAsync: boolean)
+```
+
+MessageOption构造函数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageOption-constructor(isAsync: boolean)--><!--Device-MessageOption-constructor(isAsync: boolean)-End-->
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [isAsync](arkts-ipc-rpc-messageoption-c.md) | boolean | 是 |
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+MessageOption构造函数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageOption-constructor()--><!--Device-MessageOption-constructor()-End-->
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+## constructor
+
+```TypeScript
+constructor(syncFlags: number)
+```
+
+MessageOption构造函数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageOption-constructor(syncFlags: int)--><!--Device-MessageOption-constructor(syncFlags: int)-End-->
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| syncFlags | number | 是 |
+
+## constructor
+
+```TypeScript
+constructor(syncFlags: number, waitTime: number)
+```
+
+MessageOption构造函数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)--><!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)-End-->
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| syncFlags | number | 是 |
+| waitTime | number | 是 |
+
 ## getFlags
 
 ```TypeScript
@@ -85,7 +174,9 @@ getFlags(): number
 
 获取同步调用或异步调用标志。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -127,7 +218,9 @@ getWaitTime(): number
 
 获取rpc调用的最长等待时间。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -165,10 +258,11 @@ try {
 isAsync(): boolean
 ```
 
-获取  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
+获取 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -202,10 +296,11 @@ try {
 setAsync(isAsync: boolean): void
 ```
 
-设置  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
+设置 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -241,7 +336,9 @@ setFlags(flags: number): void
 
 设置同步调用或异步调用标志。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -280,7 +377,9 @@ setWaitTime(waitTime: number): void
 
 设置rpc调用最长等待时间。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -316,14 +415,15 @@ try {
 static readonly TF_ACCEPT_FDS: number
 ```
 
-指示  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)接口可以传递文件描述符。
+指示 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)接口可以传递文件描述符。
 
 **类型：** number
 
 **默认值：** 16
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -345,6 +445,8 @@ static readonly TF_ASYNC: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageOption-static readonly TF_ASYNC: number--><!--Device-MessageOption-static readonly TF_ASYNC: number-End-->
@@ -365,6 +467,8 @@ static readonly TF_SYNC: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageOption-static readonly TF_SYNC: number--><!--Device-MessageOption-static readonly TF_SYNC: number-End-->
@@ -384,6 +488,8 @@ RPC等待时间（单位：秒），IPC场景下无效。默认等待为8秒（�
 **默认值：** 4 [since 7 - 10] @default 8 [since 11]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

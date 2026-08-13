@@ -6,6 +6,8 @@ Used to do mediaquery operations.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace mediaquery--><!--Device-unnamed-declare namespace mediaquery-End-->

@@ -13,6 +13,8 @@ Obtain the resource in resources/rawfile, used by plugin.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare function _rawfile(    id: long, type: long, bundleName: string, moduleName: string, ...params: Object[]): Resource--><!--Device-unnamed-export declare function _rawfile(    id: long, type: long, bundleName: string, moduleName: string, ...params: Object[]): Resource-End-->

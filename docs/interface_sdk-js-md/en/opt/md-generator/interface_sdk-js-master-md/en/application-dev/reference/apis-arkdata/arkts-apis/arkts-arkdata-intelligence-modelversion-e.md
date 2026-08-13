@@ -2,7 +2,9 @@
 
 Version of the model.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-enum ModelVersion--><!--Device-intelligence-enum ModelVersion-End-->
 
@@ -16,7 +18,9 @@ BASIC_MODEL = 0
 
 The basic embedding model.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModelVersion-BASIC_MODEL = 0--><!--Device-ModelVersion-BASIC_MODEL = 0-End-->
 

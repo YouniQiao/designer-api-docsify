@@ -4,9 +4,11 @@ Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddat
 
 **Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-unifiedDataChannel-class HTML extends Text--><!--Device-unifiedDataChannel-class HTML extends Text-End-->
+**Deprecated since:** -1
+
+<!--Device-unifiedDataChannel-class HTML--><!--Device-unifiedDataChannel-class HTML-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -15,26 +17,6 @@ Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddat
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
-
-## htmlContent
-
-```TypeScript
-set htmlContent(value: string)
-```
-
-Indicates the content of html, with html tags
-
-**Type:** string
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HTML-set htmlContent(value: string)--><!--Device-HTML-set htmlContent(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## plainContent
 
@@ -48,30 +30,12 @@ Plaintext without HTML tags. This parameter is optional. The default value is an
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HTML-plainContent?: string--><!--Device-HTML-plainContent?: string-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## uriAuthorizationPolicies
-
-```TypeScript
-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
-```
-
-Defines URI authorization policies for drag intention.
-
-**Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-HTML-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)--><!--Device-HTML-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core

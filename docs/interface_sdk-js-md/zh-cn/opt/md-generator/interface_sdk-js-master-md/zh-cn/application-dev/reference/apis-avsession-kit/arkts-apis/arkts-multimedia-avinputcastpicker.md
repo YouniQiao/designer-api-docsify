@@ -1,8 +1,5 @@
 # @ohos.multimedia.avInputCastPicker
 
-录音设备选择组件
-
-
 ## 汇总
 
 ### 结构体

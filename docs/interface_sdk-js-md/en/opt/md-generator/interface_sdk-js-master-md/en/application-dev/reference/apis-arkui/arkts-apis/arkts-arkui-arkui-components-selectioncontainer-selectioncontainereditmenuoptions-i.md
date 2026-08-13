@@ -4,6 +4,8 @@ Defines custom edit menu options for SelectionContainer.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SelectionContainerEditMenuOptions--><!--Device-unnamed-export interface SelectionContainerEditMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,11 @@ onCreateMenu?: OnCreateMenuCallback
 
 Passes the default menu, invokes before every display to generate a menu for triggering click events.
 
+**Type:** [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +46,11 @@ onMenuItemClick?: OnMenuItemClickWithTextCallback
 
 Invoked upon clicking an item, capable of intercepting the default system menu execution behavior.
 
+**Type:** [OnMenuItemClickWithTextCallback](arkts-arkui-onmenuitemclickwithtextcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +68,11 @@ onPrepareMenu?: OnPrepareMenuCallback
 
 Callback before displaying the menu when the selection text changes.
 
+**Type:** [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

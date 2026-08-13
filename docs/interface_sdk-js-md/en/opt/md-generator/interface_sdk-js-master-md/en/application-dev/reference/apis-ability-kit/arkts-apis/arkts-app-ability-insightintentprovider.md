@@ -4,6 +4,8 @@ Insight intent Provider.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace insightIntentProvider--><!--Device-unnamed-declare namespace insightIntentProvider-End-->
@@ -22,5 +24,6 @@ import { insightIntentProvider } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) |
-| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult) |
+| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) |
+| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult) |
+| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult) |

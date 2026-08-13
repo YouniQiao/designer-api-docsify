@@ -1,11 +1,12 @@
 # AppVersionInfo
 
-The module defines the application version information. You can use  
-[getAppVersionInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetappversioninfo7) to obtain the version information of the current application.
+The module defines the application version information. You can use getAppVersionInfo to obtain the version information of the current application.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AppVersionInfo--><!--Device-unnamed-export interface AppVersionInfo-End-->
 
@@ -26,6 +27,8 @@ Application name.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.
@@ -52,6 +55,8 @@ Application version number.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.
 
@@ -76,6 +81,8 @@ Application version name.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.

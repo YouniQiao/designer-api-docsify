@@ -4,7 +4,9 @@ Discovery failure result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DiscoveryFailureResult--><!--Device-distributedDeviceManager-interface DiscoveryFailureResult-End-->
 
@@ -28,7 +30,9 @@ Discovery failure cause code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DiscoveryFailureResult-reason: int--><!--Device-DiscoveryFailureResult-reason: int-End-->
 

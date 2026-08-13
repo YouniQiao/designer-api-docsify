@@ -12,14 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boolean>
 ```
 
-Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result.
+Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result. > **NOTE：**> > If the application is not installed for the current user, error code 16000073 is returned. If the application is > installed for the current user, the system checks whether the application is running across all users.
 
-> **NOTE：**
-> 
-> If the application is not installed for the current user, error code 16000073 is returned. If the application is
-> installed for the current user, the system checks whether the application is running across all users.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -44,10 +41,10 @@ Checks whether the application with the specified bundle name and application cl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
 
 ## Examples
 

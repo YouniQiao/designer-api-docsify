@@ -1,14 +1,10 @@
 # Magnifier
 
-提供控制放大镜的显示与隐藏的能力，放大镜会对组件内容进行放大显示，便于查看组件细节。适用于非文本类组件（如图片）需要查看细节的场景。
-
-> **说明：**
-> 
-> - 以下API需先使用UIContext中的[getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getMagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。
-> 
-> - 与文本类组件自带的放大镜能力互不影响，文本类组件推荐使用自带的放大镜能力。
+提供控制放大镜的显示与隐藏的能力，放大镜会对组件内容进行放大显示，便于查看组件细节。适用于非文本类组件（如图片）需要查看细节的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getMagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。 > > - 与文本类组件自带的放大镜能力互不影响，文本类组件推荐使用自带的放大镜能力。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class Magnifier--><!--Device-unnamed-export class Magnifier-End-->
 
@@ -20,13 +16,11 @@
 bind(id: string): void
 ```
 
-绑定放大镜与指定id的组件。
-
-> **说明：**
-> 
-> 使用前需先通过UIContext中的getMagnifier()方法获取Magnifier实例。
+绑定放大镜与指定id的组件。 > **说明：**> > 使用前需先通过UIContext中的getMagnifier()方法获取Magnifier实例。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,17 +42,11 @@ bind(id: string): void
 show(x: number, y: number): void
 ```
 
-设置放大镜显示的组件内容相对于组件左上角的位置，设置成功后放大镜会对以该坐标点为中心的区域内容进行放大显示。
-
-> **说明：**
-> 
-> - 使用前需先通过UIContext中的getMagnifier()方法获取Magnifier实例。
-> 
-> - 调用此方法前，需先调用[bind](#bind)方法绑定目标组件。
-> 
-> - 当与放大镜绑定的组件自身内容发生变化时，放大镜显示内容不会自动更新，需要主动调用show接口对放大镜显示内容进行更新。
+设置放大镜显示的组件内容相对于组件左上角的位置，设置成功后放大镜会对以该坐标点为中心的区域内容进行放大显示。 > **说明：**> > - 使用前需先通过UIContext中的getMagnifier()方法获取Magnifier实例。 > > - 调用此方法前，需先调用[bind](#bind)方法绑定目标组件。 > > - 当与放大镜绑定的组件自身内容发生变化时，放大镜显示内容不会自动更新，需要主动调用show接口对放大镜显示内容进行更新。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +72,8 @@ unbind(): void
 解除放大镜与当前组件的绑定。使用前需先通过UIContext中的getMagnifier()方法获取Magnifier实例。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

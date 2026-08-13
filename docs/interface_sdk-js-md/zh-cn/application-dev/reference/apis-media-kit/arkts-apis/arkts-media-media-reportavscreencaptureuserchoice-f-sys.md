@@ -6,11 +6,13 @@
 function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>
 ```
 
-Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation.This API is called by the system application that creates the dialog box.
+Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation. This API is called by the system application that creates the dialog box.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>--><!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>-End-->
 
@@ -22,7 +24,7 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
+| sessionId | int | 是 | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
 | choice | string | 是 | User choice, including whether screen capture is agreed, selected display ID, and window ID. For details, see JsonData in the example below. |
 
 **返回值：**
@@ -35,8 +37,8 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 

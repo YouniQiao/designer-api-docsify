@@ -4,7 +4,9 @@ Enumerates of window posture mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-window-enum WindowPostureMode--><!--Device-window-enum WindowPostureMode-End-->
 
@@ -16,11 +18,13 @@ Enumerates of window posture mode.
 DESKTOP_MODE = 0
 ```
 
-Desktop mode, when the following conditions are met:1. The fold status of screen is half folded status (FoldStatus.FOLD_STATUS_HALF_FOLDED).2. The width of creaseRects obtained via display.getLiveCreaseRegion is greater than its height.3. The window status is WindowStatusType.FULL_SCREEN or WindowStatusType.MAXIMIZE.4. The crease region is entirely winthin the window region.
+Desktop mode, when the following conditions are met: 1. The fold status of screen is half folded status (FoldStatus.FOLD_STATUS_HALF_FOLDED). 2. The width of creaseRects obtained via display.getLiveCreaseRegion is greater than its height. 3. The window status is WindowStatusType.FULL_SCREEN or WindowStatusType.MAXIMIZE. 4. The crease region is entirely winthin the window region.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,21 +1,12 @@
 # AdComponent
 
-This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles.
-
-> **NOTE：**
-> 
-> To ensure that ads can be displayed correctly, this API must be used in conjunction with the ad request API.
-> For effects and usage methods, refer to
-> [Native Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-native),
-> [Roll Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll),
-> and [Splash Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-splash)
-> integration and display.
+This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles. > **NOTE：**> > To ensure that ads can be displayed correctly, this API must be used in conjunction with the ad request API. > For effects and usage methods, refer to > [Native Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-native), > [Roll Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll), > and [Splash Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-splash) > integration and display.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare struct AdComponent--><!--Device-unnamed-declare struct AdComponent-End-->
 
@@ -26,27 +17,6 @@ This module provides the capability of displaying ads, covering native, roll, sp
 ```TypeScript
 import { AdComponent } from '@kit.AdsKit';
 ```
-
-## adRenderer
-
-```TypeScript
-adRenderer?: () => void
-```
-
-Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details,please consult   
-[Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/support-0000001061434261).
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Decorator:** @BuilderParam
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-AdComponent-adRenderer?: () => void--><!--Device-AdComponent-adRenderer?: () => void-End-->
-
-**System capability:** SystemCapability.Advertising.Ads
 
 ## build
 
@@ -60,9 +30,34 @@ A constructor used to create an **AdComponent** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdComponent-build(): void--><!--Device-AdComponent-build(): void-End-->
+
+**System capability:** SystemCapability.Advertising.Ads
+
+## adRenderer
+
+```TypeScript
+@BuilderParam
+  adRenderer?: () => void
+```
+
+Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details, please consult [Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/ support-0000001061434261).
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AdComponent-@BuilderParam  adRenderer?: () => void--><!--Device-AdComponent-@BuilderParam  adRenderer?: () => void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -72,15 +67,15 @@ A constructor used to create an **AdComponent** object.
 ads: advertising.Advertisement[]
 ```
 
-Array of ad objects.
-
-NOTE: For non-roll ad types, the component only displays the first data in the array.
+Array of ad objects. NOTE: For non-roll ad types, the component only displays the first data in the array.
 
 **Type:** advertising.Advertisement[]
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -102,6 +97,8 @@ Ad display parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions-End-->
@@ -122,6 +119,8 @@ Callback for ad status changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdComponent-interactionListener: advertising.AdInteractionListener--><!--Device-AdComponent-interactionListener: advertising.AdInteractionListener-End-->
@@ -131,11 +130,11 @@ Callback for ad status changes.
 ## rollPlayState
 
 ```TypeScript
-rollPlayState?: number
+@Prop
+  rollPlayState?: number
 ```
 
-Used to provide the playback status of roll ads externally. Set to 1 for playing and 2 for paused. The default value is 2. Other values are invalid and do not change the previous playback status. The page where the roll ad is located needs to be associated with the property through @State. For usage methods, refer to the   
-[sample code](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll#section4281165885118).
+Used to provide the playback status of roll ads externally. Set to 1 for playing and 2 for paused. The default value is 2. Other values are invalid and do not change the previous playback status. The page where the roll ad is located needs to be associated with the property through @State. For usage methods, refer to the [sample code](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ ads-publisher-service-roll#section4281165885118).
 
 **Type:** number
 
@@ -143,11 +142,11 @@ Used to provide the playback status of roll ads externally. Set to 1 for playing
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-AdComponent-rollPlayState?: number--><!--Device-AdComponent-rollPlayState?: number-End-->
+<!--Device-AdComponent-@Prop  rollPlayState?: number--><!--Device-AdComponent-@Prop  rollPlayState?: number-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

@@ -8,7 +8,9 @@ function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<b
 
 校验所选择的多个文件或目录URI是否已持久化授权，使用Promise异步回调。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>--><!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>-End-->
 
@@ -30,8 +32,8 @@ function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<b
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900042 |
 
 ## 示例

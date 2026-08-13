@@ -6,6 +6,8 @@ Provides policy file information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-securityGuard-interface PolicyFile--><!--Device-securityGuard-interface PolicyFile-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -32,6 +34,8 @@ The policy file descriptor.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-PolicyFile-fd: number--><!--Device-PolicyFile-fd: number-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -51,6 +55,8 @@ The policy file name.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-PolicyFile-name: string--><!--Device-PolicyFile-name: string-End-->
 

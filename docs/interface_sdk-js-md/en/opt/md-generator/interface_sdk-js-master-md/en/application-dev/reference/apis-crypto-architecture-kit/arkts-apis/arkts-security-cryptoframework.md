@@ -2,7 +2,9 @@
 
 The **cryptoFramework** module provides APIs for cryptographic operations, shielding the underlying hardware and algorithm library.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -24,19 +26,19 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator) |
-| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) |
-| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) |
-| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf) |
-| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem) |
-| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement) |
-| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac) |
-| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac-1) |
-| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createmd) |
-| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom) |
-| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign) |
-| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator) |
-| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify) |
+| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createAsyKeyGenerator) |
+| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) |
+| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) |
+| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createKdf) |
+| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createKem) |
+| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createKeyAgreement) |
+| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createMac) |
+| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createMac) |
+| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createMd) |
+| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createRandom) |
+| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign) |
+| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator) |
+| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createVerify) |
 
 ### Classes
 
@@ -77,7 +79,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 | [ED25519PubKeySpec](arkts-cryptoarchitecture-cryptoframework-ed25519pubkeyspec-i.md) |
 | [EccSignatureSpec](arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md) |
 | [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) |
-| [HKDFSpec](arkts-cryptoarchitecture-cryptoframework-hkdfspec-i.md) | Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for HKDF key derivation.  > **NOTE：** >  > **key** is the original key material entered by the user. An empty string can be passed in for **info** and > **salt** based on the mode. >  > For example, if the mode is **EXTRACT_AND_EXPAND**, all parameter values must be passed in. If the mode is > **EXTRACT_ONLY**, **info** can be empty. When **HKDFSpec** is constructed, pass in **null** to **info**. >  > The default mode is **EXTRACT_AND_EXPAND**. The value **HKDF\|SHA256\|EXTRACT_AND_EXPAND** is equivalent to > **HKDF\|
+| [HKDFSpec](arkts-cryptoarchitecture-cryptoframework-hkdfspec-i.md) | Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for HKDF key derivation. > **NOTE：**> > **key** is the original key material entered by the user. An empty string can be passed in for **info** and > **salt** based on the mode. > > For example, if the mode is **EXTRACT_AND_EXPAND**, all parameter values must be passed in. If the mode is > **EXTRACT_ONLY**, **info** can be empty. When **HKDFSpec** is constructed, pass in **null** to **info**. > > The default mode is **EXTRACT_AND_EXPAND**. The value **HKDF\|SHA256\|EXTRACT_AND_EXPAND** is equivalent to > **HKDF\|
 | [HmacSpec](arkts-cryptoarchitecture-cryptoframework-hmacspec-i.md) |
 | [IvParamsSpec](arkts-cryptoarchitecture-cryptoframework-ivparamsspec-i.md) |
 | [Kdf](arkts-cryptoarchitecture-cryptoframework-kdf-i.md) |

@@ -2,9 +2,11 @@
 
 Defines a media data loader, which needs to be implemented by applications.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface MediaSourceLoader--><!--Device-media-interface MediaSourceLoader-End-->
 
@@ -24,11 +26,15 @@ close: SourceCloseCallback
 
 Callback function is implemented by application, which is used to handle resource close request.
 
-**Since:** 18
+**Type:** [SourceCloseCallback](arkts-media-media-sourceclosecallback-t.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoader-close: SourceCloseCallback--><!--Device-MediaSourceLoader-close: SourceCloseCallback-End-->
 
@@ -42,11 +48,15 @@ open: SourceOpenCallback
 
 Callback function is implemented by application, which is used to handle resource opening requests.
 
-**Since:** 18
+**Type:** [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoader-open: SourceOpenCallback--><!--Device-MediaSourceLoader-open: SourceOpenCallback-End-->
 
@@ -60,11 +70,15 @@ read: SourceReadCallback
 
 Callback function is implemented by application, which is used to handle resource read requests.
 
-**Since:** 18
+**Type:** [SourceReadCallback](arkts-media-media-sourcereadcallback-t.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoader-read: SourceReadCallback--><!--Device-MediaSourceLoader-read: SourceReadCallback-End-->
 

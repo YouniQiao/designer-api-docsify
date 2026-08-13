@@ -1,8 +1,10 @@
 # Filter
 
-An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image.
+An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects, you need to call getEffectPixelMap to obtain the processed image.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
 
@@ -20,14 +22,11 @@ import { effectKit } from '@kit.ArkGraphics2D';
 blur(radius: number): Filter
 ```
 
-Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur. > **NOTE：**> > This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
 
-> **NOTE：**
-> 
-> This API provides the blur effect for static images. To provide the real-time blur effect for components,
- use dynamic blur.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -121,14 +120,11 @@ struct Index {
 blur(radius: number, tileMode: TileMode): Filter
 ```
 
-Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur. > **NOTE：**> > This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
 
-> **NOTE：**
-> 
-> This API provides the blur effect for static images. To provide the real-time blur effect for components,
- use dynamic blur.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 <!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter--><!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter-End-->
 
@@ -221,7 +217,9 @@ brightness(bright: number): Filter
 
 Adds the brightness effect to the effect chain and returns the instance of the chain. This method achieves a brightness effect by adjusting the image brightness. It is commonly used in scenarios such as dark image brightening, image preview brightness enhancement, and night mode image adaptation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -315,14 +313,11 @@ struct Index {
 getEffectPixelMap(): Promise<image.PixelMap>
 ```
 
-Obtains image.PixelMap of the source image to which the effect chain has been added. CPU rendering is used by default. This API uses a promise to return the result. To specify the rendering mode, use the getEffectPixelMap(useCpuRender: boolean) API. It is commonly used in scenarios where the processed image needs to be saved or displayed.
+Obtains image.PixelMap of the source image to which the effect chain has been added. CPU rendering is used by default. This API uses a promise to return the result. To specify the rendering mode, use the getEffectPixelMap(useCpuRender: boolean) API. It is commonly used in scenarios where the processed image needs to be saved or displayed. > **NOTE：**> > This method uses CPU rendering by default. The shader tile mode supports only DECAL, and other modes (CLAMP, REPEAT, MIRROR) are not supported. To use GPU rendering or learn about the impact of rendering modes on TileMode, see TileMode and getEffectPixelMap(useCpuRender: boolean).
 
-> **NOTE：**
-> 
-> This method uses CPU rendering by default. The shader tile mode supports only DECAL, and other modes
- (CLAMP, REPEAT, MIRROR) are not supported. To use GPU rendering or learn about the impact of rendering  modes on TileMode, see TileMode and getEffectPixelMap(useCpuRender: boolean).
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -376,11 +371,13 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 Obtains image.PixelMap of the source image with the linked list effect. The rendering mode (CPU rendering or GPU rendering) can be specified. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-Filter-getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>--><!--Device-Filter-getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>-End-->
 
@@ -430,11 +427,7 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 getPixelMap(): image.PixelMap
 ```
 
-Obtains image.PixelMap of the source image to which the effect chain has been added. It is commonly used in scenarios where the processed image needs to be saved or displayed.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. Use getEffectPixelMap instead.
+Obtains image.PixelMap of the source image to which the effect chain has been added. It is commonly used in scenarios where the processed image needs to be saved or displayed. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. Use getEffectPixelMap instead.
 
 **Since:** 9
 
@@ -479,9 +472,11 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 grayscale(): Filter
 ```
 
-Adds the grayscale effect to the effect chain and returns the instance of the chain. This method converts a color image into a grayscale image by calculating the grayscale value through weighted RGB values. It is commonly used in scenarios such as black-and-white style photo generation, image preprocessing decolorization,and grayscale icon creation.
+Adds the grayscale effect to the effect chain and returns the instance of the chain. This method converts a color image into a grayscale image by calculating the grayscale value through weighted RGB values. It is commonly used in scenarios such as black-and-white style photo generation, image preprocessing decolorization, and grayscale icon creation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -569,7 +564,9 @@ invert(): Filter
 
 Adds the invert effect to the effect chain and returns the instance of the chain. This method inverts the RGB color values of the image. It is commonly used in scenarios such as negative film effect, image artistic processing, and night mode adaptation.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-invert(): Filter--><!--Device-Filter-invert(): Filter-End-->
 
@@ -651,9 +648,11 @@ struct Index {
 setColorMatrix(colorMatrix: Array<number>): Filter
 ```
 
-Performs color transformation on the image using a custom color matrix, adds the effect to the effect chain,and returns the instance of the chain. It is commonly used in scenarios such as implementing custom color effects not supported by preset filters, such as vintage tones and warm/cool tone adjustments.
+Performs color transformation on the image using a custom color matrix, adds the effect to the effect chain, and returns the instance of the chain. It is commonly used in scenarios such as implementing custom color effects not supported by preset filters, such as vintage tones and warm/cool tone adjustments.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter--><!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter-End-->
 
@@ -675,7 +674,7 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

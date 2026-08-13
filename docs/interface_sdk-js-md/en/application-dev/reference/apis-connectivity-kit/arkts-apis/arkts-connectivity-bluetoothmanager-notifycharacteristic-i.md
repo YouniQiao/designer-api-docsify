@@ -8,7 +8,7 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **Deprecated since:** 10
 
-**Substitutes:** [NotifyCharacteristic](ohos.bluetooth.ble/ble.NotifyCharacteristic)
+**Substitutes:** [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md#NotifyCharacteristic)
 
 <!--Device-bluetoothManager-interface NotifyCharacteristic--><!--Device-bluetoothManager-interface NotifyCharacteristic-End-->
 
@@ -36,7 +36,7 @@ The UUID of a NotifyCharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.NotifyCharacteristic#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicUuid)
 
 <!--Device-NotifyCharacteristic-characteristicUuid: string--><!--Device-NotifyCharacteristic-characteristicUuid: string-End-->
 
@@ -58,7 +58,7 @@ The value of a NotifyCharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicValue](ohos.bluetooth.ble/ble.NotifyCharacteristic#characteristicValue)
+**Substitutes:** [characteristicValue](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicValue)
 
 <!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer--><!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -80,7 +80,7 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 
 **Deprecated since:** 10
 
-**Substitutes:** [confirm](ohos.bluetooth.ble/ble.NotifyCharacteristic#confirm)
+**Substitutes:** [confirm](arkts-connectivity-ble-notifycharacteristic-i.md#confirm)
 
 <!--Device-NotifyCharacteristic-confirm: boolean--><!--Device-NotifyCharacteristic-confirm: boolean-End-->
 
@@ -102,7 +102,7 @@ The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.
 
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.NotifyCharacteristic#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-notifycharacteristic-i.md#serviceUuid)
 
 <!--Device-NotifyCharacteristic-serviceUuid: string--><!--Device-NotifyCharacteristic-serviceUuid: string-End-->
 

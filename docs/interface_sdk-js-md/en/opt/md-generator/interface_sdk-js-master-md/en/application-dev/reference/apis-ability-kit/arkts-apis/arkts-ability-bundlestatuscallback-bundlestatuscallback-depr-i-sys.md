@@ -1,19 +1,12 @@
 # BundleStatusCallback (System API)
 
-> **NOTE：**
-> 
-> The initial APIs of this module are supported since API version 8. Newly added APIs will
-> be marked with a superscript to indicate their earliest API version.
-> 
-> The APIs of this module have been deprecated since API version 9. No substitute is provided.
-> 
-> The APIs provided by this module are system APIs.
+> **NOTE：**> > The initial APIs of this module are supported since API version 8. Newly added APIs will > be marked with a superscript to indicate their earliest API version. > > The APIs of this module have been deprecated since API version 9. No substitute is provided. > > The APIs provided by this module are system APIs.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleMonitor/bundleMonitor](ohos.bundle.bundleMonitor/bundleMonitor)
+**Substitutes:** [bundleMonitor/bundleMonitor](arkts-bundle-bundlemonitor.md#@ohos.bundle.bundleMonitor)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -31,11 +24,13 @@ add: (bundleName: string, userId: number) => void
 
 Used to obtain information when a bundle is installed.
 
+**Type:** (bundleName: string, userId: number) =&gt; void
+
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo-(System-API))
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -45,13 +40,6 @@ Used to obtain information when a bundle is installed.
 
 **System API:** This is a system API.
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |
-
 ## remove
 
 ```TypeScript
@@ -60,11 +48,13 @@ remove: (bundleName: string, userId: number) => void
 
 Used to obtain information when a bundle is uninstalled.
 
+**Type:** (bundleName: string, userId: number) =&gt; void
+
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo-(System-API))
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -74,13 +64,6 @@ Used to obtain information when a bundle is uninstalled.
 
 **System API:** This is a system API.
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |
-
 ## update
 
 ```TypeScript
@@ -89,11 +72,13 @@ update: (bundleName: string, userId: number) => void
 
 Used to obtain information when a bundle is updated.
 
+**Type:** (bundleName: string, userId: number) =&gt; void
+
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo-(System-API))
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -102,10 +87,3 @@ Used to obtain information when a bundle is updated.
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |

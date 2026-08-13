@@ -16,7 +16,9 @@ Query whether Wi-Fi is available
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,5 +36,5 @@ Query whether Wi-Fi is available
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2401000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
+| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
 

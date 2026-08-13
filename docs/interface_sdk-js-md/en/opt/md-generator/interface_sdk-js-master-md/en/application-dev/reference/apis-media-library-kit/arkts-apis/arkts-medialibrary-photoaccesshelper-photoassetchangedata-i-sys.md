@@ -2,7 +2,9 @@
 
 Describes the change data of a media asset.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoAssetChangeData--><!--Device-photoAccessHelper-interface PhotoAssetChangeData-End-->
 
@@ -24,7 +26,9 @@ Change status of the thumbnail (image/video).
 
 **Type:** [ThumbnailChangeStatus](arkts-medialibrary-photoaccesshelper-thumbnailchangestatus-e-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetChangeData-thumbnailChangeStatus: ThumbnailChangeStatus--><!--Device-PhotoAssetChangeData-thumbnailChangeStatus: ThumbnailChangeStatus-End-->
 
@@ -42,7 +46,9 @@ Version number of the media asset notification, which is used to determine the o
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetChangeData-version: long--><!--Device-PhotoAssetChangeData-version: long-End-->
 

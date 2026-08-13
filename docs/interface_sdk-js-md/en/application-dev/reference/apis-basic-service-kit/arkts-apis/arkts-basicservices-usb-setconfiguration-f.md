@@ -12,10 +12,7 @@ import { usb } from '@kit.BasicServicesKit';
 function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number
 ```
 
-Sets the device configuration.
-
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  
-[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter.
+Sets the device configuration. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 

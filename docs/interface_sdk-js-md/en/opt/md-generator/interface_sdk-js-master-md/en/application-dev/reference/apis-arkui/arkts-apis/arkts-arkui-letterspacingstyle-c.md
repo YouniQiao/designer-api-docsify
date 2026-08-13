@@ -4,6 +4,8 @@ Describes the letter spacing style.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class LetterSpacingStyle--><!--Device-unnamed-declare class LetterSpacingStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ A constructor used to create a text letter spacing style.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -30,7 +34,7 @@ A constructor used to create a text letter spacing style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-lengthmetrics-t.md) | Yes |
 
 ## letterSpacing
 
@@ -38,13 +42,13 @@ A constructor used to create a text letter spacing style.
 readonly letterSpacing: number
 ```
 
-Letter spacing.
-
-Unit: [vp](common)
+Letter spacing. Unit: vp
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

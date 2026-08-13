@@ -1,10 +1,12 @@
 # RationalNumber
 
-The rational number is mainly to compare rational numbers and obtain the numerator and denominator.
+Provides APIs to compare rational numbers and obtain numerators and denominators. For example, the **toString()** API can be used to convert a rational number into a string.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-util-class RationalNumber--><!--Device-util-class RationalNumber-End-->
 
@@ -19,16 +21,20 @@ import { util } from '@kit.ArkTS';
 ## compare
 
 ```TypeScript
-compare(another: RationalNumber): int
+compare(another: RationalNumber): number
 ```
 
 Compares the current RationalNumber object to the given object.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-RationalNumber-compare(another: RationalNumber): int--><!--Device-RationalNumber-compare(another: RationalNumber): int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-compare(another: RationalNumber): number--><!--Device-RationalNumber-compare(another: RationalNumber): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -42,7 +48,72 @@ Compares the current RationalNumber object to the given object.
 
 | Type | Description |
 | --- | --- |
-| int | Returns 0 or 1, or -1, depending on the comparison. |
+| number | Returns 0 or 1, or -1, depending on the comparison. |
+
+## compareTo
+
+```TypeScript
+compareTo(another: RationalNumber): number
+```
+
+Compares the current RationalNumber object to the given object.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** compare
+
+<!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Returns 0 or 1, or -1, depending on the comparison. |
+
+## constructor
+
+```TypeScript
+constructor(numerator: number, denominator: number)
+```
+
+A constructor used to create a **RationalNumber** object.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [parseRationalNumber](#parseRationalNumber)
+
+<!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| numerator | number | Yes | Numerator, which is an integer. |
+| denominator | number | Yes | Denominator, which is an integer. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+```
 
 ## constructor
 
@@ -50,15 +121,25 @@ Compares the current RationalNumber object to the given object.
 constructor()
 ```
 
-A constructor used to create a RationalNumber instance with a given numerator and denominator.
+A constructor used to create a **RationalNumber** object.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-constructor()--><!--Device-RationalNumber-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
 
 ## createRationalFromString
 
@@ -66,11 +147,15 @@ A constructor used to create a RationalNumber instance with a given numerator an
 static createRationalFromString(rationalString: string): RationalNumber
 ```
 
-Creates a RationalNumber object based on a given string.
+Creates a **RationalNumber** object based on the given string. > **NOTE：**> > The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not > intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is > displayed.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber--><!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber-End-->
 
@@ -80,7 +165,7 @@ Creates a RationalNumber object based on a given string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rationalString | string | Yes | String Expression of Rational Numbers |
+| rationalString | string | Yes | String used to create the **RationalNumber** object. |
 
 **Return value:**
 
@@ -88,17 +173,27 @@ Creates a RationalNumber object based on a given string.
 | --- | --- |
 | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
 
+## Examples
+
+```TypeScript
+let rational = util.RationalNumber.createRationalFromString("3/4");
+```
+
 ## equals
 
 ```TypeScript
 equals(obj: Object): boolean
 ```
 
-Compares two objects for equality.
+Checks whether this **RationalNumber** object equals the given object.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-equals(obj: Object): boolean--><!--Device-RationalNumber-equals(obj: Object): boolean-End-->
 
@@ -108,27 +203,51 @@ Compares two objects for equality.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | An object |
+| obj | Object | Yes | Object used to compare with this **RationalNumber** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the given object is the same as the current object; Otherwise, false is returned. |
+| boolean | Check result. The value **true** is returned if the two objects are equal; otherwise, **false** is returned. |
 
-## getCommonFactor
+## Examples
 
 ```TypeScript
-static getCommonFactor(number1: long, number2: long): long
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.equals(rational);
+console.info("result = " + result);
+// Output: result = false
 ```
 
-Get the greatest common factor of two integers.
+You are advised to use the following code snippet for API version 9 and later versions:
 
-**Since:** 23
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.equals(rational);
+console.info("result = " + result);
+// Output: result = false
+```
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+## getCommonDivisor
 
-<!--Device-RationalNumber-static getCommonFactor(number1: long, number2: long): long--><!--Device-RationalNumber-static getCommonFactor(number1: long, number2: long): long-End-->
+```TypeScript
+static getCommonDivisor(number1: number, number2: number): number
+```
+
+Obtains the greatest common divisor of two specified integers.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [getCommonFactor](#getCommonFactor)
+
+<!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -136,28 +255,73 @@ Get the greatest common factor of two integers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| number1 | long | Yes | Is an integer. |
-| number2 | long | Yes | Is an integer. |
+| number1 | number | Yes | The first integer used to get the greatest common divisor. |
+| number2 | number | Yes | The second integer used to get the greatest common divisor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | Returns the greatest common factor of two integers, integer type. |
+| number | Greatest common divisor obtained. |
+
+## getCommonFactor
+
+```TypeScript
+static getCommonFactor(number1: number, number2: number): number
+```
+
+Obtains the greatest common divisor of two specified integers. > **NOTE：**> > The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is > not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-static getCommonFactor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonFactor(number1: number, number2: number): number-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number1 | number | Yes | The first integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE <= number1 <= Number.MAX_VALUE. |
+| number2 | number | Yes | The second integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE <= number2 <= Number.MAX_VALUE. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Greatest common divisor obtained. |
+
+## Examples
+
+```TypeScript
+let result = util.RationalNumber.getCommonFactor(4,6);
+console.info("result = " + result);
+// Output: result = 2
+```
 
 ## getDenominator
 
 ```TypeScript
-getDenominator(): long
+getDenominator(): number
 ```
 
-Gets the denominator of the current object.
+Obtains the denominator of this **RationalNumber** object.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-RationalNumber-getDenominator(): long--><!--Device-RationalNumber-getDenominator(): long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-getDenominator(): number--><!--Device-RationalNumber-getDenominator(): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -165,21 +329,43 @@ Gets the denominator of the current object.
 
 | Type | Description |
 | --- | --- |
-| long | Returns the denominator of the current object. |
+| number | Denominator of this **RationalNumber** object. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.getDenominator();
+console.info("result = " + result);
+// Output: result = 2
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2)
+let result = rationalNumber.getDenominator();
+console.info("result = " + result);
+// Output: result = 2
+```
 
 ## getNumerator
 
 ```TypeScript
-getNumerator(): long
+getNumerator(): number
 ```
 
-Gets the numerator of the current object.
+Obtains the numerator of this **RationalNumber** object.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-RationalNumber-getNumerator(): long--><!--Device-RationalNumber-getNumerator(): long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-getNumerator(): number--><!--Device-RationalNumber-getNumerator(): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -187,7 +373,25 @@ Gets the numerator of the current object.
 
 | Type | Description |
 | --- | --- |
-| long | Returns the numerator of the current object. |
+| number | Numerator of this **RationalNumber** object. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.getNumerator();
+console.info("result = " + result);
+// Output: result = 1
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.getNumerator();
+console.info("result = " + result);
+// Output: result = 1
+```
 
 ## isFinite
 
@@ -195,11 +399,15 @@ Gets the numerator of the current object.
 isFinite(): boolean
 ```
 
-Checks whether the current RationalNumber object represents an infinite value.
+Checks whether this **RationalNumber** object represents a finite value.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-isFinite(): boolean--><!--Device-RationalNumber-isFinite(): boolean-End-->
 
@@ -209,7 +417,25 @@ Checks whether the current RationalNumber object represents an infinite value.
 
 | Type | Description |
 | --- | --- |
-| boolean | If the denominator is not 0, true is returned. Otherwise, false is returned. |
+| boolean | Check result. The value **true** is returned if this **RationalNumber** object represents a finite value (the denominator is not **0**); otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isFinite();
+console.info("result = " + result);
+// Output: result = true
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isFinite();
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isNaN
 
@@ -217,11 +443,15 @@ Checks whether the current RationalNumber object represents an infinite value.
 isNaN(): boolean
 ```
 
-Checks whether the current RationalNumber object represents a Not-a-Number (NaN) value.
+Checks whether this **RationalNumber** object is a Not a Number (NaN).
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-isNaN(): boolean--><!--Device-RationalNumber-isNaN(): boolean-End-->
 
@@ -231,7 +461,25 @@ Checks whether the current RationalNumber object represents a Not-a-Number (NaN)
 
 | Type | Description |
 | --- | --- |
-| boolean | If both the denominator and numerator are 0, true is returned. Otherwise, false is returned. |
+| boolean | Check result. The value **true** is returned if this **RationalNumber** object is a NaN (the denominator and numerator are both **0**); otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isNaN();
+console.info("result = " + result);
+// Output: result = false
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isNaN();
+console.info("result = " + result);
+// Output: result = false
+```
 
 ## isZero
 
@@ -239,11 +487,15 @@ Checks whether the current RationalNumber object represents a Not-a-Number (NaN)
 isZero(): boolean
 ```
 
-Checks whether the current RationalNumber object represents the value 0.
+Checks whether this **RationalNumber** object is **0**.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-isZero(): boolean--><!--Device-RationalNumber-isZero(): boolean-End-->
 
@@ -253,21 +505,43 @@ Checks whether the current RationalNumber object represents the value 0.
 
 | Type | Description |
 | --- | --- |
-| boolean | If the value represented by the current object is 0, true is returned. Otherwise, false is returned. |
+| boolean | Check result. The value **true** is returned if the value of this **RationalNumber** object is **0**; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isZero();
+console.info("result = " + result);
+// Output: result = false
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isZero();
+console.info("result = " + result);
+// Output: result = false
+```
 
 ## parseRationalNumber
 
 ```TypeScript
-static parseRationalNumber(numerator: long, denominator: long): RationalNumber
+static parseRationalNumber(numerator: number, denominator: number): RationalNumber
 ```
 
-Used to create a RationalNumber instance with a given numerator and denominator.
+Creates a **RationalNumber** instance with a given numerator and denominator. > **NOTE：**> > The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the > function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer" > is displayed.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-RationalNumber-static parseRationalNumber(numerator: long, denominator: long): RationalNumber--><!--Device-RationalNumber-static parseRationalNumber(numerator: long, denominator: long): RationalNumber-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-static parseRationalNumber(numerator: number, denominator: number): RationalNumber--><!--Device-RationalNumber-static parseRationalNumber(numerator: number, denominator: number): RationalNumber-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -275,14 +549,20 @@ Used to create a RationalNumber instance with a given numerator and denominator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numerator | long | Yes | An integer number |
-| denominator | long | Yes | An integer number |
+| numerator | number | Yes | Numerator, which is an integer. Value range: -Number.MAX_VALUE <= numerator <= Number.MAX_VALUE. |
+| denominator | number | Yes | Denominator, which is an integer. Value range: -Number.MAX_VALUE <= denominator < = Number.MAX_VALUE. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) |  |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | RationalNumber** object obtained. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+```
 
 ## toString
 
@@ -290,11 +570,15 @@ Used to create a RationalNumber instance with a given numerator and denominator.
 toString(): string
 ```
 
-Obtains a string representation of the current RationalNumber object.
+Obtains the string representation of this **RationalNumber** object.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RationalNumber-toString(): string--><!--Device-RationalNumber-toString(): string-End-->
 
@@ -304,21 +588,43 @@ Obtains a string representation of the current RationalNumber object.
 
 | Type | Description |
 | --- | --- |
-| string | Returns a string representation of the current RationalNumber object. |
+| string | Returns a string in Numerator/Denominator format in normal cases, for example, 3/5; returns **0/1** if the numerator of this object is **0**; returns **Infinity** if the denominator is **0**; returns **NaN** if the numerator and denominator are both **0**. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
 
 ## valueOf
 
 ```TypeScript
-valueOf(): double
+valueOf(): number
 ```
 
-Gets integer and floating-point values of a rational number object.
+Obtains the integer or floating-point value of this **RationalNumber** object.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-RationalNumber-valueOf(): double--><!--Device-RationalNumber-valueOf(): double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-valueOf(): number--><!--Device-RationalNumber-valueOf(): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -326,5 +632,23 @@ Gets integer and floating-point values of a rational number object.
 
 | Type | Description |
 | --- | --- |
-| double | Returns the integer and floating-point values of a rational number object. |
+| number | An integer or a floating-point number. |
+
+## Examples
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.valueOf();
+console.info("result = " + result);
+// Output: result = 0.5
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.valueOf();
+console.info("result = " + result);
+// Output: result = 0.5
+```
 

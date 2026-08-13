@@ -2,7 +2,9 @@
 
 Enumerates call states.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum CallState--><!--Device-call-export enum CallState-End-->
 
@@ -16,7 +18,9 @@ CALL_STATE_UNKNOWN = -1
 
 The call status fails to be obtained and is unknown.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallState-CALL_STATE_UNKNOWN = -1--><!--Device-CallState-CALL_STATE_UNKNOWN = -1-End-->
 
@@ -30,7 +34,9 @@ CALL_STATE_IDLE = 0
 
 No call is in progress.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallState-CALL_STATE_IDLE = 0--><!--Device-CallState-CALL_STATE_IDLE = 0-End-->
 
@@ -44,7 +50,9 @@ CALL_STATE_RINGING = 1
 
 The call is in the ringing or waiting state.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallState-CALL_STATE_RINGING = 1--><!--Device-CallState-CALL_STATE_RINGING = 1-End-->
 
@@ -58,7 +66,9 @@ CALL_STATE_OFFHOOK = 2
 
 At least one call is in dialing, active, or on hold, and no new incoming call is ringing or waiting.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallState-CALL_STATE_OFFHOOK = 2--><!--Device-CallState-CALL_STATE_OFFHOOK = 2-End-->
 
@@ -72,7 +82,9 @@ CALL_STATE_ANSWERED = 3
 
 The incoming call is answered.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallState-CALL_STATE_ANSWERED = 3--><!--Device-CallState-CALL_STATE_ANSWERED = 3-End-->
 

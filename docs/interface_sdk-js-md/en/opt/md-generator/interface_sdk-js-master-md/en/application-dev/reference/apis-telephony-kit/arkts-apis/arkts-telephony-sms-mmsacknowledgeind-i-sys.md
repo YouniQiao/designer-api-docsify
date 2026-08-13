@@ -2,7 +2,9 @@
 
 Defines an MMS confirmation index.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsAcknowledgeInd--><!--Device-sms-export interface MmsAcknowledgeInd-End-->
 
@@ -26,7 +28,9 @@ Report allowed.
 
 **Type:** ReportType
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsAcknowledgeInd-reportAllowed?: ReportType--><!--Device-MmsAcknowledgeInd-reportAllowed?: ReportType-End-->
 
@@ -44,7 +48,9 @@ Transaction ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsAcknowledgeInd-transactionId: string--><!--Device-MmsAcknowledgeInd-transactionId: string-End-->
 
@@ -62,7 +68,9 @@ Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsAcknowledgeInd-version: MmsVersionType--><!--Device-MmsAcknowledgeInd-version: MmsVersionType-End-->
 

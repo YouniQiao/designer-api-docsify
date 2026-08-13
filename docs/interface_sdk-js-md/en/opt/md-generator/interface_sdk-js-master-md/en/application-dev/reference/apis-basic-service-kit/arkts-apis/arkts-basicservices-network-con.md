@@ -6,11 +6,9 @@
 const DATA_ROAMING_STATUS: string
 ```
 
-Specifies whether data roaming is enabled.
+Specifies whether data roaming is enabled. &lt;p&gt;If the value is {@code true}, data roaming is enabled. If the value is {@code false}, data roaming is disabled.
 
-&lt;p&gt;If the value is {@code true}, data roaming is enabled. If the value is {@code false},data roaming is disabled.
-
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 21
 
@@ -24,9 +22,9 @@ Specifies whether data roaming is enabled.
 const HTTP_PROXY_CFG: string
 ```
 
-Indicates the host name and port number of the global HTTP proxy.The host name and port number are separated by a colon (:).
+Indicates the host name and port number of the global HTTP proxy. The host name and port number are separated by a colon (:).
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 21
 
@@ -42,7 +40,7 @@ const NETWORK_PREFERENCE_USAGE: string
 
 Indicates the user preferences of the network to use.
 
-**Since:** 7
+**Since:** 23
 
 **Deprecated since:** 21
 

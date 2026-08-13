@@ -2,7 +2,9 @@
 
 Water ripple scene mode enumeration.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-enum WaterRippleMode--><!--Device-uiEffect-enum WaterRippleMode-End-->
 
@@ -18,7 +20,9 @@ SMALL2MEDIUM_RECV = 0
 
 Phone tapping 2in1 device (receiving end).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaterRippleMode-SMALL2MEDIUM_RECV = 0--><!--Device-WaterRippleMode-SMALL2MEDIUM_RECV = 0-End-->
 
@@ -34,7 +38,9 @@ SMALL2MEDIUM_SEND = 1
 
 Phone tapping 2in1 device (sending end).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaterRippleMode-SMALL2MEDIUM_SEND = 1--><!--Device-WaterRippleMode-SMALL2MEDIUM_SEND = 1-End-->
 
@@ -50,7 +56,9 @@ SMALL2SMALL = 2
 
 Phone tapping phone.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaterRippleMode-SMALL2SMALL = 2--><!--Device-WaterRippleMode-SMALL2SMALL = 2-End-->
 
@@ -66,7 +74,9 @@ MINI_RECV = 3
 
 2in1 device sharing with other devices (keyboard and mouse sharing scenario).
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaterRippleMode-MINI_RECV = 3--><!--Device-WaterRippleMode-MINI_RECV = 3-End-->
 

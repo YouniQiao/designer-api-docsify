@@ -14,9 +14,11 @@ function createStream(sessionId: int, param: StreamParam): Promise<int>
 
 Creating a Stream.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,24 +32,24 @@ Creating a Stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Ability connection Session id. |
+| sessionId | int | Yes | Ability connection Session id. |
 | param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | Yes | Transport Stream Parameters |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
+| Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [32300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300004-color-space-not-supported) | Color space not supported. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [32300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) | Only one stream can be created for the current session. |
-| [32300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300003-bit-rate-not-supported) | Bitrate not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [32300004](../../apis-distributedservice-kit/errorcode-device-manager.md#32300004-color-space-not-supported) | Color space not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) | Only one stream can be created for the current session. |
+| [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-bit-rate-not-supported) | Bitrate not supported. |
 
 ## Examples
 

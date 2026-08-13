@@ -6,6 +6,8 @@ Enumerates the media types that trigger the context menu (enhanced type obtainin
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ContextMenuDataMediaType--><!--Device-unnamed-declare enum ContextMenuDataMediaType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Default value, indicating that the current context menu is not associated with a
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-ContextMenuDataMediaType-NONE = 0--><!--Device-ContextMenuDataMediaType-NONE = 0-End-->
 
@@ -38,6 +42,8 @@ Image.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-ContextMenuDataMediaType-IMAGE = 1--><!--Device-ContextMenuDataMediaType-IMAGE = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -53,6 +59,8 @@ Video.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-ContextMenuDataMediaType-VIDEO = 2--><!--Device-ContextMenuDataMediaType-VIDEO = 2-End-->
 
@@ -70,6 +78,8 @@ Audio.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-ContextMenuDataMediaType-AUDIO = 3--><!--Device-ContextMenuDataMediaType-AUDIO = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -85,6 +95,8 @@ Canvas.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-ContextMenuDataMediaType-CANVAS = 4--><!--Device-ContextMenuDataMediaType-CANVAS = 4-End-->
 

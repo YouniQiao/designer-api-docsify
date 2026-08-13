@@ -6,7 +6,9 @@ export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 
 Represents an event callback.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export type UpgradeTaskCallback = (eventInfo: EventInfo) => void--><!--Device-update-export type UpgradeTaskCallback = (eventInfo: EventInfo) => void-End-->
 

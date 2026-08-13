@@ -1,13 +1,14 @@
 # WriteStream
 
-Defines a writeable stream. You need to use  
-[fileIo.createWriteStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12) to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable).
+Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-corefile-file-fs-createwritestream-f.md#createWriteStream) to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable) .
 
 **Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)
 
 **Since:** 12
 
-<!--Device-unnamed-declare class WriteStream extends stream.Writable--><!--Device-unnamed-declare class WriteStream extends stream.Writable-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class WriteStream--><!--Device-unnamed-declare class WriteStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,6 +27,8 @@ close(): void
 Closes this writeable stream.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
@@ -60,6 +63,8 @@ The WriteStream constructor.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -73,6 +78,8 @@ seek(offset: number, whence?: WhenceType): number
 Adjusts the position of the writeable stream offset pointer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
 
@@ -96,7 +103,7 @@ Adjusts the position of the writeable stream offset pointer.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900026 |
 | 13900042 |
 
@@ -122,6 +129,8 @@ Number of bytes written to the writable stream.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -137,6 +146,8 @@ Path of the file corresponding to the writeable stream.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 

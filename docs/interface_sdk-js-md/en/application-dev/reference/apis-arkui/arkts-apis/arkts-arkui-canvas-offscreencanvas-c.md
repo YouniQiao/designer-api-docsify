@@ -6,6 +6,8 @@ Draw an object off the screen. The drawing content is not directly displayed on 
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class OffscreenCanvas--><!--Device-unnamed-export declare class OffscreenCanvas-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Constructor of the off-screen canvas, which is used to create an off-screen canv
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ Creates the context from the current OffscreenCanvas.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +85,8 @@ Exports rendered content as an ImageBitmap object
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OffscreenCanvas-transferToImageBitmap(): ImageBitmap | undefined--><!--Device-OffscreenCanvas-transferToImageBitmap(): ImageBitmap | undefined-End-->
@@ -90,44 +98,4 @@ Exports rendered content as an ImageBitmap object
 | Type | Description |
 | --- | --- |
 | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) |  |
-
-## height
-
-```TypeScript
-set height(height: double)
-```
-
-Set the height of the off-screen canvas.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OffscreenCanvas-set height(height: double)--><!--Device-OffscreenCanvas-set height(height: double)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## width
-
-```TypeScript
-set width(width: double)
-```
-
-Set the width of the off-screen canvas.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OffscreenCanvas-set width(width: double)--><!--Device-OffscreenCanvas-set width(width: double)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

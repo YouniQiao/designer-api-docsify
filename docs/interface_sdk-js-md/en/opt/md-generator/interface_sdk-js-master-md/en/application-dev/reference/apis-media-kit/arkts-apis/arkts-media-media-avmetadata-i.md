@@ -1,10 +1,10 @@
 # AVMetadata
 
-Defines the audio and video metadata. Parameters that are not declared as read-only in  
-[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of  
-[AVRecorder](arkts-media-media-avrecorder-i.md#AVRecorder).
+Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of [AVRecorder](arkts-media-media-avrecorder-i.md#AVRecorder).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
 
@@ -26,7 +26,9 @@ Title of the album. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-album?: string--><!--Device-AVMetadata-album?: string-End-->
 
@@ -42,7 +44,9 @@ Artist of the album. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-albumArtist?: string--><!--Device-AVMetadata-albumArtist?: string-End-->
 
@@ -58,7 +62,9 @@ Artist of the media asset. This parameter is not supported in AVRecorder setting
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-artist?: string--><!--Device-AVMetadata-artist?: string-End-->
 
@@ -74,7 +80,9 @@ Author of the media asset. This parameter is not supported in AVRecorder setting
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-author?: string--><!--Device-AVMetadata-author?: string-End-->
 
@@ -90,7 +98,9 @@ Composer of the media asset. This parameter is not supported in AVRecorder setti
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-composer?: string--><!--Device-AVMetadata-composer?: string-End-->
 
@@ -104,9 +114,11 @@ customInfo?: Record<string, string>
 
 Custom key-value mappings obtained from **moov.meta.list**.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-customInfo?: Record<string, string>--><!--Device-AVMetadata-customInfo?: Record<string, string>-End-->
 
@@ -122,7 +134,9 @@ Time when the media asset is created. This parameter is not supported in AVRecor
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-dateTime?: string--><!--Device-AVMetadata-dateTime?: string-End-->
 
@@ -134,11 +148,13 @@ Time when the media asset is created. This parameter is not supported in AVRecor
 dateTimeFormat?: string
 ```
 
-Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss format.This parameter is not supported in AVRecorder settings.
+Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss format. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-dateTimeFormat?: string--><!--Device-AVMetadata-dateTimeFormat?: string-End-->
 
@@ -156,6 +172,8 @@ Description of the media asset. This parameter is not supported in AVRecorder se
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-AVMetadata-description?: string--><!--Device-AVMetadata-description?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -170,7 +188,9 @@ Duration of the media asset. This parameter is not supported in AVRecorder setti
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-duration?: string--><!--Device-AVMetadata-duration?: string-End-->
 
@@ -182,11 +202,13 @@ Duration of the media asset. This parameter is not supported in AVRecorder setti
 encoder?: string
 ```
 
-The identifier that represents the software or hardware and settings used for encoding.This parameter is not supported in AVRecorder settings.
+The identifier that represents the software or hardware and settings used for encoding. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,7 +226,9 @@ Type or genre of the media asset.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-genre?: string--><!--Device-AVMetadata-genre?: string-End-->
 
@@ -220,7 +244,9 @@ Whether the media asset contains audio. This parameter is not supported in AVRec
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-hasAudio?: string--><!--Device-AVMetadata-hasAudio?: string-End-->
 
@@ -236,7 +262,9 @@ Whether the media asset contains a video. This parameter is not supported in AVR
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-hasVideo?: string--><!--Device-AVMetadata-hasVideo?: string-End-->
 
@@ -252,7 +280,9 @@ HDR type of the media asset. This parameter is not supported in AVRecorder setti
 
 **Type:** HdrType
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-hdrType?: HdrType--><!--Device-AVMetadata-hdrType?: HdrType-End-->
 
@@ -268,7 +298,9 @@ Geographical location of the media asset.
 
 **Type:** Location
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-location?: Location--><!--Device-AVMetadata-location?: Location-End-->
 
@@ -280,11 +312,13 @@ Geographical location of the media asset.
 mimeType?: string
 ```
 
-MIME type of the media asset. This parameter is not supported in AVRecorder settings.Some example mime types include: "video/mp4", "audio/mp4", "audio/amr-wb".
+MIME type of the media asset. This parameter is not supported in AVRecorder settings. Some example mime types include: "video/mp4", "audio/mp4", "audio/amr-wb".
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-mimeType?: string--><!--Device-AVMetadata-mimeType?: string-End-->
 
@@ -300,7 +334,9 @@ Audio sampling rate, in Hz. This parameter is not supported in AVRecorder settin
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-sampleRate?: string--><!--Device-AVMetadata-sampleRate?: string-End-->
 
@@ -312,11 +348,13 @@ Audio sampling rate, in Hz. This parameter is not supported in AVRecorder settin
 title?: string
 ```
 
-Title of the media asset. This parameter is not supported in AVRecorder settings.This parameter is read-only in the current version.
+Title of the media asset. This parameter is not supported in AVRecorder settings. This parameter is read-only in the current version.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-title?: string--><!--Device-AVMetadata-title?: string-End-->
 
@@ -332,7 +370,9 @@ Number of tracks of the media asset. This parameter is not supported in AVRecord
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-trackCount?: string--><!--Device-AVMetadata-trackCount?: string-End-->
 
@@ -348,7 +388,9 @@ Tracks info of the media asset. This parameter is not supported in AVRecorder se
 
 **Type:** Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-tracks?: Array<MediaDescription>--><!--Device-AVMetadata-tracks?: Array<MediaDescription>-End-->
 
@@ -364,7 +406,9 @@ Video height, in px. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-videoHeight?: string--><!--Device-AVMetadata-videoHeight?: string-End-->
 
@@ -380,7 +424,9 @@ Video rotation direction, in degrees.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-videoOrientation?: string--><!--Device-AVMetadata-videoOrientation?: string-End-->
 
@@ -396,7 +442,9 @@ Video width, in px. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-videoWidth?: string--><!--Device-AVMetadata-videoWidth?: string-End-->
 

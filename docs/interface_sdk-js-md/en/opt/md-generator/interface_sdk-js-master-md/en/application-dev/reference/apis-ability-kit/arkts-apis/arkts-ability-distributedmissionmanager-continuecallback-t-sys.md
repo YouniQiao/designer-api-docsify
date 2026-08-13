@@ -6,7 +6,9 @@ export type ContinueCallback = _ContinueCallback
 
 ContinueCallback registered for notify continue result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

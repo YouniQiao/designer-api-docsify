@@ -4,6 +4,8 @@ Declare custom content dialog
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare struct CustomContentDialog--><!--Device-unnamed-export declare struct CustomContentDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,26 +15,6 @@ Declare custom content dialog
 ```TypeScript
 import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@kit.ArkUI';
 ```
-
-## contentBuilder
-
-```TypeScript
-contentBuilder: () => void
-```
-
-Sets the CustomContentDialog content.
-
-**Since:** 12
-
-**Decorator:** @BuilderParam
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CustomContentDialog-contentBuilder: () => void--><!--Device-CustomContentDialog-contentBuilder: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## buttons
 
@@ -45,6 +27,8 @@ Sets the CustomContentDialog buttons.
 **Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)[]
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +46,39 @@ contentAreaPadding?: Padding
 
 Sets the CustomContentDialog content area padding.
 
-**Type:** Padding
+**Type:** [Padding](arkts-arkui-padding-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CustomContentDialog-contentAreaPadding?: Padding--><!--Device-CustomContentDialog-contentAreaPadding?: Padding-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## contentBuilder
+
+```TypeScript
+@BuilderParam contentBuilder: () => void
+```
+
+Sets the CustomContentDialog content.
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomContentDialog-@BuilderParam contentBuilder: () => void--><!--Device-CustomContentDialog-@BuilderParam contentBuilder: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +93,8 @@ Sets the CustomContentDialog Controller.
 **Type:** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ Sets the CustomContentDialog content area localized padding.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -125,6 +137,8 @@ Sets the CustomContentDialog title.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +160,8 @@ Sets the CustomContentDialog secondary title.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -166,6 +182,8 @@ Custom Theme.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -185,6 +203,8 @@ Sets the CustomContentDialog dark or light Mode.
 **Type:** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

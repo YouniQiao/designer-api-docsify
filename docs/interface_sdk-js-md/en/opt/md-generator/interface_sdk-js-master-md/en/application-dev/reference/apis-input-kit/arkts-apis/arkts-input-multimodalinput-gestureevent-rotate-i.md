@@ -2,7 +2,9 @@
 
 Defines a rotation gesture event.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface Rotate--><!--Device-unnamed-export declare interface Rotate-End-->
 
@@ -24,7 +26,9 @@ Rotation angle, in degrees.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rotate-angle: double--><!--Device-Rotate-angle: double-End-->
 
@@ -40,7 +44,9 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rotate-type: ActionType--><!--Device-Rotate-type: ActionType-End-->
 

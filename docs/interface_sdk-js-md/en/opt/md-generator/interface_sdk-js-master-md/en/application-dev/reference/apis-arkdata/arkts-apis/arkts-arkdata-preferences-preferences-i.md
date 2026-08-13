@@ -1,9 +1,10 @@
 # Preferences
 
-Provides APIs for obtaining and modifying the stored data.Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using   
-[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences).
+Provides APIs for obtaining and modifying the stored data. Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences) .
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-preferences-interface Preferences--><!--Device-preferences-interface Preferences-End-->
 
@@ -21,10 +22,11 @@ import { preferences } from '@kit.ArkData';
 clear(callback: AsyncCallback<void>): void
 ```
 
-Clears this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,8 +44,8 @@ Clears this **Preferences** instance. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -65,10 +67,11 @@ dataPreferences.clear((err: BusinessError) =>{
 clear(): Promise<void>
 ```
 
-Clears this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -86,7 +89,7 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -107,10 +110,11 @@ promise.then(() => {
 clearSync(): void
 ```
 
-Clears this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,10 +134,11 @@ dataPreferences.clearSync();
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the   
-**Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -152,8 +157,8 @@ Deletes a KV pair from this **Preferences** instance. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -175,10 +180,11 @@ dataPreferences.delete('startup', (err: BusinessError) => {
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,8 +208,8 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -224,10 +230,11 @@ promise.then(() => {
 deleteSync(key: string): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -245,8 +252,8 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -262,7 +269,9 @@ flush(callback: AsyncCallback<void>): void
 
 Flushes the data in this **Preferences** instance to the persistent file. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -280,8 +289,8 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -305,7 +314,9 @@ flush(): Promise<void>
 
 Flushes the data in this **Preferences** instance to the persistent file. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -323,7 +334,7 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 | Error Code ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -346,9 +357,11 @@ flushSync(): void
 
 Flushes the data in the cached **Preferences** instance to the persistent file.
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Preferences-flushSync(): void--><!--Device-Preferences-flushSync(): void-End-->
 
@@ -358,7 +371,7 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 
 | Error Code ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -374,7 +387,9 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 
 Obtains the value of a key from this **Preferences** instance. This API uses an asynchronous callback to return the result. If the value is null or is not of the default value type, **defValue** is returned.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -394,8 +409,8 @@ Obtains the value of a key from this **Preferences** instance. This API uses an 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -419,7 +434,9 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 Obtains the value of a key from this **Preferences** instance. This API uses a promise to return the result. If the value is null or is not of the default value type, **defValue** is returned.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -444,8 +461,8 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -468,7 +485,9 @@ getAll(callback: AsyncCallback<Object>): void
 
 Obtains all KV pairs from a **Preferences** instance. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -486,8 +505,8 @@ Obtains all KV pairs from a **Preferences** instance. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -520,7 +539,9 @@ getAll(): Promise<Object>
 
 Obtains all KV pairs from this **Preferences** instance. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -538,7 +559,7 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 | Error Code ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -570,7 +591,9 @@ getAllSync(): Object
 
 Obtains all KV pairs from this **Preferences** instance. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -588,7 +611,7 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 | Error Code ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -614,7 +637,9 @@ getSync(key: string, defValue: ValueType): ValueType
 
 Obtains the value of a key from this **Preferences** instance. This API returns the result synchronously. If the value is null or is not of the default value type, **defValue** is returned.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -639,8 +664,8 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -656,7 +681,9 @@ has(key: string, callback: AsyncCallback<boolean>): void
 
 Checks whether this **Preferences** instance contains the KV pair of the given key. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -675,8 +702,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -704,7 +731,9 @@ has(key: string): Promise<boolean>
 
 Checks whether this **Preferences** instance contains the KV pair of the given key. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -728,8 +757,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -756,7 +785,9 @@ hasSync(key: string): boolean
 
 Checks whether this **Preferences** instance contains the KV pair of the given key. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -780,8 +811,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -794,7 +825,92 @@ if (isExist) {
 }
 ```
 
-## off('change')
+## offChange
+
+```TypeScript
+offChange(callback?: Callback<string>): void
+```
+
+Unregisters an existing observer.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Preferences-offChange(callback?: Callback<string>): void--><!--Device-Preferences-offChange(callback?: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+
+## offDataChange
+
+```TypeScript
+offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void
+```
+
+Unregisters an observer for changes to the {@ link Preferences} object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| keys | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ValueType&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+
+## offMultiProcessChange
+
+```TypeScript
+offMultiProcessChange(callback?: Callback<string>): void
+```
+
+Unregisters an existing observer.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void--><!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: Callback<string>): void
@@ -803,6 +919,8 @@ off(type: 'change', callback?: Callback<string>): void
 Unsubscribes from data changes.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -821,8 +939,8 @@ Unsubscribes from data changes.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -844,57 +962,7 @@ dataPreferences.flush((err: BusinessError) => {
 dataPreferences.off('change', observer);
 ```
 
-## off('multiProcessChange')
-
-```TypeScript
-off(type: 'multiProcessChange', callback?: Callback<string>): void
-```
-
-Unsubscribes from inter-process data changes.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'multiProcessChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.on('multiProcessChange', observer);
-dataPreferences.putSync('startup', 'auto');
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. Cause: " + err);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-dataPreferences.off('multiProcessChange', observer);
-```
-
-## off('dataChange')
+## off_dataChange
 
 ```TypeScript
 off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void
@@ -903,6 +971,8 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, 
 Unsubscribes from changes of specific data.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -916,14 +986,14 @@ Unsubscribes from changes of specific data.
 | --- | --- | --- |
 | type | 'dataChange' | Yes |
 | keys | Array & lt;string & gt; | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ValueType&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ValueType&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -950,16 +1020,155 @@ dataPreferences.flush((err: BusinessError) => {
 dataPreferences.off('dataChange', keys, observer);
 ```
 
-## on('change')
+## off_multiProcessChange
+
+```TypeScript
+off(type: 'multiProcessChange', callback?: Callback<string>): void
+```
+
+Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'multiProcessChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.on('multiProcessChange', observer);
+dataPreferences.putSync('startup', 'auto');
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. Cause: " + err);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+dataPreferences.off('multiProcessChange', observer);
+```
+
+## onChange
+
+```TypeScript
+onChange(callback: Callback<string>): void
+```
+
+Registers an observer to listen for the change of a [Preferences](#Preferences) object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Preferences-onChange(callback: Callback<string>): void--><!--Device-Preferences-onChange(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+
+## onDataChange
+
+```TypeScript
+onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
+```
+
+Registers an observer to listen for changes to the {@ link Preferences} object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| keys | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ValueType&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+
+## onMultiProcessChange
+
+```TypeScript
+onMultiProcessChange(callback: Callback<string>): void
+```
+
+Registers an observer to listen for the change of a [Preferences](#Preferences) object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void--><!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
+
+## on_change
 
 ```TypeScript
 on(type: 'change', callback: Callback<string>): void
 ```
 
-Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is  
-[flushed](#flush).
+Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](#flush).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -978,8 +1187,8 @@ Subscribes to data changes. The registered callback will be invoked to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -1000,58 +1209,7 @@ dataPreferences.flush((err: BusinessError) => {
 })
 ```
 
-## on('multiProcessChange')
-
-```TypeScript
-on(type: 'multiProcessChange', callback: Callback<string>): void
-```
-
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling   
-[flush](#flush) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'multiProcessChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
-| [15500019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.on('multiProcessChange', observer);
-dataPreferences.putSync('startup', 'manual');
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. Cause: " + err);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-```
-
-## on('dataChange')
+## on_dataChange
 
 ```TypeScript
 on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
@@ -1060,6 +1218,8 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](#flush).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1073,14 +1233,14 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- |
 | type | 'dataChange' | Yes |
 | keys | Array & lt;string & gt; | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ValueType&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ValueType&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -1106,16 +1266,69 @@ dataPreferences.flush((err: BusinessError) => {
 })
 ```
 
+## on_multiProcessChange
+
+```TypeScript
+on(type: 'multiProcessChange', callback: Callback<string>): void
+```
+
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'multiProcessChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.on('multiProcessChange', observer);
+dataPreferences.putSync('startup', 'manual');
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. Cause: " + err);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
+
 ## put
 
 ```TypeScript
 put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 ```
 
-Writes data to this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the   
-**Preferences** instance.
+Writes data to this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1135,8 +1348,8 @@ Writes data to this **Preferences** instance. This API uses an asynchronous call
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -1158,10 +1371,11 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
 put(key: string, value: ValueType): Promise<void>
 ```
 
-Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1186,8 +1400,8 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -1208,10 +1422,11 @@ promise.then(() => {
 putSync(key: string, value: ValueType): void
 ```
 
-Writes data to this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1230,8 +1445,8 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 

@@ -6,16 +6,11 @@
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void
 ```
 
-发布后台代理提醒。使用callback异步回调。
+发布后台代理提醒。使用callback异步回调。 > **说明：** > > 该接口需要申请通知弹窗权限 > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > 后调用。 >
 
-> **说明：**
-> 
-> 该接口需要申请通知弹窗权限
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
-> 后调用。
-> 
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -34,10 +29,10 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) |
 
 ## 示例
 
@@ -66,16 +61,11 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ```
 
-发布后台代理提醒。使用Promise异步回调。
+发布后台代理提醒。使用Promise异步回调。 > **说明：** > > 该接口需要申请通知弹窗权限 > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > 后调用。 >
 
-> **说明：**
-> 
-> 该接口需要申请通知弹窗权限
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
-> 后调用。
-> 
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -99,10 +89,10 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) |
 
 ## 示例
 

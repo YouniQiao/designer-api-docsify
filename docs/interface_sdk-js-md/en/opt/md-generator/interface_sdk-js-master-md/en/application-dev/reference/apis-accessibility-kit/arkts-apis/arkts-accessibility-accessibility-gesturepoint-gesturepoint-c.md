@@ -4,6 +4,8 @@ The **GesturePoint** module provides APIs for creating gesture touch point infor
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class GesturePoint--><!--Device-unnamed-export declare class GesturePoint-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -34,8 +36,8 @@ Defines a constructor used to create a **GesturePoint** instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [positionX](#positionx) | number | Yes |
-| [positionY](#positiony) | number | Yes |
+| [positionX](#positionX) | number | Yes |
+| [positionY](#positionY) | number | Yes |
 
 ## Examples
 
@@ -57,6 +59,8 @@ X coordinate of the touch point, in pixels (px).
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-GesturePoint-positionX: double--><!--Device-GesturePoint-positionX: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -72,6 +76,8 @@ Y coordinate of the touch point, in pixels (px).
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-GesturePoint-positionY: double--><!--Device-GesturePoint-positionY: double-End-->
 

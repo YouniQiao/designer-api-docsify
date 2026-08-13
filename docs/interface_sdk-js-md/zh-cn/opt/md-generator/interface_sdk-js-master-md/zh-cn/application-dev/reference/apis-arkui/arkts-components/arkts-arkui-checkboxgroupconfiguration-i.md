@@ -1,12 +1,14 @@
 # CheckBoxGroupConfiguration
 
-开发者必须自定义此类以实现ContentModifier接口，使用方法见[contentModifier](CheckboxGroupAttribute#contentModifier)。
+开发者必须自定义此类以实现ContentModifier接口，使用方法见contentModifier。
 
-**继承/实现关系：** CheckBoxGroupConfiguration extends [CommonConfiguration<CheckBoxGroupConfiguration>](CommonConfiguration<CheckBoxGroupConfiguration>)
+**继承/实现关系：** CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>
 
 **起始版本：** 21
 
-<!--Device-unnamed-declare interface CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>--><!--Device-unnamed-declare interface CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface CheckBoxGroupConfiguration--><!--Device-unnamed-declare interface CheckBoxGroupConfiguration-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ name: string
 **类型：** string
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ status: SelectStatus
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -61,6 +67,8 @@ triggerChange: Callback<boolean>
 **类型：** Callback&lt;boolean&gt;
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

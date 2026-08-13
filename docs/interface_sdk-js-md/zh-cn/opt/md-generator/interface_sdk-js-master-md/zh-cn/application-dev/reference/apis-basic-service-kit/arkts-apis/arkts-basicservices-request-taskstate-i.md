@@ -1,10 +1,10 @@
 # TaskState
 
-上传任务的任务信息，是  
-[on('complete' | 'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))和  
-[off('complete' | 'fail')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)接口的回调参数。
+上传任务的任务信息，是 [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) 和 [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#off_progress) 接口的回调参数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-request-interface TaskState--><!--Device-request-interface TaskState-End-->
 
@@ -20,7 +20,9 @@ message: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TaskState-message: string--><!--Device-TaskState-message: string-End-->
 
@@ -36,7 +38,9 @@ path: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TaskState-path: string--><!--Device-TaskState-path: string-End-->
 
@@ -48,14 +52,13 @@ path: string
 responseCode: number
 ```
 
-上传任务返回码。返回0表示上传任务成功，返回其它值表示上传任务失败，具体请参见message参数中的上传任务结果描述信息。
-
-此处推荐使用  
-[request.agent.create](arkts-basicservices-agent-create-f.md#create-1)创建上传任务，并获取标准错误码处理异常分支。
+上传任务返回码。返回0表示上传任务成功，返回其它值表示上传任务失败，具体请参见message参数中的上传任务结果描述信息。 此处推荐使用 [request.agent.create](arkts-basicservices-agent-create-f.md#create)创建上传 任务，并获取标准错误码处理异常分支。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TaskState-responseCode: int--><!--Device-TaskState-responseCode: int-End-->
 

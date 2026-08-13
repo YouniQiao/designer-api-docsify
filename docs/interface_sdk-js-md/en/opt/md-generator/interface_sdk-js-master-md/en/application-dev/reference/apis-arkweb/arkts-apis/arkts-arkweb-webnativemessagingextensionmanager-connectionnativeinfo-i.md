@@ -4,6 +4,8 @@ Represents the information about the web native message connection.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo--><!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -26,6 +28,8 @@ Bundle name of the web native message extension application.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionNativeInfo-bundleName: string--><!--Device-ConnectionNativeInfo-bundleName: string-End-->
@@ -43,6 +47,8 @@ Unique identifier of the Web native message extension connection, returned by co
 **Type:** number
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Source URL of the browser extension.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionNativeInfo-extensionOrigin: string--><!--Device-ConnectionNativeInfo-extensionOrigin: string-End-->
@@ -79,6 +87,8 @@ Process ID of the web native message extension.
 **Type:** number
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

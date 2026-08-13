@@ -1,9 +1,10 @@
 # @ohos.security.cert
 
-证书算法库框架提供证书相关接口。其中，依赖加解密算法库框架的基础算法能力的部分，详细接口说明可参考  
-[cryptoFramework API参考](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md#cryptoFramework)。
+证书算法库框架提供证书相关接口。其中，依赖加解密算法库框架的基础算法能力的部分，详细接口说明可参考 [cryptoFramework API参考](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md#@ohos.security.cryptoFramework)。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace cert--><!--Device-unnamed-declare namespace cert-End-->
 
@@ -15,30 +16,30 @@
 
 | 名称 |
 | --- |
-| [buildX509CertChain](arkts-devicecertificate-cert-buildx509certchain-f.md#buildx509certchain) |
-| [createCertCRLCollection](arkts-devicecertificate-cert-createcertcrlcollection-f.md#createcertcrlcollection) |
-| [createCertChainValidator](arkts-devicecertificate-cert-createcertchainvalidator-f.md#createcertchainvalidator) |
-| [createCertExtension](arkts-devicecertificate-cert-createcertextension-f.md#createcertextension) |
-| [createCertExtension](arkts-devicecertificate-cert-createcertextension-f.md#createcertextension-1) |
-| [createCmsGenerator](arkts-devicecertificate-cert-createcmsgenerator-f.md#createcmsgenerator) |
-| [createCmsParser](arkts-devicecertificate-cert-createcmsparser-f.md#createcmsparser) |
-| [createPkcs12](arkts-devicecertificate-cert-createpkcs12-f.md#createpkcs12) |
-| [createPkcs12Sync](arkts-devicecertificate-cert-createpkcs12sync-f.md#createpkcs12sync) |
-| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-cert-createtrustanchorswithkeystore-f.md#createtrustanchorswithkeystore) |
-| [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createx500distinguishedname) |
-| [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createx500distinguishedname-1) |
-| [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl) |
-| [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl-1) |
-| [createX509Cert](arkts-devicecertificate-cert-createx509cert-f.md#createx509cert) |
-| [createX509Cert](arkts-devicecertificate-cert-createx509cert-f.md#createx509cert-1) |
-| [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain) |
-| [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain-1) |
-| [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain-2) |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl) |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl-1) |
-| [generateCsr](arkts-devicecertificate-cert-generatecsr-f.md#generatecsr) |
-| [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsepkcs12) |
-| [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsepkcs12-1) |
+| [buildX509CertChain](arkts-devicecertificate-cert-buildx509certchain-f.md#buildX509CertChain) |
+| [createCertCRLCollection](arkts-devicecertificate-cert-createcertcrlcollection-f.md#createCertCRLCollection) |
+| [createCertChainValidator](arkts-devicecertificate-cert-createcertchainvalidator-f.md#createCertChainValidator) |
+| [createCertExtension](arkts-devicecertificate-cert-createcertextension-f.md#createCertExtension) |
+| [createCertExtension](arkts-devicecertificate-cert-createcertextension-f.md#createCertExtension) |
+| [createCmsGenerator](arkts-devicecertificate-cert-createcmsgenerator-f.md#createCmsGenerator) |
+| [createCmsParser](arkts-devicecertificate-cert-createcmsparser-f.md#createCmsParser) |
+| [createPkcs12](arkts-devicecertificate-cert-createpkcs12-f.md#createPkcs12) |
+| [createPkcs12Sync](arkts-devicecertificate-cert-createpkcs12sync-f.md#createPkcs12Sync) |
+| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-cert-createtrustanchorswithkeystore-f.md#createTrustAnchorsWithKeyStore) |
+| [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createX500DistinguishedName) |
+| [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createX500DistinguishedName) |
+| [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md) |
+| [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createX509CRL) |
+| [createX509Cert](arkts-devicecertificate-cert-createx509cert-f.md#createX509Cert) |
+| [createX509Cert](arkts-devicecertificate-cert-createx509cert-f.md#createX509Cert) |
+| [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createX509CertChain) |
+| [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createX509CertChain) |
+| [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createX509CertChain) |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md) |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md#createX509CRL) |
+| [generateCsr](arkts-devicecertificate-cert-generatecsr-f.md#generateCsr) |
+| [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsePkcs12) |
+| [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsePkcs12) |
 
 ### 接口
 

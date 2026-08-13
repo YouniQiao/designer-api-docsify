@@ -1,20 +1,24 @@
 # Rating
 
 ```TypeScript
-type Rating = RatingFrameNode
+type Rating = TypedFrameNode<RatingInterface, RatingAttribute>
 ```
 
-Define the FrameNode type for Rating.
+Represents a FrameNode of the **Rating** type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Rating = RatingFrameNode--><!--Device-typeNode-type Rating = RatingFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-typeNode-type Rating = TypedFrameNode<RatingInterface, RatingAttribute>--><!--Device-typeNode-type Rating = TypedFrameNode<RatingInterface, RatingAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RatingFrameNode
+**Property type:** TypedFrameNode<RatingInterface, RatingAttribute>
 

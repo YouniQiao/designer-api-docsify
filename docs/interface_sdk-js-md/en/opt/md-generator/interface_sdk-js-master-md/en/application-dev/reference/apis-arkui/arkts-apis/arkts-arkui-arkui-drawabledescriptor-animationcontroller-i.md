@@ -4,6 +4,8 @@ Implements an animation controller object. It provides APIs for playing, stoppin
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface AnimationController--><!--Device-unnamed-export interface AnimationController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ getStatus(): AnimationStatus
 Obtains the current animation playback status.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,6 +95,8 @@ Pauses playback on the current frame.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -135,6 +141,8 @@ resume(): void
 Resumes playback from the current frame.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,6 +189,8 @@ Starts playback from the first frame.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -225,6 +235,8 @@ stop(): void
 Stops playback and resets to the first frame.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

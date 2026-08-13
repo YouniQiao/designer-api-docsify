@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace cursorControl--><!--Device-unnamed-declare namespace cursorControl-End-->
@@ -16,5 +18,5 @@
 
 | 名称 |
 | --- |
-| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md#setcursor) |
-| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md#restoredefault) |
+| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md#setCursor) |
+| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md#restoreDefault) |

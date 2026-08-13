@@ -2,7 +2,9 @@
 
 应用包选项，用于设置或查询应用相关信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface BundleOptions--><!--Device-unnamed-export interface BundleOptions-End-->
 
@@ -16,12 +18,13 @@
 abilityName?: string
 ```
 
-Ability名称。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Ability名称。默认值为空字符串。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,7 +44,9 @@ appIndex?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleOptions-appIndex?: int--><!--Device-BundleOptions-appIndex?: int-End-->
 
@@ -55,12 +60,13 @@ appIndex?: number
 bundleName?: string
 ```
 
-应用包名。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+应用包名。默认值为空字符串。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,12 +82,13 @@ bundleName?: string
 moduleName?: string
 ```
 
-Ability所属的模块名称。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Ability所属的模块名称。默认值为空字符串。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,7 +108,9 @@ userId?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleOptions-userId?: int--><!--Device-BundleOptions-userId?: int-End-->
 

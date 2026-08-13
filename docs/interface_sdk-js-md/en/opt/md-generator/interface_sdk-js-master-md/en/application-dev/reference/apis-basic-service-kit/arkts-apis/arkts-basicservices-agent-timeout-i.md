@@ -1,9 +1,10 @@
 # Timeout
 
-Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see   
-[WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#WaitingReason).
+Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#WaitingReason) .
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface Timeout--><!--Device-agent-interface Timeout-End-->
 
@@ -25,7 +26,9 @@ Task connection timeout interval, in seconds. The connection timeout interval in
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Timeout-connectionTimeout?: int--><!--Device-Timeout-connectionTimeout?: int-End-->
 
@@ -41,7 +44,9 @@ Total timeout interval of a task, in seconds. The total timeout interval include
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Timeout-totalTimeout?: int--><!--Device-Timeout-totalTimeout?: int-End-->
 

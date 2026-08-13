@@ -4,7 +4,9 @@ Defines the constraint change information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface ConstraintChangeInfo--><!--Device-osAccount-interface ConstraintChangeInfo-End-->
 
@@ -24,13 +26,15 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraint: string
 ```
 
-[Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) that has been changed.
+[Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) that has been changed.
 
 **Type:** string
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintChangeInfo-constraint: string--><!--Device-ConstraintChangeInfo-constraint: string-End-->
 
@@ -44,15 +48,15 @@ constraint: string
 isEnabled: boolean
 ```
 
-Enabling state of the changed constraint. The default value is **false**.
-
-The value **true** indicates that the target constraint is enabled, and **false** indicates the opposite.
+Enabling state of the changed constraint. The default value is **false**. The value **true** indicates that the target constraint is enabled, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintChangeInfo-isEnabled: boolean--><!--Device-ConstraintChangeInfo-isEnabled: boolean-End-->
 

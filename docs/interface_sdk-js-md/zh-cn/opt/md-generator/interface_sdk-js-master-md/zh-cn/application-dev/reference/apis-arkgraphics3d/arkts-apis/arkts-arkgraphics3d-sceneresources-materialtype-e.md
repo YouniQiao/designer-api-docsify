@@ -2,7 +2,9 @@
 
 材质类型枚举.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
 
@@ -16,7 +18,9 @@ SHADER = 1
 
 材质类型是Shader.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
 
@@ -30,7 +34,9 @@ METALLIC_ROUGHNESS = 2
 
 材质是基于物理的金属粗糙度材质.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MaterialType-METALLIC_ROUGHNESS = 2--><!--Device-MaterialType-METALLIC_ROUGHNESS = 2-End-->
 
@@ -46,6 +52,8 @@ UNLIT = 3
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -59,6 +67,8 @@ OCCLUSION = 4
 材质是遮挡材质
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MaterialType-OCCLUSION = 4--><!--Device-MaterialType-OCCLUSION = 4-End-->
 

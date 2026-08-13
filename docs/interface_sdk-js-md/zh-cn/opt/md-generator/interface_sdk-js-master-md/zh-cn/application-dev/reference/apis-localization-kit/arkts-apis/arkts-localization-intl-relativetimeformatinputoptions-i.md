@@ -1,14 +1,12 @@
 # RelativeTimeFormatInputOptions
 
-创建相对时间格式化对象时可设置的配置项。
-
-从API version 9开始，RelativeTimeFormatInputOptions中的属性改为可选。
+创建相对时间格式化对象时可设置的配置项。 从API version 9开始，RelativeTimeFormatInputOptions中的属性改为可选。
 
 **起始版本：** 8
 
 **废弃版本：** 20
 
-**替代接口：** [RelativeTimeFormatOptions]]([Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options))
+**替代接口：** [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options)
 
 <!--Device-intl-export interface RelativeTimeFormatInputOptions--><!--Device-intl-export interface RelativeTimeFormatInputOptions-End-->
 
@@ -20,9 +18,7 @@
 localeMatcher?: string
 ```
 
-区域匹配算法，取值包括："best fit", "lookup"。
-
-默认值：best fit。
+区域匹配算法，取值包括："best fit", "lookup"。 默认值：best fit。
 
 **类型：** string
 
@@ -30,7 +26,7 @@ localeMatcher?: string
 
 **废弃版本：** 20
 
-**替代接口：** [localeMatcher]]([Intl.RelativeTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#localematcher))
+**替代接口：** [Intl.RelativeTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#localematcher)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,11 +40,7 @@ localeMatcher?: string
 numeric?: string
 ```
 
-输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。
-
-默认值：always。
-
-不同取值的显示效果请参考[附录表23](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。 默认值：always。 不同取值的显示效果请参考附录表23。
 
 **类型：** string
 
@@ -56,7 +48,7 @@ numeric?: string
 
 **废弃版本：** 20
 
-**替代接口：** [numeric]]([Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric))
+**替代接口：** [Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -70,11 +62,7 @@ numeric?: string
 style?: string
 ```
 
-国际化消息的长度，取值包括："long", "short", "narrow"。
-
-默认值：long。
-
-不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+国际化消息的长度，取值包括："long", "short", "narrow"。 默认值：long。 不同取值的显示效果请参考附录表24。
 
 **类型：** string
 
@@ -82,7 +70,7 @@ style?: string
 
 **废弃版本：** 20
 
-**替代接口：** [style]]([Intl.RelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#style))
+**替代接口：** [Intl.RelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#style)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

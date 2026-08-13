@@ -6,7 +6,9 @@ type StreamUsageArray = Array<StreamUsage>
 
 Array of StreamUsages.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-type StreamUsageArray = Array<StreamUsage>--><!--Device-audio-type StreamUsageArray = Array<StreamUsage>-End-->
 

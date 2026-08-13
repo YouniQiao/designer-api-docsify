@@ -1,20 +1,22 @@
 # KVObject
 
 ```TypeScript
-export type KVObject = Record<string, int | long | double | string | boolean | Array<KVObject> | KVObject>
+type KVObject = { [key: string]: number | string | boolean | [] | KVObject }
 ```
 
-Defines KVObject.
+Defines a key-value pair data structure that conforms to JSON format.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-pluginComponentManager-export type KVObject = Record<string, int | long | double | string | boolean | Array<KVObject> | KVObject>--><!--Device-pluginComponentManager-export type KVObject = Record<string, int | long | double | string | boolean | Array<KVObject> | KVObject>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-pluginComponentManager-type KVObject = { [key: string]: number | string | boolean | [] | KVObject }--><!--Device-pluginComponentManager-type KVObject = { [key: string]: number | string | boolean | [] | KVObject }-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Record<string, int | long | double | string | boolean | Array<KVObject> | KVObject>
+**Property type:** { [key: string]: number | string | boolean | [] | KVObject }
 

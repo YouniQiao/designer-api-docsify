@@ -1,10 +1,24 @@
 # @ohos.app.ability.dataUriUtils
 
-The DataUriUtils module provides APIs to process URI objects. You can use the APIs to attach an ID to the end of a given URI and obtain, delete, or update the ID attached to the end of a given URI.
+/*
+ Copyright (c) 2022-2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace dataUriUtils--><!--Device-unnamed-declare namespace dataUriUtils-End-->
 
@@ -22,8 +36,8 @@ import { dataUriUtils } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [attachId](arkts-ability-datauriutils-attachid-f.md#attachid) | Attaches an ID to the end of a given URI. |
-| [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid) | Deletes the ID from the end of a given URI. |
-| [getId](arkts-ability-datauriutils-getid-f.md#getid) | Obtains the ID attached to the end of a given URI. |
-| [updateId](arkts-ability-datauriutils-updateid-f.md#updateid) | Updates the ID in a given URI. |
+| [attachId](arkts-ability-datauriutils-attachid-f.md#attachId) | Attaches an ID to the end of a given URI. |
+| [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteId) | Deletes the ID from the end of a given URI. |
+| [getId](arkts-ability-datauriutils-getid-f.md#getId) | Obtains the ID attached to the end of a given URI. |
+| [updateId](arkts-ability-datauriutils-updateid-f.md#updateId) | Updates the ID in a given URI. |
 

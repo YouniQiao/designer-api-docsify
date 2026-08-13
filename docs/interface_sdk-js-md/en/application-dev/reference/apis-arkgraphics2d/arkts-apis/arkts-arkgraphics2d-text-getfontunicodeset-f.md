@@ -12,13 +12,13 @@ import { text } from '@kit.ArkGraphics2D';
 function getFontUnicodeSet(path: string | Resource, index: int) : Promise<Array<int>>
 ```
 
-Obtains an array of font Unicode by font file path. This API uses a promise to return the result.
-
-An empty array is returned if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format.
+Obtains an array of font Unicode by font file path. This API uses a promise to return the result. An empty array is returned if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -31,13 +31,13 @@ An empty array is returned if the font file is not found, the font file path is 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \\$rawfile('file name in the resources/rawfile directory of the project'). |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the font to load when the font file format is ttc/otc. The value ranges from 0 to count-1, where count is the number of fonts contained in the font file. For non-ttc/otc files, the index can only be 0. If this parameter is negative or exceeds the actual index range of the font file, an empty array is returned. |
+| index | int | Yes | Index of the font to load when the font file format is ttc/otc. The value ranges from 0 to count-1, where count is the number of fonts contained in the font file. For non-ttc/otc files, the index can only be 0. If this parameter is negative or exceeds the actual index range of the font file, an empty array is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the Unicode array corresponding to the font file. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the Unicode array corresponding to the font file. |
 
 ## Examples
 

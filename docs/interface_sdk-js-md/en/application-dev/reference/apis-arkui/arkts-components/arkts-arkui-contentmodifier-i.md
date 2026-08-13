@@ -6,7 +6,9 @@ Defines the content modifier.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface ContentModifier<T>--><!--Device-unnamed-declare interface ContentModifier<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ContentModifier--><!--Device-unnamed-declare interface ContentModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ Defining applyContent function.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

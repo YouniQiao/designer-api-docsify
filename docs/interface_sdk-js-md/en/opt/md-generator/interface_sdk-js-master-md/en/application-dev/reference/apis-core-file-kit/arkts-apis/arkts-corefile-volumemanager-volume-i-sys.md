@@ -2,7 +2,9 @@
 
 Get All Volumes.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-volumeManager-export interface Volume--><!--Device-volumeManager-export interface Volume-End-->
 
@@ -26,7 +28,9 @@ Description of the volume.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-description: string--><!--Device-Volume-description: string-End-->
 
@@ -40,11 +44,13 @@ Description of the volume.
 diskId: string
 ```
 
-ID of the disk to which the volume belongs. A disk can have one or more volumes. The disk ID is in the disk-{Primary device ID}-{Secondary device ID} format, which is similar to the volume ID.
+ID of the disk to which the volume belongs. A disk can have one or more volumes. The disk ID is in the disk-{ Primary device ID}-{Secondary device ID} format, which is similar to the volume ID.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-diskId: string--><!--Device-Volume-diskId: string-End-->
 
@@ -64,6 +70,8 @@ Extra information of the volume.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Volume-extraInfo?: string--><!--Device-Volume-extraInfo?: string-End-->
@@ -82,7 +90,9 @@ File system type. Common file systems are **ext2**, **vfat**, and **NTFS**.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-fsType: string--><!--Device-Volume-fsType: string-End-->
 
@@ -100,7 +110,9 @@ Volume ID, in the vol-{Primary device ID}-{Secondary device ID} format. The prim
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-id: string--><!--Device-Volume-id: string-End-->
 
@@ -120,6 +132,8 @@ Partition number.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Volume-partitionNum?: int--><!--Device-Volume-partitionNum?: int-End-->
@@ -138,7 +152,9 @@ Path of the volume mounted. Generally, the path is **\/mnt/data/external/{uuid}*
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-path: string--><!--Device-Volume-path: string-End-->
 
@@ -152,11 +168,13 @@ Path of the volume mounted. Generally, the path is **\/mnt/data/external/{uuid}*
 removable: boolean
 ```
 
-Whether the volume can be removed. Currently, only removable storage devices are supported. The value **true**means the device can be removed; the value **false** means the opposite.
+Whether the volume can be removed. Currently, only removable storage devices are supported. The value **true** means the device can be removed; the value **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-removable: boolean--><!--Device-Volume-removable: boolean-End-->
 
@@ -170,19 +188,13 @@ Whether the volume can be removed. Currently, only removable storage devices are
 state: number
 ```
 
-Volume status.
-
-**0**: The volume is unmounted.
-
-**1**: The volume is being checked.
-
-**2**: The volume is mounted.
-
-**3**: The volume is being ejected.
+Volume status. **0**: The volume is unmounted. **1**: The volume is being checked. **2**: The volume is mounted. **3**: The volume is being ejected.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-state: int--><!--Device-Volume-state: int-End-->
 
@@ -200,7 +212,9 @@ Volume UUID, which uniquely identifies a volume irrespective of the card inserti
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Volume-uuid: string--><!--Device-Volume-uuid: string-End-->
 

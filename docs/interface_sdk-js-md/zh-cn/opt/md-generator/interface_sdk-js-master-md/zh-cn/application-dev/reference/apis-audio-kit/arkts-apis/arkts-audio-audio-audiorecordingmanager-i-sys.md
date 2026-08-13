@@ -1,8 +1,10 @@
 # AudioRecordingManager
 
-提供录像策略管理，包括协同录音和录制控制能力。
+提供录像策略管理，包括协同录音 和录制控制能力。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
 
@@ -17,6 +19,8 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 取消订阅系统录像控制器面板启用状态更改事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,9 +40,9 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -58,6 +62,8 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void-End-->
@@ -76,10 +82,10 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 | 错误码ID |
 | --- |
-| [6800102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-分配内存失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ListBackPressBehavior--><!--Device-unnamed-declare interface ListBackPressBehavior-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,7 @@
 closeSwipeAction?: boolean
 ```
 
-系统返回键生效时是否收起ListItem的划出组件。
-
-true表示收起ListItem的划出组件；false表示不收起ListItem的划出组件。
-
-默认值：true
+系统返回键生效时是否收起ListItem的划出组件。 true表示收起ListItem的划出组件；false表示不收起ListItem的划出组件。 默认值：true
 
 **类型：** boolean
 
@@ -29,6 +27,8 @@ true表示收起ListItem的划出组件；false表示不收起ListItem的划出�
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

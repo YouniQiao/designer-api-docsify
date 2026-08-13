@@ -14,9 +14,11 @@ function getMaxTransmitDataSize(clientSocket: int): int
 
 Obtain the maximum data size that can be transmitted through this socket channel.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-socket-function getMaxTransmitDataSize(clientSocket: int): int--><!--Device-socket-function getMaxTransmitDataSize(clientSocket: int): int-End-->
 
@@ -26,13 +28,13 @@ Obtain the maximum data size that can be transmitted through this socket channel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppConnect). |
+| clientSocket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppConnect). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Maximum transmitted data size |
+| int | Maximum transmitted data size |
 
 ## Examples
 

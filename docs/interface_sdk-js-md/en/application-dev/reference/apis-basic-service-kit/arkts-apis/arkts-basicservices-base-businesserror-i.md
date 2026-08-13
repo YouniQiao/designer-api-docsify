@@ -2,13 +2,15 @@
 
 Defines an error parameter. This API inherits from the **Error** class and is used to pass standard error information, including the error code and optional additional information.
 
-**Inheritance/Implementation:** BusinessError extends [Error](Error)
+**Inheritance/Implementation:** BusinessError extends Error
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-<!--Device-unnamed-export interface BusinessError<T = void> extends Error--><!--Device-unnamed-export interface BusinessError<T = void> extends Error-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface BusinessError--><!--Device-unnamed-export interface BusinessError-End-->
 
 **System capability:** SystemCapability.Base
 
@@ -24,13 +26,15 @@ import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.Basi
 code: number
 ```
 
-Error code returned when the API fails to be called. The specific error code is defined by each API. For details,see the error code description of the corresponding API.
+Error code returned when the API fails to be called. The specific error code is defined by each API. For details, see the error code description of the corresponding API.
 
 **Type:** number
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -53,6 +57,8 @@ Error message returned when the API fails to be called. If this parameter is lef
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

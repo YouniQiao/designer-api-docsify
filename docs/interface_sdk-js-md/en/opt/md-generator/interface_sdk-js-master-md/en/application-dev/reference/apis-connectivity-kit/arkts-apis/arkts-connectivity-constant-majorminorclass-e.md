@@ -2,7 +2,9 @@
 
 The enum of major minor class of a bluetooth device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-constant-export enum MajorMinorClass--><!--Device-constant-export enum MajorMinorClass-End-->
 
@@ -16,7 +18,9 @@ COMPUTER_UNCATEGORIZED = 0x0100
 
 The Minor Device Class field Computer Major Class
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100--><!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100-End-->
 
@@ -30,7 +34,9 @@ COMPUTER_DESKTOP = 0x0104
 
 Desktop computer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104--><!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104-End-->
 
@@ -44,7 +50,9 @@ COMPUTER_SERVER = 0x0108
 
 Server.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108--><!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108-End-->
 
@@ -58,7 +66,9 @@ COMPUTER_LAPTOP = 0x010C
 
 Laptop.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C--><!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C-End-->
 
@@ -72,7 +82,9 @@ COMPUTER_HANDHELD_PC_PDA = 0x0110
 
 Hand-held computer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110--><!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110-End-->
 
@@ -86,7 +98,9 @@ COMPUTER_PALM_SIZE_PC_PDA = 0x0114
 
 Palmtop computer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114--><!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114-End-->
 
@@ -100,7 +114,9 @@ COMPUTER_WEARABLE = 0x0118
 
 Wearable computer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118--><!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118-End-->
 
@@ -114,7 +130,9 @@ COMPUTER_TABLET = 0x011C
 
 Tablet.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C--><!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C-End-->
 
@@ -128,7 +146,9 @@ PHONE_UNCATEGORIZED = 0x0200
 
 Phone Major Class
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200--><!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200-End-->
 
@@ -142,7 +162,9 @@ PHONE_CELLULAR = 0x0204
 
 Portable phone.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204--><!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204-End-->
 
@@ -156,7 +178,9 @@ PHONE_CORDLESS = 0x0208
 
 Cordless phone.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208--><!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208-End-->
 
@@ -170,7 +194,9 @@ PHONE_SMART = 0x020C
 
 Smartphone.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_SMART = 0x020C--><!--Device-MajorMinorClass-PHONE_SMART = 0x020C-End-->
 
@@ -184,7 +210,9 @@ PHONE_MODEM_OR_GATEWAY = 0x0210
 
 Modem or gateway phone.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210--><!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210-End-->
 
@@ -198,7 +226,9 @@ PHONE_ISDN = 0x0214
 
 ISDN phone.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_ISDN = 0x0214--><!--Device-MajorMinorClass-PHONE_ISDN = 0x0214-End-->
 
@@ -212,7 +242,9 @@ NETWORK_FULLY_AVAILABLE = 0x0300
 
 LAN/Network Access Point Major Class
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300--><!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300-End-->
 
@@ -226,7 +258,9 @@ NETWORK_1_TO_17_UTILIZED = 0x0320
 
 Device used on network 1 to 17.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320--><!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320-End-->
 
@@ -240,7 +274,9 @@ NETWORK_17_TO_33_UTILIZED = 0x0340
 
 Device used on network 17 to 33.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340--><!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340-End-->
 
@@ -254,7 +290,9 @@ NETWORK_33_TO_50_UTILIZED = 0x0360
 
 Device used on network 33 to 50.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360--><!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360-End-->
 
@@ -268,7 +306,9 @@ NETWORK_60_TO_67_UTILIZED = 0x0380
 
 Device used on network 60 to 67.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380--><!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380-End-->
 
@@ -282,7 +322,9 @@ NETWORK_67_TO_83_UTILIZED = 0x03A0
 
 Device used on network 67 to 83.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0--><!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0-End-->
 
@@ -296,7 +338,9 @@ NETWORK_83_TO_99_UTILIZED = 0x03C0
 
 Device used on network 83 to 99.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0--><!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0-End-->
 
@@ -310,7 +354,9 @@ NETWORK_NO_SERVICE = 0x03E0
 
 Device without network service.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0--><!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0-End-->
 
@@ -324,7 +370,9 @@ AUDIO_VIDEO_UNCATEGORIZED = 0x0400
 
 Unclassified audio or video device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400--><!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400-End-->
 
@@ -338,7 +386,9 @@ AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404
 
 Wearable audio or video headset.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404--><!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404-End-->
 
@@ -352,7 +402,9 @@ AUDIO_VIDEO_HANDSFREE = 0x0408
 
 Hands-free audio or video device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408--><!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408-End-->
 
@@ -366,7 +418,9 @@ AUDIO_VIDEO_MICROPHONE = 0x0410
 
 Audio or video microphone.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410--><!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410-End-->
 
@@ -380,7 +434,9 @@ AUDIO_VIDEO_LOUDSPEAKER = 0x0414
 
 Audio or video loudspeaker.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414--><!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414-End-->
 
@@ -394,7 +450,9 @@ AUDIO_VIDEO_HEADPHONES = 0x0418
 
 Audio or video headphones.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418--><!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418-End-->
 
@@ -408,7 +466,9 @@ AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C
 
 Portable audio or video device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C--><!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C-End-->
 
@@ -422,7 +482,9 @@ AUDIO_VIDEO_CAR_AUDIO = 0x0420
 
 In-vehicle audio or video device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420-End-->
 
@@ -436,7 +498,9 @@ AUDIO_VIDEO_SET_TOP_BOX = 0x0424
 
 Audio or video STB device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424--><!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424-End-->
 
@@ -450,7 +514,9 @@ AUDIO_VIDEO_HIFI_AUDIO = 0x0428
 
 High-fidelity speaker device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428--><!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428-End-->
 
@@ -464,7 +530,9 @@ AUDIO_VIDEO_VCR = 0x042C
 
 Video cassette recording (VCR) device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C-End-->
 
@@ -478,7 +546,9 @@ AUDIO_VIDEO_VIDEO_CAMERA = 0x0430
 
 Camera.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430-End-->
 
@@ -492,7 +562,9 @@ AUDIO_VIDEO_CAMCORDER = 0x0434
 
 Camcorder.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434-End-->
 
@@ -506,7 +578,9 @@ AUDIO_VIDEO_VIDEO_MONITOR = 0x0438
 
 Audio or video monitor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438-End-->
 
@@ -520,7 +594,9 @@ AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C
 
 Video display or loudspeaker.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C-End-->
 
@@ -534,7 +610,9 @@ AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440
 
 Video conferencing device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440-End-->
 
@@ -548,7 +626,9 @@ AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448
 
 Audio or video gaming toy.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448-End-->
 
@@ -562,7 +642,9 @@ PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500
 
 Peripheral Major Class
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500-End-->
 
@@ -576,7 +658,9 @@ PERIPHERAL_KEYBOARD = 0x0540
 
 Keyboard device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540-End-->
 
@@ -590,7 +674,9 @@ PERIPHERAL_POINTING_DEVICE = 0x0580
 
 Pointing peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580--><!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580-End-->
 
@@ -604,7 +690,9 @@ PERIPHERAL_KEYBOARD_POINTING = 0x05C0
 
 Keyboard pointing device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0-End-->
 
@@ -618,7 +706,9 @@ PERIPHERAL_UNCATEGORIZED = 0x0500
 
 Unclassified peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500-End-->
 
@@ -632,7 +722,9 @@ PERIPHERAL_JOYSTICK = 0x0504
 
 Peripheral joystick.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504--><!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504-End-->
 
@@ -646,7 +738,9 @@ PERIPHERAL_GAMEPAD = 0x0508
 
 Peripheral game pad.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508--><!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508-End-->
 
@@ -660,7 +754,9 @@ PERIPHERAL_REMOTE_CONTROL = 0x05C0
 
 Peripheral remote control device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0-End-->
 
@@ -674,7 +770,9 @@ PERIPHERAL_SENSING_DEVICE = 0x0510
 
 Peripheral sensing device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510--><!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510-End-->
 
@@ -688,7 +786,9 @@ PERIPHERAL_DIGITIZER_TABLET = 0x0514
 
 Peripheral digitizer tablet.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514--><!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514-End-->
 
@@ -702,7 +802,9 @@ PERIPHERAL_CARD_READER = 0x0518
 
 Peripheral card reader.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518--><!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518-End-->
 
@@ -716,7 +818,9 @@ PERIPHERAL_DIGITAL_PEN = 0x051C
 
 Peripheral digital pen.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C--><!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C-End-->
 
@@ -730,7 +834,9 @@ PERIPHERAL_SCANNER_RFID = 0x0520
 
 Peripheral RFID scanner.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520--><!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520-End-->
 
@@ -744,7 +850,9 @@ PERIPHERAL_GESTURAL_INPUT = 0x0522
 
 Gesture input device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522--><!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522-End-->
 
@@ -758,7 +866,9 @@ IMAGING_UNCATEGORIZED = 0x0600
 
 Imaging Major Class
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600--><!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600-End-->
 
@@ -772,7 +882,9 @@ IMAGING_DISPLAY = 0x0610
 
 Imaging display device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610--><!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610-End-->
 
@@ -786,7 +898,9 @@ IMAGING_CAMERA = 0x0620
 
 Imaging camera device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620--><!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620-End-->
 
@@ -800,7 +914,9 @@ IMAGING_SCANNER = 0x0640
 
 Imaging scanner.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640--><!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640-End-->
 
@@ -814,7 +930,9 @@ IMAGING_PRINTER = 0x0680
 
 Imaging printer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680--><!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680-End-->
 
@@ -828,7 +946,9 @@ WEARABLE_UNCATEGORIZED = 0x0700
 
 Wearable Major Class
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700--><!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700-End-->
 
@@ -842,7 +962,9 @@ WEARABLE_WRIST_WATCH = 0x0704
 
 Smart watch.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704--><!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704-End-->
 
@@ -856,7 +978,9 @@ WEARABLE_PAGER = 0x0708
 
 Wearable pager.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708--><!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708-End-->
 
@@ -870,7 +994,9 @@ WEARABLE_JACKET = 0x070C
 
 Smart jacket.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C--><!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C-End-->
 
@@ -884,7 +1010,9 @@ WEARABLE_HELMET = 0x0710
 
 Wearable helmet.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710--><!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710-End-->
 
@@ -898,7 +1026,9 @@ WEARABLE_GLASSES = 0x0714
 
 Wearable glasses.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714--><!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714-End-->
 
@@ -912,7 +1042,9 @@ TOY_UNCATEGORIZED = 0x0800
 
 Minor Device Class field - Toy Major Class
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800--><!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800-End-->
 
@@ -926,7 +1058,9 @@ TOY_ROBOT = 0x0804
 
 Toy robot.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_ROBOT = 0x0804--><!--Device-MajorMinorClass-TOY_ROBOT = 0x0804-End-->
 
@@ -940,7 +1074,9 @@ TOY_VEHICLE = 0x0808
 
 Toy vehicle.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808--><!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808-End-->
 
@@ -954,7 +1090,9 @@ TOY_DOLL_ACTION_FIGURE = 0x080C
 
 Humanoid toy doll.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C--><!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C-End-->
 
@@ -968,7 +1106,9 @@ TOY_CONTROLLER = 0x0810
 
 Toy controller.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810--><!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810-End-->
 
@@ -982,7 +1122,9 @@ TOY_GAME = 0x0814
 
 Toy gaming device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_GAME = 0x0814--><!--Device-MajorMinorClass-TOY_GAME = 0x0814-End-->
 
@@ -996,7 +1138,9 @@ HEALTH_UNCATEGORIZED = 0x0900
 
 Minor Device Class field - Health
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900--><!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900-End-->
 
@@ -1010,7 +1154,9 @@ HEALTH_BLOOD_PRESSURE = 0x0904
 
 Blood pressure device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904--><!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904-End-->
 
@@ -1024,7 +1170,9 @@ HEALTH_THERMOMETER = 0x0908
 
 Thermometer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908--><!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908-End-->
 
@@ -1038,7 +1186,9 @@ HEALTH_WEIGHING = 0x090C
 
 Body scale.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C--><!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C-End-->
 
@@ -1052,7 +1202,9 @@ HEALTH_GLUCOSE = 0x0910
 
 Blood glucose monitor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910--><!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910-End-->
 
@@ -1066,7 +1218,9 @@ HEALTH_PULSE_OXIMETER = 0x0914
 
 Pulse oximeter.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914--><!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914-End-->
 
@@ -1080,7 +1234,9 @@ HEALTH_PULSE_RATE = 0x0918
 
 Heart rate monitor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918--><!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918-End-->
 
@@ -1094,7 +1250,9 @@ HEALTH_DATA_DISPLAY = 0x091C
 
 Health data display.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C--><!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C-End-->
 
@@ -1108,7 +1266,9 @@ HEALTH_STEP_COUNTER = 0x0920
 
 Step counter.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920--><!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920-End-->
 
@@ -1122,7 +1282,9 @@ HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924
 
 Body composition analyzer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924--><!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924-End-->
 
@@ -1136,7 +1298,9 @@ HEALTH_PEAK_FLOW_MONITOR = 0x0928
 
 Hygrometer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MONITOR = 0x0928--><!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MONITOR = 0x0928-End-->
 
@@ -1150,7 +1314,9 @@ HEALTH_MEDICATION_MONITOR = 0x092C
 
 Medication monitor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C--><!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C-End-->
 
@@ -1164,7 +1330,9 @@ HEALTH_KNEE_PROSTHESIS = 0x0930
 
 Prosthetic knee.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930--><!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930-End-->
 
@@ -1178,7 +1346,9 @@ HEALTH_ANKLE_PROSTHESIS = 0x0934
 
 Prosthetic ankle.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934--><!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934-End-->
 
@@ -1192,7 +1362,9 @@ HEALTH_GENERIC_HEALTH_MANAGER = 0x0938
 
 Generic health management device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938--><!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938-End-->
 
@@ -1206,7 +1378,9 @@ HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C
 
 Personal mobility device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C--><!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C-End-->
 

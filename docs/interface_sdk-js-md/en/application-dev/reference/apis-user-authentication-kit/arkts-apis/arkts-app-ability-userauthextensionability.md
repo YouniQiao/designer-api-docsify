@@ -1,4 +1,4 @@
-# @ohos.app.ability.UserAuthExtensionAbility(User Authentication Extension Ability)
+# @ohos.app.ability.UserAuthExtensionAbility
 
 ## Modules to Import
 

@@ -2,7 +2,9 @@
 
 端云共享的参与者。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sharing-interface Participant--><!--Device-sharing-interface Participant-End-->
 
@@ -20,7 +22,9 @@ attachInfo?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Participant-attachInfo?: string--><!--Device-Participant-attachInfo?: string-End-->
 
@@ -38,7 +42,9 @@ identity: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Participant-identity: string--><!--Device-Participant-identity: string-End-->
 
@@ -56,7 +62,9 @@ privilege?: Privilege
 
 **类型：** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Participant-privilege?: Privilege--><!--Device-Participant-privilege?: Privilege-End-->
 
@@ -74,7 +82,9 @@ role?: Role
 
 **类型：** Role
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Participant-role?: Role--><!--Device-Participant-role?: Role-End-->
 
@@ -92,7 +102,9 @@ state?: State
 
 **类型：** State
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Participant-state?: State--><!--Device-Participant-state?: State-End-->
 

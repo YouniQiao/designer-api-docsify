@@ -6,7 +6,9 @@ export type NotificationMultiLineContent = _NotificationMultiLineContent
 
 多行文本通知。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent--><!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent-End-->
 

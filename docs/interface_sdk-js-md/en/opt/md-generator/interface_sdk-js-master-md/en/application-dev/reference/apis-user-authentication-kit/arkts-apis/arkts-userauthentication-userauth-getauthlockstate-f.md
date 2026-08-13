@@ -14,11 +14,13 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 Queries the lockout state of the specified authentication type. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>--><!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>-End-->
 
@@ -40,11 +42,11 @@ Queries the lockout state of the specified authentication type. This API uses a 
 
 | Error Code ID |
 | --- |
-| [12500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) |
-| [12500008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500008-parameter-verification-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12500005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
+| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 彩信附件。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsAttachment--><!--Device-sms-export interface MmsAttachment-End-->
 
@@ -20,7 +22,9 @@ charset?: MmsCharSets
 
 **类型：** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-charset?: MmsCharSets--><!--Device-MmsAttachment-charset?: MmsCharSets-End-->
 
@@ -38,7 +42,9 @@ contentDisposition: DispositionType
 
 **类型：** [DispositionType](arkts-telephony-sms-dispositiontype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-contentDisposition: DispositionType--><!--Device-MmsAttachment-contentDisposition: DispositionType-End-->
 
@@ -56,7 +62,9 @@ contentId: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-contentId: string--><!--Device-MmsAttachment-contentId: string-End-->
 
@@ -74,7 +82,9 @@ contentLocation: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-contentLocation: string--><!--Device-MmsAttachment-contentLocation: string-End-->
 
@@ -92,7 +102,9 @@ contentTransferEncoding: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-contentTransferEncoding: string--><!--Device-MmsAttachment-contentTransferEncoding: string-End-->
 
@@ -110,7 +122,9 @@ contentType: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-contentType: string--><!--Device-MmsAttachment-contentType: string-End-->
 
@@ -128,7 +142,9 @@ fileName?: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-fileName?: string--><!--Device-MmsAttachment-fileName?: string-End-->
 
@@ -146,7 +162,9 @@ inBuff?: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-inBuff?: Array<int>--><!--Device-MmsAttachment-inBuff?: Array<int>-End-->
 
@@ -164,7 +182,9 @@ isSmil: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-isSmil: boolean--><!--Device-MmsAttachment-isSmil: boolean-End-->
 
@@ -182,7 +202,9 @@ path?: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsAttachment-path?: string--><!--Device-MmsAttachment-path?: string-End-->
 

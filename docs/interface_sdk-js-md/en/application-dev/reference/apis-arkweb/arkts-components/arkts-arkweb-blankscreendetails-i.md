@@ -6,6 +6,8 @@ Defines details of the blank screen issue detected.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BlankScreenDetails--><!--Device-unnamed-declare interface BlankScreenDetails-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,13 +18,15 @@ Defines details of the blank screen issue detected.
 detectedContentfulNodesCount?: number
 ```
 
-This attribute may exist when the contentful node detection policy is used and the threshold for the number of detected nodes is set. Otherwise, this attribute does not exist.Number of contentful nodes that are detected.
+This attribute may exist when the contentful node detection policy is used and the threshold for the number of detected nodes is set. Otherwise, this attribute does not exist. Number of contentful nodes that are detected.
 
 **Type:** number
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number--><!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number-End-->
 

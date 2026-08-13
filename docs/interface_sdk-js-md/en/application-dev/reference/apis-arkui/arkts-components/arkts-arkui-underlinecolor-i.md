@@ -6,6 +6,8 @@ Defines the underline color width property.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface UnderlineColor--><!--Device-unnamed-declare interface UnderlineColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,14 +18,15 @@ Defines the underline color width property.
 disable?: ResourceColor | undefined
 ```
 
-Underline color in the disabled state. If no value is specified or if the value specified is **undefined**,  
-**null**, or invalid, the default value is used.
+Underline color in the disabled state. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used.
 
 **Type:** ResourceColor \| undefined
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,14 +42,15 @@ Underline color in the disabled state. If no value is specified or if the value 
 error?: ResourceColor | undefined
 ```
 
-Underline color when an error occurs. If no value is specified or if the value specified is **undefined**,  
-**null**, or invalid, the default value is used. This option changes the color used in the **showCounter**attribute when the maximum number of characters is reached.
+Underline color when an error occurs. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used. This option changes the color used in the **showCounter** attribute when the maximum number of characters is reached.
 
 **Type:** ResourceColor \| undefined
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +66,15 @@ Underline color when an error occurs. If no value is specified or if the value s
 normal?: ResourceColor | undefined
 ```
 
-Underline color in the normal state. If no value is specified or if the value specified is **undefined**, **null**,or invalid, the default value is used.
+Underline color in the normal state. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used.
 
 **Type:** ResourceColor \| undefined
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,13 +90,15 @@ Underline color in the normal state. If no value is specified or if the value sp
 typing?: ResourceColor | undefined
 ```
 
-Underline color in the typing state. If no value is specified or if the value specified is **undefined**, **null**,or invalid, the default value is used.
+Underline color in the typing state. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used.
 
 **Type:** ResourceColor \| undefined
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

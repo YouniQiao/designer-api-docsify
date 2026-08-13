@@ -2,9 +2,11 @@
 
 PopupIconOptions定义图标的属性。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface PopupIconOptions--><!--Device-unnamed-export interface PopupIconOptions-End-->
 
@@ -16,19 +18,19 @@ PopupIconOptions定义图标的属性。
 borderRadius?: Length | BorderRadiuses
 ```
 
-设置图标圆角。
-
-默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
+设置图标圆角。单位：vp。 默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
 
 **类型：** Length \| BorderRadiuses
 
-**默认值：** $r('sys.float.ohos_id_corner_radius_default_s')
+**起始版本：** 11
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PopupIconOptions-borderRadius?: Length | BorderRadiuses--><!--Device-PopupIconOptions-borderRadius?: Length | BorderRadiuses-End-->
 
@@ -40,17 +42,19 @@ borderRadius?: Length | BorderRadiuses
 fillColor?: ResourceColor
 ```
 
-设置图标填充颜色。仅针对svg图源生效。 
-
-默认不改变图标颜色。
+设置图标填充颜色。仅针对svg图源生效。 默认不改变图标颜色。
 
 **类型：** ResourceColor
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PopupIconOptions-fillColor?: ResourceColor--><!--Device-PopupIconOptions-fillColor?: ResourceColor-End-->
 
@@ -62,19 +66,19 @@ fillColor?: ResourceColor
 height?: Dimension
 ```
 
-设置图标高度。
-
-默认值：32VP
+设置图标高度。单位：vp。 默认值：32VP
 
 **类型：** Dimension
 
-**默认值：** 32.0_vp
+**起始版本：** 11
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PopupIconOptions-height?: Dimension--><!--Device-PopupIconOptions-height?: Dimension-End-->
 
@@ -83,24 +87,24 @@ height?: Dimension
 ## image
 
 ```TypeScript
-image?: ResourceStr
+image: ResourceStr
 ```
 
 设置图标内容。
 
-**ArkTS模式：** 该接口仅适用于ArkTS-Sta。
-
-**ArkTS-Sta起始版本：** 23
-
 **类型：** ResourceStr
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PopupIconOptions-image?: ResourceStr--><!--Device-PopupIconOptions-image?: ResourceStr-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupIconOptions-image: ResourceStr--><!--Device-PopupIconOptions-image: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,19 +114,19 @@ image?: ResourceStr
 width?: Dimension
 ```
 
-设置图标宽度。
-
-默认值：32VP
+设置图标宽度。单位：vp。 默认值：32VP
 
 **类型：** Dimension
 
-**默认值：** 32.0_vp
+**起始版本：** 11
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PopupIconOptions-width?: Dimension--><!--Device-PopupIconOptions-width?: Dimension-End-->
 

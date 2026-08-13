@@ -2,7 +2,9 @@
 
 Represents a **Server** object, which provides methods for starting, stopping, and closing the server, and registering or unregistering event callbacks.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-linkEnhance-interface Server--><!--Device-linkEnhance-interface Server-End-->
 
@@ -20,10 +22,11 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 close(): void
 ```
 
-Destroys the **Server** object to release related resources. To interact with the peer device again, create a new  
-**Server** object.
+Destroys the **Server** object to release related resources. To interact with the peer device again, create a new **Server** object.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -37,7 +40,7 @@ Destroys the **Server** object to release related resources. To interact with th
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -60,7 +63,73 @@ try {
 }
 ```
 
-## off('connectionAccepted')
+## offConnectionAccepted
+
+```TypeScript
+offConnectionAccepted(callback?: Callback<Connection>): void
+```
+
+Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offServerStopped
+
+```TypeScript
+offServerStopped(callback?: Callback<number>): void
+```
+
+Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## off_connectionAccepted
 
 ```TypeScript
 off(type: 'connectionAccepted', callback?: Callback<Connection>): void
@@ -69,6 +138,8 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -89,8 +160,8 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 
 | Error Code ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -119,7 +190,7 @@ try {
 }
 ```
 
-## off('serverStopped')
+## off_serverStopped
 
 ```TypeScript
 off(type: 'serverStopped', callback?: Callback<number>): void
@@ -128,6 +199,8 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -148,8 +221,8 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 
 | Error Code ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -178,7 +251,73 @@ try {
 }
 ```
 
-## on('connectionAccepted')
+## onConnectionAccepted
+
+```TypeScript
+onConnectionAccepted(callback: Callback<Connection>): void
+```
+
+Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onServerStopped
+
+```TypeScript
+onServerStopped(callback: Callback<number>): void
+```
+
+Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## on_connectionAccepted
 
 ```TypeScript
 on(type: 'connectionAccepted', callback: Callback<Connection>): void
@@ -187,6 +326,8 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -207,8 +348,8 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | Error Code ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -237,7 +378,7 @@ try {
 }
 ```
 
-## on('serverStopped')
+## on_serverStopped
 
 ```TypeScript
 on(type: 'serverStopped', callback: Callback<number>): void
@@ -246,6 +387,8 @@ on(type: 'serverStopped', callback: Callback<number>): void
 Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -266,8 +409,8 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | Error Code ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -304,7 +447,9 @@ start(): void
 
 Starts a server so that it can be connected by the client. A maximum of 10 servers are supported.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -318,9 +463,9 @@ Starts a server so that it can be connected by the client. A maximum of 10 serve
 
 | Error Code ID |
 | --- |
-| [32390300](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) |
-| [32390202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) |
+| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -350,7 +495,9 @@ stop(): void
 
 Stops the server. After the server is stopped, you can call `start` to start it again.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -364,7 +511,7 @@ Stops the server. After the server is stopped, you can call `start` to start it 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

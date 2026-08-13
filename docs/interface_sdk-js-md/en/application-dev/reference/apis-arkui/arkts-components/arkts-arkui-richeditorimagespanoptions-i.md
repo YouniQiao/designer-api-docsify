@@ -6,27 +6,9 @@ Sets the offset and style of an image span.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorImageSpanOptions--><!--Device-unnamed-declare interface RichEditorImageSpanOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onHover
-
-```TypeScript
-onHover?: OnHoverCallback
-```
-
-Callback triggered on mouse hover. If this parameter is omitted, no corresponding action is taken.
-
-**Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback--><!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,6 +25,8 @@ Behavior-triggered callback. If this parameter is left empty, only the default s
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +50,8 @@ Image style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -80,9 +66,7 @@ Image style.
 offset?: number
 ```
 
-Position of the image span to be added. If this parameter is omitted, the span is added to the end of all content.
-
-If the value specified is less than 0, the span is placed at the beginning of all content. If the value is greater than the length of all content, the span is placed at the end of all content.
+Position of the image span to be added. If this parameter is omitted, the span is added to the end of all content. If the value specified is less than 0, the span is placed at the beginning of all content. If the value is greater than the length of all content, the span is placed at the end of all content.
 
 **Type:** number
 
@@ -90,11 +74,37 @@ If the value specified is less than 0, the span is placed at the beginning of al
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RichEditorImageSpanOptions-offset?: number--><!--Device-RichEditorImageSpanOptions-offset?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onHover
+
+```TypeScript
+onHover?: OnHoverCallback
+```
+
+Callback triggered on mouse hover. If this parameter is omitted, no corresponding action is taken.
+
+**Type:** [OnHoverCallback](arkts-arkui-onhovercallback-t.md)
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback--><!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

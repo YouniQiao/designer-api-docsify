@@ -2,7 +2,9 @@
 
 手势事件类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum ActionType--><!--Device-unnamed-export declare enum ActionType-End-->
 
@@ -16,7 +18,9 @@ CANCEL = 0
 
 手势取消。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ActionType-CANCEL = 0--><!--Device-ActionType-CANCEL = 0-End-->
 
@@ -30,7 +34,9 @@ BEGIN = 1
 
 手势开始。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ActionType-BEGIN = 1--><!--Device-ActionType-BEGIN = 1-End-->
 
@@ -44,7 +50,9 @@ UPDATE = 2
 
 手势更新。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ActionType-UPDATE = 2--><!--Device-ActionType-UPDATE = 2-End-->
 
@@ -58,7 +66,9 @@ END = 3
 
 手势结束。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ActionType-END = 3--><!--Device-ActionType-END = 3-End-->
 

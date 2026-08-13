@@ -6,6 +6,8 @@ Provides unified dialog APIs.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace dialog--><!--Device-unnamed-declare namespace dialog-End-->
@@ -30,7 +32,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 | [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md) | Base options shared by all dialog types. |
 | [DialogMessage](arkts-arkui-dialog-dialogmessage-i.md) | Message options for the dialog box, combining message content with text style. |
 | [DialogStyleOptions](arkts-arkui-dialog-dialogstyleoptions-i.md) | Options for the fixed-style dialog. |
-| [DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | Options for the custom-style dialog.The dialog content is provided as the first parameter of present() method,not inside this options object. |
+| [DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | Options for the custom-style dialog. The dialog content is provided as the first parameter of present() method, not inside this options object. |
 
 <!--Del-->
 ### Interfaces（系统接口）

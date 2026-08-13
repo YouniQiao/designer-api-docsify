@@ -4,6 +4,8 @@ The enum of polygon mode.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export enum PolygonMode--><!--Device-unnamed-export enum PolygonMode-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -17,6 +19,8 @@ FILL = 0
 Render the whole polygon
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PolygonMode-FILL = 0--><!--Device-PolygonMode-FILL = 0-End-->
 
@@ -32,6 +36,8 @@ Render only edges(wireframe) of the polygon
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-PolygonMode-LINE = 1--><!--Device-PolygonMode-LINE = 1-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -45,6 +51,8 @@ POINT = 2
 Render only vertices of the polygon
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PolygonMode-POINT = 2--><!--Device-PolygonMode-POINT = 2-End-->
 

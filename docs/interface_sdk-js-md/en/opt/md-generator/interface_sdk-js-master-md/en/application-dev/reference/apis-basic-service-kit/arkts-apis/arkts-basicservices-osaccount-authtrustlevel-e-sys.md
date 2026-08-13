@@ -2,7 +2,9 @@
 
 Enumerates the trust levels of the authentication result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum AuthTrustLevel--><!--Device-osAccount-enum AuthTrustLevel-End-->
 
@@ -18,7 +20,9 @@ ATL1 = 10000
 
 Trust level 1.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthTrustLevel-ATL1 = 10000--><!--Device-AuthTrustLevel-ATL1 = 10000-End-->
 
@@ -34,7 +38,9 @@ ATL2 = 20000
 
 Trust level 2.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthTrustLevel-ATL2 = 20000--><!--Device-AuthTrustLevel-ATL2 = 20000-End-->
 
@@ -50,7 +56,9 @@ ATL3 = 30000
 
 Trust level 3.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthTrustLevel-ATL3 = 30000--><!--Device-AuthTrustLevel-ATL3 = 30000-End-->
 
@@ -66,7 +74,9 @@ ATL4 = 40000
 
 Trust level 4.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthTrustLevel-ATL4 = 40000--><!--Device-AuthTrustLevel-ATL4 = 40000-End-->
 

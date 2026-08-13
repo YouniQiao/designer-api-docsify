@@ -6,7 +6,9 @@ export type AutoStartupCallback = _AutoStartupCallback
 
 Level-2 module AutoStartupCallback.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

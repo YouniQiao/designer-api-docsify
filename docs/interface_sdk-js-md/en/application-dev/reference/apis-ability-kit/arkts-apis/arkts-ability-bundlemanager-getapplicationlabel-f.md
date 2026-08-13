@@ -12,11 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
 ```
 
-Obtains the name of an application with the specified package name and clone index.This API uses a promise to return the result.
+Obtains the name of an application with the specified package name and clone index. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -31,7 +33,7 @@ Obtains the name of an application with the specified package name and clone ind
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the application. The value ranges from 0 to 5. The value 0 indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
+| appIndex | int | Yes | Index of the application. The value ranges from 0 to 5. The value 0 indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
 
 **Return value:**
 
@@ -43,7 +45,7 @@ Obtains the name of an application with the specified package name and clone ind
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 

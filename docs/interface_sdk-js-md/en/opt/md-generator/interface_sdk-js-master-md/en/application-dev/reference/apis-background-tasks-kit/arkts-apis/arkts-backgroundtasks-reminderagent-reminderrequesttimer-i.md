@@ -10,7 +10,7 @@ Defines a reminder for a scheduled timer.
 
 **Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#ReminderRequestTimer)
 
-<!--Device-reminderAgent-interface ReminderRequestTimer extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestTimer extends ReminderRequest-End-->
+<!--Device-reminderAgent-interface ReminderRequestTimer--><!--Device-reminderAgent-interface ReminderRequestTimer-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -26,7 +26,7 @@ import { reminderAgent } from '@kit.BackgroundTasksKit';
 triggerTimeInSeconds: number
 ```
 
-Number of seconds in the countdown timer.Unit: s.
+Number of seconds in the countdown timer. Unit: s.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Number of seconds in the countdown timer.Unit: s.
 
 **Deprecated since:** 9
 
-**Substitutes:** [triggerTimeInSeconds](reminderAgentManager.ReminderRequestTimer.triggerTimeInSeconds)
+**Substitutes:** triggerTimeInSeconds
 
 <!--Device-ReminderRequestTimer-triggerTimeInSeconds: number--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: number-End-->
 

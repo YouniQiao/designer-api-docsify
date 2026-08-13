@@ -1,12 +1,6 @@
 # GridRow
 
-The responsive grid layout provides rules for layout design and resolves issues of dynamic layout across devices with
-different sizes, thereby ensuring layout consistency across layouts on different devices.
-
-The **GridRow** component is used in a grid layout, together with its child component [GridCol]{@link GridCol}.
-> **Child Components**
->
-> This component can contain the **GridCol** child component.
+The responsive grid layout provides rules for layout design and resolves issues of dynamic layout across devices with different sizes, thereby ensuring layout consistency across layouts on different devices. The **GridRow** component is used in a grid layout, together with its child component GridCol. > **Child Components** > > This component can contain the **GridCol** child component.
 
 ## GridRow
 
@@ -19,6 +13,8 @@ Creates a **GridRow** container.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,10 +32,10 @@ Creates a **GridRow** container.
 
 ## Summary
 
-- [BreakPoints](arkts-arkui-gridrow-breakpoints-i.md)
-- [GridRowColumnOption](arkts-arkui-gridrow-gridrowcolumnoption-i.md)
-- [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md)
-- [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md)
-- [GutterOption](arkts-arkui-gridrow-gutteroption-i.md)
-- [BreakpointsReference](arkts-arkui-gridrow-breakpointsreference-e.md)
-- [GridRowDirection](arkts-arkui-gridrow-gridrowdirection-e.md)
+- [BreakPoints](arkts-arkui-breakpoints-i.md)
+- [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
+- [GridRowOptions](arkts-arkui-gridrowoptions-i.md)
+- [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
+- [GutterOption](arkts-arkui-gutteroption-i.md)
+- [BreakpointsReference](arkts-arkui-breakpointsreference-e.md)
+- [GridRowDirection](arkts-arkui-gridrowdirection-e.md)

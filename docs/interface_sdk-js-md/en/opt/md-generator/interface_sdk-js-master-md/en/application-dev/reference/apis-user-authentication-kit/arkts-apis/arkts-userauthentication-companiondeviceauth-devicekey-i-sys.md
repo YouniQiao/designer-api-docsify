@@ -4,6 +4,8 @@ Defines the device service ID. It uniquely identifies a device and its user, inc
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-companionDeviceAuth-interface DeviceKey--><!--Device-companionDeviceAuth-interface DeviceKey-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -22,12 +24,13 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceId: string
 ```
 
-Device ID. It is a string that uniquely identifies a device. The format is determined by the value of  
-**deviceIdType**.
+Device ID. It is a string that uniquely identifies a device. The format is determined by the value of **deviceIdType**.
 
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +46,13 @@ Device ID. It is a string that uniquely identifies a device. The format is deter
 deviceIdType: number
 ```
 
-Enumerates device ID types. They are used to specify the type of the device service ID and can be extended based on [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md#DeviceIdType). For example, you can use **UNIFIED_DEVICE_ID(1)** to indicate the unified device ID or use the vendor-defined value (≥ 10000).
+Enumerates device ID types. They are used to specify the type of the device service ID and can be extended based on [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md#DeviceIdType-(System-API)). For example, you can use **UNIFIED_DEVICE_ID(1)** to indicate the unified device ID or use the vendor-defined value (≥ 10000).
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +73,8 @@ Device user ID. It is an integer greater than or equal to 0 and is used to disti
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -18,7 +18,7 @@ Saves a character string name and its value to the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setValue](ohos.settings#setValue)
+**Substitutes:** setValue
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -50,7 +50,7 @@ Saves a character string name and its value to the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setValue](ohos.settings#setValue)
+**Substitutes:** setValue
 
 **Model restriction:** This API can be used only in the FA model.
 

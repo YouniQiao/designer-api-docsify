@@ -2,7 +2,9 @@
 
 The **distributedAccount** module provides APIs for managing distributed accounts, including querying and updating account login states.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace distributedAccount--><!--Device-unnamed-declare namespace distributedAccount-End-->
 
@@ -20,7 +22,7 @@ import { distributedAccount } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getdistributedaccountability) |
+| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getDistributedAccountAbility) |
 
 ### Interfaces
 

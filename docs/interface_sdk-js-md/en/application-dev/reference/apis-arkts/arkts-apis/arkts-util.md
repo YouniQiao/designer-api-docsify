@@ -1,10 +1,24 @@
 # @ohos.util
 
-The util module provides common utility functions,such as TextEncoder and TextDecoder for string encoding and decoding,RationalNumber8+ for rational number operations, LRUCache9+ for cache management, ScopeHelper9+ for range determination,Base64Helper9+ for Base64 encoding and decoding, types8+ for built-in object type check,and replacement on methods.
+/*
+ Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace util--><!--Device-unnamed-declare namespace util-End-->
 
@@ -22,48 +36,61 @@ import { util } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md#callbackwrapper) | Takes an async function (or a function that returns a Promise) and returns a function following the error-first callback style. |
-| [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring) | Get the string name of the system errno. |
-| [format](arkts-arkts-util-format-f.md#format) | %s: String will be used to convert all values except BigInt, Object and -0. BigInt values will be represented with an n and Objects that have no user defined toString function are inspected using util.inspect() with options { depth: 0, colors: false, compact: 3 }.%d: Number will be used to convert all values except BigInt and Symbol.%i: parseInt(value, 10) is used for all values except BigInt and Symbol.%f: parseFloat(value) is used for all values except Bigint and Symbol.%j: JSON. Replaced with the string '[Circular]' if the argument contains circular references.%o: Object. A string representation of an object with generic JavaScript object formatting.Similar to util.inspect() with options { showHidden: true, showProxy: true}. This will show the full object including non-enumerable properties and proxies.%O: Object. A string representation of an object with generic JavaScript object formatting.%O: Object. A string representation of an object with generic JavaScript object formatting.Similar to util.inspect() without options. This will show the full object not including non-enumerable properties and proxies.%c: CSS. This specifier is ignored and will skip any CSS passed in.%%: single percent sign ('%'). This does not consume an argument.Returns: &lt;string&gt; The formatted string. |
-| [generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid) | Generate a random RFC 4122 version 4 binary UUID using a cryptographically secure random number generator. |
-| [generateRandomUUID](arkts-arkts-util-generaterandomuuid-f.md#generaterandomuuid) | Generate a random RFC 4122 version 4 UUID using a cryptographically secure random number generator. |
-| [getHash](arkts-arkts-util-gethash-f.md#gethash) | Get the hash code of an object. |
-| [getMainThreadStackTrace](arkts-arkts-util-getmainthreadstacktrace-f.md#getmainthreadstacktrace) | Get stack trace of main thread. |
-| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseuuid) | Parse a UUID from the string standard representation as described in the RFC 4122 version 4. |
-| [promisify](arkts-arkts-util-promisify-f.md#promisify) | Takes a function following the common error-first callback style, i.e taking an (err, value) =>callback as the last argument, and return a function that returns promises. |
+| [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md#callbackWrapper) | Calls back an asynchronous function. In the callback, the first parameter indicates the cause of the rejection (the value is **null** if the promise has been resolved), and the second parameter indicates the resolved value. > **NOTE：**> > - **original** must be an asynchronous function. If a non-asynchronous function is passed in, the function is not > intercepted, but the error message "callbackWrapper: The type of Parameter must be AsyncFunction" is displayed. > > - This API converts an async function that returns a promise into an error-first callback function. The function > returned by this API accepts a callback as its second input parameter. When this method is called, the original > function is executed first. When the promise of **original** returns **resolve**, the first parameter of the > callback function is **null**, and the second parameter is the value of **resolve**. When the promise of > **original** returns **reject**, the first parameter of the callback function is an error object, and the second > parameter is **null**. When **original** is a function without input parameters, the first input parameter of the > function returned by this API must be an invalid placeholder parameter. |
+| [errnoToString](arkts-arkts-util-errnotostring-f.md#errnoToString) | Obtains detailed information about a system error code. |
+| [format](arkts-arkts-util-format-f.md#format) | Formats a string by replacing the placeholders in it. |
+| [generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generateRandomBinaryUUID) | Uses a secure random number generator to generate a random universally unique identifier (UUID) of RFC 4122 version 4. |
+| [generateRandomUUID](arkts-arkts-util-generaterandomuuid-f.md#generateRandomUUID) | Uses a secure random number generator to generate a random universally unique identifier (UUID) of the string type in RFC 4122 version 4. To improve performance, this API uses cached UUIDs by default, in which **entropyCache** is set to **true**. A maximum of 128 random UUIDs can be cached. After all the 128 UUIDs in the cache are used, a new set of UUIDs is generated to maintain their random distribution. If you do not need to use the cached UUID, set **entropyCache** to **false**. |
+| [getErrorString](arkts-arkts-util-geterrorstring-f.md#getErrorString) | Obtains detailed information about a system error code. |
+| [getHash](arkts-arkts-util-gethash-f.md#getHash) | Obtains the hash value of an object. If no hash value has been obtained, a random hash value is generated, saved to the **hash** field of the object, and returned. If a hash value has been obtained, the hash value saved in the **hash** field is returned (the same value is returned for the same object). |
+| [getMainThreadStackTrace](arkts-arkts-util-getmainthreadstacktrace-f.md#getMainThreadStackTrace) | Obtains the stack trace information of the main thread. A maximum of 64 call frames can be returned. This API may affect the performance of the main thread. You are advised to use this API only when necessary, such as in log recording, error analysis, or debugging scenarios. |
+| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseUUID) | Converts a UUID of the string type generated by **generateRandomUUID** to a UUID generated by **generateRandomBinaryUUID**, as described in RFC 4122. |
+| [printf](arkts-arkts-util-printf-f.md#printf) | Formats a string by replacing the placeholders in it. |
+| [promiseWrapper](arkts-arkts-util-promisewrapper-f.md#promiseWrapper) | Receives a function that uses the error-first callback mode, that is, uses `(err, value) => callback` as the last parameter, and uses a promise to return the result. |
+| [promisify](arkts-arkts-util-promisify-f.md#promisify) | Receives a function that uses the error-first callback mode, that is, uses `(err, value) => callback` as the last parameter, and uses a promise to return the result. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [Base64Helper](arkts-arkts-util-base64helper-c.md) | Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 array using the Base64 encoding scheme. |
-| [LRUCache](arkts-arkts-util-lrucache-c.md) | Provides APIs to discard the least recently used data to make rooms for new elements when the cache is full.This class uses the Least Recently Used (LRU) algorithm,which believes that the recently used data may be accessed again in the near future and the least accessed data is the least valuable data and should be removed from the cache. |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | The rational number is mainly to compare rational numbers and obtain the numerator and denominator. |
+| [ArkTSVM](arkts-arkts-util-arktsvm-c.md) | A class that provides VM maintenance and test capabilities for developers. |
+| [Aspect](arkts-arkts-util-aspect-c.md) | Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be used to perform instrumentation or replacement on class methods. |
+| [AutoFinalizerCleaner](arkts-arkts-util-autofinalizercleaner-c.md) | A cleaner for releasing resources managed by developers through a developer-defined callback. |
+| [Base64](arkts-arkts-util-base64-c.md) | Decodes a string or Uint8Array containing Base64 data into a newly allocated Uint8Array. |
+| [Base64Helper](arkts-arkts-util-base64helper-c.md) | Provides encoding and decoding for Base64 and Base64URL. The Base64 encoding table contains 64 characters, which are the uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the special characters plus sign (+) and slash (/). During encoding, the original data is divided into groups of three bytes, and each group contains a 6-bit number. Then, the corresponding characters in the Base64 encoding table are used to represent these numbers. If the last group contains only one or two bytes, the equal sign (=) is used for padding. The Base64URL encoding table contains 64 characters, which are the uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the special characters plus sign (+) and slash (/). The Base64URL encoding result does not contain equal signs (=). |
+| [LRUCache](arkts-arkts-util-lrucache-c.md) | Provides APIs to discard the least recently used data to make rooms for new elements when the cache is full. This class uses the Least Recently Used (LRU) algorithm, which believes that the recently used data may be accessed again in the near future and the least accessed data is the least valuable data and should be removed from the cache. |
+| [LruBuffer](arkts-arkts-util-lrubuffer-c.md) | The LruBuffer algorithm replaces the least used data with new data when the buffer space is insufficient. |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Provides APIs to compare rational numbers and obtain numerators and denominators. For example, the **toString()** API can be used to convert a rational number into a string. |
+| [Scope](arkts-arkts-util-scope-c.md) | The Scope interface is used to describe the valid range of a field. |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Provides APIs to define the valid range of a field. The constructor of this class creates comparable objects with lower and upper limits. |
-| [StringDecoder](arkts-arkts-util-stringdecoder-c.md) | Provide the ability to decode binary streams into strings. The supported encoding types include: utf-8, iso-8859-2,koi8-r, macintosh, windows-1250, windows-1251, gbk, gb18030, big5, utf-16be, utf-16 le, etc. |
-| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | The TextDecoder represents a text decoder that accepts a string as input,decodes it in UTF-8 format, and outputs UTF-8 byte stream. |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) | The TextEncoder interface represents a text encoder.The encoder takes the byte stream as the input and outputs the String string. |
-| [types](arkts-arkts-util-types-c.md) | Check the type of parameter. |
+| [StringDecoder](arkts-arkts-util-stringdecoder-c.md) | Provides the capability of decoding binary streams into strings. The following encoding types are supported: utf-8, iso-8859-2, koi8-r, macintosh, windows-1250, windows-1251, gbk, gb18030, big5, utf-16be, and UTF-16le. |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | Provides APIs to decode byte arrays into strings. It supports multiple formats, including UTF-8, UTF-16LE, UTF-16BE , ISO-8859, and Windows-1251. |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | Provides APIs to encode strings into byte arrays. Multiple encoding formats are supported. When **TextEncoder** is used for encoding, the number of bytes occupied by a character varies according to the encoding format. You must explicitly specify the encoding format to obtain the required encoding result. |
+| [types](arkts-arkts-util-types-c.md) | Provides APIs to check different types of built-in objects, such as ArrayBuffer, Map, and Set, so as to avoid exceptions caused by type errors. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | Defines the decode with stream related options parameters. |
-| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Return encoded text. |
-| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | The ScopeComparable contains comparison methods. |
-| [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | Defines the TextDecoder related options parameters. |
+| [AutoFinalizer](arkts-arkts-util-autofinalizer-i.md) | Provides an interface that can be implemented for releasing a resource which is managed by developers through a developer-defined callback. |
+| [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | Describes the behavioral parameters for the **decodeToString** method when decoding byte streams. |
+| [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | Defines whether decoding follows data blocks. |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Encrypted information, including the number of read characters and the number of written bytes. |
+| [HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md) | Describes heap memory information of either an ArkTS-VM, or the shared heap memory of current process. |
+| [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Describes the heap memory threshold at which the registered callback is triggered after a GC. |
+| [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | Multi-thread detection functional parameter configuration |
+| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | The values of the **ScopeComparable** type are used to implement the **compareTo** method. Therefore, ensure that the input parameters are comparable. |
+| [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | Describes decoding-related options, which include **fatal** and **ignoreBOM**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Type](arkts-arkts-util-type-e.md) | The Type represents four different encoding formats for base64 |
+| [Type](arkts-arkts-util-type-e.md) | Enumerates the Base64 encoding formats. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [PromisifiedFunc](arkts-arkts-util-promisifiedfunc-t.md) | The type of promisify return function |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | A type used to denote ScopeComparable or number. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Defines the type of values in a **Scope** object. |
 

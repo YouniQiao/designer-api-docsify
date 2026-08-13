@@ -2,7 +2,9 @@
 
 The **deviceManager** module provides APIs for managing peripheral devices, including querying the peripheral device list and binding or unbinding a peripheral device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
 
@@ -20,23 +22,23 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#binddevice) |
-| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#binddevice-1) |
-| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#binddevicedriver) |
-| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#binddevicedriver-1) |
-| [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#binddriverwithdeviceid) |
-| [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) |
-| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbinddevice) |
-| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbinddevice-1) |
-| [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid) |
+| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#bindDevice) |
+| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#bindDevice) |
+| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#bindDeviceDriver) |
+| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#bindDeviceDriver) |
+| [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#bindDriverWithDeviceId) |
+| [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) |
+| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbindDevice) |
+| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbindDevice) |
+| [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbindDriverWithDeviceId) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [queryDeviceInfo](arkts-driverdevelopment-devicemanager-querydeviceinfo-f-sys.md#querydeviceinfo) |
-| [queryDriverInfo](arkts-driverdevelopment-devicemanager-querydriverinfo-f-sys.md#querydriverinfo) |
+| [queryDeviceInfo](arkts-driverdevelopment-devicemanager-querydeviceinfo-f-sys.md#queryDeviceInfo-(System-API)) |
+| [queryDriverInfo](arkts-driverdevelopment-devicemanager-querydriverinfo-f-sys.md#queryDriverInfo-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

@@ -1,12 +1,12 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an   
-**InputMethodController** instance is obtained via   
-[getController](arkts-ime-inputmethod-getcontroller-f.md#getController).
+A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getController).
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
 
@@ -20,26 +20,17 @@ import { inputMethod } from '@kit.IMEKit';
 
 ## hideSoftKeyboard
 
-ArkTS-Dyn:
-```TypeScript
-hideSoftKeyboard(displayId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 hideSoftKeyboard(displayId: long): Promise<void>
 ```
 
-Hides the soft keyboard on a specified screen. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to
-> hide the soft keyboard only when the edit box is focused.
+Hides the soft keyboard on a specified screen. This API uses a promise to return the result. > **NOTE：**> > This API can be called only when the edit box is attached to the input method. That is, it can be called to > hide the soft keyboard only when the edit box is focused.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
@@ -55,7 +46,7 @@ Hides the soft keyboard on a specified screen. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. |
+| displayId | long | Yes | Display ID. |
 
 **Return value:**
 
@@ -67,10 +58,10 @@ Hides the soft keyboard on a specified screen. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -87,26 +78,17 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 
 ## showSoftKeyboard
 
-ArkTS-Dyn:
-```TypeScript
-showSoftKeyboard(displayId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 showSoftKeyboard(displayId: long): Promise<void>
 ```
 
-Shows the soft keyboard on a specified screen. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to
-> show the soft keyboard only when the edit box is focused.
+Shows the soft keyboard on a specified screen. This API uses a promise to return the result. > **NOTE：**> > This API can be called only when the edit box is attached to the input method. That is, it can be called to > show the soft keyboard only when the edit box is focused.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
@@ -122,7 +104,7 @@ Shows the soft keyboard on a specified screen. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. |
+| displayId | long | Yes | Display ID. |
 
 **Return value:**
 
@@ -134,10 +116,10 @@ Shows the soft keyboard on a specified screen. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 

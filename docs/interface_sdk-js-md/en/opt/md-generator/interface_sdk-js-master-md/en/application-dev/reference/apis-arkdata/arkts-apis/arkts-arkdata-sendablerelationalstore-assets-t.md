@@ -8,6 +8,8 @@ Represent an array of [Assets](arkts-arkdata-sendablerelationalstore-asset-i.md#
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendableRelationalStore-type Assets = collections.Array<Asset>--><!--Device-sendableRelationalStore-type Assets = collections.Array<Asset>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

@@ -1,21 +1,14 @@
 # StackLayoutAlgorithm
 
-Stack layout algorithm class.
-
-> **NOTE：**
-> 
-> The object of the **StackLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as
-> the input parameter of the
-> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
-> layout algorithm.
+Stack layout algorithm class. > **NOTE：**> > The object of the **StackLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as > the input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
 **Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **Since:** 24
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export class StackLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export class StackLayoutAlgorithm implements LayoutAlgorithm-End-->
+<!--Device-unnamed-export class StackLayoutAlgorithm--><!--Device-unnamed-export class StackLayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +21,8 @@ constructor(option?: StackLayoutAlgorithmOptions)
 Constructs the stack layout algorithm class.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,18 +43,16 @@ Constructs the stack layout algorithm class.
 ## alignContent
 
 ```TypeScript
-public alignContent?: LocalizedAlignment
+@Trace public alignContent?: LocalizedAlignment
 ```
 
-Alignment mode of child components in the stack layout algorithm.
-
-Default value: **LocalizedAlignment.CENTER**
-
-Invalid values are treated as the default value.
+Alignment mode of child components in the stack layout algorithm. Default value: **LocalizedAlignment.CENTER** Invalid values are treated as the default value.
 
 **Type:** [LocalizedAlignment](arkts-arkui-localizedalignment-e.md)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,6 +60,6 @@ Invalid values are treated as the default value.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
-<!--Device-StackLayoutAlgorithm-public alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithm-public alignContent?: LocalizedAlignment-End-->
+<!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

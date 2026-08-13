@@ -4,6 +4,8 @@ Represents the text rectangle size, which is used to describe the width and heig
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-text-interface TextRectSize--><!--Device-text-interface TextRectSize-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -26,6 +28,8 @@ Height of the text rectangle, which is a floating-point value in physical pixels
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -45,6 +49,8 @@ Width of the text rectangle, which is a floating-point value in physical pixels 
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

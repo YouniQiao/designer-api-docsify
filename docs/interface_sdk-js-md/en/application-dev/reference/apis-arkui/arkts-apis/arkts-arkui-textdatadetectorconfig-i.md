@@ -1,10 +1,12 @@
 # TextDataDetectorConfig
 
-This configuration is only available for the [Text](./text) and [RichEditor](./rich_editor) components.
+This configuration is only available for the Text and RichEditor components.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface TextDataDetectorConfig--><!--Device-unnamed-declare interface TextDataDetectorConfig-End-->
 
@@ -16,15 +18,15 @@ This configuration is only available for the [Text](./text) and [RichEditor](./r
 color?: ResourceColor
 ```
 
-Color of the entity after successful text detection.
-
-Default value: **'#ff0a59f7'**
+Color of the entity after successful text detection. Default value: **'#ff0a59f7'**
 
 **Type:** ResourceColor
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,25 +42,15 @@ Default value: **'#ff0a59f7'**
 decoration?: DecorationStyleInterface
 ```
 
-Decoration style of the entity after successful text detection.
-
-Default value:
-
-{
-
- type: TextDecorationType.Underline,
-
- color: same as the entity
-
- style: TextDecorationStyle.SOLID
-
-}
+Decoration style of the entity after successful text detection. Default value: { type: TextDecorationType.Underline, color: same as the entity style: TextDecorationStyle.SOLID }
 
 **Type:** DecorationStyleInterface
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,19 +66,15 @@ Default value:
 enablePreviewMenu?: boolean
 ```
 
-Whether to enable the preview menu displayed when long-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.
-
-Default value: **false**
-
-When [copyOptions](RichEditorAttribute#copyOptions) is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu.
-
-This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1devices, TVs, and wearables.
+Whether to enable the preview menu displayed when long-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite. Default value: **false** When copyOptions is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu. This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1 devices, TVs, and wearables.
 
 **Type:** boolean
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +98,8 @@ Callback invoked when text recognition succeeds.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -131,6 +121,8 @@ Entity types for text recognition. Values **null** and **[]** indicate that all 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

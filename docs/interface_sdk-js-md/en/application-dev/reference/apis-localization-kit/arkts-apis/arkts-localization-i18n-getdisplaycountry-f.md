@@ -20,7 +20,7 @@ Obtains the localized name of the specified country/region.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDisplayCountry](arkts-localization-i18n-system-c.md#getDisplayCountry)
+**Substitutes:** [getDisplayCountry](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getDisplayCountry)
 
 <!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
 

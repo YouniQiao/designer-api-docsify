@@ -4,11 +4,13 @@
 export type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
 ```
 
-type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void注册应用角标使能状态变化的回调函数类型。
+type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void 注册应用角标使能状态变化的回调函数类型。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export interface LocaleItem--><!--Device-i18n-export interface LocaleItem-End-->
 
@@ -24,7 +26,9 @@ id在SystemLocaleManager的指定区域下的表示。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LocaleItem-displayName: string--><!--Device-LocaleItem-displayName: string-End-->
 
@@ -44,7 +48,9 @@ id: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LocaleItem-id: string--><!--Device-LocaleItem-id: string-End-->
 
@@ -64,7 +70,9 @@ id的本地名称。只有在表示语言相关信息时才存在该选项。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LocaleItem-localName?: string--><!--Device-LocaleItem-localName?: string-End-->
 
@@ -84,7 +92,9 @@ suggestionType: SuggestionType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LocaleItem-suggestionType: SuggestionType--><!--Device-LocaleItem-suggestionType: SuggestionType-End-->
 

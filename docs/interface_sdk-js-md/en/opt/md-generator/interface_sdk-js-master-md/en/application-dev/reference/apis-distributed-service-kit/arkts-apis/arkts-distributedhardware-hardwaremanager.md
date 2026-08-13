@@ -1,12 +1,10 @@
 # @ohos.distributedHardware.hardwareManager
 
-The **hardwareManager** module provides the capability of controlling distributed hardware, including pausing,resuming, and stopping the distributed hardware service on the controlled device.
+The **hardwareManager** module provides the capability of controlling distributed hardware, including pausing, resuming, and stopping the distributed hardware service on the controlled device. > **NOTE：**> The APIs provided by this module are system APIs.
 
-> **NOTE：**
+**Since:** 23
 
-> The APIs provided by this module are system APIs.
-
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hardwareManager--><!--Device-unnamed-declare namespace hardwareManager-End-->
 
@@ -27,9 +25,9 @@ import { hardwareManager } from '@kit.DistributedServiceKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md#pausedistributedhardware) |
-| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md#resumedistributedhardware) |
-| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md#stopdistributedhardware) |
+| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md#pauseDistributedHardware-(System-API)) |
+| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md#resumeDistributedHardware-(System-API)) |
+| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md#stopDistributedHardware-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

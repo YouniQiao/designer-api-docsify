@@ -16,6 +16,8 @@ Get the current input method subtype of a specified user.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype-End-->
@@ -41,7 +43,7 @@ Get the current input method subtype of a specified user.
 | Error Code ID |
 | --- |
 | 12800023 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12800025 |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 | 12800024 |

@@ -1,11 +1,12 @@
 # TypeCode
 
-从API version 12起，IPC新增[writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writeArrayBuffer)和  
-[readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readArrayBuffer)方法传递ArrayBuffer数据，传递数据时通过具体类型值来分辨业务是以哪一种TypedArray去进行数据的读写。类型码对应数值及含义如下。
+从API version 12起，IPC新增[writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writeArrayBuffer)和 [readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readArrayBuffer)方法传递ArrayBuffer数据，传递数据时通过具体类型值来分辨业务是以哪一种TypedArray去进行数据 的读写。类型码对应数值及含义如下。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-rpc-enum TypeCode--><!--Device-rpc-enum TypeCode-End-->
 
@@ -19,9 +20,11 @@ INT8_ARRAY = 0
 
 TypedArray类型为INT8_ARRAY，数据将以8位有符号整数格式进行读写，每个元素占用1字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-INT8_ARRAY = 0--><!--Device-TypeCode-INT8_ARRAY = 0-End-->
 
@@ -35,9 +38,11 @@ UINT8_ARRAY = 1
 
 TypedArray类型为UINT8_ARRAY，数据将以8位无符号整数格式进行读写，每个元素占用1字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-UINT8_ARRAY = 1--><!--Device-TypeCode-UINT8_ARRAY = 1-End-->
 
@@ -51,9 +56,11 @@ INT16_ARRAY = 2
 
 TypedArray类型为INT16_ARRAY，数据将以16位有符号整数格式进行读写，每个元素占用2字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-INT16_ARRAY = 2--><!--Device-TypeCode-INT16_ARRAY = 2-End-->
 
@@ -67,9 +74,11 @@ UINT16_ARRAY = 3
 
 TypedArray类型为UINT16_ARRAY，数据将以16位无符号整数格式进行读写，每个元素占用2字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-UINT16_ARRAY = 3--><!--Device-TypeCode-UINT16_ARRAY = 3-End-->
 
@@ -83,9 +92,11 @@ INT32_ARRAY = 4
 
 TypedArray类型为INT32_ARRAY，数据将以32位有符号整数格式进行读写，每个元素占用4字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-INT32_ARRAY = 4--><!--Device-TypeCode-INT32_ARRAY = 4-End-->
 
@@ -99,9 +110,11 @@ UINT32_ARRAY = 5
 
 TypedArray类型为UINT32_ARRAY，数据将以32位无符号整数格式进行读写，每个元素占用4字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-UINT32_ARRAY = 5--><!--Device-TypeCode-UINT32_ARRAY = 5-End-->
 
@@ -115,9 +128,11 @@ FLOAT32_ARRAY = 6
 
 TypedArray类型为FLOAT32_ARRAY，数据将以32位单精度浮点数格式进行读写，每个元素占用4字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-FLOAT32_ARRAY = 6--><!--Device-TypeCode-FLOAT32_ARRAY = 6-End-->
 
@@ -131,9 +146,11 @@ FLOAT64_ARRAY = 7
 
 TypedArray类型为FLOAT64_ARRAY，数据将以64位双精度浮点数格式进行读写，每个元素占用8字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-FLOAT64_ARRAY = 7--><!--Device-TypeCode-FLOAT64_ARRAY = 7-End-->
 
@@ -147,9 +164,11 @@ BIGINT64_ARRAY = 8
 
 TypedArray类型为BIGINT64_ARRAY，数据将以64位大整数格式进行读写，每个元素占用8字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-BIGINT64_ARRAY = 8--><!--Device-TypeCode-BIGINT64_ARRAY = 8-End-->
 
@@ -163,9 +182,11 @@ BIGUINT64_ARRAY = 9
 
 TypedArray类型为BIGUINT64_ARRAY，数据将以64位无符号大整数格式进行读写，每个元素占用8字节。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TypeCode-BIGUINT64_ARRAY = 9--><!--Device-TypeCode-BIGUINT64_ARRAY = 9-End-->
 

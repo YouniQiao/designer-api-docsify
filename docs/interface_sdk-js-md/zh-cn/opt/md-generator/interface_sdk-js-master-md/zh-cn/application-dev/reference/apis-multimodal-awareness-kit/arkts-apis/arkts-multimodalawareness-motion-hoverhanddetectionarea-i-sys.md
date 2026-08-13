@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-motion-export interface HoverHandDetectionArea--><!--Device-motion-export interface HoverHandDetectionArea-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
@@ -21,6 +23,8 @@ height: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ left: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HoverHandDetectionArea-left: int--><!--Device-HoverHandDetectionArea-left: int-End-->
@@ -62,6 +68,8 @@ top: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HoverHandDetectionArea-top: int--><!--Device-HoverHandDetectionArea-top: int-End-->
@@ -81,6 +89,8 @@ width: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -14,9 +14,11 @@ function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectI
 
 Obtains the preset vibration effect based on the device ID and vibrator ID to determine whether the preset vibration effect is supported.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo--><!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo-End-->
 
@@ -39,7 +41,7 @@ Obtains the preset vibration effect based on the device ID and vibrator ID to de
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
 ## Examples
 

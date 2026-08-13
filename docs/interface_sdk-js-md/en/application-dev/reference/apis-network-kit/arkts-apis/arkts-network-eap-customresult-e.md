@@ -2,9 +2,11 @@
 
 custom 802.1x result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eap-enum CustomResult--><!--Device-eap-enum CustomResult-End-->
 
@@ -18,9 +20,11 @@ RESULT_FAIL
 
 custom authentication finished and fail
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CustomResult-RESULT_FAIL--><!--Device-CustomResult-RESULT_FAIL-End-->
 
@@ -34,9 +38,11 @@ RESULT_NEXT
 
 custom authentication success for current step, go to next step
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CustomResult-RESULT_NEXT--><!--Device-CustomResult-RESULT_NEXT-End-->
 
@@ -50,9 +56,11 @@ RESULT_FINISH
 
 custom authentication finished and success
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CustomResult-RESULT_FINISH--><!--Device-CustomResult-RESULT_FINISH-End-->
 

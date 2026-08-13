@@ -14,11 +14,13 @@ export function getSysResourceManager(): ResourceManager
 
 Obtains a system resource management object for accessing preset system resources.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-resourceManager-export function getSysResourceManager(): ResourceManager--><!--Device-resourceManager-export function getSysResourceManager(): ResourceManager-End-->
 
@@ -34,7 +36,7 @@ Obtains a system resource management object for accessing preset system resource
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
+| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
 
 ## Examples
 

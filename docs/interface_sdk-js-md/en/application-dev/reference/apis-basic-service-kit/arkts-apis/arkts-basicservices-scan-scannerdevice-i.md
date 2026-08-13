@@ -2,9 +2,11 @@
 
 Defines the scanner.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-scan-interface ScannerDevice--><!--Device-scan-interface ScannerDevice-End-->
 
@@ -26,9 +28,11 @@ Name of the scanner.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerDevice-deviceName: string--><!--Device-ScannerDevice-deviceName: string-End-->
 
@@ -44,9 +48,11 @@ Discovery mode of the scanner.
 
 **Type:** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode--><!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode-End-->
 
@@ -62,9 +68,11 @@ Manufacturer of the scanner.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerDevice-manufacturer: string--><!--Device-ScannerDevice-manufacturer: string-End-->
 
@@ -80,9 +88,11 @@ Model of the scanner.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerDevice-model: string--><!--Device-ScannerDevice-model: string-End-->
 
@@ -98,9 +108,11 @@ Unique identifier of the scanner.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerDevice-scannerId: string--><!--Device-ScannerDevice-scannerId: string-End-->
 
@@ -116,9 +128,11 @@ Unique ID of the scanner.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerDevice-uniqueId: string--><!--Device-ScannerDevice-uniqueId: string-End-->
 

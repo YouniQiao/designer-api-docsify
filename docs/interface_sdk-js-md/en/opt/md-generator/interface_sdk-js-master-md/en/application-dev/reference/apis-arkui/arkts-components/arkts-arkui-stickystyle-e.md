@@ -4,6 +4,8 @@ Enumerates the sticky styles.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum StickyStyle--><!--Device-unnamed-declare enum StickyStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ None = 0
 In the **ListItemGroup** component, the header is not pinned to the top, and the footer is not pinned to the bottom.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,6 +40,8 @@ In the **ListItemGroup** component, the header is pinned to the top, and the foo
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -54,6 +60,8 @@ In the **ListItemGroup** component, the footer is pinned to the bottom, and the 
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -71,6 +79,8 @@ BOTH = 3
 In the **ListItemGroup** component, the header is pinned to the top, and the footer is pinned to the bottom.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

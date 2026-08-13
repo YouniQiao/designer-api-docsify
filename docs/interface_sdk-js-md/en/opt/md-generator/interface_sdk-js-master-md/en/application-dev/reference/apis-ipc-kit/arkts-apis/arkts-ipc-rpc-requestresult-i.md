@@ -2,7 +2,9 @@
 
 Defines the response to the request.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
 
@@ -24,7 +26,9 @@ Message code.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
 
@@ -40,7 +44,9 @@ data: MessageSequence
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
 
@@ -56,7 +62,9 @@ Error code.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
 
@@ -72,7 +80,9 @@ reply: MessageSequence
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
 

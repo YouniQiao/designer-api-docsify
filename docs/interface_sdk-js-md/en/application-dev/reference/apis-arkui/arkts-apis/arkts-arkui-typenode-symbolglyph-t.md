@@ -1,20 +1,24 @@
 # SymbolGlyph
 
 ```TypeScript
-type SymbolGlyph = SymbolGlyphFrameNode
+type SymbolGlyph = TypedFrameNode<SymbolGlyphInterface, SymbolGlyphAttribute>
 ```
 
-Define the FrameNode type for SymbolGlyph.
+Represents a FrameNode of the **SymbolGlyph** type.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type SymbolGlyph = SymbolGlyphFrameNode--><!--Device-typeNode-type SymbolGlyph = SymbolGlyphFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-typeNode-type SymbolGlyph = TypedFrameNode<SymbolGlyphInterface, SymbolGlyphAttribute>--><!--Device-typeNode-type SymbolGlyph = TypedFrameNode<SymbolGlyphInterface, SymbolGlyphAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SymbolGlyphFrameNode
+**Property type:** TypedFrameNode<SymbolGlyphInterface, SymbolGlyphAttribute>
 

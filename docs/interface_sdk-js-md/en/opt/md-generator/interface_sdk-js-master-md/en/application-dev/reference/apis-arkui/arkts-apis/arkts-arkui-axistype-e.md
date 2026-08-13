@@ -4,6 +4,8 @@ Enumerates the axis types for axis events.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AxisType--><!--Device-unnamed-declare enum AxisType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ VERTICAL_AXIS = 0
 Vertical scroll axis.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Horizontal scroll axis.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -53,6 +59,8 @@ PINCH_AXIS = 2
 Pinch axis.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Defines the abstract interface of albums.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface AbsAlbum--><!--Device-photoAccessHelper-interface AbsAlbum-End-->
 
@@ -22,7 +24,9 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 
 Fetch shared photo assets in an album.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
@@ -48,9 +52,9 @@ Fetch shared photo assets in an album.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## coverUriSource
@@ -63,7 +67,9 @@ Source URI of the album cover.
 
 **Type:** [CoverUriSource](arkts-medialibrary-photoaccesshelper-coverurisource-e-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly coverUriSource?: CoverUriSource--><!--Device-AbsAlbum-readonly coverUriSource?: CoverUriSource-End-->
 
@@ -83,9 +89,31 @@ Whether the album is hidden. **true** if hidden, **false** otherwise.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AbsAlbum-readonly hidden?: boolean--><!--Device-AbsAlbum-readonly hidden?: boolean-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## lpath
+
+```TypeScript
+readonly lpath?: string
+```
+
+Virtual path of the album. Albums and their virtual path values: - Camera application album: '/DCIM/Camera' - Screenshot application album: '/Pictures/Screenshots' - Screen recording application album: '/Pictures/Screenrecords' - User-created album: '/Pictures/Users/{Custom album name}'
+
+**Type:** string
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AbsAlbum-readonly lpath?: string--><!--Device-AbsAlbum-readonly lpath?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -101,7 +129,9 @@ Whether the album can be synced to cloud storage or family storage. **true** if 
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-AbsAlbum-readonly uploadStatus: boolean--><!--Device-AbsAlbum-readonly uploadStatus: boolean-End-->
 

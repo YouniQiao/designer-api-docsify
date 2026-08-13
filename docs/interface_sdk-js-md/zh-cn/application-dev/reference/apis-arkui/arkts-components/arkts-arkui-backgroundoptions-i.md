@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface BackgroundOptions--><!--Device-unnamed-declare interface BackgroundOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@
 align?: Alignment
 ```
 
-Set the alignment of the custom background and component.
-
-Anonymous Object Rectification.
+Set the alignment of the custom background and component. Anonymous Object Rectification.
 
 **类型：** Alignment
 
@@ -27,6 +27,8 @@ Anonymous Object Rectification.
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,6 +53,8 @@ The set of edges for which to ignore layout safe area. To respect safe area inse
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

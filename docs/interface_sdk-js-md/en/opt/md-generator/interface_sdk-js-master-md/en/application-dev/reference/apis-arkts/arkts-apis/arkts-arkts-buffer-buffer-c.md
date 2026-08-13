@@ -2,7 +2,9 @@
 
 The Buffer object is a method of handling buffers dedicated to binary data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
 
@@ -30,6 +32,8 @@ Compares this **Buffer** object with another object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1-End-->
@@ -56,7 +60,7 @@ Compares this **Buffer** object with another object.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -74,15 +78,63 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 // Output: 1
 ```
 
+## compare
+
+```TypeScript
+compare(
+      target: Buffer | Uint8Array,
+      targetStart?: number,
+      targetEnd?: number,
+      sourceStart?: number,
+      sourceEnd?: number
+    ): number
+```
+
+Compares buf with target and returns a number indicating whether buf comes before, after, or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each Buffer.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
+| targetStart | number | No |
+| targetEnd | number | No |
+| sourceStart | number | No |
+| sourceEnd | number | No |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+
 ## copy
 
 ```TypeScript
 copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer**object.
+Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -109,7 +161,7 @@ Copies data at the specified position in this **Buffer** object to the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -136,7 +188,9 @@ entries(): IterableIterator<[number, number]>
 
 Creates and returns an iterator that contains key-value pairs of this **Buffer** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -148,8 +202,8 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
 
 ## Examples
 
@@ -181,7 +235,9 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 Checks whether this **Buffer** object is the same as another **Buffer** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -229,7 +285,9 @@ fill(
 
 Fills this **Buffer** object at the specified position. By default, data is filled cyclically.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -256,7 +314,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## includes
 
@@ -266,7 +324,9 @@ includes(value: string | number | number | number | Buffer | Uint8Array, byteOff
 
 Checks whether this **Buffer** object contains the specified value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -279,7 +339,7 @@ Checks whether this **Buffer** object contains the specified value.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
-| [byteOffset](#byteoffset) | number | No |
+| [byteOffset](#byteOffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**
@@ -294,10 +354,11 @@ Checks whether this **Buffer** object contains the specified value.
 indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found,  
-**-1** is returned.
+Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -310,7 +371,7 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
-| [byteOffset](#byteoffset) | number | No |
+| [byteOffset](#byteOffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**
@@ -327,7 +388,9 @@ keys(): IterableIterator<number>
 
 Creates and returns an iterator that contains the keys of this **Buffer** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -339,7 +402,7 @@ Creates and returns an iterator that contains the keys of this **Buffer** object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## Examples
 
@@ -367,10 +430,11 @@ Output: 0
 lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found,  
-**-1** is returned.
+Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -383,7 +447,7 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
-| [byteOffset](#byteoffset) | number | No |
+| [byteOffset](#byteOffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**
@@ -400,7 +464,9 @@ readBigInt64BE(offset?: number): bigint
 
 Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -424,7 +490,7 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -450,7 +516,9 @@ readBigInt64LE(offset?: number): bigint
 
 Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -474,7 +542,7 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -500,7 +568,9 @@ readBigUInt64BE(offset?: number): bigint
 
 Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -524,7 +594,7 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -549,7 +619,9 @@ readBigUInt64LE(offset?: number): bigint
 
 Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -573,7 +645,7 @@ Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -599,7 +671,9 @@ readDoubleBE(offset?: number): number
 
 Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -623,7 +697,7 @@ Reads a 64-bit, big-endian, double-precision floating-point number from this **B
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -647,7 +721,9 @@ readDoubleLE(offset?: number): number
 
 Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -671,7 +747,7 @@ Reads a 64-bit, little-endian, double-precision floating-point number from this 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -695,7 +771,9 @@ readFloatBE(offset?: number): number
 
 Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -719,7 +797,7 @@ Reads a 32-bit, big-endian, single-precision floating-point number from this **B
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -743,7 +821,9 @@ readFloatLE(offset?: number): number
 
 Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -767,7 +847,7 @@ Reads a 32-bit, little-endian, single-precision floating-point number from this 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -791,7 +871,9 @@ readInt16BE(offset?: number): number
 
 Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -815,7 +897,7 @@ Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -839,7 +921,9 @@ readInt16LE(offset?: number): number
 
 Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -863,7 +947,7 @@ Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -887,7 +971,9 @@ readInt32BE(offset?: number): number
 
 Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -911,7 +997,7 @@ Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -935,7 +1021,9 @@ readInt32LE(offset?: number): number
 
 Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -959,7 +1047,7 @@ Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -983,7 +1071,9 @@ readInt8(offset?: number): number
 
 Reads an 8-bit signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1007,7 +1097,7 @@ Reads an 8-bit signed integer from this **Buffer** object at the specified offse
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1033,7 +1123,9 @@ readIntBE(offset: number, byteLength: number): number
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1058,7 +1150,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1083,7 +1175,9 @@ readIntLE(offset: number, byteLength: number): number
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result as a little-endian, two's complement signed value that supports up to 48 bits of precision.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1108,7 +1202,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1132,7 +1226,9 @@ readUInt16BE(offset?: number): number
 
 Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1156,7 +1252,7 @@ Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1182,7 +1278,9 @@ readUInt16LE(offset?: number): number
 
 Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1206,7 +1304,7 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1232,7 +1330,9 @@ readUInt32BE(offset?: number): number
 
 Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1256,7 +1356,7 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1280,7 +1380,9 @@ readUInt32LE(offset?: number): number
 
 Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1304,7 +1406,7 @@ Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1328,7 +1430,9 @@ readUInt8(offset?: number): number
 
 Reads an 8-bit unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1352,7 +1456,7 @@ Reads an 8-bit unsigned integer from this **Buffer** object at the specified off
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1378,7 +1482,9 @@ readUIntBE(offset: number, byteLength: number): number
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, big-endian integer that supports up to 48 bits of precision.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1403,7 +1509,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1427,7 +1533,9 @@ readUIntLE(offset: number, byteLength: number): number
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, little-endian integer that supports up to 48 bits of precision.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1452,7 +1560,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1476,7 +1584,9 @@ subarray(start?: number, end?: number): Buffer
 
 Truncates this **Buffer** object from the specified position to create a new **Buffer** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1520,7 +1630,9 @@ swap16(): Buffer
 
 Converts this **Buffer** object into an array of unsigned 16-bit integers and swaps the byte order in place.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1538,7 +1650,7 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 | Error Code ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1561,7 +1673,9 @@ swap32(): Buffer
 
 Converts this **Buffer** object into an array of unsigned 32-bit integers and swaps the byte order in place.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1579,7 +1693,7 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 | Error Code ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1602,7 +1716,9 @@ swap64(): Buffer
 
 Converts this **Buffer** object into an array of unsigned 64-bit integers and swaps the byte order in place.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1620,7 +1736,7 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 | Error Code ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1645,6 +1761,8 @@ Converts this **Buffer** object into a JSON object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
@@ -1668,6 +1786,30 @@ console.info(JSON.stringify(obj));
 // Output: {"type":"Buffer","data":[1,2,3,4,5]}
 ```
 
+## toJSON
+
+```TypeScript
+toJSON(): jsonx.JsonElement
+```
+
+Converts this Buffer instance into a JsonElement.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Buffer-toJSON(): jsonx.JsonElement--><!--Device-Buffer-toJSON(): jsonx.JsonElement-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| jsonx.JsonElement |
+
 ## toString
 
 ```TypeScript
@@ -1677,6 +1819,8 @@ toString(encoding?: string, start?: number, end?: number): string
 Converts the data at the specified position in this **Buffer** object into a string in the specified encoding format.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1711,6 +1855,66 @@ console.info(buf1.toString('utf-8'));
 // Output: abcdefghijklmnopqrstuvwxyz
 ```
 
+## toString
+
+```TypeScript
+toString(): string
+```
+
+Decodes buf to a string according to the specified character encoding in encoding
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-Buffer-toString(): string--><!--Device-Buffer-toString(): string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## toString
+
+```TypeScript
+toString(encoding?: BufferEncoding, start?: number, end?: number): string
+```
+
+Decodes buf to a string according to the specified character encoding in encoding
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string--><!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
+| start | number | No |
+| end | number | No |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
 ## values
 
 ```TypeScript
@@ -1719,7 +1923,9 @@ values(): IterableIterator<number>
 
 Creates and returns an iterator that contains the values of this **Buffer** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1731,7 +1937,7 @@ Creates and returns an iterator that contains the values of this **Buffer** obje
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## Examples
 
@@ -1763,7 +1969,9 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 Writes a string of the specified length to this **Buffer** object at the specified position in the given encoding format.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1790,7 +1998,7 @@ Writes a string of the specified length to this **Buffer** object at the specifi
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1816,7 +2024,9 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1841,7 +2051,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1862,7 +2072,9 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1887,7 +2099,7 @@ Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1908,7 +2120,9 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1933,7 +2147,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1954,7 +2168,9 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1979,7 +2195,7 @@ Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object a
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2000,7 +2216,9 @@ writeDoubleBE(value: number, offset?: number): number
 
 Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2025,7 +2243,7 @@ Writes a 64-bit, big-endian, double-precision floating-point number to this **Bu
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2046,7 +2264,9 @@ writeDoubleLE(value: number, offset?: number): number
 
 Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2071,7 +2291,7 @@ Writes a 64-bit, little-endian, double-precision floating-point number to this *
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2092,7 +2312,9 @@ writeFloatBE(value: number, offset?: number): number
 
 Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2117,7 +2339,7 @@ Writes a 32-bit, big-endian, single-precision floating-point number to this **Bu
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2138,7 +2360,9 @@ writeFloatLE(value: number, offset?: number): number
 
 Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2163,7 +2387,7 @@ Writes a 32-bit, little-endian, single-precision floating-point number to this *
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2184,7 +2408,9 @@ writeInt16BE(value: number, offset?: number): number
 
 Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2209,7 +2435,7 @@ Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2230,7 +2456,9 @@ writeInt16LE(value: number, offset?: number): number
 
 Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2255,7 +2483,7 @@ Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2276,7 +2504,9 @@ writeInt32BE(value: number, offset?: number): number
 
 Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2301,7 +2531,7 @@ Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2322,7 +2552,9 @@ writeInt32LE(value: number, offset?: number): number
 
 Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2347,7 +2579,7 @@ Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2368,7 +2600,9 @@ writeInt8(value: number, offset?: number): number
 
 Writes an 8-bit signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2393,7 +2627,7 @@ Writes an 8-bit signed integer to this **Buffer** object at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2417,7 +2651,9 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 Writes a big-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2443,7 +2679,7 @@ Writes a big-endian signed value of the specified length to this **Buffer** obje
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2464,7 +2700,9 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 Writes a little-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2490,7 +2728,7 @@ Writes a little-endian signed value of the specified length to this **Buffer** o
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2511,7 +2749,9 @@ writeUInt16BE(value: number, offset?: number): number
 
 Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2536,7 +2776,7 @@ Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2560,7 +2800,9 @@ writeUInt16LE(value: number, offset?: number): number
 
 Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2585,7 +2827,7 @@ Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2609,7 +2851,9 @@ writeUInt32BE(value: number, offset?: number): number
 
 Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2634,7 +2878,7 @@ Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2655,7 +2899,9 @@ writeUInt32LE(value: number, offset?: number): number
 
 Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2680,7 +2926,7 @@ Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2701,7 +2947,9 @@ writeUInt8(value: number, offset?: number): number
 
 Writes an 8-bit unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2726,7 +2974,7 @@ Writes an 8-bit unsigned integer to this **Buffer** object at the specified offs
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2756,7 +3004,9 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 Writes an unsigned big-endian value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2782,7 +3032,7 @@ Writes an unsigned big-endian value of the specified length to this **Buffer** o
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2803,7 +3053,9 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 Writes an unsigned little-endian value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2829,7 +3081,7 @@ Writes an unsigned little-endian value of the specified length to this **Buffer*
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2854,6 +3106,8 @@ buffer: ArrayBuffer
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
@@ -2872,6 +3126,8 @@ Offset of the **Buffer** object in the memory pool.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-byteOffset: number--><!--Device-Buffer-byteOffset: number-End-->
@@ -2889,6 +3145,8 @@ Length of the **Buffer** object, in bytes.
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

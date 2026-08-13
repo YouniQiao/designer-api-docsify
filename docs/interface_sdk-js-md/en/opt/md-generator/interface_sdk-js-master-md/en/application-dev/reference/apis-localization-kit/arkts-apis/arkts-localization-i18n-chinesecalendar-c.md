@@ -1,12 +1,14 @@
 # ChineseCalendar
 
-Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month.
+Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar, such as leap month.
 
 **Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md#Calendar)
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export class ChineseCalendar extends Calendar--><!--Device-i18n-export class ChineseCalendar extends Calendar-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export class ChineseCalendar--><!--Device-i18n-export class ChineseCalendar-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -26,6 +28,8 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -38,8 +42,8 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [gregorianYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | Yes |
-| [cyclicalYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | Yes |
+| [gregorianYear](../../apis-na/arkts-apis/arkts-na-i18n-chinesecalendartime-i.md) | number | Yes |
+| [cyclicalYear](../../apis-na/arkts-apis/arkts-na-i18n-chinesecalendartime-i.md) | number | Yes |
 | month | number | Yes |
 
 **Return value:**
@@ -52,7 +56,7 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 | Error Code ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## setChineseCalendarTime
 
@@ -63,6 +67,8 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCalendar object.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

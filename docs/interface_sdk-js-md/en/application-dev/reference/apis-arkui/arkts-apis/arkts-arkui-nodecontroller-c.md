@@ -1,72 +1,80 @@
 # NodeController
 
-Defines the controller of the node container. Provides lifecycle callbacks for the associated NodeContainer and methods to control the child node of the NodeContainer.
+The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component. > **NOTE：**> > - NodeController objects do not support JSON serialization.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-export declare abstract class NodeController--><!--Device-unnamed-export declare abstract class NodeController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export abstract class NodeController--><!--Device-unnamed-export abstract class NodeController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToAppear
 
 ```TypeScript
-aboutToAppear(): void
+aboutToAppear?(): void
 ```
 
-AboutToAppear Method. Executed when the associated NodeContainer is aboutToAppear.
+Called after the NodeContainer component bound to this **NodeController** instance is attached and about to appear. > **NOTE：**> > For details about the callback timing, see onAppear.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NodeController-aboutToAppear(): void--><!--Device-NodeController-aboutToAppear(): void-End-->
+<!--Device-NodeController-aboutToAppear?(): void--><!--Device-NodeController-aboutToAppear?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToDisappear
 
 ```TypeScript
-aboutToDisappear(): void
+aboutToDisappear?(): void
 ```
 
-AboutToDisappear Method. Executed before the associated NodeContainer is destroyed.
+Called when the NodeContainer component bound to this **NodeController** instance is destroyed. > **NOTE：**> > For details about the callback timing, see onDisAppear.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NodeController-aboutToDisappear(): void--><!--Device-NodeController-aboutToDisappear(): void-End-->
+<!--Device-NodeController-aboutToDisappear?(): void--><!--Device-NodeController-aboutToDisappear?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToResize
 
 ```TypeScript
-aboutToResize(size: Size): void
+aboutToResize?(size: Size): void
 ```
 
-AboutToResize Method. Executed when the associated NodeContainer performs the measure method.
+Called when the NodeContainer component bound to this **NodeController** instance is resized.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NodeController-aboutToResize(size: Size): void--><!--Device-NodeController-aboutToResize(size: Size): void-End-->
+<!--Device-NodeController-aboutToResize?(size: Size): void--><!--Device-NodeController-aboutToResize?(size: Size): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +82,7 @@ AboutToResize Method. Executed when the associated NodeContainer performs the me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](arkts-arkui-graphics-size-i.md) | Yes | size used to resize |
+| size | [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | Yes | Width and height of the component, in vp. |
 
 ## makeNode
 
@@ -82,15 +90,17 @@ AboutToResize Method. Executed when the associated NodeContainer performs the me
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-MakeNode Method. Used to build a node tree and return a FrameNode or null, and attach the return result to the associated NodeContainer.Executed when the associated NodeContainer is created or the rebuild function is called.
+Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. > **NOTE：**> > NodeContainer does not support cross-instance reuse. If > NodeContainer is reused across instances and > [NodeController](#NodeController) of NodeContainer > triggers the [makeNode](#makeNode) callback method, the > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object in the input parameter may be undefined. In this case, you need > to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object in the input parameter is undefined, which > prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when > the input parameter is used.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeController-abstract makeNode(uiContext: UIContext): FrameNode | null--><!--Device-NodeController-abstract makeNode(uiContext: UIContext): FrameNode | null-End-->
 
@@ -100,51 +110,55 @@ MakeNode Method. Used to build a node tree and return a FrameNode or null, and a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to makeNode |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context of the bound NodeContainer component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | Returns a FrameNode or null. |
+| [FrameNode](arkts-arkui-framenode-c.md) | FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer]{ |
 
 ## onAttach
 
 ```TypeScript
-onAttach(): void
+onAttach?(): void
 ```
 
-OnAttach Method. Executed when the associated NodeContainer is attached to the main tree.
+Called when the NodeContainer component bound to this **NodeController** instance is attached to the main node tree. > **NOTE：**> > For details about the callback timing, see onAttach.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-NodeController-onAttach(): void--><!--Device-NodeController-onAttach(): void-End-->
+<!--Device-NodeController-onAttach?(): void--><!--Device-NodeController-onAttach?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onBind
 
 ```TypeScript
-onBind(containerId: long): void
+onBind?(containerId: number): void
 ```
 
-OnBind Method. Executed when the NodeController is bound to a NodeContainer.
+Called after this **NodeController** instance is bound to a NodeContainer component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-NodeController-onBind(containerId: long): void--><!--Device-NodeController-onBind(containerId: long): void-End-->
+<!--Device-NodeController-onBind?(containerId: number): void--><!--Device-NodeController-onBind?(containerId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,45 +166,49 @@ OnBind Method. Executed when the NodeController is bound to a NodeContainer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | the uniqueId of the NodeContainer. |
+| containerId | number | Yes | ID of the NodeContainer component to which the **NodeController** instance is bound. |
 
 ## onDetach
 
 ```TypeScript
-onDetach(): void
+onDetach?(): void
 ```
 
-OnDetach Method. Executed when the associated NodeContainer is detached from the main tree.
+Called when the NodeContainer component bound to this **NodeController** instance is detached from the main node tree. > **NOTE：**> > For details about the callback timing, see onDetach.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-NodeController-onDetach(): void--><!--Device-NodeController-onDetach(): void-End-->
+<!--Device-NodeController-onDetach?(): void--><!--Device-NodeController-onDetach?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onTouchEvent
 
 ```TypeScript
-onTouchEvent(event: TouchEvent): void
+onTouchEvent?(event: TouchEvent): void
 ```
 
-OnTouchEvent Method. Executed when associated NodeContainer is touched.
+Called when the NodeContainer component bound to this **NodeController** instance receives a touch event.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NodeController-onTouchEvent(event: TouchEvent): void--><!--Device-NodeController-onTouchEvent(event: TouchEvent): void-End-->
+<!--Device-NodeController-onTouchEvent?(event: TouchEvent): void--><!--Device-NodeController-onTouchEvent?(event: TouchEvent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,25 +216,27 @@ OnTouchEvent Method. Executed when associated NodeContainer is touched.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | TouchEvent | Yes | The TouchEvent when associated NodeContainer is touched. |
+| event | TouchEvent | Yes | Touch event. |
 
 ## onUnbind
 
 ```TypeScript
-onUnbind(containerId: long): void
+onUnbind?(containerId: number): void
 ```
 
-OnUnbind Method. Executed when the NodeController is unbound with the NodeContainer.
+Called after this **NodeController** instance is unbound from a NodeContainer component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-NodeController-onUnbind(containerId: long): void--><!--Device-NodeController-onUnbind(containerId: long): void-End-->
+<!--Device-NodeController-onUnbind?(containerId: number): void--><!--Device-NodeController-onUnbind?(containerId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -224,25 +244,27 @@ OnUnbind Method. Executed when the NodeController is unbound with the NodeContai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | the uniqueId of the NodeContainer. |
+| containerId | number | Yes | ID of the NodeContainer component from which the **NodeController** instance is unbound. |
 
 ## onWillBind
 
 ```TypeScript
-onWillBind(containerId: long): void
+onWillBind?(containerId: number): void
 ```
 
-OnWillBind Method. Executed before the NodeController is bound to a NodeContainer.
+Called when this **NodeController** instance is about to be bound to a NodeContainer component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-NodeController-onWillBind(containerId: long): void--><!--Device-NodeController-onWillBind(containerId: long): void-End-->
+<!--Device-NodeController-onWillBind?(containerId: number): void--><!--Device-NodeController-onWillBind?(containerId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -250,25 +272,27 @@ OnWillBind Method. Executed before the NodeController is bound to a NodeContaine
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | the uniqueId of the NodeContainer. |
+| containerId | number | Yes | ID of the NodeContainer component to which the **NodeController** instance is about to be bound. |
 
 ## onWillUnbind
 
 ```TypeScript
-onWillUnbind(containerId: long): void
+onWillUnbind?(containerId: number): void
 ```
 
-OnWillUnbind Method. Executed before the NodeController is unbound with the NodeContainer.
+Called when this **NodeController** instance is about to be unbound from a NodeContainer component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-NodeController-onWillUnbind(containerId: long): void--><!--Device-NodeController-onWillUnbind(containerId: long): void-End-->
+<!--Device-NodeController-onWillUnbind?(containerId: number): void--><!--Device-NodeController-onWillUnbind?(containerId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -276,7 +300,7 @@ OnWillUnbind Method. Executed before the NodeController is unbound with the Node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | the uniqueId of the NodeContainer. |
+| containerId | number | Yes | ID of the NodeContainer component from which the **NodeController** instance is about to be unbound. |
 
 ## rebuild
 
@@ -284,15 +308,17 @@ OnWillUnbind Method. Executed before the NodeController is unbound with the Node
 rebuild(): void
 ```
 
-Rebuild Method. Used to re-invoke the makeNode method.
+Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makeNode) API again to change child nodes. > **NOTE：**> > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound > NodeContainer. > > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for > example, during event callbacks, you can use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runScopedTask) method of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to explicitly define the UI context at the time of the call.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeController-rebuild(): void--><!--Device-NodeController-rebuild(): void-End-->
 

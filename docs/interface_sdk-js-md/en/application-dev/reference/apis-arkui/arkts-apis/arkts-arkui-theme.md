@@ -27,5 +27,5 @@ import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomThem
 | Name | Description |
 | --- | --- |
 | [CustomColors](arkts-arkui-customcolors-t.md) | Defines the struct of CustomColors. |
-| [CustomDarkColors](arkts-arkui-customdarkcolors-t.md) | Defines a struct for custom dark theme colors. |
+| [CustomDarkColors](arkts-arkui-customdarkcolors-t.md) | Defines the struct of CustomDarkColors. |
 

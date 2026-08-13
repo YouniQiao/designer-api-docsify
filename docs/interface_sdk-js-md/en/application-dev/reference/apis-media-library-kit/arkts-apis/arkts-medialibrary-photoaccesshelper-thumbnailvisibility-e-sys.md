@@ -2,9 +2,11 @@
 
 Enumerates the visibility statuses of thumbnails.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum ThumbnailVisibility--><!--Device-photoAccessHelper-enum ThumbnailVisibility-End-->
 
@@ -20,9 +22,11 @@ INVISIBLE = 0
 
 Unable to access thumbnail
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailVisibility-INVISIBLE = 0--><!--Device-ThumbnailVisibility-INVISIBLE = 0-End-->
 
@@ -38,9 +42,11 @@ VISIBLE = 1
 
 able to access thumbnail
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailVisibility-VISIBLE = 1--><!--Device-ThumbnailVisibility-VISIBLE = 1-End-->
 

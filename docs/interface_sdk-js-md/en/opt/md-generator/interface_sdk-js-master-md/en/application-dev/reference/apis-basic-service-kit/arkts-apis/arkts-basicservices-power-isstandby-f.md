@@ -14,7 +14,9 @@ function isStandby(): boolean
 
 Checks whether the device is in standby mode.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-power-function isStandby(): boolean--><!--Device-power-function isStandby(): boolean-End-->
 
@@ -30,7 +32,7 @@ Checks whether the device is in standby mode.
 
 | Error Code ID |
 | --- |
-| [4900101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
 
 ## Examples
 

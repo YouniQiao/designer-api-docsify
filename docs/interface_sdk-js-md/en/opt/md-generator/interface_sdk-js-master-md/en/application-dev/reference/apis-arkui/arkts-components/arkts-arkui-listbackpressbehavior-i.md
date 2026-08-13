@@ -4,6 +4,8 @@ Defines the system back button behavior of the **List** component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ListBackPressBehavior--><!--Device-unnamed-declare interface ListBackPressBehavior-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Whether to close the swipe menu when back key is pressed.
 **Default:** true
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

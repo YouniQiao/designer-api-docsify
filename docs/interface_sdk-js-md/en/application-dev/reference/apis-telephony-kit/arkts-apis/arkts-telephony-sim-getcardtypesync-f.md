@@ -14,9 +14,11 @@ function getCardTypeSync(slotId: int): CardType
 
 Obtains the type of the SIM card inserted in a specified slot.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getCardTypeSync(slotId: int): CardType--><!--Device-sim-function getCardTypeSync(slotId: int): CardType-End-->
 
@@ -26,7 +28,7 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **Return value:**
 

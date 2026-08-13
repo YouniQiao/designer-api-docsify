@@ -2,9 +2,11 @@
 
 Defines custom cursor resources.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pointer-interface CustomCursor--><!--Device-pointer-interface CustomCursor-End-->
 
@@ -22,14 +24,15 @@ import { pointer } from '@kit.InputKit';
 focusX?: int
 ```
 
-Horizontal coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is  
-**0** when this parameter is omitted.
+Horizontal coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size. The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is **0** when this parameter is omitted.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CustomCursor-focusX?: int--><!--Device-CustomCursor-focusX?: int-End-->
 
@@ -41,14 +44,15 @@ Horizontal coordinate of the custom pointer focus, in px. This coordinate is lim
 focusY?: int
 ```
 
-Vertical coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is  
-**0** when this parameter is omitted.
+Vertical coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size. The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is **0** when this parameter is omitted.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CustomCursor-focusY?: int--><!--Device-CustomCursor-focusY?: int-End-->
 
@@ -64,9 +68,11 @@ Pixel map. The minimum size is subject to the minimum limit of the image. The ma
 
 **Type:** image.PixelMap
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CustomCursor-pixelMap: image.PixelMap--><!--Device-CustomCursor-pixelMap: image.PixelMap-End-->
 

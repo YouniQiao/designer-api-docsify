@@ -12,11 +12,13 @@ import { fastbuffer } from '@kit.ArkTS';
 function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number
 ```
 
-Returns the byte length of a string when encoded using `encoding`.This is not the same as [`String.prototype.length`], which does not account for the encoding that is used to convert the string into bytes.
+Returns the byte length of a string when encoded using `encoding`. This is not the same as [`String.prototype.length`], which does not account for the encoding that is used to convert the string into bytes.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-serial-enum DataBits--><!--Device-serial-enum DataBits-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
@@ -17,6 +19,8 @@ FIVE = 5
 5位数据位
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ SIX = 6
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataBits-SIX = 6--><!--Device-DataBits-SIX = 6-End-->
@@ -50,6 +56,8 @@ SEVEN = 7
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataBits-SEVEN = 7--><!--Device-DataBits-SEVEN = 7-End-->
@@ -65,6 +73,8 @@ EIGHT = 8
 8位数据位
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

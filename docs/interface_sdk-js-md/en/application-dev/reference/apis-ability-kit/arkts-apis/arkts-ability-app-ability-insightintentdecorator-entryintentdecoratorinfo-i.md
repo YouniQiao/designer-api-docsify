@@ -1,7 +1,6 @@
 # EntryIntentDecoratorInfo
 
-Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and is used to describe the parameters supported by the  
-[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry) decorator.
+Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and is used to describe the parameters supported by the @InsightIntentEntry decorator.
 
 **Inheritance/Implementation:** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo)
 
@@ -9,7 +8,9 @@ Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecor
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-<!--Device-unnamed-declare interface EntryIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface EntryIntentDecoratorInfo extends IntentDecoratorInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface EntryIntentDecoratorInfo--><!--Device-unnamed-declare interface EntryIntentDecoratorInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -33,6 +34,8 @@ Name of the ability bound to the intent.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -54,6 +57,8 @@ Execution mode of the intent call, that is, execution mode supported when the bo
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

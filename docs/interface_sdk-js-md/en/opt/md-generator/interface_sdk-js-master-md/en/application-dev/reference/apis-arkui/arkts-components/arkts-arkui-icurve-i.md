@@ -4,6 +4,8 @@ Interface for curve object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ICurve--><!--Device-unnamed-interface ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ interpolate(fraction : number) : number
 Calculates the interpolated value along the curve at the specified normalized time point.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

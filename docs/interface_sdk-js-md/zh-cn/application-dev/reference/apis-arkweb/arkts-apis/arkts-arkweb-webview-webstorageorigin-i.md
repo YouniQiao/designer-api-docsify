@@ -1,10 +1,12 @@
 # WebStorageOrigin
 
-Provides basic information of web storage.
+提供Web SQL数据库的使用信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface WebStorageOrigin--><!--Device-webview-interface WebStorageOrigin-End-->
 
@@ -16,13 +18,17 @@ Provides basic information of web storage.
 origin: string
 ```
 
-Url source.
+指定源的字符串索引。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorageOrigin-origin: string--><!--Device-WebStorageOrigin-origin: string-End-->
 
@@ -31,36 +37,44 @@ Url source.
 ## quota
 
 ```TypeScript
-quota: double
+quota: number
 ```
 
-the callback of getOriginUsage. Unit: byte.
+指定源的存储配额。 单位：byte。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebStorageOrigin-quota: double--><!--Device-WebStorageOrigin-quota: double-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorageOrigin-quota: number--><!--Device-WebStorageOrigin-quota: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## usage
 
 ```TypeScript
-usage: double
+usage: number
 ```
 
-Specify the amount of storage for the source. Unit: byte.
+指定源的存储量。 单位：byte。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebStorageOrigin-usage: double--><!--Device-WebStorageOrigin-usage: double-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorageOrigin-usage: number--><!--Device-WebStorageOrigin-usage: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

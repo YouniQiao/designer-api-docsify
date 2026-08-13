@@ -14,7 +14,9 @@ function unregisterChange(uri: string): void
 
 Unsubscribes from the change of a file.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-function unregisterChange(uri: string): void--><!--Device-cloudSync-function unregisterChange(uri: string): void-End-->
 
@@ -30,7 +32,7 @@ Unsubscribes from the change of a file.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900001 |
 | 13900002 |
 | 14000002 |

@@ -2,7 +2,9 @@
 
 PixelMap的初始化选项。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-interface InitializationOptions--><!--Device-image-interface InitializationOptions-End-->
 
@@ -18,7 +20,9 @@ alphaType?: AlphaType
 
 **类型：** [AlphaType](arkts-image-image-alphatype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,7 +42,9 @@ editable?: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,7 +64,9 @@ pixelFormat?: PixelMapFormat
 
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +86,9 @@ scaleMode?: ScaleMode
 
 **类型：** [ScaleMode](arkts-image-image-scalemode-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,7 +108,9 @@ size: Size
 
 **类型：** Size
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -118,7 +130,9 @@ srcPixelFormat?: PixelMapFormat
 
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InitializationOptions-srcPixelFormat?: PixelMapFormat--><!--Device-InitializationOptions-srcPixelFormat?: PixelMapFormat-End-->
 

@@ -2,9 +2,11 @@
 
 Represents the text information about the recommended images.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface TextContextInfo--><!--Device-photoAccessHelper-interface TextContextInfo-End-->
 
@@ -26,11 +28,13 @@ Text based on which images are recommended. The text cannot exceed 250 character
 
 **Type:** string
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextContextInfo-text?: string--><!--Device-TextContextInfo-text?: string-End-->
 

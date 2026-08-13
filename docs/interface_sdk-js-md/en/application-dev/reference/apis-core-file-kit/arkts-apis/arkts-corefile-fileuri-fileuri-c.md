@@ -2,13 +2,15 @@
 
 FileUri represents the uri of the file.
 
-**Inheritance/Implementation:** FileUri extends [uri.URI](uri.URI)
+**Inheritance/Implementation:** FileUri extends uri.URI
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-fileUri-class FileUri extends uri.URI--><!--Device-fileUri-class FileUri extends uri.URI-End-->
+**Deprecated since:** -1
+
+<!--Device-fileUri-class FileUri--><!--Device-fileUri-class FileUri-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
@@ -26,11 +28,13 @@ constructor(uriOrPath: string)
 
 Constructor for obtaining the instance of the FileUri class.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FileUri-constructor(uriOrPath: string)--><!--Device-FileUri-constructor(uriOrPath: string)-End-->
 
@@ -68,11 +72,13 @@ getFullDirectoryUri(): string
 
 Get the full directory uri where the file URI is located
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FileUri-getFullDirectoryUri(): string--><!--Device-FileUri-getFullDirectoryUri(): string-End-->
 
@@ -114,11 +120,13 @@ isRemoteUri(): boolean
 
 Check whether the incoming URI is a remote URI
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FileUri-isRemoteUri(): boolean--><!--Device-FileUri-isRemoteUri(): boolean-End-->
 
@@ -160,7 +168,9 @@ Converts this URI into an encoded string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,24 +191,4 @@ let path = pathDir + '/test';
 let fileUriObject = new fileUri.FileUri(path);
 console.info("The uri of FileUri is " + fileUriObject.toString());
 ```
-
-## name
-
-```TypeScript
-get name(): string
-```
-
-Obtains the file name of uri.
-
-**Type:** string
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-FileUri-get name(): string--><!--Device-FileUri-get name(): string-End-->
-
-**System capability:** SystemCapability.FileManagement.AppFileService
 

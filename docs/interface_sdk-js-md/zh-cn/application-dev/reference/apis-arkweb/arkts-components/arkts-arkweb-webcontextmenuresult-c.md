@@ -6,6 +6,8 @@ Defines the context menu result, related to [WebContextMenuResult](#WebContextMe
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class WebContextMenuResult--><!--Device-unnamed-declare class WebContextMenuResult-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -16,11 +18,13 @@ Defines the context menu result, related to [WebContextMenuResult](#WebContextMe
 closeContextMenu(): void
 ```
 
-在WebContextMenuResult中无其他调用且需要关闭上下文菜单时，开发者需调用此函数关闭菜单。
+在WebContextMenuResult中无其他调用且需要关闭上下文菜单时， 开发者需调用此函数关闭菜单。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,6 +44,8 @@ WebContextMenuResult的构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuResult-constructor()--><!--Device-WebContextMenuResult-constructor()-End-->
@@ -58,6 +64,8 @@ copy(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuResult-copy(): void--><!--Device-WebContextMenuResult-copy(): void-End-->
@@ -70,11 +78,13 @@ copy(): void
 copyImage(): void
 ```
 
-若WebContextMenuParam包含图片内容，该函数将复制当前上下文菜单对应的图片。若WebContextMenuParam不包含图片内容，则该函数不执行任何操作。
+若WebContextMenuParam包含图片内容，该函数将复制当前上下文菜单对应的图片。 若WebContextMenuParam不包含图片内容，则该函数不执行任何操作。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -94,6 +104,8 @@ cut(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuResult-cut(): void--><!--Device-WebContextMenuResult-cut(): void-End-->
@@ -111,6 +123,8 @@ paste(): void
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -130,6 +144,8 @@ pasteAndMatchStyle(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-WebContextMenuResult-pasteAndMatchStyle(): void--><!--Device-WebContextMenuResult-pasteAndMatchStyle(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -145,6 +161,8 @@ redo(): void
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebContextMenuResult-redo(): void--><!--Device-WebContextMenuResult-redo(): void-End-->
 
@@ -162,6 +180,8 @@ requestPasswordAutoFill(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-WebContextMenuResult-requestPasswordAutoFill(): void--><!--Device-WebContextMenuResult-requestPasswordAutoFill(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -177,6 +197,8 @@ saveImage(): void
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -196,6 +218,8 @@ selectAll(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebContextMenuResult-selectAll(): void--><!--Device-WebContextMenuResult-selectAll(): void-End-->
@@ -213,6 +237,8 @@ undo(): void
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebContextMenuResult-undo(): void--><!--Device-WebContextMenuResult-undo(): void-End-->
 

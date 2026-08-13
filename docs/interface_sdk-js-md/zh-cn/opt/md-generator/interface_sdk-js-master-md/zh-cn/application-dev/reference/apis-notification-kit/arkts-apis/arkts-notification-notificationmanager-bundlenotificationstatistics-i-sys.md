@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-notificationManager-export interface BundleNotificationStatistics--><!--Device-notificationManager-export interface BundleNotificationStatistics-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,6 +30,8 @@ bundle: BundleOption
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-BundleNotificationStatistics-bundle: BundleOption--><!--Device-BundleNotificationStatistics-bundle: BundleOption-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -46,7 +50,9 @@ lastTime: number
 
 **起始版本：** 26.0.0
 
-<!--Device-BundleNotificationStatistics-lastTime: number--><!--Device-BundleNotificationStatistics-lastTime: number-End-->
+**废弃版本：** -1
+
+<!--Device-BundleNotificationStatistics-lastTime: long--><!--Device-BundleNotificationStatistics-lastTime: long-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -64,7 +70,9 @@ recentCount: number
 
 **起始版本：** 26.0.0
 
-<!--Device-BundleNotificationStatistics-recentCount: number--><!--Device-BundleNotificationStatistics-recentCount: number-End-->
+**废弃版本：** -1
+
+<!--Device-BundleNotificationStatistics-recentCount: int--><!--Device-BundleNotificationStatistics-recentCount: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

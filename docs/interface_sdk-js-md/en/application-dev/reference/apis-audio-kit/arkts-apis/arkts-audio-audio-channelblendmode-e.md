@@ -2,9 +2,11 @@
 
 Enumerates the audio channel blending modes.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum ChannelBlendMode--><!--Device-audio-enum ChannelBlendMode-End-->
 
@@ -18,9 +20,11 @@ MODE_DEFAULT = 0
 
 No channel process.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChannelBlendMode-MODE_DEFAULT = 0--><!--Device-ChannelBlendMode-MODE_DEFAULT = 0-End-->
 
@@ -34,9 +38,11 @@ MODE_BLEND_LR = 1
 
 Blends the left and right channels together.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChannelBlendMode-MODE_BLEND_LR = 1--><!--Device-ChannelBlendMode-MODE_BLEND_LR = 1-End-->
 
@@ -50,9 +56,11 @@ MODE_ALL_LEFT = 2
 
 Copies the left channel and applies it to both the left and right channels.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChannelBlendMode-MODE_ALL_LEFT = 2--><!--Device-ChannelBlendMode-MODE_ALL_LEFT = 2-End-->
 
@@ -66,9 +74,11 @@ MODE_ALL_RIGHT = 3
 
 Copies the right channel and applies it to both the left and right channels.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChannelBlendMode-MODE_ALL_RIGHT = 3--><!--Device-ChannelBlendMode-MODE_ALL_RIGHT = 3-End-->
 

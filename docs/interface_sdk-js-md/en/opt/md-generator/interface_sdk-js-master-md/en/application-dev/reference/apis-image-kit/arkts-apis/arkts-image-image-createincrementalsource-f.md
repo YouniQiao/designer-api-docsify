@@ -1,4 +1,4 @@
-# CreateIncrementalSource
+# createIncrementalSource
 
 ## Modules to Import
 
@@ -6,38 +6,19 @@
 import { image } from '@kit.ImageKit';
 ```
 
-## CreateIncrementalSource
+## createIncrementalSource
 
 ```TypeScript
-function CreateIncrementalSource(buf: ArrayBuffer): ImageSource
+function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined
 ```
 
-Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.
+Creates an ImageSource instance based on the buffer in incremental.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**Since:** 23
 
-The ImageSource instance created in incremental mode supports the following capabilities (applicable to synchronous, callback, and promise modes):
+**Deprecated since:** -1
 
-- Obtaining image information: Call   
-[getImageInfo](arkts-image-image-imagesource-i.md#getImageInfo)to obtain image information by index, or call   
-[getImageInfo](arkts-image-image-imagesource-i.md#getImageInfo) to directly obtain image information.  
-- Obtaining an image property: Call   
-[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)to obtain the value of a property with the specified index in an image.  
-- Obtaining image properties: Call   
-[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties) to obtain the values of properties with the given names in an image.  
-- Updating incremental data: Call   
-[updateData](arkts-image-image-imagesource-i.md#updateData).  
-- Creating a PixelMap object: Call   
-[createPixelMap](arkts-image-image-imagesource-i.md#createPixelMap) or   
-[createPixelMap](arkts-image-image-imagesource-i.md#createPixelMap)to create a PixelMap object based on decoding options; call   
-[createPixelMap](arkts-image-image-imagesource-i.md#createPixelMap) to create a PixelMap object based on default parameters.  
-- Releasing an ImageSource instance: Call   
-[release](arkts-image-image-imagesource-i.md#release).
-
-**Since:** 9
-
-<!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer): ImageSource--><!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer): ImageSource-End-->
+<!--Device-image-function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined--><!--Device-image-function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -53,46 +34,21 @@ The ImageSource instance created in incremental mode supports the following capa
 | --- |
 | [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
-## Examples
+
+## createIncrementalSource
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreateIncrementalImageSource(context : Context) {
-  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // Obtain the image resource.
-  // 'app.media.startIcon' is only an example. Replace it with the actual one in use. Otherwise, the imageArray instance fails to be created, and subsequent operations cannot be performed.
-  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // Image slice.
-  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
-  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength));
-  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
-    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
-      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
-      console.info('Succeeded in creating pixelMap');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-  })
-}
+function createIncrementalSource(buf: ArrayBuffer, 
+      options?: SourceOptions): ImageSource | undefined
 ```
 
+Creates an ImageSource instance based on the buffer in incremental.
 
-## CreateIncrementalSource
+**Since:** 23
 
-```TypeScript
-function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource
-```
+**Deprecated since:** -1
 
-Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.
-
-The capabilities supported by the ImageSource instance created by this API are the same as those supported by the instance created by   
-[CreateIncrementalSource(buf: ArrayBuffer): ImageSource](#CreateIncrementalSource).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 9
-
-<!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource--><!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource-End-->
+<!--Device-image-function createIncrementalSource(buf: ArrayBuffer,       options?: SourceOptions): ImageSource | undefined--><!--Device-image-function createIncrementalSource(buf: ArrayBuffer,       options?: SourceOptions): ImageSource | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -108,29 +64,3 @@ The capabilities supported by the ImageSource instance created by this API are t
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreateIncrementalImageSource(context : Context) {
-  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // Obtain the image resource.
-  // 'app.media.startIcon' is only an example. Replace it with the actual one in use. Otherwise, the imageArray instance fails to be created, and subsequent operations cannot be performed.
-  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // Image slice.
-  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
-  let sourceOptions: image.SourceOptions = { sourceDensity: 120};
-
-  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength), sourceOptions);
-  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
-    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
-      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
-      console.info('Succeeded in creating pixelMap');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-  })
-}
-```

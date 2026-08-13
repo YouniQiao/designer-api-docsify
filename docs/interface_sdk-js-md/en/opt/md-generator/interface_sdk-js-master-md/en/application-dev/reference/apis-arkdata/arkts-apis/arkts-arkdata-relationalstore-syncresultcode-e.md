@@ -4,6 +4,8 @@ Describes the status of device sync.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-relationalStore-enum SyncResultCode--><!--Device-relationalStore-enum SyncResultCode-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -17,6 +19,8 @@ SUCCESS = 0
 Indicates sync success.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Indicates sync fail, for detailed reasons, please refer to the message.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResultCode-FAIL = 1--><!--Device-SyncResultCode-FAIL = 1-End-->
@@ -49,6 +55,8 @@ OFFLINE = 2
 Indicates that the device is offline.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Indicates parameter is invalid.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResultCode-INVALID_ARGS = 3--><!--Device-SyncResultCode-INVALID_ARGS = 3-End-->
@@ -81,6 +91,8 @@ DISTRIBUTED_TABLE_NOT_SET = 4
 Indicates that a distributed table is not set.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ Indicates that the synchronization field of the peer device is inconsistent with
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResultCode-TABLE_FIELD_MISMATCH = 5--><!--Device-SyncResultCode-TABLE_FIELD_MISMATCH = 5-End-->
@@ -113,6 +127,8 @@ DISTRIBUTED_SCHEMA_MISMATCH = 6
 Indicates that the schema field of the peer device is inconsistent with that of the local device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +146,8 @@ Indicates that the database is busy.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResultCode-BUSY = 7--><!--Device-SyncResultCode-BUSY = 7-End-->
@@ -145,6 +163,8 @@ CORRUPTED = 8
 Indicates that the database is corrupted.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,6 +182,8 @@ Indicates synchronization timeout.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResultCode-TIMEOUT = 9--><!--Device-SyncResultCode-TIMEOUT = 9-End-->
@@ -178,6 +200,8 @@ Indicates that the table structure changed during the synchronization process.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SyncResultCode-SCHEMA_CHANGED = 10--><!--Device-SyncResultCode-SCHEMA_CHANGED = 10-End-->
@@ -193,6 +217,8 @@ CONSTRAINT_VIOLATION = 11
 Indicates a violation of constraints when synchronizing data.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

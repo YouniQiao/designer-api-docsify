@@ -12,18 +12,13 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>
 ```
 
-Sets the power saving mode for a process. This API uses a promise to return the result.
+Sets the power saving mode for a process. This API uses a promise to return the result. You can set to enter the power saving mode when: - The application is not focused, and there are no audio operations or UI updates. - The application cannot obtain the power lock through the system framework. - The application needs to perform time-consuming computing tasks, such as compression, decompression, and compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
 
-You can set to enter the power saving mode when:
+**Since:** 23
 
-- The application is not focused, and there are no audio operations or UI updates.  
-- The application cannot obtain the power lock through the system framework.  
-- The application needs to perform time-consuming computing tasks, such as compression, decompression, and   
-compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
 
@@ -35,7 +30,7 @@ compilation, which are significantly restricted by CPU resources. (In this case,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process ID. |
+| pid | int | Yes | Process ID. |
 | powerSaveMode | [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md) | Yes | Power saving mode. |
 
 **Return value:**
@@ -48,11 +43,11 @@ compilation, which are significantly restricted by CPU resources. (In this case,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [31800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) | The setting failed due to system scheduling reasons. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) | Setup error, This setting is overridden by settings in Task Manager |
-| [31800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [31800004](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) | The setting failed due to system scheduling reasons. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31800003](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) | Setup error, This setting is overridden by settings in Task Manager |
+| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

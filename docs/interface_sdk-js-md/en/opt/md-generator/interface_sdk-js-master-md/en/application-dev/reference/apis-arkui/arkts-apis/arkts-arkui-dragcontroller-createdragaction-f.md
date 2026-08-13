@@ -12,22 +12,13 @@ import { dragController } from '@kit.ArkUI';
 function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Since API version 11, you can use the
-> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the
-> [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object associated with the current UI context.
-> 
-> - For optimal drag and drop performance, limit the number of drag previews.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. > **NOTE：**> > - Since API version 11, you can use the > [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the > [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object associated with the current UI context. > > - For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
 
 **Deprecated since:** 18
 
-**Substitutes:** [createDragAction](ohos.arkui.UIContext.DragController#createDragAction)
+**Substitutes:** createDragAction
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,12 +45,12 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
-You are advised to use [getDragController](arkts-apis-uicontext-uicontext.md#getdragcontroller11) in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the DragController object associated with the current UI context.
+You are advised to use [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

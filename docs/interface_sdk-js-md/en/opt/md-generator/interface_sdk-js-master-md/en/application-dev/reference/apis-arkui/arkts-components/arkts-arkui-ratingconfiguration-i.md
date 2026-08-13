@@ -1,13 +1,14 @@
 # RatingConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
 
-**Inheritance/Implementation:** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
+**Inheritance/Implementation:** RatingConfiguration extends CommonConfiguration<RatingConfiguration>
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>--><!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface RatingConfiguration--><!--Device-unnamed-declare interface RatingConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,13 +18,13 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 indicator: boolean
 ```
 
-Whether the rating bar is used as an indicator. **true**: used as an indicator. **false**: not used as an indicator.
-
-Default value: **false**
+Whether the rating bar is used as an indicator. **true**: used as an indicator. **false**: not used as an indicator. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,23 +40,13 @@ Default value: **false**
 rating: number
 ```
 
-Value to rate.
-
-Default value: **0**
-
-Value range: [0, stars]
-
-Values less than 0 are treated as **0**, and values greater than the value of   
-[stars](RatingAttribute#stars(value: number)) are treated as the value of **stars**.
-
-This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
-
-This parameter supports two-way binding through   
-[!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Value to rate. Default value: **0** Value range: [0, stars] Values less than 0 are treated as **0**, and values greater than the value of stars are treated as the value of **stars**. This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md). This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,13 +62,13 @@ This parameter supports two-way binding through
 stars: number
 ```
 
-Total number of ratings.
-
-Default value: **5**
+Total number of ratings. Default value: **5**
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,13 +84,13 @@ Default value: **5**
 stepSize: number
 ```
 
-Step of an operation.
-
-Default value: **0.5**
+Step of an operation. Default value: **0.5**
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,6 +111,8 @@ Callback triggered when the rating value changes.
 **Type:** Callback&lt;number&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

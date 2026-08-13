@@ -12,7 +12,7 @@ function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeSlot](ohos.notificationManager/notificationManager#removeSlot)
+**替代接口：** [removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeSlot)
 
 <!--Device-notification-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ function removeSlot(slotType: SlotType): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeSlot](ohos.notificationManager/notificationManager#removeSlot)
+**替代接口：** [removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeSlot)
 
 <!--Device-notification-function removeSlot(slotType: SlotType): Promise<void>--><!--Device-notification-function removeSlot(slotType: SlotType): Promise<void>-End-->
 

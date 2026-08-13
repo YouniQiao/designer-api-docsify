@@ -8,6 +8,8 @@ Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendableRelationalStore-type ValuesBucket = collections.Map<string, ValueType>--><!--Device-sendableRelationalStore-type ValuesBucket = collections.Map<string, ValueType>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

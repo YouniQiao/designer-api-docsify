@@ -2,7 +2,9 @@
 
 应用程序信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
 
@@ -14,12 +16,13 @@
 readonly flags?: number
 ```
 
-标识当前应用和当前用户之间的状态集合，每一位表示一个特定的布尔状态，取值参考  
-[ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md#ApplicationInfoFlag)。
+标识当前应用和当前用户之间的状态集合，每一位表示一个特定的布尔状态，取值参考 [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md#ApplicationInfoFlag（系统接口）)。
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationInfo-readonly flags?: int--><!--Device-ApplicationInfo-readonly flags?: int-End-->
 

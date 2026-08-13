@@ -1,16 +1,24 @@
 # @ohos.arkui.performanceMonitor
 
-Provides interfaces to monitor a scene for performance measurement.
+/*
+ Copyright (C) 2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-&lt;p&gt;These interfaces are used to monitor the begin, end, and value changes of finger processes that last for at least 3 ms.
 
-&lt;p&gt;Example:import "@ohos.arkui.performanceMonitor.d.ts"To start scene monitoring that is expected to complete within 5 ms:&lt;pre&gt;{@code performanceMonitor.begin(string, ActionType, string);//scene finished performanceMonitor.end(string);}&lt;/pre&gt;
+**Since:** 10
 
-&lt;p&gt;Each {@code begin} matches one {@code end}, and they must have the same scene id.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,9 +41,9 @@ import { performanceMonitor } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin) | Begin monitoring an application scene. |
-| [end](arkts-arkui-performancemonitor-end-f-sys.md#end) | End monitoring an application scene. |
-| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordinputeventtime) | recordInputEventTime monitoring an application scene. |
+| [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin) | Marks the start of a user scene. Call this API when the scene begins. |
+| [end](arkts-arkui-performancemonitor-end-f-sys.md#end) | Marks the end of a user scene. Call this API when the scene ends. |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordInputEventTime) | Records the trigger event type and time before the start of the animation scene. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -43,7 +51,7 @@ import { performanceMonitor } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | Enumerates the input event type. |
-| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | Enumerates the input source type. |
+| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | Enumerates the trigger modes for user scenes (typically scenes involving animations). |
+| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | Enumerates the trigger source types of user scenes. |
 <!--DelEnd-->
 

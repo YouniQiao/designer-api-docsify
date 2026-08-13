@@ -1,10 +1,12 @@
 # ItemDisplayRatio
 
-Enumerates the aspect ratios of the grid item display, including 1:1 and the original image's aspect ratio.
+Enumerates the aspect ratios for grid display in single-line display mode.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ItemDisplayRatio--><!--Device-unnamed-export declare enum ItemDisplayRatio-End-->
 
@@ -16,13 +18,15 @@ Enumerates the aspect ratios of the grid item display, including 1:1 and the ori
 SQUARE_RATIO = 0
 ```
 
-Square ratio item
+1:1 ratio.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ItemDisplayRatio-SQUARE_RATIO = 0--><!--Device-ItemDisplayRatio-SQUARE_RATIO = 0-End-->
 
@@ -34,13 +38,15 @@ Square ratio item
 ORIGINAL_SIZE_RATIO = 1
 ```
 
-original size ratio item
+Original image aspect ratio.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ItemDisplayRatio-ORIGINAL_SIZE_RATIO = 1--><!--Device-ItemDisplayRatio-ORIGINAL_SIZE_RATIO = 1-End-->
 

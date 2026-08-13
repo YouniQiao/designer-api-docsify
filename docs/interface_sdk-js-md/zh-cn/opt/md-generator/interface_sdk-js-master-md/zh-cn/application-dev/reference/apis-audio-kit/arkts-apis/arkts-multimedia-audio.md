@@ -1,9 +1,10 @@
 # @ohos.multimedia.audio
 
-AudioCapturer
+音频管理提供基础的音频控制能力，包括音量调节、设备管理、数据采集及渲染。 该模块提供以下音频相关的常用功能： - [AudioManager](arkts-audio-audio-audiomanager-i.md#AudioManager)：音频管理器。 - [AudioDeviceEnhanceManager](../../../reference/apis-audio-kit/arkts-apis-audio-AudioDeviceEnhanceManager.md)：音频设备增 强管理器。 - [AudioRenderer](arkts-audio-audio-audiorenderer-i.md#AudioRenderer)：音频渲染，用于播放PCM（Pulse Code Modulation）音频数据。 - [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer)：音频采集，用于录制PCM音频数据。
 
+**起始版本：** 23
 
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace audio--><!--Device-unnamed-declare namespace audio-End-->
 
@@ -16,23 +17,31 @@ AudioCapturer
 
 | 名称 |
 | --- |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer) |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer-1) |
-| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer-1) |
-| [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) |
+| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback) |
+| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) |
+| [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createasrprocessingcontroller) |
-| [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md#createglobalaudioloopback) |
-| [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md#createmicinaudiocapturer) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer-1) |
+| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createAsrProcessingController（系统接口）) |
+| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createAsrProcessingController（系统接口）) |
+| [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md#createGlobalAudioLoopback（系统接口）) |
+| [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md#createMicInAudioCapturer（系统接口）) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer（系统接口）) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer（系统接口）) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer（系统接口）) |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createTonePlayer（系统接口）) |
 <!--DelEnd-->
 
 ### 接口
@@ -134,7 +143,7 @@ AudioCapturer
 | [AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md) |
 | [AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md) |
 | [AudioErrors](arkts-audio-audio-audioerrors-e.md) |
-| [AudioLatencyType](arkts-audio-audio-audiolatencytype-e.md) | 表示音频时延类型的枚举。  \| 名称 \| 值 \| 说明 \|  \| ---- \| -- \| ---- \|  \| LATENCY_TYPE_ALL \| 0 \| 计算包含软件和硬件在内的整体音频处理链路时延。 \|  \| LATENCY_TYPE_SOFTWARE \| 1 \| 计算软件侧时延，包含软件音效。 \|  \| LATENCY_TYPE_HARDWARE \| 2 \| 计算硬件侧时延，包含HAL、驱动和硬件。 \|
+| [AudioLatencyType](arkts-audio-audio-audiolatencytype-e.md) | 表示音频时延类型的枚举。 \| 名称 \| 值 \| 说明 \| \| ---- \| -- \| ---- \| \| LATENCY_TYPE_ALL \| 0 \| 计算包含软件和硬件在内的整体音频处理链路时延。 \| \| LATENCY_TYPE_SOFTWARE \| 1 \| 计算软件侧时延，包含软件音效。 \| \| LATENCY_TYPE_HARDWARE \| 2 \| 计算硬件侧时延，包含HAL、驱动和硬件。 \|
 | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) |
 | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) |
 | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) |
@@ -231,13 +240,13 @@ AudioCapturer
 
 | 名称 |
 | --- |
-| [DEFAULT_INTERRUPT_GROUP_ID](arkts-audio-audio-con.md#default_interrupt_group_id) |
-| [DEFAULT_VOLUME_GROUP_ID](arkts-audio-audio-con.md#default_volume_group_id) |
+| [DEFAULT_INTERRUPT_GROUP_ID](arkts-audio-audio-con.md#DEFAULT_INTERRUPT_GROUP_ID) |
+| [DEFAULT_VOLUME_GROUP_ID](arkts-audio-audio-con.md#DEFAULT_VOLUME_GROUP_ID) |
 
 <!--Del-->
 ### 常量（系统接口）
 
 | 名称 |
 | --- |
-| [LOCAL_NETWORK_ID](arkts-audio-audio-con-sys.md#local_network_id) |
+| [LOCAL_NETWORK_ID](arkts-audio-audio-con-sys.md#LOCAL_NETWORK_ID) |
 <!--DelEnd-->

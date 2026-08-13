@@ -2,7 +2,9 @@
 
 四指滑动手势事件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface FourFingersSwipe--><!--Device-unnamed-export declare interface FourFingersSwipe-End-->
 
@@ -18,7 +20,9 @@ type: ActionType
 
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FourFingersSwipe-type: ActionType--><!--Device-FourFingersSwipe-type: ActionType-End-->
 
@@ -34,7 +38,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FourFingersSwipe-x: int--><!--Device-FourFingersSwipe-x: int-End-->
 
@@ -50,7 +56,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FourFingersSwipe-y: int--><!--Device-FourFingersSwipe-y: int-End-->
 

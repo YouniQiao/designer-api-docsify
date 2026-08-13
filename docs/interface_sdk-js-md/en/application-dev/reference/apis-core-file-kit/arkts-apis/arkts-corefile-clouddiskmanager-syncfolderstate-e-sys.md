@@ -2,9 +2,11 @@
 
 Enumerates the states of the sync root.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudDiskManager-enum SyncFolderState--><!--Device-cloudDiskManager-enum SyncFolderState-End-->
 
@@ -20,9 +22,11 @@ INACTIVE = 0
 
 The sync root is inactive.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncFolderState-INACTIVE = 0--><!--Device-SyncFolderState-INACTIVE = 0-End-->
 
@@ -38,9 +42,11 @@ ACTIVE = 1
 
 The sync root is active.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncFolderState-ACTIVE = 1--><!--Device-SyncFolderState-ACTIVE = 1-End-->
 

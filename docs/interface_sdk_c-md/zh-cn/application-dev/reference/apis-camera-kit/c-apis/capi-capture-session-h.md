@@ -625,7 +625,7 @@ Camera_ErrorCode OH_CaptureSession_AddVideoOutput(Camera_CaptureSession* session
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)* videoOutput | 要添加的录像输出实例。 |
+| Camera_VideoOutput* videoOutput | 要添加的录像输出实例。 |
 
 **返回：**
 
@@ -650,7 +650,7 @@ Camera_ErrorCode OH_CaptureSession_RemoveVideoOutput(Camera_CaptureSession* sess
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)* videoOutput | 要删除的录像输出实例。 |
+| Camera_VideoOutput* videoOutput | 要删除的录像输出实例。 |
 
 **返回：**
 
@@ -675,7 +675,7 @@ Camera_ErrorCode OH_CaptureSession_AddMetadataOutput(Camera_CaptureSession* sess
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_MetadataOutput* metadataOutput | 要添加的元数据输出实例。 |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | 要添加的元数据输出实例。 |
 
 **返回：**
 
@@ -700,7 +700,7 @@ Camera_ErrorCode OH_CaptureSession_RemoveMetadataOutput(Camera_CaptureSession* s
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_MetadataOutput* metadataOutput | 要删除的元数据输出实例。 |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | 要删除的元数据输出实例。 |
 
 **返回：**
 
@@ -2293,7 +2293,7 @@ Camera_ErrorCode OH_CaptureSession_CanAddVideoOutput(Camera_CaptureSession* sess
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)* cameraOutput | 要添加的录像输出实例。 |
+| Camera_VideoOutput* cameraOutput | 要添加的录像输出实例。 |
 | bool* isSuccessful | 录像输出是否可以添加到会话中的结果。返回true表示录像输出可以添加到会话中，返回false表示不可以。 |
 
 **返回：**

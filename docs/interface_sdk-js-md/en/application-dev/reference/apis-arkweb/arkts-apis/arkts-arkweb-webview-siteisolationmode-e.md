@@ -1,10 +1,12 @@
 # SiteIsolationMode
 
-Indicates the site isolation mode of the application, default value depends on different devices type.
+Enumerates the site isolation modes. The site isolation mechanism isolates websites from different sources in different render processes to reduce the cross-domain attack surface. For example, on a PC, each tab corresponds to a render process. After site isolation is enabled, Iframes from different sources run in independent render processes.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum SiteIsolationMode--><!--Device-webview-enum SiteIsolationMode-End-->
 
@@ -16,11 +18,13 @@ Indicates the site isolation mode of the application, default value depends on d
 PARTIAL = 0
 ```
 
-The partial site isolation mode
+Partial site isolation. New sites are loaded in the same render process.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-SiteIsolationMode-PARTIAL = 0--><!--Device-SiteIsolationMode-PARTIAL = 0-End-->
 
@@ -32,11 +36,13 @@ The partial site isolation mode
 STRICT = 1
 ```
 
-The strict site isolation mode
+Strict site isolation. Iframes from different sites are switched to new render processes.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-SiteIsolationMode-STRICT = 1--><!--Device-SiteIsolationMode-STRICT = 1-End-->
 

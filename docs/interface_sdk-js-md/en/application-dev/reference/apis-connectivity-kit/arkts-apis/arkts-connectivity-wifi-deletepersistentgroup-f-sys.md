@@ -20,7 +20,7 @@ Deletes the persistent P2P group with the specified network ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deletePersistentP2pGroup](ohos.wifiManager/wifiManager.deletePersistentP2pGroup)
+**Substitutes:** deletePersistentP2pGroup
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

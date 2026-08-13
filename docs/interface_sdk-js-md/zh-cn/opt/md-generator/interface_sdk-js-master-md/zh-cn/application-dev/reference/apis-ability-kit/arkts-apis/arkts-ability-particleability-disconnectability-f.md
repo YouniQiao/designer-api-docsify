@@ -10,6 +10,8 @@ function disconnectAbility(connection: number, callback: AsyncCallback<void>): v
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-particleAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void--><!--Device-particleAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void-End-->
@@ -62,6 +64,8 @@ function disconnectAbility(connection: number): Promise<void>
 断开当前ability与指定ServiceAbility的连接。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

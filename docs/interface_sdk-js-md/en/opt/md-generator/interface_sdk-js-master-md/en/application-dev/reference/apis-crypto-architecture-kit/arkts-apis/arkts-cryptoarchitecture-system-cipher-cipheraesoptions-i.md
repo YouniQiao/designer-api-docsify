@@ -6,7 +6,7 @@ Defines the input parameters of **cipher.aes()**.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-unnamed-export interface CipherAesOptions--><!--Device-unnamed-export interface CipherAesOptions-End-->
 
@@ -18,6 +18,26 @@ Defines the input parameters of **cipher.aes()**.
 import { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
+## action
+
+```TypeScript
+action: string
+```
+
+Action to perform. The options are as follows: 1. **encrypt**: Encrypts data. 2. **decrypt**: Decrypts data.
+
+**Type:** string
+
+**Since:** 3
+
+**Deprecated since:** 11
+
+**Substitutes:** Cipher
+
+<!--Device-CipherAesOptions-action: string--><!--Device-CipherAesOptions-action: string-End-->
+
+**System capability:** SystemCapability.Security.Cipher
+
 ## complete
 
 ```TypeScript
@@ -26,11 +46,13 @@ complete: () => void
 
 Called when the execution is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-complete: () => void--><!--Device-CipherAesOptions-complete: () => void-End-->
 
@@ -44,66 +66,15 @@ fail: (data: string, code: number) => void
 
 Called when data fails to be encrypted or decrypted.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-fail: (data: string, code: number) => void--><!--Device-CipherAesOptions-fail: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.Security.Cipher
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
-## success
-
-```TypeScript
-success: (data: CipherResponse) => void
-```
-
-Called when data is encrypted or decrypted successfully.
-
-**Since:** 3
-
-**Deprecated since:** 11
-
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
-
-<!--Device-CipherAesOptions-success: (data: CipherResponse) => void--><!--Device-CipherAesOptions-success: (data: CipherResponse) => void-End-->
-
-**System capability:** SystemCapability.Security.Cipher
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Yes |
-
-## action
-
-```TypeScript
-action: string
-```
-
-Action to perform. The options are as follows:
-
-1. **encrypt**: Encrypts data.2. **decrypt**: Decrypts data.
-
-**Type:** string
-
-**Since:** 3
-
-**Deprecated since:** 11
-
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
-
-<!--Device-CipherAesOptions-action: string--><!--Device-CipherAesOptions-action: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -121,7 +92,7 @@ Initialization vector (IV) for AES-based encryption and decryption. The value is
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-iv?: string--><!--Device-CipherAesOptions-iv?: string-End-->
 
@@ -141,7 +112,7 @@ Length of the IV, in bytes. This field is reserved. The default value is **16**,
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-ivLen?: string--><!--Device-CipherAesOptions-ivLen?: string-End-->
 
@@ -161,7 +132,7 @@ Offset of the IV for AES-based encryption and decryption. The default value is *
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-ivOffset?: string--><!--Device-CipherAesOptions-ivOffset?: string-End-->
 
@@ -181,9 +152,29 @@ Key used for encryption or decryption. It is a Base64 encoded string.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-key: string--><!--Device-CipherAesOptions-key: string-End-->
+
+**System capability:** SystemCapability.Security.Cipher
+
+## success
+
+```TypeScript
+success: (data: CipherResponse) => void
+```
+
+Called when data is encrypted or decrypted successfully.
+
+**Type:** (data: CipherResponse) =&gt; void
+
+**Since:** 3
+
+**Deprecated since:** 11
+
+**Substitutes:** Cipher
+
+<!--Device-CipherAesOptions-success: (data: CipherResponse) => void--><!--Device-CipherAesOptions-success: (data: CipherResponse) => void-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -193,9 +184,7 @@ Key used for encryption or decryption. It is a Base64 encoded string.
 text: string
 ```
 
-Text to be encrypted or decrypted.
-
-The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64.The default format is used for Base64 encoding.
+Text to be encrypted or decrypted. The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
 
 **Type:** string
 
@@ -203,7 +192,7 @@ The text to be encrypted must be common text. The text to be decrypted must be a
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-text: string--><!--Device-CipherAesOptions-text: string-End-->
 
@@ -223,7 +212,7 @@ Encryption mode and padding of the AES algorithm. The default value is **AES/CBC
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherAesOptions-transformation?: string--><!--Device-CipherAesOptions-transformation?: string-End-->
 

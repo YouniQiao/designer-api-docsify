@@ -2,7 +2,9 @@
 
 Represents a class for defining a uniform data type. It provides properties and methods for describing a uniform data type and its relationship with other uniform data types.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uniformTypeDescriptor-class TypeDescriptor--><!--Device-uniformTypeDescriptor-class TypeDescriptor-End-->
 
@@ -22,7 +24,9 @@ belongsTo(type: string): boolean
 
 Checks whether this data type belongs to the specified uniform data type.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,7 @@ Checks whether this data type belongs to the specified uniform data type.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -74,7 +78,9 @@ equals(typeDescriptor: TypeDescriptor): boolean
 
 Checks whether this data type is the same as the specified uniform data type. That is, compares **typeId**s of two [TypeDescriptor](#TypeDescriptor) objects.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,7 +104,7 @@ Checks whether this data type is the same as the specified uniform data type. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -124,10 +130,11 @@ try{
 isHigherLevelType(type: string): boolean
 ```
 
-Checks whether this data type is a higher-level type of the specified uniform data type. For example,   
-**SOURCE_CODE** is a higher-level type of **TYPE_SCRIPT**, and **TEXT** is a higher-level type of **SOURCE_CODE**and **TYPE_SCRIPT**.
+Checks whether this data type is a higher-level type of the specified uniform data type. For example, **SOURCE_CODE** is a higher-level type of **TYPE_SCRIPT**, and **TEXT** is a higher-level type of **SOURCE_CODE** and **TYPE_SCRIPT**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,7 +158,7 @@ Checks whether this data type is a higher-level type of the specified uniform da
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -177,10 +184,11 @@ try{
 isLowerLevelType(type: string): boolean
 ```
 
-Checks whether this data type is a lower-level type of the specified uniform data type. For example,   
-**TYPE_SCRIPT** is a lower-level type of **SOURCE_CODE**, and **TYPE_SCRIPT** and **SOURCE_CODE** are lower-level types of **TEXT**.
+Checks whether this data type is a lower-level type of the specified uniform data type. For example, **TYPE_SCRIPT** is a lower-level type of **SOURCE_CODE**, and **TYPE_SCRIPT** and **SOURCE_CODE** are lower-level types of **TEXT**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,7 +212,7 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -223,129 +231,3 @@ try{
     console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
-
-## belongingToTypes
-
-```TypeScript
-set belongingToTypes(value: Array<string>)
-```
-
-Uniform data type IDs that the uniform data type belongs to.
-
-**Type:** Array&lt;string&gt;
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TypeDescriptor-set belongingToTypes(value: Array<string>)--><!--Device-TypeDescriptor-set belongingToTypes(value: Array<string>)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## description
-
-```TypeScript
-set description(value: string)
-```
-
-A textual description for the uniform data type.
-
-**Type:** string
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TypeDescriptor-set description(value: string)--><!--Device-TypeDescriptor-set description(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## filenameExtensions
-
-```TypeScript
-set filenameExtensions(value: Array<string>)
-```
-
-File name extensions for the uniform data type.
-
-**Type:** Array&lt;string&gt;
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TypeDescriptor-set filenameExtensions(value: Array<string>)--><!--Device-TypeDescriptor-set filenameExtensions(value: Array<string>)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## iconFile
-
-```TypeScript
-set iconFile(value: string)
-```
-
-Default icon file path for the uniform data type.
-
-**Type:** string
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TypeDescriptor-set iconFile(value: string)--><!--Device-TypeDescriptor-set iconFile(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## mimeTypes
-
-```TypeScript
-set mimeTypes(value: Array<string>)
-```
-
-MIMETypes of the uniform data type.
-
-**Type:** Array&lt;string&gt;
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TypeDescriptor-set mimeTypes(value: Array<string>)--><!--Device-TypeDescriptor-set mimeTypes(value: Array<string>)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## referenceURL
-
-```TypeScript
-set referenceURL(value: string)
-```
-
-Reference URL for the uniform data type, which describes the detail information of the type.
-
-**Type:** string
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TypeDescriptor-set referenceURL(value: string)--><!--Device-TypeDescriptor-set referenceURL(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## typeId
-
-```TypeScript
-set typeId(value: string)
-```
-
-Type ID of the uniform data type, which corresponds to the enum string in the {@code UniformDataType}.
-
-**Type:** string
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TypeDescriptor-set typeId(value: string)--><!--Device-TypeDescriptor-set typeId(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core

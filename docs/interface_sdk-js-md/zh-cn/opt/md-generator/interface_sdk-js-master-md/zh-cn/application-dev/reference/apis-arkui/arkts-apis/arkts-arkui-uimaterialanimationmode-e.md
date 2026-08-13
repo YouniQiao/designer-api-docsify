@@ -4,6 +4,8 @@ Enumerates the component animation modes under the UI material effect.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum UIMaterialAnimationMode--><!--Device-unnamed-declare enum UIMaterialAnimationMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ IMMERSIVE = 0
 When the material is enabled for the component, the animation effect is automatically enabled.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ NONE = 1
 Disable the animation effect.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

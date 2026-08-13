@@ -2,9 +2,11 @@
 
 Enumerates the available device types for communication.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum CommunicationDeviceType--><!--Device-audio-enum CommunicationDeviceType-End-->
 
@@ -18,9 +20,11 @@ SPEAKER = 2
 
 Speaker.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CommunicationDeviceType-SPEAKER = 2--><!--Device-CommunicationDeviceType-SPEAKER = 2-End-->
 

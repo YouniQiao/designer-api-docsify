@@ -2,7 +2,9 @@
 
 本模块主要提供管理外部设备的相关功能，包括查询设备列表、绑定设备和解除绑定设备。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
 
@@ -14,23 +16,23 @@
 
 | 名称 |
 | --- |
-| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#binddevice) |
-| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#binddevice-1) |
-| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#binddevicedriver) |
-| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#binddevicedriver-1) |
-| [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#binddriverwithdeviceid) |
-| [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) |
-| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbinddevice) |
-| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbinddevice-1) |
-| [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid) |
+| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#bindDevice) |
+| [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md#bindDevice) |
+| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#bindDeviceDriver) |
+| [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md#bindDeviceDriver) |
+| [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#bindDriverWithDeviceId) |
+| [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) |
+| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbindDevice) |
+| [unbindDevice](arkts-driverdevelopment-devicemanager-unbinddevice-f.md#unbindDevice) |
+| [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbindDriverWithDeviceId) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [queryDeviceInfo](arkts-driverdevelopment-devicemanager-querydeviceinfo-f-sys.md#querydeviceinfo) |
-| [queryDriverInfo](arkts-driverdevelopment-devicemanager-querydriverinfo-f-sys.md#querydriverinfo) |
+| [queryDeviceInfo](arkts-driverdevelopment-devicemanager-querydeviceinfo-f-sys.md#queryDeviceInfo（系统接口）) |
+| [queryDriverInfo](arkts-driverdevelopment-devicemanager-querydriverinfo-f-sys.md#queryDriverInfo（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

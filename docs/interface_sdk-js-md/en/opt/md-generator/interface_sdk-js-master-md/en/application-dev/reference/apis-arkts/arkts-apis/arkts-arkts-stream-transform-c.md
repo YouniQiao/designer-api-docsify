@@ -1,13 +1,14 @@
 # Transform
 
-A special duplex stream that supports data conversion and result output. The **Transform** class inherits from  
-[Duplex](arkts-arkts-stream-duplex-c.md#Duplex) and supports all the APIs in **Duplex**.
+A special duplex stream that supports data conversion and result output. The **Transform** class inherits from [Duplex](arkts-arkts-stream-duplex-c.md#Duplex) and supports all the APIs in **Duplex**.
 
 **Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md#Duplex)
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-stream-export class Transform extends Duplex--><!--Device-stream-export class Transform extends Duplex-End-->
+**Deprecated since:** -1
+
+<!--Device-stream-export class Transform--><!--Device-stream-export class Transform-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,9 +26,11 @@ constructor()
 
 A constructor used to create a **Transform** object.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Transform-constructor()--><!--Device-Transform-constructor()-End-->
 
@@ -47,9 +50,11 @@ doFlush(callback: Function): void
 
 Called at the end of the stream to process the remaining data. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Transform-doFlush(callback: Function): void--><!--Device-Transform-doFlush(callback: Function): void-End-->
 
@@ -93,9 +98,11 @@ doTransform(chunk: string, encoding: string, callback: Function): void
 
 Converts or processes input data chunks and uses a callback to notify that the processing is complete.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void--><!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void-End-->
 

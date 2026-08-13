@@ -2,7 +2,9 @@
 
 传感器数据的时间戳与精度信息基类，所有传感器Response类型均继承于此。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-interface Response--><!--Device-sensor-interface Response-End-->
 
@@ -18,9 +20,11 @@ accuracy: SensorAccuracy
 
 **类型：** [SensorAccuracy](arkts-sensorservice-sensor-sensoraccuracy-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Response-accuracy: SensorAccuracy--><!--Device-Response-accuracy: SensorAccuracy-End-->
 
@@ -36,7 +40,9 @@ timestamp: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

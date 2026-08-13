@@ -12,14 +12,11 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 ```
 
-Obtains the authentication widget manager object. It is used to obtain the **UserAuthWidgetMgr** instance, which can be used to register custom authentication widgets with the system for unified management.
+Obtains the authentication widget manager object. It is used to obtain the **UserAuthWidgetMgr** instance, which can be used to register custom authentication widgets with the system for unified management. > **NOTE：**> Each **UserAuthWidgetMgr** instance can manage one authentication widget. To manage multiple widgets, you need to > obtain multiple instances.
 
-> **NOTE：**
+**Since:** 23
 
-> Each **UserAuthWidgetMgr** instance can manage one authentication widget. To manage multiple widgets, you need to
-> obtain multiple instances.
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SUPPORT_USER_AUTH
 
@@ -45,10 +42,10 @@ Obtains the authentication widget manager object. It is used to obtain the **Use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 

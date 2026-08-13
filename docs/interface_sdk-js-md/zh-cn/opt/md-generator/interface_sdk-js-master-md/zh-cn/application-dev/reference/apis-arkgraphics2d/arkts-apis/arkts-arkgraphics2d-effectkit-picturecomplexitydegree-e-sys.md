@@ -2,7 +2,9 @@
 
 图片内容复杂度的枚举。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-effectKit-enum PictureComplexityDegree--><!--Device-effectKit-enum PictureComplexityDegree-End-->
 
@@ -18,7 +20,9 @@ UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0
 
 默认值，图片内容复杂度未知。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PictureComplexityDegree-UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0--><!--Device-PictureComplexityDegree-UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0-End-->
 
@@ -34,7 +38,9 @@ PURE_PICTURE = 1
 
 图片内容复杂度为纯净。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PictureComplexityDegree-PURE_PICTURE = 1--><!--Device-PictureComplexityDegree-PURE_PICTURE = 1-End-->
 
@@ -50,7 +56,9 @@ MODERATE_COMPLEXITY_PICTURE = 2
 
 图片内容复杂度为一般。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PictureComplexityDegree-MODERATE_COMPLEXITY_PICTURE = 2--><!--Device-PictureComplexityDegree-MODERATE_COMPLEXITY_PICTURE = 2-End-->
 
@@ -66,7 +74,9 @@ VERY_FLOWERY_PICTURE = 3
 
 图片内容复杂度为复杂。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PictureComplexityDegree-VERY_FLOWERY_PICTURE = 3--><!--Device-PictureComplexityDegree-VERY_FLOWERY_PICTURE = 3-End-->
 

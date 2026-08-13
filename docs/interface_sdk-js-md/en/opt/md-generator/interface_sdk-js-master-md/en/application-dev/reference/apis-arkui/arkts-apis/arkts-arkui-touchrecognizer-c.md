@@ -4,6 +4,8 @@ Represents a touch gesture recognizer.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class TouchRecognizer--><!--Device-unnamed-declare class TouchRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ cancelTouch(): void
 Sends a touch cancellation event to this touch gesture recognizer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ getEventTargetInfo(): EventTargetInfo
 Obtains the information about the component corresponding to this touch gesture recognizer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,6 +65,8 @@ isHostBelongsTo(uniqueId: number): boolean
 Returns whether the node bound to the current touch gesture recognizer is a descendant of the specified component.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 端云同步信息，包含最近一次端云同步的时间、结果和状态。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudData-interface SyncInfo--><!--Device-cloudData-interface SyncInfo-End-->
 
@@ -20,7 +22,9 @@ code: relationalStore.ProgressCode
 
 **类型：** relationalStore.ProgressCode
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SyncInfo-code: relationalStore.ProgressCode--><!--Device-SyncInfo-code: relationalStore.ProgressCode-End-->
 
@@ -38,7 +42,9 @@ finishTime: Date
 
 **类型：** Date
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SyncInfo-finishTime: Date--><!--Device-SyncInfo-finishTime: Date-End-->
 
@@ -56,7 +62,9 @@ startTime: Date
 
 **类型：** Date
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SyncInfo-startTime: Date--><!--Device-SyncInfo-startTime: Date-End-->
 
@@ -74,7 +82,9 @@ syncStatus?: SyncStatus
 
 **类型：** [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SyncInfo-syncStatus?: SyncStatus--><!--Device-SyncInfo-syncStatus?: SyncStatus-End-->
 

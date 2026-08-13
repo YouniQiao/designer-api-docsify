@@ -8,7 +8,9 @@ function getMediaKeySystemUuid(name: string): string
 
 Get a MediaKeySystem's UUID.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -32,9 +34,9 @@ Get a MediaKeySystem's UUID.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## 示例
 

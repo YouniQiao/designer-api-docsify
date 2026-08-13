@@ -14,7 +14,9 @@ function getTouchpadTapSwitch(callback: AsyncCallback<boolean>): void
 
 Obtains the touchpad tap switch state. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function getTouchpadTapSwitch(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function getTouchpadTapSwitch(callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,8 +34,8 @@ Obtains the touchpad tap switch state. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -75,7 +77,9 @@ function getTouchpadTapSwitch(): Promise<boolean>
 
 Obtains the touchpad tap switch state. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function getTouchpadTapSwitch(): Promise<boolean>--><!--Device-pointer-function getTouchpadTapSwitch(): Promise<boolean>-End-->
 
@@ -93,8 +97,8 @@ Obtains the touchpad tap switch state. This API uses a promise to return the res
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

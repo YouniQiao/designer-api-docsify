@@ -2,7 +2,9 @@
 
 文本装饰线。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-text-interface Decoration--><!--Device-text-interface Decoration-End-->
 
@@ -18,7 +20,9 @@ color?: common2D.Color
 
 **类型：** common2D.Color
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ decorationStyle?: TextDecorationStyle
 
 **类型：** TextDecorationStyle
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ decorationThicknessScale?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +80,9 @@ textDecoration?: TextDecorationType
 
 **类型：** TextDecorationType
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

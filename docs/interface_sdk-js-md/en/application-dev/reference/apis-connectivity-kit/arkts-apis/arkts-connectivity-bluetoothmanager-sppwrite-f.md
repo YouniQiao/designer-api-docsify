@@ -20,7 +20,7 @@ Write data through the socket.
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppWrite](ohos.bluetooth.socket/socket#sppWrite)
+**Substitutes:** [sppWrite](arkts-connectivity-socket-sppwrite-f.md#sppWrite)
 
 <!--Device-bluetoothManager-function sppWrite(clientSocket: number, data: ArrayBuffer): void--><!--Device-bluetoothManager-function sppWrite(clientSocket: number, data: ArrayBuffer): void-End-->
 
@@ -37,8 +37,8 @@ Write data through the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2901054 | IO error. |
 | 2900099 | Operation failed. |
 

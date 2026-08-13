@@ -8,7 +8,9 @@ Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare class ReplaceSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class ReplaceSymbolEffect extends SymbolEffect-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ReplaceSymbolEffect--><!--Device-unnamed-declare class ReplaceSymbolEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +56,8 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -75,15 +81,15 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 replaceType?: ReplaceEffectType
 ```
 
-Replacement effect type.
-
-Default value: **ReplaceEffectType.SEQUENTIAL**.
+Replacement effect type. Default value: **ReplaceEffectType.SEQUENTIAL**.
 
 **Type:** [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md)
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,15 +107,15 @@ Default value: **ReplaceEffectType.SEQUENTIAL**.
 scope?: EffectScope
 ```
 
-Effect scope.
-
-Default value: **EffectScope.LAYER**
+Effect scope. Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

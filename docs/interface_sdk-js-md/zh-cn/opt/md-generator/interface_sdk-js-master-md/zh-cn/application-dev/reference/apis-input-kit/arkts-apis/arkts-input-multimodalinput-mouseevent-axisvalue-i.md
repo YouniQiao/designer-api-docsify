@@ -2,7 +2,9 @@
 
 鼠标轴类型和轴的值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface AxisValue--><!--Device-unnamed-export declare interface AxisValue-End-->
 
@@ -18,7 +20,9 @@ axis: Axis
 
 **类型：** [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisValue-axis: Axis--><!--Device-AxisValue-axis: Axis-End-->
 
@@ -34,7 +38,9 @@ value: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisValue-value: int--><!--Device-AxisValue-value: int-End-->
 

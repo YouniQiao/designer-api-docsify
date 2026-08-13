@@ -1,16 +1,16 @@
 # Video属性/事件
 
-除支持[通用属性](./common)外，还支持以下属性：
+除支持通用属性外，还支持以下属性： 除支持通用事件外，还支持以下事件：
 
-除支持[通用事件](./common)外，还支持以下事件：
-
-**继承/实现关系：** VideoAttribute extends [CommonMethod<VideoAttribute>](CommonMethod<VideoAttribute>)
+**继承/实现关系：** VideoAttribute extends CommonMethod<VideoAttribute>
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
-<!--Device-unnamed-declare class VideoAttribute extends CommonMethod<VideoAttribute>--><!--Device-unnamed-declare class VideoAttribute extends CommonMethod<VideoAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class VideoAttribute--><!--Device-unnamed-declare class VideoAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,15 +20,13 @@
 analyzerConfig(config: ImageAnalyzerConfig)
 ```
 
-设置AI分析识别类型，包括主体识别、文字识别和对象查找等功能，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
+设置AI分析识别类型，包括主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。 > **说明：** > > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,11 +48,13 @@ analyzerConfig(config: ImageAnalyzerConfig)
 autoPlay(value: boolean)
 ```
 
-设置视频是否自动播放，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+设置视频是否自动播放，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,11 +74,13 @@ autoPlay(value: boolean)
 controls(value: boolean)
 ```
 
-设置控制视频播放的控制栏是否显示，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+设置控制视频播放的控制栏是否显示，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +92,7 @@ controls(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 控制视频播放的控制栏是否显示。 &lt;br&gt;true：控制栏显示；false：控制栏不显示。 &lt;br&gt;默认值：true &lt;br&gt;**说明：** &lt;br&gt;如需使用[enableAnalyzer](VideoAttribute#enableAnalyzer)功能进行AI分析，需设置为false使用自定义控制栏。 |
+| value | boolean | 是 | 控制视频播放的控制栏是否显示。 &lt;br&gt;true：控制栏显示；false：控制栏不显示。 &lt;br&gt;默认值：true &lt;br&gt;**说明：** &lt;br&gt;如需使用[enableAnalyzer](#enableAnalyzer)功能进行AI分析，需设置为false使用自定义控制栏。 |
 
 ## enableAnalyzer
 
@@ -98,20 +100,13 @@ controls(value: boolean)
 enableAnalyzer(enable: boolean)
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
-
-启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。
-
-不支持与[overlay](CommonMethod#overlay)属性同时使用，两者同时设置时[overlay](CommonMethod#overlay)中  
-[CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
+设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。 启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。 不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。 > **说明：** > > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -125,7 +120,7 @@ enableAnalyzer(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用AI分析功能。 &lt;br&gt;true：开启AI分析功能；false：关闭AI分析功能。 &lt;br&gt;默认值：false &lt;br&gt;**说明：** &lt;br&gt;不支持与[overlay](CommonMethod#overlay)属性同时使用，两者同时设置时[overlay](CommonMethod#overlay)中 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。 |
+| enable | boolean | 是 | 是否启用AI分析功能。 &lt;br&gt;true：开启AI分析功能；false：关闭AI分析功能。 &lt;br&gt;默认值：false &lt;br&gt;**说明：** &lt;br&gt;不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。 |
 
 ## enableShortcutKey
 
@@ -133,13 +128,13 @@ enableAnalyzer(enable: boolean)
 enableShortcutKey(enabled: boolean)
 ```
 
-设置组件支持快捷键响应，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
-
-目前支持在组件获焦后响应空格键播放/暂停、上下方向键调整视频音量、左右方向键快进/快退。
+设置组件支持快捷键响应，支持attributeModifier动态设置属性方法。 目前支持在组件获焦后响应空格键播放/暂停、上下方向键调整视频音量、左右方向键快进/快退。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -161,11 +156,13 @@ enableShortcutKey(enabled: boolean)
 loop(value: boolean)
 ```
 
-设置是否单个视频循环播放，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+设置是否单个视频循环播放，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -185,11 +182,13 @@ loop(value: boolean)
 muted(value: boolean)
 ```
 
-设置视频是否静音，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+设置视频是否静音，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -209,11 +208,13 @@ muted(value: boolean)
 objectFit(value: ImageFit)
 ```
 
-设置视频的填充模式，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+设置视频的填充模式，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -225,7 +226,7 @@ objectFit(value: ImageFit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ImageFit | 是 | 视频填充模式。 &lt;br&gt;默认值：ImageFit.Cover &lt;br&gt;约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与ImageFit.Cover一致。 &lt;br&gt;异常值：若设置异常值undefined、null，或不在[ImageFit](ImageFit)枚举范围内的值，作用效果均与ImageFit.Cover一致。 |
+| value | ImageFit | 是 | 视频填充模式。 &lt;br&gt;默认值：ImageFit.Cover &lt;br&gt;约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与ImageFit.Cover一致。 &lt;br&gt;异常值：若设置异常值undefined、null，或不在ImageFit枚举范围内的值，作用效果均与ImageFit.Cover一致。 |
 
 ## onError
 
@@ -233,15 +234,13 @@ objectFit(value: ImageFit)
 onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 ```
 
-播放失败时触发该事件，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
+播放失败时触发该事件，支持attributeModifier动态设置属性方法。 > **说明：** > > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -253,7 +252,7 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中 [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md#ErrorCallback)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见 [Video组件错误码](../../../reference/apis-arkui/errorcode-video.md)和 [Media错误码](../../../reference/apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
+| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中 [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md#ErrorCallback)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见 [Video组件错误码](../errorcode-video.md)和 [Media错误码](../../apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
 
 ## onFinish
 
@@ -261,11 +260,13 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 onFinish(event: VoidCallback)
 ```
 
-播放结束时触发该事件，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+播放结束时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -285,11 +286,13 @@ onFinish(event: VoidCallback)
 onFullscreenChange(callback: Callback<FullscreenInfo>)
 ```
 
-在全屏播放与非全屏播放状态之间切换时触发该事件，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+在全屏播放与非全屏播放状态之间切换时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -309,11 +312,13 @@ onFullscreenChange(callback: Callback<FullscreenInfo>)
 onPause(event: VoidCallback)
 ```
 
-暂停时触发该事件，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+暂停时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -333,11 +338,13 @@ onPause(event: VoidCallback)
 onPrepared(callback: Callback<PreparedInfo>)
 ```
 
-视频准备完成时触发该事件，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+视频准备完成时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -357,11 +364,13 @@ onPrepared(callback: Callback<PreparedInfo>)
 onSeeked(callback: Callback<PlaybackInfo>)
 ```
 
-操作进度条完成后，上报播放时间信息，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+操作进度条完成后，上报播放时间信息，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -381,11 +390,13 @@ onSeeked(callback: Callback<PlaybackInfo>)
 onSeeking(callback: Callback<PlaybackInfo>)
 ```
 
-操作进度条过程时上报时间信息，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+操作进度条过程时上报时间信息，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -405,11 +416,13 @@ onSeeking(callback: Callback<PlaybackInfo>)
 onStart(event: VoidCallback)
 ```
 
-开始播放时触发该事件，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+开始播放时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -429,11 +442,13 @@ onStart(event: VoidCallback)
 onStop(event: Callback<void>)
 ```
 
-播放停止时触发该事件(当stop()方法被调用后触发)，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+播放停止时触发该事件(当stop()方法被调用后触发)，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -455,11 +470,13 @@ onStop(event: Callback<void>)
 onUpdate(callback: Callback<PlaybackInfo>)
 ```
 
-播放进度变化时触发该事件，支持[attributeModifier](CommonMethod#attributeModifier)动态设置属性方法。
+播放进度变化时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

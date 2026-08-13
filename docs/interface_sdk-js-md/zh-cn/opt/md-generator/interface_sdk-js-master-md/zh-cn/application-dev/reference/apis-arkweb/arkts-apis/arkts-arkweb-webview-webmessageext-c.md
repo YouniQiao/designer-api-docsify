@@ -4,6 +4,8 @@ The message received or sent from web message port.
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ getArray(): Array<string | number | boolean>
 获取数据对象的数组类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +38,7 @@ getArray(): Array<string | number | boolean>
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getArrayBuffer
 
@@ -45,6 +49,8 @@ getArrayBuffer(): ArrayBuffer
 获取数据对象的原始二进制数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -62,7 +68,7 @@ getArrayBuffer(): ArrayBuffer
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getBoolean
 
@@ -73,6 +79,8 @@ getBoolean(): boolean
 获取数据对象的布尔类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +98,7 @@ getBoolean(): boolean
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getError
 
@@ -101,6 +109,8 @@ getError(): Error
 获取数据对象的错误类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -118,7 +128,7 @@ getError(): Error
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getNumber
 
@@ -129,6 +139,8 @@ getNumber(): number
 获取数据对象的数值类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -146,7 +158,7 @@ getNumber(): number
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getString
 
@@ -157,6 +169,8 @@ getString(): string
 获取数据对象的字符串类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -174,7 +188,7 @@ getString(): string
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getType
 
@@ -185,6 +199,8 @@ getType(): WebMessageType
 获取数据对象的类型。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -208,6 +224,8 @@ setArray(message: Array<string | number | boolean>): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void-End-->
@@ -224,8 +242,8 @@ setArray(message: Array<string | number | boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setArrayBuffer
 
@@ -236,6 +254,8 @@ setArrayBuffer(message: ArrayBuffer): void
 设置数据对象的原始二进制数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -253,8 +273,8 @@ setArrayBuffer(message: ArrayBuffer): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setBoolean
 
@@ -265,6 +285,8 @@ setBoolean(message: boolean): void
 设置数据对象的布尔类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -282,8 +304,8 @@ setBoolean(message: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setError
 
@@ -294,6 +316,8 @@ setError(message: Error): void
 设置数据对象的错误对象类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -311,8 +335,8 @@ setError(message: Error): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setNumber
 
@@ -323,6 +347,8 @@ setNumber(message: number): void
 设置数据对象的数值类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -340,8 +366,8 @@ setNumber(message: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setString
 
@@ -352,6 +378,8 @@ setString(message: string): void
 设置数据对象的字符串类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -369,8 +397,8 @@ setString(message: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setType
 
@@ -381,6 +409,8 @@ setType(type: WebMessageType): void
 设置数据对象的类型。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -398,5 +428,5 @@ setType(type: WebMessageType): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |

@@ -2,9 +2,11 @@
 
 Enumerates the path operation types. It is often used in path combination and clipping scenarios.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum PathOp--><!--Device-drawing-enum PathOp-End-->
 
@@ -18,9 +20,11 @@ DIFFERENCE = 0
 
 Difference operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PathOp-DIFFERENCE = 0--><!--Device-PathOp-DIFFERENCE = 0-End-->
 
@@ -34,9 +38,11 @@ INTERSECT = 1
 
 Intersection operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PathOp-INTERSECT = 1--><!--Device-PathOp-INTERSECT = 1-End-->
 
@@ -50,9 +56,11 @@ UNION = 2
 
 Union operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PathOp-UNION = 2--><!--Device-PathOp-UNION = 2-End-->
 
@@ -66,9 +74,11 @@ XOR = 3
 
 XOR operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PathOp-XOR = 3--><!--Device-PathOp-XOR = 3-End-->
 
@@ -82,9 +92,11 @@ REVERSE_DIFFERENCE = 4
 
 Reverse difference operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PathOp-REVERSE_DIFFERENCE = 4--><!--Device-PathOp-REVERSE_DIFFERENCE = 4-End-->
 

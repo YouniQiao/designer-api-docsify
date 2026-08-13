@@ -1,14 +1,14 @@
 # Button properties/events
 
-In addition to the [universal attributes](common), the following attributes are supported.
+In addition to the universal attributes, the following attributes are supported. The universal events are supported.
 
-The [universal events](common) are supported.
-
-**Inheritance/Implementation:** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
+**Inheritance/Implementation:** ButtonAttribute extends CommonMethod<ButtonAttribute>
 
 **Since:** 7
 
-<!--Device-unnamed-declare class ButtonAttribute extends CommonMethod<ButtonAttribute>--><!--Device-unnamed-declare class ButtonAttribute extends CommonMethod<ButtonAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ButtonAttribute--><!--Device-unnamed-declare class ButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +18,11 @@ The [universal events](common) are supported.
 buttonStyle(value: ButtonStyleMode)
 ```
 
-Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
-[fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
-
-> **NOTE：**
-> 
-> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
+Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](#fontColor), and [role](#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting. > **NOTE：**> > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +50,8 @@ Creates a content modifier.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,13 +72,11 @@ Creates a content modifier.
 controlSize(value: ControlSize)
 ```
 
-Sets the size for the button.
-
-> **NOTE：**
-> 
-> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
+Sets the size for the button. > **NOTE：**> > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +104,8 @@ Sets the font color for the button.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -131,6 +129,8 @@ fontFamily(value: string | Resource)
 Sets the font family.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,6 +156,8 @@ Sets the font size for the button.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -180,6 +182,8 @@ Sets the font style for the button.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -192,7 +196,7 @@ Sets the font style for the button.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [FontStyle](#fontstyle) | Yes |
+| value | [FontStyle](#fontStyle) | Yes |
 
 ## fontWeight
 
@@ -203,6 +207,8 @@ fontWeight(value: number | FontWeight | string)
 Sets the font weight for the button.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -228,6 +234,8 @@ Sets the label style for the button.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -251,6 +259,8 @@ maxFontScale(scale: number | Resource)
 Sets the maximum font scale factor for text.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -276,6 +286,8 @@ Sets the minimum font scale factor for text.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -296,11 +308,11 @@ Sets the minimum font scale factor for text.
 role(value: ButtonRole)
 ```
 
-Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
-[fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](#fontColor), and [buttonStyle](#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -328,6 +340,8 @@ Specifies whether to enable the pressed state effect when the button is clicked.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -351,6 +365,8 @@ type(value: ButtonType)
 Sets the button type.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

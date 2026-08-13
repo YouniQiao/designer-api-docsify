@@ -1,10 +1,12 @@
 # GridLayoutAlgorithmOptions
 
-GridLayoutAlgorithm constructor options.
+Sets the number of columns, column spacing, and row spacing of the grid layout algorithm.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface GridLayoutAlgorithmOptions--><!--Device-unnamed-interface GridLayoutAlgorithmOptions-End-->
 
@@ -16,17 +18,21 @@ GridLayoutAlgorithm constructor options.
 columnsGap?: LengthMetrics
 ```
 
-The spacing between columns.
+Spacing between columns. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-GridLayoutAlgorithmOptions-columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithmOptions-columnsGap?: LengthMetrics-End-->
 
@@ -38,17 +44,21 @@ The spacing between columns.
 columnsTemplate?: string | ItemFillPolicy
 ```
 
-This parameter specifies the number of columns in the current grid layout.
+Number of columns in the grid layout. Default value: **'1fr'** Invalid values are treated as the default value.
 
-**Type:** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
+**Type:** string \| [ItemFillPolicy](../../apis-na/arkts-apis/arkts-na-units-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-GridLayoutAlgorithmOptions-columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithmOptions-columnsTemplate?: string | ItemFillPolicy-End-->
 
@@ -60,17 +70,21 @@ This parameter specifies the number of columns in the current grid layout.
 rowsGap?: LengthMetrics
 ```
 
-The spacing between rows.
+Spacing between rows. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-GridLayoutAlgorithmOptions-rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithmOptions-rowsGap?: LengthMetrics-End-->
 

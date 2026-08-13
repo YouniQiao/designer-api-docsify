@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface CommonProgressStyleOptions--><!--Device-unnamed-declare interface CommonProgressStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@
 enableSmoothEffect?: boolean
 ```
 
-进度平滑动效的开关。开启平滑动效后设置进度，进度会从当前值渐变至设定值，页面会有进度变化的动效；否则进度从当前值突变至设定值，页面无动效。
-
-true：表示开启进度平滑动效。
-
-false：表示关闭进度平滑动效。
-
-默认值：true
+进度平滑动效的开关。开启平滑动效后设置进度，进度会从当前值渐变至设定值，页面会有进度变化的动效；否则进度从当前值突变至设定值，页面无动效。 true：表示开启进度平滑动效。 false：表示关闭进度平滑动效。 默认值：true
 
 **类型：** boolean
 
@@ -31,6 +27,8 @@ false：表示关闭进度平滑动效。
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

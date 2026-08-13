@@ -18,7 +18,7 @@ Clears the cache data of an application. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -48,7 +48,7 @@ Clears the cache data of an application. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 

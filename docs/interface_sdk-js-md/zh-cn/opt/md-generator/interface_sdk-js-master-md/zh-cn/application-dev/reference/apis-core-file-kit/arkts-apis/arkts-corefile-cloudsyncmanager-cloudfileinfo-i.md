@@ -2,7 +2,9 @@
 
 应用本地和云端文件个数以及大小信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSyncManager-interface CloudFileInfo--><!--Device-cloudSyncManager-interface CloudFileInfo-End-->
 
@@ -18,7 +20,9 @@ bothFileCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudFileInfo-bothFileCount: int--><!--Device-CloudFileInfo-bothFileCount: int-End-->
 
@@ -34,7 +38,9 @@ bothFileTotalSize: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudFileInfo-bothFileTotalSize: long--><!--Device-CloudFileInfo-bothFileTotalSize: long-End-->
 
@@ -50,7 +56,9 @@ cloudFileCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudFileInfo-cloudFileCount: int--><!--Device-CloudFileInfo-cloudFileCount: int-End-->
 
@@ -66,7 +74,9 @@ cloudFileTotalSize: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudFileInfo-cloudFileTotalSize: long--><!--Device-CloudFileInfo-cloudFileTotalSize: long-End-->
 
@@ -82,7 +92,9 @@ localFileCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudFileInfo-localFileCount: int--><!--Device-CloudFileInfo-localFileCount: int-End-->
 
@@ -98,7 +110,9 @@ localFileTotalSize: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudFileInfo-localFileTotalSize: long--><!--Device-CloudFileInfo-localFileTotalSize: long-End-->
 

@@ -12,18 +12,13 @@ import { text } from '@kit.ArkGraphics2D';
 function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void
 ```
 
-Sets the glyph type to be used when characters are mapped to the .notdef (undefined) glyph.
+Sets the glyph type to be used when characters are mapped to the .notdef (undefined) glyph. After this API is called, any subsequently rendered text containing undefined glyphs will be displayed according to this setting. This setting affects how to display undefined characters in the font: - The default behavior follows the .notdef glyph design of the font. - After this feature is enabled, characters without glyphs are displayed as a tofu block.
 
-After this API is called, any subsequently rendered text containing undefined glyphs will be displayed according to this setting.
+**Since:** 23
 
-This setting affects how to display undefined characters in the font:
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-- The default behavior follows the .notdef glyph design of the font.  
-- After this feature is enabled, characters without glyphs are displayed as a tofu block.
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

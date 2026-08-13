@@ -2,7 +2,9 @@
 
 Enumerates file aggregation types.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-picker-export enum MergeTypeMode--><!--Device-picker-export enum MergeTypeMode-End-->
 
@@ -16,9 +18,11 @@ DEFAULT = 0
 
 Default mode, indicating that this parameter does not take effect.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MergeTypeMode-DEFAULT = 0--><!--Device-MergeTypeMode-DEFAULT = 0-End-->
 
@@ -32,9 +36,11 @@ AUDIO = 1
 
 Audio mode.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MergeTypeMode-AUDIO = 1--><!--Device-MergeTypeMode-AUDIO = 1-End-->
 
@@ -48,9 +54,11 @@ VIDEO = 2
 
 Video mode.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MergeTypeMode-VIDEO = 2--><!--Device-MergeTypeMode-VIDEO = 2-End-->
 
@@ -64,9 +72,11 @@ DOCUMENT = 3
 
 Document mode.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MergeTypeMode-DOCUMENT = 3--><!--Device-MergeTypeMode-DOCUMENT = 3-End-->
 
@@ -80,9 +90,11 @@ PICTURE = 4
 
 Image mode.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MergeTypeMode-PICTURE = 4--><!--Device-MergeTypeMode-PICTURE = 4-End-->
 

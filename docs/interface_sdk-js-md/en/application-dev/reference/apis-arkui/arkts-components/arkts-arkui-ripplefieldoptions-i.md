@@ -6,6 +6,8 @@ Defines ripple field options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RippleFieldOptions--><!--Device-unnamed-declare interface RippleFieldOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Defines ripple field options.
 amplitude?: number
 ```
 
-The amplitude of the ripple field. The greater the amplitude, the stronger the force of the ripple field.Range of values:[0, +∞)
+The amplitude of the ripple field. The greater the amplitude, the stronger the force of the ripple field. Range of values:[0, +∞)
 
 **Type:** number
 
@@ -25,6 +27,8 @@ The amplitude of the ripple field. The greater the amplitude, the stronger the f
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ The attenuation coefficient of the ripple field. The larger the attenuation coef
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -73,6 +79,8 @@ The central point where the ripple field generates force. The top-left corner of
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +106,8 @@ The region influenced by the ripple field.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -122,6 +132,8 @@ Wave speed. The greater the wave speed, the faster the wave changes over time, a
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -136,7 +148,7 @@ Wave speed. The greater the wave speed, the faster the wave changes over time, a
 wavelength?: number
 ```
 
-Wavelength, which is the distance over which a wave cycle changes. The larger the wavelength, the slower the wave changes with distance, and the less pronounced the wave fluctiations.Range of values:[0, +∞)
+Wavelength, which is the distance over which a wave cycle changes. The larger the wavelength, the slower the wave changes with distance, and the less pronounced the wave fluctiations. Range of values:[0, +∞)
 
 **Type:** number
 
@@ -145,6 +157,8 @@ Wavelength, which is the distance over which a wave cycle changes. The larger th
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

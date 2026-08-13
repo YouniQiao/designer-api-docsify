@@ -4,9 +4,11 @@ Provides APIs for managing the analysis album change request.
 
 **Inheritance/Implementation:** MediaAnalysisAlbumChangeRequest extends [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#MediaAlbumChangeRequest)
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,7 +28,9 @@ constructor(album: Album)
 
 Constructor.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)-End-->
 
@@ -44,8 +48,8 @@ Constructor.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -79,20 +83,60 @@ static createAnalysisAlbumRequest(
       context:Context,
       name: string,
       subtype: AlbumSubtype
+    ): MediaAnalysisAlbumChangeRequest | null
+```
+
+Creates a MediaAnalysisAlbumChangeRequest instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context:Context,      name: string,      subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest | null--><!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context:Context,      name: string,      subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest | null-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| name | string | Yes |
+| subtype | [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## createAnalysisAlbumRequest
+
+```TypeScript
+static createAnalysisAlbumRequest(
+      context:Context,
+      name: string,
+      subtype: AlbumSubtype
     ): MediaAnalysisAlbumChangeRequest
 ```
 
-Creates a change request for the **Analysis** album.
-
-> **NOTE：**
-> 
-> The album name must meet the following requirements:
-> 
-> - The album name string length ranges from 1 to 255.
-> 
-> - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates a change request for the **Analysis** album. > **NOTE：**> > The album name must meet the following requirements: > > - The album name string length ranges from 1 to 255. > > - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,9 +164,9 @@ Creates a change request for the **Analysis** album.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -152,6 +196,8 @@ Sets the default cover image for the smart album.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void--><!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void-End-->
@@ -170,9 +216,9 @@ Sets the default cover image for the smart album.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -230,7 +276,9 @@ setOrderPosition(assets: Array<PhotoAsset>, position: Array<number>): void
 
 Sets the sequence of assets in the **Analysis** album.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -251,9 +299,9 @@ Sets the sequence of assets in the **Analysis** album.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -306,37 +354,11 @@ async function example(context: Context) {
 setRelationship(relationship: string): Promise<void>
 ```
 
-Sets the relationships of a person in the portrait album.
+Sets the relationships of a person in the portrait album. The supported relationship names include: | Unique ID | Description | | ---------- | ------- | | me | Me| | son | Son| | daughter | Daughter| | wife | Wife| | husband | Husband| | father | Father| | mother | Mother| | colleague | Colleague| | friend | Friend| | classmate | Classmate| | best_friend_female | Best female friend| | boyfriend | Boyfriend| | girlfriend | Girlfriend| | family | Family| | maternal_grandfather | Maternal grandfather| | maternal_grandmother | Maternal grandmother| | paternal_grandfather | Paternal grandfather| | paternal_grandmother | Paternal grandmother| | older_brother | Older brother| | older_sister | Older sister| | younger_brother | Younger brother| | younger_sister | Younger sister| | relative | Relative| | other | Other|
 
-The supported relationship names include:  
-| Unique ID | Description |
-| ---------- | ------- |
-| me | Me|
-| son | Son|
-| daughter | Daughter|
-| wife | Wife|
-| husband | Husband|
-| father | Father|
-| mother | Mother|
-| colleague | Colleague|
-| friend | Friend|
-| classmate | Classmate|
-| best_friend_female | Best female friend|
-| boyfriend | Boyfriend|
-| girlfriend | Girlfriend|
-| family | Family|
-| maternal_grandfather | Maternal grandfather|
-| maternal_grandmother | Maternal grandmother|
-| paternal_grandfather | Paternal grandfather|
-| paternal_grandmother | Paternal grandmother|
-| older_brother | Older brother|
-| older_sister | Older sister|
-| younger_brother | Younger brother|
-| younger_sister | Younger sister|
-| relative | Relative|
-| other |
+**Since:** 26.0.0
 
-**Since:** 21
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -362,10 +384,10 @@ The supported relationship names include:
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 

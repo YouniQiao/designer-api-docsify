@@ -2,9 +2,11 @@
 
 Enumerates the status code returned after data processing is complete.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum UsbTransferStatus--><!--Device-usbManager-export enum UsbTransferStatus-End-->
 
@@ -18,9 +20,11 @@ TRANSFER_COMPLETED = 0
 
 Transfer completed.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_COMPLETED = 0--><!--Device-UsbTransferStatus-TRANSFER_COMPLETED = 0-End-->
 
@@ -34,9 +38,11 @@ TRANSFER_ERROR = 1
 
 Transfer failed.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_ERROR = 1--><!--Device-UsbTransferStatus-TRANSFER_ERROR = 1-End-->
 
@@ -50,9 +56,11 @@ TRANSFER_TIMED_OUT = 2
 
 Transfer timeout.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_TIMED_OUT = 2--><!--Device-UsbTransferStatus-TRANSFER_TIMED_OUT = 2-End-->
 
@@ -66,9 +74,11 @@ TRANSFER_CANCELED = 3
 
 Transfer canceled.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_CANCELED = 3--><!--Device-UsbTransferStatus-TRANSFER_CANCELED = 3-End-->
 
@@ -82,9 +92,11 @@ TRANSFER_STALL = 4
 
 Transfer stalled (at bulk/interrupt endpoint).
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_STALL = 4--><!--Device-UsbTransferStatus-TRANSFER_STALL = 4-End-->
 
@@ -98,9 +110,11 @@ TRANSFER_NO_DEVICE = 5
 
 Device disconnected.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_NO_DEVICE = 5--><!--Device-UsbTransferStatus-TRANSFER_NO_DEVICE = 5-End-->
 
@@ -114,9 +128,11 @@ TRANSFER_OVERFLOW = 6
 
 Data overflow.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_OVERFLOW = 6--><!--Device-UsbTransferStatus-TRANSFER_OVERFLOW = 6-End-->
 

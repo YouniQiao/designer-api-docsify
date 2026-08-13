@@ -1,18 +1,20 @@
-# VideoPlayStateChangedCallback
+# videoPlayStateChangedCallback
 
 ```TypeScript
-export type VideoPlayStateChangedCallback = (state: VideoPlayerState) => void
+export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void
 ```
 
-The callback of onVideoPlayStateChanged event
+Callback to be invoked when the video playback state on a photo browser page changes.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-unnamed-export type VideoPlayStateChangedCallback = (state: VideoPlayerState) => void--><!--Device-unnamed-export type VideoPlayStateChangedCallback = (state: VideoPlayerState) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-unnamed-export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void--><!--Device-unnamed-export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,5 +22,5 @@ The callback of onVideoPlayStateChanged event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md) | Yes | Indicates the video player state. |
+| state | [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md) | Yes | Enumerates the video playback states. |
 

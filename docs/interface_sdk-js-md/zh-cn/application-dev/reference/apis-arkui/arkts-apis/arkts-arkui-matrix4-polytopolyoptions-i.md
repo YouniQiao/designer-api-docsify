@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-matrix4-export interface PolyToPolyOptions--><!--Device-matrix4-export interface PolyToPolyOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ dst: Array<Point>
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PolyToPolyOptions-dst: Array<Point>--><!--Device-PolyToPolyOptions-dst: Array<Point>-End-->
@@ -36,11 +40,7 @@ dst: Array<Point>
 dstIndex?: int
 ```
 
-目标坐标起始索引。
-
-默认值: src.length/2 
-
-取值范围：[0, +∞)
+目标坐标起始索引。 默认值: src.length/2 取值范围：[0, +∞)
 
 **类型：** int
 
@@ -49,6 +49,8 @@ dstIndex?: int
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,11 +64,7 @@ dstIndex?: int
 pointCount?: int
 ```
 
-使用到的点数量。
-
-默认值: 0 
-
-取值范围：[0, +∞)
+使用到的点数量。 默认值: 0 取值范围：[0, +∞)
 
 **类型：** int
 
@@ -75,6 +73,8 @@ pointCount?: int
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,6 +96,8 @@ src: Array<Point>
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PolyToPolyOptions-src: Array<Point>--><!--Device-PolyToPolyOptions-src: Array<Point>-End-->
@@ -108,11 +110,7 @@ src: Array<Point>
 srcIndex?: int
 ```
 
-源点坐标起始索引。
-
-默认值:0 
-
-取值范围：[0, +∞)
+源点坐标起始索引。 默认值:0 取值范围：[0, +∞)
 
 **类型：** int
 
@@ -121,6 +119,8 @@ srcIndex?: int
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

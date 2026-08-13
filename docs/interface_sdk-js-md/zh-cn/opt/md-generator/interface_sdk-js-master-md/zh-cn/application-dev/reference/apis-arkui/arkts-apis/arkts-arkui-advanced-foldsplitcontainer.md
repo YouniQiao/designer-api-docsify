@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.FoldSplitContainer(Defines FoldSplitContainer component.)
+# @ohos.arkui.advanced.FoldSplitContainer
 
 ## 汇总
 

@@ -2,7 +2,9 @@
 
 设置地磁响应对象，用于描述指定地理位置的地磁场信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-interface GeomagneticResponse--><!--Device-sensor-interface GeomagneticResponse-End-->
 
@@ -18,7 +20,9 @@ deflectionAngle: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeomagneticResponse-deflectionAngle: double--><!--Device-GeomagneticResponse-deflectionAngle: double-End-->
 
@@ -34,7 +38,9 @@ geomagneticDip: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeomagneticResponse-geomagneticDip: double--><!--Device-GeomagneticResponse-geomagneticDip: double-End-->
 
@@ -50,7 +56,9 @@ levelIntensity: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeomagneticResponse-levelIntensity: double--><!--Device-GeomagneticResponse-levelIntensity: double-End-->
 
@@ -66,7 +74,9 @@ totalIntensity: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeomagneticResponse-totalIntensity: double--><!--Device-GeomagneticResponse-totalIntensity: double-End-->
 
@@ -82,7 +92,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeomagneticResponse-x: double--><!--Device-GeomagneticResponse-x: double-End-->
 
@@ -98,7 +110,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeomagneticResponse-y: double--><!--Device-GeomagneticResponse-y: double-End-->
 
@@ -114,7 +128,9 @@ z: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeomagneticResponse-z: double--><!--Device-GeomagneticResponse-z: double-End-->
 

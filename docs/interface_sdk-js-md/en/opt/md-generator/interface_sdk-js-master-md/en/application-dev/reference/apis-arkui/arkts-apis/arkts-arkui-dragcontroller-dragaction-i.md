@@ -4,6 +4,8 @@ Implements a **DragAction** object to subscribe to drag state changes and start 
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface DragAction--><!--Device-dragController-interface DragAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,7 +16,7 @@ Implements a **DragAction** object to subscribe to drag state changes and start 
 import { dragController } from '@kit.ArkUI';
 ```
 
-## off('statusChange')
+## off_statusChange
 
 ```TypeScript
 off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
@@ -23,6 +25,8 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 Unsubscribes from drag state changes.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +43,7 @@ Unsubscribes from drag state changes.
 | type | 'statusChange' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | No |
 
-## on('statusChange')
+## on_statusChange
 
 ```TypeScript
 on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
@@ -48,6 +52,8 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 Subscribes to drag state changes.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +80,8 @@ Starts the drag service. This API uses a promise to return the result.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -92,4 +100,4 @@ Starts the drag service. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [100001](../errorcode-internal.md#100001-internal-error) |

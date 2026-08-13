@@ -1,11 +1,10 @@
 # ParagraphBuilder
 
-Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) and  
-[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection) to the constructor, then set the text style through  
-[pushStyle](#pushStyle), add text content through  
-[addText](#addText), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) object for typesetting and drawing.
+Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) and [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection) to the constructor, then set the text style through [pushStyle](#pushStyle), add text content through [addText](#addText), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) object for typesetting and drawing.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-class ParagraphBuilder--><!--Device-text-class ParagraphBuilder-End-->
 
@@ -25,7 +24,9 @@ addPlaceholder(placeholderSpan: PlaceholderSpan): void
 
 Inserts a placeholder when building a text paragraph. After insertion, the placeholder occupies the corresponding space in paragraph typesetting according to the specified width, height, and alignment, and affects text line breaking and layout.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -82,7 +83,9 @@ addSymbol(symbolId: number): void
 
 Inserts a symbol into the paragraph being built.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -138,7 +141,9 @@ addText(text: string): void
 
 Inserts a text string into the paragraph being built.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -191,9 +196,11 @@ struct Index {
 build(): Paragraph
 ```
 
-Builds a paragraph and generates a paragraph object that can be used for subsequent typesetting and rendering.After build() is called, a new ParagraphBuilder instance must be created to build text again.
+Builds a paragraph and generates a paragraph object that can be used for subsequent typesetting and rendering. After build() is called, a new ParagraphBuilder instance must be created to build text again.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -249,7 +256,9 @@ buildLineTypeset(): LineTypeset
 
 Builds a line typesetter and generates a LineTypeset object that can be used for line-by-line typesetting calculation.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -300,7 +309,9 @@ constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)
 
 A constructor used to create a **ParagraphBuilder** object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -353,15 +364,11 @@ struct Index {
 popStyle(): void
 ```
 
-Restores the previous text style.
+Restores the previous text style. > **NOTE：**> > This method must be called after [pushStyle()](#pushStyle). After it is called, > subsequently added text will use the text style before the pop operation. If the style stack is empty, the > textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) will be used as the default style.
 
-> **NOTE：**
-> 
-> This method must be called after [pushStyle()](#pushStyle). After it is called,
-> subsequently added text will use the text style before the pop operation. If the style stack is empty, the
-> textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) will be used as the default style.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -409,13 +416,11 @@ struct Index {
 pushStyle(textStyle: TextStyle): void
 ```
 
-Applies a new style to the current text blob.
+Applies a new style to the current text blob. > **NOTE：**> > When you update the style of the current text blob, all text added afterward will use this new style.
 
-> **NOTE：**
-> 
-> When you update the style of the current text blob, all text added afterward will use this new style.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

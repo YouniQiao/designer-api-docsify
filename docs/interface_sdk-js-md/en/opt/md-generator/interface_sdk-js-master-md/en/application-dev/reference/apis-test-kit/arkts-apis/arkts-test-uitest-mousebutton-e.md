@@ -2,7 +2,9 @@
 
 Describes the injected simulated mouse button.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum MouseButton--><!--Device-unnamed-declare enum MouseButton-End-->
 
@@ -16,7 +18,9 @@ MOUSE_BUTTON_LEFT = 0
 
 Left button on the mouse.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ MOUSE_BUTTON_RIGHT = 1
 
 Right button on the mouse.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +54,9 @@ MOUSE_BUTTON_MIDDLE = 2
 
 MIDDLE button on the mouse.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -12,9 +12,11 @@ import { hichecker } from '@kit.PerformanceAnalysisKit';
 function addCheckRule(rule: bigint) : void
 ```
 
-Adds one or more check rules. HiChecker detects unexpected operations or gives feedback based on the added rules.You can use **grep HiChecker** to check for the application running information in the hilog.
+Adds one or more check rules. HiChecker detects unexpected operations or gives feedback based on the added rules. You can use **grep HiChecker** to check for the application running information in the hilog.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hichecker-function addCheckRule(rule: bigint) : void--><!--Device-hichecker-function addCheckRule(rule: bigint) : void-End-->
 
@@ -30,7 +32,7 @@ Adds one or more check rules. HiChecker detects unexpected operations or gives f
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

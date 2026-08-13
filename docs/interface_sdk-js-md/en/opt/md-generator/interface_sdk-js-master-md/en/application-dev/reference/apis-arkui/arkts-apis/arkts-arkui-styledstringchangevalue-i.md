@@ -4,6 +4,8 @@ Describes the text changes of the styled string.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface StyledStringChangeValue--><!--Device-unnamed-interface StyledStringChangeValue-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Describes the text changes of the styled string.
 previewText?: StyledString
 ```
 
-Styled string for preview content.
-
-Used to represent temporary uncommitted input content in scenarios such as voice input, camera input, and IME pre-composition.
+Styled string for preview content. Used to represent temporary uncommitted input content in scenarios such as voice input, camera input, and IME pre- composition.
 
 **Type:** [StyledString](arkts-arkui-styledstring-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +44,8 @@ Range of the styled string to be replaced in the original string.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -61,6 +65,8 @@ Styled string used for replacement.
 **Type:** [StyledString](arkts-arkui-styledstring-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

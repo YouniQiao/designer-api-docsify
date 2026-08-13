@@ -6,11 +6,11 @@
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-根据给定的bundleName清理BundleCache。使用callback异步回调。
+根据给定的bundleName清理BundleCache。使用callback异步回调。 调用方清理自身缓存数据时不需要权限。
 
-调用方清理自身缓存数据时不需要权限。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
@@ -31,11 +31,11 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 
 | 错误码ID |
 | --- |
-| [17700030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700030-指定的应用不支持清除缓存文件) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700030](../errorcode-bundle.md#17700030-指定的应用不支持清除缓存文件) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -67,11 +67,11 @@ try {
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-根据给定的bundleName清理BundleCache。使用Promise异步回调。
+根据给定的bundleName清理BundleCache。使用Promise异步回调。 调用方清理自身缓存数据时不需要权限。
 
-调用方清理自身缓存数据时不需要权限。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
@@ -97,11 +97,11 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17700030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700030-指定的应用不支持清除缓存文件) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700030](../errorcode-bundle.md#17700030-指定的应用不支持清除缓存文件) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -131,11 +131,11 @@ try {
 function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<void>
 ```
 
-根据给定的bundleName和appIndex清理BundleCache。使用Promise异步回调。
+根据给定的bundleName和appIndex清理BundleCache。使用Promise异步回调。 调用方清理自身缓存数据时不需要权限。
 
-调用方清理自身缓存数据时不需要权限。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
@@ -162,12 +162,12 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<vo
 
 | 错误码ID |
 | --- |
-| [17700030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700030-指定的应用不支持清除缓存文件) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700030](../errorcode-bundle.md#17700030-指定的应用不支持清除缓存文件) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

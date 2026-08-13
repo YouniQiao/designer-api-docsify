@@ -1,15 +1,22 @@
 # @ohos.font(Custom Font Registration)
 
-本模块提供注册自定义字体。
+/*
+ Copyright (c) 2022-2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **说明：**
-> 
-> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
-> [UIContext](@ohos.arkui.UIContext)说明。
-> 
-> - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace font--><!--Device-unnamed-declare namespace font-End-->
 
@@ -21,10 +28,10 @@
 
 | 名称 |
 | --- |
-| [getFontByName](arkts-arkui-font-getfontbyname-f.md#getfontbyname) |
-| [getSystemFontList](arkts-arkui-font-getsystemfontlist-f.md#getsystemfontlist) |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getuifontconfig) |
-| [registerFont](arkts-arkui-font-registerfont-f.md#registerfont) |
+| [getFontByName](arkts-arkui-font-getfontbyname-f.md#getFontByName) |
+| [getSystemFontList](arkts-arkui-font-getsystemfontlist-f.md#getSystemFontList) |
+| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getUIFontConfig) |
+| [registerFont](arkts-arkui-font-registerfont-f.md#registerFont) |
 
 ### 接口
 

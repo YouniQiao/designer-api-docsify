@@ -4,7 +4,9 @@ Optional configuration for maximizing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface MaximizeOptions--><!--Device-window-interface MaximizeOptions-End-->
 
@@ -22,7 +24,7 @@ import { window } from '@kit.ArkUI';
 acrossDisplayPresentation?: AcrossDisplayPresentation
 ```
 
-The parameter controls the across-display mode policy of main windows.This parameter can be called properly only on 2-in-1 devices with folding capabilities.If it is called on other device types, it has no effect.
+The parameter controls the across-display mode policy of main windows. This parameter can be called properly only on 2-in-1 devices with folding capabilities. If it is called on other device types, it has no effect.
 
 **Type:** [AcrossDisplayPresentation](arkts-arkui-window-acrossdisplaypresentation-e.md)
 
@@ -30,7 +32,9 @@ The parameter controls the across-display mode policy of main windows.This param
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +56,9 @@ Layout when the window is maximized.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,13 +72,15 @@ Layout when the window is maximized.
 snapshotAnimationConfig?: WindowSnapshotAnimationConfig
 ```
 
-The configuration of snapshot animation. If not specified, the system default animation will be used.When both the duration and delay parameters are set to 0, it means the snapshot animation is canceled.
+The configuration of snapshot animation. If not specified, the system default animation will be used. When both the duration and delay parameters are set to 0, it means the snapshot animation is canceled.
 
 **Type:** [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

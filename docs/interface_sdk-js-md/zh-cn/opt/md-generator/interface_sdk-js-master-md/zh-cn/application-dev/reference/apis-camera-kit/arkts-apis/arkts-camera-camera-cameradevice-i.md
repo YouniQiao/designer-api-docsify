@@ -2,7 +2,9 @@
 
 相机设备信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
 
@@ -19,6 +21,8 @@ Car设备摄像头位置。
 **类型：** [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +42,9 @@ readonly cameraId: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -56,7 +62,9 @@ readonly cameraOrientation: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -74,7 +82,9 @@ readonly cameraPosition: CameraPosition
 
 **类型：** [CameraPosition](arkts-camera-camera-cameraposition-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -92,7 +102,9 @@ readonly cameraType: CameraType
 
 **类型：** [CameraType](arkts-camera-camera-cameratype-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -110,7 +122,9 @@ readonly connectionType: ConnectionType
 
 **类型：** [ConnectionType](arkts-camera-camera-connectiontype-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -130,47 +144,13 @@ readonly constituentCameraDevices?: Array<CameraDevice>
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>--><!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## hostDeviceName
-
-```TypeScript
-readonly hostDeviceName: string
-```
-
-远端设备名称。若当前无远端设备，返回为空。
-
-**类型：** string
-
-**起始版本：** 15
-
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CameraDevice-readonly hostDeviceName: string--><!--Device-CameraDevice-readonly hostDeviceName: string-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## hostDeviceType
-
-```TypeScript
-readonly hostDeviceType: HostDeviceType
-```
-
-远端设备类型。
-
-**类型：** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
-
-**起始版本：** 15
-
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType--><!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -185,6 +165,8 @@ readonly isLogicalCamera?: boolean
 **类型：** boolean
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,29 +188,13 @@ readonly lensDistortion?: Array<number>
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CameraDevice-readonly lensDistortion?: Array<double>--><!--Device-CameraDevice-readonly lensDistortion?: Array<double>-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## lensEquivalentFocalLength
-
-```TypeScript
-readonly lensEquivalentFocalLength?: Array<number>
-```
-
-相机镜头等效焦距。
-
-**类型：** Array&lt;number&gt;
-
-**起始版本：** 24
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>--><!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -243,6 +209,8 @@ readonly lensFocalLength?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -264,6 +232,8 @@ readonly lensIntrinsicCalibration?: Array<number>
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -283,6 +253,8 @@ readonly minimumFocusDistance?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -304,6 +276,8 @@ readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -324,6 +298,8 @@ readonly sensorPhysicalSize?: Array<number>
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -343,6 +319,8 @@ readonly sensorPixelArraySize?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

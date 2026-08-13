@@ -14,7 +14,7 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [castTempForm](@ohos.app.form.formHost:formHost#castTempForm)
+**Substitutes:** castTempForm
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -29,7 +29,7 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is converted to a normal one, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is converted to a normal one, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## castTempForm
@@ -46,7 +46,7 @@ Converts a temporary widget to a normal one. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [castTempForm](@ohos.app.form.formHost:formHost#castTempForm)
+**Substitutes:** castTempForm
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

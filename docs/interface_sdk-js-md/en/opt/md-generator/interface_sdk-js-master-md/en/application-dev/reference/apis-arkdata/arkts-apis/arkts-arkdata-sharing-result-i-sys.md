@@ -2,9 +2,11 @@
 
 Represents the device-cloud sharing result.
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-sharing-interface Result<T>--><!--Device-sharing-interface Result<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-sharing-interface Result--><!--Device-sharing-interface Result-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -26,7 +28,9 @@ Error code.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-code: int--><!--Device-Result-code: int-End-->
 
@@ -44,7 +48,9 @@ Detailed description of the error code. The default value is undefined.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-description?: string--><!--Device-Result-description?: string-End-->
 
@@ -62,7 +68,9 @@ Value returned. The specific type is specified by the T parameter. The default v
 
 **Type:** T
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-value?: T--><!--Device-Result-value?: T-End-->
 

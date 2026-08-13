@@ -50,7 +50,7 @@ Index of the image. The default value is **0**.
 
 **Since:** 7
 
-**Deprecated since:** 11  
+**Deprecated since:** 11
 
 **Substitutes:** [index](arkts-image-image-imagepropertyoptions-i.md#index)
 

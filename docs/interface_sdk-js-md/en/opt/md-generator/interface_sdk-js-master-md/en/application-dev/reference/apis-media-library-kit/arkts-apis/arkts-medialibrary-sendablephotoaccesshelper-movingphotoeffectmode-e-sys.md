@@ -4,6 +4,8 @@ Enumeration of moving photo effect mode.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-enum MovingPhotoEffectMode--><!--Device-sendablePhotoAccessHelper-enum MovingPhotoEffectMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -19,6 +21,8 @@ DEFAULT = 0
 Default
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-DEFAULT = 0--><!--Device-MovingPhotoEffectMode-DEFAULT = 0-End-->
 
@@ -36,6 +40,8 @@ Bounce play
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-MovingPhotoEffectMode-BOUNCE_PLAY = 1--><!--Device-MovingPhotoEffectMode-BOUNCE_PLAY = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -51,6 +57,8 @@ LOOP_PLAY = 2
 Loop play
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-LOOP_PLAY = 2--><!--Device-MovingPhotoEffectMode-LOOP_PLAY = 2-End-->
 
@@ -68,6 +76,8 @@ Long exposure
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-MovingPhotoEffectMode-LONG_EXPOSURE = 3--><!--Device-MovingPhotoEffectMode-LONG_EXPOSURE = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -83,6 +93,8 @@ MULTI_EXPOSURE = 4
 Multi exposure
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-MULTI_EXPOSURE = 4--><!--Device-MovingPhotoEffectMode-MULTI_EXPOSURE = 4-End-->
 
@@ -100,6 +112,8 @@ Cinema graph
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-MovingPhotoEffectMode-CINEMA_GRAPH = 5--><!--Device-MovingPhotoEffectMode-CINEMA_GRAPH = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -115,6 +129,8 @@ IMAGE_ONLY = 10
 Image only
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-MovingPhotoEffectMode-IMAGE_ONLY = 10--><!--Device-MovingPhotoEffectMode-IMAGE_ONLY = 10-End-->
 

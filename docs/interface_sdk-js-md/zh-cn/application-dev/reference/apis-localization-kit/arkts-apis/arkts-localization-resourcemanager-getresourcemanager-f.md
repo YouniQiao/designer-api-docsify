@@ -12,6 +12,8 @@ export function getResourceManager(callback: AsyncCallback<ResourceManager>): vo
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void-End-->
@@ -63,6 +65,8 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -119,6 +123,8 @@ export function getResourceManager(): Promise<ResourceManager>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>-End-->
@@ -166,6 +172,8 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

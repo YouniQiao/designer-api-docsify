@@ -8,9 +8,11 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: numbe
 
 将主屏左上角为原点的全局坐标转换成displayId指定屏幕左上角为原点的相对坐标。若未传入displayId，默认转换为全局坐标所在屏幕的相对坐标系。若全局坐标不在任何屏幕上，默认转换成主屏的相对坐标。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition--><!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition-End-->
 
@@ -33,8 +35,8 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: numbe
 
 | 错误码ID |
 | --- |
-| [1400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400004-参数异常) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
+| [1400004](../errorcode-display.md#1400004-参数异常) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

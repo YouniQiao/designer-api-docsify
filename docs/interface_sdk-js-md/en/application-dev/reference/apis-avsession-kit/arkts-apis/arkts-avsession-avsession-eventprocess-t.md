@@ -8,7 +8,9 @@ The general process funcation with an event and arguments.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.1.0; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-type EventProcess = (event: string, args: Record<string, Object>) => void--><!--Device-avSession-type EventProcess = (event: string, args: Record<string, Object>) => void-End-->
 

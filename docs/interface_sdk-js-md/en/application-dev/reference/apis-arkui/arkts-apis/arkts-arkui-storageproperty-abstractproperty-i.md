@@ -1,14 +1,14 @@
 # AbstractProperty
 
-Define AbstractProperty&lt;T&gt; interface.
-
-AbstractProperty can be understood as a handler or an alias to a property inside LocalStorage / AppStorage singleton allows to read the value with @see get and to change the value with @see set.
+Define AbstractProperty&lt;T&gt; interface. AbstractProperty can be understood as a handler or an alias to a property inside LocalStorage / AppStorage singleton allows to read the value with @see get and to change the value with @see set.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface AbstractProperty<T>--><!--Device-unnamed-export declare interface AbstractProperty<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface AbstractProperty--><!--Device-unnamed-export declare interface AbstractProperty-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +23,8 @@ Reads value of the referenced AppStorage/LocalStorage property.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,31 +41,67 @@ Reads value of the referenced AppStorage/LocalStorage property.
 ## info
 
 ```TypeScript
-default info(): string
+info(): string
 ```
 
-Returns the name of the referenced property
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AbstractProperty-default info(): string--><!--Device-AbstractProperty-default info(): string-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-AbstractProperty-info(): string--><!--Device-AbstractProperty-info(): string-End-->
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | name of the referenced property |
+| string |  |
 
 ## onChange
 
 ```TypeScript
-default onChange(onChangeFunc: OnChangeType<T> | undefined): void
+onChange(onChangeFunc: OnChangeType<T> | undefined): void
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void--><!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | Yes |  |
+
+## set
+
+```TypeScript
+set(newValue: T): void
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-AbstractProperty-set(newValue: T): void--><!--Device-AbstractProperty-set(newValue: T): void-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| newValue | T | Yes |  |
+
+## default
+
+```TypeScript
+default
 ```
 
 Register callback function to be called on value change of the referenced property calling with value undefined clear the callback.
@@ -72,39 +110,11 @@ Register callback function to be called on value change of the referenced proper
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AbstractProperty-default onChange(onChangeFunc: OnChangeType<T> | undefined): void--><!--Device-AbstractProperty-default onChange(onChangeFunc: OnChangeType<T> | undefined): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | Yes | register callback function |
-
-## set
-
-```TypeScript
-default set(newValue: T): void
-```
-
-Assign a new value to the referenced property
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AbstractProperty-default set(newValue: T): void--><!--Device-AbstractProperty-default set(newValue: T): void-End-->
+<!--Device-AbstractProperty-default--><!--Device-AbstractProperty-default-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newValue | T | Yes | a new value of the referenced property |
 

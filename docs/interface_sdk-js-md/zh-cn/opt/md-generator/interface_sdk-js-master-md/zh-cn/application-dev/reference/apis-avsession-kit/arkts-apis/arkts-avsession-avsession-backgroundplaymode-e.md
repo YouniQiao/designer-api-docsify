@@ -1,13 +1,10 @@
 # BackgroundPlayMode
 
-表示session支持的后台播放模式的枚举。
-
-| 名称 | 值 | 说明 |
-| ------------------------- | - | ----------------------- |
-| [ENABLE_BACKGROUND_PLAY](arkts-avsession-avsession-backgroundplaymode-e.md) | 0 | 支持后台播放。 |
-| [DISABLE_BACKGROUND_PLAY](arkts-avsession-avsession-backgroundplaymode-e.md) | 1 |
+表示session支持的后台播放模式的枚举。 | 名称 | 值 | 说明 | | ------------------------- | - | ----------------------- | | ENABLE_BACKGROUND_PLAY | 0 | 支持后台播放。 | | DISABLE_BACKGROUND_PLAY | 1 | 不支持后台播放。 |
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-avSession-enum BackgroundPlayMode--><!--Device-avSession-enum BackgroundPlayMode-End-->
 
@@ -22,6 +19,8 @@ ENABLE_BACKGROUND_PLAY = 0
 支持后台播放模式
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +37,8 @@ DISABLE_BACKGROUND_PLAY = 1
 不支持后台播放模式
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

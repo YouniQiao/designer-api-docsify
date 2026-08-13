@@ -8,7 +8,7 @@ Defines the size type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-unnamed-declare enum SizeType--><!--Device-unnamed-declare enum SizeType-End-->
 
@@ -28,7 +28,7 @@ Select a value based on the device type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-Auto--><!--Device-SizeType-Auto-End-->
 
@@ -48,7 +48,7 @@ Extra Small width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-XS--><!--Device-SizeType-XS-End-->
 
@@ -68,7 +68,7 @@ Small width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-SM--><!--Device-SizeType-SM-End-->
 
@@ -88,7 +88,7 @@ Medium width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-MD--><!--Device-SizeType-MD-End-->
 
@@ -108,7 +108,7 @@ Large width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-LG--><!--Device-SizeType-LG-End-->
 

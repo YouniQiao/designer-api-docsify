@@ -4,6 +4,8 @@ Provides APIs for output Entity.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-interface Entity--><!--Device-photoAccessHelper-interface Entity-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -28,6 +30,8 @@ Indicates Entity Alias.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Entity-alias: string[]--><!--Device-Entity-alias: string[]-End-->
@@ -47,6 +51,8 @@ Indicates Entity Name.
 **Type:** FieldType
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Indicates Entity Id.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Entity-id: string--><!--Device-Entity-id: string-End-->
@@ -87,6 +95,8 @@ Indicates Entity Name.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

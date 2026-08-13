@@ -4,6 +4,8 @@ The ProxyRule used by insertProxyRule.
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-webview-class ProxyRule--><!--Device-webview-class ProxyRule-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ getSchemeFilter(): ProxySchemeFilter
 获取代理规则中的ProxySchemeFilter信息。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -39,6 +43,8 @@ getUrl(): string
 获取代理规则中的代理的Url信息。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

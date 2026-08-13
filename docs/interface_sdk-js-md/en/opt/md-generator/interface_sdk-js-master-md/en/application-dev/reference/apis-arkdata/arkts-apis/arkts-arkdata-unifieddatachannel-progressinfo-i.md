@@ -2,7 +2,9 @@
 
 Represents the progress information.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-interface ProgressInfo--><!--Device-unifiedDataChannel-interface ProgressInfo-End-->
 
@@ -20,17 +22,17 @@ import { unifiedDataChannel } from '@kit.ArkData';
 progress: number
 ```
 
-Progress of the drag task, in percentage. 
-
-The value is an integer ranging from -1 to 100. The value **-1** indicates a failure to obtain data, and the value **100** indicates data is obtained.
+Progress of the drag task, in percentage. The value is an integer ranging from -1 to 100. The value **-1** indicates a failure to obtain data, and the value **100** indicates data is obtained.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ProgressInfo-progress: int--><!--Device-ProgressInfo-progress: int-End-->
 
@@ -46,11 +48,13 @@ Status code of the drag task reported by the system.
 
 **Type:** [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md)
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ProgressInfo-status: ListenerStatus--><!--Device-ProgressInfo-status: ListenerStatus-End-->
 

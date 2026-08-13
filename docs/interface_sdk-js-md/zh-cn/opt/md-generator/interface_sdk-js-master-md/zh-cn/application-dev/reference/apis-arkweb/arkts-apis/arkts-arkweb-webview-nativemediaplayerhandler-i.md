@@ -1,14 +1,10 @@
 # NativeMediaPlayerHandler
 
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 12开始支持。
-> 
-> - 示例效果请以真机运行为准。
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的参数。应用通过该对象，将 播放器的状态通知给 ArkWeb 内核。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-webview-interface NativeMediaPlayerHandler--><!--Device-webview-interface NativeMediaPlayerHandler-End-->
 
@@ -23,6 +19,8 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 当媒体的缓冲时长发生变化时，调用该方法将媒体的缓冲时长通知给 ArkWeb 内核。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,6 +44,8 @@ handleDurationChanged(duration: number): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void--><!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void-End-->
@@ -68,6 +68,8 @@ handleEnded(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleEnded(): void--><!--Device-NativeMediaPlayerHandler-handleEnded(): void-End-->
@@ -83,6 +85,8 @@ handleError(error: MediaError, errorMessage: string): void
 当播放器发生错误时，调用该方法将错误通知 ArkWeb 内核。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -107,6 +111,8 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void--><!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void-End-->
@@ -128,6 +134,8 @@ handleMutedChanged(muted: boolean): void
 当播放器的静音状态发生变化时，调用该方法将静音状态通知给 ArkWeb 内核。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -151,6 +159,8 @@ handleNetworkStateChanged(state: NetworkState): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void--><!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void-End-->
@@ -172,6 +182,8 @@ handlePlaybackRateChanged(playbackRate: number): void
 当播放器的播放速率发生变化时，调用该方法将播放速率通知给 ArkWeb 内核。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -195,6 +207,8 @@ handleReadyStateChanged(state: ReadyState): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void--><!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void-End-->
@@ -217,6 +231,8 @@ handleSeekFinished(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void--><!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void-End-->
@@ -233,6 +249,8 @@ handleSeeking(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleSeeking(): void--><!--Device-NativeMediaPlayerHandler-handleSeeking(): void-End-->
@@ -248,6 +266,8 @@ handleStatusChanged(status: PlaybackStatus): void
 当播放器的播放状态发生变化时，调用该方法将播放状态通知给 ArkWeb 内核。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -271,6 +291,8 @@ handleTimeUpdate(currentPlayTime: number): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void--><!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void-End-->
@@ -292,6 +314,8 @@ handleVideoSizeChanged(width: number, height: number): void
 当播放器解析出视频的尺寸时， 调用该方法将视频尺寸通知 ArkWeb 内核。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -315,6 +339,8 @@ handleVolumeChanged(volume: number): void
 当播放器的音量发生变化时，调用该方法将音量通知给 ArkWeb 内核。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

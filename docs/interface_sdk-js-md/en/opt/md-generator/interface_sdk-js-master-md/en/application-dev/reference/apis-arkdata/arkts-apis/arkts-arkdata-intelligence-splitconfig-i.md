@@ -2,7 +2,9 @@
 
 Manages text chunk process configurations.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-interface SplitConfig--><!--Device-intelligence-interface SplitConfig-End-->
 
@@ -24,7 +26,9 @@ The ratio of overlap between adjacent chunks.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SplitConfig-overlapRatio: double--><!--Device-SplitConfig-overlapRatio: double-End-->
 
@@ -40,7 +44,9 @@ The maximun size of chunks.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SplitConfig-size: int--><!--Device-SplitConfig-size: int-End-->
 

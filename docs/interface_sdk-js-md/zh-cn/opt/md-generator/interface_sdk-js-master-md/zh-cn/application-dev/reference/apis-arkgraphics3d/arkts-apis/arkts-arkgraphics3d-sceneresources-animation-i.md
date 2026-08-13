@@ -4,9 +4,11 @@
 
 **继承/实现关系：** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-unnamed-export interface Animation extends SceneResource--><!--Device-unnamed-export interface Animation extends SceneResource-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Animation--><!--Device-unnamed-export interface Animation-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,7 +20,9 @@ finish(): void
 
 结束动画并将位置设置到结尾.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-finish(): void--><!--Device-Animation-finish(): void-End-->
 
@@ -50,7 +54,9 @@ onFinished(callback: Callback<void>): void
 
 动画播放结束时执行的回调函数，动画播放完成或者finish操作会触发这个回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-onFinished(callback: Callback<void>): void--><!--Device-Animation-onFinished(callback: Callback<void>): void-End-->
 
@@ -90,7 +96,9 @@ onStarted(callback: Callback<void>): void
 
 注册动画开始时的回调.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-onStarted(callback: Callback<void>): void--><!--Device-Animation-onStarted(callback: Callback<void>): void-End-->
 
@@ -130,7 +138,9 @@ pause(): void
 
 暂停动画.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-pause(): void--><!--Device-Animation-pause(): void-End-->
 
@@ -162,7 +172,9 @@ restart(): void
 
 重新启动动画.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-restart(): void--><!--Device-Animation-restart(): void-End-->
 
@@ -194,7 +206,9 @@ seek(position: number): void
 
 将动画跳转到指定位置.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-seek(position: double): void--><!--Device-Animation-seek(position: double): void-End-->
 
@@ -232,7 +246,9 @@ start(): void
 
 开始动画.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-start(): void--><!--Device-Animation-start(): void-End-->
 
@@ -264,7 +280,9 @@ stop(): void
 
 停止动画并将位置设置到开头.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-stop(): void--><!--Device-Animation-stop(): void-End-->
 
@@ -298,7 +316,9 @@ readonly duration: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-readonly duration: double--><!--Device-Animation-readonly duration: double-End-->
 
@@ -314,7 +334,9 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-enabled: boolean--><!--Device-Animation-enabled: boolean-End-->
 
@@ -330,7 +352,9 @@ readonly progress: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-readonly progress: double--><!--Device-Animation-readonly progress: double-End-->
 
@@ -346,7 +370,9 @@ readonly running: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-readonly running: boolean--><!--Device-Animation-readonly running: boolean-End-->
 
@@ -358,11 +384,13 @@ readonly running: boolean
 speed?: number
 ```
 
-动画速度因子负值使用给定速度因子反向播放动画
+动画速度因子 负值使用给定速度因子反向播放动画
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Animation-speed?: double--><!--Device-Animation-speed?: double-End-->
 

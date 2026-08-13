@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace sendableImage--><!--Device-unnamed-declare namespace sendableImage-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -14,16 +16,16 @@
 
 | 名称 |
 | --- |
-| [convertFromPixelMap](arkts-image-sendableimage-convertfrompixelmap-f.md#convertfrompixelmap) |
-| [convertToPixelMap](arkts-image-sendableimage-converttopixelmap-f.md#converttopixelmap) |
-| [createImageReceiver](arkts-image-sendableimage-createimagereceiver-f.md#createimagereceiver) |
-| [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource) |
-| [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource-1) |
-| [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource-2) |
-| [createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createpixelmap) |
-| [createPixelMapFromParcel](arkts-image-sendableimage-createpixelmapfromparcel-f.md#createpixelmapfromparcel) |
-| [createPixelMapFromSurface](arkts-image-sendableimage-createpixelmapfromsurface-f.md#createpixelmapfromsurface) |
-| [createPixelMapSync](arkts-image-sendableimage-createpixelmapsync-f.md#createpixelmapsync) |
+| [convertFromPixelMap](arkts-image-sendableimage-convertfrompixelmap-f.md#convertFromPixelMap) |
+| [convertToPixelMap](arkts-image-sendableimage-converttopixelmap-f.md#convertToPixelMap) |
+| [createImageReceiver](arkts-image-sendableimage-createimagereceiver-f.md#createImageReceiver) |
+| [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createImageSource) |
+| [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createImageSource) |
+| [createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createPixelMap) |
+| [createPixelMapFromParcel](arkts-image-sendableimage-createpixelmapfromparcel-f.md#createPixelMapFromParcel) |
+| [createPixelMapFromSurface](arkts-image-sendableimage-createpixelmapfromsurface-f.md#createPixelMapFromSurface) |
+| [createPixelMapSync](arkts-image-sendableimage-createpixelmapsync-f.md#createPixelMapSync) |
 
 ### 接口
 

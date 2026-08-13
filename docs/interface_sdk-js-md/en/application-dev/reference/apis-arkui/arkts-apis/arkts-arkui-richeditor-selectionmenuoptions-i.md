@@ -6,61 +6,9 @@ Defines the selection menu options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface SelectionMenuOptions--><!--Device-unnamed-export declare interface SelectionMenuOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onAppear
-
-```TypeScript
-onAppear?: MenuOnAppearCallback
-```
-
-Callback function when the selection menu appears.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback--><!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onMenuHide
-
-```TypeScript
-onMenuHide?: MenuCallback
-```
-
-Callback function when the selection menu is hidden.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onMenuShow
-
-```TypeScript
-onMenuShow?: MenuCallback
-```
-
-Callback function when the selection menu is displayed.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,9 +26,33 @@ Menu type, default value is MenuType.SELECTION_MENU.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionMenuOptions-menuType?: MenuType--><!--Device-SelectionMenuOptions-menuType?: MenuType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onAppear
+
+```TypeScript
+onAppear?: MenuOnAppearCallback
+```
+
+Callback function when the selection menu appears.
+
+**Type:** [MenuOnAppearCallback](arkts-arkui-menuonappearcallback-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback--><!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,9 +70,55 @@ Callback function when the selection menu disappears.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionMenuOptions-onDisappear?: VoidCallback--><!--Device-SelectionMenuOptions-onDisappear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onMenuHide
+
+```TypeScript
+onMenuHide?: MenuCallback
+```
+
+Callback function when the selection menu is hidden.
+
+**Type:** [MenuCallback](arkts-arkui-menucallback-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onMenuShow
+
+```TypeScript
+onMenuShow?: MenuCallback
+```
+
+Callback function when the selection menu is displayed.
+
+**Type:** [MenuCallback](arkts-arkui-menucallback-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,6 +135,8 @@ Defines the preview menu options.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

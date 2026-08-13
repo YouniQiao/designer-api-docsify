@@ -103,7 +103,9 @@
 | --- |
 | [AVRecorderState](arkts-media-avrecorderstate-t.md) |
 | [AudioState](arkts-media-audiostate-t.md) |
+| [MediaDescription](arkts-media-mediadescription-t.md) |
 | [OnAVRecorderStateChangeHandler](arkts-media-onavrecorderstatechangehandler-t.md) |
+| [PlaybackInfo](arkts-media-playbackinfo-t.md) |
 | [PlaybackMetrics](arkts-media-playbackmetrics-t.md) |
 | [SourceCloseCallback](arkts-media-sourceclosecallback-t.md) |
 | [SourceOpenCallback](arkts-media-sourceopencallback-t.md) |

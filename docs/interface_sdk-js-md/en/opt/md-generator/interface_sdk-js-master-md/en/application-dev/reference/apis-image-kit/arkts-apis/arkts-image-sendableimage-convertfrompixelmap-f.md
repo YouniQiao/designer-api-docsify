@@ -16,6 +16,8 @@ Creates a sendable image PixelMap from image PixelMap.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendableImage-function convertFromPixelMap(pixelmap: image.PixelMap): PixelMap--><!--Device-sendableImage-function convertFromPixelMap(pixelmap: image.PixelMap): PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -36,8 +38,8 @@ Creates a sendable image PixelMap from image PixelMap.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
 
 ## Examples
 

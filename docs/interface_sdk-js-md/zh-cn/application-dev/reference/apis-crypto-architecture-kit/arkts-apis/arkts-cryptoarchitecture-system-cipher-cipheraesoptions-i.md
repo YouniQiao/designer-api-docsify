@@ -8,9 +8,31 @@
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-unnamed-export interface CipherAesOptions--><!--Device-unnamed-export interface CipherAesOptions-End-->
+
+**系统能力：** SystemCapability.Security.Cipher
+
+## action
+
+```TypeScript
+action: string
+```
+
+加解密操作类型，可选项有： 1. encrypt 加密； 2. decrypt 解密。
+
+**类型：** string
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+
+**废弃版本：** 11
+
+**替代接口：** Cipher
+
+<!--Device-CipherAesOptions-action: string--><!--Device-CipherAesOptions-action: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -22,13 +44,15 @@ complete: () => void
 
 接口调用结束的回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-complete: () => void--><!--Device-CipherAesOptions-complete: () => void-End-->
 
@@ -42,72 +66,17 @@ fail: (data: string, code: number) => void
 
 接口调用失败的回调函数。
 
+**类型：** (data: string, code: number) =&gt; void
+
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-fail: (data: string, code: number) => void--><!--Device-CipherAesOptions-fail: (data: string, code: number) => void-End-->
-
-**系统能力：** SystemCapability.Security.Cipher
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | string | 是 |  |
-| code | number | 是 |  |
-
-## success
-
-```TypeScript
-success: (data: CipherResponse) => void
-```
-
-接口调用成功的回调函数。
-
-**起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
-**废弃版本：** 11
-
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
-
-<!--Device-CipherAesOptions-success: (data: CipherResponse) => void--><!--Device-CipherAesOptions-success: (data: CipherResponse) => void-End-->
-
-**系统能力：** SystemCapability.Security.Cipher
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | 是 |  |
-
-## action
-
-```TypeScript
-action: string
-```
-
-加解密操作类型，可选项有：
-
-1. encrypt 加密；2. decrypt 解密。
-
-**类型：** string
-
-**起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
-**废弃版本：** 11
-
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
-
-<!--Device-CipherAesOptions-action: string--><!--Device-CipherAesOptions-action: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -127,7 +96,7 @@ AES加解密的初始向量，经过base64编码后的字符串，默认值为ke
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-iv?: string--><!--Device-CipherAesOptions-iv?: string-End-->
 
@@ -149,7 +118,7 @@ AES加解密的初始向量字节长度，当前为预留字段，默认值16，
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-ivLen?: string--><!--Device-CipherAesOptions-ivLen?: string-End-->
 
@@ -171,7 +140,7 @@ AES加解密的初始向量偏移，默认值0，仅支持0。
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-ivOffset?: string--><!--Device-CipherAesOptions-ivOffset?: string-End-->
 
@@ -193,9 +162,31 @@ key: string
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-key: string--><!--Device-CipherAesOptions-key: string-End-->
+
+**系统能力：** SystemCapability.Security.Cipher
+
+## success
+
+```TypeScript
+success: (data: CipherResponse) => void
+```
+
+接口调用成功的回调函数。
+
+**类型：** (data: CipherResponse) =&gt; void
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+
+**废弃版本：** 11
+
+**替代接口：** Cipher
+
+<!--Device-CipherAesOptions-success: (data: CipherResponse) => void--><!--Device-CipherAesOptions-success: (data: CipherResponse) => void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -215,7 +206,7 @@ text: string
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-text: string--><!--Device-CipherAesOptions-text: string-End-->
 
@@ -237,7 +228,7 @@ AES算法的加密模式和填充项，默认AES/CBC/PKCS5Padding。
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherAesOptions-transformation?: string--><!--Device-CipherAesOptions-transformation?: string-End-->
 

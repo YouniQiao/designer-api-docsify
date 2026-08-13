@@ -1,19 +1,12 @@
 # KVStoreResultSet
 
-提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。
+提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。 KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。 在调用KVStoreResultSet的方法前，需要先通过 getKVStore 构建一个SingleKVStore或者DeviceKVStore实例。 > **说明：** > > KVStoreResultSet的游标起始位置为-1。
 
-KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
+**起始版本：** 23
 
-在调用KVStoreResultSet的方法前，需要先通过  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个SingleKVStore或者DeviceKVStore实例。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-> **说明：**
-> 
-> KVStoreResultSet的游标起始位置为-1。
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
@@ -21,21 +14,17 @@ KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库�
 
 ## getCount
 
-ArkTS-Dyn:
-```TypeScript
-getCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCount(): int
 ```
 
 获取结果集中的总行数。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,7 +36,7 @@ getCount(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回数据的总行数。 |
+| int | 返回数据的总行数。 |
 
 ## 示例
 
@@ -101,9 +90,11 @@ getEntry(): Entry
 
 从当前位置获取对应的键值对。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -161,22 +152,17 @@ try {
 
 ## getPosition
 
-ArkTS-Dyn:
-```TypeScript
-getPosition(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getPosition(): int
 ```
 
-获取结果集中当前的读取位置。读取位置会因[moveToFirst](#moveToFirst)、  
-[moveToLast](#moveToLast)等操作而发生变化。
+获取结果集中当前的读取位置。读取位置会因[moveToFirst](#moveToFirst)、 [moveToLast](#moveToLast)等操作而发生变化。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,7 +174,7 @@ getPosition(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前读取位置。取值范围>= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
+| int | 返回当前读取位置。取值范围>= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
 
 ## 示例
 
@@ -242,9 +228,11 @@ isAfterLast(): boolean
 
 检查读取位置是否在最后一行之后。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -308,9 +296,11 @@ isBeforeFirst(): boolean
 
 检查读取位置是否在第一行之前。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -374,9 +364,11 @@ isFirst(): boolean
 
 检查读取位置是否为第一行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -442,9 +434,11 @@ isLast(): boolean
 
 检查读取位置是否为最后一行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -504,21 +498,17 @@ try {
 
 ## move
 
-ArkTS-Dyn:
-```TypeScript
-move(offset: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 move(offset: int): boolean
 ```
 
 将读取位置移动到当前位置的相对偏移量。即当前游标位置向下偏移 offset 行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -530,7 +520,7 @@ move(offset: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示与当前位置的相对偏移量，正偏移表示向结果集末尾方向移动（行号增大），负偏移表示向结果集起始方向移动（行号减小）。当游标超出结果集最前或者最后的位置时，接口返回false。 |
+| offset | int | 是 | 表示与当前位置的相对偏移量，正偏移表示向结果集末尾方向移动（行号增大），负偏移表示向结果集起始方向移动（行号减小）。当游标超出结果集最前或者最后的位置时，接口返回false。 |
 
 **返回值：**
 
@@ -542,7 +532,7 @@ move(offset: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -598,9 +588,11 @@ moveToFirst(): boolean
 
 将读取位置移动到第一行。如果结果集为空，则返回false。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -666,9 +658,11 @@ moveToLast(): boolean
 
 将读取位置移动到最后一行。如果结果集为空，则返回false。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -734,9 +728,11 @@ moveToNext(): boolean
 
 将读取位置移动到下一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -800,21 +796,17 @@ try {
 
 ## moveToPosition
 
-ArkTS-Dyn:
-```TypeScript
-moveToPosition(position: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveToPosition(position: int): boolean
 ```
 
 将读取位置从 0 移动到绝对位置。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -826,7 +818,7 @@ moveToPosition(position: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示绝对位置。当绝对位置超出结果集最前或者最后的位置时，接口返回false。 |
+| position | int | 是 | 表示绝对位置。当绝对位置超出结果集最前或者最后的位置时，接口返回false。 |
 
 **返回值：**
 
@@ -838,7 +830,7 @@ moveToPosition(position: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -894,9 +886,11 @@ moveToPrevious(): boolean
 
 将读取位置移动到上一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

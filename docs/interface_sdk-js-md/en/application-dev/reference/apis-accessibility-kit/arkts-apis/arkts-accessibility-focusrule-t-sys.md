@@ -9,7 +9,9 @@ Defines a focus rule for determining the start node and its descendants when sea
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' |'checkSelf' | 'checkSelfBypassDescendants'--><!--Device-unnamed-export type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' |'checkSelf' | 'checkSelfBypassDescendants'-End-->
 

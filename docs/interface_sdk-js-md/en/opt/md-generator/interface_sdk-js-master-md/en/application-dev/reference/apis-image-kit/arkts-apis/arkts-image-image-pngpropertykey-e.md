@@ -4,6 +4,8 @@ Enumerates the properties available for the metadata of a PNG image.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-enum PngPropertyKey--><!--Device-image-enum PngPropertyKey-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -17,6 +19,8 @@ X_PIXELS_PER_METER = 'PngXPixelsPerMeter'
 PNG x pixels per meter.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ PNG y pixels per meter.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-Y_PIXELS_PER_METER = 'PngYPixelsPerMeter'--><!--Device-PngPropertyKey-Y_PIXELS_PER_METER = 'PngYPixelsPerMeter'-End-->
@@ -49,6 +55,8 @@ GAMMA = 'PngGamma'
 PNG gamma.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ PNG interlacing mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-INTERLACE_TYPE = 'PngInterlaceType'--><!--Device-PngPropertyKey-INTERLACE_TYPE = 'PngInterlaceType'-End-->
@@ -81,6 +91,8 @@ SRGB_INTENT = 'PngSRGBIntent'
 PNG sRGB rendering intent.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ PNG color primary/white-point coordinates.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-CHROMATICITIES = 'PngChromaticities'--><!--Device-PngPropertyKey-CHROMATICITIES = 'PngChromaticities'-End-->
@@ -113,6 +127,8 @@ TITLE = 'PngTitle'
 PNG title.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +146,8 @@ PNG description.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-DESCRIPTION = 'PngDescription'--><!--Device-PngPropertyKey-DESCRIPTION = 'PngDescription'-End-->
@@ -145,6 +163,8 @@ COMMENT = 'PngComment'
 PNG comment.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,6 +182,8 @@ PNG disclaimer.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-DISCLAIMER = 'PngDisclaimer'--><!--Device-PngPropertyKey-DISCLAIMER = 'PngDisclaimer'-End-->
@@ -177,6 +199,8 @@ WARNING = 'PngWarning'
 PNG warning.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,6 +218,8 @@ PNG author.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-AUTHOR = 'PngAuthor'--><!--Device-PngPropertyKey-AUTHOR = 'PngAuthor'-End-->
@@ -209,6 +235,8 @@ COPYRIGHT = 'PngCopyright'
 PNG copyright.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,6 +254,8 @@ PNG creation time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-CREATION_TIME = 'PngCreationTime'--><!--Device-PngPropertyKey-CREATION_TIME = 'PngCreationTime'-End-->
@@ -242,6 +272,8 @@ PNG modification time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngPropertyKey-MODIFICATION_TIME = 'PngModificationTime'--><!--Device-PngPropertyKey-MODIFICATION_TIME = 'PngModificationTime'-End-->
@@ -257,6 +289,8 @@ SOFTWARE = 'PngSoftware'
 PNG software.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,13 +1,14 @@
 # Duplex
 
-既可读又可写的流。双工流允许数据双向传输，即可读可写。  
-**Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md#ReadableOptions)，支持**Readable**中的所有API。
+既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md#ReadableOptions)，支持**Readable**中的所有API。
 
 **继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#Readable)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-stream-class Duplex extends Readable--><!--Device-stream-class Duplex extends Readable-End-->
+**废弃版本：** -1
+
+<!--Device-stream-class Duplex--><!--Device-stream-class Duplex-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -19,9 +20,11 @@ constructor()
 
 创建**Duplex**对象的构造函数。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-constructor()--><!--Device-Duplex-constructor()-End-->
 
@@ -41,9 +44,11 @@ cork(): boolean
 
 强制将后续写入的数据缓存起来。调用此API可优化连续写入操作的性能。调用此API后，**writableCorked**的值加1。建议与[uncork()](arkts-arkts-stream-writable-c.md#uncork)配合使用。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-cork(): boolean--><!--Device-Duplex-cork(): boolean-End-->
 
@@ -71,9 +76,11 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 数据写入API。需要由开发者实现此API，但不要直接调用。此API在写入数据时自动调用。使用异步回调返回结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
 
@@ -116,9 +123,11 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 批量数据写入API。需要由开发者实现此API，但不要直接调用。此API在写入数据时自动调用。使用异步回调返回结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
 
@@ -168,9 +177,11 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 结束双工流的写入过程。如果**writableCorked**的值大于0，则将其置为**0**，并输出缓冲区中的剩余数据。如果传入**chunk**参数，则将其视为最后一个数据块，根据当前执行上下文使用**write**或**doWrite** API写入。如果使用**doWrite**写入，**encoding**参数的有效性检查由**doWrite**决定。如果单独使用**end**（不使用**write**）且传入**chunk**参数，则数据通过**doWrite**写入。使用异步回调返回结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
 
@@ -194,7 +205,7 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 | 错误码ID |
 | --- |
-| [10200039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200039-dotransform接口未实现) |
+| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) |
 
 ## 示例
 
@@ -227,9 +238,11 @@ setDefaultEncoding(encoding?: string): boolean
 
 设置双工流的默认字符编码类型，确保在读取数据时正确解析字符。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean--><!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean-End-->
 
@@ -276,9 +289,11 @@ uncork(): boolean
 
 释放cork状态，刷新缓冲区中的数据并写入目标位置。调用此API后，**writableCorked**的值减1。如果值变为**0**，则流不再处于cork状态；否则，流仍处于cork状态。建议与[cork()](arkts-arkts-stream-writable-c.md#cork)配合使用。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-uncork(): boolean--><!--Device-Duplex-uncork(): boolean-End-->
 
@@ -324,9 +339,11 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 向流的缓冲区写入数据。使用异步回调返回结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
 
@@ -350,9 +367,9 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 错误码ID |
 | --- |
-| [10200039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200039-dotransform接口未实现) |
-| [10200037](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200037-多次调用callback) |
-| [10200036](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200036-流已经结束仍进行写操作) |
+| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) |
+| [10200037](../errorcode-utils.md#10200037-多次调用callback) |
+| [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) |
 
 ## 示例
 
@@ -375,129 +392,3 @@ let duplexStream = new TestDuplex();
 let result = duplexStream.write("test", "utf8");
 console.info("duplexStream result", result); // duplexStream result true
 ```
-
-## writable
-
-```TypeScript
-get writable(): boolean
-```
-
-表示双工流是否处于可写状态。true表示当前流是可写的，false表示流当前不再接受写入操作。
-
-**类型：** boolean
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Duplex-get writable(): boolean--><!--Device-Duplex-get writable(): boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## writableCorked
-
-```TypeScript
-get writableCorked(): number
-```
-
-表示双工流cork状态计数。值大于0时，双工流处于强制写入缓冲区状态，值为0时，该状态解除。使用cork()方法时计数加一，使用uncork()方法时计数减一，使用end()方法时计数清零。
-
-**类型：** number
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Duplex-get writableCorked(): int--><!--Device-Duplex-get writableCorked(): int-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## writableEnded
-
-```TypeScript
-get writableEnded(): boolean
-```
-
-表示当前双工流的end()是否被调用，该状态不代表数据已经全部写入。true表示end()已被调用，false表示end()未被调用。
-
-**类型：** boolean
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Duplex-get writableEnded(): boolean--><!--Device-Duplex-get writableEnded(): boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## writableFinished
-
-```TypeScript
-get writableFinished(): boolean
-```
-
-表示当前双工流是否处于写入完成状态。true表示当前流已处于写入完成状态，false表示当前流的写入操作可能还在进行中。
-
-**类型：** boolean
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Duplex-get writableFinished(): boolean--><!--Device-Duplex-get writableFinished(): boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## writableHighWatermark
-
-```TypeScript
-get writableHighWatermark(): number
-```
-
-定义双工流的写模式下缓冲区数据量的水位线大小。当前版本不支持开发者自定义修改设置水位线大小。调用write()写入后，若缓冲区数据量达到该值，write()会返回false。默认值为16 * 1024字节。
-
-**类型：** number
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Duplex-get writableHighWatermark(): int--><!--Device-Duplex-get writableHighWatermark(): int-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## writableLength
-
-```TypeScript
-get writableLength(): number
-```
-
-表示双工流缓冲区中待写入的字节数。
-
-**类型：** number
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Duplex-get writableLength(): int--><!--Device-Duplex-get writableLength(): int-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## writableObjectMode
-
-```TypeScript
-get writableObjectMode(): boolean
-```
-
-用于指定双工流的写模式是否以对象模式工作。true表示流的写模式被配置为对象模式，false表示流的写模式处于非对象模式。当前版本只支持原始数据（字符串和Uint8Array），返回值为false。
-
-**类型：** boolean
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Duplex-get writableObjectMode(): boolean--><!--Device-Duplex-get writableObjectMode(): boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang

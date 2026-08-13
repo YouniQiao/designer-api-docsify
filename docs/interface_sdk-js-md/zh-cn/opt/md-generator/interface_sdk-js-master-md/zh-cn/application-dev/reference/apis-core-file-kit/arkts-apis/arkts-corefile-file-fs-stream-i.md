@@ -1,10 +1,10 @@
 # Stream
 
-文件流，在调用Stream的方法前，需要先通过  
-[fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream)方法或者  
-[fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream)（同步或异步）来构建一个Stream实例。
+文件流，在调用Stream的方法前，需要先通过 fileIo.createStream方法或者 fileIo.fdopenStream（同步或异步）来构建一个Stream 实例。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
@@ -19,6 +19,8 @@ close(): Promise<void>
 关闭文件流，使用promise异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +68,8 @@ close(callback: AsyncCallback<void>): void
 异步关闭文件流，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -116,6 +120,8 @@ closeSync(): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
@@ -150,6 +156,8 @@ flush(): Promise<void>
 刷新文件流，使用promise异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -204,6 +212,8 @@ flush(callback: AsyncCallback<void>): void
 异步刷新文件流，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -261,6 +271,8 @@ flushSync(): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
@@ -305,6 +317,8 @@ read(
 从流文件读取数据，使用promise异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -373,6 +387,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
@@ -433,6 +449,8 @@ read(
 从流文件读取数据，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -500,6 +518,8 @@ readSync(
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number--><!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number-End-->
@@ -562,6 +582,8 @@ write(
 将数据写入流文件，使用promise异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -630,6 +652,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
@@ -692,6 +716,8 @@ write(
 将数据写入流文件，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -761,6 +787,8 @@ writeSync(
 以同步方法将数据写入流文件。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

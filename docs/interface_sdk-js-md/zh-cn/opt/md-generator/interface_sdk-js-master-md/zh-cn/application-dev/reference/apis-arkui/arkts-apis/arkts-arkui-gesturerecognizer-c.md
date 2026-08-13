@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class GestureRecognizer--><!--Device-unnamed-declare class GestureRecognizer-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getEventTargetInfo(): EventTargetInfo
 返回当前手势识别器对应组件的信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ getFingerCount(): number
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -65,6 +71,8 @@ getState(): GestureRecognizerState
 返回当前手势识别器的状态。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +98,8 @@ getTag(): string
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -113,6 +123,8 @@ getType(): GestureControl.GestureType
 返回当前手势识别器的类型。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,6 +150,8 @@ isBuiltIn(): boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -161,6 +175,8 @@ isEnabled(): boolean
 返回当前手势识别器的使能状态。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,6 +202,8 @@ isFingerCountLimit(): boolean
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -209,6 +227,8 @@ isHostBelongsTo(uniqueId: number): boolean
 返回当前手势识别器绑定节点是否为传入组件的后代节点。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -240,6 +260,8 @@ isValid(): boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-GestureRecognizer-isValid(): boolean--><!--Device-GestureRecognizer-isValid(): boolean-End-->
@@ -258,10 +280,11 @@ isValid(): boolean
 preventBegin(): void
 ```
 
-在手指全部抬起前阻止手势识别器参与当前手势识别。如果系统已确定该手势识别器的结果（无论成功与否），调用此接口将无效。此方法与GestureRecognizer.[setEnabled](#setEnabled)(isEnabled: boolean)不同，  
-[setEnabled](#setEnabled)并不会阻止手势识别器对象参与手势识别过程，而只会影响手势对应的回调函数是否执行。
+在手指全部抬起前阻止手势识别器参与当前手势识别。如果系统已确定该手势识别器的结果（无论成功与否），调用此接口将无效。此方法与 GestureRecognizer.[setEnabled](#setEnabled)(isEnabled: boolean)不同， [setEnabled](#setEnabled)并不会阻止手势识别器对象参与手势识别过程，而只会影响手势对应的回调函数是否执行。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -281,6 +304,8 @@ setEnabled(isEnabled: boolean): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -293,4 +318,4 @@ setEnabled(isEnabled: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isEnabled](#isenabled) | boolean | 是 |
+| [isEnabled](#isEnabled) | boolean | 是 |

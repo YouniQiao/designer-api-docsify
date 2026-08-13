@@ -2,7 +2,9 @@
 
 Enumerates the camera portrait theme types.
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum PortraitThemeType--><!--Device-camera-enum PortraitThemeType-End-->
 
@@ -18,7 +20,9 @@ NATURAL = 0
 
 Natural portrait theme type.
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PortraitThemeType-NATURAL = 0--><!--Device-PortraitThemeType-NATURAL = 0-End-->
 
@@ -34,7 +38,9 @@ DELICATE = 1
 
 Delicate portrait theme type.
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PortraitThemeType-DELICATE = 1--><!--Device-PortraitThemeType-DELICATE = 1-End-->
 
@@ -50,7 +56,9 @@ STYLISH = 2
 
 Stylish portrait theme type.
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PortraitThemeType-STYLISH = 2--><!--Device-PortraitThemeType-STYLISH = 2-End-->
 

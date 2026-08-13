@@ -4,15 +4,15 @@
 type RotationChangeCallback<T, U> = (info: T) => U
 ```
 
-Describes a generic callback function for rotation event notifications.
+Describes a generic callback function for rotation event notifications. In this callback function, the parameter type is [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo) , and the return value type is [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) \| void.
 
-In this callback function, the parameter type is [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo), and the return value type is [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) \| void.
+**Since:** 23
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-type RotationChangeCallback<T, U> = (info: T) => U--><!--Device-window-type RotationChangeCallback<T, U> = (info: T) => U-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates the control type of application disposal.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appControl-export enum ControlType--><!--Device-appControl-export enum ControlType-End-->
 
@@ -20,9 +22,11 @@ ALLOWED_LIST = 1
 
 A trustlist is used, which means that the application components in the list are allowed to run.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ControlType-ALLOWED_LIST = 1--><!--Device-ControlType-ALLOWED_LIST = 1-End-->
 
@@ -38,9 +42,11 @@ DISALLOWED_LIST = 2
 
 A blocklist is used, which means that the application components in the list are forbidden to run.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ControlType-DISALLOWED_LIST = 2--><!--Device-ControlType-DISALLOWED_LIST = 2-End-->
 

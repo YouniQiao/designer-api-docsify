@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class BottomTabBarStyle--><!--Device-unnamed-declare class BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ BottomTabBarStyle的构造函数。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)--><!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)-End-->
@@ -28,7 +32,7 @@ BottomTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
 
 ## iconStyle
@@ -40,6 +44,8 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 设置底部页签的图标样式。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,6 +77,8 @@ id(value: string): BottomTabBarStyle
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -100,6 +108,8 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 设置底部页签的label文本和字体的样式。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -131,6 +141,8 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -161,6 +173,8 @@ BottomTabBarStyle的静态构造函数。
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -173,7 +187,7 @@ BottomTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
 
 **返回值：**
@@ -192,6 +206,8 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -204,7 +220,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 |
+| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 |
 
 **返回值：**
 
@@ -221,6 +237,8 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 设置底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值，仅fixed水平模式下在底部页签之间有效。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -251,6 +269,8 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 设置底部页签的图片、文字在垂直方向上的对齐格式。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

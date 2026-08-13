@@ -8,7 +8,7 @@ The ContinuationResult module describes the device information returned by the c
 
 **Deprecated since:** 22
 
-**Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#distributedDeviceManager)
+**Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#@ohos.distributedDeviceManager)
 
 <!--Device-unnamed-export interface ContinuationResult--><!--Device-unnamed-export interface ContinuationResult-End-->
 

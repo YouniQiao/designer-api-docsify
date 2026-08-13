@@ -2,9 +2,11 @@
 
 场景资源参数类型.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SceneResourceParameters--><!--Device-unnamed-export interface SceneResourceParameters-End-->
 
@@ -20,9 +22,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceParameters-name: string--><!--Device-SceneResourceParameters-name: string-End-->
 
@@ -38,9 +42,11 @@ uri?: ResourceStr
 
 **类型：** ResourceStr
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceParameters-uri?: ResourceStr--><!--Device-SceneResourceParameters-uri?: ResourceStr-End-->
 

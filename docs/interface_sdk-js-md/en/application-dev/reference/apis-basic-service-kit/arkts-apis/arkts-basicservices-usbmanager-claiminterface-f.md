@@ -12,18 +12,13 @@ import { usbManager } from '@kit.BasicServicesKit';
 function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int
 ```
 
-Claims a USB device interface.
+Claims a USB device interface. > **NOTE：**> > In USB programming, **claimInterface** is a common operation, which indicates that an application requests the > operating system to release a USB interface from the kernel driver and hand over the USB interface to a user > space program for control.&lt;br&gt; > > All the **claim** communication interfaces used below refer to the claim interface operations.
 
-> **NOTE：**
-> 
-> In USB programming, **claimInterface** is a common operation, which indicates that an application requests the
-> operating system to release a USB interface from the kernel driver and hand over the USB interface to a user
-> space program for control.&lt;br&gt;
-> > All the **claim** communication interfaces used below refer to the claim interface operations.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int--><!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int-End-->
 
@@ -41,14 +36,14 @@ Claims a USB device interface.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns **0** if the **claim** interface is called successfully; returns an error code otherwise. The error codes are as follows: |
+| int | Returns **0** if the **claim** interface is called successfully; returns an error code otherwise. The error codes are as follows: |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## Examples
 

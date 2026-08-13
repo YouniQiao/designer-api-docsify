@@ -2,7 +2,9 @@
 
 Defines the application account manager, which is used to manage account information of applications.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface AppAccountManager--><!--Device-appAccount-interface AppAccountManager-End-->
 
@@ -20,19 +22,13 @@ import { appAccount } from '@kit.BasicServicesKit';
 addAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-Adds an application account with the given name. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createAccount)
-> instead.
+Adds an application account with the given name. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [createAccount](#createAccount) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**Substitutes:** [createAccount](#createAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -61,19 +57,13 @@ appAccountManager.addAccount('WangWu', (err: BusinessError) => {
 addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Adds an application account name and additional information. This API uses an asynchronous callback to return the  result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createAccount)
-> instead.
+Adds an application account name and additional information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [createAccount](#createAccount) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**Substitutes:** [createAccount](#createAccount)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -103,18 +93,13 @@ appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => {
 addAccount(name: string, extraInfo?: string): Promise<void>
 ```
 
-Adds an application account name and additional information. This API uses a promise to return the result.
-
-> **NOTE：**
-> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createAccount-2)
-> instead.
+Adds an application account name and additional information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [createAccount](#createAccount) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**Substitutes:** [createAccount](#createAccount)(name: string, options?: CreateAccountOptions)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
@@ -156,19 +141,13 @@ addAccountImplicitly(
     ): void
 ```
 
-Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [createAccountImplicitly](#createAccountImplicitly)
-> instead.
+Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [createAccountImplicitly](#createAccountImplicitly) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccountImplicitly](appAccount.AppAccountManager.createAccountImplicitly(owner:)
+**Substitutes:** [createAccountImplicitly](#createAccountImplicitly)(owner: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -232,7 +211,9 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 Authenticates an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void--><!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void-End-->
 
@@ -251,13 +232,13 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -321,6 +302,8 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -332,20 +315,20 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | name | string | Yes |
 | owner | string | Yes |
 | authType | string | Yes |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| options | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -396,6 +379,49 @@ struct Index {
 }
 ```
 
+## auth
+
+```TypeScript
+auth(
+      name: string,
+      owner: string,
+      authType: string,
+      options: Record<string, RecordData>,
+      callback: AuthCallback
+    ): void
+```
+
+Authenticates an application account. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| owner | string | Yes |
+| authType | string | Yes |
+| options | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+
 ## authenticate
 
 ```TypeScript
@@ -408,19 +434,13 @@ authenticate(
     ): void
 ```
 
-Authenticates an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [auth](#auth)
-> instead.
+Authenticates an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [auth](#auth) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [auth](appAccount.AppAccountManager.auth(name:)
+**Substitutes:** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -485,7 +505,9 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 Checks whether an application account has specific labels. This API uses an asynchronous callback to return the result. The labels are checked by the authenticator of the target application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void-End-->
 
@@ -504,13 +526,13 @@ Checks whether an application account has specific labels. This API uses an asyn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -541,7 +563,9 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 Checks whether an application account has specific labels. This API uses a promise to return the result. The labels are checked by the authenticator of the target application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>-End-->
 
@@ -565,13 +589,13 @@ Checks whether an application account has specific labels. This API uses a promi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -598,9 +622,11 @@ try {
 checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an application can access the data of an account. This API uses an asynchronous callback to return  the result.
+Checks whether an application can access the data of an account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -618,10 +644,10 @@ Checks whether an application can access the data of an account. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -651,7 +677,9 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 Checks whether an application can access the data of an account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>-End-->
 
@@ -674,10 +702,10 @@ Checks whether an application can access the data of an account. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -702,19 +730,13 @@ try {
 checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback  to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](#checkDataSyncEnabled)
-> instead.
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkDataSyncEnabled](#checkDataSyncEnabled) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**Substitutes:** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -749,18 +771,13 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
 checkAppAccountSyncEnable(name: string): Promise<boolean>
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](#checkDataSyncEnabled-1) instead.
+Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkDataSyncEnabled](#checkDataSyncEnabled) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**Substitutes:** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -800,7 +817,9 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -819,11 +838,11 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -853,7 +872,9 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -877,11 +898,11 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -907,9 +928,11 @@ try {
 checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback  to return the result.
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -928,11 +951,11 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -961,7 +984,9 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -985,11 +1010,11 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1019,19 +1044,13 @@ checkOAuthTokenVisibility(
     ): void
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility)
-> instead.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**Substitutes:** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void-End-->
 
@@ -1067,19 +1086,13 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility-1)
-> instead.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**Substitutes:** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -1120,7 +1133,9 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 Creates an application account with the given name. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1137,11 +1152,11 @@ Creates an application account with the given name. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
 
 ## Examples
 
@@ -1170,7 +1185,9 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 Creates an application account with custom data. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -1188,11 +1205,11 @@ Creates an application account with custom data. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
 
 ## Examples
 
@@ -1226,7 +1243,9 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 Creates an application account with custom data. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>--><!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>-End-->
 
@@ -1249,11 +1268,11 @@ Creates an application account with custom data. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
 
 ## Examples
 
@@ -1285,7 +1304,9 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 Creates an application account implicitly based on the specified account owner. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void-End-->
 
@@ -1302,13 +1323,13 @@ Creates an application account implicitly based on the specified account owner. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
 
 ## Examples
 
@@ -1363,7 +1384,9 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 Creates an application account implicitly based on the specified account owner and options. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
@@ -1381,13 +1404,13 @@ Creates an application account implicitly based on the specified account owner a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
 
 ## Examples
 
@@ -1444,19 +1467,13 @@ struct Index {
 deleteAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](#removeAccount)
-> instead.
+Deletes an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [removeAccount](#removeAccount) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**Substitutes:** [removeAccount](#removeAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1485,19 +1502,13 @@ appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => {
 deleteAccount(name: string): Promise<void>
 ```
 
-Deletes an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](#removeAccount-1)
-> instead.
+Deletes an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [removeAccount](#removeAccount) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**Substitutes:** [removeAccount](#removeAccount)(name: string)
 
 <!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
@@ -1533,9 +1544,11 @@ appAccountManager.deleteAccount('ZhaoLiu').then(() => {
 deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
+Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1555,11 +1568,11 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1589,7 +1602,9 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -1614,11 +1629,11 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1645,7 +1660,9 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 Deletes the credential of the specified type from an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1663,11 +1680,11 @@ Deletes the credential of the specified type from an application account. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -1696,7 +1713,9 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 Deletes the credential of the specified type from an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>-End-->
 
@@ -1719,11 +1738,11 @@ Deletes the credential of the specified type from an application account. This A
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -1748,19 +1767,13 @@ try {
 deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](#deleteAuthToken)
-> instead.
+Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [deleteAuthToken](#deleteAuthToken) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**Substitutes:** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1797,19 +1810,13 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](#deleteAuthToken-1)
-> instead.
+Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [deleteAuthToken](#deleteAuthToken) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**Substitutes:** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -1848,19 +1855,13 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Disables an application account from accessing an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess)
-> instead.
+Disables an application account from accessing an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1890,19 +1891,13 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err
 disableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-Disables an application account from accessing an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess-1)
-> instead.
+Disables an application account from accessing an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -1939,19 +1934,13 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
 enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Enables an application account to access an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess)
-> instead.
+Enables an application account to access an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1985,19 +1974,13 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err:
 enableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-Enables an application account to access an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess-1)
-> instead.
+Enables an application account to access an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -2034,19 +2017,13 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(
 getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](#getCredential)
-> instead.
+Obtains the credential of an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCredential](#getCredential) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**Substitutes:** [getCredential](#getCredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2080,19 +2057,13 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: Bu
 getAccountCredential(name: string, credentialType: string): Promise<string>
 ```
 
-Obtains the credential of an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](#getCredential-1)
-> instead.
+Obtains the credential of an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCredential](#getCredential) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**Substitutes:** [getCredential](#getCredential)(name: string, credentialType: string)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -2129,19 +2100,13 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that  can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData)
-> instead.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2174,18 +2139,13 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
 getAccountExtraInfo(name: string): Promise<string>
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that  can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData-1) instead.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
@@ -2221,9 +2181,11 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
 getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -2240,9 +2202,9 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 | Error Code ID |
 | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -2270,9 +2232,11 @@ try {
 getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
@@ -2294,9 +2258,9 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 | Error Code ID |
 | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -2322,19 +2286,13 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAllAccounts](#getAllAccounts)
-> instead.
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAllAccounts](#getAllAccounts) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAccounts](appAccount.AppAccountManager.getAllAccounts(callback:)
+**Substitutes:** [getAllAccounts](#getAllAccounts)(callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2368,12 +2326,7 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAllAccounts](#getAllAccounts) instead.
+Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAllAccounts](#getAllAccounts) instead.
 
 **Since:** 7
 
@@ -2411,9 +2364,11 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
 getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -2429,8 +2384,8 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2457,9 +2412,11 @@ try {
 getAllAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>-End-->
 
@@ -2475,7 +2432,7 @@ Obtains information about all accessible application accounts. This API uses a p
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2500,19 +2457,13 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](#getAccountsByOwner)
-> instead.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAccountsByOwner](#getAccountsByOwner) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**Substitutes:** [getAccountsByOwner](#getAccountsByOwner)(owner: string, callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2548,18 +2499,13 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](#getAccountsByOwner-1) instead.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAccountsByOwner](#getAccountsByOwner) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**Substitutes:** [getAccountsByOwner](#getAccountsByOwner)(owner: string)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2600,7 +2546,9 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void-End-->
 
@@ -2618,10 +2566,10 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2651,7 +2599,9 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>-End-->
 
@@ -2674,10 +2624,10 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2703,19 +2653,13 @@ try {
 getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](#getAllAuthTokens)
-> instead.
+Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAllAuthTokens](#getAllAuthTokens) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**Substitutes:** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
@@ -2750,18 +2694,13 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
 getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](#getAllAuthTokens-1) instead.
+Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAllAuthTokens](#getAllAuthTokens) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**Substitutes:** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
@@ -2799,19 +2738,13 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData)
-> instead.
+Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2845,18 +2778,13 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, res
 getAssociatedData(name: string, key: string): Promise<string>
 ```
 
-Obtains data associated with an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData-1) instead.
+Obtains data associated with an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
@@ -2895,7 +2823,9 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void--><!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void-End-->
 
@@ -2912,10 +2842,10 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2960,7 +2890,9 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>--><!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>-End-->
 
@@ -2982,10 +2914,10 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3026,10 +2958,11 @@ export default class EntryAbility extends UIAbility {
 getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setAuthTokenVisibility](#setAuthTokenVisibility). This API uses an asynchronous callback to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setAuthTokenVisibility](#setAuthTokenVisibility) . This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -3047,11 +2980,11 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3078,10 +3011,11 @@ try {
 getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setAuthTokenVisibility](#setAuthTokenVisibility). This API uses a promise to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setAuthTokenVisibility](#setAuthTokenVisibility) . This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -3104,11 +3038,11 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3133,9 +3067,11 @@ try {
 getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
+Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3154,11 +3090,11 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3188,7 +3124,9 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -3212,11 +3150,11 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3241,19 +3179,13 @@ try {
 getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getAuthCallback)
-> instead.
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthCallback](#getAuthCallback) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**Substitutes:** [getAuthCallback](#getAuthCallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
 
@@ -3298,18 +3230,13 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getAuthCallback-1) instead.
+Obtains the authenticator callback for an authentication session. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthCallback](#getAuthCallback) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**Substitutes:** [getAuthCallback](#getAuthCallback)(sessionId: string)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
@@ -3357,19 +3284,13 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo)
-> instead.
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [queryAuthenticatorInfo](#queryAuthenticatorInfo) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**Substitutes:** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -3403,18 +3324,13 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
 getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 ```
 
-Obtains the authenticator information of an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo-1) instead.
+Obtains the authenticator information of an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [queryAuthenticatorInfo](#queryAuthenticatorInfo) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**Substitutes:** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -3453,7 +3369,9 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3471,11 +3389,11 @@ Obtains the credential of an application account. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -3504,7 +3422,9 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 Obtains the credential of an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -3527,11 +3447,11 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -3558,7 +3478,9 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 Obtains the custom data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3576,11 +3498,11 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
 
 ## Examples
 
@@ -3609,7 +3531,9 @@ getCustomData(name: string, key: string): Promise<string>
 
 Obtains the custom data of an application account based on the specified key. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>-End-->
 
@@ -3632,11 +3556,11 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
 
 ## Examples
 
@@ -3663,7 +3587,9 @@ getCustomDataSync(name: string, key: string): string
 
 Obtains the custom data of an application account based on the specified key. The API returns the result synchronously.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string--><!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string-End-->
 
@@ -3686,11 +3612,11 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
 
 ## Examples
 
@@ -3712,20 +3638,13 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility). This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](#getAuthList)
-> instead.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setOAuthTokenVisibility) . This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthList](#getAuthList) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**Substitutes:** [getAuthList](#getAuthList)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -3759,19 +3678,13 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility). This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](#getAuthList-1) instead.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setOAuthTokenVisibility) . This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthList](#getAuthList) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**Substitutes:** [getAuthList](#getAuthList)(name: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -3808,19 +3721,13 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](#getAuthToken)
-> instead.
+Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthToken](#getAuthToken) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**Substitutes:** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3856,19 +3763,13 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](#getAuthToken-1)
-> instead.
+Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthToken](#getAuthToken) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**Substitutes:** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -3900,25 +3801,101 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 });
 ```
 
-## off('change')
+## offAccountChange
+
+```TypeScript
+offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
+```
+
+Unsubscribes from account events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+
+## off_accountChange
+
+```TypeScript
+off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
+```
+
+Unsubscribes from account information changes.
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'accountChange' | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
+  console.info('receive change data:' + JSON.stringify(data));
+}
+
+try {
+  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+try {
+  appAccountManager.off('accountChange', changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-Unsubscribes from account information changes.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [off('accountChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-> instead.
+Unsubscribes from account information changes. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [off('accountChange')](#off_change) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](appAccount.AppAccountManager.off(type:)
+**Substitutes:** [off](#off_change)(type: 'accountChange', callback?: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -3951,17 +3928,49 @@ try {
 }
 ```
 
-## off('accountChange')
+## onAccountChange
 
 ```TypeScript
-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
+onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-Unsubscribes from account information changes.
+Subscribes to the change events of accounts of the specified owners.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| owners | Array & lt;string & gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+
+## on_accountChange
+
+```TypeScript
+on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+```
+
+Subscribes to account information changes of apps.
 
 **Since:** 9
 
-<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3970,15 +3979,16 @@ Unsubscribes from account information changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'accountChange' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No |
+| owners | Array & lt;string & gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -3995,33 +4005,21 @@ try {
   const err = e as BusinessError;
   console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
-try {
-  appAccountManager.off('accountChange', changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
-}
 ```
 
-## on('change')
+## on_change
 
 ```TypeScript
 on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-Subscribes to account information changes of apps.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [on('accountChange')](appAccount.AppAccountManager.on(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array<AppAccountInfo>&gt;&lt;AppAccountInfo&gt;>))
-> instead.
+Subscribes to account information changes of apps. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [on('accountChange')](#on_change) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](appAccount.AppAccountManager.on(type:)
+**Substitutes:** [on](#on_change)(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -4052,53 +4050,6 @@ try {
 }
 ```
 
-## on('accountChange')
-
-```TypeScript
-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
-```
-
-Subscribes to account information changes of apps.
-
-**Since:** 9
-
-<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'accountChange' | Yes |
-| owners | Array & lt;string & gt; | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data:' + JSON.stringify(data));
-}
-
-try {
-  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## queryAuthenticatorInfo
 
 ```TypeScript
@@ -4107,7 +4058,9 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -4124,10 +4077,10 @@ Obtains the authenticator information of an application. This API uses an asynch
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -4157,7 +4110,9 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 Obtains the authenticator information of an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -4179,10 +4134,10 @@ Obtains the authenticator information of an application. This API uses a promise
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -4210,7 +4165,9 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 Removes an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4227,10 +4184,10 @@ Removes an application account. This API uses an asynchronous callback to return
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4259,7 +4216,9 @@ removeAccount(name: string): Promise<void>
 
 Removes an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string): Promise<void>--><!--Device-AppAccountManager-removeAccount(name: string): Promise<void>-End-->
 
@@ -4281,10 +4240,10 @@ Removes an application account. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4311,7 +4270,9 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 Selects the accounts that can be accessed by the invoker based on the options. This API uses an asynchronous callback to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -4328,11 +4289,11 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4366,7 +4327,9 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 Selects the accounts that can be accessed by the invoker based on the options. This API uses a promise to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>-End-->
 
@@ -4388,11 +4351,11 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4420,19 +4383,13 @@ try {
 setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a credential for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](#setCredential)
-> instead.
+Sets a credential for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCredential](#setCredential) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**Substitutes:** [setCredential](#setCredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4467,19 +4424,13 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
 ```
 
-Sets a credential for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](#setCredential-1)
-> instead.
+Sets a credential for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCredential](#setCredential) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**Substitutes:** [setCredential](#setCredential)(name: string, credentialType: string, credential: string)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -4517,19 +4468,13 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Sets additional information for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData)
-> instead.
+Sets additional information for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4563,19 +4508,13 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) 
 setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 ```
 
-Sets additional information for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData-1)
-> instead.
+Sets additional information for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
@@ -4614,7 +4553,9 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 Sets the access to the data of an account for an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -4633,11 +4574,11 @@ Sets the access to the data of an account for an application. This API uses an a
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -4666,7 +4607,9 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 Sets the access to the data of an account for an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>-End-->
 
@@ -4690,11 +4633,11 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -4719,19 +4662,13 @@ try {
 setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](#setDataSyncEnabled)
-> instead.
+Sets data synchronization for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setDataSyncEnabled](#setDataSyncEnabled) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**Substitutes:** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4767,19 +4704,13 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError)
 setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 ```
 
-Sets data synchronization for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](#setDataSyncEnabled-1)
-> instead.
+Sets data synchronization for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setDataSyncEnabled](#setDataSyncEnabled) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**Substitutes:** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4818,19 +4749,13 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Sets data to be associated with an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData)
-> instead.
+Sets data to be associated with an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4865,19 +4790,13 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessEr
 setAssociatedData(name: string, key: string, value: string): Promise<void>
 ```
 
-Sets data to be associated with an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData-1)
-> instead.
+Sets data to be associated with an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -4917,7 +4836,9 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4936,11 +4857,11 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4969,7 +4890,9 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -4993,11 +4916,11 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5028,9 +4951,11 @@ setAuthTokenVisibility(
     ): void
 ```
 
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return  the result.
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -5050,12 +4975,12 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -5085,7 +5010,9 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -5110,12 +5037,12 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Error Code ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -5142,7 +5069,9 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 Sets the authenticator attributes of an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void-End-->
 
@@ -5159,12 +5088,12 @@ Sets the authenticator attributes of an application. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -5196,7 +5125,9 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 Sets the authenticator properties. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
@@ -5214,12 +5145,12 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -5255,7 +5186,9 @@ setCredential(name: string, credentialType: string, credential: string,
 
 Sets a credential for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void-End-->
 
@@ -5274,10 +5207,10 @@ Sets a credential for an application account. This API uses an asynchronous call
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5306,7 +5239,9 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 Sets a credential for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -5330,10 +5265,10 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5360,7 +5295,9 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 Sets custom data for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5379,11 +5316,11 @@ Sets custom data for an application account. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
 
 ## Examples
 
@@ -5412,7 +5349,9 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 Sets custom data for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -5436,11 +5375,11 @@ Sets custom data for an application account. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
 
 ## Examples
 
@@ -5467,7 +5406,9 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5487,11 +5428,11 @@ Sets data synchronization for an application account. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5516,7 +5457,9 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 Sets data synchronization for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5541,11 +5484,11 @@ Sets data synchronization for an application account. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5570,19 +5513,13 @@ try {
 setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](#setAuthToken)
-> instead.
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthToken](#setAuthToken) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**Substitutes:** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5617,19 +5554,13 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
 setOAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](#setAuthToken-1)
-> instead.
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthToken](#setAuthToken) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**Substitutes:** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -5673,19 +5604,13 @@ setOAuthTokenVisibility(
     ): void
 ```
 
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return  the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](#setAuthTokenVisibility)
-> instead.
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthTokenVisibility](#setAuthTokenVisibility) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility()
+**Substitutes:** [setAuthTokenVisibility](#setAuthTokenVisibility)( name: string, authType: string, bundleName: string, isVisible: boolean, callback: AsyncCallback&lt;void&gt; )
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -5722,19 +5647,13 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
 ```
 
-Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](#setAuthTokenVisibility-1)
-> instead.
+Sets the visibility of an authorization token to an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthTokenVisibility](#setAuthTokenVisibility) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility(name:)
+**Substitutes:** [setAuthTokenVisibility](#setAuthTokenVisibility)(name: string, authType: string, bundleName: string, isVisible: boolean)
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -5775,7 +5694,9 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void-End-->
 
@@ -5793,13 +5714,13 @@ Verifies the credential of an application account. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -5831,7 +5752,9 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 Verifies the user credential. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
@@ -5850,13 +5773,13 @@ Verifies the user credential. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 

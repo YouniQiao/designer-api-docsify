@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export enum ArcDirection--><!--Device-unnamed-export enum ArcDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -17,6 +19,8 @@ THREE_CLOCK_DIRECTION = 0
 3点钟方向。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ SIX_CLOCK_DIRECTION = 1
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcDirection-SIX_CLOCK_DIRECTION = 1--><!--Device-ArcDirection-SIX_CLOCK_DIRECTION = 1-End-->
@@ -49,6 +55,8 @@ NINE_CLOCK_DIRECTION = 2
 9点钟方向。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

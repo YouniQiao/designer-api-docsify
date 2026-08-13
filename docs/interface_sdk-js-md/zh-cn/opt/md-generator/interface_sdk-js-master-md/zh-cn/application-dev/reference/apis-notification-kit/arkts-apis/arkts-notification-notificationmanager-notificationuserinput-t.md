@@ -6,7 +6,9 @@ export type NotificationUserInput = _NotificationUserInput
 
 保存用户输入的通知消息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationUserInput = _NotificationUserInput--><!--Device-notificationManager-export type NotificationUserInput = _NotificationUserInput-End-->
 

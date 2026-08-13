@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class SubHeaderV2Select--><!--Device-unnamed-export declare class SubHeaderV2Select-End-->
 
@@ -20,6 +20,8 @@ select内容以及事件构造函数。
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -34,37 +36,14 @@ select内容以及事件构造函数。
 | --- | --- | --- |
 | [options](#options) | [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | 是 |
 
-## onSelect
-
-```TypeScript
-onSelect?: SubHeaderV2SelectOnSelect
-```
-
-Sets the onSelect of the SubHeaderV2SelectOptions.
-
-**起始版本：** 18
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2Select-onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2Select-onSelect?: SubHeaderV2SelectOnSelect-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## defaultFocus
 
 ```TypeScript
-defaultFocus?: boolean
+@Trace
+  defaultFocus?: boolean
 ```
 
-下拉按钮是否为默认焦点。
-
-true：下拉按钮是默认焦点。
-
-false：下拉按钮不是默认焦点。
-
-默认值：false
+下拉按钮是否为默认焦点。 true：下拉按钮是默认焦点。 false：下拉按钮不是默认焦点。 默认值：false
 
 **类型：** boolean
 
@@ -72,76 +51,108 @@ false：下拉按钮不是默认焦点。
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Select-defaultFocus?: boolean--><!--Device-SubHeaderV2Select-defaultFocus?: boolean-End-->
+<!--Device-SubHeaderV2Select-@Trace  defaultFocus?: boolean--><!--Device-SubHeaderV2Select-@Trace  defaultFocus?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
 
 ```TypeScript
-id?: string
+@Trace
+  id?: string
 ```
 
-下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置下拉按钮id。
+下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。 默认值：undefined，表示不设置下拉按钮id。
 
 **类型：** string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Select-id?: string--><!--Device-SubHeaderV2Select-id?: string-End-->
+<!--Device-SubHeaderV2Select-@Trace  id?: string--><!--Device-SubHeaderV2Select-@Trace  id?: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onSelect
+
+```TypeScript
+@Trace
+  onSelect?: SubHeaderV2SelectOnSelect
+```
+
+Sets the onSelect of the SubHeaderV2SelectOptions.
+
+**类型：** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SubHeaderV2Select-@Trace  onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2Select-@Trace  onSelect?: SubHeaderV2SelectOnSelect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
 
 ```TypeScript
-options: SelectOption[]
+@Trace
+  options: SelectOption[]
 ```
 
 Sets the options of the SubHeaderV2SelectOptions.
 
-**类型：** [SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)[]
+**类型：** SelectOption[]
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Select-options: SelectOption[]--><!--Device-SubHeaderV2Select-options: SelectOption[]-End-->
+<!--Device-SubHeaderV2Select-@Trace  options: SelectOption[]--><!--Device-SubHeaderV2Select-@Trace  options: SelectOption[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedContent
 
 ```TypeScript
-selectedContent?: ResourceStr
+@Trace selectedContent?: ResourceStr
 ```
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Select-selectedContent?: ResourceStr--><!--Device-SubHeaderV2Select-selectedContent?: ResourceStr-End-->
+<!--Device-SubHeaderV2Select-@Trace selectedContent?: ResourceStr--><!--Device-SubHeaderV2Select-@Trace selectedContent?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedIndex
 
 ```TypeScript
-selectedIndex?: number
+@Trace
+  selectedIndex?: number
 ```
 
 Sets the selected index of the SubHeaderV2SelectOptions.
@@ -150,10 +161,12 @@ Sets the selected index of the SubHeaderV2SelectOptions.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Select-selectedIndex?: number--><!--Device-SubHeaderV2Select-selectedIndex?: number-End-->
+<!--Device-SubHeaderV2Select-@Trace  selectedIndex?: number--><!--Device-SubHeaderV2Select-@Trace  selectedIndex?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

@@ -1,8 +1,10 @@
 # System
 
-Provides system attribute configuration functions, including translating language and country/region names,obtaining the list of supported languages and countries/regions, and obtaining the system language and region.
+Provides system attribute configuration functions, including translating language and country/region names, obtaining the list of supported languages and countries/regions, and obtaining the system language and region.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
 
@@ -22,7 +24,9 @@ static getAppPreferredLanguage(): string
 
 Obtains the preferred language of an application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,7 +56,9 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 
 Obtains the country/region display name in the specified language.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,8 +84,8 @@ Obtains the country/region display name in the specified language.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -103,7 +109,9 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 
 Obtains the language display name in the specified language.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,8 +137,8 @@ Obtains the language display name in the specified language.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -155,9 +163,11 @@ static getFirstDayOfWeek(): WeekDay
 
 Obtains the first day of a week in the system settings.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getFirstDayOfWeek(): WeekDay--><!--Device-System-static getFirstDayOfWeek(): WeekDay-End-->
 
@@ -185,7 +195,9 @@ static getFirstPreferredLanguage(): string
 
 Obtains the first language in the preferred language list.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -215,7 +227,9 @@ static getPreferredLanguageList(): Array<string>
 
 Obtains the list of preferred languages.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -243,11 +257,13 @@ let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList(
 static getSimplifiedLanguage(language?: string): string
 ```
 
-Obtains the simplified representation of a language. For example, the simplified representation of **en-Latn-US**is **en**, and that of **en-Latn-GB** is **en-GB**.
+Obtains the simplified representation of a language. For example, the simplified representation of **en-Latn-US** is **en**, and that of **en-Latn-GB** is **en-GB**.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getSimplifiedLanguage(language?: string): string--><!--Device-System-static getSimplifiedLanguage(language?: string): string-End-->
 
@@ -269,8 +285,8 @@ Obtains the simplified representation of a language. For example, the simplified
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -297,7 +313,9 @@ static getSystemCountries(language: string): Array<string>
 
 Obtains the list of countries/regions supported for the specified language.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -321,8 +339,8 @@ Obtains the list of countries/regions supported for the specified language.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -345,11 +363,11 @@ try {
 static getSystemLanguage(): string
 ```
 
-Obtains the current system language. To listen for system language changes, enable listening for  
-[COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see  
-[System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system language. To listen for system language changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) . For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -379,9 +397,11 @@ let systemLanguage: string = i18n.System.getSystemLanguage(); // If the system l
 static getSystemLanguages(): Array<string>
 ```
 
-Obtains the list of system languages.Since API version 11, this API is supported in ArkTS widgets.
+Obtains the list of system languages. Since API version 11, this API is supported in ArkTS widgets.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -444,13 +464,13 @@ let systemLocale: string = i18n.System.getSystemLocale(); // If the system langu
 static getSystemLocaleInstance(): Intl.Locale
 ```
 
-Obtains the current system locale. To listen for system locale changes, enable listening for  
-[COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see  
-[System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system locale. To listen for system locale changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) . For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getSystemLocaleInstance(): Intl.Locale--><!--Device-System-static getSystemLocaleInstance(): Intl.Locale-End-->
 
@@ -476,11 +496,11 @@ let systemLocale: Intl.Locale = i18n.System.getSystemLocaleInstance();
 static getSystemRegion(): string
 ```
 
-Obtains the current system country/region. To listen for system region changes, enable listening for  
-[COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see  
-[System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system country/region. To listen for system region changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) . For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -510,9 +530,11 @@ static getTemperatureName(type: TemperatureType): string
 
 Obtains the name of a temperature unit.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getTemperatureName(type: TemperatureType): string--><!--Device-System-static getTemperatureName(type: TemperatureType): string-End-->
 
@@ -534,7 +556,7 @@ Obtains the name of a temperature unit.
 
 | Error Code ID |
 | --- |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -559,9 +581,11 @@ static getTemperatureType(): TemperatureType
 
 Obtains the temperature unit of the system.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getTemperatureType(): TemperatureType--><!--Device-System-static getTemperatureType(): TemperatureType-End-->
 
@@ -589,7 +613,9 @@ static getUsingLocalDigit(): boolean
 
 Checks whether use of local digits is enabled.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -617,10 +643,11 @@ let usingLocalDigit: boolean = i18n.System.getUsingLocalDigit();
 static is24HourClock(): boolean
 ```
 
-Checks whether the 24-hour clock is used. To listen for system time format changes, enable listening for  
-[COMMON_EVENT_TIME_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_time_changed). For details, see [User Preference](../../../internationalization/i18n-user-preferences.md#how-to-develop).
+Checks whether the 24-hour clock is used. To listen for system time format changes, enable listening for [COMMON_EVENT_TIME_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_time_changed) . For details, see [User Preference](../../../internationalization/i18n-user-preferences.md#how-to-develop).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -652,7 +679,9 @@ static isSuggested(language: string, region?: string): boolean
 
 Checks whether a language is a suggested language in the specified region. It can be used for region-based language recommendation or language-based region recommendation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -677,8 +706,8 @@ Checks whether a language is a suggested language in the specified region. It ca
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -703,7 +732,9 @@ static setAppPreferredLanguage(language: string): void
 
 Sets the preferred language of the application. Resources are loaded in the preferred language when the application is launched. If the preferred language is set to **default**, the application's language will be the same as the system language, and the setting will take effect upon cold starting of the application.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -721,8 +752,8 @@ Sets the preferred language of the application. Resources are loaded in the pref
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 

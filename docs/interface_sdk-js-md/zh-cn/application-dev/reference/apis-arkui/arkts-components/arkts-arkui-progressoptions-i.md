@@ -6,7 +6,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
-<!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>--><!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface ProgressOptions--><!--Device-unnamed-declare interface ProgressOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,11 +18,7 @@
 style?: ProgressStyle
 ```
 
-指定进度条样式。
-
-从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md#ProgressType)替代。
-
-默认值：ProgressStyle.Linear
+指定进度条样式。 从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md#ProgressType)替代。 默认值：ProgressStyle.Linear
 
 **类型：** [ProgressStyle](arkts-arkui-progressstyle-e.md)
 
@@ -42,17 +40,15 @@ style?: ProgressStyle
 total?: number
 ```
 
-指定进度总长。设置小于0的数值时置为100。
-
-默认值：100
-
-取值范围：(0, +∞)。
+指定进度总长。设置小于0的数值时置为100。 默认值：100 取值范围：(0, +∞)。
 
 **类型：** number
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,18 +64,15 @@ total?: number
 type?: Type
 ```
 
-指定进度条类型。
-
-默认值：ProgressType.Linear
-
-**说明：** 不同的type需分别对应相应的[style](ProgressAttribute#style)属性设置，详细映射关系参考
-[ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。
+指定进度条类型。 默认值：ProgressType.Linear **说明：** 不同的type需分别对应相应的style属性设置，详细映射关系参考 [ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。
 
 **类型：** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -95,17 +88,15 @@ type?: Type
 value: number
 ```
 
-指定当前进度值。
-
-默认值：0
-
-取值范围：[0, total]，设置小于0的数值时置为0，设置大于total的数值时置为total，设置非法值时按默认值处理。
+指定当前进度值。 默认值：0 取值范围：[0, total]，设置小于0的数值时置为0，设置大于total的数值时置为total，设置非法值时按默认值处理。
 
 **类型：** number
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

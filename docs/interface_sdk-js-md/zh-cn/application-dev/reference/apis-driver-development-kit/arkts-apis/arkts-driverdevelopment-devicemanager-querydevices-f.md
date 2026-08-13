@@ -8,9 +8,11 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 获取接入主设备的外部设备列表。如果没有设备接入，那么将会返回一个空的列表。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -22,7 +24,7 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| busType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#BusType)约定的设备总线类型，不填则查找所有类型设备。 |
+| busType | int | 否 | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#BusType)约定的设备总线类型，不填则查找所有类型设备。 |
 
 **返回值：**
 
@@ -34,8 +36,8 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [22900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception or busType parameter error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception or busType parameter error. |
 
 ## 示例
 

@@ -2,7 +2,9 @@
 
 Indicates the lock states.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-export enum LockState--><!--Device-sim-export enum LockState-End-->
 
@@ -18,7 +20,9 @@ LOCK_OFF = 0
 
 Indicates that the lock state card is in the &lt;b&gt;off&lt;/b&gt; state.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LockState-LOCK_OFF = 0--><!--Device-LockState-LOCK_OFF = 0-End-->
 
@@ -34,7 +38,9 @@ LOCK_ON = 1
 
 Indicates that the lock state card is in the &lt;b&gt;on&lt;/b&gt; state.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LockState-LOCK_ON = 1--><!--Device-LockState-LOCK_ON = 1-End-->
 

@@ -12,9 +12,11 @@ import { systemSoundManager } from '@kit.AudioKit';
 function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 ```
 
-Creates a SystemSoundPlayer instance. This function uses a promise to return the result.This player can be used to play some system sounds for media or camera actions.
+Creates a SystemSoundPlayer instance. This function uses a promise to return the result. This player can be used to play some system sounds for media or camera actions.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
 
@@ -30,7 +32,7 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 

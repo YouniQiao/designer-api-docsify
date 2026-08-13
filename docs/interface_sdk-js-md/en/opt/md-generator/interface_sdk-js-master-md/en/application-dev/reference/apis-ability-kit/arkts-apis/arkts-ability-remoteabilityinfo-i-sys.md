@@ -1,13 +1,10 @@
 # RemoteAbilityInfo (System API)
 
-The module provides information about a remote ability, which can be obtained through  
-[distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getRemoteAbilityInfo).
+The module provides information about a remote ability, which can be obtained through [distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getRemoteAbilityInfo-(System-API)) . > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
 
@@ -25,7 +22,9 @@ Element name information of the remote ability.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAbilityInfo-readonly elementName: ElementName--><!--Device-RemoteAbilityInfo-readonly elementName: ElementName-End-->
 
@@ -43,7 +42,9 @@ Icon of the remote ability.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAbilityInfo-readonly icon: string--><!--Device-RemoteAbilityInfo-readonly icon: string-End-->
 
@@ -61,7 +62,9 @@ Label of the remote ability.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAbilityInfo-readonly label: string--><!--Device-RemoteAbilityInfo-readonly label: string-End-->
 

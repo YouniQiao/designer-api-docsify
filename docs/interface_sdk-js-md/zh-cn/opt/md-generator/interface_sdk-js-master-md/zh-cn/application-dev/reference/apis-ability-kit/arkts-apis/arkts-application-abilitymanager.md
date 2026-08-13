@@ -6,7 +6,7 @@ AbilityManager模块提供对Ability相关信息和状态信息进行获取、�
 
 **废弃版本：** 9
 
-**替代接口：** [abilityManager/abilityManager](ohos.app.ability.abilityManager/abilityManager)
+**替代接口：** [abilityManager/abilityManager](arkts-app-ability-abilitymanager.md#@ohos.app.ability.abilityManager)
 
 <!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
 
@@ -21,10 +21,10 @@ AbilityManager模块提供对Ability相关信息和状态信息进行获取、�
 
 | 名称 |
 | --- |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos-1) |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration-1) |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getAbilityRunningInfos) |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getAbilityRunningInfos) |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateConfiguration) |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateConfiguration) |
 <!--DelEnd-->
 
 <!--Del-->

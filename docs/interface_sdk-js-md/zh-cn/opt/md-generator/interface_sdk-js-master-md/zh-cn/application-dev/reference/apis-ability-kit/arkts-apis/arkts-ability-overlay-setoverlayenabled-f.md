@@ -8,7 +8,9 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 
 设置当前应用中overlay module的禁用使能状态。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -26,9 +28,9 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
 ## 示例
 
@@ -63,7 +65,9 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 
 设置当前应用中overlay特征module的禁用使能状态。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>-End-->
 
@@ -86,9 +90,9 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
 ## 示例
 

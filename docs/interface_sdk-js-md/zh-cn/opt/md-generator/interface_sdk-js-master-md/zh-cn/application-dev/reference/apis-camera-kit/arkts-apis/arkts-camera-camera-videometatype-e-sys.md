@@ -2,7 +2,9 @@
 
 Video meta type.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum VideoMetaType--><!--Device-camera-enum VideoMetaType-End-->
 
@@ -18,7 +20,9 @@ VIDEO_META_MAKER_INFO = 0
 
 Video meta type for storing maker info.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoMetaType-VIDEO_META_MAKER_INFO = 0--><!--Device-VideoMetaType-VIDEO_META_MAKER_INFO = 0-End-->
 

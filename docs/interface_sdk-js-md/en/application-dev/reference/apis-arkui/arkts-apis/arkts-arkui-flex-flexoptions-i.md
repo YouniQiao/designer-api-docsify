@@ -6,6 +6,8 @@ Describes the layout and alignment of child components within the Flex component
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface FlexOptions--><!--Device-unnamed-export declare interface FlexOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Describes the layout and alignment of child components within the Flex component
 alignContent?: FlexAlign
 ```
 
-Alignment mode of the child components in a multi-row Flex component along the cross axis.This parameter is valid only when wrap is set to Wrap or WrapReverse.
+Alignment mode of the child components in a multi-row Flex component along the cross axis. This parameter is valid only when wrap is set to Wrap or WrapReverse.
 
 **Type:** [FlexAlign](arkts-arkui-flexalign-e.md)
 
@@ -25,6 +27,8 @@ Alignment mode of the child components in a multi-row Flex component along the c
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Alignment mode of the child components in the Flex component along the cross axi
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FlexOptions-alignItems?: ItemAlign--><!--Device-FlexOptions-alignItems?: ItemAlign-End-->
@@ -69,6 +75,8 @@ Direction in which child components are arranged in the Flex component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,6 +100,8 @@ Alignment mode of the child components in the Flex component along the main axis
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FlexOptions-justifyContent?: FlexAlign--><!--Device-FlexOptions-justifyContent?: FlexAlign-End-->
@@ -114,6 +124,8 @@ Spacing between child components along the main axis or cross axis of the Flex c
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FlexOptions-space?: FlexSpaceOptions--><!--Device-FlexOptions-space?: FlexSpaceOptions-End-->
@@ -135,6 +147,8 @@ Whether the Flex component has a single line or multiple lines.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

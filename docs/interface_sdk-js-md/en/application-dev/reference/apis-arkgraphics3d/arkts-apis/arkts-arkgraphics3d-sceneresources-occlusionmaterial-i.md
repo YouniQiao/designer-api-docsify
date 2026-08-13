@@ -6,9 +6,11 @@ Occlusion material resource
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface OcclusionMaterial extends Material--><!--Device-unnamed-export interface OcclusionMaterial extends Material-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface OcclusionMaterial--><!--Device-unnamed-export interface OcclusionMaterial-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

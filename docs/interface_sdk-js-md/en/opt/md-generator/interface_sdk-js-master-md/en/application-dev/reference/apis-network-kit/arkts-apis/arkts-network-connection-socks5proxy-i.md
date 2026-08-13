@@ -4,6 +4,8 @@ Socks5 Proxy Configuration Information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-connection-export interface Socks5Proxy--><!--Device-connection-export interface Socks5Proxy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -20,11 +22,13 @@ import { connection } from '@kit.NetworkKit';
 dnsStrategy?: Socks5DnsStrategy
 ```
 
-DNS resolution strategy.Determines whether the client or the proxy server resolves the domain name.
+DNS resolution strategy. Determines whether the client or the proxy server resolves the domain name.
 
 **Type:** [Socks5DnsStrategy](arkts-network-connection-socks5dnsstrategy-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Exclusion list for proxy servers.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Socks5Proxy-exclusionList?: Array<string>--><!--Device-Socks5Proxy-exclusionList?: Array<string>-End-->
@@ -61,6 +67,8 @@ Proxy server host name.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +88,8 @@ Proxy password.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Socks5Proxy-password?: string--><!--Device-Socks5Proxy-password?: string-End-->
@@ -98,6 +108,8 @@ Host port.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Socks5Proxy-port: int--><!--Device-Socks5Proxy-port: int-End-->
@@ -115,6 +127,8 @@ Proxy username.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

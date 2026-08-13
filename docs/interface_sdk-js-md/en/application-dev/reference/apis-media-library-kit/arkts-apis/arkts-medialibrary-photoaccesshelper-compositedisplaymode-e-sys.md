@@ -4,7 +4,9 @@ Enumerates the display modes available for a composite image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum CompositeDisplayMode--><!--Device-photoAccessHelper-enum CompositeDisplayMode-End-->
 
@@ -22,7 +24,9 @@ Displays the original composite image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CompositeDisplayMode-DEFAULT = 0--><!--Device-CompositeDisplayMode-DEFAULT = 0-End-->
 
@@ -40,7 +44,9 @@ Displays the cloud-enhanced composite image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1--><!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1-End-->
 

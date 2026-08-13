@@ -8,7 +8,9 @@ function removeWatcher(watcher: Watcher): void
 
 移除事件观察者。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -26,8 +28,8 @@ function removeWatcher(watcher: Watcher): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11102001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102001-非法的观察者名称) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11102001](../errorcode-hiappevent.md#11102001-非法的观察者名称) |
 
 ## 示例
 

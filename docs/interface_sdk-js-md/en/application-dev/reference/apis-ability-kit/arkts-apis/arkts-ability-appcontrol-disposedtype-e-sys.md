@@ -2,9 +2,11 @@
 
 Enumerates the types of application disposals.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appControl-export enum DisposedType--><!--Device-appControl-export enum DisposedType-End-->
 
@@ -20,9 +22,11 @@ BLOCK_APPLICATION = 1
 
 All abilities of the application are blocked. That is, the entire application is blocked.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedType-BLOCK_APPLICATION = 1--><!--Device-DisposedType-BLOCK_APPLICATION = 1-End-->
 
@@ -38,9 +42,11 @@ BLOCK_ABILITY = 2
 
 A specific ability of the application is blocked.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedType-BLOCK_ABILITY = 2--><!--Device-DisposedType-BLOCK_ABILITY = 2-End-->
 
@@ -56,9 +62,11 @@ NON_BLOCK = 3
 
 The application is not blocked.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedType-NON_BLOCK = 3--><!--Device-DisposedType-NON_BLOCK = 3-End-->
 

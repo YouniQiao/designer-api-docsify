@@ -4,6 +4,8 @@ Enumeration of play state.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-enum PlaybackState--><!--Device-avMusicTemplate-enum PlaybackState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -14,9 +16,11 @@ Enumeration of play state.
 PLAYBACK_STATE_PREPARE = 0
 ```
 
-Preparing state. Indicates that the media file is not ready to play,the media is loading or buffering
+Preparing state. Indicates that the media file is not ready to play, the media is loading or buffering
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Playing state.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1--><!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1-End-->
@@ -50,6 +56,8 @@ Paused state.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2--><!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2-End-->
@@ -62,9 +70,11 @@ Paused state.
 PLAYBACK_STATE_STOP = 3
 ```
 
-Stopped state.The server will clear the media playback position and other information.
+Stopped state. The server will clear the media playback position and other information.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +92,8 @@ Completed state.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4--><!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4-End-->
@@ -98,6 +110,8 @@ error state.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5--><!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5-End-->
@@ -113,6 +127,8 @@ PLAYBACK_STATE_BUFFERING = 6
 Buffering state.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

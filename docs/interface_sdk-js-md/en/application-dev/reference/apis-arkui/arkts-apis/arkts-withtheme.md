@@ -1,4 +1,4 @@
-# withTheme(Defines WithTheme component.)
+# withTheme
 
 ## Summary
 

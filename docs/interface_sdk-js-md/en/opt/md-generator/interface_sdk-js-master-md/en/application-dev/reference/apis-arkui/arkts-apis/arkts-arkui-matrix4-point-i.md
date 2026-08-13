@@ -4,6 +4,8 @@ Defines the data structure of a coordinate point.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-matrix4-export interface Point--><!--Device-matrix4-export interface Point-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { matrix4 } from '@kit.ArkUI';
 x: number
 ```
 
-X-coordinate.
-
-Value range: (-∞, +∞)
+X-coordinate. Value range: (-∞, +∞)
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Value range: (-∞, +∞)
 y: number
 ```
 
-Y-coordinate.
-
-Value range: (-∞, +∞)
+Y-coordinate. Value range: (-∞, +∞)
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

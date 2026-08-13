@@ -18,5 +18,5 @@
 
 | 名称 |
 | --- |
-| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#lazycolumnlayout) |
-| [LazyColumnLayoutInstance](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#lazycolumnlayoutinstance) |
+| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#LazyColumnLayout) |
+| [LazyColumnLayoutInstance](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#LazyColumnLayoutInstance) |

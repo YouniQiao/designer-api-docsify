@@ -16,6 +16,8 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
 <!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>--><!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>-End-->
@@ -32,8 +34,8 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 | Error Code ID |
 | --- |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

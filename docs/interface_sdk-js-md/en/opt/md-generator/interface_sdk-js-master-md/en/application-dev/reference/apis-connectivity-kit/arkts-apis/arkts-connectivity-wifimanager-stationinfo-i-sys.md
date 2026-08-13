@@ -2,7 +2,9 @@
 
 Wi-Fi station information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface StationInfo--><!--Device-wifiManager-interface StationInfo-End-->
 
@@ -26,7 +28,9 @@ The IP address of the Wi-Fi client
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
 
@@ -44,7 +48,9 @@ The MAC address of the Wi-Fi client
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
 
@@ -62,7 +68,9 @@ The MAC address type of the Wi-Fi client
 
 **Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StationInfo-macAddressType?: DeviceAddressType--><!--Device-StationInfo-macAddressType?: DeviceAddressType-End-->
 
@@ -80,7 +88,9 @@ The network name of the Wi-Fi client
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
 

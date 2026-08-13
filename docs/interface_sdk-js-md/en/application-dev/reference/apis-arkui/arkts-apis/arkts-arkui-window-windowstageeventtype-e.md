@@ -2,9 +2,11 @@
 
 Enumerates the lifecycle event types of a WindowStage.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-enum WindowStageEventType--><!--Device-window-enum WindowStageEventType-End-->
 
@@ -18,9 +20,11 @@ SHOWN = 1
 
 The WindowStage is shown in the foreground, for example, when launching from the application icon, triggered whether it is the first launch or resuming from the background.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +42,11 @@ ACTIVE = 2
 
 The WindowStage gains focus, for example, the state of the application window after handling a click event, or the state after the application is launched.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,9 +64,11 @@ INACTIVE = 3
 
 The WindowStage loses focus, for example, the state of the window that was in focus when a new application is opened or another window is clicked.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,9 +86,11 @@ HIDDEN = 4
 
 The WindowStage is running in the background, for example, when the application exists after swiping up or the application window is closed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,13 +108,15 @@ RESUMED = 5
 
 The WindowStage is in the foreground and interactive, for example, when the application is open and can interact with the user.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowStageEventType-RESUMED = 5--><!--Device-WindowStageEventType-RESUMED = 5-End-->
 
@@ -118,13 +130,15 @@ PAUSED = 6
 
 The WindowStage is in the foreground but not interactive, for example, when the application is in the foreground and is entering the multitasking screen.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowStageEventType-PAUSED = 6--><!--Device-WindowStageEventType-PAUSED = 6-End-->
 

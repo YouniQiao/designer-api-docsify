@@ -4,6 +4,8 @@ Defines the construction information for **ArcSliderLayoutValueOptions**.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ArcSliderLayoutOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderLayoutOptionsConstructorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -20,15 +22,15 @@ import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSli
 position?: ArcSliderPosition
 ```
 
-Position of the arc slider on the screen.
-
-Default value: **ArcSliderPosition.RIGHT**
+Position of the arc slider on the screen. Default value: **ArcSliderPosition.RIGHT**
 
 **Type:** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **Default:** ArcSliderPosition.RIGHT
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -42,15 +44,15 @@ Default value: **ArcSliderPosition.RIGHT**
 reverse?: boolean
 ```
 
-Whether the value range of the arc slider is reversed. **false**: top-to-bottom sliding.
-
-**true** (default): bottom-to-top sliding.
+Whether the value range of the arc slider is reversed. **false**: top-to-bottom sliding. **true** (default): bottom-to-top sliding.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

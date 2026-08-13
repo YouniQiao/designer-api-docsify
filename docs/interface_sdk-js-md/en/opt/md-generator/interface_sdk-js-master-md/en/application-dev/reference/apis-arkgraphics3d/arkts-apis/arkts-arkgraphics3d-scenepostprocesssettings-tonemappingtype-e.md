@@ -2,7 +2,9 @@
 
 Enumerates the tone mapping types.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum ToneMappingType--><!--Device-unnamed-export enum ToneMappingType-End-->
 
@@ -16,7 +18,9 @@ ACES = 0
 
 Academy Color Encoding System (ACES).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToneMappingType-ACES = 0--><!--Device-ToneMappingType-ACES = 0-End-->
 
@@ -30,7 +34,9 @@ ACES_2020 = 1
 
 The tone mapping type is ACES_2020.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToneMappingType-ACES_2020 = 1--><!--Device-ToneMappingType-ACES_2020 = 1-End-->
 
@@ -44,7 +50,9 @@ FILMIC = 2
 
 The tone mapping type is FILMIC.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToneMappingType-FILMIC = 2--><!--Device-ToneMappingType-FILMIC = 2-End-->
 

@@ -2,7 +2,9 @@
 
 记录表之间通过表字段指定的关联关系。其中表a关联到表b，称a为b关联的子表，b为a关联的父表。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-interface Reference--><!--Device-relationalStore-interface Reference-End-->
 
@@ -20,7 +22,9 @@ refFields: Record<string, string>
 
 **类型：** Record&lt;string, string&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Reference-refFields: Record<string, string>--><!--Device-Reference-refFields: Record<string, string>-End-->
 
@@ -38,7 +42,9 @@ sourceTable: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Reference-sourceTable: string--><!--Device-Reference-sourceTable: string-End-->
 
@@ -56,7 +62,9 @@ targetTable: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Reference-targetTable: string--><!--Device-Reference-targetTable: string-End-->
 

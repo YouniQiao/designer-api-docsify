@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,6 +25,8 @@ accessibilityStateDescription?: string
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,6 +50,8 @@ accessibilityVisible?: boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-accessibilityVisible?: boolean--><!--Device-ElementAttributeValues-accessibilityVisible?: boolean-End-->
@@ -67,6 +73,8 @@ belongTreeId?: int
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +98,8 @@ childrenIds?: Array<long>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-childrenIds?: Array<long>--><!--Device-ElementAttributeValues-childrenIds?: Array<long>-End-->
@@ -111,6 +121,8 @@ childrenTreeId?: int
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,6 +146,8 @@ currentItem?: AccessibilityGrid
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid--><!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid-End-->
@@ -155,6 +169,8 @@ Indicates the custom actions supported by the component.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,6 +194,8 @@ isEssential?: boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-isEssential?: boolean--><!--Device-ElementAttributeValues-isEssential?: boolean-End-->
@@ -199,6 +217,8 @@ mainWindowId?: int
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,6 +242,8 @@ navDestinationId?: long
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-navDestinationId?: long--><!--Device-ElementAttributeValues-navDestinationId?: long-End-->
@@ -244,6 +266,8 @@ parentId?: long
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ElementAttributeValues-parentId?: long--><!--Device-ElementAttributeValues-parentId?: long-End-->
@@ -265,6 +289,8 @@ span?: AccessibilitySpan[]
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

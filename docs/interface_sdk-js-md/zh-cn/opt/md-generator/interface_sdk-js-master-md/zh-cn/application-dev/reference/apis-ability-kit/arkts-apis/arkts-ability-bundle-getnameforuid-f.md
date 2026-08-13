@@ -52,7 +52,7 @@ function getNameForUid(uid: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 <!--Device-bundle-function getNameForUid(uid: number): Promise<string>--><!--Device-bundle-function getNameForUid(uid: number): Promise<string>-End-->
 

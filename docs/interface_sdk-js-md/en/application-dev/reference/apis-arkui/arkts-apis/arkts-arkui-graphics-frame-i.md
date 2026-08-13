@@ -1,10 +1,12 @@
 # Frame
 
-Frame info, include the position info and size info.
+Sets or returns the layout size and position of the component.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface Frame--><!--Device-unnamed-export declare interface Frame-End-->
 
@@ -13,80 +15,96 @@ Frame info, include the position info and size info.
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
-Size value for height of the frame info.
+Component height. Unit: vp. Value range: [0, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Frame-height: double--><!--Device-Frame-height: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Frame-height: number--><!--Device-Frame-height: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
-Size value for width of the frame info.
+Component width. Unit: vp. Value range: [0, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Frame-width: double--><!--Device-Frame-width: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Frame-width: number--><!--Device-Frame-width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Position value for x-axis of the frame info.
+Horizontal position. Unit: vp. Value range: (-∞, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Frame-x: double--><!--Device-Frame-x: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Frame-x: number--><!--Device-Frame-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Position value for y-axis of the frame info.
+Vertical position. Unit: vp. Value range: (-∞, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Frame-y: double--><!--Device-Frame-y: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Frame-y: number--><!--Device-Frame-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

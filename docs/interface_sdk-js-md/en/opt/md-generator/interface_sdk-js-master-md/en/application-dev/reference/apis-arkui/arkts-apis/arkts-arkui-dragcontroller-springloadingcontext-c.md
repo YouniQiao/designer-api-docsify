@@ -4,6 +4,8 @@ Defines callback context information passed to applications during hover detecti
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-dragController-class SpringLoadingContext--><!--Device-dragController-class SpringLoadingContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Terminates subsequent hover detection. This API does not trigger CANCEL state no
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -38,10 +42,11 @@ Terminates subsequent hover detection. This API does not trigger CANCEL state no
 updateConfiguration(config: DragSpringLoadingConfiguration): void
 ```
 
-Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN.Applications typically set the hover detection configuration when binding  
-[onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#onDragSpringLoading) or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
+Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN. Applications typically set the hover detection configuration when binding [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#onDragSpringLoading) or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,13 +68,13 @@ Updates the hover detection configuration. This API is effective only when the h
 currentConfig?: DragSpringLoadingConfiguration
 ```
 
-Configuration information in the current callback. Omitted in CANCEL state; uses the  
-[DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md#DragSpringLoadingConfiguration) default value when  
-**undefined**.
+Configuration information in the current callback. Omitted in CANCEL state; uses the [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md#DragSpringLoadingConfiguration) default value when **undefined**.
 
 **Type:** DragSpringLoadingConfiguration
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,6 +96,8 @@ Callback notification sequence number in the current hover detection cycle. The 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -105,12 +112,13 @@ Callback notification sequence number in the current hover detection cycle. The 
 dragInfos?: SpringLoadingDragInfos
 ```
 
-Drag information. Omitted in CANCEL state; uses the  
-[SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md#SpringLoadingDragInfos) default value when **undefined**.
+Drag information. Omitted in CANCEL state; uses the [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md#SpringLoadingDragInfos) default value when **undefined**.
 
 **Type:** [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,6 +139,8 @@ Current state of hover detection.
 **Type:** [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

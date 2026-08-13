@@ -12,11 +12,13 @@ import { errorManager } from '@kit.AbilityKit';
 function onFreeze(observer: FreezeObserver): void
 ```
 
-Register an observer for freeze event.This function can only be called from main thread.Please note that each process only supports registering one observer.If you register multiple times, the later one will overwrite the previous one.
+Register an observer for freeze event. This function can only be called from main thread. Please note that each process only supports registering one observer. If you register multiple times, the later one will overwrite the previous one.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-errorManager-function onFreeze(observer: FreezeObserver): void--><!--Device-errorManager-function onFreeze(observer: FreezeObserver): void-End-->
 
@@ -32,6 +34,6 @@ Register an observer for freeze event.This function can only be called from main
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
 

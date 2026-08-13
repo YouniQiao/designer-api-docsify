@@ -2,9 +2,11 @@
 
 Represents the size of the input method panel.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface PanelRect--><!--Device-inputMethodEngine-export interface PanelRect-End-->
 
@@ -26,9 +28,11 @@ Size of the input method panel window in landscape mode.
 
 **Type:** window.Rect
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PanelRect-landscapeRect: window.Rect--><!--Device-PanelRect-landscapeRect: window.Rect-End-->
 
@@ -44,9 +48,11 @@ Size of the input method panel window in portrait mode.
 
 **Type:** window.Rect
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PanelRect-portraitRect: window.Rect--><!--Device-PanelRect-portraitRect: window.Rect-End-->
 

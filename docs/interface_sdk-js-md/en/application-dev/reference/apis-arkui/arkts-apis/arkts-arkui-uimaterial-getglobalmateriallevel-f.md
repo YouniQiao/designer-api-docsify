@@ -9,18 +9,22 @@ import { uiMaterial } from '@kit.ArkUI';
 ## getGlobalMaterialLevel
 
 ```TypeScript
-export function getGlobalMaterialLevel(): MaterialLevel
+function getGlobalMaterialLevel(): MaterialLevel
 ```
 
 Obtains the global material level, which is related to the device computing power. This configuration item is defined by the device and cannot be modified.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiMaterial-export function getGlobalMaterialLevel(): MaterialLevel--><!--Device-uiMaterial-export function getGlobalMaterialLevel(): MaterialLevel-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-uiMaterial-function getGlobalMaterialLevel(): MaterialLevel--><!--Device-uiMaterial-function getGlobalMaterialLevel(): MaterialLevel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

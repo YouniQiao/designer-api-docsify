@@ -18,6 +18,8 @@ Synchronizes the data of a file. This API returns the result synchronously.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function fdatasyncSync(fd: number): void--><!--Device-unnamed-declare function fdatasyncSync(fd: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

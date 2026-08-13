@@ -14,9 +14,11 @@ function stopRtt(callId: int, type: ImsRttMode): Promise<void>
 
 Stop rtt.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -30,7 +32,7 @@ Stop rtt.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
+| callId | int | Yes | Indicates the identifier of the call. |
 | type | [ImsRttMode](arkts-telephony-call-imsrttmode-e-sys.md) | Yes | Indicates the type of operation. |
 
 **Return value:**
@@ -47,6 +49,6 @@ Stop rtt.
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error. |
 | 8400999 | Unknown error code. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 

@@ -15,7 +15,7 @@
 | [CancelButtonOptions](arkts-arkui-search-cancelbuttonoptions-i.md) | Defines the CancelButton options |
 | [IconOptions](arkts-arkui-search-iconoptions-i.md) | Defines the icon options |
 | [SearchButtonOptions](arkts-arkui-search-searchbuttonoptions-i.md) | Defines the SearchButton options |
-| [SearchOptions](arkts-arkui-search-searchoptions-i.md) | Options used to construct the search.  Anonymous Object Rectification. |
+| [SearchOptions](arkts-arkui-search-searchoptions-i.md) | Options used to construct the search. Anonymous Object Rectification. |
 
 ### Enums
 

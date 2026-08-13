@@ -6,6 +6,8 @@ Defines the option in int unit of grid-container component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface GridRowColumnOption--><!--Device-unnamed-export declare interface GridRowColumnOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Grid Row Column Option lg, select lg column num based on gridRow current breakpo
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Grid Row Column Option md
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridRowColumnOption-md?: int--><!--Device-GridRowColumnOption-md?: int-End-->
@@ -63,6 +69,8 @@ Grid Row Column Option sm, select sm column num based on gridRow current breakpo
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ Grid Row Column Option xl, select xl column num based on gridRow current breakpo
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridRowColumnOption-xl?: int--><!--Device-GridRowColumnOption-xl?: int-End-->
@@ -104,6 +114,8 @@ Grid Row Column Option xs, select xs column num based on gridRow current breakpo
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridRowColumnOption-xs?: int--><!--Device-GridRowColumnOption-xs?: int-End-->
@@ -123,6 +135,8 @@ Grid Row Column Option xxl, select xxl column num based on gridRow current break
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

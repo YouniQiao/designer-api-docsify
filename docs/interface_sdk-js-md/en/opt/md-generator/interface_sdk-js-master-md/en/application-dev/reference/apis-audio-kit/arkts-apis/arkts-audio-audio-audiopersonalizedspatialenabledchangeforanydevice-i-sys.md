@@ -4,6 +4,8 @@ This interface is used to notify the listener of personalized spatialization ena
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice--><!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -28,6 +30,8 @@ Audio device description.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-deviceDescriptor: AudioDeviceDescriptor--><!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-deviceDescriptor: AudioDeviceDescriptor-End-->
@@ -47,6 +51,8 @@ Personalized spatialization enable state.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

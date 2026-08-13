@@ -2,7 +2,9 @@
 
 FA模型的使用信息属性集合。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-interface BundleEvents--><!--Device-usageStatistics-interface BundleEvents-End-->
 
@@ -20,7 +22,9 @@ appGroup?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-appGroup?: int--><!--Device-BundleEvents-appGroup?: int-End-->
 
@@ -38,7 +42,9 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-bundleName?: string--><!--Device-BundleEvents-bundleName?: string-End-->
 
@@ -56,7 +62,9 @@ eventId?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-eventId?: int--><!--Device-BundleEvents-eventId?: int-End-->
 
@@ -74,7 +82,9 @@ eventOccurredTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-eventOccurredTime?: long--><!--Device-BundleEvents-eventOccurredTime?: long-End-->
 
@@ -92,7 +102,9 @@ indexOfLink?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-indexOfLink?: string--><!--Device-BundleEvents-indexOfLink?: string-End-->
 
@@ -110,7 +122,9 @@ nameOfClass?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-nameOfClass?: string--><!--Device-BundleEvents-nameOfClass?: string-End-->
 

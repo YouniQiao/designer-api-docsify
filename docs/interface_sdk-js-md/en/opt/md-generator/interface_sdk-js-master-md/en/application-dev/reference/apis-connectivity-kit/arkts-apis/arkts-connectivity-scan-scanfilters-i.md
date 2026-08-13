@@ -4,6 +4,8 @@ Describes the scan filters.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-scan-interface ScanFilters--><!--Device-scan-interface ScanFilters-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -20,11 +22,13 @@ import { scan } from '@kit.ConnectivityKit';
 address?: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Indicates the device name.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScanFilters-deviceName?: string--><!--Device-ScanFilters-deviceName?: string-End-->
@@ -62,6 +68,8 @@ Indicates the manufacturer data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScanFilters-manufacturerData?: ArrayBuffer--><!--Device-ScanFilters-manufacturerData?: ArrayBuffer-End-->
@@ -74,11 +82,13 @@ Indicates the manufacturer data.
 manufacturerDataMask?: ArrayBuffer
 ```
 
-Indicates the manufacturer data mask.If a manufacturer data mask is set in the scan filter, its length must match the manufacturer data length.
+Indicates the manufacturer data mask. If a manufacturer data mask is set in the scan filter, its length must match the manufacturer data length.
 
 **Type:** ArrayBuffer
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ Indicates the manufacturer ID.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScanFilters-manufacturerId?: int--><!--Device-ScanFilters-manufacturerId?: int-End-->
@@ -110,11 +122,13 @@ Indicates the manufacturer ID.
 rssi?: number
 ```
 
-Indicates the RSSI.Unit: dBm, The value must be an integer within [-128,127].
+Indicates the RSSI. Unit: dBm, The value must be an integer within [-128,127].
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

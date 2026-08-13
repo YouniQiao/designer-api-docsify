@@ -1,7 +1,6 @@
 # USBEndpoint
 
-Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  
-[USBInterface](arkts-basicservices-usb-usbinterface-i.md#USBInterface).
+Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usb-usbinterface-i.md#USBInterface).
 
 **Since:** 8
 

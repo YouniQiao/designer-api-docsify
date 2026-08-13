@@ -1,10 +1,12 @@
 # Callback
 
-Defines a common callback used to return the processing result when an asynchronous operation is successful.You need to define the callback type.
+Defines a common callback used to return the processing result when an asynchronous operation is successful. You need to define the callback type.
 
 **Since:** 6
 
-<!--Device-unnamed-export interface Callback<T>--><!--Device-unnamed-export interface Callback<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Callback--><!--Device-unnamed-export interface Callback-End-->
 
 **System capability:** SystemCapability.Base
 
@@ -14,13 +16,15 @@ Defines a common callback used to return the processing result when an asynchron
 import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (data: T): void
 ```
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

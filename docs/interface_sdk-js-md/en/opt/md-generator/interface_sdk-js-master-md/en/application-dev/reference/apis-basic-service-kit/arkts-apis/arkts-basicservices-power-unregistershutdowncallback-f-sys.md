@@ -16,6 +16,8 @@ Unregisters the callback to be invoked when the device is shut down or rebooted.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.REBOOT
 
 <!--Device-power-function unregisterShutdownCallback(callback?: Callback<void>): void--><!--Device-power-function unregisterShutdownCallback(callback?: Callback<void>): void-End-->
@@ -34,9 +36,9 @@ Unregisters the callback to be invoked when the device is shut down or rebooted.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [4900101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
 
 ## Examples
 

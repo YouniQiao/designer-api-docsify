@@ -1,14 +1,14 @@
 # LiveFormExtensionContext
 
-**LiveFormExtensionContext**, inherited from   
-[ExtensionContext](./application/ExtensionContext:ExtensionContext), is the context of   
-[LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility).
+**LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext), is the context of [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility).
 
-**Inheritance/Implementation:** LiveFormExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** LiveFormExtensionContext extends ExtensionContext
 
-**Since:** 20
+**Since:** 23
 
-<!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LiveFormExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,9 +18,11 @@
 public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): number
 ```
 
-Connect a service extension ability.The destination of the connection must be a service extension.You must implement the [ConnectOptions](ConnectOptions) interface to obtain the proxy of the target service extension when the Service extension is connected.
+Connect a service extension ability.The destination of the connection must be a service extension. You must implement the ConnectOptions interface to obtain the proxy of the target service extension when the Service extension is connected.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +49,10 @@ Connect a service extension ability.The destination of the connection must be a 
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16501011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501011-api-not-supported) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## disconnectServiceExtensionAbility
 
@@ -60,7 +62,9 @@ public disconnectServiceExtensionAbility(connectionId: number): Promise<void>
 
 Disconnect an ability to a service extension, in contrast to [connectServiceExtensionAbility](#connectServiceExtensionAbility).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +90,6 @@ Disconnect an ability to a service extension, in contrast to [connectServiceExte
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16501011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501011-api-not-supported) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

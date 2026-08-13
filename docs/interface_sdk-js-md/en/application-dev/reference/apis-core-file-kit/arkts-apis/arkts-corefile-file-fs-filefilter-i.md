@@ -1,10 +1,12 @@
 # FileFilter
 
-Describes a file name filter, which can be used to customize file name filtering rules.
+Defines the file name filtering interface used by listFileExt().
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface FileFilter--><!--Device-unnamed-export interface FileFilter-End-->
 
@@ -22,16 +24,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 filter(name: string): boolean
 ```
 
-Filters files of the [listFileExt](arkts-corefile-fileio-listfileext-f.md#listFileExt) or [listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listFileExtSync) API and determines whether a specified file name should be included in the returned file list.
-
-> **NOTE：**
-> 
-> This function is frequently called. Do not perform time-consuming operations, such as file I/O operations and
-> network requests.
+Filtering function, which determines whether the specified file name should be included in the file list. Note: This function is frequently invoked. Avoid time-consuming operations, such as file I/O and network requests.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +42,11 @@ Filters files of the [listFileExt](arkts-corefile-fileio-listfileext-f.md#listFi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name or relative path of the file to be filtered. In recursive mode, the value is a relative file path, which starts with a slash (/). |
+| name | string | Yes | Name of the file to be filtered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the file is included in the returned file list. The value **true** indicates the file is included, and the value **false** indicates the opposite. |
+| boolean | Returns true if the file should be included, false otherwise. |
 

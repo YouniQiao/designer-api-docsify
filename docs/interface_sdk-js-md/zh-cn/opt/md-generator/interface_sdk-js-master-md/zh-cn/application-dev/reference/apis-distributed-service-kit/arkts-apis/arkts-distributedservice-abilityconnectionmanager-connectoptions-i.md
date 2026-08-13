@@ -2,7 +2,9 @@
 
 应用连接时所需的连接选项。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityConnectionManager-interface ConnectOptions--><!--Device-abilityConnectionManager-interface ConnectOptions-End-->
 
@@ -18,7 +20,9 @@ true代表需要传输数据，false代表不需要传输数据。
 
 **类型：** boolean
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ parameters?: Record<string, string>
 
 **类型：** Record&lt;string, string&gt;
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,7 +60,9 @@ startOptions?: StartOptionParams
 
 **类型：** [StartOptionParams](arkts-distributedservice-abilityconnectionmanager-startoptionparams-e.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

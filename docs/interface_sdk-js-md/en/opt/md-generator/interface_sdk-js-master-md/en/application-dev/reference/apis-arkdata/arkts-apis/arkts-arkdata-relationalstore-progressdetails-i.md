@@ -2,7 +2,9 @@
 
 Describes detail of the cloud sync {@code Progress}.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface ProgressDetails--><!--Device-relationalStore-interface ProgressDetails-End-->
 
@@ -24,7 +26,9 @@ Describes the code of data sync progress.
 
 **Type:** [ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProgressDetails-code: ProgressCode--><!--Device-ProgressDetails-code: ProgressCode-End-->
 
@@ -36,13 +40,13 @@ Describes the code of data sync progress.
 details: Record<string, TableDetails>
 ```
 
-Statistics of each table.
+Statistics of each table. The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
 
-The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-ProgressDetails-details: Record<string, TableDetails>--><!--Device-ProgressDetails-details: Record<string, TableDetails>-End-->
 
@@ -60,6 +64,8 @@ Indicates the code message.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProgressDetails-message?: string--><!--Device-ProgressDetails-message?: string-End-->
@@ -76,7 +82,9 @@ Describes the status of data sync progress.
 
 **Type:** Progress
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProgressDetails-schedule: Progress--><!--Device-ProgressDetails-schedule: Progress-End-->
 

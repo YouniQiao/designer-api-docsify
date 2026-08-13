@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 <!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
@@ -21,6 +23,8 @@ constructor()
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -49,6 +53,8 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
@@ -60,7 +66,7 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [NumberOptions](../../apis-default/arkts-apis/arkts-intl-numberoptions-i.md) | 否 | 创建数字格式化对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
+| options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | 否 | 创建数字格式化对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
 ## 示例
 
@@ -82,6 +88,8 @@ format(num: double): string
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -130,6 +138,8 @@ formatRange(startRange: double, endRange: double): string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
@@ -170,6 +180,8 @@ resolvedOptions(): NumberOptions
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
@@ -180,7 +192,7 @@ resolvedOptions(): NumberOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [NumberOptions](../../apis-default/arkts-apis/arkts-intl-numberoptions-i.md) | 创建数字格式化对象时设置的配置项。 |
+| [NumberOptions](arkts-localization-intl-numberoptions-i.md) | 创建数字格式化对象时设置的配置项。 |
 
 ## 示例
 

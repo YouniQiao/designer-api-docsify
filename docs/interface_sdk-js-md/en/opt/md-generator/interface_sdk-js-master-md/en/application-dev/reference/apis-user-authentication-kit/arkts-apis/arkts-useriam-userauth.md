@@ -1,17 +1,10 @@
-# @ohos.userIAM.userAuth(User Authentication)
+# @ohos.userIAM.userAuth
 
-The **userAuth** module is the core module for user authentication in OpenHarmony. It provides authentication capabilities in scenarios such as device unlocking, payment verification, and application login.
+The **userAuth** module is the core module for user authentication in OpenHarmony. It provides authentication capabilities in scenarios such as device unlocking, payment verification, and application login. This module supports multiple biometric authentication methods (face, fingerprint) and password authentication (PIN), and provides various security trust levels. Since API version 26.0.0, the companion device authentication mode is added. This module applies to the following scenarios: - Device unlocking authentication. - Financial payment verification. - Application login protection. - Confirmation for sensitive operations.
 
-This module supports multiple biometric authentication methods (face, fingerprint) and password authentication (PIN),and provides various security trust levels. Since API version 26.0.0, the companion device authentication mode is added.
+**Since:** 23
 
-This module applies to the following scenarios:
-
-- Device unlocking authentication.  
-- Financial payment verification.  
-- Application login protection.  
-- Confirmation for sensitive operations.
-
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace userAuth--><!--Device-unnamed-declare namespace userAuth-End-->
 
@@ -29,23 +22,23 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance) |
-| [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getauthlockstate) |
-| [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md#getauthenticator) |
-| [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus) |
-| [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getenrolledstate) |
-| [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance) |
+| [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getAuthInstance) |
+| [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getAuthLockState) |
+| [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md#getAuthenticator) |
+| [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getAvailableStatus) |
+| [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getEnrolledState) |
+| [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getUserAuthInstance) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getUserAuthWidgetMgr](arkts-userauthentication-userauth-getuserauthwidgetmgr-f-sys.md#getuserauthwidgetmgr) |
-| [queryReusableAuthResult](arkts-userauthentication-userauth-queryreusableauthresult-f-sys.md#queryreusableauthresult) |
-| [registerRemoteAuthCallback](arkts-userauthentication-userauth-registerremoteauthcallback-f-sys.md#registerremoteauthcallback) |
-| [sendNotice](arkts-userauthentication-userauth-sendnotice-f-sys.md#sendnotice) |
-| [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterremoteauthcallback) |
+| [getUserAuthWidgetMgr](arkts-userauthentication-userauth-getuserauthwidgetmgr-f-sys.md#getUserAuthWidgetMgr-(System-API)) |
+| [queryReusableAuthResult](arkts-userauthentication-userauth-queryreusableauthresult-f-sys.md#queryReusableAuthResult-(System-API)) |
+| [registerRemoteAuthCallback](arkts-userauthentication-userauth-registerremoteauthcallback-f-sys.md#registerRemoteAuthCallback-(System-API)) |
+| [sendNotice](arkts-userauthentication-userauth-sendnotice-f-sys.md#sendNotice-(System-API)) |
+| [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterRemoteAuthCallback-(System-API)) |
 <!--DelEnd-->
 
 ### Classes
@@ -116,6 +109,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [AuthCallbackOnResultFunc](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md) |
 | [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) |
 | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) |
 | [AuthType](arkts-userauthentication-userauth-authtype-t.md) |
@@ -127,6 +121,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [AuthWidgetCallbackSendCommandFunc](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md) |
 | [ResultCallback](arkts-userauthentication-userauth-resultcallback-t-sys.md) |
 | [WidgetParamCallback](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md) |
 <!--DelEnd-->
@@ -135,5 +130,5 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#max_allowable_reuse_duration) |
-| [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanent_lockout_duration) |
+| [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#MAX_ALLOWABLE_REUSE_DURATION) |
+| [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#PERMANENT_LOCKOUT_DURATION) |

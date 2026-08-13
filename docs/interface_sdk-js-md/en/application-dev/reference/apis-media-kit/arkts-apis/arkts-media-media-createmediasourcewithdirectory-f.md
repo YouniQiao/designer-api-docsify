@@ -16,7 +16,9 @@ Create a MediaSource object from the given directory.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,5 +42,5 @@ Create a MediaSource object from the given directory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5411007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411007-no-resource-available) | The directory specified by the path parameter does not exist or inaccessible. |
+| [5411007](../errorcode-media.md#5411007-no-resource-available) | The directory specified by the path parameter does not exist or inaccessible. |
 

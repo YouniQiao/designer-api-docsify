@@ -1,16 +1,6 @@
 # Path2D
 
-路径对象，支持通过对象的接口进行路径的描述，并通过Canvas的stroke接口或者fill接口进行绘制。
-
-> **说明：**
-> 
-> Path2D对象不支持重置已设置的路径，如需新路径可重新创建一个空的Path2D对象。
-> 
-> Path2D对象的方法无法对
-> [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)
-> 和
-> [OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)
-> 对象中设置的路径生效。
+路径对象，支持通过对象的接口进行路径的描述，并通过Canvas的stroke接口或者fill接口进行绘制。 > **说明：** > > Path2D对象不支持重置已设置的路径，如需新路径可重新创建一个空的Path2D对象。 > > Path2D对象的方法无法对 > [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md) > 和 > [OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md) > 对象中设置的路径生效。
 
 **继承/实现关系：** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
@@ -18,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-<!--Device-unnamed-declare class Path2D extends CanvasPath--><!--Device-unnamed-declare class Path2D extends CanvasPath-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class Path2D--><!--Device-unnamed-declare class Path2D-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +25,8 @@ addPath(path: Path2D, transform?: Matrix2D): void
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -61,6 +55,8 @@ constructor()
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -81,6 +77,8 @@ constructor(unit: LengthMetricsUnit)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -95,7 +93,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unit | LengthMetricsUnit | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](./canvas) 。 &lt;br&gt;默认值：DEFAULT &lt;br&gt;异常值NaN和Infinity按默认值处理。 |
+| unit | LengthMetricsUnit | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同CanvasRenderingContext2D 。 &lt;br&gt;默认值：DEFAULT &lt;br&gt;异常值NaN和Infinity按默认值处理。 |
 
 ## constructor
 
@@ -108,6 +106,8 @@ constructor(path: Path2D)
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -134,6 +134,8 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,6 +166,8 @@ constructor(d: string)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -189,6 +193,8 @@ constructor(description: string, unit: LengthMetricsUnit)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

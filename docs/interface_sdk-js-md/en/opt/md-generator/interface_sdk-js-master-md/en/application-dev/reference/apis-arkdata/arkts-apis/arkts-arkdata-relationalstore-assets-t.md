@@ -6,7 +6,9 @@ type Assets = Asset[]
 
 Indicates several assets in one column
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-type Assets = Asset[]--><!--Device-relationalStore-type Assets = Asset[]-End-->
 

@@ -2,7 +2,9 @@
 
 Describes the parameters used for creating a child window.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface SubWindowOptions--><!--Device-window-interface SubWindowOptions-End-->
 
@@ -24,7 +26,9 @@ Whether the child window is topmost. **true** if topmost, **false** otherwise. T
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubWindowOptions-isTopmost?: boolean--><!--Device-SubWindowOptions-isTopmost?: boolean-End-->
 

@@ -16,6 +16,8 @@ Obtains an extended attribute of a file or directory. This API uses a promise to
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function getxattr(path: string, key: string): Promise<string>--><!--Device-unnamed-declare function getxattr(path: string, key: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -37,7 +39,7 @@ Obtains an extended attribute of a file or directory. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900037 |
 | 13900038 |
 | 13900007 |

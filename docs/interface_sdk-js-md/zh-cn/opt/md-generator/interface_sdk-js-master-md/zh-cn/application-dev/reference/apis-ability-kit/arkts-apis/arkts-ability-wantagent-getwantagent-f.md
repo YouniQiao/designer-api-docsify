@@ -8,7 +8,9 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 创建WantAgent，使用callback异步回调。创建成功返回WantAgent对象，创建失败返回空值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -27,9 +29,9 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-无效wantagent对象) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000007](../errorcode-ability.md#16000007-服务未响应) |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
 
 ## 示例
 
@@ -94,7 +96,9 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 创建WantAgent。使用Promise异步回调。创建成功返回WantAgent对象，创建失败返回空值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -118,9 +122,9 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-无效wantagent对象) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000007](../errorcode-ability.md#16000007-服务未响应) |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
 
 ## 示例
 

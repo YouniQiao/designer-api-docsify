@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RichEditorChangeValue--><!--Device-unnamed-export declare interface RichEditorChangeValue-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ rangeBefore: TextRange
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ replacedImageSpans: Array<RichEditorImageSpanResult>
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorChangeValue-replacedImageSpans: Array<RichEditorImageSpanResult>--><!--Device-RichEditorChangeValue-replacedImageSpans: Array<RichEditorImageSpanResult>-End-->
@@ -64,6 +70,8 @@ replacedSpans: Array<RichEditorTextSpanResult>
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorChangeValue-replacedSpans: Array<RichEditorTextSpanResult>--><!--Device-RichEditorChangeValue-replacedSpans: Array<RichEditorTextSpanResult>-End-->
@@ -83,6 +91,8 @@ replacedSymbolSpans: Array<RichEditorTextSpanResult>
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

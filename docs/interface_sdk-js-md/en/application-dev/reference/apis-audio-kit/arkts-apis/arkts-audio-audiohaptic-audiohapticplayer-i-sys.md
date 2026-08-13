@@ -1,11 +1,12 @@
 # AudioHapticPlayer
 
-Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use   
-[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
@@ -23,11 +24,13 @@ import { audioHaptic } from '@kit.AudioKit';
 enableHapticsInSilentMode(enable: boolean): void
 ```
 
-Enable haptics when the ringer mode is silent mode.This function should be called before player start or after stop, and before release.
+Enable haptics when the ringer mode is silent mode. This function should be called before player start or after stop, and before release.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void--><!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void-End-->
 
@@ -45,8 +48,8 @@ Enable haptics when the ringer mode is silent mode.This function should be calle
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## isHapticsIntensityAdjustmentSupported
 
@@ -56,9 +59,11 @@ isHapticsIntensityAdjustmentSupported(): boolean
 
 Check whether the device supports haptics intensity adjustment.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean-End-->
 
@@ -76,7 +81,7 @@ Check whether the device supports haptics intensity adjustment.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## isHapticsRampSupported
 
@@ -86,9 +91,11 @@ isHapticsRampSupported(): boolean
 
 Check whether the device supports haptics intensity ramp effect.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean-End-->
 
@@ -106,25 +113,21 @@ Check whether the device supports haptics intensity ramp effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## setHapticsIntensity
 
-ArkTS-Dyn:
-```TypeScript
-setHapticsIntensity(intensity: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setHapticsIntensity(intensity: double): Promise<void>
 ```
 
-Set haptics intensity for this player. This method uses a promise to return the result.This function should be called before player release, and can only set once for each starting process.
+Set haptics intensity for this player. This method uses a promise to return the result. This function should be called before player release, and can only set once for each starting process.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>-End-->
 
@@ -136,7 +139,7 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Target Haptics intensity value. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
+| intensity | double | Yes | Target Haptics intensity value. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
 
 **Return value:**
 
@@ -148,28 +151,24 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Function is not supported in current device. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Function is not supported in current device. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 
 ## setHapticsRamp
 
-ArkTS-Dyn:
-```TypeScript
-setHapticsRamp(duration: number, startIntensity: number, endIntensity: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>
 ```
 
-Set haptics intensity ramp effect for this player. This method uses a promise to return the result.This function should be called before player start or after stop, and before release.
+Set haptics intensity ramp effect for this player. This method uses a promise to return the result. This function should be called before player start or after stop, and before release.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>-End-->
 
@@ -181,9 +180,9 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ramp duration to set, unit is milliseconds. The value should be an integer, and not less than 100. |
-| startIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Starting intensity for Haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
-| endIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | End intensity for haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
+| duration | int | Yes | ramp duration to set, unit is milliseconds. The value should be an integer, and not less than 100. |
+| startIntensity | double | Yes | Starting intensity for Haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
+| endIntensity | double | Yes | End intensity for haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
 
 **Return value:**
 
@@ -195,8 +194,8 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Function is not supported in current device. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Function is not supported in current device. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 

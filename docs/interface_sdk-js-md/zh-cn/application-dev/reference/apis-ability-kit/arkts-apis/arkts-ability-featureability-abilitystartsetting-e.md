@@ -1,12 +1,12 @@
 # AbilityStartSetting
 
-表示当前Ability对应的窗口属性，abilityStartSetting属性是一个定义为[key: string]: any的对象，key对应设定类型为：AbilityStartSetting枚举类型，value对应设定类型为：AbilityWindowConfiguration枚举类型。
-
-使用时通过featureAbility.AbilityStartSetting获取。
+表示当前Ability对应的窗口属性，abilityStartSetting属性是一个定义为[key: string]: any的对象，key对应设定类型为：AbilityStartSetting枚举类型，value对应设定类型为 ：AbilityWindowConfiguration枚举类型。 使用时通过featureAbility.AbilityStartSetting获取。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-featureAbility-export enum AbilityStartSetting--><!--Device-featureAbility-export enum AbilityStartSetting-End-->
 
@@ -23,6 +23,8 @@ BOUNDS_KEY = 'abilityBounds'
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -42,6 +44,8 @@ WINDOW_MODE_KEY = 'windowMode'
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-AbilityStartSetting-WINDOW_MODE_KEY = 'windowMode'--><!--Device-AbilityStartSetting-WINDOW_MODE_KEY = 'windowMode'-End-->
@@ -59,6 +63,8 @@ DISPLAY_ID_KEY = 'displayId'
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

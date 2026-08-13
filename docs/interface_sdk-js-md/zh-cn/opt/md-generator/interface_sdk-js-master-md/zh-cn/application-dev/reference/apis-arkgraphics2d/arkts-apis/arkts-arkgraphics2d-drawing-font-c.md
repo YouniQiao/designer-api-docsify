@@ -1,14 +1,10 @@
 # Font
 
-Font类用于描述字型绘制时所使用的属性（如大小、字体、粗细、倾斜、缩放等），并支持文本测量、字形转换、路径轮廓获取、主题字体跟随等能力。
+Font类用于描述字型绘制时所使用的属性（如大小、字体、粗细、倾斜、缩放等），并支持文本测量、字形转换、路径轮廓获取、主题字体跟随等能力。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-> **说明：**
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-drawing-class Font--><!--Device-drawing-class Font-End-->
 
@@ -22,7 +18,9 @@ countText(text: string): number
 
 获取文本所表示的字符数量。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -46,7 +44,7 @@ countText(text: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## createPathForGlyph
 
@@ -58,9 +56,39 @@ createPathForGlyph(index: number): Path
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-createPathForGlyph(index: number): Path--><!--Device-Font-createPathForGlyph(index: number): Path-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) |
+
+## createPathForGlyph
+
+```TypeScript
+createPathForGlyph(index: number): Path | undefined
+```
+
+获取指定字形的路径轮廓。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-createPathForGlyph(index: int): Path | undefined--><!--Device-Font-createPathForGlyph(index: int): Path | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -84,7 +112,9 @@ enableEmbolden(isEmbolden: boolean): void
 
 使能字型粗体。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -102,7 +132,7 @@ enableEmbolden(isEmbolden: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## enableLinearMetrics
 
@@ -112,7 +142,9 @@ enableLinearMetrics(isLinearMetrics: boolean): void
 
 使能字型的线性缩放。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -130,7 +162,7 @@ enableLinearMetrics(isLinearMetrics: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## enableSubpixel
 
@@ -140,7 +172,9 @@ enableSubpixel(isSubpixel: boolean): void
 
 使能字型亚像素级别的文字绘制，显示效果平滑。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -158,7 +192,7 @@ enableSubpixel(isSubpixel: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## getBounds
 
@@ -170,9 +204,39 @@ getBounds(glyphs: Array<number>): Array<common2D.Rect>
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-getBounds(glyphs: Array<number>): Array<common2D.Rect>--><!--Device-Font-getBounds(glyphs: Array<number>): Array<common2D.Rect>-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| glyphs | Array & lt;number & gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Array & lt;common2D.Rect & gt; |
+
+## getBounds
+
+```TypeScript
+getBounds(glyphs: Array<number>): Array<common2D.Rect> | undefined
+```
+
+获取字形数组中每个字形的边界矩形。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-getBounds(glyphs: Array<int>): Array<common2D.Rect> | undefined--><!--Device-Font-getBounds(glyphs: Array<int>): Array<common2D.Rect> | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -198,9 +262,33 @@ getEdging(): FontEdging
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-getEdging(): FontEdging--><!--Device-Font-getEdging(): FontEdging-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) |
+
+## getEdging
+
+```TypeScript
+getEdging(): FontEdging | undefined
+```
+
+获取字型边缘效果。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-getEdging(): FontEdging | undefined--><!--Device-Font-getEdging(): FontEdging | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -220,9 +308,33 @@ getHinting(): FontHinting
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-getHinting(): FontHinting--><!--Device-Font-getHinting(): FontHinting-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) |
+
+## getHinting
+
+```TypeScript
+getHinting(): FontHinting | undefined
+```
+
+获取字型轮廓效果。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-getHinting(): FontHinting | undefined--><!--Device-Font-getHinting(): FontHinting | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -242,9 +354,33 @@ getMetrics(): FontMetrics
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-getMetrics(): FontMetrics--><!--Device-Font-getMetrics(): FontMetrics-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) |
+
+## getMetrics
+
+```TypeScript
+getMetrics(): FontMetrics | undefined
+```
+
+获取与字体关联的FontMetrics属性。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-getMetrics(): FontMetrics | undefined--><!--Device-Font-getMetrics(): FontMetrics | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -262,7 +398,9 @@ getScaleX(): number
 
 获取字型在x轴方向上的缩放比例。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -284,7 +422,9 @@ getSize(): number
 
 获取字型大小。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -306,7 +446,9 @@ getSkewX(): number
 
 获取字型在x轴方向上的倾斜比例。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -329,6 +471,8 @@ getTextPath(text: string, byteLength: number, x: number, y: number): Path
 获取文字的路径轮廓。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -355,7 +499,44 @@ getTextPath(text: string, byteLength: number, x: number, y: number): Path
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## getTextPath
+
+```TypeScript
+getTextPath(text: string, byteLength: number, x: number, y: number): Path | undefined
+```
+
+获取文字的路径轮廓。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-getTextPath(text: string, byteLength: int, x: double, y: double): Path | undefined--><!--Device-Font-getTextPath(text: string, byteLength: int, x: double, y: double): Path | undefined-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| byteLength | number | 是 |
+| x | number | 是 |
+| y | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## getTextPathWithFallback
 
@@ -367,9 +548,44 @@ getTextPathWithFallback(text: string, byteLength: number, x: number, y: number):
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Font-getTextPathWithFallback(text: string, byteLength: number, x: number, y: number): Path--><!--Device-Font-getTextPathWithFallback(text: string, byteLength: number, x: number, y: number): Path-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| byteLength | number | 是 |
+| x | number | 是 |
+| y | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) |
+
+## getTextPathWithFallback
+
+```TypeScript
+getTextPathWithFallback(text: string, byteLength: number, x: number, y: number): Path | undefined
+```
+
+获取文字的轮廓路径，支持字体回退能力。
+
+**起始版本：** 26.0.0
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Font-getTextPathWithFallback(text: string, byteLength: int, x: double, y: double): Path | undefined--><!--Device-Font-getTextPathWithFallback(text: string, byteLength: int, x: double, y: double): Path | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -398,9 +614,33 @@ getTypeface(): Typeface
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Font-getTypeface(): Typeface--><!--Device-Font-getTypeface(): Typeface-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) |
+
+## getTypeface
+
+```TypeScript
+getTypeface(): Typeface | undefined
+```
+
+获取字体。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-getTypeface(): Typeface | undefined--><!--Device-Font-getTypeface(): Typeface | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -419,6 +659,8 @@ getWidths(glyphs: Array<number>): Array<number>
 获取字形数组中每个字形对应的宽度。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -442,7 +684,41 @@ getWidths(glyphs: Array<number>): Array<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## getWidths
+
+```TypeScript
+getWidths(glyphs: Array<number>): Array<number> | undefined
+```
+
+获取字形数组中每个字形对应的宽度。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-getWidths(glyphs: Array<int>): Array<double> | undefined--><!--Device-Font-getWidths(glyphs: Array<int>): Array<double> | undefined-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| glyphs | Array & lt;number & gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Array & lt;number & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## isBaselineSnap
 
@@ -452,7 +728,9 @@ isBaselineSnap(): boolean
 
 当前画布矩阵轴对齐时，获取字型基线是否与像素对齐的结果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -474,7 +752,9 @@ isEmbeddedBitmaps(): boolean
 
 获取字型是否使用内嵌位图渲染的结果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -496,7 +776,9 @@ isEmbolden(): boolean
 
 获取字型是否设置了粗体效果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -518,7 +800,9 @@ isForceAutoHinting(): boolean
 
 获取字型是否自动调整轮廓以优化渲染效果的结果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -540,7 +824,9 @@ isLinearMetrics(): boolean
 
 获取字型是否可以线性缩放。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -562,7 +848,9 @@ isSubpixel(): boolean
 
 获取字型是否使用亚像素渲染。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -584,7 +872,9 @@ isThemeFontFollowed(): boolean
 
 获取字型中的字体是否跟随主题字体。默认不跟随。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -606,7 +896,9 @@ measureSingleCharacter(text: string): number
 
 测量单个字符的宽度。当前字型中的字体不支持待测量字符时，退化到使用系统字体测量字符宽度。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -630,7 +922,7 @@ measureSingleCharacter(text: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## measureSingleCharacterWithFeatures
 
@@ -640,7 +932,9 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 
 测量单个字符的宽度，字符带有字体特征。当前字型中的字体不支持待测量字符时，退化到使用系统字体测量字符宽度。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -665,7 +959,7 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 
 | 错误码ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
 ## measureText
 
@@ -673,14 +967,11 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 measureText(text: string, encoding: TextEncoding): number
 ```
 
-测量文本的宽度。
+测量文本的宽度。 > **说明：** > > 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用 > [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12)替代。
 
-> **说明：**
-> 
-> 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用
-> [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12)替代。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -705,7 +996,7 @@ measureText(text: string, encoding: TextEncoding): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setBaselineSnap
 
@@ -715,7 +1006,9 @@ setBaselineSnap(isBaselineSnap: boolean): void
 
 当前画布矩阵轴对齐时，设置字型基线是否与像素对齐。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -733,7 +1026,7 @@ setBaselineSnap(isBaselineSnap: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setEdging
 
@@ -743,7 +1036,9 @@ setEdging(edging: FontEdging): void
 
 设置字型边缘效果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -761,7 +1056,7 @@ setEdging(edging: FontEdging): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setEmbeddedBitmaps
 
@@ -771,7 +1066,9 @@ setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void
 
 设置字型是否使用字体文件中内嵌的位图字形进行渲染。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -789,7 +1086,7 @@ setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setForceAutoHinting
 
@@ -799,7 +1096,9 @@ setForceAutoHinting(isForceAutoHinting: boolean): void
 
 设置是否自动调整字型轮廓以优化渲染效果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -817,7 +1116,7 @@ setForceAutoHinting(isForceAutoHinting: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setHinting
 
@@ -827,7 +1126,9 @@ setHinting(hinting: FontHinting): void
 
 设置字型轮廓效果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -845,7 +1146,7 @@ setHinting(hinting: FontHinting): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setScaleX
 
@@ -855,7 +1156,9 @@ setScaleX(scaleX: number): void
 
 设置字型在x轴方向上的缩放比例。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -873,7 +1176,7 @@ setScaleX(scaleX: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setSize
 
@@ -883,7 +1186,9 @@ setSize(textSize: number): void
 
 设置字型大小。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -901,7 +1206,7 @@ setSize(textSize: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setSkewX
 
@@ -911,7 +1216,9 @@ setSkewX(skewX: number): void
 
 设置字型在x轴方向上的倾斜比例。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -929,7 +1236,7 @@ setSkewX(skewX: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setThemeFontFollowed
 
@@ -939,7 +1246,9 @@ setThemeFontFollowed(followed: boolean): void
 
 设置字型中的字体是否跟随主题字体。设置跟随主题字体后，若系统启用主题字体并且字型未被设置字体，字型会使用该主题字体。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -957,7 +1266,7 @@ setThemeFontFollowed(followed: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## setTypeface
 
@@ -967,7 +1276,9 @@ setTypeface(typeface: Typeface): void
 
 为字型设置字体样式（包括字体名称、粗细、斜体等属性）。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -985,7 +1296,7 @@ setTypeface(typeface: Typeface): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## textToGlyphs
 
@@ -996,6 +1307,8 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 将文本转换为字形索引。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1020,4 +1333,39 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## textToGlyphs
+
+```TypeScript
+textToGlyphs(text: string, glyphCount?: number): Array<number> | undefined
+```
+
+将文本转换为字形索引。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Font-textToGlyphs(text: string, glyphCount?: int): Array<int> | undefined--><!--Device-Font-textToGlyphs(text: string, glyphCount?: int): Array<int> | undefined-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| glyphCount | number | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Array & lt;number & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

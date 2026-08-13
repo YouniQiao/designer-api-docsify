@@ -4,9 +4,11 @@ USB device information, which is inherited from [Device](arkts-driverdevelopment
 
 **Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md#Device)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-deviceManager-interface USBDevice extends Device--><!--Device-deviceManager-interface USBDevice extends Device-End-->
+**Deprecated since:** -1
+
+<!--Device-deviceManager-interface USBDevice--><!--Device-deviceManager-interface USBDevice-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -26,7 +28,9 @@ Product ID of the USB device.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBDevice-productId: int--><!--Device-USBDevice-productId: int-End-->
 
@@ -42,7 +46,9 @@ Vendor ID of the USB device.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBDevice-vendorId: int--><!--Device-USBDevice-vendorId: int-End-->
 

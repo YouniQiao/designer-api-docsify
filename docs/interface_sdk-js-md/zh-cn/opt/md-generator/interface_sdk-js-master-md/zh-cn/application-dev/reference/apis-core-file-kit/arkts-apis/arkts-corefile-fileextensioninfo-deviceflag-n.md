@@ -21,6 +21,6 @@
 
 | 名称 |
 | --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#SUPPORTS_READ) |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#SUPPORTS_WRITE) |
 <!--DelEnd-->

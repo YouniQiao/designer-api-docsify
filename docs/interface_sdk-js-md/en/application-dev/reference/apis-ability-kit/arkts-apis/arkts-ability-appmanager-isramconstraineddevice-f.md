@@ -12,11 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function isRamConstrainedDevice(): Promise<boolean>
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses a promise to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +36,7 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -56,11 +58,13 @@ appManager.isRamConstrainedDevice().then((data) => {
 function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses an asynchronous callback to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,14 +76,14 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the check result for whether the device is RAM-constrained. Otherwise, **err** is an error object. You can perform error handling or other custom processing.&lt;br&gt;**true** is returned if the device is RAM-constrained; **false** is returned otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the check result for whether the device is RAM-constrained. Otherwise, **err** is an error object. You can perform error handling or other custom processing.&lt;br&gt;**true** is returned if the device is RAM-constrained; **false** is returned otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

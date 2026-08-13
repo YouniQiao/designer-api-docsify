@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ getArray(): Array<string | number | boolean>
 获取JavaScript代码执行结果的数组类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +38,7 @@ getArray(): Array<string | number | boolean>
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getArrayBuffer
 
@@ -45,6 +49,8 @@ getArrayBuffer(): ArrayBuffer
 获取JavaScript代码执行结果的原始二进制数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -62,7 +68,7 @@ getArrayBuffer(): ArrayBuffer
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getBoolean
 
@@ -73,6 +79,8 @@ getBoolean(): boolean
 获取JavaScript代码执行结果的布尔类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +98,7 @@ getBoolean(): boolean
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getErrorDescription
 
@@ -101,6 +109,8 @@ getErrorDescription(): string | null
 获取JS执行的异常信息，并将其序列化为字符串。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-JsMessageExt-getErrorDescription(): string | null--><!--Device-JsMessageExt-getErrorDescription(): string | null-End-->
 
@@ -122,6 +132,8 @@ getNumber(): number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-JsMessageExt-getNumber(): number--><!--Device-JsMessageExt-getNumber(): number-End-->
@@ -138,7 +150,7 @@ getNumber(): number
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getString
 
@@ -149,6 +161,8 @@ getString(): string
 获取JavaScript代码执行结果的字符串类型数据。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -166,7 +180,7 @@ getString(): string
 
 | 错误码ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getType
 
@@ -177,6 +191,8 @@ getType(): JsMessageType
 获取数据对象的类型。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

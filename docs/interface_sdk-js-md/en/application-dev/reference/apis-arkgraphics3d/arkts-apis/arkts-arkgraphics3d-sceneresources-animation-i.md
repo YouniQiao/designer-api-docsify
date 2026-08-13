@@ -4,11 +4,13 @@ Animation resource, which inherits from [SceneResource](arkts-arkgraphics3d-scen
 
 **Inheritance/Implementation:** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface Animation extends SceneResource--><!--Device-unnamed-export interface Animation extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Animation--><!--Device-unnamed-export interface Animation-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +22,11 @@ finish(): void
 
 Finishes the playing of the animation and sets its progress of 1 (finished).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-finish(): void--><!--Device-Animation-finish(): void-End-->
 
@@ -54,9 +58,11 @@ onFinished(callback: Callback<void>): void
 
 Called when the animation playback is complete or the finish API is called.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-onFinished(callback: Callback<void>): void--><!--Device-Animation-onFinished(callback: Callback<void>): void-End-->
 
@@ -66,7 +72,7 @@ Called when the animation playback is complete or the finish API is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
 
 ## Examples
 
@@ -96,9 +102,11 @@ onStarted(callback: Callback<void>): void
 
 Called when the animation starts to play. The start operation is triggered by calling start or restart.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-onStarted(callback: Callback<void>): void--><!--Device-Animation-onStarted(callback: Callback<void>): void-End-->
 
@@ -108,7 +116,7 @@ Called when the animation starts to play. The start operation is triggered by ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
 
 ## Examples
 
@@ -138,9 +146,11 @@ pause(): void
 
 Pauses the animation. The animation remains in the current playing progress.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-pause(): void--><!--Device-Animation-pause(): void-End-->
 
@@ -172,9 +182,11 @@ restart(): void
 
 Plays the animation from the beginning.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-restart(): void--><!--Device-Animation-restart(): void-End-->
 
@@ -200,21 +212,17 @@ function restart(): void {
 
 ## seek
 
-ArkTS-Dyn:
-```TypeScript
-seek(position: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 seek(position: double): void
 ```
 
 Plays the animation from the specified position.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-seek(position: double): void--><!--Device-Animation-seek(position: double): void-End-->
 
@@ -224,7 +232,7 @@ Plays the animation from the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Position from which the animation playback starts. The value range is [0, 1]. |
+| position | double | Yes | Position from which the animation playback starts. The value range is [0, 1]. |
 
 ## Examples
 
@@ -252,9 +260,11 @@ start(): void
 
 Plays the animation based on the current progress.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-start(): void--><!--Device-Animation-start(): void-End-->
 
@@ -286,9 +296,11 @@ stop(): void
 
 Stops playing the animation and sets its progress to 0 (not started).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-stop(): void--><!--Device-Animation-stop(): void-End-->
 
@@ -320,11 +332,13 @@ readonly duration: double
 
 Animation duration, in seconds. The value must be greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-readonly duration: double--><!--Device-Animation-readonly duration: double-End-->
 
@@ -340,9 +354,11 @@ Whether the animation is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-enabled: boolean--><!--Device-Animation-enabled: boolean-End-->
 
@@ -356,11 +372,13 @@ readonly progress: double
 
 Playing progress of the animation. The value range is [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-readonly progress: double--><!--Device-Animation-readonly progress: double-End-->
 
@@ -376,9 +394,11 @@ Whether the animation is running. true if running, false otherwise.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-readonly running: boolean--><!--Device-Animation-readonly running: boolean-End-->
 
@@ -390,13 +410,15 @@ Whether the animation is running. true if running, false otherwise.
 speed?: double
 ```
 
-Playback speed factor of the animation. The default value is 1.0, indicating that the animation is played at normal speed.If the value is negative, the animation plays in reverse.
+Playback speed factor of the animation. The default value is 1.0, indicating that the animation is played at normal speed. If the value is negative, the animation plays in reverse.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Animation-speed?: double--><!--Device-Animation-speed?: double-End-->
 

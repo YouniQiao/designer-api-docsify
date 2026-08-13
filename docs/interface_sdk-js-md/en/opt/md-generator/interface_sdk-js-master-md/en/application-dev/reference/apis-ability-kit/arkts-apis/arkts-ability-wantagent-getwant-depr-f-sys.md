@@ -6,13 +6,13 @@
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
+Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
+**Substitutes:** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant-(System-API))
 
 <!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
@@ -34,13 +34,13 @@ Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#Wan
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
+Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
+**Substitutes:** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant-(System-API))
 
 <!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 

@@ -2,7 +2,9 @@
 
 捏合手势事件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface Pinch--><!--Device-unnamed-export declare interface Pinch-End-->
 
@@ -18,7 +20,9 @@ scale: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Pinch-scale: double--><!--Device-Pinch-scale: double-End-->
 
@@ -34,7 +38,9 @@ type: ActionType
 
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Pinch-type: ActionType--><!--Device-Pinch-type: ActionType-End-->
 

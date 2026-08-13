@@ -2,9 +2,11 @@
 
 Rotational speed. A negative value indicates a clockwise rotation, and a positive value indicates a counterclockwise rotation.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface RotationSpeed--><!--Device-mechanicManager-export interface RotationSpeed-End-->
 
@@ -26,11 +28,13 @@ pitchSpeed?: double
 
 Pitch speed, measured in radians per second.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationSpeed-pitchSpeed?: double--><!--Device-RotationSpeed-pitchSpeed?: double-End-->
 
@@ -46,11 +50,13 @@ rollSpeed?: double
 
 Roll speed, measured in radians per second.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationSpeed-rollSpeed?: double--><!--Device-RotationSpeed-rollSpeed?: double-End-->
 
@@ -66,11 +72,13 @@ yawSpeed?: double
 
 Yaw speed, measured in radians per second.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationSpeed-yawSpeed?: double--><!--Device-RotationSpeed-yawSpeed?: double-End-->
 

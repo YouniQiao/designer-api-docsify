@@ -1,19 +1,12 @@
 # StaticSubscriberExtensionAbility (System API)
 
-This module provides extension abilities of Basic Services Kit for static subscribers,which can be used to subscribe to common events in static mode. Static subscription enables receiving common events without keeping the app running in the background. This ability is applicable to scenarios where system services or system apps need to perform background processing when specific common events occur.
+This module provides extension abilities of Basic Services Kit for static subscribers, which can be used to subscribe to common events in static mode. Static subscription enables receiving common events without keeping the app running in the background. This ability is applicable to scenarios where system services or system apps need to perform background processing when specific common events occur. **StaticSubscriberExtensionAbility** provides the **onReceiveEvent** method and the **context** attribute. The **context** attribute is of the **StaticSubscriberExtensionContext** type, which is the running context of the extension ability. It is inherited from **ExtensionContext** and provides **startAbility** to start other abilities in the same app during event processing. **APIs used in combination** The typical process of this module is as follows: Inherit the base class, override **onReceiveEvent**, start a callback, read the event data, and start the target ability. Note that **context.startAbility** can start only the abilities that belong to the same app as the current **StaticSubscriberExtensionAbility**.
 
-**StaticSubscriberExtensionAbility** provides the **onReceiveEvent** method and the  
-**context** attribute. The **context** attribute is of the  
-**StaticSubscriberExtensionContext** type, which is the running context of the extension ability. It is inherited from **ExtensionContext** and provides **startAbility** to start other abilities in the same app during event processing.
+**Since:** 23
 
-**APIs used in combination**
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-The typical process of this module is as follows: Inherit the base class, override  
-**onReceiveEvent**, start a callback, read the event data, and start the target ability. Note that **context.startAbility** can start only the abilities that belong to the same app as the current **StaticSubscriberExtensionAbility**.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class StaticSubscriberExtensionAbility--><!--Device-unnamed-declare class StaticSubscriberExtensionAbility-End-->
 
@@ -35,9 +28,11 @@ onReceiveEvent(event: CommonEventData): void
 
 Defines a callback to be invoked when a common event is triggered in static mode.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,9 +70,11 @@ Context of the extension ability subscribed to in static mode.
 
 **Type:** [StaticSubscriberExtensionContext](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

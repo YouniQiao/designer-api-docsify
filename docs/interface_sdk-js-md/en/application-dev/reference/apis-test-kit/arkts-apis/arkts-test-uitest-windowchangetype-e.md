@@ -2,9 +2,11 @@
 
 Enumerates the window change event types that can be listened for.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WindowChangeType--><!--Device-unnamed-declare enum WindowChangeType-End-->
 
@@ -18,11 +20,13 @@ WINDOW_UNDEFINED = 0
 
 Non-window change event. &lt;br&gt;Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 
@@ -36,11 +40,13 @@ WINDOW_ADDED = 1
 
 Window adding event.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
 
@@ -54,11 +60,13 @@ WINDOW_REMOVED = 2
 
 Window removing event.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowChangeType-WINDOW_REMOVED = 2--><!--Device-WindowChangeType-WINDOW_REMOVED = 2-End-->
 
@@ -72,11 +80,13 @@ WINDOW_BOUNDS_CHANGED = 3
 
 Window bounds change event.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 

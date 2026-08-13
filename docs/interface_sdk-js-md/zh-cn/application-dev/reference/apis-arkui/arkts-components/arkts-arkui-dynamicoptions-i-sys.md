@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface DynamicOptions--><!--Device-unnamed-declare interface DynamicOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +20,15 @@
 allowCrossProcessNesting?: boolean
 ```
 
-是否允许跨进程[UIExtensionComponent](./ui_extension_component)嵌套。&lt;br/&gt;true：允许跨进程嵌套；false：不允许跨进程嵌套。&lt;br/&gt;默认值：false
+是否允许跨进程UIExtensionComponent嵌套。&lt;br/&gt;true：允许跨进程嵌套；false：不允许跨进程嵌套。&lt;br/&gt;默认值：false
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ allowOccupied?: boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DynamicOptions-allowOccupied?: boolean--><!--Device-DynamicOptions-allowOccupied?: boolean-End-->
@@ -69,6 +75,8 @@ backgroundTransparent?: boolean
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,6 +100,8 @@ entryPoint: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DynamicOptions-entryPoint: string--><!--Device-DynamicOptions-entryPoint: string-End-->
@@ -113,6 +123,8 @@ worker: Worker
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,10 +1,12 @@
 # AnimationController
 
-Define the data structure for PixelMap animations.
+Implements an animation controller object. It provides APIs for playing, stopping, resuming, and pausing animations, as well as querying the status.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AnimationController--><!--Device-unnamed-export interface AnimationController-End-->
 
@@ -22,13 +24,17 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 getStatus(): AnimationStatus
 ```
 
-Get animtion status of the current component.
+Obtains the current animation playback status.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-AnimationController-getStatus(): AnimationStatus--><!--Device-AnimationController-getStatus(): AnimationStatus-End-->
 
@@ -38,7 +44,50 @@ Get animtion status of the current component.
 
 | Type | Description |
 | --- | --- |
-| AnimationStatus | Return the status of animation. |
+| AnimationStatus | Current animation state: initial, running, paused, or stopped. |
+
+## Examples
+
+```TypeScript
+import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Example {
+  options: AnimationOptions = { duration: 1000, iterations: -1 };
+  // Replace $r('app.media.gif') with the image resource file you use.
+  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
+
+  statusToString(status: AnimationStatus): string {
+    switch (status) {
+      case AnimationStatus.Initial:
+        return "Initial"
+      case AnimationStatus.Running:
+        return "Running"
+      case AnimationStatus.Paused:
+        return "Paused"
+      case AnimationStatus.Stopped:
+        return "Stopped"
+      default:
+        return "Error"
+    }
+  }
+
+  build() {
+    Column() {
+      Image(this.animated)
+        .width(100)
+        .height(100)
+        .onClick(() => {
+          let controller = this.animated.getAnimationController()
+          // Obtain the current animation playback status.
+          let status = controller?.getStatus()
+          console.info(`animation status = ${this.statusToString(status)}`)
+        })
+    }
+  }
+}
+```
 
 ## pause
 
@@ -46,17 +95,48 @@ Get animtion status of the current component.
 pause(): void
 ```
 
-Pause animation playback, and keep it to the current frame.
+Pauses playback on the current frame.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-AnimationController-pause(): void--><!--Device-AnimationController-pause(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Examples
+
+```TypeScript
+import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Example {
+  options: AnimationOptions = { duration: 1000, iterations: -1 };
+  // Replace $r('app.media.gif') with the image resource file you use.
+  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
+
+  build() {
+    Column() {
+      Image(this.animated)
+        .width(100)
+        .height(100)
+        .onClick(() => {
+          let controller = this.animated.getAnimationController()
+          // Pause playback on the current frame.
+          controller?.pause()
+        })
+    }
+  }
+}
+```
 
 ## resume
 
@@ -64,17 +144,48 @@ Pause animation playback, and keep it to the current frame.
 resume(): void
 ```
 
-Resume animation playback from the current frame.
+Resumes playback from the current frame.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-AnimationController-resume(): void--><!--Device-AnimationController-resume(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Examples
+
+```TypeScript
+import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Example {
+  options: AnimationOptions = { duration: 1000, iterations: -1 };
+  // Replace $r('app.media.gif') with the image resource file you use.
+  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
+
+  build() {
+    Column() {
+      Image(this.animated)
+        .width(100)
+        .height(100)
+        .onClick(() => {
+          let controller = this.animated.getAnimationController()
+          // Start playback from the current frame when the animated image is paused or stopped.
+          controller?.resume()
+        })
+    }
+  }
+}
+```
 
 ## start
 
@@ -82,17 +193,48 @@ Resume animation playback from the current frame.
 start(): void
 ```
 
-Start animtion playback.
+Starts playback from the first frame.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-AnimationController-start(): void--><!--Device-AnimationController-start(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Examples
+
+```TypeScript
+import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Example {
+  options: AnimationOptions = { duration: 1000, iterations: -1, autoPlay: false };
+  // Replace $r('app.media.gif') with the image resource file you use.
+  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
+
+  build() {
+    Column() {
+      Image(this.animated)
+        .width(100)
+        .height(100)
+        .onClick(() => {
+          let controller = this.animated.getAnimationController()
+          // Start playback.
+          controller?.start()
+        })
+    }
+  }
+}
+```
 
 ## stop
 
@@ -100,15 +242,46 @@ Start animtion playback.
 stop(): void
 ```
 
-Stop animation playback, and reset to first frame.
+Stops playback and resets to the first frame.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-AnimationController-stop(): void--><!--Device-AnimationController-stop(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Examples
+
+```TypeScript
+import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Example {
+  options: AnimationOptions = { duration: 1000, iterations: -1 };
+  // Replace $r('app.media.gif') with the image resource file you use.
+  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
+
+  build() {
+    Column() {
+      Image(this.animated)
+        .width(100)
+        .height(100)
+        .onClick(() => {
+          let controller = this.animated.getAnimationController()
+          // Stop playback and reset to the first frame.
+          controller?.stop()
+        })
+    }
+  }
+}
+```
 

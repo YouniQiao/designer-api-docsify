@@ -6,7 +6,7 @@ Defines a **BarometerResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [BarometerResponse](ohos.sensor/sensor#BarometerResponse)
+**Substitutes:** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md#BarometerResponse)
 
 <!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 
@@ -32,7 +32,7 @@ Pressure, in pascal.
 
 **Deprecated since:** 8
 
-**Substitutes:** [pressure](ohos.sensor/sensor#BarometerResponse.pressure)
+**Substitutes:** [pressure](arkts-sensorservice-sensor-barometerresponse-i.md#pressure)
 
 **Model restriction:** This API can be used only in the FA model.
 

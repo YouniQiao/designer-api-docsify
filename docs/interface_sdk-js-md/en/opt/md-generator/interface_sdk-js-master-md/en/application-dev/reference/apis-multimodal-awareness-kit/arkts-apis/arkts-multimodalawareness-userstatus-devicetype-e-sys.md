@@ -4,6 +4,8 @@ Enumerates device types.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-userStatus-export enum DeviceType--><!--Device-userStatus-export enum DeviceType-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -19,6 +21,8 @@ UNKNOWN_TYPE = 0
 Unknown device type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ PC device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceType-PC = 0x0C--><!--Device-DeviceType-PC = 0x0C-End-->
@@ -56,6 +62,8 @@ Phone device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceType-PHONE = 0x0E--><!--Device-DeviceType-PHONE = 0x0E-End-->
@@ -73,6 +81,8 @@ TABLET = 0x11
 Tablet device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

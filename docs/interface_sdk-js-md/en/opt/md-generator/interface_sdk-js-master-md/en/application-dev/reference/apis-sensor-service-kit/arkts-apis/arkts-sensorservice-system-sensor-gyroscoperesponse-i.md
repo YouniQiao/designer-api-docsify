@@ -6,7 +6,7 @@ Defines a **GyroscopeResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [GyroscopeResponse](ohos.sensor/sensor#GyroscopeResponse)
+**Substitutes:** [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md#GyroscopeResponse)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -34,7 +34,7 @@ Rotation angular velocity of the X axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** [x](ohos.sensor/sensor#GyroscopeResponse.x)
+**Substitutes:** [x](arkts-sensorservice-sensor-gyroscoperesponse-i.md#x)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -58,7 +58,7 @@ Rotation angular velocity of the Y axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** [y](ohos.sensor/sensor#GyroscopeResponse.y)
+**Substitutes:** [y](arkts-sensorservice-sensor-gyroscoperesponse-i.md#y)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -82,7 +82,7 @@ Rotation angular velocity of the Z axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** [z](ohos.sensor/sensor#GyroscopeResponse.z)
+**Substitutes:** [z](arkts-sensorservice-sensor-gyroscoperesponse-i.md#z)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 

@@ -4,12 +4,13 @@
 export type PermissionDef = _PermissionDef
 ```
 
-Defines the detailed information about the permissions defined in the  
-[module.json5](../../../quick-start/module-configuration-file.md) file.
+Defines the detailed information about the permissions defined in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export type PermissionDef = _PermissionDef--><!--Device-bundleManager-export type PermissionDef = _PermissionDef-End-->
 

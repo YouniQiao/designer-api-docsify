@@ -1,10 +1,12 @@
 # SuppressWarningsType
 
-Defines the warning types that support suppression. Developers can selectively suppress compatibility warnings,multi-device warnings, and permission warnings as required. This helps ensure code quality, reduce unnecessary warning interference, and improve development experience.
+Defines the warning types that support suppression. Developers can selectively suppress compatibility warnings, multi-device warnings, and permission warnings as required. This helps ensure code quality, reduce unnecessary warning interference, and improve development experience.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export const enum SuppressWarningsType--><!--Device-unnamed-export const enum SuppressWarningsType-End-->
 
@@ -16,11 +18,13 @@ Defines the warning types that support suppression. Developers can selectively s
 COMPATIBILITY = 'compatibility'
 ```
 
-Compatibility warning.This warning is generated when the start version of the API called is later than the compatible SDK version set for the project(compatibleSdkVersion specified in build-profile.json5).It is recommended that this warning be suppressed when version check or compatibility processing has been performed.Suppressing this warning without proper handling may cause devices running earlier versions to malfunction.
+Compatibility warning. This warning is generated when the start version of the API called is later than the compatible SDK version set for the project(compatibleSdkVersion specified in build-profile.json5). It is recommended that this warning be suppressed when version check or compatibility processing has been performed. Suppressing this warning without proper handling may cause devices running earlier versions to malfunction.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ Compatibility warning.This warning is generated when the start version of the AP
 SYSCAP = 'syscap'
 ```
 
-Multi-device warning.This warning is generated when the system capability obtained by calling the API is not supported on the target device.
+Multi-device warning. This warning is generated when the system capability obtained by calling the API is not supported on the target device.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,11 +66,13 @@ Multi-device warning.This warning is generated when the system capability obtain
 PERMISSION = 'permission'
 ```
 
-Permission warning.This warning is generated when an API that requires permissions is called but the corresponding permissions are not declared in the configuration file.
+Permission warning. This warning is generated when an API that requires permissions is called but the corresponding permissions are not declared in the configuration file.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

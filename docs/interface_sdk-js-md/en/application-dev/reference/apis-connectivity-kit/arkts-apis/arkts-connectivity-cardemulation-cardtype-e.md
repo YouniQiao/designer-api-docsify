@@ -2,9 +2,11 @@
 
 Define the card emulation type, payment or other.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cardEmulation-enum CardType--><!--Device-cardEmulation-enum CardType-End-->
 
@@ -18,11 +20,13 @@ PAYMENT = 'payment'
 
 Payment type of card emulation
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CardType-PAYMENT = 'payment'--><!--Device-CardType-PAYMENT = 'payment'-End-->
 
@@ -36,11 +40,13 @@ OTHER = 'other'
 
 Other type of card emulation
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CardType-OTHER = 'other'--><!--Device-CardType-OTHER = 'other'-End-->
 

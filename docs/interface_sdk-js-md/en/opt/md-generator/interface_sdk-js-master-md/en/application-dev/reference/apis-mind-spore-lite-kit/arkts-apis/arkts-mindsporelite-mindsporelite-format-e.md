@@ -2,7 +2,9 @@
 
 Enum for provides MSTensor format
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-export enum Format--><!--Device-mindSporeLite-export enum Format-End-->
 
@@ -16,7 +18,9 @@ DEFAULT_FORMAT = -1
 
 data format is default
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ NCHW = 0
 
 data format is NCHW
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ NHWC = 1
 
 data format is NHWC
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +72,9 @@ NHWC4 = 2
 
 data format is NHWC4
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +90,9 @@ HWKC = 3
 
 data format is HWKC
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +108,9 @@ HWCK = 4
 
 data format is HWCK
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,7 +126,9 @@ KCHW = 5
 
 data format is KCHW
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

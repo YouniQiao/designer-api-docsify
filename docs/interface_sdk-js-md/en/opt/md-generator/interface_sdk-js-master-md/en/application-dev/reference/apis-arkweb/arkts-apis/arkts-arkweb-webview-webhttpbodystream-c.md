@@ -4,6 +4,8 @@ The http body stream of the request.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ getPosition(): number
 Get the current position of the data stream. Unit: bytes.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,6 +50,8 @@ Get the total size of the data stream. When data is chunked, always return zero.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHttpBodyStream-getSize(): number--><!--Device-WebHttpBodyStream-getSize(): number-End-->
@@ -68,6 +74,8 @@ Initialize data stream.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHttpBodyStream-initialize(): Promise<void>--><!--Device-WebHttpBodyStream-initialize(): Promise<void>-End-->
@@ -84,7 +92,7 @@ Initialize data stream.
 
 | Error Code ID |
 | --- |
-| [17100022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100022-failed-to-initialize-webhttpbodystream) |
+| [17100022](../errorcode-webview.md#17100022-failed-to-initialize-webhttpbodystream) |
 
 ## isChunked
 
@@ -95,6 +103,8 @@ isChunked(): boolean
 Whether data stream is chunked.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,9 +124,11 @@ Whether data stream is chunked.
 isEof(): boolean
 ```
 
-Whether all data stream has been consumed. For chunked uploads,returns false until the first read attempt.
+Whether all data stream has been consumed. For chunked uploads, returns false until the first read attempt.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -140,6 +152,8 @@ Returns true if the upload data in the stream is entirely in memory, and all rea
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHttpBodyStream-isInMemory(): boolean--><!--Device-WebHttpBodyStream-isInMemory(): boolean-End-->
@@ -161,6 +175,8 @@ read(size: number): Promise<ArrayBuffer>
 Read the data stream to the buffer. Unit: bytes.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -184,4 +200,4 @@ Read the data stream to the buffer. Unit: bytes.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

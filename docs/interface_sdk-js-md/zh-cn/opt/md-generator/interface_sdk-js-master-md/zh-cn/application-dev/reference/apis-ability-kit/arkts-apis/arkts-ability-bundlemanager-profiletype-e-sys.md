@@ -2,7 +2,9 @@
 
 标识配置文件类型。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-export enum ProfileType--><!--Device-bundleManager-export enum ProfileType-End-->
 
@@ -18,7 +20,9 @@ INTENT_PROFILE = 1
 
 意图框架配置文件。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProfileType-INTENT_PROFILE = 1--><!--Device-ProfileType-INTENT_PROFILE = 1-End-->
 
@@ -32,9 +36,11 @@ INTENT_PROFILE = 1
 CLOUD_PROFILE = 8
 ```
 
-[端云同步](../../apis-core-file-kit/arkts-apis/arkts-file-cloudsync.md#cloudSync)配置文件。26.0.0
+[端云同步](../../apis-core-file-kit/arkts-apis/arkts-file-cloudsync.md#@ohos.file.cloudSync)配置文件。 26.0.0
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

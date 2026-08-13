@@ -2,7 +2,9 @@
 
 Type of the primary mouse button.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-enum PrimaryButton--><!--Device-pointer-enum PrimaryButton-End-->
 
@@ -16,7 +18,9 @@ LEFT = 0
 
 Left button.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrimaryButton-LEFT = 0--><!--Device-PrimaryButton-LEFT = 0-End-->
 
@@ -30,7 +34,9 @@ RIGHT = 1
 
 Right button.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrimaryButton-RIGHT = 1--><!--Device-PrimaryButton-RIGHT = 1-End-->
 

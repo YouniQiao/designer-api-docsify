@@ -2,7 +2,9 @@
 
 创建富文本显示的数字格式化对象时的可选配置项。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export interface StyledNumberFormatOptions--><!--Device-i18n-export interface StyledNumberFormatOptions-End-->
 
@@ -18,9 +20,11 @@ decimal?: TextStyle
 
 **类型：** TextStyle
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledNumberFormatOptions-decimal?: TextStyle--><!--Device-StyledNumberFormatOptions-decimal?: TextStyle-End-->
 
@@ -36,9 +40,11 @@ fraction?: TextStyle
 
 **类型：** TextStyle
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledNumberFormatOptions-fraction?: TextStyle--><!--Device-StyledNumberFormatOptions-fraction?: TextStyle-End-->
 
@@ -54,9 +60,11 @@ integer?: TextStyle
 
 **类型：** TextStyle
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledNumberFormatOptions-integer?: TextStyle--><!--Device-StyledNumberFormatOptions-integer?: TextStyle-End-->
 
@@ -72,9 +80,11 @@ unit?: TextStyle
 
 **类型：** TextStyle
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledNumberFormatOptions-unit?: TextStyle--><!--Device-StyledNumberFormatOptions-unit?: TextStyle-End-->
 

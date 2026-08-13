@@ -2,15 +2,13 @@
 
 DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).
 
-> **Description:**
-> 
-> - This component interface can only be used in Stage model.
+## Child Components None
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct DatePickerComponent--><!--Device-unnamed-export declare struct DatePickerComponent-End-->
 
@@ -22,30 +20,11 @@ DatePickerComponent component is used to select date (year, month, day) and time
 import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Decorator:** @Builder
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DatePickerComponent-build(): void--><!--Device-DatePickerComponent-build(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## options
 
 ```TypeScript
-options: DatePickerComponentOptions
+@Prop
+  options: DatePickerComponentOptions
 ```
 
 Defines options for the date time picker component.
@@ -54,11 +33,15 @@ Defines options for the date time picker component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DatePickerComponent-options: DatePickerComponentOptions--><!--Device-DatePickerComponent-options: DatePickerComponentOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DatePickerComponent-@Prop  options: DatePickerComponentOptions--><!--Device-DatePickerComponent-@Prop  options: DatePickerComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

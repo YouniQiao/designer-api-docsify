@@ -4,17 +4,15 @@
 type SourceCloseCallback = (uuid: long) => void
 ```
 
-This callback function is implemented by applications to release related resources.
+This callback function is implemented by applications to release related resources. > **NOTE：**> > The client must return the handle immediately after processing the request.
 
-> **NOTE：**
-> 
-> The client must return the handle immediately after processing the request.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-media-type SourceCloseCallback = (uuid: long) => void--><!--Device-media-type SourceCloseCallback = (uuid: long) => void-End-->
 
@@ -24,5 +22,5 @@ This callback function is implemented by applications to release related resourc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. |
+| uuid | long | Yes | ID for the resource handle. |
 

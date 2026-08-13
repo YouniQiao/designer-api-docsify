@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface PreviewMenuOptions--><!--Device-unnamed-declare interface PreviewMenuOptions-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -14,15 +16,15 @@
 hapticFeedbackMode?: HapticFeedbackMode
 ```
 
-菜单弹出时振动效果。需配置"ohos.permission.VIBRATE"权限
-
-默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
+菜单弹出时振动效果。需配置"ohos.permission.VIBRATE"权限 默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
 
 **类型：** [HapticFeedbackMode](../../apis-arkui/arkts-components/arkts-arkui-hapticfeedbackmode-e.md)
 
 **默认值：** HapticFeedbackMode.DISABLED
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode--><!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode-End-->
 

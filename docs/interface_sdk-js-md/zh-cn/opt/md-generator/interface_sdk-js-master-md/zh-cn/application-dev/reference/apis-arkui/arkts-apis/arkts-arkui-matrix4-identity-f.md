@@ -10,6 +10,8 @@ Matrix的初始化函数，可以返回一个单位矩阵对象。
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-matrix4-function identity(): Matrix4Transit--><!--Device-matrix4-function identity(): Matrix4Transit-End-->

@@ -2,7 +2,9 @@
 
 输入法面板类型枚举。定义面板的类别，决定面板是软键盘还是状态栏。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum PanelType--><!--Device-unnamed-export enum PanelType-End-->
 
@@ -16,7 +18,9 @@ SOFT_KEYBOARD = 0
 
 软键盘类型。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PanelType-SOFT_KEYBOARD = 0--><!--Device-PanelType-SOFT_KEYBOARD = 0-End-->
 
@@ -30,7 +34,9 @@ STATUS_BAR
 
 状态栏类型。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PanelType-STATUS_BAR--><!--Device-PanelType-STATUS_BAR-End-->
 

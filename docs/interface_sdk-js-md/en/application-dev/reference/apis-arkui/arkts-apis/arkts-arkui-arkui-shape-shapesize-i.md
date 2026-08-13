@@ -1,12 +1,14 @@
 # ShapeSize
 
-Interface for shape size properties.
+Describes the size of a shape.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export interface ShapeSize--><!--Device-unnamed-export interface ShapeSize-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface ShapeSize--><!--Device-unnamed-interface ShapeSize-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,40 +21,52 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ## height
 
 ```TypeScript
-height?: double | string
+height?: number | string
 ```
 
-Defines the height of Shape.
+Height of the shape. When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification. Unit: vp. If the value is invalid, 0 vp is used.
 
-**Type:** double \| string
+**Type:** number \| string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ShapeSize-height?: double | string--><!--Device-ShapeSize-height?: double | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ShapeSize-height?: number | string--><!--Device-ShapeSize-height?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
 
 ```TypeScript
-width?: double | string
+width?: number | string
 ```
 
-Defines the width of Shape.
+Width of the shape. When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification. Unit: vp. If the value is invalid, 0 vp is used.
 
-**Type:** double \| string
+**Type:** number \| string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ShapeSize-width?: double | string--><!--Device-ShapeSize-width?: double | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ShapeSize-width?: number | string--><!--Device-ShapeSize-width?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

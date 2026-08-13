@@ -4,6 +4,8 @@ Enumerates the display modes available for a composite image.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-enum CompositeDisplayMode--><!--Device-photoAccessHelper-enum CompositeDisplayMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -20,6 +22,8 @@ Displays the original composite image.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CompositeDisplayMode-DEFAULT = 0--><!--Device-CompositeDisplayMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -35,6 +39,8 @@ CLOUD_ENHANCEMENT = 1
 Displays the cloud-enhanced composite image.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1--><!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1-End-->
 

@@ -1,11 +1,12 @@
 # SubIntentInfoForConfiguration (System API)
 
-Describes the unique information of the  
-[intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
+Describes the unique information of the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration--><!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration-End-->
 
@@ -22,20 +23,22 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 ## entities
 
 ```TypeScript
-readonly entities?: Record<string, Object>
+readonly entities?: Record<string, RecordData>
 ```
 
 Entity information contained in the intent.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, Object>--><!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, Object>-End-->
+<!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, RecordData>--><!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -53,7 +56,9 @@ Information about the widget bound to the intent.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,20 +71,22 @@ Information about the widget bound to the intent.
 ## inputParams
 
 ```TypeScript
-readonly inputParams?: Array<Record<string, Object>>
+readonly inputParams?: Array<Record<string, RecordData>>
 ```
 
 Data format of intent parameters, which is used to define the input data format during intent calls.
 
-**Type:** Array&lt;Record&lt;string, Object&gt;&gt;
+**Type:** Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, Object>>--><!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, Object>>-End-->
+<!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, RecordData>>--><!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, RecordData>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -88,20 +95,22 @@ Data format of intent parameters, which is used to define the input data format 
 ## outputParams
 
 ```TypeScript
-readonly outputParams?: Array<Record<string, Object>>
+readonly outputParams?: Array<Record<string, RecordData>>
 ```
 
 Data format for the results returned by intent calls. It defines how the data should be structured.
 
-**Type:** Array&lt;Record&lt;string, Object&gt;&gt;
+**Type:** Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, Object>>--><!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, Object>>-End-->
+<!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, RecordData>>--><!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, RecordData>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -119,7 +128,9 @@ Information about the ServiceExtensionAbility bound to the intent.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,7 +152,9 @@ Relative path of the intent execution file. The value is a string of a maximum o
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,7 +176,9 @@ Information about the UIAbility bound to the intent, including the **ability** a
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,7 +200,9 @@ Information about the UIExtensionAbility bound to the intent.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Describes the point coordinates, which are used for focus and exposure configuration.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface Point--><!--Device-camera-interface Point-End-->
 
@@ -24,7 +26,9 @@ X coordinate of a point.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,7 +46,9 @@ Y coordinate of a point.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

@@ -10,6 +10,8 @@ Represents the callback used to set the parallel relationship between built-in g
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -22,7 +24,7 @@ Represents the callback used to set the parallel relationship between built-in g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | GestureRecognizer | Yes | Built-in gesture recognizer of the current component. Currently only a built- in gesture recognizer of the [GestureType](GestureControl.GestureType).PAN_GESTURE type is supported. |
+| current | GestureRecognizer | Yes | Built-in gesture recognizer of the current component. Currently only a built- in gesture recognizer of the GestureType.PAN_GESTURE type is supported. |
 | others | Array&lt;GestureRecognizer&gt; | Yes | Gesture recognizers of the same type from other components with higher priority in the response chain. |
 
 **Return value:**

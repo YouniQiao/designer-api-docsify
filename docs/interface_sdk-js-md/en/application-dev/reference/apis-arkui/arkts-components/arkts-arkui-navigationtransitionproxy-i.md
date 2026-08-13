@@ -6,6 +6,8 @@ Implements a custom transition animation proxy.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavigationTransitionProxy--><!--Device-unnamed-declare interface NavigationTransitionProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Implements a custom transition animation proxy.
 cancelTransition?(): void
 ```
 
-Cancels this interactive transition animation, restoring the routing stack to its state before page redirection. (Non-interactive transition animations cannot be canceled.)
+Cancels this interactive transition animation, restoring the routing stack to its state before page redirection. ( Non-interactive transition animations cannot be canceled.)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Finishes this custom transition animation. This API must be manually called to e
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -56,17 +62,13 @@ Finishes this custom transition animation. This API must be manually called to e
 updateTransition?(progress: number): void
 ```
 
-Updates the progress of this interactive transition animation. (Non-interactive animations do not support setting the animation progress).
-
-> **NOTE：**
-> 
-> You are not advised to use stack operations in [aboutToAppear](BaseCustomComponent#aboutToAppear), as the
-> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
-> failures.
+Updates the progress of this interactive transition animation. (Non-interactive animations do not support setting the animation progress). > **NOTE：**> > You are not advised to use stack operations in aboutToAppear, as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,6 +98,8 @@ Information about the exit page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -110,11 +114,7 @@ Information about the exit page.
 isInteractive?: boolean
 ```
 
-Whether the transition animation is interactive.
-
-**true**: yes; **false**: no
-
-Default value: **false**
+Whether the transition animation is interactive. **true**: yes; **false**: no Default value: **false**
 
 **Type:** boolean
 
@@ -123,6 +123,8 @@ Default value: **false**
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,6 +147,8 @@ Information about the enter page.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

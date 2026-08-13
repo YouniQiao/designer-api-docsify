@@ -4,6 +4,8 @@ Enumerates the states of a file memory link.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-enum AppLinkState--><!--Device-photoAccessHelper-enum AppLinkState-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -19,6 +21,8 @@ DEFAULT = 0
 Whether the file has a memory link cannot be determined.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ The file does not have a memory link.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppLinkState-HAS_NO_LINK = 1--><!--Device-AppLinkState-HAS_NO_LINK = 1-End-->
@@ -55,6 +61,8 @@ HAS_LINK = 2
 The file has a memory link.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

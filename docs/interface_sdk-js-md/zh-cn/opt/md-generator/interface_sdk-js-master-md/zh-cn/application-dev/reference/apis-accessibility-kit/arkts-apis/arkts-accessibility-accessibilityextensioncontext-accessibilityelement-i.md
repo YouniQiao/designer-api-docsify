@@ -1,9 +1,10 @@
 # AccessibilityElement
 
-无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用   
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
+无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用 [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement) 或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
@@ -185,8 +186,8 @@ attributeValue<T extends keyof ElementAttributeValues>(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-属性不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9300004](../errorcode-accessibility.md#9300004-属性不存在) |
 
 ## 示例
 
@@ -238,8 +239,8 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-属性不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9300004](../errorcode-accessibility.md#9300004-属性不存在) |
 
 ## 示例
 
@@ -285,7 +286,7 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -338,7 +339,7 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -384,7 +385,7 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -437,7 +438,7 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -483,7 +484,7 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -536,7 +537,7 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -582,8 +583,8 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9300005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
 
 ## 示例
 
@@ -636,8 +637,8 @@ performAction(actionName: string, parameters?: object): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9300005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
 
 ## 示例
 
@@ -716,8 +717,8 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9300005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
 
 ## 示例
 

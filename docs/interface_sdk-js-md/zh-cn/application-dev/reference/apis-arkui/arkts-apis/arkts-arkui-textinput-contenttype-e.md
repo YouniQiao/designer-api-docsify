@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum ContentType--><!--Device-unnamed-export declare enum ContentType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ USER_NAME = 0
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ PASSWORD = 1
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-PASSWORD = 1--><!--Device-ContentType-PASSWORD = 1-End-->
@@ -57,6 +63,8 @@ NEW_PASSWORD = 2
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +84,8 @@ FULL_STREET_ADDRESS = 3
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-FULL_STREET_ADDRESS = 3--><!--Device-ContentType-FULL_STREET_ADDRESS = 3-End-->
@@ -93,6 +103,8 @@ HOUSE_NUMBER = 4
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +124,8 @@ DISTRICT_ADDRESS = 5
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-DISTRICT_ADDRESS = 5--><!--Device-ContentType-DISTRICT_ADDRESS = 5-End-->
@@ -129,6 +143,8 @@ CITY_ADDRESS = 6
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,6 +164,8 @@ PROVINCE_ADDRESS = 7
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-PROVINCE_ADDRESS = 7--><!--Device-ContentType-PROVINCE_ADDRESS = 7-End-->
@@ -165,6 +183,8 @@ COUNTRY_ADDRESS = 8
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,6 +204,8 @@ PERSON_FULL_NAME = 9
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-PERSON_FULL_NAME = 9--><!--Device-ContentType-PERSON_FULL_NAME = 9-End-->
@@ -201,6 +223,8 @@ PERSON_LAST_NAME = 10
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -220,6 +244,8 @@ PERSON_FIRST_NAME = 11
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-PERSON_FIRST_NAME = 11--><!--Device-ContentType-PERSON_FIRST_NAME = 11-End-->
@@ -237,6 +263,8 @@ PHONE_NUMBER = 12
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -256,6 +284,8 @@ PHONE_COUNTRY_CODE = 13
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-PHONE_COUNTRY_CODE = 13--><!--Device-ContentType-PHONE_COUNTRY_CODE = 13-End-->
@@ -273,6 +303,8 @@ FULL_PHONE_NUMBER = 14
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -292,6 +324,8 @@ EMAIL_ADDRESS = 15
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-EMAIL_ADDRESS = 15--><!--Device-ContentType-EMAIL_ADDRESS = 15-End-->
@@ -309,6 +343,8 @@ BANK_CARD_NUMBER = 16
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -328,6 +364,8 @@ ID_CARD_NUMBER = 17
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-ID_CARD_NUMBER = 17--><!--Device-ContentType-ID_CARD_NUMBER = 17-End-->
@@ -345,6 +383,8 @@ NICKNAME = 23
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -364,6 +404,8 @@ DETAIL_INFO_WITHOUT_STREET = 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-DETAIL_INFO_WITHOUT_STREET = 24--><!--Device-ContentType-DETAIL_INFO_WITHOUT_STREET = 24-End-->
@@ -381,6 +423,8 @@ FORMAT_ADDRESS = 25
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -400,6 +444,8 @@ PASSPORT_NUMBER = 26
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-PASSPORT_NUMBER = 26--><!--Device-ContentType-PASSPORT_NUMBER = 26-End-->
@@ -417,6 +463,8 @@ VALIDITY = 27
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -436,6 +484,8 @@ ISSUE_AT = 28
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-ISSUE_AT = 28--><!--Device-ContentType-ISSUE_AT = 28-End-->
@@ -453,6 +503,8 @@ ORGANIZATION = 29
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -472,6 +524,8 @@ TAX_ID = 30
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-TAX_ID = 30--><!--Device-ContentType-TAX_ID = 30-End-->
@@ -489,6 +543,8 @@ ADDRESS_CITY_AND_STATE = 31
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -508,6 +564,8 @@ FLIGHT_NUMBER = 32
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-FLIGHT_NUMBER = 32--><!--Device-ContentType-FLIGHT_NUMBER = 32-End-->
@@ -525,6 +583,8 @@ LICENSE_NUMBER = 33
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -544,6 +604,8 @@ LICENSE_FILE_NUMBER = 34
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-LICENSE_FILE_NUMBER = 34--><!--Device-ContentType-LICENSE_FILE_NUMBER = 34-End-->
@@ -561,6 +623,8 @@ LICENSE_PLATE = 35
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -580,6 +644,8 @@ ENGINE_NUMBER = 36
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentType-ENGINE_NUMBER = 36--><!--Device-ContentType-ENGINE_NUMBER = 36-End-->
@@ -597,6 +663,8 @@ LICENSE_CHASSIS_NUMBER = 37
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

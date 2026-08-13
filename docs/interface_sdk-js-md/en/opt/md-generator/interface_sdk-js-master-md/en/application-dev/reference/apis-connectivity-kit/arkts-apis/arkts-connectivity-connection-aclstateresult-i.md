@@ -4,6 +4,8 @@ Acl state change result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-connection-interface AclStateResult--><!--Device-connection-interface AclStateResult-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -26,6 +28,8 @@ The virtual address of a Bluetooth device. For example, "11:22:33:AA:BB:FF".
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AclStateResult-deviceId: string--><!--Device-AclStateResult-deviceId: string-End-->
@@ -43,6 +47,8 @@ Acl state of the device.
 **Type:** [AclState](arkts-connectivity-connection-aclstate-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

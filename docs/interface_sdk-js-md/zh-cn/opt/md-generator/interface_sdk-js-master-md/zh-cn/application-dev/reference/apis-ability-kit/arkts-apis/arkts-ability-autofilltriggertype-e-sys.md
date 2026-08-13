@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export enum AutoFillTriggerType--><!--Device-unnamed-export enum AutoFillTriggerType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -16,9 +18,11 @@
 AUTO_REQUEST = 0
 ```
 
-自动拉起自动填充服务，可通过[TextInput](@internal/component/ets/text_input)控件获焦后自动拉起。
+自动拉起自动填充服务，可通过TextInput控件获焦后自动拉起。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ MANUAL_REQUEST = 1
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AutoFillTriggerType-MANUAL_REQUEST = 1--><!--Device-AutoFillTriggerType-MANUAL_REQUEST = 1-End-->
@@ -55,6 +61,8 @@ PASTE_REQUEST = 2
 粘贴拉起自动填充服务，可通过在密码保险箱内长按用户名或密码选择安全复制后，再长按任意输入控件弹出二级菜单，选择粘贴，拉起自动填充服务。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

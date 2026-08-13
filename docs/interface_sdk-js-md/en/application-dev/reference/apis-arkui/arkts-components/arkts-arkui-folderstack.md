@@ -1,19 +1,6 @@
 # FolderStack
 
-**FolderStack** extends the [Stack]{@link stack} container, adding the <!--RP1-->foldable phone hover<!--RP1End-->
-capability. Child components specified in the **upperItems** array of [FolderStackOptions]{@link FolderStackOptions}
-automatically avoid the screen crease area and reposition to the upper display.
-> **NOTE**
->
-> The hover capability is designed for and only works on <!--RP2-->dual-fold devices<!--RP2End-->.
->
-> When the component's parent is an
-> [if/else conditional render](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md) node, the foldable
-> hover feature is disabled.
->
-> **Child Components**
->
-> Multiple child components are supported.
+**FolderStack** extends the [Stack](../../apis-na/arkts-apis/arkts-na-lib-es5-error-i.md#stack) container, adding the <!--RP1-->foldable phone hover<!--RP1End--> capability. Child components specified in the **upperItems** array of [FolderStackOptions](arkts-arkui-folderstackoptions-i.md#FolderStackOptions) automatically avoid the screen crease area and reposition to the upper display. > **NOTE** > > The hover capability is designed for and only works on <!--RP2-->dual-fold devices<!--RP2End-->. > > When the component's parent is an > [if/else conditional render](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) node, the foldable > hover feature is disabled. > > **Child Components** > > Multiple child components are supported.
 
 ## FolderStack
 
@@ -26,6 +13,8 @@ Defines the constructor of FolderStack component.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,9 +32,9 @@ Defines the constructor of FolderStack component.
 
 ## Summary
 
-- [FolderStackOptions](arkts-arkui-folderstack-folderstackoptions-i.md)
-- [HoverEventParam](arkts-arkui-folderstack-hovereventparam-i.md)
-- [OnFoldStatusChangeInfo](arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md)
-- [OnFoldStatusChangeCallback](arkts-arkui-folderstack-onfoldstatuschangecallback-t.md)
-- [OnHoverStatusChangeCallback](arkts-arkui-folderstack-onhoverstatuschangecallback-t.md)
-- [WindowStatusType](arkts-arkui-folderstack-windowstatustype-t.md)
+- [FolderStackOptions](arkts-arkui-folderstackoptions-i.md)
+- [HoverEventParam](arkts-arkui-hovereventparam-i.md)
+- [OnFoldStatusChangeInfo](arkts-arkui-onfoldstatuschangeinfo-i.md)
+- [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md)
+- [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md)
+- [WindowStatusType](arkts-arkui-windowstatustype-t.md)

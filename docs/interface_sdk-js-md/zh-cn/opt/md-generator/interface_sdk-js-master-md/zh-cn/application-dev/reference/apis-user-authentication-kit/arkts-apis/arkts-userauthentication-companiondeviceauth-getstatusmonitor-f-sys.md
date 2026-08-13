@@ -6,11 +6,11 @@
 function getStatusMonitor(localUserId: number): StatusMonitor
 ```
 
-获取状态监听器。用于获取指定用户的状态监听器对象，通过该对象可查询和订阅伴随设备的模板状态、持续认证状态、可添加设备状态等信息。
-
-生命周期：订阅在系统服务侧按用户维护。使用完毕应调用对应的off方法取消订阅以释放资源；应用进程退出时已注册的订阅会自动清理。
+获取状态监听器。用于获取指定用户的状态监听器对象，通过该对象可查询和订阅伴随设备的模板状态、持续认证状态、可添加设备状态等信息。 生命周期：订阅在系统服务侧按用户维护。使用完毕应调用对应的off方法取消订阅以释放资源；应用进程退出时已注册的订阅会自动清理。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.USE_USER_IDM
 
@@ -38,10 +38,10 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 | 错误码ID |
 | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
-| [32600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-模板未找到) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600002](../errorcode-useriam.md#32600002-模板未找到) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

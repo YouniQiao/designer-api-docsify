@@ -12,11 +12,13 @@ import { advertising } from '@kit.AdsKit';
 function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void
 ```
 
-Deletes the ad JavaScript object injected through **registerWebAdInterface**(this API is only open to some pre-installed system applications).
+Deletes the ad JavaScript object injected through **registerWebAdInterface** (this API is only open to some pre-installed system applications).
 
 **Since:** 16
 
 **ArkTS mode:** ArkTS-Dyn only, since version 16.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
@@ -35,8 +37,8 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface**(thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 

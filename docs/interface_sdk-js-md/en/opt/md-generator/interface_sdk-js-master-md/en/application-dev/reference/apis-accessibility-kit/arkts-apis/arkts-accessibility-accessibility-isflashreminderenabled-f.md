@@ -16,6 +16,8 @@ Checks whether flash alerts mode is enabled. This API uses a promise to return t
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-accessibility-function isFlashReminderEnabled(): Promise<boolean>--><!--Device-accessibility-function isFlashReminderEnabled(): Promise<boolean>-End-->

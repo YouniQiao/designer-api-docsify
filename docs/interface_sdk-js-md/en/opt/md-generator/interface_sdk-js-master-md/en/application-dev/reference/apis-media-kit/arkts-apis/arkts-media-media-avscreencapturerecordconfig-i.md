@@ -2,7 +2,9 @@
 
 Defines the screen capture parameters.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVScreenCaptureRecordConfig--><!--Device-media-interface AVScreenCaptureRecordConfig-End-->
 
@@ -20,11 +22,13 @@ import { media } from '@kit.MediaKit';
 audioBitrate?: number
 ```
 
-Audio bit rate, in bit/s. This value is used for both internal capture and external capture (using microphones).The default value is **96000**.
+Audio bit rate, in bit/s. This value is used for both internal capture and external capture (using microphones). The default value is **96000**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int-End-->
 
@@ -36,11 +40,13 @@ Audio bit rate, in bit/s. This value is used for both internal capture and exter
 audioChannelCount?: number
 ```
 
-Number of audio channels. This value is used for both internal capture and external capture (using microphones).Only **1** and **2** (default) are supported.
+Number of audio channels. This value is used for both internal capture and external capture (using microphones). Only **1** and **2** (default) are supported.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int--><!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int-End-->
 
@@ -56,7 +62,9 @@ Audio sampling rate, in Hz. This value is used for both internal capture and ext
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int--><!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int-End-->
 
@@ -72,7 +80,9 @@ ID of the display used for screen capture. By default, the main screen is captur
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-displayId?: int--><!--Device-AVScreenCaptureRecordConfig-displayId?: int-End-->
 
@@ -88,7 +98,9 @@ FD of the file output.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-fd: int--><!--Device-AVScreenCaptureRecordConfig-fd: int-End-->
 
@@ -104,7 +116,9 @@ Video fill mode during screen capture.
 
 **Type:** [AVScreenCaptureFillMode](arkts-media-media-avscreencapturefillmode-e.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode--><!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode-End-->
 
@@ -120,7 +134,9 @@ Video height, in px. The default value varies according to the display in use.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-frameHeight?: int--><!--Device-AVScreenCaptureRecordConfig-frameHeight?: int-End-->
 
@@ -136,7 +152,9 @@ Video width, in px. The default value varies according to the display in use.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-frameWidth?: int--><!--Device-AVScreenCaptureRecordConfig-frameWidth?: int-End-->
 
@@ -152,7 +170,9 @@ Encoding and container format used. The default value is **SCREEN_RECORD_PRESET_
 
 **Type:** [AVScreenCaptureRecordPreset](arkts-media-media-avscreencapturerecordpreset-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset--><!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset-End-->
 
@@ -170,7 +190,9 @@ Screen Capture Policy Configuration Fields
 
 **Default:** {default value of the property} [Required if provided]
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy--><!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy-End-->
 
@@ -186,7 +208,9 @@ Video bit rate, in bit/s. The default value is **10000000**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int-End-->
 

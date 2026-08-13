@@ -3,6 +3,7 @@
 ## ImageSpan
 
 ```TypeScript
+@ComponentBuilder
 export declare function ImageSpan(
     value: ResourceStr | PixelMap
 ): ImageSpanAttribute
@@ -14,9 +15,11 @@ Defines ImageSpan Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute--><!--Device-unnamed-export declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines ImageSpan Component.
 
 | Type | Description |
 | --- | --- |
-| [ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md) |  |
+| ImageSpanAttribute |  |
 
 
 ## ImageSpan
 
 ```TypeScript
+@Builder
 export declare function ImageSpan(
     style: CustomBuilderT<ImageSpanAttribute>,
 ): ImageSpanAttribute
@@ -47,11 +51,11 @@ Defines ImageSpan Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute--><!--Device-unnamed-export declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute--><!--Device-unnamed-@Builderexport declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines ImageSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md)&gt; | Yes | ImageSpan attribute instance |
+| style | CustomBuilderT&lt;ImageSpanAttribute&gt; | Yes | ImageSpan attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md) |  |
+| ImageSpanAttribute |  |
 

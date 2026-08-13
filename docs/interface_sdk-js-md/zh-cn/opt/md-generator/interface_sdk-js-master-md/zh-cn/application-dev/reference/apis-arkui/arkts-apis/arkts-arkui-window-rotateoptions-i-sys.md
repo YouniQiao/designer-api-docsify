@@ -2,7 +2,9 @@
 
 旋转参数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface RotateOptions--><!--Device-window-interface RotateOptions-End-->
 
@@ -20,7 +22,9 @@ pivotX?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotateOptions-pivotX?: double--><!--Device-RotateOptions-pivotX?: double-End-->
 
@@ -38,7 +42,9 @@ pivotY?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotateOptions-pivotY?: double--><!--Device-RotateOptions-pivotY?: double-End-->
 
@@ -56,7 +62,9 @@ x?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotateOptions-x?: double--><!--Device-RotateOptions-x?: double-End-->
 
@@ -74,7 +82,9 @@ y?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotateOptions-y?: double--><!--Device-RotateOptions-y?: double-End-->
 
@@ -92,7 +102,9 @@ z?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotateOptions-z?: double--><!--Device-RotateOptions-z?: double-End-->
 

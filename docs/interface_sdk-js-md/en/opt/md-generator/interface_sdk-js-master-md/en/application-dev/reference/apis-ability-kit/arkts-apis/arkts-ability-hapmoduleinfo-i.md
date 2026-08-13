@@ -2,7 +2,9 @@
 
 The module defines the HAP module information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface HapModuleInfo--><!--Device-unnamed-export interface HapModuleInfo-End-->
 
@@ -14,13 +16,13 @@ The module defines the HAP module information.
 readonly abilitiesInfo: Array<AbilityInfo>
 ```
 
-Information about all ability components of the current module. The information can be obtained by passing in  
-**GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Information about all ability components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,9 +40,11 @@ Installation path of the module.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HapModuleInfo-readonly codePath: string--><!--Device-HapModuleInfo-readonly codePath: string-End-->
 
@@ -56,7 +60,9 @@ Dynamic shared libraries on which the module depends.
 
 **Type:** Array&lt;[Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,7 +80,9 @@ Module description.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -92,7 +100,9 @@ ID of the module description.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,7 +120,9 @@ Array of [device types](../../../quick-start/module-configuration-file.md#device
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -124,12 +136,13 @@ Array of [device types](../../../quick-start/module-configuration-file.md#device
 readonly extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
 ```
 
-Information about all ExtensionAbility components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** to the **bundleFlags**parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Information about all ExtensionAbility components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -143,15 +156,15 @@ Information about all ExtensionAbility components of the current module. The inf
 readonly fileContextMenuConfig: string
 ```
 
-File menu configuration of the module. The information can be obtained by passing in  
-**GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+File menu configuration of the module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HapModuleInfo-readonly fileContextMenuConfig: string--><!--Device-HapModuleInfo-readonly fileContextMenuConfig: string-End-->
 
@@ -167,7 +180,9 @@ Hash value of the module.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -181,13 +196,13 @@ Hash value of the module.
 readonly icon: string
 ```
 
-[Icon](../../../quick-start/layered-image.md) for the entry ability of the current module. It is the index of the icon resource file and should match the value of **icon** in the  
-[abilities](../../../quick-start/module-configuration-file.md#abilities) or  
-[extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
+[Icon](../../../quick-start/layered-image.md) for the entry ability of the current module. It is the index of the icon resource file and should match the value of **icon** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) or [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -205,7 +220,9 @@ readonly iconId: number
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -219,11 +236,13 @@ readonly iconId: number
 readonly installationFree: boolean
 ```
 
-Whether the module supports the installation-free feature. Installation-free means that the module does not need to be explicitly installed through an app market. **true** if the module supports installation-free, **false**otherwise.
+Whether the module supports the installation-free feature. Installation-free means that the module does not need to be explicitly installed through an app market. **true** if the module supports installation-free, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -237,12 +256,13 @@ Whether the module supports the installation-free feature. Installation-free mea
 readonly label: string
 ```
 
-Label of the entry ability of the current module. It is the index of a string resource and should match the value of **label** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) or  
-[extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
+Label of the entry ability of the current module. It is the index of a string resource and should match the value of **label** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) or [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -260,7 +280,9 @@ readonly labelId: number
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -278,7 +300,9 @@ Name of the UIAbility or ExtensionAbility that serves as the entry of the curren
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -292,12 +316,13 @@ Name of the UIAbility or ExtensionAbility that serves as the entry of the curren
 readonly metadata: Array<Metadata>
 ```
 
-Metadata of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Metadata of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -315,7 +340,9 @@ Module name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -333,7 +360,9 @@ Local library file path of the module in the application.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-readonly nativeLibraryPath: string--><!--Device-HapModuleInfo-readonly nativeLibraryPath: string-End-->
 
@@ -349,7 +378,9 @@ Preloaded modules in the atomic service.
 
 **Type:** Array&lt;[PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -363,15 +394,15 @@ Preloaded modules in the atomic service.
 readonly routerMap: Array<RouterItem>
 ```
 
-[Router table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and  
-**GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+[Router table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HapModuleInfo-readonly routerMap: Array<RouterItem>--><!--Device-HapModuleInfo-readonly routerMap: Array<RouterItem>-End-->
 
@@ -387,7 +418,9 @@ Type of the module.
 
 **Type:** bundleManager.ModuleType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

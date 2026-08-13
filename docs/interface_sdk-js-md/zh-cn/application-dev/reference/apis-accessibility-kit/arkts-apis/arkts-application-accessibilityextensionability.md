@@ -1,8 +1,5 @@
 # @ohos.application.AccessibilityExtensionAbility
 
-AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力，能力包括成功连接无障碍服务、断开无障碍服务、处理无障碍服务事件和无障碍按键事件等。
-
-
 ## 汇总
 
 ### 类
@@ -38,9 +35,9 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能�
 | 名称 | 说明 |
 | --- | --- |
 | [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | 表示无障碍节点元素，请参考[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)。 |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | 表示辅助功能扩展的上下文环境，请参考[AccessibilityExtensionContext](./application/AccessibilityExtensionContext)。 |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | 表示辅助功能扩展的上下文环境，请参考AccessibilityExtensionContext。 |
 | [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | 表示[ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues)的属性名称。 |
-| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | 表示节点元素具备的属性名称及属性值类型信息，请参考  [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues)。 |
+| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | 表示节点元素具备的属性名称及属性值类型信息，请参考 [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues)。 |
 | [FocusDirection](arkts-accessibility-focusdirection-t.md) | 表示查询下一焦点元素的方向，请参考[FocusDirection](arkts-accessibility-focusdirection-t.md#FocusDirection)。 |
 | [FocusType](arkts-accessibility-focustype-t.md) | 表示查询焦点元素的类型，请参考[FocusType](arkts-accessibility-focustype-t.md#FocusType)。 |
 | [GestureType](arkts-accessibility-gesturetype-t.md) | 手势事件类型。 |

@@ -10,7 +10,9 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -30,16 +32,16 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 返回广播句柄promise对象。 |
+| Promise&lt;int&gt; | 返回广播句柄promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [36100043](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID. |
-| [36100040](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100040-整数超出范围) | Integer out of range. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID. |
+| [36100040](../errorcode-nearlink-service.md#36100040-整数超出范围) | Integer out of range. |
 

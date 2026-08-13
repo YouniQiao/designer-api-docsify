@@ -44,7 +44,7 @@ data: string
 
 **废弃版本：** 9
 
-**替代接口：** [extras](ohos.request.agent.Progress.extras)
+**替代接口：** extras
 
 <!--Device-UploadResponse-data: string--><!--Device-UploadResponse-data: string-End-->
 
@@ -64,7 +64,7 @@ headers: Object
 
 **废弃版本：** 9
 
-**替代接口：** [headers](ohos.request.agent.HttpResponse.headers)
+**替代接口：** headers
 
 <!--Device-UploadResponse-headers: Object--><!--Device-UploadResponse-headers: Object-End-->
 

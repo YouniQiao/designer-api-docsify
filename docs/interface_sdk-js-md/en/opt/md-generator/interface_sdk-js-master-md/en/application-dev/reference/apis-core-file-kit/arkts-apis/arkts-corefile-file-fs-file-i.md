@@ -4,6 +4,8 @@ Represents a **File** object opened by **open()**.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface File--><!--Device-unnamed-declare interface File-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -23,6 +25,8 @@ getParent(): string
 Obtains the parent directory of this file object.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-File-getParent(): string--><!--Device-File-getParent(): string-End-->
 
@@ -60,6 +64,8 @@ lock(exclusive?: boolean): Promise<void>
 Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-File-lock(exclusive?: boolean): Promise<void>--><!--Device-File-lock(exclusive?: boolean): Promise<void>-End-->
 
@@ -114,6 +120,8 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-File-lock(callback: AsyncCallback<void>): void--><!--Device-File-lock(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -161,6 +169,8 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void--><!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -211,6 +221,8 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-File-tryLock(exclusive?: boolean): void--><!--Device-File-tryLock(exclusive?: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -252,6 +264,8 @@ Unlocks a file. This API returns the result synchronously.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-File-unlock(): void--><!--Device-File-unlock(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -290,6 +304,8 @@ FD of the file.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-File-readonly fd: number--><!--Device-File-readonly fd: number-End-->
@@ -308,6 +324,8 @@ Name of the file.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-File-readonly name: string--><!--Device-File-readonly name: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -323,6 +341,8 @@ Path of the file.
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-File-readonly path: string--><!--Device-File-readonly path: string-End-->
 

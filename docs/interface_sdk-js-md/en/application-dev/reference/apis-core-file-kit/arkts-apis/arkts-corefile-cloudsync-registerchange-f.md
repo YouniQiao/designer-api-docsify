@@ -14,9 +14,11 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 
 Subscribes to the change of a file. The callback returns the changed data.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void--><!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void-End-->
 
@@ -28,13 +30,13 @@ Subscribes to the change of a file. The callback returns the changed data.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to download. |
 | recursion | boolean | Yes | Whether to listen for the change of the URI, subfiles, and subdirectories. The value **true** means to listen for the change of the URI, subfiles, and subdirectories; the value **false** means to only listen for the change of the URI. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | Yes | Callback used to return the changed data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | Yes | Callback used to return the changed data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |

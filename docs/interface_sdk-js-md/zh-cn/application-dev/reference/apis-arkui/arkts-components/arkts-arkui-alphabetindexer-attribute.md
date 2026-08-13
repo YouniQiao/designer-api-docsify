@@ -1,22 +1,16 @@
 # AlphabetIndexer属性/事件
 
-[width](CommonMethod#width(value: Length))属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
+width属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。 padding属性默认为4vp。 文本最大的字体缩放倍数maxFontScale和最小的字体缩放倍数minFontScale 皆为1，不跟随系统字体大小调节变化。 除支持通用属性外，还支持以下属性： 除支持通用事件外，还支持以下事件：
 
-[padding](CommonMethod#padding)属性默认为4vp。
-
-文本最大的字体缩放倍数[maxFontScale](TextAttribute#maxFontScale)和最小的字体缩放倍数[minFontScale](TextAttribute#minFontScale)皆为1，不跟随系统字体大小调节变化。
-
-除支持[通用属性](common)外，还支持以下属性：
-
-除支持[通用事件](common)外，还支持以下事件：
-
-**继承/实现关系：** AlphabetIndexerAttribute extends [CommonMethod<AlphabetIndexerAttribute>](CommonMethod<AlphabetIndexerAttribute>)
+**继承/实现关系：** AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
-<!--Device-unnamed-declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>--><!--Device-unnamed-declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class AlphabetIndexerAttribute--><!--Device-unnamed-declare class AlphabetIndexerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +26,8 @@ alignStyle(value: IndexerAlign, offset?: Length)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-alignStyle(value: IndexerAlign, offset?: Length): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-alignStyle(value: IndexerAlign, offset?: Length): AlphabetIndexerAttribute-End-->
@@ -43,7 +39,7 @@ alignStyle(value: IndexerAlign, offset?: Length)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | 是 | 索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。&lt;br/&gt;默认值：IndexerAlign.END |
-| offset | Length | 否 | 提示弹窗与索引条之间间距，大于等于0为有效值，在不设置或设置为小于0的情况下间距与popupPosition.x相同。与 [popupPosition](AlphabetIndexerAttribute#popupPosition)同时设置时，水平方向上offset生效，竖直方向上popupPosition.y生 效。<br>**起始版本：** 10 |
+| offset | Length | 否 | 提示弹窗与索引条之间间距，大于等于0为有效值，在不设置或设置为小于0的情况下间距与popupPosition.x相同。与 [popupPosition](#popupPosition)同时设置时，水平方向上offset生效，竖直方向上popupPosition.y生 效。<br>**起始版本：** 10 |
 
 ## autoCollapse
 
@@ -51,25 +47,13 @@ alignStyle(value: IndexerAlign, offset?: Length)
 autoCollapse(value: boolean)
 ```
 
-设置是否使用自适应折叠模式。
-
-如果索引项第一项为“#”，当除去第一项后剩余索引项数量 <= 9时，选择全显示模式（所有索引项完整显示）；9 < 剩余索引项数量 &lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；剩余索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
-
-如果索引项第一项不为“#”，当所有索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 < 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
-
-> **说明：**
-
-&gt;&lt; 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
-
-&gt;&lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；所有索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
-
-> **说明：**
-
-> 从API version 12开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
+设置是否使用自适应折叠模式。 如果索引项第一项为“#”，当除去第一项后剩余索引项数量 <= 9时，选择全显示模式（所有索引项完整显示）；9 < 剩余索引项数量 &lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 剩余索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。 如果索引项第一项不为“#”，当所有索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 < 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。 > **说明：** &gt;&lt; 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。 &gt;&lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 所有索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。 > **说明：** > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,6 +81,8 @@ color(value: ResourceColor)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-color(value: ResourceColor): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-color(value: ResourceColor): AlphabetIndexerAttribute-End-->
@@ -120,6 +106,8 @@ enableHapticFeedback(value: boolean)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -147,6 +135,8 @@ font(value: Font)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-font(value: Font): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-font(value: Font): AlphabetIndexerAttribute-End-->
@@ -170,6 +160,8 @@ itemBorderRadius(value: number)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -197,6 +189,8 @@ itemSize(value: string | number)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-itemSize(value: string | number): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-itemSize(value: string | number): AlphabetIndexerAttribute-End-->
@@ -207,7 +201,7 @@ itemSize(value: string | number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number | 是 | 索引项区域大小，索引项区域为正方形，即正方形边长。不支持设置为百分比。&lt;br/&gt;实际取值会受到组件尺寸的约束，索引项宽度最大为组件宽度-左右 [padding](CommonMethod#padding)，索引项高度最大为（组件高度-上下[padding](CommonMethod#padding)）/索引项个数。传入值小于等于0时，按照 默认值处理。&lt;br/&gt;默认值：16.0&lt;br/&gt;单位：vp |
+| value | string \| number | 是 | 索引项区域大小，索引项区域为正方形，即正方形边长。不支持设置为百分比。&lt;br/&gt;实际取值会受到组件尺寸的约束，索引项宽度最大为组件宽度-左右 padding，索引项高度最大为（组件高度-上下padding）/索引项个数。传入值小于等于0时，按照 默认值处理。&lt;br/&gt;默认值：16.0&lt;br/&gt;单位：vp |
 
 ## onPopupSelect
 
@@ -215,11 +209,13 @@ itemSize(value: string | number)
 onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback)
 ```
 
-提示弹窗二级索引选中事件，回调参数为当前选中二级索引项索引。仅在[usingPopup](#usingpopup)为true时触发。
+提示弹窗二级索引选中事件，回调参数为当前选中二级索引项索引。仅在[usingPopup](#usingPopup)为true时触发。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -231,7 +227,7 @@ onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | 是 | 回调函数，用于处理提示弹窗二级索引选中事件。 需先设置[usingPopup](#usingpopup)为true。<br>**起始版本：** 18 |
+| callback | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | 是 | 回调函数，用于处理提示弹窗二级索引选中事件。 需先设置[usingPopup](#usingPopup)为true。<br>**起始版本：** 18 |
 
 ## onRequestPopupData
 
@@ -245,6 +241,8 @@ onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback): AlphabetIndexerAttribute-End-->
@@ -255,7 +253,7 @@ onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | 是 | 回调函数，用于提供提示弹窗二级索引项内容。 需先设置[usingPopup](#usingpopup)为true。<br>**起始版本：** 18 |
+| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | 是 | 回调函数，用于提供提示弹窗二级索引项内容。 需先设置[usingPopup](#usingPopup)为true。<br>**起始版本：** 18 |
 
 ## onSelect
 
@@ -268,6 +266,8 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -287,11 +287,7 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 onSelected(callback: (index: number) => void)
 ```
 
-注册索引项选中事件回调，回调参数为当前选中项索引。
-
-> **说明：**
-
-> 从API version 7开始支持，从API version 8开始废弃，建议使用[onSelect](AlphabetIndexerAttribute#onSelect)替代。
+注册索引项选中事件回调，回调参数为当前选中项索引。 > **说明：** > 从API version 7开始支持，从API version 8开始废弃，建议使用[onSelect](#onSelect)替代。
 
 **起始版本：** 7
 
@@ -299,7 +295,7 @@ onSelected(callback: (index: number) => void)
 
 **废弃版本：** 8
 
-**替代接口：** [onSelect](onSelect)
+**替代接口：** [onSelect](#onSelect)
 
 <!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute-End-->
 
@@ -317,21 +313,13 @@ onSelected(callback: (index: number) => void)
 popupBackground(value: ResourceColor)
 ```
 
-设置提示弹窗背景颜色。
-
-该接口未被主动调用或参数value传入undefined时：
-
-API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，显示为白色。
-
-对于API version 12至API version 24版本，默认为#66808080，显示为半透明的灰色。
-
-从API版本26.0.0开始，如果[popupBackground](AlphabetIndexerAttribute#popupBackground)  
-[popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle)均未被主动调用或参数value传入undefined，高档、中档算力设备默认显示为沉浸式材质  
-[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档算力设备默认显示为白色背景。
+设置提示弹窗背景颜色。 该接口未被主动调用或参数value传入undefined时： API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，显示为白色。 对于API version 12至API version 24版本，默认为#66808080，显示为半透明的灰色。 从API版本26.0.0开始，如果[popupBackground](#popupBackground) [popupBackgroundBlurStyle](#popupBackgroundBlurStyle)均未被主动调用或 参数value传入undefined，高档、中档算力设备默认显示为沉浸式材质 [ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档算力设备默认显示为白色背景。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -343,7 +331,7 @@ API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | 提示弹窗背景颜色。&lt;br/&gt;弹窗的背景模糊材质效果会对背景色产生影响，可通过设置 [popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle)属性值为NONE关闭背景模糊材质效果。&lt;br/&gt; |
+| value | ResourceColor | 是 | 提示弹窗背景颜色。&lt;br/&gt;弹窗的背景模糊材质效果会对背景色产生影响，可通过设置 [popupBackgroundBlurStyle](#popupBackgroundBlurStyle)属性值为NONE关闭背景模糊材质效果。&lt;br/&gt; |
 
 ## popupBackgroundBlurStyle
 
@@ -351,12 +339,13 @@ API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，�
 popupBackgroundBlurStyle(value: BlurStyle)
 ```
 
-设置提示弹窗的背景模糊材质。API版本26.0.0之前版本，未通过该接口设置时，默认为组件普通材质模糊，对应取值为BlurStyle中的COMPONENT_REGULAR。从API版本26.0.0开始，  
-[popupBackground](AlphabetIndexerAttribute#popupBackground)和popupBackgroundBlurStyle均未被主动调用或者传入undefined时，在高档、中档算力设备默认显示为沉浸式材质[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档算力设备默认显示为白色背景。
+设置提示弹窗的背景模糊材质。API版本26.0.0之前版本，未通过该接口设置时，默认为组件普通材质模糊，对应取值为BlurStyle中的COMPONENT_REGULAR。从API版本26.0.0开始， [popupBackground](#popupBackground)和popupBackgroundBlurStyle均未被主动调用或者传入undefined时，在高档 、中档算力设备默认显示为沉浸式材质[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档 算力设备默认显示为白色背景。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -370,7 +359,7 @@ popupBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BlurStyle | 是 | 设置提示弹窗的背景模糊材质。&lt;br/&gt;弹窗的背景模糊材质效果会对背景色 [popupBackground](AlphabetIndexerAttribute#popupBackground)产生影响，可通过设置属性值为NONE关闭背景模糊材质效果。 |
+| value | BlurStyle | 是 | 设置提示弹窗的背景模糊材质。&lt;br/&gt;弹窗的背景模糊材质效果会对背景色 [popupBackground](#popupBackground)产生影响，可通过设置属性值为NONE关闭背景模糊材质效果。 |
 
 ## popupColor
 
@@ -383,6 +372,8 @@ popupColor(value: ResourceColor)
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -408,6 +399,8 @@ popupFont(value: Font)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-popupFont(value: Font): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-popupFont(value: Font): AlphabetIndexerAttribute-End-->
@@ -431,6 +424,8 @@ popupItemBackgroundColor(value: ResourceColor)
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -458,6 +453,8 @@ popupItemBorderRadius(value: number)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -483,6 +480,8 @@ popupItemFont(value: Font)
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -510,6 +509,8 @@ popupPosition(value: Position)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-popupPosition(value: Position): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-popupPosition(value: Position): AlphabetIndexerAttribute-End-->
@@ -520,7 +521,7 @@ popupPosition(value: Position)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position | 是 | 弹出窗口相对于索引条上边框中点的位置。与[alignStyle](#alignstyle)同时设置时， 水平方向由[alignStyle](#alignstyle)的offset参数控制，竖直方向上value.y生效。&lt;br/&gt;默认值：{x: 60.0, y: 48.0}&lt;br/&gt;单位：vp |
+| value | Position | 是 | 弹出窗口相对于索引条上边框中点的位置。与[alignStyle](#alignStyle)同时设置时， 水平方向由[alignStyle](#alignStyle)的offset参数控制，竖直方向上value.y生效。&lt;br/&gt;默认值：{x: 60.0, y: 48.0}&lt;br/&gt;单位：vp |
 
 ## popupSelectedColor
 
@@ -533,6 +534,8 @@ popupSelectedColor(value: ResourceColor)
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -560,6 +563,8 @@ popupTitleBackground(value: ResourceColor)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -586,6 +591,8 @@ popupUnselectedColor(value: ResourceColor)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -606,13 +613,13 @@ popupUnselectedColor(value: ResourceColor)
 selected(index: number)
 ```
 
-设置选中项索引值。与[AlphabetIndexerOptions](#alphabetindexeroptions18对象说明)中的selected同时设置时，该属性的优先级更高。
-
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+设置选中项索引值。与[AlphabetIndexerOptions](#alphabetindexeroptions18对象说明)中的selected同时设置时，该属性的优先级更高。 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -638,6 +645,8 @@ selectedBackgroundColor(value: ResourceColor)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-selectedBackgroundColor(value: ResourceColor): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-selectedBackgroundColor(value: ResourceColor): AlphabetIndexerAttribute-End-->
@@ -661,6 +670,8 @@ selectedColor(value: ResourceColor)
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -686,6 +697,8 @@ selectedFont(value: Font)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AlphabetIndexerAttribute-selectedFont(value: Font): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-selectedFont(value: Font): AlphabetIndexerAttribute-End-->
@@ -709,6 +722,8 @@ usingPopup(value: boolean)
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

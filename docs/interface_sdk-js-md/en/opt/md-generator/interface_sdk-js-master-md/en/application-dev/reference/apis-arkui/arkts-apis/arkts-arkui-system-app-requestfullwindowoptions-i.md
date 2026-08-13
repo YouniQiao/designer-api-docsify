@@ -4,6 +4,8 @@ Defines the option of RequestFullWindow interface.
 
 **Since:** 3
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface RequestFullWindowOptions--><!--Device-unnamed-export interface RequestFullWindowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Defines the number of animation options.
 **Type:** number
 
 **Since:** 3
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,27 +4,9 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-advertising-export interface AdRequestParams--><!--Device-advertising-export interface AdRequestParams-End-->
-
-**系统能力：** SystemCapability.Advertising.Ads
-
-## [key: string]
-
-```TypeScript
-[key: string]: number | boolean | string | undefined
-```
-
-自定义参数。
-
-&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
-
-**类型：** number \| boolean \| string \| undefined
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined--><!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -39,6 +21,8 @@ adCount?: number
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -58,6 +42,8 @@ adHeight?: number
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AdRequestParams-adHeight?: number--><!--Device-AdRequestParams-adHeight?: number-End-->
@@ -70,13 +56,13 @@ adHeight?: number
 adId: string
 ```
 
-广告位ID。
-
-说明：getAdRequestBody接口可以不传该参数。
+广告位ID。 说明：getAdRequestBody接口可以不传该参数。
 
 **类型：** string
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,13 +76,13 @@ adId: string
 adSearchKeyword?: string
 ```
 
-广告关键字。不填默认""。
-
-说明：暂不支持使用。
+广告关键字。不填默认""。 说明：暂不支持使用。
 
 **类型：** string
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -110,20 +96,13 @@ adSearchKeyword?: string
 adType?: number
 ```
 
-请求的广告类型。
-
-- 1：开屏广告。  
-- 3：原生广告。  
-- 7：激励广告。  
-- 8：横幅广告。  
-- 12：插屏广告。  
-- 60：贴片广告。
-
-不填默认为原生广告类型。
+请求的广告类型。 - 1：开屏广告。 - 3：原生广告。 - 7：激励广告。 - 8：横幅广告。 - 12：插屏广告。 - 60：贴片广告。 不填默认为原生广告类型。
 
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -142,6 +121,8 @@ adWidth?: number
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

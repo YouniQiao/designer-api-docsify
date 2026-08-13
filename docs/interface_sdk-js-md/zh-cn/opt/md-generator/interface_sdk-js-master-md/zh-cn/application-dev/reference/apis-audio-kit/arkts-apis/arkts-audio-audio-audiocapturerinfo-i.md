@@ -2,7 +2,9 @@
 
 描述音频采集器信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioCapturerInfo--><!--Device-audio-interface AudioCapturerInfo-End-->
 
@@ -14,13 +16,13 @@
 capturerFlags: number
 ```
 
-录制流行为标志。
-
-设置为0即可。
+录制流行为标志。 设置为0即可。
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerInfo-capturerFlags: int--><!--Device-AudioCapturerInfo-capturerFlags: int-End-->
 
@@ -36,7 +38,9 @@ source: SourceType
 
 **类型：** SourceType
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerInfo-source: SourceType--><!--Device-AudioCapturerInfo-source: SourceType-End-->
 

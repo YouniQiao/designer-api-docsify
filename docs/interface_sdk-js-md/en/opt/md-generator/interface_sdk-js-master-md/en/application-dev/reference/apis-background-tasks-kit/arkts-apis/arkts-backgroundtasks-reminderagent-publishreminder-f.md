@@ -12,14 +12,13 @@ import { reminderAgent } from '@kit.BackgroundTasksKit';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void
 ```
 
-Publishes a reminder through the reminder agent. This API uses an asynchronous callback to return the result. It can be called only when notification is enabled for the application through   
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)
+Publishes a reminder through the reminder agent. This API uses an asynchronous callback to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishReminder](reminderAgentManager.publishReminder)
+**Substitutes:** publishReminder
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -57,14 +56,13 @@ reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) =>
 function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ```
 
-Publishes a reminder through the reminder agent. This API uses a promise to return the result. It can be called only when notification is enabled for the application through   
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)
+Publishes a reminder through the reminder agent. This API uses a promise to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishReminder](reminderAgentManager.publishReminder)
+**Substitutes:** publishReminder
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 

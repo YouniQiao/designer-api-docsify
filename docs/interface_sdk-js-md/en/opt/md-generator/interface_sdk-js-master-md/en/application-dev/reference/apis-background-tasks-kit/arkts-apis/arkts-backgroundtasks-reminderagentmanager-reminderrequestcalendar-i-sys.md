@@ -1,14 +1,14 @@
 # ReminderRequestCalendar
 
-ReminderRequestCalendar extends ReminderRequest
-
-Defines a reminder for a calendar event.
+ReminderRequestCalendar extends ReminderRequest Defines a reminder for a calendar event.
 
 **Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-reminderAgentManager-interface ReminderRequestCalendar--><!--Device-reminderAgentManager-interface ReminderRequestCalendar-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -28,7 +28,9 @@ Custom reminder, which specifies the ServiceExtensionAbility to start.
 
 **Type:** WantAgent
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequestCalendar-rruleWantAgent?: WantAgent--><!--Device-ReminderRequestCalendar-rruleWantAgent?: WantAgent-End-->
 

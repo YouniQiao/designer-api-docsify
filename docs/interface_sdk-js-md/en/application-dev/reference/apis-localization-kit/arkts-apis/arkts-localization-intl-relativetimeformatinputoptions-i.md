@@ -1,6 +1,6 @@
 # RelativeTimeFormatInputOptions
 
-Defines the configuration options for a **RelativeTimeFormat** object.Since API version 9, the attributes in **RelativeTimeFormatInputOptions** are optional.
+Defines the configuration options for a **RelativeTimeFormat** object. Since API version 9, the attributes in **RelativeTimeFormatInputOptions** are optional.
 
 **Since:** 8
 
@@ -8,7 +8,7 @@ Defines the configuration options for a **RelativeTimeFormat** object.Since API 
 
 **Deprecated since:** 20
 
-**Substitutes:** [RelativeTimeFormatOptions]]([Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options))
+**Substitutes:** [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options)
 
 <!--Device-intl-export interface RelativeTimeFormatInputOptions--><!--Device-intl-export interface RelativeTimeFormatInputOptions-End-->
 
@@ -26,9 +26,7 @@ import { intl } from '@kit.LocalizationKit';
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be **lookup** or **best fit**.
-
-The default value is **best fit**.
+Locale matching algorithm. The value can be **lookup** or **best fit**. The default value is **best fit**.
 
 **Type:** string
 
@@ -38,7 +36,7 @@ The default value is **best fit**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [localeMatcher]]([Intl.RelativeTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#localematcher))
+**Substitutes:** [Intl.RelativeTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#localematcher)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,12 +50,7 @@ The default value is **best fit**.
 numeric?: string
 ```
 
-Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**.
-
-The default value is **always**.
-
-For details about their display effects, see   
-[Table 23](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**. The default value is **always**. For details about their display effects, see Table 23.
 
 **Type:** string
 
@@ -67,7 +60,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [numeric]]([Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric))
+**Substitutes:** [Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -81,9 +74,7 @@ For details about their display effects, see
 style?: string
 ```
 
-Length of an internationalized message. The value can be **long**, **short**, or **narrow**.
-
-The default value is **long**.
+Length of an internationalized message. The value can be **long**, **short**, or **narrow**. The default value is **long**.
 
 **Type:** string
 
@@ -93,7 +84,7 @@ The default value is **long**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [style]]([Intl.RelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#style))
+**Substitutes:** [Intl.RelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#style)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

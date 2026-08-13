@@ -1,9 +1,10 @@
 # ProgressSignal
 
-Defines a function for canceling the paste task. This parameter is valid only when  
-[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator) is set to **NONE**.
+Defines a function for canceling the paste task. This parameter is valid only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator) is set to **NONE**.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-export class ProgressSignal--><!--Device-pasteboard-export class ProgressSignal-End-->
 
@@ -23,9 +24,11 @@ cancel(): void
 
 Cancels an ongoing paste task.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ProgressSignal-cancel(): void--><!--Device-ProgressSignal-cancel(): void-End-->
 

@@ -3,6 +3,7 @@
 ## Span
 
 ```TypeScript
+@ComponentBuilder
 export declare function Span(
     value: string | Resource
 ): SpanAttribute
@@ -14,9 +15,11 @@ Defines Span Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Span(    value: string | Resource): SpanAttribute--><!--Device-unnamed-export declare function Span(    value: string | Resource): SpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Span(    value: string | Resource): SpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Span(    value: string | Resource): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines Span Component.
 
 | Type | Description |
 | --- | --- |
-| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
+| SpanAttribute |  |
 
 
 ## Span
 
 ```TypeScript
+@Builder
 export declare function Span(
     style: CustomBuilderT<SpanAttribute>,
 ): SpanAttribute
@@ -47,11 +51,11 @@ Defines Span Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute--><!--Device-unnamed-export declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute--><!--Device-unnamed-@Builderexport declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines Span Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SpanAttribute](arkts-arkui-span-spanattribute-i.md)&gt; | Yes | Span attribute instance |
+| style | CustomBuilderT&lt;SpanAttribute&gt; | Yes | Span attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
+| SpanAttribute |  |
 

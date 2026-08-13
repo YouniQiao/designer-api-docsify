@@ -4,6 +4,8 @@ ToolInfo describes the basic information of a cli tool.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ToolInfo--><!--Device-unnamed-export interface ToolInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -22,6 +24,8 @@ The description of the CLI tool.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly description: string--><!--Device-ToolInfo-readonly description: string-End-->
@@ -38,9 +42,11 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 Schemas about custom event.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Supported event types for custom event.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly eventTypes?: Array<string>--><!--Device-ToolInfo-readonly eventTypes?: Array<string>-End-->
@@ -81,6 +89,8 @@ The executable path of the CLI tool.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,6 +112,8 @@ Whether this tool has subcommand.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly hasSubCommand?: boolean--><!--Device-ToolInfo-readonly hasSubCommand?: boolean-End-->
@@ -118,9 +130,11 @@ readonly inputSchema: Record<string, Object>
 
 The input schema of the CLI tool.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,6 +158,8 @@ Whether the tool can be executed when the screen is locked.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean--><!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean-End-->
@@ -164,6 +180,8 @@ The name of the CLI tool.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly name: string--><!--Device-ToolInfo-readonly name: string-End-->
@@ -180,9 +198,11 @@ readonly outputSchema: Record<string, Object>
 
 The output schema of the CLI tool.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,6 +224,8 @@ The require permissions of the CLI tool.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly requirePermissions?: Array<string>--><!--Device-ToolInfo-readonly requirePermissions?: Array<string>-End-->
@@ -220,9 +242,11 @@ readonly subcommands?: Record<string, SubCommandInfo>
 
 SubCommandInfo list.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i-sys.md)&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i-sys.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -243,6 +267,8 @@ The version of the CLI tool (format defined by provider, e.g., "1.0.0").
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

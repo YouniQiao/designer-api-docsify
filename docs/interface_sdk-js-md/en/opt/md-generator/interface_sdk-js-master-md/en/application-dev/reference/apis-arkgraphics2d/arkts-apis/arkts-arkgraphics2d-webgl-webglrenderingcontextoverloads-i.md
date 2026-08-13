@@ -4,6 +4,8 @@ WebGL 1.0
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface WebGLRenderingContextOverloads--><!--Device-unnamed-interface WebGLRenderingContextOverloads-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -17,6 +19,8 @@ bufferData(target: GLenum, size: GLsizeiptr, usage: GLenum): void
 Sets buffer data
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,6 +46,8 @@ Sets buffer data from BufferSource
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, data: BufferSource | null, usage: GLenum): void--><!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, data: BufferSource | null, usage: GLenum): void-End-->
@@ -65,6 +71,8 @@ bufferSubData(target: GLenum, offset: GLintptr, data: BufferSource): void
 Sets buffer sub data
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -98,6 +106,8 @@ Compressed texture image 2D
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-compressedTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      width: GLsizei,      height: GLsizei,      border: GLint,      data: ArrayBufferView,    ): void--><!--Device-WebGLRenderingContextOverloads-compressedTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      width: GLsizei,      height: GLsizei,      border: GLint,      data: ArrayBufferView,    ): void-End-->
@@ -114,7 +124,7 @@ Compressed texture image 2D
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| data | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 
 ## compressedTexSubImage2D
 
@@ -135,6 +145,8 @@ Compressed texture sub image 2D
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-compressedTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      data: ArrayBufferView,    ): void--><!--Device-WebGLRenderingContextOverloads-compressedTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      data: ArrayBufferView,    ): void-End-->
@@ -152,7 +164,7 @@ Compressed texture sub image 2D
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| data | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes |
 
 ## readPixels
 
@@ -172,6 +184,8 @@ Reads pixels from the framebuffer
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-readPixels(      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGLRenderingContextOverloads-readPixels(      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
@@ -188,7 +202,7 @@ Reads pixels from the framebuffer
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -210,6 +224,8 @@ Sets texture image 2D from pixels
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-texImage2D(      target: GLenum,      level: GLint,      internalformat: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGLRenderingContextOverloads-texImage2D(      target: GLenum,      level: GLint,      internalformat: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
@@ -228,7 +244,7 @@ Sets texture image 2D from pixels
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -246,6 +262,8 @@ texImage2D(
 Sets texture image 2D from TexImageSource
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -284,6 +302,8 @@ Sets texture sub image 2D from pixels
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-texSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGLRenderingContextOverloads-texSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
@@ -302,7 +322,7 @@ Sets texture sub image 2D from pixels
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texSubImage2D
 
@@ -321,6 +341,8 @@ texSubImage2D(
 Sets texture sub image 2D from TexImageSource
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -350,6 +372,8 @@ Sets uniform1fv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-uniform1fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform1fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
@@ -372,6 +396,8 @@ uniform1iv(location: WebGLUniformLocation | null, v: Int32List): void
 Sets uniform1iv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -396,6 +422,8 @@ Sets uniform2fv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-uniform2fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform2fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
@@ -418,6 +446,8 @@ uniform2iv(location: WebGLUniformLocation | null, v: Int32List): void
 Sets uniform2iv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -442,6 +472,8 @@ Sets uniform3fv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-uniform3fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform3fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
@@ -464,6 +496,8 @@ uniform3iv(location: WebGLUniformLocation | null, v: Int32List): void
 Sets uniform3iv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -488,6 +522,8 @@ Sets uniform4fv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-uniform4fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform4fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
@@ -511,6 +547,8 @@ Sets uniform4iv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-uniform4iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform4iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
@@ -533,6 +571,8 @@ uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, va
 Sets uniformMatrix2fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -558,6 +598,8 @@ Sets uniformMatrix3fv value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextOverloads-uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void-End-->
@@ -581,6 +623,8 @@ uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, va
 Sets uniformMatrix4fv value
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

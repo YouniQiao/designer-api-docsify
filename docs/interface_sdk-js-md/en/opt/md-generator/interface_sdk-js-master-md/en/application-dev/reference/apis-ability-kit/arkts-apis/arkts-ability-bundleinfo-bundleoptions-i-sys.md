@@ -2,7 +2,9 @@
 
 The bundle options of bundle manager
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BundleOptions--><!--Device-unnamed-export interface BundleOptions-End-->
 
@@ -22,6 +24,8 @@ Indicates ability name
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleOptions-abilityName?: string--><!--Device-BundleOptions-abilityName?: string-End-->
@@ -40,7 +44,9 @@ Indicates the app index.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleOptions-appIndex?: int--><!--Device-BundleOptions-appIndex?: int-End-->
 
@@ -59,6 +65,8 @@ Indicates bundle name
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +88,8 @@ Indicates module name
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleOptions-moduleName?: string--><!--Device-BundleOptions-moduleName?: string-End-->
@@ -98,7 +108,9 @@ Indicates the user id.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleOptions-userId?: int--><!--Device-BundleOptions-userId?: int-End-->
 

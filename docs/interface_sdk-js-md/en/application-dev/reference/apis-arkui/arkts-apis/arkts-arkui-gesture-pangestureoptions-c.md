@@ -6,6 +6,8 @@ Defines the PanGesture options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class PanGestureOptions--><!--Device-unnamed-export declare class PanGestureOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Constructor parameters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Get the pan direction attribute.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanGestureOptions-getDirection(): PanDirection--><!--Device-PanGestureOptions-getDirection(): PanDirection-End-->
@@ -64,11 +70,13 @@ Get the pan direction attribute.
 getDistance(): double
 ```
 
-Returns the pan gesture's distance.The unit is vp.
+Returns the pan gesture's distance. The unit is vp.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,6 +102,8 @@ Sets the direction attribute.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanGestureOptions-setDirection(value: PanDirection): void--><!--Device-PanGestureOptions-setDirection(value: PanDirection): void-End-->
@@ -118,6 +128,8 @@ Sets the setDistance attribute.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanGestureOptions-setDistance(value: double): void--><!--Device-PanGestureOptions-setDistance(value: double): void-End-->
@@ -141,6 +153,8 @@ Sets the setFingers attribute.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -18,7 +18,7 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteKeyItem](huks.deleteKeyItem(keyAlias:)
+**Substitutes:** [deleteKeyItem](arkts-universalkeystore-huks-deletekeyitem-f.md#deleteKeyItem)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -59,7 +59,7 @@ Deletes a key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteKeyItem](huks.deleteKeyItem(keyAlias:)
+**Substitutes:** [deleteKeyItem](arkts-universalkeystore-huks-deletekeyitem-f.md#deleteKeyItem)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 

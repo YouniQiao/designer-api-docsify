@@ -2,9 +2,11 @@
 
 rtt通话消息
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
 
@@ -20,11 +22,13 @@ callId: int
 
 rtt通话id
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
 
@@ -42,9 +46,11 @@ rtt消息
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
 

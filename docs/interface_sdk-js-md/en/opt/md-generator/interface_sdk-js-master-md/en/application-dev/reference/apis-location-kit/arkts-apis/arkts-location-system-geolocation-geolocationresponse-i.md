@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [Location](ohos.geoLocationManager/geoLocationManager.Location)
+**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#Location)
 
 <!--Device-unnamed-export interface GeolocationResponse--><!--Device-unnamed-export interface GeolocationResponse-End-->
 
@@ -30,7 +30,7 @@ Location accuracy.
 
 **Deprecated since:** 9
 
-**Substitutes:** [accuracy](ohos.geoLocationManager/geoLocationManager.Location#accuracy)
+**Substitutes:** [accuracy](arkts-location-geolocationmanager-location-i.md#accuracy)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -52,7 +52,7 @@ Altitude.
 
 **Deprecated since:** 9
 
-**Substitutes:** [altitude](ohos.geoLocationManager/geoLocationManager.Location#altitude)
+**Substitutes:** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -74,7 +74,7 @@ Latitude.
 
 **Deprecated since:** 9
 
-**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.Location#latitude)
+**Substitutes:** [latitude](arkts-location-geolocationmanager-location-i.md#latitude)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -96,7 +96,7 @@ Longitude.
 
 **Deprecated since:** 9
 
-**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.Location#longitude)
+**Substitutes:** [longitude](arkts-location-geolocationmanager-location-i.md#longitude)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -118,7 +118,7 @@ Time when the location is obtained.
 
 **Deprecated since:** 9
 
-**Substitutes:** [timeStamp](ohos.geoLocationManager/geoLocationManager.Location#timeStamp)
+**Substitutes:** [timeStamp](arkts-location-geolocationmanager-location-i.md#timeStamp)
 
 **Model restriction:** This API can be used only in the FA model.
 

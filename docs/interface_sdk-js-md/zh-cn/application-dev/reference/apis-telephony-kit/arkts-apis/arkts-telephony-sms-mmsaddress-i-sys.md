@@ -2,9 +2,11 @@
 
 彩信地址。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsAddress--><!--Device-sms-export interface MmsAddress-End-->
 
@@ -22,9 +24,11 @@ address: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsAddress-address: string--><!--Device-MmsAddress-address: string-End-->
 
@@ -42,9 +46,11 @@ charset: MmsCharSets
 
 **类型：** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsAddress-charset: MmsCharSets--><!--Device-MmsAddress-charset: MmsCharSets-End-->
 

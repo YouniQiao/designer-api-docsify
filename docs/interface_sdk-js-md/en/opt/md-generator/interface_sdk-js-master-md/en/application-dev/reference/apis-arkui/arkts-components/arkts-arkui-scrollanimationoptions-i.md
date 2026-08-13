@@ -4,6 +4,8 @@ Provides parameters for customizing scroll animations.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ScrollAnimationOptions--><!--Device-unnamed-declare interface ScrollAnimationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,15 @@ Provides parameters for customizing scroll animations.
 canOverScroll?: boolean
 ```
 
-Whether to enable overscroll.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt; Scrolling can exceed the boundary and initiate a bounce animation when this parameter is set to &lt;em&gt;true&lt;/em&gt;,and the component's &lt;em&gt;edgeEffect&lt;/em&gt; attribute is set to EdgeEffect.Spring.&lt;/p&gt;
+Whether to enable overscroll. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt; Scrolling can exceed the boundary and initiate a bounce animation when this parameter is set to &lt;em&gt;true&lt;/em&gt;, and the component's &lt;em&gt;edgeEffect&lt;/em&gt; attribute is set to EdgeEffect.Spring. &lt;/p&gt;
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +48,8 @@ Scrolling curve.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,15 +64,15 @@ Scrolling curve.
 duration?: number
 ```
 
-Scrolling duration.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;Scrolling duration.&lt;br&gt;Default value: **1000**&lt;br&gt;Unit: ms&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the default value.&lt;/p&gt;
+Scrolling duration. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;Scrolling duration.&lt;br&gt;Default value: **1000**&lt;br&gt;Unit: ms &lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the default value. &lt;/p&gt;
 
 **Type:** number
 
 **Default:** 1000
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -34,4 +34,4 @@ Translates this matrix object along the x, y, and z axes.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| [Matrix4Transit](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md) |

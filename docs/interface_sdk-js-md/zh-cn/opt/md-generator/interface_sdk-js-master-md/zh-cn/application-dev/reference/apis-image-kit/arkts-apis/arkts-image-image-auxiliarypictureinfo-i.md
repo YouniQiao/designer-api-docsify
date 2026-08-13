@@ -2,7 +2,9 @@
 
 表示辅助图的图像信息。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-interface AuxiliaryPictureInfo--><!--Device-image-interface AuxiliaryPictureInfo-End-->
 
@@ -18,7 +20,9 @@ auxiliaryPictureType: AuxiliaryPictureType
 
 **类型：** [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPictureInfo-auxiliaryPictureType: AuxiliaryPictureType--><!--Device-AuxiliaryPictureInfo-auxiliaryPictureType: AuxiliaryPictureType-End-->
 
@@ -34,7 +38,9 @@ colorSpace: colorSpaceManager.ColorSpaceManager
 
 **类型：** colorSpaceManager.ColorSpaceManager
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPictureInfo-colorSpace: colorSpaceManager.ColorSpaceManager--><!--Device-AuxiliaryPictureInfo-colorSpace: colorSpaceManager.ColorSpaceManager-End-->
 
@@ -50,7 +56,9 @@ pixelFormat: PixelMapFormat
 
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPictureInfo-pixelFormat: PixelMapFormat--><!--Device-AuxiliaryPictureInfo-pixelFormat: PixelMapFormat-End-->
 
@@ -66,7 +74,9 @@ rowStride: number
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPictureInfo-rowStride: int--><!--Device-AuxiliaryPictureInfo-rowStride: int-End-->
 
@@ -82,7 +92,9 @@ size: Size
 
 **类型：** Size
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuxiliaryPictureInfo-size: Size--><!--Device-AuxiliaryPictureInfo-size: Size-End-->
 

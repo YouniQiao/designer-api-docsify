@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-osAccount-enum OsAccountSubProfileEvent--><!--Device-osAccount-enum OsAccountSubProfileEvent-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -16,9 +18,11 @@
 CREATED = 0
 ```
 
-CREATED事件。系统账号子profile创建完成时触发。
+CREATED事件。 系统账号子profile创建完成时触发。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,9 +38,11 @@ CREATED事件。系统账号子profile创建完成时触发。
 DELETED = 1
 ```
 
-DELETED事件。当系统账号子Profile删除完成时触发。
+DELETED事件。 当系统账号子Profile删除完成时触发。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,9 +58,11 @@ DELETED事件。当系统账号子Profile删除完成时触发。
 SWITCHING = 2
 ```
 
-SWITCHING事件。当系统账号子Profile切换开始时触发。
+SWITCHING事件。 当系统账号子Profile切换开始时触发。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,9 +78,11 @@ SWITCHING事件。当系统账号子Profile切换开始时触发。
 SWITCHED = 3
 ```
 
-SWITCHED事件。系统账号子profile切换完成时触发。
+SWITCHED事件。 系统账号子profile切换完成时触发。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

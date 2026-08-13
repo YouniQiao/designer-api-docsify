@@ -1,13 +1,10 @@
 # BundleResourceInfo（系统接口）
 
-应用配置的图标和名称信息，可以通过  
-[getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo)获取。
+应用配置的图标和名称信息，可以通过 [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo（系统接口）) 获取。 > **说明：** > > 本模块为系统接口。
 
-> **说明：**
-> 
-> 本模块为系统接口。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface BundleResourceInfo--><!--Device-unnamed-export interface BundleResourceInfo-End-->
 
@@ -25,7 +22,9 @@ readonly appIndex: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleResourceInfo-readonly appIndex: int--><!--Device-BundleResourceInfo-readonly appIndex: int-End-->
 
@@ -43,7 +42,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleResourceInfo-readonly bundleName: string--><!--Device-BundleResourceInfo-readonly bundleName: string-End-->
 
@@ -54,16 +55,18 @@ readonly bundleName: string
 ## drawableDescriptor
 
 ```TypeScript
-readonly drawableDescriptor: DrawableDescriptor
+readonly drawableDescriptor: DrawableDescriptor | null
 ```
 
-应用图标的drawableDescriptor对象。
+Indicates the drawable descriptor of this bundle icon
 
-**类型：** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**类型：** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor--><!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor-End-->
+**废弃版本：** -1
+
+<!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null--><!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -79,7 +82,9 @@ readonly icon: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleResourceInfo-readonly icon: string--><!--Device-BundleResourceInfo-readonly icon: string-End-->
 
@@ -97,7 +102,9 @@ readonly label: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleResourceInfo-readonly label: string--><!--Device-BundleResourceInfo-readonly label: string-End-->
 

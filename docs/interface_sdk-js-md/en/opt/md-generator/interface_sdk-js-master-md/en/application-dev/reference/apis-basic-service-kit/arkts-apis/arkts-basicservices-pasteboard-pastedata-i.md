@@ -1,13 +1,10 @@
 # PasteData
 
-Implements a **PasteData** object. PasteData contains one or more data records (  
-[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md#PasteDataRecord)) and property description objects (  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)).Before calling any API in **PasteData**, you must use **  
-[createData()](arkts-basicservices-pasteboard-createdata-f.md#createData)** or **  
-[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getData)** to create a  
-**PasteData** object.
+Implements a **PasteData** object. PasteData contains one or more data records ( [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md#PasteDataRecord)) and property description objects ( [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)). Before calling any API in **PasteData**, you must use ** [createData()](arkts-basicservices-pasteboard-createdata-f.md#createData)** or ** [getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getData)** to create a **PasteData** object.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-interface PasteData--><!--Device-pasteboard-interface PasteData-End-->
 
@@ -25,14 +22,13 @@ import { pasteboard } from '@kit.BasicServicesKit';
 addHtmlRecord(htmlText: string): void
 ```
 
-Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
+Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addHtmlRecord(htmlText: string): void--><!--Device-PasteData-addHtmlRecord(htmlText: string): void-End-->
 
@@ -58,10 +54,11 @@ pasteData.addHtmlRecord(html);
 addRecord(record: PasteDataRecord): void
 ```
 
-Adds a data record to the PasteData, and adds its type to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,10 +91,11 @@ pasteData.addRecord(htmlRecord);
 addRecord(mimeType: string, value: ValueType): void
 ```
 
-Adds a data record to the PasteData, and adds its type to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,8 +114,8 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900002-maximum-number-of-records-reached) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900002](../../apis-basic-services-kit/errorcode-pasteboard.md#12900002-maximum-number-of-records-reached) |
 
 ## Examples
 
@@ -134,14 +132,13 @@ pasteData.addRecord('app/xml', dataXml);
 addTextRecord(text: string): void
 ```
 
-Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
+Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addTextRecord(text: string): void--><!--Device-PasteData-addTextRecord(text: string): void-End-->
 
@@ -166,14 +163,13 @@ pasteData.addTextRecord('good');
 addUriRecord(uri: string): void
 ```
 
-Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
+Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addUriRecord(uri: string): void--><!--Device-PasteData-addUriRecord(uri: string): void-End-->
 
@@ -198,14 +194,13 @@ pasteData.addUriRecord('dataability:///com.example.myapplication1/user.txt');
 addWantRecord(want: Want): void
 ```
 
-Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
+Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
+**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addWantRecord(want: Want): void--><!--Device-PasteData-addWantRecord(want: Want): void-End-->
 
@@ -238,7 +233,9 @@ getMimeTypes(): Array<string>
 
 Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) of the PasteData.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -267,7 +264,9 @@ getPrimaryHtml(): string
 
 Obtains the HTML content of the primary record.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -302,7 +301,9 @@ getPrimaryMimeType(): string
 
 Obtains the data type of the primary record in the pasteboard.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -331,7 +332,9 @@ getPrimaryPixelMap(): image.PixelMap
 
 Obtains the PixelMap of the primary record.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -375,7 +378,9 @@ getPrimaryText(): string
 
 Obtains the plain text of the primary record.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -414,7 +419,9 @@ getPrimaryUri(): string
 
 Obtains the URI of the primary record.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -449,7 +456,9 @@ getPrimaryWant(): Want
 
 Obtains the **Want** object of the primary record.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -485,7 +494,9 @@ getProperty(): PasteDataProperty
 
 Obtains the property of the PasteData.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -514,7 +525,9 @@ getRecord(index: number): PasteDataRecord
 
 Obtains the record with a specific index in PasteData.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -538,8 +551,8 @@ Obtains the record with a specific index in PasteData.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) |
 
 ## Examples
 
@@ -560,7 +573,7 @@ Obtains the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRecord](pasteboard.PasteData.getRecord(index:)
+**Substitutes:** [getRecord](#getRecord)(index: int)
 
 <!--Device-PasteData-getRecordAt(index: number): PasteDataRecord--><!--Device-PasteData-getRecordAt(index: number): PasteDataRecord-End-->
 
@@ -582,7 +595,7 @@ Obtains the record with a specific index in PasteData.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -599,7 +612,9 @@ getRecordCount(): number
 
 Obtains the number of records in a PasteData object.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -628,7 +643,9 @@ getTag(): string
 
 Obtains the custom tag from the PasteData. If no custom tag is set, an empty string is returned.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -661,7 +678,7 @@ Checks whether the PasteData contains data of the specified type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hasType](pasteboard.PasteData.hasType(mimeType:)
+**Substitutes:** [hasType](#hasType)(mimeType: string)
 
 <!--Device-PasteData-hasMimeType(mimeType: string): boolean--><!--Device-PasteData-hasMimeType(mimeType: string): boolean-End-->
 
@@ -683,7 +700,7 @@ Checks whether the PasteData contains data of the specified type.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -700,7 +717,9 @@ hasType(mimeType: string): boolean
 
 Checks whether the PasteData contains data of the specified MIME type.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -724,7 +743,7 @@ Checks whether the PasteData contains data of the specified MIME type.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -741,7 +760,9 @@ pasteComplete(): void
 
 Invoked to notify pasteboard service the utilization of PasteData has completed and occupied resources can be released for further usage
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PasteData-pasteComplete(): void--><!--Device-PasteData-pasteComplete(): void-End-->
 
@@ -772,7 +793,9 @@ pasteStart(): void
 
 Notifies the pasteboard service to retain the cross-device channel before reading data from the pasteboard.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PasteData-pasteStart(): void--><!--Device-PasteData-pasteStart(): void-End-->
 
@@ -803,7 +826,9 @@ removeRecord(index: number): void
 
 Removes the record with a specific index in PasteData.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -821,8 +846,8 @@ Removes the record with a specific index in PasteData.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) |
 
 ## Examples
 
@@ -843,7 +868,7 @@ Removes the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeRecord](pasteboard.PasteData.removeRecord(index:)
+**Substitutes:** [removeRecord](#removeRecord)(index: int)
 
 <!--Device-PasteData-removeRecordAt(index: number): boolean--><!--Device-PasteData-removeRecordAt(index: number): boolean-End-->
 
@@ -865,7 +890,7 @@ Removes the record with a specific index in PasteData.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -882,7 +907,9 @@ replaceRecord(index: number, record: PasteDataRecord): void
 
 Replaces the record with a specific index in PasteData.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -901,8 +928,8 @@ Replaces the record with a specific index in PasteData.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) |
 
 ## Examples
 
@@ -924,7 +951,7 @@ Replaces the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [replaceRecord](pasteboard.PasteData.replaceRecord(index:)
+**Substitutes:** [replaceRecord](#replaceRecord)(index: int, record: PasteDataRecord)
 
 <!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean--><!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean-End-->
 
@@ -959,7 +986,9 @@ setProperty(property: PasteDataProperty): void
 
 Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -977,7 +1006,7 @@ Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -996,7 +1025,7 @@ prop.tag = 'TestTag';
 pasteData.setProperty(prop);
 ```
 
-The localOnly and shareOption attributes of [PasteDataProperty](#pastedataproperty7) are mutually exclusive. The shareOption attribute is prioritized, and its value affects the value of localOnly.
+The localOnly and shareOption attributes of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) are mutually exclusive. The shareOption attribute is prioritized, and its value affects the value of localOnly.
 
 ```TypeScript
 (async () => {

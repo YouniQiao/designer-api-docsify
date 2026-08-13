@@ -12,11 +12,13 @@ import { componentSnapshot } from '@kit.ArkUI';
 export function getSync(id: string, options?: SnapshotOptions): image.PixelMap | null
 ```
 
-Take a screenshot of the specified component in synchronous mode,this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown.
+Take a screenshot of the specified component in synchronous mode, this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +43,7 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [160002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
-| [160003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
 

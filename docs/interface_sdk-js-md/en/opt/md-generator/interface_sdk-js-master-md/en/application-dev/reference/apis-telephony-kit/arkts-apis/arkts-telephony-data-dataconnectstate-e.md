@@ -2,7 +2,9 @@
 
 Describes the cellular data link connection state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-data-export enum DataConnectState--><!--Device-data-export enum DataConnectState-End-->
 
@@ -16,7 +18,9 @@ DATA_STATE_UNKNOWN = -1
 
 Indicates that a cellular data link is unknown.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_UNKNOWN = -1--><!--Device-DataConnectState-DATA_STATE_UNKNOWN = -1-End-->
 
@@ -30,7 +34,9 @@ DATA_STATE_DISCONNECTED = 0
 
 Indicates that a cellular data link is disconnected.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_DISCONNECTED = 0--><!--Device-DataConnectState-DATA_STATE_DISCONNECTED = 0-End-->
 
@@ -44,7 +50,9 @@ DATA_STATE_CONNECTING = 1
 
 Indicates that a cellular data link is being connected.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_CONNECTING = 1--><!--Device-DataConnectState-DATA_STATE_CONNECTING = 1-End-->
 
@@ -58,7 +66,9 @@ DATA_STATE_CONNECTED = 2
 
 Indicates that a cellular data link is connected.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_CONNECTED = 2--><!--Device-DataConnectState-DATA_STATE_CONNECTED = 2-End-->
 
@@ -72,7 +82,9 @@ DATA_STATE_SUSPENDED = 3
 
 Indicates that a cellular data link is suspended.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_SUSPENDED = 3--><!--Device-DataConnectState-DATA_STATE_SUSPENDED = 3-End-->
 

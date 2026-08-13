@@ -6,29 +6,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Advertisement--><!--Device-unnamed-export interface Advertisement-End-->
-
-**系统能力：** SystemCapability.Advertising.Ads
-
-## [key:string]
-
-```TypeScript
-[key:string]: Object
-```
-
-自定义参数。
-
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
-
-**类型：** Object
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Advertisement-[key:string]: Object--><!--Device-Advertisement-[key:string]: Object-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -38,22 +18,15 @@
 adType: number
 ```
 
-广告类型。
-
-- 1：开屏广告。  
-- 3：原生广告。  
-- 7：激励广告。  
-- 8：横幅广告。  
-- 12：插屏广告。  
-- 60：贴片广告。
-
-不填默认为原生广告类型。
+广告类型。 - 1：开屏广告。 - 3：原生广告。 - 7：激励广告。 - 8：横幅广告。 - 12：插屏广告。 - 60：贴片广告。 不填默认为原生广告类型。
 
 **类型：** number
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -67,16 +40,15 @@ adType: number
 clicked: boolean
 ```
 
-广告是否被点击。
-
-- true：被点击。  
-- false：未被点击。
+广告是否被点击。 - true：被点击。 - false：未被点击。
 
 **类型：** boolean
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,21 +62,15 @@ clicked: boolean
 rewardVerifyConfig: Map<string, string>
 ```
 
-服务器验证参数。
-
-{
-
-customData: "test",
-
-userId: "12345"
-
-}
+服务器验证参数。 { customData: "test", userId: "12345" }
 
 **类型：** Map&lt;string, string&gt;
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -118,16 +84,15 @@ userId: "12345"
 rewarded: boolean
 ```
 
-广告是否获得奖励。
-
-- true：获得奖励。  
-- false：没有获得奖励。
+广告是否获得奖励。 - true：获得奖励。 - false：没有获得奖励。
 
 **类型：** boolean
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -141,16 +106,15 @@ rewarded: boolean
 shown: boolean
 ```
 
-广告是否展示。
-
-- true：展示。  
-- false：未展示。
+广告是否展示。 - true：展示。 - false：未展示。
 
 **类型：** boolean
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -171,6 +135,8 @@ uniqueId: string
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

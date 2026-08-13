@@ -7,11 +7,13 @@ export type RadiusItem = [
 ]
 ```
 
-Defines the RadiusItem.The first element is the width of the rounded corner, the second is the height of the rounded corner.
+Defines the RadiusItem. The first element is the width of the rounded corner, the second is the height of the rounded corner.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

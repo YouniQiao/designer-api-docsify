@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-securityManager-export enum PermissionManagedState--><!--Device-securityManager-export enum PermissionManagedState-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ DENIED = -1
 已静默拒绝。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ GRANTED = 0
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PermissionManagedState-GRANTED = 0--><!--Device-PermissionManagedState-GRANTED = 0-End-->
@@ -49,6 +55,8 @@ DEFAULT = 1
 默认由用户授予。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

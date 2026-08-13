@@ -4,11 +4,13 @@
 
 **继承/实现关系：** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-export declare class CustomGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class CustomGeometry extends GeometryDefinition-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class CustomGeometry--><!--Device-unnamed-export declare class CustomGeometry-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -24,7 +26,9 @@ colors?: Color[]
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-CustomGeometry-colors?: Color[]--><!--Device-CustomGeometry-colors?: Color[]-End-->
 
@@ -36,11 +40,7 @@ colors?: Color[]
 indices?: int[]
 ```
 
-构成三角形的顶点索引. PrimitiveTopology应用于索引定义的序列.
-
-给定vertices = [a, b, c, d]，创建相同的一对三角形的示例: topology = PrimitiveTopology.TRIANGLE_LIST  indices = [0, 1, 2, 2, 1, 3] 生成的三角形：abc、cbd
-
- topology = PrimitiveTopology.TRIANGLE_STRIP  indices = [0, 1, 2, 3] 生成的三角形：abc、cbd (b和c在cbd中被反转，以匹配第一个三角形的面方向)
+构成三角形的顶点索引. PrimitiveTopology应用于索引定义的序列. 给定vertices = [a, b, c, d]，创建相同的一对三角形的示例: topology = PrimitiveTopology.TRIANGLE_LIST indices = [0, 1, 2, 2, 1, 3] 生成的三角形：abc、cbd topology = PrimitiveTopology.TRIANGLE_STRIP indices = [0, 1, 2, 3] 生成的三角形：abc、cbd (b和c在cbd中被反转，以匹配第一个三角形的面方向)
 
 **类型：** int[]
 
@@ -48,7 +48,9 @@ indices?: int[]
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-CustomGeometry-indices?: int[]--><!--Device-CustomGeometry-indices?: int[]-End-->
 
@@ -66,7 +68,9 @@ normals?: Vec3[]
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-CustomGeometry-normals?: Vec3[]--><!--Device-CustomGeometry-normals?: Vec3[]-End-->
 
@@ -86,7 +90,9 @@ topology?: PrimitiveTopology
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-CustomGeometry-topology?: PrimitiveTopology--><!--Device-CustomGeometry-topology?: PrimitiveTopology-End-->
 
@@ -104,27 +110,11 @@ uvs?: Vec2[]
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-CustomGeometry-uvs?: Vec2[]--><!--Device-CustomGeometry-uvs?: Vec2[]-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
-## vertices
-
-```TypeScript
-set vertices(value: Vec3[])
-```
-
-顶点数组.
-
-**类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
-
-**起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
-<!--Device-CustomGeometry-set vertices(value: Vec3[])--><!--Device-CustomGeometry-set vertices(value: Vec3[])-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

@@ -2,9 +2,11 @@
 
 The module defines the application information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
 
@@ -16,14 +18,15 @@ The module defines the application information.
 readonly accessTokenId: long
 ```
 
-Access token ID of the application, which is used in the  
-[application access control verification API](../../../reference/apis-ability-kit/js-apis-abilityAccessCtrl.md#checkaccesstoken9).
+Access token ID of the application, which is used in the [application access control verification API](arkts-ability-abilityaccessctrl-atmanager-i.md#checkAccessToken) .
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,16 +40,15 @@ Access token ID of the application, which is used in the
 readonly appDistributionType: string
 ```
 
-Distribution type of the application signing certificate. The options are as follows:&lt;li&gt;**app_gallery**:application installed from AppGallery. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;&lt;li&gt;**enterprise**: enterprise internal application.These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. &lt;!--RP2--  
-&gt; &lt;!--RP2End--&gt;&lt;li&gt;**enterprise_mdm**: enterprise
-[Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application). &lt;!--Del--&gt;To install a common enterprise application, you must have  
-[administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md#enableAdmin). &lt;!--DelEnd--&gt;&lt;!--RP3--&gt;&lt;!--RP3End--&gt;&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application) and offline installer. &lt;!--RP4--&gt;&lt;!--RP4End--&gt;&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. &lt;!--RP5--&gt;&lt;!--RP5End--&gt;&lt;li&gt;none: others.
+Distribution type of the application signing certificate. The options are as follows:&lt;li&gt;**app_gallery**: application installed from AppGallery. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;&lt;li&gt;**enterprise**: enterprise internal application. These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. &lt;!--RP2-- &gt;&lt;!--RP2End--&gt;&lt;li&gt;**enterprise_mdm**: enterprise [Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application) . &lt;!--Del--&gt;To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableAdmin-(System-API)) . &lt;!--DelEnd--&gt;&lt;!--RP3--&gt;&lt;!--RP3End--&gt;&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application) and offline installer. &lt;!--RP4--&gt;&lt;!--RP4End--&gt;&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. &lt;!-- RP5--&gt;&lt;!--RP5End--&gt;&lt;li&gt;none: others.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,11 +64,13 @@ readonly appIndex: int
 
 Index of an application clone. It takes effect only for cloned applications.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationInfo-readonly appIndex: int--><!--Device-ApplicationInfo-readonly appIndex: int-End-->
 
@@ -82,9 +86,11 @@ Type of the application signing certificate file. The options are **debug** and 
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,9 +108,11 @@ Bundle type, which can be **APP** (application) or **ATOMIC_SERVICE** (atomic se
 
 **Type:** bundleManager.BundleType
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,11 +130,13 @@ Whether device-cloud file synchronization is enabled for the application. **true
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean--><!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean-End-->
 
@@ -138,15 +148,17 @@ Whether device-cloud file synchronization is enabled for the application. **true
 readonly cloudStructuredDataSyncEnabled?: boolean
 ```
 
-Whether device-cloud structured data synchronization is enabled for the application. **true** if enabled, **false**otherwise.
+Whether device-cloud structured data synchronization is enabled for the application. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean--><!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean-End-->
 
@@ -162,9 +174,11 @@ Installation directory of the application.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -182,11 +196,13 @@ Whether the application data is unclearable. **true** if unclearable, **false** 
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ApplicationInfo-readonly dataUnclearable: boolean--><!--Device-ApplicationInfo-readonly dataUnclearable: boolean-End-->
 
@@ -202,9 +218,11 @@ Whether the application is running in debug mode. **true** if in debug mode, **f
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -218,15 +236,15 @@ Whether the application is running in debug mode. **true** if in debug mode, **f
 readonly description: string
 ```
 
-Description of the application. It corresponds to the **description** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md). For details about **description**, see the  
-**descriptionResource** field in this table.
+Description of the application. It corresponds to the **description** field in the [app.json5](../../../quick-start/app-configuration-file.md). For details about **description**, see the **descriptionResource** field in this table.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -242,11 +260,13 @@ readonly descriptionId: long
 
 Resource ID of the application description. It is automatically generated during compilation and build based on the description configured for the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -260,14 +280,15 @@ Resource ID of the application description. It is automatically generated during
 readonly descriptionResource: Resource
 ```
 
-Resource information of the application description. The resource information obtained contains the bundle name,module name, and ID of the resource. You can call  
-[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent)to obtain the resource details.
+Resource information of the application description. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent) to obtain the resource details.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -285,9 +306,11 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -301,15 +324,15 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 readonly icon: string
 ```
 
-Application icon. It corresponds to the **icon** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file. For details about **icon**, see the  
-**iconResource** field in this table.
+Application icon. It corresponds to the **icon** field in the [app.json5](../../../quick-start/app-configuration-file.md) file. For details about **icon**, see the **iconResource** field in this table.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -325,11 +348,13 @@ readonly iconId: long
 
 Resource ID of the application icon. It is automatically generated during compilation and build based on the icon configured for the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -343,14 +368,15 @@ Resource ID of the application icon. It is automatically generated during compil
 readonly iconResource: Resource
 ```
 
-Resource information of the application icon. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call  
-[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent)to obtain the resource details.
+Resource information of the application icon. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent) to obtain the resource details.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -364,22 +390,17 @@ Resource information of the application icon. The resource information obtained 
 readonly installSource: string
 ```
 
-Installation source of an application. The options are as follows:
-
-- **pre-installed**: pre-installed application installed during the first boot.  
-- **ota**: pre-installed application added during system upgrade.  
-- **recovery**: pre-installed application manually restored by the user after uninstallation.  
-- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a  
-variable, subject to the actual value.  
-- **unknown**: unknown application installation source.
+Installation source of an application. The options are as follows: - **pre-installed**: pre-installed application installed during the first boot. - **ota**: pre-installed application added during system upgrade. - **recovery**: pre-installed application manually restored by the user after uninstallation. - **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a variable, subject to the actual value. - **unknown**: unknown application installation source.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ApplicationInfo-readonly installSource: string--><!--Device-ApplicationInfo-readonly installSource: string-End-->
 
@@ -391,16 +412,15 @@ variable, subject to the actual value.
 readonly label: string
 ```
 
-Application label. It corresponds to the **label** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file. For details about **label**, see the  
-**labelResource** field in this table. Starting from API version 20, if  
-[bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getAbilityInfo) is used to obtain application information, this field is the application name visible to users, instead of the resource descriptor.
+Application label. It corresponds to the **label** field in the [app.json5](../../../quick-start/app-configuration-file.md) file. For details about **label**, see the **labelResource** field in this table. Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getAbilityInfo) is used to obtain application information, this field is the application name visible to users, instead of the resource descriptor.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -416,11 +436,13 @@ readonly labelId: long
 
 Resource ID of the application label. It is automatically generated during compilation and build based on the label configured for the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -434,14 +456,15 @@ Resource ID of the application label. It is automatically generated during compi
 readonly labelResource: Resource
 ```
 
-Resource information of the application label. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call  
-[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent)to obtain the resource details.
+Resource information of the application label. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent) to obtain the resource details.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -455,11 +478,7 @@ Resource information of the application label. The resource information obtained
 readonly metadata: Map<string, Array<Metadata>>
 ```
 
-Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and  
-**GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
-
-Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray**instead.
+Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf). Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray** instead.
 
 **Type:** Map&lt;string, Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;&gt;
 
@@ -481,15 +500,15 @@ Note: Supported since API version 9 and deprecated since API version 10. You are
 readonly metadataArray: Array<ModuleMetadata>
 ```
 
-Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and  
-**GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md)&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -507,9 +526,11 @@ Multi-app mode.
 
 **Type:** [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationInfo-readonly multiAppMode: MultiAppMode--><!--Device-ApplicationInfo-readonly multiAppMode: MultiAppMode-End-->
 
@@ -521,14 +542,15 @@ Multi-app mode.
 readonly name: string
 ```
 
-Name of the application bundle. It corresponds to the **bundleName** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Name of the application bundle. It corresponds to the **bundleName** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -546,9 +568,11 @@ Local library file path of the application.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationInfo-readonly nativeLibraryPath: string--><!--Device-ApplicationInfo-readonly nativeLibraryPath: string-End-->
 
@@ -560,15 +584,15 @@ Local library file path of the application.
 readonly permissions: Array<string>
 ```
 
-Permissions required for accessing the application. The permissions can be obtained by passing in  
-**GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags**parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Permissions required for accessing the application. The permissions can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -586,9 +610,11 @@ Process name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -602,15 +628,17 @@ Process name.
 readonly releaseType: string
 ```
 
-Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo)) to determine the compatibility.
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2 , Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#@ohos.deviceInfo)) to determine the compatibility.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ApplicationInfo-readonly releaseType: string--><!--Device-ApplicationInfo-readonly releaseType: string-End-->
 
@@ -626,9 +654,11 @@ Whether the application is removable. **true** if removable, **false** otherwise
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -646,9 +676,11 @@ Whether the application is a system application. **true** if it is a system appl
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -664,11 +696,13 @@ readonly uid: int
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

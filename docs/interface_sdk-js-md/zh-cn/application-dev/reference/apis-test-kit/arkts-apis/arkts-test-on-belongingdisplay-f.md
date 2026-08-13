@@ -10,7 +10,9 @@ Specifies the displayId to which the target Component belongs.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ON-export function belongingDisplay(displayId: int): On--><!--Device-ON-export function belongingDisplay(displayId: int): On-End-->
 
@@ -32,5 +34,5 @@ Specifies the displayId to which the target Component belongs.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 

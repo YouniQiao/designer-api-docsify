@@ -16,7 +16,9 @@ Specifies the clickable status of the target Component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ON-export function clickable(b?: boolean): On--><!--Device-ON-export function clickable(b?: boolean): On-End-->
 

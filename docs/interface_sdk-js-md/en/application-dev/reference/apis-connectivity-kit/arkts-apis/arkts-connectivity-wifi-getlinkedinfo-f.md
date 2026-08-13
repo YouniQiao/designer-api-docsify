@@ -20,7 +20,7 @@ Obtains information about a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLinkedInfo](ohos.wifiManager/wifiManager.getLinkedInfo)
+**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -49,7 +49,7 @@ Obtains information about a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLinkedInfo](ohos.wifiManager/wifiManager.getLinkedInfo)
+**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -61,7 +61,7 @@ Obtains information about a Wi-Fi connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiLinkedInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes |  |
 
 ## Examples
 

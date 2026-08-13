@@ -16,6 +16,8 @@ Get the senior mode state for app.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,10 +45,10 @@ Get the senior mode state for app.
 
 | Error Code ID |
 | --- |
-| [9300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300008-app-clone-index-invalid) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
+| [9300008](../errorcode-accessibility.md#9300008-app-clone-index-invalid) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
 
 ## Examples
 

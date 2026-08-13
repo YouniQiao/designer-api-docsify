@@ -6,6 +6,8 @@ Defines a styled string controller.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface StyledStringController--><!--Device-unnamed-declare interface StyledStringController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Obtains the styled string displayed in the rich text component.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Sets the styled string displayed in the rich text component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,5 +66,5 @@ Sets the styled string displayed in the rich text component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string to set.&lt;br&gt;**NOTE：**&lt;br&gt;The child class [MutableStyledString](MutableStyledString) of **StyledString** can also serve as the argument. |
+| styledString | StyledString | Yes | Styled string to set.&lt;br&gt;**NOTE：**&lt;br&gt;The child class MutableStyledString of **StyledString** can also serve as the argument. |
 

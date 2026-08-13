@@ -16,9 +16,11 @@ function loadModelFromFd(
 
 Creates a Model instance file description
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,7 +32,7 @@ Creates a Model instance file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
+| model | int | Yes | model indicates model file description to be loaded |
 | context | Context | No | context indicates model context information |
 
 **Return value:**
@@ -73,9 +75,11 @@ function loadModelFromFd(
 
 Create a Model instance from file description
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +91,8 @@ Create a Model instance from file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| model | int | Yes | model indicates model file description to be loaded |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -125,9 +129,11 @@ function loadModelFromFd(
 
 Create a Model instance from file description
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,9 +145,9 @@ Create a Model instance from file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
+| model | int | Yes | model indicates model file description to be loaded |
 | context | Context | Yes | context indicates model context information |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 

@@ -1,20 +1,10 @@
 # GeolocationPermissions
 
-Implements a **GeolocationPermissions** object.
-
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
-> 
-> - You must load the **Web** component before calling the APIs in **GeolocationPermissions**.
-> 
-> - Required Permissions
-> **ohos.permission.LOCATION**, **ohos.permission.APPROXIMATELY_LOCATION**, and
-> **ohos.permission.LOCATION_IN_BACKGROUND**, which are required for accessing the location information. For details
-> about the permissions, see
-> [@ohos.geolocation (Geolocation)](../../../reference/apis-location-kit/js-apis-geolocation.md).
+Implements a **GeolocationPermissions** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **GeolocationPermissions**. > > - Required Permissions > **ohos.permission.LOCATION**, **ohos.permission.APPROXIMATELY_LOCATION**, and > **ohos.permission.LOCATION_IN_BACKGROUND**, which are required for accessing the location information. For details > about the permissions, see > [@ohos.geolocation (Geolocation)](../../apis-location-kit/arkts-apis/arkts-geolocation.md#@ohos.geolocation).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-webview-class GeolocationPermissions--><!--Device-webview-class GeolocationPermissions-End-->
 
@@ -36,6 +26,8 @@ Allows the specified origin to use the geolocation information.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void-End-->
@@ -53,8 +45,8 @@ Allows the specified origin to use the geolocation information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## deleteAllGeolocation
 
@@ -65,6 +57,8 @@ static deleteAllGeolocation(incognito?: boolean): void
 Clears the geolocation permission status of all sources.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,6 +82,8 @@ Clears the geolocation permission status of a specified origin.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void-End-->
@@ -105,8 +101,8 @@ Clears the geolocation permission status of a specified origin.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getAccessibleGeolocation
 
@@ -117,6 +113,8 @@ static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<bo
 Obtains the geolocation permission status of the specified origin. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -141,8 +139,8 @@ Obtains the geolocation permission status of the specified origin. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getAccessibleGeolocation
 
@@ -153,6 +151,8 @@ static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>
 Obtains the geolocation permission status of the specified origin. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -172,8 +172,8 @@ Obtains the geolocation permission status of the specified origin. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getStoredGeolocation
 
@@ -184,6 +184,8 @@ static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>
 Obtains the geolocation permission status of all origins. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -207,7 +209,7 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getStoredGeolocation
 
@@ -218,6 +220,8 @@ static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: 
 Obtains the geolocation permission status of all origins. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -236,4 +240,4 @@ Obtains the geolocation permission status of all origins. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

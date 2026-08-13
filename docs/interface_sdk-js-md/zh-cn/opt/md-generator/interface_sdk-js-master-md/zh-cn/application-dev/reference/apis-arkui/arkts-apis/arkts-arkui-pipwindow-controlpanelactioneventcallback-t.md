@@ -6,9 +6,11 @@ type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: numb
 
 描述画中画控制面板控件动作事件回调。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPWindow-type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int) => void--><!--Device-PiPWindow-type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int) => void-End-->
 

@@ -2,7 +2,9 @@
 
 定义打印参数的接口。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-interface PrintAttributes--><!--Device-print-interface PrintAttributes-End-->
 
@@ -18,7 +20,9 @@ colorMode?: PrintColorMode
 
 **类型：** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintAttributes-colorMode?: PrintColorMode--><!--Device-PrintAttributes-colorMode?: PrintColorMode-End-->
 
@@ -34,7 +38,9 @@ copyNumber?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintAttributes-copyNumber?: int--><!--Device-PrintAttributes-copyNumber?: int-End-->
 
@@ -50,7 +56,9 @@ directionMode?: PrintDirectionMode
 
 **类型：** [PrintDirectionMode](arkts-basicservices-print-printdirectionmode-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintAttributes-directionMode?: PrintDirectionMode--><!--Device-PrintAttributes-directionMode?: PrintDirectionMode-End-->
 
@@ -66,7 +74,9 @@ duplexMode?: PrintDuplexMode
 
 **类型：** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintAttributes-duplexMode?: PrintDuplexMode--><!--Device-PrintAttributes-duplexMode?: PrintDuplexMode-End-->
 
@@ -82,7 +92,9 @@ pageRange?: PrintPageRange
 
 **类型：** [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintAttributes-pageRange?: PrintPageRange--><!--Device-PrintAttributes-pageRange?: PrintPageRange-End-->
 
@@ -98,7 +110,9 @@ pageSize?: PrintPageSize | PrintPageType
 
 **类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType--><!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType-End-->
 

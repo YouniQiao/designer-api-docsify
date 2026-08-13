@@ -4,6 +4,8 @@ Defines the type of the element on the right of the **ComposeListItem** componen
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class OperateItem--><!--Device-unnamed-export declare class OperateItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, Cont
 arrow?: OperateIcon
 ```
 
-Arrow with a size of 12 x 24 vp.
-
-If this parameter is not set or is set to **undefined**, the arrow is not displayed.
+Arrow with a size of 12 x 24 vp. If this parameter is not set or is set to **undefined**, the arrow is not displayed.
 
 **Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ If this parameter is not set or is set to **undefined**, the arrow is not displa
 button?: OperateButton
 ```
 
-Button.
-
-If this parameter is not set or is set to **undefined**, the button is not displayed.
+Button. If this parameter is not set or is set to **undefined**, the button is not displayed.
 
 **Type:** [OperateButton](arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +66,13 @@ If this parameter is not set or is set to **undefined**, the button is not displ
 checkbox?: OperateCheck
 ```
 
-Check box with a size of 24 x 24 vp.
-
-If this parameter is not set or is set to **undefined**, the check box is not displayed.
+Check box with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the check box is not displayed.
 
 **Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,13 +88,13 @@ If this parameter is not set or is set to **undefined**, the check box is not di
 icon?: OperateIcon
 ```
 
-First icon with a size of 24 x 24 vp.
-
-If this parameter is not set or is set to **undefined**, the icon is not displayed.
+First icon with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
 **Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,13 +110,13 @@ If this parameter is not set or is set to **undefined**, the icon is not display
 image?: ResourceStr
 ```
 
-Image with a size of 48 x 48 vp.
-
-If this parameter is not set or is set to **undefined**, the image is not displayed.
+Image with a size of 48 x 48 vp. If this parameter is not set or is set to **undefined**, the image is not displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,13 +132,13 @@ If this parameter is not set or is set to **undefined**, the image is not displa
 radio?: OperateCheck
 ```
 
-Radio button with a size of 24 x 24 vp.
-
-If this parameter is not set or is set to **undefined**, the radio button is not displayed.
+Radio button with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the radio button is not displayed.
 
 **Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,13 +154,13 @@ If this parameter is not set or is set to **undefined**, the radio button is not
 subIcon?: OperateIcon
 ```
 
-Second icon with a size of 24 x 24 vp.
-
-If this parameter is not set or is set to **undefined**, the icon is not displayed.
+Second icon with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
 **Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,13 +176,13 @@ If this parameter is not set or is set to **undefined**, the icon is not display
 switch?: OperateCheck
 ```
 
-Switch.
-
-If this parameter is not set or is set to **undefined**, the switch is not displayed.
+Switch. If this parameter is not set or is set to **undefined**, the switch is not displayed.
 
 **Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,13 +198,13 @@ If this parameter is not set or is set to **undefined**, the switch is not displ
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon with a size of 48 x 48 vp.
-
-If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
+Symbol icon with a size of 48 x 48 vp. If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,13 +220,13 @@ If this parameter is not set or is set to **undefined**, the symbol icon is not 
 text?: ResourceStr
 ```
 
-Text.
-
-If this parameter is not set or is set to **undefined**, the text is not displayed.
+Text. If this parameter is not set or is set to **undefined**, the text is not displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

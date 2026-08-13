@@ -2,9 +2,11 @@
 
 Enumerates the supported Advanced Audio Coding (AAC) formats.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum AacProfile--><!--Device-media-enum AacProfile-End-->
 
@@ -18,11 +20,13 @@ AAC_LC = 0
 
 Standard AAC Low Complexity profile.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AacProfile-AAC_LC = 0--><!--Device-AacProfile-AAC_LC = 0-End-->
 
@@ -36,11 +40,13 @@ AAC_HE = 1
 
 Standard AAC High Efficiency profile.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AacProfile-AAC_HE = 1--><!--Device-AacProfile-AAC_HE = 1-End-->
 
@@ -54,11 +60,13 @@ AAC_HE_V2 = 2
 
 AAC High Efficiency Version 2 profile (also known as HE-AAC v2).
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AacProfile-AAC_HE_V2 = 2--><!--Device-AacProfile-AAC_HE_V2 = 2-End-->
 

@@ -2,7 +2,9 @@
 
 Media Stream. AVPlayer use this for mediaData access, current version only support live stream.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface MediaStream--><!--Device-unnamed-interface MediaStream-End-->
 
@@ -18,9 +20,11 @@ biterate of this mediaStream.
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaStream-bitrate: int--><!--Device-MediaStream-bitrate: int-End-->
 
@@ -36,9 +40,11 @@ video height.
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaStream-height: int--><!--Device-MediaStream-height: int-End-->
 
@@ -54,9 +60,11 @@ url for this mediaStream
 
 **类型：** string
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaStream-url: string--><!--Device-MediaStream-url: string-End-->
 
@@ -72,9 +80,11 @@ video width.
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaStream-width: int--><!--Device-MediaStream-width: int-End-->
 

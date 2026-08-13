@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function getActiveNotificationCount(callback: AsyncCallback<number>): void
 ```
 
-获取当前应用的通知数量。使用callback异步回调。
+获取当前应用的通知数量。使用callback异步回调。 用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
 
-用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-notificationManager-function getActiveNotificationCount(callback: AsyncCallback<long>): void--><!--Device-notificationManager-function getActiveNotificationCount(callback: AsyncCallback<long>): void-End-->
 
@@ -24,7 +24,7 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 **参见：**
 
-[setBadgeNumber](notificationManager.setBadgeNumber(badgeNumber: int,callback: AsyncCallback<void>): void) 设置角标个数。
+setBadgeNumber 设置角标个数。
 
 **参数：**
 
@@ -36,10 +36,10 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -64,11 +64,11 @@ notificationManager.getActiveNotificationCount(getActiveNotificationCountCallbac
 function getActiveNotificationCount(): Promise<number>
 ```
 
-获取当前应用的通知数量。使用Promise异步回调。
+获取当前应用的通知数量。使用Promise异步回调。 用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
 
-用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-notificationManager-function getActiveNotificationCount(): Promise<long>--><!--Device-notificationManager-function getActiveNotificationCount(): Promise<long>-End-->
 
@@ -76,7 +76,7 @@ function getActiveNotificationCount(): Promise<number>
 
 **参见：**
 
-[setBadgeNumber](notificationManager.setBadgeNumber(badgeNumber: int): Promise<void>) 设置角标个数。
+setBadgeNumber 设置角标个数。
 
 **返回值：**
 
@@ -88,9 +88,9 @@ function getActiveNotificationCount(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

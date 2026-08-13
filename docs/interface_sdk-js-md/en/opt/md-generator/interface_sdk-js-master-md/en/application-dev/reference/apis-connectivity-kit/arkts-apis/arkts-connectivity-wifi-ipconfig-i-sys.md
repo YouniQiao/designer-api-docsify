@@ -6,7 +6,7 @@ Wi-Fi IP configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IpConfig](ohos.wifiManager/wifiManager.IpConfig)
+**Substitutes:** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md#IpConfig-(System-API))
 
 <!--Device-wifi-interface IpConfig--><!--Device-wifi-interface IpConfig-End-->
 
@@ -34,7 +34,7 @@ DNS servers.
 
 **Deprecated since:** 9
 
-**Substitutes:** [dnsServers](ohos.wifiManager/wifiManager.IpConfig.dnsServers)
+**Substitutes:** [dnsServers](arkts-connectivity-wifimanager-ipconfig-i-sys.md#dnsServers)
 
 <!--Device-IpConfig-dnsServers: number[]--><!--Device-IpConfig-dnsServers: number[]-End-->
 
@@ -56,7 +56,7 @@ Domains.
 
 **Deprecated since:** 9
 
-**Substitutes:** [domains](ohos.wifiManager/wifiManager.IpConfig.domains)
+**Substitutes:** [domains](arkts-connectivity-wifimanager-ipconfig-i-sys.md#domains)
 
 <!--Device-IpConfig-domains: Array<string>--><!--Device-IpConfig-domains: Array<string>-End-->
 
@@ -78,7 +78,7 @@ Gate way.
 
 **Deprecated since:** 9
 
-**Substitutes:** [gateway](ohos.wifiManager/wifiManager.IpConfig.gateway)
+**Substitutes:** [gateway](arkts-connectivity-wifimanager-ipconfig-i-sys.md#gateway)
 
 <!--Device-IpConfig-gateway: number--><!--Device-IpConfig-gateway: number-End-->
 
@@ -100,7 +100,7 @@ IP address.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ipAddress](ohos.wifiManager/wifiManager.IpConfig.ipAddress)
+**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-ipconfig-i-sys.md#ipAddress)
 
 <!--Device-IpConfig-ipAddress: number--><!--Device-IpConfig-ipAddress: number-End-->
 

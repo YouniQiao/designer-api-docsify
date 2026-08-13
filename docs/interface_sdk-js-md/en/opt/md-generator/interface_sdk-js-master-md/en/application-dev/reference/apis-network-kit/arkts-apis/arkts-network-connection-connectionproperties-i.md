@@ -2,7 +2,9 @@
 
 Defines the network connection properties.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface ConnectionProperties--><!--Device-connection-export interface ConnectionProperties-End-->
 
@@ -24,7 +26,9 @@ Network address, refer to [NetAddress].
 
 **Type:** Array&lt;NetAddress&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-dnses: Array<NetAddress>--><!--Device-ConnectionProperties-dnses: Array<NetAddress>-End-->
 
@@ -40,7 +44,9 @@ Domain. The default value is "".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-domains: string--><!--Device-ConnectionProperties-domains: string-End-->
 
@@ -56,7 +62,9 @@ Network card name.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-interfaceName: string--><!--Device-ConnectionProperties-interfaceName: string-End-->
 
@@ -72,7 +80,9 @@ Whether the IPv4 address of the interface is valid.
 
 **Type:** boolean
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +100,9 @@ Whether the IPv6 address of the interface is valid.
 
 **Type:** boolean
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,7 +120,9 @@ Link information.
 
 **Type:** Array&lt;LinkAddress&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>--><!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>-End-->
 
@@ -124,7 +138,9 @@ Maximum transmission unit.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-mtu: int--><!--Device-ConnectionProperties-mtu: int-End-->
 
@@ -140,7 +156,9 @@ Routing information.
 
 **Type:** Array&lt;RouteInfo&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-routes: Array<RouteInfo>--><!--Device-ConnectionProperties-routes: Array<RouteInfo>-End-->
 

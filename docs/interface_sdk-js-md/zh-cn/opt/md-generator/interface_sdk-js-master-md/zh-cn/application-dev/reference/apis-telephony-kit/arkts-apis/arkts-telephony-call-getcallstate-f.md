@@ -8,7 +8,9 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 获取当前通话状态。使用callback异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void--><!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void-End-->
 
@@ -43,7 +45,9 @@ function getCallState(): Promise<CallState>
 
 获取当前通话状态。使用Promise异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function getCallState(): Promise<CallState>--><!--Device-call-function getCallState(): Promise<CallState>-End-->
 

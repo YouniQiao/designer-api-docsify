@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-calendarManager-export enum AttendeeType--><!--Device-calendarManager-export enum AttendeeType-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -17,6 +19,8 @@ REQUIRED = 1
 会议日程主送者。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ OPTIONAL = 2
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AttendeeType-OPTIONAL = 2--><!--Device-AttendeeType-OPTIONAL = 2-End-->
@@ -49,6 +55,8 @@ RESOURCE = 3
 会议中使用的资源（电视或投影仪等）。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

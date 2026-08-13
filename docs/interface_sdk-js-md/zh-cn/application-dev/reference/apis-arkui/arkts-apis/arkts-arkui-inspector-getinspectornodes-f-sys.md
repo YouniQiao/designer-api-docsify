@@ -14,7 +14,7 @@ declare function getInspectorNodes(): object
 
 **废弃版本：** 9
 
-**替代接口：** [getInspectorTree](getInspectorTree)
+**替代接口：** getInspectorTree
 
 <!--Device-unnamed-declare function getInspectorNodes(): object--><!--Device-unnamed-declare function getInspectorNodes(): object-End-->
 

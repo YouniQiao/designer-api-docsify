@@ -12,16 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getAppThreadCpuUsage(): ThreadCpuUsage[]
 ```
 
-Obtains the CPU usage of application threads.
+Obtains the CPU usage of application threads. > **NOTE：**> > This API involves cross-process communication and takes a long time. To avoid performance problems, you are > advised not to call this API in the main thread.
 
-> **NOTE：**
-> 
-> This API involves cross-process communication and takes a long time. To avoid performance problems, you are
-> advised not to call this API in the main thread.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
 

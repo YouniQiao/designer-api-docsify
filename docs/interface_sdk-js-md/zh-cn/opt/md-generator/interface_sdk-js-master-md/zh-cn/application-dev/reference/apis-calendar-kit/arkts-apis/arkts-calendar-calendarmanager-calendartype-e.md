@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-calendarManager-enum CalendarType--><!--Device-calendarManager-enum CalendarType-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -17,6 +19,8 @@ LOCAL = 'local'
 本地账户。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ EMAIL = 'email'
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CalendarType-EMAIL = 'email'--><!--Device-CalendarType-EMAIL = 'email'-End-->
@@ -49,6 +55,8 @@ BIRTHDAY = 'birthday'
 生日账户。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ CALDAV = 'caldav'
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CalendarType-CALDAV = 'caldav'--><!--Device-CalendarType-CALDAV = 'caldav'-End-->
@@ -81,6 +91,8 @@ SUBSCRIBED = 'subscribed'
 订阅账户。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

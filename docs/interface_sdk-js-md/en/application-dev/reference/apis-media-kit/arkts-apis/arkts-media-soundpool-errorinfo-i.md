@@ -2,11 +2,13 @@
 
 Describes the error information.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface ErrorInfo<T extends Error = BusinessError>--><!--Device-unnamed-export interface ErrorInfo<T extends Error = BusinessError>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface ErrorInfo--><!--Device-unnamed-export interface ErrorInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -16,13 +18,15 @@ Describes the error information.
 errorCode: T
 ```
 
-Error code. The type of **errorCode** is [BusinessError](../../../reference/apis-basic-services-kit/js-apis-base.md).
+Error code. The type of **errorCode** is BusinessError.
 
 **Type:** T
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorInfo-errorCode: T--><!--Device-ErrorInfo-errorCode: T-End-->
 
@@ -38,9 +42,11 @@ Stage at which the error occurred.
 
 **Type:** [ErrorType](arkts-media-soundpool-errortype-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorInfo-errorType?: ErrorType--><!--Device-ErrorInfo-errorType?: ErrorType-End-->
 
@@ -54,11 +60,13 @@ soundId?: int
 
 ID of the resource where the error occurred. It can be obtained by calling **load**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorInfo-soundId?: int--><!--Device-ErrorInfo-soundId?: int-End-->
 
@@ -72,11 +80,13 @@ streamId?: int
 
 ID of the audio stream where the error occurred. It can be obtained by calling **play**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorInfo-streamId?: int--><!--Device-ErrorInfo-streamId?: int-End-->
 

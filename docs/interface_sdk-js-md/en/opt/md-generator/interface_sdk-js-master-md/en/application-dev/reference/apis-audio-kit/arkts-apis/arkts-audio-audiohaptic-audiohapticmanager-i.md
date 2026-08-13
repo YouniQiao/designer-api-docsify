@@ -1,9 +1,10 @@
 # AudioHapticManager
 
-Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use   
-[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager) to create an AudioHapticManager instance.
+Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager) to create an AudioHapticManager instance.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
 
@@ -24,6 +25,8 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 Create an audio haptic player. This method uses a promise to return the result. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -48,11 +51,11 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -72,22 +75,57 @@ audioHapticManagerInstance.createPlayer(id, options).then((value: audioHaptic.Au
 });
 ```
 
+## createPlayer
+
+```TypeScript
+createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer | null>
+```
+
+Create an audio haptic player. This method uses a promise to return the result. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-AudioHapticManager-createPlayer(id: int, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer | null>--><!--Device-AudioHapticManager-createPlayer(id: int, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer | null>-End-->
+
+**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| id | number | Yes |
+| options | [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
 ## registerSource
 
 ```TypeScript
 registerSource(audioUri: string, hapticUri: string): Promise<number>
 ```
 
-Registers audio and haptic resources via URIs. This API uses a promise to return the result.
+Registers audio and haptic resources via URIs. This API uses a promise to return the result. > **NOTE：**> > A maximum of 128 resources can be registered at the same time for an application. Any attempt to register > beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number > of registered resources. For resources that are no longer used, you are advised to unregister them in a timely > manner.
 
-> **NOTE：**
-> 
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
-> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
-> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
-> manner.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
 
@@ -97,7 +135,7 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [audioUri](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-audio-c.md) | string | Yes |
+| audioUri | string | Yes |
 | hapticUri | string | Yes |
 
 **Return value:**
@@ -110,7 +148,7 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -135,16 +173,11 @@ audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value: numb
 registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<number>
 ```
 
-Registers audio and haptic resources via file descriptors. This API uses a promise to return the result.
+Registers audio and haptic resources via file descriptors. This API uses a promise to return the result. > **NOTE：**> > A maximum of 128 resources can be registered at the same time for an application. Any attempt to register > beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number > of registered resources. For resources that are no longer used, you are advised to unregister them in a timely > manner.
 
-> **NOTE：**
-> 
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
-> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
-> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
-> manner.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
@@ -203,7 +236,9 @@ setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
 
 Sets the latency mode for an audio-haptic source.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
 
@@ -220,8 +255,8 @@ Sets the latency mode for an audio-haptic source.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## Examples
 
@@ -243,7 +278,9 @@ setStreamUsage(id: number, usage: audio.StreamUsage): void
 
 Sets the stream usage for an audio-haptic source.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
@@ -260,8 +297,8 @@ Sets the stream usage for an audio-haptic source.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## Examples
 
@@ -282,14 +319,11 @@ audioHapticManagerInstance.setStreamUsage(id, usage);
 unregisterSource(id: number): Promise<void>
 ```
 
-Unregisters an audio-haptic source. This API uses a promise to return the result.
+Unregisters an audio-haptic source. This API uses a promise to return the result. > **NOTE：**> > For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues > such as resource leaks or the number of resources exceeding the upper limit.
 
-> **NOTE：**
-> 
-> For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues
-> such as resource leaks or the number of resources exceeding the upper limit.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
@@ -311,7 +345,7 @@ Unregisters an audio-haptic source. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

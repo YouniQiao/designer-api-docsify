@@ -4,6 +4,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface LocaleResponse--><!--Device-unnamed-export interface LocaleResponse-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
@@ -22,6 +24,8 @@ countryOrRegion: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LocaleResponse-countryOrRegion: string--><!--Device-LocaleResponse-countryOrRegion: string-End-->
@@ -34,17 +38,15 @@ countryOrRegion: string
 dir: "ltr" | "rtl"
 ```
 
-文字布局方向。取值范围：
-
-- ltr：从左到右。
-
-- rtl：从右到左。
+文字布局方向。取值范围： - ltr：从左到右。 - rtl：从右到左。
 
 **类型：** "ltr" \| "rtl"
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -65,6 +67,8 @@ language: string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

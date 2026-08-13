@@ -1,9 +1,10 @@
 # LinkIntentInfo (System API)
 
-Describes the parameters supported by the  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator, such as the URI required for application redirection.
+Describes the parameters supported by the @InsightIntentLink decorator, such as the URI required for application redirection.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-interface LinkIntentInfo--><!--Device-insightIntentDriver-interface LinkIntentInfo-End-->
 
@@ -27,7 +28,9 @@ URI of an intent.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

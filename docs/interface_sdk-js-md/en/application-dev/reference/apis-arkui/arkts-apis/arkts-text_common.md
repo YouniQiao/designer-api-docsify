@@ -9,7 +9,7 @@
 | [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md) | Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle). |
 | [ContentTransition](arkts-arkui-contenttransition-c.md) | Defines the base class for text transitions. |
 | [LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md) | Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle). |
-| [NumericTextTransition](arkts-arkui-numerictexttransition-c.md) | Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the  [copyOption](TextAttribute#copyOption) property is ineffective. The flip animation fails if the text contains child components or is set via a styled string.  **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition). |
+| [NumericTextTransition](arkts-arkui-numerictexttransition-c.md) | Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the copyOption property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition). |
 | [RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md) | Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle). |
 | [ShaderStyle](arkts-arkui-shaderstyle-c.md) | Defines the base class for text shader effects. |
 | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Defines the unique identifier for a custom menu item. It is used to identify menu items. The IDs for built-in menu items are listed in the table below. |
@@ -29,7 +29,7 @@
 | [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md) | Defines font weight configurations. When the configuration object (including an empty object **{}**) is passed, the default values are used for properties that are not explicitly set. When **null** or **undefined** is passed, default values are not applied, and the font weight behavior is consistent with that of the parent component text. |
 | [IMEClient](arkts-arkui-imeclient-i.md) | Defines the input method client type bound to an input component. |
 | [InsertValue](arkts-arkui-insertvalue-i.md) | Defines the inserted text value info. |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Implements a layout manager object.  > **NOTE：** >  > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- > to-date layout information. |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Implements a layout manager object. > **NOTE：**> > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- > to-date layout information. |
 | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | Configures the line spacing of text and whether it applies only between lines. |
 | [MaxLinesOptions](arkts-arkui-maxlinesoptions-i.md) | Configures the display effect of the **TextArea** component when the text exceeds the maximum number of lines. |
 | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | Defines the options of the numeric flip animation. |
@@ -41,8 +41,8 @@
 | [StyledStringController](arkts-arkui-styledstringcontroller-i.md) | Defines a styled string controller. |
 | [TextBaseController](arkts-arkui-textbasecontroller-i.md) | Defines a text selection controller. |
 | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | Provides information about the text before and after a change, including the selection ranges. |
-| [TextDataDetectorConfig](arkts-arkui-textdatadetectorconfig-i.md) | This configuration is only available for the [Text](./text) and [RichEditor](./rich_editor) components. |
-| [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md) | Implements an extended text editing controller.  Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md#TextBaseController). |
+| [TextDataDetectorConfig](arkts-arkui-textdatadetectorconfig-i.md) | This configuration is only available for the Text and RichEditor components. |
+| [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md) | Implements an extended text editing controller. Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md#TextBaseController). |
 | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | Defines the text layout options. |
 | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | TextMenuItem |
 | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | Provides the options for customizing the context menu on selection. |
@@ -67,7 +67,7 @@
 | [KeyboardAppearance](arkts-arkui-keyboardappearance-e.md) | Enumerates the appearance modes of the keyboard. |
 | [MaxLinesMode](arkts-arkui-maxlinesmode-e.md) | Enumerates the display effects of the **TextArea** component when text exceeds the maximum number of lines. The default value is **CLIP** (truncating text at the maximum line count). |
 | [MenuType](arkts-arkui-menutype-e.md) | Enumerates the menu types. |
-| [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md) | An enumeration that defines the line corner style, i.e.,the style of the brush when drawing a polyline at the corners of the line segments. |
+| [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md) | An enumeration that defines the line corner style, i.e., the style of the brush when drawing a polyline at the corners of the line segments. |
 | [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md) | Enumerates the text superscript and subscript styles. |
 | [TextContentAlign](arkts-arkui-textcontentalign-e.md) | Enumerates the vertical alignment directions of the text content area. |
 | [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md) | Defines the text data detector type. |

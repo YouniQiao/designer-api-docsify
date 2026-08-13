@@ -1,8 +1,10 @@
 # VibratorCurvePoint
 
-相对事件振动强度的增益。用于[ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md#ContinuousParam)和[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md#VibratorEvent)的points字段，精细控制振动强度和频率的变化趋势。
+相对事件振动强度的增益。用于[ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md#ContinuousParam)和[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md#VibratorEvent)的 points字段，精细控制振动强度和频率的变化趋势。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-vibrator-interface VibratorCurvePoint--><!--Device-vibrator-interface VibratorCurvePoint-End-->
 
@@ -18,7 +20,9 @@ frequency?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorCurvePoint-frequency?: int--><!--Device-VibratorCurvePoint-frequency?: int-End-->
 
@@ -34,7 +38,9 @@ intensity?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorCurvePoint-intensity?: double--><!--Device-VibratorCurvePoint-intensity?: double-End-->
 
@@ -50,7 +56,9 @@ time: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorCurvePoint-time: int--><!--Device-VibratorCurvePoint-time: int-End-->
 

@@ -2,7 +2,9 @@
 
 发送请求的响应结果。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
 
@@ -18,7 +20,9 @@ code: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
 
@@ -34,7 +38,9 @@ data: MessageSequence
 
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
 
@@ -50,7 +56,9 @@ errCode: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
 
@@ -66,7 +74,9 @@ reply: MessageSequence
 
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
 

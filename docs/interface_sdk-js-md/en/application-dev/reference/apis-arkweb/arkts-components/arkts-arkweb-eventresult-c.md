@@ -1,20 +1,12 @@
 # EventResult
 
-Represents the event consumption result sent to the **Web** component. For details about the supported events, see  
-[TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md#TouchType), [MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md#MouseAction), and left, middle, and right buttons in  
-[MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-mousebutton-e.md#MouseButton).
-
-If the application does not consume the event, set the consumption result to **false**, and the event will be consumed by the **Web** component. If the application consumes the event, set the consumption result to **true**, and the **Web** component will not consume the event. If the consumption result is not set according to the preceding specifications, exceptions may occur.
-
-For details about the sample code of the touch event, see  
-[onNativeEmbedGestureEvent](web:WebAttribute.onNativeEmbedGestureEvent).
-
-For details about the sample code of the mouse event, see  
-[onNativeEmbedMouseEvent](web:WebAttribute.onNativeEmbedMouseEvent).
+Represents the event consumption result sent to the **Web** component. For details about the supported events, see [TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md#TouchType), [MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md#MouseAction), and left, middle, and right buttons in [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-mousebutton-e.md#MouseButton). If the application does not consume the event, set the consumption result to **false**, and the event will be consumed by the **Web** component. If the application consumes the event, set the consumption result to **true**, and the **Web** component will not consume the event. If the consumption result is not set according to the preceding specifications, exceptions may occur. For details about the sample code of the touch event, see onNativeEmbedGestureEvent. For details about the sample code of the mouse event, see onNativeEmbedMouseEvent.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class EventResult--><!--Device-unnamed-declare class EventResult-End-->
 
@@ -31,6 +23,8 @@ Constructs a **EventResult** object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -49,6 +43,8 @@ Sets the gesture event consumption result.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,6 +70,8 @@ Sets the gesture event consumption result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-EventResult-setGestureEventResult(result: boolean, stopPropagation: boolean): void--><!--Device-EventResult-setGestureEventResult(result: boolean, stopPropagation: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -96,6 +94,8 @@ Sets the mouse event consumption result.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-EventResult-setMouseEventResult(result: boolean, stopPropagation?: boolean): void--><!--Device-EventResult-setMouseEventResult(result: boolean, stopPropagation?: boolean): void-End-->
 

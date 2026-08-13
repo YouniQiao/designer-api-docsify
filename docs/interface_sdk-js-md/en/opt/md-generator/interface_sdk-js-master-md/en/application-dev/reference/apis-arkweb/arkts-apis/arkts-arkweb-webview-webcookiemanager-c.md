@@ -4,6 +4,8 @@ Provides methods for managing the web cookies.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-webview-class WebCookieManager--><!--Device-webview-class WebCookieManager-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Remove all cookies Asynchronously.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCookieManager-static clearAllCookies(): Promise<void>--><!--Device-WebCookieManager-static clearAllCookies(): Promise<void>-End-->
@@ -40,7 +44,7 @@ Remove all cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## clearAllCookies
 
@@ -51,6 +55,8 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 Remove all cookies Asynchronously.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,7 +74,7 @@ Remove all cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## clearAllCookiesSync
 
@@ -79,6 +85,8 @@ static clearAllCookiesSync(incognito?: boolean): void
 Remove all cookies.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,6 +110,8 @@ Delete the session cookies Asynchronously.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>--><!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>-End-->
@@ -118,7 +128,7 @@ Delete the session cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## clearSessionCookie
 
@@ -129,6 +139,8 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 Delete the session cookies Asynchronously.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -146,7 +158,7 @@ Delete the session cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## clearSessionCookieSync
 
@@ -157,6 +169,8 @@ static clearSessionCookieSync(): void
 Delete the session cookies.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -173,6 +187,8 @@ static configCookie(url: string, value: string): Promise<void>
 Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -197,9 +213,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookie
 
@@ -210,6 +226,8 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>-End-->
 
@@ -234,9 +252,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookie
 
@@ -247,6 +265,8 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -266,9 +286,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookieSync
 
@@ -276,31 +296,11 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 static configCookieSync(url: string, value: string, incognito?: boolean): void
 ```
 
-Set a single cookie (key-value pair) for the given URL.
-
-> **NOTE：**
-> 
-> You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on
-> the page.
-> 
-> Cookies are periodically saved to the disk every 30s. You can also use the
-> **saveCookieAsync** API to forcibly save cookies to the disk.
-> 
-> The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the
-> format of "key=value", followed by a list of cookie attributes separated by semicolons, for example,
-> **"key=value;Max-Age=100"**.
-> 
-> If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has
-> expired, it will not be stored. To set multiple cookies, call this method multiple times.
-> 
-> If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated
-> by semicolons.
-> 
-> If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol.
-> 
-> To override HttpOnly cookies, the HttpOnly attribute must be specified in the value.
+Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on > the page. > > Cookies are periodically saved to the disk every 30s. You can also use the > **saveCookieAsync** API to forcibly save cookies to the disk. > > The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the > format of "key=value", followed by a list of cookie attributes separated by semicolons, for example, > **"key=value;Max-Age=100"**. > > If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has > expired, it will not be stored. To set multiple cookies, call this method multiple times. > > If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated > by semicolons. > > If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol. > > To override HttpOnly cookies, the HttpOnly attribute must be specified in the value.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -320,9 +320,9 @@ Set a single cookie (key-value pair) for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookieSync
 
@@ -330,31 +330,11 @@ Set a single cookie (key-value pair) for the given URL.
 static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void
 ```
 
-Set a single cookie (key-value pair) for the given URL.
-
-> **NOTE：**
-> 
-> You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on
-> the page.
-> 
-> It is recommended that cookie syncing be completed before the **Web** component is loaded.
-> 
-> Cookies are periodically saved to the disk every 30s. You can also use the
-> **saveCookieAsync** API to forcibly save cookies to the disk.
-> 
-> The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the
-> format of "key=value", followed by a list of cookie attributes separated by semicolons, for example,
-> **"key=value;Max-Age=100"**.
-> 
-> If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has
-> expired, it will not be stored. To set multiple cookies, call this method multiple times.
-> 
-> If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated
-> by semicolons.
-> 
-> If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol.
+Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on > the page. > > It is recommended that cookie syncing be completed before the **Web** component is loaded. > > Cookies are periodically saved to the disk every 30s. You can also use the > **saveCookieAsync** API to forcibly save cookies to the disk. > > The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the > format of "key=value", followed by a list of cookie attributes separated by semicolons, for example, > **"key=value;Max-Age=100"**. > > If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has > expired, it will not be stored. To set multiple cookies, call this method multiple times. > > If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated > by semicolons. > > If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void-End-->
 
@@ -373,9 +353,9 @@ Set a single cookie (key-value pair) for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## deleteEntireCookie
 
@@ -423,6 +403,8 @@ Check whether exists any cookies.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean--><!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean-End-->
@@ -451,6 +433,8 @@ Fetches all stored cookies asynchronously.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>--><!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -477,6 +461,8 @@ Gets all cookies for the given URL Asynchronously.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>-End-->
@@ -499,8 +485,8 @@ Gets all cookies for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookie
 
@@ -511,6 +497,8 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 Gets all cookies for the given URL Asynchronously.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>-End-->
 
@@ -533,8 +521,8 @@ Gets all cookies for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookie
 
@@ -545,6 +533,8 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 Gets all cookies for the given URL Asynchronously.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -563,8 +553,8 @@ Gets all cookies for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookie
 
@@ -575,6 +565,8 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 Gets all cookies for the given URL Asynchronously.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -600,7 +592,7 @@ Gets all cookies for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookieSync
 
@@ -608,13 +600,11 @@ Gets all cookies for the given URL Asynchronously.
 static fetchCookieSync(url: string, incognito?: boolean): string
 ```
 
-Gets all cookies for the given URL.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;
-
-**fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However,a specific cookie value cannot be obtained separately.&lt;/p&gt;
+Gets all cookies for the given URL. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; **fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However, a specific cookie value cannot be obtained separately. &lt;/p&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -639,8 +629,8 @@ Gets all cookies for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookieSync
 
@@ -648,13 +638,11 @@ Gets all cookies for the given URL.
 static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCookies?: boolean): string
 ```
 
-Gets all cookies for the given URL.
-
-&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;
-
-**fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However,a specific cookie value cannot be obtained separately.
+Gets all cookies for the given URL. &lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; **fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However, a specific cookie value cannot be obtained separately.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -680,7 +668,7 @@ Gets all cookies for the given URL.
 
 | Error Code ID |
 | --- |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## getCookie
 
@@ -716,8 +704,8 @@ Gets all cookies for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## isCookieAllowed
 
@@ -728,6 +716,8 @@ static isCookieAllowed(): boolean
 Get whether the instance can send and accept cookies.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -751,6 +741,8 @@ Get whether the instance can send and accept thirdparty cookies.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean--><!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean-End-->
@@ -769,9 +761,11 @@ Get whether the instance can send and accept thirdparty cookies.
 static putAcceptCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept cookies.By default this is set to be true.
+Set whether the instance should send and accept cookies. By default this is set to be true.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -789,7 +783,7 @@ Set whether the instance should send and accept cookies.By default this is set t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## putAcceptThirdPartyCookieEnabled
 
@@ -797,9 +791,11 @@ Set whether the instance should send and accept cookies.By default this is set t
 static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept thirdparty cookies.By default this is set to be false.
+Set whether the instance should send and accept thirdparty cookies. By default this is set to be false.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -817,7 +813,7 @@ Set whether the instance should send and accept thirdparty cookies.By default th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## saveCookieAsync
 
@@ -828,6 +824,8 @@ static saveCookieAsync(): Promise<void>
 Save the cookies Asynchronously.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -845,7 +843,7 @@ Save the cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## saveCookieAsync
 
@@ -856,6 +854,8 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 Save the cookies Asynchronously.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -873,7 +873,7 @@ Save the cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## saveCookieSync
 
@@ -881,14 +881,11 @@ Save the cookies Asynchronously.
 static saveCookieSync(): void
 ```
 
-Save the cookies synchronously.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;  
-**saveCookieSync** is used to forcibly write cookies that need to be persisted to disks. Session cookies are not persisted on PCs, 2-in-1 devices, or tablets, even if **saveCookieSync** is invoked.
-
-**saveCookieSync** blocks the caller until the operation is complete. During this period, I/O operations may be performed.&lt;/p&gt;
+Save the cookies synchronously. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; **saveCookieSync** is used to forcibly write cookies that need to be persisted to disks. Session cookies are not persisted on PCs, 2-in-1 devices, or tablets, even if **saveCookieSync** is invoked. **saveCookieSync** blocks the caller until the operation is complete. During this period, I/O operations may be performed. &lt;/p&gt;
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static saveCookieSync(): void--><!--Device-WebCookieManager-static saveCookieSync(): void-End-->
 
@@ -923,9 +920,9 @@ Set a single cookie (key-value pair) for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## setLazyInitializeWebEngine
 
@@ -936,6 +933,8 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 Delays the initialization of the web engine. By default, the web engine is initialized when the CookieManager interface is called. By setting the 'lazy' parameter to true, the web engine will not be initialized when the CookieManager interface is called. Instead, the web engine will be initialized either when the web component is created or when initializeWebEngine is called.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void--><!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void-End-->
 

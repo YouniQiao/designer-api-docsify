@@ -1,16 +1,12 @@
 # SignSpecItem
 
-Enumerates the signing and signature verification parameters, which can be set by using  
-[setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setSignSpec) and  
-[setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setVerifySpec), and obtained by using [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getSignSpec) and  
-[getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getVerifySpec).
+Enumerates the signing and signature verification parameters, which can be set by using [setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setSignSpec) and [setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setVerifySpec), and obtained by using [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getSignSpec) and [getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getVerifySpec). &lt;br&gt;Currently, only RSA and SM2 are supported. For details, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md) .
 
-&lt;br&gt;Currently, only RSA and SM2 are supported. For details, see  
-[Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md).
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-enum SignSpecItem--><!--Device-cryptoFramework-enum SignSpecItem-End-->
 
@@ -26,9 +22,11 @@ PSS_MD_NAME_STR = 100
 
 Message digest algorithm used with the PSS padding mode in RSA.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,9 +44,11 @@ PSS_MGF_NAME_STR = 101
 
 Mask generation algorithm used with the PSS padding mode in RSA. Currently, only MGF1 is supported.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,9 +66,11 @@ PSS_MGF1_MD_STR = 102
 
 Message digest algorithm for the MGF1 mask generation used with the PSS padding mode in RSA.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,23 +86,13 @@ Message digest algorithm for the MGF1 mask generation used with the PSS padding 
 PSS_SALT_LEN_NUM = 103
 ```
 
-Length of the salt in bytes used with the PSS padding mode in RSA.
+Length of the salt in bytes used with the PSS padding mode in RSA. &lt;br&gt;According to the FIPS 186-4 standard, sLen should be greater than or equal to 0 and less than or equal to the hash length. &lt;br&gt;Default values: - For sign, automatically calculate the maximum salt length. - For verify, automatically calculate the salt length. &lt;br&gt;Special values: - For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to automatically calculate the maximum salt length. The recommended value is -1. - For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
 
-&lt;br&gt;According to the FIPS 186-4 standard, sLen should be greater than or equal to 0 and less than or equal to the hash length.
+**Since:** 23
 
-&lt;br&gt;Default values:  
-- For sign, automatically calculate the maximum salt length.  
-- For verify, automatically calculate the salt length.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-&lt;br&gt;Special values:  
-- For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to  
-automatically calculate the maximum salt length. The recommended value is -1.  
-- For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically  
-calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,9 +110,11 @@ PSS_TRAILER_FIELD_NUM = 104
 
 Trailer field used in the encoding operation when PSS padding mode is used in RSA.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -138,9 +132,11 @@ SM2_USER_ID_UINT8ARR = 105
 
 User ID field in SM2.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,7 +156,9 @@ Indicates whether deterministic signing is used for the ML-DSA signing and verif
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,7 +178,9 @@ Indicates the mu parameter value for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,7 +200,9 @@ Indicates the context data for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

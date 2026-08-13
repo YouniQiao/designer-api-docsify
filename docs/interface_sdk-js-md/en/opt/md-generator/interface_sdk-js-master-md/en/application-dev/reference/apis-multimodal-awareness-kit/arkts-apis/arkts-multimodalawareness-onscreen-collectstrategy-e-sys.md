@@ -4,6 +4,8 @@ Defines a page information collection policy.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-onScreen-export enum CollectStrategy--><!--Device-onScreen-export enum CollectStrategy-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -19,6 +21,8 @@ ALLOW = 1 << 0
 Collection is supported.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Collection policy of the split-screen window on the application.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CollectStrategy-SPLIT_SCREEN = 1 << 1--><!--Device-CollectStrategy-SPLIT_SCREEN = 1 << 1-End-->
@@ -55,6 +61,8 @@ UNSUPPORTED_APP = 1 << 2
 Automatic collection is not supported.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Privacy window of the application.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CollectStrategy-PRIVATE_WINDOW = 1 << 3--><!--Device-CollectStrategy-PRIVATE_WINDOW = 1 << 3-End-->
@@ -91,6 +101,8 @@ ANCO_APP = 1 << 4
 VM application, which is a non-HarmonyOS application.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +122,8 @@ Collection policies can be configured.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CollectStrategy-ALLOW_USER_CHANGE = 1 << 5--><!--Device-CollectStrategy-ALLOW_USER_CHANGE = 1 << 5-End-->
@@ -127,6 +141,8 @@ BUSINESS_APP = 1 << 6
 Application data can be collected.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +162,8 @@ Floating window.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CollectStrategy-FLOAT_SCREEN = 1 << 7--><!--Device-CollectStrategy-FLOAT_SCREEN = 1 << 7-End-->
@@ -164,6 +182,8 @@ Picture-in-picture mode.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CollectStrategy-PIP_SCREEN = 1 << 8--><!--Device-CollectStrategy-PIP_SCREEN = 1 << 8-End-->
@@ -181,6 +201,8 @@ LAUNCHER = 1 << 9
 Desktop application.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

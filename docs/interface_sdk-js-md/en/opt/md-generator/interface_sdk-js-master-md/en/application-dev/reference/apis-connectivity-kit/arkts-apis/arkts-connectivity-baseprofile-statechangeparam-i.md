@@ -2,7 +2,9 @@
 
 Profile state change parameters.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-baseProfile-export interface StateChangeParam--><!--Device-baseProfile-export interface StateChangeParam-End-->
 
@@ -24,7 +26,9 @@ Cause of disconnect
 
 **Type:** [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ The address of device
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ PAN role of the device
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StateChangeParam-role?: PanRole--><!--Device-StateChangeParam-role?: PanRole-End-->
@@ -78,7 +86,9 @@ Profile state value
 
 **Type:** ProfileConnectionState
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

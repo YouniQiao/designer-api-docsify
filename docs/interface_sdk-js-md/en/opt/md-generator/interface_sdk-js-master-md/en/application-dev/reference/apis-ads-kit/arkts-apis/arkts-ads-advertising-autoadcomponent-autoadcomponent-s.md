@@ -4,7 +4,7 @@ The AutoAdComponent module provides the capability of displaying carousel ads.
 
 **Since:** 11
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare struct AutoAdComponent--><!--Device-unnamed-declare struct AutoAdComponent-End-->
 
@@ -26,6 +26,8 @@ A constructor used to create an **AutoAdComponent** object.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoAdComponent-build(): void--><!--Device-AutoAdComponent-build(): void-End-->
@@ -43,6 +45,8 @@ Ad configuration options.
 **Type:** advertising.AdOptions
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,6 +66,8 @@ Ad request parameters.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoAdComponent-adParam: advertising.AdRequestParams--><!--Device-AutoAdComponent-adParam: advertising.AdRequestParams-End-->
@@ -80,6 +86,8 @@ Ad display parameters.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions-End-->
@@ -97,6 +105,8 @@ Ad status change callback.
 **Type:** advertising.AdInteractionListener
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

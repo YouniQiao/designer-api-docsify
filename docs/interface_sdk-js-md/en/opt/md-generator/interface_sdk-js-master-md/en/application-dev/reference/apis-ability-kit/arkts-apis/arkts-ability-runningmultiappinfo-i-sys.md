@@ -2,7 +2,9 @@
 
 The RunningMultiAppInfo module defines the information of an application in multi-app mode in the running state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RunningMultiAppInfo--><!--Device-unnamed-export interface RunningMultiAppInfo-End-->
 
@@ -20,7 +22,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningMultiAppInfo-bundleName: string--><!--Device-RunningMultiAppInfo-bundleName: string-End-->
 
@@ -38,7 +42,9 @@ Multi-app mode.
 
 **Type:** [MultiAppMode](arkts-ability-multiappmode-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningMultiAppInfo-mode: MultiAppMode--><!--Device-RunningMultiAppInfo-mode: MultiAppMode-End-->
 
@@ -56,7 +62,9 @@ Information about application clones with the specific bundle name in the runnin
 
 **Type:** Array&lt;[RunningAppClone](arkts-ability-runningappclone-i-sys.md)&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>--><!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>-End-->
 
@@ -74,7 +82,9 @@ Information about a multi-instance application with the specific bundle name in 
 
 **Type:** Array&lt;[RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md)&gt;
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>--><!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>-End-->
 

@@ -2,9 +2,11 @@
 
 The ServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ServiceExtensionAbility--><!--Device-unnamed-declare class ServiceExtensionAbility-End-->
 
@@ -26,9 +28,11 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 Called when the configuration of this ServiceExtensionAbility is updated.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,9 +68,11 @@ onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 
 Called following **onCreate()** when a ServiceExtensionAbility is started by calling **connectAbility()**. A RemoteObject is returned for communication between the server and client.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,9 +149,11 @@ onCreate(want: Want): void
 
 Called to initialize the service logic when a ServiceExtensionAbility is being created.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,9 +189,11 @@ onDestroy(): void
 
 Called to clear resources when this ServiceExtensionAbility is being destroyed.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -211,11 +221,13 @@ class ServiceExt extends ServiceExtensionAbility {
 onDisconnect(want: Want): void | Promise<void>
 ```
 
-Called when a client is disconnected from this ServiceExtensionAbility.This API returns the result synchronously or uses a promise to return the result.
+Called when a client is disconnected from this ServiceExtensionAbility. This API returns the result synchronously or uses a promise to return the result.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,11 +276,13 @@ class ServiceExt extends ServiceExtensionAbility {
 onDisconnect(want: Want): Promise<void> | undefined
 ```
 
-Called when a client is disconnected from this ServiceExtensionAbility.This API returns the result synchronously or uses a promise to return the result.
+Called when a client is disconnected from this ServiceExtensionAbility. This API returns the result synchronously or uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,9 +312,11 @@ onDump(params: Array<string>): Array<string>
 
 Dumps the client information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -347,6 +363,8 @@ Called when a new client attempts to connect to this ServiceExtensionAbility aft
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onReconnect(want: Want): void--><!--Device-ServiceExtensionAbility-onReconnect(want: Want): void-End-->
@@ -375,22 +393,17 @@ class ServiceExt extends ServiceExtensionAbility {
 
 ## onRequest
 
-ArkTS-Dyn:
-```TypeScript
-onRequest(want: Want, startId: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onRequest(want: Want, startId: int): void
 ```
 
-Called following **onCreate()** when a ServiceExtensionAbility is started by calling **startAbility()** or  
-**startServiceExtensionAbility()**. The value of **startId** is incremented for each ServiceExtensionAbility that is started.
+Called following **onCreate()** when a ServiceExtensionAbility is started by calling **startAbility()** or **startServiceExtensionAbility()**. The value of **startId** is incremented for each ServiceExtensionAbility that is started.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -405,7 +418,7 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
-| startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
+| startId | int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
 ## Examples
 
@@ -429,9 +442,11 @@ Context of the ServiceExtensionAbility. This context inherits from **ExtensionCo
 
 **Type:** [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

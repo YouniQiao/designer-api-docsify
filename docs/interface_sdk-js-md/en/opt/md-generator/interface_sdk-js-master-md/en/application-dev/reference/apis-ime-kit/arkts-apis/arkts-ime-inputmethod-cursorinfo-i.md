@@ -2,7 +2,9 @@
 
 Information of Cursor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export interface CursorInfo--><!--Device-inputMethod-export interface CursorInfo-End-->
 
@@ -26,6 +28,8 @@ Indicates the ID of the display where the cursor locates.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CursorInfo-displayId?: long--><!--Device-CursorInfo-displayId?: long-End-->
@@ -42,7 +46,9 @@ Indicates the height point of the cursor info, unit is px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CursorInfo-height: double--><!--Device-CursorInfo-height: double-End-->
 
@@ -58,7 +64,9 @@ Indicates the left point of the cursor info and must be absolute coordinate of t
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CursorInfo-left: double--><!--Device-CursorInfo-left: double-End-->
 
@@ -74,7 +82,9 @@ Indicates the top point of the cursor info and must be absolute coordinate of th
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CursorInfo-top: double--><!--Device-CursorInfo-top: double-End-->
 
@@ -90,7 +100,9 @@ Indicates the width point of the cursor info, unit is px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CursorInfo-width: double--><!--Device-CursorInfo-width: double-End-->
 

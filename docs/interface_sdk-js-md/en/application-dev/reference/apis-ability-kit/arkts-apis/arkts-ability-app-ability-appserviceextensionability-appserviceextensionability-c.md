@@ -2,13 +2,15 @@
 
 The AppServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
-**Inheritance/Implementation:** AppServiceExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** AppServiceExtensionAbility extends ExtensionAbility
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class AppServiceExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AppServiceExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AppServiceExtensionAbility--><!--Device-unnamed-declare class AppServiceExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,12 +26,13 @@ import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 onConnect(want: Want): rpc.RemoteObject
 ```
 
-Called when an AppServiceExtensionAbility instance is connected by calling  
-[connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectAppServiceExtensionAbility).
+Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectAppServiceExtensionAbility) .
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,16 +84,13 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 onCreate(want: Want): void
 ```
 
-Called when an AppServiceExtensionAbility instance is created.Applications can perform initialization operations, such as registering common event listeners, in this callback.
+Called when an AppServiceExtensionAbility instance is created. Applications can perform initialization operations, such as registering common event listeners, in this callback. > **NOTE：**> > If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked > again when the instance is started or connected.
 
-> **NOTE：**
-> 
-> If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked
-> again when the instance is started or connected.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,9 +127,11 @@ onDestroy(): void
 
 Called when an AppServiceExtensionAbility instance is destroyed. Applications can perform resource cleanup operations, such as unregistering listeners, in this callback.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,9 +162,11 @@ onDisconnect(want: Want): void
 
 Called when all connections to an AppServiceExtensionAbility instance are interrupted.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -193,22 +197,17 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 
 ## onRequest
 
-ArkTS-Dyn:
-```TypeScript
-onRequest(want: Want, startId: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onRequest(want: Want, startId: int): void
 ```
 
-Called each time an AppServiceExtensionAbility instance is started by calling  
-[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startAppServiceExtensionAbility).
+Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startAppServiceExtensionAbility) .
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,7 +220,7 @@ Called each time an AppServiceExtensionAbility instance is started by calling
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target AppServiceExtensionAbility instance, including the ability name and bundle name. |
-| startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
+| startId | int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
 ## Examples
 
@@ -244,14 +243,15 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-Context environment for an AppServiceExtensionAbility. This context inherits from  
-[ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 **Type:** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Information related to eUICC chips/devices.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface EuiccInfo--><!--Device-eSIM-export interface EuiccInfo-End-->
 
@@ -28,9 +30,11 @@ Operating system version.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EuiccInfo-osVersion: string--><!--Device-EuiccInfo-osVersion: string-End-->
 

@@ -4,7 +4,9 @@ Indicates the style options of the title bar.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface EditableTitleBarStyleV2Options--><!--Device-unnamed-export declare interface EditableTitleBarStyleV2Options-End-->
 
@@ -22,15 +24,19 @@ import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarS
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style.
+Background blur style
 
 **Type:** BlurStyle
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarStyleV2Options-backgroundBlurStyle?: BlurStyle--><!--Device-EditableTitleBarStyleV2Options-backgroundBlurStyle?: BlurStyle-End-->
 
@@ -42,15 +48,19 @@ Background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Background color.
+Background color
 
 **Type:** ResourceColor
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarStyleV2Options-backgroundColor?: ResourceColor--><!--Device-EditableTitleBarStyleV2Options-backgroundColor?: ResourceColor-End-->
 
@@ -68,9 +78,13 @@ Content margin, supports RTL layout.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarStyleV2Options-contentMargin?: LocalizedMargin--><!--Device-EditableTitleBarStyleV2Options-contentMargin?: LocalizedMargin-End-->
 
@@ -88,9 +102,13 @@ Indicates the edges of the safe area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarStyleV2Options-safeAreaEdges?: Array<SafeAreaEdge>--><!--Device-EditableTitleBarStyleV2Options-safeAreaEdges?: Array<SafeAreaEdge>-End-->
 
@@ -108,9 +126,13 @@ Indicates the types of the safe area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarStyleV2Options-safeAreaTypes?: Array<SafeAreaType>--><!--Device-EditableTitleBarStyleV2Options-safeAreaTypes?: Array<SafeAreaType>-End-->
 

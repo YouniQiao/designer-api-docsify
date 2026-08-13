@@ -2,7 +2,9 @@
 
 Enumerates the camera concurrency types.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum CameraConcurrentType--><!--Device-camera-enum CameraConcurrentType-End-->
 
@@ -16,7 +18,9 @@ CAMERA_FULL_CAPABILITY = 1
 
 Full camera concurrency.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -32,7 +36,9 @@ CAMERA_LIMITED_CAPABILITY = 0
 
 Limited camera concurrency.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

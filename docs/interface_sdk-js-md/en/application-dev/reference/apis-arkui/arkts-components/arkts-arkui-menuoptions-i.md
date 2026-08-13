@@ -8,7 +8,9 @@ Configues menu item information, which is inherited from [ContextMenuOptions](ar
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface MenuOptions extends ContextMenuOptions--><!--Device-unnamed-declare interface MenuOptions extends ContextMenuOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface MenuOptions--><!--Device-unnamed-declare interface MenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +20,7 @@ Configues menu item information, which is inherited from [ContextMenuOptions](ar
 showInSubWindow?: boolean
 ```
 
-Whether to show the menu in a subwindow.
-
-**true**: yes; **false**: no
-
-Default value: **true** for 2-in-1 devices and **false** for other devices
-
-**NOTE：**
-
-This parameter takes effect only for 2-in-1 devices.
+Whether to show the menu in a subwindow. **true**: yes; **false**: no Default value: **true** for 2-in-1 devices and **false** for other devices **NOTE：**This parameter takes effect only for 2-in-1 devices.
 
 **Type:** boolean
 
@@ -35,6 +29,8 @@ This parameter takes effect only for 2-in-1 devices.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,17 +46,15 @@ This parameter takes effect only for 2-in-1 devices.
 title?: ResourceStr
 ```
 
-Menu title.
-
-**NOTE：**
-
-This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt;.
+Menu title. **NOTE：**This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt;.
 
 **Type:** ResourceStr
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

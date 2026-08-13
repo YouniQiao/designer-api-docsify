@@ -2,7 +2,9 @@
 
 Represents update information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface UpgradeInfo--><!--Device-update-export interface UpgradeInfo-End-->
 
@@ -26,7 +28,9 @@ Upgrade service type.
 
 **Type:** BusinessType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeInfo-businessType: BusinessType--><!--Device-UpgradeInfo-businessType: BusinessType-End-->
 
@@ -40,12 +44,13 @@ Upgrade service type.
 upgradeApp: string
 ```
 
-Caller package name, which is used to identify the app that calls the upgrade API. The value is in the format of   
-**com.***xxx.xxx.xxx* and consists of multiple segments separated by dots (.). The value is a string of 1 to 255 characters, and each segment ranges from 1 to 64 characters. Only letters, digits, and dots (.) are supported. Each segment must start with a letter and cannot contain consecutive dots (.) or end with a dot (.). An exception is thrown when the value is out of range or the format is incorrect.
+Caller package name, which is used to identify the app that calls the upgrade API. The value is in the format of **com.***xxx.xxx.xxx* and consists of multiple segments separated by dots (.). The value is a string of 1 to 255 characters, and each segment ranges from 1 to 64 characters. Only letters, digits, and dots (.) are supported. Each segment must start with a letter and cannot contain consecutive dots (.) or end with a dot (.). An exception is thrown when the value is out of range or the format is incorrect.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeInfo-upgradeApp: string--><!--Device-UpgradeInfo-upgradeApp: string-End-->
 

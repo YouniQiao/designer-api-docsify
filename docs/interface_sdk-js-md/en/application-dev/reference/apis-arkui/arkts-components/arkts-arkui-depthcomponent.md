@@ -14,6 +14,8 @@ Defines the DepthComponent constructor.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -33,14 +35,14 @@ Defines the DepthComponent constructor.
 
 ## Summary
 
-- [CameraBufferCrop](arkts-arkui-depthcomponent-camerabuffercrop-i-sys.md)
-- [CropOffset](arkts-arkui-depthcomponent-cropoffset-i-sys.md)
-- [DepthCameraParams](arkts-arkui-depthcomponent-depthcameraparams-i-sys.md)
-- [DepthComponentCompleteEvent](arkts-arkui-depthcomponent-depthcomponentcompleteevent-i-sys.md)
-- [DepthComponentErrorEvent](arkts-arkui-depthcomponent-depthcomponenterrorevent-i-sys.md)
-- [DepthComponentOptions](arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md)
-- [DepthLightParams](arkts-arkui-depthcomponent-depthlightparams-i-sys.md)
-- [DepthComponentCompleteCallback](arkts-arkui-depthcomponent-depthcomponentcompletecallback-t-sys.md)
-- [DepthComponentErrorCallback](arkts-arkui-depthcomponent-depthcomponenterrorcallback-t-sys.md)
-- [DepthMapCallback](arkts-arkui-depthcomponent-depthmapcallback-t-sys.md)
-- [DepthSpaceType](arkts-arkui-depthcomponent-depthspacetype-e-sys.md)
+- [CameraBufferCrop](arkts-arkui-camerabuffercrop-i-sys.md)
+- [CropOffset](arkts-arkui-cropoffset-i-sys.md)
+- [DepthCameraParams](arkts-arkui-depthcameraparams-i-sys.md)
+- [DepthComponentCompleteEvent](arkts-arkui-depthcomponentcompleteevent-i-sys.md)
+- [DepthComponentErrorEvent](arkts-arkui-depthcomponenterrorevent-i-sys.md)
+- [DepthComponentOptions](arkts-arkui-depthcomponentoptions-i-sys.md)
+- [DepthLightParams](arkts-arkui-depthlightparams-i-sys.md)
+- [DepthComponentCompleteCallback](arkts-arkui-depthcomponentcompletecallback-t-sys.md)
+- [DepthComponentErrorCallback](arkts-arkui-depthcomponenterrorcallback-t-sys.md)
+- [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md)
+- [DepthSpaceType](arkts-arkui-depthspacetype-e-sys.md)

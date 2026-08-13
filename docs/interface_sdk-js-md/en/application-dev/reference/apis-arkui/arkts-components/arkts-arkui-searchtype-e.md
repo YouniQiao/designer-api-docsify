@@ -6,6 +6,8 @@ Enumerates the text input types of a search box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SearchType--><!--Device-unnamed-declare enum SearchType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Basic input mode with no special restrictions.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Digit input mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -56,13 +62,13 @@ Digit input mode.
 PHONE_NUMBER = 3
 ```
 
-Phone number input mode.
-
-In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
+Phone number input mode. In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,13 +84,13 @@ In this mode, the following characters are allowed: digits, spaces, plus signs (
 EMAIL = 5
 ```
 
-Email address input mode.
-
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
+Email address input mode. This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,13 +106,13 @@ This mode accepts only digits, letters, underscores (_), dots (.), and the follo
 NUMBER_DECIMAL = 12
 ```
 
-Number input mode with a decimal point.
-
-The value can contain digits and one decimal point.
+Number input mode with a decimal point. The value can contain digits and one decimal point.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,6 +134,8 @@ URL input mode with no special restrictions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -147,6 +155,8 @@ One-time code (verification code) input mode with no special restrictions.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

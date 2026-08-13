@@ -8,7 +8,7 @@ P2P device information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2pDevice](ohos.wifiManager/wifiManager.WifiP2pDevice)
+**Substitutes:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md#WifiP2pDevice)
 
 <!--Device-wifi-interface WifiP2pDevice--><!--Device-wifi-interface WifiP2pDevice-End-->
 
@@ -36,7 +36,7 @@ Device mac address
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceAddress](ohos.wifiManager/wifiManager.WifiP2pDevice.deviceAddress)
+**Substitutes:** [deviceAddress](arkts-connectivity-wifimanager-wifip2pdevice-i.md#deviceAddress)
 
 <!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
 
@@ -58,7 +58,7 @@ Device name
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceName](ohos.wifiManager/wifiManager.WifiP2pDevice.deviceName)
+**Substitutes:** [deviceName](arkts-connectivity-wifimanager-wifip2pdevice-i.md#deviceName)
 
 <!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
 
@@ -80,7 +80,7 @@ Device status
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceStatus](ohos.wifiManager/wifiManager.WifiP2pDevice.deviceStatus)
+**Substitutes:** [deviceStatus](arkts-connectivity-wifimanager-wifip2pdevice-i.md#deviceStatus)
 
 <!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
 
@@ -102,7 +102,7 @@ Device group capabilities
 
 **Deprecated since:** 9
 
-**Substitutes:** [groupCapabilitys](#groupCapabilitys)
+**Substitutes:** groupCapabilitys
 
 <!--Device-WifiP2pDevice-groupCapabilitys: number--><!--Device-WifiP2pDevice-groupCapabilitys: number-End-->
 
@@ -124,7 +124,7 @@ Primary device type
 
 **Deprecated since:** 9
 
-**Substitutes:** [primaryDeviceType](ohos.wifiManager/wifiManager.WifiP2pDevice.primaryDeviceType)
+**Substitutes:** [primaryDeviceType](arkts-connectivity-wifimanager-wifip2pdevice-i.md#primaryDeviceType)
 
 <!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
 

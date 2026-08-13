@@ -4,6 +4,8 @@ Enumerates the web screen capture modes.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum WebCaptureMode--><!--Device-unnamed-declare enum WebCaptureMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ HOME_SCREEN = 0
 Home screen capture mode.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

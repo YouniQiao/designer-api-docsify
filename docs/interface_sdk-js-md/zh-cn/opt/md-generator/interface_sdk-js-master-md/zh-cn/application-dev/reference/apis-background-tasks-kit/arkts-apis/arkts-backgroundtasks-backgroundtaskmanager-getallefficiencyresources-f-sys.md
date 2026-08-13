@@ -8,7 +8,9 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 获取已申请的所有能效资源信息，如能效资源类型等，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>--><!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>-End-->
 
@@ -26,10 +28,10 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 | 错误码ID |
 | --- |
-| [18700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700004-系统服务失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [18700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
-| [18700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700002-parcel读写操作失败) |
+| [18700004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700004-系统服务失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
+| [18700002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700002-parcel读写操作失败) |
 
 ## 示例
 

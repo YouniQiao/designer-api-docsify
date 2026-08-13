@@ -8,7 +8,9 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 应用异步获取当前应用存储空间大小（单位为Byte），使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void--><!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void-End-->
 
@@ -24,7 +26,7 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13600001 |
 | 13900042 |
 
@@ -51,7 +53,9 @@ function getCurrentBundleStats(): Promise<BundleStats>
 
 应用异步获取当前应用存储空间大小（单位为Byte），以Promise方式返回。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>--><!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>-End-->
 
@@ -67,7 +71,7 @@ function getCurrentBundleStats(): Promise<BundleStats>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13600001 |
 | 13900042 |
 

@@ -1,19 +1,10 @@
-# @ohos.dlpPermission(DLP)
+# @ohos.dlpPermission
 
-Data loss prevention (DLP) is a system solution provided to prevent data disclosure. This module provides APIs for cross-device file access management, encrypted storage, and access authorization. DLP protects sensitive files through encryption and generates encrypted files in .dlp format (DLP files). When opening a DLP file, the system automatically creates an isolated DLP sandbox environment to ensure that the file content is not leaked to unauthorized environments.
-
-> **NOTE：**
-> 
-> - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a
-> superscript to indicate their earliest API version.
-> 
-> - The kit to which **@ohos.dlpPermission** belongs has been changed from `DataLossPreventionKit` to `
-> DataProtectionKit`. You are advised to use the new module name `@
-> kit.DataProtectionKit` to import the module. If `@
-> kit.DataLossPreventionKit` is imported, only the APIs before the change can be called and the APIs after the change
-> cannot be used.
+Data loss prevention (DLP) is a system solution provided to prevent data disclosure. This module provides APIs for cross-device file access management, encrypted storage, and access authorization. DLP protects sensitive files through encryption and generates encrypted files in .dlp format (DLP files). When opening a DLP file, the system automatically creates an isolated DLP sandbox environment to ensure that the file content is not leaked to unauthorized environments. > **NOTE：**> > - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a > superscript to indicate their earliest API version. > > - The kit to which **@ohos.dlpPermission** belongs has been changed from `DataLossPreventionKit` to ` > DataProtectionKit`. You are advised to use the new module name `@ > kit.DataProtectionKit` to import the module. If `@ > kit.DataLossPreventionKit` is imported, only the APIs before the change can be called and the APIs after the change > cannot be used.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace dlpPermission--><!--Device-unnamed-declare namespace dlpPermission-End-->
 
@@ -31,59 +22,59 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [cancelRetentionState](arkts-dataprotection-dlppermission-cancelretentionstate-f.md#cancelretentionstate) |
-| [cancelRetentionState](arkts-dataprotection-dlppermission-cancelretentionstate-f.md#cancelretentionstate-1) |
-| [cleanSandboxAppConfig](arkts-dataprotection-dlppermission-cleansandboxappconfig-f.md#cleansandboxappconfig) |
-| [closeOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-closeopenedenterprisedlpfiles-f.md#closeopenedenterprisedlpfiles) |
-| [decryptDlpFile](arkts-dataprotection-dlppermission-decryptdlpfile-f.md#decryptdlpfile) |
-| [generateDlpFileForEnterprise](arkts-dataprotection-dlppermission-generatedlpfileforenterprise-f.md#generatedlpfileforenterprise) |
-| [getControlledAppLists](arkts-dataprotection-dlppermission-getcontrolledapplists-f.md#getcontrolledapplists) |
-| [getDLPFileAccessRecords](arkts-dataprotection-dlppermission-getdlpfileaccessrecords-f.md#getdlpfileaccessrecords) |
-| [getDLPFileAccessRecords](arkts-dataprotection-dlppermission-getdlpfileaccessrecords-f.md#getdlpfileaccessrecords-1) |
-| [getDLPPermissionInfo](arkts-dataprotection-dlppermission-getdlppermissioninfo-f.md#getdlppermissioninfo) |
-| [getDLPPermissionInfo](arkts-dataprotection-dlppermission-getdlppermissioninfo-f.md#getdlppermissioninfo-1) |
-| [getDLPSuffix](arkts-dataprotection-dlppermission-getdlpsuffix-f.md#getdlpsuffix) |
-| [getDLPSupportedFileTypes](arkts-dataprotection-dlppermission-getdlpsupportedfiletypes-f.md#getdlpsupportedfiletypes) |
-| [getDLPSupportedFileTypes](arkts-dataprotection-dlppermission-getdlpsupportedfiletypes-f.md#getdlpsupportedfiletypes-1) |
-| [getOriginalFileName](arkts-dataprotection-dlppermission-getoriginalfilename-f.md#getoriginalfilename) |
-| [getRetentionSandboxList](arkts-dataprotection-dlppermission-getretentionsandboxlist-f.md#getretentionsandboxlist) |
-| [getRetentionSandboxList](arkts-dataprotection-dlppermission-getretentionsandboxlist-f.md#getretentionsandboxlist-1) |
-| [getRetentionSandboxList](arkts-dataprotection-dlppermission-getretentionsandboxlist-f.md#getretentionsandboxlist-2) |
-| [getSandboxAppConfig](arkts-dataprotection-dlppermission-getsandboxappconfig-f.md#getsandboxappconfig) |
-| [isDLPFeatureProvided](arkts-dataprotection-dlppermission-isdlpfeatureprovided-f.md#isdlpfeatureprovided) |
-| [isDLPFile](arkts-dataprotection-dlppermission-isdlpfile-f.md#isdlpfile) |
-| [isDLPFile](arkts-dataprotection-dlppermission-isdlpfile-f.md#isdlpfile-1) |
-| [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md#isinsandbox) |
-| [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md#isinsandbox-1) |
-| [off](arkts-dataprotection-dlppermission-off-f.md#off) |
-| [on](arkts-dataprotection-dlppermission-on-f.md#on) |
-| [processPluginCommand](arkts-dataprotection-dlppermission-processplugincommand-f.md#processplugincommand) |
-| [queryDlpPolicy](arkts-dataprotection-dlppermission-querydlppolicy-f.md#querydlppolicy) |
-| [queryOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-queryopenedenterprisedlpfiles-f.md#queryopenedenterprisedlpfiles) |
-| [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setcontrolledapplists) |
-| [setEnterprisePolicy](arkts-dataprotection-dlppermission-setenterprisepolicy-f.md#setenterprisepolicy) |
-| [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md#setretentionstate) |
-| [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md#setretentionstate-1) |
-| [setSandboxAppConfig](arkts-dataprotection-dlppermission-setsandboxappconfig-f.md#setsandboxappconfig) |
-| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md#startdlpmanagerforresult) |
+| [cancelRetentionState](arkts-dataprotection-dlppermission-cancelretentionstate-f.md#cancelRetentionState) |
+| [cancelRetentionState](arkts-dataprotection-dlppermission-cancelretentionstate-f.md#cancelRetentionState) |
+| [cleanSandboxAppConfig](arkts-dataprotection-dlppermission-cleansandboxappconfig-f.md#cleanSandboxAppConfig) |
+| [closeOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-closeopenedenterprisedlpfiles-f.md#closeOpenedEnterpriseDlpFiles) |
+| [getControlledAppLists](arkts-dataprotection-dlppermission-getcontrolledapplists-f.md#getControlledAppLists) |
+| [getDLPFileAccessRecords](arkts-dataprotection-dlppermission-getdlpfileaccessrecords-f.md#getDLPFileAccessRecords) |
+| [getDLPFileAccessRecords](arkts-dataprotection-dlppermission-getdlpfileaccessrecords-f.md#getDLPFileAccessRecords) |
+| [getDLPPermissionInfo](arkts-dataprotection-dlppermission-getdlppermissioninfo-f.md#getDLPPermissionInfo) |
+| [getDLPPermissionInfo](arkts-dataprotection-dlppermission-getdlppermissioninfo-f.md#getDLPPermissionInfo) |
+| [getDLPSuffix](arkts-dataprotection-dlppermission-getdlpsuffix-f.md#getDLPSuffix) |
+| [getDLPSupportedFileTypes](arkts-dataprotection-dlppermission-getdlpsupportedfiletypes-f.md#getDLPSupportedFileTypes) |
+| [getDLPSupportedFileTypes](arkts-dataprotection-dlppermission-getdlpsupportedfiletypes-f.md#getDLPSupportedFileTypes) |
+| [getOriginalFileName](arkts-dataprotection-dlppermission-getoriginalfilename-f.md#getOriginalFileName) |
+| [getRetentionSandboxList](arkts-dataprotection-dlppermission-getretentionsandboxlist-f.md#getRetentionSandboxList) |
+| [getRetentionSandboxList](arkts-dataprotection-dlppermission-getretentionsandboxlist-f.md#getRetentionSandboxList) |
+| [getRetentionSandboxList](arkts-dataprotection-dlppermission-getretentionsandboxlist-f.md#getRetentionSandboxList) |
+| [getSandboxAppConfig](arkts-dataprotection-dlppermission-getsandboxappconfig-f.md#getSandboxAppConfig) |
+| [isDLPFeatureProvided](arkts-dataprotection-dlppermission-isdlpfeatureprovided-f.md#isDLPFeatureProvided) |
+| [isDLPFile](arkts-dataprotection-dlppermission-isdlpfile-f.md#isDLPFile) |
+| [isDLPFile](arkts-dataprotection-dlppermission-isdlpfile-f.md#isDLPFile) |
+| [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md#isInSandbox) |
+| [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md#isInSandbox) |
+| [off_openDLPFile](arkts-dataprotection-dlppermission-offopendlpfile-f.md#off_openDLPFile) |
+| [on_openDLPFile](arkts-dataprotection-dlppermission-onopendlpfile-f.md#on_openDLPFile) |
+| [processPluginCommand](arkts-dataprotection-dlppermission-processplugincommand-f.md#processPluginCommand) |
+| [queryOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-queryopenedenterprisedlpfiles-f.md#queryOpenedEnterpriseDlpFiles) |
+| [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setControlledAppLists) |
+| [setEnterprisePolicy](arkts-dataprotection-dlppermission-setenterprisepolicy-f.md#setEnterprisePolicy) |
+| [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md#setRetentionState) |
+| [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md#setRetentionState) |
+| [setSandboxAppConfig](arkts-dataprotection-dlppermission-setsandboxappconfig-f.md#setSandboxAppConfig) |
+| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md#startDLPManagerForResult) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile) |
-| [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile-1) |
-| [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md#getdlpgatheringpolicy) |
-| [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md#getdlpgatheringpolicy-1) |
-| [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md#installdlpsandbox) |
-| [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md#installdlpsandbox-1) |
-| [off](arkts-dataprotection-dlppermission-off-f-sys.md#off-1) |
-| [on](arkts-dataprotection-dlppermission-on-f-sys.md#on-1) |
-| [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile) |
-| [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile-1) |
-| [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox) |
-| [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox-1) |
+| [decryptDlpFile](arkts-dataprotection-dlppermission-decryptdlpfile-f-sys.md#decryptDlpFile-(System-API)) |
+| [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generateDLPFile-(System-API)) |
+| [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generateDLPFile-(System-API)) |
+| [generateDlpFileForEnterprise](arkts-dataprotection-dlppermission-generatedlpfileforenterprise-f-sys.md#generateDlpFileForEnterprise-(System-API)) |
+| [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md#getDLPGatheringPolicy-(System-API)) |
+| [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md#getDLPGatheringPolicy-(System-API)) |
+| [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md#installDLPSandbox-(System-API)) |
+| [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md#installDLPSandbox-(System-API)) |
+| [off_uninstallDLPSandbox](arkts-dataprotection-dlppermission-offuninstalldlpsandbox-f-sys.md#off_uninstallDLPSandbox) |
+| [on_uninstallDLPSandbox](arkts-dataprotection-dlppermission-onuninstalldlpsandbox-f-sys.md#on_uninstallDLPSandbox) |
+| [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#openDLPFile-(System-API)) |
+| [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#openDLPFile-(System-API)) |
+| [queryDlpPolicy](arkts-dataprotection-dlppermission-querydlppolicy-f-sys.md#queryDlpPolicy-(System-API)) |
+| [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstallDLPSandbox-(System-API)) |
+| [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstallDLPSandbox-(System-API)) |
 <!--DelEnd-->
 
 ### Classes
@@ -97,7 +88,6 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md) |
-| [AuthUser](arkts-dataprotection-dlppermission-authuser-i.md) |
 | [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) |
 | [DLPManagerResult](arkts-dataprotection-dlppermission-dlpmanagerresult-i.md) |
 | [DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md) |
@@ -112,7 +102,10 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [AuthUser](arkts-dataprotection-dlppermission-authuser-i-sys.md) |
+| [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i-sys.md) |
 | [DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md) |
+| [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i-sys.md) |
 | [DLPSandboxInfo](arkts-dataprotection-dlppermission-dlpsandboxinfo-i-sys.md) |
 | [DLPSandboxState](arkts-dataprotection-dlppermission-dlpsandboxstate-i-sys.md) |
 <!--DelEnd-->
@@ -123,7 +116,6 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | --- |
 | [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md) |
 | [ActionFlagType](arkts-dataprotection-dlppermission-actionflagtype-e.md) |
-| [ActionType](arkts-dataprotection-dlppermission-actiontype-e.md) |
 | [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md) |
 | [PluginCmd](arkts-dataprotection-dlppermission-plugincmd-e.md) |
 
@@ -132,5 +124,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [AccountType](arkts-dataprotection-dlppermission-accounttype-e-sys.md) |
+| [ActionType](arkts-dataprotection-dlppermission-actiontype-e-sys.md) |
 | [GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md) |
 <!--DelEnd-->

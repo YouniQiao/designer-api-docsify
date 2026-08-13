@@ -12,7 +12,7 @@
 
 **替代接口：** [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#ReminderRequestCalendar)
 
-<!--Device-reminderAgent-interface ReminderRequestCalendar extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestCalendar extends ReminderRequest-End-->
+<!--Device-reminderAgent-interface ReminderRequestCalendar--><!--Device-reminderAgent-interface ReminderRequestCalendar-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -32,7 +32,7 @@ dateTime: LocalDateTime
 
 **废弃版本：** 9
 
-**替代接口：** [dateTime](reminderAgentManager.ReminderRequestCalendar.dateTime)
+**替代接口：** dateTime
 
 <!--Device-ReminderRequestCalendar-dateTime: LocalDateTime--><!--Device-ReminderRequestCalendar-dateTime: LocalDateTime-End-->
 
@@ -54,7 +54,7 @@ repeatDays?: Array<number>
 
 **废弃版本：** 9
 
-**替代接口：** [repeatDays](reminderAgentManager.ReminderRequestCalendar.repeatDays)
+**替代接口：** repeatDays
 
 <!--Device-ReminderRequestCalendar-repeatDays?: Array<number>--><!--Device-ReminderRequestCalendar-repeatDays?: Array<number>-End-->
 
@@ -76,7 +76,7 @@ repeatMonths?: Array<number>
 
 **废弃版本：** 9
 
-**替代接口：** [repeatMonths](reminderAgentManager.ReminderRequestCalendar.repeatMonths)
+**替代接口：** repeatMonths
 
 <!--Device-ReminderRequestCalendar-repeatMonths?: Array<number>--><!--Device-ReminderRequestCalendar-repeatMonths?: Array<number>-End-->
 

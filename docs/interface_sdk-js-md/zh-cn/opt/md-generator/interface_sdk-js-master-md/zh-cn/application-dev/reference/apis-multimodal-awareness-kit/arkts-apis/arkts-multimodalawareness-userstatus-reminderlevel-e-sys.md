@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-userStatus-export enum ReminderLevel--><!--Device-userStatus-export enum ReminderLevel-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
@@ -19,6 +21,8 @@ WEAK_REMINDER = 0
 弱提醒级别。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ NORMAL_REMINDER = 1
 普通提醒级别。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

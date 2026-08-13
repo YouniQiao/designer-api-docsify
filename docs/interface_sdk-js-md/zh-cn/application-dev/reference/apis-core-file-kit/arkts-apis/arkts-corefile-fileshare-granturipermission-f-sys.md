@@ -13,9 +13,11 @@ function grantUriPermission(
 
 为应用授予公共目录文件URI的临时访问权限，使用Callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_MEDIA
 
@@ -32,15 +34,15 @@ function grantUriPermission(
 | uri | string | 是 | 公共目录文件URI。 |
 | bundleName | string | 是 | 分享目标的包名。 |
 | flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或 wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 14300001 | IPC error |
 
 ## 示例
@@ -77,9 +79,11 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 为应用授予公共目录文件URI的临时访问权限，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_MEDIA
 
@@ -107,9 +111,9 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 14300001 | IPC error |
 
 ## 示例
@@ -144,9 +148,11 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 
 给应用授予目标文件临时权限，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -162,7 +168,7 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 | --- | --- | --- | --- |
 | policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 | 需要授权URI的策略信息数组。 |
 | targetBundleName | string | 是 | 被授权应用的应用包名。 |
-| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 被授权应用的分身索引，取值为0时表示主应用。 |
+| appCloneIndex | int | 是 | 被授权应用的分身索引，取值为0时表示主应用。 |
 
 **返回值：**
 
@@ -174,10 +180,10 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 13900001 | Operation not permitted. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900011 | Out of memory. |
 
 ## 示例

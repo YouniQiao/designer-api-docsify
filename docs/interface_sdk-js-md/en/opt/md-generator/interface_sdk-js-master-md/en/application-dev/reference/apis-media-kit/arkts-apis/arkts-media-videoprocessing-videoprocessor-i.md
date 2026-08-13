@@ -4,6 +4,8 @@ Provides the VideoProcessor type, including AIHDR related functions.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-videoProcessing-interface VideoProcessor--><!--Device-videoProcessing-interface VideoProcessor-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
@@ -24,6 +26,8 @@ Gets the current status of video processor features.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoProcessor-getStatus(): Promise<VideoProcessorStatus | undefined>--><!--Device-VideoProcessor-getStatus(): Promise<VideoProcessorStatus | undefined>-End-->
@@ -40,7 +44,7 @@ Gets the current status of video processor features.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## offStatusChange
 
@@ -51,6 +55,8 @@ offStatusChange(callback?: VideoProcessorStatusCallback): void
 Unregisters a listener for video processor status changes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +74,9 @@ Unregisters a listener for video processor status changes.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200006](../../apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
 
 ## onStatusChange
 
@@ -81,6 +87,8 @@ onStatusChange(callback: VideoProcessorStatusCallback): void
 Registers a listener for video processor status changes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +106,6 @@ Registers a listener for video processor status changes.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200007](../../apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |

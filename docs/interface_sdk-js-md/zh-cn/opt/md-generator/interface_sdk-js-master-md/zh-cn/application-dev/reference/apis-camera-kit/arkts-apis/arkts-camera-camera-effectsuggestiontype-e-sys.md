@@ -2,7 +2,9 @@
 
 Enum for effect suggestion.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum EffectSuggestionType--><!--Device-camera-enum EffectSuggestionType-End-->
 
@@ -18,7 +20,9 @@ EFFECT_SUGGESTION_NONE = 0
 
 None.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_NONE = 0--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_NONE = 0-End-->
 
@@ -34,7 +38,9 @@ EFFECT_SUGGESTION_PORTRAIT = 1
 
 Portrait.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_PORTRAIT = 1--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_PORTRAIT = 1-End-->
 
@@ -50,7 +56,9 @@ EFFECT_SUGGESTION_FOOD = 2
 
 Food.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_FOOD = 2--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_FOOD = 2-End-->
 
@@ -66,7 +74,9 @@ EFFECT_SUGGESTION_SKY = 3
 
 Sky.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SKY = 3--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SKY = 3-End-->
 
@@ -82,7 +92,9 @@ EFFECT_SUGGESTION_SUNRISE_SUNSET = 4
 
 Sunrise and sunset.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SUNRISE_SUNSET = 4--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SUNRISE_SUNSET = 4-End-->
 
@@ -98,7 +110,9 @@ EFFECT_SUGGESTION_STAGE = 5
 
 Stage.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_STAGE = 5--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_STAGE = 5-End-->
 

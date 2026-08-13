@@ -2,7 +2,9 @@
 
 PhotoViewPicker provides APIs for the user to select images and videos. Before using the APIs of PhotoViewPicker, you need to create a PhotoViewPicker instance.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class PhotoViewPicker--><!--Device-photoAccessHelper-class PhotoViewPicker-End-->
 
@@ -20,17 +22,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses a promise to return the result. You can pass in **PhotoSelectOptions** to specify the type and maximum number of the files to select. A **PhotoSelectResult** object is returned.
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses a promise to return the result. You can pass in **PhotoSelectOptions** to specify the type and maximum number of the files to select. A **PhotoSelectResult** object is returned. > **NOTE：**> > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used > only by calling > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) > . For details, see > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
-> **NOTE：**
-> 
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
-> only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)
-> . For details, see
-> [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+**Since:** 26.0.0
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,8 +50,8 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | 13900042 |
 
 ## select
@@ -64,17 +60,11 @@ Starts a **photoPicker** page for the user to select one or more images or video
 select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result. You can pass in **PhotoSelectOptions** to specify the media file type and the maximum number of files to select.
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result. You can pass in **PhotoSelectOptions** to specify the media file type and the maximum number of files to select. > **NOTE：**> > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used > only by calling > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) > . For details, see > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
-> **NOTE：**
-> 
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
-> only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)
-> . For details, see
-> [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+**Since:** 26.0.0
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,8 +83,8 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | 13900042 |
 
 ## select
@@ -103,17 +93,11 @@ Starts a **photoPicker** page for the user to select one or more images or video
 select(callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result.
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result. > **NOTE：**> > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used > only by calling > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) > . For details, see > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
-> **NOTE：**
-> 
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
-> only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)
-> . For details, see
-> [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+**Since:** 26.0.0
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -131,5 +115,5 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900042 |

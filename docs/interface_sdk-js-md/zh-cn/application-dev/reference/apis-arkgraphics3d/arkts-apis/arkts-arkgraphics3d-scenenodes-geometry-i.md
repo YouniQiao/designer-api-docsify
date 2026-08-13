@@ -4,11 +4,13 @@
 
 **继承/实现关系：** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-export interface Geometry extends Node--><!--Device-unnamed-export interface Geometry extends Node-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Geometry--><!--Device-unnamed-export interface Geometry-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -22,9 +24,11 @@ readonly mesh: Mesh
 
 **类型：** [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Geometry-readonly mesh: Mesh--><!--Device-Geometry-readonly mesh: Mesh-End-->
 
@@ -40,9 +44,11 @@ Morpher目标定义.
 
 **类型：** [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Geometry-readonly morpher?: Morpher--><!--Device-Geometry-readonly morpher?: Morpher-End-->
 

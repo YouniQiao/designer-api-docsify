@@ -1,8 +1,10 @@
 # GetInputDataOptions（系统接口）
 
-表示[通知调用者获取数据](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8)的可选参数集合。
+表示通知调用者获取数据的可选参数集合。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface GetInputDataOptions--><!--Device-osAccount-interface GetInputDataOptions-End-->
 
@@ -20,7 +22,9 @@ challenge?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetInputDataOptions-challenge?: Uint8Array--><!--Device-GetInputDataOptions-challenge?: Uint8Array-End-->
 

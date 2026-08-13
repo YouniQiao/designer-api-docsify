@@ -4,6 +4,8 @@ Policy type.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-deviceSettings-enum SettingsItem--><!--Device-deviceSettings-enum SettingsItem-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ DEVICE_NAME = 0
 Device name.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ FLOATING_NAVIGATION = 1
 Three-key navigation.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

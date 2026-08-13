@@ -4,6 +4,8 @@ Avis metadata.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-class AvisMetadata--><!--Device-image-class AvisMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -20,11 +22,13 @@ import { image } from '@kit.ImageKit';
 readonly delayTime?: number
 ```
 
-Delay of each frame. Unit: ms, The value should be an integer.&lt;br&gt;Unit:ms.
+Delay of each frame. Unit: ms, The value should be an integer. &lt;br&gt;Unit:ms.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

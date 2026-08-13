@@ -3,6 +3,7 @@
 ## SymbolSpan
 
 ```TypeScript
+@ComponentBuilder
 export declare function SymbolSpan(
     value: Resource
 ): SymbolSpanAttribute
@@ -14,9 +15,11 @@ export declare function SymbolSpan(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function SymbolSpan(    value: Resource): SymbolSpanAttribute--><!--Device-unnamed-export declare function SymbolSpan(    value: Resource): SymbolSpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function SymbolSpan(    value: Resource): SymbolSpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function SymbolSpan(    value: Resource): SymbolSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ export declare function SymbolSpan(
 
 | 类型 | 说明 |
 | --- | --- |
-| [SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md) |  |
+| SymbolSpanAttribute |  |
 
 
 ## SymbolSpan
 
 ```TypeScript
+@Builder
 export declare function SymbolSpan(
     style: CustomBuilderT<SymbolSpanAttribute>,
 ): SymbolSpanAttribute
@@ -47,11 +51,11 @@ export declare function SymbolSpan(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute--><!--Device-unnamed-export declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute--><!--Device-unnamed-@Builderexport declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ export declare function SymbolSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md)&gt; | 是 | SymbolSpan属性的实例。 |
+| style | CustomBuilderT&lt;SymbolSpanAttribute&gt; | 是 | SymbolSpan属性的实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md) |  |
+| SymbolSpanAttribute |  |
 

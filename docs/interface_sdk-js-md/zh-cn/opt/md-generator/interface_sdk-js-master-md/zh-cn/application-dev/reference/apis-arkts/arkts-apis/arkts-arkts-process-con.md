@@ -10,6 +10,8 @@ const pid: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-process-const pid: number--><!--Device-process-const pid: number-End-->
@@ -26,6 +28,8 @@ const tid: number
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-process-const tid: number--><!--Device-process-const tid: number-End-->
@@ -41,6 +45,8 @@ const uid: number
 进程的用户标识。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

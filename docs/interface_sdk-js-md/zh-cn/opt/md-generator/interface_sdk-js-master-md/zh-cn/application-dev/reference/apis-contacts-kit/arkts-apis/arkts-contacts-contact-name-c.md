@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-contact-class Name--><!--Device-contact-class Name-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -19,6 +21,8 @@ familyName?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ familyNamePhonetic?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Name-familyNamePhonetic?: string--><!--Device-Name-familyNamePhonetic?: string-End-->
@@ -55,6 +61,8 @@ fullName: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ givenName?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Name-givenName?: string--><!--Device-Name-givenName?: string-End-->
@@ -91,6 +101,8 @@ givenNamePhonetic?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +122,8 @@ hasName?: boolean
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Name-hasName?: boolean--><!--Device-Name-hasName?: boolean-End-->
@@ -127,6 +141,8 @@ middleName?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -146,6 +162,8 @@ middleNamePhonetic?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Name-middleNamePhonetic?: string--><!--Device-Name-middleNamePhonetic?: string-End-->
@@ -164,6 +182,8 @@ namePrefix?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Name-namePrefix?: string--><!--Device-Name-namePrefix?: string-End-->
@@ -181,6 +201,8 @@ nameSuffix?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

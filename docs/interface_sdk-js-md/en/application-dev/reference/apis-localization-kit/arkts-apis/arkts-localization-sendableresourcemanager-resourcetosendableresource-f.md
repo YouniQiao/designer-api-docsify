@@ -18,6 +18,8 @@ Converts a `Resource` object to a `SendableResource` object that can be used for
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendableResourceManager-export function resourceToSendableResource(resource: Resource): SendableResource--><!--Device-sendableResourceManager-export function resourceToSendableResource(resource: Resource): SendableResource-End-->
@@ -40,7 +42,7 @@ Converts a `Resource` object to a `SendableResource` object that can be used for
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## Examples
 

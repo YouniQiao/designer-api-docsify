@@ -2,7 +2,9 @@
 
 Describes the parameters for scan.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface ScanOptions--><!--Device-ble-interface ScanOptions-End-->
 
@@ -24,7 +26,9 @@ Bluetooth LE scan mode
 
 **Type:** ScanDuty
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,9 @@ Time of delay for reporting the scan result
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Indicates whether the scan is extended, default is {@code false}
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -84,7 +92,9 @@ Match mode for Bluetooth LE scan filters hardware match
 
 **Type:** MatchMode
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,11 +114,13 @@ Physical Layer used during scan.
 
 **Type:** [PhyType](arkts-connectivity-ble-phytype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanOptions-phyType?: PhyType--><!--Device-ScanOptions-phyType?: PhyType-End-->
 
@@ -124,11 +136,13 @@ Report mode used during scan.
 
 **Type:** [ScanReportMode](arkts-connectivity-ble-scanreportmode-e.md)
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanOptions-reportMode?: ScanReportMode--><!--Device-ScanOptions-reportMode?: ScanReportMode-End-->
 

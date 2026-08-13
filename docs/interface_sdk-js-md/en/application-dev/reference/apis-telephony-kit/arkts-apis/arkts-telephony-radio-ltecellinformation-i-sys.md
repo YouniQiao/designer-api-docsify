@@ -2,9 +2,11 @@
 
 Obtains LTE cell information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface LteCellInformation--><!--Device-radio-export interface LteCellInformation-End-->
 
@@ -26,11 +28,13 @@ bandwidth: int
 
 Indicates the bandwidth.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-bandwidth: int--><!--Device-LteCellInformation-bandwidth: int-End-->
 
@@ -46,11 +50,13 @@ cgi: long
 
 Indicates the cell global identification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-cgi: long--><!--Device-LteCellInformation-cgi: long-End-->
 
@@ -66,11 +72,13 @@ earfcn: int
 
 Indicates the E-UTRA Absolute Radio Frequency Channel Number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-earfcn: int--><!--Device-LteCellInformation-earfcn: int-End-->
 
@@ -88,9 +96,11 @@ Support for New Radio_Dual Connectivity.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-isSupportEndc: boolean--><!--Device-LteCellInformation-isSupportEndc: boolean-End-->
 
@@ -108,9 +118,11 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-mcc: string--><!--Device-LteCellInformation-mcc: string-End-->
 
@@ -128,9 +140,11 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-mnc: string--><!--Device-LteCellInformation-mnc: string-End-->
 
@@ -146,11 +160,13 @@ pci: int
 
 Indicates the physical cell identification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-pci: int--><!--Device-LteCellInformation-pci: int-End-->
 
@@ -166,11 +182,13 @@ tac: int
 
 Indicates the tracking area code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-tac: int--><!--Device-LteCellInformation-tac: int-End-->
 

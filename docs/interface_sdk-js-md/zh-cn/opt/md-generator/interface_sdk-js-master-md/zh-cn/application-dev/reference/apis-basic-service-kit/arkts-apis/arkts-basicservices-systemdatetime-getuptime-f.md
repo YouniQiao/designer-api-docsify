@@ -8,7 +8,9 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
 
 使用同步方式获取自系统启动以来经过的时间。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
 
@@ -31,7 +33,7 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

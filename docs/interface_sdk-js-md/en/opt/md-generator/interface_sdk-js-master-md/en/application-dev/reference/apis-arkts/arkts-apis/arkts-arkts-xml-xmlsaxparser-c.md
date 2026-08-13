@@ -4,6 +4,8 @@ The XmlSAXParser provides the capability of parsing XML in a streaming manner.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-xml-class XmlSAXParser--><!--Device-xml-class XmlSAXParser-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -23,6 +25,8 @@ constructor(inputStream: stream.Readable, encoding?: string)
 Creates and returns an XmlSAXParser instance.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ parse(xmlSAXHandler: XmlSAXHandler): void
 Creates and returns an XmlSAXParser instance.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

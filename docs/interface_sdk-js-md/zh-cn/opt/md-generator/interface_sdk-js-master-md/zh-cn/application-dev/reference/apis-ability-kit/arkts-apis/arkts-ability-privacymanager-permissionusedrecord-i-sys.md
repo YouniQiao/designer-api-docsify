@@ -2,7 +2,9 @@
 
 某个权限的访问记录。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-privacyManager-interface PermissionUsedRecord--><!--Device-privacyManager-interface PermissionUsedRecord-End-->
 
@@ -20,7 +22,9 @@ accessCount: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-accessCount: int--><!--Device-PermissionUsedRecord-accessCount: int-End-->
 
@@ -34,13 +38,13 @@ accessCount: number
 accessRecords: Array<UsedRecordDetail>
 ```
 
-访问记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
-
-默认值：查询最近10条成功访问记录。
+访问记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。 默认值：查询最近10条成功访问记录。
 
 **类型：** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>-End-->
 
@@ -60,6 +64,8 @@ enhancedIdentity?: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PermissionUsedRecord-enhancedIdentity?: string--><!--Device-PermissionUsedRecord-enhancedIdentity?: string-End-->
@@ -74,11 +80,13 @@ enhancedIdentity?: string
 lastAccessDuration: number
 ```
 
-最后一次访问时长。单位为：毫秒。
+最后一次访问时长。 单位为：毫秒。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-lastAccessDuration: long--><!--Device-PermissionUsedRecord-lastAccessDuration: long-End-->
 
@@ -92,11 +100,13 @@ lastAccessDuration: number
 lastAccessTime: number
 ```
 
-最后一次访问时间。单位为：毫秒。
+最后一次访问时间。 单位为：毫秒。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-lastAccessTime: long--><!--Device-PermissionUsedRecord-lastAccessTime: long-End-->
 
@@ -110,11 +120,13 @@ lastAccessTime: number
 lastRejectTime: number
 ```
 
-最后一次拒绝时间。单位为：毫秒。
+最后一次拒绝时间。 单位为：毫秒。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-lastRejectTime: long--><!--Device-PermissionUsedRecord-lastRejectTime: long-End-->
 
@@ -132,7 +144,9 @@ permissionName: Permissions
 
 **类型：** Permissions
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-permissionName: Permissions--><!--Device-PermissionUsedRecord-permissionName: Permissions-End-->
 
@@ -150,7 +164,9 @@ rejectCount: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-rejectCount: int--><!--Device-PermissionUsedRecord-rejectCount: int-End-->
 
@@ -164,13 +180,13 @@ rejectCount: number
 rejectRecords: Array<UsedRecordDetail>
 ```
 
-拒绝记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
-
-默认值：查询最近10条失败或拒绝记录。
+拒绝记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。 默认值：查询最近10条失败或拒绝记录。
 
 **类型：** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>-End-->
 

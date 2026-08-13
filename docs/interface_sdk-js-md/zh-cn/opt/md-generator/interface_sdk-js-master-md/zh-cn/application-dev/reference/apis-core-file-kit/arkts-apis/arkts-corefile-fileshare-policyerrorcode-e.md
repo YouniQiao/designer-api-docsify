@@ -2,7 +2,9 @@
 
 枚举授予或激活权限策略失败的URI对应的错误码。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-fileShare-export enum PolicyErrorCode--><!--Device-fileShare-export enum PolicyErrorCode-End-->
 
@@ -16,7 +18,9 @@ PERSISTENCE_FORBIDDEN = 1
 
 URI禁止被持久化。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1--><!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1-End-->
 
@@ -30,7 +34,9 @@ INVALID_MODE = 2
 
 无效的模式。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PolicyErrorCode-INVALID_MODE = 2--><!--Device-PolicyErrorCode-INVALID_MODE = 2-End-->
 
@@ -44,7 +50,9 @@ INVALID_PATH = 3
 
 无效的路径。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PolicyErrorCode-INVALID_PATH = 3--><!--Device-PolicyErrorCode-INVALID_PATH = 3-End-->
 
@@ -58,7 +66,9 @@ PERMISSION_NOT_PERSISTED = 4
 
 权限没有被持久化。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4--><!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4-End-->
 

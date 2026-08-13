@@ -6,6 +6,8 @@ Enumerates the swipe action menu display directions for ListItem components.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ListItemSwipeActionDirection--><!--Device-unnamed-declare enum ListItemSwipeActionDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Enumerates the swipe action menu display directions for ListItem components.
 START = 0
 ```
 
-When the List direction is vertical, it indicates the left in LTR mode and right in RTL mode.When the List direction is horizontal, it indicates the top.
+When the List direction is vertical, it indicates the left in LTR mode and right in RTL mode. When the List direction is horizontal, it indicates the top.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +40,13 @@ When the List direction is vertical, it indicates the left in LTR mode and right
 END = 1
 ```
 
-When the List direction is vertical, it indicates the right in LTR mode and left in RTL mode.When the List direction is horizontal, it indicates the bottom.
+When the List direction is vertical, it indicates the right in LTR mode and left in RTL mode. When the List direction is horizontal, it indicates the bottom.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

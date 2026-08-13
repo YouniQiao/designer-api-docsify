@@ -1,8 +1,4 @@
-# notificationRequest(Information carried when a notification is sent)
-
-This module defines the data structure of a notification request, which is used to describe all information of a
- notification, including notification content, identifier, display style, and interaction behavior.
-
+# notificationRequest
 
 ## Summary
 

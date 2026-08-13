@@ -2,11 +2,13 @@
 
 Photo Functions object.
 
-**Inheritance/Implementation:** PhotoFunctions extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery), [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery), [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#ManualExposureQuery), [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery), [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery), [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery), [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md#ColorManagementQuery), [MacroQuery](arkts-camera-camera-macroquery-i.md#MacroQuery), [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#SceneDetectionQuery)
+**Inheritance/Implementation:** PhotoFunctions extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery), [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery), [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#ManualExposureQuery-(System-API)), [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery), [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery-(System-API)), [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery-(System-API)), [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md#ColorManagementQuery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#MacroQuery-(System-API)), [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#SceneDetectionQuery-(System-API))
 
-**Since:** 13
+**Since:** 23
 
-<!--Device-camera-interface PhotoFunctions extends FlashQuery, AutoExposureQuery, ManualExposureQuery, FocusQuery, ZoomQuery, BeautyQuery, ColorEffectQuery, ColorManagementQuery, MacroQuery, SceneDetectionQuery--><!--Device-camera-interface PhotoFunctions extends FlashQuery, AutoExposureQuery, ManualExposureQuery, FocusQuery, ZoomQuery, BeautyQuery, ColorEffectQuery, ColorManagementQuery, MacroQuery, SceneDetectionQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface PhotoFunctions--><!--Device-camera-interface PhotoFunctions-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

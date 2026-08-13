@@ -1,11 +1,12 @@
 # FocusTrackingInfo (System API)
 
-Describes the focus tracking information, which is obtained by calling VideoSessionForSys.  
-[on('focusTrackingInfoAvailable')](camera.VideoSession.on(type: 'focusTrackingInfoAvailable', callback: Callback&lt;FocusTrackingInfo&gt;)).
+Describes the focus tracking information, which is obtained by calling VideoSessionForSys. [on('focusTrackingInfoAvailable')](arkts-camera-camera-videosession-i.md#on_error).
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface FocusTrackingInfo--><!--Device-camera-interface FocusTrackingInfo-End-->
 
@@ -29,9 +30,11 @@ Tracing mode.
 
 **Type:** [FocusTrackingMode](arkts-camera-camera-focustrackingmode-e-sys.md)
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusTrackingInfo-trackingMode: FocusTrackingMode--><!--Device-FocusTrackingInfo-trackingMode: FocusTrackingMode-End-->
 
@@ -49,9 +52,11 @@ Tracking region.
 
 **Type:** Rect
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusTrackingInfo-trackingRegion: Rect--><!--Device-FocusTrackingInfo-trackingRegion: Rect-End-->
 

@@ -1,10 +1,10 @@
 # VibratePreset
 
-Represents the preset vibration effect. You can pass **VibratePreset** to  
-[VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect) to specify a preset vibration effect when calling  
-[vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1).
+Represents the preset vibration effect. You can pass **VibratePreset** to [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect) to specify a preset vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibratePreset--><!--Device-vibrator-interface VibratePreset-End-->
 
@@ -26,7 +26,9 @@ Number of repeated vibrations. This parameter is optional. The default value is 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratePreset-count?: int--><!--Device-VibratePreset-count?: int-End-->
 
@@ -38,11 +40,13 @@ Number of repeated vibrations. This parameter is optional. The default value is 
 effectId: string
 ```
 
-Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64characters are used.
+Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64 characters are used.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratePreset-effectId: string--><!--Device-VibratePreset-effectId: string-End-->
 
@@ -58,7 +62,9 @@ Vibration intensity. This parameter is optional. The value range is [0, 100]. Th
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratePreset-intensity?: int--><!--Device-VibratePreset-intensity?: int-End-->
 
@@ -74,7 +80,9 @@ The value **preset** means that vibration is triggered based on the specified ef
 
 **Type:** 'preset'
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratePreset-type: 'preset'--><!--Device-VibratePreset-type: 'preset'-End-->
 

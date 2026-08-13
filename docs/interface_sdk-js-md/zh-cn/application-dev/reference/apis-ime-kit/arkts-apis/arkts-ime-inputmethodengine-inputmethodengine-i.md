@@ -14,7 +14,7 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## off('inputStart')
+## off_inputStart
 
 ```TypeScript
 off(
@@ -31,7 +31,7 @@ off(
 
 **废弃版本：** 23
 
-**替代接口：** [off](inputMethodEngine.InputMethodAbility.off(type:)
+**替代接口：** off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
 
 <!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -54,7 +54,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## off('keyboardShow' | 'keyboardHide')
+## off_keyboardHide
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -68,7 +68,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** [off](inputMethodEngine.InputMethodAbility.off(type:)
+**替代接口：** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -88,7 +88,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## off('keyboardShow' | 'keyboardHide')
+## off_keyboardShow
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -102,7 +102,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** [off](inputMethodEngine.InputMethodAbility.off(type:)
+**替代接口：** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -122,7 +122,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## on('inputStart')
+## on_inputStart
 
 ```TypeScript
 on(
@@ -139,7 +139,7 @@ on(
 
 **废弃版本：** 23
 
-**替代接口：** [on](inputMethodEngine.InputMethodAbility.on(type:)
+**替代接口：** on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
 
 <!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -162,7 +162,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## on('keyboardShow' | 'keyboardHide')
+## on_keyboardHide
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -176,7 +176,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** [on](inputMethodEngine.InputMethodAbility.on(type:)
+**替代接口：** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
@@ -200,7 +200,7 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 });
 ```
 
-## on('keyboardShow' | 'keyboardHide')
+## on_keyboardShow
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -214,7 +214,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** [on](inputMethodEngine.InputMethodAbility.on(type:)
+**替代接口：** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 

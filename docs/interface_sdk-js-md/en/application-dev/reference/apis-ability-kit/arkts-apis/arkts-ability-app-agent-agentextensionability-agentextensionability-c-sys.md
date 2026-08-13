@@ -2,13 +2,15 @@
 
 The class of agent extension ability. This class cannot be used in Harmony Archive(HAR).
 
-**Inheritance/Implementation:** AgentExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** AgentExtensionAbility extends ExtensionAbility
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-<!--Device-unnamed-declare class AgentExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AgentExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AgentExtensionAbility--><!--Device-unnamed-declare class AgentExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -28,7 +30,9 @@ Called back when a LOW_CODE agent is invoked.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

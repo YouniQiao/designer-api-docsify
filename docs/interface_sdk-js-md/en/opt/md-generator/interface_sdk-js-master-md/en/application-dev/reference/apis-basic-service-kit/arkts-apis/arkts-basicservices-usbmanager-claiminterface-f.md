@@ -12,16 +12,11 @@ import { usbManager } from '@kit.BasicServicesKit';
 function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number
 ```
 
-Claims a USB device interface.
+Claims a USB device interface. > **NOTE：**> > In USB programming, **claimInterface** is a common operation, which indicates that an application requests the > operating system to release a USB interface from the kernel driver and hand over the USB interface to a user > space program for control.&lt;br&gt; > > All the **claim** communication interfaces used below refer to the claim interface operations.
 
-> **NOTE：**
-> 
-> In USB programming, **claimInterface** is a common operation, which indicates that an application requests the
-> operating system to release a USB interface from the kernel driver and hand over the USB interface to a user
-> space program for control.&lt;br&gt;
-> > All the **claim** communication interfaces used below refer to the claim interface operations.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int--><!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int-End-->
 
@@ -45,8 +40,8 @@ Claims a USB device interface.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

@@ -9,6 +9,8 @@ type ValueType = null | number | string | boolean | collections.Uint8Array | Ass
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-sendableRelationalStore-type ValueType = null | number | string | boolean | collections.Uint8Array | Asset | Assets |    collections.Float32Array | bigint--><!--Device-sendableRelationalStore-type ValueType = null | number | string | boolean | collections.Uint8Array | Asset | Assets |    collections.Float32Array | bigint-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

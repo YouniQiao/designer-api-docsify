@@ -4,6 +4,8 @@ Enumerates the types of the maximum count.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum MaxCountType--><!--Device-unnamed-export declare enum MaxCountType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -17,6 +19,8 @@ TOTAL_MAX_COUNT = 0
 Total number of media assets (images and videos) that can be selected.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,6 +38,8 @@ Total number of images that can be selected. The value cannot be greater than **
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MaxCountType-PHOTO_MAX_COUNT = 1--><!--Device-MaxCountType-PHOTO_MAX_COUNT = 1-End-->
@@ -49,6 +55,8 @@ VIDEO_MAX_COUNT = 2
 Total number of videos that can be selected. The value cannot be greater than **Total_MAX_Count**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -2,7 +2,9 @@
 
 Checksum object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-zlib-interface Checksum--><!--Device-zlib-interface Checksum-End-->
 
@@ -22,9 +24,11 @@ adler32(adler: number, buf: ArrayBuffer): Promise<number>
 
 Calculates the Adler-32 checksum. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-adler32(adler: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-adler32(adler: long, buf: ArrayBuffer): Promise<long>-End-->
 
@@ -47,7 +51,7 @@ Calculates the Adler-32 checksum. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -77,9 +81,11 @@ adler32Combine(adler1: number, adler2: number, len2: number): Promise<number>
 
 Combines two Adler-32 checksums. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>--><!--Device-Checksum-adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>-End-->
 
@@ -103,7 +109,7 @@ Combines two Adler-32 checksums. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -144,9 +150,11 @@ crc32(crc: number, buf: ArrayBuffer): Promise<number>
 
 Updates a CRC-32 checksum. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-crc32(crc: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-crc32(crc: long, buf: ArrayBuffer): Promise<long>-End-->
 
@@ -169,7 +177,7 @@ Updates a CRC-32 checksum. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -201,9 +209,11 @@ crc32Combine(crc1: number, crc2: number, len2: number): Promise<number>
 
 Combines two CRC-32 checksums. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>--><!--Device-Checksum-crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>-End-->
 
@@ -227,7 +237,7 @@ Combines two CRC-32 checksums. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -268,9 +278,11 @@ crc64(crc: number, buf: ArrayBuffer): Promise<number>
 
 Updates a CRC-64 checksum. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-crc64(crc: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-crc64(crc: long, buf: ArrayBuffer): Promise<long>-End-->
 
@@ -293,7 +305,7 @@ Updates a CRC-64 checksum. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -325,9 +337,11 @@ getCrc64Table(): Promise<Array<number>>
 
 Obtains this CRC-64 checksum table. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-getCrc64Table(): Promise<Array<long>>--><!--Device-Checksum-getCrc64Table(): Promise<Array<long>>-End-->
 
@@ -361,9 +375,11 @@ getCrcTable(): Promise<Array<number>>
 
 Obtains this CRC-32 checksum table. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-getCrcTable(): Promise<Array<long>>--><!--Device-Checksum-getCrcTable(): Promise<Array<long>>-End-->
 

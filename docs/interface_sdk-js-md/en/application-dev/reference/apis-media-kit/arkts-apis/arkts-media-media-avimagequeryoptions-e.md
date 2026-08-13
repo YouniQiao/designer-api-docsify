@@ -1,12 +1,12 @@
 # AVImageQueryOptions
 
-Enumerates the relationship between the video frame and the time at which the video thumbnail is obtained.
+Enumerates the relationship between the video frame and the time at which the video thumbnail is obtained. The time passed in for obtaining the thumbnail may be different from the time of the video frame for which the thumbnail is actually obtained. Therefore, you need to specify their relationship.
 
-The time passed in for obtaining the thumbnail may be different from the time of the video frame for which the thumbnail is actually obtained. Therefore, you need to specify their relationship.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-media-enum AVImageQueryOptions--><!--Device-media-enum AVImageQueryOptions-End-->
 
@@ -20,9 +20,11 @@ AV_IMAGE_QUERY_NEXT_SYNC = 0
 
 The key frame at or next to the specified time is selected.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_NEXT_SYNC = 0--><!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_NEXT_SYNC = 0-End-->
 
@@ -36,9 +38,11 @@ AV_IMAGE_QUERY_PREVIOUS_SYNC
 
 The key frame at or prior to the specified time is selected.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_PREVIOUS_SYNC--><!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_PREVIOUS_SYNC-End-->
 
@@ -52,9 +56,11 @@ AV_IMAGE_QUERY_CLOSEST_SYNC
 
 The key frame closest to the specified time is selected.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_CLOSEST_SYNC--><!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_CLOSEST_SYNC-End-->
 
@@ -68,9 +74,11 @@ AV_IMAGE_QUERY_CLOSEST
 
 The frame (not necessarily a key frame) closest to the specified time is selected.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_CLOSEST--><!--Device-AVImageQueryOptions-AV_IMAGE_QUERY_CLOSEST-End-->
 

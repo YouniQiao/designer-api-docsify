@@ -4,6 +4,8 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -23,6 +25,8 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 Inserts a function after a method of a class object. The final return value is the return value of the function inserted.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,6 +108,8 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 Inserts a function before a method of a class object. The inserted function is executed in prior to the original method of the class object.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,6 +200,8 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 Replaces a method of a class object with another function. After the replacement, only the new function logic is executed. The final return value is the return value of the new function.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

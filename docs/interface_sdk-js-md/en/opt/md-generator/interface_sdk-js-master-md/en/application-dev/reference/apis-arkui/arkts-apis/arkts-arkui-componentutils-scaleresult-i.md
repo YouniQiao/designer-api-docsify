@@ -4,6 +4,8 @@ Scale Result
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface ScaleResult--><!--Device-componentUtils-interface ScaleResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { componentUtils } from '@kit.ArkUI';
 centerX: number
 ```
 
-X-coordinate of the center point.
-
-Unit: vp
+X-coordinate of the center point. Unit: vp
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Unit: vp
 centerY: number
 ```
 
-Y-coordinate of the center point.
-
-Unit: vp
+Y-coordinate of the center point. Unit: vp
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +72,8 @@ Scale factor along the x-axis.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -90,6 +94,8 @@ Scale factor along the y-axis.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -109,6 +115,8 @@ Scale factor along the z-axis.
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

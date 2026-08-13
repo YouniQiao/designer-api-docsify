@@ -1,10 +1,12 @@
 # SwiperItemInfo
 
-The information of changed SwiperItem.
+Provides information about **Swiper** child components.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SwiperItemInfo--><!--Device-unnamed-export interface SwiperItemInfo-End-->
 
@@ -19,40 +21,48 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-The index of SwiperItem.The value should be an integer.
+Index of the child component in the **Swiper** container.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SwiperItemInfo-index: int--><!--Device-SwiperItemInfo-index: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SwiperItemInfo-index: number--><!--Device-SwiperItemInfo-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## uniqueId
 
 ```TypeScript
-uniqueId: int
+uniqueId: number
 ```
 
-The uniqueId of SwiperItem.The value should be an integer.
+Unique ID of the **Swiper** child component.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SwiperItemInfo-uniqueId: int--><!--Device-SwiperItemInfo-uniqueId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SwiperItemInfo-uniqueId: number--><!--Device-SwiperItemInfo-uniqueId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

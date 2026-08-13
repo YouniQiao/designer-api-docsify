@@ -6,9 +6,11 @@ type NotifyNetDisconnectCallback = (deviceId: string, state: int) => void
 
 Callback function on network disconnect.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -23,5 +25,5 @@ Callback function on network disconnect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the deviceId network disconnect. |
-| state | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the state of network. |
+| state | int | Yes | Indicates the state of network. |
 

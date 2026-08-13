@@ -2,13 +2,15 @@
 
 Provides the method of switching the cursor position.
 
-**Inheritance/Implementation:** TextAreaController extends [TextContentControllerBase](TextContentControllerBase)
+**Inheritance/Implementation:** TextAreaController extends TextContentControllerBase
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class TextAreaController extends TextContentControllerBase--><!--Device-unnamed-export declare class TextAreaController extends TextContentControllerBase-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class TextAreaController--><!--Device-unnamed-export declare class TextAreaController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Called when the position of the insertion cursor is set.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ Called when the position of the insertion cursor is set.
 constructor()
 ```
 
-constructor.A constructor used to create a TextAreaController object.
+constructor. A constructor used to create a TextAreaController object.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,13 +66,13 @@ constructor.A constructor used to create a TextAreaController object.
 setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void
 ```
 
-Text selection is achieved by specifying the start and end positions of the text.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If &lt;em&gt;selectionMenuHidden&lt;/em&gt; is set to &lt;em&gt;true&lt;/em&gt; or a 2-in-1 device is used,calling setTextSelection does not display the context menu even when options is set to &lt;em&gt;MenuPolicy.SHOW&lt;/em&gt;.&lt;br&gt;If the selected text contains an emoji,the emoji is selected when its start position is within the text selection range.&lt;/p&gt;
+Text selection is achieved by specifying the start and end positions of the text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If &lt;em&gt;selectionMenuHidden&lt;/em&gt; is set to &lt;em&gt;true&lt;/em&gt; or a 2-in-1 device is used, calling setTextSelection does not display the context menu even when options is set to &lt;em&gt;MenuPolicy.SHOW&lt;/em&gt;. &lt;br&gt;If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,6 +99,8 @@ Exit edit state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

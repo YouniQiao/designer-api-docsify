@@ -2,9 +2,11 @@
 
 Defines the attachment of an MMS message.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsAttachment--><!--Device-sms-export interface MmsAttachment-End-->
 
@@ -28,9 +30,11 @@ Character set.
 
 **Type:** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-charset?: MmsCharSets--><!--Device-MmsAttachment-charset?: MmsCharSets-End-->
 
@@ -48,9 +52,11 @@ Content disposition.
 
 **Type:** [DispositionType](arkts-telephony-sms-dispositiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-contentDisposition: DispositionType--><!--Device-MmsAttachment-contentDisposition: DispositionType-End-->
 
@@ -68,9 +74,11 @@ Content ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-contentId: string--><!--Device-MmsAttachment-contentId: string-End-->
 
@@ -88,9 +96,11 @@ Content location.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-contentLocation: string--><!--Device-MmsAttachment-contentLocation: string-End-->
 
@@ -108,9 +118,11 @@ Encoding for content transfer.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-contentTransferEncoding: string--><!--Device-MmsAttachment-contentTransferEncoding: string-End-->
 
@@ -128,9 +140,11 @@ Content type.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-contentType: string--><!--Device-MmsAttachment-contentType: string-End-->
 
@@ -148,9 +162,11 @@ File name.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-fileName?: string--><!--Device-MmsAttachment-fileName?: string-End-->
 
@@ -166,11 +182,13 @@ inBuff?: Array<int>
 
 Whether the message is in the buffer.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-inBuff?: Array<int>--><!--Device-MmsAttachment-inBuff?: Array<int>-End-->
 
@@ -188,9 +206,11 @@ Whether the synchronized multimedia integration language is used.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-isSmil: boolean--><!--Device-MmsAttachment-isSmil: boolean-End-->
 
@@ -208,9 +228,11 @@ Path.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsAttachment-path?: string--><!--Device-MmsAttachment-path?: string-End-->
 

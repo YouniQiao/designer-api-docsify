@@ -8,7 +8,7 @@ Enumerates the sync modes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SyncMode](ohos.data.distributedKVStore.SyncMode)
+**Substitutes:** SyncMode
 
 <!--Device-distributedData-enum SyncMode--><!--Device-distributedData-enum SyncMode-End-->
 
@@ -28,7 +28,7 @@ Pull data from the peer end to the local end only.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PULL_ONLY](ohos.data.distributedKVStore.SyncMode#PULL_ONLY)
+**Substitutes:** PULL_ONLY
 
 <!--Device-SyncMode-PULL_ONLY = 0--><!--Device-SyncMode-PULL_ONLY = 0-End-->
 
@@ -48,7 +48,7 @@ Push data from the local end to the peer end only.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PUSH_ONLY](ohos.data.distributedKVStore.SyncMode#PUSH_ONLY)
+**Substitutes:** PUSH_ONLY
 
 <!--Device-SyncMode-PUSH_ONLY = 1--><!--Device-SyncMode-PUSH_ONLY = 1-End-->
 
@@ -68,7 +68,7 @@ Push data from the local end to the peer end and then pull data from the peer en
 
 **Deprecated since:** 9
 
-**Substitutes:** [PUSH_PULL](ohos.data.distributedKVStore.SyncMode#PUSH_PULL)
+**Substitutes:** PUSH_PULL
 
 <!--Device-SyncMode-PUSH_PULL = 2--><!--Device-SyncMode-PUSH_PULL = 2-End-->
 

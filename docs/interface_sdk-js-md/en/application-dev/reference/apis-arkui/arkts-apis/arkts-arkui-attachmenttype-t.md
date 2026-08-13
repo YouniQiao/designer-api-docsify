@@ -4,11 +4,13 @@
 declare type AttachmentType = ImageAttachmentInterface | ResourceImageAttachmentOptions
 ```
 
-Defines the image attachment type, which is used to set images of PixelMap or [ResourceStr](ResourceStr) type for styled strings.
+Defines the image attachment type, which is used to set images of PixelMap or ResourceStr type for styled strings.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

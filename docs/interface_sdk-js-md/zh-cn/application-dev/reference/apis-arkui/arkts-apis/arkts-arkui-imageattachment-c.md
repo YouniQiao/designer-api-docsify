@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class ImageAttachment--><!--Device-unnamed-declare class ImageAttachment-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor(value: ImageAttachmentInterface)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +46,13 @@ constructor(value: ImageAttachmentInterface)
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和[ResourceStr](ResourceStr)类型图片的支持。
+图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和ResourceStr类型图片的支持。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,7 +66,7 @@ constructor(attachment: Optional<AttachmentType>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attachment | Optional&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | 是 | PixelMap类型或[ResourceStr](ResourceStr)类型图片设置项。 |
+| attachment | Optional&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | 是 | PixelMap类型或ResourceStr类型图片设置项。 |
 
 ## colorFilter
 
@@ -75,6 +81,8 @@ readonly colorFilter?: ColorFilterType
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +106,8 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -120,6 +130,8 @@ readonly objectFit?: ImageFit
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -134,15 +146,15 @@ readonly objectFit?: ImageFit
 readonly size?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`px`。
+获取属性字符串的图片尺寸。 返回number类型值的单位为`px`。
 
 **类型：** SizeOptions
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,17 +170,15 @@ readonly size?: SizeOptions
 readonly sizeInVp?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`vp`。
-
-当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
+获取属性字符串的图片尺寸。 返回number类型值的单位为`vp`。 当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
 
 **类型：** SizeOptions
 
 **起始版本：** 21
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,17 +194,15 @@ readonly sizeInVp?: SizeOptions
 readonly supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
-
-true：支持SVG解析新能力；false：保持原有SVG解析能力。
-
-默认值：false
+获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。 true：支持SVG解析新能力；false：保持原有SVG解析能力。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,6 +226,8 @@ readonly value: PixelMap
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -239,6 +249,8 @@ readonly verticalAlign?: ImageSpanAlignment
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

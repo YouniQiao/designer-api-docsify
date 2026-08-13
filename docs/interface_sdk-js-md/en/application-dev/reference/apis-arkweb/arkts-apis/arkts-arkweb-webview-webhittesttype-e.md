@@ -1,140 +1,174 @@
 # WebHitTestType
 
-Enum type supplied to [getHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getHitTest) for indicating the cursor node HitTest.
+Enumerates the cursor node types for the [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) API.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebHitTestType--><!--Device-webview-enum WebHitTestType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## EDIT_TEXT
+## EditText
 
 ```TypeScript
-EDIT_TEXT = 0
+EditText = 0
 ```
 
 Editable area.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-EDIT_TEXT = 0--><!--Device-WebHitTestType-EDIT_TEXT = 0-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-EditText = 0--><!--Device-WebHitTestType-EditText = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## EMAIL
+## Email
 
 ```TypeScript
-EMAIL = 1
+Email = 1
 ```
 
 Email address.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-EMAIL = 1--><!--Device-WebHitTestType-EMAIL = 1-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Email = 1--><!--Device-WebHitTestType-Email = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## HTTP_ANCHOR
+## HttpAnchor
 
 ```TypeScript
-HTTP_ANCHOR = 2
+HttpAnchor = 2
 ```
 
 Hyperlink, where **src** is **http**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-HTTP_ANCHOR = 2--><!--Device-WebHitTestType-HTTP_ANCHOR = 2-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-HttpAnchor = 2--><!--Device-WebHitTestType-HttpAnchor = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## HTTP_ANCHOR_IMG
+## HttpAnchorImg
 
 ```TypeScript
-HTTP_ANCHOR_IMG = 3
+HttpAnchorImg = 3
 ```
 
 Image with a hyperlink, where **src** is http + HTML::img.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-HTTP_ANCHOR_IMG = 3--><!--Device-WebHitTestType-HTTP_ANCHOR_IMG = 3-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-HttpAnchorImg = 3--><!--Device-WebHitTestType-HttpAnchorImg = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## IMG
+## Img
 
 ```TypeScript
-IMG = 4
+Img = 4
 ```
 
 HTML::img tag.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-IMG = 4--><!--Device-WebHitTestType-IMG = 4-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Img = 4--><!--Device-WebHitTestType-Img = 4-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## MAP
+## Map
 
 ```TypeScript
-MAP = 5
+Map = 5
 ```
 
 Geographical address.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-MAP = 5--><!--Device-WebHitTestType-MAP = 5-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Map = 5--><!--Device-WebHitTestType-Map = 5-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## PHONE
+## Phone
 
 ```TypeScript
-PHONE = 6
+Phone = 6
 ```
 
 Phone number.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-PHONE = 6--><!--Device-WebHitTestType-PHONE = 6-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Phone = 6--><!--Device-WebHitTestType-Phone = 6-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## UNKNOWN
+## Unknown
 
 ```TypeScript
-UNKNOWN = 7
+Unknown = 7
 ```
 
 Unknown content.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-WebHitTestType-UNKNOWN = 7--><!--Device-WebHitTestType-UNKNOWN = 7-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Unknown = 7--><!--Device-WebHitTestType-Unknown = 7-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

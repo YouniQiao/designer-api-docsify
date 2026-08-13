@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-contact-class PostalAddress--><!--Device-contact-class PostalAddress-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -19,6 +21,8 @@ static readonly ADDR_HOME: 1
 **类型：** 1
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ static readonly ADDR_OTHER: 3
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-static readonly ADDR_OTHER: 3--><!--Device-PostalAddress-static readonly ADDR_OTHER: 3-End-->
@@ -55,6 +61,8 @@ static readonly ADDR_WORK: 2
 **类型：** 2
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ static readonly CUSTOM_LABEL: 0
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0--><!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0-End-->
@@ -91,6 +101,8 @@ static readonly INVALID_LABEL_ID: -1
 **类型：** -1
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +122,8 @@ city?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-city?: string--><!--Device-PostalAddress-city?: string-End-->
@@ -127,6 +141,8 @@ country?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -146,6 +162,8 @@ labelId?: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-labelId?: number--><!--Device-PostalAddress-labelId?: number-End-->
@@ -163,6 +181,8 @@ labelName?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -182,6 +202,8 @@ neighborhood?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-neighborhood?: string--><!--Device-PostalAddress-neighborhood?: string-End-->
@@ -199,6 +221,8 @@ pobox?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -218,6 +242,8 @@ postalAddress: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-postalAddress: string--><!--Device-PostalAddress-postalAddress: string-End-->
@@ -235,6 +261,8 @@ postcode?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -254,6 +282,8 @@ region?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-region?: string--><!--Device-PostalAddress-region?: string-End-->
@@ -271,6 +301,8 @@ street?: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

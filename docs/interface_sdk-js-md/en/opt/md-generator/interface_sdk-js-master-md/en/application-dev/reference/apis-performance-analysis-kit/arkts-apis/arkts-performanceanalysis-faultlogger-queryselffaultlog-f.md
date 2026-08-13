@@ -18,7 +18,7 @@ Obtains the fault information about the current application. This API uses an as
 
 **Deprecated since:** 9
 
-**Substitutes:** [query](ohos.faultlogger/FaultLogger#query)
+**Substitutes:** query
 
 <!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -72,7 +72,7 @@ Obtains the fault information about the current application. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** [query](ohos.faultlogger/FaultLogger#query)
+**Substitutes:** query
 
 <!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 

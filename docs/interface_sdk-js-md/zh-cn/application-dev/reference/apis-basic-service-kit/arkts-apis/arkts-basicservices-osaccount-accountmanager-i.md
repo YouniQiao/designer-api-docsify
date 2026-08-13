@@ -2,9 +2,11 @@
 
 系统账号管理类。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
 
@@ -18,9 +20,11 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 判断是否支持多系统账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -30,14 +34,14 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -91,9 +95,11 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 判断是否支持多系统账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
 
@@ -109,7 +115,7 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -158,11 +164,7 @@ try {
 checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否处于激活状态。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -181,17 +183,17 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -223,11 +225,7 @@ try {
 checkOsAccountActivated(localId: number): Promise<boolean>
 ```
 
-判断指定系统账号是否处于激活状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -257,11 +255,11 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -291,11 +289,7 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否具有指定约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -314,18 +308,18 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| constraint | string | 是 | 指定的约束名称。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -357,11 +351,7 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>
 ```
 
-判断指定系统账号是否具有指定约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -380,7 +370,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
+| constraint | string | 是 | 指定的约束名称。 |
 
 **返回值：**
 
@@ -392,11 +382,11 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -429,9 +419,11 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否为测试账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -441,14 +433,14 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号；默认为false。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号；默认为false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -502,9 +494,11 @@ checkOsAccountTestable(): Promise<boolean>
 
 检查当前系统账号是否为测试账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
 
@@ -520,7 +514,7 @@ checkOsAccountTestable(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -569,12 +563,7 @@ try {
 checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-检查当前系统账号是否已认证解锁。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。建议使用
-> [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
+检查当前系统账号是否已认证解锁。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。建议使用 > [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
 
 **起始版本：** 9
 
@@ -592,13 +581,13 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -626,12 +615,7 @@ try {
 checkOsAccountVerified(): Promise<boolean>
 ```
 
-检查当前系统账号是否已认证解锁。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。建议使用
-> [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
+检查当前系统账号是否已认证解锁。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。建议使用 > [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
 
 **起始版本：** 9
 
@@ -655,7 +639,7 @@ checkOsAccountVerified(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -681,11 +665,7 @@ try {
 checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定系统账号是否已验证。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -704,17 +684,17 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -744,11 +724,7 @@ try {
 checkOsAccountVerified(localId: number): Promise<boolean>
 ```
 
-检查指定系统账号是否已验证。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -778,11 +754,11 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -806,21 +782,17 @@ try {
 
 ## getActivatedOsAccountLocalIds
 
-ArkTS-Dyn:
-```TypeScript
-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void
 ```
 
 查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
 
@@ -830,14 +802,14 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -891,21 +863,17 @@ try {
 
 ## getActivatedOsAccountLocalIds
 
-ArkTS-Dyn:
-```TypeScript
-getActivatedOsAccountLocalIds(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getActivatedOsAccountLocalIds(): Promise<Array<int>>
 ```
 
 查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
 
@@ -915,13 +883,13 @@ getActivatedOsAccountLocalIds(): Promise<Array<int>>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回当前处于激活状态的系统账号的ID列表。 |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回当前处于激活状态的系统账号的ID列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -970,12 +938,7 @@ try {
 getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 ```
 
-获取已创建的系统账号数量。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountCount](#getOsAccountCount)替代。
+获取已创建的系统账号数量。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountCount](#getOsAccountCount)替代。
 
 **起始版本：** 7
 
@@ -983,7 +946,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountCount](osAccount.AccountManager.getOsAccountCount(callback:)
+**替代接口：** [getOsAccountCount](#getOsAccountCount)(callback: AsyncCallback&lt;int&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -995,7 +958,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
 
 ## 示例
 
@@ -1018,12 +981,7 @@ accountManager.getCreatedOsAccountsCount((err: BusinessError, count: number)=>{
 getCreatedOsAccountsCount(): Promise<number>
 ```
 
-获取已创建的系统账号数量。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountCount](#getOsAccountCount)替代。
+获取已创建的系统账号数量。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountCount](#getOsAccountCount)替代。
 
 **起始版本：** 7
 
@@ -1064,11 +1022,7 @@ accountManager.getCreatedOsAccountsCount().then((count: number) => {
 getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-查询当前进程所属的系统账号的信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -1088,14 +1042,14 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1123,11 +1077,7 @@ try {
 getCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-查询当前进程所属的系统账号的信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -1153,8 +1103,8 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1180,13 +1130,7 @@ try {
 getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 ```
 
-获取分布式虚拟设备ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)
-> 替代。
+获取分布式虚拟设备ID。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) > 替代。
 
 **起始版本：** 7
 
@@ -1194,7 +1138,7 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [queryDistributedVirtualDeviceId](osAccount.AccountManager.queryDistributedVirtualDeviceId(callback:)
+**替代接口：** [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)(callback: AsyncCallback&lt;string&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1206,7 +1150,7 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
 
 ## 示例
 
@@ -1229,12 +1173,7 @@ accountManager.getDistributedVirtualDeviceId((err: BusinessError, virtualID: str
 getDistributedVirtualDeviceId(): Promise<string>
 ```
 
-获取分布式虚拟设备ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)替代。
+获取分布式虚拟设备ID。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)替代。
 
 **起始版本：** 7
 
@@ -1271,21 +1210,17 @@ accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
 
 ## getForegroundOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getForegroundOsAccountLocalId(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getForegroundOsAccountLocalId(): Promise<int>
 ```
 
 获取前台系统账号的ID。使用Promise异步回调。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
 
@@ -1295,13 +1230,13 @@ getForegroundOsAccountLocalId(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回前台系统账号的ID。 |
+| Promise&lt;int&gt; | Promise对象。返回前台系统账号的ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1350,11 +1285,7 @@ try {
 getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定系统账号的全部约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -1362,7 +1293,7 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**替代接口：** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1375,7 +1306,7 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的全部 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的全部 约束；否则为错误对象。 |
 
 ## 示例
 
@@ -1402,11 +1333,7 @@ accountManager.getOsAccountAllConstraints(localId, (err: BusinessError, constrai
 getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 ```
 
-获取指定系统账号的全部约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -1414,7 +1341,7 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**替代接口：** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1432,7 +1359,7 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号的全部 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号的全部 约束。 |
 
 ## 示例
 
@@ -1457,11 +1384,7 @@ accountManager.getOsAccountAllConstraints(localId).then((constraints: string[]) 
 getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定系统账号的全部约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -1480,17 +1403,17 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为该系统账号的全部 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为该系统账号的全部 约束；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1522,11 +1445,7 @@ try {
 getOsAccountConstraints(localId: number): Promise<Array<string>>
 ```
 
-获取指定系统账号的全部约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -1550,17 +1469,17 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号的全部 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号的全部 约束。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1586,21 +1505,17 @@ try {
 
 ## getOsAccountCount
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountCount(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountCount(callback: AsyncCallback<int>): void
 ```
 
-获取已创建的系统账号数量。使用callback异步回调。该接口仅限系统应用调用。
+获取已创建的系统账号数量。使用callback异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1612,15 +1527,15 @@ getOsAccountCount(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1668,21 +1583,17 @@ try {
 
 ## getOsAccountCount
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountCount(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountCount(): Promise<int>
 ```
 
-获取已创建的系统账号数量。使用Promise异步回调。该接口仅限系统应用调用。
+获取已创建的系统账号数量。使用Promise异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1694,14 +1605,14 @@ getOsAccountCount(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回已创建的系统账号的数量。 |
+| Promise&lt;int&gt; | Promise对象，返回已创建的系统账号的数量。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1755,6 +1666,8 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
@@ -1777,10 +1690,10 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1813,7 +1726,9 @@ getOsAccountDomainInfo(localId: int): Promise<DomainAccountInfo | null>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1837,9 +1752,9 @@ getOsAccountDomainInfo(localId: int): Promise<DomainAccountInfo | null>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1864,21 +1779,17 @@ accountManager.getOsAccountDomainInfo(localId).then((domainAccountInfo: osAccoun
 
 ## getOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalId(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalId(callback: AsyncCallback<int>): void
 ```
 
 获取当前进程所属的系统账号ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
 
@@ -1888,14 +1799,14 @@ getOsAccountLocalId(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1943,21 +1854,17 @@ try {
 
 ## getOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalId(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalId(): Promise<int>
 ```
 
 获取当前进程所属的系统账号ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
 
@@ -1967,13 +1874,13 @@ getOsAccountLocalId(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回当前进程所属的系统账号ID。 |
+| Promise&lt;int&gt; | Promise对象，返回当前进程所属的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2022,13 +1929,7 @@ try {
 getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void
 ```
 
-通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)
-> 替代。
+通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > 替代。
 
 **起始版本：** 8
 
@@ -2036,7 +1937,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**替代接口：** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2047,7 +1948,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | serialNumber | number | 是 | 账号SN码。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
 
 ## 示例
 
@@ -2073,13 +1974,7 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber, (err: BusinessErr
 getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 ```
 
-通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber-1)
-> 替代。
+通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > 替代。
 
 **起始版本：** 8
 
@@ -2087,7 +1982,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**替代接口：** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
@@ -2123,21 +2018,17 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber).then((localId: nu
 
 ## getOsAccountLocalIdForDomain
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void
 ```
 
-根据域账号信息，获取与其关联的系统账号ID。使用callback异步回调。该接口仅限系统应用调用。
+根据域账号信息，获取与其关联的系统账号ID。使用callback异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2150,16 +2041,16 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2209,21 +2100,17 @@ try {
 
 ## getOsAccountLocalIdForDomain
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>
 ```
 
-根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。该接口仅限系统应用调用。
+根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2241,16 +2128,16 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回域账号关联的系统账号ID。 |
+| Promise&lt;int&gt; | Promise对象，返回域账号关联的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2297,21 +2184,17 @@ try {
 
 ## getOsAccountLocalIdForSerialNumber
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void
 ```
 
 通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
 
@@ -2321,17 +2204,17 @@ getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serialNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 账号SN码。 |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
+| serialNumber | long | 是 | 账号SN码。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。如果成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2382,21 +2265,17 @@ try {
 
 ## getOsAccountLocalIdForSerialNumber
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>
 ```
 
 通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
 
@@ -2406,22 +2285,22 @@ getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serialNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 账号SN码。 |
+| serialNumber | long | 是 | 账号SN码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回与SN码关联的系统账号的账号ID。 |
+| Promise&lt;int&gt; | Promise对象，返回与SN码关联的系统账号的账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2469,21 +2348,17 @@ try {
 
 ## getOsAccountLocalIdForUid
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void
 ```
 
 根据uid查询对应的系统账号ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
 
@@ -2493,16 +2368,16 @@ getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 进程uid。 |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
+| uid | int | 是 | 进程uid。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2552,21 +2427,17 @@ try {
 
 ## getOsAccountLocalIdForUid
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForUid(uid: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForUid(uid: int): Promise<int>
 ```
 
 根据uid查询对应的系统账号ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
 
@@ -2576,21 +2447,21 @@ getOsAccountLocalIdForUid(uid: int): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 进程uid。 |
+| uid | int | 是 | 进程uid。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回指定uid对应的系统账号ID。 |
+| Promise&lt;int&gt; | Promise对象，返回指定uid对应的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2638,21 +2509,17 @@ try {
 
 ## getOsAccountLocalIdForUidSync
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForUidSync(uid: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForUidSync(uid: int): int
 ```
 
 根据uid查询对应的系统账号ID。使用同步方式返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
 
@@ -2662,20 +2529,20 @@ getOsAccountLocalIdForUidSync(uid: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 进程uid。 |
+| uid | int | 是 | 进程uid。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定uid对应的系统账号ID。 |
+| int | 返回指定uid对应的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
 ## 示例
 
@@ -2716,13 +2583,7 @@ try {
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-根据域账号信息，获取与其关联的系统账号的账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)
-> 替代。
+根据域账号信息，获取与其关联的系统账号的账号ID。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > 替代。
 
 **起始版本：** 8
 
@@ -2730,7 +2591,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**替代接口：** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;int&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2743,7 +2604,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，如果获取成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，如果获取成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
 
 ## 示例
 
@@ -2767,13 +2628,7 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo, (err: BusinessError, lo
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain-1)
-> 替代。
+根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > 替代。
 
 **起始版本：** 8
 
@@ -2781,7 +2636,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**替代接口：** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2821,12 +2676,7 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) 
 getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 ```
 
-获取当前进程所属的系统账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalId](#getOsAccountLocalId)替代。
+获取当前进程所属的系统账号ID。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalId](#getOsAccountLocalId)替代。
 
 **起始版本：** 7
 
@@ -2834,7 +2684,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalId](osAccount.AccountManager.getOsAccountLocalId(callback:)
+**替代接口：** [getOsAccountLocalId](#getOsAccountLocalId)(callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
 
@@ -2844,7 +2694,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
 
 ## 示例
 
@@ -2867,12 +2717,7 @@ accountManager.getOsAccountLocalIdFromProcess((err: BusinessError, localId: numb
 getOsAccountLocalIdFromProcess(): Promise<number>
 ```
 
-获取当前进程所属的系统账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalId](#getOsAccountLocalId)替代。
+获取当前进程所属的系统账号ID。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalId](#getOsAccountLocalId)替代。
 
 **起始版本：** 7
 
@@ -2911,13 +2756,7 @@ accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
 getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 ```
 
-根据uid查询对应的系统账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)
-> 替代。
+根据uid查询对应的系统账号ID。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid) > 替代。
 
 **起始版本：** 7
 
@@ -2925,7 +2764,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**替代接口：** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2936,7 +2775,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | number | 是 | 进程uid。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
 
 ## 示例
 
@@ -2962,12 +2801,7 @@ accountManager.getOsAccountLocalIdFromUid(uid, (err: BusinessError, localId: num
 getOsAccountLocalIdFromUid(uid: number): Promise<number>
 ```
 
-根据uid查询对应的系统账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid-1)替代。
+根据uid查询对应的系统账号ID。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)替代。
 
 **起始版本：** 7
 
@@ -2975,7 +2809,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**替代接口：** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
@@ -3011,12 +2845,6 @@ accountManager.getOsAccountLocalIdFromUid(uid).then((localId: number) => {
 
 ## getOsAccountLocalIds
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIds(): Promise<number[]>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIds(): Promise<int[]>
 ```
@@ -3025,7 +2853,9 @@ getOsAccountLocalIds(): Promise<int[]>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -3039,14 +2869,14 @@ getOsAccountLocalIds(): Promise<int[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number[]&gt;  <br>ArkTS-Sta：Promise&lt;int[]&gt; | Promise对象，返回所有非系统级的操作系统账号的本地ID。 |
+| Promise&lt;int[]&gt; | Promise对象，返回所有非系统级的操作系统账号的本地ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3095,9 +2925,11 @@ getOsAccountName(): Promise<string>
 
 查询调用方所属系统账号的名称。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
 
@@ -3113,7 +2945,7 @@ getOsAccountName(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3158,12 +2990,6 @@ try {
 
 ## getOsAccountNameByLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountNameByLocalId(localId: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountNameByLocalId(localId: int): Promise<string>
 ```
@@ -3172,7 +2998,9 @@ getOsAccountNameByLocalId(localId: int): Promise<string>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -3186,7 +3014,7 @@ getOsAccountNameByLocalId(localId: int): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标系统账号的本地ID。 |
+| localId | int | 是 | 目标系统账号的本地ID。 |
 
 **返回值：**
 
@@ -3198,10 +3026,10 @@ getOsAccountNameByLocalId(localId: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3229,9 +3057,11 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 查询当前进程所属的系统账号的账号类型。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -3241,14 +3071,14 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3302,9 +3132,11 @@ getOsAccountType(): Promise<OsAccountType>
 
 查询当前进程所属的系统账号的账号类型。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
 
@@ -3320,7 +3152,7 @@ getOsAccountType(): Promise<OsAccountType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3369,12 +3201,7 @@ try {
 getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 ```
 
-查询当前进程所属的系统账号的账号类型。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountType](#getOsAccountType)替代。
+查询当前进程所属的系统账号的账号类型。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountType](#getOsAccountType)替代。
 
 **起始版本：** 7
 
@@ -3382,7 +3209,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountType](osAccount.AccountManager.getOsAccountType(callback:)
+**替代接口：** [getOsAccountType](#getOsAccountType)(callback: AsyncCallback&lt;OsAccountType&gt;)
 
 <!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -3392,7 +3219,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
 
 ## 示例
 
@@ -3415,12 +3242,7 @@ accountManager.getOsAccountTypeFromProcess((err: BusinessError, accountType: osA
 getOsAccountTypeFromProcess(): Promise<OsAccountType>
 ```
 
-查询当前进程所属的系统账号的账号类型。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getOsAccountType)
-> 替代。
+查询当前进程所属的系统账号的账号类型。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getOsAccountType) > 替代。
 
 **起始版本：** 7
 
@@ -3459,13 +3281,7 @@ accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAcco
 getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
 ```
 
-通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)
-> 替代。
+通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > 替代。
 
 **起始版本：** 8
 
@@ -3473,7 +3289,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 **废弃版本：** 9
 
-**替代接口：** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**替代接口：** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int, callback: AsyncCallback&lt;long&gt;)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -3484,7 +3300,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
 
 ## 示例
 
@@ -3511,13 +3327,7 @@ accountManager.getSerialNumberByOsAccountLocalId(localId, (err: BusinessError, s
 getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 ```
 
-通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId-1)
-> 替代。
+通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > 替代。
 
 **起始版本：** 8
 
@@ -3525,7 +3335,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**替代接口：** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
@@ -3562,21 +3372,17 @@ accountManager.getSerialNumberByOsAccountLocalId(localId).then((serialNumber: nu
 
 ## getSerialNumberForOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void
 ```
 
 通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
 
@@ -3586,17 +3392,17 @@ getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 系统账号ID。 |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
+| localId | int | 是 | 系统账号ID。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3647,21 +3453,17 @@ try {
 
 ## getSerialNumberForOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSerialNumberForOsAccountLocalId(localId: int): Promise<long>
 ```
 
 通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
 
@@ -3671,22 +3473,22 @@ getSerialNumberForOsAccountLocalId(localId: int): Promise<long>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 系统账号ID。 |
+| localId | int | 是 | 系统账号ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回与该系统账号关联的SN码。 |
+| Promise&lt;long&gt; | Promise对象，返回与该系统账号关联的SN码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3738,13 +3540,7 @@ try {
 isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 ```
 
-判断是否支持多系统账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)
-> 替代。
+判断是否支持多系统账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) > 替代。
 
 **起始版本：** 7
 
@@ -3752,7 +3548,7 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [checkMultiOsAccountEnabled](osAccount.AccountManager.checkMultiOsAccountEnabled(callback:)
+**替代接口：** [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -3762,7 +3558,7 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
 
 ## 示例
 
@@ -3785,12 +3581,7 @@ accountManager.isMultiOsAccountEnable((err: BusinessError, isEnabled: boolean) =
 isMultiOsAccountEnable(): Promise<boolean>
 ```
 
-判断是否支持多系统账号。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)替代。
+判断是否支持多系统账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)替代。
 
 **起始版本：** 7
 
@@ -3829,11 +3620,7 @@ accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
 isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否处于激活状态。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -3841,7 +3628,7 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**替代接口：** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3854,7 +3641,7 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
 
 ## 示例
 
@@ -3881,11 +3668,7 @@ accountManager.isOsAccountActived(localId, (err: BusinessError, isActived: boole
 isOsAccountActived(localId: number): Promise<boolean>
 ```
 
-判断指定系统账号是否处于激活状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -3893,7 +3676,7 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**替代接口：** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3936,11 +3719,7 @@ accountManager.isOsAccountActived(localId).then((isActived: boolean) => {
 isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否具有指定约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -3948,7 +3727,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**替代接口：** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3961,8 +3740,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| constraint | string | 是 | 指定的约束名称。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 ## 示例
 
@@ -3990,11 +3769,7 @@ accountManager.isOsAccountConstraintEnable(localId, constraint, (err: BusinessEr
 isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>
 ```
 
-判断指定系统账号是否具有指定约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -4002,7 +3777,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**替代接口：** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4015,7 +3790,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
+| constraint | string | 是 | 指定的约束名称。 |
 
 **返回值：**
 
@@ -4049,9 +3824,11 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 判断当前系统账号是否使能指定约束。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
 
@@ -4061,7 +3838,7 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
+| constraint | string | 是 | 指定的约束名称。 |
 
 **返回值：**
 
@@ -4073,8 +3850,8 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -4127,9 +3904,11 @@ isOsAccountUnlocked(): Promise<boolean>
 
 检查当前系统账号是否已认证解锁。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
 
@@ -4145,7 +3924,7 @@ isOsAccountUnlocked(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -4194,13 +3973,7 @@ try {
 isOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-检查当前系统账号是否已验证。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountVerified](#checkOsAccountVerified)
-> 替代。
+检查当前系统账号是否已验证。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkOsAccountVerified](#checkOsAccountVerified) > 替代。
 
 **起始版本：** 7
 
@@ -4208,7 +3981,7 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(callback:)
+**替代接口：** [checkOsAccountVerified](#checkOsAccountVerified)(callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -4220,7 +3993,7 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
 
 ## 示例
 
@@ -4243,11 +4016,7 @@ accountManager.isOsAccountVerified((err: BusinessError, isVerified: boolean) => 
 isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定系统账号是否已验证。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -4255,7 +4024,7 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**替代接口：** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -4268,7 +4037,7 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
 
 ## 示例
 
@@ -4293,11 +4062,7 @@ accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boo
 isOsAccountVerified(localId?: number): Promise<boolean>
 ```
 
-检查指定系统账号是否已验证。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -4305,7 +4070,7 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**替代接口：** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -4344,13 +4109,7 @@ accountManager.isOsAccountVerified().then((isVerified: boolean) => {
 isTestOsAccount(callback: AsyncCallback<boolean>): void
 ```
 
-检查当前系统账号是否为测试账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountTestable](#checkOsAccountTestable)
-> 替代。
+检查当前系统账号是否为测试账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkOsAccountTestable](#checkOsAccountTestable) > 替代。
 
 **起始版本：** 7
 
@@ -4358,7 +4117,7 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountTestable](osAccount.AccountManager.checkOsAccountTestable(callback:)
+**替代接口：** [checkOsAccountTestable](#checkOsAccountTestable)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
 
@@ -4368,7 +4127,7 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号。 |
 
 ## 示例
 
@@ -4391,12 +4150,7 @@ accountManager.isTestOsAccount((err: BusinessError, isTestable: boolean) => {
 isTestOsAccount(): Promise<boolean>
 ```
 
-检查当前系统账号是否为测试账号。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountTestable](#checkOsAccountTestable)替代。
+检查当前系统账号是否为测试账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkOsAccountTestable](#checkOsAccountTestable)替代。
 
 **起始版本：** 7
 
@@ -4435,13 +4189,7 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)
-> 替代。
+查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) > 替代。
 
 **起始版本：** 8
 
@@ -4449,7 +4197,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getActivatedOsAccountLocalIds](osAccount.AccountManager.getActivatedOsAccountLocalIds(callback:)
+**替代接口：** [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)(callback: AsyncCallback&lt;Array&lt;int&gt;&gt;)
 
 <!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -4459,7 +4207,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
 
 ## 示例
 
@@ -4485,12 +4233,7 @@ accountManager.queryActivatedOsAccountIds((err: BusinessError, idArray: number[]
 queryActivatedOsAccountIds(): Promise<Array<number>>
 ```
 
-查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)替代。
+查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)替代。
 
 **起始版本：** 8
 
@@ -4529,11 +4272,7 @@ accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
 queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-查询当前进程所属的系统账号的信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -4541,7 +4280,7 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getCurrentOsAccount](osAccount.AccountManager.getCurrentOsAccount(callback:)
+**替代接口：** [getCurrentOsAccount](#getCurrentOsAccount)(callback: AsyncCallback&lt;OsAccountInfo&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4553,7 +4292,7 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
 
 ## 示例
 
@@ -4576,11 +4315,7 @@ accountManager.queryCurrentOsAccount((err: BusinessError, curAccountInfo: osAcco
 queryCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-查询当前进程所属的系统账号的信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -4623,9 +4358,11 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 获取分布式虚拟设备ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4637,15 +4374,15 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -4699,9 +4436,11 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 获取分布式虚拟设备ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4719,8 +4458,8 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 

@@ -4,6 +4,8 @@ Type of the Enter key.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EnterKeyType--><!--Device-unnamed-declare enum EnterKeyType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Go = 2
 The Enter key is labeled "Go."
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ The Enter key is labeled "Search."
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EnterKeyType-Search = 3--><!--Device-EnterKeyType-Search = 3-End-->
@@ -49,6 +55,8 @@ Send = 4
 The Enter key is labeled "Send."
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ The Enter key is labeled "Next."
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EnterKeyType-Next = 5--><!--Device-EnterKeyType-Next = 5-End-->
@@ -82,6 +92,8 @@ The Enter key is labeled "Done."
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EnterKeyType-Done = 6--><!--Device-EnterKeyType-Done = 6-End-->
@@ -97,6 +109,8 @@ PREVIOUS = 7
 The Enter key is labeled "Previous."
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,6 +129,8 @@ NEW_LINE = 8
 The Enter key is labeled "New Line."
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

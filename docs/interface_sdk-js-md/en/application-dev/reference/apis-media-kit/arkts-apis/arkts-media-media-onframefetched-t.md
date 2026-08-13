@@ -8,7 +8,9 @@ Describes the callback invoked when thumbnails are obtained in batches.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -21,5 +23,5 @@ Describes the callback invoked when thumbnails are obtained in batches.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | frameInfo | [FrameInfo](arkts-media-media-frameinfo-i.md) | Yes | Thumbnail information. |
-| err | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | No | Error that occurs when the thumbnail is obtained. The default value is **null**. |
+| err | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | No | Error that occurs when the thumbnail is obtained. The default value is **null**. |
 

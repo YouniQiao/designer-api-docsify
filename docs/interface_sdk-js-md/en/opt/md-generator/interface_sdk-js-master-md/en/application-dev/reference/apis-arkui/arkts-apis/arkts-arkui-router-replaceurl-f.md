@@ -12,20 +12,13 @@ import { router } from '@kit.ArkUI';
 function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application and destroys the current page.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)(options: router.RouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,9 +37,9 @@ Replaces the current page with another one in the application and destroys the c
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## Examples
 
@@ -80,21 +73,13 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions): Promise<void>
 ```
 
-Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the  
-[Navigation](../../../ui/arkts-navigation-architecture.md) component.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the [Navigation](../../../ui/arkts-navigation-architecture.md) component. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)(options: router.RouterOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,9 +103,9 @@ Replaces the current page with another one in the application and destroys the c
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## Examples
 
@@ -156,20 +141,13 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application and destroys the current page.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -189,9 +167,9 @@ Replaces the current page with another one in the application and destroys the c
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## Examples
 
@@ -225,20 +203,13 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Replaces the current page with another one in the application and destroys the current page.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)(options: router.RouterOptions, mode: router.RouterMode)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -263,9 +234,9 @@ Replaces the current page with another one in the application and destroys the c
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## Examples
 

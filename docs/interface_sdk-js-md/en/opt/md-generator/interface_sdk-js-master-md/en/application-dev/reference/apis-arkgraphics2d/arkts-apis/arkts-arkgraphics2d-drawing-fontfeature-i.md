@@ -1,8 +1,10 @@
 # FontFeature
 
-Defines font features, which are typesetting rules within a font that determine how glyphs look, such as ligatures,alternates, and superscripts/subscripts.
+Defines font features, which are typesetting rules within a font that determine how glyphs look, such as ligatures, alternates, and superscripts/subscripts.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-drawing-interface FontFeature--><!--Device-drawing-interface FontFeature-End-->
 
@@ -24,7 +26,9 @@ Name of a font feature. Common font feature names include **liga**, **frac**, an
 
 **Type:** string
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Value of a font feature, which is a floating point number. You are advised to de
 
 **Type:** number
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

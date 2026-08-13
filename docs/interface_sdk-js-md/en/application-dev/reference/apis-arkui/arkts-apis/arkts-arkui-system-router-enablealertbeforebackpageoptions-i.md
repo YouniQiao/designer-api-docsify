@@ -8,7 +8,7 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions-End-->
 
@@ -28,23 +28,19 @@ cancel?: (errMsg: string) => void
 
 Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
 
+**Type:** (errMsg: string) =&gt; void
+
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errMsg | string | Yes |  |
 
 ## complete
 
@@ -54,43 +50,19 @@ complete?: () => void
 
 Called when the dialog box is closed.
 
+**Type:** () =&gt; void
+
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## success
-
-```TypeScript
-success?: (errMsg: string) => void
-```
-
-Called when the **OK** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 8
-
-**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
-
-<!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errMsg | string | Yes |  |
 
 ## message
 
@@ -108,9 +80,31 @@ Content displayed in the confirm dialog box.
 
 **Deprecated since:** 8
 
-**Substitutes:** [message](ohos.router.EnableAlertOptions#message)
+**Substitutes:** message
 
 <!--Device-EnableAlertBeforeBackPageOptions-message: string--><!--Device-EnableAlertBeforeBackPageOptions-message: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## success
+
+```TypeScript
+success?: (errMsg: string) => void
+```
+
+Called when the **OK** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
+
+**Type:** (errMsg: string) =&gt; void
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** 8
+
+**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+
+<!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

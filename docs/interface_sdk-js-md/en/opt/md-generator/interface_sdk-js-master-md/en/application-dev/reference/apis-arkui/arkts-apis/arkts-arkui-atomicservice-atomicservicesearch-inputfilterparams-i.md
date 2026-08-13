@@ -4,6 +4,8 @@ Sets regular expression for input filtering.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface InputFilterParams--><!--Device-unnamed-export interface InputFilterParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,12 +22,13 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 error?: Callback<string>
 ```
 
-Callback used to return the filtered-out content when regular expression matching fails. Default value:  
-**undefined**.
+Callback used to return the filtered-out content when regular expression matching fails. Default value: **undefined**.
 
 **Type:** Callback&lt;string&gt;
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -44,6 +47,8 @@ Regular expression.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

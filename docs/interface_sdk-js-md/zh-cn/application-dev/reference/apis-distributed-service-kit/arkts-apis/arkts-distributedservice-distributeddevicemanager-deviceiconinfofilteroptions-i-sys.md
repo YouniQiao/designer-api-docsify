@@ -2,9 +2,11 @@
 
 设备图标信息过滤选项。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions-End-->
 
@@ -22,9 +24,11 @@ imageType: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceIconInfoFilterOptions-imageType: string--><!--Device-DeviceIconInfoFilterOptions-imageType: string-End-->
 
@@ -42,9 +46,11 @@ internalModel?: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceIconInfoFilterOptions-internalModel?: string--><!--Device-DeviceIconInfoFilterOptions-internalModel?: string-End-->
 
@@ -62,9 +68,11 @@ productId: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceIconInfoFilterOptions-productId: string--><!--Device-DeviceIconInfoFilterOptions-productId: string-End-->
 
@@ -78,16 +86,15 @@ productId: string
 specName: string
 ```
 
-图片规格名称。取值范围：
-
-- lg：大图，尺寸为1016064px。  
-- sm：小图，尺寸为65536px。
+图片规格名称。取值范围： - lg：大图，尺寸为1016064px。 - sm：小图，尺寸为65536px。
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceIconInfoFilterOptions-specName: string--><!--Device-DeviceIconInfoFilterOptions-specName: string-End-->
 
@@ -105,9 +112,11 @@ subProductId?: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceIconInfoFilterOptions-subProductId?: string--><!--Device-DeviceIconInfoFilterOptions-subProductId?: string-End-->
 

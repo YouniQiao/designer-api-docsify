@@ -6,6 +6,8 @@ Represents a device clipboard policy.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-securityManager-export enum ClipboardPolicy--><!--Device-securityManager-export enum ClipboardPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Default policy, which indicates no policy.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Allow the clipboard to be used in the same application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ClipboardPolicy-IN_APP = 1--><!--Device-ClipboardPolicy-IN_APP = 1-End-->
@@ -58,6 +64,8 @@ Allow the clipboard to be used on the same device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ClipboardPolicy-LOCAL_DEVICE = 2--><!--Device-ClipboardPolicy-LOCAL_DEVICE = 2-End-->
@@ -75,6 +83,8 @@ Allow the clipboard to be used across devices.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

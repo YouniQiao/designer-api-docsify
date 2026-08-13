@@ -4,11 +4,13 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface WorkerEventListener--><!--Device-unnamed-export interface WorkerEventListener-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (event: Event): void | Promise<void>
@@ -17,6 +19,8 @@
 指定要调用的回调函数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +38,8 @@
 
 | 错误码ID |
 | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 

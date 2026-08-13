@@ -2,7 +2,9 @@
 
 Enumerates the window modes.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum GlobalWindowMode--><!--Device-window-enum GlobalWindowMode-End-->
 
@@ -16,9 +18,11 @@ FULLSCREEN = 1
 
 Full-screen window. The first binary bit from right to left is 1.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GlobalWindowMode-FULLSCREEN = 1--><!--Device-GlobalWindowMode-FULLSCREEN = 1-End-->
 
@@ -32,9 +36,11 @@ SPLIT = 1 << 1
 
 Split-screen window. The second binary bit from right to left is 1.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GlobalWindowMode-SPLIT = 1 << 1--><!--Device-GlobalWindowMode-SPLIT = 1 << 1-End-->
 
@@ -48,9 +54,11 @@ FLOAT = 1 << 2
 
 Floating window. The third binary bit from right to left is 1.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GlobalWindowMode-FLOAT = 1 << 2--><!--Device-GlobalWindowMode-FLOAT = 1 << 2-End-->
 
@@ -64,9 +72,11 @@ PIP = 1 << 3
 
 PiP window. The fourth binary bit from right to left is 1.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GlobalWindowMode-PIP = 1 << 3--><!--Device-GlobalWindowMode-PIP = 1 << 3-End-->
 

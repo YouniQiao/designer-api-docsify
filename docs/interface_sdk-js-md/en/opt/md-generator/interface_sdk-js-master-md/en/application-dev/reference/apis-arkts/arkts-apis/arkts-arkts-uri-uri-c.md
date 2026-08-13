@@ -2,7 +2,9 @@
 
 URI Represents a Uniform Resource Identifier (URI) reference.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uri-export class URI--><!--Device-uri-export class URI-End-->
 
@@ -20,11 +22,13 @@ import { uri } from '@kit.ArkTS';
 addEncodedSegment(pathSegment: string): URI
 ```
 
-Appends an encoded field to the path component of this URI to create a new URI and returns the new URI,while keeping the existing URI unchanged.
+Appends an encoded field to the path component of this URI to create a new URI and returns the new URI, while keeping the existing URI unchanged.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-addEncodedSegment(pathSegment: string): URI--><!--Device-URI-addEncodedSegment(pathSegment: string): URI-End-->
 
@@ -58,9 +62,11 @@ addQueryValue(key: string, value: string): URI
 
 Adds a query parameter to this URI to create a new URI, while keeping the existing URI unchanged.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-addQueryValue(key: string, value: string): URI--><!--Device-URI-addQueryValue(key: string, value: string): URI-End-->
 
@@ -93,11 +99,13 @@ console.info(newRoute.toString()); // https://www.test.com?param1=hello%20world
 addSegment(pathSegment: string): URI
 ```
 
-Encodes a given field, appends it to the path component of this URI to create a new URI, and returns the new URI,while keeping the existing URI unchanged.
+Encodes a given field, appends it to the path component of this URI to create a new URI, and returns the new URI, while keeping the existing URI unchanged.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-addSegment(pathSegment: string): URI--><!--Device-URI-addSegment(pathSegment: string): URI-End-->
 
@@ -131,9 +139,11 @@ checkHierarchical(): boolean
 
 Checks whether this URI is a hierarchical URI. The URI that starts with a slash (/) in scheme-specific-part is a hierarchical URI. Relative URIs are also hierarchical.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-checkHierarchical(): boolean--><!--Device-URI-checkHierarchical(): boolean-End-->
 
@@ -162,7 +172,9 @@ checkIsAbsolute(): boolean
 
 Checks whether this URI is an absolute URI (whether the scheme component is defined).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -193,9 +205,11 @@ checkOpaque(): boolean
 
 Checks whether this URI is an opaque URI. The URI that does not start with a slash (/) is an opaque URI.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-checkOpaque(): boolean--><!--Device-URI-checkOpaque(): boolean-End-->
 
@@ -224,9 +238,11 @@ checkRelative(): boolean
 
 Determine whether URI is Relative.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-checkRelative(): boolean--><!--Device-URI-checkRelative(): boolean-End-->
 
@@ -255,9 +271,11 @@ clearQuery(): URI
 
 Clears the query component of this URI to create a new URI, while keeping the existing URI object unchanged.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-clearQuery(): URI--><!--Device-URI-clearQuery(): URI-End-->
 
@@ -284,7 +302,9 @@ constructor(uri: string)
 
 A constructor used to create a URI instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -302,7 +322,7 @@ A constructor used to create a URI instance.
 
 | Error Code ID |
 | --- |
-| [10200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
 ## Examples
 
@@ -323,9 +343,11 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 Creates a URI based on the provided scheme, scheme-specific-part, and fragment components.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI--><!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI-End-->
 
@@ -398,7 +420,9 @@ equalsTo(other: URI): boolean
 
 Checks whether this URI is the same as another URI object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -434,9 +458,11 @@ getBooleanQueryValue(key: string, defaultValue: boolean): boolean
 
 Obtains the value of the Boolean type of a query parameter in this URI.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean--><!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean-End-->
 
@@ -478,9 +504,11 @@ getLastSegment(): string
 
 Obtains the last segment of this URI.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-getLastSegment(): string--><!--Device-URI-getLastSegment(): string-End-->
 
@@ -507,9 +535,11 @@ getQueryNames(): string[]
 
 Obtains all non-repeated keys in the query component of this URI.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-getQueryNames(): string[]--><!--Device-URI-getQueryNames(): string[]-End-->
 
@@ -535,9 +565,11 @@ console.info(paramNames.toString()); // param1,param2
 getQueryValue(key: string): string
 ```
 
-Obtains the first value of a given key from the query component of this URI. If the query component contains encoded content,this API decodes the key before obtaining the value.
+Obtains the first value of a given key from the query component of this URI. If the query component contains encoded content, this API decodes the key before obtaining the value.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -567,6 +599,36 @@ console.info(uriInstance1.getQueryValue('sa=')) // po~
 console.info(uriInstance1.getQueryValue('abc')) // null
 ```
 
+## getQueryValue
+
+```TypeScript
+getQueryValue(key: string): string | null
+```
+
+Obtains the first value of a given key from the query component of this URI. If the query component contains encoded content, this API decodes the key before obtaining the value.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URI-getQueryValue(key: string): string | null--><!--Device-URI-getQueryValue(key: string): string | null-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
 ## getQueryValues
 
 ```TypeScript
@@ -575,9 +637,11 @@ getQueryValues(key: string): string[]
 
 Obtains the values of a given key from the query component of this URI.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-getQueryValues(key: string): string[]--><!--Device-URI-getQueryValues(key: string): string[]-End-->
 
@@ -611,9 +675,11 @@ getSegment(): string[]
 
 Gets the decoded path segments.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URI-getSegment(): string[]--><!--Device-URI-getSegment(): string[]-End-->
 
@@ -640,7 +706,9 @@ normalize(): URI
 
 Normalizes the path of this URI.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -677,7 +745,9 @@ toString(): string
 
 Converts this URI into an encoded string.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -710,6 +780,8 @@ Gets/Sets the decoding permission component part of this URI.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URI-authority: string--><!--Device-URI-authority: string-End-->
@@ -727,6 +799,8 @@ Gets/Sets the encoded authority part of this URI.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -746,6 +820,8 @@ Gets/Sets the encoded fragment part of this URI, everything after the '#'.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-URI-encodedFragment: string--><!--Device-URI-encodedFragment: string-End-->
@@ -763,6 +839,8 @@ Gets/Sets the encoded path portion of the URI.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -782,6 +860,8 @@ Gets/Sets the encoded query component from this URI.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-URI-encodedQuery: string--><!--Device-URI-encodedQuery: string-End-->
@@ -799,6 +879,8 @@ Gets/Sets the scheme-specific part of this URI, i.e. everything between the sche
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -818,6 +900,8 @@ Gets/Sets Obtains the encoded user information part of the URI.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-URI-encodedUserInfo: string--><!--Device-URI-encodedUserInfo: string-End-->
@@ -835,6 +919,8 @@ Gets/Sets the fragment part of the URI.
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -854,6 +940,8 @@ Gets the hostname portion of the URI without a port.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URI-host: string--><!--Device-URI-host: string-End-->
@@ -871,6 +959,8 @@ Gets/Sets the path portion of the URI.
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -890,6 +980,8 @@ Gets the port portion of the URI.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URI-port: string--><!--Device-URI-port: string-End-->
@@ -907,6 +999,8 @@ Gets/Sets the query portion of the URI
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -926,6 +1020,8 @@ Gets/Sets the protocol part of the URI.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URI-scheme: string--><!--Device-URI-scheme: string-End-->
@@ -944,6 +1040,8 @@ Gets/Sets the decoding scheme-specific part of the URI.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URI-ssp: string--><!--Device-URI-ssp: string-End-->
@@ -961,6 +1059,8 @@ Gets/Sets Obtains the user information part of the URI.
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

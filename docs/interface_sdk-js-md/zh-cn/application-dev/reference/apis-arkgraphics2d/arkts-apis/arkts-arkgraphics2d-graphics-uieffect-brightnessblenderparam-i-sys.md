@@ -2,9 +2,11 @@
 
 BrightnessBlender的参数列表，用于配置提亮效果的各项属性，包括灰度调整系数、饱和度和混合比例等参数。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface BrightnessBlenderParam--><!--Device-unnamed-export declare interface BrightnessBlenderParam-End-->
 
@@ -20,11 +22,13 @@ cubicRate: double
 
 灰度调整的三阶系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -42,11 +46,13 @@ degree: double
 
 灰度调整的比例。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -64,11 +70,13 @@ fraction: double
 
 提亮效果的混合比例。 取值范围为[0, 1]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -86,11 +94,13 @@ linearRate: double
 
 灰度调整的线性系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -108,11 +118,13 @@ negativeCoefficient: [double, double, double]
 
 基于基准饱和度的RGB负向调整参数。 每个number的取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**类型：** [double, double, double]
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -130,11 +142,13 @@ positiveCoefficient: [double, double, double]
 
 基于基准饱和度的RGB正向调整参数。 每个number的取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**类型：** [double, double, double]
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -152,11 +166,13 @@ quadraticRate: double
 
 灰度调整的二阶系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -174,11 +190,13 @@ saturation: double
 
 提亮的基准饱和度。 取值范围为[0, 20]，超出边界会在实现时自动截断。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 

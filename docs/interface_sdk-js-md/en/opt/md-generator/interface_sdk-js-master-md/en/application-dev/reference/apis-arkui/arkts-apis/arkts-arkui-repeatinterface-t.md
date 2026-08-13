@@ -8,6 +8,8 @@ Indicates the type of Repeat.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -28,4 +30,4 @@ Indicates the type of Repeat.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
+| RepeatAttribute & lt;T & gt; |

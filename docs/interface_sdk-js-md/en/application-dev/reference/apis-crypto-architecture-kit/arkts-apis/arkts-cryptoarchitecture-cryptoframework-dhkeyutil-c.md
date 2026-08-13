@@ -2,9 +2,11 @@
 
 Generates common parameters for a DH key based on the prime **p** length and the private key length.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-class DHKeyUtil--><!--Device-cryptoFramework-class DHKeyUtil-End-->
 
@@ -20,21 +22,17 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
 ## genDHCommonParamsSpec
 
-ArkTS-Dyn:
-```TypeScript
-static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
-```
-
-ArkTS-Sta:
 ```TypeScript
 static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec
 ```
 
-Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see [DH](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#dh).
+Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see DH.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,8 +46,8 @@ Generates common parameters for a DH key based on the prime **p** length and the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the prime **p**, in bits. |
-| skLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Maximum length of the generated DH private key, in bits. The default value is **0**.&lt;br&gt; When this parameter is set to **0**, the maximum length of the generated DH private key is as follows:&lt;br&gt; ffdhe2048: 255 bits.&lt;br&gt;ffdhe3072: 275 bits.&lt;br&gt;ffdhe4096: 325 bits.&lt;br&gt;ffdhe6144: 375 bits.&lt;br&gt;ffdhe8192: 400 bits. |
+| pLen | int | Yes | Length of the prime **p**, in bits. |
+| skLen | int | No | Maximum length of the generated DH private key, in bits. The default value is **0**.&lt;br&gt; When this parameter is set to **0**, the maximum length of the generated DH private key is as follows:&lt;br&gt; ffdhe2048: 255 bits.&lt;br&gt;ffdhe3072: 275 bits.&lt;br&gt;ffdhe4096: 325 bits.&lt;br&gt;ffdhe6144: 375 bits.&lt;br&gt;ffdhe8192: 400 bits. |
 
 **Return value:**
 
@@ -61,10 +59,10 @@ Generates common parameters for a DH key based on the prime **p** length and the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 

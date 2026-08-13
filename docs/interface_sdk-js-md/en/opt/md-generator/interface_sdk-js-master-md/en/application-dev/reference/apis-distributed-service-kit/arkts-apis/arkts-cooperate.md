@@ -1,8 +1,10 @@
 # @ohos.cooperate
 
-The **cooperate** module implements screen hopping for two or more networked devices to share the keyboard and mouse  for collaborative operations.
+The **cooperate** module implements screen hopping for two or more networked devices to share the keyboard and mouse for collaborative operations.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cooperate--><!--Device-unnamed-declare namespace cooperate-End-->
 
@@ -23,33 +25,37 @@ import { cooperate } from '@kit.DistributedServiceKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [activate](arkts-distributedservice-cooperate-activate-f-sys.md#activate) |
-| [activate](arkts-distributedservice-cooperate-activate-f-sys.md#activate-1) |
-| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate) |
-| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate-1) |
-| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md#activatecooperatewithoptions) |
-| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md#deactivate) |
-| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md#deactivate-1) |
-| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate) |
-| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate-1) |
-| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate) |
-| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-1) |
-| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md#getcrossingswitchstate) |
-| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md#getcrossingswitchstate-1) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#off) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#off-1) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#off-2) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#on) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#on-1) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#on-2) |
-| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md#prepare) |
-| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md#prepare-1) |
-| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate) |
-| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate-1) |
-| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md#unprepare) |
-| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md#unprepare-1) |
-| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unpreparecooperate) |
-| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unpreparecooperate-1) |
+| [activate](arkts-distributedservice-cooperate-activate-f-sys.md#activate-(System-API)) |
+| [activate](arkts-distributedservice-cooperate-activate-f-sys.md#activate-(System-API)) |
+| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate-(System-API)) |
+| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate-(System-API)) |
+| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md#activateCooperateWithOptions-(System-API)) |
+| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md#deactivate-(System-API)) |
+| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md#deactivate-(System-API)) |
+| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivateCooperate-(System-API)) |
+| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivateCooperate-(System-API)) |
+| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState-(System-API)) |
+| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState-(System-API)) |
+| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md#getCrossingSwitchState-(System-API)) |
+| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md#getCrossingSwitchState-(System-API)) |
+| [offCooperateMessage](arkts-distributedservice-cooperate-offcooperatemessage-f-sys.md#offCooperateMessage-(System-API)) |
+| [offCooperateMouseEvent](arkts-distributedservice-cooperate-offcooperatemouseevent-f-sys.md#offCooperateMouseEvent-(System-API)) |
+| [off_cooperate](arkts-distributedservice-cooperate-offcooperate-f-sys.md#off_cooperate) |
+| [off_cooperateMessage](arkts-distributedservice-cooperate-offcooperatemessage-f-sys.md) |
+| [off_cooperateMouse](arkts-distributedservice-cooperate-offcooperatemouse-f-sys.md#off_cooperateMouse) |
+| [onCooperateMessage](arkts-distributedservice-cooperate-oncooperatemessage-f-sys.md#onCooperateMessage-(System-API)) |
+| [onCooperateMouseEvent](arkts-distributedservice-cooperate-oncooperatemouseevent-f-sys.md#onCooperateMouseEvent-(System-API)) |
+| [on_cooperate](arkts-distributedservice-cooperate-oncooperate-f-sys.md#on_cooperate) |
+| [on_cooperateMessage](arkts-distributedservice-cooperate-oncooperatemessage-f-sys.md) |
+| [on_cooperateMouse](arkts-distributedservice-cooperate-oncooperatemouse-f-sys.md#on_cooperateMouse) |
+| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md#prepare-(System-API)) |
+| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md#prepare-(System-API)) |
+| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#prepareCooperate-(System-API)) |
+| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#prepareCooperate-(System-API)) |
+| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md#unprepare-(System-API)) |
+| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md#unprepare-(System-API)) |
+| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unprepareCooperate-(System-API)) |
+| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unprepareCooperate-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

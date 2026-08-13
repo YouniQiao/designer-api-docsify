@@ -10,6 +10,8 @@ export function getResourceManager(callback: AsyncCallback<ResourceManager>): vo
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void-End-->
@@ -59,6 +61,8 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 获取指定应用的资源管理对象。使用callback异步回调。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -113,6 +117,8 @@ export function getResourceManager(): Promise<ResourceManager>
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>-End-->
@@ -158,6 +164,8 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 获取指定应用的资源管理对象。使用Promise异步回调。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

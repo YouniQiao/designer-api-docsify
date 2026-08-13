@@ -2,7 +2,9 @@
 
 Represents the peripheral device information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-interface Device--><!--Device-deviceManager-interface Device-End-->
 
@@ -24,7 +26,9 @@ Bus type.
 
 **Type:** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Device-busType: BusType--><!--Device-Device-busType: BusType-End-->
 
@@ -40,7 +44,9 @@ Description of the peripheral device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Device-description: string--><!--Device-Device-description: string-End-->
 
@@ -56,7 +62,9 @@ ID of the peripheral device.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Device-deviceId: long--><!--Device-Device-deviceId: long-End-->
 

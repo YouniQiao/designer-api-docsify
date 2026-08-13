@@ -1,11 +1,10 @@
 # DataLoadInfo
 
-Defines type and quantity of the data to load.
+Defines type and quantity of the data to load. - Used by the **data sender** to define the data range that can be provided. This field is mandatory. - Used by the **data receiver** to define the expected data type and quantity. This field is optional.
 
-- Used by the **data sender** to define the data range that can be provided. This field is mandatory.  
-- Used by the **data receiver** to define the expected data type and quantity. This field is optional.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-interface DataLoadInfo--><!--Device-unifiedDataChannel-interface DataLoadInfo-End-->
 
@@ -27,11 +26,13 @@ Indicates the maximum number of data records to be loaded.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DataLoadInfo-recordCount?: long--><!--Device-DataLoadInfo-recordCount?: long-End-->
 
@@ -43,15 +44,17 @@ Indicates the maximum number of data records to be loaded.
 types?: Set<string>
 ```
 
-Represents the data type or supported types to load.&lt;br&gt;This parameter is mandatory when used by the data provider.
+Represents the data type or supported types to load. &lt;br&gt;This parameter is mandatory when used by the data provider.
 
 **Type:** Set&lt;string&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DataLoadInfo-types?: Set<string>--><!--Device-DataLoadInfo-types?: Set<string>-End-->
 

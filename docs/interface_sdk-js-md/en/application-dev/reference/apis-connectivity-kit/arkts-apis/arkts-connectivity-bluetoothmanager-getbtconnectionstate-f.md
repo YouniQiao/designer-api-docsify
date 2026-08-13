@@ -12,7 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function getBtConnectionState(): ProfileConnectionState
 ```
 
-Get the local device connection state to any profile of any remote device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Get the local device connection state to any profile of any remote device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Get the local device connection state to any profile of any remote device.On API
 
 **Deprecated since:** 10
 
-**Substitutes:** [getProfileConnectionState](ohos.bluetooth.connection/connection#getProfileConnectionState)
+**Substitutes:** [getProfileConnectionState](arkts-connectivity-connection-getprofileconnectionstate-f.md#getProfileConnectionState)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -40,8 +40,8 @@ Get the local device connection state to any profile of any remote device.On API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

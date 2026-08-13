@@ -2,7 +2,9 @@
 
 Describes the callback for the current system bar.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface SystemBarTintState--><!--Device-window-interface SystemBarTintState-End-->
 
@@ -26,7 +28,9 @@ ID of the screen where the window is located. The value must be an integer.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemBarTintState-displayId: long--><!--Device-SystemBarTintState-displayId: long-End-->
 
@@ -44,7 +48,9 @@ All system bar information that has been changed.
 
 **Type:** Array&lt;[SystemBarRegionTint](arkts-arkui-window-systembarregiontint-i-sys.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemBarTintState-regionTint: Array<SystemBarRegionTint>--><!--Device-SystemBarTintState-regionTint: Array<SystemBarRegionTint>-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates the types of window animations.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-enum AnimationType--><!--Device-window-enum AnimationType-End-->
 
@@ -18,9 +20,11 @@ FADE_IN = 1
 
 Fade-in animation, which takes effect during window display.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AnimationType-FADE_IN = 1--><!--Device-AnimationType-FADE_IN = 1-End-->
 

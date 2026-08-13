@@ -14,7 +14,7 @@ function createWantRecord(want: Want): PasteDataRecord
 
 **废弃版本：** 9
 
-**替代接口：** [createRecord](pasteboard.createRecord(mimeType:)
+**替代接口：** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord--><!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord-End-->
 

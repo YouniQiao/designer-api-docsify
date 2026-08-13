@@ -1,10 +1,10 @@
 # ColorSpaceManager
 
-Implements management of color space objects.
+Implements management of color space objects. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager.
 
-Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-interface ColorSpaceManager--><!--Device-colorSpaceManager-interface ColorSpaceManager-End-->
 
@@ -24,7 +24,9 @@ getColorSpaceName(): ColorSpace
 
 Obtains the color space type.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace-End-->
 
@@ -40,7 +42,7 @@ Obtains the color space type.
 
 | Error Code ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -62,7 +64,9 @@ getGamma(): number
 
 Obtains the gamma of the color space.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getGamma(): double--><!--Device-ColorSpaceManager-getGamma(): double-End-->
 
@@ -78,7 +82,7 @@ Obtains the gamma of the color space.
 
 | Error Code ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -100,7 +104,9 @@ getWhitePoint(): Array<number>
 
 Obtains the coordinates of the white point in the color space.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getWhitePoint(): Array<double>--><!--Device-ColorSpaceManager-getWhitePoint(): Array<double>-End-->
 
@@ -116,7 +122,7 @@ Obtains the coordinates of the white point in the color space.
 
 | Error Code ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 

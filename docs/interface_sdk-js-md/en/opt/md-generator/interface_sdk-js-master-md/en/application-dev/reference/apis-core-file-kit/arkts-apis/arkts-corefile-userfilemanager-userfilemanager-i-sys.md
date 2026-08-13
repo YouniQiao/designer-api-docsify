@@ -26,17 +26,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 createAlbum(name: string, callback: AsyncCallback<Album>): void
 ```
 
-Creates an album. This API uses an asynchronous callback to return the result.
-
-The album name must meet the following requirements:
-
-- The album name is a string of 1 to 255 characters.  
-- The album name cannot contain any of the following characters:
-
-. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-- The album name is case-insensitive.  
-- Duplicate album names are not allowed.
+Creates an album. This API uses an asynchronous callback to return the result. The album name must meet the following requirements: - The album name is a string of 1 to 255 characters. - The album name cannot contain any of the following characters: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ] - The album name is case-insensitive. - Duplicate album names are not allowed.
 
 **Since:** 10
 
@@ -61,7 +51,7 @@ The album name must meet the following requirements:
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -83,17 +73,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 createAlbum(name: string): Promise<Album>
 ```
 
-Creates an album. This API uses a promise to return the result.
-
-The album name must meet the following requirements:
-
-- The album name is a string of 1 to 255 characters.  
-- The album name cannot contain any of the following characters:
-
-. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-- The album name is case-insensitive.  
-- Duplicate album names are not allowed.
+Creates an album. This API uses a promise to return the result. The album name must meet the following requirements: - The album name is a string of 1 to 255 characters. - The album name cannot contain any of the following characters: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ] - The album name is case-insensitive. - Duplicate album names are not allowed.
 
 **Since:** 10
 
@@ -123,7 +103,7 @@ The album name must meet the following requirements:
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -175,7 +155,7 @@ Creates an audio asset. This API uses an asynchronous callback to return the res
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -232,7 +212,7 @@ Creates an audio asset. This API uses a promise to return the result.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -287,7 +267,7 @@ Creates an image or video asset with the specified file name and URI. This API u
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -350,7 +330,7 @@ Creates an image or video asset with the specified file name. This API uses an a
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -410,7 +390,7 @@ Creates an image or video asset with the specified file name and album URI. This
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -469,7 +449,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -527,7 +507,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -584,7 +564,7 @@ Deletes a media file. This API uses an asynchronous callback to return the resul
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -660,7 +640,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -718,7 +698,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -781,7 +761,7 @@ Deletes user albums. This API uses a promise to return the result.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -834,7 +814,7 @@ Obtains information about online peer devices. This API uses an asynchronous cal
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -878,7 +858,7 @@ Obtains the information about online peer devices. This API uses a promise to re
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -910,18 +890,13 @@ getAlbums(
     ): void
 ```
 
-Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.
-
-This API cannot be used to obtain hidden albums. Use   
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums)to obtain hidden albums.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result. This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums) to obtain hidden albums. Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAlbums](@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums)
+**Substitutes:** getAlbums
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -948,7 +923,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -984,18 +959,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 getAlbums(type: AlbumType, subType: AlbumSubType, callback: AsyncCallback<FetchResult<Album>>): void
 ```
 
-Obtains albums by type. This API uses an asynchronous callback to return the result.
-
-This API cannot be used to obtain hidden albums. Use   
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums)to obtain hidden albums.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums by type. This API uses an asynchronous callback to return the result. This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums) to obtain hidden albums. Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAlbums](@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums)
+**Substitutes:** getAlbums
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1021,7 +991,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -1049,18 +1019,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 getAlbums(type: AlbumType, subType: AlbumSubType, options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options and album type. This API uses a promise to return the result.
-
-This API cannot be used to obtain hidden albums. Use   
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums)to obtain hidden albums.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses a promise to return the result. This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums) to obtain hidden albums. Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAlbums](@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums)
+**Substitutes:** getAlbums
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1092,7 +1057,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1147,7 +1112,7 @@ Obtains information about all peer devices. This API uses an asynchronous callba
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -1191,7 +1156,7 @@ Obtains the information about all peer devices. This API uses a promise to retur
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -1248,7 +1213,7 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1315,7 +1280,7 @@ Obtains an audio asset. This API uses a promise to return the result.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1348,13 +1313,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getPhotoAlbums(options: AlbumFetchOptions, callback: AsyncCallback<FetchResult<Album>>): void
 ```
 
-Obtains image and video albums. This API uses an asynchronous callback to return the result.
-
-This API cannot be used to obtain hidden albums. Use   
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums)to obtain hidden albums.
-
-This API will be deprecated. Use   
-[getAlbums](#getAlbums)instead.
+Obtains image and video albums. This API uses an asynchronous callback to return the result. This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums) to obtain hidden albums. This API will be deprecated. Use [getAlbums](#getAlbums) instead.
 
 **Since:** 9
 
@@ -1385,7 +1344,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1420,13 +1379,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getPhotoAlbums(options: AlbumFetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains albums. This API uses a promise to return the result.
-
-This API cannot be used to obtain hidden albums. Use   
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums)to obtain hidden albums.
-
-This API will be deprecated. Use   
-[getAlbums](#getAlbums)instead.
+Obtains albums. This API uses a promise to return the result. This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getHiddenAlbums) to obtain hidden albums. This API will be deprecated. Use [getAlbums](#getAlbums) instead.
 
 **Since:** 9
 
@@ -1462,7 +1415,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1521,7 +1474,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1590,7 +1543,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1652,11 +1605,11 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1735,11 +1688,11 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1787,16 +1740,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 getPrivateAlbum(type: PrivateAlbumType, callback: AsyncCallback<FetchResult<PrivateAlbum>>): void
 ```
 
-Obtains the system album. This API uses an asynchronous callback to return the result.
-
-This API will be deprecated. Use   
-[getAlbums](#getAlbums)instead.
+Obtains the system album. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [getAlbums](#getAlbums) instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAlbums](@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums)
+**Substitutes:** getAlbums
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1821,7 +1771,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -1843,16 +1793,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 getPrivateAlbum(type: PrivateAlbumType): Promise<FetchResult<PrivateAlbum>>
 ```
 
-Obtains the private album. This API uses a promise to return the result.
-
-This API will be deprecated. Use   
-[getAlbums](#getAlbums)instead.
+Obtains the private album. This API uses a promise to return the result. This API will be deprecated. Use [getAlbums](#getAlbums) instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAlbums](@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums)
+**Substitutes:** getAlbums
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1882,7 +1829,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -1897,22 +1844,19 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-## off
+## off_ChangeEvent
 
 ```TypeScript
 off(type: ChangeEvent, callback?: Callback<void>): void
 ```
 
-Unsubscribes from changes of the file management library. This API uses a callback to return the result.
-
-This API will be deprecated. Use   
-[off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off) instead.
+Unsubscribes from changes of the file management library. This API uses a callback to return the result. This API will be deprecated. Use [off](#off_ChangeEvent) instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [off](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.off)
+**Substitutes:** [off](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#off_photoChange)
 
 <!--Device-UserFileManager-off(type: ChangeEvent, callback?: Callback<void>): void--><!--Device-UserFileManager-off(type: ChangeEvent, callback?: Callback<void>): void-End-->
 
@@ -1929,7 +1873,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -1961,7 +1905,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(uri: string, callback?: Callback<ChangeData>): void
@@ -1973,7 +1917,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [unregisterChange](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.unregisterChange)
+**Substitutes:** unregisterChange
 
 <!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void--><!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void-End-->
 
@@ -1996,7 +1940,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -2037,22 +1981,19 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-## on
+## on_ChangeEvent
 
 ```TypeScript
 on(type: ChangeEvent, callback: Callback<void>): void
 ```
 
-Subscribes to changes of the file management library. This API uses a callback to return the result.
-
-This API will be deprecated. Use   
-[on](userFileManager.UserFileManager.on(uri: string, forSubUri: boolean, callback: Callback&lt;ChangeData&gt;))instead.
+Subscribes to changes of the file management library. This API uses a callback to return the result. This API will be deprecated. Use [on](#on_ChangeEvent) instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [on](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.on)
+**Substitutes:** [on](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#on_photoChange)
 
 <!--Device-UserFileManager-on(type: ChangeEvent, callback: Callback<void>): void--><!--Device-UserFileManager-on(type: ChangeEvent, callback: Callback<void>): void-End-->
 
@@ -2069,7 +2010,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -2099,7 +2040,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on(uri: string, forSubUri: boolean, callback: Callback<ChangeData>): void
@@ -2135,7 +2076,7 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -2181,9 +2122,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this **UserFileManager** instance. This API uses an asynchronous callback to return the result.
-
-Call this API when the APIs in the **UserFileManager** instance are no longer used.
+Releases this **UserFileManager** instance. This API uses an asynchronous callback to return the result. Call this API when the APIs in the **UserFileManager** instance are no longer used.
 
 **Since:** 9
 
@@ -2205,7 +2144,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -2226,9 +2165,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 release(): Promise<void>
 ```
 
-Releases this **UserFileManager** instance. This API uses a promise to return the result.
-
-Call this API when the APIs in the **UserFileManager** instance are no longer used.
+Releases this **UserFileManager** instance. This API uses a promise to return the result. Call this API when the APIs in the **UserFileManager** instance are no longer used.
 
 **Since:** 9
 
@@ -2250,7 +2187,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)).
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {

@@ -2,7 +2,9 @@
 
 Describes an audio session strategy.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioSessionStrategy--><!--Device-audio-interface AudioSessionStrategy-End-->
 
@@ -24,7 +26,9 @@ Audio concurrency mode.
 
 **Type:** [AudioConcurrencyMode](arkts-audio-audio-audioconcurrencymode-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

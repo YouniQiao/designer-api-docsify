@@ -6,6 +6,8 @@ Represents the sync result of an asset.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-asset-interface SyncResult--><!--Device-asset-interface SyncResult-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -30,6 +32,8 @@ Number of assets that fail to be synced.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-SyncResult-readonly failedCount?: number--><!--Device-SyncResult-readonly failedCount?: number-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -40,14 +44,15 @@ Number of assets that fail to be synced.
 readonly resultCode: number
 ```
 
-Sync result code of an asset. If the sync is successful, the result code is **0**. If the sync fails, see  
-[ErrorCode](arkts-assetstore-asset-errorcode-e.md#ErrorCode) for the result code.
+Sync result code of an asset. If the sync is successful, the result code is **0**. If the sync fails, see [ErrorCode](arkts-assetstore-asset-errorcode-e.md#ErrorCode) for the result code.
 
 **Type:** number
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-SyncResult-readonly resultCode: number--><!--Device-SyncResult-readonly resultCode: number-End-->
 
@@ -66,6 +71,8 @@ Total number of assets to be synced.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-SyncResult-readonly totalCount?: number--><!--Device-SyncResult-readonly totalCount?: number-End-->
 

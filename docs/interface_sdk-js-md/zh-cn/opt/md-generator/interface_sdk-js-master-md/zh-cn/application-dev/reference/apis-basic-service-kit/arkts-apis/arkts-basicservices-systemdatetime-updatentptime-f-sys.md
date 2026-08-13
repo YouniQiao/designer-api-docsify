@@ -8,7 +8,9 @@ function updateNtpTime(): Promise<void>
 
 使用异步方式从NTP服务器更新NTP时间。该方法一小时内只会从NTP服务器更新一次NTP时间。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function updateNtpTime(): Promise<void>--><!--Device-systemDateTime-function updateNtpTime(): Promise<void>-End-->
 
@@ -26,8 +28,8 @@ function updateNtpTime(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [13000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

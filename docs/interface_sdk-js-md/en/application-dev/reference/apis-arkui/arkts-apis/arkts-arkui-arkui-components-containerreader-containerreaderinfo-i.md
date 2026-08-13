@@ -1,12 +1,14 @@
 # ContainerReaderInfo
 
-Defines the configuration options for ContainerReader component.Used to specify the parameters for container dimension reading and breakpoint analysis.
+Defines the configuration options for ContainerReader component. Used to specify the parameters for container dimension reading and breakpoint analysis.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export declare interface ContainerReaderInfo--><!--Device-unnamed-export declare interface ContainerReaderInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface ContainerReaderInfo--><!--Device-unnamed-export interface ContainerReaderInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,60 +21,78 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 ## heightBreakpoint
 
 ```TypeScript
-heightBreakpoint?: Bindable<HeightBreakpoint>
+heightBreakpoint?: HeightBreakpoint
 ```
 
-Optional height breakpoint configuration for container height analysis.Defines the height thresholds that trigger different layout behaviors.
+Optional height breakpoint configuration for container height analysis. Defines the height thresholds that trigger different layout behaviors.
 
-**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;HeightBreakpoint&gt;
+**Type:** HeightBreakpoint
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContainerReaderInfo-heightBreakpoint?: Bindable<HeightBreakpoint>--><!--Device-ContainerReaderInfo-heightBreakpoint?: Bindable<HeightBreakpoint>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ContainerReaderInfo-heightBreakpoint?: HeightBreakpoint--><!--Device-ContainerReaderInfo-heightBreakpoint?: HeightBreakpoint-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
 
 ```TypeScript
-size: Bindable<Size>
+size: Size
 ```
 
-The target container size for layout analysis.Defines the reference dimensions used for breakpoint calculation and layout adaptation.
+The target container size for layout analysis. Defines the reference dimensions used for breakpoint calculation and layout adaptation.
 
-**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Size](arkts-arkui-graphics-size-i.md)&gt;
+**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContainerReaderInfo-size: Bindable<Size>--><!--Device-ContainerReaderInfo-size: Bindable<Size>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ContainerReaderInfo-size: Size--><!--Device-ContainerReaderInfo-size: Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## widthBreakpoint
 
 ```TypeScript
-widthBreakpoint?: Bindable<WidthBreakpoint>
+widthBreakpoint?: WidthBreakpoint
 ```
 
-Optional width breakpoint configuration for container width analysis.Defines the width thresholds that trigger different layout behaviors.
+Optional width breakpoint configuration for container width analysis. Defines the width thresholds that trigger different layout behaviors.
 
-**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;WidthBreakpoint&gt;
+**Type:** WidthBreakpoint
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContainerReaderInfo-widthBreakpoint?: Bindable<WidthBreakpoint>--><!--Device-ContainerReaderInfo-widthBreakpoint?: Bindable<WidthBreakpoint>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ContainerReaderInfo-widthBreakpoint?: WidthBreakpoint--><!--Device-ContainerReaderInfo-widthBreakpoint?: WidthBreakpoint-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,9 +4,11 @@
 type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>
 ```
 
-Represents a FrameNode of the **WaterFlow** type. Only [FlowItem](../@internal/component/ets/flow_item) child components can be added.
+Represents a FrameNode of the **WaterFlow** type. Only FlowItem child components can be added.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

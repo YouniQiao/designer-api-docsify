@@ -14,9 +14,11 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 
 Obtains the identity information of an application, including the bundle name and clone index, based on the given sandbox directory name.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity--><!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity-End-->
 

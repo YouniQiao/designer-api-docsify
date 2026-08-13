@@ -2,9 +2,11 @@
 
 Defines information about the images or videos selected.
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class PhotoSelectResult--><!--Device-photoAccessHelper-class PhotoSelectResult-End-->
 
@@ -26,11 +28,13 @@ Information about the context of exiting the PhotoPicker. This information is re
 
 **Type:** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectResult-contextRecoveryInfo: ContextRecoveryInfo--><!--Device-PhotoSelectResult-contextRecoveryInfo: ContextRecoveryInfo-End-->
 
@@ -42,14 +46,15 @@ Information about the context of exiting the PhotoPicker. This information is re
 isOriginalPhoto: boolean
 ```
 
-Whether the selected media file is the original image. **true** if yes, **false** otherwise. The default value is  
-**false**.
+Whether the selected media file is the original image. **true** if yes, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,17 +68,17 @@ Whether the selected media file is the original image. **true** if yes, **false*
 movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 ```
 
-Array of moving photo badge states for the media files selected from Gallery.
-
-If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
+Array of moving photo badge states for the media files selected from Gallery. If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
 
 **Type:** Array&lt;[MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)&gt;
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>--><!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>-End-->
 
@@ -85,17 +90,15 @@ If **isMovingPhotoBadgeShown** is set to **true**, this array contains the movin
 photoUris: Array<string>
 ```
 
-URIs of the media files selected.
-
-This URI array can be used only by calling the   
-[photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)API through temporary authorization. For details, see   
-[Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+URIs of the media files selected. This URI array can be used only by calling the [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) API through temporary authorization. For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

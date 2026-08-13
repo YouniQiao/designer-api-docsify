@@ -1,0 +1,44 @@
+# Material (System API)
+
+Base class of the system material object on the UI.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-uiMaterial-export class Material--><!--Device-uiMaterial-export class Material-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## constructor
+
+```TypeScript
+constructor(options?: MaterialOptions)
+```
+
+Constructor of material class.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Material-constructor(options?: MaterialOptions)--><!--Device-Material-constructor(options?: MaterialOptions)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [MaterialOptions](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialoptions-i-sys.md) | No | the options to construct a material. &lt;br&gt;Default value:{type:uiMaterial.MaterialType.NONE} |
+

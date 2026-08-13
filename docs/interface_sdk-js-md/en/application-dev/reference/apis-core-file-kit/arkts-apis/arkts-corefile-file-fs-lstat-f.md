@@ -18,6 +18,8 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function lstat(path: string): Promise<Stat>--><!--Device-unnamed-declare function lstat(path: string): Promise<Stat>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -62,6 +64,8 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -71,7 +75,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path or URI of the file.&lt;br&gt;**Note：**: URIs can be passed since API version 22. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the symbolic link information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the symbolic link information obtained. |
 
 **Error codes:**
 

@@ -10,6 +10,8 @@ Creates a PixelMap object from surface id.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -31,9 +33,9 @@ Creates a PixelMap object from surface id.
 
 | 错误码ID |
 | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
-| [62980178](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-pixelmap创建失败) |
-| [62980105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-图片获取数据错误) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
+| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
 
 ## 示例
 

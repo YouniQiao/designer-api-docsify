@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-util-interface TextDecoderOptions--><!--Device-util-interface TextDecoderOptions-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -19,6 +21,8 @@ fatal?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ ignoreBOM?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

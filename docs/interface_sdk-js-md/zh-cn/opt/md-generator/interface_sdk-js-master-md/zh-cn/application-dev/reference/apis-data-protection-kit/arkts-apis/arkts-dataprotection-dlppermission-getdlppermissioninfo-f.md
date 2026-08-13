@@ -6,11 +6,11 @@
 function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 ```
 
-查询当前DLP沙箱的权限信息，包括文件授权类型及可执行操作（如查看、编辑、复制等）。仅支持在DLP沙箱应用中调用，使用Promise异步回调。
-
-在DLP沙箱中处理文件时，可根据权限信息判断当前用户可以执行哪些操作，避免调用无权限的功能。
+查询当前DLP沙箱的权限信息，包括文件授权类型及可执行操作（如查看、编辑、复制等）。仅支持在DLP沙箱应用中调用，使用Promise异步回调。 在DLP沙箱中处理文件时，可根据权限信息判断当前用户可以执行哪些操作，避免调用无权限的功能。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>--><!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>-End-->
 
@@ -26,9 +26,9 @@ function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 
 | 错误码ID |
 | --- |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100006-非dlp沙箱应用) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 
@@ -53,11 +53,11 @@ dlpPermission.isInSandbox().then(async (inSandbox) => { // 是否在沙箱内。
 function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 ```
 
-查询当前DLP沙箱的权限信息。返回的权限信息包括文件的授权类型和可执行的操作权限（如查看、编辑、复制等）。仅支持在DLP沙箱应用中调用。使用callback异步回调。
-
-在DLP沙箱中处理文件时，可根据权限信息判断当前用户可以执行哪些操作，避免调用无权限的功能。
+查询当前DLP沙箱的权限信息。返回的权限信息包括文件的授权类型和可执行的操作权限（如查看、编辑、复制等）。仅支持在DLP沙箱应用中调用。使用callback异步回调。 在DLP沙箱中处理文件时，可根据权限信息判断当前用户可以执行哪些操作，避免调用无权限的功能。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void--><!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void-End-->
 
@@ -73,10 +73,10 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100006-非dlp沙箱应用) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 

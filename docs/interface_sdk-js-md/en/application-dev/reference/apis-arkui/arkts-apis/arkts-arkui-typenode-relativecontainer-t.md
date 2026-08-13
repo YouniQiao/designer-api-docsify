@@ -1,20 +1,24 @@
 # RelativeContainer
 
 ```TypeScript
-type RelativeContainer = RelativeContainerFrameNode
+type RelativeContainer = TypedFrameNode<RelativeContainerInterface, RelativeContainerAttribute>
 ```
 
-Define the FrameNode type for RelativeContainer.
+Represents a FrameNode of the **RelativeContainer** type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type RelativeContainer = RelativeContainerFrameNode--><!--Device-typeNode-type RelativeContainer = RelativeContainerFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type RelativeContainer = TypedFrameNode<RelativeContainerInterface, RelativeContainerAttribute>--><!--Device-typeNode-type RelativeContainer = TypedFrameNode<RelativeContainerInterface, RelativeContainerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RelativeContainerFrameNode
+**Property type:** TypedFrameNode<RelativeContainerInterface, RelativeContainerAttribute>
 

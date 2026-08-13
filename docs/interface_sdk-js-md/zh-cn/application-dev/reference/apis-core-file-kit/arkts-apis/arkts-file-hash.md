@@ -2,9 +2,11 @@
 
 该模块提供文件哈希处理能力，对文件内容进行哈希处理。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace hash--><!--Device-unnamed-declare namespace hash-End-->
 
@@ -16,9 +18,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createHash](arkts-corefile-hash-createhash-f.md#createhash) | 创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。 |
+| [createHash](arkts-corefile-hash-createhash-f.md#createHash) | 创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。 |
 | [hash](arkts-corefile-hash-f.md#hash) | 计算文件的哈希值，使用Promise异步回调。 |
-| [hash](arkts-corefile-hash-f.md#hash-1) | 计算文件的哈希值，使用callback异步回调。 |
+| [hash](arkts-corefile-hash-f.md#hash) | 计算文件的哈希值，使用callback异步回调。 |
 
 ### 类
 

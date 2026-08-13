@@ -12,6 +12,8 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ENTERPRISE_ACTIVATE_DEVICE_ADMIN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -31,13 +33,13 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [9200004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200004-激活设备管理器失败) | Failed to activate the administrator application of the device. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [9200017](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200017-企业设备管理员自激活凭证无效) | The self-activation credential of the enterprise device administrator is invalid. |
-| [9200018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200018-该设备非企业设备) | This device is not an enterprise device. |
-| [9200003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200003-指定的设备管理器元能力组件无效) | The administrator ability component is invalid. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [9200004](../errorcode-enterpriseDeviceManager.md#9200004-激活设备管理器失败) | Failed to activate the administrator application of the device. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200017](../errorcode-enterpriseDeviceManager.md#9200017-企业设备管理员自激活凭证无效) | The self-activation credential of the enterprise device administrator is invalid. |
+| [9200018](../errorcode-enterpriseDeviceManager.md#9200018-该设备非企业设备) | This device is not an enterprise device. |
+| [9200003](../errorcode-enterpriseDeviceManager.md#9200003-指定的设备管理器元能力组件无效) | The administrator ability component is invalid. |
 
 ## 示例
 

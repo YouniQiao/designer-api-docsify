@@ -14,7 +14,9 @@ function isFloatingBallEnabled(): boolean
 
 Checks whether the device supports floating balls.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-floatingBall-function isFloatingBallEnabled(): boolean--><!--Device-floatingBall-function isFloatingBallEnabled(): boolean-End-->
 

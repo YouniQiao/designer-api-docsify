@@ -20,7 +20,7 @@ Zips a file. The execution result is returned after the compression is complete.
 
 **Deprecated since:** 9
 
-**Substitutes:** [compressFile](zlib.compressFile(inFile:)
+**Substitutes:** [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressFile)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
@@ -30,7 +30,7 @@ Zips a file. The execution result is returned after the compression is complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](./app/context) and [Stage Model](./app/context). |
+| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. |
 | outFile | string | Yes | Path of the zipped file. The file name extension is .zip. |
 | options | Options | Yes | Optional parameters for the zip operation. |
 

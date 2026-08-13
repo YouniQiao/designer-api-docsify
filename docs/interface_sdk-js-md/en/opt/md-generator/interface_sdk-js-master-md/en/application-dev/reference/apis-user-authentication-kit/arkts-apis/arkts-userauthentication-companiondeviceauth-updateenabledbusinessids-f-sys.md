@@ -16,6 +16,8 @@ Updates the service scope supported by the specified companion device template. 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,11 +45,11 @@ Updates the service scope supported by the specified companion device template. 
 
 | Error Code ID |
 | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
-| [32600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600003-invalid-service-id) |
-| [32600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-template-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600003](../errorcode-useriam.md#32600003-invalid-service-id) |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

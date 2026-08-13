@@ -3,6 +3,7 @@
 ## Flex
 
 ```TypeScript
+@ComponentBuilder
 export declare function Flex(
     value?: FlexOptions,
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines Flex Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-export declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,18 +29,19 @@ Defines Flex Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [FlexOptions](arkts-arkui-flex-flexoptions-i.md) | No | Flex options. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlexAttribute](arkts-arkui-flex-flexattribute-i.md) |  |
+| FlexAttribute |  |
 
 
 ## Flex
 
 ```TypeScript
+@Builder
 export declare function Flex(
     style: CustomBuilderT<FlexAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines Flex Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-export declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-@Builderexport declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,12 +66,12 @@ Defines Flex Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[FlexAttribute](arkts-arkui-flex-flexattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;FlexAttribute&gt; | Yes | the callback to set up component's attributes. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlexAttribute](arkts-arkui-flex-flexattribute-i.md) |  |
+| FlexAttribute |  |
 

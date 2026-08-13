@@ -4,6 +4,8 @@ Defines the result of the authorization.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-osAccount-interface AcquireAuthorizationResult--><!--Device-osAccount-interface AcquireAuthorizationResult-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -22,13 +24,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 isReused?: boolean
 ```
 
-Whether the authorization result is reused. The default value is **undefined**.
-
-**true**: The authorization result is reused. **false**: The authorization result is not reused.
+Whether the authorization result is reused. The default value is **undefined**. **true**: The authorization result is reused. **false**: The authorization result is not reused.
 
 **Type:** boolean
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +52,8 @@ Permission associated with the authorization.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcquireAuthorizationResult-privilege: string--><!--Device-AcquireAuthorizationResult-privilege: string-End-->
@@ -64,11 +68,13 @@ Permission associated with the authorization.
 resultCode: AuthorizationResultCode
 ```
 
-Authorization result code.If the authorization is successful, AuthorizationResultCode#AUTHORIZATION_SUCCESS is returned.Otherwise, an error code is returned. For details, see AuthorizationResultCode.
+Authorization result code. If the authorization is successful, AuthorizationResultCode#AUTHORIZATION_SUCCESS is returned. Otherwise, an error code is returned. For details, see AuthorizationResultCode.
 
 **Type:** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +96,8 @@ Authorization token. The default value is **undefined**.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcquireAuthorizationResult-token?: Uint8Array--><!--Device-AcquireAuthorizationResult-token?: Uint8Array-End-->
@@ -109,6 +117,8 @@ Validity period of the authorization, in seconds. The default value is **300**.
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

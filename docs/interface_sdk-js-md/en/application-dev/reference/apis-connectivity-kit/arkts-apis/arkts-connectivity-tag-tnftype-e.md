@@ -2,9 +2,11 @@
 
 TNF types definitions, see NFCForum-TS-NDEF_1.0.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-tag-enum TnfType--><!--Device-tag-enum TnfType-End-->
 
@@ -18,11 +20,13 @@ TNF_EMPTY = 0x0
 
 Empty
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TnfType-TNF_EMPTY = 0x0--><!--Device-TnfType-TNF_EMPTY = 0x0-End-->
 
@@ -36,11 +40,13 @@ TNF_WELL_KNOWN = 0x1
 
 NFC Forum well-known type [NFC RTD]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TnfType-TNF_WELL_KNOWN = 0x1--><!--Device-TnfType-TNF_WELL_KNOWN = 0x1-End-->
 
@@ -54,11 +60,13 @@ TNF_MEDIA = 0x2
 
 Media-type as defined in RFC 2046 [RFC 2046]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TnfType-TNF_MEDIA = 0x2--><!--Device-TnfType-TNF_MEDIA = 0x2-End-->
 
@@ -72,11 +80,13 @@ TNF_ABSOLUTE_URI = 0x3
 
 Absolute URI as defined in RFC 3986 [RFC 3986]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TnfType-TNF_ABSOLUTE_URI = 0x3--><!--Device-TnfType-TNF_ABSOLUTE_URI = 0x3-End-->
 
@@ -90,11 +100,13 @@ TNF_EXT_APP = 0x4
 
 NFC Forum external type [NFC RTD]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TnfType-TNF_EXT_APP = 0x4--><!--Device-TnfType-TNF_EXT_APP = 0x4-End-->
 
@@ -108,11 +120,13 @@ TNF_UNKNOWN = 0x5
 
 Unknown
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TnfType-TNF_UNKNOWN = 0x5--><!--Device-TnfType-TNF_UNKNOWN = 0x5-End-->
 
@@ -126,11 +140,13 @@ TNF_UNCHANGED = 0x6
 
 Unchanged (see section 2.3.3)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TnfType-TNF_UNCHANGED = 0x6--><!--Device-TnfType-TNF_UNCHANGED = 0x6-End-->
 

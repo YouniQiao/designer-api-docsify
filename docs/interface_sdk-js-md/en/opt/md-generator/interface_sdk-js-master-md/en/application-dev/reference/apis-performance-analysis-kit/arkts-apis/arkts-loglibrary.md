@@ -2,7 +2,9 @@
 
 The **logLibrary** module provides APIs for obtaining various system maintenance and test logs.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace logLibrary--><!--Device-unnamed-declare namespace logLibrary-End-->
 
@@ -23,12 +25,12 @@ import { logLibrary } from '@kit.PerformanceAnalysisKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy) |
-| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy-1) |
-| [list](arkts-performanceanalysis-loglibrary-list-f-sys.md#list) |
-| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move) |
-| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move-1) |
-| [remove](arkts-performanceanalysis-loglibrary-remove-f-sys.md#remove) |
+| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy-(System-API)) |
+| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy-(System-API)) |
+| [list](arkts-performanceanalysis-loglibrary-list-f-sys.md#list-(System-API)) |
+| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move-(System-API)) |
+| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move-(System-API)) |
+| [remove](arkts-performanceanalysis-loglibrary-remove-f-sys.md#remove-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

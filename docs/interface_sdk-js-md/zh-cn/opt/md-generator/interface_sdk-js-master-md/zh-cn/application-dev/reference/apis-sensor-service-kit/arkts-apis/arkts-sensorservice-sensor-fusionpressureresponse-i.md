@@ -4,9 +4,11 @@
 
 **继承/实现关系：** FusionPressureResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 22
+**起始版本：** 23
 
-<!--Device-sensor-interface FusionPressureResponse extends Response--><!--Device-sensor-interface FusionPressureResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface FusionPressureResponse--><!--Device-sensor-interface FusionPressureResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ fusionPressure: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FusionPressureResponse-fusionPressure: double--><!--Device-FusionPressureResponse-fusionPressure: double-End-->
 

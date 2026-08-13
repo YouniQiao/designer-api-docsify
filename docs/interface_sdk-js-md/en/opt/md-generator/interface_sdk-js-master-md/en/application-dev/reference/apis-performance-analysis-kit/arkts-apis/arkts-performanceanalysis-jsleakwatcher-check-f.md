@@ -14,7 +14,9 @@ function check(): string
 
 Obtains the list of objects that are leaked and registered using **jsLeakWatcher.watch()**. Objects that are not reclaimed after GC is triggered are marked as leaked.
 
-**Since:** 12
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-jsLeakWatcher-function check(): string--><!--Device-jsLeakWatcher-function check(): string-End-->
 

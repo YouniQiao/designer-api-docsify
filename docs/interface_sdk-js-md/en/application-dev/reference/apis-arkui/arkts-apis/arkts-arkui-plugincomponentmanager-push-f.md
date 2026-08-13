@@ -9,18 +9,20 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 ## push
 
 ```TypeScript
-export function push(param: PushParameters, callback: AsyncCallback<void>): void
+function push(param: PushParameters, callback: AsyncCallback<void>): void
 ```
 
-Plugin component push method.
+Pushes the component and data to the component user.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-pluginComponentManager-export function push(param: PushParameters, callback: AsyncCallback<void>): void--><!--Device-pluginComponentManager-export function push(param: PushParameters, callback: AsyncCallback<void>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-pluginComponentManager-function push(param: PushParameters, callback: AsyncCallback<void>): void--><!--Device-pluginComponentManager-function push(param: PushParameters, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +30,33 @@ Plugin component push method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Yes |  |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
+| param | [PushParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-pushparameters-i.md) | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
+
+## Examples
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.push(
+  {
+    want: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    name: "plugintemplate",
+    data: {
+      "key_1": "plugin component test",
+      "key_2": 34234,
+    },
+    extraData: {
+      "extra_str": "this is push event",
+    },
+    jsonPath: "",
+  },
+  (err) => {
+    console.info("push_callback: push ok!");
+  }
+)
+```
 

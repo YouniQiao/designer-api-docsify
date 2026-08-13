@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface WithThemeOptions--><!--Device-unnamed-declare interface WithThemeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 colorMode?: ThemeColorMode
 ```
 
-用于指定WithTheme作用域内组件配色的深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+用于指定WithTheme作用域内组件配色的深浅色模式。 默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,15 +42,15 @@ colorMode?: ThemeColorMode
 theme?: CustomTheme
 ```
 
-用于设置WithTheme作用域内组件的自定义主题配色。
-
-默认值：undefined，默认配色跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
+用于设置WithTheme作用域内组件的自定义主题配色。 默认值：undefined，默认配色跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
 
 **类型：** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,6 +6,8 @@ Describes the style options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface StyleOptions--><!--Device-unnamed-declare interface StyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Describes the style options.
 length?: number
 ```
 
-Length of the styled string style.
-
-If the value is less than 0 or exceeds the difference between the string length and the value of **start**, it is treated as the difference between the string length and the value of **start**.
+Length of the styled string style. If the value is less than 0 or exceeds the difference between the string length and the value of **start**, it is treated as the difference between the string length and the value of **start**.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,15 @@ If the value is less than 0 or exceeds the difference between the string length 
 start?: number
 ```
 
-Start position of the styled string style.
-
-If the value is less than 0 or exceeds the string length, it is treated as **0**.
+Start position of the styled string style. If the value is less than 0 or exceeds the string length, it is treated as **0**.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +74,8 @@ Style key.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -93,6 +97,8 @@ Style object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

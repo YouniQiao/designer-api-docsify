@@ -2,7 +2,9 @@
 
 Describes the data structure of the task progress.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface Progress--><!--Device-agent-interface Progress-End-->
 
@@ -17,18 +19,18 @@ import { request } from '@kit.BasicServicesKit';
 ## extras
 
 ```TypeScript
-readonly extras?: object
+readonly extras?: Record<string, string>
 ```
 
-Extra information of the task, for example, the header and body of the response from the server. The default value is empty.
+The extras for an interaction. Such as headers and body of response from server. But when the Content-Disposition header responded, &lt;br&gt;the body will be into the uri of its attachment only, the body here is empty. {"headers": {"key": v}, "body": "contents"}. The "body" field is not supported in cross-platform scenarios.
 
-**Type:** object
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Since:** 10
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-Progress-readonly extras?: object--><!--Device-Progress-readonly extras?: object-End-->
+<!--Device-Progress-readonly extras?: Record<string, string>--><!--Device-Progress-readonly extras?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,7 +44,9 @@ Index of the file that is being processed in the task.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,7 +64,9 @@ Size of processed data in the current file in the task, in bytes.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,7 +84,9 @@ Size of a file in a task, in bytes. If the server uses the chunk mode for data t
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +104,9 @@ Current task status.
 
 **Type:** State
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

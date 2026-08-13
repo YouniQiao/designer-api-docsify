@@ -2,7 +2,9 @@
 
 Represents the distributed information about an OS account.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedAccount-interface DistributedInfo--><!--Device-distributedAccount-interface DistributedInfo-End-->
 
@@ -24,7 +26,9 @@ Avatar of the distributed account. By default, no value is passed in.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedInfo-avatar?: string--><!--Device-DistributedInfo-avatar?: string-End-->
 
@@ -36,19 +40,13 @@ Avatar of the distributed account. By default, no value is passed in.
 event: string
 ```
 
-Login state of the distributed account. The state can be login, logout, token invalid, or logoff, which correspond to the following strings respectively:
-
-- Ohos.account.event.LOGIN
-
-- Ohos.account.event.LOGOUT
-
-- Ohos.account.event.TOKEN_INVALID
-
-- Ohos.account.event.LOGOFF
+Login state of the distributed account. The state can be login, logout, token invalid, or logoff, which correspond to the following strings respectively: - Ohos.account.event.LOGIN - Ohos.account.event.LOGOUT - Ohos.account.event.TOKEN_INVALID - Ohos.account.event.LOGOFF
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedInfo-event: string--><!--Device-DistributedInfo-event: string-End-->
 
@@ -64,7 +62,9 @@ UID of the distributed account. It must be a non-null string.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedInfo-id: string--><!--Device-DistributedInfo-id: string-End-->
 
@@ -80,7 +80,9 @@ Name of the distributed account. It must be a non-null string.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedInfo-name: string--><!--Device-DistributedInfo-name: string-End-->
 
@@ -96,7 +98,9 @@ Nickname of the distributed account. By default, no value is passed in.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedInfo-nickname?: string--><!--Device-DistributedInfo-nickname?: string-End-->
 
@@ -105,16 +109,18 @@ Nickname of the distributed account. By default, no value is passed in.
 ## scalableData
 
 ```TypeScript
-scalableData?: object
+scalableData?: Record<string, RecordData>
 ```
 
 Additional information about the distributed account, in the form of KV pairs. This parameter is left empty by default.
 
-**Type:** object
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-DistributedInfo-scalableData?: object--><!--Device-DistributedInfo-scalableData?: object-End-->
+**Deprecated since:** -1
+
+<!--Device-DistributedInfo-scalableData?: Record<string, RecordData>--><!--Device-DistributedInfo-scalableData?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -128,7 +134,9 @@ Status of the distributed account. The value is of the enumerated type. The defa
 
 **Type:** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedInfo-readonly status?: DistributedAccountStatus--><!--Device-DistributedInfo-readonly status?: DistributedAccountStatus-End-->
 

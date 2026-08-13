@@ -32,7 +32,7 @@ Name of the ability that is redirected to when the reminder notification is clic
 
 **Deprecated since:** 9
 
-**Substitutes:** [abilityName](reminderAgentManager.WantAgent.abilityName)
+**Substitutes:** abilityName
 
 <!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
 
@@ -52,7 +52,7 @@ Name of the HAP that is redirected to when the reminder notification is clicked.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pkgName](reminderAgentManager.WantAgent.pkgName)
+**Substitutes:** pkgName
 
 <!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
 

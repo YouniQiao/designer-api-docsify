@@ -4,6 +4,8 @@ Defines the ID, direction, and referenced components of a barrier.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LocalizedBarrierStyle--><!--Device-unnamed-declare interface LocalizedBarrierStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ ID of the barrier, which must be unique and cannot be the same as the name of an
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -34,13 +38,13 @@ ID of the barrier, which must be unique and cannot be the same as the name of an
 localizedDirection : LocalizedBarrierDirection
 ```
 
-Direction of the barrier.
-
-Vertical-direction barriers (including **TOP** and **BOTTOM**) can only serve as the horizontal anchor of a component. If they are used as a vertical anchor, the anchor value will be **0**. Horizontal-direction barriers (including **START** and **END**) can only serve as the vertical anchor of a component. If they are used as a horizontal anchor, the anchor value will be **0**.
+Direction of the barrier. Vertical-direction barriers (including **TOP** and **BOTTOM**) can only serve as the horizontal anchor of a component. If they are used as a vertical anchor, the anchor value will be **0**. Horizontal-direction barriers ( including **START** and **END**) can only serve as the vertical anchor of a component. If they are used as a horizontal anchor, the anchor value will be **0**.
 
 **Type:** [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,6 +65,8 @@ Referenced components of the barrier.
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

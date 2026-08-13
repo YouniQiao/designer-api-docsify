@@ -20,7 +20,7 @@ declare function choose(types?: string[]): Promise<string>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | string[] | 否 |
+| [types](../../apis-na/arkts-apis/arkts-na-util-types-c.md) | string[] | 否 |
 
 **返回值：**
 
@@ -72,5 +72,5 @@ declare function choose(types: string[], callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | string[] | 是 |
+| [types](../../apis-na/arkts-apis/arkts-na-util-types-c.md) | string[] | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |

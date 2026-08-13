@@ -2,7 +2,9 @@
 
 Describes the patterns supported by the pasteboard.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-enum Pattern--><!--Device-pasteboard-enum Pattern-End-->
 
@@ -16,7 +18,9 @@ URL = 0
 
 URL.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pattern-URL = 0--><!--Device-Pattern-URL = 0-End-->
 
@@ -30,7 +34,9 @@ NUMBER = 1
 
 Number.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pattern-NUMBER = 1--><!--Device-Pattern-NUMBER = 1-End-->
 
@@ -44,7 +50,9 @@ EMAIL_ADDRESS = 2
 
 Email address.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pattern-EMAIL_ADDRESS = 2--><!--Device-Pattern-EMAIL_ADDRESS = 2-End-->
 
@@ -56,9 +64,11 @@ Email address.
 HTTP_URL = 3
 ```
 
-HTTP URL.This API can be used only in the stage model.
+HTTP URL. This API can be used only in the stage model.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,9 +82,11 @@ HTTP URL.This API can be used only in the stage model.
 FLIGHT_NUMBER = 4
 ```
 
-Flight number.This API can be used only in the stage model.
+Flight number. This API can be used only in the stage model.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Provides the unified video processor status.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-videoProcessing-interface VideoProcessorStatus--><!--Device-videoProcessing-interface VideoProcessorStatus-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
@@ -25,6 +27,8 @@ AIHDR status.
 **Type:** [VideoProcessorAiHdrStatus](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

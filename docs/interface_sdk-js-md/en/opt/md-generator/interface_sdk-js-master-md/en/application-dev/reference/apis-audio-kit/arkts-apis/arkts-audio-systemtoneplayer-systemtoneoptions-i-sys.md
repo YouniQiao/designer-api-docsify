@@ -2,7 +2,9 @@
 
 Describes the options of system tones.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SystemToneOptions--><!--Device-unnamed-export interface SystemToneOptions-End-->
 
@@ -20,7 +22,9 @@ Whether to mute the audio. **true** to mute, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemToneOptions-muteAudio?: boolean--><!--Device-SystemToneOptions-muteAudio?: boolean-End-->
 
@@ -38,7 +42,9 @@ Whether to turn off haptics feedback when a system tone is played. **true** to t
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemToneOptions-muteHaptics?: boolean--><!--Device-SystemToneOptions-muteHaptics?: boolean-End-->
 

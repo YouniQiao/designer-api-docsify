@@ -14,15 +14,17 @@ function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promis
 
 Register type descriptors into the system.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DYNAMIC_UTD_TYPE
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-uniformTypeDescriptor-function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promise<void>--><!--Device-uniformTypeDescriptor-function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promise<void>-End-->
 
@@ -46,8 +48,8 @@ Register type descriptors into the system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-udmf.md#20400003-invalid-utd-content) | The content of one or more typeDescriptors violate rules. |
-| [20400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-udmf.md#20400002-invalid-utd-format) | The format of one or more typeDescriptors are invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [20400003](../errorcode-udmf.md#20400003-invalid-utd-content) | The content of one or more typeDescriptors violate rules. |
+| [20400002](../errorcode-udmf.md#20400002-invalid-utd-format) | The format of one or more typeDescriptors are invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

@@ -8,7 +8,9 @@ The &lt;input&gt; component provides an interactive interface to receive user in
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
-<!--Device-unnamed-export interface InputElement extends Element--><!--Device-unnamed-export interface InputElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface InputElement--><!--Device-unnamed-export interface InputElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +26,8 @@ Deletes the previous character at the cursor position.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-InputElement-delete(): void--><!--Device-InputElement-delete(): void-End-->
@@ -36,11 +40,13 @@ Deletes the previous character at the cursor position.
 focus(param: { focus: boolean }): void
 ```
 
-Obtains or loses the focus of a component.When the component type is set to text, email, date, time, number, or password, the input method can be displayed or collapsed.
+Obtains or loses the focus of a component. When the component type is set to text, email, date, time, number, or password, the input method can be displayed or collapsed.
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -60,11 +66,13 @@ Obtains or loses the focus of a component.When the component type is set to text
 showError(param: { error: string }): void
 ```
 
-Displays the error message.This attribute is available when the component type is set to text, email, date, time, number, or password.
+Displays the error message. This attribute is available when the component type is set to text, email, date, time, number, or password.
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

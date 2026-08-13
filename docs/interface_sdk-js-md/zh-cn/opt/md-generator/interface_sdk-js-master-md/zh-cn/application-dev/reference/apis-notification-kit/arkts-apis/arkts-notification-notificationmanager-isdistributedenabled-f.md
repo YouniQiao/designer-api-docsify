@@ -14,11 +14,11 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 查询设备是否支持跨设备协同通知。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [isDistributedEnabled](notificationManager.isDistributedEnabled(deviceType:)
+**替代接口：** [isDistributedEnabled](#isDistributedEnabled)(deviceType: string)
 
 <!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -34,12 +34,12 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1600010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600010-分布式操作失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -65,11 +65,11 @@ function isDistributedEnabled(): Promise<boolean>
 
 查询设备是否支持跨设备协同通知。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [isDistributedEnabled](notificationManager.isDistributedEnabled(deviceType:)
+**替代接口：** [isDistributedEnabled](#isDistributedEnabled)(deviceType: string)
 
 <!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>-End-->
 
@@ -85,11 +85,11 @@ function isDistributedEnabled(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1600010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600010-分布式操作失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

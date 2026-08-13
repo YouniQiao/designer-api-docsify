@@ -2,11 +2,13 @@
 
 描述组件的布局约束。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-export declare interface LayoutConstraint--><!--Device-unnamed-export declare interface LayoutConstraint-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface LayoutConstraint--><!--Device-unnamed-declare interface LayoutConstraint-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,17 @@ maxSize: Size
 
 最大尺寸。
 
-**类型：** [Size](arkts-arkui-graphics-size-i.md)
+**类型：** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LayoutConstraint-maxSize: Size--><!--Device-LayoutConstraint-maxSize: Size-End-->
 
@@ -38,13 +44,17 @@ minSize: Size
 
 最小尺寸。
 
-**类型：** [Size](arkts-arkui-graphics-size-i.md)
+**类型：** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LayoutConstraint-minSize: Size--><!--Device-LayoutConstraint-minSize: Size-End-->
 
@@ -58,13 +68,17 @@ percentReference: Size
 
 子节点计算百分比时的尺寸基准。
 
-**类型：** [Size](arkts-arkui-graphics-size-i.md)
+**类型：** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LayoutConstraint-percentReference: Size--><!--Device-LayoutConstraint-percentReference: Size-End-->
 

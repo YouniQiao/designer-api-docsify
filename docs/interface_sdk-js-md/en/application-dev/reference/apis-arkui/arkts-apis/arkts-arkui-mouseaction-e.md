@@ -6,6 +6,8 @@ Sets the action type of a mouse operation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum MouseAction--><!--Device-unnamed-declare enum MouseAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ The mouse button is pressed.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ The mouse button is released.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseAction-Release--><!--Device-MouseAction-Release-End-->
@@ -58,6 +64,8 @@ The mouse cursor moves.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseAction-Move--><!--Device-MouseAction-Move-End-->
@@ -70,13 +78,13 @@ The mouse cursor moves.
 Hover
 ```
 
-The mouse pointer is hovered on an element.
-
-Note: This value has no effect.
+The mouse pointer is hovered on an element. Note: This value has no effect.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -95,6 +103,8 @@ The mouse pointer moves into the window.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,6 +126,8 @@ The mouse pointer moves out of the window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -130,13 +142,13 @@ The mouse pointer moves out of the window.
 CANCEL = 13
 ```
 
-The mouse button action is canceled. It is triggered in the following scenarios:
-
-1. Component focus loss: This action is triggered when a currently focused component loses focus due to a system event (such as pop-up interruption or app switching).2. Event interruption: During a mouse operation, if a higher-priority event occurs (such as a system-level gesture or forced event stream recycling), causing the current mouse operation to be forcibly terminated.3. Abnormal state exit: In scenarios such as component destruction or abnormal rendering environment, unfinished mouse events are marked as canceled.
+The mouse button action is canceled. It is triggered in the following scenarios: 1. Component focus loss: This action is triggered when a currently focused component loses focus due to a system event (such as pop-up interruption or app switching). 2. Event interruption: During a mouse operation, if a higher-priority event occurs (such as a system-level gesture or forced event stream recycling), causing the current mouse operation to be forcibly terminated. 3. Abnormal state exit: In scenarios such as component destruction or abnormal rendering environment, unfinished mouse events are marked as canceled.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

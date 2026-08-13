@@ -4,6 +4,8 @@ Definition of device adress information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-mechanicManager-export interface AddressInfo--><!--Device-mechanicManager-export interface AddressInfo-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -28,6 +30,8 @@ Address of device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AddressInfo-address: string--><!--Device-AddressInfo-address: string-End-->
@@ -47,6 +51,8 @@ Type of address.
 **Type:** [AddressType](arkts-mechanic-mechanicmanager-addresstype-e-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

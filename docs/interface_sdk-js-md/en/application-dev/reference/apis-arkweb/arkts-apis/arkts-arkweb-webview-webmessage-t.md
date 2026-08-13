@@ -4,11 +4,15 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-WebMessage type supplied to [onMessageEventExt](onMessageEventExt) for indicating the type of web message.
+Defines the data types supported by [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onMessageEventExt).
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 9.
 
 <!--Device-webview-type WebMessage = ArrayBuffer | string--><!--Device-webview-type WebMessage = ArrayBuffer | string-End-->
 
@@ -16,6 +20,6 @@ WebMessage type supplied to [onMessageEventExt](onMessageEventExt) for indicatin
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer |  |
-| string |  |
+| ArrayBuffer | [since 11] |
+| string | [since 11] |
 

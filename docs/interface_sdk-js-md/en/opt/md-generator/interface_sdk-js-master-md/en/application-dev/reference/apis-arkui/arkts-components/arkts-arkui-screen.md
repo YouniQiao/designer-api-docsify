@@ -12,6 +12,8 @@ Called when the Screen is used.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScreenInterface-(screenId: long): ScreenAttribute--><!--Device-ScreenInterface-(screenId: long): ScreenAttribute-End-->

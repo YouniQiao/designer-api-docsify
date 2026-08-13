@@ -14,7 +14,7 @@ Checks whether two WantAgent objects are equal.
 
 **Deprecated since:** 9
 
-**Substitutes:** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
+**Substitutes:** [equal](arkts-ability-wantagent-equal-f.md#equal)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -28,7 +28,7 @@ Checks whether two WantAgent objects are equal.
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to compare. |
 | otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent Object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
 
 ## Examples
 
@@ -101,7 +101,7 @@ Checks whether two WantAgent objects are equal.
 
 **Deprecated since:** 9
 
-**Substitutes:** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
+**Substitutes:** [equal](arkts-ability-wantagent-equal-f.md#equal)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

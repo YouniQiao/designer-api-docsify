@@ -1,14 +1,14 @@
 # ScrollActionProposal
 
-Smart gesture scroll action handling. The default direction is forward scrolling, including right and down. When dynamically customizing smart gesture behavior through the  
-[registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, setting the return value  
-[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)'s **selectedProposal** to an object of this type triggers a scroll operation on the target component.
+Smart gesture scroll action handling. The default direction is forward scrolling, including right and down. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)'s **selectedProposal** to an object of this type triggers a scroll operation on the target component.
 
 **Inheritance/Implementation:** ScrollActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export class ScrollActionProposal extends TargetedGestureProposal--><!--Device-unnamed-export class ScrollActionProposal extends TargetedGestureProposal-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ScrollActionProposal--><!--Device-unnamed-export class ScrollActionProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ constructor(node: FrameNode, distance: number)
 Constructor for the smart gesture scroll action handling.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,15 +51,13 @@ Constructor for the smart gesture scroll action handling.
 distance?: number
 ```
 
-Scroll distance of the smart gesture.
-
-Value range: [0, +∞). Values less than 0 are treated as 0.
-
-Unit: vp.
+Scroll distance of the smart gesture. Value range: [0, +∞). Values less than 0 are treated as 0. Unit: vp.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

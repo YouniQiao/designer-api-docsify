@@ -2,9 +2,11 @@
 
 Enumerates the types of parties that set to keep applications alive.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appManager-export enum KeepAliveSetter--><!--Device-appManager-export enum KeepAliveSetter-End-->
 
@@ -20,9 +22,11 @@ SYSTEM = 0
 
 System, which means that the system sets to keep applications alive.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeepAliveSetter-SYSTEM = 0--><!--Device-KeepAliveSetter-SYSTEM = 0-End-->
 
@@ -38,9 +42,11 @@ USER = 1
 
 User, which means that a user sets to keep applications alive.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeepAliveSetter-USER = 1--><!--Device-KeepAliveSetter-USER = 1-End-->
 

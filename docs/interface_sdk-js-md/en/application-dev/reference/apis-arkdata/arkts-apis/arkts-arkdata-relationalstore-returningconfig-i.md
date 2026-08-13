@@ -4,7 +4,9 @@ Specifies the list of field names to return after returning-related APIs are cal
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface ReturningConfig--><!--Device-relationalStore-interface ReturningConfig-End-->
 
@@ -28,7 +30,9 @@ Fields returned in the result set. One to four fields are supported for input. N
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,14 +46,15 @@ Fields returned in the result set. One to four fields are supported for input. N
 maxReturningCount?: int
 ```
 
-Maximum number of rows returned in the result set. The default value is **1024**, and the maximum value is   
-**32766**. Note: If the actual number of modified rows exceeds the value set for **maxReturningCount**, the system will discard the excess data.
+Maximum number of rows returned in the result set. The default value is **1024**, and the maximum value is **32766**. Note: If the actual number of modified rows exceeds the value set for **maxReturningCount**, the system will discard the excess data.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

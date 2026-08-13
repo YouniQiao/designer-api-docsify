@@ -10,6 +10,8 @@ function getSkillInfosForSelf(flags: number): Promise<Array<SkillInfo>>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -34,4 +36,4 @@ function getSkillInfosForSelf(flags: number): Promise<Array<SkillInfo>>
 
 | 错误码ID |
 | --- |
-| [17700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700101-包管理服务异常) |
+| [17700101](../errorcode-bundle.md#17700101-包管理服务异常) |

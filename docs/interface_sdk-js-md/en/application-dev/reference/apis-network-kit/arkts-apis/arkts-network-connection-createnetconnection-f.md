@@ -14,11 +14,13 @@ function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetCon
 
 Create a network connection with optional netSpecifier and timeout.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection--><!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection-End-->
 
@@ -29,7 +31,7 @@ Create a network connection with optional netSpecifier and timeout.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Indicates the network specifier. See [NetSpecifier](arkts-network-connection-netspecifier-i.md#NetSpecifier). |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | The time in milliseconds to attempt looking for a suitable network before [netUnavailable](NetConnection#netUnavailable) is called. |
+| timeout | int | No | The time in milliseconds to attempt looking for a suitable network before netUnavailable is called. |
 
 **Return value:**
 

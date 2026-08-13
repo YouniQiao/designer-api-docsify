@@ -12,7 +12,7 @@ Defines a reminder for an alarm.
 
 **Substitutes:** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#ReminderRequestAlarm)
 
-<!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest-End-->
+<!--Device-reminderAgent-interface ReminderRequestAlarm--><!--Device-reminderAgent-interface ReminderRequestAlarm-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -38,7 +38,7 @@ Days of a week when the reminder repeats. The value ranges from 1 to 7, correspo
 
 **Deprecated since:** 9
 
-**Substitutes:** [daysOfWeek](reminderAgentManager.ReminderRequestAlarm.daysOfWeek)
+**Substitutes:** daysOfWeek
 
 <!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>-End-->
 
@@ -60,7 +60,7 @@ Hour portion of the reminder time.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hour](reminderAgentManager.ReminderRequestAlarm.hour)
+**Substitutes:** hour
 
 <!--Device-ReminderRequestAlarm-hour: number--><!--Device-ReminderRequestAlarm-hour: number-End-->
 
@@ -82,7 +82,7 @@ Minute portion of the reminder time.
 
 **Deprecated since:** 9
 
-**Substitutes:** [minute](reminderAgentManager.ReminderRequestAlarm.minute)
+**Substitutes:** minute
 
 <!--Device-ReminderRequestAlarm-minute: number--><!--Device-ReminderRequestAlarm-minute: number-End-->
 

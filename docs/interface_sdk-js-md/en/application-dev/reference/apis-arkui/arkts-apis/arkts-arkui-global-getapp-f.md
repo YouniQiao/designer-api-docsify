@@ -12,6 +12,8 @@ Obtain the objects exposed in app.js
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function getApp(): object--><!--Device-unnamed-export declare function getApp(): object-End-->

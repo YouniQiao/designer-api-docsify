@@ -8,7 +8,9 @@ function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void
 
 订阅RTT消息事件
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -32,5 +34,5 @@ function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void
 | 8400002 |
 | 8400003 |
 | 8400999 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

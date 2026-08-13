@@ -4,6 +4,8 @@ Returns the notification classification information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface NotificationClassification--><!--Device-unnamed-export interface NotificationClassification-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -21,6 +23,8 @@ Notification classification identified by the system.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Notification sub-classification identified by the system.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

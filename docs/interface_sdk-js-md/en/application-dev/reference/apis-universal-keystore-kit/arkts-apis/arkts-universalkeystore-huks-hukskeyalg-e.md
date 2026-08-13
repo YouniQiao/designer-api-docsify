@@ -6,6 +6,8 @@ Enumerates the key algorithms.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksKeyAlg--><!--Device-huks-export enum HuksKeyAlg-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,6 +23,8 @@ RSA.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,6 +46,8 @@ ECC.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2--><!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2-End-->
@@ -61,6 +67,8 @@ DSA&lt;!--RP5--&gt;&lt;!--RP5End--&gt;.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,6 +90,8 @@ AES.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_AES = 20--><!--Device-HuksKeyAlg-HUKS_ALG_AES = 20-End-->
@@ -99,6 +109,8 @@ HMAC.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -120,6 +132,8 @@ HKDF.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51--><!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51-End-->
@@ -139,6 +153,8 @@ PBKDF2.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,6 +176,8 @@ ECDH.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100--><!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100-End-->
@@ -179,6 +197,8 @@ X25519.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -200,6 +220,8 @@ Ed25519.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102--><!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102-End-->
@@ -219,6 +241,8 @@ DH.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -240,6 +264,8 @@ SM2.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150--><!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150-End-->
@@ -259,6 +285,8 @@ SM3
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -280,6 +308,8 @@ SM4.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152--><!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152-End-->
@@ -294,11 +324,13 @@ SM4.
 HUKS_ALG_DES = 160
 ```
 
-DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt;standard devices&lt;!--RP5End--&gt; since API version 18).
+DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -312,11 +344,13 @@ DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since 
 HUKS_ALG_3DES = 161
 ```
 
-3DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt;standard devices&lt;!--RP5End--&gt; since API version 18).
+3DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -330,11 +364,13 @@ HUKS_ALG_3DES = 161
 HUKS_ALG_CMAC = 162
 ```
 
-CMAC (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt;standard devices&lt;!--RP5End--&gt; since API version 18).
+CMAC (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -354,6 +390,8 @@ ML-KEM.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200--><!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200-End-->
@@ -371,6 +409,8 @@ ML-DSA.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

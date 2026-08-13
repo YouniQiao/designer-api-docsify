@@ -10,7 +10,9 @@ Set this application's senior mode.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,7 +36,7 @@ Set this application's senior mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9300000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
 
 ## 示例
 

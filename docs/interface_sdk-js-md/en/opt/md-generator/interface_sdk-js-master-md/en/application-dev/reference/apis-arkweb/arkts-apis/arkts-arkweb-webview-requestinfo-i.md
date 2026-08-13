@@ -4,6 +4,8 @@ Describes the information about the resource request sent by the **Web** compone
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface RequestInfo--><!--Device-webview-interface RequestInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -26,6 +28,8 @@ Form data in the request body.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestInfo-formData: string--><!--Device-RequestInfo-formData: string-End-->
@@ -44,6 +48,8 @@ Method of the request.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestInfo-method: string--><!--Device-RequestInfo-method: string-End-->
@@ -61,6 +67,8 @@ URL of the request.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

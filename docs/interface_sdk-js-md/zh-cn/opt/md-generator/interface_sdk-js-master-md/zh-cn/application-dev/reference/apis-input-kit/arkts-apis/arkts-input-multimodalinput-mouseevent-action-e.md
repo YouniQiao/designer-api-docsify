@@ -2,7 +2,9 @@
 
 鼠标事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum Action--><!--Device-unnamed-export declare enum Action-End-->
 
@@ -16,7 +18,9 @@ CANCEL = 0
 
 取消。鼠标down事件异常打断，未正常闭环，例如：按下鼠标按键后未抬起，窗口退后台或被异常销毁时触发cancel事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-CANCEL = 0--><!--Device-Action-CANCEL = 0-End-->
 
@@ -30,7 +34,9 @@ MOVE = 1
 
 鼠标移动。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-MOVE = 1--><!--Device-Action-MOVE = 1-End-->
 
@@ -44,7 +50,9 @@ BUTTON_DOWN = 2
 
 鼠标按键按下。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-BUTTON_DOWN = 2--><!--Device-Action-BUTTON_DOWN = 2-End-->
 
@@ -58,7 +66,9 @@ BUTTON_UP = 3
 
 鼠标按键抬起。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-BUTTON_UP = 3--><!--Device-Action-BUTTON_UP = 3-End-->
 
@@ -72,7 +82,9 @@ AXIS_BEGIN = 4
 
 鼠标轴事件开始。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-AXIS_BEGIN = 4--><!--Device-Action-AXIS_BEGIN = 4-End-->
 
@@ -86,7 +98,9 @@ AXIS_UPDATE = 5
 
 鼠标轴事件更新。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-AXIS_UPDATE = 5--><!--Device-Action-AXIS_UPDATE = 5-End-->
 
@@ -100,7 +114,9 @@ AXIS_END = 6
 
 鼠标轴事件结束。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-AXIS_END = 6--><!--Device-Action-AXIS_END = 6-End-->
 
@@ -114,7 +130,9 @@ ACTION_DOWN = 7
 
 触控板按下。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-ACTION_DOWN = 7--><!--Device-Action-ACTION_DOWN = 7-End-->
 
@@ -128,7 +146,9 @@ ACTION_UP = 8
 
 触控板抬起。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Action-ACTION_UP = 8--><!--Device-Action-ACTION_UP = 8-End-->
 

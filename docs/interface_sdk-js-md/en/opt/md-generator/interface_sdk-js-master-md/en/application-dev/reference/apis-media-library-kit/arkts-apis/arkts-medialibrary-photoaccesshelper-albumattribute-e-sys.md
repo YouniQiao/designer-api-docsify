@@ -4,6 +4,8 @@ Album operation attribute.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-enum AlbumAttribute--><!--Device-photoAccessHelper-enum AlbumAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -19,6 +21,8 @@ NICK_NAME_ATTR = 'nickname'
 The album nickname operation attribute.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ The album extra_info operation attribute.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlbumAttribute-EXTRA_INFO_ATTR = 'extra_info'--><!--Device-AlbumAttribute-EXTRA_INFO_ATTR = 'extra_info'-End-->
@@ -56,6 +62,8 @@ The album is_removed operation attribute.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlbumAttribute-IS_REMOVED_ATTR = 'is_removed'--><!--Device-AlbumAttribute-IS_REMOVED_ATTR = 'is_removed'-End-->
@@ -73,6 +81,8 @@ FRIEND_ID_ATTR = 'friend_id'
 The album friend_id operation attribute.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

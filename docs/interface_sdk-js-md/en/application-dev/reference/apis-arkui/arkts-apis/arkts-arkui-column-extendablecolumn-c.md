@@ -2,20 +2,23 @@
 
 Defines the Extendable Column.
 
-**Inheritance/Implementation:** ExtendableColumn implements [ColumnAttribute](arkts-arkui-column-columnattribute-i.md#ColumnAttribute)
+**Inheritance/Implementation:** ExtendableColumn implements ColumnAttribute
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-<!--Device-unnamed-export declare abstract class ExtendableColumn implements ColumnAttribute--><!--Device-unnamed-export declare abstract class ExtendableColumn implements ColumnAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare abstract class ExtendableColumn--><!--Device-unnamed-export declare abstract class ExtendableColumn-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## $_instantiate
 
 ```TypeScript
-static $_instantiate<T extends ExtendableColumn>(
+@ComponentBuilder
+    static $_instantiate<T extends ExtendableColumn>(
         factory: ConstructorT<T>, 
         options?: ColumnOptions | ColumnOptionsV2, 
         content_?: CustomBuilder
@@ -28,9 +31,11 @@ Constructor of Extendable Column.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableColumn-static $_instantiate<T extends ExtendableColumn>(        factory: ConstructorT<T>,         options?: ColumnOptions | ColumnOptionsV2,         content_?: CustomBuilder    ): T--><!--Device-ExtendableColumn-static $_instantiate<T extends ExtendableColumn>(        factory: ConstructorT<T>,         options?: ColumnOptions | ColumnOptionsV2,         content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableColumn-@ComponentBuilder    static $_instantiate<T extends ExtendableColumn>(        factory: ConstructorT<T>,         options?: ColumnOptions | ColumnOptionsV2,         content_?: CustomBuilder    ): T--><!--Device-ExtendableColumn-@ComponentBuilder    static $_instantiate<T extends ExtendableColumn>(        factory: ConstructorT<T>,         options?: ColumnOptions | ColumnOptionsV2,         content_?: CustomBuilder    ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +43,9 @@ Constructor of Extendable Column.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
 | options | [ColumnOptions](arkts-arkui-column-columnoptions-i.md) \| [ColumnOptionsV2](arkts-arkui-column-columnoptionsv2-i.md) | No |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
@@ -51,7 +56,8 @@ Constructor of Extendable Column.
 ## _instantiateImpl
 
 ```TypeScript
-static _instantiateImpl<T extends ExtendableColumn>(
+@Builder
+    static _instantiateImpl<T extends ExtendableColumn>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -64,11 +70,11 @@ Entry of Extendable Column.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableColumn-static _instantiateImpl<T extends ExtendableColumn>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableColumn-static _instantiateImpl<T extends ExtendableColumn>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableColumn-@Builder    static _instantiateImpl<T extends ExtendableColumn>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableColumn-@Builder    static _instantiateImpl<T extends ExtendableColumn>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,9 +82,9 @@ Entry of Extendable Column.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| styles | CustomBuilderT&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
+| content_ | CustomBuilder | No |  |
 
 ## setColumnOptions
 
@@ -91,6 +97,8 @@ Set the Column Options.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

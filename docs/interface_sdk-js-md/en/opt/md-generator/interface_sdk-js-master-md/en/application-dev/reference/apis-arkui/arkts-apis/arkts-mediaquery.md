@@ -1,18 +1,10 @@
 # @ohos.mediaquery
 
-The **mediaquery** module provides different styles for different media types.
-
-> **NOTE：**
-> 
-> - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). In
-> other words, the APIs of this module can be used only after a component instance is created; they cannot be called
-> in the lifecycle of the UIAbility.
-> 
-> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
-> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](@ohos.arkui.UIContext).
+The **mediaquery** module provides different styles for different media types. > **NOTE：**> > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). In > other words, the APIs of this module can be used only after a component instance is created; they cannot be called > in the lifecycle of the UIAbility. > > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace mediaquery--><!--Device-unnamed-declare namespace mediaquery-End-->
 
@@ -30,7 +22,7 @@ import { mediaquery } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [matchMediaSync](arkts-arkui-mediaquery-matchmediasync-f.md#matchmediasync) |
+| [matchMediaSync](arkts-arkui-mediaquery-matchmediasync-f.md#matchMediaSync) |
 
 ### Interfaces
 

@@ -2,6 +2,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace utils--><!--Device-unnamed-declare namespace utils-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -19,7 +21,7 @@
 
 | 名称 |
 | --- |
-| [isSendable](arkts-arkts-utils-issendable-f.md#issendable) |
+| [isSendable](arkts-arkts-utils-issendable-f.md#isSendable) |
 
 ### 类
 

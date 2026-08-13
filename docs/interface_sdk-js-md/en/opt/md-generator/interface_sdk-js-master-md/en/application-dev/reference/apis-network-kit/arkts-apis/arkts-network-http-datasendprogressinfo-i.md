@@ -2,7 +2,9 @@
 
 This interface is used to monitor the progress of sending data.
 
-**Since:** 15
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface DataSendProgressInfo--><!--Device-http-export interface DataSendProgressInfo-End-->
 
@@ -24,9 +26,11 @@ Used to specify the data size to be sent.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DataSendProgressInfo-sendSize: int--><!--Device-DataSendProgressInfo-sendSize: int-End-->
 
@@ -42,9 +46,11 @@ Total number of bytes to receive.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DataSendProgressInfo-totalSize: int--><!--Device-DataSendProgressInfo-totalSize: int-End-->
 

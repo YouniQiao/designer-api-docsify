@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum PenKey--><!--Device-unnamed-declare enum PenKey-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -17,6 +19,8 @@ HANDWRITING = 0
 手写键。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ SMART = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PenKey-SMART = 1--><!--Device-PenKey-SMART = 1-End-->
@@ -49,6 +55,8 @@ AIR_MOUSE = 2
 空鼠键。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

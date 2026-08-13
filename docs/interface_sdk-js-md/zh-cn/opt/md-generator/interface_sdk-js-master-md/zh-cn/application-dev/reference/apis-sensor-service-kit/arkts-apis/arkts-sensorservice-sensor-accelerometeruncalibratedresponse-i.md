@@ -4,9 +4,11 @@
 
 **继承/实现关系：** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface AccelerometerUncalibratedResponse extends Response--><!--Device-sensor-interface AccelerometerUncalibratedResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface AccelerometerUncalibratedResponse--><!--Device-sensor-interface AccelerometerUncalibratedResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ biasX: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-biasX: double--><!--Device-AccelerometerUncalibratedResponse-biasX: double-End-->
 
@@ -36,7 +40,9 @@ biasY: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-biasY: double--><!--Device-AccelerometerUncalibratedResponse-biasY: double-End-->
 
@@ -52,7 +58,9 @@ biasZ: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-biasZ: double--><!--Device-AccelerometerUncalibratedResponse-biasZ: double-End-->
 
@@ -68,7 +76,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-x: double--><!--Device-AccelerometerUncalibratedResponse-x: double-End-->
 
@@ -84,7 +94,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-y: double--><!--Device-AccelerometerUncalibratedResponse-y: double-End-->
 
@@ -100,7 +112,9 @@ z: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-z: double--><!--Device-AccelerometerUncalibratedResponse-z: double-End-->
 

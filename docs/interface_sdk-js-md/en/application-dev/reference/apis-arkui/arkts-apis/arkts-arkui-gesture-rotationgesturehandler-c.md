@@ -8,7 +8,9 @@ Defines the RotationGesture handler.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class RotationGestureHandler extends GestureHandler--><!--Device-unnamed-export declare class RotationGestureHandler extends GestureHandler-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class RotationGestureHandler--><!--Device-unnamed-export declare class RotationGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor parameters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ The Rotation gesture is successfully recognized and a callback is triggered when
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +84,8 @@ The Rotation gesture is successfully recognized. When the finger is lifted, the 
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RotationGestureHandler-onActionEnd(event: Callback<GestureEvent>): this--><!--Device-RotationGestureHandler-onActionEnd(event: Callback<GestureEvent>): this-End-->
@@ -108,6 +116,8 @@ Rotation gesture recognition success callback.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RotationGestureHandler-onActionStart(event: Callback<GestureEvent>): this--><!--Device-RotationGestureHandler-onActionStart(event: Callback<GestureEvent>): this-End-->
@@ -137,6 +147,8 @@ Callback when the Rotation gesture is moving.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,9 @@ type AccessAuthorization = constant.AccessAuthorization
 
 Indicate the phone book access authorization.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-pbap-type AccessAuthorization = constant.AccessAuthorization--><!--Device-pbap-type AccessAuthorization = constant.AccessAuthorization-End-->
 

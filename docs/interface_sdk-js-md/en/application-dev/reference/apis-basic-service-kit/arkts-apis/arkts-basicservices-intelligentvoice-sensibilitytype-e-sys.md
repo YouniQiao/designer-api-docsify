@@ -2,9 +2,11 @@
 
 Enumerates sensibility type.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-enum SensibilityType--><!--Device-intelligentVoice-enum SensibilityType-End-->
 
@@ -20,9 +22,11 @@ LOW_SENSIBILITY = 1
 
 Low sensibility.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SensibilityType-LOW_SENSIBILITY = 1--><!--Device-SensibilityType-LOW_SENSIBILITY = 1-End-->
 
@@ -38,9 +42,11 @@ MIDDLE_SENSIBILITY = 2
 
 Middle sensibility.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SensibilityType-MIDDLE_SENSIBILITY = 2--><!--Device-SensibilityType-MIDDLE_SENSIBILITY = 2-End-->
 
@@ -56,9 +62,11 @@ HIGH_SENSIBILITY = 3
 
 High sensibility.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SensibilityType-HIGH_SENSIBILITY = 3--><!--Device-SensibilityType-HIGH_SENSIBILITY = 3-End-->
 

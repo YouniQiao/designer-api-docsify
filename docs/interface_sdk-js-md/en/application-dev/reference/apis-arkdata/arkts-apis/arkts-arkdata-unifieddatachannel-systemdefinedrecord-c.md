@@ -1,18 +1,16 @@
 # SystemDefinedRecord
 
-Represents specific data types defined by OpenHarmony. It is a child class of   
-[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord) and a base class of OpenHarmony-specific data types. You are advised to use the child class of **SystemDefinedRecord**, for example,   
-[SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md#SystemDefinedForm),   
-[SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md#SystemDefinedAppItem), and   
-[SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md#SystemDefinedPixelMap), to describe OpenHarmony-specific data.
+Represents specific data types defined by OpenHarmony. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord) and a base class of OpenHarmony-specific data types. You are advised to use the child class of **SystemDefinedRecord**, for example, [SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md#SystemDefinedForm), [SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md#SystemDefinedAppItem), and [SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md#SystemDefinedPixelMap), to describe OpenHarmony-specific data.
 
 **Inheritance/Implementation:** SystemDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unifiedDataChannel-class SystemDefinedRecord extends UnifiedRecord--><!--Device-unifiedDataChannel-class SystemDefinedRecord extends UnifiedRecord-End-->
+**Deprecated since:** -1
+
+<!--Device-unifiedDataChannel-class SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedRecord-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -28,13 +26,15 @@ import { unifiedDataChannel } from '@kit.ArkData';
 details?: Record<string, int | long | double | string | Uint8Array>
 ```
 
-A dictionary type object, where the key is of the string type, and the value can be a number, a string, or a Uint8Array. The default value is an empty dictionary object.
+A dictionary type object, where the key is of the string type, and the value can be a number, a string, or a Uint 8Array. The default value is an empty dictionary object.
 
 **Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,7 +8,9 @@ Defines linear gradient class.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
-<!--Device-unnamed-export declare class LinearGradientStyle extends ShaderStyle--><!--Device-unnamed-export declare class LinearGradientStyle extends ShaderStyle-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class LinearGradientStyle--><!--Device-unnamed-export declare class LinearGradientStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ The constructor.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ The constructor.
 options: LinearGradientOptions
 ```
 
-The options of the gradient.angle: Angle of linear gradient.direction: Direction of linear gradient.colors: Color description for gradients repeating: if the gradient colors with repeated coloring.
+The options of the gradient. angle: Angle of linear gradient. direction: Direction of linear gradient. colors: Color description for gradients repeating: if the gradient colors with repeated coloring.
 
 **Type:** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

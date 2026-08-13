@@ -6,7 +6,9 @@ export type MissionInfo = _MissionInfo
 
 Mission information corresponding to ability.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-missionManager-export type MissionInfo = _MissionInfo--><!--Device-missionManager-export type MissionInfo = _MissionInfo-End-->
 

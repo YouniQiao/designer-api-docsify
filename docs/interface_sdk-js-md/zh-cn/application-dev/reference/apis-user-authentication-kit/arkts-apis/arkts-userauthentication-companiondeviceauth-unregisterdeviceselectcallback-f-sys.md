@@ -10,7 +10,9 @@ function unregisterDeviceSelectCallback(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.USE_USER_IDM
 
@@ -26,9 +28,9 @@ function unregisterDeviceSelectCallback(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

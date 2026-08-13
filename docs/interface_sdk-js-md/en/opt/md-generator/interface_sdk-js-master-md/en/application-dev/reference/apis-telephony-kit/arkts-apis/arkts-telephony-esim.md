@@ -1,8 +1,10 @@
 # @ohos.telephony.esim
 
-This indicates that the eSIM card performs the profile management operation synchronously.Includes methods defined by GSMA Spec (SGP.22) and customized methods.
+This indicates that the eSIM card performs the profile management operation synchronously. Includes methods defined by GSMA Spec (SGP.22) and customized methods.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace eSIM--><!--Device-unnamed-declare namespace eSIM-End-->
 
@@ -20,33 +22,33 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addProfile](arkts-telephony-esim-addprofile-f.md#addprofile) |
-| [isSupported](arkts-telephony-esim-issupported-f.md#issupported) |
+| [addProfile](arkts-telephony-esim-addprofile-f.md#addProfile) |
+| [isSupported](arkts-telephony-esim-issupported-f.md#isSupported) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [cancelSession](arkts-telephony-esim-cancelsession-f-sys.md#cancelsession) |
-| [deleteProfile](arkts-telephony-esim-deleteprofile-f-sys.md#deleteprofile) |
-| [downloadProfile](arkts-telephony-esim-downloadprofile-f-sys.md#downloadprofile) |
-| [getContractInfo](arkts-telephony-esim-getcontractinfo-f-sys.md#getcontractinfo) |
-| [getDefaultSmdpAddress](arkts-telephony-esim-getdefaultsmdpaddress-f-sys.md#getdefaultsmdpaddress) |
-| [getDownloadableProfileMetadata](arkts-telephony-esim-getdownloadableprofilemetadata-f-sys.md#getdownloadableprofilemetadata) |
-| [getDownloadableProfiles](arkts-telephony-esim-getdownloadableprofiles-f-sys.md#getdownloadableprofiles) |
-| [getEid](arkts-telephony-esim-geteid-f-sys.md#geteid) |
-| [getEsimFreeStorage](arkts-telephony-esim-getesimfreestorage-f-sys.md#getesimfreestorage) |
-| [getEuiccInfo](arkts-telephony-esim-geteuiccinfo-f-sys.md#geteuiccinfo) |
-| [getEuiccProfileInfoList](arkts-telephony-esim-geteuiccprofileinfolist-f-sys.md#geteuiccprofileinfolist) |
-| [getOsuStatus](arkts-telephony-esim-getosustatus-f-sys.md#getosustatus) |
-| [getSupportedPkids](arkts-telephony-esim-getsupportedpkids-f-sys.md#getsupportedpkids) |
-| [reserveProfilesForFactoryRestore](arkts-telephony-esim-reserveprofilesforfactoryrestore-f-sys.md#reserveprofilesforfactoryrestore) |
-| [resetMemory](arkts-telephony-esim-resetmemory-f-sys.md#resetmemory) |
-| [setDefaultSmdpAddress](arkts-telephony-esim-setdefaultsmdpaddress-f-sys.md#setdefaultsmdpaddress) |
-| [setProfileNickname](arkts-telephony-esim-setprofilenickname-f-sys.md#setprofilenickname) |
-| [startOsu](arkts-telephony-esim-startosu-f-sys.md#startosu) |
-| [switchToProfile](arkts-telephony-esim-switchtoprofile-f-sys.md#switchtoprofile) |
+| [cancelSession](arkts-telephony-esim-cancelsession-f-sys.md#cancelSession-(System-API)) |
+| [deleteProfile](arkts-telephony-esim-deleteprofile-f-sys.md#deleteProfile-(System-API)) |
+| [downloadProfile](arkts-telephony-esim-downloadprofile-f-sys.md#downloadProfile-(System-API)) |
+| [getContractInfo](arkts-telephony-esim-getcontractinfo-f-sys.md#getContractInfo-(System-API)) |
+| [getDefaultSmdpAddress](arkts-telephony-esim-getdefaultsmdpaddress-f-sys.md#getDefaultSmdpAddress-(System-API)) |
+| [getDownloadableProfileMetadata](arkts-telephony-esim-getdownloadableprofilemetadata-f-sys.md#getDownloadableProfileMetadata-(System-API)) |
+| [getDownloadableProfiles](arkts-telephony-esim-getdownloadableprofiles-f-sys.md#getDownloadableProfiles-(System-API)) |
+| [getEid](arkts-telephony-esim-geteid-f-sys.md#getEid-(System-API)) |
+| [getEsimFreeStorage](arkts-telephony-esim-getesimfreestorage-f-sys.md#getEsimFreeStorage-(System-API)) |
+| [getEuiccInfo](arkts-telephony-esim-geteuiccinfo-f-sys.md#getEuiccInfo-(System-API)) |
+| [getEuiccProfileInfoList](arkts-telephony-esim-geteuiccprofileinfolist-f-sys.md#getEuiccProfileInfoList-(System-API)) |
+| [getOsuStatus](arkts-telephony-esim-getosustatus-f-sys.md#getOsuStatus-(System-API)) |
+| [getSupportedPkids](arkts-telephony-esim-getsupportedpkids-f-sys.md#getSupportedPkids-(System-API)) |
+| [reserveProfilesForFactoryRestore](arkts-telephony-esim-reserveprofilesforfactoryrestore-f-sys.md#reserveProfilesForFactoryRestore-(System-API)) |
+| [resetMemory](arkts-telephony-esim-resetmemory-f-sys.md#resetMemory-(System-API)) |
+| [setDefaultSmdpAddress](arkts-telephony-esim-setdefaultsmdpaddress-f-sys.md#setDefaultSmdpAddress-(System-API)) |
+| [setProfileNickname](arkts-telephony-esim-setprofilenickname-f-sys.md#setProfileNickname-(System-API)) |
+| [startOsu](arkts-telephony-esim-startosu-f-sys.md#startOsu-(System-API)) |
+| [switchToProfile](arkts-telephony-esim-switchtoprofile-f-sys.md#switchToProfile-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

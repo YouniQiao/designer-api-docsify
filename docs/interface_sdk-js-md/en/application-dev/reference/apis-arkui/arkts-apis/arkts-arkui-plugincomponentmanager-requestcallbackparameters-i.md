@@ -1,12 +1,14 @@
 # RequestCallbackParameters
 
-Plugin component request callback parameters.
+Provides the result returned after the **PluginManager.Request** API is called.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-pluginComponentManager-export interface RequestCallbackParameters--><!--Device-pluginComponentManager-export interface RequestCallbackParameters-End-->
+**Deprecated since:** -1
+
+<!--Device-pluginComponentManager-interface RequestCallbackParameters--><!--Device-pluginComponentManager-interface RequestCallbackParameters-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +24,17 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 componentTemplate: PluginComponentTemplate
 ```
 
-Defines componentTemplate.
+Component template.
 
-**Type:** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
+**Type:** [PluginComponentTemplate](../../apis-na/arkts-apis/arkts-na-plugincomponent-plugincomponenttemplate-i.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestCallbackParameters-componentTemplate: PluginComponentTemplate--><!--Device-RequestCallbackParameters-componentTemplate: PluginComponentTemplate-End-->
 
@@ -42,15 +46,17 @@ Defines componentTemplate.
 data: KVObject
 ```
 
-Defines data.
+Component data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestCallbackParameters-data: KVObject--><!--Device-RequestCallbackParameters-data: KVObject-End-->
 
@@ -62,15 +68,17 @@ Defines data.
 extraData: KVObject
 ```
 
-Defines extraData.
+Extra data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestCallbackParameters-extraData: KVObject--><!--Device-RequestCallbackParameters-extraData: KVObject-End-->
 

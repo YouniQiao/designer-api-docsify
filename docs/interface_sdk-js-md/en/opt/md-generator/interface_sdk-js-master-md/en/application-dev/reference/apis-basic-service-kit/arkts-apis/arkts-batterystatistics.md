@@ -1,12 +1,10 @@
 # @ohos.batteryStatistics
 
-The **batteryStatistics** module provides APIs for querying software and hardware power consumption statistics.
+The **batteryStatistics** module provides APIs for querying software and hardware power consumption statistics. > **NOTE：**> > - The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> - The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace batteryStats--><!--Device-unnamed-declare namespace batteryStats-End-->
 
@@ -27,12 +25,12 @@ import { batteryStats } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md#getapppowerpercent) |
-| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md#getapppowervalue) |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getbatterystats) |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getbatterystats-1) |
-| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md#gethardwareunitpowerpercent) |
-| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md#gethardwareunitpowervalue) |
+| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md#getAppPowerPercent-(System-API)) |
+| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md#getAppPowerValue-(System-API)) |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getBatteryStats-(System-API)) |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getBatteryStats-(System-API)) |
+| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md#getHardwareUnitPowerPercent-(System-API)) |
+| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md#getHardwareUnitPowerValue-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

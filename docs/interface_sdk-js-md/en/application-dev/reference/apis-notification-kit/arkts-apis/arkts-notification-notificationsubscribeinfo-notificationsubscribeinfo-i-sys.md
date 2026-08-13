@@ -2,9 +2,11 @@
 
 The **NotificationSubscribeInfo** module provides APIs for defining the information about the publisher for notification subscription.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationSubscribeInfo--><!--Device-unnamed-export interface NotificationSubscribeInfo-End-->
 
@@ -22,9 +24,11 @@ Bundle names of the applications whose notifications to subscribe to. If this pa
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscribeInfo-bundleNames?: Array<string>--><!--Device-NotificationSubscribeInfo-bundleNames?: Array<string>-End-->
 
@@ -38,13 +42,15 @@ Bundle names of the applications whose notifications to subscribe to. If this pa
 deviceType?: string
 ```
 
-Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo).
+Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#@ohos.deviceInfo).
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscribeInfo-deviceType?: string--><!--Device-NotificationSubscribeInfo-deviceType?: string-End-->
 
@@ -58,16 +64,15 @@ Device type. If this parameter is not specified, the subscription defaults to no
 enableClassification?: boolean
 ```
 
-Whether to enable notification classification.
-
-- **true**: yes.  
-- **false**: no. The default value is **false**.
+Whether to enable notification classification. - **true**: yes. - **false**: no. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,21 +88,15 @@ Whether to enable notification classification.
 filterLimit?: long
 ```
 
-Notification filtering range. The default value is **0**. The options are as follows:
+Notification filtering range. The default value is **0**. The options are as follows: - **0**: All notifications are included in the subscription. - **1**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SlotType) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton) is empty. - **2**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SlotType) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton) is not empty.
 
-- **0**: All notifications are included in the subscription.  
-- **1**: Filter out notifications whose slot type is   
-[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SlotType) and   
-[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton) is empty.  
-- **2**: Filter out notifications whose slot type is   
-[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SlotType) and   
-[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton) is not empty.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscribeInfo-filterLimit?: long--><!--Device-NotificationSubscribeInfo-filterLimit?: long-End-->
 
@@ -111,18 +110,15 @@ Notification filtering range. The default value is **0**. The options are as fol
 needSilentReplayOnSubscribe?: boolean
 ```
 
-Whether to enable silent replay upon subscription.
-
-- **true**: yes.  
-- **false**: no. The default value is **false**.
-
-After this feature is enabled, historical notifications are silently re-pushed upon the first subscription,without ringing or vibration reminders.
+Whether to enable silent replay upon subscription. - **true**: yes. - **false**: no. The default value is **false**. After this feature is enabled, historical notifications are silently re-pushed upon the first subscription, without ringing or vibration reminders.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,7 +140,9 @@ Image options of the live notification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,9 +162,11 @@ Types of the notification slots. If this parameter is not specified, the subscri
 
 **Type:** Array&lt;notificationManager.SlotType&gt;
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscribeInfo-slotTypes?: Array<notificationManager.SlotType>--><!--Device-NotificationSubscribeInfo-slotTypes?: Array<notificationManager.SlotType>-End-->
 
@@ -182,11 +182,13 @@ userId?: int
 
 User ID. If this parameter is not specified, the subscription defaults to notifications from the current user ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSubscribeInfo-userId?: int--><!--Device-NotificationSubscribeInfo-userId?: int-End-->
 
@@ -206,7 +208,9 @@ Configuration options for notification voice broadcast.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

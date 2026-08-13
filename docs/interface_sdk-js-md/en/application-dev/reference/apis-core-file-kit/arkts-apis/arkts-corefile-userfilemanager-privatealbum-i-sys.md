@@ -1,10 +1,8 @@
 # PrivateAlbum (System API)
 
-Provides APIs for managing the system albums.
+Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md#Album-(System-API)) instead.
 
-This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md#Album) instead.
-
-**Inheritance/Implementation:** PrivateAlbum extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#AbsAlbum)
+**Inheritance/Implementation:** PrivateAlbum extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#AbsAlbum-(System-API))
 
 **Since:** 9
 
@@ -14,7 +12,7 @@ This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-
 
 **Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#Album)
 
-<!--Device-userFileManager-interface PrivateAlbum extends AbsAlbum--><!--Device-userFileManager-interface PrivateAlbum extends AbsAlbum-End-->
+<!--Device-userFileManager-interface PrivateAlbum--><!--Device-userFileManager-interface PrivateAlbum-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -32,10 +30,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 delete(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous callback to return the result.
-
-This API will be deprecated. Use   
-[Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletePhotoAssets)instead.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletePhotoAssets) instead.
 
 **Since:** 9
 
@@ -43,7 +38,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAlbumsWithUri](@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.deleteAlbumsWithUri)
+**Substitutes:** deleteAlbumsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -58,11 +53,11 @@ This API will be deprecated. Use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -95,10 +90,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 delete(uri: string): Promise<void>
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to return the result.
-
-This API will be deprecated. Use   
-[Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletePhotoAssets)instead.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletePhotoAssets) instead.
 
 **Since:** 9
 
@@ -106,7 +98,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAlbumsWithUri](@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.deleteAlbumsWithUri)
+**Substitutes:** deleteAlbumsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -130,7 +122,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -162,10 +154,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result.
-
-This API will be deprecated. Use   
-[Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverPhotoAssets)instead.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverPhotoAssets) instead.
 
 **Since:** 9
 
@@ -173,7 +162,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [recoverAssetsWithUri](@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.recoverAssetsWithUri)
+**Substitutes:** recoverAssetsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -188,11 +177,11 @@ This API will be deprecated. Use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -233,10 +222,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string): Promise<void>
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result.
-
-This API will be deprecated. Use   
-[Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverPhotoAssets)instead.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverPhotoAssets) instead.
 
 **Since:** 9
 
@@ -244,7 +230,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [recoverAssetsWithUri](@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.recoverAssetsWithUri)
+**Substitutes:** recoverAssetsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -268,7 +254,7 @@ This API will be deprecated. Use
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

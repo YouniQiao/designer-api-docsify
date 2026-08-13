@@ -2,9 +2,11 @@
 
 Provides the video recorder profile definitions.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface VideoRecorderProfile--><!--Device-media-interface VideoRecorderProfile-End-->
 
@@ -26,11 +28,13 @@ readonly audioBitrate: int
 
 Indicates the audio bit rate, in bit/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioBitrate: int--><!--Device-VideoRecorderProfile-readonly audioBitrate: int-End-->
 
@@ -46,11 +50,13 @@ readonly audioChannels: int
 
 Indicates the number of audio channels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioChannels: int--><!--Device-VideoRecorderProfile-readonly audioChannels: int-End-->
 
@@ -68,9 +74,11 @@ Indicates the audio encoding format.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType-End-->
 
@@ -86,11 +94,13 @@ readonly audioSampleRate: int
 
 Indicates the audio sampling rate, in Hz.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioSampleRate: int--><!--Device-VideoRecorderProfile-readonly audioSampleRate: int-End-->
 
@@ -108,9 +118,11 @@ Indicates the output file format.
 
 **Type:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType--><!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType-End-->
 
@@ -126,11 +138,13 @@ readonly videoBitrate: int
 
 Indicates the video bit rate, in bit/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoBitrate: int--><!--Device-VideoRecorderProfile-readonly videoBitrate: int-End-->
 
@@ -148,9 +162,11 @@ Indicates the video encoding format.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType-End-->
 
@@ -166,11 +182,13 @@ readonly videoFrameHeight: int
 
 Indicates the video height, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameHeight: int--><!--Device-VideoRecorderProfile-readonly videoFrameHeight: int-End-->
 
@@ -186,11 +204,13 @@ readonly videoFrameRate: int
 
 Indicates the video frame rate, in fps.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameRate: int--><!--Device-VideoRecorderProfile-readonly videoFrameRate: int-End-->
 
@@ -206,11 +226,13 @@ readonly videoFrameWidth: int
 
 Indicates the video width, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameWidth: int--><!--Device-VideoRecorderProfile-readonly videoFrameWidth: int-End-->
 

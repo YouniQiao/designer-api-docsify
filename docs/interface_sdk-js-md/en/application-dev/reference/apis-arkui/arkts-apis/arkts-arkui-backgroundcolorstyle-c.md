@@ -6,6 +6,8 @@ Describes the text background color style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class BackgroundColorStyle--><!--Device-unnamed-declare class BackgroundColorStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ A constructor used to create a text background style.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,23 +46,15 @@ A constructor used to create a text background style.
 readonly textBackgroundStyle: TextBackgroundStyle
 ```
 
-Text background color of the styled string.
-
-Default value:
-
-{
-
-color: Color.Transparent,
-
-radius: 0
-
-}
+Text background color of the styled string. Default value: { color: Color.Transparent, radius: 0 }
 
 **Type:** TextBackgroundStyle
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

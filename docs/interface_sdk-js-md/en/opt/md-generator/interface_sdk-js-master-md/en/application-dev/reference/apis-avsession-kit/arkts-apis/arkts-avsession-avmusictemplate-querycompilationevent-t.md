@@ -8,6 +8,8 @@ The query compilation event.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avMusicTemplate-type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<PageMediaEntity>--><!--Device-avMusicTemplate-type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<PageMediaEntity>-End-->

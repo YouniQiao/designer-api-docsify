@@ -2,9 +2,11 @@
 
 Describes the EAP information.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eap-interface EapData--><!--Device-eap-interface EapData-End-->
 
@@ -26,9 +28,11 @@ EAP packet length.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapData-bufferLen: number--><!--Device-EapData-bufferLen: number-End-->
 
@@ -44,9 +48,11 @@ EAP packet buffer.
 
 **Type:** Uint8Array
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapData-eapBuffer: Uint8Array--><!--Device-EapData-eapBuffer: Uint8Array-End-->
 
@@ -62,9 +68,11 @@ EAP message ID.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EapData-msgId: number--><!--Device-EapData-msgId: number-End-->
 

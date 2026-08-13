@@ -6,6 +6,8 @@ Describes the object returned after the callback is triggered when an image is s
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ImageLoadResult--><!--Device-unnamed-declare interface ImageLoadResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Describes the object returned after the callback is triggered when an image is s
 componentHeight: number
 ```
 
-Height of the component.
-
-Unit: [px](common)
+Height of the component. Unit: px
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,15 @@ Unit: [px](common)
 componentWidth: number
 ```
 
-Width of the component.
-
-Unit: [px](common)
+Width of the component. Unit: px
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,19 +66,15 @@ Unit: [px](common)
 contentHeight: number
 ```
 
-Actual rendered height of the image.
-
-Unit: [px](common)
-
-**NOTE：**
-
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Actual rendered height of the image. Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,19 +90,15 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentOffsetX: number
 ```
 
-Offset of the rendered content relative to the component on the x-axis.
-
-Unit: [px](common)
-
-**NOTE：**
-
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Offset of the rendered content relative to the component on the x-axis. Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,19 +114,15 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentOffsetY: number
 ```
 
-Offset of the rendered content relative to the component on the y-axis
-
-Unit: [px](common)
-
-**NOTE：**
-
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Offset of the rendered content relative to the component on the y-axis Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,19 +138,15 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentWidth: number
 ```
 
-Actual rendered width of the image.
-
-Unit: [px](common)
-
-**NOTE：**
-
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Actual rendered width of the image. Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,15 +162,15 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 height: number
 ```
 
-Height of the image.
-
-Unit: [px](common)
+Height of the image. Unit: px
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,17 +186,15 @@ Unit: [px](common)
 loadingStatus: number
 ```
 
-Loading status of the image.
-
-**NOTE：**
-
-If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
+Loading status of the image. **NOTE：**If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,15 +210,15 @@ If the return value is **0**, the image is successfully loaded. If the return va
 width: number
 ```
 
-Width of the image.
-
-Unit: [px](common)
+Width of the image. Unit: px
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

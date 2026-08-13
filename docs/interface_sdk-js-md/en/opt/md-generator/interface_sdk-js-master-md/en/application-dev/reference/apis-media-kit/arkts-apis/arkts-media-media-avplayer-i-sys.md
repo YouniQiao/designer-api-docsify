@@ -1,17 +1,10 @@
 # AVPlayer
 
-AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use   
-[createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer) to create an AVPlayer instance.
+AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer) to create an AVPlayer instance. When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate): listens for AVPlayer state changes. [on('error')](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate): listens for error events. Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources. For details about the audio and video playback demo, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md) and [Video Playback](../../../media/media/video-playback.md).
 
-When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)): listens for AVPlayer state changes. [on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback)):listens for error events.
+**Since:** 23
 
-Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources.
-
-For details about the audio and video playback demo, see   
-[Audio Playback](../../../media/media/using-avplayer-for-playback.md) and   
-[Video Playback](../../../media/media/video-playback.md).
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
 
@@ -33,6 +26,8 @@ Enable the post-processing function of Camera for video playback.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,9 +48,9 @@ Enable the post-processing function of Camera for video playback.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## forceLoadVideo
 
@@ -66,6 +61,8 @@ forceLoadVideo(force: boolean): Promise<void>
 Specifies whether to forcibly load the video. This API can be called only when the AVPlayer is in the prepared, playing, or paused state. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,7 +88,7 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## enableStartFrameRateOpt
 
@@ -104,6 +101,8 @@ Whether a slower synchronization policy is used at the start of playback to redu
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

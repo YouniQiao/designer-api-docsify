@@ -6,17 +6,13 @@
 function downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void
 ```
 
-创建并启动一个下载任务，使用callback异步回调，支持HTTP协议。通过  
-[on('complete'|'pause'|'remove')](request.DownloadTask.on(type: 'complete' | 'pause' | 'remove', callback: () => void))可获取任务下载时的状态信息，包括任务完成、暂停或移除。通过  
-[on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void))可获取任务下载时的错误信息。
+创建并启动一个下载任务，使用callback异步回调，支持HTTP协议。通过 on('complete'|'pause'|'remove') 可获取任务下载时的状态信息，包括任务完成、暂停或移除。通过 on('fail')可获取任务下载时的错误信息。 > **说明：** > > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
-> **说明：**
-> 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -30,17 +26,17 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 基于应用程序的上下文。 |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 | 下载的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 是 | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 是 | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
-| [13400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
-| [13400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
-| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
 
@@ -99,17 +95,13 @@ try {
 function downloadFile(context: BaseContext, config: DownloadConfig): Promise<DownloadTask>
 ```
 
-创建并启动一个下载任务，使用Promise异步回调，支持HTTP协议。通过  
-[on('complete'|'pause'|'remove')](request.DownloadTask.on(type: 'complete' | 'pause' | 'remove', callback: () => void))可以获取任务下载时的状态信息，包括任务完成、暂停或移除。通过  
-[on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void))可以获取任务下载时的错误信息。
+创建并启动一个下载任务，使用Promise异步回调，支持HTTP协议。通过 on('complete'|'pause'|'remove') 可以获取任务下载时的状态信息，包括任务完成、暂停或移除。通过 on('fail')可以获取任务下载时的错误信息。 > **说明：** > > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
-> **说明：**
-> 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -134,11 +126,11 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
-| [13400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
-| [13400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
-| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
 

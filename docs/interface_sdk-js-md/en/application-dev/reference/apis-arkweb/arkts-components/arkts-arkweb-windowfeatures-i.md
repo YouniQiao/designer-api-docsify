@@ -6,6 +6,8 @@ Represents the feature information of the new window requested to be created by 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface WindowFeatures--><!--Device-unnamed-declare interface WindowFeatures-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Height of the new window. Unit:pixels.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowFeatures-height: number--><!--Device-WindowFeatures-height: number-End-->
 
@@ -42,6 +46,8 @@ Width of the new window. Unit:pixels.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-WindowFeatures-width: number--><!--Device-WindowFeatures-width: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -60,6 +66,8 @@ X coordinate of the top-left corner of the new window. Unit:pixels.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-WindowFeatures-x: number--><!--Device-WindowFeatures-x: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -77,6 +85,8 @@ Y coordinate of the top-left corner of the new window. Unit:pixels.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WindowFeatures-y: number--><!--Device-WindowFeatures-y: number-End-->
 

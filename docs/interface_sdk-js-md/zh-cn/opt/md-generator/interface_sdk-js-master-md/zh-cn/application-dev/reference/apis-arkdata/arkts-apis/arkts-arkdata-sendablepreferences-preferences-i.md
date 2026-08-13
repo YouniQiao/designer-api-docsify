@@ -1,14 +1,14 @@
 # Preferences
 
-Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable)，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，提供获取和修改存储数据的接口。
+Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable)，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线 程）传递，传递的行为是引用传递，提供获取和修改存储数据的接口。 下列接口都需先使用[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)获取到Preferences实例，再通过此实例调用对应接 口。
 
-下列接口都需先使用[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)获取到Preferences实例，再通过此实例调用对应接口。
-
-**继承/实现关系：** Preferences extends [lang.ISendable](lang.ISendable)
+**继承/实现关系：** Preferences extends lang.ISendable
 
 **起始版本：** 12
 
-<!--Device-sendablePreferences-interface Preferences extends lang.ISendable--><!--Device-sendablePreferences-interface Preferences extends lang.ISendable-End-->
+**废弃版本：** -1
+
+<!--Device-sendablePreferences-interface Preferences--><!--Device-sendablePreferences-interface Preferences-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -21,6 +21,8 @@ clear(): Promise<void>
 清除缓存的Preferences实例中的所有数据，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,7 +40,7 @@ clear(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -63,6 +65,8 @@ clearSync(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Preferences-clearSync(): void--><!--Device-Preferences-clearSync(): void-End-->
@@ -73,7 +77,7 @@ clearSync(): void
 
 | 错误码ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -87,9 +91,11 @@ preferences.clearSync();
 delete(key: string): Promise<void>
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
+从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，使用 Promise异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -113,8 +119,8 @@ delete(key: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -135,9 +141,11 @@ promise.then(() => {
 deleteSync(key: string): void
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
+从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，此为同步接 口。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -155,8 +163,8 @@ deleteSync(key: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -170,13 +178,11 @@ preferences.deleteSync('startup');
 flush(): Promise<void>
 ```
 
-将缓存的Preferences实例中的数据异步存储到共享用户首选项的持久化文件中，使用Promise异步回调。
-
-> **说明：**
-> 
-> 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
+将缓存的Preferences实例中的数据异步存储到共享用户首选项的持久化文件中，使用Promise异步回调。 > **说明：** > > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -194,7 +200,7 @@ flush(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -215,13 +221,11 @@ promise.then(() => {
 flushSync(): void
 ```
 
-将缓存的Preferences实例中的数据存储到共享用户首选项的持久化文件中。
-
-> **说明：**
-> 
-> 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
+将缓存的Preferences实例中的数据存储到共享用户首选项的持久化文件中。 > **说明：** > > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -233,7 +237,7 @@ flushSync(): void
 
 | 错误码ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -250,6 +254,8 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 从缓存的Preferences实例中获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue，使用Promise异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -274,8 +280,8 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -302,6 +308,8 @@ getAll(): Promise<lang.ISendable>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Preferences-getAll(): Promise<lang.ISendable>--><!--Device-Preferences-getAll(): Promise<lang.ISendable>-End-->
@@ -318,7 +326,7 @@ getAll(): Promise<lang.ISendable>
 
 | 错误码ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -346,6 +354,8 @@ getAllSync(): lang.ISendable
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Preferences-getAllSync(): lang.ISendable--><!--Device-Preferences-getAllSync(): lang.ISendable-End-->
@@ -362,7 +372,7 @@ getAllSync(): lang.ISendable
 
 | 错误码ID |
 | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -384,6 +394,8 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 从缓存的Preferences实例中获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue，此为同步接口。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -408,8 +420,8 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -428,6 +440,8 @@ has(key: string): Promise<boolean>
 检查缓存的Preferences实例中是否包含名为给定Key的存储键值对，使用Promise异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -451,8 +465,8 @@ has(key: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -481,6 +495,8 @@ hasSync(key: string): boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Preferences-hasSync(key: string): boolean--><!--Device-Preferences-hasSync(key: string): boolean-End-->
@@ -503,8 +519,8 @@ hasSync(key: string): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -517,7 +533,7 @@ if (isExist) {
 }
 ```
 
-## off('change')
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: Callback<string>): void
@@ -526,6 +542,8 @@ off(type: 'change', callback?: Callback<string>): void
 取消订阅数据变更。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -544,8 +562,8 @@ off(type: 'change', callback?: Callback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -565,57 +583,7 @@ preferences.flush().then(() => {
 });
 ```
 
-## off('multiProcessChange')
-
-```TypeScript
-off(type: 'multiProcessChange', callback?: Callback<string>): void
-```
-
-取消订阅进程间数据变更。
-
-本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'multiProcessChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'auto');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('multiProcessChange', observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## off('dataChange')
+## off_dataChange
 
 ```TypeScript
 off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void
@@ -624,6 +592,8 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 取消精确订阅数据变更。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -643,8 +613,8 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -667,28 +637,67 @@ preferences.flush().then(() => {
 });
 ```
 
-## on('change')
+## off_multiProcessChange
+
+```TypeScript
+off(type: 'multiProcessChange', callback?: Callback<string>): void
+```
+
+取消订阅进程间数据变更。 本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'multiProcessChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'auto');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('multiProcessChange', observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## on_change
 
 ```TypeScript
 on(type: 'change', callback: Callback<string>): void
 ```
 
-订阅数据变更，订阅的Key的值发生变更后，在执行flush方法后，触发callback回调。
-
-> **不同订阅方法的对比：**
-> 
-> - on('change')：订阅所有Key变化，适合全局数据变化感知需求。
-> 
-> - on('dataChange')：精确订阅指定Key的变化，适合关注特定数据场景，可回调返回具体值。
-> 
-> **选取建议：** 需要监听所有数据变更时使用on('change')；需要精确知道特定Key变化并获取新值时使用on('dataChange')。
-> > **说明：**
-> 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者
-> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
+订阅数据变更，订阅的Key的值发生变更后，在执行flush方法后，触发callback回调。 > **不同订阅方法的对比：** > > - on('change')：订阅所有Key变化，适合全局数据变化感知需求。 > > - on('dataChange')：精确订阅指定Key的变化，适合关注特定数据场景，可回调返回具体值。 > > **选取建议：** 需要监听所有数据变更时使用on('change')；需要精确知道特定Key变化并获取新值时使用on('dataChange')。 > > **说明：** > > 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者 > [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -707,8 +716,8 @@ on(type: 'change', callback: Callback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -727,79 +736,17 @@ preferences.flush().then(() => {
 });
 ```
 
-## on('multiProcessChange')
-
-```TypeScript
-on(type: 'multiProcessChange', callback: Callback<string>): void
-```
-
-订阅进程间数据变更，多个进程持有同一个首选项文件时，在任意一个进程（包括本进程）执行[flush](#flush)方法，持久化文件发生变更后，触发callback回调。
-
-本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
-
-> **说明：**
-> 
-> 同一持久化文件在当前进程订阅进程间数据变更的最大数量为50次，超过最大限制后会订阅失败。建议在触发callback回调后及时取消订阅。
-> 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者
-> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'multiProcessChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
-| [15500019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500019-获取订阅服务失败) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'manual');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## on('dataChange')
+## on_dataChange
 
 ```TypeScript
 on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void
 ```
 
-精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](#flush)方法后，触发callback回调。
-
-> **说明：**
-> 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者
-> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
+精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](#flush)方法后，触发callback回调。 > **说明：** > > 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者 > [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -819,8 +766,8 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -842,21 +789,67 @@ preferences.flush().then(() => {
 });
 ```
 
+## on_multiProcessChange
+
+```TypeScript
+on(type: 'multiProcessChange', callback: Callback<string>): void
+```
+
+订阅进程间数据变更，多个进程持有同一个首选项文件时，在任意一个进程（包括本进程）执行[flush](#flush)方法，持久化文件发生变更后，触发 callback回调。 本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。 > **说明：** > > 同一持久化文件在当前进程订阅进程间数据变更的最大数量为50次，超过最大限制后会订阅失败。建议在触发callback回调后及时取消订阅。 > > 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者 > [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'multiProcessChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'manual');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## put
 
 ```TypeScript
 put(key: string, value: lang.ISendable): Promise<void>
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
-
-> **说明：**
-> 
-> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
-> 
-> 当对应的键已经存在时，put()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
+将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。 > **说明：** > > 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。 > > 当对应的键已经存在时，put()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -881,8 +874,8 @@ put(key: string, value: lang.ISendable): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -903,15 +896,11 @@ promise.then(() => {
 putSync(key: string, value: lang.ISendable): void
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
-
-> **说明：**
-> 
-> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
-> 
-> 当对应的键已经存在时，putSync()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
+将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。 > **说明：** > > 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。 > > 当对应的键已经存在时，putSync()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -930,8 +919,8 @@ putSync(key: string, value: lang.ISendable): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 

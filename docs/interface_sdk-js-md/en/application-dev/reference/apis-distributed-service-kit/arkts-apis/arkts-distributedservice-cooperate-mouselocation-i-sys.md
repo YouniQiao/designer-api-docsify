@@ -2,9 +2,11 @@
 
 Defines the mouse pointer position for screen hopping.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cooperate-interface MouseLocation--><!--Device-cooperate-interface MouseLocation-End-->
 
@@ -26,11 +28,13 @@ displayHeight: int
 
 Screen height, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayHeight: int--><!--Device-MouseLocation-displayHeight: int-End-->
 
@@ -46,11 +50,13 @@ displayWidth: int
 
 Screen width, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayWidth: int--><!--Device-MouseLocation-displayWidth: int-End-->
 
@@ -66,11 +72,13 @@ displayX: int
 
 Position of the mouse pointer on the X coordinate of the screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayX: int--><!--Device-MouseLocation-displayX: int-End-->
 
@@ -86,11 +94,13 @@ displayY: int
 
 Position of the mouse pointer on the Y coordinate of the screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MouseLocation-displayY: int--><!--Device-MouseLocation-displayY: int-End-->
 

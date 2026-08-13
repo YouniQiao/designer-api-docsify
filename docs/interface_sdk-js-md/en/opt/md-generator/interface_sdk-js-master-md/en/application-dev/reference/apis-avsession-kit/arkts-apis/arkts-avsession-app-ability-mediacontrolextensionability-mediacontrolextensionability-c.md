@@ -4,11 +4,13 @@ The class of media control extension ability.
 
 **Inheritance/Implementation:** MediaControlExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export default class MediaControlExtensionAbility extends UIExtensionAbility--><!--Device-unnamed-export default class MediaControlExtensionAbility extends UIExtensionAbility-End-->
+<!--Device-unnamed-export default class MediaControlExtensionAbility--><!--Device-unnamed-export default class MediaControlExtensionAbility-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 

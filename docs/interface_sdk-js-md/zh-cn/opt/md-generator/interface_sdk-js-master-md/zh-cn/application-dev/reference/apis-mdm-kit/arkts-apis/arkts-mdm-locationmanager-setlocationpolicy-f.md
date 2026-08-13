@@ -6,17 +6,11 @@
 function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 ```
 
-设置位置服务管理策略。可用于企业管控场景，如：在涉密区域禁用位置服务以保护信息安全，或在物流配送应用中强制开启位置服务以追踪设备位置。
-
-> **说明：**
-> 
-> - 禁用：在需要保护隐私或节省电量的场景下设置。
-> 
-> - 强制开启：在设备安全追踪、资产管理等场景下设置。
-> 
-> - 默认：取消策略限制，由用户自主控制。
+设置位置服务管理策略。可用于企业管控场景，如：在涉密区域禁用位置服务以保护信息安全，或在物流配送应用中强制开启位置服务以追踪设备位置。 > **说明：** > > - 禁用：在需要保护隐私或节省电量的场景下设置。 > > - 强制开启：在设备安全追踪、资产管理等场景下设置。 > > - 默认：取消策略限制，由用户自主控制。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -37,10 +31,10 @@ function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

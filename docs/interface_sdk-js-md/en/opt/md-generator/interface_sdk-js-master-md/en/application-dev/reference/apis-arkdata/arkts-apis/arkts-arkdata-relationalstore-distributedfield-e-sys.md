@@ -4,6 +4,8 @@ Enumerates the DistributedField.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-relationalStore-enum DistributedField--><!--Device-relationalStore-enum DistributedField-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -16,9 +18,11 @@ Enumerates the DistributedField.
 ORIGIN = '#_origin'
 ```
 
-Origin field. For details, see [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md#DistributedOrigin).
+Origin field. For details, see [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md#DistributedOrigin-(System-API)).
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,9 +38,11 @@ Origin field. For details, see [DistributedOrigin](arkts-arkdata-relationalstore
 ORIGIN_ORIDEVICE = '#_ori_device'
 ```
 
-Origin device field.Indicates the data origin sources device ID.
+Origin device field. Indicates the data origin sources device ID.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,11 +58,11 @@ Origin device field.Indicates the data origin sources device ID.
 CURSOR_FIELD = '#_cursor'
 ```
 
-Cursor field.
-
-This parameter can be used as the input parameter of the predicate of the query interface and as the query filter condition.
+Cursor field. This parameter can be used as the input parameter of the predicate of the query interface and as the query filter condition.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,6 +81,8 @@ DELETED_FLAG_FIELD = '#_deleted_flag'
 Indicates whether data has been deleted.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

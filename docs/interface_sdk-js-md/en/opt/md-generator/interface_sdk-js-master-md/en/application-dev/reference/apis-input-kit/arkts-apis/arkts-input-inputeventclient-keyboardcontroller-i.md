@@ -1,10 +1,10 @@
 # KeyboardController
 
-Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements:
-
-1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and has not been released.2. A key can only be released after it has been pressed.3. A maximum of five keys can be pressed and held simultaneously.
+Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements: 1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and has not been released. 2. A key can only be released after it has been pressed. 3. A maximum of five keys can be pressed and held simultaneously.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-inputEventClient-interface KeyboardController--><!--Device-inputEventClient-interface KeyboardController-End-->
 
@@ -25,6 +25,8 @@ pressKey(keyCode: KeyCode): Promise<void>
 Presses a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -50,9 +52,9 @@ Presses a key. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -97,6 +99,8 @@ Releases a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -121,10 +125,10 @@ Releases a key. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-For details, see [pressKey](#presskey).
+For details, see [pressKey](#pressKey).

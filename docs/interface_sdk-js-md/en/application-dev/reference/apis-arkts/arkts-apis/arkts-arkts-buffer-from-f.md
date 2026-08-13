@@ -14,9 +14,11 @@ function from(array: double[]): Buffer
 
 Creates a **Buffer** object with the specified array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -28,7 +30,7 @@ Creates a **Buffer** object with the specified array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | Yes | Array to create a **Buffer** object. |
+| array | double[] | Yes | Array to create a **Buffer** object. |
 
 **Return value:**
 
@@ -59,6 +61,8 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer-End-->
@@ -83,7 +87,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
 
 ## Examples
 
@@ -106,7 +110,9 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -132,7 +138,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
 
 
 ## from
@@ -141,11 +147,13 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 function from(buffer: Buffer | Uint8Array): Buffer
 ```
 
-Copies the data of a passed **Buffer** object to create a new **Buffer** object and returns the new one.Creates a **Buffer** object based on the memory of a passed **Uint8Array** object and returns the new object,maintaining the memory association of the data.
+Copies the data of a passed **Buffer** object to create a new **Buffer** object and returns the new one. Creates a **Buffer** object based on the memory of a passed **Uint8Array** object and returns the new object, maintaining the memory association of the data.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -191,9 +199,11 @@ function from(object: Object, offsetOrEncoding: int | string, length: int): Buff
 
 Creates a **Buffer** object based on the specified object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -206,8 +216,8 @@ Creates a **Buffer** object based on the specified object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | object | Object | Yes | Object that supports **Symbol.toPrimitive** or **valueOf()**. |
-| offsetOrEncoding | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | Yes | Byte offset or encoding format. |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the **Buffer** object to create, in bytes. This parameter is valid only when the return value of **valueOf()** of **object** is **ArrayBuffer**. Value range: 0 <= length <= ArrayBuffer.byteLength. Error 10200001 is reported if a value outside this range is reported. In other cases, you can set this parameter to any value of the number type. This parameter does not affect the result. |
+| offsetOrEncoding | int \| string | Yes | Byte offset or encoding format. |
+| length | int | Yes | Length of the **Buffer** object to create, in bytes. This parameter is valid only when the return value of **valueOf()** of **object** is **ArrayBuffer**. Value range: 0 <= length <= ArrayBuffer.byteLength. Error 10200001 is reported if a value outside this range is reported. In other cases, you can set this parameter to any value of the number type. This parameter does not affect the result. |
 
 **Return value:**
 
@@ -233,9 +243,11 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 Creates a **Buffer** object based on a string in the given encoding format.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

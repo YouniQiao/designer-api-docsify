@@ -8,7 +8,7 @@ Describes the Gatt descriptor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BLEDescriptor](ohos.bluetoothManager/bluetoothManager.BLEDescriptor)
+**Substitutes:** [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.md#BLEDescriptor)
 
 <!--Device-bluetooth-interface BLEDescriptor--><!--Device-bluetooth-interface BLEDescriptor-End-->
 
@@ -36,7 +36,7 @@ The UUID of the [BLECharacteristic](arkts-connectivity-bluetooth-blecharacterist
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicUuid](ohos.bluetoothManager/bluetoothManager.BLEDescriptor.characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-bluetoothmanager-bledescriptor-i.md#characteristicUuid)
 
 <!--Device-BLEDescriptor-characteristicUuid: string--><!--Device-BLEDescriptor-characteristicUuid: string-End-->
 
@@ -58,7 +58,7 @@ The UUID of the BLEDescriptor instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptorUuid](ohos.bluetoothManager/bluetoothManager.BLEDescriptor.descriptorUuid)
+**Substitutes:** [descriptorUuid](arkts-connectivity-bluetoothmanager-bledescriptor-i.md#descriptorUuid)
 
 <!--Device-BLEDescriptor-descriptorUuid: string--><!--Device-BLEDescriptor-descriptorUuid: string-End-->
 
@@ -80,7 +80,7 @@ The value of the BLEDescriptor instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptorValue](ohos.bluetoothManager/bluetoothManager.BLEDescriptor.descriptorValue)
+**Substitutes:** [descriptorValue](arkts-connectivity-bluetoothmanager-bledescriptor-i.md#descriptorValue)
 
 <!--Device-BLEDescriptor-descriptorValue: ArrayBuffer--><!--Device-BLEDescriptor-descriptorValue: ArrayBuffer-End-->
 
@@ -102,7 +102,7 @@ The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md#Gatt
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.BLEDescriptor.serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-bledescriptor-i.md#serviceUuid)
 
 <!--Device-BLEDescriptor-serviceUuid: string--><!--Device-BLEDescriptor-serviceUuid: string-End-->
 

@@ -2,9 +2,11 @@
 
 Euicc OS upgrade status.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export enum OsuStatus--><!--Device-eSIM-export enum OsuStatus-End-->
 
@@ -20,9 +22,11 @@ EUICC_UPGRADE_IN_PROGRESS = 1
 
 The OS upgrade is in progress.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OsuStatus-EUICC_UPGRADE_IN_PROGRESS = 1--><!--Device-OsuStatus-EUICC_UPGRADE_IN_PROGRESS = 1-End-->
 
@@ -38,9 +42,11 @@ EUICC_UPGRADE_FAILED = 2
 
 The OS upgrade failed.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OsuStatus-EUICC_UPGRADE_FAILED = 2--><!--Device-OsuStatus-EUICC_UPGRADE_FAILED = 2-End-->
 
@@ -56,9 +62,11 @@ EUICC_UPGRADE_SUCCESSFUL = 3
 
 The OS upgrade successful.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OsuStatus-EUICC_UPGRADE_SUCCESSFUL = 3--><!--Device-OsuStatus-EUICC_UPGRADE_SUCCESSFUL = 3-End-->
 
@@ -74,9 +82,11 @@ EUICC_UPGRADE_ALREADY_LATEST = 4
 
 The OS upgrade not needed since current eUICC OS is latest.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OsuStatus-EUICC_UPGRADE_ALREADY_LATEST = 4--><!--Device-OsuStatus-EUICC_UPGRADE_ALREADY_LATEST = 4-End-->
 
@@ -92,9 +102,11 @@ EUICC_UPGRADE_SERVICE_UNAVAILABLE = 5
 
 The OS upgrade status is unavailable since eUICC service is unavailable.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OsuStatus-EUICC_UPGRADE_SERVICE_UNAVAILABLE = 5--><!--Device-OsuStatus-EUICC_UPGRADE_SERVICE_UNAVAILABLE = 5-End-->
 

@@ -2,7 +2,9 @@
 
 Axis aligned boundary box used to determine whether two objects in space are overlapping.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Aabb--><!--Device-unnamed-export interface Aabb-End-->
 
@@ -18,7 +20,9 @@ Maximum point of the axis-aligned bounding box, in scene units of the world coor
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Aabb-aabbMax: Vec3--><!--Device-Aabb-aabbMax: Vec3-End-->
 
@@ -34,7 +38,9 @@ Minimum point of the axis-aligned bounding box, in scene units of the world coor
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Aabb-aabbMin: Vec3--><!--Device-Aabb-aabbMin: Vec3-End-->
 

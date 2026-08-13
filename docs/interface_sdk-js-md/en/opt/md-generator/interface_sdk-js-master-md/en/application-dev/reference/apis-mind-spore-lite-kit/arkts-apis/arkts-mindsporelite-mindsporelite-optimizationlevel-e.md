@@ -2,7 +2,9 @@
 
 Enum for optimization level
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-export enum OptimizationLevel--><!--Device-mindSporeLite-export enum OptimizationLevel-End-->
 
@@ -16,7 +18,9 @@ O0 = 0
 
 Do not change
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ O2 = 2
 
 Cast network to float16, keep batch norm and loss in float32
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ O3 = 3
 
 Cast network to float16, including batch norm
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +72,9 @@ AUTO = 4
 
 Choose optimization based on device
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

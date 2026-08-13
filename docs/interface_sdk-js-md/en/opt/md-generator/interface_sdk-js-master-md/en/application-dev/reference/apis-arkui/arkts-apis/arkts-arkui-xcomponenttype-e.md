@@ -4,6 +4,8 @@ The type of XComponent
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum XComponentType--><!--Device-unnamed-declare enum XComponentType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SURFACE
 Surface type. The default type is used.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,9 +58,11 @@ Component type.
 TEXTURE
 ```
 
-Texture type.Supports EGL/OpenGLES and media data rendering.Custom drawing content is composited with XComponent’s native content before display.Key features:1. Maintains frame synchronization between GPU textures and ArkUI drawing commands.2. Supports unified animation with built-in components.3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type  using the display subsystem (DSS).
+Texture type. Supports EGL/OpenGLES and media data rendering. Custom drawing content is composited with XComponent’s native content before display. Key features: 1. Maintains frame synchronization between GPU textures and ArkUI drawing commands. 2. Supports unified animation with built-in components. 3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type using the display subsystem (DSS).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +84,7 @@ Node type.
 
 **Deprecated since:** 20
 
-**Substitutes:** [ContentSlot](ContentSlot)
+**Substitutes:** [ContentSlot](../arkts-components/arkts-arkui-content-t.md#ContentSlot)
 
 **Model restriction:** This API can be used only in the stage model.
 

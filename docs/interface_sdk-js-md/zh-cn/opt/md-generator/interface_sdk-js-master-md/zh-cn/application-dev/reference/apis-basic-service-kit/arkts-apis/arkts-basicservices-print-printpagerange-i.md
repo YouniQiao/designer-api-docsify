@@ -2,7 +2,9 @@
 
 定义打印范围的接口。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-interface PrintPageRange--><!--Device-print-interface PrintPageRange-End-->
 
@@ -18,7 +20,9 @@ endPage?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintPageRange-endPage?: int--><!--Device-PrintPageRange-endPage?: int-End-->
 
@@ -34,7 +38,9 @@ pages?: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintPageRange-pages?: Array<int>--><!--Device-PrintPageRange-pages?: Array<int>-End-->
 
@@ -50,7 +56,9 @@ startPage?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintPageRange-startPage?: int--><!--Device-PrintPageRange-startPage?: int-End-->
 

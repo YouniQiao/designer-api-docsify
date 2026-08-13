@@ -1,9 +1,10 @@
 # TextStyle
 
-Represents a text style, which controls the visual appearance attributes of text, including font, color, font size,spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushStyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
+Represents a text style, which controls the visual appearance attributes of text, including font, color, font size, spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushStyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface TextStyle--><!--Device-text-interface TextStyle-End-->
 
@@ -25,7 +26,9 @@ Text rectangle style. Pass this parameter when you need to add a background rect
 
 **Type:** [RectStyle](arkts-arkgraphics2d-text-rectstyle-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -39,11 +42,13 @@ Text rectangle style. Pass this parameter when you need to add a background rect
 badgeType?: TextBadgeType
 ```
 
-Sets whether to use superscript or subscript in text layout. **TEXT_SUPERSCRIPT** indicates that superscript is enabled, and **TEXT_SUBSCRIPT** indicates that subscript is enabled. The default value is **TEXT_BADGE_NONE**,indicating that neither superscript nor subscript is enabled.
+Sets whether to use superscript or subscript in text layout. **TEXT_SUPERSCRIPT** indicates that superscript is enabled, and **TEXT_SUBSCRIPT** indicates that subscript is enabled. The default value is **TEXT_BADGE_NONE**, indicating that neither superscript nor subscript is enabled.
 
 **Type:** [TextBadgeType](arkts-arkgraphics2d-text-textbadgetype-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -61,7 +66,9 @@ Text baseline type. The default value is **ALPHABETIC**.
 
 **Type:** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -79,7 +86,9 @@ Vertical offset distance of the text baseline, in physical pixels (px). The defa
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -97,7 +106,9 @@ Text color. The default color is white.
 
 **Type:** common2D.Color
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -115,7 +126,9 @@ Text decoration. By default, no decoration is used.
 
 **Type:** [Decoration](arkts-arkgraphics2d-text-decoration-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -133,7 +146,9 @@ Ellipsis text. When the ellipsis takes effect, this field value replaces the ell
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -151,7 +166,9 @@ Ellipsis type. The default value is **END**, indicating that the ellipsis is at 
 
 **Type:** EllipsisMode
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -171,6 +188,8 @@ Edge processing mode for drawing texts. The default value is **ANTI_ALIAS**.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -185,11 +204,13 @@ Edge processing mode for drawing texts. The default value is **ANTI_ALIAS**.
 fontFamilies?: Array<string>
 ```
 
-List of font family names. The default value is empty, which matches the system font. When using a custom font,specify the name used when loading the font in this list. When set together with fontTypefaces, fontTypefaces takes precedence and fontFamilies does not take effect.
+List of font family names. The default value is empty, which matches the system font. When using a custom font, specify the name used when loading the font in this list. When set together with fontTypefaces, fontTypefaces takes precedence and fontFamilies does not take effect.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -207,7 +228,9 @@ Array of text font features. Pass this parameter when you need to enable or disa
 
 **Type:** Array&lt;FontFeature&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -225,7 +248,9 @@ Font size, a floating-point value with a default value of **14.0**, measured in 
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -243,7 +268,9 @@ Font style. The default value is **NORMAL**.
 
 **Type:** FontStyle
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -257,13 +284,13 @@ Font style. The default value is **NORMAL**.
 fontTypefaces?: Array<drawing.Typeface>
 ```
 
-Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used.
-
-When fontTypefaces is set together with [TextStyle](#TextStyle).fontFamilies, fontTypefaces takes precedence.
+Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used. When fontTypefaces is set together with [TextStyle](#TextStyle).fontFamilies, fontTypefaces takes precedence.
 
 **Type:** Array&lt;drawing.Typeface&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -283,7 +310,9 @@ Array of variable font properties. Pass this parameter when you need to adjust t
 
 **Type:** Array&lt;FontVariation&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -301,7 +330,9 @@ Font weight. The default value is W400. Before &lt;!--RP1--&gt;OpenHarmony 6.1&l
 
 **Type:** FontWeight
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -319,7 +350,9 @@ Font width. The default value is **NORMAL**.
 
 **Type:** [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md)
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -337,7 +370,9 @@ Whether half leading is enabled. Half leading is the leading split in half and a
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -355,7 +390,9 @@ The value **true** means the text box height is set based on the font size and h
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -373,7 +410,9 @@ Scale factor of the line height. The value is a floating point number. The defau
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -391,7 +430,9 @@ Character spacing, a floating-point value in physical pixels (px) with a default
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -409,7 +450,9 @@ Maximum line height, in physical pixels (px). If the line height is scaled, the 
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -427,7 +470,9 @@ Minimum line height, in physical pixels (px). If the line height is scaled, the 
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -445,7 +490,9 @@ Scaling base style of the line height. The default value is **FONT_SIZE**.
 
 **Type:** LineHeightStyle
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -459,12 +506,13 @@ Scaling base style of the line height. The default value is **FONT_SIZE**.
 locale?: string
 ```
 
-Language type. For example, **'en-Latn'** indicates English (Latin script), **'zh-Hans'** indicates Simplified Chinese, and **'zh-Hant'** indicates Traditional Chinese. Supports two-segment language tags in the language-script format, where language complies with the ISO 639-1 standard and script complies with the ISO 15924standard. If the locale is not specified, set to an empty string, or set to **undefined**, the default locale is  
-**'zh-Hans'**.
+Language type. For example, **'en-Latn'** indicates English (Latin script), **'zh-Hans'** indicates Simplified Chinese, and **'zh-Hant'** indicates Traditional Chinese. Supports two-segment language tags in the language- script format, where language complies with the ISO 639-1 standard and script complies with the ISO 15924 standard. If the locale is not specified, set to an empty string, or set to **undefined**, the default locale is **'zh-Hans'**.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -482,7 +530,9 @@ Array of text shadows. Pass this parameter when you need to add shadow effects t
 
 **Type:** Array&lt;[TextShadow](arkts-arkgraphics2d-text-textshadow-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -500,7 +550,9 @@ Word spacing, a floating-point value in physical pixels (px) with a default valu
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

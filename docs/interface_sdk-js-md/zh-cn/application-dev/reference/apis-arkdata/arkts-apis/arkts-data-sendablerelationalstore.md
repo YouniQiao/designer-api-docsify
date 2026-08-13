@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace sendableRelationalStore--><!--Device-unnamed-declare namespace sendableRelationalStore-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -16,18 +18,18 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [fromSendableAsset](arkts-arkdata-sendablerelationalstore-fromsendableasset-f.md#fromsendableasset) | 将可跨线程传递的附件数据，转换为不可跨线程传递的附件数据。 |
-| [fromSendableValues](arkts-arkdata-sendablerelationalstore-fromsendablevalues-f.md#fromsendablevalues) | 将可跨线程传递的数组数据，转换为不可跨线程传递的数组数据。 |
-| [fromSendableValuesBucket](arkts-arkdata-sendablerelationalstore-fromsendablevaluesbucket-f.md#fromsendablevaluesbucket) | 将可用于跨线程传递的键值对数据，转换为不能用于跨线程传递的键值对数据。 |
-| [toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) | 将不可跨线程传递的附件数据，转换为可跨线程传递的附件数据。 |
-| [toSendableValues](arkts-arkdata-sendablerelationalstore-tosendablevalues-f.md#tosendablevalues) | 将不可跨线程传递的数组数据，转换为可跨线程传递的数组数据。 |
-| [toSendableValuesBucket](arkts-arkdata-sendablerelationalstore-tosendablevaluesbucket-f.md#tosendablevaluesbucket) | 将不能用于跨线程传递的键值对数据，转换为可用于跨线程传递的键值对数据。 |
+| [fromSendableAsset](arkts-arkdata-sendablerelationalstore-fromsendableasset-f.md#fromSendableAsset) | 将可跨线程传递的附件数据，转换为不可跨线程传递的附件数据。 |
+| [fromSendableValues](arkts-arkdata-sendablerelationalstore-fromsendablevalues-f.md#fromSendableValues) | 将可跨线程传递的数组数据，转换为不可跨线程传递的数组数据。 |
+| [fromSendableValuesBucket](arkts-arkdata-sendablerelationalstore-fromsendablevaluesbucket-f.md#fromSendableValuesBucket) | 将可用于跨线程传递的键值对数据，转换为不能用于跨线程传递的键值对数据。 |
+| [toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#toSendableAsset) | 将不可跨线程传递的附件数据，转换为可跨线程传递的附件数据。 |
+| [toSendableValues](arkts-arkdata-sendablerelationalstore-tosendablevalues-f.md#toSendableValues) | 将不可跨线程传递的数组数据，转换为可跨线程传递的数组数据。 |
+| [toSendableValuesBucket](arkts-arkdata-sendablerelationalstore-tosendablevaluesbucket-f.md#toSendableValuesBucket) | 将不能用于跨线程传递的键值对数据，转换为可用于跨线程传递的键值对数据。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 记录资产附件（文件、图片、视频等类型文件）的相关信息。用于支持资产数据跨线程传递，继承自  [lang.ISendable](../../../reference/apis-arkts/js-apis-arkts-lang.md#langisendable)。资产类型的相关接口暂不支持Datashare。使用  [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#toSendableAsset)方法创建。 |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 记录资产附件（文件、图片、视频等类型文件）的相关信息。用于支持资产数据跨线程传递，继承自 lang.ISendable。资产类型的相关接口暂不支持Datashare。使用 [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#toSendableAsset)方法创建。 |
 
 ### 类型
 

@@ -6,15 +6,11 @@
 function generateKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void
 ```
 
-生成密钥。使用callback异步回调。
-
-基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
-
-> **说明：**
-> 
-> 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
+生成密钥。使用callback异步回调。 基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。 > **说明：** > > 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,27 +30,27 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 
 | 错误码ID |
 | --- |
-| [12000023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000023-ukey-pin码未认证) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000021-ukey-pin码被锁定) |
-| [12000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [12000017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000017-同名密钥已存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12000026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000026-安全元件故障) |
-| [12000024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-设备或资源繁忙) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) |
-| [12000003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-无效的密钥算法参数) |
-| [12000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-缺少密钥算法参数) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-该子功能不支持特性) |
-| [12000015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000015-调用其他系统服务失败) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) |
+| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) |
+| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) |
+| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
 
 ## 示例
 
@@ -186,15 +182,11 @@ export default {
 function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 ```
 
-生成密钥。使用Promise异步回调。
-
-基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
-
-> **说明：**
-> 
-> 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
+生成密钥。使用Promise异步回调。 基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。 > **说明：** > > 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -219,27 +211,27 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 | 错误码ID |
 | --- |
-| [12000023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000023-ukey-pin码未认证) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000021-ukey-pin码被锁定) |
-| [12000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [12000017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000017-同名密钥已存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12000026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000026-安全元件故障) |
-| [12000024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-设备或资源繁忙) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) |
-| [12000003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-无效的密钥算法参数) |
-| [12000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-缺少密钥算法参数) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-该子功能不支持特性) |
-| [12000015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000015-调用其他系统服务失败) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) |
+| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) |
+| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) |
+| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
 
 ## 示例
 

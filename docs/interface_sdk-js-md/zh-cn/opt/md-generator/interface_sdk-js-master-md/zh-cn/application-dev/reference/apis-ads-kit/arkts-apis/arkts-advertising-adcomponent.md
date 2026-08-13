@@ -1,4 +1,4 @@
-# @ohos.advertising.AdComponent(广告展示组件)
+# @ohos.advertising.AdComponent
 
 ## 汇总
 

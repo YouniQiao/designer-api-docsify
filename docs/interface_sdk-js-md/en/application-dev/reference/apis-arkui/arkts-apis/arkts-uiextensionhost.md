@@ -1,17 +1,12 @@
 # @ohos.uiExtensionHost
 
-Intended only for the **UIExtensionComponent** that has process isolation requirements, the **uiExtensionHost**module provides APIs for obtaining the host application window information and information about the component itself.
+Intended only for the **UIExtensionComponent** that has process isolation requirements, the **uiExtensionHost** module provides APIs for obtaining the host application window information and information about the component itself. > **NOTE：**> > No new function will be added to this module. Related functions will be provided in the > [uiExtension](arkts-arkui-uiextension.md#@ohos.arkui.uiExtension) interface. > > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> No new function will be added to this module. Related functions will be provided in the
-> [uiExtension](arkts-arkui-uiextension.md#uiExtension) interface.
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,11 +1,10 @@
 # Calendar
 
-In the following API examples, you need to use   
-[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getCalendar) to obtain 
-
-a **Calendar** object before calling related APIs.
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar) or getCalendar() to obtain a **Calendar** object before calling related APIs.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-calendarManager-export interface Calendar--><!--Device-calendarManager-export interface Calendar-End-->
 
@@ -23,9 +22,11 @@ import { calendarManager } from '@kit.CalendarKit';
 addEvent(event: Event): Promise<number>
 ```
 
-Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses a promise to return the result.
+Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
@@ -53,8 +54,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -94,9 +95,11 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 addEvent(event: Event, callback: AsyncCallback<number>): void
 ```
 
-Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses an asynchronous callback to return the result.
+Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
@@ -119,8 +122,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -160,9 +163,11 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
 addEvents(events: Event[]): Promise<void>
 ```
 
-Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses a promise to return the result.
+Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
@@ -188,8 +193,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -236,9 +241,11 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 addEvents(events: Event[], callback: AsyncCallback<void>): void
 ```
 
-Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses an asynchronous callback to return the result.
+Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
@@ -259,8 +266,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -312,6 +319,8 @@ deleteEvent(id: number): Promise<void>
 Deletes an event with the specified ID. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Calendar-deleteEvent(id: number): Promise<void>--><!--Device-Calendar-deleteEvent(id: number): Promise<void>-End-->
 
@@ -379,6 +388,8 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void-End-->
@@ -443,6 +454,8 @@ deleteEvents(ids: number[]): Promise<void>
 Deletes a batch of events with the specified IDs. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>--><!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>-End-->
 
@@ -523,6 +536,8 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void-End-->
@@ -601,6 +616,8 @@ Obtains the calendar account information.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Calendar-getAccount(): CalendarAccount--><!--Device-Calendar-getAccount(): CalendarAccount-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -643,6 +660,8 @@ Obtains the calendar configuration information.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Calendar-getConfig(): CalendarConfig--><!--Device-Calendar-getConfig(): CalendarConfig-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -681,9 +700,11 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>
 ```
 
-Obtains all events in a calendar that match the filter criteria. This API uses a promise to return the result.If there is only one input parameter, the filter criteria, corresponding to the type EventFilter, must be set as the parameter.If no input parameter is specified, all events under the specified calendar account can be queried.
+Obtains all events in a calendar that match the filter criteria. This API uses a promise to return the result. If there is only one input parameter, the filter criteria, corresponding to the type EventFilter, must be set as the parameter. If no input parameter is specified, all events under the specified calendar account can be queried.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
@@ -710,8 +731,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -764,6 +785,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.READ_CALENDAR
@@ -784,8 +807,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -847,11 +870,11 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(callback: AsyncCallback<Event[]>):void
 ```
 
-Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.
-
-For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime,endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20,the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone,location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
+Obtains all events in the current calendar. This API uses an asynchronous callback to return the result. For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
@@ -871,8 +894,8 @@ For versions earlier than API version 20, the default fields to be obtained incl
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -907,11 +930,11 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 openEventEditPage(id: number): Promise<void>
 ```
 
-Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result.
-
-This API can be used to view and edit calendar events in the system calendar.
+Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result. This API can be used to view and edit calendar events in the system calendar.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -937,8 +960,8 @@ This API can be used to view and edit calendar events in the system calendar.
 
 | Error Code ID |
 | --- |
-| [23900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900005-event-not-editable) |
-| [23900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) |
+| [23900005](../errorcode-calendarManager.md#23900005-event-not-editable) |
+| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) |
 
 ## Examples
 
@@ -1001,6 +1024,8 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 18-20: ohos.permission.READ_CALENDAR
@@ -1030,8 +1055,8 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 | Error Code ID |
 | --- |
-| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1083,6 +1108,8 @@ Sets the calendar configuration information. This API uses a promise to return t
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>--><!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -1103,7 +1130,7 @@ Sets the calendar configuration information. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [23900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) |
+| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) |
 
 ## Examples
 
@@ -1145,6 +1172,8 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void--><!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -1160,7 +1189,7 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [23900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) |
+| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) |
 
 ## Examples
 
@@ -1203,6 +1232,8 @@ updateEvent(event: Event): Promise<void>
 Updates an event, with the ID of the updated event specified in Event. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Calendar-updateEvent(event: Event): Promise<void>--><!--Device-Calendar-updateEvent(event: Event): Promise<void>-End-->
 
@@ -1272,6 +1303,8 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void--><!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -1333,11 +1366,13 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 readonly id: number
 ```
 
-Calendar account ID, which is the unique identifier of a calendar account and is the auto-increment primary key of the database. If the value is less than 0, the account creation fails;if the value is greater than 0, the account creation succeeds.
+Calendar account ID, which is the unique identifier of a calendar account and is the auto-increment primary key of the database. If the value is less than 0, the account creation fails; if the value is greater than 0, the account creation succeeds.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -18,6 +18,8 @@ Creates a writeable stream. This API returns the result synchronously.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream--><!--Device-unnamed-declare function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -27,7 +29,7 @@ Creates a writeable stream. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file. |
-| options | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | No | The options are as follows:&lt;br&gt;- **start** (number): start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **mode** (number): [mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the writeable stream. This parameter is optional. The default value is the write-only mode. |
+| options | [WriteStreamOptions](../../apis-na/arkts-apis/arkts-na-file-fs-writestreamoptions-i.md) | No | The options are as follows:&lt;br&gt;- **start** (number): start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **mode** (number): mode for creating the writeable stream. This parameter is optional. The default value is the write-only mode. |
 
 **Return value:**
 
@@ -48,7 +50,7 @@ Creates a writeable stream. This API returns the result synchronously.
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

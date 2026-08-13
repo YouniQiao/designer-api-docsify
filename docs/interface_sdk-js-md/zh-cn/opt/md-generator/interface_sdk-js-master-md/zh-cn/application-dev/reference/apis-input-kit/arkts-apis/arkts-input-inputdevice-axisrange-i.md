@@ -2,7 +2,9 @@
 
 输入设备的轴信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-interface AxisRange--><!--Device-inputDevice-interface AxisRange-End-->
 
@@ -18,7 +20,9 @@ axis: AxisType
 
 **类型：** AxisType
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisRange-axis: AxisType--><!--Device-AxisRange-axis: AxisType-End-->
 
@@ -34,7 +38,9 @@ flat: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisRange-flat: int--><!--Device-AxisRange-flat: int-End-->
 
@@ -50,7 +56,9 @@ fuzz: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisRange-fuzz: int--><!--Device-AxisRange-fuzz: int-End-->
 
@@ -66,7 +74,9 @@ max: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisRange-max: int--><!--Device-AxisRange-max: int-End-->
 
@@ -82,7 +92,9 @@ min: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisRange-min: int--><!--Device-AxisRange-min: int-End-->
 
@@ -98,7 +110,9 @@ resolution: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisRange-resolution: int--><!--Device-AxisRange-resolution: int-End-->
 
@@ -114,7 +128,9 @@ source: SourceType
 
 **类型：** SourceType
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AxisRange-source: SourceType--><!--Device-AxisRange-source: SourceType-End-->
 

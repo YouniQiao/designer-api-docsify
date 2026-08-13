@@ -2,7 +2,9 @@
 
 表示发起方请求信息，作为窗口绑定模态弹框的入参。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-dialogRequest-export interface RequestInfo--><!--Device-dialogRequest-export interface RequestInfo-End-->
 
@@ -18,7 +20,9 @@ windowRect?: WindowRect
 
 **类型：** [WindowRect](arkts-ability-dialogrequest-windowrect-i.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

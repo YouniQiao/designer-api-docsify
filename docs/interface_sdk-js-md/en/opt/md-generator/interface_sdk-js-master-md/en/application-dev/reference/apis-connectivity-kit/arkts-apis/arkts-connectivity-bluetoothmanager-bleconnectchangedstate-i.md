@@ -32,7 +32,7 @@ Indicates the peer device address
 
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](ohos.bluetooth.ble/ble.BLEConnectionChangeState#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-bleconnectionchangestate-i.md#deviceId)
 
 <!--Device-BLEConnectChangedState-deviceId: string--><!--Device-BLEConnectChangedState-deviceId: string-End-->
 
@@ -52,7 +52,7 @@ Connection state of the Gatt profile
 
 **Deprecated since:** 10
 
-**Substitutes:** [state](ohos.bluetooth.ble/ble.BLEConnectionChangeState#state)
+**Substitutes:** [state](arkts-connectivity-ble-bleconnectionchangestate-i.md#state)
 
 <!--Device-BLEConnectChangedState-state: ProfileConnectionState--><!--Device-BLEConnectChangedState-state: ProfileConnectionState-End-->
 

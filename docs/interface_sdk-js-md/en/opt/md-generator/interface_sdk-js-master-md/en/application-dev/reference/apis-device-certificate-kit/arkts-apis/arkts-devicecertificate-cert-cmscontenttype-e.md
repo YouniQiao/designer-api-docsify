@@ -2,7 +2,9 @@
 
 Enumerates the Cryptographic Message Syntax (CMS) message types.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum CmsContentType--><!--Device-cert-enum CmsContentType-End-->
 
@@ -16,9 +18,11 @@ SIGNED_DATA = 0
 
 Signed data.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsContentType-SIGNED_DATA = 0--><!--Device-CmsContentType-SIGNED_DATA = 0-End-->
 
@@ -32,9 +36,11 @@ ENVELOPED_DATA = 1
 
 Enveloped data, including authenticated enveloped data.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsContentType-ENVELOPED_DATA = 1--><!--Device-CmsContentType-ENVELOPED_DATA = 1-End-->
 

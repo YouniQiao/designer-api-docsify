@@ -14,9 +14,11 @@ function getDeviceAltitude(seaPressure: double, currentPressure: double, callbac
 
 Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void-End-->
 
@@ -26,16 +28,16 @@ Obtains the altitude based on the atmospheric pressure. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sea-level atmospheric pressure, in hPa. |
-| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Specified atmospheric pressure, in hPa. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | Yes | Callback used to return the altitude, in meters. |
+| seaPressure | double | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | double | Yes | Specified atmospheric pressure, in hPa. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | Callback used to return the altitude, in meters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## Examples
 
@@ -69,9 +71,11 @@ function getDeviceAltitude(seaPressure: double, currentPressure: double): Promis
 
 Obtains the altitude based on the atmospheric pressure. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>-End-->
 
@@ -81,21 +85,21 @@ Obtains the altitude based on the atmospheric pressure. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sea-level atmospheric pressure, in hPa. |
-| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Specified atmospheric pressure, in hPa. |
+| seaPressure | double | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | double | Yes | Specified atmospheric pressure, in hPa. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;double&gt; | Promise used to return the altitude, in meters. |
+| Promise&lt;double&gt; | Promise used to return the altitude, in meters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## Examples
 

@@ -1,8 +1,4 @@
-# AccessibilityExtensionContext(Provides accessibility extension context)
-
-AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。
- 辅助功能扩展上下文模块提供辅助功能扩展的上下文环境的能力，包括允许配置辅助应用关注信息类型、查询节点信息、手势注入等。
-
+# AccessibilityExtensionContext
 
 ## 汇总
 

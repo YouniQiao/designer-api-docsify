@@ -2,7 +2,9 @@
 
 Defines information about the host application window and **UIExtensionComponent**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiExtensionHost-interface UIExtensionHostWindowProxyProperties--><!--Device-uiExtensionHost-interface UIExtensionHostWindowProxyProperties-End-->
 
@@ -26,7 +28,9 @@ Position, width, and height of the **UIExtensionComponent**.
 
 **Type:** window.Rect
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

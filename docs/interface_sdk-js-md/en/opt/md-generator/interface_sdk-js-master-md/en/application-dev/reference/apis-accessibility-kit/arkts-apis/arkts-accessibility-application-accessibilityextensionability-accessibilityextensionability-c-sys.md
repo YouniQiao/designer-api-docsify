@@ -2,7 +2,9 @@
 
 The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
 
@@ -20,9 +22,11 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 onAccessibilityConnect(): void
 ```
 
-Called when the AccessibilityExtensionAbility is enabled and connected to the system service.In this API, you can have the service logic initialized. This API can be overridden as required. It returns the result to notify that the ability is successfully connected.
+Called when the AccessibilityExtensionAbility is enabled and connected to the system service. In this API, you can have the service logic initialized. This API can be overridden as required. It returns the result to notify that the ability is successfully connected.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -36,8 +40,8 @@ Called when the AccessibilityExtensionAbility is enabled and connected to the sy
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -57,9 +61,11 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityDisconnect(): void
 ```
 
-Called when the AccessibilityExtensionAbility is successfully disconnected from the system service.In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
+Called when the AccessibilityExtensionAbility is successfully disconnected from the system service. In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -73,8 +79,8 @@ Called when the AccessibilityExtensionAbility is successfully disconnected from 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -96,7 +102,9 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 
 Called when a specified event occurs in an application. In this API, you can implement event-specific service logic. Generally, this API needs to be overridden.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -116,8 +124,8 @@ Called when a specified event occurs in an application. In this API, you can imp
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -142,7 +150,9 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -156,7 +166,7 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
+| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
 
 **Return value:**
 
@@ -168,8 +178,8 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

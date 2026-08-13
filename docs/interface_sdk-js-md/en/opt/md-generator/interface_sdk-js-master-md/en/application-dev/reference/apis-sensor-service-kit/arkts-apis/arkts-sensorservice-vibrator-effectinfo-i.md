@@ -2,7 +2,9 @@
 
 Defines the preset effect.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface EffectInfo--><!--Device-vibrator-interface EffectInfo-End-->
 
@@ -24,7 +26,9 @@ Whether the preset effect is supported. The value **true** indicates that the pr
 
 **Type:** boolean
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EffectInfo-isEffectSupported: boolean--><!--Device-EffectInfo-isEffectSupported: boolean-End-->
 

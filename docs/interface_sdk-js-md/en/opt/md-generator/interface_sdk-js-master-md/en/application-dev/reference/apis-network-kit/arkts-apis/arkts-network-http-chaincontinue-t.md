@@ -6,9 +6,11 @@ export type ChainContinue = boolean
 
 Whether or not to continue process of interceptor chain.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-http-export type ChainContinue = boolean--><!--Device-http-export type ChainContinue = boolean-End-->
 

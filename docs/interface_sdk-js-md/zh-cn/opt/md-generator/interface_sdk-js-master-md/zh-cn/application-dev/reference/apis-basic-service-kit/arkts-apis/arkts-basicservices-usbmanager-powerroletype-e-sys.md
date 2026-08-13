@@ -2,7 +2,9 @@
 
 Enumerates power role types.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-export enum PowerRoleType--><!--Device-usbManager-export enum PowerRoleType-End-->
 
@@ -18,7 +20,9 @@ NONE = 0
 
 没有功能。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
 
@@ -34,7 +38,9 @@ SOURCE = 1
 
 External power supply
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
 
@@ -50,7 +56,9 @@ SINK = 2
 
 Internal power supply
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
 

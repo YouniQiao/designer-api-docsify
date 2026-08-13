@@ -8,7 +8,9 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 获取所有系统快捷键，使用Promise异步回调。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>--><!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>-End-->
 
@@ -24,7 +26,7 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

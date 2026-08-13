@@ -1,13 +1,10 @@
 # CreateOptions
 
-Options for creating an image or video asset.
+Options for creating an image or video asset. The title must meet the following requirements: - It must not contain a file name extension. - The total length of the file name must be between 1 and 255 characters.
 
-The title must meet the following requirements:
+**Since:** 23
 
-- It must not contain a file name extension.  
-- The total length of the file name must be between 1 and 255 characters.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface CreateOptions--><!--Device-photoAccessHelper-interface CreateOptions-End-->
 
@@ -29,9 +26,11 @@ Subtype of the image or video file.
 
 **Type:** PhotoSubtype
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CreateOptions-subtype?: PhotoSubtype--><!--Device-CreateOptions-subtype?: PhotoSubtype-End-->
 
@@ -47,7 +46,9 @@ Title of the image or video.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

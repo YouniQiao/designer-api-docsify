@@ -16,6 +16,8 @@ Plugin component push method used to send the information of the template it pro
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-pluginComponentManager-function push(param: PushParameterForStage, callback: AsyncCallback<void>): void--><!--Device-pluginComponentManager-function push(param: PushParameterForStage, callback: AsyncCallback<void>): void-End-->

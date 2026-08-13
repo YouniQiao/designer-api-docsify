@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface EventLocationInfo--><!--Device-unnamed-declare interface EventLocationInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ getCurrentLocalPosition?(): Coordinate2D
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,17 +46,15 @@ getCurrentLocalPosition?(): Coordinate2D
 displayX: number
 ```
 
-相对于屏幕的左上角X坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+相对于屏幕的左上角X坐标。 取值范围：[0, +∞) 单位：vp
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,17 +70,15 @@ displayX: number
 displayY: number
 ```
 
-相对于屏幕的左上角Y坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+相对于屏幕的左上角Y坐标。 取值范围：[0, +∞) 单位：vp
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,17 +94,15 @@ displayY: number
 globalDisplayX?: number
 ```
 
-相对于主屏幕左上角为原点的坐标系中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+相对于主屏幕左上角为原点的坐标系中的X坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,17 +118,15 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-相对于主屏幕左上角为原点的坐标系中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+相对于主屏幕左上角为原点的坐标系中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,17 +142,15 @@ globalDisplayY?: number
 windowX: number
 ```
 
-相对于窗口的左上角X坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+相对于窗口的左上角X坐标。 取值范围：[0, +∞) 单位：vp
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,17 +166,15 @@ windowX: number
 windowY: number
 ```
 
-相对于窗口的左上角Y坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+相对于窗口的左上角Y坐标。 取值范围：[0, +∞) 单位：vp
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,17 +190,15 @@ windowY: number
 x: number
 ```
 
-相对于组件左上角的X坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+相对于组件左上角的X坐标。 取值范围：[0, +∞) 单位：vp
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,17 +214,15 @@ x: number
 y: number
 ```
 
-相对于组件左上角的Y坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+相对于组件左上角的Y坐标。 取值范围：[0, +∞) 单位：vp
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

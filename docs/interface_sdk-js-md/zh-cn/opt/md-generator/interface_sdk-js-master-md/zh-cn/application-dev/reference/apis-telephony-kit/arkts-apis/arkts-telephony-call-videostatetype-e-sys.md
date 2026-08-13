@@ -2,7 +2,9 @@
 
 视频状态类型。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export enum VideoStateType--><!--Device-call-export enum VideoStateType-End-->
 
@@ -18,7 +20,9 @@ TYPE_VOICE = 0
 
 语音状态。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoStateType-TYPE_VOICE = 0--><!--Device-VideoStateType-TYPE_VOICE = 0-End-->
 
@@ -54,7 +58,9 @@ TYPE_VIDEO_SEND_ONLY = 1
 
 视频通话只发送数据状态。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoStateType-TYPE_VIDEO_SEND_ONLY = 1--><!--Device-VideoStateType-TYPE_VIDEO_SEND_ONLY = 1-End-->
 
@@ -70,7 +76,9 @@ TYPE_VIDEO_RECEIVE_ONLY = 2
 
 视频通话只接收数据状态。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoStateType-TYPE_VIDEO_RECEIVE_ONLY = 2--><!--Device-VideoStateType-TYPE_VIDEO_RECEIVE_ONLY = 2-End-->
 
@@ -86,7 +94,9 @@ TYPE_VIDEO_BIDIRECTIONAL = 3
 
 视频通话接收发送数据状态。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoStateType-TYPE_VIDEO_BIDIRECTIONAL = 3--><!--Device-VideoStateType-TYPE_VIDEO_BIDIRECTIONAL = 3-End-->
 

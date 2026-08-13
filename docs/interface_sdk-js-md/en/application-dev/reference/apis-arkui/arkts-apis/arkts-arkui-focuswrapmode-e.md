@@ -6,6 +6,8 @@ Enumerates focus wrapping modes for cross-axis directional navigation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FocusWrapMode--><!--Device-unnamed-declare enum FocusWrapMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Cross-axis directional navigation does not wrap focus.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -36,13 +40,13 @@ Cross-axis directional navigation does not wrap focus.
 WRAP_WITH_ARROW = 1
 ```
 
-Cross-axis directional navigation wraps focus.
-
-In irregular grid layouts, when moving focus along the cross axis, the system prioritizes focusable items within the same row.
+Cross-axis directional navigation wraps focus. In irregular grid layouts, when moving focus along the cross axis, the system prioritizes focusable items within the same row.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

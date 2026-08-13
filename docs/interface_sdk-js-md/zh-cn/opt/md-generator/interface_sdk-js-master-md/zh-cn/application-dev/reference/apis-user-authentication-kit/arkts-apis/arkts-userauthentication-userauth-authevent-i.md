@@ -24,7 +24,7 @@ callback(result: EventInfo): void
 
 **废弃版本：** 11
 
-**替代接口：** [onResult](userAuth.IAuthCallback.onResult(result:)
+**替代接口：** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onResult)(result: UserAuthResult)
 
 <!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 

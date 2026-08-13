@@ -70,7 +70,7 @@ Sets the cookie.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCookie](ohos.web.webview.webview.WebCookieManager#setCookie)
+**Substitutes:** setCookie
 
 <!--Device-WebCookie-setCookie()--><!--Device-WebCookie-setCookie()-End-->
 

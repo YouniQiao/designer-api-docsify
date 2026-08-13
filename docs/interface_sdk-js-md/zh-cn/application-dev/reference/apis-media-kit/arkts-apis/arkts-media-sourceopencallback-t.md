@@ -4,17 +4,15 @@
 type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long
 ```
 
-由应用实现此回调函数，应用需处理传入的资源打开请求，并返回所打开资源对应的唯一句柄。
+由应用实现此回调函数，应用需处理传入的资源打开请求，并返回所打开资源对应的唯一句柄。 > **注意：** > > 客户端在处理完请求后应立刻返回。
 
-> **注意：**
-> 
-> 客户端在处理完请求后应立刻返回。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long--><!--Device-unnamed-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long-End-->
 
@@ -30,5 +28,5 @@ type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 当前资源打开请求的句柄。大于0表示请求成功，小于或等于0表示请求失败。<br/> - request对象对应句柄唯一。 |
+| long | 当前资源打开请求的句柄。大于0表示请求成功，小于或等于0表示请求失败。<br/> - request对象对应句柄唯一。 |
 

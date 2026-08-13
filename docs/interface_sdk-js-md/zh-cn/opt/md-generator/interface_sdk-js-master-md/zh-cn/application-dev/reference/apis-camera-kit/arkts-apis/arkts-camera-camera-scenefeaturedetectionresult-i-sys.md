@@ -2,7 +2,9 @@
 
 Describes the scene feature detection result.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface SceneFeatureDetectionResult--><!--Device-camera-interface SceneFeatureDetectionResult-End-->
 
@@ -20,7 +22,9 @@ Whether the specified scene feature is detected. **true** if detected, **false**
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneFeatureDetectionResult-readonly detected: boolean--><!--Device-SceneFeatureDetectionResult-readonly detected: boolean-End-->
 
@@ -38,7 +42,9 @@ Scene feature type.
 
 **类型：** [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType--><!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType-End-->
 

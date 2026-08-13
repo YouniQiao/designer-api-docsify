@@ -2,7 +2,9 @@
 
 Enumerates the keyboard status.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export enum KeyboardStatus--><!--Device-inputMethod-export enum KeyboardStatus-End-->
 
@@ -16,7 +18,9 @@ NONE = 0
 
 The keyboard status is none.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardStatus-NONE = 0--><!--Device-KeyboardStatus-NONE = 0-End-->
 
@@ -30,7 +34,9 @@ HIDE = 1
 
 The keyboard status is hide.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardStatus-HIDE = 1--><!--Device-KeyboardStatus-HIDE = 1-End-->
 
@@ -44,7 +50,9 @@ SHOW = 2
 
 The keyboard status is show.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardStatus-SHOW = 2--><!--Device-KeyboardStatus-SHOW = 2-End-->
 

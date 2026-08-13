@@ -4,7 +4,9 @@ Enumerates the types of rotation information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-enum RotationInfoType--><!--Device-window-enum RotationInfoType-End-->
 
@@ -16,14 +18,13 @@ Enumerates the types of rotation information.
 WINDOW_ORIENTATION = 0
 ```
 
-Window's screen orientation, based on how the Window module defines landscape/portrait modes.
-
-Note that it maps to the **orientation** parameter in  
-[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo).
+Window's screen orientation, based on how the Window module defines landscape/portrait modes. Note that it maps to the **orientation** parameter in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationInfoType-WINDOW_ORIENTATION = 0--><!--Device-RotationInfoType-WINDOW_ORIENTATION = 0-End-->
 
@@ -35,13 +36,13 @@ Note that it maps to the **orientation** parameter in
 DISPLAY_ORIENTATION = 1
 ```
 
-Physical screen orientation, based on how the Display module defines landscape/portrait modes.
-
-It maps to the **orientation** property of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) object.
+Physical screen orientation, based on how the Display module defines landscape/portrait modes. It maps to the **orientation** property of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationInfoType-DISPLAY_ORIENTATION = 1--><!--Device-RotationInfoType-DISPLAY_ORIENTATION = 1-End-->
 
@@ -53,13 +54,13 @@ It maps to the **orientation** property of the [display](arkts-arkui-display-dis
 DISPLAY_ROTATION = 2
 ```
 
-Physical rotation angle of the device's screen (in degrees, clockwise).
-
-It maps to the **rotation** property of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) object.
+Physical rotation angle of the device's screen (in degrees, clockwise). It maps to the **rotation** property of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RotationInfoType-DISPLAY_ROTATION = 2--><!--Device-RotationInfoType-DISPLAY_ROTATION = 2-End-->
 

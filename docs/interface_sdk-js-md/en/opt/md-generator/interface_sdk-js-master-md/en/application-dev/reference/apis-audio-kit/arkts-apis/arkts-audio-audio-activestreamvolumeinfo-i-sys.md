@@ -4,6 +4,8 @@ Volume information for active audio streams.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-audio-interface ActiveStreamVolumeInfo--><!--Device-audio-interface ActiveStreamVolumeInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -28,6 +30,8 @@ Volume of the application.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ActiveStreamVolumeInfo-appVolume: int--><!--Device-ActiveStreamVolumeInfo-appVolume: int-End-->
@@ -48,6 +52,8 @@ UID of the application.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ActiveStreamVolumeInfo-clientUid: int--><!--Device-ActiveStreamVolumeInfo-clientUid: int-End-->
@@ -67,6 +73,8 @@ Volume type of the current stream.
 **Type:** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

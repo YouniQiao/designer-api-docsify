@@ -2,7 +2,9 @@
 
 音频会话状态变更事件。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioSessionStateChangedEvent--><!--Device-audio-interface AudioSessionStateChangedEvent-End-->
 
@@ -18,7 +20,9 @@ stateChangeHint: AudioSessionStateChangeHint
 
 **类型：** [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioSessionStateChangedEvent-stateChangeHint: AudioSessionStateChangeHint--><!--Device-AudioSessionStateChangedEvent-stateChangeHint: AudioSessionStateChangeHint-End-->
 

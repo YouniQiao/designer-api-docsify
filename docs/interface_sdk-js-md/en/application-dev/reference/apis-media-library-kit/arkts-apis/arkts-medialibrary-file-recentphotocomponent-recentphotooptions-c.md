@@ -1,10 +1,12 @@
 # RecentPhotoOptions
 
-RecentPhotoOptions Object
+Represents the configuration of the recent image or video.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class RecentPhotoOptions--><!--Device-unnamed-export declare class RecentPhotoOptions-End-->
 
@@ -19,100 +21,110 @@ import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckI
 ## MIMEType
 
 ```TypeScript
-public MIMEType?: photoAccessHelper.PhotoViewMIMETypes
+MIMEType?: photoAccessHelper.PhotoViewMIMETypes
 ```
 
-The Type of the file in the recent photo window.
+Types of the file displayed. The default value is **PhotoViewMIMETypes.IMAGE_VIDEO_TYPE**.
 
 **Type:** photoAccessHelper.PhotoViewMIMETypes
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RecentPhotoOptions-public MIMEType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-RecentPhotoOptions-public MIMEType?: photoAccessHelper.PhotoViewMIMETypes-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RecentPhotoOptions-MIMEType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-RecentPhotoOptions-MIMEType?: photoAccessHelper.PhotoViewMIMETypes-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## colorMode
 
 ```TypeScript
-public colorMode?: PickerColorMode
+colorMode?: PickerColorMode
 ```
 
-color mode of recentPhotoComponent placeholder
+Color mode of the placeholder. This setting is used when **isAutoRefreshSupported** is set to **true** and no recent image or video meets the requirements, showing a placeholder instead. By default, it follows the system's dark/light color mode.
 
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RecentPhotoOptions-public colorMode?: PickerColorMode--><!--Device-RecentPhotoOptions-public colorMode?: PickerColorMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-RecentPhotoOptions-colorMode?: PickerColorMode--><!--Device-RecentPhotoOptions-colorMode?: PickerColorMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## isAutoRefreshSupported
 
 ```TypeScript
-public isAutoRefreshSupported?: boolean
+isAutoRefreshSupported?: boolean
 ```
 
-isSupportAutoRefresh
+Whether the **RecentPhotoComponent** automatically refreshes when there are changes (including additions, deletions, or modifications) to the recent images or videos that meet the requirements. If the component's originally displayed image or video is deleted and there are no other images or videos that meet the requirements, a placeholder is displayed and the component does not automatically close. The default value is **false**, indicating that the component does not automatically refresh. If this parameter is set to **true**, all images are displayed, and the **period** parameter is invalid.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RecentPhotoOptions-public isAutoRefreshSupported?: boolean--><!--Device-RecentPhotoOptions-public isAutoRefreshSupported?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-RecentPhotoOptions-isAutoRefreshSupported?: boolean--><!--Device-RecentPhotoOptions-isAutoRefreshSupported?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## period
 
 ```TypeScript
-public period?: int
+period?: number
 ```
 
-Support set period time
+Time period for displaying the latest image sorted by creation time, in seconds. The longest duration you can set is 1 day (86400s). If the value is less than or equal to 0, greater than 86400, or not set, the most recent photos over the longest period of up to one day is displayed by default. If there is no image or video in the specified period, the component is not displayed.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RecentPhotoOptions-public period?: int--><!--Device-RecentPhotoOptions-public period?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RecentPhotoOptions-period?: number--><!--Device-RecentPhotoOptions-period?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoSource
 
 ```TypeScript
-public photoSource?: PhotoSource
+photoSource?: PhotoSource
 ```
 
-PhotoSource
+Source of the recent image or video, for example, image or video taken by the camera or screenshot. By default, the source is not restricted.
 
-**Type:** [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
+**Type:** [PhotoSource](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-photosource-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RecentPhotoOptions-public photoSource?: PhotoSource--><!--Device-RecentPhotoOptions-public photoSource?: PhotoSource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RecentPhotoOptions-photoSource?: PhotoSource--><!--Device-RecentPhotoOptions-photoSource?: PhotoSource-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

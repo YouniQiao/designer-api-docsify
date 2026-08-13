@@ -2,7 +2,9 @@
 
 Describe the HID device capability fields of this endpoint being queried.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-hid-interface HidDeviceSdp--><!--Device-hid-interface HidDeviceSdp-End-->
 
@@ -24,7 +26,9 @@ description for this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ descriptors identifies the descriptors associated with the bluetooth hid device.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ name of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ provider of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +106,9 @@ Subclass of this Bluetooth HID device. Subclass represents the specific HID devi
 
 **Type:** [Subclass](arkts-connectivity-hid-subclass-e.md)
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

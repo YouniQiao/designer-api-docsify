@@ -13,15 +13,13 @@ function getBundleInfo(bundleName: string,
     bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name and bundle options. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name and bundle options. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -45,15 +43,13 @@ No permission is required for obtaining the caller's own information.
 function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -76,15 +72,13 @@ No permission is required for obtaining the caller's own information.
 function getBundleInfo(bundleName: string, bundleFlags: number, options?: BundleOptions): Promise<BundleInfo>
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 

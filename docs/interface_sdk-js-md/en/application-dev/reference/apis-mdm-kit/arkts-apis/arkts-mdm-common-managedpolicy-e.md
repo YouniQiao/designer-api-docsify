@@ -6,6 +6,8 @@ Enumerates enterprise device management policies.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-common-export enum ManagedPolicy--><!--Device-common-export enum ManagedPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Default policy with no restrictions applied.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Policy that disallows extensions from external sources to run.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ManagedPolicy-DISALLOW = 1--><!--Device-ManagedPolicy-DISALLOW = 1-End-->
@@ -57,6 +63,8 @@ Policy that forcibly enables extensions from external sources to run.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

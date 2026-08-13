@@ -6,7 +6,9 @@ export type NotificationSlot = _NotificationSlot
 
 通知渠道。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationSlot = _NotificationSlot--><!--Device-notificationManager-export type NotificationSlot = _NotificationSlot-End-->
 

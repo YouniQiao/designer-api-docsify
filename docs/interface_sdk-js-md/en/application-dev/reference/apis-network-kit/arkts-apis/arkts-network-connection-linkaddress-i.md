@@ -2,9 +2,11 @@
 
 Defines network link information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface LinkAddress--><!--Device-connection-export interface LinkAddress-End-->
 
@@ -26,9 +28,11 @@ Link address.
 
 **Type:** NetAddress
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LinkAddress-address: NetAddress--><!--Device-LinkAddress-address: NetAddress-End-->
 
@@ -42,11 +46,13 @@ prefixLength: int
 
 The length of the link address prefix.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LinkAddress-prefixLength: int--><!--Device-LinkAddress-prefixLength: int-End-->
 

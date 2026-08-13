@@ -4,6 +4,8 @@ Web组件预编译JavaScript生成字节码缓存的配置对象，用于控制�
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-interface CacheOptions--><!--Device-webview-interface CacheOptions-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ responseHeaders: Array<WebHeader>
 **类型：** Array&lt;WebHeader&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-CacheOptions-responseHeaders: Array<WebHeader>--><!--Device-CacheOptions-responseHeaders: Array<WebHeader>-End-->
 

@@ -6,7 +6,9 @@ Defines a UIScrollableCommonEvent which is used to set different common event to
 
 **Since:** 19
 
-<!--Device-unnamed-declare interface UIScrollEvent extends UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIScrollEvent extends UIScrollableCommonEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface UIScrollEvent--><!--Device-unnamed-declare interface UIScrollEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 Set or reset the callback which is triggered when the Scroll did scroll.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 Set or reset the callback which is triggered when the Scroll will scroll.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

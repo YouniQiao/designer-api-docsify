@@ -2,9 +2,11 @@
 
 Defines the notification flags.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationFlags--><!--Device-unnamed-export interface NotificationFlags-End-->
 
@@ -18,11 +20,13 @@ bannerEnabled?: NotificationFlagStatus
 
 Settings of banner for the notification. The default value is **TYPE_NONE**. Only TYPE_CLOSE takes effect.
 
-**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus-End-->
 
@@ -36,11 +40,13 @@ lockScreenEnabled?: NotificationFlagStatus
 
 Settings of screen lock for the notification. The default value is **TYPE_NONE**. Only TYPE_CLOSE takes effect.
 
-**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus-End-->
 
@@ -54,11 +60,13 @@ soundEnabled?: NotificationFlagStatus
 
 Settings of sound for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
 
-**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus-End-->
 
@@ -72,11 +80,13 @@ vibrationEnabled?: NotificationFlagStatus
 
 Settings of vibration for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
 
-**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+**Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus-End-->
 

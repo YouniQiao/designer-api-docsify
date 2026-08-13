@@ -2,7 +2,9 @@
 
 Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityAccessCtrl-interface AtManager--><!--Device-abilityAccessCtrl-interface AtManager-End-->
 
@@ -23,9 +25,11 @@ generateCliAuthResult(
       authInfoList: Array<CliAuthInfo>): Promise<ToolAuthResult>
 ```
 
-Generates an authorization result based on the CLI authorization information.This API uses a promise to return the result.
+Generates an authorization result based on the CLI authorization information. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
@@ -55,13 +59,13 @@ Generates an authorization result based on the CLI authorization information.Thi
 
 | Error Code ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -97,6 +101,8 @@ Queries whether a CLI (Command Line Interface) command requires a permission dia
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -124,11 +130,11 @@ Queries whether a CLI (Command Line Interface) command requires a permission dia
 
 | Error Code ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -162,6 +168,8 @@ Queries the CLI permissions and mapped runtime permissions that the CLI commands
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -190,12 +198,12 @@ Queries the CLI permissions and mapped runtime permissions that the CLI commands
 
 | Error Code ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -225,7 +233,9 @@ getPermissionFlags(tokenID: number, permissionName: Permissions): Promise<number
 
 Obtains the flags of a specified permission for a specified app. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS or ohos.permission.GRANT_SENSITIVE_PERMISSIONS or ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -252,14 +262,14 @@ Obtains the flags of a specified permission for a specified app. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -284,7 +294,9 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 
 Obtains the toggle state of a permission. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -310,13 +322,13 @@ Obtains the toggle state of a permission. This API uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -350,6 +362,8 @@ Obtains the permission dialog toggle status for a specified permission under a s
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -377,13 +391,13 @@ Obtains the permission dialog toggle status for a specified permission under a s
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## getPermissionsStatus
 
@@ -393,7 +407,9 @@ getPermissionsStatus(tokenID: number, permissionList: Array<Permissions>): Promi
 
 Obtains the status of the specified permissions. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -420,12 +436,12 @@ Obtains the status of the specified permissions. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -450,7 +466,9 @@ getVersion(): Promise<number>
 
 Obtains the data version number of the current permission management. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AtManager-getVersion(): Promise<int>--><!--Device-AtManager-getVersion(): Promise<int>-End-->
 
@@ -468,7 +486,7 @@ Obtains the data version number of the current permission management. This API u
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -491,10 +509,11 @@ promise.then((data: number) => {
 grantPermission(tokenID: number, permissionName: Permissions, permissionFlags: number): Promise<void>
 ```
 
-Grants an app permission. After the call is successful, the specified app obtains the permission and can access the corresponding protected resources. Unlike  
-[grantUserGrantedPermission](#grantUserGrantedPermission),which only supports permissions of the user_grant type, this API supports granting permissions of both the user_grant and manual_settings types. This API uses a promise to return the result.
+Grants an app permission. After the call is successful, the specified app obtains the permission and can access the corresponding protected resources. Unlike [grantUserGrantedPermission](#grantUserGrantedPermission), which only supports permissions of the user_grant type, this API supports granting permissions of both the user_grant and manual_settings types. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
@@ -522,14 +541,14 @@ Grants an app permission. After the call is successful, the specified app obtain
 
 | Error Code ID |
 | --- |
-| [12100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-unexpected-permission) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -553,12 +572,11 @@ atManager.grantPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags
 grantUserGrantedPermission(tokenID: number, permissionName: Permissions, permissionFlags: number): Promise<void>
 ```
 
-Grants a user_grant permission to an app. After the call is successful, the app obtains the user_grant permission and can access the corresponding protected resources. This API uses a promise to return the result.
+Grants a user_grant permission to an app. After the call is successful, the app obtains the user_grant permission and can access the corresponding protected resources. This API uses a promise to return the result. This API only supports granting permissions of the user_grant type. If you need to grant permissions of the user_grant or manual_settings type, you are advised to use [grantPermission](#grantPermission).
 
-This API only supports granting permissions of the user_grant type. If you need to grant permissions of the user_grant or manual_settings type, you are advised to use  
-[grantPermission](#grantPermission).
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
@@ -586,14 +604,14 @@ This API only supports granting permissions of the user_grant type. If you need 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -624,7 +642,9 @@ grantUserGrantedPermission(
 
 Grants a user_grant permission to an app. This API uses an asynchronous callback to return the result. After the call is successful, the app obtains the user_grant permission and can access the corresponding protected resources.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
@@ -647,14 +667,14 @@ Grants a user_grant permission to an app. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -674,7 +694,50 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
-## off('permissionStateChange')
+## offPermissionStateChange
+
+```TypeScript
+offPermissionStateChange(
+      tokenIDList: Array<number>,
+      permissionList: Array<Permissions>,
+      callback?: Callback<PermissionStateChangeInfo>
+    ): void
+```
+
+Unsubscribes from changes in the state of the specified permissions for the token ID list and permission list. This API uses an asynchronous callback to return the result. When unsubscribing, if no callback is passed in, all listening callbacks that completely match the tokenIDList and permissionList will be unsubscribed in batches. > **NOTE：**> This API is usually used together with > [onPermissionStateChange](#on_permissionStateChange) > to cancel the listening relationship created by onPermissionStateChange.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
+
+**System capability:** SystemCapability.Security.AccessToken
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tokenIDList | Array & lt;number & gt; | Yes |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
+
+## off_permissionStateChange
 
 ```TypeScript
 off(
@@ -685,13 +748,11 @@ off(
     ): void
 ```
 
-Unsubscribes from changes in the state of the specified permissions for the token ID list and permission list.This API uses an asynchronous callback to return the result.
-
-When unsubscribing, if no callback is passed in, all listening callbacks that completely match the tokenIDList and permissionList will be unsubscribed in batches.
-
-This API is usually used together with [on](abilityAccessCtrl.AtManager.on)to cancel the listening relationship created by on.
+Unsubscribes from changes in the state of the specified permissions for the token ID list and permission list. This API uses an asynchronous callback to return the result. When unsubscribing, if no callback is passed in, all listening callbacks that completely match the tokenIDList and permissionList will be unsubscribed in batches. This API is usually used together with [on](#on_permissionStateChange) to cancel the listening relationship created by on.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -714,11 +775,11 @@ This API is usually used together with [on](abilityAccessCtrl.AtManager.on)to ca
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -738,7 +799,52 @@ try {
 }
 ```
 
-## on('permissionStateChange')
+## onPermissionStateChange
+
+```TypeScript
+onPermissionStateChange(
+      tokenIDList: Array<number>,
+      permissionList: Array<Permissions>,
+      callback: Callback<PermissionStateChangeInfo>
+    ): void
+```
+
+Subscribes to changes in the state of specified permissions for the given applications. This API uses an asynchronous callback to return the result. Multiple callbacks can be registered for the specified **tokenIDList** and **permissionList**. > **NOTE：**> If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list, > the same callback cannot be used for subscription. > This API is usually used together with > [offPermissionStateChange](#off_permissionStateChange). > When listening is no longer needed, offPermissionStateChange should be called to unsubscribe.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+
+**System capability:** SystemCapability.Security.AccessToken
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tokenIDList | Array & lt;number & gt; | Yes |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100005](../errorcode-access-token.md#12100005-listener-overflows) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
+
+## on_permissionStateChange
 
 ```TypeScript
 on(
@@ -749,15 +855,11 @@ on(
     ): void
 ```
 
-Subscribes to changes in the state of specified permissions for the given applications. This API uses an asynchronous callback to return the result.
-
-Multiple callbacks can be registered for the specified **tokenIDList** and **permissionList**.
-
-If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list,the same callback cannot be used for subscription.
-
-This API is usually used together with [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off).When listening is no longer needed, off should be called to unsubscribe.
+Subscribes to changes in the state of specified permissions for the given applications. This API uses an asynchronous callback to return the result. Multiple callbacks can be registered for the specified **tokenIDList** and **permissionList**. If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list, the same callback cannot be used for subscription. This API is usually used together with [off](#off_permissionStateChange). When listening is no longer needed, off should be called to unsubscribe.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -780,13 +882,13 @@ This API is usually used together with [off](../../apis-user-authentication-kit/
 
 | Error Code ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100005-listener-overflows) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100005](../errorcode-access-token.md#12100005-listener-overflows) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -817,9 +919,11 @@ queryStatusByPermission(
       permissionList: Array<Permissions>): Promise<Array<PermissionStatusInfo>>
 ```
 
-Queries all apps that have requested the specified permissions and their permission statuses based on the permission list. This API uses a promise to return the result. When the size of the queried data result exceeds50000 entries, the API directly returns error code 12100015.
+Queries all apps that have requested the specified permissions and their permission statuses based on the permission list. This API uses a promise to return the result. When the size of the queried data result exceeds 50000 entries, the API directly returns error code 12100015.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -848,11 +952,11 @@ Queries all apps that have requested the specified permissions and their permiss
 | Error Code ID |
 | --- |
 | 12100015 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -878,6 +982,8 @@ queryStatusByTokenID(tokenIDList: Array<number>): Promise<Array<PermissionStatus
 Queries all permission statuses of an app based on its tokenID list. This API uses a promise to return the result. When the size of the queried data result exceeds 50000 entries, the API directly returns error code 12100015.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -906,11 +1012,11 @@ Queries all permission statuses of an app based on its tokenID list. This API us
 | Error Code ID |
 | --- |
 | 12100015 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -936,7 +1042,9 @@ requestPermissionOnApplicationSetting(tokenID: number): Promise<void>
 
 Starts the permission settings page for an application. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -962,10 +1070,10 @@ Starts the permission settings page for an application. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -991,14 +1099,11 @@ requestPermissionsFromUserWithWindowId(
         permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-Pops up a dialog based on the window ID to request user authorization. After the call is successful, the permission request result object is returned. Developers can continue the business process after window-level authorization based on the permission request result. This API uses a promise to return the result.
-
-This is applicable to scenarios where a system app needs to explicitly attach the permission request dialog to a specified window.
-
-If the user denies authorization, the dialog cannot be pulled up again. Permission can be re-obtained in the following ways: 1. Manually authorize in the system settings. 2. Call  
-[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionOnSetting) to pull up the permission settings dialog to guide the user to authorize.
+Pops up a dialog based on the window ID to request user authorization. After the call is successful, the permission request result object is returned. Developers can continue the business process after window-level authorization based on the permission request result. This API uses a promise to return the result. This is applicable to scenarios where a system app needs to explicitly attach the permission request dialog to a specified window. If the user denies authorization, the dialog cannot be pulled up again. Permission can be re-obtained in the following ways: 1. Manually authorize in the system settings. 2. Call [requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionOnSetting) to pull up the permission settings dialog to guide the user to authorize.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1026,12 +1131,12 @@ If the user denies authorization, the dialog cannot be pulled up again. Permissi
 
 | Error Code ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## Examples
 
-For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../security/AccessToken/request-user-authorization.md).
+For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
@@ -1064,11 +1169,11 @@ revokePermission(
       killProcess?: boolean): Promise<void>
 ```
 
-Revokes an app permission. After the call is successful, the app loses the permission and cannot access the corresponding protected resources. Whether to terminate the app process is determined by the value of the killProcess parameter. This API uses a promise to return the result.
+Revokes an app permission. After the call is successful, the app loses the permission and cannot access the corresponding protected resources. Whether to terminate the app process is determined by the value of the killProcess parameter. This API uses a promise to return the result. When the killProcess parameter is true and the permission status changes from "authorized" to "unauthorized", the app process will be terminated.
 
-When the killProcess parameter is true and the permission status changes from "authorized" to "unauthorized",the app process will be terminated.
+**Since:** 23
 
-**Since:** 21
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -1097,14 +1202,14 @@ When the killProcess parameter is true and the permission status changes from "a
 
 | Error Code ID |
 | --- |
-| [12100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-unexpected-permission) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -1135,14 +1240,11 @@ atManager.revokePermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlag
 revokeUserGrantedPermission(tokenID: number, permissionName: Permissions, permissionFlags: number): Promise<void>
 ```
 
-Revokes a user_grant permission from an app. After the call is successful, the app loses the user_grant permission and cannot access the corresponding protected resources.This API uses a promise to return the result.
+Revokes a user_grant permission from an app. After the call is successful, the app loses the user_grant permission and cannot access the corresponding protected resources. This API uses a promise to return the result. This API only supports revoking permissions of the user_grant type and does not support controlling whether to terminate the app process. If you need to revoke permissions of the user_grant or manual_settings type, or need to control whether to terminate the app process after revoking the permission, you are advised to use [revokePermission](#revokePermission). When the permission status changes from "authorized" to "unauthorized", the app process will be terminated.
 
-This API only supports revoking permissions of the user_grant type and does not support controlling whether to terminate the app process. If you need to revoke permissions of the user_grant or manual_settings type, or need to control whether to terminate the app process after revoking the permission, you are advised to use  
-[revokePermission](#revokePermission).
+**Since:** 23
 
-When the permission status changes from "authorized" to "unauthorized", the app process will be terminated.
-
-**Since:** 8
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -1170,14 +1272,14 @@ When the permission status changes from "authorized" to "unauthorized", the app 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -1206,9 +1308,11 @@ revokeUserGrantedPermission(
     ): void
 ```
 
-Revokes a user_grant permission from an app. This API uses an asynchronous callback to return the result.After the call is successful, the app loses the user_grant permission and cannot access the corresponding protected resources.
+Revokes a user_grant permission from an app. This API uses an asynchronous callback to return the result. After the call is successful, the app loses the user_grant permission and cannot access the corresponding protected resources.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -1231,14 +1335,14 @@ Revokes a user_grant permission from an app. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -1266,7 +1370,9 @@ setPermissionRequestToggleStatus(permissionName: Permissions, status: Permission
 
 Sets the dialog toggle status for a specified permission of the current user. After the call is successful, the dialog toggle status of the permission will be set to the specified value. When the status is CLOSED, no permission dialog will pop up when the app requests the permission. When the status is OPEN, the permission dialog will pop up normally when the app requests the permission. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISABLE_PERMISSION_DIALOG
 
@@ -1293,14 +1399,14 @@ Sets the dialog toggle status for a specified permission of the current user. Af
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -1331,6 +1437,8 @@ Sets the dialog toggle status for a specified permission under a specified sub-p
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.DISABLE_PERMISSION_DIALOG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1359,11 +1467,11 @@ Sets the dialog toggle status for a specified permission under a specified sub-p
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |

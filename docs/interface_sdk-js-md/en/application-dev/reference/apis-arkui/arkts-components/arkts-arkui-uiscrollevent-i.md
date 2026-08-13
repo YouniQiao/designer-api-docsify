@@ -2,13 +2,15 @@
 
 Defines a UIScrollableCommonEvent which is used to set different common event to target component.
 
-**Inheritance/Implementation:** UIScrollEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
+**Inheritance/Implementation:** UIScrollEvent extends UIScrollableCommonEvent
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
-<!--Device-unnamed-declare interface UIScrollEvent extends UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIScrollEvent extends UIScrollableCommonEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface UIScrollEvent--><!--Device-unnamed-declare interface UIScrollEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ Set or reset the callback which is triggered when the Scroll will scroll.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

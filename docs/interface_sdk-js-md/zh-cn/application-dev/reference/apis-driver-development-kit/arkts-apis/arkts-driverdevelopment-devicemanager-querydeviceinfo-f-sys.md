@@ -8,9 +8,11 @@ function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
 
 查询扩展外设详细信息列表。如果没有设备接入，那么将会返回一个空的列表。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -24,7 +26,7 @@ function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获得。 如果不传入设备ID，则默认获取所有的设备信息；如果没有外接设备，且没有传入设备ID则会返回空数组。 |
+| deviceId | long | 否 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获得。 如果不传入设备ID，则默认获取所有的设备信息；如果没有外接设备，且没有传入设备ID则会返回空数组。 |
 
 **返回值：**
 
@@ -36,10 +38,10 @@ function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [26300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application cannot call a system API. |
+| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application cannot call a system API. |
 
 ## 示例
 

@@ -11,6 +11,8 @@ declare function createRandomAccessFileSync(file: string | File, mode?: number,
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function createRandomAccessFileSync(file: string | File, mode?: number,  options?: RandomAccessFileOptions): RandomAccessFile--><!--Device-unnamed-declare function createRandomAccessFileSync(file: string | File, mode?: number,  options?: RandomAccessFileOptions): RandomAccessFile-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

@@ -12,11 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 ```
 
-设置通知稍后提醒。该通知在指定时间后再次提醒，每次设置只会提醒一次，提醒方式与该通知相同。设置后该通知被删除。
+设置通知稍后提醒。该通知在指定时间后再次提醒，每次设置只会提醒一次，提醒方式与该通知相同。 设置后该通知被删除。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -33,7 +35,7 @@ function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hashCode | string | 是 | 需要设置稍后提醒通知的唯一标识。 |
-| delayTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 稍后提醒的时间间隔。&lt;br&gt;单位：秒。 |
+| delayTime | long | 是 | 稍后提醒的时间间隔。&lt;br&gt;单位：秒。 |
 
 **返回值：**
 
@@ -45,12 +47,12 @@ function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600028](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600028-当前通知不支持该接口) | This notification is not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [1600028](../errorcode-notification.md#1600028-当前通知不支持该接口) | This notification is not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
 ## 示例
 

@@ -4,6 +4,8 @@ The parameters of blur bubbles rise effect.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-uiEffect-interface BlurBubblesRiseEffectParam--><!--Device-uiEffect-interface BlurBubblesRiseEffectParam-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -22,11 +24,13 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 blurIntensity: number
 ```
 
-The Gaussian blur intensity of the blur bubbles rise effect.The value range is [0, 1], and values outside the range will be clamped during implementation.0 means no blur, and 1 represents the maximum blur level.
+The Gaussian blur intensity of the blur bubbles rise effect. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 means no blur, and 1 represents the maximum blur level.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ The Gaussian blur intensity of the blur bubbles rise effect.The value range is [
 maskImage: image.PixelMap
 ```
 
-The mask image for the blur bubbles rise effect, controlling the blur bubbles area.The masked area has a blur effect, while the unmasked area has no blur effect.
+The mask image for the blur bubbles rise effect, controlling the blur bubbles area. The masked area has a blur effect, while the unmasked area has no blur effect.
 
 **Type:** image.PixelMap
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +68,13 @@ The mask image for the blur bubbles rise effect, controlling the blur bubbles ar
 mixStrength: number
 ```
 
-The mixing strength between the original and blurred images.The value range is [0, 1], and values outside the range will be clamped during implementation.0 corresponds to the original image, and 1 corresponds to the blurred image.
+The mixing strength between the original and blurred images. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 corresponds to the original image, and 1 corresponds to the blurred image.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,11 +90,13 @@ The mixing strength between the original and blurred images.The value range is [
 progress: number
 ```
 
-The animation progress of the blur bubbles rise effect.The value range is [0, 1], and values outside the range will be clamped during implementation.0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
+The animation progress of the blur bubbles rise effect. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

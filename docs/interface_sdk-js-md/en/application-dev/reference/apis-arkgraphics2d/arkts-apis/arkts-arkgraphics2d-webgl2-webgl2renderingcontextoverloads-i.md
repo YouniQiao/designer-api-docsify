@@ -6,6 +6,8 @@ WebGL 2.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface WebGL2RenderingContextOverloads--><!--Device-unnamed-interface WebGL2RenderingContextOverloads-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -21,6 +23,8 @@ Sets buffer data
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -47,6 +51,8 @@ Sets buffer data from BufferSource
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -80,6 +86,8 @@ Sets buffer data from ArrayBufferView with offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-bufferData(      target: webgl.GLenum,      srcData: ArrayBufferView,      usage: webgl.GLenum,      srcOffset: webgl.GLuint,      length?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-bufferData(      target: webgl.GLenum,      srcData: ArrayBufferView,      usage: webgl.GLenum,      srcOffset: webgl.GLuint,      length?: webgl.GLuint,    ): void-End-->
@@ -107,6 +115,8 @@ Sets buffer sub data
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -139,6 +149,8 @@ Sets buffer sub data with offset
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -176,6 +188,8 @@ Compressed texture image 2D from PBO offset
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -218,6 +232,8 @@ Compressed texture image 2D from ArrayBufferView
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-compressedTexImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-compressedTexImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void-End-->
@@ -259,6 +275,8 @@ Compressed texture sub image 2D from PBO offset
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -303,6 +321,8 @@ Compressed texture sub image 2D from ArrayBufferView
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-compressedTexSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-compressedTexSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void-End-->
@@ -344,6 +364,8 @@ Reads pixels from the framebuffer to ArrayBufferView
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-readPixels(      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      dstData: ArrayBufferView | null,    ): void--><!--Device-WebGL2RenderingContextOverloads-readPixels(      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      dstData: ArrayBufferView | null,    ): void-End-->
@@ -381,6 +403,8 @@ Reads pixels from the framebuffer to PBO offset
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -420,6 +444,8 @@ Reads pixels from the framebuffer to ArrayBufferView with offset
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -462,6 +488,8 @@ Sets texture image 2D from pixels
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
@@ -501,6 +529,8 @@ Sets texture image 2D from TexImageSource
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void--><!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void-End-->
@@ -539,6 +569,8 @@ Sets texture image 2D from PBO offset
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -581,6 +613,8 @@ Sets texture image 2D from TexImageSource
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -625,6 +659,8 @@ Sets texture image 2D from ArrayBufferView with offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-texImage2D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void-End-->
@@ -668,6 +704,8 @@ Sets texture sub image 2D from pixels
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
@@ -708,6 +746,8 @@ Sets texture sub image 2D from TexImageSource
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void--><!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void-End-->
@@ -747,6 +787,8 @@ Sets texture sub image 2D from PBO offset
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -789,6 +831,8 @@ Sets texture sub image 2D from TexImageSource
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -833,6 +877,8 @@ Sets texture sub image 2D from ArrayBufferView with offset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-texSubImage2D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void-End-->
@@ -871,6 +917,8 @@ Sets uniform1fv value
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform1fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform1fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -902,6 +950,8 @@ Sets uniform1iv value
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -935,6 +985,8 @@ Sets uniform2fv value
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform2fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform2fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -966,6 +1018,8 @@ Sets uniform2iv value
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -999,6 +1053,8 @@ Sets uniform3fv value
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform3fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform3fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -1030,6 +1086,8 @@ Sets uniform3iv value
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1063,6 +1121,8 @@ Sets uniform4fv value
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniform4fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniform4fv(      location: webgl.WebGLUniformLocation | null,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -1094,6 +1154,8 @@ Sets uniform4iv value
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1127,6 +1189,8 @@ Sets uniformMatrix2fv value
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1162,6 +1226,8 @@ Sets uniformMatrix3fv value
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextOverloads-uniformMatrix3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextOverloads-uniformMatrix3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -1195,6 +1261,8 @@ Sets uniformMatrix4fv value
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

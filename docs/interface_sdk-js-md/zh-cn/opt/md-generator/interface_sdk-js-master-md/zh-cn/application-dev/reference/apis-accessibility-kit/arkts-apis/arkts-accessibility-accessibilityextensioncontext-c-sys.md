@@ -2,11 +2,13 @@
 
 辅助功能扩展的上下文环境，用来配置辅助应用关注信息类型、查询节点信息、手势注入等。
 
-**继承/实现关系：** AccessibilityExtensionContext extends [ExtensionContext](ExtensionContext)
+**继承/实现关系：** AccessibilityExtensionContext extends ExtensionContext
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -18,7 +20,9 @@ getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 
 获取当前获得焦点的元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -38,10 +42,10 @@ getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [9300006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
+| [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
 
 ## 示例
 
@@ -95,7 +99,9 @@ getAccessibilityWindowsSync(displayId?: number): Array<AccessibilityElement>
 
 获取窗口列表。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -121,9 +127,9 @@ getAccessibilityWindowsSync(displayId?: number): Array<AccessibilityElement>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
 
 ## 示例
 
@@ -181,7 +187,9 @@ getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
 
 提供查询应用自定义默认焦点的能力。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>--><!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>-End-->
 
@@ -205,9 +213,9 @@ getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
 
 ## 示例
 
@@ -262,7 +270,9 @@ getElements(windowId: number, elementId?: number): Promise<Array<AccessibilityEl
 
 提供批量查询节点的能力。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>-End-->
 
@@ -287,9 +297,9 @@ getElements(windowId: number, elementId?: number): Promise<Array<AccessibilityEl
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
 
 ## 示例
 
@@ -346,7 +356,9 @@ getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
 
 获取活动窗口根元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -372,10 +384,10 @@ getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [9300006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
+| [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
 
 ## 示例
 
@@ -431,7 +443,9 @@ holdRunningLockSync(): void
 
 持有RunningLock锁，持锁后，屏幕不会自动灭屏。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -445,8 +459,8 @@ holdRunningLockSync(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -496,12 +510,11 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-通知无障碍服务可以关闭该无障碍扩展服务。
+通知无障碍服务可以关闭该无障碍扩展服务。 此函数需要与注册预关闭接口 [on('preDisconnect')](#on_preDisconnect)配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
 
-此函数需要与注册预关闭接口  
-[on('preDisconnect')](AccessibilityExtensionContext#on(type: 'preDisconnect', callback: Callback&lt;void&gt;))配合使用，如果没有调用过注册预关闭函数，直接调用此函数不生效。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -515,8 +528,8 @@ notifyDisconnect(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -560,7 +573,40 @@ export default class AccessibilityManager {
 }
 ```
 
-## off('preDisconnect')
+## offPreDisconnect
+
+```TypeScript
+offPreDisconnect(callback?: Callback<void>): void
+```
+
+Unregister accessibilityExtensionAbility disconnect callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_preDisconnect
 
 ```TypeScript
 off(type: 'preDisconnect', callback?: Callback<void>): void
@@ -569,6 +615,8 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 取消已经向无障碍服务注册的预关闭回调函数，无障碍服务关闭该扩展服务前不再执行该回调。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -589,8 +637,8 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -634,18 +682,50 @@ export default class AccessibilityManager {
 }
 ```
 
-## on('preDisconnect')
+## onPreDisconnect
+
+```TypeScript
+onPreDisconnect(callback: Callback<void>): void
+```
+
+Register accessibilityExtensionAbility disconnect callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_preDisconnect
 
 ```TypeScript
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-向无障碍服务注册回调函数，在无障碍服务关闭该无障碍扩展服务前会执行该回调函数。使用callback异步回调。
-
-此注册函数需要与[notifyDisconnect](#notifyDisconnect)配合使用，如果不调用  
-[notifyDisconnect](#notifyDisconnect)，则默认等待30秒后，无障碍扩展服务会自动关闭。
+向无障碍服务注册回调函数，在无障碍服务关闭该无障碍扩展服务前会执行该回调函数。使用callback异步回调。 此注册函数需要与[notifyDisconnect](#notifyDisconnect)配合使用，如果不调用 [notifyDisconnect](#notifyDisconnect)，则默认等待30秒后，无障碍扩展服务会自动关闭。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -666,8 +746,8 @@ on(type: 'preDisconnect', callback: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -721,7 +801,9 @@ startAbility(want: Want): Promise<void>
 
 提供拉起前台页面的能力。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
@@ -745,8 +827,8 @@ startAbility(want: Want): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -805,7 +887,9 @@ unholdRunningLockSync(): void
 
 释放RunningLock锁，恢复自动灭屏。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -819,8 +903,8 @@ unholdRunningLockSync(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

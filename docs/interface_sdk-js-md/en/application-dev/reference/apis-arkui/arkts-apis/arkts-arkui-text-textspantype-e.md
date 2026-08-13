@@ -1,12 +1,12 @@
 # TextSpanType
 
-Defines span type.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The order for menu type matching is as follows.&lt;br&gt;When the user interacts with text, the system follows this order to decides which type of menu to display.&lt;ol&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
+Defines span type. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The order for menu type matching is as follows. &lt;br&gt;When the user interacts with text, the system follows this order to decides which type of menu to display. &lt;ol&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt; &lt;/ol&gt; &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum TextSpanType--><!--Device-unnamed-export declare enum TextSpanType-End-->
 
@@ -23,6 +23,8 @@ Only contains text.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +44,8 @@ Only contains image.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextSpanType-IMAGE = 1--><!--Device-TextSpanType-IMAGE = 1-End-->
@@ -60,6 +64,8 @@ Contains both text and image.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextSpanType-MIXED = 2--><!--Device-TextSpanType-MIXED = 2-End-->
@@ -72,11 +78,13 @@ Contains both text and image.
 DEFAULT = 3
 ```
 
-When no other types are explicitly specified, this type will be matched.When this type is registered but TEXT, IMAGE, or MIXED types are not registered,this type will be triggered and displayed for those registered types.
+When no other types are explicitly specified, this type will be matched. When this type is registered but TEXT, IMAGE, or MIXED types are not registered, this type will be triggered and displayed for those registered types.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

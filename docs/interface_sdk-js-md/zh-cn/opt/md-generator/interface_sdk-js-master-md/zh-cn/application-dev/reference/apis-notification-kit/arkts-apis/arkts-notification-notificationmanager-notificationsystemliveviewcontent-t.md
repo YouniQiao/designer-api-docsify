@@ -6,7 +6,9 @@ export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewConte
 
 系统实况窗通知内容。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewContent--><!--Device-notificationManager-export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewContent-End-->
 

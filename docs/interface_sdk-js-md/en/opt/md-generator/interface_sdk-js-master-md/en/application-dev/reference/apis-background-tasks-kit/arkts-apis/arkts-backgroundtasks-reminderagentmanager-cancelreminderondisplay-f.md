@@ -16,6 +16,8 @@ Cancels the notification card displayed in the notification center with the agen
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -36,8 +38,8 @@ Cancels the notification card displayed in the notification center with the agen
 
 | Error Code ID |
 | --- |
-| [1700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) |
-| [1700007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
 
 ## Examples
 

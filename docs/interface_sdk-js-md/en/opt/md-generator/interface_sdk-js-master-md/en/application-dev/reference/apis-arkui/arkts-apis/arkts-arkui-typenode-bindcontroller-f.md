@@ -10,6 +10,8 @@ Binds a [TextController](../arkts-components/arkts-arkui-textcontroller-c.md#Tex
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -30,8 +32,8 @@ Binds a [TextController](../arkts-components/arkts-arkui-textcontroller-c.md#Tex
 
 | Error Code ID |
 | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
-| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| [100023](../errorcode-node.md#100023-parameter-error) |
 
 ## Examples
 
@@ -87,9 +89,11 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void
 ```
 
-Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md#SwiperController) instance to the [Swiper](arkts-arkui-typenode-swiper-t.md#Swiper) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
+Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md#SwiperController) instance to the [Swiper](arkts-arkui-typenode-swiper-t.md#Swiper) node. Cross- language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,12 +115,12 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md
 
 | Error Code ID |
 | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
-| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| [100023](../errorcode-node.md#100023-parameter-error) |
 
 ## Examples
 
-See the example for [createNode('Swiper')12+](#createnodeswiper12).
+See the example for createNode('Swiper')12+.
 
 
 ## bindController
@@ -128,6 +132,8 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 Binds the [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) to the [Scroll](arkts-arkui-typenode-scroll-t.md#Scroll) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,8 +155,8 @@ Binds the [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
 
 ## Examples
 
@@ -168,6 +174,8 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) instance to the [List](arkts-arkui-typenode-list-t.md#List) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,8 +197,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) insta
 
 | Error Code ID |
 | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
-| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| [100023](../errorcode-node.md#100023-parameter-error) |
 
 ## Examples
 
@@ -205,11 +213,11 @@ typeNode.bindController(node, scroller, 'List');
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-Binds the [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md#TextInputController) to the [TextInput](arkts-arkui-typenode-textinput-t.md#TextInput) node. Cross  
--language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API  
-supports declaratively created nodes since API version 26.0.0.
+Binds the [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md#TextInputController) to the [TextInput](arkts-arkui-typenode-textinput-t.md#TextInput) node. Cross -language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -231,8 +239,8 @@ supports declaratively created nodes since API version 26.0.0.
 
 | Error Code ID |
 | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
-| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| [100023](../errorcode-node.md#100023-parameter-error) |
 
 ## Examples
 
@@ -285,6 +293,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) insta
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -305,8 +315,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) insta
 
 | Error Code ID |
 | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
-| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| [100023](../errorcode-node.md#100023-parameter-error) |
 
 ## Examples
 
@@ -321,9 +331,11 @@ typeNode.bindController(node, scroller, 'WaterFlow');
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-Binds a [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md#TextAreaController) instance to the [TextArea](arkts-arkui-typenode-textarea-t.md#TextArea) node.Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md#TextAreaController) instance to the [TextArea](arkts-arkui-typenode-textarea-t.md#TextArea) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -345,8 +357,8 @@ Binds a [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-
 
 | Error Code ID |
 | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
-| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| [100023](../errorcode-node.md#100023-parameter-error) |
 
 ## Examples
 
@@ -399,6 +411,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) insta
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -419,8 +433,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller) insta
 
 | Error Code ID |
 | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) |
-| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| [100023](../errorcode-node.md#100023-parameter-error) |
 
 ## Examples
 

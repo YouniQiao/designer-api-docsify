@@ -3,97 +3,107 @@
 ## MAX_RECORD_NUM
 
 ```TypeScript
-const MAX_RECORD_NUM = 512
+const MAX_RECORD_NUM: number
 ```
 
-Maximum number of records in a **PasteData** object. In versions earlier than API version 10, the value is 512,indicating that no more records can be added once the number of records reaches 512.
+Maximum number of records in a **PasteData** object. In versions earlier than API version 10, the value is 512, indicating that no more records can be added once the number of records reaches 512. Since API version 10, no limit is placed on the number of records in a **PasteData** object. Unit: Numbers, the value must be an integer within [512, 512].
 
-Since API version 10, no limit is placed on the number of records in a **PasteData** object.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the stage model.
 
-<!--Device-pasteboard-const MAX_RECORD_NUM = 512--><!--Device-pasteboard-const MAX_RECORD_NUM = 512-End-->
+<!--Device-pasteboard-const MAX_RECORD_NUM: int--><!--Device-pasteboard-const MAX_RECORD_NUM: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_PIXELMAP
 
 ```TypeScript
-const MIMETYPE_PIXELMAP = 'pixelMap'
+const MIMETYPE_PIXELMAP: string
 ```
 
-MIME type of the PixelMap content.
+MIME type of the PixelMap content. The value is 'pixelMap'.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-pasteboard-const MIMETYPE_PIXELMAP = 'pixelMap'--><!--Device-pasteboard-const MIMETYPE_PIXELMAP = 'pixelMap'-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-pasteboard-const MIMETYPE_PIXELMAP: string--><!--Device-pasteboard-const MIMETYPE_PIXELMAP: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_HTML
 
 ```TypeScript
-const MIMETYPE_TEXT_HTML = 'text/html'
+const MIMETYPE_TEXT_HTML: string
 ```
 
-MIME type of the HTML content.
+MIME type of the HTML content. The value is 'text/html'.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_HTML = 'text/html'--><!--Device-pasteboard-const MIMETYPE_TEXT_HTML = 'text/html'-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string--><!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_PLAIN
 
 ```TypeScript
-const MIMETYPE_TEXT_PLAIN = 'text/plain'
+const MIMETYPE_TEXT_PLAIN: string
 ```
 
-MIME type of the plain text content.
+MIME type of the plain text content. The value is 'text/plain'.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN = 'text/plain'--><!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN = 'text/plain'-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN: string--><!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_URI
 
 ```TypeScript
-const MIMETYPE_TEXT_URI = 'text/uri'
+const MIMETYPE_TEXT_URI: string
 ```
 
-MIME type of the URI content.
+MIME type of the URI content. The value is 'text/uri'.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_URI = 'text/uri'--><!--Device-pasteboard-const MIMETYPE_TEXT_URI = 'text/uri'-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-pasteboard-const MIMETYPE_TEXT_URI: string--><!--Device-pasteboard-const MIMETYPE_TEXT_URI: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_WANT
 
 ```TypeScript
-const MIMETYPE_TEXT_WANT = 'text/want'
+const MIMETYPE_TEXT_WANT: string
 ```
 
-MIME type of the Want content.
+MIME type of the Want content. The value is 'text/want'.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_WANT = 'text/want'--><!--Device-pasteboard-const MIMETYPE_TEXT_WANT = 'text/want'-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-pasteboard-const MIMETYPE_TEXT_WANT: string--><!--Device-pasteboard-const MIMETYPE_TEXT_WANT: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard

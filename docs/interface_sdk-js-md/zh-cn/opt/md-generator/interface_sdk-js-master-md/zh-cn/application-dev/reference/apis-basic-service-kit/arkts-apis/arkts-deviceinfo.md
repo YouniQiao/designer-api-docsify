@@ -1,14 +1,22 @@
 # @ohos.deviceInfo
 
-本模块提供终端设备信息查询，开发者不可配置。
+/*
+ Copyright (c) 2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **说明：**
-> 
-> 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> hardwareProfile、incrementalVersion、buildType、buildUser、buildHost、buildTime、buildRootHash等参数返回值为default，这些参数会在设备正式商用版本中配置具体值。
-> 本模块接口返回设备常量信息，建议应用只调用一次，不需要频繁调用。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace deviceInfo--><!--Device-unnamed-declare namespace deviceInfo-End-->
 
@@ -20,7 +28,7 @@
 
 | 名称 |
 | --- |
-| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md#apiavailable) |
+| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md#apiAvailable) |
 
 ### 枚举
 
@@ -33,47 +41,47 @@
 
 | 名称 |
 | --- |
-| [ODID](arkts-basicservices-deviceinfo-con.md#odid) |
-| [abiList](arkts-basicservices-deviceinfo-con.md#abilist) |
-| [bootCount](arkts-basicservices-deviceinfo-con.md#bootcount) |
-| [bootloaderVersion](arkts-basicservices-deviceinfo-con.md#bootloaderversion) |
+| [ODID](arkts-basicservices-deviceinfo-con.md#ODID) |
+| [abiList](arkts-basicservices-deviceinfo-con.md#abiList) |
+| [bootCount](arkts-basicservices-deviceinfo-con.md#bootCount) |
+| [bootloaderVersion](arkts-basicservices-deviceinfo-con.md#bootloaderVersion) |
 | [brand](arkts-basicservices-deviceinfo-con.md#brand) |
-| [buildHost](arkts-basicservices-deviceinfo-con.md#buildhost) |
-| [buildRootHash](arkts-basicservices-deviceinfo-con.md#buildroothash) |
-| [buildTime](arkts-basicservices-deviceinfo-con.md#buildtime) |
-| [buildType](arkts-basicservices-deviceinfo-con.md#buildtype) |
-| [buildUser](arkts-basicservices-deviceinfo-con.md#builduser) |
-| [buildVersion](arkts-basicservices-deviceinfo-con.md#buildversion) |
-| [chipType](arkts-basicservices-deviceinfo-con.md#chiptype) |
-| [deviceColor](arkts-basicservices-deviceinfo-con.md#devicecolor) |
-| [deviceType](arkts-basicservices-deviceinfo-con.md#devicetype) |
-| [diskSN](arkts-basicservices-deviceinfo-con.md#disksn) |
-| [displayVersion](arkts-basicservices-deviceinfo-con.md#displayversion) |
-| [distributionOSApiName](arkts-basicservices-deviceinfo-con.md#distributionosapiname) |
-| [distributionOSApiVersion](arkts-basicservices-deviceinfo-con.md#distributionosapiversion) |
-| [distributionOSName](arkts-basicservices-deviceinfo-con.md#distributionosname) |
-| [distributionOSReleaseType](arkts-basicservices-deviceinfo-con.md#distributionosreleasetype) |
-| [distributionOSVersion](arkts-basicservices-deviceinfo-con.md#distributionosversion) |
-| [featureVersion](arkts-basicservices-deviceinfo-con.md#featureversion) |
-| [firstApiVersion](arkts-basicservices-deviceinfo-con.md#firstapiversion) |
-| [hardwareModel](arkts-basicservices-deviceinfo-con.md#hardwaremodel) |
-| [hardwareProfile](arkts-basicservices-deviceinfo-con.md#hardwareprofile) |
-| [incrementalVersion](arkts-basicservices-deviceinfo-con.md#incrementalversion) |
-| [majorVersion](arkts-basicservices-deviceinfo-con.md#majorversion) |
+| [buildHost](arkts-basicservices-deviceinfo-con.md#buildHost) |
+| [buildRootHash](arkts-basicservices-deviceinfo-con.md#buildRootHash) |
+| [buildTime](arkts-basicservices-deviceinfo-con.md#buildTime) |
+| [buildType](arkts-basicservices-deviceinfo-con.md#buildType) |
+| [buildUser](arkts-basicservices-deviceinfo-con.md#buildUser) |
+| [buildVersion](arkts-basicservices-deviceinfo-con.md#buildVersion) |
+| [chipType](arkts-basicservices-deviceinfo-con.md#chipType) |
+| [deviceColor](arkts-basicservices-deviceinfo-con.md#deviceColor) |
+| [deviceType](arkts-basicservices-deviceinfo-con.md#deviceType) |
+| [diskSN](arkts-basicservices-deviceinfo-con.md#diskSN) |
+| [displayVersion](arkts-basicservices-deviceinfo-con.md#displayVersion) |
+| [distributionOSApiName](arkts-basicservices-deviceinfo-con.md#distributionOSApiName) |
+| [distributionOSApiVersion](arkts-basicservices-deviceinfo-con.md#distributionOSApiVersion) |
+| [distributionOSName](arkts-basicservices-deviceinfo-con.md#distributionOSName) |
+| [distributionOSReleaseType](arkts-basicservices-deviceinfo-con.md#distributionOSReleaseType) |
+| [distributionOSVersion](arkts-basicservices-deviceinfo-con.md#distributionOSVersion) |
+| [featureVersion](arkts-basicservices-deviceinfo-con.md#featureVersion) |
+| [firstApiVersion](arkts-basicservices-deviceinfo-con.md#firstApiVersion) |
+| [hardwareModel](arkts-basicservices-deviceinfo-con.md#hardwareModel) |
+| [hardwareProfile](arkts-basicservices-deviceinfo-con.md#hardwareProfile) |
+| [incrementalVersion](arkts-basicservices-deviceinfo-con.md#incrementalVersion) |
+| [majorVersion](arkts-basicservices-deviceinfo-con.md#majorVersion) |
 | [manufacture](arkts-basicservices-deviceinfo-con.md#manufacture) |
-| [marketName](arkts-basicservices-deviceinfo-con.md#marketname) |
-| [osFullName](arkts-basicservices-deviceinfo-con.md#osfullname) |
-| [osReleaseType](arkts-basicservices-deviceinfo-con.md#osreleasetype) |
-| [performanceClass](arkts-basicservices-deviceinfo-con.md#performanceclass) |
-| [productModel](arkts-basicservices-deviceinfo-con.md#productmodel) |
-| [productModelAlias](arkts-basicservices-deviceinfo-con.md#productmodelalias) |
-| [productSeries](arkts-basicservices-deviceinfo-con.md#productseries) |
-| [sdkApiVersion](arkts-basicservices-deviceinfo-con.md#sdkapiversion) |
-| [sdkMinorApiVersion](arkts-basicservices-deviceinfo-con.md#sdkminorapiversion) |
-| [sdkPatchApiVersion](arkts-basicservices-deviceinfo-con.md#sdkpatchapiversion) |
-| [securityPatchTag](arkts-basicservices-deviceinfo-con.md#securitypatchtag) |
-| [seniorVersion](arkts-basicservices-deviceinfo-con.md#seniorversion) |
+| [marketName](arkts-basicservices-deviceinfo-con.md#marketName) |
+| [osFullName](arkts-basicservices-deviceinfo-con.md#osFullName) |
+| [osReleaseType](arkts-basicservices-deviceinfo-con.md#osReleaseType) |
+| [performanceClass](arkts-basicservices-deviceinfo-con.md#performanceClass) |
+| [productModel](arkts-basicservices-deviceinfo-con.md#productModel) |
+| [productModelAlias](arkts-basicservices-deviceinfo-con.md#productModelAlias) |
+| [productSeries](arkts-basicservices-deviceinfo-con.md#productSeries) |
+| [sdkApiVersion](arkts-basicservices-deviceinfo-con.md#sdkApiVersion) |
+| [sdkMinorApiVersion](arkts-basicservices-deviceinfo-con.md#sdkMinorApiVersion) |
+| [sdkPatchApiVersion](arkts-basicservices-deviceinfo-con.md#sdkPatchApiVersion) |
+| [securityPatchTag](arkts-basicservices-deviceinfo-con.md#securityPatchTag) |
+| [seniorVersion](arkts-basicservices-deviceinfo-con.md#seniorVersion) |
 | [serial](arkts-basicservices-deviceinfo-con.md#serial) |
-| [softwareModel](arkts-basicservices-deviceinfo-con.md#softwaremodel) |
+| [softwareModel](arkts-basicservices-deviceinfo-con.md#softwareModel) |
 | [udid](arkts-basicservices-deviceinfo-con.md#udid) |
-| [versionId](arkts-basicservices-deviceinfo-con.md#versionid) |
+| [versionId](arkts-basicservices-deviceinfo-con.md#versionId) |

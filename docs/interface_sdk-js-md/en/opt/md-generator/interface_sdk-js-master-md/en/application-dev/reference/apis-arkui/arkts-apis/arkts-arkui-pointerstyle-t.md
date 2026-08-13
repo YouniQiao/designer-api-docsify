@@ -8,6 +8,8 @@ Defines the pointer style.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export type PointerStyle = pointer.PointerStyle--><!--Device-unnamed-export type PointerStyle = pointer.PointerStyle-End-->

@@ -6,6 +6,8 @@ Enumerates command codes for the plugin of an enterprise security application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export enum PluginCmd--><!--Device-dlpPermission-export enum PluginCmd-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -21,6 +23,8 @@ Command for delivering the plugin file name.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Command for delivering the plugin configuration file name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PluginCmd-CMD_BASE_INSTALL_CONFIG_FILE = 0x1002--><!--Device-PluginCmd-CMD_BASE_INSTALL_CONFIG_FILE = 0x1002-End-->
@@ -57,6 +63,8 @@ Command for delivering the suffix filter file name.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Command for uninstalling the plugin and removing all related files.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PluginCmd-CMD_BASE_UNINSTALL_PLUGIN = 0x1004--><!--Device-PluginCmd-CMD_BASE_UNINSTALL_PLUGIN = 0x1004-End-->
@@ -94,6 +104,8 @@ Command for querying whether transparent encryption and decryption is enabled.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PluginCmd-CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS = 0x1005--><!--Device-PluginCmd-CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS = 0x1005-End-->
@@ -111,6 +123,8 @@ Command for delivering generic event data to the plugin.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

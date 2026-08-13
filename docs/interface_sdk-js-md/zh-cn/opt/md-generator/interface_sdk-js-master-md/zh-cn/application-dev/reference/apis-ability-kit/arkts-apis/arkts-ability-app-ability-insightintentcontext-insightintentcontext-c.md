@@ -1,9 +1,10 @@
 # InsightIntentContext
 
-本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor)和  
-[@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#InsightIntentEntryExecutor)的属性，为意图执行提供基础能力，例如启动本应用内的[UIAbility组件](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)。
+本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor)和 [@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#InsightIntentEntryExecutor)的属性，为意图执行提 供基础能力，例如启动本应用内的[UIAbility组件](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class InsightIntentContext--><!--Device-unnamed-declare class InsightIntentContext-End-->
 
@@ -18,6 +19,8 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 设置意图执行结果的返回形式，适用于执行模式为[UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md#ExecuteMode)的意图。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,7 +40,7 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 | 错误码ID |
 | --- |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -92,6 +95,8 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -110,7 +115,7 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 | 错误码ID |
 | --- |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -162,11 +167,13 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 启动UIAbility组件，仅支持启动本应用内的UIAbility组件。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
@@ -183,21 +190,21 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-不支持的操作) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -248,11 +255,13 @@ startAbility(want: Want): Promise<void>
 
 启动UIAbility组件，仅支持启动本应用内的UIAbility组件。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>--><!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>-End-->
 
@@ -274,21 +283,21 @@ startAbility(want: Want): Promise<void>
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-不支持的操作) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -332,13 +341,13 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-意图实例唯一ID。用于通过  
-[insightIntentProvider.sendExecuteResult接口](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult) 和  
-[insightIntentProvider.sendIntentResult接口](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult)返回指定意图的执行结果。
+意图实例唯一ID。用于通过 [insightIntentProvider.sendExecuteResult接口] sendExecuteResult 和 [insightIntentProvider.sendIntentResult接口] sendIntentResult返回指定意图的执行结果。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

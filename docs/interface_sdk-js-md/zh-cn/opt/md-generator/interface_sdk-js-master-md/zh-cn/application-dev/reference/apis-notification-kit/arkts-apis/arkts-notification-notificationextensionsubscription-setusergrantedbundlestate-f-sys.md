@@ -15,7 +15,9 @@ function setUserGrantedBundleState(targetBundle: BundleOption,
 
 设置指定应用中“已获取的本机通知”的应用通知开关状态。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,11 +45,11 @@ function setUserGrantedBundleState(targetBundle: BundleOption,
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600022](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600022-无效的包信息) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600022](../errorcode-notification.md#1600022-无效的包信息) |
 
 ## 示例
 

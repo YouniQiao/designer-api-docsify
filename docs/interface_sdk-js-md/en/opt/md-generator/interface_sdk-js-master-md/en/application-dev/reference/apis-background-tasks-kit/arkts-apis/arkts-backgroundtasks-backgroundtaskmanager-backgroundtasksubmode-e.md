@@ -1,9 +1,10 @@
 # BackgroundTaskSubmode
 
-Defines the subtype of a continuous task. It is usually used together with the main type   
-[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode). For details, see the mapping table. The two types are newly added in API version 21 for requesting and updating continuous tasks.
+Defines the subtype of a continuous task. It is usually used together with the main type [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode). For details, see the mapping table. The two types are newly added in API version 21 for requesting and updating continuous tasks.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export enum BackgroundTaskSubmode--><!--Device-backgroundTaskManager-export enum BackgroundTaskSubmode-End-->
 
@@ -17,7 +18,9 @@ SUBMODE_CAR_KEY_NORMAL_NOTIFICATION = 1
 
 **CAR_KEY** type. It is of the normal text notification type.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskSubmode-SUBMODE_CAR_KEY_NORMAL_NOTIFICATION = 1--><!--Device-BackgroundTaskSubmode-SUBMODE_CAR_KEY_NORMAL_NOTIFICATION = 1-End-->
 
@@ -31,7 +34,9 @@ SUBMODE_NORMAL_NOTIFICATION = 2
 
 Normal text notification.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -47,7 +52,9 @@ SUBMODE_LIVE_VIEW_NOTIFICATION = 3
 
 Live view notification.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskSubmode-SUBMODE_LIVE_VIEW_NOTIFICATION = 3--><!--Device-BackgroundTaskSubmode-SUBMODE_LIVE_VIEW_NOTIFICATION = 3-End-->
 
@@ -59,9 +66,11 @@ Live view notification.
 SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION = 4
 ```
 
-Audio and video playback. It is of the normal text notification type.You can access [AVSession](../../../media/avsession/avsession-overview.md) as needed.
+Audio and video playback. It is of the normal text notification type. You can access [AVSession](../../../media/avsession/avsession-overview.md) as needed.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -75,9 +84,11 @@ Audio and video playback. It is of the normal text notification type.You can acc
 SUBMODE_AVSESSION_AUDIO_PLAYBACK = 5
 ```
 
-Audio and video playback scenario where [AVSession](../../../media/avsession/avsession-overview.md) is accessed.It is of the normal text notification type.
+Audio and video playback scenario where [AVSession](../../../media/avsession/avsession-overview.md) is accessed. It is of the normal text notification type.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -93,7 +104,9 @@ SUBMODE_AUDIO_RECORD_NORMAL_NOTIFICATION = 6
 
 Recording. It is of the normal text notification type.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskSubmode-SUBMODE_AUDIO_RECORD_NORMAL_NOTIFICATION = 6--><!--Device-BackgroundTaskSubmode-SUBMODE_AUDIO_RECORD_NORMAL_NOTIFICATION = 6-End-->
 
@@ -107,7 +120,9 @@ SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION = 7
 
 Recording. It is of the normal text notification type.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskSubmode-SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION = 7--><!--Device-BackgroundTaskSubmode-SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION = 7-End-->
 
@@ -121,7 +136,9 @@ SUBMODE_VOICE_CHAT_NORMAL_NOTIFICATION = 8
 
 Call. It is of the normal text notification type.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskSubmode-SUBMODE_VOICE_CHAT_NORMAL_NOTIFICATION = 8--><!--Device-BackgroundTaskSubmode-SUBMODE_VOICE_CHAT_NORMAL_NOTIFICATION = 8-End-->
 
@@ -135,7 +152,9 @@ SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION = 9
 
 Media processing. For example, an application exports media files in the background. It is of the normal text notification type.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskSubmode-SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION = 9--><!--Device-BackgroundTaskSubmode-SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION = 9-End-->
 
@@ -149,7 +168,9 @@ SUBMODE_VIDEO_BROADCAST_NORMAL_NOTIFICATION = 10
 
 Video casting. For example, an application uses a third-party casting component to cast a video in the background, and the notification type is common text notification.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BackgroundTaskSubmode-SUBMODE_VIDEO_BROADCAST_NORMAL_NOTIFICATION = 10--><!--Device-BackgroundTaskSubmode-SUBMODE_VIDEO_BROADCAST_NORMAL_NOTIFICATION = 10-End-->
 
@@ -163,7 +184,9 @@ SUBMODE_WORK_OUT_NORMAL_NOTIFICATION = 11
 
 Exercise. For example, an application has an indoor running scenario in the background, and the notification type is common text notification.
 
-**Since:** 23
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

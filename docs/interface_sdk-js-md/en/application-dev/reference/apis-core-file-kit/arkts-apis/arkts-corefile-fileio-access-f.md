@@ -59,7 +59,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
 
 
 ## access
@@ -88,5 +88,5 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
 | mode | number | Yes | Options for accessing the file. You can specify multiple options, separated with a bitwise OR operator (\|). The default value is **0**.&lt;br&gt;The options are as follows:&lt;br&gt;- **0**: Check whether the file exists.&lt;br&gt;- **1**: Check whether the process has the execute permission on the file.&lt;br&gt;- **2**: Check whether the process has the write permission on the file.&lt;br&gt;- **4**: Check whether the process has the read permission on the file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
 

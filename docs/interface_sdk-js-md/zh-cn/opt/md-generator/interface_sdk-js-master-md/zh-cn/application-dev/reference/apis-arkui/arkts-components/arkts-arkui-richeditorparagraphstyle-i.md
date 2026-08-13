@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RichEditorParagraphStyle--><!--Device-unnamed-declare interface RichEditorParagraphStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,12 +16,13 @@
 leadingMargin?: Dimension | LeadingMarginPlaceholder
 ```
 
-设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置，默认单位为vp。默认值：{"size":  
-["0.00px","0.00px"]}
+设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置，默认单位为vp。默认值：{"size": ["0.00px","0.00px"]}
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,15 +38,13 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 lineBreakStrategy?: LineBreakStrategy
 ```
 
-设置折行规则。 
-
-默认值：LineBreakStrategy.GREEDY
-
-在wordBreak不等于breakAll的时候生效，不支持连字符。
+设置折行规则。 默认值：LineBreakStrategy.GREEDY 在wordBreak不等于breakAll的时候生效，不支持连字符。
 
 **类型：** [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,17 +60,13 @@ lineBreakStrategy?: LineBreakStrategy
 paragraphSpacing?: number
 ```
 
-设置段落间距大小。
-
-单位：fp
-
-取值范围：[0, +∞)。传入负值时，按默认值处理。
-
-段落间距默认大小为0。
+设置段落间距大小。 单位：fp 取值范围：[0, +∞)。传入负值时，按默认值处理。 段落间距默认大小为0。
 
 **类型：** number
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,16 +82,13 @@ paragraphSpacing?: number
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。
-
-默认值：undefined，不设置着色器效果。
-
-该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#RichEditorTextStyle)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
-[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#RichEditorTextStyle)的fontColor。
+设置文本着色器效果。 默认值：undefined，不设置着色器效果。 该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#RichEditorTextStyle)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#RichEditorTextStyle)的fontColor。
 
 **类型：** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,6 +110,8 @@ textAlign?: TextAlign
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -130,13 +126,13 @@ textAlign?: TextAlign
 textDirection?: TextDirection
 ```
 
-设置文本方向。
-
-默认值：TextDirection.DEFAULT
+设置文本方向。 默认值：TextDirection.DEFAULT
 
 **类型：** TextDirection
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,13 +148,13 @@ textDirection?: TextDirection
 textVerticalAlign?: TextVerticalAlign
 ```
 
-设置文本段落在垂直方向的对齐方式。
-
-默认值：TextVerticalAlign.BASELINE
+设置文本段落在垂直方向的对齐方式。 默认值：TextVerticalAlign.BASELINE
 
 **类型：** TextVerticalAlign
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -174,13 +170,13 @@ textVerticalAlign?: TextVerticalAlign
 wordBreak?: WordBreak
 ```
 
-设置断行规则。
-
-默认值：WordBreak.BREAK_WORD。
+设置断行规则。 默认值：WordBreak.BREAK_WORD。
 
 **类型：** WordBreak
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

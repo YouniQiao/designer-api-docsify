@@ -2,7 +2,9 @@
 
 Enumerates the font styles.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-enum FontStyle--><!--Device-text-enum FontStyle-End-->
 
@@ -16,7 +18,9 @@ NORMAL = 0
 
 Normal.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -32,7 +36,9 @@ ITALIC = 1
 
 Italic. If no italic version is available for the current font, the oblique version will be used instead.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -48,7 +54,9 @@ OBLIQUE = 2
 
 Oblique. If no oblique version is available for the current font, the italic version will be used instead.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

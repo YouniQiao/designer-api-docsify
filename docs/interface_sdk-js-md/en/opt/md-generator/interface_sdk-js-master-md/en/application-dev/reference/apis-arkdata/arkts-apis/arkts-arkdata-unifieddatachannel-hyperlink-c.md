@@ -4,9 +4,11 @@ Represents the hyperlink data. It is a child class of [Text](arkts-arkdata-unifi
 
 **Inheritance/Implementation:** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-unifiedDataChannel-class Hyperlink extends Text--><!--Device-unifiedDataChannel-class Hyperlink extends Text-End-->
+**Deprecated since:** -1
+
+<!--Device-unifiedDataChannel-class Hyperlink--><!--Device-unifiedDataChannel-class Hyperlink-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -28,30 +30,12 @@ Indicates the description of a link
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Hyperlink-description?: string--><!--Device-Hyperlink-description?: string-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## url
-
-```TypeScript
-set url(value: string)
-```
-
-Indicates the url of a link
-
-**Type:** string
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Hyperlink-set url(value: string)--><!--Device-Hyperlink-set url(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core

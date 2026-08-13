@@ -2,9 +2,11 @@
 
 用于描述通知扩展订阅的信息。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo--><!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo-End-->
 
@@ -16,13 +18,15 @@
 addr: string
 ```
 
-表示设备的唯一标识符。当type为`SubscribeType.BLUETOOTH`时，指定对应的蓝牙设备地址。例如："11:22:33:AA:BB:FF"。
+表示设备的唯一标识符。 当type为`SubscribeType.BLUETOOTH`时，指定对应的蓝牙设备地址。例如："11:22:33:AA:BB:FF"。
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationExtensionSubscriptionInfo-addr: string--><!--Device-NotificationExtensionSubscriptionInfo-addr: string-End-->
 
@@ -38,9 +42,11 @@ type: notificationExtensionSubscription.SubscribeType
 
 **类型：** notificationExtensionSubscription.SubscribeType
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType--><!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType-End-->
 

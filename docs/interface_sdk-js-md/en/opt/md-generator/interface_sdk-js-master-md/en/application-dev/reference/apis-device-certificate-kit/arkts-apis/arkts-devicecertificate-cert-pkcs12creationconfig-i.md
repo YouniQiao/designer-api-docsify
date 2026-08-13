@@ -2,7 +2,9 @@
 
 Represents the configuration for creating .p12 files.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface Pkcs12CreationConfig--><!--Device-cert-interface Pkcs12CreationConfig-End-->
 
@@ -24,9 +26,11 @@ Algorithm parameters for encrypting the certificate.
 
 **Type:** [PbesParams](arkts-devicecertificate-cert-pbesparams-i.md)
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12CreationConfig-certEncParams?: PbesParams--><!--Device-Pkcs12CreationConfig-certEncParams?: PbesParams-End-->
 
@@ -38,16 +42,17 @@ Algorithm parameters for encrypting the certificate.
 encryptCert?: boolean
 ```
 
-Whether to encrypt the certificate. The default value is **true**. **true** means to encrypt the certificate;  
-**false** otherwise.
+Whether to encrypt the certificate. The default value is **true**. **true** means to encrypt the certificate; **false** otherwise.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12CreationConfig-encryptCert?: boolean--><!--Device-Pkcs12CreationConfig-encryptCert?: boolean-End-->
 
@@ -63,9 +68,11 @@ Algorithm parameters for encrypting the private key.
 
 **Type:** [PbesParams](arkts-devicecertificate-cert-pbesparams-i.md)
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12CreationConfig-keyEncParams?: PbesParams--><!--Device-Pkcs12CreationConfig-keyEncParams?: PbesParams-End-->
 
@@ -83,9 +90,11 @@ MAC digest algorithm for the P12. The default value is **SHA256**.
 
 **Default:** Pkcs12MacDigestAlgorithm.SHA256
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12CreationConfig-macDigestAlgorithm?: Pkcs12MacDigestAlgorithm--><!--Device-Pkcs12CreationConfig-macDigestAlgorithm?: Pkcs12MacDigestAlgorithm-End-->
 
@@ -97,15 +106,17 @@ MAC digest algorithm for the P12. The default value is **SHA256**.
 macIterations?: number
 ```
 
-Number of P12 MAC iterations. The default value is **2048**.The value must be a positive integer.
+Number of P12 MAC iterations. The default value is **2048**. The value must be a positive integer.
 
 **Type:** number
 
 **Default:** 2048
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12CreationConfig-macIterations?: int--><!--Device-Pkcs12CreationConfig-macIterations?: int-End-->
 
@@ -117,15 +128,17 @@ Number of P12 MAC iterations. The default value is **2048**.The value must be a 
 macSaltLen?: number
 ```
 
-Length of the salt value of the P12 MAC. The minimum value is **8**, and the default value is **16**.The value must be an integer greater than or equal to 8.
+Length of the salt value of the P12 MAC. The minimum value is **8**, and the default value is **16**. The value must be an integer greater than or equal to 8.
 
 **Type:** number
 
 **Default:** 16
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12CreationConfig-macSaltLen?: int--><!--Device-Pkcs12CreationConfig-macSaltLen?: int-End-->
 
@@ -141,9 +154,11 @@ Password of the .p12 file. The minimum length is 4.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12CreationConfig-password: string--><!--Device-Pkcs12CreationConfig-password: string-End-->
 

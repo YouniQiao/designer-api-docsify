@@ -18,7 +18,7 @@ Obtain current location switch status
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLocationEnabled](ohos.geoLocationManager/geoLocationManager.isLocationEnabled)
+**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -59,7 +59,7 @@ Obtain current location switch status
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLocationEnabled](ohos.geoLocationManager/geoLocationManager.isLocationEnabled)
+**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled)
 
 **Required permissions:** ohos.permission.LOCATION
 

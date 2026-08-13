@@ -14,7 +14,9 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The system uses the HDR PixelMap and SDR PixelMap to generate a gainmap. The returned Picture object contains the SDR PixelMap and the generated gainmap, both in RGBA8888 format. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>-End-->
 
@@ -39,7 +41,7 @@ Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The syste
 
 | Error Code ID |
 | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
 
 ## Examples
 
@@ -91,6 +93,8 @@ Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified opt
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>-End-->
@@ -117,8 +121,8 @@ Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified opt
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
 
 ## Examples
 

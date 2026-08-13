@@ -12,16 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured under **metadata** in  
-[abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses an asynchronous callback to return the result.
+Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses an asynchronous callback to return the result. > NOTE > > If the profile uses the resource reference format, the return value retains this format (for example, > **\$string:res_id**). You can obtain the referenced resources through related APIs of the > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager).
 
-> NOTE
-> 
-> If the profile uses the resource reference format, the return value retains this format (for example,
-> **\$string:res_id**). You can obtain the referenced resources through related APIs of the
-> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,11 +37,11 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-disabled-ability) |
-| [17700024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700024-profile-does-not-exist) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 
 ## Examples
 
@@ -80,16 +75,11 @@ try {
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise<Array<string>>
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured under **metadata** in  
-[abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses a promise to return the result.
+Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses a promise to return the result. > NOTE > > If the profile uses the resource reference format, the return value retains this format (for example, > **\$string:res_id**). You can obtain the referenced resources through related APIs of the > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager).
 
-> NOTE
-> 
-> If the profile uses the resource reference format, the return value retains this format (for example,
-> **\$string:res_id**). You can obtain the referenced resources through related APIs of the
-> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,11 +105,11 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-disabled-ability) |
-| [17700024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700024-profile-does-not-exist) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 
 ## Examples
 

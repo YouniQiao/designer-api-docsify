@@ -12,15 +12,13 @@ import { wifi } from '@kit.ConnectivityKit';
 function enableHotspot(): boolean
 ```
 
-Enables a Wi-Fi hotspot.
-
-&lt;p&gt;This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
+Enables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableHotspot](ohos.wifiManager/wifiManager.enableHotspot)
+**Substitutes:** [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md#enableHotspot-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 

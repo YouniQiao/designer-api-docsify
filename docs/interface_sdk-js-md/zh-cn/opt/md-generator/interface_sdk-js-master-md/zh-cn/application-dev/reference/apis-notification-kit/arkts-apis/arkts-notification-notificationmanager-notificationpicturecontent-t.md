@@ -6,7 +6,9 @@ export type NotificationPictureContent = _NotificationPictureContent
 
 附有图片的通知。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationPictureContent = _NotificationPictureContent--><!--Device-notificationManager-export type NotificationPictureContent = _NotificationPictureContent-End-->
 

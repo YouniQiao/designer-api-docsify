@@ -4,6 +4,8 @@ RouterPageInfo包含的信息，由系统返回给开发者。
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-uiObserver-export class RouterPageInfo--><!--Device-uiObserver-export class RouterPageInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ context: UIAbilityContext | UIContext
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -34,11 +38,13 @@ context: UIAbilityContext | UIContext
 index: number
 ```
 
-触发生命周期的routerPage页面对应的上下文信息。取值应≥0。
+触发生命周期的routerPage页面对应的上下文信息。 取值应≥0。
 
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,6 +66,8 @@ name: string
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -79,6 +87,8 @@ pageId: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,6 +110,8 @@ path: string
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -120,6 +132,8 @@ routerPage页面的大小，单位是vp。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -139,6 +153,8 @@ state: RouterPageState
 **类型：** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

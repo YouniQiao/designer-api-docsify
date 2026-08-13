@@ -8,7 +8,9 @@ Defines the tap gesture recognizer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class TapRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class TapRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class TapRecognizer--><!--Device-unnamed-export declare class TapRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Returns the tap gesture's count.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

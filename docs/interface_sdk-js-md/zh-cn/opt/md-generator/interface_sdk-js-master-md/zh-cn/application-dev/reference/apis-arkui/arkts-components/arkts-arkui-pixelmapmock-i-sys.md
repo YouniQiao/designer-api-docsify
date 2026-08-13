@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface PixelMapMock--><!--Device-unnamed-declare interface PixelMapMock-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ release(): void
 release function.
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-PixelMapMock-release(): void--><!--Device-PixelMapMock-release(): void-End-->
 

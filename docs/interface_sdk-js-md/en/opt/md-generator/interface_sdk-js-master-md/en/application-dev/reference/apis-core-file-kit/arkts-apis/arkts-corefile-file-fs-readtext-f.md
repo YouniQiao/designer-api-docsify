@@ -19,6 +19,8 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>-End-->
@@ -68,6 +70,8 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function readText(filePath: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(filePath: string, callback: AsyncCallback<string>): void-End-->
@@ -113,6 +117,8 @@ declare function readText(
 Reads the text content of a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

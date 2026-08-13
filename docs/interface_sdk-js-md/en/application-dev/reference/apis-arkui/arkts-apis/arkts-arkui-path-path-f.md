@@ -3,6 +3,7 @@
 ## Path
 
 ```TypeScript
+@ComponentBuilder
 export declare function Path(
     options?: PathOptions
 ): PathAttribute
@@ -14,9 +15,11 @@ Path is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Path(    options?: PathOptions): PathAttribute--><!--Device-unnamed-export declare function Path(    options?: PathOptions): PathAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Path(    options?: PathOptions): PathAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Path(    options?: PathOptions): PathAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Path is returned when the parameter is transferred.
 ## Path
 
 ```TypeScript
+@Builder
 export declare function Path(
     style: CustomBuilderT<PathAttribute>,
 ): PathAttribute
@@ -47,11 +51,11 @@ Defines Path Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Path(    style: CustomBuilderT<PathAttribute>,): PathAttribute--><!--Device-unnamed-export declare function Path(    style: CustomBuilderT<PathAttribute>,): PathAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Path(    style: CustomBuilderT<PathAttribute>,): PathAttribute--><!--Device-unnamed-@Builderexport declare function Path(    style: CustomBuilderT<PathAttribute>,): PathAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Path Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

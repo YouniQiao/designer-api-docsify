@@ -28,7 +28,7 @@ id: number
 
 **废弃版本：** 9
 
-**替代接口：** [NotificationKey](ohos.notificationManager/notificationManager#NotificationKey)
+**替代接口：** NotificationKey
 
 <!--Device-NotificationKey-id: number--><!--Device-NotificationKey-id: number-End-->
 
@@ -50,7 +50,7 @@ label?: string
 
 **废弃版本：** 9
 
-**替代接口：** [NotificationKey](ohos.notificationManager/notificationManager#NotificationKey)
+**替代接口：** NotificationKey
 
 <!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
 

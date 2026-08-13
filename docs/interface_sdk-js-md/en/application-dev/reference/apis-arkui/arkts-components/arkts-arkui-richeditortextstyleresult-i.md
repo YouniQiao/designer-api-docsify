@@ -1,14 +1,12 @@
 # RichEditorTextStyleResult
 
-Provides the text span style information returned by the backend.
-
-While **fontWeight** in **RichEditorTextStyle** sets the font weight, **fontWeight** in **RichEditorTextStyleResult**returns the set font weight after conversion to digits.
-
-Conversion relationship between fontWeight in RichEditorSymbolSpanStyle and RichEditorSymbolSpanStyleResult, the conversion relationship is the same as that of fontWeight in RichEditorTextStyle and RichEditorTextStyleResult.
+Provides the text span style information returned by the backend. While **fontWeight** in **RichEditorTextStyle** sets the font weight, **fontWeight** in **RichEditorTextStyleResult** returns the set font weight after conversion to digits. Conversion relationship between fontWeight in RichEditorSymbolSpanStyle and RichEditorSymbolSpanStyleResult, the conversion relationship is the same as that of fontWeight in RichEditorTextStyle and RichEditorTextStyleResult.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface RichEditorTextStyleResult--><!--Device-unnamed-declare interface RichEditorTextStyleResult-End-->
 
@@ -27,6 +25,8 @@ Text decorative line.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +50,8 @@ Font color.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -71,6 +73,8 @@ Font family.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,6 +98,8 @@ Font feature.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -115,6 +121,8 @@ Font size. The default unit is fp.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,6 +146,8 @@ Font style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -160,6 +170,8 @@ Font weight.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -174,17 +186,15 @@ Font weight.
 halfLeading?: boolean
 ```
 
-Whether half leading is enabled.
-
-Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite.
-
-Default value: **false**
+Whether half leading is enabled. Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,6 +218,8 @@ Letter spacing. The default unit is fp.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -229,6 +241,8 @@ Line height. The default unit is fp.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,6 +266,8 @@ Text stroke color.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -274,6 +290,8 @@ Get the stroke join style of the text.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -288,15 +306,15 @@ Get the stroke join style of the text.
 strokeWidth?: number
 ```
 
-Text stroke width.
-
-The unit is [vp](common).
+Text stroke width. The unit is vp.
 
 **Type:** number
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,23 +330,15 @@ The unit is [vp](common).
 textBackgroundStyle?: TextBackgroundStyle
 ```
 
-Text background style.
-
-Default value:
-
-{
-
-color: Color.Transparent,
-
-radius: 0
-
-}
+Text background style. Default value: { color: Color.Transparent, radius: 0 }
 
 **Type:** TextBackgroundStyle
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -344,17 +354,15 @@ radius: 0
 textShadow?: Array<ShadowOptions>
 ```
 
-Text shadow.
-
-**NOTE：**
-
-Only the shadow blur radius, shadow color, and shadow offset can be queried.
+Text shadow. **NOTE：**Only the shadow blur radius, shadow color, and shadow offset can be queried.
 
 **Type:** Array&lt;ShadowOptions&gt;
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

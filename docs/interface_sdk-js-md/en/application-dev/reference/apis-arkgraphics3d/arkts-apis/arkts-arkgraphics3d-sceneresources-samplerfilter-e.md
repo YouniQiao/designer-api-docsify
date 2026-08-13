@@ -1,10 +1,12 @@
 # SamplerFilter
 
-Enumerates the filtering modes of a sampler.The filtering mode determines the interpolation method used when sampling textures,controlling how final pixel colors are calculated during texture scaling or deformation.
+Enumerates the filtering modes of a sampler. The filtering mode determines the interpolation method used when sampling textures, controlling how final pixel colors are calculated during texture scaling or deformation.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum SamplerFilter--><!--Device-unnamed-export enum SamplerFilter-End-->
 
@@ -18,9 +20,11 @@ NEAREST = 0
 
 Uses nearest-neighbor interpolation, which is fast but can result in jagged edges.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SamplerFilter-NEAREST = 0--><!--Device-SamplerFilter-NEAREST = 0-End-->
 
@@ -34,9 +38,11 @@ LINEAR = 1
 
 Uses linear interpolation, providing a smoother appearance but with a slight performance cost.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SamplerFilter-LINEAR = 1--><!--Device-SamplerFilter-LINEAR = 1-End-->
 

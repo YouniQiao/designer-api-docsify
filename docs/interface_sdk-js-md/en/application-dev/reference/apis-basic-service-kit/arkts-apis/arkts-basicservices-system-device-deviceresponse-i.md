@@ -62,7 +62,7 @@ Brand.
 deviceType: string
 ```
 
-Device type. The options are as follows:phone: smartphone tablet: tablet tv: smart TV wearable: wearable liteWearable: lite wearable ar: AR vr: virtual reality earphones: headset pc: personal computer speaker: speaker smartVision: smart visual device linkIoT: connection module
+Device type. The options are as follows: phone: smartphone tablet: tablet tv: smart TV wearable: wearable liteWearable: lite wearable ar: AR vr: virtual reality earphones: headset pc: personal computer speaker: speaker smartVision: smart visual device linkIoT: connection module
 
 **Type:** string
 
@@ -202,7 +202,7 @@ Screen density, unit dpi.
 screenShape: 'rect' | 'circle'
 ```
 
-Screen shape. The options are as follows:rect: Rectangle screen.circle: Circle screen.
+Screen shape. The options are as follows: rect: Rectangle screen. circle: Circle screen.
 
 **Type:** 'rect' \| 'circle'
 
@@ -222,7 +222,7 @@ Screen shape. The options are as follows:rect: Rectangle screen.circle: Circle s
 sdkMinorApiVersion?: number
 ```
 
-Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
+Minor API version of the system software. From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion. Example: 26.0.0 Value range: (-∞,+∞).
 
 **Type:** number
 
@@ -244,7 +244,7 @@ Minor API version of the system software.From API 26 and later versions, the sys
 sdkPatchApiVersion?: number
 ```
 
-Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
+Minor API version of the system software. From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion. Example: 26.0.0 Value range: (-∞,+∞).
 
 **Type:** number
 

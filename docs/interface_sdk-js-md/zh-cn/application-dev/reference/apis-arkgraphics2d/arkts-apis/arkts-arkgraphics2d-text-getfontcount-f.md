@@ -6,13 +6,13 @@
 function getFontCount(path: string | Resource) : int
 ```
 
-根据字体文件路径获取包含的字体文件数。
-
-如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回0。
+根据字体文件路径获取包含的字体文件数。 如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回0。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,7 +32,7 @@ function getFontCount(path: string | Resource) : int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 包含字体数量。 |
+| int | 包含字体数量。 |
 
 ## 示例
 

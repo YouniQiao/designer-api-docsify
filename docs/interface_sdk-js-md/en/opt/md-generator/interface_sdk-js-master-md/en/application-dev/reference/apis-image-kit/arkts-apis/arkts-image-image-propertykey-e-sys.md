@@ -1,17 +1,10 @@
 # PropertyKey
 
-Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
+Enumerates the types of Exchangeable Image File Format (Exif) data of an image. - The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for example, **image.PropertyKey.NEW_SUBFILE_TYPE**). - The format example is used only to show how to modify values and read results. For details about how to use them, see [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty) (to modify a single Exif field), [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties) (to modify multiple Exif fields), [getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty) (to read a single Exif field), and [getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties) ( to read multiple Exif fields).
 
-- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for  
-example, **image.PropertyKey.NEW_SUBFILE_TYPE**).  
-- The format example is used only to show how to modify values and read results. For details about how to use them,  
-see   
-[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty)(to modify a single Exif field),   
-[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties)(to modify multiple Exif fields),   
-[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)(to read a single Exif field), and   
-[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties) (to read multiple Exif fields).
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-image-enum PropertyKey--><!--Device-image-enum PropertyKey-End-->
 
@@ -26,6 +19,8 @@ XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
 Describes xtstyle template name.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,6 +40,8 @@ Describes xtstyle custom light and shadow.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PropertyKey-XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'-End-->
@@ -62,6 +59,8 @@ XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 Describes xtstyle custom saturation.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,6 +80,8 @@ Describes xtstyle custom hue.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'-End-->
@@ -98,6 +99,8 @@ XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'
 Describes xtstyle exposure param.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

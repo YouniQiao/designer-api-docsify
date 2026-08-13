@@ -1,4 +1,4 @@
-# SceneNodes(Defines 3D node related interfaces)
+# SceneNodes
 
 ## Summary
 
@@ -13,7 +13,7 @@
 | [LayerMask](arkts-arkgraphics3d-scenenodes-layermask-i.md) | Defines the layer mask of the node. |
 | [Light](arkts-arkgraphics3d-scenenodes-light-i.md) | Defines light interface. |
 | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | The 3D scene consists of nodes in a tree hierarchy, where each node implements a Node interface. |
-| [SpotLight](arkts-arkgraphics3d-scenenodes-spotlight-i.md) | Spotlight, which inherits from [Light](arkts-arkgraphics3d-scenenodes-light-i.md#Light).  A spotlight emits a conical beam of light in a specific direction,with the intensity of the light decaying according to the angles defined by the innerAngle and outerAngle parameters.Like a point light, a spotlight's intensity also diminishes with distance from the source.  > **NOTE：** >  > Ensure that the innerAngle and outerAngle values are proper. > If the value set for outerAngle is greater than PI/2, it is forcibly set to PI/2 internally. > If the value set for outerAngle is less than innerAngle, it is forcibly set to innerAngle internally. |
+| [SpotLight](arkts-arkgraphics3d-scenenodes-spotlight-i.md) | Spotlight, which inherits from [Light](arkts-arkgraphics3d-scenenodes-light-i.md#Light). A spotlight emits a conical beam of light in a specific direction, with the intensity of the light decaying according to the angles defined by the innerAngle and outerAngle parameters. Like a point light, a spotlight's intensity also diminishes with distance from the source. > **NOTE：**> > Ensure that the innerAngle and outerAngle values are proper. > If the value set for outerAngle is greater than PI/2, it is forcibly set to PI/2 internally. > If the value set for outerAngle is less than innerAngle, it is forcibly set to innerAngle internally. |
 
 ### Enums
 

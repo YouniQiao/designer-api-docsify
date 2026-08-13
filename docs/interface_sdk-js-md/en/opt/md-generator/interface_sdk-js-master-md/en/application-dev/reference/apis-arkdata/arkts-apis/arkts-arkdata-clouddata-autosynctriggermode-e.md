@@ -4,6 +4,8 @@ Indicates automatic synchronization triggering method for Device-Cloud data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cloudData-enum AutoSyncTriggerMode--><!--Device-cloudData-enum AutoSyncTriggerMode-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -17,6 +19,8 @@ ACCOUNT_LOGIN = 0
 Indicates account login trigger method.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Indicates the synchronization switch trigger mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoSyncTriggerMode-CLOUD_SWITCH_ON = 1--><!--Device-AutoSyncTriggerMode-CLOUD_SWITCH_ON = 1-End-->
@@ -49,6 +55,8 @@ NETWORK_RECOVER = 2
 Indicates the trigger mode for network reconnection after recovery.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Indicates the cloud-side data change trigger mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoSyncTriggerMode-CLOUD_DATA_CHANGE = 3--><!--Device-AutoSyncTriggerMode-CLOUD_DATA_CHANGE = 3-End-->
@@ -81,6 +91,8 @@ USER_CHANGE = 4
 Indicates the user change trigger method.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

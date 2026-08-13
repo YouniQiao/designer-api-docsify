@@ -2,9 +2,11 @@
 
 The state of Wi-Fi connection enumeration.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-export enum ConnState--><!--Device-wifiManager-export enum ConnState-End-->
 
@@ -18,9 +20,11 @@ SCANNING
 
 The device is searching for an available AP.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-SCANNING--><!--Device-ConnState-SCANNING-End-->
 
@@ -34,9 +38,11 @@ CONNECTING
 
 The Wi-Fi connection is being set up.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-CONNECTING--><!--Device-ConnState-CONNECTING-End-->
 
@@ -50,9 +56,11 @@ AUTHENTICATING
 
 The Wi-Fi connection is being authenticated.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-AUTHENTICATING--><!--Device-ConnState-AUTHENTICATING-End-->
 
@@ -66,9 +74,11 @@ OBTAINING_IPADDR
 
 The IP address of the Wi-Fi connection is being obtained.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-OBTAINING_IPADDR--><!--Device-ConnState-OBTAINING_IPADDR-End-->
 
@@ -82,9 +92,11 @@ CONNECTED
 
 The Wi-Fi connection has been set up.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-CONNECTED--><!--Device-ConnState-CONNECTED-End-->
 
@@ -98,9 +110,11 @@ DISCONNECTING
 
 The Wi-Fi connection is being torn down.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-DISCONNECTING--><!--Device-ConnState-DISCONNECTING-End-->
 
@@ -114,9 +128,11 @@ DISCONNECTED
 
 The Wi-Fi connection has been torn down.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-DISCONNECTED--><!--Device-ConnState-DISCONNECTED-End-->
 
@@ -130,9 +146,11 @@ UNKNOWN
 
 Failed to set up the Wi-Fi connection.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnState-UNKNOWN--><!--Device-ConnState-UNKNOWN-End-->
 

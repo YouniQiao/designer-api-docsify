@@ -6,7 +6,9 @@ type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterIn
 
 Defines a callback that takes the printer event and printer information as parameters.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-print-type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterInformation) => void--><!--Device-print-type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterInformation) => void-End-->
 

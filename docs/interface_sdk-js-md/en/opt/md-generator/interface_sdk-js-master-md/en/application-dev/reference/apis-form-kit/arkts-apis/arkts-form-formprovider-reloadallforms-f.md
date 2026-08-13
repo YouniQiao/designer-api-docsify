@@ -12,14 +12,15 @@ import { formProvider } from '@kit.FormKit';
 function reloadAllForms(context: UIAbilityContext): Promise<number>
 ```
 
-Reloads all widgets. Invoked in the main process of the application, this API notifies the FormExtension process to  perform batch updates of all widgets added to the current application. It can only be called within a   
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and uses a promise to return the result.
+Reloads all widgets. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates of all widgets added to the current application. It can only be called within a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function reloadAllForms(context: UIAbilityContext): Promise<int>--><!--Device-formProvider-function reloadAllForms(context: UIAbilityContext): Promise<int>-End-->
 
@@ -41,7 +42,7 @@ Reloads all widgets. Invoked in the main process of the application, this API no
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
 ## Examples
 

@@ -14,7 +14,9 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 Obtains the call status. This API uses an asynchronous callback to return the result.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void--><!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void-End-->
 
@@ -49,7 +51,9 @@ function getCallState(): Promise<CallState>
 
 Obtains the call status. This API uses a promise to return the result.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-function getCallState(): Promise<CallState>--><!--Device-call-function getCallState(): Promise<CallState>-End-->
 

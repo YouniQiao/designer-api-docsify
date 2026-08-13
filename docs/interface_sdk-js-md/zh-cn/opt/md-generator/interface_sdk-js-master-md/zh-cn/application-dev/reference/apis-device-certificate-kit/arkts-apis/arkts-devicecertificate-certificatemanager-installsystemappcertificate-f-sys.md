@@ -10,6 +10,8 @@ function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string):
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_SYSTEM_APP_CERT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -37,13 +39,13 @@ function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string):
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500008-密码错误) |
-| [17500003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500003-证书或凭据无效) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) |
-| [17500004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17500008](../errorcode-certManager.md#17500008-密码错误) |
+| [17500003](../errorcode-certManager.md#17500003-证书或凭据无效) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
+| [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
 
 ## 示例
 

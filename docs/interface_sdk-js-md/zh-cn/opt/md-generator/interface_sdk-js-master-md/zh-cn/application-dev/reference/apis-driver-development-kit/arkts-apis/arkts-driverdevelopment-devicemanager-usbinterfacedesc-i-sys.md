@@ -2,7 +2,9 @@
 
 USB设备接口描述符。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-deviceManager-interface USBInterfaceDesc--><!--Device-deviceManager-interface USBInterfaceDesc-End-->
 
@@ -20,7 +22,9 @@ bClass: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterfaceDesc-bClass: int--><!--Device-USBInterfaceDesc-bClass: int-End-->
 
@@ -38,7 +42,9 @@ bInterfaceNumber: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterfaceDesc-bInterfaceNumber: int--><!--Device-USBInterfaceDesc-bInterfaceNumber: int-End-->
 
@@ -56,7 +62,9 @@ bProtocol: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterfaceDesc-bProtocol: int--><!--Device-USBInterfaceDesc-bProtocol: int-End-->
 
@@ -74,7 +82,9 @@ bSubClass: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterfaceDesc-bSubClass: int--><!--Device-USBInterfaceDesc-bSubClass: int-End-->
 

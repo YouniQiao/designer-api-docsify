@@ -1,8 +1,10 @@
-# @ohos.file.fileuri(文件URI)
+# @ohos.file.fileuri
 
 提供文件URI相关接口，可用于URI与应用沙箱路径之间的转换。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->
 
@@ -14,7 +16,7 @@
 
 | 名称 |
 | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) |
 
 ### 类
 

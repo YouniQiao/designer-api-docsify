@@ -2,7 +2,9 @@
 
 Represents brief information about a certificate.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export interface CertAbstract--><!--Device-certificateManager-export interface CertAbstract-End-->
 
@@ -24,7 +26,9 @@ Alias of a certificate. The value contains up to 128 bytes.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertAbstract-certAlias: string--><!--Device-CertAbstract-certAlias: string-End-->
 
@@ -40,7 +44,9 @@ Certificate state. The value **true** indicates that the certificate is enabled,
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertAbstract-state: boolean--><!--Device-CertAbstract-state: boolean-End-->
 
@@ -56,7 +62,9 @@ Name of the certificate subject. The value contains up to 1024 bytes.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertAbstract-subjectName: string--><!--Device-CertAbstract-subjectName: string-End-->
 
@@ -72,7 +80,9 @@ Unique identifier of a certificate. The value contains up to 256 bytes.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertAbstract-uri: string--><!--Device-CertAbstract-uri: string-End-->
 

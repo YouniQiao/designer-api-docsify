@@ -4,6 +4,8 @@ Defines a callback used to return whether the application started by double-pres
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-settingsLite-interface ClickCallback--><!--Device-settingsLite-interface ClickCallback-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
@@ -23,6 +25,8 @@ onResult(result: boolean): void
 Called to determine whether the application can be started by double-pressing the function key.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

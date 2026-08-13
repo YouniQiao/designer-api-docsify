@@ -1,9 +1,10 @@
 # UIExtensionIntentInfo (System API)
 
-Describes the information of the UIExtensionAbility bound to the  
-[intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
+Describes the information of the UIExtensionAbility bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-interface UIExtensionIntentInfo--><!--Device-insightIntentDriver-interface UIExtensionIntentInfo-End-->
 
@@ -28,6 +29,8 @@ Name of the UIAbility bound to the intent.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

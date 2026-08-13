@@ -4,6 +4,8 @@ Enumerates the callbacks used for the request for loading multiple ads.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-advertising-export interface MultiSlotsAdLoadListener--><!--Device-advertising-export interface MultiSlotsAdLoadListener-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -23,6 +25,8 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 Called when an ad request fails.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,6 +66,8 @@ onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void
 Called when a request for loading multiple ads is successful.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

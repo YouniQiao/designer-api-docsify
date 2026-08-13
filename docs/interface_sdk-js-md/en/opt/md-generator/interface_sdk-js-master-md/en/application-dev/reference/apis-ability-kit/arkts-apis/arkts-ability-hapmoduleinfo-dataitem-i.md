@@ -2,7 +2,9 @@
 
 Describes the user-defined data in the routing table configuration of the module.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DataItem--><!--Device-unnamed-export interface DataItem-End-->
 
@@ -18,9 +20,11 @@ Key of the user-defined data.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DataItem-readonly key: string--><!--Device-DataItem-readonly key: string-End-->
 
@@ -36,9 +40,11 @@ Value of the user-defined data.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DataItem-readonly value: string--><!--Device-DataItem-readonly value: string-End-->
 

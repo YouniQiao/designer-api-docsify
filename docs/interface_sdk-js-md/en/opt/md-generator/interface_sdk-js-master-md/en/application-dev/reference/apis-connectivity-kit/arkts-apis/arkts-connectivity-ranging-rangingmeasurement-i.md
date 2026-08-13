@@ -4,6 +4,8 @@ Describes the measurement result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-ranging-interface RangingMeasurement--><!--Device-ranging-interface RangingMeasurement-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -26,6 +28,8 @@ Confidence level of measurement results.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingMeasurement-confidence: RangingConfidence--><!--Device-RangingMeasurement-confidence: RangingConfidence-End-->
@@ -43,6 +47,8 @@ Measurement result value. The value is expressed in centimeters.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

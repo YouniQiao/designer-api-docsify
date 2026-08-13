@@ -6,7 +6,7 @@ The enum of BLE match mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [MatchMode](ohos.bluetoothManager/bluetoothManager.MatchMode)
+**Substitutes:** [MatchMode](arkts-connectivity-bluetoothmanager-matchmode-e.md#MatchMode)
 
 <!--Device-bluetooth-enum MatchMode--><!--Device-bluetooth-enum MatchMode-End-->
 
@@ -24,7 +24,7 @@ aggressive mode
 
 **Deprecated since:** 9
 
-**Substitutes:** [MATCH_MODE_AGGRESSIVE](ohos.bluetoothManager/bluetoothManager.MatchMode.MATCH_MODE_AGGRESSIVE)
+**Substitutes:** [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#MATCH_MODE_AGGRESSIVE)
 
 <!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1--><!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1-End-->
 
@@ -42,7 +42,7 @@ sticky mode
 
 **Deprecated since:** 9
 
-**Substitutes:** [MATCH_MODE_STICKY](ohos.bluetoothManager/bluetoothManager.MatchMode.MATCH_MODE_STICKY)
+**Substitutes:** [MATCH_MODE_STICKY](arkts-connectivity-bluetoothmanager-matchmode-e.md#MATCH_MODE_STICKY)
 
 <!--Device-MatchMode-MATCH_MODE_STICKY = 2--><!--Device-MatchMode-MATCH_MODE_STICKY = 2-End-->
 

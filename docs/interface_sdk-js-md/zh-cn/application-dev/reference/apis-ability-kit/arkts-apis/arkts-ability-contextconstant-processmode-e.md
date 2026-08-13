@@ -1,11 +1,12 @@
 # ProcessMode
 
-UIAbility启动后的进程模式。ProcessMode作为[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions)的一个属性，仅在  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)中生效，用来指定目标UIAbility的进程模式。该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。
+UIAbility启动后的进程模式。 ProcessMode作为[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions)的一个属性，仅在 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) 中生效，用来指定目标UIAbility的进程模式。 该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-contextConstant-export enum ProcessMode--><!--Device-contextConstant-export enum ProcessMode-End-->
 
@@ -17,15 +18,13 @@ UIAbility启动后的进程模式。ProcessMode作为[StartOptions](arkts-abilit
 NEW_PROCESS_ATTACH_TO_PARENT = 1
 ```
 
-创建一个新进程，并在该进程上启动UIAbility。该进程会跟随父进程退出。
+创建一个新进程，并在该进程上启动UIAbility。该进程会跟随父进程退出。 **约束：** 使用此模式时，要求目标UIAbility跟调用方是在同一个应用。
 
-**约束：**
+**起始版本：** 23
 
-使用此模式时，要求目标UIAbility跟调用方是在同一个应用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,15 +38,13 @@ NEW_PROCESS_ATTACH_TO_PARENT = 1
 NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM = 2
 ```
 
-创建一个新进程，在该进程上启动UIAbility，并绑定该进程到状态栏图标上。
+创建一个新进程，在该进程上启动UIAbility，并绑定该进程到状态栏图标上。 **约束：** 使用此模式时，要求目标UIAbility跟调用方是在同一个应用，并且应用要在状态栏中有图标。
 
-**约束：**
+**起始版本：** 23
 
-使用此模式时，要求目标UIAbility跟调用方是在同一个应用，并且应用要在状态栏中有图标。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,15 +58,13 @@ NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM = 2
 ATTACH_TO_STATUS_BAR_ITEM = 3
 ```
 
-启动UIAbility，并绑定该UIAbility所在进程到状态栏图标上。
+启动UIAbility，并绑定该UIAbility所在进程到状态栏图标上。 **约束：** 使用此模式时，要求目标UIAbility跟调用方是在同一个应用，并且应用要在状态栏中有图标。
 
-**约束：**
+**起始版本：** 23
 
-使用此模式时，要求目标UIAbility跟调用方是在同一个应用，并且应用要在状态栏中有图标。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

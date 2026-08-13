@@ -12,7 +12,7 @@ function addContact(contact: Contact, callback: AsyncCallback<number>): void
 
 **废弃版本：** 10
 
-**替代接口：** [addContact](contact.addContact(context:)
+**替代接口：** [addContact](#addContact)(context: Context, contact: Contact, callback: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -63,6 +63,8 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -83,12 +85,12 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -126,7 +128,7 @@ function addContact(contact: Contact): Promise<number>
 
 **废弃版本：** 10
 
-**替代接口：** [addContact](contact.addContact(context:)
+**替代接口：** [addContact](#addContact)(context: Context, contact: Contact)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -177,6 +179,8 @@ function addContact(context: Context, contact: Contact): Promise<number>
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -202,12 +206,12 @@ function addContact(context: Context, contact: Contact): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

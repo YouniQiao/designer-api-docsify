@@ -6,13 +6,13 @@
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-Sets the notification slot for a specified application.This API uses an asynchronous callback to return the result.
+Sets the notification slot for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSlotByBundle](ohos.notificationManager/notificationManager#setSlotByBundle)
+**Substitutes:** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setSlotByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,7 +43,7 @@ Sets the notification slot for a specified application. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSlotByBundle](ohos.notificationManager/notificationManager#setSlotByBundle)
+**Substitutes:** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setSlotByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

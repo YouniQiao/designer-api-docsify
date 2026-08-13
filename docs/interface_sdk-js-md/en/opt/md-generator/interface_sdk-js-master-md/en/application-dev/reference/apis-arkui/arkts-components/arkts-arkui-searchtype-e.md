@@ -4,6 +4,8 @@ Enumerates the text input types of a search box.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SearchType--><!--Device-unnamed-declare enum SearchType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NORMAL = 0
 Basic input mode with no special restrictions.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Digit input mode.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -50,11 +56,11 @@ Digit input mode.
 PHONE_NUMBER = 3
 ```
 
-Phone number input mode.
-
-In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
+Phone number input mode. In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +76,11 @@ In this mode, the following characters are allowed: digits, spaces, plus signs (
 EMAIL = 5
 ```
 
-Email address input mode.
-
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
+Email address input mode. This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,11 +96,11 @@ This mode accepts only digits, letters, underscores (_), dots (.), and the follo
 NUMBER_DECIMAL = 12
 ```
 
-Number input mode with a decimal point.
-
-The value can contain digits and one decimal point.
+Number input mode with a decimal point. The value can contain digits and one decimal point.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,6 +120,8 @@ URL input mode with no special restrictions.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -131,6 +139,8 @@ ONE_TIME_CODE = 14
 One-time code (verification code) input mode with no special restrictions.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

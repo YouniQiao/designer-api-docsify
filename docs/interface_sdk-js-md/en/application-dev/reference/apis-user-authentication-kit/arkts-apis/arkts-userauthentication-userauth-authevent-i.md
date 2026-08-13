@@ -34,7 +34,7 @@ Called to return the authentication result or authentication tip information.
 
 **Deprecated since:** 11
 
-**Substitutes:** [onResult](userAuth.IAuthCallback.onResult(result:)
+**Substitutes:** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onResult)(result: UserAuthResult)
 
 <!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 

@@ -1,14 +1,16 @@
 # DialogOptions
 
-Dialog options
+Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) to provide enhanced customization capabilities for the dialog box.
 
 **Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-promptAction-export interface DialogOptions extends BaseDialogOptions--><!--Device-promptAction-export interface DialogOptions extends BaseDialogOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-interface DialogOptions--><!--Device-promptAction-interface DialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,17 +26,21 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 backgroundBlurStyle?: BlurStyle
 ```
 
-Defines the dialog's background blur Style
+Background blur style of the dialog box. &lt;br&gt;Default value: **BlurStyle.COMPONENT_ULTRA_THICK** &lt;br&gt;**NOTE：**&lt;br&gt;Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-backgroundBlurStyle?: BlurStyle--><!--Device-DialogOptions-backgroundBlurStyle?: BlurStyle-End-->
 
@@ -46,15 +52,19 @@ Defines the dialog's background blur Style
 backgroundColor?: ResourceColor
 ```
 
-Defines the dialog's background color.
+Background color of the dialog box.&lt;br&gt;Default value: **Color.Transparent**. &lt;br&gt;**NOTE：**&lt;br&gt;The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
 
 **Type:** ResourceColor
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-backgroundColor?: ResourceColor--><!--Device-DialogOptions-backgroundColor?: ResourceColor-End-->
 
@@ -66,15 +76,19 @@ Defines the dialog's background color.
 borderColor?: DialogOptionsBorderColor
 ```
 
-Defines the dialog's border color.
+Border color of the dialog box. &lt;br&gt;Default value: **Color.Black**. &lt;br&gt; **borderColor** must be used with **borderWidth** in pairs.
 
 **Type:** [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-borderColor?: DialogOptionsBorderColor--><!--Device-DialogOptions-borderColor?: DialogOptionsBorderColor-End-->
 
@@ -86,15 +100,19 @@ Defines the dialog's border color.
 borderStyle?: DialogOptionsBorderStyle
 ```
 
-Defines the dialog's border style.
+Border style of the dialog box. &lt;br&gt;Default value: **BorderStyle.Solid**. &lt;br&gt; **borderStyle** must be used with **borderWidth** in pairs.
 
 **Type:** [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-borderStyle?: DialogOptionsBorderStyle--><!--Device-DialogOptions-borderStyle?: DialogOptionsBorderStyle-End-->
 
@@ -106,15 +124,19 @@ Defines the dialog's border style.
 borderWidth?: DialogOptionsBorderWidth
 ```
 
-Defines the dialog's border width.
+Border width of the dialog box. &lt;br&gt;You can set the width for all four sides or set separate widths for individual sides. &lt;br&gt;Default value: **0**. &lt;br&gt;Unit: vp. &lt;br&gt; When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. &lt;br&gt;If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
 **Type:** [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-borderWidth?: DialogOptionsBorderWidth--><!--Device-DialogOptions-borderWidth?: DialogOptionsBorderWidth-End-->
 
@@ -126,15 +148,19 @@ Defines the dialog's border width.
 cornerRadius?: DialogOptionsCornerRadius
 ```
 
-Defines the dialog's corner radius.
+Background corner radius of the dialog box.&lt;br&gt;You can set separate radii for the four corners. &lt;br&gt;Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }** &lt;br&gt; The radius of the rounded corners is subject to the component size. Its maximum value is half of the component width or height. If the value is negative, the default value is used. &lt;br&gt; When set to a percentage, the value defines the radius as a percentage of the parent dialog box's width or height.
 
 **Type:** [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-cornerRadius?: DialogOptionsCornerRadius--><!--Device-DialogOptions-cornerRadius?: DialogOptionsCornerRadius-End-->
 
@@ -146,15 +172,19 @@ Defines the dialog's corner radius.
 height?: Dimension
 ```
 
-Defines the dialog's height.
+Height of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default maximum value: 0.9 x (Window height – Safe area) &lt;br&gt;- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
 **Type:** Dimension
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-height?: Dimension--><!--Device-DialogOptions-height?: Dimension-End-->
 
@@ -166,15 +196,19 @@ Defines the dialog's height.
 shadow?: DialogOptionsShadow
 ```
 
-Defines the dialog's shadow.
+Shadow of the dialog box. &lt;br&gt;Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
 **Type:** [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-shadow?: DialogOptionsShadow--><!--Device-DialogOptions-shadow?: DialogOptionsShadow-End-->
 
@@ -186,15 +220,19 @@ Defines the dialog's shadow.
 width?: Dimension
 ```
 
-Defines the dialog's width.
+Width of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default maximum value: 400vp &lt;br&gt;- Percentage-based configuration: The reference width of the dialog box is adjusted based on the width of the window where the dialog box is located.
 
 **Type:** Dimension
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DialogOptions-width?: Dimension--><!--Device-DialogOptions-width?: Dimension-End-->
 

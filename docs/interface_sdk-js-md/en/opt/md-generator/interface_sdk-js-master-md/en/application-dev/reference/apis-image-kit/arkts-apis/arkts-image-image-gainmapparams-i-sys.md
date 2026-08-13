@@ -4,6 +4,8 @@ Describes gainmap generation parameters.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-interface GainmapParams--><!--Device-image-interface GainmapParams-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -27,6 +29,8 @@ Indicates generating a full-size gainmap or a 1/2 downscaled gainmap.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

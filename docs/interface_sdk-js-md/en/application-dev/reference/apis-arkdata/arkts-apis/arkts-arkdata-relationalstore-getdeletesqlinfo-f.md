@@ -14,9 +14,11 @@ function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo
 
 Obtains the SQL statement used to delete data. This API returns the result synchronously.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo--><!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo-End-->
 
@@ -38,7 +40,7 @@ Obtains the SQL statement used to delete data. This API returns the result synch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
 ## Examples
 

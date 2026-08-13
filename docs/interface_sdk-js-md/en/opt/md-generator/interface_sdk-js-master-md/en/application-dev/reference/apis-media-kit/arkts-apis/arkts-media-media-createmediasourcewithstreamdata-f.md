@@ -16,6 +16,8 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource-End-->
@@ -43,3 +45,32 @@ streams.push({url: "http://xxx/720p.flv", width: 1280, height: 720, bitrate: 200
 streams.push({url: "http://xxx/1080p.flv", width: 1920, height: 1080, bitrate: 2000000});
 let mediaSource : media.MediaSource = media.createMediaSourceWithStreamData(streams);
 ```
+
+
+## createMediaSourceWithStreamData
+
+```TypeScript
+function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined
+```
+
+Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source is supported.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streams | Array&lt;[MediaStream](arkts-media-media-mediastream-i.md)&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaSource](arkts-media-media-mediasource-i.md) |

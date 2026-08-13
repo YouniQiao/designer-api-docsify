@@ -1,8 +1,6 @@
 # AlertDialogParamWithConfirm
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam).
-
-Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** > **style** > **defaultFocus**
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam). Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** > **style** > **defaultFocus**
 
 **Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
 
@@ -10,7 +8,9 @@ Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-declare interface AlertDialogParamWithConfirm extends AlertDialogParam--><!--Device-unnamed-declare interface AlertDialogParamWithConfirm extends AlertDialogParam-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AlertDialogParamWithConfirm--><!--Device-unnamed-declare interface AlertDialogParamWithConfirm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,14 +20,15 @@ Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** 
 confirm?: AlertDialogButtonBaseOptions
 ```
 
-Information about the confirm button. When the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation, the button responds to the **Enter** key by default. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. The default response to the   
-**Enter** key does not work when **defaultFocus** is set to **true**.
+Information about the confirm button. When the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation, the button responds to the **Enter** key by default. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. The default response to the **Enter** key does not work when **defaultFocus** is set to **true**.
 
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

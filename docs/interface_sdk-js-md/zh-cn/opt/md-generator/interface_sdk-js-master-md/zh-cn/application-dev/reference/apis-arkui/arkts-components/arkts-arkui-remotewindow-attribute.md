@@ -1,14 +1,14 @@
 # RemoteWindow属性/事件
 
-支持[通用属性](common)。
+支持通用属性。 支持通用事件。
 
-支持[通用事件](common)。
-
-**继承/实现关系：** RemoteWindowAttribute extends [CommonMethod<RemoteWindowAttribute>](CommonMethod<RemoteWindowAttribute>)
+**继承/实现关系：** RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare class RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>--><!--Device-unnamed-declare class RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class RemoteWindowAttribute--><!--Device-unnamed-declare class RemoteWindowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

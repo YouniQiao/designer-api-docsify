@@ -20,7 +20,7 @@ Obtains information about a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getP2pLinkedInfo](ohos.wifiManager/wifiManager.getP2pLinkedInfo)
+**Substitutes:** [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getP2pLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -49,7 +49,7 @@ Obtains information about a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getP2pLinkedInfo](ohos.wifiManager/wifiManager.getP2pLinkedInfo)
+**Substitutes:** [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getP2pLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -61,7 +61,7 @@ Obtains information about a P2P connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pLinkedInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes |  |
 
 ## Examples
 

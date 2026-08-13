@@ -2,9 +2,11 @@
 
 Defines the ICC account information.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
 
@@ -26,9 +28,11 @@ Indicates the iccId for card.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-iccId: string--><!--Device-IccAccountInfo-iccId: string-End-->
 
@@ -44,9 +48,11 @@ Indicates the active status for card.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-isActive: boolean--><!--Device-IccAccountInfo-isActive: boolean-End-->
 
@@ -62,9 +68,11 @@ Indicates the mark card is eSim or not.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-isEsim: boolean--><!--Device-IccAccountInfo-isEsim: boolean-End-->
 
@@ -80,9 +88,11 @@ Indicates the display name for card.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-showName: string--><!--Device-IccAccountInfo-showName: string-End-->
 
@@ -98,9 +108,11 @@ Indicates the display number for card.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-showNumber: string--><!--Device-IccAccountInfo-showNumber: string-End-->
 
@@ -114,11 +126,13 @@ simId: int
 
 Indicates the sim Id for card.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-simId: int--><!--Device-IccAccountInfo-simId: int-End-->
 
@@ -130,13 +144,15 @@ Indicates the sim Id for card.
 slotIndex: int
 ```
 
-Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device.
+Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-slotIndex: int--><!--Device-IccAccountInfo-slotIndex: int-End-->
 

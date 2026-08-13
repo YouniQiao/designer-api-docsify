@@ -2,7 +2,9 @@
 
 Enumerates the download states of a cloud file.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-enum State--><!--Device-cloudSync-enum State-End-->
 
@@ -17,6 +19,8 @@ MISSING = 4
 Indicates that the download task is missing.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

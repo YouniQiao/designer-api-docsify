@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class ImageAttachment--><!--Device-unnamed-export declare class ImageAttachment-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor(value: AttachmentType | undefined)
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ readonly colorFilter?: ColorFilterType
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ImageAttachment-readonly colorFilter?: ColorFilterType--><!--Device-ImageAttachment-readonly colorFilter?: ColorFilterType-End-->
@@ -67,6 +73,8 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,6 +96,8 @@ readonly objectFit?: ImageFit
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ImageAttachment-readonly objectFit?: ImageFit--><!--Device-ImageAttachment-readonly objectFit?: ImageFit-End-->
@@ -108,6 +118,8 @@ readonly resourceValue?: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ImageAttachment-readonly resourceValue?: string--><!--Device-ImageAttachment-readonly resourceValue?: string-End-->
@@ -120,15 +132,15 @@ readonly resourceValue?: string
 readonly size?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`px`。
+获取属性字符串的图片尺寸。 返回number类型值的单位为`px`。
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,17 +154,15 @@ readonly size?: SizeOptions
 readonly sizeInVp?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`vp`。
-
-当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
+获取属性字符串的图片尺寸。 返回number类型值的单位为`vp`。 当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -166,17 +176,15 @@ readonly sizeInVp?: SizeOptions
 readonly supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
-
-true：支持SVG解析新能力；false：保持原有SVG解析能力。
-
-默认值：false
+获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。 true：支持SVG解析新能力；false：保持原有SVG解析能力。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,6 +206,8 @@ readonly value: PixelMap
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ImageAttachment-readonly value: PixelMap--><!--Device-ImageAttachment-readonly value: PixelMap-End-->
@@ -217,6 +227,8 @@ readonly verticalAlign?: ImageSpanAlignment
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

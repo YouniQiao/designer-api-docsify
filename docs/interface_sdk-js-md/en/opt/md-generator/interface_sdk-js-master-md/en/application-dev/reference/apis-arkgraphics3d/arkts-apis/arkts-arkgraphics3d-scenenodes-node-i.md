@@ -4,9 +4,11 @@ The 3D scene consists of nodes in a tree hierarchy, where each node implements a
 
 **Inheritance/Implementation:** Node extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface Node extends SceneResource--><!--Device-unnamed-export interface Node extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Node--><!--Device-unnamed-export interface Node-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,7 +20,9 @@ getNodeByPath(path: string): Node | null
 
 Obtains a node by path. If no node is obtained, null is returned.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-getNodeByPath(path: string): Node | null--><!--Device-Node-getNodeByPath(path: string): Node | null-End-->
 
@@ -59,12 +63,13 @@ function getNode(): void {
 readonly children: Container<Node>
 ```
 
-Child node of the node and null if it does not exist.This is a read-only property, indicating that you cannot directly replace the entire children container.However, you can operate the child nodes using container methods like [append](arkts-arkgraphics3d-scenenodes-container-i.md#append),  
-[insertAfter](arkts-arkgraphics3d-scenenodes-container-i.md#insertAfter), [remove](arkts-arkgraphics3d-scenenodes-container-i.md#remove), or [clear](arkts-arkgraphics3d-scenenodes-container-i.md#clear).If the node being appended or inserted already exists in the container, it is removed first and then reinserted.As a result, the total number of child nodes remains unchanged, making the operation seem ineffective.The count increases only when a new node is added.
+Child node of the node and null if it does not exist. This is a read-only property, indicating that you cannot directly replace the entire children container. However, you can operate the child nodes using container methods like [append](arkts-arkgraphics3d-scenenodes-container-i.md#append), [insertAfter](arkts-arkgraphics3d-scenenodes-container-i.md#insertAfter), [remove](arkts-arkgraphics3d-scenenodes-container-i.md#remove), or [clear](arkts-arkgraphics3d-scenenodes-container-i.md#clear). If the node being appended or inserted already exists in the container, it is removed first and then reinserted. As a result, the total number of child nodes remains unchanged, making the operation seem ineffective. The count increases only when a new node is added.
 
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-readonly children: Container<Node>--><!--Device-Node-readonly children: Container<Node>-End-->
 
@@ -80,7 +85,9 @@ Layer mask of a node.
 
 **Type:** [LayerMask](arkts-arkgraphics3d-scenenodes-layermask-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-readonly layerMask: LayerMask--><!--Device-Node-readonly layerMask: LayerMask-End-->
 
@@ -96,7 +103,9 @@ Node type.
 
 **Type:** [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-readonly nodeType: NodeType--><!--Device-Node-readonly nodeType: NodeType-End-->
 
@@ -112,7 +121,9 @@ Parent node of the node and null if it does not exist.
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-readonly parent: Node | null--><!--Device-Node-readonly parent: Node | null-End-->
 
@@ -128,7 +139,9 @@ Node path.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-readonly path: string--><!--Device-Node-readonly path: string-End-->
 
@@ -144,7 +157,9 @@ Node position, in scene units of the world coordinate system (for example, cm, m
 
 **Type:** [Position3](arkts-arkgraphics3d-position3-t.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-position: Position3--><!--Device-Node-position: Position3-End-->
 
@@ -160,7 +175,9 @@ Rotation angle of a node.
 
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-rotation: Quaternion--><!--Device-Node-rotation: Quaternion-End-->
 
@@ -176,7 +193,9 @@ Node scale.
 
 **Type:** [Scale3](arkts-arkgraphics3d-scale3-t.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-scale: Scale3--><!--Device-Node-scale: Scale3-End-->
 
@@ -192,7 +211,9 @@ Whether a node is visible. true if visible, false otherwise.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Node-visible: boolean--><!--Device-Node-visible: boolean-End-->
 

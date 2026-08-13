@@ -2,7 +2,9 @@
 
 Enumerates the flashlight modes.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum TorchMode--><!--Device-camera-enum TorchMode-End-->
 
@@ -16,7 +18,9 @@ OFF = 0
 
 The flashlight is off.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -32,7 +36,9 @@ ON = 1
 
 The flashlight is on.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -48,7 +54,9 @@ AUTO = 2
 
 The system automatically adjusts the flashlight brightness according to the environment.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

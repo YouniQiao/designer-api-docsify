@@ -2,9 +2,11 @@
 
 Defines the vibrator information.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibratorInfo--><!--Device-vibrator-interface VibratorInfo-End-->
 
@@ -24,11 +26,13 @@ deviceId: int
 
 Device ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VibratorInfo-deviceId: int--><!--Device-VibratorInfo-deviceId: int-End-->
 
@@ -44,9 +48,11 @@ Device name.
 
 **Type:** string
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VibratorInfo-deviceName: string--><!--Device-VibratorInfo-deviceName: string-End-->
 
@@ -58,14 +64,15 @@ Device name.
 isHdHapticSupported: boolean
 ```
 
-Whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value  
-**false** indicates the opposite.
+Whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VibratorInfo-isHdHapticSupported: boolean--><!--Device-VibratorInfo-isHdHapticSupported: boolean-End-->
 
@@ -81,9 +88,11 @@ Whether the device is a local device. The value **true** indicates that the devi
 
 **Type:** boolean
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VibratorInfo-isLocalVibrator: boolean--><!--Device-VibratorInfo-isLocalVibrator: boolean-End-->
 
@@ -97,11 +106,13 @@ vibratorId: int
 
 Vibrator ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VibratorInfo-vibratorId: int--><!--Device-VibratorInfo-vibratorId: int-End-->
 

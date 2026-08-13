@@ -8,7 +8,9 @@ function getCameraTrackingEnabled(): boolean
 
 获取相机跟踪状态
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean--><!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean-End-->
 
@@ -24,8 +26,8 @@ function getCameraTrackingEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
 
 ## 示例
 

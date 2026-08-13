@@ -1,12 +1,10 @@
 # NodeAdapter
 
-NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](../@internal/component/ets/lazy_for_each)实现接口功能。适用于长列表等需要按需加载节点数据的场景，可提升渲染性能并降低内存占用。
-
-> **说明：**
-> 
-> NodeAdapter各方法中的数值入参（如start、count、from、to）不能为负数，入参为负数时不做处理。
+NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接口功能。适用于长列表等需要按需加载节点数 据的场景，可提升渲染性能并降低内存占用。 > **说明：** > > NodeAdapter各方法中的数值入参（如start、count、from、to）不能为负数，入参为负数时不做处理。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class NodeAdapter--><!--Device-unnamed-declare class NodeAdapter-End-->
 
@@ -18,13 +16,11 @@ NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](../@int
 static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 ```
 
-给FrameNode绑定一个NodeAdapter。一个节点只能绑定一个NodeAdapter。已经绑定NodeAdapter的再次绑定会失败并返回false。
-
-> **说明：**
-> 
-> 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
+给FrameNode绑定一个NodeAdapter。一个节点只能绑定一个NodeAdapter。已经绑定NodeAdapter的再次绑定会失败并返回false。 > **说明：** > > 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,6 +53,8 @@ NodeAdapter的构造函数。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -74,6 +72,8 @@ static detachNodeAdapter(node: FrameNode): void
 解除绑定操作，解除FrameNode节点绑定的NodeAdapter。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,6 +99,8 @@ dispose(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -113,10 +115,11 @@ dispose(): void
 getAllAvailableItems(): Array<FrameNode>
 ```
 
-获取所有有效数据。有效节点数据包括显示在屏幕上的节点以及预加载的节点。其中预加载节点的数量可依照LazyForEach的  
-[使用限制](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#使用限制)，调整父容器的cachedCount属性进行设置。
+获取所有有效数据。有效节点数据包括显示在屏幕上的节点以及预加载的节点。其中预加载节点的数量可依照LazyForEach的 [使用限制](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#使用限制)，调整父容器的cachedCount属性进行设置。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,6 +145,8 @@ insertItem(start: number, count: number): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -163,9 +168,11 @@ insertItem(start: number, count: number): void
 isDisposed(): boolean
 ```
 
-查询当前NodeAdapter对象是否已解除与后端实体节点的引用关系。前端节点均绑定有相应的后端实体节点，当节点调用dispose接口解除绑定后，再次调用该节点的其他接口可能会出现crash、返回默认值的情况。由于业务需求，可能存在节点在dispose后仍被调用接口的情况。为此，提供此接口以供开发者在操作节点前检查其有效性，避免潜在风险。
+查询当前NodeAdapter对象是否已解除与后端实体节点的引用关系。前端节点均绑定有相应的后端实体节点，当节点调用dispose接口解除绑定后，再次调用该节点的其他接口可能会出现crash、返回默认值的情况。由于业务需求，可能存 在节点在dispose后仍被调用接口的情况。为此，提供此接口以供开发者在操作节点前检查其有效性，避免潜在风险。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -183,7 +190,7 @@ isDisposed(): boolean
 
 ## 示例
 
-请参考[检验NodeAdapter是否有效示例](#检验nodeadapter是否有效示例)。
+请参考[检验NodeAdapter是否有效示例。
 
 ## moveItem
 
@@ -194,6 +201,8 @@ moveItem(from: number, to: number): void
 将数据从原始索引移动到目的索引。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -216,18 +225,11 @@ moveItem(from: number, to: number): void
 onAttachToNode?(target: FrameNode): void
 ```
 
-FrameNode绑定NodeAdapter时回调。
-
-> **说明：**
-> 
-> 在API版本26.0.0之前，该回调在宿主节点挂载到主树时触发。如果通过动态赋值方式设置该回调，开发者可以在调用[attachNodeAdapter](#attachNodeAdapter)后
-> 、宿主节点挂载到主树前完成设置，并在宿主节点挂载到主树时收到该回调。
-> 
-> 从API版本26.0.0开始，该回调会在NodeAdapter绑定到宿主节点时立即触发，而不是在宿主节点挂载到主节点树时触发。此时宿主节点可能尚未挂载到主节点树。如果回调逻辑依赖节点已挂载（例如访问布局信息或执行动画），建议在
-> 该回调中注册[onAppear](CommonMethod#onAppear)，并将相关逻辑放入onAppear中执行。如果通过动态赋值方式设置该回调，请在调用
-> [attachNodeAdapter](#attachNodeAdapter)前完成设置，否则回调可能无法触发。
+FrameNode绑定NodeAdapter时回调。 > **说明：** > > 在API版本26.0.0之前，该回调在宿主节点挂载到主树时触发。如果通过动态赋值方式设置该回调，开发者可以在调用[attachNodeAdapter](#attachNodeAdapter)后 > 、宿主节点挂载到主树前完成设置，并在宿主节点挂载到主树时收到该回调。 > > 从API版本26.0.0开始，该回调会在NodeAdapter绑定到宿主节点时立即触发，而不是在宿主节点挂载到主节点树时触发。此时宿主节点可能尚未挂载到主节点树。如果回调逻辑依赖节点已挂载（例如访问布局信息或执行动画），建议在 > 该回调中注册onAppear，并将相关逻辑放入onAppear中执行。如果通过动态赋值方式设置该回调，请在调用 > [attachNodeAdapter](#attachNodeAdapter)前完成设置，否则回调可能无法触发。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,6 +254,8 @@ onCreateChild?(index: number): FrameNode
 节点首次加载或新节点滑入时回调。建议开发者在添加子组件时，遵循声明式组件中子组件的约束。例如，WaterFlow支持添加FlowItem子节点。父节点根据子节点的索引与key值判断是否触发了节点首次加载或新节点滑入。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -283,6 +287,8 @@ onDetachFromNode?(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -300,6 +306,8 @@ onDisposeChild?(id: number, node: FrameNode): void
 子节点即将销毁时回调。既不显示在屏幕上，也不处于预加载范围内的节点都属于即将销毁的节点。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -325,6 +333,8 @@ onGetChildId?(index: number): number
 节点首次加载或新节点滑入时回调。传入的index参数用于自定义生成Id，需要开发者自行保证根据不同index生成Id的唯一性。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -356,6 +366,8 @@ onUpdateChild?(id: number, node: FrameNode): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -381,6 +393,8 @@ reloadAllItems(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -398,6 +412,8 @@ reloadItem(start: number, count: number): void
 从索引值开始重新加载指定数量的节点数据。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -424,6 +440,8 @@ removeItem(start: number, count: number): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -438,23 +456,3 @@ removeItem(start: number, count: number): void
 | --- | --- | --- |
 | start | number | 是 |
 | count | number | 是 |
-
-## totalNodeCount
-
-```TypeScript
-get totalNodeCount(): number
-```
-
-Get the total number of node count.
-
-**类型：** number
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeAdapter-get totalNodeCount(): number--><!--Device-NodeAdapter-get totalNodeCount(): number-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full

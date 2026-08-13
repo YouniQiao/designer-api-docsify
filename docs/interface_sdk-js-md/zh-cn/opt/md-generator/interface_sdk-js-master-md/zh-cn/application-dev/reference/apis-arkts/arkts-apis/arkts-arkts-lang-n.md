@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace lang--><!--Device-unnamed-declare namespace lang-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

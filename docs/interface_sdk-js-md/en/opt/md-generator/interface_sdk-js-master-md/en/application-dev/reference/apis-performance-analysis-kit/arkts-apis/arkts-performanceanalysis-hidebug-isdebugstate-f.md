@@ -14,7 +14,9 @@ function isDebugState(): boolean
 
 Obtains the debugging state of an application process.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function isDebugState(): boolean--><!--Device-hidebug-function isDebugState(): boolean-End-->
 

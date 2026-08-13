@@ -1,16 +1,14 @@
 # X963KdfSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for X963KDF key derivation function (KDF).
-
-> **NOTE：**
-> 
-> **key** is the original key material entered by the user.
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for X963KDF key derivation function (KDF). > **NOTE：**> > **key** is the original key material entered by the user.
 
 **Inheritance/Implementation:** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec)
 
-**Since:** 22
+**Since:** 23
 
-<!--Device-cryptoFramework-interface X963KdfSpec extends KdfSpec--><!--Device-cryptoFramework-interface X963KdfSpec extends KdfSpec-End-->
+**Deprecated since:** -1
+
+<!--Device-cryptoFramework-interface X963KdfSpec--><!--Device-cryptoFramework-interface X963KdfSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -30,9 +28,11 @@ Shared information.
 
 **Type:** Uint8Array
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X963KdfSpec-info: Uint8Array--><!--Device-X963KdfSpec-info: Uint8Array-End-->
 
@@ -48,9 +48,11 @@ Key material.
 
 **Type:** string \| Uint8Array
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X963KdfSpec-key: string | Uint8Array--><!--Device-X963KdfSpec-key: string | Uint8Array-End-->
 
@@ -62,13 +64,15 @@ Key material.
 keySize: number
 ```
 
-Length of the derived key, in bytes.The value must be a positive integer.
+Length of the derived key, in bytes. The value must be a positive integer.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X963KdfSpec-keySize: int--><!--Device-X963KdfSpec-keySize: int-End-->
 

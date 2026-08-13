@@ -4,6 +4,8 @@ The data returned by the event handler when onScrollFrameBegin.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface OnScrollFrameBeginHandlerResult--><!--Device-unnamed-interface OnScrollFrameBeginHandlerResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Actual scroll offset relative to the previous frame.&lt;br&gt;Unit: vp Anonymous
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

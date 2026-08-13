@@ -4,7 +4,9 @@ Defines the window callback.
 
 **Since:** 15
 
-<!--Device-unnamed-declare interface Callback<T, V = void>--><!--Device-unnamed-declare interface Callback<T, V = void>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface Callback--><!--Device-unnamed-declare interface Callback-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -14,7 +16,7 @@ Defines the window callback.
 import { window } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (data: T): V
@@ -23,6 +25,8 @@ import { window } from '@kit.ArkUI';
 Defines the callback info.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

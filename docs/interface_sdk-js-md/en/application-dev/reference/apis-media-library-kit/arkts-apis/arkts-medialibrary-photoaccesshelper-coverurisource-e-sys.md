@@ -2,9 +2,11 @@
 
 Enumerates the sources of the album covers.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum CoverUriSource--><!--Device-photoAccessHelper-enum CoverUriSource-End-->
 
@@ -20,9 +22,11 @@ DEFAULT_COVER = 0
 
 Default cover.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CoverUriSource-DEFAULT_COVER = 0--><!--Device-CoverUriSource-DEFAULT_COVER = 0-End-->
 
@@ -38,9 +42,11 @@ MANUAL_COVER = 1
 
 Cover manually set.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CoverUriSource-MANUAL_COVER = 1--><!--Device-CoverUriSource-MANUAL_COVER = 1-End-->
 

@@ -3,6 +3,7 @@
 ## Span
 
 ```TypeScript
+@ComponentBuilder
 export declare function Span(
     value: string | Resource
 ): SpanAttribute
@@ -14,9 +15,11 @@ export declare function Span(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Span(    value: string | Resource): SpanAttribute--><!--Device-unnamed-export declare function Span(    value: string | Resource): SpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Span(    value: string | Resource): SpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Span(    value: string | Resource): SpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ export declare function Span(
 
 | 类型 | 说明 |
 | --- | --- |
-| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
+| SpanAttribute |  |
 
 
 ## Span
 
 ```TypeScript
+@Builder
 export declare function Span(
     style: CustomBuilderT<SpanAttribute>,
 ): SpanAttribute
@@ -47,11 +51,11 @@ export declare function Span(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute--><!--Device-unnamed-export declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute--><!--Device-unnamed-@Builderexport declare function Span(    style: CustomBuilderT<SpanAttribute>,): SpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ export declare function Span(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SpanAttribute](arkts-arkui-span-spanattribute-i.md)&gt; | 是 | Span属性实例。 |
+| style | CustomBuilderT&lt;SpanAttribute&gt; | 是 | Span属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
+| SpanAttribute |  |
 

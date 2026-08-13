@@ -18,7 +18,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 10
 
-**Substitutes:** [setTime](systemDateTime.setTime(time:)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime-(System-API))(time: long, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -39,9 +39,9 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -76,7 +76,7 @@ Sets the system date. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [setTime](systemDateTime.setTime(time:)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime-(System-API))(time: long, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -102,9 +102,9 @@ Sets the system date. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

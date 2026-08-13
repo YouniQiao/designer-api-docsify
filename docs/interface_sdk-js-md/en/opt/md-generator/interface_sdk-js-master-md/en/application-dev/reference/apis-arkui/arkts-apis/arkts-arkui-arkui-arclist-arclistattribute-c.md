@@ -1,12 +1,14 @@
 # ArcListAttribute
 
-In addition to the [universal attributes](common), the following attributes are supported.
+In addition to the universal attributes, the following attributes are supported.
 
-**Inheritance/Implementation:** ArcListAttribute extends [CommonMethod<ArcListAttribute>](CommonMethod<ArcListAttribute>)
+**Inheritance/Implementation:** ArcListAttribute extends CommonMethod<ArcListAttribute>
 
 **Since:** 18
 
-<!--Device-unnamed-export declare class ArcListAttribute extends CommonMethod<ArcListAttribute>--><!--Device-unnamed-export declare class ArcListAttribute extends CommonMethod<ArcListAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class ArcListAttribute--><!--Device-unnamed-export declare class ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -22,10 +24,11 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@k
 cachedCount(count: Optional<number>): ArcListAttribute
 ```
 
-Sets the number of arc list items to be preloaded (cached). In a lazy loading scenario,only the content equivalent to **cachedCount** outside the visible area of the arc list is preloaded. In a non-lazy loading scenario, all items are loaded at once. For both lazy and non-lazy loading, only the content within the visible area of the arc list plus the content equivalent to **cachedCount** outside the visible area is laid out.When **cachedCount** is set for the arc list, the system preloads and lays out the  
-**cachedCount**-specified number of rows of arc list items both above and below the currently visible area of the arc list.
+Sets the number of arc list items to be preloaded (cached). In a lazy loading scenario, only the content equivalent to **cachedCount** outside the visible area of the arc list is preloaded. In a non-lazy loading scenario, all items are loaded at once. For both lazy and non-lazy loading, only the content within the visible area of the arc list plus the content equivalent to **cachedCount** outside the visible area is laid out. When **cachedCount** is set for the arc list, the system preloads and lays out the **cachedCount**-specified number of rows of arc list items both above and below the currently visible area of the arc list.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -51,9 +54,11 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 chainAnimation(enable: Optional<boolean>): ArcListAttribute
 ```
 
-Sets whether to enable chained animations, which provide a visually connected, or"chained," effect when the **ArcList** component is scrolled or its top or bottom edge is dragged.The list items are separated with even space, and one item animation starts after the previous animation during basic sliding interactions. The chained animation effect is similar with spring physics.For chained animations to work properly, the edge scrolling effect of the **ArcList**component must be set to **EdgeEffect.Spring**.
+Sets whether to enable chained animations, which provide a visually connected, or "chained," effect when the **ArcList** component is scrolled or its top or bottom edge is dragged. The list items are separated with even space, and one item animation starts after the previous animation during basic sliding interactions. The chained animation effect is similar with spring physics. For chained animations to work properly, the edge scrolling effect of the **ArcList** component must be set to **EdgeEffect.Spring**.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -83,6 +88,8 @@ Sets the size information of the child components of the **ArcList** component a
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute--><!--Device-ArcListAttribute-childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute-End-->
@@ -110,6 +117,8 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 Sets the sensitivity of the digital crown's event response.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -139,6 +148,8 @@ Sets whether to enable scroll gestures.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute--><!--Device-ArcListAttribute-enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute-End-->
@@ -166,6 +177,8 @@ fadingEdge(enable: Optional<boolean>): ArcListAttribute
 Sets whether to enable the edge fading effect.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -195,6 +208,8 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-flingSpeedLimit(speed: Optional<number>): ArcListAttribute--><!--Device-ArcListAttribute-flingSpeedLimit(speed: Optional<number>): ArcListAttribute-End-->
@@ -222,6 +237,8 @@ friction(friction: Optional<number>): ArcListAttribute
 Sets the friction coefficient. It applies only to gestures in the scrolling area, and it affects only the inertial scrolling process. If this attribute is set to a value less than or equal to 0, the default value is used.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -251,6 +268,8 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute-End-->
@@ -275,9 +294,11 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list reaches the end position.If the edge scrolling effect is set to spring, this event is triggered when scrolling past the end position and again when bouncing back to it.
+Triggered when the list reaches the end position. If the edge scrolling effect is set to spring, this event is triggered when scrolling past the end position and again when bouncing back to it.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -303,10 +324,11 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list reaches the start position.This event is triggered during initialization of the **ArcList** component if  
-**initialIndex** is set to **0**, and whenever the list scrolls to the start position.If the edge scrolling effect is set to spring, this event is triggered when scrolling past the start position and again when bouncing back to it.
+Triggered when the list reaches the start position. This event is triggered during initialization of the **ArcList** component if **initialIndex** is set to **0**, and whenever the list scrolls to the start position. If the edge scrolling effect is set to spring, this event is triggered when scrolling past the start position and again when bouncing back to it.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -332,9 +354,11 @@ Triggered when the list reaches the start position.This event is triggered durin
 onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 ```
 
-Triggered when a child component enters or leaves the visible area of the **ArcList**component. This event is triggered during initialization of the **ArcList** component and when the index of the first or last child component in the visible area changes, or when the center child component changes.If the edge scrolling effect of the **ArcList** component is set to spring, this event is not triggered during continued scrolling at the edge or during the bounce-back process.
+Triggered when a child component enters or leaves the visible area of the **ArcList** component. This event is triggered during initialization of the **ArcList** component and when the index of the first or last child component in the visible area changes, or when the center child component changes. If the edge scrolling effect of the **ArcList** component is set to spring, this event is not triggered during continued scrolling at the edge or during the bounce-back process.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -364,6 +388,8 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute-End-->
@@ -388,10 +414,11 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list stops scrolling after the user's finger leaves the screen.This event is also triggered when the animation contained in the scrolling triggered by  
-**Scroller** stops.
+Triggered when the list stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by **Scroller** stops.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -421,6 +448,8 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute-End-->
@@ -448,6 +477,8 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 Sets the state of the scrollbar.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -477,6 +508,8 @@ Sets the color of the scrollbar.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute-End-->
@@ -505,6 +538,8 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcListAttribute-scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute-End-->
@@ -532,6 +567,8 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 Sets the spacing between list items.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

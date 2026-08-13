@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ProgressStyleMap--><!--Device-unnamed-declare interface ProgressStyleMap-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@
 **类型：** [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -59,6 +65,8 @@
 **类型：** [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,6 +88,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -99,6 +109,8 @@
 **类型：** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

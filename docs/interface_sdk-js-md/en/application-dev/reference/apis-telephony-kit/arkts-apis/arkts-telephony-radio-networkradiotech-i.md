@@ -2,9 +2,11 @@
 
 Describes the radio access technology (RAT) of registered network.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface NetworkRadioTech--><!--Device-radio-export interface NetworkRadioTech-End-->
 
@@ -26,9 +28,11 @@ Indicates radio access technology (RAT) of circuit service (CS) domain.
 
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkRadioTech-csRadioTech: RadioTechnology--><!--Device-NetworkRadioTech-csRadioTech: RadioTechnology-End-->
 
@@ -44,9 +48,11 @@ Indicates radio access technology (RAT) of packet service (PS) domain.
 
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkRadioTech-psRadioTech: RadioTechnology--><!--Device-NetworkRadioTech-psRadioTech: RadioTechnology-End-->
 

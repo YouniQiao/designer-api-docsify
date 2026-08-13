@@ -1,12 +1,10 @@
 # AbilityDelegatorArgs
 
-AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取测试用例参数AbilityDelegatorArgs对象的能力。
+AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取测试用例参数AbilityDelegatorArgs对象的能力。 > **说明：** > > 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
 
-> **说明：**
-> 
-> 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
+**起始版本：** 23
 
-**起始版本：** 8
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AbilityDelegatorArgs--><!--Device-unnamed-export interface AbilityDelegatorArgs-End-->
 
@@ -22,7 +20,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,7 +40,9 @@ parameters: Record<string, string>
 
 **类型：** Record&lt;string, string&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,7 +60,9 @@ testCaseNames: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -76,7 +80,9 @@ testRunnerClassName: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

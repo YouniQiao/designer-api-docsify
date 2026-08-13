@@ -1,10 +1,6 @@
 # SingleKVStore
 
-Provides APIs to query and synchronize data in a single KV store. This class inherits from  
-[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md#KVStoreType).
-
-Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices.Before calling any method in **SingleKVStore**, you must use  
-[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) to obtain a **SingleKVStore** instance.
+Provides APIs to query and synchronize data in a single KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md#KVStoreType). Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices. Before calling any method in **SingleKVStore**, you must use getKVStore to obtain a **SingleKVStore** instance.
 
 **Inheritance/Implementation:** SingleKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md#KVStore)
 
@@ -12,9 +8,9 @@ Data is not distinguished by device in a single KV store. The data written to di
 
 **Deprecated since:** 9
 
-**Substitutes:** [SingleKVStore](ohos.data.distributedKVStore.SingleKVStore)
+**Substitutes:** SingleKVStore
 
-<!--Device-distributedData-interface SingleKVStore extends KVStore--><!--Device-distributedData-interface SingleKVStore extends KVStore-End-->
+<!--Device-distributedData-interface SingleKVStore--><!--Device-distributedData-interface SingleKVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -24,14 +20,13 @@ Data is not distinguished by device in a single KV store. The data written to di
 closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[SingleKVStore.getResultSet](#getResultSet). This API uses an asynchronous callback to return the result.
+Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](#getResultSet) . This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeResultSet](ohos.data.distributedKVStore.SingleKVStore#closeResultSet)
+**Substitutes:** closeResultSet
 
 <!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void-End-->
 
@@ -68,14 +63,13 @@ try {
 closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[SingleKVStore.getResultSet](#getResultSet). This API uses a promise to return the result.
+Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](#getResultSet) . This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeResultSet](ohos.data.distributedKVStore.SingleKVStore#closeResultSet)
+**Substitutes:** closeResultSet
 
 <!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>--><!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>-End-->
 
@@ -121,7 +115,7 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.data.distributedKVStore.SingleKVStore#get)
+**Substitutes:** get
 
 <!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<Uint8Array | string | boolean | number>): void--><!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<Uint8Array | string | boolean | number>): void-End-->
 
@@ -168,7 +162,7 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.data.distributedKVStore.SingleKVStore#get)
+**Substitutes:** get
 
 <!--Device-SingleKVStore-get(key: string): Promise<Uint8Array | string | boolean | number>--><!--Device-SingleKVStore-get(key: string): Promise<Uint8Array | string | boolean | number>-End-->
 
@@ -220,7 +214,7 @@ Obtains all KV pairs that match the specified key prefix. This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.SingleKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -275,7 +269,7 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.SingleKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
 
@@ -342,7 +336,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.SingleKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -402,7 +396,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.SingleKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
 
@@ -469,7 +463,7 @@ Obtains the result set with the specified prefix. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.SingleKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-SingleKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -527,7 +521,7 @@ Obtains the result set with the specified prefix. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.SingleKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KvStoreResultSet>--><!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KvStoreResultSet>-End-->
 
@@ -590,13 +584,13 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous  callback to return the result.
+Obtains a **KvStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.SingleKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -653,7 +647,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.SingleKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-SingleKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>--><!--Device-SingleKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>-End-->
 
@@ -719,7 +713,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSize](ohos.data.distributedKVStore.SingleKVStore#getResultSize)
+**Substitutes:** getResultSize
 
 <!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void--><!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void-End-->
 
@@ -774,7 +768,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSize](ohos.data.distributedKVStore.SingleKVStore#getResultSize)
+**Substitutes:** getResultSize
 
 <!--Device-SingleKVStore-getResultSize(query: Query): Promise<number>--><!--Device-SingleKVStore-getResultSize(query: Query): Promise<number>-End-->
 
@@ -838,7 +832,7 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSecurityLevel](ohos.data.distributedKVStore.SingleKVStore#getSecurityLevel)
+**Substitutes:** getSecurityLevel
 
 <!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void--><!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void-End-->
 
@@ -875,7 +869,7 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSecurityLevel](ohos.data.distributedKVStore.SingleKVStore#getSecurityLevel)
+**Substitutes:** getSecurityLevel
 
 <!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>--><!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>-End-->
 
@@ -902,7 +896,7 @@ try {
 }
 ```
 
-## off
+## off_dataChange
 
 ```TypeScript
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
@@ -914,7 +908,7 @@ Unsubscribes from data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**Substitutes:** off
 
 <!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -948,7 +942,7 @@ class KvstoreModel {
 }
 ```
 
-## off
+## off_syncComplete
 
 ```TypeScript
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
@@ -960,7 +954,7 @@ Unsubscribes from sync completion events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**Substitutes:** off
 
 <!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -994,7 +988,7 @@ class KvstoreModel {
 }
 ```
 
-## on
+## on_dataChange
 
 ```TypeScript
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
@@ -1006,7 +1000,7 @@ Subscribes to data changes of the specified type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.data.distributedKVStore.SingleKVStore#on)
+**Substitutes:** on
 
 <!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -1029,7 +1023,7 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 });
 ```
 
-## on
+## on_syncComplete
 
 ```TypeScript
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
@@ -1041,7 +1035,7 @@ Subscribes to sync completion events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.data.distributedKVStore.SingleKVStore#on)
+**Substitutes:** on
 
 <!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -1080,21 +1074,13 @@ try {
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of a device. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](#sync).
+Deletes data of a device. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeDeviceData](ohos.data.distributedKVStore.SingleKVStore#removeDeviceData)
+**Substitutes:** removeDeviceData
 
 <!--Device-SingleKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1139,21 +1125,13 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of a device. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](#sync).
+Deletes data of a device. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeDeviceData](ohos.data.distributedKVStore.SingleKVStore#removeDeviceData)
+**Substitutes:** removeDeviceData
 
 <!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>--><!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>-End-->
 
@@ -1211,7 +1189,7 @@ Sets the default delay allowed for KV store sync. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSyncParam](ohos.data.distributedKVStore.SingleKVStore#setSyncParam)
+**Substitutes:** setSyncParam
 
 <!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void-End-->
 
@@ -1250,7 +1228,7 @@ Sets the default delay allowed for KV store sync. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSyncParam](ohos.data.distributedKVStore.SingleKVStore#setSyncParam)
+**Substitutes:** setSyncParam
 
 <!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number): Promise<void>--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number): Promise<void>-End-->
 
@@ -1290,21 +1268,13 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Synchronizes the KV store manually.
-
-> **NOTE：**
-> 
-> **deviceIds** is **networkId** in &lt;!--RP2--&gt;
-> [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md#DeviceInfo), which can be obtained by
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
+Synchronizes the KV store manually. > **NOTE：**> > **deviceIds** is **networkId** in &lt;!--RP2--&gt; > [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md#DeviceInfo-(System-API)), which can be obtained by > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [sync](ohos.data.distributedKVStore.SingleKVStore#sync)
+**Substitutes:** sync
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 

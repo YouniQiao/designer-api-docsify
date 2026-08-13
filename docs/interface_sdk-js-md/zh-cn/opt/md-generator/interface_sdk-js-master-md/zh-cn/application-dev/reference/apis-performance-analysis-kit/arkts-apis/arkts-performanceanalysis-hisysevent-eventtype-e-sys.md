@@ -2,7 +2,9 @@
 
 系统事件类型枚举。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiSysEvent-enum EventType--><!--Device-hiSysEvent-enum EventType-End-->
 
@@ -18,7 +20,9 @@ FAULT = 1
 
 错误事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
@@ -34,7 +38,9 @@ STATISTIC = 2
 
 统计事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
@@ -50,7 +56,9 @@ SECURITY = 3
 
 安全事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
@@ -66,7 +74,9 @@ BEHAVIOR = 4
 
 用户行为事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 

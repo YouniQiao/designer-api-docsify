@@ -1,8 +1,10 @@
 # AudioRecordingManager
 
-提供录像策略管理，包括协同录音和录制控制能力。
+提供录像策略管理，包括协同录音 和录制控制能力。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
 
@@ -14,9 +16,11 @@
 enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig): Promise<void>
 ```
 
-启用或禁用系统录像控制器面板。应用程序在启动录制码流之前，可以调用此接口拉起录制控制器面板。允许用户完成录音设备或音效参数的选择。然后可以启动录音服务，避免在记录过程。应用程序必须在前台才能启用面板；启用操作不生效如果应用程序在后台。禁用面板不受应用程序的限制前台或后台状态。该接口使用promise返回结果。
+启用或禁用系统录像控制器面板。 应用程序在启动录制码流之前，可以调用此接口拉起录制控制器面板。 允许用户完成录音设备或音效参数的选择。 然后可以启动录音服务，避免在 记录过程。 应用程序必须在前台才能启用面板；启用操作不生效 如果应用程序在后台。禁用面板不受应用程序的限制 前台或后台状态。 该接口使用promise返回结果。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,5 +45,5 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |

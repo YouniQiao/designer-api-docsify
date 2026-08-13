@@ -6,7 +6,9 @@ type NetworkState = radio.NetworkState
 
 网络注册状态。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-observer-type NetworkState = radio.NetworkState--><!--Device-observer-type NetworkState = radio.NetworkState-End-->
 

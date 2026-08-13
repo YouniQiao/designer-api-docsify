@@ -2,9 +2,11 @@
 
 The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
 
@@ -22,7 +24,7 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 onAccessibilityEvent(event: AccessibilityEvent): void
 ```
 
-Called when an event that matches the specified bundle and event type occurs. In this API, you can implement event-specific service logic. Generally, this API needs to be overridden.
+Called when an event that matches the specified bundle and event type occurs. In this API, you can implement event- specific service logic. Generally, this API needs to be overridden.
 
 **Since:** 9
 
@@ -91,7 +93,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onDisconnect(): void
 ```
 
-Called when the **AccessibilityExtensionAbility** is disabled and disconnected from the system service. In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
+Called when the **AccessibilityExtensionAbility** is disabled and disconnected from the system service. In this API , you can implement the service logic of resource release and exit. This API can be overridden as required.
 
 **Since:** 9
 
@@ -173,9 +175,11 @@ Context of the accessibility extension ability.
 
 **Type:** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext--><!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext-End-->
 

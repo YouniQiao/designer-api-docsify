@@ -4,6 +4,8 @@ The definition of EpisodeRange.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface EpisodeRange--><!--Device-avMusicTemplate-interface EpisodeRange-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ End Index.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EpisodeRange-end: int--><!--Device-EpisodeRange-end: int-End-->
@@ -43,6 +47,8 @@ Start Index.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

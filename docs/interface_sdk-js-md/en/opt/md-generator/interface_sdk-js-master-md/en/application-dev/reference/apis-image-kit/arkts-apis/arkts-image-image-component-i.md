@@ -2,7 +2,9 @@
 
 Describes the color components of an image.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface Component--><!--Device-image-interface Component-End-->
 
@@ -24,7 +26,9 @@ Component buffer.
 
 **Type:** ArrayBuffer
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Component-readonly byteBuffer: ArrayBuffer--><!--Device-Component-readonly byteBuffer: ArrayBuffer-End-->
 
@@ -40,7 +44,9 @@ Color component type.
 
 **Type:** ComponentType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Component-readonly componentType: ComponentType--><!--Device-Component-readonly componentType: ComponentType-End-->
 
@@ -56,7 +62,9 @@ Pixel stride.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Component-readonly pixelStride: int--><!--Device-Component-readonly pixelStride: int-End-->
 
@@ -68,12 +76,13 @@ Pixel stride.
 readonly rowStride: number
 ```
 
-Row stride. The camera preview stream data needs to be read by stride. For details, see   
-[Solution to Screen Artifacts During Camera Preview](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-deal-stride-solution).
+Row stride. The camera preview stream data needs to be read by stride. For details, see [Solution to Screen Artifacts During Camera Preview](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-deal-stride-solution) .
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Component-readonly rowStride: int--><!--Device-Component-readonly rowStride: int-End-->
 

@@ -1,23 +1,12 @@
 # Cipher
 
-Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption.Before use, you must create a **Cipher** instance by using  
-[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher).Call the [init()](#init-3),  
-[update()](#update), and  
-[doFinal()](#doFinal) APIs in this class as needed to complete encryption or decryption operations.
+Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption. Before use, you must create a **Cipher** instance by using [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher). Call the [init()](#init), [update()](#update), and [doFinal()](#doFinal) APIs in this class as needed to complete encryption or decryption operations. &lt;br&gt;For details about the complete encryption and decryption process, see Encryption and Decryption Overview . &lt;br&gt;A complete symmetric encryption/decryption process is slightly different from the asymmetric encryption/decryption process. - Symmetric encryption and decryption: **init()** and **doFinal()** are mandatory. **update()** is optional and can be called multiple times to encrypt or decrypt big data. After **doFinal()** is called to complete an encryption or decryption operation, **init()** can be called to start a new encryption or decryption operation. - RSA or SM2 asymmetric encryption and decryption: **init()** and **doFinal()** are mandatory, and **update()** is not supported. **doFinal()** can be called multiple times to encrypt or decrypt big data. **init()** cannot be called repeatedly. If the encryption/decryption mode or padding mode is changed, a new **Cipher** object must be created.
 
-&lt;br&gt;For details about the complete encryption and decryption process, see  
-[Encryption and Decryption Overview](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md).
+**Since:** 23
 
-&lt;br&gt;A complete symmetric encryption/decryption process is slightly different from the asymmetric encryption/decryption process.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-- Symmetric encryption and decryption: **init()** and **doFinal()** are mandatory. **update()** is optional and can  
-be called multiple times to encrypt or decrypt big data. After **doFinal()** is called to complete an encryption or decryption operation, **init()** can be called to start a new encryption or decryption operation.  
-- RSA or SM2 asymmetric encryption and decryption: **init()** and **doFinal()** are mandatory, and **update()** is  
-not supported. **doFinal()** can be called multiple times to encrypt or decrypt big data. **init()** cannot be called repeatedly. If the encryption/decryption mode or padding mode is changed, a new **Cipher** object must be created.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Cipher--><!--Device-cryptoFramework-interface Cipher-End-->
 
@@ -37,11 +26,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,17 +47,17 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Indicates the data to be finally encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -74,44 +65,13 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
-
-&lt;br&gt;(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in all the data without using **update()**. If all the data has been passed in by  
-[update()](#update), you can pass in **null** in **data** of **doFinal()**. The output of **doFinal()** varies with the symmetric block cipher mode in use. This API uses an asynchronous callback to return the result.
-
-- In a single encryption process with GCM or CCM mode, concatenating the results of each **update()** and  
-**doFinal()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** passed to **doFinal()** is  
-**null**, the **doFinal()** result is only the **authTag**. During decryption, **authTag** must be set in  
-[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md#GcmParamsSpec) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md#CcmParamsSpec), and the ciphertext must be set in **data**.  
-- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
-of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
-
-(2) Encrypts or decrypts the data passed in this time in RSA and SM2 asymmetric encryption or decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a large amount of data needs to be encrypted/decrypted, call **doFinal()** multiple times and concatenate the result of each **doFinal()** to obtain the complete plaintext/ciphertext.
-
-> **NOTE：**
-> 
-> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and
-> decryption process is started, **init()** must be called with a complete parameter list for initialization.
-> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
-> parameter must be set when **init** is called during decryption.
-> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
-> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
-> **GcmParamsSpec** for decryption.
-> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
-> before using the **.data** field to access the **doFinal()** result.
-> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
-> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
-> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
-> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
-> result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
-> decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
-> The operations are similar for SM2 and RSA.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result. &lt;br&gt;(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in all the data without using **update()**. If all the data has been passed in by [update()](#update), you can pass in **null** in **data** of **doFinal()**. The output of **doFinal()** varies with the symmetric block cipher mode in use. This API uses an asynchronous callback to return the result. - In a single encryption process with GCM or CCM mode, concatenating the results of each **update()** and **doFinal()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** passed to **doFinal()** is **null**, the **doFinal()** result is only the **authTag**. During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md#GcmParamsSpec) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md#CcmParamsSpec), and the ciphertext must be set in **data**. - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext. (2) Encrypts or decrypts the data passed in this time in RSA and SM2 asymmetric encryption or decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a large amount of data needs to be encrypted/decrypted, call **doFinal()** multiple times and concatenate the result of each **doFinal()** to obtain the complete plaintext/ciphertext. > **NOTE：**> > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process > is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and > decryption process is started, **init()** must be called with a complete parameter list for initialization. > Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params** > parameter must be set when **init** is called during decryption. > 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in > **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the > **GcmParamsSpec** for decryption. > 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null** > before using the **.data** field to access the **doFinal()** result. > For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**. > For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned > result is **null**. > 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and > decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair. > The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,17 +86,17 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Data to encrypt or decrypt. In symmetric encryption and decryption, this parameter can be **null**, but **{data: Uint8Array (empty)}** cannot be passed in. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -144,33 +104,13 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and
-> decryption process is started, **init()** must be called with a complete parameter list for initialization.
-> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
-> parameter must be set when **init** is called during decryption.
-> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
-> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
-> **GcmParamsSpec** for decryption.
-> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
-> before using the **.data** field to access the **doFinal()** result.
-> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
-> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
-> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
-> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
-> result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
-> decryption, see
-> [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
-> The operations are similar for SM2 and RSA.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result. > **NOTE：**> > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process > is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and > decryption process is started, **init()** must be called with a complete parameter list for initialization. > Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params** > parameter must be set when **init** is called during decryption. > 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in > **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the > **GcmParamsSpec** for decryption. > 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null** > before using the **.data** field to access the **doFinal()** result. > For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**. > For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned > result is **null**. > 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and > decryption, see > Encryption and Decryption by Segment with an RSA Asymmetric Key Pair. > The operations are similar for SM2 and RSA.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -183,17 +123,17 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Indicates the data to be finally encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## doFinal
 
@@ -201,11 +141,13 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 doFinal(data: DataBlob): Promise<DataBlob>
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -231,11 +173,11 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -243,52 +185,13 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 doFinal(data: DataBlob | null): Promise<DataBlob>
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
-
-&lt;br&gt;(1) Encrypts or decrypts the remaining data (generated by the block cipher mode) and the data passed in this time to finalize the symmetric encryption or decryption. This API uses a promise to return the result.
-
-If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in data without using **update()**. If all the data has been passed in by **update()**, you can pass in **null** in **data** of  
-**doFinal()**.
-
-The output of **doFinal()** varies with the symmetric encryption/decryption mode in use.
-
-- Symmetric encryption in GCM and CCM mode: The result consists of the ciphertext and **authTag** (the last 16  
-bytes for GCM and the last 12 bytes for CCM). If **data** in **doFinal** is null, the result of **doFinal** is  
-**authTag**.
-
-During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md#GcmParamsSpec) or  
-[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md#CcmParamsSpec), and the ciphertext must be set in **data**.
-
-- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
-of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
-
-(2) Encrypts or decrypts the data passed in RSA and SM2 asymmetric encryption or decryption. This API uses a promise to return the encrypted or decrypted data. If a large amount of data is to be processed, call  
-**doFinal()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
-
-> **NOTE：**
-> 
-> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and
-> decryption process is started, **init()** must be called with a complete parameter list for initialization.
-> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
-> parameter must be set when **init** is called during decryption.
-> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
-> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
-> **GcmParamsSpec** for decryption.
-> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
-> before using the **.data** field to access the **doFinal()** result.
-> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
-> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
-> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
-> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
-> result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
-> decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
-> The operations are similar for SM2 and RSA.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result. &lt;br&gt;(1) Encrypts or decrypts the remaining data (generated by the block cipher mode) and the data passed in this time to finalize the symmetric encryption or decryption. This API uses a promise to return the result. If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in data without using **update()**. If all the data has been passed in by **update()**, you can pass in **null** in **data** of **doFinal()**. The output of **doFinal()** varies with the symmetric encryption/decryption mode in use. - Symmetric encryption in GCM and CCM mode: The result consists of the ciphertext and **authTag** (the last 16 bytes for GCM and the last 12 bytes for CCM). If **data** in **doFinal** is null, the result of **doFinal** is **authTag**. During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md#GcmParamsSpec) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md#CcmParamsSpec), and the ciphertext must be set in **data**. - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext. (2) Encrypts or decrypts the data passed in RSA and SM2 asymmetric encryption or decryption. This API uses a promise to return the encrypted or decrypted data. If a large amount of data is to be processed, call **doFinal()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext. > **NOTE：**> > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process > is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and > decryption process is started, **init()** must be called with a complete parameter list for initialization. > Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params** > parameter must be set when **init** is called during decryption. > 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in > **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the > **GcmParamsSpec** for decryption. > 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null** > before using the **.data** field to access the **doFinal()** result. > For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**. > For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned > result is **null**. > 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and > decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair. > The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -314,11 +217,11 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -326,32 +229,13 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 doFinal(data: DataBlob | null): Promise<DataBlob | null>
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and
-> decryption process is started, **init()** must be called with a complete parameter list for initialization.
-> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
-> parameter must be set when **init** is called during decryption.
-> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
-> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
-> **GcmParamsSpec** for decryption.
-> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
-> before using the **.data** field to access the **doFinal()** result.
-> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
-> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
-> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
-> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
-> result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
-> decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
-> The operations are similar for SM2 and RSA.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result. > **NOTE：**> > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process > is complete and the [Cipher](#Cipher) instance is cleared. When a new encryption and > decryption process is started, **init()** must be called with a complete parameter list for initialization. > Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params** > parameter must be set when **init** is called during decryption. > 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in > **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the > **GcmParamsSpec** for decryption. > 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null** > before using the **.data** field to access the **doFinal()** result. > For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**. > For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned > result is **null**. > 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and > decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair. > The operations are similar for SM2 and RSA.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -375,11 +259,11 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## doFinalSync
 
@@ -387,33 +271,13 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 doFinalSync(data: DataBlob | null): DataBlob
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished.
-
-&lt;br&gt;(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API returns the encrypted or decrypted data synchronously.
-
-If a small amount of data is to be processed, you can pass in all the data at a time in **doFinalSync()** without using **updateSync()**. If data has been passed in by using  
-[updateSync](#updateSync-1) in the current encryption and decryption process, you can pass in **null** to the **data** parameter of **doFinalSync()**.
-
-The output of **doFinalSync()** varies with the symmetric block cipher mode in use.
-
-- In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and  
-**doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is  
-**null**, the result of **doFinalSync()** is **authTag**.  
-- During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md#GcmParamsSpec) or  
-[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md#CcmParamsSpec), and the ciphertext must be set in **data**.  
-- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
-of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext.
-
-(2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()**multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
-
-&lt;br&gt;See **NOTE：**in
-[doFinal()](#doFinal) for other precautions.
-
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [doFinal](doFinal). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. &lt;br&gt;(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API returns the encrypted or decrypted data synchronously. If a small amount of data is to be processed, you can pass in all the data at a time in **doFinalSync()** without using **updateSync()**. If data has been passed in by using [updateSync](#updateSync) in the current encryption and decryption process, you can pass in **null** to the **data** parameter of **doFinalSync()**. The output of **doFinalSync()** varies with the symmetric block cipher mode in use. - In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and **doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is **null**, the result of **doFinalSync()** is **authTag**. - During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md#GcmParamsSpec) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md#CcmParamsSpec), and the ciphertext must be set in **data**. - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext. (2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext. &lt;br&gt;See **NOTE：**in [doFinal()](#doFinal) for other precautions. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -437,11 +301,11 @@ of **updateSync()** and **doFinalSync()** throughout the process will yield the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinalSync
 
@@ -449,13 +313,13 @@ of **updateSync()** and **doFinalSync()** throughout the process will yield the 
 doFinalSync(data: DataBlob | null): DataBlob | null
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished.
-
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [doFinal](doFinal). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -479,11 +343,11 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## getCipherSpec
 
@@ -493,9 +357,11 @@ getCipherSpec(itemType: CipherSpecItem): string | Uint8Array
 
 Obtains cipher specifications. Currently, only RSA and SM2 (available since API version 11) are supported.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -521,11 +387,11 @@ Obtains cipher specifications. Currently, only RSA and SM2 (available since API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Unsupported itemType.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Unsupported itemType.<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -545,14 +411,13 @@ function testGetCipherSpec() {
 init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<void>): void
 ```
 
-Initializes the crypto operation with the given crypto mode, key and parameters. This API uses an asynchronous callback to return the result.
-
-&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
-**update** is optional.
+Initializes the crypto operation with the given crypto mode, key and parameters. This API uses an asynchronous callback to return the result. &lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -569,17 +434,17 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
 | key | Key | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | Indicates the algorithm parameters such as IV. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## init
 
@@ -587,14 +452,13 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void
 ```
 
-Initializes the [cipher](#Cipher) object for encryption and decryption. This API uses an asynchronous callback to return the result.
+Initializes the [cipher](#Cipher) object for encryption and decryption. This API uses an asynchronous callback to return the result. &lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
-&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
-**update** is optional.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -611,17 +475,17 @@ Initializes the [cipher](#Cipher) object for encryption and decryption. This API
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
 | key | Key | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. In versions earlier than API version 10, only **ParamsSpec** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## init
 
@@ -629,14 +493,13 @@ Initializes the [cipher](#Cipher) object for encryption and decryption. This API
 init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 ```
 
-Initializes the crypto operation with the given crypto mode, key and parameters. This API uses a promise to return the result.
-
-&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
-**update** is optional.
+Initializes the crypto operation with the given crypto mode, key and parameters. This API uses a promise to return the result. &lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -664,11 +527,11 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## init
 
@@ -676,14 +539,13 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 ```
 
-Initializes the cipher object for encryption and decryption. This API uses a promise to return the result.
+Initializes the cipher object for encryption and decryption. This API uses a promise to return the result. &lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
-&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
-**update** is optional.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -711,11 +573,11 @@ Initializes the cipher object for encryption and decryption. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## initSync
 
@@ -723,17 +585,15 @@ Initializes the cipher object for encryption and decryption. This API uses a pro
 initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 ```
 
-Initializes a [cipher](#Cipher) instance. This API returns the result synchronously.
+Initializes a [cipher](#Cipher) instance. This API returns the result synchronously. &lt;br&gt;**initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;**initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
+**Since:** 23
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [init](init). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Cipher-initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void--><!--Device-Cipher-initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void-End-->
 
@@ -751,11 +611,11 @@ Initializes a [cipher](#Cipher) instance. This API returns the result synchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## setCipherSpec
 
@@ -763,12 +623,13 @@ Initializes a [cipher](#Cipher) instance. This API returns the result synchronou
 setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void
 ```
 
-Sets cipher specifications. You can use this API to set cipher specifications that cannot be set by  
-[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher). Currently, only RSA is supported.
+Sets cipher specifications. You can use this API to set cipher specifications that cannot be set by [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher). Currently, only RSA is supported.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -789,11 +650,11 @@ Sets cipher specifications. You can use this API to set cipher specifications th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Unsupported itemType.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Unsupported itemType.<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -813,43 +674,13 @@ function testsetCipherSpec() {
 update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 ```
 
-Updates the data to encrypt or decrypt by segment. This API uses an asynchronous callback to return the result.
-
-&lt;br&gt;This API can be called only after the [Cipher](#Cipher) instance is initialized by using [init()](#init-3).
-
-> **NOTE：**
-> 
-> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
-> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
-> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
-> ciphertext or plaintext.
-> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
-> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
-> processed block data.
-> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
-> **null** is returned and the data will be retained until a block is formed in the next **update()** or
-> **doFinal()**.
-> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
-> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the
-> final encrypted or decrypted data.
-> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
-> plaintext length.
-> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
-> **init()**), depending on the data volume.
-> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
-> at once.
-> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
-> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
-> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
-> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
-> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
-> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
-> **doFinal()** once to decrypt data and verify the tag.
+Updates the data to encrypt or decrypt by segment. This API uses an asynchronous callback to return the result. &lt;br&gt;This API can be called only after the [Cipher](#Cipher) instance is initialized by using [init()](#init). > **NOTE：**> > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete > ciphertext or plaintext. > &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the > data input by **update()** is an integer multiple of the block size, and **update()** returns the newly > processed block data. > &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise, > **null** is returned and the data will be retained until a block is formed in the next **update()** or > **doFinal()**. > &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in > [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the > final encrypted or decrypted data. > &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the > plaintext length. > 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after > **init()**), depending on the data volume. > &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all > at once. > &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see > Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode). > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**. > 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the > encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag** > or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or > **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -864,17 +695,17 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Data to be encrypted or decrypted. It cannot be null. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## update
 
@@ -882,41 +713,13 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 ```
 
-Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
-> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
-> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
-> ciphertext or plaintext.
-> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
-> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
-> processed block data.
-> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
-> **null** is returned and the data will be retained until a block is formed in the next **update()** or
-> **doFinal()**.
-> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
-> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the
-> final encrypted or decrypted data.
-> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
-> plaintext length.
-> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
-> **init()**), depending on the data volume.
-> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
-> at once.
-> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
-> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
-> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
-> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
-> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
-> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
-> **doFinal()** once to decrypt data and verify the tag.
+Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses an asynchronous callback to return the result. > **NOTE：**> > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete > ciphertext or plaintext. > &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the > data input by **update()** is an integer multiple of the block size, and **update()** returns the newly > processed block data. > &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise, > **null** is returned and the data will be retained until a block is formed in the next **update()** or > **doFinal()**. > &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in > [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the > final encrypted or decrypted data. > &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the > plaintext length. > 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after > **init()**), depending on the data volume. > &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all > at once. > &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see > Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode). > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**. > 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the > encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag** > or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or > **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -929,17 +732,17 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Indicates the data to be encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## update
 
@@ -947,43 +750,13 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 update(data: DataBlob): Promise<DataBlob>
 ```
 
-Updates the data to encrypt or decrypt by segment. This API uses a promise to return the result.
-
-&lt;br&gt;This API can be called only after the [Cipher](#Cipher) instance is initialized by using [init()](#init-3).
-
-> **NOTE：**
-> 
-> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
-> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
-> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
-> ciphertext or plaintext.
-> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
-> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
-> processed block data.
-> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
-> **null** is returned and the data will be retained until a block is formed in the next **update()** or
-> **doFinal()**.
-> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
-> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the
-> final encrypted or decrypted data.
-> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
-> plaintext length.
-> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
-> **init()**), depending on the data volume.
-> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
-> at once.
-> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
-> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
-> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
-> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
-> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
-> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
-> **doFinal()** once to decrypt data and verify the tag.
+Updates the data to encrypt or decrypt by segment. This API uses a promise to return the result. &lt;br&gt;This API can be called only after the [Cipher](#Cipher) instance is initialized by using [init()](#init). > **NOTE：**> > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete > ciphertext or plaintext. > &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the > data input by **update()** is an integer multiple of the block size, and **update()** returns the newly > processed block data. > &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise, > **null** is returned and the data will be retained until a block is formed in the next **update()** or > **doFinal()**. > &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in > [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the > final encrypted or decrypted data. > &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the > plaintext length. > 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after > **init()**), depending on the data volume. > &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all > at once. > &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see > Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode). > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**. > 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the > encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag** > or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or > **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1009,11 +782,11 @@ Updates the data to encrypt or decrypt by segment. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## update
 
@@ -1021,41 +794,13 @@ Updates the data to encrypt or decrypt by segment. This API uses a promise to re
 update(data: DataBlob): Promise<DataBlob | null>
 ```
 
-Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
-> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
-> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
-> ciphertext or plaintext.
-> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
-> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
-> processed block data.
-> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
-> **null** is returned and the data will be retained until a block is formed in the next **update()** or
-> **doFinal()**.
-> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
-> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the
-> final encrypted or decrypted data.
-> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
-> plaintext length.
-> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
-> **init()**), depending on the data volume.
-> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
-> at once.
-> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
-> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
-> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
-> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
-> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
-> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
-> **doFinal()** once to decrypt data and verify the tag.
+Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses a promise to return the result. > **NOTE：**> > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete > ciphertext or plaintext. > &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the > data input by **update()** is an integer multiple of the block size, and **update()** returns the newly > processed block data. > &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise, > **null** is returned and the data will be retained until a block is formed in the next **update()** or > **doFinal()**. > &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in > [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) to the integer multiple of the block size to produce the > final encrypted or decrypted data. > &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the > plaintext length. > 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after > **init()**), depending on the data volume. > &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all > at once. > &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see > Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode). > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**. > 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the > encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag** > or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or > **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1079,11 +824,11 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## updateSync
 
@@ -1091,17 +836,13 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 updateSync(data: DataBlob): DataBlob
 ```
 
-Updates the data to encrypt or decrypt by segment.
-
-&lt;br&gt;This API can be called only after the [Cipher](#Cipher) instance is initialized by using [initSync()](#initSync).
-
-&lt;br&gt;See **NOTE：**in **update()** for other precautions.
-
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [update](update). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates the data to encrypt or decrypt by segment. &lt;br&gt;This API can be called only after the [Cipher](#Cipher) instance is initialized by using [initSync()](#initSync). &lt;br&gt;See **NOTE：**in **update()** for other precautions. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1125,11 +866,11 @@ Updates the data to encrypt or decrypt by segment.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## updateSync
 
@@ -1137,13 +878,13 @@ Updates the data to encrypt or decrypt by segment.
 updateSync(data: DataBlob): DataBlob | null
 ```
 
-Updates the data to encrypt or decrypt by segment.
-
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [update](update). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates the data to encrypt or decrypt by segment. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1167,11 +908,11 @@ Updates the data to encrypt or decrypt by segment.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## algName
 
@@ -1183,9 +924,11 @@ Indicates the algorithm name of the cipher object.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

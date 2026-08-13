@@ -1,19 +1,10 @@
 # ComponentSnapshot
 
-Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
-
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
-> in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
-> 
-> - Transformation properties such as scaling, translation, and rotation only apply to the child components of the
-> target component. Applying these transformation properties directly to the target component itself has no effect;
-> the snapshot will still display the component as it appears before any transformations are applied.
+Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance. > > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the > target component. Applying these transformation properties directly to the target component itself has no effect; > the snapshot will still display the component as it appears before any transformations are applied.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
 
@@ -32,14 +23,11 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
     options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Captures a snapshot of the area between two specified components. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The components corresponding to **start** and **end** must belong to the same component tree, and the **start**
-> component must be an ancestor of the **end** component.
+Captures a snapshot of the area between two specified components. This API uses a promise to return the result. > **NOTE：**> > The components corresponding to **start** and **end** must belong to the same component tree, and the **start** > component must be an ancestor of the **end** component.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +56,9 @@ Captures a snapshot of the area between two specified components. This API uses 
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

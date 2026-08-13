@@ -1,10 +1,4 @@
-# notificationContent(Some notification types and content)
-
-The **NotificationContent** defines the content structure of a notification and provides content description API
- of multiple notification types. When an application needs to publish a notification, it can select the
- corresponding content type API to construct the notification content based on the display requirements (such as
- plain text, long text, multi-line text, picture, or live view).
-
+# notificationContent
 
 ## Summary
 

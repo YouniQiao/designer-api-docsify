@@ -1,8 +1,10 @@
 # Driver
 
-Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过[create](create)创建实例。该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过create创建实例。 该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class Driver--><!--Device-unnamed-declare class Driver-End-->
 
@@ -16,7 +18,9 @@ assertComponentExist(on: On): Promise<void>
 
 断言API，用于断言当前界面是否存在满足给出的目标属性的控件。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,9 +44,9 @@ assertComponentExist(on: On): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-断言失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000003](../errorcode-uitest.md#17000003-断言失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -64,7 +68,9 @@ click(x: number, y: number): Promise<void>
 
 在目标坐标点单击。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -89,8 +95,8 @@ click(x: number, y: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -114,9 +120,11 @@ clickAt(point: Point): Promise<void>
 
 在目标坐标点进行单击。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-clickAt(point: Point): Promise<void>--><!--Device-Driver-clickAt(point: Point): Promise<void>-End-->
 
@@ -138,8 +146,8 @@ clickAt(point: Point): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -162,6 +170,8 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 点击屏幕上的指定位置，可选择触摸选项。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -186,8 +196,8 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -213,7 +223,9 @@ static create(): Driver
 
 静态方法，构造一个Driver对象，并返回该对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -231,7 +243,7 @@ static create(): Driver
 
 | 错误码ID |
 | --- |
-| [17000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000001-初始化失败) |
+| [17000001](../errorcode-uitest.md#17000001-初始化失败) |
 
 ## 示例
 
@@ -252,7 +264,9 @@ createUIEventObserver(): UIEventObserver
 
 创建一个UI事件监听器。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -270,7 +284,7 @@ createUIEventObserver(): UIEventObserver
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -292,9 +306,11 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 注入手表表冠旋转事件，可指定旋转速度。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>--><!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>-End-->
 
@@ -317,9 +333,9 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -344,7 +360,9 @@ delayMs(duration: number): Promise<void>
 
 在给定的时间内延时。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -368,8 +386,8 @@ delayMs(duration: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -391,7 +409,9 @@ doubleClick(x: number, y: number): Promise<void>
 
 在目标坐标点双击。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -416,8 +436,8 @@ doubleClick(x: number, y: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -439,9 +459,11 @@ doubleClickAt(point: Point): Promise<void>
 
 对目标坐标进行双击。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-doubleClickAt(point: Point): Promise<void>--><!--Device-Driver-doubleClickAt(point: Point): Promise<void>-End-->
 
@@ -463,8 +485,8 @@ doubleClickAt(point: Point): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -486,7 +508,9 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 从起始坐标点拖拽至目的坐标点。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -514,8 +538,8 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -537,9 +561,11 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 从起始坐标点拖拽至目标坐标点，支持指定拖拽速度和拖拽前长按时间。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
@@ -564,8 +590,8 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -588,6 +614,8 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 在屏幕上拖拽指定的点之间，具有可选设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -613,8 +641,8 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -644,6 +672,8 @@ Get the current layout information and save as file with json format.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>--><!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>-End-->
@@ -667,8 +697,8 @@ Get the current layout information and save as file with json format.
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -693,6 +723,8 @@ findComponent(on: On): Promise<Component>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-findComponent(on: On): Promise<Component>--><!--Device-Driver-findComponent(on: On): Promise<Component>-End-->
@@ -715,8 +747,8 @@ findComponent(on: On): Promise<Component>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -732,6 +764,41 @@ async function demo() {
 }
 ```
 
+## findComponent
+
+```TypeScript
+findComponent(on: On): Promise<Component | null>
+```
+
+Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Driver-findComponent(on: On): Promise<Component | null>--><!--Device-Driver-findComponent(on: On): Promise<Component | null>-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+
 ## findComponents
 
 ```TypeScript
@@ -741,6 +808,8 @@ findComponents(on: On): Promise<Array<Component>>
 根据给出的目标控件属性要求查找出所有匹配控件，以列表保存。使用Promise异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -764,8 +833,8 @@ findComponents(on: On): Promise<Array<Component>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -781,6 +850,41 @@ async function demo() {
 }
 ```
 
+## findComponents
+
+```TypeScript
+findComponents(on: On): Promise<Array<Component> | null>
+```
+
+Find all the matched [Component](arkts-test-uitest-component-c.md#Component)s on current UI.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt; \| null & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+
 ## findWindow
 
 ```TypeScript
@@ -790,6 +894,8 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 通过指定窗口的属性来查找目标窗口。使用Promise异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -813,8 +919,8 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -828,6 +934,41 @@ async function demo() {
 }
 ```
 
+## findWindow
+
+```TypeScript
+findWindow(filter: WindowFilter): Promise<UiWindow | null>
+```
+
+Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow) window.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md) \| null & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+
 ## fling
 
 ```TypeScript
@@ -836,7 +977,9 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -863,8 +1006,8 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -886,7 +1029,9 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 指定方向和滑动速率，模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -911,8 +1056,8 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -934,9 +1079,11 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 指定方向、滑动速率和操作屏幕，模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>--><!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>-End-->
 
@@ -960,8 +1107,8 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -983,7 +1130,9 @@ getDisplayDensity(): Promise<Point>
 
 获取当前设备屏幕的分辨率。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1001,7 +1150,7 @@ getDisplayDensity(): Promise<Point>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1023,9 +1172,11 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 获取当前设备指定屏幕的分辨率。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>--><!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>-End-->
 
@@ -1047,8 +1198,8 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1070,7 +1221,9 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 获取当前设备的屏幕显示方向。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1088,7 +1241,7 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1110,9 +1263,11 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 获取当前设备指定屏幕的显示方向。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>--><!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>-End-->
 
@@ -1134,8 +1289,8 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1157,7 +1312,9 @@ getDisplaySize(): Promise<Point>
 
 获取当前设备的屏幕大小。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1175,7 +1332,7 @@ getDisplaySize(): Promise<Point>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1197,9 +1354,11 @@ getDisplaySize(displayId: number): Promise<Point>
 
 获取当前设备指定屏幕的大小。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>--><!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>-End-->
 
@@ -1221,8 +1380,8 @@ getDisplaySize(displayId: number): Promise<Point>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1242,15 +1401,13 @@ async function demo() {
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<void>
 ```
 
-模拟指关节多点注入滑动操作。使用Promise异步回调。
+模拟指关节多点注入滑动操作。使用Promise异步回调。 > **说明：** > > 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
 
-> **说明：**
-> 
-> 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
+**起始版本：** 23
 
-**起始版本：** 22
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>--><!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>-End-->
 
@@ -1273,9 +1430,9 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -1305,7 +1462,9 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 向设备注入多指操作。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1330,8 +1489,8 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1369,9 +1528,11 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 模拟手写笔多点连续注入操作。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>-End-->
 
@@ -1395,8 +1556,8 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1425,9 +1586,11 @@ inputText(p: Point, text: string): Promise<void>
 
 在指定坐标点输入文本，不清空组件内原有文本，直接在坐标处追加输入。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-inputText(p: Point, text: string): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string): Promise<void>-End-->
 
@@ -1450,8 +1613,8 @@ inputText(p: Point, text: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1479,9 +1642,11 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 在指定坐标点输入文本，支持指定文本输入方式。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>-End-->
 
@@ -1505,9 +1670,9 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1539,9 +1704,11 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 从起始点拖拽至终止点，并查找目标控件是否存在。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>-End-->
 
@@ -1567,8 +1734,8 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1590,9 +1757,11 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 在坐标点长按，并查找目标控件是否存在。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>-End-->
 
@@ -1616,8 +1785,8 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1639,9 +1808,11 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 从起始点滑向终止点，并查找目标控件是否存在。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>-End-->
 
@@ -1666,8 +1837,8 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1687,15 +1858,13 @@ async function demo() {
 knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 ```
 
-模拟指关节敲击屏幕操作。使用Promise异步回调。
+模拟指关节敲击屏幕操作。使用Promise异步回调。 > **说明：** > > 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
 
-> **说明：**
-> 
-> 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
+**起始版本：** 23
 
-**起始版本：** 22
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>--><!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>-End-->
 
@@ -1718,9 +1887,9 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -1744,7 +1913,9 @@ longClick(x: number, y: number): Promise<void>
 
 在目标坐标点长按。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1769,8 +1940,8 @@ longClick(x: number, y: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1792,9 +1963,11 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 长按目标坐标点，支持指定长按时长。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>--><!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>-End-->
 
@@ -1817,8 +1990,8 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1841,6 +2014,8 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 长按屏幕上的指定位置，可选择触摸设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -1865,8 +2040,8 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1893,7 +2068,9 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 
 在指定坐标点注入鼠标点击动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标点击动作。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1920,8 +2097,8 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1943,9 +2120,11 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 在指定坐标点注入鼠标双击动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标双击动作。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
 
@@ -1970,8 +2149,8 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1994,6 +2173,8 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 鼠标按住鼠标左键从起始坐标点拖拽至终点坐标点。使用Promise异步回调。对于 API version 26.0.0 之前的版本，该接口不支持鼠标跨屏拖拽操作，起始点与终点需属于同一屏幕，否则将抛出401错误码；从 API version 26.0.0 开始，该接口支持鼠标跨屏拖拽操作。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2019,8 +2200,8 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2040,11 +2221,13 @@ async function demo() {
 mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<void>
 ```
 
-鼠标按住鼠标左键从起始坐标点拖拽至终点坐标点，支持指定拖拽速度和拖拽前长按时间。使用Promise异步回调。对于 API version 26.0.0 之前的版本，该接口不支持鼠标跨屏拖拽操作，起始点与终点需属于同一屏幕，否则将抛出401错误码；从 API version 26.0.0 开始，该接口支持鼠标跨屏拖拽操作。
+鼠标按住鼠标左键从起始坐标点拖拽至终点坐标点，支持指定拖拽速度和拖拽前长按时间。使用Promise异步回调。 对于 API version 26.0.0 之前的版本，该接口不支持鼠标跨屏拖拽操作，起始点与终点需属于同一屏幕，否则将抛出401错误码； 从 API version 26.0.0 开始，该接口支持鼠标跨屏拖拽操作。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
@@ -2069,8 +2252,8 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2090,9 +2273,11 @@ async function demo() {
 mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>
 ```
 
-按住鼠标左键并在屏幕上的指定点之间拖动，具有可选的触摸和按键设置。
+按住鼠标左键并在屏幕上的指定点之间拖动， 具有可选的触摸和按键设置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -2119,8 +2304,8 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -2153,6 +2338,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>-End-->
@@ -2178,8 +2365,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2202,9 +2389,11 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 在指定坐标点注入鼠标长按动作，支持同时按下对应键盘组合键，支持指定长按时长。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标长按动作。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>-End-->
 
@@ -2230,8 +2419,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2254,7 +2443,9 @@ mouseMoveTo(p: Point): Promise<void>
 
 将鼠标光标移到目标点。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2278,8 +2469,8 @@ mouseMoveTo(p: Point): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2301,9 +2492,11 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 鼠标从起始坐标点滑向终点坐标点。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
@@ -2327,8 +2520,8 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2351,6 +2544,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 在指定坐标点注入鼠标滚轮滑动动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标滚轮滑动动作。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2378,8 +2573,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2401,9 +2596,11 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 在指定坐标点注入鼠标滚轮滑动动作，支持同时按下对应键盘组合键并且指定滑动速度。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>-End-->
 
@@ -2430,8 +2627,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2453,9 +2650,11 @@ penClick(point: Point): Promise<void>
 
 模拟手写笔点击操作。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-penClick(point: Point): Promise<void>--><!--Device-Driver-penClick(point: Point): Promise<void>-End-->
 
@@ -2477,8 +2676,8 @@ penClick(point: Point): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2500,9 +2699,11 @@ penDoubleClick(point: Point): Promise<void>
 
 模拟手写笔双击操作。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-penDoubleClick(point: Point): Promise<void>--><!--Device-Driver-penDoubleClick(point: Point): Promise<void>-End-->
 
@@ -2524,8 +2725,8 @@ penDoubleClick(point: Point): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2547,9 +2748,11 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 模拟手写笔长按操作。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>--><!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>-End-->
 
@@ -2572,8 +2775,8 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2595,9 +2798,11 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 模拟手写笔的滑动操作。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>-End-->
 
@@ -2622,8 +2827,8 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2645,7 +2850,9 @@ pressBack(): Promise<void>
 
 进行点击BACK键的操作。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2663,7 +2870,7 @@ pressBack(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2685,9 +2892,11 @@ pressBack(displayId: number): Promise<void>
 
 对指定屏幕进行点击BACK键的操作。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-pressBack(displayId: int): Promise<void>--><!--Device-Driver-pressBack(displayId: int): Promise<void>-End-->
 
@@ -2709,8 +2918,8 @@ pressBack(displayId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -2732,7 +2941,9 @@ pressHome(): Promise<void>
 
 设备注入返回桌面操作。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2750,7 +2961,7 @@ pressHome(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2772,9 +2983,11 @@ pressHome(displayId: number): Promise<void>
 
 设备指定屏幕上注入返回桌面操作。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-pressHome(displayId: int): Promise<void>--><!--Device-Driver-pressHome(displayId: int): Promise<void>-End-->
 
@@ -2796,8 +3009,8 @@ pressHome(displayId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -2819,7 +3032,9 @@ screenCap(savePath: string): Promise<boolean>
 
 捕获当前屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2843,8 +3058,8 @@ screenCap(savePath: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2866,9 +3081,11 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 捕获指定屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>--><!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>-End-->
 
@@ -2891,8 +3108,8 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2914,7 +3131,9 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 捕获当前屏幕的指定区域，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2939,8 +3158,8 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2967,7 +3186,9 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 将当前场景的显示方向设置为指定的显示方向。使用Promise异步回调。适用于可旋转的应用场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2991,8 +3212,8 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3014,7 +3235,9 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 启用/禁用设备旋转屏幕的功能。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3038,8 +3261,8 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3061,7 +3284,9 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 从起始坐标点滑向目的坐标点。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3089,8 +3314,8 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3114,9 +3339,11 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 从起始坐标点滑向目标坐标点。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
@@ -3140,8 +3367,8 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -3164,6 +3391,8 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 使用可选的触摸选项在指定点之间滑动屏幕。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -3189,8 +3418,8 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -3217,9 +3446,11 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 
 模拟触摸板多指滑动手势。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>--><!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>-End-->
 
@@ -3243,9 +3474,9 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -3267,9 +3498,11 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 模拟触摸板双指滚动手势。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>--><!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>-End-->
 
@@ -3294,9 +3527,9 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -3319,6 +3552,8 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 通过给定的key值，找到对应组合键并点击。使用Promise异步回调。例如，Key值为(2072, 2019)时，找到key值对应的组合键并点击，如Ctrl+c。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3344,8 +3579,8 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3368,9 +3603,11 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 通过给定的key值，找到对应组合键，并在指定屏幕下进行点击。使用Promise异步回调。例如，Key值为(2072, 2019)时，找到key值对应的组合键并点击，如Ctrl+c。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>-End-->
 
@@ -3395,8 +3632,8 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3418,7 +3655,9 @@ triggerKey(keyCode: number): Promise<void>
 
 传入key值实现模拟点击对应按键的效果。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3442,8 +3681,8 @@ triggerKey(keyCode: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3466,9 +3705,11 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 在指定屏幕，传入key值实现模拟点击对应按键的效果。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>-End-->
 
@@ -3491,8 +3732,8 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3513,15 +3754,11 @@ async function demo() {
 triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>
 ```
 
-Trigger pen key operation.
-
-Supported combinations:
-
-- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.  
-- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),  
-HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
+Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -3548,9 +3785,9 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -3579,6 +3816,8 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>--><!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>-End-->
@@ -3602,8 +3841,8 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3617,6 +3856,42 @@ async function demo() {
 }
 ```
 
+## waitForComponent
+
+```TypeScript
+waitForComponent(on: On, time: number): Promise<Component | null>
+```
+
+Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI during the time given.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>--><!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| time | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+
 ## waitForIdle
 
 ```TypeScript
@@ -3625,7 +3900,9 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 判断当前界面的所有控件是否已经空闲。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3650,8 +3927,8 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3673,7 +3950,9 @@ wakeUpDisplay(): Promise<void>
 
 唤醒当前设备即设备亮屏。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3691,7 +3970,7 @@ wakeUpDisplay(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 

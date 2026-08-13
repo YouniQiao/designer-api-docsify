@@ -2,7 +2,9 @@
 
 The module defines the configuration of [AppStartup](../../../application-models/app-startup.md).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default interface StartupConfig--><!--Device-unnamed-export default interface StartupConfig-End-->
 
@@ -24,7 +26,9 @@ AppStartup listener, which is called when all the startup tasks are complete.
 
 **Type:** [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,9 @@ Timeout for executing all startup tasks, measured in ms. The default value is 10
 
 **Default:** 10000
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

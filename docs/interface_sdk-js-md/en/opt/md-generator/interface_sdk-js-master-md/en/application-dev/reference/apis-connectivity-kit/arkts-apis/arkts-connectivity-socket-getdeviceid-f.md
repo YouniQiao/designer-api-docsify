@@ -14,7 +14,9 @@ function getDeviceId(clientSocket: number): string
 
 Obtain the device id in the client socket.
 
-**Since:** 17
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-function getDeviceId(clientSocket: int): string--><!--Device-socket-function getDeviceId(clientSocket: int): string-End-->
 
@@ -36,7 +38,7 @@ Obtain the device id in the client socket.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

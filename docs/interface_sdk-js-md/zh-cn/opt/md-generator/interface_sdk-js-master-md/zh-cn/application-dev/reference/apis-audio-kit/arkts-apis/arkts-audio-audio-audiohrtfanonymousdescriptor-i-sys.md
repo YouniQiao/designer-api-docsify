@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-audio-interface AudioHRTFAnonymousDescriptor--><!--Device-audio-interface AudioHRTFAnonymousDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
@@ -21,6 +23,8 @@ fd: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +45,8 @@ length: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

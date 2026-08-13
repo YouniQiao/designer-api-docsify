@@ -18,6 +18,8 @@ Creates a PixelMap object from surface id.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -39,9 +41,9 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
-| [62980178](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
-| [62980105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 ## Examples
 

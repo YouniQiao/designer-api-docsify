@@ -2,7 +2,9 @@
 
 转速，负值表示顺时针旋转。正值表示逆时针旋转。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface RotationSpeed--><!--Device-mechanicManager-export interface RotationSpeed-End-->
 
@@ -20,7 +22,9 @@ pitchSpeed?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationSpeed-pitchSpeed?: double--><!--Device-RotationSpeed-pitchSpeed?: double-End-->
 
@@ -38,7 +42,9 @@ rollSpeed?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationSpeed-rollSpeed?: double--><!--Device-RotationSpeed-rollSpeed?: double-End-->
 
@@ -56,7 +62,9 @@ yawSpeed?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationSpeed-yawSpeed?: double--><!--Device-RotationSpeed-yawSpeed?: double-End-->
 

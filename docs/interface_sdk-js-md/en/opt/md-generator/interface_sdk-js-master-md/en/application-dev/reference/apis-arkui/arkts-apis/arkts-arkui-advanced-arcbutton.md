@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.ArcButton(Defines the arc button component)
+# @ohos.arkui.advanced.ArcButton
 
 ## Modules to Import
 

@@ -2,7 +2,9 @@
 
 Represents information about a participant of device-cloud sharing.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sharing-interface Participant--><!--Device-sharing-interface Participant-End-->
 
@@ -22,11 +24,13 @@ import { cloudData } from '@kit.ArkData';
 attachInfo?: string
 ```
 
-Additional information, such as the verification code used for participant identity verification.The default value is an empty string.
+Additional information, such as the verification code used for participant identity verification. The default value is an empty string.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Participant-attachInfo?: string--><!--Device-Participant-attachInfo?: string-End-->
 
@@ -44,7 +48,9 @@ ID of the participant.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Participant-identity: string--><!--Device-Participant-identity: string-End-->
 
@@ -62,7 +68,9 @@ Permissions on the shared data. The Privilege defaults are used by default.
 
 **Type:** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Participant-privilege?: Privilege--><!--Device-Participant-privilege?: Privilege-End-->
 
@@ -80,7 +88,9 @@ Role of the participant, inviter or invitee. The default value is undefined.
 
 **Type:** Role
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Participant-role?: Role--><!--Device-Participant-role?: Role-End-->
 
@@ -98,7 +108,9 @@ State of the device-cloud sharing. The default value is undefined.
 
 **Type:** State
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Participant-state?: State--><!--Device-Participant-state?: State-End-->
 

@@ -4,6 +4,8 @@ Define the background style of span.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextBackgroundStyle--><!--Device-unnamed-declare interface TextBackgroundStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Text background color.
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,9 +40,11 @@ radius?: Dimension | BorderRadiuses
 
 Rounded corner radius of the text background.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Defines the data summary of the dragged object.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-dragInteraction-interface Summary--><!--Device-dragInteraction-interface Summary-End-->
 
@@ -26,11 +28,13 @@ dataSize: int
 
 Data length of the dragged object.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Summary-dataSize: int--><!--Device-Summary-dataSize: int-End-->
 
@@ -48,9 +52,11 @@ Type of the dragged object.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Summary-dataType: string--><!--Device-Summary-dataType: string-End-->
 

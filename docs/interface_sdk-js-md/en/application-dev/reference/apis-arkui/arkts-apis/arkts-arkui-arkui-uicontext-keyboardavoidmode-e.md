@@ -1,10 +1,12 @@
 # KeyboardAvoidMode
 
-Enum of KeyBoardAvoidMethodType
+Enumerates the modes in which the layout responds when the keyboard is displayed.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export const enum KeyboardAvoidMode--><!--Device-unnamed-export const enum KeyboardAvoidMode-End-->
 
@@ -16,13 +18,17 @@ Enum of KeyBoardAvoidMethodType
 OFFSET = 0
 ```
 
-Default Type, offset the whole page when keyBoard height changed.
+Offset Type, the layout moves up.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyboardAvoidMode-OFFSET = 0--><!--Device-KeyboardAvoidMode-OFFSET = 0-End-->
 
@@ -34,13 +40,17 @@ Default Type, offset the whole page when keyBoard height changed.
 RESIZE = 1
 ```
 
-Resize Type, resize the page when keyBoard height changed.
+Resize Type, the layout is resized.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyboardAvoidMode-RESIZE = 1--><!--Device-KeyboardAvoidMode-RESIZE = 1-End-->
 
@@ -52,13 +62,17 @@ Resize Type, resize the page when keyBoard height changed.
 OFFSET_WITH_CARET = 2
 ```
 
-Offset Type, offset the whole page when caret position or keyboard height changed.
+Offset Type, the layout moves up, and this adjustment also occurs if the caret position in the text box changes.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-KeyboardAvoidMode-OFFSET_WITH_CARET = 2--><!--Device-KeyboardAvoidMode-OFFSET_WITH_CARET = 2-End-->
 
@@ -70,13 +84,17 @@ Offset Type, offset the whole page when caret position or keyboard height change
 RESIZE_WITH_CARET = 3
 ```
 
-Resize Type, resize the whole page when when caret position or keyboard height changed.
+Resize Type, the layout moves up, and this adjustment also occurs if the caret position in the text box changes.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-KeyboardAvoidMode-RESIZE_WITH_CARET = 3--><!--Device-KeyboardAvoidMode-RESIZE_WITH_CARET = 3-End-->
 
@@ -88,13 +106,17 @@ Resize Type, resize the whole page when when caret position or keyboard height c
 NONE = 4
 ```
 
-None Type, nothing to do when keyboard height changed.
+None Type, the layout is not adjusted to avoid the keyboard.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-KeyboardAvoidMode-NONE = 4--><!--Device-KeyboardAvoidMode-NONE = 4-End-->
 

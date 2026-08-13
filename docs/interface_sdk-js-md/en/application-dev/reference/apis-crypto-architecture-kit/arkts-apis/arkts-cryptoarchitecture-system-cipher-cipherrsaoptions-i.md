@@ -8,7 +8,7 @@ Defines the input parameters of **cipher.rsa()**.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-unnamed-export interface CipherRsaOptions--><!--Device-unnamed-export interface CipherRsaOptions-End-->
 
@@ -20,6 +20,28 @@ Defines the input parameters of **cipher.rsa()**.
 import { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
+## action
+
+```TypeScript
+action: string
+```
+
+Action to perform. The options are as follows: 1. **encrypt**: Encrypts data. 2. **decrypt**: Decrypts data.
+
+**Type:** string
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 11
+
+**Substitutes:** Cipher
+
+<!--Device-CipherRsaOptions-action: string--><!--Device-CipherRsaOptions-action: string-End-->
+
+**System capability:** SystemCapability.Security.Cipher
+
 ## complete
 
 ```TypeScript
@@ -28,13 +50,15 @@ complete: () => void
 
 Called when the execution is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherRsaOptions-complete: () => void--><!--Device-CipherRsaOptions-complete: () => void-End-->
 
@@ -48,72 +72,17 @@ fail: (data: string, code: number) => void
 
 Called when data fails to be encrypted or decrypted.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherRsaOptions-fail: (data: string, code: number) => void--><!--Device-CipherRsaOptions-fail: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.Security.Cipher
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
-## success
-
-```TypeScript
-success: (data: CipherResponse) => void
-```
-
-Called when data is encrypted or decrypted successfully.
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 11
-
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
-
-<!--Device-CipherRsaOptions-success: (data: CipherResponse) => void--><!--Device-CipherRsaOptions-success: (data: CipherResponse) => void-End-->
-
-**System capability:** SystemCapability.Security.Cipher
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Yes |  |
-
-## action
-
-```TypeScript
-action: string
-```
-
-Action to perform. The options are as follows:
-
-1. **encrypt**: Encrypts data.2. **decrypt**: Decrypts data.
-
-**Type:** string
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 11
-
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
-
-<!--Device-CipherRsaOptions-action: string--><!--Device-CipherRsaOptions-action: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -133,9 +102,31 @@ RSA key. It is a public key in encryption and a private key in decryption.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherRsaOptions-key: string--><!--Device-CipherRsaOptions-key: string-End-->
+
+**System capability:** SystemCapability.Security.Cipher
+
+## success
+
+```TypeScript
+success: (data: CipherResponse) => void
+```
+
+Called when data is encrypted or decrypted successfully.
+
+**Type:** (data: CipherResponse) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 11
+
+**Substitutes:** Cipher
+
+<!--Device-CipherRsaOptions-success: (data: CipherResponse) => void--><!--Device-CipherRsaOptions-success: (data: CipherResponse) => void-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -145,9 +136,7 @@ RSA key. It is a public key in encryption and a private key in decryption.
 text: string
 ```
 
-Text to be encrypted or decrypted.
-
-The text to be encrypted must be a common text and cannot exceed the length calculated based on the formula (keySize/8 - 66). **keySize** indicates the key length. For example, if the key length is 1024 bytes, the text cannot exceed 62 bytes (1024/8 - 66 = 62). The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
+Text to be encrypted or decrypted. The text to be encrypted must be a common text and cannot exceed the length calculated based on the formula ( keySize/8 - 66). **keySize** indicates the key length. For example, if the key length is 1024 bytes, the text cannot exceed 62 bytes (1024/8 - 66 = 62). The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
 
 **Type:** string
 
@@ -157,7 +146,7 @@ The text to be encrypted must be a common text and cannot exceed the length calc
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherRsaOptions-text: string--><!--Device-CipherRsaOptions-text: string-End-->
 
@@ -179,7 +168,7 @@ RSA padding. The default value is **RSA/None/OAEPWithSHA256AndMGF1Padding**.
 
 **Deprecated since:** 11
 
-**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
+**Substitutes:** Cipher
 
 <!--Device-CipherRsaOptions-transformation?: string--><!--Device-CipherRsaOptions-transformation?: string-End-->
 

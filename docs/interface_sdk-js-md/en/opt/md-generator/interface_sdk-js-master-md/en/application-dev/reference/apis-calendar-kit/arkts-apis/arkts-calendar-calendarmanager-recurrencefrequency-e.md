@@ -4,6 +4,8 @@ Enumerates the types of the event recurrence rule.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export enum RecurrenceFrequency--><!--Device-calendarManager-export enum RecurrenceFrequency-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -17,6 +19,8 @@ YEARLY = 0
 Yearly.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Monthly.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RecurrenceFrequency-MONTHLY = 1--><!--Device-RecurrenceFrequency-MONTHLY = 1-End-->
@@ -50,6 +56,8 @@ Weekly.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RecurrenceFrequency-WEEKLY = 2--><!--Device-RecurrenceFrequency-WEEKLY = 2-End-->
@@ -65,6 +73,8 @@ DAILY = 3
 Daily.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

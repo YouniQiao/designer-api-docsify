@@ -1,10 +1,12 @@
 # TagInfo
 
-Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
+Provides tag information. &lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
 
@@ -32,7 +34,7 @@ The supported technology list of this tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** [technology](ohos.nfc.tag/tag.TagInfo#technology)
+**Substitutes:** [technology](#technology)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -48,15 +50,17 @@ technology: int[]
 
 The supported technology list of this tag.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** int[]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagInfo-technology: int[]--><!--Device-TagInfo-technology: int[]-End-->
 
@@ -70,15 +74,17 @@ uid: int[]
 
 The uid of this tag, it.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** int[]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagInfo-uid: int[]--><!--Device-TagInfo-uid: int[]-End-->
 

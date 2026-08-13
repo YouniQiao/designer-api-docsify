@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-notificationManager-export enum PriorityStrategyStatus--><!--Device-notificationManager-export enum PriorityStrategyStatus-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -19,6 +21,8 @@ STATUS_SYSTEM_DEFAULT = 1 << 0
 默认优先策略。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ STATUS_SYSTEM_RULE = 1 << 1
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PriorityStrategyStatus-STATUS_SYSTEM_RULE = 1 << 1--><!--Device-PriorityStrategyStatus-STATUS_SYSTEM_RULE = 1 << 1-End-->
@@ -55,6 +61,8 @@ STATUS_INTELLIGENT = 1 << 2
 仅智能识别。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ STATUS_USER_DEFINED = 1 << 3
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PriorityStrategyStatus-STATUS_USER_DEFINED = 1 << 3--><!--Device-PriorityStrategyStatus-STATUS_USER_DEFINED = 1 << 3-End-->
@@ -92,6 +102,8 @@ STATUS_APPLICATION_DEFINED = 1 << 4
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PriorityStrategyStatus-STATUS_APPLICATION_DEFINED = 1 << 4--><!--Device-PriorityStrategyStatus-STATUS_APPLICATION_DEFINED = 1 << 4-End-->
@@ -109,6 +121,8 @@ STATUS_ALL_PRIORITY = 1 << 5
 全部通知优先。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

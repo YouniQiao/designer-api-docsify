@@ -30,7 +30,7 @@ File name in the header when **multipart** is used.
 
 **Deprecated since:** 9
 
-**Substitutes:** [filename](ohos.request.agent.FileSpec.filename)
+**Substitutes:** filename
 
 <!--Device-RequestFile-filename?: string--><!--Device-RequestFile-filename?: string-End-->
 
@@ -50,7 +50,7 @@ Name of a form item when **multipart** is used. The default value is **file**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [name](ohos.request.agent.FormItem.name)
+**Substitutes:** name
 
 <!--Device-RequestFile-name?: string--><!--Device-RequestFile-name?: string-End-->
 
@@ -70,7 +70,7 @@ Type of the file content. By default, the type is obtained based on the extensio
 
 **Deprecated since:** 9
 
-**Substitutes:** [contentType](ohos.request.agent.FileSpec.contentType)
+**Substitutes:** contentType
 
 <!--Device-RequestFile-type?: string--><!--Device-RequestFile-type?: string-End-->
 
@@ -90,7 +90,7 @@ Local path for storing files.
 
 **Deprecated since:** 9
 
-**Substitutes:** [path](ohos.request.agent.FileSpec.path)
+**Substitutes:** path
 
 <!--Device-RequestFile-uri: string--><!--Device-RequestFile-uri: string-End-->
 

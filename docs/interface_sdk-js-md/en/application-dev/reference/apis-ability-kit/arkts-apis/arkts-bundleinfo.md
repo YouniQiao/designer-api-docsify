@@ -1,11 +1,5 @@
 # BundleInfo
 
-The module defines the bundle information. An application can obtain its own bundle information through
- [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)
- , with [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag) set to the information to be
- contained in the returned [BundleInfo](arkts-ability-bundleinfo-i.md#BundleInfo).
-
-
 ## Summary
 
 ### Interfaces
@@ -15,9 +9,9 @@ The module defines the bundle information. An application can obtain its own bun
 | [AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md) | Describes the app backup icon information. |
 | [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md) | Describes the identity information of an application clone. |
 | [BundleInfo](arkts-ability-bundleinfo-i.md) | The module defines the bundle information. |
-| [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md) | Provides the detailed information of the permissions to request from the system.  > **NOTE：** >  > - If multiple packages of an application have requested the same permission but with different reasons, the system > returns only one reason based on a descending priority order: entry HAP > feature HAP > in-app HSP. |
-| [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md) | Describes the signature information of the app package,which can identifythe app source, ensure app integrity,and be used for app security verification and identification. |
-| [UsedScene](arkts-ability-bundleinfo-usedscene-i.md) | Describes the use scenario and timing of the permission,helping developers request and use permissions properly. |
+| [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md) | Provides the detailed information of the permissions to request from the system. > **NOTE：**> > - If multiple packages of an application have requested the same permission but with different reasons, the system > returns only one reason based on a descending priority order: entry HAP > feature HAP > in-app HSP. |
+| [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md) | Describes the signature information of the app package,which can identifythe app source, ensure app integrity, and be used for app security verification and identification. |
+| [UsedScene](arkts-ability-bundleinfo-usedscene-i.md) | Describes the use scenario and timing of the permission, helping developers request and use permissions properly. |
 
 <!--Del-->
 ### Interfaces（系统接口）

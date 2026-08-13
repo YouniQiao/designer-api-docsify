@@ -8,7 +8,9 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个增益图（gainmap），返回的Picture对象将包含SDR PixelMap和生成的gainmap PixelMap，像素格式为RGBA8888。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>-End-->
 
@@ -20,8 +22,8 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
-| sdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| hdrPixelMap | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
+| sdrPixelMap | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
 
 **返回值：**
 
@@ -33,7 +35,7 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 | 错误码ID |
 | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 ## 示例
 
@@ -85,6 +87,8 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>-End-->
@@ -97,8 +101,8 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
-| sdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| hdrPixelMap | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
+| sdrPixelMap | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
 | params | [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | 是 |
 
 **返回值：**
@@ -111,8 +115,8 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 ## 示例
 

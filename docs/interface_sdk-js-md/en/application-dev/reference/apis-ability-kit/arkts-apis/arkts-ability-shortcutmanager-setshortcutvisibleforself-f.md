@@ -14,9 +14,11 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>-End-->
 
@@ -39,7 +41,7 @@ Sets whether to display the specified shortcut for the current application. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
+| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
 
 ## Examples
 

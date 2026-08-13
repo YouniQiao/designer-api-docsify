@@ -2,7 +2,9 @@
 
 Connect type for device.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum ConnectType--><!--Device-audio-enum ConnectType-End-->
 
@@ -18,7 +20,9 @@ CONNECT_TYPE_LOCAL = 1
 
 Connect type for local device.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectType-CONNECT_TYPE_LOCAL = 1--><!--Device-ConnectType-CONNECT_TYPE_LOCAL = 1-End-->
 
@@ -34,7 +38,9 @@ CONNECT_TYPE_DISTRIBUTED = 2
 
 Connect type for distributed device.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConnectType-CONNECT_TYPE_DISTRIBUTED = 2--><!--Device-ConnectType-CONNECT_TYPE_DISTRIBUTED = 2-End-->
 

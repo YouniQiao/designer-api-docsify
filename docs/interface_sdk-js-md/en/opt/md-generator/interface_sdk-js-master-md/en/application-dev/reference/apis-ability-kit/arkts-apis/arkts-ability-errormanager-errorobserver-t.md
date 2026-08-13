@@ -8,6 +8,8 @@ Defines the ErrorObserver module.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-errorManager-export type ErrorObserver = _ErrorObserver.default--><!--Device-errorManager-export type ErrorObserver = _ErrorObserver.default-End-->

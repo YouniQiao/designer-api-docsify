@@ -4,6 +4,8 @@ RGB white balance gain values.
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-camera-interface WhiteBalanceGains--><!--Device-camera-interface WhiteBalanceGains-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -21,6 +23,8 @@ The blue gain component of the white balance value.
 **类型：** number
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ The green gain component of the white balance value.
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WhiteBalanceGains-greenGain: double--><!--Device-WhiteBalanceGains-greenGain: double-End-->
@@ -61,6 +67,8 @@ The red gain component of the white balance value.
 **类型：** number
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

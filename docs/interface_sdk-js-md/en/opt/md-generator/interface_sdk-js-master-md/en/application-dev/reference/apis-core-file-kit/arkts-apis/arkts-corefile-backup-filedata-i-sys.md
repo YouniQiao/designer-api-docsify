@@ -2,7 +2,9 @@
 
 Corresponding to a file's data. Filedata is useful when doing IPC with the backup service.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-interface FileData--><!--Device-backup-interface FileData-End-->
 
@@ -26,7 +28,9 @@ Indicates a native file descriptor typically retrieved from the backup service t
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileData-fd: int--><!--Device-FileData-fd: int-End-->
 

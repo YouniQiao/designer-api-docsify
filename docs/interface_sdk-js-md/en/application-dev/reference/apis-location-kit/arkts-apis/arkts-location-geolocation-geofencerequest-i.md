@@ -8,7 +8,7 @@ Configuring parameters in geo fence requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [GeofenceRequest](ohos.geoLocationManager/geoLocationManager.GeofenceRequest)
+**Substitutes:** [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md#GeofenceRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -36,7 +36,7 @@ geofence: Geofence
 
 **Deprecated since:** 9
 
-**Substitutes:** [geofence](ohos.geoLocationManager/geoLocationManager.GeofenceRequest#geofence)
+**Substitutes:** [geofence](arkts-location-geolocationmanager-geofencerequest-i.md#geofence)
 
 <!--Device-GeofenceRequest-geofence: Geofence--><!--Device-GeofenceRequest-geofence: Geofence-End-->
 
@@ -56,7 +56,7 @@ priority: LocationRequestPriority
 
 **Deprecated since:** 9
 
-**Substitutes:** [priority](ohos.geoLocationManager/geoLocationManager.GeofenceRequest#priority)
+**Substitutes:** priority
 
 <!--Device-GeofenceRequest-priority: LocationRequestPriority--><!--Device-GeofenceRequest-priority: LocationRequestPriority-End-->
 
@@ -76,7 +76,7 @@ scenario: LocationRequestScenario
 
 **Deprecated since:** 9
 
-**Substitutes:** [scenario](ohos.geoLocationManager/geoLocationManager.GeofenceRequest#scenario)
+**Substitutes:** [scenario](arkts-location-geolocationmanager-geofencerequest-i.md#scenario)
 
 <!--Device-GeofenceRequest-scenario: LocationRequestScenario--><!--Device-GeofenceRequest-scenario: LocationRequestScenario-End-->
 

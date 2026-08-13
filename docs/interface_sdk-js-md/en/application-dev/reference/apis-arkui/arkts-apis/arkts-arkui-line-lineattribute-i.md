@@ -2,33 +2,31 @@
 
 Provides attribute for Line.
 
-**Inheritance/Implementation:** LineAttribute extends [CommonShapeMethod](CommonShapeMethod)
+**Inheritance/Implementation:** LineAttribute extends CommonShapeMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface LineAttribute extends CommonShapeMethod--><!--Device-unnamed-export declare interface LineAttribute extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface LineAttribute--><!--Device-unnamed-export declare interface LineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LineAttribute-default attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LineAttribute-default attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-LineAttribute-attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LineAttribute-attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -45,20 +43,16 @@ Call attributeModifier.
 ## endPoint
 
 ```TypeScript
-default endPoint(value: ShapePoint | undefined): this
+endPoint(value: ShapePoint | undefined): this
 ```
 
-Line end coordinates (relative coordinates).
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LineAttribute-default endPoint(value: ShapePoint | undefined): this--><!--Device-LineAttribute-default endPoint(value: ShapePoint | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-LineAttribute-endPoint(value: ShapePoint | undefined): this--><!--Device-LineAttribute-endPoint(value: ShapePoint | undefined): this-End-->
 
 **Parameters:**
 
@@ -75,50 +69,42 @@ Line end coordinates (relative coordinates).
 ## setLineOptions
 
 ```TypeScript
-default setLineOptions(options?: LineOptions): this
+setLineOptions(options?: LineOptions): this
 ```
 
-Set Line options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LineAttribute-default setLineOptions(options?: LineOptions): this--><!--Device-LineAttribute-default setLineOptions(options?: LineOptions): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-LineAttribute-setLineOptions(options?: LineOptions): this--><!--Device-LineAttribute-setLineOptions(options?: LineOptions): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-line-lineoptions-i.md) | No | Line constructor options. |
+| options | [LineOptions](arkts-arkui-line-lineoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the LineAttribute. |
+| this |  |
 
 ## startPoint
 
 ```TypeScript
-default startPoint(value: ShapePoint | undefined): this
+startPoint(value: ShapePoint | undefined): this
 ```
 
-Coordinate of the start point of the line (relative coordinate).
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LineAttribute-default startPoint(value: ShapePoint | undefined): this--><!--Device-LineAttribute-default startPoint(value: ShapePoint | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-LineAttribute-startPoint(value: ShapePoint | undefined): this--><!--Device-LineAttribute-startPoint(value: ShapePoint | undefined): this-End-->
 
 **Parameters:**
 
@@ -131,4 +117,24 @@ Coordinate of the start point of the line (relative coordinate).
 | Type | Description |
 | --- | --- |
 | this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LineAttribute-default--><!--Device-LineAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

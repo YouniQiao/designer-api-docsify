@@ -4,6 +4,8 @@ Describes part of the **wantAgent** information in NotificationRequest.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface NotificationParameters--><!--Device-unnamed-export interface NotificationParameters-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -14,12 +16,13 @@ Describes part of the **wantAgent** information in NotificationRequest.
 wantAction?:string
 ```
 
-**action** field passed in **want** when **wantAgent** is created. For details, see   
-[action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
+**action** field passed in **want** when **wantAgent** is created. For details, see [action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
 
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,19 +33,20 @@ wantAction?:string
 ## wantParameters
 
 ```TypeScript
-wantParameters?:Record<string, Object>
+wantParameters?:Record<string, RecordData>
 ```
 
-**parameters** field passed in **want** when **wantAgent** is created. For details, see   
-[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
+**parameters** field passed in **want** when **wantAgent** is created. For details, see [parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NotificationParameters-wantParameters?:Record<string, Object>--><!--Device-NotificationParameters-wantParameters?:Record<string, Object>-End-->
+<!--Device-NotificationParameters-wantParameters?:Record<string, RecordData>--><!--Device-NotificationParameters-wantParameters?:Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -52,12 +56,13 @@ wantParameters?:Record<string, Object>
 wantUri?:string
 ```
 
-**uri** field passed in **want** when **wantAgent** is created. For details, see   
-[uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
+**uri** field passed in **want** when **wantAgent** is created. For details, see [uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
 
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

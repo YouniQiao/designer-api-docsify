@@ -1,4 +1,4 @@
-# @ohos.application.DistributedExtensionContext(Distributed Extension Context)
+# @ohos.application.DistributedExtensionContext
 
 ## 汇总
 

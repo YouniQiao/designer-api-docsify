@@ -6,9 +6,11 @@
 function createData(mimeType: string, value: ValueType): PasteData
 ```
 
-构建一个指定类型的剪贴板内容对象，根据传入的MIME类型和数据内容创建PasteData实例。调用此方法后，系统将验证MIME类型有效性，封装数据内容，并返回可用于后续剪贴板操作的PasteData对象。参数mimeType长度不能超过1024字节，value类型需与mimeType匹配。当需要将单一类型的数据（如纯文本、HTML、图片等）放入剪贴板时使用此方法。mimeType优先使用已定义的常量类型（如MIMETYPE_TEXT_PLAIN），若需要传递自定义格式数据，可使用自定义MIME类型。
+构建一个指定类型的剪贴板内容对象，根据传入的MIME类型和数据内容创建PasteData实例。 调用此方法后，系统将验证MIME类型有效性，封装数据内容，并返回可用于后续剪贴板操作的PasteData对象。 参数mimeType长度不能超过1024字节，value类型需与mimeType匹配。当需要将单一类型的数据（如纯文本、HTML、图片等）放入剪贴板时使用此方法。 mimeType优先使用已定义的常量类型（如MIMETYPE_TEXT_PLAIN），若需要传递自定义格式数据，可使用自定义MIME类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,7 +35,7 @@ function createData(mimeType: string, value: ValueType): PasteData
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 
 ## createData
@@ -42,9 +44,11 @@ function createData(mimeType: string, value: ValueType): PasteData
 function createData(data: Record<string, ValueType>): PasteData
 ```
 
-构建一个包含多个类型数据的剪贴板内容对象，支持一次创建多个MIME类型的数据条目。调用此方法后，系统将解析Record中的多个key-value对，创建多个PasteDataRecord条目，首个MIME类型作为默认类型。非默认类型数据需通过[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getData)接口读取。应用需要将多种不同类型的数据(如文本、URI、HTML等)同时复制到剪贴板时，可使用此接口一次性构建包含多个MIME类型数据的剪贴板内容对象。
+构建一个包含多个类型数据的剪贴板内容对象，支持一次创建多个MIME类型的数据条目。 调用此方法后，系统将解析Record中的多个key-value对，创建多个PasteDataRecord条目，首个MIME类型作为默认类型。 非默认类型数据需通过[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getData)接口读取。 应用需要将多种不同类型的数据(如文本、URI、HTML等)同时复制到剪贴板时，可使用此接口一次性构建包含多个MIME类型数据的剪贴板内容对象。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-pasteboard-function createData(data: Record<string, ValueType>): PasteData--><!--Device-pasteboard-function createData(data: Record<string, ValueType>): PasteData-End-->
 
@@ -66,4 +70,4 @@ function createData(data: Record<string, ValueType>): PasteData
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

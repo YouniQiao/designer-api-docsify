@@ -14,7 +14,9 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 
 Obtain information about the current p2p group.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -32,9 +34,9 @@ Obtain information about the current p2p group.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2801000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2801000-p2p-module-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 
 ## getCurrentGroup
@@ -45,7 +47,9 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 
 Obtain information about the current p2p group.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -63,9 +67,9 @@ Obtain information about the current p2p group.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2801000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2801000-p2p-module-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

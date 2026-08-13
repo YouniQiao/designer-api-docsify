@@ -4,6 +4,8 @@ Type of focus draw level.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FocusDrawLevel--><!--Device-unnamed-declare enum FocusDrawLevel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SELF = 0
 Draw focus on node self level.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ TOP = 1
 Draw focus on top level.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

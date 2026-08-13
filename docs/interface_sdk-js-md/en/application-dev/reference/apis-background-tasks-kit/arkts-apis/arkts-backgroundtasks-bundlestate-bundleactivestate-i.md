@@ -102,7 +102,7 @@ The class name.
 stateOccurredTime?: number
 ```
 
-The time when this state occurred, in milliseconds.&lt;br&gt; Unit:ms
+The time when this state occurred, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 

@@ -16,6 +16,8 @@ Disconnects the connection of a specified web native message extension.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 
 **Model restriction:** This API can be used only in the stage model.
@@ -40,10 +42,10 @@ Disconnects the connection of a specified web native message extension.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 

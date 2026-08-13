@@ -1,8 +1,10 @@
 # WebResourceRequest
 
-Encompassed message information as parameters to [onConsole](onConsole) method.
+Encompassed message information as parameters to onConsole method.
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class WebResourceRequest--><!--Device-unnamed-declare class WebResourceRequest-End-->
 
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ getRequestHeader(): Array<Header>
 获取资源请求头信息。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,6 +62,8 @@ getRequestMethod(): string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceRequest-getRequestMethod(): string--><!--Device-WebResourceRequest-getRequestMethod(): string-End-->
@@ -77,6 +85,8 @@ getRequestUrl(): string
 获取资源请求的URL信息。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -100,6 +110,8 @@ isMainFrame(): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceRequest-isMainFrame(): boolean--><!--Device-WebResourceRequest-isMainFrame(): boolean-End-->
@@ -122,6 +134,8 @@ isRedirect(): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceRequest-isRedirect(): boolean--><!--Device-WebResourceRequest-isRedirect(): boolean-End-->
@@ -143,6 +157,8 @@ isRequestGesture(): boolean
 获取资源请求是否与手势（如点击）相关联。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

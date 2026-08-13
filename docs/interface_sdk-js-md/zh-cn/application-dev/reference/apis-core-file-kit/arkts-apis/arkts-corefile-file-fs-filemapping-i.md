@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,6 +23,8 @@ capacity(): number
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,6 +69,8 @@ flip(): void
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -111,6 +117,8 @@ getLimit(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-getLimit(): number--><!--Device-FileMapping-getLimit(): number-End-->
@@ -155,6 +163,8 @@ getPosition(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
@@ -193,11 +203,13 @@ fileIo.closeSync(file);
 msync(): Promise<void>
 ```
 
-将整个文件映射区的脏页数据同步到磁盘文件，使用promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将整个文件映射区的脏页数据同步到磁盘文件，使用promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -275,11 +287,13 @@ mapping.msync().then(() => {
 msync(position: number, length: number): Promise<void>
 ```
 
-将文件映射区指定范围内的脏页数据同步到磁盘文件，使用promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将文件映射区指定范围内的脏页数据同步到磁盘文件，使用promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -364,11 +378,13 @@ mapping.msync(50, buffer.byteLength).then(() => {
 msyncSync(): void
 ```
 
-以同步方法将整个文件映射区的脏页数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将整个文件映射区的脏页数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -412,11 +428,13 @@ fileIo.closeSync(file);
 msyncSync(position: number, length: number): void
 ```
 
-以同步方法将文件映射区指定范围内的脏页数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将文件映射区指定范围内的脏页数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -473,6 +491,8 @@ read(buffer: ArrayBuffer, length?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number-End-->
@@ -528,6 +548,8 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -586,6 +608,8 @@ remaining(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
@@ -633,6 +657,8 @@ setLimit(limit: number): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-setLimit(limit: number): void--><!--Device-FileMapping-setLimit(limit: number): void-End-->
@@ -677,6 +703,8 @@ setPosition(position: number): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
@@ -720,6 +748,8 @@ unmap(): Promise<void>
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -795,6 +825,8 @@ unmapSync(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
@@ -833,6 +865,8 @@ write(data: ArrayBuffer, length?: number): number
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -891,6 +925,8 @@ write(position: number, data: ArrayBuffer, length?: number): number
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

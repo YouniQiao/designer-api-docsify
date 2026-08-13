@@ -4,27 +4,9 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class SubHeaderV2OperationItem--><!--Device-unnamed-export declare class SubHeaderV2OperationItem-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## action
-
-```TypeScript
-action?: SubHeaderV2OperationItemAction
-```
-
-callback function when operate the text or icon.
-
-**起始版本：** 18
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-action?: SubHeaderV2OperationItemAction--><!--Device-SubHeaderV2OperationItem-action?: SubHeaderV2OperationItemAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,6 +19,8 @@ constructor(options: SubHeaderV2OperationItemOptions)
 操作项SubHeaderV2OperationItem的构造函数。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,7 +39,8 @@ constructor(options: SubHeaderV2OperationItemOptions)
 ## accessibilityDescription
 
 ```TypeScript
-accessibilityDescription?: ResourceStr
+@Trace
+  accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of this text or icon.
@@ -64,18 +49,21 @@ The accessibilityDescription of this text or icon.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2OperationItem-accessibilityDescription?: ResourceStr--><!--Device-SubHeaderV2OperationItem-accessibilityDescription?: ResourceStr-End-->
+<!--Device-SubHeaderV2OperationItem-@Trace  accessibilityDescription?: ResourceStr--><!--Device-SubHeaderV2OperationItem-@Trace  accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-accessibilityLevel?: string
+@Trace
+  accessibilityLevel?: string
 ```
 
 The accessibilityLevel of this text or icon.
@@ -86,18 +74,21 @@ The accessibilityLevel of this text or icon.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2OperationItem-accessibilityLevel?: string--><!--Device-SubHeaderV2OperationItem-accessibilityLevel?: string-End-->
+<!--Device-SubHeaderV2OperationItem-@Trace  accessibilityLevel?: string--><!--Device-SubHeaderV2OperationItem-@Trace  accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-accessibilityText?: ResourceStr
+@Trace
+  accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of this text or icon.
@@ -106,18 +97,44 @@ The accessibilityText of this text or icon.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2OperationItem-accessibilityText?: ResourceStr--><!--Device-SubHeaderV2OperationItem-accessibilityText?: ResourceStr-End-->
+<!--Device-SubHeaderV2OperationItem-@Trace  accessibilityText?: ResourceStr--><!--Device-SubHeaderV2OperationItem-@Trace  accessibilityText?: ResourceStr-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+@Trace
+  action?: SubHeaderV2OperationItemAction
+```
+
+callback function when operate the text or icon.
+
+**类型：** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SubHeaderV2OperationItem-@Trace  action?: SubHeaderV2OperationItemAction--><!--Device-SubHeaderV2OperationItem-@Trace  action?: SubHeaderV2OperationItemAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-content: SubHeaderV2OperationItemType
+@Trace
+  content: SubHeaderV2OperationItemType
 ```
 
 The content of text or the address of icon.
@@ -126,18 +143,21 @@ The content of text or the address of icon.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2OperationItem-content: SubHeaderV2OperationItemType--><!--Device-SubHeaderV2OperationItem-content: SubHeaderV2OperationItemType-End-->
+<!--Device-SubHeaderV2OperationItem-@Trace  content: SubHeaderV2OperationItemType--><!--Device-SubHeaderV2OperationItem-@Trace  content: SubHeaderV2OperationItemType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultFocus
 
 ```TypeScript
-defaultFocus?: boolean
+@Trace
+  defaultFocus?: boolean
 ```
 
 Sets the default focus state of the text or icon.
@@ -148,32 +168,35 @@ Sets the default focus state of the text or icon.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2OperationItem-defaultFocus?: boolean--><!--Device-SubHeaderV2OperationItem-defaultFocus?: boolean-End-->
+<!--Device-SubHeaderV2OperationItem-@Trace  defaultFocus?: boolean--><!--Device-SubHeaderV2OperationItem-@Trace  defaultFocus?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
 
 ```TypeScript
-id?: string
+@Trace
+  id?: string
 ```
 
-子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置子标题右侧操作项id。
+子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。 默认值：undefined，表示不设置子标题右侧操作项id。
 
 **类型：** string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2OperationItem-id?: string--><!--Device-SubHeaderV2OperationItem-id?: string-End-->
+<!--Device-SubHeaderV2OperationItem-@Trace  id?: string--><!--Device-SubHeaderV2OperationItem-@Trace  id?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

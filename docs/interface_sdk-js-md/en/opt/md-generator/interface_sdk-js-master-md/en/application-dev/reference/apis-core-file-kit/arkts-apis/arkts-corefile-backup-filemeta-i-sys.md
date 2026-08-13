@@ -2,7 +2,9 @@
 
 Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-interface FileMeta--><!--Device-backup-interface FileMeta-End-->
 
@@ -26,7 +28,9 @@ Indicates the name of a bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileMeta-bundleName: string--><!--Device-FileMeta-bundleName: string-End-->
 
@@ -44,7 +48,9 @@ Indicates a uri to a file.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileMeta-uri: string--><!--Device-FileMeta-uri: string-End-->
 
@@ -63,6 +69,8 @@ Indicates uris to files.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 订阅或发送的事件，订阅事件时`EventPriority`不生效。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-emitter-export interface InnerEvent--><!--Device-emitter-export interface InnerEvent-End-->
 
@@ -18,7 +20,9 @@ eventId: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ priority?: EventPriority
 
 **类型：** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

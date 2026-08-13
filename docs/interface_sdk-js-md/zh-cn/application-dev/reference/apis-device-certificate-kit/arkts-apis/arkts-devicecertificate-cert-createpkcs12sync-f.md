@@ -8,11 +8,13 @@ function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8
 
 表示创建P12，同步返回结果。
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array--><!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array-End-->
 
@@ -35,10 +37,10 @@ function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. 密码过短或过长； &lt;br&gt;2. 私钥与证书不匹配； &lt;br&gt;3. 加密算法参数无效。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. 密码过短或过长； &lt;br&gt;2. 私钥与证书不匹配； &lt;br&gt;3. 加密算法参数无效。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 

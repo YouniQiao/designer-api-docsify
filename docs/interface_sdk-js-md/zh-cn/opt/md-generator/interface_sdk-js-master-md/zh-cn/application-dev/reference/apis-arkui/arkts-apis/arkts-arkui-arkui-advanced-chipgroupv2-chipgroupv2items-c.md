@@ -2,13 +2,13 @@
 
 ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md#ChipGroupV2Item)&gt;。
 
-**继承/实现关系：** ChipGroupV2Items extends [Array<ChipGroupV2Item>](Array<ChipGroupV2Item>)
+**继承/实现关系：** ChipGroupV2Items extends Array<ChipGroupV2Item>
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
-<!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>--><!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>-End-->
+<!--Device-unnamed-export declare class ChipGroupV2Items--><!--Device-unnamed-export declare class ChipGroupV2Items-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +21,8 @@ constructor(items: ChipGroupV2ItemConfig[])
 ChipGroupV2Items的构造函数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Deferred video enhancement info.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface DeferredVideoEnhancementInfo--><!--Device-camera-interface DeferredVideoEnhancementInfo-End-->
 
@@ -26,7 +28,9 @@ Check whether deferred video enhancement available.
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean--><!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean-End-->
 
@@ -44,7 +48,9 @@ Video identifier.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string--><!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string-End-->
 

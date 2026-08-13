@@ -8,7 +8,9 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 通过传入的PixelMap创建ColorPicker实例，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +36,7 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -75,7 +77,9 @@ function createColorPicker(source: image.PixelMap, region: Array<number>): Promi
 
 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -102,7 +106,7 @@ function createColorPicker(source: image.PixelMap, region: Array<number>): Promi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -143,7 +147,9 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 通过传入的PixelMap创建ColorPicker实例，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -164,7 +170,7 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -205,7 +211,9 @@ function createColorPicker(source: image.PixelMap, region: Array<number>, callba
 
 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -227,7 +235,7 @@ function createColorPicker(source: image.PixelMap, region: Array<number>, callba
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

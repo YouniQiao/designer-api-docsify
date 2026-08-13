@@ -1,8 +1,10 @@
 # ContainerReaderInfo
 
-Defines the configuration options for ContainerReader component.Used to specify the parameters for container dimension reading and breakpoint analysis.
+Defines the configuration options for ContainerReader component. Used to specify the parameters for container dimension reading and breakpoint analysis.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ContainerReaderInfo--><!--Device-unnamed-export interface ContainerReaderInfo-End-->
 
@@ -20,11 +22,13 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 heightBreakpoint?: HeightBreakpoint
 ```
 
-Optional height breakpoint configuration for container height analysis.Defines the height thresholds that trigger different layout behaviors.
+Optional height breakpoint configuration for container height analysis. Defines the height thresholds that trigger different layout behaviors.
 
 **Type:** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ Optional height breakpoint configuration for container height analysis.Defines t
 size: Size
 ```
 
-The target container size for layout analysis.Defines the reference dimensions used for breakpoint calculation and layout adaptation.
+The target container size for layout analysis. Defines the reference dimensions used for breakpoint calculation and layout adaptation.
 
 **Type:** [Size](arkts-arkui-graphics-size-i.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,11 +70,13 @@ The target container size for layout analysis.Defines the reference dimensions u
 widthBreakpoint?: WidthBreakpoint
 ```
 
-Optional width breakpoint configuration for container width analysis.Defines the width thresholds that trigger different layout behaviors.
+Optional width breakpoint configuration for container width analysis. Defines the width thresholds that trigger different layout behaviors.
 
 **Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

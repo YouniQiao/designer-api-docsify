@@ -4,6 +4,8 @@ Defines the enum of the resolution following strategy for **SecurityUIExtensionC
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SecurityDpiFollowStrategy--><!--Device-unnamed-declare enum SecurityDpiFollowStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ FOLLOW_HOST_DPI = 0
 The resolution follows the host application.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 The resolution follows the **UIExtensionAbility**.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

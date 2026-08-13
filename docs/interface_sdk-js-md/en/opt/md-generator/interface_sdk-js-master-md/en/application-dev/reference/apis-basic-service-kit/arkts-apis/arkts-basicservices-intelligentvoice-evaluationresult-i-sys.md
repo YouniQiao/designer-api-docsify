@@ -2,7 +2,9 @@
 
 Describes evaluation result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface EvaluationResult--><!--Device-intelligentVoice-interface EvaluationResult-End-->
 
@@ -26,7 +28,9 @@ Describes evaluation result code.
 
 **Type:** [EvaluationResultCode](arkts-basicservices-intelligentvoice-evaluationresultcode-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResult-resultCode: EvaluationResultCode--><!--Device-EvaluationResult-resultCode: EvaluationResultCode-End-->
 
@@ -44,7 +48,9 @@ Evaluation score.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResult-score: int--><!--Device-EvaluationResult-score: int-End-->
 

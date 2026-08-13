@@ -1,14 +1,10 @@
 # @ohos.app.ability.insightIntentDriver
 
-本模块提供执行意图调用的能力，系统根据用户交互等信息执行意图调用。
+本模块提供执行意图调用的能力，系统根据用户交互等信息执行意图调用。 > **说明：** > > 本模块从API version 20开始支持通过 > @InsightIntentLink > 装饰器定义的意图来实现应用跳转。
 
-> **说明：**
-> 
-> 本模块从API version 20开始支持通过
-> [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)
-> 装饰器定义的意图来实现应用跳转。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -25,13 +21,14 @@
 
 | 名称 |
 | --- |
-| [execute](arkts-ability-insightintentdriver-execute-f-sys.md#execute) |
-| [execute](arkts-ability-insightintentdriver-execute-f-sys.md#execute-1) |
-| [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo) |
-| [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename) |
-| [getInsightIntentInfoByFilter](arkts-ability-insightintentdriver-getinsightintentinfobyfilter-f-sys.md#getinsightintentinfobyfilter) |
-| [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getinsightintentinfobyintentname) |
-| [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md#queryentityinfo) |
+| [execute](arkts-ability-insightintentdriver-execute-f-sys.md#execute（系统接口）) |
+| [execute](arkts-ability-insightintentdriver-execute-f-sys.md#execute（系统接口）) |
+| [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getAllInsightIntentInfo（系统接口）) |
+| [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getInsightIntentInfoByBundleName（系统接口）) |
+| [getInsightIntentInfoByFilter](arkts-ability-insightintentdriver-getinsightintentinfobyfilter-f-sys.md#getInsightIntentInfoByFilter（系统接口）) |
+| [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getInsightIntentInfoByIntentName（系统接口）) |
+| [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md#queryEntityInfo（系统接口）) |
+| [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md#queryEntityInfo（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

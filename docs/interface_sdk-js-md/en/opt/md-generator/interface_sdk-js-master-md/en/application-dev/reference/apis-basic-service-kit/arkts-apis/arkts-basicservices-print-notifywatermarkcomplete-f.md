@@ -16,6 +16,8 @@ Notify watermark complete.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_PRINT
 
 **Model restriction:** This API can be used only in the stage model.
@@ -35,7 +37,7 @@ Notify watermark complete.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

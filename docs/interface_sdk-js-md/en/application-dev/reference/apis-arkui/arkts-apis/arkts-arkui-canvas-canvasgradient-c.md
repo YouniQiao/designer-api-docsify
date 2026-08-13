@@ -6,6 +6,8 @@ Opaque objects that describe gradients, created by createLinearGradient() or cre
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class CanvasGradient--><!--Device-unnamed-export declare class CanvasGradient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Add a breakpoint defined by offset and color to the gradient
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,5 +43,5 @@ Add a breakpoint defined by offset and color to the gradient
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103701](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-parameter-error) | The color's ColorSpace is not the same as the last color's. |
+| [103701](../errorcode-canvas.md#103701-parameter-error) | The color's ColorSpace is not the same as the last color's. |
 

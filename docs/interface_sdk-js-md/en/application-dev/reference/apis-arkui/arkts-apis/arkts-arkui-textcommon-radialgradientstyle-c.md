@@ -8,7 +8,9 @@ Defines radial gradient class.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
-<!--Device-unnamed-export declare class RadialGradientStyle extends ShaderStyle--><!--Device-unnamed-export declare class RadialGradientStyle extends ShaderStyle-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class RadialGradientStyle--><!--Device-unnamed-export declare class RadialGradientStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ The constructor.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ The constructor.
 options: RadialGradientOptions
 ```
 
-The options of the gradient.center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞)colors:Color description for gradients repeating: Refill. The default value is false
+The options of the gradient. center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞) colors:Color description for gradients repeating: Refill. The default value is false
 
 **Type:** [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

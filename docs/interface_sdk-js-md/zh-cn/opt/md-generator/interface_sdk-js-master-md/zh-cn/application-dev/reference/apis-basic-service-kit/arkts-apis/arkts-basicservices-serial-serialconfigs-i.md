@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-serial-interface SerialConfigs--><!--Device-serial-interface SerialConfigs-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
@@ -14,13 +16,15 @@
 baudRate?: number
 ```
 
-波特率取值限定为整数。取值约束:标准波特率。&lt;br&gt;单位:bps。&lt;br&gt;默认值:115200。
+波特率 取值限定为整数。 取值约束:标准波特率。 &lt;br&gt;单位:bps。 &lt;br&gt;默认值:115200。
 
 **类型：** number
 
 **默认值：** 115200
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,13 +38,15 @@ baudRate?: number
 dataBits?: DataBits
 ```
 
-数据位&lt;br&gt;默认值:EIGHT。
+数据位 &lt;br&gt;默认值:EIGHT。
 
 **类型：** DataBits
 
 **默认值：** EIGHT
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,13 +60,15 @@ dataBits?: DataBits
 parity?: Parity
 ```
 
-校验位&lt;br&gt;默认值:NONE。
+校验位 &lt;br&gt;默认值:NONE。
 
 **类型：** Parity
 
 **默认值：** NONE
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,13 +82,15 @@ parity?: Parity
 rtscts?: boolean
 ```
 
-是否开启硬件自动流控&lt;br&gt;默认值:false。
+是否开启硬件自动流控 &lt;br&gt;默认值:false。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,15 +104,15 @@ rtscts?: boolean
 stopBits?: StopBits
 ```
 
-停止位
-
-&lt;br&gt;默认值:ONE。
+停止位 &lt;br&gt;默认值:ONE。
 
 **类型：** StopBits
 
 **默认值：** ONE
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,13 +126,15 @@ stopBits?: StopBits
 xany?: boolean
 ```
 
-是否启用XANY软件流控&lt;br&gt;默认值:false。
+是否启用XANY软件流控 &lt;br&gt;默认值:false。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,13 +148,15 @@ xany?: boolean
 xoff?: boolean
 ```
 
-是否启用XOFF软件流控接收&lt;br&gt;默认值:false。
+是否启用XOFF软件流控接收 &lt;br&gt;默认值:false。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,13 +170,15 @@ xoff?: boolean
 xon?: boolean
 ```
 
-是否启用XON软件流控发送&lt;br&gt;默认值:false。
+是否启用XON软件流控发送 &lt;br&gt;默认值:false。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

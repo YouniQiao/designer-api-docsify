@@ -14,7 +14,9 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallba
 
 Sets the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -33,8 +35,8 @@ Sets the touchpad double-tap and drag switch state. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -76,7 +78,9 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>
 
 Sets the touchpad double-tap and drag switch state. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>-End-->
 
@@ -100,8 +104,8 @@ Sets the touchpad double-tap and drag switch state. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

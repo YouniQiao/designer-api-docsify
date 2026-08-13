@@ -19,7 +19,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAngleVariation](sensor.getAngleVariation(currentRotationMatrix:)
+**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getAngleVariation)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -64,7 +64,7 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAngleVariation](sensor.getAngleVariation(currentRotationMatrix:)
+**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getAngleVariation)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;)
 
 <!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>-End-->
 

@@ -1,11 +1,12 @@
 # RectType
 
-Enumerates the types of rectangles used to fill the lattices. Used only in  
-[Lattice](arkts-graphics-drawing.md#drawing).
+Enumerates the types of rectangles used to fill the lattices. Used only in [Lattice](arkts-graphics-drawing.md#@ohos.graphics.drawing).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum RectType--><!--Device-drawing-enum RectType-End-->
 
@@ -19,9 +20,11 @@ DEFAULT = 0
 
 Draws an image into the lattice.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RectType-DEFAULT = 0--><!--Device-RectType-DEFAULT = 0-End-->
 
@@ -35,9 +38,11 @@ TRANSPARENT = 1
 
 Sets the lattice to transparent.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RectType-TRANSPARENT = 1--><!--Device-RectType-TRANSPARENT = 1-End-->
 
@@ -49,11 +54,13 @@ Sets the lattice to transparent.
 FIXEDCOLOR = 2
 ```
 
-Draws the colors in the **fColors** array in [Lattice](arkts-graphics-drawing.md#drawing) into a lattice.
+Draws the colors in the **fColors** array in [Lattice](arkts-graphics-drawing.md#@ohos.graphics.drawing) into a lattice.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RectType-FIXEDCOLOR = 2--><!--Device-RectType-FIXEDCOLOR = 2-End-->
 

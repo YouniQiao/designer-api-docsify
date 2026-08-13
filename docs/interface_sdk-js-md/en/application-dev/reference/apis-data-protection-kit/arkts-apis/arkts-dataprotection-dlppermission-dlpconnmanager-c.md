@@ -1,15 +1,12 @@
 # DlpConnManager
 
-Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA.
-
-> **NOTE：**
-> 
-> **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback
-> capabilities from the SA.
+Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA. > **NOTE：**> > **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback > capabilities from the SA.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-export class DlpConnManager--><!--Device-dlpPermission-export class DlpConnManager-End-->
 
@@ -33,6 +30,8 @@ Represents a constructor for instantiating [DlpConnManager](#DlpConnManager).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API version 21 - 24: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
@@ -45,8 +44,8 @@ Represents a constructor for instantiating [DlpConnManager](#DlpConnManager).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## registerPlugin
 
@@ -54,15 +53,13 @@ Represents a constructor for instantiating [DlpConnManager](#DlpConnManager).
 static registerPlugin(plugin: DlpConnPlugin): number
 ```
 
-Registers a callback with the SA.
-
-> **NOTE：**
-> 
-> **registerPlugin** registers the callback with the SA.
+Registers a callback with the SA. > **NOTE：**> > **registerPlugin** registers the callback with the SA.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -88,12 +85,12 @@ Registers a callback with the SA.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## unregisterPlugin
 
@@ -101,17 +98,13 @@ Registers a callback with the SA.
 static unregisterPlugin(): void
 ```
 
-Unregisters a callback from the SA.
-
-This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
-
-> **NOTE：**
-> 
-> **unregisterPlugin** unregisters a plug-in from the SA.
+Unregisters a callback from the SA. This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released. > **NOTE：**> > **unregisterPlugin** unregisters a plug-in from the SA.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -125,10 +118,10 @@ This API unregisters a callback and releases resources when an application exits
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

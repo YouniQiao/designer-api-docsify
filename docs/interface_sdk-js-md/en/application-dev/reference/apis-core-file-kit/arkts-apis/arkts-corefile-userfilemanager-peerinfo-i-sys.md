@@ -48,8 +48,7 @@ Name of the registered device.
 readonly isOnline: boolean
 ```
 
-Whether the registered device is online. The value **true** means the registered device is online; the value   
-**false** means the opposite.
+Whether the registered device is online. The value **true** means the registered device is online; the value **false** means the opposite.
 
 **Type:** boolean
 

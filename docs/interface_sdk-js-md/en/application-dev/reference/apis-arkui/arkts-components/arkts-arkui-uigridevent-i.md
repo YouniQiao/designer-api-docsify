@@ -1,15 +1,16 @@
 # UIGridEvent
 
-Represents the return value of the  
-[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-3) method in **frameNode**,which can be used to set scroll events for a **Grid** node.
+Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent) method in **frameNode**, which can be used to set scroll events for a **Grid** node.
 
-**Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
+**Inheritance/Implementation:** UIGridEvent extends UIScrollableCommonEvent
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
-<!--Device-unnamed-declare interface UIGridEvent extends UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIGridEvent extends UIScrollableCommonEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface UIGridEvent--><!--Device-unnamed-declare interface UIGridEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,14 +20,13 @@ Represents the return value of the
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-Sets the callback for the  
-[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
-
-If the input parameter is **undefined**, the event callback is reset.
+Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event. If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,14 +48,13 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 ```
 
-Sets the callback of the  
-[onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#onscrollindex) event.
-
-If the input parameter is **undefined**, the event callback is reset.
+Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#onscrollindex) event. If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,14 +76,13 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-Sets the callback for the  
-[onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
-
-If the input parameter is **undefined**, the event callback is reset.
+Sets the callback for the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event. If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

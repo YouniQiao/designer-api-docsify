@@ -12,14 +12,13 @@ import { media } from '@kit.MediaKit';
 function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-Creates a **SoundPool** instance. This API uses a promise to return the result.
+Creates a **SoundPool** instance. This API uses a promise to return the result. If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
 
-If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using  
-**createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>--><!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>-End-->
 
@@ -31,7 +30,7 @@ If a **SoundPool** instance created using [createSoundPool](arkts-media-media-cr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxStreams | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
+| maxStreams | int | Yes | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | Yes | Audio renderer parameters. |
 
 **Return value:**
@@ -44,8 +43,8 @@ If a **SoundPool** instance created using [createSoundPool](arkts-media-media-cr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API error. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API error. Return by promise. |
 
 ## Examples
 

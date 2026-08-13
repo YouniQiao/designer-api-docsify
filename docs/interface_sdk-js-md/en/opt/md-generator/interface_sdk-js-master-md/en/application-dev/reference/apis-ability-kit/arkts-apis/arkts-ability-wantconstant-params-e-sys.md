@@ -2,7 +2,9 @@
 
 Defines **Params** (specifying the action that can be performed) in the Want.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wantConstant-export enum Params--><!--Device-wantConstant-export enum Params-End-->
 
@@ -16,7 +18,9 @@ DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'
 
 Action of obtaining the sandbox flag.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Params-DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'--><!--Device-Params-DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'-End-->
 
@@ -32,7 +36,9 @@ DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'
 
 Action of obtaining the DLP bundle name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Params-DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'--><!--Device-Params-DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'-End-->
 
@@ -48,7 +54,9 @@ DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'
 
 Action of obtaining the DLP module name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Params-DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'--><!--Device-Params-DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'-End-->
 
@@ -64,7 +72,9 @@ DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'
 
 Action of obtaining the DLP ability name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Params-DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'--><!--Device-Params-DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'-End-->
 
@@ -80,7 +90,9 @@ DLP_PARAMS_INDEX = 'ohos.dlp.params.index'
 
 Action of obtaining the DLP index.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Params-DLP_PARAMS_INDEX = 'ohos.dlp.params.index'--><!--Device-Params-DLP_PARAMS_INDEX = 'ohos.dlp.params.index'-End-->
 
@@ -96,7 +108,9 @@ HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'
 
 Indicates the type of hide sensitive information.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Params-HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'--><!--Device-Params-HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'-End-->
 
@@ -112,7 +126,9 @@ ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'
 
 Session ID of the AssertFault.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,6 +147,8 @@ UI_EXTENSION_ROOT_TOKEN = 'ohos.param.uiExtension.rootHostToken'
 Indicates the UIExtension root host token when connecting to a service extension ability.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

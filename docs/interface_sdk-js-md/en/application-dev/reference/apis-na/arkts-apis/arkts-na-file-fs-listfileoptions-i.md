@@ -1,0 +1,74 @@
+# ListFileOptions
+
+Defines the options used in **listFile()**.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface ListFileOptions--><!--Device-unnamed-export interface ListFileOptions-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## filter
+
+```TypeScript
+filter?: Filter
+```
+
+File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
+
+**Type:** [Filter](arkts-na-file-fs-filter-i.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-ListFileOptions-filter?: Filter--><!--Device-ListFileOptions-filter?: Filter-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## listNum
+
+```TypeScript
+listNum?: long
+```
+
+Number of file names to list. This parameter is optional. The default value is **0**, which means to list all files.
+
+**Type:** long
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-ListFileOptions-listNum?: long--><!--Device-ListFileOptions-listNum?: long-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## recursion
+
+```TypeScript
+recursion?: boolean
+```
+
+Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is **false**. If **recursion** is **false**, the names of files and directories that meet the filtering requirements in the current directory are returned. If **recursion** is **true**, relative paths (starting with /) of all files that meet the specified conditions in the current directory are returned.
+
+**Type:** boolean
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-ListFileOptions-recursion?: boolean--><!--Device-ListFileOptions-recursion?: boolean-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+

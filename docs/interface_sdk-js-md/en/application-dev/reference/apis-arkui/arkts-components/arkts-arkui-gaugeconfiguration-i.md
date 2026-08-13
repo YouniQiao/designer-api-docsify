@@ -1,15 +1,16 @@
 # GaugeConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from  
-[CommonConfiguration](CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration.
 
-**Inheritance/Implementation:** GaugeConfiguration extends [CommonConfiguration<GaugeConfiguration>](CommonConfiguration<GaugeConfiguration>)
+**Inheritance/Implementation:** GaugeConfiguration extends CommonConfiguration<GaugeConfiguration>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface GaugeConfiguration extends CommonConfiguration<GaugeConfiguration>--><!--Device-unnamed-declare interface GaugeConfiguration extends CommonConfiguration<GaugeConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface GaugeConfiguration--><!--Device-unnamed-declare interface GaugeConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +27,8 @@ Maximum value of the current data segment.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +52,8 @@ Minimum value of the current data segment.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -70,6 +75,8 @@ Current value.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

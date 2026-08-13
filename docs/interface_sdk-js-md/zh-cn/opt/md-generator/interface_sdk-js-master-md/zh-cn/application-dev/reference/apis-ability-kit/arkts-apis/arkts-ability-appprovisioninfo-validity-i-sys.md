@@ -2,7 +2,9 @@
 
 配置文件中的有效期。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Validity--><!--Device-unnamed-export interface Validity-End-->
 
@@ -20,7 +22,9 @@ readonly notAfter: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Validity-readonly notAfter: long--><!--Device-Validity-readonly notAfter: long-End-->
 
@@ -38,7 +42,9 @@ readonly notBefore: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Validity-readonly notBefore: long--><!--Device-Validity-readonly notBefore: long-End-->
 

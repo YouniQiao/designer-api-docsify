@@ -12,11 +12,13 @@ import { agentManager } from '@kit.AbilityKit';
 function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>
 ```
 
-Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to[connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectServiceExtensionAbility).
+Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectServiceExtensionAbility-(System-API)).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,7 +33,7 @@ Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | Yes | The context of the current agent extension ability. |
-| connectId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | The connection id returned by connectServiceExtensionAbility. |
+| connectId | long | Yes | The connection id returned by connectServiceExtensionAbility. |
 
 **Return value:**
 
@@ -43,7 +45,7 @@ Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 

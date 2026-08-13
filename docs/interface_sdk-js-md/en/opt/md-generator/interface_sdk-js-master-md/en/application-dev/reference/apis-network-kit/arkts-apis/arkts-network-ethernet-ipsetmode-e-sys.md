@@ -4,6 +4,8 @@ Defines the configuration mode of the Ethernet connection.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-ethernet-export enum IPSetMode--><!--Device-ethernet-export enum IPSetMode-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -19,6 +21,8 @@ STATIC = 0
 WAN Static configuration.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-IPSetMode-STATIC = 0--><!--Device-IPSetMode-STATIC = 0-End-->
 
@@ -36,6 +40,8 @@ WAN Dynamic configuration.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-IPSetMode-DHCP = 1--><!--Device-IPSetMode-DHCP = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -52,6 +58,8 @@ LAN Static configuration.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-IPSetMode-LAN_STATIC = 2--><!--Device-IPSetMode-LAN_STATIC = 2-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -67,6 +75,8 @@ LAN_DHCP = 3
 LAN Dynamic configuration.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-IPSetMode-LAN_DHCP = 3--><!--Device-IPSetMode-LAN_DHCP = 3-End-->
 

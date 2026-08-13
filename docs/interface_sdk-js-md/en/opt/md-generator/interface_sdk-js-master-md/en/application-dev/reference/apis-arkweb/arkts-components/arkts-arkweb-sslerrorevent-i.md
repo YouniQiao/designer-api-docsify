@@ -4,6 +4,8 @@ Defines the ssl error event.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SslErrorEvent--><!--Device-unnamed-declare interface SslErrorEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ Certificate chain data in DER format.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>--><!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -35,6 +39,8 @@ Error codes.
 **Type:** [SslError](arkts-arkweb-sslerror-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,6 +60,8 @@ Notifies the user of the operation behavior of the web component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SslErrorEvent-handler: SslErrorHandler--><!--Device-SslErrorEvent-handler: SslErrorHandler-End-->
@@ -71,6 +79,8 @@ Whether the error is fatal.
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,6 +100,8 @@ Whether the request is main frame.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SslErrorEvent-isMainFrame: boolean--><!--Device-SslErrorEvent-isMainFrame: boolean-End-->
@@ -107,6 +119,8 @@ Original url.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,6 +140,8 @@ Referrer.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SslErrorEvent-referrer: string--><!--Device-SslErrorEvent-referrer: string-End-->
@@ -143,6 +159,8 @@ Request url.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

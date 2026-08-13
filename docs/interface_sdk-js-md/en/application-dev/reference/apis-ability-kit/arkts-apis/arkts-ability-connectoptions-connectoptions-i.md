@@ -1,11 +1,12 @@
 # ConnectOptions
 
-**ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of  
-[connectServiceExtensionAbility](./application/UIAbilityContext:UIAbilityContext.connectServiceExtensionAbility)to connect to a ServiceExtensionAbility.
+**ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectServiceExtensionAbility) to connect to a ServiceExtensionAbility.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ConnectOptions--><!--Device-unnamed-export interface ConnectOptions-End-->
 
@@ -22,6 +23,8 @@ Called when a connection is set up.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-ConnectOptions-onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void--><!--Device-ConnectOptions-onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void-End-->
 
@@ -65,22 +68,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-## onConnect
-
-```TypeScript
-onConnect: OnConnectFn
-```
-
-Callback invoked when a connection is set up.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-ConnectOptions-onConnect: OnConnectFn--><!--Device-ConnectOptions-onConnect: OnConnectFn-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## onDisconnect
 
 ```TypeScript
@@ -92,6 +79,8 @@ Called when a connection is interrupted.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-ConnectOptions-onDisconnect(elementName: ElementName): void--><!--Device-ConnectOptions-onDisconnect(elementName: ElementName): void-End-->
 
@@ -134,22 +123,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-## onDisconnect
-
-```TypeScript
-onDisconnect: OnDisconnectFn
-```
-
-Callback invoked when a connection is interrupted.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-ConnectOptions-onDisconnect: OnDisconnectFn--><!--Device-ConnectOptions-onDisconnect: OnDisconnectFn-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## onFailed
 
 ```TypeScript
@@ -162,6 +135,8 @@ Called when a connection fails.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-ConnectOptions-onFailed(code: number): void--><!--Device-ConnectOptions-onFailed(code: number): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -170,7 +145,7 @@ Called when a connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Error code returned when connection to the specified ability fails.  For details about the error codes, see [Universal Error Codes](../errorcode-universal.md) and [Ability Error Codes](errorcode-ability.md).  201 - The application does not have permission to call the interface.  16000001 - The specified ability does not exist.  16000002 - Incorrect ability type.  16000004 - Cannot start an invisible component.  16000005 - The specified process does not have the permission.  16000006 - Cross-user operations are not allowed.  16000008 - The crowdtesting application expires.  16000053 - The ability is not on the top of the UI.  16000055 - Installation-free timed out.  16000050 - Internal error. |
+| code | number | Yes | Error code returned when connection to the specified ability fails.  For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [Ability Error Codes](../errorcode-ability.md).  201 - The application does not have permission to call the interface.  16000001 - The specified ability does not exist.  16000002 - Incorrect ability type.  16000004 - Cannot start an invisible component.  16000005 - The specified process does not have the permission.  16000006 - Cross-user operations are not allowed.  16000008 - The crowdtesting application expires.  16000053 - The ability is not on the top of the UI.  16000055 - Installation-free timed out.  16000050 - Internal error. |
 
 ## Examples
 
@@ -203,6 +178,46 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+## onConnect
+
+```TypeScript
+onConnect: OnConnectFn
+```
+
+Callback invoked when a connection is set up.
+
+**Type:** [OnConnectFn](arkts-ability-onconnectfn-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-ConnectOptions-onConnect: OnConnectFn--><!--Device-ConnectOptions-onConnect: OnConnectFn-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## onDisconnect
+
+```TypeScript
+onDisconnect: OnDisconnectFn
+```
+
+Callback invoked when a connection is interrupted.
+
+**Type:** [OnDisconnectFn](arkts-ability-ondisconnectfn-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-ConnectOptions-onDisconnect: OnDisconnectFn--><!--Device-ConnectOptions-onDisconnect: OnDisconnectFn-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## onFailed
 
 ```TypeScript
@@ -211,9 +226,13 @@ onFailed: OnFailedFn
 
 Callback invoked when a connection fails.
 
+**Type:** [OnFailedFn](arkts-ability-onfailedfn-t.md)
+
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConnectOptions-onFailed: OnFailedFn--><!--Device-ConnectOptions-onFailed: OnFailedFn-End-->
 

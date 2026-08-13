@@ -1,8 +1,10 @@
 # TransientParam
 
-瞬态振动参数。用于[VibratorPatternBuilder.addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addTransientEvent)的options参数，指定短振事件的振动强度、频率和通道编号。
+瞬态振动参数。用于[VibratorPatternBuilder.addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addTransientEvent)的 options参数，指定短振事件的振动强度、频率和通道编号。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-vibrator-interface TransientParam--><!--Device-vibrator-interface TransientParam-End-->
 
@@ -18,7 +20,9 @@ frequency?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TransientParam-frequency?: int--><!--Device-TransientParam-frequency?: int-End-->
 
@@ -34,7 +38,9 @@ index?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TransientParam-index?: int--><!--Device-TransientParam-index?: int-End-->
 
@@ -50,7 +56,9 @@ intensity?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TransientParam-intensity?: int--><!--Device-TransientParam-intensity?: int-End-->
 

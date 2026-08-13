@@ -4,7 +4,9 @@ DisplayMode enum defines the display mode of the picker.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum DisplayMode--><!--Device-unnamed-export declare enum DisplayMode-End-->
 
@@ -20,9 +22,13 @@ Displays only the date.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DisplayMode-DATE = 0--><!--Device-DisplayMode-DATE = 0-End-->
 
@@ -38,9 +44,13 @@ Displays only the time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DisplayMode-TIME = 1--><!--Device-DisplayMode-TIME = 1-End-->
 
@@ -56,9 +66,13 @@ Displays both date and time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DisplayMode-DATE_TIME = 2--><!--Device-DisplayMode-DATE_TIME = 2-End-->
 

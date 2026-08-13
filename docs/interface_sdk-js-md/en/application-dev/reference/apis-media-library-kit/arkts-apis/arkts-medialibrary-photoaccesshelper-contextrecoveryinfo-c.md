@@ -2,9 +2,11 @@
 
 Describes the information about the context of exiting the PhotoPicker. It can be used during the subsequent launch of the PhotoPicker to restore the state from the previous exit.
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export class ContextRecoveryInfo--><!--Device-photoAccessHelper-export class ContextRecoveryInfo-End-->
 
@@ -22,21 +24,17 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 albumUri: string
 ```
 
-URI of the album in the media library when the user selects an image and exits.
-
-- If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string.  
-- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the   
-next restoration is not supported, and the returned **albumUri** is an empty string.
-
-The default value is an empty string.
+URI of the album in the media library when the user selects an image and exits. - If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string. - If the user exits after selecting from search results, text recommendations, or avatar recommendations, the next restoration is not supported, and the returned **albumUri** is an empty string. The default value is an empty string.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-albumUri: string--><!--Device-ContextRecoveryInfo-albumUri: string-End-->
 
@@ -52,11 +50,13 @@ File name of the top-left image in the grid interface when the user last selecte
 
 **Type:** string
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-displayName: string--><!--Device-ContextRecoveryInfo-displayName: string-End-->
 
@@ -68,18 +68,19 @@ File name of the top-left image in the grid interface when the user last selecte
 fileSize?: int
 ```
 
-File size of the top-left image in the grid interface when the user last selected an image. The default value is   
-**0**.Unit: Byte, The value must be an integer greater than or equal to 0.
+File size of the top-left image in the grid interface when the user last selected an image. The default value is **0**. Unit: Byte, The value must be an integer greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-fileSize?: int--><!--Device-ContextRecoveryInfo-fileSize?: int-End-->
 
@@ -95,13 +96,15 @@ Level of the grid when the user exits last time.
 
 **Type:** [GridLevel](arkts-medialibrary-photoaccesshelper-gridlevel-e.md)
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-gridLevel?: GridLevel--><!--Device-ContextRecoveryInfo-gridLevel?: GridLevel-End-->
 
@@ -113,18 +116,17 @@ Level of the grid when the user exits last time.
 recommendationType: int
 ```
 
-Enumerated value of the recommended content set by the user during the last selection. For details, see   
-[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#RecommendationType).
+Enumerated value of the recommended content set by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#RecommendationType). If no recommendation was set during the last selection, the default value is **0**.
 
-If no recommendation was set during the last selection, the default value is **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 26.0.0
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-recommendationType: int--><!--Device-ContextRecoveryInfo-recommendationType: int-End-->
 
@@ -136,18 +138,17 @@ If no recommendation was set during the last selection, the default value is **0
 selectedRecommendationType: int
 ```
 
-Enumerated value of the recommended content selected by the user during the last selection. For details, see   
-[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#RecommendationType).
+Enumerated value of the recommended content selected by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#RecommendationType). If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
 
-If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 26.0.0
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-selectedRecommendationType: int--><!--Device-ContextRecoveryInfo-selectedRecommendationType: int-End-->
 
@@ -163,13 +164,15 @@ Sorting rule of the grid interface when the user last selected an image. The def
 
 **Type:** string
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-sortRule?: string--><!--Device-ContextRecoveryInfo-sortRule?: string-End-->
 
@@ -181,20 +184,17 @@ Sorting rule of the grid interface when the user last selected an image. The def
 time: long
 ```
 
-Time of the top-left image in the grid interface when the user last selected an image.
+Time of the top-left image in the grid interface when the user last selected an image. - For albums sorted by capture time, the capture time is returned. - For albums sorted by save time, the save time is returned. The default value is **0**. Unit: ms, The value must be greater than or equal to 0.
 
-- For albums sorted by capture time, the capture time is returned.  
-- For albums sorted by save time, the save time is returned. The default value is **0**.
+**Type:** long
 
-Unit: ms, The value must be greater than or equal to 0.
+**Since:** 26.0.0
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Since:** 21
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
-
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-time: long--><!--Device-ContextRecoveryInfo-time: long-End-->
 
@@ -206,17 +206,17 @@ Unit: ms, The value must be greater than or equal to 0.
 version: int
 ```
 
-Version number of the state data, used to verify the compatibility of the state information data with the state recovery capability.
+Version number of the state data, used to verify the compatibility of the state information data with the state recovery capability. The version number must be greater than or equal to 1.0.
 
-The version number must be greater than or equal to 1.0.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 26.0.0
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextRecoveryInfo-version: int--><!--Device-ContextRecoveryInfo-version: int-End-->
 

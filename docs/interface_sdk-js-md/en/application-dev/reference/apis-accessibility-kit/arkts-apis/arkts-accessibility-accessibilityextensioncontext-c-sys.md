@@ -2,24 +2,20 @@
 
 The accessibility extension context. Used to configure, query information, and inject gestures.
 
-**Inheritance/Implementation:** AccessibilityExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## addAccessibilityVirtualNodes
 
-ArkTS-Dyn:
-```TypeScript
-addAccessibilityVirtualNodes(elementId: number, windowId: number, nodes: Array<AccessibilityVirtualNode>): Promise<OperateVirtualNodeResult>
-```
-
-ArkTS-Sta:
 ```TypeScript
 addAccessibilityVirtualNodes(elementId: long, windowId: int, nodes: Array<AccessibilityVirtualNode>): Promise<OperateVirtualNodeResult>
 ```
@@ -28,7 +24,9 @@ Add accessibility virtual nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -44,8 +42,8 @@ Add accessibility virtual nodes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the id of the node to which the accessibility virtual node tree belongs |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the window id &lt;br&gt;The value range is all integers. |
+| elementId | long | Yes | Indicates the id of the node to which the accessibility virtual node tree belongs |
+| windowId | int | Yes | Indicates the window id &lt;br&gt;The value range is all integers. |
 | nodes | Array&lt;[AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md)&gt; | Yes | Indicates accessibility virtual node tree. |
 
 **Return value:**
@@ -58,9 +56,9 @@ Add accessibility virtual nodes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
 
 ## getAccessibilityFocusedElement
 
@@ -70,9 +68,11 @@ getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 
 Obtains the element that is currently focused. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -92,10 +92,10 @@ Obtains the element that is currently focused. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
-| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## Examples
 
@@ -143,21 +143,17 @@ export default class AccessibilityManager {
 
 ## getAccessibilityWindowsSync
 
-ArkTS-Dyn:
-```TypeScript
-getAccessibilityWindowsSync(displayId?: number): Array<AccessibilityElement>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAccessibilityWindowsSync(displayId?: long): Array<AccessibilityElement>
 ```
 
 Obtains the accessibility windows.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -171,7 +167,7 @@ Obtains the accessibility windows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Indicates the display ID. If this parameter is not provided, indicates the default displayId. |
+| displayId | long | No | Indicates the display ID. If this parameter is not provided, indicates the default displayId. |
 
 **Return value:**
 
@@ -183,27 +179,23 @@ Obtains the accessibility windows.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getDefaultFocusedElementIds
 
-ArkTS-Dyn:
-```TypeScript
-getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>
 ```
 
 Obtains the custom default focuses of an application. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>--><!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>-End-->
 
@@ -215,21 +207,21 @@ Obtains the custom default focuses of an application. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID to be obtained. |
+| windowId | int | Yes | Window ID to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## Examples
 
@@ -278,21 +270,17 @@ export default class AccessibilityManager {
 
 ## getElements
 
-ArkTS-Dyn:
-```TypeScript
-getElements(windowId: number, elementId?: number): Promise<Array<AccessibilityElement>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>
 ```
 
 Obtains node elements in batches. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>-End-->
 
@@ -304,8 +292,8 @@ Obtains node elements in batches. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID to be obtained. |
-| elementId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Element ID to be obtained. If this parameter is passed in, the list of all child nodes under the current node is obtained. Otherwise, all nodes in the window are obtained. The default value is **-1**. |
+| windowId | int | Yes | Window ID to be obtained. |
+| elementId | long | No | Element ID to be obtained. If this parameter is passed in, the list of all child nodes under the current node is obtained. Otherwise, all nodes in the window are obtained. The default value is **-1**. |
 
 **Return value:**
 
@@ -317,9 +305,9 @@ Obtains node elements in batches. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## Examples
 
@@ -370,21 +358,17 @@ export default class AccessibilityManager {
 
 ## getRootInActiveWindow
 
-ArkTS-Dyn:
-```TypeScript
-getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>
 ```
 
 Obtains the root element of an active window. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -398,7 +382,7 @@ Obtains the root element of an active window. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the window ID. |
+| windowId | int | No | Indicates the window ID. |
 
 **Return value:**
 
@@ -410,10 +394,10 @@ Obtains the root element of an active window. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
-| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## holdRunningLockSync
 
@@ -423,9 +407,11 @@ holdRunningLockSync(): void
 
 Holds the running lock. After the lock is held, the screen will not turn off automatically.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -439,8 +425,8 @@ Holds the running lock. After the lock is held, the screen will not turn off aut
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -490,14 +476,13 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-Notifies the accessibility service that the accessibility extension service can be disconnected.
+Notifies the accessibility service that the accessibility extension service can be disconnected. This API must be used together with the [on('preDisconnect')](#on_preDisconnect) API. If the **on('preDisconnect')** API is not called, this API does not take effect.
 
-This API must be used together with the   
-[on('preDisconnect')](AccessibilityExtensionContext#on(type: 'preDisconnect', callback: Callback&lt;void&gt;)) API.If the **on('preDisconnect')** API is not called, this API does not take effect.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -511,8 +496,8 @@ This API must be used together with the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -556,7 +541,42 @@ export default class AccessibilityManager {
 }
 ```
 
-## off('preDisconnect')
+## offPreDisconnect
+
+```TypeScript
+offPreDisconnect(callback?: Callback<void>): void
+```
+
+Unregister accessibilityExtensionAbility disconnect callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Indicates the callback function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## off_preDisconnect
 
 ```TypeScript
 off(type: 'preDisconnect', callback?: Callback<void>): void
@@ -567,6 +587,8 @@ Unsubscribes from the pre-disconnection event of the accessibility extension ser
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -581,14 +603,14 @@ Unsubscribes from the pre-disconnection event of the accessibility extension ser
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Name of the event to listen for. The value is fixed at **'preDisconnect'**, indicating that the accessibility extension service is about to be disconnected. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister, which must be the same as that of [on('preDisconnect')](AccessibilityExtensionContext#on(type: 'preDisconnect', callback: Callback&lt;void&gt;)). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister, which must be the same as that of [on('preDisconnect')](#on_preDisconnect). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -634,21 +656,23 @@ export default class AccessibilityManager {
 }
 ```
 
-## offPreDisconnect
+## onPreDisconnect
 
 ```TypeScript
-offPreDisconnect(callback?: Callback<void>): void
+onPreDisconnect(callback: Callback<void>): void
 ```
 
-Unregister accessibilityExtensionAbility disconnect callback.
+Register accessibilityExtensionAbility disconnect callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
-<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
+<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -658,28 +682,28 @@ Unregister accessibilityExtensionAbility disconnect callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Indicates the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## on('preDisconnect')
+## on_preDisconnect
 
 ```TypeScript
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-Subscribes to the pre-disconnection event of the accessibility extension service. This API is called when the accessibility extension service is about to be disconnected. This API uses an asynchronous callback to return the result.
-
-Used together with [notifyDisconnect](#notifyDisconnect); otherwise, the accessibility extension service is automatically disconnected 30 seconds later by default.
+Subscribes to the pre-disconnection event of the accessibility extension service. This API is called when the accessibility extension service is about to be disconnected. This API uses an asynchronous callback to return the result. Used together with [notifyDisconnect](#notifyDisconnect); otherwise, the accessibility extension service is automatically disconnected 30 seconds later by default.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -694,14 +718,14 @@ Used together with [notifyDisconnect](#notifyDisconnect); otherwise, the accessi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Name of the event to listen for. The value is fixed at **'preDisconnect'**, indicating that the accessibility extension service is about to be disconnected. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback to be invoked when the accessibility extension service is about to be disconnected. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback to be invoked when the accessibility extension service is about to be disconnected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -747,47 +771,8 @@ export default class AccessibilityManager {
 }
 ```
 
-## onPreDisconnect
-
-```TypeScript
-onPreDisconnect(callback: Callback<void>): void
-```
-
-Register accessibilityExtensionAbility disconnect callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Indicates the callback function. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
 ## removeAccessibilityVirtualNodes
 
-ArkTS-Dyn:
-```TypeScript
-removeAccessibilityVirtualNodes(elementId: number, windowId: number): Promise<OperateVirtualNodeResult>
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeAccessibilityVirtualNodes(elementId: long, windowId: int): Promise<OperateVirtualNodeResult>
 ```
@@ -796,7 +781,9 @@ Remove accessibility virtual nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -812,8 +799,8 @@ Remove accessibility virtual nodes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the id of the accessibility element to be removed. |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the window id. &lt;br&gt;The value range is all integers. |
+| elementId | long | Yes | Indicates the id of the accessibility element to be removed. |
+| windowId | int | Yes | Indicates the window id. &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
@@ -825,9 +812,9 @@ Remove accessibility virtual nodes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
 
 ## startAbility
 
@@ -837,9 +824,11 @@ startAbility(want: Want): Promise<void>
 
 Starts the foreground page. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
@@ -863,8 +852,8 @@ Starts the foreground page. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have the permission required to call the API. |
 
 ## Examples
 
@@ -923,9 +912,11 @@ unholdRunningLockSync(): void
 
 Releases the running lock. After the lock is released, the screen will automatically turn off.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -939,8 +930,8 @@ Releases the running lock. After the lock is released, the screen will automatic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -986,12 +977,6 @@ export default class AccessibilityManager {
 
 ## updateAccessibilityElementProperty
 
-ArkTS-Dyn:
-```TypeScript
-updateAccessibilityElementProperty(elementId: number, windowId: number, node: AccessibilityVirtualNode): Promise<OperateVirtualNodeResult>
-```
-
-ArkTS-Sta:
 ```TypeScript
 updateAccessibilityElementProperty(elementId: long, windowId: int, node: AccessibilityVirtualNode): Promise<OperateVirtualNodeResult>
 ```
@@ -1000,7 +985,9 @@ Update accessibility element property.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -1016,8 +1003,8 @@ Update accessibility element property.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the id of the accessibility element to be updated |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the window id &lt;br&gt;The value range is all integers. |
+| elementId | long | Yes | Indicates the id of the accessibility element to be updated |
+| windowId | int | Yes | Indicates the window id &lt;br&gt;The value range is all integers. |
 | node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Yes | Indicates accessibility virtual node to be updated. |
 
 **Return value:**
@@ -1030,7 +1017,7 @@ Update accessibility element property.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
 

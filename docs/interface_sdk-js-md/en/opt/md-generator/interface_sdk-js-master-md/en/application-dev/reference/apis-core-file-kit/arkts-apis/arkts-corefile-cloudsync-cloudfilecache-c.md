@@ -2,7 +2,9 @@
 
 Provides APIs for the file manager application to download files from the Drive Kit to a local device.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-class CloudFileCache--><!--Device-cloudSync-class CloudFileCache-End-->
 
@@ -23,6 +25,8 @@ cleanAllFileCache(): Promise<void>
 Clean all downloaded files except those not yet migrated to the cloud or those that are being written to.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +54,9 @@ cleanFileCache(uri: string): void
 
 Deletes a cache file. This API returns the result synchronously.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-cleanFileCache(uri: string): void--><!--Device-CloudFileCache-cleanFileCache(uri: string): void-End-->
 
@@ -100,7 +106,9 @@ constructor()
 
 A constructor used to create a **CloudFileCache** instance. Data is not shared between multiple instances.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-constructor()--><!--Device-CloudFileCache-constructor()-End-->
 
@@ -110,7 +118,7 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -127,6 +135,8 @@ getCachedTotalSize(): Promise<number>
 Query the total size of cached files.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,17 +156,19 @@ Query the total size of cached files.
 | --- |
 | 13900010 |
 
-## off
+## offBatchDownload
 
 ```TypeScript
-off(event: 'progress', callback?: Callback<DownloadProgress>): void
+offBatchDownload(callback?: Callback<MultiDownloadProgress>): void
 ```
 
-Removes the specified callback from the device-cloud file cache progress.
+Unsubscribes from cloud file cache download progress event.
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -164,46 +176,55 @@ Removes the specified callback from the device-cloud file cache progress.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | 'progress' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| 13900020 |
+| 22400005 |
+
+## offProgress
+
+```TypeScript
+offProgress(callback?: Callback<DownloadProgress>): void
+```
+
+Unsubscribes from cloud file cache download progress event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-
-let callback = (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-}
-
-try {
-  fileCache.on('progress', callback);
-  fileCache.off('progress', callback);
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## off
+## off_batchDownload
 
 ```TypeScript
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-Removes the listener added via the  
-[on](cloudSync.CloudFileCache#on(event: 'batchDownload', callback: Callback&lt;MultiDownloadProgress&gt;)) API for file batch downloads.
+Removes the listener added via the [on](#on_progress) API for file batch downloads.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void-End-->
 
@@ -242,17 +263,19 @@ try {
 }
 ```
 
-## on
+## off_progress
 
 ```TypeScript
-on(event: 'progress', callback: Callback<DownloadProgress>): void
+off(event: 'progress', callback?: Callback<DownloadProgress>): void
 ```
 
-Registers a listener for the download progress of a file from the Drive Kit.
+Removes the specified callback from the device-cloud file cache progress.
 
 **Since:** 11
 
-<!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -261,13 +284,13 @@ Registers a listener for the download progress of a file from the Drive Kit.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'progress' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
 ## Examples
@@ -276,19 +299,79 @@ Registers a listener for the download progress of a file from the Drive Kit.
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let fileCache = new cloudSync.CloudFileCache();
+
 let callback = (pg: cloudSync.DownloadProgress) => {
   console.info("download state: " + pg.state);
-};
+}
 
 try {
   fileCache.on('progress', callback);
+  fileCache.off('progress', callback);
 } catch (e) {
   const error = e as BusinessError;
   console.error(`Error code: ${error.code}, message: ${error.message}`);
 }
 ```
 
-## on
+## onBatchDownload
+
+```TypeScript
+onBatchDownload(callback: Callback<MultiDownloadProgress>): void
+```
+
+Subscribes to a batch of cloud file cache download progress change event. This method uses a callback to get download progress changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| 13900020 |
+| 22400005 |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: Callback<DownloadProgress>): void
+```
+
+Subscribes to cloud file cache download progress change event. This method uses a callback to get download progress changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+
+## on_batchDownload
 
 ```TypeScript
 on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
@@ -297,6 +380,8 @@ on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
 Registers a listener for the batch download of a file from the Drive Kit.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void-End-->
 
@@ -339,6 +424,54 @@ try {
 }
 ```
 
+## on_progress
+
+```TypeScript
+on(event: 'progress', callback: Callback<DownloadProgress>): void
+```
+
+Registers a listener for the download progress of a file from the Drive Kit.
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+<!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | 'progress' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (pg: cloudSync.DownloadProgress) => {
+  console.info("download state: " + pg.state);
+};
+
+try {
+  fileCache.on('progress', callback);
+} catch (e) {
+  const error = e as BusinessError;
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## start
 
 ```TypeScript
@@ -347,7 +480,9 @@ start(uri: string): Promise<void>
 
 Starts downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-start(uri: string): Promise<void>--><!--Device-CloudFileCache-start(uri: string): Promise<void>-End-->
 
@@ -369,7 +504,7 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900002 |
 | 14000002 |
 | 13900025 |
@@ -409,7 +544,9 @@ start(uri: string, callback: AsyncCallback<void>): void
 
 Starts downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -426,7 +563,7 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900002 |
 | 14000002 |
 | 13900025 |
@@ -457,11 +594,11 @@ fileCache.start(uri, (err: BusinessError) => {
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<number>
 ```
 
-Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.
+Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result. Different batch download tasks can be distinguished by the task ID returned.
 
-Different batch download tasks can be distinguished by the task ID returned.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>--><!--Device-CloudFileCache-startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>-End-->
 
@@ -519,11 +656,11 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result. When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
-When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-stop(uri: string, needClean?: boolean): Promise<void>--><!--Device-CloudFileCache-stop(uri: string, needClean?: boolean): Promise<void>-End-->
 
@@ -546,7 +683,7 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900002 |
 | 14000002 |
 | 13600001 |
@@ -574,11 +711,11 @@ fileCache.stop(uri, true).then(() => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
+Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result. When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
 
-When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -595,7 +732,7 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900002 |
 | 14000002 |
 | 13600001 |
@@ -625,11 +762,11 @@ fileCache.stop(uri, (err: BusinessError) => {
 stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 ```
 
-Stops the batch download task enabled by [startBatch](#startBatch) of a file from the Drive Kit. This API uses a promise to return the result.
+Stops the batch download task enabled by [startBatch](#startBatch) of a file from the Drive Kit. This API uses a promise to return the result. When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
 
-When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-CloudFileCache-stopBatch(downloadId: long, needClean?: boolean): Promise<void>--><!--Device-CloudFileCache-stopBatch(downloadId: long, needClean?: boolean): Promise<void>-End-->
 

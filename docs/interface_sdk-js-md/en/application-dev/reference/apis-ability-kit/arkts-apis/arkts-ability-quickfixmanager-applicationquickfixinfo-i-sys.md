@@ -2,9 +2,11 @@
 
 Defines the quick fix information at the application level.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-quickFixManager-export interface ApplicationQuickFixInfo--><!--Device-quickFixManager-export interface ApplicationQuickFixInfo-End-->
 
@@ -28,9 +30,11 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleName: string-End-->
 
@@ -46,11 +50,13 @@ readonly bundleVersionCode: long
 
 Internal version number of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long-End-->
 
@@ -68,9 +74,11 @@ Version number of the application that is shown to users.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string-End-->
 
@@ -88,9 +96,11 @@ Quick fix information at the HAP file level.
 
 **Type:** Array&lt;[HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>--><!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>-End-->
 
@@ -106,11 +116,13 @@ readonly quickFixVersionCode: long
 
 Version code of the quick fix patch package.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long-End-->
 
@@ -128,9 +140,11 @@ Text description of the version number of the quick fix patch package.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string-End-->
 

@@ -2,9 +2,11 @@
 
 The enum of environment background type.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum EnvironmentBackgroundType--><!--Device-unnamed-export enum EnvironmentBackgroundType-End-->
 
@@ -18,9 +20,11 @@ BACKGROUND_NONE = 0
 
 The background is none.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0--><!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0-End-->
 
@@ -34,9 +38,11 @@ BACKGROUND_IMAGE = 1
 
 The background is image.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1--><!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1-End-->
 
@@ -50,9 +56,11 @@ BACKGROUND_CUBEMAP = 2
 
 The background is cubemap.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2--><!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2-End-->
 
@@ -66,9 +74,11 @@ BACKGROUND_EQUIRECTANGULAR = 3
 
 The background is equirectangular.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3--><!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3-End-->
 

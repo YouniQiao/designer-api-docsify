@@ -6,6 +6,8 @@ Defines a VPN connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-vpnExtension-export interface VpnConnection--><!--Device-vpnExtension-export interface VpnConnection-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -28,6 +30,8 @@ Create a VPN network using the VpnConfig.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-VpnConnection-create(config: VpnConfig): Promise<number>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<number>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -48,12 +52,12 @@ Create a VPN network using the VpnConfig.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2203001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied, please check the user type. |
-| [2203002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN exist already, please execute destroy first. |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
+| [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied, please check the user type. |
+| [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN exist already, please execute destroy first. |
 
 ## Examples
 
@@ -146,6 +150,8 @@ Destroy the VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -160,9 +166,9 @@ Destroy the VPN network.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
 
 ## Examples
 
@@ -197,6 +203,8 @@ Destroy the VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-VpnConnection-destroy(vpnId: string): Promise<void>--><!--Device-VpnConnection-destroy(vpnId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -217,8 +225,8 @@ Destroy the VPN network.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
-| [19900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
+| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
 
 ## Examples
 
@@ -253,6 +261,8 @@ generate vpn id.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-VpnConnection-generateVpnId(): Promise<string>--><!--Device-VpnConnection-generateVpnId(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -267,8 +277,8 @@ generate vpn id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
-| [19900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
+| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
 
 ## Examples
 
@@ -302,6 +312,8 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-VpnConnection-protect(socketFd: number): Promise<void>--><!--Device-VpnConnection-protect(socketFd: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -322,11 +334,11 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2203004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
+| [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
 
 ## Examples
 
@@ -366,11 +378,13 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 protectProcessNet(): Promise<void>
 ```
 
-Protect all socket of the VPN process. After executing this function,all sockets subsequently created by the current process will be protected,while previously created sockets will not be protected.
+Protect all socket of the VPN process. After executing this function, all sockets subsequently created by the current process will be protected, while previously created sockets will not be protected.
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-VpnConnection-protectProcessNet(): Promise<void>--><!--Device-VpnConnection-protectProcessNet(): Promise<void>-End-->
 

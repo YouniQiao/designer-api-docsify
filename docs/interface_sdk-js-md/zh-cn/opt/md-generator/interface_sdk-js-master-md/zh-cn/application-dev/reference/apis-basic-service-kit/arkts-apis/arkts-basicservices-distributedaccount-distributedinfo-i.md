@@ -2,7 +2,9 @@
 
 提供操作系统账号的分布式信息。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedAccount-interface DistributedInfo--><!--Device-distributedAccount-interface DistributedInfo-End-->
 
@@ -18,7 +20,9 @@ avatar?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedInfo-avatar?: string--><!--Device-DistributedInfo-avatar?: string-End-->
 
@@ -30,19 +34,13 @@ avatar?: string
 event: string
 ```
 
-分布式账号登录状态，包括登录、登出、Token失效和注销，分别对应以下字符串：
-
-- Ohos.account.event.LOGIN
-
-- Ohos.account.event.LOGOUT
-
-- Ohos.account.event.TOKEN_INVALID
-
-- Ohos.account.event.LOGOFF
+分布式账号登录状态，包括登录、登出、Token失效和注销，分别对应以下字符串： - Ohos.account.event.LOGIN - Ohos.account.event.LOGOUT - Ohos.account.event.TOKEN_INVALID - Ohos.account.event.LOGOFF
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedInfo-event: string--><!--Device-DistributedInfo-event: string-End-->
 
@@ -58,7 +56,9 @@ id: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedInfo-id: string--><!--Device-DistributedInfo-id: string-End-->
 
@@ -74,7 +74,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedInfo-name: string--><!--Device-DistributedInfo-name: string-End-->
 
@@ -90,7 +92,9 @@ nickname?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedInfo-nickname?: string--><!--Device-DistributedInfo-nickname?: string-End-->
 
@@ -99,16 +103,18 @@ nickname?: string
 ## scalableData
 
 ```TypeScript
-scalableData?: object
+scalableData?: Record<string, RecordData>
 ```
 
 分布式账号扩展信息，根据业务所需，以k-v形式传递定制化信息，默认为空。
 
-**类型：** object
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-DistributedInfo-scalableData?: object--><!--Device-DistributedInfo-scalableData?: object-End-->
+**废弃版本：** -1
+
+<!--Device-DistributedInfo-scalableData?: Record<string, RecordData>--><!--Device-DistributedInfo-scalableData?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -122,7 +128,9 @@ readonly status?: DistributedAccountStatus
 
 **类型：** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedInfo-readonly status?: DistributedAccountStatus--><!--Device-DistributedInfo-readonly status?: DistributedAccountStatus-End-->
 

@@ -14,5 +14,5 @@
 
 | Name | Description |
 | --- | --- |
-| [RadiusItem](arkts-arkui-radiusitem-t.md) | Defines the RadiusItem.The first element is the width of the rounded corner, the second is the height of the rounded corner. |
+| [RadiusItem](arkts-arkui-radiusitem-t.md) | Defines the RadiusItem. The first element is the width of the rounded corner, the second is the height of the rounded corner. |
 

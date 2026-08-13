@@ -14,7 +14,9 @@ function hash(path: string, algorithm: string): Promise<string>
 
 Calculates a hash value for a file. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,7 +65,9 @@ function hash(path: string, algorithm: string, callback: AsyncCallback<string>):
 
 Calculates a hash value for a file. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

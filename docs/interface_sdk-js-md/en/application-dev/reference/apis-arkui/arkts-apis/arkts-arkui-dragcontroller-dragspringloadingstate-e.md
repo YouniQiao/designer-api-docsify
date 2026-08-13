@@ -1,10 +1,12 @@
 # DragSpringLoadingState
 
-Defines the drag spring loading state.Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END
+Defines the drag spring loading state. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-dragController-export const enum DragSpringLoadingState--><!--Device-dragController-export const enum DragSpringLoadingState-End-->
 
@@ -16,11 +18,13 @@ Defines the drag spring loading state.Under default system configuration, if no 
 BEGIN = 0
 ```
 
-The user has remained stationary for a period, initiating the spring loading process.This state allows for some preparatory operations during spring loading.
+The user has remained stationary for a period, initiating the spring loading process. This state allows for some preparatory operations during spring loading.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +38,13 @@ The user has remained stationary for a period, initiating the spring loading pro
 UPDATE = 1
 ```
 
-Already in the spring loading state. The system periodically checks the user's hover status.If the user remains stationary, it triggers an UPDATE state notification at regular intervals.This state allows for UI effect refreshes to emphasize the hover state.
+Already in the spring loading state. The system periodically checks the user's hover status. If the user remains stationary, it triggers an UPDATE state notification at regular intervals. This state allows for UI effect refreshes to emphasize the hover state.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,6 +64,8 @@ The entire spring loading state ends. The application can perform cleanup operat
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DragSpringLoadingState-END = 2--><!--Device-DragSpringLoadingState-END = 2-End-->
@@ -70,11 +78,13 @@ The entire spring loading state ends. The application can perform cleanup operat
 CANCEL = 3
 ```
 
-After entering the BEGIN state, if the user moves out of the component range, exceeds the displacement threshold, lifts the finger, or switches windows (pull out), the CANCEL state is triggered.The application should restore the UI style and cancel any pending navigation or view switching actions.
+After entering the BEGIN state, if the user moves out of the component range, exceeds the displacement threshold, lifts the finger, or switches windows (pull out), the CANCEL state is triggered. The application should restore the UI style and cancel any pending navigation or view switching actions.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

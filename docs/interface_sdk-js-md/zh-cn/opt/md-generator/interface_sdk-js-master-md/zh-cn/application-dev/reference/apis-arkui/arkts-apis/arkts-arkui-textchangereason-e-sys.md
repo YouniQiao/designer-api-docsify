@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum TextChangeReason--><!--Device-unnamed-declare enum TextChangeReason-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ UNKNOWN = 0
 未知原因。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ INPUT = 1
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeReason-INPUT = 1--><!--Device-TextChangeReason-INPUT = 1-End-->
@@ -55,6 +61,8 @@ PASTE = 2
 粘贴。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ CUT = 3
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeReason-CUT = 3--><!--Device-TextChangeReason-CUT = 3-End-->
@@ -91,6 +101,8 @@ DRAG = 4
 拖拽。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +122,8 @@ AUTO_FILL = 5
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeReason-AUTO_FILL = 5--><!--Device-TextChangeReason-AUTO_FILL = 5-End-->
@@ -127,6 +141,8 @@ AI_WRITE = 6
 AI帮写。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +162,8 @@ REDO = 7
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeReason-REDO = 7--><!--Device-TextChangeReason-REDO = 7-End-->
@@ -163,6 +181,8 @@ UNDO = 8
 撤销。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,6 +202,8 @@ CONTROLLER = 9
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeReason-CONTROLLER = 9--><!--Device-TextChangeReason-CONTROLLER = 9-End-->
@@ -199,6 +221,8 @@ ACCESSIBILITY = 10
 无障碍接口。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,6 +242,8 @@ COLLABORATION = 11
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeReason-COLLABORATION = 11--><!--Device-TextChangeReason-COLLABORATION = 11-End-->
@@ -235,6 +261,8 @@ STYLUS = 12
 手写笔。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Describes the information about the window layout.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface WindowLayoutInfo--><!--Device-window-interface WindowLayoutInfo-End-->
 
@@ -20,11 +22,13 @@ import { window } from '@kit.ArkUI';
 windowAlpha?: number
 ```
 
-The window's alpha fade level. This number is in the range 0.0 to 1.0,where 0.0 is fully transparent and 1.0 is fully opaque.
+The window's alpha fade level. This number is in the range 0.0 to 1.0, where 0.0 is fully transparent and 1.0 is fully opaque.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,9 +48,11 @@ Window rectangle, that is, the position and size of the window on the display.
 
 **Type:** Rect
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowLayoutInfo-windowRect: Rect--><!--Device-WindowLayoutInfo-windowRect: Rect-End-->
 

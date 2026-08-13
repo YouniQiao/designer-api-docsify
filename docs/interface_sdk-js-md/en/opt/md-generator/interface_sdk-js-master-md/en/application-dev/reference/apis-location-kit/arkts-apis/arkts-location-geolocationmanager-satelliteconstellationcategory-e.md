@@ -2,7 +2,9 @@
 
 Enum for satellite constellation category.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum SatelliteConstellationCategory--><!--Device-geoLocationManager-export enum SatelliteConstellationCategory-End-->
 
@@ -16,7 +18,9 @@ CONSTELLATION_CATEGORY_UNKNOWN = 0
 
 Invalid value.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_UNKNOWN = 0--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_UNKNOWN = 0-End-->
 
@@ -30,7 +34,9 @@ CONSTELLATION_CATEGORY_GPS = 1
 
 GPS.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GPS = 1--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GPS = 1-End-->
 
@@ -44,7 +50,9 @@ CONSTELLATION_CATEGORY_SBAS = 2
 
 SBAS.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_SBAS = 2--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_SBAS = 2-End-->
 
@@ -58,7 +66,9 @@ CONSTELLATION_CATEGORY_GLONASS = 3
 
 GLONASS.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GLONASS = 3--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GLONASS = 3-End-->
 
@@ -72,7 +82,9 @@ CONSTELLATION_CATEGORY_QZSS = 4
 
 QZSS.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_QZSS = 4--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_QZSS = 4-End-->
 
@@ -86,7 +98,9 @@ CONSTELLATION_CATEGORY_BEIDOU = 5
 
 BEIDOU.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_BEIDOU = 5--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_BEIDOU = 5-End-->
 
@@ -100,7 +114,9 @@ CONSTELLATION_CATEGORY_GALILEO = 6
 
 GALILEO.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GALILEO = 6--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GALILEO = 6-End-->
 
@@ -114,7 +130,9 @@ CONSTELLATION_CATEGORY_IRNSS = 7
 
 IRNSS.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_IRNSS = 7--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_IRNSS = 7-End-->
 

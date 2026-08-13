@@ -1,13 +1,12 @@
 # AbilityFirstFrameStateData（系统接口）
 
-定义了首帧绘制完成事件回调上报的数据结构。通过  
-[on](./../@ohos.app.ability.appManager:appManager.on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string))注册监听Ability首帧绘制完成事件后，可使用  
-[AbilityFirstFrameStateObserver](arkts-ability-abilityfirstframestateobserver-i-sys.md#AbilityFirstFrameStateObserver)的  
-[onAbilityFirstFrameDrawn](arkts-ability-abilityfirstframestateobserver-i-sys.md#onAbilityFirstFrameDrawn)回调获取上报的数据结构。
+定义了首帧绘制完成事件回调上报的数据结构。通过 [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) 注册监听Ability首帧绘制完成事件后，可使用 [AbilityFirstFrameStateObserver](arkts-ability-abilityfirstframestateobserver-i-sys.md#AbilityFirstFrameStateObserver（系统接口）)的 [onAbilityFirstFrameDrawn](arkts-ability-abilityfirstframestateobserver-i-sys.md#onAbilityFirstFrameDrawn) 回调获取上报的数据结构。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AbilityFirstFrameStateData--><!--Device-unnamed-export interface AbilityFirstFrameStateData-End-->
 
@@ -25,9 +24,11 @@ Ability名称。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFirstFrameStateData-abilityName: string--><!--Device-AbilityFirstFrameStateData-abilityName: string-End-->
 
@@ -43,13 +44,15 @@ appIndex: int
 
 DLP沙盒的索引。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **默认值：** 0
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFirstFrameStateData-appIndex: int--><!--Device-AbilityFirstFrameStateData-appIndex: int-End-->
 
@@ -67,9 +70,11 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFirstFrameStateData-bundleName: string--><!--Device-AbilityFirstFrameStateData-bundleName: string-End-->
 
@@ -89,9 +94,11 @@ isColdStart: boolean
 
 **默认值：** false
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFirstFrameStateData-isColdStart: boolean--><!--Device-AbilityFirstFrameStateData-isColdStart: boolean-End-->
 
@@ -109,9 +116,11 @@ moduleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AbilityFirstFrameStateData-moduleName: string--><!--Device-AbilityFirstFrameStateData-moduleName: string-End-->
 

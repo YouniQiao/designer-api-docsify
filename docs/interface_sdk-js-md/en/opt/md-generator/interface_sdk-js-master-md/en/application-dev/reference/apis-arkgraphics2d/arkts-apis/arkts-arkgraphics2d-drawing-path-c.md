@@ -1,15 +1,10 @@
 # Path
 
-A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
+A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-drawing-class Path--><!--Device-drawing-class Path-End-->
 
@@ -27,11 +22,11 @@ import { drawing } from '@kit.ArkGraphics2D';
 addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 ```
 
-Adds an arc to this path.When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added:
+Adds an arc to this path. When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added: 1. The result of **startAngle** modulo 90 is close to 0. 2. The value of **sweepAngle** is not in the range of (-360, 360). In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
 
-1. The result of **startAngle** modulo 90 is close to 0.2. The value of **sweepAngle** is not in the range of (-360, 360).In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void--><!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void-End-->
 
@@ -49,7 +44,7 @@ Adds an arc to this path.When **startAngle** and **sweepAngle** meet the followi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## addCircle
 
@@ -59,7 +54,9 @@ addCircle(x: number, y: number, radius: number, pathDirection?: PathDirection): 
 
 Adds a circle to this path in the specified direction. The start point of the circle is (x + radius, y).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void--><!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void-End-->
 
@@ -78,7 +75,7 @@ Adds a circle to this path in the specified direction. The start point of the ci
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## addOval
 
@@ -88,7 +85,9 @@ addOval(rect: common2D.Rect, start: number, pathDirection?: PathDirection): void
 
 Adds the inscribed ellipse of a rectangle to this path in the specified direction.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void--><!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void-End-->
 
@@ -106,7 +105,7 @@ Adds the inscribed ellipse of a rectangle to this path in the specified directio
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## addPath
 
@@ -116,7 +115,9 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 Transforms the points in a path by a matrix and stores the resulting path in the current **Path** object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void--><!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void-End-->
 
@@ -133,7 +134,7 @@ Transforms the points in a path by a matrix and stores the resulting path in the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## addPolygon
 
@@ -143,7 +144,9 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 Adds a polygon to this path.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void--><!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void-End-->
 
@@ -160,7 +163,7 @@ Adds a polygon to this path.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## addRect
 
@@ -170,7 +173,9 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 
 Adds a rectangle to a path in the specified direction. The start point is the upper left corner of the rectangle.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void--><!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void-End-->
 
@@ -187,7 +192,7 @@ Adds a rectangle to a path in the specified direction. The start point is the up
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## addRoundRect
 
@@ -197,7 +202,9 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 Adds a rounded rectangle to a path in the specified direction. When the path direction is clockwise, the start point is at the intersection of the rounded rectangle's left boundary and its lower left corner. When the path direction is counterclockwise, the start point is at the intersection point between the left boundary and the upper left corner.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void--><!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void-End-->
 
@@ -214,7 +221,7 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## approximate
 
@@ -222,20 +229,11 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 approximate(acceptableError: number): Array<number>
 ```
 
-Converts the existing path into an approximate path consisting of consecutive line segments.
-
-> **NOTE：**
-> 
-> - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting
-> performance and memory usage.
-> 
-> - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially
-> distorting the original shape.
-> 
-> - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies
-> them to polygons by keeping just the start and end points of their Bezier curve segments.
+Converts the existing path into an approximate path consisting of consecutive line segments. > **NOTE：**> > - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting > performance and memory usage. > > - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially > distorting the original shape. > > - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies > them to polygons by keeping just the start and end points of their Bezier curve segments.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-Path-approximate(acceptableError: number): Array<number>--><!--Device-Path-approximate(acceptableError: number): Array<number>-End-->
 
@@ -257,7 +255,41 @@ Converts the existing path into an approximate path consisting of consecutive li
 
 | Error Code ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+
+## approximate
+
+```TypeScript
+approximate(acceptableError: number): Array<number> | undefined
+```
+
+Approximates the path with a series of line segments.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+<!--Device-Path-approximate(acceptableError: double): Array<double> | undefined--><!--Device-Path-approximate(acceptableError: double): Array<double> | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| acceptableError | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;number & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## arcTo
 
@@ -267,7 +299,9 @@ arcTo(x1: number, y1: number, x2: number, y2: number, startDeg: number, sweepDeg
 
 Draws an arc to this path using angle arc mode. This mode first defines a rectangle and takes its inscribed ellipse. Then, it specifies a start angle and a sweep angle. The arc is the portion of the ellipse's circumference defined by the start angle and the sweep angle. By default, a line segment from the last point of the path to the start point of the arc is also added.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -290,7 +324,7 @@ Draws an arc to this path using angle arc mode. This mode first defines a rectan
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## buildFromSvgString
 
@@ -300,7 +334,9 @@ buildFromSvgString(str: string): boolean
 
 Parses the path represented by an SVG string.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-buildFromSvgString(str: string): boolean--><!--Device-Path-buildFromSvgString(str: string): boolean-End-->
 
@@ -322,7 +358,7 @@ Parses the path represented by an SVG string.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## close
 
@@ -332,7 +368,9 @@ close(): void
 
 Closes this path by adding a line segment from the start point to the last point of the path.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-close(): void--><!--Device-Path-close(): void-End-->
 
@@ -344,9 +382,11 @@ Closes this path by adding a line segment from the start point to the last point
 conicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number): void
 ```
 
-Draws a conic curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
+Draws a conic curve from the last point of this path to the target point. If the path is empty, the start point ( 0, 0) is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -368,7 +408,7 @@ Draws a conic curve from the last point of this path to the target point. If the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## constructor
 
@@ -378,7 +418,9 @@ constructor()
 
 Constructs a path.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -394,7 +436,9 @@ constructor(path: Path)
 
 Constructs a copy of an existing path.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -414,10 +458,11 @@ Constructs a copy of an existing path.
 contains(x: number, y: number): boolean
 ```
 
-Checks whether a coordinate point is included in this path. For details, see  
-[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md#PathFillType).
+Checks whether a coordinate point is included in this path. For details, see [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md#PathFillType).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-contains(x: double, y: double): boolean--><!--Device-Path-contains(x: double, y: double): boolean-End-->
 
@@ -440,7 +485,7 @@ Checks whether a coordinate point is included in this path. For details, see
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## convertToSvgString
 
@@ -451,6 +496,8 @@ convertToSvgString(): string
 Converts path to an SVG string.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -472,7 +519,9 @@ cubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: nu
 
 Draws a cubic Bezier curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -495,7 +544,7 @@ Draws a cubic Bezier curve from the last point of this path to the target point.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getBounds
 
@@ -507,7 +556,31 @@ Obtains the minimum bounding rectangle that encloses this path.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-Path-getBounds(): common2D.Rect--><!--Device-Path-getBounds(): common2D.Rect-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect |
+
+## getBounds
+
+```TypeScript
+getBounds(): common2D.Rect | undefined
+```
+
+Obtains the minimum bounding rectangle that encloses this path.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Path-getBounds(): common2D.Rect | undefined--><!--Device-Path-getBounds(): common2D.Rect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -526,6 +599,8 @@ getConicWeightData(): Array<number>
 Gets path conic weight data.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -549,7 +624,31 @@ Obtains the fill type of a path.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-Path-getFillType(): PathFillType--><!--Device-Path-getFillType(): PathFillType-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) |
+
+## getFillType
+
+```TypeScript
+getFillType(): PathFillType | undefined
+```
+
+Gets fill type, the rule used to fill path.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+<!--Device-Path-getFillType(): PathFillType | undefined--><!--Device-Path-getFillType(): PathFillType | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -569,9 +668,35 @@ Gets the last point of the path.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Path-getLastPoint(): common2D.Point--><!--Device-Path-getLastPoint(): common2D.Point-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Point |
+
+## getLastPoint
+
+```TypeScript
+getLastPoint(): common2D.Point | undefined
+```
+
+Gets the last point of the path.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Path-getLastPoint(): common2D.Point | undefined--><!--Device-Path-getLastPoint(): common2D.Point | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -589,7 +714,9 @@ getLength(forceClosed: boolean): number
 
 Obtains the path length.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-getLength(forceClosed: boolean): double--><!--Device-Path-getLength(forceClosed: boolean): double-End-->
 
@@ -615,7 +742,9 @@ getMatrix(forceClosed: boolean, distance: number, matrix: Matrix, flags: PathMea
 
 Obtains a transformation matrix at a specific position along the path, which represents the coordinates and orientation of that point.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean--><!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean-End-->
 
@@ -640,7 +769,7 @@ Obtains a transformation matrix at a specific position along the path, which rep
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getPathIterator
 
@@ -652,7 +781,31 @@ Obtains the operation iterator of this path.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-Path-getPathIterator(): PathIterator--><!--Device-Path-getPathIterator(): PathIterator-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) |
+
+## getPathIterator
+
+```TypeScript
+getPathIterator(): PathIterator | undefined
+```
+
+Obtains the operation iterator of this path.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Path-getPathIterator(): PathIterator | undefined--><!--Device-Path-getPathIterator(): PathIterator | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -671,6 +824,8 @@ getPointData(): Array<common2D.Point>
 Gets path point data.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -692,7 +847,9 @@ getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D
 
 Obtains the coordinates and tangent at a distance from the start point of this path.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean--><!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean-End-->
 
@@ -717,7 +874,7 @@ Obtains the coordinates and tangent at a distance from the start point of this p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getSegment
 
@@ -727,7 +884,9 @@ getSegment(forceClosed: boolean, start: number, stop: number, startWithMoveTo: b
 
 Extracts a segment of a path and appends it to a destination path.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean--><!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean-End-->
 
@@ -759,6 +918,8 @@ Gets path verb data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Path-getVerbData(): Array<PathIteratorVerb>--><!--Device-Path-getVerbData(): Array<PathIteratorVerb>-End-->
@@ -779,7 +940,9 @@ interpolate(other: Path, weight: number, interpolatedPath: Path): boolean
 
 Interpolates between the existing path and another path based on the given weight and stores the result in the target path object. Interpolation is achievable if the two paths have the same number of points. The target path is created based on the structure of the existing path.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean--><!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean-End-->
 
@@ -803,7 +966,7 @@ Interpolates between the existing path and another path based on the given weigh
 
 | Error Code ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## isClosed
 
@@ -813,7 +976,9 @@ isClosed(): boolean
 
 Checks whether a path is closed.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-isClosed(): boolean--><!--Device-Path-isClosed(): boolean-End-->
 
@@ -833,7 +998,9 @@ isEmpty(): boolean
 
 Checks whether a path is empty.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Path-isEmpty(): boolean--><!--Device-Path-isEmpty(): boolean-End-->
 
@@ -854,6 +1021,8 @@ isEqual(path: Path): boolean
 Checks if two paths are equal.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -881,7 +1050,9 @@ isInterpolate(other: Path): boolean
 
 Checks whether the existing path and another path are compatible for interpolation in terms of structure and operation sequence. If the paths contain conic operations, the weight values of the operations must be the same.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Path-isInterpolate(other: Path): boolean--><!--Device-Path-isInterpolate(other: Path): boolean-End-->
 
@@ -905,10 +1076,11 @@ Checks whether the existing path and another path are compatible for interpolati
 isInverseFillType(): boolean
 ```
 
-Checks whether the current path fill type is the inverse fill type. For example, the fill types **Winding** and  
-**EvenOdd** are not inverse types, while **InverseWinding** and **InverseEvenOdd** are inverse types.
+Checks whether the current path fill type is the inverse fill type. For example, the fill types **Winding** and **EvenOdd** are not inverse types, while **InverseWinding** and **InverseEvenOdd** are inverse types.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-isInverseFillType(): boolean--><!--Device-Path-isInverseFillType(): boolean-End-->
 
@@ -928,7 +1100,9 @@ isRect(rect: common2D.Rect | null): boolean
 
 Checks whether a path forms a rectangle.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-isRect(rect: common2D.Rect | null): boolean--><!--Device-Path-isRect(rect: common2D.Rect | null): boolean-End-->
 
@@ -952,9 +1126,11 @@ Checks whether a path forms a rectangle.
 lineTo(x: number, y: number): void
 ```
 
-Draws a line segment from the last point of this path to the target point. If the path is empty, the start point(0, 0) is used.
+Draws a line segment from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -973,7 +1149,7 @@ Draws a line segment from the last point of this path to the target point. If th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## moveTo
 
@@ -983,7 +1159,9 @@ moveTo(x: number, y: number): void
 
 Sets the start point of this path.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1002,7 +1180,7 @@ Sets the start point of this path.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## offset
 
@@ -1010,10 +1188,11 @@ Sets the start point of this path.
 offset(dx: number, dy: number): Path
 ```
 
-Offsets this path by specified distances along the X axis and Y axis and stores the resulting path in the  
-**Path** object returned.
+Offsets this path by specified distances along the X axis and Y axis and stores the resulting path in the **Path** object returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-Path-offset(dx: number, dy: number): Path--><!--Device-Path-offset(dx: number, dy: number): Path-End-->
 
@@ -1036,7 +1215,42 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## offset
+
+```TypeScript
+offset(dx: number, dy: number): Path | undefined
+```
+
+Offsets this path by specified distances along the X axis and Y axis and stores the resulting path in the Path object returned.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Path-offset(dx: double, dy: double): Path | undefined--><!--Device-Path-offset(dx: double, dy: double): Path | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dx | number | Yes |
+| dy | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## op
 
@@ -1046,7 +1260,9 @@ op(path: Path, pathOp: PathOp): boolean
 
 Combines this path with the passed-in path based on the specified operation mode.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-op(path: Path, pathOp: PathOp): boolean--><!--Device-Path-op(path: Path, pathOp: PathOp): boolean-End-->
 
@@ -1069,7 +1285,7 @@ Combines this path with the passed-in path based on the specified operation mode
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## quadTo
 
@@ -1079,7 +1295,9 @@ quadTo(ctrlX: number, ctrlY: number, endX: number, endY: number): void
 
 Draws a quadratic Bezier curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1100,7 +1318,7 @@ Draws a quadratic Bezier curve from the last point of this path to the target po
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## rConicTo
 
@@ -1108,9 +1326,11 @@ Draws a quadratic Bezier curve from the last point of this path to the target po
 rConicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number): void
 ```
 
-Draws a conic curve from the last point of this path to a point relative to the last point. If the path is empty,the start point (0, 0) is used.
+Draws a conic curve from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1132,7 +1352,7 @@ Draws a conic curve from the last point of this path to a point relative to the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## rCubicTo
 
@@ -1142,7 +1362,9 @@ rCubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: n
 
 Draws a cubic Bezier curve from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1165,7 +1387,7 @@ Draws a cubic Bezier curve from the last point of this path to a point relative 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## rLineTo
 
@@ -1173,9 +1395,11 @@ Draws a cubic Bezier curve from the last point of this path to a point relative 
 rLineTo(dx: number, dy: number): void
 ```
 
-Draws a line segment from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
+Draws a line segment from the last point of this path to a point relative to the last point. If the path is empty , the start point (0, 0) is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1194,7 +1418,7 @@ Draws a line segment from the last point of this path to a point relative to the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## rMoveTo
 
@@ -1204,7 +1428,9 @@ rMoveTo(dx: number, dy: number): void
 
 Sets the start position relative to the last point of this path. If the path is empty, the start point (0, 0) is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1223,7 +1449,7 @@ Sets the start position relative to the last point of this path. If the path is 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## rQuadTo
 
@@ -1233,7 +1459,9 @@ rQuadTo(dx1: number, dy1: number, dx2: number, dy2: number): void
 
 Draws a quadratic Bezier curve from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1254,7 +1482,7 @@ Draws a quadratic Bezier curve from the last point of this path to a point relat
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## reset
 
@@ -1264,7 +1492,9 @@ reset(): void
 
 Resets the path data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-reset(): void--><!--Device-Path-reset(): void-End-->
 
@@ -1278,7 +1508,9 @@ rewind(): void
 
 Rewinds a path by clearing all its points and lines but reserves the memory space.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Path-rewind(): void--><!--Device-Path-rewind(): void-End-->
 
@@ -1292,7 +1524,9 @@ set(src: Path): void
 
 Updates the existing path with another path.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1312,9 +1546,11 @@ Updates the existing path with another path.
 setFillType(pathFillType: PathFillType): void
 ```
 
-Sets the fill type of this path. The fill type determines how "inside" of the path is drawn. For example, when the fill type **Winding** is used, "inside" of the path is determined by a non-zero sum of signed edge crossings.When **EvenOdd** is used, "inside" of the path is determined by an odd number of edge crossings.
+Sets the fill type of this path. The fill type determines how "inside" of the path is drawn. For example, when the fill type **Winding** is used, "inside" of the path is determined by a non-zero sum of signed edge crossings. When **EvenOdd** is used, "inside" of the path is determined by an odd number of edge crossings.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-setFillType(pathFillType: PathFillType): void--><!--Device-Path-setFillType(pathFillType: PathFillType): void-End-->
 
@@ -1330,7 +1566,7 @@ Sets the fill type of this path. The fill type determines how "inside" of the pa
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setLastPoint
 
@@ -1340,7 +1576,9 @@ setLastPoint(x: number, y: number): void
 
 Sets the last point of a path.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Path-setLastPoint(x: double, y: double): void--><!--Device-Path-setLastPoint(x: double, y: double): void-End-->
 
@@ -1363,6 +1601,8 @@ Toggles the fill type of the path to the inverse type. For example, if the **Win
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-Path-toggleInverseFillType(): void--><!--Device-Path-toggleInverseFillType(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1375,7 +1615,9 @@ transform(matrix: Matrix): void
 
 Transforms the points in a path by matrix.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Path-transform(matrix: Matrix): void--><!--Device-Path-transform(matrix: Matrix): void-End-->
 
@@ -1391,4 +1633,4 @@ Transforms the points in a path by matrix.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

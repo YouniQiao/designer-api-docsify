@@ -1,17 +1,17 @@
 # ReqPermissionDetail
 
 ```TypeScript
-export type ReqPermissionDetail = _BundleInfo.ReqPermissionDetail
+export type ReqPermissionDetail = _ReqPermissionDetail
 ```
 
 Defines the detailed information of the permissions to request from the system.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type ReqPermissionDetail = _BundleInfo.ReqPermissionDetail--><!--Device-bundleManager-export type ReqPermissionDetail = _BundleInfo.ReqPermissionDetail-End-->
+<!--Device-bundleManager-export type ReqPermissionDetail = _ReqPermissionDetail--><!--Device-bundleManager-export type ReqPermissionDetail = _ReqPermissionDetail-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.ReqPermissionDetail
+**Property type:** _ReqPermissionDetail

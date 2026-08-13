@@ -4,6 +4,8 @@ Provides accessibility configuration of the slider prefix and suffix.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface SliderCustomContentOptions--><!--Device-unnamed-interface SliderCustomContentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Provides accessibility configuration of the slider prefix and suffix.
 accessibilityDescription?: ResourceStr
 ```
 
-Detailed functional description for assistive technologies.
-
-Default value: **"Double-tap to activate"**
+Detailed functional description for assistive technologies. Default value: **"Double-tap to activate"**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,15 +38,13 @@ Default value: **"Double-tap to activate"**
 accessibilityGroup?: boolean
 ```
 
-Whether to enable accessibility grouping.
-
-The value **true** means to enable accessibility grouping, and **false** means the opposite. When accessibility grouping is enabled, the component and all its children are treated as a single selectable unit, and the accessibility service will no longer focus on the individual child components.
-
-Default value: **false**
+Whether to enable accessibility grouping. The value **true** means to enable accessibility grouping, and **false** means the opposite. When accessibility grouping is enabled, the component and all its children are treated as a single selectable unit, and the accessibility service will no longer focus on the individual child components. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,23 +60,13 @@ Default value: **false**
 accessibilityLevel?: string
 ```
 
-Whether the component can be recognized by accessibility services.
-
-The options are as follows:
-
-**"auto"**: It is treated as "yes" by the system.
-
-**"yes"**: The component can be recognized by accessibility services.
-
-**"no"**: The component cannot be recognized by accessibility services.
-
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
-
-Default value: **"auto"**
+Whether the component can be recognized by accessibility services. The options are as follows: **"auto"**: It is treated as "yes" by the system. **"yes"**: The component can be recognized by accessibility services. **"no"**: The component cannot be recognized by accessibility services. **"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services. Default value: **"auto"**
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,13 +82,13 @@ Default value: **"auto"**
 accessibilityText?: ResourceStr
 ```
 
-Text for assistive technologies (for example, screen readers).
-
-Default value: **""**
+Text for assistive technologies (for example, screen readers). Default value: **""**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

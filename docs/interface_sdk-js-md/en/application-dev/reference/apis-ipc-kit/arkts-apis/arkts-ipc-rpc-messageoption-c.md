@@ -2,9 +2,11 @@
 
 Defines the options used to construct the **MessageOption** object.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-rpc-class MessageOption--><!--Device-rpc-class MessageOption-End-->
 
@@ -27,6 +29,8 @@ A constructor used to create a **MessageOption** object.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -65,6 +69,8 @@ A constructor used to create a **MessageOption** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-constructor(async?: boolean)--><!--Device-MessageOption-constructor(async?: boolean)-End-->
@@ -99,7 +105,9 @@ A constructor used to create a MessageOption instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageOption-constructor(isAsync: boolean)--><!--Device-MessageOption-constructor(isAsync: boolean)-End-->
 
@@ -121,7 +129,9 @@ A constructor used to create a MessageOption instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageOption-constructor()--><!--Device-MessageOption-constructor()-End-->
 
@@ -137,7 +147,9 @@ A constructor used to create a MessageOption instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageOption-constructor(syncFlags: int)--><!--Device-MessageOption-constructor(syncFlags: int)-End-->
 
@@ -159,7 +171,9 @@ A constructor used to create a MessageOption instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)--><!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)-End-->
 
@@ -174,21 +188,17 @@ A constructor used to create a MessageOption instance.
 
 ## getFlags
 
-ArkTS-Dyn:
-```TypeScript
-getFlags(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getFlags(): int
 ```
 
 Obtains the call flag, which can be synchronous or asynchronous.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -200,7 +210,7 @@ Obtains the call flag, which can be synchronous or asynchronous.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Call flag obtained. **0**: synchronous call flag; **1**: asynchronous call flag. |
+| int | Call flag obtained. **0**: synchronous call flag; **1**: asynchronous call flag. |
 
 ## Examples
 
@@ -224,21 +234,17 @@ try {
 
 ## getWaitTime
 
-ArkTS-Dyn:
-```TypeScript
-getWaitTime(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getWaitTime(): int
 ```
 
 Obtains the maximum wait time for this RPC call.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -250,7 +256,7 @@ Obtains the maximum wait time for this RPC call.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Return the maximum waiting time obtained by the RPC, in seconds. The default value is **TF_WAIT_TIME**. |
+| int | Return the maximum waiting time obtained by the RPC, in seconds. The default value is **TF_WAIT_TIME**. |
 
 ## Examples
 
@@ -278,9 +284,11 @@ isAsync(): boolean
 
 Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -316,9 +324,11 @@ setAsync(isAsync: boolean): void
 
 Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -348,21 +358,17 @@ try {
 
 ## setFlags
 
-ArkTS-Dyn:
-```TypeScript
-setFlags(flags: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setFlags(flags: int): void
 ```
 
 Sets the call flag, which can be synchronous or asynchronous.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -374,7 +380,7 @@ Sets the call flag, which can be synchronous or asynchronous.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call flag to set. **0**: synchronous call flag; **1**: asynchronous call flag. |
+| flags | int | Yes | Call flag to set. **0**: synchronous call flag; **1**: asynchronous call flag. |
 
 ## Examples
 
@@ -395,21 +401,17 @@ try {
 
 ## setWaitTime
 
-ArkTS-Dyn:
-```TypeScript
-setWaitTime(waitTime: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setWaitTime(waitTime: int): void
 ```
 
 Sets the maximum wait time for this RPC call.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -421,7 +423,7 @@ Sets the maximum wait time for this RPC call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the maximum waiting time for RPC, in seconds. The upper limit is 3000 seconds. |
+| waitTime | int | Yes | Indicates the maximum waiting time for RPC, in seconds. The upper limit is 3000 seconds. |
 
 ## Examples
 
@@ -453,7 +455,9 @@ Indication to **sendMessageRequest** for passing the file descriptor.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -475,7 +479,9 @@ Asynchronous call.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -497,7 +503,9 @@ Synchronous call.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -511,7 +519,7 @@ Synchronous call.
 static readonly TF_WAIT_TIME: number
 ```
 
-RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are  advised not to change the waiting time.
+RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are advised not to change the waiting time.
 
 **Type:** number
 
@@ -519,7 +527,9 @@ RPC wait time, in seconds. This parameter cannot be used in IPC. The default wai
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

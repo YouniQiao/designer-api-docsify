@@ -3,6 +3,7 @@
 ## Text
 
 ```TypeScript
+@Builder
 export declare function Text(
     style: CustomBuilderT<TextAttribute>,
     content_?: CustomBuilder,
@@ -15,11 +16,11 @@ export declare function Text(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-export declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-@Builderexport declare function Text(    style: CustomBuilderT<TextAttribute>,    content_?: CustomBuilder,): TextAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,19 +28,20 @@ export declare function Text(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextAttribute](arkts-arkui-text-textattribute-i.md)&gt; | 是 | Text属性实例。 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
+| style | CustomBuilderT&lt;TextAttribute&gt; | 是 | Text属性实例。 |
+| content_ | CustomBuilder | 否 | 容器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAttribute](arkts-arkui-text-textattribute-i.md) |  |
+| TextAttribute |  |
 
 
 ## Text
 
 ```TypeScript
+@ComponentBuilder
 export declare function Text(
     content?: string | Resource, value?: TextOptions, 
     content_?: CustomBuilder,
@@ -52,9 +54,11 @@ export declare function Text(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-export declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Text(    content?: string | Resource, value?: TextOptions,     content_?: CustomBuilder,): TextAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +68,11 @@ export declare function Text(
 | --- | --- | --- | --- |
 | content | string \| [Resource](arkts-arkui-resource-t.md) | 否 |  |
 | value | [TextOptions](arkts-arkui-text-textoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAttribute](arkts-arkui-text-textattribute-i.md) |  |
+| TextAttribute |  |
 

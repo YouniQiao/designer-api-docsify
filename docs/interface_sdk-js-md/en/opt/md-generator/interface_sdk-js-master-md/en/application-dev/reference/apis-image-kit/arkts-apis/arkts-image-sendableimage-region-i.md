@@ -1,12 +1,14 @@
 # Region
 
-Describes the region information.It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
+Describes the region information. It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
 
-**Inheritance/Implementation:** Region extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** Region extends lang.ISendable
 
 **Since:** 12
 
-<!--Device-sendableImage-interface Region extends lang.ISendable--><!--Device-sendableImage-interface Region extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendableImage-interface Region--><!--Device-sendableImage-interface Region-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -28,6 +30,8 @@ Region size.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -48,6 +52,8 @@ X coordinate, in px.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -67,6 +73,8 @@ Y coordinate, in px.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

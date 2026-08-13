@@ -16,6 +16,8 @@ Hide the AI node graph Sheet.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-imageGeneration-function hideGeneratorNodeGraph(uiContext: UIContext): Promise<void>--><!--Device-imageGeneration-function hideGeneratorNodeGraph(uiContext: UIContext): Promise<void>-End-->

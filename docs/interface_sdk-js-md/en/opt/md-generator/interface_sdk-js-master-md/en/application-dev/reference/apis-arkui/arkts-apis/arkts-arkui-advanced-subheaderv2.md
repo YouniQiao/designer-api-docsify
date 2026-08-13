@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.SubHeaderV2(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)
+# @ohos.arkui.advanced.SubHeaderV2
 
 ## Modules to Import
 

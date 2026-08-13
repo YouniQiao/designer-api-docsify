@@ -1,8 +1,10 @@
 # AppDistributionType
 
-应用程序签名证书的分发类型。详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#ApplicationInfo)的appDistributionType属性。
+应用程序签名证书的分发类型。详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#ApplicationInfo)的appDistributionType属 性。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-enum AppDistributionType--><!--Device-bundleManager-enum AppDistributionType-End-->
 
@@ -17,6 +19,8 @@ APP_GALLERY = 1
 应用市场安装的应用。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ ENTERPRISE = 2
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
@@ -49,6 +55,8 @@ ENTERPRISE_NORMAL = 3
 普通企业应用。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ ENTERPRISE_MDM = 4
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AppDistributionType-ENTERPRISE_MDM = 4--><!--Device-AppDistributionType-ENTERPRISE_MDM = 4-End-->
@@ -82,6 +92,8 @@ INTERNALTESTING = 5
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AppDistributionType-INTERNALTESTING = 5--><!--Device-AppDistributionType-INTERNALTESTING = 5-End-->
@@ -97,6 +109,8 @@ CROWDTESTING = 6
 众包测试应用。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

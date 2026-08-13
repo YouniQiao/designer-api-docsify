@@ -2,14 +2,14 @@
 
 Defines the grid container attribute from inheritance Column
 
-**Inheritance/Implementation:** GridContainerAttribute extends [ColumnAttribute](arkts-arkui-column-attribute.md#ColumnAttribute)
+**Inheritance/Implementation:** GridContainerAttribute extends ColumnAttribute
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColAttribute](grid_col/GridColAttribute)
+**Substitutes:** grid_col/GridColAttribute and grid_row/GridRowAttribute
 
-<!--Device-unnamed-declare class GridContainerAttribute extends ColumnAttribute--><!--Device-unnamed-declare class GridContainerAttribute extends ColumnAttribute-End-->
+<!--Device-unnamed-declare class GridContainerAttribute--><!--Device-unnamed-declare class GridContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

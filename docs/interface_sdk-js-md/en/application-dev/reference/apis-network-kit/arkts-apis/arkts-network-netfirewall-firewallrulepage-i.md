@@ -6,6 +6,8 @@ Rule page information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-interface FirewallRulePage--><!--Device-netFirewall-interface FirewallRulePage-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -30,6 +32,8 @@ Page data: all records displayed on this page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-FirewallRulePage-data: Array<NetFirewallRule>--><!--Device-FirewallRulePage-data: Array<NetFirewallRule>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -47,6 +51,8 @@ Current page number: indicates the page number of this query.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-FirewallRulePage-page: number--><!--Device-FirewallRulePage-page: number-End-->
 
@@ -66,6 +72,8 @@ Page size: maximum number of records on a page for this query.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-FirewallRulePage-pageSize: number--><!--Device-FirewallRulePage-pageSize: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -83,6 +91,8 @@ Total pages: total number of pages.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-FirewallRulePage-totalPage: number--><!--Device-FirewallRulePage-totalPage: number-End-->
 

@@ -8,6 +8,8 @@ type DataCallback = (deviceId: string, msg: ArrayBuffer) => void
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-conversation-type DataCallback = (deviceId: string, msg: ArrayBuffer) => void--><!--Device-conversation-type DataCallback = (deviceId: string, msg: ArrayBuffer) => void-End-->

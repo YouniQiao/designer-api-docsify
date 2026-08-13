@@ -1,14 +1,16 @@
 # SceneDetection (System API)
 
-Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#SceneDetectionQuery).
+Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#SceneDetectionQuery-(System-API)).
 
-**Inheritance/Implementation:** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#SceneDetectionQuery)
+**Inheritance/Implementation:** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#SceneDetectionQuery-(System-API))
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface SceneDetection extends SceneDetectionQuery--><!--Device-camera-interface SceneDetection extends SceneDetectionQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface SceneDetection--><!--Device-camera-interface SceneDetection-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,12 +28,13 @@ import { camera } from '@kit.CameraKit';
 enableSceneFeature(type: SceneFeatureType, enabled: boolean): void
 ```
 
-Enables or disables a scene feature. This API must be called after  
-[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md#SceneFeatureDetectionResult) of the corresponding scene feature is received.
+Enables or disables a scene feature. This API must be called after [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md#SceneFeatureDetectionResult-(System-API)) of the corresponding scene feature is received.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneDetection-enableSceneFeature(type: SceneFeatureType, enabled: boolean): void--><!--Device-SceneDetection-enableSceneFeature(type: SceneFeatureType, enabled: boolean): void-End-->
 
@@ -50,8 +53,8 @@ Enables or disables a scene feature. This API must be called after
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

@@ -20,7 +20,7 @@ Creates a **PasteData** object of the Want type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createData](pasteboard.createData(mimeType:)
+**Substitutes:** [createData](arkts-basicservices-pasteboard-createdata-f.md#createData)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createWantData(want: Want): PasteData--><!--Device-pasteboard-function createWantData(want: Want): PasteData-End-->
 

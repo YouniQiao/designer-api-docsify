@@ -2,9 +2,11 @@
 
 The profile state.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export enum ProfileState--><!--Device-eSIM-export enum ProfileState-End-->
 
@@ -20,9 +22,11 @@ PROFILE_STATE_UNSPECIFIED = -1
 
 Profile state not specified.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileState-PROFILE_STATE_UNSPECIFIED = -1--><!--Device-ProfileState-PROFILE_STATE_UNSPECIFIED = -1-End-->
 
@@ -38,9 +42,11 @@ PROFILE_STATE_DISABLED = 0
 
 Disabled profiles.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileState-PROFILE_STATE_DISABLED = 0--><!--Device-ProfileState-PROFILE_STATE_DISABLED = 0-End-->
 
@@ -56,9 +62,11 @@ PROFILE_STATE_ENABLED = 1
 
 Enabled profile.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileState-PROFILE_STATE_ENABLED = 1--><!--Device-ProfileState-PROFILE_STATE_ENABLED = 1-End-->
 

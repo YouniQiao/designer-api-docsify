@@ -6,6 +6,8 @@ Defines a contact's website.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Website--><!--Device-contact-class Website-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -29,6 +31,8 @@ Website that stores the contact information.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

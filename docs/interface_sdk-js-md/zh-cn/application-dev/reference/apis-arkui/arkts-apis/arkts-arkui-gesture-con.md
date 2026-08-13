@@ -12,6 +12,8 @@ Defines GestureGroup Component.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare const GestureGroup: GestureGroupInterface--><!--Device-unnamed-declare const GestureGroup: GestureGroupInterface-End-->
@@ -29,6 +31,8 @@ Defines LongPressGesture Component.
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -48,6 +52,8 @@ Defines PanGesture Component.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare const PanGesture: PanGestureInterface--><!--Device-unnamed-declare const PanGesture: PanGestureInterface-End-->
@@ -65,6 +71,8 @@ Defines PinchGesture Component.
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,6 +92,8 @@ Defines RotationGesture Component.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare const RotationGesture: RotationGestureInterface--><!--Device-unnamed-declare const RotationGesture: RotationGestureInterface-End-->
@@ -102,6 +112,8 @@ Defines SwipeGesture Component.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare const SwipeGesture: SwipeGestureInterface--><!--Device-unnamed-declare const SwipeGesture: SwipeGestureInterface-End-->
@@ -119,6 +131,8 @@ Defines TapGesture Component.
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

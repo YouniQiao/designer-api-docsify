@@ -8,9 +8,11 @@ const RULE_CAUTION_PRINT_LOG = 9223372036854775808n
 
 告警规则，当有告警时记录日志。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hichecker-const RULE_CAUTION_PRINT_LOG = 9223372036854775808n--><!--Device-hichecker-const RULE_CAUTION_PRINT_LOG = 9223372036854775808n-End-->
 
@@ -24,9 +26,11 @@ const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n
 
 告警规则，当有告警时让应用退出。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hichecker-const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n--><!--Device-hichecker-const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n-End-->
 
@@ -40,9 +44,11 @@ const RULE_CHECK_ABILITY_CONNECTION_LEAK = 8589934592n
 
 检测规则，检测是否发生ability泄露。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hichecker-const RULE_CHECK_ABILITY_CONNECTION_LEAK = 8589934592n--><!--Device-hichecker-const RULE_CHECK_ABILITY_CONNECTION_LEAK = 8589934592n-End-->
 
@@ -56,9 +62,11 @@ const RULE_CHECK_ARKUI_PERFORMANCE = 17179869184n
 
 检测规则，检测arkui性能。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hichecker-const RULE_CHECK_ARKUI_PERFORMANCE = 17179869184n--><!--Device-hichecker-const RULE_CHECK_ARKUI_PERFORMANCE = 17179869184n-End-->
 
@@ -74,7 +82,9 @@ const RULE_THREAD_CHECK_NETWORK_USAGE = 2n
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-hichecker-const RULE_THREAD_CHECK_NETWORK_USAGE = 2n--><!--Device-hichecker-const RULE_THREAD_CHECK_NETWORK_USAGE = 2n-End-->
 
@@ -88,9 +98,11 @@ const RULE_THREAD_CHECK_SLOW_PROCESS = 1n
 
 检测规则，检测是否有耗时函数被调用。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hichecker-const RULE_THREAD_CHECK_SLOW_PROCESS = 1n--><!--Device-hichecker-const RULE_THREAD_CHECK_SLOW_PROCESS = 1n-End-->
 

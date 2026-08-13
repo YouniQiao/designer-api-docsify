@@ -8,7 +8,9 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 切换输入法，使用promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
@@ -35,11 +37,11 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800005-配置持久化失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 

@@ -14,9 +14,11 @@ function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promis
 
 Rotates a mechanical device at the specified speed.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>--><!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>-End-->
 
@@ -28,9 +30,9 @@ Rotates a mechanical device at the specified speed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
+| mechId | int | Yes | ID of the mechanical device. |
 | speed | [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | Yes | Rotation speed. |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Rotation duration. Unit: millisecond. |
+| duration | int | Yes | Rotation duration. Unit: millisecond. |
 
 **Return value:**
 
@@ -42,9 +44,9 @@ Rotates a mechanical device at the specified speed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 

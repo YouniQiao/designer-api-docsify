@@ -1,18 +1,12 @@
 # ImageSource
 
-The **ImageSource** class provides APIs to obtain image information.
+The **ImageSource** class provides APIs to obtain image information. Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) to create an ImageSource instance. All APIs in ImageSource cannot be called concurrently. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Before calling any API in ImageSource, you must use   
-[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-1) to create an ImageSource instance.
+**Since:** 23
 
-All APIs in ImageSource cannot be called concurrently.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
 
@@ -34,7 +28,9 @@ Obtains raw data from an image.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,8 @@ Obtains raw data from an image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 
 ## createPicture
 
@@ -61,16 +57,13 @@ Obtains raw data from an image.
 createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 ```
 
-Creates a Picture object based on decoding options. This API uses a promise to return the result.
-
-Images occupy a large amount of memory. When you finish using a Picture instance, call   
-[release](arkts-image-image-picture-i.md#release) to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a Picture object based on decoding options. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>-End-->
 
@@ -92,9 +85,9 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**Applicable version:** 24 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**Applicable version:** 24 and later |
 
 ## createPicture
 
@@ -106,7 +99,9 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>-End-->
 
@@ -128,7 +123,7 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
 
 ## createPictureAtIndex
 
@@ -136,16 +131,13 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 createPictureAtIndex(index: int): Promise<Picture>
 ```
 
-Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result.
-
-Images occupy a large amount of memory. When you finish using a Picture instance, call   
-[release](arkts-image-image-picture-i.md#release) to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>--><!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>-End-->
 
@@ -167,11 +159,11 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
-| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
 
 ## createPictureAtIndex
 
@@ -183,7 +175,9 @@ Decodes an image at the specified index into a Picture object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>--><!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>-End-->
 
@@ -205,11 +199,11 @@ Decodes an image at the specified index into a Picture object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
-| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
 
 ## createPixelMap
 
@@ -217,26 +211,13 @@ Decodes an image at the specified index into a Picture object.
 createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result.
-
-Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocator](#createPixelMapUsingAllocator-1). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
-[Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
-
-> **NOTE：**
-> 
-> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
-> 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-> 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createPixelMapUsingAllocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -268,7 +249,9 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>-End-->
 
@@ -292,26 +275,13 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 createPixelMap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result.
-
-Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocator](#createPixelMapUsingAllocator-1). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
-[Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
-
-> **NOTE：**
-> 
-> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
-> 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-> 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createPixelMapUsingAllocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -325,7 +295,7 @@ Starting from API version 15, you are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createPixelMap
 
@@ -337,7 +307,9 @@ Creates a PixelMap object. This method uses a callback to return the object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void-End-->
 
@@ -347,7 +319,7 @@ Creates a PixelMap object. This method uses a callback to return the object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
 
 ## createPixelMap
 
@@ -355,26 +327,13 @@ Creates a PixelMap object. This method uses a callback to return the object.
 createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
-
-Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocator](#createPixelMapUsingAllocator-1). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
-[Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
-
-> **NOTE：**
-> 
-> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
-> 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-> 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createPixelMapUsingAllocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -389,7 +348,7 @@ Starting from API version 15, you are advised to use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Decoding options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createPixelMap
 
@@ -401,7 +360,9 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void-End-->
 
@@ -412,7 +373,7 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Image decoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
 
 ## createPixelMapList
 
@@ -420,28 +381,13 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result.
+Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result. For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image. > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed. > > - This function decodes all frames at once. If the number of frames is high or the size of individual frames is > large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component > for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this > function.
 
-For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
-> 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-> 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
-> 
-> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is
-> large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component
-> for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
-> function.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>--><!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>-End-->
 
@@ -463,19 +409,19 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980174](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -483,28 +429,13 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result.
+Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result. For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image. > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed. > > - This function decodes all frames at once. If the number of frames is high or the size of individual frames is > large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component > for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this > function.
 
-For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
-> 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-> 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
-> 
-> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is
-> large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component
-> for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
-> function.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void-End-->
 
@@ -514,25 +445,25 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980174](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -540,28 +471,13 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result.
+Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result. For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image. > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed. > > - This function decodes all frames at once. If the number of frames is high or the size of individual frames is > large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component > for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this > function.
 
-For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
-> 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-> 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
-> 
-> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is
-> large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component
-> for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
-> function.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void-End-->
 
@@ -572,25 +488,25 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Decoding options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980174](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
 
 ## createPixelMapSync
 
@@ -598,28 +514,13 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 createPixelMapSync(options?: DecodingOptions): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options. This API returns the result synchronously.
-
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call   
-[release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocatorSync](#createPixelMapUsingAllocatorSync-1). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
-[Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
-
-> **NOTE：**
-> 
-> This API operates synchronously and will block the current thread during execution. It should not be invoked
-> from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For
-> details, see
-> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Creates a PixelMap object based on decoding options. This API returns the result synchronously. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](#createPixelMapUsingAllocatorSync) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap-End-->
 
@@ -647,7 +548,9 @@ Create a PixelMap object based on image decoding parameters synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined-End-->
 
@@ -671,22 +574,13 @@ Create a PixelMap object based on image decoding parameters synchronously.
 createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see   
-[Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
-
-> **NOTE：**
-> 
-> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
-> 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-> 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>-End-->
 
@@ -709,14 +603,14 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
-| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocator
 
@@ -729,7 +623,9 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>-End-->
 
@@ -752,13 +648,13 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
-| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -766,23 +662,13 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
-
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call   
-[release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-> **NOTE：**
-> 
-> This API operates synchronously and will block the current thread during execution. It should not be invoked
-> from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For
-> details, see
-> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. > **NOTE：**> > This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
@@ -805,14 +691,14 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
-| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -820,11 +706,13 @@ Before releasing the instance, ensure that all asynchronous operations associate
 createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined
 ```
 
-Creates a PixelMap based on decoding parameters synchronously, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
+Creates a PixelMap based on decoding parameters synchronously, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined-End-->
 
@@ -847,13 +735,13 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
-| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
 
 ## createThumbnail
 
@@ -861,11 +749,13 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>
 ```
 
-Creates a thumbnail image based on image decoding parameters.This method uses a promise to return the PixelMap object, which represents the thumbnail.
+Creates a thumbnail image based on image decoding parameters. This method uses a promise to return the PixelMap object, which represents the thumbnail.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -889,12 +779,12 @@ Creates a thumbnail image based on image decoding parameters.This method uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700305](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
-| [7700303](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
+| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
+| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
 
 ## createThumbnailSync
 
@@ -902,11 +792,13 @@ Creates a thumbnail image based on image decoding parameters.This method uses a 
 createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 ```
 
-Synchronously creates a thumbnail image based on image decoding parameters.This method returns a `PixelMap` object, which represents the generated thumbnail.
+Synchronously creates a thumbnail image based on image decoding parameters. This method returns a `PixelMap` object, which represents the generated thumbnail.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -930,30 +822,26 @@ Synchronously creates a thumbnail image based on image decoding parameters.This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700305](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
-| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
-| [7700303](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
+| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
+| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
 
 ## getDelayTimeList
 
-ArkTS-Dyn:
-```TypeScript
-getDelayTimeList(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDelayTimeList(): Promise<Array<int>>
 ```
 
 Obtains an array of delay times. This API uses a promise to return the result. This API applies only to images in GIF or WebP format.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>--><!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>-End-->
 
@@ -963,38 +851,34 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of delay times. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of delay times. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980149](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 
 ## getDelayTimeList
 
-ArkTS-Dyn:
-```TypeScript
-getDelayTimeList(callback: AsyncCallback<Array<number>>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 ```
 
 Obtains an array of delay times. This API uses an asynchronous callback to return the result. This API applies only to images in GIF or WebP format.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void--><!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void-End-->
 
@@ -1004,38 +888,34 @@ Obtains an array of delay times. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the array of delay times obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the array of delay times obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980149](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 
 ## getDisposalTypeList
 
-ArkTS-Dyn:
-```TypeScript
-getDisposalTypeList(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDisposalTypeList(): Promise<Array<int>>
 ```
 
 Obtains the list of disposal types. This API uses a promise to return the result. It is used only for GIF images.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>--><!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>-End-->
 
@@ -1045,34 +925,30 @@ Obtains the list of disposal types. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of disposal types. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of disposal types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980149](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
 ## getFrameCount
 
-ArkTS-Dyn:
-```TypeScript
-getFrameCount(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getFrameCount(): Promise<int>
 ```
 
 Obtains the number of frames. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getFrameCount(): Promise<int>--><!--Device-ImageSource-getFrameCount(): Promise<int>-End-->
 
@@ -1082,39 +958,35 @@ Obtains the number of frames. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of frames. |
+| Promise&lt;int&gt; | Promise used to return the number of frames. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980112](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 
 ## getFrameCount
 
-ArkTS-Dyn:
-```TypeScript
-getFrameCount(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getFrameCount(callback: AsyncCallback<int>): void
 ```
 
 Obtains the number of frames. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void--><!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void-End-->
 
@@ -1124,21 +996,21 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of frames obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of frames obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980112](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 
 ## getImageInfo
 
@@ -1151,6 +1023,8 @@ Obtains the image information with the specified index. This API uses an asynchr
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1165,7 +1039,7 @@ Obtains the image information with the specified index. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
 ## getImageInfo
 
@@ -1177,7 +1051,9 @@ Obtains information about an image with the specified sequence number and uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void-End-->
 
@@ -1188,7 +1064,7 @@ Obtains information about an image with the specified sequence number and uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | Sequence number of an image. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | Yes | Callback used to return the image information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | Yes | Callback used to return the image information. |
 
 ## getImageInfo
 
@@ -1202,6 +1078,8 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -1214,7 +1092,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
 ## getImageInfo
 
@@ -1226,7 +1104,9 @@ Obtains information about this image and uses a callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void-End-->
 
@@ -1236,7 +1116,7 @@ Obtains information about this image and uses a callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | Yes | Callback used to return the image information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | Yes | Callback used to return the image information. |
 
 ## getImageInfo
 
@@ -1249,6 +1129,8 @@ Obtains the image information. This API uses a promise to return the result.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1280,7 +1162,9 @@ Get image information from image source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>--><!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>-End-->
 
@@ -1304,18 +1188,13 @@ Get image information from image source.
 getImageInfoSync(index?: int): ImageInfo
 ```
 
-Obtains the image information with the specified index. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> This API operates synchronously and will block the current thread during execution. It should not be invoked
-> from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For
-> details, see
-> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Obtains the image information with the specified index. This API returns the result synchronously. > **NOTE：**> > This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo-End-->
 
@@ -1343,7 +1222,9 @@ Get image information from image source synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined-End-->
 
@@ -1367,13 +1248,13 @@ Get image information from image source synchronously.
 getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>
 ```
 
-Obtains the values of properties with the given names in this image. This API uses a promise to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the values of properties with the given names in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>-End-->
 
@@ -1395,11 +1276,11 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 
 ## getImageProperties
 
@@ -1411,7 +1292,9 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>-End-->
 
@@ -1433,10 +1316,10 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1444,13 +1327,13 @@ Obtains the value of properties in an image. This method uses a promise to retur
 getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
+Obtains the value of a property with the specified index in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>-End-->
 
@@ -1473,18 +1356,18 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980112](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1492,9 +1375,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1502,7 +1383,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](image.ImageSource.getImageProperty(key:)
+**Substitutes:** [getImageProperty](#getImageProperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
@@ -1527,9 +1408,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 getImageProperty(key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1537,7 +1416,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](image.ImageSource.getImageProperty(key:)
+**Substitutes:** [getImageProperty](#getImageProperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -1548,7 +1427,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Name of the property. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
 
 ## getImageProperty
 
@@ -1556,7 +1435,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void
 ```
 
-Obtains the value of a property in this image. This API uses an asynchronous callback to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property in this image. This API uses an asynchronous callback to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1564,7 +1443,7 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](image.ImageSource.getImageProperty(key:)
+**Substitutes:** [getImageProperty](#getImageProperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
@@ -1576,7 +1455,7 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | key | string | Yes | Name of the property. |
 | options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | Yes | Image properties, including the image index and default property value. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
 
 ## getImagePropertySync
 
@@ -1584,24 +1463,13 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 getImagePropertySync(key: PropertyKey): string
 ```
 
-Obtains the value of a specified Exif property. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format
-> and contain Exif information. (The supported formats may vary depending on the hardware.)
-> 
-> - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and
-> ISO.
-> 
-> - This API operates synchronously and will block the current thread during execution. It should not be invoked
-> from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For
-> details, see
-> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Obtains the value of a specified Exif property. This API returns the result synchronously. > **NOTE：**> > - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format > and contain Exif information. (The supported formats may vary depending on the hardware.) > > - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and > ISO. > > - This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string-End-->
 
@@ -1623,9 +1491,9 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
 
 ## getImagePropertySync
 
@@ -1637,7 +1505,9 @@ Obtains the value of a property in the image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined-End-->
 
@@ -1659,9 +1529,9 @@ Obtains the value of a property in the image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
 
 ## modifyImageProperties
 
@@ -1669,19 +1539,13 @@ Obtains the value of a property in the image.
 modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 ```
 
-Modifies the values of properties in this image. This API uses a promise to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-
-> **NOTE：**
-> 
-> The property byte length is changed when the **modifyImageProperties** API is called to modify the values of
-> properties. Currently, you can call the API in an ImageSource instance created based on a file descriptor or
-> path, but not an ImageSource instance created based on buffers.
+Modifies the values of properties in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) > **NOTE：**> > The property byte length is changed when the **modifyImageProperties** API is called to modify the values of > properties. Currently, you can call the API in an ImageSource instance created based on a file descriptor or > path, but not an ImageSource instance created based on buffers.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>-End-->
 
@@ -1703,10 +1567,10 @@ This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;2
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| [62980146](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
-| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 
 ## modifyImageProperties
 
@@ -1718,7 +1582,9 @@ Modify the value of properties in an image with the specified keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>-End-->
 
@@ -1740,9 +1606,9 @@ Modify the value of properties in an image with the specified keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980146](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
-| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 
 ## modifyImagePropertiesEnhanced
 
@@ -1750,26 +1616,13 @@ Modify the value of properties in an image with the specified keys.
 modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result.
+Modifies image properties in batches. This API uses a promise to return the result. > **NOTE：**> > - Calling this API to modify properties alters the property byte length. You are advised to create an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by passing a > file descriptor or an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by > passing a URI. > > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more > efficient than > [modifyImageProperties](#modifyImageProperties) > . > > - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
 
-> **NOTE：**
-> 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-5) instance by passing a
-> file descriptor or an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-1) instance by
-> passing a URI.
-> 
-> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more
-> efficient than
-> [modifyImageProperties](#modifyImageProperties)
-> .
-> 
-> - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>--><!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>-End-->
 
@@ -1791,9 +1644,9 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700304](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
-| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 
 ## modifyImageProperty
 
@@ -1801,19 +1654,13 @@ Modifies image properties in batches. This API uses a promise to return the resu
 modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result.
+Modifies the value of a property in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) > **NOTE：**> > The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a > property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path > , but not an ImageSource instance created based on buffers.
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+**Since:** 23
 
-> **NOTE：**
-> 
-> The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a
-> property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path
-> , but not an ImageSource instance created based on buffers.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>-End-->
 
@@ -1836,11 +1683,11 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
-| [62980146](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
-| [62980133](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980133-image-property-value-out-of-range) | The EXIF data is out of range. |
-| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| [62980133](../errorcode-image.md#62980133-image-property-value-out-of-range) | The EXIF data is out of range. |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 
 ## modifyImageProperty
 
@@ -1848,15 +1695,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 modifyImageProperty(key: string, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-
-> **NOTE：**
-> 
-> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a
-> property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path
-> , but not an ImageSource instance created based on buffers.
+Modifies the value of a property in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) > **NOTE：**> > - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a > property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path > , but not an ImageSource instance created based on buffers.
 
 **Since:** 9
 
@@ -1864,7 +1703,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
+**Substitutes:** [modifyImageProperty](#modifyImageProperty)(key: PropertyKey, value: string)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
@@ -1889,15 +1728,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Modifies the value of a property in this image. This API uses an asynchronous callback to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-
-> **NOTE：**
-> 
-> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a
-> property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path
-> , but not an ImageSource instance created based on buffers.
+Modifies the value of a property in this image. This API uses an asynchronous callback to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) > **NOTE：**> > - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a > property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path > , but not an ImageSource instance created based on buffers.
 
 **Since:** 9
 
@@ -1905,7 +1736,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
+**Substitutes:** [modifyImageProperty](#modifyImageProperty)(key: PropertyKey, value: string)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1917,54 +1748,21 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | --- | --- | --- | --- |
 | key | string | Yes | Name of the property. |
 | value | string | Yes | New value of the property. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readImageMetadata
 
-ArkTS-Dyn:
-```TypeScript
-readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadata>
-```
-
-ArkTS-Sta:
 ```TypeScript
 readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 ```
 
-Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. (The supported formats may vary depending on the hardware.)
-
-> **NOTE：**
-> 
-> When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the
-> values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey):
-> 
-> - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**,
-> **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts**
-> , **SamplesPerPixel**, **BitsPerSample**, **YCbCrCoefficients**, **YCbCrSubSampling**, **YCbCrPositioning**,
-> **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values
-> related to the main image are returned.
-> 
-> - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the
-> specifications, an empty string is returned.
-> 
-> - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an
-> error code is returned.
-> 
-> - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned.
-> 
-> - **GPSVersionID**: If there is no valid GPS data, the GPS version number is cleared and **0** is returned.
-> 
-> - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**.
-> 
-> - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the
-> recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are
-> used in sequence.
+Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. ( The supported formats may vary depending on the hardware.) > **NOTE：**> > When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the > values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey): > > - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**, > **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts** > , **SamplesPerPixel**, **BitsPerSample**, **YCbCrCoefficients**, **YCbCrSubSampling**, **YCbCrPositioning**, > **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values > related to the main image are returned. > > - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the > specifications, an empty string is returned. > > - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an > error code is returned. > > - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned. > > - **GPSVersionID**: If there is no valid GPS data, the GPS version number is cleared and **0** is returned. > > - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**. > > - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the > recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are > used in sequence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1977,7 +1775,7 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | propertyKeys | string[] | No | Array of properties names. If **propertyKeys** is not specified, all supported metadata is returned. |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of the property to be obtained. The default value is **0**. |
+| index | int | No | Index of the property to be obtained. The default value is **0**. |
 
 **Return value:**
 
@@ -1989,38 +1787,23 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
-| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 
 ## readImageMetadataByType
 
-ArkTS-Dyn:
-```TypeScript
-readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise<ImageMetadata>
-```
-
-ArkTS-Sta:
 ```TypeScript
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>
 ```
 
-Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If   
-**metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result.
-
-This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.)
-
-> **NOTE：**
-> 
-> - **EXIF_METADATA** applies to JPEG, PNG, HEIF, WEBP, and DNG images.
-> 
-> - **HEIFS_METADATA** applies to HEIFS images.
-> 
-> - If the input **MetadataType** does not match the image format, error code **7700102** will be returned.
+Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If **metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.) > **NOTE：**> > - **EXIF_METADATA** applies to JPEG, PNG, HEIF, WEBP, and DNG images. > > - **HEIFS_METADATA** applies to HEIFS images. > > - If the input **MetadataType** does not match the image format, error code **7700102** will be returned.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2033,7 +1816,7 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | No | Metadata type array. If this parameter is left empty, all supported metadata is obtained. |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No |  |
+| index | int | No |  |
 
 **Return value:**
 
@@ -2045,9 +1828,9 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
-| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 
 ## release
 
@@ -2055,15 +1838,13 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageSource instance. This API uses an asynchronous callback to return the result.
+Releases this ImageSource instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-release(callback: AsyncCallback<void>): void--><!--Device-ImageSource-release(callback: AsyncCallback<void>): void-End-->
 
@@ -2073,7 +1854,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -2081,15 +1862,13 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this ImageSource instance. This API uses a promise to return the result.
+Releases this ImageSource instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
 
@@ -2103,21 +1882,17 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 ## updateData
 
-ArkTS-Dyn:
-```TypeScript
-updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>
 ```
 
 Updates incremental data. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>--><!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>-End-->
 
@@ -2129,8 +1904,8 @@ Updates incremental data. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | Buffer for storing the incremental data. |
 | isFinished | boolean | Yes | Whether data update is complete. The value **true** means that the data update is complete and the last segment of data is stored in the buffer. The value **false** means that the data update is still in progress. |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.<br>**Since:** 11 |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the buffer, in bytes. |
+| offset | int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.<br>**Since:** 11 |
+| length | int | Yes | Length of the buffer, in bytes. |
 
 **Return value:**
 
@@ -2140,18 +1915,6 @@ Updates incremental data. This API uses a promise to return the result.
 
 ## updateData
 
-ArkTS-Dyn:
-```TypeScript
-updateData(
-      buf: ArrayBuffer,
-      isFinished: boolean,
-      offset: number,
-      length: number,
-      callback: AsyncCallback<void>
-    ): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 updateData(
       buf: ArrayBuffer,
@@ -2164,9 +1927,11 @@ updateData(
 
 Updates incremental data. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void--><!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -2178,9 +1943,9 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | Buffer for storing the incremental data. |
 | isFinished | boolean | Yes | Whether data update is complete. The value **true** means that the data update is complete and the last segment of data is stored in the buffer. The value **false** means that the data update is still in progress. |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.<br>**Since:** 11 |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the buffer, in bytes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| offset | int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.<br>**Since:** 11 |
+| length | int | Yes | Length of the buffer, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## writeImageMetadata
 
@@ -2188,28 +1953,13 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-5) instance by passing a
-> file descriptor or an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-1) instance by
-> passing a URI.
-> 
-> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more
-> efficient than
-> [modifyImageProperties](#modifyImageProperties)
-> .
-> 
-> - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information.
-> Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif
-> information read/write in HEIF format.
+Modifies image properties in batches. This API uses a promise to return the result. > **NOTE：**> > - Calling this API to modify properties alters the property byte length. You are advised to create an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by passing a > file descriptor or an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by > passing a URI. > > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more > efficient than > [modifyImageProperties](#modifyImageProperties) > . > > - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information. > Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif > information read/write in HEIF format.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2233,9 +1983,9 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: The imageSource object is released. |
-| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: The imageSource object is released. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 
 ## supportedFormats
 
@@ -2247,9 +1997,11 @@ Supported image formats.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageSource-readonly supportedFormats: Array<string>--><!--Device-ImageSource-readonly supportedFormats: Array<string>-End-->
 

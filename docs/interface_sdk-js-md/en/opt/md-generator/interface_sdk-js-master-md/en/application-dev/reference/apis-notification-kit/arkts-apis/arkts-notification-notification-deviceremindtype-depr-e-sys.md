@@ -6,7 +6,7 @@ Defines the notification reminder type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DeviceRemindType](ohos.notificationManager/notificationManager#DeviceRemindType)
+**Substitutes:** [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#DeviceRemindType-(System-API))
 
 <!--Device-notification-export enum DeviceRemindType--><!--Device-notification-export enum DeviceRemindType-End-->
 
@@ -26,7 +26,7 @@ The device is not in use. No notification is required.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IDLE_DONOT_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#IDLE_DONOT_REMIND)
+**Substitutes:** [IDLE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#IDLE_DONOT_REMIND)
 
 <!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0--><!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0-End-->
 
@@ -46,7 +46,7 @@ The device is not in use.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IDLE_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#IDLE_REMIND)
+**Substitutes:** [IDLE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#IDLE_REMIND)
 
 <!--Device-DeviceRemindType-IDLE_REMIND = 1--><!--Device-DeviceRemindType-IDLE_REMIND = 1-End-->
 
@@ -66,7 +66,7 @@ The device is in use. No notification is required.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ACTIVE_DONOT_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#ACTIVE_DONOT_REMIND)
+**Substitutes:** [ACTIVE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#ACTIVE_DONOT_REMIND)
 
 <!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2--><!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2-End-->
 
@@ -86,7 +86,7 @@ The device is in use.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ACTIVE_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#ACTIVE_REMIND)
+**Substitutes:** [ACTIVE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#ACTIVE_REMIND)
 
 <!--Device-DeviceRemindType-ACTIVE_REMIND = 3--><!--Device-DeviceRemindType-ACTIVE_REMIND = 3-End-->
 

@@ -1,10 +1,10 @@
 # ValueType
 
-Indicates the {@code ValueType}.
+Indicates the {@code ValueType}. &lt;p&gt;{@code ValueType} is obtained based on the value.
 
-&lt;p&gt;{@code ValueType} is obtained based on the value.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-enum ValueType--><!--Device-distributedKVStore-enum ValueType-End-->
 
@@ -18,7 +18,9 @@ STRING = 0
 
 Indicates that the value type is string.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +38,8 @@ Indicates that the value type is int.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -50,6 +54,8 @@ Indicates that the value type is float.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -62,7 +68,9 @@ BYTE_ARRAY = 3
 
 Indicates that the value type is byte array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ BOOLEAN = 4
 
 Indicates that the value type is boolean.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,10 +104,30 @@ DOUBLE = 5
 
 Indicates that the value type is double.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## LONG
+
+```TypeScript
+LONG = 6
+```
+
+Indicates that the value type is long.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ValueType-LONG = 6--><!--Device-ValueType-LONG = 6-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core

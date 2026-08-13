@@ -2,7 +2,9 @@
 
 Enumerates the preconfigured resolution types.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum PreconfigType--><!--Device-camera-enum PreconfigType-End-->
 
@@ -16,7 +18,9 @@ PRECONFIG_720P = 0
 
 720p resolution.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -32,7 +36,9 @@ PRECONFIG_1080P = 1
 
 1080p resolution.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -48,7 +54,9 @@ PRECONFIG_4K = 2
 
 4K resolution.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -64,7 +72,9 @@ PRECONFIG_HIGH_QUALITY = 3
 
 High-quality resolution.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -81,6 +91,8 @@ PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4
 Resolution that supports HDR preview and GIF photography.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,11 +12,13 @@ import { scan } from '@kit.ConnectivityKit';
 function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>
 ```
 
-Starts scanning for specified NearLink devices with filters.It is allowed to set filter parameter to {@code null} if you do not want to use filter.
+Starts scanning for specified NearLink devices with filters. It is allowed to set filter parameter to {@code null} if you do not want to use filter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -43,10 +45,10 @@ Starts scanning for specified NearLink devices with filters.It is allowed to set
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100042 | Empty array. |
 | 36100040 | Integer out of range. |
 | 36100041 | Invalid address. |

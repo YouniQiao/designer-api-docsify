@@ -1,10 +1,24 @@
 # @ohos.net.netFirewall
 
-Provides interfaces to manage net firewall.
+/*
+ Copyright (C) 2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace netFirewall--><!--Device-unnamed-declare namespace netFirewall-End-->
 
@@ -22,20 +36,20 @@ import { netFirewall } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md#addnetfirewallrule) | Add a firewall rule. |
-| [getNetFirewallPolicy](arkts-network-netfirewall-getnetfirewallpolicy-f.md#getnetfirewallpolicy) | Get firewall policy by userId. |
-| [getNetFirewallRule](arkts-network-netfirewall-getnetfirewallrule-f.md#getnetfirewallrule) | Get a specified firewall rule by userId and ruleId. |
-| [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md#getnetfirewallrules) | Get firewall rules by userId, and it is necessary to specify the pagination query parameters. |
-| [removeNetFirewallRule](arkts-network-netfirewall-removenetfirewallrule-f.md#removenetfirewallrule) | Delete a firewall rule by userId and ruleId. |
-| [setNetFirewallPolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md#setnetfirewallpolicy) | Set firewall policy by userId.&lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.&lt;/p&gt; |
-| [updateNetFirewallRule](arkts-network-netfirewall-updatenetfirewallrule-f.md#updatenetfirewallrule) | Update a firewall rule. |
+| [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md#addNetFirewallRule) | Add a firewall rule. |
+| [getNetFirewallPolicy](arkts-network-netfirewall-getnetfirewallpolicy-f.md#getNetFirewallPolicy) | Get firewall policy by userId. |
+| [getNetFirewallRule](arkts-network-netfirewall-getnetfirewallrule-f.md#getNetFirewallRule) | Get a specified firewall rule by userId and ruleId. |
+| [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md#getNetFirewallRules) | Get firewall rules by userId, and it is necessary to specify the pagination query parameters. |
+| [removeNetFirewallRule](arkts-network-netfirewall-removenetfirewallrule-f.md#removeNetFirewallRule) | Delete a firewall rule by userId and ruleId. |
+| [setNetFirewallPolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md#setNetFirewallPolicy) | Set firewall policy by userId. &lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.&lt;/p&gt; |
+| [updateNetFirewallRule](arkts-network-netfirewall-updatenetfirewallrule-f.md#updateNetFirewallRule) | Update a firewall rule. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getInterceptedRecords](arkts-network-netfirewall-getinterceptedrecords-f-sys.md#getinterceptedrecords) | Get intercepted records by userId, and it is necessary to specify the pagination query parameters. |
+| [getInterceptedRecords](arkts-network-netfirewall-getinterceptedrecords-f-sys.md#getInterceptedRecords) | Get intercepted records by userId, and it is necessary to specify the pagination query parameters. |
 <!--DelEnd-->
 
 ### Interfaces

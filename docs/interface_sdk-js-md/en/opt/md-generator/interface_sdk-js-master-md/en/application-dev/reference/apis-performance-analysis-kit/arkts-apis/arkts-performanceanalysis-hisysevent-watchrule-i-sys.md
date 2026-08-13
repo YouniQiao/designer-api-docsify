@@ -2,7 +2,9 @@
 
 Defines event subscription rules.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-interface WatchRule--><!--Device-hiSysEvent-interface WatchRule-End-->
 
@@ -26,7 +28,9 @@ Event domain.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatchRule-domain: string--><!--Device-WatchRule-domain: string-End-->
 
@@ -44,7 +48,9 @@ Event name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatchRule-name: string--><!--Device-WatchRule-name: string-End-->
 
@@ -62,7 +68,9 @@ Matching rule type.
 
 **Type:** [RuleType](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatchRule-ruleType: RuleType--><!--Device-WatchRule-ruleType: RuleType-End-->
 
@@ -73,16 +81,18 @@ Matching rule type.
 ## tag
 
 ```TypeScript
-tag?: string
+tag?: string | null | undefined
 ```
 
 Event tag.
 
-**Type:** string
+**Type:** string \| null \| undefined
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-WatchRule-tag?: string--><!--Device-WatchRule-tag?: string-End-->
+**Deprecated since:** -1
+
+<!--Device-WatchRule-tag?: string | null | undefined--><!--Device-WatchRule-tag?: string | null | undefined-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

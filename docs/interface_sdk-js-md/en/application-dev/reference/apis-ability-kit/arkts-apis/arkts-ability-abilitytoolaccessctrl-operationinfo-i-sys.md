@@ -6,6 +6,8 @@ Operation information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-interface OperationInfo--><!--Device-abilityToolAccessCtrl-interface OperationInfo-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -26,6 +28,8 @@ Operation detail information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-OperationInfo-info: CliCmdInfo | Permissions--><!--Device-OperationInfo-info: CliCmdInfo | Permissions-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -45,6 +49,8 @@ Operation type.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-OperationInfo-operationType: OperationType--><!--Device-OperationInfo-operationType: OperationType-End-->
 

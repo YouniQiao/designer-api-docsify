@@ -2,7 +2,9 @@
 
 Result state.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export enum ResultCode--><!--Device-eSIM-export enum ResultCode-End-->
 
@@ -18,7 +20,9 @@ RESULT_SOLVABLE_ERRORS = -2
 
 Indicates that the user must resolve a solvable error.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_SOLVABLE_ERRORS = -2--><!--Device-ResultCode-RESULT_SOLVABLE_ERRORS = -2-End-->
 
@@ -34,7 +38,9 @@ RESULT_MUST_DISABLE_PROFILE = -1
 
 Indicates that the active profile must be disabled to perform the operation.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_MUST_DISABLE_PROFILE = -1--><!--Device-ResultCode-RESULT_MUST_DISABLE_PROFILE = -1-End-->
 
@@ -50,7 +56,9 @@ RESULT_OK = 0
 
 Operation succeeded.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_OK = 0--><!--Device-ResultCode-RESULT_OK = 0-End-->
 
@@ -66,7 +74,9 @@ RESULT_GET_EID_FAILED = 201
 
 Failed to obtain the EID.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_GET_EID_FAILED = 201--><!--Device-ResultCode-RESULT_GET_EID_FAILED = 201-End-->
 
@@ -82,7 +92,9 @@ RESULT_ACTIVATION_CODE_CHANGED = 203
 
 The activation code is changed after the end user confirms the operation.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_ACTIVATION_CODE_CHANGED = 203--><!--Device-ResultCode-RESULT_ACTIVATION_CODE_CHANGED = 203-End-->
 
@@ -98,7 +110,9 @@ RESULT_ACTIVATION_CODE_INVALID = 204
 
 The activation code is invalid.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_ACTIVATION_CODE_INVALID = 204--><!--Device-ResultCode-RESULT_ACTIVATION_CODE_INVALID = 204-End-->
 
@@ -114,7 +128,9 @@ RESULT_SMDP_ADDRESS_INVALID = 205
 
 The SM-DP+ server address is invalid.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_SMDP_ADDRESS_INVALID = 205--><!--Device-ResultCode-RESULT_SMDP_ADDRESS_INVALID = 205-End-->
 
@@ -130,7 +146,9 @@ RESULT_EUICC_INFO_INVALID = 206
 
 Invalid eUICC information.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_EUICC_INFO_INVALID = 206--><!--Device-ResultCode-RESULT_EUICC_INFO_INVALID = 206-End-->
 
@@ -146,7 +164,9 @@ RESULT_TLS_HANDSHAKE_FAILED = 207
 
 TLS handshake fails.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_TLS_HANDSHAKE_FAILED = 207--><!--Device-ResultCode-RESULT_TLS_HANDSHAKE_FAILED = 207-End-->
 
@@ -162,7 +182,9 @@ RESULT_CERTIFICATE_IO_ERROR = 208
 
 Certificate network connection error.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_CERTIFICATE_IO_ERROR = 208--><!--Device-ResultCode-RESULT_CERTIFICATE_IO_ERROR = 208-End-->
 
@@ -178,7 +200,9 @@ RESULT_CERTIFICATE_RESPONSE_TIMEOUT = 209
 
 The certificate address is invalid or the response times out.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_CERTIFICATE_RESPONSE_TIMEOUT = 209--><!--Device-ResultCode-RESULT_CERTIFICATE_RESPONSE_TIMEOUT = 209-End-->
 
@@ -194,7 +218,9 @@ RESULT_AUTHENTICATION_FAILED = 210
 
 Authentication fails.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_AUTHENTICATION_FAILED = 210--><!--Device-ResultCode-RESULT_AUTHENTICATION_FAILED = 210-End-->
 
@@ -210,7 +236,9 @@ RESULT_RESPONSE_HTTP_FAILED = 211
 
 HTTP response fails.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_RESPONSE_HTTP_FAILED = 211--><!--Device-ResultCode-RESULT_RESPONSE_HTTP_FAILED = 211-End-->
 
@@ -226,7 +254,9 @@ RESULT_CONFIRMATION_CODE_INCORRECT = 212
 
 Incorrect confirmation code.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_CONFIRMATION_CODE_INCORRECT = 212--><!--Device-ResultCode-RESULT_CONFIRMATION_CODE_INCORRECT = 212-End-->
 
@@ -242,7 +272,9 @@ RESULT_EXCEEDED_CONFIRMATION_CODE_TRY_LIMIT = 213
 
 The maximum number of confirmation code attempts is reached.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_EXCEEDED_CONFIRMATION_CODE_TRY_LIMIT = 213--><!--Device-ResultCode-RESULT_EXCEEDED_CONFIRMATION_CODE_TRY_LIMIT = 213-End-->
 
@@ -258,7 +290,9 @@ RESULT_NO_PROFILE_ON_SERVER = 214
 
 There is no profile on the server for download.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_NO_PROFILE_ON_SERVER = 214--><!--Device-ResultCode-RESULT_NO_PROFILE_ON_SERVER = 214-End-->
 
@@ -274,7 +308,9 @@ RESULT_TRANSACTION_ID_INVALID = 215
 
 The transaction ID is invalid.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_TRANSACTION_ID_INVALID = 215--><!--Device-ResultCode-RESULT_TRANSACTION_ID_INVALID = 215-End-->
 
@@ -290,7 +326,9 @@ RESULT_SERVER_ADDRESS_INVALID = 216
 
 The server address is invalid.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_SERVER_ADDRESS_INVALID = 216--><!--Device-ResultCode-RESULT_SERVER_ADDRESS_INVALID = 216-End-->
 
@@ -306,7 +344,9 @@ RESULT_GET_BOUND_PROFILE_PACKAGE_FAILED = 217
 
 Failed to obtain the bound profile package.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_GET_BOUND_PROFILE_PACKAGE_FAILED = 217--><!--Device-ResultCode-RESULT_GET_BOUND_PROFILE_PACKAGE_FAILED = 217-End-->
 
@@ -322,7 +362,9 @@ RESULT_USER_CANCEL_DOWNLOAD = 218
 
 The download is canceled by the end user.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_USER_CANCEL_DOWNLOAD = 218--><!--Device-ResultCode-RESULT_USER_CANCEL_DOWNLOAD = 218-End-->
 
@@ -338,7 +380,9 @@ RESULT_SERVER_UNAVAILABLE = 220
 
 The carrier server is unavailable.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_SERVER_UNAVAILABLE = 220--><!--Device-ResultCode-RESULT_SERVER_UNAVAILABLE = 220-End-->
 
@@ -354,7 +398,9 @@ RESULT_PROFILE_NON_DELETE = 223
 
 The profile is attached to a non-delete profile policy rule.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_PROFILE_NON_DELETE = 223--><!--Device-ResultCode-RESULT_PROFILE_NON_DELETE = 223-End-->
 
@@ -370,7 +416,9 @@ RESULT_SMDP_ADDRESS_INCORRECT = 226
 
 The authentication response server address does not match.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_SMDP_ADDRESS_INCORRECT = 226--><!--Device-ResultCode-RESULT_SMDP_ADDRESS_INCORRECT = 226-End-->
 
@@ -386,7 +434,9 @@ RESULT_ANALYZE_AUTHENTICATION_SERVER_RESPONSE_FAILED = 228
 
 Failed to analyze the authentication server response.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_SERVER_RESPONSE_FAILED = 228--><!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_SERVER_RESPONSE_FAILED = 228-End-->
 
@@ -402,7 +452,9 @@ RESULT_ANALYZE_AUTHENTICATION_CLIENT_RESPONSE_FAILED = 229
 
 Failed to analyze the authentication client response.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_RESPONSE_FAILED = 229--><!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_RESPONSE_FAILED = 229-End-->
 
@@ -418,7 +470,9 @@ RESULT_ANALYZE_AUTHENTICATION_CLIENT_MATCHING_ID_REFUSED = 231
 
 Failed to analyze the authentication client response because the matching ID is rejected.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_MATCHING_ID_REFUSED = 231--><!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_MATCHING_ID_REFUSED = 231-End-->
 
@@ -434,7 +488,9 @@ RESULT_PROFILE_TYPE_ERROR_AUTHENTICATION_STOPPED = 233
 
 Authentication stopped due to an error in the profile type.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_PROFILE_TYPE_ERROR_AUTHENTICATION_STOPPED = 233--><!--Device-ResultCode-RESULT_PROFILE_TYPE_ERROR_AUTHENTICATION_STOPPED = 233-End-->
 
@@ -450,7 +506,9 @@ RESULT_CARRIER_SERVER_REFUSED_ERRORS = 249
 
 The carrier server refused errors of which the reason code is 3.8.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_CARRIER_SERVER_REFUSED_ERRORS = 249--><!--Device-ResultCode-RESULT_CARRIER_SERVER_REFUSED_ERRORS = 249-End-->
 
@@ -466,7 +524,9 @@ RESULT_CERTIFICATE_INVALID = 251
 
 The certificate is invalid.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_CERTIFICATE_INVALID = 251--><!--Device-ResultCode-RESULT_CERTIFICATE_INVALID = 251-End-->
 
@@ -482,7 +542,9 @@ RESULT_OUT_OF_MEMORY = 263
 
 Profile installation failed due to insufficient memory.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_OUT_OF_MEMORY = 263--><!--Device-ResultCode-RESULT_OUT_OF_MEMORY = 263-End-->
 
@@ -498,7 +560,9 @@ RESULT_PPR_FORBIDDEN = 268
 
 The profile policy rule prohibits this operation during download.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_PPR_FORBIDDEN = 268--><!--Device-ResultCode-RESULT_PPR_FORBIDDEN = 268-End-->
 
@@ -514,7 +578,9 @@ RESULT_NOTHING_TO_DELETE = 270
 
 Nothing is to be deleted.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_NOTHING_TO_DELETE = 270--><!--Device-ResultCode-RESULT_NOTHING_TO_DELETE = 270-End-->
 
@@ -530,7 +596,9 @@ RESULT_PPR_NOT_MATCH = 276
 
 The profile policy rule does not match.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_PPR_NOT_MATCH = 276--><!--Device-ResultCode-RESULT_PPR_NOT_MATCH = 276-End-->
 
@@ -546,7 +614,9 @@ RESULT_CAT_BUSY = 283
 
 A session is ongoing.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_CAT_BUSY = 283--><!--Device-ResultCode-RESULT_CAT_BUSY = 283-End-->
 
@@ -562,7 +632,9 @@ RESULT_PROFILE_EID_INVALID = 284
 
 This eSIM profile is already in use or is invalid.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_PROFILE_EID_INVALID = 284--><!--Device-ResultCode-RESULT_PROFILE_EID_INVALID = 284-End-->
 
@@ -578,7 +650,9 @@ RESULT_DOWNLOAD_TIMEOUT = 287
 
 Download times out.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_DOWNLOAD_TIMEOUT = 287--><!--Device-ResultCode-RESULT_DOWNLOAD_TIMEOUT = 287-End-->
 
@@ -594,7 +668,9 @@ RESULT_SGP_22_OTHER = 400
 
 Other errors defined in SGP.22.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-RESULT_SGP_22_OTHER = 400--><!--Device-ResultCode-RESULT_SGP_22_OTHER = 400-End-->
 

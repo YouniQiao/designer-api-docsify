@@ -4,6 +4,8 @@ Represents the offset values resulting from a scroll operation.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OffsetResult--><!--Device-unnamed-declare interface OffsetResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Represents the offset values resulting from a scroll operation.
 xOffset: number
 ```
 
-Horizontal scrolling offset.&lt;br&gt;The unit of the return value is vp.
+Horizontal scrolling offset. &lt;br&gt;The unit of the return value is vp.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +38,13 @@ Horizontal scrolling offset.&lt;br&gt;The unit of the return value is vp.
 yOffset: number
 ```
 
-Vertical scrolling offset.&lt;br&gt;The unit of the return value is vp.
+Vertical scrolling offset. &lt;br&gt;The unit of the return value is vp.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

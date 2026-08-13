@@ -2,7 +2,9 @@
 
 Provides methods to accessing bluetooth MAP(Message Access Profile)-related capabilities.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace map--><!--Device-unnamed-declare namespace map-End-->
 
@@ -20,7 +22,7 @@ import { map } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md#createmapmseprofile) |
+| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md#createMapMseProfile) |
 
 <!--Del-->
 ### Interfaces（系统接口）

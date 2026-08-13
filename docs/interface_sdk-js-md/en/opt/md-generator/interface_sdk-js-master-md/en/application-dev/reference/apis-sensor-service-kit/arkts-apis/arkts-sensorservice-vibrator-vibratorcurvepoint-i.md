@@ -2,7 +2,9 @@
 
 Defines the gain relative to the vibration intensity.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibratorCurvePoint--><!--Device-vibrator-interface VibratorCurvePoint-End-->
 
@@ -24,7 +26,9 @@ Change relative to the vibration frequency. This parameter is optional. The valu
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorCurvePoint-frequency?: int--><!--Device-VibratorCurvePoint-frequency?: int-End-->
 
@@ -40,7 +44,9 @@ Gain relative to the vibration intensity. This parameter is optional. The value 
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorCurvePoint-intensity?: double--><!--Device-VibratorCurvePoint-intensity?: double-End-->
 
@@ -56,7 +62,9 @@ Start time offset, in ms.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorCurvePoint-time: int--><!--Device-VibratorCurvePoint-time: int-End-->
 

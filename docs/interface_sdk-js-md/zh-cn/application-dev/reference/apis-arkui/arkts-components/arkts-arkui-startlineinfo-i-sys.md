@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface StartLineInfo--><!--Device-unnamed-declare interface StartLineInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ startIndex: int
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ startIndex对应GridItem在Grid布局中的起始行号。若该GridItem跨多�
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-StartLineInfo-startLine: int--><!--Device-StartLineInfo-startLine: int-End-->
@@ -62,15 +68,15 @@ startIndex对应GridItem在Grid布局中的起始行号。若该GridItem跨多�
 startOffset: double
 ```
 
-startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。
-
-单位：vp
+startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。 单位：vp
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,15 +92,15 @@ startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。
 totalOffset: double
 ```
 
-总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。
-
-单位：vp
+总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。 单位：vp
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

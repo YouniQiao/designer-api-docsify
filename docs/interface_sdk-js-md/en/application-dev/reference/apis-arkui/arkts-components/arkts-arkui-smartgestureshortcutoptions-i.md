@@ -6,6 +6,8 @@ Smart gesture response behavior configuration object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SmartGestureShortcutOptions--><!--Device-unnamed-declare interface SmartGestureShortcutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Smart gesture response behavior configuration object.
 action?: GestureShortcut
 ```
 
-Smart gesture response priority. Currently only **GestureShortcut.PRIMARY** is supported, indicating the component serves as the preferred response target for smart gesture operations such as swiping and clicking.
-
-Default value: **GestureShortcut.PRIMARY**.
+Smart gesture response priority. Currently only **GestureShortcut.PRIMARY** is supported, indicating the component serves as the preferred response target for smart gesture operations such as swiping and clicking. Default value: **GestureShortcut.PRIMARY**.
 
 **Type:** GestureShortcut
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,19 +42,15 @@ Default value: **GestureShortcut.PRIMARY**.
 enabled?: boolean
 ```
 
-Whether the current component responds to smart gestures.
-
-**true**: The component responds to smart gestures.
-
-**false**: The component does not respond to smart gestures.
-
-Default value: **false**.
+Whether the current component responds to smart gestures. **true**: The component responds to smart gestures. **false**: The component does not respond to smart gestures. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,20 +66,15 @@ Default value: **false**.
 selectable?: boolean
 ```
 
-Whether to display and retain the selected state after the component is selected by a smart gesture operation.
-
-**true**: Show the selection indicator.
-
-**false**: Do not show the selection indicator.
-
-When **enabled** is **true**, the default value is **true**; when **enabled** is **false**, the default value is  
-**false**.
+Whether to display and retain the selected state after the component is selected by a smart gesture operation. **true**: Show the selection indicator. **false**: Do not show the selection indicator. When **enabled** is **true**, the default value is **true**; when **enabled** is **false**, the default value is **false**.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

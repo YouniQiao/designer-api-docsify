@@ -10,6 +10,8 @@ function getAllAppPrivateCertificatesByUid(appUid: number) : Promise<CMResult>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -36,9 +38,9 @@ function getAllAppPrivateCertificatesByUid(appUid: number) : Promise<CMResult>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
 
 ## 示例
 

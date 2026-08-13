@@ -2,7 +2,9 @@
 
 HTTP credential. Some server or proxy server need this.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface Credential--><!--Device-http-export interface Credential-End-->
 
@@ -24,9 +26,11 @@ Password of credential. Default is ''.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Credential-password: string--><!--Device-Credential-password: string-End-->
 
@@ -42,9 +46,11 @@ Username of credential. Default is ''.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Credential-username: string--><!--Device-Credential-username: string-End-->
 

@@ -2,7 +2,9 @@
 
 Provides APIs for operating on certificate extensions.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface CertExtension--><!--Device-cert-interface CertExtension-End-->
 
@@ -22,7 +24,9 @@ checkCA(): number
 
 Checks whether the certificate is a CA certificate.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,9 +44,9 @@ Checks whether the certificate is a CA certificate.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 
@@ -91,7 +95,9 @@ getEncoded(): EncodingBlob
 
 Obtains the serialized data of the certificate extensions.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -109,9 +115,9 @@ Obtains the serialized data of the certificate extensions.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 
@@ -161,7 +167,9 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 
 Obtains the value of a specific certificate extension entry by OID.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -186,10 +194,10 @@ Obtains the value of a specific certificate extension entry by OID.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 
@@ -243,7 +251,9 @@ getOidList(valueType: ExtensionOidType): DataArray
 
 Obtains the OIDs of the certificate extensions.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -267,10 +277,10 @@ Obtains the OIDs of the certificate extensions.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 
@@ -320,7 +330,9 @@ hasUnsupportedCriticalExtension(): boolean
 
 Checks whether there is a critical extension that is not supported.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -338,9 +350,9 @@ Checks whether there is a critical extension that is not supported.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 

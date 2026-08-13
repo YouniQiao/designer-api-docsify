@@ -6,19 +6,13 @@
 function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator
 ```
 
-通过宽、高、图片格式、容量创建ImageCreator实例。
-
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11废弃，建议使用[createImageCreator](#createImageCreator)代替。
+通过宽、高、图片格式、容量创建ImageCreator实例。 由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > 从API version 9开始支持，从API version 11废弃，建议使用[createImageCreator](#createImageCreator)代替。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** [createImageCreator](image.createImageCreator(size:)
+**替代接口：** [createImageCreator](#createImageCreator)(size: Size, format: ImageFormat, capacity: int)
 
 <!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
 
@@ -52,11 +46,11 @@ let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.Ima
 function createImageCreator(size: Size, format: ImageFormat, capacity: number): ImageCreator
 ```
 
-通过图片大小、图片格式、容量创建ImageCreator实例。
+通过图片大小、图片格式、容量创建ImageCreator实例。 由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator--><!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator-End-->
 
@@ -80,7 +74,7 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: number): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

@@ -8,7 +8,7 @@ Defines the routing state.
 
 **Deprecated since:** 8
 
-**Substitutes:** [RouterState](ohos.router#RouterState)
+**Substitutes:** RouterState
 
 <!--Device-unnamed-export interface RouterState--><!--Device-unnamed-export interface RouterState-End-->
 
@@ -36,7 +36,7 @@ Index of the current page in the stack. The index starts from 1 from the bottom 
 
 **Deprecated since:** 8
 
-**Substitutes:** [index](ohos.router.RouterState#index)
+**Substitutes:** index
 
 <!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
 
@@ -58,7 +58,7 @@ Name of the current page, that is, the file name.
 
 **Deprecated since:** 8
 
-**Substitutes:** [name](ohos.router.RouterState#name)
+**Substitutes:** name
 
 <!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
 
@@ -80,7 +80,7 @@ Path of the current page.
 
 **Deprecated since:** 8
 
-**Substitutes:** [path](ohos.router.RouterState#path)
+**Substitutes:** path
 
 <!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
 

@@ -2,7 +2,9 @@
 
 Defines the custom vibration effect.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibrateFromPattern--><!--Device-vibrator-interface VibrateFromPattern-End-->
 
@@ -24,7 +26,9 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 
 **Type:** [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibrateFromPattern-pattern: VibratorPattern--><!--Device-VibrateFromPattern-pattern: VibratorPattern-End-->
 
@@ -40,7 +44,9 @@ If the value is **pattern**, the vibrator vibrates based on the specified patter
 
 **Type:** 'pattern'
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibrateFromPattern-type: 'pattern'--><!--Device-VibrateFromPattern-type: 'pattern'-End-->
 

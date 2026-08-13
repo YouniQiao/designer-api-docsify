@@ -4,6 +4,8 @@ Describes the internal information about a task.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-taskpool-class TaskInfo--><!--Device-taskpool-class TaskInfo-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -20,11 +22,13 @@ import { taskpool } from '@kit.ArkTS';
 duration?: number
 ```
 
-Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the task is not running. If the return value is empty, no task is running. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 11.
+Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the task is not running. If the return value is empty, no task is running. You are advised not to change the value.&lt; br&gt; This API can be used in atomic services since API version 11.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,11 +42,13 @@ Duration that the task has been executed, in ms. The default value is **0**. If 
 name: string
 ```
 
-Task name. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 12.
+Task name. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 12.
 
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,13 +62,15 @@ Task name. You are advised not to change the value.&lt;br&gt;This API can be use
 state: State
 ```
 
-Task state. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 11.
+Task state. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
 
 **Type:** State
 
 **Default:** State::WAITING
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,13 +84,15 @@ Task state. You are advised not to change the value.&lt;br&gt;This API can be us
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 11.
+Task ID, which is globally unique by default. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
 
 **Type:** number
 
 **Default:** 0
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -2,9 +2,11 @@
 
 Describes the options for image encoding.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface PackingOption--><!--Device-image-interface PackingOption-End-->
 
@@ -22,13 +24,15 @@ import { image } from '@kit.ImageKit';
 backgroundColor?: int
 ```
 
-The background color used when the image pixels are in RGBA format but the target encoding format does not support transparency, such as "image/jpeg" or "image/heif".The value must be a 24‑bit RGB integer expressed in hexadecimal notation (e.g., 0xRRGGBB).The alpha channel is ignored.Valid range: 0x000000 – 0xFFFFFF.
+The background color used when the image pixels are in RGBA format but the target encoding format does not support transparency, such as "image/jpeg" or "image/heif". The value must be a 24‑bit RGB integer expressed in hexadecimal notation (e.g., 0xRRGGBB). The alpha channel is ignored. Valid range: 0x000000 – 0xFFFFFF.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,14 +46,15 @@ The background color used when the image pixels are in RGBA format but the targe
 bufferSize?: int
 ```
 
-Size of the buffer for receiving the encoded data, in bytes. If this parameter is not set, the default value 25 MB is used. If the size of an image exceeds 25 MB, you must specify the size. The value of **bufferSize** must be greater than the size of the encoded image. The use of   
-[packToFile](arkts-image-image-imagepacker-i.md#packToFile)is not restricted by this parameter.
+Size of the buffer for receiving the encoded data, in bytes. If this parameter is not set, the default value 25 MB is used. If the size of an image exceeds 25 MB, you must specify the size. The value of **bufferSize** must be greater than the size of the encoded image. The use of [packToFile](arkts-image-image-imagepacker-i.md#packToFile) is not restricted by this parameter.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,9 +72,11 @@ Desired dynamic range. The default value is **SDR**.
 
 **Type:** [PackingDynamicRange](arkts-image-image-packingdynamicrange-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange--><!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange-End-->
 
@@ -81,17 +88,15 @@ Desired dynamic range. The default value is **SDR**.
 format: string
 ```
 
-Format of the packed image.
-
-Currently, only the following formats are supported: image/jpeg, image/webp, image/png, image/heic (or image/heif)&lt;sup&gt;12+&lt;/sup&gt;, image/sdr_astc_4x4&lt;sup&gt;18+&lt;/sup&gt;, image/sdr_sut_superfast_4x4&lt;sup&gt;18+&lt;/sup&gt; (depending on the hardware), and image/hdr_astc_4x4&lt;sup&gt;20+&lt;/sup&gt;.
-
-**NOTE：**: The JPEG format does not support the alpha channel. If the JPEG format with the alpha channel is used for data encoding, the transparent color turns black.
+Format of the packed image. Currently, only the following formats are supported: image/jpeg, image/webp, image/png, image/heic (or image/heif )&lt;sup&gt;12+&lt;/sup&gt;, image/sdr_astc_4x4&lt;sup&gt;18+&lt;/sup&gt;, image/sdr_sut_superfast_4x4&lt;sup&gt;18+&lt;/sup&gt; (depending on the hardware), and image/hdr_astc_4x4&lt;sup&gt;20+&lt;/sup&gt;. **NOTE：**: The JPEG format does not support the alpha channel. If the JPEG format with the alpha channel is used for data encoding, the transparent color turns black.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -105,13 +110,15 @@ Currently, only the following formats are supported: image/jpeg, image/webp, ima
 maxEmbedThumbnailDimension?: int
 ```
 
-This parameter is valid only when needsPackProperties is set to true. It specifies the maximum width and height  of the thumbnail generated during encoding. If this parameter is not specified, no thumbnail will be  generated during encoding.The value should be an integer.&lt;br&gt;Unit:px.
+This parameter is valid only when needsPackProperties is set to true. It specifies the maximum width and height of the thumbnail generated during encoding. If this parameter is not specified, no thumbnail will be generated during encoding. The value should be an integer. &lt;br&gt;Unit:px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,13 +132,15 @@ This parameter is valid only when needsPackProperties is set to true. It specifi
 needsPackGPS?: boolean
 ```
 
-Indicates whether to carry GPS information when encoding the EXIF metadata.Default value: true.
+Indicates whether to carry GPS information when encoding the EXIF metadata. Default value: true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,9 +158,11 @@ Whether encoding image property information, for example, Exif, is required. **t
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PackingOption-needsPackProperties?: boolean--><!--Device-PackingOption-needsPackProperties?: boolean-End-->
 
@@ -163,20 +174,15 @@ Whether encoding image property information, for example, Exif, is required. **t
 quality: int
 ```
 
-Quality of the output image set. This parameter takes effect only for JPEG and HEIF images. The value range is   
-[0, 100]. The value **0** means the lowest quality, and **100** means the highest quality. The higher the quality, the larger the space occupied by the generated image. WebP and PNG images are lossless.
+Quality of the output image set. This parameter takes effect only for JPEG and HEIF images. The value range is [0, 100]. The value **0** means the lowest quality, and **100** means the highest quality. The higher the quality , the larger the space occupied by the generated image. WebP and PNG images are lossless. In the case of sdr_astc_4x4 encoding, the parameter can be set to **92** and **85**. In the case of sut encoding, the parameter can be set to **92**. (Available since API version 20) In the case of hdr_astc_4x4 encoding, the parameter can be set to **85**.
 
-In the case of sdr_astc_4x4 encoding, the parameter can be set to **92** and **85**.
+**Type:** int
 
-In the case of sut encoding, the parameter can be set to **92**.
+**Since:** 23
 
-(Available since API version 20) In the case of hdr_astc_4x4 encoding, the parameter can be set to **85**.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -196,7 +202,9 @@ Packing image size limit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -216,7 +224,9 @@ Options for tiff image packing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

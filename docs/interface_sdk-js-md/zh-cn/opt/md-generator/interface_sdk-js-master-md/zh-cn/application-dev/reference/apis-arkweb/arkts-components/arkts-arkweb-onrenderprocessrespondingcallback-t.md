@@ -8,6 +8,8 @@ The callback of render process responding.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type OnRenderProcessRespondingCallback = () => void--><!--Device-unnamed-type OnRenderProcessRespondingCallback = () => void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

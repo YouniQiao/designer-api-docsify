@@ -12,9 +12,11 @@ import { agentManager } from '@kit.AbilityKit';
 function registerAgentCard(agentCard: AgentCard): Promise<void>
 ```
 
-Registers an AgentCard.If `agentCard.type` is not specified, it defaults to `agentConstant.AgentCardType.APP`.When the type is `APP` or `LOW_CODE`, `appInfo` is validated, especially `bundleName` and `abilityName`.A maximum of 1000 AgentCards can be registered under one bundle.
+Registers an AgentCard. If `agentCard.type` is not specified, it defaults to `agentConstant.AgentCardType.APP`. When the type is `APP` or `LOW_CODE`, `appInfo` is validated, especially `bundleName` and `abilityName`. A maximum of 1000 AgentCards can be registered under one bundle.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MODIFY_AGENT_CARD
 
@@ -42,12 +44,12 @@ Registers an AgentCard.If `agentCard.type` is not specified, it defaults to `age
 
 | Error Code ID |
 | --- |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 | 35600008 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 35600006 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 35600005 |
-| [18500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500001-invalid-bundle-name) |
+| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) |

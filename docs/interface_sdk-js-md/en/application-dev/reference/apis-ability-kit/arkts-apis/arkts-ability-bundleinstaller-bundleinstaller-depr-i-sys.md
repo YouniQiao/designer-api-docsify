@@ -8,7 +8,7 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#BundleInstaller)
+**Substitutes:** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#BundleInstaller-(System-API))
 
 <!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
 
@@ -46,7 +46,7 @@ Install an application in a HAP.
 | --- | --- | --- | --- |
 | bundleFilePaths | Array&lt;string&gt; | Yes | Sandbox path where the HAP files of the bundle are stored. |
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
 
 ## recover
 
@@ -78,7 +78,7 @@ recover an application.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle recovery. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If recover is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If recover is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
 
 ## uninstall
 
@@ -110,5 +110,5 @@ Uninstall an application.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle uninstall. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If uninstall is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If uninstall is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
 

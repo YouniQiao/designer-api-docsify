@@ -1,6 +1,8 @@
 # abilityAccessCtrl
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace abilityAccessCtrl--><!--Device-unnamed-declare namespace abilityAccessCtrl-End-->
 
@@ -18,7 +20,7 @@ import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager) |
+| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager) |
 
 ### Interfaces
 

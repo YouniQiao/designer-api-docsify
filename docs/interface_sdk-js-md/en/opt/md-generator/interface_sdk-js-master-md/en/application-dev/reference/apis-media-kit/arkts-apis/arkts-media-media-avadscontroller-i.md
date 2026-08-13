@@ -4,6 +4,8 @@ Definition of the Ad Content Control Interface
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-media-interface AVAdsController--><!--Device-media-interface AVAdsController-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -20,9 +22,11 @@ import { media } from '@kit.MediaKit';
 addAdsMediaSource(src: MediaSource, start: number): Promise<string>
 ```
 
-Add an advertisement film source to the advertisement controller,The insertion time (relative to the playback progress of the main media asset) can be specified.
+Add an advertisement film source to the advertisement controller, The insertion time (relative to the playback progress of the main media asset) can be specified.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,7 +51,7 @@ Add an advertisement film source to the advertisement controller,The insertion t
 
 | Error Code ID |
 | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## disableAllAdsMediaSource
 
@@ -58,6 +62,8 @@ disableAllAdsMediaSource(): void
 Disable playback of the remaining broadcast content in the current session
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +80,8 @@ offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void
 Unregisters the event processing function when the ad content fails to be loaded.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,6 +105,8 @@ Unregisters the processing function of the event triggered by the completion of 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVAdsController-offAdsListenerAdsCompleted(callback?: Callback<string>): void--><!--Device-AVAdsController-offAdsListenerAdsCompleted(callback?: Callback<string>): void-End-->
@@ -118,6 +128,8 @@ offAdsListenerAdsSkipped(callback?: Callback<string>): void
 Unregisters the processing function of the event triggered when advertisement is skipped.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,6 +153,8 @@ Unregisters the processing function for the event triggered when a new ad conten
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVAdsController-offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void--><!--Device-AVAdsController-offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void-End-->
@@ -162,6 +176,8 @@ onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void
 Registers the event processing function when the ad content fails to be loaded.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,6 +201,8 @@ Registers the processing function of the event triggered by the completion of ad
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVAdsController-onAdsListenerAdsCompleted(callback: Callback<string>): void--><!--Device-AVAdsController-onAdsListenerAdsCompleted(callback: Callback<string>): void-End-->
@@ -206,6 +224,8 @@ onAdsListenerAdsSkipped(callback: Callback<string>): void
 Registers the processing function of the event triggered when advertisement is skipped.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,6 +249,8 @@ Registers the processing function for the event triggered when a new ad content 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVAdsController-onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void--><!--Device-AVAdsController-onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void-End-->
@@ -251,6 +273,8 @@ Release the AVAdsController object.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVAdsController-release(): void--><!--Device-AVAdsController-release(): void-End-->
@@ -266,6 +290,8 @@ removeAdsMediaSource(id: string): void
 Remove the ad source specified in the AdsController.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -283,7 +309,7 @@ Remove the ad source specified in the AdsController.
 
 | Error Code ID |
 | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## skipCurrentAdsMediaSource
 
@@ -294,6 +320,8 @@ skipCurrentAdsMediaSource(): void
 Skip the ad content that is being played.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

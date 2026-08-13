@@ -16,7 +16,9 @@ Set the SIM card labelIndex.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -30,8 +32,8 @@ Set the SIM card labelIndex.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the sim Id for card from sim account information. &lt;br&gt;Value range:[1,500] |
-| simLabelIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the simlabel index for card. |
+| simId | int | Yes | Indicates the sim Id for card from sim account information. &lt;br&gt;Value range:[1,500] |
+| simLabelIndex | int | Yes | Indicates the simlabel index for card. |
 
 **Return value:**
 
@@ -43,10 +45,10 @@ Set the SIM card labelIndex.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
-| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 

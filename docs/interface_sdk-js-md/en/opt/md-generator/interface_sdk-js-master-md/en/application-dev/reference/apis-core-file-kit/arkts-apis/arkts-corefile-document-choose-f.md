@@ -20,7 +20,7 @@ Chooses files of the specified types. This API uses a promise to return the resu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | string[] | No |
+| [types](../../apis-na/arkts-apis/arkts-na-util-types-c.md) | string[] | No |
 
 **Return value:**
 
@@ -72,5 +72,5 @@ Chooses files of the specified types. This API uses an asynchronous callback to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | string[] | Yes |
+| [types](../../apis-na/arkts-apis/arkts-na-util-types-c.md) | string[] | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |

@@ -2,7 +2,9 @@
 
 HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后，可在拖拽、复制粘贴等场景中传递富文本内容，支持跨应用的HTML格式数据交互，并可通过uriAuthorizationPolicies控制URI授权策略。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uniformDataStruct-interface HTML--><!--Device-uniformDataStruct-interface HTML-End-->
 
@@ -14,21 +16,13 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 details?: Record<string, string>
 ```
 
-字典类型对象，key和value均为string类型，用于描述HTML的详细属性内容。非必填字段，默认值为空字典对象。例如，可生成一个details内容为
-
-{
-
-"title":"标题",
-
-"content":"内容"
-
-}
-
-的数据对象。
+字典类型对象，key和value均为string类型，用于描述HTML的详细属性内容。非必填字段，默认值为空字典对象。例如，可生成一个details内容为 { "title":"标题", "content":"内容" } 的数据对象。
 
 **类型：** Record&lt;string, string&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +36,13 @@ details?: Record<string, string>
 htmlContent: string
 ```
 
-HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文档或HTML片段。长度限制为20MB。建议使用UTF-8编码。例如：&lt;div&gt;标题&lt;/div&gt;。
+HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文档或HTML片段。长度限制为20MB。建议使用UTF-8编码。 例如：&lt;div&gt;标题&lt;/div&gt;。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,7 +60,9 @@ plainContent?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,12 +76,13 @@ plainContent?: string
 readonly uniformDataType: 'general.html'
 ```
 
-统一数据类型标识为html类型数据，固定为“general.html”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
+统一数据类型标识为html类型数据，固定为“general.html”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
 
 **类型：** 'general.html'
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,12 +96,13 @@ readonly uniformDataType: 'general.html'
 uriAuthorizationPolicies?: Array<number>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见  
-[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md#UriPermission)。
+用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见 [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md#UriPermission)。
 
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,9 +2,11 @@
 
 Configuring parameters in reverse geocode requests.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface ReverseGeoCodeRequest--><!--Device-geoLocationManager-export interface ReverseGeoCodeRequest-End-->
 
@@ -26,9 +28,11 @@ Indicates the country information.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReverseGeoCodeRequest-country?: string--><!--Device-ReverseGeoCodeRequest-country?: string-End-->
 
@@ -42,11 +46,13 @@ latitude: double
 
 Latitude for reverse geocoding query.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReverseGeoCodeRequest-latitude: double--><!--Device-ReverseGeoCodeRequest-latitude: double-End-->
 
@@ -62,9 +68,11 @@ Indicates the language area information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
 
@@ -78,11 +86,13 @@ longitude: double
 
 Longitude for reverse geocoding query.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReverseGeoCodeRequest-longitude: double--><!--Device-ReverseGeoCodeRequest-longitude: double-End-->
 
@@ -96,11 +106,13 @@ maxItems?: int
 
 Indicates the maximum number of addresses returned by reverse geocoding query.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReverseGeoCodeRequest-maxItems?: int--><!--Device-ReverseGeoCodeRequest-maxItems?: int-End-->
 

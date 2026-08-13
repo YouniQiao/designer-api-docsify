@@ -1,9 +1,10 @@
 # Emitter
 
-This module provides the capabilities of sending and processing inter- or intra-thread events in a process of the same **Emitter** instance. You can use the following APIs to subscribe to an event in persistent or one-shot manner, cancel the subscription, or emit an event to the event queue. This module is applicable when inter-thread communication and event management are required based on independent instances. Different   
-**Emitter** instances are isolated from each other.
+This module provides the capabilities of sending and processing inter- or intra-thread events in a process of the same **Emitter** instance. You can use the following APIs to subscribe to an event in persistent or one-shot manner, cancel the subscription, or emit an event to the event queue. This module is applicable when inter-thread communication and event management are required based on independent instances. Different **Emitter** instances are isolated from each other.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-emitter-export class Emitter--><!--Device-emitter-export class Emitter-End-->
 
@@ -23,9 +24,11 @@ constructor()
 
 Defines a constructor.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-constructor()--><!--Device-Emitter-constructor()-End-->
 
@@ -37,22 +40,19 @@ Defines a constructor.
 let emitter1: emitter.Emitter = new emitter.Emitter();
 ```
 
-## emit
+## emit_string
 
 ```TypeScript
 emit(eventId: string, data?: EventData): void
 ```
 
-Emits a specified event to the Emitter class instance.
+Emits a specified event to the Emitter class instance. This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported. After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
-[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+**Since:** 23
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
+**Deprecated since:** -1
 
-**Since:** 22
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit(eventId: string, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, data?: EventData): void-End-->
 
@@ -79,22 +79,19 @@ let eventData: emitter.EventData = {
 emitter1.emit('eventId', eventData);
 ```
 
-## emit
+## emit_string
 
 ```TypeScript
 emit<T>(eventId: string, data?: GenericEventData<T>): void
 ```
 
-Emits a specified event to the Emitter class instance.
+Emits a specified event to the Emitter class instance. This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported. After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
-[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+**Since:** 23
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
+**Deprecated since:** -1
 
-**Since:** 22
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
 
@@ -130,22 +127,19 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter1.emit('eventId', eventData);
 ```
 
-## emit
+## emit_string
 
 ```TypeScript
 emit(eventId: string, options: Options, data?: EventData): void
 ```
 
-Emits an event of a specified priority to the Emitter instance.
+Emits an event of a specified priority to the Emitter instance. This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported. After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
-[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+**Since:** 23
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
+**Deprecated since:** -1
 
-**Since:** 22
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void-End-->
 
@@ -177,22 +171,19 @@ let eventData: emitter.EventData = {
 emitter1.emit('eventId', options, eventData);
 ```
 
-## emit
+## emit_string
 
 ```TypeScript
 emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 ```
 
-Emits an event of a specified priority to the Emitter instance.
+Emits an event of a specified priority to the Emitter instance. This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported. After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
-[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+**Since:** 23
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
+**Deprecated since:** -1
 
-**Since:** 22
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
 
@@ -240,9 +231,11 @@ getListenerCount(eventId: string): number
 
 Obtains the number of subscriptions to a specified event of the Emitter instance.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-getListenerCount(eventId: string): long--><!--Device-Emitter-getListenerCount(eventId: string): long-End-->
 
@@ -267,20 +260,65 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 let count: number = emitter1.getListenerCount('eventId');
 ```
 
-## off
+## offEventData
+
+```TypeScript
+offEventData(eventId: string, callback: Callback<EventData>): void
+```
+
+Unsubscribes from an event with the specified event ID and processed by the specified callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| eventId | string | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes |
+
+## offGenericEventData
+
+```TypeScript
+offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+```
+
+Unsubscribes from an event with the specified event ID and processed by the specified callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| eventId | string | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes |
+
+## off_string
 
 ```TypeScript
 off(eventId: string): void
 ```
 
-Unsubscribes from all events with the specified event ID of the Emitter instance.
+Unsubscribes from all events with the specified event ID of the Emitter instance. After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
 
-After this API is used to unsubscribe from an event, the event that has been published through the   
-[emit](emitter.Emitter#emit(eventId: string, data?: EventData)) API but has not been executed will be unsubscribed.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-off(eventId: string): void--><!--Device-Emitter-off(eventId: string): void-End-->
 
@@ -300,20 +338,17 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 emitter1.off('eventId');
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(eventId: string, callback: Callback<EventData>): void
 ```
 
-Unsubscribes from an event of the Emitter instance. This API takes effect only when the   
-[on](emitter.Emitter#on(eventId: string, callback: Callback&lt;EventData&gt;)) or   
-[once](emitter.Emitter#once(eventId: string, callback: Callback&lt;EventData&gt;)) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
-
-After this API is used to unsubscribe from an event, the event that has been published through the   
-[emit](emitter.Emitter#emit(eventId: string, data?: EventData)) API but has not been executed will be unsubscribed.
+Unsubscribes from an event of the Emitter instance. This API takes effect only when the [on](#on_string) or once API is used to subscribe to the event with specified event ID and a callback is used to process the event. After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -342,20 +377,17 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.off('eventId', callback);
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-Unsubscribes from an event of the Emitter instance. This API takes effect only when the   
-[on](emitter.Emitter#on&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) or   
-[once](emitter.Emitter#once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
-
-After this API is used to unsubscribe from an event, the event that has been published through the   
-[emit](emitter.Emitter#emit&lt;T&gt;(eventId: string, data?: GenericEventData&lt;T&gt;)) API but has not been executed will be unsubscribed.
+Unsubscribes from an event of the Emitter instance. This API takes effect only when the on or once API is used to subscribe to the event with specified event ID and a callback is used to process the event. After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -398,7 +430,53 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.off('eventId', callback);
 ```
 
-## on
+## onEventData
+
+```TypeScript
+onEventData(eventId: string, callback: Callback<EventData>): void
+```
+
+Subscribes to an event in persistent manner and executes a callback after the event is received.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| eventId | string | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes |
+
+## onGenericEventData
+
+```TypeScript
+onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+```
+
+Subscribes to an event in persistent manner and executes a callback after the event is received.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| eventId | string | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes |
+
+## on_string
 
 ```TypeScript
 on(eventId: string, callback: Callback<EventData>): void
@@ -407,6 +485,8 @@ on(eventId: string, callback: Callback<EventData>): void
 Subscribes to an event specified by the Emitter instance in persistent manner and executes a callback after the event is received.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -435,7 +515,7 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.on('eventId', callback);
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
@@ -444,6 +524,8 @@ on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 Subscribes to an event specified by the Emitter instance in persistent manner and executes a callback after the event is received.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -486,7 +568,53 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.on('eventId', callback);
 ```
 
-## once
+## onceEventData
+
+```TypeScript
+onceEventData(eventId: string, callback: Callback<EventData>): void
+```
+
+Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| eventId | string | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes |
+
+## onceGenericEventData
+
+```TypeScript
+onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+```
+
+Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| eventId | string | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes |
+
+## once_string
 
 ```TypeScript
 once(eventId: string, callback: Callback<EventData>): void
@@ -495,6 +623,8 @@ once(eventId: string, callback: Callback<EventData>): void
 Subscribes to an event specified by the Emitter instance in one-shot manner and unsubscribes from it after the event callback is executed. This API uses an asynchronous callback to return the result.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -523,7 +653,7 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.once('eventId', callback);
 ```
 
-## once
+## once_string
 
 ```TypeScript
 once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
@@ -532,6 +662,8 @@ once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 Subscribes to an event specified by the Emitter instance in one-shot manner and unsubscribes from it after the event callback is executed. This API uses an asynchronous callback to return the result.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

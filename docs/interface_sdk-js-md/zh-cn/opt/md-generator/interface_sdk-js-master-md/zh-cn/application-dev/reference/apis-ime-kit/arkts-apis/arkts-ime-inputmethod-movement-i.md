@@ -2,7 +2,9 @@
 
 选中文本时，光标移动的方向。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export interface Movement--><!--Device-inputMethod-export interface Movement-End-->
 
@@ -18,7 +20,9 @@ direction: Direction
 
 **类型：** Direction
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Movement-direction: Direction--><!--Device-Movement-direction: Direction-End-->
 

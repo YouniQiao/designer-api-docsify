@@ -14,7 +14,7 @@ Deletes a widget. After this API is called, the application can no longer use th
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm)
+**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -29,7 +29,7 @@ Deletes a widget. After this API is called, the application can no longer use th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is deleted, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is deleted, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## deleteForm
@@ -46,7 +46,7 @@ Deletes a widget. After this API is called, the application can no longer use th
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm)
+**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

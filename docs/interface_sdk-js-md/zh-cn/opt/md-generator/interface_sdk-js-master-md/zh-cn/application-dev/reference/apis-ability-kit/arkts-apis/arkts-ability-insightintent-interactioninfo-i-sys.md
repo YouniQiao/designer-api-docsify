@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-insightIntent-interface InteractionInfo--><!--Device-insightIntent-interface InteractionInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,6 +23,8 @@ interactionUI?: InteractionUI
 **类型：** [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

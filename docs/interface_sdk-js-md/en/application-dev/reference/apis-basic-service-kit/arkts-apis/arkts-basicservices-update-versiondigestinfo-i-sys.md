@@ -2,9 +2,11 @@
 
 Represents version digest information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface VersionDigestInfo--><!--Device-update-export interface VersionDigestInfo-End-->
 
@@ -28,9 +30,11 @@ Version digest information. The value is a string of 1 to 128 characters. The va
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VersionDigestInfo-versionDigest: string--><!--Device-VersionDigestInfo-versionDigest: string-End-->
 

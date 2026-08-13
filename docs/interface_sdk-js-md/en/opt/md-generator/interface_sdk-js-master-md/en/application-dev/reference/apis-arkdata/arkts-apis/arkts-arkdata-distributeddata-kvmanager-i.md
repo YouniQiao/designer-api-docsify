@@ -1,13 +1,12 @@
 # KVManager
 
-Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must  use  
-[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createKVManager) to create a **KVManager** object.
+Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createKVManager) to create a **KVManager** object.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [KVManager](ohos.data.distributedKVStore.KVManager)
+**Substitutes:** KVManager
 
 <!--Device-distributedData-interface KVManager--><!--Device-distributedData-interface KVManager-End-->
 
@@ -25,7 +24,7 @@ Closes a KV store. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeKVStore](ohos.data.distributedKVStore.KVManager#closeKVStore)
+**Substitutes:** closeKVStore
 
 <!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void-End-->
 
@@ -79,7 +78,7 @@ Closes a KV store. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeKVStore](ohos.data.distributedKVStore.KVManager#closeKVStore)
+**Substitutes:** closeKVStore
 
 <!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>-End-->
 
@@ -142,7 +141,7 @@ Deletes a KV store. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteKVStore](ohos.data.distributedKVStore.KVManager#deleteKVStore)
+**Substitutes:** deleteKVStore
 
 <!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -195,7 +194,7 @@ Deletes a KV store. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteKVStore](ohos.data.distributedKVStore.KVManager#deleteKVStore)
+**Substitutes:** deleteKVStore
 
 <!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>-End-->
 
@@ -251,15 +250,13 @@ try {
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-Obtains the IDs of all KV stores that are created by  
-[getKVStore()](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
-[deleteKVStore()](#deleteKVStore). This API uses an asynchronous callback to return the result.
+Obtains the IDs of all KV stores that are created by getKVStore() and have not been deleted by [deleteKVStore()](#deleteKVStore) . This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllKVStoreId](ohos.data.distributedKVStore.KVManager#getAllKVStoreId)
+**Substitutes:** getAllKVStoreId
 
 <!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void--><!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void-End-->
 
@@ -292,15 +289,13 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-Obtains the IDs of all KV stores that are created by  
-[getKVStore()](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
-[deleteKVStore()](#deleteKVStore). This API uses a promise to return the result.
+Obtains the IDs of all KV stores that are created by getKVStore() and have not been deleted by [deleteKVStore()](#deleteKVStore) . This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllKVStoreId](ohos.data.distributedKVStore.KVManager#getAllKVStoreId)
+**Substitutes:** getAllKVStoreId
 
 <!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>--><!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>-End-->
 
@@ -347,7 +342,7 @@ Creates and obtains a KV store. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKVStore](ohos.data.distributedKVStore.KVManager#getKVStore)
+**Substitutes:** getKVStore
 
 <!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>-End-->
 
@@ -403,7 +398,7 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKVStore](ohos.data.distributedKVStore.KVManager#getKVStore)
+**Substitutes:** getKVStore
 
 <!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void-End-->
 
@@ -444,7 +439,7 @@ try {
 }
 ```
 
-## off
+## off_distributedDataServiceDie
 
 ```TypeScript
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
@@ -456,7 +451,7 @@ Unsubscribes from service status changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**Substitutes:** off
 
 <!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
 
@@ -484,7 +479,7 @@ try {
 }
 ```
 
-## on
+## on_distributedDataServiceDie
 
 ```TypeScript
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
@@ -496,7 +491,7 @@ Subscribes to service status changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.data.distributedKVStore.KVManager#on)
+**Substitutes:** on
 
 <!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
 

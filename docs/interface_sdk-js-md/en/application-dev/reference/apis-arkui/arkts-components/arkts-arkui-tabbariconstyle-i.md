@@ -6,6 +6,8 @@ Represents a label icon style object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TabBarIconStyle--><!--Device-unnamed-declare interface TabBarIconStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@ Represents a label icon style object.
 selectedColor?: ResourceColor
 ```
 
-Color of the label icon when it is selected.
-
-Default value: **#FF007DFF**
-
-**NOTE：**
-
-This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
+Color of the label icon when it is selected. Default value: **#FF007DFF** **NOTE：**This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
 
 **Type:** ResourceColor
 
@@ -31,6 +27,8 @@ This attribute only applies to an SVG image. Once set, the fill color will repla
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +44,7 @@ This attribute only applies to an SVG image. Once set, the fill color will repla
 unselectedColor?: ResourceColor
 ```
 
-Color of the label icon when it is not selected.
-
-Default value: **#33182431**
-
-**NOTE：**
-
-This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
+Color of the label icon when it is not selected. Default value: **#33182431** **NOTE：**This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
 
 **Type:** ResourceColor
 
@@ -61,6 +53,8 @@ This attribute only applies to an SVG image. Once set, the fill color will repla
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

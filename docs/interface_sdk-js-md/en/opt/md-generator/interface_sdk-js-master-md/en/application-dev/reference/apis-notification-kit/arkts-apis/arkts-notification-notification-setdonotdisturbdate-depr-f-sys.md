@@ -12,7 +12,7 @@ Sets the DND time. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ Sets the DND time. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -77,7 +77,7 @@ Sets the DND time for a specified user. This API uses an asynchronous callback t
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -108,7 +108,7 @@ Sets the DND time for a specified user. This API uses a promise to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

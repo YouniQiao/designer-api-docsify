@@ -2,7 +2,9 @@
 
 systemScreenLock
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace screenLock--><!--Device-unnamed-declare namespace screenLock-End-->
 
@@ -20,34 +22,34 @@ import { screenLock } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isscreenlocked) |
-| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isscreenlocked-1) |
-| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#issecuremode) |
-| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#issecuremode-1) |
-| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockscreen) |
-| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockscreen-1) |
+| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isScreenLocked) |
+| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isScreenLocked) |
+| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#isSecureMode) |
+| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#isSecureMode) |
+| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockScreen) |
+| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockScreen) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getScreenLockAuthState](arkts-basicservices-screenlock-getscreenlockauthstate-f-sys.md#getscreenlockauthstate) |
-| [getStrongAuth](arkts-basicservices-screenlock-getstrongauth-f-sys.md#getstrongauth) |
-| [getUnlockPolicy](arkts-basicservices-screenlock-getunlockpolicy-f-sys.md#getunlockpolicy) |
-| [isDeviceLocked](arkts-basicservices-screenlock-isdevicelocked-f-sys.md#isdevicelocked) |
-| [isLocked](arkts-basicservices-screenlock-islocked-f-sys.md#islocked) |
-| [isScreenLockDisabled](arkts-basicservices-screenlock-isscreenlockdisabled-f-sys.md#isscreenlockdisabled) |
-| [lock](arkts-basicservices-screenlock-lock-f-sys.md#lock) |
-| [lock](arkts-basicservices-screenlock-lock-f-sys.md#lock-1) |
-| [onSystemEvent](arkts-basicservices-screenlock-onsystemevent-f-sys.md#onsystemevent) |
-| [requestStrongAuth](arkts-basicservices-screenlock-requeststrongauth-f-sys.md#requeststrongauth) |
-| [sendScreenLockEvent](arkts-basicservices-screenlock-sendscreenlockevent-f-sys.md#sendscreenlockevent) |
-| [sendScreenLockEvent](arkts-basicservices-screenlock-sendscreenlockevent-f-sys.md#sendscreenlockevent-1) |
-| [setScreenLockAuthState](arkts-basicservices-screenlock-setscreenlockauthstate-f-sys.md#setscreenlockauthstate) |
-| [setScreenLockDisabled](arkts-basicservices-screenlock-setscreenlockdisabled-f-sys.md#setscreenlockdisabled) |
-| [unlock](arkts-basicservices-screenlock-unlock-f-sys.md#unlock) |
-| [unlock](arkts-basicservices-screenlock-unlock-f-sys.md#unlock-1) |
+| [getScreenLockAuthState](arkts-basicservices-screenlock-getscreenlockauthstate-f-sys.md#getScreenLockAuthState-(System-API)) |
+| [getStrongAuth](arkts-basicservices-screenlock-getstrongauth-f-sys.md#getStrongAuth-(System-API)) |
+| [getUnlockPolicy](arkts-basicservices-screenlock-getunlockpolicy-f-sys.md#getUnlockPolicy-(System-API)) |
+| [isDeviceLocked](arkts-basicservices-screenlock-isdevicelocked-f-sys.md#isDeviceLocked-(System-API)) |
+| [isLocked](arkts-basicservices-screenlock-islocked-f-sys.md#isLocked-(System-API)) |
+| [isScreenLockDisabled](arkts-basicservices-screenlock-isscreenlockdisabled-f-sys.md#isScreenLockDisabled-(System-API)) |
+| [lock](arkts-basicservices-screenlock-lock-f-sys.md#lock-(System-API)) |
+| [lock](arkts-basicservices-screenlock-lock-f-sys.md#lock-(System-API)) |
+| [onSystemEvent](arkts-basicservices-screenlock-onsystemevent-f-sys.md#onSystemEvent-(System-API)) |
+| [requestStrongAuth](arkts-basicservices-screenlock-requeststrongauth-f-sys.md#requestStrongAuth-(System-API)) |
+| [sendScreenLockEvent](arkts-basicservices-screenlock-sendscreenlockevent-f-sys.md#sendScreenLockEvent-(System-API)) |
+| [sendScreenLockEvent](arkts-basicservices-screenlock-sendscreenlockevent-f-sys.md#sendScreenLockEvent-(System-API)) |
+| [setScreenLockAuthState](arkts-basicservices-screenlock-setscreenlockauthstate-f-sys.md#setScreenLockAuthState-(System-API)) |
+| [setScreenLockDisabled](arkts-basicservices-screenlock-setscreenlockdisabled-f-sys.md#setScreenLockDisabled-(System-API)) |
+| [unlock](arkts-basicservices-screenlock-unlock-f-sys.md#unlock-(System-API)) |
+| [unlock](arkts-basicservices-screenlock-unlock-f-sys.md#unlock-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

@@ -60,7 +60,9 @@ function getValueSync(context: Context, name: string, defValue: string): string
 
 Get value from settingsdata(synchronous method)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,10 +103,11 @@ let value = settings.getValueSync(context, settings.display.SCREEN_BRIGHTNESS_ST
 function getValueSync(context: Context, name: string, defValue: string, domainName: string): string
 ```
 
-Get value from settingsdata(synchronous method).  
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Get value from settingsdata(synchronous method). [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

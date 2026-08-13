@@ -2,7 +2,9 @@
 
 Describes the main window information.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface MainWindowInfo--><!--Device-window-interface MainWindowInfo-End-->
 
@@ -24,7 +26,9 @@ ID of the display to which the main window belongs.
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MainWindowInfo-displayId: long--><!--Device-MainWindowInfo-displayId: long-End-->
 
@@ -40,7 +44,9 @@ Task name of the main window.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MainWindowInfo-label: string--><!--Device-MainWindowInfo-label: string-End-->
 
@@ -52,11 +58,13 @@ Task name of the main window.
 showing: boolean
 ```
 
-Foreground/Background status of the main window. **true** if the main window is in the foreground, **false**otherwise.
+Foreground/Background status of the main window. **true** if the main window is in the foreground, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MainWindowInfo-showing: boolean--><!--Device-MainWindowInfo-showing: boolean-End-->
 
@@ -72,7 +80,9 @@ ID of the main window.
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MainWindowInfo-windowId: int--><!--Device-MainWindowInfo-windowId: int-End-->
 

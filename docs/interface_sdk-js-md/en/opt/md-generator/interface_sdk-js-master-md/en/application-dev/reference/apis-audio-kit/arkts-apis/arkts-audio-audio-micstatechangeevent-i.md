@@ -2,7 +2,9 @@
 
 Describes the event received by the application when the microphone mute status is changed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface MicStateChangeEvent--><!--Device-audio-interface MicStateChangeEvent-End-->
 
@@ -24,7 +26,9 @@ Mute status of the microphone **true** if muted, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MicStateChangeEvent-mute: boolean--><!--Device-MicStateChangeEvent-mute: boolean-End-->
 

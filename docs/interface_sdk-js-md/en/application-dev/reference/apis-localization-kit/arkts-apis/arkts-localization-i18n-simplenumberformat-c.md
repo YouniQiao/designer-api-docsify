@@ -1,10 +1,12 @@
 # SimpleNumberFormat
 
-Provide a simple number formatting interface.
+Formats a number based on the specified skeleton string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class SimpleNumberFormat--><!--Device-i18n-export class SimpleNumberFormat-End-->
 
@@ -26,7 +28,9 @@ Formats a number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -45,4 +49,20 @@ Formats a number.
 | Type | Description |
 | --- | --- |
 | string | Formatted number. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
+  let formattedNumber: string = formatter.format(10); // formattedNumber = '10%'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call SimpleNumberFormat.format failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

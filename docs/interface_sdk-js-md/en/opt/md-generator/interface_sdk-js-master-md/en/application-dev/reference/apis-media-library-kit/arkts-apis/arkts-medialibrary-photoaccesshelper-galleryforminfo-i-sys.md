@@ -2,7 +2,9 @@
 
 Defines the Gallery widget information.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface GalleryFormInfo--><!--Device-photoAccessHelper-interface GalleryFormInfo-End-->
 
@@ -22,17 +24,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 assetUris?: Array<string>
 ```
 
-URIs of the images or albums bound to the widget.
-
-This parameter cannot be empty when creating or updating a widget.
-
-If you attempt to create or update a widget with more than 500 URIs in **assetUris**, only the first 500 URIs are registered for listening. Any URIs beyond the first 500 are not registered. 
-
-When deleting a widget, this parameter can be omitted.
+URIs of the images or albums bound to the widget. This parameter cannot be empty when creating or updating a widget. If you attempt to create or update a widget with more than 500 URIs in **assetUris**, only the first 500 URIs are registered for listening. Any URIs beyond the first 500 are not registered. When deleting a widget, this parameter can be omitted.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GalleryFormInfo-assetUris?: Array<string>--><!--Device-GalleryFormInfo-assetUris?: Array<string>-End-->
 
@@ -50,7 +48,9 @@ Widget ID, which is provided when a widget is created in Gallery.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GalleryFormInfo-formId: string--><!--Device-GalleryFormInfo-formId: string-End-->
 

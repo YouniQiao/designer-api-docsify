@@ -2,7 +2,9 @@
 
 Information of input window.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export interface InputWindowInfo--><!--Device-inputMethod-export interface InputWindowInfo-End-->
 
@@ -26,6 +28,8 @@ Indicates the id of the display where the input window is shown.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputWindowInfo-displayId?: long--><!--Device-InputWindowInfo-displayId?: long-End-->
@@ -42,7 +46,9 @@ Indicates the height of the input window, unit is px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputWindowInfo-height: long--><!--Device-InputWindowInfo-height: long-End-->
 
@@ -58,7 +64,9 @@ Indicates the abscissa of the upper-left vertex of input window, unit is px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputWindowInfo-left: int--><!--Device-InputWindowInfo-left: int-End-->
 
@@ -74,7 +82,9 @@ Indicates name of the input window.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputWindowInfo-name: string--><!--Device-InputWindowInfo-name: string-End-->
 
@@ -90,7 +100,9 @@ Indicates the ordinate of the upper-left vertex of input window, unit is px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputWindowInfo-top: int--><!--Device-InputWindowInfo-top: int-End-->
 
@@ -106,7 +118,9 @@ Indicates the width of the input window, unit is px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputWindowInfo-width: long--><!--Device-InputWindowInfo-width: long-End-->
 

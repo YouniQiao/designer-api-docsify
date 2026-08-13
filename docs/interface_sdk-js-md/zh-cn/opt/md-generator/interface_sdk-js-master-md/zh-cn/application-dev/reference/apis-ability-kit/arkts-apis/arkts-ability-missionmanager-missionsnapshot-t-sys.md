@@ -6,7 +6,9 @@ export type MissionSnapshot = _MissionSnapshot
 
 任务的任务快照对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot--><!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot-End-->
 

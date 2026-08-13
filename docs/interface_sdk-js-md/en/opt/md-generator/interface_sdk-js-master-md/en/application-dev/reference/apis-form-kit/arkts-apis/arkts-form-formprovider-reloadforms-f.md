@@ -12,15 +12,15 @@ import { formProvider } from '@kit.FormKit';
 function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<number>
 ```
 
-Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and **formName** of the current application, each widget has a different widget ID after being added to the home screen for multiple times. Widget providers can use this API to batch update widgets that have different IDs but share the same **moduleName**,   
-**abilityName**, and **formName**. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates. It can only be called within a   
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and uses a promise to return the result.
+Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and **formName** of the current application, each widget has a different widget ID after being added to the home screen for multiple times. Widget providers can use this API to batch update widgets that have different IDs but share the same **moduleName**, **abilityName**, and **formName**. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates. It can only be called within a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<int>--><!--Device-formProvider-function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<int>-End-->
 
@@ -45,7 +45,7 @@ Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and 
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
 ## Examples
 

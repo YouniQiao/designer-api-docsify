@@ -12,7 +12,7 @@ Publishes a common event to a specific user. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishAsUser](@ohos.commonEventManager:commonEventManager.publishAsUser(event:)
+**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishAsUser-(System-API))(event: string, userId: int, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -67,7 +67,7 @@ Publishes a common event with given properties to a specific user. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishAsUser](@ohos.commonEventManager:commonEventManager.publishAsUser()
+**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishAsUser-(System-API))( event: string, userId: int, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
 
 <!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 

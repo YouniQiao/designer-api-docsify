@@ -2,7 +2,9 @@
 
 定义矩形.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
 
@@ -18,7 +20,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
 
@@ -34,7 +38,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
 
@@ -50,7 +56,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-x: double--><!--Device-Rect-x: double-End-->
 
@@ -66,7 +74,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-y: double--><!--Device-Rect-y: double-End-->
 

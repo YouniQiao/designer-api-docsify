@@ -1,4 +1,4 @@
-# @ohos.bundleState(设备使用信息统计)
+# @ohos.bundleState
 
 本模块提供设备使用信息统计能力。
 
@@ -16,24 +16,24 @@
 
 | 名称 |
 | --- |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate) |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate-1) |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryappusageprioritygroup) |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryappusageprioritygroup-1) |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#querycurrentbundleactivestates) |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#querycurrentbundleactivestates-1) |
+| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isIdleState) |
+| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isIdleState) |
+| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryAppUsagePriorityGroup) |
+| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryAppUsagePriorityGroup) |
+| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#queryCurrentBundleActiveStates) |
+| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#queryCurrentBundleActiveStates) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#querybundleactivestates) |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#querybundleactivestates-1) |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval) |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval-1) |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos) |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos-1) |
+| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#queryBundleActiveStates（系统接口）) |
+| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#queryBundleActiveStates（系统接口）) |
+| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#queryBundleStateInfoByInterval（系统接口）) |
+| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#queryBundleStateInfoByInterval（系统接口）) |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#queryBundleStateInfos（系统接口）) |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#queryBundleStateInfos（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

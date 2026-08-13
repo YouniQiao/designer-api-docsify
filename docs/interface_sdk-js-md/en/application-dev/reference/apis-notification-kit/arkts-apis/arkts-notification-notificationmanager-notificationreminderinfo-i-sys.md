@@ -2,9 +2,11 @@
 
 Describes the information about the application reminder.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface NotificationReminderInfo--><!--Device-notificationManager-export interface NotificationReminderInfo-End-->
 
@@ -28,9 +30,11 @@ Bundle information of the application.
 
 **Type:** BundleOption
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationReminderInfo-bundle: BundleOption--><!--Device-NotificationReminderInfo-bundle: BundleOption-End-->
 
@@ -44,13 +48,15 @@ Bundle information of the application.
 reminderFlags: long
 ```
 
-Notification reminder mode flags.&lt;br&gt;- bit0: sound prompt. The value **0** indicates disabled, and **1**indicates enabled. &lt;br&gt;- bit1: lock screen. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit3:screen on. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit4: vibration. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit5: status bar notification icon. The value **0** indicates disabled, and **1** indicates enabled.
+Notification reminder mode flags.&lt;br&gt;- bit0: sound prompt. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit1: lock screen. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit3: screen on. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit4: vibration. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit5: status bar notification icon. The value **0** indicates disabled, and **1** indicates enabled.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationReminderInfo-reminderFlags: long--><!--Device-NotificationReminderInfo-reminderFlags: long-End-->
 
@@ -68,9 +74,11 @@ Whether the silent reminder is enabled. The value **true** indicates that the si
 
 **Type:** boolean
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationReminderInfo-silentReminderEnabled: boolean--><!--Device-NotificationReminderInfo-silentReminderEnabled: boolean-End-->
 

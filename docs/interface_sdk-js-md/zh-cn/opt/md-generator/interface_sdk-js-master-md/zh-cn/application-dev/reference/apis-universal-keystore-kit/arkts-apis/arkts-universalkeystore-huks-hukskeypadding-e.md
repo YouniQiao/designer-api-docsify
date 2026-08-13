@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-huks-export enum HuksKeyPadding--><!--Device-huks-export enum HuksKeyPadding-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -17,6 +19,8 @@ HUKS_PADDING_NONE = 0
 表示不使用填充算法。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ HUKS_PADDING_OAEP = 1
 表示使用OAEP填充算法。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -52,6 +58,8 @@ HUKS_PADDING_PSS = 2
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2--><!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2-End-->
@@ -69,6 +77,8 @@ HUKS_PADDING_PKCS1_V1_5 = 3
 表示使用PKCS1_V1_5填充算法。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -88,6 +98,8 @@ HUKS_PADDING_PKCS5 = 4
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4-End-->
@@ -106,6 +118,8 @@ HUKS_PADDING_PKCS7 = 5
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5-End-->
@@ -122,6 +136,8 @@ HUKS_PADDING_ISO_IEC_9796_2 = 6
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6--><!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6-End-->
@@ -137,6 +153,8 @@ HUKS_PADDING_ISO_IEC_9797_1 = 7
 表示使用ISO_IEC_9797_1填充算法&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

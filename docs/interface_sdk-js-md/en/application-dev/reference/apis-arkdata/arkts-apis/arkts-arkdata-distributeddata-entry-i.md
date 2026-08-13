@@ -8,7 +8,7 @@ Defines the KV pairs stored in the KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Entry](ohos.data.distributedKVStore.Entry)
+**Substitutes:** Entry
 
 <!--Device-distributedData-interface Entry--><!--Device-distributedData-interface Entry-End-->
 
@@ -30,7 +30,7 @@ Key of the KV pair stored in the KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** [key](ohos.data.distributedKVStore.Entry#key)
+**Substitutes:** key
 
 <!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
 
@@ -52,7 +52,7 @@ Value of the KV pair stored in the KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** [value](ohos.data.distributedKVStore.Entry#value)
+**Substitutes:** value
 
 <!--Device-Entry-value: Value--><!--Device-Entry-value: Value-End-->
 

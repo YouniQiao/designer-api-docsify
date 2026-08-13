@@ -12,7 +12,7 @@ function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVMana
 
 **废弃版本：** 9
 
-**替代接口：** [createKVManager](ohos.data.distributedKVStore#createKVManager)
+**替代接口：** createKVManager
 
 <!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void--><!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void-End-->
 
@@ -63,7 +63,7 @@ function createKVManager(config: KVManagerConfig): Promise<KVManager>
 
 **废弃版本：** 9
 
-**替代接口：** [createKVManager](ohos.data.distributedKVStore#createKVManager)
+**替代接口：** createKVManager
 
 <!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>--><!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>-End-->
 

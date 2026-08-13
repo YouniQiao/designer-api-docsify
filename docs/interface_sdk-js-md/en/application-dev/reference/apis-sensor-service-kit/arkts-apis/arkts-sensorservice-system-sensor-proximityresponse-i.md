@@ -8,7 +8,7 @@ Callback invoked when the proximity sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [ProximityResponse](ohos.sensor/sensor#ProximityResponse)
+**Substitutes:** [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md#ProximityResponse)
 
 <!--Device-unnamed-export interface ProximityResponse--><!--Device-unnamed-export interface ProximityResponse-End-->
 
@@ -36,7 +36,7 @@ Distance between a visible object and the device screen.
 
 **Deprecated since:** 8
 
-**Substitutes:** [distance](ohos.sensor/sensor#ProximityResponse.distance)
+**Substitutes:** [distance](arkts-sensorservice-sensor-proximityresponse-i.md#distance)
 
 **Model restriction:** This API can be used only in the FA model.
 

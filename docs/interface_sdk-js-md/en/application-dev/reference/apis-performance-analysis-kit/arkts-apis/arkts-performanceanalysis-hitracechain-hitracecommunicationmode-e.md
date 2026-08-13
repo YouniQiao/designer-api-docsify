@@ -2,9 +2,11 @@
 
 Enumerates communication modes.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-enum HiTraceCommunicationMode--><!--Device-hiTraceChain-enum HiTraceCommunicationMode-End-->
 
@@ -18,9 +20,11 @@ DEFAULT = 0
 
 Default communication.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceCommunicationMode-DEFAULT = 0--><!--Device-HiTraceCommunicationMode-DEFAULT = 0-End-->
 
@@ -34,9 +38,11 @@ THREAD = 1
 
 Inter-thread communication.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceCommunicationMode-THREAD = 1--><!--Device-HiTraceCommunicationMode-THREAD = 1-End-->
 
@@ -50,9 +56,11 @@ PROCESS = 2
 
 Inter-process communication.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceCommunicationMode-PROCESS = 2--><!--Device-HiTraceCommunicationMode-PROCESS = 2-End-->
 
@@ -66,9 +74,11 @@ DEVICE = 3
 
 Inter-device communication.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HiTraceCommunicationMode-DEVICE = 3--><!--Device-HiTraceCommunicationMode-DEVICE = 3-End-->
 

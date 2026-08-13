@@ -2,9 +2,11 @@
 
 ScrollEvent type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export enum ScrollEventType--><!--Device-uiObserver-export enum ScrollEventType-End-->
 
@@ -16,13 +18,17 @@ ScrollEvent type.
 SCROLL_START = 0
 ```
 
-When the ScrollEvent start.
+When the ScrollEvent starts.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScrollEventType-SCROLL_START = 0--><!--Device-ScrollEventType-SCROLL_START = 0-End-->
 
@@ -34,13 +40,17 @@ When the ScrollEvent start.
 SCROLL_STOP = 1
 ```
 
-When the ScrollEvent stop.
+When the ScrollEvent stops.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScrollEventType-SCROLL_STOP = 1--><!--Device-ScrollEventType-SCROLL_STOP = 1-End-->
 

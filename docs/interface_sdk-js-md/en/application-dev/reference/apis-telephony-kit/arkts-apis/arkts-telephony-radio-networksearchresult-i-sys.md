@@ -2,9 +2,11 @@
 
 Obtains the network search results.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface NetworkSearchResult--><!--Device-radio-export interface NetworkSearchResult-End-->
 
@@ -28,9 +30,11 @@ Indicates whether the network search was successful.
 
 **Type:** boolean
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSearchResult-isNetworkSearchSuccess: boolean--><!--Device-NetworkSearchResult-isNetworkSearchSuccess: boolean-End-->
 
@@ -48,9 +52,11 @@ Obtains the network search results.
 
 **Type:** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSearchResult-networkSearchResult: Array<NetworkInformation>--><!--Device-NetworkSearchResult-networkSearchResult: Array<NetworkInformation>-End-->
 

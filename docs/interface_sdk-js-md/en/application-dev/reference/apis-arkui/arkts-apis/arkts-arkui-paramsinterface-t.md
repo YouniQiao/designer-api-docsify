@@ -14,7 +14,7 @@ List of routing parameters.
 
 **Deprecated since:** 8
 
-**Substitutes:** [params](ohos.router.RouterOptions#params)
+**Substitutes:** params
 
 <!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}--><!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}-End-->
 

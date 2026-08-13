@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-motion-export enum PickupEvent--><!--Device-motion-export enum PickupEvent-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
@@ -19,6 +21,8 @@ PICKED_UP = 0
 表示检测到拾起动作（设备正在被拿起）。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

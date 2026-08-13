@@ -2,7 +2,9 @@
 
 Gzip header information passed to and from zlib routines.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-zlib-interface GzHeader--><!--Device-zlib-interface GzHeader-End-->
 
@@ -24,9 +26,11 @@ Comment.
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-comment?: ArrayBuffer--><!--Device-GzHeader-comment?: ArrayBuffer-End-->
 
@@ -42,9 +46,11 @@ Returns **True** after reading the gzip file header.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-done?: boolean--><!--Device-GzHeader-done?: boolean-End-->
 
@@ -60,9 +66,11 @@ Extra field.
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-extra?: ArrayBuffer--><!--Device-GzHeader-extra?: ArrayBuffer-End-->
 
@@ -78,9 +86,11 @@ Length of the extra field.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-extraLen?: int--><!--Device-GzHeader-extraLen?: int-End-->
 
@@ -96,9 +106,11 @@ Returns **True** if the **crc** header exists.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-hcrc?: boolean--><!--Device-GzHeader-hcrc?: boolean-End-->
 
@@ -114,9 +126,11 @@ Returns **True** if the compressed data is considered text.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-isText?: boolean--><!--Device-GzHeader-isText?: boolean-End-->
 
@@ -132,9 +146,11 @@ File name.
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-name?: ArrayBuffer--><!--Device-GzHeader-name?: ArrayBuffer-End-->
 
@@ -150,9 +166,11 @@ Operating system.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-os?: int--><!--Device-GzHeader-os?: int-End-->
 
@@ -168,9 +186,11 @@ Modification time.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-time?: long--><!--Device-GzHeader-time?: long-End-->
 
@@ -186,9 +206,11 @@ Extra flag.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GzHeader-xflags?: int--><!--Device-GzHeader-xflags?: int-End-->
 

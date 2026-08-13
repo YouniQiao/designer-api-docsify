@@ -1,21 +1,18 @@
 # PinchGestureInterface
 
-**PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers.
+**PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers. > **NOTE：**> > To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make > contact again to satisfy the recognition criteria.
 
-> **NOTE：**
-> 
-> To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make
-> contact again to satisfy the recognition criteria.
-
-**Inheritance/Implementation:** PinchGestureInterface extends [GestureInterface<PinchGestureInterface>](GestureInterface<PinchGestureInterface>)
+**Inheritance/Implementation:** PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 
 **Since:** 7
 
-<!--Device-unnamed-interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>--><!--Device-unnamed-interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface PinchGestureInterface--><!--Device-unnamed-interface PinchGestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: { fingers?: number; distance?: number }): PinchGestureInterface
@@ -24,6 +21,8 @@
 Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,16 +42,17 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&
 | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options?: PinchGestureHandlerOptions): PinchGestureInterface
 ```
 
-Sets the parameters for the pinch gesture. Compared with  
-[PinchGesture](PinchGestureInterface(value?: { fingers?: number; distance?: number))},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+Sets the parameters for the pinch gesture. Compared with PinchGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +84,8 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PinchGestureInterface-onActionCancel(event: () => void): PinchGestureInterface--><!--Device-PinchGestureInterface-onActionCancel(event: () => void): PinchGestureInterface-End-->
@@ -108,10 +110,11 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 onActionCancel(event: Callback<GestureEvent>): PinchGestureInterface
 ```
 
-Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with   
-[onActionCancel](PinchGestureInterface.onActionCancel(event: () => void)), this callback returns gesture event information.
+Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with onActionCancel, this callback returns gesture event information.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,6 +146,8 @@ Triggered when all fingers are lifted after successful pinch gesture recognition
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PinchGestureInterface-onActionEnd(event: (event: GestureEvent) => void): PinchGestureInterface--><!--Device-PinchGestureInterface-onActionEnd(event: (event: GestureEvent) => void): PinchGestureInterface-End-->
@@ -171,6 +176,8 @@ Triggered after the pinch gesture is recognized.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PinchGestureInterface-onActionStart(event: (event: GestureEvent) => void): PinchGestureInterface--><!--Device-PinchGestureInterface-onActionStart(event: (event: GestureEvent) => void): PinchGestureInterface-End-->
@@ -198,6 +205,8 @@ onActionUpdate(event: (event: GestureEvent) => void): PinchGestureInterface
 Triggered when the user moves the finger in the pinch gesture on the screen.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

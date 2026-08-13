@@ -1,18 +1,14 @@
 # ParticleUpdaterOptions
 
-Defines the particle updater options.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
+Defines the particle updater options. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-interface ParticleUpdaterOptions<TYPE, UPDATER extends ParticleUpdater>--><!--Device-unnamed-interface ParticleUpdaterOptions<TYPE, UPDATER extends ParticleUpdater>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface ParticleUpdaterOptions--><!--Device-unnamed-interface ParticleUpdaterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,18 +18,15 @@ Defines the particle updater options.
 config: ParticlePropertyUpdaterConfigs<TYPE>[UPDATER]
 ```
 
-How the property is updated. The available options of **type** are as follows:
-
-1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is  
- [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.NONE].2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is  
- [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.RANDOM].3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case,the **config** type is  
-[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.CURVE].
+How the property is updated. The available options of **type** are as follows: 1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.NONE]. 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.RANDOM]. 3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.CURVE].
 
 **Type:** [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)&lt;TYPE&gt;[UPDATER]
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,6 +49,8 @@ Particle updater type.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

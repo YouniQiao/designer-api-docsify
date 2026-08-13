@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-dlpPermission-export interface DLPPermissionInfo--><!--Device-dlpPermission-export interface DLPPermissionInfo-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -20,6 +22,8 @@ dlpFileAccess: DLPFileAccess
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-DLPPermissionInfo-dlpFileAccess: DLPFileAccess--><!--Device-DLPPermissionInfo-dlpFileAccess: DLPFileAccess-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -35,6 +39,8 @@ flags: number
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-DLPPermissionInfo-flags: number--><!--Device-DLPPermissionInfo-flags: number-End-->
 

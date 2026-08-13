@@ -2,7 +2,9 @@
 
 Defines TCP port states of system network.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface TcpNetPortStatesInfo--><!--Device-connection-export interface TcpNetPortStatesInfo-End-->
 
@@ -24,7 +26,9 @@ Local IP of the TCP network.
 
 **Type:** string
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Local port of the TCP network.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ PID of the TCP network.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ Remote IP of the TCP network.
 
 **Type:** string
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ Remote port of the TCP network.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TcpNetPortStatesInfo-tcpRemotePort: int--><!--Device-TcpNetPortStatesInfo-tcpRemotePort: int-End-->
@@ -114,7 +126,9 @@ Port state of the TCP network.
 
 **Type:** [TcpState](arkts-network-connection-tcpstate-e.md)
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,7 +146,9 @@ UID of the TCP network.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,7 +16,9 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +43,8 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600305](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation, e.g. on cross-platform. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get the data from Surface. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation, e.g. on cross-platform. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get the data from Surface. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 

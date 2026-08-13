@@ -14,7 +14,9 @@ function getAppMemoryLimit(): MemoryLimit
 
 Obtains the memory limit of an application process.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit--><!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit-End-->
 

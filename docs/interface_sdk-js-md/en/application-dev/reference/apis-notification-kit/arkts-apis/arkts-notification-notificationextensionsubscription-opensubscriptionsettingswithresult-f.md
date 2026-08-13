@@ -16,7 +16,9 @@ Opens the settings screen of notification extension subscription in a semi-modal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -42,10 +44,10 @@ Opens the settings screen of notification extension subscription in a semi-modal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied or current device not supported. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600018-notification-settings-page-already-displayed) | The notification settings window is already displayed. |
-| [1600023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) | The application does not implement the NotificationSubscriberExtensionAbility. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied or current device not supported. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) | The notification settings window is already displayed. |
+| [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) | The application does not implement the NotificationSubscriberExtensionAbility. |
 
 ## Examples
 

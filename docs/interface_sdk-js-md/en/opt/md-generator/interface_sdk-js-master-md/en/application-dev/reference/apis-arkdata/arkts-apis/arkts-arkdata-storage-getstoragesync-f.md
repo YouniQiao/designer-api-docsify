@@ -12,7 +12,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPreferences](ohos.preferences.preferences.getPreferences)
+**Substitutes:** getPreferences
 
 <!--Device-storage-function getStorageSync(path: string): Storage--><!--Device-storage-function getStorageSync(path: string): Storage-End-->
 

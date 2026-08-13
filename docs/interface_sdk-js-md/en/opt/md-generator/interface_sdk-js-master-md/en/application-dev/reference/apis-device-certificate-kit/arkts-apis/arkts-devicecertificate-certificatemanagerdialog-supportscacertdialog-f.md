@@ -16,6 +16,8 @@ Check whether the device supports the [openCertificateDetailDialog](arkts-device
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean--><!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean-End-->
@@ -32,7 +34,7 @@ Check whether the device supports the [openCertificateDetailDialog](arkts-device
 
 | Error Code ID |
 | --- |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-internal-error) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
 
 ## Examples
 

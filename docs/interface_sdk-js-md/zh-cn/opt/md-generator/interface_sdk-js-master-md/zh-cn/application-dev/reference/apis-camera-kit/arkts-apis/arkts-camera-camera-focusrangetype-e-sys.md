@@ -2,7 +2,9 @@
 
 Enumerates the focus range types.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum FocusRangeType--><!--Device-camera-enum FocusRangeType-End-->
 
@@ -18,7 +20,9 @@ AUTO = 0
 
 Auto focus.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusRangeType-AUTO = 0--><!--Device-FocusRangeType-AUTO = 0-End-->
 
@@ -34,7 +38,9 @@ NEAR = 1
 
 Focus on near objects.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusRangeType-NEAR = 1--><!--Device-FocusRangeType-NEAR = 1-End-->
 

@@ -6,7 +6,9 @@ export type NotificationFlags = _NotificationFlags
 
 描述通知标志位。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationFlags = _NotificationFlags--><!--Device-notificationManager-export type NotificationFlags = _NotificationFlags-End-->
 

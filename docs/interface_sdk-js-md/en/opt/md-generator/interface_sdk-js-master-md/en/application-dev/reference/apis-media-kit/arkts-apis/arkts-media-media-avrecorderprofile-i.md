@@ -2,7 +2,9 @@
 
 Describes the audio and video recording profile.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVRecorderProfile--><!--Device-media-interface AVRecorderProfile-End-->
 
@@ -24,9 +26,11 @@ AAC profile for AAC audio encoder. If not set, use AAC_LC profile as default.
 
 **Type:** [AacProfile](arkts-media-media-aacprofile-e.md)
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVRecorderProfile-aacProfile?: AacProfile--><!--Device-AVRecorderProfile-aacProfile?: AacProfile-End-->
 
@@ -38,11 +42,13 @@ AAC profile for AAC audio encoder. If not set, use AAC_LC profile as default.
 audioBitrate?: number
 ```
 
-Audio encoding bit rate, in bit/s. This parameter is mandatory for audio recording.&lt;br&gt;Supported bit rate ranges:&lt;br&gt;- Range [32000 - 500000] for the AAC encoding format.&lt;br&gt;- Range [64000] for the G.711 μ-law encoding format.&lt;br&gt;- Range [8000, 16000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000,224000, 256000, 320000] for the MP3 encoding format.&lt;br&gt;When the MP3 encoding format is used,the mapping between the sampling rate and bit rate is as follows:&lt;br&gt;- When the sampling rate is lower than16 kHZ, the bit rate range is [8000 - 64000].&lt;br&gt;- When the sampling rate ranges from 16 kHz to 32 kHz,the bit rate range is [8000 - 160000].&lt;br&gt;- When the sampling rate is greater than 32 kHz, the bit rate range is [32000 - 320000].&lt;br&gt;- Range [4750, 5150, 5900, 6700, 7400, 7950, 10200, 12200] for the AMR-NB encoding format.&lt;br&gt;- Range [6600, 8850, 12650, 14250, 15850, 18250, 19850, 23050, 23850] for the AMR-WB encoding format.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
+Audio encoding bit rate, in bit/s. This parameter is mandatory for audio recording.&lt;br&gt;Supported bit rate ranges: &lt;br&gt;- Range [32000 - 500000] for the AAC encoding format.&lt;br&gt;- Range [64000] for the G.711 μ-law encoding format. &lt;br&gt;- Range [8000, 16000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000] for the MP3 encoding format.&lt;br&gt;When the MP3 encoding format is used, the mapping between the sampling rate and bit rate is as follows:&lt;br&gt;- When the sampling rate is lower than 16 kHZ, the bit rate range is [8000 - 64000].&lt;br&gt;- When the sampling rate ranges from 16 kHz to 32 kHz, the bit rate range is [8000 - 160000].&lt;br&gt;- When the sampling rate is greater than 32 kHz, the bit rate range is [32000 - 320000].&lt;br&gt;- Range [4750, 5150, 5900, 6700, 7400, 7950, 10200, 12200] for the AMR-NB encoding format.&lt;br&gt;- Range [6600, 8850, 12650, 14250, 15850, 18250, 19850, 23050, 23850] for the AMR-WB encoding format.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,7 +66,9 @@ Number of audio channels. This parameter is mandatory for audio recording.&lt;br
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,11 +82,13 @@ Number of audio channels. This parameter is mandatory for audio recording.&lt;br
 audioCodec?: CodecMimeType
 ```
 
-Audio encoding format. This parameter is mandatory for audio recording. Currently, AUDIO_AAC, AUDIO_MP3,AUDIO_G711MU, AUDIO_AMR_NB, and AUDIO_AMR_WB are supported.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
+Audio encoding format. This parameter is mandatory for audio recording. Currently, AUDIO_AAC, AUDIO_MP3, AUDIO_G711MU, AUDIO_AMR_NB, and AUDIO_AMR_WB are supported.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,11 +102,13 @@ Audio encoding format. This parameter is mandatory for audio recording. Currentl
 audioSampleRate?: number
 ```
 
-Audio sampling rate, in Hz. This parameter is mandatory for audio recording.&lt;br&gt;Supported sampling rate ranges:&lt;br&gt;- Range [8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 64000, 88200, 96000] for the AAC encoding format.&lt;br&gt;- Range [8000] for the G.711 μ-law encoding format.&lt;br&gt;- Range [8000, 11025, 12000, 16000,22050, 24000, 32000, 44100, 48000] for the MP3 encoding format.&lt;br&gt;- Range [8000] for the AMR-NB encoding format.&lt;br&gt;- Range [16000] for the AMR-WB encoding format.&lt;br&gt;Variable bit rate. The bit rate is for reference only.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
+Audio sampling rate, in Hz. This parameter is mandatory for audio recording.&lt;br&gt;Supported sampling rate ranges: &lt;br&gt;- Range [8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 64000, 88200, 96000] for the AAC encoding format.&lt;br&gt;- Range [8000] for the G.711 μ-law encoding format.&lt;br&gt;- Range [8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000] for the MP3 encoding format.&lt;br&gt;- Range [8000] for the AMR-NB encoding format. &lt;br&gt;- Range [16000] for the AMR-WB encoding format.&lt;br&gt;Variable bit rate. The bit rate is for reference only. &lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,7 +126,9 @@ Indicates whether enable B Frame. Default is disabled.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-enableBFrame?: boolean--><!--Device-AVRecorderProfile-enableBFrame?: boolean-End-->
 
@@ -130,7 +144,9 @@ Whether temporal layered encoding is supported. This parameter is optional for v
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-enableTemporalScale?: boolean--><!--Device-AVRecorderProfile-enableTemporalScale?: boolean-End-->
 
@@ -142,11 +158,13 @@ Whether temporal layered encoding is supported. This parameter is optional for v
 fileFormat: ContainerFormatType
 ```
 
-Container format of a file. This parameter is mandatory. Currently, the MP4, M4A, MP3, WAV, AMR, and AAC container formats are supported. The AUDIO_MP3 encoding format cannot be used in the MP4 container format.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
+Container format of a file. This parameter is mandatory. Currently, the MP4, M4A, MP3, WAV, AMR, and AAC container formats are supported. The AUDIO_MP3 encoding format cannot be used in the MP4 container format. &lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -164,7 +182,9 @@ HDR encoding. This parameter is optional for video recording. The default value 
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-isHdr?: boolean--><!--Device-AVRecorderProfile-isHdr?: boolean-End-->
 
@@ -176,12 +196,13 @@ HDR encoding. This parameter is optional for video recording. The default value 
 videoBitrate?: number
 ```
 
-Video encoding bit rate, in bit/s. This parameter is mandatory for video recording. The value range is  
-[10000 - 100000000], in bit/s.
+Video encoding bit rate, in bit/s. This parameter is mandatory for video recording. The value range is [10000 - 100000000], in bit/s.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoBitrate?: int--><!--Device-AVRecorderProfile-videoBitrate?: int-End-->
 
@@ -193,11 +214,13 @@ Video encoding bit rate, in bit/s. This parameter is mandatory for video recordi
 videoCodec?: CodecMimeType
 ```
 
-Video encoding format. This parameter is mandatory for video recording.Currently, VIDEO_AVC and VIDEO_HEVC is supported.
+Video encoding format. This parameter is mandatory for video recording. Currently, VIDEO_AVC and VIDEO_HEVC is supported.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoCodec?: CodecMimeType--><!--Device-AVRecorderProfile-videoCodec?: CodecMimeType-End-->
 
@@ -213,7 +236,9 @@ Height of a video frame, in px. This parameter is mandatory for video recording.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoFrameHeight?: int--><!--Device-AVRecorderProfile-videoFrameHeight?: int-End-->
 
@@ -229,7 +254,9 @@ Video frame rate, in fps. This parameter is mandatory for video recording. The v
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoFrameRate?: int--><!--Device-AVRecorderProfile-videoFrameRate?: int-End-->
 
@@ -245,7 +272,9 @@ Width of a video frame, in px. This parameter is mandatory for video recording. 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoFrameWidth?: int--><!--Device-AVRecorderProfile-videoFrameWidth?: int-End-->
 

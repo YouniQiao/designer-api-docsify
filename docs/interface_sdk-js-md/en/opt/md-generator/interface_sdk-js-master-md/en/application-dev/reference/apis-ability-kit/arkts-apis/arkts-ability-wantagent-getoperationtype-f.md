@@ -12,9 +12,11 @@ import { WantAgent } from '@kit.AbilityKit';
 function getOperationType(agent: WantAgent, callback: AsyncCallback<number>): void
 ```
 
-Obtains the operation type of a WantAgent object.This API uses an asynchronous callback to return the result.
+Obtains the operation type of a WantAgent object. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,10 +35,10 @@ Obtains the operation type of a WantAgent object.This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-service-unresponsive) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) |
-| [16000015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000015-service-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+| [16000015](../errorcode-ability.md#16000015-service-timeout) |
 
 ## Examples
 
@@ -111,9 +113,11 @@ try {
 function getOperationType(agent: WantAgent): Promise<number>
 ```
 
-Obtains the operation type of a WantAgent object.This API uses a promise to return the result.
+Obtains the operation type of a WantAgent object. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -137,10 +141,10 @@ Obtains the operation type of a WantAgent object.This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-service-unresponsive) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) |
-| [16000015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000015-service-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+| [16000015](../errorcode-ability.md#16000015-service-timeout) |
 
 ## Examples
 

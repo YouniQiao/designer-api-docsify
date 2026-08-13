@@ -4,6 +4,8 @@ The module provides the capability to interact with cli tools in the system.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace cliManager--><!--Device-unnamed-declare namespace cliManager-End-->
@@ -25,15 +27,15 @@ import { cliManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [clearSession](arkts-ability-climanager-clearsession-f-sys.md#clearsession) |
-| [execCmd](arkts-ability-climanager-execcmd-f-sys.md#execcmd) |
-| [execTool](arkts-ability-climanager-exectool-f-sys.md#exectool) |
-| [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f-sys.md#gettoolinfobyname) |
-| [querySession](arkts-ability-climanager-querysession-f-sys.md#querysession) |
-| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f-sys.md#querytoolsummaries) |
-| [queryTools](arkts-ability-climanager-querytools-f-sys.md#querytools) |
-| [sendMessage](arkts-ability-climanager-sendmessage-f-sys.md#sendmessage) |
-| [subscribeSession](arkts-ability-climanager-subscribesession-f-sys.md#subscribesession) |
+| [clearSession](arkts-ability-climanager-clearsession-f-sys.md#clearSession-(System-API)) |
+| [execCmd](arkts-ability-climanager-execcmd-f-sys.md#execCmd-(System-API)) |
+| [execTool](arkts-ability-climanager-exectool-f-sys.md#execTool-(System-API)) |
+| [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f-sys.md#getToolInfoByName-(System-API)) |
+| [querySession](arkts-ability-climanager-querysession-f-sys.md#querySession-(System-API)) |
+| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f-sys.md#queryToolSummaries-(System-API)) |
+| [queryTools](arkts-ability-climanager-querytools-f-sys.md#queryTools-(System-API)) |
+| [sendMessage](arkts-ability-climanager-sendmessage-f-sys.md#sendMessage-(System-API)) |
+| [subscribeSession](arkts-ability-climanager-subscribesession-f-sys.md#subscribeSession-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

@@ -12,14 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getCpuUsage() : number
 ```
 
-Obtains the CPU usage of a process.
+Obtains the CPU usage of a process. > **NOTE：**> > This API involves cross-process communication and takes a long time. To avoid performance problems, you are > advised not to call this API in the main thread.
 
-> **NOTE：**
-> 
-> This API involves cross-process communication and takes a long time. To avoid performance problems, you are
-> advised not to call this API in the main thread.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getCpuUsage() : double--><!--Device-hidebug-function getCpuUsage() : double-End-->
 

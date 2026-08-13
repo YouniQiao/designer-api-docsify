@@ -2,7 +2,9 @@
 
 Enumerates the time-lapse recording states.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum TimeLapseRecordState--><!--Device-camera-enum TimeLapseRecordState-End-->
 
@@ -18,7 +20,9 @@ IDLE = 0
 
 Recording not started.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TimeLapseRecordState-IDLE = 0--><!--Device-TimeLapseRecordState-IDLE = 0-End-->
 
@@ -34,7 +38,9 @@ RECORDING = 1
 
 Recording.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TimeLapseRecordState-RECORDING = 1--><!--Device-TimeLapseRecordState-RECORDING = 1-End-->
 

@@ -2,7 +2,9 @@
 
 The **volumeManager** module provides APIs for querying and managing volumes and disks, including querying volume information, mounting or unmounting a volume, partitioning a disk, and formatting a volume.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace volumeManager--><!--Device-unnamed-declare namespace volumeManager-End-->
 
@@ -23,34 +25,34 @@ import { volumeManager } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [burn](arkts-corefile-volumemanager-burn-f-sys.md#burn) |
-| [createIsoImage](arkts-corefile-volumemanager-createisoimage-f-sys.md#createisoimage) |
-| [createPartition](arkts-corefile-volumemanager-createpartition-f-sys.md#createpartition) |
-| [deletePartition](arkts-corefile-volumemanager-deletepartition-f-sys.md#deletepartition) |
-| [eject](arkts-corefile-volumemanager-eject-f-sys.md#eject) |
-| [erase](arkts-corefile-volumemanager-erase-f-sys.md#erase) |
-| [format](arkts-corefile-volumemanager-format-f-sys.md#format) |
-| [format](arkts-corefile-volumemanager-format-f-sys.md#format-1) |
-| [formatPartition](arkts-corefile-volumemanager-formatpartition-f-sys.md#formatpartition) |
-| [getAllDisks](arkts-corefile-volumemanager-getalldisks-f-sys.md#getalldisks) |
-| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getallvolumes) |
-| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getallvolumes-1) |
-| [getDiskById](arkts-corefile-volumemanager-getdiskbyid-f-sys.md#getdiskbyid) |
-| [getOpProcess](arkts-corefile-volumemanager-getopprocess-f-sys.md#getopprocess) |
-| [getPartitionTable](arkts-corefile-volumemanager-getpartitiontable-f-sys.md#getpartitiontable) |
-| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getvolumebyid) |
-| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getvolumebyid-1) |
-| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getvolumebyuuid) |
-| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getvolumebyuuid-1) |
-| [isVolumeInUse](arkts-corefile-volumemanager-isvolumeinuse-f-sys.md#isvolumeinuse) |
-| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount) |
-| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount-1) |
-| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition) |
-| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition-1) |
-| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setvolumedescription) |
-| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setvolumedescription-1) |
-| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount) |
-| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount-1) |
+| [burn](arkts-corefile-volumemanager-burn-f-sys.md#burn-(System-API)) |
+| [createIsoImage](arkts-corefile-volumemanager-createisoimage-f-sys.md#createIsoImage-(System-API)) |
+| [createPartition](arkts-corefile-volumemanager-createpartition-f-sys.md#createPartition-(System-API)) |
+| [deletePartition](arkts-corefile-volumemanager-deletepartition-f-sys.md#deletePartition-(System-API)) |
+| [eject](arkts-corefile-volumemanager-eject-f-sys.md#eject-(System-API)) |
+| [erase](arkts-corefile-volumemanager-erase-f-sys.md#erase-(System-API)) |
+| [format](arkts-corefile-volumemanager-format-f-sys.md#format-(System-API)) |
+| [format](arkts-corefile-volumemanager-format-f-sys.md#format-(System-API)) |
+| [formatPartition](arkts-corefile-volumemanager-formatpartition-f-sys.md#formatPartition-(System-API)) |
+| [getAllDisks](arkts-corefile-volumemanager-getalldisks-f-sys.md#getAllDisks-(System-API)) |
+| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getAllVolumes-(System-API)) |
+| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getAllVolumes-(System-API)) |
+| [getDiskById](arkts-corefile-volumemanager-getdiskbyid-f-sys.md#getDiskById-(System-API)) |
+| [getOpProcess](arkts-corefile-volumemanager-getopprocess-f-sys.md#getOpProcess-(System-API)) |
+| [getPartitionTable](arkts-corefile-volumemanager-getpartitiontable-f-sys.md#getPartitionTable-(System-API)) |
+| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getVolumeById-(System-API)) |
+| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getVolumeById-(System-API)) |
+| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getVolumeByUuid-(System-API)) |
+| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getVolumeByUuid-(System-API)) |
+| [isVolumeInUse](arkts-corefile-volumemanager-isvolumeinuse-f-sys.md#isVolumeInUse-(System-API)) |
+| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount-(System-API)) |
+| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount-(System-API)) |
+| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition-(System-API)) |
+| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition-(System-API)) |
+| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setVolumeDescription-(System-API)) |
+| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setVolumeDescription-(System-API)) |
+| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount-(System-API)) |
+| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

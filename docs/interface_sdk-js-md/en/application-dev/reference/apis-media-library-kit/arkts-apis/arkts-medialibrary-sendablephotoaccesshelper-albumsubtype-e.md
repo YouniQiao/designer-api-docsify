@@ -6,6 +6,8 @@ Enumerate the album subtypes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype--><!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,6 +23,8 @@ User album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-USER_GENERIC = 1--><!--Device-AlbumSubtype-USER_GENERIC = 1-End-->
 
@@ -38,6 +42,8 @@ Favorites.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-FAVORITE = 1025--><!--Device-AlbumSubtype-FAVORITE = 1025-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,6 +59,8 @@ Video album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-VIDEO--><!--Device-AlbumSubtype-VIDEO-End-->
 
@@ -70,6 +78,8 @@ Photo album.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -85,6 +95,8 @@ Any album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-ANY = 2147483647--><!--Device-AlbumSubtype-ANY = 2147483647-End-->
 

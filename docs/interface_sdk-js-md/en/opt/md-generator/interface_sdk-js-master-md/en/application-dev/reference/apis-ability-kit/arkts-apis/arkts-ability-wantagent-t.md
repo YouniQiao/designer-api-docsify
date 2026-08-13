@@ -6,7 +6,9 @@ export type WantAgent = object
 
 Target WantAgent object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type WantAgent = object--><!--Device-unnamed-export type WantAgent = object-End-->
 

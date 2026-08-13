@@ -2,33 +2,31 @@
 
 Provides attribute for Ellipse.
 
-**Inheritance/Implementation:** EllipseAttribute extends [CommonShapeMethod](CommonShapeMethod)
+**Inheritance/Implementation:** EllipseAttribute extends CommonShapeMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface EllipseAttribute extends CommonShapeMethod--><!--Device-unnamed-export declare interface EllipseAttribute extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface EllipseAttribute--><!--Device-unnamed-export declare interface EllipseAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<EllipseAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<EllipseAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EllipseAttribute-default attributeModifier(modifier: AttributeModifier<EllipseAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-EllipseAttribute-default attributeModifier(modifier: AttributeModifier<EllipseAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-EllipseAttribute-attributeModifier(modifier: AttributeModifier<EllipseAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-EllipseAttribute-attributeModifier(modifier: AttributeModifier<EllipseAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -45,30 +43,46 @@ Call attributeModifier.
 ## setEllipseOptions
 
 ```TypeScript
-default setEllipseOptions(options?: EllipseOptions): this
+setEllipseOptions(options?: EllipseOptions): this
 ```
 
-Set Ellipse options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EllipseAttribute-default setEllipseOptions(options?: EllipseOptions): this--><!--Device-EllipseAttribute-default setEllipseOptions(options?: EllipseOptions): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-EllipseAttribute-setEllipseOptions(options?: EllipseOptions): this--><!--Device-EllipseAttribute-setEllipseOptions(options?: EllipseOptions): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md) | No | Ellipse constructor options. |
+| options | [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the EllipseAttribute. |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EllipseAttribute-default--><!--Device-EllipseAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

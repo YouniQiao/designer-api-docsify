@@ -2,9 +2,11 @@
 
 Configuring parameters in geo fence requests.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface GeofenceRequest--><!--Device-geoLocationManager-export interface GeofenceRequest-End-->
 
@@ -26,9 +28,11 @@ Circular fence information.
 
 **Type:** Geofence
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeofenceRequest-geofence: Geofence--><!--Device-GeofenceRequest-geofence: Geofence-End-->
 
@@ -44,9 +48,11 @@ Indicate the user scenario.
 
 **Type:** LocationRequestScenario
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeofenceRequest-scenario: LocationRequestScenario--><!--Device-GeofenceRequest-scenario: LocationRequestScenario-End-->
 

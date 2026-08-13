@@ -6,6 +6,8 @@ Describes the text style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class TextStyle--><!--Device-unnamed-declare class TextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ A constructor used to create a text style.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Text color of the styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -64,15 +70,15 @@ Text color of the styled string.
 readonly fontConfigs?: FontConfigs
 ```
 
-Font configuration of the styled string.
-
-Default value: **undefined**, indicating that fontConfigs is not set.
+Font configuration of the styled string. Default value: **undefined**, indicating that fontConfigs is not set.
 
 **Type:** FontConfigs
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,15 +94,15 @@ Default value: **undefined**, indicating that fontConfigs is not set.
 readonly fontFamily?: string
 ```
 
-Font family of the styled string.
-
-Returns **undefined** by default.
+Font family of the styled string. Returns **undefined** by default.
 
 **Type:** string
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,15 +118,15 @@ Returns **undefined** by default.
 readonly fontSize?: number
 ```
 
-Font size of the styled string.
-
-Unit: [vp](common)
+Font size of the styled string. Unit: vp
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,6 +150,8 @@ Font style of the styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -158,17 +166,15 @@ Font style of the styled string.
 readonly fontVariations?: Array<FontVariation>
 ```
 
-Array of variable font attributes.
-
-Default value: **undefined**, indicating that variable font attributes are not set.
-
-**Since**: 26.0.0
+Array of variable font attributes. Default value: **undefined**, indicating that variable font attributes are not set. **Since**: 26.0.0
 
 **Type:** Array&lt;FontVariation&gt;
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,6 +198,8 @@ Font weight of the styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -206,15 +214,15 @@ Font weight of the styled string.
 readonly strokeColor?: ResourceColor
 ```
 
-Text stroke color of the styled string.
-
-Default value: same as the text color.
+Text stroke color of the styled string. Default value: same as the text color.
 
 **Type:** ResourceColor
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,17 +238,15 @@ Default value: same as the text color.
 readonly strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Text stroke join style of the styled string.
-
-Default value: **StrokeJoinStyle.MITER_JOIN**.
-
-**Since**: 26.0.0.
+Text stroke join style of the styled string. Default value: **StrokeJoinStyle.MITER_JOIN**. **Since**: 26.0.0.
 
 **Type:** StrokeJoinStyle
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -256,15 +262,15 @@ Default value: **StrokeJoinStyle.MITER_JOIN**.
 readonly strokeWidth?: number
 ```
 
-Text stroke width of the styled string.
-
-Default value: **0**, in [vp](common).
+Text stroke width of the styled string. Default value: **0**, in vp.
 
 **Type:** number
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -280,15 +286,15 @@ Default value: **0**, in [vp](common).
 readonly superscript?: SuperscriptStyle
 ```
 
-Superscript or subscript for the styled string.
-
-Default value: **SuperscriptStyle.NORMAL**.
+Superscript or subscript for the styled string. Default value: **SuperscriptStyle.NORMAL**.
 
 **Type:** SuperscriptStyle
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

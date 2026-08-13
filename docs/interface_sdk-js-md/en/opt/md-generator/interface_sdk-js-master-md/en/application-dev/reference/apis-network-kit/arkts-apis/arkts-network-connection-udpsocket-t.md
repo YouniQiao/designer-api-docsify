@@ -8,6 +8,8 @@ Get a UDPSocket object.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-connection-type UDPSocket = socket.UDPSocket--><!--Device-connection-type UDPSocket = socket.UDPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

@@ -1,22 +1,10 @@
 # Verify
 
-Signature verification interface, defining methods for verifying signatures using a public key. Before use, you must create a **Verify** instance by using  
-[createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createVerify). Invoke **init()**, **update()**, and  
-**verify()** in this class in sequence to complete the signature verification. For details about the sample code, see  
-[Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
+Signature verification interface, defining methods for verifying signatures using a public key. Before use, you must create a **Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createVerify). Invoke **init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode) . &lt;br&gt;The **Verify** class does not support repeated initialization. When a new key is used for signature verification, you must create a new **Verify** instance and call **init()** for initialization. &lt;br&gt;The signature verification mode is determined in **createVerify()**, and the key is set by **init()**. &lt;br&gt;If the signed message is short, you can call **verify()** to pass in the signed message and signature ( **signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**. &lt;br&gt;If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10 , the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data. &lt;br&gt;If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-&lt;br&gt;The **Verify** class does not support repeated initialization. When a new key is used for signature verification,you must create a new **Verify** instance and call **init()** for initialization.
+**Since:** 23
 
-&lt;br&gt;The signature verification mode is determined in **createVerify()**, and the key is set by **init()**.
-
-&lt;br&gt;If the signed message is short, you can call **verify()** to pass in the signed message and signature (  
-**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
-
-&lt;br&gt;If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
-
-&lt;br&gt;If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Verify--><!--Device-cryptoFramework-interface Verify-End-->
 
@@ -38,7 +26,9 @@ getVerifySpec(itemType: SignSpecItem): string | number
 
 Obtains signature verification specifications. Currently, only RSA is supported.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,11 +54,11 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -89,10 +79,11 @@ function testGetVerifySpec() {
 init(pubKey: PubKey, callback: AsyncCallback<void>): void
 ```
 
-Initializes the **Verify** object using a public key. This API uses an asynchronous callback to return the result. **init**, **update**, and **verify** must be used together. **init** and **verify** are mandatory, and  
-**update** is optional.
+Initializes the **Verify** object using a public key. This API uses an asynchronous callback to return the result. **init**, **update**, and **verify** must be used together. **init** and **verify** are mandatory, and **update** is optional.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -113,11 +104,11 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## init
 
@@ -125,10 +116,11 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 init(pubKey: PubKey): Promise<void>
 ```
 
-Initializes the **Verify** object using a public key. This API uses a promise to return the result. **init**,  
-**update**, and **verify** must be used together. **init** and **verify** are mandatory, and **update** is optional.
+Initializes the **Verify** object using a public key. This API uses a promise to return the result. **init**, **update**, and **verify** must be used together. **init** and **verify** are mandatory, and **update** is optional.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -154,11 +146,11 @@ Initializes the **Verify** object using a public key. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## initSync
 
@@ -166,15 +158,13 @@ Initializes the **Verify** object using a public key. This API uses a promise to
 initSync(pubKey: PubKey): void
 ```
 
-Initializes the **Verify** instance with a public key. This API returns the result synchronously. **initSync**,  
-**updateSync**, and **verifySync** must be used together. **initSync** and **verifySync** are mandatory, and  
-**updateSync** is optional.
+Initializes the **Verify** instance with a public key. This API returns the result synchronously. **initSync**, **updateSync**, and **verifySync** must be used together. **initSync** and **verifySync** are mandatory, and **updateSync** is optional. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [init](init). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Verify-initSync(pubKey: PubKey): void--><!--Device-Verify-initSync(pubKey: PubKey): void-End-->
 
@@ -190,11 +180,11 @@ Initializes the **Verify** instance with a public key. This API returns the resu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## recover
 
@@ -202,15 +192,13 @@ Initializes the **Verify** instance with a public key. This API returns the resu
 recover(signatureData: DataBlob): Promise<DataBlob | null>
 ```
 
-Recovers the original data from a signature. This API uses a promise to return the result.
+Recovers the original data from a signature. This API uses a promise to return the result. > **NOTE：**> > - Currently, only RSA is supported.
 
-> **NOTE：**
-> 
-> - Currently, only RSA is supported.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>--><!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>-End-->
 
@@ -232,11 +220,11 @@ Recovers the original data from a signature. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## Examples
 
@@ -322,17 +310,13 @@ async function recoverByPromise() {
 recoverSync(signatureData: DataBlob): DataBlob | null
 ```
 
-Recovers the original data from a signature. This API returns the result synchronously.
+Recovers the original data from a signature. This API returns the result synchronously. > **NOTE：**> > - Currently, only RSA is supported. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-> **NOTE：**
-> 
-> - Currently, only RSA is supported.
+**Since:** 23
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Deprecated since:** -1
 
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null--><!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null-End-->
 
@@ -354,11 +338,11 @@ Recovers the original data from a signature. This API returns the result synchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## setVerifySpec
 
@@ -366,13 +350,11 @@ Recovers the original data from a signature. This API returns the result synchro
 setVerifySpec(itemType: SignSpecItem, itemValue: number): void
 ```
 
-Sets signature verification specifications. You can use this API to set signature verification parameters that cannot be set by [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createVerify).
-
-&lt;br&gt;Currently, only RSA and SM2 are supported. Since API version 11, SM2 signature verification parameters can be set.
-
-&lt;br&gt;The parameters for signature verification must be the same as those for signing.
+Sets signature verification specifications. You can use this API to set signature verification parameters that cannot be set by [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createVerify). &lt;br&gt;Currently, only RSA and SM2 are supported. Since API version 11, SM2 signature verification parameters can be set. &lt;br&gt;The parameters for signature verification must be the same as those for signing.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -393,11 +375,11 @@ Sets signature verification specifications. You can use this API to set signatur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -417,13 +399,11 @@ function testSetVerifySpec() {
 setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 ```
 
-Sets the specified parameter for the Verify instance.
+Sets the specified parameter for the Verify instance. &lt;br&gt;Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported. &lt;br&gt;The parameters for signature verification must be the same as those for signing.
 
-&lt;br&gt;Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
+**Since:** 23
 
-&lt;br&gt;The parameters for signature verification must be the same as those for signing.
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -444,13 +424,13 @@ Sets the specified parameter for the Verify instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## setVerifySpec
 
@@ -458,13 +438,11 @@ Sets the specified parameter for the Verify instance.
 setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): void
 ```
 
-Sets the specified parameter for the Verify instance.
-
-&lt;br&gt;Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in ML-DSA are supported.
-
-&lt;br&gt;The parameters for signature verification must be the same as those for signing.
+Sets the specified parameter for the Verify instance. &lt;br&gt;Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in ML-DSA are supported. &lt;br&gt;The parameters for signature verification must be the same as those for signing.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -485,12 +463,12 @@ Sets the specified parameter for the Verify instance.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -503,39 +481,52 @@ function testSetVerifySpec() {
 }
 ```
 
+## setVerifySpec
+
+```TypeScript
+setVerifySpec(itemType: SignSpecItem, itemValue: boolean): void
+```
+
+Sets the specified parameter for the Verify instance. &lt;br&gt;Currently, only ML_DSA_DETERMINISTIC and ML_DSA_MU in ML-DSA are supported. For ML_DSA_CONTEXT parameter, use [setVerifySpec()](#setVerifySpec). &lt;br&gt;The parameters for signature verification must be the same as those for signing.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: boolean): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: boolean): void-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Signature
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [itemType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | Yes |
+| itemValue | boolean | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+
 ## update
 
 ```TypeScript
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates the data for signature verification. This API uses an asynchronous callback to return the result.
+Updates the data for signature verification. This API uses an asynchronous callback to return the result. &lt;br&gt;This API can be called only after the Verify instance is initialized using [init](#init) or [initSync](#initSync). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > verify > after [init](#init)), depending on > the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signature verification, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-&lt;br&gt;This API can be called only after the [Verify](#Verify) instance is initialized using  
-[init](#init) or [initSync](#initSync).
+**Since:** 23
 
-> **NOTE：**
-> 
-> You can call **update** multiple times or do not use **update** (call
-> [verify](#verify)
-> after [init](#init)), depending on
-> the data volume.
-> 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
-> prevents too much memory from being requested at a time.
-> 
-> For details about the sample code for calling **update()** multiple times in signature verification, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
-> . The operations of other algorithms are similar.
-> 
-> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
-> data.
-> 
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is
-> not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -556,11 +547,11 @@ Updates the data for signature verification. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## update
 
@@ -568,32 +559,11 @@ Updates the data for signature verification. This API uses an asynchronous callb
 update(data: DataBlob): Promise<void>
 ```
 
-Updates the data for signature verification. This API uses a promise to return the result.
+Updates the data for signature verification. This API uses a promise to return the result. &lt;br&gt;This API can be called only after the Verify instance is initialized using [init()](#init). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > verify after > [init](#init)), depending on the data volume. > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signature verification, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-&lt;br&gt;This API can be called only after the [Verify](#Verify) instance is initialized using  
-[init()](#init).
+**Since:** 23
 
-> **NOTE：**
-> 
-> You can call **update** multiple times or do not use **update** (call
-> [verify](#verify-3) after
-> [init](#init)), depending on the data volume.
-
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
-> prevents too much memory from being requested at a time.
-
-> For details about the sample code for calling **update()** multiple times in signature verification, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
-> . The operations of other algorithms are similar.
-
-> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
-> data.
-
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is
-> not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -619,11 +589,11 @@ Updates the data for signature verification. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## updateSync
 
@@ -631,36 +601,13 @@ Updates the data for signature verification. This API uses a promise to return t
 updateSync(data: DataBlob): void
 ```
 
-Updates the data for signature verification. This API returns the result synchronously.
+Updates the data for signature verification. This API returns the result synchronously. &lt;br&gt;This API can be called only after the Verify instance is initialized by using [initSync()](#initSync). > **NOTE：**> > You can call **updateSync** multiple times or do not use **updateSync** (call > [verifySync](#verifySync) after [initSync](#initSync)), > depending on the data volume. > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > For details about the sample code for calling **updateSync** multiple times in signature verification, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass > in data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync** > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;This API can be called only after the [Verify](#Verify) instance is initialized by using  
-[initSync()](#initSync).
+**Since:** 23
 
-> **NOTE：**
-> 
-> You can call **updateSync** multiple times or do not use **updateSync** (call
-> [verifySync](#verifySync) after [initSync](#initSync)),
-> depending on the data volume.
+**Deprecated since:** -1
 
-> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is
-> a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.
-> This prevents too much memory from being requested at a time.
-
-> For details about the sample code for calling **updateSync** multiple times in signature verification, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
-> . The operations of other algorithms are similar.
-
-> **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass
-> in data.
-
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync**
-> is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
-
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [update](update). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Verify-updateSync(data: DataBlob): void--><!--Device-Verify-updateSync(data: DataBlob): void-End-->
 
@@ -676,11 +623,11 @@ Updates the data for signature verification. This API returns the result synchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## verify
 
@@ -691,6 +638,8 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 Verifies the message, including the update data. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -712,11 +661,11 @@ Verifies the message, including the update data. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## verify
 
@@ -726,7 +675,9 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 
 Verifies the signature of the data. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -748,11 +699,11 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## verify
 
@@ -763,6 +714,8 @@ verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>
 Verifies the message, including the update data. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -789,11 +742,11 @@ Verifies the message, including the update data. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## verify
 
@@ -803,7 +756,9 @@ verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>
 
 Verifies the signature of the data. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -830,11 +785,11 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## verifySync
 
@@ -842,13 +797,13 @@ Verifies the signature of the data. This API uses a promise to return the result
 verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 ```
 
-Verifies the signature. This API returns the verification result synchronously.
+Verifies the signature. This API returns the verification result synchronously. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, verify. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [verify](#verify). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean--><!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean-End-->
 
@@ -871,15 +826,15 @@ Verifies the signature. This API returns the verification result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
-For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -951,7 +906,7 @@ function verifyByCallback() {
 }
 ```
 
-For more examples, see [Signing and Signature Verification with an RSA Key Pair](../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples, see [Signing and Signature Verification with an RSA Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -1025,7 +980,7 @@ async function verifyByPromise() {
 }
 ```
 
-For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -1109,7 +1064,9 @@ Indicates the algorithm name of the Verify instance.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

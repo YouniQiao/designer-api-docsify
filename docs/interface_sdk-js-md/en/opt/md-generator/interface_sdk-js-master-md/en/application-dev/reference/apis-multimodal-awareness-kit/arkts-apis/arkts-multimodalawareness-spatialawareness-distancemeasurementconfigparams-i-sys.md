@@ -4,6 +4,8 @@ Configuration parameters for the distance measurement interface
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-spatialAwareness-export interface DistanceMeasurementConfigParams--><!--Device-spatialAwareness-export interface DistanceMeasurementConfigParams-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -28,6 +30,8 @@ distance measurement supported devices list
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistanceMeasurementConfigParams-deviceList: string[]--><!--Device-DistanceMeasurementConfigParams-deviceList: string[]-End-->
@@ -47,6 +51,8 @@ distance measurement result reporting frequency
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ distance measurement result reporting mode
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistanceMeasurementConfigParams-reportMode: ReportingMode--><!--Device-DistanceMeasurementConfigParams-reportMode: ReportingMode-End-->
@@ -87,6 +95,8 @@ distance measurement technology type
 **Type:** [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

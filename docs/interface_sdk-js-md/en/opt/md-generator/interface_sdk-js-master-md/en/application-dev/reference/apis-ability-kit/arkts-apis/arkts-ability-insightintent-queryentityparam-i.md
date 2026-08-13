@@ -4,6 +4,8 @@ Parameter for query entity.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-insightIntent-interface QueryEntityParam--><!--Device-insightIntent-interface QueryEntityParam-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -17,20 +19,22 @@ import { insightIntent } from '@kit.AbilityKit';
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: Record<string, RecordData>
 ```
 
 Indicates the parameters when querying entities by property.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-QueryEntityParam-parameters?: Record<string, Object>--><!--Device-QueryEntityParam-parameters?: Record<string, Object>-End-->
+<!--Device-QueryEntityParam-parameters?: Record<string, RecordData>--><!--Device-QueryEntityParam-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -45,6 +49,8 @@ The query type.
 **Type:** [QueryType](arkts-ability-insightintent-querytype-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

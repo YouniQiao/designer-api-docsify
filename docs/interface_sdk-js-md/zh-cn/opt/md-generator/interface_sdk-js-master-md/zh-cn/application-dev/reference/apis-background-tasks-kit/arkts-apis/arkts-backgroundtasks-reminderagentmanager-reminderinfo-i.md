@@ -2,7 +2,9 @@
 
 代理提醒信息，包含 ReminderRequest 和 ReminderId。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-interface ReminderInfo--><!--Device-reminderAgentManager-interface ReminderInfo-End-->
 
@@ -18,7 +20,9 @@ reminderId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ReminderInfo-reminderId: int--><!--Device-ReminderInfo-reminderId: int-End-->
 
@@ -34,7 +38,9 @@ reminderReq: ReminderRequest
 
 **类型：** ReminderRequest
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ReminderInfo-reminderReq: ReminderRequest--><!--Device-ReminderInfo-reminderReq: ReminderRequest-End-->
 

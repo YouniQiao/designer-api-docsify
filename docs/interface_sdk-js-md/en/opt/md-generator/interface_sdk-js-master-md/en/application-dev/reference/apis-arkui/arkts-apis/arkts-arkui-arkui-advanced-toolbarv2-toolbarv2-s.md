@@ -4,7 +4,7 @@ Declare Component ToolBarV2
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ToolBarV2--><!--Device-unnamed-export declare struct ToolBarV2-End-->
 
@@ -19,7 +19,8 @@ import { ToolBarV2ItemImageOptions, ToolBarV2Item, ToolBarV2ItemText, ToolBarV2S
 ## activatedIndex
 
 ```TypeScript
-activatedIndex?: number
+@Param
+  activatedIndex?: number
 ```
 
 Define toolbarV2 activate item index, default is -1.
@@ -28,20 +29,21 @@ Define toolbarV2 activate item index, default is -1.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2-activatedIndex?: number--><!--Device-ToolBarV2-activatedIndex?: number-End-->
+<!--Device-ToolBarV2-@Param  activatedIndex?: number--><!--Device-ToolBarV2-@Param  activatedIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dividerModifier
 
 ```TypeScript
-dividerModifier?: DividerModifier
+@Param
+  dividerModifier?: DividerModifier
 ```
 
 Define divider Modifier.
@@ -50,20 +52,22 @@ Define divider Modifier.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2-dividerModifier?: DividerModifier--><!--Device-ToolBarV2-dividerModifier?: DividerModifier-End-->
+<!--Device-ToolBarV2-@Param  dividerModifier?: DividerModifier--><!--Device-ToolBarV2-@Param  dividerModifier?: DividerModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarList
 
 ```TypeScript
-toolBarList: ToolBarV2Item[]
+@Require
+  @Param
+  toolBarList: ToolBarV2Item[]
 ```
 
 Define toolbarV2 item list.
@@ -72,20 +76,21 @@ Define toolbarV2 item list.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2-toolBarList: ToolBarV2Item[]--><!--Device-ToolBarV2-toolBarList: ToolBarV2Item[]-End-->
+<!--Device-ToolBarV2-@Require  @Param  toolBarList: ToolBarV2Item[]--><!--Device-ToolBarV2-@Require  @Param  toolBarList: ToolBarV2Item[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarModifier
 
 ```TypeScript
-toolBarModifier?: ToolBarV2Modifier
+@Param
+  toolBarModifier?: ToolBarV2Modifier
 ```
 
 Define toolbarV2 modifier.
@@ -94,12 +99,12 @@ Define toolbarV2 modifier.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2-toolBarModifier?: ToolBarV2Modifier--><!--Device-ToolBarV2-toolBarModifier?: ToolBarV2Modifier-End-->
+<!--Device-ToolBarV2-@Param  toolBarModifier?: ToolBarV2Modifier--><!--Device-ToolBarV2-@Param  toolBarModifier?: ToolBarV2Modifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

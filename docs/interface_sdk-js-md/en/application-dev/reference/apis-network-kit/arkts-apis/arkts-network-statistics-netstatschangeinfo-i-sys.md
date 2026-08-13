@@ -2,9 +2,11 @@
 
 Used to monitor and manage the status and usage of network interfaces.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface NetStatsChangeInfo--><!--Device-statistics-export interface NetStatsChangeInfo-End-->
 
@@ -28,9 +30,11 @@ Network interface for querying traffic.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsChangeInfo-iface: string--><!--Device-NetStatsChangeInfo-iface: string-End-->
 
@@ -46,11 +50,13 @@ uid?: int
 
 Network interface for querying traffic.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsChangeInfo-uid?: int--><!--Device-NetStatsChangeInfo-uid?: int-End-->
 

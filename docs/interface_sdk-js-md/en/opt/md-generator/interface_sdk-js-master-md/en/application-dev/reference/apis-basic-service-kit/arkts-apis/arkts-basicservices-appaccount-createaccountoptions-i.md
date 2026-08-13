@@ -2,7 +2,9 @@
 
 Defines the options for creating an application account.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface CreateAccountOptions--><!--Device-appAccount-interface CreateAccountOptions-End-->
 
@@ -22,9 +24,11 @@ customData?: Record<string, string>
 
 Custom data. By default, no value is passed in.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CreateAccountOptions-customData?: Record<string, string>--><!--Device-CreateAccountOptions-customData?: Record<string, string>-End-->
 

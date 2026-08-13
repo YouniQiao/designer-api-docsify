@@ -1,8 +1,10 @@
 # MissionListener（系统接口）
 
-定义系统任务状态监听，可以通过[on](arkts-ability-missionmanager-on-f-sys.md#on)注册。
+定义系统任务状态监听，可以通过on注册。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface MissionListener--><!--Device-unnamed-export interface MissionListener-End-->
 
@@ -18,7 +20,9 @@ onMissionClosed(mission: number): void
 
 当系统关闭任务时会触发该回调函数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionListener-onMissionClosed(mission: int): void--><!--Device-MissionListener-onMissionClosed(mission: int): void-End-->
 
@@ -87,7 +91,9 @@ onMissionCreated(mission: number): void
 
 当系统创建任务时会触发该回调函数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionListener-onMissionCreated(mission: int): void--><!--Device-MissionListener-onMissionCreated(mission: int): void-End-->
 
@@ -103,7 +109,7 @@ onMissionCreated(mission: number): void
 
 ## 示例
 
-详细示例请见[onMissionClosed](#onmissionclosed9)。
+详细示例请见[onMissionClosed](#onMissionClosed)。
 
 ## onMissionDestroyed
 
@@ -113,7 +119,9 @@ onMissionDestroyed(mission: number): void
 
 当系统销毁任务时会触发该回调函数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionListener-onMissionDestroyed(mission: int): void--><!--Device-MissionListener-onMissionDestroyed(mission: int): void-End-->
 
@@ -129,7 +137,7 @@ onMissionDestroyed(mission: number): void
 
 ## 示例
 
-详细示例请见[onMissionClosed](#onmissionclosed9)。
+详细示例请见[onMissionClosed](#onMissionClosed)。
 
 ## onMissionIconUpdated
 
@@ -139,7 +147,9 @@ onMissionIconUpdated(mission: number, icon: image.PixelMap): void
 
 当系统更新任务图标时会触发该回调函数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void--><!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void-End-->
 
@@ -156,7 +166,7 @@ onMissionIconUpdated(mission: number, icon: image.PixelMap): void
 
 ## 示例
 
-详细示例请见[onMissionClosed](#onmissionclosed9)。
+详细示例请见[onMissionClosed](#onMissionClosed)。
 
 ## onMissionLabelUpdated
 
@@ -166,7 +176,9 @@ onMissionLabelUpdated(mission: number): void
 
 当系统更新任务标签时会触发该回调函数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionListener-onMissionLabelUpdated(mission: int): void--><!--Device-MissionListener-onMissionLabelUpdated(mission: int): void-End-->
 
@@ -182,7 +194,7 @@ onMissionLabelUpdated(mission: number): void
 
 ## 示例
 
-详细示例请见[onMissionClosed](#onmissionclosed9)。
+详细示例请见[onMissionClosed](#onMissionClosed)。
 
 ## onMissionMovedToFront
 
@@ -192,7 +204,9 @@ onMissionMovedToFront(mission: number): void
 
 当系统将任务移动到前台时会触发该回调函数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionListener-onMissionMovedToFront(mission: int): void--><!--Device-MissionListener-onMissionMovedToFront(mission: int): void-End-->
 
@@ -208,7 +222,7 @@ onMissionMovedToFront(mission: number): void
 
 ## 示例
 
-详细示例请见[onMissionClosed](#onmissionclosed9)。
+详细示例请见[onMissionClosed](#onMissionClosed)。
 
 ## onMissionSnapshotChanged
 
@@ -218,7 +232,9 @@ onMissionSnapshotChanged(mission: number): void
 
 当系统更新任务缩略图时会触发该回调函数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void--><!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void-End-->
 
@@ -234,4 +250,4 @@ onMissionSnapshotChanged(mission: number): void
 
 ## 示例
 
-详细示例请见[onMissionClosed](#onmissionclosed9)。
+详细示例请见[onMissionClosed](#onMissionClosed)。

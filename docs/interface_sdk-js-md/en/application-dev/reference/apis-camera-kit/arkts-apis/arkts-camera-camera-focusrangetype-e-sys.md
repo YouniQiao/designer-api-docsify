@@ -2,9 +2,11 @@
 
 Enumerates the focus range types.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum FocusRangeType--><!--Device-camera-enum FocusRangeType-End-->
 
@@ -20,9 +22,11 @@ AUTO = 0
 
 Auto focus.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusRangeType-AUTO = 0--><!--Device-FocusRangeType-AUTO = 0-End-->
 
@@ -38,9 +42,11 @@ NEAR = 1
 
 Focus on near objects.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusRangeType-NEAR = 1--><!--Device-FocusRangeType-NEAR = 1-End-->
 

@@ -1,15 +1,10 @@
 # LocalStorage
 
-LocalStorage是页面级的UI状态存储，通过[@Entry](../../../reference/apis-arkui/arkui-ts/ts-universal-entry.md#entry)装饰器接收的参数可以在页面内共享同一个LocalStorage实例。具体UI使用说明，详见[LocalStorage：页面级UI状态存储](../../../ui/state-management/arkts-localstorage.md)。
-
-> **说明：**
-> 
-> 从API version 12开始，LocalStorage支持[Map](../../../ui/state-management/arkts-localstorage.md#装饰map类型变量)、
-> [Set](../../../ui/state-management/arkts-localstorage.md#装饰set类型变量)、
-> [Date类型](../../../ui/state-management/arkts-localstorage.md#装饰date类型变量)，支持null、undefined以及
-> [联合类型](../../../ui/state-management/arkts-localstorage.md#localstorage支持联合类型)。
+LocalStorage是页面级的UI状态存储，通过[@Entry](../../../reference/apis-arkui/arkui-ts/ts-universal-entry.md#entry)装饰器接收的参数可以在页面内 共享同一个LocalStorage实例。具体UI使用说明，详见[LocalStorage：页面级UI状态存储](../../../ui/state-management/arkts-localstorage.md)。 > **说明：** > > 从API version 12开始，LocalStorage支持[Map](../../../ui/state-management/arkts-localstorage.md#装饰map类型变量)、 > [Set](../../../ui/state-management/arkts-localstorage.md#装饰set类型变量)、 > [Date类型](../../../ui/state-management/arkts-localstorage.md#装饰date类型变量)，支持null、undefined以及 > [联合类型](../../../ui/state-management/arkts-localstorage.md#localstorage支持联合类型)。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class LocalStorage--><!--Device-unnamed-declare class LocalStorage-End-->
 
@@ -27,7 +22,7 @@ static GetShared(): LocalStorage
 
 **废弃版本：** 10
 
-**替代接口：** [getShared](#getShared)
+**替代接口：** getShared
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,11 +50,11 @@ let storage: LocalStorage = LocalStorage.GetShared();
 clear(): boolean
 ```
 
-删除[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所有的属性。仅当LocalStorage中的属性没有任何订阅者时可删除成功并返回true；如果有订阅者，clear不会生效并返回false。
-
-订阅者的含义参考[delete](#delete)。
+删除[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所有的属性。仅当LocalStorage中的属性没有任何订阅者时可删除成功并返回true； 如果有订阅者，clear不会生效并返回false。 订阅者的含义参考[delete](#delete)。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -89,9 +84,11 @@ let res: boolean = storage.clear(); // true，已经没有订阅者
 constructor(initializingProperties?: Object)
 ```
 
-创建一个新的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。使用Object.keys(initializingProperties)返回的属性名及其值，初始化LocalStorage实例。
+创建一个新的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。使用Object.keys(initializingProperties)返回 的属性名及其值，初始化LocalStorage实例。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -120,21 +117,11 @@ let storage: LocalStorage = new LocalStorage(initialData);
 delete(propName: string): boolean
 ```
 
-在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中删除propName对应的属性。仅当LocalStorage中该属性没有任何订阅者时可删除成功并返回true；如果有订阅者，则返回false。
-
-属性的订阅者为：
-
-1. [@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink)、[@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop)装饰的变量。
-
-2. 通过[link](#link)、[prop](#prop)、[setAndLink](#setAndLink)、[setAndProp](#setAndProp)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty)的实例。
-
-如需删除这些订阅者，可通过以下方式：
-
-1. 删除\@LocalStorageLink、\@LocalStorageProp所在的自定义组件。删除自定义组件请参考[自定义组件的删除](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#自定义组件的删除)。
-
-2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#aboutToBeDeleted)接口。
+在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中删除propName对应的属性。仅当LocalStorage中该属性没有任何订阅者时可删除成 功并返回true；如果有订阅者，则返回false。 属性的订阅者为： 1. [@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink)、[@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop)装饰的变量。 2. 通过[link](#link)、[prop](#prop)、[setAndLink](#setAndLink)、[setAndProp](#setAndProp)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty（系统接口）)的实例。 如需删除这些订阅者，可通过以下方式： 1. 删除\@LocalStorageLink、\@LocalStorageProp所在的自定义组件。删除自定义组件请参考[自定义组件的删除](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#自定义组件的删除)。 2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#aboutToBeDeleted)接口。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -178,6 +165,8 @@ get<T>(propName: string): T | undefined
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -212,12 +201,7 @@ let value: number = storage.get('PropA') as number; // 47
 static getShared(): LocalStorage
 ```
 
-获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。
-
-> **说明：**
-> 
-> 从API version 12开始，可使用[UIContext](@ohos.arkui.UIContext)中的
-> [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getSharedLocalStorage)明确UI执行上下文中的LocalStorage实例。
+获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。 > **说明：** > > 从API version 12开始，可使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getSharedLocalStorage)明确UI执行上下文中的LocalStorage实例。
 
 **起始版本：** 10
 
@@ -250,6 +234,8 @@ has(propName: string): boolean
 判断propName对应的属性是否在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -289,6 +275,8 @@ keys(): IterableIterator<string>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -317,11 +305,11 @@ let keys: IterableIterator<string> = storage.keys();
 link<T>(propName: string): SubscribedAbstractProperty<T>
 ```
 
-如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例中存在，则返回与LocalStorage中propName对应属性的双向绑定数据。与[prop](#prop)的单向数据绑定不同，link建立双向数据绑定，修改会同步回LocalStorage，LocalStorage会将变化同步到所有绑定该propName的数据和自定义组件中。
-
-如果LocalStorage中不存在propName，则返回undefined。
+如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例中存在，则返回与LocalStorage中propName对应属 性的双向绑定数据。与[prop](#prop)的单向数据绑定不同，link建立双向数据绑定，修改会同步回LocalStorage，LocalStorage会将变化同步到所有绑定该propName 的数据和自定义组件中。 如果LocalStorage中不存在propName，则返回undefined。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -359,9 +347,11 @@ linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get()
 prop<S>(propName: string): SubscribedAbstractProperty<S>
 ```
 
-如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回与LocalStorage中propName对应属性的单向绑定数据。如果LocalStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回LocalStorage中。
+如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回与LocalStorage中propName对应属性的 单向绑定数据。如果LocalStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回LocalStorage中。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -399,11 +389,11 @@ prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
 public ref<T>(propName: string): AbstractProperty<T> | undefined
 ```
 
-如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回LocalStorage中propName对应属性的引用。否则，返回undefined。
-
-与[link](#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#AbstractProperty)类型的变量。
+如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回LocalStorage中propName对应属性的引 用。否则，返回undefined。 与[link](#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#AbstractProperty)类型的变量。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -429,9 +419,11 @@ public ref<T>(propName: string): AbstractProperty<T> | undefined
 set<T>(propName: string, newValue: T): boolean
 ```
 
-在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[setOrCreate](#setOrCreate)不同，set仅在propName已存在时生效，propName不存在时返回false。
+在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则 不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[setOrCreate](#setOrCreate)不同，set仅在propName已存在时生效，propName不存在时 返回false。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -469,10 +461,11 @@ let res1: boolean = storage.set('PropB', 47); // false
 setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-与[link](#link)接口类似，如果给定的propName在  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在LocalStorage中创建和初始化propName对应的属性，返回其双向绑定数据。
+与[link](#link)接口类似，如果给定的propName在 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用 defaultValue在LocalStorage中创建和初始化propName对应的属性，返回其双向绑定数据。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -510,10 +503,11 @@ let link2: SubscribedAbstractProperty<number> = storage.setAndLink('PropA', 50);
 setAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>
 ```
 
-与[prop](#prop)接口类似，如果给定的propName在  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在LocalStorage中创建和初始化propName对应的属性，返回其单向绑定数据。
+与[prop](#prop)接口类似，如果给定的propName在 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用 defaultValue在LocalStorage中创建和初始化propName对应的属性，返回其单向绑定数据。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -550,12 +544,11 @@ let prop: SubscribedAbstractProperty<number> = storage.setAndProp('PropB', 49); 
 public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 ```
 
-与[ref](arkts-arkui-appstorage-c.md#ref)接口类似，如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，则返回LocalStorage中propName对应属性的引用。如果不存在，则使用defaultValue在LocalStorage中创建和初始化propName对应的属性，并返回其引用。
-
-与[setAndLink](#setAndLink)的功能基本一致，区别在于不需要手动释放返回的  
-[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#AbstractProperty)类型的变量。
+与[ref](arkts-arkui-appstorage-c.md#ref)接口类似，如果给定的propName在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中 存在，则返回LocalStorage中propName对应属性的引用。如果不存在，则使用defaultValue在LocalStorage中创建和初始化propName对应的属性，并返回其引用。 与[setAndLink](#setAndLink)的功能基本一致，区别在于不需要手动释放返回的 [AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#AbstractProperty)类型的变量。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -582,11 +575,11 @@ public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 setOrCreate<T>(propName: string, newValue: T): boolean
 ```
 
-如果propName已经在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，并且newValue和propName对应属性的值不同，则设置propName对应属性的值为newValue，否则状态变量不会通知UI刷新propName对应属性的值。
-
-如果propName不存在，则创建propName属性，值为newValue。setOrCreate仅可创建单个LocalStorage的键值对，如需创建多个LocalStorage键值对，可多次调用此方法。
+如果propName已经在[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中存在，并且newValue和propName对应属性的值不同，则设置 propName对应属性的值为newValue，否则状态变量不会通知UI刷新propName对应属性的值。 如果propName不存在，则创建propName属性，值为newValue。setOrCreate仅可创建单个LocalStorage的键值对，如需创建多个LocalStorage键值对，可多次调用此方法。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -628,6 +621,8 @@ size(): number
 返回[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中的属性数量。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

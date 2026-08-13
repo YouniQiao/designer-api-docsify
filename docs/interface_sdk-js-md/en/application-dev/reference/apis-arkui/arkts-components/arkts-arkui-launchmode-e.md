@@ -6,6 +6,8 @@ Enumerates the operation modes for the routing stack.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum LaunchMode--><!--Device-unnamed-declare enum LaunchMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@ Enumerates the operation modes for the routing stack.
 STANDARD = 0
 ```
 
-Default routing stack operation mode.
-
-In this mode, push operations add the specified **NavDestination** page to the stack; replace operations replace the current top **NavDestination** page.
+Default routing stack operation mode. In this mode, push operations add the specified **NavDestination** page to the stack; replace operations replace the current top **NavDestination** page.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,12 +40,13 @@ In this mode, push operations add the specified **NavDestination** page to the s
 MOVE_TO_TOP_SINGLETON = 1
 ```
 
-This mode searches from the bottom to the top of the routing stack. If a **NavDestination** page with the specified name exists, it moves that page to the top of the stack (for a replace operation, it replaces the last top  
-**NavDestination** page with the specified one); otherwise, it behaves like **STANDARD**.
+This mode searches from the bottom to the top of the routing stack. If a **NavDestination** page with the specified name exists, it moves that page to the top of the stack (for a replace operation, it replaces the last top **NavDestination** page with the specified one); otherwise, it behaves like **STANDARD**.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,12 +62,13 @@ This mode searches from the bottom to the top of the routing stack. If a **NavDe
 POP_TO_SINGLETON = 2
 ```
 
-This mode searches from the bottom to the top of the routing stack. If a **NavDestination** page with the specified name exists, it removes all **NavDestination** pages above it(for a replace operation, it replaces the last top  
-**NavDestination** page with the specified one); otherwise, it behaves like **STANDARD**.
+This mode searches from the bottom to the top of the routing stack. If a **NavDestination** page with the specified name exists, it removes all **NavDestination** pages above it(for a replace operation, it replaces the last top **NavDestination** page with the specified one); otherwise, it behaves like **STANDARD**.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,6 +89,8 @@ This mode creates an instance of **NavDestination**. Compared with **STANDARD**,
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

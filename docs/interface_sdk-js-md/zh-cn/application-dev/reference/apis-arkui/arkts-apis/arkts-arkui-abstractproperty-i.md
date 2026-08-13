@@ -1,16 +1,14 @@
 # AbstractProperty
 
-AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、修改所引用属性数据及查询属性名的能力。与SubscribedAbstractProperty不同，AbstractProperty实例无需手动释放。
-
-> **说明：**
-> 
-> 从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
+AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、修改所引用属性数据及查询属性名的能力。与SubscribedAbstractProperty不同，AbstractProperty 实例无需手动释放。 > **说明：** > > 从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare interface AbstractProperty<T>--><!--Device-unnamed-declare interface AbstractProperty<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface AbstractProperty--><!--Device-unnamed-declare interface AbstractProperty-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,12 +18,13 @@ AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、�
 get(): T
 ```
 
-读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的数据。
+读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/ [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的数据。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -45,12 +44,13 @@ get(): T
 info(): string
 ```
 
-读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的属性名。
+读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/ [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的属性名。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -70,12 +70,13 @@ info(): string
 set(newValue: T): void
 ```
 
-更新[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的数据，newValue必须是T类型，可以为null或undefined。
+更新[AppStorage](../../../ui/state-management/arkts-appstorage.md)/ [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的数据，newValue必须是T类型，可以为null或undefined。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

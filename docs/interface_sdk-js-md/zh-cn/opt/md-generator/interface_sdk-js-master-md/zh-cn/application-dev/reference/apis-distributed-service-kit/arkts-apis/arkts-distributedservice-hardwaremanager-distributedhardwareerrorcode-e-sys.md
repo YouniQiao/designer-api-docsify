@@ -2,7 +2,9 @@
 
 分布式硬件错误码的枚举。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hardwareManager-enum DistributedHardwareErrorCode--><!--Device-hardwareManager-enum DistributedHardwareErrorCode-End-->
 
@@ -18,7 +20,9 @@ ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101
 
 表示分布式硬件未启动。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedHardwareErrorCode-ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101--><!--Device-DistributedHardwareErrorCode-ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101-End-->
 
@@ -34,7 +38,9 @@ ERR_CODE_DEVICE_NOT_CONNECTED = 24200102
 
 表示源端设备未连接。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedHardwareErrorCode-ERR_CODE_DEVICE_NOT_CONNECTED = 24200102--><!--Device-DistributedHardwareErrorCode-ERR_CODE_DEVICE_NOT_CONNECTED = 24200102-End-->
 

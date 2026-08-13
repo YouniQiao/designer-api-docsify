@@ -1,12 +1,8 @@
 # AlphabetIndexer
 
-The **AlphabetIndexer** component can create a logically indexed array of items in a container for instant location.
+The **AlphabetIndexer** component can create a logically indexed array of items in a container for instant location. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## AlphabetIndexer
 
@@ -17,6 +13,8 @@ AlphabetIndexer(options: AlphabetIndexerOptions)
 Creates an **AlphabetIndexer** component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,8 +30,8 @@ Creates an **AlphabetIndexer** component.
 
 ## Summary
 
-- [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md)
-- [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-alphabetindexer-onalphabetindexerpopupselectcallback-t.md)
-- [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-alphabetindexer-onalphabetindexerrequestpopupdatacallback-t.md)
-- [OnAlphabetIndexerSelectCallback](arkts-arkui-alphabetindexer-onalphabetindexerselectcallback-t.md)
-- [IndexerAlign](arkts-arkui-alphabetindexer-indexeralign-e.md)
+- [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md)
+- [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md)
+- [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md)
+- [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md)
+- [IndexerAlign](arkts-arkui-indexeralign-e.md)

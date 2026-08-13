@@ -1,4 +1,4 @@
-# NotificationExtensionSubscriptionInfo(Describes a notification extension subscription info)
+# NotificationExtensionSubscriptionInfo
 
 ## 汇总
 

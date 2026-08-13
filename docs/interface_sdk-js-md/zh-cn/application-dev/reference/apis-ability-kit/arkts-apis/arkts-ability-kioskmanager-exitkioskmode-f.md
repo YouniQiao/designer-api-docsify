@@ -6,11 +6,13 @@
 function exitKioskMode(context: UIAbilityContext): Promise<void>
 ```
 
-退出Kiosk模式。使用Promise异步回调。该接口仅对已进入Kiosk模式的应用生效。该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
+退出Kiosk模式。使用Promise异步回调。 该接口仅对已进入Kiosk模式的应用生效。 该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,10 +36,10 @@ function exitKioskMode(context: UIAbilityContext): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000112-当前系统没有应用进入kiosk模式) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
-| [16000110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000112](../errorcode-ability.md#16000112-当前系统没有应用进入kiosk模式) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [16000110](../errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
 
 ## 示例
 

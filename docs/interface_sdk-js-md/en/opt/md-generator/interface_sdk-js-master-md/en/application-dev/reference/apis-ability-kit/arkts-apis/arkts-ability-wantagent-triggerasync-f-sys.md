@@ -12,9 +12,11 @@ import { WantAgent } from '@kit.AbilityKit';
 function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>
 ```
 
-Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information.If the specified wantAgent is local, you need to apply for permission:ohos.permission.TRIGGER_LOCAL_WANTAGENT permission.
+Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information. If the specified wantAgent is local, you need to apply for permission: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +44,11 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 
 | Error Code ID |
 | --- |
-| [16000020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000153](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000153-wantagent-object-is-canceled) |
+| [16000020](../errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000153](../errorcode-ability.md#16000153-wantagent-object-is-canceled) |
 
 ## Examples
 

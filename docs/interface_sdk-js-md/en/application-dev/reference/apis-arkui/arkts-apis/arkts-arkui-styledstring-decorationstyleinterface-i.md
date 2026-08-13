@@ -6,6 +6,8 @@ DecorationStyleInterface
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface DecorationStyleInterface--><!--Device-unnamed-export declare interface DecorationStyleInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ The color value of the decoration property object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The style value of the decoration property object.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DecorationStyleInterface-style?: TextDecorationStyle--><!--Device-DecorationStyleInterface-style?: TextDecorationStyle-End-->
@@ -64,6 +70,8 @@ The thickness scale of the decoration
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DecorationStyleInterface-thicknessScale?: double--><!--Device-DecorationStyleInterface-thicknessScale?: double-End-->
@@ -83,6 +91,8 @@ The type value of the decoration property object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

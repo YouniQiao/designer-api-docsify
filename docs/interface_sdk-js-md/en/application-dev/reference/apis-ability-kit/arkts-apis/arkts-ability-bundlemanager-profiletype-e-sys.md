@@ -2,9 +2,11 @@
 
 Enumerates the types of profiles (also called application files).
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export enum ProfileType--><!--Device-bundleManager-export enum ProfileType-End-->
 
@@ -20,9 +22,11 @@ INTENT_PROFILE = 1
 
 Profile of the InsightIntent framework.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileType-INTENT_PROFILE = 1--><!--Device-ProfileType-INTENT_PROFILE = 1-End-->
 
@@ -40,7 +44,9 @@ Device-Cloud Sync configuration file.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

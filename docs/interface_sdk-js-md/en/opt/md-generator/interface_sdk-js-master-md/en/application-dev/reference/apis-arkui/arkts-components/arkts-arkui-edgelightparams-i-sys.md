@@ -4,6 +4,8 @@ Defines the parameters of the edge light effect.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface EdgeLightParams--><!--Device-unnamed-declare interface EdgeLightParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the parameters of the edge light effect.
 color?: ResourceColor
 ```
 
-The color of the light effect.&lt;br&gt;If not specified, the default color is white (#FFFFFF).
+The color of the light effect. &lt;br&gt;If not specified, the default color is white (#FFFFFF).
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #FFFFFF
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ The color of the light effect.&lt;br&gt;If not specified, the default color is w
 intensity?: number
 ```
 
-The luminous intensity of the Edge Streamer effect.&lt;br&gt;Valid range: [0.0, 1.0].Default value is 1.&lt;br&gt;Value 0.0 means the light effect is completely invisible.&lt;br&gt;Value 1.0 means the light effect is at maximum brightness.&lt;br&gt;Values exceeding 1.0 will be clamped to 1.0.&lt;br&gt;Negative values are treated as 0.0.
+The luminous intensity of the Edge Streamer effect. &lt;br&gt;Valid range: [0.0, 1.0].Default value is 1. &lt;br&gt;Value 0.0 means the light effect is completely invisible. &lt;br&gt;Value 1.0 means the light effect is at maximum brightness. &lt;br&gt;Values exceeding 1.0 will be clamped to 1.0. &lt;br&gt;Negative values are treated as 0.0.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,11 +64,13 @@ The luminous intensity of the Edge Streamer effect.&lt;br&gt;Valid range: [0.0, 
 length: Length
 ```
 
-Projection length of the edge streamer along the flow direction.&lt;br&gt;Negative values are treated as 0.
+Projection length of the edge streamer along the flow direction. &lt;br&gt;Negative values are treated as 0.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ The location of the edge light effect.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightParams-position: EdgeLightPosition--><!--Device-EdgeLightParams-position: EdgeLightPosition-End-->
@@ -98,13 +108,15 @@ The location of the edge light effect.
 thickness?: Length
 ```
 
-The thickness (width) of the light effect line.&lt;br&gt;Negative values are treated as 0.&lt;br&gt;If not specified, the default value is 0vp.
+The thickness (width) of the light effect line. &lt;br&gt;Negative values are treated as 0. &lt;br&gt;If not specified, the default value is 0vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0vp
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

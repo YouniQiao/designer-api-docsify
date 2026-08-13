@@ -2,9 +2,11 @@
 
 Defines the textures, property factors, and texture samplers used by a material.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MaterialProperty--><!--Device-unnamed-export interface MaterialProperty-End-->
 
@@ -20,9 +22,11 @@ PBR property factor, with different meanings for different properties.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MaterialProperty-factor: Vec4--><!--Device-MaterialProperty-factor: Vec4-End-->
 
@@ -38,9 +42,11 @@ Texture map based on PBR properties to convey the texture information of the mat
 
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MaterialProperty-image: Image | null--><!--Device-MaterialProperty-image: Image | null-End-->
 
@@ -52,13 +58,15 @@ Texture map based on PBR properties to convey the texture information of the mat
 sampler?: Sampler
 ```
 
-Texture sampler, with the default value set to LINEAR for magnification, minification, and mipmaps,and to REPEAT for U, V, and W directions.
+Texture sampler, with the default value set to LINEAR for magnification, minification, and mipmaps, and to REPEAT for U, V, and W directions.
 
 **Type:** [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MaterialProperty-sampler?: Sampler--><!--Device-MaterialProperty-sampler?: Sampler-End-->
 

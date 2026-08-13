@@ -1,4 +1,4 @@
-# @ohos.multimedia.movingphotoview(A component which support applications to show moving photo data)
+# @ohos.multimedia.movingphotoview
 
 ## Modules to Import
 
@@ -64,5 +64,5 @@ import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoV
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [MovingPhotoView](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoview) |
-| [MovingPhotoViewInstance](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoviewinstance) |
+| [MovingPhotoView](arkts-medialibrary-multimedia-movingphotoview-con.md#MovingPhotoView) |
+| [MovingPhotoViewInstance](arkts-medialibrary-multimedia-movingphotoview-con.md#MovingPhotoViewInstance) |

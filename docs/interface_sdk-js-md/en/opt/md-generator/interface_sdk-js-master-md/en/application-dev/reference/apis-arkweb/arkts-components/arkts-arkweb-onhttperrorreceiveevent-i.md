@@ -4,6 +4,8 @@ Defines the triggered function when the web page receives a web resource loading
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnHttpErrorReceiveEvent--><!--Device-unnamed-declare interface OnHttpErrorReceiveEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ The information of request.
 **Type:** [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -37,6 +41,8 @@ Web resource response of event.
 **Type:** [WebResourceResponse](arkts-arkweb-webresourceresponse-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

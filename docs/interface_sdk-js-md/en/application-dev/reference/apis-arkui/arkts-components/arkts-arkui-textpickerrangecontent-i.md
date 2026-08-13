@@ -6,6 +6,8 @@ Defines the content for single-column picker options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextPickerRangeContent--><!--Device-unnamed-declare interface TextPickerRangeContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Image resource. If the value is a string, such as **"/common/hello.png"**, it re
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -38,11 +42,7 @@ Image resource. If the value is a string, such as **"/common/hello.png"**, it re
 text?: string | Resource
 ```
 
-Text information.
-
-An empty character string is used by default.
-
-Note: Text truncation occurs when content exceeds column width.
+Text information. An empty character string is used by default. Note: Text truncation occurs when content exceeds column width.
 
 **Type:** string \| Resource
 
@@ -51,6 +51,8 @@ Note: Text truncation occurs when content exceeds column width.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

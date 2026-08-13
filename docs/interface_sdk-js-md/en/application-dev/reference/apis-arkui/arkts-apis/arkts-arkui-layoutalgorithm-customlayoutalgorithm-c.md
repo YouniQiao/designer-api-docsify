@@ -1,34 +1,40 @@
 # CustomLayoutAlgorithm
 
-Defines the custom layout algorithm.
+Custom layout algorithm class. > **NOTE：**> > The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as > the input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
-**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
+**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare class CustomLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export declare class CustomLayoutAlgorithm implements LayoutAlgorithm-End-->
+<!--Device-unnamed-export class CustomLayoutAlgorithm--><!--Device-unnamed-export class CustomLayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onLayout
 
 ```TypeScript
-onLayout(self: FrameNode, position: NodePosition): void
+onLayout(self: FrameNode, position: Position): void
 ```
 
-Method to assign a position to the DynamicLayout FrameNode and each of its children.It can be used to specify how the DynamicLayout FrameNode and its child nodes are positioned and sized within the layout.
+Customizes the position of the child component to be arranged. When the position of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout position of the component to you through **onLayout**. State variables should not be changed in this callback. > **NOTE：**> > In this callback, you can call > getChild() of > FrameNode to obtain the child > component **FrameNode** and call > layout() of > FrameNode to set the position of the > child component. For details, see > [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: NodePosition): void--><!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: NodePosition): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void--><!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,8 +42,8 @@ Method to assign a position to the DynamicLayout FrameNode and each of its child
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
-| position | [NodePosition](arkts-arkui-nodeposition-t.md) | Yes | The position of the node, will be used when executing layout method. |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
+| position | [Position](arkts-arkui-position-t.md) | Yes | Position information used in layout of the dynamic layout component. |
 
 ## onMeasure
 
@@ -45,13 +51,19 @@ Method to assign a position to the DynamicLayout FrameNode and each of its child
 onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 ```
 
-Method to measure the DynamicLayout FrameNode and its content to determine the measured size.
+Customizes the size of the child component to be measured. When the size of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout constraint of the component to you through **onMeasure**. State variables should not be changed in this callback. > **NOTE：**> > In this callback, you can call > getChild() of > FrameNode to obtain the child > component **FrameNode** and call > measure() of > FrameNode to measure the size of the > child component. For details, see > [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-CustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint): void--><!--Device-CustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint): void-End-->
 
@@ -61,6 +73,6 @@ Method to measure the DynamicLayout FrameNode and its content to determine the m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | The layout constraint of the node, which will be used in measure process. |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Layout constraint used by the dynamic layout component for measurement. |
 

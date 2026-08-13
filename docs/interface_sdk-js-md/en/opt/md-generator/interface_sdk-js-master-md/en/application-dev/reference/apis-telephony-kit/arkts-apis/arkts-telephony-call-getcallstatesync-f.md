@@ -14,7 +14,9 @@ function getCallStateSync(): CallState
 
 Obtains the call status.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-function getCallStateSync(): CallState--><!--Device-call-function getCallStateSync(): CallState-End-->
 

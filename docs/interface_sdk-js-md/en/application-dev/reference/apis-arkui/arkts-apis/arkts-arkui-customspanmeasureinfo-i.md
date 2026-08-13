@@ -6,6 +6,8 @@ Defines the CustomSpanMeasureInfo interface.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CustomSpanMeasureInfo--><!--Device-unnamed-declare interface CustomSpanMeasureInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Defines the CustomSpanMeasureInfo interface.
 fontSize: number
 ```
 
-Text font size.
-
-Unit: [fp](common)
+Text font size. Unit: fp
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,17 +42,15 @@ Unit: [fp](common)
 layoutPolicy?: LayoutPolicy
 ```
 
-Width layout policy of the parent component of the custom span.
-
-**NOTE：**
-
-When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
+Width layout policy of the parent component of the custom span. **NOTE：**When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
 
 **Type:** LayoutPolicy
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,15 +66,15 @@ When the value is **null** or **undefined**, the parent component does not have 
 maxWidth?: number
 ```
 
-Maximum width constraint of the custom span within the parent component's content area.
-
-Unit: [px](common)
+Maximum width constraint of the custom span within the parent component's content area. Unit: px
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

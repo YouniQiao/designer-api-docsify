@@ -6,6 +6,8 @@ Surface配置。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SurfaceConfig--><!--Device-unnamed-declare interface SurfaceConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@ Surface配置。
 isOpaque?: boolean
 ```
 
-是否需要将XComponent所持有的surface视为不透明，即使该surface具有半透明像素。true表示需要视为不透明，false表示其他情况。
-
-默认值：**false**。
+是否需要将XComponent所持有的surface视为不透明， 即使该surface具有半透明像素。 true表示需要视为不透明，false表示其他情况。 默认值：**false**。
 
 **类型：** boolean
 
@@ -27,6 +27,8 @@ isOpaque?: boolean
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

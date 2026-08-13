@@ -2,9 +2,11 @@
 
 Describes a color in ARGB format.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-common2D-interface Color4f--><!--Device-common2D-interface Color4f-End-->
 
@@ -24,11 +26,13 @@ alpha: double
 
 Alpha component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Color4f-alpha: double--><!--Device-Color4f-alpha: double-End-->
 
@@ -42,11 +46,13 @@ blue: double
 
 Blue component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Color4f-blue: double--><!--Device-Color4f-blue: double-End-->
 
@@ -60,11 +66,13 @@ green: double
 
 Green component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Color4f-green: double--><!--Device-Color4f-green: double-End-->
 
@@ -78,11 +86,13 @@ red: double
 
 Red component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Color4f-red: double--><!--Device-Color4f-red: double-End-->
 

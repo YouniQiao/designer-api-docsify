@@ -1,9 +1,10 @@
 # Ashmem
 
-Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an  
- **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size, and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the  local device.
+Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size, and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the local device.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-rpc-class Ashmem--><!--Device-rpc-class Ashmem-End-->
 
@@ -21,13 +22,11 @@ import { rpc } from '@kit.IPCKit';
 closeAshmem(): void
 ```
 
-Closes this **Ashmem** object.
+Closes this **Ashmem** object. > **NOTE：**> > Before closing the **Ashmem** object, you need to remove the address mapping.
 
-> **NOTE：**
-> 
-> Before closing the **Ashmem** object, you need to remove the address mapping.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-Ashmem-closeAshmem(): void--><!--Device-Ashmem-closeAshmem(): void-End-->
 
@@ -55,7 +54,9 @@ static create(name: string, size: number): Ashmem
 
 Creates an **Ashmem** object with the specified name and size. This API is a static method.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-static create(name: string, size: int): Ashmem--><!--Device-Ashmem-static create(name: string, size: int): Ashmem-End-->
 
@@ -78,7 +79,7 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -107,7 +108,9 @@ static create(ashmem: Ashmem): Ashmem
 
 Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem** objects point to the same shared memory region.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem-End-->
 
@@ -129,7 +132,7 @@ Creates an **Ashmem** object by copying the file descriptor of an existing **Ash
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -162,7 +165,7 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](create())
+**Substitutes:** create()
 
 <!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
 
@@ -209,7 +212,7 @@ Creates an **Ashmem** object by copying the file descriptor of an existing **Ash
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](create())
+**Substitutes:** create()
 
 <!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
 
@@ -251,7 +254,9 @@ getAshmemSize(): number
 
 Obtains the memory size of this **Ashmem** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-getAshmemSize(): int--><!--Device-Ashmem-getAshmemSize(): int-End-->
 
@@ -284,13 +289,13 @@ try {
 mapAshmem(mapType: number): boolean
 ```
 
-Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is  specified by this **Ashmem** object.
+Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [mapTypedAshmem](mapTypedAshmem(mapType:)
+**Substitutes:** [mapTypedAshmem](#mapTypedAshmem)(mapType: int)
 
 <!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
 
@@ -374,7 +379,7 @@ Maps the shared file to the read-only virtual address space of the process.
 
 **Deprecated since:** 9
 
-**Substitutes:** [mapReadonlyAshmem](#mapReadonlyAshmem)()
+**Substitutes:** mapReadonlyAshmem()
 
 <!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
 
@@ -409,7 +414,9 @@ mapReadWriteAshmem(): void
 
 Maps the shared file to the readable and writable virtual address space of the process.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-mapReadWriteAshmem(): void--><!--Device-Ashmem-mapReadWriteAshmem(): void-End-->
 
@@ -419,7 +426,7 @@ Maps the shared file to the readable and writable virtual address space of the p
 
 | Error Code ID |
 | --- |
-| [1900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-failed-to-call-mmap) |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 ## Examples
 
@@ -446,7 +453,9 @@ mapReadonlyAshmem(): void
 
 Maps the shared file to the read-only virtual address space of the process.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-mapReadonlyAshmem(): void--><!--Device-Ashmem-mapReadonlyAshmem(): void-End-->
 
@@ -456,7 +465,7 @@ Maps the shared file to the read-only virtual address space of the process.
 
 | Error Code ID |
 | --- |
-| [1900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-failed-to-call-mmap) |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 ## Examples
 
@@ -481,9 +490,11 @@ try {
 mapTypedAshmem(mapType: number): void
 ```
 
-Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is  specified by this **Ashmem** object.
+Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-mapTypedAshmem(mapType: int): void--><!--Device-Ashmem-mapTypedAshmem(mapType: int): void-End-->
 
@@ -499,8 +510,8 @@ Creates the shared file mapping on the virtual address space of this process. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-failed-to-call-mmap) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 ## Examples
 
@@ -525,18 +536,13 @@ try {
 readAshmem(size: number, offset: number): number[]
 ```
 
-Reads data from the shared file associated with this **Ashmem** object.
-
-> **NOTE：**
-> 
-> - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
+Reads data from the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** [readDataFromAshmem](readDataFromAshmem(size:)
+**Substitutes:** [readDataFromAshmem](#readDataFromAshmem)(size: int, offset: int)
 
 <!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
 
@@ -559,8 +565,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
 
 ## Examples
 
@@ -589,14 +595,11 @@ try {
 readDataFromAshmem(size: number, offset: number): ArrayBuffer
 ```
 
-Reads data from the shared file associated with this **Ashmem** object.
+Reads data from the shared file associated with this **Ashmem** object. > **NOTE：**> > Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
-> **NOTE：**
-> 
-> Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer--><!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer-End-->
 
@@ -619,8 +622,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
 
 ## Examples
 
@@ -655,18 +658,13 @@ try {
 readFromAshmem(size: number, offset: number): number[]
 ```
 
-Reads data from the shared file associated with this **Ashmem** object.
-
-> **NOTE：**
-> 
-> - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
+Reads data from the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [readDataFromAshmem](readDataFromAshmem(size:)
+**Substitutes:** [readDataFromAshmem](#readDataFromAshmem)(size: int, offset: int)
 
 <!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
 
@@ -717,7 +715,7 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 **Deprecated since:** 9
 
-**Substitutes:** [setProtectionType](setProtectionType(protectionType:)
+**Substitutes:** [setProtectionType](#setProtectionType)(protectionType: int)
 
 <!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
 
@@ -759,7 +757,9 @@ setProtectionType(protectionType: number): void
 
 Sets the protection level of the memory region to which the shared file is mapped.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-setProtectionType(protectionType: int): void--><!--Device-Ashmem-setProtectionType(protectionType: int): void-End-->
 
@@ -775,8 +775,8 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900002-failed-to-call-ioctl) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) |
 
 ## Examples
 
@@ -803,7 +803,9 @@ unmapAshmem(): void
 
 Deletes the mappings for the specified address range of this **Ashmem** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-unmapAshmem(): void--><!--Device-Ashmem-unmapAshmem(): void-End-->
 
@@ -829,18 +831,13 @@ try {
 writeAshmem(buf: number[], size: number, offset: number): void
 ```
 
-Writes data to the shared file associated with this **Ashmem** object.
-
-> **NOTE：**
-> 
-> - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
+Writes data to the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeDataToAshmem](writeDataToAshmem(buf:)
+**Substitutes:** [writeDataToAshmem](#writeDataToAshmem)(buf: ArrayBuffer, size: int, offset: int)
 
 <!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
@@ -858,8 +855,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
 
 ## Examples
 
@@ -886,14 +883,11 @@ try {
 writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 ```
 
-Writes data to the shared file associated with this **Ashmem** object.
+Writes data to the shared file associated with this **Ashmem** object. > **NOTE：**> > Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
-> **NOTE：**
-> 
-> Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void--><!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void-End-->
 
@@ -911,8 +905,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
 
 ## Examples
 
@@ -944,18 +938,13 @@ try {
 writeToAshmem(buf: number[], size: number, offset: number): boolean
 ```
 
-Writes data to the shared file associated with this **Ashmem** object.
-
-> **NOTE：**
-> 
-> - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
+Writes data to the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeDataToAshmem](writeDataToAshmem(buf:)
+**Substitutes:** [writeDataToAshmem](#writeDataToAshmem)(buf: ArrayBuffer, size: int, offset: int)
 
 <!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
 
@@ -1007,6 +996,8 @@ Mapped memory protection type, indicating that the mapped memory is executable.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-Ashmem-static readonly PROT_EXEC: number--><!--Device-Ashmem-static readonly PROT_EXEC: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1024,6 +1015,8 @@ Mapped memory protection type, indicating that the mapped memory cannot be acces
 **Default:** 0
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-static readonly PROT_NONE: number--><!--Device-Ashmem-static readonly PROT_NONE: number-End-->
 
@@ -1043,6 +1036,8 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-Ashmem-static readonly PROT_READ: number--><!--Device-Ashmem-static readonly PROT_READ: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1060,6 +1055,8 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 **Default:** 2
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-Ashmem-static readonly PROT_WRITE: number--><!--Device-Ashmem-static readonly PROT_WRITE: number-End-->
 

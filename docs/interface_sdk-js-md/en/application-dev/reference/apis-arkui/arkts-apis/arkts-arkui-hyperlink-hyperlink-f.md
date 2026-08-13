@@ -3,6 +3,7 @@
 ## Hyperlink
 
 ```TypeScript
+@ComponentBuilder
 export declare function Hyperlink(
     address: string | Resource | undefined, content?: string | Resource, 
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines Hyperlink Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-export declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,18 +30,19 @@ Defines Hyperlink Component.
 | --- | --- | --- | --- |
 | address | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | The link address of component. The default value is an empty string. Passing `undefined` resets it to the default value. |
 | content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | The title of the component. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | The node of component. |
+| content_ | CustomBuilder | No | The node of component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
+| HyperlinkAttribute |  |
 
 
 ## Hyperlink
 
 ```TypeScript
+@Builder
 export declare function Hyperlink(
     style: CustomBuilderT<HyperlinkAttribute>,
     content_?: CustomBuilder,
@@ -51,11 +55,11 @@ Defines Hyperlink Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-export declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-@Builderexport declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,12 +67,12 @@ Defines Hyperlink Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md)&gt; | Yes | Hyperlink attribute instance. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;HyperlinkAttribute&gt; | Yes | Hyperlink attribute instance. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
+| HyperlinkAttribute |  |
 

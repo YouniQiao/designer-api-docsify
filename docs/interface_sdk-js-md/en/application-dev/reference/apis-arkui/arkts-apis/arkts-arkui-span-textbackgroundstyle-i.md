@@ -6,6 +6,8 @@ Define the background style of span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface TextBackgroundStyle--><!--Device-unnamed-export declare interface TextBackgroundStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Background color of span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextBackgroundStyle-color?: ResourceColor--><!--Device-TextBackgroundStyle-color?: ResourceColor-End-->
@@ -38,11 +42,13 @@ radius?: Dimension | BorderRadiuses
 
 Background radius of span.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

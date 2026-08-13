@@ -1,19 +1,24 @@
 # @ohos.usb(USB Manager)
 
-The **usb** module provides USB device management functions, including USB device list query, bulk data transfer,control transfer, and permission control.
+/*
+ Copyright (c) 2021-2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **NOTE：**
-> 
-> The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with
-> a superscript to indicate their earliest API version.
-> The APIs provided by this module are no longer maintained since API version 9. You are advised to use
-> [@ohos.usbManager](arkts-usbmanager.md#usbManager).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [usbManager](arkts-usbmanager.md#usbManager)
+**Substitutes:** [usbManager](arkts-usbmanager.md#@ohos.usbManager)
 
 <!--Device-unnamed-declare namespace usb--><!--Device-unnamed-declare namespace usb-End-->
 
@@ -31,32 +36,32 @@ import { usb } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulktransfer) |
-| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) |
-| [closePipe](arkts-basicservices-usb-closepipe-f.md#closepipe) |
-| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) |
-| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controltransfer) |
-| [getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) |
-| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getfiledescriptor) |
-| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getrawdescriptor) |
-| [hasRight](arkts-basicservices-usb-hasright-f.md#hasright) |
-| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseinterface) |
-| [requestRight](arkts-basicservices-usb-requestright-f.md#requestright) |
-| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setconfiguration) |
-| [setInterface](arkts-basicservices-usb-setinterface-f.md#setinterface) |
+| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulkTransfer) |
+| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) |
+| [closePipe](arkts-basicservices-usb-closepipe-f.md#closePipe) |
+| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) |
+| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controlTransfer) |
+| [getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) |
+| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getFileDescriptor) |
+| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getRawDescriptor) |
+| [hasRight](arkts-basicservices-usb-hasright-f.md#hasRight) |
+| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseInterface) |
+| [requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) |
+| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setConfiguration) |
+| [setInterface](arkts-basicservices-usb-setinterface-f.md#setInterface) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getCurrentFunctions](arkts-basicservices-usb-getcurrentfunctions-f-sys.md#getcurrentfunctions) |
-| [getPorts](arkts-basicservices-usb-getports-f-sys.md#getports) |
-| [getSupportedModes](arkts-basicservices-usb-getsupportedmodes-f-sys.md#getsupportedmodes) |
-| [setCurrentFunctions](arkts-basicservices-usb-setcurrentfunctions-f-sys.md#setcurrentfunctions) |
-| [setPortRoles](arkts-basicservices-usb-setportroles-f-sys.md#setportroles) |
-| [usbFunctionsFromString](arkts-basicservices-usb-usbfunctionsfromstring-f-sys.md#usbfunctionsfromstring) |
-| [usbFunctionsToString](arkts-basicservices-usb-usbfunctionstostring-f-sys.md#usbfunctionstostring) |
+| [getCurrentFunctions](arkts-basicservices-usb-getcurrentfunctions-f-sys.md#getCurrentFunctions-(System-API)) |
+| [getPorts](arkts-basicservices-usb-getports-f-sys.md#getPorts-(System-API)) |
+| [getSupportedModes](arkts-basicservices-usb-getsupportedmodes-f-sys.md#getSupportedModes-(System-API)) |
+| [setCurrentFunctions](arkts-basicservices-usb-setcurrentfunctions-f-sys.md#setCurrentFunctions-(System-API)) |
+| [setPortRoles](arkts-basicservices-usb-setportroles-f-sys.md#setPortRoles-(System-API)) |
+| [usbFunctionsFromString](arkts-basicservices-usb-usbfunctionsfromstring-f-sys.md#usbFunctionsFromString-(System-API)) |
+| [usbFunctionsToString](arkts-basicservices-usb-usbfunctionstostring-f-sys.md#usbFunctionsToString-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

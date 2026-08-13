@@ -8,7 +8,9 @@ function isValid(id: HiTraceId): boolean
 
 判断HiTraceId是否有效，同步接口。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean--><!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean-End-->
 

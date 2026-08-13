@@ -4,6 +4,8 @@ Defines the position of a guideline.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface GuideLinePosition--><!--Device-unnamed-declare interface GuideLinePosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Defines the position of a guideline.
 end? : Dimension
 ```
 
-Distance between the guideline and the right or bottom of the container.Unit: vp.
+Distance between the guideline and the right or bottom of the container. Unit: vp.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +38,13 @@ Distance between the guideline and the right or bottom of the container.Unit: vp
 start? : Dimension
 ```
 
-Distance between the guideline and the left or top of the container.Unit: vp.
+Distance between the guideline and the left or top of the container. Unit: vp.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

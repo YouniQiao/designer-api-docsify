@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface OperationInfo--><!--Device-abilityToolAccessCtrl-interface OperationInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -22,6 +24,8 @@ info: CliCmdInfo | Permissions
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-OperationInfo-info: CliCmdInfo | Permissions--><!--Device-OperationInfo-info: CliCmdInfo | Permissions-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -39,6 +43,8 @@ operationType: OperationType
 **类型：** OperationType
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-OperationInfo-operationType: OperationType--><!--Device-OperationInfo-operationType: OperationType-End-->
 

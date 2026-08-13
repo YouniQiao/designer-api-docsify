@@ -2,7 +2,9 @@
 
 Enumerates the types of window rotation events.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum RotationChangeType--><!--Device-window-enum RotationChangeType-End-->
 
@@ -16,9 +18,11 @@ WINDOW_WILL_ROTATE = 0
 
 The window is about to rotate.
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0--><!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0-End-->
 
@@ -32,9 +36,11 @@ WINDOW_DID_ROTATE = 1
 
 The window has finished rotating.
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1--><!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1-End-->
 

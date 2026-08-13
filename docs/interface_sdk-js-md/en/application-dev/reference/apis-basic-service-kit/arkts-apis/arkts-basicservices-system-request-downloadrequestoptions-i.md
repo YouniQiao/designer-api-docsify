@@ -1,9 +1,6 @@
 # DownloadRequestOptions
 
-> **NOTE：**
-> 
-> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
-> [UploadConfig](arkts-basicservices-agent-config-i.md#Config) instead.
+> **NOTE：**> > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use > [UploadConfig](arkts-basicservices-agent-config-i.md#Config) instead.
 
 **Since:** 3
 
@@ -31,15 +28,39 @@ complete?: () => void
 
 Called when API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.request.agent.Task.on)
+**Substitutes:** on
 
 <!--Device-DownloadRequestOptions-complete?: () => void--><!--Device-DownloadRequestOptions-complete?: () => void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## description
+
+```TypeScript
+description?: string
+```
+
+Download description. The default value is the file name.
+
+**Type:** string
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** description
+
+<!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -51,70 +72,17 @@ fail?: (data: any, code: number) => void
 
 Called when downloading fails.
 
+**Type:** (data: any, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.request.agent.Task.on)
+**Substitutes:** on
 
 <!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | any | Yes |  |
-| code | number | Yes |  |
-
-## success
-
-```TypeScript
-success?: (data: DownloadResponse) => void
-```
-
-Called when the files are successfully downloaded.
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 9
-
-**Substitutes:** [on](ohos.request.agent.Task.on)
-
-<!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md) | Yes |  |
-
-## description
-
-```TypeScript
-description?: string
-```
-
-Download description.The default value is the file name.
-
-**Type:** string
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 9
-
-**Substitutes:** [description](ohos.request.agent.Config.description)
-
-<!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -124,7 +92,7 @@ Download description.The default value is the file name.
 filename?: string
 ```
 
-Name of the file to downloaded.The value is obtained from the current request or resource URL by default.
+Name of the file to downloaded. The value is obtained from the current request or resource URL by default.
 
 **Type:** string
 
@@ -134,7 +102,7 @@ Name of the file to downloaded.The value is obtained from the current request or
 
 **Deprecated since:** 9
 
-**Substitutes:** [saveas](ohos.request.agent.Config.saveas)
+**Substitutes:** saveas
 
 <!--Device-DownloadRequestOptions-filename?: string--><!--Device-DownloadRequestOptions-filename?: string-End-->
 
@@ -156,9 +124,31 @@ Request header.
 
 **Deprecated since:** 9
 
-**Substitutes:** [headers](ohos.request.agent.Config.headers)
+**Substitutes:** headers
 
 <!--Device-DownloadRequestOptions-header?: string--><!--Device-DownloadRequestOptions-header?: string-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## success
+
+```TypeScript
+success?: (data: DownloadResponse) => void
+```
+
+Called when the files are successfully downloaded.
+
+**Type:** (data: DownloadResponse) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** on
+
+<!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -178,7 +168,7 @@ Resource URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** [url](ohos.request.agent.Config.url)
+**Substitutes:** url
 
 <!--Device-DownloadRequestOptions-url: string--><!--Device-DownloadRequestOptions-url: string-End-->
 

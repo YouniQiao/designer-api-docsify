@@ -2,7 +2,9 @@
 
 input method property
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-interface InputMethodProperty--><!--Device-inputMethod-interface InputMethodProperty-End-->
 
@@ -24,7 +26,9 @@ The enabledState of input method
 
 **Type:** [EnabledState](arkts-ime-inputmethod-enabledstate-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-readonly enabledState?: EnabledState--><!--Device-InputMethodProperty-readonly enabledState?: EnabledState-End-->
 
@@ -40,7 +44,9 @@ The extra info of input method
 
 **Type:** object
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-extra?: object--><!--Device-InputMethodProperty-extra?: object-End-->
 
@@ -56,7 +62,9 @@ The icon of input method
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-readonly icon?: string--><!--Device-InputMethodProperty-readonly icon?: string-End-->
 
@@ -72,7 +80,9 @@ The icon id of input method
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-readonly iconId?: long--><!--Device-InputMethodProperty-readonly iconId?: long-End-->
 
@@ -88,7 +98,9 @@ The id of input method
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-readonly id: string--><!--Device-InputMethodProperty-readonly id: string-End-->
 
@@ -104,7 +116,9 @@ The label of input method
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-readonly label?: string--><!--Device-InputMethodProperty-readonly label?: string-End-->
 
@@ -120,7 +134,9 @@ The label id of input method
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-readonly labelId?: long--><!--Device-InputMethodProperty-readonly labelId?: long-End-->
 
@@ -156,7 +172,9 @@ The name of input method
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodProperty-readonly name: string--><!--Device-InputMethodProperty-readonly name: string-End-->
 

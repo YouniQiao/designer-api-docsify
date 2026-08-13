@@ -8,7 +8,7 @@ Represents a screen hopping message notification.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState)
+**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState-(System-API))
 
 <!--Device-cooperate-enum CooperateMsg--><!--Device-cooperate-enum CooperateMsg-End-->
 

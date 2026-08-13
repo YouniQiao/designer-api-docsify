@@ -6,7 +6,7 @@ Configuring parameters in location requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequest](ohos.geoLocationManager/geoLocationManager.LocationRequest)
+**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md#LocationRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,7 +32,7 @@ distanceInterval?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [distanceInterval](ohos.geoLocationManager/geoLocationManager.LocationRequest#distanceInterval)
+**Substitutes:** [distanceInterval](arkts-location-geolocationmanager-locationrequest-i.md#distanceInterval)
 
 <!--Device-LocationRequest-distanceInterval?: number--><!--Device-LocationRequest-distanceInterval?: number-End-->
 
@@ -50,7 +50,7 @@ maxAccuracy?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [maxAccuracy](ohos.geoLocationManager/geoLocationManager.LocationRequest#maxAccuracy)
+**Substitutes:** [maxAccuracy](arkts-location-geolocationmanager-locationrequest-i.md#maxAccuracy)
 
 <!--Device-LocationRequest-maxAccuracy?: number--><!--Device-LocationRequest-maxAccuracy?: number-End-->
 
@@ -68,7 +68,7 @@ priority?: LocationRequestPriority
 
 **Deprecated since:** 9
 
-**Substitutes:** [priority](ohos.geoLocationManager/geoLocationManager.LocationRequest#priority)
+**Substitutes:** [priority](arkts-location-geolocationmanager-locationrequest-i.md#priority)
 
 <!--Device-LocationRequest-priority?: LocationRequestPriority--><!--Device-LocationRequest-priority?: LocationRequestPriority-End-->
 
@@ -86,7 +86,7 @@ scenario?: LocationRequestScenario
 
 **Deprecated since:** 9
 
-**Substitutes:** [scenario](ohos.geoLocationManager/geoLocationManager.LocationRequest#scenario)
+**Substitutes:** [scenario](arkts-location-geolocationmanager-locationrequest-i.md#scenario)
 
 <!--Device-LocationRequest-scenario?: LocationRequestScenario--><!--Device-LocationRequest-scenario?: LocationRequestScenario-End-->
 
@@ -104,7 +104,7 @@ timeInterval?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [timeInterval](ohos.geoLocationManager/geoLocationManager.LocationRequest#timeInterval)
+**Substitutes:** [timeInterval](arkts-location-geolocationmanager-locationrequest-i.md#timeInterval)
 
 <!--Device-LocationRequest-timeInterval?: number--><!--Device-LocationRequest-timeInterval?: number-End-->
 

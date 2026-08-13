@@ -4,6 +4,8 @@ Describes the command for drawing a path.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface CommandPath--><!--Device-unnamed-export interface CommandPath-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,14 +16,13 @@ Describes the command for drawing a path.
 commands: string
 ```
 
-Commands for drawing a path. For details about how to convert pixel units, see  
-[Pixel Units](../@internal/component/ets/common).
-
-Unit: px
+Commands for drawing a path. For details about how to convert pixel units, see Pixel Units. Unit: px
 
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

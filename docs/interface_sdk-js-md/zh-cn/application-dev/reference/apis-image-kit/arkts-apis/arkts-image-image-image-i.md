@@ -1,21 +1,12 @@
 # Image
 
-Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。
+Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。 调用[readNextImage](arkts-image-image-imagereceiver-i.md#readNextImage)和 [readLatestImage](arkts-image-image-imagereceiver-i.md#readLatestImage)接口时会返回Image实例。 Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver)发送图片数据的发送方实 际写入的内容为准。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该 实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
-调用[readNextImage](arkts-image-image-imagereceiver-i.md#readNextImage)和  
-[readLatestImage](arkts-image-image-imagereceiver-i.md#readLatestImage)接口时会返回Image实例。
+**起始版本：** 23
 
-Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver)发送图片数据的发送方实际写入的内容为准。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-image-interface Image--><!--Device-image-interface Image-End-->
 
@@ -27,15 +18,13 @@ Image的属性仅支持在创建时初始化，后续无法再修改，且其属
 getBufferData(): ImageBufferData | null
 ```
 
-从图像中获取ImageBufferData。
-
-> **注意：**
-> 
-> ImageBufferData中的byteBuffer是对内部缓存的浅拷贝，当Image的生命周期结束时，便不能对byteBuffer做任何操作，否则会导致未定义行为。
+从图像中获取ImageBufferData。 > **注意：** > > ImageBufferData中的byteBuffer是对内部缓存的浅拷贝，当Image的生命周期结束时，便不能对byteBuffer做任何操作，否则会导致未定义行为。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,9 +46,11 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 
 根据图像的组件类型从图像中获取组件缓存。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void--><!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void-End-->
 
@@ -70,7 +61,7 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | componentType | ComponentType | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
 
 ## getComponent
 
@@ -80,9 +71,11 @@ getComponent(componentType: ComponentType): Promise<Component>
 
 根据图像的组件类型从图像中获取组件缓存。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>--><!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>-End-->
 
@@ -110,7 +103,9 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,8 +129,8 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
 
 ## release
 
@@ -143,17 +138,13 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 release(callback: AsyncCallback<void>): void
 ```
 
-释放当前图像。使用callback异步回调。
+释放当前图像。使用callback异步回调。 在接收另一个图像前必须先释放对应资源。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-在接收另一个图像前必须先释放对应资源。
+**起始版本：** 23
 
-由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-Image-release(callback: AsyncCallback<void>): void--><!--Device-Image-release(callback: AsyncCallback<void>): void-End-->
 
@@ -163,7 +154,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -171,17 +162,13 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放当前图像。使用Promise异步回调。
+释放当前图像。使用Promise异步回调。 在接收另一个图像前必须先释放对应资源。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-在接收另一个图像前必须先释放对应资源。
+**起始版本：** 23
 
-由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
 
@@ -203,9 +190,11 @@ clipRect: Region
 
 **类型：** Region
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
 
@@ -223,7 +212,9 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -237,14 +228,15 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 readonly format: int
 ```
 
-图像格式，参考  
-[OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/capi-buffer-common-h.md#oh_nativebuffer_format)。
+图像格式，参考 [OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/capi-buffer-common-h.md#oh_nativebuffer_format)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-readonly format: int--><!--Device-Image-readonly format: int-End-->
 
@@ -256,24 +248,15 @@ readonly format: int
 readonly size: Size
 ```
 
-图像大小。
-
-如果Image对象所存储的是相机预览流数据（YUV图像数据），那么获取到的size中的宽和高分别对应YUV图像的宽和高。
-
-如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。
-
-Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过  
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput)接口还是  
-[createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPhotoOutput)接口传给相机。
-
-相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与  
-[拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
+图像大小。 如果Image对象所存储的是相机预览流数据（YUV图像数据），那么获取到的size中的宽和高分别对应YUV图像的宽和高。 如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。 Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过 [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput) 接口还是 [createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPhotoOutput) 接口传给相机。 相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与 [拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
 
 **类型：** Size
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
 
@@ -285,14 +268,15 @@ Image对象所存储的数据是预览流还是拍照流，取决于应用将rec
 readonly timestamp: long
 ```
 
-图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生成时间，可以通过  
-[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)接口读取EXIF时间戳信息。
+图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生 成时间，可以通过 [getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)接口读 取EXIF时间戳信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-readonly timestamp: long--><!--Device-Image-readonly timestamp: long-End-->
 

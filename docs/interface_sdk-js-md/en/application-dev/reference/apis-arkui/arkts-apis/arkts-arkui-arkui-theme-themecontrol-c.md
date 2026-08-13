@@ -2,9 +2,11 @@
 
 Class ThemeControl provides the Theme management for whole Ability and pages.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ThemeControl--><!--Device-unnamed-export declare class ThemeControl-End-->
 
@@ -19,21 +21,22 @@ import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomThem
 ## setDefaultTheme
 
 ```TypeScript
-static setDefaultTheme(theme: CustomTheme | undefined): void
+static setDefaultTheme(theme: CustomTheme): void
 ```
 
-Sets the default Theme:
+Sets the default Theme: - for whole Ability when invoked from the Ability level code. - for the ArkUI page and for later opened pages when invoked at the ArkUI page level.
 
-- for whole Ability when invoked from the Ability level code.  
-- for the ArkUI page and for later opened pages when invoked at the ArkUI page level.
+**Since:** 12
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ThemeControl-static setDefaultTheme(theme: CustomTheme | undefined): void--><!--Device-ThemeControl-static setDefaultTheme(theme: CustomTheme | undefined): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ThemeControl-static setDefaultTheme(theme: CustomTheme): void--><!--Device-ThemeControl-static setDefaultTheme(theme: CustomTheme): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,5 +44,5 @@ Sets the default Theme:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) \| undefined | Yes |  |
+| theme | [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | Yes |  |
 

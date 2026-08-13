@@ -4,6 +4,8 @@ This interface is used to set the options for EmbeddedComponentAttribute during 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface EmbeddedOptions--><!--Device-unnamed-declare interface EmbeddedOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ This interface is used to set the options for EmbeddedComponentAttribute during 
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-Set Areachange placeholder.If the Areachange placeholder ComponentContent is set, the placeholder node is displayed until the EmbeddedComponent size change is complete.
+Set Areachange placeholder. If the Areachange placeholder ComponentContent is set, the placeholder node is displayed until the EmbeddedComponent size change is complete.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ComponentContent&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Set EmbeddedComponent Content Dpi Follow Strategy.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -56,11 +62,13 @@ Set EmbeddedComponent Content Dpi Follow Strategy.
 placeholder?: ComponentContent
 ```
 
-Set placeholder.If set placeholder ComponentContent, show placeholder node when connection is not established.
+Set placeholder. If set placeholder ComponentContent, show placeholder node when connection is not established.
 
 **Type:** ComponentContent
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,6 +91,8 @@ Set EmbeddedComponent Content Window Mode Follow Strategy.
 **Default:** EmbeddedWindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

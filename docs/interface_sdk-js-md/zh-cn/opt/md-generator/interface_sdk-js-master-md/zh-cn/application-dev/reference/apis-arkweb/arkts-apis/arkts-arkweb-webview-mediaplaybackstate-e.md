@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-enum MediaPlaybackState--><!--Device-webview-enum MediaPlaybackState-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NONE = 0
 页面无音视频启播。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ PLAYING = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaPlaybackState-PLAYING = 1--><!--Device-MediaPlaybackState-PLAYING = 1-End-->
@@ -50,6 +56,8 @@ PAUSED = 2
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaPlaybackState-PAUSED = 2--><!--Device-MediaPlaybackState-PAUSED = 2-End-->
@@ -65,6 +73,8 @@ STOPPED = 3
 页面音视频停止。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

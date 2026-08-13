@@ -2,9 +2,11 @@
 
 Defines the resource type of request.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum WebResourceType--><!--Device-webview-enum WebResourceType-End-->
 
@@ -16,11 +18,13 @@ Defines the resource type of request.
 MAIN_FRAME = 0
 ```
 
-Top level page.
+顶层页面。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-MAIN_FRAME = 0--><!--Device-WebResourceType-MAIN_FRAME = 0-End-->
 
@@ -32,11 +36,13 @@ Top level page.
 SUB_FRAME = 1
 ```
 
-Frame or Iframe.
+Frame或Iframe。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-SUB_FRAME = 1--><!--Device-WebResourceType-SUB_FRAME = 1-End-->
 
@@ -48,11 +54,13 @@ Frame or Iframe.
 STYLE_SHEET = 2
 ```
 
-CSS stylesheet.
+CSS样式表。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-STYLE_SHEET = 2--><!--Device-WebResourceType-STYLE_SHEET = 2-End-->
 
@@ -64,11 +72,13 @@ CSS stylesheet.
 SCRIPT = 3
 ```
 
-External script.
+外部脚本。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-SCRIPT = 3--><!--Device-WebResourceType-SCRIPT = 3-End-->
 
@@ -80,11 +90,13 @@ External script.
 IMAGE = 4
 ```
 
-Image (jpg/gif/png/etc).
+图片（jpg/gif/png/以及其他）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-IMAGE = 4--><!--Device-WebResourceType-IMAGE = 4-End-->
 
@@ -96,11 +108,13 @@ Image (jpg/gif/png/etc).
 FONT_RESOURCE = 5
 ```
 
-Font.
+字体。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-FONT_RESOURCE = 5--><!--Device-WebResourceType-FONT_RESOURCE = 5-End-->
 
@@ -112,11 +126,13 @@ Font.
 SUB_RESOURCE = 6
 ```
 
-Some other subresource. This is the default type if the actual type is unknown.
+其他子资源。如果实际类型未知，则是默认类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-SUB_RESOURCE = 6--><!--Device-WebResourceType-SUB_RESOURCE = 6-End-->
 
@@ -128,11 +144,13 @@ Some other subresource. This is the default type if the actual type is unknown.
 OBJECT = 7
 ```
 
-Object (or embed) tag for a plugin, or a resource that a plugin requested.
+插件的Object（或embed）标签，或者插件请求的资源。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-OBJECT = 7--><!--Device-WebResourceType-OBJECT = 7-End-->
 
@@ -144,11 +162,13 @@ Object (or embed) tag for a plugin, or a resource that a plugin requested.
 MEDIA = 8
 ```
 
-Media resource.
+媒体资源。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-MEDIA = 8--><!--Device-WebResourceType-MEDIA = 8-End-->
 
@@ -160,11 +180,13 @@ Media resource.
 WORKER = 9
 ```
 
-Main resource of a dedicated worker.
+专用工作线程的主资源。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-WORKER = 9--><!--Device-WebResourceType-WORKER = 9-End-->
 
@@ -176,11 +198,13 @@ Main resource of a dedicated worker.
 SHARED_WORKER = 10
 ```
 
-Main resource of a shared worker.
+共享工作线程的主资源。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-SHARED_WORKER = 10--><!--Device-WebResourceType-SHARED_WORKER = 10-End-->
 
@@ -192,11 +216,13 @@ Main resource of a shared worker.
 PREFETCH = 11
 ```
 
-Explicitly requested prefetch.
+明确的预取请求。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-PREFETCH = 11--><!--Device-WebResourceType-PREFETCH = 11-End-->
 
@@ -208,11 +234,13 @@ Explicitly requested prefetch.
 FAVICON = 12
 ```
 
-Favicon.
+网站图标。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-FAVICON = 12--><!--Device-WebResourceType-FAVICON = 12-End-->
 
@@ -226,9 +254,11 @@ XHR = 13
 
 XMLHttpRequest.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-XHR = 13--><!--Device-WebResourceType-XHR = 13-End-->
 
@@ -240,11 +270,13 @@ XMLHttpRequest.
 PING = 14
 ```
 
-Ping request for &lt;a ping&gt;/sendBeacon.
+&lt;a ping\&gt;/sendBeacon的Ping请求。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-PING = 14--><!--Device-WebResourceType-PING = 14-End-->
 
@@ -256,11 +288,13 @@ Ping request for &lt;a ping&gt;/sendBeacon.
 SERVICE_WORKER = 15
 ```
 
-The main resource of a service worker.
+service worker的主资源。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-SERVICE_WORKER = 15--><!--Device-WebResourceType-SERVICE_WORKER = 15-End-->
 
@@ -272,11 +306,13 @@ The main resource of a service worker.
 CSP_REPORT = 16
 ```
 
-Report of Content Security Policy violations.
+内容安全策略违规报告。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-CSP_REPORT = 16--><!--Device-WebResourceType-CSP_REPORT = 16-End-->
 
@@ -288,11 +324,13 @@ Report of Content Security Policy violations.
 PLUGIN_RESOURCE = 17
 ```
 
-Resource that a plugin requested.
+插件请求的资源。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-PLUGIN_RESOURCE = 17--><!--Device-WebResourceType-PLUGIN_RESOURCE = 17-End-->
 
@@ -304,11 +342,13 @@ Resource that a plugin requested.
 NAVIGATION_PRELOAD_MAIN_FRAME = 19
 ```
 
-A main-frame service worker navigation preload request.
+触发service worker预热的主frame跳转请求。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-NAVIGATION_PRELOAD_MAIN_FRAME = 19--><!--Device-WebResourceType-NAVIGATION_PRELOAD_MAIN_FRAME = 19-End-->
 
@@ -320,11 +360,13 @@ A main-frame service worker navigation preload request.
 NAVIGATION_PRELOAD_SUB_FRAME = 20
 ```
 
-A sub-frame service worker navigation preload request.
+触发service worker预热的子frame跳转请求。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceType-NAVIGATION_PRELOAD_SUB_FRAME = 20--><!--Device-WebResourceType-NAVIGATION_PRELOAD_SUB_FRAME = 20-End-->
 

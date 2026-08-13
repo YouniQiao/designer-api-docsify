@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancelAll(callback: AsyncCallback<void>): void
 ```
 
-取消当前应用所有已发布的通知。使用callback异步回调。
+取消当前应用所有已发布的通知。使用callback异步回调。 取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。 适用于应用退出或用户手动清除全部通知的场景。
 
-取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。适用于应用退出或用户手动清除全部通知的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void-End-->
 
@@ -24,9 +24,9 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 **参见：**
 
-[publish](notificationManager.publish(request: NotificationRequest, callback: AsyncCallback<void>):void) 发布通知。
+publish 发布通知。
 
-[cancel](notificationManager.cancel(id: int, label: string, callback: AsyncCallback<void>): void) 取消已发布的通知。
+cancel 取消已发布的通知。
 
 **参数：**
 
@@ -38,10 +38,10 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -66,11 +66,11 @@ notificationManager.cancelAll(cancelAllCallback);
 function cancelAll(): Promise<void>
 ```
 
-取消当前应用所有已发布的通知。使用Promise异步回调。
+取消当前应用所有已发布的通知。使用Promise异步回调。 取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。 适用于应用退出或用户手动清除全部通知的场景。
 
-取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。适用于应用退出或用户手动清除全部通知的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-notificationManager-function cancelAll(): Promise<void>--><!--Device-notificationManager-function cancelAll(): Promise<void>-End-->
 
@@ -78,9 +78,9 @@ function cancelAll(): Promise<void>
 
 **参见：**
 
-[publish](notificationManager.publish(request: NotificationRequest):Promise<void>) 发布通知。
+publish 发布通知。
 
-[cancel](notificationManager.cancel(id:int, label?: string): Promise<void>) 根据指定的通知ID取消已发布的通知。
+cancel 根据指定的通知ID取消已发布的通知。
 
 **返回值：**
 
@@ -92,9 +92,9 @@ function cancelAll(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

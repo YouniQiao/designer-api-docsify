@@ -1,11 +1,12 @@
 # DownloadInfo
 
-Defines the download task information, which is the callback parameter of the   
-[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo) API.
+Defines the download task information, which is the callback parameter of the [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo) API.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-request-interface DownloadInfo--><!--Device-request-interface DownloadInfo-End-->
 
@@ -27,9 +28,11 @@ Description of the download task.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-description: string--><!--Device-DownloadInfo-description: string-End-->
 
@@ -43,11 +46,13 @@ downloadId: long
 
 Download task ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadId: long--><!--Device-DownloadInfo-downloadId: long-End-->
 
@@ -63,9 +68,11 @@ Name of the download task.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadTitle: string--><!--Device-DownloadInfo-downloadTitle: string-End-->
 
@@ -79,11 +86,13 @@ downloadTotalBytes: long
 
 Total size of the files to download, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
 
@@ -97,11 +106,13 @@ downloadedBytes: long
 
 Real-time download size, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
 
@@ -113,14 +124,15 @@ Real-time download size, in bytes.
 failedReason: int
 ```
 
-Cause of the download failure. The value can be any constant in   
-[Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
+Cause of the download failure. The value can be any constant in [Download Error Codes](arkts-basicservices-request-n.md#Constants) .
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-failedReason: int--><!--Device-DownloadInfo-failedReason: int-End-->
 
@@ -136,9 +148,11 @@ Name of the downloaded file.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-fileName: string--><!--Device-DownloadInfo-fileName: string-End-->
 
@@ -154,9 +168,11 @@ URI of the saved file.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-filePath: string--><!--Device-DownloadInfo-filePath: string-End-->
 
@@ -168,14 +184,15 @@ URI of the saved file.
 pausedReason: int
 ```
 
-Cause of download pause. The value can be any constant in   
-[Causes of Download Pause](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
+Cause of download pause. The value can be any constant in [Causes of Download Pause](arkts-basicservices-request-n.md#Constants) .
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-pausedReason: int--><!--Device-DownloadInfo-pausedReason: int-End-->
 
@@ -187,14 +204,15 @@ Cause of download pause. The value can be any constant in
 status: int
 ```
 
-Download task status code. The value can be any constant in   
-[Download Task Status Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
+Download task status code. The value can be any constant in [Download Task Status Codes](arkts-basicservices-request-n.md#Constants) .
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-status: int--><!--Device-DownloadInfo-status: int-End-->
 
@@ -210,9 +228,11 @@ URI of the downloaded file.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-targetURI: string--><!--Device-DownloadInfo-targetURI: string-End-->
 

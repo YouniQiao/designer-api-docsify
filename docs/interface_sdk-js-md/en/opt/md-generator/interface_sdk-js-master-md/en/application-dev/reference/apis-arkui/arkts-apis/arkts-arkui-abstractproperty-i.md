@@ -1,11 +1,12 @@
 # AbstractProperty
 
-Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md).
+Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface AbstractProperty<T>--><!--Device-unnamed-declare interface AbstractProperty<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AbstractProperty--><!--Device-unnamed-declare interface AbstractProperty-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,10 +16,11 @@ Provides a reference to properties stored in [AppStorage](../../../ui/state-mana
 get(): T
 ```
 
-Reads data of the referenced property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md).
+Reads data of the referenced property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +40,11 @@ Reads data of the referenced property from [AppStorage](../../../ui/state-manage
 info(): string
 ```
 
-Reads the property name of the referenced property from  
-[AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md).
+Reads the property name of the referenced property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,15 +64,11 @@ Reads the property name of the referenced property from
 set(newValue: T): void
 ```
 
-Updates the data of the referenced property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T**type and can be **null** or **undefined**.
-
-> **NOTE：**
-
-> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,
-> **undefined**, and union types.
+Updates the data of the referenced property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type and can be **null** or **undefined**. > **NOTE：**> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**, > **undefined**, and union types.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

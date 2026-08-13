@@ -6,6 +6,8 @@ Image information for AI-generated images.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface ImageItem--><!--Device-imageGeneration-interface ImageItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,15 +26,15 @@ import { imageGeneration } from '@kit.ArkUI';
 image?: image.PixelMap
 ```
 
-Image decoding information for preview in the page of ImageGeneratorDialog.
-
-&lt;p&gt;**NOTE：**:Displayed within the canvas in the ImageGeneratorDialog; if not provided, the image will be decoded from the url.&lt;/p&gt;
+Image decoding information for preview in the page of ImageGeneratorDialog. &lt;p&gt;**NOTE：**: Displayed within the canvas in the ImageGeneratorDialog; if not provided, the image will be decoded from the url. &lt;/p&gt;
 
 **Type:** image.PixelMap
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,15 +50,15 @@ Image decoding information for preview in the page of ImageGeneratorDialog.
 isHandwrite?: boolean
 ```
 
-whether the image type is a hand-drawn line art.
-
-&lt;p&gt;**NOTE：**:it is recommended to be provided in Hand-drawn line art scenarios to achieve better results.&lt;/p&gt;
+whether the image type is a hand-drawn line art. &lt;p&gt;**NOTE：**: it is recommended to be provided in Hand-drawn line art scenarios to achieve better results. &lt;/p&gt;
 
 **Type:** boolean
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,15 +74,15 @@ whether the image type is a hand-drawn line art.
 rect?: common2D.Rect
 ```
 
-The size and position of the container used to display images in the preview canvas.
-
-&lt;p&gt;**NOTE：**:it is recommended to be provided in multi-image fusion scenarios to achieve better results.&lt;/p&gt;
+The size and position of the container used to display images in the preview canvas. &lt;p&gt;**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. &lt;/p&gt;
 
 **Type:** common2D.Rect
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,15 +98,15 @@ The size and position of the container used to display images in the preview can
 rotation?: componentUtils.Rotation2D
 ```
 
-The rotation of the container used to display images in the preview canvas.
-
-&lt;p&gt;**NOTE：**:it is recommended to be provided in multi-image fusion scenarios to achieve better results.&lt;/p&gt;
+The rotation of the container used to display images in the preview canvas. &lt;p&gt;**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. &lt;/p&gt;
 
 **Type:** componentUtils.Rotation2D
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,15 +122,15 @@ The rotation of the container used to display images in the preview canvas.
 url?: ResourceStr
 ```
 
-Original image path information for image generation;
-
-&lt;p&gt;**NOTE：**:for high-resolution scenarios, it is best to provide the original image path; if not provided, the image.PixelMap will be used for image generation.&lt;/p&gt;
+Original image path information for image generation; &lt;p&gt;**NOTE：**: for high-resolution scenarios, it is best to provide the original image path; if not provided, the image.PixelMap will be used for image generation. &lt;/p&gt;
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,15 +146,15 @@ Original image path information for image generation;
 zIndex?: int
 ```
 
-In scenarios with multiple images, information about image rendering hierarchy.
-
-&lt;p&gt;**NOTE：**:it is recommended to be provided in multi-image fusion scenarios to achieve better results.&lt;/p&gt;
+In scenarios with multiple images, information about image rendering hierarchy. &lt;p&gt;**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. &lt;/p&gt;
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

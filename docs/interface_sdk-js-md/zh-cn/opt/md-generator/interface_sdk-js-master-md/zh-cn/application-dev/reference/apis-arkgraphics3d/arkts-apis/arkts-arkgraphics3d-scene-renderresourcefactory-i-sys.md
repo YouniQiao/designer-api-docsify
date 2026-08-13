@@ -2,7 +2,9 @@
 
 渲染资源工厂，用于创建可在共享RenderContext的场景间共享的资源。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
 
@@ -17,6 +19,8 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 从SceneLoadParams创建新场景.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

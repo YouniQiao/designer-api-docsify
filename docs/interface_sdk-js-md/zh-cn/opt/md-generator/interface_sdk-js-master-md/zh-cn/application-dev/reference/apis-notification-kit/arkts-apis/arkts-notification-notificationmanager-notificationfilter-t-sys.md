@@ -6,7 +6,9 @@ export type NotificationFilter = _NotificationFilter
 
 描述查询普通实况窗时的筛选条件。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationFilter = _NotificationFilter--><!--Device-notificationManager-export type NotificationFilter = _NotificationFilter-End-->
 

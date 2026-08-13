@@ -12,9 +12,11 @@ import { ArkTSUtils } from '@kit.ArkTS';
 function stringify(value: Object | null | undefined): string
 ```
 
-Converts an ArkTS value to a JavaScript Object Notation (JSON) string.Extra supports Map and Set.
+Converts an ArkTS value to a JavaScript Object Notation (JSON) string. Extra supports Map and Set.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

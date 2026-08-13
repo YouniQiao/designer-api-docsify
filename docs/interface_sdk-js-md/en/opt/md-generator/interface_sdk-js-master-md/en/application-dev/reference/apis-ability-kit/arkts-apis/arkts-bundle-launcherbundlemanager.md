@@ -1,9 +1,10 @@
 # @ohos.bundle.launcherBundleManager
 
-The module providers APIs for launcher applications (applications with icons on the home screen) to obtain the  
-[launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo).
+The module providers APIs for launcher applications (applications with icons on the home screen) to obtain the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace launcherBundleManager--><!--Device-unnamed-declare namespace launcherBundleManager-End-->
 
@@ -21,24 +22,24 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync) |
+| [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getLauncherAbilityInfoSync) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo) |
-| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo-1) |
-| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo) |
-| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-1) |
-| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo) |
-| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo-1) |
-| [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex) |
-| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync) |
-| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync-1) |
-| [startShortcut](arkts-ability-launcherbundlemanager-startshortcut-f-sys.md#startshortcut) |
-| [startShortcutWithReason](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md#startshortcutwithreason) |
+| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getAllLauncherAbilityInfo-(System-API)) |
+| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getAllLauncherAbilityInfo-(System-API)) |
+| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo-(System-API)) |
+| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo-(System-API)) |
+| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo-(System-API)) |
+| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getShortcutInfo-(System-API)) |
+| [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getShortcutInfoByAppIndex-(System-API)) |
+| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getShortcutInfoSync-(System-API)) |
+| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getShortcutInfoSync-(System-API)) |
+| [startShortcut](arkts-ability-launcherbundlemanager-startshortcut-f-sys.md#startShortcut-(System-API)) |
+| [startShortcutWithReason](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md#startShortcutWithReason-(System-API)) |
 <!--DelEnd-->
 
 ### Types
@@ -46,6 +47,13 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) |
-| [ParameterItem](arkts-ability-launcherbundlemanager-parameteritem-t.md) |
-| [ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md) |
-| [ShortcutWant](arkts-ability-launcherbundlemanager-shortcutwant-t.md) |
+
+<!--Del-->
+### Types（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ParameterItem](arkts-ability-launcherbundlemanager-parameteritem-t-sys.md) |
+| [ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md) |
+| [ShortcutWant](arkts-ability-launcherbundlemanager-shortcutwant-t-sys.md) |
+<!--DelEnd-->

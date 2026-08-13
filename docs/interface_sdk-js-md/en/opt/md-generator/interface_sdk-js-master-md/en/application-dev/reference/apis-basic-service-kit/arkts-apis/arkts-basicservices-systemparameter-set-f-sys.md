@@ -18,7 +18,7 @@ Sets a value for the specified key. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [set](ohos.systemParameterEnhance.set)
+**Substitutes:** set
 
 <!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -64,7 +64,7 @@ Sets a value for the specified key. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [set](ohos.systemParameterEnhance.set)
+**Substitutes:** set
 
 <!--Device-systemParameter-function set(key: string, value: string): Promise<void>--><!--Device-systemParameter-function set(key: string, value: string): Promise<void>-End-->
 

@@ -1,10 +1,12 @@
 # PreselectedInfo
 
-PreselectedInfo
+Describes the information about the preselected files and their corresponding **PhotoPickerComponent** index.
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class PreselectedInfo--><!--Device-unnamed-export declare class PreselectedInfo-End-->
 
@@ -19,40 +21,44 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 ## preselectablePickerIndex
 
 ```TypeScript
-public preselectablePickerIndex?: int
+preselectablePickerIndex?: number
 ```
 
-PreselectablePickerIndex. Serial number of the picker component that will automatically select this media file.
+Index of the **PhotoPickerComponent** that can be used in automatic selection. The default value is **-1**, which allows automatic selection in any **PhotoPickerComponent**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PreselectedInfo-public preselectablePickerIndex?: int--><!--Device-PreselectedInfo-public preselectablePickerIndex?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PreselectedInfo-preselectablePickerIndex?: number--><!--Device-PreselectedInfo-preselectablePickerIndex?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## uri
 
 ```TypeScript
-public uri: string
+uri: string
 ```
 
-Uri. Uri of the media file to be automatically selected.
+URI of the preselected media file.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PreselectedInfo-public uri: string--><!--Device-PreselectedInfo-public uri: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PreselectedInfo-uri: string--><!--Device-PreselectedInfo-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

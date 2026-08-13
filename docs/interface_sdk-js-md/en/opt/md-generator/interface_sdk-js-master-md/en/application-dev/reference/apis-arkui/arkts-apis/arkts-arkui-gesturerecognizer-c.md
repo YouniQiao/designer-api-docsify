@@ -4,6 +4,8 @@ Gesture recognizer object.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class GestureRecognizer--><!--Device-unnamed-declare class GestureRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getEventTargetInfo(): EventTargetInfo
 Obtains the information about the component corresponding to this gesture recognizer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Obtains the number of fingers required to trigger the preset gesture.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -65,6 +71,8 @@ getState(): GestureRecognizerState
 Obtains the state of this gesture recognizer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Obtains the tag of this gesture recognizer.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -113,6 +123,8 @@ getType(): GestureControl.GestureType
 Obtains the type of this gesture recognizer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,6 +150,8 @@ Obtains whether this gesture recognizer is a built-in gesture.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -161,6 +175,8 @@ isEnabled(): boolean
 Obtains the enabled state of this gesture recognizer.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,6 +202,8 @@ Checks whether the preset gesture detects the number of fingers on the screen.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -209,6 +227,8 @@ isHostBelongsTo(uniqueId: number): boolean
 Returns whether the node bound to the current gesture recognizer is a descendant of the specified component.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -240,6 +260,8 @@ Whether the current gesture recognizer is valid.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizer-isValid(): boolean--><!--Device-GestureRecognizer-isValid(): boolean-End-->
@@ -262,6 +284,8 @@ Prevents a gesture recognizer from participating in the current gesture recognit
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -280,6 +304,8 @@ Sets the enabled state of this gesture recognizer.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -292,4 +318,4 @@ Sets the enabled state of this gesture recognizer.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [isEnabled](#isenabled) | boolean | Yes |
+| [isEnabled](#isEnabled) | boolean | Yes |

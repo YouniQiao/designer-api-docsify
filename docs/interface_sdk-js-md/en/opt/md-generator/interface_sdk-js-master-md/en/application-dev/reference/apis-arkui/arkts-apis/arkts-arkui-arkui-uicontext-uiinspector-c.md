@@ -4,6 +4,8 @@ Provides APIs for registering the component layout and drawing display completio
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class UIInspector--><!--Device-unnamed-export class UIInspector-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ createComponentObserver(id: string): inspector.ComponentObserver
 Registers a callback for layout and drawing display completion notifications for a specific component.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +54,11 @@ Registers a callback for layout and drawing display completion notifications for
 createComponentObserver(id: string | number): inspector.ComponentObserver
 ```
 
-Registers a callback for layout and drawing display completion notifications for a specific component.&lt;br&gt;Display refers to the process of sending the drawing command of a node to the graphics service and completing&lt;br&gt;the display. Compared with createComponentObserver, this API supports the input of **UniqueID** (the unique ID&lt;br&gt;allocated by the system to a node).
+Registers a callback for layout and drawing display completion notifications for a specific component. &lt;br&gt;Display refers to the process of sending the drawing command of a node to the graphics service and completing &lt;br&gt;the display. Compared with createComponentObserver, this API supports the input of **UniqueID** (the unique ID &lt;br&gt;allocated by the system to a node).
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

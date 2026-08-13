@@ -10,7 +10,9 @@ Get the senior mode state for app.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -27,7 +29,7 @@ Get the senior mode state for app.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | Indicates the bundle name of the application to be queried &lt;br&gt;The bundle name must follow the reverse domain naming convention (e.g., "com.example.app"). |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | Indicates the index of clone app. &lt;br&gt;The value must be an integer greater than or equal to 0. Default value: 0. |
+| appIndex | int | 否 | Indicates the index of clone app. &lt;br&gt;The value must be an integer greater than or equal to 0. Default value: 0. |
 
 **返回值：**
 
@@ -39,10 +41,10 @@ Get the senior mode state for app.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9300008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300008-应用分身索引不合法) | The appIndex is invalid. Possible causes: &lt;br&gt;1.The appIndex is out of the valid range. &lt;br&gt;2.The application corresponding to the appIndex does not exist. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
-| [9300000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
+| [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) | The appIndex is invalid. Possible causes: &lt;br&gt;1.The appIndex is out of the valid range. &lt;br&gt;2.The application corresponding to the appIndex does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
 
 ## 示例
 

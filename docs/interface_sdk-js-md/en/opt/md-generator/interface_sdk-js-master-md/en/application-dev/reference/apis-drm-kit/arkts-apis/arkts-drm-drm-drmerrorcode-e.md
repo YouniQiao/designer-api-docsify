@@ -2,7 +2,9 @@
 
 Enumerates the DRM error codes.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drm-enum DrmErrorCode--><!--Device-drm-enum DrmErrorCode-End-->
 
@@ -16,7 +18,9 @@ ERROR_UNKNOWN = 24700101
 
 Unknown error.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -32,7 +36,9 @@ MAX_SYSTEM_NUM_REACHED = 24700103
 
 Maximum number of MediaKeySystem instances (64) reached.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -48,7 +54,9 @@ MAX_SESSION_NUM_REACHED = 24700104
 
 Maximum number of MediaKeySession instances (64) reached.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -64,7 +72,9 @@ SERVICE_FATAL_ERROR = 24700201
 
 DRM service fatal error.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

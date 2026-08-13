@@ -6,6 +6,8 @@ Image object with layout information.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface ImageItem--><!--Device-componentUtils-interface ImageItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,6 +34,8 @@ Image Decoding Information.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageItem-image: image.PixelMap--><!--Device-ImageItem-image: image.PixelMap-End-->
@@ -53,6 +57,8 @@ Information about the position and size of the box which displays the image.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +82,8 @@ Information about the rotation of the box which displays the image.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageItem-rotation?: Rotation2D--><!--Device-ImageItem-rotation?: Rotation2D-End-->
@@ -97,6 +105,8 @@ Information about image rendering hierarchy.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

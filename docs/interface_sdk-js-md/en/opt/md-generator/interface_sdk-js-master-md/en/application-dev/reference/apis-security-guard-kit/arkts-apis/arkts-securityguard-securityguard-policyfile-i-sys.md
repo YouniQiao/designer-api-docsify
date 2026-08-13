@@ -4,6 +4,8 @@ Provides policy file information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-securityGuard-interface PolicyFile--><!--Device-securityGuard-interface PolicyFile-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -28,6 +30,8 @@ The policy file descriptor.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-PolicyFile-fd: number--><!--Device-PolicyFile-fd: number-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -45,6 +49,8 @@ The policy file name.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-PolicyFile-name: string--><!--Device-PolicyFile-name: string-End-->
 

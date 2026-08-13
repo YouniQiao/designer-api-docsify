@@ -14,9 +14,11 @@ function isMediaKeySystemSupported(name: string, mimeType: string, level: Conten
 
 Checks whether the device supports the combination of the DRM solution, MIME type, and content protection level.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -28,8 +30,8 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported-2). |
-| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. Before calling this API, ensure that the MIME type is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported-1) . |
+| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported). |
+| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. Before calling this API, ensure that the MIME type is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported) . |
 | level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes | Content protection level. |
 
 **Return value:**
@@ -42,9 +44,9 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## Examples
 
@@ -70,9 +72,11 @@ function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 
 Checks whether the device supports the combination of the DRM solution and MIME type.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -84,7 +88,7 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported-2). |
+| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported). |
 | mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. For example, video/avc and video/hevc. |
 
 **Return value:**
@@ -97,9 +101,9 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## Examples
 
@@ -125,9 +129,11 @@ function isMediaKeySystemSupported(name: string): boolean
 
 Checks whether the device supports the specified DRM solution.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -151,9 +157,9 @@ Checks whether the device supports the specified DRM solution.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param name's length is zero or too big(exceeds 4096 Bytes). |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param name's length is zero or too big(exceeds 4096 Bytes). |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## Examples
 

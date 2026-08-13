@@ -10,6 +10,8 @@ export type Callback<T> = (data: T) => void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export type Callback<T> = (data: T) => void--><!--Device-unnamed-export type Callback<T> = (data: T) => void-End-->
 
 **系统能力：** SystemCapability.Base

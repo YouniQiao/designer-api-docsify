@@ -2,7 +2,9 @@
 
 Enumerates the data proxy types.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-dataShare-enum DataProxyType--><!--Device-dataShare-enum DataProxyType-End-->
 
@@ -16,7 +18,9 @@ SHARED_CONFIG = 0
 
 Inter-application shared configuration.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

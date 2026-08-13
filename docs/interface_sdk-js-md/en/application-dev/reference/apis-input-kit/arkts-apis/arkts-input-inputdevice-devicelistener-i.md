@@ -2,9 +2,11 @@
 
 Provides hot swap information about an input device.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-interface DeviceListener--><!--Device-inputDevice-interface DeviceListener-End-->
 
@@ -24,11 +26,13 @@ deviceId: int
 
 Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceListener-deviceId: int--><!--Device-DeviceListener-deviceId: int-End-->
 
@@ -44,9 +48,11 @@ Device change type, which indicates whether an input device is inserted or remov
 
 **Type:** [ChangedType](arkts-input-inputdevice-changedtype-t.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceListener-type: ChangedType--><!--Device-DeviceListener-type: ChangedType-End-->
 

@@ -4,6 +4,8 @@ Used to intercept url requests. Response headers and body can be sent through We
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-class WebResourceHandler--><!--Device-webview-class WebResourceHandler-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ didFail(code: WebNetErrorList): void
 通知ArkWeb内核被拦截请求应该返回失败。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +38,8 @@ didFail(code: WebNetErrorList): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didFail
 
@@ -46,6 +50,8 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 Notify that this request should be failed.
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void-End-->
 
@@ -62,8 +68,8 @@ Notify that this request should be failed.
 
 | 错误码ID |
 | --- |
-| [17100101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100101-使用了错误的网络错误码) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didFail
 
@@ -74,6 +80,8 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 Notify that this request should be failed.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void-End-->
 
@@ -91,7 +99,7 @@ Notify that this request should be failed.
 
 | 错误码ID |
 | --- |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didFinish
 
@@ -103,6 +111,8 @@ didFinish(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceHandler-didFinish(): void--><!--Device-WebResourceHandler-didFinish(): void-End-->
@@ -113,7 +123,7 @@ didFinish(): void
 
 | 错误码ID |
 | --- |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didReceiveResponse
 
@@ -124,6 +134,8 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 将构造的响应头传递给被拦截的请求。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -141,8 +153,8 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didReceiveResponseBody
 
@@ -153,6 +165,8 @@ didReceiveResponseBody(data: ArrayBuffer): void
 将构造的响应体传递给被拦截的请求。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -170,5 +184,5 @@ didReceiveResponseBody(data: ArrayBuffer): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |

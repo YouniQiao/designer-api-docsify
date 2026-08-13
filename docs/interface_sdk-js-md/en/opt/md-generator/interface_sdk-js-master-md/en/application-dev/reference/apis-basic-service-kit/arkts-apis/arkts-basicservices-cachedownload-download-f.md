@@ -12,17 +12,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function download(url: string, options: CacheDownloadOptions): void
 ```
 
-Downloads a task from a specified URL. If the transfer is successful, the data is downloaded to the memory cache and file cache.
+Downloads a task from a specified URL. If the transfer is successful, the data is downloaded to the memory cache and file cache. - After automatically decompressing during HTTP transmission, the size of the target resource cannot exceed 20971 520 bytes (20 MB). Otherwise, the resource fails to store in the memory cache or file cache. - When caching the downloaded data, if the data already exists in the destination URL, the new data will overwrite the old one. - In addition, the system determines whether to store the target resource in a specified location based on each cache type's size limit in **cacheDownload**. By default, the LRU mode is used to replace the existing cached data. - This API returns the result synchronously, without blocking the calling thread.
 
-- After automatically decompressing during HTTP transmission, the size of the target resource cannot exceed 20971  
-520 bytes (20 MB). Otherwise, the resource fails to store in the memory cache or file cache.  
-- When caching the downloaded data, if the data already exists in the destination URL, the new data will   
-overwrite the old one.  
-- In addition, the system determines whether to store the target resource in a specified location based on each   
-cache type's size limit in **cacheDownload**. By default, the LRU mode is used to replace the existing cached data.  
-- This API returns the result synchronously, without blocking the calling thread.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -41,8 +35,8 @@ cache type's size limit in **cacheDownload**. By default, the LRU mode is used t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

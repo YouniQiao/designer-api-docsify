@@ -4,6 +4,8 @@ Provides text decoration options.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextDecorationOptions--><!--Device-unnamed-declare interface TextDecorationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Provides text decoration options.
 color?: ResourceColor
 ```
 
-Color of the text decoration.Default value: Color.Black.
+Color of the text decoration. Default value: Color.Black.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +38,13 @@ Color of the text decoration.Default value: Color.Black.
 style?: TextDecorationStyle
 ```
 
-Style of the text decoration.Default value: TextDecorationStyle.SOLID.
+Style of the text decoration. Default value: TextDecorationStyle.SOLID.
 
 **Type:** TextDecorationStyle
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,11 +60,13 @@ Style of the text decoration.Default value: TextDecorationStyle.SOLID.
 thicknessScale?: number
 ```
 
-The scale value of decoration thickness.Value constraint: Negative values are handled as default values. Default value: 1.
+The scale value of decoration thickness. Value constraint: Negative values are handled as default values. Default value: 1.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +87,8 @@ Type of the text decoration.
 **Type:** TextDecorationType
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

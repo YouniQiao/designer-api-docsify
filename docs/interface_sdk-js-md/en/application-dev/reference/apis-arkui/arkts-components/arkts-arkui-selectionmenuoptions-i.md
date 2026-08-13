@@ -6,7 +6,33 @@ Sets menu options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SelectionMenuOptions--><!--Device-unnamed-declare interface SelectionMenuOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## menuType
+
+```TypeScript
+menuType?: MenuType
+```
+
+Type of the custom context menu on selection. Default value: **MenuType.SELECTION_MENU**
+
+**Type:** MenuType
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-SelectionMenuOptions-menuType?: MenuType--><!--Device-SelectionMenuOptions-menuType?: MenuType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,79 +44,19 @@ onAppear?: MenuOnAppearCallback
 
 Callback invoked when the custom context menu on selection appears.
 
+**Type:** [MenuOnAppearCallback](arkts-arkui-menuonappearcallback-t.md)
+
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback--><!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onMenuHide
-
-```TypeScript
-onMenuHide?: MenuCallback
-```
-
-Callback invoked when the custom context menu on selection is hidden.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onMenuShow
-
-```TypeScript
-onMenuShow?: MenuCallback
-```
-
-Callback invoked when the custom context menu on selection is shown.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## menuType
-
-```TypeScript
-menuType?: MenuType
-```
-
-Type of the custom context menu on selection.
-
-Default value: **MenuType.SELECTION_MENU**
-
-**Type:** MenuType
-
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-SelectionMenuOptions-menuType?: MenuType--><!--Device-SelectionMenuOptions-menuType?: MenuType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +74,61 @@ Callback invoked when the custom context menu on selection disappears.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectionMenuOptions-onDisappear?: Callback<void>--><!--Device-SelectionMenuOptions-onDisappear?: Callback<void>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onMenuHide
+
+```TypeScript
+onMenuHide?: MenuCallback
+```
+
+Callback invoked when the custom context menu on selection is hidden.
+
+**Type:** [MenuCallback](arkts-arkui-menucallback-t.md)
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onMenuShow
+
+```TypeScript
+onMenuShow?: MenuCallback
+```
+
+Callback invoked when the custom context menu on selection is shown.
+
+**Type:** [MenuCallback](arkts-arkui-menucallback-t.md)
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,11 +140,13 @@ previewMenuOptions?: PreviewMenuOptions
 
 Options of the preview menu. This parameter is valid only in **RichEditor**.
 
-**Type:** [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
+**Type:** PreviewMenuOptions
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

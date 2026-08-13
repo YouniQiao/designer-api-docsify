@@ -6,7 +6,9 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogP
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface AlertDialogParamWithButtons extends AlertDialogParam--><!--Device-unnamed-declare interface AlertDialogParamWithButtons extends AlertDialogParam-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AlertDialogParamWithButtons--><!--Device-unnamed-declare interface AlertDialogParamWithButtons-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,13 +18,13 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogP
 primaryButton: AlertDialogButtonBaseOptions
 ```
 
-Information about the primary button, including the enabling status, default focus, button style, text content, text color, button background color, and click callback. When the dialog box has focus and focus has not been shifted using the **Tab** key, the button responds to the **Enter** key by default, and multiple dialog boxes can gain focus consecutively to respond automatically. The default response to the **Enter** key does not work when   
-**defaultFocus** is set to **true**. For details, see   
-[Example 7](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#example-7-customizing-the-background-blur-effect).
+Information about the primary button, including the enabling status, default focus, button style, text content, text color, button background color, and click callback. When the dialog box has focus and focus has not been shifted using the **Tab** key, the button responds to the **Enter** key by default, and multiple dialog boxes can gain focus consecutively to respond automatically. The default response to the **Enter** key does not work when **defaultFocus** is set to **true**. For details, see [Example 7](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#example-7-customizing-the-background-blur-effect).
 
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,6 +43,8 @@ Information about the secondary button, including the enabling status, default f
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

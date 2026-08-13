@@ -2,7 +2,9 @@
 
 Defines the request result information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface RequestResult--><!--Device-osAccount-interface RequestResult-End-->
 
@@ -26,7 +28,9 @@ Credential ID, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-credentialId?: Uint8Array--><!--Device-RequestResult-credentialId?: Uint8Array-End-->
 

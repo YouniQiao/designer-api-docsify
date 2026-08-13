@@ -1,8 +1,10 @@
 # CommonEventSubscriber
 
-表示公共事件的订阅者。CommonEventSubscriber提供了对有序公共事件的处理能力，包括获取和设置事件传递的Code和Data数据、查询当前公共事件是否为有序或粘性公共事件、中止或清理有序公共事件的中止状态、结束对当前有序公共事件的处理，以及获取订阅者的订阅信息等，适用于订阅者需要对接收到的公共事件进行数据处理和流程控制的场景。
+表示公共事件的订阅者。CommonEventSubscriber提供了对有序公共事件的 处理能力，包括获取和设置事件传递的Code和Data数据、查询当前公共事件 是否为有序或粘性公共事件、中止或清理有序公共事件的中止状态、结束对 当前有序公共事件的处理，以及获取订阅者的订阅信息等，适用于订阅者需要 对接收到的公共事件进行数据处理和流程控制的场景。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface CommonEventSubscriber--><!--Device-unnamed-export interface CommonEventSubscriber-End-->
 
@@ -14,10 +16,11 @@
 abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
+添加有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事 件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -33,7 +36,7 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -60,10 +63,11 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 abortCommonEvent(): Promise<void>
 ```
 
-添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
+添加有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事 件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
 
@@ -96,10 +100,11 @@ subscriber.finishCommonEvent().then(() => {
 abortCommonEventSync(): void
 ```
 
-同步添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。
+同步添加有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事 件，使该公共事件不再向下一个订阅者传递。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
 
@@ -122,10 +127,11 @@ subscriber.finishCommonEvent().then(() => {
 clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用callback异步回调。
+清理有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下 一个订阅者传递。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -141,7 +147,7 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -168,10 +174,11 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 clearAbortCommonEvent(): Promise<void>
 ```
 
-清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用Promise异步回调。
+清理有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下 一个订阅者传递。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
 
@@ -204,10 +211,11 @@ subscriber.finishCommonEvent().then(() => {
 clearAbortCommonEventSync(): void
 ```
 
-同步清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下一个订阅者传递。
+同步清理有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下 一个订阅者传递。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
@@ -232,7 +240,9 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 
 用于订阅者结束对当前有序公共事件的处理。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -248,7 +258,7 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -270,7 +280,9 @@ finishCommonEvent(): Promise<void>
 
 用于订阅者结束对当前有序公共事件的处理。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>-End-->
 
@@ -300,7 +312,9 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 
 获取当前有序公共事件是否处于中止状态。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
@@ -316,7 +330,7 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -338,7 +352,9 @@ getAbortCommonEvent(): Promise<boolean>
 
 获取当前有序公共事件是否处于中止状态。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>-End-->
 
@@ -368,7 +384,9 @@ getAbortCommonEventSync(): boolean
 
 同步获取当前有序公共事件是否处于中止状态。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean-End-->
 
@@ -395,7 +413,9 @@ getCode(callback: AsyncCallback<number>): void
 
 获取有序公共事件传递的数据。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -413,7 +433,7 @@ getCode(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -435,7 +455,9 @@ getCode(): Promise<number>
 
 获取有序公共事件传递的数据。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -467,7 +489,9 @@ getCodeSync(): number
 
 同步获取有序公共事件传递的数据。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -496,7 +520,9 @@ getData(callback: AsyncCallback<string>): void
 
 获取有序公共事件传递的数据。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -514,7 +540,7 @@ getData(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -537,7 +563,9 @@ getData(): Promise<string>
 
 获取有序公共事件传递的数据。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -569,7 +597,9 @@ getDataSync(): string
 
 同步获取有序公共事件传递的数据。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -600,6 +630,8 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void-End-->
@@ -616,7 +648,7 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -633,12 +665,42 @@ subscriber.getSubscribeInfo((err: BusinessError, subscribeInfo: commonEventManag
 ## getSubscribeInfo
 
 ```TypeScript
+getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void
+```
+
+获取订阅者的订阅信息。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void-End-->
+
+**系统能力：** SystemCapability.Notification.CommonEvent
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null & gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## getSubscribeInfo
+
+```TypeScript
 getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 ```
 
 获取订阅者的订阅信息。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -662,6 +724,28 @@ subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEven
 });
 ```
 
+## getSubscribeInfo
+
+```TypeScript
+getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>
+```
+
+获取订阅者的订阅信息。使用Promise异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>--><!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>-End-->
+
+**系统能力：** SystemCapability.Notification.CommonEvent
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null & gt; |
+
 ## getSubscribeInfoSync
 
 ```TypeScript
@@ -671,6 +755,8 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 同步获取订阅者的订阅信息。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -691,6 +777,28 @@ let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = subscriber.getS
 console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
 ```
 
+## getSubscribeInfoSync
+
+```TypeScript
+getSubscribeInfoSync(): CommonEventSubscribeInfo|null
+```
+
+同步获取订阅者的订阅信息。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo|null--><!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo|null-End-->
+
+**系统能力：** SystemCapability.Notification.CommonEvent
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) |
+
 ## isOrderedCommonEvent
 
 ```TypeScript
@@ -699,7 +807,9 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 
 查询当前公共事件是否为有序公共事件。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
@@ -715,7 +825,7 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -737,7 +847,9 @@ isOrderedCommonEvent(): Promise<boolean>
 
 查询当前公共事件是否为有序公共事件。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>-End-->
 
@@ -767,7 +879,9 @@ isOrderedCommonEventSync(): boolean
 
 同步查询当前公共事件是否为有序公共事件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean-End-->
 
@@ -794,7 +908,9 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 
 查询当前公共事件是否为一个粘性公共事件。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
@@ -810,7 +926,7 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -832,7 +948,9 @@ isStickyCommonEvent(): Promise<boolean>
 
 查询当前公共事件是否为一个粘性公共事件。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>-End-->
 
@@ -862,7 +980,9 @@ isStickyCommonEventSync(): boolean
 
 同步检查当前公共事件是否为一个粘性公共事件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean-End-->
 
@@ -889,7 +1009,9 @@ setCode(code: number, callback: AsyncCallback<void>): void
 
 设置有序公共事件传递的数据。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -908,7 +1030,7 @@ setCode(code: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -930,7 +1052,9 @@ setCode(code: number): Promise<void>
 
 设置有序公共事件传递的数据。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -954,7 +1078,7 @@ setCode(code: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -974,7 +1098,9 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 
 设置有序公共事件传递的数据。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -994,7 +1120,7 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1016,7 +1142,9 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 设置有序公共事件传递的数据。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1041,7 +1169,7 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1061,7 +1189,9 @@ setCodeAndDataSync(code: number, data: string): void
 
 同步设置有序公共事件传递的数据。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1080,7 +1210,7 @@ setCodeAndDataSync(code: number, data: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1101,7 +1231,9 @@ setCodeSync(code: number): void
 
 同步设置有序公共事件传递的数据。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1119,7 +1251,7 @@ setCodeSync(code: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1140,7 +1272,9 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 设置有序公共事件传递的数据。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1159,7 +1293,7 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1181,7 +1315,9 @@ setData(data: string): Promise<void>
 
 设置有序公共事件传递的数据。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1205,7 +1341,7 @@ setData(data: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1225,7 +1361,9 @@ setDataSync(data: string): void
 
 同步设置有序公共事件传递的数据。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1243,7 +1381,7 @@ setDataSync(data: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

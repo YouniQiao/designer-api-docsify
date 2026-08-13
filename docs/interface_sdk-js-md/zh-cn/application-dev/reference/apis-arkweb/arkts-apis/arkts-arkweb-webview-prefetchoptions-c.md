@@ -2,9 +2,11 @@
 
 Defines the PrefetchOptions class.
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-webview-class PrefetchOptions--><!--Device-webview-class PrefetchOptions-End-->
 
@@ -18,9 +20,11 @@ constructor()
 
 Constructor for PrefetchOptions.
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-PrefetchOptions-constructor()--><!--Device-PrefetchOptions-constructor()-End-->
 
@@ -32,13 +36,15 @@ Constructor for PrefetchOptions.
 ignoreCacheControlNoStore: boolean
 ```
 
-Set whether to ignore Cache-Control: no-store‌.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;This setting controls whether prefetch operations bypass the HTTP Cache-Control: no-store directive.Important‌: Default behavior (false) aligns with HTTP security standards. Overriding (true) requires explicit risk assessment for non-sensitive resources.
+设置是否忽略响应头中的Cache-Control: no-store。默认值：false。 &lt;p&gt;&lt;strong&gt;API 说明&lt;/strong&gt;:&lt;br&gt; 此设置控制预取操作是否绕过 HTTP Cache-Control: no-store 指令。 重要提示：默认行为（false）符合 HTTP 安全标准。若要覆盖默认行为（设置为 true），必须对非敏感资源进行明确的**风险评估**。
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean--><!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean-End-->
 
@@ -47,18 +53,20 @@ Set whether to ignore Cache-Control: no-store‌.&lt;p&gt;&lt;strong&gt;API Note
 ## minTimeBetweenPrefetchesMs
 
 ```TypeScript
-minTimeBetweenPrefetchesMs: int
+minTimeBetweenPrefetchesMs: number
 ```
 
-‌Set prefetch page interval limit.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Unit: ms. Default 500ms (ensures only one successful prefetch within 500ms).The interval throttles prefetch frequency to balance performance and resource usage.
+设置两次网页预取的最小时间间隔。 每次预取时会计算和上次预取的间隔时间，若小于设置值，则取消本次预取。 该间隔用于限制预取的频率，以平衡性能和资源使用。 默认为500，最大值为500。单位: ms。 设置为负数时，默认为0。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
 
-<!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: int--><!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: int-End-->
+**废弃版本：** -1
+
+<!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number--><!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ getAcbState(): AcbState
 获取ACB连接状态。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -36,9 +40,9 @@ getAcbState(): AcbState
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## getConnectionState
 
@@ -49,6 +53,8 @@ getConnectionState(): ConnectionState
 获取profile连接状态。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -68,9 +74,9 @@ getConnectionState(): ConnectionState
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## getDeviceClass
 
@@ -81,6 +87,8 @@ getDeviceClass(): DeviceClass
 获取星闪设备的类型。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -100,9 +108,9 @@ getDeviceClass(): DeviceClass
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## getDeviceInformation
 
@@ -113,6 +121,8 @@ getDeviceInformation(): DeviceInformation
 获取远端设备信息。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -132,9 +142,9 @@ getDeviceInformation(): DeviceInformation
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## getDeviceName
 
@@ -145,6 +155,8 @@ getDeviceName(): string
 获取星闪设备的名称。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -164,9 +176,9 @@ getDeviceName(): string
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## getPairingState
 
@@ -177,6 +189,8 @@ getPairingState(): PairingState
 获取配对状态。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -196,9 +210,9 @@ getPairingState(): PairingState
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## startPairing
 
@@ -209,6 +223,8 @@ startPairing(): Promise<void>
 启动与远端星闪设备的配对。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -228,6 +244,6 @@ startPairing(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |

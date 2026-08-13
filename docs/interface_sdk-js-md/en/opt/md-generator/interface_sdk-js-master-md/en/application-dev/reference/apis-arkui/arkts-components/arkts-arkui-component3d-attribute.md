@@ -1,10 +1,12 @@
 # Component3D properties/events
 
-**Inheritance/Implementation:** Component3DAttribute extends [CommonMethod<Component3DAttribute>](CommonMethod<Component3DAttribute>)
+**Inheritance/Implementation:** Component3DAttribute extends CommonMethod<Component3DAttribute>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class Component3DAttribute extends CommonMethod<Component3DAttribute>--><!--Device-unnamed-declare class Component3DAttribute extends CommonMethod<Component3DAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Component3DAttribute--><!--Device-unnamed-declare class Component3DAttribute-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -17,6 +19,8 @@ customRender(uri: ResourceStr, selfRenderUpdate: boolean)
 Set render pipeline of 3D scene render.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,6 +45,8 @@ Load 3D model environment resource.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Component3DAttribute-environment(uri: ResourceStr): Component3DAttribute--><!--Device-Component3DAttribute-environment(uri: ResourceStr): Component3DAttribute-End-->
@@ -62,6 +68,8 @@ renderHeight(value: Dimension)
 Set render height resolution.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -85,6 +93,8 @@ Set render width resolution.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Component3DAttribute-renderWidth(value: Dimension): Component3DAttribute--><!--Device-Component3DAttribute-renderWidth(value: Dimension): Component3DAttribute-End-->
@@ -106,6 +116,8 @@ shader(uri: ResourceStr)
 Load shader uri.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -129,6 +141,8 @@ Load shader texture uri.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Component3DAttribute-shaderImageTexture(uri: ResourceStr): Component3DAttribute--><!--Device-Component3DAttribute-shaderImageTexture(uri: ResourceStr): Component3DAttribute-End-->
@@ -150,6 +164,8 @@ shaderInputBuffer(buffer: Array<number>)
 Buffer input for shader animation
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -12,12 +12,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function cancel(url: string): void
 ```
 
-Cancels an ongoing download task based on the URL. The saved memory cache and file cache are not affected.
+Cancels an ongoing download task based on the URL. The saved memory cache and file cache are not affected. - If there is no download task with the specified URL, this API does not take effect. - When this API is used for synchronous execution, the calling thread is not blocked.
 
-- If there is no download task with the specified URL, this API does not take effect.  
-- When this API is used for synchronous execution, the calling thread is not blocked.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-function cancel(url: string): void--><!--Device-cacheDownload-function cancel(url: string): void-End-->
 
@@ -33,7 +32,7 @@ Cancels an ongoing download task based on the URL. The saved memory cache and fi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

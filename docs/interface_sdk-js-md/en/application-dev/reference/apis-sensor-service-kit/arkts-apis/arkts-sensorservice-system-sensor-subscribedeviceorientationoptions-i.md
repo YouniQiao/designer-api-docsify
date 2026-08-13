@@ -8,7 +8,7 @@ Defines the type of data to return for a subscription to data changes of the dev
 
 **Deprecated since:** 8
 
-**Substitutes:** [ORIENTATION](ohos.sensor/sensor.SensorId#ORIENTATION)
+**Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#ORIENTATION)
 
 <!--Device-unnamed-export interface SubscribeDeviceOrientationOptions--><!--Device-unnamed-export interface SubscribeDeviceOrientationOptions-End-->
 
@@ -28,13 +28,15 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](ohos.sensor/sensor#on)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,54 +44,13 @@ Callback invoked when an API call fails.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
-## success
-
-```TypeScript
-success: (data: DeviceOrientationResponse) => void
-```
-
-Callback invoked when the device orientation sensor data changes.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 8
-
-**Substitutes:** [on](ohos.sensor/sensor#on)
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void--><!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [DeviceOrientationResponse](arkts-sensorservice-system-sensor-deviceorientationresponse-i.md) | Yes |  |
-
 ## interval
 
 ```TypeScript
 interval: string
 ```
 
-Interval at which the callback is invoked to return the device orientation sensor data.
-
-The default value is **normal**. The options are as follows:
-
-- **game**: called at an interval of 20 ms, which is applicable to gaming scenarios.  
-- **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios.  
-- **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
+Interval at which the callback is invoked to return the device orientation sensor data. The default value is **normal**. The options are as follows: - **game**: called at an interval of 20 ms, which is applicable to gaming scenarios. - **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios. - **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
 
 **Type:** string
 
@@ -99,11 +60,35 @@ The default value is **normal**. The options are as follows:
 
 **Deprecated since:** 8
 
-**Substitutes:** [interval](ohos.sensor/sensor#Options.interval)
+**Substitutes:** [interval](arkts-sensorservice-sensor-options-i.md#interval)
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-SubscribeDeviceOrientationOptions-interval: string--><!--Device-SubscribeDeviceOrientationOptions-interval: string-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor.Lite
+
+## success
+
+```TypeScript
+success: (data: DeviceOrientationResponse) => void
+```
+
+Callback invoked when the device orientation sensor data changes.
+
+**Type:** (data: DeviceOrientationResponse) =&gt; void
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** 8
+
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void--><!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

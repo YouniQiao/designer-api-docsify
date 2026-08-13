@@ -4,7 +4,9 @@ Indicates the options for VCard export.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vcard-export interface VCardBuilderOptions--><!--Device-vcard-export interface VCardBuilderOptions-End-->
 
@@ -28,7 +30,9 @@ Indicates the VCard types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VCardBuilderOptions-cardType?: VCardType--><!--Device-VCardBuilderOptions-cardType?: VCardType-End-->
 
@@ -46,7 +50,9 @@ Indicates the Encoding format.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VCardBuilderOptions-charset?: string--><!--Device-VCardBuilderOptions-charset?: string-End-->
 

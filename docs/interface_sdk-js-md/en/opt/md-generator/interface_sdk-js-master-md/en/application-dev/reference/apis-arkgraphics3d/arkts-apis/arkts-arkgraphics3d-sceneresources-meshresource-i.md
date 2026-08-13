@@ -4,8 +4,10 @@ The mesh data description resource for the geometry node
 
 **Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-unnamed-export interface MeshResource extends SceneResource--><!--Device-unnamed-export interface MeshResource extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface MeshResource--><!--Device-unnamed-export interface MeshResource-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

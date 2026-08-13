@@ -4,6 +4,8 @@ Enumerates the directions in which the swipe gesture can be recognized.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SwipeDirection--><!--Device-unnamed-declare enum SwipeDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ None
 Swiping disabled.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Horizontal direction. The gesture is triggered when the angle between the finger
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SwipeDirection-Horizontal--><!--Device-SwipeDirection-Horizontal-End-->
@@ -50,6 +56,8 @@ Vertical direction. The gesture is triggered when the angle between the finger m
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SwipeDirection-Vertical--><!--Device-SwipeDirection-Vertical-End-->
@@ -65,6 +73,8 @@ All
 All directions.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

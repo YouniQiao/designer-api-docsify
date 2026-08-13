@@ -2,7 +2,9 @@
 
 Provides methods to accessing bluetooth audio related capabilities.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace a2dp--><!--Device-unnamed-declare namespace a2dp-End-->
 
@@ -20,7 +22,7 @@ import { a2dp } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md#createa2dpsrcprofile) |
+| [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md#createA2dpSrcProfile) |
 
 ### Interfaces
 

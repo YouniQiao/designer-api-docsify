@@ -4,6 +4,8 @@ Provides coordinate information for tap gestures.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface EventLocationInfo--><!--Device-unnamed-declare interface EventLocationInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getCurrentLocalPosition?(): Coordinate2D
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,15 +42,13 @@ Gets the coordinates of the top-left corner of the current component based on it
 displayX: number
 ```
 
-X coordinate relative to the upper left corner of the screen.
-
-Value range: [0, +∞)
-
-Unit: vp
+X coordinate relative to the upper left corner of the screen. Value range: [0, +∞) Unit: vp
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +64,13 @@ Unit: vp
 displayY: number
 ```
 
-Y coordinate relative to the upper left corner of the screen.
-
-Value range: [0, +∞)
-
-Unit: vp
+Y coordinate relative to the upper left corner of the screen. Value range: [0, +∞) Unit: vp
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,15 +86,13 @@ Unit: vp
 globalDisplayX?: number
 ```
 
-X coordinate in the coordinate system with the upper left corner of the main screen as the origin.
-
-Unit: vp
-
-Value range: [0, +∞)
+X coordinate in the coordinate system with the upper left corner of the main screen as the origin. Unit: vp Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,15 +108,13 @@ Value range: [0, +∞)
 globalDisplayY?: number
 ```
 
-Y coordinate in the coordinate system with the upper left corner of the main screen as the origin.
-
-Unit: vp
-
-Value range: [0, +∞)
+Y coordinate in the coordinate system with the upper left corner of the main screen as the origin. Unit: vp Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,15 +130,13 @@ Value range: [0, +∞)
 windowX: number
 ```
 
-X coordinate relative to the upper left corner of the window.
-
-Value range: [0, +∞)
-
-Unit: vp
+X coordinate relative to the upper left corner of the window. Value range: [0, +∞) Unit: vp
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,15 +152,13 @@ Unit: vp
 windowY: number
 ```
 
-Y coordinate relative to the upper left corner of the window.
-
-Value range: [0, +∞)
-
-Unit: vp
+Y coordinate relative to the upper left corner of the window. Value range: [0, +∞) Unit: vp
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,15 +174,13 @@ Unit: vp
 x: number
 ```
 
-X coordinate relative to the upper left corner of the component.
-
-Value range: [0, +∞)
-
-Unit: vp
+X coordinate relative to the upper left corner of the component. Value range: [0, +∞) Unit: vp
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,15 +196,13 @@ Unit: vp
 y: number
 ```
 
-Y coordinate relative to the upper left corner of the component.
-
-Value range: [0, +∞)
-
-Unit: vp
+Y coordinate relative to the upper left corner of the component. Value range: [0, +∞) Unit: vp
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,7 +12,7 @@ Deletes a widget. After this API is called, the application can no longer use th
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm)
+**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,7 +42,7 @@ Deletes a widget. After this API is called, the application can no longer use th
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm)
+**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

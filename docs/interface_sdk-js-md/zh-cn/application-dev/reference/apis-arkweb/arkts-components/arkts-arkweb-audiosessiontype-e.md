@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum AudioSessionType--><!--Device-unnamed-declare enum AudioSessionType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ AMBIENT = 3
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-AudioSessionType-AMBIENT = 3--><!--Device-AudioSessionType-AMBIENT = 3-End-->
 

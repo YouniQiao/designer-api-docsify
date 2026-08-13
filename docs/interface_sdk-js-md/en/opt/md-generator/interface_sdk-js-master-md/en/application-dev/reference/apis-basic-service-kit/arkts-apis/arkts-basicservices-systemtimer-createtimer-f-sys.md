@@ -12,15 +12,11 @@ import { systemTimer } from '@kit.BasicServicesKit';
 function createTimer(options: TimerOptions, callback: AsyncCallback<number>): void
 ```
 
-Creates a timer. This API uses an asynchronous callback to return the result.
+Creates a timer. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs.
 
-> **NOTE：**
-> 
-> This API must be used together with
-> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer). Otherwise
-> , memory leakage occurs.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void--><!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void-End-->
 
@@ -39,8 +35,8 @@ Creates a timer. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -72,15 +68,11 @@ try {
 function createTimer(options: TimerOptions): Promise<number>
 ```
 
-Creates a timer. This API uses a promise to return the timer ID.
+Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs.
 
-> **NOTE：**
-> 
-> This API must be used together with
-> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer). Otherwise
-> , memory leakage occurs.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>--><!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>-End-->
 
@@ -104,8 +96,8 @@ Creates a timer. This API uses a promise to return the timer ID.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

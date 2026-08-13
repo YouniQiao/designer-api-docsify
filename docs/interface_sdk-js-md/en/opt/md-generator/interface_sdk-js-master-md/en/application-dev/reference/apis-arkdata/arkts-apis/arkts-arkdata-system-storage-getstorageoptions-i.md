@@ -16,6 +16,8 @@ complete?: () => void
 
 Called when the execution is completed.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 6
@@ -26,62 +28,13 @@ Called when the execution is completed.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-Called when the stored content fails to be read.
-
-**Since:** 3
-
-**Deprecated since:** 6
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetStorageOptions-fail?: (data: string, code: number) => void--><!--Device-GetStorageOptions-fail?: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
-## success
-
-```TypeScript
-success?: (data: any) => void
-```
-
-Called when the stored content is read successfully.
-
-**Since:** 3
-
-**Deprecated since:** 6
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetStorageOptions-success?: (data: any) => void--><!--Device-GetStorageOptions-success?: (data: any) => void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | any | Yes |
-
 ## default
 
 ```TypeScript
 default?: string
 ```
 
-Default value returned when the key does not exist.If this parameter is not specified, an empty string is returned.
+Default value returned when the key does not exist. If this parameter is not specified, an empty string is returned.
 
 **Type:** string
 
@@ -95,13 +48,33 @@ Default value returned when the key does not exist.If this parameter is not spec
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+Called when the stored content fails to be read.
+
+**Type:** (data: string, code: number) =&gt; void
+
+**Since:** 3
+
+**Deprecated since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetStorageOptions-fail?: (data: string, code: number) => void--><!--Device-GetStorageOptions-fail?: (data: string, code: number) => void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
 ## key
 
 ```TypeScript
 key: string
 ```
 
-Content index.the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;&lt;=&gt;?[]|\x7F.
+Content index. the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;&lt;=&gt;?[]|\x7F.
 
 **Type:** string
 
@@ -112,5 +85,25 @@ Content index.the value contains a maximum of 32 characters and cannot contain s
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-GetStorageOptions-key: string--><!--Device-GetStorageOptions-key: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+## success
+
+```TypeScript
+success?: (data: any) => void
+```
+
+Called when the stored content is read successfully.
+
+**Type:** (data: any) =&gt; void
+
+**Since:** 3
+
+**Deprecated since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetStorageOptions-success?: (data: any) => void--><!--Device-GetStorageOptions-success?: (data: any) => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite

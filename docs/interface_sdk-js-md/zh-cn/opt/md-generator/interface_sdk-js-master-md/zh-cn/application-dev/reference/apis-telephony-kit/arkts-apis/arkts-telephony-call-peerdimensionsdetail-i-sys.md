@@ -2,7 +2,9 @@
 
 视频通话对端画面分辨率信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface PeerDimensionsDetail--><!--Device-call-export interface PeerDimensionsDetail-End-->
 
@@ -20,7 +22,9 @@ callId: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PeerDimensionsDetail-callId: int--><!--Device-PeerDimensionsDetail-callId: int-End-->
 
@@ -38,7 +42,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PeerDimensionsDetail-height: int--><!--Device-PeerDimensionsDetail-height: int-End-->
 
@@ -56,7 +62,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PeerDimensionsDetail-width: int--><!--Device-PeerDimensionsDetail-width: int-End-->
 

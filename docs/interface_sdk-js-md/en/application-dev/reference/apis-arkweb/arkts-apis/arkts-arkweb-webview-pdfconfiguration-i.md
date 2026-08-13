@@ -1,10 +1,12 @@
 # PdfConfiguration
 
-Defines the configuration of creating pdf, related to {@Link createPdf} method.
+Specifies the input parameters of **createPdf()**. > **NOTE：**> > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface PdfConfiguration--><!--Device-webview-interface PdfConfiguration-End-->
 
@@ -19,108 +21,132 @@ import { webview } from '@kit.ArkWeb';
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
-Number of the height. Unit: in.
+Page height, in inches. Recommended value: 11.69 inches of A4 paper height.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-PdfConfiguration-height: double--><!--Device-PdfConfiguration-height: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PdfConfiguration-height: number--><!--Device-PdfConfiguration-height: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## marginBottom
 
 ```TypeScript
-marginBottom: double
+marginBottom: number
 ```
 
-Number of the marginBottom. Unit: in.
+Bottom margin. The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-PdfConfiguration-marginBottom: double--><!--Device-PdfConfiguration-marginBottom: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PdfConfiguration-marginBottom: number--><!--Device-PdfConfiguration-marginBottom: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## marginLeft
 
 ```TypeScript
-marginLeft: double
+marginLeft: number
 ```
 
-Number of the marginLeft. Unit: in.
+Left margin. The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-PdfConfiguration-marginLeft: double--><!--Device-PdfConfiguration-marginLeft: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PdfConfiguration-marginLeft: number--><!--Device-PdfConfiguration-marginLeft: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## marginRight
 
 ```TypeScript
-marginRight: double
+marginRight: number
 ```
 
-Number of the marginRight. Unit: in.
+Right margin. The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-PdfConfiguration-marginRight: double--><!--Device-PdfConfiguration-marginRight: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PdfConfiguration-marginRight: number--><!--Device-PdfConfiguration-marginRight: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## marginTop
 
 ```TypeScript
-marginTop: double
+marginTop: number
 ```
 
-Number of the marginTop. Unit: in.
+Top margin. The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-PdfConfiguration-marginTop: double--><!--Device-PdfConfiguration-marginTop: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PdfConfiguration-marginTop: number--><!--Device-PdfConfiguration-marginTop: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## scale
 
 ```TypeScript
-scale?: double
+scale?: number
 ```
 
-Number of the scaling.
+Scale multiple. The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2.0, set it to **2.0**. Default value: **1.0**
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-PdfConfiguration-scale?: double--><!--Device-PdfConfiguration-scale?: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PdfConfiguration-scale?: number--><!--Device-PdfConfiguration-scale?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -130,13 +156,17 @@ Number of the scaling.
 shouldPrintBackground?: boolean
 ```
 
-Whether background should be printed when creating pdf.
+Whether to print the background color. The value **true** means to print the background color, and **false** means the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-PdfConfiguration-shouldPrintBackground?: boolean--><!--Device-PdfConfiguration-shouldPrintBackground?: boolean-End-->
 
@@ -145,18 +175,22 @@ Whether background should be printed when creating pdf.
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
-Number of the width. Unit: in.
+Page width, in inches. Recommended value: 8.27 inches of A4 paper width.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-PdfConfiguration-width: double--><!--Device-PdfConfiguration-width: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PdfConfiguration-width: number--><!--Device-PdfConfiguration-width: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

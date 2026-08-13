@@ -14,7 +14,9 @@ function getAppVMMemoryInfo(): VMMemoryInfo
 
 Obtains VM memory information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo--><!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo-End-->
 

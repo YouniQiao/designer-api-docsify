@@ -2,7 +2,9 @@
 
 Enumerates the modes for saving documents.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-picker-export enum DocumentPickerMode--><!--Device-picker-export enum DocumentPickerMode-End-->
 
@@ -16,9 +18,11 @@ DEFAULT = 0
 
 Standard mode.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DocumentPickerMode-DEFAULT = 0--><!--Device-DocumentPickerMode-DEFAULT = 0-End-->
 
@@ -30,13 +34,13 @@ Standard mode.
 DOWNLOAD = 1
 ```
 
-Download mode.
+Download mode. **Note：**: The directories created in DOWNLOAD mode are used only to save files. There is no access isolation between directories. You are advised not to save sensitive application data.
 
-**Note：**: The directories created in DOWNLOAD mode are used only to save files. There is no access isolation between directories. You are advised not to save sensitive application data.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DocumentPickerMode-DOWNLOAD = 1--><!--Device-DocumentPickerMode-DOWNLOAD = 1-End-->
 

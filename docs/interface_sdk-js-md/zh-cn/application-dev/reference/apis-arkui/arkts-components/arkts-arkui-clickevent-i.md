@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
-<!--Device-unnamed-declare interface ClickEvent extends BaseEvent--><!--Device-unnamed-declare interface ClickEvent extends BaseEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface ClickEvent--><!--Device-unnamed-declare interface ClickEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +26,8 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -38,49 +42,21 @@ getCurrentLocalPosition?(): Coordinate2D
 | --- | --- |
 | Coordinate2D | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
-## preventDefault
-
-```TypeScript
-preventDefault: () => void
-```
-
-阻止默认事件。
-
-**说明：** 该接口仅支持部分组件使用，当前支持组件：RichEditor、Hyperlink，不支持的组件使用时会抛出异常。暂不支持异步调用和提供Modifier接口。
-
-**起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ClickEvent-preventDefault: () => void--><!--Device-ClickEvent-preventDefault: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100017](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-event.md#100017-组件不支持阻止默认事件) | Component does not support prevent function. |
-
 ## displayX
 
 ```TypeScript
 displayX: number
 ```
 
-点击位置在当前应用屏幕坐标系中的X坐标。
-
-单位：vp
+点击位置在当前应用屏幕坐标系中的X坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,15 +72,15 @@ displayX: number
 displayY: number
 ```
 
-点击位置在当前应用屏幕坐标系中的Y坐标。
-
-单位：vp
+点击位置在当前应用屏幕坐标系中的Y坐标。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,17 +96,15 @@ displayY: number
 globalDisplayX?: number
 ```
 
-点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,17 +120,15 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -180,11 +152,37 @@ hand?: InteractionHand
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ClickEvent-hand?: InteractionHand--><!--Device-ClickEvent-hand?: InteractionHand-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## preventDefault
+
+```TypeScript
+preventDefault: () => void
+```
+
+阻止默认事件。 **说明：** 该接口仅支持部分组件使用，当前支持组件：RichEditor、Hyperlink，不支持的组件使用时会抛出异常。暂不支持异步调用和提供Modifier接口。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClickEvent-preventDefault: () => void--><!--Device-ClickEvent-preventDefault: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,9 +192,7 @@ hand?: InteractionHand
 screenX: number
 ```
 
-点击位置在当前应用窗口坐标系中的X坐标。
-
-单位：vp
+点击位置在当前应用窗口坐标系中的X坐标。 单位：vp
 
 **类型：** number
 
@@ -218,9 +214,7 @@ screenX: number
 screenY: number
 ```
 
-点击位置在当前应用窗口坐标系中的Y坐标。
-
-单位：vp
+点击位置在当前应用窗口坐标系中的Y坐标。 单位：vp
 
 **类型：** number
 
@@ -242,15 +236,15 @@ screenY: number
 windowX: number
 ```
 
-点击位置在当前应用窗口坐标系中的X坐标。onClick的distanceThreshold设置后，点击位置为抬手点。
-
-单位：vp
+点击位置在当前应用窗口坐标系中的X坐标。onClick的distanceThreshold设置后，点击位置为抬手点。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,15 +260,15 @@ windowX: number
 windowY: number
 ```
 
-点击位置在当前应用窗口坐标系中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。
-
-单位：vp
+点击位置在当前应用窗口坐标系中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。 单位：vp
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,16 +284,15 @@ windowY: number
 x: number
 ```
 
-点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的  
-[distanceThreshold](arkts-arkui-commonmethod-c.md#onClick)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
-
-单位：vp
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的 [distanceThreshold](arkts-arkui-commonmethod-c.md#onClick)设置后，点击位置为抬手 点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。 单位：vp
 
 **类型：** number
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -315,15 +308,15 @@ x: number
 y: number
 ```
 
-点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
-
-单位：vp
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。触发事件的是键盘或手柄 时，点击位置为被点击元素的中心点。 单位：vp
 
 **类型：** number
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

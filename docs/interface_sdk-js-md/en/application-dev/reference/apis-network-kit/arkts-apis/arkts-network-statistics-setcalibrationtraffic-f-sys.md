@@ -16,7 +16,9 @@ Set calibration traffic data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -32,9 +34,9 @@ Set calibration traffic data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The ID of the specified sim card. |
-| remainTraffic | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | The remaining traffic data. |
-| totalTraffic | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | The total traffic data. |
+| simId | int | Yes | The ID of the specified sim card. |
+| remainTraffic | long | Yes | The remaining traffic data. |
+| totalTraffic | long | No | The total traffic data. |
 
 **Return value:**
 
@@ -46,12 +48,12 @@ Set calibration traffic data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value, such as simId error. |
-| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error, such as nullptr. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value, such as simId error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error, such as nullptr. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
 
 ## Examples
 

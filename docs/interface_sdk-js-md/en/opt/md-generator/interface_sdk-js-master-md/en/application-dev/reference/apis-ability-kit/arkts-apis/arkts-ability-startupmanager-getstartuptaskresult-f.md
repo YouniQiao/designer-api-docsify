@@ -16,6 +16,8 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object-End-->
@@ -38,7 +40,7 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -77,3 +79,34 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+
+## getStartupTaskResult
+
+```TypeScript
+function getStartupTaskResult(startupTask: string): Any
+```
+
+Obtains specific startup task result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-startupManager-function getStartupTaskResult(startupTask: string): Any--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Any-End-->
+
+**System capability:** SystemCapability.Ability.AppStartup
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startupTask | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Any |

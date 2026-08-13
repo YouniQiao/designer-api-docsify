@@ -12,7 +12,7 @@ import { ConnectionInfo } from '@kit.ArkWeb';
 
 | Name | Description |
 | --- | --- |
-| [WebNativeMessagingExtensionAbility](arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md) | class of web native messaging extension ability. |
+| [WebNativeMessagingExtensionAbility](arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md) | Provides the web native messaging capability and is inherited from ExtensionAbility. |
 
 ### Interfaces
 

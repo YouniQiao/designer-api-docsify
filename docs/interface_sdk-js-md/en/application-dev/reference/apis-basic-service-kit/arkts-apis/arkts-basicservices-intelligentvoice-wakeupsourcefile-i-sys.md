@@ -2,9 +2,11 @@
 
 Describes wakeup source file information.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface WakeupSourceFile--><!--Device-intelligentVoice-interface WakeupSourceFile-End-->
 
@@ -28,9 +30,11 @@ File content.
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupSourceFile-fileContent: ArrayBuffer--><!--Device-WakeupSourceFile-fileContent: ArrayBuffer-End-->
 
@@ -48,9 +52,11 @@ File path.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupSourceFile-filePath: string--><!--Device-WakeupSourceFile-filePath: string-End-->
 

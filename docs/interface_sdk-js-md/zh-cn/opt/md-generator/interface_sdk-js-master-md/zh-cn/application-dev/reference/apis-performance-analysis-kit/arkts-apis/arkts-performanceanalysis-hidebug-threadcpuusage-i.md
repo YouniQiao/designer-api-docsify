@@ -2,7 +2,9 @@
 
 线程的CPU使用情况。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-interface ThreadCpuUsage--><!--Device-hidebug-interface ThreadCpuUsage-End-->
 
@@ -18,7 +20,9 @@ cpuUsage: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ThreadCpuUsage-cpuUsage: double--><!--Device-ThreadCpuUsage-cpuUsage: double-End-->
 
@@ -34,7 +38,9 @@ threadId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ThreadCpuUsage-threadId: long--><!--Device-ThreadCpuUsage-threadId: long-End-->
 

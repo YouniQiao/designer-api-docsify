@@ -4,6 +4,8 @@ Defines whether decoding follows data blocks.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-util-interface DecodeWithStreamOptions--><!--Device-util-interface DecodeWithStreamOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -25,6 +27,8 @@ Whether to allow data blocks in subsequent **decodeWithStream()**. If data is pr
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

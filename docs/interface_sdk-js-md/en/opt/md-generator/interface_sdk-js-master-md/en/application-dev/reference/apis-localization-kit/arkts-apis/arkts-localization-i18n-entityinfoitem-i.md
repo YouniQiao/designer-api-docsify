@@ -2,7 +2,9 @@
 
 Defines a list of entities.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export interface EntityInfoItem--><!--Device-i18n-export interface EntityInfoItem-End-->
 
@@ -24,7 +26,9 @@ Start position of the entity in the input string.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ End position of the entity the input string.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,7 +66,9 @@ Entity type. The value can be **phone_number** or **date**. **phone_number** ind
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

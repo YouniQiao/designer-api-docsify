@@ -1,12 +1,12 @@
 # EllipsisMode
 
-Enumerates the ellipsis styles.
+Enumerates the ellipsis styles. **EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line.
 
-**EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-text-enum EllipsisMode--><!--Device-text-enum EllipsisMode-End-->
 
@@ -18,12 +18,13 @@ Enumerates the ellipsis styles.
 START = 0
 ```
 
-Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in  
-[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
+Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -37,12 +38,13 @@ Ellipsis at the beginning. This enumerated value is valid only when **maxLines**
 MIDDLE = 1
 ```
 
-Ellipsis in the middle. This enumerated value is valid only when **maxLines** is set to **1** in  
-[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
+Ellipsis in the middle. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -56,12 +58,13 @@ Ellipsis in the middle. This enumerated value is valid only when **maxLines** is
 END = 2
 ```
 
-Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in  
-[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
+Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -75,12 +78,13 @@ Ellipsis at the end. This enumerated value is valid when **maxLines** is set to 
 MULTILINE_START = 3
 ```
 
-Ellipsis at the beginning. This enumerated value is valid when **maxLines** is set to any value in  
-[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
+Ellipsis at the beginning. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -94,12 +98,13 @@ Ellipsis at the beginning. This enumerated value is valid when **maxLines** is s
 MULTILINE_MIDDLE = 4
 ```
 
-Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in  
-[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
+Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

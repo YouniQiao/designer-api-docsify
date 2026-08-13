@@ -2,9 +2,11 @@
 
 Enumerates the types of the resources to write.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum ResourceType--><!--Device-photoAccessHelper-enum ResourceType-End-->
 
@@ -18,11 +20,13 @@ IMAGE_RESOURCE = 1
 
 Image resource.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceType-IMAGE_RESOURCE = 1--><!--Device-ResourceType-IMAGE_RESOURCE = 1-End-->
 
@@ -36,11 +40,13 @@ VIDEO_RESOURCE = 2
 
 Video resource.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceType-VIDEO_RESOURCE = 2--><!--Device-ResourceType-VIDEO_RESOURCE = 2-End-->
 

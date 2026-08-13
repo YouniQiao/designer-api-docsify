@@ -2,7 +2,9 @@
 
 Describes the contents of the scan report.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface ScanReport--><!--Device-ble-interface ScanReport-End-->
 
@@ -24,11 +26,13 @@ The type of scan report
 
 **Type:** [ScanReportType](arkts-connectivity-ble-scanreporttype-e.md)
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanReport-reportType: ScanReportType--><!--Device-ScanReport-reportType: ScanReportType-End-->
 
@@ -44,11 +48,13 @@ Describes the contents of the scan results.
 
 **Type:** Array&lt;ScanResult&gt;
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanReport-scanResult: Array<ScanResult>--><!--Device-ScanReport-scanResult: Array<ScanResult>-End-->
 

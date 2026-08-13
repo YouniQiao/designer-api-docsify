@@ -12,13 +12,13 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function addProcessor(processor: Processor): number
 ```
 
-Adds the configuration information of the data processor, such as the event name received by it.
+Adds the configuration information of the data processor, such as the event name received by it. This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addProcessorFromConfig) or use a child thread.
 
-This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addProcessorFromConfig) or use a child thread.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiAppEvent-function addProcessor(processor: Processor): long--><!--Device-hiAppEvent-function addProcessor(processor: Processor): long-End-->
 
@@ -40,7 +40,7 @@ This is a synchronous API and involves time-consuming operations. To ensure perf
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

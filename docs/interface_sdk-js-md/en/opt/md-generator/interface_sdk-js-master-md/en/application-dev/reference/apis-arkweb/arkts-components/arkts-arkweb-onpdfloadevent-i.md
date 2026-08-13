@@ -4,6 +4,8 @@ Defines the function triggered when the PDF loading is successful or fails.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnPdfLoadEvent--><!--Device-unnamed-declare interface OnPdfLoadEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ The PDF page loading result.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-OnPdfLoadEvent-result: PdfLoadResult--><!--Device-OnPdfLoadEvent-result: PdfLoadResult-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -35,6 +39,8 @@ URL of the page.
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-OnPdfLoadEvent-url: string--><!--Device-OnPdfLoadEvent-url: string-End-->
 

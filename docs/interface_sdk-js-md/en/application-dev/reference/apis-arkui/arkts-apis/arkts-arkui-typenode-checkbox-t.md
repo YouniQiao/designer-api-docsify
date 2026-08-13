@@ -1,20 +1,24 @@
 # Checkbox
 
 ```TypeScript
-type Checkbox = CheckboxFrameNode
+type Checkbox = TypedFrameNode<CheckboxInterface, CheckboxAttribute>
 ```
 
-Define the FrameNode type for Checkbox.
+Represents a FrameNode of the **Checkbox** type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Checkbox = CheckboxFrameNode--><!--Device-typeNode-type Checkbox = CheckboxFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-typeNode-type Checkbox = TypedFrameNode<CheckboxInterface, CheckboxAttribute>--><!--Device-typeNode-type Checkbox = TypedFrameNode<CheckboxInterface, CheckboxAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** CheckboxFrameNode
+**Property type:** TypedFrameNode<CheckboxInterface, CheckboxAttribute>
 

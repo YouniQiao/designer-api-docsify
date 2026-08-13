@@ -2,9 +2,11 @@
 
 Enumerates the usage statuses of a widget.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum FormUsageState--><!--Device-formInfo-enum FormUsageState-End-->
 
@@ -20,9 +22,11 @@ USED = 0
 
 The widget is in use.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormUsageState-USED = 0--><!--Device-FormUsageState-USED = 0-End-->
 
@@ -38,9 +42,11 @@ UNUSED = 1
 
 The widget is not in use.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormUsageState-UNUSED = 1--><!--Device-FormUsageState-UNUSED = 1-End-->
 

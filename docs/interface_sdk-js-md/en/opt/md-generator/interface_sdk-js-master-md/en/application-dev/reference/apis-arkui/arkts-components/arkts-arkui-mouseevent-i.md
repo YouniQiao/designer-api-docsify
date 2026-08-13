@@ -6,7 +6,9 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface MouseEvent extends BaseEvent--><!--Device-unnamed-declare interface MouseEvent extends BaseEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface MouseEvent--><!--Device-unnamed-declare interface MouseEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ getCurrentLocalPosition?(): Coordinate2D
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,12 +44,11 @@ Gets the coordinates of the top-left corner of the current component based on it
 getHistoricalPoints?(): Array<MouseHistoricalPoint>
 ```
 
-Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects.
-
-This API can only be called from [MouseEvent](#MouseEvent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onMouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of  
-[MouseEvent](#MouseEvent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onMouse), and the remaining points are treated as historical points.
+Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects. This API can only be called from [MouseEvent](#MouseEvent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onMouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](#MouseEvent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onMouse), and the remaining points are treated as historical points.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,22 +64,6 @@ This API can only be called from [MouseEvent](#MouseEvent) to obtain information
 | --- |
 | Array&lt;[MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md)&gt; |
 
-## stopPropagation
-
-```TypeScript
-stopPropagation: () => void
-```
-
-Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-MouseEvent-stopPropagation: () => void--><!--Device-MouseEvent-stopPropagation: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## action
 
 ```TypeScript
@@ -88,6 +75,8 @@ Mouse action.
 **Type:** [MouseAction](../arkts-apis/arkts-arkui-mouseaction-e.md)
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,6 +96,8 @@ Mouse button.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseEvent-button: MouseButton--><!--Device-MouseEvent-button: MouseButton-End-->
@@ -119,13 +110,13 @@ Mouse button.
 displayX: number
 ```
 
-X coordinate of the mouse position in the coordinate system of the current screen window.
-
-Unit: vp.
+X coordinate of the mouse position in the coordinate system of the current screen window. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,13 +132,13 @@ Unit: vp.
 displayY: number
 ```
 
-Y coordinate of the mouse position in the coordinate system of the current screen window.
-
-Unit: vp.
+Y coordinate of the mouse position in the coordinate system of the current screen window. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,20 +154,13 @@ Unit: vp.
 eventHandleId?: number
 ```
 
-Unique identifier for event processing.
-
-Value range: [0, +∞)
-
-**NOTE：**
-
-This field is used when dispatching events using the  
-[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000.
-
-Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,16 +176,13 @@ Using the same **eventHandleId** for multiple event dispatches will cause abnorm
 globalDisplayX?: number
 ```
 
-X coordinate of the mouse position in the  
-[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
-
-Unit: vp.
-
-Value range: (-∞, +∞).
+X coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -217,16 +198,13 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the mouse position in the  
-[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
-
-Unit: vp.
-
-Value range: (-∞, +∞).
+Y coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,6 +226,8 @@ Set of buttons being pressed.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -262,15 +242,13 @@ Set of buttons being pressed.
 rawDeltaX?: number
 ```
 
-Movement increment of the mouse along the X axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world.The reported value is determined by the hardware, not the physical or logical pixels of the screen.
-
-**NOTE：**
-
-Before API version 26.0.0, the return value of **rawDeltaX** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaX** is the original movement data of the mouse hardware.
+Movement increment of the mouse along the X axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world. The reported value is determined by the hardware, not the physical or logical pixels of the screen. **NOTE：**Before API version 26.0.0, the return value of **rawDeltaX** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaX** is the original movement data of the mouse hardware.
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -286,15 +264,13 @@ Before API version 26.0.0, the return value of **rawDeltaX** was not the origina
 rawDeltaY?: number
 ```
 
-Movement increment of the mouse along the Y axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world.The reported value is determined by the hardware, not the physical or logical pixels of the screen.
-
-**NOTE：**
-
-Before API version 26.0.0, the return value of **rawDeltaY** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaY** is the original movement data of the mouse hardware.
+Movement increment of the mouse along the Y axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world. The reported value is determined by the hardware, not the physical or logical pixels of the screen. **NOTE：**Before API version 26.0.0, the return value of **rawDeltaY** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaY** is the original movement data of the mouse hardware.
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,12 +286,7 @@ Before API version 26.0.0, the return value of **rawDeltaY** was not the origina
 screenX: number
 ```
 
-X coordinate of the mouse position in the coordinate system of the current application window.
-
-Unit: vp.
-
-Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**windowX** instead.
+X coordinate of the mouse position in the coordinate system of the current application window. Unit: vp. Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use **windowX** instead.
 
 **Type:** number
 
@@ -335,12 +306,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 screenY: number
 ```
 
-Y coordinate of the mouse position in the coordinate system of the current application window.
-
-Unit: vp.
-
-Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**windowY** instead.
+Y coordinate of the mouse position in the coordinate system of the current application window. Unit: vp. Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use **windowY** instead.
 
 **Type:** number
 
@@ -354,19 +320,39 @@ Note: This API is supported since API version 8 and deprecated since API version
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## stopPropagation
+
+```TypeScript
+stopPropagation: () => void
+```
+
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+
+**Type:** () =&gt; void
+
+**Since:** 8
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MouseEvent-stopPropagation: () => void--><!--Device-MouseEvent-stopPropagation: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## windowX
 
 ```TypeScript
 windowX: number
 ```
 
-X coordinate of the mouse position in the coordinate system of the current application window.
-
-Unit: vp.
+X coordinate of the mouse position in the coordinate system of the current application window. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -382,13 +368,13 @@ Unit: vp.
 windowY: number
 ```
 
-Y coordinate of the mouse position in the coordinate system of the current application window.
-
-Unit: vp.
+Y coordinate of the mouse position in the coordinate system of the current application window. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,14 +390,13 @@ Unit: vp.
 x: number
 ```
 
-X coordinate of the mouse point in the  
-[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the event-responsive component.
-
-Unit: vp.
+X coordinate of the mouse point in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the event- responsive component. Unit: vp.
 
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -425,14 +410,13 @@ Unit: vp.
 y: number
 ```
 
-Y coordinate of the mouse point in the  
-[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the event-responsive component.
-
-Unit: vp.
+Y coordinate of the mouse point in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the event- responsive component. Unit: vp.
 
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

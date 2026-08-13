@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getPluginBundlePathForSelf(pluginBundleName: string): string
 ```
 
-Obtains the installation path of a specified plugin in the current  
-[application sandbox](../../../file-management/app-sandbox-directory.md).
+Obtains the installation path of a specified plugin in the current [application sandbox](../../../file-management/app-sandbox-directory.md).
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
 
@@ -39,7 +40,7 @@ Obtains the installation path of a specified plugin in the current
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

@@ -4,6 +4,8 @@ Param when query insight intent entity.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-insightIntentDriver-interface QueryParam--><!--Device-insightIntentDriver-interface QueryParam-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -28,6 +30,8 @@ Indicates the bundle name.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-QueryParam-bundleName: string--><!--Device-QueryParam-bundleName: string-End-->
@@ -47,6 +51,8 @@ Indicates the entity class name.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Indicates the intent name.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-QueryParam-intentName: string--><!--Device-QueryParam-intentName: string-End-->
@@ -87,6 +95,8 @@ Indicates the module name.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +118,8 @@ Indicates the param for query entity.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-QueryParam-queryEntityParam: insightIntent.QueryEntityParam--><!--Device-QueryParam-queryEntityParam: insightIntent.QueryEntityParam-End-->
@@ -122,13 +134,13 @@ Indicates the param for query entity.
 userId?: number
 ```
 
-Indicates the target user ID.
-
-If the user ID of the caller application is different from the target user ID, you need to apply for permission: ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS.
+Indicates the target user ID. If the user ID of the caller application is different from the target user ID, you need to apply for permission: ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

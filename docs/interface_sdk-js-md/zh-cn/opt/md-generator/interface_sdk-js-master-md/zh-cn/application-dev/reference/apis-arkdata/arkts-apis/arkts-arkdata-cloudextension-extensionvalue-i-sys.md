@@ -2,7 +2,9 @@
 
 当前数据记录的扩展信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface ExtensionValue--><!--Device-cloudExtension-export interface ExtensionValue-End-->
 
@@ -20,7 +22,9 @@ readonly createTime: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionValue-readonly createTime: long--><!--Device-ExtensionValue-readonly createTime: long-End-->
 
@@ -38,7 +42,9 @@ readonly id: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionValue-readonly id: string--><!--Device-ExtensionValue-readonly id: string-End-->
 
@@ -56,7 +62,9 @@ readonly modifyTime: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionValue-readonly modifyTime: long--><!--Device-ExtensionValue-readonly modifyTime: long-End-->
 
@@ -74,7 +82,9 @@ readonly operation: Flag
 
 **类型：** [Flag](arkts-arkdata-cloudextension-flag-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionValue-readonly operation: Flag--><!--Device-ExtensionValue-readonly operation: Flag-End-->
 

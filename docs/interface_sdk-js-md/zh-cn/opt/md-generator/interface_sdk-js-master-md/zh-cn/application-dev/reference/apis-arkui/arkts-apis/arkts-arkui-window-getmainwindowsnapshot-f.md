@@ -9,7 +9,9 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 获取一个或多个指定windowId的主窗口截图，使用Promise异步回调。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
@@ -34,9 +36,9 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

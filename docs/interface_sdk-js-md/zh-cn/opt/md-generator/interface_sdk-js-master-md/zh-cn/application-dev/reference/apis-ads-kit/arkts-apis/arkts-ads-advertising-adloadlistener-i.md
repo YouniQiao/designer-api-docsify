@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-advertising-export interface AdLoadListener--><!--Device-advertising-export interface AdLoadListener-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -17,6 +19,8 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 广告请求失败回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,6 +60,8 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 广告请求成功后回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

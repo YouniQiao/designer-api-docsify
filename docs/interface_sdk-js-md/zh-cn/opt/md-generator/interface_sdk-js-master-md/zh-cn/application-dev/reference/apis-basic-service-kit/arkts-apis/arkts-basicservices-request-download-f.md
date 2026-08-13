@@ -12,7 +12,7 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 **废弃版本：** 9
 
-**替代接口：** [downloadFile](request.downloadFile(context:)
+**替代接口：** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -33,7 +33,7 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -63,7 +63,7 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 **废弃版本：** 9
 
-**替代接口：** [downloadFile](request.downloadFile(context:)
+**替代接口：** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -89,7 +89,7 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

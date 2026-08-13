@@ -4,11 +4,13 @@
 type WatermarkCallback = (jobId: string, fd: int) => void
 ```
 
-Defines the callback type used in registering to listen for watermark handling.The value of jobId indicates the print job ID.The value of fd indicates the fd.
+Defines the callback type used in registering to listen for watermark handling. The value of jobId indicates the print job ID. The value of fd indicates the fd.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -21,5 +23,5 @@ Defines the callback type used in registering to listen for watermark handling.T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobId | string | Yes | the print job ID <br>Print job ID in preview. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File Descriptor <br>File descriptor in preview. |
+| fd | int | Yes | File Descriptor <br>File descriptor in preview. |
 

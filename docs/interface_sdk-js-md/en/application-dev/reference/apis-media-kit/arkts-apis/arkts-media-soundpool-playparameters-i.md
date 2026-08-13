@@ -1,12 +1,12 @@
 # PlayParameters
 
-Describes the playback parameters of the sound pool.
+Describes the playback parameters of the sound pool. These parameters are used to control the playback volume, number of loops, and priority.
 
-These parameters are used to control the playback volume, number of loops, and priority.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
 
@@ -18,15 +18,15 @@ These parameters are used to control the playback volume, number of loops, and p
 leftVolume?: double
 ```
 
-Volume of the left channel. The value range is [0.0, 1.0], and the default value is **1.0**.
+Volume of the left channel. The value range is [0.0, 1.0], and the default value is **1.0**. When the volume exceeds the boundary value, the boundary value is automatically used.
 
-When the volume exceeds the boundary value, the boundary value is automatically used.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-leftVolume?: double--><!--Device-PlayParameters-leftVolume?: double-End-->
 
@@ -38,21 +38,15 @@ When the volume exceeds the boundary value, the boundary value is automatically 
 loop?: int
 ```
 
-Number of loops.
+Number of loops. If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1. If this parameter is set to a value less than 0, the content is played repeatedly. The default value is **0**, indicating that the content is played only once. If this parameter is set to a floating-point number, only the integer part is used.
 
-If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.
+**Type:** int
 
-If this parameter is set to a value less than 0, the content is played repeatedly.
+**Since:** 23
 
-The default value is **0**, indicating that the content is played only once.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-If this parameter is set to a floating-point number, only the integer part is used.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-loop?: int--><!--Device-PlayParameters-loop?: int-End-->
 
@@ -66,11 +60,13 @@ pitch?: double
 
 Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001. The default value is 1.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,17 +80,15 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 priority?: int
 ```
 
-Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority.
+Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority. The playback priority is determined by comparing the values. The value must be an integer greater than or equal to 0. The default value is **0**. If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
 
-The playback priority is determined by comparing the values. The value must be an integer greater than or equal to 0. The default value is **0**.
+**Type:** int
 
-If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
+**Since:** 23
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-priority?: int--><!--Device-PlayParameters-priority?: int-End-->
 
@@ -108,11 +102,13 @@ rate?: int
 
 Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audio-kit/arkts-apis-audio-e.md). Default value: **0**
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-rate?: int--><!--Device-PlayParameters-rate?: int-End-->
 
@@ -124,15 +120,15 @@ Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audi
 rightVolume?: double
 ```
 
-Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**.
+Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**. When the volume exceeds the boundary value, the boundary value is automatically used.
 
-When the volume exceeds the boundary value, the boundary value is automatically used.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-PlayParameters-rightVolume?: double--><!--Device-PlayParameters-rightVolume?: double-End-->
 

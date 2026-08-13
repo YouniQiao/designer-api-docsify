@@ -4,6 +4,8 @@ ToolInfo describes the basic summary information of a cli tool.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ToolSummary--><!--Device-unnamed-export interface ToolSummary-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -21,6 +23,8 @@ The description of the CLI tool.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ The name of the CLI tool.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolSummary-readonly name: string--><!--Device-ToolSummary-readonly name: string-End-->
@@ -61,6 +67,8 @@ The version of the CLI tool (format defined by provider, e.g., "1.0.0").
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

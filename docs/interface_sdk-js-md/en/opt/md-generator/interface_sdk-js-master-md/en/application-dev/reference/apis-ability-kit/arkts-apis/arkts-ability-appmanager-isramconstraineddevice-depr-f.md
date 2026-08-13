@@ -6,13 +6,13 @@
 function isRamConstrainedDevice(): Promise<boolean>
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses a promise to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses a promise to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [isRamConstrainedDevice](ohos.app.ability.appManager/appManager#isRamConstrainedDevice)
+**Substitutes:** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isRamConstrainedDevice)
 
 <!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>--><!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>-End-->
 
@@ -44,13 +44,13 @@ appManager.isRamConstrainedDevice().then((data) => {
 function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses an asynchronous callback to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [isRamConstrainedDevice](ohos.app.ability.appManager/appManager#isRamConstrainedDevice)
+**Substitutes:** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isRamConstrainedDevice)
 
 <!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void-End-->
 

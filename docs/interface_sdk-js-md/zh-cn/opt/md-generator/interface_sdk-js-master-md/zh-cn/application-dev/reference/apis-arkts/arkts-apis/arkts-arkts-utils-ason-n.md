@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-utils-namespace ASON--><!--Device-utils-namespace ASON-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

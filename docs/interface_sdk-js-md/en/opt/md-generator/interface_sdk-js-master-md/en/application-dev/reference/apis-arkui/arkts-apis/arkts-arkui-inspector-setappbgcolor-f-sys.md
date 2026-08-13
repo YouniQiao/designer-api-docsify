@@ -10,6 +10,8 @@ Set app background color.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function setAppBgColor(value: string): void--><!--Device-unnamed-declare function setAppBgColor(value: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

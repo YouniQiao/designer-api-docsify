@@ -4,9 +4,9 @@ Declare OperateItemV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class OperateItemV2--><!--Device-unnamed-export declare class OperateItemV2-End-->
 
@@ -28,9 +28,13 @@ The constructor of OperateItemV2.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2-constructor(options?: OperateItemV2Options)--><!--Device-OperateItemV2-constructor(options?: OperateItemV2Options)-End-->
 
@@ -45,7 +49,8 @@ The constructor of OperateItemV2.
 ## arrow
 
 ```TypeScript
-public arrow?: OperateIconV2
+@Trace
+  public arrow?: OperateIconV2
 ```
 
 Sets the arrow.
@@ -54,18 +59,23 @@ Sets the arrow.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public arrow?: OperateIconV2--><!--Device-OperateItemV2-public arrow?: OperateIconV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public arrow?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public arrow?: OperateIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## button
 
 ```TypeScript
-public button?: OperateButtonV2
+@Trace
+  public button?: OperateButtonV2
 ```
 
 Sets the button.
@@ -74,18 +84,23 @@ Sets the button.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public button?: OperateButtonV2--><!--Device-OperateItemV2-public button?: OperateButtonV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public button?: OperateButtonV2--><!--Device-OperateItemV2-@Trace  public button?: OperateButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checkbox
 
 ```TypeScript
-public checkbox?: OperateCheckV2
+@Trace
+  public checkbox?: OperateCheckV2
 ```
 
 Sets the checkBox.
@@ -94,18 +109,23 @@ Sets the checkBox.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public checkbox?: OperateCheckV2--><!--Device-OperateItemV2-public checkbox?: OperateCheckV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public checkbox?: OperateCheckV2--><!--Device-OperateItemV2-@Trace  public checkbox?: OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
 
 ```TypeScript
-public icon?: OperateIconV2
+@Trace
+  public icon?: OperateIconV2
 ```
 
 Sets the icon.
@@ -114,18 +134,23 @@ Sets the icon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public icon?: OperateIconV2--><!--Device-OperateItemV2-public icon?: OperateIconV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public icon?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public icon?: OperateIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## image
 
 ```TypeScript
-public image?: ResourceStr
+@Trace
+  public image?: ResourceStr
 ```
 
 Sets the image.
@@ -134,18 +159,23 @@ Sets the image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public image?: ResourceStr--><!--Device-OperateItemV2-public image?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public image?: ResourceStr--><!--Device-OperateItemV2-@Trace  public image?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radio
 
 ```TypeScript
-public radio?: OperateCheckV2
+@Trace
+  public radio?: OperateCheckV2
 ```
 
 Sets the radio.
@@ -154,18 +184,23 @@ Sets the radio.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public radio?: OperateCheckV2--><!--Device-OperateItemV2-public radio?: OperateCheckV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public radio?: OperateCheckV2--><!--Device-OperateItemV2-@Trace  public radio?: OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## subIcon
 
 ```TypeScript
-public subIcon?: OperateIconV2
+@Trace
+  public subIcon?: OperateIconV2
 ```
 
 Sets the subIcon.
@@ -174,18 +209,23 @@ Sets the subIcon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public subIcon?: OperateIconV2--><!--Device-OperateItemV2-public subIcon?: OperateIconV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public subIcon?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public subIcon?: OperateIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
 
 ```TypeScript
-public symbolStyle?: SymbolGlyphModifier
+@Trace
+  public symbolStyle?: SymbolGlyphModifier
 ```
 
 Sets the symbolStyle.
@@ -194,18 +234,23 @@ Sets the symbolStyle.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItemV2-public symbolStyle?: SymbolGlyphModifier-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
 
 ```TypeScript
-public text?: ResourceStr
+@Trace
+  public text?: ResourceStr
 ```
 
 Sets the text.
@@ -214,18 +259,23 @@ Sets the text.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public text?: ResourceStr--><!--Device-OperateItemV2-public text?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public text?: ResourceStr--><!--Device-OperateItemV2-@Trace  public text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toggle
 
 ```TypeScript
-public toggle?: OperateCheckV2
+@Trace
+  public toggle?: OperateCheckV2
 ```
 
 Sets the toggle.
@@ -234,11 +284,15 @@ Sets the toggle.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OperateItemV2-public toggle?: OperateCheckV2--><!--Device-OperateItemV2-public toggle?: OperateCheckV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-@Trace  public toggle?: OperateCheckV2--><!--Device-OperateItemV2-@Trace  public toggle?: OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

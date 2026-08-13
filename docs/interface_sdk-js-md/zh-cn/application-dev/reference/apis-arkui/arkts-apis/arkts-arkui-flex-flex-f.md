@@ -3,6 +3,7 @@
 ## Flex
 
 ```TypeScript
+@ComponentBuilder
 export declare function Flex(
     value?: FlexOptions,
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Flex布局容器。
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-export declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Flex(    value?: FlexOptions,    content_?: CustomBuilder,): FlexAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,18 +29,19 @@ Flex布局容器。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [FlexOptions](arkts-arkui-flex-flexoptions-i.md) | 否 | 弹性布局子组件参数。 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | CustomBuilder | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlexAttribute](arkts-arkui-flex-flexattribute-i.md) |  |
+| FlexAttribute |  |
 
 
 ## Flex
 
 ```TypeScript
+@Builder
 export declare function Flex(
     style: CustomBuilderT<FlexAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines Flex Component.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-export declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute--><!--Device-unnamed-@Builderexport declare function Flex(    style: CustomBuilderT<FlexAttribute>,    content_?: CustomBuilder,): FlexAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,12 +66,12 @@ Defines Flex Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[FlexAttribute](arkts-arkui-flex-flexattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
+| style | CustomBuilderT&lt;FlexAttribute&gt; | 是 | the callback to set up component's attributes. |
+| content_ | CustomBuilder | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlexAttribute](arkts-arkui-flex-flexattribute-i.md) |  |
+| FlexAttribute |  |
 

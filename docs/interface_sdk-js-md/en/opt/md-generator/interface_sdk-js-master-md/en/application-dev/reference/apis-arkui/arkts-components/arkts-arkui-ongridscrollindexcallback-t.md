@@ -8,6 +8,8 @@ Represents a callback for item changes in the visible area of the **Grid** compo
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -21,4 +23,4 @@ Represents a callback for item changes in the visible area of the **Grid** compo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | first | number | Yes |
-| [last](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-breakiterator-c.md) | number | Yes |
+| [last](../../apis-na/arkts-apis/arkts-na-i18n-breakiterator-c.md) | number | Yes |

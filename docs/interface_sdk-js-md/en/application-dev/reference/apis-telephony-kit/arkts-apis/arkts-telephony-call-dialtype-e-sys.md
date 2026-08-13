@@ -2,9 +2,11 @@
 
 Enumerates dialup types.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum DialType--><!--Device-call-export enum DialType-End-->
 
@@ -20,9 +22,11 @@ DIAL_CARRIER_TYPE = 0
 
 Carrier.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialType-DIAL_CARRIER_TYPE = 0--><!--Device-DialType-DIAL_CARRIER_TYPE = 0-End-->
 
@@ -38,9 +42,11 @@ DIAL_VOICE_MAIL_TYPE = 1
 
 Voice mail.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialType-DIAL_VOICE_MAIL_TYPE = 1--><!--Device-DialType-DIAL_VOICE_MAIL_TYPE = 1-End-->
 
@@ -56,9 +62,11 @@ DIAL_OTT_TYPE = 2
 
 OTT.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialType-DIAL_OTT_TYPE = 2--><!--Device-DialType-DIAL_OTT_TYPE = 2-End-->
 
@@ -76,7 +84,9 @@ X-Call.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-DialType-DIAL_XCALL_TYPE = 3--><!--Device-DialType-DIAL_XCALL_TYPE = 3-End-->
 

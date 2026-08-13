@@ -2,7 +2,9 @@
 
 Enumerates the display modes of secondary screens.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screen-enum MultiScreenMode--><!--Device-screen-enum MultiScreenMode-End-->
 
@@ -18,7 +20,9 @@ SCREEN_MIRROR = 0
 
 Mirror mode.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiScreenMode-SCREEN_MIRROR = 0--><!--Device-MultiScreenMode-SCREEN_MIRROR = 0-End-->
 
@@ -34,7 +38,9 @@ SCREEN_EXTEND = 1
 
 Extend mode.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiScreenMode-SCREEN_EXTEND = 1--><!--Device-MultiScreenMode-SCREEN_EXTEND = 1-End-->
 

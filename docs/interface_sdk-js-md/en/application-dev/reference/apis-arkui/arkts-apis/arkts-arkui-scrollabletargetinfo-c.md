@@ -8,7 +8,9 @@ Provides the information about the scrollable container component corresponding 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare class ScrollableTargetInfo extends EventTargetInfo--><!--Device-unnamed-declare class ScrollableTargetInfo extends EventTargetInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ScrollableTargetInfo--><!--Device-unnamed-declare class ScrollableTargetInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Checks whether this scrollable container component is scrolled to the top. If it
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ Checks whether the current scroll container is scrolled to the bottom. If the co
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

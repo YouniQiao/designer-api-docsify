@@ -4,6 +4,8 @@ Enumerates keyboard fluid lighting effects.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum KeyboardFluidLightMode--><!--Device-unnamed-declare enum KeyboardFluidLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ NONE = 0
 No fluid lighting effect.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ BACKGROUND_FLUID_LIGHT = 1
 Background fluid lighting effect enabled.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

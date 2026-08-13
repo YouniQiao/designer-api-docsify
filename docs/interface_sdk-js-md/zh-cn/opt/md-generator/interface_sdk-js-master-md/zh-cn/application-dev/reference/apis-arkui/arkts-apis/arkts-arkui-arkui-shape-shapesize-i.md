@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface ShapeSize--><!--Device-unnamed-interface ShapeSize-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,21 +16,13 @@
 height?: number | string
 ```
 
-形状的高度。 
-
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 
-
-单位：vp
-
-默认值：0vp
-
-取值为异常值时按照0vp处理。
-
-不设置时默认值为0vp。
+形状的高度。 类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 单位：vp 默认值：0vp 取值为异常值时按照0vp处理。 不设置时默认值为0vp。
 
 **类型：** number \| string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,21 +40,13 @@ height?: number | string
 width?: number | string
 ```
 
-形状的宽度。
-
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 
-
-单位：vp
-
-默认值：0vp
-
-取值为异常值时按照0vp处理。
-
-不设置时默认值为0vp。
+形状的宽度。 类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 单位：vp 默认值：0vp 取值为异常值时按照0vp处理。 不设置时默认值为0vp。
 
 **类型：** number \| string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

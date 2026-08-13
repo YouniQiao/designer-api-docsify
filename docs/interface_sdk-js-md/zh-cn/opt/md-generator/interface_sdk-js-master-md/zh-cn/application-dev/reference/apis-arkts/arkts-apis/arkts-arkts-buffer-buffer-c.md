@@ -2,7 +2,9 @@
 
 Buffer对象是处理二进制数据的缓冲区。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
 
@@ -23,6 +25,8 @@ compare(
 比较当前Buffer对象与目标Buffer或Uint8Array对象，并返回在排序中的结果。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +54,7 @@ compare(
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -68,6 +72,52 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 // 输出结果：1
 ```
 
+## compare
+
+```TypeScript
+compare(
+      target: Buffer | Uint8Array,
+      targetStart?: number,
+      targetEnd?: number,
+      sourceStart?: number,
+      sourceEnd?: number
+    ): number
+```
+
+比较当前Buffer对象与目标Buffer或Uint8Array对象，并返回在排序中的结果。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 |
+| targetStart | number | 否 |
+| targetEnd | number | 否 |
+| sourceStart | number | 否 |
+| sourceEnd | number | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
 ## copy
 
 ```TypeScript
@@ -76,7 +126,9 @@ copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, so
 
 将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -103,7 +155,7 @@ copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, so
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -130,7 +182,9 @@ entries(): IterableIterator<[number, number]>
 
 返回一个包含字节索引（key）和字节值（value）的迭代器。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -175,7 +229,9 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 比较`this`实例和otherBuffer实例是否相等。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -223,7 +279,9 @@ fill(
 
 使用value填充当前对象指定位置的数据，当value的长度小于需要填充的范围时会重复value进行填充，并返回填充后的Buffer对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -250,7 +308,7 @@ fill(
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## includes
 
@@ -260,7 +318,9 @@ includes(value: string | number | number | number | Buffer | Uint8Array, byteOff
 
 检查Buffer对象是否包含value值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -273,7 +333,7 @@ includes(value: string | number | number | number | Buffer | Uint8Array, byteOff
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 |
-| [byteOffset](#byteoffset) | number | 否 |
+| [byteOffset](#byteOffset) | number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
 **返回值：**
@@ -290,7 +350,9 @@ indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffs
 
 返回当前对象中首次出现value的索引，如果不包含value，则返回-1。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -303,7 +365,7 @@ indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffs
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 |
-| [byteOffset](#byteoffset) | number | 否 |
+| [byteOffset](#byteOffset) | number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
 **返回值：**
@@ -320,7 +382,9 @@ keys(): IterableIterator<number>
 
 返回一个包含字节索引（key）和字节值（value）的迭代器。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -362,7 +426,9 @@ lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byte
 
 返回this实例中最后一次出现value的索引，如果对象不包含value，则返回-1。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -375,7 +441,7 @@ lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byte
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 |
-| [byteOffset](#byteoffset) | number | 否 |
+| [byteOffset](#byteOffset) | number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
 **返回值：**
@@ -392,7 +458,9 @@ readBigInt64BE(offset?: number): bigint
 
 从指定的`offset`处读取有符号的大端序64位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -416,7 +484,7 @@ readBigInt64BE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -442,7 +510,9 @@ readBigInt64LE(offset?: number): bigint
 
 从指定的`offset`处读取有符号的小端序64位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -466,7 +536,7 @@ readBigInt64LE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -492,7 +562,9 @@ readBigUInt64BE(offset?: number): bigint
 
 从指定的`offset`处读取无符号的大端序64位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -516,7 +588,7 @@ readBigUInt64BE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -541,7 +613,9 @@ readBigUInt64LE(offset?: number): bigint
 
 从指定的`offset`处读取无符号的小端序64位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -565,7 +639,7 @@ readBigUInt64LE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -591,7 +665,9 @@ readDoubleBE(offset?: number): number
 
 从指定的`offset`处读取64位大端序双精度值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -615,7 +691,7 @@ readDoubleBE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -639,7 +715,9 @@ readDoubleLE(offset?: number): number
 
 从指定的`offset`处读取64位小端序双精度值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -663,7 +741,7 @@ readDoubleLE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -687,7 +765,9 @@ readFloatBE(offset?: number): number
 
 从指定的`offset`处读取32位大端序浮点数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -711,7 +791,7 @@ readFloatBE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -735,7 +815,9 @@ readFloatLE(offset?: number): number
 
 从指定的`offset`处读取32位小端序浮点数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -759,7 +841,7 @@ readFloatLE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -783,7 +865,9 @@ readInt16BE(offset?: number): number
 
 从指定的`offset`处读取有符号的大端序16位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -807,7 +891,7 @@ readInt16BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -831,7 +915,9 @@ readInt16LE(offset?: number): number
 
 从指定的`offset`处读取有符号的小端序16位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -855,7 +941,7 @@ readInt16LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -879,7 +965,9 @@ readInt32BE(offset?: number): number
 
 从指定的`offset`处读取有符号的大端序32位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -903,7 +991,7 @@ readInt32BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -927,7 +1015,9 @@ readInt32LE(offset?: number): number
 
 从指定的`offset`处读取有符号的小端序32位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -951,7 +1041,7 @@ readInt32LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -975,7 +1065,9 @@ readInt8(offset?: number): number
 
 从指定的`offset`处读取有符号的8位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -999,7 +1091,7 @@ readInt8(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1025,7 +1117,9 @@ readIntBE(offset: number, byteLength: number): number
 
 从指定的`offset`处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1050,7 +1144,7 @@ readIntBE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1075,7 +1169,9 @@ readIntLE(offset: number, byteLength: number): number
 
 从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1100,7 +1196,7 @@ readIntLE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1124,7 +1220,9 @@ readUInt16BE(offset?: number): number
 
 从指定的`offset`处读取无符号的大端序16位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1148,7 +1246,7 @@ readUInt16BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1174,7 +1272,9 @@ readUInt16LE(offset?: number): number
 
 从指定的`offset`处读取无符号的小端序16位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1198,7 +1298,7 @@ readUInt16LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1224,7 +1324,9 @@ readUInt32BE(offset?: number): number
 
 从指定的`offset`处的buf读取无符号的大端序32位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1248,7 +1350,7 @@ readUInt32BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1272,7 +1374,9 @@ readUInt32LE(offset?: number): number
 
 从指定的`offset`处的buf读取无符号的小端序32位整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1296,7 +1400,7 @@ readUInt32LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1320,7 +1424,9 @@ readUInt8(offset?: number): number
 
 从指定的`offset`处读取8位无符号整型数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1344,7 +1450,7 @@ readUInt8(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1370,7 +1476,9 @@ readUIntBE(offset: number, byteLength: number): number
 
 从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1395,7 +1503,7 @@ readUIntBE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1419,7 +1527,9 @@ readUIntLE(offset: number, byteLength: number): number
 
 从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1444,7 +1554,7 @@ readUIntLE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1468,7 +1578,9 @@ subarray(start?: number, end?: number): Buffer
 
 截取当前对象指定位置的数据并返回。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1512,7 +1624,9 @@ swap16(): Buffer
 
 将当前对象转换为无符号的16位整数数组，并交换字节顺序。适用于需要在大端序和小端序之间转换16位数据的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1530,7 +1644,7 @@ swap16(): Buffer
 
 | 错误码ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
 
 ## 示例
 
@@ -1553,7 +1667,9 @@ swap32(): Buffer
 
 将当前对象转换为无符号的32位整数数组，并交换字节顺序。适用于需要在大端序和小端序之间转换32位数据的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1571,7 +1687,7 @@ swap32(): Buffer
 
 | 错误码ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
 
 ## 示例
 
@@ -1594,7 +1710,9 @@ swap64(): Buffer
 
 将当前对象转换为无符号的64位整数数组，并交换字节顺序。适用于需要在大端序和小端序之间转换64位数据的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1612,7 +1730,7 @@ swap64(): Buffer
 
 | 错误码ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
 
 ## 示例
 
@@ -1637,6 +1755,8 @@ toJSON(): Object
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
@@ -1660,6 +1780,30 @@ console.info(JSON.stringify(obj));
 // 输出结果: {"type":"Buffer","data":[1,2,3,4,5]}
 ```
 
+## toJSON
+
+```TypeScript
+toJSON(): jsonx.JsonElement
+```
+
+将此Buffer实例转换为JsonElement。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-toJSON(): jsonx.JsonElement--><!--Device-Buffer-toJSON(): jsonx.JsonElement-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| jsonx.JsonElement |
+
 ## toString
 
 ```TypeScript
@@ -1669,6 +1813,8 @@ toString(encoding?: string, start?: number, end?: number): string
 将当前对象中指定位置的数据转成指定编码格式的字符串并返回。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1703,6 +1849,66 @@ console.info(buf1.toString('utf-8'));
 // 输出结果: abcdefghijklmnopqrstuvwxyz
 ```
 
+## toString
+
+```TypeScript
+toString(): string
+```
+
+按照encoding指定的字符编码将buf解码为字符串。
+
+**起始版本：** 24
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-toString(): string--><!--Device-Buffer-toString(): string-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+## toString
+
+```TypeScript
+toString(encoding?: BufferEncoding, start?: number, end?: number): string
+```
+
+按照encoding指定的字符编码将buf解码为字符串。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string--><!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
+| start | number | 否 |
+| end | number | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
 ## values
 
 ```TypeScript
@@ -1711,7 +1917,9 @@ values(): IterableIterator<number>
 
 返回一个包含value的迭代器。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1755,7 +1963,9 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 在Buffer对象的offset偏移处写入指定编码的字符串，写入的字节长度为length。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1782,7 +1992,7 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1808,7 +2018,9 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 在Buffer对象的offset偏移处写入有符号的大端序64位BigInt型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1833,7 +2045,7 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1854,7 +2066,9 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 在Buffer对象的offset偏移处写入有符号的小端序64位BigInt型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1879,7 +2093,7 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1900,7 +2114,9 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 在Buffer对象的offset偏移处写入无符号的大端序64位BigUInt型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1925,7 +2141,7 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1946,7 +2162,9 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 在Buffer对象的offset偏移处写入无符号的小端序64位BigUInt型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1971,7 +2189,7 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1992,7 +2210,9 @@ writeDoubleBE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入大端序的64位双浮点型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2017,7 +2237,7 @@ writeDoubleBE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2038,7 +2258,9 @@ writeDoubleLE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入小端序的64位双浮点型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2063,7 +2285,7 @@ writeDoubleLE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2084,7 +2306,9 @@ writeFloatBE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入大端序的32位浮点型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2109,7 +2333,7 @@ writeFloatBE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2130,7 +2354,9 @@ writeFloatLE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入小端序的32位浮点型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2155,7 +2381,7 @@ writeFloatLE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2176,7 +2402,9 @@ writeInt16BE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入大端序的16位有符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2201,7 +2429,7 @@ writeInt16BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2222,7 +2450,9 @@ writeInt16LE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入小端序的16位有符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2247,7 +2477,7 @@ writeInt16LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2268,7 +2498,9 @@ writeInt32BE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入大端序的32位有符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2293,7 +2525,7 @@ writeInt32BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2314,7 +2546,9 @@ writeInt32LE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入小端序的32位有符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2339,7 +2573,7 @@ writeInt32LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2360,7 +2594,9 @@ writeInt8(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入8位有符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2385,7 +2621,7 @@ writeInt8(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2409,7 +2645,9 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 在Buffer对象的offset偏移处写入大端序的有符号数据，字节长度为byteLength。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2435,7 +2673,7 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2456,7 +2694,9 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 在Buffer对象的offset偏移处写入小端序的有符号数据，字节长度为byteLength。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2482,7 +2722,7 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2503,7 +2743,9 @@ writeUInt16BE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入大端序的16位无符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2528,7 +2770,7 @@ writeUInt16BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2552,7 +2794,9 @@ writeUInt16LE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入小端序的16位无符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2577,7 +2821,7 @@ writeUInt16LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2601,7 +2845,9 @@ writeUInt32BE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入大端序的32位无符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2626,7 +2872,7 @@ writeUInt32BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2647,7 +2893,9 @@ writeUInt32LE(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入小端序的32位无符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2672,7 +2920,7 @@ writeUInt32LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2693,7 +2941,9 @@ writeUInt8(value: number, offset?: number): number
 
 在Buffer对象的offset偏移处写入8位无符号整型数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2718,7 +2968,7 @@ writeUInt8(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2748,7 +2998,9 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 在Buffer对象的offset偏移处写入大端序的无符号数据，字节长度为byteLength。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2774,7 +3026,7 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2795,7 +3047,9 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 在Buffer对象的offset偏移处写入小端序的无符号数据，字节长度为byteLength。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2821,7 +3075,7 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2846,6 +3100,8 @@ ArrayBuffer对象。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
@@ -2858,12 +3114,13 @@ ArrayBuffer对象。
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。&lt;br&gt;- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocUninitializedFromPool)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。&lt;br&gt;- 当Buffer直接分配内存时（如使用  
-[alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
+当前Buffer所在内存池的偏移量。&lt;br&gt;- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocUninitializedFromPool)创 建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。&lt;br&gt;- 当Buffer直接分配内存时（如使用 [alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
 
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2882,6 +3139,8 @@ Buffer对象的字节长度。
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

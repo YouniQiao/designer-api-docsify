@@ -2,9 +2,11 @@
 
 Enumerates the types of properties to obtain.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum GetPropertyType--><!--Device-osAccount-enum GetPropertyType-End-->
 
@@ -20,9 +22,11 @@ AUTH_SUB_TYPE = 1
 
 Authentication credential subtype.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetPropertyType-AUTH_SUB_TYPE = 1--><!--Device-GetPropertyType-AUTH_SUB_TYPE = 1-End-->
 
@@ -38,9 +42,11 @@ REMAIN_TIMES = 2
 
 Number of remaining times.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetPropertyType-REMAIN_TIMES = 2--><!--Device-GetPropertyType-REMAIN_TIMES = 2-End-->
 
@@ -56,9 +62,11 @@ FREEZING_TIME = 3
 
 Freezing time.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetPropertyType-FREEZING_TIME = 3--><!--Device-GetPropertyType-FREEZING_TIME = 3-End-->
 
@@ -74,9 +82,11 @@ ENROLLMENT_PROGRESS = 4
 
 Enrollment progress, which is left blank by default.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4--><!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4-End-->
 
@@ -92,9 +102,11 @@ SENSOR_INFO = 5
 
 Sensor information, which is left blank by default.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetPropertyType-SENSOR_INFO = 5--><!--Device-GetPropertyType-SENSOR_INFO = 5-End-->
 
@@ -110,9 +122,11 @@ NEXT_PHASE_FREEZING_TIME = 6
 
 Next freezing time.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6--><!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6-End-->
 
@@ -128,9 +142,11 @@ CREDENTIAL_LENGTH = 7
 
 Credential length.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7--><!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7-End-->
 

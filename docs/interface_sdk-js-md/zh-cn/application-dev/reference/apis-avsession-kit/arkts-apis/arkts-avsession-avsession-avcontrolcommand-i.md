@@ -2,9 +2,11 @@
 
 会话接受的命令的对象描述。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface AVControlCommand--><!--Device-avSession-interface AVControlCommand-End-->
 
@@ -20,9 +22,11 @@ command: AVControlCommandType
 
 **类型：** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,9 +44,11 @@ commandInfo?: CommandInfo
 
 **类型：** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVControlCommand-commandInfo?: CommandInfo--><!--Device-AVControlCommand-commandInfo?: CommandInfo-End-->
 
@@ -56,11 +62,13 @@ parameter?: LoopMode | string | double
 
 命令对应的参数。
 
-**类型：** ArkTS-Dyn: [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number  <br>ArkTS-Sta：[LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
+**类型：** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

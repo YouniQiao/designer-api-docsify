@@ -12,7 +12,7 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [displayBadge](ohos.notificationManager/notificationManager#displayBadge)
+**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displayBadge（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,7 +43,7 @@ function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [displayBadge](ohos.notificationManager/notificationManager#displayBadge)
+**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displayBadge（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

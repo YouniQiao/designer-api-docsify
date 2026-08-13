@@ -6,6 +6,8 @@ Defines an application that creates the contact.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Holder--><!--Device-contact-class Holder-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,6 +32,8 @@ Bundle name. The default value is **com.ohos.contacts**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-Holder-readonly bundleName: string--><!--Device-Holder-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -48,6 +52,8 @@ Application name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-Holder-readonly displayName?: string--><!--Device-Holder-readonly displayName?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -65,6 +71,8 @@ Application ID.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-Holder-holderId?: number--><!--Device-Holder-holderId?: number-End-->
 

@@ -1,10 +1,12 @@
 # BaseGestureHandlingProposal
 
-Class BaseGestureHandlingProposal.
+Base class for smart gesture handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, the callback parameter type is an instance of a specific subclass type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export abstract class BaseGestureHandlingProposal--><!--Device-unnamed-export abstract class BaseGestureHandlingProposal-End-->
 
@@ -22,15 +24,19 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 action: SmartGestureAction
 ```
 
-The smart gesture action to be performed. Defines the specific operation triggered by the gesture.
+Final action of the smart gesture.
 
 **Type:** SmartGestureAction
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-BaseGestureHandlingProposal-action: SmartGestureAction--><!--Device-BaseGestureHandlingProposal-action: SmartGestureAction-End-->
 
@@ -42,15 +48,19 @@ The smart gesture action to be performed. Defines the specific operation trigger
 operateIntention: OperateIntention
 ```
 
-The underlying user operation intention. Represents the fundamental user interaction goal.
+Underlying operation intention of the smart gesture.
 
 **Type:** OperateIntention
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-BaseGestureHandlingProposal-operateIntention: OperateIntention--><!--Device-BaseGestureHandlingProposal-operateIntention: OperateIntention-End-->
 

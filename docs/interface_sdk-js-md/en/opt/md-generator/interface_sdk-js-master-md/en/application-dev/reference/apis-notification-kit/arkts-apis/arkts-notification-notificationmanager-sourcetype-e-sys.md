@@ -2,7 +2,9 @@
 
 Defines the notification source type.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export enum SourceType--><!--Device-notificationManager-export enum SourceType-End-->
 
@@ -18,7 +20,9 @@ TYPE_NORMAL = 0
 
 Normal notification.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SourceType-TYPE_NORMAL = 0--><!--Device-SourceType-TYPE_NORMAL = 0-End-->
 
@@ -34,7 +38,9 @@ TYPE_CONTINUOUS = 1
 
 Continuous notification.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SourceType-TYPE_CONTINUOUS = 1--><!--Device-SourceType-TYPE_CONTINUOUS = 1-End-->
 
@@ -50,7 +56,9 @@ TYPE_TIMER = 2
 
 Timed notification.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SourceType-TYPE_TIMER = 2--><!--Device-SourceType-TYPE_TIMER = 2-End-->
 

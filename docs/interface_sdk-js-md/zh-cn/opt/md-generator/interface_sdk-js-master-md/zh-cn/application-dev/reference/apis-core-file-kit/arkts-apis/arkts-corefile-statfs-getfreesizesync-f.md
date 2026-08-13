@@ -8,7 +8,9 @@ function getFreeSizeSync(path: string): number
 
 以同步方法获取指定文件系统空闲字节数。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-statfs-function getFreeSizeSync(path: string): long--><!--Device-statfs-function getFreeSizeSync(path: string): long-End-->
 

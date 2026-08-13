@@ -4,7 +4,9 @@ Defines the details for triggering a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Trigger--><!--Device-unnamed-export interface Trigger-End-->
 
@@ -24,7 +26,9 @@ Details about a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Trigger-condition:Geofence--><!--Device-Trigger-condition:Geofence-End-->
 
@@ -40,11 +44,13 @@ displayTime?:int
 
 Display time of a live view, in seconds. The value ranges from 15 to 1800. The default value is **900**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Trigger-displayTime?:int--><!--Device-Trigger-displayTime?:int-End-->
 
@@ -64,7 +70,9 @@ Trigger type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Trigger-type:TriggerType--><!--Device-Trigger-type:TriggerType-End-->
 

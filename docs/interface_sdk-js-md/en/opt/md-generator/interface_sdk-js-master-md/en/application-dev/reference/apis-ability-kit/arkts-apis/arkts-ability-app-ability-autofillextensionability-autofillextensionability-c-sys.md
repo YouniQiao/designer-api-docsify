@@ -2,11 +2,13 @@
 
 The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility).
 
-**Inheritance/Implementation:** AutoFillExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** AutoFillExtensionAbility extends ExtensionAbility
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AutoFillExtensionAbility--><!--Device-unnamed-declare class AutoFillExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -26,7 +28,9 @@ onBackground(): void
 
 Called when this AutoFillExtensionAbility is switched from the foreground to the background.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,7 +61,9 @@ onCreate(): void
 
 Called when an AutoFillExtensionAbility is created.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +96,8 @@ Called to clear resources when this AutoFillExtensionAbility is destroyed. This 
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>-End-->
@@ -111,6 +119,32 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 }
 ```
 
+## onDestroy
+
+```TypeScript
+onDestroy(): Promise<void> | undefined
+```
+
+Called to clear resources when this AutoFillExtensionAbility is destroyed.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoFillExtensionAbility-onDestroy(): Promise<void> | undefined--><!--Device-AutoFillExtensionAbility-onDestroy(): Promise<void> | undefined-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
 ## onFillRequest
 
 ```TypeScript
@@ -119,7 +153,9 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 Called when an auto-fill request is initiated or a password is generated.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,7 +170,7 @@ Called when an auto-fill request is initiated or a password is generated.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
-| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | Yes |
+| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) | Yes |
 | callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | Yes |
 
 ## Examples
@@ -180,7 +216,9 @@ onForeground(): void
 
 Called when this AutoFillExtensionAbility is switched from the background to the foreground.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -211,7 +249,9 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 Called when automatic or manual saving is initiated.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,7 +266,7 @@ Called when automatic or manual saving is initiated.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
-| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Yes |
+| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | Yes |
 | callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | Yes |
 
 ## Examples
@@ -270,7 +310,9 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 Called when a UIExtensionContentSession instance is destroyed for this AutoFillExtensionAbility.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -307,7 +349,9 @@ onUpdateRequest(request: UpdateRequest): void
 
 Called when an update request is received.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -347,7 +391,9 @@ Context of the AutoFillExtensionAbility. This context inherits from **ExtensionC
 
 **Type:** [AutoFillExtensionContext](arkts-ability-autofillextensioncontext-c-sys.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

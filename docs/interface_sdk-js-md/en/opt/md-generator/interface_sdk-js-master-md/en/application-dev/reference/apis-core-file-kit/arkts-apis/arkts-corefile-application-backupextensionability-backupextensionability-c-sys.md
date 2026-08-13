@@ -2,7 +2,9 @@
 
 Class to be override for backup extension ability.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
 
@@ -20,9 +22,11 @@ import { BundleVersion } from '@kit.CoreFileKit';
 getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-Callback to be called when getting application backup compatibilityInfo.Developer could override this method to provide the backup compatibilityInfo.
+Callback to be called when getting application backup compatibilityInfo. Developer could override this method to provide the backup compatibilityInfo.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +54,11 @@ Callback to be called when getting application backup compatibilityInfo.Develope
 getBackupInfo(): string
 ```
 
-Callback to be called when getting application backupInfo.Developer could override this method to provide the backupInfo.
+Callback to be called when getting application backupInfo. Developer could override this method to provide the backupInfo.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,9 +80,11 @@ Callback to be called when getting application backupInfo.Developer could overri
 getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-Callback to be called when getting application restore compatibilityInfo.Developer could override this method to provide the restore compatibilityInfo.
+Callback to be called when getting application restore compatibilityInfo. Developer could override this method to provide the restore compatibilityInfo.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

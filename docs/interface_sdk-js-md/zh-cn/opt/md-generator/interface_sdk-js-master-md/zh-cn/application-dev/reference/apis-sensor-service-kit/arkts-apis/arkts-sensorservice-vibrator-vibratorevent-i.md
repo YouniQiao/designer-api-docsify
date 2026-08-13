@@ -2,7 +2,9 @@
 
 振动事件。用于[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md#VibratorPattern)的events数组中定义具体的振动事件。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-vibrator-interface VibratorEvent--><!--Device-vibrator-interface VibratorEvent-End-->
 
@@ -18,7 +20,9 @@ duration?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorEvent-duration?: int--><!--Device-VibratorEvent-duration?: int-End-->
 
@@ -34,7 +38,9 @@ eventType: VibratorEventType
 
 **类型：** [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorEvent-eventType: VibratorEventType--><!--Device-VibratorEvent-eventType: VibratorEventType-End-->
 
@@ -50,7 +56,9 @@ frequency?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorEvent-frequency?: int--><!--Device-VibratorEvent-frequency?: int-End-->
 
@@ -66,7 +74,9 @@ index?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorEvent-index?: int--><!--Device-VibratorEvent-index?: int-End-->
 
@@ -82,7 +92,9 @@ intensity?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorEvent-intensity?: int--><!--Device-VibratorEvent-intensity?: int-End-->
 
@@ -98,7 +110,9 @@ points?: Array<VibratorCurvePoint>
 
 **类型：** Array&lt;[VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md)&gt;
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>--><!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>-End-->
 
@@ -114,7 +128,9 @@ time: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VibratorEvent-time: int--><!--Device-VibratorEvent-time: int-End-->
 

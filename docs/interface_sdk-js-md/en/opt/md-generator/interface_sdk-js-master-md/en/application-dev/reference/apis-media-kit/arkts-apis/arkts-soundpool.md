@@ -1,12 +1,5 @@
 # soundPool
 
-The module provides APIs for loading, unloading, playing, and stopping playing sounds, setting the volume, and
- setting the number of loops.
- Before using these APIs, you must call
- [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)
- to create a **SoundPool** instance.
-
-
 ## Summary
 
 ### Interfaces

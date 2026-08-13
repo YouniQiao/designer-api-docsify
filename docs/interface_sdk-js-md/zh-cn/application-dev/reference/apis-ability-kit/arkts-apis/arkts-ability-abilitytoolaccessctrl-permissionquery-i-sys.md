@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface PermissionQuery--><!--Device-abilityToolAccessCtrl-interface PermissionQuery-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -18,13 +20,15 @@
 callerTokenId?: long
 ```
 
-主叫token标识。取值范围：(-∞,+∞)。
+主叫token标识。 取值范围：(-∞,+∞)。
 
 **类型：** long
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-PermissionQuery-callerTokenId?: long--><!--Device-PermissionQuery-callerTokenId?: long-End-->
 
@@ -46,6 +50,8 @@ domainId?: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-PermissionQuery-domainId?: string--><!--Device-PermissionQuery-domainId?: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -65,6 +71,8 @@ needTicket?: boolean
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-PermissionQuery-needTicket?: boolean--><!--Device-PermissionQuery-needTicket?: boolean-End-->
 
@@ -86,6 +94,8 @@ operationInfo: OperationInfo[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-PermissionQuery-operationInfo: OperationInfo[]--><!--Device-PermissionQuery-operationInfo: OperationInfo[]-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -106,6 +116,8 @@ remoteInfo?: RemoteInfo
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
 
+**废弃版本：** -1
+
 <!--Device-PermissionQuery-remoteInfo?: RemoteInfo--><!--Device-PermissionQuery-remoteInfo?: RemoteInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -118,13 +130,15 @@ remoteInfo?: RemoteInfo
 ticketExpireTimeMs?: long
 ```
 
-凭据过期时间，单位为毫秒。取值范围：(-∞,+∞)。
+凭据过期时间，单位为毫秒。 取值范围：(-∞,+∞)。
 
 **类型：** long
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-PermissionQuery-ticketExpireTimeMs?: long--><!--Device-PermissionQuery-ticketExpireTimeMs?: long-End-->
 

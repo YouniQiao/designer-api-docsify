@@ -1,9 +1,10 @@
 # AppVersionInfo
 
-应用版本信息，可以通过  
-[getAppVersionInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetappversioninfo7)获取当前应用的版本信息。
+应用版本信息，可以通过 getAppVersionInfo获取当前应 用的版本信息。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AppVersionInfo--><!--Device-unnamed-export interface AppVersionInfo-End-->
 
@@ -22,6 +23,8 @@ readonly appName: string
 **默认值：** appName
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口仅可在FA模型下使用。
@@ -46,6 +49,8 @@ readonly versionCode: number
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 
 - API版本12+：此接口仅可在FA模型下使用。
 
@@ -68,6 +73,8 @@ readonly versionName: string
 **默认值：** versionName
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口仅可在FA模型下使用。

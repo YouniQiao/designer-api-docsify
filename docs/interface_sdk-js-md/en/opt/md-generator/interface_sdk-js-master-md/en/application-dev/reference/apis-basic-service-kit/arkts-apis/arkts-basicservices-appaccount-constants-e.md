@@ -2,7 +2,9 @@
 
 Enumerates the constants.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-enum Constants--><!--Device-appAccount-enum Constants-End-->
 
@@ -14,10 +16,7 @@ Enumerates the constants.
 ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
 ```
 
-Operation of adding an account implicitly.
-
-Note: This API is supported since API version 8 and deprecated since API version 9. Use  
-**ACTION_CREATE_ACCOUNT_IMPLICITLY** instead.
+Operation of adding an account implicitly. Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_CREATE_ACCOUNT_IMPLICITLY** instead.
 
 **Since:** 8
 
@@ -35,9 +34,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 ACTION_AUTHENTICATE = 'authenticate'
 ```
 
-Authentication operation.
-
-Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_AUTH** instead.
+Authentication operation. Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_AUTH** instead.
 
 **Since:** 8
 
@@ -57,7 +54,9 @@ ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"
 
 Operation of creating an account implicitly.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"--><!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"-End-->
 
@@ -71,7 +70,9 @@ ACTION_AUTH = "auth"
 
 Authentication operation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-ACTION_AUTH = "auth"--><!--Device-Constants-ACTION_AUTH = "auth"-End-->
 
@@ -85,7 +86,9 @@ ACTION_VERIFY_CREDENTIAL = "verifyCredential"
 
 Operation of verifying credentials.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"--><!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"-End-->
 
@@ -99,7 +102,9 @@ ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 
 Operation of setting authenticator properties.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"--><!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"-End-->
 
@@ -113,7 +118,9 @@ KEY_NAME = "name"
 
 Name of the application account.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_NAME = "name"--><!--Device-Constants-KEY_NAME = "name"-End-->
 
@@ -127,7 +134,9 @@ KEY_OWNER = "owner"
 
 Bundle name of the application account owner.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_OWNER = "owner"--><!--Device-Constants-KEY_OWNER = "owner"-End-->
 
@@ -141,7 +150,9 @@ KEY_TOKEN = "token"
 
 Token.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_TOKEN = "token"--><!--Device-Constants-KEY_TOKEN = "token"-End-->
 
@@ -155,7 +166,9 @@ KEY_ACTION = "action"
 
 Operation.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_ACTION = "action"--><!--Device-Constants-KEY_ACTION = "action"-End-->
 
@@ -169,7 +182,9 @@ KEY_AUTH_TYPE = "authType"
 
 Authentication type.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_AUTH_TYPE = "authType"--><!--Device-Constants-KEY_AUTH_TYPE = "authType"-End-->
 
@@ -183,7 +198,9 @@ KEY_SESSION_ID = "sessionId"
 
 Session ID.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_SESSION_ID = "sessionId"--><!--Device-Constants-KEY_SESSION_ID = "sessionId"-End-->
 
@@ -197,7 +214,9 @@ KEY_CALLER_PID = "callerPid"
 
 PID of the caller.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_CALLER_PID = "callerPid"--><!--Device-Constants-KEY_CALLER_PID = "callerPid"-End-->
 
@@ -211,7 +230,9 @@ KEY_CALLER_UID = "callerUid"
 
 UID of the caller.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_CALLER_UID = "callerUid"--><!--Device-Constants-KEY_CALLER_UID = "callerUid"-End-->
 
@@ -225,7 +246,9 @@ KEY_CALLER_BUNDLE_NAME = "callerBundleName"
 
 Bundle name of the caller.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"--><!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"-End-->
 
@@ -239,7 +262,9 @@ KEY_REQUIRED_LABELS = "requiredLabels"
 
 Required labels.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"--><!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"-End-->
 
@@ -253,7 +278,9 @@ KEY_BOOLEAN_RESULT = "booleanResult"
 
 Return value of the Boolean type.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"--><!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"-End-->
 

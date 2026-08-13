@@ -4,7 +4,9 @@ Insight intent Provider.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -24,7 +26,7 @@ import { insightIntentProvider } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) | Send execute result. |
-| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult) | Send intent result. |
-| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult-1) | Send intent result. |
+| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) | Send execute result. |
+| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult) | Send intent result. |
+| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult) | Send intent result. |
 

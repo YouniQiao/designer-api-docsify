@@ -4,6 +4,8 @@ Queries the return value type of the target accessibility nodes.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface FocusMoveResult--><!--Device-unnamed-export declare interface FocusMoveResult-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -22,6 +24,8 @@ Type of the return value.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FocusMoveResult-result: FocusMoveResultCode--><!--Device-FocusMoveResult-result: FocusMoveResultCode-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -39,6 +43,8 @@ Target accessibility nodes.
 **Type:** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResult-target: Array<AccessibilityElement>--><!--Device-FocusMoveResult-target: Array<AccessibilityElement>-End-->
 

@@ -6,6 +6,8 @@ Defines the contact selection filter.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-contact-interface ContactSelectionFilter--><!--Device-contact-interface ContactSelectionFilter-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -30,6 +32,8 @@ Filter criteria.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ContactSelectionFilter-filterClause: FilterClause--><!--Device-ContactSelectionFilter-filterClause: FilterClause-End-->
@@ -49,6 +53,8 @@ Filter type.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface BackgroundEffectOptions--><!--Device-unnamed-declare interface BackgroundEffectOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ adaptiveColor?: AdaptiveColor
 **默认值：** AdaptiveColor.DEFAULT
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ blurOptions?: BlurOptions
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -65,6 +71,8 @@ brightness?: number
 **默认值：** 1
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,6 +96,8 @@ color?: ResourceColor
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -110,6 +120,8 @@ inactiveColor?: ResourceColor
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -124,15 +136,15 @@ inactiveColor?: ResourceColor
 policy?: BlurStyleActivePolicy
 ```
 
-模糊激活策略。
-
-默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
+模糊激活策略。 默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
 
 **类型：** [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md)
 
 **默认值：** BlurStyleActivePolicy.ALWAYS_ACTIVE
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,6 +165,8 @@ radius: number
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -175,6 +189,8 @@ saturation?: number
 **默认值：** 1
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

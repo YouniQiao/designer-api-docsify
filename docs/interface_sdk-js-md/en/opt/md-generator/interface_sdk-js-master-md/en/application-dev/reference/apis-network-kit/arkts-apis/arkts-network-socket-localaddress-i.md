@@ -4,6 +4,8 @@ Defines a local address.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface LocalAddress--><!--Device-socket-export interface LocalAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -25,6 +27,8 @@ LocalAddress address.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-LocalAddress-address: string--><!--Device-LocalAddress-address: string-End-->
 

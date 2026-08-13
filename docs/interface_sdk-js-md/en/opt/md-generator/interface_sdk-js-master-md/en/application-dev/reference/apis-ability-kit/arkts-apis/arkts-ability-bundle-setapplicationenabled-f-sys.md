@@ -18,7 +18,7 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -49,7 +49,7 @@ Sets whether to enable an application. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 

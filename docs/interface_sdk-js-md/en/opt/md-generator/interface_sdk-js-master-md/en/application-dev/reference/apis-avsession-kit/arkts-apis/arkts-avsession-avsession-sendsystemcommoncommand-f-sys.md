@@ -16,6 +16,8 @@ Send system control command. The system automatically selects the recipient.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,8 +45,8 @@ Send system control command. The system automatically selects the recipient.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |

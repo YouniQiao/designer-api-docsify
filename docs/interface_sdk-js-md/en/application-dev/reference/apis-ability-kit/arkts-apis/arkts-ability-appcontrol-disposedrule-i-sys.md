@@ -2,9 +2,11 @@
 
 Defines a disposed rule.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appControl-export interface DisposedRule--><!--Device-appControl-export interface DisposedRule-End-->
 
@@ -28,9 +30,11 @@ Type of application component that functions as the displayed page.
 
 **Type:** ComponentType
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedRule-componentType: ComponentType--><!--Device-DisposedRule-componentType: ComponentType-End-->
 
@@ -48,9 +52,11 @@ Control type of application disposal.
 
 **Type:** ControlType
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedRule-controlType: ControlType--><!--Device-DisposedRule-controlType: ControlType-End-->
 
@@ -68,9 +74,11 @@ Type of application disposal.
 
 **Type:** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedRule-disposedType: DisposedType--><!--Device-DisposedRule-disposedType: DisposedType-End-->
 
@@ -88,9 +96,11 @@ List of application components to be disposed of or exempted.
 
 **Type:** Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedRule-elementList: Array<ElementName>--><!--Device-DisposedRule-elementList: Array<ElementName>-End-->
 
@@ -104,13 +114,15 @@ List of application components to be disposed of or exempted.
 pageJump?: PageJumpMode
 ```
 
-Specifies whether to jump to another page when the target application is blocked. The default value is[PAGE_JUMP_WINDOW_SHOW](arkts-ability-appcontrol-pagejumpmode-e-sys.md#PAGE_JUMP_WINDOW_SHOW).
+Specifies whether to jump to another page when the target application is blocked. The default value is [PAGE_JUMP_WINDOW_SHOW](arkts-ability-appcontrol-pagejumpmode-e-sys.md#PAGE_JUMP_WINDOW_SHOW).
 
 **Type:** [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,13 +138,15 @@ Specifies whether to jump to another page when the target application is blocked
 priority: int
 ```
 
-Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer.A smaller value indicates a higher priority.
+Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer. A smaller value indicates a higher priority.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedRule-priority: int--><!--Device-DisposedRule-priority: int-End-->
 
@@ -150,9 +164,11 @@ Page displayed when the application is disposed of.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisposedRule-want: Want--><!--Device-DisposedRule-want: Want-End-->
 

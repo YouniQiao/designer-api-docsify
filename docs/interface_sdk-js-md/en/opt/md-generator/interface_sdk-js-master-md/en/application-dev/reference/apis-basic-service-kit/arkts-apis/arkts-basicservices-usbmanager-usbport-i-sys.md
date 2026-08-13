@@ -2,7 +2,9 @@
 
 Represents a USB port.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBPort--><!--Device-usbManager-interface USBPort-End-->
 
@@ -26,7 +28,9 @@ Unique identifier of a USB port.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBPort-id: int--><!--Device-USBPort-id: int-End-->
 
@@ -44,7 +48,9 @@ USB port role.
 
 **Type:** USBPortStatus
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
 
@@ -62,7 +68,9 @@ Numeric mask combination for the supported mode list.
 
 **Type:** PortModeType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
 

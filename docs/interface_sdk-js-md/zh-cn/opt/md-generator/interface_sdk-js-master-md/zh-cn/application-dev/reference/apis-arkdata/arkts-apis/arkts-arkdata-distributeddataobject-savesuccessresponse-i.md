@@ -1,8 +1,10 @@
 # SaveSuccessResponse
 
-[save](arkts-arkdata-distributeddataobject-dataobject-i.md#save)接口回调信息。
+[save](arkts-arkdata-distributeddataobject-dataobject-i.md#save) 接口回调信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDataObject-interface SaveSuccessResponse--><!--Device-distributedDataObject-interface SaveSuccessResponse-End-->
 
@@ -18,7 +20,9 @@ deviceId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SaveSuccessResponse-deviceId: string--><!--Device-SaveSuccessResponse-deviceId: string-End-->
 
@@ -34,7 +38,9 @@ sessionId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SaveSuccessResponse-sessionId: string--><!--Device-SaveSuccessResponse-sessionId: string-End-->
 
@@ -50,7 +56,9 @@ version: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SaveSuccessResponse-version: int--><!--Device-SaveSuccessResponse-version: int-End-->
 

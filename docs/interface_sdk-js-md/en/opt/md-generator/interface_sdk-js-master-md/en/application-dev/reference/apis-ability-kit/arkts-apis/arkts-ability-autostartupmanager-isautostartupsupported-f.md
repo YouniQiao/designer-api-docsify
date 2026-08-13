@@ -16,6 +16,8 @@ Check whether the current device supports auto startup on this device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-autoStartupManager-function isAutoStartupSupported(): boolean--><!--Device-autoStartupManager-function isAutoStartupSupported(): boolean-End-->

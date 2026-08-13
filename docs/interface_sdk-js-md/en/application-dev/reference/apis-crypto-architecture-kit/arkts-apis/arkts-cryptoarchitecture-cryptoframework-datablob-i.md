@@ -1,14 +1,12 @@
 # DataBlob
 
-Encapsulates binary data. The core field **data** is of the Uint8Array type.
+Encapsulates binary data. The core field **data** is of the Uint8Array type. > **NOTE：**> > The Uint8Array typed array represents an array of 8-bit unsigned integers.
 
-> **NOTE：**
-> 
-> The Uint8Array typed array represents an array of 8-bit unsigned integers.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface DataBlob--><!--Device-cryptoFramework-interface DataBlob-End-->
 
@@ -30,9 +28,11 @@ Binary data array.
 
 **Type:** Uint8Array
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.

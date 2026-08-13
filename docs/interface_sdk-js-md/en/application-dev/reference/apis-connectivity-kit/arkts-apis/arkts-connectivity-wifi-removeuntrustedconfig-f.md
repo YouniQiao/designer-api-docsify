@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 ```
 
-Removes a specified untrusted hotspot configuration.
-
-&lt;p&gt;This method removes one configuration at a time.
+Removes a specified untrusted hotspot configuration. &lt;p&gt;This method removes one configuration at a time.
 
 **Since:** 7
 
@@ -82,9 +80,7 @@ try {
 function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void
 ```
 
-Removes a specified untrusted hotspot configuration.
-
-&lt;p&gt;This method removes one configuration at a time.
+Removes a specified untrusted hotspot configuration. &lt;p&gt;This method removes one configuration at a time.
 
 **Since:** 7
 
@@ -105,7 +101,7 @@ Removes a specified untrusted hotspot configuration.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
 
 ## Examples
 

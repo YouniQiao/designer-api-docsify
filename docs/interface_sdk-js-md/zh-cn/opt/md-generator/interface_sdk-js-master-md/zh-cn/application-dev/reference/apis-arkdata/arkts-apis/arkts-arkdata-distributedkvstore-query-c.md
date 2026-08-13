@@ -2,7 +2,9 @@
 
 使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。Query对象的谓词方法均返回自身，支持链式调用。一个Query对象中谓词数量上限为256个。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-class Query--><!--Device-distributedKVStore-class Query-End-->
 
@@ -16,7 +18,9 @@ and(): Query
 
 构造一个带有与条件的查询对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用and()连接多个条件，无前置谓词时调用and()无效。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,7 +62,9 @@ beginGroup(): Query
 
 创建一个带有左括号的查询条件组。必须与[endGroup()](#endGroup)成对使用，以形成完整的查询条件分组。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,7 +106,9 @@ constructor()
 
 用于创建Query实例的构造函数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,19 +122,11 @@ constructor()
 deviceId(deviceId: string): Query
 ```
 
-添加设备ID作为Key的前缀。
+添加设备ID作为Key的前缀。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的
-> networkId，通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,7 +138,7 @@ deviceId(deviceId: string): Query
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [deviceId](#deviceid) | string | 是 |
+| [deviceId](#deviceId) | string | 是 |
 
 **返回值：**
 
@@ -150,7 +150,7 @@ deviceId(deviceId: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -177,7 +177,9 @@ endGroup(): Query
 
 创建一个带有右括号的查询条件组。必须与[beginGroup()](#beginGroup)成对使用，以形成完整的查询条件分组。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -217,16 +219,11 @@ try {
 equalTo(field: string, value: number | number | string | boolean): Query
 ```
 
-构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。
+构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。 > **说明：** > > 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -251,7 +248,7 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## getSqlLike
 
@@ -261,7 +258,9 @@ getSqlLike(): string
 
 获取Query对象的查询语句。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -298,16 +297,11 @@ try {
 greaterThan(field: string, value: number | number | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有大于指定值的指定字段的条目。
+构造一个Query对象以查询具有大于指定值的指定字段的条目。 > **说明：** > > 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -332,7 +326,7 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## greaterThanOrEqualTo
 
@@ -340,16 +334,11 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 greaterThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。
+构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。 > **说明：** > > 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -374,7 +363,7 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## inNumber
 
@@ -382,16 +371,11 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 inNumber(field: string, valueList: number[] | number[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。 > **说明：** > > 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -416,7 +400,7 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## inString
 
@@ -424,16 +408,11 @@ inNumber(field: string, valueList: number[] | number[]): Query
 inString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。 > **说明：** > > 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -458,7 +437,7 @@ inString(field: string, valueList: string[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -484,16 +463,11 @@ try {
 isNotNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值不为null的指定字段的条目。
+构造一个Query对象以查询具有值不为null的指定字段的条目。 > **说明：** > > 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -517,7 +491,7 @@ isNotNull(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -543,16 +517,11 @@ try {
 isNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值为null的指定字段的条目。
+构造一个Query对象以查询具有值为null的指定字段的条目。 > **说明：** > > 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -576,7 +545,7 @@ isNull(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -602,16 +571,11 @@ try {
 lessThan(field: string, value: number | number | string): Query
 ```
 
-构造一个Query对象以查询具有小于指定值的指定字段的条目。
+构造一个Query对象以查询具有小于指定值的指定字段的条目。 > **说明：** > > 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -636,7 +600,7 @@ lessThan(field: string, value: number | number | string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## lessThanOrEqualTo
 
@@ -644,16 +608,11 @@ lessThan(field: string, value: number | number | string): Query
 lessThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。
+构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。 > **说明：** > > 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -678,7 +637,7 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## like
 
@@ -686,16 +645,11 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 like(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。
+构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。 > **说明：** > > 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -720,7 +674,7 @@ like(field: string, value: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -748,7 +702,9 @@ limit(total: number, offset: number): Query
 
 构造一个Query对象来指定结果的数量和开始位置。该接口必须要在Query对象查询和升降序等操作之后调用，调用limit接口后，不可再对Query对象进行查询和升降序等操作。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -773,7 +729,7 @@ limit(total: number, offset: number): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -802,16 +758,11 @@ try {
 notEqualTo(field: string, value: number | number | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不等于指定值的条目。
+构造一个Query对象以查询具有指定字段且值不等于指定值的条目。 > **说明：** > > 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -836,7 +787,7 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## notInNumber
 
@@ -844,16 +795,11 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 notInNumber(field: string, valueList: number[] | number[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。
+构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。 > **说明：** > > 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -878,7 +824,7 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## notInString
 
@@ -886,16 +832,11 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 notInString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。
+构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。 > **说明：** > > 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -920,7 +861,7 @@ notInString(field: string, valueList: string[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -948,7 +889,9 @@ or(): Query
 
 构造一个带有或条件的Query对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用or()连接多个条件，无前置谓词时调用or()无效。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -988,16 +931,11 @@ try {
 orderByAsc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按升序排序。
+构造一个Query对象，将查询结果按升序排序。 > **说明：** > > 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1021,7 +959,7 @@ orderByAsc(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1048,16 +986,11 @@ try {
 orderByDesc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按降序排序。
+构造一个Query对象，将查询结果按降序排序。 > **说明：** > > 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1081,7 +1014,7 @@ orderByDesc(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1110,7 +1043,9 @@ prefixKey(prefix: string): Query
 
 创建具有指定键前缀的查询条件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1134,7 +1069,7 @@ prefixKey(prefix: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1163,7 +1098,9 @@ reset(): Query
 
 重置Query对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1205,7 +1142,9 @@ setSuggestIndex(index: string): Query
 
 设置一个指定的索引，将优先用于查询。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1229,7 +1168,7 @@ setSuggestIndex(index: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1256,16 +1195,11 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。
+构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。 > **说明：** > > 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1290,7 +1224,7 @@ unlike(field: string, value: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

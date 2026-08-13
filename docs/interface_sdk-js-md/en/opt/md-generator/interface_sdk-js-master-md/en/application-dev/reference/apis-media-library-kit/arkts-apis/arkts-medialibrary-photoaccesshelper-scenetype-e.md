@@ -2,7 +2,9 @@
 
 Enumeration type of scene.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum SceneType--><!--Device-photoAccessHelper-export enum SceneType-End-->
 
@@ -16,11 +18,13 @@ GRID_TO_PHOTO_BROWSER = 0
 
 Tap the grid icon to browse the large image.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SceneType-GRID_TO_PHOTO_BROWSER = 0--><!--Device-SceneType-GRID_TO_PHOTO_BROWSER = 0-End-->
 
@@ -34,11 +38,13 @@ PHOTO_BROWSER_SWIPE = 1
 
 Swipe left or right in the large image scene.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SceneType-PHOTO_BROWSER_SWIPE = 1--><!--Device-SceneType-PHOTO_BROWSER_SWIPE = 1-End-->
 

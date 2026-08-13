@@ -6,6 +6,8 @@ Defines the ad status change callback.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-advertising-export interface AdInteractionListener--><!--Device-advertising-export interface AdInteractionListener-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -27,6 +29,8 @@ Called when the ad display status changes.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

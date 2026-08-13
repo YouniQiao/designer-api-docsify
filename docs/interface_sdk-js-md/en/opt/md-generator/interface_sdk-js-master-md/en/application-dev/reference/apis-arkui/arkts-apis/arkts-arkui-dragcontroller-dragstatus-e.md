@@ -4,6 +4,8 @@ Describes the dragging start and end states.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-dragController-const enum DragStatus--><!--Device-dragController-const enum DragStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ STARTED = 0
 Dragging is started.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ ENDED = 1
 Dragging ends.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 应用包选项，用于设置或查询应用相关信息。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface BundleOptions--><!--Device-unnamed-export interface BundleOptions-End-->
 
@@ -18,14 +20,15 @@
 abilityName?: string
 ```
 
-Ability名称。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Ability名称。默认值为空字符串。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,11 +46,13 @@ appIndex?: int
 
 应用分身ID。默认为0，表示主应用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleOptions-appIndex?: int--><!--Device-BundleOptions-appIndex?: int-End-->
 
@@ -61,14 +66,15 @@ appIndex?: int
 bundleName?: string
 ```
 
-应用包名。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+应用包名。默认值为空字符串。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,14 +90,15 @@ bundleName?: string
 moduleName?: string
 ```
 
-Ability所属的模块名称。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Ability所属的模块名称。默认值为空字符串。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,11 +116,13 @@ userId?: int
 
 用户ID。默认为当前调用方所在的用户。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleOptions-userId?: int--><!--Device-BundleOptions-userId?: int-End-->
 

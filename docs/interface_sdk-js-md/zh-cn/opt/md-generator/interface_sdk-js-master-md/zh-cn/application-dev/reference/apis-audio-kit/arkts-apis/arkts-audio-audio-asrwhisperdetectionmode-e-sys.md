@@ -2,7 +2,9 @@
 
 ASR whisper detection mode.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum AsrWhisperDetectionMode--><!--Device-audio-enum AsrWhisperDetectionMode-End-->
 
@@ -18,7 +20,9 @@ BYPASS = 0
 
 No operation.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AsrWhisperDetectionMode-BYPASS = 0--><!--Device-AsrWhisperDetectionMode-BYPASS = 0-End-->
 
@@ -34,7 +38,9 @@ STANDARD = 1
 
 Use standard whisper detection model.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AsrWhisperDetectionMode-STANDARD = 1--><!--Device-AsrWhisperDetectionMode-STANDARD = 1-End-->
 

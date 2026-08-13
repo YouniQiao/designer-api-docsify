@@ -3,6 +3,7 @@
 ## FolderStack
 
 ```TypeScript
+@ComponentBuilder
 export declare function FolderStack(
     options?: FolderStackOptions, 
     content_?: CustomBuilder
@@ -15,9 +16,11 @@ Defines FolderStack Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function FolderStack(    options?: FolderStackOptions,     content_?: CustomBuilder): FolderStackAttribute--><!--Device-unnamed-export declare function FolderStack(    options?: FolderStackOptions,     content_?: CustomBuilder): FolderStackAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function FolderStack(    options?: FolderStackOptions,     content_?: CustomBuilder): FolderStackAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function FolderStack(    options?: FolderStackOptions,     content_?: CustomBuilder): FolderStackAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,18 +29,19 @@ Defines FolderStack Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [FolderStackOptions](arkts-arkui-folderstack-folderstackoptions-i.md) | No | FolderStack options. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FolderStackAttribute](arkts-arkui-folderstack-folderstackattribute-i.md) |  |
+| FolderStackAttribute |  |
 
 
 ## FolderStack
 
 ```TypeScript
+@Builder
 export declare function FolderStack(
     style: CustomBuilderT<FolderStackAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines FolderStack Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function FolderStack(    style: CustomBuilderT<FolderStackAttribute>,    content_?: CustomBuilder,): FolderStackAttribute--><!--Device-unnamed-export declare function FolderStack(    style: CustomBuilderT<FolderStackAttribute>,    content_?: CustomBuilder,): FolderStackAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function FolderStack(    style: CustomBuilderT<FolderStackAttribute>,    content_?: CustomBuilder,): FolderStackAttribute--><!--Device-unnamed-@Builderexport declare function FolderStack(    style: CustomBuilderT<FolderStackAttribute>,    content_?: CustomBuilder,): FolderStackAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,12 +66,12 @@ Defines FolderStack Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[FolderStackAttribute](arkts-arkui-folderstack-folderstackattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;FolderStackAttribute&gt; | Yes | the callback to set up component's attributes. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FolderStackAttribute](arkts-arkui-folderstack-folderstackattribute-i.md) |  |
+| FolderStackAttribute |  |
 

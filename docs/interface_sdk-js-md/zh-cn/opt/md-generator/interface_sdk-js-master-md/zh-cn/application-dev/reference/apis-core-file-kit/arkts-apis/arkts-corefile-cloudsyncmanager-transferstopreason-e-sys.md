@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-cloudSyncManager-enum TransferStopReason--><!--Device-cloudSyncManager-enum TransferStopReason-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -19,6 +21,8 @@ SWITCH_OFF = 0
 搬迁过程中，云服务开关关闭。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ ACCOUNT_LOGOUT = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TransferStopReason-ACCOUNT_LOGOUT = 1--><!--Device-TransferStopReason-ACCOUNT_LOGOUT = 1-End-->
@@ -55,6 +61,8 @@ OTHER_REASON = 2
 搬迁过程中，其他原因导致停止。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

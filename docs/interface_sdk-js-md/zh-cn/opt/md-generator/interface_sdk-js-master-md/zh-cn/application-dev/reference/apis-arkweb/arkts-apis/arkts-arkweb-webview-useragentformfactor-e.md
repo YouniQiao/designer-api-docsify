@@ -4,6 +4,8 @@ The form factors for User-Agent metadata.
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-webview-enum UserAgentFormFactor--><!--Device-webview-enum UserAgentFormFactor-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ AUTOMOTIVE = 'Automotive'
 Form factor option: Automotive.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ Form factor option: Desktop.
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserAgentFormFactor-DESKTOP = 'Desktop'--><!--Device-UserAgentFormFactor-DESKTOP = 'Desktop'-End-->
@@ -49,6 +55,8 @@ MOBILE = 'Mobile'
 Form factor option: Mobile.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ Form factor option: EInk.
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserAgentFormFactor-EINK = 'EInk'--><!--Device-UserAgentFormFactor-EINK = 'EInk'-End-->
@@ -81,6 +91,8 @@ TABLET = 'Tablet'
 Form factor option: Tablet.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +110,8 @@ Form factor option: Watch.
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserAgentFormFactor-WATCH = 'Watch'--><!--Device-UserAgentFormFactor-WATCH = 'Watch'-End-->
@@ -113,6 +127,8 @@ XR = 'XR'
 Form factor option: XR.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

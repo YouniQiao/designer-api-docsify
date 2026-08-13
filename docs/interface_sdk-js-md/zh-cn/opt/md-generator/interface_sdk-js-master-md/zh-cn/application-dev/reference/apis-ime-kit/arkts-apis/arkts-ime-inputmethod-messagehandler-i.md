@@ -2,7 +2,9 @@
 
 自定义通信对象。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-interface MessageHandler--><!--Device-inputMethod-interface MessageHandler-End-->
 
@@ -17,6 +19,8 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 接收输入法应用发送的自定义数据回调函数。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 <!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
 
@@ -55,6 +59,8 @@ onTerminated(): void
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -74,3 +80,39 @@ let messageHandler: inputMethod.MessageHandler = {
 };
 inputMethodController.recvMessage(messageHandler);
 ```
+
+## onMessage
+
+```TypeScript
+onMessage: OnMessageCallback
+```
+
+onMessage(msgId: string, msgParam?: ArrayBuffer): void
+
+**类型：** OnMessageCallback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## onTerminated
+
+```TypeScript
+onTerminated: Callback<void>
+```
+
+onTerminated(): void 监听对象终止回调函数。
+
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageHandler-onTerminated: Callback<void>--><!--Device-MessageHandler-onTerminated: Callback<void>-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework

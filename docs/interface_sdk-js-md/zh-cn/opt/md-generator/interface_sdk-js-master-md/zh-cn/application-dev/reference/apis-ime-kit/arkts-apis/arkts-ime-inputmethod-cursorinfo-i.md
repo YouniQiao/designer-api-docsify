@@ -2,7 +2,9 @@
 
 光标信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export interface CursorInfo--><!--Device-inputMethod-export interface CursorInfo-End-->
 
@@ -20,6 +22,8 @@ displayId?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CursorInfo-displayId?: long--><!--Device-CursorInfo-displayId?: long-End-->
@@ -36,7 +40,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CursorInfo-height: double--><!--Device-CursorInfo-height: double-End-->
 
@@ -52,7 +58,9 @@ left: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CursorInfo-left: double--><!--Device-CursorInfo-left: double-End-->
 
@@ -68,7 +76,9 @@ top: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CursorInfo-top: double--><!--Device-CursorInfo-top: double-End-->
 
@@ -84,7 +94,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CursorInfo-width: double--><!--Device-CursorInfo-width: double-End-->
 

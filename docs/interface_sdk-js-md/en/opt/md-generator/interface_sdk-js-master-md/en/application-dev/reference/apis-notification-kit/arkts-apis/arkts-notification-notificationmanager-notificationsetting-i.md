@@ -2,7 +2,9 @@
 
 Describes the setting status of the notification mode switch.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface NotificationSetting--><!--Device-notificationManager-export interface NotificationSetting-End-->
 
@@ -20,14 +22,13 @@ import { notificationManager } from '@kit.NotificationKit';
 badgeNumberEnabled?: boolean
 ```
 
-Whether to enable the display of notification badges.
-
-- **true**: enable.  
-- **false**: disable.
+Whether to enable the display of notification badges. - **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,14 +42,13 @@ Whether to enable the display of notification badges.
 bannerEnabled?: boolean
 ```
 
-Whether to enable banner notification.
-
-- **true**: enable.  
-- **false**: disable.
+Whether to enable banner notification. - **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,14 +62,13 @@ Whether to enable banner notification.
 lockScreenEnabled?: boolean
 ```
 
-Whether to enable lock screen notification.
-
-- **true**: enable.  
-- **false**: disable.
+Whether to enable lock screen notification. - **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,14 +82,13 @@ Whether to enable lock screen notification.
 notificationEnabled?: boolean
 ```
 
-Whether to enable the application notification.
-
-- **true**: enable.  
-- **false**: disable.
+Whether to enable the application notification. - **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,14 +102,13 @@ Whether to enable the application notification.
 soundEnabled: boolean
 ```
 
-Whether to enable ringtone.
-
-- **true**: enable.  
-- **false**: disable.
+Whether to enable ringtone. - **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSetting-soundEnabled: boolean--><!--Device-NotificationSetting-soundEnabled: boolean-End-->
 
@@ -123,14 +120,13 @@ Whether to enable ringtone.
 vibrationEnabled: boolean
 ```
 
-Whether to enable vibration.
-
-- **true**: enable.  
-- **false**: disable.
+Whether to enable vibration. - **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSetting-vibrationEnabled: boolean--><!--Device-NotificationSetting-vibrationEnabled: boolean-End-->
 

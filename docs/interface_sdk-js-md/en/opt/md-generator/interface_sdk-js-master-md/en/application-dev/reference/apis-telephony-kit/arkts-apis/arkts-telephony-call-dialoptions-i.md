@@ -2,7 +2,9 @@
 
 Provides an option for determining whether a call is a video call.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface DialOptions--><!--Device-call-export interface DialOptions-End-->
 
@@ -20,14 +22,13 @@ import { call } from '@kit.TelephonyKit';
 extras?: boolean
 ```
 
-Whether the call is a video call.
-
-- **true**: video call  
-- **false** (default): voice call
+Whether the call is a video call. - **true**: video call - **false** (default): voice call
 
 **Type:** boolean
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DialOptions-extras?: boolean--><!--Device-DialOptions-extras?: boolean-End-->
 

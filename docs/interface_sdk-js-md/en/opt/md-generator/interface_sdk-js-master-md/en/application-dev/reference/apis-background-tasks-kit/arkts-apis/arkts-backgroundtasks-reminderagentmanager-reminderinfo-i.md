@@ -2,7 +2,9 @@
 
 Defines the reminder information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface ReminderInfo--><!--Device-reminderAgentManager-interface ReminderInfo-End-->
 
@@ -24,7 +26,9 @@ Reminder ID.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderInfo-reminderId: int--><!--Device-ReminderInfo-reminderId: int-End-->
 
@@ -40,7 +44,9 @@ Request used for publishing the reminder.
 
 **Type:** ReminderRequest
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderInfo-reminderReq: ReminderRequest--><!--Device-ReminderInfo-reminderReq: ReminderRequest-End-->
 

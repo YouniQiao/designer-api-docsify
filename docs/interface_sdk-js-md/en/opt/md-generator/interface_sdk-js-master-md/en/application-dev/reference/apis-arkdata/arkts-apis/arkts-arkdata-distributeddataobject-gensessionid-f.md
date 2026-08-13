@@ -14,7 +14,9 @@ function genSessionId(): string
 
 Creates a random session ID.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDataObject-function genSessionId(): string--><!--Device-distributedDataObject-function genSessionId(): string-End-->
 

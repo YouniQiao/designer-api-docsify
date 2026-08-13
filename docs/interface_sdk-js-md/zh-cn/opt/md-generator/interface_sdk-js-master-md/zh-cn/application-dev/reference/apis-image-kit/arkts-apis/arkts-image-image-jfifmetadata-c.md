@@ -4,6 +4,8 @@ JFIF metadata.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-image-class JfifMetadata--><!--Device-image-class JfifMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -14,11 +16,13 @@ JFIF metadata.
 readonly densityUnit?: number
 ```
 
-JFIF density unit.The value should be an integer.
+JFIF density unit. The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ whether the JFIF image is progressive.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-JfifMetadata-readonly isProgressive?: boolean--><!--Device-JfifMetadata-readonly isProgressive?: boolean-End-->
@@ -56,6 +62,8 @@ JFIF version.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-JfifMetadata-readonly version?: int[]--><!--Device-JfifMetadata-readonly version?: int[]-End-->
@@ -68,11 +76,13 @@ JFIF version.
 readonly xDensity?: number
 ```
 
-JFIF x density.The value should be an integer.
+JFIF x density. The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,11 +96,13 @@ JFIF x density.The value should be an integer.
 readonly yDensity?: number
 ```
 
-JFIF y density.The value should be an integer.
+JFIF y density. The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

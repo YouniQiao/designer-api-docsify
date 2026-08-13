@@ -3,6 +3,7 @@
 ## Polygon
 
 ```TypeScript
+@ComponentBuilder
 export declare function Polygon(
     options?: PolygonOptions
 ): PolygonAttribute
@@ -14,9 +15,11 @@ Polygon is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Polygon(    options?: PolygonOptions): PolygonAttribute--><!--Device-unnamed-export declare function Polygon(    options?: PolygonOptions): PolygonAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Polygon(    options?: PolygonOptions): PolygonAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Polygon(    options?: PolygonOptions): PolygonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Polygon is returned when the parameter is transferred.
 ## Polygon
 
 ```TypeScript
+@Builder
 export declare function Polygon(
     style: CustomBuilderT<PolygonAttribute>,
 ): PolygonAttribute
@@ -47,11 +51,11 @@ Defines Polygon Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute--><!--Device-unnamed-export declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute--><!--Device-unnamed-@Builderexport declare function Polygon(    style: CustomBuilderT<PolygonAttribute>,): PolygonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Polygon Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

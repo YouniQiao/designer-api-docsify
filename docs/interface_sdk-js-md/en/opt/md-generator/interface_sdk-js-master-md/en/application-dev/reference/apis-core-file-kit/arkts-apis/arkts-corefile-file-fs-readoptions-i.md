@@ -4,6 +4,8 @@ Defines the options used in **read()**.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ReadOptions--><!--Device-unnamed-export interface ReadOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -26,6 +28,8 @@ Length of the data to read, in bytes. This parameter is optional. The default va
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ReadOptions-length?: number--><!--Device-ReadOptions-length?: number-End-->
@@ -38,11 +42,13 @@ Length of the data to read, in bytes. This parameter is optional. The default va
 offset?: number
 ```
 
-Start position of the file to read, in bytes. This parameter is optional.By default, data is read from the current position.
+Start position of the file to read, in bytes. This parameter is optional. By default, data is read from the current position.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -6,7 +6,9 @@ type CardType = sim.CardType
 
 卡类型。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-observer-type CardType = sim.CardType--><!--Device-observer-type CardType = sim.CardType-End-->
 

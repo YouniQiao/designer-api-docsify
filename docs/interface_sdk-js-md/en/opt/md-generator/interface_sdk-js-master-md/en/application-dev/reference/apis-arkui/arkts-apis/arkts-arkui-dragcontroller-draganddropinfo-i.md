@@ -4,6 +4,8 @@ Provides the data reported when the state changes during dragging.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface DragAndDropInfo--><!--Device-dragController-interface DragAndDropInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Drag event corresponding to the current state. The drag event initiated by **dra
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,6 +50,8 @@ Additional information about the drag action. Not supported currently. The defau
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,6 +71,8 @@ Current dragging state (started or ended).
 **Type:** [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

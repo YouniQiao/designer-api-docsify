@@ -4,11 +4,11 @@
 export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo
 ```
 
-Defines the entry icon and name of an application.
+Defines the entry icon and name of an application. &lt;!--no_check--&gt;
 
-&lt;!--no_check--&gt;
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-bundleResourceManager-export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo--><!--Device-bundleResourceManager-export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo-End-->
 

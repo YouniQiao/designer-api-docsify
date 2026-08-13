@@ -1,17 +1,12 @@
 # PerfTestStrategy
 
-Represents the performance test strategy.
+Represents the performance test strategy. > **NOTE：**> > The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call > this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the > code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that > the code segment execution meets the expectation, and **false** indicates the opposite.
 
-> **NOTE：**
-> 
-> The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call
-> this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the
-> code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that
-> the code segment execution meets the expectation, and **false** indicates the opposite.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface PerfTestStrategy--><!--Device-unnamed-declare interface PerfTestStrategy-End-->
 
@@ -31,13 +26,15 @@ actionCode: Callback<Callback<boolean>>
 
 Code segment to test. The input parameter is a callback function, which needs to be called in the code segment to notify the framework that the execution is complete. Otherwise, the execution will time out. For details, see the following description.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTestStrategy-actionCode: Callback<Callback<boolean>>--><!--Device-PerfTestStrategy-actionCode: Callback<Callback<boolean>>-End-->
 
@@ -53,11 +50,13 @@ Bundle name of the application to test. The format must be the same as that of *
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTestStrategy-bundleName?: string--><!--Device-PerfTestStrategy-bundleName?: string-End-->
 
@@ -71,13 +70,15 @@ iterations?: int
 
 Number of test iterations. The value must be an integer greater than 0. The default value is **5**. An exception is thrown if the value is out of range.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTestStrategy-iterations?: int--><!--Device-PerfTestStrategy-iterations?: int-End-->
 
@@ -93,11 +94,13 @@ Array of performance metrics to test. If the array is empty, no performance metr
 
 **Type:** Array&lt;[PerfMetric](arkts-test-test-perftest-perfmetric-e.md)&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTestStrategy-metrics: Array<PerfMetric>--><!--Device-PerfTestStrategy-metrics: Array<PerfMetric>-End-->
 
@@ -111,13 +114,15 @@ resetCode?: Callback<Callback<boolean>>
 
 Code segment for resetting the environment after the test is complete. This parameter is passed for resetting after each test when the test code segment modifies the global status (such as global variables and configurations). The default value is empty. This code segment is not executed when the framework is performing the test. The input parameter is a callback function, which needs to be called in the code segment to notify the framework that the execution is complete. Otherwise, the execution will time out. For details, see the following description.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTestStrategy-resetCode?: Callback<Callback<boolean>>--><!--Device-PerfTestStrategy-resetCode?: Callback<Callback<boolean>>-End-->
 
@@ -131,13 +136,15 @@ timeout?: int
 
 resetCode**) at a time. The value is an integer greater than 0, in milliseconds. The default value is **10000**. If the execution of a test code segment takes a long time, you can increase the value of this parameter to prevent timeout. If a timeout occurs, an exception is triggered and the test execution is terminated.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTestStrategy-timeout?: int--><!--Device-PerfTestStrategy-timeout?: int-End-->
 

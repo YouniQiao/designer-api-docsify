@@ -1,18 +1,20 @@
 # ProcessData
 
 ```TypeScript
-export type ProcessData = _ProcessData
+export type ProcessData = _ProcessData.default
 ```
 
 进程数据信息。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
-<!--Device-unnamed-export type ProcessData = _ProcessData--><!--Device-unnamed-export type ProcessData = _ProcessData-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export type ProcessData = _ProcessData.default--><!--Device-unnamed-export type ProcessData = _ProcessData.default-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _ProcessData
+**属性类型：** _ProcessData.default
 

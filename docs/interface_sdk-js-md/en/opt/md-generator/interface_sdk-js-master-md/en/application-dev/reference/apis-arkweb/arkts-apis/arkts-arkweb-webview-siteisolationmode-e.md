@@ -4,6 +4,8 @@ Enumerates the site isolation modes. The site isolation mechanism isolates websi
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum SiteIsolationMode--><!--Device-webview-enum SiteIsolationMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -18,6 +20,8 @@ Partial site isolation. New sites are loaded in the same render process.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-SiteIsolationMode-PARTIAL = 0--><!--Device-SiteIsolationMode-PARTIAL = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -31,6 +35,8 @@ STRICT = 1
 Strict site isolation. Iframes from different sites are switched to new render processes.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-SiteIsolationMode-STRICT = 1--><!--Device-SiteIsolationMode-STRICT = 1-End-->
 

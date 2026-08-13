@@ -1,20 +1,12 @@
 # @ohos.bundle
 
-The module provides APIs for obtaining information about an application, including  
-[bundle information](./bundle/bundleInfo),  
-[application information](arkts-ability-applicationinfo-applicationinfo-depr-i.md#ApplicationInfo), and  
-[ability information](arkts-ability-abilityinfo-abilityinfo-depr-i.md#AbilityInfo). It also provides APIs to obtain and set the application disabling state.
-
-> **NOTE：**
-> 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
-> [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md#bundleManager) instead.
+The module provides APIs for obtaining information about an application, including bundle information, [application information](arkts-ability-applicationinfo-applicationinfo-depr-i.md#ApplicationInfo), and [ability information](arkts-ability-abilityinfo-abilityinfo-depr-i.md#AbilityInfo). It also provides APIs to obtain and set the application disabling state. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md#@ohos.bundle.bundleManager) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleManager](arkts-bundle-bundlemanager.md#bundleManager)
+**Substitutes:** [bundleManager](arkts-bundle-bundlemanager.md#@ohos.bundle.bundleManager)
 
 <!--Device-unnamed-declare namespace bundle--><!--Device-unnamed-declare namespace bundle-End-->
 
@@ -32,59 +24,59 @@ import { bundle } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon) |
-| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon-1) |
-| [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo) |
-| [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo-1) |
-| [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md#getabilitylabel) |
-| [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md#getabilitylabel-1) |
-| [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md#getallapplicationinfo) |
-| [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md#getallapplicationinfo-1) |
-| [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md#getallapplicationinfo-2) |
-| [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md#getallbundleinfo) |
-| [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md#getallbundleinfo-1) |
-| [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md#getallbundleinfo-2) |
-| [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo) |
-| [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo-1) |
-| [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo-2) |
-| [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md#getbundlearchiveinfo) |
-| [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md#getbundlearchiveinfo-1) |
-| [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo) |
-| [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo-1) |
-| [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo-2) |
-| [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md#getlaunchwantforbundle) |
-| [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md#getlaunchwantforbundle-1) |
-| [getNameForUid](arkts-ability-bundle-getnameforuid-f.md#getnameforuid) |
-| [getNameForUid](arkts-ability-bundle-getnameforuid-f.md#getnameforuid-1) |
-| [isAbilityEnabled](arkts-ability-bundle-isabilityenabled-f.md#isabilityenabled) |
-| [isAbilityEnabled](arkts-ability-bundle-isabilityenabled-f.md#isabilityenabled-1) |
-| [isApplicationEnabled](arkts-ability-bundle-isapplicationenabled-f.md#isapplicationenabled) |
-| [isApplicationEnabled](arkts-ability-bundle-isapplicationenabled-f.md#isapplicationenabled-1) |
-| [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md#queryabilitybywant) |
-| [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md#queryabilitybywant-1) |
-| [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md#queryabilitybywant-2) |
+| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getAbilityIcon) |
+| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getAbilityIcon) |
+| [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo) |
+| [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo) |
+| [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md#getAbilityLabel) |
+| [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md#getAbilityLabel) |
+| [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md#getAllApplicationInfo) |
+| [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md#getAllApplicationInfo) |
+| [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md#getAllApplicationInfo) |
+| [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md#getAllBundleInfo) |
+| [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md#getAllBundleInfo) |
+| [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md#getAllBundleInfo) |
+| [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) |
+| [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) |
+| [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) |
+| [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md#getBundleArchiveInfo) |
+| [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md#getBundleArchiveInfo) |
+| [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) |
+| [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) |
+| [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) |
+| [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md#getLaunchWantForBundle) |
+| [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md#getLaunchWantForBundle) |
+| [getNameForUid](arkts-ability-bundle-getnameforuid-f.md#getNameForUid) |
+| [getNameForUid](arkts-ability-bundle-getnameforuid-f.md#getNameForUid) |
+| [isAbilityEnabled](arkts-ability-bundle-isabilityenabled-f.md#isAbilityEnabled) |
+| [isAbilityEnabled](arkts-ability-bundle-isabilityenabled-f.md#isAbilityEnabled) |
+| [isApplicationEnabled](arkts-ability-bundle-isapplicationenabled-f.md#isApplicationEnabled) |
+| [isApplicationEnabled](arkts-ability-bundle-isapplicationenabled-f.md#isApplicationEnabled) |
+| [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md#queryAbilityByWant) |
+| [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md#queryAbilityByWant) |
+| [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md#queryAbilityByWant) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [cleanBundleCacheFiles](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md#cleanbundlecachefiles) |
-| [cleanBundleCacheFiles](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md#cleanbundlecachefiles-1) |
-| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getapplicationinfos) |
-| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getapplicationinfos-1) |
-| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getapplicationinfos-2) |
-| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getbundleinfos) |
-| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getbundleinfos-1) |
-| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getbundleinfos-2) |
-| [getBundleInstaller](arkts-ability-bundle-getbundleinstaller-f-sys.md#getbundleinstaller) |
-| [getBundleInstaller](arkts-ability-bundle-getbundleinstaller-f-sys.md#getbundleinstaller-1) |
-| [getPermissionDef](arkts-ability-bundle-getpermissiondef-f-sys.md#getpermissiondef) |
-| [getPermissionDef](arkts-ability-bundle-getpermissiondef-f-sys.md#getpermissiondef-1) |
-| [setAbilityEnabled](arkts-ability-bundle-setabilityenabled-f-sys.md#setabilityenabled) |
-| [setAbilityEnabled](arkts-ability-bundle-setabilityenabled-f-sys.md#setabilityenabled-1) |
-| [setApplicationEnabled](arkts-ability-bundle-setapplicationenabled-f-sys.md#setapplicationenabled) |
-| [setApplicationEnabled](arkts-ability-bundle-setapplicationenabled-f-sys.md#setapplicationenabled-1) |
+| [cleanBundleCacheFiles](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md#cleanBundleCacheFiles-(System-API)) |
+| [cleanBundleCacheFiles](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md#cleanBundleCacheFiles-(System-API)) |
+| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getApplicationInfos-(System-API)) |
+| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getApplicationInfos-(System-API)) |
+| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getApplicationInfos-(System-API)) |
+| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getBundleInfos-(System-API)) |
+| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getBundleInfos-(System-API)) |
+| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getBundleInfos-(System-API)) |
+| [getBundleInstaller](arkts-ability-bundle-getbundleinstaller-f-sys.md#getBundleInstaller-(System-API)) |
+| [getBundleInstaller](arkts-ability-bundle-getbundleinstaller-f-sys.md#getBundleInstaller-(System-API)) |
+| [getPermissionDef](arkts-ability-bundle-getpermissiondef-f-sys.md#getPermissionDef-(System-API)) |
+| [getPermissionDef](arkts-ability-bundle-getpermissiondef-f-sys.md#getPermissionDef-(System-API)) |
+| [setAbilityEnabled](arkts-ability-bundle-setabilityenabled-f-sys.md#setAbilityEnabled-(System-API)) |
+| [setAbilityEnabled](arkts-ability-bundle-setabilityenabled-f-sys.md#setAbilityEnabled-(System-API)) |
+| [setApplicationEnabled](arkts-ability-bundle-setapplicationenabled-f-sys.md#setApplicationEnabled-(System-API)) |
+| [setApplicationEnabled](arkts-ability-bundle-setapplicationenabled-f-sys.md#setApplicationEnabled-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

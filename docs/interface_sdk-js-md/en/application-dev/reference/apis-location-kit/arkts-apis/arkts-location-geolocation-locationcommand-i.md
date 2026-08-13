@@ -8,7 +8,7 @@ Location subsystem command structure
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationCommand](ohos.geoLocationManager/geoLocationManager.LocationCommand)
+**Substitutes:** [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md#LocationCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -36,7 +36,7 @@ command: string
 
 **Deprecated since:** 9
 
-**Substitutes:** [command](ohos.geoLocationManager/geoLocationManager.LocationCommand#command)
+**Substitutes:** [command](arkts-location-geolocationmanager-locationcommand-i.md#command)
 
 <!--Device-LocationCommand-command: string--><!--Device-LocationCommand-command: string-End-->
 
@@ -56,7 +56,7 @@ scenario: LocationRequestScenario
 
 **Deprecated since:** 9
 
-**Substitutes:** [scenario](ohos.geoLocationManager/geoLocationManager.LocationCommand#scenario)
+**Substitutes:** [scenario](arkts-location-geolocationmanager-locationcommand-i.md#scenario)
 
 <!--Device-LocationCommand-scenario: LocationRequestScenario--><!--Device-LocationCommand-scenario: LocationRequestScenario-End-->
 

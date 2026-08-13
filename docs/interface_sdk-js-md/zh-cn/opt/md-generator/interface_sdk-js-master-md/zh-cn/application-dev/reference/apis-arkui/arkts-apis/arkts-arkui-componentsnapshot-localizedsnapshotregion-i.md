@@ -1,14 +1,10 @@
 # LocalizedSnapshotRegion
 
-定义组件截图的矩形区域，start和end的值在布局方向为LTR时指定为left和right，在布局方向为RTL时指定为right和left。
-
-> **说明：**
-> 
-> 直接使用componentSnapshot可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取
-> [UIContext](@ohos.arkui.UIContext)实例，并使用[getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
-> 获取绑定实例的componentSnapshot。
+定义组件截图的矩形区域，start和end的值在布局方向为LTR时指定为left和right，在布局方向为RTL时指定为right和left。 > **说明：** > > 直接使用componentSnapshot可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)实例，并使用[getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > 获取绑定实例的componentSnapshot。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 <!--Device-componentSnapshot-interface LocalizedSnapshotRegion--><!--Device-componentSnapshot-interface LocalizedSnapshotRegion-End-->
 
@@ -20,15 +16,13 @@
 bottom: number
 ```
 
-截图区域矩形右下角的y轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件高度]
+截图区域矩形右下角的y轴坐标。 单位：px 取值范围：[0, 组件高度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,15 +38,13 @@ bottom: number
 end: number
 ```
 
-布局方向为LTR时表示截图区域矩形右下角的x轴坐标，布局方向为RTL时表示截图区域矩形左下角的x轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件宽度]
+布局方向为LTR时表示截图区域矩形右下角的x轴坐标，布局方向为RTL时表示截图区域矩形左下角的x轴坐标。 单位：px 取值范围：[0, 组件宽度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,15 +60,13 @@ end: number
 start: number
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的x轴坐标，布局方向为RTL时表示截图区域矩形右上角的x轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件宽度]
+布局方向为LTR时表示截图区域矩形左上角的x轴坐标，布局方向为RTL时表示截图区域矩形右上角的x轴坐标。 单位：px 取值范围：[0, 组件宽度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,15 +82,13 @@ start: number
 top: number
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的y轴坐标，布局方向为RTL时表示截图区域矩形右上角的y轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件高度]
+布局方向为LTR时表示截图区域矩形左上角的y轴坐标，布局方向为RTL时表示截图区域矩形右上角的y轴坐标。 单位：px 取值范围：[0, 组件高度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

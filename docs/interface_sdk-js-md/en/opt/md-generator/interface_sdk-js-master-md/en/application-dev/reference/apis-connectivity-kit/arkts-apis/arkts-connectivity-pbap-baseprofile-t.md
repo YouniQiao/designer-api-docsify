@@ -6,7 +6,9 @@ type BaseProfile = baseProfile.BaseProfile
 
 Base interface of profile.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-pbap-type BaseProfile = baseProfile.BaseProfile--><!--Device-pbap-type BaseProfile = baseProfile.BaseProfile-End-->
 

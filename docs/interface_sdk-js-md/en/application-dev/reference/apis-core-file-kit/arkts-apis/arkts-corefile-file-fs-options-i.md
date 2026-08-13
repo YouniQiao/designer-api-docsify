@@ -2,9 +2,11 @@
 
 Defines the options used in **readLines()**.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
 
@@ -26,9 +28,11 @@ File encoding format. It is optional.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-Options-encoding?: string--><!--Device-Options-encoding?: string-End-->
 

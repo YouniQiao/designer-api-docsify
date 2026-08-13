@@ -18,7 +18,7 @@ Obtain address info from location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocation](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation)
+**Substitutes:** [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -61,7 +61,7 @@ Obtain address info from location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocation](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation)
+**Substitutes:** [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 

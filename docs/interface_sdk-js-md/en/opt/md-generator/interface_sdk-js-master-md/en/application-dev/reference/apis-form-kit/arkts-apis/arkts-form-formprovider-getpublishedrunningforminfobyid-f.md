@@ -14,9 +14,11 @@ function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.Runni
 
 Obtains the information of a specified widget that has been added to the home screen. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>--><!--Device-formProvider-function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>-End-->
 
@@ -38,11 +40,11 @@ Obtains the information of a specified widget that has been added to the home sc
 
 | Error Code ID |
 | --- |
-| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
-| [16501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

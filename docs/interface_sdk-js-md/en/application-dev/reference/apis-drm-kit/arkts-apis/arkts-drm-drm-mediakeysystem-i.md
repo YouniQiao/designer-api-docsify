@@ -1,11 +1,12 @@
 # MediaKeySystem
 
-MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use   
-[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem-1) to create a MediaKeySystem instance.
+MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem) to create a MediaKeySystem instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
 
@@ -25,9 +26,11 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 
 Clears offline media keys with the specified IDs.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -45,9 +48,9 @@ Clears offline media keys with the specified IDs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -60,6 +63,8 @@ Creates a MediaKeySession instance with the specified content protection level.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -83,10 +88,10 @@ Creates a MediaKeySession instance with the specified content protection level.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -98,7 +103,9 @@ Create a MediaKeySession instance with level.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined-End-->
 
@@ -120,10 +127,10 @@ Create a MediaKeySession instance with level.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -136,6 +143,8 @@ Creates a MediaKeySession instance with the default content protection level.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -153,9 +162,9 @@ Creates a MediaKeySession instance with the default content protection level.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -167,7 +176,9 @@ Create a MediaKeySession instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined-End-->
 
@@ -183,9 +194,9 @@ Create a MediaKeySession instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## destroy
 
@@ -195,9 +206,11 @@ destroy(): void
 
 Destroys this MediaKeySystem instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -209,8 +222,8 @@ Destroys this MediaKeySystem instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## generateKeySystemRequest
 
@@ -220,9 +233,11 @@ generateKeySystemRequest(): Promise<ProvisionRequest>
 
 Generates a request to obtain a device certificate for the MediaKeySystem. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -240,8 +255,8 @@ Generates a request to obtain a device certificate for the MediaKeySystem. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getCertificateStatus
 
@@ -251,9 +266,11 @@ getCertificateStatus(): CertificateStatus
 
 Obtains the status of the device certificate.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -271,8 +288,8 @@ Obtains the status of the device certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getConfigurationByteArray
 
@@ -282,9 +299,11 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 Obtains the value of a configuration item in the form of a byte array.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -308,9 +327,9 @@ Obtains the value of a configuration item in the form of a byte array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getConfigurationString
 
@@ -320,9 +339,11 @@ getConfigurationString(configName: string): string
 
 Obtains the value of a configuration item in the form of a string.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -346,9 +367,9 @@ Obtains the value of a configuration item in the form of a string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getMaxContentProtectionLevel
 
@@ -358,9 +379,11 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 Obtains the maximum content protection level supported by the current DRM solution.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -378,8 +401,8 @@ Obtains the maximum content protection level supported by the current DRM soluti
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getOfflineMediaKeyIds
 
@@ -389,9 +412,11 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 Obtains the IDs of offline media keys.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -409,8 +434,8 @@ Obtains the IDs of offline media keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getOfflineMediaKeyStatus
 
@@ -420,9 +445,11 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 
 Obtains the status of offline media keys with the specified IDs.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -446,9 +473,9 @@ Obtains the status of offline media keys with the specified IDs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getStatistics
 
@@ -458,9 +485,11 @@ getStatistics(): StatisticKeyValue[]
 
 Obtains the DRM metrics, including the number of active sessions, plugin version details, the maximum decryption time for each session (over three attempts), the total count of decryption operations, and the number of decryption failures.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -478,40 +507,8 @@ Obtains the DRM metrics, including the number of active sessions, plugin version
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## off('keySystemRequired')
-
-```TypeScript
-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unsubscribes from events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem-1). |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## offKeySystemRequired
 
@@ -523,7 +520,9 @@ Unregister keySystemRequired events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
@@ -539,23 +538,25 @@ Unregister keySystemRequired events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on('keySystemRequired')
+## off_keySystemRequired
 
 ```TypeScript
-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
+off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Subscribes to events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
+Unsubscribes from events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -563,15 +564,15 @@ Subscribes to events indicating that the application requests a device certifica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem-1). It is triggered when a device certificate is required. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. The occurrence of this event signals the need to request a device certificate. |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem). |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## onKeySystemRequired
 
@@ -583,7 +584,9 @@ Register keySystemRequired events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void-End-->
 
@@ -599,7 +602,41 @@ Register keySystemRequired events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## on_keySystemRequired
+
+```TypeScript
+on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
+```
+
+Subscribes to events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem). It is triggered when a device certificate is required. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. The occurrence of this event signals the need to request a device certificate. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## processKeySystemResponse
 
@@ -609,9 +646,11 @@ processKeySystemResponse(response: Uint8Array): Promise<void>
 
 Processes the response to a previously generated device certificate request. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -635,9 +674,9 @@ Processes the response to a previously generated device certificate request. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## setConfigurationByteArray
 
@@ -647,9 +686,11 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 Sets a configuration item in the form of a byte array.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -668,9 +709,9 @@ Sets a configuration item in the form of a byte array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## setConfigurationString
 
@@ -680,9 +721,11 @@ setConfigurationString(configName: string, value: string): void
 
 Sets a configuration item in the form of a string.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -701,7 +744,7 @@ Sets a configuration item in the form of a string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 

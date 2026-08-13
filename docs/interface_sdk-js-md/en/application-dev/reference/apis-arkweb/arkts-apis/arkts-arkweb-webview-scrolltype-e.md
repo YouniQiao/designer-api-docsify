@@ -1,10 +1,12 @@
 # ScrollType
 
-Enum type supplied to [setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setScrollable) for indicating the type of scroll.
+Enumerates the scroll types for [setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setScrollable).
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum ScrollType--><!--Device-webview-enum ScrollType-End-->
 
@@ -16,11 +18,13 @@ Enum type supplied to [setScrollable](arkts-arkweb-webview-webviewcontroller-c.m
 EVENT = 0
 ```
 
-Indicates scrolling the web page through scroll event, include touch screen, touch pad, and mouse wheel.
+Scrolling event, indicating that a web page is scrolled by using a touchscreen, a touchpad, or a mouse.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-ScrollType-EVENT = 0--><!--Device-ScrollType-EVENT = 0-End-->
 

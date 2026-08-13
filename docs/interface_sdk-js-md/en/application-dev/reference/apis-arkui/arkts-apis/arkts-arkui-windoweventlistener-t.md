@@ -8,7 +8,9 @@ Callback function for window event
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,6 +22,6 @@ Callback function for window event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The id of the window which triggers the event |
+| windowId | int | Yes | The id of the window which triggers the event |
 | event | [window.WindowEventType](arkts-arkui-window-windoweventtype-e.md) | Yes | Window callback event type |
 

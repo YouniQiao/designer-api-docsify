@@ -1,6 +1,6 @@
 # wantAgent
 
-The WantAgent module provides APIs for creating and comparing WantAgent objects, and obtaining the user ID and bundle  name of a WantAgent object.
+The WantAgent module provides APIs for creating and comparing WantAgent objects, and obtaining the user ID and bundle name of a WantAgent object.
 
 **Since:** 7
 
@@ -8,7 +8,7 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 **Deprecated since:** 9
 
-**Substitutes:** [wantAgent/wantAgent](ohos.app.ability.wantAgent/wantAgent)
+**Substitutes:** [wantAgent/wantAgent](arkts-ability-wantagent-n.md#wantAgent)
 
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 
@@ -20,25 +20,25 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 | Name | Description |
 | --- | --- |
-| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename) | Obtains the bundle name of a WantAgent. |
-| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename-1) | Obtains the bundle name of a WantAgent. |
-| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid) | Obtains the UID of a WantAgent. |
-| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid-1) | Obtains the UID of a WantAgent. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getBundleName) | Obtains the bundle name of a WantAgent. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getBundleName) | Obtains the bundle name of a WantAgent. |
+| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getUid) | Obtains the UID of a WantAgent. |
+| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getUid) | Obtains the UID of a WantAgent. |
 | [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
-| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel-1) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
+| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
 | [trigger](arkts-ability-wantagent-trigger-depr-f.md#trigger) | Triggers a WantAgent. |
 | [equal](arkts-ability-wantagent-equal-depr-f.md#equal) | Checks whether two WantAgent objects are equal. |
-| [equal](arkts-ability-wantagent-equal-depr-f.md#equal-1) | Checks whether two WantAgent objects are equal. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent) | Obtains a WantAgent object. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent-1) | Obtains a WantAgent object. |
+| [equal](arkts-ability-wantagent-equal-depr-f.md#equal) | Checks whether two WantAgent objects are equal. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getWantAgent) | Obtains a WantAgent object. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getWantAgent) | Obtains a WantAgent object. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent). |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant-1) | Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent). |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getWant) | Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent). |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getWant) | Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent). |
 <!--DelEnd-->
 
 ### Interfaces

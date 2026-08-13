@@ -1,9 +1,10 @@
 # FormIntentInfo（系统接口）
 
-FormIntentInfo用于描述  
-[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)装饰器支持的参数，例如卡片名称。同时，该接口也可用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的卡片信息。
+FormIntentInfo用于描述 @InsightIntentForm 装饰器支持的参数，例如卡片名称。同时，该接口也可用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的卡片信 息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-insightIntentDriver-interface FormIntentInfo--><!--Device-insightIntentDriver-interface FormIntentInfo-End-->
 
@@ -21,7 +22,9 @@ Ability名称。
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,11 +40,13 @@ Ability名称。
 readonly formName: string
 ```
 
-表示[FormExtensionAbility](@ohos.app.form.FormExtensionAbility)绑定的卡片名称。
+表示FormExtensionAbility绑定的卡片名称。
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

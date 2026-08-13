@@ -2,7 +2,9 @@
 
 Provides methods for setting the answering mode of incoming and outgoing calls.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-settings-namespace phone--><!--Device-settings-namespace phone-End-->
 
@@ -20,4 +22,4 @@ import { settings } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [RTT_CALLING_STATUS](arkts-basicservices-phone-con.md#rtt_calling_status) |
+| [RTT_CALLING_STATUS](arkts-basicservices-phone-con.md#RTT_CALLING_STATUS) |

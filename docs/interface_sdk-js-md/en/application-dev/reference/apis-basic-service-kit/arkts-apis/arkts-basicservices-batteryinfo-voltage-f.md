@@ -18,6 +18,8 @@ Battery voltage of the device, in unit of microvolt.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-function voltage(): int--><!--Device-batteryInfo-function voltage(): int-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

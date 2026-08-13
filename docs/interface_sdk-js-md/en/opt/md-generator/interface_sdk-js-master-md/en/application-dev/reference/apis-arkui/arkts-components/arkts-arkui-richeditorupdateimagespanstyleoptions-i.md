@@ -1,14 +1,14 @@
 # RichEditorUpdateImageSpanStyleOptions
 
-Image style options.
-
-Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions).
+Image style options. Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions).
 
 **Inheritance/Implementation:** RichEditorUpdateImageSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface RichEditorUpdateImageSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateImageSpanStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +23,8 @@ Image style.
 **Type:** [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

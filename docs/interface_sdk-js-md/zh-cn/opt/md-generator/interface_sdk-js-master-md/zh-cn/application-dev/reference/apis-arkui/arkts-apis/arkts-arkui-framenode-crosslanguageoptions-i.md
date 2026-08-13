@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface CrossLanguageOptions--><!--Device-unnamed-declare interface CrossLanguageOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,15 @@
 attributeSetting?: boolean
 ```
 
-FrameNode是否支持跨ArkTS语言进行属性设置。
-
-true表示支持跨ArkTS语言进行属性设置，false表示不支持跨ArkTS语言进行属性设置。
-
-默认值为false。
+FrameNode是否支持跨ArkTS语言进行属性设置。 true表示支持跨ArkTS语言进行属性设置，false表示不支持跨ArkTS语言进行属性设置。 默认值为false。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,22 +40,15 @@ true表示支持跨ArkTS语言进行属性设置，false表示不支持跨ArkTS�
 treeOperating?: boolean
 ```
 
-FrameNode是否支持跨ArkTS语言进行组件树操作。
-
-true表示支持跨ArkTS语言进行组件树操作，false表示不支持跨ArkTS语言进行组件树操作。
-
-默认值为false。
-
-**说明：** 当FrameNode启用了跨ArkTS语言进行组件树操作的选项后，支持该FrameNode跨ArkTS语言调用
-[addChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addchild)、  
-[insertChildAfter](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildafter)、[insertChildAt](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildat)、  
-[insertChildBefore](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildbefore)和[removeChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#removechild)。
+FrameNode是否支持跨ArkTS语言进行组件树操作。 true表示支持跨ArkTS语言进行组件树操作，false表示不支持跨ArkTS语言进行组件树操作。 默认值为false。 **说明：** 当FrameNode启用了跨ArkTS语言进行组件树操作的选项后，支持该FrameNode跨ArkTS语言调用 [addChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addchild)、 [insertChildAfter](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildafter) 、[insertChildAt](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildat)、 [insertChildBefore](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildbefore) 和[removeChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#removechild)。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

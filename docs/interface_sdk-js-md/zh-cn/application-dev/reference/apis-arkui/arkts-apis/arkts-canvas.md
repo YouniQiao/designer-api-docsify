@@ -11,9 +11,9 @@
 | [CanvasRenderer](arkts-arkui-canvasrenderer-c.md) | CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 |
 | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 |
 | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进行绘制，绘制对象可以是形状、文本、图片等。 |
-| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建  [Worker线程](../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。 |
+| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建 [Worker线程](../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到 Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。 |
 | [ImageData](arkts-arkui-imagedata-c.md) | ImageData对象可以存储canvas渲染的像素数据。 |
-| [OffscreenCanvas](arkts-arkui-offscreencanvas-c.md) | OffscreenCanvas组件用于绘制自定义图形。  使用[Canvas](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)组件或  [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务，从而避免影响应用程序主线程性能。 |
+| [OffscreenCanvas](arkts-arkui-offscreencanvas-c.md) | OffscreenCanvas组件用于绘制自定义图形。 使用[Canvas](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)组件或 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md) 对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响 应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务， 从而避免影响应用程序主线程性能。 |
 | [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) |  |
 | [Path2D](arkts-arkui-path2d-c.md) | 路径对象，支持通过对象的接口进行路径的描述，并通过Canvas的stroke接口或者fill接口进行绘制。 |
 | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 用于配置CanvasRenderingContext2D对象的参数，包括是否开启抗锯齿。 |
@@ -23,8 +23,8 @@
 | 名称 | 说明 |
 | --- | --- |
 | [CanvasParams](arkts-arkui-canvasparams-i.md) | 定义Canvas的具体配置参数。 |
-| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | 一个Object对象，使用  [createPattern](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md#createpattern)方法创建，通过指定图像和重复方式创建图片填充的模板。 |
-| [OffscreenCanvasRenderingContext2DInterface](arkts-arkui-offscreencanvasrenderingcontext2dinterface-i.md) | 使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制，绘制对象可以是形状、文本、图片等。离屏绘制是指将需要绘制的内容先绘制在缓存区，然后将其转换成图片，一次性绘制到Canvas上。离屏绘制使用CPU进行绘制，绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。 |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | 一个Object对象，使用 [createPattern](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md#createpattern) 方法创建，通过指定图像和重复方式创建图片填充的模板。 |
+| [OffscreenCanvasRenderingContext2DInterface](arkts-arkui-offscreencanvasrenderingcontext2dinterface-i.md) | 使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制，绘制对象可以是形状、文本、图片等。 离屏绘制是指将需要绘制的内容先绘制在缓存区，然后将其转换成图片，一次性绘制到Canvas上。 离屏绘制使用CPU进行绘制，绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。 |
 | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | 定义渲染上下文的具体配置参数。 |
 | [Size](arkts-arkui-size-i.md) | DrawingRenderingContext的尺寸信息。 |
 | [TextMetrics](arkts-arkui-textmetrics-i.md) | 文本的尺寸信息。 |

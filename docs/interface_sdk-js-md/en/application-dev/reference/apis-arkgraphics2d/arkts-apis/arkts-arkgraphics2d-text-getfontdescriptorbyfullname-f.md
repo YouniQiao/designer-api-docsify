@@ -12,13 +12,13 @@ import { text } from '@kit.ArkGraphics2D';
 function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>
 ```
 
-Obtains the font descriptor based on the font name and type. This API uses a promise to return the result.
+Obtains the font descriptor based on the font name and type. This API uses a promise to return the result. A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
 
-A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
+**Since:** 23
 
-**Since:** 14
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -43,7 +43,7 @@ A font descriptor is a data structure that describes font features. It contains 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

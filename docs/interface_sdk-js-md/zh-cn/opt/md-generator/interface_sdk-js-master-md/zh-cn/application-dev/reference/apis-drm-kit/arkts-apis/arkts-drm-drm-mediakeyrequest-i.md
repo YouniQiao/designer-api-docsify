@@ -2,7 +2,9 @@
 
 媒体密钥请求参数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-drm-interface MediaKeyRequest--><!--Device-drm-interface MediaKeyRequest-End-->
 
@@ -18,7 +20,9 @@ data: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ defaultURL: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ mediaKeyRequestType: MediaKeyRequestType
 
 **类型：** [MediaKeyRequestType](arkts-drm-drm-mediakeyrequesttype-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

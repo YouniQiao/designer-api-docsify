@@ -15,7 +15,9 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 Creates the context for a plugin based on a given context, plugin bundle name, plugin module name, and application bundle name to obtain the basic information about the plugin. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -32,9 +34,9 @@ Creates the context for a plugin based on a given context, plugin bundle name, p
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | Yes |
-| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | Yes |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i-sys.md) | string | Yes |
 | pluginModuleName | string | Yes |
-| [hostBundleName](../../apis-form-kit/arkts-apis/arkts-form-forminfo-runningforminfo-i.md) | string | Yes |
+| [hostBundleName](../../apis-form-kit/arkts-apis/arkts-form-forminfo-runningforminfo-i-sys.md) | string | Yes |
 
 **Return value:**
 
@@ -46,8 +48,8 @@ Creates the context for a plugin based on a given context, plugin bundle name, p
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

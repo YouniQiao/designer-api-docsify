@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SmartGestureShortcutOptions--><!--Device-unnamed-declare interface SmartGestureShortcutOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 action?: GestureShortcut
 ```
 
-智慧手势响应优先级。当前仅支持GestureShortcut.PRIMARY。
-
-当未显式传入该参数或参数异常时，会清空当前组件的智慧手势响应行为配置。
+智慧手势响应优先级。当前仅支持GestureShortcut.PRIMARY。 当未显式传入该参数或参数异常时，会清空当前组件的智慧手势响应行为配置。
 
 **类型：** GestureShortcut
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +42,15 @@ action?: GestureShortcut
 enabled?: boolean
 ```
 
-当前组件是否响应智慧手势。
-
-true表示组件响应智慧手势，false表示组件不响应智慧手势。
-
-默认值为false。
+当前组件是否响应智慧手势。 true表示组件响应智慧手势，false表示组件不响应智慧手势。 默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,17 +66,15 @@ true表示组件响应智慧手势，false表示组件不响应智慧手势。
 selectable?: boolean
 ```
 
-组件被智慧手势操作选中后是否展示并保留选中态。
-
-true表示显示选中框，false表示不显示选中框。
-
-当enabled为true时，默认值为true；当enabled为false时，默认值为false。
+组件被智慧手势操作选中后是否展示并保留选中态。 true表示显示选中框，false表示不显示选中框。 当enabled为true时，默认值为true；当enabled为false时，默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

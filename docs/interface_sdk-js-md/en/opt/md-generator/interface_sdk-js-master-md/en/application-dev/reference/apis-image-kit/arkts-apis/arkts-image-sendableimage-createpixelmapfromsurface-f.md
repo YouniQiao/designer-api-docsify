@@ -16,6 +16,8 @@ Creates a PixelMap object from surface id.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -37,9 +39,9 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID |
 | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980178](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
-| [62980105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-failure-in-obtaining-image-data) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) |
 
 ## Examples
 

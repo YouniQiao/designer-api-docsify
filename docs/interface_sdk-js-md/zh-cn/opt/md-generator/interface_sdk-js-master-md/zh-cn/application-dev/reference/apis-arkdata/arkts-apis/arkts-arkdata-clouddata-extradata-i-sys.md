@@ -2,7 +2,9 @@
 
 透传数据，携带通知数据变更所需要的信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
 
@@ -20,7 +22,9 @@ eventId: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
 
@@ -38,7 +42,9 @@ extraData: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
 

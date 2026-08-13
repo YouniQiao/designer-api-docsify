@@ -3,6 +3,7 @@
 ## Hyperlink
 
 ```TypeScript
+@ComponentBuilder
 export declare function Hyperlink(
     address: string | Resource | undefined, content?: string | Resource, 
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ export declare function Hyperlink(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-export declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Hyperlink(    address: string | Resource | undefined, content?: string | Resource,     content_?: CustomBuilder,): HyperlinkAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,18 +30,19 @@ export declare function Hyperlink(
 | --- | --- | --- | --- |
 | address | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | Hyperlink组件跳转的网页地址。&lt;br/&gt;取值为undefined时，按无跳转链接地址处理。 |
 | content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 | Hyperlink组件中超链接显示文本。&lt;br/&gt;若不传该参数且组件内无子组件时，默认显示address参数值链接地址。&lt;br/&gt; **说明：** &lt;br/&gt;组件内有子组件时，不显示超链接文本。 &lt;br&gt;默认值：''。 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | The node of component. |
+| content_ | CustomBuilder | 否 | The node of component. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
+| HyperlinkAttribute |  |
 
 
 ## Hyperlink
 
 ```TypeScript
+@Builder
 export declare function Hyperlink(
     style: CustomBuilderT<HyperlinkAttribute>,
     content_?: CustomBuilder,
@@ -51,11 +55,11 @@ export declare function Hyperlink(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-export declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute--><!--Device-unnamed-@Builderexport declare function Hyperlink(    style: CustomBuilderT<HyperlinkAttribute>,    content_?: CustomBuilder,): HyperlinkAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,12 +67,12 @@ export declare function Hyperlink(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md)&gt; | 是 | Hyperlink属性实例。 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
+| style | CustomBuilderT&lt;HyperlinkAttribute&gt; | 是 | Hyperlink属性实例。 |
+| content_ | CustomBuilder | 否 | 容器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
+| HyperlinkAttribute |  |
 

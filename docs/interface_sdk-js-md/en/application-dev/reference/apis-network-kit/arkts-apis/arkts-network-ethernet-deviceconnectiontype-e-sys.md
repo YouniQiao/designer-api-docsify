@@ -6,6 +6,8 @@ Defines the Device Connection Mode of the Ethernet.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-ethernet-export enum DeviceConnectionType--><!--Device-ethernet-export enum DeviceConnectionType-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -24,6 +26,8 @@ Ethernet in built-in mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-DeviceConnectionType-BUILT_IN = 0--><!--Device-DeviceConnectionType-BUILT_IN = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -41,6 +45,8 @@ Ethernet in external mode. For example, an ethernet connection via USB.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceConnectionType-EXTERNAL = 1--><!--Device-DeviceConnectionType-EXTERNAL = 1-End-->
 

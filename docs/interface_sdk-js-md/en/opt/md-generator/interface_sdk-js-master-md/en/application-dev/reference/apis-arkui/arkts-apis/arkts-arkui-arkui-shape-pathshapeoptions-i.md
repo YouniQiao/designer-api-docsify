@@ -4,6 +4,8 @@ Represents the parameter of the constructor used to create a **PathShape** objec
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface PathShapeOptions--><!--Device-unnamed-interface PathShapeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,13 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 commands?: string
 ```
 
-Path drawing commands. For more about the commands, see [commands](PathAttribute#commands).
+Path drawing commands. For more about the commands, see commands.
 
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

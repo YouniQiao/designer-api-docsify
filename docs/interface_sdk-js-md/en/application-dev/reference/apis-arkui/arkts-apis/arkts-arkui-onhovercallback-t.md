@@ -10,6 +10,8 @@ callback of the on hover event.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type OnHoverCallback = (status: boolean, event: HoverEvent) => void--><!--Device-unnamed-export type OnHoverCallback = (status: boolean, event: HoverEvent) => void-End-->

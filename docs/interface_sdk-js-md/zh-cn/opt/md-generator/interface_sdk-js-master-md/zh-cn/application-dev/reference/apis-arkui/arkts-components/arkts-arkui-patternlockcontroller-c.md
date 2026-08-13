@@ -2,11 +2,11 @@
 
 PatternLock组件的控制器，用于重置组件状态和设置图案密码状态。
 
-## 导入对象
-
-```ts patternLockController: PatternLockController = new PatternLockController();```
+## 导入对象 ```ts patternLockController: PatternLockController = new PatternLockController(); ```
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class PatternLockController--><!--Device-unnamed-declare class PatternLockController-End-->
 
@@ -21,6 +21,8 @@ constructor()
 PatternLockController的构造函数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +40,8 @@ reset()
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PatternLockController-reset()--><!--Device-PatternLockController-reset()-End-->
@@ -53,6 +57,8 @@ setChallengeResult(result: PatternLockChallengeResult): void
 设置图案密码的正确或错误状态。需要在PatternLock组件构造时传入对应的controller参数才可生效，未传入时调用不生效。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

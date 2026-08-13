@@ -4,9 +4,11 @@ Environment resource, which inherits from [SceneResource](arkts-arkgraphics3d-sc
 
 **Inheritance/Implementation:** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface Environment extends SceneResource--><!--Device-unnamed-export interface Environment extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Environment--><!--Device-unnamed-export interface Environment-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,7 +22,9 @@ Environment background type.
 
 **Type:** [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-backgroundType: EnvironmentBackgroundType--><!--Device-Environment-backgroundType: EnvironmentBackgroundType-End-->
 
@@ -36,7 +40,9 @@ Environment image. The default value is undefined.
 
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-environmentImage?: Image | null--><!--Device-Environment-environmentImage?: Image | null-End-->
 
@@ -52,7 +58,9 @@ Environment map factor.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-environmentMapFactor: Vec4--><!--Device-Environment-environmentMapFactor: Vec4-End-->
 
@@ -72,6 +80,8 @@ Rotation of the ambient light. The default value is undefined. The parameter mus
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Environment-environmentRotation?: Quaternion--><!--Device-Environment-environmentRotation?: Quaternion-End-->
@@ -88,7 +98,9 @@ Indirect diffuse factor.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-indirectDiffuseFactor: Vec4--><!--Device-Environment-indirectDiffuseFactor: Vec4-End-->
 
@@ -104,7 +116,9 @@ Indirect specular factor.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-indirectSpecularFactor: Vec4--><!--Device-Environment-indirectSpecularFactor: Vec4-End-->
 
@@ -120,7 +134,9 @@ Irradiance coefficients. The default value is undefined.
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-irradianceCoefficients?: Vec3[]--><!--Device-Environment-irradianceCoefficients?: Vec3[]-End-->
 
@@ -136,7 +152,9 @@ Radiance image. The default value is undefined.
 
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-radianceImage?: Image | null--><!--Device-Environment-radianceImage?: Image | null-End-->
 

@@ -2,9 +2,11 @@
 
 Represents a **Schema** instance, which provides the methods for defining the values stored in a KV store.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
 
@@ -24,9 +26,11 @@ appendChild(child: FieldNode): boolean
 
 Appends a child node to this **FieldNode**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +54,7 @@ Appends a child node to this **FieldNode**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -81,9 +85,11 @@ constructor(name: string)
 
 Defines a constructor used to create a **FieldNode** instance with a string field.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,7 +107,7 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
 ## default
 
@@ -117,67 +123,9 @@ Indicates the default value of field node.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## defaultValue
-
-```TypeScript
-set defaultValue(defaultValue: string)
-```
-
-Set the default value of field node.
-
-**Type:** string
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FieldNode-set defaultValue(defaultValue: string)--><!--Device-FieldNode-set defaultValue(defaultValue: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## nullable
-
-```TypeScript
-set nullable(isnullable: boolean)
-```
-
-Set the nullable of database field.
-
-**Type:** boolean
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FieldNode-set nullable(isnullable: boolean)--><!--Device-FieldNode-set nullable(isnullable: boolean)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## type
-
-```TypeScript
-set type(type: int)
-```
-
-Set the type of value.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FieldNode-set type(type: int)--><!--Device-FieldNode-set type(type: int)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

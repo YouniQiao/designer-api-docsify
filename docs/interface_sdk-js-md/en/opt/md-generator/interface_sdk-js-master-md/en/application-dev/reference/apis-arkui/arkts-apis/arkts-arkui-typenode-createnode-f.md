@@ -10,6 +10,8 @@ Creates a FrameNode of the **Text** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -78,6 +80,8 @@ Creates a FrameNode of the **Column** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -145,6 +149,8 @@ Creates a FrameNode of the Row type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -164,7 +170,7 @@ Creates a FrameNode of the Row type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Row](arkts-arkui-typenode-row-t.md) |
+| [Row](../../apis-na/arkts-apis/arkts-na-typenode-row-t.md) |
 
 ## Examples
 
@@ -212,6 +218,8 @@ Creates a FrameNode of the **Stack** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -231,7 +239,7 @@ Creates a FrameNode of the **Stack** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Stack](arkts-arkui-typenode-stack-t.md) |
+| [Stack](../../apis-na/arkts-apis/arkts-na-typenode-stack-t.md) |
 
 ## Examples
 
@@ -283,6 +291,8 @@ Creates a FrameNode of the **GridRow** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -302,7 +312,7 @@ Creates a FrameNode of the **GridRow** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [GridRow](arkts-arkui-typenode-gridrow-t.md) |
+| [GridRow](../../apis-na/arkts-apis/arkts-na-typenode-gridrow-t.md) |
 
 ## Examples
 
@@ -357,6 +367,8 @@ Creates a FrameNode of the **GridCol** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -376,7 +388,7 @@ Creates a FrameNode of the **GridCol** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [GridCol](arkts-arkui-typenode-gridcol-t.md) |
+| [GridCol](../../apis-na/arkts-apis/arkts-na-typenode-gridcol-t.md) |
 
 ## Examples
 
@@ -431,6 +443,8 @@ Creates a FrameNode of the Flex type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -450,7 +464,7 @@ Creates a FrameNode of the Flex type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Flex](arkts-arkui-typenode-flex-t.md) |
+| [Flex](../../apis-na/arkts-apis/arkts-na-typenode-flex-t.md) |
 
 ## Examples
 
@@ -497,6 +511,8 @@ function createNode(context: UIContext, nodeType: 'Swiper'): Swiper
 Creates a FrameNode of the **Swiper** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -584,6 +600,8 @@ Creates a FrameNode of the **Progress** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -654,6 +672,8 @@ Creates a FrameNode of the **Scroll** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -673,7 +693,7 @@ Creates a FrameNode of the **Scroll** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Scroll](arkts-arkui-typenode-scroll-t.md) |
+| [Scroll](../../apis-na/arkts-apis/arkts-na-typenode-scroll-t.md) |
 
 ## Examples
 
@@ -737,6 +757,8 @@ function createNode(context: UIContext, nodeType: 'RelativeContainer'): Relative
 Creates a FrameNode of the **RelativeContainer** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -805,6 +827,8 @@ Creates a FrameNode of the **Divider** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -824,7 +848,7 @@ Creates a FrameNode of the **Divider** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Divider](arkts-arkui-typenode-divider-t.md) |
+| [Divider](../../apis-na/arkts-apis/arkts-na-typenode-divider-t.md) |
 
 ## Examples
 
@@ -877,6 +901,8 @@ function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingPro
 Creates a FrameNode of the **LoadingProgress** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -946,6 +972,8 @@ Creates a FrameNode of the **Search** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1014,6 +1042,8 @@ function createNode(context: UIContext, nodeType: 'Blank'): Blank
 Creates a FrameNode of the **Blank** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1088,6 +1118,8 @@ function createNode(context: UIContext, nodeType: 'Image'): Image
 Creates a FrameNode of the **Image** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1166,6 +1198,8 @@ function createNode(context: UIContext, nodeType: 'List'): List
 Creates a FrameNode of the **List** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1258,6 +1292,8 @@ Creates a FrameNode of the **ListItem** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1277,11 +1313,11 @@ Creates a FrameNode of the **ListItem** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ListItem](arkts-arkui-typenode-listitem-t.md) |
+| [ListItem](../../apis-na/arkts-apis/arkts-na-typenode-listitem-t.md) |
 
 ## Examples
 
-See the example for [createNode('List')](#createnodelist12).
+See the example for createNode('List').
 
 
 ## createNode
@@ -1293,6 +1329,8 @@ function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 Creates a FrameNode of the **TextInput** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1360,6 +1398,8 @@ function createNode(context: UIContext, nodeType: 'Button'): Button
 Creates a FrameNode of the **Button** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1435,6 +1475,8 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1454,11 +1496,11 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) |
+| [ListItemGroup](../../apis-na/arkts-apis/arkts-na-typenode-listitemgroup-t.md) |
 
 ## Examples
 
-See the example for [createNode('List')](#createnodelist12).
+See the example for createNode('List').
 
 
 ## createNode
@@ -1470,6 +1512,8 @@ function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 Creates a FrameNode of the **WaterFlow** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1490,7 +1534,7 @@ Creates a FrameNode of the **WaterFlow** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) |
+| [WaterFlow](../../apis-na/arkts-apis/arkts-na-typenode-waterflow-t.md) |
 
 ## Examples
 
@@ -1566,6 +1610,8 @@ Creates a FrameNode of the **FlowItem** type.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1585,11 +1631,11 @@ Creates a FrameNode of the **FlowItem** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FlowItem](arkts-arkui-typenode-flowitem-t.md) |
+| [FlowItem](../../apis-na/arkts-apis/arkts-na-typenode-flowitem-t.md) |
 
 ## Examples
 
-See the example for [createNode('WaterFlow')](#createnodewaterflow12).
+See the example for createNode('WaterFlow').
 
 
 ## createNode
@@ -1601,6 +1647,8 @@ function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 Creates a FrameNode of the **XComponent** type.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1621,7 +1669,7 @@ Creates a FrameNode of the **XComponent** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) |
+| [XComponent](../../apis-na/arkts-apis/arkts-na-typenode-xcomponent-t.md) |
 
 ## Examples
 
@@ -1670,6 +1718,8 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1690,7 +1740,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) |
+| [XComponent](../../apis-na/arkts-apis/arkts-na-typenode-xcomponent-t.md) |
 
 ## Examples
 
@@ -1745,6 +1795,8 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -1765,7 +1817,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) |
+| [XComponent](../../apis-na/arkts-apis/arkts-na-typenode-xcomponent-t.md) |
 
 ## Examples
 
@@ -1818,6 +1870,8 @@ Creates a FrameNode of the **Checkbox** type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1837,7 +1891,7 @@ Creates a FrameNode of the **Checkbox** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Checkbox](arkts-arkui-typenode-checkbox-t.md) |
+| [Checkbox](../../apis-na/arkts-apis/arkts-na-typenode-checkbox-t.md) |
 
 ## Examples
 
@@ -1893,6 +1947,8 @@ function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGrou
 Creates a FrameNode of the **CheckboxGroup** type.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1972,6 +2028,8 @@ Creates a FrameNode of the **Radio** type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2047,6 +2105,8 @@ Creates a FrameNode of the **Rating** type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2066,7 +2126,7 @@ Creates a FrameNode of the **Rating** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Rating](arkts-arkui-typenode-rating-t.md) |
+| [Rating](../../apis-na/arkts-apis/arkts-na-typenode-rating-t.md) |
 
 ## Examples
 
@@ -2117,6 +2177,8 @@ function createNode(context: UIContext, nodeType: 'Select'): Select
 Creates a FrameNode of the **Select** type.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2187,6 +2249,8 @@ Creates a FrameNode of the **Slider** type.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2206,7 +2270,7 @@ Creates a FrameNode of the **Slider** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Slider](arkts-arkui-typenode-slider-t.md) |
+| [Slider](../../apis-na/arkts-apis/arkts-na-typenode-slider-t.md) |
 
 ## Examples
 
@@ -2256,6 +2320,8 @@ function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOpti
 Creates a FrameNode of the **Toggle** type.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2329,6 +2395,8 @@ Creates a FrameNode of the **Marquee** type.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2348,7 +2416,7 @@ Creates a FrameNode of the **Marquee** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Marquee](arkts-arkui-typenode-marquee-t.md) |
+| [Marquee](../../apis-na/arkts-apis/arkts-na-typenode-marquee-t.md) |
 
 ## Examples
 
@@ -2396,6 +2464,8 @@ function createNode(context: UIContext, nodeType: 'TextArea'): TextArea
 Creates a FrameNode of the **TextArea** type.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2464,6 +2534,8 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2483,7 +2555,7 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) |
+| [SymbolGlyph](../../apis-na/arkts-apis/arkts-na-typenode-symbolglyph-t.md) |
 
 ## Examples
 
@@ -2531,6 +2603,8 @@ Creates a FrameNode of the **QRCode** type.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2569,6 +2643,8 @@ Creates a FrameNode of the **Badge** type.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2588,7 +2664,7 @@ Creates a FrameNode of the **Badge** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Badge](arkts-arkui-typenode-badge-t.md) |
+| [Badge](../../apis-na/arkts-apis/arkts-na-typenode-badge-t.md) |
 
 ## Examples
 
@@ -2606,6 +2682,8 @@ function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 Creates a FrameNode of the **TextClock** type.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2626,7 +2704,7 @@ Creates a FrameNode of the **TextClock** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [TextClock](arkts-arkui-typenode-textclock-t.md) |
+| [TextClock](../../apis-na/arkts-apis/arkts-na-typenode-textclock-t.md) |
 
 ## Examples
 
@@ -2644,6 +2722,8 @@ function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 Creates a FrameNode of the **TextTimer** type.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2683,6 +2763,8 @@ Creates a FrameNode of the **Grid** type.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2702,7 +2784,7 @@ Creates a FrameNode of the **Grid** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Grid](arkts-arkui-typenode-grid-t.md) |
+| [Grid](../../apis-na/arkts-apis/arkts-na-typenode-grid-t.md) |
 
 ## Examples
 
@@ -2773,6 +2855,8 @@ Creates a FrameNode of the **GridItem** type.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2792,8 +2876,8 @@ Creates a FrameNode of the **GridItem** type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [GridItem](arkts-arkui-typenode-griditem-t.md) |
+| [GridItem](../../apis-na/arkts-apis/arkts-na-typenode-griditem-t.md) |
 
 ## Examples
 
-See the example for [createNode('Grid')](#createnodegrid14).
+See the example for createNode('Grid').

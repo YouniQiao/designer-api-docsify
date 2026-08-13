@@ -2,7 +2,9 @@
 
 提供电话号码相关的能力，包括电话号码有效性判断、格式化和归属地获取。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class PhoneNumberFormat--><!--Device-i18n-export class PhoneNumberFormat-End-->
 
@@ -16,7 +18,9 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 
 创建电话号码格式化对象。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,13 +50,11 @@ let phoneNumberFormat: i18n.PhoneNumberFormat = new i18n.PhoneNumberFormat('CN',
 format(phoneNumber: string): string
 ```
 
-对电话号码进行格式化。
+对电话号码进行格式化。 > **说明：**> > 从API version 12开始，支持对拨号中的电话号码进行格式化。
 
-> **说明：**
-> 
-> 从API version 12开始，支持对拨号中的电话号码进行格式化。
+**起始版本：** 23
 
-**起始版本：** 8
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,13 +100,11 @@ for (let i = 0; i < phoneNumber.length; i++) {
 getLocationName(phoneNumber: string, locale: string): string
 ```
 
-获取电话号码归属地。
+获取电话号码归属地。 > **说明：**> > 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
 
-> **说明：**
-> 
-> 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -154,7 +154,9 @@ isValidNumber(phoneNumber: string): boolean
 
 判断电话号码是否为当前电话号码格式化对象中国家的有效号码。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

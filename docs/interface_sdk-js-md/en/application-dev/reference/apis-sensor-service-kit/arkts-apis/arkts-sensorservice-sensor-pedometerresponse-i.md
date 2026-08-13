@@ -4,11 +4,13 @@ Describes the pedometer sensor data. It extends from [Response](arkts-sensorserv
 
 **Inheritance/Implementation:** PedometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-sensor-interface PedometerResponse extends Response--><!--Device-sensor-interface PedometerResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface PedometerResponse--><!--Device-sensor-interface PedometerResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,11 +28,13 @@ steps: double
 
 Number of steps a user has walked.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PedometerResponse-steps: double--><!--Device-PedometerResponse-steps: double-End-->
 

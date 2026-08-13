@@ -2,9 +2,11 @@
 
 P2P group owner band.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum GroupOwnerBand--><!--Device-wifiManager-enum GroupOwnerBand-End-->
 
@@ -18,9 +20,11 @@ GO_BAND_AUTO = 0
 
 default band.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GroupOwnerBand-GO_BAND_AUTO = 0--><!--Device-GroupOwnerBand-GO_BAND_AUTO = 0-End-->
 
@@ -34,9 +38,11 @@ GO_BAND_2GHZ = 1
 
 2.4G band.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GroupOwnerBand-GO_BAND_2GHZ = 1--><!--Device-GroupOwnerBand-GO_BAND_2GHZ = 1-End-->
 
@@ -50,9 +56,11 @@ GO_BAND_5GHZ = 2
 
 5G band.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GroupOwnerBand-GO_BAND_5GHZ = 2--><!--Device-GroupOwnerBand-GO_BAND_5GHZ = 2-End-->
 

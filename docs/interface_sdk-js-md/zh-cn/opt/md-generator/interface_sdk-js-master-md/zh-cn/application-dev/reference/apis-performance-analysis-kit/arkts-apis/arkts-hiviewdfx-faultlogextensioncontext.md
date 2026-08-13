@@ -1,4 +1,4 @@
-# @ohos.hiviewdfx.FaultLogExtensionContext(故障延迟通知上下文)
+# @ohos.hiviewdfx.FaultLogExtensionContext
 
 ## 汇总
 

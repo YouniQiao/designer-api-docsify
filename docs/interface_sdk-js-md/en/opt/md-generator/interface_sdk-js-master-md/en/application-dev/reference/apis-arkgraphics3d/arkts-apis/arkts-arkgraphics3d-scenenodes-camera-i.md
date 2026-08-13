@@ -4,9 +4,11 @@ Defines camera.
 
 **Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface Camera extends Node--><!--Device-unnamed-export interface Camera extends Node-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Camera--><!--Device-unnamed-export interface Camera-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -19,6 +21,8 @@ getProjectionMatrix(): Mat4x4
 Get the projection matrix of this camera.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-getProjectionMatrix(): Mat4x4--><!--Device-Camera-getProjectionMatrix(): Mat4x4-End-->
 
@@ -63,6 +67,8 @@ Get the view matrix of this camera.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-Camera-getViewMatrix(): Mat4x4--><!--Device-Camera-getViewMatrix(): Mat4x4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -102,9 +108,11 @@ function GetViewMatrix(): void {
 raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 ```
 
-Casts a ray from a specific position on the screen to detect and retrieve information about all hit 3D objects.This API uses a promise to return the result.
+Casts a ray from a specific position on the screen to detect and retrieve information about all hit 3D objects. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>--><!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>-End-->
 
@@ -247,7 +255,9 @@ Color after the render target is cleared.
 
 **Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-clearColor: Color | null--><!--Device-Camera-clearColor: Color | null-End-->
 
@@ -263,7 +273,9 @@ Post-processing effects applied to the camera output.
 
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt;
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-readonly effects: Container<Effect>--><!--Device-Camera-readonly effects: Container<Effect>-End-->
 
@@ -279,7 +291,9 @@ Whether the camera is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-enabled: boolean--><!--Device-Camera-enabled: boolean-End-->
 
@@ -291,11 +305,13 @@ Whether the camera is enabled. true if enabled, false otherwise.
 farPlane: number
 ```
 
-Far plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system.The value is greater than that of nearPlane.
+Far plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system. The value is greater than that of nearPlane.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-farPlane: double--><!--Device-Camera-farPlane: double-End-->
 
@@ -307,11 +323,13 @@ Far plane. The unit is the scene unit (such as cm, m, and km) in the world coord
 fov: number
 ```
 
-Field of view. The unit is radian (rad).The value ranges from 0 to π radians.
+Field of view. The unit is radian (rad). The value ranges from 0 to π radians.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-fov: double--><!--Device-Camera-fov: double-End-->
 
@@ -323,13 +341,15 @@ Field of view. The unit is radian (rad).The value ranges from 0 to π radians.
 msaa?: boolean
 ```
 
-Whether Multisample Anti-Aliasing (MSAA) is enabled. true if enabled, false otherwise.The default value is false.
+Whether Multisample Anti-Aliasing (MSAA) is enabled. true if enabled, false otherwise. The default value is false.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-msaa?: boolean--><!--Device-Camera-msaa?: boolean-End-->
 
@@ -341,11 +361,13 @@ Whether Multisample Anti-Aliasing (MSAA) is enabled. true if enabled, false othe
 nearPlane: number
 ```
 
-Near plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system.The value is greater than 0.
+Near plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system. The value is greater than 0.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-nearPlane: double--><!--Device-Camera-nearPlane: double-End-->
 
@@ -361,7 +383,9 @@ Post-processing settings.
 
 **Type:** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-postProcess: PostProcessSettings | null--><!--Device-Camera-postProcess: PostProcessSettings | null-End-->
 
@@ -373,13 +397,15 @@ Post-processing settings.
 renderingPipeline?: RenderingPipelineType
 ```
 
-Rendering pipeline type. If this parameter is not set, the lightweight forward rendering pipeline is used by default.(If the FORWARD_LIGHTWEIGHT pipeline is selected, certain features are unavailable.)
+Rendering pipeline type. If this parameter is not set, the lightweight forward rendering pipeline is used by default. (If the FORWARD_LIGHTWEIGHT pipeline is selected, certain features are unavailable.)
 
 **Type:** [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md)
 
 **Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Camera-renderingPipeline?: RenderingPipelineType--><!--Device-Camera-renderingPipeline?: RenderingPipelineType-End-->
 

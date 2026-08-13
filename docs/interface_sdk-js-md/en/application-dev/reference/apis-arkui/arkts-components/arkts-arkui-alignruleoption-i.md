@@ -6,6 +6,8 @@ Defines the align rule options of relative container.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface AlignRuleOption--><!--Device-unnamed-declare interface AlignRuleOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Defines the align rule options of relative container.
 bias?: Bias
 ```
 
-Offset of the component under the anchor constraints.The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
+Offset of the component under the anchor constraints. The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
 **Type:** Bias
 
@@ -25,6 +27,8 @@ Offset of the component under the anchor constraints.The value is the ratio of t
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ Offset of the component under the anchor constraints.The value is the ratio of t
 bottom?: VerticalAlignParam
 ```
 
-Top alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
+Top alignment. In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,13 +70,15 @@ Top alignment.In versions earlier than API version 23, the input parameter type 
 center?: VerticalAlignParam
 ```
 
-Center alignment in the vertical direction.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
+Center alignment in the vertical direction. In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -86,13 +94,15 @@ Center alignment in the vertical direction.In versions earlier than API version 
 left?: HorizontalAlignParam
 ```
 
-Left alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
+Left alignment. In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
 **Type:** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,13 +118,15 @@ Left alignment.In versions earlier than API version 23, the input parameter type
 middle?: HorizontalAlignParam
 ```
 
-Center alignment in the horizontal direction.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
+Center alignment in the horizontal direction. In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
 **Type:** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,13 +142,15 @@ Center alignment in the horizontal direction.In versions earlier than API versio
 right?: HorizontalAlignParam
 ```
 
-Right alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align:HorizontalAlign }.
+Right alignment. In versions earlier than API version 23, the input parameter type is { anchor: string, align:HorizontalAlign }.
 
 **Type:** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -152,13 +166,15 @@ Right alignment.In versions earlier than API version 23, the input parameter typ
 top?: VerticalAlignParam
 ```
 
-Top alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
+Top alignment. In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

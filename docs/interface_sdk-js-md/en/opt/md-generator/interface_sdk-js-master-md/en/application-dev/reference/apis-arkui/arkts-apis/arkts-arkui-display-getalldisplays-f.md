@@ -14,7 +14,9 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 Obtains all Display objects. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +34,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 | Error Code ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 
 ## Examples
 
@@ -60,7 +62,9 @@ function getAllDisplays(): Promise<Array<Display>>
 
 Obtains all Display objects. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +82,7 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 
 ## Examples
 

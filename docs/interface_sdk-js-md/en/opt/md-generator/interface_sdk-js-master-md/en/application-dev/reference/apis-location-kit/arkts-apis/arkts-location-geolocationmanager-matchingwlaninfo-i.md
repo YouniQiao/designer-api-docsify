@@ -4,6 +4,8 @@ Matching WLAN information structure.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-geoLocationManager-export interface MatchingWlanInfo--><!--Device-geoLocationManager-export interface MatchingWlanInfo-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -26,6 +28,8 @@ Indicates the index of the matched WLAN in the wlanBssidArray.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,6 +49,8 @@ WLAN SSID.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Enumerates mouse axis types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum Axis--><!--Device-unnamed-export declare enum Axis-End-->
 
@@ -16,7 +18,9 @@ SCROLL_VERTICAL = 0
 
 Vertical scroll axis of the mouse.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Axis-SCROLL_VERTICAL = 0--><!--Device-Axis-SCROLL_VERTICAL = 0-End-->
 
@@ -30,7 +34,9 @@ SCROLL_HORIZONTAL = 1
 
 Horizontal scroll axis of the mouse.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Axis-SCROLL_HORIZONTAL = 1--><!--Device-Axis-SCROLL_HORIZONTAL = 1-End-->
 
@@ -44,7 +50,9 @@ PINCH = 2
 
 Pinch axis of the mouse.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Axis-PINCH = 2--><!--Device-Axis-PINCH = 2-End-->
 

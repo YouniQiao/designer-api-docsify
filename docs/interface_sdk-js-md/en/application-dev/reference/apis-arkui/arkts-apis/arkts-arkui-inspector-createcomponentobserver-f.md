@@ -20,7 +20,7 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 **Deprecated since:** 18
 
-**Substitutes:** [createComponentObserver](ohos.arkui.UIContext.UIInspector#createComponentObserver)
+**Substitutes:** createComponentObserver
 
 **Model restriction:** This API can be used only in the stage model.
 

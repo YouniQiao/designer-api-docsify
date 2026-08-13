@@ -2,7 +2,9 @@
 
 Defines the offset area between the input method soft keyboard and the system panel.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface SystemPanelInsets--><!--Device-inputMethodEngine-interface SystemPanelInsets-End-->
 
@@ -24,7 +26,9 @@ Distance between the bottom border of the keyboard area and the bottom border of
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemPanelInsets-readonly bottom: int--><!--Device-SystemPanelInsets-readonly bottom: int-End-->
 
@@ -40,7 +44,9 @@ Distance between the left border of the keyboard area and the left border of the
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemPanelInsets-readonly left: int--><!--Device-SystemPanelInsets-readonly left: int-End-->
 
@@ -56,7 +62,9 @@ Distance between the right border of the keyboard area and the right border of t
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemPanelInsets-readonly right: int--><!--Device-SystemPanelInsets-readonly right: int-End-->
 

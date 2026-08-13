@@ -1,20 +1,12 @@
 # Environment
 
-For details about how to use environment parameters, see  
-[Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md).
+For details about how to use environment parameters, see [Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md).
 
-## Built-in Environment Variables
-
-| key | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Description |
-| -------------------- | --------------- | ------------------------------------------------------------ |
-| accessibilityEnabled | string | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.|
-| colorMode | [ColorMode](@link #ColorMode) | Color mode. The options are as follows: & lt;br & gt;- **ColorMode.LIGHT**: light mode. & lt;br & gt;- **ColorMode.DARK**: dark mode. |
-| fontScale | number | Font scale. |
-| [fontWeightScale](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | number | Font weight ratio. |
-| layoutDirection | [LayoutDirection](@link LayoutDirection) | Layout direction. The options are as follows: & lt;br & gt;- **LayoutDirection.LTR**: from left to right. & lt;br & gt;- **LayoutDirection.RTL**: from right to left. & lt;br & gt;- **Auto**: follows the system settings. |
-| languageCode | string | Current system language, which is in lowercase letters, for example, **zh**.
+## Built-in Environment Variables | key                  | Type           | Description                                                        | | -------------------- | --------------- | ------------------------------------------------------------ | | accessibilityEnabled | string          | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.| | colorMode            | ColorMode       | Color mode. The options are as follows:<br>- **ColorMode.LIGHT**: light mode.<br>- **ColorMode.DARK**: dark mode.| | fontScale            | number          | Font scale.                                              | | fontWeightScale      | number          | Font weight ratio.                                                  | | layoutDirection      | [LayoutDirection](arkts-arkui-layoutdirection-e.md#LayoutDirection) | Layout direction. The options are as follows:<br>- **LayoutDirection.LTR**: from left to right.<br>- **LayoutDirection.RTL**: from right to left.<br>- **Auto**: follows the system settings.| | languageCode         | string          | Current system language, which is in lowercase letters, for example, **zh**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Environment--><!--Device-unnamed-declare class Environment-End-->
 
@@ -29,6 +21,8 @@ constructor()
 Constructor.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-Environment-constructor()--><!--Device-Environment-constructor()-End-->
 

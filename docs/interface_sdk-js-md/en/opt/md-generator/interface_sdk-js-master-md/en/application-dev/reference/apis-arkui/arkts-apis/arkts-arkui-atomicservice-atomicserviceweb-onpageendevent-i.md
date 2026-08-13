@@ -4,6 +4,8 @@ Represents the callback invoked when the web page loading ends.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface OnPageEndEvent--><!--Device-unnamed-export declare interface OnPageEndEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ The url of page.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

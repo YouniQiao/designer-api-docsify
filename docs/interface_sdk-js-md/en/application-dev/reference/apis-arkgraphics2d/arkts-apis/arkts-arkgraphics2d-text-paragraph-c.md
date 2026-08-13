@@ -1,13 +1,12 @@
 # Paragraph
 
-Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
+Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing. Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **Paragraph** object.
 
-Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  
-[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **Paragraph** object.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-text-class Paragraph--><!--Device-text-class Paragraph-End-->
 
@@ -27,9 +26,11 @@ didExceedMaxLines(): boolean
 
 Checks whether the number of lines in the paragraph exceeds the maximum.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -55,14 +56,13 @@ let didExceed = paragraph.didExceedMaxLines();
 forceReuseRasterResult(isForce: boolean): void
 ```
 
-Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.
-
-This API is suitable for scenarios where the text content remains unchanged but  
-[paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
+Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default. This API is suitable for scenarios where the text content remains unchanged but [paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,21 +80,17 @@ This API is suitable for scenarios where the text content remains unchanged but
 
 ## getActualTextRange
 
-ArkTS-Dyn:
-```TypeScript
-getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
-```
-
-ArkTS-Sta:
 ```TypeScript
 getActualTextRange(lineNumber: int, includeSpaces: boolean): Range
 ```
 
 Obtains the actually visible text range in the specified line, excluding any overflow ellipsis.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -106,7 +102,7 @@ Obtains the actually visible text range in the specified line, excluding any ove
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Line number of the text range, starting from 0. This API can only be used to obtain the bounds of existing lines. That is, the line number must start from 0, and the maximum line index is the number of text lines – 1. The number of text lines can be obtained via the [getLineCount](#getLineCount) API. |
+| lineNumber | int | Yes | Line number of the text range, starting from 0. This API can only be used to obtain the bounds of existing lines. That is, the line number must start from 0, and the maximum line index is the number of text lines – 1. The number of text lines can be obtained via the [getLineCount](#getLineCount) API. |
 | includeSpaces | boolean | Yes | Whether spaces are included. The value **true** means that spaces are contained, and **false** means the opposite. |
 
 **Return value:**
@@ -123,21 +119,17 @@ let rang = paragraph.getActualTextRange(0, true);
 
 ## getAlphabeticBaseline
 
-ArkTS-Dyn:
-```TypeScript
-getAlphabeticBaseline(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAlphabeticBaseline(): double
 ```
 
 Obtains the alphabetic baseline.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -149,7 +141,7 @@ Obtains the alphabetic baseline.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Alphabetic baseline, in units of px. The value is a floating point number. |
+| double | Alphabetic baseline, in units of px. The value is a floating point number. |
 
 ## Examples
 
@@ -159,12 +151,6 @@ let alphabeticBaseline = paragraph.getAlphabeticBaseline();
 
 ## getCharacterPositionAtCoordinate
 
-ArkTS-Dyn:
-```TypeScript
-getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEncoding): PositionWithAffinity
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEncoding): PositionWithAffinity
 ```
@@ -173,7 +159,9 @@ Obtains the character position information closest to the given coordinates.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -187,8 +175,8 @@ Obtains the character position information closest to the given coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal coordinate in the text layout area, in physical pixels (px). X offset relative to the top-left corner of the text layout area, with the right direction as positive. Supports floating-point values and accepts negative values, which indicate positions to the left of the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical coordinate in the text layout area, in physical pixels (px). Y offset relative to the top-left corner of the text layout area, with the downward direction as positive. Supports floating-point values and accepts negative values, which indicate positions above the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
+| x | double | Yes | Horizontal coordinate in the text layout area, in physical pixels (px). X offset relative to the top-left corner of the text layout area, with the right direction as positive. Supports floating-point values and accepts negative values, which indicate positions to the left of the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
+| y | double | Yes | Vertical coordinate in the text layout area, in physical pixels (px). Y offset relative to the top-left corner of the text layout area, with the downward direction as positive. Supports floating-point values and accepts negative values, which indicate positions above the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
 | encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16 encoding, the returned character position indicates the UTF-16 encoding unit offset. |
 
 **Return value:**
@@ -201,7 +189,7 @@ Obtains the character position information closest to the given coordinates.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getCharacterRangeForGlyphRange
 
@@ -213,7 +201,9 @@ Obtains the character range corresponding to the specified glyph range.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -240,25 +230,21 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getGlyphPositionAtCoordinate
 
-ArkTS-Dyn:
-```TypeScript
-getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
-```
-
-ArkTS-Sta:
 ```TypeScript
 getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity
 ```
 
 Obtains the position of a glyph closest to the given coordinates.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -270,8 +256,8 @@ Obtains the position of a glyph closest to the given coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal coordinate, which is a floating-point value in physical pixels (px). |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical coordinate, which is a floating-point value in physical pixels (px). |
+| x | double | Yes | Horizontal coordinate, which is a floating-point value in physical pixels (px). |
+| y | double | Yes | Vertical coordinate, which is a floating-point value in physical pixels (px). |
 
 **Return value:**
 
@@ -295,7 +281,9 @@ Obtains the glyph range corresponding to the specified character range.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,25 +310,21 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getHeight
 
-ArkTS-Dyn:
-```TypeScript
-getHeight(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getHeight(): double
 ```
 
 Obtains the total height of the text.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -352,7 +336,7 @@ Obtains the total height of the text.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Total height, in units of px. The value is a floating point number. |
+| double | Total height, in units of px. The value is a floating point number. |
 
 ## Examples
 
@@ -362,21 +346,17 @@ let height = paragraph.getHeight();
 
 ## getIdeographicBaseline
 
-ArkTS-Dyn:
-```TypeScript
-getIdeographicBaseline(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIdeographicBaseline(): double
 ```
 
 Obtains the ideographic baseline.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -388,7 +368,7 @@ Obtains the ideographic baseline.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Baseline position under ideographic characters, a floating point number in physical pixels ( px). |
+| double | Baseline position under ideographic characters, a floating point number in physical pixels ( px). |
 
 ## Examples
 
@@ -398,21 +378,17 @@ let ideographicBaseline = paragraph.getIdeographicBaseline();
 
 ## getLineCount
 
-ArkTS-Dyn:
-```TypeScript
-getLineCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLineCount(): int
 ```
 
 Obtains the number of text lines.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -424,7 +400,7 @@ Obtains the number of text lines.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of text lines. The value is an integer. |
+| int | Number of text lines. The value is an integer. |
 
 ## Examples
 
@@ -434,21 +410,17 @@ let lineCount = paragraph.getLineCount();
 
 ## getLineHeight
 
-ArkTS-Dyn:
-```TypeScript
-getLineHeight(line: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLineHeight(line: int): double
 ```
 
 Obtains the height of a given line.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -460,13 +432,13 @@ Obtains the height of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the text line, which is an integer ranging from 0 to [getLineCount](#getLineCount)-1. |
+| line | int | Yes | Index of the text line, which is an integer ranging from 0 to [getLineCount](#getLineCount)-1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Line height, in physical pixels (px). |
+| double | Line height, in physical pixels (px). |
 
 ## Examples
 
@@ -482,9 +454,11 @@ getLineMetrics(): Array<LineMetrics>
 
 Obtains an array of line measurement information.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -506,21 +480,17 @@ let arrLineMetric =  paragraph.getLineMetrics();
 
 ## getLineMetrics
 
-ArkTS-Dyn:
-```TypeScript
-getLineMetrics(lineNumber: number): LineMetrics | undefined
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLineMetrics(lineNumber: int): LineMetrics | undefined
 ```
 
 Obtains the line measurement information of a line.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -532,7 +502,7 @@ Obtains the line measurement information of a line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of the line for which metric information is to be queried. Line numbers start from 0, and the maximum line index is the number of text lines minus 1. The number of text lines can be obtained through the [getLineCount](#getLineCount) API. |
+| lineNumber | int | Yes | Number of the line for which metric information is to be queried. Line numbers start from 0, and the maximum line index is the number of text lines minus 1. The number of text lines can be obtained through the [getLineCount](#getLineCount) API. |
 
 **Return value:**
 
@@ -548,21 +518,17 @@ let lineMetrics =  paragraph.getLineMetrics(0);
 
 ## getLineWidth
 
-ArkTS-Dyn:
-```TypeScript
-getLineWidth(line: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLineWidth(line: int): double
 ```
 
 Obtains the width of a given line.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -574,13 +540,13 @@ Obtains the width of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Text line index, which is an integer ranging from 0 to [getLineCount](#getLineCount)-1. |
+| line | int | Yes | Text line index, which is an integer ranging from 0 to [getLineCount](#getLineCount)-1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Line width, in physical pixels (px). |
+| double | Line width, in physical pixels (px). |
 
 ## Examples
 
@@ -590,21 +556,17 @@ let lineWidth = paragraph.getLineWidth(0);
 
 ## getLongestLine
 
-ArkTS-Dyn:
-```TypeScript
-getLongestLine(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLongestLine(): double
 ```
 
 Obtains the longest line in the text.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -616,7 +578,7 @@ Obtains the longest line in the text.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Longest line, in units of px. The value is a floating point number. |
+| double | Longest line, in units of px. The value is a floating point number. |
 
 ## Examples
 
@@ -626,21 +588,17 @@ let longestLine = paragraph.getLongestLine();
 
 ## getLongestLineWithIndent
 
-ArkTS-Dyn:
-```TypeScript
-getLongestLineWithIndent(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLongestLineWithIndent(): double
 ```
 
 Obtains the width of the longest line, including its indentation, in the text. You are advised to round up the return value. If the text content is empty, **0** is returned.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -652,7 +610,7 @@ Obtains the width of the longest line, including its indentation, in the text. Y
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Width of the longest line, including its indentation. The value is a floating point number, in px. |
+| double | Width of the longest line, including its indentation. The value is a floating point number, in px. |
 
 ## Examples
 
@@ -662,21 +620,17 @@ let longestLineWithIndent = paragraph.getLongestLineWithIndent();
 
 ## getMaxIntrinsicWidth
 
-ArkTS-Dyn:
-```TypeScript
-getMaxIntrinsicWidth(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMaxIntrinsicWidth(): double
 ```
 
 Obtains the maximum intrinsic width of the paragraph.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -688,7 +642,7 @@ Obtains the maximum intrinsic width of the paragraph.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Maximum intrinsic width, in units of px. The value is a floating point number. |
+| double | Maximum intrinsic width, in units of px. The value is a floating point number. |
 
 ## Examples
 
@@ -698,21 +652,17 @@ let maxIntrinsicWidth = paragraph.getMaxIntrinsicWidth();
 
 ## getMaxWidth
 
-ArkTS-Dyn:
-```TypeScript
-getMaxWidth(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMaxWidth(): double
 ```
 
 Obtains the maximum width of the line in the text.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -724,7 +674,7 @@ Obtains the maximum width of the line in the text.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Maximum line width, in units of px. The value is a floating point number. |
+| double | Maximum line width, in units of px. The value is a floating point number. |
 
 ## Examples
 
@@ -734,21 +684,17 @@ let maxWidth = paragraph.getMaxWidth();
 
 ## getMinIntrinsicWidth
 
-ArkTS-Dyn:
-```TypeScript
-getMinIntrinsicWidth(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMinIntrinsicWidth(): double
 ```
 
 Obtains the minimum intrinsic width of the paragraph.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -760,7 +706,7 @@ Obtains the minimum intrinsic width of the paragraph.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Minimum intrinsic width, in units of px. The value is a floating point number. |
+| double | Minimum intrinsic width, in units of px. The value is a floating point number. |
 
 ## Examples
 
@@ -778,7 +724,9 @@ Obtains the style configuration of a paragraph.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -804,7 +752,9 @@ Obtains the text processing status of a paragraph.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -828,9 +778,11 @@ getRectsForPlaceholders(): Array<TextBox>
 
 Obtains the rectangles occupied by all placeholders in the text.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -858,9 +810,11 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 Obtains the rectangles occupied by the characters in the range of the text under the given rectangle width and height.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -899,7 +853,9 @@ Obtains the text display status of a paragraph.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -923,9 +879,11 @@ getTextLines(): Array<TextLine>
 
 Obtains all the text lines.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -951,25 +909,13 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle))or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)).
-
-**NOTE：**
-
-The returned range depends on the specific truncation of the paragraph(for example, whether the maximum number of lines or ellipsis is set):
-
-| Scenario| Description|  
-|---|---|  
-| Text is not truncated.| The range includes all typeset text.|  
-| Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.|  
-| EllipsisMode.END| The range is the text before the ellipsis.|  
-| EllipsisMode.START| The value is the text after the ellipsis.|  
-| EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.|  
-| EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.|  
-| EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)). **NOTE：**The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set): | Scenario| Description| |---|---| | Text is not truncated.| The range includes all typeset text.| | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.| | EllipsisMode.END| The range is the text before the ellipsis.| | EllipsisMode.START| The value is the text after the ellipsis.| | EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -987,21 +933,17 @@ The returned range depends on the specific truncation of the paragraph(for examp
 
 ## getWordBoundary
 
-ArkTS-Dyn:
-```TypeScript
-getWordBoundary(offset: number): Range
-```
-
-ArkTS-Sta:
 ```TypeScript
 getWordBoundary(offset: int): Range
 ```
 
 Obtains the range of the word where the glyph with a given offset is located.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1013,7 +955,7 @@ Obtains the range of the word where the glyph with a given offset is located.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset of the glyph. The value is an integer. |
+| offset | int | Yes | Offset of the glyph. The value is an integer. |
 
 **Return value:**
 
@@ -1029,21 +971,17 @@ let wordRange = paragraph.getWordBoundary(0);
 
 ## layout
 
-ArkTS-Dyn:
-```TypeScript
-layout(width: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 layout(width: double): Promise<void>
 ```
 
 Performs layout and calculates the positions of all glyphs. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1055,7 +993,7 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Maximum width of a single line, in units of px. The value is a floating point number. |
+| width | double | Yes | Maximum width of a single line, in units of px. The value is a floating point number. |
 
 **Return value:**
 
@@ -1067,7 +1005,7 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -1143,21 +1081,17 @@ struct Index {
 
 ## layoutSync
 
-ArkTS-Dyn:
-```TypeScript
-layoutSync(width: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 layoutSync(width: double): void
 ```
 
 Performs layout and calculates the positions of all glyphs.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1169,7 +1103,7 @@ Performs layout and calculates the positions of all glyphs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Maximum width of a single line, in units of px. The value is a floating point number. |
+| width | double | Yes | Maximum width of a single line, in units of px. The value is a floating point number. |
 
 ## Examples
 
@@ -1187,7 +1121,9 @@ Performs layout with the given height and width and calculates the positions of 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1211,22 +1147,17 @@ Performs layout with the given height and width and calculates the positions of 
 
 ## paint
 
-ArkTS-Dyn:
-```TypeScript
-paint(canvas: drawing.Canvas, x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
-Draws text on the canvas with (x, y) as the upper-left corner. You must call  
-[layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+Draws text on the canvas with (x, y) as the upper-left corner. You must call [layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1239,8 +1170,8 @@ Draws text on the canvas with (x, y) as the upper-left corner. You must call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | Yes | Target canvas. |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| x | double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| y | double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
@@ -1254,21 +1185,17 @@ paragraph.paint(canvas, 0, 0);
 
 ## paintOnPath
 
-ArkTS-Dyn:
-```TypeScript
-paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void
 ```
 
 Draws text along a path on the canvas. You must call [layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1282,8 +1209,8 @@ Draws text along a path on the canvas. You must call [layout()](#layout) for typ
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | Yes | Target canvas. |
 | path | drawing.Path | Yes | Path along which the text is drawn. |
-| hOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Offset along the path direction. Positive values extend forward from the path start point, and negative values extend backward. Unit: physical pixels (px). |
-| vOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Offset along the vertical direction of the path. Positive values extend to the right along the path, and negative values extend to the left. Unit: physical pixels (px). |
+| hOffset | double | Yes | Offset along the path direction. Positive values extend forward from the path start point, and negative values extend backward. Unit: physical pixels (px). |
+| vOffset | double | Yes | Offset along the vertical direction of the path. Positive values extend to the right along the path, and negative values extend to the left. Unit: physical pixels (px). |
 
 ## Examples
 
@@ -1305,9 +1232,11 @@ updateColor(color: common2D.Color): void
 
 Updates the color of the entire text span. This API call also updates the decoration color if it hasn't been set yet.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1335,9 +1264,11 @@ updateDecoration(decoration: Decoration): void
 
 Updates the decoration line of the entire text span.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

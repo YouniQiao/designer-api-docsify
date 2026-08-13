@@ -10,6 +10,8 @@ declare function setAppBgColor(value: string): void
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function setAppBgColor(value: string): void--><!--Device-unnamed-declare function setAppBgColor(value: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

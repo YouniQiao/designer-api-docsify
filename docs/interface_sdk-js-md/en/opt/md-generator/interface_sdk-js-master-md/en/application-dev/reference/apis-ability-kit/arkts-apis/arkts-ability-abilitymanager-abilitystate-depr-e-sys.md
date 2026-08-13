@@ -6,7 +6,7 @@ Enumerates the ability states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityState](ohos.app.ability.abilityManager/abilityManager#AbilityState)
+**Substitutes:** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md#AbilityState)
 
 <!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
 
@@ -26,7 +26,7 @@ The ability is in the initial state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [INITIAL](ohos.app.ability.abilityManager/abilityManager.AbilityState#INITIAL)
+**Substitutes:** [INITIAL](arkts-ability-abilitymanager-abilitystate-e.md#INITIAL)
 
 <!--Device-AbilityState-INITIAL = 0--><!--Device-AbilityState-INITIAL = 0-End-->
 
@@ -46,7 +46,7 @@ The ability is running in the foreground.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FOREGROUND](ohos.app.ability.abilityManager/abilityManager.AbilityState#FOREGROUND)
+**Substitutes:** [FOREGROUND](arkts-ability-abilitymanager-abilitystate-e.md#FOREGROUND)
 
 <!--Device-AbilityState-FOREGROUND = 9--><!--Device-AbilityState-FOREGROUND = 9-End-->
 
@@ -66,7 +66,7 @@ The ability is running in the background.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BACKGROUND](ohos.app.ability.abilityManager/abilityManager.AbilityState#BACKGROUND)
+**Substitutes:** [BACKGROUND](arkts-ability-abilitymanager-abilitystate-e.md#BACKGROUND)
 
 <!--Device-AbilityState-BACKGROUND = 10--><!--Device-AbilityState-BACKGROUND = 10-End-->
 
@@ -86,7 +86,7 @@ The ability is being switched to the foreground.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FOREGROUNDING](ohos.app.ability.abilityManager/abilityManager.AbilityState#FOREGROUNDING)
+**Substitutes:** [FOREGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#FOREGROUNDING)
 
 <!--Device-AbilityState-FOREGROUNDING = 11--><!--Device-AbilityState-FOREGROUNDING = 11-End-->
 
@@ -106,7 +106,7 @@ The ability is being switched to the background.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BACKGROUNDING](ohos.app.ability.abilityManager/abilityManager.AbilityState#BACKGROUNDING)
+**Substitutes:** [BACKGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#BACKGROUNDING)
 
 <!--Device-AbilityState-BACKGROUNDING = 12--><!--Device-AbilityState-BACKGROUNDING = 12-End-->
 

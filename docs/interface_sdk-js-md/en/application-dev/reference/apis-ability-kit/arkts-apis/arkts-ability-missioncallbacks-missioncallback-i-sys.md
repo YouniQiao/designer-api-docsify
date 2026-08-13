@@ -2,9 +2,11 @@
 
 MissionCallback registered by app.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->
 
@@ -20,9 +22,13 @@ notifyMissionsChanged: NotifyMissionsChangedCallback
 
 Called by system when mission changed.
 
-**Since:** 9
+**Type:** [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -42,9 +48,13 @@ notifyNetDisconnect: NotifyNetDisconnectCallback
 
 Called by system when network disconnect.
 
-**Since:** 9
+**Type:** [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -64,9 +74,13 @@ notifySnapshot: NotifySnapshotCallback
 
 Called by system when snapshot changed.
 
-**Since:** 9
+**Type:** [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

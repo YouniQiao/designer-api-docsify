@@ -1,14 +1,14 @@
 # ReminderRequestAlarm
 
-ReminderRequestAlarm extends ReminderRequest
-
-闹钟实例对象，用于设置提醒的时间。
+ReminderRequestAlarm extends ReminderRequest 闹钟实例对象，用于设置提醒的时间。
 
 **继承/实现关系：** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-reminderAgentManager-interface ReminderRequestAlarm extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestAlarm extends ReminderRequest-End-->
+**废弃版本：** -1
+
+<!--Device-reminderAgentManager-interface ReminderRequestAlarm--><!--Device-reminderAgentManager-interface ReminderRequestAlarm-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -22,7 +22,9 @@ daysOfWeek?: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>-End-->
 
@@ -38,7 +40,9 @@ hour: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ReminderRequestAlarm-hour: int--><!--Device-ReminderRequestAlarm-hour: int-End-->
 
@@ -54,7 +58,9 @@ minute: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ReminderRequestAlarm-minute: int--><!--Device-ReminderRequestAlarm-minute: int-End-->
 

@@ -8,7 +8,7 @@ Base interface of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BaseProfile](ohos.bluetoothManager/bluetoothManager.BaseProfile)
+**Substitutes:** [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#BaseProfile)
 
 <!--Device-bluetooth-interface BaseProfile--><!--Device-bluetooth-interface BaseProfile-End-->
 
@@ -34,7 +34,7 @@ Obtains the connected devices list of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getConnectionDevices](ohos.bluetoothManager/bluetoothManager.BaseProfile#getConnectionDevices)
+**Substitutes:** [getConnectionDevices](arkts-connectivity-bluetoothmanager-baseprofile-i.md#getConnectionDevices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -69,7 +69,7 @@ Obtains the profile state of device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceState](ohos.bluetoothManager/bluetoothManager.BaseProfile#getDeviceState)
+**Substitutes:** [getDeviceState](arkts-connectivity-bluetoothmanager-baseprofile-i.md#getDeviceState)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

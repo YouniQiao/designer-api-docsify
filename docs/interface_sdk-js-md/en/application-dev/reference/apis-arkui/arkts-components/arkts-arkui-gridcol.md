@@ -1,9 +1,6 @@
 # GridCol
 
-The **GridCol** component must be used as a child component of the [GridRow]{@link GridRow} container.
-> **Child Components**
->
-> This component can contain only one child component.
+The **GridCol** component must be used as a child component of the GridRow container. > **Child Components** > > This component can contain only one child component.
 
 ## GridCol
 
@@ -16,6 +13,8 @@ Creates a **GridCol** component.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,5 +32,5 @@ Creates a **GridCol** component.
 
 ## Summary
 
-- [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
-- [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md)
+- [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+- [GridColOptions](arkts-arkui-gridcoloptions-i.md)

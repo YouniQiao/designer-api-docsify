@@ -1,11 +1,10 @@
 # DataShareUpdate (System API)
 
-Defines the parameter information used to update the database.
+Defines the parameter information used to update the database. The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared under **proxyData** in the **module.json5** file. For details about the configuration method, see [Data Provider Application Development](../../../database/share-data-by-silent-access-sys.md#data-provider-application-development)
 
-The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared under **proxyData** in the **module.json5** file. For details about the configuration method, see   
-[Data Provider Application Development](../../../database/share-data-by-silent-access-sys.md#data-provider-application-development)
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface DataShareUpdate--><!--Device-reminderAgentManager-interface DataShareUpdate-End-->
 
@@ -27,9 +26,11 @@ equalTo: Record<string, number | string | boolean>
 
 Filter criteria. Currently, only **equalTo** is supported.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| string \| boolean&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number \| string \| boolean&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>--><!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>-End-->
 
@@ -47,7 +48,9 @@ URI of the data, which is the unique identifier for cross-application data acces
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataShareUpdate-uri: string--><!--Device-DataShareUpdate-uri: string-End-->
 
@@ -65,7 +68,9 @@ New data.
 
 **Type:** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataShareUpdate-value: ValuesBucket--><!--Device-DataShareUpdate-value: ValuesBucket-End-->
 

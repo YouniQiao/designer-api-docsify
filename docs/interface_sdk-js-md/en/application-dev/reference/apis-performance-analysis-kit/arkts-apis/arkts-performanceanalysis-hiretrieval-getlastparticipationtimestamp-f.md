@@ -16,7 +16,9 @@ Query the UNIX timestamp of the last participating time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -28,5 +30,5 @@ Query the UNIX timestamp of the last participating time.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Returns the timestamp of the last participating time in milliseconds, if never participated return 0. |
+| long | Returns the timestamp of the last participating time in milliseconds, if never participated return 0. |
 

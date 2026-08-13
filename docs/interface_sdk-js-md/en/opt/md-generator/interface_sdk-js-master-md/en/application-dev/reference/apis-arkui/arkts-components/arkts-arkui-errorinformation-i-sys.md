@@ -4,6 +4,8 @@ Provides the widget error information.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ErrorInformation--><!--Device-unnamed-interface ErrorInformation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Provides the widget error information.
 errcode: number
 ```
 
-[Error code](../../../reference/apis-form-kit/errorcode-form.md).
+[Error code](../../apis-form-kit/errorcode-form.md).
 
 **Type:** number
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-ErrorInformation-errcode: number--><!--Device-ErrorInformation-errcode: number-End-->
 
@@ -39,6 +43,8 @@ Error message.
 **Type:** string
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-ErrorInformation-msg: string--><!--Device-ErrorInformation-msg: string-End-->
 

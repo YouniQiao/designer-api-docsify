@@ -2,7 +2,9 @@
 
 Describes the geographical location.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface LocationOptions--><!--Device-sensor-interface LocationOptions-End-->
 
@@ -24,7 +26,9 @@ Altitude, in m.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocationOptions-altitude: double--><!--Device-LocationOptions-altitude: double-End-->
 
@@ -40,7 +44,9 @@ Latitude, in degrees.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocationOptions-latitude: double--><!--Device-LocationOptions-latitude: double-End-->
 
@@ -56,7 +62,9 @@ Longitude, in degrees.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocationOptions-longitude: double--><!--Device-LocationOptions-longitude: double-End-->
 

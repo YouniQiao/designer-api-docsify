@@ -2,7 +2,9 @@
 
 身份认证组件管理器。用于将自定义身份认证控件注册到UserAuthWidgetMgr中进行统一管理和调度。自定义身份认证控件可接收来自用户认证框架的命令并执行相应操作。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-userAuth-interface UserAuthWidgetMgr--><!--Device-userAuth-interface UserAuthWidgetMgr-End-->
 
@@ -10,7 +12,38 @@
 
 **系统接口：** 此接口为系统接口。
 
-## off('command')
+## offCommand
+
+```TypeScript
+offCommand(callback?: IAuthWidgetCallback): void
+```
+
+身份认证控件取消订阅来自用户认证框架的命令。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void-End-->
+
+**系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+
+## off_command
 
 ```TypeScript
 off(type: 'command', callback?: IAuthWidgetCallback): void
@@ -19,6 +52,8 @@ off(type: 'command', callback?: IAuthWidgetCallback): void
 取消订阅来自用户认证框架的命令事件。身份认证控件通过此接口取消对用户认证框架命令的订阅。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void-End-->
 
@@ -37,8 +72,8 @@ off(type: 'command', callback?: IAuthWidgetCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -62,7 +97,38 @@ try {
 }
 ```
 
-## on('command')
+## onCommand
+
+```TypeScript
+onCommand(callback: IAuthWidgetCallback): void
+```
+
+身份认证控件订阅来自用户认证框架的命令。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void-End-->
+
+**系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+
+## on_command
 
 ```TypeScript
 on(type: 'command', callback: IAuthWidgetCallback): void
@@ -71,6 +137,8 @@ on(type: 'command', callback: IAuthWidgetCallback): void
 订阅来自用户认证框架的命令事件。身份认证控件通过此接口订阅来自用户认证框架的命令，以便根据命令执行相应的认证操作。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void-End-->
 
@@ -89,8 +157,8 @@ on(type: 'command', callback: IAuthWidgetCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 

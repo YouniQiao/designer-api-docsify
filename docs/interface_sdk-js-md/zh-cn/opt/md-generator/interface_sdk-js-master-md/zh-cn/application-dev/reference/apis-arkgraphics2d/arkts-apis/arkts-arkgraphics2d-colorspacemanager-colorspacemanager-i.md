@@ -1,10 +1,10 @@
 # ColorSpaceManager
 
-当前色域对象实例。
+当前色域对象实例。 下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
 
-下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-colorSpaceManager-interface ColorSpaceManager--><!--Device-colorSpaceManager-interface ColorSpaceManager-End-->
 
@@ -18,7 +18,9 @@ getColorSpaceName(): ColorSpace
 
 获取色域类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace-End-->
 
@@ -34,7 +36,7 @@ getColorSpaceName(): ColorSpace
 
 | 错误码ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 
@@ -56,7 +58,9 @@ getGamma(): number
 
 获取色域gamma值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpaceManager-getGamma(): double--><!--Device-ColorSpaceManager-getGamma(): double-End-->
 
@@ -72,7 +76,7 @@ getGamma(): number
 
 | 错误码ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 
@@ -94,7 +98,9 @@ getWhitePoint(): Array<number>
 
 获取色域白点值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorSpaceManager-getWhitePoint(): Array<double>--><!--Device-ColorSpaceManager-getWhitePoint(): Array<double>-End-->
 
@@ -110,7 +116,7 @@ getWhitePoint(): Array<number>
 
 | 错误码ID |
 | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 

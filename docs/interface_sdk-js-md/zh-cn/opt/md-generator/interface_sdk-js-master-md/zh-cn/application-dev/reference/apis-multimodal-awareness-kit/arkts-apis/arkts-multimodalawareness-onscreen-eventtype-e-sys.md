@@ -2,7 +2,9 @@
 
 定义控制事件的类型。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-onScreen-export enum EventType--><!--Device-onScreen-export enum EventType-End-->
 
@@ -16,7 +18,9 @@ SCROLL_TO_HOOK = 1
 
 表示滚动到hook点事件。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventType-SCROLL_TO_HOOK = 1--><!--Device-EventType-SCROLL_TO_HOOK = 1-End-->
 

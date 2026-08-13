@@ -1,14 +1,14 @@
 # Zoom
 
-**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery).
-
-It provides APIs related to zoom operations.
+**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery). It provides APIs related to zoom operations.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface Zoom--><!--Device-camera-interface Zoom-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,7 +26,9 @@ getZoomRatio(): number
 
 Obtains the zoom ratio in use.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -44,8 +46,8 @@ Obtains the zoom ratio in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## setSmoothZoom
 
@@ -55,7 +57,9 @@ setSmoothZoom(targetRatio: number, mode?: SmoothZoomMode): void
 
 Sets smooth zoom.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -74,7 +78,7 @@ Sets smooth zoom.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## setZoomRatio
 
@@ -84,7 +88,9 @@ setZoomRatio(zoomRatio: number): void
 
 Sets a zoom ratio, with a maximum precision of two decimal places.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -96,10 +102,10 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [zoomRatio](arkts-camera-camera-zoompointinfo-i.md) | number | Yes |
+| [zoomRatio](arkts-camera-camera-zoompointinfo-i-sys.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

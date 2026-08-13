@@ -1,9 +1,5 @@
 # dataAbilityHelper
 
-A DataAbilityHelper object is obtained through
- [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper).
-
-
 ## Summary
 
 ### Interfaces
@@ -12,3 +8,9 @@ A DataAbilityHelper object is obtained through
 | --- |
 | [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) |
 | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) |
+
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PacMap](arkts-ability-pacmap-t.md) |

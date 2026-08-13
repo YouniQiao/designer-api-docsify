@@ -8,7 +8,9 @@ Defines a onCompleted function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-type OnCompletedFn = (error: BusinessError<void>) => void--><!--Device-unnamed-type OnCompletedFn = (error: BusinessError<void>) => void-End-->
 
@@ -18,5 +20,5 @@ Defines a onCompleted function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | Yes | Indicates the error during execution. |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | Indicates the error during execution. |
 

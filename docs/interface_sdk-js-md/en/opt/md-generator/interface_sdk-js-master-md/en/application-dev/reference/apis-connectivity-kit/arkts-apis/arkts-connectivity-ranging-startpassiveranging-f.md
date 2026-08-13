@@ -12,13 +12,11 @@ import { ranging } from '@kit.ConnectivityKit';
 function startPassiveRanging(capabilityType: RangingTypes): Promise<number>
 ```
 
-Starts passive ranging mode.
-
-Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets.
-
-The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
+Starts passive ranging mode. Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets. The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -45,7 +43,7 @@ The returned handle can be used to stop the passive ranging broadcast via stopPa
 | Error Code ID |
 | --- |
 | 34900052 |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 34900053 |
-| [34900099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900099-operation-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |

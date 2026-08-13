@@ -4,6 +4,8 @@ Defines the event to observe.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface WatchEvent--><!--Device-unnamed-export interface WatchEvent-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -20,14 +22,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 readonly cookie: number
 ```
 
-Cookie bound with the event.
-
-Currently, only the **IN_MOVED_FROM** and **IN_MOVED_TO** events are supported. The **IN_MOVED_FROM** and  
-**IN_MOVED_TO** events of the same file have the same **cookie** value.
+Cookie bound with the event. Currently, only the **IN_MOVED_FROM** and **IN_MOVED_TO** events are supported. The **IN_MOVED_FROM** and **IN_MOVED_TO** events of the same file have the same **cookie** value.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-WatchEvent-readonly cookie: number--><!--Device-WatchEvent-readonly cookie: number-End-->
 
@@ -45,6 +46,8 @@ Events to observe. Multiple events can be separated by vertical bars (
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-WatchEvent-readonly event: number--><!--Device-WatchEvent-readonly event: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -60,6 +63,8 @@ Sandbox path of the file to observe. The sandbox path contains the file name.
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-WatchEvent-readonly fileName: string--><!--Device-WatchEvent-readonly fileName: string-End-->
 

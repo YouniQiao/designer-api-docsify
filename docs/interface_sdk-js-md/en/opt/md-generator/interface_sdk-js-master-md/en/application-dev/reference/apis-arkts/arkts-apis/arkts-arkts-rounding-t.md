@@ -1,27 +1,19 @@
 # Rounding
 
 ```TypeScript
-type Rounding = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+type Rounding = number
 ```
 
 The type used to set rounding
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-unnamed-type Rounding = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8--><!--Device-unnamed-type Rounding = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-unnamed-type Rounding = int--><!--Device-unnamed-type Rounding = int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| 0 |
-| 1 |
-| 2 |
-| 3 |
-| 4 |
-| 5 |
-| 6 |
-| 7 |
-| 8 |
+**Property type:** int

@@ -1,11 +1,12 @@
 # SaveModeFlag
 
-Enumerates the application state saving modes. This enum is used as an input parameter of   
-[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery).
+Enumerates the application state saving modes. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery).
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appRecovery-enum SaveModeFlag--><!--Device-appRecovery-enum SaveModeFlag-End-->
 
@@ -19,9 +20,11 @@ SAVE_WITH_FILE = 0x0001
 
 The application state is saved and written to the local file cache.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,9 +40,11 @@ SAVE_WITH_SHARED_MEMORY = 0x0002
 
 The application state is saved in the memory. When the application exits due to a fault, it is written to the local file cache.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

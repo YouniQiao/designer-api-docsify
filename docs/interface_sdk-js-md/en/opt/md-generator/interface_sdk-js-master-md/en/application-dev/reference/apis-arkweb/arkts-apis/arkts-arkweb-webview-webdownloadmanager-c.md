@@ -4,6 +4,8 @@ You can trigger download manually through this interface, or resume failed or ca
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-webview-class WebDownloadManager--><!--Device-webview-class WebDownloadManager-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Resume the canceled or failed download.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void--><!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void-End-->
@@ -40,7 +44,7 @@ Resume the canceled or failed download.
 
 | Error Code ID |
 | --- |
-| [17100018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100018-no-webdownloaddelegate-available) |
+| [17100018](../errorcode-webview.md#17100018-no-webdownloaddelegate-available) |
 
 ## setDownloadDelegate
 
@@ -51,6 +55,8 @@ static setDownloadDelegate(delegate: WebDownloadDelegate): void
 Set a delegate used to receive the progress of the download triggered from WebDownloadManager.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -9,7 +9,9 @@ Defines a condition for querying the focusable node.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type FocusCondition = 'forward' | 'backward' |'findLast' | 'getForwardScrollAncestor' | 'getBackwardScrollAncestor' | 'getScrollableAncestor'--><!--Device-unnamed-export type FocusCondition = 'forward' | 'backward' |'findLast' | 'getForwardScrollAncestor' | 'getBackwardScrollAncestor' | 'getScrollableAncestor'-End-->
 

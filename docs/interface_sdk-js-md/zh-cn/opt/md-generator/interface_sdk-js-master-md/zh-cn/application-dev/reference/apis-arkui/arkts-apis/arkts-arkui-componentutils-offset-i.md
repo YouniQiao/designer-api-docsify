@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-componentUtils-interface Offset--><!--Device-componentUtils-interface Offset-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 x: number
 ```
 
-x点坐标。
-
-单位: px
+x点坐标。 单位: px
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ x点坐标。
 y: number
 ```
 
-y点坐标。
-
-单位: px
+y点坐标。 单位: px
 
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

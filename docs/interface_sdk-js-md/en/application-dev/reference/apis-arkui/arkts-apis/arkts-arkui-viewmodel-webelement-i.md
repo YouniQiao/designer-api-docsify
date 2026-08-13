@@ -8,7 +8,9 @@ The &lt;web&gt; component is a container for displaying web page content.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-<!--Device-unnamed-export interface WebElement extends Element--><!--Device-unnamed-export interface WebElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface WebElement--><!--Device-unnamed-export interface WebElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Reload the web page content
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

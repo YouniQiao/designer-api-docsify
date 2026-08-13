@@ -6,7 +6,7 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 
 **Deprecated since:** 9
 
-**Substitutes:** [commonEventManager](arkts-commoneventmanager.md#commonEventManager)
+**Substitutes:** [commonEventManager](arkts-commoneventmanager.md#@ohos.commonEventManager)
 
 <!--Device-unnamed-declare namespace commonEvent--><!--Device-unnamed-declare namespace commonEvent-End-->
 
@@ -18,10 +18,10 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createsubscriber) |
-| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createsubscriber-1) |
+| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createSubscriber) |
+| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createSubscriber) |
 | [publish](arkts-basicservices-commonevent-publish-depr-f.md#publish) |
-| [publish](arkts-basicservices-commonevent-publish-depr-f.md#publish-1) |
+| [publish](arkts-basicservices-commonevent-publish-depr-f.md#publish) |
 | [subscribe](arkts-basicservices-commonevent-subscribe-depr-f.md#subscribe) |
 | [unsubscribe](arkts-basicservices-commonevent-unsubscribe-depr-f.md#unsubscribe) |
 
@@ -30,8 +30,8 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishasuser) |
-| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishasuser-1) |
+| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishAsUser) |
+| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishAsUser) |
 <!--DelEnd-->
 
 ### Enums

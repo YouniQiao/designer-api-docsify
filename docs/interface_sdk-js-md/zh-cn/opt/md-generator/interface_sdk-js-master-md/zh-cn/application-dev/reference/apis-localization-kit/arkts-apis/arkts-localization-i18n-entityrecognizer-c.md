@@ -2,7 +2,9 @@
 
 提供实体识别相关的能力，可以获取文本中实体的类型和起止位置。当前支持识别的实体包括电话号码和时间日期。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class EntityRecognizer--><!--Device-i18n-export class EntityRecognizer-End-->
 
@@ -16,7 +18,9 @@ constructor(locale?: string)
 
 创建实体识别对象。该对象根据区域规则识别文本中的实体。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +38,8 @@ constructor(locale?: string)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -59,7 +63,9 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 
 获取文本中的实体信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -83,7 +89,7 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

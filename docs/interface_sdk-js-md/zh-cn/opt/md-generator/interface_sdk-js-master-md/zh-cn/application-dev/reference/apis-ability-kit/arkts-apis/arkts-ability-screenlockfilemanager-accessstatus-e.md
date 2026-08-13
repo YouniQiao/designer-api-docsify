@@ -2,7 +2,9 @@
 
 表示锁屏下敏感数据访问权限申请状态的枚举。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screenLockFileManager-export enum AccessStatus--><!--Device-screenLockFileManager-export enum AccessStatus-End-->
 
@@ -16,7 +18,9 @@ ACCESS_DENIED = -1
 
 申请锁屏下敏感数据访问权限被拒绝。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessStatus-ACCESS_DENIED = -1--><!--Device-AccessStatus-ACCESS_DENIED = -1-End-->
 
@@ -30,7 +34,9 @@ ACCESS_GRANTED = 0
 
 申请锁屏下敏感数据访问权限被允许。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessStatus-ACCESS_GRANTED = 0--><!--Device-AccessStatus-ACCESS_GRANTED = 0-End-->
 

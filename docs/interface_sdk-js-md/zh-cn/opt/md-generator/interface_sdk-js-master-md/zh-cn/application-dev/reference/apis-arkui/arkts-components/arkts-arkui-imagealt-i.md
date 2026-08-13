@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ImageAlt--><!--Device-unnamed-declare interface ImageAlt-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ error?: ResourceStr | PixelMap
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +45,8 @@ placeholder?: ResourceStr | PixelMap
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

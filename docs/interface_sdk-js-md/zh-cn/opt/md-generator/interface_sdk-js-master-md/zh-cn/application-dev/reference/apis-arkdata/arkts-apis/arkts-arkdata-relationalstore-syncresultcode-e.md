@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-relationalStore-enum SyncResultCode--><!--Device-relationalStore-enum SyncResultCode-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -17,6 +19,8 @@ SUCCESS = 0
 表示同步成功。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ FAIL = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SyncResultCode-FAIL = 1--><!--Device-SyncResultCode-FAIL = 1-End-->
@@ -49,6 +55,8 @@ OFFLINE = 2
 表示远端设备离线。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ INVALID_ARGS = 3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SyncResultCode-INVALID_ARGS = 3--><!--Device-SyncResultCode-INVALID_ARGS = 3-End-->
@@ -81,6 +91,8 @@ DISTRIBUTED_TABLE_NOT_SET = 4
 表示本端设备或远端设备未设置分布式表。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +110,8 @@ TABLE_FIELD_MISMATCH = 5
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SyncResultCode-TABLE_FIELD_MISMATCH = 5--><!--Device-SyncResultCode-TABLE_FIELD_MISMATCH = 5-End-->
@@ -113,6 +127,8 @@ DISTRIBUTED_SCHEMA_MISMATCH = 6
 表示对端设备与本端设备分布式表的Schema字段不一致，或者存在一个分布式表没有配置Schema。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,6 +146,8 @@ BUSY = 7
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SyncResultCode-BUSY = 7--><!--Device-SyncResultCode-BUSY = 7-End-->
@@ -145,6 +163,8 @@ CORRUPTED = 8
 表示数据库损坏。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,6 +182,8 @@ TIMEOUT = 9
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SyncResultCode-TIMEOUT = 9--><!--Device-SyncResultCode-TIMEOUT = 9-End-->
@@ -178,6 +200,8 @@ SCHEMA_CHANGED = 10
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SyncResultCode-SCHEMA_CHANGED = 10--><!--Device-SyncResultCode-SCHEMA_CHANGED = 10-End-->
@@ -193,6 +217,8 @@ CONSTRAINT_VIOLATION = 11
 表示同步数据时违反约束条件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

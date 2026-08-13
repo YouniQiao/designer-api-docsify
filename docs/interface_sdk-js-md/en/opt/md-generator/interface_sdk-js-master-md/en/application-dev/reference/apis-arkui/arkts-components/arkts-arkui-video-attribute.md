@@ -1,14 +1,14 @@
 # Video properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md#CommonMethod), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md#CommonMethod), the following attributes are supported. In addition to the [universal events](arkts-arkui-commonmethod-c.md#CommonMethod), the following events are supported.
 
-In addition to the [universal events](arkts-arkui-commonmethod-c.md#CommonMethod), the following events are supported.
-
-**Inheritance/Implementation:** VideoAttribute extends [CommonMethod<VideoAttribute>](CommonMethod<VideoAttribute>)
+**Inheritance/Implementation:** VideoAttribute extends CommonMethod<VideoAttribute>
 
 **Since:** 7
 
-<!--Device-unnamed-declare class VideoAttribute extends CommonMethod<VideoAttribute>--><!--Device-unnamed-declare class VideoAttribute extends CommonMethod<VideoAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class VideoAttribute--><!--Device-unnamed-declare class VideoAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,11 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md#CommonMethod
 analyzerConfig(config: ImageAnalyzerConfig)
 ```
 
-Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](CommonMethod#attributeModifier).
-
-> **NOTE：**
-> 
-> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 20.
+Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier. > **NOTE：**> > This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +44,11 @@ Sets the AI image analysis types, including subject recognition, text recognitio
 autoPlay(value: boolean)
 ```
 
-Sets whether to enable autoplay. This attribute can be dynamically set using  
-[attributeModifier](CommonMethod#attributeModifier).
+Sets whether to enable autoplay. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -69,10 +68,11 @@ Sets whether to enable autoplay. This attribute can be dynamically set using
 controls(value: boolean)
 ```
 
-Sets whether to display the video playback control bar. This attribute can be dynamically set using  
-[attributeModifier](CommonMethod#attributeModifier).
+Sets whether to display the video playback control bar. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -92,20 +92,11 @@ Sets whether to display the video playback control bar. This attribute can be dy
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](CommonMethod#attributeModifier).
-
-After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
-
-Note that if this attribute and the [overlay](CommonMethod#overlay) attribute are both set,  
-[CustomBuilder](arkts-arkui-custombuilder-t.md#CustomBuilder) specified in [overlay](arkts-arkui-commonmethod-c.md#CommonMethod) has no effect.
-
-> **NOTE：**
-> 
-> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 20.
-
-After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed. Note that if this attribute and the overlay attribute are both set, [CustomBuilder](arkts-arkui-custombuilder-t.md#CustomBuilder) specified in [overlay](arkts-arkui-commonmethod-c.md#CommonMethod) has no effect. > **NOTE：**> > This API can be called within attributeModifier since API version 20. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,11 +118,11 @@ After this feature is enabled, the video automatically enters an analysis state 
 enableShortcutKey(enabled: boolean)
 ```
 
-Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using [attributeModifier](CommonMethod#attributeModifier).
-
-Currently, the component can respond to the following keys when it is in focus: spacebar for playing or pausing the video, up or down arrow key for adjusting the video volume, and left or right arrow key for fast forwarding or rewinding the video.
+Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using attributeModifier. Currently, the component can respond to the following keys when it is in focus: spacebar for playing or pausing the video, up or down arrow key for adjusting the video volume, and left or right arrow key for fast forwarding or rewinding the video.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,10 +144,11 @@ Currently, the component can respond to the following keys when it is in focus: 
 loop(value: boolean)
 ```
 
-Sets whether to repeat the video. This attribute can be dynamically set using  
-[attributeModifier](CommonMethod#attributeModifier).
+Sets whether to repeat the video. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -176,10 +168,11 @@ Sets whether to repeat the video. This attribute can be dynamically set using
 muted(value: boolean)
 ```
 
-Sets whether to mute the video. This attribute can be dynamically set using  
-[attributeModifier](CommonMethod#attributeModifier).
+Sets whether to mute the video. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -199,10 +192,11 @@ Sets whether to mute the video. This attribute can be dynamically set using
 objectFit(value: ImageFit)
 ```
 
-Sets the fill mode for the video content. This attribute can be dynamically set using  
-[attributeModifier](CommonMethod#attributeModifier).
+Sets the fill mode for the video content. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -226,6 +220,8 @@ Called when playback fails.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoAttribute-onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback): VideoAttribute--><!--Device-VideoAttribute-onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback): VideoAttribute-End-->
@@ -244,9 +240,11 @@ Called when playback fails.
 onFinish(event: VoidCallback)
 ```
 
-Called when the video playback ends.Anonymous Object Rectification.
+Called when the video playback ends. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -266,9 +264,11 @@ Called when the video playback ends.Anonymous Object Rectification.
 onFullscreenChange(callback: Callback<FullscreenInfo>)
 ```
 
-Called when the video enters and exits the full screen.Anonymous Object Rectification.
+Called when the video enters and exits the full screen. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -288,9 +288,11 @@ Called when the video enters and exits the full screen.Anonymous Object Rectific
 onPause(event: VoidCallback)
 ```
 
-Called when the video is paused.Anonymous Object Rectification.
+Called when the video is paused. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -310,9 +312,11 @@ Called when the video is paused.Anonymous Object Rectification.
 onPrepared(callback: Callback<PreparedInfo>)
 ```
 
-Called when the video preparation is complete.Anonymous Object Rectification.
+Called when the video preparation is complete. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -332,9 +336,11 @@ Called when the video preparation is complete.Anonymous Object Rectification.
 onSeeked(callback: Callback<PlaybackInfo>)
 ```
 
-Called when the playback time information is reported after the operation progress bar is completed.Anonymous Object Rectification.
+Called when the playback time information is reported after the operation progress bar is completed. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -354,9 +360,11 @@ Called when the playback time information is reported after the operation progre
 onSeeking(callback: Callback<PlaybackInfo>)
 ```
 
-Called when the time information is reported when the progress bar process is operated.Anonymous Object Rectification.
+Called when the time information is reported when the progress bar process is operated. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -376,9 +384,11 @@ Called when the time information is reported when the progress bar process is op
 onStart(event: VoidCallback)
 ```
 
-Called when the video is played.Anonymous Object Rectification.
+Called when the video is played. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -402,6 +412,8 @@ Called when the video is stopped.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -422,9 +434,11 @@ Called when the video is stopped.
 onUpdate(callback: Callback<PlaybackInfo>)
 ```
 
-Called when the playback progress changes.Anonymous Object Rectification.
+Called when the playback progress changes. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -14,7 +14,7 @@ Converts a number in units of px to a number in units of lpx.
 
 **Deprecated since:** 18
 
-**Substitutes:** [px2lpx](ohos.arkui.UIContext.UIContext#px2lpx)
+**Substitutes:** px2lpx
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

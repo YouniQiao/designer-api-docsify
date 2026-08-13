@@ -4,6 +4,8 @@ Defines a vector that contains the x, y, z, and w coordinate values.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface Vector4--><!--Device-unnamed-interface Vector4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Defines a vector that contains the x, y, z, and w coordinate values.
 w: number
 ```
 
-W coordinate value of the vector.
-
-Value range: (-∞, +∞).
+W coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ Value range: (-∞, +∞).
 x: number
 ```
 
-X coordinate value of the vector.
-
-Value range: (-∞, +∞).
+X coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +60,13 @@ Value range: (-∞, +∞).
 y: number
 ```
 
-Y coordinate value of the vector.
-
-Value range: (-∞, +∞).
+Y coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,13 +82,13 @@ Value range: (-∞, +∞).
 z: number
 ```
 
-Z coordinate value of the vector.
-
-Value range: (-∞, +∞).
+Z coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

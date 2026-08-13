@@ -1,11 +1,6 @@
 # UsedScene
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [UsedScene](#UsedScene) instead.
-
-Describes the application scenario and timing for using the permission.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [UsedScene](#UsedScene) instead. Describes the application scenario and timing for using the permission.
 
 **Since:** 7
 
@@ -37,7 +32,7 @@ Abilities that use the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [abilities](ohos.bundle.bundleManager/bundleManager.UsedScene#abilities)
+**Substitutes:** abilities
 
 <!--Device-UsedScene-abilities: Array<string>--><!--Device-UsedScene-abilities: Array<string>-End-->
 
@@ -61,7 +56,7 @@ Time when the permission is used.
 
 **Deprecated since:** 9
 
-**Substitutes:** [when](ohos.bundle.bundleManager/bundleManager.UsedScene#when)
+**Substitutes:** when
 
 <!--Device-UsedScene-when: string--><!--Device-UsedScene-when: string-End-->
 

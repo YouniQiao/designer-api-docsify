@@ -1,14 +1,10 @@
 # KVStoreResultSet
 
-Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a  time.The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.Before calling any API in **KVStoreResultSet**, you must use **  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))  
-** to construct a **SingleKVStore** or **DeviceKVStore** instance.
+Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a time. The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data. Before calling any API in **KVStoreResultSet**, you must use ** getKVStore ** to construct a **SingleKVStore** or **DeviceKVStore** instance. > **NOTE：**> > The cursor start position of **KVStoreResultSet** is **-1**.
 
-> **NOTE：**
-> 
-> The cursor start position of **KVStoreResultSet** is **-1**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
@@ -28,7 +24,9 @@ getCount(): number
 
 Obtains the total number of rows in the result set.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,7 +70,9 @@ getEntry(): Entry
 
 Obtains the KV pair from the current position.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +84,7 @@ Obtains the KV pair from the current position.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) |
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) |
 
 ## Examples
 
@@ -113,10 +113,11 @@ try {
 getPosition(): number
 ```
 
-Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#moveToFirst) and  
-[moveToLast](#moveToLast).
+Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#moveToFirst) and [moveToLast](#moveToLast).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,7 +161,9 @@ isAfterLast(): boolean
 
 Checks whether the data read position is after the last row.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -203,7 +206,9 @@ isBeforeFirst(): boolean
 
 Checks whether the data read position is before the first row.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,7 +251,9 @@ isFirst(): boolean
 
 Checks whether the data read position is the first row.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,7 +297,9 @@ isLast(): boolean
 
 Checks whether the data read position is the last row.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,7 +343,9 @@ move(offset: number): boolean
 
 Moves the data read position with the specified offset from the current position. That is, moves the number of rows specified by **offset** from the current position.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -358,7 +369,7 @@ Moves the data read position with the specified offset from the current position
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -390,7 +401,9 @@ moveToFirst(): boolean
 
 Moves the data read position to the first row. If the result set is empty, **false** will be returned.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -434,7 +447,9 @@ moveToLast(): boolean
 
 Moves the data read position to the last row. If the result set is empty, **false** will be returned.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -478,7 +493,9 @@ moveToNext(): boolean
 
 Moves the data read position to the next row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -524,7 +541,9 @@ moveToPosition(position: number): boolean
 
 Moves the data read position from 0 to an absolute position.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -548,7 +567,7 @@ Moves the data read position from 0 to an absolute position.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -580,7 +599,9 @@ moveToPrevious(): boolean
 
 Moves the data read position to the previous row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

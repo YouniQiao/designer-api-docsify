@@ -12,11 +12,15 @@ import { util } from '@kit.ArkTS';
 function getMainThreadStackTrace(): string
 ```
 
-Get stack trace of main thread.
+Obtains the stack trace information of the main thread. A maximum of 64 call frames can be returned. This API may affect the performance of the main thread. You are advised to use this API only when necessary, such as in log recording, error analysis, or debugging scenarios.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-util-function getMainThreadStackTrace(): string--><!--Device-util-function getMainThreadStackTrace(): string-End-->
 
@@ -26,5 +30,13 @@ Get stack trace of main thread.
 
 | Type | Description |
 | --- | --- |
-| string | Return a stack trace of main thread. |
+| string | Stack trace information of the main thread. If the main thread is not executing JavaScript code , an empty string is returned. |
+
+## Examples
+
+```TypeScript
+let stack = util.getMainThreadStackTrace();
+console.info(stack);
+// Obtain the stack trace information of the main thread.
+```
 

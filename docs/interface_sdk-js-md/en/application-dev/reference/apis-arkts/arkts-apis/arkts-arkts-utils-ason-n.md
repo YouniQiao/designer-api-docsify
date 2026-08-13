@@ -6,6 +6,8 @@ ArkTS JSON utils.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-utils-namespace ASON--><!--Device-utils-namespace ASON-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -23,7 +25,7 @@ import { ArkTSUtils } from '@kit.ArkTS';
 | Name | Description |
 | --- | --- |
 | [parse](arkts-arkts-ason-parse-f.md#parse) | Converts a JavaScript Object Notation (JSON) string into an ArkTS Value. |
-| [stringify](arkts-arkts-ason-stringify-f.md#stringify) | Converts an ArkTS value to a JavaScript Object Notation (JSON) string.Extra supports Map and Set. |
+| [stringify](arkts-arkts-ason-stringify-f.md#stringify) | Converts an ArkTS value to a JavaScript Object Notation (JSON) string. Extra supports Map and Set. |
 
 ### Interfaces
 

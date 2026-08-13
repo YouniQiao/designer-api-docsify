@@ -4,7 +4,7 @@ Defines chipGroupV2.
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ChipGroupV2--><!--Device-unnamed-export declare struct ChipGroupV2-End-->
 
@@ -19,7 +19,8 @@ import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConf
 ## $items
 
 ```TypeScript
-$items?: Callback<ChipGroupV2Items>
+@Event
+    $items?: Callback<ChipGroupV2Items>
 ```
 
 Two-way binding callback method for ChipV2 item.
@@ -28,18 +29,21 @@ Two-way binding callback method for ChipV2 item.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-$items?: Callback<ChipGroupV2Items>--><!--Device-ChipGroupV2-$items?: Callback<ChipGroupV2Items>-End-->
+<!--Device-ChipGroupV2-@Event    $items?: Callback<ChipGroupV2Items>--><!--Device-ChipGroupV2-@Event    $items?: Callback<ChipGroupV2Items>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## $selectedIndexes
 
 ```TypeScript
-$selectedIndexes?: Callback<Array<number>>
+@Event
+    $selectedIndexes?: Callback<Array<number>>
 ```
 
 Two-way binding callback method for selected ChipV2 item indexes.
@@ -48,18 +52,21 @@ Two-way binding callback method for selected ChipV2 item indexes.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-$selectedIndexes?: Callback<Array<number>>--><!--Device-ChipGroupV2-$selectedIndexes?: Callback<Array<number>>-End-->
+<!--Device-ChipGroupV2-@Event    $selectedIndexes?: Callback<Array<number>>--><!--Device-ChipGroupV2-@Event    $selectedIndexes?: Callback<Array<number>>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## chipGroupPadding
 
 ```TypeScript
-chipGroupPadding?: ChipGroupV2Padding
+@Param
+     chipGroupPadding?: ChipGroupV2Padding
 ```
 
 ChipGroupV2 padding (only support top and bottom).
@@ -68,20 +75,21 @@ ChipGroupV2 padding (only support top and bottom).
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-chipGroupPadding?: ChipGroupV2Padding--><!--Device-ChipGroupV2-chipGroupPadding?: ChipGroupV2Padding-End-->
+<!--Device-ChipGroupV2-@Param     chipGroupPadding?: ChipGroupV2Padding--><!--Device-ChipGroupV2-@Param     chipGroupPadding?: ChipGroupV2Padding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## chipGroupSpace
 
 ```TypeScript
-chipGroupSpace?: ChipGroupV2Space
+@Param
+    chipGroupSpace?: ChipGroupV2Space
 ```
 
 Left and right inner margins and spacing between ChipV2.
@@ -90,20 +98,21 @@ Left and right inner margins and spacing between ChipV2.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-chipGroupSpace?: ChipGroupV2Space--><!--Device-ChipGroupV2-chipGroupSpace?: ChipGroupV2Space-End-->
+<!--Device-ChipGroupV2-@Param    chipGroupSpace?: ChipGroupV2Space--><!--Device-ChipGroupV2-@Param    chipGroupSpace?: ChipGroupV2Space-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemStyle
 
 ```TypeScript
-itemStyle?: ChipGroupV2ItemStyle
+@Param
+    itemStyle?: ChipGroupV2ItemStyle
 ```
 
 ChipV2 item style.
@@ -112,20 +121,22 @@ ChipV2 item style.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-itemStyle?: ChipGroupV2ItemStyle--><!--Device-ChipGroupV2-itemStyle?: ChipGroupV2ItemStyle-End-->
+<!--Device-ChipGroupV2-@Param    itemStyle?: ChipGroupV2ItemStyle--><!--Device-ChipGroupV2-@Param    itemStyle?: ChipGroupV2ItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## items
 
 ```TypeScript
-items: ChipGroupV2Items
+@Require
+    @Param
+    items: ChipGroupV2Items
 ```
 
 ChipV2 item.
@@ -134,20 +145,21 @@ ChipV2 item.
 
 **Since:** 26.0.0
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-items: ChipGroupV2Items--><!--Device-ChipGroupV2-items: ChipGroupV2Items-End-->
+<!--Device-ChipGroupV2-@Require    @Param    items: ChipGroupV2Items--><!--Device-ChipGroupV2-@Require    @Param    items: ChipGroupV2Items-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## multiple
 
 ```TypeScript
-multiple?: boolean
+@Param
+    multiple?: boolean
 ```
 
 Support multiple ChipV2 item selection.
@@ -156,20 +168,21 @@ Support multiple ChipV2 item selection.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-multiple?: boolean--><!--Device-ChipGroupV2-multiple?: boolean-End-->
+<!--Device-ChipGroupV2-@Param    multiple?: boolean--><!--Device-ChipGroupV2-@Param    multiple?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
 
 ```TypeScript
-onChange?: Callback<Array<number>>
+@Event
+    onChange?: Callback<Array<number>>
 ```
 
 Callback method when the chipV2 status changes
@@ -178,18 +191,21 @@ Callback method when the chipV2 status changes
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-onChange?: Callback<Array<number>>--><!--Device-ChipGroupV2-onChange?: Callback<Array<number>>-End-->
+<!--Device-ChipGroupV2-@Event    onChange?: Callback<Array<number>>--><!--Device-ChipGroupV2-@Event    onChange?: Callback<Array<number>>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedIndexes
 
 ```TypeScript
-selectedIndexes?: Array<number>
+@Param
+    selectedIndexes?: Array<number>
 ```
 
 Selected ChipV2 item indexes.
@@ -198,20 +214,21 @@ Selected ChipV2 item indexes.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-selectedIndexes?: Array<number>--><!--Device-ChipGroupV2-selectedIndexes?: Array<number>-End-->
+<!--Device-ChipGroupV2-@Param    selectedIndexes?: Array<number>--><!--Device-ChipGroupV2-@Param    selectedIndexes?: Array<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffix
 
 ```TypeScript
-suffix?: Callback<void>
+@BuilderParam
+    suffix?: Callback<void>
 ```
 
 The builder function which will be rendered in the suffix of ChipGroupV2.
@@ -220,12 +237,12 @@ The builder function which will be rendered in the suffix of ChipGroupV2.
 
 **Since:** 26.0.0
 
-**Decorator:** @BuilderParam
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-suffix?: Callback<void>--><!--Device-ChipGroupV2-suffix?: Callback<void>-End-->
+<!--Device-ChipGroupV2-@BuilderParam    suffix?: Callback<void>--><!--Device-ChipGroupV2-@BuilderParam    suffix?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

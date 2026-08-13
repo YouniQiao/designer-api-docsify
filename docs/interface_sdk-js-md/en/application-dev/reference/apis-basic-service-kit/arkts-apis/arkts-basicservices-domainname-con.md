@@ -6,13 +6,13 @@
 const DEVICE_SHARED: string
 ```
 
-Provide the domain name for device shared Key.
+Provide the domain name for device shared Key. &lt;p&gt;This constants is a domain name for device level shared key.
 
-&lt;p&gt;This constants is a domain name for device level shared key.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-domainName-const DEVICE_SHARED: string--><!--Device-domainName-const DEVICE_SHARED: string-End-->
 
@@ -24,13 +24,13 @@ Provide the domain name for device shared Key.
 const USER_PROPERTY: string
 ```
 
-Provide the domain name for user property.
+Provide the domain name for user property. &lt;p&gt;This constants is a domain name for user level key.
 
-&lt;p&gt;This constants is a domain name for user level key.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-domainName-const USER_PROPERTY: string--><!--Device-domainName-const USER_PROPERTY: string-End-->
 

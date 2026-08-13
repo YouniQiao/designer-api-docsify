@@ -4,6 +4,8 @@ JS跨线程通信工具。
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace worker--><!--Device-unnamed-declare namespace worker-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -29,5 +31,5 @@ JS跨线程通信工具。
 
 | 名称 |
 | --- |
-| [parentPort](arkts-arkts-worker-con.md#parentport) |
-| [workerPort](arkts-arkts-worker-con.md#workerport) |
+| [parentPort](arkts-arkts-worker-con.md#parentPort) |
+| [workerPort](arkts-arkts-worker-con.md#workerPort) |

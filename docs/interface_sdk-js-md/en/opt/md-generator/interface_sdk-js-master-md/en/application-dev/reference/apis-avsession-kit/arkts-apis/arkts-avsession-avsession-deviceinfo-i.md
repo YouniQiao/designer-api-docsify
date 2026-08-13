@@ -2,7 +2,9 @@
 
 Device Information Definition
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
 
@@ -24,9 +26,11 @@ Audio capabilities supported by the device.
 
 **Type:** [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities--><!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities-End-->
 
@@ -42,7 +46,9 @@ The playback type supported by the device. See [AVCastCategory](arkts-avsession-
 
 **Type:** [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,11 +62,13 @@ The playback type supported by the device. See [AVCastCategory](arkts-avsession-
 deviceId: string
 ```
 
-Audio device id.The length of the audioDeviceId array is greater than 1if output to multiple devices at the same time.
+Audio device id.The length of the audioDeviceId array is greater than 1 if output to multiple devices at the same time.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,11 +82,13 @@ Audio device id.The length of the audioDeviceId array is greater than 1if output
 deviceName: string
 ```
 
-Device name. The length of the deviceName array is greater than 1if output to multiple devices at the same time.
+Device name. The length of the deviceName array is greater than 1 if output to multiple devices at the same time.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,7 +106,9 @@ device type.
 
 **Type:** DeviceType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,9 +126,11 @@ Device manufacturer.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-manufacturer?: string--><!--Device-DeviceInfo-manufacturer?: string-End-->
 
@@ -132,9 +146,11 @@ Device model name.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-modelName?: string--><!--Device-DeviceInfo-modelName?: string-End-->
 
@@ -150,9 +166,11 @@ The drm capability supported by current device, each drm is represented by uuid.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>--><!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>-End-->
 
@@ -168,7 +186,9 @@ The protocols supported by current device, can be union of [ProtocolType](arkts-
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -186,9 +206,11 @@ Whether the device supports pull-end playback, including a collection of pull-en
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-supportedPullClients?: Array<int>--><!--Device-DeviceInfo-supportedPullClients?: Array<int>-End-->
 

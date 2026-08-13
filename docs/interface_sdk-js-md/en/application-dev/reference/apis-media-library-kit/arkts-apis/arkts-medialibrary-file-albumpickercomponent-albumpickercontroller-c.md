@@ -1,12 +1,12 @@
 # AlbumPickerController
 
-The class for AlbumPickerController
+A controller that enables applications to send data to the **AlbumPickerComponent**.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Decorator:** @Observed
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class AlbumPickerController--><!--Device-unnamed-export declare class AlbumPickerController-End-->
 
@@ -21,18 +21,20 @@ import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOpt
 ## setFontSize
 
 ```TypeScript
-public setFontSize(fontSize: int | string): void
+setFontSize(fontSize: number | string): void
 ```
 
-Set font size to album picker component. Invalid value will result in the default font size being shown.
+Sets the font size of the album list.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AlbumPickerController-public setFontSize(fontSize: int | string): void--><!--Device-AlbumPickerController-public setFontSize(fontSize: int | string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AlbumPickerController-setFontSize(fontSize: number | string): void--><!--Device-AlbumPickerController-setFontSize(fontSize: number | string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,5 +42,5 @@ Set font size to album picker component. Invalid value will result in the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontSize | int \| string | Yes | font size of album picker component |
+| fontSize | number \| string | Yes | Font size. For details about the value range, see fontSize. |
 

@@ -1,12 +1,14 @@
 # DragController
 
-class DragController
+Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. > **NOTE：**> > In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) in > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-export declare class DragController--><!--Device-unnamed-export declare class DragController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class DragController--><!--Device-unnamed-export class DragController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 cancelDataLoading(key: string): void
 ```
 
-Cancel the UDMF data sync process by passing in the data key as the identify, can only be used after the drop.
+Cancels the data loading initiated by the startDataLoading API. This API can be called only after the drag is released.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-DragController-cancelDataLoading(key: string): void--><!--Device-DragController-cancelDataLoading(key: string): void-End-->
 
@@ -38,31 +44,34 @@ Cancel the UDMF data sync process by passing in the data key as the identify, ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | The data key returned by startDataLoading method. |
+| key | string | Yes | Identifier for the drag data. It is used to distinguish between different drag operations. The key can be obtained through the **startDataLoading** API. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [190004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190004-operation-failed) | Operation failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [190004](../errorcode-drag-event.md#190004-operation-failed) | Operation failed. |
 
 ## createDragAction
 
 ```TypeScript
-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined,
-    dragInfo: dragController.DragInfo): dragController.DragAction
+createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction
 ```
 
-Create one drag action object, which can be used for starting drag later or monitoring the drag status after drag started.
+Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid. Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation. > **NOTE：**> > For optimal drag and drop performance, limit the number of drag previews.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined,    dragInfo: dragController.DragInfo): dragController.DragAction--><!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined,    dragInfo: dragController.DragInfo): dragController.DragAction-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction--><!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,21 +79,21 @@ Create one drag action object, which can be used for starting drag later or moni
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customArray | Array&lt;CustomBuilder \| DragItemInfo&gt; \| undefined | Yes | Objects used for prompts displayed when the objects are dragged. |
-| dragInfo | dragController.DragInfo | Yes | Information about the drag event. |
+| customArray | Array&lt;CustomBuilder \| DragItemInfo&gt; | Yes | Object to be dragged. |
+| dragInfo | dragController.DragInfo | Yes | Drag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| dragController.DragAction | one drag action object |
+| dragController.DragAction | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal handling failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## enableDropDisallowedBadge
 
@@ -92,17 +101,17 @@ Create one drag action object, which can be used for starting drag later or moni
 enableDropDisallowedBadge(enabled: boolean): void
 ```
 
-Sets whether to enable the disallow badge icon show.
+Specifies whether to enable the display of a disallowed badge when dragged content is incompatible with a component 's configured allowDrop types. When a component can accept or process dragged data or returns **DragBehavior.COPY** to indicate copy mode processing, the drag preview shows a plus icon with data count badge. When the component returns **DragBehavior.MOVE** to indicate cut mode processing, only the data count badge appears. When this feature is enabled, the system automatically displays a disallowed badge during drag operations if the dragged data types are incompatible with the target component's allowed drop types. This API currently does not support [UIExtension](arkts-arkui-uiextension.md#@ohos.arkui.uiExtension).
 
-Typically, when a component can receive or process data dragged by the user, or when it declares to the system that data should be processed in COPY way by returning DragBehavior.COPY, the system will display a plus sign together with the data number on the upper-left corner of the dragged object; if returning DragBehavior.MOVE to the system to declare that data should be processed in CUT way, the system will only display the data number on the upper-left corner of the dragged object.
+**Since:** 20
 
-In some cases, when the system determines or the component explicitly declares that it cannot handle the data that the user is dragging, the system displays a badge icon in the same way as it does for DragBehavior.MOVE.So if you want to show the more clearly status, you can call this method on the UI instance in advance to force the system to display a clear prohibition icon on the upper left corner in such cases, and the user can clearly know that data cannot be dropped here.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DragController-enableDropDisallowedBadge(enabled: boolean): void--><!--Device-DragController-enableDropDisallowedBadge(enabled: boolean): void-End-->
 
@@ -112,24 +121,28 @@ In some cases, when the system determines or the component explicitly declares t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Indicating enable the disallow status showing or not. |
+| enabled | boolean | Yes | Whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured allowDrop types. The value **true** means to enable the display of a disallowed badge, and **false** means the opposite. The default value is **false**. |
 
 ## executeDrag
 
 ```TypeScript
-executeDrag(custom: CustomBuilder | DragItemInfo | undefined, dragInfo: dragController.DragInfo,
+executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,
     callback: AsyncCallback<dragController.DragEventParam>): void
 ```
 
-Execute a drag event.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a callback to return the drag event result.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo | undefined, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo | undefined, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -137,33 +150,37 @@ Execute a drag event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| DragItemInfo \| undefined | Yes | Object used for prompts displayed when the object is dragged. |
-| dragInfo | dragController.DragInfo | Yes | Information about the drag event. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;dragController.DragEventParam&gt; | Yes | Callback that contains the drag event information. |
+| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.&lt;br&gt; **NOTE：**&lt;br&gt;The global builder is not supported. If the Image component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
+| dragInfo | dragController.DragInfo | Yes | Drag information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | Yes | Callback used to return the result.&lt;br&gt;- **event**: drag event information that includes only the drag result.&lt;br&gt;- **extraParams**: extra information about the drag event.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal handling failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## executeDrag
 
 ```TypeScript
-executeDrag(custom: CustomBuilder | DragItemInfo | undefined, dragInfo: dragController.DragInfo)
-    : Promise<dragController.DragEventParam> | null
+executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)
+    : Promise<dragController.DragEventParam>
 ```
 
-Execute a drag event.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the drag event result.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo | undefined, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam> | null--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo | undefined, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam> | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam>--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,21 +188,22 @@ Execute a drag event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| DragItemInfo \| undefined | Yes | Object used for prompts displayed when the object is dragged. |
-| dragInfo | dragController.DragInfo | Yes | Information about the drag event. |
+| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged. |
+| dragInfo | dragController.DragInfo | Yes | Drag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information. Null will be returned if the parameters' checking failed or some internal errors occur, for example: the runtime environment is broken. |
+| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. &lt;br&gt;- **event**: drag event information that includes only the drag result. &lt;br&gt;- **extraParams**: extra information about the drag event.<br>**Applicable version:** 11 and later |
+| Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal handling failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## getDragPreview
 
@@ -193,13 +211,17 @@ Execute a drag event.
 getDragPreview(): dragController.DragPreview
 ```
 
-Get a drag preview object.
+Obtains the **DragPreview** object, which represents the preview displayed during a drag operation.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DragController-getDragPreview(): dragController.DragPreview--><!--Device-DragController-getDragPreview(): dragController.DragPreview-End-->
 
@@ -209,7 +231,7 @@ Get a drag preview object.
 
 | Type | Description |
 | --- | --- |
-| dragController.DragPreview | A drag preview object. |
+| dragController.DragPreview | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
 
 ## notifyDragStartRequest
 
@@ -217,13 +239,17 @@ Get a drag preview object.
 notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): void
 ```
 
-Notify the drag start request to specific pending or continue.
+Controls whether the application can initiate a drag operation.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DragController-notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): void--><!--Device-DragController-notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): void-End-->
 
@@ -233,7 +259,7 @@ Notify the drag start request to specific pending or continue.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestStatus | dragController.DragStartRequestStatus | Yes | Status about the drag start behavior. |
+| requestStatus | dragController.DragStartRequestStatus | Yes | Whether the application can initiate a drag operation. |
 
 ## setDragEventStrictReportingEnabled
 
@@ -241,13 +267,17 @@ Notify the drag start request to specific pending or continue.
 setDragEventStrictReportingEnabled(enable: boolean): void
 ```
 
-Enable drag event strict reporting for drag enter and leave notification in nested situation.For example, the parent and child both register the onDragEnter/onDragLeave events, if this flag is enabled, the parent will be notified with leave event, and the child will notified with enter event at the same time, when user drag action is passing through the parent and enter the scope of the child.Please be noted, the default value of the flag is false, it means, for the same situation, the parent will not receive the leave notification, just the child can get the enter event, which is not fully strict.
+Sets whether the **onDragLeave** callback of the parent component is triggered when an item is dragged from the parent to the child component.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DragController-setDragEventStrictReportingEnabled(enable: boolean): void--><!--Device-DragController-setDragEventStrictReportingEnabled(enable: boolean): void-End-->
 
@@ -257,5 +287,5 @@ Enable drag event strict reporting for drag enter and leave notification in nest
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Indicating enable drag event strict reporting or not. |
+| enable | boolean | Yes | Whether the **onDragLeave** callback of the parent component is triggered when an item is dragged from the parent to the child component. The value **true** means the **onDragLeave** callback of the parent component is triggered, and **false** means the opposite. |
 

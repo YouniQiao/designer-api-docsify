@@ -1,14 +1,14 @@
 # Zoom
 
-Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)。
-
-变焦类，对设备变焦操作。
+Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)。 变焦类，对设备变焦操作。
 
 **继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface Zoom--><!--Device-camera-interface Zoom-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -20,7 +20,9 @@ getZoomCenterPoint(): Point
 
 Gets zoom center point.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Zoom-getZoomCenterPoint(): Point--><!--Device-Zoom-getZoomCenterPoint(): Point-End-->
 
@@ -38,8 +40,8 @@ Gets zoom center point.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## prepareZoom
 
@@ -49,7 +51,9 @@ prepareZoom(): void
 
 Instructs the bottom layer to prepare for zooming, for example, powering on the sensor.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Zoom-prepareZoom(): void--><!--Device-Zoom-prepareZoom(): void-End-->
 
@@ -61,8 +65,8 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -88,7 +92,9 @@ setZoomCenterPoint(point: Point): void
 
 Sets zoom center point.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Zoom-setZoomCenterPoint(point: Point): void--><!--Device-Zoom-setZoomCenterPoint(point: Point): void-End-->
 
@@ -106,8 +112,8 @@ Sets zoom center point.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## unprepareZoom
 
@@ -117,7 +123,9 @@ unprepareZoom(): void
 
 Instructs the bottom layer to unprepare for zooming.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Zoom-unprepareZoom(): void--><!--Device-Zoom-unprepareZoom(): void-End-->
 
@@ -129,8 +137,8 @@ Instructs the bottom layer to unprepare for zooming.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

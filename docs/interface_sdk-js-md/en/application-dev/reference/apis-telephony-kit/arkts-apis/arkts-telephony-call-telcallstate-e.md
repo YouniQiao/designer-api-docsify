@@ -2,9 +2,11 @@
 
 Enumerates call states.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum TelCallState--><!--Device-call-export enum TelCallState-End-->
 
@@ -18,9 +20,11 @@ TEL_CALL_STATE_UNKNOWN = -1
 
 The call status fails to be obtained and is unknown.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TelCallState-TEL_CALL_STATE_UNKNOWN = -1--><!--Device-TelCallState-TEL_CALL_STATE_UNKNOWN = -1-End-->
 
@@ -34,9 +38,11 @@ TEL_CALL_STATE_IDLE = 0
 
 No call is in progress.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TelCallState-TEL_CALL_STATE_IDLE = 0--><!--Device-TelCallState-TEL_CALL_STATE_IDLE = 0-End-->
 
@@ -50,9 +56,11 @@ TEL_CALL_STATE_RINGING = 1
 
 The call is in the ringing or waiting state.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TelCallState-TEL_CALL_STATE_RINGING = 1--><!--Device-TelCallState-TEL_CALL_STATE_RINGING = 1-End-->
 
@@ -66,9 +74,11 @@ TEL_CALL_STATE_OFFHOOK = 2
 
 At least one call is being dialed, and no new incoming call is in the ringing or waiting state.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TelCallState-TEL_CALL_STATE_OFFHOOK = 2--><!--Device-TelCallState-TEL_CALL_STATE_OFFHOOK = 2-End-->
 
@@ -82,9 +92,11 @@ TEL_CALL_STATE_ANSWERED = 3
 
 The incoming call is answered.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TelCallState-TEL_CALL_STATE_ANSWERED = 3--><!--Device-TelCallState-TEL_CALL_STATE_ANSWERED = 3-End-->
 
@@ -98,9 +110,11 @@ TEL_CALL_STATE_CONNECTED = 4
 
 The call is being connected or placed on hold.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TelCallState-TEL_CALL_STATE_CONNECTED = 4--><!--Device-TelCallState-TEL_CALL_STATE_CONNECTED = 4-End-->
 

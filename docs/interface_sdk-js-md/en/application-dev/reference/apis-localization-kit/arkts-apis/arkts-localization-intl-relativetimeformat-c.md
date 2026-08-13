@@ -8,7 +8,7 @@ Provides the relative time formatting capability.
 
 **Deprecated since:** 20
 
-**Substitutes:** [RelativeTimeFormat]]([Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat))
+**Substitutes:** [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
 
 <!--Device-intl-export class RelativeTimeFormat--><!--Device-intl-export class RelativeTimeFormat-End-->
 
@@ -34,7 +34,7 @@ Creates a **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [constructor]]([Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat))
+**Substitutes:** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -65,7 +65,7 @@ Creates a **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [constructor]]([Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat))
+**Substitutes:** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -107,7 +107,7 @@ Formats a relative time.
 
 **Deprecated since:** 20
 
-**Substitutes:** [format]]([Intl.RelativeTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format))
+**Substitutes:** [Intl.RelativeTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -153,7 +153,7 @@ Formats the relative time
 
 **Deprecated since:** 20
 
-**Substitutes:** [formatToParts]]([Intl.RelativeTimeFormat.formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts))
+**Substitutes:** [Intl.RelativeTimeFormat.formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -198,7 +198,7 @@ Defines the formatting options for a **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [resolvedOptions]]([Intl.RelativeTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions))
+**Substitutes:** [Intl.RelativeTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

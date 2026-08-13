@@ -16,6 +16,8 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
 <!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>--><!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>-End-->
@@ -40,9 +42,9 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

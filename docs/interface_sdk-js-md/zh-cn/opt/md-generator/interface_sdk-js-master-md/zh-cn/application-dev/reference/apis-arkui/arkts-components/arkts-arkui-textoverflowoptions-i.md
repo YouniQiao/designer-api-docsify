@@ -1,12 +1,10 @@
 # TextOverflowOptions
 
-文本超长显示方式对象。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+文本超长显示方式对象。 > **说明：** > > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface TextOverflowOptions--><!--Device-unnamed-declare interface TextOverflowOptions-End-->
 
@@ -18,15 +16,15 @@
 overflow: TextOverflow
 ```
 
-文本超长时的显示方式。
-
-默认值：TextOverflow.Clip
+文本超长时的显示方式。 默认值：TextOverflow.Clip
 
 **类型：** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
 **默认值：** TextOverflow.Clip [since 18]
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

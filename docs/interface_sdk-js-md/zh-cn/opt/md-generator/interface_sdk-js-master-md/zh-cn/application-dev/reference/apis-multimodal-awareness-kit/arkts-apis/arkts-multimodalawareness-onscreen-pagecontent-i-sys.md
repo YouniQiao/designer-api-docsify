@@ -2,7 +2,9 @@
 
 屏上内容。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-onScreen-export interface PageContent--><!--Device-onScreen-export interface PageContent-End-->
 
@@ -20,7 +22,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-bundleName: string--><!--Device-PageContent-bundleName: string-End-->
 
@@ -38,7 +42,9 @@ content?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-content?: string--><!--Device-PageContent-content?: string-End-->
 
@@ -56,7 +62,9 @@ pageLink?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-pageLink?: string--><!--Device-PageContent-pageLink?: string-End-->
 
@@ -74,7 +82,9 @@ paragraphs?: Paragraph[]
 
 **类型：** Paragraph[]
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-paragraphs?: Paragraph[]--><!--Device-PageContent-paragraphs?: Paragraph[]-End-->
 
@@ -92,7 +102,9 @@ scenario?: Scenario
 
 **类型：** [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-scenario?: Scenario--><!--Device-PageContent-scenario?: Scenario-End-->
 
@@ -110,7 +122,9 @@ sessionId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-sessionId: long--><!--Device-PageContent-sessionId: long-End-->
 
@@ -128,7 +142,9 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-title?: string--><!--Device-PageContent-title?: string-End-->
 
@@ -146,7 +162,9 @@ windowId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PageContent-windowId: int--><!--Device-PageContent-windowId: int-End-->
 

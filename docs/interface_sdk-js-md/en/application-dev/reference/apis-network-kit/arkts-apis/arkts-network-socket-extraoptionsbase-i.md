@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface ExtraOptionsBase--><!--Device-socket-export interface ExtraOptionsBase-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,6 +30,8 @@ Size of the receive buffer, in MBS.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ExtraOptionsBase-receiveBufferSize?: number--><!--Device-ExtraOptionsBase-receiveBufferSize?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -45,6 +49,8 @@ Whether to reuse addresses. The default value is false.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ExtraOptionsBase-reuseAddress?: boolean--><!--Device-ExtraOptionsBase-reuseAddress?: boolean-End-->
 
@@ -64,6 +70,8 @@ Size of the send buffer, in MBS.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ExtraOptionsBase-sendBufferSize?: number--><!--Device-ExtraOptionsBase-sendBufferSize?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -81,6 +89,8 @@ Timeout duration of the UDPSocket connection, in milliseconds.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ExtraOptionsBase-socketTimeout?: number--><!--Device-ExtraOptionsBase-socketTimeout?: number-End-->
 

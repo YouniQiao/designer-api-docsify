@@ -4,21 +4,9 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface CopyOptions--><!--Device-unnamed-interface CopyOptions-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO
-
-## progressListener
-
-```TypeScript
-progressListener?: ProgressListener
-```
-
-拷贝进度监听。
-
-**起始版本：** 11
-
-<!--Device-CopyOptions-progressListener?: ProgressListener--><!--Device-CopyOptions-progressListener?: ProgressListener-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -34,6 +22,26 @@ copySignal?: TaskSignal
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-CopyOptions-copySignal?: TaskSignal--><!--Device-CopyOptions-copySignal?: TaskSignal-End-->
+
+**系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## progressListener
+
+```TypeScript
+progressListener?: ProgressListener
+```
+
+拷贝进度监听。
+
+**类型：** [ProgressListener](arkts-corefile-progresslistener-t.md)
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-CopyOptions-progressListener?: ProgressListener--><!--Device-CopyOptions-progressListener?: ProgressListener-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

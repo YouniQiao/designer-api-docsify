@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-conversation-interface DeviceNodeInfo--><!--Device-conversation-interface DeviceNodeInfo-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
@@ -21,6 +23,8 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ deviceTypeId: number
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceNodeInfo-deviceTypeId: int--><!--Device-DeviceNodeInfo-deviceTypeId: int-End-->
@@ -61,6 +67,8 @@ nearby: boolean
 **类型：** boolean
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,6 +90,8 @@ networkId: string
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceNodeInfo-networkId: string--><!--Device-DeviceNodeInfo-networkId: string-End-->
@@ -96,11 +106,13 @@ networkId: string
 udid: string
 ```
 
-设备的UDID，唯一标识一台设备，用于发送数据时的设备寻址。与networkId不同，UDID为设备的永久唯一标识，不随网络拓扑变化而改变，两者互为替代，发送数据时可任选其一。
+设备的UDID，唯一标识一台设备，用于发送数据时的设备寻址。与networkId不同，UDID为设备的永久唯一标识， 不随网络拓扑变化而改变，两者互为替代，发送数据时可任选其一。
 
 **类型：** string
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

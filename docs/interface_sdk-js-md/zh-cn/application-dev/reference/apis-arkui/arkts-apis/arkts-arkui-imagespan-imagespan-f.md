@@ -3,6 +3,7 @@
 ## ImageSpan
 
 ```TypeScript
+@ComponentBuilder
 export declare function ImageSpan(
     value: ResourceStr | PixelMap
 ): ImageSpanAttribute
@@ -14,9 +15,11 @@ export declare function ImageSpan(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute--><!--Device-unnamed-export declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ImageSpan(    value: ResourceStr | PixelMap): ImageSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ export declare function ImageSpan(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md) |  |
+| ImageSpanAttribute |  |
 
 
 ## ImageSpan
 
 ```TypeScript
+@Builder
 export declare function ImageSpan(
     style: CustomBuilderT<ImageSpanAttribute>,
 ): ImageSpanAttribute
@@ -47,11 +51,11 @@ export declare function ImageSpan(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute--><!--Device-unnamed-export declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute--><!--Device-unnamed-@Builderexport declare function ImageSpan(    style: CustomBuilderT<ImageSpanAttribute>,): ImageSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ export declare function ImageSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md)&gt; | 是 | ImageSpan属性实例。 |
+| style | CustomBuilderT&lt;ImageSpanAttribute&gt; | 是 | ImageSpan属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md) |  |
+| ImageSpanAttribute |  |
 

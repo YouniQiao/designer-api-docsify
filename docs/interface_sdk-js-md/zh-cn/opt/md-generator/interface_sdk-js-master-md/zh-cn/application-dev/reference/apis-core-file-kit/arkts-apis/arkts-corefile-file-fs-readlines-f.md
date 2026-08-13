@@ -10,6 +10,8 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function readLines(filePath: string, options?: Options): Promise<ReaderIterator>--><!--Device-unnamed-declare function readLines(filePath: string, options?: Options): Promise<ReaderIterator>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -56,6 +58,8 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void--><!--Device-unnamed-declare function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -94,6 +98,8 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 逐行读取文件文本内容，使用callback异步回调，只支持读取utf-8格式文件。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void--><!--Device-unnamed-declare function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void-End-->
 

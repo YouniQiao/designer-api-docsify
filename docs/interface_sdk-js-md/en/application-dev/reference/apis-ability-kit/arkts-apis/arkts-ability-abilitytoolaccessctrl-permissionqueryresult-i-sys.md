@@ -6,6 +6,8 @@ Permission query result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-interface PermissionQueryResult--><!--Device-abilityToolAccessCtrl-interface PermissionQueryResult-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -25,6 +27,8 @@ Whether a dialog is required.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-PermissionQueryResult-needDialog: boolean--><!--Device-PermissionQueryResult-needDialog: boolean-End-->
 
@@ -46,6 +50,8 @@ Permission result list.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]--><!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -65,6 +71,8 @@ Ticket information.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-PermissionQueryResult-ticket?: TicketInfo--><!--Device-PermissionQueryResult-ticket?: TicketInfo-End-->
 

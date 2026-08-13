@@ -2,7 +2,9 @@
 
 表示要获取的属性类型的枚举。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-enum GetPropertyType--><!--Device-osAccount-enum GetPropertyType-End-->
 
@@ -18,7 +20,9 @@ AUTH_SUB_TYPE = 1
 
 认证子类型。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetPropertyType-AUTH_SUB_TYPE = 1--><!--Device-GetPropertyType-AUTH_SUB_TYPE = 1-End-->
 
@@ -34,7 +38,9 @@ REMAIN_TIMES = 2
 
 剩余次数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetPropertyType-REMAIN_TIMES = 2--><!--Device-GetPropertyType-REMAIN_TIMES = 2-End-->
 
@@ -50,7 +56,9 @@ FREEZING_TIME = 3
 
 冻结时间。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetPropertyType-FREEZING_TIME = 3--><!--Device-GetPropertyType-FREEZING_TIME = 3-End-->
 
@@ -66,7 +74,9 @@ ENROLLMENT_PROGRESS = 4
 
 指示录入进度，默认为空。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4--><!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4-End-->
 
@@ -82,7 +92,9 @@ SENSOR_INFO = 5
 
 指示传感器信息，默认为空。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetPropertyType-SENSOR_INFO = 5--><!--Device-GetPropertyType-SENSOR_INFO = 5-End-->
 
@@ -98,7 +110,9 @@ NEXT_PHASE_FREEZING_TIME = 6
 
 下次冻结时间。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6--><!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6-End-->
 
@@ -114,7 +128,9 @@ CREDENTIAL_LENGTH = 7
 
 凭据长度。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7--><!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7-End-->
 

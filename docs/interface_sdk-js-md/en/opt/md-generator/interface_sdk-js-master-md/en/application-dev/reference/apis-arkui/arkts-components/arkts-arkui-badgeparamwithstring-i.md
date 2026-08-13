@@ -6,7 +6,9 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all a
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface BadgeParamWithString extends BadgeParam--><!--Device-unnamed-declare interface BadgeParamWithString extends BadgeParam-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface BadgeParamWithString--><!--Device-unnamed-declare interface BadgeParamWithString-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,13 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all a
 value: ResourceStr
 ```
 
-Text string of the badge content.
-
-**NOTE：**
-
-The ResourceStr type is supported since API version 20.
+Text string of the badge content. **NOTE：**The ResourceStr type is supported since API version 20.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

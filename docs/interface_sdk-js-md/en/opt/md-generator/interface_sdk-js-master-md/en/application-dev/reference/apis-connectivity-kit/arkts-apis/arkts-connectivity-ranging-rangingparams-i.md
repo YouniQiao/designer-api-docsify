@@ -4,6 +4,8 @@ Parameters for ranging operation.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-ranging-interface RangingParams--><!--Device-ranging-interface RangingParams-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -26,6 +28,8 @@ Indicates the capability type for ranging.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingParams-capabilityType: RangingTypes--><!--Device-RangingParams-capabilityType: RangingTypes-End-->
@@ -43,6 +47,8 @@ Address of the ranging device.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

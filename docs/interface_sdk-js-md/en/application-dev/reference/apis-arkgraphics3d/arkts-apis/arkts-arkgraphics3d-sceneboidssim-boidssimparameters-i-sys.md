@@ -1,19 +1,12 @@
 # BoidsSimParameters (System API)
 
-Boids simulation parameters used to configure the behavioral attributes of each individual.
-
-> **NOTE：**
-> 
-> A simulation frame refers to the update cycle executed at a fixed time step in the Boids simulation, similar to FixedUpdate in Unity.
-> The default time step is 16 ms (approximately 62.5 FPS). The simulation is driven by accumulating real time and consuming it in fixed steps.
-> The default values of some parameters below are calculated based on this time step:
-> - maxVelocityMag: 0.01 / 0.016 ≈ 0.625 (m/s).
-> - maxAccelerationMag: maxVelocityMag / 0.016 ≈ 39.06 (m/s²).
-> - maxTurnRate: π × 0.75 × 0.016 ≈ 0.0377 (rad/simulation frame).
+Boids simulation parameters used to configure the behavioral attributes of each individual. > **NOTE：**> > A simulation frame refers to the update cycle executed at a fixed time step in the Boids simulation, similar to FixedUpdate in Unity. > The default time step is 16 ms (approximately 62.5 FPS). The simulation is driven by accumulating real time and consuming it in fixed steps. > The default values of some parameters below are calculated based on this time step: > - maxVelocityMag: 0.01 / 0.016 ≈ 0.625 (m/s). > - maxAccelerationMag: maxVelocityMag / 0.016 ≈ 39.06 (m/s²). > - maxTurnRate: π × 0.75 × 0.016 ≈ 0.0377 (rad/simulation frame).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BoidsSimParameters--><!--Device-unnamed-export interface BoidsSimParameters-End-->
 
@@ -27,13 +20,15 @@ Boids simulation parameters used to configure the behavioral attributes of each 
 alignmentDistance?: double
 ```
 
-Perception radius of the alignment rule. Unit is m.Neighboring individuals within this distance (inclusive) contribute to the alignment force.Value >= 0.Default value: 0.0.
+Perception radius of the alignment rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the alignment force. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,13 +44,15 @@ Perception radius of the alignment rule. Unit is m.Neighboring individuals withi
 alignmentWeight?: double
 ```
 
-Weight of the alignment rule.The intensity with which the individual steers toward the average heading of neighboring individuals within the alignmentDistance.Value >= 0.Default value: 0.0.
+Weight of the alignment rule. The intensity with which the individual steers toward the average heading of neighboring individuals within the alignmentDistance. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,13 +68,15 @@ Weight of the alignment rule.The intensity with which the individual steers towa
 boundaryDistance?: double
 ```
 
-Effective distance of the boundary constraint force. Unit is m.The individual is subject to a repulsive force when its distance to the boundary wall is within this distance.Value >= 0.Default value: 0.0.
+Effective distance of the boundary constraint force. Unit is m. The individual is subject to a repulsive force when its distance to the boundary wall is within this distance. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,13 +92,15 @@ Effective distance of the boundary constraint force. Unit is m.The individual is
 boundaryMaxPos?: Vec3
 ```
 
-Maximum corner of the axis-aligned bounding box that constrains the individual's movement range.Each component unit is m.Default value: (0, 0, 0).
+Maximum corner of the axis-aligned bounding box that constrains the individual's movement range. Each component unit is m. Default value: (0, 0, 0).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,13 +116,15 @@ Maximum corner of the axis-aligned bounding box that constrains the individual's
 boundaryMinPos?: Vec3
 ```
 
-Minimum corner of the axis-aligned bounding box that constrains the individual's movement range.Each component unit is m. When any component of boundaryMinPos is greater than or equal to the corresponding component of boundaryMaxPos,the individual is considered to have no boundary constraint.Default value: (0, 0, 0).
+Minimum corner of the axis-aligned bounding box that constrains the individual's movement range. Each component unit is m. When any component of boundaryMinPos is greater than or equal to the corresponding component of boundaryMaxPos, the individual is considered to have no boundary constraint. Default value: (0, 0, 0).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,13 +140,15 @@ Minimum corner of the axis-aligned bounding box that constrains the individual's
 boundaryWeight?: double
 ```
 
-Weight of the boundary constraint force.The intensity with which the individual is pushed back by the boundary wall within the boundaryDistance.Value >= 0.Default value: 0.0.
+Weight of the boundary constraint force. The intensity with which the individual is pushed back by the boundary wall within the boundaryDistance. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,13 +164,15 @@ Weight of the boundary constraint force.The intensity with which the individual 
 cohesionDistance?: double
 ```
 
-Perception radius of the cohesion rule. Unit is m.Neighboring individuals within this distance (inclusive) contribute to the cohesion force.Value >= 0.Default value: 0.0.
+Perception radius of the cohesion rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the cohesion force. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,13 +188,15 @@ Perception radius of the cohesion rule. Unit is m.Neighboring individuals within
 cohesionWeight?: double
 ```
 
-Weight of the cohesion rule.The intensity with which the individual is attracted toward the average position of neighboring individuals within the cohesionDistance.Value >= 0.Default value: 0.0.
+Weight of the cohesion rule. The intensity with which the individual is attracted toward the average position of neighboring individuals within the cohesionDistance. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -203,13 +212,15 @@ Weight of the cohesion rule.The intensity with which the individual is attracted
 gravityWeight?: double
 ```
 
-Attraction intensity of the attraction field on this individual.Value >= 0.Default value: 0.0.
+Attraction intensity of the attraction field on this individual. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -225,13 +236,15 @@ Attraction intensity of the attraction field on this individual.Value >= 0.Defau
 initialPosition?: Vec3
 ```
 
-Initial position of each individual. Each component unit is m.If not set, the current entity position is retained.Default value: (NaN, NaN, NaN).
+Initial position of each individual. Each component unit is m. If not set, the current entity position is retained. Default value: (NaN, NaN, NaN).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -247,13 +260,15 @@ Initial position of each individual. Each component unit is m.If not set, the cu
 initialRotation?: Quaternion
 ```
 
-Quaternion of the initial rotation direction of each individual.If not set, the quaternion of the current entity rotation direction is retained.Default value: (NaN, NaN, NaN, NaN).
+Quaternion of the initial rotation direction of each individual. If not set, the quaternion of the current entity rotation direction is retained. Default value: (NaN, NaN, NaN, NaN).
 
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -269,13 +284,15 @@ Quaternion of the initial rotation direction of each individual.If not set, the 
 initialVelocity?: Vec3
 ```
 
-Initial velocity vector of each individual. Each component unit is m/s.Default value: (0, 0, 0).
+Initial velocity vector of each individual. Each component unit is m/s. Default value: (0, 0, 0).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -291,13 +308,15 @@ Initial velocity vector of each individual. Each component unit is m/s.Default v
 maxAccelerationMag?: double
 ```
 
-Maximum acceleration that the individual can reach per simulation frame. Unit is m/s².Value >= 0.Default value is approximately 39.06.
+Maximum acceleration that the individual can reach per simulation frame. Unit is m/s². Value >= 0. Default value is approximately 39.06.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -313,13 +332,15 @@ Maximum acceleration that the individual can reach per simulation frame. Unit is
 maxTurnRate?: Vec3
 ```
 
-Maximum turn rate per axis per simulation frame. Each component unit is rad/simulation frame.Each component value >= 0.Default value for each component is approximately 0.0377.
+Maximum turn rate per axis per simulation frame. Each component unit is rad/simulation frame. Each component value >= 0. Default value for each component is approximately 0.0377.
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -335,13 +356,15 @@ Maximum turn rate per axis per simulation frame. Each component unit is rad/simu
 maxVelocityMag?: double
 ```
 
-Maximum velocity that the individual can reach per simulation frame. Unit is m/s.Value >= 0.Default value is approximately 0.625.
+Maximum velocity that the individual can reach per simulation frame. Unit is m/s. Value >= 0. Default value is approximately 0.625.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -357,13 +380,15 @@ Maximum velocity that the individual can reach per simulation frame. Unit is m/s
 repulsionWeight?: double
 ```
 
-Repulsion intensity of the repulsion field on this individual.Value >= 0.Default value: 0.0.
+Repulsion intensity of the repulsion field on this individual. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -379,13 +404,15 @@ Repulsion intensity of the repulsion field on this individual.Value >= 0.Default
 separationDistance?: double
 ```
 
-Perception radius of the separation rule. Unit is m.Only neighboring individuals strictly within this distance contribute to the separation force (boundary force is 0).Value >= 0.Default value: 0.0.
+Perception radius of the separation rule. Unit is m. Only neighboring individuals strictly within this distance contribute to the separation force (boundary force is 0). Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -401,13 +428,15 @@ Perception radius of the separation rule. Unit is m.Only neighboring individuals
 separationWeight?: double
 ```
 
-Weight of the separation rule.The intensity with which the individual is repelled by neighboring individuals within the separationDistance.Value >= 0.Default value: 0.0.
+Weight of the separation rule. The intensity with which the individual is repelled by neighboring individuals within the separationDistance. Value >= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

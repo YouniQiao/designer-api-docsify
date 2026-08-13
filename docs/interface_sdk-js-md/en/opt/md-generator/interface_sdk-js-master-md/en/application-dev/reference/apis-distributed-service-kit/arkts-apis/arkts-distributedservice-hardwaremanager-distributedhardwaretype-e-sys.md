@@ -2,7 +2,9 @@
 
 Enumerates the types of the distributed hardware.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hardwareManager-enum DistributedHardwareType--><!--Device-hardwareManager-enum DistributedHardwareType-End-->
 
@@ -18,7 +20,9 @@ ALL = 0
 
 All distributed hardware.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-ALL = 0--><!--Device-DistributedHardwareType-ALL = 0-End-->
 
@@ -34,7 +38,9 @@ CAMERA = 1
 
 Distributed camera.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-CAMERA = 1--><!--Device-DistributedHardwareType-CAMERA = 1-End-->
 
@@ -50,7 +56,9 @@ SCREEN = 8
 
 Distributed screen.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-SCREEN = 8--><!--Device-DistributedHardwareType-SCREEN = 8-End-->
 
@@ -66,7 +74,9 @@ MODEM_MIC = 256
 
 Distributed microphone for mobile calls.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-MODEM_MIC = 256--><!--Device-DistributedHardwareType-MODEM_MIC = 256-End-->
 
@@ -82,7 +92,9 @@ MODEM_SPEAKER = 512
 
 Distributed speaker for mobile calls.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-MODEM_SPEAKER = 512--><!--Device-DistributedHardwareType-MODEM_SPEAKER = 512-End-->
 
@@ -98,7 +110,9 @@ MIC = 1024
 
 Distributed microphone.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-MIC = 1024--><!--Device-DistributedHardwareType-MIC = 1024-End-->
 
@@ -114,7 +128,9 @@ SPEAKER = 2048
 
 Distributed speaker.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-SPEAKER = 2048--><!--Device-DistributedHardwareType-SPEAKER = 2048-End-->
 

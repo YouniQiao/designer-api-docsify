@@ -4,9 +4,15 @@ Represents the image data. It is a child class of [File](arkts-arkdata-unifiedda
 
 **Inheritance/Implementation:** Image extends [File](arkts-arkdata-unifieddatachannel-file-c.md#File)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-unifiedDataChannel-class Image extends File--><!--Device-unifiedDataChannel-class Image extends File-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-unifiedDataChannel-class Image--><!--Device-unifiedDataChannel-class Image-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -15,23 +21,3 @@ Represents the image data. It is a child class of [File](arkts-arkdata-unifiedda
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
-
-## imageUri
-
-```TypeScript
-set imageUri(value: string)
-```
-
-Indicates the uri of image
-
-**Type:** string
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Image-set imageUri(value: string)--><!--Device-Image-set imageUri(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core

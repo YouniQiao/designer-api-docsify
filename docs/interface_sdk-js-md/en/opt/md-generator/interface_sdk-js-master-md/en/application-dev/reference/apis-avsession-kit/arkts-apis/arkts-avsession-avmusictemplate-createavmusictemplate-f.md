@@ -16,6 +16,8 @@ Create an AVMusicTemplate instance.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate--><!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate-End-->
@@ -38,5 +40,5 @@ Create an AVMusicTemplate instance.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [35000001](../errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) |

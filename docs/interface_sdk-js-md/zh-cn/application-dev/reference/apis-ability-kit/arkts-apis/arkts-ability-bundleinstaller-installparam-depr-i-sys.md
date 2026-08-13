@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam)
+**替代接口：** [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam（系统接口）)
 
 <!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
 

@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function isOperationAllowed(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
+Checks whether a user is allowed to set wallpapers. Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ Checks whether a user is allowed to set wallpapers.Returns true if a user is all
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
 
 ## Examples
 
@@ -51,7 +51,7 @@ wallpaper.isOperationAllowed((error: BusinessError, data: Boolean) => {
 function isOperationAllowed(): Promise<boolean>
 ```
 
-Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
+Checks whether a user is allowed to set wallpapers. Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 **Since:** 7
 

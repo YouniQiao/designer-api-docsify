@@ -1,12 +1,14 @@
 # ColorReservation（系统接口）
 
-ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery)Provides API for obtaining and setting a color reservation type.
+ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery（系统接口）) Provides API for obtaining and setting a color reservation type.
 
-**继承/实现关系：** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery)
+**继承/实现关系：** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery（系统接口）)
 
-**起始版本：** 15
+**起始版本：** 23
 
-<!--Device-camera-interface ColorReservation extends ColorReservationQuery--><!--Device-camera-interface ColorReservation extends ColorReservationQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface ColorReservation--><!--Device-camera-interface ColorReservation-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -20,7 +22,9 @@ getColorReservation(): ColorReservationType
 
 Obtains the color reservation type in use.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorReservation-getColorReservation(): ColorReservationType--><!--Device-ColorReservation-getColorReservation(): ColorReservationType-End-->
 
@@ -38,8 +42,8 @@ Obtains the color reservation type in use.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -65,10 +69,11 @@ function getColorReservation(session: camera.VideoSessionForSys): camera.ColorRe
 setColorReservation(type: ColorReservationType): void
 ```
 
-Sets a color reservation type. Before the setting, call  
-[getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes) to obtain the supported color reservation types.
+Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes) to obtain the supported color reservation types.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void--><!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void-End-->
 
@@ -86,11 +91,11 @@ Sets a color reservation type. Before the setting, call
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

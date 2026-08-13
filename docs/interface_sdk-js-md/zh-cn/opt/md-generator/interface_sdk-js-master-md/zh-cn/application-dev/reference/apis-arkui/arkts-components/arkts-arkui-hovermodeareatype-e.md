@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum HoverModeAreaType--><!--Device-unnamed-declare enum HoverModeAreaType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TOP_SCREEN = 0
 上半屏。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ BOTTOM_SCREEN = 1
 下半屏。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

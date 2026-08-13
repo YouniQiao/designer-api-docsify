@@ -14,7 +14,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPreferences](ohos.preferences.preferences.getPreferences)
+**Substitutes:** getPreferences
 
 <!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void--><!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void-End-->
 
@@ -23,7 +23,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the target file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Storage&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Storage&gt; | Yes | Callback used to return the result. |
 
 
 ## getStorage
@@ -40,7 +40,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPreferences](ohos.preferences.preferences.getPreferences)
+**Substitutes:** getPreferences
 
 <!--Device-storage-function getStorage(path: string): Promise<Storage>--><!--Device-storage-function getStorage(path: string): Promise<Storage>-End-->
 

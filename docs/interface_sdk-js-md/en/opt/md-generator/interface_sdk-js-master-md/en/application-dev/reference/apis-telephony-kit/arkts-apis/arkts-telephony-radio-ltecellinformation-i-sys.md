@@ -2,7 +2,9 @@
 
 Obtains LTE cell information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface LteCellInformation--><!--Device-radio-export interface LteCellInformation-End-->
 
@@ -26,7 +28,9 @@ Indicates the bandwidth.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-bandwidth: int--><!--Device-LteCellInformation-bandwidth: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the cell global identification.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-cgi: long--><!--Device-LteCellInformation-cgi: long-End-->
 
@@ -62,7 +68,9 @@ Indicates the E-UTRA Absolute Radio Frequency Channel Number.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-earfcn: int--><!--Device-LteCellInformation-earfcn: int-End-->
 
@@ -80,7 +88,9 @@ Support for New Radio_Dual Connectivity.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-isSupportEndc: boolean--><!--Device-LteCellInformation-isSupportEndc: boolean-End-->
 
@@ -98,7 +108,9 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-mcc: string--><!--Device-LteCellInformation-mcc: string-End-->
 
@@ -116,7 +128,9 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-mnc: string--><!--Device-LteCellInformation-mnc: string-End-->
 
@@ -134,7 +148,9 @@ Indicates the physical cell identification.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-pci: int--><!--Device-LteCellInformation-pci: int-End-->
 
@@ -152,7 +168,9 @@ Indicates the tracking area code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LteCellInformation-tac: int--><!--Device-LteCellInformation-tac: int-End-->
 

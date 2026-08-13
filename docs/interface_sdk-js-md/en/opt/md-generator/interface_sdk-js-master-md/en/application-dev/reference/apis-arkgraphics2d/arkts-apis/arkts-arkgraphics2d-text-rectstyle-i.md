@@ -2,7 +2,9 @@
 
 Describes the style of a rectangle.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface RectStyle--><!--Device-text-interface RectStyle-End-->
 
@@ -24,7 +26,9 @@ Color of the rectangle.
 
 **Type:** common2D.Color
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Lower left radius of the rectangle, in physical pixels (px).
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -60,7 +66,9 @@ Upper left radius of the rectangle, in physical pixels (px).
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -78,7 +86,9 @@ Lower right radius of the rectangle, in physical pixels (px).
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -96,7 +106,9 @@ Upper right radius of the rectangle, in physical pixels (px).
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

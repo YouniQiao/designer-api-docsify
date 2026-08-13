@@ -12,19 +12,13 @@ import { restrictions } from '@kit.MDMKit';
 function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void
 ```
 
-Disallows a feature.
-
-> **NOTE：**
-> 
-> This API applies a device-level restriction policy that affects all users of the device. To set a restriction
-> policy for a specific user, use the
-> [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) API.
+Disallows a feature. > **NOTE：**> > This API applies a device-level restriction policy that affects all users of the device. To set a restriction > policy for a specific user, use the > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) API.
 
 **Since:** 12
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy](restrictions.setDisallowedPolicy(admin:)
+**Substitutes:** [setDisallowedPolicy](#setDisallowedPolicy)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **Required permissions:** 
 - API version 20+: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS or ohos.permission.ENTERPRISE_MANAGE_NETWORK
@@ -49,10 +43,10 @@ Disallows a feature.
 
 | Error Code ID |
 | --- |
-| [9200013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 
@@ -86,6 +80,8 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -106,12 +102,12 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 
 | Error Code ID |
 | --- |
-| [9200013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [9200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

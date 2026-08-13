@@ -1,19 +1,10 @@
 # ComponentSnapshot
 
-Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
-
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
-> in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
-> 
-> - Transformation properties such as scaling, translation, and rotation only apply to the child components of the
-> target component. Applying these transformation properties directly to the target component itself has no effect;
-> the snapshot will still display the component as it appears before any transformations are applied.
+Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance. > > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the > target component. Applying these transformation properties directly to the target component itself has no effect; > the snapshot will still display the component as it appears before any transformations are applied.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
 
@@ -32,19 +23,11 @@ createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap
     delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder).This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in
-> the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
-> scenarios.
-> 
-> - If a component is on a time-consuming task, for example, an [Image](image) or [Web](web) component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
-> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder). This API uses an asynchronous callback to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,11 +51,11 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
-| [160001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) |
-| [160004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) |
 
 ## createFromBuilder
 
@@ -81,19 +64,11 @@ createFromBuilder(builder: CustomBuilder, delay?: number,
     checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder).This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in
-> the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
-> scenarios.
-> 
-> - If a component is on a time-consuming task, for example, an [Image](image) or [Web](web) component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
-> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder). This API uses a promise to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,11 +97,11 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
-| [160001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) |
-| [160004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) |
 
 ## createFromComponent
 
@@ -138,6 +113,8 @@ createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: numb
 Captures a snapshot of the provided component content. This API uses a promise to return the result.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,11 +143,11 @@ Captures a snapshot of the provided component content. This API uses a promise t
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
-| [160001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) |
-| [160004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) |
 
 ## get
 
@@ -178,14 +155,11 @@ Captures a snapshot of the provided component content. This API uses a promise t
 get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,9 +181,9 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
 
 ## get
 
@@ -217,14 +191,11 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,9 +222,9 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
 
 ## getSizeLimitation
 
@@ -264,6 +235,8 @@ getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation
 Obtains the size limit of a component screenshot.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -285,14 +258,11 @@ Obtains the size limit of a component screenshot.
 getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) after completing the capture.Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios.
-
-> **NOTE：**
-> 
-> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) after completing the capture. Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -319,10 +289,10 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [160002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160002-snapshot-timeout) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
 
 ## getSyncWithUniqueId
 
@@ -330,14 +300,11 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) object.
-
-> **NOTE：**
-> 
-> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) object. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -364,10 +331,10 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [160002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160002-snapshot-timeout) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
 
 ## getWithUniqueId
 
@@ -375,14 +342,11 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API uses a promise to return the result. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -409,6 +373,6 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |

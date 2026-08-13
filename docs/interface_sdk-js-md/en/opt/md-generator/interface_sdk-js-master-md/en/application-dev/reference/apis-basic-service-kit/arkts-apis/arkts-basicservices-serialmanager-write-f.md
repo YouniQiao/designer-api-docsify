@@ -12,9 +12,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function write(portId: number, buffer: Uint8Array, timeout?: number): Promise<number>
 ```
 
-Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB;otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result.
+Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>--><!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>-End-->
 
@@ -38,12 +40,12 @@ Writes data to the serial port device asynchronously. The length of data written
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [31400007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400007-io-exception) |
-| [31400006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400006-data-transfer-timeout) |
-| [31400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [31400007](../../apis-basic-services-kit/errorcode-usb.md#31400007-io-exception) |
+| [31400006](../../apis-basic-services-kit/errorcode-usb.md#31400006-data-transfer-timeout) |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
 
 ## Examples
 

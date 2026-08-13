@@ -1,15 +1,12 @@
 # TitlePosition
 
-Defines the vertical position of the title relative to the subtitle in the dialog box. By default, the title is above the subtitle.
-
-| Name| Value| Description|  
-| - | - | - |  
-| TOP | 0 | The title is above the subtitle.Default value.|  
-| BOTTOM | 1 | The title is below the subtitle.|
+Defines the vertical position of the title relative to the subtitle in the dialog box. By default, the title is above the subtitle. | Name| Value| Description| | - | - | - | | TOP | 0 | The title is above the subtitle.Default value.| | BOTTOM | 1 | The title is below the subtitle.|
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum TitlePosition--><!--Device-unnamed-export declare enum TitlePosition-End-->
 
@@ -26,6 +23,8 @@ The main title is above the text content.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,6 +43,8 @@ The main title is below the text content.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

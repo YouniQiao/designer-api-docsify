@@ -1,16 +1,12 @@
 # ImageCreator
 
-The ImageCreator class provides APIs for applications to request an image data area and compile image data.
+The ImageCreator class provides APIs for applications to request an image data area and compile image data. Before calling any APIs in ImageCreator, you must use [image.createImageCreator](arkts-image-image-createimagecreator-f.md#createImageCreator) to create an ImageCreator instance. ImageCreator does not support multiple threads. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Before calling any APIs in ImageCreator, you must use   
-[image.createImageCreator](arkts-image-image-createimagecreator-f.md#createImageCreator-1)to create an ImageCreator instance. ImageCreator does not support multiple threads.
+**Since:** 23
 
-Images occupy a large amount of memory. When you finish using an ImageCreator instance, call   
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-interface ImageCreator--><!--Device-image-interface ImageCreator-End-->
 
@@ -30,9 +26,11 @@ dequeueImage(callback: AsyncCallback<Image>): void
 
 Obtains an image buffer from the idle queue and writes image data into it. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-dequeueImage(callback: AsyncCallback<Image>): void--><!--Device-ImageCreator-dequeueImage(callback: AsyncCallback<Image>): void-End-->
 
@@ -42,7 +40,7 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
 
 ## dequeueImage
 
@@ -52,9 +50,11 @@ dequeueImage(): Promise<Image>
 
 Obtains an image buffer from the idle queue and writes image data into it. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-dequeueImage(): Promise<Image>--><!--Device-ImageCreator-dequeueImage(): Promise<Image>-End-->
 
@@ -66,7 +66,31 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 | --- | --- |
 | Promise&lt;Image&gt; | Promise used to return the latest image. |
 
-## off('imageRelease')
+## offImageRelease
+
+```TypeScript
+offImageRelease(callback?: AsyncCallback<void>): void
+```
+
+Remove callback subscriptions when releasing buffer
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-ImageCreator-offImageRelease(callback?: AsyncCallback<void>): void--><!--Device-ImageCreator-offImageRelease(callback?: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageCreator
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to be removed. |
+
+## off_imageRelease
 
 ```TypeScript
 off(type: 'imageRelease', callback?: AsyncCallback<void>): void
@@ -78,6 +102,8 @@ Unregisters the callback function that is triggered when the buffer is released.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 <!--Device-ImageCreator-off(type: 'imageRelease', callback?: AsyncCallback<void>): void--><!--Device-ImageCreator-off(type: 'imageRelease', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
@@ -87,52 +113,7 @@ Unregisters the callback function that is triggered when the buffer is released.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imageRelease' | Yes | Type of event, which is **'imageRelease'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful, **err** is null; otherwise, **err** is an error object. |
-
-## offImageRelease
-
-```TypeScript
-offImageRelease(callback?: AsyncCallback<void>): void
-```
-
-Remove callback subscriptions when releasing buffer
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-ImageCreator-offImageRelease(callback?: AsyncCallback<void>): void--><!--Device-ImageCreator-offImageRelease(callback?: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.ImageCreator
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback to be removed. |
-
-## on('imageRelease')
-
-```TypeScript
-on(type: 'imageRelease', callback: AsyncCallback<void>): void
-```
-
-Listens for image release events. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-<!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void--><!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.ImageCreator
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'imageRelease' | Yes | Type of event, which is **'imageRelease'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful, **err** is null; otherwise, **err** is an error object. |
 
 ## onImageRelease
 
@@ -144,7 +125,9 @@ Subscribe callback when releasing buffer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-onImageRelease(callback: AsyncCallback<void>): void--><!--Device-ImageCreator-onImageRelease(callback: AsyncCallback<void>): void-End-->
 
@@ -154,7 +137,32 @@ Subscribe callback when releasing buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. |
+
+## on_imageRelease
+
+```TypeScript
+on(type: 'imageRelease', callback: AsyncCallback<void>): void
+```
+
+Listens for image release events. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+<!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void--><!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageCreator
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'imageRelease' | Yes | Type of event, which is **'imageRelease'**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## queueImage
 
@@ -164,9 +172,11 @@ queueImage(image: Image, callback: AsyncCallback<void>): void
 
 Places the drawn image in the queue. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-queueImage(image: Image, callback: AsyncCallback<void>): void--><!--Device-ImageCreator-queueImage(image: Image, callback: AsyncCallback<void>): void-End-->
 
@@ -177,7 +187,7 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | image | Image | Yes | Drawn image. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## queueImage
 
@@ -187,9 +197,11 @@ queueImage(image: Image): Promise<void>
 
 Places the drawn image in the queue. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-queueImage(image: Image): Promise<void>--><!--Device-ImageCreator-queueImage(image: Image): Promise<void>-End-->
 
@@ -213,15 +225,13 @@ Places the drawn image in the queue. This API uses a promise to return the resul
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageCreator instance. This API uses an asynchronous callback to return the result.
+Releases this ImageCreator instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-release(callback: AsyncCallback<void>): void--><!--Device-ImageCreator-release(callback: AsyncCallback<void>): void-End-->
 
@@ -231,7 +241,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -239,15 +249,13 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this ImageCreator instance. This API uses a promise to return the result.
+Releases this ImageCreator instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-release(): Promise<void>--><!--Device-ImageCreator-release(): Promise<void>-End-->
 
@@ -265,13 +273,15 @@ Before releasing the instance, ensure that all asynchronous operations associate
 readonly capacity: int
 ```
 
-Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.The actual capacity is determined by the device hardware.
+Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-readonly capacity: int--><!--Device-ImageCreator-readonly capacity: int-End-->
 
@@ -287,9 +297,11 @@ Image format.
 
 **Type:** [ImageFormat](arkts-image-image-imageformat-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImageCreator-readonly format: ImageFormat--><!--Device-ImageCreator-readonly format: ImageFormat-End-->
 

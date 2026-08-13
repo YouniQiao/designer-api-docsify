@@ -4,7 +4,9 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface RowLayoutAlgorithmOptions--><!--Device-unnamed-interface RowLayoutAlgorithmOptions-End-->
 
@@ -16,15 +18,23 @@
 alignItems?: VerticalAlign
 ```
 
-所有子组件在垂直方向上的对齐格式。非法值：按默认值处理。
+所有子组件在垂直方向上的对齐格式。 默认值：VerticalAlign.Center 非法值：按默认值处理。
 
-**类型：** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
+**类型：** [VerticalAlign](../../apis-na/arkts-apis/arkts-na-enums-verticalalign-e.md)
 
 **默认值：** VerticalAlign.Center
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign-End-->
 
@@ -36,8 +46,7 @@ alignItems?: VerticalAlign
 isReverse?: boolean
 ```
 
-子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性  
-[direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction)影响，如果[direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction)属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。非法值：按默认值处理。
+子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性direction影响，如果 direction属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。 默认值：false 非法值：按默认值处理。
 
 **类型：** boolean
 
@@ -45,7 +54,15 @@ isReverse?: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean-End-->
 
@@ -57,15 +74,23 @@ isReverse?: boolean
 justifyContent?: FlexAlign
 ```
 
-所有子组件在水平方向上的对齐格式。非法值：按默认值处理。
+所有子组件在水平方向上的对齐格式。 默认值：FlexAlign.Start 非法值：按默认值处理。
 
-**类型：** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
+**类型：** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
 
 **默认值：** FlexAlign.Start
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
 
@@ -77,15 +102,23 @@ justifyContent?: FlexAlign
 space?: LengthMetrics
 ```
 
-横向布局元素水平方向间距。非法值：按默认值处理。
+横向布局元素水平方向间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics-End-->
 

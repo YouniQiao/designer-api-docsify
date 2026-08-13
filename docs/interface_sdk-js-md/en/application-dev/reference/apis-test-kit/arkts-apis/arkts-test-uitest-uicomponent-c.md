@@ -1,6 +1,6 @@
 # UiComponent
 
-In **UiTest**, the **UiComponent** class represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
+In **UiTest**, the **UiComponent** class represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection. All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
 **Since:** 8
 
@@ -268,7 +268,7 @@ Inputs text to a component. This API takes effect only for editable text compone
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputText](Component#inputText(text:)
+**Substitutes:** [inputText](arkts-test-uitest-component-c.md#inputText)(text: string)
 
 <!--Device-UiComponent-inputText(text: string): Promise<void>--><!--Device-UiComponent-inputText(text: string): Promise<void>-End-->
 
@@ -567,7 +567,7 @@ Scrolls on this component to search for the target component (applicable to comp
 
 **Deprecated since:** 9
 
-**Substitutes:** [scrollSearch](Component#scrollSearch(on:)
+**Substitutes:** [scrollSearch](arkts-test-uitest-component-c.md#scrollSearch)(on: On)
 
 <!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>--><!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>-End-->
 

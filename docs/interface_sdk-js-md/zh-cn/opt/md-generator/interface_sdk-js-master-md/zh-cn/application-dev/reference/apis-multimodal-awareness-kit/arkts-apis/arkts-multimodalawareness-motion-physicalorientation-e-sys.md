@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-motion-export enum PhysicalOrientation--><!--Device-motion-export enum PhysicalOrientation-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
@@ -19,6 +21,8 @@ UPRIGHT = 0
 表示竖直放置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ LEFT = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PhysicalOrientation-LEFT = 1--><!--Device-PhysicalOrientation-LEFT = 1-End-->
@@ -55,6 +61,8 @@ INVERTED = 2
 表示倒置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ RIGHT = 3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PhysicalOrientation-RIGHT = 3--><!--Device-PhysicalOrientation-RIGHT = 3-End-->
@@ -92,6 +102,8 @@ FACE_UP = 4
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PhysicalOrientation-FACE_UP = 4--><!--Device-PhysicalOrientation-FACE_UP = 4-End-->
@@ -109,6 +121,8 @@ FACE_DOWN = 5
 表示屏幕朝下。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

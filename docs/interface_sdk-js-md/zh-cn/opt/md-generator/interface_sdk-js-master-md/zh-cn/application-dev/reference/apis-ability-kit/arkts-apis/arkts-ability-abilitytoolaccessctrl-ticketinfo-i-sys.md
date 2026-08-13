@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface TicketInfo--><!--Device-abilityToolAccessCtrl-interface TicketInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -21,6 +23,8 @@ challenge: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-TicketInfo-challenge: string--><!--Device-TicketInfo-challenge: string-End-->
 
@@ -40,6 +44,8 @@ message: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-TicketInfo-message: string--><!--Device-TicketInfo-message: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -57,6 +63,8 @@ ticket: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-TicketInfo-ticket: string--><!--Device-TicketInfo-ticket: string-End-->
 

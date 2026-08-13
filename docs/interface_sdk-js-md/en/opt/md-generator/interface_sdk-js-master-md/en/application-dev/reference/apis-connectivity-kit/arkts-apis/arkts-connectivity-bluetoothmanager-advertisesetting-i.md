@@ -6,7 +6,7 @@ Describes the settings for BLE advertising.
 
 **Deprecated since:** 10
 
-**Substitutes:** [AdvertiseSetting](ohos.bluetooth.ble/ble.AdvertiseSetting)
+**Substitutes:** [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md#AdvertiseSetting)
 
 <!--Device-bluetoothManager-interface AdvertiseSetting--><!--Device-bluetoothManager-interface AdvertiseSetting-End-->
 
@@ -32,7 +32,7 @@ Indicates whether the BLE is connectable, default is {@code true}
 
 **Deprecated since:** 10
 
-**Substitutes:** [connectable](ohos.bluetooth.ble/ble.AdvertiseSetting#connectable)
+**Substitutes:** [connectable](arkts-connectivity-ble-advertisesetting-i.md#connectable)
 
 <!--Device-AdvertiseSetting-connectable?: boolean--><!--Device-AdvertiseSetting-connectable?: boolean-End-->
 
@@ -44,7 +44,7 @@ Indicates whether the BLE is connectable, default is {@code true}
 interval?: number
 ```
 
-Minimum slot value for the advertising interval, which is {@code 32} (20 ms)Maximum slot value for the advertising interval, which is {@code 16777215} (10485.759375s)Default slot value for the advertising interval, which is {@code 1600} (1s)
+Minimum slot value for the advertising interval, which is {@code 32} (20 ms) Maximum slot value for the advertising interval, which is {@code 16777215} (10485.759375s) Default slot value for the advertising interval, which is {@code 1600} (1s)
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Minimum slot value for the advertising interval, which is {@code 32} (20 ms)Maxi
 
 **Deprecated since:** 10
 
-**Substitutes:** [interval](ohos.bluetooth.ble/ble.AdvertiseSetting#interval)
+**Substitutes:** [interval](arkts-connectivity-ble-advertisesetting-i.md#interval)
 
 <!--Device-AdvertiseSetting-interval?: number--><!--Device-AdvertiseSetting-interval?: number-End-->
 
@@ -64,7 +64,7 @@ Minimum slot value for the advertising interval, which is {@code 32} (20 ms)Maxi
 txPower?: number
 ```
 
-Minimum transmission power level for advertising, which is {@code -127}Maximum transmission power level for advertising, which is {@code 1}Default transmission power level for advertising, which is {@code -7}
+Minimum transmission power level for advertising, which is {@code -127} Maximum transmission power level for advertising, which is {@code 1} Default transmission power level for advertising, which is {@code -7}
 
 **Type:** number
 
@@ -72,7 +72,7 @@ Minimum transmission power level for advertising, which is {@code -127}Maximum t
 
 **Deprecated since:** 10
 
-**Substitutes:** [txPower](ohos.bluetooth.ble/ble.AdvertiseSetting#txPower)
+**Substitutes:** [txPower](arkts-connectivity-ble-advertisesetting-i.md#txPower)
 
 <!--Device-AdvertiseSetting-txPower?: number--><!--Device-AdvertiseSetting-txPower?: number-End-->
 

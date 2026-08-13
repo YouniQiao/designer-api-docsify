@@ -4,6 +4,8 @@ Rendering layer of the EffectComponent.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EffectLayer--><!--Device-unnamed-declare enum EffectLayer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ NONE = 0
 No special effect layer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Charging animation layer.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EffectLayer-CHARGE_MOTION = 1--><!--Device-EffectLayer-CHARGE_MOTION = 1-End-->
@@ -55,6 +61,8 @@ CHARGE_TEXT = 2
 Charging text layer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Represents album information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class AlbumInfo--><!--Device-unnamed-export declare class AlbumInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -26,6 +28,8 @@ Album name.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AlbumInfo-albumName?: string--><!--Device-AlbumInfo-albumName?: string-End-->
@@ -43,6 +47,8 @@ Album URI.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

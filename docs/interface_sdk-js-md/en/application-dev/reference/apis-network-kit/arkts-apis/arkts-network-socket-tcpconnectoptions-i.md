@@ -6,6 +6,8 @@ Defines TCPSocket connection parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface TCPConnectOptions--><!--Device-socket-export interface TCPConnectOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,6 +32,8 @@ Bound IP address and port number.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TCPConnectOptions-address: NetAddress--><!--Device-TCPConnectOptions-address: NetAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -48,6 +52,8 @@ Set this option for the proxy feature.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-TCPConnectOptions-proxy?: ProxyOptions--><!--Device-TCPConnectOptions-proxy?: ProxyOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -65,6 +71,8 @@ Timeout duration of the TCPSocket connection, in milliseconds.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TCPConnectOptions-timeout?: number--><!--Device-TCPConnectOptions-timeout?: number-End-->
 

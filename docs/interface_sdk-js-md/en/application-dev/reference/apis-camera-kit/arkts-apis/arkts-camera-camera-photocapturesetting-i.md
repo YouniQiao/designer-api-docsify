@@ -2,9 +2,11 @@
 
 Describes the settings for taking an image.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface PhotoCaptureSetting--><!--Device-camera-interface PhotoCaptureSetting-End-->
 
@@ -24,11 +26,13 @@ compressionQuality?: int
 
 Photo image compression quality.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,9 +52,11 @@ Geolocation information of the image (depending on the device hardware informati
 
 **Type:** Location
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -64,15 +70,15 @@ Geolocation information of the image (depending on the device hardware informati
 mirror?: boolean
 ```
 
-Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call   
-[isMirrorSupported](arkts-camera-camera-photooutput-i.md#isMirrorSupported) to check whether mirror photography is supported.  
-**true** if enabled, **false** otherwise.
+Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call [isMirrorSupported](arkts-camera-camera-photooutput-i.md#isMirrorSupported) to check whether mirror photography is supported. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -90,9 +96,11 @@ Image quality (high by default).
 
 **Type:** QualityLevel
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -110,9 +118,11 @@ Rotation angle of the image. The default value is **0**, indicating clockwise ro
 
 **Type:** [ImageRotation](arkts-camera-camera-imagerotation-e.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

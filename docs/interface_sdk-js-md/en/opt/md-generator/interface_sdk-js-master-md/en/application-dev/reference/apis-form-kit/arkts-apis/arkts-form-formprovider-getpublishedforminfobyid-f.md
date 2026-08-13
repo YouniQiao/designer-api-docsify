@@ -12,12 +12,7 @@ import { formProvider } from '@kit.FormKit';
 function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>
 ```
 
-Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise  to return the result.
-
-> **NOTE：**
-> 
-> This field is supported since API version 18 and deprecated since API version 20. You are advised to use
-> [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getPublishedRunningFormInfoById) instead.
+Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result. > **NOTE：**> > This field is supported since API version 18 and deprecated since API version 20. You are advised to use > [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getPublishedRunningFormInfoById) instead.
 
 **Since:** 18
 
@@ -47,9 +42,9 @@ Obtains the information of the widget that has been added to the home screen on 
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

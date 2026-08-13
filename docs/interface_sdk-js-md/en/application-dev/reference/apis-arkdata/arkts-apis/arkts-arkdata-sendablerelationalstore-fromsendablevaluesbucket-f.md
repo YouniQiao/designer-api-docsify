@@ -18,6 +18,8 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket--><!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -38,8 +40,8 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [14800000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
 
 ## Examples
 

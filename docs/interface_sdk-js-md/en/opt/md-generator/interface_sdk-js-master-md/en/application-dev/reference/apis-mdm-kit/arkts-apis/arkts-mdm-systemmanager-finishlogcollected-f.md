@@ -12,20 +12,11 @@ import { systemManager } from '@kit.MDMKit';
 function finishLogCollected(admin: Want): void
 ```
 
-Deletes the device logs collected by the current MDM app under the current user.
-
-> **NOTE：**
-> 
-> After the app calls [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog) to initiate log collection and
-> receives the
-> [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onLogCollected)
-> callback, you are advised to immediately copy or process the logs, and then call this API to delete the collected
-> logs.
-> 
-> If this API is not called, device logs will occupy the system storage space, which does not affect the next call
-> of [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog) to start a log collection task.
+Deletes the device logs collected by the current MDM app under the current user. > **NOTE：**> > After the app calls [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog) to initiate log collection and > receives the > [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onLogCollected) > callback, you are advised to immediately copy or process the logs, and then call this API to delete the collected > logs. > > If this API is not called, device logs will occupy the system storage space, which does not affect the next call > of [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog) to start a log collection task.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_READ_LOG
 
@@ -45,10 +36,10 @@ Deletes the device logs collected by the current MDM app under the current user.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

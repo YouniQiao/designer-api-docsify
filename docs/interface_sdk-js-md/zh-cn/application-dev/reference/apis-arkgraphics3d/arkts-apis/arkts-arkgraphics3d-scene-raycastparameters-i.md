@@ -2,9 +2,11 @@
 
 如何执行射线检测.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RaycastParameters--><!--Device-unnamed-export interface RaycastParameters-End-->
 
@@ -16,13 +18,15 @@
 rootNode?: Node
 ```
 
-如果定义，则仅搜索该节点层级下的节点如果未定义，则搜索场景中的所有节点
+如果定义，则仅搜索该节点层级下的节点 如果未定义，则搜索场景中的所有节点
 
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RaycastParameters-rootNode?: Node--><!--Device-RaycastParameters-rootNode?: Node-End-->
 

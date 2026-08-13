@@ -2,7 +2,9 @@
 
 Provides APIs for device-cloud data sharing, including sharing or unsharing data, exiting a share, changing the privilege on the shared data, querying participants, confirming an invitation, changing the invitation confirmation state, and querying the shared resource.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-export namespace sharing--><!--Device-cloudData-export namespace sharing-End-->
 
@@ -23,25 +25,25 @@ import { cloudData } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare) |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-1) |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-2) |
-| [share](arkts-arkdata-sharing-share-f-sys.md#share) |
-| [share](arkts-arkdata-sharing-share-f-sys.md#share-1) |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare) |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare-1) |
-| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit) |
-| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit-1) |
-| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege) |
-| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege-1) |
-| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants) |
-| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants-1) |
-| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation) |
-| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation-1) |
-| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation) |
-| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation-1) |
-| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation) |
-| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation-1) |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocResourceAndShare-(System-API)) |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocResourceAndShare-(System-API)) |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocResourceAndShare-(System-API)) |
+| [share](arkts-arkdata-sharing-share-f-sys.md#share-(System-API)) |
+| [share](arkts-arkdata-sharing-share-f-sys.md#share-(System-API)) |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare-(System-API)) |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare-(System-API)) |
+| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit-(System-API)) |
+| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit-(System-API)) |
+| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changePrivilege-(System-API)) |
+| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changePrivilege-(System-API)) |
+| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryParticipants-(System-API)) |
+| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryParticipants-(System-API)) |
+| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryParticipantsByInvitation-(System-API)) |
+| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryParticipantsByInvitation-(System-API)) |
+| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirmInvitation-(System-API)) |
+| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirmInvitation-(System-API)) |
+| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeConfirmation-(System-API)) |
+| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeConfirmation-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

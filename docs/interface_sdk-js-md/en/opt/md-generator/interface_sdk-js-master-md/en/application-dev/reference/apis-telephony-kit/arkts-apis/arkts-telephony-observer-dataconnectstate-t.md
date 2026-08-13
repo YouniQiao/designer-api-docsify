@@ -6,7 +6,9 @@ type DataConnectState = data.DataConnectState
 
 Describes the connection status of a cellular data link.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-type DataConnectState = data.DataConnectState--><!--Device-observer-type DataConnectState = data.DataConnectState-End-->
 

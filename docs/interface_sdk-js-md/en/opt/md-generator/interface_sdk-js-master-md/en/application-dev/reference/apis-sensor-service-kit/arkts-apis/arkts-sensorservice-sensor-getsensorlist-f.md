@@ -14,7 +14,9 @@ function getSensorList(callback: AsyncCallback<Array<Sensor>>): void
 
 Obtains information about all sensors on the device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void--><!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void-End-->
 
@@ -30,8 +32,8 @@ Obtains information about all sensors on the device. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 
@@ -65,7 +67,9 @@ function getSensorList(): Promise<Array<Sensor>>
 
 Obtains information about all sensors on the device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>--><!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>-End-->
 
@@ -81,8 +85,8 @@ Obtains information about all sensors on the device. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

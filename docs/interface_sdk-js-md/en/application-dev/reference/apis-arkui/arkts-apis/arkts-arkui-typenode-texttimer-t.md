@@ -1,20 +1,24 @@
 # TextTimer
 
 ```TypeScript
-type TextTimer = TextTimerFrameNode
+type TextTimer = TypedFrameNode<TextTimerInterface, TextTimerAttribute>
 ```
 
-Define the FrameNode type for TextTimer.
+Represents a FrameNode of the **TextTimer** type.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type TextTimer = TextTimerFrameNode--><!--Device-typeNode-type TextTimer = TextTimerFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-typeNode-type TextTimer = TypedFrameNode<TextTimerInterface, TextTimerAttribute>--><!--Device-typeNode-type TextTimer = TypedFrameNode<TextTimerInterface, TextTimerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TextTimerFrameNode
+**Property type:** TypedFrameNode<TextTimerInterface, TextTimerAttribute>
 

@@ -6,6 +6,8 @@ Defines range of text type component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface TextRange--><!--Device-unnamed-export declare interface TextRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Defines range of text type component.
 end?: int
 ```
 
-End offset.The value should be an integer.
+End offset. The value should be an integer.
 
 **Type:** int
 
@@ -25,6 +27,8 @@ End offset.The value should be an integer.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +42,7 @@ End offset.The value should be an integer.
 start?: int
 ```
 
-Start offset.The value should be an integer.
+Start offset. The value should be an integer.
 
 **Type:** int
 
@@ -47,6 +51,8 @@ Start offset.The value should be an integer.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

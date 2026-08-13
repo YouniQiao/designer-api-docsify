@@ -10,6 +10,8 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>--><!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>-End-->
@@ -71,6 +73,8 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 基于文件路径创建文件流，使用callback异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md#Stream)中的close()函数关闭文件流。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

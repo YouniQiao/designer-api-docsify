@@ -6,34 +6,11 @@
 const ODID: string
 ```
 
-Open device identifier.
-
-An ODID will be regenerated in the following scenarios:
-
-Restore a phone to its factory settings.
-
-Uninstall and reinstall all applications with the same **developerId** on one device.
-
-An ODID is generated based on the following rules:
-
-The value is generated based on the **groupId** parsed from the **developerId** in the signature information. As  
-**groupId.developerId** is the rule, if no **groupId** exists, the **developerId** is used as the **groupId**.
-
-Applications with the same **developerId** use the same ODID on one device.
-
-Applications with different **developerId**s use different ODIDs on one device.
-
-Applications with the same **developerId** use different ODIDs on different devices.
-
-Applications with different **developerId**s use different ODIDs on different devices.
-
-**NOTE：**
-
-The data length is 37 bytes.
-
-Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Open device identifier. An ODID will be regenerated in the following scenarios: Restore a phone to its factory settings. Uninstall and reinstall all applications with the same **developerId** on one device. An ODID is generated based on the following rules: The value is generated based on the **groupId** parsed from the **developerId** in the signature information. As **groupId.developerId** is the rule, if no **groupId** exists, the **developerId** is used as the **groupId**. Applications with the same **developerId** use the same ODID on one device. Applications with different **developerId**s use different ODIDs on one device. Applications with the same **developerId** use different ODIDs on different devices. Applications with different **developerId**s use different ODIDs on different devices. **NOTE：**The data length is 37 bytes (including the terminator). Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
 
@@ -45,11 +22,11 @@ Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 const abiList: string
 ```
 
-Application binary interface (Abi) list.
-
-Example: arm64-v8a
+Application binary interface (Abi) list. Example: arm64-v8a
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const abiList: string--><!--Device-deviceInfo-const abiList: string-End-->
 
@@ -61,9 +38,11 @@ Example: arm64-v8a
 const bootCount: number
 ```
 
-Obtains boot count since the device starts running
+Number of device reboots. If the number cannot be obtained, **-1** is returned. Example: 100
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const bootCount: number--><!--Device-deviceInfo-const bootCount: number-End-->
 
@@ -75,11 +54,11 @@ Obtains boot count since the device starts running
 const bootloaderVersion: string
 ```
 
-Bootloader version.
-
-Example: bootloader
+Bootloader version, which identifies the version of the device bootloader. Example: bootloader
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const bootloaderVersion: string--><!--Device-deviceInfo-const bootloaderVersion: string-End-->
 
@@ -93,9 +72,9 @@ const brand: string
 
 Device brand.
 
-Example: HUAWEI
-
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -109,11 +88,11 @@ Example: HUAWEI
 const buildHost: string
 ```
 
-Build host.
-
-Example: default
+Build host. Example: default
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildHost: string--><!--Device-deviceInfo-const buildHost: string-End-->
 
@@ -125,11 +104,11 @@ Example: default
 const buildRootHash: string
 ```
 
-Build root hash.
-
-Example: default
+Build root hash. Example: default
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildRootHash: string--><!--Device-deviceInfo-const buildRootHash: string-End-->
 
@@ -141,11 +120,11 @@ Example: default
 const buildTime: string
 ```
 
-Build time.
-
-Example: default
+Build time. Example: default
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildTime: string--><!--Device-deviceInfo-const buildTime: string-End-->
 
@@ -157,11 +136,11 @@ Example: default
 const buildType: string
 ```
 
-Build type.
-
-Example: default
+Build type. Example: default
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildType: string--><!--Device-deviceInfo-const buildType: string-End-->
 
@@ -173,11 +152,11 @@ Example: default
 const buildUser: string
 ```
 
-Build user.
-
-Example: default
+Build user. Example: default
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildUser: string--><!--Device-deviceInfo-const buildUser: string-End-->
 
@@ -189,12 +168,11 @@ Example: default
 const buildVersion: number
 ```
 
-Build version number. The value is the fourth digit in **osFullName**. You are advised to use   
-**deviceInfo.buildVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
-
-Example: 1
+Build version number. The value is the fourth digit in **osFullName**. You are advised to use **deviceInfo.buildVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement. Example: 1
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildVersion: number--><!--Device-deviceInfo-const buildVersion: number-End-->
 
@@ -206,9 +184,11 @@ Example: 1
 const chipType: string
 ```
 
-Obtains the device CPU chipType by a string.
+Obtains the device CPU chipType by a string. Example: xxxxx
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const chipType: string--><!--Device-deviceInfo-const chipType: string-End-->
 
@@ -220,9 +200,11 @@ Obtains the device CPU chipType by a string.
 const deviceColor: string
 ```
 
-Obtain the device color represented by a string. If it cannot be obtained, return an empty string
+Device color. If the value cannot be obtained, an empty string is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -236,11 +218,11 @@ Obtain the device color represented by a string. If it cannot be obtained, retur
 const deviceType: string
 ```
 
-Device type. For details, see [deviceTypes tag](../../../quick-start/module-configuration-file.md#devicetypes).
-
-Example: &lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
+Device type. For details, see [deviceTypes tag](../../../quick-start/module-configuration-file.md#devicetypes). Example: &lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -254,17 +236,11 @@ Example: &lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
 const diskSN: string
 ```
 
-Disk SN.
-
-**NOTE：**
-
-This field can be queried only on the 2-in-1 device. For other devices, the query result is empty.
-
-ohos.permission.ACCESS_DISK_PHY_INFO
-
-Example: 2502EM400567
+Serial number of the disk. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time. **NOTE：**This field can be queried only on the 2-in-1 device. For other devices, the query result is empty. ohos.permission.ACCESS_DISK_PHY_INFO Example: 2502EM400567
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DISK_PHY_INFO
 
@@ -278,11 +254,11 @@ Example: 2502EM400567
 const displayVersion: string
 ```
 
-Product version.
-
-Example: &lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
+Product version. Example: &lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const displayVersion: string--><!--Device-deviceInfo-const displayVersion: string-End-->
 
@@ -298,6 +274,8 @@ Distribution OS API name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--Del
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-deviceInfo-const distributionOSApiName: string--><!--Device-deviceInfo-const distributionOSApiName: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -308,11 +286,11 @@ Distribution OS API name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--Del
 const distributionOSApiVersion: number
 ```
 
-Distribution OS API version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
-
-Example: 50001
+Distribution OS API version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt; Example: 50001
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const distributionOSApiVersion: number--><!--Device-deviceInfo-const distributionOSApiVersion: number-End-->
 
@@ -324,11 +302,11 @@ Example: 50001
 const distributionOSName: string
 ```
 
-Distribution OS name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
-
-Example: OpenHarmony
+Distribution OS name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt; Example: OpenHarmony
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const distributionOSName: string--><!--Device-deviceInfo-const distributionOSName: string-End-->
 
@@ -340,11 +318,11 @@ Example: OpenHarmony
 const distributionOSReleaseType: string
 ```
 
-Distribution OS release type.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
-
-Example: Release
+Distribution OS release type.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt; Example: Release
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const distributionOSReleaseType: string--><!--Device-deviceInfo-const distributionOSReleaseType: string-End-->
 
@@ -356,11 +334,11 @@ Example: Release
 const distributionOSVersion: string
 ```
 
-Distribution OS version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;&lt;!--RP11--&gt;&lt;!--RP11End--&gt;
-
-Example: 5.0.0
+Distribution OS version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;&lt;!--RP11--&gt;&lt;!--RP11End--&gt; Example: 5.0.0
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const distributionOSVersion: string--><!--Device-deviceInfo-const distributionOSVersion: string-End-->
 
@@ -372,12 +350,11 @@ Example: 5.0.0
 const featureVersion: number
 ```
 
-Feature version number. The value is the third digit in **osFullName**. You are advised to use   
-**deviceInfo.featureVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
-
-Example: 0
+Feature version number. The value is the third digit in **osFullName**. You are advised to use **deviceInfo.featureVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement. Example: 0
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const featureVersion: number--><!--Device-deviceInfo-const featureVersion: number-End-->
 
@@ -389,11 +366,11 @@ Example: 0
 const firstApiVersion: number
 ```
 
-First API version.
-
-Example: 3
+First API version. Example: 3
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const firstApiVersion: number--><!--Device-deviceInfo-const firstApiVersion: number-End-->
 
@@ -405,11 +382,11 @@ Example: 3
 const hardwareModel: string
 ```
 
-Hardware model.
-
-Example: &lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
+Hardware model. Example: &lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const hardwareModel: string--><!--Device-deviceInfo-const hardwareModel: string-End-->
 
@@ -421,13 +398,7 @@ Example: &lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
 const hardwareProfile: string
 ```
 
-Hardware profile.
-
-**NOTE：**
-
-This API is supported since API version 6 and deprecated since API version 9.
-
-Example: default
+Hardware profile. **NOTE：**This API is supported since API version 6 and deprecated since API version 9. You are advised to use [SystemCapability](../../../reference/syscap.md) instead. Example: default
 
 **Since:** 6
 
@@ -443,11 +414,11 @@ Example: default
 const incrementalVersion: string
 ```
 
-Incremental version.
-
-Example: default
+Incremental version, which is the Ohos version number generated during compilation. Example: default
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const incrementalVersion: string--><!--Device-deviceInfo-const incrementalVersion: string-End-->
 
@@ -459,11 +430,11 @@ Example: default
 const majorVersion: number
 ```
 
-Major version number, which increments with the main version. The value is the first digit in **osFullName**. You are advised to use **deviceInfo.majorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
-
-Example: 5
+Major version number, which increments with the main version. The value is the first digit in **osFullName**. You are advised to use **deviceInfo.majorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement. Example: 5
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const majorVersion: number--><!--Device-deviceInfo-const majorVersion: number-End-->
 
@@ -477,9 +448,9 @@ const manufacture: string
 
 Device manufacturer.
 
-Example: HUAWEI
-
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const manufacture: string--><!--Device-deviceInfo-const manufacture: string-End-->
 
@@ -491,11 +462,11 @@ Example: HUAWEI
 const marketName: string
 ```
 
-Marketing name.
-
-Example: &lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
+Marketing name. Example: &lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const marketName: string--><!--Device-deviceInfo-const marketName: string-End-->
 
@@ -507,11 +478,11 @@ Example: &lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
 const osFullName: string
 ```
 
-System version. The version number is in the format of **OpenHarmony-x.x.x.x**, where **x** is a digit.
-
-Example: &lt;!--RP10--&gt;Openharmony-5.0.0.1&lt;!--RP10End--&gt;
+System version. The version number is in the format of **&lt;!--RP12--&gt;OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. &lt;!--RP12End--&gt;To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended. Example: &lt;!--RP10--&gt;Openharmony-5.0.0.1&lt;!--RP10End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -525,17 +496,11 @@ Example: &lt;!--RP10--&gt;Openharmony-5.0.0.1&lt;!--RP10End--&gt;
 const osReleaseType: string
 ```
 
-OS release type. The options are as follows:
-
-- **Canary**: Preliminary release open only to specific developers. This release does not promise API stability  
-and may require tolerance of instability.  
-- **Beta**: Release open to all developers. This release does not promise API stability and may require tolerance   
-of instability.  
-- **Release**: Official release open to all developers. This release promises that all APIs are stable.
-
-Example: &lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
+OS release type. The options are as follows: - **Canary**: Preliminary release open only to specific developers. This release does not promise API stability and may require tolerance of instability. - **Beta**: Release open to all developers. This release does not promise API stability and may require tolerance of instability. - **Release**: Official release open to all developers. This release promises that all APIs are stable. Example: &lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const osReleaseType: string--><!--Device-deviceInfo-const osReleaseType: string-End-->
 
@@ -547,9 +512,11 @@ Example: &lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
 const performanceClass: PerformanceClassLevel
 ```
 
-Device capability level.
+Device capability level, which is evaluated based on factors such as CPU, memory, storage read/write performance, and screen resolution. Example: 0
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const performanceClass: PerformanceClassLevel--><!--Device-deviceInfo-const performanceClass: PerformanceClassLevel-End-->
 
@@ -561,11 +528,11 @@ Device capability level.
 const productModel: string
 ```
 
-Product model.
-
-Example: &lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
+Product model. Example: &lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -579,11 +546,11 @@ Example: &lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
 const productModelAlias: string
 ```
 
-Product model alias.
-
-Example: TAS-AL00
+Product model alias. Example: TAS-AL00
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -597,11 +564,11 @@ Example: TAS-AL00
 const productSeries: string
 ```
 
-Product series.
-
-Example: &lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
+Product series. Example: &lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const productSeries: string--><!--Device-deviceInfo-const productSeries: string-End-->
 
@@ -613,11 +580,11 @@ Example: &lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
 const sdkApiVersion: number
 ```
 
-SDK API version.
-
-Example: 12
+SDK API version. Example: 12
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -631,9 +598,11 @@ Example: 12
 const sdkMinorApiVersion: number
 ```
 
-Obtains the SDK Minor API version.
+System version. The version number is in the format of **&lt;!--RP12--&gt;OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. &lt;!--RP12End--&gt;To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -649,9 +618,11 @@ Obtains the SDK Minor API version.
 const sdkPatchApiVersion: number
 ```
 
-Obtains the SDK Patch API version.
+SDK patch API version. Starting from API version 26.0.0, the system API version is in the format of **sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion**.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -667,11 +638,11 @@ Obtains the SDK Patch API version.
 const securityPatchTag: string
 ```
 
-Security patch tag.
-
-Example: &lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
+Security patch tag. Example: &lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const securityPatchTag: string--><!--Device-deviceInfo-const securityPatchTag: string-End-->
 
@@ -683,12 +654,11 @@ Example: &lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
 const seniorVersion: number
 ```
 
-Senior version number, which increments with architecture and feature updates. The value is the second digit in  
-**osFullName**. You are advised to use **deviceInfo.seniorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
-
-Example: 0
+Senior version number, which increments with architecture and feature updates. The value is the second digit in **osFullName**. You are advised to use **deviceInfo.seniorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement. Example: 0
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const seniorVersion: number--><!--Device-deviceInfo-const seniorVersion: number-End-->
 
@@ -700,17 +670,11 @@ Example: 0
 const serial: string
 ```
 
-Device serial number (SN).
-
-**NOTE：**
-
-The device SN can be used as the unique identifier of a device.
-
-**Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only)
-
-Example: The SN varies with the device.
+Serial number of the device. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time.. **NOTE：**The device SN can be used as the unique identifier of a device. **Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only) Example: The SN varies with the device.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
 
@@ -724,11 +688,11 @@ Example: The SN varies with the device.
 const softwareModel: string
 ```
 
-Software model.
-
-Example: &lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
+Software model. Example: &lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const softwareModel: string--><!--Device-deviceInfo-const softwareModel: string-End-->
 
@@ -740,17 +704,11 @@ Example: &lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
 const udid: string
 ```
 
-Device UDID.
-
-**NOTE：**
-
-The data length is 65 bytes. The UDID can be used as the unique identifier of a device.
-
-**Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only)
-
-Example: 9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
+UDID of the device. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time. **NOTE：**The data length is 65 bytes. The UDID can be used as the unique identifier of a device. **Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only) Example: 9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
 
@@ -764,12 +722,11 @@ Example: 9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
 const versionId: string
 ```
 
-Version ID. It consists of the following fields: **deviceType**, **manufacture**, **brand**, **productSeries**,   
-**osFullName**, **productModel**, **softwareModel**, **sdkApiVersion**, **incrementalVersion**, and **buildType**.
-
-Example: wearable/HUAWEI/HUAWEI/TAS/OpenHarmony-5.0.0.1/TAS-AL00/TAS-AL00/12/default/release:nolog
+Version ID, which is a concatenation of **deviceType**, **manufacture**, **brand**, **productSeries**, **osFullName**, **productModel**, **softwareModel**, **sdkApiVersion**, **incrementalVersion**, and **buildType**. To obtain a specific field value, you are advised to use the corresponding field directly (such as **deviceType** and **manufacture**) instead of parsing **versionId**, facilitating efficiency improvement.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-const versionId: string--><!--Device-deviceInfo-const versionId: string-End-->
 

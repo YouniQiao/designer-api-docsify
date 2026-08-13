@@ -4,6 +4,8 @@ Provides the prefetching capability. It works with **LazyForEach** to prefetch d
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface IPrefetcher--><!--Device-unnamed-export interface IPrefetcher-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +48,11 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 visibleAreaChanged(minVisible: number, maxVisible: number): void
 ```
 
-Called when the boundary of the visible area changes. It notifies **Prefetcher** of the current visible area range so that **Prefetcher** can determine whether to prefetch or cancel the prefetching of data items. Before calling this API, you need to set a data source using **setDataSource**. This API works with the **List**, **Grid**,  
-**WaterFlow**, and **Swiper** components.
+Called when the boundary of the visible area changes. It notifies **Prefetcher** of the current visible area range so that **Prefetcher** can determine whether to prefetch or cancel the prefetching of data items. Before calling this API, you need to set a data source using **setDataSource**. This API works with the **List**, **Grid**, **WaterFlow**, and **Swiper** components.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

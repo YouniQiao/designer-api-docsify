@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-contact-class PhoneNumber--><!--Device-contact-class PhoneNumber-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -19,6 +21,8 @@ static readonly CUSTOM_LABEL: 0
 **类型：** 0
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ static readonly INVALID_LABEL_ID: -1
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly INVALID_LABEL_ID: -1--><!--Device-PhoneNumber-static readonly INVALID_LABEL_ID: -1-End-->
@@ -55,6 +61,8 @@ static readonly NUM_ASSISTANT: 19
 **类型：** 19
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ static readonly NUM_CALLBACK: 8
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_CALLBACK: 8--><!--Device-PhoneNumber-static readonly NUM_CALLBACK: 8-End-->
@@ -91,6 +101,8 @@ static readonly NUM_CAR: 9
 **类型：** 9
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +122,8 @@ static readonly NUM_COMPANY_MAIN: 10
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_COMPANY_MAIN: 10--><!--Device-PhoneNumber-static readonly NUM_COMPANY_MAIN: 10-End-->
@@ -127,6 +141,8 @@ static readonly NUM_FAX_HOME: 5
 **类型：** 5
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -146,6 +162,8 @@ static readonly NUM_FAX_WORK: 4
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_FAX_WORK: 4--><!--Device-PhoneNumber-static readonly NUM_FAX_WORK: 4-End-->
@@ -163,6 +181,8 @@ static readonly NUM_HOME: 1
 **类型：** 1
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -182,6 +202,8 @@ static readonly NUM_ISDN: 11
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_ISDN: 11--><!--Device-PhoneNumber-static readonly NUM_ISDN: 11-End-->
@@ -199,6 +221,8 @@ static readonly NUM_MAIN: 12
 **类型：** 12
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -218,6 +242,8 @@ static readonly NUM_MMS: 20
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_MMS: 20--><!--Device-PhoneNumber-static readonly NUM_MMS: 20-End-->
@@ -235,6 +261,8 @@ static readonly NUM_MOBILE: 2
 **类型：** 2
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -254,6 +282,8 @@ static readonly NUM_OTHER: 7
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_OTHER: 7--><!--Device-PhoneNumber-static readonly NUM_OTHER: 7-End-->
@@ -271,6 +301,8 @@ static readonly NUM_OTHER_FAX: 13
 **类型：** 13
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -290,6 +322,8 @@ static readonly NUM_PAGER: 6
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_PAGER: 6--><!--Device-PhoneNumber-static readonly NUM_PAGER: 6-End-->
@@ -307,6 +341,8 @@ static readonly NUM_RADIO: 14
 **类型：** 14
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -326,6 +362,8 @@ static readonly NUM_TELEX: 15
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_TELEX: 15--><!--Device-PhoneNumber-static readonly NUM_TELEX: 15-End-->
@@ -343,6 +381,8 @@ static readonly NUM_TTY_TDD: 16
 **类型：** 16
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -362,6 +402,8 @@ static readonly NUM_WORK: 3
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_WORK: 3--><!--Device-PhoneNumber-static readonly NUM_WORK: 3-End-->
@@ -379,6 +421,8 @@ static readonly NUM_WORK_MOBILE: 17
 **类型：** 17
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -398,6 +442,8 @@ static readonly NUM_WORK_PAGER: 18
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-static readonly NUM_WORK_PAGER: 18--><!--Device-PhoneNumber-static readonly NUM_WORK_PAGER: 18-End-->
@@ -415,6 +461,8 @@ labelId?: number
 **类型：** number
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -434,6 +482,8 @@ labelName?: string
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhoneNumber-labelName?: string--><!--Device-PhoneNumber-labelName?: string-End-->
@@ -451,6 +501,8 @@ phoneNumber: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

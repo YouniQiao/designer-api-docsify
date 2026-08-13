@@ -2,9 +2,11 @@
 
 Enumerates the padding modes that can be used for signing and signature verification.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export enum CmKeyPadding--><!--Device-certificateManager-export enum CmKeyPadding-End-->
 
@@ -18,9 +20,11 @@ CM_PADDING_NONE = 0
 
 No padding.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CmKeyPadding-CM_PADDING_NONE = 0--><!--Device-CmKeyPadding-CM_PADDING_NONE = 0-End-->
 
@@ -34,9 +38,11 @@ CM_PADDING_PSS = 1
 
 PSS.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CmKeyPadding-CM_PADDING_PSS = 1--><!--Device-CmKeyPadding-CM_PADDING_PSS = 1-End-->
 
@@ -50,9 +56,11 @@ CM_PADDING_PKCS1_V1_5 = 2
 
 PKCS1-V1_5.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CmKeyPadding-CM_PADDING_PKCS1_V1_5 = 2--><!--Device-CmKeyPadding-CM_PADDING_PKCS1_V1_5 = 2-End-->
 

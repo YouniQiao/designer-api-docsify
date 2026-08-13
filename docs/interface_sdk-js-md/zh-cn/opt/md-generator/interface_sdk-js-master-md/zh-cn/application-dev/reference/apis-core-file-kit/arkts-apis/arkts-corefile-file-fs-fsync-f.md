@@ -10,6 +10,8 @@ declare function fsync(fd: number): Promise<void>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function fsync(fd: number): Promise<void>--><!--Device-unnamed-declare function fsync(fd: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -48,6 +50,8 @@ declare function fsync(fd: number, callback: AsyncCallback<void>): void
 将文件系统缓存数据写入磁盘，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function fsync(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fsync(fd: number, callback: AsyncCallback<void>): void-End-->
 

@@ -14,9 +14,11 @@ function isBeaconFenceSupported(): boolean
 
 Check whether the BeaconFence service is supported.
 
-**Since:** 20
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-geoLocationManager-function isBeaconFenceSupported(): boolean--><!--Device-geoLocationManager-function isBeaconFenceSupported(): boolean-End-->
 

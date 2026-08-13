@@ -2,9 +2,11 @@
 
 Describes the progress information about a batch download.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface CloudAssetDownloadProgressInfo--><!--Device-photoAccessHelper-interface CloudAssetDownloadProgressInfo-End-->
 
@@ -26,11 +28,13 @@ readonly autoPauseReason: int
 
 Reason for automatic pause.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudAssetDownloadProgressInfo-readonly autoPauseReason: int--><!--Device-CloudAssetDownloadProgressInfo-readonly autoPauseReason: int-End-->
 
@@ -48,9 +52,11 @@ Type of event that triggers this update.
 
 **Type:** [CloudAssetDownloadNotifyType](arkts-medialibrary-photoaccesshelper-cloudassetdownloadnotifytype-e-sys.md)
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudAssetDownloadProgressInfo-readonly downloadEventType: CloudAssetDownloadNotifyType--><!--Device-CloudAssetDownloadProgressInfo-readonly downloadEventType: CloudAssetDownloadNotifyType-End-->
 
@@ -66,11 +72,13 @@ readonly fileId: int
 
 ID of the file being downloaded.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudAssetDownloadProgressInfo-readonly fileId: int--><!--Device-CloudAssetDownloadProgressInfo-readonly fileId: int-End-->
 
@@ -86,11 +94,13 @@ readonly percent: int
 
 Download completion percentage.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudAssetDownloadProgressInfo-readonly percent: int--><!--Device-CloudAssetDownloadProgressInfo-readonly percent: int-End-->
 

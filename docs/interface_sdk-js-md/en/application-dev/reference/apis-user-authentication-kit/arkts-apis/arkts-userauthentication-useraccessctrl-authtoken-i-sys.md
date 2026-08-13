@@ -2,9 +2,11 @@
 
 Defines the authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level, authentication type, and user ID.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-userAccessCtrl-interface AuthToken--><!--Device-userAccessCtrl-interface AuthToken-End-->
 
@@ -28,9 +30,11 @@ Authentication trust level. It indicates the security strength level of the curr
 
 **Type:** userAuth.AuthTrustLevel
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel--><!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel-End-->
 
@@ -48,9 +52,11 @@ Credential type for the identity authentication. It indicates the authentication
 
 **Type:** userAuth.UserAuthType
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-authType: userAuth.UserAuthType--><!--Device-AuthToken-authType: userAuth.UserAuthType-End-->
 
@@ -68,9 +74,11 @@ Random challenge value for the authentication. It is used to prevent replay atta
 
 **Type:** Uint8Array
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-challenge: Uint8Array--><!--Device-AuthToken-challenge: Uint8Array-End-->
 
@@ -84,13 +92,15 @@ Random challenge value for the authentication. It is used to prevent replay atta
 credentialId?: bigint
 ```
 
-Credential ID. It indicates the ID of the credential that is successfully matched in the current authentication.It is used to associate with the specific authentication credential.
+Credential ID. It indicates the ID of the credential that is successfully matched in the current authentication. It is used to associate with the specific authentication credential.
 
 **Type:** bigint
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-credentialId?: bigint--><!--Device-AuthToken-credentialId?: bigint-End-->
 
@@ -108,9 +118,11 @@ Credential enrollment ID. It indicates the original value of **credentialDigest*
 
 **Type:** bigint
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-enrolledId?: bigint--><!--Device-AuthToken-enrolledId?: bigint-End-->
 
@@ -128,9 +140,11 @@ Secure user ID. It indicates the security ID of a user, which is used internally
 
 **Type:** bigint
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-secureUid?: bigint--><!--Device-AuthToken-secureUid?: bigint-End-->
 
@@ -148,9 +162,11 @@ Time elapsed since the **AuthToken** was issued, in milliseconds.
 
 **Type:** bigint
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-timeInterval: bigint--><!--Device-AuthToken-timeInterval: bigint-End-->
 
@@ -168,9 +184,11 @@ Authentication token type. It identifies the source of the token, such as local 
 
 **Type:** [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-tokenType: AuthTokenType--><!--Device-AuthToken-tokenType: AuthTokenType-End-->
 
@@ -186,11 +204,13 @@ userId: int
 
 User ID. It indicates the ID of the user who has completed authentication. The value is a non-negative integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthToken-userId: int--><!--Device-AuthToken-userId: int-End-->
 

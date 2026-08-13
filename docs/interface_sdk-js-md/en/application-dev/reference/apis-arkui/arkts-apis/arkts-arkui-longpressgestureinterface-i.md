@@ -1,40 +1,32 @@
 # LongPressGestureInterface
 
-**LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
+**LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter. > **NOTE：**> > Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing > the application's two-finger long press gesture to be ineffective.
 
-> **NOTE：**
-> 
-> Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing
-> the application's two-finger long press gesture to be ineffective.
-
-**Inheritance/Implementation:** LongPressGestureInterface extends [GestureInterface<LongPressGestureInterface>](GestureInterface<LongPressGestureInterface>)
+**Inheritance/Implementation:** LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>--><!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface LongPressGestureInterface--><!--Device-unnamed-interface LongPressGestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
-
-In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
-**Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
-
-If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
-
-If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
+Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface). In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows: If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event. If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,24 +46,19 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-Creates a long press gesture. Compared with [LongPressGesture](LongPressGestureInterface(value?: { fingers?: number; repeat?: boolean; duration?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
-
-In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
-**Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
-
-If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
-
-If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
+Creates a long press gesture. Compared with LongPressGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen. In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows: If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event. If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,6 +92,8 @@ Registers the callback for successful long press gesture recognition.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LongPressGestureInterface-onAction(event: (event: GestureEvent) => void): LongPressGestureInterface--><!--Device-LongPressGestureInterface-onAction(event: (event: GestureEvent) => void): LongPressGestureInterface-End-->
@@ -135,6 +124,8 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LongPressGestureInterface-onActionCancel(event: () => void): LongPressGestureInterface--><!--Device-LongPressGestureInterface-onActionCancel(event: () => void): LongPressGestureInterface-End-->
@@ -164,6 +155,8 @@ Registers the callback for long press gesture cancellation. This callback is tri
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,6 +189,8 @@ Registers the callback for long press gesture completion. This callback is trigg
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

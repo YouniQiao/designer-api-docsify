@@ -6,7 +6,9 @@ export type NotificationSubscriber = _NotificationSubscriber
 
 Provides callback methods for subscribers to receive and cancel notifications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationSubscribe-export type NotificationSubscriber = _NotificationSubscriber--><!--Device-notificationSubscribe-export type NotificationSubscriber = _NotificationSubscriber-End-->
 

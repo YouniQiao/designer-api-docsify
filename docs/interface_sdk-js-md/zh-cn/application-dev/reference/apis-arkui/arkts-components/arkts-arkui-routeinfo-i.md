@@ -8,7 +8,7 @@
 
 **废弃版本：** 13
 
-**替代接口：** [NavPathStack](Navigation#NavPathStack)
+**替代接口：** NavPathStack and navDestination
 
 <!--Device-unnamed-declare interface RouteInfo--><!--Device-unnamed-declare interface RouteInfo-End-->
 
@@ -30,7 +30,7 @@ name: string
 
 **废弃版本：** 13
 
-**替代接口：** [name](Navigation.NavPathInfo#name)
+**替代接口：** name
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,7 +56,7 @@ param?: unknown
 
 **废弃版本：** 13
 
-**替代接口：** [param](Navigation.NavPathInfo#param)
+**替代接口：** param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

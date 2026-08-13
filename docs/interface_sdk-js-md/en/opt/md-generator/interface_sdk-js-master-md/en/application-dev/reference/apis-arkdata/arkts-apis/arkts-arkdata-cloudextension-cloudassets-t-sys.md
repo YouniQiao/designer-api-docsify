@@ -6,7 +6,9 @@ type CloudAssets = Array<CloudAsset>
 
 Represents an array of CloudAsset.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>--><!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>-End-->
 

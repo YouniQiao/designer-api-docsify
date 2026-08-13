@@ -4,7 +4,9 @@
 type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 ```
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>--><!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>-End-->
 

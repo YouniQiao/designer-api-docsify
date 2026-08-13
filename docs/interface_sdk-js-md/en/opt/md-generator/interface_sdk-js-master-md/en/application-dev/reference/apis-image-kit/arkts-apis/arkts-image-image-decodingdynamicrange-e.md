@@ -2,7 +2,9 @@
 
 Enumerates the desired dynamic range of an image during decoding.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-enum DecodingDynamicRange--><!--Device-image-enum DecodingDynamicRange-End-->
 
@@ -14,10 +16,11 @@ Enumerates the desired dynamic range of an image during decoding.
 AUTO = 0
 ```
 
-The image is decoded based on the format. If the image is in HDR format, it is decoded based on the HDR content; otherwise, it is decoded based on the SDR content. The image source created by calling   
-[CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#CreateIncrementalSource) is decoded into SDR content.
+The image is decoded based on the format. If the image is in HDR format, it is decoded based on the HDR content; otherwise, it is decoded based on the SDR content. The image source created by calling CreateIncrementalSource is decoded into SDR content.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DecodingDynamicRange-AUTO = 0--><!--Device-DecodingDynamicRange-AUTO = 0-End-->
 
@@ -31,7 +34,9 @@ SDR = 1
 
 The image is decoded according to the standard dynamic range.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DecodingDynamicRange-SDR = 1--><!--Device-DecodingDynamicRange-SDR = 1-End-->
 
@@ -43,10 +48,11 @@ The image is decoded according to the standard dynamic range.
 HDR = 2
 ```
 
-The image is decoded according to the high dynamic range. The image source created by calling   
-[CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#CreateIncrementalSource) is decoded into SDR content.
+The image is decoded according to the high dynamic range. The image source created by calling CreateIncrementalSource is decoded into SDR content.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DecodingDynamicRange-HDR = 2--><!--Device-DecodingDynamicRange-HDR = 2-End-->
 

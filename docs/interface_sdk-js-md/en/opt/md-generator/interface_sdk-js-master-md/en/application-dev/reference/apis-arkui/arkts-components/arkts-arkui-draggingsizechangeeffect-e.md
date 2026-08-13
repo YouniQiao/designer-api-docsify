@@ -1,9 +1,10 @@
 # DraggingSizeChangeEffect
 
-Enumerates the transition effects for switching between the floating image (set through  
-[bindContextMenu](arkts-arkui-commonmethod-c.md#bindContextMenu-1)) and the drag preview when both are configured on a component.
+Enumerates the transition effects for switching between the floating image (set through [bindContextMenu](arkts-arkui-commonmethod-c.md#bindContextMenu) ) and the drag preview when both are configured on a component.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum DraggingSizeChangeEffect--><!--Device-unnamed-declare enum DraggingSizeChangeEffect-End-->
 
@@ -19,6 +20,8 @@ Direct transition from the menu preview to the final drag preview image upon dra
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -33,10 +36,11 @@ Direct transition from the menu preview to the final drag preview image upon dra
 SIZE_TRANSITION = 1
 ```
 
-Smooth size transition from the menu preview to the final drag preview. Disabled when **DISABLE_SCALE** is set in  
-[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md#DragPreviewMode). Used when the floating preview matches the drag preview.
+Smooth size transition from the menu preview to the final drag preview. Disabled when **DISABLE_SCALE** is set in [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md#DragPreviewMode). Used when the floating preview matches the drag preview.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +56,11 @@ Smooth size transition from the menu preview to the final drag preview. Disabled
 SIZE_CONTENT_TRANSITION = 2
 ```
 
-Gradual transition from the menu preview to the final drag preview with opacity and size animations. Disabled when  
-**DISABLE_SCALE** is set in [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md#DragPreviewMode). Suitable for significant visual differences between preview images.
+Gradual transition from the menu preview to the final drag preview with opacity and size animations. Disabled when **DISABLE_SCALE** is set in [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md#DragPreviewMode). Suitable for significant visual differences between preview images.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

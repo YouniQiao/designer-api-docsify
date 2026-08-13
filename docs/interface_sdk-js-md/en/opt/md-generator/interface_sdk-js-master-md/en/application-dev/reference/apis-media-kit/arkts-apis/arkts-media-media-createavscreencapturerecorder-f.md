@@ -16,6 +16,8 @@ Creates an AVScreenCaptureRecorder instance. This API uses a promise to return t
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -30,7 +32,7 @@ Creates an AVScreenCaptureRecorder instance. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 
@@ -49,3 +51,32 @@ media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptu
   console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
 });
 ```
+
+
+## createAVScreenCaptureRecorder
+
+```TypeScript
+function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>
+```
+
+Creates an **AVScreenCaptureRecorder** instance. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AVScreenCaptureRecorder](arkts-media-media-avscreencapturerecorder-i.md) \| undefined & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |

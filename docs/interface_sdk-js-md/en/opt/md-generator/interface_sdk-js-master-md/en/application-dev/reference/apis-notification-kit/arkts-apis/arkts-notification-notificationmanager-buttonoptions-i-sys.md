@@ -2,7 +2,9 @@
 
 Provides the button information of the notification.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface ButtonOptions--><!--Device-notificationManager-export interface ButtonOptions-End-->
 
@@ -26,7 +28,9 @@ Button name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 

@@ -4,6 +4,8 @@ PasswordIcon object.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface PasswordIcon--><!--Device-unnamed-interface PasswordIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ PasswordIcon object.
 offIconSrc?: string | Resource
 ```
 
-Displays the icon when the password is toggled to hidden in the password input mode.
-
-The string type can be used to load network images and local images.
+Displays the icon when the password is toggled to hidden in the password input mode. The string type can be used to load network images and local images.
 
 **Type:** string \| Resource
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ The string type can be used to load network images and local images.
 onIconSrc?: string | Resource
 ```
 
-Displays the icon when the password is toggled to visible in the password input mode.
-
-The string type can be used to load network images and local images.
+Displays the icon when the password is toggled to visible in the password input mode. The string type can be used to load network images and local images.
 
 **Type:** string \| Resource
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

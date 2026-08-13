@@ -2,7 +2,9 @@
 
 Defines event subscription parameters.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-export interface ObserverOptions--><!--Device-observer-export interface ObserverOptions-End-->
 
@@ -20,14 +22,13 @@ import { observer } from '@kit.TelephonyKit';
 slotId: number
 ```
 
-Card slot ID.
-
-- **0**: card slot 1.  
-- **1**: card slot 2.
+Card slot ID. - **0**: card slot 1. - **1**: card slot 2.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ObserverOptions-slotId: int--><!--Device-ObserverOptions-slotId: int-End-->
 

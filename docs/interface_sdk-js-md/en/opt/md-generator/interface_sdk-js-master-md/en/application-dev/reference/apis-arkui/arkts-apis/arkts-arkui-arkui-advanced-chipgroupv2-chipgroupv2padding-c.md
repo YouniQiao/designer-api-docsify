@@ -4,7 +4,7 @@ Defines chip group padding.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ChipGroupV2Padding--><!--Device-unnamed-export declare class ChipGroupV2Padding-End-->
 
@@ -26,6 +26,8 @@ The constructor of ChipGroupV2PaddingConfig
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ The constructor of ChipGroupV2PaddingConfig
 ## bottom
 
 ```TypeScript
-public bottom: Length
+@Trace
+    public bottom: Length
 ```
 
 Bottom of chip group padding.
@@ -52,18 +55,21 @@ Bottom of chip group padding.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Padding-public bottom: Length--><!--Device-ChipGroupV2Padding-public bottom: Length-End-->
+<!--Device-ChipGroupV2Padding-@Trace    public bottom: Length--><!--Device-ChipGroupV2Padding-@Trace    public bottom: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## top
 
 ```TypeScript
-public top: Length
+@Trace
+    public top: Length
 ```
 
 Top of chip group padding.
@@ -72,10 +78,12 @@ Top of chip group padding.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Padding-public top: Length--><!--Device-ChipGroupV2Padding-public top: Length-End-->
+<!--Device-ChipGroupV2Padding-@Trace    public top: Length--><!--Device-ChipGroupV2Padding-@Trace    public top: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -4,6 +4,8 @@ Defines a contact's name.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Name--><!--Device-contact-class Name-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -26,6 +28,8 @@ Family name.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Name-familyName?: string--><!--Device-Name-familyName?: string-End-->
@@ -43,6 +47,8 @@ Family name in pinyin.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,6 +68,8 @@ Full name of the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Name-fullName: string--><!--Device-Name-fullName: string-End-->
@@ -79,6 +87,8 @@ Given name of the contact.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +108,8 @@ Given name of the contact in pinyin.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Name-givenNamePhonetic?: string--><!--Device-Name-givenNamePhonetic?: string-End-->
@@ -115,6 +127,8 @@ Whether the contact information contains the name. The value **true** indicates 
 **Type:** boolean
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -134,6 +148,8 @@ Middle name of the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Name-middleName?: string--><!--Device-Name-middleName?: string-End-->
@@ -151,6 +167,8 @@ Middle name of the contact in pinyin.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -170,6 +188,8 @@ Prefix of the contact name.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Name-namePrefix?: string--><!--Device-Name-namePrefix?: string-End-->
@@ -187,6 +207,8 @@ Suffix of the contact name.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

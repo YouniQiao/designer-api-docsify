@@ -8,6 +8,8 @@ Callback to be invoked when the video playback state on a photo browser page cha
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-unnamed-export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void--><!--Device-unnamed-export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void-End-->

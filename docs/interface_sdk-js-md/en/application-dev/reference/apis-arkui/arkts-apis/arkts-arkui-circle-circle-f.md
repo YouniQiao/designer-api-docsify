@@ -3,6 +3,7 @@
 ## Circle
 
 ```TypeScript
+@ComponentBuilder
 export declare function Circle(
     options?: CircleOptions
 ): CircleAttribute
@@ -14,9 +15,11 @@ Circle is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Circle(    options?: CircleOptions): CircleAttribute--><!--Device-unnamed-export declare function Circle(    options?: CircleOptions): CircleAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Circle(    options?: CircleOptions): CircleAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Circle(    options?: CircleOptions): CircleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Circle is returned when the parameter is transferred.
 ## Circle
 
 ```TypeScript
+@Builder
 export declare function Circle(
     style: CustomBuilderT<CircleAttribute>
 ): CircleAttribute
@@ -47,11 +51,11 @@ Defines Circle Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Circle(    style: CustomBuilderT<CircleAttribute>): CircleAttribute--><!--Device-unnamed-export declare function Circle(    style: CustomBuilderT<CircleAttribute>): CircleAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Circle(    style: CustomBuilderT<CircleAttribute>): CircleAttribute--><!--Device-unnamed-@Builderexport declare function Circle(    style: CustomBuilderT<CircleAttribute>): CircleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Circle Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CircleAttribute](arkts-arkui-circle-circleattribute-i.md)&gt; | Yes | Circle options. |
+| style | CustomBuilderT&lt;[CircleAttribute](arkts-arkui-circle-circleattribute-i.md)&gt; | Yes | Circle options. |
 
 **Return value:**
 

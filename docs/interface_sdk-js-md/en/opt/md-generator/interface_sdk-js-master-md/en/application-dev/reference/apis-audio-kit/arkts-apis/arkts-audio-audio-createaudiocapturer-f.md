@@ -16,6 +16,8 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -65,12 +67,47 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 ## createAudioCapturer
 
 ```TypeScript
+function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
+```
+
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses an asynchronous callback to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null & gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
+
+
+## createAudioCapturer
+
+```TypeScript
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>
 ```
 
 Creates an AudioCapturer instance. This API uses a promise to return the result.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>-End-->
 
@@ -120,3 +157,41 @@ audio.createAudioCapturer(audioCapturerOptions).then((data) => {
   console.error(`AudioCapturer Created : ERROR : ${err}`);
 });
 ```
+
+
+## createAudioCapturer
+
+```TypeScript
+function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>
+```
+
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses a promise to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |

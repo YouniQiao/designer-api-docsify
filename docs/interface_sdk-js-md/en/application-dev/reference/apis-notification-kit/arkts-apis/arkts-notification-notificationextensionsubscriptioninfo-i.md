@@ -2,9 +2,11 @@
 
 The **NotificationExtensionSubscriptionInfo** module describes the information about notification extension subscription.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo--><!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo-End-->
 
@@ -20,9 +22,11 @@ Unique identifier of the device. When **type** is set to **SubscribeType.BLUETOO
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationExtensionSubscriptionInfo-addr: string--><!--Device-NotificationExtensionSubscriptionInfo-addr: string-End-->
 
@@ -34,14 +38,15 @@ Unique identifier of the device. When **type** is set to **SubscribeType.BLUETOO
 type: notificationExtensionSubscription.SubscribeType
 ```
 
-Subscription type, specifying the subscription method for notification extension. Currently, only  
-**SubscribeType.BLUETOOTH** is supported, indicating subscription to notifications via Bluetooth.
+Subscription type, specifying the subscription method for notification extension. Currently, only **SubscribeType.BLUETOOTH** is supported, indicating subscription to notifications via Bluetooth.
 
 **Type:** notificationExtensionSubscription.SubscribeType
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType--><!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType-End-->
 

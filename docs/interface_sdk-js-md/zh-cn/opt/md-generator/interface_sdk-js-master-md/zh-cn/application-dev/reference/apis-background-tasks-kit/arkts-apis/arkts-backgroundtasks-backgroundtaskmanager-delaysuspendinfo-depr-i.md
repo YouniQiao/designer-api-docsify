@@ -18,9 +18,7 @@
 actualDelayTime: number
 ```
 
-应用的实际挂起延迟时间，单位：ms。
-
-一般情况下默认值为180000，低电量（依据系统低电量广播）时默认值为60000。
+应用的实际挂起延迟时间，单位：ms。 一般情况下默认值为180000，低电量（依据系统低电量广播）时默认值为60000。
 
 **类型：** number
 
@@ -28,7 +26,7 @@ actualDelayTime: number
 
 **废弃版本：** 9
 
-**替代接口：** [DelaySuspendInfo](ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo)
+**替代接口：** DelaySuspendInfo
 
 <!--Device-DelaySuspendInfo-actualDelayTime: number--><!--Device-DelaySuspendInfo-actualDelayTime: number-End-->
 
@@ -48,7 +46,7 @@ requestId: number
 
 **废弃版本：** 9
 
-**替代接口：** [DelaySuspendInfo](ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo)
+**替代接口：** DelaySuspendInfo
 
 <!--Device-DelaySuspendInfo-requestId: number--><!--Device-DelaySuspendInfo-requestId: number-End-->
 

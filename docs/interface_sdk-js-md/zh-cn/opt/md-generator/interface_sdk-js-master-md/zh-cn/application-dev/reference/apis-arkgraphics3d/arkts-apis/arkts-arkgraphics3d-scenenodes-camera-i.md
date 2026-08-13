@@ -4,9 +4,11 @@
 
 **继承/实现关系：** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-unnamed-export interface Camera extends Node--><!--Device-unnamed-export interface Camera extends Node-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Camera--><!--Device-unnamed-export interface Camera-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -19,6 +21,8 @@ getProjectionMatrix(): Mat4x4
 获取相机的投影矩阵.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-getProjectionMatrix(): Mat4x4--><!--Device-Camera-getProjectionMatrix(): Mat4x4-End-->
 
@@ -63,6 +67,8 @@ getViewMatrix(): Mat4x4
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-Camera-getViewMatrix(): Mat4x4--><!--Device-Camera-getViewMatrix(): Mat4x4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -104,7 +110,9 @@ raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 
 从屏幕指定位置发射射线，检测并返回所有命中的3D物体信息。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>--><!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>-End-->
 
@@ -243,11 +251,13 @@ function lookAt(node: Node, eye: Vec3, center: Vec3, up: Vec3) {
 clearColor: Color | null
 ```
 
-背景清除颜色（环境背景会覆盖此颜色,需要BACKGROUND_NONE才能实际生效).
+背景清除颜色（环境背景会覆盖此颜色, 需要BACKGROUND_NONE才能实际生效).
 
 **类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-clearColor: Color | null--><!--Device-Camera-clearColor: Color | null-End-->
 
@@ -263,7 +273,9 @@ readonly effects: Container<Effect>
 
 **类型：** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt;
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-readonly effects: Container<Effect>--><!--Device-Camera-readonly effects: Container<Effect>-End-->
 
@@ -279,7 +291,9 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-enabled: boolean--><!--Device-Camera-enabled: boolean-End-->
 
@@ -295,7 +309,9 @@ farPlane: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-farPlane: double--><!--Device-Camera-farPlane: double-End-->
 
@@ -311,7 +327,9 @@ fov: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-fov: double--><!--Device-Camera-fov: double-End-->
 
@@ -329,7 +347,9 @@ msaa?: boolean
 
 **默认值：** false
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-msaa?: boolean--><!--Device-Camera-msaa?: boolean-End-->
 
@@ -345,7 +365,9 @@ nearPlane: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-nearPlane: double--><!--Device-Camera-nearPlane: double-End-->
 
@@ -361,7 +383,9 @@ postProcess: PostProcessSettings | null
 
 **类型：** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-postProcess: PostProcessSettings | null--><!--Device-Camera-postProcess: PostProcessSettings | null-End-->
 
@@ -379,7 +403,9 @@ renderingPipeline?: RenderingPipelineType
 
 **默认值：** RenderingPipelineType.FORWARD_LIGHTWEIGHT 前向轻量级渲染管线
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Camera-renderingPipeline?: RenderingPipelineType--><!--Device-Camera-renderingPipeline?: RenderingPipelineType-End-->
 

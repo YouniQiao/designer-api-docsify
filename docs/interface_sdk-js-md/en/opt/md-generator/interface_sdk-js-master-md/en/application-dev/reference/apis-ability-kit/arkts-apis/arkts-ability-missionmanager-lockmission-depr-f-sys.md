@@ -12,7 +12,7 @@ Locks a given mission. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [lockMission](ohos.app.ability.missionManager/missionManager#lockMission)
+**Substitutes:** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -61,7 +61,7 @@ Locks a given mission. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [lockMission](ohos.app.ability.missionManager/missionManager#lockMission)
+**Substitutes:** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

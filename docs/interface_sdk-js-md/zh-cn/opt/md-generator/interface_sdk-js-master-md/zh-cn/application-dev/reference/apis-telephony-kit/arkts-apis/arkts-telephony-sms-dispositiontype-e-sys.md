@@ -2,7 +2,9 @@
 
 处理类型。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export enum DispositionType--><!--Device-sms-export enum DispositionType-End-->
 
@@ -18,7 +20,9 @@ FROM_DATA = 0
 
 数据来源
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DispositionType-FROM_DATA = 0--><!--Device-DispositionType-FROM_DATA = 0-End-->
 
@@ -34,7 +38,9 @@ ATTACHMENT = 1
 
 附件
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DispositionType-ATTACHMENT = 1--><!--Device-DispositionType-ATTACHMENT = 1-End-->
 
@@ -50,7 +56,9 @@ INLINE = 2
 
 内联
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DispositionType-INLINE = 2--><!--Device-DispositionType-INLINE = 2-End-->
 

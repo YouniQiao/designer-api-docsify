@@ -4,6 +4,8 @@ pluginComponentManager.request方法接收到的回调结果。
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-pluginComponentManager-interface RequestCallbackParameters--><!--Device-pluginComponentManager-interface RequestCallbackParameters-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ componentTemplate: PluginComponentTemplate
 **类型：** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ data: KVObject
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RequestCallbackParameters-data: KVObject--><!--Device-RequestCallbackParameters-data: KVObject-End-->
@@ -55,6 +61,8 @@ extraData: KVObject
 **类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

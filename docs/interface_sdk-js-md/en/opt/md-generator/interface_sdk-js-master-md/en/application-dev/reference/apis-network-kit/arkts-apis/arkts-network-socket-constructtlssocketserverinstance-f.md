@@ -14,7 +14,9 @@ function constructTLSSocketServerInstance(): TLSSocketServer
 
 Creates a TLSSocketServer object.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer--><!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer-End-->
 

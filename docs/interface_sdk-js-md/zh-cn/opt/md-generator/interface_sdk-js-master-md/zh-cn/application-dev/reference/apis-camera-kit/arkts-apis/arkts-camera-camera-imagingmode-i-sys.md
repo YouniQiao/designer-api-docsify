@@ -2,11 +2,13 @@
 
 Implements imaging mode.
 
-**继承/实现关系：** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#ImagingModeQuery)
+**继承/实现关系：** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#ImagingModeQuery（系统接口）)
 
 **起始版本：** 26.0.0
 
-<!--Device-camera-interface ImagingMode extends ImagingModeQuery--><!--Device-camera-interface ImagingMode extends ImagingModeQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface ImagingMode--><!--Device-camera-interface ImagingMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -21,6 +23,8 @@ getImagingMode(): CameraImagingMode
 Gets current imaging mode.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,8 +44,8 @@ Gets current imaging mode.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setImagingMode
 
@@ -52,6 +56,8 @@ setImagingMode(mode: CameraImagingMode): void
 Sets imaging mode.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,5 +77,5 @@ Sets imaging mode.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

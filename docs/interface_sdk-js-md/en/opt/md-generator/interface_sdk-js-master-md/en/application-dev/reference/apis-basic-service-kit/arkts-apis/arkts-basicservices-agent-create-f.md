@@ -12,15 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function create(context: BaseContext, config: Config, callback: AsyncCallback<Task>): void
 ```
 
-Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported.
+Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -42,12 +38,12 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [21900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900004-application-task-queue-full) |
-| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
-| [13400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [21900004](../../apis-basic-services-kit/errorcode-request.md#21900004-application-task-queue-full) |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## create
@@ -56,15 +52,11 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 function create(context: BaseContext, config: Config): Promise<Task>
 ```
 
-Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/HTTPS is supported.
+Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/ HTTPS is supported. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
-> **NOTE：**
-> 
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
-> .
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -91,9 +83,9 @@ Creates an upload or download task and adds it to the queue. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [21900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900004-application-task-queue-full) |
-| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
-| [13400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [21900004](../../apis-basic-services-kit/errorcode-request.md#21900004-application-task-queue-full) |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

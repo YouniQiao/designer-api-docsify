@@ -14,7 +14,9 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 Creates a ColorPicker instance based on a pixel map. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,7 +42,7 @@ Creates a ColorPicker instance based on a pixel map. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -81,7 +83,9 @@ function createColorPicker(source: image.PixelMap, region: Array<number>): Promi
 
 Creates a ColorPicker instance for the selected region based on a pixel map. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,7 +112,7 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -149,7 +153,9 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 Creates a ColorPicker instance based on a pixel map. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -170,7 +176,7 @@ Creates a ColorPicker instance based on a pixel map. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -211,7 +217,9 @@ function createColorPicker(source: image.PixelMap, region: Array<number>, callba
 
 Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -233,7 +241,7 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Describes the interruption event received by the application when the audio is interrupted.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface InterruptEvent--><!--Device-audio-interface InterruptEvent-End-->
 
@@ -24,7 +26,9 @@ Whether the audio interruption has started or ended.
 
 **Type:** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Whether the audio interruption is forcibly taken by the system or taken by an ap
 
 **Type:** [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,7 +66,9 @@ Hint provided along the interruption to provide information related to the inter
 
 **Type:** [InterruptHint](arkts-audio-audio-interrupthint-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

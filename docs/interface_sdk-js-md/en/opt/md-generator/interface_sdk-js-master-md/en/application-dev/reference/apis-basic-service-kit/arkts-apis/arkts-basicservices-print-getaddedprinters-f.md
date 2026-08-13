@@ -14,7 +14,9 @@ function getAddedPrinters(): Promise<Array<string>>
 
 Obtains the list of printers added to the system. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 
@@ -32,7 +34,7 @@ Obtains the list of printers added to the system. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

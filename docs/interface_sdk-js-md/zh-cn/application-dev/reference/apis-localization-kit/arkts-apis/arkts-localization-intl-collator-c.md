@@ -2,9 +2,11 @@
 
 提供字符串排序的能力。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-intl-export class Collator--><!--Device-intl-export class Collator-End-->
 
@@ -21,6 +23,8 @@ compare(first: string, second: string): int
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -64,6 +68,8 @@ constructor()
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Collator-constructor()--><!--Device-Collator-constructor()-End-->
@@ -91,6 +97,8 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)--><!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)-End-->
@@ -102,7 +110,7 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [CollatorOptions](../../apis-default/arkts-apis/arkts-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
+| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
 ## 示例
 
@@ -125,6 +133,8 @@ resolvedOptions(): CollatorOptions
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Collator-resolvedOptions(): CollatorOptions--><!--Device-Collator-resolvedOptions(): CollatorOptions-End-->
@@ -135,7 +145,7 @@ resolvedOptions(): CollatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [CollatorOptions](../../apis-default/arkts-apis/arkts-intl-collatoroptions-i.md) | 返回排序对象的属性。 |
+| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 返回排序对象的属性。 |
 
 ## 示例
 

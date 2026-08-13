@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface StyledStringChangeValue--><!--Device-unnamed-interface StyledStringChangeValue-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 previewText?: StyledString
 ```
 
-预览内容属性字符串。
-
-该属性用于表示语音输入、拍摄输入、输入法预上屏场景下的未提交上屏的临时输入内容。
+预览内容属性字符串。 该属性用于表示语音输入、拍摄输入、输入法预上屏场景下的未提交上屏的临时输入内容。
 
 **类型：** [StyledString](arkts-arkui-styledstring-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +44,8 @@ range: TextRange
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -61,6 +65,8 @@ replacementString: StyledString
 **类型：** [StyledString](arkts-arkui-styledstring-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

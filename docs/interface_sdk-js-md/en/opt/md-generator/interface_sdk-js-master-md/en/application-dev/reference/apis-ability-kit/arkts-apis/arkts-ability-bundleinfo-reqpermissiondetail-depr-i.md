@@ -1,17 +1,12 @@
 # ReqPermissionDetail
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [ReqPermissionDetail](bundleInfo) instead.
-
-Provides the detailed information of the permissions to request from the system.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > ReqPermissionDetail instead. Provides the detailed information of the permissions to request from the system.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleInfo](bundleInfo)
+**Substitutes:** bundleInfo
 
 <!--Device-unnamed-export interface ReqPermissionDetail--><!--Device-unnamed-export interface ReqPermissionDetail-End-->
 
@@ -33,7 +28,7 @@ Name of the permission to request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#name)
+**Substitutes:** name
 
 <!--Device-ReqPermissionDetail-name: string--><!--Device-ReqPermissionDetail-name: string-End-->
 
@@ -55,7 +50,7 @@ Reason for requesting the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reason](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#reason)
+**Substitutes:** reason
 
 <!--Device-ReqPermissionDetail-reason: string--><!--Device-ReqPermissionDetail-reason: string-End-->
 
@@ -77,7 +72,7 @@ Application scenario and timing for using the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [usedScene](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#usedScene)
+**Substitutes:** usedScene
 
 <!--Device-ReqPermissionDetail-usedScene: UsedScene--><!--Device-ReqPermissionDetail-usedScene: UsedScene-End-->
 

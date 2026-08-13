@@ -14,9 +14,11 @@ function getAllValidReminders(): Promise<Array<ReminderInfo>>
 
 Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. To call this API, you need to request the ohos.permission.PUBLISH_AGENT_REMINDER permission.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function getAllValidReminders(): Promise<Array<ReminderInfo>>--><!--Device-reminderAgentManager-function getAllValidReminders(): Promise<Array<ReminderInfo>>-End-->
 
@@ -32,7 +34,7 @@ Obtains all [valid (not yet expired) reminders](../../../task-management/agent-p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

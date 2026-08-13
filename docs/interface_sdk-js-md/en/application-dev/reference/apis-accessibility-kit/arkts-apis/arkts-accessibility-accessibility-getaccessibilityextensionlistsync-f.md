@@ -17,9 +17,11 @@ function getAccessibilityExtensionListSync(
 
 Query the list of accessibility applications in the current system, which can be queried by criteria.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

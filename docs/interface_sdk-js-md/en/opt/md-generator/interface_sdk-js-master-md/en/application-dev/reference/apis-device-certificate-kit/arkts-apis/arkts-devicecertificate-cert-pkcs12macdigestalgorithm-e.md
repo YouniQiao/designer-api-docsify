@@ -2,7 +2,9 @@
 
 Enumerates the P12 MAC digest algorithms.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum Pkcs12MacDigestAlgorithm--><!--Device-cert-enum Pkcs12MacDigestAlgorithm-End-->
 
@@ -16,9 +18,11 @@ SHA256 = 0
 
 SHA-256.
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12MacDigestAlgorithm-SHA256 = 0--><!--Device-Pkcs12MacDigestAlgorithm-SHA256 = 0-End-->
 
@@ -32,9 +36,11 @@ SHA384 = 1
 
 SHA-384.
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12MacDigestAlgorithm-SHA384 = 1--><!--Device-Pkcs12MacDigestAlgorithm-SHA384 = 1-End-->
 
@@ -48,9 +54,11 @@ SHA512 = 2
 
 SHA-512.
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12MacDigestAlgorithm-SHA512 = 2--><!--Device-Pkcs12MacDigestAlgorithm-SHA512 = 2-End-->
 

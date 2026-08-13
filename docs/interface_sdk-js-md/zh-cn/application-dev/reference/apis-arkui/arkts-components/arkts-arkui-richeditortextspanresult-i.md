@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RichEditorTextSpanResult--><!--Device-unnamed-declare interface RichEditorTextSpanResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ offsetInSpan: [number, number]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -38,15 +42,15 @@ offsetInSpan: [number, number]
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-段落样式。
-
-省略时，使用系统默认段落样式。
+段落样式。 省略时，使用系统默认段落样式。
 
 **类型：** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,6 +74,8 @@ previewText?: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -91,6 +97,8 @@ Span位置。
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,6 +122,8 @@ symbolSpanStyle?: RichEditorSymbolSpanStyle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -136,6 +146,8 @@ textStyle: RichEditorTextStyleResult
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -150,17 +162,15 @@ textStyle: RichEditorTextStyleResult
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。
-
-默认值：undefined。
-
-当需要为文本设置超链接样式时传入此参数。
+url信息。 默认值：undefined。 当需要为文本设置超链接样式时传入此参数。
 
 **类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,6 +194,8 @@ value: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -198,15 +210,15 @@ value: string
 valueResource?: Resource
 ```
 
-SymbolSpan资源内容。
-
-默认值：undefined。
+SymbolSpan资源内容。 默认值：undefined。
 
 **类型：** Resource
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

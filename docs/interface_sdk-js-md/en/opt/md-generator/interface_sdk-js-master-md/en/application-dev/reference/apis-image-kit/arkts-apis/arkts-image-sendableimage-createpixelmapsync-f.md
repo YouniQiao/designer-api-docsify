@@ -16,6 +16,8 @@ Create PixelMap by data buffer.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap--><!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -37,7 +39,7 @@ Create PixelMap by data buffer.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

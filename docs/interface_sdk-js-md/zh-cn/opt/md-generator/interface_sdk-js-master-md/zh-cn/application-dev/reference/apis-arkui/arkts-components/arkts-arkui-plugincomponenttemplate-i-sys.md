@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface PluginComponentTemplate--><!--Device-unnamed-interface PluginComponentTemplate-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ bundleName: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-PluginComponentTemplate-bundleName: string--><!--Device-PluginComponentTemplate-bundleName: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -39,6 +43,8 @@ source: string
 **类型：** string
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-PluginComponentTemplate-source: string--><!--Device-PluginComponentTemplate-source: string-End-->
 

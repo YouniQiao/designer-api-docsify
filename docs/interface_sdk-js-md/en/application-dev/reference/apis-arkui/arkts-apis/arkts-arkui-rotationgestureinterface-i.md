@@ -2,17 +2,19 @@
 
 **RotationGesture** is used to trigger a rotation gesture, which recognizes rotational movements using two to five fingers, with a minimum angular change of 1 degree. This gesture cannot be triggered using a two-finger rotation operation on a trackpad.
 
-**Inheritance/Implementation:** RotationGestureInterface extends [GestureInterface<RotationGestureInterface>](GestureInterface<RotationGestureInterface>)
+**Inheritance/Implementation:** RotationGestureInterface extends GestureInterface<RotationGestureInterface>
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-interface RotationGestureInterface extends GestureInterface<RotationGestureInterface>--><!--Device-unnamed-interface RotationGestureInterface extends GestureInterface<RotationGestureInterface>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface RotationGestureInterface--><!--Device-unnamed-interface RotationGestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
@@ -23,6 +25,8 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,18 +46,19 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options?: RotationGestureHandlerOptions): RotationGestureInterface
 ```
 
-Sets the parameters for the rotation gesture. Compared with  
-[RotationGesture](RotationGestureInterface(value?: { fingers?: number; angle?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+Sets the parameters for the rotation gesture. Compared with RotationGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,6 +92,8 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RotationGestureInterface-onActionCancel(event: () => void): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionCancel(event: () => void): RotationGestureInterface-End-->
@@ -111,12 +118,13 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
-Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with   
-[onActionCancel](RotationGestureInterface.onActionCancel(event: () => void)), this callback returns gesture event information.
+Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with onActionCancel, this callback returns gesture event information.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,6 +158,8 @@ Triggered when the last finger used for the rotation gesture is lifted.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RotationGestureInterface-onActionEnd(event: (event: GestureEvent) => void): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionEnd(event: (event: GestureEvent) => void): RotationGestureInterface-End-->
@@ -180,6 +190,8 @@ Triggered when the rotation gesture is recognized successfully.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RotationGestureInterface-onActionStart(event: (event: GestureEvent) => void): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionStart(event: (event: GestureEvent) => void): RotationGestureInterface-End-->
@@ -209,6 +221,8 @@ Triggered during the movement of the rotation gesture.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

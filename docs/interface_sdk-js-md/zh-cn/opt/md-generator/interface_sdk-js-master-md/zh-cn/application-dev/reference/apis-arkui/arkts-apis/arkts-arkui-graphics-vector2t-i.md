@@ -4,7 +4,9 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-interface Vector2T<T>--><!--Device-unnamed-interface Vector2T<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-interface Vector2T--><!--Device-unnamed-interface Vector2T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ x: T
 **类型：** T
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +43,8 @@ y: T
 **类型：** T
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

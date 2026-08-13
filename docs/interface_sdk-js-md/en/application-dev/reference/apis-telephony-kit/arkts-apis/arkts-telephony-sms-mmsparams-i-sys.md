@@ -2,9 +2,11 @@
 
 Defines the parameters for sending SMS messages.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsParams--><!--Device-sms-export interface MmsParams-End-->
 
@@ -28,9 +30,11 @@ MMS PDU address.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsParams-data: string--><!--Device-MmsParams-data: string-End-->
 
@@ -44,13 +48,15 @@ MMS PDU address.
 mmsConfig?: MmsConfig
 ```
 
-MMS configuration file. For details, see [MmsParams](#MmsParams).
+MMS configuration file. For details, see [MmsParams](#MmsParams-(System-API)).
 
 **Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
 
@@ -68,9 +74,11 @@ MMSC address.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsParams-mmsc: string--><!--Device-MmsParams-mmsc: string-End-->
 
@@ -84,16 +92,15 @@ MMSC address.
 slotId: int
 ```
 
-Slot ID of the SIM card used for sending SMS messages.
+Slot ID of the SIM card used for sending SMS messages. - **0**: card slot 1 - **1**: card slot 2
 
-- **0**: card slot 1  
-- **1**: card slot 2
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-MmsParams-slotId: int--><!--Device-MmsParams-slotId: int-End-->
 

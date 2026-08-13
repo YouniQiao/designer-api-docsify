@@ -2,9 +2,11 @@
 
 Provides methods to accessing bluetooth OPP(OBEX OBJECT PUSH Profile)-related capabilities.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -25,7 +27,7 @@ import { opp } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createOppServerProfile](arkts-connectivity-opp-createoppserverprofile-f-sys.md#createoppserverprofile) | create the instance of OPP server profile. |
+| [createOppServerProfile](arkts-connectivity-opp-createoppserverprofile-f-sys.md#createOppServerProfile) | create the instance of OPP server profile. |
 <!--DelEnd-->
 
 <!--Del-->

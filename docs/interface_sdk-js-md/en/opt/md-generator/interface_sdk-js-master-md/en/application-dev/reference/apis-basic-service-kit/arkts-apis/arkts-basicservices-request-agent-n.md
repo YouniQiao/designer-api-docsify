@@ -1,8 +1,10 @@
 # agent
 
-The request agent api.Supports "background" and "frontend" tasks as while.Though "background" and "frontend" here do not the same with process's concept.All tasks will be executed at request manager service and recorded.Background tasks is for concurrent transfer, such as caching videos for a later play.Frontend tasks is for instant transfer, such as submitting forms for a consumption bill.Background tasks use notification to tell user tasks' status information.Frontend tasks use callback to tell caller tasks' status information.Background has some automatically restore mechanism.Frontend tasks controlled by caller.Uses `multipart/form-data` in client request for upload.A `Content-Disposition: attachment; filename=&lt;filename&gt;` response from server leads to download.More details, please see the architecture documents of the request subsystem.Only front-end mode is supported in cross-platform scenarios.
+The request agent api. Supports "background" and "frontend" tasks as while. Though "background" and "frontend" here do not the same with process's concept. All tasks will be executed at request manager service and recorded. Background tasks is for concurrent transfer, such as caching videos for a later play. Frontend tasks is for instant transfer, such as submitting forms for a consumption bill. Background tasks use notification to tell user tasks' status information. Frontend tasks use callback to tell caller tasks' status information. Background has some automatically restore mechanism. Frontend tasks controlled by caller. Uses `multipart/form-data` in client request for upload. A `Content-Disposition: attachment; filename=&lt;filename&gt;` response from server leads to download. More details, please see the architecture documents of the request subsystem. Only front-end mode is supported in cross-platform scenarios.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-namespace agent--><!--Device-request-namespace agent-End-->
 
@@ -21,28 +23,28 @@ import { request } from '@kit.BasicServicesKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [create](arkts-basicservices-agent-create-f.md#create) |
-| [create](arkts-basicservices-agent-create-f.md#create-1) |
-| [getTask](arkts-basicservices-agent-gettask-f.md#gettask) |
+| [create](arkts-basicservices-agent-create-f.md#create) |
+| [getTask](arkts-basicservices-agent-gettask-f.md#getTask) |
 | [remove](arkts-basicservices-agent-remove-f.md#remove) |
-| [remove](arkts-basicservices-agent-remove-f.md#remove-1) |
+| [remove](arkts-basicservices-agent-remove-f.md#remove) |
 | [show](arkts-basicservices-agent-show-f.md#show) |
-| [show](arkts-basicservices-agent-show-f.md#show-1) |
+| [show](arkts-basicservices-agent-show-f.md#show) |
 | [touch](arkts-basicservices-agent-touch-f.md#touch) |
-| [touch](arkts-basicservices-agent-touch-f.md#touch-1) |
+| [touch](arkts-basicservices-agent-touch-f.md#touch) |
 | [search](arkts-basicservices-agent-search-f.md#search) |
-| [search](arkts-basicservices-agent-search-f.md#search-1) |
-| [search](arkts-basicservices-agent-search-f.md#search-2) |
-| [createGroup](arkts-basicservices-agent-creategroup-f.md#creategroup) |
-| [attachGroup](arkts-basicservices-agent-attachgroup-f.md#attachgroup) |
-| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md#deletegroup) |
+| [search](arkts-basicservices-agent-search-f.md#search) |
+| [search](arkts-basicservices-agent-search-f.md#search) |
+| [createGroup](arkts-basicservices-agent-creategroup-f.md#createGroup) |
+| [attachGroup](arkts-basicservices-agent-attachgroup-f.md#attachGroup) |
+| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md#deleteGroup) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [query](arkts-basicservices-agent-query-f-sys.md#query) |
-| [query](arkts-basicservices-agent-query-f-sys.md#query-1) |
+| [query](arkts-basicservices-agent-query-f-sys.md#query-(System-API)) |
+| [query](arkts-basicservices-agent-query-f-sys.md#query-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -84,9 +86,15 @@ import { request } from '@kit.BasicServicesKit';
 | [Faults](arkts-basicservices-agent-faults-e.md) |
 | [WaitingReason](arkts-basicservices-agent-waitingreason-e.md) |
 
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) |
+
 ### Constants
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [VISIBILITY_COMPLETION](arkts-basicservices-agent-con.md#visibility_completion) |
-| [VISIBILITY_PROGRESS](arkts-basicservices-agent-con.md#visibility_progress) |
+| [VISIBILITY_COMPLETION](arkts-basicservices-agent-con.md#VISIBILITY_COMPLETION) |
+| [VISIBILITY_PROGRESS](arkts-basicservices-agent-con.md#VISIBILITY_PROGRESS) |

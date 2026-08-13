@@ -8,9 +8,11 @@ function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>
 
 设置扫描选项为自动模式。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PRINT
 
@@ -23,7 +25,7 @@ function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scannerId | string | 是 | 扫描仪的ID。 |
-| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要设置为自动的选项的索引。 |
+| optionIndex | int | 是 | 要设置为自动的选项的索引。 |
 
 **返回值：**
 
@@ -35,7 +37,7 @@ function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

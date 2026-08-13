@@ -6,9 +6,13 @@ type OnProxyConfigChangeCallback = () => void
 
 The callback for proxy changed.
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-webview-type OnProxyConfigChangeCallback = () => void--><!--Device-webview-type OnProxyConfigChangeCallback = () => void-End-->
 

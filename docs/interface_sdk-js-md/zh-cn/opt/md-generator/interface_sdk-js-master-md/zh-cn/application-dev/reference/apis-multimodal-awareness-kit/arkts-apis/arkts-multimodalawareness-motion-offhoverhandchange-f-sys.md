@@ -10,6 +10,8 @@ function offHoverHandChange(callback?: Callback<HoverHandAction>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-motion-function offHoverHandChange(callback?: Callback<HoverHandAction>): void--><!--Device-motion-function offHoverHandChange(callback?: Callback<HoverHandAction>): void-End-->
@@ -28,6 +30,6 @@ function offHoverHandChange(callback?: Callback<HoverHandAction>): void
 
 | 错误码ID |
 | --- |
-| [31500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
-| [31500003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500003-取消订阅失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
+| [31500003](../../apis-multimodalawareness-kit/errorcode-motion.md#31500003-取消订阅失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

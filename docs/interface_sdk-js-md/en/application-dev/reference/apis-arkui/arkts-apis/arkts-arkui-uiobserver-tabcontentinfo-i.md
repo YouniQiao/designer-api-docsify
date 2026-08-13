@@ -1,10 +1,12 @@
 # TabContentInfo
 
-TabContent info.
+Provides the **TabContent** switching information.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export interface TabContentInfo--><!--Device-uiObserver-export interface TabContentInfo-End-->
 
@@ -22,15 +24,19 @@ import { uiObserver } from '@kit.ArkUI';
 id: string
 ```
 
-Tabs id.
+ID of the **Tabs** component.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TabContentInfo-id: string--><!--Device-TabContentInfo-id: string-End-->
 
@@ -39,40 +45,48 @@ Tabs id.
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-The index of TabContent in Tabs.The value should be an integer.
+Index of the **TabContent** component. The index is zero-based.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TabContentInfo-index: int--><!--Device-TabContentInfo-index: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabContentInfo-index: number--><!--Device-TabContentInfo-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lastIndex
 
 ```TypeScript
-lastIndex?: int
+lastIndex?: number
 ```
 
-The last focus index of TabContent in Tabs.The value should be an integer.
+Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navDestinationUpdate).
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TabContentInfo-lastIndex?: int--><!--Device-TabContentInfo-lastIndex?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TabContentInfo-lastIndex?: number--><!--Device-TabContentInfo-lastIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,15 +96,19 @@ The last focus index of TabContent in Tabs.The value should be an integer.
 state: TabContentState
 ```
 
-The state of TabContent.
+Enumerates the **TabContent** component states.
 
 **Type:** [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TabContentInfo-state: TabContentState--><!--Device-TabContentInfo-state: TabContentState-End-->
 
@@ -102,15 +120,19 @@ The state of TabContent.
 tabContentId: string
 ```
 
-TabContent id.
+ID of the **TabContent** component.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TabContentInfo-tabContentId: string--><!--Device-TabContentInfo-tabContentId: string-End-->
 
@@ -119,40 +141,48 @@ TabContent id.
 ## tabContentUniqueId
 
 ```TypeScript
-tabContentUniqueId: int
+tabContentUniqueId: number
 ```
 
-TabContent uniqueId.The value should be an integer.
+Unique ID of the **TabContent** component.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TabContentInfo-tabContentUniqueId: int--><!--Device-TabContentInfo-tabContentUniqueId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabContentInfo-tabContentUniqueId: number--><!--Device-TabContentInfo-tabContentUniqueId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## uniqueId
 
 ```TypeScript
-uniqueId: int
+uniqueId: number
 ```
 
-Tabs uniqueId.The value should be an integer.
+Unique ID of the **Tabs** component.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TabContentInfo-uniqueId: int--><!--Device-TabContentInfo-uniqueId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabContentInfo-uniqueId: number--><!--Device-TabContentInfo-uniqueId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

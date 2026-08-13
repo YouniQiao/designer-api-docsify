@@ -1,8 +1,10 @@
 # DragStartRequestStatus
 
-Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when [onDragStart](CommonMethod#onDragStart) is called.
+Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when onDragStart is called.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-dragController-const enum DragStartRequestStatus--><!--Device-dragController-const enum DragStartRequestStatus-End-->
 
@@ -17,6 +19,8 @@ WAITING = 0
 The application is preparing data and cannot initiate a drag operation yet.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ READY = 1
 The application has completed data preparation and is ready to initiate a drag operation.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

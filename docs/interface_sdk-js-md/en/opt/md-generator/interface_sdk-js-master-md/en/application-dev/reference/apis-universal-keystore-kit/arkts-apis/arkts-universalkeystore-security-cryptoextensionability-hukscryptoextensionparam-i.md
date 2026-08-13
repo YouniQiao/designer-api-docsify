@@ -4,6 +4,8 @@ Defines the type of the param used for calling the API.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface HuksCryptoExtensionParam--><!--Device-unnamed-export interface HuksCryptoExtensionParam-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -26,6 +28,8 @@ Parameter tag, which is used to distinguish parameters.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HuksCryptoExtensionParam-tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number--><!--Device-HuksCryptoExtensionParam-tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number-End-->
@@ -43,6 +47,8 @@ Value of the tag.
 **Type:** boolean \| number \| bigint \| Uint8Array
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

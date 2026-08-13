@@ -2,7 +2,9 @@
 
 压缩等待返回信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-zlib-interface DeflatePendingOutputInfo--><!--Device-zlib-interface DeflatePendingOutputInfo-End-->
 
@@ -18,9 +20,11 @@ bits: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeflatePendingOutputInfo-bits: int--><!--Device-DeflatePendingOutputInfo-bits: int-End-->
 
@@ -36,9 +40,11 @@ pending: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeflatePendingOutputInfo-pending: int--><!--Device-DeflatePendingOutputInfo-pending: int-End-->
 
@@ -54,9 +60,11 @@ status: ReturnStatus
 
 **类型：** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeflatePendingOutputInfo-status: ReturnStatus--><!--Device-DeflatePendingOutputInfo-status: ReturnStatus-End-->
 

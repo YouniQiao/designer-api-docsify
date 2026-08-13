@@ -2,7 +2,9 @@
 
 Describes the illumination information.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface LuminationInfo--><!--Device-camera-interface LuminationInfo-End-->
 
@@ -20,7 +22,9 @@ Illumination. The value range is [0, 1].
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LuminationInfo-readonly lumination?: double--><!--Device-LuminationInfo-readonly lumination?: double-End-->
 

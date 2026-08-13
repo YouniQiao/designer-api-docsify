@@ -1,9 +1,10 @@
 # AbilityFirstFrameStateObserver（系统接口）
 
-定义了Ability首帧绘制完成事件监听对象，可以作为  
-[on](./../@ohos.app.ability.appManager:appManager.on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string))的入参，用于监听Ability首帧绘制完成事件。
+定义了Ability首帧绘制完成事件监听对象，可以作为 [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) 的入参，用于监听Ability首帧绘制完成事件。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AbilityFirstFrameStateObserver--><!--Device-unnamed-export interface AbilityFirstFrameStateObserver-End-->
 
@@ -19,7 +20,9 @@ onAbilityFirstFrameDrawn(data: AbilityFirstFrameStateData): void
 
 Ability首帧绘制完成时触发的回调函数。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AbilityFirstFrameStateObserver-onAbilityFirstFrameDrawn(data: AbilityFirstFrameStateData): void--><!--Device-AbilityFirstFrameStateObserver-onAbilityFirstFrameDrawn(data: AbilityFirstFrameStateData): void-End-->
 

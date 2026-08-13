@@ -3,6 +3,7 @@
 ## EffectComponent
 
 ```TypeScript
+@ComponentBuilder
 export declare function EffectComponent(
     options?: EffectComponentOptions,
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines EffectComponent Component
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-export declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,18 +31,19 @@ Defines EffectComponent Component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | No | The options to create an EffectComponent. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Subcomponents of EffectComponent |
+| content_ | CustomBuilder | No | Subcomponents of EffectComponent |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i.md) |  |
 
 
 ## EffectComponent
 
 ```TypeScript
+@Builder
 export declare function EffectComponent(
     style_: CustomBuilderT<EffectComponentAttribute>,
     content_?: CustomBuilder,
@@ -52,11 +56,11 @@ Defines EffectComponent
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-export declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-@Builderexport declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,12 +70,12 @@ Defines EffectComponent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md)&gt; | Yes | EffectComponent attribute instance |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | CustomBuilderT&lt;[EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i.md)&gt; | Yes | EffectComponent attribute instance |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i.md) |  |
 

@@ -18,7 +18,7 @@ Reads the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](ohos.connectedTag/connectedTag#read)
+**Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md#read)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -58,7 +58,7 @@ Reads the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](ohos.connectedTag/connectedTag#read)
+**Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md#read)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

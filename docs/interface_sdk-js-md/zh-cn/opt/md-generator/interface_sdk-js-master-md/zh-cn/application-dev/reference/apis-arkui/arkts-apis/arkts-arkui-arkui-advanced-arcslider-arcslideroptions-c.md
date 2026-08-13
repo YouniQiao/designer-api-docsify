@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class ArcSliderOptions--><!--Device-unnamed-declare class ArcSliderOptions-End-->
 
@@ -20,6 +20,8 @@ ArcSliderOptions的构造函数。
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)--><!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)-End-->
@@ -32,136 +34,149 @@ ArcSliderOptions的构造函数。
 | --- | --- | --- |
 | options | [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | 否 |
 
-## onChange
-
-```TypeScript
-onChange?: ArcSliderChangeHandler
-```
-
-弧形Slider的进度值发生变化时触发回调。
-
-默认值：不传入的情况，无回调。
-
-**起始版本：** 18
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptions-onChange?: ArcSliderChangeHandler-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-## onEnlarge
-
-```TypeScript
-onEnlarge?: ArcSliderEnlargeHandler
-```
-
-弧形Slider放大或缩小时触发回调。
-
-默认值：不传入的情况，无回调。
-
-**起始版本：** 18
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptions-onEnlarge?: ArcSliderEnlargeHandler-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-## onTouch
-
-```TypeScript
-onTouch?: ArcSliderTouchHandler
-```
-
-弧形Slider被触摸时触发回调。
-
-默认值：不传入的情况，无回调。
-
-**起始版本：** 18
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptions-onTouch?: ArcSliderTouchHandler-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
 ## digitalCrownSensitivity
 
 ```TypeScript
-digitalCrownSensitivity?: CrownSensitivity
+@Trace
+  digitalCrownSensitivity?: CrownSensitivity
 ```
 
-设置旋转表冠的灵敏度。
-
-默认值：CrownSensitivity.MEDIUM
+设置旋转表冠的灵敏度。 默认值：CrownSensitivity.MEDIUM
 
 **类型：** [CrownSensitivity](arkts-arkui-crownsensitivity-e.md)
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ArcSliderOptions-digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptions-digitalCrownSensitivity?: CrownSensitivity-End-->
+<!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## layoutOptions
 
 ```TypeScript
-layoutOptions?: ArcSliderLayoutOptions
+@Trace
+  layoutOptions?: ArcSliderLayoutOptions
 ```
 
-配置弧形Slider的样式信息。
-
-默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ArcSliderOptions-layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptions-layoutOptions?: ArcSliderLayoutOptions-End-->
+<!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## onChange
+
+```TypeScript
+@Trace
+  onChange?: ArcSliderChangeHandler
+```
+
+弧形Slider的进度值发生变化时触发回调。 默认值：不传入的情况，无回调。
+
+**类型：** [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md)
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## onEnlarge
+
+```TypeScript
+@Trace
+  onEnlarge?: ArcSliderEnlargeHandler
+```
+
+弧形Slider放大或缩小时触发回调。 默认值：不传入的情况，无回调。
+
+**类型：** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## onTouch
+
+```TypeScript
+@Trace
+  onTouch?: ArcSliderTouchHandler
+```
+
+弧形Slider被触摸时触发回调。 默认值：不传入的情况，无回调。
+
+**类型：** [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md)
+
+**起始版本：** 18
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## styleOptions
 
 ```TypeScript
-styleOptions?: ArcSliderStyleOptions
+@Trace
+  styleOptions?: ArcSliderStyleOptions
 ```
 
-配置弧形Slider的样式信息。
-
-默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ArcSliderOptions-styleOptions?: ArcSliderStyleOptions--><!--Device-ArcSliderOptions-styleOptions?: ArcSliderStyleOptions-End-->
+<!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions--><!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## valueOptions
 
 ```TypeScript
-valueOptions?: ArcSliderValueOptions
+@Trace
+  valueOptions?: ArcSliderValueOptions
 ```
 
-配置弧形Slider的样式信息。
-
-默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ArcSliderOptions-valueOptions?: ArcSliderValueOptions--><!--Device-ArcSliderOptions-valueOptions?: ArcSliderValueOptions-End-->
+<!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions--><!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle

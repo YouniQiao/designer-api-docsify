@@ -32,7 +32,7 @@ Name of the ability that is automatically started when the reminder arrives and 
 
 **Deprecated since:** 9
 
-**Substitutes:** [abilityName](reminderAgentManager.MaxScreenWantAgent.abilityName)
+**Substitutes:** abilityName
 
 <!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
 
@@ -52,7 +52,7 @@ Name of the HAP that is automatically started when the reminder arrives and the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [pkgName](reminderAgentManager.MaxScreenWantAgent.pkgName)
+**Substitutes:** pkgName
 
 <!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
 

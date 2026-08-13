@@ -16,7 +16,9 @@ Get all AVMusicTemplate descriptors.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -32,7 +34,7 @@ Get all AVMusicTemplate descriptors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | user id |
+| userId | int | No | user id |
 
 **Return value:**
 
@@ -44,7 +46,7 @@ Get all AVMusicTemplate descriptors.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verify failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

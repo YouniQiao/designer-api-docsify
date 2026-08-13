@@ -1,13 +1,12 @@
 # DeliveryMode
 
-Enumerates the asset delivery modes.
+Enumerates the asset delivery modes. These modes are used for segmented photo or video delivery. If the device does not support segmentation, the three delivery modes below work the same way and just return the requested image or video directly. The request result is returned through the [onDataPrepared](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md#onDataPrepared) callback.
 
-These modes are used for segmented photo or video delivery. If the device does not support segmentation, the three delivery modes below work the same way and just return the requested image or video directly. The request result is returned through the   
-[onDataPrepared](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md#onDataPrepared)callback.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum DeliveryMode--><!--Device-photoAccessHelper-enum DeliveryMode-End-->
 
@@ -19,13 +18,13 @@ These modes are used for segmented photo or video delivery. If the device does n
 FAST_MODE = 0
 ```
 
-Fast mode.
+Fast mode. For segmented photo or video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low- quality version right away.
 
-For segmented photo or video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version right away.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-DeliveryMode-FAST_MODE = 0--><!--Device-DeliveryMode-FAST_MODE = 0-End-->
 
@@ -37,13 +36,13 @@ For segmented photo or video delivery, if a high-quality version is available, i
 HIGH_QUALITY_MODE = 1
 ```
 
-High-quality mode.
+High-quality mode. For segmented photo or video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it starts a task to generate a high- quality version and returns the callback for the high-quality version once that version is ready.
 
-For segmented photo or video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it starts a task to generate a high-quality version and returns the callback for the high-quality version once that version is ready.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-DeliveryMode-HIGH_QUALITY_MODE = 1--><!--Device-DeliveryMode-HIGH_QUALITY_MODE = 1-End-->
 
@@ -55,16 +54,13 @@ For segmented photo or video delivery, if a high-quality version is available, i
 BALANCE_MODE = 2
 ```
 
-Balance mode.
+Balance mode. - For segmented photo delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version, starts a task to generate a high-quality version, and returns the callback for the high-quality version once that version is ready. - For segmented video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version right away.
 
-- For segmented photo delivery, if a high-quality version is available, it quickly returns the callback for that   
-high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version, starts a task to generate a high-quality version, and returns the callback for the high-quality version once that version is ready.  
-- For segmented video delivery, if a high-quality version is available, it quickly returns the callback for that   
-high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version right away.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-DeliveryMode-BALANCE_MODE = 2--><!--Device-DeliveryMode-BALANCE_MODE = 2-End-->
 

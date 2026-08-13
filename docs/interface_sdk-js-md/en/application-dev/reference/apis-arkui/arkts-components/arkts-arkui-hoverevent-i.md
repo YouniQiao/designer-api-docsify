@@ -8,27 +8,9 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface HoverEvent extends BaseEvent--><!--Device-unnamed-declare interface HoverEvent extends BaseEvent-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## stopPropagation
-
-```TypeScript
-stopPropagation: () => void
-```
-
-Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HoverEvent-stopPropagation: () => void--><!--Device-HoverEvent-stopPropagation: () => void-End-->
+<!--Device-unnamed-declare interface HoverEvent--><!--Device-unnamed-declare interface HoverEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,15 +20,15 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 displayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the coordinate system of the current screen window.
-
-Unit: vp.
+X coordinate of the cursor or stylus position in the coordinate system of the current screen window. Unit: vp.
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +44,15 @@ Unit: vp.
 displayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the coordinate system of the current screen window.
-
-Unit: vp.
+Y coordinate of the cursor or stylus position in the coordinate system of the current screen window. Unit: vp.
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,18 +68,15 @@ Unit: vp.
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the  
-[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
-
-Unit: vp.
-
-Value range: (-∞, +∞).
+X coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,18 +92,15 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the  
-[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
-
-Unit: vp.
-
-Value range: (-∞, +∞).
+Y coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,21 +110,45 @@ Value range: (-∞, +∞).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## stopPropagation
+
+```TypeScript
+stopPropagation: () => void
+```
+
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+
+**Type:** () =&gt; void
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HoverEvent-stopPropagation: () => void--><!--Device-HoverEvent-stopPropagation: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## windowX
 
 ```TypeScript
 windowX?: number
 ```
 
-X coordinate of the cursor or stylus position in the coordinate system of the current application window.
-
-Unit: vp.
+X coordinate of the cursor or stylus position in the coordinate system of the current application window. Unit: vp.
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,15 +164,15 @@ Unit: vp.
 windowY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the coordinate system of the current application window.
-
-Unit: vp.
+Y coordinate of the cursor or stylus position in the coordinate system of the current application window. Unit: vp.
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,16 +188,15 @@ Unit: vp.
 x?: number
 ```
 
-X coordinate of the cursor or stylus position in the  
-[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
-
-Unit: vp.
+X coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component. Unit: vp.
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -213,16 +212,15 @@ Unit: vp.
 y?: number
 ```
 
-Y coordinate of the cursor or stylus position in the  
-[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
-
-Unit: vp.
+Y coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component. Unit: vp.
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

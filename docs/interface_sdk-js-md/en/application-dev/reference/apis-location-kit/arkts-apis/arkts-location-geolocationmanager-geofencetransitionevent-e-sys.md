@@ -2,9 +2,11 @@
 
 Enum for geofence transition status.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum GeofenceTransitionEvent--><!--Device-geoLocationManager-export enum GeofenceTransitionEvent-End-->
 
@@ -18,9 +20,11 @@ GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8
 
 The device is approaching the geofence.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +42,11 @@ GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16
 
 The device is leaving the geofence.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,9 +64,11 @@ GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32
 
 The device is approaching the fence from the outside and already very near to it for long time.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface CheckboxGroupOptions--><!--Device-unnamed-declare interface CheckboxGroupOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,13 @@
 group?: string
 ```
 
-群组名称。
-
-默认值：undefined，默认状态下管理[CheckboxOptions](arkts-arkui-checkboxoptions-i.md#CheckboxOptions)属性group信息为undefined的节点。 
-
-**说明：**
-
-具有相同群组名称的多个CheckboxGroup，仅第一个CheckboxGroup生效。
+群组名称。 默认值：undefined，默认状态下管理[CheckboxOptions](arkts-arkui-checkboxoptions-i.md#CheckboxOptions)属性group信息为undefined的节点。 **说明：** 具有相同群组名称的多个CheckboxGroup，仅第一个CheckboxGroup生效。
 
 **类型：** string
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,15 +2,15 @@
 
 定义XComponent Node。
 
-**继承/实现关系：** XComponentNode extends [FrameNode](FrameNode)
+**继承/实现关系：** XComponentNode extends FrameNode
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** [XComponent](ohos.arkui.node/typeNode#XComponent)
+**替代接口：** XComponent
 
-<!--Device-unnamed-export declare class XComponentNode extends FrameNode--><!--Device-unnamed-export declare class XComponentNode extends FrameNode-End-->
+<!--Device-unnamed-export declare class XComponentNode--><!--Device-unnamed-export declare class XComponentNode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +26,7 @@ changeRenderType(type: NodeRenderType): boolean
 
 **废弃版本：** 12
 
-**替代接口：** [appendChild](ohos.arkui.node/FrameNode#appendChild)
+**替代接口：** appendChild
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,7 +59,7 @@ constructor(uiContext: UIContext, options: RenderOptions,
 
 **废弃版本：** 12
 
-**替代接口：** [createNode](ohos.arkui.node/typeNode#createNode)
+**替代接口：** createNode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,7 +89,7 @@ onCreate(event?: Object): void
 
 **废弃版本：** 12
 
-**替代接口：** [onLoad](XComponent/XComponentAttribute#onLoad)
+**替代接口：** onLoad
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,7 +115,7 @@ onDestroy(): void
 
 **废弃版本：** 12
 
-**替代接口：** [onDestroy](XComponent/XComponentAttribute#onDestroy)
+**替代接口：** onDestroy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

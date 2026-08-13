@@ -1,8 +1,10 @@
 # AVErrorCode
 
-Enumerates the types of [Media error codes](../../../reference/apis-media-kit/errorcode-media.md).
+Enumerates the types of [Media error codes](../errorcode-media.md).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-enum AVErrorCode--><!--Device-media-enum AVErrorCode-End-->
 
@@ -16,7 +18,9 @@ AVERR_SESSION_NOT_EXIST = 5400109
 
 The parameter value means session does not exist
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVErrorCode-AVERR_SESSION_NOT_EXIST = 5400109--><!--Device-AVErrorCode-AVERR_SESSION_NOT_EXIST = 5400109-End-->
 

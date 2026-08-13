@@ -6,6 +6,8 @@ Scale Result
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-export interface ScaleResult--><!--Device-componentUtils-export interface ScaleResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Transform the x-axis coordinate of the center point.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScaleResult-centerX: double--><!--Device-ScaleResult-centerX: double-End-->
@@ -49,6 +53,8 @@ Transform the y-axis coordinate of the center point.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Zoom factor of the x-axis.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScaleResult-x: double--><!--Device-ScaleResult-x: double-End-->
@@ -90,6 +98,8 @@ Zoom factor of the y-axis.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScaleResult-y: double--><!--Device-ScaleResult-y: double-End-->
@@ -109,6 +119,8 @@ Zoom factor of the z-axis.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Layout information for the expanded state.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ExpandedRegionLayoutOptions--><!--Device-unnamed-export interface ExpandedRegionLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,14 +22,13 @@ import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, Expan
 extraRegionPosition?: ExtraRegionPosition
 ```
 
-Position information of the extra region. This setting takes effect only when  
-**isExtraRegionPerpendicular** is set to **false**.
-
-Default value: **ExtraRegionPosition.top**.
+Position information of the extra region. This setting takes effect only when **isExtraRegionPerpendicular** is set to **false**. Default value: **ExtraRegionPosition.top**.
 
 **Type:** [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +44,13 @@ Default value: **ExtraRegionPosition.top**.
 horizontalSplitRatio?: number
 ```
 
-Width ratio between the primary and extra regions. This setting takes effect only when **extra**is effective.The value should be an integer. Default value: {@link.PresetSplitRatio}.LAYOUT_3V2.
+Width ratio between the primary and extra regions. This setting takes effect only when **extra** is effective. The value should be an integer. Default value: {@link.PresetSplitRatio}.LAYOUT_3V2.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,13 +66,13 @@ Width ratio between the primary and extra regions. This setting takes effect onl
 isExtraRegionPerpendicular?: boolean
 ```
 
-Whether the extra region extends perpendicularly through the entire component from top to bottom.The value **true** means that the extra region extends perpendicularly through the entire component from top to bottom, and **false** means the opposite. This setting takes effect only when **extra**is effective.
-
-Default value: **true**.
+Whether the extra region extends perpendicularly through the entire component from top to bottom. The value **true** means that the extra region extends perpendicularly through the entire component from top to bottom, and **false** means the opposite. This setting takes effect only when **extra** is effective. Default value: **true**.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,11 +88,13 @@ Default value: **true**.
 verticalSplitRatio?: number
 ```
 
-Height ratio between the primary and extra regions.The value range is all integers. Default value: {@link.PresetSplitRatio}.LAYOUT_1V1.
+Height ratio between the primary and extra regions. The value range is all integers. Default value: {@link.PresetSplitRatio}.LAYOUT_1V1.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

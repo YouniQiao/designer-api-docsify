@@ -4,6 +4,8 @@ TIFF metadata.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-class TiffMetadata--><!--Device-image-class TiffMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -26,6 +28,8 @@ Name of the image creator or artist.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly artist?: string--><!--Device-TiffMetadata-readonly artist?: string-End-->
@@ -38,11 +42,13 @@ Name of the image creator or artist.
 readonly compression?: number
 ```
 
-Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate).The value should be an integer.
+Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate). The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Copyright notice for the image.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly copyright?: string--><!--Device-TiffMetadata-readonly copyright?: string-End-->
@@ -79,6 +87,8 @@ Date and time associated with the image (typically last modification).
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ Name of the document or image.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly documentName?: string--><!--Device-TiffMetadata-readonly documentName?: string-End-->
@@ -115,6 +127,8 @@ Host computer/system used for image processing.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +148,8 @@ Description of the image content.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly imageDescription?: string--><!--Device-TiffMetadata-readonly imageDescription?: string-End-->
@@ -151,6 +167,8 @@ Manufacturer of the capture device.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,6 +188,8 @@ Model name/number of the capture device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly model?: string--><!--Device-TiffMetadata-readonly model?: string-End-->
@@ -188,6 +208,8 @@ Indicates image orientation for correct display rotation/flip.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly orientation?: Orientation--><!--Device-TiffMetadata-readonly orientation?: Orientation-End-->
@@ -200,11 +222,13 @@ Indicates image orientation for correct display rotation/flip.
 readonly photometricInterpretation?: number
 ```
 
-Defines how pixel colors are interpreted (e.g., RGB, grayscale).The value should be an integer.
+Defines how pixel colors are interpreted (e.g., RGB, grayscale). The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,6 +248,8 @@ Chromaticity coordinates of the RGB primaries.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly primaryChromaticities?: double[]--><!--Device-TiffMetadata-readonly primaryChromaticities?: double[]-End-->
@@ -236,11 +262,13 @@ Chromaticity coordinates of the RGB primaries.
 readonly resolutionUnit?: number
 ```
 
-Unit for X/Y resolution.The value should be an integer.
+Unit for X/Y resolution. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,6 +288,8 @@ Software used to create or process the image.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly software?: string--><!--Device-TiffMetadata-readonly software?: string-End-->
@@ -272,11 +302,13 @@ Software used to create or process the image.
 readonly tileLength?: number
 ```
 
-Height of each image tile in pixels.The value should be an integer.
+Height of each image tile in pixels. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,11 +322,13 @@ Height of each image tile in pixels.The value should be an integer.
 readonly tileWidth?: number
 ```
 
-Width of each image tile in pixels.The value should be an integer.
+Width of each image tile in pixels. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,6 +348,8 @@ Tone transfer curve mapping pixel values to output intensity.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly transferFunction?: string--><!--Device-TiffMetadata-readonly transferFunction?: string-End-->
@@ -331,6 +367,8 @@ Chromaticity coordinates of the reference white point.
 **Type:** number[]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -350,6 +388,8 @@ Horizontal resolution (pixels per resolution unit).
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly xResolution?: double--><!--Device-TiffMetadata-readonly xResolution?: double-End-->
@@ -367,6 +407,8 @@ Vertical resolution (pixels per resolution unit).
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

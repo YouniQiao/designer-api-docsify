@@ -18,6 +18,8 @@ Synchronizes the cached data of a file to storage. This API returns the result s
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function fsyncSync(fd: number): void--><!--Device-unnamed-declare function fsyncSync(fd: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

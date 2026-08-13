@@ -2,9 +2,11 @@
 
 Enumerates USB port roles.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBPortStatus--><!--Device-usbManager-interface USBPortStatus-End-->
 
@@ -26,11 +28,13 @@ currentDataRole: int
 
 Current data role.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBPortStatus-currentDataRole: int--><!--Device-USBPortStatus-currentDataRole: int-End-->
 
@@ -46,11 +50,13 @@ currentMode: int
 
 Current USB mode.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBPortStatus-currentMode: int--><!--Device-USBPortStatus-currentMode: int-End-->
 
@@ -66,11 +72,13 @@ currentPowerRole: int
 
 Current power role.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBPortStatus-currentPowerRole: int--><!--Device-USBPortStatus-currentPowerRole: int-End-->
 

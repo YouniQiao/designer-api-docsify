@@ -1,17 +1,12 @@
 # AudioSessionManager
 
-This interface implements audio session management.
+This interface implements audio session management. Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getSessionManager) to obtain an AudioSessionManager instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 12.
 
-Before calling any API in AudioSessionManager, you must use  
-[getSessionManager](arkts-audio-audio-audiomanager-i.md#getSessionManager) to obtain an AudioSessionManager instance.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The initial APIs of this interface are supported since API version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioSessionManager--><!--Device-audio-interface AudioSessionManager-End-->
 
@@ -31,9 +26,11 @@ activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 
 Activates an audio session. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -57,9 +54,9 @@ Activates an audio session. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
 
 ## clearSelectedMediaInputDevice
 
@@ -67,12 +64,13 @@ Activates an audio session. This API uses a promise to return the result.
 clearSelectedMediaInputDevice(): Promise<void>
 ```
 
-Clears the media input device set by calling  
-[selectMediaInputDevice](#selectMediaInputDevice). This API uses a promise to return the result.
+Clears the media input device set by calling [selectMediaInputDevice](#selectMediaInputDevice). This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>--><!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>-End-->
 
@@ -88,7 +86,7 @@ Clears the media input device set by calling
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## deactivateAudioSession
 
@@ -98,9 +96,11 @@ deactivateAudioSession(): Promise<void>
 
 Deactivates this audio session. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -118,7 +118,7 @@ Deactivates this audio session. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
 
 ## enableMuteSuggestionWhenMixWithOthers
 
@@ -126,23 +126,13 @@ Deactivates this audio session. This API uses a promise to return the result.
 enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 ```
 
-Enables mute suggestion notifications for mixed playback.
-
-Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.
-
-If this feature is enabled, mute and unmute suggestions will be sent through the  
-[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md#AudioSessionStateChangedEvent) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
-
-This feature can be used only by audio sessions for which  
-[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) has been set and the  
-**CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
-
-For details, see  
-[Enabling Mute Suggestion Notifications for Mixed Playback](../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback).
+Enables mute suggestion notifications for mixed playback. Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience. If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md#AudioSessionStateChangedEvent) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed. This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session. For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback) .
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,8 +150,8 @@ For details, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) | Function is called without setting [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) or called after audio session activation. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, system internal error. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Function is called without setting [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) or called after audio session activation. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, system internal error. |
 
 ## getAvailableDevices
 
@@ -171,9 +161,11 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 
 Obtains the available audio devices.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors-End-->
 
@@ -195,8 +187,8 @@ Obtains the available audio devices.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## getBluetoothAndNearlinkPreferredRecordCategory
 
@@ -204,12 +196,13 @@ Obtains the available audio devices.
 getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory
 ```
 
-Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling  
-[setBluetoothAndNearlinkPreferredRecordCategory](#setBluetoothAndNearlinkPreferredRecordCategory).
+Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling [setBluetoothAndNearlinkPreferredRecordCategory](#setBluetoothAndNearlinkPreferredRecordCategory) .
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory--><!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory-End-->
 
@@ -225,7 +218,7 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## getDefaultOutputDevice
 
@@ -233,12 +226,13 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 getDefaultOutputDevice(): DeviceType
 ```
 
-Obtains the default audio output device set by calling  
-[setDefaultOutputDevice](#setDefaultOutputDevice).
+Obtains the default audio output device set by calling [setDefaultOutputDevice](#setDefaultOutputDevice).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType--><!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType-End-->
 
@@ -254,8 +248,8 @@ Obtains the default audio output device set by calling
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## getSelectedMediaInputDevice
 
@@ -263,12 +257,13 @@ Obtains the default audio output device set by calling
 getSelectedMediaInputDevice(): AudioDeviceDescriptor
 ```
 
-Obtains the media input device set by calling  
-[selectMediaInputDevice](#selectMediaInputDevice). If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
+Obtains the media input device set by calling [selectMediaInputDevice](#selectMediaInputDevice). If no device has been specified , the device with **deviceType** set to **INVALID** is returned.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor--><!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor-End-->
 
@@ -284,7 +279,7 @@ Obtains the media input device set by calling
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## isAudioSessionActivated
 
@@ -294,9 +289,11 @@ isAudioSessionActivated(): boolean
 
 Checks whether this audio session is activated.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -316,12 +313,13 @@ Checks whether this audio session is activated.
 isOtherMediaPlaying(): boolean
 ```
 
-Check whether any other application is currently playing audio of the four media types: **MUSIC**, **MOVIE**,  
-**AUDIOBOOK**, and **GAME**. Audio sessions that have activated these media types will also be checked.
+Check whether any other application is currently playing audio of the four media types: **MUSIC**, **MOVIE**, **AUDIOBOOK**, and **GAME**. Audio sessions that have activated these media types will also be checked.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -335,156 +333,6 @@ Check whether any other application is currently playing audio of the four media
 | --- | --- |
 | boolean | Whether another application is playing audio of certain media types. **true** means yes; **false** otherwise. |
 
-## off('audioSessionDeactivated')
-
-```TypeScript
-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void
-```
-
-Unsubscribes from the audio session deactivation event. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback used to return the reason why the audio session is deactivated. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## off('audioSessionStateChanged')
-
-```TypeScript
-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void
-```
-
-Unsubscribes from the audio session state change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-<!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback used to return the audio session change information. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## off('currentOutputDeviceChanged')
-
-```TypeScript
-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void
-```
-
-Unsubscribes from the current output device change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-<!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current output device. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## off('availableDeviceChange')
-
-```TypeScript
-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void
-```
-
-Unsubscribes from the event indicating that the connection status of an available audio device is changed.
-
-**Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-<!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the available device change details. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## off('currentInputDeviceChanged')
-
-```TypeScript
-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void
-```
-
-Unsubscribes from the current input device change event.
-
-**Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-<!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current input device. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
 ## offAudioSessionDeactivated
 
 ```TypeScript
@@ -495,7 +343,9 @@ Unsubscribes to audio session deactivated event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -508,13 +358,13 @@ Unsubscribes to audio session deactivated event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.<br>**Applicable version:** 23 and later |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.<br>**Applicable version:** 23 and later |
 
 ## offAudioSessionStateChanged
 
@@ -526,7 +376,9 @@ Unsubscribes to audio session deactivated event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
 
@@ -536,14 +388,14 @@ Unsubscribes to audio session deactivated event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback invoked for the audio session state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback invoked for the audio session state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## offAvailableDeviceChange
 
@@ -555,7 +407,9 @@ Unsubscribes to available device change events.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
 
@@ -565,13 +419,13 @@ Unsubscribes to available device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## offCurrentInputDeviceChanged
 
@@ -583,7 +437,9 @@ Unsubscribes current input device change events.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
 
@@ -593,13 +449,13 @@ Unsubscribes current input device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## offCurrentOutputDeviceChanged
 
@@ -611,7 +467,9 @@ UnSubscribes output device change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
 
@@ -621,30 +479,32 @@ UnSubscribes output device change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to listen device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## on('audioSessionDeactivated')
+## off_audioSessionDeactivated
 
 ```TypeScript
-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void
+off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Subscribes to the audio session deactivation event, which is triggered when an audio session is deactivated. This API uses an asynchronous callback to return the result.
+Unsubscribes from the audio session deactivation event. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
+<!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -653,28 +513,30 @@ Subscribes to the audio session deactivation event, which is triggered when an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback used to return the reason why the audio session is deactivated. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback used to return the reason why the audio session is deactivated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on('audioSessionStateChanged')
+## off_audioSessionStateChanged
 
 ```TypeScript
-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void
+off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Subscribes to the audio session state change event, which is triggered when the audio session focus is changed.This API uses an asynchronous callback to return the result.
+Unsubscribes from the audio session state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-<!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -683,60 +545,30 @@ Subscribes to the audio session state change event, which is triggered when the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback used to return the audio session change information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback used to return the audio session change information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## on('currentOutputDeviceChanged')
-
-```TypeScript
-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void
-```
-
-Subscribes to the current output device change event, which is triggered when the current output device is changed. This API uses an asynchronous callback to return the result.
-
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-<!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current output device. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## on('availableDeviceChange')
+## off_availableDeviceChange
 
 ```TypeScript
-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to the event indicating that the connection status of an available audio device is changed.
+Unsubscribes from the event indicating that the connection status of an available audio device is changed.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-<!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -745,29 +577,29 @@ Subscribes to the event indicating that the connection status of an available au
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device type (classified by usage). |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the available device change details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the available device change details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## on('currentInputDeviceChanged')
+## off_currentInputDeviceChanged
 
 ```TypeScript
-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void
+off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void
 ```
 
-Subscribes to the current input device change event, which is triggered when the current input device is changed.
+Unsubscribes from the current input device change event.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-<!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -776,14 +608,45 @@ Subscribes to the current input device change event, which is triggered when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current input device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current input device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## off_currentOutputDeviceChanged
+
+```TypeScript
+off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void
+```
+
+Unsubscribes from the current output device change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current output device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## onAudioSessionDeactivated
 
@@ -791,11 +654,13 @@ Subscribes to the current input device change event, which is triggered when the
 onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Listens for audio session deactivated event. When the audio session is deactivated,registered clients will receive the callback.
+Listens for audio session deactivated event. When the audio session is deactivated, registered clients will receive the callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -808,13 +673,13 @@ Listens for audio session deactivated event. When the audio session is deactivat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.<br>**Applicable version:** 23 and later |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.<br>**Applicable version:** 23 and later |
 
 ## onAudioSessionStateChanged
 
@@ -822,11 +687,13 @@ Listens for audio session deactivated event. When the audio session is deactivat
 onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Listens for audio session state change event. When the audio session state change,registered clients will receive the callback.
+Listens for audio session state change event. When the audio session state change, registered clients will receive the callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void-End-->
 
@@ -836,15 +703,15 @@ Listens for audio session state change event. When the audio session state chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback invoked for the audio session state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback invoked for the audio session state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## onAvailableDeviceChange
 
@@ -856,7 +723,9 @@ Subscribes to available device change events. When a device is connected/disconn
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
 
@@ -867,14 +736,14 @@ Subscribes to available device change events. When a device is connected/disconn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device usage to filter available devices. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## onCurrentInputDeviceChanged
 
@@ -886,7 +755,9 @@ Subscribes input device change event callback. The event is triggered when curre
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
 
@@ -896,14 +767,14 @@ Subscribes input device change event callback. The event is triggered when curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen input device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen input device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## onCurrentOutputDeviceChanged
 
@@ -911,11 +782,13 @@ Subscribes input device change event callback. The event is triggered when curre
 onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-Subscribes output device change event callback.The event is triggered when device change.
+Subscribes output device change event callback. The event is triggered when device change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
 
@@ -925,15 +798,180 @@ Subscribes output device change event callback.The event is triggered when devic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on_audioSessionDeactivated
+
+```TypeScript
+on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void
+```
+
+Subscribes to the audio session deactivation event, which is triggered when an audio session is deactivated. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback used to return the reason why the audio session is deactivated. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## on_audioSessionStateChanged
+
+```TypeScript
+on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void
+```
+
+Subscribes to the audio session state change event, which is triggered when the audio session focus is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback used to return the audio session change information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on_availableDeviceChange
+
+```TypeScript
+on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to the event indicating that the connection status of an available audio device is changed.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device type (classified by usage). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the available device change details. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on_currentInputDeviceChanged
+
+```TypeScript
+on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void
+```
+
+Subscribes to the current input device change event, which is triggered when the current input device is changed.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current input device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on_currentOutputDeviceChanged
+
+```TypeScript
+on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void
+```
+
+Subscribes to the current output device change event, which is triggered when the current output device is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+<!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current output device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## selectMediaInputDevice
 
@@ -941,26 +979,13 @@ Subscribes output device change event callback.The event is triggered when devic
 selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects a media input device. This API uses a promise to return the result.
+Selects a media input device. This API uses a promise to return the result. > **NOTE：**> > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where > [SourceType](arkts-audio-audio-sourcetype-e.md#SourceType) is **SOURCE_TYPE_VOICE_COMMUNICATION**. > > - Before calling this API, call [getAvailableDevices](#getAvailableDevices) to > query the list of available input devices and select an input device from the list. > > - If there are recording streams of other applications with higher priorities in the system, the actual input > device used will follow the input device selected by these applications. > > - Applications can listen for the > [currentInputDeviceChanged](#on_audioSessionDeactivated) > event to find out the actual input device being used.
 
-> **NOTE：**
-> 
-> - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where
-> [SourceType](arkts-audio-audio-sourcetype-e.md#SourceType) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
-> 
-> - Before calling this API, call [getAvailableDevices](#getAvailableDevices) to
-> query the list of available input devices and select an input device from the list.
-> 
-> - If there are recording streams of other applications with higher priorities in the system, the actual input
-> device used will follow the input device selected by these applications.
-> 
-> - Applications can listen for the
-> [currentInputDeviceChanged](audio.AudioSessionManager.on(type: 'currentInputDeviceChanged', callback: Callback&lt;CurrentInputDeviceChangedEvent&gt;))
-> event to find out the actual input device being used.
+**Since:** 24
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>-End-->
 
@@ -982,32 +1007,22 @@ Selects a media input device. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device does not exist. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device does not exist. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## setAudioSessionBehavior
 
-ArkTS-Dyn:
-```TypeScript
-setAudioSessionBehavior(behavior: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAudioSessionBehavior(behavior: int): void
 ```
 
-Sets audio session behavior parameters. (Multiple flags can be combined.)
-
-> **NOTE：**
-> 
-> If this API is called while an audio session is active, you must call the
-> [activateAudioSession](#activateAudioSession) API again
-> for the settings to take effect.
+Sets audio session behavior parameters. (Multiple flags can be combined.) > **NOTE：**> > If this API is called while an audio session is active, you must call the > [activateAudioSession](#activateAudioSession) API again > for the settings to take effect.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1019,14 +1034,14 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| behavior | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the audio session behavior.&lt;br&gt;This can be a single flag or a bitwise OR combination of multiple flags.&lt;br&gt;For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags). |
+| behavior | int | Yes | Specifies the audio session behavior.&lt;br&gt;This can be a single flag or a bitwise OR combination of multiple flags.&lt;br&gt;For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in the current state. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in the current state. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setAudioSessionScene
 
@@ -1036,9 +1051,11 @@ setAudioSessionScene(scene: AudioSessionScene): void
 
 Sets an audio session scene.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void--><!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void-End-->
 
@@ -1054,9 +1071,9 @@ Sets an audio session scene.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## setBluetoothAndNearlinkPreferredRecordCategory
 
@@ -1064,23 +1081,13 @@ Sets an audio session scene.
 setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>
 ```
 
-Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
+Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result. > **NOTE：**> > - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system > prioritizes using the device for recording when the device is connected. > > - If there are recording streams of other applications with higher priorities in the system, the actual input > device used will follow the input device selected by these applications. > > - Applications can listen for the > [currentInputDeviceChanged](#on_audioSessionDeactivated) > event to find out the actual input device being used.
 
-> **NOTE：**
-> 
-> - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system
-> prioritizes using the device for recording when the device is connected.
-> 
-> - If there are recording streams of other applications with higher priorities in the system, the actual input
-> device used will follow the input device selected by these applications.
-> 
-> - Applications can listen for the
-> [currentInputDeviceChanged](audio.AudioSessionManager.on(type: 'currentInputDeviceChanged', callback: Callback&lt;CurrentInputDeviceChangedEvent&gt;))
-> event to find out the actual input device being used.
+**Since:** 24
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>--><!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>-End-->
 
@@ -1102,8 +1109,8 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## setCapturerMuteHint
 
@@ -1115,7 +1122,9 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1139,7 +1148,7 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state, there is no audio capturer running. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state, there is no audio capturer running. |
 
 ## setDefaultOutputDevice
 
@@ -1147,26 +1156,13 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Sets the default audio output device. This API uses a promise to return the result.
+Sets the default audio output device. This API uses a promise to return the result. > **NOTE：**> > - This API applies to the following scenario: When > [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) is set to **VoIP**, the setting takes > effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take > effect upon AudioSession activation. Instead, the setting applies when > [StreamUsage](arkts-audio-audio-streamusage-e.md#StreamUsage) for playback is voice message, VoIP voice call, > or VoIP video call. Supported devices include the earpiece, speaker, and system default device. > > - This API can be called at any time after an AudioSessionManager instance is created. The system records the > device set by the application. However, the setting takes effect only after the AudioSession is activated. When > the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected, > the system prioritizes audio output through the external device. Otherwise, the system uses the device set by > the application.
 
-> **NOTE：**
-> 
-> - This API applies to the following scenario: When
-> [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) is set to **VoIP**, the setting takes
-> effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take
-> effect upon AudioSession activation. Instead, the setting applies when
-> [StreamUsage](arkts-audio-audio-streamusage-e.md#StreamUsage) for playback is voice message, VoIP voice call,
-> or VoIP video call. Supported devices include the earpiece, speaker, and system default device.
-> 
-> - This API can be called at any time after an AudioSessionManager instance is created. The system records the
-> device set by the application. However, the setting takes effect only after the AudioSession is activated. When
-> the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected,
-> the system prioritizes audio output through the external device. Otherwise, the system uses the device set by
-> the application.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
@@ -1188,9 +1184,9 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## setMediaOutputDevice
 
@@ -1198,11 +1194,13 @@ Sets the default audio output device. This API uses a promise to return the resu
 setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Set the audio output device to the built-in speaker, when other audio peripherals are connected, such as bluetooth headphones or wired headsets. It should be noted that this interface only applies to media streams.In scenarios where there are concurrent playback streams with higher priority or user selects the output device through system UI, the actual output device used by the application may differ from the selected one. The application can obtain currently active output device by subscribing to the currentOutputDeviceChanged event.
+Set the audio output device to the built-in speaker, when other audio peripherals are connected, such as bluetooth headphones or wired headsets. It should be noted that this interface only applies to media streams. In scenarios where there are concurrent playback streams with higher priority or user selects the output device through system UI, the actual output device used by the application may differ from the selected one. The application can obtain currently active output device by subscribing to the currentOutputDeviceChanged event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1226,6 +1224,6 @@ Set the audio output device to the built-in speaker, when other audio peripheral
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device type is not supported. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device type is not supported. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
 

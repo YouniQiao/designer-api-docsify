@@ -1,18 +1,15 @@
 # Graphics
 
-自定义节点（RenderNode）相关的图形属性定义，提供几何变换（缩放、旋转、平移）、颜色与长度的统一表示、形状定义、图形遮罩与裁剪、模糊效果等能力，适用于需要在自定义节点上进行精细化图形绘制与视觉效果处理的场景。
-
-
 ## 汇总
 
 ### 函数
 
 | 名称 |
 | --- |
-| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderradiuses) |
-| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderstyles) |
-| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgecolors) |
-| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgewidths) |
+| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderRadiuses) |
+| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderStyles) |
+| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgeColors) |
+| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgeWidths) |
 
 ### 类
 

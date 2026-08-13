@@ -4,6 +4,8 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-fastbuffer-class FastBuffer--><!--Device-fastbuffer-class FastBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -20,9 +22,11 @@ import { fastbuffer } from '@kit.ArkTS';
 compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1
 ```
 
-Compares buf with target and returns a number indicating whether buf comes before, after,or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
+Compares buf with target and returns a number indicating whether buf comes before, after, or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -50,8 +54,8 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -75,9 +79,11 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf.If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
+Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf. If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -104,8 +110,8 @@ Copies data from a region of buf to a region in target, even if the target memor
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -137,6 +143,8 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>--><!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>-End-->
@@ -147,7 +155,7 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[             number, number         ]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[             number, number         ]&gt; |
 
 ## Examples
 
@@ -181,6 +189,8 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean--><!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean-End-->
@@ -203,7 +213,7 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 | Error Code ID |
 | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -230,6 +240,8 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer--><!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer-End-->
@@ -255,8 +267,8 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -278,6 +290,8 @@ Returns true if value was found in buf, false otherwise
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean--><!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean-End-->
@@ -289,7 +303,7 @@ Returns true if value was found in buf, false otherwise
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
-| [byteOffset](#byteoffset) | number | No |
+| [byteOffset](#byteOffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**
@@ -320,6 +334,8 @@ The index of the first occurrence of value in buf
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -331,7 +347,7 @@ The index of the first occurrence of value in buf
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
-| [byteOffset](#byteoffset) | number | No |
+| [byteOffset](#byteOffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**
@@ -362,6 +378,8 @@ Creates and returns an iterator of buf keys (indices).
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-keys(): IterableIterator<number>--><!--Device-FastBuffer-keys(): IterableIterator<number>-End-->
@@ -372,7 +390,7 @@ Creates and returns an iterator of buf keys (indices).
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## Examples
 
@@ -404,6 +422,8 @@ The index of the last occurrence of value in buf
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -415,7 +435,7 @@ The index of the last occurrence of value in buf
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
-| [byteOffset](#byteoffset) | number | No |
+| [byteOffset](#byteOffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**
@@ -446,6 +466,8 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint-End-->
@@ -468,7 +490,7 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -490,6 +512,8 @@ readBigInt64LE(offset?: number): bigint
 Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -513,7 +537,7 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -535,6 +559,8 @@ readBigUInt64BE(offset?: number): bigint
 Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -558,7 +584,7 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -580,6 +606,8 @@ readBigUInt64LE(offset?: number): bigint
 Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -603,7 +631,7 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -625,6 +653,8 @@ readDoubleBE(offset?: number): number
 Reads a 64-bit, big-endian double from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -648,7 +678,7 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -669,6 +699,8 @@ readDoubleLE(offset?: number): number
 Reads a 64-bit, little-endian double from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -692,7 +724,7 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -713,6 +745,8 @@ readFloatBE(offset?: number): number
 Reads a 32-bit, big-endian float from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -736,7 +770,7 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -757,6 +791,8 @@ readFloatLE(offset?: number): number
 Reads a 32-bit, little-endian float from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -780,7 +816,7 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -801,6 +837,8 @@ readInt16BE(offset?: number): number
 Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -824,7 +862,7 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -845,6 +883,8 @@ readInt16LE(offset?: number): number
 Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -868,7 +908,7 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -889,6 +929,8 @@ readInt32BE(offset?: number): number
 Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -912,7 +954,7 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -933,6 +975,8 @@ readInt32LE(offset?: number): number
 Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -956,7 +1000,7 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -977,6 +1021,8 @@ readInt8(offset?: number): number
 Reads a signed 8-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1000,7 +1046,7 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1020,9 +1066,11 @@ console.info(buf.readInt8(1).toString());
 readIntBE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian,two's complement signed value supporting up to 48 bits of accuracy
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian, two's complement signed value supporting up to 48 bits of accuracy
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1047,7 +1095,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1066,9 +1114,11 @@ console.info(num.toString());
 readIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian,two's complement signed value supporting up to 48 bits of accuracy.
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian, two's complement signed value supporting up to 48 bits of accuracy.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1093,7 +1143,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1114,6 +1164,8 @@ readUInt16BE(offset?: number): number
 Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1137,7 +1189,7 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1161,6 +1213,8 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUInt16LE(offset?: number): number--><!--Device-FastBuffer-readUInt16LE(offset?: number): number-End-->
@@ -1183,7 +1237,7 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1207,6 +1261,8 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-readUInt32BE(offset?: number): number--><!--Device-FastBuffer-readUInt32BE(offset?: number): number-End-->
@@ -1229,7 +1285,7 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1250,6 +1306,8 @@ readUInt32LE(offset?: number): number
 Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1273,7 +1331,7 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1294,6 +1352,8 @@ readUInt8(offset?: number): number
 Reads an unsigned 8-bit integer from buf at the specified offset
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1317,7 +1377,7 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1340,6 +1400,8 @@ readUIntBE(offset: number, byteLength: number): number
 Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned big-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1364,7 +1426,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1382,9 +1444,11 @@ console.info(buf.readUIntBE(0, 6).toString(16));
 readUIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned,little-endian integer supporting up to 48 bits of accuracy.
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned, little-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1409,7 +1473,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1430,6 +1494,8 @@ subarray(start?: number, end?: number): FastBuffer
 Returns a new FastBuffer that references the same memory as the original, but offset and cropped by the start and end indices.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1475,6 +1541,8 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap16(): FastBuffer--><!--Device-FastBuffer-swap16(): FastBuffer-End-->
@@ -1491,7 +1559,7 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 | Error Code ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1516,6 +1584,8 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap32(): FastBuffer--><!--Device-FastBuffer-swap32(): FastBuffer-End-->
@@ -1532,7 +1602,7 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 | Error Code ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1557,6 +1627,8 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap64(): FastBuffer--><!--Device-FastBuffer-swap64(): FastBuffer-End-->
@@ -1573,7 +1645,7 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 | Error Code ID |
 | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1597,6 +1669,8 @@ toJSON(): Object
 Returns a JSON representation of buf
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1631,6 +1705,8 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string-End-->
@@ -1655,7 +1731,7 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Error Code ID |
 | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -1680,6 +1756,8 @@ Creates and returns an iterator for buf values (bytes).
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-values(): IterableIterator<number>--><!--Device-FastBuffer-values(): IterableIterator<number>-End-->
@@ -1690,7 +1768,7 @@ Creates and returns an iterator for buf values (bytes).
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## Examples
 
@@ -1724,6 +1802,8 @@ Writes string to buf at offset according to the character encoding in encoding
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number--><!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number-End-->
@@ -1749,8 +1829,8 @@ Writes string to buf at offset according to the character encoding in encoding
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -1778,6 +1858,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number-End-->
@@ -1801,7 +1883,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1823,6 +1905,8 @@ writeBigInt64LE(value: bigint, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1847,7 +1931,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1869,6 +1953,8 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1893,7 +1979,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1915,6 +2001,8 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1939,7 +2027,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1961,6 +2049,8 @@ writeDoubleBE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1985,7 +2075,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2007,6 +2097,8 @@ writeDoubleLE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2031,7 +2123,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2053,6 +2145,8 @@ writeFloatBE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2077,7 +2171,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2099,6 +2193,8 @@ writeFloatLE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2123,7 +2219,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2145,6 +2241,8 @@ writeInt16BE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian. The value must be a valid signed 16-bit integer
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2169,7 +2267,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2191,6 +2289,8 @@ writeInt16LE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian. The value must be a valid signed 16-bit integer
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2215,7 +2315,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2237,6 +2337,8 @@ writeInt32BE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian. The value must be a valid signed 32-bit integer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2261,7 +2363,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2283,6 +2385,8 @@ writeInt32LE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian. The value must be a valid signed 32-bit integer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2307,7 +2411,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2329,6 +2433,8 @@ writeInt8(value: number, offset?: number): number
 Writes value to buf at the specified offset. value must be a valid signed 8-bit integer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2353,7 +2459,7 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2379,6 +2485,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number-End-->
@@ -2403,7 +2511,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2425,6 +2533,8 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2450,7 +2560,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2472,6 +2582,8 @@ writeUInt16BE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian. The value must be a valid unsigned 16-bit integer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2496,7 +2608,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2522,6 +2634,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number-End-->
@@ -2545,7 +2659,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2571,6 +2685,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number-End-->
@@ -2594,7 +2710,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2616,6 +2732,8 @@ writeUInt32LE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian. The value must be a valid unsigned 32-bit integer.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2640,7 +2758,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2662,6 +2780,8 @@ writeUInt8(value: number, offset?: number): number
 Writes value to buf at the specified offset. value must be a valid unsigned 8-bit integer
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2686,7 +2806,7 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2718,6 +2838,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number-End-->
@@ -2742,7 +2864,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2764,6 +2886,8 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2789,7 +2913,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2814,6 +2938,8 @@ The arraybuffer underlying the FastBuffer object
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-buffer: ArrayBuffer--><!--Device-FastBuffer-buffer: ArrayBuffer-End-->
@@ -2832,6 +2958,8 @@ The byteOffset of the Buffers underlying ArrayBuffer object
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-byteOffset: number--><!--Device-FastBuffer-byteOffset: number-End-->
@@ -2849,6 +2977,8 @@ Returns the number of bytes in buf
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

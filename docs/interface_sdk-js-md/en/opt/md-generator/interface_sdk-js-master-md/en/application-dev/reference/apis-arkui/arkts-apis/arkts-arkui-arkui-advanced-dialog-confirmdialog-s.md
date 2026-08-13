@@ -4,6 +4,8 @@ Declare CustomDialog ConfirmDialog
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare struct ConfirmDialog--><!--Device-unnamed-export declare struct ConfirmDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Sets the ConfirmDialog checkbox tips.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Sets the ConfirmDialog content.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Sets the ConfirmDialog Controller.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -77,7 +85,7 @@ Sets the ConfirmDialog Controller.
 ## isChecked
 
 ```TypeScript
-isChecked?: boolean
+@Prop isChecked?: boolean
 ```
 
 Sets the ConfirmDialog checkbox state.
@@ -86,13 +94,13 @@ Sets the ConfirmDialog checkbox state.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConfirmDialog-isChecked?: boolean--><!--Device-ConfirmDialog-isChecked?: boolean-End-->
+<!--Device-ConfirmDialog-@Prop isChecked?: boolean--><!--Device-ConfirmDialog-@Prop isChecked?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,6 +115,8 @@ Sets the ConfirmDialog CheckBox Callback.
 **Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,6 +138,8 @@ Sets the ConfirmDialog primary button.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -147,6 +159,8 @@ Sets the ConfirmDialog secondary button.
 **Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,6 +182,8 @@ Custom Theme.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -188,6 +204,8 @@ Sets the ConfirmDialog dark or light Mode.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -207,6 +225,8 @@ Sets the ConfirmDialog title.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

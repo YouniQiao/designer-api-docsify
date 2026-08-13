@@ -6,6 +6,8 @@ Enumerates the permission decision statuses.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-abilityAccessCtrl-export enum PermissionDecisionStatus--><!--Device-abilityAccessCtrl-export enum PermissionDecisionStatus-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -23,6 +25,8 @@ Indicates that a permission dialog needs to pop up.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Indicates that no dialog is needed and the permission has been denied by the use
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDecisionStatus-NO_DIALOG_DENIED = 1--><!--Device-PermissionDecisionStatus-NO_DIALOG_DENIED = 1-End-->
@@ -63,6 +69,8 @@ Indicates that no dialog is needed and the permission is restricted by the syste
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ Indicates that no dialog is needed and the permission has been granted.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDecisionStatus-NO_DIALOG_GRANTED = 3--><!--Device-PermissionDecisionStatus-NO_DIALOG_GRANTED = 3-End-->
@@ -104,6 +114,8 @@ Indicates that no dialog is needed, but the permission is not declared.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDecisionStatus-NO_DIALOG_NOT_DECLARED = 4--><!--Device-PermissionDecisionStatus-NO_DIALOG_NOT_DECLARED = 4-End-->
@@ -123,6 +135,8 @@ Indicates that no dialog is needed and the CLI permission has been resolved to r
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

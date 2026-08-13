@@ -4,7 +4,9 @@ Enumerates the time zone types. When the time zone is changed, the reminder time
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-export enum TimeZoneType--><!--Device-reminderAgentManager-export enum TimeZoneType-End-->
 
@@ -20,7 +22,9 @@ Default value. When the time zone is changed, the reminder time is calculated in
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +42,9 @@ Fixed time zone, which is used in scenarios such as ticket booking and meetings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,11 +58,13 @@ Fixed time zone, which is used in scenarios such as ticket booking and meetings.
 SYSTEM_TIME_ZONE = 2
 ```
 
-System time zone, which is used in scenarios such as setting the alarm clock, fixed time for exercise, and sleep time.For example, if the reminder time is set to 08:00 (GMT+8), and the time zone is changed to GMT+4, the reminder will still be triggered at 08:00. The reminder time is not affected by the change of the system time.
+System time zone, which is used in scenarios such as setting the alarm clock, fixed time for exercise, and sleep time. For example, if the reminder time is set to 08:00 (GMT+8), and the time zone is changed to GMT+4, the reminder will still be triggered at 08:00. The reminder time is not affected by the change of the system time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

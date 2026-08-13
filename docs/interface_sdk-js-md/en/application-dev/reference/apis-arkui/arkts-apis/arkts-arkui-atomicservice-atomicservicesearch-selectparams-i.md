@@ -6,6 +6,8 @@ Provides optional attributes for the selection area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SelectParams--><!--Device-unnamed-export interface SelectParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -15,24 +17,6 @@ Provides optional attributes for the selection area.
 ```TypeScript
 import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
-
-## onSelect
-
-```TypeScript
-onSelect?: OnSelectCallback
-```
-
-Callback when the select is selected.
-
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectParams-onSelect?: OnSelectCallback--><!--Device-SelectParams-onSelect?: OnSelectCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrowPosition
 
@@ -47,6 +31,8 @@ Set the layout direction for text and arrow in select.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -68,6 +54,8 @@ Sets the divider of select.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-divider?: Optional<DividerOptions> | null--><!--Device-SelectParams-divider?: Optional<DividerOptions> | null-End-->
@@ -87,6 +75,8 @@ Sets the text properties of the select button itself.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -108,6 +98,8 @@ Sets the text color of the select button itself.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-fontColor?: ResourceColor--><!--Device-SelectParams-fontColor?: ResourceColor-End-->
@@ -127,6 +119,8 @@ Set the alignment between select and menu.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -148,6 +142,8 @@ Set menu background blur Style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-menuBackgroundBlurStyle?: BlurStyle--><!--Device-SelectParams-menuBackgroundBlurStyle?: BlurStyle-End-->
@@ -167,6 +163,8 @@ Set the menu's background color.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -188,9 +186,33 @@ Register a ContentModifier for each menu item.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-menuItemContentModifier?: ContentModifier<MenuItemConfiguration>--><!--Device-SelectParams-menuItemContentModifier?: ContentModifier<MenuItemConfiguration>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onSelect
+
+```TypeScript
+onSelect?: OnSelectCallback
+```
+
+Callback when the select is selected.
+
+**Type:** [OnSelectCallback](arkts-arkui-onselectcallback-t.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SelectParams-onSelect?: OnSelectCallback--><!--Device-SelectParams-onSelect?: OnSelectCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -207,6 +229,8 @@ Sets the background color of the select item.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -228,6 +252,8 @@ Sets the text style for select items.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-optionFont?: Font--><!--Device-SelectParams-optionFont?: Font-End-->
@@ -247,6 +273,8 @@ Sets the text color for select items.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -268,6 +296,8 @@ Set the height of each option.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-optionHeight?: Dimension--><!--Device-SelectParams-optionHeight?: Dimension-End-->
@@ -287,6 +317,8 @@ Set the width of each option and set whether the option width fit the trigger.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -308,6 +340,8 @@ SubOption array of the select.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-options?: Array<SelectOption>--><!--Device-SelectParams-options?: Array<SelectOption>-End-->
@@ -327,6 +361,8 @@ The default text value.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -348,6 +384,8 @@ The default selected index.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-selected?: number--><!--Device-SelectParams-selected?: number-End-->
@@ -367,6 +405,8 @@ Sets the background color of the selected items in the select.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -388,6 +428,8 @@ Sets the text style of the selected items in the select.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-selectedOptionFont?: Font--><!--Device-SelectParams-selectedOptionFont?: Font-End-->
@@ -408,6 +450,8 @@ Sets the text color of the selected item in the select.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectParams-selectedOptionFontColor?: ResourceColor--><!--Device-SelectParams-selectedOptionFontColor?: ResourceColor-End-->
@@ -427,6 +471,8 @@ Set the space for text and icon in select.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

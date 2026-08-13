@@ -8,9 +8,3 @@
 | --- | --- |
 | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 定义拉起UIExtensionAbility执行结果的回调。 |
 
-### 类型
-
-| 名称 | 说明 |
-| --- | --- |
-| [OnResultFn](arkts-ability-onresultfn-t.md) | 拉起UIExtensionAbility终止时的回调。 |
-

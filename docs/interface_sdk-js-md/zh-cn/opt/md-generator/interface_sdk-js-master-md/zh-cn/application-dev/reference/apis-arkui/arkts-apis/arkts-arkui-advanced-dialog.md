@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.Dialog(Dialog)
+# @ohos.arkui.advanced.Dialog
 
 ## 汇总
 

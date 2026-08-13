@@ -2,7 +2,9 @@
 
 Describes the notification information about the change of a media asset.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoAssetChangeInfos--><!--Device-photoAccessHelper-interface PhotoAssetChangeInfos-End-->
 
@@ -24,7 +26,9 @@ Array of changed media assets. If all media assets need to be queried again, **a
 
 **Type:** [PhotoAssetChangeData](arkts-medialibrary-photoaccesshelper-photoassetchangedata-i.md)[] \| null
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetChangeInfos-assetChangeDatas: PhotoAssetChangeData[] | null--><!--Device-PhotoAssetChangeInfos-assetChangeDatas: PhotoAssetChangeData[] | null-End-->
 
@@ -36,15 +40,13 @@ Array of changed media assets. If all media assets need to be queried again, **a
 isForRecheck: boolean
 ```
 
-Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise.
-
-**NOTE：**
-
-In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
+Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise. **NOTE：**In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetChangeInfos-isForRecheck: boolean--><!--Device-PhotoAssetChangeInfos-isForRecheck: boolean-End-->
 
@@ -60,7 +62,9 @@ Type of the media asset change.
 
 **Type:** [NotifyChangeType](arkts-medialibrary-photoaccesshelper-notifychangetype-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetChangeInfos-type: NotifyChangeType--><!--Device-PhotoAssetChangeInfos-type: NotifyChangeType-End-->
 

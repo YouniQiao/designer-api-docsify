@@ -6,13 +6,13 @@
 function enableNotification(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable notification for a specified application.This API uses an asynchronous callback to return the result.
+Sets whether to enable notification for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
+**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,7 +43,7 @@ Sets whether to enable notification for a specified application. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
+**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

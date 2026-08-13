@@ -1,12 +1,14 @@
 # ShowDialogSuccessResponse
 
-Success response.
+Describes the dialog box response result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-promptAction-export interface ShowDialogSuccessResponse--><!--Device-promptAction-export interface ShowDialogSuccessResponse-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-interface ShowDialogSuccessResponse--><!--Device-promptAction-interface ShowDialogSuccessResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,20 +21,22 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-Index of the selected button, starting from 0.
+Index of the selected button in the **buttons** array, starting from **0**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ShowDialogSuccessResponse-index: int--><!--Device-ShowDialogSuccessResponse-index: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

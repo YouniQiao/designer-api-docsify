@@ -1,15 +1,10 @@
 # CommonEventPublishData
 
-This module encapsulates the data and attributes carried when a common event is published, including the event data (code/data), subscriber permissions, subscriber bundle name, whether the event is ordered or sticky, and additional parameters. It allows the publisher to precisely control the common event recipients, event delivery sequence, and sticky feature. This module is applicable to scenarios where the recipients need to be specified, custom event data needs to be transferred, and ordered/sticky common events need to be implemented.
+This module encapsulates the data and attributes carried when a common event is published, including the event data (code/data), subscriber permissions, subscriber bundle name, whether the event is ordered or sticky, and additional parameters. It allows the publisher to precisely control the common event recipients, event delivery sequence, and sticky feature. This module is applicable to scenarios where the recipients need to be specified, custom event data needs to be transferred, and ordered/sticky common events need to be implemented. > **NOTE：**> > If there is no restriction, any app can subscribe to common events and read the > information carried by the event. In this case, sensitive information should not be > carried in common events. The **subscriberPermissions** and **bundleName** parameters > of this module can be used to restrict the receiving scope of common events.
 
-> **NOTE：**
-> 
-> If there is no restriction, any app can subscribe to common events and read the
-> information carried by the event. In this case, sensitive information should not be
-> carried in common events. The **subscriberPermissions** and **bundleName** parameters
-> of this module can be used to restrict the receiving scope of common events.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CommonEventPublishData--><!--Device-unnamed-export interface CommonEventPublishData-End-->
 
@@ -25,7 +20,9 @@ Bundle name of the subscriber, which is used to specify the subscriber to whom t
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,7 +42,9 @@ Common event data transferred by the publisher. The default value is **0**.
 
 **Default:** 0
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,7 +62,9 @@ Common event data transferred by the publisher. The value is a string and cannot
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -77,18 +78,15 @@ Common event data transferred by the publisher. The value is a string and cannot
 isOrdered?: boolean
 ```
 
-Whether the common event is an ordered one. The default value is **false**.
-
-- **true**: This event is an ordered common event. Based on the priority set by the subscriber, the common event is  
-preferentially sent to the subscriber with a higher priority. After the subscriber successfully receives the event,the public event is sent to the subscriber with a lower priority. Subscribers with the same priority receive common events in a random order.  
-- **false**: This event is an unordered common event. Whether subscribers receive the event is not considered, and   
-the common event which subscribers receive may not comply with the subscription sequence.
+Whether the common event is an ordered one. The default value is **false**. - **true**: This event is an ordered common event. Based on the priority set by the subscriber, the common event is preferentially sent to the subscriber with a higher priority. After the subscriber successfully receives the event, the public event is sent to the subscriber with a lower priority. Subscribers with the same priority receive common events in a random order. - **false**: This event is an unordered common event. Whether subscribers receive the event is not considered, and the common event which subscribers receive may not comply with the subscription sequence.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventPublishData-isOrdered?: boolean--><!--Device-CommonEventPublishData-isOrdered?: boolean-End-->
 
@@ -100,23 +98,15 @@ the common event which subscribers receive may not comply with the subscription 
 isSticky?: boolean
 ```
 
-Whether the common event is a sticky one. The default value is **false**.
-
-- **true**: This event is a sticky common event, which allows subscribers to receive common events that have been   
-sent before subscription.  
-- **false**: This event is not a sticky common event, which allows subscribers to receive common events sent after   
-subscription.
-
-Only system applications and system services are allowed to send sticky events.
-
-**Required Permissions**:   
-[ohos.permission.COMMONEVENT_STICKY](../../../security/AccessToken/permissions-for-all.md#ohospermissioncommonevent_sticky)
+Whether the common event is a sticky one. The default value is **false**. - **true**: This event is a sticky common event, which allows subscribers to receive common events that have been sent before subscription. - **false**: This event is not a sticky common event, which allows subscribers to receive common events sent after subscription. Only system applications and system services are allowed to send sticky events. **Required Permissions**: [ohos.permission.COMMONEVENT_STICKY](../../../security/AccessToken/permissions-for-all.md#ohospermissioncommonevent_sticky)
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.COMMONEVENT_STICKY
 
@@ -127,18 +117,18 @@ Only system applications and system services are allowed to send sticky events.
 ## parameters
 
 ```TypeScript
-parameters?: { [key: string]: any }
+parameters?: Record<string, RecordData>
 ```
 
 Additional information about the common event transferred by the publisher. Custom parameters are configured in a key-value pair format. This parameter is left empty by default.
 
-**Type:** { [key: string]: any }
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-CommonEventPublishData-parameters?: { [key: string]: any }--><!--Device-CommonEventPublishData-parameters?: { [key: string]: any }-End-->
+<!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>--><!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -152,7 +142,9 @@ Subscriber permissions. Only subscribers with the specified permissions can rece
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

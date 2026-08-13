@@ -2,9 +2,11 @@
 
 The enum of SceneResource type.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->
 
@@ -18,9 +20,11 @@ UNKNOWN = 0
 
 The resource is an Unknown.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
 
@@ -34,9 +38,11 @@ NODE = 1
 
 The resource is a Node.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
 
@@ -50,9 +56,11 @@ ENVIRONMENT = 2
 
 The resource is an Environment.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-ENVIRONMENT = 2--><!--Device-SceneResourceType-ENVIRONMENT = 2-End-->
 
@@ -66,9 +74,11 @@ MATERIAL = 3
 
 The resource is a Material.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-MATERIAL = 3--><!--Device-SceneResourceType-MATERIAL = 3-End-->
 
@@ -82,9 +92,11 @@ MESH = 4
 
 The resource is a Mesh.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-MESH = 4--><!--Device-SceneResourceType-MESH = 4-End-->
 
@@ -98,9 +110,11 @@ ANIMATION = 5
 
 The resource is an Animation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
 
@@ -114,9 +128,11 @@ SHADER = 6
 
 The resource is a Shader.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-SHADER = 6--><!--Device-SceneResourceType-SHADER = 6-End-->
 
@@ -130,9 +146,11 @@ IMAGE = 7
 
 The resource is an Image.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
 
@@ -146,9 +164,11 @@ MESH_RESOURCE = 8
 
 The resource is a mesh resource
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
 
@@ -162,9 +182,11 @@ EFFECT = 9
 
 The resource is an Effect.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
 

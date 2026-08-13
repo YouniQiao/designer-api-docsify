@@ -14,7 +14,7 @@ Attaches the given ID to the end of the path component of the given uri.
 
 **Deprecated since:** 9
 
-**Substitutes:** [attachId](ohos.app.ability.dataUriUtils/dataUriUtils#attachId)
+**Substitutes:** [attachId](arkts-ability-datauriutils-attachid-f.md#attachId)
 
 <!--Device-dataUriUtils-function attachId(uri: string, id: number): string--><!--Device-dataUriUtils-function attachId(uri: string, id: number): string-End-->
 

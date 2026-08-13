@@ -1,12 +1,12 @@
 # WithThemeAttribute
 
-The [universal attributes](common) are not supported.
-
-The [universal events](common) are not supported.
+The universal attributes are not supported. The universal events are not supported.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,22 +1,8 @@
 # EmbeddedComponent
 
-The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another
-[EmbeddedUIExtensionAbility]{@link @ohos.app.ability.EmbeddedUIExtensionAbility:EmbeddedUIExtensionAbility} in the
-same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering.
+The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another [EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#EmbeddedUIExtensionAbility) in the same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering. It is usually used in modular development scenarios where process isolation is required. > **NOTE**
 
-It is usually used in modular development scenarios where process isolation is required.
-
-> **NOTE**
-
-## Constraints
-
-The **EmbeddedComponent** is supported only on devices configured with multi-process permissions.
-
-The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility.
-
-## Child Components
-
-Not supported
+## Constraints The **EmbeddedComponent** is supported only on devices configured with multi-process permissions. The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility. ###### Child Components Not supported
 
 ## EmbeddedComponent
 
@@ -30,6 +16,8 @@ EmbeddedComponent(
 Creates a cross-process embedded component to display the UI of the EmbeddedUIExtensionAbility with the same bundle name.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,9 +44,11 @@ EmbeddedComponent(
 )
 ```
 
-Construct the EmbeddedComponent.&lt;br/&gt;Called when the EmbeddedComponent is used.
+Construct the EmbeddedComponent.&lt;br/&gt; Called when the EmbeddedComponent is used.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +68,7 @@ Construct the EmbeddedComponent.&lt;br/&gt;Called when the EmbeddedComponent is 
 
 ## Summary
 
-- [EmbeddedOptions](arkts-arkui-embeddedcomponent-embeddedoptions-i.md)
-- [TerminationInfo](arkts-arkui-embeddedcomponent-terminationinfo-i.md)
-- [EmbeddedDpiFollowStrategy](arkts-arkui-embeddedcomponent-embeddeddpifollowstrategy-e.md)
-- [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedcomponent-embeddedwindowmodefollowstrategy-e.md)
+- [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md)
+- [TerminationInfo](arkts-arkui-terminationinfo-i.md)
+- [EmbeddedDpiFollowStrategy](arkts-arkui-embeddeddpifollowstrategy-e.md)
+- [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedwindowmodefollowstrategy-e.md)

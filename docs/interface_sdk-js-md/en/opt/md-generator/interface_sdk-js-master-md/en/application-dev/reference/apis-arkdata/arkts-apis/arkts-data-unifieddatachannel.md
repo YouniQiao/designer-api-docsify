@@ -2,7 +2,9 @@
 
 As a part of the Unified Data Management Framework (UDMF), the **unifiedDataChannel** module provides unified data channels and standard data access interfaces for many-to-many data sharing across applications. It also provides definitions for uniform data types, such as text and image, to streamline data interaction between different applications and minimize the workload of data type adaptation. Although the UDMF does not parse user data, you are advised not to transfer sensitive personal data or privacy data due to low-level security of storage path.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,17 +24,24 @@ import { unifiedDataChannel } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md#convertrecordstoentries) |
-| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deletedata) |
-| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deletedata-1) |
-| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata) |
-| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata-1) |
-| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata) |
-| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata-1) |
-| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md#removeappshareoptions) |
-| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions) |
-| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata) |
-| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata-1) |
+| [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md#convertRecordsToEntries) |
+| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deleteData) |
+| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deleteData) |
+| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData) |
+| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData) |
+| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#queryData) |
+| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#queryData) |
+| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updateData) |
+| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updateData) |
+
+<!--Del-->
+### Functions（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f-sys.md#removeAppShareOptions-(System-API)) |
+| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setAppShareOptions-(System-API)) |
+<!--DelEnd-->
 
 ### Classes
 
@@ -78,6 +87,14 @@ import { unifiedDataChannel } from '@kit.ArkData';
 | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) |
 | [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md) |
 | [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md) |
+
+<!--Del-->
+### Enums（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Intention](arkts-arkdata-unifieddatachannel-intention-e-sys.md) |
+<!--DelEnd-->
 
 ### Types
 

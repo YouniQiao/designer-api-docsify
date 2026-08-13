@@ -2,7 +2,9 @@
 
 Enum for sports type
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum SportsType--><!--Device-geoLocationManager-export enum SportsType-End-->
 
@@ -16,9 +18,11 @@ RUNNING = 1
 
 Indicates running.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SportsType-RUNNING = 1--><!--Device-SportsType-RUNNING = 1-End-->
 
@@ -32,9 +36,11 @@ WALKING = 2
 
 Indicates walking.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SportsType-WALKING = 2--><!--Device-SportsType-WALKING = 2-End-->
 
@@ -48,9 +54,11 @@ CYCLING = 3
 
 Indicates cycling.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SportsType-CYCLING = 3--><!--Device-SportsType-CYCLING = 3-End-->
 
@@ -64,11 +72,13 @@ SKIING = 4
 
 Indicates Skiing.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-SportsType-SKIING = 4--><!--Device-SportsType-SKIING = 4-End-->
 

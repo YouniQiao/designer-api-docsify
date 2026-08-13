@@ -2,9 +2,11 @@
 
 Defines the download content options.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DownloadContentOptions--><!--Device-unnamed-export interface DownloadContentOptions-End-->
 
@@ -24,13 +26,15 @@ icon?: DownloadIconStyle
 
 DownloadFileButton icon Style.
 
-**Type:** [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
+**Type:** [DownloadIconStyle](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadContentOptions-icon?: DownloadIconStyle--><!--Device-DownloadContentOptions-icon?: DownloadIconStyle-End-->
 
@@ -44,13 +48,15 @@ text?: DownloadDescription
 
 DownloadFileButton description.
 
-**Type:** [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
+**Type:** [DownloadDescription](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadContentOptions-text?: DownloadDescription--><!--Device-DownloadContentOptions-text?: DownloadDescription-End-->
 

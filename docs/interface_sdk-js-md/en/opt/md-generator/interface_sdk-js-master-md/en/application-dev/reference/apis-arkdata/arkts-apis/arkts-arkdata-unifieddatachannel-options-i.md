@@ -2,7 +2,9 @@
 
 Defines the data operation performed by the UDMF. It includes three optional parameters: **intention**, **key**, and **visibility**. The three parameters can be left unspecified. For details, see the parameter description of the specific API.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-interface Options--><!--Device-unifiedDataChannel-interface Options-End-->
 
@@ -24,7 +26,9 @@ Type of the data channel related to the data operation.
 
 **Type:** [Intention](arkts-arkdata-unifieddatachannel-intention-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,17 +44,13 @@ Type of the data channel related to the data operation.
 key?: string
 ```
 
-Unique identifier of the data object in the UDMF, which can be obtained from the value returned by   
-[insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData).
-
-The key consists of **udmf:/**, **intention**, **bundleName**, and **groupId** with a (/) in between, for example, **udmf://DataHub/com.ohos.test/0123456789**.
-
-**udmf:/** is fixed, **DataHub** is an enum of **intention**, **com.ohos.test** is the bundle name, and   
-**0123456789** is a group ID randomly generated.
+Unique identifier of the data object in the UDMF, which can be obtained from the value returned by [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData). The key consists of **udmf:/**, **intention**, **bundleName**, and **groupId** with a (/) in between, for example , **udmf://DataHub/com.ohos.test/0123456789**. **udmf:/** is fixed, **DataHub** is an enum of **intention**, **com.ohos.test** is the bundle name, and **0123456789** is a group ID randomly generated.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +70,13 @@ Data visibility level. This parameter is effective only when specified during da
 
 **Type:** Visibility
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Options-visibility?: Visibility--><!--Device-Options-visibility?: Visibility-End-->
 

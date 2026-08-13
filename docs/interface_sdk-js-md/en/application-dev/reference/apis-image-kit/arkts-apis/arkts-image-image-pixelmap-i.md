@@ -1,14 +1,12 @@
 # PixelMap
 
-The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
-[Bytes per pixel](arkts-image-image-pixelmapformat-e.md#PixelMapFormat).Since API version 11, PixelMap supports cross-thread calls through [Worker](@ohos.worker). If a PixelMap object is invoked by another thread through [Worker](@ohos.worker), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md#image) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md#image) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md#PixelMapFormat). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md#@ohos.multimedia.image) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-multimedia-image.md#@ohos.multimedia.image) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface PixelMap--><!--Device-image-interface PixelMap-End-->
 
@@ -28,9 +26,11 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback:
 
 Performs color space conversion (CSC) on the image pixel color based on a given color space. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback<void>): void--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback<void>): void-End-->
 
@@ -41,16 +41,16 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
-| [62980108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 
 ## applyColorSpace
 
@@ -60,9 +60,11 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<
 
 Performs Color Space Converters (CSC) on the image pixel color based on a given color space. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
@@ -84,10 +86,10 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
-| [62980108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 
 ## applyCrop
 
@@ -99,7 +101,9 @@ Crops the PixelMap.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,12 +131,12 @@ Crops the PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
 
 ## applyCropSync
 
@@ -144,7 +148,9 @@ Crops the PixelMap.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,12 +172,12 @@ Crops the PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
 
 ## applyFlip
 
@@ -183,7 +189,9 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,12 +220,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyFlipSync
 
@@ -229,7 +237,9 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,32 +262,26 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyRotate
 
-ArkTS-Dyn:
-```TypeScript
-applyRotate(angle: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyRotate(angle: double): Promise<void>
 ```
 
-Rotates the PixelMap.
-
-Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -293,7 +297,7 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The rotation angle in degrees. Unit: Degree. |
+| angle | double | Yes | The rotation angle in degrees. Unit: Degree. |
 
 **Return value:**
 
@@ -305,32 +309,26 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyRotateSync
 
-ArkTS-Dyn:
-```TypeScript
-applyRotateSync(angle: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyRotateSync(angle: double): void
 ```
 
-Rotates the PixelMap.
-
-Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -346,27 +344,21 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The rotation angle in degrees. Unit: Degree. |
+| angle | double | Yes | The rotation angle in degrees. Unit: Degree. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScale
 
-ArkTS-Dyn:
-```TypeScript
-applyScale(x: number, y: number, level?: AntiAliasingLevel): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyScale(x: double, y: double, level?: AntiAliasingLevel): Promise<void>
 ```
@@ -375,7 +367,9 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -391,8 +385,8 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of width. Unit: Percentage. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of height. Unit: Percentage. |
+| x | double | Yes | The scale ratio of width. Unit: Percentage. |
+| y | double | Yes | The scale ratio of height. Unit: Percentage. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | The anti-aliasing algorithm to be used. Default value: NONE. |
 
 **Return value:**
@@ -405,21 +399,15 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScaleSync
 
-ArkTS-Dyn:
-```TypeScript
-applyScaleSync(x: number, y: number, level?: AntiAliasingLevel): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyScaleSync(x: double, y: double, level?: AntiAliasingLevel): void
 ```
@@ -428,7 +416,9 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -444,29 +434,23 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of width. Unit: Percentage. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of height. Unit: Percentage. |
+| x | double | Yes | The scale ratio of width. Unit: Percentage. |
+| y | double | Yes | The scale ratio of height. Unit: Percentage. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | The anti-aliasing algorithm to be used. Default value: NONE. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslate
 
-ArkTS-Dyn:
-```TypeScript
-applyTranslate(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyTranslate(x: double, y: double): Promise<void>
 ```
@@ -475,7 +459,9 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -491,8 +477,8 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
+| y | double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
 
 **Return value:**
 
@@ -504,21 +490,15 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslateSync
 
-ArkTS-Dyn:
-```TypeScript
-applyTranslateSync(x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyTranslateSync(x: double, y: double): void
 ```
@@ -527,7 +507,9 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -543,19 +525,19 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
+| y | double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## clone
 
@@ -565,9 +547,11 @@ clone(): Promise<PixelMap>
 
 Copies this PixelMap object. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-clone(): Promise<PixelMap>--><!--Device-PixelMap-clone(): Promise<PixelMap>-End-->
 
@@ -583,11 +567,11 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
-| [62980102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## cloneSync
 
@@ -597,9 +581,11 @@ cloneSync(): PixelMap
 
 Copies this PixelMap object. This API returns the result synchronously.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-cloneSync(): PixelMap--><!--Device-PixelMap-cloneSync(): PixelMap-End-->
 
@@ -615,11 +601,11 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
-| [62980102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## convertPixelFormat
 
@@ -629,9 +615,11 @@ convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>
 
 The method is used for the transformation of the image formats. Pixel data will be changed by calling this method.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>--><!--Device-PixelMap-convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>-End-->
 
@@ -653,11 +641,11 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980274](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980274-failed-to-convert-images) | The conversion failed. |
-| [62980178](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the pixelmap. |
-| [62980276](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980276-unsupported-image-conversion-target-type) | The type to be converted is an unsupported target pixel format. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980274](../errorcode-image.md#62980274-failed-to-convert-images) | The conversion failed. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the pixelmap. |
+| [62980276](../errorcode-image.md#62980276-unsupported-image-conversion-target-type) | The type to be converted is an unsupported target pixel format. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 
 ## createAlphaPixelmap
 
@@ -665,13 +653,13 @@ The method is used for the transformation of the image formats. Pixel data will 
 createAlphaPixelmap(): Promise<PixelMap>
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -693,13 +681,13 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -713,7 +701,7 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createAlphaPixelmapSync
 
@@ -721,15 +709,15 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 createAlphaPixelmapSync(): PixelMap
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractAlphaPixelMapSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractAlphaPixelMapSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
 
@@ -745,26 +733,22 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#e
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## createCroppedAndScaledPixelMap
 
-ArkTS-Dyn:
-```TypeScript
-createCroppedAndScaledPixelMap(region: Region, x: number, y: number, level?: AntiAliasingLevel): Promise<PixelMap>
-```
-
-ArkTS-Sta:
 ```TypeScript
 createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>
 ```
 
 Creates an image that has been cropped and resized based on the specified cropping area, scale factors of the width and height, and anti-aliasing level. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>--><!--Device-PixelMap-createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>-End-->
 
@@ -775,8 +759,8 @@ Creates an image that has been cropped and resized based on the specified croppi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | region | Region | Yes | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. It must not be **0**. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. It must not be **0**. |
+| x | double | Yes | Scale factor of the width. It must not be **0**. |
+| y | double | Yes | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. Default value: **NONE**. |
 
 **Return value:**
@@ -789,28 +773,24 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
-| [7600205](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 
 ## createCroppedAndScaledPixelMapSync
 
-ArkTS-Dyn:
-```TypeScript
-createCroppedAndScaledPixelMapSync(region: Region, x: number, y: number, level?: AntiAliasingLevel): PixelMap
-```
-
-ArkTS-Sta:
 ```TypeScript
 createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap
 ```
 
 Creates an image that has been cropped and resized based on the specified cropping area, scale factors of the width and height, and anti-aliasing level. This API returns the result synchronously.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap--><!--Device-PixelMap-createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap-End-->
 
@@ -821,8 +801,8 @@ Creates an image that has been cropped and resized based on the specified croppi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | region | Region | Yes | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. It must not be **0**. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. It must not be **0**. |
+| x | double | Yes | Scale factor of the width. It must not be **0**. |
+| y | double | Yes | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. Default value: **NONE**. |
 
 **Return value:**
@@ -835,28 +815,24 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
-| [7600205](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 
 ## createScaledPixelMap
 
-ArkTS-Dyn:
-```TypeScript
-createScaledPixelMap(x: number, y: number, level?: AntiAliasingLevel): Promise<PixelMap>
-```
-
-ArkTS-Sta:
 ```TypeScript
 createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>
 ```
 
 Creates an image that has been resized based on the specified anti-aliasing level and the scale factors of the width and height. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>--><!--Device-PixelMap-createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>-End-->
 
@@ -866,8 +842,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | double | Yes | Scale factor of the width. |
+| y | double | Yes | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
 
 **Return value:**
@@ -880,26 +856,22 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## createScaledPixelMapSync
 
-ArkTS-Dyn:
-```TypeScript
-createScaledPixelMapSync(x: number, y: number, level?: AntiAliasingLevel): PixelMap
-```
-
-ArkTS-Sta:
 ```TypeScript
 createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap
 ```
 
 Creates an image that has been resized based on the specified anti-aliasing level and the scale factors of the width and height. This API returns the result synchronously.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap--><!--Device-PixelMap-createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap-End-->
 
@@ -909,8 +881,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | double | Yes | Scale factor of the width. |
+| y | double | Yes | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
 
 **Return value:**
@@ -923,8 +895,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## crop
 
@@ -932,13 +904,13 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 crop(region: Region, callback: AsyncCallback<void>): void
 ```
 
-Crops this image based on a given size. This API uses an asynchronous callback to return the result.
+Crops this image based on a given size. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -953,7 +925,7 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) inste
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | region | Region | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## crop
 
@@ -961,13 +933,13 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) inste
 crop(region: Region): Promise<void>
 ```
 
-Crops a PixelMap based on a given size. This API uses a promise to return the result.
+Crops a PixelMap based on a given size. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -995,15 +967,15 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) inste
 cropSync(region: Region): void
 ```
 
-Crops this image based on a given size. This API returns the result synchronously.
+Crops this image based on a given size. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-cropSync(region: Region): void--><!--Device-PixelMap-cropSync(region: Region): void-End-->
 
@@ -1019,8 +991,8 @@ Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## extractAlphaPixelMap
 
@@ -1032,7 +1004,9 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1054,11 +1028,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600306](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| [7600305](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## extractAlphaPixelMapSync
 
@@ -1070,7 +1044,9 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1092,11 +1068,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600306](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| [7600305](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## flip
 
@@ -1104,13 +1080,13 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): void
 ```
 
-Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
+Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1126,7 +1102,7 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) inste
 | --- | --- | --- | --- |
 | horizontal | boolean | Yes | Whether to flip the image horizontally. **true** to flip the image horizontally, **false** otherwise. |
 | vertical | boolean | Yes | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## flip
 
@@ -1134,13 +1110,13 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) inste
 flip(horizontal: boolean, vertical: boolean): Promise<void>
 ```
 
-Flips a PixelMap based on a given angle. This API uses a promise to return the result.
+Flips a PixelMap based on a given angle. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1169,15 +1145,15 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) inste
 flipSync(horizontal: boolean, vertical: boolean): void
 ```
 
-Flips this image horizontally or vertically, or both. This API returns the result synchronously.
+Flips this image horizontally or vertically, or both. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
 
@@ -1194,26 +1170,22 @@ Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## getBytesNumberPerRow
 
-ArkTS-Dyn:
-```TypeScript
-getBytesNumberPerRow(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBytesNumberPerRow(): int
 ```
 
 Obtains the number of bytes per row of this image. Unit: bytes.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1227,7 +1199,7 @@ Obtains the number of bytes per row of this image. Unit: bytes.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of bytes per row. |
+| int | Number of bytes per row. |
 
 ## getColorSpace
 
@@ -1237,9 +1209,11 @@ getColorSpace(): colorSpaceManager.ColorSpaceManager
 
 Obtains the color space of this image.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
@@ -1255,27 +1229,23 @@ Obtains the color space of this image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
 
 ## getDensity
 
-ArkTS-Dyn:
-```TypeScript
-getDensity(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDensity(): int
 ```
 
 Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1289,7 +1259,7 @@ Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Pixel density, in ppi. |
+| int | Pixel density, in ppi. |
 
 ## getImageInfo
 
@@ -1299,9 +1269,11 @@ getImageInfo(): Promise<ImageInfo>
 
 Obtains the image information of a PixelMap. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1325,9 +1297,11 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 
 Obtains the image information. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1341,7 +1315,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
 ## getImageInfoSync
 
@@ -1351,13 +1325,15 @@ getImageInfoSync(): ImageInfo
 
 Obtains the image information. This API returns the result synchronously.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-PixelMap-getImageInfoSync(): ImageInfo--><!--Device-PixelMap-getImageInfoSync(): ImageInfo-End-->
 
@@ -1373,7 +1349,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## getMetadata
 
@@ -1383,9 +1359,11 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue
 
 Obtains the value of the metadata with a given key in this PixelMap.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-getMetadata(key: HdrMetadataKey): HdrMetadataValue--><!--Device-PixelMap-getMetadata(key: HdrMetadataKey): HdrMetadataValue-End-->
 
@@ -1407,28 +1385,24 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## getPixelBytesNumber
 
-ArkTS-Dyn:
-```TypeScript
-getPixelBytesNumber(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getPixelBytesNumber(): int
 ```
 
 Obtains the total number of bytes of this image. Unit: bytes.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1442,25 +1416,21 @@ Obtains the total number of bytes of this image. Unit: bytes.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Total number of bytes. |
+| int | Total number of bytes. |
 
 ## getUniqueId
 
-ArkTS-Dyn:
-```TypeScript
-getUniqueId(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getUniqueId(): int
 ```
 
 Obtains the unique ID of this PixelMap.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-getUniqueId(): int--><!--Device-PixelMap-getUniqueId(): int-End-->
 
@@ -1470,13 +1440,13 @@ Obtains the unique ID of this PixelMap.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Unique ID. The value is a positive integer. |
+| int | Unique ID. The value is a positive integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
 
 ## isReleased
 
@@ -1484,16 +1454,13 @@ Obtains the unique ID of this PixelMap.
 isReleased(): boolean
 ```
 
-Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail.
+Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail. > **NOTE：**> > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
-> **NOTE：**
-> 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-PixelMap-isReleased(): boolean--><!--Device-PixelMap-isReleased(): boolean-End-->
 
@@ -1513,9 +1480,11 @@ marshalling(sequence: rpc.MessageSequence): void
 
 Marshals this PixelMap object and writes it to a MessageSequence object.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
@@ -1531,28 +1500,22 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## opacity
 
-ArkTS-Dyn:
-```TypeScript
-opacity(rate: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 opacity(rate: double, callback: AsyncCallback<void>): void
 ```
 
-Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
+Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1566,28 +1529,22 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| rate | double | Yes | Opacity rate. The value range is (0,1]. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## opacity
 
-ArkTS-Dyn:
-```TypeScript
-opacity(rate: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 opacity(rate: double): Promise<void>
 ```
 
-Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
+Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1601,7 +1558,7 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
+| rate | double | Yes | Opacity rate. The value range is (0,1]. |
 
 **Return value:**
 
@@ -1611,25 +1568,19 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) ins
 
 ## opacitySync
 
-ArkTS-Dyn:
-```TypeScript
-opacitySync(rate: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 opacitySync(rate: double): void
 ```
 
-Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
+Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacitySync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacitySync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-opacitySync(rate: double): void--><!--Device-PixelMap-opacitySync(rate: double): void-End-->
 
@@ -1639,14 +1590,14 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacityS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
+| rate | double | Yes | Opacity rate. The value range is (0,1]. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## readAllPixelsToBuffer
 
@@ -1654,11 +1605,13 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacityS
 readAllPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads all the pixel data from the PixelMap and writes the data to a buffer.The resulting data will be in the same pixel format as the PixelMap.
+Reads all the pixel data from the PixelMap and writes the data to a buffer. The resulting data will be in the same pixel format as the PixelMap.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1686,11 +1639,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readAllPixelsToBufferSync
 
@@ -1698,11 +1651,13 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 readAllPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads all the pixel data from the PixelMap and writes the data to a buffer.The resulting data will be in the same pixel format as the PixelMap.
+Reads all the pixel data from the PixelMap and writes the data to a buffer. The resulting data will be in the same pixel format as the PixelMap.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1724,11 +1679,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readPixels
 
@@ -1736,14 +1691,13 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1771,14 +1725,13 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixel
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1793,7 +1746,7 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixel
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the pixels will be read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readPixelsSync
 
@@ -1801,16 +1754,15 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixel
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API returns the result synchronously.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readPixelsToAreaSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readPixelsToAreaSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-readPixelsSync(area: PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: PositionArea): void-End-->
 
@@ -1826,8 +1778,8 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## readPixelsToArea
 
@@ -1839,7 +1791,9 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1867,11 +1821,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readPixelsToAreaSync
 
@@ -1883,7 +1837,9 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1905,11 +1861,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readPixelsToBuffer
 
@@ -1917,13 +1873,13 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses a promise to return the result.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1951,13 +1907,13 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses an asynchronous callback to return the result.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1972,7 +1928,7 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](#getPixelBytesNumber). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readPixelsToBufferSync
 
@@ -1980,17 +1936,17 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 readPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API returns the result synchronously.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readAllPixelsToBufferSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readAllPixelsToBufferSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
 
@@ -2006,8 +1962,8 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## release
 
@@ -2015,16 +1971,13 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. > **NOTE：**> > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
-> **NOTE：**
-> 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2038,7 +1991,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -2046,16 +1999,13 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 release(): Promise<void>
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. > **NOTE：**> > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
-> **NOTE：**
-> 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2073,23 +2023,17 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 ## rotate
 
-ArkTS-Dyn:
-```TypeScript
-rotate(angle: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 rotate(angle: double, callback: AsyncCallback<void>): void
 ```
 
-Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
+Rotates this image based on a given angle. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2103,28 +2047,22 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| angle | double | Yes | Angle to rotate. Unit: degrees. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## rotate
 
-ArkTS-Dyn:
-```TypeScript
-rotate(angle: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 rotate(angle: double): Promise<void>
 ```
 
-Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
+Rotates a PixelMap based on a given angle. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2138,7 +2076,7 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
+| angle | double | Yes | Angle to rotate. Unit: degrees. |
 
 **Return value:**
 
@@ -2148,25 +2086,19 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) i
 
 ## rotateSync
 
-ArkTS-Dyn:
-```TypeScript
-rotateSync(angle: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 rotateSync(angle: double): void
 ```
 
-Rotates this image based on a given angle. This API returns the result synchronously.
+Rotates this image based on a given angle. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotateSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotateSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-rotateSync(angle: double): void--><!--Device-PixelMap-rotateSync(angle: double): void-End-->
 
@@ -2176,34 +2108,28 @@ Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
+| angle | double | Yes | Angle to rotate. Unit: degrees. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## scale
 
-ArkTS-Dyn:
-```TypeScript
-scale(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 scale(x: double, y: double, callback: AsyncCallback<void>): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
+Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2217,29 +2143,23 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | double | Yes | Scale factor of the width. |
+| y | double | Yes | Scale factor of the height. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## scale
 
-ArkTS-Dyn:
-```TypeScript
-scale(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 scale(x: double, y: double): Promise<void>
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
+Scales this image based on the scale factors of the width and height. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2253,8 +2173,8 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | double | Yes | Scale factor of the width. |
+| y | double | Yes | Scale factor of the height. |
 
 **Return value:**
 
@@ -2264,27 +2184,21 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 ## scale
 
-ArkTS-Dyn:
-```TypeScript
-scale(x: number, y: number, level: AntiAliasingLevel): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-PixelMap-scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>--><!--Device-PixelMap-scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>-End-->
 
@@ -2294,8 +2208,8 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | double | Yes | Scale factor of the width. |
+| y | double | Yes | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | Yes | Anti-aliasing level. |
 
 **Return value:**
@@ -2308,30 +2222,24 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## scaleSync
 
-ArkTS-Dyn:
-```TypeScript
-scaleSync(x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 scaleSync(x: double, y: double): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
+Scales this image based on the scale factors of the width and height. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-scaleSync(x: double, y: double): void--><!--Device-PixelMap-scaleSync(x: double, y: double): void-End-->
 
@@ -2341,37 +2249,31 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | double | Yes | Scale factor of the width. |
+| y | double | Yes | Scale factor of the height. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## scaleSync
 
-ArkTS-Dyn:
-```TypeScript
-scaleSync(x: number, y: number, level: AntiAliasingLevel): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 scaleSync(x: double, y: double, level: AntiAliasingLevel): void
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-scaleSync(x: double, y: double, level: AntiAliasingLevel): void--><!--Device-PixelMap-scaleSync(x: double, y: double, level: AntiAliasingLevel): void-End-->
 
@@ -2381,16 +2283,16 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | double | Yes | Scale factor of the width. |
+| y | double | Yes | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | Yes | Anti-aliasing level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## setColorSpace
 
@@ -2398,13 +2300,13 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleS
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixel map.
+Set color space of pixel map. This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
 
-This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
@@ -2420,8 +2322,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 
 ## setMemoryNameSync
 
@@ -2431,9 +2333,11 @@ setMemoryNameSync(name: string): void
 
 Sets a memory name for this PixelMap.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-setMemoryNameSync(name: string): void--><!--Device-PixelMap-setMemoryNameSync(name: string): void-End-->
 
@@ -2449,9 +2353,9 @@ Sets a memory name for this PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980286](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) | Memory format not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980286](../errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) | Memory format not supported. |
 
 ## setMetadata
 
@@ -2461,9 +2365,11 @@ setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>
 
 Sets the value for the metadata with a given key in this PixelMap. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>--><!--Device-PixelMap-setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>-End-->
 
@@ -2486,19 +2392,13 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## setOpacity
 
-ArkTS-Dyn:
-```TypeScript
-setOpacity(value: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOpacity(value: double): Promise<void>
 ```
@@ -2507,7 +2407,9 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2523,7 +2425,7 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
 
 **Return value:**
 
@@ -2535,21 +2437,15 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600207](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setOpacitySync
 
-ArkTS-Dyn:
-```TypeScript
-setOpacitySync(value: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOpacitySync(value: double): void
 ```
@@ -2558,7 +2454,9 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2574,18 +2472,18 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600207](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setTransferDetached
 
@@ -2595,9 +2493,11 @@ setTransferDetached(detached: boolean): void
 
 Sets whether to detach from the original thread when this PixelMap is transmitted across threads. This API applies to the scenario where the PixelMap needs to be released immediately.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-setTransferDetached(detached: boolean): void--><!--Device-PixelMap-setTransferDetached(detached: boolean): void-End-->
 
@@ -2613,7 +2513,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## toSdr
 
@@ -2623,9 +2523,11 @@ toSdr(): Promise<void>
 
 Convert pixelmap to standard dynamic range.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-toSdr(): Promise<void>--><!--Device-PixelMap-toSdr(): Promise<void>-End-->
 
@@ -2641,27 +2543,21 @@ Convert pixelmap to standard dynamic range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) | Invalid image operation. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid image operation. |
 
 ## translate
 
-ArkTS-Dyn:
-```TypeScript
-translate(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 translate(x: double, y: double, callback: AsyncCallback<void>): void
 ```
 
-Translates this image based on given coordinates. This API uses an asynchronous callback to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+Translates this image based on given coordinates. This API uses an asynchronous callback to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2675,29 +2571,23 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTransl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | double | Yes | X coordinate to translate, in px. |
+| y | double | Yes | Y coordinate to translate, in px. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## translate
 
-ArkTS-Dyn:
-```TypeScript
-translate(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 translate(x: double, y: double): Promise<void>
 ```
 
-Translates a PixelMap based on given coordinates. This API uses a promise to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+Translates a PixelMap based on given coordinates. This API uses a promise to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2711,8 +2601,8 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTransl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
+| x | double | Yes | X coordinate to translate, in px. |
+| y | double | Yes | Y coordinate to translate, in px. |
 
 **Return value:**
 
@@ -2722,25 +2612,19 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTransl
 
 ## translateSync
 
-ArkTS-Dyn:
-```TypeScript
-translateSync(x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 translateSync(x: double, y: double): void
 ```
 
-Translates this image based on given coordinates. This API returns the result synchronously.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+Translates this image based on given coordinates. This API returns the result synchronously. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTranslateSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTranslateSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-translateSync(x: double, y: double): void--><!--Device-PixelMap-translateSync(x: double, y: double): void-End-->
 
@@ -2750,15 +2634,15 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
+| x | double | Yes | X coordinate to translate, in px. |
+| y | double | Yes | Y coordinate to translate, in px. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## unmarshalling
 
@@ -2766,11 +2650,13 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTr
 unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 ```
 
-Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createPixelMapFromParcel).
+Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode, use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createPixelMapFromParcel).
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
 
@@ -2792,9 +2678,9 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## writeAllPixelsFromBuffer
 
@@ -2802,11 +2688,13 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 writeAllPixelsFromBuffer(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixel data from a buffer and writes the data to the PixelMap.The source data must be in the same pixel format as the PixelMap.
+Reads the pixel data from a buffer and writes the data to the PixelMap. The source data must be in the same pixel format as the PixelMap.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2834,12 +2722,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writeAllPixelsFromBufferSync
 
@@ -2847,11 +2735,13 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 writeAllPixelsFromBufferSync(src: ArrayBuffer): void
 ```
 
-Reads the pixel data from a buffer and writes the data to the PixelMap.The source data must be in the same pixel format as the PixelMap.
+Reads the pixel data from a buffer and writes the data to the PixelMap. The source data must be in the same pixel format as the PixelMap.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2873,12 +2763,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writeBufferToPixels
 
@@ -2886,13 +2776,13 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 writeBufferToPixels(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses a promise to return the result.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2920,13 +2810,13 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses an asynchronous callback to return the result.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2941,7 +2831,7 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](#getPixelBytesNumber). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## writeBufferToPixelsSync
 
@@ -2949,15 +2839,15 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 writeBufferToPixelsSync(src: ArrayBuffer): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API returns the result synchronously.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeAllPixelsFromBufferSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeAllPixelsFromBufferSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
 
@@ -2973,8 +2863,8 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## writePixels
 
@@ -2982,14 +2872,13 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3017,14 +2906,13 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writeP
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3039,7 +2927,7 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writeP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the pixels will be written. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## writePixelsFromArea
 
@@ -3051,7 +2939,9 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3079,12 +2969,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writePixelsFromAreaSync
 
@@ -3096,7 +2986,9 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3118,12 +3010,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writePixelsSync
 
@@ -3131,18 +3023,17 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API returns the result synchronously.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writePixelsFromAreaSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writePixelsFromAreaSync) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-PixelMap-writePixelsSync(area: PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: PositionArea): void-End-->
 
@@ -3158,8 +3049,8 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## isEditable
 
@@ -3167,13 +3058,15 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 readonly isEditable: boolean
 ```
 
-Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.&lt;br&gt;This API can be used in atomic services since API version 11.&lt;br&gt;This API can be used in ArkTS widgets since API version 12.
+Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.&lt;br&gt; This API can be used in atomic services since API version 11.&lt;br&gt; This API can be used in ArkTS widgets since API version 12.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3189,13 +3082,15 @@ Whether the image pixels are editable. **true** if editable, **false** otherwise
 readonly isStrideAlignment: boolean
 ```
 
-Whether the row data of the image is memory aligned. The value **true** means that the row data is memory-aligned, and there may be blank bytes padded at the end of each row to meet alignment requirements. The value **false**means that the row data is not memory-aligned, and rows are packed contiguously with no padding bytes at the end.
+Whether the row data of the image is memory aligned. The value **true** means that the row data is memory-aligned , and there may be blank bytes padded at the end of each row to meet alignment requirements. The value **false** means that the row data is not memory-aligned, and rows are packed contiguously with no padding bytes at the end.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 

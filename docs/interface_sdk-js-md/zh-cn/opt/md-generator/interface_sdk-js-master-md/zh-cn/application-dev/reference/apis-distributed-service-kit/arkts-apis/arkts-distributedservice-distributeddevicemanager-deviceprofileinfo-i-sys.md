@@ -2,7 +2,9 @@
 
 设备信息。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDeviceManager-interface DeviceProfileInfo--><!--Device-distributedDeviceManager-interface DeviceProfileInfo-End-->
 
@@ -20,7 +22,9 @@ bleMac: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-bleMac: string--><!--Device-DeviceProfileInfo-bleMac: string-End-->
 
@@ -38,7 +42,9 @@ brMac: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-brMac: string--><!--Device-DeviceProfileInfo-brMac: string-End-->
 
@@ -56,7 +62,9 @@ deviceId: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-deviceId: string--><!--Device-DeviceProfileInfo-deviceId: string-End-->
 
@@ -74,7 +82,9 @@ deviceName: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-deviceName: string--><!--Device-DeviceProfileInfo-deviceName: string-End-->
 
@@ -92,7 +102,9 @@ deviceSn: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-deviceSn: string--><!--Device-DeviceProfileInfo-deviceSn: string-End-->
 
@@ -110,7 +122,9 @@ deviceType: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-deviceType: string--><!--Device-DeviceProfileInfo-deviceType: string-End-->
 
@@ -128,7 +142,9 @@ firmwareVersion: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-firmwareVersion: string--><!--Device-DeviceProfileInfo-firmwareVersion: string-End-->
 
@@ -146,7 +162,9 @@ hardwareVersion: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-hardwareVersion: string--><!--Device-DeviceProfileInfo-hardwareVersion: string-End-->
 
@@ -164,7 +182,9 @@ internalModel?: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-internalModel?: string--><!--Device-DeviceProfileInfo-internalModel?: string-End-->
 
@@ -178,14 +198,13 @@ internalModel?: string
 isLocalDevice: boolean
 ```
 
-是否为本地设备。
-
-- false：表示非本地设备，即被查询的其他设备。  
-- true：表示本地设备，即当前正在使用该接口的设备。
+是否为本地设备。 - false：表示非本地设备，即被查询的其他设备。 - true：表示本地设备，即当前正在使用该接口的设备。
 
 **类型：** boolean
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-isLocalDevice: boolean--><!--Device-DeviceProfileInfo-isLocalDevice: boolean-End-->
 
@@ -203,7 +222,9 @@ MAC地址。
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-mac: string--><!--Device-DeviceProfileInfo-mac: string-End-->
 
@@ -221,7 +242,9 @@ manufacturer: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-manufacturer: string--><!--Device-DeviceProfileInfo-manufacturer: string-End-->
 
@@ -239,7 +262,9 @@ model: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-model: string--><!--Device-DeviceProfileInfo-model: string-End-->
 
@@ -257,7 +282,9 @@ modifyTime: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-modifyTime: string--><!--Device-DeviceProfileInfo-modifyTime: string-End-->
 
@@ -275,7 +302,9 @@ productId: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-productId: string--><!--Device-DeviceProfileInfo-productId: string-End-->
 
@@ -293,7 +322,9 @@ productName?: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-productName?: string--><!--Device-DeviceProfileInfo-productName?: string-End-->
 
@@ -311,7 +342,9 @@ protocolType: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-protocolType: int--><!--Device-DeviceProfileInfo-protocolType: int-End-->
 
@@ -329,7 +362,9 @@ registerTime: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-registerTime: string--><!--Device-DeviceProfileInfo-registerTime: string-End-->
 
@@ -347,7 +382,9 @@ SDK版本。
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-sdkVersion: string--><!--Device-DeviceProfileInfo-sdkVersion: string-End-->
 
@@ -365,7 +402,9 @@ services?: Array<ServiceProfileInfo>
 
 **类型：** Array&lt;[ServiceProfileInfo](arkts-distributedservice-distributeddevicemanager-serviceprofileinfo-i-sys.md)&gt;
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-services?: Array<ServiceProfileInfo>--><!--Device-DeviceProfileInfo-services?: Array<ServiceProfileInfo>-End-->
 
@@ -383,7 +422,9 @@ setupType: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-setupType: int--><!--Device-DeviceProfileInfo-setupType: int-End-->
 
@@ -401,7 +442,9 @@ shareTime: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-shareTime: string--><!--Device-DeviceProfileInfo-shareTime: string-End-->
 
@@ -419,7 +462,9 @@ Starflash的MAC地址。
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-sleMac: string--><!--Device-DeviceProfileInfo-sleMac: string-End-->
 
@@ -437,7 +482,9 @@ softwareVersion: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-softwareVersion: string--><!--Device-DeviceProfileInfo-softwareVersion: string-End-->
 
@@ -455,7 +502,9 @@ subProductId?: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-subProductId?: string--><!--Device-DeviceProfileInfo-subProductId?: string-End-->
 
@@ -473,7 +522,9 @@ wiseDeviceId: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-wiseDeviceId: string--><!--Device-DeviceProfileInfo-wiseDeviceId: string-End-->
 
@@ -491,7 +542,9 @@ wiseUserId: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceProfileInfo-wiseUserId: string--><!--Device-DeviceProfileInfo-wiseUserId: string-End-->
 

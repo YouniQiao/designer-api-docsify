@@ -4,11 +4,13 @@ Represents a dynamic synchronization scene of Marquee.
 
 **Inheritance/Implementation:** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md#DynamicSyncScene)
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-unnamed-export declare class MarqueeDynamicSyncScene extends DynamicSyncScene--><!--Device-unnamed-export declare class MarqueeDynamicSyncScene extends DynamicSyncScene-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class MarqueeDynamicSyncScene--><!--Device-unnamed-export class MarqueeDynamicSyncScene-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +30,15 @@ Type of the MarqueeDynamicSyncSceneType.
 
 **Type:** [MarqueeDynamicSyncSceneType](arkts-arkui-arkui-uicontext-marqueedynamicsyncscenetype-e.md)
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MarqueeDynamicSyncScene-readonly type: MarqueeDynamicSyncSceneType--><!--Device-MarqueeDynamicSyncScene-readonly type: MarqueeDynamicSyncSceneType-End-->
 

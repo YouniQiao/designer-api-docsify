@@ -1,13 +1,14 @@
 # QuickImageDataHandler
 
-QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in   
-**onDataPrepared**.
+QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in **onDataPrepared**.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-photoAccessHelper-interface QuickImageDataHandler<T>--><!--Device-photoAccessHelper-interface QuickImageDataHandler<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-interface QuickImageDataHandler--><!--Device-photoAccessHelper-interface QuickImageDataHandler-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -23,17 +24,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void
 ```
 
-Called when the requested image is ready. If an error occurs, **data** returned by the callback is **undefined**.
-
-Information returned by **map**:
-
-| Map Key | **Description**|  
-|----------|-------|  
-| 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
+Called when the requested image is ready. If an error occurs, **data** returned by the callback is **undefined**. Information returned by **map**: | Map Key | **Description**| |----------|-------| | 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-QuickImageDataHandler-onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void--><!--Device-QuickImageDataHandler-onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void-End-->
 
@@ -57,7 +54,9 @@ Indicates required media asset data quickly is prepared
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-QuickImageDataHandler-onDataPrepared(data: T | undefined, imageSource: image.ImageSource | null, map: Map<string, string>): void--><!--Device-QuickImageDataHandler-onDataPrepared(data: T | undefined, imageSource: image.ImageSource | null, map: Map<string, string>): void-End-->
 

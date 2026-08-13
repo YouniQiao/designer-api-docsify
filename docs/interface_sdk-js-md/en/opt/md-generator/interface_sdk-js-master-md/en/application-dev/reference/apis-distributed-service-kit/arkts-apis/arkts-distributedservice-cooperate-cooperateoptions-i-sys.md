@@ -2,7 +2,9 @@
 
 Screen hopping options, such as the exit position.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cooperate-interface CooperateOptions--><!--Device-cooperate-interface CooperateOptions-End-->
 
@@ -26,7 +28,9 @@ Screen ID of the peer device.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CooperateOptions-displayId: long--><!--Device-CooperateOptions-displayId: long-End-->
 
@@ -44,7 +48,9 @@ X coordinate of the mouse cursor.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CooperateOptions-displayX: int--><!--Device-CooperateOptions-displayX: int-End-->
 
@@ -62,7 +68,9 @@ Y coordinate of the mouse cursor.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CooperateOptions-displayY: int--><!--Device-CooperateOptions-displayY: int-End-->
 

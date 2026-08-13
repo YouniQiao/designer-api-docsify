@@ -6,6 +6,8 @@ Provides parameters for system adaptive adjustments. By default, the system perf
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SystemAdaptiveOptions--><!--Device-unnamed-declare interface SystemAdaptiveOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Provides parameters for system adaptive adjustments. By default, the system perf
 disableSystemAdaptation?: boolean
 ```
 
-Whether to disable system adaptive adjustment. Whenever possible, do not include this parameter. This parameter only affects low-computing-power devices, the definition of which is determined by the device manufacturer. On low-computing-power devices, the system automatically decides whether to adjust effects (such as blur) to lower-computing-power alternatives based on conditions including computing power and load. To disable this feature, set this parameter to **true**.
-
-Default value: **false**
+Whether to disable system adaptive adjustment. Whenever possible, do not include this parameter. This parameter only affects low-computing-power devices, the definition of which is determined by the device manufacturer. On low- computing-power devices, the system automatically decides whether to adjust effects (such as blur) to lower- computing-power alternatives based on conditions including computing power and load. To disable this feature, set this parameter to **true**. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

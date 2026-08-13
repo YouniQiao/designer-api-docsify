@@ -2,7 +2,9 @@
 
 Obtains the network selection mode.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum NetworkSelectionMode--><!--Device-radio-export enum NetworkSelectionMode-End-->
 
@@ -16,7 +18,9 @@ NETWORK_SELECTION_UNKNOWN = 0
 
 Indicates that the network is unavailable for registration.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSelectionMode-NETWORK_SELECTION_UNKNOWN = 0--><!--Device-NetworkSelectionMode-NETWORK_SELECTION_UNKNOWN = 0-End-->
 
@@ -30,7 +34,9 @@ NETWORK_SELECTION_AUTOMATIC = 1
 
 Indicates that the network is unavailable for registration.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSelectionMode-NETWORK_SELECTION_AUTOMATIC = 1--><!--Device-NetworkSelectionMode-NETWORK_SELECTION_AUTOMATIC = 1-End-->
 
@@ -44,7 +50,9 @@ NETWORK_SELECTION_MANUAL = 2
 
 Manual network selection modes.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSelectionMode-NETWORK_SELECTION_MANUAL = 2--><!--Device-NetworkSelectionMode-NETWORK_SELECTION_MANUAL = 2-End-->
 

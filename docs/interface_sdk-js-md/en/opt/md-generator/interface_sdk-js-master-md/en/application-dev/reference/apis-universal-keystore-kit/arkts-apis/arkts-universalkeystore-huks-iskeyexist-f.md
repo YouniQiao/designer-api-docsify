@@ -18,7 +18,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
+**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
 
@@ -59,7 +59,7 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
+**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
 

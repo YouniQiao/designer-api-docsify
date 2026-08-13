@@ -8,9 +8,11 @@ function pick(): Promise<PickInfo>
 
 获取屏幕截图，当前仅支持获取displayId为0的屏幕截图（如果需要对扩展屏截图，可以通过[capture](arkts-arkui-screenshot-capture-f.md#capture)接口实现），使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-screenshot-function pick(): Promise<PickInfo>--><!--Device-screenshot-function pick(): Promise<PickInfo>-End-->
 
@@ -26,8 +28,8 @@ function pick(): Promise<PickInfo>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

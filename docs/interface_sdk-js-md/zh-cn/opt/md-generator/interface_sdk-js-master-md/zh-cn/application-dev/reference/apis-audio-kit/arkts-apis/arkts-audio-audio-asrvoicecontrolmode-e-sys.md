@@ -2,7 +2,9 @@
 
 ASR voice control mode.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum AsrVoiceControlMode--><!--Device-audio-enum AsrVoiceControlMode-End-->
 
@@ -18,7 +20,9 @@ AUDIO_2_VOICE_TX = 0
 
 Send output stream to TX.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX = 0--><!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX = 0-End-->
 
@@ -34,7 +38,9 @@ AUDIO_MIX_2_VOICE_TX = 1
 
 Send both output stream and MIC input to TX.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX = 1--><!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX = 1-End-->
 
@@ -50,7 +56,9 @@ AUDIO_2_VOICE_TX_EX = 2
 
 Based on the AUDIO_2_VOICE_TX, Send output stream to voice call record.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX_EX = 2--><!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX_EX = 2-End-->
 
@@ -66,7 +74,9 @@ AUDIO_MIX_2_VOICE_TX_EX = 3
 
 Based on the AUDIO_MIX_2_VOICE_TX, Send output stream to voice call record.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX_EX = 3--><!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX_EX = 3-End-->
 

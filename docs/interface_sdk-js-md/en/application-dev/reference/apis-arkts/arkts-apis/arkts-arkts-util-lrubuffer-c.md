@@ -10,7 +10,7 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **Substitutes:** [LRUCache](arkts-arkts-util-lrucache-c.md#LRUCache)
 
-<!--Device-util-class LruBuffer<K, V>--><!--Device-util-class LruBuffer<K, V>-End-->
+<!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -34,7 +34,7 @@ Specifies the default iterator for an object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [iterator]](ohos.util.LRUCache.[Symbol.iterator])
+**Substitutes:** iterator]
 
 <!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
@@ -151,7 +151,7 @@ A constructor used to create a **LruBuffer** instance. The default capacity of t
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](ohos.util.LRUCache.constructor)
+**Substitutes:** constructor
 
 <!--Device-LruBuffer-constructor(capacity?: number)--><!--Device-LruBuffer-constructor(capacity?: number)-End-->
 
@@ -826,7 +826,7 @@ Total number of values in this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [length](ohos.util.LRUCache.length)
+**Substitutes:** length
 
 <!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
 

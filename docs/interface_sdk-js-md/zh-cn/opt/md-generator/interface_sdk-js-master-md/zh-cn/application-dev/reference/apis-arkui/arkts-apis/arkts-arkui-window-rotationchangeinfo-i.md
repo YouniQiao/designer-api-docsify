@@ -2,7 +2,9 @@
 
 窗口旋转变化时的窗口信息。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface RotationChangeInfo--><!--Device-window-interface RotationChangeInfo-End-->
 
@@ -18,9 +20,11 @@ displayId: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RotationChangeInfo-displayId: long--><!--Device-RotationChangeInfo-displayId: long-End-->
 
@@ -36,9 +40,11 @@ displayRect: Rect
 
 **类型：** Rect
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RotationChangeInfo-displayRect: Rect--><!--Device-RotationChangeInfo-displayRect: Rect-End-->
 
@@ -50,20 +56,15 @@ displayRect: Rect
 orientation: number
 ```
 
-窗口显示方向。
-
-- 0表示竖屏。  
-- 1表示反向横屏。  
-- 2表示反向竖屏。  
-- 3表示横屏。
-
-开发者在使用时，需要注意该方向与display对象的属性orientation含义不一致。
+窗口显示方向。 - 0表示竖屏。 - 1表示反向横屏。 - 2表示反向竖屏。 - 3表示横屏。 开发者在使用时，需要注意该方向与display对象的属性orientation含义不一致。
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RotationChangeInfo-orientation: int--><!--Device-RotationChangeInfo-orientation: int-End-->
 
@@ -79,9 +80,11 @@ type: RotationChangeType
 
 **类型：** [RotationChangeType](arkts-arkui-window-rotationchangetype-e.md)
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RotationChangeInfo-type: RotationChangeType--><!--Device-RotationChangeInfo-type: RotationChangeType-End-->
 

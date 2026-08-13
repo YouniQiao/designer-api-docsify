@@ -20,7 +20,7 @@ static clear(options?: ClearStorageOptions): void
 
 **废弃版本：** 6
 
-**替代接口：** [clear](ohos.preferences.preferences.clear)
+**替代接口：** clear
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -46,7 +46,7 @@ static delete(options: DeleteStorageOptions): void
 
 **废弃版本：** 6
 
-**替代接口：** [delete](ohos.preferences.preferences.delete)
+**替代接口：** delete
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -72,7 +72,7 @@ static get(options: GetStorageOptions): void
 
 **废弃版本：** 6
 
-**替代接口：** [get](ohos.preferences.preferences.get)
+**替代接口：** get
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

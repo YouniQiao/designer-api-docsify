@@ -16,7 +16,9 @@ Specifies the bundleName of the application which the window that the target Com
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ON-export function inWindow(bundleName: string): On--><!--Device-ON-export function inWindow(bundleName: string): On-End-->
 

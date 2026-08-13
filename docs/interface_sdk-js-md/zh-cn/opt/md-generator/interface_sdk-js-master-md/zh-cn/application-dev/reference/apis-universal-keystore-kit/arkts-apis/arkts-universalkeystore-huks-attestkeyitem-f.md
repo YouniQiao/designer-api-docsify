@@ -6,15 +6,11 @@
 function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-获取密钥证书。使用callback异步回调。
-
-&lt;!--RP6--&gt;  
-> **说明：**
-> 
-> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。
-&lt;!--RP6End--&gt;
+获取密钥证书。使用callback异步回调。 &lt;!--RP6--&gt; > **说明：** > > 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。 &lt;!--RP6End--&gt;
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ATTEST_KEY
 
@@ -34,17 +30,17 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-该子功能不支持特性) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
 
 ## 示例
 
@@ -150,15 +146,11 @@ async function generateKeyThenAttestKey() {
 function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-获取密钥证书。使用Promise异步回调。
-
-&lt;!--RP6--&gt;  
-> **说明：**
-> 
-> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。
-&lt;!--RP6End--&gt;
+获取密钥证书。使用Promise异步回调。 &lt;!--RP6--&gt; > **说明：** > > 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。 &lt;!--RP6End--&gt;
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ATTEST_KEY
 
@@ -183,17 +175,17 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-该子功能不支持特性) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
 
 ## 示例
 

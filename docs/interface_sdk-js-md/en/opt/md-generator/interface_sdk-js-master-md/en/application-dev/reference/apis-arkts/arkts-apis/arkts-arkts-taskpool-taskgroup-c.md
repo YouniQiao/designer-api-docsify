@@ -1,9 +1,10 @@
 # TaskGroup
 
-Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements in the array is the same as the sequence of tasks added by calling  
-[addTask](#addTask-1). If any task fails, the corresponding exception is thrown.If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
+Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements in the array is the same as the sequence of tasks added by calling [addTask](#addTask). If any task fails, the corresponding exception is thrown. If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-taskpool-class TaskGroup--><!--Device-taskpool-class TaskGroup-End-->
 
@@ -21,9 +22,11 @@ import { taskpool } from '@kit.ArkTS';
 addTask(func: Function, ...args: Object[]): void
 ```
 
-Adds the function to be executed to this task group. Before using this API, you must create a **TaskGroup**instance.
+Adds the function to be executed to this task group. Before using this API, you must create a **TaskGroup** instance.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +45,7 @@ Adds the function to be executed to this task group. Before using this API, you 
 
 | Error Code ID |
 | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
 
 ## Examples
 
@@ -67,6 +70,8 @@ Adds a created task to this task group. Before using this API, you must create a
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TaskGroup-addTask(task: Task): void--><!--Device-TaskGroup-addTask(task: Task): void-End-->
@@ -83,9 +88,9 @@ Adds a created task to this task group. Before using this API, you must create a
 
 | Error Code ID |
 | --- |
-| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
 
 ## Examples
 
@@ -111,6 +116,8 @@ Constructor used to create a **TaskGroup** instance.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TaskGroup-constructor()--><!--Device-TaskGroup-constructor()-End-->
@@ -132,6 +139,8 @@ constructor(name: string)
 A constructor used to create a **TaskGroup** instance, with the task group name specified.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -164,6 +173,8 @@ Name of the task group specified when the task group is created.
 **Type:** string
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

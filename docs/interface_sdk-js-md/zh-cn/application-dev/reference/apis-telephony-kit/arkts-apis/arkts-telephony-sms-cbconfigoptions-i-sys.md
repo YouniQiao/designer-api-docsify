@@ -2,9 +2,11 @@
 
 小区广播配置选项。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface CBConfigOptions--><!--Device-sms-export interface CBConfigOptions-End-->
 
@@ -22,9 +24,11 @@ enable: boolean
 
 **类型：** boolean
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigOptions-enable: boolean--><!--Device-CBConfigOptions-enable: boolean-End-->
 
@@ -40,11 +44,13 @@ endMessageId: int
 
 消息结束ID
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigOptions-endMessageId: int--><!--Device-CBConfigOptions-endMessageId: int-End-->
 
@@ -62,9 +68,11 @@ ranType: RanType
 
 **类型：** [RanType](arkts-telephony-sms-rantype-e-sys.md)
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigOptions-ranType: RanType--><!--Device-CBConfigOptions-ranType: RanType-End-->
 
@@ -80,11 +88,13 @@ slotId: int
 
 卡槽ID
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigOptions-slotId: int--><!--Device-CBConfigOptions-slotId: int-End-->
 
@@ -100,11 +110,13 @@ startMessageId: int
 
 消息起始ID
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigOptions-startMessageId: int--><!--Device-CBConfigOptions-startMessageId: int-End-->
 

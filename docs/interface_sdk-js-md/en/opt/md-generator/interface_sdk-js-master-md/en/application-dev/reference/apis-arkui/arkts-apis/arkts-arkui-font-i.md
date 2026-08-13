@@ -4,6 +4,8 @@ Sets the text style.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface Font--><!--Device-unnamed-declare interface Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Sets the text style.
 family?: string | Resource
 ```
 
-Font family. &lt;br&gt;To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order.Example: **'Arial, HarmonyOS Sans'**.Default value: 'HarmonyOS Sans'.
+Font family. &lt;br&gt;To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. Default value: 'HarmonyOS Sans'.
 
 **Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,11 +36,13 @@ Font family. &lt;br&gt;To specify multiple fonts, separate them with commas (,),
 size?: Length
 ```
 
-Font size. If the value is of the number type, the unit fp is used. Percentage strings are not supported.Default value: 16fp.
+Font size. If the value is of the number type, the unit fp is used. Percentage strings are not supported. Default value: 16fp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,11 +56,13 @@ Font size. If the value is of the number type, the unit fp is used. Percentage s
 style?: FontStyle
 ```
 
-Font style.Default value: FontStyle.Normal.
+Font style. Default value: FontStyle.Normal.
 
 **Type:** FontStyle
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,11 +76,13 @@ Font style.Default value: FontStyle.Normal.
 weight?: FontWeight | number | string
 ```
 
-Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.Default value: FontWeight.Normal.
+Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font. Default value: FontWeight.Normal.
 
 **Type:** FontWeight \| number \| string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

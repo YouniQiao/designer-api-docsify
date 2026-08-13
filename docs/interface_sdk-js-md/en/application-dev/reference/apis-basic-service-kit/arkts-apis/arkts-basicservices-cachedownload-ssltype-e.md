@@ -2,9 +2,11 @@
 
 Enumerates secure communication protocols.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-enum SslType--><!--Device-cacheDownload-enum SslType-End-->
 
@@ -18,9 +20,11 @@ TLS = 'TLS'
 
 TLS.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SslType-TLS = 'TLS'--><!--Device-SslType-TLS = 'TLS'-End-->
 
@@ -34,9 +38,11 @@ TLCP = 'TLCP'
 
 TLCP.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SslType-TLCP = 'TLCP'--><!--Device-SslType-TLCP = 'TLCP'-End-->
 

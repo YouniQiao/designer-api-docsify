@@ -8,7 +8,7 @@ Describes the class of a bluetooth device.
 
 **Deprecated since:** 10
 
-**Substitutes:** [DeviceClass](ohos.bluetooth.connection/connection.DeviceClass)
+**Substitutes:** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md#DeviceClass)
 
 <!--Device-bluetoothManager-interface DeviceClass--><!--Device-bluetoothManager-interface DeviceClass-End-->
 
@@ -36,7 +36,7 @@ Class of the device.
 
 **Deprecated since:** 10
 
-**Substitutes:** [classOfDevice](ohos.bluetooth.connection/connection.DeviceClass#classOfDevice)
+**Substitutes:** [classOfDevice](arkts-connectivity-connection-deviceclass-i.md#classOfDevice)
 
 <!--Device-DeviceClass-classOfDevice: number--><!--Device-DeviceClass-classOfDevice: number-End-->
 
@@ -58,7 +58,7 @@ Major classes of Bluetooth devices.
 
 **Deprecated since:** 10
 
-**Substitutes:** [majorClass](ohos.bluetooth.connection/connection.DeviceClass#majorClass)
+**Substitutes:** [majorClass](arkts-connectivity-connection-deviceclass-i.md#majorClass)
 
 <!--Device-DeviceClass-majorClass: MajorClass--><!--Device-DeviceClass-majorClass: MajorClass-End-->
 
@@ -80,7 +80,7 @@ Major and minor classes of Bluetooth devices.
 
 **Deprecated since:** 10
 
-**Substitutes:** [majorMinorClass](ohos.bluetooth.connection/connection.DeviceClass#majorMinorClass)
+**Substitutes:** [majorMinorClass](arkts-connectivity-connection-deviceclass-i.md#majorMinorClass)
 
 <!--Device-DeviceClass-majorMinorClass: MajorMinorClass--><!--Device-DeviceClass-majorMinorClass: MajorMinorClass-End-->
 

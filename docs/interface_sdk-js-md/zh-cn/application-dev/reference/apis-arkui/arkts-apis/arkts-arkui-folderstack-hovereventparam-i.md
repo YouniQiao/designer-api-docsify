@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface HoverEventParam--><!--Device-unnamed-export declare interface HoverEventParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ appRotation: AppRotation
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ foldStatus: FoldStatus
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HoverEventParam-foldStatus: FoldStatus--><!--Device-HoverEventParam-foldStatus: FoldStatus-End-->
@@ -56,13 +62,15 @@ foldStatus: FoldStatus
 isHoverMode: boolean
 ```
 
-当前是否为悬停态。设置为true时表示当前为悬停态，设置为false时表示当前为非悬停态。
+当前是否为悬停态。 设置为true时表示当前为悬停态，设置为false时表示当前为非悬停态。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,6 +91,8 @@ windowStatusType: WindowStatusType
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Defines the range of the **RichEditor**.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorRange--><!--Device-unnamed-declare interface RichEditorRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ End position of the span whose style needs to be updated. If this parameter is l
 **Default:** text length
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ Start position of the span whose style needs to be updated. If this parameter is
 **Default:** 0
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

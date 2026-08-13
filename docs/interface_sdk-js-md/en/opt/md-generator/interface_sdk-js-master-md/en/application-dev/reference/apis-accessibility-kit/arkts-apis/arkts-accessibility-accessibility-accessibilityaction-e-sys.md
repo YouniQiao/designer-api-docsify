@@ -1,10 +1,10 @@
 # AccessibilityAction (System API)
 
-Enumerates executable actions for accessibility node elements.
+Enumerates executable actions for accessibility node elements. Accessibility node elements are UI components that support accessibility actions, such as buttons, text boxes, and so on.
 
-Accessibility node elements are UI components that support accessibility actions, such as buttons, text boxes, and so on.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum AccessibilityAction--><!--Device-unnamed-export enum AccessibilityAction-End-->
 
@@ -20,7 +20,9 @@ ACCESSIBILITY_FOCUS = 0
 
 Gain an accessibility focus.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-ACCESSIBILITY_FOCUS = 0--><!--Device-AccessibilityAction-ACCESSIBILITY_FOCUS = 0-End-->
 
@@ -36,7 +38,9 @@ CLEAR_ACCESSIBILITY_FOCUS = 1
 
 Clear an accessibility focus.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-CLEAR_ACCESSIBILITY_FOCUS = 1--><!--Device-AccessibilityAction-CLEAR_ACCESSIBILITY_FOCUS = 1-End-->
 
@@ -52,7 +56,9 @@ FOCUS = 2
 
 Gain a focus for a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-FOCUS = 2--><!--Device-AccessibilityAction-FOCUS = 2-End-->
 
@@ -68,7 +74,9 @@ CLEAR_FOCUS = 3
 
 Clear a focus for a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-CLEAR_FOCUS = 3--><!--Device-AccessibilityAction-CLEAR_FOCUS = 3-End-->
 
@@ -84,7 +92,9 @@ CLICK = 4
 
 Click a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-CLICK = 4--><!--Device-AccessibilityAction-CLICK = 4-End-->
 
@@ -100,7 +110,9 @@ LONG_CLICK = 5
 
 Long press a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-LONG_CLICK = 5--><!--Device-AccessibilityAction-LONG_CLICK = 5-End-->
 
@@ -116,7 +128,9 @@ CUT = 6
 
 Cut the content of a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-CUT = 6--><!--Device-AccessibilityAction-CUT = 6-End-->
 
@@ -132,7 +146,9 @@ COPY = 7
 
 Copy the content of a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-COPY = 7--><!--Device-AccessibilityAction-COPY = 7-End-->
 
@@ -148,7 +164,9 @@ PASTE = 8
 
 Paste the content into a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-PASTE = 8--><!--Device-AccessibilityAction-PASTE = 8-End-->
 
@@ -164,7 +182,9 @@ SELECT = 9
 
 Select a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SELECT = 9--><!--Device-AccessibilityAction-SELECT = 9-End-->
 
@@ -180,7 +200,9 @@ SET_TEXT = 10
 
 Set the text of a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SET_TEXT = 10--><!--Device-AccessibilityAction-SET_TEXT = 10-End-->
 
@@ -196,7 +218,9 @@ SCROLL_FORWARD = 11
 
 Scroll a component forward.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SCROLL_FORWARD = 11--><!--Device-AccessibilityAction-SCROLL_FORWARD = 11-End-->
 
@@ -212,7 +236,9 @@ SCROLL_BACKWARD = 12
 
 Scroll a component backward.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SCROLL_BACKWARD = 12--><!--Device-AccessibilityAction-SCROLL_BACKWARD = 12-End-->
 
@@ -228,7 +254,9 @@ SET_SELECTION = 13
 
 Select a text range in a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SET_SELECTION = 13--><!--Device-AccessibilityAction-SET_SELECTION = 13-End-->
 
@@ -244,7 +272,9 @@ SET_CURSOR_POSITION = 14
 
 Set the cursor position in a component.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SET_CURSOR_POSITION = 14--><!--Device-AccessibilityAction-SET_CURSOR_POSITION = 14-End-->
 
@@ -260,7 +290,9 @@ HOME = 15
 
 Return to the home screen.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-HOME = 15--><!--Device-AccessibilityAction-HOME = 15-End-->
 
@@ -276,7 +308,9 @@ BACK = 16
 
 Return to the previous screen.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-BACK = 16--><!--Device-AccessibilityAction-BACK = 16-End-->
 
@@ -292,7 +326,9 @@ RECENT_TASK = 17
 
 Open a recent task.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-RECENT_TASK = 17--><!--Device-AccessibilityAction-RECENT_TASK = 17-End-->
 
@@ -308,7 +344,9 @@ NOTIFICATION_CENTER = 18
 
 Open the notification center.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-NOTIFICATION_CENTER = 18--><!--Device-AccessibilityAction-NOTIFICATION_CENTER = 18-End-->
 
@@ -324,7 +362,9 @@ CONTROL_CENTER = 19
 
 Open the control center.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-CONTROL_CENTER = 19--><!--Device-AccessibilityAction-CONTROL_CENTER = 19-End-->
 
@@ -340,7 +380,9 @@ SPAN_CLICK = 20
 
 Click a text span.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SPAN_CLICK = 20--><!--Device-AccessibilityAction-SPAN_CLICK = 20-End-->
 
@@ -357,6 +399,8 @@ INJECT_ACTION = 21
 Injection action.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -375,6 +419,8 @@ EXECUTE_CUSTOM_ACTION = 22
 Execute custom action on a component.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

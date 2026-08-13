@@ -8,6 +8,8 @@ The observer will be called by the system when resource usage exceed threshold.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -22,4 +24,4 @@ The observer will be called by the system when resource usage exceed threshold.
 | --- | --- | --- |
 | [resourceType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sceneresource-i.md) | [ResourceType](arkts-ability-errormanager-resourcetype-e.md) | Yes |
 | resourceSize | number | Yes |
-| detailInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | No |
+| detailInfo | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number&gt; | No |

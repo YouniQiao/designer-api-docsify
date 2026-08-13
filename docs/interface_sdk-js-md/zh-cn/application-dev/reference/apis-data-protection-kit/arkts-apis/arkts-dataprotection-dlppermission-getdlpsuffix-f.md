@@ -6,13 +6,13 @@
 function getDLPSuffix(): string
 ```
 
-获取DLP文件扩展名。调用成功后返回DLP文件扩展名（如'.dlp'）。接口为同步接口。
-
-用于获取DLP文件的标准扩展名，便于构建DLP文件名或进行文件类型判断。
+获取DLP文件扩展名。调用成功后返回DLP文件扩展名（如'.dlp'）。接口为同步接口。 用于获取DLP文件的标准扩展名，便于构建DLP文件名或进行文件类型判断。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getDLPSuffix(): string--><!--Device-dlpPermission-function getDLPSuffix(): string-End-->
 
@@ -28,7 +28,7 @@ function getDLPSuffix(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 

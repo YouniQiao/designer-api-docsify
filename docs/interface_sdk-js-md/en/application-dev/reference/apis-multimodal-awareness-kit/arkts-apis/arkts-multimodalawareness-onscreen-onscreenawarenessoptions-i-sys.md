@@ -4,7 +4,9 @@ Defines the list of onscreen awareness parameters, which is used to obtain onscr
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-onScreen-export interface OnscreenAwarenessOptions--><!--Device-onScreen-export interface OnscreenAwarenessOptions-End-->
 
@@ -30,7 +32,9 @@ List of awareness parameters. The parameter result is a key-value data object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

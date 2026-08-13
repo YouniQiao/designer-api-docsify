@@ -3,6 +3,7 @@
 ## Line
 
 ```TypeScript
+@ComponentBuilder
 export declare function Line(
     options?: LineOptions
 ): LineAttribute
@@ -14,9 +15,11 @@ Line is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Line(    options?: LineOptions): LineAttribute--><!--Device-unnamed-export declare function Line(    options?: LineOptions): LineAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Line(    options?: LineOptions): LineAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Line(    options?: LineOptions): LineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Line is returned when the parameter is transferred.
 ## Line
 
 ```TypeScript
+@Builder
 export declare function Line(
     style: CustomBuilderT<LineAttribute>
 ): LineAttribute
@@ -47,11 +51,11 @@ Defines Line Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Line(    style: CustomBuilderT<LineAttribute>): LineAttribute--><!--Device-unnamed-export declare function Line(    style: CustomBuilderT<LineAttribute>): LineAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Line(    style: CustomBuilderT<LineAttribute>): LineAttribute--><!--Device-unnamed-@Builderexport declare function Line(    style: CustomBuilderT<LineAttribute>): LineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Line Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[LineAttribute](arkts-arkui-line-lineattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[LineAttribute](arkts-arkui-line-lineattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

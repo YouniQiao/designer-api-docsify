@@ -4,6 +4,8 @@
 
 **起始版本：** 13
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum MenuType--><!--Device-unnamed-declare enum MenuType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SELECTION_MENU = 0
 文本选择菜单。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ PREVIEW_MENU = 1
 图片预览菜单。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 流传输角色。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityConnectionManager-export enum StreamRole--><!--Device-abilityConnectionManager-export enum StreamRole-End-->
 
@@ -18,7 +20,9 @@ SOURCE = 0
 
 发送流。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ SINK = 1
 
 接收流。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

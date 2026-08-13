@@ -2,7 +2,9 @@
 
 应用级别的快速修复信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-quickFixManager-export interface ApplicationQuickFixInfo--><!--Device-quickFixManager-export interface ApplicationQuickFixInfo-End-->
 
@@ -20,7 +22,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleName: string-End-->
 
@@ -38,7 +42,9 @@ readonly bundleVersionCode: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long-End-->
 
@@ -56,7 +62,9 @@ readonly bundleVersionName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string-End-->
 
@@ -74,7 +82,9 @@ hap级别的快速修复信息。
 
 **类型：** Array&lt;[HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>--><!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>-End-->
 
@@ -92,7 +102,9 @@ readonly quickFixVersionCode: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long-End-->
 
@@ -110,7 +122,9 @@ readonly quickFixVersionName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string-End-->
 

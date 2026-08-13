@@ -1,16 +1,14 @@
 # Stabilization
 
-**Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#StabilizationQuery).
-
-It provides APIs to set video stabilization.
-
-You can set video stabilization only when a [VideoOutput](arkts-camera-camera-videooutput-i.md#VideoOutput) stream exists in the session.
+**Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#StabilizationQuery). It provides APIs to set video stabilization. You can set video stabilization only when a [VideoOutput](arkts-camera-camera-videooutput-i.md#VideoOutput) stream exists in the session.
 
 **Inheritance/Implementation:** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#StabilizationQuery)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-camera-interface Stabilization extends StabilizationQuery--><!--Device-camera-interface Stabilization extends StabilizationQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface Stabilization--><!--Device-camera-interface Stabilization-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,7 +26,9 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 Obtains the video stabilization mode in use.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -46,7 +46,7 @@ Obtains the video stabilization mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## setVideoStabilizationMode
 
@@ -54,10 +54,11 @@ Obtains the video stabilization mode in use.
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-Sets a video stabilization mode. Before the setting, call   
-[isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isVideoStabilizationModeSupported) to check whether the target video stabilization mode is supported. It is recommended that you set the video stabilization mode between [commitConfig](arkts-camera-camera-session-i.md#commitConfig) and [Start](arkts-camera-camera-session-i.md#start).
+Sets a video stabilization mode. Before the setting, call [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isVideoStabilizationModeSupported) to check whether the target video stabilization mode is supported. It is recommended that you set the video stabilization mode between [commitConfig](arkts-camera-camera-session-i.md#commitConfig) and [Start](arkts-camera-camera-session-i.md#start).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -75,4 +76,4 @@ Sets a video stabilization mode. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

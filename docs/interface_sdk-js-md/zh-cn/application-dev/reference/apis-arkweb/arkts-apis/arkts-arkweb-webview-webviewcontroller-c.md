@@ -1,10 +1,12 @@
 # WebviewController
 
-WebviewController can control various behaviors of Web components(including page navigation, declaring cycle state, JavaScript interaction and so on).A WebviewController object can only control one Web component,and methods on the Webviewcontroller (except static methods) can only be called after the web component is bound to the WebviewController.
+Provides methods for controlling the web controller.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebviewController--><!--Device-webview-class WebviewController-End-->
 
@@ -16,11 +18,15 @@ WebviewController can control various behaviors of Web components(including page
 accessBackward(): boolean
 ```
 
-Checks whether the web page can go back.
+当前页面是否可后退，即当前页面是否有返回历史记录。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-accessBackward(): boolean--><!--Device-WebviewController-accessBackward(): boolean-End-->
 
@@ -30,13 +36,13 @@ Checks whether the web page can go back.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if the web page can go back else false. |
+| boolean | 当前页面可以后退返回true,否则返回false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## accessForward
 
@@ -44,11 +50,15 @@ Checks whether the web page can go back.
 accessForward(): boolean
 ```
 
-Checks whether the web page can go forward.
+当前页面是否可前进，即当前页面是否有前进历史记录。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-accessForward(): boolean--><!--Device-WebviewController-accessForward(): boolean-End-->
 
@@ -58,27 +68,31 @@ Checks whether the web page can go forward.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if the web page can go forward else false. |
+| boolean | 可以前进返回true，否则返回false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## accessStep
 
 ```TypeScript
-accessStep(step: int): boolean
+accessStep(step: number): boolean
 ```
 
-Checks whether the web page can go back or forward the given number of steps.
+当前页面是否可前进或者后退给定的step步。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-accessStep(step: int): boolean--><!--Device-WebviewController-accessStep(step: int): boolean-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-accessStep(step: number): boolean--><!--Device-WebviewController-accessStep(step: number): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -86,20 +100,20 @@ Checks whether the web page can go back or forward the given number of steps.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| step | int | 是 | The number of steps. |
+| step | number | 是 | 要跳转的步数，正数代表前进，负数代表后退。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if the web page can go back else false. |
+| boolean | 页面是否前进或后退。 &lt;br&gt;返回true表示可以前进或者后退，返回false表示不可以前进或后退。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## addIntelligentTrackingPreventionBypassingList
 
@@ -107,11 +121,15 @@ Checks whether the web page can go back or forward the given number of steps.
 static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void
 ```
 
-Add bypassing hosts for Intelligent Tracking Prevention.
+添加智能防跟踪功能绕过的域名列表。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
 
@@ -121,28 +139,30 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hostList | Array&lt;string&gt; | 是 | Hosts that bypass the Intelligent Tracking Prevention. |
+| hostList | Array&lt;string&gt; | 是 | 绕过智能防跟踪功能的域名列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## avoidVisibleViewportBottom
 
 ```TypeScript
-avoidVisibleViewportBottom(avoidHeight: int): void
+avoidVisibleViewportBottom(avoidHeight: number): void
 ```
 
-Sets the bottom avoidance height of the web visible viewport.When setting non-zero height, the position and size of the web component remain unchanged,&lt;br&gt;and the visible viewport upward avoids avoidHeight, as manifested by the web page content raising avoidHeight.&lt;br&gt;This interface is generally used for customizing the bottom avoidance area, and it is not recommended for&lt;br&gt;simultaneous use with clicking the editable area of the web page showing the keyboard.&lt;br&gt;In this case, the keyboardAvoidMode will be OVERLAYS_CONTENT.When setting zero, web page content can be restored and the keyboardAvoidMode will be the value set by keyboardAvoidMode().
+设置Web网页可视视口底部避让高度。 > **说明：** > > - avoidHeight有效值区间为[0, Web组件高度]，超出有效值区间时取边界值。 > > - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的 > 场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。 > > - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用 > [keyboardAvoidMode()](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#keyboardavoidmode12) > 声明的模式。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: int): void--><!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: int): void-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void--><!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -150,28 +170,32 @@ Sets the bottom avoidance height of the web visible viewport.When setting non-ze
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| avoidHeight | int | 是 | the height value of the visible viewport avoidance. The valid interval of avoidHeight is [0, the height of web component]. When avoidHeight is out of the valid interval, it takes the boundary value of the interval. &lt;br&gt;Unit: vp. |
+| avoidHeight | number | 是 | 设置Web网页可视视口底部避让高度。&lt;br&gt;单位：vp&lt;br&gt;合法取值范围：0~Web组件高度&lt;br&gt;非法值设置行为：小于0取值为0，大于Web组件高度取值为 Web组件高度。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## backOrForward
 
 ```TypeScript
-backOrForward(step: int): void
+backOrForward(step: number): void
 ```
 
-Goes forward or back backOrForward in the history of the web page.
+按照历史栈，前进或者后退指定步长的页面，当历史栈中不存在对应步长的页面时，不会进行页面跳转。 前进或者后退页面时，直接使用已加载过的网页，无需重新加载网页。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-backOrForward(step: int): void--><!--Device-WebviewController-backOrForward(step: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-backOrForward(step: number): void--><!--Device-WebviewController-backOrForward(step: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -179,14 +203,14 @@ Goes forward or back backOrForward in the history of the web page.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| step | int | 是 | Steps to go forward or backward. |
+| step | number | 是 | 需要前进或后退的步长。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## backward
 
@@ -194,11 +218,15 @@ Goes forward or back backOrForward in the history of the web page.
 backward(): void
 ```
 
-Goes back in the history of the web page.
+按照历史栈，后退一个页面。一般结合[accessBackward](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessBackward)一起使用。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-backward(): void--><!--Device-WebviewController-backward(): void-End-->
 
@@ -208,7 +236,7 @@ Goes back in the history of the web page.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearBlanklessLoadingCache
 
@@ -216,11 +244,13 @@ Goes back in the history of the web page.
 static clearBlanklessLoadingCache(keys?: Array<string>) : void
 ```
 
-Clears the blankless loading cache of the page with a specified key value.
+清除指定key值页面无白屏优化缓存，本接口只清除缓存。 在小程序或Web应用场景中，当页面加载时内容变化显著，可能会出现一次明显的跳变。若对此跳变有所顾虑，可使用该接口清除页面缓存。 > **说明：** > > - 清除之后的页面，需在第三次加载页面时才会产生优化效果。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void--><!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void-End-->
 
@@ -230,13 +260,13 @@ Clears the blankless loading cache of the page with a specified key value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 否 | The list of key values of pages cached in the blankless loading solution. These key values are specified in getBlanklessInfoKey. The default value is the list of key values of all pages cached in the blankless loading solution. The key length cannot exceed 2048 characters, and the number of keys must be less than or equal to 100. The URL is the same as that input to the Web component during page loading. When the key length exceeds 2048 characters, the key does not take effect. When the number of keys exceeds 100, the first 100 keys are used. If these parameters are left empty, the default values are used. |
+| keys | Array&lt;string&gt; | 否 | 清除Blankless优化方案页面的key值列表，key值为 [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)中指定过的。&lt;br&gt;默认值：所有Blankless优化 方案缓存的页面key列表。&lt;br&gt;合法取值范围：长度不超过2048，key列表长度<=100。key和加载页面时输入给ArkWeb的相同。&lt;br&gt;非法值设置行为：传入undefined/null会抛出异常错误码401； key长度超过2048时该key不生效；长度超过100时，取前100个；当为空时，使用默认值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. @static |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
 
 ## clearClientAuthenticationCache
 
@@ -244,11 +274,15 @@ Clears the blankless loading cache of the page with a specified key value.
 clearClientAuthenticationCache(): void
 ```
 
-Clears the client authentication certificate cache in the Web.
+清除Web组件记录的客户端证书请求事件对应的用户操作行为。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-clearClientAuthenticationCache(): void--><!--Device-WebviewController-clearClientAuthenticationCache(): void-End-->
 
@@ -258,7 +292,7 @@ Clears the client authentication certificate cache in the Web.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearHistory
 
@@ -266,11 +300,15 @@ Clears the client authentication certificate cache in the Web.
 clearHistory(): void
 ```
 
-Clears the history in the Web.
+删除所有前进后退记录。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-clearHistory(): void--><!--Device-WebviewController-clearHistory(): void-End-->
 
@@ -280,7 +318,7 @@ Clears the history in the Web.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearHostIP
 
@@ -288,11 +326,15 @@ Clears the history in the Web.
 static clearHostIP(hostName: string): void
 ```
 
-Clear the host name IP address.
+清除指定主机域名解析后的IP地址。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static clearHostIP(hostName: string): void--><!--Device-WebviewController-static clearHostIP(hostName: string): void-End-->
 
@@ -302,13 +344,13 @@ Clear the host name IP address.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hostName | string | 是 | Which host name to be cleared. |
+| hostName | string | 是 | 要清除DNS记录的主机域名。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## clearIntelligentTrackingPreventionBypassingList
 
@@ -316,11 +358,15 @@ Clear the host name IP address.
 static clearIntelligentTrackingPreventionBypassingList(): void
 ```
 
-Clear bypassing hosts for Intelligent Tracking Prevention.
+删除通过addIntelligentTrackingPreventionBypassingList接口添加的所有域名。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void--><!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void-End-->
 
@@ -330,7 +376,7 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## clearMatches
 
@@ -338,11 +384,15 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 clearMatches(): void
 ```
 
-Clears the highlighting surrounding text matches created by searchAllAsync.
+清除所有通过[searchAllAsync](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#searchAllAsync)匹配到的高亮字符查找结果。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-clearMatches(): void--><!--Device-WebviewController-clearMatches(): void-End-->
 
@@ -352,7 +402,7 @@ Clears the highlighting surrounding text matches created by searchAllAsync.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearPrefetchedResource
 
@@ -360,11 +410,15 @@ Clears the highlighting surrounding text matches created by searchAllAsync.
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-Clears the cache of prefetched resources based on the specified cache key list.The cache key in the input parameter must be the prefetched resource cache key specified by API[prefetchResource](#prefetchResource).
+根据指定的缓存key列表清除对应的预获取资源缓存。入参中的缓存key必须是[prefetchResource](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#prefetchResource)指定预获取到的资 源缓存key。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void--><!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void-End-->
 
@@ -374,7 +428,7 @@ Clears the cache of prefetched resources based on the specified cache key list.T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cacheKeyList | Array&lt;string&gt; | 是 | The keys for memory cache. The key in cacheKeyList only support number and letters. |
+| cacheKeyList | Array&lt;string&gt; | 是 | 用于后续查询预获取资源缓存的key。仅支持字母和数字，未传入或传入空则取默认值url作为key。 |
 
 ## clearServiceWorkerWebSchemeHandler
 
@@ -384,9 +438,13 @@ static clearServiceWorkerWebSchemeHandler(): void
 
 Clear all web service worker scheme handlers.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void--><!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void-End-->
 
@@ -398,11 +456,15 @@ Clear all web service worker scheme handlers.
 clearSslCache(): void
 ```
 
-Clears the ssl cache in the Web.
+清除Web组件记录的SSL证书错误事件对应的用户操作行为。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-clearSslCache(): void--><!--Device-WebviewController-clearSslCache(): void-End-->
 
@@ -412,7 +474,7 @@ Clears the ssl cache in the Web.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearWebSchemeHandler
 
@@ -422,9 +484,13 @@ clearWebSchemeHandler(): void
 
 Clear all web scheme handlers for related web component.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-clearWebSchemeHandler(): void--><!--Device-WebviewController-clearWebSchemeHandler(): void-End-->
 
@@ -434,7 +500,7 @@ Clear all web scheme handlers for related web component.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## closeAllMediaPresentations
 
@@ -444,9 +510,13 @@ closeAllMediaPresentations(): void
 
 控制网页所有全屏视频关闭。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-closeAllMediaPresentations(): void--><!--Device-WebviewController-closeAllMediaPresentations(): void-End-->
 
@@ -456,7 +526,7 @@ closeAllMediaPresentations(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## closeCamera
 
@@ -466,9 +536,13 @@ closeCamera(): void
 
 关闭当前网页摄像头捕获。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-closeCamera(): void--><!--Device-WebviewController-closeCamera(): void-End-->
 
@@ -478,7 +552,7 @@ closeCamera(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## constructor
 
@@ -488,9 +562,13 @@ constructor(webTag?: string)
 
 A constructor used to create a WebviewController object.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-constructor(webTag?: string)--><!--Device-WebviewController-constructor(webTag?: string)-End-->
 
@@ -510,9 +588,13 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 
 Rendering current Web page into Pdf data, return the result in async mode.
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void-End-->
 
@@ -522,15 +604,15 @@ Rendering current Web page into Pdf data, return the result in async mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
+| configuration | [PdfConfiguration](../../apis-na/arkts-apis/arkts-na-webview-pdfconfiguration-i.md) | 是 | Parameters required for creating a PDF file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](../../apis-na/arkts-apis/arkts-na-webview-pdfdata-c.md)&gt; | 是 | Callback used to return the data stream of an online PDF file. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid input parameter. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## createPdf
 
@@ -540,9 +622,13 @@ createPdf(configuration: PdfConfiguration): Promise<PdfData>
 
 Rendering current Web page into Pdf data, return the result in promise mode.
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>-End-->
 
@@ -552,20 +638,20 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
+| configuration | [PdfConfiguration](../../apis-na/arkts-apis/arkts-na-webview-pdfconfiguration-i.md) | 是 | Parameters required for creating a PDF file. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | The promise returned by the function. PdfData is pdf data stream of current web page in Uint8Array { |
+| Promise&lt;[PdfData](../../apis-na/arkts-apis/arkts-na-webview-pdfdata-c.md)&gt; | Promise used to return the data stream of a web page. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid input parameter. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## createWebMessagePorts
 
@@ -573,11 +659,15 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 ```
 
-Create web message ports
+创建Web消息端口。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>--><!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>-End-->
 
@@ -587,20 +677,20 @@ Create web message ports
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isExtentionType | boolean | 否 | Set whether the web message port supports extention type. |
+| isExtentionType | boolean | 否 | 是否使用扩展增强接口。&lt;br&gt;默认值：false。<br>**起始版本：** 10 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; | An array represent 2 WebMessagePort, then can use those ports to communication with html pages. |
+| Array&lt;[WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md)&gt; | web消息端口列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed.<br>**适用版本：** 10+ |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## createWebPrintDocumentAdapter
 
@@ -610,9 +700,11 @@ createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 
 Creates a PrintDocumentAdapter instance to provide content for printing.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter--><!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter-End-->
 
@@ -628,14 +720,14 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 
 | 类型 | 说明 |
 | --- | --- |
-| print.PrintDocumentAdapter | Return PrintDocumentAdapter instance created. |
+| print.PrintDocumentAdapter | PrintDocumentAdapter** instance created. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## customizeSchemes
 
@@ -643,11 +735,15 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 static customizeSchemes(schemes: Array<WebCustomScheme>): void
 ```
 
-Register Web custom schemes.
+对Web内核赋予自定义协议URL的跨域请求与fetch请求的权限。当Web在跨域fetch自定义协议URL时，该fetch请求可被 onInterceptRequest事件接口所拦截，从而开发者可以进一步处理该请求。建议在任何Web组件初始化之前调用该接口。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void-End-->
 
@@ -657,14 +753,14 @@ Register Web custom schemes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-na/arkts-apis/arkts-na-webview-webcustomscheme-i.md)&gt; | 是 | 自定义协议配置，最多支持同时配置10个自定义协议。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100020](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## customizeSchemes
 
@@ -672,11 +768,15 @@ Register Web custom schemes.
 static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void
 ```
 
-Register Web custom schemes.
+对Web内核赋予自定义协议URL的跨域请求与fetch请求的权限。当Web在跨域fetch自定义协议URL时，该fetch请求可被 onInterceptRequest事件接口所拦截，从而开发者可以进一步处理该请求。建议在任何Web组件初始化之前调用该接口。
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void-End-->
 
@@ -686,15 +786,15 @@ Register Web custom schemes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
-| lazyInitWebEngine | boolean | 是 | When true: The interface internally skips initializing WebEngine and temporarily stores the registered schemes, which will be passed to WebEngine when it actually initializes. When false: The interface automatically performs WebEngine initialization internally. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-na/arkts-apis/arkts-na-webview-webcustomscheme-i.md)&gt; | 是 | 自定义协议配置，最多支持同时配置10个自定义协议。 |
+| lazyInitWebEngine | boolean | 是 | 为true时：接口内部跳过初始化WebEngine。 临时存储注册的方案，当它实际被传递给WebEngine时，这些方案将被传递给WebEngine 初始化。当false时：接口内部自动进行WebEngine初始化 - 表示接口内部是否跳过初始化WebEngine。&lt;br&gt;true表示接口内部跳过初始化WebEngine，并将注册的Schemes暂存，当它真正初始化 时，这些Schemes将传递给WebEngine。false表示接口内部自动进行WebEngine初始化。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100020](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. The length of the schemes array is greater than 10. 2. The character length of the scheme is greater than 32. 3. The character in the scheme is not within the allowed range of lowercase English letters, numbers, and the symbols ".", "+", "-". @static |
+| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. The length of the schemes array is greater than 10. 2. The character length of the scheme is greater than 32. 3. The character in the scheme is not within the allowed range of lowercase English letters, numbers, and the symbols ".", "+", "-". |
 
 ## deleteJavaScriptRegister
 
@@ -702,11 +802,15 @@ Register Web custom schemes.
 deleteJavaScriptRegister(name: string): void
 ```
 
-Deletes a registered JavaScript object with given name.
+删除一个已注册的、具有给定名称的JavaScript对象。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-deleteJavaScriptRegister(name: string): void--><!--Device-WebviewController-deleteJavaScriptRegister(name: string): void-End-->
 
@@ -716,15 +820,15 @@ Deletes a registered JavaScript object with given name.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | The name of a registered JavaScript object to be deleted. |
+| name | string | 是 | 要删除的已注册JavaScript对象的名称。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100008-删除不存在的javascriptproxy) | Failed to delete JavaScriptProxy because it does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100008](../errorcode-webview.md#17100008-删除不存在的javascriptproxy) | Failed to delete JavaScriptProxy because it does not exist. |
 
 ## enableAdsBlock
 
@@ -732,11 +836,15 @@ Deletes a registered JavaScript object with given name.
 enableAdsBlock(enable: boolean): void
 ```
 
-Enable the ability to block Ads, disabled by default.
+启用广告过滤功能。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-enableAdsBlock(enable: boolean): void--><!--Device-WebviewController-enableAdsBlock(enable: boolean): void-End-->
 
@@ -746,15 +854,15 @@ Enable the ability to block Ads, disabled by default.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | { |
+| enable | boolean | 是 | 是否启用广告过滤功能。&lt;br&gt;true表示启用广告过滤功能，false表示取消广告过滤功能。&lt;br&gt;默认值：false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## enableAdvancedSecurityMode
 
@@ -762,11 +870,13 @@ Enable the ability to block Ads, disabled by default.
 static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 ```
 
-Enable the application disable some features such as PDFViewer to enhance the security level of web application
+启用应用程序禁用PDFViewer等一些功能，以提高Web应用程序的安全级别
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -778,21 +888,23 @@ Enable the application disable some features such as PDFViewer to enhance the se
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| securityParams | [SecurityParams](arkts-arkweb-webview-securityparams-i.md) | 是 | The options means which supported option or item will be disabled. |
+| securityParams | [SecurityParams](../../apis-na/arkts-apis/arkts-na-webview-securityparams-i.md) | 是 | 参数表示将禁用支持的选项或项目。 |
 
 ## enableBackForwardCache
 
 ```TypeScript
-static enableBackForwardCache(features?: BackForwardCacheSupportedFeatures): void
+static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 ```
 
-Enable the BackForwardCache and indicate features that are allowed to enter BackForwardCache.Default is disabled.
+开启Web组件前进后退缓存功能，通过参数指定是否允许使用特定的页面进入前进后退缓存。 默认设置为禁用。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebviewController-static enableBackForwardCache(features?: BackForwardCacheSupportedFeatures): void--><!--Device-WebviewController-static enableBackForwardCache(features?: BackForwardCacheSupportedFeatures): void-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void--><!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -800,7 +912,7 @@ Enable the BackForwardCache and indicate features that are allowed to enter Back
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| features | [BackForwardCacheSupportedFeatures](arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | 否 | The features that supports BackForwardCache. @static |
+| features | [BackForwardCacheSupportedFeatures](../../apis-na/arkts-apis/arkts-na-webview-backforwardcachesupportedfeatures-c.md) | 是 | 允许使用特定的页面进入前进后退缓存中。 |
 
 ## enableIntelligentTrackingPrevention
 
@@ -808,11 +920,15 @@ Enable the BackForwardCache and indicate features that are allowed to enter Back
 enableIntelligentTrackingPrevention(enable: boolean): void
 ```
 
-Enable the ability to use Intelligent Tracking Prevention; default is disabled.
+启用智能防跟踪功能。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void--><!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void-End-->
 
@@ -822,15 +938,15 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | { |
+| enable | boolean | 是 | 是否启用智能防跟踪功能。&lt;br&gt;true表示启用智能防跟踪功能，false表示不启用智能防跟踪功能。&lt;br&gt;默认值：false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## enablePrivateNetworkAccess
 
@@ -838,11 +954,13 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 static enablePrivateNetworkAccess(enable: boolean): void
 ```
 
-After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight request before issuing any sub-resource private network requests to request explicit permission from the target server.After disable PrivateNetworkAccess, ArkWeb will no longer check whether the private network request is legitimate.
+After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight request before issuing any sub-resource private network requests to request explicit permission from the target server. After disable PrivateNetworkAccess, ArkWeb will no longer check whether the private network request is legitimate. By default, PrivateNetworkAccess feature is enabled.
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void--><!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void-End-->
 
@@ -852,7 +970,7 @@ After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight req
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | {@code true} enable the private network access check; {@code false} otherwise. @static |
+| enable | boolean | 是 | {@code true} enable the private network acccess check; {@code false} otherwise. |
 
 ## enableSafeBrowsing
 
@@ -860,11 +978,15 @@ After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight req
 enableSafeBrowsing(enable: boolean): void
 ```
 
-Enable the ability to check website security risks.Illegal and fraudulent websites are mandatory enabled and can't be disabled by this function.
+启用检查网站安全风险的功能，非法和欺诈网站是强制启用的，不能通过此功能禁用。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void--><!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void-End-->
 
@@ -874,13 +996,13 @@ Enable the ability to check website security risks.Illegal and fraudulent websit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | {@code true} enable check the website security risks; {@code false} otherwise. |
+| enable | boolean | 是 | {@code true} 启用检查网站安全风险的功能， {@code false} 表示不启用检查网站安全风险的功能。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## enableWholeWebPageDrawing
 
@@ -888,11 +1010,15 @@ Enable the ability to check website security risks.Illegal and fraudulent websit
 static enableWholeWebPageDrawing(): void
 ```
 
-Enables the full drawing capability for the web page.This API works only during Web component initialization.
+设置开启网页全量绘制能力。仅在web初始化时设置。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static enableWholeWebPageDrawing(): void--><!--Device-WebviewController-static enableWholeWebPageDrawing(): void-End-->
 
@@ -904,11 +1030,15 @@ Enables the full drawing capability for the web page.This API works only during 
 forward(): void
 ```
 
-Goes forward in the history of the web page.
+按照历史栈，前进一个页面。一般结合accessForward一起使用。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-forward(): void--><!--Device-WebviewController-forward(): void-End-->
 
@@ -918,7 +1048,7 @@ Goes forward in the history of the web page.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getActiveWebEngineVersion
 
@@ -928,9 +1058,11 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 获取当前ArkWeb内核版本。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion--><!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion-End-->
 
@@ -940,7 +1072,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
+| [ArkWebEngineVersion](../../apis-na/arkts-apis/arkts-na-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
 
 ## getAttachState
 
@@ -948,11 +1080,13 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 getAttachState(): ControllerAttachState
 ```
 
-Get whether webviewController is attached to a web component.
+获取webview controller是否绑定一个web组件
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-getAttachState(): ControllerAttachState--><!--Device-WebviewController-getAttachState(): ControllerAttachState-End-->
 
@@ -962,7 +1096,7 @@ Get whether webviewController is attached to a web component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) | the attach state of controller |
+| [ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md) | 绑定状态 |
 
 ## getBackForwardEntries
 
@@ -970,11 +1104,15 @@ Get whether webviewController is attached to a web component.
 getBackForwardEntries(): BackForwardList
 ```
 
-Get back forward stack list from current webview.
+获取当前Webview的历史信息列表。 > **说明：** > > onLoadIntercept在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用getBackForwardEntries > 拿到的历史栈不包括当前正在加载中的跳转。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getBackForwardEntries(): BackForwardList--><!--Device-WebviewController-getBackForwardEntries(): BackForwardList-End-->
 
@@ -984,13 +1122,13 @@ Get back forward stack list from current webview.
 
 | 类型 | 说明 |
 | --- | --- |
-| [BackForwardList](arkts-arkweb-webview-backforwardlist-i.md) | Back forward list for current webview. |
+| [BackForwardList](../../apis-na/arkts-apis/arkts-na-webview-backforwardlist-i.md) | 当前Webview的历史信息列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getBlanklessInfoWithKey
 
@@ -998,11 +1136,13 @@ Get back forward stack list from current webview.
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-Obtains the prediction information about the blankless loading solution and enables the generation of the transition frame for the current loading. The application determines whether to enable the blankless loading solution based on the information.
+获取页面首屏加载预测信息（详细说明见[BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md#BlanklessInfo)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏 加载。必须与[setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey)接口配套使用，并且必须在触发加载页面的 接口之前或在`onLoadIntercept`中调用。需在`WebViewController`与Web组件绑定后才能使用。 > **说明：** > > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口 > [setBlanklessLoadingCacheCapacity](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingCacheCapacity)设置缓存容量，具体见该 > 接口说明。超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 > > - 如果发现快照相似度（即[BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md#BlanklessInfo)中的similarity）极低，请确认key值是否传递正确。 > > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 > > - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。增 > 加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 > [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo--><!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo-End-->
 
@@ -1012,19 +1152,19 @@ Obtains the prediction information about the blankless loading solution and enab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | The key value that uniquely identifies the page. Default value: N/A. The value cannot be empty or exceed 2048 characters. When an invalid value is set, this API does not take effect. |
+| key | string | 是 | 唯一标识本页面的key值。&lt;br&gt;合法取值范围：非空，长度不超过2048个字符。&lt;br&gt;设置非法值时不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md) | The prediction information about the blankless loading solution. |
+| [BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md) | 页面首屏加载预测信息，主要包括首屏相似度预测值，首屏加载耗时预测值，应用需根据此信息来决策是否启用无白屏加载插帧。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
 
 ## getCertificate
 
@@ -1032,11 +1172,15 @@ Obtains the prediction information about the blankless loading solution and enab
 getCertificate(): Promise<Array<cert.X509Cert>>
 ```
 
-Get certificate for the current website.
+获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过Promise异步返回当前网站的X509格式证书。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>--><!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>-End-->
 
@@ -1052,7 +1196,7 @@ Get certificate for the current website.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a web component. |
 
 ## getCertificate
 
@@ -1060,11 +1204,15 @@ Get certificate for the current website.
 getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 ```
 
-Get certificate for the current website.
+获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过AsyncCallback异步返回当前网站的X509格式证书。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void--><!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void-End-->
 
@@ -1074,14 +1222,14 @@ Get certificate for the current website.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | the callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a web component. |
 
 ## getCustomUserAgent
 
@@ -1089,11 +1237,15 @@ Get certificate for the current website.
 getCustomUserAgent(): string
 ```
 
-Get custom user agent.
+获取自定义用户代理。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getCustomUserAgent(): string--><!--Device-WebviewController-getCustomUserAgent(): string-End-->
 
@@ -1103,13 +1255,13 @@ Get custom user agent.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Get custom User agent information. |
+| string | 用户自定义代理信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getDefaultUserAgent
 
@@ -1117,11 +1269,13 @@ Get custom user agent.
 static getDefaultUserAgent(): string
 ```
 
-Get the default user agent.
+获取默认用户代理。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static getDefaultUserAgent(): string--><!--Device-WebviewController-static getDefaultUserAgent(): string-End-->
 
@@ -1131,7 +1285,7 @@ Get the default user agent.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | The default user agent string. |
+| string | ArkWeb默认User-Agent字符串。 |
 
 ## getErrorPageEnabled
 
@@ -1141,9 +1295,11 @@ getErrorPageEnabled(): boolean
 
 Get whether default error page feature is enabled.
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-getErrorPageEnabled(): boolean--><!--Device-WebviewController-getErrorPageEnabled(): boolean-End-->
 
@@ -1159,7 +1315,7 @@ Get whether default error page feature is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getFavicon
 
@@ -1167,11 +1323,15 @@ Get whether default error page feature is enabled.
 getFavicon(): image.PixelMap
 ```
 
-Gets the favicon of current Web page.
+获取页面的favicon图标。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getFavicon(): image.PixelMap--><!--Device-WebviewController-getFavicon(): image.PixelMap-End-->
 
@@ -1187,7 +1347,75 @@ Gets the favicon of current Web page.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+## getHitTest
+
+```TypeScript
+getHitTest(): WebHitTestType
+```
+
+获取当前被点击区域的元素类型。 > **说明：** > > 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)替代。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 18
+
+**替代接口：** [getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-getHitTest(): WebHitTestType--><!--Device-WebviewController-getHitTest(): WebHitTestType-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md) | 被点击区域的元素类型。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+## getHitTestValue
+
+```TypeScript
+getHitTestValue(): HitTestValue
+```
+
+获取当前被点击区域的元素信息。 > **说明：** > > 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)替代。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 18
+
+**替代接口：** [getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-getHitTestValue(): HitTestValue--><!--Device-WebviewController-getHitTestValue(): HitTestValue-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [HitTestValue](../../apis-na/arkts-apis/arkts-na-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getLastHitTest
 
@@ -1195,11 +1423,13 @@ Gets the favicon of current Web page.
 getLastHitTest(): HitTestValue
 ```
 
-Gets the last hit test value of HitTest.
+获取上一次被点击区域的元素信息。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-getLastHitTest(): HitTestValue--><!--Device-WebviewController-getLastHitTest(): HitTestValue-End-->
 
@@ -1209,13 +1439,13 @@ Gets the last hit test value of HitTest.
 
 | 类型 | 说明 |
 | --- | --- |
-| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Return the element information of the clicked area. |
+| [HitTestValue](../../apis-na/arkts-apis/arkts-na-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getLastJavascriptProxyCallingFrameUrl
 
@@ -1223,11 +1453,15 @@ Gets the last hit test value of HitTest.
 getLastJavascriptProxyCallingFrameUrl(): string
 ```
 
-Get the url of the last frame that calls the JavaScriptProxy.This should be called on the UI thread.
+获取最后一次调用注入的对象的frame的URL。该方法应在 UI 线程上调用。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string--><!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string-End-->
 
@@ -1237,13 +1471,13 @@ Get the url of the last frame that calls the JavaScriptProxy.This should be call
 
 | 类型 | 说明 |
 | --- | --- |
-| string | The url of the last frame that calls the JavaScriptProxy. |
+| string | 最后一次调用注入的对象的frame的URL。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getLastPostMessageURL
 
@@ -1251,11 +1485,13 @@ Get the url of the last frame that calls the JavaScriptProxy.This should be call
 getLastPostMessageURL(): string
 ```
 
-Gets URL of frame that sent the last postMessage to native application.
+获取上一次发送post message给应用的HTML的frame的url
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1273,7 +1509,7 @@ Gets URL of frame that sent the last postMessage to native application.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getMediaPlaybackState
 
@@ -1283,9 +1519,13 @@ getMediaPlaybackState(): MediaPlaybackState
 
 查询当前网页音视频播放状态。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState--><!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState-End-->
 
@@ -1295,13 +1535,13 @@ getMediaPlaybackState(): MediaPlaybackState
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
+| [MediaPlaybackState](../../apis-na/arkts-apis/arkts-na-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getOriginalUrl
 
@@ -1309,11 +1549,15 @@ getMediaPlaybackState(): MediaPlaybackState
 getOriginalUrl(): string
 ```
 
-Gets the original url of current Web page.
+获取当前页面的原始URL地址。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getOriginalUrl(): string--><!--Device-WebviewController-getOriginalUrl(): string-End-->
 
@@ -1323,27 +1567,31 @@ Gets the original url of current Web page.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return the original url of the current page. |
+| string | 当前页面的原始URL地址。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getPageHeight
 
 ```TypeScript
-getPageHeight(): int
+getPageHeight(): number
 ```
 
-Obtains the height of this web page.
+获取当前网页的页面高度。具体使用详情请参考[获取网页内容高度](../../../web/web-getpage-height.md)。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-getPageHeight(): int--><!--Device-WebviewController-getPageHeight(): int-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-getPageHeight(): number--><!--Device-WebviewController-getPageHeight(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1351,13 +1599,13 @@ Obtains the height of this web page.
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Height of the current web page. Unit: vp. |
+| number | 当前网页的页面高度。单位：vp。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getPageOffset
 
@@ -1365,11 +1613,13 @@ Obtains the height of this web page.
 getPageOffset(): ScrollOffset
 ```
 
-Get the page offset. And the unit is virtual pixel.
+获取网页当前的滚动偏移量（不包含过滚动偏移量）。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-getPageOffset(): ScrollOffset--><!--Device-WebviewController-getPageOffset(): ScrollOffset-End-->
 
@@ -1379,13 +1629,13 @@ Get the page offset. And the unit is virtual pixel.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) | page offset |
+| [ScrollOffset](../../apis-na/arkts-apis/arkts-na-webview-scrolloffset-i.md) | 网页当前的滚动偏移量（不包含过滚动偏移量）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## getPrintBackground
 
@@ -1395,9 +1645,13 @@ getPrintBackground(): boolean
 
 Get whether print web page background.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getPrintBackground(): boolean--><!--Device-WebviewController-getPrintBackground(): boolean-End-->
 
@@ -1407,27 +1661,29 @@ Get whether print web page background.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Get whether print web page background. |
+| boolean | Whether the web page background is printed. &lt;br&gt;The value **true** indicates that the web page background is printed, and **false** indicates the opposite. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getProgress
 
 ```TypeScript
-getProgress() : int
+getProgress() : number
 ```
 
 Gets the loading progress for the current page.
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-WebviewController-getProgress() : int--><!--Device-WebviewController-getProgress() : int-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-getProgress() : number--><!--Device-WebviewController-getProgress() : number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1435,13 +1691,13 @@ Gets the loading progress for the current page.
 
 | 类型 | 说明 |
 | --- | --- |
-| int | The loading progress for the current page. |
+| number | 当前页面加载进度，取值范围[0, 100] |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## getRenderProcessMode
 
@@ -1451,9 +1707,13 @@ static getRenderProcessMode(): RenderProcessMode
 
 Get render process mode of the ArkWeb.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode--><!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode-End-->
 
@@ -1463,7 +1723,7 @@ Get render process mode of the ArkWeb.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
+| [RenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
 
 ## getScrollOffset
 
@@ -1471,11 +1731,15 @@ Get render process mode of the ArkWeb.
 getScrollOffset(): ScrollOffset
 ```
 
-Get the scroll offset of the webpage in view port, the coordinates of the top left corner of the view port are X: 0, Y: 0.And the unit is virtual pixel.
+获取网页当前的滚动偏移量（包含过滚动偏移量）。
 
-**起始版本：** 23
+**起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
 
@@ -1485,7 +1749,7 @@ Get the scroll offset of the webpage in view port, the coordinates of the top le
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) | scroll offset |
+| [ScrollOffset](../../apis-na/arkts-apis/arkts-na-webview-scrolloffset-i.md) | 网页当前的滚动偏移量（包含过滚动偏移量）。 |
 
 ## getScrollable
 
@@ -1493,11 +1757,15 @@ Get the scroll offset of the webpage in view port, the coordinates of the top le
 getScrollable(): boolean
 ```
 
-Get whether scrolling is allowed.
+获取当前网页是否允许滚动。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getScrollable(): boolean--><!--Device-WebviewController-getScrollable(): boolean-End-->
 
@@ -1507,13 +1775,13 @@ Get whether scrolling is allowed.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Get scrolling is allowed information. |
+| boolean | 当前网页是否允许滚动。 &lt;br&gt;true为允许滚动，false为禁止滚动。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getSecurityLevel
 
@@ -1521,11 +1789,15 @@ Get whether scrolling is allowed.
 getSecurityLevel(): SecurityLevel
 ```
 
-Get the security level of the current page.
+获取当前网页的安全级别。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getSecurityLevel(): SecurityLevel--><!--Device-WebviewController-getSecurityLevel(): SecurityLevel-End-->
 
@@ -1535,13 +1807,13 @@ Get the security level of the current page.
 
 | 类型 | 说明 |
 | --- | --- |
-| SecurityLevel | the security level of current page. |
+| SecurityLevel | 当前网页的安全级别，具体值为NONE、SECURE、WARNING、DANGEROUS。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getSiteIsolationMode
 
@@ -1551,9 +1823,11 @@ static getSiteIsolationMode(): SiteIsolationMode
 
 Get the site isolation mode.
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode--><!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode-End-->
 
@@ -1563,7 +1837,7 @@ Get the site isolation mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
+| [SiteIsolationMode](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
 
 ## getSurfaceId
 
@@ -1571,11 +1845,15 @@ Get the site isolation mode.
 getSurfaceId(): string
 ```
 
-Get the ID of the surface created by ArkWeb. This ID can be used for web page screenshots.
+获取ArkWeb对应Surface的ID，此ID可用于网页截图。 > **说明：** > > 仅Web组件渲染模式是ASYNC_RENDER时有效。getSurfaceId需要在Web组件初始化之后才能获取到值。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getSurfaceId(): string--><!--Device-WebviewController-getSurfaceId(): string-End-->
 
@@ -1585,7 +1863,7 @@ Get the ID of the surface created by ArkWeb. This ID can be used for web page sc
 
 | 类型 | 说明 |
 | --- | --- |
-| string | The ID of the surface created by ArkWeb. |
+| string | ArkWeb持有Surface的ID。 |
 
 ## getTitle
 
@@ -1593,11 +1871,15 @@ Get the ID of the surface created by ArkWeb. This ID can be used for web page sc
 getTitle(): string
 ```
 
-Gets the title of current Web page.
+获取当前网页的标题。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getTitle(): string--><!--Device-WebviewController-getTitle(): string-End-->
 
@@ -1607,13 +1889,13 @@ Gets the title of current Web page.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return to File Selector Title. |
+| string | 当前网页的标题。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getUrl
 
@@ -1621,11 +1903,15 @@ Gets the title of current Web page.
 getUrl(): string
 ```
 
-Gets the url of current Web page.
+获取当前页面的URL地址。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getUrl(): string--><!--Device-WebviewController-getUrl(): string-End-->
 
@@ -1635,13 +1921,13 @@ Gets the url of current Web page.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return the url of the current page. |
+| string | 当前页面的URL地址。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getUserAgent
 
@@ -1649,11 +1935,15 @@ Gets the url of current Web page.
 getUserAgent(): string
 ```
 
-Gets the default user agent.
+获取当前默认用户代理。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getUserAgent(): string--><!--Device-WebviewController-getUserAgent(): string-End-->
 
@@ -1663,13 +1953,13 @@ Gets the default user agent.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return user agent information. |
+| string | 默认用户代理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getUserAgentClientHintsEnabled
 
@@ -1677,13 +1967,13 @@ Gets the default user agent.
 static getUserAgentClientHintsEnabled(): boolean
 ```
 
-Get if the User-Agent Client Hints enabled.
+Get if the UserAgent Client Hints enabled.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean--><!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean-End-->
 
@@ -1693,7 +1983,7 @@ Get if the User-Agent Client Hints enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | If User-Agent Client Hints was enabled. |
+| boolean | If UserAgent Client Hints was enabled. |
 
 ## getUserAgentMetadata
 
@@ -1705,9 +1995,9 @@ Get the User-Agent metadata corresponding to the User-Agent.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata--><!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata-End-->
 
@@ -1723,21 +2013,25 @@ Get the User-Agent metadata corresponding to the User-Agent.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
+| [UserAgentMetadata](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
 
 ## getWebId
 
 ```TypeScript
-getWebId(): int
+getWebId(): number
 ```
 
 Gets the index value of the current Web component for the management of multiple Web components.
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-<!--Device-WebviewController-getWebId(): int--><!--Device-WebviewController-getWebId(): int-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-getWebId(): number--><!--Device-WebviewController-getWebId(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1745,13 +2039,13 @@ Gets the index value of the current Web component for the management of multiple
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Returns the index value of the current Web component. |
+| number | Returns the index value of the current Web component. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## hasImage
 
@@ -1761,9 +2055,13 @@ hasImage(): Promise<boolean>
 
 通过Promise方式异步查找当前页面是否存在图像。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-hasImage(): Promise<boolean>--><!--Device-WebviewController-hasImage(): Promise<boolean>-End-->
 
@@ -1779,8 +2077,8 @@ hasImage(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## hasImage
 
@@ -1790,9 +2088,13 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 通过Callback方式异步查找当前页面是否存在图像。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void--><!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1802,14 +2104,14 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。&lt;br&gt; true表示页面存在图像；false表示页面不存在图像。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。&lt;br&gt; true表示页面存在图像；false表示页面不存在图像。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## initializeWebEngine
 
@@ -1817,11 +2119,15 @@ hasImage(callback: AsyncCallback<boolean>): void
 static initializeWebEngine(): void
 ```
 
-Initialize the web engine before loading the Web components.This is a global static API that must be called on the UI thread, and it will have no effect if any Web components are loaded.
+Initialize the web engine before loading the Web components. This is a global static API that must be called on the UI thread, and it will have no effect if any Web components are loaded.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static initializeWebEngine(): void--><!--Device-WebviewController-static initializeWebEngine(): void-End-->
 
@@ -1833,11 +2139,13 @@ Initialize the web engine before loading the Web components.This is a global sta
 injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 ```
 
-Inject offline resources into cache.
+将本地离线资源注入到内存缓存中，以提升页面首次启动速度。 内存缓存中的资源由内核自动管理，当注入的资源过多导致内存压力过大，内核自动释放未使用的资源，应避免注入大量资源到内存缓存中。 正常情况下，资源的有效期由提供的Cache-Control或Expires响应头控制其有效期，默认的有效期为86400秒，即1天。 资源的MIMEType通过提供的Content-Type响应头配置，Content-Type需符合标准，否则无法正常使用，MODULE_JS必须提供有效的MIMEType，其他类型可不提供。 以此方式注入的资源，仅支持通过HTML中的标签加载。如果业务网页中的script标签使用了crossorigin属性，则必须在接口的responseHeaders参数中设置Cross-Origin响应头的值为anonymous 或use-credentials。 当调用`webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)`接口后，应用会启动多渲染进程模式，此接口在此场景下不 会生效。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void--><!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void-End-->
 
@@ -1847,14 +2155,15 @@ Inject offline resources into cache.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceMaps | Array&lt;[OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | 是 | Array of offline resource info maps. The count of array must between 1 and 30. |
+| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-na/arkts-apis/arkts-na-webview-offlineresourcemap-i.md)&gt; | 是 | 本地离线资源配置对象，单次调用最大支持注入30个资源，单个资源最大支持10Mb。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 12 - 21 |
 
 ## isActiveWebEngineEvergreen
 
@@ -1866,7 +2175,9 @@ static isActiveWebEngineEvergreen(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean--><!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean-End-->
 
@@ -1884,11 +2195,15 @@ static isActiveWebEngineEvergreen(): boolean
 isAdsBlockEnabled(): boolean
 ```
 
-Get whether Ads block is enabled.
+查询广告过滤功能是否开启。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-isAdsBlockEnabled(): boolean--><!--Device-WebviewController-isAdsBlockEnabled(): boolean-End-->
 
@@ -1898,13 +2213,13 @@ Get whether Ads block is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if the ability of AdsBlock is enabled; else false. |
+| boolean | 返回true代表广告过滤功能已开启，返回false代表广告过滤功能关闭。 &lt;br&gt;默认值：false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## isAdsBlockEnabledForCurPage
 
@@ -1912,11 +2227,15 @@ Get whether Ads block is enabled.
 isAdsBlockEnabledForCurPage(): boolean
 ```
 
-Get whether Ads block is enabled for current Webpage.
+查询当前网页是否开启广告过滤功能。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean--><!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean-End-->
 
@@ -1926,13 +2245,13 @@ Get whether Ads block is enabled for current Webpage.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if the ability of AdsBlock is enabled for current Webpage; else false. |
+| boolean | 返回true代表此网页已开启广告过滤，返回false代表当前网页已关闭广告过滤。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## isAutoPreconnectEnabled
 
@@ -1940,11 +2259,13 @@ Get whether Ads block is enabled for current Webpage.
 static isAutoPreconnectEnabled(): boolean
 ```
 
-‌Retrieve whether the automatic pre-connection feature is enabled‌.
+?Retrieve whether the automatic pre-connection feature is enabled?.
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean--><!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean-End-->
 
@@ -1962,11 +2283,15 @@ static isAutoPreconnectEnabled(): boolean
 isIncognitoMode(): boolean
 ```
 
-Whether the incognito mode is set.
+查询当前是否是隐私模式的Webview。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-isIncognitoMode(): boolean--><!--Device-WebviewController-isIncognitoMode(): boolean-End-->
 
@@ -1976,13 +2301,13 @@ Whether the incognito mode is set.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | { |
+| boolean | 返回是否是隐私模式的Webview。 &lt;br&gt;true表示是隐私模式，false表示不是隐私模式。 &lt;br&gt;默认为false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## isIntelligentTrackingPreventionEnabled
 
@@ -1990,11 +2315,15 @@ Whether the incognito mode is set.
 isIntelligentTrackingPreventionEnabled(): boolean
 ```
 
-Get whether Intelligent Tracking Prevention is enabled.
+获取Web组件是否启用了智能防跟踪功能。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean--><!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean-End-->
 
@@ -2004,14 +2333,14 @@ Get whether Intelligent Tracking Prevention is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if enable the Intelligent Tracking Prevention; else false. |
+| boolean | Web组件是否启用了智能防跟踪功能。 &lt;br&gt;true表示启用了智能防跟踪功能，false表示未启用智能防跟踪功能。 &lt;br&gt;默认值：false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2021,9 +2350,11 @@ static isPrivateNetworkAccessEnabled(): boolean
 
 Get whether PrivateNetworkAccess is enabled.
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean--><!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean-End-->
 
@@ -2033,7 +2364,7 @@ Get whether PrivateNetworkAccess is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True is enable the ability to check private network access else false. |
+| boolean | True if enable the ability to check private network access else false. |
 
 ## isSafeBrowsingEnabled
 
@@ -2041,11 +2372,15 @@ Get whether PrivateNetworkAccess is enabled.
 isSafeBrowsingEnabled(): boolean
 ```
 
-Get whether checking website security risks is enabled.
+获取当前网页是否启用了检查网站安全风险。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-isSafeBrowsingEnabled(): boolean--><!--Device-WebviewController-isSafeBrowsingEnabled(): boolean-End-->
 
@@ -2055,7 +2390,7 @@ Get whether checking website security risks is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if enable the ability to check website security risks else false. |
+| boolean | true表示启用了检查网站安全风险的功能，false表示未启用检查网站安全风险的功能。 |
 
 ## loadData
 
@@ -2063,11 +2398,15 @@ Get whether checking website security risks is enabled.
 loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void
 ```
 
-Loads the data or URL.
+加载指定的数据。 baseUrl与historyUrl同时为空的情况下： encoding如果为非base64（包括空值），则假定数据对安全URL字符范围内的八位字节使用ASCII编码，对该范围外的八位字节使用URL的标准%xx十六进制编码。 data数据必须使用base64编码或将内容中的任何#字符编码为%23。否则#将被视为内容的结尾而剩余的文本将被用作文档片段标识符。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void--><!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void-End-->
 
@@ -2077,18 +2416,19 @@ Loads the data or URL.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string | 是 | A string encoded according to "Base64" or "URL". |
-| mimeType | string | 是 | Media type. For example: "text/html". |
-| encoding | string | 是 | Encoding type. For example: "UTF-8". |
-| baseUrl | string | 否 | A specified URL path ("http"/"https"/"data" protocol), which is assigned to window.origin by the Web component. |
-| historyUrl | string | 否 | History URL. When it is not empty, it can be managed by history records to realize the back and forth function. This property is invalid when baseUrl is empty. |
+| data | string | 是 | 按照"base64"或者"URL"编码后的一段字符串。 |
+| mimeType | string | 是 | 媒体类型（MIME）。 |
+| encoding | string | 是 | 编码类型，具体为"base64"或者"URL"编码。 |
+| baseUrl | string | 否 | 按照"base64"或者"URL"编码后的一段字符串。 |
+| historyUrl | string | 否 | 用作历史记录所使用的URL。非空时，历史记录以此URL进行管理。当baseUrl为空时，此属性无效。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 9 - 10 |
 
 ## loadUrl
 
@@ -2096,11 +2436,15 @@ Loads the data or URL.
 loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 ```
 
-Loads the data or URL.
+加载指定的URL。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void--><!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void-End-->
 
@@ -2110,31 +2454,33 @@ Loads the data or URL.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | The URL to load. |
-| headers | Array&lt;WebHeader&gt; | 否 | Additional HTTP request header for URL. |
+| url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的URL。 |
+| headers | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。&lt;br&gt;默认值： []。 &lt;br&gt;传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid. |
-| [17100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid. |
+| [17100003](../errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
 
-## offControllerAttachStateChange
+## off_controllerAttachStateChange
 
 ```TypeScript
-offControllerAttachStateChange(callback?: Callback<ControllerAttachState>): void
+off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void
 ```
 
-Unregister the callback for controller attach state change.
+取消注册controller绑定状态变化的回调
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-WebviewController-offControllerAttachStateChange(callback?: Callback<ControllerAttachState>): void--><!--Device-WebviewController-offControllerAttachStateChange(callback?: Callback<ControllerAttachState>): void-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void--><!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2142,7 +2488,8 @@ Unregister the callback for controller attach state change.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | Callback used to return the controller attach state. |
+| type | 'controllerAttachStateChange' | 是 | the event of controller attach state change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | 否 | Callback used to return the controller attach state. |
 
 ## onActive
 
@@ -2150,11 +2497,15 @@ Unregister the callback for controller attach state change.
 onActive(): void
 ```
 
-Call this interface to notify the Web component to enter the foreground activation state.The activation state is the state in which the application interacts with the user.The application will remain in this state until something happens,such as receiving an incoming call or closing the screen of the device,to shift the focus away from the application.
+Let the Web active.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-onActive(): void--><!--Device-WebviewController-onActive(): void-End-->
 
@@ -2164,29 +2515,7 @@ Call this interface to notify the Web component to enter the foreground activati
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-
-## onControllerAttachStateChange
-
-```TypeScript
-onControllerAttachStateChange(callback: Callback<ControllerAttachState>): void
-```
-
-Register the callback for controller attach state change.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-WebviewController-onControllerAttachStateChange(callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-onControllerAttachStateChange(callback: Callback<ControllerAttachState>): void-End-->
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | Callback used to return the controller attach state. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## onCreateNativeMediaPlayer
 
@@ -2194,14 +2523,15 @@ Register the callback for controller attach state change.
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-注册回调函数，开启  
-[应用接管网页媒体播放功能](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12)后，当网页中有播放媒体时，触发注册的回调函数。
+注册回调函数，开启 [应用接管网页媒体播放功能](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12) 后，当网页中有播放媒体时，触发注册的回调函数。 如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
 
-如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
+**起始版本：** 12
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void--><!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void-End-->
 
@@ -2211,7 +2541,7 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
+| callback | [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
 
 ## onInactive
 
@@ -2219,11 +2549,15 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 onInactive(): void
 ```
 
-Call this interface to notify the Web component to enter the inactive state.In this callback, the developer can realize the appropriate behavior when the application loses focus.In this state, any content that can be safely paused will be paused as much as possible,such as animation and geographical location. However, JavaScript will not be paused.To pause JavaScript globally, please use [pauseAllTimers](#pauseAllTimers).To reactivate the Web component, call onActive.
+Let the Web inactive.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-onInactive(): void--><!--Device-WebviewController-onInactive(): void-End-->
 
@@ -2233,7 +2567,32 @@ Call this interface to notify the Web component to enter the inactive state.In t
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+## on_controllerAttachStateChange
+
+```TypeScript
+on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void
+```
+
+注册controller绑定状态变化的回调
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+<!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'controllerAttachStateChange' | 是 | the event of controller attach state change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | 是 | Callback used to return the controller attach state. |
 
 ## pageDown
 
@@ -2241,11 +2600,15 @@ Call this interface to notify the Web component to enter the inactive state.In t
 pageDown(bottom: boolean): void
 ```
 
-Scroll the contents of this Webview down by half the view size.
+将Webview的内容向下滚动半个视框大小或者跳转到页面最底部，通过bottom入参控制。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-pageDown(bottom: boolean): void--><!--Device-WebviewController-pageDown(bottom: boolean): void-End-->
 
@@ -2255,14 +2618,14 @@ Scroll the contents of this Webview down by half the view size.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bottom | boolean | 是 | Whether to jump to the bottom of the page, if set to false, the page content will scroll down half the size of the view frame, and when set to true, it will jump to the bottom of the page. |
+| bottom | boolean | 是 | 是否跳转到页面最底部。&lt;br&gt;false时表示将页面内容向下滚动半个视框大小，true表示跳转到页面最底部。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pageUp
 
@@ -2270,11 +2633,15 @@ Scroll the contents of this Webview down by half the view size.
 pageUp(top: boolean): void
 ```
 
-Scroll the contents of this Webview up by half the view size.
+将Webview的内容向上滚动半个视框大小或者跳转到页面最顶部，通过top入参控制。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-pageUp(top: boolean): void--><!--Device-WebviewController-pageUp(top: boolean): void-End-->
 
@@ -2284,14 +2651,14 @@ Scroll the contents of this Webview up by half the view size.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| top | boolean | 是 | Whether to jump to the top of the page, if set to false, the page content will scroll up half the size of the view frame, and when set to true, it will jump to the top of the page. |
+| top | boolean | 是 | 是否跳转到页面最顶部。&lt;br&gt;false表示将页面内容向上滚动半个视框大小，true表示跳转到页面最顶部。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pauseAllMedia
 
@@ -2301,9 +2668,13 @@ pauseAllMedia(): void
 
 控制网页所有音视频暂停。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-pauseAllMedia(): void--><!--Device-WebviewController-pauseAllMedia(): void-End-->
 
@@ -2313,7 +2684,7 @@ pauseAllMedia(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pauseAllTimers
 
@@ -2321,11 +2692,15 @@ pauseAllMedia(): void
 static pauseAllTimers(): void
 ```
 
-Pause all WebView timers.
+暂停所有WebView的定时器。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static pauseAllTimers(): void--><!--Device-WebviewController-static pauseAllTimers(): void-End-->
 
@@ -2335,7 +2710,7 @@ Pause all WebView timers.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pauseMicrophone
 
@@ -2347,7 +2722,9 @@ pauseMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-pauseMicrophone(): void--><!--Device-WebviewController-pauseMicrophone(): void-End-->
 
@@ -2357,7 +2734,7 @@ pauseMicrophone(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## postMessage
 
@@ -2365,11 +2742,15 @@ pauseMicrophone(): void
 postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 ```
 
-Post web message port to html
+发送Web消息端口到HTML。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void--><!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void-End-->
 
@@ -2379,16 +2760,16 @@ Post web message port to html
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Data name information to send. |
-| ports | Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; | 是 | Port number array information to send. |
-| uri | string | 是 | URI to receive this information. |
+| name | string | 是 | 要发送的消息名称。 |
+| ports | Array&lt;[WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md)&gt; | 是 | 要发送的消息端口。 |
+| uri | string | 是 | 接收该消息的URI。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## postUrl
 
@@ -2396,11 +2777,15 @@ Post web message port to html
 postUrl(url: string, postData: ArrayBuffer): void
 ```
 
-Loads the URL use "POST" method with post data.
+使用"POST"方法加载带有postData的URL。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void--><!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void-End-->
 
@@ -2410,30 +2795,32 @@ Loads the URL use "POST" method with post data.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | Request the URL use "POST" method. |
-| postData | ArrayBuffer | 是 | This data will passed to "POST" request. |
+| url | string | 是 | 需要加载的URL。 |
+| postData | ArrayBuffer | 是 | 使用"POST"方法传递数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid. |
 
 ## precompileJavaScript
 
 ```TypeScript
-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<int>
+precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>
 ```
 
-Compile javascript and generate code cache.
+预编译JavaScript生成字节码缓存或根据提供的参数更新已有的字节码缓存。 接口通过提供的文件信息、E-Tag响应头和Last-Modified响应头判断是否需要更新已有的字节码缓存。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<int>--><!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<int>-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>--><!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2441,22 +2828,22 @@ Compile javascript and generate code cache.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | Url of the javascript. Only support HTTP/HTTPS protocol and length no longer than 2048. |
-| script | string \| Uint8Array | 是 | Javascript source code. script must not be empty. |
-| cacheOptions | [CacheOptions](arkts-arkweb-webview-cacheoptions-i.md) | 是 | Generate code cache option. |
+| url | string | 是 | 本地JavaScript文件对应的网络地址，即业务网页请求该文件的服务器版本时使用的网络地址。网络地址仅支持http或https协议，长度不超过2048。如果该网络地址对应的缓存 失效，则业务网页将通过网络请求对应的资源。 |
+| script | string \| Uint8Array | 是 | 本地JavaScript的文本内容。内容不能为空。 |
+| cacheOptions | [CacheOptions](../../apis-na/arkts-apis/arkts-na-webview-cacheoptions-i.md) | 是 | 用于控制字节码缓存更新。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | The promise returned by the function. 0 means generate code cache successfully, -1 means internal error. |
+| Promise&lt;number&gt; | 生成字节码缓存的错误码，0表示无错误，-1表示内部错误。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## prefetchPage
 
@@ -2464,11 +2851,15 @@ Compile javascript and generate code cache.
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 ```
 
-Prefetch the resources required by the page, but will not execute js or render the page.
+在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。 > **说明：** > > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 > > - prefetchPage对302重定向页面同样正常预取。 > > - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。 > > - 连续prefetchPage多个URL只有第一个生效。 > > - prefetchPage有时间限制，500ms内不能多次预取。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void-End-->
 
@@ -2478,15 +2869,15 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | Which url to preresolve/preconnect. |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 | Additional HTTP request header of the URL. |
+| url | string | 是 | 预加载的URL。 |
+| additionalHeaders | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 10 - 21 |
 
 ## prefetchPage
 
@@ -2494,11 +2885,13 @@ Prefetch the resources required by the page, but will not execute js or render t
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void
 ```
 
-Prefetch the resources required by the page, but will not execute js or render the page.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;‌prefetchPage‌ does not cache resources with Cache-Control: no-store by default,and only allows one prefetch within 500ms.Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control:no-store and adjusting the throttling interval.
+Prefetch the resources required by the page, but will not execute js or render the page. > **说明：** > > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 > - prefetchPage对302重定向页面同样正常预取。 ?> - prefetchPage默认不缓存Cache-Control: no-store的资源，并且只允许在500ms内进行一次预取。 > - 可以通过prefetchOptions自定义预取行为，包括忽略Cache-Control: no-store和调整节流间隔。
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void-End-->
 
@@ -2508,31 +2901,35 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | Which url to preresolve/preconnect. |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 | Additional HTTP request header of the URL. |
-| prefetchOptions | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | 否 | Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control: no-store and adjusting the throttling interval. |
+| url | string | 是 | 预加载的URL。 |
+| additionalHeaders | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。&lt;br&gt;默认值： [] |
+| prefetchOptions | [PrefetchOptions](../../apis-na/arkts-apis/arkts-na-webview-prefetchoptions-c.md) | 否 | 预取行为可以通过 prefetchOptions 进行自定义，包括忽略 Cache-Control: no-store 以及调整节流间隔。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 21+ |
 
 ## prefetchResource
 
 ```TypeScript
 static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,
-        cacheValidTime?: int): void
+                            cacheValidTime?: number): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers,saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading.Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported.A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request,call API[clearPrefetchedResource](#clearPrefetchedResource) to clear the cache of unnecessary post requests.Otherwise, the cache of the earliest prefetched POST request will be automatically cleared.To use the prefetched resource cache, you need to add the key value ArkWebPostCacheKey to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
+根据指定的请求信息和附加的HTTP请求头去预获取资源请求，存入内存缓存，并指定其缓存key和有效期，以加快加载速度。目前仅支持Content-Type为application/x-www-form-urlencoded的 POST请求。最多可以预获取6个POST请求。如果要预获取第7个，请通过 [clearPrefetchedResource](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#clearPrefetchedResource)清除不需要的POST请求缓存，否则会自动清除最早预获取的 POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。 内存缓存中的资源由内核自动管理，当注入的资源过多导致内存压力过大，内核自动释放未使用的资源，应避免注入大量资源到内存缓存中。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,        cacheValidTime?: int): void--><!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,        cacheValidTime?: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,                            cacheValidTime?: number): void--><!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,                            cacheValidTime?: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2540,30 +2937,35 @@ Prefetches resource requests based on specified request information and addition
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | RequestInfo | 是 | The information of the request. |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 | Additional HTTP request header of the request. |
-| cacheKey | string | 否 | The key for memory cache. Default value is the url of the request. Only support number and letters. |
-| cacheValidTime | int | 否 | The valid time of the cache for request, ranges greater than 0. The unit is second. Default value is 300s. The value of cacheValidTime must between 1 and 2147483647. |
+| request | RequestInfo | 是 | 预获取请求的信息。 |
+| additionalHeaders | Array&lt;WebHeader&gt; | 否 | 预获取请求的附加HTTP请求头。 &lt;br&gt;传入undefined或null会抛出异常错误码401。 |
+| cacheKey | string | 否 | 用于后续查询预获取资源缓存的key。仅支持字母和数字，未传入或传入空则取默认值url作为key。&lt;br&gt;传入undefined或null会抛出异常错误码401。 |
+| cacheValidTime | number | 否 | 预获取资源缓存的有效期。&lt;br&gt;取值范围：(0, 2147483647]。&lt;br&gt;默认值：300s。 &lt;br&gt;单位：s。 &lt;br&gt;传入 undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 12 - 21 |
 
 ## prepareForPageLoad
 
 ```TypeScript
-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: int): void
+static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void
 ```
 
-Preresolve or Preconnect the url. This API can be called before loading the url to make loading faster.
+预连接URL，在加载URL之前调用此API，对URL只进行DNS解析，socket建链操作，并不获取主资源子资源。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: int): void--><!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void--><!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2571,16 +2973,16 @@ Preresolve or Preconnect the url. This API can be called before loading the url 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | Which url to preresolve/preconnect. |
-| preconnectable | boolean | 是 | Indicates whether to preconnect. |
-| numSockets | int | 是 | If preconnectable is true, this parameter indicates the number of sockets to be preconnected. |
+| url | string | 是 | 预连接的URL。 |
+| preconnectable | boolean | 是 | 是否进行预连接。如果preconnectable为true，则对URL进行DNS解析，socket建链预连接；如果preconnectable为false ，则不做任何预连接操作。 |
+| numSockets | number | 是 | 要预连接的socket数。socket数目连接需要大于0，最多允许6个连接。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
-| [17100013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100013-预连接时输入socket数目无效) | The number of preconnect sockets is invalid. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 10 - 21 |
+| [17100013](../errorcode-webview.md#17100013-预连接时输入socket数目无效) | The number of preconnect sockets is invalid. |
 
 ## refresh
 
@@ -2588,11 +2990,15 @@ Preresolve or Preconnect the url. This API can be called before loading the url 
 refresh(): void
 ```
 
-Refreshes the current URL.
+调用此接口通知Web组件刷新网页。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-refresh(): void--><!--Device-WebviewController-refresh(): void-End-->
 
@@ -2602,7 +3008,7 @@ Refreshes the current URL.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## refresh
 
@@ -2610,13 +3016,13 @@ Refreshes the current URL.
 refresh(ignoreCache: boolean): void
 ```
 
-Refreshes the current URL.
+通知Web组件刷新网页，可以选择是否忽略缓存刷新。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-WebviewController-refresh(ignoreCache: boolean): void--><!--Device-WebviewController-refresh(ignoreCache: boolean): void-End-->
 
@@ -2626,28 +3032,32 @@ Refreshes the current URL.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ignoreCache | boolean | 是 | If set to true, it indicates an end-to-end request with "pragma: no-cache"; otherwise, it performs a normal refresh. |
+| ignoreCache | boolean | 是 | Web组件刷新网页，选择是否忽略缓存刷新。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## registerJavaScriptProxy
 
 ```TypeScript
 registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,
-            asyncMethodList?: Array<string>, permission?: string): void
+        asyncMethodList?: Array<string>, permission?: string): void
 ```
 
-Registers the supplied ArkTS object into this Web component.The object is registered into all frames of the web page, including all iframes, using the specified name.This allows the methods of the ArkTS object to be accessed from JavaScript.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Registed objects will not appear in JavaScript until the page is next (re)load.To avoid memory leaks, registerJavaScriptProxy must be used together with deleteJavaScriptProxy.To avoid security risks, it is recommended that registerJavaScriptProxy be used with trusted web components.If the same method is registered repeatedly in both synchronous and asynchronous list, it will default to an asynchronous method.The synchronous function list and asynchronous function list cannot be empty at the same time.&lt;br&gt;otherwise, this registration will fail. &lt;p&gt;
+Registers the JavaScript object and method list.
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,            asyncMethodList?: Array<string>, permission?: string): void--><!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,            asyncMethodList?: Array<string>, permission?: string): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,        asyncMethodList?: Array<string>, permission?: string): void--><!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,        asyncMethodList?: Array<string>, permission?: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2655,18 +3065,18 @@ Registers the supplied ArkTS object into this Web component.The object is regist
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jsObject | object | 是 | Application side JavaScript objects participating in registration. |
+| jsObject | object | 是 | Application side JavaScript objects participating in registration.<br>**起始版本：** 9 |
 | name | string | 是 | The name of the registered object, which is consistent with the object name called in the window. |
 | methodList | Array&lt;string&gt; | 是 | The method of the application side JavaScript object participating in the registration. |
-| asyncMethodList | Array&lt;string&gt; | 否 | The async method of the application side JavaScript object participating in the registration. |
-| permission | string | 否 | permission configuration defining web page URLs that can access JavaScriptProxy methods. The configuration can be defined at two levels, object level and method level. |
+| asyncMethodList | Array&lt;string&gt; | 否 | The async method of the application side JavaScript object participating in the registration.<br>**起始版本：** 12 |
+| permission | string | 否 | permission configuration defining web page URLs that can access JavaScriptProxy methods. The configuration can be defined at two levels, object level and method level.<br>**起始版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## removeAllCache
 
@@ -2674,11 +3084,13 @@ Registers the supplied ArkTS object into this Web component.The object is regist
 static removeAllCache(clearRom: boolean): void
 ```
 
-Remove resource cache in application. So this method will remove all cache for all web components in the same application.
+清除应用中的资源缓存文件，此方法将会清除同一应用中所有Webview的缓存文件。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static removeAllCache(clearRom: boolean): void--><!--Device-WebviewController-static removeAllCache(clearRom: boolean): void-End-->
 
@@ -2688,13 +3100,13 @@ Remove resource cache in application. So this method will remove all cache for a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clearRom | boolean | 是 | Remove cache in both rom and ram if true. Otherwise only clear cache in ram. |
+| clearRom | boolean | 是 | 设置为true时同时清除ROM和RAM中的缓存，设置为false时只清除RAM中的缓存。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## removeCache
 
@@ -2702,13 +3114,15 @@ Remove resource cache in application. So this method will remove all cache for a
 removeCache(clearRom: boolean): void
 ```
 
-Clears the cache in the application. This API will clear the cache for all webviews in the same application.
+清除应用中的资源缓存文件，此方法将会清除同一应用中所有Webview的缓存文件。
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;You can view the Webview cache in the data/storage/el2/base/cache/web/Cache directory.&lt;/p&gt;
+**起始版本：** 9
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-removeCache(clearRom: boolean): void--><!--Device-WebviewController-removeCache(clearRom: boolean): void-End-->
 
@@ -2718,14 +3132,14 @@ Clears the cache in the application. This API will clear the cache for all webvi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clearRom | boolean | 是 | Whether to clear the cache in the ROM and RAM at the same time. {@code true} means to clear the cache in the ROM and RAM at the same time; {@code false} means to only clear the cache in the RAM. |
+| clearRom | boolean | 是 | 设置为true时同时清除ROM和RAM中的缓存，设置为false时只清除RAM中的缓存。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## removeIntelligentTrackingPreventionBypassingList
 
@@ -2733,11 +3147,15 @@ Clears the cache in the application. This API will clear the cache for all webvi
 static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void
 ```
 
-Remove bypassing hosts for Intelligent Tracking Prevention.
+删除通过addIntelligentTrackingPreventionBypassingList接口添加的部分域名列表。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
 
@@ -2747,14 +3165,14 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hostList | Array&lt;string&gt; | 是 | Hosts needs to remove from bypass list. |
+| hostList | Array&lt;string&gt; | 是 | 绕过智能防跟踪功能的域名列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## requestFocus
 
@@ -2762,11 +3180,15 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 requestFocus(): void
 ```
 
-Gets the request focus.
+使当前Web页面获取焦点。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-requestFocus(): void--><!--Device-WebviewController-requestFocus(): void-End-->
 
@@ -2776,21 +3198,25 @@ Gets the request focus.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## restoreWebState
 
 ```TypeScript
-restoreWebState(state: Uint8Array): void
+restoreWebState(state: Uint8Array) : void
 ```
 
-Restoring the web access stack, that is, the history of access.
+当前Webview从序列化数据中恢复页面状态历史记录。 如果state过大，可能会导致异常。建议state大于512k时，放弃恢复页面状态历史记录。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-restoreWebState(state: Uint8Array): void--><!--Device-WebviewController-restoreWebState(state: Uint8Array): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-restoreWebState(state: Uint8Array) : void--><!--Device-WebviewController-restoreWebState(state: Uint8Array) : void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2798,14 +3224,14 @@ Restoring the web access stack, that is, the history of access.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | Uint8Array | 是 | Web access stack after serialization. |
+| state | Uint8Array | 是 | 页面状态历史记录序列化数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## resumeAllMedia
 
@@ -2815,9 +3241,13 @@ resumeAllMedia(): void
 
 控制网页被pauseAllMedia接口暂停的音视频继续播放。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-resumeAllMedia(): void--><!--Device-WebviewController-resumeAllMedia(): void-End-->
 
@@ -2827,7 +3257,7 @@ resumeAllMedia(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## resumeAllTimers
 
@@ -2835,11 +3265,15 @@ resumeAllMedia(): void
 static resumeAllTimers(): void
 ```
 
-Resume all timers suspended from the pauseAllTimers() interface.
+恢复从pauseAllTimers()接口中被暂停的所有的定时器。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static resumeAllTimers(): void--><!--Device-WebviewController-static resumeAllTimers(): void-End-->
 
@@ -2849,7 +3283,7 @@ Resume all timers suspended from the pauseAllTimers() interface.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## resumeMicrophone
 
@@ -2857,12 +3291,13 @@ Resume all timers suspended from the pauseAllTimers() interface.
 resumeMicrophone(): void
 ```
 
-恢复当前网页麦克风捕获。使用麦克风功能前请在module.json5中添加权限: ohos.permission.MICROPHONE，具体权限的添加方法请参考  
-[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+恢复当前网页麦克风捕获。使用麦克风功能前请在module.json5中添加权限: ohos.permission.MICROPHONE，具体权限的添加方法请参考 [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-resumeMicrophone(): void--><!--Device-WebviewController-resumeMicrophone(): void-End-->
 
@@ -2872,7 +3307,7 @@ resumeMicrophone(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## runJavaScript
 
@@ -2880,11 +3315,15 @@ resumeMicrophone(): void
 runJavaScript(script: string): Promise<string>
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through a via Promise.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.&lt;br&gt;It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;br&gt;If you cannot obtain the return value by executing the asynchronous method,you need to determine whether to use synchronous or asynchronous mode based on the specific situation.&lt;p&gt;
+在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过Promise方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 > **说明：** > > - 跨导航操作（如loadUrl）时，JavaScript状态 将不再保留，例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 > > - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-runJavaScript(script: string): Promise<string>--><!--Device-WebviewController-runJavaScript(script: string): Promise<string>-End-->
 
@@ -2894,21 +3333,21 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string | 是 | JavaScript Script. |
+| script | string | 是 | JavaScript脚本。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, null will be returned. |
+| Promise&lt;string&gt; | Promise实例，返回脚本执行的结果，执行失败返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-resource路径错误) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
 
 ## runJavaScript
 
@@ -2916,11 +3355,15 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 runJavaScript(script: string, callback: AsyncCallback<string>): void
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;p&gt;
+在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过异步回调方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 > **说明：** > > - 跨导航操作（如loadUrl）时，JavaScript状态将不再保留。例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 > > - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void--><!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2930,16 +3373,16 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string | 是 | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Callbacks execute JavaScript script results. |
+| script | string | 是 | JavaScript脚本。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-resource路径错误) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
 
 ## runJavaScriptExt
 
@@ -2947,11 +3390,15 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 ```
 
-Execute JavaScript code in the context of the currently displayed page, and return the result.
+异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>-End-->
 
@@ -2961,20 +3408,20 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string \| ArrayBuffer | 是 | JavaScript Script. |
+| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 10 - 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, a none type value will be returned. |
+| Promise&lt;[JsMessageExt](../../apis-na/arkts-apis/arkts-na-webview-jsmessageext-c.md)&gt; | Promise实例，返回脚本执行的结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## runJavaScriptExt
 
@@ -2982,11 +3429,15 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void
 ```
 
-Execute JavaScript code in the context of the currently displayed page, and return the result.
+异步执行JavaScript脚本，并通过回调方式返回脚本执行的结果。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void-End-->
 
@@ -2996,29 +3447,33 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string \| ArrayBuffer | 是 | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | Callbacks execute JavaScript script results. |
+| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 10 - 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](../../apis-na/arkts-apis/arkts-na-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## scrollBy
 
 ```TypeScript
-scrollBy(deltaX: double, deltaY: double, duration?: int): void
+scrollBy(deltaX: number, deltaY: number, duration?: number): void
 ```
 
-Scroll by the delta position within specified time.
+在指定时间内将页面滚动指定的偏移量。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-scrollBy(deltaX: double, deltaY: double, duration?: int): void--><!--Device-WebviewController-scrollBy(deltaX: double, deltaY: double, duration?: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void--><!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3026,30 +3481,32 @@ Scroll by the delta position within specified time.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deltaX | double | 是 | the delta x of the position &lt;br&gt;Unit: vp. |
-| deltaY | double | 是 | the delta y of the position &lt;br&gt;Unit: vp. |
-| duration | int | 否 | the scroll animation duration. &lt;br&gt;Unit: millisecond, The value range is all integers, If the value is not passed, or is negative or 0, there is no animation. |
+| deltaX | number | 是 | 水平偏移量，其中水平向右为正方向。&lt;br&gt;单位：vp。 |
+| deltaY | number | 是 | 垂直偏移量，其中垂直向下为正方向。&lt;br&gt;单位：vp。 |
+| duration | number | 否 | 滚动动画时间。&lt;br&gt;单位：ms。 &lt;br&gt;不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。 &lt;br&gt;传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## scrollByWithResult
 
 ```TypeScript
-scrollByWithResult(deltaX: double, deltaY: double): boolean
+scrollByWithResult(deltaX: number, deltaY: number): boolean
 ```
 
-Scrolls by the specified delta position and returns a result indicating whether the scrolling operation was successful or not.
+将页面滚动指定的偏移量，返回值表示此次滚动是否执行成功。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebviewController-scrollByWithResult(deltaX: double, deltaY: double): boolean--><!--Device-WebviewController-scrollByWithResult(deltaX: double, deltaY: double): boolean-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean--><!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3057,35 +3514,39 @@ Scrolls by the specified delta position and returns a result indicating whether 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deltaX | double | 是 | the delta x of the position. The unit is vp |
-| deltaY | double | 是 | the delta y of the position. The unit is vp |
+| deltaX | number | 是 | 水平偏移量，其中水平向右为正方向。 &lt;br&gt;单位：vp。 |
+| deltaY | number | 是 | 垂直偏移量，其中垂直向下为正方向。 &lt;br&gt;单位：vp。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true if the scroll operation is successful, otherwise false. Return value scenario: when the Web page is in the touch state, return false, otherwise return true. In the same layer rendering scene, when the same layer rendering area of ??the Web is in the touching state, the return value is true. In a nested scrolling scenario, calling scrollByWithResult will not trigger nested scrolling of the parent component. This interface does not guarantee sliding frame rate performance. |
+| boolean | true表示当前网页可以滑动，false表示当前网页不可以滑动。 &lt;br&gt;默认为false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## scrollTo
 
 ```TypeScript
-scrollTo(x: double, y: double, duration?: int): void
+scrollTo(x: number, y: number, duration?: number): void
 ```
 
-Scroll to the position within specified time.
+Scrolls the page to the specified absolute position within a specified period. 在指定时间内，将页面滚动到指定的绝对位置。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-scrollTo(x: double, y: double, duration?: int): void--><!--Device-WebviewController-scrollTo(x: double, y: double, duration?: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-scrollTo(x: number, y: number, duration?: number): void--><!--Device-WebviewController-scrollTo(x: number, y: number, duration?: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3093,16 +3554,16 @@ Scroll to the position within specified time.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | double | 是 | the x of the position &lt;br&gt;Unit: vp. |
-| y | double | 是 | the y of the position &lt;br&gt;Unit: vp. |
-| duration | int | 否 | the scroll animation duration. &lt;br&gt;Unit: millisecond, The value range is all integers, If the value is not passed, or is negative or 0, there is no animation. |
+| x | number | 是 | 绝对位置的水平坐标，当传入数值为负数时，按照传入0处理。&lt;br&gt;单位：vp。 |
+| y | number | 是 | 绝对位置的垂直坐标，当传入数值为负数时，按照传入0处理。&lt;br&gt;单位：vp。 |
+| duration | number | 否 | 滚动动画时间。&lt;br&gt;单位：ms。&lt;br&gt;不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。 &lt;br&gt;传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## searchAllAsync
 
@@ -3110,11 +3571,15 @@ Scroll to the position within specified time.
 searchAllAsync(searchString: string): void
 ```
 
-Search all instances of 'searchString' on the page and highlights them,result will be notify through callback onSearchResultReceive.
+异步查找网页中所有匹配关键字'searchString'的内容并高亮，结果通过 onSearchResultReceive异步返回。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-searchAllAsync(searchString: string): void--><!--Device-WebviewController-searchAllAsync(searchString: string): void-End-->
 
@@ -3124,14 +3589,14 @@ Search all instances of 'searchString' on the page and highlights them,result wi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| searchString | string | 是 | String to be search. |
+| searchString | string | 是 | 查找的关键字。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## searchNext
 
@@ -3139,11 +3604,15 @@ Search all instances of 'searchString' on the page and highlights them,result wi
 searchNext(forward: boolean): void
 ```
 
-Highlights and scrolls to the next match search.
+滚动到下一个匹配的查找结果并高亮。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-searchNext(forward: boolean): void--><!--Device-WebviewController-searchNext(forward: boolean): void-End-->
 
@@ -3153,28 +3622,32 @@ Highlights and scrolls to the next match search.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| forward | boolean | 是 | Step of search is back or forward. |
+| forward | boolean | 是 | 从前向后或者逆向查找方式。&lt;br&gt;true表示从前向后查找，false表示从后向前查找。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## serializeWebState
 
 ```TypeScript
-serializeWebState(): Uint8Array
+serializeWebState() : Uint8Array
 ```
 
 Serialize the access stack of the web, that is, the history of access.
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebviewController-serializeWebState(): Uint8Array--><!--Device-WebviewController-serializeWebState(): Uint8Array-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-serializeWebState() : Uint8Array--><!--Device-WebviewController-serializeWebState() : Uint8Array-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3188,7 +3661,7 @@ Serialize the access stack of the web, that is, the history of access.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setActiveWebEngineVersion
 
@@ -3196,17 +3669,13 @@ Serialize the access stack of the web, that is, the history of access.
 static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 ```
 
-设置ArkWeb内核版本。若系统不支持指定版本，则设置无效。该接口为全局静态API，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。
+设置ArkWeb内核版本。若系统不支持指定版本，则设置无效。该接口为全局静态API，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。 > **说明：** > > - setActiveWebEngineVersion不支持在异步线程中调用。 > > - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
 
-> **说明：**
-> 
-> - setActiveWebEngineVersion不支持在异步线程中调用。
-> 
-> - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
+**起始版本：** 20
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void--><!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void-End-->
 
@@ -3216,7 +3685,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
+| engineVersion | [ArkWebEngineVersion](../../apis-na/arkts-apis/arkts-na-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
 
 ## setAppCustomUserAgent
 
@@ -3224,13 +3693,13 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Set the default User-Agent for the application.
+Set the default User-Agent for the application. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows: 1. The User-Agent set by setCustomUserAgent is used first. 2. If not set, it will check whether a specific User-Agent has been assigned to the current page via setUserAgentForHosts. 3. If no specific User-Agent is assigned, the application will fall back to using the User-Agent set by setAppCustomUserAgent. 4. If the app's default User-Agent is also not specified, the web's default User-Agent will be used as the final fallback. &lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows:1. The User-Agent set by setCustomUserAgent is used first.2. If not set, it will check whether a specific User-Agent has been  assigned to the current page via setUserAgentForHosts.3. If no specific User-Agent is assigned, the application will fall back  to using the User-Agent set by setAppCustomUserAgent.4. If the app's default User-Agent is also not specified, the web's default  User-Agent will be used as the final fallback.&lt;/p&gt;
+**起始版本：** 20
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void--><!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void-End-->
 
@@ -3240,7 +3709,7 @@ Set the default User-Agent for the application.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | The User-Agent string. @static |
+| userAgent | string | 是 | The User-Agent string. |
 
 ## setAudioMuted
 
@@ -3250,9 +3719,13 @@ setAudioMuted(mute: boolean): void
 
 设置网页静音。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setAudioMuted(mute: boolean): void--><!--Device-WebviewController-setAudioMuted(mute: boolean): void-End-->
 
@@ -3268,8 +3741,8 @@ setAudioMuted(mute: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setAutoPreconnect
 
@@ -3279,9 +3752,11 @@ static setAutoPreconnect(enabled: boolean): void
 
 Configure whether to enable automatic pre-connection to high-frequency URLs accessed during the application's previous lifecycle after web initialization.
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void--><!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void-End-->
 
@@ -3291,21 +3766,23 @@ Configure whether to enable automatic pre-connection to high-frequency URLs acce
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | Enable if true, disable if false. @static |
+| enabled | boolean | 是 | Enable if true, disable if false. |
 
 ## setBackForwardCacheOptions
 
 ```TypeScript
-setBackForwardCacheOptions(options?: BackForwardCacheOptions): void
+setBackForwardCacheOptions(options: BackForwardCacheOptions): void
 ```
 
-Configure the BackForwardCache.
+可以设置Web组件中前进后退缓存的相关选项。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebviewController-setBackForwardCacheOptions(options?: BackForwardCacheOptions): void--><!--Device-WebviewController-setBackForwardCacheOptions(options?: BackForwardCacheOptions): void-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void--><!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3313,27 +3790,29 @@ Configure the BackForwardCache.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [BackForwardCacheOptions](arkts-arkweb-webview-backforwardcacheoptions-c.md) | 否 | The configuration of BackForwardCache. |
+| options | [BackForwardCacheOptions](../../apis-na/arkts-apis/arkts-na-webview-backforwardcacheoptions-c.md) | 是 | 用来控制Web组件前进后退缓存相关选项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setBlanklessLoadingCacheCapacity
 
 ```TypeScript
-static setBlanklessLoadingCacheCapacity(capacity: int) : int
+static setBlanklessLoadingCacheCapacity(capacity: number) : number
 ```
 
-Sets the cache capacity of the blankless loading solution and returns the value that takes effect. If this API is not called, the default capacity 30 MB is used. The maximum capacity cannot exceed 100 MB.
+设置无白屏加载方案的持久化缓存容量，返回实际生效值。当接口没有显式调用时，默认缓存容量为30MB。当实际缓存超过容量时，将采用淘汰不常用的过渡帧的方式清理。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: int) : int--><!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: int) : int-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number--><!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3341,19 +3820,19 @@ Sets the cache capacity of the blankless loading solution and returns the value 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capacity | int | 是 | Cache capacity, in MB. The maximum value is 100 MB. The default value is 30 MB. The value ranges from 0 to 100. If this parameter is set to 0, no cache capacity is available and the functionality is disabled globally. When the value is set to a number smaller than 0, the value 0 takes effect. When the value is set to a number greater than 100, the value 100 takes effect. |
+| capacity | number | 是 | 设置持久化缓存设置，单位MB，最大设置不超过100MB。&lt;br&gt;合法取值范围：[0, 100]，当设置为0时，无缓存空间，则功能全局不开启。&lt;br&gt;非法值设置行为：小于 0时生效值为0，大于100时生效值为100。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | The effective value that ranges from 0 MB to 100 MB. |
+| number | 返回实际生效的容量值，范围0~100。 &lt;br&gt;小于0时生效值为0，大于100时生效值为100。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. @static |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
 
 ## setBlanklessLoadingWithKey
 
@@ -3361,11 +3840,13 @@ Sets the cache capacity of the blankless loading solution and returns the value 
 setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode
 ```
 
-Sets whether to enable blankless page loading. This API must be used in pair with the getBlanklessInfoWithKey API.
+设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)接口配套使用。 > **说明：** > > - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)。 > > - 页面加载必须在调用本接口的组件中进行。 > > - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 > [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode-End-->
 
@@ -3375,39 +3856,39 @@ Sets whether to enable blankless page loading. This API must be used in pair wit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | The key value that uniquely identifies the current page. It must be the same as the key value of the getBlanklessInfoWithKey API. Default value: N/A. The value cannot be empty or exceed 2048 characters. When an invalid value is set, the error code WebBlanklessErrorCode is returned, and the API does not take effect. |
-| is_start | boolean | 是 | Whether to enable frame interpolation. The value true indicates to enable frame interpolation, and the value false indicates the opposite. The default value is false. The value can be true or false. Action for setting an invalid value: N/A. |
+| key | string | 是 | 唯一标识本页面的key值。必须与getBlanklessInfoWithKey接口的key值相同。&lt;br&gt;合法取值范围：非空，长度不超过2048个字符。&lt;br&gt;非法值设置行为：返 回错误码WebBlanklessErrorCode，方案不生效。 |
+| is_start | boolean | 是 | 是否启用开始插帧。true：启用，false：不启用。&lt;br&gt;传入undefined或null时为false。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md) | 返回接口调用是否成功，具体见 [WebBlanklessErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
 
 ## setBlanklessLoadingWithParams
 
 ```TypeScript
 setBlanklessLoadingWithParams(key: string,
-            param: BlanklessLoadingParam) : WebBlanklessErrorCode
+      param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,            param: BlanklessLoadingParam) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,            param: BlanklessLoadingParam) : WebBlanklessErrorCode-End-->
+<!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,      param: BlanklessLoadingParam) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,      param: BlanklessLoadingParam) : WebBlanklessErrorCode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3415,34 +3896,38 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | Key value that uniquely identifies the current page. The key value must be the same as that of getBlanklessInfoWithKey. &lt;br&gt;Value range: (0, 2048] &lt;br&gt;Value range: (0, 2048] &lt;br&gt;which must be the same as the key value in getBlanklessInfoWithKey |
-| param | [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) | 是 | The parameter of blankless. For details see {@Link BlanklessLoadingParam}. &lt;br&gt;na |
+| key | string | 是 | Key value that uniquely identifies the current page. &lt;br&gt;Value range: (0, 2048] &lt;br&gt;The key value must be the same as that of getBlanklessInfoWithKey. |
+| param | [BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md) | 是 | The blankless loading parameter. &lt;br&gt;None |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## setConnectionTimeout
 
 ```TypeScript
-static setConnectionTimeout(timeout: int): void
+static setConnectionTimeout(timeout: number): void
 ```
 
-Set web engine socket connection timeout. Unit: seconds.
+设置网络连接超时时间，使用者可通过Web组件中的onErrorReceive方法获取超时错误码。若未调用该接口则默认超时时间为30秒。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-WebviewController-static setConnectionTimeout(timeout: int): void--><!--Device-WebviewController-static setConnectionTimeout(timeout: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-static setConnectionTimeout(timeout: number): void--><!--Device-WebviewController-static setConnectionTimeout(timeout: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3450,13 +3935,13 @@ Set web engine socket connection timeout. Unit: seconds.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | int | 是 | Socket connection timeout. The value should be an integer. |
+| timeout | number | 是 | socket连接超时时间，以秒为单位，必须为大于0的整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## setCustomUserAgent
 
@@ -3464,11 +3949,15 @@ Set web engine socket connection timeout. Unit: seconds.
 setCustomUserAgent(userAgent: string): void
 ```
 
-Set custom user agent.
+设置自定义用户代理，会覆盖系统的用户代理。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setCustomUserAgent(userAgent: string): void--><!--Device-WebviewController-setCustomUserAgent(userAgent: string): void-End-->
 
@@ -3478,14 +3967,14 @@ Set custom user agent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | User custom agent information. |
+| userAgent | string | 是 | 用户自定义代理信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setDownloadDelegate
 
@@ -3493,11 +3982,15 @@ Set custom user agent.
 setDownloadDelegate(delegate: WebDownloadDelegate): void
 ```
 
-Set delegate for download.Used to notify the progress of the download triggered from web.
+为当前的Web组件设置一个WebDownloadDelegate，该delegate用来接收页面内触发的下载进度的委托。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
 
@@ -3507,13 +4000,13 @@ Set delegate for download.Used to notify the progress of the download triggered 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from web. |
+| delegate | [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md) | 是 | 用来接收下载进度的委托。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setErrorPageEnabled
 
@@ -3521,11 +4014,13 @@ Set delegate for download.Used to notify the progress of the download triggered 
 setErrorPageEnabled(enable: boolean): void
 ```
 
-Set whether enable the error page. onOverrideErrorPage will be triggered when the page error.
+是否开启默认错误页，开启后onOverrideErrorPage会在页面发生错误的时候进行回调
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void-End-->
 
@@ -3535,27 +4030,31 @@ Set whether enable the error page. onOverrideErrorPage will be triggered when th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Whether to enable the default error page feature. |
+| enable | boolean | 是 | 是否开启 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setHostIP
 
 ```TypeScript
-static setHostIP(hostName: string, address: string, aliveTime: int): void
+static setHostIP(hostName: string, address: string, aliveTime: number): void
 ```
 
-Set IP address for host name.
+设置主机域名解析后的IP地址。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: int): void--><!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: number): void--><!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3563,15 +4062,15 @@ Set IP address for host name.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hostName | string | 是 | Which host name to be resolved. |
-| address | string | 是 | Resolved IP address. |
-| aliveTime | int | 是 | The validity seconds for resolve cache. |
+| hostName | string | 是 | 要添加DNS记录的主机域名。 |
+| address | string | 是 | 主机域名解析地址（支持IPv4，IPv6）。 |
+| aliveTime | number | 是 | 缓存有效时间（秒）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setHttpDns
 
@@ -3579,11 +4078,15 @@ Set IP address for host name.
 static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 ```
 
-Set web engine to use HttpDns server to resolve dns.
+设置Web组件是否使用HTTPDNS解析DNS。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void--><!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void-End-->
 
@@ -3593,14 +4096,14 @@ Set web engine to use HttpDns server to resolve dns.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| secureDnsMode | [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) | 是 | using HttpDns. |
-| secureDnsConfig | string | 是 | The configuration of the HttpDns server. Must be https protocol and only allow one server to be configured. |
+| secureDnsMode | [SecureDnsMode](../../apis-na/arkts-apis/arkts-na-webview-securednsmode-e.md) | 是 | 使用HTTPDNS的模式。 |
+| secureDnsConfig | string | 是 | HTTPDNS server的配置，必须是https协议并且只允许配置一个server。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## setNetworkAvailable
 
@@ -3608,11 +4111,15 @@ Set web engine to use HttpDns server to resolve dns.
 setNetworkAvailable(enable: boolean): void
 ```
 
-Put network state for web. Which is used to set window.navigator.onLine property in JavaScript.
+为网页设置网络状态。该功能用于在JavaScript中设置window.navigator.onLine属性。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setNetworkAvailable(enable: boolean): void--><!--Device-WebviewController-setNetworkAvailable(enable: boolean): void-End-->
 
@@ -3622,14 +4129,14 @@ Put network state for web. Which is used to set window.navigator.onLine property
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Whether enable window.navigator.onLine. |
+| enable | boolean | 是 | 设置JavaScript中的`window.navigator.onLine`属性。&lt;br&gt;true表示设置JavaScript中的` window.navigator.onLine`属性为true，false表示设置JavaScript中的`window.navigator.onLine`属性为false。&lt;br&gt;默认值：true。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setPathAllowingUniversalAccess
 
@@ -3637,17 +4144,13 @@ Put network state for web. Which is used to set window.navigator.onLine property
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list.The behavior of [fileAccess](fileAccess) will be overwritten by that of this API.
+设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源（ [fileAccess](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#fileaccess)的行为将会被此接口行为覆盖）。 setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式： 1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example 2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example 3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。 4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example 当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以 [fileAccess](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#fileaccess)的行为为准。
 
-The paths in the list must be any of the following(sub path and module name must be provided):
+**起始版本：** 12
 
-1. The path of subdirectory of the application file directory, like "/data/storage/el2/base/files/example" or "/data/storage/el2/base/haps/entry/files/example". The application file directory is obtained using Context.filesDir in the Ability Kit.2. The path of application resource directory or its subdirectory, like "/data/storage/el1/bundle/entry/resource/resfile" or "/data/storage/el1/bundle/entry/resource/resfile/example". The application resource directory is obtained from Context.resourceDir in the Ability Kit.
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the [fileAccess](fileAccess).
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 <!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void--><!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void-End-->
 
@@ -3657,14 +4160,14 @@ If a path in the list is not of the preceding paths, error code 401 is reported 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathList | Array&lt;string&gt; | 是 | The path list allow universal access. |
+| pathList | Array&lt;string&gt; | 是 | 路径列表 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. &lt;br&gt;3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setPrintBackground
 
@@ -3674,9 +4177,13 @@ setPrintBackground(enable: boolean): void
 
 Set whether print web page background.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setPrintBackground(enable: boolean): void--><!--Device-WebviewController-setPrintBackground(enable: boolean): void-End-->
 
@@ -3686,14 +4193,14 @@ Set whether print web page background.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Set whether print web page background |
+| enable | boolean | 是 | Whether to print the web page background.&lt;br&gt;The value **true** means to print the web page background, and **false** means the opposite. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setRenderProcessMode
 
@@ -3703,9 +4210,13 @@ static setRenderProcessMode(mode: RenderProcessMode): void
 
 Set render process mode of the ArkWeb.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void--><!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void-End-->
 
@@ -3715,13 +4226,13 @@ Set render process mode of the ArkWeb.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | 是 | The render process mode for the ArkWeb. Call [getRenderProcessMode](#getRenderProcessMode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value *0 indicates the single render subprocess mode, and *1 indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of *RenderProcessMode is passed, the multi-render subprocess mode is used by default. |
+| mode | [RenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-renderprocessmode-e.md) | 是 | The render process mode for the ArkWeb. Call [getRenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getRenderProcessMode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value **0** indicates the single render subprocess mode, and **1** indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of **RenderProcessMode** is passed, the multi-render subprocess mode is used by default. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. @static |
 
 ## setScrollable
 
@@ -3729,11 +4240,15 @@ Set render process mode of the ArkWeb.
 setScrollable(enable: boolean, type?: ScrollType): void
 ```
 
-Set whether scroll is allowed; default is true.
+设置网页是否允许滚动。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void--><!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void-End-->
 
@@ -3743,15 +4258,15 @@ Set whether scroll is allowed; default is true.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Set whether scrolling is allowed {@code true} means scrolling is allowed. {@code false} means scrolling is disabled. |
-| type | [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | 否 | Enable scrolling type When the input parameter enable is false, it indicates that scrolling of the ScrollType type is prohibited. When ScrollType is not specified,it indicates that all types of webpage scrolling are prohibited. When the input parameter enable is true, regardless of whether ScrollType is specified, it indicates that all types of webpage scrolling are allowed. |
+| enable | boolean | 是 | 表示是否将网页设置为允许滚动。&lt;br&gt;true表示设置为允许滚动，false表示禁止滚动。&lt;br&gt;默认值：true。 |
+| type | [ScrollType](../../apis-na/arkts-apis/arkts-na-webview-scrolltype-e.md) | 否 | 网页可触发的滚动类型，支持缺省配置。 &lt;br&gt; - enable为false时，表示禁止ScrollType类型的滚动，当ScrollType缺省时表示禁止所有类型网页滚动。 &lt;br&gt; - enable为true时，ScrollType缺省与否，都表示允许所有类型的网页滚动。 &lt;br&gt;传入null或undefined时会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setScrollbarMode
 
@@ -3759,11 +4274,13 @@ Set whether scroll is allowed; default is true.
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-Sets whether to switch web scrollbar mode.
+在Web页面场景，设置全局滚动条模式。不显式调用时，默认为 [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](../../apis-na/arkts-apis/arkts-na-webview-scrollbarmode-e.md#ScrollbarMode)（非常驻滚动条）。 > **说明：** > > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 > > - 若forceDisplayScrollBar > 接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 > > - 该接口需要在WebViewController绑定Web组件之前调用。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void--><!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void-End-->
 
@@ -3773,7 +4290,7 @@ Sets whether to switch web scrollbar mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scrollbarMode | [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | 是 | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
+| scrollbarMode | [ScrollbarMode](../../apis-na/arkts-apis/arkts-na-webview-scrollbarmode-e.md) | 是 | 滚动条模式。 |
 
 ## setServiceWorkerWebSchemeHandler
 
@@ -3783,9 +4300,13 @@ static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandle
 
 Set web scheme handler for specific scheme. This is used for service worker.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
 
@@ -3796,13 +4317,13 @@ Set web scheme handler for specific scheme. This is used for service worker.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| handler | [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setSiteIsolationMode
 
@@ -3812,9 +4333,11 @@ static setSiteIsolationMode(mode: SiteIsolationMode): void
 
 Set the site isolation mode.
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void--><!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void-End-->
 
@@ -3824,27 +4347,29 @@ Set the site isolation mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | 是 | The site isolation mode of the application, default value depends on different devices type. |
+| mode | [SiteIsolationMode](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) | 是 | The site isolation mode of the application, default value depends on different devices type. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. @static |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. @static |
 
 ## setSocketIdleTimeout
 
 ```TypeScript
-static setSocketIdleTimeout(timeout: int): void
+static setSocketIdleTimeout(timeout: number): void
 ```
 
-Set web engine socket idle timeout.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Unit: seconds, minimum 30s, maximum 5 minutes. If not set, the default is five minutes.&lt;/p&gt;
+设置ArkWeb中已使用过的空闲socket的超时时间。
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
 
-<!--Device-WebviewController-static setSocketIdleTimeout(timeout: int): void--><!--Device-WebviewController-static setSocketIdleTimeout(timeout: int): void-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void--><!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3852,7 +4377,7 @@ Set web engine socket idle timeout.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | int | 是 | Socket idle timeout. @static |
+| timeout | number | 是 | ArkWeb中已经使用过的空闲socket的超时时间。&lt;br&gt;取值范围：[30,300]，单位：s。&lt;br&gt;小于30时生效值为30，大于300时生效值为300。 |
 
 ## setSoftKeyboardBehaviorMode
 
@@ -3862,9 +4387,11 @@ setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void
 
 Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown/hidden automatically in particular situation, for example, when web is inactive or active.
 
-**起始版本：** 23
+**起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void--><!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void-End-->
 
@@ -3874,13 +4401,46 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | 是 | The WebSoftKeyboardBehaviorMode of this web. |
+| mode | [WebSoftKeyboardBehaviorMode](../../apis-na/arkts-apis/arkts-na-webview-websoftkeyboardbehaviormode-e.md) | 是 | The WebSoftKeyboardBehaviorMode of this web. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+## setUrlTrustList
+
+```TypeScript
+setUrlTrustList(urlTrustList: string): void
+```
+
+Set the URL trust list for the ArkWeb. When the URL trust list has been set, only the URLs in the list can be accessed.
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| urlTrustList | string | 是 | the URL trust list in JSON format. An empty string means that all URLs are allowed to access. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setUrlTrustList
 
@@ -3888,17 +4448,13 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void
 ```
 
-Sets the URL trust list for the ArkWeb.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;When the URL trust list is set, only the URLs in the list can be accessed.
-
-Example of the urlTrustList:
-
-{ "UrlPermissionList": [ { "scheme": "https", "host": "www.example1.com", "port": 443, "path": "pathA/pathB" }, { "scheme": "http", "host": "*.example2.com", "port": 80, "path": "test1/test2/test3" } ]}&lt;/p&gt;
+Sets the URL trust list for the ArkWeb. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; When the URL trust list is set, only the URLs in the list can be accessed. Example of the urlTrustList: { "UrlPermissionList": [ { "scheme": "https", "host": "www.example1.com", "port": 443, "path": "pathA/pathB" }, { "scheme": "http", "host": "*.example2.com", "port": 80, "path": "test1/test2/test3" } ] } &lt;/p&gt;
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void-End-->
 
@@ -3916,37 +4472,8 @@ Example of the urlTrustList:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error, possible causes: 1. Mandatory parameters are left unspecified 2. JSON string exceeds 10MB limit 3. JSON parsing failed (syntax errors, etc.) 4. UrlPermissionList field is missing 5. URL rule validation failed: - scheme must be http or https - host cannot be empty - port must be between 0-65535 - path length cannot exceed 65536 characters |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Initialization error. The WebviewController must be associated with a Web component. |
-
-## setUrlTrustList
-
-```TypeScript
-setUrlTrustList(urlTrustList: string): void
-```
-
-Set the URL trust list for the ArkWeb.When the URL trust list has been set, only the URLs in the list can be accessed.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void-End-->
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| urlTrustList | string | 是 | the URL trust list in JSON format. An empty string means that all URLs are allowed to access. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error, possible causes: 1. Mandatory parameters are left unspecified 2. JSON string exceeds 10MB limit 3. JSON parsing failed (syntax errors, etc.) 4. UrlPermissionList field is missing 5. URL rule validation failed: - scheme must be http or https - host cannot be empty - port must be between 0-65535 - path length cannot exceed 65536 characters |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Initialization error. The WebviewController must be associated with a Web component. |
 
 ## setUserAgentClientHintsEnabled
 
@@ -3954,13 +4481,13 @@ Set the URL trust list for the ArkWeb.When the URL trust list has been set, only
 static setUserAgentClientHintsEnabled(enabled: boolean): void
 ```
 
-Enable the User-Agent Client Hints.
+Enable the UserAgent Client Hints.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void--><!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void-End-->
 
@@ -3970,7 +4497,7 @@ Enable the User-Agent Client Hints.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | User-Agent Client Hints will enabled when set true. @static |
+| enabled | boolean | 是 | UserAgent Client Hints will enabled when set true. |
 
 ## setUserAgentForHosts
 
@@ -3978,11 +4505,13 @@ Enable the User-Agent Client Hints.
 static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 ```
 
-Set the User-Agent to be used for specified hosts, with a maximum of 20,000 hosts.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Setting the same host list multiple times for the same User-Agent will override the previous settings. That is, if you want to cancel certain hosts from using the specified User-Agent, you need to reset the host list for that User-Agent.&lt;/p&gt;
+设置用于指定主机的User-Agent，最多支持20,000个主机。 为同一个 User-Agent 多次设置相同的 Host 列表，将会覆盖之前的设置。也就是说，如果您希望取消某些Host使用指定的User-Agent， 您需要重新为该 User-Agent 设置 Host 列表。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void--><!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void-End-->
 
@@ -3993,7 +4522,7 @@ Set the User-Agent to be used for specified hosts, with a maximum of 20,000 host
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userAgent | string | 是 | The User-Agent string. |
-| hosts | Array&lt;string&gt; | 是 | The hosts to which the User-Agent apply. @static |
+| hosts | Array&lt;string&gt; | 是 | The hosts to which the User-Agent apply. |
 
 ## setUserAgentMetadata
 
@@ -4001,21 +4530,13 @@ Set the User-Agent to be used for specified hosts, with a maximum of 20,000 host
 setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 ```
 
-Sets the User-Agent metadata corresponding to the User-Agent.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.
-
-The User-Agent can be set with setCustomUserAgent or setAppCustomUserAgent or setUserAgentForHosts.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent and the overridden User-Agent contains the system default User-Agent, the system default value will be used.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent but the overridden User-Agent does not contain the system default User-Agent, only the low-entry User-Agent client hints will be generated.&lt;/p&gt;
+Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void--><!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void-End-->
 
@@ -4026,7 +4547,7 @@ If the UserAgentMetadata is not found according to the overridden User-Agent but
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userAgent | string | 是 | The User-Agent string. |
-| metaData | [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | 是 | The UserAgentMetadata for the userAgent. |
+| metaData | [UserAgentMetadata](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md) | 是 | The UserAgentMetadata for the userAgent. |
 
 ## setWebDebuggingAccess
 
@@ -4034,13 +4555,15 @@ If the UserAgentMetadata is not found according to the overridden User-Agent but
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-Sets whether to enable web debugging. By default, web debugging is disabled.For details, see Debugging Frontend Pages by Using DevTools.
+设置是否启用网页调试功能。默认情况下，网页调试功能是关闭的。详情请参考DevTools工具。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患因此，建议在应用正式发布版本时，不要开启此功能。
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Enabling web debugging allows users to check and modify the internal status of the web page,which poses security risks. Therefore, you are advised not to enable this function in the officially released version of the app.&lt;/p&gt;
+**起始版本：** 9
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void-End-->
 
@@ -4050,27 +4573,29 @@ Sets whether to enable web debugging. By default, web debugging is disabled.For 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webDebuggingAccess | boolean | 是 | Sets whether to enable web debugging.{@code true} enable web debugging;{@code false} disable web debugging. The default value is false. |
+| webDebuggingAccess | boolean | 是 | 设置是否启用网页调试功能。&lt;br&gt;true表示启用网页调试功能。false表示不启用网页调试功能。&lt;br&gt;默认值：false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setWebDebuggingAccess
 
 ```TypeScript
-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: int): void
+static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
-Enables debugging of web contents.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The port numbers from 0 to 1024 are prohibited. Ports less than 0 or greater than 65535 are considered invalid.If an attempt is made to set these disabled or invalid ports, an exception will be thrown.&lt;/p&gt;
+设置是否启用无线网页调试功能，默认不开启。 当没有指定端口port时，该接口等同于 setWebDebuggingAccess 接口，ArkWeb会启动一个本地domain socket监听。 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。 由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: int): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: int): void-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4078,14 +4603,14 @@ Enables debugging of web contents.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webDebuggingAccess | boolean | 是 | { |
-| port | int | 是 | Indicates the port of the devtools server. After the port is specified, a tcp server socket is created instead of a unix domain socket. |
+| webDebuggingAccess | boolean | 是 | 设置是否启用网页调试功能。&lt;br/&gt;true表示开启网页调试功能，false表示关闭网页调试功能。 |
+| port | number | 是 | 表示 devtools 服务器的端口。指定端口后，将创建一个 TCP 服务器套接字，而不是 Unix 域套接字。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100023-使用了不被允许的端口号) | The port number is not within the allowed range. @static |
+| [17100023](../errorcode-webview.md#17100023-使用了不被允许的端口号) | The port number is not within the allowed range. |
 
 ## setWebDestroyMode
 
@@ -4093,11 +4618,13 @@ Enables debugging of web contents.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;
 static setWebDestroyMode(mode: WebDestroyMode): void
 ```
 
-Set web destroy mode.
+设置web组件的销毁模式
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void--><!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void-End-->
 
@@ -4107,7 +4634,7 @@ Set web destroy mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | 是 | web destroy mode, default NORMAL_MODE. |
+| mode | [WebDestroyMode](../../apis-na/arkts-apis/arkts-na-webview-webdestroymode-e.md) | 是 | web组件销毁模式，默认NORMAL_MODE |
 
 ## setWebSchemeHandler
 
@@ -4117,9 +4644,13 @@ setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 
 Set web scheme handler for specific scheme. This is only used for related web component.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
 
@@ -4130,28 +4661,32 @@ Set web scheme handler for specific scheme. This is only used for related web co
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| handler | [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## slideScroll
 
 ```TypeScript
-slideScroll(vx: double, vy: double): void
+slideScroll(vx: number, vy: number): void
 ```
 
-Slide by the speed.
+按照指定速度模拟对页面的轻扫滚动动作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-slideScroll(vx: double, vy: double): void--><!--Device-WebviewController-slideScroll(vx: double, vy: double): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-slideScroll(vx: number, vy: number): void--><!--Device-WebviewController-slideScroll(vx: number, vy: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4159,15 +4694,15 @@ Slide by the speed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| vx | double | 是 | the x speed of the speed. The unit is vp/s. |
-| vy | double | 是 | the y speed of the speed. The unit is vp/s. |
+| vx | number | 是 | 轻扫滚动的水平速度分量，其中水平向右为速度正方向。&lt;br&gt;单位：vp/s。 |
+| vy | number | 是 | 轻扫滚动的垂直速度分量，其中垂直向下为速度正方向。&lt;br&gt;单位：vp/s。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## startCamera
 
@@ -4175,12 +4710,15 @@ Slide by the speed.
 startCamera(): void
 ```
 
-开启当前网页摄像头捕获。使用摄像头功能前请在module.json5中添加权限: ohos.permission.CAMERA，具体权限的添加方法请参考  
-[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+开启当前网页摄像头捕获。使用摄像头功能前请在module.json5中添加权限: ohos.permission.CAMERA，具体权限的添加方法请参考 [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-startCamera(): void--><!--Device-WebviewController-startCamera(): void-End-->
 
@@ -4190,7 +4728,7 @@ startCamera(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## startDownload
 
@@ -4198,11 +4736,15 @@ startCamera(): void
 startDownload(url: string): void
 ```
 
-Start a download.
+使用Web组件的下载能力来下载指定的URL，比如下载网页中指定的图片。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-startDownload(url: string): void--><!--Device-WebviewController-startDownload(url: string): void-End-->
 
@@ -4212,14 +4754,14 @@ Start a download.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The download url. |
+| url | string | 是 | 下载地址。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 11 - 21 |
 
 ## stop
 
@@ -4227,11 +4769,15 @@ Start a download.
 stop(): void
 ```
 
-Stops the current load.
+停止页面加载。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-stop(): void--><!--Device-WebviewController-stop(): void-End-->
 
@@ -4241,7 +4787,7 @@ Stops the current load.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## stopAllMedia
 
@@ -4251,9 +4797,13 @@ stopAllMedia(): void
 
 控制网页所有音视频停止。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-stopAllMedia(): void--><!--Device-WebviewController-stopAllMedia(): void-End-->
 
@@ -4263,7 +4813,7 @@ stopAllMedia(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## stopCamera
 
@@ -4273,9 +4823,13 @@ stopCamera(): void
 
 停止当前网页摄像头捕获。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-stopCamera(): void--><!--Device-WebviewController-stopCamera(): void-End-->
 
@@ -4285,7 +4839,7 @@ stopCamera(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## stopMicrophone
 
@@ -4297,7 +4851,9 @@ stopMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-stopMicrophone(): void--><!--Device-WebviewController-stopMicrophone(): void-End-->
 
@@ -4307,7 +4863,7 @@ stopMicrophone(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## storeWebArchive
 
@@ -4315,11 +4871,15 @@ stopMicrophone(): void
 storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 ```
 
-Stores the current page as a web archive.
+以Promise方式异步保存当前页面。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>-End-->
 
@@ -4329,22 +4889,22 @@ Stores the current page as a web archive.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| baseName | string | 是 | Where the generated offline webpage is stored, This value cannot be null. |
-| autoName | boolean | 是 | Decide whether to automatically generate the file name. If false, it is stored by the file name of baseName. If true, the file name is automatically generated based on the current URL and stored in the file directory of baseName. |
+| baseName | string | 是 | 生成的离线网页存储位置，该值不能为空。 |
+| autoName | boolean | 是 | 决定是否自动生成文件名。&lt;br&gt;false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | a promise resolved after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
+| Promise&lt;string&gt; | Promise实例，保存成功返回文件路径，保存失败返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
 
 ## storeWebArchive
 
@@ -4352,11 +4912,15 @@ Stores the current page as a web archive.
 storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void
 ```
 
-Stores the current page as a web archive.
+以回调方式异步保存当前页面。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void-End-->
 
@@ -4366,17 +4930,17 @@ Stores the current page as a web archive.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| baseName | string | 是 | Where the generated offline webpage is stored, This value cannot be null. |
-| autoName | boolean | 是 | Decide whether to automatically generate the file name. If false, it is stored by the file name of baseName. If true, the file name is automatically generated based on the current URL and stored in the file directory of baseName. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | called after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
+| baseName | string | 是 | 生成的离线网页存储位置，该值不能为空。 |
+| autoName | boolean | 是 | 决定是否自动生成文件名。&lt;br&gt;false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
 
 ## terminateRenderProcess
 
@@ -4384,11 +4948,13 @@ Stores the current page as a web archive.
 terminateRenderProcess(): boolean
 ```
 
-Destroy the rendering process.Calling this interface will actively destroy the associated rendering process.If the rendering process has not been started or destroyed, it has no effect.In addition, destroying the rendering process will also affect all other instances associated with the rendering process.
+Destroy the rendering process. Calling this interface will actively destroy the associated rendering process. If the rendering process has not been started or destroyed, it has no effect. In addition, destroying the rendering process will also affect all other instances associated with the rendering process.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebviewController-terminateRenderProcess(): boolean--><!--Device-WebviewController-terminateRenderProcess(): boolean-End-->
 
@@ -4404,7 +4970,7 @@ Destroy the rendering process.Calling this interface will actively destroy the a
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## trimMemoryByPressureLevel
 
@@ -4412,11 +4978,15 @@ Destroy the rendering process.Calling this interface will actively destroy the a
 static trimMemoryByPressureLevel(level: PressureLevel): void
 ```
 
-Trim memory by different memory pressure level.
+根据指定的内存压力等级，主动清理Web组件占用的缓存。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void--><!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void-End-->
 
@@ -4426,27 +4996,29 @@ Trim memory by different memory pressure level.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | 是 | The memory pressure level for the ArkWeb. |
+| level | [PressureLevel](../../apis-na/arkts-apis/arkts-na-webview-pressurelevel-e.md) | 是 | 需要清理内存的内存等级。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. &lt;br&gt;3.Parameter verification failed. |
 
 ## waitForAttached
 
 ```TypeScript
-waitForAttached(timeout: int): Promise<ControllerAttachState>
+waitForAttached(timeout: number): Promise<ControllerAttachState>
 ```
 
 Wait for the controller to attach a web component until timeout.
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-WebviewController-waitForAttached(timeout: int): Promise<ControllerAttachState>--><!--Device-WebviewController-waitForAttached(timeout: int): Promise<ControllerAttachState>-End-->
+**废弃版本：** -1
+
+<!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>--><!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4454,13 +5026,13 @@ Wait for the controller to attach a web component until timeout.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | int | 是 | the wait timeout, if timeout reach, promise will return, the unit is millisecond. |
+| timeout | number | 是 | 异步等待时长。取值范围: [0, 65535]单位: ms |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
+| Promise&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
 
 ## warmupServiceWorker
 
@@ -4468,11 +5040,15 @@ Wait for the controller to attach a web component until timeout.
 static warmupServiceWorker(url: string): void
 ```
 
-Warmup the registered service worker associated the url.
+预热ServiceWorker，以提升首屏页面的加载速度（仅限于会使用ServiceWorker的页面）。在加载URL之前调用此API。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static warmupServiceWorker(url: string): void--><!--Device-WebviewController-static warmupServiceWorker(url: string): void-End-->
 
@@ -4482,13 +5058,13 @@ Warmup the registered service worker associated the url.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The url. |
+| url | string | 是 | 需要预热ServiceWorker的URL。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 12 - 21 |
 
 ## webPageSnapshot
 
@@ -4496,13 +5072,15 @@ Warmup the registered service worker associated the url.
 webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void
 ```
 
-Web page snapshot.
+获取网页全量绘制结果。 > **说明：** > > 此接口不支持并发调用。 > > 仅支持对渲染进程上的资源进行截图：静态图片和文本。 > > 如果页面有视频则截图时会显示该视频的占位图片，没有占位图片则显示空白。
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Only screenshots of assets on the rendering process are supported: still images and text.If there is a video on the page, the placeholder image of the video will be displayed when you take a screenshot,and blank if there is no placeholder.&lt;/p&gt;
+**起始版本：** 12
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void--><!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void-End-->
 
@@ -4512,22 +5090,26 @@ Web page snapshot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | 是 | The snapshot info. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | the callback of snapshot. |
+| info | [SnapshotInfo](../../apis-na/arkts-apis/arkts-na-webview-snapshotinfo-i.md) | 是 | 全量绘制结果入参。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](../../apis-na/arkts-apis/arkts-na-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
 
 ## zoom
 
 ```TypeScript
-zoom(factor: double): void
+zoom(factor: number): void
 ```
 
-Zooms in or out of this web page. This API is effective only when zoomAccess is true.
+调整当前网页的缩放比例，zoomAccess需为true.
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-WebviewController-zoom(factor: double): void--><!--Device-WebviewController-zoom(factor: double): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebviewController-zoom(factor: number): void--><!--Device-WebviewController-zoom(factor: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4535,15 +5117,15 @@ Zooms in or out of this web page. This API is effective only when zoomAccess is 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factor | double | 是 | Relative zoom ratio. The value must be greater than 0. The value 1 indicates that the page is not zoomed. A value smaller than 1 indicates zoom-out, and a value greater than 1 indicates zoom-in. &lt;br&gt;Value range: (0, 100]. |
+| factor | number | 是 | 基于当前网页所需调整的相对缩放比例，入参要求大于0， 当入参为1时为默认加载网页的缩放比例，入参小于1为缩小，入参大于1为放大。 &lt;br&gt;取值范围：(0，100]。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## zoomIn
 
@@ -4551,11 +5133,15 @@ Zooms in or out of this web page. This API is effective only when zoomAccess is 
 zoomIn(): void
 ```
 
-Zooms in on this web page by 25%.
+调用此接口将当前网页进行放大，比例为25%。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-zoomIn(): void--><!--Device-WebviewController-zoomIn(): void-End-->
 
@@ -4565,8 +5151,8 @@ Zooms in on this web page by 25%.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## zoomOut
 
@@ -4574,11 +5160,15 @@ Zooms in on this web page by 25%.
 zoomOut(): void
 ```
 
-Zooms out of this web page by 20%.
+调用此接口将当前网页进行缩小，比例为20%。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-zoomOut(): void--><!--Device-WebviewController-zoomOut(): void-End-->
 
@@ -4588,6 +5178,6 @@ Zooms out of this web page by 20%.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
-| [17100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 

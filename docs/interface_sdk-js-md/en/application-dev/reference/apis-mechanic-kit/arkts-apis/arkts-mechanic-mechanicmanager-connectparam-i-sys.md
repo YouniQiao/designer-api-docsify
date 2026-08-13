@@ -4,7 +4,9 @@ Definition of connect parameter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface ConnectParam--><!--Device-mechanicManager-export interface ConnectParam-End-->
 
@@ -24,24 +26,15 @@ import { mechanicManager } from '@kit.MechanicKit';
 custdata: string
 ```
 
-Data carried during device discovery Data must be in the following format:|type|value|type|value|..value'len for each specific type is predefined length The following table lists the supported types and versions.  
------------------------------------------------------------------  
-type | value | value len |api level  
------------------------------------------------------------------  
-0x01 | 3-axis gravity sensor value | 3Byte |26.0.0  
------------------------------------------------------------------  
-0x02 | 1st byte offset of the MAC address | 1Byte |26.0.0  
------------------------------------------------------------------  
-0x03 | Pairing broadcast | 1Byte |26.0.0  
------------------------------------------------------------------  
-0x04 | Target device identifer | 4Byte |26.0.0  
------------------------------------------------------------------.
+Data carried during device discovery Data must be in the following format:|type|value|type|value|.. value'len for each specific type is predefined length The following table lists the supported types and versions. ----------------------------------------------------------------- type | value | value len |api level ----------------------------------------------------------------- 0x01 | 3-axis gravity sensor value | 3Byte |26.0.0 ----------------------------------------------------------------- 0x02 | 1st byte offset of the MAC address | 1Byte |26.0.0 ----------------------------------------------------------------- 0x03 | Pairing broadcast | 1Byte |26.0.0 ----------------------------------------------------------------- 0x04 | Target device identifer | 4Byte |26.0.0 -----------------------------------------------------------------.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,7 +56,9 @@ Name of the mechanical device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,13 +74,15 @@ Name of the mechanical device.
 identifier?: int
 ```
 
-Identifer of current device.The value should be an integer.
+Identifer of current device. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

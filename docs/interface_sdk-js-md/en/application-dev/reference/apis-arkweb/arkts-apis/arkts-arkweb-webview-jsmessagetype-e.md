@@ -2,9 +2,11 @@
 
 Enum type supplied to [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runJavaScriptExt) for indicating the result of JavaScript code execution.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum JsMessageType--><!--Device-webview-enum JsMessageType-End-->
 
@@ -13,96 +15,120 @@ Enum type supplied to [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-
 ## NOT_SUPPORT
 
 ```TypeScript
-NOT_SUPPORT
+NOT_SUPPORT = 0
 ```
 
 Unsupported data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-JsMessageType-NOT_SUPPORT--><!--Device-JsMessageType-NOT_SUPPORT-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-NOT_SUPPORT = 0--><!--Device-JsMessageType-NOT_SUPPORT = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## STRING
 
 ```TypeScript
-STRING
+STRING = 1
 ```
 
 The string data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-JsMessageType-STRING--><!--Device-JsMessageType-STRING-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-STRING = 1--><!--Device-JsMessageType-STRING = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NUMBER
 
 ```TypeScript
-NUMBER
+NUMBER = 2
 ```
 
 The number data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-JsMessageType-NUMBER--><!--Device-JsMessageType-NUMBER-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-NUMBER = 2--><!--Device-JsMessageType-NUMBER = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## BOOLEAN
 
 ```TypeScript
-BOOLEAN
+BOOLEAN = 3
 ```
 
 The boolean data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-JsMessageType-BOOLEAN--><!--Device-JsMessageType-BOOLEAN-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-BOOLEAN = 3--><!--Device-JsMessageType-BOOLEAN = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ARRAY_BUFFER
 
 ```TypeScript
-ARRAY_BUFFER
+ARRAY_BUFFER = 4
 ```
 
 The arraybuffer data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-JsMessageType-ARRAY_BUFFER--><!--Device-JsMessageType-ARRAY_BUFFER-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-ARRAY_BUFFER = 4--><!--Device-JsMessageType-ARRAY_BUFFER = 4-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ARRAY
 
 ```TypeScript
-ARRAY
+ARRAY = 5
 ```
 
 The array data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-JsMessageType-ARRAY--><!--Device-JsMessageType-ARRAY-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-ARRAY = 5--><!--Device-JsMessageType-ARRAY = 5-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

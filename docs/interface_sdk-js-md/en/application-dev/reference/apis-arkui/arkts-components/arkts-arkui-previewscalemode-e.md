@@ -6,6 +6,8 @@ Enumerates the scale modes of the preview image.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum PreviewScaleMode--><!--Device-unnamed-declare enum PreviewScaleMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Enumerates the scale modes of the preview image.
 AUTO = 0
 ```
 
-The preview image automatically adjusts its width, height, and scale based on [Placement](Placement).
+The preview image automatically adjusts its width, height, and scale based on Placement.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ The preview image retains its original size. However, the preview image may stil
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -61,6 +67,8 @@ The preview image maintains its aspect ratio when scaled.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

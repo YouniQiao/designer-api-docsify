@@ -1,8 +1,6 @@
 # ColorSpaceManager
 
-当前可共享的色彩管理实例。ColorSpaceManager是用于管理和操作色域对象的核心类，提供了获取色域类型、白点值、gamma值等功能，并支持在ArkTS并发实例间传递。
-
-下列API示例中都需先使用[create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
+当前可共享的色彩管理实例。ColorSpaceManager是用于管理和操作色域对象的核心类，提供了获取色域类型、白点值、gamma值等功能，并支持在ArkTS并发实例间传递。 下列API示例中都需先使用[create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
 
 **继承/实现关系：** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md#ISendable)
 
@@ -10,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable-End-->
+**废弃版本：** -1
+
+<!--Device-sendableColorSpaceManager-interface ColorSpaceManager--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -26,6 +26,8 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -40,7 +42,7 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
 
 ## 示例
 
@@ -61,6 +63,8 @@ getGamma(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-ColorSpaceManager-getGamma(): number--><!--Device-ColorSpaceManager-getGamma(): number-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -75,7 +79,7 @@ getGamma(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
 
 ## 示例
 
@@ -96,6 +100,8 @@ getWhitePoint(): collections.Array<number>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>--><!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -110,7 +116,7 @@ getWhitePoint(): collections.Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
 
 ## 示例
 

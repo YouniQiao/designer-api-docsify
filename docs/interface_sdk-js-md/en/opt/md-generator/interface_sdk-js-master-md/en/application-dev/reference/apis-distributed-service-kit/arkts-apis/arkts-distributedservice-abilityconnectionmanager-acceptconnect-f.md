@@ -14,7 +14,9 @@ function acceptConnect(sessionId: number, token: string): Promise<void>
 
 Accepts the UIAbility connection after a collaboration session is set up and the session ID is obtained.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +41,7 @@ Accepts the UIAbility connection after a collaboration session is set up and the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -6,7 +6,9 @@ export type Parameter = _Parameter
 
 Indicates executeAction parameter.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type Parameter = _Parameter--><!--Device-unnamed-export type Parameter = _Parameter-End-->
 

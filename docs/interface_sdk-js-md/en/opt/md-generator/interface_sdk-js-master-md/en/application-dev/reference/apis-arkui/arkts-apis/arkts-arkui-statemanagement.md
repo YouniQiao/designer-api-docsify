@@ -1,13 +1,4 @@
-# @ohos.arkui.StateManagement(State Management)
-
-The state management module provides data storage, persistent data management, UIAbility data storage, and
- environment state and tools required by applications.
- T and S in this topic represent the types as described below.
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| ---- |
-| T    |
-| S    |
-
+# @ohos.arkui.StateManagement
 
 ## Modules to Import
 
@@ -24,7 +15,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 | [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md) |
 | [Binding](arkts-arkui-arkui-statemanagement-binding-c.md) |
 | [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md) |
-| [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md) | Defines the parameter type for the  [globalConnect](PersistenceV2.globalConnect&lt;T extends CollectionType<S>, S extends object&gt;&lt;S&gt;, S extends object>( type: ConnectOptionsCollections&lt;T, S&gt; \|
+| [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md) |
 | [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md) |
 | [PersistenceV2](arkts-arkui-arkui-statemanagement-persistencev2-c.md) |
 | [UIUtils](arkts-arkui-arkui-statemanagement-uiutils-c.md) |

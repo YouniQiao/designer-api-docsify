@@ -1,15 +1,12 @@
 # RemoteAbilityInfo（系统接口）
 
-包含远程的ability信息，通过接口  
-[distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getRemoteAbilityInfo)获取。
+包含远程的ability信息，通过接口 [distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getRemoteAbilityInfo（系统接口）) 获取。 > **说明：** > > 本模块为系统接口。
 
-> **说明：**
-> 
-> 本模块为系统接口。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
 
@@ -27,9 +24,11 @@ readonly elementName: ElementName
 
 **类型：** [ElementName](arkts-ability-elementname-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteAbilityInfo-readonly elementName: ElementName--><!--Device-RemoteAbilityInfo-readonly elementName: ElementName-End-->
 
@@ -47,9 +46,11 @@ readonly icon: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteAbilityInfo-readonly icon: string--><!--Device-RemoteAbilityInfo-readonly icon: string-End-->
 
@@ -67,9 +68,11 @@ readonly label: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteAbilityInfo-readonly label: string--><!--Device-RemoteAbilityInfo-readonly label: string-End-->
 

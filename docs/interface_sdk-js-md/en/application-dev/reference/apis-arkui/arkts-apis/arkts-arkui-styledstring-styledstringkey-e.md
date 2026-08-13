@@ -6,6 +6,8 @@ the attribute type of the StyledString
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum StyledStringKey--><!--Device-unnamed-export declare enum StyledStringKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ The key of TextStyle.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ The key of DecorationStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledStringKey-DECORATION = 1--><!--Device-StyledStringKey-DECORATION = 1-End-->
@@ -57,6 +63,8 @@ The key of BaselineOffsetStyle.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ The key of LetterSpacingStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledStringKey-LETTER_SPACING = 3--><!--Device-StyledStringKey-LETTER_SPACING = 3-End-->
@@ -93,6 +103,8 @@ The key of TextShadowStyle.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ The key of LineHeightStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledStringKey-LINE_HEIGHT = 5--><!--Device-StyledStringKey-LINE_HEIGHT = 5-End-->
@@ -129,6 +143,8 @@ The key of BackgroundColorStyle.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +164,8 @@ The key of UrlStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledStringKey-URL = 7--><!--Device-StyledStringKey-URL = 7-End-->
@@ -165,6 +183,8 @@ The key of LineSpacingStyle.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,6 +204,8 @@ The key of GestureStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledStringKey-GESTURE = 100--><!--Device-StyledStringKey-GESTURE = 100-End-->
@@ -201,6 +223,8 @@ The key of ParagraphStyle.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,6 +244,8 @@ The key of ImageAttachment.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledStringKey-IMAGE = 300--><!--Device-StyledStringKey-IMAGE = 300-End-->
@@ -238,6 +264,8 @@ The key of CustomSpan.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledStringKey-CUSTOM_SPAN = 400--><!--Device-StyledStringKey-CUSTOM_SPAN = 400-End-->
@@ -255,6 +283,8 @@ The key of UserDataSpan.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

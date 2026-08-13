@@ -2,7 +2,9 @@
 
 描述通知渠道，不同通知渠道对应的通知提醒方式不同。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
 
@@ -14,14 +16,13 @@
 readonly authorizedStatus?: number
 ```
 
-授权状态。
-
-- 0：表示已授权。   
-- 1：表示待授权。
+授权状态。 - 0：表示已授权。 - 1：表示待授权。
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-readonly authorizedStatus?: int--><!--Device-NotificationSlot-readonly authorizedStatus?: int-End-->
 
@@ -35,18 +36,13 @@ readonly authorizedStatus?: number
 readonly reminderMode?: number
 ```
 
-通知提醒模式。
-
-- bit0：铃声提示。0表示关闭，1表示开启。   
-- bit1：锁屏。0表示关闭，1表示开启。   
-- bit2：横幅。0表示关闭，1表示开启。   
-- bit3：亮屏。0表示关闭，1表示开启。   
-- bit4：振动。0表示关闭，1表示开启。   
-- bit5：状态栏通知图标。0表示关闭，1表示开启。
+通知提醒模式。 - bit0：铃声提示。0表示关闭，1表示开启。 - bit1：锁屏。0表示关闭，1表示开启。 - bit2：横幅。0表示关闭，1表示开启。 - bit3：亮屏。0表示关闭，1表示开启。 - bit4：振动。0表示关闭，1表示开启。 - bit5：状态栏通知图标。0表示关闭，1表示开启。
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-readonly reminderMode?: int--><!--Device-NotificationSlot-readonly reminderMode?: int-End-->
 

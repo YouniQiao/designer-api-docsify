@@ -10,6 +10,8 @@ Listener used to observe the copy progress.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-type ProgressListener = (progress: Progress) => void--><!--Device-unnamed-type ProgressListener = (progress: Progress) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

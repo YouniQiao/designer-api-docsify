@@ -8,7 +8,9 @@ function getCfgDirList(callback: AsyncCallback<Array<string>>): void
 
 获取配置层级目录列表，按优先级从低到高。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -26,7 +28,7 @@ function getCfgDirList(callback: AsyncCallback<Array<string>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 
 ## getCfgDirList
@@ -37,7 +39,9 @@ function getCfgDirList(): Promise<Array<string>>
 
 获取配置层级目录列表，按优先级从低到高。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>--><!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>-End-->
 

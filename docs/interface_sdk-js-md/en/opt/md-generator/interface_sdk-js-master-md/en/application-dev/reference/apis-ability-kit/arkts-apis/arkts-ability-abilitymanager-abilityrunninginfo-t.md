@@ -6,7 +6,9 @@ export type AbilityRunningInfo = _AbilityRunningInfo
 
 Defines the level-2 module AbilityRunningInfo.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityManager-export type AbilityRunningInfo = _AbilityRunningInfo--><!--Device-abilityManager-export type AbilityRunningInfo = _AbilityRunningInfo-End-->
 

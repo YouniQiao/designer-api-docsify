@@ -18,7 +18,7 @@ Connects to a remote device over the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppConnect](ohos.bluetoothManager/bluetoothManager.sppConnect)
+**Substitutes:** [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppConnect)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

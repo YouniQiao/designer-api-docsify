@@ -2,7 +2,9 @@
 
 Enumerates the audio interrupt request type.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum InterruptRequestType--><!--Device-audio-enum InterruptRequestType-End-->
 
@@ -18,7 +20,9 @@ INTERRUPT_REQUEST_TYPE_DEFAULT = 0
 
 Default type to request audio interrupt.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InterruptRequestType-INTERRUPT_REQUEST_TYPE_DEFAULT = 0--><!--Device-InterruptRequestType-INTERRUPT_REQUEST_TYPE_DEFAULT = 0-End-->
 

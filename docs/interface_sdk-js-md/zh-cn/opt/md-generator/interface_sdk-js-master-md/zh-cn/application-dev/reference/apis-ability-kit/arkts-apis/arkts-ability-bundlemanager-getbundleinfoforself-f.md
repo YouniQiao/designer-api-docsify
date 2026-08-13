@@ -8,7 +8,9 @@ function getBundleInfoForSelf(bundleFlags: number): Promise<BundleInfo>
 
 根据给定的bundleFlags获取当前应用的BundleInfo。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +34,7 @@ function getBundleInfoForSelf(bundleFlags: number): Promise<BundleInfo>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -66,7 +68,9 @@ function getBundleInfoForSelf(bundleFlags: number, callback: AsyncCallback<Bundl
 
 根据给定的bundleFlags获取当前应用的BundleInfo。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -85,7 +89,7 @@ function getBundleInfoForSelf(bundleFlags: number, callback: AsyncCallback<Bundl
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

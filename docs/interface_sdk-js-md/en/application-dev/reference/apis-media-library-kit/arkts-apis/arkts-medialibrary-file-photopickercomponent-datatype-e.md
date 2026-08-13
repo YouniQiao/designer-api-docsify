@@ -1,10 +1,12 @@
 # DataType
 
-DataType represents the type of the data set to picker component
+Enumerates the types of data sent from **PickerController** to the **PhotoPickerComponent**.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum DataType--><!--Device-unnamed-export declare enum DataType-End-->
 
@@ -16,13 +18,15 @@ DataType represents the type of the data set to picker component
 SET_SELECTED_URIS = 1
 ```
 
-DataType: set selected uris to picker component, the data should be a array of uri
+Sends a list of selected items to instruct the **PhotoPickerComponent** to refresh the selection status. A string array needs to be passed in. For example, after an image is deleted from an application's page, the application calls **setData()** to notify the **PhotoPickerComponent** of the remaining selected items. Then, the **PhotoPickerComponent** refreshes the check box status.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DataType-SET_SELECTED_URIS = 1--><!--Device-DataType-SET_SELECTED_URIS = 1-End-->
 
@@ -34,13 +38,15 @@ DataType: set selected uris to picker component, the data should be a array of u
 SET_ALBUM_URI = 2
 ```
 
-SET_ALBUM_URI. set selected album uri to picker component
+Sends the selected album to instruct the **PhotoPickerComponent** to refresh the album data. A string array needs to be passed in. For example, after an album is selected from an application's page, the application calls **setData** to notify the **PhotoPickerComponent** of the URI of the selected album. Then, the **PhotoPickerComponent** refreshes the album data.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DataType-SET_ALBUM_URI = 2--><!--Device-DataType-SET_ALBUM_URI = 2-End-->
 
@@ -52,13 +58,15 @@ SET_ALBUM_URI. set selected album uri to picker component
 SET_SELECTED_INFO = 3
 ```
 
-SET_SELECTED_INFO. Set selected information to picker component.
+Sends the URI of the selected file and the index of the selected **PhotoPickerComponent**. If the index of a **PhotoPickerComponent** matches the one provided in the parameter, the selected file is automatically highlighted in that **PhotoPickerComponent**.
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-DataType-SET_SELECTED_INFO = 3--><!--Device-DataType-SET_SELECTED_INFO = 3-End-->
 
@@ -70,15 +78,39 @@ SET_SELECTED_INFO. Set selected information to picker component.
 SET_BADGE_CONFIGS = 4
 ```
 
-SET_BADGE_CONFIGS. Set badge configs to picker component.
+Sends the badge configurations, which are of the [badgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md#BadgeConfig) type and include a list of data with badge types and corresponding file URIs. Once configured, the badge of the configured type is displayed in the specified file.
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-DataType-SET_BADGE_CONFIGS = 4--><!--Device-DataType-SET_BADGE_CONFIGS = 4-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## SET_ITEM_CLICK_RESULT
+
+```TypeScript
+SET_ITEM_CLICK_RESULT = 5
+```
+
+Result of the click, which is of the [ClickResult](arkts-medialibrary-file-photopickercomponent-clickresult-c.md#ClickResult) type.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataType-SET_BADGE_CONFIGS = 4--><!--Device-DataType-SET_BADGE_CONFIGS = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-DataType-SET_ITEM_CLICK_RESULT = 5--><!--Device-DataType-SET_ITEM_CLICK_RESULT = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -4,11 +4,13 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface Callback<T, V = void>--><!--Device-unnamed-declare interface Callback<T, V = void>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface Callback--><!--Device-unnamed-declare interface Callback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (data: T): V
@@ -17,6 +19,8 @@
 定义回调函数的信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,9 +4,15 @@ Represents the folder data. It is a child class of [File](arkts-arkdata-unifiedd
 
 **Inheritance/Implementation:** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md#File)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-unifiedDataChannel-class Folder extends File--><!--Device-unifiedDataChannel-class Folder extends File-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-unifiedDataChannel-class Folder--><!--Device-unifiedDataChannel-class Folder-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -15,23 +21,3 @@ Represents the folder data. It is a child class of [File](arkts-arkdata-unifiedd
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
-
-## folderUri
-
-```TypeScript
-set folderUri(value: string)
-```
-
-Indicates the uri of folder
-
-**Type:** string
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Folder-set folderUri(value: string)--><!--Device-Folder-set folderUri(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core

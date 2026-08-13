@@ -2,7 +2,9 @@
 
 The **inputMethodEngine** module is oriented to input method applications (including system and third-party input method applications). With the APIs of this module, input method applications are able to create soft keyboard windows, insert or delete characters, select text, and listen for physical keyboard events.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace inputMethodEngine--><!--Device-unnamed-declare namespace inputMethodEngine-End-->
 
@@ -20,10 +22,12 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createKeyboardDelegate](arkts-ime-inputmethodengine-createkeyboarddelegate-f.md#createkeyboarddelegate) |
-| [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability) |
-| [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine) |
-| [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) |
+| [createKeyboardDelegate](arkts-ime-inputmethodengine-createkeyboarddelegate-f.md#createKeyboardDelegate) |
+| [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility) |
+| [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility) |
+| [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getInputMethodEngine) |
+| [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) |
+| [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) |
 
 ### Interfaces
 
@@ -87,6 +91,12 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md) |
+| [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) |
+| [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) |
+| [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) |
+| [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) |
+| [OnMessageCallback](arkts-ime-inputmethodengine-onmessagecallback-t.md) |
+| [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) |
 | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) |
 
 <!--Del-->
@@ -101,41 +111,41 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [CURSOR_DOWN](arkts-ime-inputmethodengine-con.md#cursor_down) |
-| [CURSOR_LEFT](arkts-ime-inputmethodengine-con.md#cursor_left) |
-| [CURSOR_RIGHT](arkts-ime-inputmethodengine-con.md#cursor_right) |
-| [CURSOR_UP](arkts-ime-inputmethodengine-con.md#cursor_up) |
-| [DISPLAY_MODE_FULL](arkts-ime-inputmethodengine-con.md#display_mode_full) |
-| [DISPLAY_MODE_PART](arkts-ime-inputmethodengine-con.md#display_mode_part) |
-| [ENTER_KEY_TYPE_DONE](arkts-ime-inputmethodengine-con.md#enter_key_type_done) |
-| [ENTER_KEY_TYPE_GO](arkts-ime-inputmethodengine-con.md#enter_key_type_go) |
-| [ENTER_KEY_TYPE_NEWLINE](arkts-ime-inputmethodengine-con.md#enter_key_type_newline) |
-| [ENTER_KEY_TYPE_NEXT](arkts-ime-inputmethodengine-con.md#enter_key_type_next) |
-| [ENTER_KEY_TYPE_PREVIOUS](arkts-ime-inputmethodengine-con.md#enter_key_type_previous) |
-| [ENTER_KEY_TYPE_SEARCH](arkts-ime-inputmethodengine-con.md#enter_key_type_search) |
-| [ENTER_KEY_TYPE_SEND](arkts-ime-inputmethodengine-con.md#enter_key_type_send) |
-| [ENTER_KEY_TYPE_UNSPECIFIED](arkts-ime-inputmethodengine-con.md#enter_key_type_unspecified) |
-| [FLAG_SELECTING](arkts-ime-inputmethodengine-con.md#flag_selecting) |
-| [FLAG_SINGLE_LINE](arkts-ime-inputmethodengine-con.md#flag_single_line) |
-| [OPTION_ASCII](arkts-ime-inputmethodengine-con.md#option_ascii) |
-| [OPTION_AUTO_CAP_CHARACTERS](arkts-ime-inputmethodengine-con.md#option_auto_cap_characters) |
-| [OPTION_AUTO_CAP_SENTENCES](arkts-ime-inputmethodengine-con.md#option_auto_cap_sentences) |
-| [OPTION_AUTO_WORDS](arkts-ime-inputmethodengine-con.md#option_auto_words) |
-| [OPTION_MULTI_LINE](arkts-ime-inputmethodengine-con.md#option_multi_line) |
-| [OPTION_NONE](arkts-ime-inputmethodengine-con.md#option_none) |
-| [OPTION_NO_FULLSCREEN](arkts-ime-inputmethodengine-con.md#option_no_fullscreen) |
-| [PATTERN_DATETIME](arkts-ime-inputmethodengine-con.md#pattern_datetime) |
-| [PATTERN_EMAIL](arkts-ime-inputmethodengine-con.md#pattern_email) |
-| [PATTERN_NEW_PASSWORD](arkts-ime-inputmethodengine-con.md#pattern_new_password) |
-| [PATTERN_NULL](arkts-ime-inputmethodengine-con.md#pattern_null) |
-| [PATTERN_NUMBER](arkts-ime-inputmethodengine-con.md#pattern_number) |
-| [PATTERN_NUMBER_DECIMAL](arkts-ime-inputmethodengine-con.md#pattern_number_decimal) |
-| [PATTERN_ONE_TIME_CODE](arkts-ime-inputmethodengine-con.md#pattern_one_time_code) |
-| [PATTERN_PASSWORD](arkts-ime-inputmethodengine-con.md#pattern_password) |
-| [PATTERN_PASSWORD_NUMBER](arkts-ime-inputmethodengine-con.md#pattern_password_number) |
-| [PATTERN_PASSWORD_SCREEN_LOCK](arkts-ime-inputmethodengine-con.md#pattern_password_screen_lock) |
-| [PATTERN_PHONE](arkts-ime-inputmethodengine-con.md#pattern_phone) |
-| [PATTERN_TEXT](arkts-ime-inputmethodengine-con.md#pattern_text) |
-| [PATTERN_URI](arkts-ime-inputmethodengine-con.md#pattern_uri) |
-| [PATTERN_USER_NAME](arkts-ime-inputmethodengine-con.md#pattern_user_name) |
-| [WINDOW_TYPE_INPUT_METHOD_FLOAT](arkts-ime-inputmethodengine-con.md#window_type_input_method_float) |
+| [CURSOR_DOWN](arkts-ime-inputmethodengine-con.md#CURSOR_DOWN) |
+| [CURSOR_LEFT](arkts-ime-inputmethodengine-con.md#CURSOR_LEFT) |
+| [CURSOR_RIGHT](arkts-ime-inputmethodengine-con.md#CURSOR_RIGHT) |
+| [CURSOR_UP](arkts-ime-inputmethodengine-con.md#CURSOR_UP) |
+| [DISPLAY_MODE_FULL](arkts-ime-inputmethodengine-con.md#DISPLAY_MODE_FULL) |
+| [DISPLAY_MODE_PART](arkts-ime-inputmethodengine-con.md#DISPLAY_MODE_PART) |
+| [ENTER_KEY_TYPE_DONE](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_DONE) |
+| [ENTER_KEY_TYPE_GO](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_GO) |
+| [ENTER_KEY_TYPE_NEWLINE](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_NEWLINE) |
+| [ENTER_KEY_TYPE_NEXT](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_NEXT) |
+| [ENTER_KEY_TYPE_PREVIOUS](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_PREVIOUS) |
+| [ENTER_KEY_TYPE_SEARCH](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_SEARCH) |
+| [ENTER_KEY_TYPE_SEND](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_SEND) |
+| [ENTER_KEY_TYPE_UNSPECIFIED](arkts-ime-inputmethodengine-con.md#ENTER_KEY_TYPE_UNSPECIFIED) |
+| [FLAG_SELECTING](arkts-ime-inputmethodengine-con.md#FLAG_SELECTING) |
+| [FLAG_SINGLE_LINE](arkts-ime-inputmethodengine-con.md#FLAG_SINGLE_LINE) |
+| [OPTION_ASCII](arkts-ime-inputmethodengine-con.md#OPTION_ASCII) |
+| [OPTION_AUTO_CAP_CHARACTERS](arkts-ime-inputmethodengine-con.md#OPTION_AUTO_CAP_CHARACTERS) |
+| [OPTION_AUTO_CAP_SENTENCES](arkts-ime-inputmethodengine-con.md#OPTION_AUTO_CAP_SENTENCES) |
+| [OPTION_AUTO_WORDS](arkts-ime-inputmethodengine-con.md#OPTION_AUTO_WORDS) |
+| [OPTION_MULTI_LINE](arkts-ime-inputmethodengine-con.md#OPTION_MULTI_LINE) |
+| [OPTION_NONE](arkts-ime-inputmethodengine-con.md#OPTION_NONE) |
+| [OPTION_NO_FULLSCREEN](arkts-ime-inputmethodengine-con.md#OPTION_NO_FULLSCREEN) |
+| [PATTERN_DATETIME](arkts-ime-inputmethodengine-con.md#PATTERN_DATETIME) |
+| [PATTERN_EMAIL](arkts-ime-inputmethodengine-con.md#PATTERN_EMAIL) |
+| [PATTERN_NEW_PASSWORD](arkts-ime-inputmethodengine-con.md#PATTERN_NEW_PASSWORD) |
+| [PATTERN_NULL](arkts-ime-inputmethodengine-con.md#PATTERN_NULL) |
+| [PATTERN_NUMBER](arkts-ime-inputmethodengine-con.md#PATTERN_NUMBER) |
+| [PATTERN_NUMBER_DECIMAL](arkts-ime-inputmethodengine-con.md#PATTERN_NUMBER_DECIMAL) |
+| [PATTERN_ONE_TIME_CODE](arkts-ime-inputmethodengine-con.md#PATTERN_ONE_TIME_CODE) |
+| [PATTERN_PASSWORD](arkts-ime-inputmethodengine-con.md#PATTERN_PASSWORD) |
+| [PATTERN_PASSWORD_NUMBER](arkts-ime-inputmethodengine-con.md#PATTERN_PASSWORD_NUMBER) |
+| [PATTERN_PASSWORD_SCREEN_LOCK](arkts-ime-inputmethodengine-con.md#PATTERN_PASSWORD_SCREEN_LOCK) |
+| [PATTERN_PHONE](arkts-ime-inputmethodengine-con.md#PATTERN_PHONE) |
+| [PATTERN_TEXT](arkts-ime-inputmethodengine-con.md#PATTERN_TEXT) |
+| [PATTERN_URI](arkts-ime-inputmethodengine-con.md#PATTERN_URI) |
+| [PATTERN_USER_NAME](arkts-ime-inputmethodengine-con.md#PATTERN_USER_NAME) |
+| [WINDOW_TYPE_INPUT_METHOD_FLOAT](arkts-ime-inputmethodengine-con.md#WINDOW_TYPE_INPUT_METHOD_FLOAT) |

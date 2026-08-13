@@ -12,10 +12,11 @@ import { i18n } from '@kit.LocalizationKit';
 export function isRTL(locale: string): boolean
 ```
 
-Checks whether a language is an RTL language. For an RTL language,  
-[UI mirroring](../../../internationalization/i18n-ui-design.md#ui-mirroring) is required.
+Checks whether a language is an RTL language. For an RTL language, [UI mirroring](../../../internationalization/i18n-ui-design.md#ui-mirroring) is required.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

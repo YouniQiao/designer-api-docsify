@@ -1,10 +1,12 @@
 # RecentPhotoInfo
 
-Recent photo info
+Represents information about the recent image or video.
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class RecentPhotoInfo--><!--Device-unnamed-export declare class RecentPhotoInfo-End-->
 
@@ -19,40 +21,44 @@ import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckI
 ## dateTaken
 
 ```TypeScript
-public dateTaken?: long
+dateTaken?: number
 ```
 
-The dateTaken of photos or videos
+Time when the recent image or video is taken, in ms. The value is the number of milliseconds elapsed since the Unix epoch (00:00:00 UTC on January 1, 1970).
 
-**Type:** long
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RecentPhotoInfo-public dateTaken?: long--><!--Device-RecentPhotoInfo-public dateTaken?: long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-RecentPhotoInfo-dateTaken?: number--><!--Device-RecentPhotoInfo-dateTaken?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## identifier
 
 ```TypeScript
-public identifier?: string
+identifier?: string
 ```
 
-The identifier of photos or videos
+Hash value of the name of the recent image or video, which is used to help the application determine whether the image or video to be displayed is the same as the one displayed before.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RecentPhotoInfo-public identifier?: string--><!--Device-RecentPhotoInfo-public identifier?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-RecentPhotoInfo-identifier?: string--><!--Device-RecentPhotoInfo-identifier?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -2,9 +2,11 @@
 
 Describes the event indicating that an audio session is deactivated.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioSessionDeactivatedEvent--><!--Device-audio-interface AudioSessionDeactivatedEvent-End-->
 
@@ -26,9 +28,11 @@ Reason for deactivating an audio session.
 
 **Type:** [AudioSessionDeactivatedReason](arkts-audio-audio-audiosessiondeactivatedreason-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionDeactivatedEvent-reason: AudioSessionDeactivatedReason--><!--Device-AudioSessionDeactivatedEvent-reason: AudioSessionDeactivatedReason-End-->
 

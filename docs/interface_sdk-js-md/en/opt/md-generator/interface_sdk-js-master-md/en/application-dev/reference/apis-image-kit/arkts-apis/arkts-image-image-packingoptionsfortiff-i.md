@@ -4,6 +4,8 @@ Describes the options for tiff image packing.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-interface PackingOptionsForTiff--><!--Device-image-interface PackingOptionsForTiff-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -20,14 +22,13 @@ import { image } from '@kit.ImageKit';
 compression?: number
 ```
 
-Compression algorithm type: 3 (CCITT G3), 4 (CCITT G4), 5 (LZW).  
-- For binary image: must be 3 (G3) or 4 (G4), automatically uses 4 (G4).  
-- For Y8/RGB_888 format: automatically uses LZW (5), user setting is ignored.  
-The value should be an integer, Currently, only 3, 4, and 5 are supported.
+Compression algorithm type: 3 (CCITT G3), 4 (CCITT G4), 5 (LZW). - For binary image: must be 3 (G3) or 4 (G4), automatically uses 4 (G4). - For Y8/RGB_888 format: automatically uses LZW (5), user setting is ignored. The value should be an integer, Currently, only 3, 4, and 5 are supported.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +48,8 @@ Image orientation.Default value is TOP_LEFT.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PackingOptionsForTiff-orientation?: Orientation--><!--Device-PackingOptionsForTiff-orientation?: Orientation-End-->
@@ -59,11 +62,13 @@ Image orientation.Default value is TOP_LEFT.
 resolutionUnit?: number
 ```
 
-Resolution unit: 1 (No unit), 2 (Inch), 3 (Centimeter).Currently, only 1, 2, and 3 are supported.
+Resolution unit: 1 (No unit), 2 (Inch), 3 (Centimeter). Currently, only 1, 2, and 3 are supported.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,11 +82,13 @@ Resolution unit: 1 (No unit), 2 (Inch), 3 (Centimeter).Currently, only 1, 2, and
 xResolution?: number
 ```
 
-Horizontal resolution.The value must be greater than 0.
+Horizontal resolution. The value must be greater than 0.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,11 +102,13 @@ Horizontal resolution.The value must be greater than 0.
 yResolution?: number
 ```
 
-Vertical resolution.The value must be greater than 0.
+Vertical resolution. The value must be greater than 0.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

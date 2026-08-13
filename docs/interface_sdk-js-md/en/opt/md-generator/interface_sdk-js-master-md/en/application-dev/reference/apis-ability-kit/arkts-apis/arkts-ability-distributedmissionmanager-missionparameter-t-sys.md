@@ -4,10 +4,11 @@
 export type MissionParameter = _MissionParameter
 ```
 
-Defines the parameters required for mission synchronization. It is used an input parameter in  
-[startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startSyncRemoteMissions-1).
+Defines the parameters required for mission synchronization. It is used an input parameter in [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startSyncRemoteMissions-(System-API)) .
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

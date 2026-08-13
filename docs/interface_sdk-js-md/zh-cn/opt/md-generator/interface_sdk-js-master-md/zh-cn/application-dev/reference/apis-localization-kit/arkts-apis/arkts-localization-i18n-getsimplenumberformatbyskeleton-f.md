@@ -8,9 +8,11 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 
 通过框架字符串获取SimpleNumberFormat对象。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat--><!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat-End-->
 
@@ -33,7 +35,7 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 
 | 错误码ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 
 ## getSimpleNumberFormatBySkeleton
@@ -48,7 +50,7 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.
 
 **废弃版本：** 20
 
-**替代接口：** [getSimpleNumberFormatBySkeleton](i18n.getSimpleNumberFormatBySkeleton(skeleton:)
+**替代接口：** [getSimpleNumberFormatBySkeleton](#getSimpleNumberFormatBySkeleton)(skeleton: string, locale?: Intl.Locale)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -73,4 +75,4 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.
 
 | 错误码ID |
 | --- |
-| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) |

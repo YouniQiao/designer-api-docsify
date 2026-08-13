@@ -2,7 +2,9 @@
 
 USB设备端口角色信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-interface USBPortStatus--><!--Device-usbManager-interface USBPortStatus-End-->
 
@@ -20,7 +22,9 @@ currentDataRole: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBPortStatus-currentDataRole: int--><!--Device-USBPortStatus-currentDataRole: int-End-->
 
@@ -38,7 +42,9 @@ currentMode: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBPortStatus-currentMode: int--><!--Device-USBPortStatus-currentMode: int-End-->
 
@@ -56,7 +62,9 @@ currentPowerRole: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBPortStatus-currentPowerRole: int--><!--Device-USBPortStatus-currentPowerRole: int-End-->
 

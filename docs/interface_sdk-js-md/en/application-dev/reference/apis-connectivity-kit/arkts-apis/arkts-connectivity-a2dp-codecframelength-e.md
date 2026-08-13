@@ -2,9 +2,11 @@
 
 Describes the codec frame length.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-a2dp-enum CodecFrameLength--><!--Device-a2dp-enum CodecFrameLength-End-->
 
@@ -18,9 +20,11 @@ CODEC_FRAME_LENGTH_5MS = 0
 
 Codec frame length 5ms.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_5MS = 0--><!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_5MS = 0-End-->
 
@@ -34,9 +38,11 @@ CODEC_FRAME_LENGTH_10MS = 1
 
 Codec frame length 10ms.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_10MS = 1--><!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_10MS = 1-End-->
 

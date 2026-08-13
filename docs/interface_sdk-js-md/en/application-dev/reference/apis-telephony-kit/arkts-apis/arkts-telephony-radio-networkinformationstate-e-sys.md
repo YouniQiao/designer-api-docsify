@@ -2,9 +2,11 @@
 
 Obtains network information status.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum NetworkInformationState--><!--Device-radio-export enum NetworkInformationState-End-->
 
@@ -20,9 +22,11 @@ NETWORK_UNKNOWN = 0
 
 Indicates that the network state is unknown.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformationState-NETWORK_UNKNOWN = 0--><!--Device-NetworkInformationState-NETWORK_UNKNOWN = 0-End-->
 
@@ -38,9 +42,11 @@ NETWORK_AVAILABLE = 1
 
 Indicates that the network is available for registration.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformationState-NETWORK_AVAILABLE = 1--><!--Device-NetworkInformationState-NETWORK_AVAILABLE = 1-End-->
 
@@ -56,9 +62,11 @@ NETWORK_CURRENT = 2
 
 Indicates that you have already registered with the network.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformationState-NETWORK_CURRENT = 2--><!--Device-NetworkInformationState-NETWORK_CURRENT = 2-End-->
 
@@ -74,9 +82,11 @@ NETWORK_FORBIDDEN = 3
 
 Indicates that the network is unavailable for registration.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformationState-NETWORK_FORBIDDEN = 3--><!--Device-NetworkInformationState-NETWORK_FORBIDDEN = 3-End-->
 

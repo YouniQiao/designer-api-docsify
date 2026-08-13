@@ -32,6 +32,8 @@ The object used by the worker thread to communicate with the host thread.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-worker-const workerPort: ThreadWorkerGlobalScope--><!--Device-worker-const workerPort: ThreadWorkerGlobalScope-End-->

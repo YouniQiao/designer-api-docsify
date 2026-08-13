@@ -2,7 +2,9 @@
 
 辅助功能网格信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)中的属性currentItem。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface AccessibilityGrid--><!--Device-unnamed-interface AccessibilityGrid-End-->
 
@@ -20,7 +22,9 @@ columnIndex: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityGrid-columnIndex: int--><!--Device-AccessibilityGrid-columnIndex: int-End-->
 
@@ -38,7 +42,9 @@ rowIndex: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityGrid-rowIndex: int--><!--Device-AccessibilityGrid-rowIndex: int-End-->
 

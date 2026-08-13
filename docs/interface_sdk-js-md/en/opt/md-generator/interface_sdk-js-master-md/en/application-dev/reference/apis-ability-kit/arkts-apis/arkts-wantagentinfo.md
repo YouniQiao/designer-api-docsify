@@ -1,8 +1,5 @@
 # wantAgentInfo
 
-The module defines the information required for triggering the WantAgent.
-
-
 ## Summary
 
 ### Interfaces

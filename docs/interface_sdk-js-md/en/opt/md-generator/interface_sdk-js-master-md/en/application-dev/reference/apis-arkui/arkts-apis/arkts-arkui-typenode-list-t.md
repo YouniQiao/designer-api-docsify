@@ -4,10 +4,11 @@
 type List = TypedFrameNode<ListInterface, ListAttribute>
 ```
 
-Represents a FrameNode of the **List** type. This type of node only allows child components of the  
-[ListItem](arkts-arkui-typenode-listitem-t.md#ListItem) and [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md#ListItemGroup) types.
+Represents a FrameNode of the **List** type. This type of node only allows child components of the [ListItem](arkts-arkui-typenode-listitem-t.md#ListItem) and [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md#ListItemGroup) types.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

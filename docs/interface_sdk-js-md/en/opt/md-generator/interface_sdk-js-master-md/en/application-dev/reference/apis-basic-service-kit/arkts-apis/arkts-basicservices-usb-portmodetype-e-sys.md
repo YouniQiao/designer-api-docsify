@@ -6,7 +6,7 @@ Enumerates USB port mode types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md#PortModeType)
+**Substitutes:** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md#PortModeType-(System-API))
 
 <!--Device-usb-export enum PortModeType--><!--Device-usb-export enum PortModeType-End-->
 

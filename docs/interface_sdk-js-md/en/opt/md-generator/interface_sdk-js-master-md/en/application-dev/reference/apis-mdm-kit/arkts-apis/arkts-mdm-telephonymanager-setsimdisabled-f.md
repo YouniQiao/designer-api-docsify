@@ -12,9 +12,11 @@ import { telephonyManager } from '@kit.MDMKit';
 function setSimDisabled(admin: Want, slotId: number): void
 ```
 
-Disables the SIM card in the specified slot. After being disabled, the SIM card in the specified slot cannot be used for making or receiving calls, sending or receiving SMSs, or accessing the internet. For example, an enterprise device administrator can disable the SIM card when an employee leaves the company or a device is lost,preventing unauthorized use. This is applicable in scenarios where enterprises need to restrict employee devices'communication capabilities, such as preventing SIM card misuse after employee departure or device loss, thereby ensuring enterprise communication security and cost control.
+Disables the SIM card in the specified slot. After being disabled, the SIM card in the specified slot cannot be used for making or receiving calls, sending or receiving SMSs, or accessing the internet. For example, an enterprise device administrator can disable the SIM card when an employee leaves the company or a device is lost, preventing unauthorized use. This is applicable in scenarios where enterprises need to restrict employee devices' communication capabilities, such as preventing SIM card misuse after employee departure or device loss, thereby ensuring enterprise communication security and cost control.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -35,10 +37,10 @@ Disables the SIM card in the specified slot. After being disabled, the SIM card 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

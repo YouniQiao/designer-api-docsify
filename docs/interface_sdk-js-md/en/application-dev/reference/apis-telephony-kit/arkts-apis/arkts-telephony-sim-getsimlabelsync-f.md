@@ -14,9 +14,11 @@ function getSimLabelSync(slotId: int): SimLabel
 
 Obtains the SIM card label synchronously.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getSimLabelSync(slotId: int): SimLabel--><!--Device-sim-function getSimLabelSync(slotId: int): SimLabel-End-->
 
@@ -26,7 +28,7 @@ Obtains the SIM card label synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID, which ranges from 0 to the maximum number of slots supported by the device. |
+| slotId | int | Yes | SIM card slot ID, which ranges from 0 to the maximum number of slots supported by the device. |
 
 **Return value:**
 

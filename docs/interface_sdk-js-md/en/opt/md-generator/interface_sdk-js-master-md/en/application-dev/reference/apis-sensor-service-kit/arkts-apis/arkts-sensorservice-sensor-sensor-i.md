@@ -2,7 +2,9 @@
 
 Describes the sensor information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface Sensor--><!--Device-sensor-interface Sensor-End-->
 
@@ -24,7 +26,9 @@ Device ID.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-deviceId?: int--><!--Device-Sensor-deviceId?: int-End-->
 
@@ -40,7 +44,9 @@ Device name.
 
 **Type:** string
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-deviceName?: string--><!--Device-Sensor-deviceName?: string-End-->
 
@@ -56,7 +62,9 @@ Firmware version of the sensor.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-firmwareVersion:string--><!--Device-Sensor-firmwareVersion:string-End-->
 
@@ -72,7 +80,9 @@ Hardware version of the sensor.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-hardwareVersion:string--><!--Device-Sensor-hardwareVersion:string-End-->
 
@@ -84,11 +94,13 @@ Hardware version of the sensor.
 isLocalSensor?: boolean
 ```
 
-Whether the sensor is a local sensor. The value **true** indicates a local sensor, and the value **false**indicates the opposite.
+Whether the sensor is a local sensor. The value **true** indicates a local sensor, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-isLocalSensor?: boolean--><!--Device-Sensor-isLocalSensor?: boolean-End-->
 
@@ -100,11 +112,13 @@ Whether the sensor is a local sensor. The value **true** indicates a local senso
 isMockSensor?: boolean
 ```
 
-Whether the sensor is a mock sensor. The value **true** indicates a mock sensor, and the value **false**indicates the opposite.
+Whether the sensor is a mock sensor. The value **true** indicates a mock sensor, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-isMockSensor?: boolean--><!--Device-Sensor-isMockSensor?: boolean-End-->
 
@@ -120,7 +134,9 @@ Maximum measurement range of the sensor.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-maxRange:double--><!--Device-Sensor-maxRange:double-End-->
 
@@ -136,7 +152,9 @@ Maximum sampling period.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-maxSamplePeriod:long--><!--Device-Sensor-maxSamplePeriod:long-End-->
 
@@ -152,7 +170,9 @@ Minimum sampling period.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-minSamplePeriod:long--><!--Device-Sensor-minSamplePeriod:long-End-->
 
@@ -168,7 +188,9 @@ Estimated sensor power, in mA.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-power:double--><!--Device-Sensor-power:double-End-->
 
@@ -184,7 +206,9 @@ Precision of the sensor.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-precision:double--><!--Device-Sensor-precision:double-End-->
 
@@ -200,7 +224,9 @@ Sensor type ID.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-sensorId:int--><!--Device-Sensor-sensorId:int-End-->
 
@@ -216,7 +242,9 @@ Sensor index.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-sensorIndex?: int--><!--Device-Sensor-sensorIndex?: int-End-->
 
@@ -232,7 +260,9 @@ Sensor name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-sensorName:string--><!--Device-Sensor-sensorName:string-End-->
 
@@ -248,7 +278,9 @@ Vendor of the sensor.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Sensor-vendorName:string--><!--Device-Sensor-vendorName:string-End-->
 

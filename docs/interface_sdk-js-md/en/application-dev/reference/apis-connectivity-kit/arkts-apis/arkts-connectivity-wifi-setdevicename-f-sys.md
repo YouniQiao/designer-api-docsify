@@ -20,7 +20,7 @@ Sets the name of the Wi-Fi P2P device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setP2pDeviceName](ohos.wifiManager/wifiManager.setP2pDeviceName)
+**Substitutes:** setP2pDeviceName
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

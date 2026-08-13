@@ -2,9 +2,11 @@
 
 Process data as blob type
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-buffer-class Blob--><!--Device-buffer-class Blob-End-->
 
@@ -24,9 +26,11 @@ arrayBuffer(): Promise<ArrayBuffer>
 
 Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +70,8 @@ A constructor used to create a **Blob** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)--><!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)-End-->
@@ -104,7 +110,9 @@ Creates a new Blob object containing a concatenation of the given sources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -121,21 +129,17 @@ Creates a new Blob object containing a concatenation of the given sources.
 
 ## slice
 
-ArkTS-Dyn:
-```TypeScript
-slice(start?: number, end?: number, type?: string): Blob
-```
-
-ArkTS-Sta:
 ```TypeScript
 slice(start?: int, end?: int, type?: string): Blob
 ```
 
 Creates and returns a **Blob** object that contains specified data from this **Blob** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -147,8 +151,8 @@ Creates and returns a **Blob** object that contains specified data from this **B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the start position of data. The default value is **0**. |
-| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the end position of data. The default value is the data length in the original **Blob** object. |
+| start | int | No | Offset to the start position of data. The default value is **0**. |
+| end | int | No | Offset to the end position of data. The default value is the data length in the original **Blob** object. |
 | type | string | No | Type of the data in the new **Blob** object. The default value is **''**. |
 
 **Return value:**
@@ -176,9 +180,11 @@ text(): Promise<string>
 
 Decodes data using UTF-8 and returns a string. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -204,44 +210,4 @@ pro.then((val: string) => {
   // Output: abc
 });
 ```
-
-## size
-
-```TypeScript
-get size(): int
-```
-
-Total size of the Blob instance, in bytes.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Blob-get size(): int--><!--Device-Blob-get size(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## type
-
-```TypeScript
-get type(): string
-```
-
-Type of the data in the Blob instance.
-
-**Type:** string
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Blob-get type(): string--><!--Device-Blob-get type(): string-End-->
-
-**System capability:** SystemCapability.Utils.Lang
 

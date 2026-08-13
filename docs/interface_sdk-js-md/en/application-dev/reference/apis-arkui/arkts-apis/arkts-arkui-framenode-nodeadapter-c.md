@@ -1,12 +1,14 @@
 # NodeAdapter
 
-Used for lazy loading of typeNode.
+Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality. > **NOTE：**> > Negative input parameters are ignored and trigger no processing.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class NodeAdapter--><!--Device-unnamed-export declare class NodeAdapter-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class NodeAdapter--><!--Device-unnamed-declare class NodeAdapter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,13 +18,17 @@ Used for lazy loading of typeNode.
 static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 ```
 
-Add a NodeAdapter to bind to the node.A node can only be bound to one NodeAdapter. Binding failure returns false.
+Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAdapter. Attempts to re-attach to a NodeAdapter that has already been attached to will fail and return **false**. > **NOTE：**> > The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**, > **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeAdapter-static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean--><!--Device-NodeAdapter-static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean-End-->
 
@@ -32,14 +38,14 @@ Add a NodeAdapter to bind to the node.A node can only be bound to one NodeAdapte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Yes | Define lazy loading classes. |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The bound FrameNode node. |
+| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Yes | NodeAdapter class for lazy loading. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to be attached. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Return the binding result. |
+| boolean | Attachment result. Returns **true** if the attachment is successful; returns **false** otherwise. |
 
 ## constructor
 
@@ -47,13 +53,17 @@ Add a NodeAdapter to bind to the node.A node can only be bound to one NodeAdapte
 constructor()
 ```
 
-Constructor.
+A constructor used to create a **NodeAdapter** object.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeAdapter-constructor()--><!--Device-NodeAdapter-constructor()-End-->
 
@@ -65,13 +75,17 @@ Constructor.
 static detachNodeAdapter(node: FrameNode): void
 ```
 
-Remove the bound NodeAdapter from the node.A node can only be bound to one NodeAdapter.
+Detaches a FrameNode from its NodeAdapter.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeAdapter-static detachNodeAdapter(node: FrameNode): void--><!--Device-NodeAdapter-static detachNodeAdapter(node: FrameNode): void-End-->
 
@@ -81,7 +95,7 @@ Remove the bound NodeAdapter from the node.A node can only be bound to one NodeA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Unbind the FrameNode node. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to detach. |
 
 ## dispose
 
@@ -89,13 +103,17 @@ Remove the bound NodeAdapter from the node.A node can only be bound to one NodeA
 dispose(): void
 ```
 
-Dispose the NodeAdapter immediately.
+Disposes of this **NodeAdapter** object. Bindings, if any, of the object will be cleared before the object is disposed of.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeAdapter-dispose(): void--><!--Device-NodeAdapter-dispose(): void-End-->
 
@@ -107,13 +125,17 @@ Dispose the NodeAdapter immediately.
 getAllAvailableItems(): Array<FrameNode>
 ```
 
-Obtain all data results.
+Obtains all available items. Available nodes include both currently displayed and preloaded nodes. The number of preloaded nodes can be configured by adjusting the **cachedCount** property of the parent container, following the [usage constraints](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#constraints) of **LazyForEach**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeAdapter-getAllAvailableItems(): Array<FrameNode>--><!--Device-NodeAdapter-getAllAvailableItems(): Array<FrameNode>-End-->
 
@@ -123,23 +145,27 @@ Obtain all data results.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | Return all valid FrameNode collections. |
+| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | Array of items in the FrameNode. |
 
 ## insertItem
 
 ```TypeScript
-insertItem(start: int, count: int): void
+insertItem(start: number, count: number): void
 ```
 
-Define data insertion operations.Insert a specified amount of data starting from the index value.
+Inserts a specified number of items starting from a specific index.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-insertItem(start: int, count: int): void--><!--Device-NodeAdapter-insertItem(start: int, count: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-insertItem(start: number, count: number): void--><!--Device-NodeAdapter-insertItem(start: number, count: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,8 +173,8 @@ Define data insertion operations.Insert a specified amount of data starting from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | Start Insert index values for data. |
-| count | int | Yes | Insert the number of data. |
+| start | number | Yes | Starting index of the items to insert. &lt;br&gt;Value range: 0, +∞). |
+| count | number | Yes | Number of the items to insert. &lt;br&gt;Value range: [0, +∞). |
 
 ## isDisposed
 
@@ -156,13 +182,17 @@ Define data insertion operations.Insert a specified amount of data starting from
 isDisposed(): boolean
 ```
 
-Get if the NodeAdapter is disposed.
+Checks whether the NodeAdapter's backend reference has been released. Frontend nodes maintain references to corresponding backend entity nodes. After a node calls the **dispose** API to release this reference, subsequent API calls may cause crashes or return default values. This API facilitates validation of node validity prior to operations, thereby mitigating risks in scenarios where calls after disposal are required.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-NodeAdapter-isDisposed(): boolean--><!--Device-NodeAdapter-isDisposed(): boolean-End-->
 
@@ -172,23 +202,31 @@ Get if the NodeAdapter is disposed.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the NodeAdapter is disposed, false otherwise. |
+| boolean | Whether the reference to the backend node is released. The value **true** means that the reference to backend node is released, and **false** means the opposite. |
+
+## Examples
+
+See [NodeAdapter Validity Check Example.
 
 ## moveItem
 
 ```TypeScript
-moveItem(from: int, to: int): void
+moveItem(from: number, to: number): void
 ```
 
-Define data movement operations. Move data from the starting index to the ending index.
+Moves items from the starting index to the ending index.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-moveItem(from: int, to: int): void--><!--Device-NodeAdapter-moveItem(from: int, to: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-moveItem(from: number, to: number): void--><!--Device-NodeAdapter-moveItem(from: number, to: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,24 +234,28 @@ Define data movement operations. Move data from the starting index to the ending
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | int | Yes | Starting index value. |
-| to | int | Yes | End index value. |
+| from | number | Yes | Original index from which the data will be moved. &lt;br&gt;Value range: [0, +∞). |
+| to | number | Yes | Target index to which the data will be moved. &lt;br&gt;Value range: [0, +∞). |
 
 ## onAttachToNode
 
 ```TypeScript
-onAttachToNode(target: FrameNode): void
+onAttachToNode?(target: FrameNode): void
 ```
 
-This callback will be triggered when a FrameNode is bound.
+Called when a FrameNode is attached to the NodeAdapter. > **NOTE：**> > In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the > main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling > [attachNodeAdapter](#attachNodeAdapter) and before the host node is attached to the main tree. > In this case, you will receive this callback when the host node is attached to the main tree. > > In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host > node, instead of when the host node is attached to the main tree. In this case, the host node may not have been > attached to the main tree. If the node on which the callback logic depends has been mounted (for example, > accessing layout information or executing animation), you are advised to register > onAppear in the callback and place the related logic in **onAppear** for > execution. If you set this callback by dynamically assigning a value, complete the setting before calling > [attachNodeAdapter](#attachNodeAdapter). Otherwise, the callback may fail to be triggered.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-onAttachToNode(target: FrameNode): void--><!--Device-NodeAdapter-onAttachToNode(target: FrameNode): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-onAttachToNode?(target: FrameNode): void--><!--Device-NodeAdapter-onAttachToNode?(target: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -221,23 +263,27 @@ This callback will be triggered when a FrameNode is bound.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The bound FrameNode node. |
+| target | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode attached to the NodeAdapter. |
 
 ## onCreateChild
 
 ```TypeScript
-onCreateChild(index: int): FrameNode
+onCreateChild?(index: number): FrameNode
 ```
 
-Call this callback when loading for the first time or when a new node slides in.
+Called during node initialization or when new child nodes are detected. When adding child components, follow the child component restrictions for declarative components. For example, **WaterFlow** only supports adding **FlowItem** child nodes. The parent node uses the child node's index and key to determine whether the node is being loaded for the first time or a new node is sliding into view.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-onCreateChild(index: int): FrameNode--><!--Device-NodeAdapter-onCreateChild(index: int): FrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-onCreateChild?(index: number): FrameNode--><!--Device-NodeAdapter-onCreateChild?(index: number): FrameNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -245,47 +291,55 @@ Call this callback when loading for the first time or when a new node slides in.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Load the index value of the data. |
+| index | number | Yes | Index of the loaded node. &lt;br&gt;Value range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | Returns the FrameNode node that loads the node. |
+| [FrameNode](arkts-arkui-framenode-c.md) | FrameNode created by you. |
 
 ## onDetachFromNode
 
 ```TypeScript
-onDetachFromNode(): void
+onDetachFromNode?(): void
 ```
 
-This callback will be triggered when the binding is released.
+Called when detachment occurs.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-onDetachFromNode(): void--><!--Device-NodeAdapter-onDetachFromNode(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-onDetachFromNode?(): void--><!--Device-NodeAdapter-onDetachFromNode?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDisposeChild
 
 ```TypeScript
-onDisposeChild(id: int, node: FrameNode): void
+onDisposeChild?(id: number, node: FrameNode): void
 ```
 
-Called when the child node is about to be destroyed.
+Called when a child node is about to be disposed. Nodes that are neither displayed on the screen nor within the preload range are considered nodes about to be disposed.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-onDisposeChild(id: int, node: FrameNode): void--><!--Device-NodeAdapter-onDisposeChild(id: int, node: FrameNode): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-onDisposeChild?(id: number, node: FrameNode): void--><!--Device-NodeAdapter-onDisposeChild?(id: number, node: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -293,24 +347,28 @@ Called when the child node is about to be destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | The child node ID that is about to be destroyed. |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The FrameNode node that is about to be destroyed. |
+| id | number | Yes | ID of the child node to be disposed of. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to be disposed of. |
 
 ## onGetChildId
 
 ```TypeScript
-onGetChildId(index: int): int
+onGetChildId?(index: number): number
 ```
 
-Call this callback when loading for the first time or when a new node slides in.Used to generate custom IDs,developers need to ensure the uniqueness of the IDs themselves.
+Called during node initialization or when new child nodes are detected. The **index** parameter enables custom ID generation. Ensure that IDs remain unique across different index values.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-onGetChildId(index: int): int--><!--Device-NodeAdapter-onGetChildId(index: int): int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-onGetChildId?(index: number): number--><!--Device-NodeAdapter-onGetChildId?(index: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -318,29 +376,33 @@ Call this callback when loading for the first time or when a new node slides in.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Load the index value of the data. |
+| index | number | Yes | Index of the loaded node. &lt;br&gt;Value range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Returning the developer's custom ID requires the developer to ensure its uniqueness. |
+| number | Custom ID. Make sure the ID is unique. |
 
 ## onUpdateChild
 
 ```TypeScript
-onUpdateChild(id: int, node: FrameNode): void
+onUpdateChild?(id: number, node: FrameNode): void
 ```
 
-Call this callback when reloading or reusing.
+Called when a loaded node is reused. Node reuse occurs when the key value of a cached node matches that of the node to be reused.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-onUpdateChild(id: int, node: FrameNode): void--><!--Device-NodeAdapter-onUpdateChild(id: int, node: FrameNode): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-onUpdateChild?(id: number, node: FrameNode): void--><!--Device-NodeAdapter-onUpdateChild?(id: number, node: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -348,8 +410,8 @@ Call this callback when reloading or reusing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | The child node ID that is about to be reloaded. |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Reused FrameNode nodes. |
+| id | number | Yes | ID of the node to be reused. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode that is reused. |
 
 ## reloadAllItems
 
@@ -357,13 +419,17 @@ Call this callback when reloading or reusing.
 reloadAllItems(): void
 ```
 
-Define the operation of reloading all data.
+Reloads all items in this node. This API calls the OnDataReloaded API in **LazyForEach** to trigger component data refresh.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NodeAdapter-reloadAllItems(): void--><!--Device-NodeAdapter-reloadAllItems(): void-End-->
 
@@ -372,18 +438,22 @@ Define the operation of reloading all data.
 ## reloadItem
 
 ```TypeScript
-reloadItem(start: int, count: int): void
+reloadItem(start: number, count: number): void
 ```
 
-Define the data reload operation.Reload a specified amount of data starting from the index value.
+Reloads a specified number of items starting from a specific index.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-reloadItem(start: int, count: int): void--><!--Device-NodeAdapter-reloadItem(start: int, count: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-reloadItem(start: number, count: number): void--><!--Device-NodeAdapter-reloadItem(start: number, count: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -391,24 +461,28 @@ Define the data reload operation.Reload a specified amount of data starting from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | Start loading index values for data. |
-| count | int | Yes | Load the number of data. |
+| start | number | Yes | Starting index of the items to reload. &lt;br&gt;Value range: [0, +∞). |
+| count | number | Yes | Number of the items to reload. &lt;br&gt;Value range: [0, +∞). |
 
 ## removeItem
 
 ```TypeScript
-removeItem(start: int, count: int): void
+removeItem(start: number, count: number): void
 ```
 
-Define data deletion operations.Delete a specified amount of data starting from the index value.
+Removes a specified number of items starting from a specific index.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeAdapter-removeItem(start: int, count: int): void--><!--Device-NodeAdapter-removeItem(start: int, count: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeAdapter-removeItem(start: number, count: number): void--><!--Device-NodeAdapter-removeItem(start: number, count: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -416,26 +490,6 @@ Define data deletion operations.Delete a specified amount of data starting from 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | Start deleting index values for data. |
-| count | int | Yes | Delete the number of data. |
-
-## totalNodeCount
-
-```TypeScript
-get totalNodeCount(): int
-```
-
-Get the total number of node count.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NodeAdapter-get totalNodeCount(): int--><!--Device-NodeAdapter-get totalNodeCount(): int-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+| start | number | Yes | Starting index of the items to remove. &lt;br&gt;Value range: [0, +∞). |
+| count | number | Yes | Number of the items to remove. &lt;br&gt;Value range: [0, +∞). |
 

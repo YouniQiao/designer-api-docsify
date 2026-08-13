@@ -1,18 +1,14 @@
 # UIExtensionComponent properties/events
 
-The [universal attributes](./common) are supported.
+The universal attributes are supported. Universal events, such as the click event, are not supported. The events are passed to the remote UIExtensionAbility for processing after coordinate conversion. The following events are supported:
 
-Universal events, such as the [click event](./common), are not supported.
-
-The events are passed to the remote UIExtensionAbility for processing after coordinate conversion.
-
-The following events are supported:
-
-**Inheritance/Implementation:** UIExtensionComponentAttribute extends [CommonMethod<UIExtensionComponentAttribute>](CommonMethod<UIExtensionComponentAttribute>)
+**Inheritance/Implementation:** UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>
 
 **Since:** 10
 
-<!--Device-unnamed-declare class UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>--><!--Device-unnamed-declare class UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class UIExtensionComponentAttribute--><!--Device-unnamed-declare class UIExtensionComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class BaselineOffsetStyle--><!--Device-unnamed-declare class BaselineOffsetStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ constructor(value: LengthMetrics)
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -30,7 +34,7 @@ constructor(value: LengthMetrics)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-lengthmetrics-t.md) | 是 |
 
 ## baselineOffset
 
@@ -38,13 +42,13 @@ constructor(value: LengthMetrics)
 readonly baselineOffset: number
 ```
 
-获取属性字符串的文本基线偏移量。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+获取属性字符串的文本基线偏移量。 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

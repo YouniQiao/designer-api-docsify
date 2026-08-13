@@ -26,6 +26,8 @@ complete?: () => void
 
 Called when an API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -44,6 +46,8 @@ fail?: (data: string, code: number) => void
 
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -54,21 +58,15 @@ Called when an API call has failed. **data** indicates the error information, an
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
 ## success
 
 ```TypeScript
 success?: (data: BrightnessModeResponse) => void
 ```
 
-Called when an API call is successful. **data** is a return value of the  
-[BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md#BrightnessModeResponse) type.
+Called when an API call is successful. **data** is a return value of the [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md#BrightnessModeResponse) type.
+
+**Type:** (data: BrightnessModeResponse) =&gt; void
 
 **Since:** 3
 
@@ -79,10 +77,4 @@ Called when an API call is successful. **data** is a return value of the
 <!--Device-GetBrightnessModeOptions-success?: (data: BrightnessModeResponse) => void--><!--Device-GetBrightnessModeOptions-success?: (data: BrightnessModeResponse) => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md) | Yes |  |
 

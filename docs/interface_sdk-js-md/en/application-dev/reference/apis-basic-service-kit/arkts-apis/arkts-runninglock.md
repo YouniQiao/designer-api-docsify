@@ -2,9 +2,11 @@
 
 The **runningLock** module provides APIs for creating, querying, holding, and releasing running locks. A running lock enables the proximity sensor to turn on or off the screen, or prevents the device from entering sleep mode when the screen is off. For details about the running lock types, see [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md#RunningLockType).
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace runningLock--><!--Device-unnamed-declare namespace runningLock-End-->
 
@@ -23,12 +25,12 @@ import { runningLock } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [create](arkts-basicservices-runninglock-create-f.md#create) | Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses an asynchronous callback to return the result. |
-| [create](arkts-basicservices-runninglock-create-f.md#create-1) | Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses a promise to return the result. |
-| [createRunningLock](arkts-basicservices-runninglock-createrunninglock-f.md#createrunninglock) | Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses an asynchronous callback to return the result. |
-| [createRunningLock](arkts-basicservices-runninglock-createrunninglock-f.md#createrunninglock-1) | Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses a promise to return the result. |
-| [isRunningLockTypeSupported](arkts-basicservices-runninglock-isrunninglocktypesupported-f.md#isrunninglocktypesupported) | Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses an asynchronous callback to return the result. |
-| [isRunningLockTypeSupported](arkts-basicservices-runninglock-isrunninglocktypesupported-f.md#isrunninglocktypesupported-1) | Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses a promise to return the result. |
-| [isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported) | Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. |
+| [create](arkts-basicservices-runninglock-create-f.md#create) | Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses a promise to return the result. |
+| [createRunningLock](arkts-basicservices-runninglock-createrunninglock-f.md#createRunningLock) | Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses an asynchronous callback to return the result. |
+| [createRunningLock](arkts-basicservices-runninglock-createrunninglock-f.md#createRunningLock) | Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses a promise to return the result. |
+| [isRunningLockTypeSupported](arkts-basicservices-runninglock-isrunninglocktypesupported-f.md#isRunningLockTypeSupported) | Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses an asynchronous callback to return the result. |
+| [isRunningLockTypeSupported](arkts-basicservices-runninglock-isrunninglocktypesupported-f.md#isRunningLockTypeSupported) | Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses a promise to return the result. |
+| [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported) | Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. |
 
 ### Classes
 

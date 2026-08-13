@@ -1,10 +1,12 @@
 # WebSchemeHandlerRequest
 
-Defines the Web resource request used for scheme handler.
+通过WebSchemeHandler拦截到的请求。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebSchemeHandlerRequest--><!--Device-webview-class WebSchemeHandlerRequest-End-->
 
@@ -16,11 +18,13 @@ Defines the Web resource request used for scheme handler.
 getFrameUrl(): string
 ```
 
-Gets the URL of frame which trigger this request.
+获取触发此请求的Frame的URL。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebSchemeHandlerRequest-getFrameUrl(): string--><!--Device-WebSchemeHandlerRequest-getFrameUrl(): string-End-->
 
@@ -30,7 +34,7 @@ Gets the URL of frame which trigger this request.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return the URL of frame which trigger this request. |
+| string | 返回触发此请求的Frame的URL。 |
 
 ## getHeader
 
@@ -38,11 +42,15 @@ Gets the URL of frame which trigger this request.
 getHeader(): Array<WebHeader>
 ```
 
-Gets request headers.
+获取资源请求头信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-getHeader(): Array<WebHeader>--><!--Device-WebSchemeHandlerRequest-getHeader(): Array<WebHeader>-End-->
 
@@ -52,7 +60,7 @@ Gets request headers.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WebHeader&gt; | Return the request headers. |
+| Array&lt;WebHeader&gt; | 返回资源请求头信息。 |
 
 ## getHttpBodyStream
 
@@ -60,11 +68,15 @@ Gets request headers.
 getHttpBodyStream(): WebHttpBodyStream | null
 ```
 
-Get http body stream.
+获取资源请求中的WebHttpBodyStream。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-getHttpBodyStream(): WebHttpBodyStream | null--><!--Device-WebSchemeHandlerRequest-getHttpBodyStream(): WebHttpBodyStream | null-End-->
 
@@ -74,7 +86,7 @@ Get http body stream.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
+| [WebHttpBodyStream](../../apis-na/arkts-apis/arkts-na-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
 
 ## getReferrer
 
@@ -82,11 +94,15 @@ Get http body stream.
 getReferrer(): string
 ```
 
-Get referrer of request.
+获取referrer。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-getReferrer(): string--><!--Device-WebSchemeHandlerRequest-getReferrer(): string-End-->
 
@@ -96,7 +112,7 @@ Get referrer of request.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return referrer of request. |
+| string | 获取到的referrer。 |
 
 ## getRequestMethod
 
@@ -104,11 +120,15 @@ Get referrer of request.
 getRequestMethod(): string
 ```
 
-Get request method.
+获取请求方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-getRequestMethod(): string--><!--Device-WebSchemeHandlerRequest-getRequestMethod(): string-End-->
 
@@ -118,7 +138,7 @@ Get request method.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return the request method. |
+| string | 返回请求方法。 |
 
 ## getRequestResourceType
 
@@ -126,11 +146,13 @@ Get request method.
 getRequestResourceType(): WebResourceType
 ```
 
-Get request's resource type.
+获取资源请求的资源类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType--><!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType-End-->
 
@@ -140,7 +162,7 @@ Get request's resource type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Return the request's resource type. |
+| [WebResourceType](../../apis-na/arkts-apis/arkts-na-webview-webresourcetype-e.md) | 返回资源请求的资源类型。 |
 
 ## getRequestUrl
 
@@ -148,11 +170,15 @@ Get request's resource type.
 getRequestUrl(): string
 ```
 
-Gets the request URL.
+获取资源请求的URL信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-getRequestUrl(): string--><!--Device-WebSchemeHandlerRequest-getRequestUrl(): string-End-->
 
@@ -162,7 +188,7 @@ Gets the request URL.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return the request URL. |
+| string | 返回资源请求的URL信息。 |
 
 ## hasGesture
 
@@ -170,11 +196,15 @@ Gets the request URL.
 hasGesture(): boolean
 ```
 
-Check whether the request is associated with gesture.
+获取资源请求是否与手势（如点击）相关联。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-hasGesture(): boolean--><!--Device-WebSchemeHandlerRequest-hasGesture(): boolean-End-->
 
@@ -184,7 +214,7 @@ Check whether the request is associated with gesture.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether request has user gesture. |
+| boolean | 返回资源请求是否与手势（如点击）相关联，如果返回资源请求与手势相关联则返回true，否则返回false。 |
 
 ## isMainFrame
 
@@ -192,11 +222,15 @@ Check whether the request is associated with gesture.
 isMainFrame(): boolean
 ```
 
-Check whether the request is for getting the main frame.
+判断资源请求是否为主frame。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-isMainFrame(): boolean--><!--Device-WebSchemeHandlerRequest-isMainFrame(): boolean-End-->
 
@@ -206,5 +240,5 @@ Check whether the request is for getting the main frame.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether request is main frame. |
+| boolean | 判断资源请求是否为主frame，如果资源请求是主frame则返回true，否则返回false。 |
 

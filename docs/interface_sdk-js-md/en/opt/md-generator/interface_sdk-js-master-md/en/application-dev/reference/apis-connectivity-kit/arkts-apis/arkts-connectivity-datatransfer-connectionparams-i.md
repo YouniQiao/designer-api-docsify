@@ -4,6 +4,8 @@ Describes the parameters for connection.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-dataTransfer-interface ConnectionParams--><!--Device-dataTransfer-interface ConnectionParams-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -20,11 +22,13 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the connected device address.The length must be 17, The value consists of hexadecimal digits and colons (:),for example, 11:22:33:AA:BB:FF.
+Indicates the connected device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Data transfer mode. The basic transfer mode is used by default Default value: BA
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionParams-transferMode?: TransferMode--><!--Device-ConnectionParams-transferMode?: TransferMode-End-->
@@ -56,11 +62,13 @@ Data transfer mode. The basic transfer mode is used by default Default value: BA
 uuid: string
 ```
 
-Indicates the service UUID.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
+Indicates the service UUID. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. &lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

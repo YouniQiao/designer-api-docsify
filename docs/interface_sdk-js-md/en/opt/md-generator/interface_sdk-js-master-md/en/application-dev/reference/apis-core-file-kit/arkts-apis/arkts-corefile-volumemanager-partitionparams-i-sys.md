@@ -4,6 +4,8 @@ Partition creation options.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-volumeManager-export interface PartitionParams--><!--Device-volumeManager-export interface PartitionParams-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -28,6 +30,8 @@ End sector of the partition.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionParams-endSector: long--><!--Device-PartitionParams-endSector: long-End-->
@@ -47,6 +51,8 @@ Partition number.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Start sector of the partition.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionParams-startSector: long--><!--Device-PartitionParams-startSector: long-End-->
@@ -87,6 +95,8 @@ The code of file system. Common file systems are **ext4**, **vfat**, **exfat**, 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

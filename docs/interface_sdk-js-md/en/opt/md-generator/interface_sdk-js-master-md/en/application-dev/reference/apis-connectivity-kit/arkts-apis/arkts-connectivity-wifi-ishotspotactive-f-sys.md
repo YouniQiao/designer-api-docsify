@@ -18,7 +18,7 @@ Checks whether Wi-Fi hotspot is active on a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isHotspotActive](ohos.wifiManager/wifiManager.isHotspotActive)
+**Substitutes:** [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md#isHotspotActive)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

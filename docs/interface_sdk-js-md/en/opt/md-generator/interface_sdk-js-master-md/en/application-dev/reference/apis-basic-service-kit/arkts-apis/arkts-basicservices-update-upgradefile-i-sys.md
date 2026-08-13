@@ -2,7 +2,9 @@
 
 Represents the upgrade file, including the file type and file path, which are used to specify the local upgrade package to be installed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface UpgradeFile--><!--Device-update-export interface UpgradeFile-End-->
 
@@ -26,7 +28,9 @@ File path, which can be an absolute path or a relative path. The path length ran
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeFile-filePath: string--><!--Device-UpgradeFile-filePath: string-End-->
 
@@ -44,7 +48,9 @@ File type, which specifies the type of the upgrade package. If this parameter is
 
 **Type:** ComponentType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeFile-fileType: ComponentType--><!--Device-UpgradeFile-fileType: ComponentType-End-->
 

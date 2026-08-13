@@ -12,7 +12,7 @@ function getFreeBytes(path: string, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getFreeBytes](@ohos.file.statvfs:statfs.getFreeBytes)
+**替代接口：** getFreeBytes
 
 <!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -54,7 +54,7 @@ function getFreeBytes(path: string): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getFreeBytes](@ohos.file.statvfs:statfs.getFreeBytes)
+**替代接口：** getFreeBytes
 
 <!--Device-Statfs-function getFreeBytes(path: string): Promise<number>--><!--Device-Statfs-function getFreeBytes(path: string): Promise<number>-End-->
 

@@ -1,11 +1,12 @@
 # TabsController
 
-Defines a tab controller, which is used to control switching of tabs. One **TabsController** cannot control multiple  
-**Tabs** components.
+Defines a tab controller, which is used to control switching of tabs. One **TabsController** cannot control multiple **Tabs** components.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class TabsController--><!--Device-unnamed-declare class TabsController-End-->
 
@@ -22,6 +23,8 @@ Switches to the specified tab.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,6 +50,8 @@ A constructor used to create a **TabsController** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TabsController-constructor()--><!--Device-TabsController-constructor()-End-->
@@ -59,24 +64,13 @@ A constructor used to create a **TabsController** object.
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches.
-
-> **NOTE：**
-> 
-> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
-> preloading in the [onAppear](CommonMethod#onAppear) lifecycle of **Tabs**.
-> 
-> - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown
-> when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when
-> calling this API.
-> 
-> - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the
-> content displayed on the tab bar. For details, see
-> [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
+Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches. > **NOTE：**> > - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first > preloading in the onAppear lifecycle of **Tabs**. > > - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown > when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when > calling this API. > > - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the > content displayed on the tab bar. For details, see > [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +96,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -110,20 +104,13 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 setTabBarOpacity(opacity: number): void
 ```
 
-Sets the opacity of the tab bar.
-
-> **NOTE：**
-> 
-> When a **Tabs** component is bound to a scrollable container using APIs like
-> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)
-> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the
-> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In
-> this case, any **TabBar** opacity set via the **setTabBarOpacity** API will be overridden. Therefore, avoid using
-> **bindTabsToScrollable**, **bindTabsToNestedScrollable**, and **setTabBarOpacity** simultaneously.
+Sets the opacity of the tab bar. > **NOTE：**> > When a **Tabs** component is bound to a scrollable container using APIs like > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindTabsToScrollable) > or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the > container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In > this case, any **TabBar** opacity set via the **setTabBarOpacity** API will be overridden. Therefore, avoid using > **bindTabsToScrollable**, **bindTabsToNestedScrollable**, and **setTabBarOpacity** simultaneously.
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,20 +132,13 @@ Sets the opacity of the tab bar.
 setTabBarTranslate(translate: TranslateOptions): void
 ```
 
-Sets the translation distance of the tab bar.
-
-> **NOTE：**
-> 
-> When a **Tabs** component is bound to a scrollable container using APIs like
-> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)
-> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the
-> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In
-> this case, calling the **setTabBarTranslate** API has no effect. Therefore, avoid using **bindTabsToScrollable**,
-> **bindTabsToNestedScrollable**, and **setTabBarTranslate** simultaneously.
+Sets the translation distance of the tab bar. > **NOTE：**> > When a **Tabs** component is bound to a scrollable container using APIs like > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindTabsToScrollable) > or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the > container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In > this case, calling the **setTabBarTranslate** API has no effect. Therefore, avoid using **bindTabsToScrollable**, > **bindTabsToNestedScrollable**, and **setTabBarTranslate** simultaneously.
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

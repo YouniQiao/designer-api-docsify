@@ -4,6 +4,8 @@ Describes the pairing state parameters.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-remoteDevice-interface PairingStateParam--><!--Device-remoteDevice-interface PairingStateParam-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -20,11 +22,13 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Indicates the previous pairing state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingStateParam-preState: PairingState--><!--Device-PairingStateParam-preState: PairingState-End-->
@@ -61,6 +67,8 @@ Indicates the pairing state reason.
 **Type:** [PairingReason](arkts-connectivity-remotedevice-pairingreason-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +88,8 @@ Indicates reason message. This field is intended for log information only and sh
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingStateParam-reasonMsg?: string--><!--Device-PairingStateParam-reasonMsg?: string-End-->
@@ -97,6 +107,8 @@ Indicates the current pairing state.
 **Type:** PairingState
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

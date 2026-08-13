@@ -1,4 +1,4 @@
-# commonEventPublishData(The CommonEventPublishData module provides APIs for defining common event content and attributes.)
+# commonEventPublishData
 
 ## 汇总
 

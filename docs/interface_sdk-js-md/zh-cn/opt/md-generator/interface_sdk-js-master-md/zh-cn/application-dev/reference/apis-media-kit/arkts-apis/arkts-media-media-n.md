@@ -2,7 +2,9 @@
 
 媒体子系统为开发者提供一套简单且易于理解的接口，使得开发者能够方便接入系统并使用系统的媒体资源。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace media--><!--Device-unnamed-declare namespace media-End-->
 
@@ -15,38 +17,55 @@
 
 | 名称 |
 | --- |
-| [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer) |
-| [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer-1) |
-| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder) |
-| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder-1) |
-| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md#createaudioplayer) |
-| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) |
-| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md#createmediasourcewithfd) |
-| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md#createmediasourcewithdatasource) |
-| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl) |
-| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createmediasourcewithstreamdata) |
-| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer) |
-| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer-1) |
-| [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool) |
-| [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool-1) |
-| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder) |
-| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createavtranscoder) |
-| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor) |
-| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor-1) |
-| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator) |
-| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator-1) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md#createAudioPlayer) |
+| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md#createAudioRecorder) |
+| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md#createMediaSourceWithFd) |
+| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md#createMediaSourceWithDataSource) |
+| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl) |
+| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl) |
+| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createMediaSourceWithStreamData) |
+| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createMediaSourceWithStreamData) |
+| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createVideoPlayer) |
+| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createVideoPlayer) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createAVScreenCaptureRecorder) |
+| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createAVScreenCaptureRecorder) |
+| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createAVTranscoder) |
+| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createAVTranscoder) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder) |
-| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder-1) |
-| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md#createparallelsoundpool) |
-| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md#reportavscreencaptureuserchoice) |
-| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md#getavscreencaptureconfigurableparameters) |
-| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getscreencapturemonitor) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder（系统接口）) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder（系统接口）) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder（系统接口）) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder（系统接口）) |
+| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md#createParallelSoundPool（系统接口）) |
+| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md#reportAVScreenCaptureUserChoice（系统接口）) |
+| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md#getAVScreenCaptureConfigurableParameters（系统接口）) |
+| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getScreenCaptureMonitor（系统接口）) |
+| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getScreenCaptureMonitor（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

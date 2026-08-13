@@ -6,15 +6,11 @@
 function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>
 ```
 
-在当前[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。
-
-该接口用于拉起DLP权限管理应用配置文件权限，并将用户操作结果返回给调用方。
-
-> **说明：**
-> 
-> 该接口仅支持域账号调用。
+在当前[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。 该接口用于拉起DLP权限管理应用配置文件权限，并将用户操作结果返回给调用方。 > **说明：** > > 该接口仅支持域账号调用。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,11 +35,11 @@ function startDLPManagerForResult(context: common.UIAbilityContext, want: Want):
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100017-want参数中parameters内没有displayname) |
-| [19100016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100016-want参数中没有uri) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100017](../errorcode-dlp.md#19100017-want参数中parameters内没有displayname) |
+| [19100016](../errorcode-dlp.md#19100016-want参数中没有uri) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 

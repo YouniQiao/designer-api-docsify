@@ -1,8 +1,10 @@
 # TextEmbedding
 
-Describes the text embedding functions of the multi-modal embedding model.Chinese and English are supported.
+Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-interface TextEmbedding--><!--Device-intelligence-interface TextEmbedding-End-->
 
@@ -20,9 +22,11 @@ import { intelligence } from '@kit.ArkData';
 getEmbedding(text: string): Promise<Array<number>>
 ```
 
-Obtains the embedding vector of the given text.The model can process up to 512 characters of text per inference, supporting both Chinese and English.
+Obtains the embedding vector of the given text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>--><!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>-End-->
 
@@ -44,9 +48,9 @@ Obtains the embedding vector of the given text.The model can process up to 512 c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 ## Examples
 
@@ -70,9 +74,11 @@ textEmbedding.getEmbedding(text)
 getEmbedding(batchTexts: Array<string>): Promise<Array<Array<number>>>
 ```
 
-Obtains the embedding vector of a given batch of text.The model can process up to 512 characters of text per inference, supporting both Chinese and English.
+Obtains the embedding vector of a given batch of text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>--><!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>-End-->
 
@@ -94,9 +100,9 @@ Obtains the embedding vector of a given batch of text.The model can process up t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 ## Examples
 
@@ -122,7 +128,9 @@ loadModel(): Promise<void>
 
 Loads this text embedding model. If the loading fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-loadModel(): Promise<void>--><!--Device-TextEmbedding-loadModel(): Promise<void>-End-->
 
@@ -138,8 +146,8 @@ Loads this text embedding model. If the loading fails, an error code is returned
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 ## Examples
 
@@ -163,7 +171,9 @@ releaseModel(): Promise<void>
 
 Releases this text embedding model. If the releasing fails, an error code is returned.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextEmbedding-releaseModel(): Promise<void>--><!--Device-TextEmbedding-releaseModel(): Promise<void>-End-->
 
@@ -179,8 +189,8 @@ Releases this text embedding model. If the releasing fails, an error code is ret
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 ## Examples
 

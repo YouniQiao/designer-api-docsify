@@ -1,14 +1,14 @@
 # RectShape
 
-用于clipShape和maskShape接口的矩形形状。
+用于clipShape和maskShape接口的矩形形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
 
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
-
-**继承/实现关系：** RectShape extends [BaseShape<RectShape>](BaseShape<RectShape>)
+**继承/实现关系：** RectShape extends BaseShape<RectShape>
 
 **起始版本：** 12
 
-<!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>--><!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class RectShape--><!--Device-unnamed-export declare class RectShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +21,8 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 创建RectShape对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +49,8 @@ radius(radius: number | string | Array<number | string>): RectShape
 设置矩形形状的圆角半径。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,6 +84,8 @@ radiusHeight(rHeight: number | string): RectShape
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -111,6 +117,8 @@ radiusWidth(rWidth: number | string): RectShape
 设置矩形形状圆角半径的宽度。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

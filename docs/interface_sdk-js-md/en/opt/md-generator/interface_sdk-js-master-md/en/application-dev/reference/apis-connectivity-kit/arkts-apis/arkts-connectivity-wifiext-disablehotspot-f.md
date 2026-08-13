@@ -18,7 +18,7 @@ Disables a Wi-Fi hotspot.
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableHotspot](ohos.wifiManagerExt/wifiManagerExt.disableHotspot)
+**Substitutes:** [disableHotspot](arkts-connectivity-wifimanagerext-disablehotspot-f.md#disableHotspot)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 

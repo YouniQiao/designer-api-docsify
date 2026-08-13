@@ -2,7 +2,9 @@
 
 表示凭据的简要信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-certificateManager-export interface CredentialAbstract--><!--Device-certificateManager-export interface CredentialAbstract-End-->
 
@@ -18,7 +20,9 @@ alias: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CredentialAbstract-alias: string--><!--Device-CredentialAbstract-alias: string-End-->
 
@@ -34,7 +38,9 @@ keyUri: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CredentialAbstract-keyUri: string--><!--Device-CredentialAbstract-keyUri: string-End-->
 
@@ -50,7 +56,9 @@ type: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CredentialAbstract-type: string--><!--Device-CredentialAbstract-type: string-End-->
 

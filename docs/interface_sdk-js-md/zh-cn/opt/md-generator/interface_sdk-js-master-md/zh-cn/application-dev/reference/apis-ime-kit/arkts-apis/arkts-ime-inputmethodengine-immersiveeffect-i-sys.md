@@ -2,7 +2,9 @@
 
 沉浸效果。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
 
@@ -14,13 +16,13 @@
 fluidLightMode?: FluidLightMode
 ```
 
-流光模式，未填充时默认为NONE。
-
-该属性仅系统应用可以使用。
+流光模式，未填充时默认为NONE。 该属性仅系统应用可以使用。
 
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode--><!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode-End-->
 

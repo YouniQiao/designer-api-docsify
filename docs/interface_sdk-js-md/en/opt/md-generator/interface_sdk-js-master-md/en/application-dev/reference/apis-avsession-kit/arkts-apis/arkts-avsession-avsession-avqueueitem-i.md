@@ -2,7 +2,9 @@
 
 The item in the playlist of the session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface AVQueueItem--><!--Device-avSession-interface AVQueueItem-End-->
 
@@ -24,7 +26,9 @@ The media description of the item in the playlist.
 
 **Type:** [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Sequence number of the item in the playlist.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

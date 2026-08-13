@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum KeyProcessingMode--><!--Device-unnamed-declare enum KeyProcessingMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ FOCUS_NAVIGATION = 0
 默认值，当前组件不消费按键时，tab/方向键优先在当前容器内走焦。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ ANCESTOR_EVENT = 1
 当前组件不消费按键时，tab/方向键优先冒泡给父组件。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

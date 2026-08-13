@@ -2,7 +2,9 @@
 
 通知扩展内容。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationExtensionContent--><!--Device-unnamed-export interface NotificationExtensionContent-End-->
 
@@ -18,7 +20,9 @@ text: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationExtensionContent-text: string--><!--Device-NotificationExtensionContent-text: string-End-->
 
@@ -34,7 +38,9 @@ title: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationExtensionContent-title: string--><!--Device-NotificationExtensionContent-title: string-End-->
 

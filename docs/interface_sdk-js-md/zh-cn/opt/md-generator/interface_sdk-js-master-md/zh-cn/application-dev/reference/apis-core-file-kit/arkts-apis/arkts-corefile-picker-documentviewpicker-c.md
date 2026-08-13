@@ -2,7 +2,9 @@
 
 文件选择器对象，用来支撑选择和保存各种格式文档。在使用前，需要先创建DocumentViewPicker实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-picker-class DocumentViewPicker--><!--Device-picker-class DocumentViewPicker-End-->
 
@@ -16,9 +18,11 @@ constructor()
 
 创建DocumentViewPicker对象，不推荐使用该构造函数，会出现概率性失败问题。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DocumentViewPicker-constructor()--><!--Device-DocumentViewPicker-constructor()-End-->
 
@@ -36,12 +40,13 @@ let documentPicker = new picker.DocumentViewPicker(); // 不推荐使用无参�
 constructor(context: Context)
 ```
 
-创建DocumentViewPicker对象，推荐使用该构造函数，获取context参考  
-[getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12)。
+创建DocumentViewPicker对象，推荐使用该构造函数，获取context参考 [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getHostContext)。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DocumentViewPicker-constructor(context: Context)--><!--Device-DocumentViewPicker-constructor(context: Context)-End-->
 
@@ -87,13 +92,11 @@ struct Index {
 constructor(context: Context, window: window.Window)
 ```
 
-应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法创建DocumentViewPicker对象。
+应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法 创建DocumentViewPicker对象。 > **说明：** > > 从API version 19开始，2in1和Tablet设备支持该方法。
 
-> **说明：**
-> 
-> 从API version 19开始，2in1和Tablet设备支持该方法。
+**起始版本：** 23
 
-**起始版本：** 13
+**废弃版本：** -1
 
 <!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)--><!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)-End-->
 
@@ -143,12 +146,13 @@ struct Index {
 getSelectedIndex(): number
 ```
 
-获取保存成功后的文件后缀类型的下标。该方法只在调用 [save()](#save)时使用生效，其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#DocumentSaveOptions)。该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数  
-[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#DocumentSaveOptions)里的某个后缀类型。如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
+获取保存成功后的文件后缀类型的下标。 该方法只在调用 [save()](#save)时使用生效， 其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#DocumentSaveOptions)。 该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数 [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#DocumentSaveOptions)里的某个后缀类型。 如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DocumentViewPicker-getSelectedIndex(): int--><!--Device-DocumentViewPicker-getSelectedIndex(): int-End-->
 
@@ -168,7 +172,9 @@ save(option?: DocumentSaveOptions): Promise<Array<string>>
 
 通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -219,7 +225,9 @@ save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -267,7 +275,9 @@ save(callback: AsyncCallback<Array<string>>): void
 
 通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -312,7 +322,9 @@ select(option?: DocumentSelectOptions): Promise<Array<string>>
 
 通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -362,7 +374,9 @@ select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): v
 
 通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -409,7 +423,9 @@ select(callback: AsyncCallback<Array<string>>): void
 
 通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

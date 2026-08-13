@@ -4,6 +4,8 @@ Enumerates the modes in which the layout responds when the keyboard is displayed
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export const enum KeyboardAvoidMode--><!--Device-unnamed-export const enum KeyboardAvoidMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ OFFSET = 0
 Offset Type, the layout moves up.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Resize Type, the layout is resized.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -53,6 +59,8 @@ OFFSET_WITH_CARET = 2
 Offset Type, the layout moves up, and this adjustment also occurs if the caret position in the text box changes.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ Resize Type, the layout moves up, and this adjustment also occurs if the caret p
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -89,6 +99,8 @@ NONE = 4
 None Type, the layout is not adjusted to avoid the keyboard.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

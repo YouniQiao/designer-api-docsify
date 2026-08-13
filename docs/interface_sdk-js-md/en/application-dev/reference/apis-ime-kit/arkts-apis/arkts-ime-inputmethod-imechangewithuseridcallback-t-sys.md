@@ -9,7 +9,9 @@ The callback of the inputmethod change event which carries the user ID whose inp
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -25,5 +27,5 @@ The callback of the inputmethod change event which carries the user ID whose inp
 | --- | --- | --- | --- |
 | inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | the property of current inputmethod. |
 | inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | the subtype of current inputmethod. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | the user ID whose inputmethod is changed. |
+| userId | int | Yes | the user ID whose inputmethod is changed. |
 

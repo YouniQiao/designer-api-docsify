@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace calendarManager--><!--Device-unnamed-declare namespace calendarManager-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -14,7 +16,7 @@
 
 | 名称 |
 | --- |
-| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) |
+| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getCalendarManager) |
 
 ### 类
 

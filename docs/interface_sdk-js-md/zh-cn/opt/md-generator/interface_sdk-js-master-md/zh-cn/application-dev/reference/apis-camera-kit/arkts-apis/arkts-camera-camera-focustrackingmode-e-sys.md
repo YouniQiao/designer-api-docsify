@@ -2,7 +2,9 @@
 
 Enumerates the focus tracking modes.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum FocusTrackingMode--><!--Device-camera-enum FocusTrackingMode-End-->
 
@@ -18,7 +20,9 @@ AUTO = 0
 
 Automatic.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusTrackingMode-AUTO = 0--><!--Device-FocusTrackingMode-AUTO = 0-End-->
 

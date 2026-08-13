@@ -3,21 +3,21 @@
 ## SelectionMenu
 
 ```TypeScript
+@Builder
 export declare function SelectionMenu(options: SelectionMenuOptions): void
 ```
 
-入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。例如，富文本组件[RichEditor](./@internal/component/ets/rich_editor)使用  
-[bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。
+入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。例如，富文本组件RichEditor使用 bindSelectionMenu接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。
 
 **起始版本：** 11
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-export declare function SelectionMenu(options: SelectionMenuOptions): void--><!--Device-unnamed-export declare function SelectionMenu(options: SelectionMenuOptions): void-End-->
+<!--Device-unnamed-@Builderexport declare function SelectionMenu(options: SelectionMenuOptions): void--><!--Device-unnamed-@Builderexport declare function SelectionMenu(options: SelectionMenuOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,4 +25,4 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | 是 |
+| options | [SelectionMenuOptions](arkts-arkui-richeditor-selectionmenuoptions-i.md) | 是 |

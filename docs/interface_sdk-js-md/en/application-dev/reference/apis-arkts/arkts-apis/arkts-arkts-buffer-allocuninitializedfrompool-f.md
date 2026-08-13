@@ -12,11 +12,13 @@ import { buffer } from '@kit.ArkTS';
 function allocUninitializedFromPool(size: int): Buffer
 ```
 
-Creates a **Buffer** object of the specified size from the buffer pool, without initializing it.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created.
+Creates a **Buffer** object of the specified size from the buffer pool, without initializing it. You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -28,7 +30,7 @@ Creates a **Buffer** object of the specified size from the buffer pool, without 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Size of the **Buffer** object to create, in bytes. |
+| size | int | Yes | Size of the **Buffer** object to create, in bytes. |
 
 **Return value:**
 

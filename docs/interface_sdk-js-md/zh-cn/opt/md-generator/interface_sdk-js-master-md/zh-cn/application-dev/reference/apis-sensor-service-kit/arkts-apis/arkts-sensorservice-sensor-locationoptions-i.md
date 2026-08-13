@@ -2,7 +2,9 @@
 
 指示地理位置，用于传入经纬度和海拔信息以计算地磁场。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-interface LocationOptions--><!--Device-sensor-interface LocationOptions-End-->
 
@@ -18,7 +20,9 @@ altitude: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LocationOptions-altitude: double--><!--Device-LocationOptions-altitude: double-End-->
 
@@ -34,7 +38,9 @@ latitude: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LocationOptions-latitude: double--><!--Device-LocationOptions-latitude: double-End-->
 
@@ -50,7 +56,9 @@ longitude: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LocationOptions-longitude: double--><!--Device-LocationOptions-longitude: double-End-->
 

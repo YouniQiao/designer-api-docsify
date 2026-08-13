@@ -14,7 +14,7 @@ function unregister(token: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**替代接口：** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -27,7 +27,7 @@ function unregister(token: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当解注册成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当解注册成功，err为undefined，否则返回错误对象。 |
 
 ## 示例
 
@@ -59,7 +59,7 @@ function unregister(token: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**替代接口：** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

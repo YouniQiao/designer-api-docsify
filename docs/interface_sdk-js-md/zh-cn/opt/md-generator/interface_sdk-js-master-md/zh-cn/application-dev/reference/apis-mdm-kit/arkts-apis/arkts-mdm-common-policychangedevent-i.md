@@ -1,11 +1,10 @@
 # PolicyChangedEvent
 
-策略变更事件。
-
-该接口目前在  
-[onAdminPolicyChanged](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onAdminPolicyChanged)接口中作为回调入参使用。
+策略变更事件。 该接口目前在 [onAdminPolicyChanged](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onAdminPolicyChanged) 接口中作为回调入参使用。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-common-export interface PolicyChangedEvent--><!--Device-common-export interface PolicyChangedEvent-End-->
 
@@ -23,6 +22,8 @@ bundleName: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PolicyChangedEvent-bundleName: string--><!--Device-PolicyChangedEvent-bundleName: string-End-->
@@ -35,11 +36,13 @@ bundleName: string
 functionName: string
 ```
 
-接口名称。例如调用[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setPasswordPolicy)接口时，该字段返回值为setPasswordPolicy。
+接口名称。例如调用[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setPasswordPolicy)接口时，该字段返回值为 setPasswordPolicy。
 
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,12 +56,13 @@ functionName: string
 parameters: string
 ```
 
-调用接口时传入的参数值（不包含admin参数），JSON格式字符串。例如调用  
-[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setPasswordPolicy)接口，该字段返回值为{"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"至少8个字符，且包含数字和字母。"}}。
+调用接口时传入的参数值（不包含admin参数），JSON格式字符串。例如调用 [setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setPasswordPolicy)接口，该字段返回值为{"policy": {"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"至少8个字 符，且包含数字和字母。"}}。
 
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,6 +81,8 @@ time: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

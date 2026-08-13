@@ -12,22 +12,13 @@ import { font } from '@kit.ArkUI';
 function registerFont(options: FontOptions): void
 ```
 
-Registers a custom font with the font manager.
-
-This API is asynchronous and does not support concurrent calls.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Font](@ohos.arkui.UIContext) object associated with
-> the current UI context.
+Registers a custom font with the font manager. This API is asynchronous and does not support concurrent calls. > **NOTE：**> > - Since API version 10, you can use the > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated with > the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [registerFont](ohos.arkui.UIContext.Font#registerFont)
+**Substitutes:** registerFont
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -2,7 +2,9 @@
 
 FA模型的使用信息属性集合。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-interface BundleStatsInfo--><!--Device-usageStatistics-interface BundleStatsInfo-End-->
 
@@ -20,7 +22,9 @@ abilityInFgTotalTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-abilityInFgTotalTime?: long--><!--Device-BundleStatsInfo-abilityInFgTotalTime?: long-End-->
 
@@ -38,7 +42,9 @@ abilityPrevAccessTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-abilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-abilityPrevAccessTime?: long-End-->
 
@@ -56,7 +62,9 @@ abilityPrevSeenTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-abilityPrevSeenTime?: long--><!--Device-BundleStatsInfo-abilityPrevSeenTime?: long-End-->
 
@@ -74,7 +82,9 @@ abilitySeenTotalTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-abilitySeenTotalTime?: long--><!--Device-BundleStatsInfo-abilitySeenTotalTime?: long-End-->
 
@@ -92,7 +102,9 @@ appIndex?: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-appIndex?: int--><!--Device-BundleStatsInfo-appIndex?: int-End-->
 
@@ -110,7 +122,9 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-bundleName?: string--><!--Device-BundleStatsInfo-bundleName?: string-End-->
 
@@ -128,7 +142,9 @@ fgAbilityAccessTotalTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long--><!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long-End-->
 
@@ -146,7 +162,9 @@ fgAbilityPrevAccessTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long-End-->
 
@@ -164,7 +182,9 @@ id: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-id: int--><!--Device-BundleStatsInfo-id: int-End-->
 
@@ -182,7 +202,9 @@ BundleActiveInfo对象中第一条应用使用统计的记录时间，单位：m
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-infosBeginTime?: long--><!--Device-BundleStatsInfo-infosBeginTime?: long-End-->
 
@@ -200,7 +222,9 @@ BundleActiveInfo对象中最后一条应用使用统计的记录时间，单位�
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStatsInfo-infosEndTime?: long--><!--Device-BundleStatsInfo-infosEndTime?: long-End-->
 

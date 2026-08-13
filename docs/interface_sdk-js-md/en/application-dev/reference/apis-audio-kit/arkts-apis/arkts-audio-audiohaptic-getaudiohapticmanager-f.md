@@ -14,9 +14,11 @@ function getAudioHapticManager(): AudioHapticManager
 
 Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md#AudioHapticManager) instance. This object is singleton in one process.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager--><!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager-End-->
 

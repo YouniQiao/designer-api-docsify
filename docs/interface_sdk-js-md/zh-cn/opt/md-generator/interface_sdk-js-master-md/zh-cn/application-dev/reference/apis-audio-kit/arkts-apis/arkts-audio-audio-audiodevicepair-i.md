@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-audio-interface AudioDevicePair--><!--Device-audio-interface AudioDevicePair-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -19,6 +21,8 @@ inputDevice: AudioDeviceDescriptor
 **类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ outputDevice: AudioDeviceDescriptor
 **类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

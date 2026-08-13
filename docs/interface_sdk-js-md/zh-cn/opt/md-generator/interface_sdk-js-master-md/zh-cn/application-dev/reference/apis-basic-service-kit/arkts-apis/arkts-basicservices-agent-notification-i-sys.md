@@ -2,7 +2,9 @@
 
 通知栏自定义信息。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-agent-interface Notification--><!--Device-agent-interface Notification-End-->
 
@@ -14,11 +16,13 @@
 disable?: boolean
 ```
 
-Disables the notification.If the value is false, a notification will be displayed, otherwise nothing will be displayed.If not specified, the value is false.
+Disables the notification. If the value is false, a notification will be displayed, otherwise nothing will be displayed. If not specified, the value is false.
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Notification-disable?: boolean--><!--Device-Notification-disable?: boolean-End-->
 

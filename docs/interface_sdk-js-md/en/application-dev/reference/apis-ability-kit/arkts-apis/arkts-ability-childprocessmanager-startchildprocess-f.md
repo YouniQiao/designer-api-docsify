@@ -12,20 +12,13 @@ import { childProcessManager } from '@kit.AbilityKit';
 function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
 ```
 
-Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
+Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160 00061 is returned. > **NOTE：**> > If the child process is created successfully, its PID is returned, and its > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the > function is done, the child process is automatically destroyed. > > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only > synchronous ArkTS API calls.
 
-> **NOTE：**
-> 
-> If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
-> function is done, the child process is automatically destroyed.
-> 
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
-> synchronous ArkTS API calls.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,16 +37,16 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the PID of the child process. |
+| Promise&lt;int&gt; | Promise used to return the PID of the child process. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
 
 ## Examples
 
@@ -96,20 +89,13 @@ try {
 function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<int>): void
 ```
 
-Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
+Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160 00061 is returned. > **NOTE：**> > If the child process is created successfully, its PID is returned, and its > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the > function is done, the child process is automatically destroyed. > > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only > synchronous ArkTS API calls.
 
-> **NOTE：**
-> 
-> If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
-> function is done, the child process is automatically destroyed.
-> 
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
-> synchronous ArkTS API calls.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -123,16 +109,16 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 | --- | --- | --- | --- |
 | srcEntry | string | Yes | Path of the source file of the child process relative to the root directory **src/main**. The source file can be stored only in the module of the entry type. For example, if the source file of a child process is **src/main/ets/process/DemoProcess.ets** in the entry module, then **srcEntry** is **./ets/process/ DemoProcess.ets**.&lt;br&gt;In addition, ensure that the source file of the child process is referenced by other files to prevent it from being optimized by the build tool. (For details, see the sample code below.) |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | Yes | Start mode of the child process. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the subprocess is started, **err** is **undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the subprocess is started, **err** is **undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
 
 ## Examples
 

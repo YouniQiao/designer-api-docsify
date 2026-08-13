@@ -1,10 +1,6 @@
 # AudioInterrupt
 
-音频监听事件传入的参数。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，无替代接口。
+音频监听事件传入的参数。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，无替代接口。
 
 **起始版本：** 7
 
@@ -34,7 +30,7 @@ contentType: ContentType
 
 **废弃版本：** 9
 
-**替代接口：** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
+**替代接口：** rendererInfo
 
 <!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
 
@@ -78,7 +74,7 @@ streamUsage: StreamUsage
 
 **废弃版本：** 9
 
-**替代接口：** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
+**替代接口：** rendererInfo
 
 <!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
 

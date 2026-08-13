@@ -2,7 +2,9 @@
 
 Enumerates the audio loopback modes.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioLoopbackMode--><!--Device-audio-enum AudioLoopbackMode-End-->
 
@@ -16,7 +18,9 @@ HARDWARE = 0
 
 Hardware loopback.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackMode-HARDWARE = 0--><!--Device-AudioLoopbackMode-HARDWARE = 0-End-->
 

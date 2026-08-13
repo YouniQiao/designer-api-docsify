@@ -4,7 +4,9 @@ Represents a class constructor that accepts arbitrary arguments.
 
 **Since:** 12
 
-<!--Device-unnamed-export interface TypeConstructorWithArgs<T>--><!--Device-unnamed-export interface TypeConstructorWithArgs<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface TypeConstructorWithArgs--><!--Device-unnamed-export interface TypeConstructorWithArgs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,7 +16,7 @@ Represents a class constructor that accepts arbitrary arguments.
 import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
-## [[Construct]]
+## constructor
 
 ```TypeScript
 new(...args: any): T
@@ -23,6 +25,8 @@ new(...args: any): T
 Creates and returns an instance of the specified type T.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

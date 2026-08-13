@@ -4,6 +4,8 @@ Represents an operation for changing data.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface DataChangeOperation--><!--Device-unnamed-interface DataChangeOperation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Index of the data to be changed. The value range is [0, data source length - 1].
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ New key to assign to the changed data. The original key is used by default.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -59,6 +65,8 @@ Type of data change.
 **Type:** [DataOperationType.CHANGE](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

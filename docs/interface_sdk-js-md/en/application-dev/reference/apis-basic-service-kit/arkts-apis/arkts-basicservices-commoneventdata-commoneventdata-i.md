@@ -2,9 +2,11 @@
 
 Describes the data of a common event. The **CommonEventData** module is used to carry the common event data received by subscribers in common event subscription scenarios. The data includes the event name, publisher bundle name, code, data, and additional parameters. This module is applicable to scenarios where apps subscribe to and process common events and parse the data carried in the events.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CommonEventData--><!--Device-unnamed-export interface CommonEventData-End-->
 
@@ -20,9 +22,11 @@ Bundle name of the common event publisher. The default value is an empty string.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,17 +40,17 @@ Bundle name of the common event publisher. The default value is an empty string.
 code?: int
 ```
 
-Common event data received by the subscriber. The value of this field is the same as that of the **code** field in   
-[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses   
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event. The value ranges from –2147483648 to 2147483647.The default value is **0**.
+Common event data received by the subscriber. The value of this field is the same as that of the **code** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish) to publish a common event. The value ranges from –2147483648 to 2147483647. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Default:** 0
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,15 +64,15 @@ Common event data received by the subscriber. The value of this field is the sam
 data?: string
 ```
 
-Common event data received by the subscriber. The data size cannot exceed 64 KB.The value of this field is the same as that of the **data** field in  
-[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
+Common event data received by the subscriber. The data size cannot exceed 64 KB. The value of this field is the same as that of the **data** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish) to publish a common event.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -86,9 +90,11 @@ Name of the common event that is being received.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -99,21 +105,20 @@ Name of the common event that is being received.
 ## parameters
 
 ```TypeScript
-parameters?: { [key: string]: any }
+parameters?: Record<string, RecordData>
 ```
 
-Additional information about the common event received by the subscriber. The value of this field is the same as that of the **parameters** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses   
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
+Additional information about the common event received by the subscriber. The value of this field is the same as that of the **parameters** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish) to publish a common event.
 
-**Type:** { [key: string]: any }
+**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-CommonEventData-parameters?: { [key: string]: any }--><!--Device-CommonEventData-parameters?: { [key: string]: any }-End-->
+<!--Device-CommonEventData-parameters?: Record<string, RecordData>--><!--Device-CommonEventData-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

@@ -2,7 +2,9 @@
 
 Describes the attributes that describe the font size and layout. A typeface has similar font metrics.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-interface FontMetrics--><!--Device-drawing-interface FontMetrics-End-->
 
@@ -24,7 +26,9 @@ Distance from the baseline to the highest coordinate of the text. The value is a
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Average character width.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -60,7 +66,9 @@ Maximum distance from the baseline to the lowest coordinate of the text. The val
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -78,7 +86,9 @@ Height of a capital letter. The value is usually a negative value.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -96,7 +106,9 @@ Distance from the baseline to the lowest coordinate of the text. The value is a 
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -107,18 +119,18 @@ Distance from the baseline to the lowest coordinate of the text. The value is a 
 ## flags
 
 ```TypeScript
-flags?: FontMetricsFlags
+flags?: number
 ```
 
 Font measurement flags that are valid.
 
-**Type:** [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md)
+**Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
 
-<!--Device-FontMetrics-flags?: FontMetricsFlags--><!--Device-FontMetrics-flags?: FontMetricsFlags-End-->
+<!--Device-FontMetrics-flags?: int--><!--Device-FontMetrics-flags?: int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -132,7 +144,9 @@ Interline spacing, that is, the distance from the descent of one line of text to
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -150,7 +164,9 @@ Maximum character width.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -168,7 +184,9 @@ Vertical distance from the baseline to the bottom of the strikethrough. The valu
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -186,7 +204,9 @@ Thickness of the strikethrough.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -204,7 +224,9 @@ Maximum distance from the baseline to the highest coordinate of the text. The va
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -222,7 +244,9 @@ Vertical distance from the baseline to the top of the underline. The value is us
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -240,7 +264,9 @@ Thickness of the underline.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -258,7 +284,9 @@ Height of the lowercase letter x. The value is usually a negative value.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -276,7 +304,9 @@ Horizontal distance from the rightmost edge of any glyph bounding box to the ori
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -294,7 +324,9 @@ Horizontal distance from the leftmost edge of any glyph bounding box to the orig
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

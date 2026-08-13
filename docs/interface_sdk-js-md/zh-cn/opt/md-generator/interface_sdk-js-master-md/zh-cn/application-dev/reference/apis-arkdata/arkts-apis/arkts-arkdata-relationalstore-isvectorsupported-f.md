@@ -8,7 +8,9 @@ function isVectorSupported(): boolean
 
 判断系统是否提供向量数据库能力。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-function isVectorSupported(): boolean--><!--Device-relationalStore-function isVectorSupported(): boolean-End-->
 

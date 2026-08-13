@@ -1,11 +1,10 @@
 # Paragraph
 
-Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
+Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing. Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **Paragraph** object.
 
-Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  
-[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **Paragraph** object.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-text-class Paragraph--><!--Device-text-class Paragraph-End-->
 
@@ -25,7 +24,9 @@ didExceedMaxLines(): boolean
 
 Checks whether the number of lines in the paragraph exceeds the maximum.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -51,12 +52,11 @@ let didExceed = paragraph.didExceedMaxLines();
 forceReuseRasterResult(isForce: boolean): void
 ```
 
-Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.
-
-This API is suitable for scenarios where the text content remains unchanged but  
-[paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
+Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default. This API is suitable for scenarios where the text content remains unchanged but [paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,7 +127,9 @@ getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
 
 Obtains the actually visible text range in the specified line, excluding any overflow ellipsis.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -162,7 +164,9 @@ getAlphabeticBaseline(): number
 
 Obtains the alphabetic baseline.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -192,6 +196,8 @@ Obtains the character position information closest to the given coordinates.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -218,7 +224,7 @@ Obtains the character position information closest to the given coordinates.
 
 | Error Code ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -266,6 +272,8 @@ Obtains the character range corresponding to the specified glyph range.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -291,7 +299,7 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Error Code ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -336,7 +344,9 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 Obtains the position of a glyph closest to the given coordinates.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -373,6 +383,8 @@ Obtains the glyph range corresponding to the specified character range.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -398,7 +410,7 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Error Code ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -443,7 +455,9 @@ getHeight(): number
 
 Obtains the total height of the text.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -471,7 +485,9 @@ getIdeographicBaseline(): number
 
 Obtains the ideographic baseline.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -499,7 +515,9 @@ getLineCount(): number
 
 Obtains the number of text lines.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -527,7 +545,9 @@ getLineHeight(line: number): number
 
 Obtains the height of a given line.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -561,7 +581,9 @@ getLineMetrics(): Array<LineMetrics>
 
 Obtains an array of line measurement information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -589,7 +611,9 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 Obtains the line measurement information of a line.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -623,7 +647,9 @@ getLineWidth(line: number): number
 
 Obtains the width of a given line.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -657,7 +683,9 @@ getLongestLine(): number
 
 Obtains the longest line in the text.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -685,7 +713,9 @@ getLongestLineWithIndent(): number
 
 Obtains the width of the longest line, including its indentation, in the text. You are advised to round up the return value. If the text content is empty, **0** is returned.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -713,7 +743,9 @@ getMaxIntrinsicWidth(): number
 
 Obtains the maximum intrinsic width of the paragraph.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -741,7 +773,9 @@ getMaxWidth(): number
 
 Obtains the maximum width of the line in the text.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -769,7 +803,9 @@ getMinIntrinsicWidth(): number
 
 Obtains the minimum intrinsic width of the paragraph.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -798,6 +834,8 @@ getParagraphStyle(): ParagraphStyle
 Obtains the style configuration of a paragraph.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -871,6 +909,8 @@ Obtains the text processing status of a paragraph.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -928,7 +968,9 @@ getRectsForPlaceholders(): Array<TextBox>
 
 Obtains the rectangles occupied by all placeholders in the text.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -956,7 +998,9 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 Obtains the rectangles occupied by the characters in the range of the text under the given rectangle width and height.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -994,6 +1038,8 @@ getTextDisplayState(): TextDisplayState
 Obtains the text display status of a paragraph.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1052,7 +1098,9 @@ getTextLines(): Array<TextLine>
 
 Obtains all the text lines.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1078,23 +1126,11 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle))or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)).
-
-**NOTE：**
-
-The returned range depends on the specific truncation of the paragraph(for example, whether the maximum number of lines or ellipsis is set):
-
-| [Scenario](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-onscreen-scenario-e-sys.md) | Description|
-|---|---|
-| Text is not truncated.| The range includes all typeset text.|
-| Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.|
-| EllipsisMode.END| The range is the text before the ellipsis.|
-| EllipsisMode.START| The value is the text after the ellipsis.|
-| EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.|
-| EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.|
-| EllipsisMode.MULTILINE_MIDDLE|
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)). **NOTE：**The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set): | Scenario| Description| |---|---| | Text is not truncated.| The range includes all typeset text.| | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.| | EllipsisMode.END| The range is the text before the ellipsis.| | EllipsisMode.START| The value is the text after the ellipsis.| | EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1124,7 +1160,9 @@ getWordBoundary(offset: number): Range
 
 Obtains the range of the word where the glyph with a given offset is located.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1158,7 +1196,9 @@ layout(width: number): Promise<void>
 
 Performs layout and calculates the positions of all glyphs. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1182,7 +1222,7 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1265,7 +1305,9 @@ layoutSync(width: number): void
 
 Performs layout and calculates the positions of all glyphs.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1294,6 +1336,8 @@ layoutWithConstraints(size: TextRectSize): TextLayoutResult
 Performs layout with the given height and width and calculates the positions of all glyphs.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1332,10 +1376,11 @@ for (let i = 0; i < result.fitStrRange.length; ++i) {
 paint(canvas: drawing.Canvas, x: number, y: number): void
 ```
 
-Draws text on the canvas with (x, y) as the upper-left corner. You must call  
-[layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+Draws text on the canvas with (x, y) as the upper-left corner. You must call [layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1369,7 +1414,9 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset
 
 Draws text along a path on the canvas. You must call [layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1406,7 +1453,9 @@ updateColor(color: common2D.Color): void
 
 Updates the color of the entire text span. This API call also updates the decoration color if it hasn't been set yet.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1434,7 +1483,9 @@ updateDecoration(decoration: Decoration): void
 
 Updates the decoration line of the entire text span.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

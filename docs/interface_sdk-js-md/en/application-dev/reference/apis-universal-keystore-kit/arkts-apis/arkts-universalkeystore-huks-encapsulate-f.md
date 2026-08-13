@@ -13,11 +13,13 @@ function encapsulate(keyAlias: string, params: HuksParam[],
       sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-Post-Quantum Cryptography key encapsulation operation, supporting key management by HUKS or by the application itself. If the application chooses to manage the key,the symmetric key is carried in the outData field of HuksReturnResult.
+Post-Quantum Cryptography key encapsulation operation, supporting key management by HUKS or by the application itself. If the application chooses to manage the key, the symmetric key is carried in the outData field of HuksReturnResult.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -44,19 +46,19 @@ Post-Quantum Cryptography key encapsulation operation, supporting key management
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | API is not supported. |
-| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) | The input parameter is invalid. |
-| [12000017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | API is not supported. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | The input parameter is invalid. |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists. |
 | 12000016 | The screen lock password is not set. |
-| [12000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) | The algorithm engine reported an error, please check the input parameters. |
-| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) | File operation failed. |
-| [12000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameters are invalid, please check the algorithm parameters. |
-| [12000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-missing-key-algorithm-parameter) | Algorithm parameters are missing, please check the algorithm parameters. |
-| [12000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) | Algorithm mode is not supported |
-| [12000015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM. |
-| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) | Memory is insufficient. |
-| [12000013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000013-the-credential-does-not-exist) | Queried credential does not exist |
-| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) | Device environment or input parameters are abnormal. |
-| [12000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried key does not exist, please check the key-related parameters. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | The algorithm engine reported an error, please check the input parameters. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000004](../errorcode-huks.md#12000004-file-error) | File operation failed. |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameters are invalid, please check the algorithm parameters. |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | Algorithm parameters are missing, please check the algorithm parameters. |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Algorithm mode is not supported |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | Memory is insufficient. |
+| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | Queried credential does not exist |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameters are abnormal. |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried key does not exist, please check the key-related parameters. |
 

@@ -2,9 +2,11 @@
 
 Enumerates the states available for the system screen recorder.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum ScreenCaptureEvent--><!--Device-media-enum ScreenCaptureEvent-End-->
 
@@ -20,9 +22,11 @@ SCREENCAPTURE_STARTED = 0
 
 The system screen recorder starts screen capture.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScreenCaptureEvent-SCREENCAPTURE_STARTED = 0--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_STARTED = 0-End-->
 
@@ -38,9 +42,11 @@ SCREENCAPTURE_STOPPED = 1
 
 The system screen recorder stops screen capture.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScreenCaptureEvent-SCREENCAPTURE_STOPPED = 1--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_STOPPED = 1-End-->
 
@@ -58,7 +64,9 @@ The system screen recorder died.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2-End-->
 

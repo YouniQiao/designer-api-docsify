@@ -1,20 +1,16 @@
 # ImmersiveMaterial
 
-Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md#MaterialType).
+Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md#MaterialType-(System-API)). The performance of an immersive material varies based on device computing power. The high, medium, and low levels of device computing power are determined by device vendors and defined in the system configuration files. On devices with high- and mid-level computing power, the filter and shadow effects of the material layer are affected. On devices with low-level computing power, the background color, border color, border width, and shadow effects are affected. In addition, the effect of the same material is affected by the immersive light configuration in the application. The material parameters and effects vary depending on the immersive light configuration.
 
-The performance of an immersive material varies based on device computing power. The high, medium, and low levels of device computing power are determined by device vendors and defined in the system configuration files. On devices with high- and mid-level computing power, the filter and   
-[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) effects of the material layer are affected.On devices with low-level computing power, the   
-[background color](CommonMethod#backgroundColor(value: ResourceColor)),   
-[border color](CommonMethod#borderColor), [border width](CommonMethod#borderWidth), and   
-[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) effects are affected. In addition, the effect of the same material is affected by the immersive light configuration in the application. The material parameters and effects vary depending on the immersive light configuration.
-
-**Inheritance/Implementation:** ImmersiveMaterial extends [Material](arkts-arkui-uimaterial-material-c.md#Material)
+**Inheritance/Implementation:** ImmersiveMaterial extends [Material](arkts-arkui-uimaterial-material-c-sys.md#Material-(System-API))
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-uiMaterial-export class ImmersiveMaterial extends Material--><!--Device-uiMaterial-export class ImmersiveMaterial extends Material-End-->
+**Deprecated since:** -1
+
+<!--Device-uiMaterial-class ImmersiveMaterial--><!--Device-uiMaterial-class ImmersiveMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +30,13 @@ Constructs **ImmersiveMaterial**.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ImmersiveMaterial-constructor(options?: ImmersiveOptions)--><!--Device-ImmersiveMaterial-constructor(options?: ImmersiveOptions)-End-->
 

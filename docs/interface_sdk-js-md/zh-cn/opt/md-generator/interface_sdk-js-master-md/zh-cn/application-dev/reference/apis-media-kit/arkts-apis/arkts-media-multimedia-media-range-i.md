@@ -2,7 +2,9 @@
 
 包含上下限的范围。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface Range--><!--Device-unnamed-interface Range-End-->
 
@@ -18,7 +20,9 @@ max: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Range-max: int--><!--Device-Range-max: int-End-->
 
@@ -34,7 +38,9 @@ min: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Range-min: int--><!--Device-Range-min: int-End-->
 

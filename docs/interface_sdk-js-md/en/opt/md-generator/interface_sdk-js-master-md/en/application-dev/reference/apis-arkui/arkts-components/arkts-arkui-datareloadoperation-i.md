@@ -1,8 +1,10 @@
 # DataReloadOperation
 
-Represents an operation for reloading data. If the **onDatasetChange** event contains a **DataOperationType.RELOAD**operation, all other operations in the event are ineffective. In such cases, the framework will call **keyGenerator**to perform a comparison of keys with their corresponding values.
+Represents an operation for reloading data. If the **onDatasetChange** event contains a **DataOperationType.RELOAD** operation, all other operations in the event are ineffective. In such cases, the framework will call **keyGenerator** to perform a comparison of keys with their corresponding values.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface DataReloadOperation--><!--Device-unnamed-interface DataReloadOperation-End-->
 
@@ -14,13 +16,13 @@ Represents an operation for reloading data. If the **onDatasetChange** event con
 reuseImmediately?: boolean
 ```
 
-Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty.  
-**true**: Enable the feature.  
-**false**: Disable the feature.Default value: **false**.
+Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty. **true**: Enable the feature. **false**: Disable the feature. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +43,8 @@ Type of data reloading.
 **Type:** [DataOperationType.RELOAD](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

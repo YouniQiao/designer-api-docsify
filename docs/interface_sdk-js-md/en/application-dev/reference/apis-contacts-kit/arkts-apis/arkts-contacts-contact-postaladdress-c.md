@@ -6,6 +6,8 @@ Defines a contact's postal address.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-contact-class PostalAddress--><!--Device-contact-class PostalAddress-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,6 +32,8 @@ Home address, the default value is **1**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-static readonly ADDR_HOME: 1--><!--Device-PostalAddress-static readonly ADDR_HOME: 1-End-->
@@ -49,6 +53,8 @@ Other addresses, the default value is **3**.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,6 +76,8 @@ Work address, the default value is **2**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-static readonly ADDR_WORK: 2--><!--Device-PostalAddress-static readonly ADDR_WORK: 2-End-->
@@ -89,6 +97,8 @@ Custom postal address type, the default value is **0**.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,6 +120,8 @@ Invalid address type, the default value is **-1**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1-End-->
@@ -129,6 +141,8 @@ City where the contact is located.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -150,6 +164,8 @@ Country/Region where the contact is located.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-country?: string--><!--Device-PostalAddress-country?: string-End-->
@@ -169,6 +185,8 @@ Postal address type.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -190,6 +208,8 @@ Name of the Postal address type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-labelName?: string--><!--Device-PostalAddress-labelName?: string-End-->
@@ -209,6 +229,8 @@ Neighbor of the contact.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -230,6 +252,8 @@ Email of the contact.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-pobox?: string--><!--Device-PostalAddress-pobox?: string-End-->
@@ -249,6 +273,8 @@ Postal address of the contact.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -270,6 +296,8 @@ Postal code of the region where the contact is located.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-postcode?: string--><!--Device-PostalAddress-postcode?: string-End-->
@@ -290,6 +318,8 @@ Area where the contact is located.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-region?: string--><!--Device-PostalAddress-region?: string-End-->
@@ -309,6 +339,8 @@ Street where the contact resides.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

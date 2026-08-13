@@ -2,9 +2,11 @@
 
 The enum of bluetooth dialog type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-access-enum DialogType--><!--Device-access-enum DialogType-End-->
 
@@ -20,9 +22,11 @@ BLUETOOTH_SWITCH = 0
 
 The type of bluetooth switch dialog.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialogType-BLUETOOTH_SWITCH = 0--><!--Device-DialogType-BLUETOOTH_SWITCH = 0-End-->
 

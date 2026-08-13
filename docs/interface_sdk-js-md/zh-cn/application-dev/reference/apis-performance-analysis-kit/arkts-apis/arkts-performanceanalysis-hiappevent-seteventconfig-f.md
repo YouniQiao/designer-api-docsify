@@ -6,24 +6,15 @@
 function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>
 ```
 
-事件相关的配置参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件名称，设置事件相关的配置参数。
+事件相关的配置参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件名称，设置事件相关的配置参数。 不同的事件有不同的配置项，目前仅支持以下事件： - MAIN_THREAD_JANK（参数配置详见 [主线程超时事件检测](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#seteventconfig接口参数设置说明)） - APP_CRASH（参数配置详见[崩溃日志配置参数设置介绍](../../../dfx/hiappevent-watcher-crash-events.md#自定义规格设置)） - RESOURCE_OVERLIMIT（参数配置详见[资源泄漏事件检测](../../../dfx/hiappevent-watcher-resourceleak-events.md#自定义规格设置)） > **说明：** > > 从API版本26.0.0开始，configEventPolicy已支持本接口所有设置，推荐使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy)。
 
-不同的事件有不同的配置项，目前仅支持以下事件：
+**起始版本：** 23
 
-- MAIN_THREAD_JANK（参数配置详见  
-[主线程超时事件检测](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#seteventconfig接口参数设置说明)）  
-- APP_CRASH（参数配置详见[崩溃日志配置参数设置介绍](../../../dfx/hiappevent-watcher-crash-events.md#自定义规格设置)）  
-- RESOURCE_OVERLIMIT（参数配置详见[资源泄漏事件检测](../../../dfx/hiappevent-watcher-resourceleak-events.md#自定义规格设置)）
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-> **说明：**
-> 
-> 从API版本26.0.0开始，configEventPolicy已支持本接口所有设置，推荐使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy)。
+**废弃版本：** -1
 
-**起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiAppEvent-function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>--><!--Device-hiAppEvent-function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>-End-->
 
@@ -46,7 +37,7 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 

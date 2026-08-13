@@ -1,14 +1,12 @@
 # GridItemStyle
 
-GridItem样式枚举，用于定义GridItem的交互态样式。
-
-> **说明：**
-> 
-> GridItem焦点态样式设置：Grid组件需要设置4vp规格以上的内边距，用于显示GridItem的焦点框。
+GridItem样式枚举，用于定义GridItem的交互态样式。 > **说明：** > > GridItem焦点态样式设置：Grid组件需要设置4vp规格以上的内边距，用于显示GridItem的焦点框。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare enum GridItemStyle--><!--Device-unnamed-declare enum GridItemStyle-End-->
 
@@ -25,6 +23,8 @@ NONE = 0
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +45,8 @@ PLAIN = 1
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

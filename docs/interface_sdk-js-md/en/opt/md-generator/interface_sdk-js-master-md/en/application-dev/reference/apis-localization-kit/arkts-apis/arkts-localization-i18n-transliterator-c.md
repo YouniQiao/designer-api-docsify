@@ -2,7 +2,9 @@
 
 Provides text transliteration capabilities, such as obtaining the supported language IDs and transliterating text.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class Transliterator--><!--Device-i18n-export class Transliterator-End-->
 
@@ -22,7 +24,9 @@ static getAvailableIDs(): string[]
 
 Obtains a list of IDs supported by the **Transliterator** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,7 +58,9 @@ static getInstance(id: string): Transliterator
 
 Creates a **Transliterator** object based on the specified ID.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,7 +96,9 @@ transform(text: string): string
 
 Converts the input text from the source format to the target format.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

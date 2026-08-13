@@ -13,9 +13,11 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
     context: common.UIAbilityContext): void
 ```
 
-Parses and processes the body of an ad response(this API is only open to some pre-installed system applications).
+Parses and processes the body of an ad response (this API is only open to some pre-installed system applications).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void-End-->
 
@@ -33,14 +35,14 @@ Parses and processes the body of an ad response(this API is only open to some pr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [21800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800005-ad-data-parsing-failure) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../errorcode-ads.md#801-ad-request-failure) |
+| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Context](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

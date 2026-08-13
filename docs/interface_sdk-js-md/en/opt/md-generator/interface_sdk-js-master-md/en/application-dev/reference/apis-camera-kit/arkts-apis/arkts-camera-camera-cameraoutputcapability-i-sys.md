@@ -2,7 +2,9 @@
 
 Describes the camera output capability.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface CameraOutputCapability--><!--Device-camera-interface CameraOutputCapability-End-->
 
@@ -24,7 +26,9 @@ Supported depth stream profiles.
 
 **Type:** Array&lt;[DepthProfile](arkts-camera-camera-depthprofile-i-sys.md)&gt;
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraOutputCapability-readonly depthProfiles: Array<DepthProfile>--><!--Device-CameraOutputCapability-readonly depthProfiles: Array<DepthProfile>-End-->
 

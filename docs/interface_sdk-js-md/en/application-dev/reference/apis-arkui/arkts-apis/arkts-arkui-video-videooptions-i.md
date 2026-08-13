@@ -6,6 +6,8 @@ Defines the video options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface VideoOptions--><!--Device-unnamed-export declare interface VideoOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ controller of video.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ controllerAsync of video.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoOptions-controllerAsync?: VideoControllerAsync--><!--Device-VideoOptions-controllerAsync?: VideoControllerAsync-End-->
@@ -64,6 +70,8 @@ playback rate of video.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoOptions-currentProgressRate?: double | string | PlaybackSpeed--><!--Device-VideoOptions-currentProgressRate?: double | string | PlaybackSpeed-End-->
@@ -78,11 +86,13 @@ imageAIOptions?: ImageAIOptions
 
 image ai options of video.
 
-**Type:** [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md)
+**Type:** [ImageAIOptions](../../apis-na/arkts-apis/arkts-na-imagecommon-imageaioptions-i.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,6 +114,8 @@ poster options of video.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoOptions-posterOptions?: PosterOptions--><!--Device-VideoOptions-posterOptions?: PosterOptions-End-->
@@ -124,6 +136,8 @@ preview uri of video.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoOptions-previewUri?: string | PixelMap | Resource--><!--Device-VideoOptions-previewUri?: string | PixelMap | Resource-End-->
@@ -143,6 +157,8 @@ src of video.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

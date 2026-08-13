@@ -4,6 +4,8 @@ Describes the page routing state.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-router-interface RouterState--><!--Device-router-interface RouterState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Index of the current page in the stack. The index starts from 1 from the bottom 
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
@@ -44,6 +48,8 @@ Name of the current page, that is, the file name.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
@@ -61,6 +67,8 @@ Parameters carried on the current page.
 **Type:** Object
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,6 +89,8 @@ Path of the current page.
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

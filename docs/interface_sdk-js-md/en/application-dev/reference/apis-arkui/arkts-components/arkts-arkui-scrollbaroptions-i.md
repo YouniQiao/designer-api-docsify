@@ -1,26 +1,12 @@
 # ScrollBarOptions
 
-Parameters of the **ScrollBar** component.
-
-> **NOTE：**
-> 
-> - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the
-> behavior style of the scrollbar.
-> 
-> - This component is bound to a scrollable component through **scroller**, and can be used to scroll the scrollable
-> component only when their directions are the same. The **ScrollBar** component can be bound to only one scrollable
-> component, and vice versa.
-> 
-> - Since API version 12, the **ScrollBar** component displays a default scrollbar style when without child nodes.
-> 
-> - The visibility of the **ScrollBar** component is set through **BarState**. The component automatically adjusts
-> **opacity** based on the **BarState** setting to control its visibility. Therefore, setting the
-> [opacity](CommonMethod#opacity(opacity: Optional&lt;number | Resource&gt;)) attribute for the **ScrollBar**
-> component does not take effect.
+Parameters of the **ScrollBar** component. > **NOTE：**> > - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the > behavior style of the scrollbar. > > - This component is bound to a scrollable component through **scroller**, and can be used to scroll the scrollable > component only when their directions are the same. The **ScrollBar** component can be bound to only one scrollable > component, and vice versa. > > - Since API version 12, the **ScrollBar** component displays a default scrollbar style when without child nodes. > > - The visibility of the **ScrollBar** component is set through **BarState**. The component automatically adjusts > **opacity** based on the **BarState** setting to control its visibility. Therefore, setting the > opacity attribute for the **ScrollBar** > component does not take effect.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ScrollBarOptions--><!--Device-unnamed-declare interface ScrollBarOptions-End-->
 
@@ -39,6 +25,8 @@ Scrollbar direction in which scrollable components scroll.&lt;br&gt;Default valu
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,6 +48,8 @@ Scroller, which can be bound to scrollable components for scrolling control.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScrollBarOptions-scroller: Scroller--><!--Device-ScrollBarOptions-scroller: Scroller-End-->
@@ -79,6 +69,8 @@ Scrollbar state.&lt;br&gt;Default value: **BarState.Auto**
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

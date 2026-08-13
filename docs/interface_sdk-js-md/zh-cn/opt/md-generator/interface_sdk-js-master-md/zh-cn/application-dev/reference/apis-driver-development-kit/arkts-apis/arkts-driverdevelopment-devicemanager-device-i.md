@@ -2,7 +2,9 @@
 
 外设信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-deviceManager-interface Device--><!--Device-deviceManager-interface Device-End-->
 
@@ -18,7 +20,9 @@ busType: BusType
 
 **类型：** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Device-busType: BusType--><!--Device-Device-busType: BusType-End-->
 
@@ -34,7 +38,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Device-description: string--><!--Device-Device-description: string-End-->
 
@@ -50,7 +56,9 @@ deviceId: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Device-deviceId: long--><!--Device-Device-deviceId: long-End-->
 

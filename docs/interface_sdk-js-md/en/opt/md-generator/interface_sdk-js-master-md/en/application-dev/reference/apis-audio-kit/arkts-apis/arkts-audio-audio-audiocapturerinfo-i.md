@@ -2,7 +2,9 @@
 
 Describes audio capturer information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioCapturerInfo--><!--Device-audio-interface AudioCapturerInfo-End-->
 
@@ -20,13 +22,13 @@ import { audio } from '@kit.AudioKit';
 capturerFlags: number
 ```
 
-Flags that control the capturer behavior.
-
-Set this parameter to **0**.
+Flags that control the capturer behavior. Set this parameter to **0**.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerInfo-capturerFlags: int--><!--Device-AudioCapturerInfo-capturerFlags: int-End-->
 
@@ -42,7 +44,9 @@ Audio source type.
 
 **Type:** SourceType
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerInfo-source: SourceType--><!--Device-AudioCapturerInfo-source: SourceType-End-->
 

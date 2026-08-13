@@ -4,6 +4,8 @@ Describes the information about the preselected files and their corresponding **
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class PreselectedInfo--><!--Device-unnamed-export declare class PreselectedInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -26,6 +28,8 @@ Index of the **PhotoPickerComponent** that can be used in automatic selection. T
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-PreselectedInfo-preselectablePickerIndex?: number--><!--Device-PreselectedInfo-preselectablePickerIndex?: number-End-->
@@ -43,6 +47,8 @@ URI of the preselected media file.
 **Type:** string
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

@@ -14,9 +14,11 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 Creates a **DataProxyHandle** instance. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +36,7 @@ Creates a **DataProxyHandle** instance. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 

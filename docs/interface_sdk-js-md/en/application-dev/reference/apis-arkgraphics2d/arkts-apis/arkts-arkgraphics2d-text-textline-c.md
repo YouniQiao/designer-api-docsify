@@ -1,14 +1,12 @@
 # TextLine
 
-Implements a carrier that describes the basic text line structure of a paragraph.
+Implements a carrier that describes the basic text line structure of a paragraph. Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine) of the [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset) class to create a **TextLine** object.
 
-Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the  
-[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine) of the  
-[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset) class to create a **TextLine** object.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-text-class TextLine--><!--Device-text-class TextLine-End-->
 
@@ -31,6 +29,8 @@ Creates a truncated text line object.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -95,7 +95,9 @@ Creates a truncated text line object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined--><!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined-End-->
 
@@ -123,9 +125,11 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 
 Enumerates the offset and index of each character in a text line.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -151,21 +155,17 @@ lines[0].enumerateCaretOffsets(callback);
 
 ## getAlignmentOffset
 
-ArkTS-Dyn:
-```TypeScript
-getAlignmentOffset(alignmentFactor: number, alignmentWidth: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double
 ```
 
 Obtains the offset of this text line after alignment based on the alignment factor and alignment width.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -177,14 +177,14 @@ Obtains the offset of this text line after alignment based on the alignment fact
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignmentFactor | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Alignment factor, which determines how text is aligned. The value is a floating point number. A value less than or equal to 0.0 means that the text is left-aligned; a value between 0.0 and 0.5 means that the text is slightly left-aligned; the value 0.5 means that the text is centered; a value between 0.5 and 1 means that the text is slightly right-aligned; a value greater than or equal to 1.0 means that the text is right-aligned. |
-| alignmentWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Alignment width, namely the width of the text line, which is a floating-point value, in physical pixels (px). If the width is less than the actual width of the text line, **0** is returned. |
+| alignmentFactor | double | Yes | Alignment factor, which determines how text is aligned. The value is a floating point number. A value less than or equal to 0.0 means that the text is left-aligned; a value between 0.0 and 0.5 means that the text is slightly left-aligned; the value 0.5 means that the text is centered; a value between 0.5 and 1 means that the text is slightly right-aligned; a value greater than or equal to 1.0 means that the text is right-aligned. |
+| alignmentWidth | double | Yes | Alignment width, namely the width of the text line, which is a floating-point value, in physical pixels (px). If the width is less than the actual width of the text line, **0** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Calculated offset required for alignment, which is a floating-point value, in physical pixels (px). |
+| double | Calculated offset required for alignment, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
@@ -194,21 +194,17 @@ let alignmentOffset = lines[0].getAlignmentOffset(0.5, 500);
 
 ## getGlyphCount
 
-ArkTS-Dyn:
-```TypeScript
-getGlyphCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getGlyphCount(): int
 ```
 
 Obtains the number of glyphs in this text line.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -220,7 +216,7 @@ Obtains the number of glyphs in this text line.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of glyphs. The value is an integer. |
+| int | Number of glyphs. The value is an integer. |
 
 ## Examples
 
@@ -236,9 +232,11 @@ getGlyphRuns(): Array<Run>
 
 Obtains the array of glyph runs in the text line.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -264,21 +262,13 @@ let runs = lines[0].getGlyphRuns();
 getImageBounds(): common2D.Rect
 ```
 
-Obtains the image boundaries of this text line. The image boundaries, equivalent to visual boundaries, depend on the font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. For the strings "j" and "E", their image boundaries are different.Specifically, the width of the boundary for "j" is narrower than that for "E", and the height of the boundary for"j" is taller than that for "E".
+Obtains the image boundaries of this text line. The image boundaries, equivalent to visual boundaries, depend on the font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. For the strings "j" and "E", their image boundaries are different. Specifically, the width of the boundary for "j" is narrower than that for "E", and the height of the boundary for "j" is taller than that for "E". > **NOTE：**> > The figure shows the image boundaries for the string " a b ". > >  > > The figure shows the image boundaries for the string "j" or "E". > > 
 
-> **NOTE：**
-> 
-> The figure shows the image boundaries for the string " a b ".
-> 
-> ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
-> 
-> The figure shows the image boundaries for the string "j" or "E".
-> 
-> ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -300,21 +290,17 @@ let imageBounds = lines[0].getImageBounds();
 
 ## getOffsetForStringIndex
 
-ArkTS-Dyn:
-```TypeScript
-getOffsetForStringIndex(index: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOffsetForStringIndex(index: int): double
 ```
 
 Obtains the offset of a character with the specified index in this text line.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -326,13 +312,13 @@ Obtains the offset of a character with the specified index in this text line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the character. The value is an integer. |
+| index | int | Yes | Index of the character. The value is an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Offset at the given string index, which is a floating-point value, in physical pixels (px). |
+| double | Offset at the given string index, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
@@ -342,21 +328,17 @@ let offset = lines[0].getOffsetForStringIndex(3);
 
 ## getStringIndexForPosition
 
-ArkTS-Dyn:
-```TypeScript
-getStringIndexForPosition(point: common2D.Point): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getStringIndexForPosition(point: common2D.Point): int
 ```
 
 Obtains the index of a character at the specified position in the original string.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -374,7 +356,7 @@ Obtains the index of a character at the specified position in the original strin
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the character in the text line. The value is an integer. |
+| int | Index of the character in the text line. The value is an integer. |
 
 ## Examples
 
@@ -391,9 +373,11 @@ getTextRange(): Range
 
 Obtains the range of the text in this text line in the entire paragraph.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -415,21 +399,17 @@ let textRange = lines[0].getTextRange();
 
 ## getTrailingSpaceWidth
 
-ArkTS-Dyn:
-```TypeScript
-getTrailingSpaceWidth(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getTrailingSpaceWidth(): double
 ```
 
 Obtains the width of the spaces at the end of this text line.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -441,7 +421,7 @@ Obtains the width of the spaces at the end of this text line.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Width of trailing whitespace characters in the text line, which is a floating-point value, in physical pixels (px). |
+| double | Width of trailing whitespace characters in the text line, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
@@ -455,22 +435,13 @@ let trailingSpaceWidth = lines[0].getTrailingSpaceWidth();
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
+Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves. > **NOTE：**> > The figure shows the typesetting boundaries for the string " a b ". > >  > > The figure shows the typesetting boundaries for the string "j" or "E". > > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
-> **NOTE：**
-> 
-> The figure shows the typesetting boundaries for the string " a b ".
-> 
-> ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
-> 
-> The figure shows the typesetting boundaries for the string "j" or "E".
-> 
-> !
-> [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -493,21 +464,17 @@ console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent 
 
 ## paint
 
-ArkTS-Dyn:
-```TypeScript
-paint(canvas: drawing.Canvas, x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
 Paints this text line on the canvas with the coordinate point (x, y) as the upper left corner.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -520,8 +487,8 @@ Paints this text line on the canvas with the coordinate point (x, y) as the uppe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | Yes | Target canvas. |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| x | double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| y | double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 

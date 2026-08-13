@@ -12,23 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>
 ```
 
-Sets or cancels the keep-alive status for an application that belongs to a specified user. This API uses a promise to return the result.Starting from API version 18, this API can be properly called only on 2-in-1 devices and wearables. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Sets or cancels the keep-alive status for an application that belongs to a specified user. This API uses a promise to return the result. Starting from API version 18, this API can be properly called only on 2-in-1 devices and wearables. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > - To support keep-alive, **mainElement** in the > [module.json5](../../../quick-start/module-configuration-file.md) file of the application must be a UIAbility. > The system initiates the keep-alive operation only when this mainElement has been launched. > > - On 2-in-1 devices, the application must appear in the status bar within 5 seconds of launch. Otherwise, the > system revokes the application's keep-alive status and terminate the restarted process. > > - When the kept-alive application process exits, the system attempts to restart it. If three consecutive restart > attempts fail, the system stops restarting the process.
 
-> **NOTE：**
-> 
-> - To support keep-alive, **mainElement** in the
-> [module.json5](../../../quick-start/module-configuration-file.md) file of the application must be a UIAbility.
-> The system initiates the keep-alive operation only when this mainElement has been launched.
-> 
-> - On 2-in-1 devices, the application must appear in the status bar within 5 seconds of launch. Otherwise, the
-> system revokes the application's keep-alive status and terminate the restarted process.
-> 
-> - When the kept-alive application process exits, the system attempts to restart it. If three consecutive restart
-> attempts fail, the system stops restarting the process.
+**Since:** 23
 
-**Since:** 14
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
@@ -43,7 +33,7 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | enable | boolean | Yes | Whether to keep the application alive or cancel its keep-alive status. **true** to keep the application alive, **false** otherwise. |
 
 **Return value:**
@@ -56,15 +46,15 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300008-specified-package-does-not-have-a-main-uiability) | The target bundle has no MainAbility. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300009-specified-package-does-not-have-a-status-bar) | The target bundle has no status-bar ability. |
-| [16300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300010-running-application-is-not-attached-to-a-status-bar) | The target application is not attached to the status bar. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300005-bundle-information-does-not-exist) | The target bundle does not exist. |
+| [16300008](../errorcode-ability.md#16300008-specified-package-does-not-have-a-main-uiability) | The target bundle has no MainAbility. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16300009](../errorcode-ability.md#16300009-specified-package-does-not-have-a-status-bar) | The target bundle has no status-bar ability. |
+| [16300010](../errorcode-ability.md#16300010-running-application-is-not-attached-to-a-status-bar) | The target application is not attached to the status bar. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16300005](../errorcode-ability.md#16300005-bundle-information-does-not-exist) | The target bundle does not exist. |
 
 ## Examples
 
